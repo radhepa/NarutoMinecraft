@@ -21,3 +21,4 @@ field_guide_herbs	Field Guide to Leaf Herbs	scroll	book	any	beta2	1	45	-	Shows w
 smithing_manual	Smith's Notebook	scroll	book	genin	beta2	1	0	quest:side.b2.forge_apprentice	The apprentice's notes: unlocks the senbon and caltrops recipes	item:book	icon	unlocks=recipe:senbon,recipe:makibishi
 recipe_card	Recipe Card	scroll	recipe	any	beta1	1	0	quest	A family recipe written out for you: right-click to learn it (VF's recipe cards)	-	vf	vf=villagefriends:recipe_card
 blueprint	Furniture Plan	scroll	recipe	any	beta1	1	0	quest:clan.kinoshita.1;shop:kinoshita_yard	A carpenter's drawing: unlocks one furniture recipe at the workbench	-	icon	variant=recipe
+hand_sign_primer	Hand-Sign Primer	scroll	book	academy	beta1	1	0	kit:knack.ninjutsu	An Academy primer of the twelve signs: practise them and your weaving steadies	item:book	icon	bind=player

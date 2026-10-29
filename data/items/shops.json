@@ -1763,6 +1763,149 @@
      "qty": 1,
      "restock": "weekly",
      "pool": "rot"
+    },
+    {
+     "item": "leaf_banner",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "icebox",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "tea_kettle",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "bowl_shelf",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "ramen_cup_tower",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "balcony_planter",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "balcony_bench",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "laundry_line",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "meditation_mat",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "curtains",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "alarm_clock",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "shoe_rack",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "umbrella_stand",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "bath_mat",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "towel_rack",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "photo_frame",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "weight_rack",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "tea_table",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "wooden_bed",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "double_futon",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "child_futon",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "irori_hearth",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "engawa_bench",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
     }
    ],
    "jobs": [
@@ -3899,6 +4042,15 @@
    "price": 30,
    "effect": "Add, change or remove face marks",
    "note": "The character creation session's price"
+  },
+  {
+   "id": "service.locksmith",
+   "provider": "housing_office",
+   "rank": "any",
+   "slice": "beta1",
+   "price": 20,
+   "effect": "Cut a spare key to your home",
+   "note": "The home session's spare key"
   }
  ]
 }

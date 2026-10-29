@@ -1,7 +1,7 @@
 {
  "format": 1,
  "_doc": "Compiled by tools/items/items.py from tools/items/catalogue/*.tsv. Do not edit.",
- "count": 523,
+ "count": 558,
  "items": [
   {
    "id": "flash_bomb",
@@ -306,7 +306,8 @@
    "sources": [
     "kit:academy",
     "shop:weapon_shop",
-    "shop:academy_supply"
+    "shop:academy_supply",
+    "kit:knack.weapons"
    ],
    "use": "Blunt training kunai: combo strikes and throws at the Academy posts; never draws blood on a spar",
    "art": "tint:kunai",
@@ -894,7 +895,8 @@
    "sell": 0,
    "sources": [
     "shop:academy_supply",
-    "craft:tailoring"
+    "craft:tailoring",
+    "kit:knack.taijutsu"
    ],
    "use": "Cloth fist wraps for taijutsu: no weapon, a little sturdier fists",
    "art": "icon",
@@ -4585,6 +4587,31 @@
    }
   },
   {
+   "id": "hand_sign_primer",
+   "registry": "shinobi_life:hand_sign_primer",
+   "new": true,
+   "name": "Hand-Sign Primer",
+   "mod": "shinobi_life",
+   "category": "scroll",
+   "group": "book",
+   "rank": "academy",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 0,
+   "sell": 0,
+   "sources": [
+    "kit:knack.ninjutsu"
+   ],
+   "use": "An Academy primer of the twelve signs: practise them and your weaving steadies",
+   "gifts": [
+    "item:book"
+   ],
+   "art": "icon",
+   "props": {
+    "bind": "player"
+   }
+  },
+  {
    "id": "smithing_manual",
    "registry": "shinobi_life:smithing_manual",
    "new": true,
@@ -5886,6 +5913,96 @@
    "art": "icon"
   },
   {
+   "id": "bath_mat",
+   "registry": "shinobi_life:bath_mat",
+   "new": true,
+   "name": "Bath Mat",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "bath",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 10,
+   "sell": 5,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A woven mat for the bath",
+   "art": "block",
+   "props": {
+    "block": "bath_mat"
+   }
+  },
+  {
+   "id": "towel_rack",
+   "registry": "shinobi_life:towel_rack",
+   "new": true,
+   "name": "Towel Rack",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "bath",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 15,
+   "sell": 7,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A bamboo towel rack",
+   "art": "block",
+   "props": {
+    "block": "towel_rack"
+   }
+  },
+  {
+   "id": "child_futon",
+   "registry": "shinobi_life:child_futon",
+   "new": true,
+   "name": "Child's Futon",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "bed",
+   "rank": "any",
+   "slice": "later",
+   "stack": 1,
+   "price": 150,
+   "sell": 75,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A small futon",
+   "art": "block",
+   "props": {
+    "block": "child_futon",
+    "bed": "yes"
+   }
+  },
+  {
+   "id": "double_futon",
+   "registry": "shinobi_life:double_futon",
+   "new": true,
+   "name": "Double Futon",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "bed",
+   "rank": "any",
+   "slice": "later",
+   "stack": 1,
+   "price": 500,
+   "sell": 250,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A futon for two",
+   "art": "block",
+   "props": {
+    "block": "double_futon",
+    "bed": "yes"
+   }
+  },
+  {
    "id": "futon",
    "registry": "shinobi_life:futon",
    "new": true,
@@ -5935,6 +6052,142 @@
    }
   },
   {
+   "id": "wooden_bed",
+   "registry": "shinobi_life:wooden_bed",
+   "new": true,
+   "name": "Wooden Bed",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "bed",
+   "rank": "any",
+   "slice": "later",
+   "stack": 1,
+   "price": 600,
+   "sell": 300,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A raised bed with a carved frame",
+   "art": "block",
+   "props": {
+    "block": "wooden_bed",
+    "bed": "yes"
+   }
+  },
+  {
+   "id": "alarm_clock",
+   "registry": "shinobi_life:alarm_clock",
+   "new": true,
+   "name": "Alarm Clock",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "decor",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 15,
+   "sell": 7,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "Rings at the hour you set: no oversleeping after a late night",
+   "art": "block",
+   "props": {
+    "block": "alarm_clock"
+   }
+  },
+  {
+   "id": "festival_drum",
+   "registry": "shinobi_life:festival_drum",
+   "new": true,
+   "name": "Festival Drum",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "decor",
+   "rank": "any",
+   "slice": "beta2",
+   "stack": 1,
+   "price": 80,
+   "sell": 40,
+   "sources": [
+    "event:leaf_festival"
+   ],
+   "use": "A taiko on a stand; give it a bang",
+   "art": "block",
+   "props": {
+    "block": "festival_drum"
+   }
+  },
+  {
+   "id": "laundry_line",
+   "registry": "shinobi_life:laundry_line",
+   "new": true,
+   "name": "Laundry Line",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "decor",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 15,
+   "sell": 7,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A line of washing across the balcony",
+   "art": "block",
+   "props": {
+    "block": "laundry_line"
+   }
+  },
+  {
+   "id": "ramen_cup_tower",
+   "registry": "shinobi_life:ramen_cup_tower",
+   "new": true,
+   "name": "Instant Ramen Tower",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "decor",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 15,
+   "sell": 7,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A teetering stack of instant ramen cups. A monument",
+   "gifts": [
+    "food:ramen"
+   ],
+   "art": "block",
+   "props": {
+    "block": "ramen_cup_tower"
+   }
+  },
+  {
+   "id": "umbrella_stand",
+   "registry": "shinobi_life:umbrella_stand",
+   "new": true,
+   "name": "Umbrella Stand",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "decor",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 15,
+   "sell": 7,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A ceramic stand for wet umbrellas",
+   "art": "block",
+   "props": {
+    "block": "umbrella_stand"
+   }
+  },
+  {
    "id": "curio_cabinet",
    "registry": "shinobi_life:curio_cabinet",
    "new": true,
@@ -5981,6 +6234,29 @@
    }
   },
   {
+   "id": "photo_frame",
+   "registry": "shinobi_life:photo_frame",
+   "new": true,
+   "name": "Photo Frame",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "display",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 15,
+   "sell": 7,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "Frames one photograph",
+   "art": "block",
+   "props": {
+    "block": "photo_frame",
+    "slots": "1"
+   }
+  },
+  {
    "id": "wall_mount",
    "registry": "shinobi_life:wall_mount",
    "new": true,
@@ -6023,8 +6299,7 @@
    "art": "block",
    "props": {
     "block": "rug",
-    "variant": "colour",
-    "set": "starter"
+    "variant": "colour"
    }
   },
   {
@@ -6048,6 +6323,7 @@
    "art": "block",
    "props": {
     "block": "tatami",
+    "set": "starter",
     "block_variants": "tatami|aged_tatami"
    }
   },
@@ -6097,6 +6373,96 @@
    }
   },
   {
+   "id": "cupboard",
+   "registry": "shinobi_life:cupboard",
+   "new": true,
+   "name": "Cupboard",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "kitchen",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 60,
+   "sell": 30,
+   "sources": [
+    "kit:start"
+   ],
+   "use": "A kitchen cupboard: a pantry for your ingredients and dishes (storage)",
+   "art": "block",
+   "props": {
+    "block": "cupboard",
+    "slots": "18"
+   }
+  },
+  {
+   "id": "icebox",
+   "registry": "shinobi_life:icebox",
+   "new": true,
+   "name": "Icebox",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "kitchen",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 160,
+   "sell": 80,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "Keeps fresh ingredients from spoiling",
+   "art": "block",
+   "props": {
+    "block": "icebox",
+    "slots": "18"
+   }
+  },
+  {
+   "id": "irori_hearth",
+   "registry": "shinobi_life:irori_hearth",
+   "new": true,
+   "name": "Irori Hearth",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "kitchen",
+   "rank": "any",
+   "slice": "later",
+   "stack": 1,
+   "price": 1200,
+   "sell": 600,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A sunken hearth in the floor: cook, warm and gather round",
+   "art": "block",
+   "props": {
+    "block": "irori_hearth"
+   }
+  },
+  {
+   "id": "tea_kettle",
+   "registry": "shinobi_life:tea_kettle",
+   "new": true,
+   "name": "Tea Kettle",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "kitchen",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 25,
+   "sell": 12,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "An iron kettle: brew tea at home",
+   "art": "block",
+   "props": {
+    "block": "tea_kettle"
+   }
+  },
+  {
    "id": "andon_lamp",
    "registry": "shinobi_life:andon_lamp",
    "new": true,
@@ -6120,6 +6486,53 @@
     "set": "starter",
     "light": "13",
     "block_variants": "andon_lamp|red_andon_lamp"
+   }
+  },
+  {
+   "id": "clan_lantern",
+   "registry": "shinobi_life:clan_lantern",
+   "new": true,
+   "name": "Clan Lantern",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "light",
+   "rank": "any",
+   "slice": "beta2",
+   "stack": 1,
+   "price": 70,
+   "sell": 35,
+   "sources": [
+    "clan"
+   ],
+   "use": "A lantern painted with a clan's crest",
+   "art": "block",
+   "props": {
+    "block": "clan_lantern",
+    "variant": "clan:25",
+    "light": "12"
+   }
+  },
+  {
+   "id": "lantern_string",
+   "registry": "shinobi_life:lantern_string",
+   "new": true,
+   "name": "String of Lanterns",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "light",
+   "rank": "any",
+   "slice": "beta2",
+   "stack": 1,
+   "price": 40,
+   "sell": 20,
+   "sources": [
+    "event:leaf_festival"
+   ],
+   "use": "Festival lanterns on a string across a room or balcony",
+   "art": "block",
+   "props": {
+    "block": "lantern_string",
+    "light": "10"
    }
   },
   {
@@ -6265,6 +6678,28 @@
    }
   },
   {
+   "id": "balcony_planter",
+   "registry": "shinobi_life:balcony_planter",
+   "new": true,
+   "name": "Balcony Planter",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "plant",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 40,
+   "sell": 20,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A long planter of herbs and flowers for the balcony; water it",
+   "art": "block",
+   "props": {
+    "block": "balcony_planter"
+   }
+  },
+  {
    "id": "bamboo_vase",
    "registry": "shinobi_life:bamboo_vase",
    "new": true,
@@ -6356,8 +6791,7 @@
    "use": "Something green on the sill (vanilla's potted fern)",
    "art": "vanilla",
    "props": {
-    "vanilla_block": "minecraft:potted_fern",
-    "set": "starter"
+    "vanilla_block": "minecraft:potted_fern"
    }
   },
   {
@@ -6380,6 +6814,29 @@
    "art": "block",
    "props": {
     "block": "bamboo_blind"
+   }
+  },
+  {
+   "id": "clan_screen",
+   "registry": "shinobi_life:clan_screen",
+   "new": true,
+   "name": "Clan Screen",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "screen",
+   "rank": "any",
+   "slice": "beta2",
+   "stack": 1,
+   "price": 120,
+   "sell": 60,
+   "sources": [
+    "clan"
+   ],
+   "use": "A folding screen with a clan's crest",
+   "art": "block",
+   "props": {
+    "block": "clan_screen",
+    "variant": "clan:25"
    }
   },
   {
@@ -6452,6 +6909,72 @@
    "props": {
     "block": "shoji_screen",
     "set": "starter"
+   }
+  },
+  {
+   "id": "balcony_bench",
+   "registry": "shinobi_life:balcony_bench",
+   "new": true,
+   "name": "Balcony Bench",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "seat",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 70,
+   "sell": 35,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A bench facing the Rock",
+   "art": "block",
+   "props": {
+    "block": "balcony_bench"
+   }
+  },
+  {
+   "id": "engawa_bench",
+   "registry": "shinobi_life:engawa_bench",
+   "new": true,
+   "name": "Engawa Bench",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "seat",
+   "rank": "any",
+   "slice": "later",
+   "stack": 1,
+   "price": 250,
+   "sell": 125,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A veranda bench along a house",
+   "art": "block",
+   "props": {
+    "block": "engawa_bench"
+   }
+  },
+  {
+   "id": "ichiraku_stool",
+   "registry": "shinobi_life:ichiraku_stool",
+   "new": true,
+   "name": "Ichiraku Stool",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "seat",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 0,
+   "sell": 0,
+   "sources": [
+    "quest:filler.ramen_thief.3"
+   ],
+   "use": "A real stool from the ramen stand, given by the cook",
+   "art": "block",
+   "props": {
+    "block": "ramen_stool"
    }
   },
   {
@@ -6619,6 +7142,29 @@
    }
   },
   {
+   "id": "bowl_shelf",
+   "registry": "shinobi_life:bowl_shelf",
+   "new": true,
+   "name": "Bowl Shelf",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "storage",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 40,
+   "sell": 20,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A shelf of ramen bowls, for the ramen corner",
+   "art": "block",
+   "props": {
+    "block": "bowl_shelf",
+    "slots": "6"
+   }
+  },
+  {
    "id": "display_shelf",
    "registry": "shinobi_life:display_shelf",
    "new": true,
@@ -6688,6 +7234,28 @@
     "set": "starter",
     "slots": "9",
     "block_variants": "scroll_shelf|archive_scroll_shelf"
+   }
+  },
+  {
+   "id": "shoe_rack",
+   "registry": "shinobi_life:shoe_rack",
+   "new": true,
+   "name": "Shoe Rack",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "storage",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 20,
+   "sell": 10,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "For the entryway",
+   "art": "block",
+   "props": {
+    "block": "shoe_rack"
    }
   },
   {
@@ -6848,13 +7416,13 @@
    "sell": 30,
    "sources": [
     "shop:furniture_shop",
-    "craft:workbench"
+    "craft:workbench",
+    "kit:start"
    ],
    "use": "A chabudai: meals here count as a proper sit-down meal",
    "art": "block",
    "props": {
     "block": "low_table",
-    "set": "starter",
     "block_variants": "low_table|dark_low_table|long_low_table"
    }
   },
@@ -6881,6 +7449,50 @@
    "art": "block",
    "props": {
     "block": "tea_set"
+   }
+  },
+  {
+   "id": "tea_table",
+   "registry": "shinobi_life:tea_table",
+   "new": true,
+   "name": "Tea Table",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "table",
+   "rank": "any",
+   "slice": "beta2",
+   "stack": 1,
+   "price": 90,
+   "sell": 45,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A low lacquered table for the tea set",
+   "art": "block",
+   "props": {
+    "block": "tea_table"
+   }
+  },
+  {
+   "id": "meditation_mat",
+   "registry": "shinobi_life:meditation_mat",
+   "new": true,
+   "name": "Meditation Mat",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "training",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 30,
+   "sell": 15,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "Meditate here: chakra comes back a little faster",
+   "art": "block",
+   "props": {
+    "block": "meditation_mat"
    }
   },
   {
@@ -6954,6 +7566,28 @@
    }
   },
   {
+   "id": "weight_rack",
+   "registry": "shinobi_life:weight_rack",
+   "new": true,
+   "name": "Weight Rack",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "training",
+   "rank": "any",
+   "slice": "beta2",
+   "stack": 1,
+   "price": 120,
+   "sell": 60,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "Stone weights for strength training at home",
+   "art": "block",
+   "props": {
+    "block": "weight_rack"
+   }
+  },
+  {
    "id": "calendar_scroll",
    "registry": "shinobi_life:calendar_scroll",
    "new": true,
@@ -6977,6 +7611,74 @@
    }
   },
   {
+   "id": "clan_banner",
+   "registry": "shinobi_life:clan_banner",
+   "new": true,
+   "name": "Clan Banner",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "wall",
+   "rank": "any",
+   "slice": "beta2",
+   "stack": 1,
+   "price": 60,
+   "sell": 30,
+   "sources": [
+    "clan"
+   ],
+   "use": "A banner in a clan's colours, sold in its quarter (wave 2 clans from Beta 2.5)",
+   "art": "block",
+   "props": {
+    "block": "clan_banner",
+    "variant": "clan:25"
+   }
+  },
+  {
+   "id": "curtains",
+   "registry": "shinobi_life:curtains",
+   "new": true,
+   "name": "Curtains",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "wall",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 25,
+   "sell": 12,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "Cotton curtains for a window, any colour",
+   "art": "block",
+   "props": {
+    "block": "curtains",
+    "variant": "colour"
+   }
+  },
+  {
+   "id": "fan_display",
+   "registry": "shinobi_life:fan_display",
+   "new": true,
+   "name": "Fan Display",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "wall",
+   "rank": "any",
+   "slice": "beta2",
+   "stack": 1,
+   "price": 20,
+   "sell": 10,
+   "sources": [
+    "event:leaf_festival"
+   ],
+   "use": "A painted festival fan on a wall stand",
+   "art": "block",
+   "props": {
+    "block": "fan_display"
+   }
+  },
+  {
    "id": "hanging_scroll",
    "registry": "shinobi_life:hanging_scroll",
    "new": true,
@@ -6996,8 +7698,30 @@
    "art": "block",
    "props": {
     "block": "hanging_scroll",
-    "set": "starter",
     "block_variants": "hanging_scroll_fire|hanging_scroll_shinobi|hanging_scroll_harmony|hanging_scroll_landscape|hanging_scroll_crane|hanging_scroll_leaf"
+   }
+  },
+  {
+   "id": "leaf_banner",
+   "registry": "shinobi_life:leaf_banner",
+   "new": true,
+   "name": "Leaf Banner",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "wall",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 50,
+   "sell": 25,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A cloth banner with the Leaf's mark; the heart of the Leaf set",
+   "art": "block",
+   "props": {
+    "block": "leaf_banner",
+    "set": "starter"
    }
   },
   {
@@ -7014,8 +7738,7 @@
    "price": 30,
    "sell": 15,
    "sources": [
-    "home:apartment",
-    "kit:start"
+    "home:apartment"
    ],
    "use": "Letters and clan summons arrive here in the morning",
    "art": "block",
@@ -8526,6 +9249,30 @@
    "art": "icon",
    "props": {
     "block": "keepsake"
+   }
+  },
+  {
+   "id": "photograph",
+   "registry": "shinobi_life:photograph",
+   "new": true,
+   "name": "Photograph",
+   "mod": "shinobi_life",
+   "category": "keepsake",
+   "group": "photo",
+   "rank": "any",
+   "slice": "beta2",
+   "stack": 16,
+   "price": 0,
+   "sell": 0,
+   "sources": [
+    "quest"
+   ],
+   "use": "A photograph of a milestone (the squad's first day, a promotion); frame it",
+   "art": "icon",
+   "props": {
+    "variant": "milestone",
+    "block": "keepsake",
+    "named_by": "quest"
    }
   },
   {
@@ -10102,6 +10849,25 @@
    }
   },
   {
+   "id": "spare_key",
+   "registry": "shinobi_life:spare_key",
+   "new": true,
+   "name": "Spare Key",
+   "mod": "shinobi_life",
+   "category": "key",
+   "group": "home",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 0,
+   "sell": 0,
+   "sources": [
+    "service:locksmith"
+   ],
+   "use": "A spare key to your home, to give to someone you trust",
+   "art": "icon"
+  },
+  {
    "id": "stolen_goods",
    "registry": "shinobi_progression:stolen_goods",
    "new": true,
@@ -11319,6 +12085,32 @@
    ],
    "use": "A wooden ema: write a wish and hang it at the shrine",
    "art": "icon"
+  },
+  {
+   "id": "half_charm",
+   "registry": "shinobi_progression:half_charm",
+   "new": true,
+   "name": "Half Charm",
+   "mod": "shinobi_progression",
+   "category": "key",
+   "group": "story",
+   "rank": "any",
+   "slice": "beta1",
+   "stack": 1,
+   "price": 0,
+   "sell": 0,
+   "sources": [
+    "kit:start"
+   ],
+   "use": "Half of a small charm. You have always had it",
+   "art": "icon",
+   "props": {
+    "bind": "player",
+    "named_by": "story",
+    "no_drop": "yes",
+    "no_sell": "yes",
+    "no_store": "yes"
+   }
   },
   {
    "id": "travel_permit",

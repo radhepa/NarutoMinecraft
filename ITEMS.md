@@ -43,7 +43,7 @@ python tools/items/sprites.py [--check|--list]
 
 ## 1. The registry
 
-**523 entries: 492 new items and 31 existing ones given a price** (vanilla eggs and chests, VF's onion, bandage
+**558 entries: 527 new items and 31 existing ones given a price** (vanilla eggs and chests, VF's onion, bandage
 and cooking pot), plus **410 outfits** as variants of one item. Every item id in the pack lives here; other
 sessions key their data by these ids (combat stats, mission rewards, shopkeeper lines).
 
@@ -73,19 +73,19 @@ full list of ways to get it is in `items.json`.
 | consumable | 20 | 2 | 10 |  | 5 | 3 | Pills, medicine, coatings, wards, rations |
 | food | 55 | 29 | 26 |  |  |  | Leaf dishes |
 | ingredient | 47 | 41 | 6 |  |  |  | Kitchen ingredients the shops sell |
-| scroll | 9 | 3 | 5 |  |  | 1 | Technique and storage scrolls, maps, books |
+| scroll | 10 | 4 | 5 |  |  | 1 | Technique and storage scrolls, maps, books |
 | material | 46 | 20 | 20 |  | 5 | 1 | Steel, paper, powder, ink, cloth, herbs, monster parts, loot |
-| furniture | 51 | 42 | 9 |  |  |  | Furnish-mode pieces (their blocks are the Konoha session's) |
+| furniture | 82 | 60 | 17 |  |  | 5 | Furnish-mode pieces (their blocks are the Konoha session's) |
 | station | 8 | 4 | 2 |  |  | 2 | Crafting stations for your home |
-| keepsake | 60 | 4 | 33 | 17 |  | 6 | Display items: clans, filler arcs, side quests, missions |
+| keepsake | 61 | 4 | 34 | 17 |  | 6 | Display items: clans, filler arcs, side quests, missions, photographs |
 | curio | 51 | 14 | 33 |  |  | 4 | Charming, useless loot |
-| key | 71 | 11 | 49 |  | 3 | 8 | Quest, mission and exam items |
+| key | 73 | 13 | 49 |  | 3 | 8 | Quest, mission, exam and story items |
 | gift | 18 | 14 | 4 |  |  |  | Bouquets, hairpins, novels, toys, tea tins |
 | collectible | 8 | 5 | 3 |  |  |  | Info cards, clan crests, figurines, pressed flowers, masks |
 | pet | 9 | 8 |  |  |  | 1 | Pet food, collars, toys |
 | currency | 5 | 4 | 1 |  |  |  | Ryo notes, festival prize tokens |
 | outfit | 1 | 1 |  |  |  |  | `folded_outfit`, plus 410 wardrobe outfits as its variants |
-| **all** | **523** | **217** | **229** | **19** | **17** | **41** | |
+| **all** | **558** | **238** | **238** | **19** | **17** | **46** | |
 
 The full list, item by item, is in [CATALOGUE.md](docs/items/CATALOGUE.md).
 
@@ -117,12 +117,17 @@ The full list, item by item, is in [CATALOGUE.md](docs/items/CATALOGUE.md).
   armour and mask and the Kage hat (later), pouches, bedroll and camp kit, and three shrine charms (luck, study,
   safety).
 - **Furniture** (ROADMAP §7, "Your apartment and furniture"): beds, tables, cushions, tatami, screens, storage, lamps,
-  plants, wall pieces, a household shrine, training pieces, pet furniture, games, and the home stations. A furniture
+  plants, wall pieces, kitchen and bath pieces, a household shrine, training pieces, pet furniture, games, festival
+  and balcony pieces, clan banners, screens and lanterns (one item each, a variant per clan), displays and the home
+  stations. A furniture
   row names its block (`block=`) and the Konoha session's colour variants (`block_variants=`); one item sells any
-  variant. The **first proper furniture set** (`set=starter`: low table, two cushions, shoji screen, scroll shelf,
-  andon lamp, fern, rug, hanging scroll) costs 425 ryo: the economy is tuned so it takes about a week.
-- **Keepsakes** (60): one per clan welcome (25), filler finale, several side and district quests, two per
-  teammate's bond quests, the squad photograph, and 20 from memorable missions. They place on one small display
+  variant. The home session owns furniture's comfort, style and sets (docs/HOME.md); this registry owns the ids,
+  prices and sources, and includes every piece of the home catalogue. The **first proper furniture set**
+  (`set=starter`, the home session's Leaf set less the futon and low table the flat comes with: two floor cushions,
+  tatami, an andon lamp, a scroll shelf, a shoji screen and the Leaf banner) costs 325 ryo: the economy is tuned so
+  it takes about a week.
+- **Keepsakes** (61): one per clan welcome (25), filler finale, several side and district quests, two per
+  teammate's bond quests, the squad photograph, 20 from memorable missions, and milestone photographs. They place on one small display
   stand and are never sold.
 - **Curios** (51): useless, charming things with a line of flavor (a counterfeit note with the Hokage upside down,
   a ronin's broken tsuba, a stone fox ear). The pawn shop buys them for a few ryo; nothing needs them. They drop
@@ -160,7 +165,8 @@ Quest and story items are **generic types**: `quest_item`, `quest_letter`, `ques
 `lost_item`. A quest gives one with a name, look and text from its own keys in the dialogue bank, so this registry
 never names a plot object and nothing here can spoil the story. Named key items are only the ones the roadmap
 already names (the apartment key, the bell test's bell, the Forest of Death's pair of scrolls, mission scrolls and
-reports, exam forms) and the missions session's 45 mission items (`mission_*`, bound to their mission).
+reports, exam forms), the story session's starting key item (named by that session, with its text from the story),
+and the missions session's 45 mission items (`mission_*`, bound to their mission).
 
 ### 1.7 Gift tags
 
@@ -175,7 +181,8 @@ What the story hands you (`kits.tsv`):
 
 | Kit | When | Items |
 |---|---|---|
-| `kit:start` | Ch 1, the flat | apartment key, futon, mailbox, chest, wardrobe cabinet, cooking pot; 100 ryo (the first stipend and a welcome gift) |
+| `kit:start` | the creator screen; Ch 1, the flat | the story's half charm (it cannot be dropped, sold or stored); apartment key, futon, low table, cupboard, chest, the built-in wardrobe, cooking pot; 100 ryo (the first stipend and a welcome gift) |
+| `kit:knack.<knack>` | the creator screen | taijutsu: knuckle wraps; weapons: five fine-grade practice kunai; ninjutsu: a hand-sign primer (balanced: none; combat gives the knack's bonus) |
 | `kit:academy` | Ch 1 to 2 | enrolment form, textbook, the Academy outfit from the creator, 5 practice kunai, 10 practice shuriken, training headband, sandals |
 | `kit:genin` | Ch 7 to 9 | forehead protector, a Genin outfit, tool pouch, 3 kunai, 6 shuriken, 4 field rations |
 | `kit:chunin` | Ch 20, if promoted | flak vest, a Chunin outfit |
@@ -290,12 +297,13 @@ at 5, 15 and 30 shifts (capped at 80); keepers teach recipes and plans as you ke
 ### 2.4 Interiors (blocks asked of the Konoha session)
 
 Each shop lists its interior blocks in `shops.tsv`; with the stations, the furniture blocks and the keepsake stand
-they make **119 block requests** (`data/items/block_requests.json`): 51 furniture blocks, 37 interior pieces (the
+they make **149 block requests** (`data/items/block_requests.json`): 81 furniture blocks, 37 interior pieces (the
 shop counter and noren, Ichiraku's counter and stools, grills, stalls, the bath counter, the medicine-drawer wall,
 the ema rack ...), 26 displays (one shared item-rendering block entity; this file sets their slots: shelves 6,
 cubby walls 9, glass case 4, the curio shelf 12, the mannequin one outfit, the showroom plinth one furniture piece),
-4 smithy and sealing stations, and VF's easel. The Konoha session has adopted them; its colour variants (46 across
-13 furniture pieces) and per-shop noren are written into the rows.
+4 smithy and sealing stations, and VF's easel. The Konoha session adopted the first 119 (and the barber's chair,
+the wall mount and eleven more noren); its colour variants (46 across 13 furniture pieces) and per-shop noren are
+written into the rows. The 30 furniture pieces added from the home catalogue are new requests.
 
 ## 3. Crafting
 
@@ -389,8 +397,8 @@ back except furniture (half price) and loot and curios at the pawn shop.
 |---|---|---|---|
 | **The orphan's stipend, every morning, all game** | 30 a day | Meals (Ichiraku, the grocer, tea, dango, barbecue) | 3 to 35 a dish; 25 to 40 a day typical |
 | Part-time jobs | 40 to 80 a shift | Thrown tools, bombs and medicine used up | about 17 a D-rank, 115 a C-rank |
-| D-rank missions (the missions session's bands) | 60 to 150 | Soldier pills, coatings, scrolls of your nature | 60; 40; 150 to 600 |
-| C-rank missions | 300 to 600 | Furniture | 10 to 900 a piece |
+| D-rank missions (the missions session's bands; a steady player's median 105) | 60 to 150 | Soldier pills, coatings, scrolls of your nature | 60; 40; 150 to 600 |
+| C-rank missions (median 445) | 300 to 600 | Furniture | 10 to 900 a piece |
 | Story chapters with pay | 300 to 600 (provisional) | Outfits | 100 to 480 |
 | Side quests (SIDE_QUESTS.md §2.6) | 10 to 400 | Gifts for friends | the bond engine's three a day |
 | Small favours (generated) | 10 to 30 | Services: bath 8, lessons 50 to 60, repairs, orders, adoption 40 to 100, restyles 30 to 60 | |
@@ -398,7 +406,7 @@ back except furniture (half price) and loot and curios at the pawn shop.
 
 **The stipend.** The owner decided: no rent, and the stipend keeps going. It stays **flat at 30 ryo a day for the
 whole game**, not by rank: it covers a frugal day's meals and nothing more, so savings, tools, furniture and
-everything you want still come from missions. A day of two D-ranks pays 5.7 times the stipend.
+everything you want still come from missions. A day of two D-ranks pays seven times the stipend.
 
 ### 4.2 Sinks and inflation guards
 
@@ -417,30 +425,31 @@ everything you want still come from missions. A day of two D-ranks pays 5.7 time
 dinner, a pet, gifts every few days, keeps furnishing), and **spender** (eats out every meal, buys early). Each day:
 income (stipend, shifts, board D-ranks from Ch 9, story and board C-ranks with their camp loot, side quests on the
 day they open, favours), meals (at shop prices, or home-cooked at ingredient prices; onigiri when ryo run short),
-upkeep, then the wishlist in order with a few days of food kept in reserve. Seed 20261029:
+upkeep (and a packed lunch on mission days), then the wishlist in order with a few days of food kept in reserve.
+Seed 20261029:
 
 | | Frugal | Typical | Spender |
 |---|---|---|---|
-| A day of two D-ranks leaves, after food and upkeep | 61% | **58%** | 35% |
-| First furniture set complete | day 6 | **day 8** | day 9 |
-| Ryo at the end of Beta 1 / Beta 2 / Beta 3 | 512 / 4,740 / 5,631 | **171 / 2,367 / 2,332** | 108 / 617 / 504 |
-| Earned over the beta | 10,217 | **9,613** | 8,703 |
-| Spent | 4,586 | **7,281** | 8,199 |
+| A day of two D-ranks leaves, after food, a packed lunch and upkeep | 61% | **59%** | 40% |
+| First furniture set complete | day 6 | **day 6** (6 to 8 over seeds) | day 9 |
+| Ryo at the end of Beta 1 / Beta 2 / Beta 3 | 611 / 4,971 / 5,880 | **269 / 2,510 / 2,495** | 105 / 676 / 471 |
+| Earned over the beta | 10,612 | **9,948** | 9,018 |
+| Spent | 4,732 | **7,453** | 8,547 |
 | Hungry days | 0 | 0 | 0 |
 
 (`./gradlew :life:economy:simulate` prints the full report, what each player bought and when, and `-Pdaily=typical`
 the day-by-day ledger.) Over nine seeds `RuleOfThumbTest` holds ROADMAP's rules of thumb and the guards:
 
-- **A day of D-ranks covers food and leaves about half:** the typical Genin keeps 40 to 60% (58%).
-- **The first proper furniture set takes about an in-game week:** the typical player's median day is 6 to 9 (8).
+- **A day of D-ranks covers food and leaves about half:** the typical Genin keeps 40 to 60% (59%).
+- **The first proper furniture set takes about an in-game week:** the typical player's median day is 6 to 9.
 - **Nobody starves or goes into debt**, and every ryo is accounted for.
 - **The stipend never replaces missions:** it does not feed a typical Genin, and missions earn more than 2.5 times
   the stipend over the beta, Academy days included.
 - **Ryo do not pile up:** the typical player ends the beta with 300 to 2,500 ryo and spends at least 70% of what
   it earns; frugal ends richer than typical, typical than the spender.
 
-Mission and chapter pay in the simulation are the missions session's bands with provisional means (D 85, C 420,
-chapters 300 to 600); `economy.json` marks them.
+Mission pay in the simulation is the missions session's: its bands and a steady player's medians (D 105, C 445).
+Chapter pay (300 to 600 for the four story chapters that pay) is provisional and marked in `economy.json`.
 
 ## 5. Item art
 
@@ -450,9 +459,9 @@ What each item needs (`art` column; `items.py --stats`), for all items and for t
 |---|---|---|---|
 | Authored 16px sprite | 27 | 27 | **26 prototypes done** (`sprites.py`) |
 | Palette variant of an authored sprite (`tint:`) | 46 | 39 | **26 done** |
-| Simple 16px icon still to draw | 341 | 321 | to do: mostly food, ingredients, materials, curios and key items, in the prototypes' style |
+| Simple 16px icon still to draw | 345 | 325 | to do: mostly food, ingredients, materials, curios and key items, in the prototypes' style |
 | 3D held model | 16 | 9 | to do: tanto, bokken, bo staff, weighted chain, ninjato, katana, the clan weapons; later weapons |
-| Block (furniture, stations, displays) | 54 | 51 | the Konoha session's models; the item icon is the block |
+| Block (furniture, stations, displays) | 85 | 77 | the Konoha session's models; the item icon is the block |
 | From the wardrobe | 7 + 410 outfits | 4 + 282 | icons rendered from the wardrobe's own renders |
 | Reused (vanilla or VF) | 32 | 31 | nothing to draw |
 
@@ -470,8 +479,8 @@ swap is one line. Previews: [sprites](docs/renders/items/sprites.png), [palette 
 | Konoha build | 119 block requests (furniture, interiors, displays, stations) adopted into `tools/konoha/blocks.json`; renames `tatami` and vanilla `potted_fern`; colour and noren variants written into the rows; new: `wall_mount`, `barber_chair`, the barber's site, eleven more shop noren; slot counts for displays; gathering-spot anchors |
 | Combat | Weapon, tool, coating and gear ids reconciled (combat keys stats by these ids; grade multipliers agreed); clan weapons are clan-line rewards now that the player is clanless; enemy ids for `drop.*` tables to confirm |
 | Missions | 18 curio tables under its names, 45 `mission_*` items (9 more reuse existing ids), 20 mission keepsakes, client gifts mapped to items, info cards, technique scrolls by pool; pay bands used in the simulation, means to confirm |
-| Home | No collection book: curios, keepsakes, cards and crests are ordinary items kept in chests and on display furniture (display case, wall mount, curio cabinet, shelves); storage furniture; the wardrobe cabinet in the starting flat; the stipend number; houses and movers are the home session's numbers |
-| Character creation | The starting and rank kits; restyle prices at the barber |
+| Home | No collection book: curios, keepsakes, cards and crests are ordinary items kept in chests and on display furniture (display case, wall mount, curio cabinet, shelves); its furniture catalogue merged into the registry (new pieces keep its ids and prices; duplicates map to the ids the Konoha blocks use); the starter set is its Leaf set; the stipend; houses, movers and the spare key are its numbers |
+| Character creation | The starting, knack and rank kits; the story's starting key item; restyle prices at the barber |
 | Dialogue | Shop ids, keeper roles and districts for `dlg:shop.<shop>.*` pools, plus haggle, order and job lines |
 | Roadmap and side quests | The stipend; this file's summary in ROADMAP §7; SIDE_QUESTS.md §8's rewards used as written |
 | Bonds | Gift tags meet every gift a personality names; standing titles and keeper friendship set discounts |

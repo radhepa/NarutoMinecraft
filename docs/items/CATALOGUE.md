@@ -12,13 +12,13 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | consumable | 20 |
 | food | 55 |
 | ingredient | 47 |
-| scroll | 9 |
+| scroll | 10 |
 | material | 46 |
-| furniture | 51 |
+| furniture | 82 |
 | station | 8 |
-| keepsake | 60 |
+| keepsake | 61 |
 | curio | 51 |
-| key | 71 |
+| key | 73 |
 | gift | 18 |
 | collectible | 8 |
 | pet | 9 |
@@ -42,7 +42,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `fuma_shuriken` | Windmill Shuriken | thrown | chunin | later | 1 | 180 | shop:weapon_shop, craft:smithy | A folding giant shuriken that arcs back toward you |
 | `kunai` | Kunai | thrown | genin | beta2 | 16 | 12 | kit:genin, salvage:bandit_camp, shop:weapon_shop, shop:pawn_shop, shop:exam_stalls, craft:smithy | The shinobi's knife: combo weapon in hand, right click throws it like a trident and it can be picked up again |
 | `manji_shuriken` | Manji Shuriken | thrown | genin | beta2 | 16 | 9 | shop:weapon_shop, craft:smithy | A heavier four-armed star with hooked blades: slower, but it cuts deeper |
-| `practice_kunai` | Practice Kunai | thrown | academy | beta1 | 16 | 2 | kit:academy, shop:weapon_shop, shop:academy_supply | Blunt training kunai: combo strikes and throws at the Academy posts; never draws blood on a spar |
+| `practice_kunai` | Practice Kunai | thrown | academy | beta1 | 16 | 2 | kit:academy, shop:weapon_shop, shop:academy_supply, kit:knack.weapons | Blunt training kunai: combo strikes and throws at the Academy posts; never draws blood on a spar |
 | `practice_shuriken` | Practice Shuriken | thrown | academy | beta1 | 64 | 1 | kit:academy, shop:weapon_shop, shop:academy_supply | Blunt wooden-edged stars for target practice |
 | `rusty_kunai` | Rusty Kunai | thrown | any | beta2 | 16 | — | salvage:bandit_camp, drop:bandit, loot:salvage.bandit_camp, loot:drop.bandit | A bandit's pitted blade. Throws badly; the forge melts it down to scrap steel |
 | `senbon` | Senbon | thrown | genin | beta2 | 64 | 2 | shop:weapon_shop, craft:smithy | Steel needles: little damage, but they carry a coating and pin a nerve point |
@@ -76,7 +76,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 |---|---|---|---|---|---|---|---|---|
 | `arm_guards` | Arm Guards | arms | genin | beta2 | 1 | 90 | shop:weapon_shop, craft:smithy | Steel-backed bracers: a block takes a little less |
 | `fingerless_gloves` | Fingerless Gloves | arms | genin | beta2 | 1 | 50 | shop:tool_shop, craft:tailoring | Leather gloves that leave your fingers free for signs |
-| `knuckle_wraps` | Knuckle Wraps | arms | academy | beta1 | 1 | 20 | shop:academy_supply, craft:tailoring | Cloth fist wraps for taijutsu: no weapon, a little sturdier fists |
+| `knuckle_wraps` | Knuckle Wraps | arms | academy | beta1 | 1 | 20 | shop:academy_supply, craft:tailoring, kit:knack.taijutsu | Cloth fist wraps for taijutsu: no weapon, a little sturdier fists |
 | `anbu_armor` | ANBU Armour | body | anbu | later | 1 | — | kit:anbu | Light armour of the masked corps |
 | `flak_vest` | Flak Vest | body | chunin | beta3 | 1 | 600 | kit:chunin, shop:tailor | The Leaf's green vest with scroll pockets; a Chunin's due |
 | `mesh_shirt` | Mesh Undershirt | body | genin | beta2 | 1 | 350 | shop:weapon_shop, craft:smithy | Chain-mesh under your clothes: blades bite less |
@@ -252,6 +252,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | Id | Name | Group | Rank | Slice | Stack | Price | Sources | Use |
 |---|---|---|---|---|---|---|---|---|
 | `field_guide_herbs` | Field Guide to Leaf Herbs | book | any | beta2 | 1 | 45 | shop:pharmacy, shop:bookshop | Shows which gathering spots grow which herbs; unlocks two apothecary recipes |
+| `hand_sign_primer` | Hand-Sign Primer | book | academy | beta1 | 1 | — | kit:knack.ninjutsu | An Academy primer of the twelve signs: practise them and your weaving steadies |
 | `smithing_manual` | Smith's Notebook | book | genin | beta2 | 1 | — | quest:side.b2.forge_apprentice | The apprentice's notes: unlocks the senbon and caltrops recipes |
 | `festival_programme` | Festival Programme | map | any | beta2 | 1 | — | event:leaf_festival | When the stalls open, the games and the fireworks |
 | `konoha_map` | Map of the Leaf | map | any | beta1 | 1 | 20 | shop:scroll_shop, shop:bookshop, shop:haruno_store | A folding map: open it to see districts, shops and their hours |
@@ -316,30 +317,52 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 
 | Id | Name | Group | Rank | Slice | Stack | Price | Sources | Use |
 |---|---|---|---|---|---|---|---|---|
+| `bath_mat` | Bath Mat | bath | any | beta1 | 1 | 10 | shop:furniture_shop | A woven mat for the bath |
+| `towel_rack` | Towel Rack | bath | any | beta1 | 1 | 15 | shop:furniture_shop | A bamboo towel rack |
+| `child_futon` | Child's Futon | bed | any | later | 1 | 150 | shop:furniture_shop | A small futon |
+| `double_futon` | Double Futon | bed | any | later | 1 | 500 | shop:furniture_shop | A futon for two |
 | `futon` | Futon | bed | any | beta1 | 1 | 120 | home:apartment, shop:furniture_shop, kit:start | A rolled-out bed in six colours. Your home always keeps one |
 | `futon_deluxe` | Thick Futon | bed | any | beta1 | 1 | 300 | shop:furniture_shop | A plump quilted futon: Well Rested lasts an hour longer |
+| `wooden_bed` | Wooden Bed | bed | any | later | 1 | 600 | shop:furniture_shop | A raised bed with a carved frame |
+| `alarm_clock` | Alarm Clock | decor | any | beta1 | 1 | 15 | shop:furniture_shop | Rings at the hour you set: no oversleeping after a late night |
+| `festival_drum` | Festival Drum | decor | any | beta2 | 1 | 80 | event:leaf_festival | A taiko on a stand; give it a bang |
+| `laundry_line` | Laundry Line | decor | any | beta1 | 1 | 15 | shop:furniture_shop | A line of washing across the balcony |
+| `ramen_cup_tower` | Instant Ramen Tower | decor | any | beta1 | 1 | 15 | shop:furniture_shop | A teetering stack of instant ramen cups. A monument |
+| `umbrella_stand` | Umbrella Stand | decor | any | beta1 | 1 | 15 | shop:furniture_shop | A ceramic stand for wet umbrellas |
 | `curio_cabinet` | Curio Cabinet | display | any | beta2 | 1 | 220 | shop:furniture_shop | A crowded cabinet of little shelves that shows twelve small things |
 | `display_case` | Display Case | display | any | beta1 | 1 | 130 | shop:furniture_shop | A glass-topped case that shows four keepsakes, curios or weapons |
+| `photo_frame` | Photo Frame | display | any | beta1 | 1 | 15 | shop:furniture_shop | Frames one photograph |
 | `wall_mount` | Wall Mount | display | any | beta1 | 1 | 45 | shop:furniture_shop | A wooden wall bracket that shows one item: a blade, a mask, a fan, a curio |
 | `rug` | Woven Rug | floor | any | beta1 | 16 | 25 | shop:furniture_shop | A cotton rug in any colour |
 | `tatami` | Tatami Mat | floor | any | beta1 | 16 | 40 | shop:furniture_shop, craft:workbench | A woven floor mat laid over the boards |
 | `go_board` | Go Board | game | any | beta2 | 1 | 50 | shop:furniture_shop, shop:pawn_shop | Black and white stones in two pots |
 | `shogi_board` | Shogi Board | game | any | beta1 | 1 | 50 | shop:furniture_shop | A thick wooden board: play a resident who sits with you |
+| `cupboard` | Cupboard | kitchen | any | beta1 | 1 | 60 | kit:start | A kitchen cupboard: a pantry for your ingredients and dishes (storage) |
+| `icebox` | Icebox | kitchen | any | beta1 | 1 | 160 | shop:furniture_shop | Keeps fresh ingredients from spoiling |
+| `irori_hearth` | Irori Hearth | kitchen | any | later | 1 | 1200 | shop:furniture_shop | A sunken hearth in the floor: cook, warm and gather round |
+| `tea_kettle` | Tea Kettle | kitchen | any | beta1 | 1 | 25 | shop:furniture_shop | An iron kettle: brew tea at home |
 | `andon_lamp` | Andon Lamp | light | any | beta1 | 1 | 35 | shop:furniture_shop, craft:workbench | A paper floor lamp |
+| `clan_lantern` | Clan Lantern | light | any | beta2 | 1 | 70 | clan | A lantern painted with a clan's crest |
+| `lantern_string` | String of Lanterns | light | any | beta2 | 1 | 40 | event:leaf_festival | Festival lanterns on a string across a room or balcony |
 | `paper_lantern` | Paper Lantern | light | any | beta1 | 1 | 20 | shop:furniture_shop, shop:festival_stalls, craft:workbench | A hanging lantern; any colour |
 | `stone_lantern` | Stone Lantern | light | any | beta2 | 1 | 150 | shop:furniture_shop, shop:market_day_stalls | A tōrō for a garden or a balcony |
 | `cat_tower` | Cat Tower | pet | any | beta1 | 1 | 90 | shop:cat_shelter | Scratching posts and shelves; cats love it |
 | `goldfish_bowl` | Goldfish Bowl | pet | any | beta2 | 1 | 45 | shop:festival_stalls | Put a festival goldfish in it |
 | `pet_bed` | Pet Bed | pet | any | beta1 | 1 | 40 | shop:furniture_shop, shop:inuzuka_clinic, craft:workbench | Where your pet sleeps when it is not at the foot of your bed |
 | `pet_bowl` | Pet Bowl | pet | any | beta1 | 1 | 15 | shop:furniture_shop, shop:inuzuka_clinic | Fill it, and your pet eats at home |
+| `balcony_planter` | Balcony Planter | plant | any | beta1 | 1 | 40 | shop:furniture_shop | A long planter of herbs and flowers for the balcony; water it |
 | `bamboo_vase` | Bamboo Vase | plant | any | beta1 | 1 | 30 | shop:flower_shop | A cut-bamboo vase |
 | `ikebana` | Ikebana | plant | any | beta1 | 1 | 60 | shop:flower_shop, craft:workbench | A flower arrangement from the flower shop; it wilts after a season |
 | `potted_bonsai` | Bonsai | plant | any | beta1 | 1 | 120 | shop:flower_shop, shop:market_day_stalls | A small pine, very old and very patient |
 | `potted_fern` | Potted Fern | plant | any | beta1 | 1 | 25 | shop:flower_shop | Something green on the sill (vanilla's potted fern) |
 | `bamboo_blind` | Bamboo Blind | screen | any | beta1 | 1 | 20 | shop:furniture_shop | A roll-down sudare for a window |
+| `clan_screen` | Clan Screen | screen | any | beta2 | 1 | 120 | clan | A folding screen with a clan's crest |
 | `folding_screen` | Painted Folding Screen | screen | any | beta2 | 1 | 220 | shop:furniture_shop, shop:painters_studio, craft:workbench | A six-panel byobu with a painted landscape |
 | `noren` | Noren Curtain | screen | any | beta1 | 1 | 25 | shop:furniture_shop | A split cloth curtain for a doorway |
 | `shoji_screen` | Shoji Screen | screen | any | beta1 | 1 | 80 | shop:furniture_shop, craft:workbench | A paper sliding screen to divide a room |
+| `balcony_bench` | Balcony Bench | seat | any | beta1 | 1 | 70 | shop:furniture_shop | A bench facing the Rock |
+| `engawa_bench` | Engawa Bench | seat | any | later | 1 | 250 | shop:furniture_shop | A veranda bench along a house |
+| `ichiraku_stool` | Ichiraku Stool | seat | any | beta1 | 1 | — | quest:filler.ramen_thief.3 | A real stool from the ramen stand, given by the cook |
 | `zabuton` | Floor Cushion | seat | any | beta1 | 1 | 15 | shop:furniture_shop, craft:workbench | A square cushion; sit on it |
 | `zaisu` | Floor Chair | seat | any | beta1 | 1 | 35 | shop:furniture_shop | A legless chair with a back |
 | `incense_burner` | Incense Burner | shrine | any | beta1 | 1 | 30 | shop:furniture_shop | Smoke curls up from it |
@@ -347,23 +370,32 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `memorial_altar` | Memorial Altar | shrine | any | beta2 | 1 | 250 | shop:furniture_shop | A family altar for those who are gone |
 | `barrel` | Barrel | storage | any | beta1 | 1 | 15 | vanilla, shop:furniture_shop | A plain barrel for storage |
 | `bookcase` | Bookcase | storage | any | beta1 | 1 | 110 | shop:furniture_shop | Shows the books and novels you own; holds 18 |
+| `bowl_shelf` | Bowl Shelf | storage | any | beta1 | 1 | 40 | shop:furniture_shop | A shelf of ramen bowls, for the ramen corner |
 | `display_shelf` | Display Shelf | storage | any | beta1 | 1 | 75 | shop:furniture_shop | Shows keepsakes and figurines |
 | `dresser_mirror` | Dresser and Mirror | storage | any | beta1 | 1 | 120 | shop:furniture_shop, shop:barber | Change your hair style and colour from those you have unlocked |
 | `scroll_shelf` | Scroll Shelf | storage | any | beta1 | 1 | 90 | shop:furniture_shop, craft:workbench | Shelves of scroll cubbies: holds 9 scrolls and books on display |
+| `shoe_rack` | Shoe Rack | storage | any | beta1 | 1 | 20 | shop:furniture_shop | For the entryway |
 | `step_tansu` | Step Tansu | storage | any | beta2 | 1 | 320 | shop:furniture_shop, craft:workbench | A staircase chest: storage, and it climbs to a loft |
 | `storage_chest` | Wooden Chest | storage | any | beta1 | 1 | 10 | vanilla, shop:furniture_shop, kit:start | A plain chest |
 | `tansu_chest` | Tansu Chest | storage | any | beta1 | 1 | 180 | shop:furniture_shop, craft:workbench | A stepped wooden chest of drawers: storage like a chest |
 | `wardrobe_cabinet` | Wardrobe | storage | any | beta1 | 1 | 200 | shop:furniture_shop, kit:start | Hang your outfits here: change clothes at home from everything you own |
 | `kotatsu` | Kotatsu | table | any | beta2 | 1 | 280 | shop:furniture_shop, craft:workbench | A low table with a quilt and a heater; sitting at it in winter clears the cold |
 | `low_desk` | Writing Desk | table | any | beta1 | 1 | 70 | shop:furniture_shop, craft:workbench | A low desk for letters and study |
-| `low_table` | Low Table | table | any | beta1 | 1 | 60 | shop:furniture_shop, craft:workbench | A chabudai: meals here count as a proper sit-down meal |
+| `low_table` | Low Table | table | any | beta1 | 1 | 60 | shop:furniture_shop, craft:workbench, kit:start | A chabudai: meals here count as a proper sit-down meal |
 | `tea_set` | Tea Set | table | any | beta2 | 1 | 60 | shop:furniture_shop | A pot and cups on a tray; brew tea at home |
+| `tea_table` | Tea Table | table | any | beta2 | 1 | 90 | shop:furniture_shop | A low lacquered table for the tea set |
+| `meditation_mat` | Meditation Mat | training | any | beta1 | 1 | 30 | shop:furniture_shop | Meditate here: chakra comes back a little faster |
 | `target_board` | Target Board | training | any | beta1 | 1 | 70 | shop:furniture_shop, craft:workbench | Throw at it at home: a little training XP a day |
 | `training_dummy` | Training Dummy | training | any | beta1 | 1 | 160 | shop:furniture_shop, craft:workbench | Practise combos at home: a little training XP a day |
 | `weapon_rack` | Weapon Rack | training | genin | beta1 | 1 | 140 | shop:weapon_shop, craft:workbench | Holds and shows four weapons |
+| `weight_rack` | Weight Rack | training | any | beta2 | 1 | 120 | shop:furniture_shop | Stone weights for strength training at home |
 | `calendar_scroll` | Wall Calendar | wall | any | beta1 | 1 | 15 | shop:furniture_shop, shop:bookshop | The season and the coming events and birthdays |
+| `clan_banner` | Clan Banner | wall | any | beta2 | 1 | 60 | clan | A banner in a clan's colours, sold in its quarter (wave 2 clans from Beta 2.5) |
+| `curtains` | Curtains | wall | any | beta1 | 1 | 25 | shop:furniture_shop | Cotton curtains for a window, any colour |
+| `fan_display` | Fan Display | wall | any | beta2 | 1 | 20 | event:leaf_festival | A painted festival fan on a wall stand |
 | `hanging_scroll` | Hanging Scroll | wall | any | beta1 | 1 | 80 | shop:painters_studio | A kakejiku: a painting or a word in ink |
-| `mailbox` | Mailbox | wall | any | beta1 | 1 | 30 | home:apartment, kit:start | Letters and clan summons arrive here in the morning |
+| `leaf_banner` | Leaf Banner | wall | any | beta1 | 1 | 50 | shop:furniture_shop | A cloth banner with the Leaf's mark; the heart of the Leaf set |
+| `mailbox` | Mailbox | wall | any | beta1 | 1 | 30 | home:apartment | Letters and clan summons arrive here in the morning |
 | `poster` | Poster | wall | any | beta1 | 1 | 10 | shop:bookshop, shop:haruno_store, shop:painters_studio | A paper poster: the Rock, a ramen ad, the Academy, a festival |
 | `wall_clock` | Wall Clock | wall | any | beta1 | 1 | 60 | shop:furniture_shop | Shows the time and the day; chimes at six |
 | `wind_chime` | Wind Chime | wall | any | beta1 | 1 | 12 | shop:furniture_shop, shop:haruno_store | A glass furin that rings in a breeze |
@@ -441,6 +473,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `keepsake_snow_rabbit` | Snow Rabbit | mission | any | beta2 | 1 | — | mission:mission.d.snow_clearing | A rabbit carved in white wood, from a snowy roof |
 | `keepsake_summit_seal` | Summit Seal | mission | any | later | 1 | — | mission:mission.s.peace_summit | A seal from a peace summit |
 | `keepsake_trader_map` | Trader's Map | mission | any | beta2 | 1 | — | mission:mission.c.escort_merchant | A merchant's hand-drawn map of the east road |
+| `photograph` | Photograph | photo | any | beta2 | 16 | — | quest | A photograph of a milestone (the squad's first day, a promotion); frame it |
 | `keepsake_cat_figurine` | Cat Figurine | side | any | beta1 | 1 | — | quest:district.b1.neighbours.3 | A beckoning cat in painted clay |
 | `keepsake_race_ribbon` | Rooftop Race Ribbon | side | any | beta2 | 1 | — | quest:side.b2.rooftop_race | A red ribbon from the Market Day rooftop race |
 | `keepsake_shogi_set` | Old Shogi Set | side | any | beta1 | 1 | — | quest:side.b1.shogi | A worn board and pieces, polished by a lifetime of games |
@@ -521,6 +554,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `quest_letter` | Letter | generic | any | beta1 | 16 | — | quest, mission:d | A sealed or open letter for a quest |
 | `quest_parcel` | Parcel | generic | any | beta1 | 16 | — | quest, mission:d | A wrapped package to deliver |
 | `apartment_key` | Apartment Key | home | any | beta1 | 1 | — | quest:main.ch1, kit:start | The key to your flat; right-click your door plaque with it to furnish |
+| `spare_key` | Spare Key | home | any | beta1 | 1 | — | service:locksmith | A spare key to your home, to give to someone you trust |
 | `stolen_goods` | Stolen Goods | loot | any | beta2 | 64 | — | salvage:bandit_camp, loot:salvage.bandit_camp | A crate of someone's things: return them for a reward and a deed, or sell them and live with it |
 | `bounty_token` | Bandit Bounty Token | mission | genin | beta2 | 64 | — | mission:c, drop:bandit_leader | Proof a camp was cleared: hand it in for the bounty |
 | `escort_pass` | Escort Pass | mission | genin | beta2 | 1 | — | mission:c | The Leaf's pass for an escort on the road |
@@ -576,6 +610,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `mission_treaty_draft` | Treaty Draft | mission | genin | later | 1 | — | mission:mission.b.allied_courier | A draft treaty under escort |
 | `scent_cloth` | Scent Cloth | mission | genin | beta2 | 1 | — | mission:d, mission:c | Something that smells of who you are looking for: a ninken tracks it |
 | `wish_plaque` | Wish Plaque | shrine | any | beta1 | 16 | 5 | quest:district.b1.shrine.wishes, shop:shrine_office | A wooden ema: write a wish and hang it at the shrine |
+| `half_charm` | Half Charm | story | any | beta1 | 1 | — | kit:start | Half of a small charm. You have always had it |
 | `travel_permit` | Travel Permit | travel | genin | beta2 | 1 | — | mission:c, quest:main.ch13 | Lets the travel desk send you beyond the border |
 
 ## gift
@@ -944,6 +979,29 @@ carpenters_lane; 09:00 to 18:00, closed Moonday; from beta1; keeper `role:shop.f
 | `wall_mount` |  |  |  | 4 | weekly | core |
 | `barrel` |  |  |  | 4 | weekly | core |
 | `curio_cabinet` |  |  | beta2 | 1 | weekly | rot |
+| `leaf_banner` |  |  |  | 2 | weekly | core |
+| `icebox` |  |  |  | 2 | weekly | core |
+| `tea_kettle` |  |  |  | 2 | weekly | core |
+| `bowl_shelf` |  |  |  | 2 | weekly | core |
+| `ramen_cup_tower` |  |  |  | 2 | weekly | core |
+| `balcony_planter` |  |  |  | 2 | weekly | core |
+| `balcony_bench` |  |  |  | 2 | weekly | core |
+| `laundry_line` |  |  |  | 2 | weekly | core |
+| `meditation_mat` |  |  |  | 2 | weekly | core |
+| `curtains` |  |  |  | 2 | weekly | core |
+| `alarm_clock` |  |  |  | 2 | weekly | core |
+| `shoe_rack` |  |  |  | 2 | weekly | core |
+| `umbrella_stand` |  |  |  | 2 | weekly | core |
+| `bath_mat` |  |  |  | 2 | weekly | core |
+| `towel_rack` |  |  |  | 2 | weekly | core |
+| `photo_frame` |  |  |  | 2 | weekly | core |
+| `weight_rack` |  |  |  | 1 | weekly | rot |
+| `tea_table` |  |  |  | 1 | weekly | rot |
+| `wooden_bed` |  |  | later | 1 | weekly | core |
+| `double_futon` |  |  | later | 1 | weekly | core |
+| `child_futon` |  |  | later | 1 | weekly | core |
+| `irori_hearth` |  |  | later | 1 | weekly | core |
+| `engawa_bench` |  |  | later | 1 | weekly | core |
 
 ### Kinoshita Yard (`kinoshita_yard`)
 

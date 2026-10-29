@@ -16,10 +16,16 @@
     "note": "The home's bed, already laid out"
    },
    {
-    "item": "mailbox",
+    "item": "low_table",
     "count": 1,
     "when": "main.ch1 (the apartment)",
-    "note": "Already on the door"
+    "note": "The flat comes with one (the home session's starter)"
+   },
+   {
+    "item": "cupboard",
+    "count": 1,
+    "when": "main.ch1 (the apartment)",
+    "note": "The flat comes with one"
    },
    {
     "item": "storage_chest",
@@ -31,7 +37,7 @@
     "item": "wardrobe_cabinet",
     "count": 1,
     "when": "main.ch1 (the apartment)",
-    "note": "The flat's wardrobe: your outfits live here"
+    "note": "The flat's built-in closet (a home fixture): your outfits live here"
    },
    {
     "item": "cooking_pot",
@@ -50,6 +56,12 @@
     "count": 1,
     "when": "main.ch1 (Ichiraku)",
     "note": "The instructor's treat"
+   },
+   {
+    "item": "half_charm",
+    "count": 1,
+    "when": "the creator screen",
+    "note": "The story session's starting key item; it cannot be dropped, sold or stored"
    }
   ],
   "kit:academy": [
@@ -146,6 +158,30 @@
     "count": 1,
     "when": "main.ch20 (results, if promoted)",
     "note": "A Chunin outfit of your clan or collection"
+   }
+  ],
+  "kit:knack.taijutsu": [
+   {
+    "item": "knuckle_wraps",
+    "count": 1,
+    "when": "the creator screen (knack: taijutsu)",
+    "note": "Combat gives the knack its bonus"
+   }
+  ],
+  "kit:knack.weapons": [
+   {
+    "item": "practice_kunai",
+    "count": 5,
+    "when": "the creator screen (knack: weapons)",
+    "note": "A fine-grade set (grade component)"
+   }
+  ],
+  "kit:knack.ninjutsu": [
+   {
+    "item": "hand_sign_primer",
+    "count": 1,
+    "when": "the creator screen (knack: ninjutsu)",
+    "note": null
    }
   ]
  }

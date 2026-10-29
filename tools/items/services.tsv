@@ -27,3 +27,4 @@ service.travel	travel_desk	genin	later	50	A personal trip to an open far region	
 service.restyle.hair	barber	any	beta1	40	A new hairstyle from those you have unlocked	The character creation session's price
 service.restyle.hair_colour	barber	any	beta1	60	A new hair colour	The character creation session's price
 service.restyle.marks	barber	any	beta1	30	Add, change or remove face marks	The character creation session's price
+service.locksmith	housing_office	any	beta1	20	Cut a spare key to your home	The home session's spare key

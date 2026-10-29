@@ -783,15 +783,15 @@ and shows on the HUD as a total; a purchase takes notes and gives change in the 
 and closed. The orphan's stipend, **30 ryo every morning for the whole game** (there is no rent), covers a frugal
 day's meals and nothing more; missions, jobs and quests pay for everything else. Rules of thumb, held by the
 seeded simulation in `life/economy` over the beta's 48 days: a day of D-rank missions covers food and leaves about
-half to save (a typical Genin keeps 58%), and the first proper furniture set (425 ryo) takes about an in-game
-week (a typical player finishes it on day 8). The full design, every price, shop and sink is in
+half to save (a typical Genin keeps 59%), and the first proper furniture set (325 ryo) takes about an in-game
+week (a typical player finishes it on day 6 to 8). The full design, every price, shop and sink is in
 **[ITEMS.md](ITEMS.md)**.
 
 | Earn (beta) | Ryo | Spend (beta) | Ryo |
 |---|---|---|---|
 | Orphan's stipend (all game) | 30 a day | Ramen, onigiri, tea, dango | 3 to 15 |
 | Part-time jobs (Ichiraku, grocer, flower shop, tea house, Haruno's, furniture deliveries; the forge, bath house, Kinoshita yard and pharmacy from Genin) | 40 to 80 a shift | Kunai, shuriken, smoke and paper bombs | 2 to 30 each |
-| D-rank mission | 60 to 150 | Soldier pill | 60 |
+| D-rank mission (a steady median of 105) | 60 to 150 | Soldier pill | 60 |
 | C-rank mission | 300 to 600 | Furniture | 10 to 900 a piece |
 | Side quests | 10 to 400 | Outfits (rank outfits are given) | 100 to 480 |
 | Festival games | small prizes | Crafting materials (steel, paper, powder) | 1 to 45 |

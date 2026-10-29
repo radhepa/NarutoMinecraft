@@ -100,6 +100,11 @@ public final class EconomySim {
         for (Object meal : list(obj(obj(profile(profile).get("meals"))).get(slice))) total += mealCost((String) meal, slice, day);
         return (int) Math.round(total);
     }
+    /** The packed lunch bought on a day with a mission (economy.json rule_of_thumb.d_rank_day.mission_meal). */
+    public int missionMeal(int day) {
+        String meal = str(obj(obj(eco.get("rule_of_thumb")).get("d_rank_day")).get("mission_meal"), "");
+        return meal.isEmpty() ? 0 : (int) Math.round(mealCost(meal, slice(day), day));
+    }
     /** Thrown tools and medicine a mission of a rank uses up. */
     public int upkeep(String missionRank) {
         double total = 0;
@@ -120,7 +125,7 @@ public final class EconomySim {
         var rule = obj(obj(eco.get("rule_of_thumb")).get("d_rank_day"));
         int missions = integer(rule.get("missions"), 2);
         double income = missions * num(obj(obj(eco.get("missions")).get("d")).get("beta2_mean"), 85);
-        double costs = dailyFood(profile, slice(day), day) + missions * upkeep("d");
+        double costs = dailyFood(profile, slice(day), day) + missionMeal(day) + missions * upkeep("d");
         return (income - costs) / income;
     }
 
@@ -202,9 +207,10 @@ public final class EconomySim {
             if (balance < 2 * usual) food = fallbackFood(day);   // short of ryo, a player eats onigiri until pay comes in
             if (balance >= food) { balance -= food; spent += food; spentBy.merge("food", food, Integer::sum); }
             else { hungry++; spent += balance; spentBy.merge("food", balance, Integer::sum); balance = 0; }
-            int tools = dToday * upkeep("d") + cToday * upkeep("c") + (deathDays.contains(day) ? deathLoss() : 0);
+            int tools = dToday * upkeep("d") + cToday * upkeep("c") + (deathDays.contains(day) ? deathLoss() : 0)
+                    + (dToday + cToday > 0 ? missionMeal(day) : 0);
             int paidTools = Math.min(balance, tools);
-            balance -= paidTools; spent += paidTools; spentBy.merge("tools and medicine", paidTools, Integer::sum);
+            balance -= paidTools; spent += paidTools; spentBy.merge("mission upkeep", paidTools, Integer::sum);
 
             // The wishlist, keeping a few days of food in reserve.
             int reserve = integer(p.get("reserve_days"), 3) * usual;
@@ -327,9 +333,9 @@ public final class EconomySim {
                 sim.starterSetPrice(), String.join(", ", sim.starterSet()));
         System.out.println("Rule of thumb 1, a day of D-ranks leaves (food and upkeep paid):");
         for (String profile : List.of("frugal", "typical", "spender"))
-            System.out.printf("  %-8s %3.0f%% of %d ryo (food %d, upkeep %d a mission)%n", profile, 100 * sim.dRankDayLeft(profile, 20),
-                    2 * integer(obj(obj(catalogue.economy.get("missions")).get("d")).get("beta2_mean"), 85),
-                    sim.dailyFood(profile, "beta2", 20), sim.upkeep("d"));
+            System.out.printf("  %-8s %3.0f%% of %d ryo (food %d and a packed lunch %d, upkeep %d a mission)%n", profile,
+                    100 * sim.dRankDayLeft(profile, 20), 2 * integer(obj(obj(catalogue.economy.get("missions")).get("d")).get("beta2_mean"), 85),
+                    sim.dailyFood(profile, "beta2", 20), sim.missionMeal(20), sim.upkeep("d"));
         System.out.println();
         for (String profile : List.of("frugal", "typical", "spender")) {
             var r = sim.run(profile, seed);

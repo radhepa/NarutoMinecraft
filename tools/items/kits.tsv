@@ -3,9 +3,10 @@
 kit	when	item	count	note
 kit:start	main.ch1 (the apartment)	apartment_key	1	-
 kit:start	main.ch1 (the apartment)	futon	1	The home's bed, already laid out
-kit:start	main.ch1 (the apartment)	mailbox	1	Already on the door
+kit:start	main.ch1 (the apartment)	low_table	1	The flat comes with one (the home session's starter)
+kit:start	main.ch1 (the apartment)	cupboard	1	The flat comes with one
 kit:start	main.ch1 (the apartment)	storage_chest	1	-
-kit:start	main.ch1 (the apartment)	wardrobe_cabinet	1	The flat's wardrobe: your outfits live here
+kit:start	main.ch1 (the apartment)	wardrobe_cabinet	1	The flat's built-in closet (a home fixture): your outfits live here
 kit:start	main.ch1 (the apartment)	cooking_pot	1	Over the flat's little hearth
 kit:start	main.ch1 (the Hokage)	ryo_100	1	The first stipend (30) and a welcome gift (70); the stipend then comes every morning, all game
 kit:start	main.ch1 (Ichiraku)	miso_ramen	1	The instructor's treat
@@ -24,3 +25,7 @@ kit:genin	main.ch9 (the Mission Desk)	ration_bar	4	-
 kit:genin	main.ch7 (graduation)	folded_outfit	1	A Genin outfit of your clan or collection
 kit:chunin	main.ch20 (results, if promoted)	flak_vest	1	-
 kit:chunin	main.ch20 (results, if promoted)	folded_outfit	1	A Chunin outfit of your clan or collection
+kit:start	the creator screen	half_charm	1	The story session's starting key item; it cannot be dropped, sold or stored
+kit:knack.taijutsu	the creator screen (knack: taijutsu)	knuckle_wraps	1	Combat gives the knack its bonus
+kit:knack.weapons	the creator screen (knack: weapons)	practice_kunai	5	A fine-grade set (grade component)
+kit:knack.ninjutsu	the creator screen (knack: ninjutsu)	hand_sign_primer	1	-

@@ -42,3 +42,4 @@ keepsake_clan_kinoshita	Master's Mark Stool	keepsake	clan	any	beta2_5	1	0	quest:
 keepsake_clan_tsuchigumo	Shimenawa Charm	keepsake	clan	any	beta2_5	1	0	quest:clan.tsuchigumo.1	A twist of the shrine's sacred rope	-	icon	block=keepsake
 keepsake_clan_suzuran	Pressed Lily Charm	keepsake	clan	any	beta2_5	1	0	quest:clan.suzuran.1	A lily of the valley pressed in glass	-	icon	block=keepsake
 keepsake_clan_tobari	Muffled Lantern	keepsake	clan	any	beta2_5	1	0	quest:clan.tobari.1	A night-watch lantern with a cloth hood	-	icon	block=keepsake;light=6
+photograph	Photograph	keepsake	photo	any	beta2	16	0	quest	A photograph of a milestone (the squad's first day, a promotion); frame it	-	icon	variant=milestone;block=keepsake;named_by=quest
