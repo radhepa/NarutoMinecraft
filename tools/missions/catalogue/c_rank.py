@@ -4,7 +4,7 @@ Enemy groups are the combat session's ids (`group:` in Shinobi Combat's registry
 ones these templates ask for). In-map places outside the wall are anchors; far places are regions reached
 through the travel desk at the main gate.
 """
-from mkit import (S, anchor, chose, choose, collect, count, craft, deliver, defeat, end, enemy_group, escort,
+from mkit import (S, merchant_camp_talk, MERCHANT_TALK, anchor, chose, choose, collect, count, craft, deliver, defeat, end, enemy_group, escort,
                   go, inspect, mission, one_of, outcome, perform, protect, region, resident, role, sleep, sneak,
                   spawn, suspect_of, survive, talk, twist, twist_if, wait_until)
 
@@ -29,7 +29,9 @@ add(mission(
           branch=[(twist_if("bridge_out"), "detour")]),
         S("detour", escort(C, "slot:ford"), "ambush"),
         S("ambush", defeat("slot:bandits", at="slot:bend"), "camp",
-          on_enter=[{"spawn_group": ["slot:bandits", "slot:bend"]}]),
+          on_enter=[{"spawn_group": ["slot:bandits", "slot:bend"]}],
+          branch=[(MERCHANT_TALK, "merchant_talk")]),
+        merchant_camp_talk("camp"),
         S("camp", sleep("slot:camp"), "last_leg",
           branch=[(twist_if("night_raid"), "raid")],
           on_done=[{"bond_event": ["role:squad", "camp_night"]}]),
@@ -150,7 +152,9 @@ add(mission(
     steps=[
         S("meet", talk(C), "day1"),
         S("day1", protect(C, until="18:00"), "camp",
-          on_enter=[{"spawn_group": ["slot:raiders", "road.east_bend"]}]),
+          on_enter=[{"spawn_group": ["slot:raiders", "place:road.east_bend"]}],
+          branch=[(MERCHANT_TALK, "merchant_talk")]),
+        merchant_camp_talk("camp"),
         S("camp", sleep("slot:camp"), "day2", on_done=[{"bond_event": ["role:squad", "camp_night"]}],
           branch=[(twist_if("inside_job"), "suspect"), (twist_if("sabotage"), "wheel")]),
         S("suspect", inspect("cart_marks", at="slot:camp", count=3), "accuse"),

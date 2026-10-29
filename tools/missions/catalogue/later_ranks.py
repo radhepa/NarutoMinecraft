@@ -45,7 +45,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("prisoner", 2), twist("alarm", 2, harder=True)],
-    bonus=["unseen", "no_alarm", "no_knockouts"], enemies=["combat:group.fort_guards"], regions=["region:hill_fort"],
+    trail_drop={"chance": 0.25, "pool": "journal:trail.roads"}, bonus=["unseen", "no_alarm", "no_knockouts"], enemies=["combat:group.fort_guards"], regions=["region:hill_fort"],
     tags=["stealth", "infiltration", "travel"],
     twist_premises={"prisoner": "A prisoner in the cellar begs to be taken along.",
                     "alarm": "A dog catches your scent on the way out."}))
@@ -165,7 +165,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("they_ambush_first", 2, harder=True, modifier=True), twist("one_surrenders", 1, modifier=True)],
-    fast_hours=36, bonus=["fast", "no_knockouts", "spared"], enemies=["combat:group.rogue_pair"], regions=["region:post_town"],
+    fast_hours=36, trail_drop={"chance": 0.25, "pool": "journal:trail.roads"}, bonus=["fast", "no_knockouts", "spared"], enemies=["combat:group.rogue_pair"], regions=["region:post_town"],
     tags=["travel", "hunt", "fight"],
     twist_premises={"they_ambush_first": "They knew you were coming.",
                     "one_surrenders": "One of them throws down their kunai and asks for a trial at home."}))
@@ -185,7 +185,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("patrol", 2, harder=True), twist("civilian_workers", 1, modifier=True)],
-    bonus=["unseen", "no_alarm", "spared"], enemies=["combat:group.foreign_squad"], regions=["region:border_depot"],
+    trail_drop={"chance": 0.25, "pool": "journal:trail.roads"}, bonus=["unseen", "no_alarm", "spared"], enemies=["combat:group.foreign_squad"], regions=["region:border_depot"],
     tags=["travel", "stealth", "sabotage"],
     twist_premises={"patrol": "A patrol changes its route tonight.",
                     "civilian_workers": "Hired civilians sleep in the depot; get them out first."}))
@@ -206,7 +206,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("spy_a", 1, modifier=True), twist("spy_b", 1, modifier=True), twist("spy_c", 1, modifier=True)],
-    bonus=["unseen", "kind_choice"], regions=["region:post_town"], tags=["travel", "investigation", "talk"],
+    trail_drop={"chance": 0.25, "pool": "journal:trail.roads"}, bonus=["unseen", "kind_choice"], regions=["region:post_town"], tags=["travel", "investigation", "talk"],
     twist_premises={"spy_a": "The rolled spy is the first suspect.", "spy_b": "The rolled spy is the second.",
                     "spy_c": "The rolled spy is the third."}))
 
@@ -261,7 +261,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("hunters", 2, harder=True), twist("cipher", 1, modifier=True)],
-    bonus=["unseen", "fast"], fast_hours=24, enemies=["combat:group.hunter_squad"], regions=["region:allied_village"],
+    trail_drop={"chance": 0.25, "pool": "journal:trail.roads"}, bonus=["unseen", "fast"], fast_hours=24, enemies=["combat:group.hunter_squad"], regions=["region:allied_village"],
     tags=["travel", "courier", "stealth"],
     twist_premises={"hunters": "A hunter squad has been sent to take it from you.",
                     "cipher": "The allies want the draft read aloud in cipher at the gate."}))
@@ -303,6 +303,50 @@ add(mission(
     tags=["travel", "stealth", "recovery", "chain"],
     twist_premises={"copied": "They have already made copies.",
                     "rival_is_family": "The rival workshop belongs to an estranged branch of the same family."}))
+
+add(mission(
+    "mission.b.road_watch", "b", "patrol", minutes=35, days=2, pay=0.45, unlock=CHUNIN,
+    premise="Trouble on the roads: walk the east road to the border and report anything unusual.",
+    client=resident(group="shinobi", rank="jonin"),
+    slots={"road": anchor("road.east_bend"), "waystation": anchor("road.east_waystation"), "post": anchor("border.post"),
+           "trouble": enemy_group("combat:group.road_ambush", "combat:group.smugglers", "combat:group.rogue_pair")},
+    steps=[
+        S("road", inspect("road_signs", at="slot:road", count=3), "waystation",
+          branch=[(twist_if("ambush"), "fight")]),
+        S("fight", defeat("slot:trouble", at="slot:road"), "waystation", on_enter=[{"spawn_group": ["slot:trouble", "slot:road"]}]),
+        S("waystation", talk("innkeeper"), "post",
+          branch=[(twist_if("rumour"), "rumour")]),
+        S("rumour", inspect("abandoned_camp", at="slot:waystation", count=2), "post"),
+        S("post", go("slot:post"), "report"),
+        S("report", talk(C), None),
+    ],
+    twists=[twist("ambush", 2, harder=True), twist("rumour", 2)],
+    trail_drop={"chance": 0.35, "pool": "journal:trail.roads"},
+    bonus=["no_knockouts", "all_found"], enemies=["combat:group.road_ambush", "combat:group.smugglers", "combat:group.rogue_pair"],
+    regions=["region:east_road", "region:border_village"], tags=["road", "patrol", "travel"],
+    twist_premises={"ambush": "Whatever is wrong on the road finds you first.",
+                    "rumour": "The innkeeper saw campfires where nobody should camp."}))
+
+add(mission(
+    "mission.b.false_floors", "b", "investigation", minutes=40, pay=0.5, unlock=CHUNIN,
+    premise="An empty workshop in the east: search an abandoned carpenter's shop in a far region.",
+    client=resident(group="shinobi", rank="jonin"),
+    slots={"shop": anchor("far.workshop"), "cellar": anchor("far.workshop_cellar"),
+           "squatters": enemy_group("combat:group.smugglers", "combat:group.rogue_pair")},
+    steps=[
+        travel("search"),
+        S("search", inspect("workshop", at="slot:shop", count=5), "cellar"),
+        S("cellar", inspect("floorboards", at="slot:cellar", count=3), "report",
+          branch=[(twist_if("occupied"), "fight")]),
+        S("fight", defeat("slot:squatters", at="slot:cellar"), "report", on_enter=[{"spawn_group": ["slot:squatters", "slot:cellar"]}]),
+        S("report", talk(C), None),
+    ],
+    twists=[twist("occupied", 2, harder=True), twist("cold_trail", 1, modifier=True)],
+    trail_drop={"chance": 0.5, "pool": "journal:trail.workshop"},
+    bonus=["unseen", "all_found"], enemies=["combat:group.smugglers", "combat:group.rogue_pair"], regions=["region:far_lands"],
+    tags=["travel", "investigation", "stealth"],
+    twist_premises={"occupied": "Someone is still using the cellar.",
+                    "cold_trail": "Whoever worked here left in a hurry, weeks ago."}))
 
 # --- A rank (Jonin) ----------------------------------------------------------------------------------
 
@@ -420,9 +464,10 @@ add(mission(
 
 add(mission(
     "mission.a.cell_hunt", "a", "hunt", minutes=50, days=2, pay=0.6, unlock=JONIN,
-    premise="Track an enemy cell through a far region and bring it down.",
+    premise="Track a band of rogue ninja in a far region.",
     client=resident(group="council"),
-    slots={"trail": anchor("far.trail"), "lair": anchor("far.lair"), "cell": enemy_group("combat:group.cell_pair")},
+    slots={"far": region("region:far_lands", "region:northern_forest", "region:mountain_pass", "region:coast_town"),
+           "trail": anchor("far.trail"), "lair": anchor("far.lair"), "cell": enemy_group("combat:group.cell_pair")},
     steps=[
         travel("trail"),
         S("trail", inspect("tracks", at="slot:trail", count=5), "lair"),

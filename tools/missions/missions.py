@@ -33,7 +33,7 @@ OBJECTIVES = {"go", "talk", "inspect", "collect", "deliver", "craft", "buy", "de
               "survive", "sneak", "perform", "wait_until", "sleep", "choose"}
 CONDITIONS = {"all", "any", "not", "flag", "rank_at_least", "rank_at_most", "level_at_least", "quest_state",
               "friendship", "clan", "clanless", "time_between", "calendar", "knows_technique", "standing",
-              "squad_cohesion", "twist", "chose", "event_active"}
+              "squad_cohesion", "twist", "chose", "event_active", "client_is"}
 ACTIONS = {"spawn_group", "bond_event", "mission_outcome", "lead", "set_flag", "give_item", "deed", "clan_deed",
            "favor", "shared_moment"}
 RANK_ORDER = {r: i for i, r in enumerate(RANKS)}

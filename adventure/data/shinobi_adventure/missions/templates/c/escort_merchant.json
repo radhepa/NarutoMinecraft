@@ -115,6 +115,37 @@
      ]
     }
    ],
+   "branch": [
+    {
+     "if": {
+      "all": [
+       {
+        "client_is": "role:merchant"
+       },
+       {
+        "flag": "story.ch14.done"
+       }
+      ]
+     },
+     "next": "merchant_talk"
+    }
+   ],
+   "next": "camp"
+  },
+  "merchant_talk": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client",
+    "dialogue": "dlg:mission.chain.merchant.camp_talk"
+   },
+   "on_done": [
+    {
+     "set_flag": [
+      "story.merchant.camp_talks",
+      "+1"
+     ]
+    }
+   ],
    "next": "camp"
   },
   "camp": {

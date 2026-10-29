@@ -152,6 +152,10 @@
   "stealth"
  ],
  "contested": false,
+ "trail_drop": {
+  "chance": 0.25,
+  "pool": "journal:trail.roads"
+ },
  "classic": true,
  "banter": "dlg:mission.banter.courier",
  "_premise": "Carry a treaty draft to an allied village, through land where others would like to read it.",

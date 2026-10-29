@@ -214,6 +214,16 @@ def end(outcome):
     return {"mission_outcome": outcome}
 
 
+# The merchant's camp talk (chain.merchant): one neutral step, the same in every save, on runs where the client
+# is the travelling merchant and after Ch 14. The story session owns what it means.
+MERCHANT_TALK = {"all": [{"client_is": "role:merchant"}, {"flag": "story.ch14.done"}]}
+
+
+def merchant_camp_talk(nxt):
+    return S("merchant_talk", talk("slot:client", dialogue="dlg:mission.chain.merchant.camp_talk"), nxt,
+             on_done=[{"set_flag": ["story.merchant.camp_talks", "+1"]}])
+
+
 # --- the template ---------------------------------------------------------------------------------------
 
 def outcome(pay=1.0, standing=0, acts=(), flags=(), news=None, extra=None):
@@ -241,7 +251,7 @@ def twist(tid, weight=1, harder=False, modifier=False):
 
 def mission(mid, rank, category, *, premise, minutes, steps, client=None, slots=None, party="squad",
             twists=(), outcomes=None, bonus=(), enemies=(), anchors=(), regions=(), unlock=None, pay=0.5,
-            tags=(), fail=None, season=None, event=None, contested=False, chain=None, status=None,
+            tags=(), fail=None, season=None, event=None, contested=False, chain=None, status=None, trail_drop=None,
             classic=True, fast_hours=None, days=None, twist_premises=None, choice_premises=None):
     assert rank in RANKS, mid
     assert party in PARTIES, mid
@@ -290,6 +300,8 @@ def mission(mid, rank, category, *, premise, minutes, steps, client=None, slots=
     t["contested"] = contested
     if chain:
         t["chain"] = chain
+    if trail_drop:
+        t["trail_drop"] = trail_drop
     t["classic"] = classic
     t["banter"] = "dlg:mission.banter." + category
     # English premises for the docs only; the game reads the keys above.
