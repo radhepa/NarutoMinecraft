@@ -1,0 +1,168 @@
+{
+  "id": "core",
+  "name": "Core",
+  "role": "shinobi",
+  "tagline": "The first general ninja wardrobe: the Leaf's standard field kit before the collections expanded it.",
+  "pool": {
+    "hair": [
+      "h02_leaf_spikes",
+      "h04_long_straight",
+      "h05_swept_spikes",
+      "h06_low_ponytail",
+      "h08_short_crop",
+      "h09_high_ponytail"
+    ],
+    "hair_colors": [
+      "RAVEN",
+      "ESPRESSO",
+      "CHESTNUT",
+      "AUBURN",
+      "GINGER",
+      "HONEY",
+      "WHEAT",
+      "ASH_BLONDE",
+      "SILVER"
+    ],
+    "eye_colors": [
+      "DARK",
+      "DARK",
+      "SKY",
+      "JADE"
+    ],
+    "palettes": [
+      "BRAWLER",
+      "GENIN_SCOUT",
+      "GENIN_TRACKER",
+      "JONIN_COMMANDER",
+      "JONIN_FIELD",
+      "JONIN_KUNOICHI",
+      "JONIN_SENTINEL",
+      "KONOHA_JONIN",
+      "KUNOICHI_VIOLET",
+      "SCROLL_BEARER"
+    ],
+    "headwear": [
+      null,
+      null,
+      "w02_forehead_protector",
+      "w02_forehead_protector",
+      "w09_bandana_protector"
+    ],
+    "bottoms": [
+      "b01_shinobi_trousers",
+      "b03_genin_track_pants",
+      "b07_cargo_shorts",
+      "b08_mesh_leggings"
+    ],
+    "complexions": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "outfits": [
+    {
+      "id": "konoha_jonin",
+      "name": "Konoha Flak Vest",
+      "top": "t02_konoha_flak_vest",
+      "bottom": "b01_shinobi_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "KONOHA_JONIN"
+      ]
+    },
+    {
+      "id": "genin_scout",
+      "name": "Scout Hoodie",
+      "top": "t13_scout_hoodie",
+      "bottom": "b07_cargo_shorts",
+      "rank": "genin",
+      "palettes": [
+        "GENIN_SCOUT"
+      ]
+    },
+    {
+      "id": "genin_brawler",
+      "name": "Brawler Vest",
+      "top": "t14_brawler_vest",
+      "bottom": "b01_shinobi_trousers",
+      "rank": "genin",
+      "palettes": [
+        "BRAWLER"
+      ]
+    },
+    {
+      "id": "genin_kunoichi",
+      "name": "Kunoichi Tunic",
+      "top": "t15_kunoichi_tunic",
+      "bottom": "b08_mesh_leggings",
+      "rank": "genin",
+      "palettes": [
+        "KUNOICHI_VIOLET"
+      ]
+    },
+    {
+      "id": "genin_tracker",
+      "name": "Tracker Zip Vest",
+      "top": "t16_tracker_zip_vest",
+      "bottom": "b03_genin_track_pants",
+      "rank": "genin",
+      "palettes": [
+        "GENIN_TRACKER"
+      ]
+    },
+    {
+      "id": "genin_scroll",
+      "name": "Scroll Bearer",
+      "top": "t17_scroll_bearer",
+      "bottom": "b01_shinobi_trousers",
+      "rank": "genin",
+      "palettes": [
+        "SCROLL_BEARER"
+      ]
+    },
+    {
+      "id": "jonin_sentinel",
+      "name": "Sentinel Vest",
+      "top": "t18_sentinel_vest",
+      "bottom": "b01_shinobi_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "JONIN_SENTINEL"
+      ]
+    },
+    {
+      "id": "jonin_field",
+      "name": "Field Vest",
+      "top": "t19_field_vest",
+      "bottom": "b01_shinobi_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "JONIN_FIELD"
+      ]
+    },
+    {
+      "id": "jonin_kunoichi",
+      "name": "Kunoichi Jonin",
+      "top": "t20_kunoichi_jonin",
+      "bottom": "b08_mesh_leggings",
+      "rank": "jonin",
+      "palettes": [
+        "JONIN_KUNOICHI"
+      ]
+    },
+    {
+      "id": "jonin_commander",
+      "name": "Commander Coat",
+      "top": "t21_commander_coat",
+      "bottom": "b01_shinobi_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "JONIN_COMMANDER"
+      ]
+    }
+  ]
+}

@@ -119,19 +119,35 @@ def ramp(base: str, dark: float = 1.0, light: float = 1.0) -> list[str]:
     return out
 
 
+def load_groups(folder: str) -> dict:
+    return {c["id"]: c for c in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((TOOL / folder).glob("*.json")))}
+
+
 def load_clans() -> dict:
     """Every tools/wardrobe/clans/*.json by id: the clan's mixing pools, outfit templates and the
     palettes, hair colors, eye colors and face marks it defines. See CLANS.md."""
-    return {c["id"]: c for c in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((TOOL / "clans").glob("*.json")))}
+    return load_groups("clans")
+
+
+def load_collections() -> dict:
+    """Every tools/wardrobe/collections/*.json by id: the general ninja wardrobe, in the clan file's
+    schema. Clanless residents mix across all of them at once (general_resident). See CLANS.md."""
+    return load_groups("collections")
+
+
+def load_all_groups() -> list[tuple[str, dict]]:
+    """("clan", file) and ("collection", file) pairs, for the checks and tables both share."""
+    return [("clan", c) for c in load_clans().values()] + [("collection", c) for c in load_collections().values()]
 
 
 def with_clans(src: dict, field: str) -> dict:
-    """A shared table plus the entries every clan file adds to it; an id may only be defined once."""
+    """A shared table plus the entries every clan and collection file adds to it; an id may only be
+    defined once."""
     merged = dict(src)
-    for cid, clan in load_clans().items():
+    for what, clan in load_all_groups():
         for key, value in clan.get(field, {}).items():
             if key in merged:
-                raise ValueError(f"clan {cid} redefines {field} {key}")
+                raise ValueError(f"{what} {clan['id']} redefines {field} {key}")
             merged[key] = value
     return merged
 
@@ -582,6 +598,7 @@ def catalog(garments: dict) -> dict:
     data["characters"] = load_characters()
     data["marks"] = load_marks()
     data["clans"] = list(load_clans().values())
+    data["collections"] = list(load_collections().values())
     return data
 
 
@@ -604,7 +621,7 @@ EYE_STYLES = ("starlit", "soft_glint")   # the Living Eyes styles, see living_ey
 BROWS = ("fine", "bold")
 # The career ladder of the living village: every character is dressed for one rank. Signature
 # characters are one-off looks; the rest are role outfits the village mixes onto residents.
-RANKS = ("academy", "genin", "chunin", "jonin", "anbu", "kage")
+RANKS = ("academy", "genin", "chunin", "jonin", "anbu", "kage", "civilian")
 CHARACTER_SLOTS = {"face": "faces", "hair": "hair", "headwear": "headwear", "top": "tops", "bottom": "bottoms"}
 
 
@@ -665,8 +682,9 @@ POOL_KINDS = {"hair": "hair", "headwear": "headwear", "bottoms": "bottoms"}
 
 def validate_clans(garments: dict, palettes: dict, hairs: dict, eyes: dict, marks: dict) -> list[str]:
     errors = []
-    for cid, clan in load_clans().items():
-        pool, where = clan.get("pool", {}), f"clan {cid}"
+    for what, clan in load_all_groups():
+        cid = clan["id"]
+        pool, where = clan.get("pool", {}), f"{what} {cid}"
         for field, kind in POOL_KINDS.items():
             for gid in pool.get(field, []):
                 if gid is None and field == "headwear":
@@ -701,6 +719,16 @@ def validate_clans(garments: dict, palettes: dict, hairs: dict, eyes: dict, mark
                 errors.append(f"{where} outfit {oid} rank must be one of {', '.join(RANKS)}")
         if not clan.get("outfits"):
             errors.append(f"{where} needs outfits")
+        if what == "collection" and clan.get("role", "shinobi") not in ROLES:
+            errors.append(f"{where} role must be one of {', '.join(ROLES)}")
+        if what == "clan" and clan.get("standing", "noble") not in ("noble", "minor"):
+            errors.append(f"{where} standing must be noble or minor")
+    pop = load_population()
+    for cid in load_clans():
+        if cid not in pop["clans"]:
+            errors.append(f"clan {cid} has no weight in population.json")
+    if not pop.get("family_names"):
+        errors.append("population.json needs family_names")
     return errors
 
 
@@ -741,10 +769,71 @@ def clan_resident(clan: dict, garments: dict, seed: int, outfit: int | None = No
             "palette": rng.choice(o.get("palettes", pool["palettes"])), "hair_color": rng.choice(pool["hair_colors"]),
             "eye_color": rng.choice(pool["eye_colors"]), "eye_style": rng.choice(EYE_STYLES),
             "feminine": gender == "female", "complexion": rng.choice(pool.get("complexions", [0, 1, 2])),
-            "rank": o.get("rank", "genin"), "scale": 14, "clan": clan["id"]}
+            "rank": o.get("rank", "genin"), "scale": 14}
+    if clan["id"] != "general":
+        spec["clan"] = clan["id"]
     marks = [m["id"] for m in pool.get("marks", []) if rng.random() < m["chance"]]
     if marks:
         spec["marks"] = marks
+    return spec
+
+
+ROLES = ("shinobi", "civilian")
+
+
+def general_pool(role: str = "shinobi") -> dict:
+    """Every collection of one role merged into one clanless group: a resident may wear one
+    collection's top with another's bottom and a third's hairstyle, so the general wardrobe mixes as
+    a whole. Civilians dress from the civilian collections but wear the shinobi hairstyles too."""
+    merged = {"id": "general", "name": "Hidden Leaf", "pool": {}, "outfits": []}
+    for c in load_collections().values():
+        mine = c.get("role", "shinobi") == role
+        if not mine and not (role == "civilian" and c.get("role", "shinobi") == "shinobi"):
+            continue
+        for field, values in c.get("pool", {}).items():
+            if not mine and field != "hair":
+                continue
+            have = merged["pool"].setdefault(field, [])
+            have += values if field in ("headwear", "marks") else [v for v in values if v not in have]
+        if mine:
+            merged["outfits"] += c.get("outfits", [])
+    return merged
+
+
+def general_resident(garments: dict, seed: int, role: str = "shinobi") -> dict:
+    """One clanless resident of the Hidden Leaf, mixed across every collection of a role."""
+    return clan_resident(general_pool(role), garments, seed)
+
+
+def load_population() -> dict:
+    """tools/wardrobe/population.json: how often each kind of resident appears. See CLANS.md."""
+    return json.loads((TOOL / "population.json").read_text(encoding="utf-8"))
+
+
+def population_weights() -> list[tuple[str, float]]:
+    """("civilian" | "clanless" | clan id, weight) for every group that exists: a clan or role whose
+    files have not landed yet is skipped and the rest renormalise."""
+    pop, clans = load_population(), load_clans()
+    roles = {c.get("role", "shinobi") for c in load_collections().values()}
+    groups = [(g, pop[g]) for g, role in (("civilian", "civilian"), ("clanless", "shinobi")) if role in roles]
+    return groups + [(cid, w) for cid, w in pop["clans"].items() if cid in clans]
+
+
+def village_resident(garments: dict, seed: int) -> dict:
+    """Any resident of the Hidden Leaf, drawn by population weight: most are civilians or clanless
+    shinobi with ordinary family names; the noble clans are rare."""
+    import random
+    rng = random.Random(f"village:{seed}")
+    groups = population_weights()
+    group = rng.choices([g for g, _ in groups], weights=[w for _, w in groups])[0]
+    if group in ("civilian", "clanless"):
+        spec = general_resident(garments, seed, "civilian" if group == "civilian" else "shinobi")
+        spec["family"] = rng.choice(load_population()["family_names"])
+        spec["role"] = "civilian" if group == "civilian" else "shinobi"
+    else:
+        spec = clan_resident(load_clans()[group], garments, seed)
+        spec["role"] = "shinobi"
+    spec["id"] = f"village_{seed}"
     return spec
 
 

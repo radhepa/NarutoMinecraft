@@ -42,15 +42,15 @@
     "semantic_hash": ""
   },
   "tools/wardrobe/render.py": {
-    "mtime": 1793299053.1111307,
-    "seen": 1793301501.169769,
-    "ast_hash": "1b525e283b3c9711013c77976cd43436",
+    "mtime": 1793301718.496776,
+    "seen": 1793301773.3850036,
+    "ast_hash": "97bb1b39116ec85f6fad86a98e731cd1",
     "semantic_hash": ""
   },
   "tools/wardrobe/wardrobe.py": {
-    "mtime": 1793299032.34369,
-    "seen": 1793301501.16977,
-    "ast_hash": "eb8c3afab65699feab78a5d31eaad9f4",
+    "mtime": 1793301730.3394928,
+    "seen": 1793301773.3850052,
+    "ast_hash": "aab25bb012ef93ca257f94fa9ca196fa",
     "semantic_hash": ""
   },
   "README.md": {
@@ -60,9 +60,9 @@
     "semantic_hash": ""
   },
   "CLANS.md": {
-    "mtime": 1793299886.2915547,
-    "seen": 1793301501.1697712,
-    "ast_hash": "c6951b066f8a3460bbb6faaa0471abbd",
+    "mtime": 1793301769.300427,
+    "seen": 1793301773.3850064,
+    "ast_hash": "633598775a3686ee3f11cdfc6ab545a9",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
