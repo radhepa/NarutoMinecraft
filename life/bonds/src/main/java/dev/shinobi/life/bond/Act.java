@@ -72,7 +72,7 @@ public enum Act {
     FOLLOWED_ORDERS(def(Size.SMALL, 45).meters(0, 2, 0.5, 0).honors(Value.DUTY).lean(Trait.DISCIPLINE, Meter.TRUST, 1)),
     RANK_UP(def(Size.BIG, 0).meters(0.5, 0, 3.5, 0).deed(8).lean(Trait.PRIDE, Meter.RIVALRY, 2.5)),
     HELPED_RESIDENT(def(Size.SMALL, 60).meters(2, 2, 0.5, 0).honors(Value.KINDNESS).deed(5)),
-    SAVED_THE_VILLAGE(def(Size.BIG, 0).meters(4, 4, 6, 0).honors(Value.COURAGE, Value.DUTY).deed(40).lived()),
+    SAVED_THE_VILLAGE(def(Size.BIG, 0).meters(4, 4, 6, 0).honors(Value.COURAGE, Value.DUTY).deed(90).lived().forgives()),
     DEFENDED_VILLAGE(def(Size.NOTABLE, 120).meters(2.5, 2.5, 3.5, 0).honors(Value.COURAGE, Value.DUTY).deed(12)),
     APOLOGIZED(def(Size.SMALL, 30).meters(1, 1, 0, 0)),
     ANSWERED(def(Size.NOTABLE, 120).meters(0.5, 0.5, 0, 0)),
@@ -129,6 +129,8 @@ public enum Act {
     public final boolean moment, quarrel, romantic, spreads, professional;
     /** A deed the whole village lived through: everyone knows it firsthand the day it happens. */
     public final boolean lived;
+    /** A deed so great the village lets go of the player's old bad deeds (memories stay; standing forgives). */
+    public final boolean forgives;
     /** Standing it is worth to the communities that hear of it; 0 for a private act. */
     public final int worth;
     public final Set<Value> honors, violates;
@@ -137,7 +139,7 @@ public enum Act {
 
     Act(Def d) {
         size = d.size; halfLife = d.size == Size.BIG ? 0 : d.halfLife; base = d.base; warmth = d.warmth; experience = d.exp;
-        moment = d.moment; quarrel = d.quarrel; romantic = d.romantic; professional = d.professional; lived = d.lived; worth = d.worth; spreads = d.spreads || d.worth != 0;
+        moment = d.moment; quarrel = d.quarrel; romantic = d.romantic; professional = d.professional; lived = d.lived; forgives = d.forgives; worth = d.worth; spreads = d.spreads || d.worth != 0;
         honors = Set.copyOf(d.honors); violates = Set.copyOf(d.violates); peeve = d.peeve; leans = List.copyOf(d.leans);
     }
     public String id() { return name().toLowerCase(Locale.ROOT); }
@@ -149,7 +151,7 @@ public enum Act {
 
     private static Def def(Size size, int halfLife) { return new Def(size, halfLife); }
     private static final class Def {
-        final Size size; final int halfLife; Meters base = Meters.ZERO; double warmth; Experience exp; boolean moment, quarrel, romantic, spreads, professional, lived;
+        final Size size; final int halfLife; Meters base = Meters.ZERO; double warmth; Experience exp; boolean moment, quarrel, romantic, spreads, professional, lived, forgives;
         int worth; final EnumSet<Value> honors = EnumSet.noneOf(Value.class), violates = EnumSet.noneOf(Value.class);
         Peeve peeve; final java.util.ArrayList<Lean> leans = new java.util.ArrayList<>();
         Def(Size size, int halfLife) { this.size = size; this.halfLife = halfLife; }
@@ -163,6 +165,7 @@ public enum Act {
         Def romantic() { romantic = true; return this; }
         Def spreads() { spreads = true; return this; }
         Def lived() { lived = true; return this; }
+        Def forgives() { forgives = true; return this; }
         Def deed(int w) { worth = w; return this; }
         Def honors(Value... v) { honors.addAll(List.of(v)); return this; }
         Def violates(Value... v) { violates.addAll(List.of(v)); return this; }

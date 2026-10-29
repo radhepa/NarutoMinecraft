@@ -692,10 +692,12 @@ Good Neighbor in every district and clan quarter):
 | 60 h: village (after the finale) | Hero in 5 of 5 | Hero in 5 of 5 | Hero in 5 of 5 |
 | Good Neighbor everywhere | 5 of 5 at 45 h and 60 h | 5 of 5 at 45 h and 60 h | 3 of 5 at 45 h, 5 of 5 at 60 h |
 
-The story ends the last arc with `saved_the_village` (a deed worth 40 that the whole village lives
-through: everyone knows it firsthand at once), so every player who finishes reaches Hero with the
-village; the simulation fires it at the end. Before it, at 60 h: devoted 38 to 40, typical 37 to
-39, reckless 20 to 23. After it: devoted 45 to 46, typical 44 to 45, reckless 36 to 37 (Hero is 35).
+The story ends the last arc with `saved_the_village` (a deed worth 90 that the whole village lives
+through: everyone knows it firsthand at once). It also forgives old bad news: earlier bad deeds stop
+weighing on standing (memories stay). Even with nothing else to their name, a player who saved the
+village scores 40(1 - e^(-90/40)) = 35.8, so everyone who finishes reaches Hero with the village and
+level 50 is the Hokage's real filter. Before it, at 60 h: devoted 38 to 40, typical 37 to 39,
+reckless 20 to 23. After it: devoted 47 to 48, typical 46 to 47, reckless 42 (Hero is 35).
 
 Run `./gradlew :life:bonds:simulate` for the full tables, or `-Pexplain=role:teammate_a` to see
 where one bond's meters come from. `TimeAndPacingTest` holds these targets on five seeds.

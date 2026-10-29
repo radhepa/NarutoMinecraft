@@ -337,6 +337,7 @@ public final class BondWorld {
     public Deed deedOf(int serial) { return deeds.stream().filter(d -> d.serial == serial).findFirst().orElse(null); }
     /** A deed: whoever it was about lived it, the witnesses saw it, and from them word spreads. */
     public Deed deed(Act act, String about, Collection<String> witnesses) {
+        if (act.forgives) for (var old : deeds) if (!old.good()) old.forgiven = true;
         var d = new Deed(nextSerial++, act, day, about);
         deeds.add(d);
         if (village != null) village.onDeed(d);

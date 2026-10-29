@@ -288,9 +288,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Act.java": {
-    "mtime": 1793310981.6534512,
-    "seen": 1793311022.9152713,
-    "ast_hash": "abd0dc911e96ade68e0d3b363cf6bb9a",
+    "mtime": 1793311072.7422984,
+    "seen": 1793311122.2660286,
+    "ast_hash": "e4293eac1dca6070d0749093fb27e6a7",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Bond.java": {
@@ -336,9 +336,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondWorld.java": {
-    "mtime": 1793310981.6545029,
-    "seen": 1793311022.9152968,
-    "ast_hash": "49cc22ebaa90677cb9087e3acec4c9d9",
+    "mtime": 1793311072.7426841,
+    "seen": 1793311122.2660677,
+    "ast_hash": "8704065fa34d7cf28875648d83f7ffca",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/ClanProfile.java": {
@@ -366,9 +366,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Deed.java": {
-    "mtime": 1793307753.5893254,
-    "seen": 1793310895.6853437,
-    "ast_hash": "92cd7d447d9e1306961cad0083958bd4",
+    "mtime": 1793311072.7397895,
+    "seen": 1793311122.2660863,
+    "ast_hash": "066096c9bda97649dcfc6c6942a14718",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Gossip.java": {
@@ -444,9 +444,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/SaveFormat.java": {
-    "mtime": 1793308940.2078872,
-    "seen": 1793310895.6853714,
-    "ast_hash": "fac8b0fff44eaebab21026bdf2d5d5d9",
+    "mtime": 1793311072.7406468,
+    "seen": 1793311122.266139,
+    "ast_hash": "b9c9ff1d3ebad7dcbb1f7b5b4e29943f",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Seeds.java": {
@@ -510,9 +510,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/GossipTest.java": {
-    "mtime": 1793311001.0149314,
-    "seen": 1793311022.9153607,
-    "ast_hash": "8be33d4f2023164449385b11c384dcdd",
+    "mtime": 1793311087.6009958,
+    "seen": 1793311122.2661803,
+    "ast_hash": "2a47cf5d757fb2c5cb5977f8030dcebe",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/KindlingAndBookTest.java": {
@@ -594,9 +594,9 @@
     "semantic_hash": ""
   },
   "BONDS.md": {
-    "mtime": 1793311001.0217395,
-    "seen": 1793311022.9156587,
-    "ast_hash": "b984a9a583a1a0e6bf69a3cdc243b7db",
+    "mtime": 1793311113.3524976,
+    "seen": 1793311122.2667546,
+    "ast_hash": "3ea0f957b5e60f2d9b748486c50b92b3",
     "semantic_hash": ""
   },
   "SIDE_QUESTS.md": {

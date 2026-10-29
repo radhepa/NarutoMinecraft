@@ -28,6 +28,8 @@ public final class Deed {
     final Map<String, Know> knowers = new TreeMap<>();
     /** Days in a row nobody new heard it: after {@link Gossip#DIES_DOWN} the news has died down and stops spreading. */
     int quiet;
+    /** A bad deed the village let go of (after {@link Act#SAVED_THE_VILLAGE}): remembered, but no longer weighing on standing. */
+    boolean forgiven;
 
     Deed(int serial, Act act, long day, String about) { this.serial = serial; this.act = act; this.day = day; this.about = about == null ? "" : about; }
 
@@ -36,11 +38,12 @@ public final class Deed {
     public long day() { return day; }
     public String about() { return about; }
     public String note() { return note; }
+    public boolean forgiven() { return forgiven; }
     public boolean knows(String id) { return knowers.containsKey(id); }
     public Know know(String id) { return knowers.get(id); }
     public Map<String, Know> knowers() { return Map.copyOf(knowers); }
     public boolean good() { return act.worth > 0 || act.worth == 0 && act.base.sumOfLosses() == 0; }
     public boolean fresh(long today) { return today - day <= (good() ? GOOD_WINDOW : BAD_WINDOW); }
     /** How much it still weighs on standing: good deeds never fade; bad deeds fade by half every 28 days. */
-    public double fade(long today) { return good() ? 1 : Math.pow(.5, Math.max(0, today - day) / (double) BAD_WINDOW); }
+    public double fade(long today) { return good() ? 1 : forgiven ? 0 : Math.pow(.5, Math.max(0, today - day) / (double) BAD_WINDOW); }
 }
