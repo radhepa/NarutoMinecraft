@@ -27,10 +27,12 @@ Filler is welcome (the user asked for it), but even filler says something about 
 
 - Names: `{name:<role>}`, `{given:<role>}`, `{family:<role>}`, `{hokage:<n>}`, `{player}`. Never a
   literal name from the pools.
-- Pronouns for rolled-look roles and the player: `{they:<role>}`, `{them:<role>}`,
-  `{their:<role>}`, `{theirs:<role>}`, `{themself:<role>}`, plus verb agreement helpers
-  (`{is:<role>}`, `{was:<role>}`, `{s:<role>}`), requested from the dialogue and character-creation
-  sessions. Fixed-look roles have fixed pronouns ([WORLD.md](WORLD.md#conventions)).
+- Pronouns for rolled-look roles and the player (dialogue session's tokens): `{they:<ref>}`,
+  `{them:<ref>}`, `{their:<ref>}`, `{theirs:<ref>}`, `{themself:<ref>}`, and agreeing verbs `{is:<ref>}`,
+  `{has:<ref>}`, `{was:<ref>}` and the suffix `{s:<ref>}` ("{they:role:x} walk{s:role:x}"). The player is
+  a ref too (`{they:player}`). Pets: `{pet:<ref>}`. Fixed-look roles have fixed pronouns
+  ([WORLD.md](WORLD.md#conventions)).
+- Answers: each `ans.<role>.<topic>` flag maps to the question format's `sets:`.
 - The player's nursery number is the word **"Nine"**: it is written literally (it is not a name),
   and only in lines the gates below allow.
 
