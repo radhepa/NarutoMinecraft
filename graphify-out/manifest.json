@@ -238,5 +238,11 @@
     "seen": 1793303284.6322198,
     "ast_hash": "1641523af365a5d76faf6b2b36dd1f4a",
     "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_household.py": {
+    "mtime": 1793303375.007459,
+    "seen": 1793303387.4020808,
+    "ast_hash": "c97406c0981955c1398edc0d477a5871",
+    "semantic_hash": ""
   }
 }

@@ -1,28 +1,28 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 40 files · ~67,521 words
+- 41 files · ~70,135 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 3 file(s) not represented in the graph (top: (none) 3)
 
 ## Summary
-- 918 nodes · 1921 edges · 57 communities (55 shown, 2 thin omitted)
+- 967 nodes · 2014 edges · 70 communities (54 shown, 16 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 73 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ce876a3d`
+- Built from commit: `9767e14b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - kit_tsuchigumo.py
-- kit_shinobi.py
+- How the pieces work
 - Clans
 - kit_senju.py
 - render.py
 - living_eyes.py
-- kit_academy.py
+- solid
 - Story bible
 - kit_kurama.py
 - rnd
@@ -36,16 +36,16 @@
 - stamp
 - kit_hyuga.py
 - kit_nara.py
-- kit_kunoichi.py
-- kit_tobari.py
+- kit_household.py
+- kit_shinobi.py
 - Garment
-- kit_sarutobi.py
-- glyphs.py
+- flaps
+- kit_shimura.py
 - arm_bone
 - kit_yamanaka.py
 - kit_hagane.py
 - rnd
-- solid
+- kit_uchiha.py
 - 5. Data formats built for the whole story
 - kit_field.py
 - outputs
@@ -66,34 +66,47 @@
 - rot_matrix
 - build
 - Box
-- spike
-- paint.py
-- ring_shell
+- jika_tabi
+- shade
+- kit_morino.py
 - kit_specialist.py
-- bandage
-- hood_down
+- anime.py
+- curtain
 - curls_face
+- leg_cloth
+- mandarin_collar
+- bands
+- geta
+- ichimatsu
+- kasuri
+- overlap
+- topknot
+- tabi
+- brush_pin
+- coat_skirts
+- herb_pouch
+- sash
 
 ## God Nodes (most connected - your core abstractions)
-1. `k()` - 176 edges
-2. `solid()` - 120 edges
-3. `fabric()` - 91 edges
-4. `strip_fabric()` - 43 edges
+1. `k()` - 185 edges
+2. `solid()` - 123 edges
+3. `fabric()` - 96 edges
+4. `strip_fabric()` - 51 edges
 5. `stamp()` - 40 edges
-6. `Shared helpers` - 33 edges
-7. `cel_box()` - 32 edges
-8. `rnd()` - 31 edges
-9. `arm_bone()` - 28 edges
-10. `arm_x()` - 27 edges
+6. `cel_box()` - 34 edges
+7. `rnd()` - 33 edges
+8. `Shared helpers` - 33 edges
+9. `arm_bone()` - 30 edges
+10. `arm_x()` - 29 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Shared helpers` --references--> `wraps()`  [INFERRED]
-  CLANS.md → tools/wardrobe/kit_shinobi.py
 - `Code by mod` --references--> `render()`  [INFERRED]
   ROADMAP.md → tools/wardrobe/render.py
 - `Shared helpers` --references--> `cel_box()`  [INFERRED]
   CLANS.md → tools/wardrobe/anime.py
 - `Shared helpers` --references--> `spike()`  [INFERRED]
+  CLANS.md → tools/wardrobe/anime.py
+- `Shared helpers` --references--> `bangs()`  [INFERRED]
   CLANS.md → tools/wardrobe/anime.py
 - `Shared helpers` --references--> `ring_shell()`  [INFERRED]
   CLANS.md → tools/wardrobe/anime.py
@@ -101,15 +114,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (57 total, 2 thin omitted)
+## Communities (70 total, 16 thin omitted)
 
 ### Community 0 - "kit_tsuchigumo.py"
-Cohesion: 0.15
-Nodes (7): drawn_line(), glyph(), spider_crest(), thread_spool(), threads(), web(), web_hem()
+Cohesion: 0.14
+Nodes (8): drawn_line(), glyph(), spider_crest(), thread_spool(), threads(), web(), web_hem(), line()
 
-### Community 1 - "kit_shinobi.py"
-Cohesion: 0.13
-Nodes (7): anbu_arms(), anbu_plates(), flak_vest(), mesh(), sandals(), tanto(), wraps()
+### Community 1 - "How the pieces work"
+Cohesion: 0.22
+Nodes (5): How the pieces work, mesh(), tanto(), bump(), ears()
 
 ### Community 2 - "Clans"
 Cohesion: 0.13
@@ -127,9 +140,9 @@ Nodes (18): backdrop(), Canvas, Character, clan_renders(), composite(), cube_qua
 Cohesion: 0.16
 Nodes (21): blend(), blush(), brow(), brow_top(), eye_top(), fit(), hex_rgb(), lash() (+13 more)
 
-### Community 6 - "kit_academy.py"
-Cohesion: 0.10
-Nodes (10): drawstrings(), holster(), hood_down(), ribbed(), sash(), shin_wraps(), side_stripe(), stripes() (+2 more)
+### Community 6 - "solid"
+Cohesion: 0.05
+Nodes (24): drawstrings(), holster(), hood_down(), ribbed(), sash(), shin_wraps(), side_stripe(), sleeve_roll() (+16 more)
 
 ### Community 7 - "Story bible"
 Cohesion: 0.06
@@ -141,23 +154,23 @@ Nodes (12): back_crest(), bead_clip(), brush_stroke(), bun(), ink_clouds(), part
 
 ### Community 9 - "rnd"
 Cohesion: 0.13
-Nodes (7): claw_marks(), fang(), fang_small(), fur_box(), fur_edge(), fur_face(), paw()
+Nodes (7): burst(), claw_marks(), fang(), fang_small(), fur_box(), fur_face(), paw()
 
 ### Community 10 - "kit_yuhi.py"
 Cohesion: 0.06
-Nodes (18): arm_crest(), back_crest(), chest_crest(), circle(), frog_clasps(), kimono_trim(), bandage_turns(), mist_swirls() (+10 more)
+Nodes (20): arm_crest(), back_crest(), chest_crest(), circle(), frog_clasps(), kimono_trim(), wave_lock(), bandage_turns() (+12 more)
 
 ### Community 11 - "k"
-Cohesion: 0.15
-Nodes (12): belt(), collar(), flaps(), footwear(), obi(), legs(), neckline(), pouch() (+4 more)
+Cohesion: 0.09
+Nodes (18): belt(), collar(), footwear(), arm_warmers(), frog_buttons(), mandarin_collar(), obi(), shin_wrap() (+10 more)
 
 ### Community 12 - "kit_aburame.py"
 Cohesion: 0.18
 Nodes (4): deep_hood(), high_collar(), hood_down(), lenses()
 
 ### Community 13 - "fabric"
-Cohesion: 0.15
-Nodes (9): How the pieces work, head_cloth(), forehead_protector(), beak(), bump(), ears(), plate(), strap() (+1 more)
+Cohesion: 0.13
+Nodes (9): back_crest(), crest(), back_crest(), arm_protector(), protector_plate(), beak(), plate(), strap() (+1 more)
 
 ### Community 14 - "kit_suzuran.py"
 Cohesion: 0.11
@@ -168,40 +181,44 @@ Cohesion: 0.12
 Nodes (17): 7. Systems in the beta, Adventure rules, Character creation, Combat in the beta, Death, Food, Friendship and bonds, Gear and crafting (+9 more)
 
 ### Community 16 - "strip_fabric"
-Cohesion: 0.12
-Nodes (8): leg_cloth(), waist(), body(), vest(), tabi(), gloves(), sleeves(), strip_fabric()
+Cohesion: 0.10
+Nodes (11): waist(), body(), arm_cloth(), cloth_shoes(), trouser_legs(), waist(), gloves(), sandals() (+3 more)
 
 ### Community 17 - "stamp"
-Cohesion: 0.11
-Nodes (10): stamp(), back_crest(), decal(), shoulder_decal(), slanted_protector(), white_fang_tanto(), crest(), back_crest() (+2 more)
+Cohesion: 0.10
+Nodes (12): stamp(), decal(), shoulder_decal(), slanted_protector(), white_fang_tanto(), crest(), crest_patch(), flame_hem() (+4 more)
 
 ### Community 18 - "kit_hyuga.py"
-Cohesion: 0.12
-Nodes (9): curtain(), tie(), back_sheet(), blunt_fringe(), gathered_tail(), hair_tie(), hime_locks(), parted_fringe() (+1 more)
+Cohesion: 0.17
+Nodes (7): bangs(), tie(), blunt_fringe(), gathered_tail(), hair_tie(), parted_fringe(), wrap_front()
 
 ### Community 19 - "kit_nara.py"
-Cohesion: 0.19
-Nodes (6): arm_protector(), back_crest(), crest(), mesh_shirt(), net(), protector_plate()
+Cohesion: 0.22
+Nodes (5): back_crest(), crest(), mesh_shirt(), net(), tuft()
 
-### Community 20 - "kit_kunoichi.py"
+### Community 20 - "kit_household.py"
 Cohesion: 0.12
-Nodes (7): arm_warmers(), frog_buttons(), mandarin_collar(), shin_wrap(), tabi_boots(), thigh_holster(), wrap_front()
+Nodes (8): blossom(), checks(), collar_band(), dots(), socks(), sprigs(), stripes(), trim()
 
-### Community 21 - "kit_tobari.py"
-Cohesion: 0.12
-Nodes (9): shirt(), shirt(), decal(), lantern(), lantern_tag(), plain_body(), shin_wraps(), split_toe_boots() (+1 more)
+### Community 21 - "kit_shinobi.py"
+Cohesion: 0.10
+Nodes (11): shirt(), anbu_arms(), anbu_plates(), flak_vest(), hood_down(), lantern_tag(), mantle(), plain_body() (+3 more)
 
 ### Community 22 - "Garment"
 Cohesion: 0.24
 Nodes (3): compatible(), Garment, key_rgba()
 
-### Community 23 - "kit_sarutobi.py"
-Cohesion: 0.22
-Nodes (5): beard(), crest(), crest_patch(), flame_hem(), monkey()
+### Community 23 - "flaps"
+Cohesion: 0.33
+Nodes (4): flaps(), robe_skirt(), skirt(), side_panels()
+
+### Community 24 - "kit_shimura.py"
+Cohesion: 0.18
+Nodes (5): forearm_wraps(), back_crest(), bandaged_arm(), cane(), bandage()
 
 ### Community 25 - "arm_bone"
-Cohesion: 0.09
-Nodes (15): sleeve_roll(), arm_bone(), arm_x(), arm_guards(), kimono_sleeves(), kimono_sleeves(), armband(), armband() (+7 more)
+Cohesion: 0.11
+Nodes (13): sode(), arm_bone(), arm_x(), arm_guards(), wide_sleeves(), kimono_sleeves(), kimono_sleeves(), kimono_sleeves() (+5 more)
 
 ### Community 26 - "kit_yamanaka.py"
 Cohesion: 0.20
@@ -212,24 +229,24 @@ Cohesion: 0.21
 Nodes (5): bracers(), harness(), mace(), plate(), shin_guards()
 
 ### Community 28 - "rnd"
-Cohesion: 0.14
-Nodes (10): clipped(), combed_back(), ink_stains(), seal_trim(), hair_box(), hair_face(), hair_shade(), rnd() (+2 more)
+Cohesion: 0.15
+Nodes (9): fur_edge(), ink_stains(), seal_trim(), cloth_shade(), hair_box(), hair_face(), hair_shade(), rnd() (+1 more)
 
-### Community 29 - "solid"
-Cohesion: 0.06
-Nodes (18): waist_pouch(), collar(), mandarin_collar(), face_mask(), kimono_sleeves(), obi(), brush_pin(), coat_skirts() (+10 more)
+### Community 29 - "kit_uchiha.py"
+Cohesion: 0.16
+Nodes (7): arm_crest(), back_crest(), chest_crest(), crest(), high_collar(), lamellar(), police_badge()
 
 ### Community 30 - "5. Data formats built for the whole story"
 Cohesion: 0.15
 Nodes (13): 5. Data formats built for the whole story, Authoring tools, Board missions, Chapters and arcs, Conditions and actions, Names rolled per save, Principles, Ranks and milestones (+5 more)
 
 ### Community 31 - "kit_field.py"
-Cohesion: 0.07
-Nodes (17): blouse(), cargo(), chain(), gloves(), half_sleeves(), holster(), knee_guards(), mesh_arms() (+9 more)
+Cohesion: 0.06
+Nodes (18): blouse(), cargo(), chain(), gloves(), half_sleeves(), holster(), knee_guards(), mesh_arms() (+10 more)
 
 ### Community 32 - "outputs"
-Cohesion: 0.22
-Nodes (11): hex_rgb(), json_text(), load_eye_colors(), load_hair_colors(), load_palettes(), outputs(), png_bytes(), ramp() (+3 more)
+Cohesion: 0.17
+Nodes (16): catalog(), hex_rgb(), json_text(), load_characters(), load_eye_colors(), load_hair_colors(), load_marks(), load_palettes() (+8 more)
 
 ### Community 33 - "11. Later systems"
 Cohesion: 0.18
@@ -240,7 +257,7 @@ Cohesion: 0.20
 Nodes (10): 10. Story bible, 12. Risks and open questions, 1. Vision, 2. Decisions, 3. Where we start, Contents, Risks, Shinobi Modpack: roadmap (+2 more)
 
 ### Community 35 - "kit_gekko.py"
-Cohesion: 0.22
+Cohesion: 0.18
 Nodes (4): crescent(), hip_katana(), katana(), sword_strap()
 
 ### Community 36 - "4. Technical architecture"
@@ -252,8 +269,8 @@ Cohesion: 0.25
 Nodes (8): 6. The map, Clan quarters, District schedule, How the map is made, Pasted or built by hand, Population, References, Scale and border
 
 ### Community 38 - "kit_uzumaki.py"
-Cohesion: 0.14
-Nodes (7): clip(), hairpin(), seal_script(), seal_tags(), waves(), wide_sleeves(), wrap_tie()
+Cohesion: 0.12
+Nodes (8): bun(), clip(), hairpin(), seal_script(), seal_tags(), waves(), wide_sleeves(), wrap_tie()
 
 ### Community 39 - "8. The beta, chapter by chapter"
 Cohesion: 0.29
@@ -264,82 +281,74 @@ Cohesion: 0.33
 Nodes (6): 9. Delivery plan, Beta 1: the opening and the Academy (~4 h main path), Beta 2: Genin life (+~8 h), Beta 3: the Chunin Exams (+~3 h), Phase 0: Foundations, Playtesting
 
 ### Community 41 - "Face"
-Cohesion: 0.19
-Nodes (6): button(), darken_rows(), grid(), line(), rivets(), Face
+Cohesion: 0.22
+Nodes (5): button(), darken_rows(), grid(), rivets(), Face
 
 ### Community 42 - "kit_akimichi.py"
-Cohesion: 0.14
-Nodes (6): gourd(), lames(), quilt(), shoku_disc(), snack_pouch(), sode()
+Cohesion: 0.17
+Nodes (5): gourd(), lames(), quilt(), shoku_disc(), snack_pouch()
 
 ### Community 43 - "kokuto"
 Cohesion: 0.20
 Nodes (5): back_blade(), crest(), hip_kokuto(), kokuto(), wave_band()
 
 ### Community 44 - "lock"
-Cohesion: 0.24
-Nodes (6): Shared helpers, back_fan(), bangs(), braid(), lock(), sidelocks()
+Cohesion: 0.16
+Nodes (8): Shared helpers, back_fan(), braid(), lock(), sidelocks(), hime_locks(), beard(), wraps()
 
 ### Community 45 - "load_clans"
-Cohesion: 0.18
-Nodes (9): catalog(), load_all_groups(), load_characters(), load_clans(), load_collections(), load_groups(), load_population(), population_weights() (+1 more)
+Cohesion: 0.23
+Nodes (7): load_all_groups(), load_clans(), load_collections(), load_groups(), load_population(), population_weights(), validate_clans()
 
 ### Community 46 - "cel_box"
-Cohesion: 0.13
-Nodes (8): cel_box(), flick(), ear_panels(), round_bun(), wave_lock(), nape_hem(), tuft(), bun()
+Cohesion: 0.14
+Nodes (8): cel_box(), spike(), flick(), crown(), ear_panels(), round_bun(), wave_lock(), pineapple()
 
 ### Community 47 - "rot_matrix"
-Cohesion: 0.18
-Nodes (5): wave_lock(), Piece, piece_corners(), rot_matrix(), world_bounds()
+Cohesion: 0.33
+Nodes (3): Piece, piece_corners(), world_bounds()
 
 ### Community 48 - "build"
-Cohesion: 0.19
-Nodes (8): build(), build_all(), load_marks(), load_module(), main(), natural(), sources(), validate_catalog()
+Cohesion: 0.28
+Nodes (5): build(), build_all(), load_module(), natural(), sources()
 
-### Community 50 - "spike"
-Cohesion: 0.25
-Nodes (4): spike(), crown(), burst(), pineapple()
+### Community 49 - "Box"
+Cohesion: 0.10
+Nodes (5): band(), hem(), strip_line(), Box, Layer
 
-### Community 51 - "paint.py"
-Cohesion: 0.16
-Nodes (6): band(), cloth_shade(), dark_seams(), hem(), strip_line(), shade()
+### Community 50 - "jika_tabi"
+Cohesion: 0.29
+Nodes (4): jika_tabi(), _soles(), waraji(), zori()
 
-### Community 52 - "ring_shell"
-Cohesion: 0.25
-Nodes (4): cel_face(), ring_shell(), crown(), pulled_back()
+### Community 52 - "kit_morino.py"
+Cohesion: 0.13
+Nodes (8): crown(), clipped(), combed_back(), head_cloth(), nape_hem(), pulled_back(), forehead_protector(), scalp()
 
 ### Community 53 - "kit_specialist.py"
-Cohesion: 0.18
-Nodes (5): bandolier(), coat_skirts(), cross_armband(), scroll_tube(), strap()
-
-### Community 54 - "bandage"
-Cohesion: 0.33
-Nodes (3): forearm_wraps(), bandaged_arm(), bandage()
-
-### Community 55 - "hood_down"
-Cohesion: 0.33
-Nodes (3): hood_down(), mantle(), pleats()
+Cohesion: 0.29
+Nodes (3): bandolier(), shirt(), strap()
 
 ### Community 56 - "curls_face"
 Cohesion: 0.40
 Nodes (3): puff(), curls_box(), curls_face()
 
 ## Knowledge Gaps
-- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `k()` connect `k` to `kit_tsuchigumo.py`, `kit_shinobi.py`, `kit_senju.py`, `kit_academy.py`, `kit_kurama.py`, `rnd`, `kit_yuhi.py`, `kit_aburame.py`, `fabric`, `kit_suzuran.py`, `strip_fabric`, `stamp`, `kit_hyuga.py`, `kit_nara.py`, `kit_kunoichi.py`, `kit_tobari.py`, `kit_sarutobi.py`, `glyphs.py`, `arm_bone`, `kit_yamanaka.py`, `kit_hagane.py`, `rnd`, `solid`, `kit_field.py`, `kit_gekko.py`, `kit_uzumaki.py`, `Face`, `kit_akimichi.py`, `kokuto`, `lock`, `cel_box`, `paint.py`, `ring_shell`, `kit_specialist.py`, `hood_down`, `curls_face`?**
-  _High betweenness centrality (0.275) - this node is a cross-community bridge._
+- **Why does `k()` connect `k` to `kit_tsuchigumo.py`, `kit_senju.py`, `solid`, `kit_kurama.py`, `rnd`, `kit_yuhi.py`, `kit_aburame.py`, `fabric`, `kit_suzuran.py`, `strip_fabric`, `stamp`, `kit_hyuga.py`, `kit_nara.py`, `kit_household.py`, `kit_shinobi.py`, `flaps`, `kit_shimura.py`, `arm_bone`, `kit_yamanaka.py`, `kit_hagane.py`, `rnd`, `kit_uchiha.py`, `kit_field.py`, `kit_gekko.py`, `kit_uzumaki.py`, `Face`, `kit_akimichi.py`, `kokuto`, `lock`, `cel_box`, `Box`, `jika_tabi`, `kit_morino.py`, `kit_specialist.py`, `anime.py`, `curls_face`, `mandarin_collar`, `geta`, `tabi`, `brush_pin`, `coat_skirts`, `herb_pouch`, `sash`?**
+  _High betweenness centrality (0.280) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `solid()` (e.g. with `Shared helpers` and `Box`) actually correct?**
   _`solid()` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **Should `kit_shinobi.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
-- **Why does `solid()` connect `solid` to `kit_tsuchigumo.py`, `kit_shinobi.py`, `kit_senju.py`, `kit_academy.py`, `kit_kurama.py`, `kit_yuhi.py`, `k`, `kit_aburame.py`, `fabric`, `kit_suzuran.py`, `strip_fabric`, `stamp`, `kit_hyuga.py`, `kit_nara.py`, `kit_kunoichi.py`, `kit_tobari.py`, `kit_sarutobi.py`, `glyphs.py`, `arm_bone`, `kit_hagane.py`, `rnd`, `kit_field.py`, `kit_gekko.py`, `kit_uzumaki.py`, `kit_akimichi.py`, `kokuto`, `lock`, `Box`, `paint.py`, `kit_specialist.py`, `bandage`, `hood_down`?**
-  _High betweenness centrality (0.180) - this node is a cross-community bridge._
+- **Should `kit_tsuchigumo.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.14166666666666666 - nodes in this community are weakly interconnected._
+- **Why does `solid()` connect `solid` to `kit_tsuchigumo.py`, `How the pieces work`, `kit_senju.py`, `kit_kurama.py`, `kit_yuhi.py`, `k`, `kit_aburame.py`, `fabric`, `kit_suzuran.py`, `strip_fabric`, `stamp`, `kit_hyuga.py`, `kit_nara.py`, `kit_household.py`, `kit_shinobi.py`, `flaps`, `kit_shimura.py`, `arm_bone`, `kit_hagane.py`, `rnd`, `kit_uchiha.py`, `kit_field.py`, `kit_gekko.py`, `kit_uzumaki.py`, `kit_akimichi.py`, `kokuto`, `lock`, `Box`, `kit_morino.py`, `kit_specialist.py`, `mandarin_collar`, `brush_pin`, `coat_skirts`, `herb_pouch`, `sash`?**
+  _High betweenness centrality (0.175) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `fabric()` (e.g. with `Shared helpers` and `Face`) actually correct?**
   _`fabric()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Should `Clans` be split into smaller, more focused modules?**
   _Cohesion score 0.13071895424836602 - nodes in this community are weakly interconnected._
 - **Why does `Clans` connect `Clans` to `lock`, `Story bible`?**
-  _High betweenness centrality (0.169) - this node is a cross-community bridge._
+  _High betweenness centrality (0.163) - this node is a cross-community bridge._
