@@ -824,7 +824,8 @@ The full design is in [docs/HOME.md](docs/HOME.md) (on the `home` branch until i
 
 - **The Academy flat:** one room (6×6), a kitchenette, a bathroom, a genkan and a 4×2 balcony facing
   the Hokage Rock. Classic always gets `flat.leaf_block.3a`; Varied rolls one of four equal
-  candidates. You start with a futon, a low table and a cupboard.
+  candidates. You move in with a futon, a low table, a cupboard, a storage chest, the wardrobe
+  cabinet and a cooking pot.
 - **The day at home:** the mirror and closet for outfits; the mailbox (the stipend envelope, notes,
   invitations, clan summons); the cupboard (food goes stale as a joke: one Well Fed tier less, never
   harm); the Hearth pot; the journal at the desk; and your own bed.
@@ -833,12 +834,13 @@ The full design is in [docs/HOME.md](docs/HOME.md) (on the `home` branch until i
   clan sets add comfort and a small perk each.
 - **Tidiness:** a light system (mess caps at 12, one quick clean clears it; a messy home costs at
   most 5 comfort, never friendship).
-- **On show:** keepsakes and milestone photos in item frames and on shelves; givers notice a kept
-  gift. A houseplant that never dies; your pet lives here.
+- **On show:** curios (charming loot), keepsakes, gifts and milestone photos are ordinary items: up
+  to six stand on their own, and display shelves, cases, cabinets and wall mounts hold more. A giver
+  notices their gift on show once. A houseplant that never dies; your pet lives here.
 - **Visitors:** drop-ins at bond level 3+, the squad after missions, the sensei's check-ins,
   neighbours and hosted home hangouts, all reacting to decor and mess; spare keys at bond level 6.
 - **A training corner** at 40% of a training ground's value, capped at an hour a day.
-- **Content:** 151 furniture pieces (137 in the beta) and 39 keepsakes.
+- **Content:** 156 furniture pieces (143 in the beta), 39 keepsakes and 52 curios.
 
 Your home is a VF house: its House Plaque flood fill gives exact bounds (`home/HouseBounds`), and
 furnishing is only allowed inside them.
@@ -854,9 +856,8 @@ furnishing is only allowed inside them.
 - **Your bed** is furniture too, but every home always keeps one bed; it is the bed that clears
   fatigue.
 - **Upgrades** (a flat, a house, a clan room, an estate) come after the beta ([Later systems](#11-later-systems)).
-- **Collecting and storage:** vanilla chests and barrels (more chests from the furniture shop);
-  curios, gifts and keepsakes are ordinary items, displayed in item frames and on shelves. No
-  collection book.
+- **Collecting and storage:** plain chests and barrels (27 slots each), with more chests from
+  furniture you buy; no custom storage screen, no decay, no weight, no collection book.
 
 ### Ryo
 
@@ -1451,12 +1452,12 @@ What the roadmap needs from it, spoiler-free:
 
 | Rank | Home |
 |---|---|
-| Chunin | Move to a two-room flat with a balcony (no rent), or into a clan's quarter if you have joined one |
+| Chunin | A two-room flat with a balcony comes with the promotion (no rent), or a clan's quarter if you have joined one |
 | Jonin | Buy a small house (about 30,000 ryo), or a larger clan room |
 | Clan founder | Your clan's estate |
 | Hokage | Quarters in the Residence |
 
-Moving is a farewell quest, and everything comes along in moving crates (items that keep their
+Moving is free and a farewell quest, and everything comes along in moving crates (items that keep their
 contents), placed again in furnish mode. A spouse moves in, with a shared bed; children come later.
 In multiplayer (later), each player has their own home. Details in [docs/HOME.md](docs/HOME.md).
 
