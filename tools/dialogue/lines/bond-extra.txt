@@ -1,0 +1,15 @@
+# Bond-book strings for keys the bond engine added late (bonds-2). Kept vague: the beats behind them are the story's.
+#! kind: cycle
+#! tags: stage=child|teen|adult
+
+## bond.memory.offered_flame  fn=deepen_bond,callback
+You offered them something of yourself, and they saw it for what it was.
+A moment you reached out further than words.
+
+## bond.memory.gave_flame  fn=deepen_bond,callback
+Something passed between you that neither of you will forget.
+You gave them a light when they needed one.
+
+## bond.goal.held  fn=teach
+Something keeps them at a distance for now.
+Whatever stands between you, time and the road ahead will have to move it.
