@@ -1,0 +1,182 @@
+{
+ "format": 1,
+ "id": "mission.d.harvest",
+ "kind": "mission",
+ "rank": "d",
+ "category": "harvest",
+ "status": "beta",
+ "title": "mission.d.harvest.title",
+ "brief": "mission.d.harvest.brief",
+ "minutes": 12,
+ "party": "squad",
+ "season": [
+  "summer",
+  "autumn"
+ ],
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "farmer"
+   }
+  },
+  "field": {
+   "pick": "anchor",
+   "tag": "farm_field"
+  },
+  "barn": {
+   "pick": "anchor",
+   "tag": "farm_barn"
+  },
+  "deer_spot": {
+   "pick": "anchor",
+   "tag": "forest_edge"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "pick"
+  },
+  "pick": {
+   "objective": {
+    "type": "collect",
+    "target": "crop",
+    "at": "slot:field",
+    "count": 24
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "hungry_deer"
+     },
+     "next": "deer"
+    },
+    {
+     "if": {
+      "twist": "storm"
+     },
+     "next": "rush"
+    }
+   ],
+   "next": "cart"
+  },
+  "deer": {
+   "objective": {
+    "type": "perform",
+    "what": "shoo_gently",
+    "at": "slot:field",
+    "count": 4
+   },
+   "next": "cart"
+  },
+  "rush": {
+   "objective": {
+    "type": "collect",
+    "target": "crop",
+    "at": "slot:field",
+    "count": 12
+   },
+   "next": "cart"
+  },
+  "cart": {
+   "objective": {
+    "type": "deliver",
+    "item": "crop",
+    "to": "slot:barn"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "broken_axle"
+     },
+     "next": "axle"
+    }
+   ],
+   "next": "report"
+  },
+  "axle": {
+   "objective": {
+    "type": "craft",
+    "item": "cart_axle",
+    "count": 1
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "hungry_deer",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.harvest.twist.hungry_deer"
+  },
+  {
+   "id": "storm",
+   "weight": 1,
+   "harder": true,
+   "premise": "mission.d.harvest.twist.storm"
+  },
+  {
+   "id": "broken_axle",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.harvest.twist.broken_axle"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "gentle",
+  "teamwork"
+ ],
+ "fast_hours": 4,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "farm_barn",
+   "farm_field",
+   "forest_edge"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.45
+ },
+ "tags": [
+  "outdoors",
+  "farm",
+  "timed"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.harvest",
+ "_premise": "Bring a farm's harvest in before the rain.",
+ "_twists": {
+  "hungry_deer": "Deer from the clan forest have found the field first; shoo them gently.",
+  "storm": "The rain comes early; half the field in half the time.",
+  "broken_axle": "The loaded cart's axle snaps on the path."
+ }
+}

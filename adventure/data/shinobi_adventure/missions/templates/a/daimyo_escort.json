@@ -1,0 +1,152 @@
+{
+ "format": 1,
+ "id": "mission.a.daimyo_escort",
+ "kind": "mission",
+ "rank": "a",
+ "category": "escort",
+ "status": "later",
+ "title": "mission.a.daimyo_escort.title",
+ "brief": "mission.a.daimyo_escort.brief",
+ "minutes": 50,
+ "party": "squad",
+ "days": 3,
+ "unlock": {
+  "rank_at_least": "jonin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "daimyo",
+    "resident_of": "any"
+   }
+  },
+  "temple": {
+   "pick": "anchor",
+   "tag": "pilgrim.temple"
+  },
+  "road": {
+   "pick": "anchor",
+   "tag": "pilgrim.road"
+  },
+  "assassins": {
+   "pick": "enemy_group",
+   "from": [
+    "assassin.team"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "road"
+  },
+  "road": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:road"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:assassins",
+      "slot:road"
+     ]
+    }
+   ],
+   "next": "temple"
+  },
+  "temple": {
+   "objective": {
+    "type": "protect",
+    "who": "slot:client",
+    "until": "+8h",
+    "at": "slot:temple"
+   },
+   "next": "home"
+  },
+  "home": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "place:gate.main"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "inside_guard",
+   "weight": 2,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.a.daimyo_escort.twist.inside_guard"
+  },
+  {
+   "id": "storm",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.a.daimyo_escort.twist.storm"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_alarm"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "assassin.team"
+ ],
+ "places": {
+  "anchors": [
+   "gate.main",
+   "gate.travel_desk",
+   "pilgrim.road",
+   "pilgrim.temple"
+  ],
+  "regions": [
+   "region:pilgrim_road"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "escort",
+  "politics",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.escort",
+ "_premise": "Escort the Fire Country's daimyo on a pilgrimage through contested land.",
+ "_twists": {
+  "inside_guard": "One of the daimyo's own guards is paid by the other side.",
+  "storm": "A typhoon strands the procession at the temple."
+ }
+}

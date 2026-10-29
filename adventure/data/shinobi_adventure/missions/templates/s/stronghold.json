@@ -1,0 +1,173 @@
+{
+ "format": 1,
+ "id": "mission.s.stronghold",
+ "kind": "mission",
+ "rank": "s",
+ "category": "infiltration",
+ "status": "later",
+ "title": "mission.s.stronghold.title",
+ "brief": "mission.s.stronghold.brief",
+ "minutes": 60,
+ "party": "squad",
+ "days": 3,
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "jonin"
+   },
+   {
+    "level_at_least": 42
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "council"
+   }
+  },
+  "stronghold": {
+   "pick": "anchor",
+   "tag": "foreign.stronghold"
+  },
+  "vault": {
+   "pick": "anchor",
+   "tag": "foreign.vault"
+  },
+  "guard": {
+   "pick": "enemy_group",
+   "from": [
+    "enemy.jonin"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "in"
+  },
+  "in": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:stronghold"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "vault"
+  },
+  "vault": {
+   "objective": {
+    "type": "collect",
+    "target": "forbidden_scroll",
+    "at": "slot:vault"
+   },
+   "next": "out"
+  },
+  "out": {
+   "objective": {
+    "type": "sneak",
+    "to": "place:gate.travel_desk"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "sealed_in"
+     },
+     "next": "fight"
+    }
+   ],
+   "next": "report"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:guard",
+    "at": "slot:stronghold"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:guard",
+      "slot:stronghold"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "deliver",
+    "item": "forbidden_scroll",
+    "to": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "sealed_in",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.s.stronghold.twist.sealed_in"
+  },
+  {
+   "id": "inside_help",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.s.stronghold.twist.inside_help"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "no_alarm",
+  "no_knockouts"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "enemy.jonin"
+ ],
+ "places": {
+  "anchors": [
+   "foreign.stronghold",
+   "foreign.vault",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:foreign_stronghold"
+  ]
+ },
+ "pay": {
+  "band": "s",
+  "xp_band": "s",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "stealth",
+  "infiltration"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.infiltration",
+ "_premise": "Retrieve a stolen forbidden technique from a foreign stronghold no one has left alive.",
+ "_twists": {
+  "sealed_in": "The stronghold seals itself when the vault opens.",
+  "inside_help": "A prisoner inside has been waiting years for someone like you."
+ }
+}

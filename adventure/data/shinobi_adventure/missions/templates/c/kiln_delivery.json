@@ -1,0 +1,193 @@
+{
+ "format": 1,
+ "id": "mission.c.kiln_delivery",
+ "kind": "mission",
+ "rank": "c",
+ "category": "delivery",
+ "status": "beta",
+ "title": "mission.c.kiln_delivery.title",
+ "brief": "mission.c.kiln_delivery.brief",
+ "minutes": 25,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch13.far_village",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "role",
+   "role": "role:client.kiln_parent"
+  },
+  "kiln": {
+   "pick": "anchor",
+   "tag": "kiln_yard"
+  },
+  "market": {
+   "pick": "anchor",
+   "tag": "border.market"
+  },
+  "road": {
+   "pick": "anchor",
+   "tag": "road.hill_pass"
+  },
+  "thieves": {
+   "pick": "enemy_group",
+   "from": [
+    "bandit.pack_small"
+   ]
+  }
+ },
+ "start": "pack",
+ "steps": {
+  "pack": {
+   "objective": {
+    "type": "collect",
+    "target": "pottery_crate",
+    "at": "slot:kiln",
+    "count": 3
+   },
+   "next": "travel"
+  },
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "road"
+  },
+  "road": {
+   "objective": {
+    "type": "escort",
+    "who": "pottery_cart",
+    "to": "slot:road"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "ambush"
+     },
+     "next": "fight"
+    }
+   ],
+   "next": "market"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:thieves",
+    "at": "slot:road"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:thieves",
+      "slot:road"
+     ]
+    }
+   ],
+   "next": "market"
+  },
+  "market": {
+   "objective": {
+    "type": "deliver",
+    "item": "pottery_crate",
+    "to": "slot:market"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "rival_potter"
+     },
+     "next": "rival"
+    }
+   ],
+   "next": "report"
+  },
+  "rival": {
+   "objective": {
+    "type": "talk",
+    "who": "rival_potter"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "ambush",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.c.kiln_delivery.twist.ambush"
+  },
+  {
+   "id": "rival_potter",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.kiln_delivery.twist.rival_potter"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "careful",
+  "client_unharmed"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "bandit.pack_small"
+ ],
+ "places": {
+  "anchors": [
+   "border.market",
+   "gate.travel_desk",
+   "kiln_yard",
+   "road.hill_pass"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.45
+ },
+ "tags": [
+  "travel",
+  "delivery",
+  "fight",
+  "chain"
+ ],
+ "contested": false,
+ "chain": "chain.kiln",
+ "classic": true,
+ "banter": "mission.banter.delivery",
+ "_premise": "The kiln family's best pottery must reach the border village's market unbroken.",
+ "_twists": {
+  "ambush": "Thieves know what pottery like this fetches.",
+  "rival_potter": "A rival workshop at the market says the glaze is stolen from them."
+ }
+}

@@ -1,0 +1,220 @@
+{
+ "format": 1,
+ "id": "mission.b.fortress_infiltration",
+ "kind": "mission",
+ "rank": "b",
+ "category": "infiltration",
+ "status": "later",
+ "title": "mission.b.fortress_infiltration.title",
+ "brief": "mission.b.fortress_infiltration.brief",
+ "minutes": 40,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "magistrate",
+    "resident_of": "any"
+   }
+  },
+  "fort": {
+   "pick": "region",
+   "from": [
+    "region:hill_fort"
+   ]
+  },
+  "wall": {
+   "pick": "anchor",
+   "tag": "fort.wall"
+  },
+  "keep": {
+   "pick": "anchor",
+   "tag": "fort.keep"
+  },
+  "guards": {
+   "pick": "enemy_group",
+   "from": [
+    "bandit.fort_guard"
+   ]
+  },
+  "gate": {
+   "pick": "anchor",
+   "tag": "fort.gate"
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "approach"
+  },
+  "approach": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:wall"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "keep"
+  },
+  "keep": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:keep"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "prisoner"
+     },
+     "next": "prisoner"
+    }
+   ],
+   "next": "ledger"
+  },
+  "prisoner": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "free": null,
+     "leave": null
+    }
+   },
+   "branch": [
+    {
+     "if": {
+      "chose": [
+       "prisoner",
+       "free"
+      ]
+     },
+     "next": "free"
+    }
+   ],
+   "next": "ledger"
+  },
+  "free": {
+   "objective": {
+    "type": "escort",
+    "who": "prisoner",
+    "to": "slot:gate"
+   },
+   "next": "ledger"
+  },
+  "ledger": {
+   "objective": {
+    "type": "collect",
+    "target": "ledger",
+    "at": "slot:keep"
+   },
+   "next": "out"
+  },
+  "out": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:gate"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "alarm"
+     },
+     "next": "fight"
+    }
+   ],
+   "next": "report"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:guards",
+    "at": "slot:gate"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:guards",
+      "slot:gate"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "prisoner",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.b.fortress_infiltration.twist.prisoner"
+  },
+  {
+   "id": "alarm",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.b.fortress_infiltration.twist.alarm"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "no_alarm",
+  "no_knockouts"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "bandit.fort_guard"
+ ],
+ "places": {
+  "anchors": [
+   "fort.gate",
+   "fort.keep",
+   "fort.wall",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:hill_fort"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.5
+ },
+ "tags": [
+  "stealth",
+  "infiltration",
+  "travel"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.infiltration",
+ "_premise": "Slip into a bandit warlord's hill fort and bring out the ledger of who pays him.",
+ "_twists": {
+  "prisoner": "A prisoner in the cellar begs to be taken along.",
+  "alarm": "A dog catches your scent on the way out."
+ }
+}

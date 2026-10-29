@@ -1,0 +1,261 @@
+{
+ "format": 1,
+ "id": "mission.c.border_delivery",
+ "kind": "mission",
+ "rank": "c",
+ "category": "delivery",
+ "status": "beta",
+ "title": "mission.c.border_delivery.title",
+ "brief": "mission.c.border_delivery.brief",
+ "minutes": 25,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch13.far_village",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "medic"
+   }
+  },
+  "healer": {
+   "pick": "anchor",
+   "tag": "border.healer"
+  },
+  "road": {
+   "pick": "anchor",
+   "tag": "road.hill_pass"
+  },
+  "hideout": {
+   "pick": "anchor",
+   "tag": "road.thieves_den"
+  },
+  "toll": {
+   "pick": "enemy_group",
+   "from": [
+    "thug.hired"
+   ]
+  },
+  "thieves": {
+   "pick": "enemy_group",
+   "from": [
+    "bandit.pack_small"
+   ]
+  }
+ },
+ "start": "pick_up",
+ "steps": {
+  "pick_up": {
+   "objective": {
+    "type": "collect",
+    "target": "medicine_crate",
+    "at": "place:hospital.desk",
+    "count": 2
+   },
+   "next": "travel"
+  },
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "road"
+  },
+  "road": {
+   "objective": {
+    "type": "go",
+    "place": "slot:road"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "stolen"
+     },
+     "next": "track"
+    },
+    {
+     "if": {
+      "twist": "toll"
+     },
+     "next": "toll"
+    },
+    {
+     "if": {
+      "twist": "storm"
+     },
+     "next": "shelter"
+    }
+   ],
+   "next": "deliver"
+  },
+  "track": {
+   "objective": {
+    "type": "inspect",
+    "target": "tracks",
+    "at": "slot:road",
+    "count": 3
+   },
+   "next": "den"
+  },
+  "den": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:thieves",
+    "at": "slot:hideout"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:thieves",
+      "slot:hideout"
+     ]
+    }
+   ],
+   "next": "deliver"
+  },
+  "toll": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "pay": null,
+     "fight": null
+    }
+   },
+   "branch": [
+    {
+     "if": {
+      "chose": [
+       "toll",
+       "fight"
+      ]
+     },
+     "next": "toll_fight"
+    }
+   ],
+   "next": "deliver"
+  },
+  "toll_fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:toll",
+    "at": "slot:road"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:toll",
+      "slot:road"
+     ]
+    }
+   ],
+   "next": "deliver"
+  },
+  "shelter": {
+   "objective": {
+    "type": "survive",
+    "until": "06:00",
+    "at": "slot:road"
+   },
+   "next": "deliver"
+  },
+  "deliver": {
+   "objective": {
+    "type": "deliver",
+    "item": "medicine_crate",
+    "to": "slot:healer"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "stolen",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.c.border_delivery.twist.stolen"
+  },
+  {
+   "id": "toll",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.border_delivery.twist.toll"
+  },
+  {
+   "id": "storm",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.c.border_delivery.twist.storm"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "fast",
+  "no_knockouts"
+ ],
+ "fast_hours": 24,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "thug.hired",
+  "bandit.pack_small"
+ ],
+ "places": {
+  "anchors": [
+   "border.healer",
+   "gate.travel_desk",
+   "hospital.desk",
+   "road.hill_pass",
+   "road.thieves_den"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.35
+ },
+ "tags": [
+  "road",
+  "delivery",
+  "travel",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.delivery",
+ "_premise": "Carry medicine and supplies to the border village's healer.",
+ "_twists": {
+  "stolen": "The crates vanish from the cart while you water the horse.",
+  "toll": "Thugs have put a 'toll' on the only bridge.",
+  "storm": "A storm closes the pass; wait it out under the rocks."
+ }
+}

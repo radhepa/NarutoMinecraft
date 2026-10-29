@@ -1,0 +1,163 @@
+{
+ "format": 1,
+ "id": "mission.a.assassination",
+ "kind": "mission",
+ "rank": "a",
+ "category": "elimination",
+ "status": "later",
+ "title": "mission.a.assassination.title",
+ "brief": "mission.a.assassination.brief",
+ "minutes": 50,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "jonin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "council"
+   }
+  },
+  "target": {
+   "pick": "role",
+   "role": "role:target.minister"
+  },
+  "palace": {
+   "pick": "anchor",
+   "tag": "foreign.palace"
+  },
+  "guard": {
+   "pick": "enemy_group",
+   "from": [
+    "enemy.jonin"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "infiltrate"
+  },
+  "infiltrate": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:palace"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "strike"
+  },
+  "strike": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:target",
+    "at": "slot:palace"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "guarded"
+     },
+     "next": "guard"
+    }
+   ],
+   "next": "escape"
+  },
+  "guard": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:guard",
+    "at": "slot:palace"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:guard",
+      "slot:palace"
+     ]
+    }
+   ],
+   "next": "escape"
+  },
+  "escape": {
+   "objective": {
+    "type": "sneak",
+    "to": "place:gate.travel_desk"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "guarded",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.a.assassination.twist.guarded"
+  },
+  {
+   "id": "change_of_heart",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.a.assassination.twist.change_of_heart"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "no_alarm"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "enemy.jonin"
+ ],
+ "places": {
+  "anchors": [
+   "foreign.palace",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:foreign_capital"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "stealth",
+  "target"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.elimination",
+ "_premise": "A foreign lord's war minister plans an invasion; remove him from the board before it begins.",
+ "_twists": {
+  "guarded": "A Jonin bodyguard never leaves his side.",
+  "change_of_heart": "The minister offers proof he was forced into the plan."
+ }
+}

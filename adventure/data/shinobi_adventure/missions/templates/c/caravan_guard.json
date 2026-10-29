@@ -1,0 +1,227 @@
+{
+ "format": 1,
+ "id": "mission.c.caravan_guard",
+ "kind": "mission",
+ "rank": "c",
+ "category": "guard",
+ "status": "beta",
+ "title": "mission.c.caravan_guard.title",
+ "brief": "mission.c.caravan_guard.brief",
+ "minutes": 35,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "trader",
+    "resident_of": "any"
+   }
+  },
+  "camp": {
+   "pick": "anchor",
+   "tag": "road.campsite"
+  },
+  "waystation": {
+   "pick": "anchor",
+   "tag": "road.east_waystation"
+  },
+  "hand_a": {
+   "pick": "resident"
+  },
+  "hand_b": {
+   "pick": "resident"
+  },
+  "insider": {
+   "pick": "suspect",
+   "from": [
+    "hand_a",
+    "hand_b"
+   ]
+  },
+  "raiders": {
+   "pick": "enemy_group",
+   "from": [
+    "bandit.pack",
+    "bandit.archers"
+   ]
+  }
+ },
+ "start": "meet",
+ "steps": {
+  "meet": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "day1"
+  },
+  "day1": {
+   "objective": {
+    "type": "protect",
+    "who": "slot:client",
+    "until": "18:00"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:raiders",
+      "road.east_bend"
+     ]
+    }
+   ],
+   "next": "camp"
+  },
+  "camp": {
+   "objective": {
+    "type": "sleep",
+    "at": "slot:camp"
+   },
+   "on_done": [
+    {
+     "bond_event": [
+      "role:squad",
+      "camp_night"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "inside_job"
+     },
+     "next": "suspect"
+    },
+    {
+     "if": {
+      "twist": "sabotage"
+     },
+     "next": "wheel"
+    }
+   ],
+   "next": "day2"
+  },
+  "suspect": {
+   "objective": {
+    "type": "inspect",
+    "target": "cart_marks",
+    "at": "slot:camp",
+    "count": 3
+   },
+   "next": "accuse"
+  },
+  "accuse": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "hand_a": null,
+     "hand_b": null,
+     "nobody": null
+    }
+   },
+   "next": "day2"
+  },
+  "wheel": {
+   "objective": {
+    "type": "craft",
+    "item": "cart_wheel",
+    "count": 1
+   },
+   "next": "day2"
+  },
+  "day2": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:waystation"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "inside_job",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.c.caravan_guard.twist.inside_job"
+  },
+  {
+   "id": "sabotage",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.caravan_guard.twist.sabotage"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_knockouts",
+  "kind_choice"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "bandit.pack",
+  "bandit.archers"
+ ],
+ "places": {
+  "anchors": [
+   "road.campsite",
+   "road.east_waystation"
+  ],
+  "regions": [
+   "region:east_road"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.55
+ },
+ "tags": [
+  "road",
+  "guard",
+  "fight",
+  "camp",
+  "investigation"
+ ],
+ "contested": false,
+ "chain": "chain.merchant",
+ "classic": true,
+ "banter": "mission.banter.guard",
+ "_premise": "Guard a three-cart caravan for two days on the east road.",
+ "_twists": {
+  "inside_job": "Somebody in the caravan is signalling the raiders.",
+  "sabotage": "A wheel has been cut halfway through in the night."
+ },
+ "_choices": {
+  "accuse": "Name the insider, or no one."
+ }
+}

@@ -1,0 +1,269 @@
+{
+ "format": 1,
+ "_doc": "Pay is the player's share in ryo. XP is a share of the XP one level takes at the rank's reference level, so a D-rank is worth less of a level the higher you are. MISSIONS.md section 3.",
+ "ranks": {
+  "d": {
+   "ryo": [
+    60,
+    150
+   ],
+   "xp": [
+    0.15,
+    0.25
+   ],
+   "ref_level": 7,
+   "minutes": [
+    8,
+    12
+   ]
+  },
+  "c": {
+   "ryo": [
+    300,
+    600
+   ],
+   "xp": [
+    0.5,
+    0.7
+   ],
+   "ref_level": 12,
+   "minutes": [
+    20,
+    35
+   ]
+  },
+  "b": {
+   "ryo": [
+    800,
+    1500
+   ],
+   "xp": [
+    0.6,
+    0.9
+   ],
+   "ref_level": 22,
+   "minutes": [
+    35,
+    45
+   ]
+  },
+  "a": {
+   "ryo": [
+    2000,
+    4000
+   ],
+   "xp": [
+    0.9,
+    1.3
+   ],
+   "ref_level": 36,
+   "minutes": [
+    45,
+    55
+   ]
+  },
+  "s": {
+   "ryo": [
+    6000,
+    12000
+   ],
+   "xp": [
+    1.8,
+    2.6
+   ],
+   "ref_level": 46,
+   "minutes": [
+    55,
+    70
+   ]
+  }
+ },
+ "jitter": 0.12,
+ "round_to": 5,
+ "twist_harder": 0.1,
+ "requested": 1.15,
+ "grades": [
+  {
+   "grade": "S",
+   "min": 100,
+   "pay": 1.25,
+   "xp": 1.25,
+   "rapport": 2.0,
+   "standing": 2
+  },
+  {
+   "grade": "A",
+   "min": 85,
+   "pay": 1.1,
+   "xp": 1.1,
+   "rapport": 1.5,
+   "standing": 1
+  },
+  {
+   "grade": "B",
+   "min": 65,
+   "pay": 1.0,
+   "xp": 1.0,
+   "rapport": 1.0,
+   "standing": 0
+  },
+  {
+   "grade": "C",
+   "min": 0,
+   "pay": 0.85,
+   "xp": 0.85,
+   "rapport": 0.5,
+   "standing": 0
+  }
+ ],
+ "score": {
+  "base": 60,
+  "bonuses": 40,
+  "knockout": -8,
+  "client_hurt": -15,
+  "alarm": -10,
+  "late": -10,
+  "good_assignment": 4,
+  "cohesion": [
+   [
+    75,
+    5
+   ],
+   [
+    50,
+    0
+   ],
+   [
+    30,
+    -5
+   ],
+   [
+    0,
+    -10
+   ]
+  ]
+ },
+ "partial": {
+  "pay": 0.5,
+  "xp": 0.6,
+  "rapport": 0.0,
+  "grade_cap": "C"
+ },
+ "fail": {
+  "pay": 0.0,
+  "xp": 0.1,
+  "rapport": -2.0,
+  "standing": -2,
+  "act": "failed_client"
+ },
+ "handed_back": {
+  "rapport": -0.5,
+  "desk": -1
+ },
+ "abandoned": {
+  "rapport": -4.0,
+  "standing": -4,
+  "act": "abandoned_mission"
+ },
+ "gifts": {
+  "_doc": "Besides pay: a thank-you from the client's trade, VF notice-board style. Item ids are requests to the items session.",
+  "chance": {
+   "d": 0.3,
+   "c": 0.35,
+   "b": 0.25,
+   "a": 0.2,
+   "s": 0.2
+  },
+  "grade_at_least": "B",
+  "by_job": {
+   "farmer": [
+    "item:food.vegetables"
+   ],
+   "fisher": [
+    "item:food.grilled_fish"
+   ],
+   "cook": [
+    "item:food.onigiri"
+   ],
+   "stallholder": [
+    "item:food.dango"
+   ],
+   "florist": [
+    "item:decor.pressed_flower"
+   ],
+   "vet": [
+    "item:pet.treats"
+   ],
+   "medic": [
+    "item:tool.bandage",
+    "item:tool.soldier_pill"
+   ],
+   "priest": [
+    "item:charm.shrine_luck"
+   ],
+   "shopkeeper": [
+    "item:tool.kunai_bundle"
+   ],
+   "trader": [
+    "item:material.steel",
+    "item:material.cloth"
+   ],
+   "teacher": [
+    "item:scroll.study_notes"
+   ],
+   "groundskeeper": [
+    "item:tool.wire"
+   ],
+   "clerk": [
+    "item:food.tea"
+   ],
+   "bath_keeper": [
+    "item:food.milk"
+   ],
+   "porter": [
+    "item:food.onigiri"
+   ],
+   "*": [
+    "item:food.onigiri",
+    "item:food.tea"
+   ]
+  }
+ },
+ "technique_scrolls": {
+  "_doc": "Learning jutsu from mission rewards (ROADMAP section 7): the first S grade on a C-rank or above can carry a scroll from the rank's pool (combat session ids).",
+  "chance": {
+   "c": 0.25,
+   "b": 0.3,
+   "a": 0.35,
+   "s": 0.5
+  },
+  "pools": {
+   "c": "pool:scroll.c_rank",
+   "b": "pool:scroll.b_rank",
+   "a": "pool:scroll.a_rank",
+   "s": "pool:scroll.s_rank"
+  }
+ },
+ "standing": {
+  "_doc": "Village reputation (BONDS.md section 8): a finished mission is a deed about the client, witnessed by the squad; the grade's standing goes to the client's district and clan.",
+  "success_act": "helped_resident",
+  "failure_act": "failed_client",
+  "abandon_act": "abandoned_mission"
+ },
+ "xp_curve": {
+  "base": 200,
+  "per_level": 40,
+  "_doc": "Provisional: XP to the next level. Progression's ranks.json owns the real curve."
+ },
+ "living": {
+  "_doc": "The beta's rule of thumb, for the simulation: a day of D-ranks covers food and leaves about half to save.",
+  "food_per_day": [
+   30,
+   45
+  ],
+  "tools_per_week": [
+   40,
+   90
+  ]
+ }
+}

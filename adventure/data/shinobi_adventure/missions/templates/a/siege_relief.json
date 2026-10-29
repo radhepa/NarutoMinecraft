@@ -1,0 +1,175 @@
+{
+ "format": 1,
+ "id": "mission.a.siege_relief",
+ "kind": "mission",
+ "rank": "a",
+ "category": "war",
+ "status": "later",
+ "title": "mission.a.siege_relief.title",
+ "brief": "mission.a.siege_relief.brief",
+ "minutes": 55,
+ "party": "squad",
+ "days": 3,
+ "unlock": {
+  "rank_at_least": "jonin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "envoy",
+    "resident_of": "any"
+   }
+  },
+  "lines": {
+   "pick": "anchor",
+   "tag": "siege.lines"
+  },
+  "gate": {
+   "pick": "anchor",
+   "tag": "siege.gate"
+  },
+  "army": {
+   "pick": "enemy_group",
+   "from": [
+    "enemy.platoon"
+   ]
+  },
+  "general": {
+   "pick": "enemy_group",
+   "from": [
+    "enemy.jonin"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "scout"
+  },
+  "scout": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:lines"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "stores"
+  },
+  "stores": {
+   "objective": {
+    "type": "deliver",
+    "item": "supply_crate",
+    "to": "slot:gate"
+   },
+   "next": "break"
+  },
+  "break": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:army",
+    "at": "slot:lines"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:army",
+      "slot:lines"
+     ]
+    }
+   ],
+   "next": "general"
+  },
+  "general": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:general",
+    "at": "slot:lines"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:general",
+      "slot:lines"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "sortie",
+   "weight": 2,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.a.siege_relief.twist.sortie"
+  },
+  {
+   "id": "tunnel",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.a.siege_relief.twist.tunnel"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "teamwork",
+  "unseen"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "enemy.platoon",
+  "enemy.jonin"
+ ],
+ "places": {
+  "anchors": [
+   "gate.travel_desk",
+   "siege.gate",
+   "siege.lines"
+  ],
+  "regions": [
+   "region:castle_town"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "war",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.war",
+ "_premise": "Break the siege of an allied castle town before its stores run out.",
+ "_twists": {
+  "sortie": "The town's own soldiers want to ride out with you.",
+  "tunnel": "An old smugglers' tunnel runs under the lines."
+ }
+}

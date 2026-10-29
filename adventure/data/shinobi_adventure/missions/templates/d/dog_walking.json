@@ -1,0 +1,170 @@
+{
+ "format": 1,
+ "id": "mission.d.dog_walking",
+ "kind": "mission",
+ "rank": "d",
+ "category": "pets",
+ "status": "beta",
+ "title": "mission.d.dog_walking.title",
+ "brief": "mission.d.dog_walking.brief",
+ "minutes": 8,
+ "party": "squad_or_solo",
+ "unlock": {
+  "rank_at_least": "genin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "vet"
+   }
+  },
+  "route": {
+   "pick": "anchor",
+   "tag": "dog_route"
+  },
+  "scent_spot": {
+   "pick": "anchor",
+   "tag": "forest_edge"
+  }
+ },
+ "start": "leash",
+ "steps": {
+  "leash": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "walk"
+  },
+  "walk": {
+   "objective": {
+    "type": "go",
+    "place": "slot:route"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "scent_chase"
+     },
+     "next": "chase"
+    },
+    {
+     "if": {
+      "twist": "shy_pup"
+     },
+     "next": "coax"
+    },
+    {
+     "if": {
+      "twist": "lost_collar"
+     },
+     "next": "collar"
+    }
+   ],
+   "next": "home"
+  },
+  "chase": {
+   "objective": {
+    "type": "go",
+    "place": "slot:scent_spot"
+   },
+   "next": "round_up"
+  },
+  "round_up": {
+   "objective": {
+    "type": "collect",
+    "target": "ninken",
+    "at": "slot:scent_spot",
+    "count": 4
+   },
+   "next": "home"
+  },
+  "coax": {
+   "objective": {
+    "type": "perform",
+    "what": "feed_treat",
+    "count": 3
+   },
+   "next": "home"
+  },
+  "collar": {
+   "objective": {
+    "type": "inspect",
+    "target": "collar",
+    "at": "slot:route"
+   },
+   "next": "home"
+  },
+  "home": {
+   "objective": {
+    "type": "deliver",
+    "item": "ninken",
+    "to": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "scent_chase",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.d.dog_walking.twist.scent_chase"
+  },
+  {
+   "id": "shy_pup",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.dog_walking.twist.shy_pup"
+  },
+  {
+   "id": "lost_collar",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.dog_walking.twist.lost_collar"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "gentle",
+  "fast"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "dog_route",
+   "forest_edge"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.25
+ },
+ "tags": [
+  "village",
+  "animal",
+  "outdoors"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.pets",
+ "_premise": "Walk the Inuzuka clinic's boarding ninken around the outer fields and bring every one back.",
+ "_twists": {
+  "scent_chase": "The pack catches a scent and bolts for the treeline.",
+  "shy_pup": "One pup will not walk for anyone; win it over.",
+  "lost_collar": "A collar with a clan tag goes missing on the route."
+ }
+}

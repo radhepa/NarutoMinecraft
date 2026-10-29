@@ -1,0 +1,137 @@
+{
+ "format": 1,
+ "id": "mission.anbu.corrupt_official",
+ "kind": "mission",
+ "rank": "a",
+ "category": "anbu",
+ "status": "later",
+ "title": "mission.anbu.corrupt_official.title",
+ "brief": "mission.anbu.corrupt_official.brief",
+ "minutes": 45,
+ "party": "anbu_cell",
+ "unlock": {
+  "rank_at_least": "anbu"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "anbu"
+   }
+  },
+  "office": {
+   "pick": "anchor",
+   "tag": "capital.office"
+  },
+  "official": {
+   "pick": "role",
+   "role": "role:target.official"
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "office"
+  },
+  "office": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:office"
+   },
+   "next": "proof"
+  },
+  "proof": {
+   "objective": {
+    "type": "collect",
+    "target": "pass_ledger",
+    "at": "slot:office"
+   },
+   "next": "decide"
+  },
+  "decide": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "expose": null,
+     "leverage": "kept_leverage"
+    }
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "blackmailed",
+   "weight": 2,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.anbu.corrupt_official.twist.blackmailed"
+  },
+  {
+   "id": "rival_agent",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.anbu.corrupt_official.twist.rival_agent"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "kept_leverage": {
+   "pay": 1.0,
+   "standing": 0,
+   "flag": "anbu.leverage"
+  }
+ },
+ "bonus": [
+  "unseen",
+  "no_alarm"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "capital.office",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:capital"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "anbu",
+  "stealth",
+  "politics"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.anbu",
+ "_premise": "Gather proof against an official of the daimyo's court who sells border passes.",
+ "_twists": {
+  "blackmailed": "The official is being blackmailed into it.",
+  "rival_agent": "Another land's agent is after the same ledger."
+ }
+}

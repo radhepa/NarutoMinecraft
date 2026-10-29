@@ -1,0 +1,204 @@
+{
+ "format": 1,
+ "id": "mission.c.heirloom",
+ "kind": "mission",
+ "rank": "c",
+ "category": "recovery",
+ "status": "beta",
+ "title": "mission.c.heirloom.title",
+ "brief": "mission.c.heirloom.brief",
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch13.far_village",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "household": true
+   }
+  },
+  "pawn": {
+   "pick": "anchor",
+   "tag": "border.pawnshop"
+  },
+  "back_room": {
+   "pick": "anchor",
+   "tag": "border.back_room"
+  },
+  "ring": {
+   "pick": "enemy_group",
+   "from": [
+    "smuggler.crew"
+   ]
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "travel"
+  },
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "pawn"
+  },
+  "pawn": {
+   "objective": {
+    "type": "inspect",
+    "target": "pawn_ledger",
+    "at": "slot:pawn"
+   },
+   "next": "back_room"
+  },
+  "back_room": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:back_room"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "take"
+  },
+  "take": {
+   "objective": {
+    "type": "collect",
+    "target": "heirloom",
+    "at": "slot:back_room"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "fake"
+     },
+     "next": "fake"
+    },
+    {
+     "if": {
+      "twist": "caught"
+     },
+     "next": "fight"
+    }
+   ],
+   "next": "report"
+  },
+  "fake": {
+   "objective": {
+    "type": "inspect",
+    "target": "heirloom",
+    "at": "slot:back_room"
+   },
+   "next": "take2"
+  },
+  "take2": {
+   "objective": {
+    "type": "collect",
+    "target": "heirloom",
+    "at": "slot:pawn"
+   },
+   "next": "report"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:ring",
+    "at": "slot:back_room"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:ring",
+      "slot:back_room"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "deliver",
+    "item": "heirloom",
+    "to": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "fake",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.heirloom.twist.fake"
+  },
+  {
+   "id": "caught",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.c.heirloom.twist.caught"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "no_alarm",
+  "clean_record"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "smuggler.crew"
+ ],
+ "places": {
+  "anchors": [
+   "border.back_room",
+   "border.pawnshop",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.45
+ },
+ "tags": [
+  "travel",
+  "stealth",
+  "recovery"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.recovery",
+ "_premise": "Recover a stolen heirloom from a pawn ring in the border village.",
+ "_twists": {
+  "fake": "The heirloom in the back room is a copy; the real one is on the counter in plain sight.",
+  "caught": "The pawnbroker's men come back early."
+ }
+}

@@ -1,0 +1,166 @@
+{
+ "format": 1,
+ "id": "mission.c.lead_genin",
+ "kind": "mission",
+ "rank": "c",
+ "category": "leadership",
+ "status": "later",
+ "title": "mission.c.lead_genin.title",
+ "brief": "mission.c.lead_genin.brief",
+ "minutes": 25,
+ "party": "lead",
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "trader",
+    "resident_of": "any"
+   }
+  },
+  "genin": {
+   "pick": "role",
+   "role": "role:npc_genin_squad"
+  },
+  "road": {
+   "pick": "anchor",
+   "tag": "road.east_bend"
+  },
+  "waystation": {
+   "pick": "anchor",
+   "tag": "road.east_waystation"
+  },
+  "bandits": {
+   "pick": "enemy_group",
+   "from": [
+    "bandit.pack_small"
+   ]
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:genin"
+   },
+   "next": "escort"
+  },
+  "escort": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:road"
+   },
+   "next": "fight"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:bandits",
+    "at": "slot:road"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:bandits",
+      "slot:road"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "genin_freezes"
+     },
+     "next": "steady"
+    }
+   ],
+   "next": "debrief"
+  },
+  "steady": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:genin"
+   },
+   "next": "debrief"
+  },
+  "debrief": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:waystation"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:genin"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "genin_freezes",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.lead_genin.twist.genin_freezes"
+  },
+  {
+   "id": "genin_charges",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.c.lead_genin.twist.genin_charges"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "teamwork",
+  "client_unharmed"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "bandit.pack_small"
+ ],
+ "places": {
+  "anchors": [
+   "road.east_bend",
+   "road.east_waystation"
+  ],
+  "regions": [
+   "region:east_road"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.5
+ },
+ "tags": [
+  "road",
+  "leadership",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.leadership",
+ "_premise": "Lead a squad of fresh Genin on their first C-rank: a short escort with a rough edge.",
+ "_twists": {
+  "genin_freezes": "One of your Genin freezes in their first real fight.",
+  "genin_charges": "One of your Genin charges in alone."
+ }
+}

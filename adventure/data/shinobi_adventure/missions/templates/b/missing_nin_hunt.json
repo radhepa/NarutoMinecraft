@@ -1,0 +1,153 @@
+{
+ "format": 1,
+ "id": "mission.b.missing_nin_hunt",
+ "kind": "mission",
+ "rank": "b",
+ "category": "hunt",
+ "status": "later",
+ "title": "mission.b.missing_nin_hunt.title",
+ "brief": "mission.b.missing_nin_hunt.brief",
+ "minutes": 40,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "jonin"
+   }
+  },
+  "town": {
+   "pick": "anchor",
+   "tag": "town.inn"
+  },
+  "ambush": {
+   "pick": "anchor",
+   "tag": "forest.trail"
+  },
+  "pair": {
+   "pick": "enemy_group",
+   "from": [
+    "missing_nin.pair"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "ask"
+  },
+  "ask": {
+   "objective": {
+    "type": "inspect",
+    "target": "rumour",
+    "at": "slot:town",
+    "count": 3
+   },
+   "next": "trail"
+  },
+  "trail": {
+   "objective": {
+    "type": "inspect",
+    "target": "tracks",
+    "at": "slot:ambush",
+    "count": 3
+   },
+   "next": "fight"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:pair",
+    "at": "slot:ambush"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:pair",
+      "slot:ambush"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "they_ambush_first",
+   "weight": 2,
+   "harder": true,
+   "modifier": true,
+   "premise": "mission.b.missing_nin_hunt.twist.they_ambush_first"
+  },
+  {
+   "id": "one_surrenders",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.b.missing_nin_hunt.twist.one_surrenders"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "no_knockouts",
+  "spared"
+ ],
+ "fast_hours": 36,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "missing_nin.pair"
+ ],
+ "places": {
+  "anchors": [
+   "forest.trail",
+   "gate.travel_desk",
+   "town.inn"
+  ],
+  "regions": [
+   "region:post_town"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "hunt",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.hunt",
+ "_premise": "Hunt down a pair of missing-nin seen on the Fire Country's roads.",
+ "_twists": {
+  "they_ambush_first": "They knew you were coming.",
+  "one_surrenders": "One of them throws down their kunai and asks for a trial at home."
+ }
+}

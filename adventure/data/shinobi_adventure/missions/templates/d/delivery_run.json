@@ -1,0 +1,163 @@
+{
+ "format": 1,
+ "id": "mission.d.delivery_run",
+ "kind": "mission",
+ "rank": "d",
+ "category": "delivery",
+ "status": "beta",
+ "title": "mission.d.delivery_run.title",
+ "brief": "mission.d.delivery_run.brief",
+ "minutes": 10,
+ "party": "squad_or_solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "porter"
+   }
+  },
+  "a": {
+   "pick": "resident"
+  },
+  "b": {
+   "pick": "resident"
+  },
+  "c": {
+   "pick": "resident"
+  },
+  "gossip": {
+   "pick": "resident"
+  }
+ },
+ "start": "collect",
+ "steps": {
+  "collect": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "first"
+  },
+  "first": {
+   "objective": {
+    "type": "deliver",
+    "item": "parcel",
+    "to": "slot:a"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "swapped"
+     },
+     "next": "swap"
+    }
+   ],
+   "next": "second"
+  },
+  "swap": {
+   "objective": {
+    "type": "inspect",
+    "target": "parcel_label",
+    "count": 2
+   },
+   "next": "second"
+  },
+  "second": {
+   "objective": {
+    "type": "deliver",
+    "item": "parcel",
+    "to": "slot:b"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "moved_house"
+     },
+     "next": "ask"
+    }
+   ],
+   "next": "third"
+  },
+  "ask": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:gossip"
+   },
+   "next": "third"
+  },
+  "third": {
+   "objective": {
+    "type": "deliver",
+    "item": "parcel",
+    "to": "slot:c"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "swapped",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.delivery_run.twist.swapped"
+  },
+  {
+   "id": "moved_house",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.delivery_run.twist.moved_house"
+  },
+  {
+   "id": "fragile",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "mission.d.delivery_run.twist.fragile"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "careful"
+ ],
+ "fast_hours": 3,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "village",
+  "delivery"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.delivery",
+ "_premise": "Deliver a sack of parcels across the village before sundown.",
+ "_twists": {
+  "swapped": "Two parcels have swapped labels.",
+  "moved_house": "One recipient has moved, and only the neighbours know where.",
+  "fragile": "One parcel rattles; no running and no roof-hopping with it."
+ }
+}

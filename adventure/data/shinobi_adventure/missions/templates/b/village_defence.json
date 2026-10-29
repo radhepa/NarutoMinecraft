@@ -1,0 +1,176 @@
+{
+ "format": 1,
+ "id": "mission.b.village_defence",
+ "kind": "mission",
+ "rank": "b",
+ "category": "defence",
+ "status": "later",
+ "title": "mission.b.village_defence.title",
+ "brief": "mission.b.village_defence.brief",
+ "minutes": 45,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "headman",
+    "resident_of": "any"
+   }
+  },
+  "square": {
+   "pick": "anchor",
+   "tag": "border.square"
+  },
+  "walls": {
+   "pick": "anchor",
+   "tag": "border.palisade"
+  },
+  "band": {
+   "pick": "enemy_group",
+   "from": [
+    "mercenary.band"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "prepare"
+  },
+  "prepare": {
+   "objective": {
+    "type": "perform",
+    "what": "set_trap",
+    "at": "slot:walls",
+    "count": 6
+   },
+   "next": "train"
+  },
+  "train": {
+   "objective": {
+    "type": "perform",
+    "what": "drill_villagers",
+    "at": "slot:square",
+    "count": 3
+   },
+   "next": "hold"
+  },
+  "hold": {
+   "objective": {
+    "type": "survive",
+    "until": "06:00",
+    "at": "slot:walls"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:band",
+      "slot:walls"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "second_wave"
+     },
+     "next": "wave"
+    }
+   ],
+   "next": "report"
+  },
+  "wave": {
+   "objective": {
+    "type": "defeat",
+    "group": "mercenary.captain",
+    "at": "slot:square"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "mercenary.captain",
+      "slot:square"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "second_wave",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.b.village_defence.twist.second_wave"
+  },
+  {
+   "id": "traitor_villager",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.b.village_defence.twist.traitor_villager"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_knockouts",
+  "teamwork"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "mercenary.band",
+  "mercenary.captain"
+ ],
+ "places": {
+  "anchors": [
+   "border.palisade",
+   "border.square",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "defence",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.defence",
+ "_premise": "A border village expects a raid by a mercenary band; prepare its defences and hold.",
+ "_twists": {
+  "second_wave": "Their captain comes himself at dawn.",
+  "traitor_villager": "Someone in the village opened a gate last time."
+ }
+}

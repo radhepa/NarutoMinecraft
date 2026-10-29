@@ -1,0 +1,201 @@
+{
+ "format": 1,
+ "id": "mission.c.protect_shop",
+ "kind": "mission",
+ "rank": "c",
+ "category": "protection",
+ "status": "beta",
+ "title": "mission.c.protect_shop.title",
+ "brief": "mission.c.protect_shop.brief",
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "shopkeeper"
+   }
+  },
+  "shop": {
+   "pick": "anchor",
+   "tag": "market.stall"
+  },
+  "rival": {
+   "pick": "resident",
+   "where": {
+    "job": "shopkeeper"
+   }
+  },
+  "thugs": {
+   "pick": "enemy_group",
+   "from": [
+    "thug.hired"
+   ]
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "guard"
+  },
+  "guard": {
+   "objective": {
+    "type": "protect",
+    "who": "slot:client",
+    "until": "18:00",
+    "at": "slot:shop"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:thugs",
+      "slot:shop"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "bribe"
+     },
+     "next": "bribe"
+    },
+    {
+     "if": {
+      "twist": "client_started_it"
+     },
+     "next": "truth"
+    }
+   ],
+   "next": "rival"
+  },
+  "bribe": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "refuse": null,
+     "take": "took_bribe"
+    }
+   },
+   "next": "rival"
+  },
+  "truth": {
+   "objective": {
+    "type": "inspect",
+    "target": "ledger",
+    "at": "slot:shop"
+   },
+   "next": "mediate"
+  },
+  "mediate": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "mediate": "mediated",
+     "side_client": null
+    }
+   },
+   "next": "rival"
+  },
+  "rival": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:rival"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "bribe",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.protect_shop.twist.bribe"
+  },
+  {
+   "id": "client_started_it",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.c.protect_shop.twist.client_started_it"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "took_bribe": {
+   "pay": 0.0,
+   "standing": -3,
+   "item_ryo": 200,
+   "deed": "hurt_resident"
+  },
+  "mediated": {
+   "pay": 1.0,
+   "standing": 1,
+   "deed": "mediated"
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "spared",
+  "kind_choice"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "thug.hired"
+ ],
+ "places": {
+  "anchors": [
+   "market.stall"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.45
+ },
+ "tags": [
+  "village",
+  "market",
+  "guard",
+  "fight",
+  "talk"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.protection",
+ "_premise": "A shopkeeper is being threatened by a rival's hired thugs; protect them through the week's big sale.",
+ "_twists": {
+  "bribe": "The rival's man offers you twice the fee to look away.",
+  "client_started_it": "The client's books show they started the feud."
+ }
+}

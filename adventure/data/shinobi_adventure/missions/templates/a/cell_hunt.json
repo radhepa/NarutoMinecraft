@@ -1,0 +1,143 @@
+{
+ "format": 1,
+ "id": "mission.a.cell_hunt",
+ "kind": "mission",
+ "rank": "a",
+ "category": "hunt",
+ "status": "later",
+ "title": "mission.a.cell_hunt.title",
+ "brief": "mission.a.cell_hunt.brief",
+ "minutes": 50,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "jonin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "council"
+   }
+  },
+  "trail": {
+   "pick": "anchor",
+   "tag": "far.trail"
+  },
+  "lair": {
+   "pick": "anchor",
+   "tag": "far.lair"
+  },
+  "cell": {
+   "pick": "enemy_group",
+   "from": [
+    "enemy.cell"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "trail"
+  },
+  "trail": {
+   "objective": {
+    "type": "inspect",
+    "target": "tracks",
+    "at": "slot:trail",
+    "count": 5
+   },
+   "next": "lair"
+  },
+  "lair": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:cell",
+    "at": "slot:lair"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:cell",
+      "slot:lair"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "trap_lair",
+   "weight": 2,
+   "harder": true,
+   "modifier": true,
+   "premise": "mission.a.cell_hunt.twist.trap_lair"
+  },
+  {
+   "id": "prisoners",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.a.cell_hunt.twist.prisoners"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "fast"
+ ],
+ "fast_hours": 36,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "enemy.cell"
+ ],
+ "places": {
+  "anchors": [
+   "far.lair",
+   "far.trail",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:far_lands"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "hunt",
+  "fight",
+  "tracking"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.hunt",
+ "_premise": "Track an enemy cell through a far region and bring it down.",
+ "_twists": {
+  "trap_lair": "The lair is bait.",
+  "prisoners": "They are holding travellers."
+ }
+}

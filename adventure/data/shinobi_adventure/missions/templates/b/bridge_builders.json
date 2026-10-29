@@ -1,0 +1,161 @@
+{
+ "format": 1,
+ "id": "mission.b.bridge_builders",
+ "kind": "mission",
+ "rank": "b",
+ "category": "guard",
+ "status": "later",
+ "title": "mission.b.bridge_builders.title",
+ "brief": "mission.b.bridge_builders.brief",
+ "minutes": 45,
+ "party": "squad",
+ "days": 3,
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "builder",
+    "resident_of": "any"
+   }
+  },
+  "bridge": {
+   "pick": "anchor",
+   "tag": "coast.bridge"
+  },
+  "thugs": {
+   "pick": "enemy_group",
+   "from": [
+    "thug.hired"
+   ]
+  },
+  "enforcer": {
+   "pick": "enemy_group",
+   "from": [
+    "missing_nin.chunin"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "work"
+  },
+  "work": {
+   "objective": {
+    "type": "protect",
+    "who": "slot:client",
+    "until": "18:00",
+    "at": "slot:bridge"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:thugs",
+      "slot:bridge"
+     ]
+    }
+   ],
+   "next": "night"
+  },
+  "night": {
+   "objective": {
+    "type": "sleep",
+    "at": "place:coast.house"
+   },
+   "next": "enforcer"
+  },
+  "enforcer": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:enforcer",
+    "at": "slot:bridge"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:enforcer",
+      "slot:bridge"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "town_stands_up",
+   "weight": 2,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.b.bridge_builders.twist.town_stands_up"
+  },
+  {
+   "id": "builder_lied",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.b.bridge_builders.twist.builder_lied"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_knockouts",
+  "teamwork"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "thug.hired",
+  "missing_nin.chunin"
+ ],
+ "places": {
+  "anchors": [
+   "coast.bridge",
+   "coast.house",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:coast_town"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "guard",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.guard",
+ "_premise": "Guard a bridge-builder whose bridge will free a poor town from a shipping boss's grip.",
+ "_twists": {
+  "town_stands_up": "The town comes out with tools to stand by the builder.",
+  "builder_lied": "The builder said C-rank; the danger is far beyond it."
+ }
+}

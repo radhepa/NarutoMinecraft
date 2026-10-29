@@ -1,0 +1,186 @@
+{
+ "format": 1,
+ "id": "mission.c.smugglers_ford",
+ "kind": "mission",
+ "rank": "c",
+ "category": "interdiction",
+ "status": "beta",
+ "title": "mission.c.smugglers_ford.title",
+ "brief": "mission.c.smugglers_ford.brief",
+ "minutes": 30,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "clan": "hagane"
+   }
+  },
+  "ford": {
+   "pick": "anchor",
+   "tag": "road.ford"
+  },
+  "crew": {
+   "pick": "enemy_group",
+   "from": [
+    "smuggler.crew"
+   ]
+  },
+  "hide": {
+   "pick": "anchor",
+   "tag": "road.reeds"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "hide"
+  },
+  "hide": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:hide"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "wait"
+  },
+  "wait": {
+   "objective": {
+    "type": "wait_until",
+    "time": "02:00",
+    "at": "slot:hide"
+   },
+   "next": "ambush"
+  },
+  "ambush": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:crew",
+    "at": "slot:ford"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:crew",
+      "slot:ford"
+     ]
+    }
+   ],
+   "next": "cargo"
+  },
+  "cargo": {
+   "objective": {
+    "type": "inspect",
+    "target": "contraband",
+    "at": "slot:ford",
+    "count": 3
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "animals"
+     },
+     "next": "animals"
+    }
+   ],
+   "next": "report"
+  },
+  "animals": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "free": null,
+     "hand_over": null
+    }
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "animals",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.smugglers_ford.twist.animals"
+  },
+  {
+   "id": "decoy",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "mission.c.smugglers_ford.twist.decoy"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "spared",
+  "no_knockouts"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "smuggler.crew"
+ ],
+ "places": {
+  "anchors": [
+   "road.ford",
+   "road.reeds"
+  ],
+  "regions": [
+   "region:east_road"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.5
+ },
+ "tags": [
+  "road",
+  "night",
+  "stealth",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.interdiction",
+ "_premise": "Stop a smuggling crew that crosses the river at a ford by night.",
+ "_twists": {
+  "animals": "The cargo is rare animals in cramped cages.",
+  "decoy": "The first boat is a decoy; the real one crosses downstream."
+ }
+}

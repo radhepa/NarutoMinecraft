@@ -1,0 +1,154 @@
+{
+ "format": 1,
+ "id": "mission.d.catering",
+ "kind": "mission",
+ "rank": "d",
+ "category": "delivery",
+ "status": "beta",
+ "title": "mission.d.catering.title",
+ "brief": "mission.d.catering.brief",
+ "minutes": 8,
+ "party": "squad",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "cook"
+   }
+  },
+  "kitchen": {
+   "pick": "anchor",
+   "tag": "restaurant"
+  },
+  "ground": {
+   "pick": "anchor",
+   "tag": "training_ground"
+  },
+  "genin": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "age": "child"
+   }
+  }
+ },
+ "start": "pick_up",
+ "steps": {
+  "pick_up": {
+   "objective": {
+    "type": "collect",
+    "target": "catering_box",
+    "at": "slot:kitchen",
+    "count": 3
+   },
+   "next": "carry"
+  },
+  "carry": {
+   "objective": {
+    "type": "deliver",
+    "item": "catering_box",
+    "to": "slot:ground"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "hungry_genin"
+     },
+     "next": "hungry"
+    },
+    {
+     "if": {
+      "twist": "spill"
+     },
+     "next": "spill"
+    }
+   ],
+   "next": "report"
+  },
+  "hungry": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:genin"
+   },
+   "next": "carry2"
+  },
+  "carry2": {
+   "objective": {
+    "type": "deliver",
+    "item": "catering_box",
+    "to": "slot:ground"
+   },
+   "next": "report"
+  },
+  "spill": {
+   "objective": {
+    "type": "collect",
+    "target": "catering_box",
+    "at": "slot:kitchen"
+   },
+   "next": "carry2"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "hungry_genin",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.catering.twist.hungry_genin"
+  },
+  {
+   "id": "spill",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.catering.twist.spill"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "careful"
+ ],
+ "fast_hours": 1,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "restaurant",
+   "training_ground"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.35
+ },
+ "tags": [
+  "village",
+  "delivery",
+  "timed"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.delivery",
+ "_premise": "Carry a restaurant's catering order to a training ground while it is still hot.",
+ "_twists": {
+  "hungry_genin": "Another squad offers to 'inspect' the food for you.",
+  "spill": "A box tips on the stairs; run back for another before it all goes cold."
+ }
+}

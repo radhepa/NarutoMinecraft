@@ -1,0 +1,161 @@
+{
+ "format": 1,
+ "id": "mission.b.supply_sabotage",
+ "kind": "mission",
+ "rank": "b",
+ "category": "sabotage",
+ "status": "later",
+ "title": "mission.b.supply_sabotage.title",
+ "brief": "mission.b.supply_sabotage.brief",
+ "minutes": 40,
+ "party": "squad",
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "jonin"
+   }
+  },
+  "depot": {
+   "pick": "anchor",
+   "tag": "border.depot"
+  },
+  "guards": {
+   "pick": "enemy_group",
+   "from": [
+    "enemy.squad"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "approach"
+  },
+  "approach": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:depot"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "spoil"
+  },
+  "spoil": {
+   "objective": {
+    "type": "perform",
+    "what": "paper_bomb_set",
+    "at": "slot:depot",
+    "count": 4
+   },
+   "next": "out"
+  },
+  "out": {
+   "objective": {
+    "type": "sneak",
+    "to": "place:gate.travel_desk"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "patrol"
+     },
+     "next": "fight"
+    }
+   ],
+   "next": "report"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:guards",
+    "at": "slot:depot"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:guards",
+      "slot:depot"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "patrol",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.b.supply_sabotage.twist.patrol"
+  },
+  {
+   "id": "civilian_workers",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.b.supply_sabotage.twist.civilian_workers"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "no_alarm",
+  "spared"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "enemy.squad"
+ ],
+ "places": {
+  "anchors": [
+   "border.depot",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:border_depot"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.55
+ },
+ "tags": [
+  "travel",
+  "stealth",
+  "sabotage"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.sabotage",
+ "_premise": "A foreign band is stockpiling weapons at a border depot; spoil the stockpile without starting a war.",
+ "_twists": {
+  "patrol": "A patrol changes its route tonight.",
+  "civilian_workers": "Hired civilians sleep in the depot; get them out first."
+ }
+}

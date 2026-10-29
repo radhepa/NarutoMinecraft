@@ -1,0 +1,151 @@
+{
+ "format": 1,
+ "id": "mission.d.leaf_raking",
+ "kind": "mission",
+ "rank": "d",
+ "category": "seasonal",
+ "status": "beta",
+ "title": "mission.d.leaf_raking.title",
+ "brief": "mission.d.leaf_raking.brief",
+ "minutes": 8,
+ "party": "squad_or_solo",
+ "season": [
+  "autumn"
+ ],
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "groundskeeper"
+   }
+  },
+  "park": {
+   "pick": "anchor",
+   "tag": "park"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "rake"
+  },
+  "rake": {
+   "objective": {
+    "type": "perform",
+    "what": "rake",
+    "at": "slot:park",
+    "count": 10
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "hidden_treasure"
+     },
+     "next": "treasure"
+    },
+    {
+     "if": {
+      "twist": "bonfire"
+     },
+     "next": "bonfire"
+    }
+   ],
+   "next": "report"
+  },
+  "treasure": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "return": null,
+     "keep": "kept_find"
+    }
+   },
+   "next": "report"
+  },
+  "bonfire": {
+   "objective": {
+    "type": "perform",
+    "what": "roast_sweet_potato",
+    "at": "slot:park"
+   },
+   "on_done": [
+    {
+     "bond_event": [
+      "role:squad",
+      "meal_together"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "hidden_treasure",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.leaf_raking.twist.hidden_treasure"
+  },
+  {
+   "id": "bonfire",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.leaf_raking.twist.bonfire"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "kept_find": {
+   "pay": 1.0,
+   "standing": 0,
+   "clean_record": false
+  }
+ },
+ "bonus": [
+  "fast",
+  "clean_record"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "park"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.2
+ },
+ "tags": [
+  "outdoors",
+  "seasonal"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.seasonal",
+ "_premise": "Rake the leaves in the park by the Academy.",
+ "_twists": {
+  "hidden_treasure": "Under the leaves, a purse someone lost weeks ago.",
+  "bonfire": "The groundskeeper says the pile is perfect for roasting sweet potatoes."
+ }
+}

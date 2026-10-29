@@ -1,0 +1,156 @@
+{
+ "format": 1,
+ "id": "mission.d.pet_sitting",
+ "kind": "mission",
+ "rank": "d",
+ "category": "pets",
+ "status": "beta",
+ "title": "mission.d.pet_sitting.title",
+ "brief": "mission.d.pet_sitting.brief",
+ "minutes": 12,
+ "party": "solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "has_pet": true,
+    "household": true
+   }
+  },
+  "home": {
+   "pick": "anchor",
+   "tag": "client_home"
+  },
+  "neighbour": {
+   "pick": "resident",
+   "where": {
+    "district": "same:client"
+   }
+  }
+ },
+ "start": "keys",
+ "steps": {
+  "keys": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "morning"
+  },
+  "morning": {
+   "objective": {
+    "type": "perform",
+    "what": "feed_pet",
+    "at": "slot:home"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "escape_artist"
+     },
+     "next": "escaped"
+    }
+   ],
+   "next": "noon"
+  },
+  "escaped": {
+   "objective": {
+    "type": "collect",
+    "target": "slot:client.pet",
+    "at": "slot:home"
+   },
+   "next": "noon"
+  },
+  "noon": {
+   "objective": {
+    "type": "wait_until",
+    "time": "12:00",
+    "at": "slot:home"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "neighbour_feud"
+     },
+     "next": "feud"
+    }
+   ],
+   "next": "evening"
+  },
+  "feud": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:neighbour"
+   },
+   "next": "evening"
+  },
+  "evening": {
+   "objective": {
+    "type": "perform",
+    "what": "feed_pet",
+    "at": "slot:home"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "escape_artist",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.pet_sitting.twist.escape_artist"
+  },
+  {
+   "id": "neighbour_feud",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.pet_sitting.twist.neighbour_feud"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "careful",
+  "extra_mile"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "client_home"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.35
+ },
+ "tags": [
+  "village",
+  "animal",
+  "timed"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.pets",
+ "_premise": "A family is away for the day; feed, brush and mind their animals at the set hours.",
+ "_twists": {
+  "escape_artist": "The pet has learned to open the latch.",
+  "neighbour_feud": "The neighbour says the pet has been raiding their garden for weeks."
+ }
+}
