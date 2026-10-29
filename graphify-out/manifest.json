@@ -168,9 +168,9 @@
     "semantic_hash": ""
   },
   "ROADMAP.md": {
-    "mtime": 1793308144.9511056,
-    "seen": 1793308163.5199132,
-    "ast_hash": "491fad626b0f78e7ea0ebafc72f68566",
+    "mtime": 1793308541.3954363,
+    "seen": 1793308619.1799815,
+    "ast_hash": "d38aaf8914d3b740de9a48d109b599be",
     "semantic_hash": ""
   },
   "docs/story/STORY_BIBLE.md": {
@@ -288,15 +288,15 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Act.java": {
-    "mtime": 1793307753.5886116,
-    "seen": 1793308163.519729,
-    "ast_hash": "309a3b9ca65729b0bad493581ef9c0d1",
+    "mtime": 1793308278.959322,
+    "seen": 1793308619.1797895,
+    "ast_hash": "3fe57d112f452fc8fcf0dbb9842e397b",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Bond.java": {
-    "mtime": 1793307753.5903254,
-    "seen": 1793308163.5197394,
-    "ast_hash": "f2d8202f4bced21c69b965eb91cbcaa1",
+    "mtime": 1793308605.366466,
+    "seen": 1793308619.1798007,
+    "ast_hash": "6312e61251cf2ec4df106ffe80c4530c",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondBook.java": {
@@ -306,9 +306,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondConditions.java": {
-    "mtime": 1793307860.3958364,
-    "seen": 1793308163.519744,
-    "ast_hash": "8b9a3d579780deb897ea7a0e7c70919d",
+    "mtime": 1793308580.4519656,
+    "seen": 1793308619.179806,
+    "ast_hash": "ba91b798ae5380ef2ebad90d8782a391",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondDialogue.java": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondEffects.java": {
-    "mtime": 1793307860.3971562,
-    "seen": 1793308163.5197482,
-    "ast_hash": "4cdeb05444c930a667c47a02906f174f",
+    "mtime": 1793308428.0253932,
+    "seen": 1793308619.1798108,
+    "ast_hash": "fa3a01575e58b0a9282e53557f8f983d",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondEvent.java": {
@@ -336,9 +336,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondWorld.java": {
-    "mtime": 1793307860.3943284,
-    "seen": 1793308163.519754,
-    "ast_hash": "303796f09dd927417dadba9c0159458f",
+    "mtime": 1793308428.0233128,
+    "seen": 1793308619.1798172,
+    "ast_hash": "7e7eaa8ffc6260c3cf6d9939cda1e7e0",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/ClanProfile.java": {
@@ -384,15 +384,15 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Kindling.java": {
-    "mtime": 1793306030.4926083,
-    "seen": 1793307475.625932,
-    "ast_hash": "12425b2b0899bb1e4acf076f4dbdb151",
+    "mtime": 1793308512.2870007,
+    "seen": 1793308619.1798344,
+    "ast_hash": "4ec90ea250d9905bf7f82a0eb4d8855f",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Levels.java": {
-    "mtime": 1793304773.4375646,
-    "seen": 1793307475.6259344,
-    "ast_hash": "fd4e95b8dd65e2a7cf467de41ee06ba0",
+    "mtime": 1793308580.452829,
+    "seen": 1793308619.1798356,
+    "ast_hash": "3e1335cd2583f558e07e1155247f3879",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Memory.java": {
@@ -444,9 +444,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/SaveFormat.java": {
-    "mtime": 1793307860.3996978,
-    "seen": 1793308163.5197935,
-    "ast_hash": "77ea2069a2e01a5b60b94a6c8b3f95df",
+    "mtime": 1793308428.02212,
+    "seen": 1793308619.1798549,
+    "ast_hash": "c48090b601aa8e8c20df89579d49239b",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Seeds.java": {
@@ -492,9 +492,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/ConditionsAndEffectsTest.java": {
-    "mtime": 1793305048.1508982,
-    "seen": 1793307475.6259828,
-    "ast_hash": "01b6e22d7c8ac873401232bece64226b",
+    "mtime": 1793308464.0927846,
+    "seen": 1793308619.1798694,
+    "ast_hash": "550af1ec2ba5ebd64bad833ebe903df2",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/ConflictTest.java": {
@@ -516,9 +516,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/KindlingAndBookTest.java": {
-    "mtime": 1793305139.7049592,
-    "seen": 1793307475.6259968,
-    "ast_hash": "bf2aaecab7c3610719025b8d9f760309",
+    "mtime": 1793308464.0932224,
+    "seen": 1793308619.1798773,
+    "ast_hash": "a7c60ed8860a3c8858f58c507c141aaa",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/Leaf.java": {
@@ -564,9 +564,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/VillageScaleTest.java": {
-    "mtime": 1793307384.2233565,
-    "seen": 1793307475.6260204,
-    "ast_hash": "9acdac584fa53675e567867ceee12769",
+    "mtime": 1793308464.0936916,
+    "seen": 1793308619.1798968,
+    "ast_hash": "436a8ed3edb3dfada7d5b96f6875da35",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/VillageTest.java": {
@@ -576,9 +576,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/sim/Playthrough.java": {
-    "mtime": 1793307976.924665,
-    "seen": 1793308163.5198333,
-    "ast_hash": "1ef47e8d949c6891e8caa47c7a866aa6",
+    "mtime": 1793308493.7058337,
+    "seen": 1793308619.1798997,
+    "ast_hash": "ca83b7d379eff4c55aeb09f5bb3b9e10",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/sim/VillageSim.java": {
@@ -594,9 +594,9 @@
     "semantic_hash": ""
   },
   "BONDS.md": {
-    "mtime": 1793308080.0443213,
-    "seen": 1793308163.5199058,
-    "ast_hash": "4dd85b68f6a5ca7a96a04debaeb9c4b9",
+    "mtime": 1793308580.450899,
+    "seen": 1793308619.1799736,
+    "ast_hash": "35bc3ce4dce02f61b30eec3a3705dcd4",
     "semantic_hash": ""
   },
   "SIDE_QUESTS.md": {
@@ -618,9 +618,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/DialogueKeys.java": {
-    "mtime": 1793307903.6288006,
-    "seen": 1793308163.5197675,
-    "ast_hash": "b14b81ee7ab5c32ac048fc42fa9fb6b0",
+    "mtime": 1793308428.025728,
+    "seen": 1793308619.1798294,
+    "ast_hash": "9976fba6e57b26c53db4029c31870274",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/LifeEvents.java": {
@@ -666,15 +666,15 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Question.java": {
-    "mtime": 1793307784.4380689,
-    "seen": 1793308163.5197868,
-    "ast_hash": "10c5403237a902479961ee73c636c2c5",
+    "mtime": 1793308278.957079,
+    "seen": 1793308619.1798487,
+    "ast_hash": "7c6e04a86d57fa3912370ea89881ed52",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Questions.java": {
-    "mtime": 1793308019.8282156,
-    "seen": 1793308163.519788,
-    "ast_hash": "5755c6a1504a5483077186926140ba69",
+    "mtime": 1793308300.3254344,
+    "seen": 1793308619.17985,
+    "ast_hash": "c25e96a2dd1cb7b2dce4e8c5e52071f1",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/QuestionsTest.java": {
@@ -687,6 +687,12 @@
     "mtime": 1793307903.6300662,
     "seen": 1793308163.5198238,
     "ast_hash": "45572d24867493302edabfce135d3e6f",
+    "semantic_hash": ""
+  },
+  "life/bonds/src/test/java/dev/shinobi/life/bond/QuestionsCompiledTest.java": {
+    "mtime": 1793308315.7700567,
+    "seen": 1793308619.179884,
+    "ast_hash": "79f4fdd2cab9ac4aef5ec0fa5d9e8492",
     "semantic_hash": ""
   }
 }
