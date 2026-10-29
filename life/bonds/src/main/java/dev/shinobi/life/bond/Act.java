@@ -88,7 +88,7 @@ public enum Act {
     MISSED_BIRTHDAY(def(Size.NOTABLE, 30).meters(-2.5, -0.5, 0, 0).peeve(Peeve.NEGLECT).violates(Value.FAMILY)),
     FELT_OVERLOOKED(def(Size.SMALL, 30).meters(-2, -0.5, 0, 1).peeve(Peeve.NEGLECT).lean(Trait.PRIDE, Meter.RIVALRY, 2)),
     STOOD_UP(def(Size.NOTABLE, 60).meters(-3, -5, 0, 0).violates(Value.HONESTY).peeve(Peeve.LATENESS)),
-    CAUGHT_CONTRADICTION(def(Size.NOTABLE, 60).meters(-1, -3, -0.5, 0).violates(Value.HONESTY).peeve(Peeve.DISHONESTY)),
+    CAUGHT_CONTRADICTION(def(Size.SMALL, 60).meters(-0.5, -1.5, 0, 0).violates(Value.HONESTY).peeve(Peeve.DISHONESTY)),
     BROKE_PROMISE(def(Size.NOTABLE, 60).meters(-2.5, -6, -0.5, 0).violates(Value.HONESTY).peeve(Peeve.LATENESS)),
     WENT_OVER_THEIR_HEAD(def(Size.NOTABLE, 60).meters(-2, -5, 0, 0.5).violates(Value.LOYALTY).lean(Trait.DISCIPLINE, Meter.TRUST, 2.5)),
     SIDED_AGAINST(def(Size.NOTABLE, 60).meters(-3, -3, 0, 1).violates(Value.LOYALTY)),

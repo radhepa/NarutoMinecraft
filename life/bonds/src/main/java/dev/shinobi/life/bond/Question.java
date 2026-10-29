@@ -31,7 +31,17 @@ public record Question(String id, Kind kind, int level, int depth, String follow
         }
     }
     /** One answer: what it says about the player (tags), where it stands on the question's axis, and what it can change. */
-    public record Answer(String id, List<AnswerTag> tags, String stance, String sets, Personality.Trait nudgeTrait, double nudge, Act deed) {}
+    public record Answer(String id, List<AnswerTag> tags, String stance, String sets, Personality.Trait nudgeTrait, double nudge, Act deed,
+            Map<Personality.Value, Integer> stands) {
+        public Answer(String id, List<AnswerTag> tags, String stance, String sets, Personality.Trait nudgeTrait, double nudge, Act deed) {
+            this(id, tags, stance, sets, nudgeTrait, nudge, deed, Map.of());
+        }
+        public Answer { stands = Map.copyOf(stands); stance = stance == null ? "" : stance; }
+    }
+    /** The dialogue data's tones, as answer tags (each tag's own id works too). */
+    public static final Map<String, AnswerTag> TONES = Map.ofEntries(Map.entry("warm", AnswerTag.KIND), Map.entry("joking", AnswerTag.PLAYFUL),
+            Map.entry("stern", AnswerTag.DUTIFUL), Map.entry("teasing", AnswerTag.PLAYFUL), Map.entry("gentle", AnswerTag.KIND), Map.entry("cold", AnswerTag.BLUNT));
+    public static AnswerTag tone(String id) { var t = TONES.get(id); return t != null ? t : AnswerTag.of(id); }
 
     public Question {
         answers = List.copyOf(answers); archetypes = Set.copyOf(archetypes); values = Set.copyOf(values); roles = Set.copyOf(roles);
@@ -50,8 +60,48 @@ public record Question(String id, Kind kind, int level, int depth, String follow
         return p.stage().compareTo(minStage) >= 0;
     }
 
+    /**
+     * The dialogue data's compiled shape ({@code tools/dialogue}, {@code questions.json}): {@code axis} and {@code pole}
+     * for contradictions, signed {@code values} an answer stands for, a {@code tone}, {@code follows} for deeper
+     * versions, {@code tags} for who may ask. Text fields ({@code asks}, {@code label}, {@code reply}, {@code mood}) and
+     * Core {@code actions} are the dialogue glue's; {@code when} is checked by the glue's veto.
+     */
+    @SuppressWarnings("unchecked")
+    static Question parseCompiled(Map<String, Object> m) {
+        String id = (String) m.get("id");
+        var tags = (Map<String, Object>) m.getOrDefault("tags", Map.of());
+        var answers = new ArrayList<Answer>();
+        for (Object o : (List<Object>) m.get("answers")) {
+            var a = (Map<String, Object>) o;
+            var stands = new java.util.EnumMap<Personality.Value, Integer>(Personality.Value.class);
+            ((Map<String, Object>) a.getOrDefault("values", Map.of())).forEach((k, v) ->
+                    stands.put(Personality.Value.valueOf(k.toUpperCase(Locale.ROOT)), (int) Math.signum(SaveFormat.dbl(v))));
+            String tone = (String) a.getOrDefault("tone", "");
+            int pole = (int) Math.signum(SaveFormat.dbl(a.getOrDefault("pole", 0)));
+            answers.add(new Answer((String) a.get("id"), tone.isEmpty() ? List.of() : List.of(tone(tone)), pole > 0 ? "+" : pole < 0 ? "-" : "",
+                    (String) a.getOrDefault("sets", ""), null, 0, null, stands));
+        }
+        Kind kind = m.containsKey("kind") ? Kind.of((String) m.get("kind")) : kindFromId(id);
+        String follows = m.get("follows") instanceof String f ? f : "";
+        return new Question(id, kind, (int) SaveFormat.lng(m.getOrDefault("level", 0)), (int) SaveFormat.lng(m.getOrDefault("depth", 1)), follows,
+                (int) SaveFormat.lng(m.getOrDefault("gap", 0)), (String) m.getOrDefault("axis", ""), Boolean.TRUE.equals(m.get("public")),
+                Set.copyOf(list(tags.get("personality"))), Set.of(), Set.copyOf(list(tags.get("role"))), Person.Stage.CHILD,
+                tags.get("clan") instanceof String c ? c : "", answers);
+    }
+    @SuppressWarnings("unchecked")
+    private static List<String> list(Object o) { return o == null ? List.of() : o instanceof String s ? List.of(s) : (List<String>) o; }
+    /** The kind from the id's family when the data does not say: q.values (a dilemma), q.advice, q.pref, q.past, q.plans, q.confess. */
+    static Kind kindFromId(String id) {
+        String family = id.startsWith("q.") && id.indexOf('.', 2) > 0 ? id.substring(2, id.indexOf('.', 2)) : "";
+        return switch (family) {
+            case "values", "dilemma" -> Kind.DILEMMA; case "advice" -> Kind.ADVICE; case "pref", "preference" -> Kind.PREFERENCE;
+            case "past" -> Kind.PLAYER_PAST; case "plans" -> Kind.PLAYER_PLANS; case "confess", "confession" -> Kind.CONFESSION; default -> Kind.OPINION;
+        };
+    }
+
     @SuppressWarnings("unchecked")
     public static Question parse(Map<String, Object> m) {
+        if (m.containsKey("axis") || m.containsKey("follows") || m.containsKey("num")) return parseCompiled(m);
         var aud = (Map<String, Object>) m.getOrDefault("audience", Map.of());
         var answers = new ArrayList<Answer>();
         for (Object o : (List<Object>) m.get("answers")) {

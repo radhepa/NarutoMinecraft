@@ -34,7 +34,10 @@ public final class Questions {
     /** One answer in the ledger: the question, the answer, when, and where it stood on the question's axis. */
     public record Answered(String question, String answer, long day, String about, String stance, boolean recalled) {}
     /** What answering did: the change to their meters, their reaction, whether it contradicted something, the deed if it spread. */
-    public record Outcome(Meters delta, String reaction, String lineKey, boolean contradiction, boolean noticed, int deedSerial) {}
+    public record Outcome(Meters delta, String reaction, String lineKey, boolean contradiction, boolean noticed, int deedSerial) {
+        /** What the dialogue should say next: {@code callback.contradict} when they caught it, else "". */
+        public String say() { return noticed ? "callback.contradict" : ""; }
+    }
 
     public static void load(BondWorld w, List<Question> bank) { w.questionBank.clear(); w.questionBank.addAll(bank); }
     public static Question question(BondWorld w, String id) {
@@ -44,10 +47,16 @@ public final class Questions {
     public static int gap(int level) { return level >= 7 ? 4 : level >= 4 ? 6 : 8; }
 
     /** The question this person asks now, if any: within the budget, at their level, never one already answered. */
-    public static Optional<Question> next(BondWorld w, String who) {
+    public static Optional<Question> next(BondWorld w, String who) { return next(w, who, q -> true); }
+    /**
+     * The same with the dialogue glue's veto: {@code allowed} checks what the engine cannot (the question's Core
+     * {@code when} condition, the dialogue's own talk budget and never-repeat ledger).
+     */
+    public static Optional<Question> next(BondWorld w, String who, java.util.function.Predicate<Question> allowed) {
         var b = w.bond(who); long day = w.day;
         if (w.questionsDay != day) { w.questionsDay = day; w.questionsToday = 0; }
-        if (!b.pendingQuestion.isEmpty() && day - b.pendingSince <= PENDING_DAYS) return Optional.of(question(w, b.pendingQuestion));
+        if (!b.pendingQuestion.isEmpty() && day - b.pendingSince <= PENDING_DAYS && allowed.test(question(w, b.pendingQuestion)))
+            return Optional.of(question(w, b.pendingQuestion));
         b.pendingQuestion = "";
         int level = w.effectiveLevel(who);
         if (w.questionsToday >= DAILY_CAP || level < MIN_LEVEL || b.conflict.active() || b.conflict.broken()) return Optional.empty();
@@ -56,7 +65,7 @@ public final class Questions {
         var recentKinds = b.answers.stream().skip(Math.max(0, b.answers.size() - 2)).map(a -> question(w, a.question()).kind()).toList();
         var candidates = new ArrayList<Question>(); var weights = new ArrayList<Double>(); double total = 0;
         for (var q : w.questionBank) {
-            if (q.level() > level || answered(b, q.id()) || !q.suits(p)) continue;
+            if (q.level() > level || answered(b, q.id()) || !q.suits(p) || !allowed.test(q)) continue;
             if (!q.followUpOf().isEmpty()) {
                 var prior = b.answers.stream().filter(a -> a.question().equals(q.followUpOf())).findFirst();
                 if (prior.isEmpty() || day - prior.get().day() < q.minGapDays()) continue;
@@ -87,6 +96,12 @@ public final class Questions {
         var p = w.person(who).personality(); var a = q.answer(answerId);
         Meters sum = Meters.ZERO;
         for (var tag : a.tags()) sum = sum.plus(tag.react(p));
+        // What the answer stands for, against what they live by.
+        for (var e : a.stands().entrySet()) {
+            boolean theirs = p.holds(e.getKey());
+            if (e.getValue() > 0) sum = sum.plus(theirs ? Meters.of(1.5, 1.5, 0, 0) : Meters.of(.3, .3, 0, 0));
+            else if (e.getValue() < 0 && theirs) sum = sum.plus(Meters.of(-2, -2.5, 0, 0));
+        }
         return sum.times(q.kind().weight() * (1 + .25 * (q.depth() - 1)));
     }
     /** The player answers. Throws for an unknown question or answer. */
@@ -96,7 +111,7 @@ public final class Questions {
         boolean contradiction = false, noticed = false;
         if (!q.about().isEmpty()) {
             String earlier = earlierStance(w, who, q.about());
-            if (earlier != null && !earlier.equals(a.stance())) {
+            if (earlier != null && !earlier.isEmpty() && !a.stance().isEmpty() && !earlier.equals(a.stance())) {
                 contradiction = true;
                 var p = w.person(who).personality();
                 double chance = .15 + .07 * w.effectiveLevel(who) + (p.holds(Personality.Value.HONESTY) ? .25 : 0) + .1 * Math.max(0, p.discipline());
@@ -108,6 +123,7 @@ public final class Questions {
         b.answers.add(new Answered(q.id(), a.id(), day, q.about(), a.stance(), false));
         b.pendingQuestion = ""; b.lastQuestion = day;
         if (!a.sets().isEmpty()) b.flags.add(a.sets());
+        b.flags.add("answer:" + q.id() + "=" + a.id());
         if (a.nudgeTrait() != null && a.nudge() != 0) nudge(w, who, a.nudgeTrait(), a.nudge());
         int serial = -1;
         if (a.deed() != null || q.isPublic() && !q.about().isEmpty()) {
@@ -122,7 +138,7 @@ public final class Questions {
     /** Where the player last stood on an axis, as far as this person knows: told them, or heard it from someone. */
     static String earlierStance(BondWorld w, String who, String about) {
         long day = w.day;
-        var own = w.bond(who).answers.reversed().stream().filter(a -> a.about().equals(about) && day - a.day() <= CHANGED_MIND).findFirst();
+        var own = w.bond(who).answers.reversed().stream().filter(a -> a.about().equals(about) && !a.stance().isEmpty() && day - a.day() <= CHANGED_MIND).findFirst();
         if (own.isPresent()) return own.get().stance();
         for (var d : w.deeds.reversed()) {
             if (d.note.isEmpty() || !d.note.startsWith(about + "=") || day - d.day > CHANGED_MIND || !d.knows(who)) continue;
