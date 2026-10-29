@@ -277,8 +277,8 @@ public final class Playthrough {
                 for (String c : CLASSMATES) w.together(c);
                 w.together(INSTRUCTOR);
                 if (index % 2 == 1) w.experience(Act.STUDIED_TOGETHER, List.of(CLASSMATES.get(r.rng.below(CLASSMATES.size()))));
+                // Beta 1: one bond quest per classmate (ROADMAP.md, "Friendship and bonds").
                 for (String c : CLASSMATES) r.bondQuest(c, 1, Levels.FIRST_BOND_QUEST, null);
-                for (String c : CLASSMATES) r.bondQuest(c, 2, 3, null);
             }
             case GENIN, EXAMS, LATER -> {
                 var squad = r.squad();
@@ -292,7 +292,9 @@ public final class Playthrough {
                     w.act(SENSEI, r.roll(p == Profile.RECKLESS ? .7 : .92) ? Act.MISSION_SUCCESS : Act.MISSION_FAILED);
                 } else if (p == Profile.RECKLESS && r.roll(.5)) { for (String m : squad) w.act(m, Act.SKIPPED_TRAINING); }
                 else w.experience(Act.TRAINED_TOGETHER, squad);
+                // Beta 2: two per teammate; Beta 3: one more per teammate, in the training break.
                 if (phase == Phase.GENIN) for (String t : r.teammates()) { r.bondQuest(t, 3, 4, null); r.bondQuest(t, 4, 5, Act.SUPPORTED_DREAM); }
+                if (phase == Phase.EXAMS && index >= 1) for (String t : r.teammates()) r.bondQuest(t, 5, 5, Act.HEART_TO_HEART);
                 if (phase == Phase.LATER) later(r, index);
                 if (r.roll(.3)) w.talk(CLASSMATES.get(r.rng.below(CLASSMATES.size())));
             }

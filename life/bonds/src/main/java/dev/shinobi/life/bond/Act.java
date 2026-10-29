@@ -49,7 +49,7 @@ public enum Act {
     DATE(def(Size.NOTABLE, 90).meters(2.5, 1, 0, 0).romance(8).exp(Experience.DATE).romantic()),
 
     // Moments: the story gates want these (bond quests, heart-to-hearts, a life saved, a secret kept).
-    BOND_MOMENT(def(Size.BIG, 0).meters(1.5, 2, 0.5, 0).moment()),
+    BOND_MOMENT(def(Size.BIG, 0).meters(2, 2.5, 0.5, 0).moment()),
     HEART_TO_HEART(def(Size.NOTABLE, 120).meters(2.5, 3, 0, 0).lean(Trait.OPENNESS, Meter.AFFECTION, 1)),
     SAVED_LIFE(def(Size.BIG, 0).meters(9, 11, 5, 0).moment().honors(Value.COURAGE, Value.LOYALTY).deed(20)),
     SAVED_BY_THEM(def(Size.BIG, 0).meters(5, 3.5, 0, 0).moment().lean(Trait.WARMTH, Meter.AFFECTION, 2)),
