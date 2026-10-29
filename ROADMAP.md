@@ -394,7 +394,7 @@ illusion.
 | Aburame | Insect swarm | A swarm entity that follows a target for 10 s, drains chakra and marks it (it glows for the caster) | arms open, swarm particles |
 | Hatake | Ninken trackers, chakra sabre | Summon a ninken that tracks a mission target or hidden enemy and leads you there; the white sabre is a tanto whose combo finisher is a lightning dash | summon, sabre strikes |
 | Kurama | Painted illusion | Genjutsu: a painted world closes over one target for 6 s | brush strokes in the air |
-| Shimura | Vacuum blades, sealing | Wind blades in a fan that cut through blocks of guard; a sealing curse used on Root missions | breath blades |
+| Shimura | Vacuum blades, sealing | Wind blades in a fan that break through a guard; a sealing curse used on Root missions | breath blades |
 | Yuhi | Tree binding | Genjutsu: the target sees itself bound by a tree and cannot move for 4 s; the caster appears behind it | sign, step-behind |
 | Gekko | Dance of the Crescent Moon | Kenjutsu: two short-lived clones appear and all three strike a target at once from three sides | three-way slash |
 
