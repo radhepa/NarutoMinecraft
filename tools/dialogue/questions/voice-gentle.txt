@@ -1,0 +1,75 @@
+# Questions only a gentle resident asks: animals, flowers, kindness, soft strength.
+#! tags: personality=gentle
+
+? q.pref.gentle_talk_animals | fn: deepen_bond reveal_character | level: 2
+Q: Do you ever talk to animals? I do. I hope that's not strange.
+Q: The sparrows by my window know me by now. Do you have any animal friends?
+- All the time :: Oh, good. Then we're both a little strange. {values:+kindness} {tone:warm}
+- Only to stray cats :: Strays need someone to talk to most of all. {values:+kindness} {tone:gentle}
+- Not really :: That's all right. Maybe one will choose you. {values:+honesty} {tone:humble}
+
+? q.pref.gentle_animal_friend | fn: deepen_bond | level: 4 | follows: q.pref.gentle_talk_animals | depth: 2
+Q: Is there one animal in particular you're friends with? I'd love to meet them.
+Q: Tell me about your animal friend. Do they have a name?
+- A stray cat :: A stray. Oh. Do you feed it? Of course you feed it. {values:+kindness} {tone:kind}
+- Birds at my window :: Birds! They remember faces, you know. They'll remember yours. {values:+kindness +knowledge} {tone:curious}
+- Not yet :: Not yet. When one chooses you, you'll know. {values:+honesty} {tone:gentle}
+
+? q.values.gentle_harsh_words | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Do you think harsh words ever help anyone?
+Q: Some teachers shout. Does it ever do any good?
+- Sometimes :: Sometimes. I suppose a loud word can wake someone up. {values:+honesty} {tone:honest}
+- Never :: I think so too. There's always a softer way. {values:+kindness} {tone:gentle}
+- Only from a friend :: From someone who loves you. Yes. That's different. {values:+loyalty +honesty} {tone:warm}
+
+? q.pref.gentle_flower | fn: deepen_bond reveal_character | level: 2
+Q: Do you have a favourite flower?
+Q: If I brought you a flower, which one would make you smile?
+- Cherry blossom :: Gone so quickly. That's what makes it precious. {values:+creativity} {tone:gentle}
+- Sunflowers :: Always turning to the light. That suits you. {values:+courage} {tone:warm}
+- Morning glory :: Opening at dawn, shy by noon. A lovely choice. {values:+creativity} {tone:humble}
+- Not really :: That's all right. I'll find you one. {values:+honesty} {tone:kind}
+
+? q.dilemma.gentle_hurt_bird | fn: deepen_bond reveal_character | level: 3
+Q: You find a little bird with a hurt wing on the road. What do you do?
+Q: A sparrow with a broken wing, hopping in the lane. What would you do?
+- Take it to the vet :: The animal clinic by the kennels. They're so good. Yes. {values:+kindness +duty} {tone:dutiful}
+- Nurse it myself :: A box, soft cloth, a drop of water. You'd be a good nurse. {values:+kindness} {tone:kind}
+- Leave it to nature :: Oh. Sometimes that's right, I know. It's still hard. {values:+freedom} {tone:honest}
+
+? q.dilemma.gentle_bird_free | fn: deepen_bond reveal_character | level: 5 | follows: q.dilemma.gentle_hurt_bird | depth: 2
+Q: And if the little bird got better, would you let it go, or keep it?
+Q: Say the wing heals. Do you open the box?
+- Let it go :: Yes. It belongs to the sky. Even if it hurts a bit to watch. {values:+freedom +kindness} {tone:gentle}
+- Keep it safe :: Safe with you. I understand. It would be loved. {values:+family} {tone:warm}
+- Let it choose :: Open the window and let it decide. Oh, I like that best. {values:+freedom} {tone:free}
+
+? q.values.gentle_strong_soft | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Can someone be strong and gentle at the same time?
+Q: Do you think gentleness is a weakness, in a shinobi?
+- Yes, of course :: I hoped you'd say that. {values:+kindness +strength} {tone:warm}
+- No, not really :: Hm. I'd like to change your mind, one day. Gently. {values:+strength} {tone:blunt}
+- The strongest are :: The strongest are the gentlest. Yes. I've seen it too. {values:+kindness +strength} {tone:humble}
+
+? q.past.gentle_kindest_thing | fn: deepen_bond reveal_character | level: 4
+Q: What's the kindest thing anyone's done for you here?
+Q: Is there a kindness someone showed you that you still think about?
+- Someone fed me :: A meal when you needed it. That's the oldest kindness. {values:+family +kindness} {tone:warm}
+- Someone listened :: Listening. People forget how much that gives. {values:+kindness} {tone:gentle}
+- Someone showed me around :: Showing someone new the way. A lovely thing to do. {values:+kindness +family} {tone:kind}
+- Someone stood up for me :: Oh. That takes courage. I'm glad someone was there. {values:+courage +loyalty} {tone:loyal}
+
+? q.past.gentle_thanked | fn: deepen_bond | level: 6 | follows: q.past.gentle_kindest_thing | depth: 2
+Q: That kindness someone showed you. Did you ever get to thank them?
+Q: Have you told them what it meant to you?
+- Yes, I did :: Good. I'm sure it made their whole week. {values:+honesty +kindness} {tone:warm}
+- Not yet :: There's still time. It doesn't have to be grand. {values:+honesty} {tone:gentle}
+- I'm passing it on :: Passing it on. That's the best thanks of all. {values:+kindness} {tone:kind}
+
+? q.pref.gentle_peaceful_place | fn: deepen_bond reveal_character | level: 2
+Q: Where in the village feels most peaceful to you?
+Q: When you need to feel calm, where do you go?
+- The shrine :: The bell and the cedar trees. Yes. It's so still there. {values:+family} {tone:gentle}
+- The garden by the river :: The little garden with the stone lantern? I love it too. {values:+freedom} {tone:warm}
+- My own window :: Just your window and the sky. That's enough, isn't it? {values:+freedom} {tone:humble}
+- The flower shop :: The Yamanaka shop. All those colours, and that smell. Lovely. {values:+creativity} {tone:kind}
