@@ -1,0 +1,74 @@
+# Questions only a reserved resident asks: short, dry, private. They warm slowly.
+# Axis poles: alone_or_together (1 alone, -1 together).
+#! tags: personality=reserved
+
+? q.pref.res_quiet_company | fn: deepen_bond reveal_character | level: 2 | axis: alone_or_together
+Q: Quiet company, or chatter?
+Q: Do you like people who talk, or people who don't?
+- Quiet company :: Good. ...This is nice, then. {values:+freedom} {tone:gentle} {pole:1}
+- Chatter :: Hm. I'll try to keep up. No promises. {values:+family} {tone:playful} {pole:-1}
+- Depends who :: Fair. Some silences are better than others. {values:+honesty} {tone:honest}
+
+? q.values.res_some_things_private | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Some things should stay private. Agree?
+Q: Do you think people share too much?
+- Yes :: Yes. Good. {values:+freedom} {tone:cold}
+- No, share more :: Hm. Maybe that works for you. {values:+honesty} {tone:honest}
+- With the right person :: The right person. ...Yes. That's the exception. {values:+loyalty +honesty} {tone:gentle}
+
+? q.values.res_never_told | fn: deepen_bond reveal_character | kind: confession | level: 6 | follows: q.values.res_some_things_private | depth: 2
+Q: Is there something you've never told anyone? Don't tell me. Just yes or no.
+Q: A thing you've kept to yourself, always. Do you have one? Only yes or no.
+- Yes :: Thought so. So do I. We'll leave it there. {values:+honesty} {tone:honest}
+- No :: Lucky. Or very open. Either way. {values:+honesty} {tone:blunt}
+- Maybe :: Maybe. A good answer. {values:+freedom} {tone:evasive}
+
+? q.pref.res_alone_spot | fn: deepen_bond reveal_character | level: 3
+Q: Where do you go when you want to be alone?
+Q: Everyone needs somewhere to disappear. Yours?
+- My apartment :: Door shut. Simple. {values:+freedom} {tone:honest}
+- The forest edge :: Good choice. Nobody follows you there. {values:+freedom} {tone:free}
+- The library :: The back shelves. Nobody talks. I know the spot. {values:+knowledge} {tone:gentle}
+- I don't, really :: You don't? Hm. Strange. I envy it, a little. {values:+loyalty} {tone:warm}
+
+? q.values.res_small_talk | fn: deepen_bond reveal_character | kind: opinion | level: 2
+Q: Small talk. Pointless?
+Q: Weather, prices, who's ill. Do you enjoy that sort of talk?
+- Pointless :: Agreed. ...Nice weather, though. Ha. {values:+honesty} {tone:blunt}
+- It's useful :: Oil for the hinges. Fine. I'll grant you that. {values:+kindness} {tone:cautious}
+- Nice, sometimes :: Sometimes. With the right baker. {values:+kindness} {tone:gentle}
+
+? q.pref.res_tea | fn: deepen_bond | level: 2
+Q: Tea. How do you take it?
+Q: Green tea, plain? Or something else?
+- Plain green :: Correct. {values:+honesty} {tone:proud}
+- Sweetened :: Sweet tea. Hm. Your business. {values:+freedom} {tone:joking}
+- I don't drink it :: No tea at all. I'll remember. {values:+honesty} {tone:blunt}
+
+? q.pref.res_tea_offer | fn: deepen_bond | level: 5 | follows: q.pref.res_tea | depth: 2 | gap: 4
+Q: ...I make decent tea. Would you drink some? With me?
+Q: I've a pot on. You can stay. If you like.
+- Yes, please :: Good. Sit. Don't talk for a bit. It's better that way. {values:+loyalty} {tone:warm}
+- If you're having some :: I am. Two cups, then. {values:+kindness} {tone:gentle}
+- Another time :: Another time. The offer stands. {values:+freedom} {tone:cautious}
+
+? q.values.res_pryers | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: People who pry. How do you deal with them?
+Q: Someone keeps asking you personal questions. What do you do?
+- Change the subject :: Weather. Works every time. {values:+freedom} {tone:evasive}
+- Tell them plainly :: "That's mine." Simple. Good. {values:+honesty} {tone:blunt}
+- Answer politely :: Patient. More patient than me. {values:+kindness} {tone:kind}
+
+? q.past.res_trust_speed | fn: deepen_bond reveal_character | level: 3
+Q: Do you trust people quickly, or slowly?
+Q: How long before you trust someone?
+- Quickly :: Quickly. Brave. Or reckless. Hm. {values:+kindness +courage} {tone:bold}
+- Slowly :: Slowly. Me too. It lasts longer that way. {values:+loyalty} {tone:cautious}
+- It depends :: On the person. Obviously. Fair. {values:+knowledge} {tone:honest}
+
+? q.past.res_trust_me | fn: deepen_bond | level: 6 | follows: q.past.res_trust_speed | depth: 2 | gap: 5
+Q: ...And me? Do you trust me yet?
+Q: Just asking. Do you trust me?
+- Yes :: ...Good. That's good. {values:+loyalty} {tone:warm}
+- Getting there :: Getting there. Fair. So am I. {values:+honesty} {tone:honest}
+- Not yet :: Not yet. Honest. I respect it. {values:+honesty} {tone:cautious}
