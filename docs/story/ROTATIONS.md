@@ -41,11 +41,26 @@ From Ch 39 on, the reveal, the clearing scenes and their callbacks differ freely
   the array's cinder seals under what he carries. He scratched the sinking sun on the player's door
   (Ch 4) and is the figure on the rooftops. The cinder seal that silences him is in his **palm**,
   under the burn scar.
-- **The voice** is the bound candidate. Since about Y-10 the voice has fed Yūgure, through the porter:
-  the names of gifted children with their chakra readings (the nurseries' recruiting list), the
-  guard rotations for the finals (Ch 19), and the archive door's schedule.
+- **The voice** is the bound candidate. Since about **Y-10** the voice has fed Yūgure, in every save:
+  through the porter since Y-6, and by **the first hand** before that (an old east-road carter, no
+  clan, an ordinary family name, who died in a road accident at Y-6). What the voice sent: the names
+  of gifted children with their chakra readings (the nurseries' recruiting list), the guard rotations
+  for the finals (Ch 19), and the archive door's schedule. Every candidate was old enough at Y-10
+  (the medic, born ~Y-31, was contacted at 21 as a new hospital orderly). Where a candidate speaks a
+  span at their reveal, it is "sixteen years".
+- **The Ch 0 raid was not the voice's leak.** The porter loaded the raid squad's supply crates and
+  reported the muster himself: **the hand warned the leader**, who let the raid happen (his plan,
+  WORLD.md).
+- **The sources reach border children too**: the library files the border outposts' entrance tests
+  with the aptitude scrolls; the stipend registry lists the border-village orphans the Leaf
+  sponsors; the hospital ledger logs every rescued child; the merchant's book logs every stop.
+- **The hideout's cells were unnumbered**, and no Leaf rescuer heard "Nine": only the player and
+  Yūgure know it.
+- **Daily lives are identical**: every candidate's schedule and night movements are the same in
+  every save until Ch 39.
 - **Yūgure's list** is kept in the voice's own notation. A cell's copy, captured in the Valley of
-  Ash (Ch 35), holds years of entries, all in one notation and one hand: the voice's. (Why a Leaf
+  Ash (Ch 35), holds sixteen years of entries (from ~Y-10), all in one notation and one hand: the
+  voice's. (Why a Leaf
   notation indexes children from outside the Leaf: it is the voice's private habit of mind; they
   keep every child they report in the system they use every day.)
 - **The four sources and their notations**, each shown to the player in the beta, in every save:
@@ -67,7 +82,9 @@ From Ch 39 on, the reveal, the clearing scenes and their callbacks differ freely
   you as a receipt). The case board also pins the Ch 0 subtitle **"Nine. Up."** as a memory card, so a
   player who missed it can still connect the slip.
 - **Thread Sight cannot solve it.** From Ch 24 the player sees bonds as threads, and a bonded
-  person who hides something flickers. The limit ([WORLD.md](WORLD.md#thread-sight-and-the-mystery-a-principled-limit)):
+  person who hides something shows a **steady flicker** (one `hides:` bond flag, never line by line;
+  it is not a lie detector). Each candidate carries exactly one `hides:` flag of the same kind until
+  Ch 39/40, and none is ever a scripted thread exception before Ch 39. The limit ([WORLD.md](WORLD.md#thread-sight-and-the-mystery-a-principled-limit)):
   it reads only people bonded to the player at 6+, it shows *that* someone hides, never *what*, and
   all four candidates hide a true secret in every save (the librarian her Kagari family history;
   the medic their letters to the strangers who saved them; the councillor his signature on the Ash
@@ -96,6 +113,9 @@ From Ch 39 on, the reveal, the clearing scenes and their callbacks differ freely
 | Councillor | The council's briefing | Told as an elder | Council post |
 | Merchant | The vendor stall permits, which list the guard posts | Gate gossip from the Sixth's clerk's errands | The cart |
 
+  None of the four leaked the Ch 0 raid: in every save that warning came from the hand (the porter
+  loaded the raid squad's crates), so the raid points at no candidate.
+
   If the player asks the Fourth (crippled or taken saves) who sees the guard rotation, he says the
   same in every save: "Half the village, child. Medics, vendors, the council, the Academy." 
 
@@ -109,13 +129,13 @@ From Ch 39 on, the reveal, the clearing scenes and their callbacks differ freely
 | `story.clue.librarian.1` | Ch 5 | The founding history's cut page; the edge is fresh | She cut it that morning and handed it to the porter | The porter cut it while collecting returns; she found it that morning |
 | `story.clue.librarian.2` | Ch 5 | The librarian is nervous and lies that the page "has been gone for years" | She is afraid of being caught | She is afraid of what the page was: her own family's secret history. She lies to protect it |
 | `story.clue.librarian.3` | Side: `district.b1.academy.overdue` | One overdue book holds a slip in an unknown cipher (Yūgure's) | A dead drop she used | The porter used the returns cart as a dead drop |
-| `story.clue.merchant.1` | Ch 11 | The cart's false floor of chakra paper; the delivery book with its shorthand | They carry paper and names | They bought the cart second-hand from a carpenter in the east who built the floor; they did not know |
+| `story.clue.merchant.1` | Ch 11 | The cart's false floor of chakra paper; the delivery book with its shorthand. In every save the merchant repairs the broken axle with their own tools (the tool marks the bound alibi later fails on) | They carry paper and names | They bought the cart second-hand from a carpenter in the east who built the floor; they did not know |
 | `story.clue.merchant.2` | Ch 14 | The merchant slows the squad on the road, inventing reasons | To let the hearth slip past | A pair in road clothes with soot-marked wrists threatened them at the waystation the night before |
 | `story.clue.councillor.2` | Ch 14 | The captured smuggler's travel pass bears the councillor's pine seal | He sealed it himself | His seal box sat open on his desk on post days, when the porter collected the council post; the porter used it |
 | `story.clue.councillor.3` | Side: `event.b2.council_day` | From the gallery you see the councillor hand a sealed letter to the porter | A report | Ordinary council post |
 | `story.clue.merchant.3` | Side: `district.b2.contraband` | The gate log shows the merchant's cart passed with no inspection, twice | They bribed the guard | The bored Hagane guards waved every regular through (the betting ring's guards) |
-| `story.clue.medic.3` | Side: `district.b2.night_shift` | Pages are missing from the hospital's intake ledger after your night shift. The night plays identically in every save: you are sent on an errand to the herb store during the window and never see the medic's station | They tore them out | The night patient (the smuggler) tore them out (see the alibi below) |
-| `story.clue.medic.4` | Side: `side.b3.hospital_supplies` | The diverted supplies' requisition is in green ink | They signed it | A forged requisition; the trail clears them (SIDE_QUESTS bible entry) |
+| `story.clue.medic.3` | Side: `district.b2.night_shift` | Pages are missing from the hospital's intake ledger after your night shift. The night plays identically in every save: you are sent on an errand to the herb store during the window, and nothing about the medic is seen | They tore them out | The night patient (the smuggler) tore them out (see the alibi below) |
+| `story.clue.medic.4` | Side: `side.b3.hospital_supplies` | The diverted supplies' requisition is in green ink | Not theirs; the voice never touched it (a pure red herring in every save) | A forged requisition by an exam official; the trail clears them (SIDE_QUESTS bible entry) |
 
 Every candidate has at least three beta clues; none is decisive.
 
@@ -136,7 +156,8 @@ quiet and lands inside a kindness:
 | Councillor | "The council is pleased. Number nine of the registry's children to make Chunin." (The registry has no such count; you are S-114) |
 | Merchant | The note: "For the ninth of my favourite customers. Eat the persimmons first." |
 
-Innocent candidates' parallel lines carry no number. A player who caught "Nine" in Ch 0 can solve
+Innocent candidates' parallel lines carry no number (the innocent medic: "Your pulse is good. Better
+than ninety, for a Chunin."), and no other line anywhere puts a count of nine near the player. A player who caught "Nine" in Ch 0 can solve
 the case here. The journal records the line (`story.clue.slip.heard`), so the case board can recall
 it.
 
@@ -184,8 +205,8 @@ get in the finale, never whether the story continues.
 
 | Bound | The scene | What they say (the heart of it) | After |
 |---|---|---|---|
-| **Librarian** | In the library at night, among the aptitude scrolls; she has the cut page's copy in her sleeve | "My grandmother was one of the twenty-seven. She whispered our real name to me once and never again. He wrote to me for ten years like a cousin. He said he was finding the lost ones. I gave him children, and I told myself I was giving them home." She knew you were Nine before you came to the Leaf | Arrested: her family's secret history goes to the archive; she asks to teach the old songs to the restored clan from her cell. Turned: she sends the false signals, and in the epilogue the player as Hokage rules on her |
-| **Medic** | The hospital roof at dawn; they have the green ink on their fingers | "They pulled me out of a burning orphanage when the Leaf was three days away. I owed them my life. I sent readings. Just numbers, I said. Then I treated your friend after the border post, and saw what she had done with what was put in her." (They mean the lost child, Ch 24; the medic treated the fallen friend in Ch 25.) "That was mine. I measured her." | Arrested, or turned; they ask to treat the lost child, whatever happens to them |
+| **Librarian** | In the library at night, among the aptitude scrolls; she has the cut page's copy in her sleeve | "My grandmother was one of the twenty-seven. She whispered our real name to me once and never again. He wrote to me for sixteen years like a cousin. He said he was finding the lost ones. I gave him children, and I told myself I was giving them home." She knew you were Nine before you came to the Leaf | Arrested: her family's secret history goes to the archive; she asks to teach the old songs to the restored clan from her cell. Turned: she sends the false signals, and in the epilogue the player as Hokage rules on her |
+| **Medic** | The hospital roof at dawn; they have the green ink on their fingers | "They pulled me out of a burning orphanage when the Leaf was three days away. I owed them my life. I sent readings, sixteen years of them. Just numbers, I said. Then I treated your friend after the border post, and saw what she had done with what was put in her." (They mean the lost child, Ch 24; the medic treated the fallen friend in Ch 25.) "That was mine. I measured her." | Arrested, or turned; they ask to treat the lost child, whatever happens to them |
 | **Councillor** | His study, his seal box open | "My grandfather drafted the fourth clause at the founding and voted to end them ten years later. The Senju owe a clan its name. The village would never pay; he said he would make it pay without blood. I believed the part I wanted." He arranged your stipend to keep you safe *and* on file, and cannot say which he meant more | Arrested and stripped of the council seat; the Senju clan line's Heart step (`clan.senju.4`) becomes his house's reckoning. Turned: he keeps his seat as a mole, hating every day of it |
 | **Merchant** | Their cart in the rain at the east gate, half packed to run | "It was paper. Then it was paper and names. Then once there were children under the floor, and they paid me three times over, and I told myself it was the last time." They kept hiring your squad because you were the one child they had carried who came back | Arrested; their delivery book helps the A-rank hunts. Turned: they run the false cargo |
 
@@ -268,7 +289,7 @@ merchant becomes the squad's informant on the roads. If the player suspected the
 
 | | **Falls** | **Crippled and abdicates** | **Taken** |
 |---|---|---|---|
-| Ch 19 | He goes down to the arena floor and fights the leader's hearths to cover the evacuation of the Academy children, and falls (shown through the cinematic cutaway: his grandson's face on the stair, the smoke closing) | He takes the leader's blow meant for the stands; the dark mirror tears half his chakra. He lives | He is hit by a binding seal and carried off through the smoke by the leader's hearth; you see ash-violet scarves lift him over the wall |
+| Ch 19 | The attack begins at the opening lantern-lighting. He is in the stands, carrying Academy children down the east stair, when the leader strikes him there; he falls on the stair (the cinematic cutaway: his grandson's face, the smoke closing) | Hit in the same place by the leader's dark mirror, which tears half his chakra; he lives | Hit in the same place by a binding seal and carried off through the smoke by the leader's hearth; you see ash-violet scarves lift him over the wall |
 | Ch 20 | An **Akimichi farewell feast**: the whole village eats his favourite dish in the street, his bowl set at an empty place; his grandson (`squad3_b`) or his daughter quotes your Ch 1 answer (`ans.hokage_4.want`; unset: "He said you came here hungry. Eat."). The Fifth named | The hospital; he abdicates from his bed and names the Fifth himself ("She is hard. The Leaf needs hard for a while") | The empty seat: the council names the Fifth "until he returns" |
 | Ch 21 (Chunin opening) | A year later; his statue's unveiling in the Academy yard; the stipend continues in his name | A year later; he teaches the Academy's history class from a wheelchair. He is your mentor in the Chunin arc (an advisor the player can visit) | A year later: intel finally places him in a Yūgure hold; the opening mission, **The Empty Seat**, brings him home, hollowed by the leader's experiments. He returns too weak to rule and becomes a mentor (as the crippled path) |
 | What it teaches the player | Loss, and the will he left | The cost of the dark mirror, seen in a man you love | The dark mirror's purpose: the leader is practising |
@@ -286,6 +307,6 @@ saves. The combinations that need care:
 | Combination | Watch for |
 |---|---|
 | Traitor = medic, fate = crippled or taken | The medic treats the Fourth; the medic's reveal scene must not need the Fourth healthy |
-| Traitor = councillor, lineage = B | The councillor signed the Ash Road sealing. At Ch 39 he says only "I signed the Ash Road away too. A Jonin's death, and a child's." (the same line in A); "your parent" waits for a cell visit after Ch 48 |
+| Traitor = councillor, lineage = B | The councillor signed the Ash Road sealing. At Ch 39 he says only "I signed the Ash Road away too. A Jonin's death." (the same line in A); "your parent" waits for a cell visit after Ch 48 |
 | Traitor = merchant, lineage = A | The merchant's note "Eat the persimmons first" (the slip) touches the persimmon motif; in A the persimmon on the sill comes from the second, not the merchant. Keep them on different days (Ch 25 and Ch 27). The innocent merchants' notes send persimmons too, so the fruit is no tell |
 | Traitor = librarian | After her arrest the gift's old forms come from the keeper (who learned them from the archive) and from the second (Ch 48); before Ch 39 she teaches identically in every save |
