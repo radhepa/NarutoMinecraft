@@ -1,14 +1,14 @@
 {
  "format": 1,
- "id": "combat:boss.ch8.bell_test",
- "name": "The bell test",
+ "id": "combat:boss.ch8.cord_test",
+ "name": "The cord test",
  "chapter": 8,
  "slice": "beta2",
  "base": "combat:enemy.spar.chunin",
  "level": 12,
  "nonlethal": true,
  "arena": "place:training_ground_3",
- "win": "take a bell (touch the sensei's belt) with a teammate taking the other: hit them while staggered, bound, possessed or in genjutsu",
+ "win": "the squad takes the three small tags on the sensei's cord together: touch the cord while the sensei is staggered, bound, possessed or in genjutsu",
  "lose": "the timer (until noon) runs out",
  "phases": [
   {
@@ -20,7 +20,7 @@
   {
    "at_hp": 0.0,
    "name": "Lesson",
-   "behaviour": "when a bell is touched: Headhunter on the one who did not help"
+   "behaviour": "when a tag is touched: Headhunter on the one who did not help"
   }
  ],
  "hp_mult": 99.0,
@@ -35,5 +35,5 @@
  ],
  "style": "combat:style.academy_basics",
  "notes": "Unwinnable alone by design; teaches squad commands and parry. Health never matters (hp 99x)",
- "dialogue": "dlg:combat.boss.ch8.bell_test"
+ "dialogue": "dlg:combat.boss.ch8.cord_test"
 }

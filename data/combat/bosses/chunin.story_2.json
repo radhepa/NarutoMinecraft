@@ -4,16 +4,19 @@
  "name": "Story boss",
  "chapter": "chunin",
  "slice": "chunin",
- "base": "combat:enemy.cell_veteran",
+ "base": "combat:group.cell_trio",
  "level": 28,
  "nonlethal": false,
  "arena": null,
  "win": "defeat",
  "lose": "the player is downed",
  "phases": [],
- "hp_mult": 7.0,
+ "hp_mult": 2.0,
  "poise": 100,
  "damage_mult": 1.15,
  "story": "bible:combat:boss.chunin.story_2",
+ "mechanics": [
+  "smothered: no audio cues within 16 blocks"
+ ],
  "dialogue": "dlg:combat.boss.chunin.story_2"
 }

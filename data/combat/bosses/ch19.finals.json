@@ -41,6 +41,7 @@
   "combat:fire.phoenix_flower"
  ],
  "style": "combat:style.academy_basics",
- "notes": "Role-based: the rival in Classic; in Varied the finals opponent is whoever the bracket gives (role:rival by default)",
+ "notes": "For the NPC exam seasons (the calendar event); role-based: role:rival by default",
+ "npc_only": true,
  "dialogue": "dlg:combat.boss.ch19.finals"
 }

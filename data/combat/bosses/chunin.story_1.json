@@ -4,16 +4,41 @@
  "name": "Story boss",
  "chapter": "chunin",
  "slice": "chunin",
- "base": "combat:enemy.cell_veteran",
+ "base": "combat:enemy.hollow_fighter",
  "level": 24,
  "nonlethal": false,
  "arena": null,
  "win": "defeat",
  "lose": "the player is downed",
- "phases": [],
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "First",
+   "behaviour": "flat, relentless; cycles natures"
+  },
+  {
+   "at_hp": 0.0,
+   "name": "Second",
+   "behaviour": "begins on ally_down"
+  }
+ ],
  "hp_mult": 7.0,
  "poise": 100,
  "damage_mult": 1.15,
  "story": "bible:combat:boss.chunin.story_1",
+ "scripted": [
+  {
+   "event": "ally_down",
+   "starts": "phase 2"
+  },
+  {
+   "event": "recognition",
+   "ends": true
+  }
+ ],
+ "mechanics": [
+  "never lands a killing blow on the player (floors at 1 HP)",
+  "cycles three natures"
+ ],
  "dialogue": "dlg:combat.boss.chunin.story_1"
 }

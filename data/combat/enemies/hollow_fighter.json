@@ -1,0 +1,38 @@
+{
+ "format": 1,
+ "id": "combat:enemy.hollow_fighter",
+ "name": "Flat-eyed fighter",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "chunin",
+ "levels": [
+  20,
+  50
+ ],
+ "band": "mid",
+ "slice": "chunin",
+ "style": "combat:style.academy_basics",
+ "weapons": [
+  "item:kunai"
+ ],
+ "techniques": [
+  "combat:fire.fire_dragon_bullet",
+  "combat:wind.blade_of_wind",
+  "combat:lightning.false_darkness"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "flat_ai",
+  "no_flinch",
+  "no_retreat",
+  "cycles_natures"
+ ],
+ "ai": {},
+ "barks": "beast_none",
+ "note": "Flat AI: never flinches or retreats; cycles three natures"
+}

@@ -81,7 +81,8 @@ public final class CombatData {
     }
     public record Phase(double atHp, String name, List<String> adds) {}
     public record Boss(String id, String slice, String base, int level, boolean nonlethal, double hpMult, double poise, List<Phase> phases,
-                       List<String> techniques, List<String> weapons, String style, String role, Map<String, Object> armour, double damageMult) {
+                       List<String> techniques, List<String> weapons, String style, String role, Map<String, Object> armour, double damageMult,
+                       boolean npcOnly) {
         static Boss of(Map<String, Object> m) {
             var ph = new ArrayList<Phase>();
             for (Object o : Json.list(m, "phases")) {
@@ -91,7 +92,7 @@ public final class CombatData {
             return new Boss(Json.str(m, "id", "?"), Json.str(m, "slice", "beta1"), Json.str(m, "base", "?"), Json.integer(m, "level", 1),
                     Json.bool(m, "nonlethal"), Json.num(m, "hp_mult", 7), Json.num(m, "poise", 100), ph, Json.strings(m, "techniques"),
                     Json.strings(m, "weapons"), Json.str(m, "style", null), Json.str(m, "role", null), Json.obj(m, "armour"),
-                    Json.num(m, "damage_mult", 1));
+                    Json.num(m, "damage_mult", 1), Json.bool(m, "npc_only"));
         }
     }
     public record Build(String id, String focus, int level, Nature nature, Map<Scaling.Pillar, Integer> ranks, int control, double physical,

@@ -596,7 +596,7 @@ final class Battle {
         if (r.chakraDrain() > 0) f0.chakra.drain(r.chakraDrain());
         f0.status.damaged();
         if (by.pup && s.delivery() == Delivery.MELEE && guard == Guard.NONE && ++by.landed % 3 == 0)
-            at(now + 4, () -> { if (f0.alive()) schedule(new Strike(by, f0, now, 0, Delivery.MELEE, 2.0 * (1 + by.level / 50.0), "physical.slash", 3, Pillar.TAIJUTSU,
+            at(now + 4, () -> { if (f0.alive()) schedule(new Strike(by, f0, now, 0, Delivery.MELEE, 2.0 * (1 + Math.max(0, by.level - 18) / 40.0), "physical.slash", 3, Pillar.TAIJUTSU,
                     by.rankOf(Pillar.TAIJUTSU), 1, List.of(), 0, "pup", false, false, false, 0, new Chain(), 1)); });
         if (r.hp() > 0) {
             by.momentum = Math.min(100, by.momentum + (guard == Guard.NONE ? 6 : 2));

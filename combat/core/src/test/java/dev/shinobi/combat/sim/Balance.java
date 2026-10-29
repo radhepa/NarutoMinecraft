@@ -299,7 +299,7 @@ public final class Balance {
     List<CombatData.Boss> betaBosses() {
         var out = new ArrayList<CombatData.Boss>();
         for (var b : data.bosses.values())
-            if (List.of("beta1", "beta2", "beta3").contains(b.slice()) && !b.id().contains("bell_test")) out.add(b);
+            if (List.of("beta1", "beta2", "beta3").contains(b.slice()) && !b.id().contains("cord_test") && !b.npcOnly()) out.add(b);
         out.sort((x, y) -> Integer.compare(x.level(), y.level()));
         return out;
     }
@@ -318,7 +318,7 @@ public final class Balance {
             }
             t.append('\n');
         }
-        t.append("\nThe bell test (Ch 8) is a scripted objective, not a health race, so it is not simulated.\n");
+        t.append("\nThe cord test (Ch 8) is a scripted objective, not a health race, so it is not simulated.\n");
         return t.toString();
     }
 }

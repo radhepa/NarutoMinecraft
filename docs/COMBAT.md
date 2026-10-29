@@ -377,7 +377,7 @@ water over Mud River a Mudslide; wind through a wave Gale Rain; lightning throug
 Thunder Gust; fire into an earth wall a Magma Wall.
 
 **Squad combo techniques**: launcher relay (a teammate launches, you air-combo), clone feint, bomb line,
-pincer, distract and take (the bell test's lesson), shadow and strike (a Nara possesses, everyone crits),
+pincer, distract and take (the cord test's lesson), shadow and strike (a Nara possesses, everyone crits),
 fang and swarm, cover fire, the triad formation (Nara, Akimichi and Yamanaka), barrier and fire, and the
 squad finisher at cohesion 80.
 
@@ -438,7 +438,8 @@ bond exactly one tier (a Spark goes out), a falling-out puts it out, and nothing
   reached). With m = 1 + 1.5 (1 - e^(-strength / 35)): your damage x m, damage taken x 1 / sqrt(m), chakra
   regen x (1 + strength / 25), allies' power x (1 + (m - 1) / 2). A loner (strength 2 to 4) gets x1.1, a
   candle; 12 x1.44, a campfire; a typical player at 60 hours (19) x1.63, a bonfire; a devoted one (22) x1.70,
-  an inferno. Afterwards 60 s of burnout.
+  an inferno. The story reads the same strength in three tiers (data): small under 20, strong from 20, the
+  whole village from 41 (x2.0). Afterwards 60 s of burnout.
 
 **Costs**: while linked you feel your allies' pain; past three kindles in a minute each burns 10% of your
 chakra bar and 30 stamina; a quarrel dims that person's tier, a falling-out snuffs it; it is useless with
@@ -498,15 +499,15 @@ spiders.
 | Boss | Chapter | Shape |
 |---|---|---|
 | `combat:boss.ch2.rival_spar` | 2 | a spar with `role:rival` (non-lethal, 30%); losing is allowed and remembered |
-| `combat:boss.ch8.bell_test` | 8 | `role:sensei`: an objective (take the bells with a teammate), unwinnable alone by design |
+| `combat:boss.ch8.cord_test` | 8 | `role:sensei`: an objective (the squad takes the three tags on the sensei's cord together), unwinnable alone by design |
 | `combat:boss.ch11.bandit_chief` | 11 | mace overheads, smoke and bombs, an archer, then a knife-fighter |
-| `combat:boss.ch14.road_ambush` | 14 | an enemy cell holds the road with smoke, makibishi and mines while a runner flees |
-| `combat:boss.ch16.forest_team` | 16 | a hunting exam team in the trees (three on three) |
+| `combat:boss.ch14.road_ambush` | 14 | a three-person cell holds the road with smoke, makibishi and mines while a runner flees; capturing the runner is required; a scripted area-denial line cuts the pursuit at 60% of the time limit |
+| `combat:boss.ch16.forest_team` | 16 | a hostile exam team in the trees (three on three); a scripted interrupt at 25% of your health ends it with no loss |
 | `combat:boss.ch16.forest_beast` | 16 | a giant snake: tail sweeps, lunges, a swallow you fight out of |
 | `combat:boss.ch17.prelim` | 17 | a one-on-one bout against one rolled exam rival (non-lethal, judged) |
-| `combat:boss.ch19.finals` | 19 | the finals bout, `role:rival` by default (non-lethal, judged) |
-| `combat:boss.ch19.stadium_cell` | 19 | attackers in the stands: defend and protect |
-| later | Chunin to road | a missing-nin bounty, a mercenary fort, a samurai captain, a puppet theatre; eight story bosses by neutral id (`chunin.story_1` ... `road.final`), defined in the story bible |
+| `combat:boss.ch19.finals` | 19 | a finals bout for the NPC exam seasons (the calendar event; non-lethal, judged) |
+| `combat:boss.ch19.stadium_cell` | 19 | cells of three in the stands: hold the east stair while children evacuate; scripted beats in the stands |
+| later | Chunin to road | a missing-nin bounty, a mercenary fort, a samurai captain, a puppet theatre; eight story bosses by neutral id (`chunin.story_1` ... `road.final`) whose mechanics, objectives and scripted events are in their files and whose story is in the bible |
 
 **Sparring and exam fights.** Sparring never kills: it ends at 30% health or a yield (hold Y), with no level
 loss; residents are knocked out, never killed (VF Knockouts). Ranked residents spar from friendship 3 (BONDS
@@ -666,16 +667,16 @@ round out, wins most pairings. PvP is a later system; this is a guard, not a tar
 |---|---|---|---|
 | ch2.rival_spar | alone | 100% (100%) / 100% / 100% / 100% | 89% (84%) / 64% (59%) / 70% (71%) / 77% (77%) |
 | ch11.bandit_chief | +2 | 100% / 100% / 100% / 100% | 71% (70%) / 97% (95%) / 84% (74%) / 87% (79%) |
-| ch14.road_ambush | +2 | 100% / 100% / 100% / 100% | 98% / 98% / 97% / 97% |
+| ch14.road_ambush | +2 | 100% (99%) / 100% / 99% (93%) / 100% | 86% (79%) / 96% (97%) / 89% (72%) / 87% (82%) |
 | ch16.forest_beast | +2 | 100% / 100% / 100% / 100% | 100% / 100% / 100% / 100% |
 | ch16.forest_team | +2 | 100% / 100% / 100% / 100% | 80% (70%) / 97% (95%) / 61% (50%) / 69% (66%) |
 | ch17.prelim | alone | 100% / 100% / 100% / 100% | 77% (74%) / 87% (86%) / 78% (72%) / 72% (61%) |
-| ch19.finals | alone | 100% / 97% / 98% / 99% | 80% (74%) / 48% (34%) / 73% (63%) / 52% (38%) |
-| ch19.stadium_cell | +2 | 90% (82%) / 98% / 91% (78%) / 97% | 42% (22%) / 52% (39%) / 53% (39%) / 38% (33%) |
+| ch19.stadium_cell | +2 | 100% / 100% / 100% / 100% | 93% (84%) / 95% (94%) / 93% (81%) / 97% (92%) |
 
-Story is forgiving (90 to 100% at average skill, 78 to 100% for novices); Shinobi is a challenge, not a wall
-(38 to 100%). Boss fights run 7 to 20 s of simulated time. The bell test is a scripted objective, not
-simulated.
+Story is forgiving (99 to 100% at average skill, 93 to 100% for novices); Shinobi is a challenge, not a wall
+(61 to 100%). Boss fights run 7 to 20 s of simulated time. The cord test is a scripted objective, and the
+finals bout belongs to the NPC exam seasons, so neither is in the table; the stadium's protect objective is
+not simulated, so that fight plays harder than its row.
 
 **Teammates' contribution** (the ranks session's typical player with its tuned offsets; target 70 to 110% of
 the player's damage and control combined, Shinobi, the squad against two rogue genin and a rogue chunin):
@@ -720,7 +721,7 @@ Shinobi from level 10, in 1 to 25 s; no pillar averages under 20% against the ot
 
 **Known gaps**: burst builds (weapons, ninjutsu, balanced) clear mooks two to four times faster than taijutsu
 from level 25, because one A-rank cast or weapon technique one-shots a mook; taijutsu's elite fights stay the
-most even. The Ch 19 stadium fight is the hardest beta fight on Shinobi (38 to 53%).
+most even. On Shinobi the hardest beta fights are the Ch 16 forest team (61 to 97%) and the first spar (64 to 89%).
 
 ## 16. Animations
 
@@ -782,6 +783,6 @@ All ids are `combat:` namespaced (`combat:fire.great_fireball`, `combat:style.st
   so taijutsu's steady pace keeps up?
 - **Kindling Bond in the beta**: none of it ships. Should Spark appear in Beta 3 as a teaser, or wait for the story?
 - **Teammate shares**: Painted Beasts now opens at level 15 for the Kurama (an exception to tier 2 at 20) and
-  the ninken grows with its owner; teammate_a is still under target at Ch 11 and Ch 20, and teammate_b over at
+  the ninken's bite grows only from the Chunin arc; teammate_a is still under target at Ch 11 and Ch 20, and teammate_b over at
   Ch 8 and Beta 3. More kit or offset tuning?
 - **PvP** is untuned beyond the guard; it waits for multiplayer.

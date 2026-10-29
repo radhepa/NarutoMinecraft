@@ -2094,7 +2094,7 @@
    "priority": "P1",
    "slice": "beta2",
    "keys": null,
-   "note": "The bell test"
+   "note": "The cord test"
   },
   "combat.res.sensei_book_dodge": {
    "ticks": 8,
@@ -2104,7 +2104,7 @@
    "priority": "P1",
    "slice": "beta2",
    "keys": null,
-   "note": "The bell test: dodges without looking up"
+   "note": "The cord test: dodges without looking up"
   },
   "combat.res.cower_civilian": {
    "ticks": 30,

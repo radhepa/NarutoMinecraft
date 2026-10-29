@@ -41,7 +41,7 @@
    }
   ],
   "response": "a command is obeyed after 4 ticks at cohesion 60+, 10 ticks at 30 to 59, 16 ticks under 30; under 30 a teammate ignores 1 in 10 (except Umino's Steady Voice)",
-  "slice": "beta2 (Ch 8, the bell test)"
+  "slice": "beta2 (Ch 8, the cord test)"
  },
  "formations": [
   {

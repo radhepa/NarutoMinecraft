@@ -27,7 +27,14 @@
  "hp_mult": 1.5,
  "poise": 35,
  "damage_mult": 0.85,
- "notes": "A three-on-three",
+ "notes": "A hostile three-on-three",
  "story": "bible:combat:boss.ch16.forest_team",
+ "scripted": [
+  {
+   "event": "interrupt",
+   "at": "player health 25% or less",
+   "what": "ends the fight, no loss"
+  }
+ ],
  "dialogue": "dlg:combat.boss.ch16.forest_team"
 }

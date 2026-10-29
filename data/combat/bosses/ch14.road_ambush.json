@@ -4,17 +4,17 @@
  "name": "Ambush on the road",
  "chapter": 14,
  "slice": "beta2",
- "base": "combat:group.cell_pair",
+ "base": "combat:group.cell_trio",
  "level": 14,
  "nonlethal": false,
  "arena": "place:road.east_bend",
- "win": "the ambush is driven off and the client is safe; the quest may also ask for a capture (combat:captured)",
- "lose": "the client falls, or you are downed",
+ "win": "the runner is captured (combat:captured) and the ambush driven off",
+ "lose": "the runner escapes, the client falls, or you are downed",
  "phases": [
   {
    "at_hp": 1.0,
    "name": "Pin down",
-   "behaviour": "an enemy cell pair holds the road with smoke, caltrops and a fire-and-wind combo while a runner flees",
+   "behaviour": "a three-person cell in road clothes and face scarves holds the road with smoke, makibishi and a fire-and-wind combo while a runner flees",
    "adds": [
     "combat:enemy.smuggler_runner"
    ],
@@ -27,10 +27,23 @@
    "openings": "wind or a flash shows the mines; a sealing tag captures a downed foe"
   }
  ],
- "hp_mult": 1.8,
- "poise": 35,
- "damage_mult": 1.0,
+ "hp_mult": 1.1,
+ "poise": 30,
+ "damage_mult": 0.8,
  "notes": "Teaches enemy cells, smoke and paper bombs, capture with a sealing tag",
  "story": "bible:combat:boss.ch14.road_ambush",
+ "scripted": [
+  {
+   "event": "bridge_cut",
+   "at": "60% of the fight's time limit",
+   "what": "an area-denial line across the pursuit path"
+  }
+ ],
+ "objectives": [
+  {
+   "id": "capture_runner",
+   "required": true
+  }
+ ],
  "dialogue": "dlg:combat.boss.ch14.road_ambush"
 }

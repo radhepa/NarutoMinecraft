@@ -102,6 +102,19 @@
    "slice": "beta2"
   },
   {
+   "id": "combat:group.cell_trio",
+   "members": [
+    {
+     "enemy": "combat:enemy.cell_vanguard",
+     "count": 2
+    },
+    {
+     "enemy": "combat:enemy.cell_support"
+    }
+   ],
+   "slice": "beta2"
+  },
+  {
    "id": "combat:group.cell_pair",
    "members": [
     {

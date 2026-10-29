@@ -33,8 +33,8 @@
    "id": "combat:squad.bell_grab",
    "name": "Distract and take",
    "slice": "beta2",
-   "needs": "the bell test's lesson",
-   "how": "One distracts (any hit), the other takes: a stagger window of 30 ticks on the target. Taught by the bell test"
+   "needs": "the cord test's lesson",
+   "how": "One distracts (any hit), the other takes: a stagger window of 30 ticks on the target. Taught by the cord test"
   },
   {
    "id": "combat:squad.shadow_and_strike",
