@@ -36,7 +36,7 @@ truth to a village that cannot bear it, and break it.
 
 | Secret | Who learns it |
 |---|---|
-| He read the keeper's mind once, twenty years ago, by accident, and has known since then that there was a buried clan. He never acted | The player, Ch 36 (he confesses it to the keeper in front of them) |
+| Twenty years ago, during a sensor sweep, he brushed the keeper's surface thoughts by accident (no reading, a touch he broke off at once) and has known since then that there was a buried clan. He never acted, and never looked again without consent | The player, Ch 36 (he confesses it to the keeper in front of them) |
 | He does not want to be Hokage; he plans to resign the moment the truth is out | The player, Ch 40 if `friendship [hokage_6, 5]`, else Ch 42 |
 
 ### How he changes
