@@ -479,7 +479,8 @@ Each person has their own XP on the player's curve (about 50 minutes a level in 
 - **Shared work.** On a day the group is together, they earn what the player earned on it: the
   same mission XP as the player on shared missions, and the same lesson XP at the Academy. The group
   is the class in the Academy and the squad from team assignment.
-- **Days apart.** They train and take missions on their own. They earn the player's recent daily
+- **Days apart.** They train and take missions on their own. The player's home practice
+  ([HOME.md](HOME.md)) is their own XP, not shared, so it counts here. They earn the player's recent daily
   pace (a moving average of the player's own XP) times their **drive** (0.95 to 1.15). From team
   assignment the rest of the ensemble is on squads of its own, so every day is a day apart for them.
 - **Catch-up and slowdown.** Their gain is scaled by `1 − 0.5 × gap` from where they belong, between
@@ -591,7 +592,7 @@ The target is teammates' damage and utility at **70 to 110% of the player's**.
 | Hook | From | Into the roster |
 |---|---|---|
 | `Day(playerXp, sharedXp, together, bonds)` | Progression: the player's XP, and which of it was shared (lessons, missions, squad training) | Once per in-game day |
-| `BondInput(level, trainedTogether, quarrel, kindling)` | Life's glue, from the bond engine: `effectiveLevel(who)`, `bond(who).trainedOn(day)`, `bond(who).conflict().active()`, `Kindling.tier(w, who).id()` (`none`, `spark`, `flame`, `blaze`) | Per person, in `Day.bonds`. The glue depends on both modules; the roster depends on neither |
+| `BondInput(level, trainedTogether, quarrel, kindling)` | Life's glue, from the bond engine: `effectiveLevel(who)`, `bond(who).trainedOn(day)`, `conflict().active() || conflict().broken()` (a falling-out counts as a quarrel), `Kindling.tier(w, who).id()` (`none`, `spark`, `flame`, `blaze`) | Per person, in `Day.bonds`. The glue depends on both modules; the roster depends on neither |
 | `beat(id, present)` | Progression's quests: a story beat, and who was there | Techniques shown at beats |
 | `promote(role, floor)` | Progression's ranks (the story decides who) | Level floors |
 | `kindle(role)` | Combat's `kindle` effect | The flame's power and its ember |
