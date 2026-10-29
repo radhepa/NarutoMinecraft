@@ -1,0 +1,15 @@
+{
+  "id": "b2303_crag_shorts",
+  "kind": "bottom",
+  "name": "Crag Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/b2303_crag_shorts.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Plum knee shorts with a rolled ochre hem, pale shin wraps and sandals."
+}

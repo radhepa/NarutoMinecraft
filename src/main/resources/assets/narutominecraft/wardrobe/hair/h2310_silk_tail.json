@@ -1,0 +1,271 @@
+{
+  "id": "h2310_silk_tail",
+  "kind": "hair",
+  "name": "Silk Tail",
+  "gender": "unisex",
+  "texture": "hair/h2310_silk_tail.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tail_tie",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        3.6
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        3.6
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "uv": [
+        13,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        3.6
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        5.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "uv": [
+        26,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        3.6
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        9.0,
+        -1.5
+      ],
+      "size": [
+        2,
+        3,
+        3
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        3.6
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        12.0,
+        -1.5
+      ],
+      "size": [
+        1,
+        2,
+        3
+      ],
+      "uv": [
+        50,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "frame_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.35,
+        -7.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        59,
+        0
+      ]
+    },
+    {
+      "id": "frame_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.35,
+        -7.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "frame_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.35,
+        -7.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        5,
+        8
+      ]
+    },
+    {
+      "id": "frame_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.35,
+        -7.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        8
+      ]
+    }
+  ],
+  "description": "Hair drawn up into a high thread-bound ponytail falling long down the back."
+}

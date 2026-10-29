@@ -1,0 +1,52 @@
+{
+  "id": "t2308_spinner_jacket",
+  "kind": "top",
+  "name": "Spinner Jacket",
+  "gender": "unisex",
+  "texture": "tops/t2308_spinner_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "jacket",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_spider",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short open ochre jacket over a pale shirt, plum web lines from the collar, spider on the back."
+}

@@ -1,0 +1,98 @@
+{
+  "id": "h2308_shrine_bob",
+  "kind": "hair",
+  "name": "Shrine Bob",
+  "gender": "unisex",
+  "texture": "hair/h2308_shrine_bob.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "side_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.55,
+        -8.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -4.2
+      ],
+      "size": [
+        1,
+        8,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "side_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.55,
+        -8.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -4.2
+      ],
+      "size": [
+        1,
+        8,
+        8
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "back_panel",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.2,
+        4.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    }
+  ],
+  "description": "Straight blunt bob: a level fringe at the brows, square side panels to the jaw."
+}
