@@ -1,0 +1,227 @@
+{
+  "id": "b1601_holster_trousers",
+  "kind": "bottom",
+  "name": "Holster Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b1601_holster_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_blouse",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_blouse",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_holster_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        1.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "right_holster",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.5,
+        0.6,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        4,
+        2
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "right_holster_needle_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.5,
+        0.9,
+        -0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        174
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        7,
+        8
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "right_holster_needle_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.5,
+        0.9,
+        -0.25
+      ],
+      "rotation": [
+        0,
+        0,
+        178
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        12,
+        8
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "right_holster_needle_2",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.5,
+        0.9,
+        0.30000000000000004
+      ],
+      "rotation": [
+        0,
+        0,
+        182
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        17,
+        8
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    }
+  ],
+  "description": "Dusky trousers bloused into shin wraps, a senbon holster on the right thigh, sandals."
+}

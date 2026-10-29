@@ -1,0 +1,47 @@
+{
+  "id": "t1610_rookie_jacket",
+  "kind": "top",
+  "name": "Rookie Jacket",
+  "gender": "unisex",
+  "texture": "tops/t1610_rookie_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "arm_cloth",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        4.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Cropped short-sleeved steel jacket open over a mesh tee, a needle strap across the back."
+}

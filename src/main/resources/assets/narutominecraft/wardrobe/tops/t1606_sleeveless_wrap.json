@@ -1,0 +1,176 @@
+{
+  "id": "t1606_sleeveless_wrap",
+  "kind": "top",
+  "name": "Sleeveless Wrap",
+  "gender": "unisex",
+  "texture": "tops/t1606_sleeveless_wrap.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "right_needle_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.4,
+        7.4,
+        -2.4
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "right_cuff_needle_0",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -3.5,
+        10.2,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "right_cuff_needle_1",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -3.5,
+        10.2,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "right_cuff_needle_2",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -3.5,
+        10.2,
+        0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        60,
+        0
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless dusky crossover top, steel sash, mesh at the throat, a senbon cuff on the right wrist."
+}

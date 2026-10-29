@@ -1,0 +1,327 @@
+{
+  "id": "h1614_slicked_back",
+  "kind": "hair",
+  "name": "Slicked Back",
+  "gender": "unisex",
+  "texture": "hair/h1614_slicked_back.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fall",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -5,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -5,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_tip_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -5,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_tip_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -5,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_tip_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -5,
+        0,
+        0
+      ],
+      "origin": [
+        1.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "nape_flick_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.6,
+        0.4,
+        5.0
+      ],
+      "rotation": [
+        14,
+        0,
+        30
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    },
+    {
+      "id": "nape_flick_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -3.6,
+        0.4,
+        5.0
+      ],
+      "rotation": [
+        14,
+        0,
+        30
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        60,
+        0
+      ]
+    },
+    {
+      "id": "nape_flick_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        3.6,
+        0.4,
+        5.0
+      ],
+      "rotation": [
+        14,
+        0,
+        -30
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "nape_flick_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        3.6,
+        0.4,
+        5.0
+      ],
+      "rotation": [
+        14,
+        0,
+        -30
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "frame_loose_0",
+      "bone": "HEAD",
+      "pivot": [
+        3.9,
+        -7.8,
+        -3.4
+      ],
+      "rotation": [
+        -6,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "frame_loose_1",
+      "bone": "HEAD",
+      "pivot": [
+        3.9,
+        -7.8,
+        -3.4
+      ],
+      "rotation": [
+        -6,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        17,
+        9
+      ]
+    }
+  ],
+  "description": "Combed straight back off the forehead, long and smooth at the nape, one loose temple lock."
+}

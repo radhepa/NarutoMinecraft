@@ -1,0 +1,81 @@
+{
+  "id": "t1603_guard_haori",
+  "kind": "top",
+  "name": "Guard Haori",
+  "gender": "unisex",
+  "texture": "tops/t1603_guard_haori.png",
+  "extrasHeight": 16,
+  "tags": [
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -4,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Dusky short haori open over a steel shirt, pale trim, elbow sleeves, the flame crest on the back."
+}

@@ -1,0 +1,248 @@
+{
+  "id": "h1604_senbon_bun",
+  "kind": "hair",
+  "name": "Senbon Bun",
+  "gender": "unisex",
+  "texture": "hair/h1604_senbon_bun.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "frame_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "frame_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "frame_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "frame_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "bun",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.4,
+        5.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        -1.5,
+        -1.5
+      ],
+      "size": [
+        4,
+        3,
+        3
+      ],
+      "uv": [
+        20,
+        0
+      ]
+    },
+    {
+      "id": "bun_round",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.4,
+        5.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -2.5,
+        -1.0
+      ],
+      "size": [
+        2,
+        5,
+        2
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "bun_pin_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.4,
+        5.6
+      ],
+      "rotation": [
+        0,
+        0,
+        58
+      ],
+      "origin": [
+        -0.5,
+        -12,
+        -0.5
+      ],
+      "size": [
+        1,
+        24,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "bun_pin_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.6,
+        5.7
+      ],
+      "rotation": [
+        0,
+        0,
+        -52
+      ],
+      "origin": [
+        -0.5,
+        -12,
+        -0.5
+      ],
+      "size": [
+        1,
+        24,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    }
+  ],
+  "description": "Combed back into a low bun at the nape, crossed through with two senbon, temple wisps."
+}

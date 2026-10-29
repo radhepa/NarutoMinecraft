@@ -204,6 +204,16 @@
         "#f1ede3"
       ]
     },
+    "SHIRANUI_AMBER": {
+      "name": "Shiranui Amber",
+      "ramp": [
+        "#0d0a09",
+        "#3d2a16",
+        "#654624",
+        "#93703e",
+        "#f0ece2"
+      ]
+    },
     "UCHIHA_ONYX": {
       "name": "Uchiha Onyx",
       "ramp": [

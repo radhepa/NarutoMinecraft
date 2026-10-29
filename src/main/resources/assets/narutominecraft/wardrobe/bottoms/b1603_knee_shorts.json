@@ -1,0 +1,44 @@
+{
+  "id": "b1603_knee_shorts",
+  "kind": "bottom",
+  "name": "Knee Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/b1603_knee_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        10.0,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "Dusky knee shorts with turned cuffs, bandaged shins, a needle pouch on the hip, sandals."
+}
