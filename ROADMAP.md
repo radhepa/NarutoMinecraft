@@ -255,7 +255,8 @@ datapack, blueprints and paste scripts) and `pack/` (the manifest). The root bui
 modules already exist: `life/bonds`, Shinobi Life's pure bond engine ([BONDS.md](BONDS.md)), and
 `progression/missions`, Shinobi Progression's pure mission generator ([MISSIONS.md](MISSIONS.md)),
 whose templates are the first data in `adventure/`, and `village/look`, Shinobi Village's player look,
-the creator's rules and age stages ([CHARACTER_CREATION.md](CHARACTER_CREATION.md)). Python authoring tools stay
+the creator's rules and age stages ([CHARACTER_CREATION.md](CHARACTER_CREATION.md)), and `life/roster`, the pure
+squad-growth model beside `life/bonds` ([docs/RANKS.md](docs/RANKS.md), on the `ranks` branch until it merges). Python authoring tools stay
 under `tools/`. Each mod has its own version; the pack manifest pins a tested set.
 
 The master world is **not** in git. It ships as a zipped save on GitHub Releases; the repository
@@ -268,7 +269,7 @@ keeps only what rebuilds or checks it: blueprints, paste scripts and the datapac
 | Core | `record`, `seed`, `logic` (conditions, actions), `flags`, `events`, `stats`, `data`, `settings`, `wallet`, `region` | `SaveSeed`, `Conditions`, `FlagStore`, `Difficulty`, `StatMath` |
 | Village | `wardrobe`, `clan`, `resident` (markers, cast), `look` (creator, age stages), client `render` | `ClanFile`, `CastRoll`, `AgeStage` |
 | Combat | `chakra`, `technique`, `combat`, `movement`, `tools`, `shinobi`, client `anim`, `hud`, `signs` | `SignSequence`, `Mastery`, `Costs`, `ComboTiming`, `HitArc`, `WallRun`, `RangeBands` |
-| Life | `rules`, `home`, `furniture`, `economy`, `craft`, `food`, `pet`, `romance`, `day`, `bond` (the pure engine in `life/bonds`, [BONDS.md](BONDS.md)), client `furnish`, `hud`, `bondbook` | `Fatigue`, `DayClock`, `FurnishRules`, `Prices`, `Courtship`, `BondWorld`, `Levels`, `Squad`, `Gossip` |
+| Life | `rules`, `home`, `furniture`, `economy`, `craft`, `food`, `pet`, `romance`, `day`, `bond` (the pure engine in `life/bonds`, [BONDS.md](BONDS.md)), `roster` (`life/roster`), client `furnish`, `hud`, `bondbook` | `Fatigue`, `DayClock`, `FurnishRules`, `Prices`, `Courtship`, `BondWorld`, `Levels`, `Squad`, `Gossip`, `Roster`, `Curve`, `ClanPower` |
 | Progression | `rank`, `level`, `quest`, `mission`, `exam`, `event`, `squad`, `cutscene`, `playerclan`, `reaction`, client `journal`, `screens` | `Ladder`, `Levels`, `QuestGraph`, `MissionRoll`, `Judging`, `RoleBinding`, `Recruiting` |
 
 Every mod follows the VF pattern: pure classes with JUnit tests, thin world glue, and client game
@@ -763,6 +764,7 @@ effort estimate) is in **[KONOHA_BUILD.md](KONOHA_BUILD.md)**.
 | Pets | Adopt a pup or a cat | Ninken tracking on missions | — |
 | Friendship | VF friendship levels with classmates and neighbours; squad roles bound | Bond stories, teammates can leave | Bond payoffs in the forest and finals |
 | Levels | 1 to 5, death penalty, floors | 5 to 15 | 15 to 18 |
+| Squad growth | Classmates level with you (`life:roster`) | Squads track you; techniques at beats | Exams: everyone's levels feed the bouts |
 | Ranks | Academy → Genin | Chunin Exam eligibility | Genin → Chunin (judged) |
 | Growing up | Child stage (the whole beta) | — | — |
 | Hand signs and chakra | Chakra bar, typed and radial signs | — | — |
@@ -961,7 +963,7 @@ VF's harmless crushes in dialogue only, enforced in code.
 ### Levels
 
 Levels are power; ranks are story. Every rank exam asks for a minimum level, and reaching a level
-never promotes you by itself.
+never promotes you by itself. NPC power tiers E to S read the same curve ([Ranks and power](#ranks-and-power)).
 
 - **Each level:** +3 maximum chakra and +1% taijutsu damage; +1 heart every 6 levels (10 hearts at
   level 1). Jutsu have a minimum level as well as a rank.
@@ -989,6 +991,39 @@ Mission XP is fixed per rank: a share of a level at the rank's reference level (
 fifth of a level at level 7, less as you grow), scaled by the grade. In the desk simulation a steady
 Genin's board missions give about two fifths of the XP from level 5 to 15
 ([MISSIONS.md](MISSIONS.md#71-pacing-in-the-beta)).
+
+### Ranks and power
+
+The full design is in [docs/RANKS.md](docs/RANKS.md) (on the `ranks` branch until it merges). Rank
+is trust and power is level, kept separate as in the show.
+
+- **Power tiers** sit on the player's level curve: E (Academy) 1 to 4, D (Genin) 5 to 14, C
+  (Chunin) 15 to 29, B (Jonin) 30 to 41, A (elite) 42 to 49, S (kage-level) 50 and up. The beta
+  tops out at C. Strong ninja are felt through showcase scenes, scheduled elite spars at the
+  training grounds, elites passing on missions, legends spoken of, and a tier glyph over residents
+  that reads "beyond you" more than two tiers up.
+- **Hierarchy:** the Hokage; three council elders; the Jonin Commander; masked ANBU; elite jonin,
+  jonin and special jonin; chunin (the desk, the gate, the wall watch, police, medics, teachers);
+  genin squads of three; the Academy; retired shinobi.
+- **Head counts:** of about 300 residents, 166 are in shinobi families: Hokage 1, elders 3, Jonin
+  Commander 1, ANBU 6, elite jonin 4, jonin 18, special jonin 8, chunin 41, genin 32, Academy 32,
+  retired 20. On a typical day 25% to 50% of the active ranks are away on missions. The player meets
+  64 named shinobi across the beta; the lore puts the whole village at about 1,100 active shinobi.
+- **Roster data:** `tools/roster/roster.json` holds 65 named shinobi with importance
+  (story-driving, fan-favourite, background) and spotlight (pillar, named, background);
+  `rank_distribution.json` drives the sampler's ranks and levels; both are checked by
+  `tools/roster/roster.py --check`.
+- **Clan power (NPCs):** great clans (Uchiha, Hyuga, Senju, Uzumaki), strong (the other noble
+  clans), minor and clanless shift levels within a rank, with overlap: about one clanless shinobi
+  in five beats the great clans' median. The player's class leans noble (`class_clan_weights`,
+  68/20/12).
+- **Squad growth (`life:roster`):** your year and the squad a year ahead grow beside you within a
+  band of where they belong (your level plus an offset); the rival runs about a level ahead. They
+  earn shared XP on days together and train on days apart, with catch-up and slowdown; teammates are
+  better in their niche, bonds add +2% training XP per bond level, and Kindling Bond makes them
+  stronger. Their techniques show only at story beats and training you see. Checked by 29 tests and
+  `./gradlew :life:roster:simulate` (60 hours, three play styles, five seeds: teammates stay in the
+  band).
 
 ### Growing up
 
