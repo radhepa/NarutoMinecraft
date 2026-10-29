@@ -1,0 +1,73 @@
+{
+  "id": "b1205_genin_shorts",
+  "kind": "bottom",
+  "name": "Kurama Genin Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/b1205_genin_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "holster_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        1.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "holster",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -3.0,
+        0.8,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Dark knee shorts with an accent side stripe, white shin wraps, thigh holster, sandals."
+}

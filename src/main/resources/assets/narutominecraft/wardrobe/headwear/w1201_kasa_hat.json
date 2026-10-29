@@ -1,0 +1,258 @@
+{
+  "id": "w1201_kasa_hat",
+  "kind": "headwear",
+  "name": "Kasa Travel Hat",
+  "gender": "unisex",
+  "texture": "headwear/w1201_kasa_hat.png",
+  "extrasHeight": 64,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "ring_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -7.0,
+        -8.9,
+        -7.0
+      ],
+      "size": [
+        14,
+        1,
+        14
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "ring_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        -9.6,
+        -6.0
+      ],
+      "size": [
+        12,
+        1,
+        12
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    },
+    {
+      "id": "ring_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        -10.3,
+        -5.0
+      ],
+      "size": [
+        10,
+        1,
+        10
+      ],
+      "uv": [
+        0,
+        30
+      ]
+    },
+    {
+      "id": "ring_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -11.0,
+        -3.5
+      ],
+      "size": [
+        7,
+        1,
+        7
+      ],
+      "uv": [
+        0,
+        42
+      ]
+    },
+    {
+      "id": "ring_4",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        -11.6,
+        -2.0
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        29,
+        42
+      ]
+    },
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -9.9,
+        -5
+      ],
+      "size": [
+        10,
+        1,
+        10
+      ],
+      "uv": [
+        0,
+        51
+      ]
+    },
+    {
+      "id": "tie_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -8.6,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        41,
+        51
+      ],
+      "scale": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    {
+      "id": "tie_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -8.6,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        46,
+        51
+      ],
+      "scale": [
+        0.5,
+        1,
+        0.5
+      ]
+    }
+  ],
+  "hidesHair": [
+    "knot",
+    "brush",
+    "bun_",
+    "pin_",
+    "crown",
+    "puff_"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Wide conical woven straw hat with a cloth band."
+}

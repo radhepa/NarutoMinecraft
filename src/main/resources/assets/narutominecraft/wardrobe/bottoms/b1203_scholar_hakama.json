@@ -1,0 +1,217 @@
+{
+  "id": "b1203_scholar_hakama",
+  "kind": "bottom",
+  "name": "Scholar's Hakama",
+  "gender": "unisex",
+  "texture": "bottoms/b1203_scholar_hakama.png",
+  "extrasHeight": 32,
+  "tags": [
+    "hakama",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_flare",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.6,
+        1.0,
+        -2.6
+      ],
+      "size": [
+        5,
+        9,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_flare",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.6,
+        1.0,
+        -2.6
+      ],
+      "size": [
+        5,
+        9,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "hakama_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hakama_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "koshi_ita",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        15
+      ]
+    },
+    {
+      "id": "hakama_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        10.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        34,
+        15
+      ]
+    },
+    {
+      "id": "hakama_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        45,
+        15
+      ]
+    }
+  ],
+  "description": "Wide pleated hakama to the ankle, a stiff back panel, cream tabi and straw zori."
+}

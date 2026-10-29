@@ -1,0 +1,356 @@
+{
+  "id": "kurama",
+  "name": "Kurama",
+  "tagline": "A refined household of genjutsu painters: wisteria lilac, paper cream and ink, soft side-parted waves, brushes and scrolls.",
+  "palettes": {
+    "KURAMA_WISTERIA": {
+      "name": "Kurama Wisteria",
+      "P": "#9a89b4",
+      "S": "#efe6d2",
+      "A": "#c4707f",
+      "L": "#6b4a33",
+      "M": "#aaa6a2",
+      "K": "#1d1a24",
+      "D": "#4b4163"
+    },
+    "KURAMA_BLOSSOM": {
+      "name": "Kurama Blossom",
+      "P": "#d39ba5",
+      "S": "#f3ead9",
+      "A": "#7c4f7a",
+      "L": "#7a5238",
+      "M": "#b4aeb0",
+      "K": "#221a22",
+      "D": "#6b5b88"
+    },
+    "KURAMA_INKWASH": {
+      "name": "Kurama Ink Wash",
+      "P": "#e6dcc6",
+      "S": "#f6f1e4",
+      "A": "#a8473c",
+      "L": "#7a5a3c",
+      "M": "#b6b2aa",
+      "K": "#141318",
+      "D": "#3b3a44"
+    },
+    "KURAMA_SAGE": {
+      "name": "Kurama Sage",
+      "P": "#8c9b7c",
+      "S": "#ece4cf",
+      "A": "#8c79a8",
+      "L": "#6a4b30",
+      "M": "#a6a69b",
+      "K": "#1d1f1a",
+      "D": "#4b5443"
+    },
+    "KURAMA_UMBER": {
+      "name": "Kurama Umber",
+      "P": "#7e5c43",
+      "S": "#eadfc6",
+      "A": "#8e7aa8",
+      "L": "#4d3424",
+      "M": "#b0a58f",
+      "K": "#1f1813",
+      "D": "#3f3a4b"
+    },
+    "KURAMA_NIGHT": {
+      "name": "Kurama Night Ink",
+      "P": "#33303d",
+      "S": "#e9e2d0",
+      "A": "#a08ec2",
+      "L": "#4e3a2a",
+      "M": "#9c99a2",
+      "K": "#121117",
+      "D": "#24222c"
+    }
+  },
+  "hair_colors": {
+    "KURAMA_TEA": {
+      "name": "Kurama Tea Brown",
+      "ramp": [
+        "#3d2617",
+        "#5e3c24",
+        "#82573a",
+        "#a77852",
+        "#c99c72"
+      ]
+    },
+    "KURAMA_UMBER": {
+      "name": "Kurama Umber",
+      "ramp": [
+        "#21150f",
+        "#352219",
+        "#4c3224",
+        "#664634",
+        "#86604a"
+      ]
+    },
+    "KURAMA_INK": {
+      "name": "Kurama Ink",
+      "ramp": [
+        "#121118",
+        "#1c1a24",
+        "#282533",
+        "#383447",
+        "#4d4860"
+      ]
+    },
+    "KURAMA_ASHEN": {
+      "name": "Kurama Ashen",
+      "ramp": [
+        "#3a3633",
+        "#57514c",
+        "#7a726a",
+        "#9c948a",
+        "#bfb8ac"
+      ]
+    },
+    "KURAMA_MAUVE": {
+      "name": "Kurama Mauve Brown",
+      "ramp": [
+        "#2e1f26",
+        "#47303a",
+        "#634552",
+        "#80606c",
+        "#a0828c"
+      ]
+    }
+  },
+  "eye_colors": {
+    "KURAMA_HAZE": {
+      "name": "Kurama Haze",
+      "ramp": [
+        "#120e18",
+        "#4f3f6b",
+        "#7b67a0",
+        "#b3a3cf",
+        "#f2efe8"
+      ]
+    },
+    "KURAMA_BROWN": {
+      "name": "Kurama Brown",
+      "ramp": [
+        "#120c0a",
+        "#5a3a26",
+        "#8a5f3e",
+        "#c09572",
+        "#f2eee6"
+      ]
+    }
+  },
+  "marks": {
+    "kurama_ink_smudge": {
+      "rects": [
+        [
+          2.7,
+          -1.75,
+          0.8,
+          0.3
+        ],
+        [
+          3.1,
+          -1.45,
+          0.4,
+          0.25
+        ]
+      ],
+      "color": "#2a2633",
+      "mirror": false
+    },
+    "kurama_beauty_mark": {
+      "rects": [
+        [
+          -2.6,
+          -1.55,
+          0.3,
+          0.3
+        ]
+      ],
+      "color": null,
+      "mirror": false
+    }
+  },
+  "pool": {
+    "hair": [
+      "h1201_yakumo_braid",
+      "h1202_unkai_tail",
+      "h1203_wisteria_waves",
+      "h1204_brush_topknot",
+      "h1205_ink_bob",
+      "h1206_scholar_half_up",
+      "h1207_shoulder_tail",
+      "h1208_cloud_curls",
+      "h1209_calligrapher_part",
+      "h1210_twin_braids",
+      "h1211_easel_shag",
+      "h1212_elder_long_tie",
+      "h1213_veiled_sweep",
+      "h1214_wisteria_buns",
+      "h1215_mist_hime"
+    ],
+    "hair_colors": [
+      "KURAMA_TEA",
+      "KURAMA_TEA",
+      "KURAMA_TEA",
+      "KURAMA_UMBER",
+      "KURAMA_UMBER",
+      "KURAMA_MAUVE",
+      "KURAMA_INK",
+      "KURAMA_ASHEN",
+      "HONEY",
+      "CHESTNUT"
+    ],
+    "eye_colors": [
+      "KURAMA_BROWN",
+      "KURAMA_BROWN",
+      "KURAMA_HAZE",
+      "KURAMA_HAZE",
+      "DARK"
+    ],
+    "palettes": [
+      "KURAMA_WISTERIA",
+      "KURAMA_BLOSSOM",
+      "KURAMA_INKWASH",
+      "KURAMA_SAGE",
+      "KURAMA_UMBER"
+    ],
+    "headwear": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "w02_forehead_protector",
+      "w1202_painted_protector",
+      "w1203_training_headband",
+      "w1201_kasa_hat"
+    ],
+    "bottoms": [
+      "b01_shinobi_trousers",
+      "b08_mesh_leggings"
+    ],
+    "complexions": [
+      0,
+      0,
+      1,
+      1,
+      2
+    ],
+    "marks": [
+      {
+        "id": "kurama_beauty_mark",
+        "chance": 0.15
+      },
+      {
+        "id": "kurama_ink_smudge",
+        "chance": 0.12
+      }
+    ]
+  },
+  "outfits": [
+    {
+      "id": "painter_robe",
+      "name": "Painter's Robe",
+      "top": "t1201_painter_robe",
+      "bottom": "b1201_painter_trousers",
+      "rank": "genin",
+      "palettes": [
+        "KURAMA_BLOSSOM",
+        "KURAMA_WISTERIA",
+        "KURAMA_INKWASH"
+      ]
+    },
+    {
+      "id": "training_kimono",
+      "name": "Training Kimono",
+      "top": "t1202_training_kimono",
+      "bottom": "b1202_wrap_skirt",
+      "rank": "genin",
+      "palettes": [
+        "KURAMA_BLOSSOM",
+        "KURAMA_WISTERIA",
+        "KURAMA_SAGE"
+      ]
+    },
+    {
+      "id": "scholar_robe",
+      "name": "Scholar's Robe",
+      "top": "t1203_scholar_robe",
+      "bottom": "b1203_scholar_hakama",
+      "rank": "jonin",
+      "palettes": [
+        "KURAMA_UMBER",
+        "KURAMA_NIGHT",
+        "KURAMA_SAGE"
+      ]
+    },
+    {
+      "id": "cloud_haori",
+      "name": "Cloud Haori",
+      "top": "t1204_cloud_haori",
+      "bottom": "b1201_painter_trousers",
+      "rank": "chunin",
+      "palettes": [
+        "KURAMA_INKWASH",
+        "KURAMA_WISTERIA",
+        "KURAMA_SAGE"
+      ]
+    },
+    {
+      "id": "painters_smock",
+      "name": "Painter's Smock",
+      "top": "t1205_painters_smock",
+      "bottom": "b1204_rolled_trousers",
+      "rank": "academy"
+    },
+    {
+      "id": "calligrapher",
+      "name": "Calligrapher's Kosode",
+      "top": "t1206_calligrapher_tasuki",
+      "bottom": "b1203_scholar_hakama",
+      "rank": "chunin"
+    },
+    {
+      "id": "travel_cloak",
+      "name": "Wisteria Travel Cloak",
+      "top": "t1207_travel_cloak",
+      "bottom": "b01_shinobi_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "KURAMA_WISTERIA",
+        "KURAMA_UMBER",
+        "KURAMA_NIGHT"
+      ]
+    },
+    {
+      "id": "genin_tunic",
+      "name": "Kurama Genin Tunic",
+      "top": "t1208_genin_tunic",
+      "bottom": "b1205_genin_shorts",
+      "rank": "genin"
+    },
+    {
+      "id": "chunin_vest",
+      "name": "Kurama Chunin Vest",
+      "top": "t1209_chunin_vest",
+      "bottom": "b1201_painter_trousers",
+      "rank": "chunin",
+      "palettes": [
+        "KURAMA_SAGE"
+      ]
+    },
+    {
+      "id": "elder_kimono",
+      "name": "Elder's Layered Kimono",
+      "top": "t1210_elder_kimono",
+      "bottom": "b1206_elder_kimono_skirt",
+      "rank": "jonin",
+      "palettes": [
+        "KURAMA_NIGHT",
+        "KURAMA_UMBER",
+        "KURAMA_WISTERIA"
+      ]
+    }
+  ]
+}

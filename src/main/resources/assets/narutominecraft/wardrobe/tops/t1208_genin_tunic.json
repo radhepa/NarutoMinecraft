@@ -1,0 +1,109 @@
+{
+  "id": "t1208_genin_tunic",
+  "kind": "top",
+  "name": "Kurama Genin Tunic",
+  "gender": "unisex",
+  "texture": "tops/t1208_genin_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "tucked_brush",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        9.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "scale": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    {
+      "id": "scroll_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.4,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved wrap tunic over a mesh undershirt, a sash with a tucked brush, bandaged forearms."
+}
