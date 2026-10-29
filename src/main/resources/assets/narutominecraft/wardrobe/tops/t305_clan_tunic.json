@@ -1,0 +1,282 @@
+{
+  "id": "t305_clan_tunic",
+  "kind": "top",
+  "name": "Clan Tunic",
+  "gender": "unisex",
+  "texture": "tops/t305_clan_tunic.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi",
+    "tunic",
+    "uchiha"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.0,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "collar_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        1.6
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.6,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "collar_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        0,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        44,
+        0
+      ]
+    },
+    {
+      "id": "collar_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.5,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        0,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        11,
+        18
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "tunic_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        40,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tunic_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        26
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "right_sleeve_trim",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.4,
+        1.6,
+        -2.4
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        21,
+        26
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_sleeve_trim",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.4,
+        1.6,
+        -2.4
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        38,
+        26
+      ],
+      "inflate": 0.15
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Long high-collared tunic, white-trimmed short sleeves, red sash, side-split skirt, crest on the back."
+}

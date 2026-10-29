@@ -1,0 +1,228 @@
+{
+  "id": "t304_fan_zip_jacket",
+  "kind": "top",
+  "name": "Fan Zip Jacket",
+  "gender": "unisex",
+  "texture": "tops/t304_fan_zip_jacket.png",
+  "extrasHeight": 48,
+  "tags": [
+    "genin",
+    "shinobi",
+    "uchiha"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.0,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "collar_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        1.6
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "collar_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        0,
+        -1.6,
+        -2.6
+      ],
+      "size": [
+        1,
+        2,
+        4
+      ],
+      "uv": [
+        44,
+        0
+      ]
+    },
+    {
+      "id": "collar_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.5,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        0,
+        -1.6,
+        -2.6
+      ],
+      "size": [
+        1,
+        2,
+        4
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "right_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.3,
+        8.8,
+        -2.3
+      ],
+      "size": [
+        4,
+        2,
+        4
+      ],
+      "uv": [
+        11,
+        18
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.3,
+        8.8,
+        -2.3
+      ],
+      "size": [
+        4,
+        2,
+        4
+      ],
+      "uv": [
+        28,
+        18
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_arm_crest",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        3.05,
+        0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        9,
+        6
+      ],
+      "uv": [
+        45,
+        18
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Long-sleeved zip jacket, collar turned up, white trim, crests on the back and shoulder."
+}

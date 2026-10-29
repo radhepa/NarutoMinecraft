@@ -1,0 +1,191 @@
+{
+  "id": "b302_war_tassets",
+  "kind": "bottom",
+  "name": "War Tassets",
+  "gender": "unisex",
+  "texture": "bottoms/b302_war_tassets.png",
+  "extrasHeight": 32,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [
+    "armor"
+  ],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tasset_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tasset_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "tasset_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "tasset_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    },
+    {
+      "id": "right_shin_guard",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.6
+      ],
+      "size": [
+        5,
+        5,
+        2
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_shin_guard",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.6
+      ],
+      "size": [
+        5,
+        5,
+        2
+      ],
+      "uv": [
+        15,
+        10
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Laced lamellar tassets over dark trousers, plated shin guards, sandals."
+}

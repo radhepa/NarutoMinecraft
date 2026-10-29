@@ -2,6 +2,14 @@
 ears and down to the nape, with a row of short curls along the brow."""
 from paint import curls_box, curls_face, scalp
 
+# Curls read best in a soft range: no bright highlights or black pits, so dark hair keeps its shape.
+SOFT = {"H0": "H1", "H4": "H3"}
+
+
+def soften(box):
+    for face in box.faces:
+        face.recolor(lambda key, x, y: SOFT.get(key, key))
+
 META = {"name": "Flicker Curls", "gender": "unisex", "description": "A thick mop of tight curls over the crown, ears and nape, short curls on the brow."}
 
 # Curl clusters: (id, origin, size, pivot, rotation)
@@ -21,10 +29,13 @@ def build(g):
     scalp(g, 3201, side_rows=6, back_rows=8, sideburn=2)
     hat = g.part("hat")
     for face in (hat.top, hat.back, hat.right, hat.left):
-        curls_face(face, 3202 + face.x0, base=1)
+        curls_face(face, 3202 + face.x0)
+        face.recolor(lambda key, x, y: SOFT.get(key, key))
     for i, (pid, origin, size, pivot, rot) in enumerate(CLUSTERS):
         box = g.piece(f"curls_{pid}", "HEAD", origin, size, pivot=pivot, rotation=rot)
-        curls_box(box, 3210 + i * 7, base=1)
+        curls_box(box, 3210 + i * 7)
+        soften(box)
     for i, (x, rz) in enumerate(BROW):
         box = g.piece(f"fringe_curl_{i}", "HEAD", (-1, 0, -1), (2, 2, 2), pivot=(x, -8.4, -4.0), rotation=(-12, 0, rz))
-        curls_box(box, 3260 + i * 5, base=1)
+        curls_box(box, 3260 + i * 5)
+        soften(box)

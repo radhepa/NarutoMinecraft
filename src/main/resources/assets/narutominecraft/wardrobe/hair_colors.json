@@ -150,6 +150,36 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "UCHIHA_INK": {
+      "name": "Uchiha Ink",
+      "ramp": [
+        "#08090d",
+        "#111319",
+        "#1c1f29",
+        "#2c3140",
+        "#4a536b"
+      ]
+    },
+    "UCHIHA_BLUE_BLACK": {
+      "name": "Uchiha Blue-Black",
+      "ramp": [
+        "#0c0f1c",
+        "#172038",
+        "#24325a",
+        "#37508a",
+        "#5f7fc0"
+      ]
+    },
+    "UCHIHA_GRAPHITE": {
+      "name": "Uchiha Graphite",
+      "ramp": [
+        "#0f0f10",
+        "#1d1c1e",
+        "#2c2a2d",
+        "#433f43",
+        "#625c60"
+      ]
     }
   }
 }
