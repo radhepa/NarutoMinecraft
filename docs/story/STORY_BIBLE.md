@@ -253,7 +253,7 @@ Story fights in the combat session's boss files (`data/combat/bosses/<id>.json`,
 | `clan.tobari.3` | What moves on the wall unheard is a Yūgure cell using a sound-smothering technique learned from a Tobari deserter (Ch 30 to 31) |
 | `clan.hatake.4` | The keepsake's heir is the sensei if no Hatake lives in the save; otherwise the last Hatake |
 | `clan.uzumaki.3` | The scattered Uzumaki is genuine, and a sealing expert who helps with the archive's seals (Ch 36) |
-| `clan.senju.4` | If `twist.traitor = councillor`, the founders' shrine dispute becomes his house's reckoning |
+| `clan.senju.4` | Opens only after `story.ch39.done`. If `twist.traitor = councillor`, the founders' shrine dispute becomes his house's reckoning |
 
 ## Bonds in the story
 

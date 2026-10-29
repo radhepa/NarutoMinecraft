@@ -70,7 +70,7 @@ The bond engine ([BONDS.md](../../BONDS.md), [LIFE_TOGETHER.md](../../LIFE_TOGET
 - **Gates** decide which scenes play: the Ch 11 campfire (`friendship [teammate_a, 5]`), the Ch 24
   fall (the highest teammate at 6+), the secret training (`bond_meter [sensei, trust, 50]`), the
   keeper's door (`trust 60`, `friendship 6`), turning the voice (`friendship [bound, 4]`), the
-  second's life (`friendship [yugure_second, 4]` or `bond_web 40`), the finale's size (`bond_web`).
+  second's life (the web at the "strong" tier, `friendship [yugure_second, 4]`, or `friendship [squad4_c, 6]`), the finale's size (the web's tier), and the Ch 53 flame order (the cord, the sensei, the spouse, the friend who fell, the other teammate, the rival; then faces).
 - **Moments** are the story's beats: every chapter's bond scene is a `shared_moment` keyed by quest id.
 - **Questions and answers.** Every major character asks the player questions (opinions, values,
   advice, their past, small confessions). Answers are player-scope flags `ans.<role>.<topic>`
@@ -96,7 +96,7 @@ The bond engine ([BONDS.md](../../BONDS.md), [LIFE_TOGETHER.md](../../LIFE_TOGET
 - **The village talks.** Big beats are deeds everyone hears: the stadium (Ch 19), the border post
   (Ch 24), the testimony (Ch 31), the council (Ch 40), the war (Ch 51a and 51b). Residents' greetings react.
 
-**Request (bonds session), required before Phase 0 builds the gift:** replace BONDS.md §11's table
+**Done (bonds session):** BONDS.md §11 now uses the approved powers. The request was to replace BONDS.md §11's table
 (nature casts, technique uses, "borrow", a "borrowed" natures source, a 12-use trial that makes a
 nature yours) with the approved powers in [WORLD.md](WORLD.md#kindling-bond-in-the-story): Thread
 Sight, Kindle, Ember Link, Ember Mark and Bonfire on the tiers Spark 6, Flame 8, Blaze 10 or a
@@ -109,6 +109,17 @@ what) is a rule of the engine, not of the story.
 `flag` condition with a value; authored life events for story roles at story beats; an act
 `gave_flame` (big, kept; the lost child's return) and `shielded_with_life` (the second); the
 finale reading each bond at 6+ in a fixed order (spouse, teammates, sensei, rival, others by level).
+
+## 3b. Rank gates (the failure rule)
+
+The main path never stalls on a failed rank gate:
+
+| Gate | If the player fails |
+|---|---|
+| Graduation (Ch 7) | A failed part is retaken the next day |
+| The Chunin Exams (Ch 20) | A player not promoted makes Chunin at the next season's exam inside the Ch 21 time skip (a vignette; a different line from the sensei) |
+| The Jonin trial (Ch 33) | The arc's chapter missions count toward the mission requirements and the trial bout counts as the A-rank; level 30 still applies, and the chapter waits for it |
+| The Hokage (Ch 55) | Met by Ch 53.7's level floor and `saved_the_village` |
 
 ## 4. Clans
 

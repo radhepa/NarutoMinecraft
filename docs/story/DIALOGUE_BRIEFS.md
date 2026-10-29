@@ -60,8 +60,9 @@ callbacks), for any character. Character briefs add their own.
 
 **Rotation gates.** A line that is only true for one bound candidate carries its condition
 (`twist.traitor = medic`). Before Ch 39, no line may differ between rotations except the two items
-in ROTATIONS §1, **Allowed divergences**: the Ch 25 slip line and the results of the four alibi
-checks. Every other scene, vote, question, visit, flicker and line is identical in every save; a
+in ROTATIONS §1, **Allowed divergences**: the Ch 25 slip line, the recorded results of the four
+alibi checks, and the content of Yūgure's list as decoded at Ch 38. Candidates' visible schedules
+are identical; alibi moments are never shown, only recorded. Every other scene, vote, question, visit, flicker and line is identical in every save; a
 candidate's held-back secret keeps their Thread Sight flicker on until Ch 39 or 40 in every save. Lineage lines that differ (`twist.lineage`) are only
 allowed from Ch 48, except the persimmon on the sill (Ch 27), which shows no giver.
 
@@ -91,6 +92,15 @@ The user's wish: friendship has questions and choices, and answers matter later.
   (`quests.py --questions`), so the tables stay the single source of truth. The "when" column of
   each table is what the index sorts by.
 
+### The Ch 53 speaking rule
+
+Six fixed speakers, in order: the red cord (the lost child), the sensei, the spouse, the friend who
+fell in Ch 24 (skipped if that was the sensei; then slot 5 is the higher teammate), the other
+teammate (or their stand-in), the rival. Each speaker's one line lives in **the Ch 53 line table of
+their character file**, and the arc cites it. Anyone else at level 9 or more may have one short line
+among the faces, unordered. No other character file promises a flame line. The phrase "So someone
+remembers" is used only in Ch 0 and in the lost child's Ch 53 line.
+
 ### The player's own choices (`ans.player.*`)
 
 | Flag | Asked | Options | Read in |
@@ -109,8 +119,10 @@ The user's wish: friendship has questions and choices, and answers matter later.
 | `ans.player.archive_follow` | Ch 37.0 | followed, stayed | The sensei's and keeper's lines |
 | `ans.player.council_testimony` | Ch 40.2 | the dead, the living, the silence | Ch 41.1 dedication, `side.j.roots` |
 | `ans.player.parent_meet` | Ch 48 | three per lineage | Ch 53.5, Ch 55.2 |
+| `ans.player.go_up` | Ch 49.4 | go, let the Seventh plan | The Seventh's last line before the climb (Ch 51b.1) |
 | `ans.player.vouch` | Ch 49.1 | vouched, let her speak, silent | Ch 51a (the doubting council members watch her on the wall; the Seventh's line) |
 | `ans.player.b_parent` | Ch 51a.4 | stood with b, let b choose | b's epilogue |
+| `ans.player.last_line` | Ch 53.6 | sing, silent | The leader's death; the lost child sings if home and you are silent |
 | `ans.player.leader_name` | Ch 54.3 | among, off, apart | The memorial; Ch 55.5 |
 | `ans.player.speech` | Ch 55.2 | three of: the cord, the cord tag, the bowl, the names, the fire | Ch 55.2 |
 

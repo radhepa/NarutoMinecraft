@@ -27,7 +27,7 @@ done when both are). Gates in the character briefs use them ("never before `stor
 | Flag | Values | Read in |
 |---|---|---|
 | `twist.traitor` | `librarian`, `medic`, `councillor`, `merchant` | Ch 25 (the slip), Chunin alibis, Ch 35 to 40, Ch 50 and 51a (turned), Ch 55 (ruling) |
-| `twist.lineage` | `second`, `fallen` | Ch 21, 27, 48, 52 to 55 |
+| `twist.lineage` | `second`, `fallen` | Ch 27 (the persimmon on the sill; no visible giver) and from Ch 48 on (48, 52 to 55). Nothing else reads it before Ch 48 |
 | `twist.fourth_fate` | `falls`, `crippled`, `taken` | Ch 19 to 21, 49, 51, 55 |
 
 ## Seeds (set in the beta, paid later)
@@ -112,6 +112,16 @@ done when both are). Gates in the character briefs use them ("never before `stor
 | `story.second.lives` | Ch 53.5: the web at "strong" or above, or `friendship [yugure_second, 4]`, or `friendship [squad4_c, 6]` with `ans.squad4_c.second` not "someone else first" | Ch 54, 55 |
 | `story.blade.custody` | Ch 52 (he lives) | Ch 54, 55 |
 
+## Held roles
+
+Bonds the story holds down until a beat, so they cannot reach Thread Sight's 6 too early:
+
+| Cap | Why |
+|---|---|
+| `level_cap [role:porter, 4, story.ch28.done]` | The hand is never in the player's web |
+| `level_cap [role:lost_child, 2, story.lost_child.home]` | The cord holds; the bond grows only once she is home |
+| `level_cap [role:yugure_second, 2, story.ch41.done]` | An enemy until her first real conversation |
+
 ## Acts the story asks of the bond engine
 
 | Act | What it is | Used in |
@@ -154,6 +164,8 @@ raw number.
 (end of Ch 53; a lived deed worth 90 that forgives earlier bad deeds, so every finisher reaches Hero with the village). `world.roster.<role>.gone` (set when a role leaves the roster:
 neutral aliases read by the ranks session): `hokage_4` at Ch 20 if `twist.fourth_fate = falls`; the bound candidate at Ch 39 if arrested; `sensei_2` and `elder_keeper` at Ch 51b.
 
+New ids from round 3: `ans.player.go_up` (Ch 49.4, read 51b), `ans.player.last_line` (Ch 53.6: sing / silent; read Ch 54 and the epilogue).
+
 New ids from round 2: `ans.anbu_captain.letter`, `ans.anbu_captain.alone` (Night Watch), `story.blade.custody` (Ch 52 to 54).
 
 ## Tokens the story needs
@@ -168,6 +180,8 @@ Player-scope string flags: `ans.<role>.<topic> = <option>`. The question tables 
 [character file](CHARACTERS/) are the source of truth for their options and payoffs; the arc
 files show where each is asked. Naming: `ans.player.*` are the player's own choices that are not
 answers to one character (how you describe the Leaf, your ramen order, your speech).
+
+**Moments:** the cord test is `shared_moment bond.cord` everywhere.
 
 **Renamed in round 2:** `ans.player.bell_given` → `ans.player.cord_given` (`handed` / `together`);
 `story.seed.bell_flicker` → `story.seed.cord_flicker`; the keepsake `bell` → `cord_tag`; the speech
