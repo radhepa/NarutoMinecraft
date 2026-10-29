@@ -1,62 +1,74 @@
-# Roadmap
+# Shinobi Modpack: roadmap
 
-From a wardrobe of Naruto-styled residents to an adventure map of the whole Hidden Leaf, where you
-arrive as an orphaned academy student and rise to Hokage.
+From a wardrobe of Naruto-styled residents to the **Shinobi Modpack**: a modpack and adventure map
+of the Hidden Leaf, where you arrive as an orphaned academy student and grow up to be Hokage.
 
 This plan builds on [Village Friends](https://github.com/radhepa/Village-Friends-Minecraft-Mod)
 (VF below) wherever VF already solves a problem. File links point at VF's `main` branch. VF
 targets **Minecraft 26.3 on Fabric** (loader 0.19.5, Fabric API 0.161.0+26.3, Loom 1.17.21,
 Java 25; VF 2.29.1, see its
 [gradle.properties](https://github.com/radhepa/Village-Friends-Minecraft-Mod/blob/main/gradle.properties)).
-Naruto Minecraft targets the same versions and stays on them. Moving to another Minecraft version
-is separate work, as it is for VF.
+Every mod in the Shinobi Modpack targets the same versions and stays on them. Moving to another
+Minecraft version is separate work, as it is for VF.
 
 ## 1. Vision
 
-Naruto Minecraft is a single-player adventure map of the Hidden Leaf: one walled village under the
-Hokage Rock, hand-built district by district, full of residents who live their own days.
+The Shinobi Modpack is a single-player adventure of the Hidden Leaf: a pack of separate mods plus a
+hand-made map of one walled village under the Hokage Rock, full of residents who live their own
+days.
 
-**The story.** You are an orphan. A squad of Leaf ninja rescues you, and the Hokage enrolls you in
-the Academy and gives you a small apartment. From there it is your life in the village: lessons,
-missions, money, friends, rivals, and every night home to bed. You cannot break or place blocks in
-the world. What you can do is earn ryo, buy things, furnish your apartment and fill its chests,
-and grow from a student with a wooden kunai into the Fifth Hokage, whose face is carved next to
-the four already on the Rock.
+**The story.** You are an orphan. A Leaf squad raids the hideout of a rogue organization and
+carries you out; the Hokage enrolls you in the Academy and gives you a small apartment. From there
+it is your life in the village: lessons, missions, money, friends, a squad of your own, rivals, and
+every night home to bed. You cannot break or place blocks in the world. What you can do is earn
+ryo, buy things, furnish your apartment and fill its chests, grow up from an Academy kid into an
+adult, uncover who took you and why, and become the Fifth Hokage, whose face is carved next to the
+four already on the Rock.
 
 The village matters more than the fighting. Residents wake, work, eat at Ichiraku, gossip, train,
 fall in love and remember what you did. That is VF's resident model, which already runs routines,
-friendships, families, deeds and notice boards. Naruto Minecraft dresses those residents as
+friendships, families, deeds and notice boards. The Shinobi Modpack dresses those residents as
 shinobi and civilians of the Leaf, gives each one a rank, and adds what VF lacks: ninja combat,
-chakra, jutsu, missions, exams, a day-and-night life for the player, and an original ninja plot.
+chakra, jutsu, missions, exams, a day-and-night life for the player, a squad, and an original ninja
+plot.
 
 Progress has two halves. **Ranks** are story milestones: exams and promotions that change your
 outfit, your missions, where you may go and how the village treats you. **Levels** are your power:
 XP from missions, training and fights raises your chakra, health and strength, and each rank's
 exam asks for a minimum level. Dying costs levels, and fails the mission you were on. Recurring
-events (festivals, the Chunin Exams twice a year, clan days) and crisis arcs give the calendar a
-pulse. Combat is fast and readable: chained taijutsu, dodges, chakra-powered movement across roofs
-and water, jutsu woven from hand signs, and thrown tools.
+events (festivals, the Chunin Exams twice a year, clan days) and the arcs of the main plot give the
+calendar a pulse. Combat is fast, readable and forgiving by default: chained taijutsu, dodges,
+chakra-powered movement across roofs and water, jutsu woven from hand signs, and thrown tools.
 
 **Ladder:** Academy → Genin → Chunin → Jonin → Hokage, with **ANBU** as an optional branch from
 Jonin.
 
 ## 2. Decisions
 
-The owner's answers to the first draft's open questions. Every section below follows them.
+The owner's decisions. Every section below follows them.
 
-| # | Topic | Decision |
-|---|---|---|
-| 1 | Clans | At the start you choose to be born into one of the 15 clans (an orphan of that clan) or to be clanless. A clanless player can later **found their own clan**: name, crest, colors, look, members recruited from residents, and a home ([Player clans](#player-clans)). |
-| 2 | Canon | Original characters only for now, maybe cameos of named characters later, and a unique ninja plot. The sitting Hokage and your mentors are original characters. |
-| 3 | ANBU | An optional branch from Jonin, not a required rung. The Hokage succession needs Jonin; ANBU is not required. |
-| 4, 6 | Players | **Single player first.** Multiplayer is a later phase. The code stays server-authoritative (single player runs an integrated server), so it is not closed off. |
-| 5 | World | A **fixed, hand-made map with a border**. |
-| 7 | Generation | Nothing is procedurally generated. Vanilla and VF world generation are off. "Generated" districts in the first draft become **pasted** ones: map tools paste blueprints at fixed spots while the map is being built, and the result is saved into the shipped world. |
-| 7 | VF's RPG add-on | **Assumption:** not shipped with the map. The owner's "No" on generation is read as also answering this; it also avoids two level systems fighting. Confirm. |
-| 8 | Elemental nature | You **choose** your first nature and **gain more** through training and milestones. |
-| 9 | Death | Dying costs levels, and if you are on a mission, the mission fails. This adds a player **level and XP** system ([Levels](#levels)). |
-| 10 | Era | Four Hokage faces on the Rock at the start. The player becomes the Fifth. |
-| — | Story premise | Orphan rescued by a squad; the Hokage grants an apartment; no block breaking; buy things, earn money, store in chests; sleep each night, or stay up and grow tired and slower. |
+| Topic | Decision |
+|---|---|
+| Name and shape | The **Shinobi Modpack**: a modpack and adventure pack, not one jar. Each piece is a separate mod with a clear dependency direction, plus the map and a pack manifest ([Architecture](#10-technical-architecture)). |
+| Players | **Single player first.** Multiplayer is a later phase. The code stays server-authoritative (single player runs an integrated server), so it is not closed off. |
+| World | A **fixed, hand-made map with a border**. Only the Leaf for now; more regions later, and the architecture leaves room for them. |
+| Generation | Nothing is procedurally generated. Vanilla and VF world generation are off. Map tools paste blueprints at fixed spots while the map is being built, and the result is saved into the shipped world. |
+| VF's RPG add-on | Not shipped. |
+| Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe, and clan or clanless. |
+| Growing up | You grow from Academy kid to teen to adult, then stay adult. No old age and no death of age ([Growing up](#growing-up)). |
+| Clans | At the start you choose to be born into one of the 15 clans (an orphan of that clan) or to be clanless. A clanless player can later **found their own clan** ([Player clans](#player-clans)). |
+| Kekkei genkai | Playable through clan membership: Sharingan, Byakugan, Wood Release and the rest come with their clan. |
+| Out of scope for now | Summoning, and with it tailed beasts. |
+| Squad | Your teammates and sensei are original characters with personalities, friendship levels and connections, generated per save, then fixed for that save. They can leave the squad ([Your squad](#your-squad)). |
+| Canon | Original characters only, maybe cameos of named characters, and a unique ninja plot. The villain is ours to propose ([The story](#7-the-story-a-proposal)). |
+| ANBU | An optional branch from Jonin, not a required rung. The Hokage succession needs Jonin. |
+| Hand signs | Both typed key sequences and a radial menu, chosen in the settings. |
+| Learning jutsu | A mix of mentors, scrolls bought with ryo, and mission rewards. |
+| Elemental nature | You **choose** your first nature and **gain more** through training and milestones. |
+| Death | Dying costs levels, and if you are on a mission, the mission fails. This adds a player **level and XP** system ([Levels](#levels)). |
+| Difficulty | Forgiving and cinematic by default, and tunable: difficulty settings, with every number in data files ([Difficulty](#difficulty)). |
+| Era | Four Hokage faces on the Rock at the start. The player becomes the Fifth. |
+| Story premise | Orphan rescued by a squad; the Hokage grants an apartment; no block breaking; buy things, earn money, store in chests; sleep each night, or stay up and grow tired and slower. |
 
 ## 3. Where we start
 
@@ -111,6 +123,7 @@ other system that reads structure pieces) needs a small VF hook so a hand-built 
 registered by marker or by bounds. That is part of Phase 0.
 
 ## 4. The map
+
 
 ### References
 
@@ -222,26 +235,31 @@ the master world before release.
 
 ## 5. Life in the village
 
+
 ### The opening
 
 A playable prologue of 15 to 20 minutes that doubles as the tutorial and introduces the people who
-will shape your career. All characters are original.
+will shape your career. All characters are original; the hideout belongs to the rogue organization
+of the story proposal (the Ashen Veil, [section 7](#7-the-story-a-proposal)).
 
-1. **Character creation.** Hair, eyes, complexion and marks from the wardrobe; born to one of the
-   15 clans (its look and, later, its technique) or clanless.
-2. **Captive.** You wake tied up in a bandit camp in the hills south of the village, at dusk. You
-   learn to look, crouch and sneak by slipping your ropes and hiding in the grass.
-3. **The rescue.** A squad breaks in: **the captain** (a Jonin, later your sensei), **a Chunin**
+1. **The creator screen.** Hair, eyes, skin (the six complexions), marks and a starting outfit from
+   the wardrobe, all shown on your child-stage model; then born to one of the 15 clans (its look,
+   and later its technique and kekkei genkai) or clanless.
+2. **Captive.** You wake locked in a cell in a hidden camp in the hills south of the village, at
+   dusk, among other children. You learn to look, crouch and sneak by slipping out and hiding in the
+   grass while masked guards pass.
+3. **The raid.** A Leaf squad breaks in: **the captain** (a Jonin, later your sensei), **a Chunin**
    (later your Academy instructor) and **a medic** (who works at the hospital). They are VF
    companions: you follow them, wait when told, and learn to dodge, sprint and climb while the
-   squad fights. A chase through the forest ends with the captain carrying you over a ravine.
+   squad fights. A chase through the forest ends with the captain carrying you over a ravine. You
+   glimpse a figure in a grey veil watching you go.
 4. **The gate at night.** The guards, the main street with its lanterns, the Rock with its four
    faces. The squad takes you to the Residence.
 5. **The Hokage.** The sitting Hokage, the Fourth, enrolls you in the Academy, grants you an
    apartment and an orphan's stipend, and hands you the key.
 6. **Your apartment.** One room: a bed, a chest, a low table, a window. The Chunin shows you where
    the ramen stand and the Academy are. You sleep, and the game proper starts the next morning at
-   6:00.
+   6:00, when you meet your classmates, two of whom will be your squad.
 
 ### Adventure rules
 
@@ -263,7 +281,7 @@ furnishing is only allowed inside them.
   inventory show a ghost preview snapped to the block grid; scroll to rotate, click to place. Aim
   at a piece you own and click to pick it back up into your inventory, with its contents. Leaving
   your bounds or pressing `F` again ends furnish mode.
-- **What counts as furniture:** blocks tagged `narutominecraft:furniture`, plus chests and
+- **What counts as furniture:** blocks tagged `shinobi_life:furniture`, plus chests and
   storage. The furniture shop sells a Leaf set (futon and bed, low tables, cushions, tatami,
   screens, scroll shelves, lamps, potted plants, posters, a weapon rack, a training dummy), and
   VF's tavern furniture and Hearth & Harvest cooking stations, so you can cook at home.
@@ -363,14 +381,15 @@ builds:
 
 ## 6. Progression
 
+
 ### Levels
 
 Levels are power; ranks are story. You need both: every rank exam asks for a minimum level, and
 reaching a level never promotes you by itself.
 
 - **Levels 1 to 60.** XP comes from missions (most of it), training milestones, exams, events, jobs
-  and fights. Fight XP falls off for repeated kills of the same kind (the RPG add-on's fatigue
-  rule), and bandit camps refill only weekly.
+  and fights. Fight XP falls off for repeated kills of the same kind (a rule borrowed from
+  VF's RPG add-on, which the pack does not ship), and bandit camps refill only weekly.
 - **Each level:** +3 maximum chakra and +1% taijutsu damage; +1 heart every 6 levels (10 hearts at
   level 1, 20 at level 60). Jutsu have a minimum level as well as a rank.
 - **Rank floors:** the level you cannot fall below once you hold the rank.
@@ -386,6 +405,52 @@ reaching a level never promotes you by itself.
 
 - **The pace:** about 30 to 45 minutes to level 5, 4 to 6 hours to 15, 15 to 20 hours to 30, and 40+
   hours to 50. The `ranks.json` file holds every number, as the RPG's `Balance` does.
+
+### Growing up
+
+You grow up once and then stay an adult: three stages, no old age, no death of age.
+
+| Stage | Age | When | Model |
+|---|---|---|---|
+| Child | 11 to 12 | From the prologue through the Academy and your first Genin year | The player model at **0.78** scale through vanilla's `scale` attribute (hitbox, eye height and reach follow it), with the head drawn 10% larger by the player poser for younger proportions |
+| Teen | 13 to 17 | From your first Chunin Exams, or the second in-game year, whichever comes first | **0.9** scale, normal head |
+| Adult | 18 and up | At Jonin, or the sixth in-game year, whichever comes first; then fixed | **1.0** scale, forever |
+
+- **Age moves** with the calendar (one year per 112 days, about 37 hours of play) and is pulled
+  forward by rank, so a fast player is never a child Jonin. It stops at adult.
+- **Stage changes** happen overnight, with a short morning scene ("You've grown") and a mirror in
+  the creator screen where you may restyle hair and outfit for free.
+- **Wardrobe:** the same pieces fit every stage, because the model is scaled, not changed. The rank
+  outfits already line up with the stages: Academy outfits for the child, Genin and Chunin outfits
+  for the teen, Jonin, ANBU and Kage for the adult. A few pieces get a `stages` field in their META
+  when they should only appear at some stages (Academy pieces only on children, for example).
+- **Residents:** VF's children are vanilla baby villagers with VF's baby transformer and their own
+  games and lessons. Your classmates and squad are not babies: they are adult residents with a
+  `stage` tag and the same `scale` values as you, so they keep shinobi routines and grow up
+  alongside you.
+
+### Your squad
+
+Your classmates, teammates and sensei are original characters made for **your** save.
+
+- **Made per save:** at the start of a new game the pack rolls the rescue captain (your sensei),
+  four classmates (two become your teammates) and a rival, each with a random look from the
+  wardrobe and the clan pools, a VF personality (warmhearted, playful, protective and the rest), a
+  family in the village, and a name from VF's name pools. Once rolled they are fixed for that save.
+- **Personality and friendship:** they are VF residents, so they use VF's ten friendship levels,
+  relationship meters with each other and with their families (`social/`), personalities, speech
+  bubbles, dialogue and gifts. Their personality also picks their fighting style (a protective
+  teammate guards you, a playful one takes risks) in their combat loadout.
+- **Connections:** each has ties the story uses: a sibling in the Academy, a parent in the police,
+  a crush, a grudge with the rival. VF's census already stores families and relationships.
+- **Growing:** they level, rank up and grow through the stages with you, and learn new techniques
+  from their sensei and clans.
+- **Leaving:** a teammate can leave the squad: if your friendship falls low and stays low, if they
+  fail an exam you pass (or pass one you fail), or through the story (one may be drawn to the Veil).
+  They stay in the village and remember you. A classmate or a new Genin takes their place, and from
+  Chunin on you can pick who joins your missions.
+- **Never killed:** squad members are knocked out, not killed (VF `Knockouts`); losing one on a
+  mission counts against your record.
 
 ### Academy student
 
@@ -422,7 +487,7 @@ reaching a level never promotes you by itself.
 
 ### Chunin
 
-- **Exam: the Chunin Exams**, in three stages (an event, section 7):
+- **Exam: the Chunin Exams**, in three stages (an event, section 8):
   1. **Written test** in an Academy hall: ten questions too hard to answer; the real test is
      gathering answers unseen (Byakugan, transformation, a clone in the rafters, bribing a proctor
      in dialogue). Caught three times and your team is out.
@@ -462,7 +527,7 @@ reaching a level never promotes you by itself.
 
 - **Succession:** when you are a Jonin (ANBU or not), level 50, with the highest standing in every
   district and clan quarter (VF standing aggregated across the village), the Fourth announces
-  retirement at the next New Year. A final crisis arc decides it: defend the village (section 7).
+  retirement at the next New Year. A final crisis arc decides it: the Veil's last attack on the village (section 7).
   Then the inauguration, and your face is carved as the fifth on the Rock (the map swaps the blank
   spot for a face built from your wardrobe look).
 - **Unlocks:** the Kage hat and haori, the Hokage office and quarters, assigning missions to NPC
@@ -487,8 +552,9 @@ you wear its look, its residents know you as kin, you learn its signature techni
 a clan elder, and you may move into the clan's quarter from Chunin. The premise holds: you still
 start in the Hokage's apartment.
 
-**Clanless.** No clan technique, but every clan's elders will teach friends (friendship level 7 or
-more) one lesser technique, and from Chunin on you can found your own clan.
+**Clanless.** No clan technique and no kekkei genkai, but every clan's elders will teach friends
+(friendship level 7 or more) one lesser technique, and from Chunin on you can found your own clan.
+In the story proposal, the clanless player is the last of a lost clan and can refound it.
 
 ### Player clans
 
@@ -496,7 +562,7 @@ A clanless player can found a clan at the clan registry in the Hokage Residence:
 20,000 ryo, and Good Neighbor standing or better.
 
 - **The clan file.** A player clan is saved as a clan JSON in exactly the [CLANS.md](CLANS.md)
-  format, in the world save (`narutominecraft/clans/<id>.json`). The runtime reads shipped and
+  format, in the world save (`shinobi_progression/clans/<id>.json`). The runtime reads shipped and
   player clans with the same loader, so the shipped clans are also packaged as runtime data, not
   only compiled into pieces.
 - **Clan editor** (a screen at the registry):
@@ -531,7 +597,41 @@ A clanless player can found a clan at the clan registry in the Hokage Residence:
 - **Prices and favors:** VF standing already moves prices; rank adds a small discount at clan
   shops and free ramen on promotion day.
 
-## 7. Events
+## 7. The story: a proposal
+
+> **Proposal.** The owner left the villain to us. This is a proposal to review, not a decision.
+> All characters are original; named canon characters appear only as cameos.
+
+### The Ashen Veil
+
+A rogue organization hidden in the borderlands, working name **the Ashen Veil**. Its members wear
+grey veils over their faces and leave ash where they have been. It gathers orphans with unusual
+chakra and forges them into weapons: conditioning, forbidden seals, chakra experiments. The
+hideout the Leaf squad raided in the prologue was one of its cells, and you were one of its
+children.
+
+**Your origin is the mystery.** Why did the Veil want you? The answer the story builds to: you are
+the last of a **lost clan**, wiped out and erased from the Leaf's records, whose chakra the Veil
+wants. Late in the plot you recover the clan's name and crest. For a clanless player that is the
+road to [founding your own clan](#player-clans): you can refound the lost clan or start a new one.
+A clan-born player is an orphan of a living clan, and the mystery becomes why the Veil took a child
+of that clan.
+
+### The arc, rank by rank
+
+| Rank | What happens | Phase |
+|---|---|---|
+| Academy | Watchers in the dark: a veiled figure on a rooftop at night, ash on your windowsill, a classmate who sleepwalks. Odd events that only you seem to notice | 1 |
+| Genin | D- and C-rank missions keep turning up the same thing: smuggled chakra paper, missing orphans from other villages, a merchant's cart with a hidden cage. The Veil is moving through the Land of Fire | 2 |
+| Chunin Exams | The Veil infiltrates the exam in disguise as a foreign team, hunts you in the Forest of Death, and attacks the stadium during the finals: the first crisis | 3 |
+| Jonin | You lead the hunt for its cells at far locations, and find a traitor inside the Leaf who has been feeding it names | 5 |
+| ANBU (optional) | Covert operations against the Veil: infiltration, sabotage, and the Shimura storyline | 5 |
+| Hokage | The final confrontation: the Veil's leader comes for the village and for you. Defending the Leaf is the succession's trial, and ends with your face on the Rock | 6 |
+
+The plot is data in the adventure map's datapack (story flags, cutscene scripts, missions and
+events), so it can be rewritten without touching the mods.
+
+## 8. Events
 
 All events run off VF's calendar (`social/Calendar`: 4 seasons of 28 days, 112 days a year, a
 Minecraft day is 20 minutes, so a year is about 37 hours of play). Each event is a JSON file; an
@@ -546,9 +646,9 @@ end by midnight so they never force fatigue, except night-duty events.
 | Academy graduation | Spring 7 and Autumn 7 | Ceremony in the yard; the player's own graduation is the first one they pass | Lessons in VF's routine |
 | Clan days (15, plus player clans) | One per clan per year, spread so no two fall in the same week | Senju and Uzumaki: founders' memorial at the shrine (Spring); Hyuga: main and branch house ceremony; Akimichi: harvest feast (Autumn); Inuzuka: ninken pairing, where children get their first pup; Nara: deer count in the forest; Yamanaka: flower festival (Spring); Uchiha: police parade; Sarutobi: the Will of Fire lantern walk (New Year eve); Aburame: insect night, with fireflies over the gardens (Summer); Hatake: a quiet visit to the memorial stone; Kurama: painting exhibition; Yuhi: grove viewing (Spring); Gekko: moon-viewing kenjutsu duels (Autumn full moon); Shimura: none in public, a beat of the ANBU branch instead; player clans: their chosen day | Party behavior, Hearth & Harvest dishes, VF pets for the pups |
 | Border incident | Random, about weekly | Rogue ninja or bandits at a gate or on a road; a short fight, a deed, a small reward | VF guard call-out |
-| Crisis arcs | Story-gated | The unique ninja plot, once each: (1) the bandits from the prologue were working for someone, and that thread leads to an invasion during your Chunin Exam finals; (2) an infiltration in the Jonin era; (3) the attack that decides the succession. Story beats are written with original characters | Guards, knockouts, the arena |
+| Crisis arcs | Story-gated | The unique ninja plot, once each: the Ashen Veil proposal ([section 7](#7-the-story-a-proposal)): watchers in the Academy years, smuggling in the Genin missions, the attack on the Chunin Exam finals, the hunt for its cells and the traitor in the Jonin era, covert operations on the ANBU branch, and the final attack that decides the succession | Guards, knockouts, the arena |
 
-Event file sketch (`data/narutominecraft/naruto/events/leaf_festival.json`):
+Event file sketch (Progression's format, in the map's datapack `shinobi_adventure`):
 
 ```json
 {
@@ -568,7 +668,7 @@ Story-gated events use `"requires": {"player_rank": "chunin", "story": "exam_fin
 `"recur": "once"`. Stages of a crisis arc are listed in the same file. Crisis arcs never damage the
 map: "damage" is dressing (smoke, rubble entities, closed streets) removed when the arc ends.
 
-## 8. Combat
+## 9. Combat
 
 Combat runs on one **technique system**: every taijutsu move, dodge, jutsu and throw is a
 technique with a cost, timing, animation and effect. The player's inputs and the NPC brains call
@@ -602,11 +702,27 @@ charges chakra.
 ### Ninjutsu
 
 **Hand signs.** Twelve signs (Rat, Ox, Tiger, Hare, Dragon, Snake, Horse, Ram, Monkey, Bird, Dog,
-Boar). Hold the **Weave** key (`R` by default): movement slows, a 12-sign radial appears, move the
-mouse to a sign and left click to add it, release `R` to cast. Each sign takes 4 ticks and plays
-its pose. A wrong sequence fizzles and wastes a little chakra. A jutsu used often enough becomes
-**mastered**: it can be bound to one of four quick slots (`Z`, `X`, `C`, `V`) and cast with fewer
-signs. Keys are rebindable; the radial also works on a controller.
+Boar). Hold the **Weave** key (`R` by default) and movement slows; then enter signs in one of two
+ways, chosen in the settings:
+
+- **Typed:** each sign has a key (by default the twelve keys `1` to `0`, `-` and `=`, rebindable);
+  type the sequence, release `R` to cast. Fast for players who learn the sequences.
+- **Radial:** a 12-sign wheel appears; move the mouse (or a controller stick) to a sign and click to
+  add it, release `R` to cast. Easier to learn, and the wheel shows the signs of jutsu you know.
+
+Each sign takes 4 ticks and plays its pose. A wrong sequence fizzles and wastes a little chakra. A
+jutsu used often enough becomes **mastered**: it can be bound to one of four quick slots (`Z`, `X`,
+`C`, `V`) and cast with fewer signs.
+
+**Learning jutsu.** A jutsu must be learned before its signs do anything, in one of three ways
+(each technique file lists which apply):
+
+- **Mentors:** your sensei, clan elders and nature masters teach at friendship and level
+  thresholds, with a short trial.
+- **Scrolls:** the scroll shop sells basic and C-rank jutsu for ryo; reading one teaches it.
+- **Mission rewards:** rarer techniques come from mission results, exam placings and story beats.
+
+Then practice makes it mastered.
 
 **Chakra.** A bar beside hunger (synced attachment). It refills slowly, fast while meditating
 (sneak and stand still), and from soldier pills (a Hearth & Harvest dish). Maximum chakra grows
@@ -625,9 +741,13 @@ with level. Running out leaves you drained: Slowness for 10 s. Fatigue slows reg
 | Earth Wall | Tiger-Hare-Boar-Dog | A wall entity on open ground that blocks movement and projectiles and crumbles after 10 s |
 | Lightning Blade (Jonin) | Ox-Hare-Monkey | Charge 1 s, then a straight dash attack that breaks through a block or parry |
 
-**Clan techniques.** Clan-born players learn their clan's signature technique at Genin; clanless
-players can learn one lesser technique per friendly clan; a player clan's art is a technique its
-founder mastered.
+**Clan techniques and kekkei genkai.** Clan-born players learn their clan's signature technique
+at Genin, and a clan with a **kekkei genkai** (Uchiha's Sharingan, Hyuga's Byakugan, Senju's Wood
+Release) passes it on: it unlocks through a clan milestone (the Sharingan awakens in a story moment
+of danger, the Byakugan through Hyuga training). Kekkei genkai come only through clan membership.
+Clanless players can learn one lesser technique per friendly clan, never a kekkei genkai; a player
+clan's art is a technique its founder mastered. **Summoning is out of scope for now**, and with it
+tailed beasts.
 
 **Genjutsu.** Three clans (Kurama, Yuhi, Uchiha) use illusions, so genjutsu is one shared effect
 type: a caught target sees a client-side illusion (fake entities, a distorted screen, a wrong HUD)
@@ -645,9 +765,9 @@ illusion.
 | Inuzuka | Fang over Fang | A spinning dash attack together with your ninken (a tamed wolf, through VF's pet code) | spin |
 | Senju | Wood Release | A short-lived wooden barrier or binding roots (entities, gone after a few seconds) | sign, wood growth |
 | Uzumaki | Sealing chains, large chakra | 30% more chakra; chains that hold one target for 4 s | chains |
-| Sarutobi | Fire mastery, Monkey staff | Fire jutsu cost 20% less; a summoned long staff with 4.5 reach that uses the combo system | staff combo |
+| Sarutobi | Fire mastery, clan staff | Fire jutsu cost 20% less; the clan's long staff (an item, not a summon) with 4.5 reach that uses the combo system | staff combo |
 | Aburame | Insect swarm | A swarm entity that follows a target for 10 s, drains chakra and marks it (it glows for the caster) | arms open, swarm particles |
-| Hatake | Ninken trackers, chakra sabre | Summon a ninken that tracks a mission target or hidden enemy and leads you there; the white sabre is a tanto whose combo finisher is a lightning dash | summon, sabre strikes |
+| Hatake | Ninken tracker, chakra sabre | Your ninken (a companion dog through VF's pet code, not a summon) tracks a mission target or hidden enemy and leads you there; the white sabre is a tanto whose combo finisher is a lightning dash | summon, sabre strikes |
 | Kurama | Painted illusion | Genjutsu: a painted world closes over one target for 6 s | brush strokes in the air |
 | Shimura | Vacuum blades, sealing | Wind blades in a fan that break through a guard; a sealing curse used on ANBU-branch missions | breath blades |
 | Yuhi | Tree binding | Genjutsu: the target sees itself bound by a tree and cannot move for 4 s; the caster appears behind it | sign, step-behind |
@@ -680,6 +800,22 @@ Bought with ryo at the tool shop; consumed when used or lost.
 - **Difficulty:** by rank and level, not by health inflation: a Jonin reacts faster and uses more
   techniques.
 
+### Difficulty
+
+Forgiving and cinematic by default, and tunable.
+
+| Setting | Story (default) | Shinobi | Hard |
+|---|---|---|---|
+| Parry and dodge windows | 6 and 8 ticks | 4 and 6 | 3 and 5 |
+| Enemy telegraphs | long, with a flash | normal | short |
+| Enemy damage | 60% | 100% | 130% |
+| Death | lose one level, never below the rank floor | the same | two levels, and 10% of your ryo |
+| Fatigue | starts at 01:00 | 00:00 | 23:00 |
+| Cinematic camera on finishers and jutsu | on | on | off |
+
+Every number lives in data (`difficulty.json` in Shinobi Core, overridden per world), and players
+can change the setting at any time in the pack's settings screen.
+
 ### Animation
 
 VF's clip system poses residents only (`ResidentLife`, `ResidentPoser`; the player is untouched).
@@ -698,69 +834,98 @@ the cross), the ninja run, chakra jump, combo strikes, heavy, dodge per directio
 throw, meditation, a tired slouch (Phase 1 and 2); wall-run, water stance (2); clan techniques (4);
 Mind Transfer and the advanced jutsu (5).
 
-## 9. Technical architecture
+## 10. Technical architecture
 
-### Shape
+### The pack: separate mods
 
-- **Mod:** `narutominecraft`, its own jar that **requires Village Friends** (like VF's `rpg/`).
-  It extends VF from outside: VF's public events, mixins on VF classes where needed, data files in
-  our namespace. When we need VF to expose something, we add a small public API to VF (as its
-  `stable/api` does) rather than patch around it. Phase 0 needs three: extra wardrobe namespaces, a
-  currency item for rewards and trades, and registering hand-built taverns (and other
-  structure-read buildings) without structure pieces.
-- **Code** (package `dev.narutominecraft`):
+The Shinobi Modpack ships as a modpack plus a map. Each piece is its own mod with its own jar, and
+dependencies run one way. Village Friends stays its own mod; we only add small public APIs to it.
 
-| Package | Owns | Pure, unit-tested core |
+| Piece | Mod id | Owns | Depends on |
+|---|---|---|---|
+| **Village Friends** | `villagefriends` | Residents, routines, society, dialogue, homes, taverns, notice boards, calendar, knockouts, animation clips | Fabric API. Unchanged except three small public APIs: extra wardrobe namespaces, a currency item for rewards and trades, registering hand-built taverns without structure pieces |
+| **Shinobi Core** | `shinobi_core` | The shared player record (rank, level, age stage, clan id, difficulty), a stat-modifier registry, the event bus, data loading and validation, the settings screen, the wallet and region interfaces | Fabric API |
+| **Shinobi Village** (the Naruto content mod) | `narutominecraft` (today's wardrobe namespace) | The wardrobe, the 15 clans and the clan loader (shipped and player clan files), resident ranks and looks, Leaf residents, the character creator and the player's look, age-stage scaling, the resident animation pack and dialogue pools, Konoha decor blocks | Village Friends, Shinobi Core |
+| **Shinobi Combat** | `shinobi_combat` | Chakra, techniques, hand-sign input, elemental natures, kekkei genkai, genjutsu, taijutsu, chakra movement, ninja tools, the shinobi enemy entity and its AI, sparring, the player poser | Shinobi Core, Shinobi Village (enemies use the resident model and wardrobe; clips use VF's format) |
+| **Shinobi Life** | `shinobi_life` | Adventure rules, the player's home, furniture and furnish mode, moving, ryo, shops and jobs, the daily cycle, sleep, fatigue, waking at home or in hospital | Shinobi Core, Village Friends (homes, plaques, trades) |
+| **Shinobi Progression** | `shinobi_progression` | Ranks, levels and XP, the death penalty, missions, exams, the event director, the squad, the story engine (flags and cutscenes), player clans (registry, editor, members, estates), residents reacting to rank | Shinobi Core, Shinobi Village, Shinobi Combat, Shinobi Life, Village Friends |
+| **Shinobi Adventure** (the map) | world save + datapack `shinobi_adventure` | The hand-made Leaf with its border; the story, quests, missions, events, shop stock, homes, districts and regions as data | Every mod above |
+| **Pack manifest** | `pack/` | A Modrinth `.mrpack` (and a CurseForge export) pinning Minecraft 26.3, Fabric Loader 0.19.5, Fabric API, Village Friends and every Shinobi mod by version and hash, with the map world and default config as overrides | — |
+
+```text
+Fabric API
+ ├── Village Friends ─────────────┐
+ └── Shinobi Core                 │
+      ├── Shinobi Village ◄───────┤
+      │    └── Shinobi Combat     │
+      ├── Shinobi Life ◄──────────┘
+      └── Shinobi Progression ◄── Village, Combat, Life
+           └── Shinobi Adventure (map + datapack) ◄── everything
+```
+
+**How the mods talk without tangling.** Lower mods never call higher ones. They meet in Shinobi
+Core:
+
+- **Events:** `RankChanged`, `LevelChanged`, `PlayerDied`, `DayStarted`, `MissionEnded`,
+  `TechniqueLearned`, `AgeStageChanged`. Progression publishes rank and level; Life publishes the
+  day; Combat listens.
+- **Stat modifiers:** Life's fatigue writes movement, damage and chakra-regen modifiers into the
+  registry; Combat reads chakra regen from it; movement and damage use vanilla attributes, so they
+  work even without Combat.
+- **Wallet:** Life implements it with ryo; Progression pays mission rewards and charges the clan
+  fee through it. Without Life, rewards fall back to XP only.
+- **Player record:** rank, level, age stage and clan id live in Core, so Village can scale the
+  model for the age stage and Combat can grant the clan's kekkei genkai without depending on
+  Progression.
+
+### Each mod on its own
+
+| Mod | Usable or testable alone |
+|---|---|
+| Shinobi Core | Unit tests; no content |
+| Shinobi Village | In any VF world: residents wear the Naruto wardrobe and clans, the creator screen dresses the player, age stages scale the model |
+| Shinobi Combat | With Village: every technique works in any world; techniques are unlocked by a command or an "all techniques" setting when Progression is absent; a test arena game test |
+| Shinobi Life | In any VF world: claim a house with a plaque as your home, furnish it, trade in ryo, sleep and feel fatigue. Adventure rules are a game rule, off by default outside the map |
+| Shinobi Progression | With the mods it depends on: ranks, levels, generic missions and events from its default data, in any VF world |
+| Shinobi Adventure | Only as the full pack |
+
+### Repository layout
+
+This repository becomes a Gradle multi-project, the way VF hosts `rpg/`: `core/`, `village/`
+(today's wardrobe resources move here), `combat/`, `life/`, `progression/`, `adventure/` (the
+datapack and map tools) and `pack/` (the manifest). Python authoring tools stay under `tools/`.
+Each mod has its own version; the pack manifest pins a tested set.
+
+### Code by mod
+
+| Mod | Packages | Pure, unit-tested core |
 |---|---|---|
-| `rank` | Ranks, milestones, levels and XP, promotions, death penalty | `Ladder`, `Milestones`, `Levels` |
-| `story` | The prologue, story flags, cutscene scripts, crisis arcs | `StoryFlags` |
-| `life` | Adventure rules, the daily cycle, fatigue, sleep, waking in hospital | `Fatigue`, `DayClock` |
-| `home` | The player's home, furnish mode, furniture blocks, moving, upgrades | `FurnishRules` |
-| `economy` | Ryo items, prices, stipend, shop tables, VF currency glue | `Prices` |
-| `clan` | Clan loading (shipped and player), clan choice, the clan editor, members, estates | `ClanFile`, `Recruiting` |
-| `chakra` | The chakra bar, regen, drain | `ChakraMath` |
-| `technique` | Technique registry, hand-sign input, casting, cooldowns, effects, natures | `SignSequence`, `Mastery`, `Costs` |
-| `combat` | Combos, dodge, block/parry, hit sweeps | `ComboTiming`, `HitArc` |
-| `movement` | Ninja run, chakra jump, wall-run, water-walk | `WallRun` |
-| `tools` | Kunai, shuriken, bombs, pouch: items and projectiles | |
-| `shinobi` | The shinobi entity, its brain and loadouts | `RangeBands` |
-| `mission` | Mission Desk, mission types, squads, rewards, failure | `MissionRoll` |
-| `event` | Event director, festival behaviors | `EventClock` |
-| `exam` | Graduation and Chunin Exam stages, judging | `Judging` |
-| `map` | Districts, zones, access rules, the paste tool (builder mode only) | `Zones` |
-| `village` | Resident ranks, rank dialogue, VF glue | |
-| client `hud`, `anim`, `look`, `screens` | Chakra, XP, ryo and fatigue on the HUD; sign radial; player poser; player wardrobe look; character creation, furnish mode, clan editor | |
+| Core | `record`, `events`, `stats`, `data`, `settings`, `wallet`, `region` | `Difficulty`, `StatMath` |
+| Village | `wardrobe`, `clan`, `resident`, `look` (creator, age stages), client `render` | `ClanFile`, `AgeStage` |
+| Combat | `chakra`, `technique`, `combat`, `movement`, `tools`, `shinobi`, client `anim`, `hud`, `signs` | `SignSequence`, `Mastery`, `Costs`, `ComboTiming`, `HitArc`, `WallRun`, `RangeBands` |
+| Life | `rules`, `home`, `furniture`, `economy`, `day`, client `furnish`, `hud` | `Fatigue`, `DayClock`, `FurnishRules`, `Prices` |
+| Progression | `rank`, `level`, `mission`, `exam`, `event`, `squad`, `story`, `playerclan`, `reaction`, client `screens` | `Ladder`, `Levels`, `MissionRoll`, `Judging`, `SquadRoll`, `StoryFlags`, `Recruiting` |
 
-- **The player's look:** the player wears the Naruto wardrobe (chosen at character creation;
-  outfits unlock by rank or are bought), drawn with VF's resident model. The look is part of the
-  synced player attachment.
-- **Tests:** the VF pattern: pure classes with JUnit tests, world glue thin, and client game tests
-  with screenshots for each feature (`-Ptests=...`).
+Every mod follows the VF pattern: pure classes with JUnit tests, thin world glue, and client game
+tests with screenshots (`-Ptests=...`).
 
 ### Data-driven content
 
-Everything that is content is JSON under `data/narutominecraft/naruto/`, validated on load (a bad
-file is skipped and named in the log, as VF does for animation packs), and authored or checked by
-Python tools under `tools/` with `--check`, matching the wardrobe.
+Each mod ships its engine with generic default data; the adventure map's datapack overrides it with
+the Leaf's content. Files are JSON, validated on load (a bad file is skipped and named in the log),
+and authored or checked by Python tools under `tools/` with `--check`.
 
-| Folder | Holds |
-|---|---|
-| `ranks.json` | The ladder, milestones, level requirements and floors, XP curve, death penalty |
-| `life.json` | Day schedule, fatigue stages and effects, sleep rules |
-| `economy.json` | Ryo denominations, stipend, mission pay bands, sell-back rate |
-| `shops/*.json` | Each shop's stock and prices |
-| `furniture/*.json` | Furniture pieces: block, price, footprint, storage |
-| `homes.json` | Apartments, flats, houses and estates: bounds, rank, price or rent |
-| `clans/*.json` | The 15 shipped clans, in the CLANS.md format (player clans live in the world save) |
-| `story/*.json` | Prologue steps, story flags, crisis arc stages |
-| `techniques/*.json` | Every technique: signs, cost, cooldown, rank, level, nature, clip, effect type and numbers |
-| `missions/*.json` | Mission types and templates: rank, objectives, places, pay, XP, dialogue pools |
-| `events/*.json` | Calendar and story events |
-| `exams/*.json` | Exam stages and judging weights |
-| `loadouts/*.json` | Enemy and sparring partner kits |
-| `districts.json` | Zones, access rules, spawn and wake points, the map layout's runtime part |
+| Data | Owner (default data) | The map's datapack adds |
+|---|---|---|
+| `difficulty.json`, settings defaults | Core | Per-world overrides |
+| Wardrobe, `clans/*.json` (the CLANS.md format) | Village | — |
+| `techniques/*.json`, `loadouts/*.json` | Combat | Enemy loadouts for the Veil and bandits |
+| `life.json` (day, fatigue, sleep), `economy.json`, `furniture/*.json`, `shops/*.json`, `homes.json` | Life | The Leaf's shops, stock, apartments and estates |
+| `ranks.json` (ladder, levels, floors, XP curve), `missions/*.json`, `exams/*.json`, `events/*.json`, `squad.json` | Progression | The Leaf's missions, exams and calendar |
+| `story/*.json` (flags, prologue, arcs, cutscenes) | Progression (engine only) | The whole plot |
+| `districts.json`, `regions/*.json` | Core (format) | Zones, access rules, wake points, the Leaf region |
 
-Technique sketch:
+Technique sketch (Combat):
 
 ```json
 {
@@ -768,174 +933,196 @@ Technique sketch:
   "signs": ["snake", "ram", "monkey", "boar", "horse", "tiger"],
   "mastered_signs": ["snake", "tiger"],
   "rank": "genin", "level": 8, "nature": "fire",
+  "learn": ["mentor:fire_master", "scroll:fire_c", "reward"],
   "chakra": 30, "cooldown": 8.0,
-  "clip": "narutominecraft.player:breath_fire",
-  "effect": {"type": "projectile", "entity": "narutominecraft:fireball", "speed": 1.2, "damage": 6, "fire": 4}
+  "clip": "shinobi_combat.player:breath_fire",
+  "effect": {"type": "projectile", "entity": "shinobi_combat:fireball", "speed": 1.2, "damage": 6, "fire": 4}
 }
 ```
 
-Effect types are a fixed set in Java (`projectile`, `dash`, `area`, `summon`, `status`, `bind`,
-`wall`, `transform`, `possess`, `illusion`); new jutsu are data unless they need a new effect type.
-No effect type can change blocks.
+Effect types are a fixed set in Combat (`projectile`, `dash`, `area`, `status`, `bind`, `wall`,
+`transform`, `possess`, `illusion`); new jutsu are data unless they need a new effect type. No
+effect type can change blocks.
+
+### Regions
+
+Only the Leaf ships now, but travel is designed in. A **region** is a dimension declared by the
+map's datapack (an empty generator, a border, pasted builds, entry points) and registered through
+Core's region interface. The Leaf is the first region. Far mission locations are small regions
+reached from the travel desk at the main gate with a short travel scene. New regions (other
+villages, the borderlands where the Veil hides) are added as datapack regions plus their world
+data, with no mod changes.
 
 ### Saves
 
-- **Player:** one Fabric attachment, copied on death and synced to its owner: rank, level and XP,
-  milestones, story flags, missions in hand, mastered techniques, quick slots, natures, clan, look,
-  team, home, fatigue.
-- **World:** level attachments like VF's (`villagefriends:societies`, `notice_boards`): the event
-  director's state, exam state and results, NPC teams, crisis arc progress, furniture ownership,
-  player clans (with their clan JSON files beside the save).
-- **Map version:** the save stores the map version. A new map release ships a new world; carrying
-  a save forward is an export of the player attachment and home contents into the new map, not a
-  re-paste of districts.
+- **Player:** each mod keeps its own Fabric attachment on the player (Core's record; Combat's
+  chakra and techniques; Life's home, fatigue and wallet state; Progression's milestones, missions,
+  story flags and squad), copied on death and synced to the owner.
+- **World:** level attachments like VF's: the event director's state, exam results, the squad's
+  rolled characters, story progress, furniture ownership, and player clans with their clan JSON
+  files beside the save.
+- **Map versions:** a new map release ships a new world; carrying a save forward exports the player
+  attachments and home contents into the new map.
 
 ### Multiplayer (later)
 
 Single player comes first. Because single player runs an integrated server, the code is written
 server-authoritative from the start (chakra, cooldowns, hits, ryo and XP decided by the server),
-which keeps multiplayer possible. What multiplayer would add later: squads of players, one
-apartment per player, exam brackets between players, a rule for who becomes Hokage, sleeping when
-not everyone is in bed, and latency testing of combat windows.
+which keeps multiplayer possible. What multiplayer would add later: squads of players, one home per
+player, exam brackets between players, a rule for who becomes Hokage, sleeping when not everyone is
+in bed, and latency testing of combat windows.
 
-## 10. Phased plan
+## 11. Phased plan
 
-Each phase ends playable. "Done" means the listed criteria are true on a clean install of the
-release jars and the map save.
+Each phase ends playable. "Done" means the listed criteria are true on a clean install of the pack
+manifest. Each deliverable names the mod it lands in: **Core**, **Village**, **Combat**, **Life**,
+**Progression**, **Map** (the world and its datapack), **Pack** (the manifest), **VF**.
 
 ### Phase 0: Foundations
 
 **Deliverables**
-- Gradle Fabric project for 26.3, `narutominecraft` jar requiring VF 2.29.x; CI build.
-- VF hooks: residents wear our wardrobe (VF reads wardrobe textures and the catalog only from the
-  `villagefriends` namespace today, see
+- **Pack:** the Gradle multi-project (`core/`, `village/`, `combat/`, `life/`, `progression/`,
+  `adventure/`, `pack/`), CI building every jar and a `.mrpack` that pins them with VF 2.29.x.
+- **VF:** the three public APIs: extra wardrobe namespaces (VF reads wardrobe textures and the
+  catalog only from the `villagefriends` namespace today, see
   [ResidentSkins.java](https://github.com/radhepa/Village-Friends-Minecraft-Mod/blob/main/src/client/java/dev/villagefriends/client/ResidentSkins.java)
-  and [Wardrobe.java](https://github.com/radhepa/Village-Friends-Minecraft-Mod/blob/main/src/main/java/dev/villagefriends/outfit/Wardrobe.java));
-  a currency item for VF rewards and trades; taverns registered without structure pieces.
-- A master map world: empty generator, border, VF and vanilla worldgen off; builder mode; the
-  paste tool with one test street of pasted Konoha homes with House Plaques and a Village Marker.
-- Adventure rules enforced (no breaking or placing outside builder mode).
-- Player attachment skeleton; JSON loaders with validation; `tools/` `--check` scripts.
-- A **spike** on the player poser: one clip playing on the player in third and first person.
+  and [Wardrobe.java](https://github.com/radhepa/Village-Friends-Minecraft-Mod/blob/main/src/main/java/dev/villagefriends/outfit/Wardrobe.java)),
+  a currency item, hand-built taverns.
+- **Core:** the player record, events, stat modifiers, data loading, settings and difficulty.
+- **Village:** today's wardrobe moved into the content mod; residents wear it; the clan loader;
+  the creator screen v1; age-stage scaling.
+- **Life:** adventure rules as a game rule (no breaking or placing outside builder mode).
+- **Combat:** the player poser spike: one clip on the player in third and first person.
+- **Map:** the master world: empty generator, border, VF and vanilla worldgen off, builder mode,
+  the paste tool, one test street of pasted homes with House Plaques and a Village Marker.
 
 **Done when**
-- `gradlew build` and `python tools/wardrobe/wardrobe.py --check` pass in CI.
+- CI builds every jar, the `.mrpack` installs in a launcher, and `wardrobe.py --check` passes.
+- Each mod loads on its own with only its dependencies (a CI job boots each one).
 - In the test street, ten Leaf residents in Naruto wardrobe walk, blink, sleep in their own beds,
   eat and greet you, and a resident trade costs ryo.
-- In survival or adventure, no block in the test street can be broken or placed.
-- The player plays one test clip in both views without breaking the vanilla walk.
+- The creator dresses a child-stage player; nothing in the test street can be broken or placed.
 
 ### Phase 1: Vertical slice — orphan to Genin
 
 **Deliverables**
-- **The opening:** character creation (look; clan or clanless), the bandit camp, the rescue squad
-  as companions, the chase, the gate, the Hokage, the apartment.
-- **Home:** the apartment, furnish mode, the furniture shop with the first Leaf set, chests.
-- **Ryo:** notes, the orphan's stipend, part-time jobs at Ichiraku and the grocer, shop prices.
-- **The day:** the daily schedule, sleeping, fatigue stages, Well Rested, waking in the hospital
-  after death, levels 1 to 10 with the death penalty and rank floor.
-- Konoha building kit v1 and the Academy district: the Academy (by hand), the yard, the apartment
-  block, ~12 homes, Ichiraku, the furniture and grocer shops, the hospital, a street to the Hokage
-  Residence, part of the wall with the main gate, the prologue hills.
-- Academy outfits (wardrobe), Academy kids and the instructor with lesson routines.
-- Chakra bar, hand-sign radial, Clone, Transformation and Substitution.
-- Taijutsu v1: three-hit combo, heavy, dodge, block; practice kunai and shuriken at targets.
-- Academy milestones and the graduation exam with the clone test; promotion to Genin with the
-  headband and Genin wardrobe unlocked.
-- Rank greeting pools for Academy and Genin; prologue and apartment dialogue.
+- **Village:** the full creator screen (hair, eyes, skin, outfit; clan or clanless), Academy
+  outfits, Academy kids and an instructor with lesson routines, the child stage.
+- **Life:** the apartment, furnish mode, the furniture shop's first Leaf set, chests, ryo, the
+  orphan's stipend, part-time jobs at Ichiraku and the grocer, the daily schedule, sleep, fatigue,
+  Well Rested, waking in hospital.
+- **Combat:** chakra, both hand-sign inputs (typed sequences and the radial, chosen in settings),
+  Clone, Transformation and Substitution, taijutsu v1 (three-hit combo, heavy, dodge, block),
+  practice kunai and shuriken, the Story difficulty defaults.
+- **Progression:** levels 1 to 10 with the death penalty and rank floor; the squad rolled per save
+  (sensei, classmates, rival); Academy milestones and the graduation exam with the clone test;
+  promotion to Genin with the headband and Genin wardrobe unlocked; the story engine.
+- **Map:** the prologue (the Veil's hideout, the raid, the chase), the Academy district (the
+  Academy, the yard, the apartment block, ~12 homes, Ichiraku, the furniture and grocer shops, the
+  hospital, a street to the Hokage Residence, part of the wall with the main gate), and the
+  Academy-era "watchers in the dark" story beats.
 
 **Done when**
-- A new player plays from character creation through the rescue, a few days of Academy life and
+- A new player plays from the creator screen through the rescue, a few days of Academy life and
   graduation to Genin in 60 to 90 minutes, with no commands.
-- They can earn ryo, buy and place furniture in their apartment, store things in a chest, sleep
-  every night, and feel fatigue if they stay up.
-- Unit tests cover combo timing, sign matching, chakra, fatigue stages, level loss and furnish
-  bounds; a client game test runs the prologue and the graduation with screenshots.
+- They earn ryo, buy and place furniture, store things in a chest, sleep every night, and feel
+  fatigue if they stay up; their classmates have names, personalities and friendship levels.
+- Unit tests cover combo timing, sign matching, chakra, fatigue, level loss, furnish bounds and the
+  squad roll; client game tests run the prologue and the graduation with screenshots.
 
 ### Phase 2: Genin life
 
 **Deliverables**
-- Mission Desk (Hokage Residence ground floor) with D-rank (5 types, VF notice board under the
-  hood) and C-rank (escort, bandit clearing, delivery to a far location by travel scene), paid in
-  ryo and XP, failing on death.
-- Team assignment with the rescue captain as sensei, and the bell test; NPC teammates as
-  companions.
-- Tree walking, wall-running, water-walking, chakra jump, ninja run.
-- The nature ceremony (choose your first), one jutsu per nature; kunai throwing, shuriken, paper
-  and smoke bombs, the tool pouch, the tool shop.
-- The shinobi entity and brain v1: bandits and rogue Genin; weekly bandit camps.
-- Training Grounds (Ground 3 by hand, two pasted), the market street. Levels to 20.
+- **Progression:** the Mission Desk with D-rank (5 types, VF notice board under the hood) and
+  C-rank (escort, bandit clearing, a delivery to a far location by travel scene), paid in ryo and
+  XP and failing on death; team assignment and the bell test; teammates who can leave; mentors who
+  teach; levels to 20.
+- **Combat:** tree walking, wall-running, water-walking, chakra jump, ninja run; the nature
+  ceremony (choose your first) and one jutsu per nature; thrown kunai, shuriken, paper and smoke
+  bombs, the tool pouch; the shinobi entity and brain v1.
+- **Life:** the tool shop and the scroll shop (bought jutsu).
+- **Core:** the region interface; the first far-location region.
+- **Map:** Training Grounds (Ground 3 by hand, two pasted), the market street, bandit camps, and
+  the Veil's smuggling thread through the Genin missions.
 
 **Done when**
-- From Genin, a player can reach Chunin Exam eligibility (level 15) in 4 to 6 hours, and the money
-  curve matches the economy table (a week of play buys the first furniture set).
+- From Genin, a player can reach Chunin Exam eligibility (level 15) in 4 to 6 hours, learning jutsu
+  from a mentor, a bought scroll and a mission reward; a week of play buys the first furniture set.
 - Every mission type completes, and fails on death, in a client game test.
 - Bandits use at least four techniques and dodge.
 
 ### Phase 3: The Chunin Exams
 
 **Deliverables**
-- Event director and the calendar events: Chunin Exams, Academy graduation, the Leaf Festival,
-  New Year.
-- The three exam stages: written test, Forest of Death (pasted trees and the tower) with bedroll
-  camping and On Duty fatigue, tower preliminaries and stadium finals with seated spectators.
-- NPC exam teams that run every season, with results in village news.
-- Chunin wardrobe, B-rank missions, judged promotion, the Chunin flat, second-nature trials.
-- Crisis arc 1, the invasion during your finals, closing the prologue's thread.
+- **Progression:** the event director and the calendar events (Chunin Exams, Academy graduation,
+  the Leaf Festival, New Year); the three exam stages; NPC exam teams every season with results in
+  village news; judged promotion; B-rank missions; the teen stage.
+- **Combat:** second-nature trials; Veil enemies with their own loadouts.
+- **Life:** the Chunin flat and moving; bedroll camping and On Duty fatigue.
+- **Village:** the Chunin wardrobe.
+- **Map:** the Forest of Death (pasted trees and the tower) and the stadium with seated spectators;
+  the Veil's infiltration and the attack on the finals.
 
 **Done when**
 - The exams run with and without the player each season; a player can enter, finish all three
-  stages and be promoted or not on judged performance; arc 1 plays start to finish.
+  stages and be promoted or not on judged performance; the Veil's attack plays start to finish.
 - 150 seated residents in the arena keep 60 fps on a mid-range PC.
 
 ### Phase 4: Clans
 
 **Deliverables**
-- **4a:** the eight great clans merged (from `clan/*`), their compounds built and populated,
-  their eight techniques (Mind Transfer may slip to Phase 5), their clan days, clan rooms for
-  clan-born players.
-- **4b:** the seven smaller clans (Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko),
-  their clan homes, techniques and days, and the shared genjutsu effect.
-- **4c: player clans.** The clan registry, the clan editor (name, palette, crest, look, outfits,
-  clan art, clan day), clan JSON saved with the world, recruiting members, the four vacant estates
-  and their halls.
-- Lesser techniques taught to clanless friends; clan dialogue pools.
+- **Village:** the 15 clans merged from `clan/*`, their residents; the clan crest decal for player
+  clans.
+- **Combat:** the 15 clan techniques and kekkei genkai (Mind Transfer may slip to Phase 5), the
+  shared genjutsu effect, lesser techniques for clanless friends.
+- **Progression:** clan days; clan rooms for clan-born players; **player clans** (the registry, the
+  editor for name, palette, crest, look, outfits, clan art and clan day; recruiting members; the
+  four vacant estates and their halls).
+- **Map:** the eight compounds, the seven clan homes, the four vacant estates.
 
 **Done when**
-- All 15 clan quarters have their residents living there with homes, and each clan technique works
-  for the player and for a clan sparring partner.
+- All 15 clan quarters have their residents living there with homes, and each clan technique and
+  kekkei genkai works for a clan-born player and for a clan sparring partner.
 - A player can found a clan, design its crest and colors, recruit three residents who change into
   the clan's look and move into the estate, and see the clan's day in the calendar.
 
 ### Phase 5: Jonin and the ANBU branch
 
 **Deliverables**
-- A-rank missions, multi-stage missions at far locations, leading your own NPC Genin team.
-- Jonin trial and council promotion; buying a house; third nature.
-- The optional ANBU branch: invitation, masks and HQ, stealth missions (detection by sight and
-  sound, night), S-rank missions, the Shimura storyline.
-- Crisis arc 2. Mind Transfer, Lightning Blade, Shadow Clone balance. Levels to 50.
+- **Progression:** A-rank missions, the hunt for the Veil's cells at far locations, the traitor in
+  the Leaf; Jonin trial and council promotion; leading your own NPC Genin team; the optional ANBU
+  branch (invitation, masks and HQ, S-rank and covert missions, the Shimura storyline); the adult
+  stage; levels to 50.
+- **Combat:** stealth (detection by sight and sound, night), Mind Transfer, Lightning Blade, Shadow
+  Clone balance; third nature.
+- **Life:** buying a house.
+- **Map:** ANBU HQ and the far-location regions of the Veil hunt.
 
 **Done when**
-- A player can reach Jonin, and optionally ANBU and back; arc 2 plays start to finish.
+- A player can reach Jonin, and optionally ANBU and back; the traitor arc plays start to finish.
 
 ### Phase 6: Hokage and the whole village
 
 **Deliverables**
-- Every remaining district and landmark: police HQ, the rest of the homes and shops, the full wall
-  and gates, the Hokage Rock with its blank fifth spot.
-- The succession, the final crisis arc, the inauguration, your face carved as the fifth.
-- Hokage play: assigning NPC teams, setting festivals, approving promotions and clan estates.
-- The map released as a downloadable save with the jars.
+- **Map:** every remaining district and landmark (police HQ, the rest of the homes and shops, the
+  full wall and gates, the Hokage Rock with its blank fifth spot); the final confrontation with the
+  Veil and the lost-clan reveal.
+- **Progression:** the succession, the inauguration, your face carved as the fifth; Hokage play
+  (assigning NPC teams, setting festivals, approving promotions and clan estates).
+- **Pack:** the release: the `.mrpack` with every mod pinned and the map world.
 
 **Done when**
-- The full ladder plays from the prologue to Hokage on one single-player save.
+- The full ladder plays from the creator screen to Hokage on one single-player save.
 
 ### Phase 7: Multiplayer (later)
 
 Squads of players, a home per player, player brackets in the exams, a Hokage rule, shared sleep
-and fatigue, and combat tested at 100 ms ping on a dedicated server. Planned after the
-single-player map is complete.
+and fatigue, and combat tested at 100 ms ping on a dedicated server.
+
+### Phase 8: More regions (later)
+
+New regions as datapack regions with their world data: other villages, the borderlands where the
+Veil hides, travel between them.
 
 ### Risks
 
@@ -943,26 +1130,32 @@ single-player map is complete.
 |---|---|---|
 | Player animation | VF poses residents only; the player model and first person are new code, and other mods touch them | Spike in Phase 0; keep clips in VF's format so the tools carry over |
 | VF on a hand-made map | VF finds houses and taverns through generated structure pieces; our map has none | Plaques and markers for houses and settlements; a VF hook for taverns in Phase 0; test every VF system we use on the map world early |
-| Combat feel | Minecraft combat is coarse (hurt invulnerability, 20 tick/s, client-side movement) | Server-decided hits with generous windows |
+| Separate mods drifting | Six mods, VF and a map must stay in step | One repository and one CI for all Shinobi mods; the pack manifest pins a tested set; a CI job boots each mod alone and the whole pack together |
+| Coupling between mods | It is tempting to call a higher mod directly | Only Core's events, record, stat modifiers and interfaces cross mod lines; review dependency direction in CI (a jar may only reference the mods it declares) |
+| Growing residents | VF children are vanilla babies; squadmates grow through custom stages | Squadmates are adult residents scaled by the `scale` attribute with a stage tag; test their routines in each stage |
+| Combat feel | Minecraft combat is coarse (hurt invulnerability, 20 tick/s, client-side movement) | Server-decided hits, generous windows on the Story difficulty |
 | Map building cost | 300+ buildings and landmarks, 15 clan quarters, 4 estates, all hand-placed or pasted | Paste everything repeatable from blueprints; hand-build only the landmarks; one district per phase |
-| Economy and fatigue balance | Money too easy kills shopping; fatigue too harsh feels like a chore | All numbers in `economy.json`, `life.json` and `ranks.json`; playtest each phase against the rules of thumb |
-| Runtime clan art | Player crests and palettes need textures made at run time, while the wardrobe is compiled offline | Palette recoloring already happens at run time; the crest is one dynamic decal layer; prototype it at the start of 4c |
-| VF coupling | VF changes often (2.29 now); a change can break our mixins | Prefer VF public APIs; pin a VF version per release; run VF's tests with our jar |
+| Economy and fatigue balance | Money too easy kills shopping; fatigue too harsh feels like a chore | Every number in data and on the difficulty settings; playtest each phase against the rules of thumb |
+| Runtime clan art | Player crests and palettes need textures made at run time, while the wardrobe is compiled offline | Palette recoloring already happens at run time; the crest is one dynamic decal layer; prototype it at the start of Phase 4 |
+| VF changes | VF changes often (2.29 now); a change can break our mixins | Prefer VF public APIs; pin a VF version per pack release; run VF's tests with our jars |
 | Performance | 150 to 250 residents with routines and societies in one area | Measure in Phase 0 and Phase 3; split Konoha into several VF settlements (one per district) if one society is too big |
 | Minecraft 26.3 | A very new version: few libraries, mod compatibility | Stay on VF's version; avoid extra library dependencies |
-| Naming and IP | Naruto names, symbols and places belong to their owners | Original characters and an original plot, as decided; cameos only later and sparingly; keep it a free fan project |
+| Naming and IP | Naruto names, symbols and places belong to their owners | Original characters and plot, cameos only, the pack's own name; keep it a free fan project |
 
 ### Still open
 
-1. **The Fourth Hokage and the four faces.** Original characters as decided: who are the four
-   Hokage on the Rock, and is the sitting Fourth one of the rescuers' teachers or a stranger?
-2. **Joining a clan later.** Can a clanless player be adopted into one of the 15 clans later (by
-   friendship with its head), or is the clan choice only at character creation?
-3. **Restricted clans.** Should every clan be open at character creation, including the
+1. **The villain.** Approve, change or replace the Ashen Veil proposal and the lost-clan origin
+   ([section 7](#7-the-story-a-proposal)).
+2. **The Fourth Hokage and the four faces.** Who are the four Hokage on the Rock, and how does the
+   sitting Fourth fit the story?
+3. **Joining a clan later.** Can a clanless player be adopted into one of the 15 clans later, or is
+   the clan choice only at character creation?
+4. **Restricted clans.** Should every clan be open at character creation, including the
    near-vanished Uzumaki and Hatake, and Shimura with its ANBU-branch story?
-4. **Death details.** Is losing one level (never below your rank's floor) and the tools you threw
-   the right weight, or should dying also cost ryo (a hospital bill)?
-5. **VF changes.** Phase 0 needs three small public hooks in VF (wardrobe namespaces, currency,
-   hand-built taverns). OK to add them to VF itself?
-6. **The RPG add-on.** Confirm the assumption that the map ships without it.
-7. **README.** The README's ladder still lists ANBU as a rung; update it to the optional branch?
+5. **VF changes.** OK to add the three small public APIs to Village Friends itself?
+6. **The content mod's id.** Keep `narutominecraft` (the wardrobe's namespace today) or rename it
+   to a Shinobi id such as `shinobi_village` before anything depends on it?
+7. **The master world.** Where does the map's world live: in this repository (large), in Git LFS,
+   or as a release asset built from the layout and blueprints?
+8. **README.** The README still calls the project Naruto Minecraft and lists ANBU as a rung; update
+   it to the Shinobi Modpack and the optional branch?
