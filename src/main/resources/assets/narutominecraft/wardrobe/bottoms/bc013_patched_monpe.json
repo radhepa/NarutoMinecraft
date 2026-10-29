@@ -1,0 +1,76 @@
+{
+  "id": "bc013_patched_monpe",
+  "kind": "bottom",
+  "name": "Patched Monpe",
+  "gender": "unisex",
+  "texture": "bottoms/bc013_patched_monpe.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "trousers",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_ankle",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_ankle",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Worn field monpe darned at the knees, gathered at the ankle over jika-tabi."
+}

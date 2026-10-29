@@ -288,7 +288,12 @@
     "h1512_shoulder_sweep",
     "h1513_strap_braid",
     "h1514_iai_gust",
-    "h1515_crossed_pin_bun"
+    "h1515_crossed_pin_bun",
+    "hc001_workers_topknot",
+    "hc002_balding_crown",
+    "hc003_matron_bun",
+    "hc004_merchant_slick",
+    "hc005_runner_tail"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -337,7 +342,12 @@
     "w1402_crimson_protector",
     "w1501_proctor_bandana",
     "w1502_cat_mask",
-    "w1503_crescent_hachimaki"
+    "w1503_crescent_hachimaki",
+    "wc001_tenugui_twist",
+    "wc002_tenugui_cap",
+    "wc003_mugiwara",
+    "wc004_sugegasa",
+    "wc005_market_kerchief"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -510,7 +520,32 @@
     "t1507_convalescent_wrap",
     "t1508_practice_gi",
     "t1509_scarf_knit",
-    "t1510_tasuki_iaido"
+    "t1510_tasuki_iaido",
+    "tc001_ramen_cook_jacket",
+    "tc002_noodle_server_kosode",
+    "tc003_festival_happi",
+    "tc004_haragake_bib",
+    "tc005_teahouse_kosode",
+    "tc006_merchant_haori",
+    "tc007_smith_leather_apron",
+    "tc008_carpenter_banten",
+    "tc009_farmer_noragi",
+    "tc010_porter_vest",
+    "tc011_fishmonger_apron",
+    "tc012_runner_tunic",
+    "tc013_shop_clerk_maekake",
+    "tc014_noren_jacket",
+    "tc015_sashiko_jacket",
+    "tc016_kappogi_smock",
+    "tc017_jinbei",
+    "tc018_showa_cardigan",
+    "tc019_grocer_shirt",
+    "tc020_innkeeper_kimono",
+    "tc021_potter_samue",
+    "tc022_dyer_shirt",
+    "tc023_padded_hanten",
+    "tc024_peddler_kimono",
+    "tc025_chanchanko_vest"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -594,7 +629,32 @@
     "b1405_bandaged_shorts",
     "b1501_gekko_hakama",
     "b1502_swordsman_trousers",
-    "b1503_strap_leggings"
+    "b1503_strap_leggings",
+    "bc001_monpe",
+    "bc002_momohiki",
+    "bc003_karusan_hakama",
+    "bc004_wharf_trousers",
+    "bc005_short_kimono_skirt",
+    "bc006_hitched_kimono",
+    "bc007_kitchen_trousers",
+    "bc008_showa_slacks",
+    "bc009_striped_kimono_skirt",
+    "bc010_hanzubon",
+    "bc011_fish_market_boots",
+    "bc012_porter_shorts",
+    "bc013_patched_monpe",
+    "bc014_dyer_trousers",
+    "bc015_sashiko_trousers",
+    "bc016_wrap_work_skirt",
+    "bc017_field_hakama",
+    "bc018_carpenter_trousers",
+    "bc019_kasuri_long_skirt",
+    "bc020_jinbei_shorts",
+    "bc021_smith_trousers",
+    "bc022_pleated_skirt",
+    "bc023_quilted_trousers",
+    "bc024_paddy_trousers",
+    "bc025_innkeeper_kimono_skirt"
   ],
   "characters": [
     {
@@ -6738,6 +6798,568 @@
           "rank": "jonin",
           "palettes": [
             "JONIN_COMMANDER"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "market",
+      "name": "Market",
+      "role": "civilian",
+      "tagline": "The working village: stallholders, cooks, smiths, carpenters, farmers, porters and runners.",
+      "palettes": {
+        "MARKET_RAMEN": {
+          "name": "Ramen Stand",
+          "P": "#e8e2d3",
+          "S": "#f3eee2",
+          "A": "#b8352c",
+          "L": "#8a6a44",
+          "M": "#a9a59b",
+          "K": "#2a2420",
+          "D": "#34405a"
+        },
+        "MARKET_INDIGO": {
+          "name": "Market Indigo",
+          "P": "#2f4566",
+          "S": "#e8e0cc",
+          "A": "#c2562e",
+          "L": "#8a6a44",
+          "M": "#a9a59b",
+          "K": "#221d1a",
+          "D": "#3a4256"
+        },
+        "MARKET_PERSIMMON": {
+          "name": "Persimmon",
+          "P": "#b85f30",
+          "S": "#efe3c8",
+          "A": "#34496a",
+          "L": "#7d5a3a",
+          "M": "#a39d90",
+          "K": "#2a211c",
+          "D": "#3c4a62"
+        },
+        "MARKET_TEA": {
+          "name": "Teahouse Green",
+          "P": "#6d7a46",
+          "S": "#eadfc4",
+          "A": "#a8402e",
+          "L": "#86663f",
+          "M": "#a9a291",
+          "K": "#262318",
+          "D": "#4a4434"
+        },
+        "MARKET_BENGARA": {
+          "name": "Bengara Red",
+          "P": "#8c3f2a",
+          "S": "#e6d8bb",
+          "A": "#d8a33b",
+          "L": "#6e4e33",
+          "M": "#a39d90",
+          "K": "#251c18",
+          "D": "#36384a"
+        },
+        "MARKET_UMBER": {
+          "name": "Umber",
+          "P": "#6b4a33",
+          "S": "#e3d3b2",
+          "A": "#c9893a",
+          "L": "#5c4030",
+          "M": "#9e978a",
+          "K": "#221a14",
+          "D": "#2f3a4e"
+        },
+        "MARKET_STRAW": {
+          "name": "Straw",
+          "P": "#c4a36a",
+          "S": "#f0e6cf",
+          "A": "#6b3a2a",
+          "L": "#8f6c40",
+          "M": "#aaa497",
+          "K": "#2b231b",
+          "D": "#3d4a5c"
+        },
+        "MARKET_PLUM": {
+          "name": "Umeboshi",
+          "P": "#6e3b4f",
+          "S": "#eee0cf",
+          "A": "#d39a3c",
+          "L": "#7a5a3e",
+          "M": "#a7a097",
+          "K": "#241a1e",
+          "D": "#3a3550"
+        },
+        "MARKET_SLATE": {
+          "name": "Slate",
+          "P": "#5a6069",
+          "S": "#e4dfd4",
+          "A": "#b5502f",
+          "L": "#7a5c40",
+          "M": "#a8aaa8",
+          "K": "#1f2024",
+          "D": "#2f3442"
+        },
+        "MARKET_MOSS": {
+          "name": "Moss",
+          "P": "#525c3a",
+          "S": "#e1d6b8",
+          "A": "#b98a3a",
+          "L": "#6e5436",
+          "M": "#9fa08f",
+          "K": "#20221a",
+          "D": "#3f3a2e"
+        },
+        "MARKET_SAKURA": {
+          "name": "Teahouse Pink",
+          "P": "#d4938e",
+          "S": "#f6ecdf",
+          "A": "#7a3a44",
+          "L": "#8a6a48",
+          "M": "#aaa49c",
+          "K": "#2a1f22",
+          "D": "#4a4058"
+        },
+        "MARKET_MUSTARD": {
+          "name": "Mustard",
+          "P": "#c08a2e",
+          "S": "#f0e4c6",
+          "A": "#4a5a7a",
+          "L": "#7d5a36",
+          "M": "#a8a294",
+          "K": "#28211a",
+          "D": "#45506a"
+        },
+        "MARKET_SOOT": {
+          "name": "Forge Soot",
+          "P": "#45403b",
+          "S": "#d8cdb8",
+          "A": "#c4612c",
+          "L": "#6a4a30",
+          "M": "#9a9690",
+          "K": "#1a1715",
+          "D": "#35332f"
+        },
+        "MARKET_HARBOR": {
+          "name": "Harbor",
+          "P": "#3d6070",
+          "S": "#e7e2d6",
+          "A": "#c84a32",
+          "L": "#5f4a3a",
+          "M": "#a0a7aa",
+          "K": "#1c2226",
+          "D": "#2c3a4a"
+        },
+        "MARKET_FESTIVAL": {
+          "name": "Festival Red",
+          "P": "#b42e2a",
+          "S": "#f2ecdf",
+          "A": "#2a3550",
+          "L": "#8a6a44",
+          "M": "#aaa69c",
+          "K": "#221a18",
+          "D": "#2a3550"
+        },
+        "MARKET_CHARCOAL": {
+          "name": "Charcoal",
+          "P": "#34353a",
+          "S": "#e8e3d8",
+          "A": "#c43b2b",
+          "L": "#6b5040",
+          "M": "#a3a3a0",
+          "K": "#18181b",
+          "D": "#4a4038"
+        },
+        "MARKET_WISTERIA": {
+          "name": "Faded Wisteria",
+          "P": "#7d7398",
+          "S": "#ede6da",
+          "A": "#c27a3a",
+          "L": "#7a5e44",
+          "M": "#a6a3a6",
+          "K": "#221f28",
+          "D": "#3d4258"
+        },
+        "MARKET_SAND": {
+          "name": "Sand",
+          "P": "#a8957a",
+          "S": "#efe8da",
+          "A": "#7a3f2e",
+          "L": "#6e5038",
+          "M": "#a7a39a",
+          "K": "#28231e",
+          "D": "#4d5260"
+        }
+      },
+      "pool": {
+        "hair": [
+          "hc001_workers_topknot",
+          "hc002_balding_crown",
+          "hc003_matron_bun",
+          "hc004_merchant_slick",
+          "hc005_runner_tail"
+        ],
+        "hair_colors": [
+          "RAVEN",
+          "RAVEN",
+          "ESPRESSO",
+          "ESPRESSO",
+          "CHESTNUT",
+          "AUBURN",
+          "GINGER",
+          "HONEY",
+          "WHEAT",
+          "ASH_BLONDE",
+          "SILVER",
+          "SNOW"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "DARK",
+          "SKY",
+          "JADE"
+        ],
+        "palettes": [
+          "MARKET_BENGARA",
+          "MARKET_CHARCOAL",
+          "MARKET_FESTIVAL",
+          "MARKET_HARBOR",
+          "MARKET_INDIGO",
+          "MARKET_MOSS",
+          "MARKET_MUSTARD",
+          "MARKET_PERSIMMON",
+          "MARKET_PLUM",
+          "MARKET_RAMEN",
+          "MARKET_SAKURA",
+          "MARKET_SAND",
+          "MARKET_SLATE",
+          "MARKET_SOOT",
+          "MARKET_STRAW",
+          "MARKET_TEA",
+          "MARKET_UMBER",
+          "MARKET_WISTERIA"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "wc001_tenugui_twist",
+          "wc002_tenugui_cap",
+          "wc003_mugiwara",
+          "wc004_sugegasa",
+          "wc005_market_kerchief"
+        ],
+        "bottoms": [
+          "bc024_paddy_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "outfits": [
+        {
+          "id": "ramen_cook",
+          "name": "Ramen Cook",
+          "top": "tc001_ramen_cook_jacket",
+          "bottom": "bc007_kitchen_trousers",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_RAMEN"
+          ]
+        },
+        {
+          "id": "noodle_server",
+          "name": "Noodle Server",
+          "top": "tc002_noodle_server_kosode",
+          "bottom": "bc019_kasuri_long_skirt",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_SAKURA",
+            "MARKET_PERSIMMON",
+            "MARKET_INDIGO"
+          ]
+        },
+        {
+          "id": "stall_happi",
+          "name": "Stallholder's Happi",
+          "top": "tc003_festival_happi",
+          "bottom": "bc002_momohiki",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_FESTIVAL",
+            "MARKET_INDIGO",
+            "MARKET_MUSTARD"
+          ]
+        },
+        {
+          "id": "haragake",
+          "name": "Tradesman",
+          "top": "tc004_haragake_bib",
+          "bottom": "bc004_wharf_trousers",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_INDIGO",
+            "MARKET_BENGARA",
+            "MARKET_UMBER"
+          ]
+        },
+        {
+          "id": "teahouse",
+          "name": "Teahouse Server",
+          "top": "tc005_teahouse_kosode",
+          "bottom": "bc005_short_kimono_skirt",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_TEA",
+            "MARKET_SAKURA",
+            "MARKET_WISTERIA"
+          ]
+        },
+        {
+          "id": "merchant",
+          "name": "Merchant",
+          "top": "tc006_merchant_haori",
+          "bottom": "bc009_striped_kimono_skirt",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_UMBER",
+            "MARKET_CHARCOAL",
+            "MARKET_SLATE"
+          ]
+        },
+        {
+          "id": "smith",
+          "name": "Smith",
+          "top": "tc007_smith_leather_apron",
+          "bottom": "bc021_smith_trousers",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_SOOT",
+            "MARKET_SLATE"
+          ]
+        },
+        {
+          "id": "carpenter",
+          "name": "Carpenter",
+          "top": "tc008_carpenter_banten",
+          "bottom": "bc018_carpenter_trousers",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_STRAW",
+            "MARKET_SAND",
+            "MARKET_INDIGO"
+          ]
+        },
+        {
+          "id": "farmer",
+          "name": "Farmer",
+          "top": "tc009_farmer_noragi",
+          "bottom": "bc013_patched_monpe",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_INDIGO",
+            "MARKET_HARBOR",
+            "MARKET_MOSS"
+          ]
+        },
+        {
+          "id": "porter",
+          "name": "Porter",
+          "top": "tc010_porter_vest",
+          "bottom": "bc012_porter_shorts",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_BENGARA",
+            "MARKET_UMBER",
+            "MARKET_MOSS"
+          ]
+        },
+        {
+          "id": "fishmonger",
+          "name": "Fishmonger",
+          "top": "tc011_fishmonger_apron",
+          "bottom": "bc011_fish_market_boots",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_HARBOR",
+            "MARKET_INDIGO",
+            "MARKET_FESTIVAL"
+          ]
+        },
+        {
+          "id": "runner",
+          "name": "Delivery Runner",
+          "top": "tc012_runner_tunic",
+          "bottom": "bc010_hanzubon",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_MUSTARD",
+            "MARKET_PERSIMMON",
+            "MARKET_TEA"
+          ]
+        },
+        {
+          "id": "shop_clerk",
+          "name": "Shop Clerk",
+          "top": "tc013_shop_clerk_maekake",
+          "bottom": "bc001_monpe",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_SLATE",
+            "MARKET_SAND",
+            "MARKET_STRAW"
+          ]
+        },
+        {
+          "id": "noren_jacket",
+          "name": "Stallholder",
+          "top": "tc014_noren_jacket",
+          "bottom": "bc008_showa_slacks",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_MOSS",
+            "MARKET_PERSIMMON",
+            "MARKET_PLUM"
+          ]
+        },
+        {
+          "id": "roofer",
+          "name": "Roofer",
+          "top": "tc015_sashiko_jacket",
+          "bottom": "bc015_sashiko_trousers",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_INDIGO",
+            "MARKET_CHARCOAL"
+          ]
+        },
+        {
+          "id": "dango_vendor",
+          "name": "Dango Vendor",
+          "top": "tc016_kappogi_smock",
+          "bottom": "bc022_pleated_skirt",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_PERSIMMON",
+            "MARKET_PLUM",
+            "MARKET_TEA"
+          ]
+        },
+        {
+          "id": "summer_evening",
+          "name": "Summer Evening",
+          "top": "tc017_jinbei",
+          "bottom": "bc020_jinbei_shorts",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_INDIGO",
+            "MARKET_WISTERIA",
+            "MARKET_SLATE"
+          ]
+        },
+        {
+          "id": "shopkeeper",
+          "name": "Shopkeeper",
+          "top": "tc018_showa_cardigan",
+          "bottom": "bc008_showa_slacks",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_UMBER",
+            "MARKET_MOSS",
+            "MARKET_SAND"
+          ]
+        },
+        {
+          "id": "greengrocer",
+          "name": "Greengrocer",
+          "top": "tc019_grocer_shirt",
+          "bottom": "bc016_wrap_work_skirt",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_TEA",
+            "MARKET_MUSTARD",
+            "MARKET_HARBOR"
+          ]
+        },
+        {
+          "id": "innkeeper",
+          "name": "Innkeeper",
+          "top": "tc020_innkeeper_kimono",
+          "bottom": "bc025_innkeeper_kimono_skirt",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_PLUM",
+            "MARKET_CHARCOAL",
+            "MARKET_WISTERIA"
+          ]
+        },
+        {
+          "id": "potter",
+          "name": "Potter",
+          "top": "tc021_potter_samue",
+          "bottom": "bc003_karusan_hakama",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_SAND",
+            "MARKET_UMBER",
+            "MARKET_SLATE"
+          ]
+        },
+        {
+          "id": "dyer",
+          "name": "Indigo Dyer",
+          "top": "tc022_dyer_shirt",
+          "bottom": "bc014_dyer_trousers",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_INDIGO",
+            "MARKET_HARBOR"
+          ]
+        },
+        {
+          "id": "night_stall",
+          "name": "Night Stall Keeper",
+          "top": "tc023_padded_hanten",
+          "bottom": "bc023_quilted_trousers",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_WISTERIA",
+            "MARKET_BENGARA",
+            "MARKET_CHARCOAL"
+          ]
+        },
+        {
+          "id": "peddler",
+          "name": "Medicine Peddler",
+          "top": "tc024_peddler_kimono",
+          "bottom": "bc006_hitched_kimono",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_HARBOR",
+            "MARKET_INDIGO",
+            "MARKET_UMBER"
+          ]
+        },
+        {
+          "id": "elder",
+          "name": "Shop Elder",
+          "top": "tc025_chanchanko_vest",
+          "bottom": "bc017_field_hakama",
+          "rank": "civilian",
+          "palettes": [
+            "MARKET_CHARCOAL",
+            "MARKET_BENGARA",
+            "MARKET_PLUM"
           ]
         }
       ]

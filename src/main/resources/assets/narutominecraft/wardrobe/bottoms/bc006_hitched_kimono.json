@@ -1,0 +1,77 @@
+{
+  "id": "bc006_hitched_kimono",
+  "kind": "bottom",
+  "name": "Hitched Kimono",
+  "gender": "unisex",
+  "texture": "bottoms/bc006_hitched_kimono.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "kimono",
+    "skirt",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Kimono skirt tucked up at the back over dark leggings, cloth gaiters and straw sandals."
+}

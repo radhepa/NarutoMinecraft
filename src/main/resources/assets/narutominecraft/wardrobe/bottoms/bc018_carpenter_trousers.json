@@ -1,0 +1,47 @@
+{
+  "id": "bc018_carpenter_trousers",
+  "kind": "bottom",
+  "name": "Carpenter's Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bc018_carpenter_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "trousers",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.16
+    }
+  ],
+  "description": "Narrow dark work trousers with patched knees, a waist cord, jika-tabi to mid-calf."
+}

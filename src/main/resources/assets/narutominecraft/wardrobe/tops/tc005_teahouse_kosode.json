@@ -1,0 +1,135 @@
+{
+  "id": "tc005_teahouse_kosode",
+  "kind": "top",
+  "name": "Teahouse Kosode",
+  "gender": "unisex",
+  "texture": "tops/tc005_teahouse_kosode.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "kimono",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "obi_bow",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.6,
+        2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -1,
+        0
+      ],
+      "size": [
+        5,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "obi_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.9,
+        9.4,
+        2.9
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "obi_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.4,
+        9.4,
+        2.9
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Small-check kosode with elbow sleeves and a wide obi tied in a flat bow at the back."
+}

@@ -1,0 +1,163 @@
+{
+  "id": "wc002_tenugui_cap",
+  "kind": "headwear",
+  "name": "Tenugui Cap",
+  "gender": "unisex",
+  "texture": "headwear/wc002_tenugui_cap.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "cap_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -6,
+        3
+      ],
+      "size": [
+        8,
+        2,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.4,
+        4.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "end_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.6,
+        -3.8,
+        4.9
+      ],
+      "rotation": [
+        16,
+        0,
+        24
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        59,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "end_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -3.8,
+        4.9
+      ],
+      "rotation": [
+        16,
+        0,
+        -20
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [
+    "*"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "White towel tied flat over the crown with an indigo print edge, knotted at the nape."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "tc017_jinbei",
+  "kind": "top",
+  "name": "Jinbei",
+  "gender": "unisex",
+  "texture": "tops/tc017_jinbei.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "civilian",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Loose kasuri-print summer top with short split sleeves, the front tied at the side with cords."
+}

@@ -1,0 +1,163 @@
+{
+  "id": "wc005_market_kerchief",
+  "kind": "headwear",
+  "name": "Market Kerchief",
+  "gender": "unisex",
+  "texture": "headwear/wc005_market_kerchief.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "kerchief",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "kerchief_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -6,
+        3
+      ],
+      "size": [
+        8,
+        3,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "point_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.4,
+        4.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "point_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.4,
+        4.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.6,
+        4.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        11
+      ]
+    }
+  ],
+  "hidesHair": [
+    "*"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Dotted cotton kerchief folded in a triangle, knotted at the nape, the point down the back."
+}

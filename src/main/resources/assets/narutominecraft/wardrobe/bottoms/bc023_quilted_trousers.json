@@ -1,0 +1,75 @@
+{
+  "id": "bc023_quilted_trousers",
+  "kind": "bottom",
+  "name": "Quilted Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bc023_quilted_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "trousers"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_ankle",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_ankle",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Padded quilted winter trousers tied at the ankle, white tabi and wooden geta."
+}

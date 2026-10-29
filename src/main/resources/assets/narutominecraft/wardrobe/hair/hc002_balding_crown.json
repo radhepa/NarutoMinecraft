@@ -1,0 +1,70 @@
+{
+  "id": "hc002_balding_crown",
+  "kind": "hair",
+  "name": "Balding Crown",
+  "gender": "male",
+  "texture": "hair/hc002_balding_crown.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "ear_tuft_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.75,
+        -5.4,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "ear_tuft_left",
+      "bone": "HEAD",
+      "pivot": [
+        3.75,
+        -5.4,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        3
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    }
+  ],
+  "description": "Bare crown, a short thick horseshoe of hair round the sides and back, bushier over the ears."
+}

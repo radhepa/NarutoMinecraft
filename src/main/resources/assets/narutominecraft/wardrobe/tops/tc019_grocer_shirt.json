@@ -1,0 +1,164 @@
+{
+  "id": "tc019_grocer_shirt",
+  "kind": "top",
+  "name": "Grocer's Shirt",
+  "gender": "unisex",
+  "texture": "tops/tc019_grocer_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "casual",
+    "civilian"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "canvas_panel",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "canvas_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        19,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "canvas_tie_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.8,
+        9.4,
+        2.6
+      ],
+      "rotation": [
+        8,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "canvas_tie_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.8,
+        9.4,
+        2.6
+      ],
+      "rotation": [
+        8,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        53,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "coin_purse",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        10.6,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "Open-collar shirt with sleeve garters under a canvas waist apron with a clasp purse for coins."
+}

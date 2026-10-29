@@ -1,0 +1,105 @@
+{
+  "id": "bc001_monpe",
+  "kind": "bottom",
+  "name": "Monpe",
+  "gender": "unisex",
+  "texture": "bottoms/bc001_monpe.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "trousers",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_ankle",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_ankle",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_tie",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        9.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Loose kasuri work trousers gathered at the ankle, tied at the waist, straw sandals."
+}

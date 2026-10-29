@@ -1,0 +1,78 @@
+{
+  "id": "tc023_padded_hanten",
+  "kind": "top",
+  "name": "Padded Hanten",
+  "gender": "unisex",
+  "texture": "tops/tc023_padded_hanten.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "coat",
+    "jacket"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hanten_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hanten_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Thick quilted winter jacket with a dark collar band, wide sleeves to the wrist and front ties."
+}

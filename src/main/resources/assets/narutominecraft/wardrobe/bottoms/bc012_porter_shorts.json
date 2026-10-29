@@ -1,0 +1,17 @@
+{
+  "id": "bc012_porter_shorts",
+  "kind": "bottom",
+  "name": "Porter's Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/bc012_porter_shorts.png",
+  "extrasHeight": 0,
+  "tags": [
+    "civilian",
+    "shorts",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Short close cotton shorts, indigo gaiters tied at the knee, bound straw sandals."
+}

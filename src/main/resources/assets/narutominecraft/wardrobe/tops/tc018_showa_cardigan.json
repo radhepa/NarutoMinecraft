@@ -1,0 +1,76 @@
+{
+  "id": "tc018_showa_cardigan",
+  "kind": "top",
+  "name": "Shopkeeper's Cardigan",
+  "gender": "unisex",
+  "texture": "tops/tc018_showa_cardigan.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "civilian",
+    "jacket"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        7.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        7.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Knitted cardigan buttoned halfway over a collared shirt, two sagging pockets, turned-back cuffs."
+}

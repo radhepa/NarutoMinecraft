@@ -1,0 +1,98 @@
+{
+  "id": "hc004_merchant_slick",
+  "kind": "hair",
+  "name": "Merchant's Slick",
+  "gender": "unisex",
+  "texture": "hair/hc004_merchant_slick.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sweep_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -8.5,
+        -4.35
+      ],
+      "rotation": [
+        -8,
+        0,
+        -72
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "sweep_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -8.5,
+        -4.35
+      ],
+      "rotation": [
+        -8,
+        0,
+        -72
+      ],
+      "origin": [
+        -1.0,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "sweep_2",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -8.5,
+        -4.35
+      ],
+      "rotation": [
+        -8,
+        0,
+        -72
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    }
+  ],
+  "description": "Short oiled hair combed from a side parting, one lock swept across the brow."
+}

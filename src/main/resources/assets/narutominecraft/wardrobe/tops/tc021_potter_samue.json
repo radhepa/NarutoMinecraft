@@ -1,0 +1,104 @@
+{
+  "id": "tc021_potter_samue",
+  "kind": "top",
+  "name": "Potter's Samue",
+  "gender": "unisex",
+  "texture": "tops/tc021_potter_samue.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "work",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        4.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        4.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "chest_pocket",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        3.0,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Plain samue jacket tied at the side, rolled sleeves, clay-smeared cuffs and belly, a chest pocket."
+}

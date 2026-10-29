@@ -1,0 +1,220 @@
+{
+  "id": "tc016_kappogi_smock",
+  "kind": "top",
+  "name": "Kappogi Smock",
+  "gender": "unisex",
+  "texture": "tops/tc016_kappogi_smock.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "civilian",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_gathered_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        7.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_gathered_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        9.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        9.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    },
+    {
+      "id": "smock_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        7
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "collar_tie",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        7
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "White over-smock with long sleeves gathered at the wrist, round collar, two pockets, skirt to the hip."
+}

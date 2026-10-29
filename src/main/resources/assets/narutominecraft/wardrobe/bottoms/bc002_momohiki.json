@@ -1,0 +1,18 @@
+{
+  "id": "bc002_momohiki",
+  "kind": "bottom",
+  "name": "Momohiki",
+  "gender": "unisex",
+  "texture": "bottoms/bc002_momohiki.png",
+  "extrasHeight": 0,
+  "tags": [
+    "civilian",
+    "leggings",
+    "trousers",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Close-fitting cotton work leggings with split-toe jika-tabi boots."
+}

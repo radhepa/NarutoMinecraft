@@ -1,0 +1,76 @@
+{
+  "id": "tc004_haragake_bib",
+  "kind": "top",
+  "name": "Haragake",
+  "gender": "unisex",
+  "texture": "tops/tc004_haragake_bib.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "civilian",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "haragake_bib",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pouch",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        7.4,
+        -3.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        3,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "Dark bib apron with a pale shop mark and a deep belly pocket over a fitted long-sleeved undershirt."
+}

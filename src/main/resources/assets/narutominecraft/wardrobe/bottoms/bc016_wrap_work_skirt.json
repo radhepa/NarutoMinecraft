@@ -1,0 +1,135 @@
+{
+  "id": "bc016_wrap_work_skirt",
+  "kind": "bottom",
+  "name": "Wrap Work Skirt",
+  "gender": "unisex",
+  "texture": "bottoms/bc016_wrap_work_skirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "skirt",
+    "trousers",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "wrap_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "wrap_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "right_ankle",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_ankle",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Short checked wrap skirt tied over monpe gathered at the ankle, straw sandals."
+}

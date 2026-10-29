@@ -1,0 +1,193 @@
+{
+  "id": "tc010_porter_vest",
+  "kind": "top",
+  "name": "Porter's Vest",
+  "gender": "unisex",
+  "texture": "tops/tc010_porter_vest.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "vest",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "shoulder_pad",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "sash_knot",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        8.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "sash_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.1,
+        10.600000000000001,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sash_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.1,
+        10.600000000000001,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "rope_coil",
+      "bone": "TORSO",
+      "pivot": [
+        4.9,
+        10.4,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1.5,
+        -1.5
+      ],
+      "size": [
+        1,
+        3,
+        3
+      ],
+      "uv": [
+        5,
+        8
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Short open sleeveless vest over a chest wrap, a quilted shoulder pad, rope coil at the hip."
+}
