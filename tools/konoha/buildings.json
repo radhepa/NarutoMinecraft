@@ -557,6 +557,28 @@
   },
   {
    "group": "landmarks",
+   "id": "standby_station",
+   "name": "Jonin standby station",
+   "how": "program `shop_house` variant + hand dressing",
+   "footprint": "11 x 11",
+   "counts": {
+    "B2": 1
+   },
+   "notes": "Beside the Residence; 6 workplace seats (jonin, day); opens to the player at Jonin"
+  },
+  {
+   "group": "landmarks",
+   "id": "gate_barracks",
+   "name": "Gate barracks",
+   "how": "program `apartment_block` variant",
+   "footprint": "14 x 11",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "By the main gate: 6 bunks for the gate guards, the Shiranui neighbourhood next to it"
+  },
+  {
+   "group": "landmarks",
    "id": "smithy",
    "name": "Smithy and forge",
    "how": "one-off + hand finish",

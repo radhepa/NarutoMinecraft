@@ -37,7 +37,7 @@ vanilla mapping and painting) and [`tools/konoha/buildings.json`](tools/konoha/b
 | Custom blocks | **104** blocks, **343** counting colour, wood, crest and sign variants separately; **580** new 16 px textures; 44 of them functional (doors, beds, seats, lights, containers, workstations, boards) |
 | Vanilla mappings | **53** needs met with vanilla blocks or combinations (roofs, walls, streets, the Rock, the forest), plus 12 painting variants for scrolls and posters |
 | Design programs | **30** Python programs (homes, apartments, shops, clan gates and houses, the wall, the forest's fence and trees, bridges, streets, training props, the Rock faces); 3 prototyped |
-| Buildings | **110** homes, **15** apartment buildings, **53** shops, **75** clan builds, **24** landmarks, **8** training grounds, **704** Forest of Death pieces (660 trees, 44 gates), **142** wall modules |
+| Buildings | **110** homes, **15** apartment buildings, **53** shops, **75** clan builds, **26** landmarks, **8** training grounds, **704** Forest of Death pieces (660 trees, 44 gates), **142** wall modules |
 | Agent effort | about **78 sessions** (~155 hours) for the whole village; **~70 sessions** (~140 hours) to the end of Beta 3 |
 | Your hours in Minecraft | about **78 hours** to the end of Beta 3 (finishing the Rock, terrain and landmarks), **~103 hours** for the whole village; plus ~20 hours reviewing renders |
 
@@ -112,7 +112,7 @@ built in the map world. Footprints are in blocks, x by z.
 | Apartment buildings | 1 | 6 | 2 | 1 | 5 | 15 |
 | Shops | 1 | 16 | 15 | 4 | 17 | 53 |
 | Clan builds | 0 | 31 | 40 | 0 | 4 | 75 |
-| Landmarks | 0 | 8 | 9 | 2 | 5 | 24 |
+| Landmarks | 0 | 9 | 10 | 2 | 5 | 26 |
 | Training grounds | 0 | 0 | 3 | 0 | 5 | 8 |
 | Forest of Death | 0 | 0 | 0 | 704 | 0 | 704 |
 | Wall | 0 | 16 | 25 | 23 | 78 | 142 |
@@ -183,6 +183,8 @@ whole village and about 220 by the end of Beta 3 (ROADMAP §6: about 300 and abo
 | Main gate and guard booth | one-off + hand finish | ~30 x 12, 20 tall |  | 1 |  |  |  | 1 | あん on the doors |
 | Ramen stand | one-off + hand finish | 7 x 6 |  | 1 |  |  |  | 1 | A VF tavern by bounds |
 | Prologue hills: the hideout and a ruined shrine | hand | ~120 x 120 |  | 1 |  |  |  | 1 | South of the wall, inside the border |
+| Jonin standby station | program `standby_station` `shop_house` variant + hand dressing | 11 x 11 |  |  | 1 |  |  | 1 | Beside the Residence; 6 workplace seats (jonin, day); opens to the player at Jonin |
+| Gate barracks | program `gate_barracks` `apartment_block` variant | 14 x 11 |  | 1 |  |  |  | 1 | By the main gate: 6 bunks for the gate guards, the Shiranui neighbourhood next to it |
 | Smithy and forge | one-off + hand finish | 11 x 11 |  |  | 1 |  |  | 1 | Behind the weapon shop |
 | Bath house | one-off + hand finish | 17 x 15 |  |  | 1 |  |  | 1 |  |
 | Ino-Shika-Cho memorial | hand | 9 x 9 |  |  | 1 |  |  | 1 | By the Nara forest |
@@ -224,6 +226,26 @@ whole village and about 220 by the end of Beta 3 (ROADMAP §6: about 300 and abo
 | Street and garden tree | program `village_tree` | varies |  | 60 | 40 |  | 50 | 150 |  |
 | Utility pole (placed by roads.py) | roads.py | 1 x 1 | 13 | 120 | 100 | 40 | 150 | 423 | Every 12 blocks on main and ring streets |
 <!-- /gen:buildings -->
+
+### Markers
+
+Blueprints and `layout.json` carry the markers the village systems read. Ranks and routines key on
+`job`; a marker may pin `rank` when a role needs it, otherwise the rank comes from the job.
+
+| Marker | Fields | Read by |
+|---|---|---|
+| `resident` | `group` (`any`, `civilian`, `clanless`, a clan id), `job`, optional `rank` | Village: residents from markers |
+| `workplace` | `job`, `slots`, `shift` (`day`, `night`, `rotation`), optional `rank_min` | Routines: where a job is done |
+| `bed`, `house_plaque` | position, facing | VF homes |
+| `seat` | facing | VF Seat |
+| `tavern_bounds` | `to` | The VF tavern hook |
+| `door_anchor`, `candidate_flat` | `note` | Paste tool, quests |
+
+Rank-bound workplaces: the Mission Desk (Residence ground floor, 3 slots, rotation, chunin; B2), the
+jonin standby station (6, day, jonin; B2), the main gate's booth (2, day, chunin) and the gate
+barracks (6 bunks; B1), the wall towers' night watch (1 each, night; 2 towers in B1), Academy
+classrooms (5 teachers, day, chunin; B1), the hospital (6 medics, day and night, chunin and
+special jonin; B1), the police HQ and ANBU HQ (later). Workers live in ordinary homes and flats.
 
 ### Story locations (neutral)
 
