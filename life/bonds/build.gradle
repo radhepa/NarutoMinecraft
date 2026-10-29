@@ -30,3 +30,12 @@ tasks.register('simulate', JavaExec) {
     args project.findProperty('seed') ?: '20261029'
     if (project.hasProperty('explain')) systemProperty 'explain', project.property('explain')
 }
+
+// The village at scale: about 300 residents by the real population weights, with cost, ties, clan drift and hooks.
+tasks.register('simulateVillage', JavaExec) {
+    group = 'verification'
+    description = 'Lives a village of about 300 residents for 180 days and reports cost, ties, clan drift and hooks.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.shinobi.life.bond.sim.VillageSim'
+    args project.findProperty('seed') ?: '20261029'
+}
