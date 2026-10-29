@@ -105,7 +105,7 @@ Jonin.
 | Content mod id | `narutominecraft`, kept. |
 | VF's RPG add-on | Not shipped. |
 | VF changes | *Default:* fine to add small public APIs to VF: extra wardrobe namespaces, a currency item, hand-built taverns, and a resident appearance seed (for Varied saves). |
-| Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe, and clan or clanless. |
+| Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe, and clan or clanless ([CHARACTER_CREATION.md](CHARACTER_CREATION.md)). |
 | Growing up | Academy kid, teen, adult, then adult for good. No old age and no death of age. |
 | Clans | 25 clans: the 15 noble clans and 10 minor clans ([CLANS.md](CLANS.md)). Born into one of them or clanless. *Default:* all 25 pickable at creation, alongside clanless; a player can also create their own clan. *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship. |
 | Population | The village is mostly clanless, drawn by clan rarity from `tools/wardrobe/population.json` (weights per thousand): about 45% civilians, 28% clanless shinobi with ordinary family names, 15% from the 10 minor clans and 13% from the 15 noble clans (an Uchiha or a Hyuga about 1 in 70, a Hatake about 1 in 500). Civilians wear their own clothing collections (market and household); the general shinobi wardrobe adds 100 tops, 100 bottoms and 50 hairstyles ([Population](#population)). |
@@ -249,8 +249,9 @@ Core:
 This repository becomes a Gradle multi-project, the way VF hosts `rpg/`: `core/`, `village/`
 (today's wardrobe resources move here), `combat/`, `life/`, `progression/`, `adventure/` (the
 datapack, blueprints and paste scripts) and `pack/` (the manifest). The root build and the first
-module already exist: `life/bonds`, Shinobi Life's pure bond engine ([BONDS.md](BONDS.md)). Python authoring tools stay
-under `tools/`. Each mod has its own version; the pack manifest pins a tested set.
+modules already exist: `life/bonds`, Shinobi Life's pure bond engine ([BONDS.md](BONDS.md)), and
+`village/look`, Shinobi Village's player look, the creator's rules and age stages
+([CHARACTER_CREATION.md](CHARACTER_CREATION.md)). Python authoring tools stay under `tools/`. Each mod has its own version; the pack manifest pins a tested set.
 
 The master world is **not** in git. It ships as a zipped save on GitHub Releases; the repository
 keeps only what rebuilds or checks it: blueprints, paste scripts and the datapack.
@@ -744,9 +745,29 @@ off (closed gates, streets under repair) or is not built yet.
 
 ### Character creation
 
-A creator screen in the prologue: hair, eyes, skin (the six complexions), marks and a starting
-outfit from the wardrobe, shown on your child-stage model; then born to one of the 25 clans (its
-look, and from Genin its technique and kekkei genkai) or clanless.
+The full design is in **[CHARACTER_CREATION.md](CHARACTER_CREATION.md)**. In short:
+
+- **World creation first:** a Shinobi tab on the Create World screen sets Classic or Varied, the
+  save seed, difficulty, adventure rules and hand-sign input.
+- **The creator** opens at the start of the prologue, over a neutral *Who are you?* card, in seven
+  steps with a live preview of your child-stage model: **origin** (one of the 25 clans or
+  clanless, all pickable), **name** (a typed given name; the clan's family name, or an ordinary one
+  from `population.json` for the clanless), **body** (body A or B, the six complexions, eye shape,
+  brows, eye color), **hair**, **face** (up to two marks, headwear without a forehead protector),
+  **outfit** (the Academy collection, plus the clan's own Academy wear and colors) and a **review**.
+- **The clan-born** get their clan's looks, family name and kin from day one, and its technique and
+  kekkei genkai from Genin; the clanless get every collection's looks and earn their place. No
+  stats differ at creation; no personality or nature is picked (the nature waits for the Genin
+  ceremony).
+- **Locked:** name, body, complexion, eyes, origin. **Changeable:** hair, hair color, brows and
+  marks at a barber; outfits and headwear at home; a free restyle on the Years Later mirror at each
+  time skip, where hair grows and outfits follow the rank.
+- **Varied's Roll a life** rolls a whole character from the save seed (the same seed, the same
+  suggestion); every row also has its own dice.
+- **Data and code:** `tools/creator/creator.json` compiled by `tools/creator/creator.py` (with
+  `--check`, previews and mock-ups) into `data/narutominecraft/creator/creator.json`; the pure Java
+  in `village/look` (age stages, the server's check of a creator submission, names, Roll a life,
+  restyling, growing up), with tests.
 
 ### Adventure rules
 
