@@ -5099,6 +5099,68 @@
    "textures": 1,
    "prototype": false,
    "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "village_well",
+   "name": "District well",
+   "category": "street",
+   "purpose": "A stone well with a roof, a pulley and a bucket: one in every district",
+   "variants": [
+    {
+     "id": "village_well",
+     "label": "Roofed",
+     "slice": "B1"
+    },
+    {
+     "id": "open_village_well",
+     "label": "Open, with a sweep pole",
+     "slice": "B2"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Draws water (Items: fills a flask or bucket)",
+   "complexity": "medium",
+   "textures": 4,
+   "prototype": false,
+   "requested_by": "dialogue lore"
+  },
+  {
+   "id": "bathhouse_mural",
+   "name": "Bathhouse mural",
+   "category": "interior",
+   "purpose": "The big painted wall of the bath house: the Hokage Rock at sunrise, 4 x 3 blocks (12 parts)",
+   "variants": [
+    {
+     "id": "bathhouse_mural",
+     "label": "Hokage Rock at sunrise",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 12,
+   "prototype": false,
+   "requested_by": "dialogue lore"
+  },
+  {
+   "id": "mail_sorting_rack",
+   "name": "Mail sorting rack",
+   "category": "shop",
+   "purpose": "The courier office's pigeonholes of letters",
+   "variants": [
+    {
+     "id": "mail_sorting_rack",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "dialogue lore"
   }
  ],
  "vanilla": [

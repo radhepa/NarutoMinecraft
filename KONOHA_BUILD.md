@@ -34,12 +34,12 @@ vanilla mapping and painting) and [`tools/konoha/buildings.json`](tools/konoha/b
 
 | | Count |
 |---|---|
-| Custom blocks | **201** blocks, **465** counting colour, wood, crest and sign variants separately; **774** new 16 px textures; 110 of them functional (doors, beds, seats, lights, containers, item displays, workstations, shop counters, boards). Includes the items session's 150 requests for stations, furniture (with the home session's catalogue), displays and shop interiors |
+| Custom blocks | **204** blocks, **469** counting colour, wood, crest and sign variants separately; **792** new 16 px textures; 112 of them functional (doors, beds, seats, lights, containers, item displays, workstations, shop counters, boards). Includes the items session's 150 requests for stations, furniture (with the home session's catalogue), displays and shop interiors |
 | Vanilla mappings | **54** needs met with vanilla blocks or combinations (roofs, walls, streets, the Rock, the forest), plus one Village Friends block reused (the easel) |
 | Design programs | **31** Python programs (homes, apartments, shops, clan gates and houses, the wall, the forest's fence and trees, bridges, streets, training props, the Rock faces); 3 prototyped |
-| Buildings | **110** homes, **15** apartment buildings, **55** shops, **75** clan builds, **30** landmarks, **8** training grounds, **704** Forest of Death pieces (660 trees, 44 gates), **142** wall modules |
-| Agent effort | about **93 sessions** (~185 hours) for the whole village; **~83 sessions** (~166 hours) to the end of Beta 3 |
-| Your hours in Minecraft | about **80 hours** to the end of Beta 3 (finishing the Rock, terrain and landmarks), **~105 hours** for the whole village; plus ~20 hours reviewing renders |
+| Buildings | **110** homes, **15** apartment buildings, **55** shops, **75** clan builds, **31** landmarks, **8** training grounds, **704** Forest of Death pieces (660 trees, 44 gates), **142** wall modules |
+| Agent effort | about **94 sessions** (~188 hours) for the whole village; **~85 sessions** (~170 hours) to the end of Beta 3 |
+| Your hours in Minecraft | about **81 hours** to the end of Beta 3 (finishing the Rock, terrain and landmarks), **~106 hours** for the whole village; plus ~20 hours reviewing renders |
 
 The detail behind each line is in sections 3, 4 and 7.
 
@@ -110,13 +110,13 @@ built in the map world. Footprints are in blocks, x by z.
 |---|---:|---:|---:|---:|---:|---:|
 | Homes | 8 | 38 | 28 | 6 | 30 | 110 |
 | Apartment buildings | 1 | 6 | 3 | 0 | 5 | 15 |
-| Shops | 1 | 18 | 17 | 4 | 15 | 55 |
+| Shops | 1 | 19 | 16 | 4 | 15 | 55 |
 | Clan builds | 0 | 31 | 40 | 0 | 4 | 75 |
-| Landmarks | 0 | 10 | 13 | 2 | 5 | 30 |
+| Landmarks | 0 | 12 | 12 | 2 | 5 | 31 |
 | Training grounds | 0 | 0 | 3 | 0 | 5 | 8 |
 | Forest of Death | 0 | 0 | 0 | 704 | 0 | 704 |
 | Wall | 0 | 16 | 25 | 23 | 78 | 142 |
-| Street pieces (bridges, trees, poles) | 13 | 182 | 142 | 40 | 202 | 579 |
+| Street pieces (bridges, trees, poles) | 13 | 188 | 146 | 41 | 205 | 593 |
 | Streets (km, laid by roads.py) | 0.15 | 2.4 | 2.0 | 0.8 | 3.0 | 8.35 |
 
 Design programs: **31** (6 homes, 3 apartment buildings, 5 shops, 3 clan builds, 2 wall, 4 forest of death, 4 street pieces (bridges, trees, poles), 1 training grounds, 1 story, 2 landmarks), 3 of them prototyped.
@@ -155,8 +155,8 @@ whole village and about 220 by the end of Beta 3 (ROADMAP §6: about 300 and abo
 | Building | Built from | Footprint | P0 | B1 | B2 | B3 | Later | Total | Notes |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|
 | Small shop-house | program `shop_tea_house` | 11 x 11 | 1 | 3 | 3 |  | 3 | 10 | Tea houses (two rivals on one corner), dango, sweets, the test street's shop |
-| Shop-house | program `shop_house` | 11 x 11 |  | 7 | 8 |  | 4 | 19 | Grocer, haruno store, the barber and market fillers (B1); scrolls, pawn, tools, tailor, medicine, metalworker, bookshop (B2) |
-| Large store | program `shop_large` + hand dressing | 17 x 13 |  | 2 | 3 |  | 2 | 7 | The furniture shop and its showroom, and the weapon shop with its forge room (B1); the post office (B2); two warehouses by the market (B2) |
+| Shop-house | program `shop_house` | 11 x 11 |  | 8 | 8 |  | 4 | 20 | Grocer, haruno store, the barber, the courier office near the Residence and market fillers (B1); scrolls, pawn, tools, tailor, medicine, metalworker, bookshop (B2) |
+| Large store | program `shop_large` + hand dressing | 17 x 13 |  | 2 | 2 |  | 2 | 6 | The furniture shop and its showroom, and the weapon shop with its forge room (B1); two warehouses by the market (B2) |
 | Market stall row | program `market_stall` | 13 x 5 |  | 6 | 2 | 4 | 4 | 16 | Vegetables, fish, rice; exam-week stalls in B3 |
 | Restaurant | program `restaurant` | 15 x 13 |  |  | 1 |  | 2 | 3 | The barbecue house (B2), an izakaya |
 
@@ -189,9 +189,10 @@ whole village and about 220 by the end of Beta 3 (ROADMAP §6: about 300 and abo
 | Potter's kiln yard | one-off + hand finish | 15 x 15 |  |  | 1 |  |  | 1 | A potter family's climbing kiln and drying racks; a potter's stall on the market street |
 | Farmstead outside the gate | program `farm` + hand terrain | ~40 x 30 |  |  | 2 |  |  | 2 | Farmhouse, barn, pen and fields; an orchard and a woodlot nearby |
 | Smithy and forge | one-off + hand finish | 11 x 11 |  |  | 1 |  |  | 1 | Behind the weapon shop |
-| Bath house | one-off + hand finish | 17 x 15 |  |  | 1 |  |  | 1 |  |
+| Bath house | one-off + hand finish | 17 x 15 |  |  | 1 |  |  | 1 | The boiler room at the back; the mural of the Hokage Rock at sunrise on the big wall |
 | Ino-Shika-Cho memorial | hand | 9 x 9 |  |  | 1 |  |  | 1 | By the Nara forest |
-| Ferry landing | hand | 9 x 7 |  |  | 1 |  |  | 1 | With the site of the future bridge |
+| Ferry landing and ferry | hand | 9 x 7 |  | 1 |  |  |  | 1 | The ferry runs from the same landing on both banks (a moored flat boat of planks; the crossing is a scripted ride); the site of the future bridge downstream |
+| River island | hand | ~12 x 9 |  | 1 |  |  |  | 1 | A little island in the river with one pine and a great many ducks |
 | East road waystation | one-off + hand finish | 21 x 21 |  |  | 1 |  |  | 1 | With the roadside inn and its cellar; the east road's bridge, ford, bend, reeds and hill pass are terrain anchors |
 | Bandit camp | camp program + hand | ~30 x 30 |  |  | 3 |  |  | 3 | Outside the wall |
 | Border village (first far region) | pasted homes + hand | ~120 x 120 |  |  | 1 |  |  | 1 | Its own region, with a few outlying buildings |
@@ -225,6 +226,7 @@ whole village and about 220 by the end of Beta 3 (ROADMAP §6: about 300 and abo
 
 | Building | Built from | Footprint | P0 | B1 | B2 | B3 | Later | Total | Notes |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|
+| District well (placed by the layout) | layout | 3 x 3 |  | 6 | 4 | 1 | 3 | 14 | One in every district; the market's is the coldest |
 | Bridge | program `bridge` | varies |  | 2 | 2 |  | 2 | 6 | Flat bridges first, arched from B2 |
 | Street and garden tree | program `village_tree` | varies |  | 60 | 40 |  | 50 | 150 |  |
 | Utility pole (placed by roads.py) | roads.py | 1 x 1 | 13 | 120 | 100 | 40 | 150 | 423 | Every 12 blocks on main and ring streets |
@@ -248,7 +250,12 @@ Rank-bound workplaces: the Mission Desk (Residence ground floor, 3 slots, rotati
 jonin standby station (6, day, jonin; B2), the main gate's booth (2, day, chunin) and the gate
 barracks (6 bunks; B1), the wall towers' night watch (1 each, night; 2 towers in B1), Academy
 classrooms (5 teachers, day, chunin; B1), the hospital (6 medics, day and night, chunin and
-special jonin; B1), the police HQ and ANBU HQ (later). Workers live in ordinary homes and flats.
+special jonin; B1), the courier office (4 couriers, day; B1), the police HQ and ANBU HQ (later). Workers live in ordinary homes and flats.
+
+**The main gate opens at dawn and closes at dusk** (dialogue canon). The gate has two pasted states,
+open and shut, swapped by the Village mod at 06:00 and 18:00 (VF's clock); the shut state blocks the
+road, and the gate workplace's guards change from the day booth to the night watch at the swap. In a
+storm the guards also shut the outer doors (dialogue). Story scenes may hold it open.
 
 ### Shop sites
 
@@ -276,7 +283,8 @@ shop displays show the shop's stock lines in order, with the slot counts the ite
 | `tool_shop`, `scroll_shop`, `tailor`, `pawn_shop` | `shop_house` (the scroll shop's calligraphy desk, the tailor's table) | Beta 2 |
 | `kinoshita_yard` | Kinoshita mark (public workbench) | Beta 2 |
 | `hagane_metalworks` | `shop_house` beside the forge | Beta 2 |
-| `bath_house` | Bath house (landmark) | Beta 2 |
+| `bath_house` | Bath house (landmark), with its mural | Beta 2 |
+| `courier_office` | `shop_house` near the Residence (letters to the farms and border villages; was the post office) | Beta 1 |
 | `painters_studio` | Kurama clan home (VF easel) | Beta 2 |
 | `festival_stalls` | `festival_stall` blocks on the main street | Beta 2 |
 | `exam_stalls` | `market_stall` rows by the stadium | Beta 3 |
@@ -318,6 +326,26 @@ tag is generic and gets 4 to 8 instances spread over the districts. Beta anchors
 The later anchors (`capital.*`, `foreign.*`, `fort.*`, `pass.*`, `pilgrim.*`, `coast.*`, `far.*`,
 `siege.*` and the rest) belong to far regions and later arcs and are placed when those are built.
 
+### Lore from dialogue
+
+Places and rules the dialogue writers invented and the user approved, so the map carries them:
+
+| Lore | On the map | Slice |
+|---|---|---|
+| A river ferry | The ferry landing on both banks; the ferry runs where the river is too wide for stepping stones | Beta 1 |
+| A small river island with one pine and many ducks | `river_island`, by hand | Beta 1 |
+| A courier office near the Residence | `shop_house`, with `mail_sorting_rack` and the `courier` sign and board | Beta 1 |
+| A well in each district (the market's is the coldest) | `village_well`, one per district, placed by the layout | Beta 1 on |
+| A bathhouse with a mural of the Hokage Rock at sunrise | `bathhouse_mural` on the bath house's big wall | Beta 2 |
+| The main gate closes at dusk | The gate's two states and the guards' shift change (Markers, above) | Beta 1 |
+| Ramen at 8 ryo | Ichiraku's prices are the items session's (8 ryo a bowl, extra chashu 2 more); the map carries the `menu_board` | Beta 1 |
+
+**Weekday names.** Dialogue uses Moonday (the fishmonger's day off; SIDE_QUESTS' council day) and
+also Sunday, Monday, Tuesday, Wednesday, Thursday and Friday. The calendar needs one seven-day list.
+The proposal: the Japanese elemental week, which already contains Moonday and Sunday: Moonday,
+Fireday, Waterday, Woodday, Metalday, Earthday, Sunday. If adopted, the stray Monday to Friday
+lines are renamed. Market Day stays a named day of VF's week (*for the calendar's owner to decide*).
+
 ### Story locations (neutral)
 
 Where the story needs a place, it is part of a building above:
@@ -332,7 +360,7 @@ Where the story needs a place, it is part of a building above:
 | Beta 2 | Outlying buildings of the first far region | Border village region |
 | Beta 2 | The council gallery | Hokage Residence |
 | Beta 2 | A sealed shrine room | Tsuchigumo mark |
-| Beta 2 | The post office | `shop_large` |
+| Beta 1 | The courier office | `shop_house` near the Residence |
 | Later | A hidden room in a clan home; the later arcs' places | Added as the arcs are written |
 
 ### Design programs
@@ -401,29 +429,29 @@ block's slice is the first slice that needs any of its variants.
 | Roofs | 5 | 15 | 37 | 0 |
 | Facades and shop fronts | 10 | 71 | 102 | 3 |
 | Crests and banners | 5 | 58 | 100 | 0 |
-| Interior fittings | 5 | 13 | 26 | 2 |
+| Interior fittings | 6 | 14 | 38 | 2 |
 | Story pieces | 2 | 4 | 7 | 1 |
 | Lanterns | 3 | 32 | 41 | 3 |
-| Streets | 8 | 22 | 30 | 2 |
+| Streets | 9 | 24 | 34 | 3 |
 | Festival | 5 | 9 | 17 | 3 |
 | Shrine | 6 | 8 | 16 | 4 |
 | Furniture (the Leaf set) | 63 | 133 | 201 | 33 |
 | Training | 6 | 7 | 13 | 4 |
 | Academy, Residence, hospital, stadium | 15 | 20 | 45 | 7 |
-| Shops and food | 27 | 27 | 50 | 13 |
+| Shops and food | 28 | 28 | 52 | 14 |
 | Gardens | 2 | 3 | 4 | 0 |
 | Clan signatures | 3 | 6 | 6 | 0 |
 | Crafting stations | 9 | 10 | 26 | 8 |
 | Displays (item-rendering) | 27 | 27 | 53 | 27 |
-| **All custom blocks** | **201** | **465** | **774** | **110** |
+| **All custom blocks** | **204** | **469** | **792** | **112** |
 
 | By slice (new that slice) | Phase 0 | Beta 1 | Beta 2 | Beta 2.5 | Beta 3 | Later | Total |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Custom blocks (first needed) | 11 | 128 | 51 | 0 | 3 | 8 | 201 |
-| Custom block variants | 21 | 225 | 194 | 0 | 11 | 14 | 465 |
+| Custom blocks (first needed) | 11 | 130 | 52 | 0 | 3 | 8 | 204 |
+| Custom block variants | 21 | 227 | 196 | 0 | 11 | 14 | 469 |
 | Vanilla mappings | 23 | 15 | 10 | 0 | 5 | 1 | 54 |
 
-Complexity: 109 simple, 79 medium and 13 complex blocks (281, 164 and 20 with variants). Prototyped now: 11 blocks, 21 with variants.
+Complexity: 111 simple, 80 medium and 13 complex blocks (283, 166 and 20 with variants). Prototyped now: 11 blocks, 21 with variants.
 <!-- /gen:block-summary -->
 
 ### Vanilla mappings
@@ -538,6 +566,7 @@ Complexity: 109 simple, 79 medium and 13 complex blocks (281, 164 and 20 with va
 | **Fusuma sliding door**<br>`fusuma_door` | Opaque painted sliding door between rooms | `fusuma_door` Plain cream; `fusuma_door_wave` Wave pattern (seigaiha); `fusuma_door_pine` Pine (Beta 2); `fusuma_door_crane` Cranes (Beta 2); `fusuma_door_mountain` Mountains (Beta 2) | door (shoji_door) | medium | 10 | Beta 1 |
 | **Ranma transom**<br>`ranma` | Carved transom panel above sliding doors | `wave_ranma` Waves; `cloud_ranma` Clouds | decor | simple | 2 | Beta 2 |
 | **Tatami** ★<br>`tatami` | Rush floor mat, 2 px, the border down its long sides (axis) | `tatami` Fresh; `aged_tatami` Aged gold | decor | simple | 4 | Phase 0 |
+| **Bathhouse mural**<br>`bathhouse_mural` | The big painted wall of the bath house: the Hokage Rock at sunrise, 4 x 3 blocks (12 parts) | `bathhouse_mural` Hokage Rock at sunrise | decor | simple | 12 | Beta 2 |
 
 #### Story pieces
 
@@ -566,6 +595,7 @@ Complexity: 109 simple, 79 medium and 13 complex blocks (281, 164 and 20 with va
 | **Post box**<br>`post_box` | The red letter box outside the post office | `post_box` Red | decor | simple | 2 | Beta 2 |
 | **Bridge post finial**<br>`bridge_finial` | Onion-shaped giboshi cap on bridge railing posts | `bronze_bridge_finial` Bronze; `red_bridge_finial` Vermilion | decor | medium | 2 | Beta 2 |
 | **Laundry line**<br>`laundry_line` | A line on a balcony with washing or an airing futon (axis) | `laundry_line` Washing; `laundry_line_futon` Airing futon; `laundry_line_empty` Empty | decor | simple | 3 | Beta 1 |
+| **District well**<br>`village_well` | A stone well with a roof, a pulley and a bucket: one in every district | `village_well` Roofed; `open_village_well` Open, with a sweep pole (Beta 2) | interact (Draws water (Items: fills a flask or bucket)) | medium | 4 | Beta 1 |
 
 #### Festival
 
@@ -718,6 +748,7 @@ Complexity: 109 simple, 79 medium and 13 complex blocks (281, 164 and 20 with va
 | **Target game booth**<br>`target_game_booth` | The festival throwing game | `target_game_booth` Target game booth | interact (Festival game) | medium | 2 | Beta 2 |
 | **Arranging table**<br>`arranging_table` | The flower shop's work table | `arranging_table` Arranging table | decor | simple | 2 | Beta 1 |
 | **Barber chair**<br>`barber_chair` | The barber's chair; right-click opens restyle | `barber_chair` Barber chair | seat (VF Seat; restyle screen by Items and the creator) | medium | 2 | Beta 1 |
+| **Mail sorting rack**<br>`mail_sorting_rack` | The courier office's pigeonholes of letters | `mail_sorting_rack` Wood | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
 
 #### Gardens
 
@@ -834,12 +865,12 @@ never the only copy.
 | Prologue hills terrain | Same | A heightmap draft | 3 |
 | Beta 1 landmark finishing (8) | Interiors, lighting, the last 10% of detail | One-off drafts; the kit's blocks; renders to compare | 12 |
 | Clan halls finishing (15) | Each clan's signature feature | Drafts from the clan JSON palette | 7.5 |
-| Beta 1 terrain between districts, the park, walking every street | Paths, slopes, sightlines to the Rock | `--plan` PNG, `/shinobi check` | 6 |
+| Beta 1 terrain between districts, the park, the river island and the ferry landing, walking every street | Paths, slopes, sightlines to the Rock | `--plan` PNG, `/shinobi check` | 8 |
 | Beta 2 training grounds terrain (Ground 3, the lake, the cliff) | Terrain | Props by program | 5 |
-| Beta 2 landmark finishing (6) and clan quarter dressing (15) | Detail | Drafts | 12 |
+| Beta 2 landmark finishing (5) and clan quarter dressing (15) | Detail | Drafts | 11 |
 | Beta 2 border village, farmsteads and the east road's terrain, walk-through | Terrain | Pasted homes and farms | 8 |
 | Beta 3 forest floor and river, tower and stadium finishing, walk-through | Terrain, scale | Trees and fence pasted first | 12 |
-| **To the end of Beta 3** | | | **~80** |
+| **To the end of Beta 3** | | | **~81** |
 | Later districts, gates, estates | | | ~25 |
 
 If you would rather build the landmarks yourself from scratch, add about 60 hours to the beta; the
@@ -907,18 +938,18 @@ from it, with margin for in-game fixes the renders cannot show:
 
 | Work | Phase 0 | Beta 1 | Beta 2 | Beta 3 | Later | Total |
 |---|---:|---:|---:|---:|---:|---:|
-| Block models and textures (190 blocks left, 444 variants, 724 textures) | 0.5 | 13.5 | 6.5 | 1 | 1.5 | **23** |
-| Java registration and block behaviour (the display block entity, seats, beds, containers, station hooks for Items' screens) | 2 | 6 | 4 | 1 | — | **13** |
+| Block models and textures (193 blocks left, 448 variants, 742 textures) | 0.5 | 14 | 6.5 | 1 | 1.5 | **23.5** |
+| Java registration and block behaviour (the display block entity, seats, beds, containers, station hooks for Items' screens, the gate's dusk swap) | 2 | 6.5 | 4 | 1 | — | **13.5** |
 | Design programs (28 left) and `roads.py`, `sweep.py`, `rock_faces.py` | 1.5 | 7 | 3 | 3 | — | **14.5** |
 | Paste tooling, `layout.py`, layout files | 6 | 3 | 2 | 1 | 2 | **14** |
-| One-off landmark drafts | — | 12 | 6 | 4 | 6 | **28** |
-| **Total** | **10** | **41.5** | **21.5** | **10** | **9.5** | **~93** (~185 h) |
+| One-off landmark drafts | — | 12.5 | 6 | 4 | 6 | **28.5** |
+| **Total** | **10** | **43** | **21.5** | **10** | **9.5** | **~94** (~188 h) |
 
 ### Your hours
 
 | | Phase 0 | Beta 1 | Beta 2 | Beta 3 | Later | Total |
 |---|---:|---:|---:|---:|---:|---:|
-| Building and terrain in Minecraft (section 5) | 2 | 41.5 | 25 | 12 | 25 | **~105** |
+| Building and terrain in Minecraft (section 5) | 2 | 43.5 | 24 | 12 | 25 | **~106** |
 | Reviewing renders | 2.5 | 8 | 4 | 2.5 | 2 | ~19 |
 
 ## 8. Registration notes for Phase 0
@@ -964,7 +995,7 @@ blocks:
    hospital, the torii's vermilion, the memorial stone's shape.
 3. **Builder tools for 26.3:** whether WorldEdit (Fabric) or Axiom has a 26.3 build; if neither,
    the agent adds brush commands (smooth, erode, fill) to builder mode.
-4. **Who finishes the landmarks:** the plan assumes agent drafts and your finishing (~80 hours to
+4. **Who finishes the landmarks:** the plan assumes agent drafts and your finishing (~81 hours to
    Beta 3); building them yourself from scratch is about 60 hours more.
 5. **The Hokage faces' designs:** `rock_faces.py` needs one depth map per face, drawn from each
    Hokage's look in the story's design notes; you approve them as renders before they are carved.

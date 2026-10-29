@@ -361,11 +361,11 @@
    "how": "program",
    "footprint": "11 x 11",
    "counts": {
-    "B1": 7,
+    "B1": 8,
     "B2": 8,
     "later": 4
    },
-   "notes": "Grocer, haruno store, the barber and market fillers (B1); scrolls, pawn, tools, tailor, medicine, metalworker, bookshop (B2)"
+   "notes": "Grocer, haruno store, the barber, the courier office near the Residence and market fillers (B1); scrolls, pawn, tools, tailor, medicine, metalworker, bookshop (B2)"
   },
   {
    "group": "shops",
@@ -375,10 +375,10 @@
    "footprint": "17 x 13",
    "counts": {
     "B1": 2,
-    "B2": 3,
+    "B2": 2,
     "later": 2
    },
-   "notes": "The furniture shop and its showroom, and the weapon shop with its forge room (B1); the post office (B2); two warehouses by the market (B2)"
+   "notes": "The furniture shop and its showroom, and the weapon shop with its forge room (B1); two warehouses by the market (B2)"
   },
   {
    "group": "shops",
@@ -636,7 +636,7 @@
    "counts": {
     "B2": 1
    },
-   "notes": ""
+   "notes": "The boiler room at the back; the mural of the Hokage Rock at sunrise on the big wall"
   },
   {
    "group": "landmarks",
@@ -652,13 +652,24 @@
   {
    "group": "landmarks",
    "id": "ferry",
-   "name": "Ferry landing",
+   "name": "Ferry landing and ferry",
    "how": "hand",
    "footprint": "9 x 7",
    "counts": {
-    "B2": 1
+    "B1": 1
    },
-   "notes": "With the site of the future bridge"
+   "notes": "The ferry runs from the same landing on both banks (a moored flat boat of planks; the crossing is a scripted ride); the site of the future bridge downstream"
+  },
+  {
+   "group": "landmarks",
+   "id": "river_island",
+   "name": "River island",
+   "how": "hand",
+   "footprint": "~12 x 9",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "A little island in the river with one pine and a great many ducks"
   },
   {
    "group": "landmarks",
@@ -809,6 +820,20 @@
     "later": 8
    },
    "notes": ""
+  },
+  {
+   "group": "streets",
+   "id": "village_well",
+   "name": "District well (placed by the layout)",
+   "how": "layout",
+   "footprint": "3 x 3",
+   "counts": {
+    "B1": 6,
+    "B2": 4,
+    "B3": 1,
+    "later": 3
+   },
+   "notes": "One in every district; the market's is the coldest"
   },
   {
    "group": "streets",
