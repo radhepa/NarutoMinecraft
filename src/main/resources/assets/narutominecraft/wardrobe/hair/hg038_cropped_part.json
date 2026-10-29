@@ -1,0 +1,43 @@
+{
+  "id": "hg038_cropped_part",
+  "kind": "hair",
+  "name": "Cropped Part",
+  "gender": "unisex",
+  "texture": "hair/hg038_cropped_part.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "crop_crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8.6,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.3
+    }
+  ],
+  "description": "A very short even crop with a sharp side part and a squared hairline."
+}

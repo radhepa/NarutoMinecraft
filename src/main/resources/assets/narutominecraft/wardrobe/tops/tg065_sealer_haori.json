@@ -1,0 +1,247 @@
+{
+  "id": "tg065_sealer_haori",
+  "kind": "top",
+  "name": "Sealer Haori",
+  "gender": "unisex",
+  "texture": "tops/tg065_sealer_haori.png",
+  "extrasHeight": 16,
+  "tags": [
+    "haori",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "haori_cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "haori_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.0,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "haori_skirt_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "haori_skirt_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "haori_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        32,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "haori_skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        2,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    },
+    {
+      "id": "haori_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        2,
+        4
+      ],
+      "uv": [
+        0,
+        7
+      ]
+    },
+    {
+      "id": "tag_roll",
+      "bone": "TORSO",
+      "pivot": [
+        4.3,
+        8.6,
+        0.5
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        11,
+        7
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Open short haori over a dark inner kimono, seal tags at hem and cuffs, chest cord, tag roll."
+}

@@ -1,0 +1,192 @@
+{
+  "id": "wg015_tracker_hood",
+  "kind": "headwear",
+  "name": "Tracker Hood",
+  "gender": "unisex",
+  "texture": "headwear/wg015_tracker_hood.png",
+  "extrasHeight": 64,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hood_top",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -9.4,
+        -4.4
+      ],
+      "size": [
+        9,
+        1,
+        10
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "hood_crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        -10.1,
+        -2.6
+      ],
+      "size": [
+        6,
+        1,
+        7
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "hood_right",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        -9,
+        -4.4
+      ],
+      "size": [
+        1,
+        9,
+        10
+      ],
+      "uv": [
+        27,
+        12
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "hood_left",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        4.5,
+        -9,
+        -4.4
+      ],
+      "size": [
+        1,
+        9,
+        10
+      ],
+      "uv": [
+        0,
+        32
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "hood_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        -9,
+        4.6
+      ],
+      "size": [
+        11,
+        9,
+        1
+      ],
+      "uv": [
+        23,
+        32
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "hood_point",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -0.4,
+        5.0
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        48,
+        32
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [
+    "*"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "A soft hood pulled up over the head, its opening clear of the face, the point behind."
+}

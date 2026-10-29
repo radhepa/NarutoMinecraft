@@ -1,0 +1,272 @@
+{
+  "id": "tg079_blade_bandolier",
+  "kind": "top",
+  "name": "Blade Bandolier",
+  "gender": "unisex",
+  "texture": "tops/tg079_blade_bandolier.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi",
+    "tunic"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bandolier_strap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -7.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_kunai_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4010797537700674,
+        2.526758060933784,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_ring_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4010797537700674,
+        2.526758060933784,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_kunai_1",
+      "bone": "TORSO",
+      "pivot": [
+        -0.8003599179233558,
+        4.5755860203112615,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_ring_1",
+      "bone": "TORSO",
+      "pivot": [
+        -0.8003599179233558,
+        4.5755860203112615,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        20,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_kunai_2",
+      "bone": "TORSO",
+      "pivot": [
+        0.8003599179233558,
+        6.624413979688738,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_ring_2",
+      "bone": "TORSO",
+      "pivot": [
+        0.8003599179233558,
+        6.624413979688738,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_kunai_3",
+      "bone": "TORSO",
+      "pivot": [
+        2.4010797537700674,
+        8.673241939066216,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_ring_3",
+      "bone": "TORSO",
+      "pivot": [
+        2.4010797537700674,
+        8.673241939066216,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless tunic with a bandolier of kunai across the chest, leather bracers."
+}

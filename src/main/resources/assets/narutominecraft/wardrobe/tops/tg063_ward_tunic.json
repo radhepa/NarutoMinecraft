@@ -1,0 +1,81 @@
+{
+  "id": "tg063_ward_tunic",
+  "kind": "top",
+  "name": "Ward Tunic",
+  "gender": "unisex",
+  "texture": "tops/tg063_ward_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi",
+    "tunic"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "left_armband",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        -0.8,
+        -2.45
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_cross",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        3.6,
+        -0.7000000000000001,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        6,
+        6
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved tunic fastened at the side, corps-colour trim, bandaged forearms, cross armband."
+}

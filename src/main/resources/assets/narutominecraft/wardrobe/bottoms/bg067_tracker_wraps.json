@@ -1,0 +1,73 @@
+{
+  "id": "bg067_tracker_wraps",
+  "kind": "bottom",
+  "name": "Tracker Wraps",
+  "gender": "unisex",
+  "texture": "bottoms/bg067_tracker_wraps.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "thigh_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        1.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "thigh_pouch",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -3.0,
+        1.0,
+        -1.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        3
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Close trousers wrapped from knee to ankle, a thigh pouch, soft split-toe boots."
+}

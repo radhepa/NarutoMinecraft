@@ -1,0 +1,132 @@
+{
+  "id": "bg077_sealer_split_skirt",
+  "kind": "bottom",
+  "name": "Sealer Split Skirt",
+  "gender": "unisex",
+  "texture": "bottoms/bg077_sealer_split_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "waist_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "waist_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        21,
+        13
+      ]
+    }
+  ],
+  "description": "Long dark wrap skirt split at the side, seal tags round the hem, close trousers, sandals."
+}

@@ -1,0 +1,342 @@
+{
+  "id": "tg061_medic_coat",
+  "kind": "top",
+  "name": "Medic Coat",
+  "gender": "unisex",
+  "texture": "tops/tg061_medic_coat.png",
+  "extrasHeight": 48,
+  "tags": [
+    "chunin",
+    "coat",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "coat_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "chest_pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        3.0,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "chest_pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        3.0,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ]
+    },
+    {
+      "id": "coat_skirt_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "coat_skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        7,
+        4
+      ],
+      "uv": [
+        21,
+        10
+      ]
+    },
+    {
+      "id": "coat_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        7,
+        4
+      ],
+      "uv": [
+        32,
+        10
+      ]
+    },
+    {
+      "id": "left_armband",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        0.2,
+        -2.45
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        43,
+        10
+      ]
+    },
+    {
+      "id": "left_cross",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        3.6,
+        0.30000000000000004,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        6,
+        6
+      ],
+      "uv": [
+        0,
+        22
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "back_cross",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.6,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        15,
+        22
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Knee-length open ward coat piped in green over a shirt, standing collar, cross armband."
+}

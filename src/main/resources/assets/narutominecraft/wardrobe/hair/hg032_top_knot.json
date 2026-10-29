@@ -1,0 +1,99 @@
+{
+  "id": "hg032_top_knot",
+  "kind": "hair",
+  "name": "Top Knot",
+  "gender": "unisex",
+  "texture": "hair/hg032_top_knot.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "crown_knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.4,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        -1.5,
+        -2.0
+      ],
+      "size": [
+        4,
+        3,
+        4
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "crown_knot_cap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.4,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        17,
+        0
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "crown_cord",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.6,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -0.4,
+        -1.5
+      ],
+      "size": [
+        3,
+        1,
+        3
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    }
+  ],
+  "description": "Hair drawn tight from brow and nape into a corded knot on the crown."
+}

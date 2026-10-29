@@ -1,0 +1,210 @@
+{
+  "id": "hg031_neat_side_part",
+  "kind": "hair",
+  "name": "Neat Side Part",
+  "gender": "unisex",
+  "texture": "hair/hg031_neat_side_part.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fringe_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -50
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -62
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -62
+      ],
+      "origin": [
+        -1.0,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    },
+    {
+      "id": "fringe_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -66
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "fringe_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -66
+      ],
+      "origin": [
+        -1.0,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        3.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -30
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        3.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -30
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    }
+  ],
+  "description": "Short hair from a clean side part, fringe swept off the brow, trimmed ears and nape."
+}

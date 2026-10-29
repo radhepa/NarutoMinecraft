@@ -1,0 +1,639 @@
+{
+  "id": "tg080_armorer_coat",
+  "kind": "top",
+  "name": "Armorer Coat",
+  "gender": "unisex",
+  "texture": "tops/tg080_armorer_coat.png",
+  "extrasHeight": 48,
+  "tags": [
+    "coat",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bandolier_r_strap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -7.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_r_kunai_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6007198358467116,
+        3.5511720406225225,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_r_ring_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6007198358467116,
+        3.5511720406225225,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_r_kunai_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        5.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_r_ring_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        5.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        20,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_r_kunai_2",
+      "bone": "TORSO",
+      "pivot": [
+        1.6007198358467116,
+        7.648827959377477,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_r_ring_2",
+      "bone": "TORSO",
+      "pivot": [
+        1.6007198358467116,
+        7.648827959377477,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_l_strap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -7.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_l_kunai_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.6007198358467116,
+        3.5511720406225225,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_l_ring_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.6007198358467116,
+        3.5511720406225225,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_l_kunai_1",
+      "bone": "TORSO",
+      "pivot": [
+        -0.0,
+        5.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_l_ring_1",
+      "bone": "TORSO",
+      "pivot": [
+        -0.0,
+        5.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_l_kunai_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6007198358467116,
+        7.648827959377477,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        60,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_l_ring_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6007198358467116,
+        7.648827959377477,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        17
+      ]
+    },
+    {
+      "id": "back_blade_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        8.4,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -80
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "back_blade_guard",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        8.4,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -80
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        10,
+        17
+      ]
+    },
+    {
+      "id": "back_blade_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        8.4,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -80
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        19,
+        17
+      ]
+    },
+    {
+      "id": "coat_skirt_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        24,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        33,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        42,
+        17
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "coat_skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        0,
+        26
+      ]
+    },
+    {
+      "id": "coat_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        11,
+        26
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless half-coat over a shirt, crossed kunai bandoliers, a blade across the back, steel guards."
+}

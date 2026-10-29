@@ -1,0 +1,165 @@
+{
+  "id": "tg066_seal_tabard",
+  "kind": "top",
+  "name": "Seal Tabard",
+  "gender": "unisex",
+  "texture": "tops/tg066_seal_tabard.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi",
+    "tunic"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "rope_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "tabard_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tabard_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "rope_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.9,
+        9.8,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        59,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "rope_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.1,
+        9.8,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Tag-edged tabard over a long-sleeved shirt, rope belt, long front and back panels."
+}
