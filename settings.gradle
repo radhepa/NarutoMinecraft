@@ -1,5 +1,6 @@
 // The Shinobi Modpack as a Gradle multi-project (ROADMAP.md, "Repository layout"). Phase 0 adds the
-// mods (core, village, combat, life, progression) and the pack; today only the pure bond engine of
-// Shinobi Life is here, at life/bonds.
+// mods (core, village, combat, life, progression) and the pack; today only the pure engines of
+// Shinobi Life are here: the bonds at life/bonds and the roster (teammate growth) at life/roster.
 rootProject.name = 'shinobi-modpack'
 include 'life:bonds'
+include 'life:roster'

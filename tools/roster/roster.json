@@ -1,0 +1,1465 @@
+{
+ "format": 1,
+ "_doc": "Every named shinobi of the beta (docs/RANKS.md). Names are rolled per save: text uses the name token, never the placeholder, which is for developers only. rank is each character's public rank when the player first sees them. levels are whole levels on the player's curve at the end of each stretch: adults hold theirs through the beta; the class grows beside the player (grows: true, from life:roster's typical run, so these are guides, not fixed). tier is read from the level at first sight. story: true marks a role docs/story/ owns; only its public rank and role live here. tools/roster/roster.py --check validates this file.",
+ "slices": [
+  "beta1",
+  "beta2",
+  "beta2.5",
+  "beta3",
+  "spoken"
+ ],
+ "ranks": [
+  "kage",
+  "elder",
+  "jonin_commander",
+  "anbu",
+  "jonin",
+  "special_jonin",
+  "chunin",
+  "genin",
+  "academy",
+  "retired",
+  "civilian"
+ ],
+ "importance": {
+  "pillar": "few, story-heavy, unique kits and looks, showcase scenes",
+  "named": "their own lines and quests: senseis, clan heads, proctors, the desk and the gate",
+  "background": "a face with a job and a rank; generated lines",
+  "legend": "spoken of, not met in the beta"
+ },
+ "squads": {
+  "squad_1": {
+   "sensei": "role:sensei",
+   "members": [
+    "player",
+    "role:teammate_a",
+    "role:teammate_b"
+   ],
+   "bench": [
+    "role:classmate_c"
+   ]
+  },
+  "squad_2": {
+   "sensei": "role:sensei_2",
+   "members": [
+    "role:rival",
+    "role:classmate_c",
+    "role:classmate_d"
+   ]
+  },
+  "squad_3": {
+   "sensei": "role:sensei_3",
+   "members": [
+    "role:classmate_e",
+    "role:classmate_f",
+    "role:classmate_g"
+   ]
+  },
+  "squad_4": {
+   "sensei": "role:sensei_4",
+   "members": [
+    "role:classmate_h",
+    "role:classmate_i",
+    "role:classmate_j"
+   ]
+  },
+  "squad_senior": {
+   "sensei": "role:sensei_senior",
+   "members": [
+    "role:senior_a",
+    "role:senior_b",
+    "role:senior_c"
+   ],
+   "notes": "a year ahead of you; they sit the Chunin Exams in your year"
+  }
+ },
+ "player": {
+  "levels": {
+   "academy": 5,
+   "genin": 15,
+   "exams": 18,
+   "chunin": 30,
+   "jonin": 42,
+   "road": 50
+  }
+ },
+ "people": [
+  {
+   "role": "role:hokage_4",
+   "name": "{name:role:hokage_4}",
+   "placeholder": "The Fourth Hokage",
+   "rank": "kage",
+   "tier": "S",
+   "importance": "pillar",
+   "clan": "akimichi",
+   "specialty": "taijutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 58,
+    "genin": 58,
+    "exams": 58
+   },
+   "story": true,
+   "group": "circle"
+  },
+  {
+   "role": "role:elder_keeper",
+   "name": "{name:role:elder_keeper}",
+   "placeholder": "Council Elder 1",
+   "rank": "elder",
+   "tier": "B",
+   "importance": "named",
+   "clan": null,
+   "specialty": "sealing",
+   "first": "beta1",
+   "levels": {
+    "academy": 38,
+    "genin": 38,
+    "exams": 38
+   },
+   "story": true,
+   "group": "circle"
+  },
+  {
+   "role": "role:elder_councillor",
+   "name": "{name:role:elder_councillor}",
+   "placeholder": "Council Elder 2",
+   "rank": "elder",
+   "tier": "B",
+   "importance": "named",
+   "clan": null,
+   "specialty": "support",
+   "first": "beta1",
+   "levels": {
+    "academy": 36,
+    "genin": 36,
+    "exams": 36
+   },
+   "story": true,
+   "group": "circle"
+  },
+  {
+   "role": "role:jonin_commander",
+   "name": "{name:role:jonin_commander}",
+   "placeholder": "The Jonin Commander",
+   "rank": "jonin_commander",
+   "tier": "A",
+   "importance": "pillar",
+   "clan": "nara",
+   "specialty": "strategy and shadow techniques",
+   "first": "beta2",
+   "levels": {
+    "academy": 46,
+    "genin": 46,
+    "exams": 46
+   },
+   "group": "circle",
+   "look": "jonin_commander",
+   "where": "standby_station",
+   "also": [
+    "role:clan_head.nara"
+   ]
+  },
+  {
+   "role": "role:anbu_commander",
+   "name": "{name:role:anbu_commander}",
+   "placeholder": "ANBU Commander (Fox mask)",
+   "rank": "anbu",
+   "tier": "A",
+   "importance": "pillar",
+   "clan": null,
+   "specialty": "kenjutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 48,
+    "genin": 48,
+    "exams": 48
+   },
+   "group": "anbu",
+   "masked": true,
+   "anbu": "commander",
+   "look": "anbu",
+   "showcase": [
+    "ch1.residence_roof"
+   ]
+  },
+  {
+   "role": "role:anbu_captain",
+   "name": "{name:role:anbu_captain}",
+   "placeholder": "ANBU Captain (Wolf mask)",
+   "rank": "anbu",
+   "tier": "B",
+   "importance": "named",
+   "clan": null,
+   "specialty": "tracking",
+   "first": "beta2",
+   "levels": {
+    "academy": 40,
+    "genin": 40,
+    "exams": 40
+   },
+   "group": "anbu",
+   "masked": true,
+   "anbu": "captain",
+   "look": "anbu_wolf",
+   "showcase": [
+    "ch13.far_road"
+   ]
+  },
+  {
+   "role": "role:anbu_cat",
+   "name": "{name:role:anbu_cat}",
+   "placeholder": "ANBU (Cat mask)",
+   "rank": "anbu",
+   "tier": "B",
+   "importance": "background",
+   "clan": null,
+   "specialty": "kenjutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 34,
+    "genin": 34,
+    "exams": 34
+   },
+   "group": "anbu",
+   "masked": true,
+   "anbu": "operative",
+   "look": "anbu_cat"
+  },
+  {
+   "role": "role:anbu_hawk",
+   "name": "{name:role:anbu_hawk}",
+   "placeholder": "ANBU (Hawk mask)",
+   "rank": "anbu",
+   "tier": "B",
+   "importance": "background",
+   "clan": null,
+   "specialty": "sensing",
+   "first": "beta2",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "anbu",
+   "masked": true,
+   "anbu": "operative",
+   "look": "anbu_hawk"
+  },
+  {
+   "role": "role:sensei",
+   "name": "{name:role:sensei}",
+   "placeholder": "Your Sensei",
+   "rank": "jonin",
+   "tier": "A",
+   "importance": "pillar",
+   "clan": "",
+   "specialty": "ninjutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 44,
+    "genin": 44,
+    "exams": 44
+   },
+   "story": true,
+   "group": "squads",
+   "leads": "squad_1",
+   "showcase": [
+    "ch8.bells",
+    "ch10.spar_with_sensei_senior"
+   ]
+  },
+  {
+   "role": "role:sensei_senior",
+   "name": "{name:role:sensei_senior}",
+   "placeholder": "The Taijutsu Master",
+   "rank": "jonin",
+   "tier": "A",
+   "importance": "pillar",
+   "clan": "",
+   "specialty": "taijutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 45,
+    "genin": 45,
+    "exams": 45
+   },
+   "group": "squads",
+   "leads": "squad_senior",
+   "look": "jonin_sentinel",
+   "showcase": [
+    "ch2.yard_demo",
+    "ch10.spar_with_sensei",
+    "ch18.training_break"
+   ]
+  },
+  {
+   "role": "role:elite_scout",
+   "name": "{name:role:elite_scout}",
+   "placeholder": "The Returning Captain",
+   "rank": "jonin",
+   "tier": "A",
+   "importance": "pillar",
+   "clan": "",
+   "specialty": "kenjutsu",
+   "first": "beta2",
+   "levels": {
+    "academy": 43,
+    "genin": 43,
+    "exams": 43
+   },
+   "group": "elite",
+   "look": "jonin_field",
+   "showcase": [
+    "ch11.east_road"
+   ]
+  },
+  {
+   "role": "role:elite_sealer",
+   "name": "{name:role:elite_sealer}",
+   "placeholder": "The Barrier Master",
+   "rank": "jonin",
+   "tier": "A",
+   "importance": "named",
+   "clan": "uzumaki",
+   "specialty": "sealing and barriers",
+   "first": "beta3",
+   "levels": {
+    "academy": 42,
+    "genin": 42,
+    "exams": 42
+   },
+   "group": "elite",
+   "showcase": [
+    "ch16.forest_barrier",
+    "ch19.arena_barrier"
+   ]
+  },
+  {
+   "role": "role:legend_veteran",
+   "name": "{name:role:legend_veteran}",
+   "placeholder": "The Old Scroll-Seller",
+   "rank": "retired",
+   "tier": "A",
+   "importance": "pillar",
+   "clan": "",
+   "specialty": "ninjutsu",
+   "first": "beta2",
+   "levels": {
+    "academy": 44,
+    "genin": 44,
+    "exams": 44
+   },
+   "group": "elite",
+   "where": "scroll_shop",
+   "showcase": [
+    "ch12.scroll_shop",
+    "side.b2.old_veteran"
+   ]
+  },
+  {
+   "role": "role:legend_wanderer",
+   "name": "{name:role:legend_wanderer}",
+   "placeholder": "The Wandering Legend",
+   "rank": "jonin",
+   "tier": "S",
+   "importance": "legend",
+   "clan": "",
+   "specialty": "ninjutsu",
+   "first": "spoken",
+   "levels": {
+    "academy": 55,
+    "genin": 55,
+    "exams": 55
+   },
+   "group": "elite",
+   "on_map": false,
+   "notes": "away on a long mission for the whole beta; spoken of at the standby station and in letters"
+  },
+  {
+   "role": "role:instructor",
+   "name": "{name:role:instructor}",
+   "placeholder": "Your Academy Instructor",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "named",
+   "clan": "",
+   "specialty": "ninjutsu and teaching",
+   "first": "beta1",
+   "levels": {
+    "academy": 24,
+    "genin": 24,
+    "exams": 24
+   },
+   "story": true,
+   "group": "academy"
+  },
+  {
+   "role": "role:instructor_2",
+   "name": "{name:role:instructor_2}",
+   "placeholder": "The Throwing Teacher",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "named",
+   "clan": "umino",
+   "specialty": "tools",
+   "first": "beta1",
+   "levels": {
+    "academy": 22,
+    "genin": 22,
+    "exams": 22
+   },
+   "group": "academy"
+  },
+  {
+   "role": "role:instructor_3",
+   "name": "{name:role:instructor_3}",
+   "placeholder": "The Chakra Teacher",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "named",
+   "clan": "",
+   "specialty": "sensing",
+   "first": "beta1",
+   "levels": {
+    "academy": 20,
+    "genin": 20,
+    "exams": 20
+   },
+   "group": "academy"
+  },
+  {
+   "role": "role:headmaster",
+   "name": "{name:role:headmaster}",
+   "placeholder": "The Academy Headmaster",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "named",
+   "clan": "umino",
+   "specialty": "sealing",
+   "first": "beta1",
+   "levels": {
+    "academy": 34,
+    "genin": 34,
+    "exams": 34
+   },
+   "group": "academy"
+  },
+  {
+   "role": "role:teammate_a",
+   "name": "{name:role:teammate_a}",
+   "placeholder": "Teammate A",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "pillar",
+   "clan": "kurama",
+   "specialty": "genjutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 17,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_1",
+   "niche": "genjutsu"
+  },
+  {
+   "role": "role:teammate_b",
+   "name": "{name:role:teammate_b}",
+   "placeholder": "Teammate B",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "pillar",
+   "clan": "",
+   "specialty": "taijutsu, with a ninken pup",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 18,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_1",
+   "niche": "taijutsu"
+  },
+  {
+   "role": "role:rival",
+   "name": "{name:role:rival}",
+   "placeholder": "The Rival",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "pillar",
+   "clan": "uchiha",
+   "specialty": "ninjutsu (fire)",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 16,
+    "exams": 19,
+    "chunin": 30,
+    "jonin": 42,
+    "road": 50
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_2",
+   "niche": "ninjutsu"
+  },
+  {
+   "role": "role:classmate_c",
+   "name": "{name:role:classmate_c}",
+   "placeholder": "Classmate C",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "named",
+   "clan": "kinoshita",
+   "specialty": "tools and traps",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 17,
+    "chunin": 29,
+    "jonin": 40,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_2",
+   "niche": "tools"
+  },
+  {
+   "role": "role:classmate_d",
+   "name": "{name:role:classmate_d}",
+   "placeholder": "Classmate D",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "named",
+   "clan": "gekko",
+   "specialty": "kenjutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 15,
+    "exams": 18,
+    "chunin": 30,
+    "jonin": 41,
+    "road": 49
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_2",
+   "niche": "kenjutsu"
+  },
+  {
+   "role": "role:classmate_e",
+   "name": "{name:role:classmate_e}",
+   "placeholder": "Classmate E",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "named",
+   "clan": "hyuga",
+   "specialty": "sensing (Byakugan)",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 15,
+    "exams": 18,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "group": "class",
+   "squad": "squad_3",
+   "niche": "sensing"
+  },
+  {
+   "role": "role:classmate_f",
+   "name": "{name:role:classmate_f}",
+   "placeholder": "Classmate F",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "named",
+   "clan": "nara",
+   "specialty": "support (shadows)",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 13,
+    "exams": 17,
+    "chunin": 29,
+    "jonin": 40,
+    "road": 48
+   },
+   "grows": true,
+   "group": "class",
+   "squad": "squad_3",
+   "niche": "support"
+  },
+  {
+   "role": "role:classmate_g",
+   "name": "{name:role:classmate_g}",
+   "placeholder": "Classmate G",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "named",
+   "clan": "akimichi",
+   "specialty": "taijutsu (expansion)",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 18,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "group": "class",
+   "squad": "squad_3",
+   "niche": "taijutsu"
+  },
+  {
+   "role": "role:classmate_h",
+   "name": "{name:role:classmate_h}",
+   "placeholder": "Classmate H",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "named",
+   "clan": "",
+   "specialty": "medical",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 17,
+    "chunin": 29,
+    "jonin": 40,
+    "road": 48
+   },
+   "grows": true,
+   "group": "class",
+   "squad": "squad_4",
+   "niche": "medical"
+  },
+  {
+   "role": "role:classmate_i",
+   "name": "{name:role:classmate_i}",
+   "placeholder": "Classmate I",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "named",
+   "clan": "inuzuka",
+   "specialty": "tracking, with a ninken",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 15,
+    "exams": 18,
+    "chunin": 30,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "group": "class",
+   "squad": "squad_4",
+   "niche": "tracking"
+  },
+  {
+   "role": "role:classmate_j",
+   "name": "{name:role:classmate_j}",
+   "placeholder": "Classmate J",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "named",
+   "clan": "",
+   "specialty": "sealing",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 13,
+    "exams": 17,
+    "chunin": 28,
+    "jonin": 40,
+    "road": 47
+   },
+   "grows": true,
+   "group": "class",
+   "squad": "squad_4",
+   "niche": "sealing"
+  },
+  {
+   "role": "role:sensei_2",
+   "name": "{name:role:sensei_2}",
+   "placeholder": "The Genjutsu Sensei",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "yuhi",
+   "specialty": "genjutsu",
+   "first": "beta2",
+   "levels": {
+    "academy": 38,
+    "genin": 38,
+    "exams": 38
+   },
+   "group": "squads",
+   "leads": "squad_2",
+   "look": "jonin_kunoichi"
+  },
+  {
+   "role": "role:sensei_3",
+   "name": "{name:role:sensei_3}",
+   "placeholder": "The Fire Sensei",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "sarutobi",
+   "specialty": "ninjutsu (fire and wind)",
+   "first": "beta2",
+   "levels": {
+    "academy": 37,
+    "genin": 37,
+    "exams": 37
+   },
+   "group": "squads",
+   "leads": "squad_3"
+  },
+  {
+   "role": "role:sensei_4",
+   "name": "{name:role:sensei_4}",
+   "placeholder": "The Senbon Sensei",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "shiranui",
+   "specialty": "tools",
+   "first": "beta2",
+   "levels": {
+    "academy": 35,
+    "genin": 35,
+    "exams": 35
+   },
+   "group": "squads",
+   "leads": "squad_4"
+  },
+  {
+   "role": "role:senior_a",
+   "name": "{name:role:senior_a}",
+   "placeholder": "Senior A (the prodigy)",
+   "rank": "genin",
+   "tier": "D",
+   "importance": "named",
+   "clan": "",
+   "specialty": "taijutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 13,
+    "genin": 16,
+    "exams": 20
+   },
+   "group": "squads",
+   "squad": "squad_senior",
+   "look": "green_beast"
+  },
+  {
+   "role": "role:senior_b",
+   "name": "{name:role:senior_b}",
+   "placeholder": "Senior B",
+   "rank": "genin",
+   "tier": "D",
+   "importance": "named",
+   "clan": "",
+   "specialty": "tools (weapons)",
+   "first": "beta1",
+   "levels": {
+    "academy": 11,
+    "genin": 14,
+    "exams": 18
+   },
+   "group": "squads",
+   "squad": "squad_senior"
+  },
+  {
+   "role": "role:senior_c",
+   "name": "{name:role:senior_c}",
+   "placeholder": "Senior C",
+   "rank": "genin",
+   "tier": "D",
+   "importance": "named",
+   "clan": "yamanaka",
+   "specialty": "sensing (mind)",
+   "first": "beta1",
+   "levels": {
+    "academy": 11,
+    "genin": 14,
+    "exams": 17
+   },
+   "group": "squads",
+   "squad": "squad_senior"
+  },
+  {
+   "role": "role:proctor_written",
+   "name": "{name:role:proctor_written}",
+   "placeholder": "The Written-Test Proctor",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "morino",
+   "specialty": "interrogation",
+   "first": "beta3",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "exams",
+   "where": "exam_hall",
+   "also": [
+    "role:clan_head.morino"
+   ]
+  },
+  {
+   "role": "role:proctor_forest",
+   "name": "{name:role:proctor_forest}",
+   "placeholder": "The Forest Proctor",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "",
+   "specialty": "survival",
+   "first": "beta3",
+   "levels": {
+    "academy": 36,
+    "genin": 36,
+    "exams": 36
+   },
+   "group": "exams",
+   "where": "forest_of_death"
+  },
+  {
+   "role": "role:proctor_finals",
+   "name": "{name:role:proctor_finals}",
+   "placeholder": "The Finals Proctor",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "gekko",
+   "specialty": "kenjutsu",
+   "first": "beta3",
+   "levels": {
+    "academy": 34,
+    "genin": 34,
+    "exams": 34
+   },
+   "group": "exams",
+   "where": "stadium"
+  },
+  {
+   "role": "role:desk_chunin_1",
+   "name": "{name:role:desk_chunin_1}",
+   "placeholder": "Mission Desk Chunin 1",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "named",
+   "clan": "",
+   "specialty": "administration",
+   "first": "beta2",
+   "levels": {
+    "academy": 19,
+    "genin": 19,
+    "exams": 19
+   },
+   "group": "duty",
+   "where": "mission_desk"
+  },
+  {
+   "role": "role:desk_chunin_2",
+   "name": "{name:role:desk_chunin_2}",
+   "placeholder": "Mission Desk Chunin 2",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "named",
+   "clan": "namiashi",
+   "specialty": "administration",
+   "first": "beta2",
+   "levels": {
+    "academy": 18,
+    "genin": 18,
+    "exams": 18
+   },
+   "group": "duty",
+   "where": "mission_desk"
+  },
+  {
+   "role": "role:gate_guard_1",
+   "name": "{name:role:gate_guard_1}",
+   "placeholder": "Gate Guard 1",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "named",
+   "clan": "hagane",
+   "specialty": "tools (mace)",
+   "first": "beta1",
+   "levels": {
+    "academy": 20,
+    "genin": 20,
+    "exams": 20
+   },
+   "group": "duty",
+   "where": "main_gate"
+  },
+  {
+   "role": "role:gate_guard_2",
+   "name": "{name:role:gate_guard_2}",
+   "placeholder": "Gate Guard 2",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "named",
+   "clan": "",
+   "specialty": "taijutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 19,
+    "genin": 19,
+    "exams": 19
+   },
+   "group": "duty",
+   "where": "main_gate"
+  },
+  {
+   "role": "role:night_watch",
+   "name": "{name:role:night_watch}",
+   "placeholder": "The Night Watch",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "named",
+   "clan": "tobari",
+   "specialty": "sensing (sound)",
+   "first": "beta1",
+   "levels": {
+    "academy": 23,
+    "genin": 23,
+    "exams": 23
+   },
+   "group": "duty",
+   "where": "wall"
+  },
+  {
+   "role": "role:police_chief",
+   "name": "{name:role:police_chief}",
+   "placeholder": "The Police Chief",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "uchiha",
+   "specialty": "ninjutsu (fire)",
+   "first": "beta2",
+   "levels": {
+    "academy": 39,
+    "genin": 39,
+    "exams": 39
+   },
+   "group": "duty",
+   "where": "police_hq",
+   "also": [
+    "role:clan_head.uchiha"
+   ]
+  },
+  {
+   "role": "role:police_officer",
+   "name": "{name:role:police_officer}",
+   "placeholder": "Police Officer",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "clan": "uchiha",
+   "specialty": "taijutsu",
+   "first": "beta2",
+   "levels": {
+    "academy": 21,
+    "genin": 21,
+    "exams": 21
+   },
+   "group": "duty",
+   "where": "police_patrol"
+  },
+  {
+   "role": "role:medic",
+   "name": "{name:role:medic}",
+   "placeholder": "The Young Medic",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "named",
+   "clan": "",
+   "specialty": "medical",
+   "first": "beta1",
+   "levels": {
+    "academy": 21,
+    "genin": 21,
+    "exams": 21
+   },
+   "story": true,
+   "group": "duty",
+   "where": "hospital"
+  },
+  {
+   "role": "role:hospital_head",
+   "name": "{name:role:hospital_head}",
+   "placeholder": "The Head Medic",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "suzuran",
+   "specialty": "medical",
+   "first": "beta1",
+   "levels": {
+    "academy": 35,
+    "genin": 35,
+    "exams": 35
+   },
+   "group": "duty",
+   "where": "hospital",
+   "also": [
+    "role:clan_head.suzuran"
+   ]
+  },
+  {
+   "role": "role:standby_jonin_1",
+   "name": "{name:role:standby_jonin_1}",
+   "placeholder": "Standby Jonin 1",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "clan": "",
+   "specialty": "ninjutsu (earth)",
+   "first": "beta2",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "standby",
+   "where": "standby_station"
+  },
+  {
+   "role": "role:standby_jonin_2",
+   "name": "{name:role:standby_jonin_2}",
+   "placeholder": "Standby Jonin 2",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "clan": "",
+   "specialty": "ninjutsu (water)",
+   "first": "beta2",
+   "levels": {
+    "academy": 32,
+    "genin": 32,
+    "exams": 32
+   },
+   "group": "standby",
+   "where": "standby_station"
+  },
+  {
+   "role": "role:standby_jonin_3",
+   "name": "{name:role:standby_jonin_3}",
+   "placeholder": "Standby Jonin 3",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "clan": "",
+   "specialty": "genjutsu",
+   "first": "beta2",
+   "levels": {
+    "academy": 31,
+    "genin": 31,
+    "exams": 31
+   },
+   "group": "standby",
+   "where": "standby_station"
+  },
+  {
+   "role": "role:clan_head.senju",
+   "name": "{name:role:clan_head.senju}",
+   "placeholder": "Head of the Senju",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "named",
+   "clan": "senju",
+   "specialty": "ninjutsu (wood)",
+   "first": "beta2",
+   "levels": {
+    "academy": 36,
+    "genin": 36,
+    "exams": 36
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.uzumaki",
+   "name": "{name:role:clan_head.uzumaki}",
+   "placeholder": "Head of the Uzumaki",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "named",
+   "clan": "uzumaki",
+   "specialty": "sealing",
+   "first": "beta2",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.hyuga",
+   "name": "{name:role:clan_head.hyuga}",
+   "placeholder": "Head of the Hyuga",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "hyuga",
+   "specialty": "taijutsu (gentle fist)",
+   "first": "beta2",
+   "levels": {
+    "academy": 41,
+    "genin": 41,
+    "exams": 41
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.akimichi",
+   "name": "{name:role:clan_head.akimichi}",
+   "placeholder": "Head of the Akimichi",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "akimichi",
+   "specialty": "taijutsu (expansion)",
+   "first": "beta2",
+   "levels": {
+    "academy": 38,
+    "genin": 38,
+    "exams": 38
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.yamanaka",
+   "name": "{name:role:clan_head.yamanaka}",
+   "placeholder": "Head of the Yamanaka",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "yamanaka",
+   "specialty": "sensing (mind)",
+   "first": "beta2",
+   "levels": {
+    "academy": 37,
+    "genin": 37,
+    "exams": 37
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.inuzuka",
+   "name": "{name:role:clan_head.inuzuka}",
+   "placeholder": "Head of the Inuzuka",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "named",
+   "clan": "inuzuka",
+   "specialty": "tracking, with ninken",
+   "first": "beta2",
+   "levels": {
+    "academy": 36,
+    "genin": 36,
+    "exams": 36
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.sarutobi",
+   "name": "{name:role:clan_head.sarutobi}",
+   "placeholder": "Head of the Sarutobi",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "clan": "sarutobi",
+   "specialty": "ninjutsu (fire)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 35,
+    "genin": 35,
+    "exams": 35
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.aburame",
+   "name": "{name:role:clan_head.aburame}",
+   "placeholder": "Head of the Aburame",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "clan": "aburame",
+   "specialty": "tracking (insects)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 35,
+    "genin": 35,
+    "exams": 35
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.kurama",
+   "name": "{name:role:clan_head.kurama}",
+   "placeholder": "Head of the Kurama",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "clan": "kurama",
+   "specialty": "genjutsu",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 30,
+    "genin": 30,
+    "exams": 30
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.shimura",
+   "name": "{name:role:clan_head.shimura}",
+   "placeholder": "Head of the Shimura",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "clan": "shimura",
+   "specialty": "ninjutsu (wind)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 32,
+    "genin": 32,
+    "exams": 32
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.yuhi",
+   "name": "{name:role:clan_head.yuhi}",
+   "placeholder": "Head of the Yuhi",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "clan": "yuhi",
+   "specialty": "genjutsu",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 34,
+    "genin": 34,
+    "exams": 34
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.gekko",
+   "name": "{name:role:clan_head.gekko}",
+   "placeholder": "Head of the Gekko",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "background",
+   "clan": "gekko",
+   "specialty": "kenjutsu",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.shiranui",
+   "name": "{name:role:clan_head.shiranui}",
+   "placeholder": "Head of the Shiranui",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "clan": "shiranui",
+   "specialty": "tools (senbon)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 26,
+    "genin": 26,
+    "exams": 26
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.umino",
+   "name": "{name:role:clan_head.umino}",
+   "placeholder": "Head of the Umino",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "clan": "umino",
+   "specialty": "teaching",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 24,
+    "genin": 24,
+    "exams": 24
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.haruno",
+   "name": "{name:role:clan_head.haruno}",
+   "placeholder": "Head of the Haruno",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "clan": "haruno",
+   "specialty": "chakra control",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 22,
+    "genin": 22,
+    "exams": 22
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.namiashi",
+   "name": "{name:role:clan_head.namiashi}",
+   "placeholder": "Head of the Namiashi",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "clan": "namiashi",
+   "specialty": "taijutsu (footwork)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 23,
+    "genin": 23,
+    "exams": 23
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.hagane",
+   "name": "{name:role:clan_head.hagane}",
+   "placeholder": "Head of the Hagane",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "clan": "hagane",
+   "specialty": "tools (metalwork)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 22,
+    "genin": 22,
+    "exams": 22
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.kinoshita",
+   "name": "{name:role:clan_head.kinoshita}",
+   "placeholder": "Head of the Kinoshita",
+   "rank": "retired",
+   "tier": "C",
+   "importance": "background",
+   "clan": "kinoshita",
+   "specialty": "tools (carpentry)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 18,
+    "genin": 18,
+    "exams": 18
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.tsuchigumo",
+   "name": "{name:role:clan_head.tsuchigumo}",
+   "placeholder": "Head of the Tsuchigumo",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "clan": "tsuchigumo",
+   "specialty": "ninjutsu (earth binding)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 27,
+    "genin": 27,
+    "exams": 27
+   },
+   "group": "clan_heads"
+  },
+  {
+   "role": "role:clan_head.tobari",
+   "name": "{name:role:clan_head.tobari}",
+   "placeholder": "Head of the Tobari",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "clan": "tobari",
+   "specialty": "sensing (sound)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 26,
+    "genin": 26,
+    "exams": 26
+   },
+   "group": "clan_heads"
+  }
+ ],
+ "civilians": [
+  {
+   "role": "role:librarian",
+   "name": "{name:role:librarian}",
+   "placeholder": "The Librarian",
+   "rank": "civilian",
+   "first": "beta1",
+   "story": true,
+   "where": "academy_library"
+  },
+  {
+   "role": "role:merchant",
+   "name": "{name:role:merchant}",
+   "placeholder": "The Travelling Merchant",
+   "rank": "civilian",
+   "first": "beta2",
+   "story": true,
+   "where": "east_road"
+  },
+  {
+   "role": "role:residence_clerk",
+   "name": "{name:role:residence_clerk}",
+   "placeholder": "The Hokage's Clerk",
+   "rank": "civilian",
+   "first": "beta1",
+   "where": "residence"
+  }
+ ]
+}

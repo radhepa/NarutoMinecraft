@@ -1,0 +1,116 @@
+{
+ "format": 1,
+ "_doc": "How the Leaf's residents get their ranks (docs/RANKS.md, \"Head counts\"). A proposal for the population sampler in tools/wardrobe/: it reads this file and does not change population.json. A marker with a job takes that job's rank. A marker bound to a named role takes the role's rank from roster.json. Every other resident draws a rank by weight for their group (civilian, clanless, minor clan or noble clan), from the save seed's population stream. The unique posts (Hokage, elders, the Jonin Commander, ANBU) are never drawn: they exist only as fixed markers. weights are residents per group at the village's 300; tools/roster/roster.py --check holds them to the head-count targets and population.json's shares.",
+ "residents": 300,
+ "fixed": {
+  "kage": 1,
+  "elder": 2,
+  "jonin_commander": 1,
+  "anbu": 6
+ },
+ "by_group": {
+  "civilian": {
+   "civilian": 134
+  },
+  "clanless": {
+   "academy": 16,
+   "genin": 17,
+   "chunin": 23,
+   "special_jonin": 4,
+   "jonin": 5,
+   "elite_jonin": 2,
+   "retired": 11
+  },
+  "minor": {
+   "academy": 8,
+   "genin": 8,
+   "chunin": 13,
+   "special_jonin": 3,
+   "jonin": 5,
+   "retired": 8
+  },
+  "noble": {
+   "academy": 8,
+   "genin": 7,
+   "chunin": 5,
+   "special_jonin": 1,
+   "jonin": 8,
+   "elite_jonin": 2,
+   "retired": 2
+  }
+ },
+ "fixed_groups": {
+  "kage": "noble",
+  "elder": "noble",
+  "jonin_commander": "noble",
+  "anbu": "clanless"
+ },
+ "targets": {
+  "kage": 1,
+  "elder": 2,
+  "jonin_commander": 1,
+  "anbu": 6,
+  "elite_jonin": 4,
+  "jonin": 18,
+  "special_jonin": 8,
+  "chunin": 41,
+  "genin": 32,
+  "academy": 32,
+  "retired": 21,
+  "civilian": 134
+ },
+ "outfit_rank": {
+  "kage": "kage",
+  "elder": "civilian",
+  "jonin_commander": "jonin",
+  "anbu": "anbu",
+  "elite_jonin": "jonin",
+  "jonin": "jonin",
+  "special_jonin": "jonin",
+  "chunin": "chunin",
+  "genin": "genin",
+  "academy": "academy",
+  "retired": "civilian",
+  "civilian": "civilian"
+ },
+ "jobs": {
+  "_doc": "Marker job tags that fix a rank, for the Konoha layout's markers (tools/konoha/layout.json).",
+  "gate_guard": "chunin",
+  "night_watch": "chunin",
+  "desk_chunin": "chunin",
+  "academy_teacher": "chunin",
+  "hospital_medic": "chunin",
+  "police_officer": "chunin",
+  "standby_jonin": "jonin",
+  "police_chief": "jonin",
+  "interrogator": "special_jonin",
+  "head_medic": "special_jonin",
+  "anbu_post": "anbu",
+  "residence_clerk": "civilian",
+  "shopkeeper": "civilian",
+  "retired_veteran": "retired"
+ },
+ "away": {
+  "_doc": "Each day, about this share of each rank is away on missions: VF's schedule keeps them off the map (at the gate, out of the village). The rest are home, training or on duty.",
+  "genin": 0.25,
+  "chunin": 0.35,
+  "special_jonin": 0.3,
+  "jonin": 0.4,
+  "elite_jonin": 0.5,
+  "anbu": 0.5
+ },
+ "lore": {
+  "_doc": "The village's whole forces as the dialogue, the standby roster boards and the mission logs speak of them. The map holds about one in ten of the Leaf's active shinobi (113 of about 1,100).",
+  "kage": 1,
+  "elder": 2,
+  "jonin_commander": 1,
+  "anbu": 90,
+  "elite_jonin": 20,
+  "jonin": 110,
+  "special_jonin": 45,
+  "chunin": 480,
+  "genin": 360,
+  "academy": 240,
+  "retired": 300
+ }
+}
