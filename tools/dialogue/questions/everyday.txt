@@ -1,7 +1,7 @@
 # Friendship questions about everyday life: small tastes, small choices, the village's habits.
 # Axis poles: honesty_vs_kindness (1 honesty, -1 kindness), rules_or_results (1 rules, -1 results).
 
-? q.pref.weather | fn: deepen_bond reveal_character | level: 2
+? q.pref.weather | fn: deepen_bond reveal_character | level: 2 | per_friend: yes
 Q: What's your favourite kind of weather?
 Q: If you could pick tomorrow's weather, what would it be?
 - Bright sunshine :: Warm stones and dry training grounds. Good choice. {values:+freedom} {tone:warm}
@@ -40,7 +40,7 @@ Q: Everyone has a little collection somewhere. What's yours?
 - Recipes :: A recipe collector! You must share some. {values:+family} {tone:warm}
 - Nothing, yet :: Then let me start you off. Here. A button from my coat. {values:+freedom} {tone:teasing}
 
-? q.pref.ramen_order | fn: deepen_bond | level: 2
+? q.pref.ramen_order | fn: deepen_bond | level: 2 | per_friend: yes
 Q: How do you take your ramen? This matters.
 Q: At Ichiraku, what's your order? Be precise.
 - Miso :: Rich and warming. The sensible choice. {values:+family} {tone:warm}
@@ -156,7 +156,7 @@ Q: Your friend's lucky kunai is at the bottom of the river, thanks to you. What 
 - Replace it quietly :: Spare them the worry. Kind, if they never notice. {values:+kindness} {tone:evasive} {pole:-1}
 - Tell them and replace it :: Both. That's the full apology. {values:+honesty +duty} {tone:dutiful}
 
-? q.village.best_food | fn: deepen_bond reveal_character worldbuild | level: 2 | public: yes
+? q.village.best_food | fn: deepen_bond reveal_character worldbuild | level: 2 | public: yes | per_friend: yes
 Q: Who makes the best food in the village?
 Q: Settle an argument for me: best cooking in the Leaf?
 - Ichiraku :: The classic answer, and probably the right one. {values:+family} {tone:loyal}

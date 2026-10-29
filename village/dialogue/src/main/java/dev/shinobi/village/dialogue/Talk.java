@@ -14,8 +14,8 @@ import java.util.Set;
  *   <li><b>The most specific line wins.</b> A topic picks a facet by weight (greet: the time, the weather, their
  *       personality...), then the fresh line with the highest specificity among those whose tags and condition hold.
  *       Explicit pool lists (the bond engine's keys) are tried in order.</li>
- *   <li><b>A talk budget.</b> Each speaker gives a few fresh exchanges a day and, unless they are cast, a lifetime
- *       allowance that grows with the bond. The first greeting of the day is free; news, bond moments, quests,
+ *   <li><b>A talk budget.</b> Each speaker gives a few fresh exchanges a day, banked on days you do not talk (up to
+ *       three days' worth), and, unless they are cast, a lifetime allowance that grows with the bond. The first greeting of the day is free; news, bond moments, quests,
  *       missions, barks and shop talk are exempt.</li>
  *   <li><b>Beyond the budget, they repeat.</b> Past it, or when nothing fresh fits, the first ask gets a
  *       "we already talked" line in their voice, the second a line they said before, and the third a polite close that
@@ -116,9 +116,22 @@ public final class Talk {
     }
     private boolean allowed(Heard.Speaker s, Context c) {
         var tier = rules.tier(c.get("tier"));
-        if (s.today >= tier.daily()) return false;
+        if (credits(s, tier) <= 0) return false;
         Integer life = tier.lifetime(c.level(), slices(c));
         return life == null || s.lifetime < life;
+    }
+    /**
+     * Today's fresh exchanges in hand. A speaker's unused allowance is banked on days without talk, up to the tier's
+     * bank (three days' worth), so a friend you have not seen in a while has more to say, and it plays out over the
+     * visit. Only the count is banked, never lines: what is said is chosen now, from what fits now.
+     */
+    private static int credits(Heard.Speaker s, Rules.Tier tier) {
+        if (s.creditDay < 0) { s.credits = tier.daily(); s.creditDay = s.day; }
+        else if (s.creditDay != s.day) {
+            s.credits = Math.min(tier.bankCap(), s.credits + tier.daily() * Math.max(0, s.day - s.creditDay));
+            s.creditDay = s.day;
+        }
+        return s.credits;
     }
     private static int slices(Context c) {
         String slice = c.get("slice");
@@ -131,7 +144,7 @@ public final class Talk {
         s.fresh++;
         if (line.filler()) s.filler++;
         if (greeting) s.greetDay = day;
-        if (!free) { s.today++; s.lifetime++; }
+        if (!free) { s.today++; s.lifetime++; s.credits--; }
         return new Said(Outcome.FRESH, Why.NONE, line, Tokens.fill(line.text(), c, names));
     }
 
@@ -269,12 +282,15 @@ public final class Talk {
         return fit.get(r.nextInt(fit.size()));
     }
     /**
-     * Whether this speaker may ask this question now: never answered (by anyone), within the bond level, its tags and
+     * Whether this speaker may ask this question now: never answered (by anyone; a per-friend question, never by this
+     * speaker, and only by a close friend), within the bond level, its tags and
      * condition holding, the question it follows answered, its first phrasing fillable, and a fresh exchange left in
      * the speaker's budget. The bond engine's veto.
      */
     public boolean askable(String speaker, Question q, Context c, int day) {
-        if (heard.heard(q.num()) || q.level() > c.level() || !q.tags().matches(c) || !conditions.test(q.when(), c)) return false;
+        if (q.perFriend() ? heard.askedBy.contains(q.num() + "@" + speaker) || c.level() < Math.max(q.level(), Question.CLOSE_FRIEND)
+                : heard.heard(q.num()) || q.level() > c.level()) return false;
+        if (!q.tags().matches(c) || !conditions.test(q.when(), c)) return false;
         if (q.follows() != null && heard.answer(q.follows()) == null) return false;
         if (Tokens.fill(q.asks().getFirst(), c, names) == null) return false;
         var s = heard.speaker(speaker, rules.recall());
@@ -295,9 +311,10 @@ public final class Talk {
         var a = q.answer(answerId);
         var s = heard.speaker(speaker, rules.recall());
         s.roll(day);
-        heard.lines.set(q.num());
+        if (q.perFriend()) heard.askedBy.add(q.num() + "@" + speaker); else heard.lines.set(q.num());
         heard.answers.put(q.id(), a.id());
-        s.today++; s.lifetime++; s.fresh++;
+        allowed(s, c);
+        s.today++; s.lifetime++; s.fresh++; s.credits--;
         String contradicts = null;
         if (q.axis() != null && a.pole() != 0) {
             String before = heard.axes.get(q.axis());

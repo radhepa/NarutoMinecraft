@@ -1,7 +1,7 @@
 # Friendship questions about the village: favourite places, change, clans, crowds and quiet.
 # Axis poles: tradition_or_change (1 tradition, -1 change), alone_or_together (1 alone, -1 together).
 
-? q.village.favorite_place | fn: deepen_bond reveal_character worldbuild | level: 2
+? q.village.favorite_place | fn: deepen_bond reveal_character worldbuild | level: 2 | per_friend: yes
 Q: What's your favourite place in the village?
 Q: If I wanted to find you on a free afternoon, where would I look?
 - Ichiraku :: The counter, the steam, the smell of broth. Can't argue. {values:+family} {tone:warm}
@@ -60,7 +60,7 @@ Q: More merchants and visitors from far away: good for the village, or not?
 - Carefully :: Welcome, but with an eye on them. The gate guards would agree. {values:+duty} {tone:stern} {pole:1}
 - Friends, not strangers :: Get to know them first. A sensible middle. {values:+loyalty} {tone:humble}
 
-? q.village.festival_stall | fn: deepen_bond reveal_character | level: 2
+? q.village.festival_stall | fn: deepen_bond reveal_character | level: 2 | per_friend: yes
 Q: At the Leaf Festival, would you rather run a stall, or just enjoy it?
 Q: If you had a festival stall, what would you sell? Or would you rather just wander?
 - Run a stall :: Ha! I'd buy whatever you're selling. Probably. {values:+creativity +duty} {tone:bold}

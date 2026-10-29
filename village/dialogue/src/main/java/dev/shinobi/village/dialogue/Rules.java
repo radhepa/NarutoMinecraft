@@ -23,10 +23,13 @@ public record Rules(Map<String, Tier> tiers, List<String> exempt, double fillerC
     }
 
     /**
-     * Fresh exchanges a speaker of a tier gives the player: {@code daily} per in-game day, and over a lifetime
-     * {@code base + perLevel x level + perSlice x slices} ({@code base} null: no lifetime cap).
+     * Fresh exchanges a speaker of a tier gives the player: {@code daily} per in-game day, banked on days without
+     * talk up to {@code bankDays} days' worth, and over a lifetime {@code base + perLevel x level + perSlice x slices}
+     * ({@code base} null: no lifetime cap).
      */
-    public record Tier(int daily, Integer base, int perLevel, int perSlice) {
+    public record Tier(int daily, Integer base, int perLevel, int perSlice, int bankDays) {
+        /** The most fresh exchanges a speaker can hold: today's and those banked on days without talk. */
+        public int bankCap() { return daily * Math.max(1, bankDays); }
         public Integer lifetime(int level, int slices) { return base == null ? null : base + perLevel * level + perSlice * slices; }
     }
     /** A pool a topic draws from, with its weight and the tag it needs ("event", "weather:!clear", "stage:child", "!"). */
@@ -58,7 +61,7 @@ public record Rules(Map<String, Tier> tiers, List<String> exempt, double fillerC
             var t = Json.map(e.getValue());
             Object base = t.get("base");
             tiers.put(e.getKey(), new Tier(Json.integer(t.get("daily"), 3), base == null ? null : Json.integer(base, 0),
-                    Json.integer(t.get("per_level"), 0), Json.integer(t.get("per_slice"), 0)));
+                    Json.integer(t.get("per_level"), 0), Json.integer(t.get("per_slice"), 0), Json.integer(t.get("bank_days"), 1)));
         }
         var exempt = new ArrayList<String>();
         for (var x : Json.list(budget.get("exempt"))) exempt.add(x.toString());

@@ -12,6 +12,7 @@ import java.util.Set;
 final class Fixture {
     static final String RULES = """
             {"budget": {"tiers": {"cast": {"daily": 6, "base": null},
+                                  "named": {"daily": 2, "bank_days": 3, "base": null},
                                   "resident": {"daily": 3, "base": 6, "per_level": 2, "per_slice": 0},
                                   "passerby": {"daily": 1, "base": 2, "per_level": 0}},
                         "exempt": ["bond.heard", "combat"]},
@@ -62,13 +63,16 @@ final class Fixture {
     }
 
     Fixture question(String id, int level, String axis, String follows, int depth, String... answersWithPoles) {
+        return question(false, id, level, axis, follows, depth, answersWithPoles);
+    }
+    Fixture question(boolean perFriend, String id, int level, String axis, String follows, int depth, String... answersWithPoles) {
         var answers = new ArrayList<Question.Answer>();
         for (int k = 0; k < answersWithPoles.length; k++) {
             int pole = Integer.parseInt(answersWithPoles[k]);
             answers.add(new Question.Answer("a" + (k + 1), "Answer " + (k + 1), "Reply " + (k + 1), null, Map.of(), "warm", pole, List.of()));
         }
         questions.put(id, new Question(id, next++, List.of("deepen_bond"), level, Tags.NONE, null, axis, follows, depth,
-                List.of("Ask " + id + "?"), List.copyOf(answers)));
+                List.of("Ask " + id + "?"), List.copyOf(answers), perFriend));
         return this;
     }
 

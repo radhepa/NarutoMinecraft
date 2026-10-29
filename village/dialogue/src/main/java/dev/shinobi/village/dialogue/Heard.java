@@ -18,7 +18,7 @@ import java.util.Map;
  */
 public final class Heard {
     public static final int FORMAT = 1;
-    private static final int FIXED = 9;
+    private static final int FIXED = 11;
 
     final BitSet lines = new BitSet();
     final BitSet groups = new BitSet();
@@ -26,12 +26,16 @@ public final class Heard {
     final Map<String, String> answers = new LinkedHashMap<>();
     /** For each question axis, the pole last taken and on which question: "pole:question". */
     final Map<String, String> axes = new HashMap<>();
+    /** Per-friend questions answered, as "question number@speaker". */
+    final java.util.Set<String> askedBy = new java.util.TreeSet<>();
     /** Questions asked across everyone today. */
     int askDay = -1, asksToday;
 
-    /** What one speaker has said to the player (saved as base-36 numbers: day, today, over, greeting day, lifetime, fresh, filler, the day of their last question, then the recall ring). */
+    /** What one speaker has said to the player (saved as base-36 numbers: day, today, over, greeting day, lifetime, fresh, filler, the day of their last question, credits, the credits' day, then the recall ring). */
     public static final class Speaker {
         int day = -1, today, over, greetDay = -1, askDay = -1000;
+        /** Fresh exchanges in hand: today's allowance plus what was banked on days without talk, as of {@code creditDay}. */
+        int credits, creditDay = -1;
         int lifetime, fresh, filler;
         final int[] recall;
         int recallNext;
@@ -47,6 +51,7 @@ public final class Heard {
             recallNext = (recallNext + 1) % recall.length;
         }
         public int today() { return today; }
+        public int credits() { return credits; }
         public int lifetime() { return lifetime; }
         public int fresh() { return fresh; }
         public int filler() { return filler; }
@@ -78,7 +83,7 @@ public final class Heard {
         for (var e : speakers.entrySet()) {
             var s = e.getValue();
             var b = new StringBuilder();
-            for (int v : new int[] {s.day, s.today, s.over, s.greetDay, s.lifetime, s.fresh, s.filler, s.askDay, s.recallNext})
+            for (int v : new int[] {s.day, s.today, s.over, s.greetDay, s.lifetime, s.fresh, s.filler, s.askDay, s.credits, s.creditDay, s.recallNext})
                 b.append(Integer.toString(v, 36)).append(',');
             for (int r : s.recall) b.append(Integer.toString(r, 36)).append(',');
             b.setLength(b.length() - 1);
@@ -88,6 +93,7 @@ public final class Heard {
         out.put("answers", new LinkedHashMap<>(answers));
         out.put("axes", new LinkedHashMap<>(axes));
         out.put("asks", askDay + "," + asksToday);
+        out.put("asked_by", new ArrayList<>(askedBy));
         return out;
     }
     public static Heard read(Map<String, Object> saved, int recall) {
@@ -102,12 +108,13 @@ public final class Heard {
             for (int k = 0; k < t.length; k++) f[k] = Integer.parseInt(t[k], 36);
             var s = new Speaker(Math.max(recall, f.length - FIXED));
             s.day = f[0]; s.today = f[1]; s.over = f[2]; s.greetDay = f[3]; s.lifetime = f[4]; s.fresh = f[5]; s.filler = f[6];
-            s.askDay = f[7]; s.recallNext = f[8] % s.recall.length;
+            s.askDay = f[7]; s.credits = f[8]; s.creditDay = f[9]; s.recallNext = f[10] % s.recall.length;
             for (int k = FIXED; k < f.length && k - FIXED < s.recall.length; k++) s.recall[k - FIXED] = f[k];
             h.speakers.put(e.getKey(), s);
         }
         for (var e : Json.map(saved.get("answers")).entrySet()) h.answers.put(e.getKey(), e.getValue().toString());
         for (var e : Json.map(saved.get("axes")).entrySet()) h.axes.put(e.getKey(), e.getValue().toString());
+        for (var a : Json.list(saved.get("asked_by"))) h.askedBy.add(a.toString());
         String asks = Json.str(saved.get("asks"));
         if (asks != null) { h.askDay = Integer.parseInt(asks.split(",")[0]); h.asksToday = Integer.parseInt(asks.split(",")[1]); }
         return h;

@@ -39,6 +39,18 @@ class QuestionsAndLedgerTest {
         assertNull(other.ask("x", FRIEND.with("level", 3), 2, r), "the follow-up waits for its level");
     }
 
+    @Test void aPerFriendQuestionIsAskedOnceByEachCloseFriend() {
+        var talk = new Fixture().question(true, "q.pref.season", 2, null, null, 1, "0", "0").talk();
+        var r = Fixture.random();
+        var close = FRIEND.with("level", 5);
+        talk.answer("x", talk.question("q.pref.season"), "a1", close, 1);
+        assertFalse(talk.askable("x", talk.question("q.pref.season"), close, 2), "spent for the friend who asked it");
+        assertTrue(talk.askable("y", talk.question("q.pref.season"), close, 2), "another close friend may ask it too");
+        assertFalse(talk.askable("z", talk.question("q.pref.season"), FRIEND.with("level", 3), 2), "only close friends");
+        var back = Heard.read(talk.heard().write(), 6);
+        assertTrue(back.askedBy.contains(talk.question("q.pref.season").num() + "@x"), "kept in the save");
+    }
+
     @Test void anAnswerOnTheOtherSideOfAnAxisIsAContradiction() {
         var talk = new Fixture()
                 .question("q.plans.stay", 0, "stay_or_go", null, 1, "1", "-1")
