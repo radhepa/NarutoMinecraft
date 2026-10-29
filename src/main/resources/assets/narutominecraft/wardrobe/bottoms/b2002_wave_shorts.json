@@ -1,0 +1,15 @@
+{
+  "id": "b2002_wave_shorts",
+  "kind": "bottom",
+  "name": "Wave Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/b2002_wave_shorts.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Knee-length teal shorts with wave-rolled cuffs, bare shins, dark sandals."
+}

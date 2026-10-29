@@ -1,0 +1,133 @@
+{
+  "id": "t2001_guard_vest",
+  "kind": "top",
+  "name": "Guard's Plate Vest",
+  "gender": "unisex",
+  "texture": "tops/t2001_guard_vest.png",
+  "extrasHeight": 16,
+  "tags": [
+    "jonin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "kokuto_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        9.4,
+        2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        -84
+      ],
+      "origin": [
+        -0.5,
+        -3,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "kokuto_guard",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        9.4,
+        2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        -84
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "kokuto_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        9.4,
+        2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        -84
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Deep teal lamellar vest with a stand collar over a dark undersuit, wave-trimmed hem, kokuto at the back."
+}

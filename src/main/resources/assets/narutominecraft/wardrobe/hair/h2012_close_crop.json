@@ -1,0 +1,42 @@
+{
+  "id": "h2012_close_crop",
+  "kind": "hair",
+  "name": "Close Crop",
+  "gender": "unisex",
+  "texture": "hair/h2012_close_crop.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "ridge",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.8,
+        0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -3
+      ],
+      "size": [
+        2,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "Hair cut to a short soldier's nap all over, a faint ridge at the crown."
+}

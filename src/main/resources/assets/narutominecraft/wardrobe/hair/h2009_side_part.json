@@ -1,0 +1,126 @@
+{
+  "id": "h2009_side_part",
+  "kind": "hair",
+  "name": "Side Part",
+  "gender": "unisex",
+  "texture": "hair/h2009_side_part.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sweep",
+      "bone": "HEAD",
+      "pivot": [
+        -2.2,
+        -8.1,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        0
+      ],
+      "size": [
+        6,
+        2,
+        4
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "wave_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.6,
+        -8.6,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        20
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "wave_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.138918542133545,
+        -7.119333474562682,
+        -4.627837084267088
+      ],
+      "rotation": [
+        -10,
+        0,
+        60
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        28,
+        0
+      ]
+    },
+    {
+      "id": "tip_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.9,
+        -8.6,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -28
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    }
+  ],
+  "description": "Neat short cut parted on the left, the long side swept across the brow in one smooth wave."
+}

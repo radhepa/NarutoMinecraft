@@ -1,0 +1,15 @@
+{
+  "id": "b2004_bound_leggings",
+  "kind": "bottom",
+  "name": "Bound Leggings",
+  "gender": "unisex",
+  "texture": "bottoms/b2004_bound_leggings.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Fitted dark leggings, pale bindings from ankle to knee edged with the wave, tabi boots."
+}

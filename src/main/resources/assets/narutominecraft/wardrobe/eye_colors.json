@@ -164,6 +164,16 @@
         "#f2eee6"
       ]
     },
+    "NAMIASHI_SLATE": {
+      "name": "Namiashi Slate",
+      "ramp": [
+        "#0b0c0e",
+        "#26303a",
+        "#3a4855",
+        "#5d6e7c",
+        "#eeeeea"
+      ]
+    },
     "NARA_BARK": {
       "name": "Nara Bark",
       "ramp": [

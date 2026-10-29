@@ -288,7 +288,22 @@
     "h1512_shoulder_sweep",
     "h1513_strap_braid",
     "h1514_iai_gust",
-    "h1515_crossed_pin_bun"
+    "h1515_crossed_pin_bun",
+    "h2001_guard_crop",
+    "h2002_breaking_fringe",
+    "h2003_crest_spikes",
+    "h2004_foam_bob",
+    "h2005_tide_tail",
+    "h2006_undertow_braid",
+    "h2007_wave_curtain",
+    "h2008_sentinel_knot",
+    "h2009_side_part",
+    "h2010_shaggy_guard",
+    "h2011_twin_currents",
+    "h2012_close_crop",
+    "h2013_half_up_tail",
+    "h2014_low_sweep",
+    "h2015_sea_wind"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -337,7 +352,10 @@
     "w1402_crimson_protector",
     "w1501_proctor_bandana",
     "w1502_cat_mask",
-    "w1503_crescent_hachimaki"
+    "w1503_crescent_hachimaki",
+    "w2001_guard_bandana",
+    "w2002_wave_hachimaki",
+    "w2003_tide_protector"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -510,7 +528,17 @@
     "t1507_convalescent_wrap",
     "t1508_practice_gi",
     "t1509_scarf_knit",
-    "t1510_tasuki_iaido"
+    "t1510_tasuki_iaido",
+    "t2001_guard_vest",
+    "t2002_wave_hem_tunic",
+    "t2003_academy_tee",
+    "t2004_ink_haori",
+    "t2005_harness_shirt",
+    "t2006_tide_jacket",
+    "t2007_sentinel_coat",
+    "t2008_crossed_wrap",
+    "t2009_practice_gi",
+    "t2010_wave_hoodie"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -594,7 +622,11 @@
     "b1405_bandaged_shorts",
     "b1501_gekko_hakama",
     "b1502_swordsman_trousers",
-    "b1503_strap_leggings"
+    "b1503_strap_leggings",
+    "b2001_guard_trousers",
+    "b2002_wave_shorts",
+    "b2003_tide_skirt",
+    "b2004_bound_leggings"
   ],
   "characters": [
     {
@@ -1279,6 +1311,60 @@
         ]
       ],
       "color": null,
+      "mirror": false
+    },
+    "namiashi_burn": {
+      "rects": [
+        [
+          2.0,
+          -1.95,
+          2.0,
+          0.5
+        ],
+        [
+          2.4,
+          -1.45,
+          1.6,
+          0.55
+        ],
+        [
+          2.9,
+          -0.9,
+          1.1,
+          0.5
+        ],
+        [
+          3.4,
+          -0.4,
+          0.6,
+          0.35
+        ],
+        [
+          1.7,
+          -1.7,
+          0.3,
+          0.3
+        ]
+      ],
+      "color": "#8a5a52",
+      "mirror": false
+    },
+    "namiashi_faded_burn": {
+      "rects": [
+        [
+          -3.9,
+          -1.6,
+          1.3,
+          0.45
+        ],
+        [
+          -3.6,
+          -1.15,
+          0.8,
+          0.4
+        ]
+      ],
+      "color": "#a7756b",
       "mirror": false
     },
     "nara_cheek_scar": {
@@ -3818,6 +3904,352 @@
             "KURAMA_UMBER",
             "KURAMA_WISTERIA"
           ]
+        }
+      ]
+    },
+    {
+      "id": "namiashi",
+      "name": "Namiashi",
+      "tagline": "Quiet swordsmen of the Hokage's guard, the 'wave-foot' family: deep teal-black and ink-blue cloth with pale grey wave trims, a black kokuto across the back or at the hip, and sometimes the burn scar the clan wears as a mark.",
+      "standing": "minor",
+      "ability": null,
+      "palettes": {
+        "NAMIASHI_TIDE": {
+          "name": "Namiashi Tide",
+          "P": "#1e3b3e",
+          "S": "#c3cacc",
+          "A": "#2c4372",
+          "L": "#3a302a",
+          "M": "#a7b1b6",
+          "K": "#101416",
+          "D": "#1a2533"
+        },
+        "NAMIASHI_INK": {
+          "name": "Namiashi Ink",
+          "P": "#22325a",
+          "S": "#cfd4d6",
+          "A": "#3b7a7c",
+          "L": "#3b322c",
+          "M": "#a9b2b8",
+          "K": "#0f1216",
+          "D": "#17292c"
+        },
+        "NAMIASHI_GUARD": {
+          "name": "Namiashi Guard",
+          "P": "#283536",
+          "S": "#b5bdbf",
+          "A": "#46858a",
+          "L": "#342c27",
+          "M": "#b0b8bd",
+          "K": "#0e1112",
+          "D": "#1c2628"
+        },
+        "NAMIASHI_FOAM": {
+          "name": "Namiashi Foam",
+          "P": "#a3adb1",
+          "S": "#e9ecec",
+          "A": "#1f4c55",
+          "L": "#463a32",
+          "M": "#c0c7cb",
+          "K": "#141819",
+          "D": "#253a3e"
+        },
+        "NAMIASHI_DEEPWATER": {
+          "name": "Namiashi Deepwater",
+          "P": "#15302f",
+          "S": "#93a9ab",
+          "A": "#d3d8d8",
+          "L": "#2f2925",
+          "M": "#9aa6ab",
+          "K": "#0c1011",
+          "D": "#20304a"
+        },
+        "NAMIASHI_SLATE": {
+          "name": "Namiashi Slate",
+          "P": "#3c4955",
+          "S": "#d6dadb",
+          "A": "#2f6b6e",
+          "L": "#43382f",
+          "M": "#b4bcc0",
+          "K": "#121518",
+          "D": "#1d3133"
+        }
+      },
+      "hair_colors": {
+        "NAMIASHI_UMBER": {
+          "name": "Namiashi Umber",
+          "ramp": [
+            "#1a120e",
+            "#2a1d16",
+            "#3b2a20",
+            "#533c2d",
+            "#715340"
+          ]
+        },
+        "NAMIASHI_INK": {
+          "name": "Namiashi Ink",
+          "ramp": [
+            "#0c0f14",
+            "#151a22",
+            "#1f2633",
+            "#2e3949",
+            "#465567"
+          ]
+        },
+        "NAMIASHI_TEAL": {
+          "name": "Namiashi Teal",
+          "ramp": [
+            "#0b1213",
+            "#132022",
+            "#1d2f31",
+            "#2b4446",
+            "#43605f"
+          ]
+        },
+        "NAMIASHI_ASH": {
+          "name": "Namiashi Ash",
+          "ramp": [
+            "#2b2d2e",
+            "#3f4243",
+            "#575b5c",
+            "#767a7a",
+            "#9ea2a1"
+          ]
+        }
+      },
+      "eye_colors": {
+        "NAMIASHI_SLATE": {
+          "name": "Namiashi Slate",
+          "ramp": [
+            "#0b0c0e",
+            "#26303a",
+            "#3a4855",
+            "#5d6e7c",
+            "#eeeeea"
+          ]
+        }
+      },
+      "marks": {
+        "namiashi_burn": {
+          "rects": [
+            [
+              2.0,
+              -1.95,
+              2.0,
+              0.5
+            ],
+            [
+              2.4,
+              -1.45,
+              1.6,
+              0.55
+            ],
+            [
+              2.9,
+              -0.9,
+              1.1,
+              0.5
+            ],
+            [
+              3.4,
+              -0.4,
+              0.6,
+              0.35
+            ],
+            [
+              1.7,
+              -1.7,
+              0.3,
+              0.3
+            ]
+          ],
+          "color": "#8a5a52",
+          "mirror": false
+        },
+        "namiashi_faded_burn": {
+          "rects": [
+            [
+              -3.9,
+              -1.6,
+              1.3,
+              0.45
+            ],
+            [
+              -3.6,
+              -1.15,
+              0.8,
+              0.4
+            ]
+          ],
+          "color": "#a7756b",
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h2001_guard_crop",
+          "h2002_breaking_fringe",
+          "h2003_crest_spikes",
+          "h2004_foam_bob",
+          "h2005_tide_tail",
+          "h2006_undertow_braid",
+          "h2007_wave_curtain",
+          "h2008_sentinel_knot",
+          "h2009_side_part",
+          "h2010_shaggy_guard",
+          "h2011_twin_currents",
+          "h2012_close_crop",
+          "h2013_half_up_tail",
+          "h2014_low_sweep",
+          "h2015_sea_wind"
+        ],
+        "hair_colors": [
+          "NAMIASHI_UMBER",
+          "NAMIASHI_UMBER",
+          "NAMIASHI_INK",
+          "NAMIASHI_TEAL",
+          "ESPRESSO",
+          "RAVEN",
+          "NAMIASHI_ASH"
+        ],
+        "eye_colors": [
+          "NAMIASHI_SLATE",
+          "NAMIASHI_SLATE",
+          "DARK"
+        ],
+        "palettes": [
+          "NAMIASHI_TIDE",
+          "NAMIASHI_INK",
+          "NAMIASHI_GUARD",
+          "NAMIASHI_DEEPWATER",
+          "NAMIASHI_SLATE",
+          "NAMIASHI_FOAM"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w2001_guard_bandana",
+          "w2001_guard_bandana",
+          "w2002_wave_hachimaki",
+          "w2003_tide_protector",
+          "w02_forehead_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          1,
+          2,
+          3
+        ],
+        "marks": [
+          {
+            "id": "namiashi_burn",
+            "chance": 0.2
+          },
+          {
+            "id": "namiashi_faded_burn",
+            "chance": 0.06
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "hokage_guard",
+          "name": "Hokage's Guard",
+          "top": "t2001_guard_vest",
+          "bottom": "b2001_guard_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "NAMIASHI_GUARD",
+            "NAMIASHI_TIDE",
+            "NAMIASHI_DEEPWATER"
+          ]
+        },
+        {
+          "id": "clan_head",
+          "name": "Clan Head",
+          "top": "t2004_ink_haori",
+          "bottom": "b2001_guard_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "NAMIASHI_TIDE",
+            "NAMIASHI_INK",
+            "NAMIASHI_DEEPWATER"
+          ]
+        },
+        {
+          "id": "night_sentinel",
+          "name": "Night Sentinel",
+          "top": "t2007_sentinel_coat",
+          "bottom": "b2004_bound_leggings",
+          "rank": "jonin"
+        },
+        {
+          "id": "guard_blade",
+          "name": "Guard's Blade",
+          "top": "t2005_harness_shirt",
+          "bottom": "b2004_bound_leggings",
+          "rank": "chunin"
+        },
+        {
+          "id": "tide_patrol",
+          "name": "Tide Patrol",
+          "top": "t2006_tide_jacket",
+          "bottom": "b2001_guard_trousers",
+          "rank": "chunin"
+        },
+        {
+          "id": "crossed_wrap",
+          "name": "Crossed Wrap",
+          "top": "t2008_crossed_wrap",
+          "bottom": "b2003_tide_skirt",
+          "rank": "chunin"
+        },
+        {
+          "id": "young_guard",
+          "name": "Young Guard",
+          "top": "t2002_wave_hem_tunic",
+          "bottom": "b2002_wave_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "sword_hall",
+          "name": "Sword Hall",
+          "top": "t2009_practice_gi",
+          "bottom": "b2004_bound_leggings",
+          "rank": "genin",
+          "palettes": [
+            "NAMIASHI_TIDE",
+            "NAMIASHI_INK",
+            "NAMIASHI_GUARD",
+            "NAMIASHI_SLATE"
+          ]
+        },
+        {
+          "id": "academy_tee",
+          "name": "Academy Tee",
+          "top": "t2003_academy_tee",
+          "bottom": "b2002_wave_shorts",
+          "rank": "academy",
+          "palettes": [
+            "NAMIASHI_TIDE",
+            "NAMIASHI_INK",
+            "NAMIASHI_DEEPWATER",
+            "NAMIASHI_SLATE"
+          ]
+        },
+        {
+          "id": "wave_hoodie",
+          "name": "Wave Hoodie",
+          "top": "t2010_wave_hoodie",
+          "bottom": "b2001_guard_trousers",
+          "rank": "academy"
         }
       ]
     },

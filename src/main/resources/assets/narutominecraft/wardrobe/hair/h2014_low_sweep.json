@@ -1,0 +1,214 @@
+{
+  "id": "h2014_low_sweep",
+  "kind": "hair",
+  "name": "Low Sweep",
+  "gender": "unisex",
+  "texture": "hair/h2014_low_sweep.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tie",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.6,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tail_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.0,
+        4.8
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        4,
+        2
+      ],
+      "uv": [
+        11,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.0,
+        4.8
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        22,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.0,
+        4.8
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        7.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.0,
+        4.8
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "temple_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.4,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ]
+    },
+    {
+      "id": "temple_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.4,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ]
+    }
+  ],
+  "description": "Long hair slicked back and gathered low at the nape, a long tail down the spine."
+}

@@ -401,6 +401,46 @@
         "#a0828c"
       ]
     },
+    "NAMIASHI_UMBER": {
+      "name": "Namiashi Umber",
+      "ramp": [
+        "#1a120e",
+        "#2a1d16",
+        "#3b2a20",
+        "#533c2d",
+        "#715340"
+      ]
+    },
+    "NAMIASHI_INK": {
+      "name": "Namiashi Ink",
+      "ramp": [
+        "#0c0f14",
+        "#151a22",
+        "#1f2633",
+        "#2e3949",
+        "#465567"
+      ]
+    },
+    "NAMIASHI_TEAL": {
+      "name": "Namiashi Teal",
+      "ramp": [
+        "#0b1213",
+        "#132022",
+        "#1d2f31",
+        "#2b4446",
+        "#43605f"
+      ]
+    },
+    "NAMIASHI_ASH": {
+      "name": "Namiashi Ash",
+      "ramp": [
+        "#2b2d2e",
+        "#3f4243",
+        "#575b5c",
+        "#767a7a",
+        "#9ea2a1"
+      ]
+    },
     "NARA_PITCH": {
       "name": "Nara Pitch",
       "ramp": [
