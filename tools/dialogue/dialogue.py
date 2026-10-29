@@ -140,6 +140,8 @@ def spoiler_terms():
     text = bible.read_text(encoding='utf-8')
     terms = set()
     for t in re.findall(r'\*\*([^*]{3,30})\*\*', text):
+        if t.rstrip().endswith(('.', ':')):
+            continue  # a bold list label ("**Method.**"), not a name
         t = t.strip(' .,:')
         if t and t[0].isupper() and len(t.split()) <= 3 and not re.search(r'[:(]', t):
             terms.add(t)
