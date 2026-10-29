@@ -132,11 +132,16 @@ public final class Visits {
         String arch = f.archetype(who);
         double q = .5 + .04 * score.tier().ordinal();
         for (var k : home.displayed()) if (k.giver().equals(who) && !home.noticed(who, k.id())) {
-            out.add("home.visit.kept_gift"); home.notice(who, k.id()); f.noticed(who, k.id()); q += .15;
+            home.notice(who, k.id());
+            if (f.noticed(who, k.id())) { out.add("home.visit.kept_gift"); q += .15; }
         }
         for (var p : home.wall()) if (p.people().contains(who) && !home.noticed(who, p.id() + "#" + p.version())) {
-            out.add("home.visit.photo." + p.id()); home.notice(who, p.id() + "#" + p.version()); f.noticed(who, p.id()); q += .1;
+            home.notice(who, p.id() + "#" + p.version());
+            f.noticed(who, p.id() + "#" + p.version());
+            out.add("home.visit.photo." + p.id()); q += .1;
         }
+        long curios = home.displayed().stream().filter(k -> k.kind() == Keepsake.Kind.CURIO).count();
+        if (curios >= 3) out.add("home.visit.curios");
         switch (home.tidiness()) {
             case MESSY -> {
                 if (EASYGOING.contains(arch)) out.add("home.visit.mess.dont_mind");

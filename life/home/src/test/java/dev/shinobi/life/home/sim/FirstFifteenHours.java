@@ -11,7 +11,6 @@ import dev.shinobi.life.home.Comfort;
 import dev.shinobi.life.home.Flat;
 import dev.shinobi.life.home.Home;
 import dev.shinobi.life.home.Practice;
-import dev.shinobi.life.home.Rent;
 import dev.shinobi.life.home.Rest;
 import dev.shinobi.life.home.Visits;
 import java.util.ArrayList;
@@ -36,8 +35,8 @@ public final class FirstFifteenHours {
     public record Slice(String name, int days, int nightsHome, int nightsAway, double homeMinutes, Map<String, Integer> visits,
             int met, int notes, int hosted, int rested, double regen) {}
     public record Snapshot(int day, double comfort, String tier, double style, int pieces, int spent, String perks, int keepsakes, int photos, String plant) {}
-    public record Result(List<Slice> slices, List<Snapshot> comfort, int ryoEnd, int spent, int rentPaid, int cleanings, int messyEvenings,
-            int staleMeals, int keys, String plantStage, double practice, Map<String, Integer> visitsByKind) {}
+    public record Result(List<Slice> slices, List<Snapshot> comfort, int ryoEnd, int spent, int cleanings, int messyEvenings,
+            int staleMeals, int keys, String plantStage, double practice, int storageSlots, Map<String, Integer> visitsByKind) {}
 
     /** The chapters that keep the player away overnight (camp, the far village, the Forest of Death). */
     static boolean awayNight(int d) { return d == 17 || d == 18 || d == 24 || d == 25 || d == 31 || d == 32 || d == 21 || d == 28 || (d >= 37 && d <= 41); }
@@ -56,17 +55,16 @@ public final class FirstFifteenHours {
     static final Map<Integer, String> PHOTOS = Map.of(2, "photo.class", 11, "photo.graduation", 12, "photo.squad", 19, "photo.first_c_rank",
             30, "photo.leaf_festival", 45, "photo.chunin_exams");
     /** What a typical player buys, in order, once it is in the shops and they can afford it. */
-    static final List<String> WISHLIST = List.of("floor_cushion", "tatami_mat", "paper_lamp", "houseplant", "keepsake_shelf", "photo_frame", "scroll_shelf",
-            "pet_bed", "pet_bowl", "folding_screen", "leaf_banner", "cooking_pot", "rug", "curtains", "training_dummy", "photo_frame",
+    static final List<String> WISHLIST = List.of("floor_cushion", "tatami_mat", "paper_lamp", "houseplant", "display_shelf", "photo_frame", "scroll_shelf",
+            "pet_bed", "pet_bowl", "folding_screen", "leaf_banner", "barrel", "rug", "curtains", "training_dummy", "photo_frame",
             "noren_curtain", "ramen_poster", "ramen_cup_tower", "bowl_shelf", "desk", "thick_futon", "meditation_mat", "icebox",
             "andon_lamp", "tea_table", "zabuton_pair", "photo_frame", "balcony_planter", "wind_chime", "display_case", "kotatsu",
-            "hanging_scroll", "keepsake_shelf", "ikebana_vase", "lantern_string", "festival_mask", "photo_frame", "weight_rack", "balcony_bench", "bonsai");
+            "hanging_scroll", "curio_cabinet", "ikebana_vase", "lantern_string", "festival_mask", "photo_frame", "weight_rack", "balcony_bench", "bonsai");
 
-    public static Result run(long seed, boolean rentOn) {
+    public static Result run(long seed) {
         var w = Cast.world(seed);
         var f = new BondFriends(w);
         var home = new Home(BondWorld.PLAYER, Flat.CLASSIC);
-        var rent = new Rent(rentOn);
         var practice = new Practice();
         var rng = Seeds.stream(seed, "home_sim", "typical");
         int ryo = 60, spent = 0, staleMeals = 0, messyEvenings = 0, keys = 0;
@@ -114,15 +112,11 @@ public final class FirstFifteenHours {
             if (d == BETA2) { w.moment(Cast.SENSEI, "ch8.bell_test"); for (String who : Cast.CLASSMATES) w.setRank(who, 1); }
 
             // Money: the stipend in the mailbox, jobs, missions; food; rent on Market Day.
-            ryo += awayMorning ? 0 : home.morning(d, rank);
+            ryo += awayMorning ? Home.STIPEND : home.morning(d);
             if (rank == 0 && rng.chance(.5)) ryo += 60;
             if (dRank(d)) ryo += 100;
             if (cRankReturn(d)) ryo += 450;
             ryo -= rank == 0 ? 15 : 20;
-            if (Math.floorMod(d, 7) == Rent.MARKET_DAY) {
-                var due = rent.weekDue(rank, home.flat(), season, Math.max(0, ryo - 40));
-                ryo -= due.paid();
-            }
             for (var r : REWARDS.getOrDefault(d, List.of())) {
                 if (r.startsWith("keepsake:")) {
                     var k = Catalog.KEEPSAKES.get(r.substring(9));
@@ -215,37 +209,33 @@ public final class FirstFifteenHours {
             w.endDay();
         }
         slices.add(new Slice(current, sliceDays(current), sl[0], sl[1], sd[0], Map.copyOf(sliceVisits), sl[2], sl[3], sl[4], sl[5], sd[1]));
-        return new Result(slices, snaps, ryo, spent, rent.paidTotal(), home.cleanings(), messyEvenings, staleMeals, keys,
-                home.plant.stage().name().toLowerCase(), practice.total(), byKind);
+        return new Result(slices, snaps, ryo, spent, home.cleanings(), messyEvenings, staleMeals, keys,
+                home.plant.stage().name().toLowerCase(), practice.total(), home.storageSlots(), byKind);
     }
     static int sliceDays(String s) { return s.equals("Beta 1") ? BETA2 : s.equals("Beta 2") ? BETA3 - BETA2 : DAYS - BETA3; }
 
     public static void main(String[] args) {
         long seed = args.length > 0 ? Long.parseLong(args[0]) : 20261029;
-        for (boolean rentOn : new boolean[]{false, true}) {
-            var r = run(seed, rentOn);
-            System.out.printf("%n## A typical player's first 15 hours (seed %d, rent %s)%n%n", seed, rentOn ? "on" : "off");
-            if (!rentOn) {
-                System.out.println("| Slice | Days | Nights home / away | Minutes awake at home a day | Visits a week | Met / notes | Hosted | Well Rested nights | Mean bonus |");
-                System.out.println("|---|---|---|---|---|---|---|---|---|");
-                for (var s : r.slices()) {
-                    int total = s.visits().values().stream().mapToInt(Integer::intValue).sum();
-                    System.out.printf("| %s | %d | %d / %d | %.1f | %.1f | %d / %d | %d | %d | +%.0f%% |%n", s.name(), s.days(), s.nightsHome(), s.nightsAway(),
-                            s.homeMinutes() / Math.max(1, s.nightsHome()), total * 7.0 / s.days(), s.met(), s.notes(), s.hosted(), s.rested(),
-                            100 * s.regen() / Math.max(1, s.rested()));
-                }
-                System.out.println("\nVisits by kind, whole beta: " + r.visitsByKind());
-                for (var s : r.slices()) System.out.println("  " + s.name() + ": " + new TreeMap<>(s.visits()));
-                System.out.println("\n| Day | Comfort | Tier | Style | Pieces | Ryo spent | Keepsakes shown | Photos hung | Plant | Perks |");
-                System.out.println("|---|---|---|---|---|---|---|---|---|---|");
-                for (var c : r.comfort())
-                    System.out.printf("| %d | %.1f | %s | %.1f | %d | %d | %d | %d | %s | %s |%n", c.day(), c.comfort(), c.tier(), c.style(), c.pieces(), c.spent(),
-                            c.keepsakes(), c.photos(), c.plant(), c.perks());
-                System.out.printf("%nCleanings %d, messy evenings %d, stale meals %d, keys given %d, home practice %.1f training-ground hours%n",
-                        r.cleanings(), r.messyEvenings(), r.staleMeals(), r.keys(), r.practice());
-            }
-            System.out.printf("Ryo at the end %d, spent on furniture %d, rent paid %d%n", r.ryoEnd(), r.spent(), r.rentPaid());
+        var r = run(seed);
+        System.out.printf("%n## A typical player's first 15 hours (seed %d)%n%n", seed);
+        System.out.println("| Slice | Days | Nights home / away | Minutes awake at home a day | Visits a week | Met / notes | Hosted | Well Rested nights | Mean bonus |");
+        System.out.println("|---|---|---|---|---|---|---|---|---|");
+        for (var s : r.slices()) {
+            int total = s.visits().values().stream().mapToInt(Integer::intValue).sum();
+            System.out.printf("| %s | %d | %d / %d | %.1f | %.1f | %d / %d | %d | %d | +%.0f%% |%n", s.name(), s.days(), s.nightsHome(), s.nightsAway(),
+                    s.homeMinutes() / Math.max(1, s.nightsHome()), total * 7.0 / s.days(), s.met(), s.notes(), s.hosted(), s.rested(),
+                    100 * s.regen() / Math.max(1, s.rested()));
         }
+        System.out.println("\nVisits by kind, whole beta: " + r.visitsByKind());
+        for (var s : r.slices()) System.out.println("  " + s.name() + ": " + new TreeMap<>(s.visits()));
+        System.out.println("\n| Day | Comfort | Tier | Style | Pieces | Ryo spent | Keepsakes shown | Photos hung | Plant | Perks |");
+        System.out.println("|---|---|---|---|---|---|---|---|---|---|");
+        for (var c : r.comfort())
+            System.out.printf("| %d | %.1f | %s | %.1f | %d | %d | %d | %d | %s | %s |%n", c.day(), c.comfort(), c.tier(), c.style(), c.pieces(), c.spent(),
+                    c.keepsakes(), c.photos(), c.plant(), c.perks());
+        System.out.printf("%nCleanings %d, messy evenings %d, stale meals %d, keys given %d, home practice %.1f training-ground hours, chest slots %d%n",
+                r.cleanings(), r.messyEvenings(), r.staleMeals(), r.keys(), r.practice(), r.storageSlots());
+        System.out.printf("Ryo at the end %d, spent on furniture %d%n", r.ryoEnd(), r.spent());
     }
 
     private FirstFifteenHours() {}

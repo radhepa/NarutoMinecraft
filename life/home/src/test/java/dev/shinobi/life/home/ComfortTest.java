@@ -62,7 +62,7 @@ class ComfortTest {
     }
     @Test void keepsakesAndPhotosAddStyle() {
         var h = new Home("player", Flat.CLASSIC);
-        h.place("keepsake_shelf"); h.place("photo_frame");
+        h.place("photo_frame");
         double before = score(h).style();
         h.keep(Catalog.KEEPSAKES.get("framed_ladle"));
         assertEquals("ok", h.display("framed_ladle"));

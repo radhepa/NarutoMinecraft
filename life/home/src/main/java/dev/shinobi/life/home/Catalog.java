@@ -25,8 +25,8 @@ public final class Catalog {
     public static final Map<String, Piece> PIECES;
     public static final Map<String, FurnitureSet> SETS;
     public static final Map<String, Keepsake> KEEPSAKES;
-    /** What every Academy flat starts with, besides its fixtures: a futon, a low table and a cupboard. */
-    public static final List<String> STARTER = List.of("futon", "low_table", "cupboard");
+    /** What every Academy flat starts with, besides its fixtures (the item registry's {@code kit:start} plus a table and a cupboard). */
+    public static final List<String> STARTER = List.of("futon", "low_table", "cupboard", "storage_chest", "wardrobe_cabinet", "cooking_pot");
 
     private static final List<Piece> pieces = new ArrayList<>();
     private static Piece p(String id, Category c, int comfort, int style, int cells, int price, String set, String slice, Source src, String... tags) {
@@ -36,13 +36,16 @@ public final class Catalog {
     private static void shelf(String id, Category c, int style, int cells, int price, String slice, int displays, String... tags) {
         pieces.add(new Piece(id, c, 0, style, cells, price, "", slice, Source.SHOP, displays, Set.of(tags)));
     }
+    /** Chests and barrels: plain Minecraft storage, {@code slots:27} each. */
+    private static void chest(String id, int comfort, int style, int cells, int price, String slice, Source src) {
+        pieces.add(new Piece(id, Category.STORAGE, comfort, style, cells, price, "", slice, src, 0, Set.of("chest", "slots:27")));
+    }
 
     static {
         // The flat's fixtures: built in, never moved. The mailbox, mirror and closet are where the day starts.
         p("window", Category.FIXTURE, 0, 1, 0, 0, "", "b1", Source.FIXED, "view");
         p("mailbox", Category.FIXTURE, 0, 0, 0, 0, "", "b1", Source.FIXED, "mail");
         p("mirror", Category.FIXTURE, 0, 0, 0, 0, "", "b1", Source.FIXED, "wardrobe");
-        p("closet", Category.FIXTURE, 0, 0, 0, 0, "", "b1", Source.FIXED, "wardrobe");
         p("sink", Category.FIXTURE, 0, 0, 0, 0, "", "b1", Source.FIXED, "clean");
         p("stove", Category.FIXTURE, 0, 0, 0, 0, "", "b1", Source.FIXED, "heat");
         p("bathtub", Category.FIXTURE, 0, 1, 0, 0, "", "b1", Source.FIXED, "bath");
@@ -94,9 +97,10 @@ public final class Catalog {
 
         // Everything else in the Academy flat and after.
         p("cupboard", Category.KITCHEN, 1, 0, 1, 0, "", "b1", Source.STARTER, "pantry");
+        p("wardrobe_cabinet", Category.STORAGE, 0, 1, 1, 0, "", "b1", Source.STARTER, "wardrobe");
         p("thick_futon", Category.BED, 7, 2, 2, 220, "", "b1", Source.SHOP, "bed");
         p("desk", Category.TABLE, 1, 1, 1, 70, "", "b1", Source.SHOP, "journal", "study");
-        p("cooking_pot", Category.KITCHEN, 1, 1, 0, 120, "", "b1", Source.SHOP, "cook", "vf:hearth_pot");
+        p("cooking_pot", Category.KITCHEN, 1, 1, 0, 0, "", "b1", Source.STARTER, "cook", "vf:hearth_pot");
         p("prep_table", Category.KITCHEN, 1, 1, 1, 90, "", "b1", Source.SHOP, "cook", "vf:hearth_prep");
         p("icebox", Category.KITCHEN, 1, 0, 1, 160, "", "b1", Source.SHOP, "pantry", "fresh");
         p("tea_kettle", Category.KITCHEN, 1, 1, 0, 25, "", "b1", Source.SHOP, "tea");
@@ -113,21 +117,26 @@ public final class Catalog {
         p("houseplant", Category.PLANT, 1, 2, 1, 25, "", "b1", Source.SHOP, "plant", "waterable");
         p("pet_bed", Category.PET, 1, 1, 1, 40, "", "b1", Source.SHOP, "pet");
         p("pet_bowl", Category.PET, 0, 0, 1, 10, "", "b1", Source.SHOP, "pet");
-        p("storage_chest", Category.STORAGE, 0, 0, 1, 30, "", "b1", Source.SHOP, "chest");
+        chest("storage_chest", 0, 0, 1, 10, "b1", Source.STARTER);
+        chest("barrel", 0, 1, 1, 15, "b1", Source.SHOP);
+        chest("tansu_chest", 1, 3, 1, 180, "b2", Source.SHOP);
+        chest("step_tansu", 1, 3, 2, 320, "b2", Source.SHOP);
         p("workbench", Category.STATION, 0, 0, 2, 150, "", "b1", Source.SHOP, "craft");
         p("small_forge", Category.STATION, 0, 0, 2, 400, "", "b2", Source.SHOP, "smith");
         p("andon_lamp", Category.LIGHT, 2, 2, 1, 70, "", "b2", Source.SHOP);
         p("kotatsu", Category.TABLE, 6, 2, 2, 450, "", "b2", Source.SHOP, "winter", "meal");
         p("bedroll", Category.BED, 1, 0, 1, 40, "", "b3", Source.SHOP, "camp");
-        shelf("keepsake_shelf", Category.DISPLAY, 1, 0, 45, "b1", 4, "keepsake");
+        shelf("display_shelf", Category.DISPLAY, 1, 0, 45, "b1", 6, "keepsake");
+        shelf("wall_mount", Category.DISPLAY, 1, 0, 15, "b1", 1, "keepsake");
         shelf("photo_frame", Category.DISPLAY, 1, 0, 15, "b1", 1, "photo");
-        shelf("display_case", Category.DISPLAY, 2, 1, 250, "b2", 5, "keepsake");
+        shelf("display_case", Category.DISPLAY, 2, 1, 250, "b2", 4, "keepsake");
+        shelf("curio_cabinet", Category.DISPLAY, 2, 1, 200, "b2", 12, "keepsake");
 
         // Later homes (designed now, built after the beta): a bigger bed, a hearth, a partner's and a child's things.
         p("wooden_bed", Category.BED, 9, 3, 3, 600, "", "later", Source.SHOP, "bed");
         p("double_futon", Category.BED, 8, 2, 3, 500, "", "later", Source.SHOP, "bed", "two");
         p("child_futon", Category.BED, 4, 1, 1, 150, "", "later", Source.SHOP, "bed", "child");
-        p("tansu_chest", Category.STORAGE, 1, 3, 1, 300, "", "later", Source.SHOP);
+        p("pinboard", Category.WALL, 0, 1, 0, 0, "", "later", Source.QUEST, "from:story.home.case_board");
         p("irori_hearth", Category.KITCHEN, 5, 3, 4, 1200, "", "later", Source.SHOP, "heat", "meal");
         p("engawa_bench", Category.SEATING, 3, 2, 2, 250, "", "later", Source.SHOP);
         p("garden_lantern", Category.LIGHT, 1, 3, 1, 200, "", "later", Source.SHOP, "garden");
@@ -171,6 +180,7 @@ public final class Catalog {
         k(ks, "teammate_a_keepsake", Keepsake.Kind.GIFT, "bond.b2.teammate_a.2", "role:teammate_a", "b2");
         k(ks, "teammate_b_keepsake", Keepsake.Kind.GIFT, "bond.b2.teammate_b.2", "role:teammate_b", "b2");
         k(ks, "festival_prize", Keepsake.Kind.FESTIVAL, "event.leaf_festival", "", "b2");
+        // The story's keepsakes are kept by hook id in the story's files; Keepsake.story(<hook>) makes one at run time.
         // The clan welcomes (SIDE_QUESTS.md section 4): one keepsake each.
         for (String clan : CLANS_WAVE_1) k(ks, "clan_keepsake." + clan, Keepsake.Kind.CLAN, "clan." + clan + ".1", "", "b2");
         for (String clan : CLANS_WAVE_2) k(ks, "clan_keepsake." + clan, Keepsake.Kind.CLAN, "clan." + clan + ".1", "", "b2.5");

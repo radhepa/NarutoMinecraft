@@ -20,7 +20,7 @@ class MoveTest {
     }
     @Test void movingTakesEverythingAlong() {
         var h = ComfortTest.leafFlat();
-        h.place("keepsake_shelf"); h.place("photo_frame"); h.place("houseplant"); h.place("pet_bed"); h.pet("ninken");
+        h.place("photo_frame"); h.place("houseplant"); h.place("pet_bed"); h.pet("ninken");
         h.keep(Catalog.KEEPSAKES.get("shogi_board")); h.display("shogi_board");
         h.photo("photo.squad", 30, List.of("role:teammate_a", "role:teammate_b", "role:sensei"), "child"); h.hang("photo.squad");
         h.giveKey("role:teammate_b", 6, 40);
@@ -51,12 +51,14 @@ class MoveTest {
     }
     @Test void keepsakesAndPhotosNeedSomewhereToGo() {
         var h = new Home("player", Flat.CLASSIC);
-        h.keep(Catalog.KEEPSAKES.get("cat_figurine"));
-        assertEquals("no_space", h.display("cat_figurine"));
-        assertEquals("not_owned", h.display("framed_ladle"));
-        h.place("keepsake_shelf");
-        assertEquals("ok", h.display("cat_figurine"));
-        assertEquals("already", h.display("cat_figurine"));
+        var all = Catalog.KEEPSAKES.values().stream().limit(Home.FREE_STANDING + 1).toList();
+        for (var k : all) h.keep(k);
+        for (int i = 0; i < Home.FREE_STANDING; i++) assertEquals("ok", h.display(all.get(i).id()), "keepsakes stand on their own");
+        assertEquals("no_space", h.display(all.getLast().id()));
+        assertEquals("not_owned", h.display("lake_lantern"));
+        h.place("display_shelf");
+        assertEquals("ok", h.display(all.getLast().id()));
+        assertEquals("already", h.display(all.getLast().id()));
         assertEquals("no_photo", h.hang("photo.class"));
         h.photo("photo.squad", 30, List.of("role:teammate_a"), "child");
         assertEquals("no_frame", h.hang("photo.squad"));

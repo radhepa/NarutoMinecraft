@@ -22,8 +22,11 @@ public interface Friends {
 
     /** A visit happened and went this well (0 to 1): a shared experience for a good one, warmth for any. Never a loss. */
     void visited(String who, String kind, double quality);
-    /** They noticed something at your home that is about them: a gift you kept on show, a photo they are in. */
-    void noticed(String who, String what);
+    /**
+     * They noticed something at your home that is about them: their gift on show ({@code gift:<id>}) or a photo they
+     * are in. Returns true the first time, when there is a line to play.
+     */
+    boolean noticed(String who, String what);
     /** You gave them a spare key: a moment between you. */
     void keyGiven(String who);
     /**

@@ -46,10 +46,11 @@ class CatalogTest {
         long beta = Catalog.PIECES.values().stream().filter(p -> !p.slice().equals("later")).count();
         long clan = Catalog.PIECES.values().stream().filter(p -> p.source() == Source.CLAN).count();
         assertEquals(75, clan);
+        assertEquals(156, Catalog.PIECES.size());
         assertEquals(Catalog.PIECES.size(), beta + Catalog.PIECES.values().stream().filter(p -> p.slice().equals("later")).count());
         assertEquals(39, Catalog.KEEPSAKES.size());
         assertEquals(12, Photo.MILESTONES.size());
-        assertEquals(List.of("futon", "low_table", "cupboard"), Catalog.STARTER);
+        assertEquals(List.of("futon", "low_table", "cupboard", "storage_chest", "wardrobe_cabinet", "cooking_pot"), Catalog.STARTER);
     }
     @Test void flatsAreRolledFromTheSeedInVariedAndFixedInClassic() {
         assertSame(Flat.CLASSIC, Flat.starting(1, true));
