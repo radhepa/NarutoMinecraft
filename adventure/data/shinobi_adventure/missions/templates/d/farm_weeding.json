@@ -22,7 +22,7 @@
   },
   "desk": {
    "pick": "anchor",
-   "tag": "desk"
+   "tag": "residence.mission_desk"
   }
  },
  "start": "brief",
@@ -167,8 +167,8 @@
  "enemies": [],
  "places": {
   "anchors": [
-   "desk",
-   "farm_field"
+   "farm_field",
+   "residence.mission_desk"
   ],
   "regions": []
  },

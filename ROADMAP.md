@@ -249,7 +249,9 @@ Core:
 This repository becomes a Gradle multi-project, the way VF hosts `rpg/`: `core/`, `village/`
 (today's wardrobe resources move here), `combat/`, `life/`, `progression/`, `adventure/` (the
 datapack, blueprints and paste scripts) and `pack/` (the manifest). The root build and the first
-module already exist: `life/bonds`, Shinobi Life's pure bond engine ([BONDS.md](BONDS.md)). Python authoring tools stay
+modules already exist: `life/bonds`, Shinobi Life's pure bond engine ([BONDS.md](BONDS.md)), and
+`progression/missions`, Shinobi Progression's pure mission generator ([MISSIONS.md](MISSIONS.md)),
+whose templates are the first data in `adventure/`. Python authoring tools stay
 under `tools/`. Each mod has its own version; the pack manifest pins a tested set.
 
 The master world is **not** in git. It ships as a zipped save on GitHub Releases; the repository
@@ -423,6 +425,22 @@ seed:
            "return": {"objective": {"type": "deliver", "to": "slot:client"}, "next": null}},
  "pay": {"band": "d", "xp_band": "d"}}
 ```
+
+The full design is in **[MISSIONS.md](MISSIONS.md)**: the Mission Desk's flow (rank-gated board
+columns, squad or solo, requests by name, travel through the gates, reporting back, failure,
+partial success and abandonment, grades S to C), the economy, recurring clients and chains, squad
+roles, and the catalogue (generated into [docs/missions/CATALOGUE.md](docs/missions/CATALOGUE.md)):
+
+- **101 templates:** 41 D-ranks of village life and 24 C-ranks with real fights in the beta; 14 B,
+  10 A and 4 S templates and 6 ANBU operations laid out for the later arcs. Each has two or three
+  **twists**, rolled per mission, that switch the graph onto their own branch (221 in all).
+- Templates also carry `twists`, `outcomes` (endings a `choose` step can lead to), bonus objectives
+  for the grade, `party` (squad, solo or either), `contested` (the rival squad races you), `chain`
+  (a recurring client) and the anchors and regions they need. `tools/missions/missions.py` compiles
+  them to the Adventure datapack and checks them.
+- **The generator** is pure Java in `progression/missions` (`MissionRoll`'s home): it rolls the
+  board from the `missions` stream, casts slots, guards variety (a taken template stays away for
+  days), and simulates Genin life's board for three kinds of player.
 
 ### Ranks and milestones
 
@@ -796,6 +814,13 @@ in-game week (a little over two hours) of play.
 Furniture sells back at half price; loot from bandit camps sells at the pawn shop. There is no
 other way to turn things into money.
 
+**Mission pay** ([MISSIONS.md](MISSIONS.md#3-ranks-and-the-economy)) is the player's share, set
+within the rank's band by the template and scaled by the grade (S ×1.25, A ×1.1, B ×1, C ×0.85;
+half for a partial success, nothing for a failure): D 60 to 150, C 300 to 600, and later B 800 to
+1,500, A 2,000 to 4,000, S 6,000 to 12,000. A Genin takes at most two D-ranks a day and one board
+C-rank a week. In the desk simulation a steady player earns about 100 ryo a day in Genin life
+against about 47 for food and tools, which keeps the rule of thumb above.
+
 ### The daily cycle
 
 A Minecraft day is 20 minutes. The village runs on VF's routines and calendar (4 seasons of 28
@@ -897,6 +922,11 @@ In the beta a level takes about 45 to 50 minutes of main path; later about 65 to
 Level 60 is post-game. Side quests add XP, so a player who does them reaches gates earlier and can
 skip some board missions.
 
+Mission XP is fixed per rank: a share of a level at the rank's reference level (a D-rank is about a
+fifth of a level at level 7, less as you grow), scaled by the grade. In the desk simulation a steady
+Genin's board missions give about two fifths of the XP from level 5 to 15
+([MISSIONS.md](MISSIONS.md#71-pacing-in-the-beta)).
+
 ### Growing up
 
 | Stage | Age | When | Model |
@@ -931,6 +961,11 @@ village and a name from VF's name pools; once rolled they are fixed for the save
 leave the squad (a bond that stays low for two weeks, a failed exam, or the story), stays in the
 village and is replaced by a classmate; once the bond recovers, a return quest can bring them back
 ([BONDS.md](BONDS.md#7-the-squad)). Squad members are knocked out, never killed.
+
+On missions the player gives each teammate a role at the briefing (point, guard, tracker or
+support); a teammate suited to a role the mission wants is a good call that lifts the grade, and the
+squad's cohesion sets how well they work together, from assisting your combos to ignoring an order
+([MISSIONS.md](MISSIONS.md#6-squad-missions)).
 
 ### Combat in the beta
 
@@ -1193,8 +1228,9 @@ council day (watch only) and the eight great clans' welcome quests (wave 1, [SID
 every Beta 2 system; the Beta 2 districts. All 25 clans' quarters, residents, clan techniques and
 generated courtesy quests are in Beta 2; only the other 17 welcome quests wait for Beta 2.5.
 
-- **Progression:** the Mission Desk with D-rank (five templates) and C-rank (escort, bandit
-  clearing, delivery to a far region) board missions, paid in ryo and XP and failing on death;
+- **Progression:** the Mission Desk with D-rank (41 templates) and C-rank (24 templates: escorts,
+  bandits, beasts, deliveries to the far region, investigations and more) board missions, paid in
+  ryo and XP by grade and failing on death ([MISSIONS.md](MISSIONS.md));
   team assignment and the bell test; teammates who can leave; mentors; levels 5 to 15; the event
   director with the Leaf Festival and New Year.
 - **Combat:** chakra movement; parry and launcher; the nature ceremony and one jutsu per nature;

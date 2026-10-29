@@ -206,7 +206,7 @@ add(mission(
 add(mission(
     "mission.d.farm_weeding", "d", "farm", minutes=10, pay=0.2, party="squad_or_solo",
     premise="Weed a farmer's field outside the wall before the planting.",
-    client=resident(job="farmer"), slots={"field": anchor("farm_field"), "desk": anchor("desk")},
+    client=resident(job="farmer"), slots={"field": anchor("farm_field"), "desk": anchor("residence.mission_desk")},
     steps=[
         S("brief", talk(C), "weed"),
         S("weed", perform("pull_weeds", at="slot:field", count=20), "report",

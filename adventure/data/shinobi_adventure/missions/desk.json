@@ -96,12 +96,12 @@
    },
    "b": {
     "chunin": 2,
-    "jonin": 3,
-    "anbu": 3
-   },
-   "a": {
     "jonin": 2,
     "anbu": 2
+   },
+   "a": {
+    "jonin": 1,
+    "anbu": 1
    },
    "s": {
     "jonin": 1,

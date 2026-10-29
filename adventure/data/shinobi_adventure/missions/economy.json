@@ -165,6 +165,91 @@
   "standing": -4,
   "act": "abandoned_mission"
  },
+ "gifts": {
+  "_doc": "Besides pay: a thank-you from the client's trade, VF notice-board style. Item ids are requests to the items session.",
+  "chance": {
+   "d": 0.3,
+   "c": 0.35,
+   "b": 0.25,
+   "a": 0.2,
+   "s": 0.2
+  },
+  "grade_at_least": "B",
+  "by_job": {
+   "farmer": [
+    "item:food.vegetables"
+   ],
+   "fisher": [
+    "item:food.grilled_fish"
+   ],
+   "cook": [
+    "item:food.onigiri"
+   ],
+   "stallholder": [
+    "item:food.dango"
+   ],
+   "florist": [
+    "item:decor.pressed_flower"
+   ],
+   "vet": [
+    "item:pet.treats"
+   ],
+   "medic": [
+    "item:tool.bandage",
+    "item:tool.soldier_pill"
+   ],
+   "priest": [
+    "item:charm.shrine_luck"
+   ],
+   "shopkeeper": [
+    "item:tool.kunai_bundle"
+   ],
+   "trader": [
+    "item:material.steel",
+    "item:material.cloth"
+   ],
+   "teacher": [
+    "item:scroll.study_notes"
+   ],
+   "groundskeeper": [
+    "item:tool.wire"
+   ],
+   "clerk": [
+    "item:food.tea"
+   ],
+   "bath_keeper": [
+    "item:food.milk"
+   ],
+   "porter": [
+    "item:food.onigiri"
+   ],
+   "*": [
+    "item:food.onigiri",
+    "item:food.tea"
+   ]
+  }
+ },
+ "technique_scrolls": {
+  "_doc": "Learning jutsu from mission rewards (ROADMAP section 7): the first S grade on a C-rank or above can carry a scroll from the rank's pool (combat session ids).",
+  "chance": {
+   "c": 0.25,
+   "b": 0.3,
+   "a": 0.35,
+   "s": 0.5
+  },
+  "pools": {
+   "c": "pool:scroll.c_rank",
+   "b": "pool:scroll.b_rank",
+   "a": "pool:scroll.a_rank",
+   "s": "pool:scroll.s_rank"
+  }
+ },
+ "standing": {
+  "_doc": "Village reputation (BONDS.md section 8): a finished mission is a deed about the client, witnessed by the squad; the grade's standing goes to the client's district and clan.",
+  "success_act": "helped_resident",
+  "failure_act": "failed_client",
+  "abandon_act": "abandoned_mission"
+ },
  "xp_curve": {
   "base": 200,
   "per_level": 40,
