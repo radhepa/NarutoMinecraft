@@ -1,0 +1,400 @@
+{
+  "id": "t601_shoku_armor",
+  "kind": "top",
+  "name": "Shoku Armor",
+  "gender": "unisex",
+  "texture": "tops/t601_shoku_armor.png",
+  "extrasHeight": 64,
+  "tags": [
+    "akimichi",
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "chest_plate_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0.2,
+        -2.5
+      ],
+      "size": [
+        9,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "belly_lame_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        4.2,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.42
+    },
+    {
+      "id": "belly_lame_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        6.2,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.5
+    },
+    {
+      "id": "belly_lame_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        8.0,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        10
+      ],
+      "inflate": 0.4
+    },
+    {
+      "id": "chest_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.3,
+        -2.82
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -9,
+        -9,
+        -1
+      ],
+      "size": [
+        18,
+        18,
+        1
+      ],
+      "uv": [
+        0,
+        18
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "right_sode_0",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.7,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        39,
+        18
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "right_sode_1",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -0.9000000000000001,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        38
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "left_sode_0",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.7,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        38
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_sode_1",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -0.9000000000000001,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        42,
+        38
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        10.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        46
+      ],
+      "inflate": 0.42
+    },
+    {
+      "id": "pouch",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        11.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        46
+      ]
+    },
+    {
+      "id": "right_guard",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.3,
+        5.4,
+        -2.3
+      ],
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "uv": [
+        36,
+        46
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_guard",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.3,
+        5.4,
+        -2.3
+      ],
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "uv": [
+        0,
+        55
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Red lacquered chest and belly plates with the food crest, shoulder sode, forearm guards."
+}

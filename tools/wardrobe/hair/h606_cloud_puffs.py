@@ -11,9 +11,9 @@ PUFFS = [(-3.0, -8.4, -1.6, (3, 2, 3)), (0, -8.8, -.4, (4, 2, 4)), (3.0, -8.4, -
 
 
 def build(g):
-    scalp(g, 6501, side_rows=5, back_rows=8, sideburn=1)
-    shell(g, 6502, side_rows=4, back_rows=7)
+    scalp(g, 6226, side_rows=5, back_rows=8, sideburn=1)
+    shell(g, 6226, side_rows=4, back_rows=7)
     for i, (x, y, z, size) in enumerate(PUFFS):
-        puff(g, f"puff_{i}", (x, y, z), size, seed=6510 + i)
+        puff(g, f"puff_{i}", (x, y, z), size, seed=6232 + i)
     for i, x in enumerate((-2.6, 0, 2.6)):
-        puff(g, f"fringe_{i}", (x, -7.6, -4.1), (3, 1, 1), seed=6530 + i)
+        puff(g, f"fringe_{i}", (x, -7.6, -4.1), (3, 1, 1), seed=6246 + i)

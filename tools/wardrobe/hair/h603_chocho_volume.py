@@ -14,14 +14,14 @@ CLOUD = [(-5.0, -6.2, -.6, (3, 4, 4)), (-5.4, -3.6, 1.0, (4, 4, 4)), (-4.6, -1.0
 
 
 def build(g):
-    scalp(g, 6201, side_rows=7, back_rows=8, sideburn=1)
-    shell(g, 6202, side_rows=6, back_rows=8)
+    scalp(g, 6091, side_rows=7, back_rows=8, sideburn=1)
+    shell(g, 6091, side_rows=6, back_rows=8)
     for i, (x, y, z, size) in enumerate(CLOUD):
-        puff(g, f"cloud_{i}", (x, y, z), size, seed=6210 + i)
+        puff(g, f"cloud_{i}", (x, y, z), size, seed=6097 + i)
         if x:
-            puff(g, f"cloud_{i}_mirror", (-x, y, z), size, seed=6230 + i)
+            puff(g, f"cloud_{i}_mirror", (-x, y, z), size, seed=6111 + i)
     for side, sign in (("right", -1), ("left", 1)):
-        puff(g, f"bun_{side}", (2.6 * sign, -10.4, .4), (3, 3, 3), seed=6250 + (sign > 0))
+        puff(g, f"bun_{side}", (2.6 * sign, -10.4, .4), (3, 3, 3), seed=6125 + (sign > 0))
         tie(g, f"bun_tie_{side}", (2.6 * sign, -8.9, .4), size=(2, 1, 2), key="A2")
     for i, x in enumerate((-2.4, 0, 2.4)):
-        puff(g, f"fringe_{i}", (x, -7.3, -4.1), (3, 2, 1), seed=6260 + i)
+        puff(g, f"fringe_{i}", (x, -7.3, -4.1), (3, 2, 1), seed=6132 + i)

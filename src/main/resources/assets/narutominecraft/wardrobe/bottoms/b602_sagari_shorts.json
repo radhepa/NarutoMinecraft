@@ -1,0 +1,191 @@
+{
+  "id": "b602_sagari_shorts",
+  "kind": "bottom",
+  "name": "Sagari Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/b602_sagari_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "akimichi",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_mawashi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        9.2,
+        -2.5
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.5
+    },
+    {
+      "id": "waist_sagari_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        12.2,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_sagari_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        12.2,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_sagari_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        12.2,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_sagari_3",
+      "bone": "TORSO",
+      "pivot": [
+        1.2,
+        12.2,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_sagari_4",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        12.2,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "Dark knee shorts, a thick mawashi band with sagari cords, bandaged shins, sandals."
+}

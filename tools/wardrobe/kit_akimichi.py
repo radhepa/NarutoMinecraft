@@ -12,45 +12,48 @@ from kit import arm_bone, arm_x
 from paint import curls_box, k, rnd, solid
 
 # 食, "food": a peaked roof with a dot under it over a stacked box, the left stroke running down
-# into a hooked foot and a long sweep to the lower right. 12 x 13, drawn at triple resolution.
-SHOKU = [".....##.....",
-         "...##..##...",
-         ".##......##.",
-         "#....##....#",
-         "...######...",
-         "...#....#...",
-         "...######...",
-         "...#....#...",
-         "...######...",
-         "...#..#.....",
-         "...#...#....",
-         "...#.#..##..",
-         "..###....##."]
+# into a hooked foot and a long sweep to the lower right. 14 x 15, drawn at triple resolution
+# with two-texel strokes so the roof survives at a distance.
+SHOKU = ["......##......",
+         ".....####.....",
+         "....##..##....",
+         "..###....###..",
+         "###...##...###",
+         "..............",
+         "...########...",
+         "...##....##...",
+         "...########...",
+         "...##....##...",
+         "...########...",
+         "...##..##.....",
+         "...##...##....",
+         "...##.#..###..",
+         "..#####...###."]
 
 
 def shoku_disc(g, pid: str, pivot, bone: str = "TORSO", ground: str = "P2", disc: str = "S", ink: str = "K1",
                rim: str | None = None, side: str = "front", rotation=(0, 0, 0)):
-    """The 食 crest in a round disc, 16 x 16 texels at triple resolution (about 5 model pixels across).
+    """The 食 crest in a round disc, 18 x 18 texels at triple resolution (6 model pixels across).
     `pivot` is the centre of the disc's face; `ground` paints the corners outside the disc so they
     melt into the garment beneath, `rim` rings the disc in another key."""
-    box = g.piece(pid, bone, (-8, -8, 0 if side == "back" else -1), (16, 16, 1), pivot=pivot, rotation=rotation,
+    box = g.piece(pid, bone, (-9, -9, 0 if side == "back" else -1), (18, 18, 1), pivot=pivot, rotation=rotation,
                   scale=(1 / 3, 1 / 3, 1 / 3))
     for f in box.faces:
         f.fill(ground)
     face = box.back if side == "back" else box.front
-    for y in range(16):
-        for x in range(16):
-            d = ((x - 7.5) ** 2 + (y - 7.5) ** 2) ** .5
-            if d <= 7.9:
-                face.set(x, y, k(disc, 3 if d < 6.6 else 2))
-                if rim and d > 6.9:
+    for y in range(18):
+        for x in range(18):
+            d = ((x - 8.5) ** 2 + (y - 8.5) ** 2) ** .5
+            if d <= 8.9:
+                face.set(x, y, k(disc, 3 if d < 7.6 else 2))
+                if rim and d > 7.9:
                     face.set(x, y, rim)
     rows = SHOKU if side == "front" else [r[::-1] for r in SHOKU]
     stamp(face, rows, 2, 1, {"#": ink})
     return box
 
 
-def lames(g, prefix: str, rows, role: str = "P", texture: str = "smooth", seed: int = 6000, lacing: str | None = "A2",
+def lames(g, prefix: str, rows, role: str = "P", texture: str = "smooth", seed: int = 6993, lacing: str | None = "A2",
           width: int = 9, depth: int = 5, front: float = -2.5):
     """Lacquered plates ringing the torso: rows are (y, height, inflate). Each lame gets a lit upper
     edge, a dark lower edge and, with `lacing`, the cord stitches that hold samurai plates together."""
@@ -68,7 +71,7 @@ def lames(g, prefix: str, rows, role: str = "P", texture: str = "smooth", seed: 
     return boxes
 
 
-def sode(g, prefix: str, role: str = "P", tiers: int = 2, seed: int = 6050, lacing: str | None = "A2", stud: str = "M3",
+def sode(g, prefix: str, role: str = "P", tiers: int = 2, seed: int = 6994, lacing: str | None = "A2", stud: str = "M3",
          flare: float = 0.0):
     """Shoulder sode: stacked plates over each upper arm, the top tier capping the shoulder."""
     out = []
@@ -102,7 +105,7 @@ def quilt(face, role: str, seed: int, base: int = 2, x0: int = 0, y0: int = 0, w
 
 
 def snack_pouch(g, pid: str, pivot, role: str = "A", size=(2, 3, 1), rotation=(0, 0, 0), bone: str = "TORSO",
-                seed: int = 6080, motion: str = "none"):
+                seed: int = 6995, motion: str = "none"):
     """A crinkled snack bag: a crimped top edge, a bright label band and a little tear notch."""
     w, h, d = size
     box = g.piece(pid, bone, (-w / 2, 0, -d / 2), size, pivot=pivot, rotation=rotation, motion=motion)
@@ -115,13 +118,13 @@ def snack_pouch(g, pid: str, pivot, role: str = "A", size=(2, 3, 1), rotation=(0
 
 
 def gourd(g, pid: str, pivot, bone: str = "TORSO", role: str = "L", cord: str = "A2", rotation=(0, 0, 12),
-          motion: str = "none"):
+          motion: str = "none", seed: int = 6996):
     """A sake gourd on a cord: a small neck, a waist tied with the cord and a fat bottom bulb."""
     parts = [((-.5, -1, -.5), (1, 1, 1)), ((-1, 0, -1), (2, 2, 2)), ((-.5, 2, -.5), (1, 1, 1)), ((-1.5, 3, -1.5), (3, 3, 3))]
     boxes = []
     for i, (o, s) in enumerate(parts):
         box = g.piece(f"{pid}_{i}", bone, o, s, pivot=pivot, rotation=rotation, motion=motion)
-        solid(box, role, "smooth", 6090 + i, 3 if i % 2 else 2)
+        solid(box, role, "smooth", seed + i, 3 if i % 2 else 2)
         if i == 2:
             box.fill(cord)
         boxes.append(box)
@@ -131,7 +134,7 @@ def gourd(g, pid: str, pivot, bone: str = "TORSO", role: str = "L", cord: str = 
 
 
 # -- hair --------------------------------------------------------------------------------------
-def puff(g, pid: str, pivot, size=(4, 4, 4), rotation=(0, 0, 0), seed: int = 6100, base: int = 2, motion: str = "none"):
+def puff(g, pid: str, pivot, size=(4, 4, 4), rotation=(0, 0, 0), seed: int = 6997, base: int = 2, motion: str = "none"):
     """A round curly puff: a box of tight coils with the top lit, centred on `pivot`."""
     w, h, d = size
     box = g.piece(pid, "HEAD", (-w / 2, -h / 2, -d / 2), size, pivot=pivot, rotation=rotation, motion=motion)
@@ -139,7 +142,7 @@ def puff(g, pid: str, pivot, size=(4, 4, 4), rotation=(0, 0, 0), seed: int = 610
     return box
 
 
-def flick(g, pid: str, pivot, rotation, segments=((3, 2), (2, 2), (1, 1)), depth: int = 2, seed: int = 6150,
+def flick(g, pid: str, pivot, rotation, segments=((3, 2), (2, 2), (1, 1)), depth: int = 2, seed: int = 6998,
           base: int = 2, motion: str = "none"):
     """A wild spike growing outward from the head along local +y, wide at the root to a point."""
     y = 0.0

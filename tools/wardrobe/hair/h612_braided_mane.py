@@ -8,14 +8,14 @@ META = {"name": "Braided Mane", "gender": "unisex",
 
 
 def build(g):
-    scalp(g, 7101, side_rows=6, back_rows=8, sideburn=2)
-    ring_shell(g, 7102, side_rows=6, back_rows=8, ring_row=1)
+    scalp(g, 6496, side_rows=6, back_rows=8, sideburn=2)
+    ring_shell(g, 6496, side_rows=6, back_rows=8, ring_row=1)
     for i, (x, z, rx, rz) in enumerate(((-2.4, -2.2, -40, -24), (0, -2.6, -44, 0), (2.4, -2.2, -40, 24),
                                         (-1.6, .6, -64, -14), (1.6, .6, -64, 14))):
-        spike(g, f"crown_{i}", (x, -7.8, z), (rx, 0, rz), ((3, 3), (2, 2), (1, 1)), 2, 7110 + i)
+        spike(g, f"crown_{i}", (x, -7.8, z), (rx, 0, rz), ((3, 3), (2, 2), (1, 1)), 2, 6502 + i)
     root = g.piece("braid_root", "HEAD", (-2, 0, -1), (4, 2, 2), pivot=(0, -4.0, 4.6), rotation=(10, 0, 0))
-    cel_box(root, 7120)
+    cel_box(root, 6509)
     tie(g, "braid_tie", (0, -2.0, 4.9), (10, 0, 0), size=(3, 1, 3), key="A2")
-    braid(g, "braid", (0, -1.2, 5.0), (12, 0, 0), links=6, width=3, seed=7130)
-    bangs(g, "fringe", [(-2.2, ((2, 2), (1, 1)), 22), (2.2, ((2, 2), (1, 1)), -22)], seed=7140)
-    sidelocks(g, "sideburn", 6, seed=7150, x=4.4, z=-2.8, flare=14, width=2)
+    braid(g, "braid", (0, -1.2, 5.0), (12, 0, 0), links=6, width=3, seed=6516)
+    bangs(g, "fringe", [(-2.2, ((2, 2), (1, 1)), 22), (2.2, ((2, 2), (1, 1)), -22)], seed=6523)
+    sidelocks(g, "sideburn", 6, seed=6530, x=4.4, z=-2.8, flare=14, width=2)

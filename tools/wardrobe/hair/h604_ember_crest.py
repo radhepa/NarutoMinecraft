@@ -13,12 +13,12 @@ CREST = [(-3.0, ((4, 3), (3, 2), (2, 2), (1, 1)), -18), (-1.0, ((4, 4), (3, 2), 
 
 
 def build(g):
-    scalp(g, 6301, side_rows=3, back_rows=7, sideburn=2)
-    ring_shell(g, 6302, side_rows=3, back_rows=6, ring_row=1)
+    scalp(g, 6136, side_rows=3, back_rows=7, sideburn=2)
+    ring_shell(g, 6136, side_rows=3, back_rows=6, ring_row=1)
     for i, (z, segs, rx) in enumerate(CREST):
-        spike(g, f"crest_{i}", (0, -7.8, z), (rx, 0, 0), segs, 3, 6310 + i)
+        spike(g, f"crest_{i}", (0, -7.8, z), (rx, 0, 0), segs, 3, 6142 + i)
     for i, (x, rz) in enumerate(((-2.4, -26), (2.4, 26))):
-        spike(g, f"crest_side_{i}", (x, -7.8, .4), (-36, 0, rz), ((3, 2), (2, 2), (1, 1)), 2, 6320 + i)
+        spike(g, f"crest_side_{i}", (x, -7.8, .4), (-36, 0, rz), ((3, 2), (2, 2), (1, 1)), 2, 6149 + i)
     for i, (x, rz) in enumerate(((-2.2, 26), (0, 0), (2.2, -26))):
-        flick(g, f"nape_{i}", (x, -2.8, 4.1), (48, 0, rz), ((2, 2), (1, 2)), 1, 6330 + i)
-    bangs(g, "fringe", [(-1.0, ((2, 2), (1, 1)), 16), (1.2, ((2, 2), (1, 1)), -16)], seed=6340)
+        flick(g, f"nape_{i}", (x, -2.8, 4.1), (48, 0, rz), ((2, 2), (1, 2)), 1, 6156 + i)
+    bangs(g, "fringe", [(-1.0, ((2, 2), (1, 1)), 16), (1.2, ((2, 2), (1, 1)), -16)], seed=6163)
