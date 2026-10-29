@@ -62,6 +62,9 @@ public enum Act {
     HELPED_RESIDENT(def(Size.SMALL, 60).meters(2, 2, 0.5, 0).honors(Value.KINDNESS).deed(5)),
     DEFENDED_VILLAGE(def(Size.NOTABLE, 120).meters(2.5, 2.5, 3.5, 0).honors(Value.COURAGE, Value.DUTY).deed(12)),
     APOLOGIZED(def(Size.SMALL, 30).meters(1, 1, 0, 0)),
+    MEDIATED(def(Size.NOTABLE, 90).meters(2, 3, 2, 0).honors(Value.KINDNESS).deed(4)),
+    HONORED_CUSTOM(def(Size.NOTABLE, 90).meters(2, 2, 1.5, 0).honors(Value.FAMILY, Value.DUTY).deed(4)),
+    GUEST_IN_QUARTER(def(Size.SMALL, 60).meters(1, 1, 0, 0).deed(1)),
 
     // Notable wrongs.
     RECKLESS_CHARGE(def(Size.SMALL, 30).professional().meters(0, -2, 1, 0).honors(Value.COURAGE).peeve(Peeve.RECKLESSNESS)
@@ -77,6 +80,9 @@ public enum Act {
     FELT_OVERLOOKED(def(Size.SMALL, 30).meters(-2, -0.5, 0, 1).peeve(Peeve.NEGLECT).lean(Trait.PRIDE, Meter.RIVALRY, 2)),
     BROKE_PROMISE(def(Size.NOTABLE, 60).meters(-2.5, -6, -0.5, 0).violates(Value.HONESTY).peeve(Peeve.LATENESS)),
     WENT_OVER_THEIR_HEAD(def(Size.NOTABLE, 60).meters(-2, -5, 0, 0.5).violates(Value.LOYALTY).lean(Trait.DISCIPLINE, Meter.TRUST, 2.5)),
+    SIDED_AGAINST(def(Size.NOTABLE, 60).meters(-3, -3, 0, 1).violates(Value.LOYALTY)),
+    INSULTED_CLAN(def(Size.NOTABLE, 60).meters(-5, -3, -1, 0).violates(Value.FAMILY).peeve(Peeve.RUDENESS).deed(-8)),
+    FAILED_CLIENT(def(Size.NOTABLE, 60).professional().meters(-2, -3, -1, 0).violates(Value.DUTY).deed(-4)),
     HURT_RESIDENT(def(Size.NOTABLE, 60).meters(-7, -7, -1, 0).violates(Value.KINDNESS).peeve(Peeve.CRUELTY).deed(-15)),
     QUARREL(def(Size.NOTABLE, 45).meters(-6, -2.5, 0, 2).quarrel().spreads().lean(Trait.PRIDE, Meter.AFFECTION, -2)),
 

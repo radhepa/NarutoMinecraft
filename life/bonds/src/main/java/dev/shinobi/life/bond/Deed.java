@@ -11,14 +11,21 @@ import java.util.TreeMap;
  */
 public final class Deed {
     public static final int GOOD_WINDOW = 14, BAD_WINDOW = 28;
-    /** How one person knows: {@code from} is who told them ("news" for village news, "" when they saw or lived it). */
-    public record Know(Reaction.Source how, long day, String from) {}
+    /**
+     * How one person knows: {@code from} is who told them ("news" for village news, "" when they saw or lived it);
+     * {@code slant} (-0.6 to 0.6) is how the retelling bent it, for the player (positive) or against them.
+     */
+    public record Know(Reaction.Source how, long day, String from, double slant) {
+        public Know(Reaction.Source how, long day, String from) { this(how, day, from, 0); }
+    }
 
     final int serial;
     final Act act;
     final long day;
     final String about;
     final Map<String, Know> knowers = new TreeMap<>();
+    /** Days in a row nobody new heard it: after {@link Gossip#DIES_DOWN} the news has died down and stops spreading. */
+    int quiet;
 
     Deed(int serial, Act act, long day, String about) { this.serial = serial; this.act = act; this.day = day; this.about = about == null ? "" : about; }
 

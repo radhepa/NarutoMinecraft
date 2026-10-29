@@ -29,6 +29,11 @@ import java.util.Map;
  * {"celebrate_birthday": "role:x"}
  * {"bond_flag":         ["role:x", "met_family"]}
  * {"set_flag":          ["story.kindling.awakened", true]} the flags the bond engine reads (Core keeps the rest)
+ * {"kindle":            "role:teammate_a"}                 a use of Kindling Bond, counted
+ * {"resolve_hook":      ["hook.clan_feud.12", "mediated"]} a side quest settles a society hook
+ * {"clan_event":        ["inuzuka", "aburame", 10, "festival"]}
+ * {"clan_deed":         {"clan": "hyuga", "act": "honored_custom"}}  witnessed by the clan's members
+ * {"mood_event":        ["village", 0.4, 0]}               cheer and tension (a festival, an attack)
  * </pre>
  */
 public final class BondEffects {
@@ -77,12 +82,34 @@ public final class BondEffects {
             case "celebrate_birthday" -> each(w, arg, who -> w.celebrate(who) ? "" : "not_today");
             case "bond_flag" -> each(w, at(arg, 0), who -> { w.setBondFlag(who, str(at(arg, 1))); return ""; });
             case "set_flag" -> { w.setFlag(str(at(arg, 0)), !(at(arg, 1) instanceof Boolean b) || b); yield ""; }
+            case "kindle" -> each(w, arg, who -> w.kindle(who).natureCasts() > 0 ? "" : "no_bond");
+            case "resolve_hook" -> w.village() == null ? "no_village" : w.village().resolve(str(at(arg, 0)), str(at(arg, 1)));
+            case "clan_event" -> {
+                if (w.village() == null) yield "no_village";
+                w.village().relations().event(str(at(arg, 0)), str(at(arg, 1)), num(at(arg, 2)), str(at(arg, 3)), w.day());
+                yield "";
+            }
+            case "clan_deed" -> {
+                var spec = (Map<String, Object>) arg;
+                String clan = str(spec.get("clan"));
+                var members = w.people().stream().filter(p -> p.clan().equals(clan)).map(Person::id).toList();
+                if (members.isEmpty()) yield "nobody";
+                var house = w.village() == null ? null : w.village().house(clan);
+                w.deed(Act.of(str(spec.get("act"))), house != null ? house.head() : members.getFirst(), members);
+                yield "";
+            }
+            case "mood_event" -> {
+                if (w.village() == null) yield "no_village";
+                w.village().push(str(at(arg, 0)), num(at(arg, 1)), num(at(arg, 2)));
+                yield "";
+            }
             default -> throw new IllegalArgumentException("not a bond action: " + e.getKey());
         };
     }
     public static boolean known(String name) {
         return List.of("add_friendship", "bond_event", "shared_moment", "start_conflict", "apologize", "reconcile", "mend", "reveal_fact",
-                "romance", "marry", "remove_from_squad", "return_to_squad", "favor", "deed", "celebrate_birthday", "bond_flag", "set_flag").contains(name);
+                "romance", "marry", "remove_from_squad", "return_to_squad", "favor", "deed", "celebrate_birthday", "bond_flag", "set_flag",
+                "kindle", "resolve_hook", "clan_event", "clan_deed", "mood_event").contains(name);
     }
 
     private static String each(BondWorld w, Object ref, java.util.function.Function<String, String> f) {

@@ -5,8 +5,9 @@ import java.util.Locale;
 /**
  * Kindling Bond, by the roadmap's thresholds: once the story unlocks it ({@link #UNLOCK_FLAG}), bond level 6 lets
  * you borrow an ally's nature, level 8 one of their techniques, level 10 both and for longer. A teammate, your
- * sensei and your spouse are the deepest bonds: for them the full tier opens at level 8. It reads the level they
- * act on, so a quarrel dims the flame and a falling-out puts it out. Shinobi Combat's {@code kindle} effect spends
+ * sensei and your spouse are the deepest bonds: for them the full tier opens at level 8, and a spouse's burns
+ * longest. Each use is counted ({@link Bond#kindled()}): borrowed often enough, a nature can be learned for good.
+ * It reads the level they act on, so a quarrel dims the flame and a falling-out puts it out. Shinobi Combat's {@code kindle} effect spends
  * the {@link Grant}.
  */
 public final class Kindling {
@@ -42,6 +43,13 @@ public final class Kindling {
             case FULL -> new Grant(5, 1, 1.5, 120);
         };
     }
+    /** A spouse is the strongest bond: their full kindling burns twice as long and rekindles in half the time. */
+    public static Grant grant(Tier tier, boolean spouse) {
+        var g = grant(tier);
+        return spouse && tier == Tier.FULL ? new Grant(g.natureCasts(), g.techniqueUses(), 2, g.rekindleMinutes() / 2) : g;
+    }
+    /** Uses with one person after which a master's trial can make their nature yours ({@code kindling_uses}). */
+    public static final int TRIAL_USES = 12;
 
     private Kindling() {}
 }

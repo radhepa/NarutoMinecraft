@@ -33,7 +33,7 @@ public final class SaveFormat {
         var deeds = new ArrayList<Object>();
         for (var d : w.deeds) {
             var knowers = new LinkedHashMap<String, Object>();
-            d.knowers.forEach((id, k) -> knowers.put(id, map("how", k.how().name().toLowerCase(), "day", k.day(), "from", k.from())));
+            d.knowers.forEach((id, k) -> knowers.put(id, map("how", k.how().name().toLowerCase(), "day", k.day(), "from", k.from(), "slant", k.slant())));
             deeds.add(map("serial", d.serial, "act", d.act.id(), "day", d.day, "about", d.about, "knowers", knowers));
         }
         out.put("deeds", deeds);
@@ -45,7 +45,7 @@ public final class SaveFormat {
         m.put("met", b.met); m.put("last_contact", b.lastContact); m.put("last_together", b.lastTogether);
         m.put("talk_day", b.talkDay); m.put("gift_day", b.giftDay); m.put("gifts_today", b.giftsToday); m.put("last_gift", b.lastGift);
         m.put("contact_days", b.contactDays); m.put("together", b.together); m.put("warmth", b.warmth);
-        m.put("level", b.level); m.put("floor", b.floor); m.put("low_days", b.lowDays);
+        m.put("level", b.level); m.put("floor", b.floor); m.put("low_days", b.lowDays); m.put("kindled", b.kindled);
         m.put("romance", b.romance.id()); m.put("romance_since", b.romanceSince); m.put("teen_since", b.teenSince);
         var memories = new ArrayList<Object>();
         for (var mem : b.memories) {
@@ -95,7 +95,7 @@ public final class SaveFormat {
             var deed = new Deed((int) lng(d.get("serial")), Act.of((String) d.get("act")), lng(d.get("day")), (String) d.getOrDefault("about", ""));
             for (var k : ((Map<String, Object>) d.getOrDefault("knowers", Map.of())).entrySet()) {
                 var km = (Map<String, Object>) k.getValue();
-                deed.knowers.put(k.getKey(), new Deed.Know(Reaction.Source.valueOf(((String) km.get("how")).toUpperCase()), lng(km.get("day")), (String) km.getOrDefault("from", "")));
+                deed.knowers.put(k.getKey(), new Deed.Know(Reaction.Source.valueOf(((String) km.get("how")).toUpperCase()), lng(km.get("day")), (String) km.getOrDefault("from", ""), dbl(km.getOrDefault("slant", 0))));
             }
             w.deeds.add(deed);
         }
@@ -107,7 +107,7 @@ public final class SaveFormat {
         b.talkDay = lng(m.getOrDefault("talk_day", -1)); b.giftDay = lng(m.getOrDefault("gift_day", -1)); b.giftsToday = (int) lng(m.getOrDefault("gifts_today", 0));
         b.lastGift = (String) m.getOrDefault("last_gift", "");
         b.contactDays = (int) lng(m.getOrDefault("contact_days", 0)); b.together = (int) lng(m.getOrDefault("together", 0));
-        b.warmth = dbl(m.getOrDefault("warmth", 0)); b.level = (int) lng(m.getOrDefault("level", 0)); b.floor = (int) lng(m.getOrDefault("floor", 0)); b.lowDays = (int) lng(m.getOrDefault("low_days", 0));
+        b.warmth = dbl(m.getOrDefault("warmth", 0)); b.level = (int) lng(m.getOrDefault("level", 0)); b.floor = (int) lng(m.getOrDefault("floor", 0)); b.kindled = (int) lng(m.getOrDefault("kindled", 0)); b.lowDays = (int) lng(m.getOrDefault("low_days", 0));
         b.romance = Courtship.Stage.of((String) m.getOrDefault("romance", "none"));
         b.romanceSince = lng(m.getOrDefault("romance_since", -1)); b.teenSince = lng(m.getOrDefault("teen_since", -1));
         for (Object o : (List<Object>) m.getOrDefault("memories", List.of())) {

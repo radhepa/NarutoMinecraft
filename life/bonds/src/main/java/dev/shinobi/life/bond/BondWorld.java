@@ -20,6 +20,8 @@ public final class BondWorld {
     public static final String PLAYER = "player";
     /** VF's calendar: four seasons of 28 days. */
     public static final int YEAR = 112, DAILY_GIFTS = 3;
+    /** A clan-born player is one of their own to their clan: a head start. */
+    public static final double KIN_AFFECTION = 8, KIN_TRUST = 6;
 
     final long seed;
     long day;
@@ -34,12 +36,15 @@ public final class BondWorld {
     String playerGender = "NON_BINARY", playerClan = "";
     final List<BondEvent> events = new ArrayList<>();
     private Map<String, Map<String, Double>> contacts;
+    /** The village-scale society, when one is settled ({@link Village#settle}); without it gossip runs on circles. */
+    Village village;
 
     public BondWorld(long seed, long day) { this.seed = seed; this.day = day; }
 
     // -- people and the player ---------------------------------------------------------------------
 
     public long seed() { return seed; }
+    public Village village() { return village; }
     public long day() { return day; }
     public void add(Person p) { people.put(p.id(), p); contacts = null; }
     public Person person(String id) { return people.get(id); }
@@ -95,6 +100,7 @@ public final class BondWorld {
         boolean peers = p.shinobi() && (to.equals(PLAYER) || need(to).shinobi()) && mine == yours;
         double rivalry = peers ? 15 * Math.max(0, pp.pride()) + 5 * Math.max(0, pp.boldness()) : 0;
         if (p.family().containsKey(to)) { affection = Math.max(affection, 55); trust = Math.max(trust, 55); }
+        if (to.equals(PLAYER) && !playerClan.isEmpty() && p.clan().equals(playerClan)) { affection += KIN_AFFECTION; trust += KIN_TRUST; }
         var m = new Meters(affection, trust, respect, rivalry, 0).plus(b.memoryWeight(day)).plus(b.conflict.weight());
         double romance = to.equals(PLAYER) && romanceOpen(from)
                 ? Courtship.meter(Courtship.spark(seed, from, chem), b.teenSince < 0 ? 0 : day - b.teenSince, b.romanticMemories(day), m.clamped().affection()) : 0;
@@ -178,6 +184,13 @@ public final class BondWorld {
         return delta;
     }
     public void reveal(String who, String fact) { bond(who).facts.add(fact); }
+    /** Kindling Bond was used with someone: what was granted (nothing if the tier is none), and the use counted for the master's trial. */
+    public Kindling.Grant kindle(String who) {
+        var tier = Kindling.tier(this, who);
+        if (tier == Kindling.Tier.NONE) return Kindling.grant(tier);
+        bond(who).kindled++;
+        return Kindling.grant(tier, who.equals(spouse()));
+    }
     public void setBondFlag(String who, String f) { bond(who).flags.add(f); }
 
     private Meters apply(String who, Act act, Source how, String about, String momentId, Collection<String> witnesses, boolean contact) {
@@ -276,6 +289,7 @@ public final class BondWorld {
     public Deed deed(Act act, String about, Collection<String> witnesses) {
         var d = new Deed(nextSerial++, act, day, about);
         deeds.add(d);
+        if (village != null) village.onDeed(d);
         if (about != null && !about.isEmpty() && people.containsKey(about)) d.knowers.put(about, new Deed.Know(Source.SELF, day, ""));
         for (String w : witnesses) if (!d.knows(w) && people.containsKey(w)) { d.knowers.put(w, new Deed.Know(Source.SEEN, day, "")); absorb(w, d); }
         return d;
@@ -296,6 +310,7 @@ public final class BondWorld {
         double close = d.about.isEmpty() ? .3 : p.family().containsKey(d.about) ? 1 : effectiveLevel(listener, d.about) / 10.0;
         var delta = Reaction.secondhand(p.personality(), d.act, k.how(), close);
         if (k.how() == Source.TOLD && !d.good()) delta = delta.losses(.6).plus(Meter.TRUST, 2);
+        if (k.slant() != 0) delta = Gossip.slanted(delta, k.slant());
         var b = bond(listener);
         b.meet(day);
         b.remember(d.act, delta, k.how(), d.about, day);
@@ -303,6 +318,7 @@ public final class BondWorld {
     }
     /** Who each person talks to, and how closely: shared circles, clan, district and family. */
     Map<String, Double> contacts(String id) {
+        if (village != null) return village.contacts(id);
         if (contacts == null) {
             var circles = new TreeMap<String, List<String>>();
             for (var p : people.values()) for (String c : circlesOf(p)) circles.computeIfAbsent(c, k -> new ArrayList<>()).add(p.id());
@@ -385,7 +401,10 @@ public final class BondWorld {
         birthdays();
         for (var d : List.copyOf(deeds)) for (String heard : Gossip.spread(this, d, day)) absorb(heard, d);
         squadDay();
+        boolean weekly = Math.floorMod(day, Village.WEEK) == Village.WEEK - 1;
         for (var b : List.copyOf(bonds.values())) {
+            // Someone who has only heard of you is a background bond: looked at once a week.
+            if (!b.met() && !weekly && b.conflict.state() == Conflict.State.NONE) continue;
             b.neglect(day); b.prune(day);
             var before = b.conflict.state();
             b.conflict = b.conflict.tick(day);
@@ -393,6 +412,7 @@ public final class BondWorld {
             if (b.to.equals(PLAYER)) courtship(b);
             updateLevel(b, 1);
         }
+        if (village != null) village.endDay();
         day++;
     }
     public void advance(int days) { for (int i = 0; i < days; i++) endDay(); }

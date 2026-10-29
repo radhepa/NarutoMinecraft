@@ -13,12 +13,15 @@ import java.util.List;
  * clan 2, district 1.5) and times the deed's size (small 0.5, notable 1), at most 0.9. Small deeds travel only
  * through close circles ({@link #SMALL_REACH}: households, squads, classes, workplaces). Big deeds are village news:
  * the next day everyone has heard. So news reaches a teammate through the squad, a clan through its members and a
- * district through its streets, and someone may hear of your quarrel before you tell them.
+ * district through its streets, and someone may hear of your quarrel before you tell them. In a settled
+ * {@link Village}, news travels along real ties, slower between clans on bad terms; a tense or cheerful village
+ * talks more; every retelling bends the story ({@link #slant}); and news nobody passes on for
+ * {@link #DIES_DOWN} days has died down.
  */
 public final class Gossip {
     public static final double BASE = .12, MAX = .9, SMALL_REACH = 2.5;
     /** In a circle bigger than this, each member talks with about {@link #TIES} of the others, like VF's ties. */
-    public static final int BIG_CIRCLE = 12, TIES = 8;
+    public static final int BIG_CIRCLE = 12, TIES = 8, DIES_DOWN = 3;
 
     /** Whether two members of a circle talk: everyone in a small circle; in a big one, a steady seeded sample of pairs. */
     public static boolean talks(long seed, String circle, String a, String b, int members) {
@@ -44,10 +47,26 @@ public final class Gossip {
         return Math.min(MAX, BASE * closeness * s);
     }
 
+    /**
+     * How a retelling bends the news: it keeps most of the teller's own slant, leans the way the teller feels about
+     * the player (a friend tells it kindly, someone cold tells it worse), and picks up a little noise each hop.
+     */
+    static double slant(BondWorld w, Deed d, Deed.Know heard, String teller, String listener, long today) {
+        var b = w.bonds.get(BondWorld.key(teller, BondWorld.PLAYER));
+        double lean = b != null && b.met() ? (Levels.feeling(w.meters(teller)) - 20) / 200 : 0;
+        double noise = (Seeds.roll(w.seed, "distort", Integer.toString(d.serial), teller, listener, Long.toString(today)) - .5) * .3;
+        return Math.clamp(heard.slant() * .8 + lean + noise, -.6, .6);
+    }
+    /** A slanted retelling: every effect moved by its own size times the slant, for the player or against them. */
+    public static Meters slanted(Meters m, double slant) {
+        return new Meters(m.affection() + Math.abs(m.affection()) * slant, m.trust() + Math.abs(m.trust()) * slant,
+                m.respect() + Math.abs(m.respect()) * slant, m.rivalry(), m.romance());
+    }
+
     /** One day of talk about one deed. Returns who heard, in order. */
     static List<String> spread(BondWorld w, Deed d, long today) {
         var heard = new ArrayList<String>();
-        if (!d.fresh(today) || today <= d.day) return heard;
+        if (!d.fresh(today) || today <= d.day || d.quiet >= DIES_DOWN) return heard;
         if (d.act.size == Act.Size.BIG) {
             for (var p : w.people.values()) if (!d.knows(p.id())) { d.knowers.put(p.id(), new Deed.Know(Reaction.Source.HEARD, today, "news")); heard.add(p.id()); }
             return heard;
@@ -59,12 +78,17 @@ public final class Gossip {
                 String listener = contact.getKey();
                 if (d.knows(listener) || d.act.size == Act.Size.SMALL && contact.getValue() < SMALL_REACH) continue;
                 double p = chance(contact.getValue(), d.act.size);
+                if (w.village != null) {
+                    var m = w.village.mood("village");
+                    p = Math.min(MAX, p * (1 + .3 * (d.good() ? Math.max(0, m.cheer()) : 0) + .3 * m.tension()));
+                }
                 if (Seeds.roll(w.seed, "gossip", Integer.toString(d.serial), teller, listener, Long.toString(today)) < p) {
-                    d.knowers.put(listener, new Deed.Know(Reaction.Source.HEARD, today, teller));
+                    d.knowers.put(listener, new Deed.Know(Reaction.Source.HEARD, today, teller, slant(w, d, known, teller, listener, today)));
                     heard.add(listener);
                 }
             }
         }
+        d.quiet = heard.isEmpty() ? d.quiet + 1 : 0;
         return heard;
     }
 

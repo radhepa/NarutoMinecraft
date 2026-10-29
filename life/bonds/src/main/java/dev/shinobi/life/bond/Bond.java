@@ -37,7 +37,7 @@ public final class Bond {
 
     final String from, to;
     long met = -1, lastContact = -1, lastTogether = -1, talkDay = -1, giftDay = -1, romanceSince = -1, teenSince = -1;
-    int contactDays, together, giftsToday, level, floor, lowDays;
+    int contactDays, together, giftsToday, level, floor, lowDays, kindled;
     double warmth;
     String lastGift = "";
     final List<Memory> memories = new ArrayList<>();
@@ -58,6 +58,8 @@ public final class Bond {
     public int level() { return level; }
     /** A level kept for good: one earned in Village Friends before Shinobi Life arrived. */
     public int floor() { return floor; }
+    /** How many times Kindling Bond has borrowed from them (a master's trial can make a borrowed nature yours). */
+    public int kindled() { return kindled; }
     public Conflict conflict() { return conflict; }
     public Courtship.Stage romance() { return romance; }
     public List<Memory> memories() { return List.copyOf(memories); }
