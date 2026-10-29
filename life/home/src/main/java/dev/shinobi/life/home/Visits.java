@@ -182,7 +182,7 @@ public final class Visits {
         return new Visit(who, "hosted." + activity, d.day(), hour, true, List.copyOf(reactions.subList(0, Math.min(MAX_REACTIONS, reactions.size()))), total / who.size());
     }
 
-    /** Gives a spare key (bond level 6): the bond engine records it as a moment. */
+    /** Gives a spare key (bond level 6): the bond engine records it as the flag {@code home.key}. */
     public static String giveKey(Home home, Friends f, String who, long day) {
         String r = home.giveKey(who, f.level(who), day);
         if (r.equals("ok")) f.keyGiven(who);

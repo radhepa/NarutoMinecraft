@@ -1,17 +1,17 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 233 files · ~286,211 words
+- 233 files · ~286,427 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .properties 2, .jar 1)
 
 ## Summary
-- 3943 nodes · 9368 edges · 170 communities (136 shown, 34 thin omitted)
-- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 1060 edges (avg confidence: 0.87)
+- 3943 nodes · 9370 edges · 171 communities (136 shown, 35 thin omitted)
+- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 1062 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8772e6e9`
+- Built from commit: `1f0dda17`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -139,7 +139,7 @@
 - Ranks
 - Json
 - FirstFifteenHours.java
-- .person
+- 18. The engine
 - Meters
 - Rng
 - Desk
@@ -173,6 +173,7 @@
 - FurnitureSet
 - 6. Filler arcs
 - street.py
+- .person
 
 ## God Nodes (most connected - your core abstractions)
 1. `k()` - 227 edges
@@ -201,7 +202,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (170 total, 34 thin omitted)
+## Communities (171 total, 35 thin omitted)
 
 ### Community 0 - "creator.py"
 Cohesion: 0.09
@@ -651,9 +652,9 @@ Nodes (12): 17. What the map needs, 2. The flat, The Classic flat: `flat.leaf_bl
 Cohesion: 0.11
 Nodes (17): 10. Open questions, 1. The hierarchy, 2. Rank and power, 3. Clan power, 4. Feeling the strong, 5. Head counts, 6. Who matters most, 7. The roster (+9 more)
 
-### Community 126 - ".person"
-Cohesion: 0.11
-Nodes (9): 12. The bond book, 18. The engine, 7. Keepsakes, curios, photos and chests, Chests and storage, Gifts, Received, GiftsTest, BondFriends (+1 more)
+### Community 126 - "18. The engine"
+Cohesion: 0.22
+Nodes (7): 18. The engine, 7. Keepsakes, curios, photos and chests, Chests and storage, Gifts, Received, GiftsTest, HomeHangout
 
 ### Community 127 - "Meters"
 Cohesion: 0.12
@@ -728,8 +729,8 @@ Cohesion: 0.13
 Nodes (9): Curve, Stretch, ACADEMY, CHUNIN, EXAMS, GENIN, JONIN, POST (+1 more)
 
 ### Community 157 - ".page"
-Cohesion: 0.33
-Nodes (4): BondBook, Fact, MemoryLine, Page
+Cohesion: 0.26
+Nodes (5): 12. The bond book, BondBook, Fact, MemoryLine, Page
 
 ### Community 158 - "TimeAndPacingTest"
 Cohesion: 0.27
@@ -749,8 +750,8 @@ Nodes (4): 6. Filler arcs, In the beta, Later (foundation), Later one-offs (foun
 
 ## Knowledge Gaps
 - **325 isolated node(s):** `TALK`, `GIFT_LOVED`, `GIFT_LIKED`, `GIFT_PLAIN`, `GIFT_DISLIKED` (+320 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1424 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **34 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1423 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -761,8 +762,8 @@ _Questions this graph is uniquely positioned to answer:_
   _325 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `creator.py` be split into smaller, more focused modules?**
   _Cohesion score 0.08879492600422834 - nodes in this community are weakly interconnected._
-- **Why does `BondWorld` connect `BondWorld` to `VillageSim.java`, `.romance`, `.person`, `org.junit.jupiter.api.Test`, `.test`, `.page`, `Run`, `.talk`, `SquadTest`, `Stage`, `list`, `Question`, `Squad`, `VillageScaleTest`, `Bond`, `.of`, `Person`, `Deed`, `AnswerTag`, `Village`, `.tier`, `VisitsTest`, `.person`?**
-  _High betweenness centrality (0.089) - this node is a cross-community bridge._
+- **Why does `BondWorld` connect `BondWorld` to `VillageSim.java`, `.romance`, `.person`, `org.junit.jupiter.api.Test`, `.test`, `.page`, `.person`, `Run`, `.talk`, `SquadTest`, `Stage`, `list`, `Question`, `Squad`, `VillageScaleTest`, `Bond`, `.of`, `Person`, `Deed`, `AnswerTag`, `Village`, `.tier`, `VisitsTest`, `18. The engine`?**
+  _High betweenness centrality (0.088) - this node is a cross-community bridge._
 - **Should `kit_uchiha.py` be split into smaller, more focused modules?**
   _Cohesion score 0.1286549707602339 - nodes in this community are weakly interconnected._
 - **Why does `solid()` connect `solid` to `kit_uchiha.py`, `kit_senju.py`, `kit_kurama.py`, `rnd`, `kit_kunoichi.py`, `kit_suzuran.py`, `k`, `Box`, `kit_sarutobi.py`, `kit_uzumaki.py`, `kit_market.py`, `kit_tobari.py`, `fabric`, `kit_rugged.py`, `kit_tsuchigumo.py`, `cel_box`, `kit_haruno.py`, `kit_household.py`, `Custom blocks`?**

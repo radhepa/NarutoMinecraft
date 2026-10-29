@@ -13,13 +13,14 @@ import java.util.List;
  * {@link Friends} over the bond engine. Visits use the engine's own verbs: a good visit is the {@code hung_out}
  * shared experience, any visit is contact and warmth; a gift on show is the engine's {@code Gifts.seenDisplayed} (the
  * giver remembers it once); a photo they are in is warmth and a bond flag ({@code home.noticed:<what>}); a spare
- * key is a moment ({@code home.spare_key}).
+ * key is the bond flag {@code home.key} and a little warmth (never a moment: keys must not open story gates).
  * Home hangouts are the engine's activities when it has them ({@code home_dinner} today), so asking, tastes,
  * highlights and rituals all work; the proposed home activities ({@link HomeHangout}) fall back to a plain shared
  * experience until the engine's catalog carries them.
  */
 public final class BondFriends implements Friends {
-    public static final String KEY_MOMENT = "home.spare_key", NOTICED = "home.noticed:";
+    /** The bond flag a key holder carries (quests read it with {@code bond_flag}); a key is not a moment, so it opens no gate. */
+    public static final String KEY_FLAG = "home.key", NOTICED = "home.noticed:";
     private final BondWorld w;
 
     public BondFriends(BondWorld w) { this.w = w; }
@@ -50,7 +51,7 @@ public final class BondFriends implements Friends {
         w.setBondFlag(who, NOTICED + what);
         return true;
     }
-    @Override public void keyGiven(String who) { w.moment(who, KEY_MOMENT); }
+    @Override public void keyGiven(String who) { w.setBondFlag(who, KEY_FLAG); w.addFriendship(who, 1); }
 
     @Override public String host(List<String> who, String activity, long day, int hour) {
         if (Activity.CATALOG.containsKey(activity)) {

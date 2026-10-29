@@ -71,12 +71,14 @@ class VisitsTest {
         var easy = Visits.meet(s.h, s.f, Cast.day(w.day(), 1, 17, false), List.of(Cast.TEAMMATE_B), "drop_in", 19);
         assertTrue(easy.reactions().contains("home.visit.mess.dont_mind"));
     }
-    @Test void aSpareKeyIsForCloseFriendsAndIsAMoment() {
+    @Test void aSpareKeyIsForCloseFriendsAndOpensNoGate() {
         var s = friendsWorld(); var w = s.f.world();
         assertEquals("not_close_enough", Visits.giveKey(s.h, s.f, Cast.TEAMMATE_B, w.day()));
         Cast.befriend(w, Cast.TEAMMATE_B, 6);
         assertEquals("ok", Visits.giveKey(s.h, s.f, Cast.TEAMMATE_B, w.day()));
-        assertTrue(w.bond(Cast.TEAMMATE_B).moments().contains(BondFriends.KEY_MOMENT));
+        var moments = w.bond(Cast.TEAMMATE_B).moments();
+        assertTrue(w.bond(Cast.TEAMMATE_B).has(BondFriends.KEY_FLAG));
+        assertEquals(moments, w.bond(Cast.TEAMMATE_B).moments(), "a key is not a moment");
         assertEquals("already", Visits.giveKey(s.h, s.f, Cast.TEAMMATE_B, w.day()));
     }
     @Test void whileYouAreOutTheyLeaveANoteOrWaitInside() {
