@@ -1,0 +1,5 @@
+{"id": "jonin_kunoichi", "name": "Kunoichi Jonin", "tagline": "Flak vest over a wine shirt, a red sash and a split wrap skirt over mesh leggings",
+ "face": "f01_shinobi", "hair": "h06_low_ponytail", "headwear": "w02_forehead_protector",
+ "top": "t20_kunoichi_jonin", "bottom": "b08_mesh_leggings",
+ "palette": "JONIN_KUNOICHI", "hair_color": "RAVEN", "eye_color": "JADE", "eye_style": "starlit", "feminine": true,
+ "complexion": 1, "scale": 14, "rank": "jonin"}

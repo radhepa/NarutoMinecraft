@@ -95,7 +95,8 @@
     "t16_tracker_zip_vest",
     "t17_scroll_bearer",
     "t18_sentinel_vest",
-    "t19_field_vest"
+    "t19_field_vest",
+    "t20_kunoichi_jonin"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -457,6 +458,24 @@
       "eye_style": "soft_glint",
       "feminine": false,
       "complexion": 4,
+      "scale": 14,
+      "rank": "jonin"
+    },
+    {
+      "id": "jonin_kunoichi",
+      "name": "Kunoichi Jonin",
+      "tagline": "Flak vest over a wine shirt, a red sash and a split wrap skirt over mesh leggings",
+      "face": "f01_shinobi",
+      "hair": "h06_low_ponytail",
+      "headwear": "w02_forehead_protector",
+      "top": "t20_kunoichi_jonin",
+      "bottom": "b08_mesh_leggings",
+      "palette": "JONIN_KUNOICHI",
+      "hair_color": "AUBURN",
+      "eye_color": "JADE",
+      "eye_style": "starlit",
+      "feminine": true,
+      "complexion": 1,
       "scale": 14,
       "rank": "jonin"
     }
