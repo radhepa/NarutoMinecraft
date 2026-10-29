@@ -1,0 +1,120 @@
+{
+ "format": 1,
+ "id": "mission.anbu.night_watch",
+ "kind": "mission",
+ "rank": "b",
+ "category": "anbu",
+ "status": "later",
+ "title": "mission.anbu.night_watch.title",
+ "brief": "mission.anbu.night_watch.brief",
+ "minutes": 35,
+ "party": "anbu_cell",
+ "unlock": {
+  "rank_at_least": "anbu"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "anbu"
+   }
+  },
+  "house": {
+   "pick": "anchor",
+   "tag": "village.rooftop_watch"
+  },
+  "visitor": {
+   "pick": "resident"
+  }
+ },
+ "start": "n1",
+ "steps": {
+  "n1": {
+   "objective": {
+    "type": "wait_until",
+    "time": "04:00",
+    "at": "slot:house"
+   },
+   "next": "n2"
+  },
+  "n2": {
+   "objective": {
+    "type": "wait_until",
+    "time": "04:00",
+    "at": "slot:house"
+   },
+   "next": "n3"
+  },
+  "n3": {
+   "objective": {
+    "type": "inspect",
+    "target": "visitor",
+    "at": "slot:house",
+    "count": 3
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "spotted",
+   "weight": 2,
+   "harder": true,
+   "modifier": true,
+   "premise": "mission.anbu.night_watch.twist.spotted"
+  },
+  {
+   "id": "innocent",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.anbu.night_watch.twist.innocent"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "village.rooftop_watch"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.6
+ },
+ "tags": [
+  "village",
+  "anbu",
+  "stealth",
+  "night"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.anbu",
+ "_premise": "Watch a house in the Leaf from the rooftops for three nights and report everyone who comes and goes.",
+ "_twists": {
+  "spotted": "A child in the house sees your mask on the second night.",
+  "innocent": "It is a love affair, not a conspiracy."
+ }
+}

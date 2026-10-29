@@ -1,0 +1,146 @@
+{
+ "format": 1,
+ "id": "mission.b.capture_rogue",
+ "kind": "mission",
+ "rank": "b",
+ "category": "capture",
+ "status": "later",
+ "title": "mission.b.capture_rogue.title",
+ "brief": "mission.b.capture_rogue.brief",
+ "minutes": 40,
+ "party": "squad",
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "jonin"
+   }
+  },
+  "target": {
+   "pick": "role",
+   "role": "role:target.deserter"
+  },
+  "hideout": {
+   "pick": "anchor",
+   "tag": "forest.hollow"
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "find"
+  },
+  "find": {
+   "objective": {
+    "type": "inspect",
+    "target": "tracks",
+    "at": "slot:hideout",
+    "count": 4
+   },
+   "next": "fight"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:target",
+    "at": "slot:hideout"
+   },
+   "next": "talk"
+  },
+  "talk": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "bring_home": null,
+     "hear_them_out": null
+    }
+   },
+   "next": "home"
+  },
+  "home": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:target",
+    "to": "place:gate.main"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "reason",
+   "weight": 2,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.b.capture_rogue.twist.reason"
+  },
+  {
+   "id": "rescuers",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "mission.b.capture_rogue.twist.rescuers"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "spared",
+  "no_knockouts"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "missing_nin.chunin"
+ ],
+ "places": {
+  "anchors": [
+   "forest.hollow",
+   "gate.main",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:northern_forest"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "capture",
+  "fight",
+  "target"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.capture",
+ "_premise": "Bring a deserter of the Leaf home alive to face judgement.",
+ "_twists": {
+  "reason": "The deserter left for a reason the council should hear.",
+  "rescuers": "Someone wants the deserter free and is willing to fight for it."
+ }
+}

@@ -1,0 +1,158 @@
+{
+ "format": 1,
+ "id": "mission.d.river_cleanup",
+ "kind": "mission",
+ "rank": "d",
+ "category": "river",
+ "status": "beta",
+ "title": "mission.d.river_cleanup.title",
+ "brief": "mission.d.river_cleanup.brief",
+ "minutes": 10,
+ "party": "squad_or_solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "fisher"
+   }
+  },
+  "bank": {
+   "pick": "anchor",
+   "tag": "riverbank"
+  },
+  "addressee": {
+   "pick": "resident"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "clean"
+  },
+  "clean": {
+   "objective": {
+    "type": "collect",
+    "target": "river_rubbish",
+    "at": "slot:bank",
+    "count": 12
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "bottle"
+     },
+     "next": "bottle"
+    },
+    {
+     "if": {
+      "twist": "snagged_net"
+     },
+     "next": "net"
+    },
+    {
+     "if": {
+      "twist": "midstream"
+     },
+     "next": "midstream"
+    }
+   ],
+   "next": "report"
+  },
+  "bottle": {
+   "objective": {
+    "type": "deliver",
+    "item": "bottled_letter",
+    "to": "slot:addressee"
+   },
+   "next": "report"
+  },
+  "net": {
+   "objective": {
+    "type": "perform",
+    "what": "free_net",
+    "at": "slot:bank"
+   },
+   "next": "report"
+  },
+  "midstream": {
+   "objective": {
+    "type": "perform",
+    "what": "water_walk_collect",
+    "at": "slot:bank",
+    "count": 4
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "bottle",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.river_cleanup.twist.bottle"
+  },
+  {
+   "id": "snagged_net",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.river_cleanup.twist.snagged_net"
+  },
+  {
+   "id": "midstream",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.river_cleanup.twist.midstream"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "all_found",
+  "fast"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "riverbank"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "outdoors",
+  "river"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.river",
+ "_premise": "Fish the rubbish out of the river below the market bridge.",
+ "_twists": {
+  "bottle": "A bottle with a letter inside, addressed to someone in the village.",
+  "snagged_net": "A fisher's net is snagged on the weir.",
+  "midstream": "The worst of it is out on the water, where only water-walking reaches."
+ }
+}

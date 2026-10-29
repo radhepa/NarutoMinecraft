@@ -1,0 +1,177 @@
+{
+ "format": 1,
+ "id": "mission.d.babysitting",
+ "kind": "mission",
+ "rank": "d",
+ "category": "childcare",
+ "status": "beta",
+ "title": "mission.d.babysitting.title",
+ "brief": "mission.d.babysitting.brief",
+ "minutes": 12,
+ "party": "squad_or_solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "household_children": true
+   }
+  },
+  "home": {
+   "pick": "anchor",
+   "tag": "client_home"
+  },
+  "hiding": {
+   "pick": "anchor",
+   "tag": "hiding_spot"
+  },
+  "hospital": {
+   "pick": "anchor",
+   "tag": "hospital.desk"
+  }
+ },
+ "start": "arrive",
+ "steps": {
+  "arrive": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "play"
+  },
+  "play": {
+   "objective": {
+    "type": "perform",
+    "what": "play_with_children",
+    "at": "slot:home",
+    "count": 3
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "hide_and_seek"
+     },
+     "next": "seek"
+    },
+    {
+     "if": {
+      "twist": "ninja_show"
+     },
+     "next": "show"
+    },
+    {
+     "if": {
+      "twist": "sick_child"
+     },
+     "next": "medicine"
+    }
+   ],
+   "next": "dinner"
+  },
+  "seek": {
+   "objective": {
+    "type": "inspect",
+    "target": "hidden_child",
+    "at": "slot:hiding"
+   },
+   "next": "dinner"
+  },
+  "show": {
+   "objective": {
+    "type": "perform",
+    "what": "technique:clone"
+   },
+   "next": "dinner"
+  },
+  "medicine": {
+   "objective": {
+    "type": "go",
+    "place": "slot:hospital"
+   },
+   "next": "back"
+  },
+  "back": {
+   "objective": {
+    "type": "deliver",
+    "item": "medicine",
+    "to": "slot:home"
+   },
+   "next": "dinner"
+  },
+  "dinner": {
+   "objective": {
+    "type": "wait_until",
+    "time": "18:00",
+    "at": "slot:home"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "hide_and_seek",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.babysitting.twist.hide_and_seek"
+  },
+  {
+   "id": "ninja_show",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.babysitting.twist.ninja_show"
+  },
+  {
+   "id": "sick_child",
+   "weight": 1,
+   "harder": true,
+   "premise": "mission.d.babysitting.twist.sick_child"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "extra_mile"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "client_home",
+   "hiding_spot",
+   "hospital.desk"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.4
+ },
+ "tags": [
+  "village",
+  "children"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.childcare",
+ "_premise": "Mind a family's children for an afternoon while the parents work.",
+ "_twists": {
+  "hide_and_seek": "The youngest hides so well the others start to worry.",
+  "ninja_show": "The children will not settle until they see a real jutsu.",
+  "sick_child": "One child runs a fever; fetch medicine without leaving the others alone."
+ }
+}

@@ -1,0 +1,167 @@
+{
+ "format": 1,
+ "id": "mission.b.warlord",
+ "kind": "mission",
+ "rank": "b",
+ "category": "elimination",
+ "status": "later",
+ "title": "mission.b.warlord.title",
+ "brief": "mission.b.warlord.brief",
+ "minutes": 40,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "magistrate",
+    "resident_of": "any"
+   }
+  },
+  "target": {
+   "pick": "role",
+   "role": "role:target.warlord"
+  },
+  "camp": {
+   "pick": "anchor",
+   "tag": "valley.camp"
+  },
+  "guard": {
+   "pick": "enemy_group",
+   "from": [
+    "bandit.fort_guard"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "scout"
+  },
+  "scout": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:camp"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "strike"
+  },
+  "strike": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:guard",
+    "at": "slot:camp"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:guard",
+      "slot:camp"
+     ]
+    }
+   ],
+   "next": "target"
+  },
+  "target": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:target",
+    "at": "slot:camp"
+   },
+   "next": "terms"
+  },
+  "terms": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "capture": null,
+     "finish": "eliminated"
+    }
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "body_double",
+   "weight": 2,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.b.warlord.twist.body_double"
+  },
+  {
+   "id": "hostage_valley",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "mission.b.warlord.twist.hostage_valley"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0,
+   "deed": "defended_village"
+  },
+  "eliminated": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "spared",
+  "no_knockouts"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "bandit.fort_guard",
+  "bandit.warlord"
+ ],
+ "places": {
+  "anchors": [
+   "gate.travel_desk",
+   "valley.camp"
+  ],
+  "regions": [
+   "region:valley"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "fight",
+  "target"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.elimination",
+ "_premise": "A bandit warlord holds a valley to ransom; end his hold on it (capture or eliminate, by the client's terms).",
+ "_twists": {
+  "body_double": "The man in the warlord's armour is a double.",
+  "hostage_valley": "He holds the valley's headmen as hostages in his camp."
+ }
+}

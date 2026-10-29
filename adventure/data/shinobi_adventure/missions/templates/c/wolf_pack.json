@@ -1,0 +1,201 @@
+{
+ "format": 1,
+ "id": "mission.c.wolf_pack",
+ "kind": "mission",
+ "rank": "c",
+ "category": "beasts",
+ "status": "beta",
+ "title": "mission.c.wolf_pack.title",
+ "brief": "mission.c.wolf_pack.brief",
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "farmer"
+   }
+  },
+  "pen": {
+   "pick": "anchor",
+   "tag": "farm_pen"
+  },
+  "den": {
+   "pick": "anchor",
+   "tag": "outside.wolf_den"
+  },
+  "pack": {
+   "pick": "enemy_group",
+   "from": [
+    "beast.wolf_pack"
+   ]
+  },
+  "camp": {
+   "pick": "anchor",
+   "tag": "outside.bandit_camp"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "watch"
+  },
+  "watch": {
+   "objective": {
+    "type": "wait_until",
+    "time": "22:00",
+    "at": "slot:pen"
+   },
+   "next": "defend"
+  },
+  "defend": {
+   "objective": {
+    "type": "protect",
+    "who": "livestock",
+    "until": "02:00",
+    "at": "slot:pen"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:pack",
+      "slot:pen"
+     ]
+    }
+   ],
+   "next": "track"
+  },
+  "track": {
+   "objective": {
+    "type": "inspect",
+    "target": "wolf_tracks",
+    "count": 3
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "driven_out"
+     },
+     "next": "cause"
+    }
+   ],
+   "next": "den"
+  },
+  "cause": {
+   "objective": {
+    "type": "go",
+    "place": "slot:camp"
+   },
+   "next": "cause_fight"
+  },
+  "cause_fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "bandit.pack_small",
+    "at": "slot:camp"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "bandit.pack_small",
+      "slot:camp"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "den": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:pack",
+    "at": "slot:den"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "driven_out",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.wolf_pack.twist.driven_out"
+  },
+  {
+   "id": "alpha",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "mission.c.wolf_pack.twist.alpha"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_knockouts"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "beast.wolf_pack",
+  "bandit.pack_small"
+ ],
+ "places": {
+  "anchors": [
+   "farm_pen",
+   "outside.bandit_camp",
+   "outside.wolf_den"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.45
+ },
+ "tags": [
+  "outside",
+  "beast",
+  "night",
+  "fight",
+  "tracking"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.beasts",
+ "_premise": "Wolves are taking livestock from the outer farms at night.",
+ "_twists": {
+  "driven_out": "The wolves were driven down by a bandit gang's fires in their hills.",
+  "alpha": "The pack has an alpha the size of a pony."
+ }
+}

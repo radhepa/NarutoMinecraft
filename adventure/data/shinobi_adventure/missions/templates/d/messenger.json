@@ -1,0 +1,159 @@
+{
+ "format": 1,
+ "id": "mission.d.messenger",
+ "kind": "mission",
+ "rank": "d",
+ "category": "delivery",
+ "status": "beta",
+ "title": "mission.d.messenger.title",
+ "brief": "mission.d.messenger.brief",
+ "minutes": 8,
+ "party": "solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "clerk"
+   }
+  },
+  "o1": {
+   "pick": "anchor",
+   "tag": "office"
+  },
+  "o2": {
+   "pick": "anchor",
+   "tag": "office"
+  },
+  "o3": {
+   "pick": "anchor",
+   "tag": "office"
+  }
+ },
+ "start": "collect",
+ "steps": {
+  "collect": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "o1"
+  },
+  "o1": {
+   "objective": {
+    "type": "deliver",
+    "item": "sealed_letter",
+    "to": "slot:o1"
+   },
+   "next": "o2"
+  },
+  "o2": {
+   "objective": {
+    "type": "deliver",
+    "item": "sealed_letter",
+    "to": "slot:o2"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "wait_reply"
+     },
+     "next": "wait"
+    }
+   ],
+   "next": "o3"
+  },
+  "wait": {
+   "objective": {
+    "type": "wait_until",
+    "time": "+1h",
+    "at": "slot:o2"
+   },
+   "next": "o3"
+  },
+  "o3": {
+   "objective": {
+    "type": "deliver",
+    "item": "sealed_letter",
+    "to": "slot:o3"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "rival_courier"
+     },
+     "next": "race"
+    }
+   ],
+   "next": "report"
+  },
+  "race": {
+   "objective": {
+    "type": "perform",
+    "what": "outrun",
+    "at": "slot:o3"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "wait_reply",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.messenger.twist.wait_reply"
+  },
+  {
+   "id": "rival_courier",
+   "weight": 1,
+   "harder": true,
+   "premise": "mission.d.messenger.twist.rival_courier"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast"
+ ],
+ "fast_hours": 1,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "office"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "village",
+  "delivery",
+  "timed",
+  "movement"
+ ],
+ "contested": true,
+ "classic": true,
+ "banter": "mission.banter.delivery",
+ "_premise": "Carry sealed letters between the Residence and three offices before the noon bell.",
+ "_twists": {
+  "wait_reply": "One office insists on sending a reply back with you.",
+  "rival_courier": "Another squad was given the same letters; first one there gets the credit."
+ }
+}

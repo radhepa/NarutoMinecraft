@@ -1,0 +1,196 @@
+{
+ "format": 1,
+ "id": "mission.d.tutoring",
+ "kind": "mission",
+ "rank": "d",
+ "category": "academy",
+ "status": "beta",
+ "title": "mission.d.tutoring.title",
+ "brief": "mission.d.tutoring.brief",
+ "minutes": 10,
+ "party": "solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "age": "child",
+    "job": "pupil"
+   }
+  },
+  "parent": {
+   "pick": "resident",
+   "where": {
+    "parent_of": "client"
+   }
+  },
+  "bully": {
+   "pick": "resident",
+   "where": {
+    "age": "child"
+   }
+  },
+  "library": {
+   "pick": "anchor",
+   "tag": "academy.library"
+  }
+ },
+ "start": "meet",
+ "steps": {
+  "meet": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:parent"
+   },
+   "next": "study"
+  },
+  "study": {
+   "objective": {
+    "type": "perform",
+    "what": "study_session",
+    "at": "slot:library",
+    "count": 2
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "real_problem"
+     },
+     "next": "listen"
+    },
+    {
+     "if": {
+      "twist": "cheat_sheet"
+     },
+     "next": "sheet"
+    }
+   ],
+   "next": "quiz"
+  },
+  "listen": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "bully"
+  },
+  "bully": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:bully"
+   },
+   "next": "quiz"
+  },
+  "sheet": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "confiscate": null,
+     "ignore": "looked_away"
+    }
+   },
+   "branch": [
+    {
+     "if": {
+      "chose": [
+       "sheet",
+       "ignore"
+      ]
+     },
+     "next": "quiz_cheat"
+    }
+   ],
+   "next": "quiz"
+  },
+  "quiz_cheat": {
+   "objective": {
+    "type": "perform",
+    "what": "quiz",
+    "at": "slot:library"
+   },
+   "on_done": [
+    {
+     "mission_outcome": "looked_away"
+    }
+   ],
+   "next": null
+  },
+  "quiz": {
+   "objective": {
+    "type": "perform",
+    "what": "quiz",
+    "at": "slot:library"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:parent"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "real_problem",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.tutoring.twist.real_problem"
+  },
+  {
+   "id": "cheat_sheet",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.tutoring.twist.cheat_sheet"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "looked_away": {
+   "pay": 1.0,
+   "standing": -1,
+   "acts": [
+    [
+     "slot:parent",
+     "broke_promise"
+    ]
+   ]
+  }
+ },
+ "bonus": [
+  "kind_choice",
+  "extra_mile"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "academy.library"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "village",
+  "academy",
+  "talk"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.academy",
+ "_premise": "Tutor an Academy pupil who will fail the next test without help.",
+ "_twists": {
+  "real_problem": "The pupil is not slow; an older child takes their lunch every day.",
+  "cheat_sheet": "You find a cheat sheet in the pupil's sleeve."
+ }
+}

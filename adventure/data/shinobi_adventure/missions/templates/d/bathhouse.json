@@ -1,0 +1,146 @@
+{
+ "format": 1,
+ "id": "mission.d.bathhouse",
+ "kind": "mission",
+ "rank": "d",
+ "category": "bathhouse",
+ "status": "beta",
+ "title": "mission.d.bathhouse.title",
+ "brief": "mission.d.bathhouse.brief",
+ "minutes": 10,
+ "party": "solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "bath_keeper"
+   }
+  },
+  "bath": {
+   "pick": "anchor",
+   "tag": "bathhouse"
+  },
+  "boiler": {
+   "pick": "anchor",
+   "tag": "bathhouse.boiler"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "scrub"
+  },
+  "scrub": {
+   "objective": {
+    "type": "perform",
+    "what": "scrub_tiles",
+    "at": "slot:bath",
+    "count": 8
+   },
+   "next": "stoke"
+  },
+  "stoke": {
+   "objective": {
+    "type": "perform",
+    "what": "stoke_fire",
+    "at": "slot:boiler",
+    "count": 3
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "boiler_trouble"
+     },
+     "next": "fix"
+    },
+    {
+     "if": {
+      "twist": "locker_key"
+     },
+     "next": "key"
+    }
+   ],
+   "next": "report"
+  },
+  "fix": {
+   "objective": {
+    "type": "perform",
+    "what": "technique:nature",
+    "at": "slot:boiler"
+   },
+   "next": "report"
+  },
+  "key": {
+   "objective": {
+    "type": "inspect",
+    "target": "locker_key",
+    "at": "slot:bath"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "boiler_trouble",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.bathhouse.twist.boiler_trouble"
+  },
+  {
+   "id": "locker_key",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.bathhouse.twist.locker_key"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "bathhouse",
+   "bathhouse.boiler"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "village",
+  "indoors"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.bathhouse",
+ "_premise": "Scrub the bath house and stoke its fires before the evening rush.",
+ "_twists": {
+  "boiler_trouble": "The boiler will not catch; a fire or wind technique would help.",
+  "locker_key": "A regular lost their locker key in the big bath."
+ }
+}

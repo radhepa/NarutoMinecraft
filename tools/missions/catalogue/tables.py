@@ -1,0 +1,188 @@
+"""The Mission Desk's numbers: pay and XP bands, grades, the desk's board rules, clients and the squad.
+
+Compiled to economy.json, desk.json, clients.json and squad.json next to the templates. Every number is
+data, so a balance pass is a datapack update (ROADMAP section 9, "Playtesting"). MISSIONS.md explains them.
+"""
+
+RANK_GATES = {
+    "d": {"all": [{"rank_at_least": "genin"}, {"rank_at_most": "chunin"},
+                  {"quest_state": ["main.ch9.small_jobs", "done"]}]},
+    "c": {"all": [{"rank_at_least": "genin"}, {"rank_at_most": "jonin"},
+                  {"quest_state": ["main.ch11.paper_trail", "done"]}]},
+    "b": {"rank_at_least": "chunin"},
+    "a": {"rank_at_least": "jonin"},
+    "s": {"all": [{"rank_at_least": "jonin"}, {"level_at_least": 42}]},
+}
+
+ECONOMY = {
+    "format": 1,
+    "_doc": "Pay is the player's share in ryo. XP is a share of the XP one level takes at the rank's reference level, so a D-rank is worth less of a level the higher you are. MISSIONS.md section 3.",
+    "ranks": {
+        "d": {"ryo": [60, 150], "xp": [0.15, 0.25], "ref_level": 7, "minutes": [8, 12]},
+        "c": {"ryo": [300, 600], "xp": [0.5, 0.7], "ref_level": 12, "minutes": [20, 35]},
+        "b": {"ryo": [800, 1500], "xp": [0.6, 0.9], "ref_level": 22, "minutes": [35, 45]},
+        "a": {"ryo": [2000, 4000], "xp": [0.9, 1.3], "ref_level": 36, "minutes": [45, 55]},
+        "s": {"ryo": [6000, 12000], "xp": [1.8, 2.6], "ref_level": 46, "minutes": [55, 70]},
+    },
+    "jitter": 0.12,
+    "round_to": 5,
+    "twist_harder": 0.1,
+    "requested": 1.15,
+    "grades": [
+        {"grade": "S", "min": 100, "pay": 1.25, "xp": 1.25, "rapport": 2.0, "standing": 2},
+        {"grade": "A", "min": 85, "pay": 1.1, "xp": 1.1, "rapport": 1.5, "standing": 1},
+        {"grade": "B", "min": 65, "pay": 1.0, "xp": 1.0, "rapport": 1.0, "standing": 0},
+        {"grade": "C", "min": 0, "pay": 0.85, "xp": 0.85, "rapport": 0.5, "standing": 0},
+    ],
+    "score": {"base": 60, "bonuses": 40, "knockout": -8, "client_hurt": -15, "alarm": -10, "late": -10,
+              "good_assignment": 4, "cohesion": [[75, 5], [50, 0], [30, -5], [0, -10]]},
+    "partial": {"pay": 0.5, "xp": 0.6, "rapport": 0.0, "grade_cap": "C"},
+    "fail": {"pay": 0.0, "xp": 0.1, "rapport": -2.0, "standing": -2, "act": "failed_client"},
+    "handed_back": {"rapport": -0.5, "desk": -1},
+    "abandoned": {"rapport": -4.0, "standing": -4, "act": "abandoned_mission"},
+    "xp_curve": {"base": 200, "per_level": 40, "_doc": "Provisional: XP to the next level. Progression's ranks.json owns the real curve."},
+    "living": {"_doc": "The beta's rule of thumb, for the simulation: a day of D-ranks covers food and leaves about half to save.",
+               "food_per_day": [30, 45], "tools_per_week": [40, 90]},
+}
+
+DESK = {
+    "format": 1,
+    "_doc": "The Mission Desk on the Hokage Residence's ground floor. MISSIONS.md section 2.",
+    "place": "place:residence.mission_desk",
+    "hours": ["08:00", "18:00"],
+    "rank_gates": RANK_GATES,
+    "board": {
+        "genin": {"d": 5, "c": 2},
+        "chunin": {"d": 2, "c": 3, "b": 3},
+        "jonin": {"c": 1, "b": 2, "a": 3},
+        "anbu": {"b": 1, "a": 2, "s": 1},
+        "hokage": {},
+    },
+    "refresh_days": {"d": 1, "c": 3, "b": 3, "a": 7, "s": 28},
+    "caps": {
+        "per_day": 2,
+        "in_hand": 1,
+        "per_week": {"c": {"genin": 1, "chunin": 3, "jonin": 3}, "b": {"chunin": 2, "jonin": 3, "anbu": 3},
+                     "a": {"jonin": 2, "anbu": 2}, "s": {"jonin": 1, "anbu": 1}},
+        "s_per_season": 1,
+    },
+    "variety": {
+        "template_gap_days": {"d": 8, "c": 12, "b": 14, "a": 21, "s": 56},
+        "client_gap_days": 4,
+        "anchor_gap_days": 2,
+        "region_gap_days": 0,
+        "max_same_category": 1,
+        "twist_gap_days": 10,
+    },
+    "twist_chance": {"classic": 0.45, "varied": 0.6},
+    "varied_weight_range": [0.5, 1.5],
+    "classic_opening": [
+        "mission.d.lost_pet", "mission.d.delivery_run", "mission.d.farm_weeding", "mission.d.academy_assist",
+        "mission.d.elder_errands", "mission.d.roof_repair", "mission.d.market_stall", "mission.d.river_cleanup",
+    ],
+    "offer_lifetime_days": {"d": 2, "c": 4, "b": 4, "a": 7, "s": 14},
+    "solo_when": "party is solo or squad_or_solo; from Chunin every D and C may be taken solo",
+}
+
+CLIENTS = {
+    "format": 1,
+    "_doc": "Client rapport, requests by name, recurring clients and chains, rival squads. MISSIONS.md section 5.",
+    "rapport": {
+        "tiers": [["stranger", -99], ["known", 1], ["regular", 3], ["trusted", 6], ["patron", 10]],
+        "soured_below": -2,
+        "_doc": "Points per mission by grade come from economy.json; a client below `soured_below` stops posting to you for 14 days.",
+    },
+    "requests": {
+        "min_tier": "known",
+        "min_avg_score": 85,
+        "chance_per_day": 0.25,
+        "max_on_board": 1,
+        "expires_days": 4,
+        "pay": 1.15,
+        "decline": "free",
+    },
+    "chains": [
+        {"id": "chain.merchant", "role": "role:merchant", "_doc": "The travelling merchant who keeps hiring the squad (ROADMAP Classic cast).",
+         "unlock": {"quest_state": ["main.ch14.second_escort", "done"]},
+         "templates": ["mission.c.escort_merchant", "mission.c.caravan_guard"], "per_week": 1},
+        {"id": "chain.kiln", "_doc": "A family of potters you work for from Genin to Jonin.",
+         "roles": {"role:client.kiln_grandmother": "an elderly civilian potter", "role:client.kiln_parent": "a civilian potter, her child",
+                   "role:client.kiln_heir": "the parent's eldest, an apprentice potter"},
+         "unlock": {"flag": "story.ch10.done"},
+         "stages": [
+             {"template": "mission.d.kiln_firing", "after": None},
+             {"template": "mission.c.kiln_delivery", "after": "mission.d.kiln_firing", "min_tier": "known"},
+             {"template": "mission.b.kiln_glaze", "after": "mission.c.kiln_delivery", "min_tier": "regular"},
+             {"template": "mission.a.kiln_court", "after": "mission.b.kiln_glaze", "min_tier": "trusted"},
+         ],
+         "per_week": 1},
+    ],
+    "returning": {
+        "_doc": "When the board casts a client, it first tries someone you have already worked for (known or better, and not too recently), so the village's regulars come back.",
+        "chance": 0.3,
+        "min_tier": "known",
+    },
+    "rival_squads": {
+        "rival": {"role": "role:rival_squad", "members": ["role:rival", "role:classmate_c", "role:classmate_d"],
+                  "unlock": {"quest_state": ["main.ch9.small_jobs", "done"]},
+                  "contests_per_week": 1, "win_chance": {"genin": 0.45, "chunin": 0.5}},
+        "npc_squads": {"count": 4, "take_unclaimed_after_days": 1, "chance": 0.2,
+                       "_doc": "Other Genin squads take offers you leave on the board; the board says who took it."},
+    },
+}
+
+SQUAD = {
+    "format": 1,
+    "_doc": "Teammates' roles in missions and how cohesion shows. MISSIONS.md section 6.",
+    "roles": {
+        "point": "Leads, scouts ahead, first into a fight",
+        "guard": "Stays with the client or the cargo",
+        "tracker": "Follows scent and signs (a ninken, a sensor, Byakugan)",
+        "support": "Traps, illusions, first aid, tools",
+    },
+    "wanted": {
+        "escort": ["guard", "point"], "guard": ["guard", "support"], "bodyguard": ["guard", "support"],
+        "bandits": ["point", "support"], "beasts": ["tracker", "point"], "tracking": ["tracker", "point"],
+        "rescue": ["tracker", "support"], "investigation": ["tracker", "support"], "protection": ["guard", "point"],
+        "delivery": ["guard", "point"], "interdiction": ["point", "support"], "courier": ["point", "tracker"],
+        "patrol": ["tracker", "point"], "recovery": ["point", "support"], "mediation": ["support", "guard"],
+        "contest": ["point", "tracker"], "duel": ["point", "support"], "leadership": ["point", "guard"],
+        "pets": ["tracker", "support"], "childcare": ["guard", "support"], "harvest": ["point", "support"],
+        "festival": ["point", "support"], "repairs": ["support", "point"], "clearing": ["support", "point"],
+        "river": ["support", "tracker"], "household": ["guard", "support"], "construction": ["point", "support"],
+        "farm": ["support", "tracker"], "*": ["point", "support"],
+    },
+    "aptitude": {
+        "_doc": "A teammate's best roles, from their profile; the first matching rule wins for each slot.",
+        "rules": [
+            {"if": {"has_ninken": True}, "roles": ["tracker"]},
+            {"if": {"clan": ["hyuga", "aburame", "inuzuka", "hatake"]}, "roles": ["tracker"]},
+            {"if": {"clan": ["kurama", "yuhi", "yamanaka", "suzuran"]}, "roles": ["support"]},
+            {"if": {"clan": ["akimichi", "gekko", "uchiha", "senju"]}, "roles": ["point"]},
+            {"if": {"trait": "discipline"}, "roles": ["guard"]},
+            {"if": {"trait": "boldness"}, "roles": ["point"]},
+            {"if": {"trait": "warmth"}, "roles": ["guard", "support"]},
+            {"if": {}, "roles": ["support"]},
+        ],
+    },
+    "assignment": {"good_call": 4, "favor": 1, "_doc": "A role that matches the teammate's aptitude and the mission adds to the grade score; every assignment is attention for the jealousy rules (BONDS.md section 7)."},
+    "cohesion": [
+        {"min": 75, "name": "in_step", "score": 5, "assists": True, "disobey": 0.0},
+        {"min": 50, "name": "steady", "score": 0, "assists": True, "disobey": 0.0},
+        {"min": 30, "name": "ragged", "score": -5, "assists": False, "disobey": 0.05},
+        {"min": 0, "name": "split", "score": -10, "assists": False, "disobey": 0.15},
+    ],
+    "acts": {
+        "success": [["role:squad", "mission_together"], ["role:squad", "mission_success"]],
+        "failure": [["role:squad", "mission_together"], ["role:squad", "mission_failed"]],
+        "camp": [["role:squad", "camp_night"]],
+        "_doc": "Bond acts the desk applies on turn-in (BONDS.md section 4); templates add their own.",
+    },
+    "banter": {
+        "key": "mission.banter.<category>.<phase>[.<cohesion>]",
+        "phases": ["brief", "depart", "travel", "arrive", "twist", "fight", "low_health", "choice", "camp",
+                   "success", "grade_s", "partial", "fail", "report"],
+        "cohesion": ["in_step", "steady", "ragged", "split"],
+        "speakers": ["role:teammate_a", "role:teammate_b", "role:sensei"],
+    },
+}

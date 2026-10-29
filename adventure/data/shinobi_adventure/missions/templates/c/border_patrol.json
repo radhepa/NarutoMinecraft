@@ -1,0 +1,177 @@
+{
+ "format": 1,
+ "id": "mission.c.border_patrol",
+ "kind": "mission",
+ "rank": "c",
+ "category": "patrol",
+ "status": "beta",
+ "title": "mission.c.border_patrol.title",
+ "brief": "mission.c.border_patrol.brief",
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch13.far_village",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "chunin"
+   }
+  },
+  "markers": {
+   "pick": "anchor",
+   "tag": "border.marker"
+  },
+  "post": {
+   "pick": "anchor",
+   "tag": "border.post"
+  },
+  "scouts": {
+   "pick": "enemy_group",
+   "from": [
+    "scout.enemy_pair"
+   ]
+  },
+  "lost": {
+   "pick": "resident",
+   "where": {
+    "resident_of": "any"
+   }
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "markers"
+  },
+  "markers": {
+   "objective": {
+    "type": "inspect",
+    "target": "border_marker",
+    "at": "slot:markers",
+    "count": 5
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "scouts"
+     },
+     "next": "scouts"
+    },
+    {
+     "if": {
+      "twist": "lost_genin"
+     },
+     "next": "lost"
+    }
+   ],
+   "next": "post"
+  },
+  "scouts": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:scouts",
+    "at": "slot:markers"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:scouts",
+      "slot:markers"
+     ]
+    }
+   ],
+   "next": "post"
+  },
+  "lost": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:lost",
+    "to": "slot:post"
+   },
+   "next": "post"
+  },
+  "post": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "scouts",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.c.border_patrol.twist.scouts"
+  },
+  {
+   "id": "lost_genin",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.border_patrol.twist.lost_genin"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "unseen",
+  "kind_choice"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "scout.enemy_pair"
+ ],
+ "places": {
+  "anchors": [
+   "border.marker",
+   "border.post"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.4
+ },
+ "tags": [
+  "travel",
+  "patrol",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.patrol",
+ "_premise": "Walk a stretch of the border with a Chunin, checking markers and watch posts.",
+ "_twists": {
+  "scouts": "Two foreign scouts are mapping the watch posts.",
+  "lost_genin": "A Genin from another village is lost on the wrong side of the markers."
+ }
+}

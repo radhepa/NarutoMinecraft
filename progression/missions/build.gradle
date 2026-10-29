@@ -1,0 +1,39 @@
+plugins {
+    id 'java-library'
+}
+
+// The Mission Desk's generator (MISSIONS.md): pure Java, no Minecraft, deterministic and seeded. It reads the board
+// templates and tables compiled by tools/missions/missions.py into the Adventure datapack. Phase 0's Progression mod
+// depends on it (`implementation project(':progression:missions')`) and includes it in its jar.
+version = '0.1.0'
+group = 'dev.shinobi'
+base { archivesName = 'shinobi-progression-missions' }
+
+repositories { mavenCentral() }
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Only to prove the seed streams match the bond engine's (and so Core's) to the bit.
+    testImplementation project(':life:bonds')
+}
+
+def catalogue = rootProject.file('adventure/data/shinobi_adventure/missions')
+
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+test {
+    useJUnitPlatform()
+    systemProperty 'missions.dir', catalogue.path
+    inputs.dir catalogue
+    testLogging { events 'failed'; exceptionFormat 'full' }
+}
+
+// Plays a beta's worth of Mission Desk days for three kinds of player and prints variety, pay and pacing.
+tasks.register('simulate', JavaExec) {
+    group = 'verification'
+    description = 'Simulates the Mission Desk through Genin life and beyond and prints variety, pay and pacing tables.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.shinobi.progression.mission.sim.DeskDays'
+    systemProperty 'missions.dir', catalogue.path
+    args project.findProperty('seed') ?: '20261029'
+}

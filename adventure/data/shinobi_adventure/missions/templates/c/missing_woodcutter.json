@@ -1,0 +1,187 @@
+{
+ "format": 1,
+ "id": "mission.c.missing_woodcutter",
+ "kind": "mission",
+ "rank": "c",
+ "category": "rescue",
+ "status": "beta",
+ "title": "mission.c.missing_woodcutter.title",
+ "brief": "mission.c.missing_woodcutter.brief",
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "household": true
+   }
+  },
+  "woods": {
+   "pick": "anchor",
+   "tag": "outside.woodcutter_path"
+  },
+  "ravine": {
+   "pick": "anchor",
+   "tag": "outside.ravine"
+  },
+  "wolves": {
+   "pick": "enemy_group",
+   "from": [
+    "beast.wolf_pack"
+   ]
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "search"
+  },
+  "search": {
+   "objective": {
+    "type": "inspect",
+    "target": "woodcutter_signs",
+    "at": "slot:woods",
+    "count": 4
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "ravine"
+     },
+     "next": "ravine"
+    }
+   ],
+   "next": "found"
+  },
+  "ravine": {
+   "objective": {
+    "type": "perform",
+    "what": "wall_run_descent",
+    "at": "slot:ravine"
+   },
+   "next": "found"
+  },
+  "found": {
+   "objective": {
+    "type": "talk",
+    "who": "woodcutter"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "wolves_close_in"
+     },
+     "next": "defend"
+    }
+   ],
+   "next": "carry"
+  },
+  "defend": {
+   "objective": {
+    "type": "protect",
+    "who": "woodcutter",
+    "until": "+1h",
+    "at": "slot:woods"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:wolves",
+      "slot:woods"
+     ]
+    }
+   ],
+   "next": "carry"
+  },
+  "carry": {
+   "objective": {
+    "type": "escort",
+    "who": "woodcutter",
+    "to": "place:hospital.desk"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "ravine",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.missing_woodcutter.twist.ravine"
+  },
+  {
+   "id": "wolves_close_in",
+   "weight": 2,
+   "harder": true,
+   "premise": "mission.c.missing_woodcutter.twist.wolves_close_in"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "fast"
+ ],
+ "fast_hours": 8,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "beast.wolf_pack"
+ ],
+ "places": {
+  "anchors": [
+   "hospital.desk",
+   "outside.ravine",
+   "outside.woodcutter_path"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.4
+ },
+ "tags": [
+  "outside",
+  "rescue",
+  "movement"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.rescue",
+ "_premise": "A woodcutter did not come home from the hills; find him.",
+ "_twists": {
+  "ravine": "He fell into a ravine; the only way down is the cliff face.",
+  "wolves_close_in": "Wolves have smelled the blood before you did."
+ }
+}

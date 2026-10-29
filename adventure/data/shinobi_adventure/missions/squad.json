@@ -1,0 +1,305 @@
+{
+ "format": 1,
+ "_doc": "Teammates' roles in missions and how cohesion shows. MISSIONS.md section 6.",
+ "roles": {
+  "point": "Leads, scouts ahead, first into a fight",
+  "guard": "Stays with the client or the cargo",
+  "tracker": "Follows scent and signs (a ninken, a sensor, Byakugan)",
+  "support": "Traps, illusions, first aid, tools"
+ },
+ "wanted": {
+  "escort": [
+   "guard",
+   "point"
+  ],
+  "guard": [
+   "guard",
+   "support"
+  ],
+  "bodyguard": [
+   "guard",
+   "support"
+  ],
+  "bandits": [
+   "point",
+   "support"
+  ],
+  "beasts": [
+   "tracker",
+   "point"
+  ],
+  "tracking": [
+   "tracker",
+   "point"
+  ],
+  "rescue": [
+   "tracker",
+   "support"
+  ],
+  "investigation": [
+   "tracker",
+   "support"
+  ],
+  "protection": [
+   "guard",
+   "point"
+  ],
+  "delivery": [
+   "guard",
+   "point"
+  ],
+  "interdiction": [
+   "point",
+   "support"
+  ],
+  "courier": [
+   "point",
+   "tracker"
+  ],
+  "patrol": [
+   "tracker",
+   "point"
+  ],
+  "recovery": [
+   "point",
+   "support"
+  ],
+  "mediation": [
+   "support",
+   "guard"
+  ],
+  "contest": [
+   "point",
+   "tracker"
+  ],
+  "duel": [
+   "point",
+   "support"
+  ],
+  "leadership": [
+   "point",
+   "guard"
+  ],
+  "pets": [
+   "tracker",
+   "support"
+  ],
+  "childcare": [
+   "guard",
+   "support"
+  ],
+  "harvest": [
+   "point",
+   "support"
+  ],
+  "festival": [
+   "point",
+   "support"
+  ],
+  "repairs": [
+   "support",
+   "point"
+  ],
+  "clearing": [
+   "support",
+   "point"
+  ],
+  "river": [
+   "support",
+   "tracker"
+  ],
+  "household": [
+   "guard",
+   "support"
+  ],
+  "construction": [
+   "point",
+   "support"
+  ],
+  "farm": [
+   "support",
+   "tracker"
+  ],
+  "*": [
+   "point",
+   "support"
+  ]
+ },
+ "aptitude": {
+  "_doc": "A teammate's best roles, from their profile; the first matching rule wins for each slot.",
+  "rules": [
+   {
+    "if": {
+     "has_ninken": true
+    },
+    "roles": [
+     "tracker"
+    ]
+   },
+   {
+    "if": {
+     "clan": [
+      "hyuga",
+      "aburame",
+      "inuzuka",
+      "hatake"
+     ]
+    },
+    "roles": [
+     "tracker"
+    ]
+   },
+   {
+    "if": {
+     "clan": [
+      "kurama",
+      "yuhi",
+      "yamanaka",
+      "suzuran"
+     ]
+    },
+    "roles": [
+     "support"
+    ]
+   },
+   {
+    "if": {
+     "clan": [
+      "akimichi",
+      "gekko",
+      "uchiha",
+      "senju"
+     ]
+    },
+    "roles": [
+     "point"
+    ]
+   },
+   {
+    "if": {
+     "trait": "discipline"
+    },
+    "roles": [
+     "guard"
+    ]
+   },
+   {
+    "if": {
+     "trait": "boldness"
+    },
+    "roles": [
+     "point"
+    ]
+   },
+   {
+    "if": {
+     "trait": "warmth"
+    },
+    "roles": [
+     "guard",
+     "support"
+    ]
+   },
+   {
+    "if": {},
+    "roles": [
+     "support"
+    ]
+   }
+  ]
+ },
+ "assignment": {
+  "good_call": 4,
+  "favor": 1,
+  "_doc": "A role that matches the teammate's aptitude and the mission adds to the grade score; every assignment is attention for the jealousy rules (BONDS.md section 7)."
+ },
+ "cohesion": [
+  {
+   "min": 75,
+   "name": "in_step",
+   "score": 5,
+   "assists": true,
+   "disobey": 0.0
+  },
+  {
+   "min": 50,
+   "name": "steady",
+   "score": 0,
+   "assists": true,
+   "disobey": 0.0
+  },
+  {
+   "min": 30,
+   "name": "ragged",
+   "score": -5,
+   "assists": false,
+   "disobey": 0.05
+  },
+  {
+   "min": 0,
+   "name": "split",
+   "score": -10,
+   "assists": false,
+   "disobey": 0.15
+  }
+ ],
+ "acts": {
+  "success": [
+   [
+    "role:squad",
+    "mission_together"
+   ],
+   [
+    "role:squad",
+    "mission_success"
+   ]
+  ],
+  "failure": [
+   [
+    "role:squad",
+    "mission_together"
+   ],
+   [
+    "role:squad",
+    "mission_failed"
+   ]
+  ],
+  "camp": [
+   [
+    "role:squad",
+    "camp_night"
+   ]
+  ],
+  "_doc": "Bond acts the desk applies on turn-in (BONDS.md section 4); templates add their own."
+ },
+ "banter": {
+  "key": "mission.banter.<category>.<phase>[.<cohesion>]",
+  "phases": [
+   "brief",
+   "depart",
+   "travel",
+   "arrive",
+   "twist",
+   "fight",
+   "low_health",
+   "choice",
+   "camp",
+   "success",
+   "grade_s",
+   "partial",
+   "fail",
+   "report"
+  ],
+  "cohesion": [
+   "in_step",
+   "steady",
+   "ragged",
+   "split"
+  ],
+  "speakers": [
+   "role:teammate_a",
+   "role:teammate_b",
+   "role:sensei"
+  ]
+ }
+}

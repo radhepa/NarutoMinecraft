@@ -1,0 +1,164 @@
+{
+ "format": 1,
+ "id": "mission.d.snow_clearing",
+ "kind": "mission",
+ "rank": "d",
+ "category": "seasonal",
+ "status": "beta",
+ "title": "mission.d.snow_clearing.title",
+ "brief": "mission.d.snow_clearing.brief",
+ "minutes": 10,
+ "party": "squad",
+ "season": [
+  "winter"
+ ],
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "clerk"
+   }
+  },
+  "roofs": {
+   "pick": "anchor",
+   "tag": "client_roof"
+  },
+  "lane": {
+   "pick": "anchor",
+   "tag": "residential_lane"
+  },
+  "kids": {
+   "pick": "resident",
+   "where": {
+    "age": "child"
+   }
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "roofs"
+  },
+  "roofs": {
+   "objective": {
+    "type": "perform",
+    "what": "shovel_roof",
+    "at": "slot:roofs",
+    "count": 6
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "slide"
+     },
+     "next": "slide"
+    },
+    {
+     "if": {
+      "twist": "snowball_ambush"
+     },
+     "next": "ambush"
+    }
+   ],
+   "next": "lane"
+  },
+  "slide": {
+   "objective": {
+    "type": "perform",
+    "what": "dodge",
+    "at": "slot:lane"
+   },
+   "next": "lane"
+  },
+  "ambush": {
+   "objective": {
+    "type": "perform",
+    "what": "snowball_fight",
+    "at": "slot:lane"
+   },
+   "on_done": [
+    {
+     "bond_event": [
+      "slot:kids",
+      "favor"
+     ]
+    }
+   ],
+   "next": "lane"
+  },
+  "lane": {
+   "objective": {
+    "type": "perform",
+    "what": "shovel_lane",
+    "at": "slot:lane",
+    "count": 8
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "slide",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.snow_clearing.twist.slide"
+  },
+  {
+   "id": "snowball_ambush",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.snow_clearing.twist.snowball_ambush"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "teamwork",
+  "fast"
+ ],
+ "fast_hours": 3,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "client_roof",
+   "residential_lane"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "village",
+  "seasonal"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.seasonal",
+ "_premise": "Clear snow from roofs and lanes before it brings a roof down.",
+ "_twists": {
+  "slide": "A whole roof of snow lets go at once.",
+  "snowball_ambush": "The street's children declare war."
+ }
+}

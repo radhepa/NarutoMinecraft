@@ -1,0 +1,149 @@
+{
+ "format": 1,
+ "id": "mission.s.coup",
+ "kind": "mission",
+ "rank": "s",
+ "category": "protection",
+ "status": "later",
+ "title": "mission.s.coup.title",
+ "brief": "mission.s.coup.brief",
+ "minutes": 60,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "jonin"
+   },
+   {
+    "level_at_least": 42
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "daimyo",
+    "resident_of": "any"
+   }
+  },
+  "palace": {
+   "pick": "anchor",
+   "tag": "capital.palace"
+  },
+  "plotters": {
+   "pick": "enemy_group",
+   "from": [
+    "assassin.team",
+    "enemy.jonin"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "intel"
+  },
+  "intel": {
+   "objective": {
+    "type": "inspect",
+    "target": "plotter_sign",
+    "at": "slot:palace",
+    "count": 4
+   },
+   "next": "night"
+  },
+  "night": {
+   "objective": {
+    "type": "protect",
+    "who": "slot:client",
+    "until": "06:00",
+    "at": "slot:palace"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:plotters",
+      "slot:palace"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "council_involved",
+   "weight": 2,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.s.coup.twist.council_involved"
+  },
+  {
+   "id": "fire",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "mission.s.coup.twist.fire"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_alarm",
+  "unseen"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "assassin.team",
+  "enemy.jonin"
+ ],
+ "places": {
+  "anchors": [
+   "capital.palace",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:capital"
+  ]
+ },
+ "pay": {
+  "band": "s",
+  "xp_band": "s",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "politics",
+  "defence",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.protection",
+ "_premise": "A coup is planned against the Fire Country's daimyo during a festival at the capital.",
+ "_twists": {
+  "council_involved": "A minister of the court is behind it.",
+  "fire": "They set the palace alight as a distraction."
+ }
+}

@@ -1,0 +1,171 @@
+{
+ "format": 1,
+ "id": "mission.d.roof_repair",
+ "kind": "mission",
+ "rank": "d",
+ "category": "repairs",
+ "status": "beta",
+ "title": "mission.d.roof_repair.title",
+ "brief": "mission.d.roof_repair.brief",
+ "minutes": 10,
+ "party": "squad_or_solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "household": true
+   }
+  },
+  "roof": {
+   "pick": "anchor",
+   "tag": "client_roof"
+  },
+  "yard": {
+   "pick": "anchor",
+   "tag": "carpenters_yard"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "tiles"
+  },
+  "tiles": {
+   "objective": {
+    "type": "collect",
+    "target": "roof_tile",
+    "at": "slot:yard",
+    "count": 8
+   },
+   "next": "patch"
+  },
+  "patch": {
+   "objective": {
+    "type": "perform",
+    "what": "lay_tile",
+    "at": "slot:roof",
+    "count": 8
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "bird_nest"
+     },
+     "next": "nest"
+    },
+    {
+     "if": {
+      "twist": "stuck_cat"
+     },
+     "next": "cat"
+    },
+    {
+     "if": {
+      "twist": "rain"
+     },
+     "next": "rain"
+    }
+   ],
+   "next": "report"
+  },
+  "nest": {
+   "objective": {
+    "type": "perform",
+    "what": "move_nest",
+    "at": "slot:roof"
+   },
+   "next": "report"
+  },
+  "cat": {
+   "objective": {
+    "type": "collect",
+    "target": "cat",
+    "at": "slot:roof"
+   },
+   "next": "report"
+  },
+  "rain": {
+   "objective": {
+    "type": "perform",
+    "what": "lay_tile",
+    "at": "slot:roof",
+    "count": 4
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "bird_nest",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.roof_repair.twist.bird_nest"
+  },
+  {
+   "id": "stuck_cat",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.roof_repair.twist.stuck_cat"
+  },
+  {
+   "id": "rain",
+   "weight": 1,
+   "harder": true,
+   "premise": "mission.d.roof_repair.twist.rain"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "careful",
+  "fast",
+  "gentle"
+ ],
+ "fast_hours": 3,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "carpenters_yard",
+   "client_roof"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.35
+ },
+ "tags": [
+  "village",
+  "movement",
+  "repairs"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.repairs",
+ "_premise": "Patch a leaking roof before the evening rain.",
+ "_twists": {
+  "bird_nest": "A swallow has nested right over the leak.",
+  "stuck_cat": "The neighbour's cat followed you up and will not come down.",
+  "rain": "The rain arrives with four tiles still to go."
+ }
+}

@@ -1,0 +1,175 @@
+{
+ "format": 1,
+ "id": "mission.d.posters",
+ "kind": "mission",
+ "rank": "d",
+ "category": "posters",
+ "status": "beta",
+ "title": "mission.d.posters.title",
+ "brief": "mission.d.posters.brief",
+ "minutes": 8,
+ "party": "squad_or_solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "clerk"
+   }
+  },
+  "boards": {
+   "pick": "anchor",
+   "tag": "poster_board"
+  },
+  "rival_shop": {
+   "pick": "resident",
+   "where": {
+    "job": "shopkeeper"
+   }
+  }
+ },
+ "start": "collect",
+ "steps": {
+  "collect": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "post"
+  },
+  "post": {
+   "objective": {
+    "type": "perform",
+    "what": "pin_poster",
+    "at": "slot:boards",
+    "count": 8
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "torn_down"
+     },
+     "next": "watch"
+    },
+    {
+     "if": {
+      "twist": "typo"
+     },
+     "next": "reprint"
+    },
+    {
+     "if": {
+      "twist": "windy"
+     },
+     "next": "chase"
+    }
+   ],
+   "next": "report"
+  },
+  "watch": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:boards"
+   },
+   "next": "confront"
+  },
+  "confront": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:rival_shop"
+   },
+   "next": "post2"
+  },
+  "post2": {
+   "objective": {
+    "type": "perform",
+    "what": "pin_poster",
+    "at": "slot:boards",
+    "count": 4
+   },
+   "next": "report"
+  },
+  "reprint": {
+   "objective": {
+    "type": "craft",
+    "item": "poster",
+    "count": 8
+   },
+   "next": "post"
+  },
+  "chase": {
+   "objective": {
+    "type": "collect",
+    "target": "poster",
+    "count": 5
+   },
+   "next": "post2"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "torn_down",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.posters.twist.torn_down"
+  },
+  {
+   "id": "typo",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.posters.twist.typo"
+  },
+  {
+   "id": "windy",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.posters.twist.windy"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "unseen"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "poster_board"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.2
+ },
+ "tags": [
+  "village",
+  "movement"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.posters",
+ "_premise": "Put up posters for an upcoming event in every district.",
+ "_twists": {
+  "torn_down": "Someone tears the posters down as fast as you put them up.",
+  "typo": "The date on every poster is wrong.",
+  "windy": "A gust takes half the stack over the rooftops."
+ }
+}

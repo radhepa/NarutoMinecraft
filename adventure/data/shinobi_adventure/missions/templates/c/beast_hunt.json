@@ -1,0 +1,230 @@
+{
+ "format": 1,
+ "id": "mission.c.beast_hunt",
+ "kind": "mission",
+ "rank": "c",
+ "category": "beasts",
+ "status": "beta",
+ "title": "mission.c.beast_hunt.title",
+ "brief": "mission.c.beast_hunt.brief",
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "farmer"
+   }
+  },
+  "fields": {
+   "pick": "anchor",
+   "tag": "farm_field"
+  },
+  "lair": {
+   "pick": "anchor",
+   "tag": "outside.boar_wallow"
+  },
+  "beast": {
+   "pick": "enemy_group",
+   "from": [
+    "beast.boar_giant"
+   ]
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "track"
+  },
+  "track": {
+   "objective": {
+    "type": "inspect",
+    "target": "boar_tracks",
+    "at": "slot:fields",
+    "count": 4
+   },
+   "next": "lair"
+  },
+  "lair": {
+   "objective": {
+    "type": "go",
+    "place": "slot:lair"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "mother_with_young"
+     },
+     "next": "young"
+    }
+   ],
+   "next": "fight"
+  },
+  "young": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "drive_off": "relocated",
+     "fight": null
+    }
+   },
+   "branch": [
+    {
+     "if": {
+      "chose": [
+       "young",
+       "drive_off"
+      ]
+     },
+     "next": "drive"
+    }
+   ],
+   "next": "fight"
+  },
+  "drive": {
+   "objective": {
+    "type": "perform",
+    "what": "drive_off",
+    "at": "slot:lair",
+    "count": 3
+   },
+   "on_done": [
+    {
+     "mission_outcome": "relocated"
+    }
+   ],
+   "next": null
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:beast",
+    "at": "slot:lair"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:beast",
+      "slot:lair"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "two_beasts"
+     },
+     "next": "second"
+    }
+   ],
+   "next": "report"
+  },
+  "second": {
+   "objective": {
+    "type": "defeat",
+    "group": "beast.boar_giant",
+    "at": "slot:fields"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "beast.boar_giant",
+      "slot:fields"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "mother_with_young",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.c.beast_hunt.twist.mother_with_young"
+  },
+  {
+   "id": "two_beasts",
+   "weight": 1,
+   "harder": true,
+   "premise": "mission.c.beast_hunt.twist.two_beasts"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "relocated": {
+   "pay": 0.9,
+   "standing": 1,
+   "clan_deed": [
+    "inuzuka",
+    "helped_resident"
+   ]
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "fast",
+  "kind_choice"
+ ],
+ "fast_hours": 6,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "beast.boar_giant"
+ ],
+ "places": {
+  "anchors": [
+   "farm_field",
+   "outside.boar_wallow"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.45
+ },
+ "tags": [
+  "outside",
+  "beast",
+  "fight",
+  "tracking"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.beasts",
+ "_premise": "A giant boar is tearing up the farms outside the wall; stop it.",
+ "_twists": {
+  "mother_with_young": "It is a sow with piglets; she was driven out of her forest by something.",
+  "two_beasts": "There are two of them."
+ }
+}

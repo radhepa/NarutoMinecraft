@@ -1,0 +1,153 @@
+{
+ "format": 1,
+ "_doc": "The Mission Desk on the Hokage Residence's ground floor. MISSIONS.md section 2.",
+ "place": "place:residence.mission_desk",
+ "hours": [
+  "08:00",
+  "18:00"
+ ],
+ "rank_gates": {
+  "d": {
+   "all": [
+    {
+     "rank_at_least": "genin"
+    },
+    {
+     "rank_at_most": "chunin"
+    },
+    {
+     "quest_state": [
+      "main.ch9.small_jobs",
+      "done"
+     ]
+    }
+   ]
+  },
+  "c": {
+   "all": [
+    {
+     "rank_at_least": "genin"
+    },
+    {
+     "rank_at_most": "jonin"
+    },
+    {
+     "quest_state": [
+      "main.ch11.paper_trail",
+      "done"
+     ]
+    }
+   ]
+  },
+  "b": {
+   "rank_at_least": "chunin"
+  },
+  "a": {
+   "rank_at_least": "jonin"
+  },
+  "s": {
+   "all": [
+    {
+     "rank_at_least": "jonin"
+    },
+    {
+     "level_at_least": 42
+    }
+   ]
+  }
+ },
+ "board": {
+  "genin": {
+   "d": 5,
+   "c": 2
+  },
+  "chunin": {
+   "d": 2,
+   "c": 3,
+   "b": 3
+  },
+  "jonin": {
+   "c": 1,
+   "b": 2,
+   "a": 3
+  },
+  "anbu": {
+   "b": 1,
+   "a": 2,
+   "s": 1
+  },
+  "hokage": {}
+ },
+ "refresh_days": {
+  "d": 1,
+  "c": 3,
+  "b": 3,
+  "a": 7,
+  "s": 28
+ },
+ "caps": {
+  "per_day": 2,
+  "in_hand": 1,
+  "per_week": {
+   "c": {
+    "genin": 1,
+    "chunin": 3,
+    "jonin": 3
+   },
+   "b": {
+    "chunin": 2,
+    "jonin": 3,
+    "anbu": 3
+   },
+   "a": {
+    "jonin": 2,
+    "anbu": 2
+   },
+   "s": {
+    "jonin": 1,
+    "anbu": 1
+   }
+  },
+  "s_per_season": 1
+ },
+ "variety": {
+  "template_gap_days": {
+   "d": 8,
+   "c": 12,
+   "b": 14,
+   "a": 21,
+   "s": 56
+  },
+  "client_gap_days": 4,
+  "anchor_gap_days": 2,
+  "region_gap_days": 0,
+  "max_same_category": 1,
+  "twist_gap_days": 10
+ },
+ "twist_chance": {
+  "classic": 0.45,
+  "varied": 0.6
+ },
+ "varied_weight_range": [
+  0.5,
+  1.5
+ ],
+ "classic_opening": [
+  "mission.d.lost_pet",
+  "mission.d.delivery_run",
+  "mission.d.farm_weeding",
+  "mission.d.academy_assist",
+  "mission.d.elder_errands",
+  "mission.d.roof_repair",
+  "mission.d.market_stall",
+  "mission.d.river_cleanup"
+ ],
+ "offer_lifetime_days": {
+  "d": 2,
+  "c": 4,
+  "b": 4,
+  "a": 7,
+  "s": 14
+ },
+ "solo_when": "party is solo or squad_or_solo; from Chunin every D and C may be taken solo"
+}

@@ -1,0 +1,127 @@
+{
+ "format": 1,
+ "id": "mission.anbu.village_shadow",
+ "kind": "mission",
+ "rank": "s",
+ "category": "anbu",
+ "status": "later",
+ "title": "mission.anbu.village_shadow.title",
+ "brief": "mission.anbu.village_shadow.brief",
+ "minutes": 60,
+ "party": "anbu_cell",
+ "unlock": {
+  "rank_at_least": "anbu"
+ },
+ "event": {
+  "during": "event.leaf_festival"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "anbu"
+   }
+  },
+  "roofs": {
+   "pick": "anchor",
+   "tag": "village.rooftop_watch"
+  },
+  "intruders": {
+   "pick": "enemy_group",
+   "from": [
+    "enemy.cell"
+   ]
+  }
+ },
+ "start": "post",
+ "steps": {
+  "post": {
+   "objective": {
+    "type": "go",
+    "place": "slot:roofs"
+   },
+   "next": "watch"
+  },
+  "watch": {
+   "objective": {
+    "type": "survive",
+    "until": "02:00",
+    "at": "slot:roofs"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:intruders",
+      "slot:roofs"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "quiet_night",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "mission.anbu.village_shadow.twist.quiet_night"
+  },
+  {
+   "id": "two_cells",
+   "weight": 2,
+   "harder": true,
+   "modifier": true,
+   "premise": "mission.anbu.village_shadow.twist.two_cells"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_alarm",
+  "unseen"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "enemy.cell"
+ ],
+ "places": {
+  "anchors": [
+   "village.rooftop_watch"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "s",
+  "xp_band": "s",
+  "weight": 0.6
+ },
+ "tags": [
+  "village",
+  "anbu",
+  "night",
+  "defence"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.anbu",
+ "_premise": "On the night of a great festival, guard the Leaf from the rooftops against what the festival hides.",
+ "_twists": {
+  "quiet_night": "Nothing comes, and you watch the fireworks alone.",
+  "two_cells": "Two cells come from opposite sides of the village."
+ }
+}

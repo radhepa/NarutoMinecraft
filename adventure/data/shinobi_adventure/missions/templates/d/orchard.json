@@ -1,0 +1,150 @@
+{
+ "format": 1,
+ "id": "mission.d.orchard",
+ "kind": "mission",
+ "rank": "d",
+ "category": "harvest",
+ "status": "beta",
+ "title": "mission.d.orchard.title",
+ "brief": "mission.d.orchard.brief",
+ "minutes": 10,
+ "party": "squad",
+ "unlock": {
+  "flag": "story.ch10.done"
+ },
+ "season": [
+  "autumn"
+ ],
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "farmer"
+   }
+  },
+  "orchard": {
+   "pick": "anchor",
+   "tag": "orchard"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "climb"
+  },
+  "climb": {
+   "objective": {
+    "type": "collect",
+    "target": "persimmon",
+    "at": "slot:orchard",
+    "count": 30
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "wasps"
+     },
+     "next": "wasps"
+    },
+    {
+     "if": {
+      "twist": "stuck_child"
+     },
+     "next": "child"
+    }
+   ],
+   "next": "report"
+  },
+  "wasps": {
+   "objective": {
+    "type": "perform",
+    "what": "smoke_bomb",
+    "at": "slot:orchard"
+   },
+   "next": "climb2"
+  },
+  "climb2": {
+   "objective": {
+    "type": "collect",
+    "target": "persimmon",
+    "at": "slot:orchard",
+    "count": 10
+   },
+   "next": "report"
+  },
+  "child": {
+   "objective": {
+    "type": "perform",
+    "what": "tree_walk_rescue",
+    "at": "slot:orchard"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "deliver",
+    "item": "persimmon",
+    "to": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "wasps",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.orchard.twist.wasps"
+  },
+  {
+   "id": "stuck_child",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.orchard.twist.stuck_child"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "careful",
+  "fast"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "orchard"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.4
+ },
+ "tags": [
+  "outdoors",
+  "farm",
+  "movement"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.harvest",
+ "_premise": "Pick persimmons from an orchard's tallest trees (tree walking welcome).",
+ "_twists": {
+  "wasps": "A wasp nest hangs in the best tree.",
+  "stuck_child": "A child climbed after you and cannot get down."
+ }
+}

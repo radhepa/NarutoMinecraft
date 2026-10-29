@@ -1,0 +1,172 @@
+{
+ "format": 1,
+ "id": "mission.d.market_stall",
+ "kind": "mission",
+ "rank": "d",
+ "category": "shop",
+ "status": "beta",
+ "title": "mission.d.market_stall.title",
+ "brief": "mission.d.market_stall.brief",
+ "minutes": 10,
+ "party": "solo",
+ "unlock": {
+  "calendar": {
+   "weekday": "market_day"
+  }
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "stallholder"
+   }
+  },
+  "stall": {
+   "pick": "anchor",
+   "tag": "market.stall"
+  },
+  "thief": {
+   "pick": "resident",
+   "where": {
+    "age": "child"
+   }
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "sell"
+  },
+  "sell": {
+   "objective": {
+    "type": "perform",
+    "what": "serve_customer",
+    "at": "slot:stall",
+    "count": 6
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "haggler"
+     },
+     "next": "haggle"
+    },
+    {
+     "if": {
+      "twist": "shoplifter"
+     },
+     "next": "chase"
+    },
+    {
+     "if": {
+      "twist": "rush"
+     },
+     "next": "rush"
+    }
+   ],
+   "next": "report"
+  },
+  "haggle": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "hold_price": null,
+     "give_in": "sold_cheap"
+    }
+   },
+   "next": "report"
+  },
+  "chase": {
+   "objective": {
+    "type": "collect",
+    "target": "stolen_goods",
+    "at": "slot:thief"
+   },
+   "next": "report"
+  },
+  "rush": {
+   "objective": {
+    "type": "perform",
+    "what": "serve_customer",
+    "at": "slot:stall",
+    "count": 8
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "haggler",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.market_stall.twist.haggler"
+  },
+  {
+   "id": "shoplifter",
+   "weight": 2,
+   "harder": false,
+   "premise": "mission.d.market_stall.twist.shoplifter"
+  },
+  {
+   "id": "rush",
+   "weight": 1,
+   "harder": false,
+   "premise": "mission.d.market_stall.twist.rush"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "sold_cheap": {
+   "pay": 0.85,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "clean_record"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "market.stall"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.35
+ },
+ "tags": [
+  "village",
+  "market"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "mission.banter.shop",
+ "_premise": "Mind a stall on Market Day while the stallholder sees a supplier.",
+ "_twists": {
+  "haggler": "A famous haggler wants the best piece for half price.",
+  "shoplifter": "Small hands, quick feet, and a missing purse.",
+  "rush": "A festival crowd arrives all at once."
+ }
+}
