@@ -45,7 +45,7 @@ Life mod depends on it (`implementation project(':life:bonds')`) and adds the th
 | Everyone you are close to, as one number | `BondWeb` |
 
 ```
-./gradlew :life:bonds:test                  # 108 tests
+./gradlew :life:bonds:test                  # 111 tests
 ./gradlew :life:bonds:simulate              # the 60-hour pacing tables (-Pseed=N, -Pexplain=role:teammate_a)
 ./gradlew :life:bonds:simulateVillage       # a village of 300 for 180 days: cost, ties, clan drift, hooks
 ```
@@ -466,6 +466,15 @@ dialogue-bank key, never a name:
 - **Shared memories:** "remembered always" (permanent memories) first, then the six strongest
   fading ones (`bond.memory.<act>`, `.seen`, `.heard`, `.told`), and the shared experiences by kind.
 - **An index** of everyone you know, highest level first (`BondWorld.bonded`).
+
+**Gifts received** (`Gifts`, for the home's collection book): every gift a resident gives the
+player is kept: the item, who gave it, the day and the occasion (birthday, festival, thanks,
+souvenir, wedding, farewell, quest, kindred, new_year). Kindred spirits (level 9, not quarrelling)
+leave a small gift about once a week on their own, one of their favorite things. The glue and quests
+add the rest (`Gifts.receive`, or the action `{"give_player": {"from", "item", "occasion"}}`). The
+home reads `Gifts.received(world)` and `Gifts.from(world, who)`; when a giver sees their gift on
+display in the player's home, `Gifts.seenDisplayed(world, giftId)` warms them once per gift
+(`saw_gift_displayed`). Condition: `{"gifts_from": [who, n]}`.
 
 ## 13. Data formats
 
