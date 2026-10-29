@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class FirstFifteenHoursTest {
     @Test void aTypicalPlayersHomeGrowsWithThem() {
         for (long seed = 1; seed <= 5; seed++) {
-            var r = FirstFifteenHours.run(seed, false);
+            var r = FirstFifteenHours.run(seed);
             var byDay = new java.util.TreeMap<Integer, FirstFifteenHours.Snapshot>();
             for (var s : r.comfort()) byDay.put(s.day(), s);
             assertTrue(byDay.get(0).comfort() < 20, "a bare flat on the first day, seed " + seed);
@@ -24,9 +24,8 @@ class FirstFifteenHoursTest {
             assertTrue(r.staleMeals() <= 20, "stale food is a joke, not a diet: " + r.staleMeals());
         }
     }
-    @Test void rentFromGeninNeverBlocksTheFurniture() {
-        var off = FirstFifteenHours.run(7, false); var on = FirstFifteenHours.run(7, true);
-        assertEquals(off.spent(), on.spent());
-        assertTrue(on.rentPaid() > 0 && on.rentPaid() <= 300);
+    @Test void thereIsAlwaysRoomInTheChests() {
+        var r = FirstFifteenHours.run(7);
+        assertTrue(r.storageSlots() >= 54, "the starting chest and at least one more: " + r.storageSlots());
     }
 }

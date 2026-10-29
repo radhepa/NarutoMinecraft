@@ -47,14 +47,14 @@ class VisitsTest {
 
     @Test void aGiftOnShowIsNoticedOnceAndWarmsTheBond() {
         var s = friendsWorld(); var w = s.f.world();
-        s.h.place("keepsake_shelf");
-        s.h.keep(Catalog.KEEPSAKES.get("village_painting"));
-        s.h.display("village_painting");
+        var g = dev.shinobi.life.bond.Gifts.receive(w, Cast.TEAMMATE_A, "item:painting", "thanks");
+        s.h.keep(Keepsake.gift(g.id(), g.item(), g.from()));
+        s.h.display("gift:" + g.id());
         double before = w.closeness(Cast.TEAMMATE_A);
         var d = Cast.day(w.day(), 1, 17, false);
         var first = Visits.meet(s.h, s.f, d, List.of(Cast.TEAMMATE_A), "drop_in", 19);
         assertTrue(first.reactions().contains("home.visit.kept_gift"), first.toString());
-        assertTrue(w.bond(Cast.TEAMMATE_A).has(BondFriends.NOTICED + "village_painting"));
+        assertTrue(dev.shinobi.life.bond.Gifts.gift(w, g.id()).orElseThrow().seen());
         assertTrue(w.closeness(Cast.TEAMMATE_A) > before);
         var second = Visits.meet(s.h, s.f, d, List.of(Cast.TEAMMATE_A), "drop_in", 20);
         assertFalse(second.reactions().contains("home.visit.kept_gift"));

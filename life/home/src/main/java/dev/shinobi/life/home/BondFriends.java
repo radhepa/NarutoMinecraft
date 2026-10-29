@@ -3,6 +3,7 @@ package dev.shinobi.life.home;
 import dev.shinobi.life.bond.Act;
 import dev.shinobi.life.bond.Activity;
 import dev.shinobi.life.bond.BondWorld;
+import dev.shinobi.life.bond.Gifts;
 import dev.shinobi.life.bond.Schedule;
 import dev.shinobi.life.bond.Together;
 import java.util.ArrayList;
@@ -10,8 +11,9 @@ import java.util.List;
 
 /**
  * {@link Friends} over the bond engine. Visits use the engine's own verbs: a good visit is the {@code hung_out}
- * shared experience, any visit is contact and warmth; a kept gift is warmth and a bond flag
- * ({@code home.noticed:<what>}) dialogue and quests can read; a spare key is a moment ({@code home.spare_key}).
+ * shared experience, any visit is contact and warmth; a gift on show is the engine's {@code Gifts.seenDisplayed} (the
+ * giver remembers it once); a photo they are in is warmth and a bond flag ({@code home.noticed:<what>}); a spare
+ * key is a moment ({@code home.spare_key}).
  * Home hangouts are the engine's activities when it has them ({@code home_dinner} today), so asking, tastes,
  * highlights and rituals all work; the proposed home activities ({@link HomeHangout}) fall back to a plain shared
  * experience until the engine's catalog carries them.
@@ -38,10 +40,15 @@ public final class BondFriends implements Friends {
         if (quality >= .4) { w.together(who); w.act(who, Act.HUNG_OUT); }
         if (quality >= .65) w.addFriendship(who, 1);
     }
-    @Override public void noticed(String who, String what) {
-        if (w.person(who) == null) return;
-        w.addFriendship(who, 2);
+    @Override public boolean noticed(String who, String what) {
+        if (w.person(who) == null) return false;
+        if (what.startsWith("gift:")) {
+            try { return Gifts.seenDisplayed(w, Integer.parseInt(what.substring(5))); } catch (NumberFormatException e) { return false; }
+        }
+        if (w.bond(who).has(NOTICED + what)) return false;
+        w.addFriendship(who, 1);
         w.setBondFlag(who, NOTICED + what);
+        return true;
     }
     @Override public void keyGiven(String who) { w.moment(who, KEY_MOMENT); }
 

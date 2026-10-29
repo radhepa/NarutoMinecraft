@@ -17,6 +17,10 @@ import java.util.TreeSet;
 public final class Home {
     /** The most mess that piles up: the floor is covered, and it goes no further. Tidy, lived-in, messy. */
     public static final int MAX_MESS = 12, LIVED_IN = 4, MESSY = 8, KEY_LEVEL = 6;
+    /** Keepsakes that can stand on their own (the sill, the table, the tops of things) before display furniture is needed. */
+    public static final int FREE_STANDING = 6;
+    /** The orphan's stipend, in the mailbox every morning for the whole game. There is no rent. */
+    public static final int STIPEND = 30;
 
     public enum Tidiness { TIDY, LIVED_IN, MESSY }
 
@@ -82,7 +86,13 @@ public final class Home {
     // -- keepsakes and photos ------------------------------------------------------------------------
 
     int slots(String tag) {
-        return placed.stream().map(Catalog::piece).filter(p -> p.category() == Category.DISPLAY && p.tags().contains(tag)).mapToInt(Piece::displays).sum();
+        int furniture = placed.stream().map(Catalog::piece).filter(p -> p.category() == Category.DISPLAY && p.tags().contains(tag)).mapToInt(Piece::displays).sum();
+        return tag.equals("keepsake") ? furniture + FREE_STANDING : furniture;
+    }
+    /** Chest slots at home: plain Minecraft chests and barrels, 27 each. More come with every chest you buy. */
+    public int storageSlots() {
+        return placed.stream().map(Catalog::piece).flatMap(p -> p.tags().stream()).filter(t -> t.startsWith("slots:"))
+                .mapToInt(t -> Integer.parseInt(t.substring(6))).sum();
     }
     public void keep(Keepsake k) { if (owned.stream().noneMatch(o -> o.id().equals(k.id()))) owned.add(k); }
     public List<Keepsake> owned() { return List.copyOf(owned); }
@@ -136,11 +146,10 @@ public final class Home {
 
     // -- the day -------------------------------------------------------------------------------------
 
-    /** Morning: the stipend envelope is in the mailbox in the Academy years. Returns the ryo in it. */
-    public int morning(long day, int rank) {
-        int ryo = Rent.stipend(rank);
-        if (ryo > 0) mailbox.post(Mailbox.Kind.STIPEND, "office:hokage", day, "home.mail.stipend", ryo + " ryo");
-        return ryo;
+    /** Morning: the stipend envelope is in the mailbox, every day of the game. Returns the ryo in it. */
+    public int morning(long day) {
+        mailbox.post(Mailbox.Kind.STIPEND, "office:hokage", day, "home.mail.stipend", STIPEND + " ryo");
+        return STIPEND;
     }
     /** End of day: the plant grows if it was watered (only a houseplant or bonsai that is actually placed). */
     public void endDay(long day, int season, Comfort.Score score) {

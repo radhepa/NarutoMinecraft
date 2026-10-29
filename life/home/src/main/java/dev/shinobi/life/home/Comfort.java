@@ -39,7 +39,7 @@ public final class Comfort {
         public boolean perk(String id) { return perks.contains(id); }
     }
 
-    /** {@code season} is VF's (0 spring to 3 winter); {@code clan} the player's clan, or empty. */
+    /** {@code season} is VF's (0 spring to 3 winter); {@code clan} the player's clan: empty at the start (the player is clanless), set if they join or found one later. */
     public static Score of(Home home, long day, int season, String clan) {
         var byCategory = new TreeMap<Category, List<Integer>>();
         var setPieces = new TreeMap<String, Integer>();

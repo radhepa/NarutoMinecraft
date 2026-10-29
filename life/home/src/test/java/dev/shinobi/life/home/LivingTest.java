@@ -71,10 +71,16 @@ class LivingTest {
         for (String id : Catalog.set("training").pieces()) h.place(id);
         assertEquals(.6, pr.session(h, ComfortTest.score(h), 3, "dummy", 3).credited(), 1e-9, "the whole set: an hour and a half");
     }
-    @Test void theStipendArrivesInTheMailboxInTheAcademyYears() {
+    @Test void theStipendArrivesEveryMorning() {
         var h = new Home("player", Flat.CLASSIC);
-        assertEquals(30, h.morning(0, 0));
-        assertEquals(0, h.morning(1, 1));
+        assertEquals(30, h.morning(0));
+        assertEquals(30, h.morning(500));
         assertEquals(Mailbox.Kind.STIPEND, h.mailbox.collect().getFirst().kind());
+    }
+    @Test void chestsArePlainStorageAndMoreComeWithFurniture() {
+        var h = new Home("player", Flat.CLASSIC);
+        assertEquals(27, h.storageSlots(), "the starting chest");
+        h.place("barrel"); h.place("storage_chest");
+        assertEquals(81, h.storageSlots());
     }
 }
