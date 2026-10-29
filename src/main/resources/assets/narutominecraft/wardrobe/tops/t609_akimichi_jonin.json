@@ -1,0 +1,418 @@
+{
+  "id": "t609_akimichi_jonin",
+  "kind": "top",
+  "name": "Akimichi Jonin",
+  "gender": "unisex",
+  "texture": "tops/t609_akimichi_jonin.png",
+  "extrasHeight": 48,
+  "tags": [
+    "akimichi",
+    "jonin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_swirl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.2,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        -2.7
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        27,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "scroll_pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.7,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "scroll_pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.1,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "scroll_pocket_2",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        9,
+        14
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "scroll_pocket_3",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        18,
+        14
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "belly_lame_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        8.6,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        27,
+        14
+      ],
+      "inflate": 0.45
+    },
+    {
+      "id": "right_sode_0",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.7,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        22
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "right_sode_1",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -0.9000000000000001,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        22
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "left_sode_0",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.7,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        42,
+        22
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_sode_1",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -0.9000000000000001,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        30
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "right_guard",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.3,
+        5.6,
+        -2.3
+      ],
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "uv": [
+        21,
+        30
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_guard",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.3,
+        5.6,
+        -2.3
+      ],
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "uv": [
+        38,
+        30
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Flak vest over a deep red shirt, red lacquered sode, a belly lame and forearm guards."
+}

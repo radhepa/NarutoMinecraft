@@ -1,0 +1,77 @@
+{
+  "id": "t604_mawashi_wrap",
+  "kind": "top",
+  "name": "Mawashi Wrap",
+  "gender": "unisex",
+  "texture": "tops/t604_mawashi_wrap.png",
+  "extrasHeight": 16,
+  "tags": [
+    "akimichi",
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mawashi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        8.2,
+        -2.5
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.55
+    },
+    {
+      "id": "mawashi_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.4,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Padded crossed jacket, a thick mawashi sash knotted at the back, bandaged forearms."
+}
