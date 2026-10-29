@@ -272,7 +272,7 @@ def name_screen(world, data):
     d.line((cx, 180, cx, 208), fill=INK, width=2)
     d.text((250, 226), "2 to 16 letters, any script; spaces, apostrophes and hyphens are fine.", font=font(14), fill=SOFT)
     scr.lock(250, 250, "first name: locked after creation")
-    scr.heading(250, 296, "Last name", "An ordinary family name, on your papers. Pick one or roll.")
+    scr.heading(250, 296, "Last name", "The family name you remember: an ordinary one. Pick one or roll.")
     d.rounded_rectangle((250, 366, 750, 414), 8, fill=(255, 250, 240), outline=INK, width=2)
     d.text((266, 377), "Tanaka", font=font(22), fill=INK)
     d.text((712, 375), "v", font=font(22, True), fill=INK)
@@ -522,7 +522,17 @@ def review_screen(world, data, origin="clanless"):
         else:
             scr.changeable(x + 430, y + 8, "changeable later")
         d.text((SW - 76, y + 6), "edit", font=font(14, True), fill=ACCENT)
-    paragraph(d, x, 610, "You begin the story with nothing but the clothes you stand in; your outfit waits at your apartment.",
+    # The starting key item, in hand: a small charred wooden charm (drawn as an icon; the item's model is the items session's).
+    d.rounded_rectangle((700, 490, 920, 700), 14, fill=PANEL2)
+    cx, cy = 810, 575
+    d.ellipse((cx - 60, cy - 30, cx + 60, cy + 40), fill=(214, 176, 140))           # an open palm
+    d.polygon([(cx - 6, cy - 34), (cx + 26, cy - 22), (cx + 18, cy + 22), (cx - 14, cy + 10)], fill=(74, 50, 36), outline=(34, 22, 16))
+    d.line((cx - 6, cy - 34, cx - 14, cy + 10), fill=(120, 86, 60), width=2)       # the broken edge of half a pair
+    d.line((cx + 8, cy - 46, cx + 4, cy - 30), fill=(150, 40, 34), width=3)        # its cord
+    tw = d.textlength("The only thing that is yours.", font=font(14))
+    d.text((810 - tw / 2, 640), "The only thing that is yours.", font=font(14), fill=INK)
+    d.text((810 - d.textlength("half charm", font=font(12)) / 2, 664), "half charm", font=font(12), fill=SOFT)
+    paragraph(d, x, 610, "You begin the story with this and the clothes you stand in; your outfit waits at your apartment.",
               600, 15, SOFT)
     scr.footer("Begin", dice=False)
     scr.save("7_review")

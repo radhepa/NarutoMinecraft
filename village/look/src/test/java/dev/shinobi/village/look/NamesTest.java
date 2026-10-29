@@ -45,6 +45,17 @@ class NamesTest {
     }
 
     @Test
+    void theClanRegistryOffersTheClansNameOrYourOwn() {
+        var name = new Names.PlayerName("Kaede", "Tanaka");
+        assertEquals(new Names.PlayerName("Kaede", "Nara"), Names.atRegistry(name, "Nara", true));
+        assertEquals(name, Names.atRegistry(name, "Nara", false));
+        assertThrows(IllegalArgumentException.class, () -> Names.atRegistry(name, " ", true));
+        var after = Names.tokens(Names.atRegistry(name, "Nara", true), "Nara");
+        assertEquals("Nara", after.get("family:player"));
+        assertEquals("Kaede Nara", after.get("name:player"));
+    }
+
+    @Test
     void tokensResolve() {
         var t = Names.tokens(new Names.PlayerName("Kaede", "Tanaka"), null);
         assertEquals("Kaede", t.get("player"));

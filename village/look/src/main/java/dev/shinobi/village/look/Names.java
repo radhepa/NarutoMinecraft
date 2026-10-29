@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The player's name. The given name is typed in the creator; the family name is the clan's for the clan-born, and for
- * the clanless an ordinary family name from population.json's pool (picked, or the one rolled on the save's
- * {@code names} stream). Text never contains the name: it uses the {@code {player}} tokens.
+ * The player's name, first then last. The first (given) name is typed in the creator; the last (family) name is an
+ * ordinary family name from population.json's pool (picked, or the one rolled on the save's {@code names} stream), or
+ * the clan's for a clan-born origin if that option returns. Text never contains the name: it uses the tokens.
  */
 public final class Names {
     /** A player's name: {@code given} as typed, {@code family} the clan's or the pool's. */
@@ -50,6 +50,16 @@ public final class Names {
     }
 
     /**
+     * The clan registry's offer (founding a clan from Chunin, or joining one by invitation or marriage): take the
+     * clan's name as your family name, or keep yours. Nothing else changes the family name; the given name never
+     * changes.
+     */
+    public static PlayerName atRegistry(PlayerName name, String clanName, boolean takeClanName) {
+        if (clanName == null || clanName.isBlank()) throw new IllegalArgumentException("the registry needs a clan name");
+        return takeClanName ? new PlayerName(name.given(), clanName) : name;
+    }
+
+    /**
      * The player's tokens, as dialogue and quest text use them: {@code {player}} the given name, {@code {player_family}},
      * {@code {player_full}}, and {@code {player_clan}} (the clan's name, empty for the clanless).
      */
@@ -59,6 +69,10 @@ public final class Names {
         m.put("player_family", name.family());
         m.put("player_full", name.full());
         m.put("player_clan", clanName == null ? "" : clanName);
+        // The role-token forms the story's text uses for every character ({name:<role>}, {given:<role>}, {family:<role>}).
+        m.put("name:player", name.full());
+        m.put("given:player", name.given());
+        m.put("family:player", name.family());
         return m;
     }
 
