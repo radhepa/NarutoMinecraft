@@ -1,0 +1,282 @@
+{
+ "format": 1,
+ "id": "mission.c.bandit_clearing",
+ "kind": "mission",
+ "rank": "c",
+ "category": "bandits",
+ "status": "beta",
+ "title": "dlg:mission.c.bandit_clearing.title",
+ "brief": "dlg:mission.c.bandit_clearing.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.bandit_clearing.brief",
+  "accept": "dlg:mission.c.bandit_clearing.accept",
+  "decline": "dlg:mission.c.bandit_clearing.decline",
+  "progress": "dlg:mission.c.bandit_clearing.progress",
+  "success": "dlg:mission.c.bandit_clearing.success",
+  "fail": "dlg:mission.c.bandit_clearing.fail",
+  "report": "dlg:mission.c.bandit_clearing.report"
+ },
+ "minutes": 30,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "farmer"
+   }
+  },
+  "camp": {
+   "pick": "anchor",
+   "tag": "outside.bandit_camp"
+  },
+  "lookout": {
+   "pick": "anchor",
+   "tag": "outside.bandit_lookout"
+  },
+  "hostages": {
+   "pick": "count",
+   "range": [
+    1,
+    3
+   ]
+  },
+  "leader": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:enemy.bandit_chief"
+   ]
+  },
+  "crew": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.bandits_camp"
+   ]
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "scout"
+  },
+  "scout": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:lookout"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "assault"
+  },
+  "assault": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:crew",
+    "at": "slot:camp"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:crew",
+      "slot:camp"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "hostages"
+     },
+     "next": "free"
+    },
+    {
+     "if": {
+      "twist": "desperate_farmers"
+     },
+     "next": "farmers"
+    }
+   ],
+   "next": "leader"
+  },
+  "free": {
+   "objective": {
+    "type": "protect",
+    "who": "hostage",
+    "at": "slot:camp"
+   },
+   "next": "leader"
+  },
+  "farmers": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "mercy": null,
+     "arrest": "arrested_all"
+    },
+    "dialogue": "dlg:mission.c.bandit_clearing.choice.farmers"
+   },
+   "branch": [
+    {
+     "if": {
+      "chose": [
+       "farmers",
+       "mercy"
+      ]
+     },
+     "next": "talk_down"
+    }
+   ],
+   "next": "leader"
+  },
+  "talk_down": {
+   "objective": {
+    "type": "talk",
+    "who": "bandit_spokesman"
+   },
+   "on_done": [
+    {
+     "mission_outcome": "talked_down"
+    }
+   ],
+   "next": null
+  },
+  "leader": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:leader",
+    "at": "slot:camp"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "leader_flees"
+     },
+     "next": "chase"
+    }
+   ],
+   "next": "loot"
+  },
+  "chase": {
+   "objective": {
+    "type": "perform",
+    "what": "pursue",
+    "at": "slot:lookout"
+   },
+   "next": "loot"
+  },
+  "loot": {
+   "objective": {
+    "type": "collect",
+    "target": "stolen_goods",
+    "at": "slot:camp",
+    "count": 4
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "hostages",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.c.bandit_clearing.twist.hostages"
+  },
+  {
+   "id": "leader_flees",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.bandit_clearing.twist.leader_flees"
+  },
+  {
+   "id": "desperate_farmers",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.c.bandit_clearing.twist.desperate_farmers"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0,
+   "acts": [
+    [
+     "role:squad",
+     "mission_success"
+    ]
+   ]
+  },
+  "talked_down": {
+   "pay": 0.8,
+   "standing": 1,
+   "deed": "mediated"
+  },
+  "arrested_all": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "no_knockouts",
+  "spared",
+  "clean_record"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.bandits_camp",
+  "combat:enemy.bandit_chief"
+ ],
+ "places": {
+  "anchors": [
+   "outside.bandit_camp",
+   "outside.bandit_lookout"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.5
+ },
+ "tags": [
+  "outside",
+  "fight",
+  "stealth"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.bandits",
+ "_premise": "Clear a bandit camp that has been robbing farms outside the wall.",
+ "_twists": {
+  "hostages": "They have taken farmhands; get them out before the fight reaches them.",
+  "leader_flees": "The leader runs for the hills at the first sign of trouble.",
+  "desperate_farmers": "The 'bandits' are farmers from a burned-out village, starving."
+ }
+}

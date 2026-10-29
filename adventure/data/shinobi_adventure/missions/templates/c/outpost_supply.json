@@ -1,0 +1,197 @@
+{
+ "format": 1,
+ "id": "mission.c.outpost_supply",
+ "kind": "mission",
+ "rank": "c",
+ "category": "delivery",
+ "status": "beta",
+ "title": "dlg:mission.c.outpost_supply.title",
+ "brief": "dlg:mission.c.outpost_supply.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.outpost_supply.brief",
+  "accept": "dlg:mission.c.outpost_supply.accept",
+  "decline": "dlg:mission.c.outpost_supply.decline",
+  "progress": "dlg:mission.c.outpost_supply.progress",
+  "success": "dlg:mission.c.outpost_supply.success",
+  "fail": "dlg:mission.c.outpost_supply.fail",
+  "report": "dlg:mission.c.outpost_supply.report"
+ },
+ "minutes": 30,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch13.far_village",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "chunin"
+   }
+  },
+  "outpost": {
+   "pick": "anchor",
+   "tag": "border.outpost"
+  },
+  "trail": {
+   "pick": "anchor",
+   "tag": "road.hill_pass"
+  },
+  "raiders": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.road_ambush",
+    "combat:group.wolves_pack"
+   ]
+  }
+ },
+ "start": "load",
+ "steps": {
+  "load": {
+   "objective": {
+    "type": "collect",
+    "target": "supply_crate",
+    "at": "place:gate.stores",
+    "count": 4
+   },
+   "next": "travel"
+  },
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "trail"
+  },
+  "trail": {
+   "objective": {
+    "type": "escort",
+    "who": "supply_cart",
+    "to": "slot:trail"
+   },
+   "next": "raid"
+  },
+  "raid": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:raiders",
+    "at": "slot:trail"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:raiders",
+      "slot:trail"
+     ]
+    }
+   ],
+   "next": "climb"
+  },
+  "climb": {
+   "objective": {
+    "type": "deliver",
+    "item": "supply_crate",
+    "to": "slot:outpost"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "outpost_sick"
+     },
+     "next": "sick"
+    }
+   ],
+   "next": "report"
+  },
+  "sick": {
+   "objective": {
+    "type": "perform",
+    "what": "first_aid",
+    "at": "slot:outpost",
+    "count": 3
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "outpost_sick",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.outpost_supply.twist.outpost_sick"
+  },
+  {
+   "id": "landslide",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "dlg:mission.c.outpost_supply.twist.landslide"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_knockouts",
+  "extra_mile"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.road_ambush",
+  "combat:group.wolves_pack"
+ ],
+ "places": {
+  "anchors": [
+   "border.outpost",
+   "gate.stores",
+   "gate.travel_desk",
+   "road.hill_pass"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.5
+ },
+ "tags": [
+  "travel",
+  "delivery",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.delivery",
+ "_premise": "Bring a cart of supplies up to a watch outpost in the hills.",
+ "_twists": {
+  "outpost_sick": "Half the outpost is down with fever.",
+  "landslide": "A landslide has taken the cart road; carry the crates up by hand."
+ }
+}

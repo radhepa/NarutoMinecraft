@@ -97,7 +97,7 @@ standard fields so tools and the journal can explain why a quest is or is not av
 | Rank | `rank_at_least`, `rank_at_most` | Many Academy and Genin quests close once you outgrow them ("too important now to fetch cats") |
 | Place | `at_place`, `district` | The quest is offered only in its district; markers show only there |
 | Friendship | `friendship`, `bond_meter`, `clan_friendship` | From the bond system |
-| Clan | `clan`, `clanless`, `clan_status` | `clan_status` is born, member (married or invited), other clan, or clanless. (`clan_relation` is the bond system's relation between two clans, used by politics quests) |
+| Clan | `clan`, `clanless`, `clan_status` | `clan_status` is clanless (the player's only start for now) or member (joined later by marriage or invitation); `born` and `other clan` are reserved for a clan-born start that may return later. (`clan_relation` is the bond system's relation between two clans, used by politics quests) |
 | Standing | `standing` | Standing per district or per clan (Newcomer, Helping Hand, Good Neighbor, Pillar, Hero) |
 | Events and the village | `event_active`, `flag`, `village_mood`, `hook_open` | Festivals, exams, clan days, story flags; a district's mood; a live society hook |
 | Time and season | `time_between`, `calendar` | Night quests, Market Day quests, winter quests |
@@ -272,7 +272,7 @@ plus any extra action the template adds.
 | `gen.favour` | `favor_needed` (7 days; none) | `client` | One of eight **variants**, read from the hook's `stakes.variant` (the simulation picks it from the client's life; `SocietyHook.FAVOR_VARIANTS`): `neighbor` (carry, fix, mind the shop), `elder_errand` (fetch, deliver, read a letter aloud; a clan head, elder or senior adult), `lost_pet` (track and return; your ninken helps), `escort` (see a working civilian across the village at night or to the gate), `sick_relative` (fetch medicine or a Suzuran herbalist; only for someone with family), `shop_trouble` (find why stock vanishes, fetch a delivery), `apprentice` (persuade a master to take the client on), `festival_help` (a stall short-handed, a lost child; only while the village mood is cheerful) | `done` → a helped deed with the client; `refused` → nothing | Beta 1 (`neighbor`, `elder_errand`, `lost_pet`); Beta 2 (the rest) |
 | `gen.lost_item_gossip` | `lost_item` (5 days; none) | `owner` (gossips and a finder are cast from the owner's ties) | Follow the gossip trail (talk ×2 to 3), find the item, then return it or keep it | `returned` → a helped deed; `kept` → a hurt deed (you keep the item; the owner may hear) | Beta 1 |
 | `gen.newcomer_settle` | `newcomer` (21 days; none) | `newcomer` (two neighbours to introduce are cast from the district) | Show them around (go ×3), introduce them, share a meal | `befriended` → a meal together, new ties for the newcomer; `ignored` → they stay alone | Beta 1 |
-| `gen.clan_courtesy` | `elder_request` (14 days; the player's clan, or Helping Hand standing with it) | `elder`, `clan` | Learn the custom (talk), bring what it asks (collect or craft the clan's gift, attend a clan rite), present it properly (choose the right words) | `done` → the clan hears you honoured its custom (`clan_deed`); `refused` → nothing | Beta 2 |
+| `gen.clan_courtesy` | `elder_request` (14 days; the player's clan, or Helping Hand standing with it: the standing route for a clanless player) | `elder`, `clan` | Learn the custom (talk), bring what it asks (collect or craft the clan's gift, attend a clan rite), present it properly (choose the right words) | `done` → the clan hears you honoured its custom (`clan_deed`); `refused` → nothing | Beta 2 |
 | `gen.rivalry_cool` | `rivalry_heating` (14 days; friendship 3 with either) | `a`, `b` (two residents, often young shinobi) | Referee their spar at a training ground, talk each down, or spar the hothead yourself, then bring them to shake hands | `cooled` → friends again; `fanned` → a quarrel (which may raise a `quarrel_to_mediate` hook) | Beta 1 |
 | `gen.matchmaking` | `secret_crush` (28 days; friendship 6 with the admirer and the player at least teen; adult residents only, never offered while the player is a child) | `admirer`, `beloved` | Learn what the beloved likes, help the admirer prepare, arrange a meeting | `helped` → they become sweethearts; `kept_quiet` → nothing changes; `told` → a broken promise: the beloved knows, the admirer is hurt | **Later** (post-beta) |
 | `gen.forbidden_match` | `forbidden_match` (28 days; the player a teen or older; adults) | `a`, `b`, `clan_a`, `clan_b` | Hear the couple, face each clan's objection, decide whether to stand with them | `supported` → they marry and their clans grumble; `discouraged` → they part | **Later** (post-beta) |
@@ -305,8 +305,7 @@ reached the *feud* label, Progression may turn it into a **council case** at the
 - **Wave 2, Beta 2.5** (a content-only drop between Beta 2 and Beta 3): the seven smaller noble
   clans (Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko) and the ten minor clans.
 - Wave-2 clans are present from Beta 2 all the same: their quarters, residents, district presence,
-  clan techniques for clan-born players (the elder's lesson in Ch 12 is part of the main path, not
-  the welcome quest) and generated `gen.clan_courtesy` quests. Only their authored welcome quest
+  and generated `gen.clan_courtesy` quests. Only their authored welcome quest
   waits for Beta 2.5.
 
 ### 4.1 The shape of a clan line
@@ -316,7 +315,7 @@ career and continues after the beta:
 
 | Step | Name | When | What it is |
 |---|---|---|---|
-| 1 | **Welcome** | Beta 2 (from Ch 12) for the eight great clans; Beta 2.5 for the other 17 | The clan's custom test for an outsider, or a homecoming for kin |
+| 1 | **Welcome** | Beta 2 (from Ch 12) for the eight great clans; Beta 2.5 for the other 17 | The clan's custom test for an outsider |
 | 2 | **Customs** | Beta 3 or early Chunin | Take part in a clan custom or prepare its clan day |
 | 3 | **Trust** | Chunin | The clan shows you something of its own: a problem it keeps from outsiders |
 | 4 | **Heart** | Jonin | The clan's internal tension comes to a head; your choice settles it |
@@ -326,13 +325,16 @@ Finishing step 1 earns the clan's welcome keepsake and opens its lesser techniqu
 ability) at the bond level the roadmap sets; step 3 or 4 is where a clan may invite a clanless
 player to join it (ROADMAP §2).
 
-**How a line differs by who you are** (`clan_status`):
+**Who the lines are written for.** The player starts as a clanless orphan (ROADMAP §2), so every
+clan line is written for an outsider who earns the clan's regard through standing and friendship:
 
-| You are | Step 1 | Through the line |
+| Situation | Step 1 | Through the line |
 |---|---|---|
-| **Clan-born** | A homecoming: kin you never met welcome you back, and the clan's elder teaches the clan technique (ROADMAP §8, Ch 12) instead of a test | You are inside the clan's politics: steps 3 and 4 ask you to take a side within the family |
-| **Of another clan** | The welcome test, with your own clan's relation to this one colouring it (an ally's child is welcomed warmly, a rival's is watched) | Your choices move both clans' relations; some steps are diplomacy between your clan and theirs |
-| **Clanless** | The welcome test, plainly: you are an outsider and must earn it | The line can end in an invitation to join (Heart or Legacy step), or in being a trusted friend of the clan |
+| **Clanless** (every player at the start) | The welcome test, plainly: you are an outsider and must earn it | Trust grows with standing and friendship; the line can end in an invitation to join (Heart or Legacy step), or in being a trusted friend of the clan |
+| **Joined a clan later** (by marriage or invitation, after the beta) | — | That clan's remaining steps switch to the member version, inside the clan's politics; other clans' lines treat you as a member of your clan, and some steps become diplomacy between the two |
+
+A clan-born start may return later as an option; the quest data keeps a `clan_status` branch for it,
+so the lines would only need its homecoming variants written.
 
 ### 4.2 Clan relations at the start
 
@@ -660,6 +662,18 @@ The Ramen Thief and draw two of the other three in a rolled order.
 | **The Last Summer** | 5 | Road to Hokage | Your old classmates plan one last summer trip before everything changes |
 | **The Statue Thief** | 3 | Road to Hokage | The Hokage statues' heads keep disappearing overnight |
 
+### Later one-offs (foundation)
+
+Standalone `side` quests for the later stretches. Premises only; the answers are in the story bible.
+
+| Id | Stretch | Premise |
+|---|---|---|
+| `side.c.returned_book` | Chunin | A library book keeps being returned on days the library is closed |
+| `side.c.court_roll` | Chunin | A clerk from the daimyo's court is stuck in the village with a damaged guest roll |
+| `side.c.sensor_shadow` | Chunin | The young sensor assigned to you would like, very much, to have a single day off |
+| `side.c.third_time` | Chunin | A loud Genin and his enormous dog are taking the Chunin Exams for the third time |
+| `side.j.roots` | Jonin | Families come asking the archive where they came from |
+
 ## 7. Inter-clan politics as quests
 
 *BUILD (beta) light; FOUNDATION (later) in full.* The bond system keeps live relations between
@@ -773,7 +787,7 @@ on top.
 | `bond.b2.teammate_a.1`, `.2` | bond | Bond levels 4 and 5 with *teammate_a* | Two stories with *teammate_a* | F, K |
 | `bond.b2.teammate_b.1`, `.2` | bond | Bond levels 4 and 5 with *teammate_b* | Two stories with *teammate_b* | F, K |
 | `event.b2.council_day` | event | After Ch 12; the Hokage Residence, the first Moonday of the season | Two clans bring a dispute to the Hokage; you watch from the gallery (no choice) | X 5%, the Ledger's clan page, leads |
-| `clan.<id>.1` (8, wave 1) | clan | After Ch 12 (Ch 9 for clan-born homecomings) | The welcome of each great clan: Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka (§4) | R 50 to 150, S clan, K clan keepsake, T lesser technique where the clan has one |
+| `clan.<id>.1` (8, wave 1) | clan | After Ch 12 | The welcome of each great clan: Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka (§4) | R 50 to 150, S clan, K clan keepsake, T lesser technique where the clan has one |
 
 **Beta 2: 45 quests** (8 side, 15 district in 4 chains of 12 quests and 3 singles, 3 event, 7
 filler, 4 bond, 8 clan).

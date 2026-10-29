@@ -1,0 +1,25 @@
+{
+ "variants": {
+  "axis=x,sag=0": {
+   "model": "narutominecraft:block/konoha/power_wire_0"
+  },
+  "axis=x,sag=1": {
+   "model": "narutominecraft:block/konoha/power_wire_1"
+  },
+  "axis=x,sag=2": {
+   "model": "narutominecraft:block/konoha/power_wire_2"
+  },
+  "axis=z,sag=0": {
+   "model": "narutominecraft:block/konoha/power_wire_0",
+   "y": 90
+  },
+  "axis=z,sag=1": {
+   "model": "narutominecraft:block/konoha/power_wire_1",
+   "y": 90
+  },
+  "axis=z,sag=2": {
+   "model": "narutominecraft:block/konoha/power_wire_2",
+   "y": 90
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "variants": {
+  "part=single": {
+   "model": "narutominecraft:block/konoha/water_tank_single"
+  },
+  "part=bottom": {
+   "model": "narutominecraft:block/konoha/water_tank_bottom"
+  },
+  "part=middle": {
+   "model": "narutominecraft:block/konoha/water_tank_middle"
+  },
+  "part=top": {
+   "model": "narutominecraft:block/konoha/water_tank_top"
+  }
+ }
+}

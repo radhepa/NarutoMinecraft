@@ -1,0 +1,32 @@
+# Gear: worn things with a use. Looks come from the wardrobe (the forehead protector's styles are wardrobe
+# headwear); stats (armour, damage reduction) belong to the combat session, keyed by these ids.
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+training_headband	Training Headband	gear	head	academy	beta1	1	15	kit:academy	The Academy's cloth headband, before you earn a protector	-	sprite	wear=head;look=w1203_training_headband
+forehead_protector	Forehead Protector	gear	head	genin	beta1	1	80	kit:genin	The Leaf's plate on a band; worn on the brow, the neck, the arm or as a bandana (a wardrobe style)	-	sprite	wear=head;look=w02_forehead_protector;replace_only=yes
+goggles	Goggles	gear	head	academy	beta1	1	40	-	Academy kids' goggles; keep smoke out of your eyes a little longer	item:goggles	icon	wear=head
+kasa_hat	Straw Kasa	gear	head	genin	beta2	1	60	-	A wide straw hat for the road: rain and sun	-	wardrobe	wear=head;look=w1201_kasa_hat
+ninja_sandals	Ninja Sandals	gear	feet	academy	beta1	1	40	kit:academy	Open-toed sandals: quiet on a roof	item:sandals	icon	wear=feet
+tabi_boots	Tabi Boots	gear	feet	genin	beta2	1	120	-	Split-toe boots with a grip for wall-running	item:sandals	icon	wear=feet
+arm_guards	Arm Guards	gear	arms	genin	beta2	1	90	-	Steel-backed bracers: a block takes a little less	-	icon	wear=arms;grades=yes
+shin_guards	Shin Guards	gear	legs	genin	beta2	1	90	-	Plated shin wraps	-	icon	wear=legs;grades=yes
+fingerless_gloves	Fingerless Gloves	gear	arms	genin	beta2	1	50	-	Leather gloves that leave your fingers free for signs	-	icon	wear=arms
+mesh_shirt	Mesh Undershirt	gear	body	genin	beta2	1	350	-	Chain-mesh under your clothes: blades bite less	-	icon	wear=body;grades=yes
+training_weights	Training Weights	gear	legs	genin	beta2	1	200	-	Leg weights: slower while worn, and training counts for more	-	icon	wear=legs
+travel_cloak	Travel Cloak	gear	body	genin	beta2	1	150	-	A dusty cloak for long roads; rain and cold do not tire you	-	wardrobe	wear=body
+flak_vest	Flak Vest	gear	body	chunin	beta3	1	600	kit:chunin	The Leaf's green vest with scroll pockets; a Chunin's due	-	sprite	wear=body;look=t02_konoha_flak_vest;replace_only=yes
+anbu_armor	ANBU Armour	gear	body	anbu	later	1	0	kit:anbu	Light armour of the masked corps	-	wardrobe	wear=body;look=t06_anbu_armor;bind=rank
+anbu_mask	ANBU Mask	gear	head	anbu	later	1	0	kit:anbu	A porcelain animal mask; residents do not know you while you wear it	-	wardrobe	wear=head;look=w03_anbu_mask;bind=rank
+kage_hat	Kage Hat	gear	head	kage	later	1	0	kit:hokage	The Hokage's hat	-	wardrobe	wear=head;look=w01_kage_hat;bind=rank
+tool_pouch	Tool Pouch	container	pouch	genin	beta2	1	60	kit:genin	Holds thrown tools: four quick-throw slots without using the hotbar	-	sprite	slots=9;quick=4;holds=tool
+leg_holster	Kunai Holster	container	pouch	genin	beta2	1	45	-	A thigh holster for six kunai, drawn without a hotbar slot	-	icon	slots=6;holds=kunai
+tool_pouch_large	Large Tool Pouch	container	pouch	genin	beta2	1	150	-	A bigger pouch: six quick-throw slots	-	tint:tool_pouch	slots=15;quick=6;holds=tool,consumable
+medic_pouch	Medic Pouch	container	pouch	genin	beta2	1	90	-	Holds medicine and bandages; using one from it is faster	-	icon	slots=9;holds=consumable
+scroll_case	Scroll Case	container	pouch	chunin	later	1	120	-	A lacquered tube for scrolls on your back	-	model	slots=6;holds=scroll
+bedroll	Bedroll	gear	camp	genin	beta3	1	80	-	Sleep anywhere outside: clears fatigue without the Well Rested bonus	-	icon	camp=yes
+camp_kit	Camp Kit	gear	camp	genin	beta2	1	140	-	A kettle, a flint and a tarp: a camp fire and a hot meal on the road	-	icon	camp=yes
+paper_lantern_hand	Hand Lantern	gear	light	academy	beta1	1	30	-	A paper lantern on a stick: light for night errands	-	icon	light=12
+luck_charm	Luck Charm	gear	charm	any	beta1	1	40	-	A shrine omamori: a little more found in salvage and gathering	-	sprite	charm=luck
+study_charm	Study Charm	gear	charm	any	beta1	1	40	-	A shrine omamori for learning: a little more XP from lessons and training	-	tint:luck_charm	charm=study
+safety_charm	Safety Charm	gear	charm	any	beta1	1	40	-	A shrine omamori for the road: the first knockout of a mission leaves you on one heart	-	tint:luck_charm	charm=safety
+shrine_bell_charm	Bell Charm	gear	charm	any	beta2	1	0	quest:filler.silent_bell	The shrine's own charm: a small luck buff that never fades	-	tint:luck_charm	charm=luck
+folded_outfit	Folded Outfit	outfit	outfit	any	beta1	1	0	kit:academy;kit:genin;kit:chunin	A wardrobe outfit, folded: put it in your wardrobe cabinet (or wear it at once) and it is yours to change into for good	-	wardrobe	variant=outfit;mod=narutominecraft

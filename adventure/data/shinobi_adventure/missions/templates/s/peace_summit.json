@@ -1,0 +1,155 @@
+{
+ "format": 1,
+ "id": "mission.s.peace_summit",
+ "kind": "mission",
+ "rank": "s",
+ "category": "protection",
+ "status": "later",
+ "title": "dlg:mission.s.peace_summit.title",
+ "brief": "dlg:mission.s.peace_summit.brief",
+ "dialogue": {
+  "brief": "dlg:mission.s.peace_summit.brief",
+  "accept": "dlg:mission.s.peace_summit.accept",
+  "decline": "dlg:mission.s.peace_summit.decline",
+  "progress": "dlg:mission.s.peace_summit.progress",
+  "success": "dlg:mission.s.peace_summit.success",
+  "fail": "dlg:mission.s.peace_summit.fail",
+  "report": "dlg:mission.s.peace_summit.report"
+ },
+ "minutes": 60,
+ "party": "squad",
+ "days": 3,
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "jonin"
+   },
+   {
+    "level_at_least": 42
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "council"
+   }
+  },
+  "hall": {
+   "pick": "anchor",
+   "tag": "summit.hall"
+  },
+  "spoilers": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.assassins",
+    "combat:group.cell_pair"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "sweep"
+  },
+  "sweep": {
+   "objective": {
+    "type": "inspect",
+    "target": "trap",
+    "at": "slot:hall",
+    "count": 5
+   },
+   "next": "summit"
+  },
+  "summit": {
+   "objective": {
+    "type": "protect",
+    "who": "delegates",
+    "until": "+12h",
+    "at": "slot:hall"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:spoilers",
+      "slot:hall"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "delegate_plot",
+   "weight": 2,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.s.peace_summit.twist.delegate_plot"
+  },
+  {
+   "id": "walkout",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.s.peace_summit.twist.walkout"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_alarm"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.assassins",
+  "combat:group.cell_pair"
+ ],
+ "places": {
+  "anchors": [
+   "gate.travel_desk",
+   "summit.hall"
+  ],
+  "regions": [
+   "region:summit"
+  ]
+ },
+ "pay": {
+  "band": "s",
+  "xp_band": "s",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "politics",
+  "guard"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.protection",
+ "_premise": "Guard the five lands' peace summit; three sides would like it to fail.",
+ "_twists": {
+  "delegate_plot": "One of the delegates hired the assassins.",
+  "walkout": "A delegation storms out; talk them back in."
+ }
+}

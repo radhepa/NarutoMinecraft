@@ -1,0 +1,3302 @@
+{
+ "format": 1,
+ "_doc": "Compiled from tools/items/stations.tsv and recipes.tsv. Do not edit. Cooking recipes become VF hearth_recipe data in Phase 0.",
+ "stations": [
+  {
+   "id": "workbench",
+   "name": "Workbench",
+   "blocks": [
+    "workbench"
+   ],
+   "public": [
+    "academy.workshop",
+    "kinoshita_yard"
+   ],
+   "home_item": "workbench",
+   "slice": "beta1",
+   "rank": "academy",
+   "max_grade": "fine",
+   "screen": "grid6",
+   "why": "Tools from paper, powder and wire, pouches and furniture; ROADMAP's first station"
+  },
+  {
+   "id": "smithy",
+   "name": "Smithy",
+   "blocks": [
+    "forge",
+    "anvil",
+    "quench_trough"
+   ],
+   "public": [
+    "weapon_shop"
+   ],
+   "home_item": "small_forge",
+   "slice": "beta2",
+   "rank": "genin",
+   "max_grade": "masterwork",
+   "screen": "forge",
+   "why": "Blades and thrown tools from steel, smelting salvage, repair and upgrade. The small forge at home stops at fine"
+  },
+  {
+   "id": "cooking",
+   "name": "Kitchen (VF Hearth & Harvest)",
+   "blocks": [
+    "villagefriends:cooking_pot",
+    "villagefriends:clay_oven",
+    "villagefriends:prep_table"
+   ],
+   "public": [
+    "apartment.kitchen",
+    "akimichi.kitchen_hall"
+   ],
+   "home_item": "cooking_pot",
+   "slice": "beta1",
+   "rank": "any",
+   "max_grade": "fine",
+   "screen": "vf_station",
+   "why": "VF's pot, oven and prep table with the Leaf's dishes as data recipes; no new kitchen block"
+  },
+  {
+   "id": "apothecary",
+   "name": "Apothecary Table",
+   "blocks": [
+    "apothecary_table"
+   ],
+   "public": [
+    "pharmacy",
+    "hospital.herb_room"
+   ],
+   "home_item": "apothecary_table",
+   "slice": "beta2",
+   "rank": "genin",
+   "max_grade": "fine",
+   "screen": "grid6",
+   "why": "Medicine, antidotes and coatings were spread over the workbench; one table for the Suzuran line, the hospital night shift and Forest of Death supplies"
+  },
+  {
+   "id": "sealing",
+   "name": "Sealing Desk",
+   "blocks": [
+    "sealing_desk"
+   ],
+   "public": [
+    "scroll_shop"
+   ],
+   "home_item": "sealing_desk",
+   "slice": "beta2",
+   "rank": "genin",
+   "max_grade": "fine",
+   "screen": "grid6",
+   "why": "Storage scrolls and blank scrolls in the beta (the scroll shop's desk); advanced tags from Chunin, with one at home"
+  },
+  {
+   "id": "tailoring",
+   "name": "Tailor's Table",
+   "blocks": [
+    "tailor_table"
+   ],
+   "public": [
+    "tailor"
+   ],
+   "home_item": "tailor_table",
+   "slice": "beta1",
+   "rank": "any",
+   "max_grade": "fine",
+   "screen": "grid6",
+   "why": "Cloth gear, pet accessories and outfit recolouring; the outfit economy (palettes, alterations) needs a place"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "smoke_bomb",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "smoke_powder",
+     "count": 2
+    },
+    {
+     "item": "washi_paper",
+     "count": 1
+    },
+    {
+     "item": "thread",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "smoke_bomb",
+    "count": 2
+   },
+   "time": 6,
+   "rank": "academy",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "ikebana",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "pressed_flower",
+     "count": 2
+    },
+    {
+     "item": "bamboo_vase",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "ikebana",
+    "count": 1
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "job:job.flower_shop:4",
+   "difficulty": 0
+  },
+  {
+   "id": "stink_bomb",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "smoke_powder",
+     "count": 1
+    },
+    {
+     "item": "mackerel",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "stink_bomb",
+    "count": 2
+   },
+   "time": 4,
+   "rank": "academy",
+   "slice": "beta1",
+   "unlock": "quest:district.b1.neighbours.1",
+   "difficulty": 0
+  },
+  {
+   "id": "ninja_wire",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "steel_wire",
+     "count": 3
+    }
+   ],
+   "output": {
+    "item": "ninja_wire",
+    "count": 2
+   },
+   "time": 4,
+   "rank": "academy",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "sealing_tag",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "washi_paper",
+     "count": 2
+    },
+    {
+     "item": "ink",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "sealing_tag",
+    "count": 2
+   },
+   "time": 6,
+   "rank": "academy",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "paper_bomb",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "washi_paper",
+     "count": 1
+    },
+    {
+     "item": "ink",
+     "count": 1
+    },
+    {
+     "item": "blasting_powder",
+     "count": 4
+    }
+   ],
+   "output": {
+    "item": "paper_bomb",
+    "count": 2
+   },
+   "time": 8,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 2
+  },
+  {
+   "id": "flash_bomb",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "flash_powder",
+     "count": 2
+    },
+    {
+     "item": "washi_paper",
+     "count": 1
+    },
+    {
+     "item": "thread",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "flash_bomb",
+    "count": 1
+   },
+   "time": 6,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "tool_pouch",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "leather_strip",
+     "count": 3
+    },
+    {
+     "item": "cotton_cloth",
+     "count": 2
+    },
+    {
+     "item": "thread",
+     "count": 1
+    },
+    {
+     "item": "steel_wire",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "tool_pouch",
+    "count": 1
+   },
+   "time": 10,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "leg_holster",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "leather_strip",
+     "count": 3
+    },
+    {
+     "item": "cotton_cloth",
+     "count": 1
+    },
+    {
+     "item": "thread",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "leg_holster",
+    "count": 1
+   },
+   "time": 8,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "medic_pouch",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "cotton_cloth",
+     "count": 6
+    },
+    {
+     "item": "leather_strip",
+     "count": 2
+    },
+    {
+     "item": "thread",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "medic_pouch",
+    "count": 1
+   },
+   "time": 8,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "low_table",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 8
+    },
+    {
+     "item": "lacquer",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "low_table",
+    "count": 1
+   },
+   "time": 12,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "zabuton",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "cotton_cloth",
+     "count": 2
+    },
+    {
+     "item": "thread",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "zabuton",
+    "count": 1
+   },
+   "time": 4,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "shoji_screen",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 8
+    },
+    {
+     "item": "washi_paper",
+     "count": 10
+    }
+   ],
+   "output": {
+    "item": "shoji_screen",
+    "count": 1
+   },
+   "time": 12,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "scroll_shelf",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 16
+    },
+    {
+     "item": "lacquer",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "scroll_shelf",
+    "count": 1
+   },
+   "time": 16,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "tansu_chest",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 24
+    },
+    {
+     "item": "lacquer",
+     "count": 2
+    },
+    {
+     "item": "steel_ingot",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "tansu_chest",
+    "count": 1
+   },
+   "time": 20,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "blueprint",
+   "difficulty": 0
+  },
+  {
+   "id": "andon_lamp",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 2
+    },
+    {
+     "item": "washi_paper",
+     "count": 4
+    },
+    {
+     "item": "lamp_oil",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "andon_lamp",
+    "count": 1
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "paper_lantern",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "washi_paper",
+     "count": 4
+    },
+    {
+     "item": "bamboo",
+     "count": 2
+    },
+    {
+     "item": "lamp_oil",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "paper_lantern",
+    "count": 1
+   },
+   "time": 6,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "tatami",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "tatami_rush",
+     "count": 10
+    },
+    {
+     "item": "cotton_cloth",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "tatami",
+    "count": 1
+   },
+   "time": 10,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "low_desk",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 10
+    },
+    {
+     "item": "lacquer",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "low_desk",
+    "count": 1
+   },
+   "time": 12,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "blueprint",
+   "difficulty": 0
+  },
+  {
+   "id": "pet_bed",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "cotton_cloth",
+     "count": 4
+    },
+    {
+     "item": "thread",
+     "count": 2
+    },
+    {
+     "item": "hinoki_planks",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "pet_bed",
+    "count": 1
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "target_board",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 8
+    },
+    {
+     "item": "dye",
+     "count": 2
+    },
+    {
+     "item": "tatami_rush",
+     "count": 6
+    }
+   ],
+   "output": {
+    "item": "target_board",
+    "count": 1
+   },
+   "time": 10,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "training_dummy",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 12
+    },
+    {
+     "item": "tatami_rush",
+     "count": 10
+    },
+    {
+     "item": "cotton_cloth",
+     "count": 4
+    },
+    {
+     "item": "leather_strip",
+     "count": 4
+    }
+   ],
+   "output": {
+    "item": "training_dummy",
+    "count": 1
+   },
+   "time": 16,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "blueprint",
+   "difficulty": 0
+  },
+  {
+   "id": "weapon_rack",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 16
+    },
+    {
+     "item": "steel_ingot",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "weapon_rack",
+    "count": 1
+   },
+   "time": 14,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "workbench",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 30
+    },
+    {
+     "item": "steel_ingot",
+     "count": 2
+    },
+    {
+     "item": "leather_strip",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "workbench",
+    "count": 1
+   },
+   "time": 30,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "quest:clan.kinoshita.1",
+   "difficulty": 0
+  },
+  {
+   "id": "kotatsu",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 20
+    },
+    {
+     "item": "cotton_cloth",
+     "count": 10
+    },
+    {
+     "item": "silk",
+     "count": 2
+    },
+    {
+     "item": "steel_ingot",
+     "count": 1
+    },
+    {
+     "item": "lacquer",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "kotatsu",
+    "count": 1
+   },
+   "time": 24,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": "blueprint",
+   "difficulty": 0
+  },
+  {
+   "id": "folding_screen",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 10
+    },
+    {
+     "item": "washi_paper",
+     "count": 20
+    },
+    {
+     "item": "silk",
+     "count": 2
+    },
+    {
+     "item": "lacquer",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "folding_screen",
+    "count": 1
+   },
+   "time": 24,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": "blueprint",
+   "difficulty": 0
+  },
+  {
+   "id": "step_tansu",
+   "station": "workbench",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 40
+    },
+    {
+     "item": "lacquer",
+     "count": 4
+    },
+    {
+     "item": "steel_ingot",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "step_tansu",
+    "count": 1
+   },
+   "time": 30,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": "blueprint",
+   "difficulty": 0
+  },
+  {
+   "id": "steel_from_scrap",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "scrap_steel",
+     "count": 4
+    },
+    {
+     "item": "charcoal",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "steel_ingot",
+    "count": 1
+   },
+   "time": 10,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "steel_from_sand",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "iron_sand",
+     "count": 4
+    },
+    {
+     "item": "charcoal",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "steel_ingot",
+    "count": 1
+   },
+   "time": 12,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "steel_from_blades",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "broken_blade",
+     "count": 2
+    },
+    {
+     "item": "charcoal",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "scrap_steel",
+    "count": 4
+   },
+   "time": 6,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "steel_from_kunai",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "rusty_kunai",
+     "count": 4
+    },
+    {
+     "item": "charcoal",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "scrap_steel",
+    "count": 2
+   },
+   "time": 6,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "refined_steel",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 2
+    },
+    {
+     "item": "charcoal",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "refined_steel",
+    "count": 1
+   },
+   "time": 20,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "job:job.forge:6",
+   "difficulty": 0
+  },
+  {
+   "id": "steel_wire",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "steel_wire",
+    "count": 8
+   },
+   "time": 8,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "chain_links",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "chain_links",
+    "count": 4
+   },
+   "time": 8,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "kunai",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 1
+    },
+    {
+     "item": "leather_strip",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "kunai",
+    "count": 3
+   },
+   "time": 12,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "job:job.forge:3",
+   "difficulty": 2
+  },
+  {
+   "id": "shuriken",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "shuriken",
+    "count": 8
+   },
+   "time": 10,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "job:job.forge:3",
+   "difficulty": 2
+  },
+  {
+   "id": "senbon",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "senbon",
+    "count": 16
+   },
+   "time": 10,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "book:smithing_manual",
+   "difficulty": 1
+  },
+  {
+   "id": "makibishi",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "scrap_steel",
+     "count": 4
+    },
+    {
+     "item": "leather_strip",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "makibishi",
+    "count": 4
+   },
+   "time": 8,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "book:smithing_manual",
+   "difficulty": 0
+  },
+  {
+   "id": "tanto",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 5
+    },
+    {
+     "item": "leather_strip",
+     "count": 2
+    },
+    {
+     "item": "hinoki_planks",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "tanto",
+    "count": 1
+   },
+   "time": 30,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "job:job.forge:6",
+   "difficulty": 3
+  },
+  {
+   "id": "manji_shuriken",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "manji_shuriken",
+    "count": 6
+   },
+   "time": 12,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "job:job.forge:6",
+   "difficulty": 2
+  },
+  {
+   "id": "knuckle_guards",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 2
+    },
+    {
+     "item": "leather_strip",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "knuckle_guards",
+    "count": 1
+   },
+   "time": 16,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 2
+  },
+  {
+   "id": "weighted_chain",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "chain_links",
+     "count": 6
+    },
+    {
+     "item": "steel_ingot",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "weighted_chain",
+    "count": 1
+   },
+   "time": 16,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 2
+  },
+  {
+   "id": "bo_staff",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "hinoki_planks",
+     "count": 6
+    },
+    {
+     "item": "steel_ingot",
+     "count": 1
+    },
+    {
+     "item": "lacquer",
+     "count": 2
+    },
+    {
+     "item": "leather_strip",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "bo_staff",
+    "count": 1
+   },
+   "time": 16,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 2
+  },
+  {
+   "id": "arm_guards",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 2
+    },
+    {
+     "item": "leather_strip",
+     "count": 3
+    }
+   ],
+   "output": {
+    "item": "arm_guards",
+    "count": 1
+   },
+   "time": 16,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 2
+  },
+  {
+   "id": "shin_guards",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "steel_ingot",
+     "count": 2
+    },
+    {
+     "item": "leather_strip",
+     "count": 3
+    }
+   ],
+   "output": {
+    "item": "shin_guards",
+    "count": 1
+   },
+   "time": 16,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 2
+  },
+  {
+   "id": "mesh_shirt",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "chain_links",
+     "count": 24
+    },
+    {
+     "item": "cotton_cloth",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "mesh_shirt",
+    "count": 1
+   },
+   "time": 30,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "mentor:role:shop.weapon.smith",
+   "difficulty": 3
+  },
+  {
+   "id": "ninjato",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "refined_steel",
+     "count": 8
+    },
+    {
+     "item": "leather_strip",
+     "count": 2
+    },
+    {
+     "item": "lacquer",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "ninjato",
+    "count": 1
+   },
+   "time": 60,
+   "rank": "genin",
+   "slice": "beta3",
+   "unlock": "mentor:role:shop.weapon.smith",
+   "difficulty": 3
+  },
+  {
+   "id": "kusarigama",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "refined_steel",
+     "count": 4
+    },
+    {
+     "item": "chain_links",
+     "count": 12
+    },
+    {
+     "item": "hinoki_planks",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "kusarigama",
+    "count": 1
+   },
+   "time": 45,
+   "rank": "chunin",
+   "slice": "later",
+   "unlock": null,
+   "difficulty": 3
+  },
+  {
+   "id": "war_fan",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "refined_steel",
+     "count": 4
+    },
+    {
+     "item": "silk",
+     "count": 4
+    },
+    {
+     "item": "lacquer",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "war_fan",
+    "count": 1
+   },
+   "time": 45,
+   "rank": "chunin",
+   "slice": "later",
+   "unlock": null,
+   "difficulty": 3
+  },
+  {
+   "id": "fuma_shuriken",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "refined_steel",
+     "count": 3
+    },
+    {
+     "item": "leather_strip",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "fuma_shuriken",
+    "count": 1
+   },
+   "time": 40,
+   "rank": "chunin",
+   "slice": "later",
+   "unlock": null,
+   "difficulty": 3
+  },
+  {
+   "id": "chakra_metal_kunai",
+   "station": "smithy",
+   "inputs": [
+    {
+     "item": "chakra_metal",
+     "count": 1
+    },
+    {
+     "item": "leather_strip",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "chakra_metal_kunai",
+    "count": 4
+   },
+   "time": 30,
+   "rank": "jonin",
+   "slice": "later",
+   "unlock": "mentor:role:shop.weapon.smith",
+   "difficulty": 3
+  },
+  {
+   "id": "herbal_poultice",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "healing_herb",
+     "count": 3
+    },
+    {
+     "item": "beeswax",
+     "count": 1
+    },
+    {
+     "item": "cotton_cloth",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "herbal_poultice",
+    "count": 2
+   },
+   "time": 8,
+   "rank": "academy",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "burn_salve",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "aloe",
+     "count": 3
+    },
+    {
+     "item": "beeswax",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "burn_salve",
+    "count": 2
+   },
+   "time": 8,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "antidote",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "bellflower_root",
+     "count": 6
+    },
+    {
+     "item": "healing_herb",
+     "count": 1
+    },
+    {
+     "item": "glass_bottle",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "antidote",
+    "count": 2
+   },
+   "time": 10,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "job:job.pharmacy:4",
+   "difficulty": 1
+  },
+  {
+   "id": "eye_drops",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "aloe",
+     "count": 1
+    },
+    {
+     "item": "healing_herb",
+     "count": 2
+    },
+    {
+     "item": "glass_bottle",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "eye_drops",
+    "count": 2
+   },
+   "time": 6,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "coating_venom",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "nightshade",
+     "count": 4
+    },
+    {
+     "item": "lily_of_the_valley",
+     "count": 2
+    },
+    {
+     "item": "glass_bottle",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "coating_venom",
+    "count": 2
+   },
+   "time": 10,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "job:job.pharmacy:8",
+   "difficulty": 2
+  },
+  {
+   "id": "food_pill",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "rice",
+     "count": 8
+    },
+    {
+     "item": "red_beans",
+     "count": 4
+    },
+    {
+     "item": "sesame",
+     "count": 4
+    },
+    {
+     "item": "honey",
+     "count": 2
+    },
+    {
+     "item": "healing_herb",
+     "count": 4
+    }
+   ],
+   "output": {
+    "item": "food_pill",
+    "count": 2
+   },
+   "time": 12,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "clan:akimichi",
+   "difficulty": 1
+  },
+  {
+   "id": "soldier_pill",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "healing_herb",
+     "count": 4
+    },
+    {
+     "item": "ginger_root",
+     "count": 4
+    },
+    {
+     "item": "honey",
+     "count": 1
+    },
+    {
+     "item": "ginseng_root",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "soldier_pill",
+    "count": 2
+   },
+   "time": 16,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": "clan:suzuran",
+   "difficulty": 2
+  },
+  {
+   "id": "blood_pill",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "ginseng_root",
+     "count": 1
+    },
+    {
+     "item": "bellflower_root",
+     "count": 3
+    },
+    {
+     "item": "red_beans",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "blood_pill",
+    "count": 2
+   },
+   "time": 14,
+   "rank": "genin",
+   "slice": "beta3",
+   "unlock": "book:field_guide_herbs",
+   "difficulty": 2
+  },
+  {
+   "id": "insect_repellent",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "kitchen_herbs",
+     "count": 4
+    },
+    {
+     "item": "ginger_root",
+     "count": 2
+    },
+    {
+     "item": "lamp_oil",
+     "count": 1
+    },
+    {
+     "item": "glass_bottle",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "insect_repellent",
+    "count": 2
+   },
+   "time": 6,
+   "rank": "genin",
+   "slice": "beta3",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "scent_powder",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "kitchen_herbs",
+     "count": 4
+    },
+    {
+     "item": "smoke_powder",
+     "count": 2
+    },
+    {
+     "item": "aloe",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "scent_powder",
+    "count": 2
+   },
+   "time": 6,
+   "rank": "genin",
+   "slice": "beta3",
+   "unlock": "clan:inuzuka",
+   "difficulty": 0
+  },
+  {
+   "id": "strong_antidote",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "antidote",
+     "count": 2
+    },
+    {
+     "item": "lily_of_the_valley",
+     "count": 3
+    },
+    {
+     "item": "ginseng_root",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "strong_antidote",
+    "count": 2
+   },
+   "time": 16,
+   "rank": "chunin",
+   "slice": "later",
+   "unlock": "clan:suzuran",
+   "difficulty": 2
+  },
+  {
+   "id": "coating_sleep",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "kitchen_herbs",
+     "count": 4
+    },
+    {
+     "item": "lily_of_the_valley",
+     "count": 2
+    },
+    {
+     "item": "smoke_powder",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "coating_sleep",
+    "count": 2
+   },
+   "time": 12,
+   "rank": "genin",
+   "slice": "beta3",
+   "unlock": "book:field_guide_herbs",
+   "difficulty": 1
+  },
+  {
+   "id": "coating_numbing",
+   "station": "apothecary",
+   "inputs": [
+    {
+     "item": "lily_of_the_valley",
+     "count": 6
+    },
+    {
+     "item": "snake_skin",
+     "count": 1
+    },
+    {
+     "item": "glass_bottle",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "coating_numbing",
+    "count": 2
+   },
+   "time": 14,
+   "rank": "genin",
+   "slice": "beta3",
+   "unlock": "clan:suzuran",
+   "difficulty": 2
+  },
+  {
+   "id": "blank_scroll",
+   "station": "sealing",
+   "inputs": [
+    {
+     "item": "washi_paper",
+     "count": 4
+    },
+    {
+     "item": "hinoki_planks",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "blank_scroll",
+    "count": 2
+   },
+   "time": 6,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "sealing_scroll",
+   "station": "sealing",
+   "inputs": [
+    {
+     "item": "blank_scroll",
+     "count": 1
+    },
+    {
+     "item": "ink",
+     "count": 2
+    },
+    {
+     "item": "chakra_paper",
+     "count": 4
+    }
+   ],
+   "output": {
+    "item": "sealing_scroll",
+    "count": 1
+   },
+   "time": 20,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "storage_scroll_large",
+   "station": "sealing",
+   "inputs": [
+    {
+     "item": "sealing_scroll",
+     "count": 4
+    },
+    {
+     "item": "chakra_paper",
+     "count": 8
+    },
+    {
+     "item": "ink",
+     "count": 4
+    }
+   ],
+   "output": {
+    "item": "storage_scroll_large",
+    "count": 1
+   },
+   "time": 40,
+   "rank": "chunin",
+   "slice": "later",
+   "unlock": null,
+   "difficulty": 2
+  },
+  {
+   "id": "barrier_tag",
+   "station": "sealing",
+   "inputs": [
+    {
+     "item": "sealing_tag",
+     "count": 4
+    },
+    {
+     "item": "chakra_paper",
+     "count": 2
+    },
+    {
+     "item": "ink",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "barrier_tag",
+    "count": 2
+   },
+   "time": 20,
+   "rank": "chunin",
+   "slice": "later",
+   "unlock": null,
+   "difficulty": 2
+  },
+  {
+   "id": "paper_bomb_chain",
+   "station": "sealing",
+   "inputs": [
+    {
+     "item": "paper_bomb",
+     "count": 5
+    },
+    {
+     "item": "steel_wire",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "paper_bomb_chain",
+    "count": 1
+   },
+   "time": 16,
+   "rank": "chunin",
+   "slice": "later",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "chakra_suppression_tag",
+   "station": "sealing",
+   "inputs": [
+    {
+     "item": "sealing_tag",
+     "count": 2
+    },
+    {
+     "item": "chakra_paper",
+     "count": 6
+    },
+    {
+     "item": "ink",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "chakra_suppression_tag",
+    "count": 1
+   },
+   "time": 30,
+   "rank": "jonin",
+   "slice": "later",
+   "unlock": "mentor:role:clan.uzumaki.elder",
+   "difficulty": 3
+  },
+  {
+   "id": "training_headband",
+   "station": "tailoring",
+   "inputs": [
+    {
+     "item": "cotton_cloth",
+     "count": 2
+    },
+    {
+     "item": "thread",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "training_headband",
+    "count": 1
+   },
+   "time": 6,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "fingerless_gloves",
+   "station": "tailoring",
+   "inputs": [
+    {
+     "item": "leather_strip",
+     "count": 6
+    },
+    {
+     "item": "thread",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "fingerless_gloves",
+    "count": 1
+   },
+   "time": 10,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "travel_cloak",
+   "station": "tailoring",
+   "inputs": [
+    {
+     "item": "cotton_cloth",
+     "count": 12
+    },
+    {
+     "item": "thread",
+     "count": 4
+    },
+    {
+     "item": "wolf_pelt",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "travel_cloak",
+    "count": 1
+   },
+   "time": 20,
+   "rank": "genin",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 1
+  },
+  {
+   "id": "pet_bandana",
+   "station": "tailoring",
+   "inputs": [
+    {
+     "item": "cotton_cloth",
+     "count": 2
+    },
+    {
+     "item": "dye",
+     "count": 1
+    },
+    {
+     "item": "thread",
+     "count": 3
+    }
+   ],
+   "output": {
+    "item": "pet_bandana",
+    "count": 1
+   },
+   "time": 6,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "pet_collar",
+   "station": "tailoring",
+   "inputs": [
+    {
+     "item": "leather_strip",
+     "count": 2
+    },
+    {
+     "item": "dye",
+     "count": 1
+    },
+    {
+     "item": "thread",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "pet_collar",
+    "count": 1
+   },
+   "time": 6,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "knuckle_wraps",
+   "station": "tailoring",
+   "inputs": [
+    {
+     "item": "cotton_cloth",
+     "count": 3
+    },
+    {
+     "item": "thread",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "knuckle_wraps",
+    "count": 1
+   },
+   "time": 4,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "handkerchief",
+   "station": "tailoring",
+   "inputs": [
+    {
+     "item": "cotton_cloth",
+     "count": 2
+    },
+    {
+     "item": "thread",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "handkerchief",
+    "count": 2
+   },
+   "time": 4,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "ribbon",
+   "station": "tailoring",
+   "inputs": [
+    {
+     "item": "silk",
+     "count": 1
+    },
+    {
+     "item": "dye",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "ribbon",
+    "count": 3
+   },
+   "time": 4,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "bandage_wrap",
+   "station": "tailoring",
+   "inputs": [
+    {
+     "item": "cotton_cloth",
+     "count": 2
+    },
+    {
+     "item": "thread",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "bandage_wrap",
+    "count": 3
+   },
+   "time": 4,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "outfit_recolour",
+   "station": "tailoring",
+   "inputs": [
+    {
+     "item": "folded_outfit",
+     "count": 1
+    },
+    {
+     "item": "dye",
+     "count": 2
+    }
+   ],
+   "output": {
+    "item": "folded_outfit",
+    "count": 1
+   },
+   "time": 20,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "red_bean_paste",
+   "station": "cooking.pot",
+   "vessel": null,
+   "inputs": [
+    {
+     "item": "red_beans",
+     "count": 2
+    },
+    {
+     "item": "sugar",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "red_bean_paste",
+    "count": 2
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "shio_ramen",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "ramen_noodles",
+     "count": 1
+    },
+    {
+     "item": "kombu",
+     "count": 1
+    },
+    {
+     "item": "green_onion",
+     "count": 1
+    },
+    {
+     "item": "fish_cake",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "shio_ramen",
+    "count": 1
+   },
+   "time": 12,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "job:job.ichiraku:3",
+   "difficulty": 0
+  },
+  {
+   "id": "shoyu_ramen",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "ramen_noodles",
+     "count": 1
+    },
+    {
+     "item": "soy_sauce",
+     "count": 1
+    },
+    {
+     "item": "bamboo_shoot",
+     "count": 1
+    },
+    {
+     "item": "fish_cake",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "shoyu_ramen",
+    "count": 1
+   },
+   "time": 12,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "job:job.ichiraku:3",
+   "difficulty": 0
+  },
+  {
+   "id": "miso_ramen",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "ramen_noodles",
+     "count": 1
+    },
+    {
+     "item": "miso_paste",
+     "count": 1
+    },
+    {
+     "item": "pork_belly",
+     "count": 1
+    },
+    {
+     "item": "green_onion",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "miso_ramen",
+    "count": 1
+   },
+   "time": 14,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "job:job.ichiraku:8",
+   "difficulty": 0
+  },
+  {
+   "id": "miso_chashu_ramen",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "ramen_noodles",
+     "count": 1
+    },
+    {
+     "item": "miso_paste",
+     "count": 1
+    },
+    {
+     "item": "pork_belly",
+     "count": 2
+    },
+    {
+     "item": "egg",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "miso_chashu_ramen",
+    "count": 1
+   },
+   "time": 16,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "card",
+   "difficulty": 0
+  },
+  {
+   "id": "miso_soup",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "miso_paste",
+     "count": 1
+    },
+    {
+     "item": "tofu",
+     "count": 1
+    },
+    {
+     "item": "green_onion",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "miso_soup",
+    "count": 1
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "green_tea",
+   "station": "cooking.pot",
+   "vessel": "glass_bottle",
+   "inputs": [
+    {
+     "item": "tea_leaves",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "green_tea",
+    "count": 1
+   },
+   "time": 6,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "matcha",
+   "station": "cooking.pot",
+   "vessel": "glass_bottle",
+   "inputs": [
+    {
+     "item": "matcha_powder",
+     "count": 1
+    },
+    {
+     "item": "milk",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "matcha",
+    "count": 1
+   },
+   "time": 6,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "job:job.tea_house:5",
+   "difficulty": 0
+  },
+  {
+   "id": "hojicha",
+   "station": "cooking.pot",
+   "vessel": "glass_bottle",
+   "inputs": [
+    {
+     "item": "roasted_tea",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "hojicha",
+    "count": 1
+   },
+   "time": 6,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "soba",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "buckwheat_noodles",
+     "count": 1
+    },
+    {
+     "item": "soy_sauce",
+     "count": 1
+    },
+    {
+     "item": "green_onion",
+     "count": 1
+    },
+    {
+     "item": "kombu",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "soba",
+    "count": 1
+   },
+   "time": 10,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "udon",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "udon_noodles",
+     "count": 1
+    },
+    {
+     "item": "kombu",
+     "count": 1
+    },
+    {
+     "item": "fish_cake",
+     "count": 1
+    },
+    {
+     "item": "green_onion",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "udon",
+    "count": 1
+   },
+   "time": 10,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "curry_rice",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "curry_roux",
+     "count": 1
+    },
+    {
+     "item": "rice",
+     "count": 1
+    },
+    {
+     "item": "potato",
+     "count": 1
+    },
+    {
+     "item": "carrot",
+     "count": 1
+    },
+    {
+     "item": "beef",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "curry_rice",
+    "count": 1
+   },
+   "time": 14,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "nikujaga",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "beef",
+     "count": 1
+    },
+    {
+     "item": "potato",
+     "count": 1
+    },
+    {
+     "item": "onion",
+     "count": 1
+    },
+    {
+     "item": "soy_sauce",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "nikujaga",
+    "count": 1
+   },
+   "time": 14,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "oyakodon",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "chicken",
+     "count": 1
+    },
+    {
+     "item": "egg",
+     "count": 1
+    },
+    {
+     "item": "rice",
+     "count": 1
+    },
+    {
+     "item": "onion",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "oyakodon",
+    "count": 1
+   },
+   "time": 12,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "katsudon",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "pork_belly",
+     "count": 1
+    },
+    {
+     "item": "egg",
+     "count": 1
+    },
+    {
+     "item": "rice",
+     "count": 1
+    },
+    {
+     "item": "flour",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "katsudon",
+    "count": 1
+   },
+   "time": 14,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "oden",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "fish_cake",
+     "count": 2
+    },
+    {
+     "item": "daikon",
+     "count": 1
+    },
+    {
+     "item": "egg",
+     "count": 1
+    },
+    {
+     "item": "kombu",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "oden",
+    "count": 1
+   },
+   "time": 16,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "zenzai",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "red_bean_paste",
+     "count": 1
+    },
+    {
+     "item": "mochi",
+     "count": 1
+    },
+    {
+     "item": "sugar",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "zenzai",
+    "count": 1
+   },
+   "time": 10,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "sukiyaki",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "beef",
+     "count": 2
+    },
+    {
+     "item": "tofu",
+     "count": 1
+    },
+    {
+     "item": "green_onion",
+     "count": 1
+    },
+    {
+     "item": "egg",
+     "count": 1
+    },
+    {
+     "item": "soy_sauce",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "sukiyaki",
+    "count": 1
+   },
+   "time": 20,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "ozoni",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "mochi",
+     "count": 1
+    },
+    {
+     "item": "daikon",
+     "count": 1
+    },
+    {
+     "item": "carrot",
+     "count": 1
+    },
+    {
+     "item": "kombu",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "ozoni",
+    "count": 1
+   },
+   "time": 12,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "grilled_fish",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "mackerel",
+     "count": 1
+    },
+    {
+     "item": "kitchen_herbs",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "grilled_fish",
+    "count": 1
+   },
+   "time": 10,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "yakitori",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "chicken",
+     "count": 1
+    },
+    {
+     "item": "soy_sauce",
+     "count": 1
+    },
+    {
+     "item": "bamboo",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "yakitori",
+    "count": 2
+   },
+   "time": 10,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "tamagoyaki",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "egg",
+     "count": 2
+    },
+    {
+     "item": "sugar",
+     "count": 1
+    },
+    {
+     "item": "soy_sauce",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "tamagoyaki",
+    "count": 1
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "dango",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "rice_flour",
+     "count": 3
+    },
+    {
+     "item": "sugar",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "dango",
+    "count": 2
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "mitarashi_dango",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "rice_flour",
+     "count": 2
+    },
+    {
+     "item": "soy_sauce",
+     "count": 1
+    },
+    {
+     "item": "sugar",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "mitarashi_dango",
+    "count": 2
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "anko_dango",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "rice_flour",
+     "count": 2
+    },
+    {
+     "item": "red_bean_paste",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "anko_dango",
+    "count": 2
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "gyoza",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "flour",
+     "count": 1
+    },
+    {
+     "item": "pork_belly",
+     "count": 1
+    },
+    {
+     "item": "cabbage",
+     "count": 1
+    },
+    {
+     "item": "garlic",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "gyoza",
+    "count": 2
+   },
+   "time": 10,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "senbei",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "rice",
+     "count": 1
+    },
+    {
+     "item": "soy_sauce",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "senbei",
+    "count": 2
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "taiyaki",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "flour",
+     "count": 1
+    },
+    {
+     "item": "egg",
+     "count": 1
+    },
+    {
+     "item": "red_bean_paste",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "taiyaki",
+    "count": 2
+   },
+   "time": 10,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "okonomiyaki",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "flour",
+     "count": 1
+    },
+    {
+     "item": "cabbage",
+     "count": 1
+    },
+    {
+     "item": "egg",
+     "count": 1
+    },
+    {
+     "item": "pork_belly",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "okonomiyaki",
+    "count": 1
+   },
+   "time": 12,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "tempura",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "prawn",
+     "count": 1
+    },
+    {
+     "item": "flour",
+     "count": 1
+    },
+    {
+     "item": "egg",
+     "count": 1
+    },
+    {
+     "item": "carrot",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "tempura",
+    "count": 1
+   },
+   "time": 12,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "takoyaki",
+   "station": "cooking.oven",
+   "inputs": [
+    {
+     "item": "flour",
+     "count": 1
+    },
+    {
+     "item": "octopus",
+     "count": 1
+    },
+    {
+     "item": "egg",
+     "count": 1
+    },
+    {
+     "item": "green_onion",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "takoyaki",
+    "count": 2
+   },
+   "time": 12,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "onigiri",
+   "station": "cooking.prep",
+   "inputs": [
+    {
+     "item": "rice",
+     "count": 2
+    },
+    {
+     "item": "nori",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "onigiri",
+    "count": 2
+   },
+   "time": 4,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "onigiri_umeboshi",
+   "station": "cooking.prep",
+   "inputs": [
+    {
+     "item": "rice",
+     "count": 2
+    },
+    {
+     "item": "nori",
+     "count": 1
+    },
+    {
+     "item": "umeboshi",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "onigiri_umeboshi",
+    "count": 2
+   },
+   "time": 4,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "onigiri_okaka",
+   "station": "cooking.prep",
+   "inputs": [
+    {
+     "item": "rice",
+     "count": 2
+    },
+    {
+     "item": "nori",
+     "count": 1
+    },
+    {
+     "item": "bonito_flakes",
+     "count": 1
+    },
+    {
+     "item": "soy_sauce",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "onigiri_okaka",
+    "count": 2
+   },
+   "time": 4,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "onigiri_salmon",
+   "station": "cooking.prep",
+   "inputs": [
+    {
+     "item": "rice",
+     "count": 2
+    },
+    {
+     "item": "nori",
+     "count": 1
+    },
+    {
+     "item": "salmon",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "onigiri_salmon",
+    "count": 2
+   },
+   "time": 4,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "onigiri_kombu",
+   "station": "cooking.prep",
+   "inputs": [
+    {
+     "item": "rice",
+     "count": 2
+    },
+    {
+     "item": "nori",
+     "count": 1
+    },
+    {
+     "item": "kombu",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "onigiri_kombu",
+    "count": 2
+   },
+   "time": 4,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "tsukemono",
+   "station": "cooking.prep",
+   "inputs": [
+    {
+     "item": "daikon",
+     "count": 1
+    },
+    {
+     "item": "cabbage",
+     "count": 1
+    },
+    {
+     "item": "umeboshi",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "tsukemono",
+    "count": 4
+   },
+   "time": 6,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "wagashi",
+   "station": "cooking.prep",
+   "inputs": [
+    {
+     "item": "red_bean_paste",
+     "count": 1
+    },
+    {
+     "item": "rice_flour",
+     "count": 1
+    },
+    {
+     "item": "sugar",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "wagashi",
+    "count": 2
+   },
+   "time": 8,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": "job:job.tea_house:5",
+   "difficulty": 0
+  },
+  {
+   "id": "sakura_mochi",
+   "station": "cooking.prep",
+   "inputs": [
+    {
+     "item": "mochi",
+     "count": 1
+    },
+    {
+     "item": "red_bean_paste",
+     "count": 1
+    },
+    {
+     "item": "sugar",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "sakura_mochi",
+    "count": 2
+   },
+   "time": 6,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "bento",
+   "station": "cooking.prep",
+   "inputs": [
+    {
+     "item": "rice",
+     "count": 2
+    },
+    {
+     "item": "grilled_fish",
+     "count": 1
+    },
+    {
+     "item": "egg",
+     "count": 1
+    },
+    {
+     "item": "tsukemono",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "bento",
+    "count": 1
+   },
+   "time": 6,
+   "rank": "any",
+   "slice": "beta1",
+   "unlock": null,
+   "difficulty": 0
+  },
+  {
+   "id": "grandmothers_dish",
+   "station": "cooking.pot",
+   "vessel": "bowl",
+   "inputs": [
+    {
+     "item": "daikon",
+     "count": 1
+    },
+    {
+     "item": "kombu",
+     "count": 1
+    },
+    {
+     "item": "shiitake",
+     "count": 1
+    },
+    {
+     "item": "ginger_root",
+     "count": 1
+    },
+    {
+     "item": "mochi",
+     "count": 1
+    }
+   ],
+   "output": {
+    "item": "grandmothers_dish",
+    "count": 1
+   },
+   "time": 20,
+   "rank": "any",
+   "slice": "beta2",
+   "unlock": "quest:district.b2.grandmothers_recipe",
+   "difficulty": 0
+  }
+ ]
+}

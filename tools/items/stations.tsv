@@ -1,0 +1,10 @@
+# Crafting stations (ROADMAP §7 Gear and crafting). blocks are asked of the Konoha session's block catalogue;
+# public stations stand in the world (anyone may use them at those places), home stations are furniture items.
+# max_grade caps the quality a station can make; screen is the menu Phase 0 builds (VF's StationMenu pattern).
+id	name	blocks	public	home_item	slice	rank	max_grade	screen	why
+workbench	Workbench	workbench	academy.workshop;kinoshita_yard	workbench	beta1	academy	fine	grid6	Tools from paper, powder and wire, pouches and furniture; ROADMAP's first station
+smithy	Smithy	forge;anvil;quench_trough	weapon_shop	small_forge	beta2	genin	masterwork	forge	Blades and thrown tools from steel, smelting salvage, repair and upgrade. The small forge at home stops at fine
+cooking	Kitchen (VF Hearth & Harvest)	villagefriends:cooking_pot;villagefriends:clay_oven;villagefriends:prep_table	apartment.kitchen;akimichi.kitchen_hall	cooking_pot	beta1	any	fine	vf_station	VF's pot, oven and prep table with the Leaf's dishes as data recipes; no new kitchen block
+apothecary	Apothecary Table	apothecary_table	pharmacy;hospital.herb_room	apothecary_table	beta2	genin	fine	grid6	Medicine, antidotes and coatings were spread over the workbench; one table for the Suzuran line, the hospital night shift and Forest of Death supplies
+sealing	Sealing Desk	sealing_desk	scroll_shop	sealing_desk	beta2	genin	fine	grid6	Storage scrolls and blank scrolls in the beta (the scroll shop's desk); advanced tags from Chunin, with one at home
+tailoring	Tailor's Table	tailor_table	tailor	tailor_table	beta1	any	fine	grid6	Cloth gear, pet accessories and outfit recolouring; the outfit economy (palettes, alterations) needs a place

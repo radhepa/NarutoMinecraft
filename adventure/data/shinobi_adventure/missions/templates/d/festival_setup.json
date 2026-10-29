@@ -1,0 +1,193 @@
+{
+ "format": 1,
+ "id": "mission.d.festival_setup",
+ "kind": "mission",
+ "rank": "d",
+ "category": "festival",
+ "status": "beta",
+ "title": "dlg:mission.d.festival_setup.title",
+ "brief": "dlg:mission.d.festival_setup.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.festival_setup.brief",
+  "accept": "dlg:mission.d.festival_setup.accept",
+  "decline": "dlg:mission.d.festival_setup.decline",
+  "progress": "dlg:mission.d.festival_setup.progress",
+  "success": "dlg:mission.d.festival_setup.success",
+  "fail": "dlg:mission.d.festival_setup.fail",
+  "report": "dlg:mission.d.festival_setup.report"
+ },
+ "minutes": 12,
+ "party": "squad",
+ "event": {
+  "before": "event.leaf_festival",
+  "days": 3
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "organiser"
+   }
+  },
+  "street": {
+   "pick": "anchor",
+   "tag": "main_street"
+  },
+  "store": {
+   "pick": "anchor",
+   "tag": "festival_store"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "stalls"
+  },
+  "stalls": {
+   "objective": {
+    "type": "perform",
+    "what": "raise_stall",
+    "at": "slot:street",
+    "count": 4
+   },
+   "next": "lanterns"
+  },
+  "lanterns": {
+   "objective": {
+    "type": "perform",
+    "what": "hang_lantern",
+    "at": "slot:street",
+    "count": 10
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "rooftops"
+     },
+     "next": "roofs"
+    },
+    {
+     "if": {
+      "twist": "missing_lanterns"
+     },
+     "next": "missing"
+    },
+    {
+     "if": {
+      "twist": "fireworks"
+     },
+     "next": "fireworks"
+    }
+   ],
+   "next": "report"
+  },
+  "roofs": {
+   "objective": {
+    "type": "perform",
+    "what": "wall_run_string",
+    "at": "slot:street",
+    "count": 3
+   },
+   "next": "report"
+  },
+  "missing": {
+   "objective": {
+    "type": "inspect",
+    "target": "lantern_crate",
+    "at": "slot:store"
+   },
+   "next": "lanterns2"
+  },
+  "lanterns2": {
+   "objective": {
+    "type": "perform",
+    "what": "hang_lantern",
+    "at": "slot:street",
+    "count": 5
+   },
+   "next": "report"
+  },
+  "fireworks": {
+   "objective": {
+    "type": "deliver",
+    "item": "fireworks_crate",
+    "to": "slot:store"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "rooftops",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.festival_setup.twist.rooftops"
+  },
+  {
+   "id": "missing_lanterns",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.festival_setup.twist.missing_lanterns"
+  },
+  {
+   "id": "fireworks",
+   "weight": 1,
+   "harder": true,
+   "premise": "dlg:mission.d.festival_setup.twist.fireworks"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "careful",
+  "teamwork",
+  "fast"
+ ],
+ "fast_hours": 4,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "festival_store",
+   "main_street"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.45
+ },
+ "tags": [
+  "village",
+  "event",
+  "movement"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.festival",
+ "_premise": "Hang lanterns and raise stalls on the main street for the festival.",
+ "_twists": {
+  "rooftops": "The lantern strings go from roof to roof, three storeys up.",
+  "missing_lanterns": "A whole crate of lanterns is missing from the store.",
+  "fireworks": "Carry the fireworks crate across the crowded street. Gently."
+ }
+}

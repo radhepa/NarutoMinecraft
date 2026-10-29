@@ -1,0 +1,184 @@
+{
+ "format": 1,
+ "id": "mission.d.shop_inventory",
+ "kind": "mission",
+ "rank": "d",
+ "category": "inventory",
+ "status": "beta",
+ "title": "dlg:mission.d.shop_inventory.title",
+ "brief": "dlg:mission.d.shop_inventory.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.shop_inventory.brief",
+  "accept": "dlg:mission.d.shop_inventory.accept",
+  "decline": "dlg:mission.d.shop_inventory.decline",
+  "progress": "dlg:mission.d.shop_inventory.progress",
+  "success": "dlg:mission.d.shop_inventory.success",
+  "fail": "dlg:mission.d.shop_inventory.fail",
+  "report": "dlg:mission.d.shop_inventory.report"
+ },
+ "minutes": 10,
+ "party": "squad_or_solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "shopkeeper"
+   }
+  },
+  "store": {
+   "pick": "anchor",
+   "tag": "shop_storeroom"
+  },
+  "porter": {
+   "pick": "resident",
+   "where": {
+    "job": "porter"
+   }
+  },
+  "apprentice": {
+   "pick": "resident",
+   "where": {
+    "job": "apprentice"
+   }
+  },
+  "culprit": {
+   "pick": "suspect",
+   "from": [
+    "porter",
+    "apprentice"
+   ]
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "count"
+  },
+  "count": {
+   "objective": {
+    "type": "inspect",
+    "target": "stock_shelf",
+    "at": "slot:store",
+    "count": 6
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "count_mismatch"
+     },
+     "next": "missing"
+    },
+    {
+     "if": {
+      "twist": "mislabelled"
+     },
+     "next": "relabel"
+    }
+   ],
+   "next": "report"
+  },
+  "missing": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:porter"
+   },
+   "next": "missing2"
+  },
+  "missing2": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:apprentice"
+   },
+   "next": "accuse"
+  },
+  "accuse": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "culprit": null,
+     "say_nothing": "kept_quiet"
+    },
+    "dialogue": "dlg:mission.d.shop_inventory.choice.accuse"
+   },
+   "next": "report"
+  },
+  "relabel": {
+   "objective": {
+    "type": "perform",
+    "what": "relabel_crate",
+    "at": "slot:store",
+    "count": 4
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "count_mismatch",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.d.shop_inventory.twist.count_mismatch"
+  },
+  {
+   "id": "mislabelled",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.shop_inventory.twist.mislabelled"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "kept_quiet": {
+   "pay": 0.8,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "all_found"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "shop_storeroom"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "village",
+  "market",
+  "indoors"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.inventory",
+ "_premise": "Count every item in a shop's storeroom before the quarterly tax visit.",
+ "_twists": {
+  "count_mismatch": "The numbers do not add up: someone has been taking a little at a time.",
+  "mislabelled": "Half the crates are labelled as something else."
+ }
+}

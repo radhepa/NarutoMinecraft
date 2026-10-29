@@ -1,0 +1,37 @@
+plugins {
+    id 'java-library'
+}
+
+// The ryo economy of Shinobi Life (ITEMS.md): prices, discounts, haggling, the pawn shop, weekly stock, crafting
+// grades, repairs and a simulation of the beta's ryo. Pure Java, no Minecraft, deterministic and seeded; it reads the
+// compiled item data in data/items/. Phase 0's Life mod depends on it (`implementation project(':life:economy')`).
+version = '0.1.0'
+group = 'dev.shinobi'
+base { archivesName = 'shinobi-life-economy' }
+
+repositories { mavenCentral() }
+dependencies {
+    testImplementation project(':life:bonds')   // only to prove the seed streams give the bond engine's numbers
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+def itemData = rootProject.file('data/items')
+test {
+    useJUnitPlatform()
+    systemProperty 'items.data', itemData.absolutePath
+    inputs.dir itemData
+    testLogging { events 'failed'; exceptionFormat 'full' }
+}
+
+// Prints the seeded beta: ryo by day for three kinds of player, against the rules of thumb.
+tasks.register('simulate', JavaExec) {
+    group = 'verification'
+    description = 'Plays the beta\'s 48 days for a frugal, a typical and a spending player and prints their ryo.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.shinobi.life.economy.sim.EconomySim'
+    args itemData.absolutePath, project.findProperty('seed') ?: '20261029'
+    if (project.hasProperty('daily')) systemProperty 'daily', project.property('daily')
+}

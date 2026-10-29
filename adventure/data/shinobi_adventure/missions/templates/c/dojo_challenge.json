@@ -1,0 +1,184 @@
+{
+ "format": 1,
+ "id": "mission.c.dojo_challenge",
+ "kind": "mission",
+ "rank": "c",
+ "category": "duel",
+ "status": "beta",
+ "title": "dlg:mission.c.dojo_challenge.title",
+ "brief": "dlg:mission.c.dojo_challenge.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.dojo_challenge.brief",
+  "accept": "dlg:mission.c.dojo_challenge.accept",
+  "decline": "dlg:mission.c.dojo_challenge.decline",
+  "progress": "dlg:mission.c.dojo_challenge.progress",
+  "success": "dlg:mission.c.dojo_challenge.success",
+  "fail": "dlg:mission.c.dojo_challenge.fail",
+  "report": "dlg:mission.c.dojo_challenge.report"
+ },
+ "minutes": 20,
+ "party": "squad_or_solo",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "clan": "gekko"
+   }
+  },
+  "dojo": {
+   "pick": "anchor",
+   "tag": "dojo"
+  },
+  "swordsman": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:enemy.bandit_ronin"
+   ]
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "find"
+  },
+  "find": {
+   "objective": {
+    "type": "inspect",
+    "target": "challenge_notice",
+    "count": 2
+   },
+   "next": "duel"
+  },
+  "duel": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:swordsman",
+    "at": "slot:dojo"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:swordsman",
+      "slot:dojo"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "honourable"
+     },
+     "next": "talk"
+    }
+   ],
+   "next": "signboards"
+  },
+  "talk": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "return_boards": null,
+     "teach_him": "made_friend"
+    },
+    "dialogue": "dlg:mission.c.dojo_challenge.choice.talk"
+   },
+   "next": "signboards"
+  },
+  "signboards": {
+   "objective": {
+    "type": "collect",
+    "target": "dojo_signboard",
+    "count": 3
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "honourable",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.dojo_challenge.twist.honourable"
+  },
+  {
+   "id": "cheater",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "dlg:mission.c.dojo_challenge.twist.cheater"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0,
+   "clan_deed": [
+    "gekko",
+    "helped_resident"
+   ]
+  },
+  "made_friend": {
+   "pay": 1.0,
+   "standing": 1
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "spared"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:enemy.bandit_ronin"
+ ],
+ "places": {
+  "anchors": [
+   "dojo"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.4
+ },
+ "tags": [
+  "village",
+  "duel",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.duel",
+ "_premise": "A wandering swordsman is beating every dojo in the village and taking their signboards.",
+ "_twists": {
+  "honourable": "He only wants a worthy opponent; beaten, he asks to be taught.",
+  "cheater": "He fights with poisoned needles hidden in his sleeves."
+ }
+}

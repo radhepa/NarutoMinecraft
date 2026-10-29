@@ -4,7 +4,12 @@ A Minecraft mod of the Hidden Leaf, built on the Village Friends resident model.
 authored in Python under `tools/wardrobe/` and compiled into `src/main/resources/`. Read
 [README.md](README.md) for the village and [CLANS.md](CLANS.md) for building a clan. The friendship
 system is [BONDS.md](BONDS.md) (time together: [LIFE_TOGETHER.md](LIFE_TOGETHER.md)); its engine is the pure Java module `life/bonds` (JDK 25:
-`./gradlew :life:bonds:test`, `./gradlew :life:bonds:simulate` for the pacing tables).
+`./gradlew :life:bonds:test`, `./gradlew :life:bonds:simulate` for the pacing tables). Missions are
+[MISSIONS.md](MISSIONS.md): templates authored in `tools/missions/` (`python tools/missions/missions.py --doc`,
+`--check`) and the pure Java generator `progression/missions` (`./gradlew :progression:missions:test`,
+`:progression:missions:simulate`).
+The home is [docs/HOME.md](docs/HOME.md); its engine is `life/home`, on top of the bond engine
+(`./gradlew :life:home:test`, `./gradlew :life:home:simulate`).
 
 ## Commits
 

@@ -1,0 +1,171 @@
+{
+ "format": 1,
+ "id": "mission.d.kiln_firing",
+ "kind": "mission",
+ "rank": "d",
+ "category": "chain",
+ "status": "beta",
+ "title": "dlg:mission.d.kiln_firing.title",
+ "brief": "dlg:mission.d.kiln_firing.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.kiln_firing.brief",
+  "accept": "dlg:mission.d.kiln_firing.accept",
+  "decline": "dlg:mission.d.kiln_firing.decline",
+  "progress": "dlg:mission.d.kiln_firing.progress",
+  "success": "dlg:mission.d.kiln_firing.success",
+  "fail": "dlg:mission.d.kiln_firing.fail",
+  "report": "dlg:mission.d.kiln_firing.report"
+ },
+ "minutes": 12,
+ "party": "squad",
+ "unlock": {
+  "time_between": [
+   "16:00",
+   "22:00"
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "role",
+   "role": "role:client.kiln_grandmother"
+  },
+  "kiln": {
+   "pick": "anchor",
+   "tag": "kiln_yard"
+  },
+  "woodlot": {
+   "pick": "anchor",
+   "tag": "woodlot"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "wood"
+  },
+  "wood": {
+   "objective": {
+    "type": "collect",
+    "target": "firewood",
+    "at": "slot:woodlot",
+    "count": 12
+   },
+   "next": "fire"
+  },
+  "fire": {
+   "objective": {
+    "type": "perform",
+    "what": "stoke_fire",
+    "at": "slot:kiln",
+    "count": 6
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "crack"
+     },
+     "next": "crack"
+    },
+    {
+     "if": {
+      "twist": "rain_night"
+     },
+     "next": "cover"
+    }
+   ],
+   "next": "dawn"
+  },
+  "crack": {
+   "objective": {
+    "type": "inspect",
+    "target": "cracked_pot",
+    "at": "slot:kiln",
+    "count": 2
+   },
+   "next": "dawn"
+  },
+  "cover": {
+   "objective": {
+    "type": "perform",
+    "what": "hold_tarp",
+    "at": "slot:kiln",
+    "count": 3
+   },
+   "next": "dawn"
+  },
+  "dawn": {
+   "objective": {
+    "type": "wait_until",
+    "time": "06:00",
+    "at": "slot:kiln"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "crack",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.kiln_firing.twist.crack"
+  },
+  {
+   "id": "rain_night",
+   "weight": 1,
+   "harder": true,
+   "premise": "dlg:mission.d.kiln_firing.twist.rain_night"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "careful",
+  "extra_mile"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "kiln_yard",
+   "woodlot"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.45
+ },
+ "tags": [
+  "village",
+  "night",
+  "chain"
+ ],
+ "contested": false,
+ "chain": "chain.kiln",
+ "classic": true,
+ "banter": "dlg:mission.banter.chain",
+ "_premise": "Keep the kiln family's fire at the right heat through a night's firing.",
+ "_twists": {
+  "crack": "A pot cracks in the heat; find which shelf is too close to the flame.",
+  "rain_night": "Rain on the kiln roof; hold the tarp until it passes."
+ }
+}

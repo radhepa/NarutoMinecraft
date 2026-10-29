@@ -1,0 +1,200 @@
+{
+ "format": 1,
+ "id": "mission.c.water_dispute",
+ "kind": "mission",
+ "rank": "c",
+ "category": "mediation",
+ "status": "beta",
+ "title": "dlg:mission.c.water_dispute.title",
+ "brief": "dlg:mission.c.water_dispute.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.water_dispute.brief",
+  "accept": "dlg:mission.c.water_dispute.accept",
+  "decline": "dlg:mission.c.water_dispute.decline",
+  "progress": "dlg:mission.c.water_dispute.progress",
+  "success": "dlg:mission.c.water_dispute.success",
+  "fail": "dlg:mission.c.water_dispute.fail",
+  "report": "dlg:mission.c.water_dispute.report"
+ },
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch13.far_village",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "headman",
+    "resident_of": "any"
+   }
+  },
+  "stream": {
+   "pick": "anchor",
+   "tag": "border.stream"
+  },
+  "other_headman": {
+   "pick": "resident",
+   "where": {
+    "job": "headman",
+    "resident_of": "any"
+   }
+  },
+  "thugs": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.hired_thugs"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "hear_a"
+  },
+  "hear_a": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "hear_b"
+  },
+  "hear_b": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:other_headman"
+   },
+   "next": "survey"
+  },
+  "survey": {
+   "objective": {
+    "type": "inspect",
+    "target": "weir",
+    "at": "slot:stream",
+    "count": 3
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "hired_muscle"
+     },
+     "next": "muscle"
+    }
+   ],
+   "next": "settle"
+  },
+  "muscle": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:thugs",
+    "at": "slot:stream"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:thugs",
+      "slot:stream"
+     ]
+    }
+   ],
+   "next": "settle"
+  },
+  "settle": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "share": "shared",
+     "upstream": null,
+     "downstream": null
+    },
+    "dialogue": "dlg:mission.c.water_dispute.choice.settle"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "hired_muscle",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.water_dispute.twist.hired_muscle"
+  },
+  {
+   "id": "dry_season",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.c.water_dispute.twist.dry_season"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "shared": {
+   "pay": 1.0,
+   "standing": 2,
+   "deed": "mediated"
+  }
+ },
+ "bonus": [
+  "kind_choice",
+  "spared"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.hired_thugs"
+ ],
+ "places": {
+  "anchors": [
+   "border.stream",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.4
+ },
+ "tags": [
+  "travel",
+  "talk",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.mediation",
+ "_premise": "Two hamlets near the border are fighting over a stream; keep the peace until the magistrate comes.",
+ "_twists": {
+  "hired_muscle": "One headman has hired muscle to settle it his way.",
+  "dry_season": "It is a dry season, and there is barely enough for one."
+ }
+}

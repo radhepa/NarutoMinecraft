@@ -1,0 +1,186 @@
+{
+ "format": 1,
+ "id": "mission.c.noble_child",
+ "kind": "mission",
+ "rank": "c",
+ "category": "bodyguard",
+ "status": "beta",
+ "title": "dlg:mission.c.noble_child.title",
+ "brief": "dlg:mission.c.noble_child.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.noble_child.brief",
+  "accept": "dlg:mission.c.noble_child.accept",
+  "decline": "dlg:mission.c.noble_child.decline",
+  "progress": "dlg:mission.c.noble_child.progress",
+  "success": "dlg:mission.c.noble_child.success",
+  "fail": "dlg:mission.c.noble_child.fail",
+  "report": "dlg:mission.c.noble_child.report"
+ },
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "noble_guest",
+    "resident_of": "any"
+   }
+  },
+  "inn": {
+   "pick": "anchor",
+   "tag": "inn"
+  },
+  "market": {
+   "pick": "anchor",
+   "tag": "main_street"
+  },
+  "kidnappers": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.hired_thugs"
+   ]
+  }
+ },
+ "start": "meet",
+ "steps": {
+  "meet": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "tour"
+  },
+  "tour": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:market"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "runs_away"
+     },
+     "next": "search"
+    },
+    {
+     "if": {
+      "twist": "kidnap_attempt"
+     },
+     "next": "kidnap"
+    }
+   ],
+   "next": "back"
+  },
+  "search": {
+   "objective": {
+    "type": "inspect",
+    "target": "child_signs",
+    "count": 3
+   },
+   "next": "back"
+  },
+  "kidnap": {
+   "objective": {
+    "type": "protect",
+    "who": "slot:client",
+    "at": "slot:market"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:kidnappers",
+      "slot:market"
+     ]
+    }
+   ],
+   "next": "back"
+  },
+  "back": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:inn"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "runs_away",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.noble_child.twist.runs_away"
+  },
+  {
+   "id": "kidnap_attempt",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.c.noble_child.twist.kidnap_attempt"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_alarm",
+  "extra_mile"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.hired_thugs"
+ ],
+ "places": {
+  "anchors": [
+   "inn",
+   "main_street"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.55
+ },
+ "tags": [
+  "village",
+  "guard",
+  "children",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.bodyguard",
+ "_premise": "Guard a visiting lord's child for a day in the village.",
+ "_twists": {
+  "runs_away": "The child gives you the slip to see the village alone.",
+  "kidnap_attempt": "Someone has been paid to take the child."
+ }
+}
