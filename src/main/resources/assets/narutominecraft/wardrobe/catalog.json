@@ -91,7 +91,8 @@
     "w08_masked_protector",
     "w09_bandana_protector",
     "w101_senju_brow_guard",
-    "w102_travel_kasa"
+    "w102_travel_kasa",
+    "w103_nawaki_goggles"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -583,16 +584,16 @@
     "senju_war_stripes": {
       "rects": [
         [
-          2.0,
-          -1.9,
-          0.35,
-          1.5
+          2.7,
+          -1.75,
+          0.3,
+          1.1
         ],
         [
-          -0.2,
-          -0.55,
-          0.4,
-          0.5
+          0.0,
+          -0.32,
+          0.3,
+          0.3
         ]
       ],
       "color": "#b3262d",
@@ -664,6 +665,16 @@
           "M": "#b0b4b8",
           "K": "#121115",
           "D": "#34323a"
+        },
+        "SENJU_TSUNADE": {
+          "name": "Senju Tsunade",
+          "P": "#56794a",
+          "S": "#a8a7a1",
+          "A": "#b8322a",
+          "L": "#6b5440",
+          "M": "#aab3b9",
+          "K": "#1b1c22",
+          "D": "#2b3a5e"
         }
       },
       "hair_colors": {
@@ -758,16 +769,16 @@
         "senju_war_stripes": {
           "rects": [
             [
-              2.0,
-              -1.9,
-              0.35,
-              1.5
+              2.7,
+              -1.75,
+              0.3,
+              1.1
             ],
             [
-              -0.2,
-              -0.55,
-              0.4,
-              0.5
+              0.0,
+              -0.32,
+              0.3,
+              0.3
             ]
           ],
           "color": "#b3262d",
@@ -790,7 +801,8 @@
           "h112_shaggy_nape",
           "h113_layered_flick",
           "h114_half_up_knot",
-          "h115_nape_chignon"
+          "h115_nape_chignon",
+          "h07_bowl_cut"
         ],
         "hair_colors": [
           "SENJU_WOOD_BLACK",
@@ -816,7 +828,8 @@
           "SENJU_RED",
           "SENJU_NAVY",
           "SENJU_EARTH",
-          "SENJU_MOSS"
+          "SENJU_MOSS",
+          "SENJU_TSUNADE"
         ],
         "headwear": [
           null,
@@ -828,7 +841,8 @@
           "w02_forehead_protector",
           "w02_forehead_protector",
           "w101_senju_brow_guard",
-          "w102_travel_kasa"
+          "w102_travel_kasa",
+          "w103_nawaki_goggles"
         ],
         "bottoms": [
           "b01_shinobi_trousers"
@@ -898,8 +912,7 @@
           "bottom": "b104_field_trousers",
           "rank": "jonin",
           "palettes": [
-            "SENJU_MOSS",
-            "SENJU_FOREST"
+            "SENJU_TSUNADE"
           ]
         },
         {

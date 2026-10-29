@@ -1,0 +1,130 @@
+{
+  "id": "w103_nawaki_goggles",
+  "kind": "headwear",
+  "name": "Nawaki Goggles",
+  "gender": "unisex",
+  "texture": "headwear/w103_nawaki_goggles.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "strap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -7.4,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.6
+    },
+    {
+      "id": "lens_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.2,
+        -6.9,
+        -4.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.5,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "lens_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.2,
+        -6.9,
+        -4.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.5,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "bridge",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.2,
+        -4.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Goggles pushed up on the forehead: two lenses in dark rims on a strap round the head."
+}

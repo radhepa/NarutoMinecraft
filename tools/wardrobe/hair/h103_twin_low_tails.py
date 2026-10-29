@@ -12,8 +12,8 @@ TAIL = ((2, 4), (2, 4), (3, 4), (2, 3), (1, 2))
 def build(g):
     scalp(g, 1064, side_rows=6, back_rows=8, sideburn=4, part=3)
     ring_shell(g, 1065, side_rows=6, back_rows=8, ring_row=1)
-    bangs(g, "fringe", [(-2.8, ((2, 2), (1, 1)), 12), (-1.2, ((2, 2), (1, 1)), 30),
-                        (1.2, ((2, 2), (1, 1)), -30), (2.8, ((2, 2), (1, 1)), -12)], seed=1079)
+    bangs(g, "fringe", [(-2.8, ((2, 2), (1, 1)), 12), (-1.8, ((2, 2), (1, 1)), 18),
+                        (1.8, ((2, 2), (1, 1)), -18), (3.0, ((2, 2), (1, 1)), -10)], seed=1079)
     sidelocks(g, "frame", 9, seed=1084, x=4.3, z=-3.4, flare=4, width=2)
     for side, sign in (("right", -1), ("left", 1)):
         pivot = (2.2 * sign, -1.4, 4.6)

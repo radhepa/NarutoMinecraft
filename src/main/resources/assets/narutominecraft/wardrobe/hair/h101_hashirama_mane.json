@@ -328,14 +328,14 @@
       "id": "fringe_1_0",
       "bone": "HEAD",
       "pivot": [
-        -1.0,
+        -1.2,
         -8.55,
         -4.35
       ],
       "rotation": [
         -10,
         0,
-        22
+        26
       ],
       "origin": [
         -1.0,
@@ -356,14 +356,14 @@
       "id": "fringe_1_1",
       "bone": "HEAD",
       "pivot": [
-        -1.0,
+        -1.2,
         -8.55,
         -4.35
       ],
       "rotation": [
         -10,
         0,
-        22
+        26
       ],
       "origin": [
         -0.5,
@@ -384,14 +384,14 @@
       "id": "fringe_2_0",
       "bone": "HEAD",
       "pivot": [
-        1.6,
+        1.2,
         -8.55,
         -4.35
       ],
       "rotation": [
         -10,
         0,
-        -24
+        -26
       ],
       "origin": [
         -1.0,
@@ -412,14 +412,14 @@
       "id": "fringe_2_1",
       "bone": "HEAD",
       "pivot": [
-        1.6,
+        1.2,
         -8.55,
         -4.35
       ],
       "rotation": [
         -10,
         0,
-        -24
+        -26
       ],
       "origin": [
         -0.5,
@@ -440,14 +440,14 @@
       "id": "fringe_3_0",
       "bone": "HEAD",
       "pivot": [
-        3.0,
+        2.8,
         -8.55,
         -4.35
       ],
       "rotation": [
         -10,
         0,
-        -12
+        -14
       ],
       "origin": [
         -1.0,
@@ -468,14 +468,14 @@
       "id": "fringe_3_1",
       "bone": "HEAD",
       "pivot": [
-        3.0,
+        2.8,
         -8.55,
         -4.35
       ],
       "rotation": [
         -10,
         0,
-        -12
+        -14
       ],
       "origin": [
         -0.5,
@@ -605,5 +605,5 @@
       ]
     }
   ],
-  "description": "Long straight mane to mid-back, off-centre parted fringe, long locks past the jaw."
+  "description": "Long straight mane to mid-back, centre-parted fringe, long locks past the jaw."
 }
