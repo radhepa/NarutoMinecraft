@@ -1,0 +1,231 @@
+{
+  "id": "t2407_nightshade_robe",
+  "kind": "top",
+  "name": "Nightshade Robe",
+  "gender": "unisex",
+  "texture": "tops/t2407_nightshade_robe.png",
+  "extrasHeight": 32,
+  "tags": [
+    "jonin",
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "poison_glass",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        4,
+        2
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "poison_cork",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        8
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "robe_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        8,
+        1
+      ],
+      "uv": [
+        14,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "robe_front_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        8,
+        1
+      ],
+      "uv": [
+        25,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "robe_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        36,
+        8
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Long dark robe edged in violet, narrow front panels to the knee, a white sash and one vial."
+}

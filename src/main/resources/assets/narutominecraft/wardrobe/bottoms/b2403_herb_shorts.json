@@ -1,0 +1,168 @@
+{
+  "id": "b2403_herb_shorts",
+  "kind": "bottom",
+  "name": "Herb Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/b2403_herb_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "thigh_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        1.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "thigh_pouch",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.6,
+        1.0,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "thigh_pouch_herbs",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.6,
+        1.0,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -1,
+        -2,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "id": "thigh_pouch_bell",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.6,
+        1.0,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        0.4,
+        -2.4,
+        -0.7
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        7
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    }
+  ],
+  "description": "Dark knee shorts, a herb pouch strapped to the right thigh, white shin wraps, sandals."
+}

@@ -1,0 +1,286 @@
+{
+  "id": "t2405_herbalist_haori",
+  "kind": "top",
+  "name": "Herbalist Haori",
+  "gender": "unisex",
+  "texture": "tops/t2405_herbalist_haori.png",
+  "extrasHeight": 32,
+  "tags": [
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "himo_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        5.0,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "id": "himo_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        5.0,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "scale": [
+        1,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "id": "right_haori_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.7,
+        -2.3,
+        -2.7
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_haori_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.7,
+        -2.3,
+        -2.7
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        31,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "lapel_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        -0.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        13,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "lapel_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        -0.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        13,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    },
+    {
+      "id": "skirt_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        9,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        18,
+        15
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Open haori printed with bell sprigs over a green kosode, white collar bands, a violet chest cord."
+}

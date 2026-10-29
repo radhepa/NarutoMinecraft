@@ -1,0 +1,484 @@
+{
+  "id": "w2402_bell_hairpin",
+  "kind": "headwear",
+  "name": "Bell Hairpin",
+  "gender": "unisex",
+  "texture": "headwear/w2402_bell_hairpin.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sprig_stem",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -7.4,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        -90,
+        18
+      ],
+      "origin": [
+        0,
+        -1,
+        -0.5
+      ],
+      "size": [
+        7,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_leaf",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -7.4,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        -90,
+        18
+      ],
+      "origin": [
+        -1,
+        -4,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        17,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_bell_0",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -7.4,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        -90,
+        18
+      ],
+      "origin": [
+        1,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        24,
+        0
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_lip_0",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -7.4,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        -90,
+        18
+      ],
+      "origin": [
+        0.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_bell_1",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -7.4,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        -90,
+        18
+      ],
+      "origin": [
+        3,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_lip_1",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -7.4,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        -90,
+        18
+      ],
+      "origin": [
+        2.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        43,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_bell_2",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -7.4,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        -90,
+        18
+      ],
+      "origin": [
+        5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_lip_2",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -7.4,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        -90,
+        18
+      ],
+      "origin": [
+        4.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        6
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "small_stem",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -6.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        -90,
+        34
+      ],
+      "origin": [
+        0,
+        -1,
+        -0.5
+      ],
+      "size": [
+        5,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        6
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "small_leaf",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -6.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        -90,
+        34
+      ],
+      "origin": [
+        -1,
+        -4,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        22,
+        6
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "small_bell_0",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -6.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        -90,
+        34
+      ],
+      "origin": [
+        1,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        6
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "small_lip_0",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -6.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        -90,
+        34
+      ],
+      "origin": [
+        0.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        34,
+        6
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "small_bell_1",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -6.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        -90,
+        34
+      ],
+      "origin": [
+        3,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        43,
+        6
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "small_lip_1",
+      "bone": "HEAD",
+      "pivot": [
+        5.1,
+        -6.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        -90,
+        34
+      ],
+      "origin": [
+        2.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        48,
+        6
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "A sprig of lily of the valley above the left ear, three white bells and a leaf, a second small sprig."
+}

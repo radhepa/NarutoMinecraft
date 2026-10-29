@@ -1,0 +1,369 @@
+{
+  "id": "t2403_apothecary_vest",
+  "kind": "top",
+  "name": "Apothecary Vest",
+  "gender": "unisex",
+  "texture": "tops/t2403_apothecary_vest.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "vial_0_glass",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        4,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "vial_0_cork",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "vial_1_glass",
+      "bone": "TORSO",
+      "pivot": [
+        -1.13,
+        3.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        4,
+        2
+      ],
+      "uv": [
+        14,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "vial_1_cork",
+      "bone": "TORSO",
+      "pivot": [
+        -1.13,
+        3.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "vial_2_glass",
+      "bone": "TORSO",
+      "pivot": [
+        0.14000000000000012,
+        5.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        4,
+        2
+      ],
+      "uv": [
+        28,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "vial_2_cork",
+      "bone": "TORSO",
+      "pivot": [
+        0.14000000000000012,
+        5.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        7
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "pouch",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        9.0,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        14
+      ]
+    },
+    {
+      "id": "pouch_herbs",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        9.0,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -1,
+        -2,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        11,
+        14
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "id": "pouch_bell",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        9.0,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        0.4,
+        -2.4,
+        -0.7
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        18,
+        14
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Padded sleeveless vest over a green undershirt, a vial sash across the chest, herb pouch, gloves."
+}

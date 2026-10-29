@@ -1,0 +1,169 @@
+{
+  "id": "t2404_medic_coat",
+  "kind": "top",
+  "name": "Lily Medic Coat",
+  "gender": "unisex",
+  "texture": "tops/t2404_medic_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "coat",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.02
+    },
+    {
+      "id": "coat_tail",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "coat_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_front_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        11.4,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.2,
+        2.32
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -7,
+        0,
+        0
+      ],
+      "size": [
+        14,
+        14,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Long open white coat over a jade under-robe, bell-trimmed knee tails, turned cuffs, gloves, crest."
+}

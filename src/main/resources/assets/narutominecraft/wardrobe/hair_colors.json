@@ -561,6 +561,36 @@
         "#bdbdbe"
       ]
     },
+    "SUZURAN_GREEN_BLACK": {
+      "name": "Suzuran Green-Black",
+      "ramp": [
+        "#0e1612",
+        "#18241e",
+        "#24352c",
+        "#33493d",
+        "#486352"
+      ]
+    },
+    "SUZURAN_SILVER": {
+      "name": "Suzuran Silver",
+      "ramp": [
+        "#6f7a76",
+        "#98a39e",
+        "#bfc9c3",
+        "#dde4df",
+        "#f4f8f4"
+      ]
+    },
+    "SUZURAN_MOSS": {
+      "name": "Suzuran Moss",
+      "ramp": [
+        "#1a2416",
+        "#2a3a22",
+        "#3d5131",
+        "#566d45",
+        "#7a8f60"
+      ]
+    },
     "UCHIHA_INK": {
       "name": "Uchiha Ink",
       "ramp": [

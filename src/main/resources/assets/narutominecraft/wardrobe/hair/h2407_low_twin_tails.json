@@ -1,0 +1,584 @@
+{
+  "id": "h2407_low_twin_tails",
+  "kind": "hair",
+  "name": "Low Twin Tails",
+  "gender": "unisex",
+  "texture": "hair/h2407_low_twin_tails.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.1,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        8
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -3.1,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        40
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        40
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "fringe_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -40
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        24,
+        0
+      ]
+    },
+    {
+      "id": "fringe_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -40
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        31,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        3.1,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -8
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        3.1,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    },
+    {
+      "id": "tie_right",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        6
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "tail_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        6
+      ],
+      "origin": [
+        -1.5,
+        1,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        5
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        6
+      ],
+      "origin": [
+        -1.5,
+        4,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        11,
+        5
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_right_2",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        6
+      ],
+      "origin": [
+        -1.5,
+        7,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        22,
+        5
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_right_3",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        6
+      ],
+      "origin": [
+        -1.0,
+        10,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        33,
+        5
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_right_4",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        13,
+        -1.0
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        42,
+        5
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tie_left",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        49,
+        5
+      ]
+    },
+    {
+      "id": "tail_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.5,
+        1,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.5,
+        4,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        11,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_left_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.5,
+        7,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        22,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_left_3",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.0,
+        10,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        33,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_left_4",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -2.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        13,
+        -1.0
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        42,
+        11
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Two long tails tied low behind the ears with white cords, fringe swept apart at the centre."
+}

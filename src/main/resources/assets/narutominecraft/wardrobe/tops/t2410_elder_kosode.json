@@ -1,0 +1,227 @@
+{
+  "id": "t2410_elder_kosode",
+  "kind": "top",
+  "name": "Elder Kosode",
+  "gender": "unisex",
+  "texture": "tops/t2410_elder_kosode.png",
+  "extrasHeight": 48,
+  "tags": [
+    "jonin",
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.02
+    },
+    {
+      "id": "right_long_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.7,
+        -2.3,
+        -2.7
+      ],
+      "size": [
+        5,
+        10,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_long_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.7,
+        -2.3,
+        -2.7
+      ],
+      "size": [
+        5,
+        10,
+        5
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "coat_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        21,
+        16
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        30,
+        16
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        39,
+        16
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.2,
+        2.32
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -7,
+        0,
+        0
+      ],
+      "size": [
+        14,
+        14,
+        1
+      ],
+      "uv": [
+        0,
+        32
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "White kosode under a long knee-length overcoat with the bell crest, bell-trimmed hem and sleeves."
+}
