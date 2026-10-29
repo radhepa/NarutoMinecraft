@@ -1,5 +1,5 @@
 """Mind Bloom Crop: the Yamanaka kunoichi's sleek purple top, sleeveless and cut short above a
-chain-mesh midriff, with a small stand collar, a blossom at the throat, bandaged elbows and long
+chain-mesh midriff, with a high collar, a blossom at the throat, bandaged elbows and long
 purple arm warmers from the elbow to the knuckles."""
 from kit import arm_x, collar
 from kit_shinobi import mesh
@@ -35,7 +35,7 @@ def build(g):
         sleeve.strip.hline(0, sleeve.strip.w - 1, 6, "P3"), sleeve.strip.hline(0, sleeve.strip.w - 1, 10, "P1")
         band = g.piece(f"{side}_warmer_band", bone, (arm_x(side) - .3, 5.7, -2.3), (4, 1, 4), inflate=.12)
         solid(band, "A", "plain", 7156, 2)
-    neck = collar(g, "collar", "P", "plain", height=1, y=-.9)
+    neck = collar(g, "collar", "P", "plain", height=2, y=-1.6)
     for face in neck.sides:
         face.hline(0, face.w - 1, 0, "P3")
-    flower(g, "brooch", (0, .4, -2.75), bone="TORSO")
+    flower(g, "brooch", (0, -.6, -3.2), bone="TORSO")

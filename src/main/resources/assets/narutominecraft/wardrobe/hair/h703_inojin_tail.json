@@ -4,7 +4,7 @@
   "name": "Inojin Tail",
   "gender": "unisex",
   "texture": "hair/h703_inojin_tail.png",
-  "extrasHeight": 16,
+  "extrasHeight": 32,
   "tags": [],
   "requires": [],
   "rejects": [],
@@ -272,7 +272,7 @@
       "rotation": [
         0,
         0,
-        6
+        5
       ],
       "origin": [
         -1.0,
@@ -281,7 +281,7 @@
       ],
       "size": [
         2,
-        3,
+        6,
         1
       ],
       "uv": [
@@ -300,11 +300,11 @@
       "rotation": [
         0,
         0,
-        6
+        5
       ],
       "origin": [
         -0.5,
-        3.0,
+        6.0,
         -0.5
       ],
       "size": [
@@ -328,7 +328,7 @@
       "rotation": [
         0,
         0,
-        -6
+        -5
       ],
       "origin": [
         -1.0,
@@ -337,7 +337,7 @@
       ],
       "size": [
         2,
-        3,
+        6,
         1
       ],
       "uv": [
@@ -356,11 +356,11 @@
       "rotation": [
         0,
         0,
-        -6
+        -5
       ],
       "origin": [
         -0.5,
-        3.0,
+        6.0,
         -0.5
       ],
       "size": [
@@ -371,6 +371,174 @@
       "uv": [
         19,
         4
+      ]
+    },
+    {
+      "id": "nape_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -4.0,
+        4.3
+      ],
+      "rotation": [
+        30,
+        0,
+        10
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        24,
+        4
+      ]
+    },
+    {
+      "id": "nape_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -4.0,
+        4.3
+      ],
+      "rotation": [
+        30,
+        0,
+        10
+      ],
+      "origin": [
+        -1.0,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        33,
+        4
+      ]
+    },
+    {
+      "id": "nape_right_2",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -4.0,
+        4.3
+      ],
+      "rotation": [
+        30,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        40,
+        4
+      ]
+    },
+    {
+      "id": "nape_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -4.0,
+        4.3
+      ],
+      "rotation": [
+        30,
+        0,
+        -10
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        45,
+        4
+      ]
+    },
+    {
+      "id": "nape_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -4.0,
+        4.3
+      ],
+      "rotation": [
+        30,
+        0,
+        -10
+      ],
+      "origin": [
+        -1.0,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        54,
+        4
+      ]
+    },
+    {
+      "id": "nape_left_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -4.0,
+        4.3
+      ],
+      "rotation": [
+        30,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        12
       ]
     },
     {
@@ -397,8 +565,8 @@
         2
       ],
       "uv": [
-        24,
-        4
+        5,
+        12
       ]
     },
     {
@@ -425,8 +593,8 @@
         3
       ],
       "uv": [
-        33,
-        4
+        14,
+        12
       ]
     },
     {
@@ -453,8 +621,8 @@
         2
       ],
       "uv": [
-        46,
-        4
+        27,
+        12
       ],
       "motion": "sway"
     },
@@ -482,8 +650,8 @@
         2
       ],
       "uv": [
-        0,
-        10
+        38,
+        12
       ],
       "motion": "sway"
     },
@@ -511,8 +679,8 @@
         2
       ],
       "uv": [
-        11,
-        10
+        49,
+        12
       ],
       "motion": "sway"
     },
@@ -540,11 +708,11 @@
         2
       ],
       "uv": [
-        20,
-        10
+        58,
+        12
       ],
       "motion": "sway"
     }
   ],
-  "description": "Small high tail, a long fringe swept over the left brow, short side locks."
+  "description": "Shoulder-length hair with a small high tail, a long fringe swept over the left brow."
 }

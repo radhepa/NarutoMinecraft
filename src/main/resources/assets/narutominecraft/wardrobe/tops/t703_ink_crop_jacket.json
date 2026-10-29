@@ -14,35 +14,6 @@
   "rejects": [],
   "pieces": [
     {
-      "id": "collar",
-      "bone": "TORSO",
-      "pivot": [
-        0,
-        0,
-        0
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "origin": [
-        -4.5,
-        -1.4,
-        -2.6
-      ],
-      "size": [
-        9,
-        2,
-        5
-      ],
-      "uv": [
-        0,
-        0
-      ],
-      "inflate": 0.06
-    },
-    {
       "id": "scroll",
       "bone": "TORSO",
       "pivot": [
@@ -66,7 +37,7 @@
         2
       ],
       "uv": [
-        29,
+        0,
         0
       ]
     },
@@ -94,12 +65,12 @@
         1
       ],
       "uv": [
-        38,
+        9,
         0
       ]
     }
   ],
   "tucked": false,
   "coversWaist": false,
-  "description": "Cropped purple jacket with half sleeves over a mesh shirt, bandaged forearms, ink scroll."
+  "description": "Black collarless crop jacket with accent straps over a purple shirt and mesh, bandaged forearms, ink scroll."
 }
