@@ -92,6 +92,8 @@ def md_block_table(cat):
                            for v in g["variants"]) if len(g["variants"]) <= 6 else (
                 f"{len(g['variants'])}: " + ", ".join(v["label"] for v in g["variants"]))
             fn = g["functional"] or "decor"
+            if g.get("slots"):
+                fn += f", {g['slots']} slot" + ("s" if g["slots"] > 1 else "")
             if g.get("reuse"):
                 fn += f" ({g['reuse']})"
             name = f"**{g['name']}**" + (" ★" if g["prototype"] else "")

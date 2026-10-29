@@ -1,7 +1,7 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 112 files · ~160,979 words
+- 112 files · ~161,190 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .properties 2, .jar 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `435ff45d`
+- Built from commit: `d6452123`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -586,7 +586,7 @@ Nodes (3): crest_patch(), seal_script(), seal_tags()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Bonds` connect `Bonds` to `Memory`, `.read`, `Story bible`, `.name`, `Person`, `Run`, `Meters`, `GossipTest`, `CourtshipTest`, `Levels`, `.page`, `Value`, `Village`, `Personality`?**
-  _High betweenness centrality (0.458) - this node is a cross-community bridge._
+  _High betweenness centrality (0.457) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `fabric()` (e.g. with `Shared helpers` and `Face`) actually correct?**
   _`fabric()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `TALK`, `GIFT_LOVED`, `GIFT_LIKED` to the rest of the system?**
@@ -594,7 +594,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `kit_shiranui.py` be split into smaller, more focused modules?**
   _Cohesion score 0.13725490196078433 - nodes in this community are weakly interconnected._
 - **Why does `Clans` connect `Clans` to `Shared helpers`, `Story bible`?**
-  _High betweenness centrality (0.367) - this node is a cross-community bridge._
+  _High betweenness centrality (0.363) - this node is a cross-community bridge._
 - **Should `kit_uchiha.py` be split into smaller, more focused modules?**
   _Cohesion score 0.1286549707602339 - nodes in this community are weakly interconnected._
 - **Why does `Shared helpers` connect `Shared helpers` to `Clans`, `kit_academy.py`, `paint.py`, `cel_box`, `kit_hyuga.py`, `fabric`, `curtain`, `kit_nara.py`, `masks.py`, `scalp`, `wardrobe/kit.py`, `kit_shinobi.py`?**

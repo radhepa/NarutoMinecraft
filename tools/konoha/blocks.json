@@ -3171,7 +3171,8 @@
    "complexity": "medium",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 1
   },
   {
    "id": "display_shelf",
@@ -3209,7 +3210,8 @@
    "complexity": "medium",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 6
   },
   {
    "id": "general_store_shelf",
@@ -3228,7 +3230,8 @@
    "complexity": "medium",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 9
   },
   {
    "id": "crate_display",
@@ -3247,7 +3250,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 4
   },
   {
    "id": "produce_crate_display",
@@ -3266,7 +3270,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 4
   },
   {
    "id": "fish_ice_display",
@@ -3285,13 +3290,14 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 4
   },
   {
    "id": "glass_case",
    "name": "Glass case",
    "category": "display",
-   "purpose": "Counter-height glass case",
+   "purpose": "Counter-height glass case; also the home display case",
    "variants": [
     {
      "id": "glass_case",
@@ -3304,7 +3310,8 @@
    "complexity": "medium",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 4
   },
   {
    "id": "weapon_display_wall",
@@ -3323,7 +3330,8 @@
    "complexity": "medium",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 6
   },
   {
    "id": "pouch_hooks",
@@ -3342,7 +3350,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 4
   },
   {
    "id": "scroll_rack",
@@ -3361,7 +3370,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 9
   },
   {
    "id": "scroll_display_case",
@@ -3380,7 +3390,8 @@
    "complexity": "medium",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 1
   },
   {
    "id": "flower_bucket_stand",
@@ -3399,7 +3410,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 6
   },
   {
    "id": "flower_pot_tiers",
@@ -3418,7 +3430,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 6
   },
   {
    "id": "showroom_plinth",
@@ -3437,7 +3450,8 @@
    "complexity": "complex",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 1
   },
   {
    "id": "bolt_shelf",
@@ -3456,7 +3470,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 6
   },
   {
    "id": "mannequin",
@@ -3475,13 +3490,14 @@
    "complexity": "complex",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 1
   },
   {
    "id": "curio_shelf",
    "name": "Curio shelf",
    "category": "display",
-   "purpose": "The pawn shop's shelf of oddments",
+   "purpose": "The pawn shop's shelf of oddments; also the home curio cabinet",
    "variants": [
     {
      "id": "curio_shelf",
@@ -3494,7 +3510,8 @@
    "complexity": "medium",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 12
   },
   {
    "id": "bookshelf_tall",
@@ -3513,7 +3530,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 9
   },
   {
    "id": "book_display_table",
@@ -3532,7 +3550,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 4
   },
   {
    "id": "pet_supply_shelf",
@@ -3551,7 +3570,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 6
   },
   {
    "id": "metal_stock_rack",
@@ -3570,7 +3590,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 6
   },
   {
    "id": "charm_stall",
@@ -3589,7 +3610,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 3
   },
   {
    "id": "paint_display",
@@ -3608,7 +3630,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 6
   },
   {
    "id": "jar_shelf",
@@ -3627,7 +3650,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 6
   },
   {
    "id": "prize_shelf",
@@ -3646,7 +3670,8 @@
    "complexity": "simple",
    "textures": 2,
    "prototype": false,
-   "requested_by": "items session"
+   "requested_by": "items session",
+   "slots": 6
   },
   {
    "id": "shop_counter",
@@ -4212,13 +4237,107 @@
      "id": "inn_noren",
      "label": "Inn (宿)",
      "slice": "B3"
+    },
+    {
+     "id": "grocer_noren",
+     "label": "Grocer 八百屋",
+     "slice": "B1"
+    },
+    {
+     "id": "fish_noren",
+     "label": "Fish 魚",
+     "slice": "B1"
+    },
+    {
+     "id": "weapon_noren",
+     "label": "Weapons 武器",
+     "slice": "B1"
+    },
+    {
+     "id": "tools_noren",
+     "label": "Tools 道具",
+     "slice": "B2"
+    },
+    {
+     "id": "furniture_noren",
+     "label": "Furniture 家具",
+     "slice": "B1"
+    },
+    {
+     "id": "tailor_noren",
+     "label": "Tailor 呉服",
+     "slice": "B2"
+    },
+    {
+     "id": "pawn_noren",
+     "label": "Pawn 質",
+     "slice": "B2"
+    },
+    {
+     "id": "medicine_noren",
+     "label": "Medicine 薬",
+     "slice": "B1"
+    },
+    {
+     "id": "books_noren",
+     "label": "Books 本",
+     "slice": "B2"
+    },
+    {
+     "id": "general_noren",
+     "label": "General store 雑貨",
+     "slice": "B1"
+    },
+    {
+     "id": "barber_noren",
+     "label": "Barber 床屋",
+     "slice": "B1"
     }
    ],
    "functional": null,
    "reuse": null,
    "complexity": "simple",
-   "textures": 10,
+   "textures": 21,
    "prototype": true,
+   "requested_by": "items session"
+  },
+  {
+   "id": "wall_mount",
+   "name": "Wall mount",
+   "category": "display",
+   "purpose": "A wall bracket showing one item",
+   "variants": [
+    {
+     "id": "wall_mount",
+     "label": "Wall mount",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session",
+   "slots": 1
+  },
+  {
+   "id": "barber_chair",
+   "name": "Barber chair",
+   "category": "shop",
+   "purpose": "The barber's chair; right-click opens restyle",
+   "variants": [
+    {
+     "id": "barber_chair",
+     "label": "Barber chair",
+     "slice": "B1"
+    }
+   ],
+   "functional": "seat",
+   "reuse": "VF Seat; restyle screen by Items and the creator",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
    "requested_by": "items session"
   }
  ],

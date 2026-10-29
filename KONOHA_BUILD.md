@@ -34,7 +34,7 @@ vanilla mapping and painting) and [`tools/konoha/buildings.json`](tools/konoha/b
 
 | | Count |
 |---|---|
-| Custom blocks | **173** blocks, **373** counting colour, wood, crest and sign variants separately; **670** new 16 px textures; 93 of them functional (doors, beds, seats, lights, containers, item displays, workstations, shop counters, boards). Includes the items session's 117 requests for stations, furniture, displays and shop interiors |
+| Custom blocks | **175** blocks, **386** counting colour, wood, crest and sign variants separately; **684** new 16 px textures; 95 of them functional (doors, beds, seats, lights, containers, item displays, workstations, shop counters, boards). Includes the items session's 120 requests for stations, furniture, displays and shop interiors |
 | Vanilla mappings | **54** needs met with vanilla blocks or combinations (roofs, walls, streets, the Rock, the forest), plus one Village Friends block reused (the easel) |
 | Design programs | **31** Python programs (homes, apartments, shops, clan gates and houses, the wall, the forest's fence and trees, bridges, streets, training props, the Rock faces); 3 prototyped |
 | Buildings | **110** homes, **15** apartment buildings, **55** shops, **75** clan builds, **30** landmarks, **8** training grounds, **704** Forest of Death pieces (660 trees, 44 gates), **142** wall modules |
@@ -110,7 +110,7 @@ built in the map world. Footprints are in blocks, x by z.
 |---|---:|---:|---:|---:|---:|---:|
 | Homes | 8 | 38 | 28 | 6 | 30 | 110 |
 | Apartment buildings | 1 | 6 | 3 | 0 | 5 | 15 |
-| Shops | 1 | 17 | 16 | 4 | 17 | 55 |
+| Shops | 1 | 18 | 17 | 4 | 15 | 55 |
 | Clan builds | 0 | 31 | 40 | 0 | 4 | 75 |
 | Landmarks | 0 | 10 | 13 | 2 | 5 | 30 |
 | Training grounds | 0 | 0 | 3 | 0 | 5 | 8 |
@@ -155,7 +155,7 @@ whole village and about 220 by the end of Beta 3 (ROADMAP §6: about 300 and abo
 | Building | Built from | Footprint | P0 | B1 | B2 | B3 | Later | Total | Notes |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|
 | Small shop-house | program `shop_tea_house` | 11 x 11 | 1 | 3 | 3 |  | 3 | 10 | Tea houses (two rivals on one corner), dango, sweets, the test street's shop |
-| Shop-house | program `shop_house` | 11 x 11 |  | 6 | 7 |  | 6 | 19 | Grocer and market fillers (B1); scrolls, pawn, tools, tailor, medicine, metalworker (B2) |
+| Shop-house | program `shop_house` | 11 x 11 |  | 7 | 8 |  | 4 | 19 | Grocer, haruno store, the barber and market fillers (B1); scrolls, pawn, tools, tailor, medicine, metalworker, bookshop (B2) |
 | Large store | program `shop_large` + hand dressing | 17 x 13 |  | 2 | 3 |  | 2 | 7 | The furniture shop and its showroom, and the weapon shop with its forge room (B1); the post office (B2); two warehouses by the market (B2) |
 | Market stall row | program `market_stall` | 13 x 5 |  | 6 | 2 | 4 | 4 | 16 | Vegetables, fish, rice; exam-week stalls in B3 |
 | Restaurant | program `restaurant` | 15 x 13 |  |  | 1 |  | 2 | 3 | The barbecue house (B2), an izakaya |
@@ -254,7 +254,8 @@ special jonin; B1), the police HQ and ANBU HQ (later). Workers live in ordinary 
 
 The items session's shops, with the building each goes in. Its slices come from
 `data/items/shops.tsv` (branch `items`); the weapon shop moves to Beta 1 (a Beta 1 side quest is
-there; it sells practice gear until Genin).
+there; it sells practice gear until Genin). Each shop's noren is `<trade>_noren` (`shop_noren` group);
+shop displays show the shop's stock lines in order, with the slot counts the items session set.
 
 | Shop | Building | Slice |
 |---|---|---|
@@ -279,7 +280,8 @@ there; it sells practice gear until Genin).
 | `painters_studio` | Kurama clan home (VF easel) | Beta 2 |
 | `festival_stalls` | `festival_stall` blocks on the main street | Beta 2 |
 | `exam_stalls` | `market_stall` rows by the stadium | Beta 3 |
-| `bookshop` | `shop_house` | Later |
+| `barber` | `shop_house` on the market street (barber chair, dresser mirror) | Beta 1 |
+| `bookshop` | `shop_house` | Beta 2 |
 
 Gathering anchors (right-click spots on a respawn timer, no breaking) the items session places
 through `layout.json`: `gather:herb_garden` (behind the hospital), `gather:bamboo_grove` (by the
@@ -397,7 +399,7 @@ block's slice is the first slice that needs any of its variants.
 | Group | Blocks | With variants | Textures | Functional |
 |---|---:|---:|---:|---:|
 | Roofs | 5 | 15 | 37 | 0 |
-| Facades and shop fronts | 10 | 60 | 91 | 3 |
+| Facades and shop fronts | 10 | 71 | 102 | 3 |
 | Crests and banners | 4 | 58 | 99 | 0 |
 | Interior fittings | 5 | 13 | 26 | 2 |
 | Story pieces | 2 | 4 | 7 | 1 |
@@ -408,20 +410,20 @@ block's slice is the first slice that needs any of its variants.
 | Furniture (the Leaf set) | 39 | 79 | 137 | 19 |
 | Training | 6 | 7 | 13 | 4 |
 | Academy, Residence, hospital, stadium | 15 | 20 | 45 | 7 |
-| Shops and food | 26 | 26 | 48 | 12 |
+| Shops and food | 27 | 27 | 50 | 13 |
 | Gardens | 2 | 3 | 4 | 0 |
 | Clan signatures | 3 | 6 | 6 | 0 |
 | Crafting stations | 9 | 10 | 26 | 8 |
-| Displays (item-rendering) | 26 | 26 | 52 | 26 |
-| **All custom blocks** | **173** | **373** | **670** | **93** |
+| Displays (item-rendering) | 27 | 27 | 53 | 27 |
+| **All custom blocks** | **175** | **386** | **684** | **95** |
 
 | By slice (new that slice) | Phase 0 | Beta 1 | Beta 2 | Beta 2.5 | Beta 3 | Later | Total |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Custom blocks (first needed) | 11 | 110 | 46 | 0 | 3 | 3 | 173 |
-| Custom block variants | 21 | 194 | 138 | 0 | 11 | 9 | 373 |
+| Custom blocks (first needed) | 11 | 112 | 46 | 0 | 3 | 3 | 175 |
+| Custom block variants | 21 | 203 | 142 | 0 | 11 | 9 | 386 |
 | Vanilla mappings | 23 | 15 | 10 | 0 | 5 | 1 | 54 |
 
-Complexity: 91 simple, 70 medium and 12 complex blocks (247, 107 and 19 with variants). Prototyped now: 11 blocks, 21 with variants.
+Complexity: 92 simple, 71 medium and 12 complex blocks (259, 108 and 19 with variants). Prototyped now: 11 blocks, 21 with variants.
 <!-- /gen:block-summary -->
 
 ### Vanilla mappings
@@ -515,7 +517,7 @@ Complexity: 91 simple, 70 medium and 12 complex blocks (247, 107 and 19 with var
 | **Amado shutter**<br>`amado` | Wooden storm shutter that closes a window or veranda at night | `amado` Light; `dark_amado` Dark | toggle (Trapdoor logic) | simple | 2 | Beta 2 |
 | **Round window**<br>`marumado` | Round lattice window (2 x 2, four parts) for tea rooms and the shrine | `marumado` Lattice | decor | medium | 4 | Beta 2 |
 | **Bamboo blind**<br>`bamboo_blind` | Sudare: roll-up blind for verandas and windows; rolled or down | `bamboo_blind` Bamboo | toggle | simple | 2 | Beta 1 |
-| **Shop noren** ★<br>`shop_noren` | A shop's noren with its name or trade painted | 10: Tea (茶), Ramen (麺), Flowers (花), Bath house (ゆ), Barbecue (焼), Dango (団子), Sake (酒), Scrolls (巻), Sweets (甘), Inn (宿) | decor | simple | 10 | Phase 0 |
+| **Shop noren** ★<br>`shop_noren` | A shop's noren with its name or trade painted | 21: Tea (茶), Ramen (麺), Flowers (花), Bath house (ゆ), Barbecue (焼), Dango (団子), Sake (酒), Scrolls (巻), Sweets (甘), Inn (宿), Grocer 八百屋, Fish 魚, Weapons 武器, Tools 道具, Furniture 家具, Tailor 呉服, Pawn 質, Medicine 薬, Books 本, General store 雑貨, Barber 床屋 | decor | simple | 21 | Phase 0 |
 
 #### Crests and banners
 
@@ -689,6 +691,7 @@ Complexity: 91 simple, 70 medium and 12 complex blocks (247, 107 and 19 with var
 | **Senbei grill**<br>`cracker_grill` | Rice cracker grill | `cracker_grill` Senbei grill | decor | medium | 2 | Beta 2 |
 | **Target game booth**<br>`target_game_booth` | The festival throwing game | `target_game_booth` Target game booth | interact (Festival game) | medium | 2 | Beta 2 |
 | **Arranging table**<br>`arranging_table` | The flower shop's work table | `arranging_table` Arranging table | decor | simple | 2 | Beta 1 |
+| **Barber chair**<br>`barber_chair` | The barber's chair; right-click opens restyle | `barber_chair` Barber chair | seat (VF Seat; restyle screen by Items and the creator) | medium | 2 | Beta 1 |
 
 #### Gardens
 
@@ -723,32 +726,33 @@ Complexity: 91 simple, 70 medium and 12 complex blocks (247, 107 and 19 with var
 
 | Block | Purpose | Variants (slice) | Function | Model | Tex | First |
 |---|---|---|---|---|---:|---|
-| **Keepsake stand**<br>`keepsake` | A small stand that shows one of the 40 keepsakes | `keepsake` Keepsake stand | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **Keepsake stand**<br>`keepsake` | A small stand that shows one of the 40 keepsakes | `keepsake` Keepsake stand | display, 1 slot (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
 | **Display shelf**<br>`display_shelf` | Home shelf showing 6 items | `display_shelf` Display shelf | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
-| **Goods shelf**<br>`goods_shelf` | Shop shelving | `goods_shelf` Goods shelf | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
-| **General store shelf**<br>`general_store_shelf` | Tall store shelving | `general_store_shelf` General store shelf | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
-| **Crate display**<br>`crate_display` | Stacked crates of goods | `crate_display` Crate display | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
-| **Produce crate**<br>`produce_crate_display` | Tilted crate of vegetables or fruit | `produce_crate_display` Produce crate | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
-| **Fish on ice**<br>`fish_ice_display` | The fishmonger's ice tray | `fish_ice_display` Fish on ice | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
-| **Glass case**<br>`glass_case` | Counter-height glass case | `glass_case` Glass case | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
-| **Weapon display wall**<br>`weapon_display_wall` | Wall board of blades and tools | `weapon_display_wall` Weapon display wall | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
-| **Pouch hooks**<br>`pouch_hooks` | Hooks of pouches and holsters | `pouch_hooks` Pouch hooks | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
-| **Scroll rack**<br>`scroll_rack` | Pigeonholes of scrolls | `scroll_rack` Scroll rack | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
-| **Scroll display case**<br>`scroll_display_case` | A glass case for rare scrolls | `scroll_display_case` Scroll display case | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 2 |
-| **Flower bucket stand**<br>`flower_bucket_stand` | Tiered buckets of cut flowers | `flower_bucket_stand` Flower bucket stand | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
-| **Flower pot tiers**<br>`flower_pot_tiers` | Stepped shelf of potted plants | `flower_pot_tiers` Flower pot tiers | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
-| **Showroom plinth**<br>`showroom_plinth` | Shows one furniture piece in the showroom | `showroom_plinth` Showroom plinth | display (Item display block entity (one renderer for all)) | complex | 2 | Beta 1 |
-| **Bolt shelf**<br>`bolt_shelf` | Bolts of cloth | `bolt_shelf` Bolt shelf | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
-| **Mannequin**<br>`mannequin` | Wears one wardrobe outfit on the resident model | `mannequin` Mannequin | display (Item display block entity (one renderer for all)) | complex | 2 | Beta 2 |
-| **Curio shelf**<br>`curio_shelf` | The pawn shop's shelf of oddments | `curio_shelf` Curio shelf | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 2 |
-| **Tall bookshelf**<br>`bookshelf_tall` | Bookshop shelving | `bookshelf_tall` Tall bookshelf | display (Item display block entity (one renderer for all)) | simple | 2 | Later |
-| **Book table**<br>`book_display_table` | A table of books face up | `book_display_table` Book table | display (Item display block entity (one renderer for all)) | simple | 2 | Later |
-| **Pet supply shelf**<br>`pet_supply_shelf` | The clinic's shelf | `pet_supply_shelf` Pet supply shelf | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
-| **Metal stock rack**<br>`metal_stock_rack` | Bars and blanks at the metalworks | `metal_stock_rack` Metal stock rack | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
-| **Charm stall**<br>`charm_stall` | Shrine charms and fortunes | `charm_stall` Charm stall | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
-| **Paint display**<br>`paint_display` | Paints and brushes at the studio | `paint_display` Paint display | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
-| **Jar shelf**<br>`jar_shelf` | Jars of herbs and medicines | `jar_shelf` Jar shelf | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
-| **Prize shelf**<br>`prize_shelf` | Festival game prizes | `prize_shelf` Prize shelf | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
+| **Goods shelf**<br>`goods_shelf` | Shop shelving | `goods_shelf` Goods shelf | display, 6 slots (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **General store shelf**<br>`general_store_shelf` | Tall store shelving | `general_store_shelf` General store shelf | display, 9 slots (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **Crate display**<br>`crate_display` | Stacked crates of goods | `crate_display` Crate display | display, 4 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Produce crate**<br>`produce_crate_display` | Tilted crate of vegetables or fruit | `produce_crate_display` Produce crate | display, 4 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Fish on ice**<br>`fish_ice_display` | The fishmonger's ice tray | `fish_ice_display` Fish on ice | display, 4 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Glass case**<br>`glass_case` | Counter-height glass case; also the home display case | `glass_case` Glass case | display, 4 slots (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **Weapon display wall**<br>`weapon_display_wall` | Wall board of blades and tools | `weapon_display_wall` Weapon display wall | display, 6 slots (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **Pouch hooks**<br>`pouch_hooks` | Hooks of pouches and holsters | `pouch_hooks` Pouch hooks | display, 4 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Scroll rack**<br>`scroll_rack` | Pigeonholes of scrolls | `scroll_rack` Scroll rack | display, 9 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
+| **Scroll display case**<br>`scroll_display_case` | A glass case for rare scrolls | `scroll_display_case` Scroll display case | display, 1 slot (Item display block entity (one renderer for all)) | medium | 2 | Beta 2 |
+| **Flower bucket stand**<br>`flower_bucket_stand` | Tiered buckets of cut flowers | `flower_bucket_stand` Flower bucket stand | display, 6 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Flower pot tiers**<br>`flower_pot_tiers` | Stepped shelf of potted plants | `flower_pot_tiers` Flower pot tiers | display, 6 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Showroom plinth**<br>`showroom_plinth` | Shows one furniture piece in the showroom | `showroom_plinth` Showroom plinth | display, 1 slot (Item display block entity (one renderer for all)) | complex | 2 | Beta 1 |
+| **Bolt shelf**<br>`bolt_shelf` | Bolts of cloth | `bolt_shelf` Bolt shelf | display, 6 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
+| **Mannequin**<br>`mannequin` | Wears one wardrobe outfit on the resident model | `mannequin` Mannequin | display, 1 slot (Item display block entity (one renderer for all)) | complex | 2 | Beta 2 |
+| **Curio shelf**<br>`curio_shelf` | The pawn shop's shelf of oddments; also the home curio cabinet | `curio_shelf` Curio shelf | display, 12 slots (Item display block entity (one renderer for all)) | medium | 2 | Beta 2 |
+| **Tall bookshelf**<br>`bookshelf_tall` | Bookshop shelving | `bookshelf_tall` Tall bookshelf | display, 9 slots (Item display block entity (one renderer for all)) | simple | 2 | Later |
+| **Book table**<br>`book_display_table` | A table of books face up | `book_display_table` Book table | display, 4 slots (Item display block entity (one renderer for all)) | simple | 2 | Later |
+| **Pet supply shelf**<br>`pet_supply_shelf` | The clinic's shelf | `pet_supply_shelf` Pet supply shelf | display, 6 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Metal stock rack**<br>`metal_stock_rack` | Bars and blanks at the metalworks | `metal_stock_rack` Metal stock rack | display, 6 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
+| **Charm stall**<br>`charm_stall` | Shrine charms and fortunes | `charm_stall` Charm stall | display, 3 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Paint display**<br>`paint_display` | Paints and brushes at the studio | `paint_display` Paint display | display, 6 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
+| **Jar shelf**<br>`jar_shelf` | Jars of herbs and medicines | `jar_shelf` Jar shelf | display, 6 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Prize shelf**<br>`prize_shelf` | Festival game prizes | `prize_shelf` Prize shelf | display, 6 slots (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
+| **Wall mount**<br>`wall_mount` | A wall bracket showing one item | `wall_mount` Wall mount | display, 1 slot (Item display block entity (one renderer for all)) | simple | 1 | Beta 1 |
 <!-- /gen:block-table -->
 
 ## 5. Process
@@ -876,7 +880,7 @@ from it, with margin for in-game fixes the renders cannot show:
 
 | Work | Phase 0 | Beta 1 | Beta 2 | Beta 3 | Later | Total |
 |---|---:|---:|---:|---:|---:|---:|
-| Block models and textures (162 blocks left, 352 variants, 620 textures) | 0.5 | 12 | 6 | 1 | 1 | **20.5** |
+| Block models and textures (164 blocks left, 365 variants, 634 textures) | 0.5 | 12 | 6 | 1 | 1 | **20.5** |
 | Java registration and block behaviour (the display block entity, seats, beds, containers, station hooks for Items' screens) | 2 | 6 | 4 | 1 | — | **13** |
 | Design programs (28 left) and `roads.py`, `sweep.py`, `rock_faces.py` | 1.5 | 7 | 3 | 3 | — | **14.5** |
 | Paste tooling, `layout.py`, layout files | 6 | 3 | 2 | 1 | 2 | **14** |
