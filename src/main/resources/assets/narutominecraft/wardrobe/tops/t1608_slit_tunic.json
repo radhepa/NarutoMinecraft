@@ -1,0 +1,163 @@
+{
+  "id": "t1608_slit_tunic",
+  "kind": "top",
+  "name": "Slit Tunic",
+  "gender": "unisex",
+  "texture": "tops/t1608_slit_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.9,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "tunic_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tunic_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        4,
+        1
+      ],
+      "uv": [
+        19,
+        8
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "needle_case",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        9.0,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        38,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Steel tunic to mid-thigh slit at the sides, stand collar, dusky sash with a needle case."
+}

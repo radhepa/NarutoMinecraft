@@ -1,0 +1,184 @@
+{
+  "id": "h1612_long_nape",
+  "kind": "hair",
+  "name": "Long Nape",
+  "gender": "unisex",
+  "texture": "hair/h1612_long_nape.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fringe_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        18
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        26
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "fringe_2",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        30
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        16
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "fall",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.2,
+        4.6
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        8,
+        11,
+        1
+      ],
+      "uv": [
+        28,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.2,
+        4.6
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        11.0,
+        -0.5
+      ],
+      "size": [
+        8,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Short over the brow and ears, the back grown long and straight between the shoulders."
+}

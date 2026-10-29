@@ -1,0 +1,330 @@
+{
+  "id": "t1602_needle_harness",
+  "kind": "top",
+  "name": "Needle Harness",
+  "gender": "unisex",
+  "texture": "tops/t1602_needle_harness.png",
+  "extrasHeight": 48,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.9,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "right_needle_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.4,
+        7.4,
+        -2.4
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "right_cuff_needle_0",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -3.5,
+        10.2,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "right_cuff_needle_1",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -3.5,
+        10.2,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        26,
+        8
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "right_cuff_needle_2",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -3.5,
+        10.2,
+        0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        31,
+        8
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "left_needle_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.4,
+        7.4,
+        -2.4
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        36,
+        8
+      ]
+    },
+    {
+      "id": "left_cuff_needle_0",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        3.5,
+        10.2,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        57,
+        8
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "left_cuff_needle_1",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        3.5,
+        10.2,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        0,
+        25
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "left_cuff_needle_2",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        3.5,
+        10.2,
+        0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        5,
+        25
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Fitted shirt with a stand collar, crossed leather straps studded with senbon, wrist cuffs."
+}

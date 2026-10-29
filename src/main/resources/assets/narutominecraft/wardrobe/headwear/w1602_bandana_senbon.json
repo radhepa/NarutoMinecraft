@@ -1,0 +1,230 @@
+{
+  "id": "w1602_bandana_senbon",
+  "kind": "headwear",
+  "name": "Bandana and Senbon",
+  "gender": "unisex",
+  "texture": "headwear/w1602_bandana_senbon.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bandana",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "bandana_band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -6,
+        2
+      ],
+      "size": [
+        8,
+        1,
+        2
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "plate",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.6,
+        4.62
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -9,
+        -4,
+        0
+      ],
+      "size": [
+        18,
+        8,
+        2
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "bandana_knot",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -7.4,
+        -4.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        11
+      ]
+    },
+    {
+      "id": "bandana_end_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.3,
+        -7.2,
+        -4.8
+      ],
+      "rotation": [
+        0,
+        0,
+        78
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        48,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "bandana_end_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.5,
+        -7.2,
+        -4.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -78
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        53,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mouth_senbon",
+      "bone": "HEAD",
+      "pivot": [
+        0.3,
+        -1.35,
+        -4.25
+      ],
+      "rotation": [
+        0,
+        30,
+        -76
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        12,
+        1
+      ],
+      "uv": [
+        58,
+        11
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    }
+  ],
+  "hidesHair": [
+    "crown",
+    "fringe"
+  ],
+  "coversFace": false,
+  "coversMouth": true,
+  "description": "The backward bandana protector, a senbon held in the corner of the mouth."
+}

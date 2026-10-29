@@ -1,0 +1,437 @@
+{
+  "id": "h1611_wrapped_locks",
+  "kind": "hair",
+  "name": "Wrapped Locks",
+  "gender": "unisex",
+  "texture": "hair/h1611_wrapped_locks.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        18
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        26
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "fringe_2",
+      "bone": "HEAD",
+      "pivot": [
+        1.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -26
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -18
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -18
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "frame_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -7.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": "frame_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -7.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ]
+    },
+    {
+      "id": "frame_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -7.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "frame_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -7.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    },
+    {
+      "id": "frame_wrap_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -7.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -1.5,
+        5.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "frame_wrap_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -7.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -1.5,
+        5.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        11,
+        10
+      ]
+    },
+    {
+      "id": "fall",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.6,
+        4.6
+      ],
+      "rotation": [
+        -4,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        22,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.6,
+        4.6
+      ],
+      "rotation": [
+        -4,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        43,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_tip_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.6,
+        4.6
+      ],
+      "rotation": [
+        -4,
+        0,
+        0
+      ],
+      "origin": [
+        0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        54,
+        10
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Collar-length hair, two long front locks bound in a cloth wrap at the jaw."
+}
