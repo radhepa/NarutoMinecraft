@@ -320,3 +320,31 @@ its seeds.
 | `clan.tobari.3` | What moves on the wall unheard is a Yūgure cell using a sound-smothering technique learned from a Tobari deserter |
 | `clan.hatake.4` | The keepsake's heir is the *sensei* if no Hatake lives in the save; otherwise the last Hatake |
 | `clan.uzumaki.3` | The scattered Uzumaki is genuine, and a sealing expert who later helps restore a Kagari seal (Road to Hokage) |
+
+## Bonds in the story (spoilers)
+
+How the plot drives the bond engine ([BONDS.md](../../BONDS.md)), by role. Everything here is data:
+quest actions and conditions on roles, never code.
+
+| Beat | Role | Bond data |
+|---|---|---|
+| Ch 0, the rescue | *captain* (later *sensei*) | `bond_event saved_by_them` (a permanent moment: they carried you out) |
+| Ch 0, the red cord | *lost_child* | A bond created at level 2 with `bond_flag red_cord`; it does not grow while she is gone (no contact) and is the hook for bringing her back |
+| Ch 3, the flare | *teammate_a* (the paired exercise) | `bond_event trained_together`; the flare is flavor only, never a Kindling grant |
+| Ch 6, a classmate confides | *teammate_b* | A choice: `kept_secret` or `broke_secret` (a permanent moment, or a quarrel) |
+| Ch 8, the bells | *teammate_a*, *teammate_b* | `shared_moment bond.bells` for whoever grabs a bell with you |
+| Ch 11, the campfire | *teammate_a* | Branch on `friendship [teammate_a, 5]`; `shared_moment` and `heart_to_heart` |
+| Ch 13, the stranger and *teammate_b* | *teammate_b*, *sensei* | Tell the *sensei*: `went_over_their_head` with *teammate_b*, `kept_promise` with the *sensei*. Keep the secret: `kept_secret` with *teammate_b*, `story.seed.teammate_approached = "kept"`. Follow them: `stood_by_them` and a `reckless_charge` the *sensei* hears of. The Chunin arc reads the flag and `bond_meter [teammate_b, trust]`: at 60 or more they stay, under 30 they leave (`remove_from_squad story`), between they nearly join Yūgure and a return quest (`squad_can_return` is bypassed by `return_to_squad`) brings them home |
+| Ch 14, the suspicion | *sensei* | The *sensei*'s trust gates the secret training of the Chunin arc: `bond_meter [sensei, trust, 50]` |
+| Ch 16, the night watch | *teammate_a*, *teammate_b* | `shared_moment bond.night_watch` for teammates not quarrelling with you; the campfire leans toward the squad only if `squad_cohesion 50` |
+| Ch 19, the attack | *teammate_a*, *teammate_b* | Whoever has the higher level covers you (`saved_by_them`); with both under 4, the *rival* does |
+| Chunin arc, the first real kindling | the teammate who falls | The teammate with the highest level who is at 6 or more; if neither is, the *sensei*. Their nature is the one kindled; `set_flag story.kindling.awakened` |
+| Chunin to Jonin, the traitor's trail | `twist.traitor` | The bound candidate's bond is never gated by the reveal: the player can be close to them. On the reveal, `start_conflict` with `broke_secret` for the bound candidate (a falling-out for most players); the innocent candidates get `shared_moment` scenes when their names are cleared |
+| Road to Hokage, every bond kindles | everyone at level 6 or more | The final watch-fire counts bonds at 6+ (the village you befriended is the fire); `standing` Hero everywhere is the Hokage requirement |
+| The lost child comes home | *lost_child* | Needs `friendship [lost_child, 2]` kept from Ch 0 and the ANBU or road-to-Hokage quest; her bond then starts growing |
+| The finale's watch-fire | the whole village | The fire's size is `BondWeb.score`: every bond at 6 or more, deeper bonds worth more, and each clan, district and rank it reaches adds one. Thresholds (data, tuned in playtests): a small fire at 15 (the squad and a few friends), a strong one at 40, the whole village at 70. A thin web still wins the fight; a wide one changes the scene and the epilogue |
+| The keeper becomes an ally | *elder_keeper* | `bond_meter [elder_keeper, trust, 60]` and `friendship [elder_keeper, 6]` open his archive quests; he starts wary (stern, private) so trust is earned through kept promises and kept secrets, not gifts |
+| The librarian trains the gift, if innocent | *librarian* | Only when `twist.traitor` is not the librarian: `friendship [librarian, 7]` and `kindling_uses` on any bond of 6+ open her training line |
+| The merchant turns informant, if innocent | *merchant* | Only when `twist.traitor` is not the merchant: `friendship [merchant, 6]` after the Ch 14 road, plus `standing ["district:market", "good_neighbor"]` |
+| Traitor candidates and friendship | every `twist.traitor` candidate | **The bound answer never depends on friendship**: it is fixed by the `twists` stream at world creation. Friendship only changes how the clue trail plays (who confides in you, who lies to your face, who you can bring along). Innocent candidates the player is close to become allies when cleared (`shared_moment` plus a permanent `reconciled` if the player suspected them aloud) |
+| The Ch 13 choice in the society | *teammate_b* | Keeping the secret plants no deed; telling the *sensei* is a `deed` the squad hears of (teammate_a learns it within days through the squad tie, so teammate_a's dialogue can react before the player tells them) |
