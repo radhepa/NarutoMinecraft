@@ -1,0 +1,373 @@
+{
+  "id": "t201_sealing_master_robe",
+  "kind": "top",
+  "name": "Sealing Master Robe",
+  "gender": "unisex",
+  "texture": "tops/t201_sealing_master_robe.png",
+  "extrasHeight": 64,
+  "tags": [
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_wide_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        1.0,
+        -3
+      ],
+      "size": [
+        6,
+        7,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "right_tamoto",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        8.0,
+        0.5
+      ],
+      "size": [
+        6,
+        3,
+        2
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "inflate": 0.05,
+      "motion": "sway"
+    },
+    {
+      "id": "left_wide_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        1.0,
+        -3
+      ],
+      "size": [
+        6,
+        7,
+        6
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_tamoto",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        8.0,
+        0.5
+      ],
+      "size": [
+        6,
+        3,
+        2
+      ],
+      "uv": [
+        25,
+        14
+      ],
+      "inflate": 0.05,
+      "motion": "sway"
+    },
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        28
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "obi_tag_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        28
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "obi_tag_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        10.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        34,
+        28
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "obi_tag_2",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        10.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        39,
+        28
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "robe_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        44,
+        28
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "robe_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        37
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.6,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        21,
+        37
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.9,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        51
+      ],
+      "inflate": 0.06
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Long wrapped robe, seal-tag collar, wide inked sleeves, red obi with tags, whirlpool crest."
+}

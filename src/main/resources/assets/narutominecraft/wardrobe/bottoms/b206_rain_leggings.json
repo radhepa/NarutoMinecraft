@@ -1,0 +1,240 @@
+{
+  "id": "b206_rain_leggings",
+  "kind": "bottom",
+  "name": "Rain Leggings",
+  "gender": "unisex",
+  "texture": "bottoms/b206_rain_leggings.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_guard",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        5.4,
+        -2.6
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_strap_5",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.4,
+        5.6,
+        -2.4
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "right_strap_8",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.4,
+        8.0,
+        -2.4
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "left_guard",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        5.4,
+        -2.6
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    },
+    {
+      "id": "left_strap_5",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.4,
+        5.6,
+        -2.4
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        7
+      ]
+    },
+    {
+      "id": "left_strap_8",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.4,
+        8.0,
+        -2.4
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        7
+      ]
+    },
+    {
+      "id": "thigh_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        1.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        42,
+        7
+      ]
+    },
+    {
+      "id": "thigh_tag",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -3.0,
+        1.2,
+        -1.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ]
+    }
+  ],
+  "description": "Snug dark leggings, strapped shin guards, a seal tag in the thigh strap, sandals."
+}

@@ -1,0 +1,284 @@
+{
+  "id": "t208_sealer_coat",
+  "kind": "top",
+  "name": "Sealer Coat",
+  "gender": "unisex",
+  "texture": "tops/t208_sealer_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "coat",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.2,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        27,
+        0
+      ],
+      "inflate": 0.6
+    },
+    {
+      "id": "belt_tag_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        9.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "belt_tag_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.7,
+        9.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "belt_tag_2",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        9.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        5,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "ink_scroll",
+      "bone": "TORSO",
+      "pivot": [
+        4.2,
+        9.0,
+        1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -30
+      ],
+      "origin": [
+        -0.5,
+        -3,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        2
+      ],
+      "uv": [
+        10,
+        14
+      ]
+    },
+    {
+      "id": "tail_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        19,
+        14
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tail_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        11.4,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        28,
+        14
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tail_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        37,
+        14
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Long open coat with seal-tag lapels and hem, tag-hung belt, ink scroll, whirlpool crest."
+}

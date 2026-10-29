@@ -1,0 +1,130 @@
+{
+  "id": "b202_village_long_skirt",
+  "kind": "bottom",
+  "name": "Village Long Skirt",
+  "gender": "unisex",
+  "texture": "bottoms/b202_village_long_skirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        11.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        11,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "skirt_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        11.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        11,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "description": "Plain ankle-length skirt with a wave band above the hem, sandals."
+}

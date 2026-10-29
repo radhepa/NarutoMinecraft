@@ -1,0 +1,130 @@
+{
+  "id": "b204_tide_hakama",
+  "kind": "bottom",
+  "name": "Tide Hakama",
+  "gender": "unisex",
+  "texture": "bottoms/b204_tide_hakama.png",
+  "extrasHeight": 32,
+  "tags": [
+    "hakama",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_flare",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        4.0,
+        -3.0
+      ],
+      "size": [
+        6,
+        6,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_flare",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        4.0,
+        -3.0
+      ],
+      "size": [
+        6,
+        6,
+        6
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "waist_ties",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "waist_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        13
+      ]
+    }
+  ],
+  "description": "Wide pleated ankle hakama flaring over the shins, waist ties, wave hem."
+}
