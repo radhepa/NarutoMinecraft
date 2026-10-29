@@ -194,6 +194,16 @@
         "#ecebe6"
       ]
     },
+    "NAMIASHI_SLATE": {
+      "name": "Namiashi Slate",
+      "ramp": [
+        "#0b0c0e",
+        "#26303a",
+        "#3a4855",
+        "#5d6e7c",
+        "#eeeeea"
+      ]
+    },
     "NARA_BARK": {
       "name": "Nara Bark",
       "ramp": [
@@ -252,6 +262,26 @@
         "#7a4ca8",
         "#b993dc",
         "#f1efe6"
+      ]
+    },
+    "TOBARI_GREY": {
+      "name": "Tobari Grey",
+      "ramp": [
+        "#0c0d12",
+        "#2b2f3d",
+        "#4a5064",
+        "#7d8599",
+        "#efeee9"
+      ]
+    },
+    "TSUCHIGUMO_MULBERRY": {
+      "name": "Tsuchigumo Mulberry",
+      "ramp": [
+        "#0e080c",
+        "#3a1a30",
+        "#5e2c4e",
+        "#8a4e76",
+        "#efe8dc"
       ]
     },
     "UCHIHA_ONYX": {
