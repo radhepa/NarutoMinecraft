@@ -180,7 +180,8 @@ So about one clanless shinobi in five beats the great clans' median at their ran
 **Your classmates lean toward the important clans** (you are a clanless orphan), so familiar names appear early. The village
 population stays as it is, with noble clans rare.
 
-- **The class.** `class_clan_weights` in `roster.json` rolls the eleven classmates in a Varied save:
+- **The class** (decided: 8 noble, 2 minor, 1 clanless in Classic). `class_clan_weights` in
+  `roster.json` rolls the eleven classmates in a Varied save:
   68% noble, 20% minor, 12% clanless. The roll picks a clan group first, then a clan inside it by
   `population.json`'s weights. The Classic class is 8 noble, 2 minor and 1 clanless.
 - **The squad a year ahead and the senseis** lean noble less (`squad_clan_weights`: 45 / 30 / 25).
@@ -199,7 +200,8 @@ without letting the player fight them. Five tools do it:
 4. **Legends spoken of.** Residents, the standby station and the Mission Desk talk about people who
    are not there.
 5. **Reading power.** When you focus on a shinobi, a tier glyph shows over their head.
-   - It reads true up to two tiers above you.
+   - It reads true up to two tiers above you (decided: two, so an Academy kid can read a chunin
+     and the beta's C-tier player can read an elite, while the Hokage stays *beyond you*).
    - Beyond that it shows *beyond you*, as a dim, flickering glyph.
    - As you climb, the glyphs resolve, so you see the ladder rise ahead of you.
 
@@ -664,6 +666,5 @@ per mission rank. The roster only needs the same XP the player earns, so in Phas
   arrives: the showcase pillars (the kenjutsu instructor, the returning captain, the old scroll-seller,
   the wandering legend), the proctors, the desk, the gate, the watch, the police, the Academy
   teachers and the clan heads.
-- **The tier glyph.** Should it read true two tiers up, or only one?
 - **Contribution shares.** Combat re-runs its duel simulator with the new offsets, and may move teammate A's
   signature genjutsu earlier and let teammate B's pup scale later.
