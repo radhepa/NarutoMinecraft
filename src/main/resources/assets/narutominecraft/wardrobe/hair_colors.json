@@ -150,6 +150,36 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "HYUGA_INDIGO": {
+      "name": "Hyuga Indigo",
+      "ramp": [
+        "#14141f",
+        "#1f2033",
+        "#2c2e4a",
+        "#3f4268",
+        "#5c6191"
+      ]
+    },
+    "HYUGA_UMBER": {
+      "name": "Hyuga Umber",
+      "ramp": [
+        "#22140d",
+        "#3a2316",
+        "#553421",
+        "#714830",
+        "#946447"
+      ]
+    },
+    "HYUGA_ELDER_ASH": {
+      "name": "Hyuga Elder Ash",
+      "ramp": [
+        "#3a3634",
+        "#57514d",
+        "#77706a",
+        "#9a938b",
+        "#bdb6ad"
+      ]
     }
   }
 }

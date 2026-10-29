@@ -63,7 +63,22 @@
     "h06_low_ponytail",
     "h07_bowl_cut",
     "h08_short_crop",
-    "h09_high_ponytail"
+    "h09_high_ponytail",
+    "h401_tip_tied_mane",
+    "h402_hime_cut",
+    "h403_bob_sidelocks",
+    "h404_clan_head",
+    "h405_side_parted_long",
+    "h406_branch_crop",
+    "h407_long_braid",
+    "h408_elder_topknot",
+    "h409_half_up_tail",
+    "h410_low_twin_tails",
+    "h411_waist_length",
+    "h412_kanzashi_bun",
+    "h413_shaggy_shoulder",
+    "h414_childs_bob",
+    "h415_swept_back_long"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -74,7 +89,9 @@
     "w06_anbu_hawk_mask",
     "w07_root_mask",
     "w08_masked_protector",
-    "w09_bandana_protector"
+    "w09_bandana_protector",
+    "w401_brow_wrap",
+    "w402_branch_protector"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -97,7 +114,17 @@
     "t18_sentinel_vest",
     "t19_field_vest",
     "t20_kunoichi_jonin",
-    "t21_commander_coat"
+    "t21_commander_coat",
+    "t401_training_wrap",
+    "t402_branch_guard_kimono",
+    "t403_elder_haori",
+    "t404_heiress_hooded_jacket",
+    "t405_two_tone_zip_jacket",
+    "t406_jonin_apron_robe",
+    "t407_attendant_kimono",
+    "t408_scout_mantle",
+    "t409_ceremonial_kimono",
+    "t410_courtyard_yukata"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -107,7 +134,12 @@
     "b05_green_leggings",
     "b06_anbu_greaves",
     "b07_cargo_shorts",
-    "b08_mesh_leggings"
+    "b08_mesh_leggings",
+    "b401_training_shorts",
+    "b402_hakama",
+    "b403_heiress_trousers",
+    "b404_cropped_trousers",
+    "b405_attendant_kimono_skirt"
   ],
   "characters": [
     {
@@ -523,7 +555,367 @@
       ],
       "color": null,
       "mirror": true
+    },
+    "hyuga_caged_bird": {
+      "rects": [
+        [
+          -0.56,
+          -7.26,
+          0.34,
+          0.34
+        ],
+        [
+          -0.28,
+          -6.98,
+          0.34,
+          0.34
+        ],
+        [
+          0,
+          -6.7,
+          0.34,
+          0.34
+        ],
+        [
+          0.28,
+          -6.42,
+          0.34,
+          0.34
+        ],
+        [
+          0.56,
+          -6.14,
+          0.34,
+          0.34
+        ],
+        [
+          1.15,
+          -6.7,
+          0.6,
+          0.24
+        ]
+      ],
+      "color": "#3f8a47",
+      "mirror": true
     }
   },
-  "clans": []
+  "clans": [
+    {
+      "id": "hyuga",
+      "name": "Hyuga",
+      "tagline": "Pale Byakugan eyes, long straight dark hair and off-white wrapped robes trimmed in lavender and navy",
+      "palettes": {
+        "HYUGA_MAIN": {
+          "name": "Hyuga Main House",
+          "P": "#e6e0d2",
+          "S": "#f4f2ec",
+          "A": "#7d6fa6",
+          "L": "#6b5a45",
+          "M": "#aab3b9",
+          "K": "#2a2833",
+          "D": "#2f3452"
+        },
+        "HYUGA_BRANCH": {
+          "name": "Hyuga Branch House",
+          "P": "#d5d4cf",
+          "S": "#efeee9",
+          "A": "#58667f",
+          "L": "#5e5144",
+          "M": "#aab3b9",
+          "K": "#2c2d33",
+          "D": "#3a3f52"
+        },
+        "HYUGA_HEIRESS": {
+          "name": "Hyuga Heiress",
+          "P": "#e9e2ee",
+          "S": "#f5f2f7",
+          "A": "#8a76b8",
+          "L": "#6b5a45",
+          "M": "#b6bcc6",
+          "K": "#2a2733",
+          "D": "#2c3256"
+        },
+        "HYUGA_ELDER": {
+          "name": "Hyuga Elder",
+          "P": "#4c4a58",
+          "S": "#e7e3da",
+          "A": "#a597c6",
+          "L": "#5a4c3e",
+          "M": "#aab3b9",
+          "K": "#2b2a31",
+          "D": "#2a2938"
+        },
+        "HYUGA_NAVY": {
+          "name": "Hyuga Navy",
+          "P": "#38405f",
+          "S": "#ece6d8",
+          "A": "#a89bd0",
+          "L": "#5e4e3e",
+          "M": "#aab3b9",
+          "K": "#24252d",
+          "D": "#4a5070"
+        },
+        "HYUGA_CEREMONIAL": {
+          "name": "Hyuga Ceremonial",
+          "P": "#efece5",
+          "S": "#fbfaf6",
+          "A": "#3f4677",
+          "L": "#6b5a45",
+          "M": "#b5bcc2",
+          "K": "#2b2a33",
+          "D": "#2b3050"
+        }
+      },
+      "hair_colors": {
+        "HYUGA_INDIGO": {
+          "name": "Hyuga Indigo",
+          "ramp": [
+            "#14141f",
+            "#1f2033",
+            "#2c2e4a",
+            "#3f4268",
+            "#5c6191"
+          ]
+        },
+        "HYUGA_UMBER": {
+          "name": "Hyuga Umber",
+          "ramp": [
+            "#22140d",
+            "#3a2316",
+            "#553421",
+            "#714830",
+            "#946447"
+          ]
+        },
+        "HYUGA_ELDER_ASH": {
+          "name": "Hyuga Elder Ash",
+          "ramp": [
+            "#3a3634",
+            "#57514d",
+            "#77706a",
+            "#9a938b",
+            "#bdb6ad"
+          ]
+        }
+      },
+      "eye_colors": {},
+      "marks": {
+        "hyuga_caged_bird": {
+          "rects": [
+            [
+              -0.56,
+              -7.26,
+              0.34,
+              0.34
+            ],
+            [
+              -0.28,
+              -6.98,
+              0.34,
+              0.34
+            ],
+            [
+              0,
+              -6.7,
+              0.34,
+              0.34
+            ],
+            [
+              0.28,
+              -6.42,
+              0.34,
+              0.34
+            ],
+            [
+              0.56,
+              -6.14,
+              0.34,
+              0.34
+            ],
+            [
+              1.15,
+              -6.7,
+              0.6,
+              0.24
+            ]
+          ],
+          "color": "#3f8a47",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h401_tip_tied_mane",
+          "h402_hime_cut",
+          "h403_bob_sidelocks",
+          "h404_clan_head",
+          "h405_side_parted_long",
+          "h406_branch_crop",
+          "h407_long_braid",
+          "h408_elder_topknot",
+          "h409_half_up_tail",
+          "h410_low_twin_tails",
+          "h411_waist_length",
+          "h412_kanzashi_bun",
+          "h413_shaggy_shoulder",
+          "h414_childs_bob",
+          "h415_swept_back_long"
+        ],
+        "hair_colors": [
+          "HYUGA_INDIGO",
+          "HYUGA_INDIGO",
+          "HYUGA_UMBER",
+          "ESPRESSO",
+          "HYUGA_ELDER_ASH"
+        ],
+        "eye_colors": [
+          "BYAKUGAN"
+        ],
+        "palettes": [
+          "HYUGA_MAIN",
+          "HYUGA_MAIN",
+          "HYUGA_BRANCH",
+          "HYUGA_HEIRESS",
+          "HYUGA_NAVY"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w401_brow_wrap",
+          "w402_branch_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          0,
+          1
+        ],
+        "marks": [
+          {
+            "id": "hyuga_caged_bird",
+            "chance": 0.3
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "training_wrap",
+          "name": "Training Wrap",
+          "top": "t401_training_wrap",
+          "bottom": "b401_training_shorts",
+          "rank": "academy",
+          "palettes": [
+            "HYUGA_MAIN",
+            "HYUGA_BRANCH",
+            "HYUGA_NAVY"
+          ]
+        },
+        {
+          "id": "branch_guard",
+          "name": "Branch Guard",
+          "top": "t402_branch_guard_kimono",
+          "bottom": "b402_hakama",
+          "rank": "chunin",
+          "palettes": [
+            "HYUGA_BRANCH",
+            "HYUGA_MAIN"
+          ]
+        },
+        {
+          "id": "elder_haori",
+          "name": "Elder Haori",
+          "top": "t403_elder_haori",
+          "bottom": "b402_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "HYUGA_ELDER"
+          ]
+        },
+        {
+          "id": "heiress_jacket",
+          "name": "Heiress Jacket",
+          "top": "t404_heiress_hooded_jacket",
+          "bottom": "b403_heiress_trousers",
+          "rank": "genin",
+          "palettes": [
+            "HYUGA_HEIRESS",
+            "HYUGA_MAIN"
+          ]
+        },
+        {
+          "id": "two_tone_zip",
+          "name": "Two-Tone Zip",
+          "top": "t405_two_tone_zip_jacket",
+          "bottom": "b403_heiress_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "HYUGA_HEIRESS",
+            "HYUGA_MAIN"
+          ]
+        },
+        {
+          "id": "jonin_robe",
+          "name": "Jonin Robe",
+          "top": "t406_jonin_apron_robe",
+          "bottom": "b401_training_shorts",
+          "rank": "jonin",
+          "palettes": [
+            "HYUGA_MAIN",
+            "HYUGA_BRANCH"
+          ]
+        },
+        {
+          "id": "attendant_kimono",
+          "name": "Attendant Kimono",
+          "top": "t407_attendant_kimono",
+          "bottom": "b405_attendant_kimono_skirt",
+          "rank": "academy",
+          "palettes": [
+            "HYUGA_MAIN",
+            "HYUGA_BRANCH",
+            "HYUGA_NAVY"
+          ]
+        },
+        {
+          "id": "scout_mantle",
+          "name": "Scout Mantle",
+          "top": "t408_scout_mantle",
+          "bottom": "b404_cropped_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "HYUGA_MAIN",
+            "HYUGA_BRANCH"
+          ]
+        },
+        {
+          "id": "ceremonial_kimono",
+          "name": "Ceremonial Kimono",
+          "top": "t409_ceremonial_kimono",
+          "bottom": "b402_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "HYUGA_CEREMONIAL"
+          ]
+        },
+        {
+          "id": "courtyard_yukata",
+          "name": "Courtyard Yukata",
+          "top": "t410_courtyard_yukata",
+          "bottom": "b404_cropped_trousers",
+          "rank": "genin",
+          "palettes": [
+            "HYUGA_MAIN",
+            "HYUGA_HEIRESS",
+            "HYUGA_BRANCH"
+          ]
+        }
+      ]
+    }
+  ]
 }
