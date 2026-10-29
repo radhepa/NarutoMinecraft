@@ -41,9 +41,10 @@ village, and what turns a 60-hour main path into a 100-hour completionist run.
 | Stretch | Main path (ROADMAP §1) | Side quests, a thorough player (~70%) | Of which authored | Of which generated | Completionist |
 |---|---|---|---|---|---|
 | **Beta 1** (opening, Academy) | ~4 h | ~2.5 h | ~2 h | ~0.5 h | ~3 h |
-| **Beta 2** (Genin) | ~8 h | ~6.5 h | ~4.5 h | ~2 h | ~10 h |
+| **Beta 2** (Genin) | ~8 h | ~5.5 h | ~3.5 h | ~2 h | ~8.5 h |
+| **Beta 2.5** (clan welcomes, wave 2; content drop played during Genin life) | — | ~1.2 h | ~1.2 h | — | ~1.7 h |
 | **Beta 3** (Chunin Exams) | ~3 h | ~1 h | ~0.75 h | ~0.25 h | ~1.3 h |
-| **Beta total** | ~15 h | **~10 h** | ~7.25 h | ~2.75 h | **~14 h** |
+| **Beta total** | ~15 h | **~10 h** | ~7.5 h | ~2.75 h | **~14.5 h** |
 | Chunin | ~13 h | ~9 h | | | |
 | Jonin | ~17 h | ~11 h | | | |
 | Road to Hokage | ~15 h | ~7 h | | | |
@@ -263,8 +264,18 @@ residents.
 
 ## 4. Clan quest lines
 
-*BUILD (beta) for each clan's first quest (Beta 2, ROADMAP §8); FOUNDATION (later) for the rest of
-each line.*
+*BUILD (beta) for each clan's first quest; FOUNDATION (later) for the rest of each line.*
+
+**Two waves.** The welcome quests ship in two waves to spread the writing load:
+
+- **Wave 1, Beta 2:** the eight great clans with clan seats (ROADMAP §6): Senju, Uzumaki, Uchiha,
+  Hyuga, Nara, Akimichi, Yamanaka, Inuzuka.
+- **Wave 2, Beta 2.5** (a content-only drop between Beta 2 and Beta 3): the seven smaller noble
+  clans (Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko) and the ten minor clans.
+- Wave-2 clans are present from Beta 2 all the same: their quarters, residents, district presence,
+  clan techniques for clan-born players (the elder's lesson in Ch 12 is part of the main path, not
+  the welcome quest) and generated `gen.clan_courtesy` quests. Only their authored welcome quest
+  waits for Beta 2.5.
 
 ### 4.1 The shape of a clan line
 
@@ -273,7 +284,7 @@ career and continues after the beta:
 
 | Step | Name | When | What it is |
 |---|---|---|---|
-| 1 | **Welcome** | Beta 2 (from Ch 12) | The clan's custom test for an outsider, or a homecoming for kin |
+| 1 | **Welcome** | Beta 2 (from Ch 12) for the eight great clans; Beta 2.5 for the other 17 | The clan's custom test for an outsider, or a homecoming for kin |
 | 2 | **Customs** | Beta 3 or early Chunin | Take part in a clan custom or prepare its clan day |
 | 3 | **Trust** | Chunin | The clan shows you something of its own: a problem it keeps from outsiders |
 | 4 | **Heart** | Jonin | The clan's internal tension comes to a head; your choice settles it |
@@ -556,8 +567,8 @@ neighbourly, and often intertwined with civilian life.
 
 | | Beta | Later | Total |
 |---|---|---|---|
-| Noble clans (15) | 15 (step 1) | 50 (steps 2 to 5; Legacy for 5 clans) | 65 |
-| Minor clans (10) | 10 (step 1) | 30 (steps 2 to 4) | 40 |
+| Noble clans (15) | 15 (step 1: 8 in Beta 2, 7 in Beta 2.5) | 50 (steps 2 to 5; Legacy for 5 clans) | 65 |
+| Minor clans (10) | 10 (step 1, Beta 2.5) | 30 (steps 2 to 4) | 40 |
 | **All** | **25** | **80** | **105** |
 
 ## 5. Civilian and district quests
@@ -647,9 +658,12 @@ clans; quests are how the player moves them.
 
 - **Council day:** the first Moonday of each season, the Hokage hears petitions in the Residence (an
   event). Severity-5 hooks and clan disputes come here as **council cases**.
-- **The player's part grows with rank:** as an Academy student or Genin you can watch from the
-  gallery and pick up leads (beta); as a Chunin you can testify; as a Jonin you can speak for a
-  clan or mediate; as Hokage you decide.
+- **The player's part grows with rank:** as a Genin you watch from the gallery (beta); as a Chunin
+  you can testify; as a Jonin you can speak for a clan or mediate; as Hokage you decide.
+- **In the beta:** one council day during Genin life (`event.b2.council_day`, after Ch 12). The
+  player watches from the gallery: two clans bring a dispute, the Hokage rules, and the scene
+  introduces clan relations (the Ledger's clan page opens). **No choice is offered**; it is a
+  scene with a few gossip leads afterwards. Testifying starts at Chunin.
 - **Outcomes** move clan relations, standing and the village news, and some cases open quests (a
   ruling to enforce, a compromise to broker).
 
@@ -663,7 +677,8 @@ relations to pick their cast and their trouble (a feuding pair assigned neighbou
 
 The beta keeps politics light: relations are visible (the Ledger and gossip), **Dogs and Bugs** is
 the beta's inter-clan arc, `gen.mediate_feud` and `gen.clan_courtesy` run on live hooks, clan
-welcome quests nudge relations, and council day can be watched from the gallery from Beta 2.
+welcome quests nudge relations, and one council day in Beta 2 is watched from the gallery with no
+choice offered.
 
 ## 8. Beta catalogue
 
@@ -720,10 +735,22 @@ on top.
 | `filler.dogs_and_bugs.1` to `.3` | filler | After Ch 9 | A prize Aburame beetle has vanished; an Inuzuka dog is the prime suspect (3 parts) | R 250 total, S both clans, K |
 | `bond.b2.teammate_a.1`, `.2` | bond | Bond levels 4 and 5 with *teammate_a* | Two stories with *teammate_a* | F, K |
 | `bond.b2.teammate_b.1`, `.2` | bond | Bond levels 4 and 5 with *teammate_b* | Two stories with *teammate_b* | F, K |
-| `clan.<id>.1` (25) | clan | After Ch 12 (Ch 9 for clan-born homecomings) | Each clan's welcome (§4) | R 50 to 150, S clan, K clan keepsake, T lesser technique where the clan has one |
+| `event.b2.council_day` | event | After Ch 12; the Hokage Residence, the first Moonday of the season | Two clans bring a dispute to the Hokage; you watch from the gallery (no choice) | X 5%, the Ledger's clan page, leads |
+| `clan.<id>.1` (8, wave 1) | clan | After Ch 12 (Ch 9 for clan-born homecomings) | The welcome of each great clan: Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka (§4) | R 50 to 150, S clan, K clan keepsake, T lesser technique where the clan has one |
 
-**Beta 2: 61 quests** (8 side, 15 district in 4 chains of 12 quests and 3 singles, 2 event, 7
-filler, 4 bond, 25 clan).
+**Beta 2: 45 quests** (8 side, 15 district in 4 chains of 12 quests and 3 singles, 3 event, 7
+filler, 4 bond, 8 clan).
+
+### Beta 2.5: clan welcomes, wave 2
+
+A content-only drop between Beta 2 and Beta 3 (data, dialogue and small builds; no new systems).
+
+| Id | Kind | Unlock | Premise | Rewards |
+|---|---|---|---|---|
+| `clan.<id>.1` (7 noble) | clan | Genin, after Ch 12 | The welcome of Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi and Gekko (§4.3) | R 50 to 150, S clan, K clan keepsake, T lesser technique where the clan has one |
+| `clan.<id>.1` (10 minor) | clan | Genin, after Ch 12 | The welcome of Shiranui, Morino, Umino, Haruno, Namiashi, Hagane, Kinoshita, Tsuchigumo, Suzuran and Tobari (§4.4) | R 50 to 120, S clan, K clan keepsake, T for Tsuchigumo, Suzuran and Tobari |
+
+**Beta 2.5: 17 quests**, all clan welcomes.
 
 ### Beta 3: the Chunin Exams
 
@@ -741,13 +768,13 @@ filler, 4 bond, 25 clan).
 
 ### Totals and Varied pools
 
-| | Beta 1 | Beta 2 | Beta 3 | Beta |
-|---|---|---|---|---|
-| Authored quests (Classic) | 17 | 61 | 7 | **85** |
-| Of which clan | — | 25 | — | 25 |
-| Generated templates active | 6 | 13 | 13 | 13 |
-| Thorough player, hours | ~2.5 | ~6.5 | ~1 | **~10** |
-| Completionist, hours | ~3 | ~10 | ~1.3 | **~14** |
+| | Beta 1 | Beta 2 | Beta 2.5 | Beta 3 | Beta |
+|---|---|---|---|---|---|
+| Authored quests (Classic) | 17 | 45 | 17 | 7 | **86** |
+| Of which clan | — | 8 | 17 | — | 25 |
+| Generated templates active | 6 | 13 | 13 | 13 | 13 |
+| Thorough player, hours | ~2.5 | ~5.5 | ~1.2 | ~1 | **~10** |
+| Completionist, hours | ~3 | ~8.5 | ~1.7 | ~1.3 | **~14.5** |
 
 | Varied pool | Shown | Pool |
 |---|---|---|
@@ -760,7 +787,8 @@ filler, 4 bond, 25 clan).
 
 ## 9. Open questions
 
-1. **The hook schema.** §3.1 is a draft; align it with the bond system's schema when it arrives.
-2. **Writing load.** 85 authored beta quests (25 of them clan welcomes) is a lot of dialogue. If it
-   is too much for Beta 2, clan welcomes could ship in two waves (the eight great clans first).
-3. **Council day in the beta.** Gallery-only in Beta 2, as written, or held back until Chunin?
+1. **The hook schema.** §3.1 is a draft; it will be aligned with the bond system's schema, with the
+   generated templates, in one change when the schema arrives.
+
+Decided: clan welcomes ship in two waves (Beta 2 and Beta 2.5); council day is watch-only in the
+beta, with testifying from Chunin.

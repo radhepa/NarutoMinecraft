@@ -1072,9 +1072,10 @@ lines, district quests, filler arcs, inter-clan politics and the catalogue) is i
 | Slice | Authored quests | Highlights | Generated templates active |
 |---|---|---|---|
 | Beta 1 | 17 | The filler arc **The Ramen Thief** (3 parts); your apartment block's neighbours; the Academy and the shrine; one bond quest per classmate | 6 |
-| Beta 2 | 61 | The filler arcs **Lanterns on the Lake** and **Dogs and Bugs**; the market's price war, the ferryman, the hospital night shift; the Leaf Festival; **25 clan welcome quests** | 13 |
+| Beta 2 | 45 | The filler arcs **Lanterns on the Lake** and **Dogs and Bugs**; the market's price war, the ferryman, the hospital night shift; the Leaf Festival; a council day watched from the gallery; **the eight great clans' welcome quests** (wave 1) | 13 |
+| Beta 2.5 | 17 | A content-only drop: **the welcome quests of the other 17 clans** (wave 2: the seven smaller noble clans and the ten minor clans) | 13 |
 | Beta 3 | 7 | Exam week in the village; night-watch bond talks | 13 |
-| **Beta** | **85** | About 10 hours for a thorough player, 14 for a completionist | 13 templates |
+| **Beta** | **86** | About 10 hours for a thorough player, 14.5 for a completionist | 13 templates |
 
 In Varied saves each slice draws its one-offs, neighbours and some filler arcs from larger pools
 (for example Beta 2: 8 one-offs shown from a pool of 20, 2 filler arcs from 3); district chains,
@@ -1099,7 +1100,7 @@ saves roll these roles entirely, by the population weights (shinobi groups only)
 
 ## 9. Delivery plan
 
-*BUILD (beta).* Phase 0, then three slices, each a release: the `.mrpack` with every mod pinned,
+*BUILD (beta).* Phase 0, then three slices (and a content drop, Beta 2.5), each a release: the `.mrpack` with every mod pinned,
 plus the zipped world on GitHub Releases. Each slice is playtested and tuned before the next starts.
 Deliverables name the mod they land in: **Core**, **Village**, **Combat**, **Life**, **Progression**,
 **Map** (world, blueprints, datapack), **Pack**, **VF**.
@@ -1164,8 +1165,10 @@ Deliverables name the mod they land in: **Core**, **Village**, **Combat**, **Lif
 
 ### Beta 2: Genin life (+~8 h)
 
-**Deliverables:** chapters 8 to 14, Beta 2's side, filler and clan quests; every Beta 2 system;
-the Beta 2 districts.
+**Deliverables:** chapters 8 to 14; Beta 2's side, district, filler, bond and event quests, the
+council day (watch only) and the eight great clans' welcome quests (wave 1, [SIDE_QUESTS.md §4](SIDE_QUESTS.md#4-clan-quest-lines));
+every Beta 2 system; the Beta 2 districts. All 25 clans' quarters, residents, clan techniques and
+generated courtesy quests are in Beta 2; only the other 17 welcome quests wait for Beta 2.5.
 
 - **Progression:** the Mission Desk with D-rank (five templates) and C-rank (escort, bandit
   clearing, delivery to a far region) board missions, paid in ryo and XP and failing on death;
@@ -1185,6 +1188,19 @@ the Beta 2 districts.
   board differs from a Classic save's and is the same for the same seed.
 - Bandits use at least four techniques and dodge; each clan technique works for a clan-born player
   and a clan sparring partner.
+
+### Beta 2.5: clan welcomes, wave 2 (content drop)
+
+**Deliverables:** the welcome quests of the other 17 clans (Sarutobi, Aburame, Hatake, Kurama,
+Shimura, Yuhi, Gekko, and the ten minor clans), with their dialogue, keepsakes and the lesser
+techniques of the clans that have one. Data, dialogue and small builds only; no new systems. It
+ships as a datapack and map update between Beta 2 and Beta 3 and is played during Genin life.
+
+**Exit criteria**
+- Every clan's welcome quest completes for a clanless player, a member of another clan and a
+  clan-born player (a client game test per clan).
+- `quests.py --check` passes with all 25 welcome quests, and their keepsakes place in the
+  apartment.
 
 ### Beta 3: the Chunin Exams (+~3 h)
 
