@@ -150,6 +150,46 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "AKIMICHI_RUST": {
+      "name": "Akimichi Rust",
+      "ramp": [
+        "#43180f",
+        "#6a2716",
+        "#93391d",
+        "#b85428",
+        "#d9773c"
+      ]
+    },
+    "AKIMICHI_MAHOGANY": {
+      "name": "Akimichi Mahogany",
+      "ramp": [
+        "#2a0f0e",
+        "#451917",
+        "#642521",
+        "#86372c",
+        "#a8503b"
+      ]
+    },
+    "AKIMICHI_COPPER": {
+      "name": "Akimichi Copper",
+      "ramp": [
+        "#5a2010",
+        "#8a3418",
+        "#b44c22",
+        "#d66c33",
+        "#ef9455"
+      ]
+    },
+    "AKIMICHI_COCOA": {
+      "name": "Akimichi Cocoa",
+      "ramp": [
+        "#1e110e",
+        "#311b16",
+        "#46281f",
+        "#5f382a",
+        "#7e4d39"
+      ]
     }
   }
 }
