@@ -96,10 +96,10 @@ standard fields so tools and the journal can explain why a quest is or is not av
 |---|---|---|
 | Rank | `rank_at_least`, `rank_at_most` | Many Academy and Genin quests close once you outgrow them ("too important now to fetch cats") |
 | Place | `at_place`, `district` | The quest is offered only in its district; markers show only there |
-| Friendship | `friendship`, `bond_at_least` | Bond levels from the bond system |
-| Clan | `clan`, `clanless`, `clan_relation` | `clan_relation` is born, member (married or invited), other clan, or clanless |
-| Standing | `standing_at_least` | VF standing per district or per clan (Newcomer, Helping Hand, Good Neighbor, Pillar, Hero) |
-| Events | `event_active`, `flag` | Festivals, exams, clan days, story flags |
+| Friendship | `friendship`, `bond_meter`, `clan_friendship` | From the bond system |
+| Clan | `clan`, `clanless`, `clan_status` | `clan_status` is born, member (married or invited), other clan, or clanless. (`clan_relation` is the bond system's relation between two clans, used by politics quests) |
+| Standing | `standing` | Standing per district or per clan (Newcomer, Helping Hand, Good Neighbor, Pillar, Hero) |
+| Events and the village | `event_active`, `flag`, `village_mood`, `hook_open` | Festivals, exams, clan days, story flags; a district's mood; a live society hook |
 | Time and season | `time_between`, `calendar` | Night quests, Market Day quests, winter quests |
 | Prerequisites | `quest_state` | Chains and arcs |
 | Mode | `mode` | Classic-only or Varied-only content, rarely used |
@@ -130,8 +130,8 @@ than twelve.
 |---|---|
 | `side`, `filler`, `clan`, `district`, `bond` | Once per save |
 | `event` | Once per occurrence (yearly); the variation is rolled from the `events` stream |
-| `generated` | Whenever the simulation raises a matching hook; a template cools down per resident (14 days) and per district (2 days) |
-| Small favours (a generated subtype: carry, fetch, deliver) | Daily, at most three a day, worth little: the idle loop of village life |
+| `generated` | Whenever the simulation raises a matching hook (about one visible hook per in-game day; never two for the same roles) |
+| Small favours (`gen.favour` from low-urgency hooks) | As the simulation raises them, worth little: the idle loop of village life |
 
 ### 2.5 Failure and expiry
 
@@ -192,75 +192,110 @@ than twelve.
 
 ## 3. Society hooks and generated quests
 
-*BUILD (beta).* The bond system raises **society hooks**: tensions and needs that come out of the
-simulation (two families feuding over a fence, a newcomer who knows nobody, an elder who cannot
-carry her groceries). A generated quest is a template that claims a hook, casts its roles from the
-hook's subjects, and feeds the outcome back into the simulation.
+*BUILD (beta).* The bond system raises **society hooks**: tensions, needs and opportunities that
+come out of the village simulation (two clans feuding, a newcomer who knows nobody, an elder who
+needs a clan custom honoured). A generated quest is a template that binds to a hook, fills its
+slots from the hook's roles, and ends by resolving the hook with one of its outcomes, which feeds
+back into the simulation. Handcrafted quests stay authored; only templates bind to hooks.
 
-### 3.1 The hook, as these templates expect it
+### 3.1 The hook schema
 
-> **Draft.** This is our best guess at the hook schema; it will be aligned with the bond system's
-> real schema when the bond session sends it. Templates read only the fields below.
+The bond system's schema (branch `bonds`: `BONDS.md` §18 and §19, `SocietyHook.java`,
+`Village.java`). Templates read these fields and nothing else.
 
 ```json
-{
-  "id": "hook:0193",
-  "type": "feud",
-  "subjects": ["resident:4f1c", "resident:a20b"],
-  "groups": ["clan:inuzuka", "clan:aburame"],
-  "severity": 3,
-  "need": null,
-  "place": "place:residential.east_lane",
-  "raised": 412, "expires": 419,
-  "visibility": "gossip",
-  "tags": ["property", "pets"],
-  "claimed_by": null
-}
+{"format": 1,
+ "id": "hook.clan_feud.12",
+ "type": "clan_feud",
+ "roles": {"clan_a": "inuzuka", "clan_b": "aburame", "a": "resident:41", "b": "resident:87"},
+ "place": "village",
+ "raised": 84, "expires": 98,
+ "urgency": 0.42,
+ "requires": {"all": [{"rank_at_least": "genin"}]},
+ "stakes": {"relation": ["inuzuka", "aburame", 10]},
+ "outcomes": ["mediated", "sided_a", "sided_b"]}
 ```
 
 | Field | Meaning for quests |
 |---|---|
-| `type` | Which templates can claim it (see the table below) |
-| `subjects`, `groups` | Residents and groups the template casts as roles |
-| `severity` (1 to 5) | 1 to 2: a small favour; 3: a generated side quest; 4 to 5: escalates into an authored set piece or a council case (§7) |
-| `need` | For needs (an item, a service, a person) |
-| `place` | Where the quest starts; the district's quest budget applies |
-| `raised`, `expires` | Game days; the quest's window |
-| `visibility` | `private` (only a bond level reveals it), `gossip` (leads), `public` (markers and boards) |
-| `claimed_by` | Set when the player takes the quest, so the simulation stops resolving it on its own |
+| `type` | Which template binds to it (§3.2) |
+| `roles` | Residents and clans the template casts into its slots |
+| `place` | `village`, `district:<id>`, `clan:<id>` or `rank:<id>`; where the quest is offered, and which district's quest budget it uses |
+| `raised`, `expires` | In-game days; an unresolved hook lapses at `expires`, and the quest with it (expired, not failed) |
+| `urgency` (0 to 1) | Orders hooks on boards and in dialogue: urgent ones get a quest marker, mild ones only a gossip lead |
+| `requires` | Core conditions the player must meet before the quest is offered (rank, friendship, standing, age stage) |
+| `stakes` | What the outcome moves (a clan relation and by how much) |
+| `outcomes` | The outcome ids the template may pass to `resolve_hook` |
 
-**Lifecycle.** The simulation raises a hook → it becomes visible through the channels in §2.3 →
-the player claims it (the quest starts) or ignores it → it resolves (by the player, by the
-simulation, or by expiry) → the template's outcome writes back relationship deltas, clan
-relation deltas, standing and news.
+**Which hooks a player meets.** `Village.visibleHooks()` returns the hooks the player comes across:
+someone in it is known to them, or it is in their district or clan. In the 300-resident simulation
+that is about nine a week, roughly one per in-game day. The simulation keeps at most 16 open hooks,
+at most 4 of a type, and never two for the same roles, so the generated loop is steady without
+flooding the journal.
+
+**Lifecycle.** The simulation raises a hook → it becomes visible (urgency picks the channel: marker,
+board, gossip lead or overheard talk, §2.3) → the player takes the quest, which binds the template
+→ the template's last step calls `{"resolve_hook": [hook_id, outcome]}` → the bond system applies
+the outcome (relations, deeds, friendship, moods). Ignored, the hook lapses at `expires` and the
+simulation moves on.
+
+**Conditions and actions templates use.** Conditions: `hook_open`, plus the bond conditions
+`friendship`, `bond_meter`, `standing`, `clan_relation [a, b, label|n]`, `village_mood [community,
+label]`, `clan_friendship [clan, level]`. Actions: `resolve_hook`, `clan_event [a, b, delta, why]`,
+`clan_deed {clan, act}`, `mood_event [community, cheer, tension]`. Clan relation labels: feud,
+rivals, cool, neutral, friendly, allies. Moods: festive, proud, calm, uneasy, tense, grieving.
 
 ### 3.2 Templates
 
-Each template is data (`quests/templates/*.json`): the hook types it claims, its roles, an
-objective graph with slots, outcome branches and feedback. "Feedback" is what the outcome writes
-back to the bond system.
+Each template is data (`quests/templates/*.json`) shaped like this:
 
-| Template | Hook it claims | Roles | Objectives | Outcomes | Feedback | From |
-|---|---|---|---|---|---|---|
-| `gen.mediate_feud` | `feud` (two residents or two families; clan feuds at severity 3+) | both parties, a witness, an elder of each side if clans | Hear both sides (talk ×2), find the facts (inspect, ask a witness), bring them together (talk), propose a settlement (choose) | Reconciled; one side favoured; walked away | Reconciled: both +; feud hook closes; clan relation + small. Favoured: winner +, loser −, clan relation shifts. Walked away: hook may escalate | Beta 2 |
-| `gen.neighbour_favour` | `need` of a household (carry, fix, fetch, mind the shop) | the neighbour | One or two simple objectives (collect, deliver, perform a chore) | Done | Neighbour +; district standing small + | Beta 1 |
-| `gen.newcomer_settle` | `newcomer` (a resident who just moved in and knows nobody) | the newcomer, two potential friends nearby | Show them around (go ×3), introduce them (talk ×2), help them find work or a stall (choose) | Settled; settled but lonely | Newcomer gains ties with the introduced residents (the bond system adds edges); newcomer +; they may become a future quest giver | Beta 1 |
-| `gen.elder_errand` | `need` of an elderly resident | the elder, a relative or shopkeeper | Fetch, deliver, read a letter aloud, find their lost reading glasses | Done; done with a story told | Elder +; their family +; sometimes a lead to an authored side quest (elders know things) | Beta 1 |
-| `gen.escort_civilian` | `travel` (a civilian must cross the village at night, or reach the gate or a waystation) | the civilian, possible troublemakers | Escort (escort), protect if a hook tag says danger (protect) | Arrived; arrived shaken; failed (they were hurt and knocked out) | Civilian ±; their family ±; district standing ± | Beta 2 |
-| `gen.rivalry_spar` | `rivalry` (two young shinobi; or a resident who has a grudge with you) | the rival, a referee | Accept (talk), spar to 30% health at a training ground (defeat, sparring rules), shake hands or not (choose) | Won gracefully; won and gloated; lost; refused | Rivalry tension down (graceful) or up (gloat); respect +; refusing costs a little respect | Beta 1 |
-| `gen.lost_item_gossip` | `lost_item` (something precious missing; the owner has heard rumours) | the owner, 2 to 3 gossips, a finder or a culprit | Follow the gossip trail (talk ×2 to 3), find it (inspect at a place or deliver from a finder), return it (deliver) | Returned; returned and named the thief; kept quiet | Owner +; the gossips' trust in you +; a named thief −, and a new `feud` hook may appear | Beta 1 |
-| `gen.sick_relative` | `illness` in a household | the patient, a carer, the hospital or a Suzuran herbalist | Fetch medicine or herbs (collect or buy), bring a medic (talk, escort) | Recovered | Household +; the hospital or Suzuran +; Suzuran standing small + | Beta 2 |
-| `gen.shop_trouble` | `business` (a shop losing stock or customers) | the shopkeeper, a supplier, a competitor | Find out why (inspect, talk), fix it (deliver stock, catch a pilferer, broker a deal) | Saved; saved at a rival's cost | Shopkeeper +; a rival shop −; a discount for you | Beta 2 |
-| `gen.lost_pet` | `pet_lost` | the owner, the pet | Track it (your ninken helps; otherwise clues), bring it home (collect, deliver) | Returned | Owner +; Inuzuka standing small + if a ninken | Beta 1 |
-| `gen.apprentice_trial` | `career` (a youth wants a trade or a teacher) | the youth, the master, their parent | Persuade the master or the parent (talk, choose), help with a first job (perform) | Apprenticed; sent home | Youth +; master ±; a new tie between them | Beta 2 |
-| `gen.family_reconcile` | `estrangement` (relatives who stopped speaking) | two relatives, a go-between | Carry a letter, set up a meeting, keep the peace at dinner (choose) | Reconciled; not yet | Both ±; household tie repaired | Later (needs teen stage) |
-| `gen.clan_courtesy` | `clan_slight` (a clan feels the player has slighted it) | a clan elder | Bring the right gift (the clan's custom), attend a clan event, apologise properly (choose) | Forgiven | Clan relation with the player +; unblocks that clan's line | Beta 2 |
-| `gen.festival_help` | `event_need` (a stall short-handed, a lost child at a festival, lanterns to hang) | stallholder, child, parent | Short festival tasks | Done | Standing +; festival prizes | Beta 2 (Leaf Festival) |
-| `gen.matchmaking` | `romance_interest` (two single adults with chemistry who will not speak first) | both adults, a friend of each | Learn what each likes (talk), arrange a meeting (deliver an invitation), smooth it over (choose) | Together; friends; offended | Their romance meter (bond system) +; your friendship with both ± | **Post-beta, adults only**, enforced by `age_stage` on every role |
+```json
+{"format": 1, "id": "gen.mediate_feud", "kind": "generated", "hook": "clan_feud",
+ "slots": {"elder_a": "hook:a", "elder_b": "hook:b", "clan_a": "hook:clan_a", "clan_b": "hook:clan_b"},
+ "steps": {
+   "hear_a": {"objective": {"type": "talk", "who": "slot:elder_a"}, "next": "hear_b"},
+   "hear_b": {"objective": {"type": "talk", "who": "slot:elder_b"}, "next": "facts"},
+   "facts":  {"objective": {"type": "inspect", "target": "anchor:hook.place"}, "next": "settle"},
+   "settle": {"objective": {"type": "choose", "dialogue": "gen.feud.settle",
+               "options": {"fair": "mediated", "side_a": "sided_a", "side_b": "sided_b"}},
+              "on_done": [{"resolve_hook": ["hook:id", "choice"]}], "next": null}},
+ "rewards": {"ryo": 120, "xp": "band:side"}}
+```
 
-Templates in the beta: 13 (all but `family_reconcile` and `matchmaking`). Each template has two to
-four dialogue variants per role personality, so the same template sounds different from different
-residents.
+The hook's `requires` is always ANDed with the template's own unlock, so a template can be stricter
+than its hook but never looser. "Feedback" below is what the bond system applies for the outcome,
+plus any extra action the template adds.
+
+| Template | Hook type | Roles (slots) | Objectives | Outcomes → feedback | Slice |
+|---|---|---|---|---|---|
+| `gen.mediate_feud` | `clan_feud` (14 days; Genin) | `clan_a`, `clan_b`, `a`, `b` (a spokesperson of each clan) | Hear both sides, find the facts at the hook's place, bring the spokespeople together, choose a settlement | `mediated` → relation +10; `sided_a` / `sided_b` → relation −6, one clan stood by, the other sided against. The template adds a `mood_event` in the clans' district (cheer if mediated, tension otherwise) | Beta 2 |
+| `gen.mediate_quarrel` | `quarrel_to_mediate` (until it heals, 21 days; friendship 3 with either) | `a`, `b` | Hear each, carry a message or an apology, set up a meeting | `mediated` → they are on speaking terms again; `failed` → the quarrel stays | Beta 1 |
+| `gen.favour` | `favor_needed` (7 days; none) | `client` | One of eight **variants**, picked from the client's profile (age, job, household, pet, the current event): **neighbour** (carry, fix, mind the shop), **elder errand** (fetch, deliver, read a letter aloud), **lost pet** (track and return; your ninken helps), **escort** (see them across the village at night or to the gate), **sick relative** (fetch medicine or a Suzuran herbalist), **shop trouble** (find why stock vanishes, fetch a delivery), **apprentice** (persuade a master to take the client on), **festival help** (a stall short-handed, a lost child) | `done` → a helped deed with the client; `refused` → nothing | Beta 1 (neighbour, elder errand, lost pet); Beta 2 (the rest) |
+| `gen.lost_item_gossip` | `lost_item` (5 days; none) | `owner` (gossips and a finder are cast from the owner's ties) | Follow the gossip trail (talk ×2 to 3), find the item, then return it or keep it | `returned` → a helped deed; `kept` → a hurt deed (you keep the item; the owner may hear) | Beta 1 |
+| `gen.newcomer_settle` | `newcomer` (21 days; none) | `newcomer` (two neighbours to introduce are cast from the district) | Show them around (go ×3), introduce them, share a meal | `befriended` → a meal together, new ties for the newcomer; `ignored` → they stay alone | Beta 1 |
+| `gen.clan_courtesy` | `elder_request` (14 days; the player's clan, or Helping Hand standing with it) | `elder`, `clan` | Learn the custom (talk), bring what it asks (collect or craft the clan's gift, attend a clan rite), present it properly (choose the right words) | `done` → the clan hears you honoured its custom (`clan_deed`); `refused` → nothing | Beta 2 |
+| `gen.rivalry_cool` | `rivalry_heating` (14 days; friendship 3 with either) | `a`, `b` (two residents, often young shinobi) | Referee their spar at a training ground, talk each down, or spar the hothead yourself, then bring them to shake hands | `cooled` → friends again; `fanned` → a quarrel (which may raise a `quarrel_to_mediate` hook) | Beta 1 |
+| `gen.matchmaking` | `secret_crush` (28 days; friendship 6 with the admirer and the player at least teen; adult residents only, never offered while the player is a child) | `admirer`, `beloved` | Learn what the beloved likes, help the admirer prepare, arrange a meeting | `helped` → they become sweethearts; `kept_quiet` → nothing changes; `told` → the beloved knows, the admirer is embarrassed | **Later** (post-beta) |
+| `gen.forbidden_match` | `forbidden_match` (28 days; the player at least teen, friendship 3 with either; adults) | `a`, `b`, `clan_a`, `clan_b` | Hear the couple, face each clan's objection, decide whether to stand with them | `supported` → they marry and their clans grumble; `discouraged` → they part | **Later** (post-beta) |
+
+**In the beta:** 7 templates (`gen.mediate_feud`, `gen.mediate_quarrel`, `gen.favour` with its
+eight variants, `gen.lost_item_gossip`, `gen.newcomer_settle`, `gen.clan_courtesy`,
+`gen.rivalry_cool`). Beta 1 runs five of them (the quarrel, three favour variants, lost items, newcomers and
+rivalries); the clan feud and clan courtesy wait for Genin rank and clan standing.
+Each template has two to four dialogue variants per role personality, so the same template sounds
+different from different residents.
+
+**Asked of the bond system (optional):**
+
+- A `variant` hint on `favor_needed` (for example `escort`, `sick`, `shop`, `pet`, `apprentice`,
+  `festival`) so the simulation can say what kind of favour it raised; until then the template
+  picks the variant from the client's profile.
+- Later, an `estrangement` hook type (relatives who stopped speaking; roles `a`, `b`; outcomes
+  `reconciled`, `failed`) for a `gen.family_reconcile` template after the beta.
+
+**Escalation to council.** When a `clan_feud` lapses unresolved and the two clans' relation has
+reached the *feud* label, Progression may turn it into a **council case** at the next council day
+(§7.3). This is Progression's rule, not a hook type.
 
 ## 4. Clan quest lines
 
@@ -294,7 +329,7 @@ Finishing step 1 earns the clan's welcome keepsake and opens its lesser techniqu
 ability) at the bond level the roadmap sets; step 3 or 4 is where a clan may invite a clanless
 player to join it (ROADMAP §2).
 
-**How a line differs by who you are** (`clan_relation`):
+**How a line differs by who you are** (`clan_status`):
 
 | You are | Step 1 | Through the line |
 |---|---|---|
@@ -646,13 +681,18 @@ clans; quests are how the player moves them.
 
 ### 7.2 What clan relations do
 
-| Relation (the bond system's bands) | Village effect | Quest effect |
+| Relation (the bond system's labels) | Village effect | Quest effect |
 |---|---|---|
-| Allied | Shared training, joint festivals, intermarriage | Joint quests; a clan vouches for you to another |
+| Allies | Shared training, joint festivals, intermarriage | Joint quests; a clan vouches for you to another |
 | Friendly | Trade discounts between their shops | Easier welcome tests |
 | Neutral | — | — |
 | Cool | Members avoid each other's streets; prices rise | Some clan quests ask you to pick a side |
-| Feuding | Closed shops, scuffles, district tension hooks | Feud hooks escalate to severity 4 to 5: authored set pieces and council cases |
+| Rivals | Open competition, scuffles at training grounds | More `clan_feud` hooks between them |
+| Feud | Closed shops, district tension (`village_mood` uneasy or tense) | A lapsed `clan_feud` can become a council case (§3.2, §7.3) |
+
+Politics quests move relations with the bond system's actions: `resolve_hook` on a `clan_feud`
+(+10 mediated, −6 sided), and `clan_event [a, b, delta, why]` from authored clan steps and council
+outcomes.
 
 ### 7.3 Council days and disputes
 
@@ -683,7 +723,7 @@ choice offered.
 ## 8. Beta catalogue
 
 *BUILD (beta).* Every authored beta side quest. Rewards: R ryo, X XP (as a share of a level), S
-standing, F friendship, K keepsake or item, T technique. Generated quests (13 templates, §3.2) come
+standing, F friendship, K keepsake or item, T technique. Generated quests (7 templates, §3.2) come
 on top.
 
 ### Beta 1: the opening and the Academy
@@ -772,7 +812,7 @@ A content-only drop between Beta 2 and Beta 3 (data, dialogue and small builds; 
 |---|---|---|---|---|---|
 | Authored quests (Classic) | 17 | 45 | 17 | 7 | **86** |
 | Of which clan | — | 8 | 17 | — | 25 |
-| Generated templates active | 6 | 13 | 13 | 13 | 13 |
+| Generated templates active | 5 | 7 | 7 | 7 | 7 |
 | Thorough player, hours | ~2.5 | ~5.5 | ~1.2 | ~1 | **~10** |
 | Completionist, hours | ~3 | ~8.5 | ~1.7 | ~1.3 | **~14.5** |
 
@@ -787,8 +827,7 @@ A content-only drop between Beta 2 and Beta 3 (data, dialogue and small builds; 
 
 ## 9. Open questions
 
-1. **The hook schema.** §3.1 is a draft; it will be aligned with the bond system's schema, with the
-   generated templates, in one change when the schema arrives.
-
-Decided: clan welcomes ship in two waves (Beta 2 and Beta 2.5); council day is watch-only in the
-beta, with testifying from Chunin.
+Nothing is open. Decided: clan welcomes ship in two waves (Beta 2 and Beta 2.5); council day is
+watch-only in the beta, with testifying from Chunin; the generated templates follow the bond
+system's hook schema (§3.1). Two optional additions are asked of the bond system (a `variant` hint
+on `favor_needed`, and an `estrangement` hook type after the beta).

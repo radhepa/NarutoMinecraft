@@ -344,8 +344,10 @@ Conditions in the beta: `flag`, `rank_at_least`, `level_at_least`, `quest_state`
 `clan`, `clanless`, `age_stage`, `time_between`, `calendar` (season, day, weekday), `at_place`,
 `has_item`, `has_ryo`, `knows_technique`, `nature`, `mode` (classic or varied), `difficulty`,
 `random` (from the quest's seed stream), and for side content `rank_at_most`, `district`,
-`standing_at_least` (per district or clan), `bond_at_least` (the bond system's levels),
-`clan_relation` (born, member, other clan, clanless) and `event_active`. Combinators: `all`, `any`,
+`clan_status` (born, member, other clan, clanless) and `event_active`; the bond system adds
+`friendship`, `bond_meter`, `standing`, `clan_relation`, `clan_friendship`, `village_mood` and
+`hook_open`, and the actions `resolve_hook`, `clan_event`, `clan_deed` and `mood_event`
+([SIDE_QUESTS.md §3](SIDE_QUESTS.md#3-society-hooks-and-generated-quests)). Combinators: `all`, `any`,
 `not`.
 
 Actions in the beta: `set_flag`, `start_quest`, `advance_quest`, `fail_quest`, `give_item`,
@@ -1065,17 +1067,17 @@ forest night watch (Ch 16) and the finals (Ch 19). Low friendship changes how th
 Optional, outside the main-path hours: `side`, `filler`, `clan`, `bond`, `event`, `district` and
 `generated` quests, as data in the Adventure datapack, found through notice boards, quest markers,
 gossip leads, overheard talk, clan summons and your own apartment block. The full design (the
-framework, the generated-quest templates that run on the bond system's society hooks, all 25 clan
+framework, the seven generated-quest templates that bind to the bond system's society hooks, all 25 clan
 lines, district quests, filler arcs, inter-clan politics and the catalogue) is in
 **[SIDE_QUESTS.md](SIDE_QUESTS.md)**.
 
 | Slice | Authored quests | Highlights | Generated templates active |
 |---|---|---|---|
-| Beta 1 | 17 | The filler arc **The Ramen Thief** (3 parts); your apartment block's neighbours; the Academy and the shrine; one bond quest per classmate | 6 |
-| Beta 2 | 45 | The filler arcs **Lanterns on the Lake** and **Dogs and Bugs**; the market's price war, the ferryman, the hospital night shift; the Leaf Festival; a council day watched from the gallery; **the eight great clans' welcome quests** (wave 1) | 13 |
-| Beta 2.5 | 17 | A content-only drop: **the welcome quests of the other 17 clans** (wave 2: the seven smaller noble clans and the ten minor clans) | 13 |
-| Beta 3 | 7 | Exam week in the village; night-watch bond talks | 13 |
-| **Beta** | **86** | About 10 hours for a thorough player, 14.5 for a completionist | 13 templates |
+| Beta 1 | 17 | The filler arc **The Ramen Thief** (3 parts); your apartment block's neighbours; the Academy and the shrine; one bond quest per classmate || 5 |
+| Beta 2 | 45 | The filler arcs **Lanterns on the Lake** and **Dogs and Bugs**; the market's price war, the ferryman, the hospital night shift; the Leaf Festival; a council day watched from the gallery; **the eight great clans' welcome quests** (wave 1) || 7 |
+| Beta 2.5 | 17 | A content-only drop: **the welcome quests of the other 17 clans** (wave 2: the seven smaller noble clans and the ten minor clans) || 7 |
+| Beta 3 | 7 | Exam week in the village; night-watch bond talks || 7 |
+| **Beta** | **86** | About 10 hours for a thorough player, 14.5 for a completionist | 7 templates |
 
 In Varied saves each slice draws its one-offs, neighbours and some filler arcs from larger pools
 (for example Beta 2: 8 one-offs shown from a pool of 20, 2 filler arcs from 3); district chains,
