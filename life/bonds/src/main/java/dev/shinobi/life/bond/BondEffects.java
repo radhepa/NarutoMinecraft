@@ -29,7 +29,7 @@ import java.util.Map;
  * {"celebrate_birthday": "role:x"}
  * {"bond_flag":         ["role:x", "met_family"]}
  * {"set_flag":          ["story.kindling.awakened", true]} the flags the bond engine reads (Core keeps the rest)
- * {"kindle":            "role:teammate_a"}                 a use of Kindling Bond, counted
+ * {"kindle":            "role:teammate_a"}                 a use of Kindling Bond: counted, and it builds resonance
  * {"resolve_hook":      ["hook.clan_feud.12", "mediated"]} a side quest settles a society hook
  * {"clan_event":        ["inuzuka", "aburame", 10, "festival"]}
  * {"clan_deed":         {"clan": "hyuga", "act": "honored_custom"}}  witnessed by the clan's members
@@ -84,7 +84,7 @@ public final class BondEffects {
             case "bond_flag" -> each(w, at(arg, 0), who -> { w.setBondFlag(who, str(at(arg, 1))); return ""; });
             case "set_flag" -> { w.setFlag(str(at(arg, 0)), !(at(arg, 1) instanceof Boolean b) || b); yield ""; }
             case "ask_question" -> each(w, at(arg, 0), who -> { Questions.ask(w, who, str(at(arg, 1))); return ""; });
-            case "kindle" -> each(w, arg, who -> w.kindle(who).natureCasts() > 0 ? "" : "no_bond");
+            case "kindle" -> each(w, arg, who -> w.kindle(who).tier() != Kindling.Tier.NONE ? "" : "no_bond");
             case "resolve_hook" -> w.village() == null ? "no_village" : w.village().resolve(str(at(arg, 0)), str(at(arg, 1)));
             case "clan_event" -> {
                 if (w.village() == null) yield "no_village";

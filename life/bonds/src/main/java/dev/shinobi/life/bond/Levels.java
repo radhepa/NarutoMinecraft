@@ -27,9 +27,9 @@ public final class Levels {
     /** What each level opens; text keys {@code bond.perk.<n>} carry the words. */
     private static final String[] PERKS = {"", "They remember you between visits.", "Their favorite things; their first bond quest.",
             "Village news; they spar with you.", "A friend: they expect you on their birthday.", "Heart-to-heart talks; their values.",
-            "Their dream; Kindling Bond can borrow their nature.", "They trust you with secrets; they would join your clan; dating (teen and up).",
-            "Kindling Bond can borrow a technique; a confession (teen and up).", "A small gift saved for you each day.",
-            "A bond for life: Kindling at full strength; marriage (adults)."};
+            "Their dream; Kindling Bond: Spark.", "They trust you with secrets; they would join your clan; dating (teen and up).",
+            "Kindling Bond: Flame; a confession (teen and up).", "A small gift saved for you each day.",
+            "A bond for life: Kindling Bond: Blaze; marriage (adults)."};
     /** Levels at which features open (quests and dialogue use the numbers, not these names). */
     public static final int FIRST_BOND_QUEST = 2, NEWS = 3, FRIEND = 4, HEART_TO_HEART = 5, KINDLE_NATURE = 6, RECRUIT = 7, DATING = 7,
             KINDLE_TECHNIQUE = 8, CONFESS = 8, DAILY_GIFT = 9, KINDLE_FULL = 10, MARRY = 10;

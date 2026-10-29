@@ -18,6 +18,8 @@ public final class DialogueKeys {
         for (var s : Conflict.State.values()) if (s != Conflict.State.NONE) { keys.add("bond.greet." + s.id()); keys.add("bond.conflict." + s.id()); }
         for (var s : Courtship.Stage.values()) if (s != Courtship.Stage.NONE) keys.add("bond.romance." + s.id());
         for (var t : Kindling.Tier.values()) keys.add("bond.kindling." + t.id());
+        for (String f : Kindling.FORMS) keys.add("bond.bonfire." + f);
+        keys.add("bond.kindling.dimmed"); keys.add("bond.kindling.nature_trial");
         keys.add("bond.jealous"); keys.add("bond.birthday.missed");
         for (var a : Act.values()) {
             if (!a.remembered()) continue;
@@ -45,6 +47,7 @@ public final class DialogueKeys {
         for (String topic : List.of("exam", "mission", "festival", "training", "date")) keys.add("followup." + topic);
         for (var label : Mood.Label.values()) keys.add("village.mood." + label.id());
         for (String r : REACTIONS) keys.add("reaction." + r);
+        keys.add("callback.contradict");
         for (var e : SocietyHook.OUTCOMES.entrySet()) {
             keys.add("hook." + e.getKey() + ".offer");
             for (String o : e.getValue()) keys.add("hook." + e.getKey() + "." + o);
@@ -60,6 +63,7 @@ public final class DialogueKeys {
             if (!q.about().isEmpty()) keys.add("answer.contradiction." + q.about());
         }
         for (String r : REACTIONS) keys.add("reaction." + r);
+        keys.add("callback.contradict");
         return List.copyOf(keys);
     }
     public static final List<String> REACTIONS = List.of("touched", "pleased", "amused", "impressed", "fine", "stung_but_respects", "hurt", "noticed_contradiction");
