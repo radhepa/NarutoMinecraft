@@ -1,0 +1,136 @@
+{
+  "id": "t1810_desk_runner",
+  "kind": "top",
+  "name": "Desk Runner",
+  "gender": "unisex",
+  "texture": "tops/t1810_desk_runner.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "strap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        -36
+      ],
+      "origin": [
+        -0.5,
+        -7.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "strap_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        36
+      ],
+      "origin": [
+        -0.5,
+        -7.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        15,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "scroll_case",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        4.6,
+        3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        36
+      ],
+      "origin": [
+        -1,
+        -3,
+        -1
+      ],
+      "size": [
+        2,
+        7,
+        2
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "spare_scroll",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        90
+      ],
+      "origin": [
+        -1,
+        -2.0,
+        -1
+      ],
+      "size": [
+        2,
+        4,
+        2
+      ],
+      "uv": [
+        19,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved navy shirt piped in sand over mesh forearms, a satchel strap and a scroll case."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "t1809_wave_wrap_blouse",
+  "kind": "top",
+  "name": "Wave Wrap Blouse",
+  "gender": "female",
+  "texture": "tops/t1809_wave_wrap_blouse.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "obi_bow",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.4,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -1,
+        0
+      ],
+      "size": [
+        5,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Wrap blouse under a sand collar, a sea-blue obi with a flat bow, elbow sleeves printed with waves."
+}

@@ -1,0 +1,162 @@
+{
+  "id": "t1807_harbor_tunic",
+  "kind": "top",
+  "name": "Harbor Tunic",
+  "gender": "unisex",
+  "texture": "tops/t1807_harbor_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        3.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        3.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "sash_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sash_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        9.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        34,
+        8
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Rolled-sleeve work tunic, a sand sash with hanging ends, a wave stitched along the hem."
+}

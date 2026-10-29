@@ -1,0 +1,18 @@
+{
+  "id": "t1803_academy_wave_tee",
+  "kind": "top",
+  "name": "Academy Wave Tee",
+  "gender": "unisex",
+  "texture": "tops/t1803_academy_wave_tee.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Loose sand tee with a navy collar and short sleeves, a sea-blue wave across the chest."
+}
