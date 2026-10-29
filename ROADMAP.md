@@ -41,7 +41,7 @@ it can and on custom animation where it must.
 | Naruto wardrobe: hair, tops, bottoms, headwear, faces, palettes, eye colors (Sharingan, Byakugan), compiled from Python | `tools/wardrobe/` → `src/main/resources/assets/narutominecraft/wardrobe/` |
 | 21 characters with a `rank`: Genin, Jonin, ANBU and kage/signature looks | `tools/wardrobe/characters/`, renders in `docs/renders/` |
 | Clan system: clan JSON, resident mixing after VF's OutfitFactory, id blocks per clan | [CLANS.md](CLANS.md), `tools/wardrobe/clans/` |
-| Eight clans (Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka) | in progress on `clan/*` branches (not on `origin` yet) |
+| Fifteen clans with id blocks in [CLANS.md](CLANS.md): Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka, Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko | in progress on `clan/*` branches |
 
 | Missing | Notes |
 |---|---|
@@ -130,13 +130,40 @@ map builder can place it again.
 | Ninja Academy | By hand | A large building at the base of the Hokage Rock, recognizable by the tree with a swing out front and a big 火 sign. Classroom, yard, target posts; the vertical slice. The office part is often confused with the Hokage Residence, but they are two buildings ([Ninja Academy file](https://naruto.fandom.com/wiki/File:Ninja_Academy.png), [Hokage Residence](https://naruto.fandom.com/wiki/Hokage_Residence)) |
 | Ichiraku Ramen | By hand (small) | A VF tavern building, so the tavern code seats and serves residents |
 | Barbecue house, dango shop, flower shop, weapon shop | Generated or small hand builds | Flower shop belongs to the Yamanaka compound |
-| Clan compounds (8) | Hand-built core, generated houses | Each has a gate, a main hall, a training yard and a few homes. Senju: wood and tree motifs; Uzumaki: memorial shrine with spiral crests; Uchiha: walled quarter on the village's outskirts with the fan crest, and the Military Police HQ in a remote part of the village ([Uchiha Clan](https://naruto.fandom.com/wiki/Uchiha_Clan)); Hyuga: formal estate with a dojo; Nara: house by the deer forest; Akimichi: big kitchen hall; Yamanaka: flower shop and greenhouse; Inuzuka: kennels and an open run |
+| Clan compounds and clan homes (15) | Hand-built core, generated houses | Eight great compounds and seven smaller clan homes; see [Clan quarters](#clan-quarters) below |
 | Training grounds | Generated props, Ground 3 by hand | Ground 3: a glade with three stumps in a row, a polished kunai-shaped memorial stone below them, a large deep river with forest on both banks and mountains in view ([Third Training Ground](https://naruto.fandom.com/wiki/Third_Training_Ground)). The Ino-Shika-Cho memorial goes near the Nara forest ([Yamanaka, Nara, and Akimichi Clan Memorial](https://naruto.fandom.com/wiki/Yamanaka,_Nara,_and_Akimichi_Clan_Memorial)). Others: target posts, logs, a lake for water-walking, a cliff for wall-running |
 | Hospital | By hand | Works with VF knockouts: revival happens here |
 | Chunin Exam arena | By hand | The stadium for the finals: about 64 blocks across the floor, tiered seating for ~150 residents on VF `Seat` entities, a Kage box. The search found no canon description, so design it from the anime art ([Chūnin Exams](https://naruto.fandom.com/wiki/Ch%C5%ABnin_Exams)) |
 | Forest of Death | Generated | Training Ground 44, north of Training Ground 43. A metal fence with 44 evenly spaced gates, a river through it, and a tower in the exact centre (by hand) holding an arena for the preliminaries. Its canon radius of about 10 km is compressed to a 384-block circle outside the wall. Giant trees 4 to 7 blocks thick and 60 to 90 tall from a tree generator make it tree-hopping terrain ([Forest of Death](https://naruto.fandom.com/wiki/Forest_of_Death)) |
 | ANBU HQ | By hand, hidden | Under the Hokage Rock, only reachable as ANBU |
 | Police HQ, the market, the main street | Generated around hand-built centres | |
+
+### Clan quarters
+
+Fifteen clans live in the village ([CLANS.md](CLANS.md)). The eight large clans get a **compound**:
+a gate, a main hall, a training yard and 6 to 12 generated homes in the clan's style, with 15 to 30
+residents. The seven small clans get a **clan home**: one hand-built house or dojo with its
+signature feature, plus 2 to 5 generated homes in an ordinary district, with 4 to 10 residents.
+Each quarter is one plot group in the map layout file, filled with that clan's residents from its
+clan JSON.
+
+| Clan | Kind | Where | Signature build |
+|---|---|---|---|
+| Senju | Compound | Beside the Hokage Residence, under the Rock: the founders' clan | Wooden hall grown around a living tree; founders' shrine |
+| Uzumaki | Compound (small, mostly memorial) | Next to the Senju, their old allies | Memorial shrine with the spiral crest and a sealing-mask hall; few living members |
+| Uchiha | Compound | On the village's outskirts, walled ([Uchiha Clan](https://naruto.fandom.com/wiki/Uchiha_Clan)) | Fan crest on every wall, the shrine with a hidden meeting room, the Military Police HQ in a remote corner |
+| Hyuga | Compound | Central, a short walk from the Residence | Formal estate in two halves, main and branch house, with a dojo and a koi pond |
+| Nara | Compound | At the edge of the village, against the clan's deer forest | Plain house, the deer forest (protected; deer as mobs), the Ino-Shika-Cho memorial |
+| Akimichi | Compound | By the market street | Big kitchen hall and storehouse; the barbecue house nearby is theirs |
+| Yamanaka | Compound | On the main street | Flower shop at the front, a greenhouse and a quiet hall for mind techniques behind |
+| Inuzuka | Compound | By the main gate, next to the outer training fields | Kennels, a veterinary clinic and an open run for the ninken |
+| Sarutobi | Clan home | Near the Residence (the Third Hokage's family) | Family house with the monkey crest and a fire-training yard |
+| Aburame | Clan home | Wooded edge of a residential district | Dark timber house with insect gardens and hive walls |
+| Hatake | Clan home | A quiet lane | A lone, worn family house (a near-vanished clan), its own small yard with ninken kennels |
+| Kurama | Clan home | An old artists' lane | House with a painting studio; genjutsu-themed scrolls and screens |
+| Shimura | Clan home | Close to the Hokage Rock, near the hidden ANBU entrance | Stern house; its cellar links to the Root storyline (Phase 5) |
+| Yuhi | Clan home | Residential district with gardens | House in a grove of old trees used for genjutsu training |
+| Gekko | Clan home | By the training grounds | Kenjutsu dojo with a moon-viewing platform |
 
 ### How the map is made
 
@@ -263,7 +290,7 @@ Minecraft day is 20 minutes, so a year is about 37 hours of play). Each event is
 | New Year | Winter 28 → Spring 1 | Shrine visit at midnight, the Hokage's address, the succession if due | Calendar, VF news |
 | Chunin Exams | Spring 15 to 21 and Autumn 15 to 21 | Written test (day 15), Forest of Death (16 to 20), finals (21). Run every season with NPC teams; the player joins when eligible, so the world keeps its rhythm | Fishing `Contest` as the pattern for entrants and results; `Seat` for spectators |
 | Academy graduation | Spring 7 and Autumn 7 | Ceremony in the yard; the player's own graduation is the first one | Lessons in VF's routine |
-| Clan days (8) | One per clan per year | Hyuga ceremony at the estate, Akimichi feast, Inuzuka ninken pairing, Nara deer count, Yamanaka flower festival, Uchiha police parade, Senju and Uzumaki memorial at the shrine | Party behavior, Hearth & Harvest dishes |
+| Clan days (15) | One per clan per year, spread so no two fall in the same week | Senju and Uzumaki: founders' memorial at the shrine (Spring); Hyuga: main and branch house ceremony; Akimichi: harvest feast (Autumn); Inuzuka: ninken pairing, where children get their first pup; Nara: deer count in the forest; Yamanaka: flower festival (Spring); Uchiha: police parade; Sarutobi: the Will of Fire lantern walk (New Year eve); Aburame: insect night, with fireflies over the gardens (Summer); Hatake: a quiet visit to the memorial stone; Kurama: painting exhibition; Yuhi: grove viewing (Spring); Gekko: moon-viewing kenjutsu duels (Autumn full moon); Shimura: none in public, it is a Root story beat instead | Party behavior, Hearth & Harvest dishes, VF pets for the pups |
 | Border incident | Random, about weekly | Rogue ninja or bandits at a gate or on a road; a short fight, a deed | VF guard call-out |
 | Crisis arcs | Story-gated | Multi-stage, once each: (1) an invasion during the Chunin Exam finals, (2) a rogue-ninja infiltration in the Jonin era, (3) the attack that decides the succession. Districts can be damaged and are restored by the map builder afterwards | Guards, knockouts, the arena |
 
@@ -347,6 +374,12 @@ from Chunin on.
 **Clan techniques.** Each clan grants one signature technique to members (see open questions on
 whether the player picks a clan) and teaches it to friends of the clan later.
 
+**Genjutsu.** Three clans (Kurama, Yuhi, Uchiha) use illusions, so genjutsu is one shared effect
+type: a caught target sees a client-side illusion (fake entities, a distorted screen, a wrong HUD)
+and moves slowly. It breaks when the target weaves the release sign (Ram, then the cast key),
+takes damage, or a teammate touches them. NPCs under genjutsu stand dazed or attack the nearest
+illusion.
+
 | Clan | Technique | Minecraft mechanic | Animation |
 |---|---|---|---|
 | Hyuga | Byakugan, Gentle Fist | Living things within 32 blocks glow through walls (like Spectral); Gentle Fist hits drain the target's chakra instead of only health | eye veins (face decal), palm strikes |
@@ -357,6 +390,13 @@ whether the player picks a clan) and teaches it to friends of the clan later.
 | Inuzuka | Fang over Fang | A spinning dash attack together with your ninken (a tamed wolf, through VF's pet code) | spin |
 | Senju | Wood Release | Grows a short-lived wooden barrier or binding roots | sign, wood growth |
 | Uzumaki | Sealing chains, large chakra | 30% more chakra; chains that hold one target for 4 s | chains |
+| Sarutobi | Fire mastery, Monkey staff | Fire jutsu cost 20% less; a summoned long staff with 4.5 reach that uses the combo system | staff combo |
+| Aburame | Insect swarm | A swarm entity that follows a target for 10 s, drains chakra and marks it (it glows for the caster) | arms open, swarm particles |
+| Hatake | Ninken trackers, chakra sabre | Summon a ninken that tracks a mission target or hidden enemy and leads you there; the white sabre is a tanto whose combo finisher is a lightning dash | summon, sabre strikes |
+| Kurama | Painted illusion | Genjutsu: a painted world closes over one target for 6 s | brush strokes in the air |
+| Shimura | Vacuum blades, sealing | Wind blades in a fan that cut through blocks of guard; a sealing curse used on Root missions | breath blades |
+| Yuhi | Tree binding | Genjutsu: the target sees itself bound by a tree and cannot move for 4 s; the caster appears behind it | sign, step-behind |
+| Gekko | Dance of the Crescent Moon | Kenjutsu: two short-lived clones appear and all three strike a target at once from three sides | three-way slash |
 
 ### Ninja tools
 
@@ -559,14 +599,16 @@ release jars and the map.
 ### Phase 4: Clans
 
 **Deliverables**
-- The eight clans merged (from `clan/*`), their compounds built, their residents populating them.
-- Clan choice for the player (if confirmed) and the eight clan techniques, except Mind Transfer
-  if it slips (then Phase 5).
-- Clan days in the calendar; clan dialogue pools.
+- **4a:** the eight great clans merged (from `clan/*`), their compounds built and populated,
+  their eight techniques (Mind Transfer may slip to Phase 5), their clan days.
+- **4b:** the seven smaller clans (Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko),
+  their clan homes, techniques and days, and the shared genjutsu effect. Shimura's Root thread
+  waits for Phase 5.
+- Clan choice for the player (if confirmed); clan dialogue pools.
 
 **Done when**
-- Each compound has its residents living there with homes, and each clan technique works for the
-  player and for a clan sparring partner.
+- All 15 clan quarters have their residents living there with homes, and each clan technique
+  works for the player and for a clan sparring partner.
 
 ### Phase 5: Jonin and ANBU
 
@@ -600,7 +642,7 @@ release jars and the map.
 |---|---|---|
 | Player animation | VF poses residents only; the player model and first person are new code, and other mods touch them | Spike in Phase 0; keep clips in VF's format so the tools carry over |
 | Combat feel | Minecraft combat is coarse (hurt invulnerability, 20 tick/s server, client-side movement) | Server-decided hits with generous windows; test at 100 ms early |
-| Map building cost | 300+ buildings and landmarks | Generate everything repeatable; hand-build only the landmarks; one district per phase |
+| Map building cost | 300+ buildings and landmarks, 15 clan quarters | Generate everything repeatable; hand-build only the landmarks; one district per phase |
 | VF coupling | VF changes often (2.29 now); a change can break our mixins | Prefer VF public APIs; pin a VF version per release; run VF's tests with our jar |
 | Performance | 150 to 250 residents with routines and societies in one area | Measure in Phase 0 and Phase 3; split Konoha into several VF settlements (one per district) if one society is too big |
 | Minecraft 26.3 | A very new version: few libraries, mod compatibility | Stay on VF's version; avoid extra library dependencies |
@@ -608,8 +650,9 @@ release jars and the map.
 
 ### Open questions for the owner
 
-1. **Clan choice.** Does the player pick a clan at the start (and get its technique), stay
-   clanless and learn from clans by friendship, or both?
+1. **Clan choice.** Does the player pick one of the 15 clans at the start (and get its
+   technique), stay clanless and learn from clans by friendship, or both? If they pick, are the
+   near-vanished clans (Uzumaki, Hatake) and Shimura, tied to Root, open to the player?
 2. **Story canon.** Original characters only (as the wardrobe has now), or the show's named
    characters and plot (the bell test, the invasion) as written? This decides dialogue, quests and
    IP exposure.
