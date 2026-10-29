@@ -124,11 +124,11 @@
   },
   "outfit": {
    "where": "home",
-   "note": "the wardrobe chest in your home holds every outfit you own; the tailor sells palettes and variants (100 to 600 ryo)"
+   "note": "the wardrobe cabinet in your home (item:wardrobe_cabinet) holds every outfit you own; the tailor sells outfits by rank, alterations and dye"
   },
   "headwear": {
    "where": "home",
-   "note": "from Genin the forehead protector is one of them"
+   "note": "kept in the wardrobe cabinet; from Genin the forehead protector is one of them"
   }
  },
  "time_skip_restyle": [

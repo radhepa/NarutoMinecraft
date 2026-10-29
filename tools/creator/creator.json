@@ -116,8 +116,8 @@
     "hair": {"where": "barber", "cost": 40},
     "hair_color": {"where": "barber", "cost": 60},
     "marks": {"where": "barber", "cost": 30, "note": "face paint and chosen marks; scars the story gives stay"},
-    "outfit": {"where": "home", "note": "the wardrobe chest in your home holds every outfit you own; the tailor sells palettes and variants (100 to 600 ryo)"},
-    "headwear": {"where": "home", "note": "from Genin the forehead protector is one of them"}
+    "outfit": {"where": "home", "note": "the wardrobe cabinet in your home (item:wardrobe_cabinet) holds every outfit you own; the tailor sells outfits by rank, alterations and dye"},
+    "headwear": {"where": "home", "note": "kept in the wardrobe cabinet; from Genin the forehead protector is one of them"}
   },
 
   "time_skip_restyle": {"_doc": "At each time skip the Years Later mirror opens: hair, hair color, brows, marks and outfit may be re-picked for free, from the new stage's lists.", "fields": ["hair", "hair_color", "brows", "marks", "outfit", "headwear"]},

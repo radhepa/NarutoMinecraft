@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * Changing your look after creation (CHARACTER_CREATION.md, "Locked and changeable"): the barber for hair, hair
- * color, brows and marks; your home's wardrobe chest for outfits and headwear; the settings screen for pronouns; the
+ * color, brows and marks; your home's wardrobe cabinet for outfits and headwear; the settings screen for pronouns; the
  * rest is locked. Every change is
  * checked against the same choices as the creator, for the player's origin and current stage, so a restyle can never
  * reach what the creator could not.

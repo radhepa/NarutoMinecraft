@@ -57,7 +57,7 @@ python3 tools/creator/creator.py --roll 42    # what Roll a life suggests for sa
 | 2 Body | Body A or B, complexion (6), eye shape, brows, eye color (5) | Open to everyone | Brows at the barber; the rest locked |
 | 3 Hair | Hairstyle (63), hair color (13) | Every collection's styles; clan styles and colors are not offered | The barber; free at each time skip |
 | 4 Face | Up to 2 marks; headwear | No forehead protector before Genin | Marks at the barber; headwear at home |
-| 5 Outfit | A starting outfit and its colors | The Academy collection's 8 Academy outfits | Home's wardrobe chest, the tailor; rank outfits come with promotions |
+| 5 Outfit | A starting outfit and its colors | The Academy collection's 8 Academy outfits | Home's wardrobe cabinet, the tailor; rank outfits come with promotions |
 | 6 Roots | Temperament, knack, affinity | Flavor and small leanings, never a story choice | Locked; the Genin ceremony still offers every nature |
 | 7 Review | Confirm | Everything on one page with what locks | — |
 
@@ -223,8 +223,14 @@ Every player starts with the same numbers; Roots add only small leanings. From t
 | Techniques, nature | None; Clone, Transformation and Substitution are learned in Beta 1; the first nature at the Genin ceremony | Combat |
 | Key item, from the creator | `half_charm`: a small charred wooden charm, half of a matched pair; cannot be dropped, sold or stored away | Story, Items |
 | In the prologue | The charm and the prologue clothes | Items |
-| At the apartment, Ch 1 | Your chosen outfit (in the wardrobe chest), a futon or bed, a chest, the apartment key; the stipend's first 30 ryo | Items, Life |
-| From the instructor, Ch 2 | Practice kunai and practice shuriken | Items |
+| At the apartment, Ch 1 (`kit:start`) | `item:apartment_key`, `item:futon`, `item:storage_chest`, `item:wardrobe_cabinet` (your chosen outfit already inside, as an `item:folded_outfit`), `item:mailbox`, `item:cooking_pot`; 100 ryo on day 1 (the first 30-ryo stipend and a 70-ryo welcome gift), then 30 ryo every morning | Items, Life |
+| At enrolment, Ch 1 (`kit:academy`) | `item:enrolment_form`, `item:academy_textbook` | Items |
+| From the instructor, Ch 2 | `item:practice_kunai` ×5, `item:practice_shuriken` ×10, `item:training_headband`, `item:ninja_sandals` | Items |
+| At promotion | `kit:genin` (forehead protector, tool pouch, kunai, shuriken, ration bars, a Genin outfit); `kit:chunin` (flak vest, a Chunin outfit) | Items |
+
+The kit ids are the items session's (`data/items/kits.json`). Your outfits live in the
+`wardrobe_cabinet`, a furniture block in your home: you change clothes there, and every outfit you
+are given or buy goes into it as a folded outfit.
 
 ## 7. Locked and changeable
 
@@ -238,13 +244,13 @@ Every player starts with the same numbers; Roots add only small leanings. From t
 | Hairstyle | Changeable | Barber; free on the Years Later mirror | 40 ryo |
 | Hair color | Changeable | Barber | 60 ryo |
 | Marks | Changeable (chosen marks; scars the story gives stay) | Barber | 30 ryo |
-| Outfit and colors | Changeable: every outfit you own | Home's wardrobe chest; the tailor sells palettes and variants (100 to 600 ryo, ROADMAP §7) | free |
-| Headwear | Changeable; from Genin the forehead protector is one of them | Home's wardrobe chest | free |
+| Outfit and colors | Changeable: every outfit you own | Home's wardrobe cabinet; the tailor sells outfits by rank (100 Academy, 180 Genin, 320 Chunin, 480 Jonin), alterations 30, dye 20 | free |
+| Headwear | Changeable; from Genin the forehead protector is one of them | Home's wardrobe cabinet | free |
 | Temperament, knack, affinity | Locked (the Genin ceremony still offers every nature) | — | — |
 
 Every restyle is checked against the creator's own lists for your current stage (`Restyle.apply`),
-so the barber can never reach what the creator could not. **The barber** is a new civilian shop
-(asked of the map: a chair in the bath house or beside the tailor). Costs are data (`changes` in
+so the barber can never reach what the creator could not. **The barber** is a civilian shop
+on the market street from Beta 1 (the items session's `service.restyle.*`, at these prices). Costs are data (`changes` in
 `creator.json`), tuned with the economy.
 
 ## 8. Randomising
@@ -285,7 +291,7 @@ The model is scaled, never swapped (ROADMAP §7, "Growing up"), so every piece f
   messy mop becomes shaggy layers) and you may pick again. Styles that waited for the stage open
   here.
 - **Outfits follow the rank.** The child stage wears Academy outfits; a promotion gives the rank's
-  outfit (Genin at graduation, Chunin in Beta 3, Jonin later) into the wardrobe chest, and at a time
+  outfit (Genin at graduation, Chunin in Beta 3, Jonin later) into the wardrobe cabinet, and at a time
   skip an outfit the new stage no longer offers becomes the stage's outfit for your rank, keeping
   your colors when it can (`GrowUp.grow`). Teens choose from 65 to 68 Genin and Chunin outfits,
   adults from 62 to 66 Chunin, Jonin, ANBU and Kage outfits, across the shinobi collections.
@@ -439,7 +445,7 @@ adult look.
   `CreatorRules.validateCreation` on receipt, and the result on Core's player record.
 - **Age-stage scaling** on the real player (the `scale` attribute and the poser's head), driven by
   `AgeStageChanged`.
-- The **barber** (a VF-style shop at a map anchor), the **wardrobe chest** in furnish mode, the
+- The **barber** (a VF-style shop at a map anchor), the **wardrobe cabinet** in furnish mode, the
   **Years Later mirror** after a `time_skip` action, the **prologue look** swap at Ch 1, the
   pronoun setting.
 - Combat reading the knack and affinity; dialogue reading the tokens and `player.temperament`.
@@ -466,6 +472,5 @@ Asked of the sibling sessions (owners decide):
 - **Combat:** the knack's +5% and practice item, and the affinity bonus at the ceremony, as ids in
   its data.
 - **Items:** `half_charm` (an undroppable key item), the Ch 1 apartment kit, the practice tools and
-  the knack's practice items as ids in the items registry; the wardrobe chest as an item or a furniture block.
+  the knack's practice items as ids in the items registry (the starting kits are registered as `kit:start`, `kit:academy`, `kit:genin`, `kit:chunin`).
 - **Dialogue:** the tokens and the address rules (§10), `player.temperament` as a context tag.
-- **Map:** a barber's chair (the bath house or beside the tailor).
