@@ -1,0 +1,189 @@
+{
+  "id": "b903_warring_hakama",
+  "kind": "bottom",
+  "name": "Warring Hakama",
+  "gender": "unisex",
+  "texture": "bottoms/b903_warring_hakama.png",
+  "extrasHeight": 16,
+  "tags": [
+    "hakama",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_hakama_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_hakama_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "right_suneate",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        6.6,
+        -2.6
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "right_suneate_tie",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        7.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        6
+      ]
+    },
+    {
+      "id": "left_suneate",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        6.6,
+        -2.6
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        21,
+        6
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_suneate_tie",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        7.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        32,
+        6
+      ]
+    }
+  ],
+  "description": "Wide pleated dark hakama gathered at the shin, laced steel shin guards, straw sandals."
+}

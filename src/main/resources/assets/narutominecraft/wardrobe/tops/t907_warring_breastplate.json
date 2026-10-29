@@ -1,0 +1,135 @@
+{
+  "id": "t907_warring_breastplate",
+  "kind": "top",
+  "name": "Warring Breastplate",
+  "gender": "unisex",
+  "texture": "tops/t907_warring_breastplate.png",
+  "extrasHeight": 32,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "strap_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        -0.4,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "strap_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        -0.4,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        5
+      ],
+      "uv": [
+        13,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "right_shoulder_lames",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        26,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_shoulder_lames",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Thick dark wrapped top, red-lacquered breastplate on shoulder straps, scaled gauntlets."
+}
