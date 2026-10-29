@@ -19,45 +19,45 @@ Every crate in here was picked by hand. No bruised fruit on my shelves. ~grocer_
 Fresh today. Have a look. ~grocer_crates
 ## shop.grocer.greet  shop=grocer  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 The crates came in this morning. Help yourself to a look. ~grocer_crates
-## shop.furniture.greet  shop=furniture  fn=commerce,reveal_character personality=warmhearted|gentle
+## shop.furniture_shop.greet  shop=furniture_shop  fn=commerce,reveal_character personality=warmhearted|gentle
 Welcome! Sit on that cushion a moment and tell me about your room. ~furniture_shavings
-## shop.furniture.greet  shop=furniture  fn=commerce,reveal_character personality=adventurous|fiery
+## shop.furniture_shop.greet  shop=furniture_shop  fn=commerce,reveal_character personality=adventurous|fiery
 Come in! Bare walls are a crime, and we're here to stop it. ~furniture_shavings
-## shop.furniture.greet  shop=furniture  fn=commerce,reveal_character personality=proud|stern
+## shop.furniture_shop.greet  shop=furniture_shop  fn=commerce,reveal_character personality=proud|stern
 Every joint in this shop was cut without a single nail. Look closely. ~furniture_shavings
-## shop.furniture.greet  shop=furniture  fn=commerce,reveal_character personality=reserved|shy
+## shop.furniture_shop.greet  shop=furniture_shop  fn=commerce,reveal_character personality=reserved|shy
 Come in. Look all you like. ~furniture_shavings
-## shop.furniture.greet  shop=furniture  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
+## shop.furniture_shop.greet  shop=furniture_shop  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 In you come. Mind the shavings on the floor, we've been busy. ~furniture_shavings
-## shop.tools.greet  shop=tools  fn=commerce,reveal_character personality=warmhearted|gentle
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character personality=warmhearted|gentle
 Welcome. Careful near the trays, I'd hate for you to nick a finger. ~tools_edges
-## shop.tools.greet  shop=tools  fn=commerce,reveal_character personality=adventurous|fiery
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character personality=adventurous|fiery
 Gear up! A full pouch is a happy pouch. ~tools_edges
-## shop.tools.greet  shop=tools  fn=commerce,reveal_character personality=proud|stern
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character personality=proud|stern
 The finest edges in the Leaf. Ask any Jonin where they buy. ~tools_edges
-## shop.tools.greet  shop=tools  fn=commerce,reveal_character personality=reserved|shy
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character personality=reserved|shy
 Kunai on the left. Shout if you need me. ~tools_edges
-## shop.tools.greet  shop=tools  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Come in. Fresh stock in the trays, sharpened this week. ~tools_edges
-## shop.smithy.greet  shop=smithy  fn=commerce,reveal_character personality=warmhearted|gentle
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character personality=warmhearted|gentle
 Come in, but drink some water first. The forge takes it out of you. ~smithy_heat
-## shop.smithy.greet  shop=smithy  fn=commerce,reveal_character personality=adventurous|fiery
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character personality=adventurous|fiery
 Feel that heat! Best part of the day, when the iron's glowing. ~smithy_heat
-## shop.smithy.greet  shop=smithy  fn=commerce,reveal_character personality=proud|stern
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character personality=proud|stern
 Every blade off this anvil is folded three times. Others fold once. ~smithy_heat
-## shop.smithy.greet  shop=smithy  fn=commerce,reveal_character personality=reserved|shy
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character personality=reserved|shy
 Mind the sparks. ~smithy_heat
-## shop.smithy.greet  shop=smithy  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Stand back from the anvil and I'll be with you in a moment. ~smithy_heat
-## shop.scroll.greet  shop=scroll  fn=commerce,reveal_character personality=warmhearted|gentle
+## shop.scroll_shop.greet  shop=scroll_shop  fn=commerce,reveal_character personality=warmhearted|gentle
 Welcome. There's a cushion by the window, if you'd like to read a while. ~scroll_quiet
-## shop.scroll.greet  shop=scroll  fn=commerce,reveal_character personality=adventurous|fiery
+## shop.scroll_shop.greet  shop=scroll_shop  fn=commerce,reveal_character personality=adventurous|fiery
 Come in! There's a scroll in here that'll change your life. Let's find it. ~scroll_quiet
-## shop.scroll.greet  shop=scroll  fn=commerce,reveal_character personality=proud|stern
+## shop.scroll_shop.greet  shop=scroll_shop  fn=commerce,reveal_character personality=proud|stern
 Every scroll here is copied by a master hand. You will not find a blotted line. ~scroll_quiet
-## shop.scroll.greet  shop=scroll  fn=commerce,reveal_character personality=reserved|shy
+## shop.scroll_shop.greet  shop=scroll_shop  fn=commerce,reveal_character personality=reserved|shy
 Welcome. Quietly, please. ~scroll_quiet
-## shop.scroll.greet  shop=scroll  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
+## shop.scroll_shop.greet  shop=scroll_shop  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Come in. The shelves go by rank, lowest to the left. ~scroll_quiet
 ## shop.tea_house.greet  shop=tea_house  fn=commerce,reveal_character personality=warmhearted|gentle
 Sit, sit. You look tired. I'll bring you something warm before you even ask. ~tea_kettle
@@ -69,35 +69,35 @@ Welcome. Ours is the oldest tea house in the Leaf, and the cups prove it. ~tea_k
 Welcome. The kettle's on. ~tea_kettle
 ## shop.tea_house.greet  shop=tea_house  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Welcome in. The kettle has just finished singing. ~tea_kettle
-## shop.barbecue.greet  shop=barbecue  fn=commerce,reveal_character personality=warmhearted|gentle
+## shop.barbecue_house.greet  shop=barbecue_house  fn=commerce,reveal_character personality=warmhearted|gentle
 Come in and eat! You're looking thin. That won't do. ~barbecue_coals
-## shop.barbecue.greet  shop=barbecue  fn=commerce,reveal_character personality=adventurous|fiery
+## shop.barbecue_house.greet  shop=barbecue_house  fn=commerce,reveal_character personality=adventurous|fiery
 Coals are hot! Who's ready to eat their own body weight? ~barbecue_coals
-## shop.barbecue.greet  shop=barbecue  fn=commerce,reveal_character personality=proud|stern
+## shop.barbecue_house.greet  shop=barbecue_house  fn=commerce,reveal_character personality=proud|stern
 Welcome to the finest grill in the village. Our marinade has never left the family. ~barbecue_coals
-## shop.barbecue.greet  shop=barbecue  fn=commerce,reveal_character personality=reserved|shy
+## shop.barbecue_house.greet  shop=barbecue_house  fn=commerce,reveal_character personality=reserved|shy
 Table's free. Grill's hot. ~barbecue_coals
-## shop.barbecue.greet  shop=barbecue  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
+## shop.barbecue_house.greet  shop=barbecue_house  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Welcome! The coals are glowing, take any table. ~barbecue_coals
-## shop.dango.greet  shop=dango  fn=commerce,reveal_character personality=warmhearted|gentle
+## shop.dango_stand.greet  shop=dango_stand  fn=commerce,reveal_character personality=warmhearted|gentle
 Hello, dear customer! Have a skewer, you deserve something sweet today. ~dango_skewer
-## shop.dango.greet  shop=dango  fn=commerce,reveal_character personality=adventurous|fiery
+## shop.dango_stand.greet  shop=dango_stand  fn=commerce,reveal_character personality=adventurous|fiery
 Dango! Get them while they're blistering hot! ~dango_skewer
-## shop.dango.greet  shop=dango  fn=commerce,reveal_character personality=proud|stern
+## shop.dango_stand.greet  shop=dango_stand  fn=commerce,reveal_character personality=proud|stern
 Perfectly round, every one. I roll them all by hand. ~dango_skewer
-## shop.dango.greet  shop=dango  fn=commerce,reveal_character personality=reserved|shy
+## shop.dango_stand.greet  shop=dango_stand  fn=commerce,reveal_character personality=reserved|shy
 Dango? They're fresh. ~dango_skewer
-## shop.dango.greet  shop=dango  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
+## shop.dango_stand.greet  shop=dango_stand  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Skewers on the grill! Step up and pick one. ~dango_skewer
-## shop.flower.greet  shop=flower  fn=commerce,reveal_character personality=warmhearted|gentle
+## shop.flower_shop.greet  shop=flower_shop  fn=commerce,reveal_character personality=warmhearted|gentle
 Welcome! Someone you care about is going to love whatever you pick today. ~flower_buckets
-## shop.flower.greet  shop=flower  fn=commerce,reveal_character personality=adventurous|fiery
+## shop.flower_shop.greet  shop=flower_shop  fn=commerce,reveal_character personality=adventurous|fiery
 Come in! Colour everywhere, it's like a festival in a bucket! ~flower_buckets
-## shop.flower.greet  shop=flower  fn=commerce,reveal_character personality=proud|stern
+## shop.flower_shop.greet  shop=flower_shop  fn=commerce,reveal_character personality=proud|stern
 Welcome. Our arrangements are the finest on the main street. ~flower_buckets
-## shop.flower.greet  shop=flower  fn=commerce,reveal_character personality=reserved|shy
+## shop.flower_shop.greet  shop=flower_shop  fn=commerce,reveal_character personality=reserved|shy
 Hello. Take your time. ~flower_buckets
-## shop.flower.greet  shop=flower  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
+## shop.flower_shop.greet  shop=flower_shop  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Come in. The flowers were cut at dawn, so everything's at its best. ~flower_buckets
 ## shop.tailor.greet  shop=tailor  fn=commerce,reveal_character personality=warmhearted|gentle
 Come in, come in. Let's find you something that makes you feel like yourself. ~tailor_measure
@@ -109,15 +109,15 @@ Welcome. My stitches are straighter than the main street. ~tailor_measure
 Welcome. Racks are on the right. ~tailor_measure
 ## shop.tailor.greet  shop=tailor  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Come in. The new cloth arrived, and it's lovely. ~tailor_measure
-## shop.pawn.greet  shop=pawn  fn=commerce,reveal_character personality=warmhearted|gentle
+## shop.pawn_shop.greet  shop=pawn_shop  fn=commerce,reveal_character personality=warmhearted|gentle
 Come in from the street! Have a look around, take your time, nothing bites. ~pawn_clutter
-## shop.pawn.greet  shop=pawn  fn=commerce,reveal_character personality=adventurous|fiery
+## shop.pawn_shop.greet  shop=pawn_shop  fn=commerce,reveal_character personality=adventurous|fiery
 Treasures, curiosities and junk! Half the fun is working out which is which! ~pawn_clutter
-## shop.pawn.greet  shop=pawn  fn=commerce,reveal_character personality=proud|stern
+## shop.pawn_shop.greet  shop=pawn_shop  fn=commerce,reveal_character personality=proud|stern
 Only the best oddities in the village end up on my shelves. ~pawn_clutter
-## shop.pawn.greet  shop=pawn  fn=commerce,reveal_character personality=reserved|shy
+## shop.pawn_shop.greet  shop=pawn_shop  fn=commerce,reveal_character personality=reserved|shy
 Buying or selling? ~pawn_clutter
-## shop.pawn.greet  shop=pawn  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
+## shop.pawn_shop.greet  shop=pawn_shop  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Welcome in. Something new comes through that door every day. ~pawn_clutter
 ## shop.bath_house.greet  shop=bath_house  fn=commerce,reveal_character personality=warmhearted|gentle
 Come in and warm up! You'll feel a new person after a soak. ~bath_steam
@@ -139,15 +139,15 @@ The finest ninken in the Land of Fire are bred under this roof. ~clinic_pups
 Hello. Pups are in the run. ~clinic_pups
 ## shop.inuzuka_clinic.greet  shop=inuzuka_clinic  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Come in. The dogs are excited, but they're friendly. ~clinic_pups
-## shop.shelter.greet  shop=shelter  fn=commerce,reveal_character personality=warmhearted|gentle
+## shop.cat_shelter.greet  shop=cat_shelter  fn=commerce,reveal_character personality=warmhearted|gentle
 Welcome! Sit with them a while, they love a gentle lap. ~shelter_cushion
-## shop.shelter.greet  shop=shelter  fn=commerce,reveal_character personality=adventurous|fiery
+## shop.cat_shelter.greet  shop=cat_shelter  fn=commerce,reveal_character personality=adventurous|fiery
 Brave enough to face twenty cats at once? Come in! ~shelter_cushion
-## shop.shelter.greet  shop=shelter  fn=commerce,reveal_character personality=proud|stern
+## shop.cat_shelter.greet  shop=cat_shelter  fn=commerce,reveal_character personality=proud|stern
 Our cats are the best cared for in the village. Look at those coats. ~shelter_cushion
-## shop.shelter.greet  shop=shelter  fn=commerce,reveal_character personality=reserved|shy
+## shop.cat_shelter.greet  shop=cat_shelter  fn=commerce,reveal_character personality=reserved|shy
 Hello. They're shy. Sit slowly. ~shelter_cushion
-## shop.shelter.greet  shop=shelter  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
+## shop.cat_shelter.greet  shop=cat_shelter  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Come in. Several of them are waiting for a home. ~shelter_cushion
 ## shop.fishmonger.greet  shop=fishmonger  fn=commerce,reveal_character personality=warmhearted|gentle
 Hello! Something nice for supper? You should eat fish twice a week, you know. ~fish_ice
@@ -159,15 +159,15 @@ The freshest fish in the Leaf, and I'll fight anyone who says otherwise. ~fish_i
 Fish. Fresh. Take a look. ~fish_ice
 ## shop.fishmonger.greet  shop=fishmonger  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 The catch is on the ice. Have a look. ~fish_ice
-## shop.pawn.haggle  shop=pawn  fn=commerce,reveal_character personality=warmhearted|gentle
+## shop.pawn_shop.haggle  shop=pawn_shop  fn=commerce,reveal_character personality=warmhearted|gentle
 Oh, all right. A little more, because you look like you need it. ~pawn_counteroffer
-## shop.pawn.haggle  shop=pawn  fn=commerce,reveal_character personality=adventurous|fiery
+## shop.pawn_shop.haggle  shop=pawn_shop  fn=commerce,reveal_character personality=adventurous|fiery
 Ha! Bold offer! Fine, meet me halfway and we'll shake on it! ~pawn_counteroffer
-## shop.pawn.haggle  shop=pawn  fn=commerce,reveal_character personality=proud|stern
+## shop.pawn_shop.haggle  shop=pawn_shop  fn=commerce,reveal_character personality=proud|stern
 I've haggled with merchants from three villages. You'll have to try harder than that. ~pawn_counteroffer
-## shop.pawn.haggle  shop=pawn  fn=commerce,reveal_character personality=reserved|shy
+## shop.pawn_shop.haggle  shop=pawn_shop  fn=commerce,reveal_character personality=reserved|shy
 No. ... Maybe a ryo more. ~pawn_counteroffer
-## shop.pawn.haggle  shop=pawn  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
+## shop.pawn_shop.haggle  shop=pawn_shop  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
 Let's meet in the middle and both go home a little unhappy. ~pawn_counteroffer
 ## shop.grocer.haggle  shop=grocer  fn=commerce,reveal_character personality=warmhearted|gentle
 I can't lower it, but here, take an apple for the walk home. ~grocer_extra
@@ -196,6 +196,6 @@ Haggle me down? Ha! I'll throw in a fish head and call it a fight! ~fish_late_pr
 ## shop.fishmonger.haggle  shop=fishmonger  fn=commerce,reveal_character personality=proud|stern
 This fish swam the cleanest stretch of the river. It's worth every ryo. ~fish_late_price
 ## shop.fishmonger.haggle  shop=fishmonger  fn=commerce,reveal_character personality=reserved|shy
-Come back after noon. Cheaper then. ~fish_late_price
+Come back near noon. Cheaper then. ~fish_late_price
 ## shop.fishmonger.haggle  shop=fishmonger  fn=commerce,reveal_character personality=playful|curious|thoughtful|steadfast|meticulous|pragmatic|imaginative|protective
-It's fresh, so it's full price. Ask me again near closing. ~fish_late_price
+It's fresh, so it's full price. Ask me again just before noon. ~fish_late_price

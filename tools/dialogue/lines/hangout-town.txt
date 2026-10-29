@@ -1,0 +1,240 @@
+# Hangouts around the village (LIFE_TOGETHER.md §3): a market stroll, the bathhouse, a shrine visit and walking a
+# pet by the river. Parts as in hangout-meals.txt; callbacks in callback-hangout-town.txt.
+#! kind: cycle
+#! fn: deepen_bond
+
+# == a market stroll ===============================================================================
+## hangout.market_stroll.ask
+Walk the market with me? I want to see what the traders brought in this week.
+Let's wander the stalls, {player}. I won't buy anything. Probably.
+Market street's busy today. Come and people-watch with me?
+## hangout.market_stroll.invite
+Market street, mid-morning. Meet me by the fish stall, I'll be the one haggling.
+A note: "Market tomorrow? I've ten ryo burning a hole in my pocket."
+## hangout.market_stroll.yes
+The market? Yes! I need new sandals anyway.
+Let's go. I know a stall with the best roasted chestnuts.
+## hangout.market_stroll.no.busy
+I'm busy right now. {when}? The stalls will still be there.
+Can't today, I'm working. Ask me {when}.
+## hangout.market_stroll.no.not_today
+Too crowded for me today. Another time.
+I'm broke until payday. Let's go when I've ryo to waste.
+## hangout.market_stroll.no.not_their_thing
+I can't stand the market crowds. All that shoving. Sorry.
+## hangout.market_stroll.no.not_close_enough
+A whole morning at the market together? Let's get to know each other a little first.
+## hangout.market_stroll.arrive
+Right. Fish stall, then the cloth sellers, then snacks. In that order. Maybe.
+Look at it all! Stay close, the crowd's thick by the fountain.
+## hangout.market_stroll.rough
+That got tiring. Too many people, not enough to say. Next time.
+## hangout.market_stroll.fine
+A good wander. I bought one radish. Worth the trip.
+## hangout.market_stroll.good
+That was fun! I didn't even mind the crowds with you.
+We should do the market together more often. You're a good haggler.
+## hangout.market_stroll.great
+Best market day ever! My arms are full and so's my heart.
+I laughed all the way from the fish stall to the gate. Thank you, {player}.
+## hangout.market_stroll.stood_up
+I walked the whole market waiting to bump into you. I didn't.
+## hangout.market_stroll.ritual
+Our market mornings. The chestnut seller saves us the burnt ones now. The good burnt ones.
+## hangout.market_stroll.ritual_missed
+The chestnut seller asked where you'd been. So did I, to myself.
+## hangout.market_stroll.highlight.1
+You haggled the cloth seller down to half price! I've never seen them so beaten!
+## hangout.market_stroll.highlight.2
+A street performer pulled you up to juggle! You dropped everything and they cheered anyway!
+## hangout.market_stroll.highlight.3
+We found matching charms at the trinket stall. One for each of us.
+## hangout.market_stroll.highlight.4
+A goat escaped from the livestock pen and chased us down the whole street!
+## hangout.market_stroll.highlight.5
+The fortune teller said we'd be friends for life. I knew that already, but still!
+## hangout.market_stroll.highlight.6
+We tried a fruit from a far-off caravan. It tasted like sunshine and soap.
+## hangout.market_stroll.highlight.7
+A stall owner gave us free sweet potatoes because we "looked like trouble." Ha!
+## hangout.market_stroll.highlight.8
+You returned a purse someone dropped and the whole stall clapped for you.
+## hangout.market_stroll.highlight.9
+We got caught in a sudden shower and huddled under the noodle stall's awning, laughing.
+## hangout.market_stroll.highlight.10
+That spinning top you bought! It's still spinning! How long can it go?
+## hangout.market_stroll.highlight.11
+We ate one skewer from every single food stall. Every single one.
+## hangout.market_stroll.highlight.12
+A little child asked if we were famous shinobi, and you said "not yet." I loved that.
+
+# == the bathhouse =================================================================================
+## hangout.bathhouse.ask
+Bathhouse tonight? My shoulders are in knots and the hot water's calling.
+Let's soak at the bathhouse, {player}. I've been dreaming of steam all day.
+Come to the bathhouse with me? Then milk in glass bottles after. That's the best part.
+## hangout.bathhouse.invite
+Bathhouse at sundown. I'll get two bottles of cold milk for after.
+A note: "Long day. Bathhouse tonight? I'll pay the ryo."
+## hangout.bathhouse.yes
+The bathhouse? Yes. I'm aching all over.
+Good idea. I'll bring towels.
+## hangout.bathhouse.no.busy
+I can't tonight. {when}? I'll be twice as sore by then.
+Not just now. {when} would suit me.
+## hangout.bathhouse.no.not_today
+I'm too tired to even walk there. Another night.
+Not tonight. I just want my own bed.
+## hangout.bathhouse.no.not_their_thing
+The bathhouse isn't my sort of place. Too hot, too crowded. Sorry.
+## hangout.bathhouse.no.not_close_enough
+The bathhouse together? That's for people who know each other a bit better.
+## hangout.bathhouse.arrive
+Wash first, then soak. That's the rule. The bath keeper will glare at you otherwise.
+Ahh, smell the cedar. Here we are. Mind the step, it's slippery.
+## hangout.bathhouse.rough
+Hot water, cold conversation. Not our best evening.
+## hangout.bathhouse.fine
+My shoulders thank you. A decent soak.
+## hangout.bathhouse.good
+I feel like a new person. A soft, pink new person. Thanks for coming.
+Good soak, good talk. Let's make this a habit.
+## hangout.bathhouse.great
+That was heaven. I didn't know I was carrying so much until I put it down.
+Perfect evening. Warm water, cold milk and a good friend.
+## hangout.bathhouse.stood_up
+I soaked until my fingers wrinkled, waiting. You owe me a bottle of milk.
+## hangout.bathhouse.ritual
+Our bathhouse nights. The keeper has our towels folded by the door before we arrive.
+## hangout.bathhouse.ritual_missed
+I haven't been to the bathhouse in weeks. My shoulders have noticed. So have I.
+## hangout.bathhouse.highlight.1
+We drank our cold milk in one go at exactly the same time. The whole bathhouse cheered!
+## hangout.bathhouse.highlight.2
+The old regular in the corner sang a whole folk song. We joined in the chorus!
+## hangout.bathhouse.highlight.3
+It started snowing while we were in the outdoor bath. Snow on our heads, warm everywhere else!
+## hangout.bathhouse.highlight.4
+You found the secret hottest spot by the cedar post. Nobody ever finds that!
+## hangout.bathhouse.highlight.5
+We talked about nothing for an hour and felt everything get lighter.
+## hangout.bathhouse.highlight.6
+The keeper let us try the special yuzu bath! The whole room smells of citrus.
+## hangout.bathhouse.highlight.7
+Steam so thick we couldn't see each other, and we kept talking anyway. Like a fog conversation.
+## hangout.bathhouse.highlight.8
+We walked home steaming in the cold air like a pair of dumplings.
+
+# == a shrine visit ================================================================================
+## hangout.shrine_visit.ask
+Come to the shrine with me? I want to ring the bell and leave an offering.
+I'm visiting the shrine this morning. Would you walk up the steps with me?
+The shrine's peaceful at this hour. Come and sit there with me, {player}.
+## hangout.shrine_visit.invite
+The shrine, early. I'll meet you at the bottom of the steps.
+A note, with a pressed leaf: "Shrine tomorrow? I'd like the company."
+## hangout.shrine_visit.yes
+The shrine? Yes. I could use some quiet.
+I'd like that. I'll bring a coin for the box.
+## hangout.shrine_visit.no.busy
+I'm busy this morning. {when}?
+Not just now, I'm on duty. {when}, perhaps.
+## hangout.shrine_visit.no.not_today
+I'm not in the right frame of mind for the shrine today.
+Another day. I'd only fidget.
+## hangout.shrine_visit.no.not_their_thing
+The shrine's not really my place. I never know what to do there.
+## hangout.shrine_visit.no.not_close_enough
+I usually go to the shrine on my own. Maybe once we know each other better.
+## hangout.shrine_visit.arrive
+Rinse your hands at the basin first. Left, then right. That's it.
+All the steps. Here we are. Listen. You can hear the wind in the bells.
+## hangout.shrine_visit.rough
+I couldn't settle today. Neither could you, I think.
+## hangout.shrine_visit.fine
+A quiet visit. That's all I wanted.
+## hangout.shrine_visit.good
+I feel calmer than I have in days. Thank you for coming.
+That was peaceful. I'm glad it was you beside me.
+## hangout.shrine_visit.great
+I don't know what I prayed for, but I think it was answered just by being there with you.
+That was beautiful. The bell, the wind, the cedars. I'll remember it.
+## hangout.shrine_visit.stood_up
+I rang the bell for both of us, since you weren't there.
+## hangout.shrine_visit.ritual
+Our shrine mornings. The keeper of the grounds nods at us now. Like old regulars.
+## hangout.shrine_visit.ritual_missed
+I've been to the shrine alone a few times. I keep leaving two coins out of habit.
+## hangout.shrine_visit.highlight.1
+We drew fortunes and both got great blessing! Both of us! What are the odds?
+## hangout.shrine_visit.highlight.2
+A white heron landed on the shrine gate just as we rang the bell.
+## hangout.shrine_visit.highlight.3
+The keeper of the grounds let us help sweep the leaves. They said we'd earned good luck.
+## hangout.shrine_visit.highlight.4
+We counted the steps together on the way up. We got different numbers. Both of us are sure.
+## hangout.shrine_visit.highlight.5
+The wind chimes all rang at once, and then there was this perfect silence.
+## hangout.shrine_visit.highlight.6
+You tied your bad fortune to the tree so carefully. Like you were putting it to bed.
+## hangout.shrine_visit.highlight.7
+We sat on the top step and watched the whole village wake up below us.
+## hangout.shrine_visit.highlight.8
+A little shrine cat followed us all the way up and sat between us for the prayer.
+
+# == walking a pet =================================================================================
+## hangout.pet_walk.ask
+I'm taking the dog for a walk by the river. Come along? It loves new people.
+Walk with me and my little beast? It's got more energy than both of us.
+The pup's pulling at the door. Come for a walk, {player}?
+## hangout.pet_walk.invite
+River path, afternoon. Bring treats. The dog will love you forever.
+A note with a muddy paw print: "Walk with us tomorrow? The dog insists."
+## hangout.pet_walk.yes
+A walk? Yes! Where's the lead?
+I'd love that. I'll bring something for the pup.
+## hangout.pet_walk.no.busy
+I can't right now. {when}? The dog will still want a walk. It always wants a walk.
+Busy at the moment. {when} instead?
+## hangout.pet_walk.no.not_today
+The poor thing's off its food today. Let's give it a rest.
+Not today. My legs are done in.
+## hangout.pet_walk.no.not_their_thing
+I'm not really an animal person. Sorry.
+## hangout.pet_walk.no.not_close_enough
+The dog's shy with people it doesn't know. Let's leave it a while.
+## hangout.pet_walk.arrive
+Hold the lead tight. It sees a duck and it's gone. ...See?
+River path. Off we go! Slow down, you silly thing!
+## hangout.pet_walk.rough
+It pulled the whole way and we barely spoke. Not our best walk.
+## hangout.pet_walk.fine
+A nice walk. One very tired dog.
+## hangout.pet_walk.good
+It's taken to you! Look, it won't stop wagging.
+That was lovely. My little one's going to sleep all evening.
+## hangout.pet_walk.great
+That was perfect. The river, the sun, the dog, you. I'm so happy.
+It's never been that good with anyone but me. You're family now, as far as it's concerned.
+## hangout.pet_walk.stood_up
+We waited at the river path for ages. The dog kept looking up the road for you.
+## hangout.pet_walk.ritual
+Our walks by the river. The dog runs to the corner where we meet you now. Every time.
+## hangout.pet_walk.ritual_missed
+The dog still stops at the corner where we used to meet you. It's breaking my heart a bit.
+## hangout.pet_walk.highlight.1
+It jumped in the river after a stick and came out and shook all over you! Ha!
+## hangout.pet_walk.highlight.2
+It brought you a stick. It never brings anyone a stick. That's an honour.
+## hangout.pet_walk.highlight.3
+It chased a duck right into the water and the duck just sat there, unimpressed.
+## hangout.pet_walk.highlight.4
+It fell asleep on your feet under the willow and you didn't move for an hour.
+## hangout.pet_walk.highlight.5
+It learned "sit" for you in one try! It took me a month!
+## hangout.pet_walk.highlight.6
+We met a whole pack of kennel dogs and they all wanted to play at once. Chaos!
+## hangout.pet_walk.highlight.7
+It found a frog and was so surprised it fell over backwards.
+## hangout.pet_walk.highlight.8
+We walked until sunset and it trotted home between us like it had two owners.

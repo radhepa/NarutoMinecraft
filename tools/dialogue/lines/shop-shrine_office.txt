@@ -14,7 +14,7 @@ New Year's blessings! The fortune box is full, and the queue is long. Worth the 
 Charms for safe travel, for study, for health and for good business.
 Paper fortunes, drawn from the box. Good ones you keep, bad ones you tie to the rack.
 Wish plaques: write your wish on the back, hang it on the wall with the others.
-The mission charm is new. Red cord, for shinobi heading out the gate.
+There is a new charm for shinobi, braided in the village colours, to wear past the gate.
 
 ## shop.shrine_office.buy  shop=shrine_office  kind=cycle  fn=commerce
 {item}. {pay}. Keep it close, not in a drawer.

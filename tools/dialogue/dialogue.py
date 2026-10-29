@@ -196,7 +196,7 @@ def check_condition(where, cond):
 TOKEN = re.compile(r'\{([a-z_]+)(?::([^{}]+))?\}')
 
 
-def check_text(where, text, terms, tags, gated, limit=MAX_LINE):
+def check_text(where, text, terms, tags, gated, limit=MAX_LINE, pool=''):
     if not text.strip():
         fail(where, 'empty text')
     if len(text) > limit:
@@ -212,6 +212,8 @@ def check_text(where, text, terms, tags, gated, limit=MAX_LINE):
         elif name == 'hokage':
             if not (arg or '').isdigit():
                 fail(where, '{hokage:N} takes a number')
+        elif pool.startswith('mission.') and not arg:
+            pass  # missions fill any of their template's slot names ({pet_spot}, {claimant}...)
         elif name not in TOKENS or arg:
             fail(where, f'unknown token {{{name}{":" + arg if arg else ""}}}')
     plain = TOKEN.sub('', text)
@@ -367,7 +369,7 @@ def read_lines(path, gated, terms, out):
         if head is None:
             fail(where, 'line before any "## pool" heading')
         text, mood, group = split_markers(where, line)
-        check_text(where, text, terms, head['tags'], gated)
+        check_text(where, text, terms, head['tags'], gated, pool=head['pool'])
         out.append({**head, 'text': text, 'mood': mood, 'group': group, 'gated': gated, 'where': where})
 
 

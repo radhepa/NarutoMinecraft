@@ -1,5 +1,5 @@
 # Greetings from inside a clan's life: customs, homes and habits, never its secrets.
-# same_clan=yes is kin greeting kin; clan_status=other and clanless are guests.
+# The player is always a clanless orphan: clan_status=clanless lines react to that, and never treat the player as kin.
 
 ## greet.clan  clan=senju  fn=worldbuild
 Welcome. If you have time, sit under the tree in our hall. Every guest is offered tea there.
@@ -13,14 +13,6 @@ Hello! The Uzumaki memorial's right next to our seat. We tend each other's paths
 ## greet.clan  clan=senju  fn=reveal_character
 Good day. My family talks about the founders as if they'd only stepped out for a moment.
 Hello. I try to be patient like the tree. I'm closer to a weed, most days.
-
-## greet.clan  clan=senju  same_clan=yes  fn=deepen_bond
-Cousin! Come and see your sapling's spot by the hall. We've kept it ready for you.
-Hello, cousin. The tree knows its own, they say. I think it leaned towards you.
-Cousin {player}. Sit under the branches with me. That's what family's for.
-
-## greet.clan  clan=senju  clan_status=other  fn=worldbuild
-Welcome, friend of another house. The Senju have always kept the door open to the other clans.
 
 ## greet.clan  clan=senju  clan_status=clanless  fn=worldbuild
 No clan of your own? The founders had nothing but a forest once. Tea under the tree is for everyone.
@@ -38,14 +30,6 @@ Hello! We live long, we laugh loud and we never forget a name. That's the Uzumak
 Hey! I practise brushwork every night. Seals have to be perfect, and I'm not, so I practise.
 Hello! I love the memorial, but I'd love a proper family dinner table even more someday.
 
-## greet.clan  clan=uzumaki  same_clan=yes  fn=deepen_bond
-Cousin! You've got the family grin. Come here, let me hug you!
-Hey, cousin! Another Uzumaki in the Leaf! That's one more name we get to say out loud, and it's a living one.
-Cousin {player}! I'll teach you to hold a seal brush. Our way. Steady hand, loud heart.
-
-## greet.clan  clan=uzumaki  clan_status=other  fn=worldbuild
-Welcome, friend! Every clan in the Leaf owes the Uzumaki a cup of tea, but we never collect.
-
 ## greet.clan  clan=uzumaki  clan_status=clanless  fn=deepen_bond
 No clan? That's all right. The Uzumaki know what it's like to be few. You're welcome at the memorial.
 
@@ -61,14 +45,6 @@ Hello. A word of advice: guests in our quarter don't ask about eyes. It's simply
 ## greet.clan  clan=uchiha  fn=reveal_character
 Good day. I'm told I seem cold. I'm not cold. I'm on duty. Those look the same from outside.
 Hello. My father patrolled this same beat. So did his. I'll do it better than both.
-
-## greet.clan  clan=uchiha  same_clan=yes  fn=deepen_bond
-Cousin. Good. Stand with the clan and the clan stands with you.
-Hello, cousin. You're one of us. Hold your head as high as the crest on your back.
-Cousin {player}. If anyone in the village gives you trouble, the quarter hears about it.
-
-## greet.clan  clan=uchiha  clan_status=other  fn=worldbuild
-Good day. The Uchiha and the other houses keep a polite distance. Polite is the important word.
 
 ## greet.clan  clan=uchiha  clan_status=clanless  fn=worldbuild
 Good day. Clan or no clan, the police protect every street equally. That's the oath.
@@ -86,14 +62,6 @@ Welcome. The dojo floor is polished every morning. You can see your own face in 
 Good day. I like the quiet of the estate. Though sometimes I go to the market just to hear noise.
 Good day. I was born to the branch house. I'm proud of my work. That's all I'll say about it.
 
-## greet.clan  clan=hyuga  same_clan=yes  fn=deepen_bond
-Cousin. You bow beautifully now. The elders noticed. So did I.
-Good day, cousin. Come to the dojo some morning. We spar as family, which means honestly.
-Cousin {player}. Sit with me by the koi pond. We needn't speak. That's the Hyuga way of saying I'm glad to see you.
-
-## greet.clan  clan=hyuga  clan_status=other  fn=worldbuild
-Good day. A guest of another clan is received at the front gate with a full bow. Allow me.
-
 ## greet.clan  clan=hyuga  clan_status=clanless  fn=worldbuild
 Good day. The estate's manners may seem strange to you. Watch, copy, and nobody will mind.
 
@@ -109,14 +77,6 @@ Hey. The Akimichi brought round a whole pot of stew for the porch. Alliances are
 ## greet.clan  clan=nara  fn=reveal_character
 Hey. I'm thinking ten moves ahead today. Move one is a nap.
 Hello. I like deer. They don't ask questions and they don't hurry.
-
-## greet.clan  clan=nara  same_clan=yes  fn=deepen_bond
-Hey, cousin. Come sit on the porch. The board's set up. You go first, I always do.
-Cousin. The deer let you walk right up to them. They know family.
-Hey, {player}. Cousin. You look tired. Lie on the grass a bit. That's an order. A lazy one.
-
-## greet.clan  clan=nara  clan_status=other  fn=worldbuild
-Hey. Your clan and ours get along fine. Not much point in not, really. Too much effort.
 
 ## greet.clan  clan=nara  clan_status=clanless  fn=worldbuild
 Hey. No clan? You get to think for yourself without a family reputation. Sounds restful.
@@ -134,14 +94,6 @@ Hey! A word of advice from a friend: never say the word fat in the kitchen hall.
 Hello! I'm learning to cook for forty. Cooking for four feels lonely now.
 Hey! Some days I'd rather be in the kitchen than on a mission. Don't tell the elders.
 
-## greet.clan  clan=akimichi  same_clan=yes  fn=deepen_bond
-Cousin! You look thin. That's a family emergency. Kitchen hall, now!
-Hello, cousin! I've set a bowl for you at the long table. I always set one now.
-Cousin {player}! Third helping today? Ha, I know you will. You're one of us.
-
-## greet.clan  clan=akimichi  clan_status=other  fn=worldbuild
-Hello, friend! It doesn't matter which clan you're from; at our table, everyone eats.
-
 ## greet.clan  clan=akimichi  clan_status=clanless  fn=deepen_bond
 Hey! No clan's no problem. Come to the kitchen hall. Anyone we feed is family for the length of the meal.
 
@@ -157,14 +109,6 @@ Hello! Somebody bought marigolds for a sick friend this morning. I hope they kne
 ## greet.clan  clan=yamanaka  fn=reveal_character
 Hello! I notice things. Your face, for instance, says you need a bright flower today.
 Good day! I've been arranging since dawn. My fingers smell of roses. I won't wash them yet.
-
-## greet.clan  clan=yamanaka  same_clan=yes  fn=deepen_bond
-Cousin! I left a sprig of bellflower on your doorstep. It means faithful. Like family.
-Hello, cousin! Come help me in the shop later. You've got the family eye for colour.
-Cousin {player}! Take a flower from the front bucket. Family pays nothing. Ever.
-
-## greet.clan  clan=yamanaka  clan_status=other  fn=worldbuild
-Hello! Our families have always traded flowers on clan days. Bring your clan's colours and I'll make something.
 
 ## greet.clan  clan=yamanaka  clan_status=clanless  fn=worldbuild
 Hello! You don't need a clan to read flowers. Learn three meanings and you're ahead of most of the village.
@@ -182,14 +126,6 @@ Hey! The Aburame say our dogs scare their bugs. We say their bugs are rude to ou
 Hey! My partner's been sniffing you for a full minute. That's a compliment, trust me.
 Hey! I sleep in a pile with my dogs. Warmest bed in the village. Don't knock it.
 
-## greet.clan  clan=inuzuka  same_clan=yes  fn=deepen_bond
-Cousin! The dogs smell family on you. Look at their tails go!
-Hey, cousin! Come to the kennels. There's a pup that keeps staring at the gate like it's waiting for someone.
-Cousin {player}! Pack's not complete without you. Come run with us later!
-
-## greet.clan  clan=inuzuka  clan_status=other  fn=worldbuild
-Hey! Your clan, our clan, the dogs don't care. They judge by the nose.
-
 ## greet.clan  clan=inuzuka  clan_status=clanless  fn=deepen_bond
 Hey! No clan? A dog doesn't care about family names. You'd make a fine pack member.
 
@@ -205,14 +141,6 @@ Good day! The fire in our hearth hasn't gone out in years. We take turns keeping
 ## greet.clan  clan=sarutobi  fn=reveal_character
 Hello! I'd give anything for this village. Sometimes I forget to give anything to myself.
 Good day! My grandfather says I'm too serious for a Sarutobi. Then he makes me laugh to prove it.
-
-## greet.clan  clan=sarutobi  same_clan=yes  fn=deepen_bond
-Cousin! Your seat by the hearth's always warm. We made sure of it.
-Hello, cousin! You'll carry a lantern with the family at New Year, won't you? Promise me.
-Cousin {player}. The fire's in you too. I can see it.
-
-## greet.clan  clan=sarutobi  clan_status=other  fn=worldbuild
-Welcome, friend of another clan! The Will of Fire burns in every house in the Leaf. Not just ours.
 
 ## greet.clan  clan=sarutobi  clan_status=clanless  fn=deepen_bond
 No clan? The whole village is your family, the way we see it. Come and sit by the hearth.
@@ -230,14 +158,6 @@ Good day. Our house is on the wooded edge for a reason. The insects prefer the t
 Hello. I am told I seem cold. I am simply thinking. The two are often confused.
 Good day. I prefer insects to most conversations. This one is an exception.
 
-## greet.clan  clan=aburame  same_clan=yes  fn=deepen_bond
-Cousin. The hive at the house recognised your chakra this morning. It was very calm. So was I.
-Hello, cousin. Visit the gardens with me. It would be logical, and also pleasant.
-Cousin {player}. You stand very still now. The insects approve. As do I.
-
-## greet.clan  clan=aburame  clan_status=other  fn=worldbuild
-Good day. Guests of other clans are always welcome in the gardens. Please keep your hands at your sides.
-
 ## greet.clan  clan=aburame  clan_status=clanless  fn=worldbuild
 Hello. A family name is not required to be tasted by a beetle. They are very fair-minded.
 
@@ -253,14 +173,6 @@ Hm. The ninken come and go as they please. They've always been more family than 
 Hello. Our yard's small and the lane's quiet. Suits the house.
 Hm. Hello. The kennel behind the house was built for a dozen dogs. Three still use it.
 Hello. The house hasn't been full in a long time. The dogs keep it from feeling empty.
-
-## greet.clan  clan=hatake  same_clan=yes  fn=deepen_bond
-...Cousin. I didn't think I'd say that word again. Come in. The dogs already like you.
-Hello, cousin. There's a room in the house with nobody in it. It could be yours, someday.
-Cousin {player}. The ninken waited at the gate all morning. Now I know who for.
-
-## greet.clan  clan=hatake  clan_status=other  fn=worldbuild
-Hello. Everyone respects the Hatake house. Hardly anyone visits. You're welcome to be the exception.
 
 ## greet.clan  clan=hatake  clan_status=clanless  fn=deepen_bond
 Hm. No clan. Well, I'm nearly the last of mine. We're not so different.
@@ -278,14 +190,6 @@ Good day. Our house smells of linseed oil and old paper. I wouldn't change it.
 Hello. I've been working on the same painting for a year. It's nearly the colour I imagined.
 Good day. Forgive the paint on my sleeves. I gave up on clean sleeves at six.
 
-## greet.clan  clan=kurama  same_clan=yes  fn=deepen_bond
-Cousin. Come to the studio. There's an empty easel by the window, and it's been waiting.
-Hello, cousin. You hold a brush like your grandmother did, I'm told. That's high praise in this house.
-Cousin {player}. I've started a small portrait of you. Don't worry, I'll finish the eyes in private.
-
-## greet.clan  clan=kurama  clan_status=other  fn=worldbuild
-Good day. Other clans commission our paintings for their halls. Perhaps yours has one of ours.
-
 ## greet.clan  clan=kurama  clan_status=clanless  fn=worldbuild
 Hello. Art doesn't care about family names. If you want to learn to paint, the lane's open.
 
@@ -301,14 +205,6 @@ Good day. Our children learn to wait before they learn to speak. The waiting is 
 Good day. I don't smile often. It doesn't mean I'm displeased.
 Hm. I serve the village in my own way. Quietly. That's enough said.
 Good day. I keep my word, and I keep it quietly. Both matter to me.
-
-## greet.clan  clan=shimura  same_clan=yes  fn=deepen_bond
-Cousin. ...I'm glad you're here. That's a great deal, from a Shimura.
-Good day, cousin. You hold your silence well. The family will be pleased.
-Cousin {player}. If you ever need counsel, come to the house. No questions asked. None answered either.
-
-## greet.clan  clan=shimura  clan_status=other  fn=worldbuild
-Good day. Another clan's child, in the Shimura lane. Mind your manners and you'll be treated with respect.
 
 ## greet.clan  clan=shimura  clan_status=clanless  fn=worldbuild
 Hm. Clanless. Service to the village doesn't need a family name. Some of the best never had one.
@@ -326,14 +222,6 @@ Hello. The grove's paths change if you're not paying attention. Not literally. M
 Hello. I like a thing that looks one way and is another. Roses. Teacups. People.
 Good day. I've been pruning the roses since dawn. My fingers are scratched, and I'm content.
 
-## greet.clan  clan=yuhi  same_clan=yes  fn=deepen_bond
-Cousin. Come and walk the grove with me. The trees remember family.
-Hello, cousin. I've saved you a rose from the gate. No thorns. I checked.
-Cousin {player}. Real tea for you today. I promise. Probably.
-
-## greet.clan  clan=yuhi  clan_status=other  fn=worldbuild
-Good day. Visitors from other clans come for the grove viewing every spring. You'd be very welcome.
-
 ## greet.clan  clan=yuhi  clan_status=clanless  fn=worldbuild
 Hello. No clan? Then the grove has no expectations of you. That's a freedom, you know.
 
@@ -349,14 +237,6 @@ Good day. Our dojo is by the training grounds. You'll hear the practice blades f
 ## greet.clan  clan=gekko  fn=reveal_character
 Hello. I always look tired. I'm not, usually. It's a family face.
 Good day. I polish my blade every evening. It's the calmest hour of my day.
-
-## greet.clan  clan=gekko  same_clan=yes  fn=deepen_bond
-Cousin. Come to the platform at the next full moon. Sit with the family. It's your place too.
-Hello, cousin. When you've a blade of your own, I'll help you choose its name.
-Cousin {player}. You stand like a swordsman already. Grandfather would have liked to see it.
-
-## greet.clan  clan=gekko  clan_status=other  fn=worldbuild
-Good day. Guests of other houses may watch the moonlit kata. Only watch. And don't cough.
 
 ## greet.clan  clan=gekko  clan_status=clanless  fn=worldbuild
 Hello. A blade doesn't care about a family name. Only the hand that holds it.
@@ -374,14 +254,6 @@ Hey. I look relaxed. I'm counting every exit in this street. Both are true.
 Hey. I've had this senbon in my mouth so long I forget it's there. Mother hates it.
 Hey. Some people do push-ups to relax. I throw needles at a wall. Same thing.
 
-## greet.clan  clan=shiranui  same_clan=yes  fn=deepen_bond
-Hey, cousin. Here, a practice senbon. Don't swallow it. Took me years to learn that.
-Cousin. Come by the barracks wall. I'll show you the family flick of the wrist.
-Hey, cousin {player}. Cool head, family. That's all you need to remember.
-
-## greet.clan  clan=shiranui  clan_status=other  fn=worldbuild
-Hey. Your clan's got its own tricks. We've got the senbon. Want to trade a lesson sometime?
-
 ## greet.clan  clan=shiranui  clan_status=clanless  fn=worldbuild
 Hey. No clan? Neither does half the gate guard. Best guards I know.
 
@@ -397,14 +269,6 @@ Good day. At home, my family is the gentlest on the street. You'd never guess it
 Good day. I make jam on my day off. Plum. Don't tell anyone at work.
 Hm. I don't frighten people on purpose. It just happens. I'm working on it.
 Good day. I can tell when you're lying. Relax, you aren't. Good.
-
-## greet.clan  clan=morino  same_clan=yes  fn=deepen_bond
-Cousin. Come home for dinner. We're much nicer without the coats.
-Good day, cousin. You've the family stare already. Use it gently.
-Cousin {player}. The house's door is always open to you. Even if the windows aren't.
-
-## greet.clan  clan=morino  clan_status=other  fn=worldbuild
-Good day. Other clans tend to whisper when we pass. You're not whispering. I appreciate that.
 
 ## greet.clan  clan=morino  clan_status=clanless  fn=worldbuild
 Hm. Clanless. Then you've no family secrets to keep. Lucky. Most people have far too many.
@@ -422,14 +286,6 @@ Hello! I remember every student I've taught. Most of them remember me as the one
 Hello! I stay up marking. Then I stay up worrying. Then I'm up for the bell.
 Good day! The proudest day of the year is graduation. I cry every time. Every single time.
 
-## greet.clan  clan=umino  same_clan=yes  fn=deepen_bond
-Cousin! Did you do your homework? Sorry, family habit. Hello!
-Hello, cousin! Come by after supper and I'll help with anything you're stuck on. That's what we do.
-Cousin {player}. You're a fine student. I'd say so even if you weren't family. I'd just say it quieter.
-
-## greet.clan  clan=umino  clan_status=other  fn=worldbuild
-Hello! Your clan's children sit in our classrooms too. Every family in the Leaf passes through an Umino's lessons.
-
 ## greet.clan  clan=umino  clan_status=clanless  fn=deepen_bond
 Hello! No clan? In my classroom, nobody has a clan. Just a name on a desk and a head full of ideas.
 
@@ -445,14 +301,6 @@ Hello! Bargaining's a sport in our family. My grandmother is undefeated.
 Hello! I could've gone to the Academy, but I love the shop. Is that strange? I don't think so.
 Hello! I keep the shop's books on rest days, and I dream in numbers the night after.
 Good day! I'm cheerful because I've chosen to be. Every morning. It's a habit, like sweeping.
-
-## greet.clan  clan=haruno  same_clan=yes  fn=deepen_bond
-Cousin! Come and help in the shop later. Family discount for you: everything's free if you sweep.
-Hello, cousin! I saved you the pinkest rice cake. Family tradition.
-Cousin {player}! The whole street knows you're a Haruno now. Wear it with a smile.
-
-## greet.clan  clan=haruno  clan_status=other  fn=commerce
-Hello! Clan folk always pay full price in our shop. Ha, only joking. Mostly. Come in, come in!
 
 ## greet.clan  clan=haruno  clan_status=clanless  fn=worldbuild
 Hello! We're merchants first. A family name never bought anything in our shop; ryo does.
@@ -470,14 +318,6 @@ Good day. I'm quiet because noise is wasted motion. So is fidgeting. I've given 
 Hello. I walk on the edges of my feet even at home. My mother says I sound like a ghost.
 Good day. I like the rain. Puddles are practice.
 
-## greet.clan  clan=namiashi  same_clan=yes  fn=deepen_bond
-Cousin. Come to the stepping stones at dawn. We'll cross together. Mind the third one.
-Good day, cousin. You walk like family already. Light on the heels.
-Cousin {player}. The dojo floor is wet for you any time. That means welcome, in our house.
-
-## greet.clan  clan=namiashi  clan_status=other  fn=worldbuild
-Good day. Your clan has its own ways of moving. I'd like to see them some time. A fair exchange.
-
 ## greet.clan  clan=namiashi  clan_status=clanless  fn=worldbuild
 Hello. Footwork belongs to anyone who practises. Our stones are in the river for everyone.
 
@@ -493,14 +333,6 @@ Hey! The gate's boring for weeks, then everything happens in an hour. That's the
 Hey! I like a good mace. Simple tool. Does what it says.
 Hey! I know every merchant who comes through the gate by their cart's squeak.
 Hey! People think gate guards just stand around. We do. But very alertly.
-
-## greet.clan  clan=hagane  same_clan=yes  fn=deepen_bond
-Cousin! Come sit at the gate with us. Best gossip in the Leaf, family rate.
-Hey, cousin! Want a turn on the relay? I'll go easy. First time only.
-Cousin {player}! Here, I saved you a bandage for your nose. Family tradition. You'll need it eventually.
-
-## greet.clan  clan=hagane  clan_status=other  fn=worldbuild
-Hey! Every clan comes through our gate. I know your family's carts by their colours.
 
 ## greet.clan  clan=hagane  clan_status=clanless  fn=worldbuild
 Hey! No clan? Half the gate's clanless. We don't care, so long as you show up on time.
@@ -518,14 +350,6 @@ Hello! I can tell what wood a chair's made of by sitting on it. Party trick. Not
 Hello! I've got a splinter in every finger. Badges of honour.
 Good day! I'd rather build one good chair than ten cheap ones. Some people find that annoying.
 
-## greet.clan  clan=kinoshita  same_clan=yes  fn=deepen_bond
-Cousin! Come to the yard. There's a workbench with your name carved in it. Well, I carved it last night.
-Hello, cousin! When you want furniture for your place, don't you dare buy it from a shop.
-Cousin {player}! You've got family hands. Strong grip. Good for a plane and a saw.
-
-## greet.clan  clan=kinoshita  clan_status=other  fn=worldbuild
-Hello! Your clan hall's roof? Probably ours. We've worked on nearly every clan's buildings.
-
 ## greet.clan  clan=kinoshita  clan_status=clanless  fn=worldbuild
 Hello! The yard takes apprentices from anywhere. Wood doesn't care who your parents were.
 
@@ -541,14 +365,6 @@ Good day. Offerings at our shrine are small: a stone, a rice cake, a quiet minut
 Good day. I'm not used to the noise of the Leaf. I go up to the quarry to think.
 Hm. Good day. I trust slowly. Don't be offended. It's the same for everyone.
 Good day. I plait rope in the evenings. My hands like the work, even when my head is tired.
-
-## greet.clan  clan=tsuchigumo  same_clan=yes  fn=deepen_bond
-Cousin. Come up to the shrine with me. The mountain should know your face.
-Good day, cousin. Help with the ropes this year. Your hands are part of the plait now.
-Cousin {player}. The stone houses are cold, but our hearths aren't. Come in.
-
-## greet.clan  clan=tsuchigumo  clan_status=other  fn=worldbuild
-Good day. Other clans rarely climb to our shrine. Those that do are always treated as guests.
 
 ## greet.clan  clan=tsuchigumo  clan_status=clanless  fn=worldbuild
 Good day. The shrine welcomes anyone who climbs the path with a quiet heart. Clan doesn't come into it.
@@ -566,14 +382,6 @@ Hello! I taste everything. Carefully. Mostly carefully.
 Good day! My hands smell of mint and bitter root. I've stopped noticing. Everyone else hasn't.
 Hello! I brew medicine all day and forget to drink my own tea.
 
-## greet.clan  clan=suzuran  same_clan=yes  fn=deepen_bond
-Cousin! Come to the gardens. I'll show you which leaves are tea and which are trouble.
-Hello, cousin! I've made you a pouch of herbs for colds. Family recipe. It tastes awful. It works.
-Cousin {player}! You've got good herb sense. You sniffed the right jar first try.
-
-## greet.clan  clan=suzuran  clan_status=other  fn=worldbuild
-Good day! Every clan in the Leaf has had a Suzuran tonic at some point. You'd be surprised who.
-
 ## greet.clan  clan=suzuran  clan_status=clanless  fn=worldbuild
 Hello! Herb lore isn't a clan secret. Anyone who wants to learn can come weed the gardens. Weeding's step one.
 
@@ -590,13 +398,299 @@ Good day. Soft steps, muffled voices. A Tobari house sounds empty even when it's
 Good day. I can walk the whole wall without making a sound. Startling the cats is the only fun part.
 Hm. I like the hour before dawn. The village belongs to the watch, then.
 
-## greet.clan  clan=tobari  same_clan=yes  fn=deepen_bond
-...Cousin. Walk a watch with me someday. Quietly. You'll see the Leaf as we do.
-Good day, cousin. I left a lantern lit on your street last night. Family looks after family.
-Cousin {player}. You've soft feet already. The night will like you.
-
-## greet.clan  clan=tobari  clan_status=other  fn=worldbuild
-Good day. Every clan's lanterns get lit by a Tobari at some point. Yours too.
-
 ## greet.clan  clan=tobari  clan_status=clanless  fn=worldbuild
 Good day. The night watch takes anyone who can keep quiet. Most people can't. Can you?
+
+## greet.clan  clan=senju  clan_status=clanless  fn=deepen_bond
+Hello. People ask whose child you are. Here under the tree, we only ask whether you'd like tea.
+
+## greet.clan  clan=senju  clan_status=clanless  fn=worldbuild
+No family crest on your back? The tree doesn't read crests. It shades everyone who sits under it.
+The founders welcomed families with no name at all into the Leaf. We've kept the habit.
+
+## greet.clan  clan=senju  clan_status=clanless  fn=reveal_character
+Hello. I sometimes envy you, you know. No founders' shrine to sweep every morning.
+
+## greet.clan  clan=uzumaki  clan_status=clanless  fn=deepen_bond
+Hey! No clan? Then I'll say your name out loud with ours at the memorial. Someone should!
+Hello! We're so few that we count our friends as family. You'd count, if you stopped by more.
+
+## greet.clan  clan=uzumaki  clan_status=clanless  fn=worldbuild
+Hey! You don't need the spiral on your back to help repaint the seals. Just a steady hand.
+
+## greet.clan  clan=uzumaki  clan_status=clanless  fn=reveal_character
+Hey! I wonder what it's like, nobody expecting you to paint perfect seals. Restful, I bet!
+
+## greet.clan  clan=uchiha  clan_status=clanless  fn=worldbuild
+Good day. No crest, no clan quarrels to inherit. There are worse ways to start.
+Good day. In the quarter we ask newcomers whose family they're from. I'll spare you the question.
+
+## greet.clan  clan=uchiha  clan_status=clanless  fn=reveal_character
+Hm. Clanless, aren't you? I can't imagine it. No one checking how you stand. ...It sounds restful.
+
+## greet.clan  clan=uchiha  clan_status=clanless  fn=react
+Hello. You walk through our quarter without flinching at the crests. Most outsiders flinch.
+
+## greet.clan  clan=hyuga  clan_status=clanless  fn=worldbuild
+Good day. Without a house of your own, you'll be received at the front gate as a guest. It is no small honour.
+
+## greet.clan  clan=hyuga  clan_status=clanless  fn=reveal_character
+Good day. You belong to neither the main house nor the branch. I find that... interesting.
+
+## greet.clan  clan=hyuga  clan_status=clanless  fn=deepen_bond
+Good day. Your bow has no clan's habits in it. It's honest. I prefer it.
+
+## greet.clan  clan=hyuga  clan_status=clanless  fn=react
+Good day. The elders wonder what to make of someone with no house. I've decided: a guest.
+
+## greet.clan  clan=nara  clan_status=clanless  fn=reveal_character
+Hey. No clan means nobody makes you count deer. I'm almost jealous.
+
+## greet.clan  clan=nara  clan_status=clanless  fn=deepen_bond
+Hey. Clan or not, you're welcome on the porch. Shogi's the only test, and it's a lazy one.
+
+## greet.clan  clan=nara  clan_status=clanless  fn=react
+Hey. My aunt asked which clan you were from. I said the clan of people who leave the Nara alone. Highest compliment.
+
+## greet.clan  clan=nara  clan_status=clanless  fn=worldbuild
+Hey. The deer don't care about family names. Neither do I, really. Too much to remember.
+
+## greet.clan  clan=akimichi  clan_status=clanless  fn=deepen_bond
+Hello! No clan to cook for you? That's no good. The kitchen hall sets a bowl for you from today.
+
+## greet.clan  clan=akimichi  clan_status=clanless  fn=react
+Hey! The aunties asked who your family is. I told them: whoever's feeding you. So, us.
+
+## greet.clan  clan=akimichi  clan_status=clanless  fn=worldbuild
+Hello! At our long table nobody checks your crest, just your appetite.
+
+## greet.clan  clan=akimichi  clan_status=clanless  fn=reveal_character
+Hello! A clanless friend, eh? You'll have to come to the harvest feast so I can show off my cooking.
+
+## greet.clan  clan=yamanaka  clan_status=clanless  fn=deepen_bond
+Hello! No clan flowers of your own? Then pick one. Anyone can choose their flower.
+
+## greet.clan  clan=yamanaka  clan_status=clanless  fn=react
+Hello! I'd have guessed you for a quiet old clan from the way you look at things. Clanless? Even better.
+
+## greet.clan  clan=yamanaka  clan_status=clanless  fn=worldbuild
+Hello! Every family on the main street buys our flowers on clan days. Come anyway. I'll make you a bouquet for no clan at all.
+
+## greet.clan  clan=yamanaka  clan_status=clanless  fn=reveal_character
+Hello! I like that I can't read your family in your face. I have to read you instead.
+
+## greet.clan  clan=inuzuka  clan_status=clanless  fn=react
+Hey! No clan? Then you're a stray, like half the pups at the clinic. Best dogs I know are strays!
+
+## greet.clan  clan=inuzuka  clan_status=clanless  fn=deepen_bond
+Hey! Nobody's family name ever impressed a dog. Your hand's out, that's what counts.
+
+## greet.clan  clan=inuzuka  clan_status=clanless  fn=reveal_character
+Hey! I couldn't live without a pack. You've managed. That's tougher than any Inuzuka I know.
+
+## greet.clan  clan=inuzuka  clan_status=clanless  fn=worldbuild
+Hey! Dogs pick their people, not their clans. One of ours has been wagging at you all week.
+
+## greet.clan  clan=sarutobi  clan_status=clanless  fn=deepen_bond
+Hello! Clanless? The Will of Fire was never meant for one family. Sit by our hearth any time.
+
+## greet.clan  clan=sarutobi  clan_status=clanless  fn=reveal_character
+Good day! My grandfather says the best shinobi he ever knew had no clan at all. He says it often.
+
+## greet.clan  clan=sarutobi  clan_status=clanless  fn=worldbuild
+Hello! Every guest gets a seat by the hearth, crest or no crest. The fire's not fussy.
+
+## greet.clan  clan=sarutobi  clan_status=clanless  fn=react
+Hello! You don't carry a family's name around with you. I imagine that's lighter on the shoulders.
+
+## greet.clan  clan=aburame  clan_status=clanless  fn=worldbuild
+Good day. Kikaichu cannot read crests. They taste only chakra. Yours tastes perfectly acceptable.
+
+## greet.clan  clan=aburame  clan_status=clanless  fn=reveal_character
+Hello. I have wondered what it is to have no clan. It seems logical that it is both lonely and free.
+
+## greet.clan  clan=aburame  clan_status=clanless  fn=deepen_bond
+Good day. Our gardens are open to you. A family name is not a requirement. Stillness is.
+
+## greet.clan  clan=aburame  clan_status=clanless  fn=react
+Hello. You did not ask me about the insects first. Clan folk usually do. I appreciate it.
+
+## greet.clan  clan=hatake  clan_status=clanless  fn=deepen_bond
+Hm. Clanless. My house is nearly empty, and you've a flat all to yourself. The dogs like us both.
+
+## greet.clan  clan=hatake  clan_status=clanless  fn=reveal_character
+Hello. People expect a great clan name to fill a whole house. Mine fills one room.
+
+## greet.clan  clan=hatake  clan_status=clanless  fn=worldbuild
+Hm. The ninken greet whoever they think is worthy. They didn't ask about your family.
+
+## greet.clan  clan=hatake  clan_status=clanless  fn=react
+Hello. Nobody asks you whose house you come from. Nobody asks me who's left in mine. We're even.
+
+## greet.clan  clan=kurama  clan_status=clanless  fn=deepen_bond
+Hello. A portrait of someone with no clan robes is a rare thing in our studio. I'd like to paint it.
+
+## greet.clan  clan=kurama  clan_status=clanless  fn=reveal_character
+Good day. Clanless, are you? I envy the blank canvas. Ours come already sketched.
+
+## greet.clan  clan=kurama  clan_status=clanless  fn=worldbuild
+Hello. In the artists' lane we don't ask about family. We ask about colour.
+
+## greet.clan  clan=kurama  clan_status=clanless  fn=react
+Good day. My cousin bet me you were from a minor clan. I bet clanless. I won a whole brush.
+
+## greet.clan  clan=shimura  clan_status=clanless  fn=worldbuild
+Good day. No clan, no family quarrels to carry. Use the freedom well.
+
+## greet.clan  clan=shimura  clan_status=clanless  fn=reveal_character
+Hm. I was asked once if I'd trade my name for none. I said no. I've wondered since.
+
+## greet.clan  clan=shimura  clan_status=clanless  fn=react
+Good day. You speak to us without a family's grudge behind you. That is rare in this lane.
+
+## greet.clan  clan=shimura  clan_status=clanless  fn=deepen_bond
+Hm. Clanless. Then your word is all you have. Keep it as we keep ours.
+
+## greet.clan  clan=yuhi  clan_status=clanless  fn=deepen_bond
+Hello. Guests with no clan get real tea at our house. That's a rule I just made.
+
+## greet.clan  clan=yuhi  clan_status=clanless  fn=reveal_character
+Good day. Red eyes, old trees, old rivalries. You have none of it. I can't decide if I pity you or envy you.
+
+## greet.clan  clan=yuhi  clan_status=clanless  fn=worldbuild
+Hello. The grove viewing in spring isn't only for clan folk. Come, and nobody will ask.
+
+## greet.clan  clan=yuhi  clan_status=clanless  fn=react
+Hello. You looked at the roses, not my eyes. Clanless folk always do. It's nice.
+
+## greet.clan  clan=gekko  clan_status=clanless  fn=deepen_bond
+Hello. Clan or not, you may sit on the moon platform. The moon has no family either.
+
+## greet.clan  clan=gekko  clan_status=clanless  fn=reveal_character
+Good day. I was handed my blade's name with my own. You'll get to choose both. I envy that a little.
+
+## greet.clan  clan=gekko  clan_status=clanless  fn=worldbuild
+Hello. Plenty of clanless swordsmen have trained in our dojo. Some of them beat us. We remember them fondly.
+
+## greet.clan  clan=gekko  clan_status=clanless  fn=react
+Good day. You stood through the whole kata without fidgeting. Clan children can't manage that.
+
+## greet.clan  clan=shiranui  clan_status=clanless  fn=react
+Hey. No clan? Easy. Fewer relatives telling you how to hold a senbon.
+
+## greet.clan  clan=shiranui  clan_status=clanless  fn=deepen_bond
+Hey. Want in on the senbon contest? No clan needed. Just a steady hand and a cool head.
+
+## greet.clan  clan=shiranui  clan_status=clanless  fn=reveal_character
+Hey. My family's small enough that it barely counts. You and I are nearly the same, really.
+
+## greet.clan  clan=shiranui  clan_status=clanless  fn=worldbuild
+Hey. The Hokage's guard has plenty of clanless faces. Nobody notices the difference on duty.
+
+## greet.clan  clan=morino  clan_status=clanless  fn=reveal_character
+Hm. Clanless. You'd make a terrible subject. No family secrets to find. I mean that kindly.
+
+## greet.clan  clan=morino  clan_status=clanless  fn=deepen_bond
+Good day. Folk with no clan hear rumours about us and believe them. You didn't. Thank you.
+
+## greet.clan  clan=morino  clan_status=clanless  fn=react
+Good day. You answered my question straight. Clan folk always look for the trap first.
+
+## greet.clan  clan=morino  clan_status=clanless  fn=worldbuild
+Hm. The coats belong to the family. The courtesy belongs to everyone.
+
+## greet.clan  clan=umino  clan_status=clanless  fn=deepen_bond
+Hello! Some of my best students had no clan at all. They had to work for everything, and it showed.
+
+## greet.clan  clan=umino  clan_status=clanless  fn=worldbuild
+Hello! Our family doesn't care whose child you are. Only whether you did the reading.
+
+## greet.clan  clan=umino  clan_status=clanless  fn=reveal_character
+Hello! I used to wish I'd been born to a great clan. Then I met their homework.
+
+## greet.clan  clan=umino  clan_status=clanless  fn=react
+Hello! No clan, no clan technique to lean on. You'll learn the basics better than anyone. I'll see to it.
+
+## greet.clan  clan=haruno  clan_status=clanless  fn=deepen_bond
+Hello! No clan? Neither did we, once. Just a shop and a pink awning. Look at us now!
+
+## greet.clan  clan=haruno  clan_status=clanless  fn=react
+Hello! Clanless customers are my favourite. You never ask for a family discount!
+
+## greet.clan  clan=haruno  clan_status=clanless  fn=reveal_character
+Hello! Half the market street is clanless. We're the only ones who call ourselves a clan. Don't tell anyone.
+
+## greet.clan  clan=haruno  clan_status=clanless  fn=worldbuild
+Hello! On the market street a family name sells nothing. A fair price sells everything.
+
+## greet.clan  clan=namiashi  clan_status=clanless  fn=deepen_bond
+Good day. No clan footwork to unlearn. You'd make a clean student on the stepping stones.
+
+## greet.clan  clan=namiashi  clan_status=clanless  fn=reveal_character
+Hello. Without a clan, who taught you to walk so quietly? Nobody? Then you're a natural.
+
+## greet.clan  clan=namiashi  clan_status=clanless  fn=react
+Good day. The Gekko would ask about your family. I'll just ask if you can swim.
+
+## greet.clan  clan=namiashi  clan_status=clanless  fn=worldbuild
+Hello. Our dojo takes clanless students on the first day of each season. The floor's wet; bring dry socks.
+
+## greet.clan  clan=hagane  clan_status=clanless  fn=react
+Hey! No clan? Ha! The gate can't decide whose cart you'd ride in. You're a mystery to the gossips.
+
+## greet.clan  clan=hagane  clan_status=clanless  fn=deepen_bond
+Hey! Clanless? Join the relay sometime. All it needs is legs and a loud voice.
+
+## greet.clan  clan=hagane  clan_status=clanless  fn=worldbuild
+Hey! Half the folk through the gate have no clan at all. Merchants, farmers, poets. Fine company.
+
+## greet.clan  clan=hagane  clan_status=clanless  fn=reveal_character
+Hey! I wondered which family you were from for a week. Lost a bet on it. You owe me nothing. Mostly.
+
+## greet.clan  clan=kinoshita  clan_status=clanless  fn=deepen_bond
+Hello! No clan? The yard takes anyone with patience and ten fingers. Keep all ten, please.
+
+## greet.clan  clan=kinoshita  clan_status=clanless  fn=react
+Hello! Clanless and furnishing a flat alone? Come to the yard. We'll find you something sturdy.
+
+## greet.clan  clan=kinoshita  clan_status=clanless  fn=reveal_character
+Hello! My grandfather says a clan is just people who built something together. Anyone can start one.
+
+## greet.clan  clan=kinoshita  clan_status=clanless  fn=worldbuild
+Hello! A beam doesn't ask who raised it. Half our best builders had no family name to speak of.
+
+## greet.clan  clan=tsuchigumo  clan_status=clanless  fn=react
+Good day. You keep to yourself as well as we do. For someone with no clan, that's rare.
+
+## greet.clan  clan=tsuchigumo  clan_status=clanless  fn=reveal_character
+Hm. A clan is a mountain to carry. You carry none. I wonder what that feels like.
+
+## greet.clan  clan=tsuchigumo  clan_status=clanless  fn=deepen_bond
+Good day. Leave a stone at the shrine sometime. The mountain doesn't ask for your family's name.
+
+## greet.clan  clan=tsuchigumo  clan_status=clanless  fn=worldbuild
+Good day. Few outsiders climb to the quarry. Clanless ones least of all. You're welcome to.
+
+## greet.clan  clan=suzuran  clan_status=clanless  fn=deepen_bond
+Hello! No clan to brew you a cold remedy? I'll brew one. It'll be disgusting. You'll thank me.
+
+## greet.clan  clan=suzuran  clan_status=clanless  fn=react
+Hello! I was going to ask about your clan, then I remembered. Never mind! Tell me your favourite herb instead.
+
+## greet.clan  clan=suzuran  clan_status=clanless  fn=reveal_character
+Good day! Clan or no clan, everyone's stomach aches the same. That's what I like about medicine.
+
+## greet.clan  clan=suzuran  clan_status=clanless  fn=worldbuild
+Hello! The hospital gardens hire clanless weeders every spring. It's how half our best apprentices started.
+
+## greet.clan  clan=tobari  clan_status=clanless  fn=deepen_bond
+...Good day. The night watch lights every street's lanterns, clan or none. Yours too.
+
+## greet.clan  clan=tobari  clan_status=clanless  fn=reveal_character
+Hm. No clan. Unseen, like us. You learn to like it, after a while.
+
+## greet.clan  clan=tobari  clan_status=clanless  fn=react
+Good day. You don't ask why our shutters stay closed. People without a clan rarely pry. Good.
+
+## greet.clan  clan=tobari  clan_status=clanless  fn=worldbuild
+...Good day. In the dark lanes, nobody can see a crest anyway. Everyone's the same at night.

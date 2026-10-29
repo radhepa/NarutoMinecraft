@@ -136,7 +136,7 @@ Fine, {pay}. The match is starting, I haven't time to argue.
 You win. {pay}, and cheer for the Leaf.
 
 ## shop.exam_stalls.haggle_fail  shop=exam_stalls  kind=cycle  fn=commerce
-Not in exam week. The stall fee by the stadium is murder.
+Not in exam week. The stall fee by the stadium is daylight robbery.
 No. I've a hundred visitors behind you who'll pay full.
 Ha! Try again after the finals, when I'm desperate.
 

@@ -1,0 +1,79 @@
+# Callbacks to village hangout highlights: the market, the bathhouse, the shrine and walking a pet.
+#! kind: cycle
+#! fn: callback
+
+## callback.hangout.market_stroll.highlight.1
+The cloth seller still flinches when they see you coming. Half price! Legendary.
+## callback.hangout.market_stroll.highlight.2
+You juggling for the street performer! You dropped everything and still got a cheer.
+## callback.hangout.market_stroll.highlight.3
+I'm wearing the charm we found at the trinket stall. Are you wearing yours?
+## callback.hangout.market_stroll.highlight.4
+That goat that chased us down the market street! I still check over my shoulder by the pens.
+## callback.hangout.market_stroll.highlight.5
+Friends for life, the fortune teller said. I'm holding you to it.
+## callback.hangout.market_stroll.highlight.6
+That caravan fruit that tasted of sunshine and soap. I've been looking for it ever since.
+## callback.hangout.market_stroll.highlight.7
+"You look like trouble." Free sweet potatoes! I've been trying to look like trouble ever since.
+## callback.hangout.market_stroll.highlight.8
+The whole stall clapping when you returned that purse. I was so proud to be next to you.
+## callback.hangout.market_stroll.highlight.9
+Huddling under the noodle stall's awning in the rain. One of my favourite days.
+## callback.hangout.market_stroll.highlight.10
+That spinning top of yours. Is it still going? Tell me it's still going.
+## callback.hangout.market_stroll.highlight.11
+One skewer from every food stall. My stomach still remembers it fondly. Mostly.
+## callback.hangout.market_stroll.highlight.12
+"Not yet," you told that little child who asked if we were famous. I think about that.
+
+## callback.hangout.bathhouse.highlight.1
+Our milk-bottle race at the bathhouse! People still raise their bottles at me.
+## callback.hangout.bathhouse.highlight.2
+I caught myself humming that folk song from the bathhouse. I only know the chorus.
+## callback.hangout.bathhouse.highlight.3
+Snow on our heads in the outdoor bath. Every first snow, I'll think of that.
+## callback.hangout.bathhouse.highlight.4
+I went looking for the secret hot spot you found by the cedar post. Couldn't find it without you.
+## callback.hangout.bathhouse.highlight.5
+That hour of talking about nothing at the bathhouse. It helped more than you know.
+## callback.hangout.bathhouse.highlight.6
+The yuzu bath! I can still smell it when I think about that night.
+## callback.hangout.bathhouse.highlight.7
+Our fog conversation in the steam. I still don't know what faces you were making.
+## callback.hangout.bathhouse.highlight.8
+Walking home steaming like two dumplings. Let's do that again when it's cold.
+
+## callback.hangout.shrine_visit.highlight.1
+Great blessing, both of us! I keep my fortune folded in my sleeve. Do you?
+## callback.hangout.shrine_visit.highlight.2
+That white heron on the shrine gate. The keeper said it's a sign of a long friendship.
+## callback.hangout.shrine_visit.highlight.3
+Sweeping leaves with the shrine keeper. I swear my luck's been better since.
+## callback.hangout.shrine_visit.highlight.4
+I still say there are more steps than you counted. We'll have to go and count again.
+## callback.hangout.shrine_visit.highlight.5
+That silence after the wind chimes. I go looking for it when I'm upset.
+## callback.hangout.shrine_visit.highlight.6
+You put your bad fortune to bed on the tree. I've done mine the same way ever since.
+## callback.hangout.shrine_visit.highlight.7
+Watching the village wake from the top step. I'd like to see that again with you.
+## callback.hangout.shrine_visit.highlight.8
+That shrine cat that sat between us. It's still there. I visit it.
+
+## callback.hangout.pet_walk.highlight.1
+The dog shaking river water all over you! It still looks pleased with itself when it sees you.
+## callback.hangout.pet_walk.highlight.2
+It's never brought anyone else a stick. Only you. I've been keeping track.
+## callback.hangout.pet_walk.highlight.3
+That unimpressed duck! The dog still sulks when we pass the spot.
+## callback.hangout.pet_walk.highlight.4
+It fell asleep on your feet under the willow. It still goes and sleeps there sometimes.
+## callback.hangout.pet_walk.highlight.5
+It still sits for you better than it sits for me. I'm a little offended.
+## callback.hangout.pet_walk.highlight.6
+That pack of kennel dogs all at once! My lead arm still hasn't forgiven us.
+## callback.hangout.pet_walk.highlight.7
+The frog that knocked the dog over backwards. I laugh about it every time we pass the reeds.
+## callback.hangout.pet_walk.highlight.8
+The dog trotting home between us, like it had two owners. As far as it's concerned, it does.

@@ -1,0 +1,64 @@
+# Overheard talk between shinobi: missions, training, the Mission Desk, gear. Nothing classified.
+#! tags: relation=shinobi
+
+## ambient.shinobi  fn=worldbuild
+A: What did the Mission Desk give you?
+B: Weeding. Three gardens. A Chunin, weeding.
+A: Every rank weeds. That's the Leaf.
+
+A: Back from the east road?
+B: Escort job. The merchant talked the whole way. Every step, every hour.
+
+A: Have you tried the new kunai from the weapon shop?
+B: Lighter. Flies further, sticks harder. I bought a dozen.
+
+A: Training ground three's booked till noon.
+B: Then we'll take the lake. Water walking, wet clothes, the usual.
+
+A: My sensei made us carry logs up the cliff all morning.
+B: Mine made us carry each other. I'd take logs.
+
+A: Paper bombs went up a ryo at the tool shop.
+B: Powder cart's late. Everything's gone up a ryo.
+
+A: Who's got the night watch on the wall?
+B: The Tobari, mostly. They hear things before they happen.
+
+A: How long were you out?
+B: Six days. I'd kill for a bath. Not literally. Mostly.
+
+## ambient.shinobi  fn=teach
+A: Did you eat before the spar?
+B: Barbecue. A plate of beef.
+A: Smart. Hits harder for a while after.
+
+A: You look done in.
+B: Up till three. Couldn't sleep before the mission.
+A: Sleep in your own bed before midnight next time. You wake up with chakra to spare.
+
+A: Your ninken's getting good at tracking.
+B: Started on the cat-finding D-ranks. Cats leave a strong trail.
+
+## ambient.shinobi  fn=reveal_character
+A: Do you ever miss the Academy?
+B: The lunches. Not the tests.
+
+A: My first C-rank, my hands shook the whole way.
+B: Mine still do. You just learn to throw with them shaking.
+
+A: I've never once hit the bullseye at the festival target stall.
+B: A Chunin, and you can't win a paper fan?
+A: Chakra's not allowed. That's my excuse.
+
+## ambient.shinobi  rank=genin  fn=react
+A: Our sensei was late again.
+B: Ours too. We practised hand signs for an hour waiting.
+A: Maybe they're all together somewhere, laughing at us.
+
+A: Two D-ranks today! Painting a fence and catching a goat.
+B: Which was harder?
+A: The fence. The goat had more sense.
+
+## ambient.shinobi  fn=filler
+A: Good mission?
+B: Good enough. Home in one piece.
