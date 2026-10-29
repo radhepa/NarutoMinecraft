@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Varied's "Roll a life": an origin by the shinobi groups' population weights (as the rolled cast is drawn, so most
- * rolls are clanless), then a whole child-stage look from that origin's own weighted pools, on the save seed's
+ * Varied's "Roll a life": an origin by the population weights of the origins the creator offers (for now only the
+ * clanless), then a whole child-stage look from that origin's own weighted pools, then the Roots, on the save seed's
  * {@code creator} stream. The same seed always suggests the same character; tools/creator/creator.py rolls the same
  * numbers (the compiled file's {@code parity} list holds both sides to it).
  */
@@ -54,6 +54,15 @@ public final class LifeRoll {
     }
 
     public static Rolled roll(CreatorRules rules, long seed) { return look(rules, seed, origin(rules, seed)); }
+
+    /** The Roots, from their own stream; pronouns are never rolled (the body's default stands until you change it). */
+    public static CreatorRules.Roots roots(CreatorRules rules, long seed, String body) {
+        var rng = Seeds.stream(seed, "creator", "roots");
+        String temperament = rng.pick(rules.rootOptions("temperament"));
+        String knack = rng.pick(rules.rootOptions("knack"));
+        String affinity = rng.pick(rules.rootOptions("affinity"));
+        return new CreatorRules.Roots(rules.defaultPronouns(body), temperament, knack, affinity);
+    }
 
     /** The roll as the compiled file's parity entries write it. */
     public static Map<String, Object> toMap(Rolled r) {

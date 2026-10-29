@@ -77,23 +77,20 @@ def _label(spec: dict, data: dict, origin: str, family: str) -> tuple[str, str]:
 
 
 def samples(world: C.World, data: dict, count: int = 10):
-    """Ten players: a Roll a life from save seeds 1..N (origin by population weight), so most are clanless."""
+    """Fifteen players rolled the way Varied's Roll a life does (save seeds 1 to 15), and the two opening looks."""
     OUT.mkdir(parents=True, exist_ok=True)
     rolled = []
     for seed in range(1, count + 1):
         origin = C.roll_origin(data, seed)
         look = C.roll_look(data, seed, origin)
         rolled.append((origin, look))
-    forced = ["uchiha", "hyuga", "inuzuka", "uzumaki", "akimichi"]
-    for i, origin in enumerate(forced):
-        rolled.append((origin, C.roll_look(data, 100 + i, origin)))
-    rolled += [(o, data["origins"][o]["defaults"][b]) for o, b in (("clanless", "male"), ("clanless", "female"),
-                                                                   ("nara", "male"), ("yamanaka", "female"), ("haruno", "female"))]
-    groups = [rolled[i:i + 5] for i in range(0, len(rolled), 5)]
-    subtitles = ["Roll a life, save seeds 1 to 5 (drawn by population: most are clanless)",
-                 "Roll a life, save seeds 6 to 10",
-                 "Clan-born rolls: Uchiha, Hyuga, Inuzuka, Uzumaki, Akimichi",
-                 "The creator's opening looks: clanless (both bodies), Nara, Yamanaka, Haruno"]
+    rolled += [(C.roll_origin(data, seed), C.roll_look(data, seed, C.roll_origin(data, seed))) for seed in range(count + 1, count + 6)]
+    rolled += [("clanless", data["origins"]["clanless"]["defaults"][b]) for b in ("male", "female")]
+    groups = [rolled[i:i + 5] for i in range(0, 15, 5)] + [rolled[15:]]
+    subtitles = ["Roll a life, save seeds 1 to 5", "Roll a life, save seeds 6 to 10", "Roll a life, save seeds 11 to 15",
+                 "The creator's opening looks, both bodies"]
+    for p in OUT.glob("samples_*.png"):
+        p.unlink()
     for n, (group, subtitle) in enumerate(zip(groups, subtitles), 1):
         lineup(world, data, group, OUT / f"samples_{n}.png", subtitle)
 

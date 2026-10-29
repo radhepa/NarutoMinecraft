@@ -20,6 +20,8 @@ class RestyleAndGrowUpTest {
         assertTrue(restyle.canChange("outfit", Restyle.Venue.HOME));
         assertFalse(restyle.canChange("body", Restyle.Venue.TIME_SKIP));
         assertTrue(restyle.canChange("hair", Restyle.Venue.TIME_SKIP));
+        assertTrue(restyle.canChange("pronouns", Restyle.Venue.SETTINGS));
+        assertEquals(Restyle.Venue.LOCKED, restyle.venue("affinity"));
     }
 
     @Test

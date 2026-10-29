@@ -31,7 +31,7 @@ RULES = TOOL / "creator.json"
 OUT = ROOT / "src/main/resources/data/narutominecraft/creator/creator.json"
 STAGES = ("child", "teen", "adult")
 BODIES = ("male", "female")
-CHANGE_PLACES = ("locked", "barber", "home")
+CHANGE_PLACES = ("locked", "barber", "home", "settings")
 PARITY_SEEDS = (1, 7, 42, 2026, 20261029, -5)
 
 
@@ -275,8 +275,10 @@ class World:
             else:
                 entry["means"] = r["clanless"]["means"]
             origins[origin] = entry
+        creatable = r["creatable"]["origins"]
         shinobi = {"clanless": self.population["clanless"]}
         shinobi.update({c: w for c, w in self.population["clans"].items() if c in self.clans})
+        shinobi = {g: w for g, w in shinobi.items() if g in creatable}
         data = {
             "format": r["format"],
             "stages": r["stages"],
@@ -291,6 +293,9 @@ class World:
             "grows_into": {k: v for k, v in r["grows_into"].items() if not k.startswith("_")},
             "stage_hair": {k: v for k, v in r["stage_hair"].items() if not k.startswith("_")},
             "prologue_look": {k: v for k, v in r["prologue_look"].items() if not k.startswith("_")},
+            "creatable": creatable,
+            "pronouns": {k: v for k, v in r["pronouns"].items() if not k.startswith("_")},
+            "roots": {k: v for k, v in r["roots"].items() if not k.startswith("_")},
             "population": shinobi,
             "outfits": dict(sorted(outfits.items())),
             "origins": origins,
@@ -299,8 +304,8 @@ class World:
             child = view(data, origin, "child")
             entry["defaults"] = {b: dict(self.defaults(origin, child, b), **r["default_overrides"].get(origin, {}).get(b, {}))
                                  for b in BODIES}
-        data["parity"] = [{"seed": s, "origin": roll_origin(data, s), "look": roll_look(data, s, roll_origin(data, s))}
-                          for s in PARITY_SEEDS]
+        data["parity"] = [{"seed": s, "origin": roll_origin(data, s), "look": roll_look(data, s, roll_origin(data, s)),
+                           "roots": roll_roots(data, s)} for s in PARITY_SEEDS]
         return data
 
 
@@ -358,6 +363,21 @@ def roll_look(data: dict, seed: int, origin: str) -> dict:
         "headwear": rng.pick(a["headwear"]),
         "family": rng.pick(o["family_names"]),
     }
+
+
+def roll_roots(data: dict, seed: int) -> dict:
+    """Roll a life's Roots: temperament, knack and affinity, from their own stream. Pronouns are never rolled."""
+    rng = stream(seed, "creator", "roots")
+    return {k: rng.pick(data["roots"][k]["options"]) for k in ("temperament", "knack", "affinity")}
+
+
+def validate_roots(data: dict, roots: dict) -> list[str]:
+    """The server's check of the Roots step and the pronouns (CreatorRules.validateRoots)."""
+    errors = [f"{k} {roots.get(k)} is not offered" for k in ("temperament", "knack", "affinity")
+              if roots.get(k) not in data["roots"][k]["options"]]
+    if "pronouns" in roots and roots["pronouns"] not in data["pronouns"]["options"]:
+        errors.append(f"pronouns {roots['pronouns']} are not offered")
+    return errors
 
 
 # -- checks ------------------------------------------------------------------------------------------------------------
@@ -487,6 +507,17 @@ def check(world: World, data: dict) -> list[str]:
             errors += [f"{origin} default ({b}): {e}" for e in validate_look(data, origin, "child", d)]
     for p in data["parity"]:
         errors += [f"parity roll {p['seed']}: {e}" for e in validate_look(data, p["origin"], "child", p["look"])]
+        errors += [f"parity roll {p['seed']}: {e}" for e in validate_roots(data, p["roots"])]
+        if p["origin"] not in data["creatable"]:
+            errors.append(f"parity roll {p['seed']}: Roll a life chose {p['origin']}, which the creator does not offer")
+    if not data["creatable"] or any(o not in data["origins"] for o in data["creatable"]):
+        errors.append("creatable origins must be known origins, at least one")
+    for k, v in data["roots"].items():
+        if v["default"] not in v["options"]:
+            errors.append(f"roots {k}: the default is not an option")
+    pr = data["pronouns"]
+    if any(pr["default_for_body"].get(b) not in pr["options"] for b in BODIES):
+        errors.append("pronouns need a default for each body among the options")
     return errors
 
 
@@ -549,7 +580,7 @@ def main(argv=None) -> int:
     blob = outputs(data)
     if args.roll is not None:
         origin = roll_origin(data, args.roll)
-        print(origin, json.dumps(roll_look(data, args.roll, origin)))
+        print(origin, json.dumps(roll_look(data, args.roll, origin)), json.dumps(roll_roots(data, args.roll)))
         return 0
     if args.mockups:
         import mockups

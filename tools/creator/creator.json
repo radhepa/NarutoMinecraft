@@ -8,6 +8,24 @@
     "adult": {"ages": [18, null], "scale": 1.0, "head": 1.0, "outfit_ranks": ["chunin", "jonin", "anbu", "kage"], "from": "time_skip_2"}
   },
 
+  "creatable": {
+    "_doc": "Origins the creator offers. For now the player is born to no clan; every clan's rules stay below so clan-born play can return as an option.",
+    "origins": ["clanless"]
+  },
+
+  "pronouns": {
+    "_doc": "How text refers to the player in the third person ({they:player}, {them:player}, {their:player}). Independent of the body; the creator preselects by body.",
+    "options": ["they", "she", "he"],
+    "default_for_body": {"male": "he", "female": "she"}
+  },
+
+  "roots": {
+    "_doc": "The Roots step: flavor and small leanings, never a story choice. temperament: a dialogue context tag only (the bond system gives the player no personality). knack: combat's starting leaning (+5% and a practice item). affinity: the nature you lean toward, shown at the Genin ceremony (choosing it there gives combat's bonus).",
+    "temperament": {"options": ["bold", "steady", "cheerful", "quiet", "curious", "stubborn"], "default": "cheerful"},
+    "knack": {"options": ["balanced", "taijutsu", "weapons", "ninjutsu"], "default": "balanced"},
+    "affinity": {"options": ["undecided", "fire", "wind", "water", "earth", "lightning"], "default": "undecided"}
+  },
+
   "name": {"min": 2, "max": 16, "allowed": "letters (any script), spaces, apostrophes and hyphens; starts with a letter; no two spaces in a row"},
 
   "bodies": {
@@ -76,9 +94,13 @@
   },
 
   "changes": {
-    "_doc": "Where each choice can change after creation. locked: never in the creator's sense (the story or a life event may still change it).",
+    "_doc": "Where each choice can change after creation: locked (the story or a life event may still change it), barber, home, or the settings screen.",
     "given_name": {"where": "locked"},
-    "family_name": {"where": "locked", "except": "marriage or joining a clan (Shinobi Life and Core glue)"},
+    "family_name": {"where": "locked", "except": "a life event the story or Shinobi Life allows (marriage, joining or founding a clan)"},
+    "pronouns": {"where": "settings"},
+    "temperament": {"where": "locked"},
+    "knack": {"where": "locked"},
+    "affinity": {"where": "locked", "note": "a leaning only: the Genin ceremony still offers every nature"},
     "body": {"where": "locked"},
     "complexion": {"where": "locked"},
     "eye_color": {"where": "locked", "except": "a kekkei genkai shows itself (Sharingan, Byakugan) on its own"},
@@ -107,9 +129,9 @@
   },
 
   "clanless": {
-    "blurb": "Most of the Leaf belongs to no clan: civilians' children and shinobi of ordinary families. You start even with everyone and earn your place yourself.",
+    "blurb": "No clan. Most of the Leaf belongs to none: civilians' children and shinobi of ordinary families. You start even with everyone and earn your place yourself.",
     "means": [
-      "An ordinary family name, on your papers",
+      "An ordinary family name, on your papers; the creator shows \"no clan\"",
       "Every collection's hairstyles and the open colors",
       "From Genin: one lesser technique from each clan where a friend reaches level 7",
       "Clan lines play as the outsider's welcome test; a clan may invite you to join it later"

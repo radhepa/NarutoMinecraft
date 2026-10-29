@@ -74,7 +74,20 @@
   },
   "family_name": {
    "where": "locked",
-   "except": "marriage or joining a clan (Shinobi Life and Core glue)"
+   "except": "a life event the story or Shinobi Life allows (marriage, joining or founding a clan)"
+  },
+  "pronouns": {
+   "where": "settings"
+  },
+  "temperament": {
+   "where": "locked"
+  },
+  "knack": {
+   "where": "locked"
+  },
+  "affinity": {
+   "where": "locked",
+   "note": "a leaning only: the Genin ceremony still offers every nature"
   },
   "body": {
    "where": "locked"
@@ -178,33 +191,55 @@
   "palette": "ACADEMY_GENIN_SAND",
   "headwear": null
  },
+ "creatable": [
+  "clanless"
+ ],
+ "pronouns": {
+  "options": [
+   "they",
+   "she",
+   "he"
+  ],
+  "default_for_body": {
+   "male": "he",
+   "female": "she"
+  }
+ },
+ "roots": {
+  "temperament": {
+   "options": [
+    "bold",
+    "steady",
+    "cheerful",
+    "quiet",
+    "curious",
+    "stubborn"
+   ],
+   "default": "cheerful"
+  },
+  "knack": {
+   "options": [
+    "balanced",
+    "taijutsu",
+    "weapons",
+    "ninjutsu"
+   ],
+   "default": "balanced"
+  },
+  "affinity": {
+   "options": [
+    "undecided",
+    "fire",
+    "wind",
+    "water",
+    "earth",
+    "lightning"
+   ],
+   "default": "undecided"
+  }
+ },
  "population": {
-  "clanless": 280,
-  "uchiha": 15,
-  "hyuga": 15,
-  "nara": 12,
-  "akimichi": 12,
-  "yamanaka": 12,
-  "inuzuka": 12,
-  "aburame": 12,
-  "sarutobi": 8,
-  "shimura": 5,
-  "yuhi": 5,
-  "gekko": 5,
-  "senju": 4,
-  "uzumaki": 4,
-  "kurama": 4,
-  "hatake": 2,
-  "shiranui": 17,
-  "morino": 17,
-  "umino": 17,
-  "haruno": 17,
-  "namiashi": 17,
-  "hagane": 17,
-  "kinoshita": 17,
-  "tsuchigumo": 10,
-  "suzuran": 10,
-  "tobari": 10
+  "clanless": 280
  },
  "outfits": {
   "aburame.elder_mantle": {
@@ -5180,7 +5215,7 @@
    "clan": null,
    "name": null,
    "standing": null,
-   "blurb": "Most of the Leaf belongs to no clan: civilians' children and shinobi of ordinary families. You start even with everyone and earn your place yourself.",
+   "blurb": "No clan. Most of the Leaf belongs to none: civilians' children and shinobi of ordinary families. You start even with everyone and earn your place yourself.",
    "family_names": [
     "Tanaka",
     "Suzuki",
@@ -5579,7 +5614,7 @@
     ]
    },
    "means": [
-    "An ordinary family name, on your papers",
+    "An ordinary family name, on your papers; the creator shows \"no clan\"",
     "Every collection's hairstyles and the open colors",
     "From Genin: one lesser technique from each clan where a friend reaches level 7",
     "Clan lines play as the outsider's welcome test; a clan may invite you to join it later"
@@ -16312,6 +16347,11 @@
     "palette": "ACADEMY_GENIN_MINT",
     "headwear": null,
     "family": "Nishimura"
+   },
+   "roots": {
+    "temperament": "bold",
+    "knack": "taijutsu",
+    "affinity": "wind"
    }
   },
   {
@@ -16330,60 +16370,80 @@
     "palette": "ACADEMY_GENIN_ROSE",
     "headwear": null,
     "family": "Yoshida"
+   },
+   "roots": {
+    "temperament": "bold",
+    "knack": "ninjutsu",
+    "affinity": "wind"
    }
   },
   {
    "seed": 42,
-   "origin": "kinoshita",
+   "origin": "clanless",
    "look": {
     "body": "male",
-    "complexion": 2,
-    "eye_style": "soft_glint",
-    "brows": "bold",
-    "hair": "hg027_long_waves",
-    "hair_color": "KINOSHITA_WALNUT",
+    "complexion": 5,
+    "eye_style": "starlit",
+    "brows": "fine",
+    "hair": "hg033_slicked_back",
+    "hair_color": "BLOSSOM_PINK",
     "eye_color": "DARK",
     "marks": [],
-    "outfit": "academy_genin.first_day",
-    "palette": "ACADEMY_GENIN_SKY",
-    "headwear": "wg003_streamer_headband",
-    "family": "Kinoshita"
+    "outfit": "academy_genin.borrowed_jacket",
+    "palette": "ACADEMY_GENIN_INDIGO",
+    "headwear": null,
+    "family": "Nishimura"
+   },
+   "roots": {
+    "temperament": "quiet",
+    "knack": "weapons",
+    "affinity": "wind"
    }
   },
   {
    "seed": 2026,
-   "origin": "nara",
+   "origin": "clanless",
    "look": {
-    "body": "female",
-    "complexion": 2,
+    "body": "male",
+    "complexion": 3,
     "eye_style": "starlit",
-    "brows": "bold",
-    "hair": "h05_swept_spikes",
-    "hair_color": "RAVEN",
+    "brows": "fine",
+    "hair": "hg034_long_tied",
+    "hair_color": "GINGER",
     "eye_color": "DARK",
     "marks": [],
-    "outfit": "academy_genin.borrowed_jacket",
-    "palette": "NARA_DUSK",
+    "outfit": "academy_genin.layers",
+    "palette": "ACADEMY_GENIN_SKY",
     "headwear": "wg003_streamer_headband",
-    "family": "Nara"
+    "family": "Tanaka"
+   },
+   "roots": {
+    "temperament": "bold",
+    "knack": "weapons",
+    "affinity": "water"
    }
   },
   {
    "seed": 20261029,
-   "origin": "yuhi",
+   "origin": "clanless",
    "look": {
-    "body": "male",
-    "complexion": 2,
+    "body": "female",
+    "complexion": 4,
     "eye_style": "soft_glint",
     "brows": "bold",
-    "hair": "h1407_rose_bun",
-    "hair_color": "YUHI_UMBER",
-    "eye_color": "YUHI_RED",
+    "hair": "hg008_shaggy_layers",
+    "hair_color": "VIOLET",
+    "eye_color": "JADE",
     "marks": [],
-    "outfit": "academy_genin.dungarees",
-    "palette": "YUHI_DUSK_ROSE",
-    "headwear": "w1401_rose_hairpin",
-    "family": "Yuhi"
+    "outfit": "academy_genin.first_day",
+    "palette": "ACADEMY_GENIN_SKY",
+    "headwear": null,
+    "family": "Shimizu"
+   },
+   "roots": {
+    "temperament": "bold",
+    "knack": "weapons",
+    "affinity": "lightning"
    }
   },
   {
@@ -16402,6 +16462,11 @@
     "palette": "ACADEMY_GENIN_MINT",
     "headwear": "wg003_streamer_headband",
     "family": "Kawaguchi"
+   },
+   "roots": {
+    "temperament": "bold",
+    "knack": "taijutsu",
+    "affinity": "undecided"
    }
   }
  ]

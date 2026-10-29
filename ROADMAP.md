@@ -106,9 +106,9 @@ Jonin.
 | Content mod id | `narutominecraft`, kept. |
 | VF's RPG add-on | Not shipped. |
 | VF changes | *Default:* fine to add small public APIs to VF: extra wardrobe namespaces, a currency item, hand-built taverns, and a resident appearance seed (for Varied saves). |
-| Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe, and clan or clanless ([CHARACTER_CREATION.md](CHARACTER_CREATION.md)). |
+| Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe. For now the player is born to no clan; clan-born play stays in the data as a later option ([CHARACTER_CREATION.md](CHARACTER_CREATION.md)). |
 | Growing up | Academy kid, teen, adult, then adult for good. No old age and no death of age. |
-| Clans | 25 clans: the 15 noble clans and 10 minor clans ([CLANS.md](CLANS.md)). Born into one of them or clanless. *Default:* all 25 pickable at creation, alongside clanless; a player can also create their own clan. *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship. |
+| Clans | 25 clans: the 15 noble clans and 10 minor clans ([CLANS.md](CLANS.md)). *Decided:* for now the player is born to no clan (clan-born play stays in the creator's data as a later option, [CHARACTER_CREATION.md](CHARACTER_CREATION.md)); a player can also create their own clan. *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship. |
 | Population | The village is mostly clanless, drawn by clan rarity from `tools/wardrobe/population.json` (weights per thousand): about 45% civilians, 28% clanless shinobi with ordinary family names, 15% from the 10 minor clans and 13% from the 15 noble clans (an Uchiha or a Hyuga about 1 in 70, a Hatake about 1 in 500). Civilians wear their own clothing collections (market and household); the general shinobi wardrobe adds 100 tops, 100 bottoms and 50 hairstyles ([Population](#population)). |
 | Kekkei genkai | Playable through clan membership. Out of scope for now: summoning, and with it tailed beasts. |
 | Squad | Teammates and sensei are original characters with personalities, friendship levels and connections, fixed per save (curated in Classic, rolled in Varied). They can leave the squad. |
@@ -704,7 +704,7 @@ off (closed gates, streets under repair) or is not built yet.
 | By | Districts and landmarks | Why |
 |---|---|---|
 | Phase 0 | One test street of pasted homes with plaques and a Village Marker | Proves pasting, homes, residents and ryo trades on a hand-made map |
-| **Beta 1** | The prologue hills, the hideout and a ruined shrine; the main gate and its stretch of wall; the main street to the Hokage Residence (exterior and ground floor); the Academy (by hand) with its yard, library and workshop; the player's apartment block (all candidate flats for Varied) and ~12 homes around it; Ichiraku; the furniture shop, grocer and Inuzuka clinic (pets); the hospital; the shrine; the Hokage Rock with its four faces; a gate and main hall for each of the 15 noble clan quarters; the civilian market street and residential streets | The opening, the Academy, life sim, pets, clan-born kin from day one, seeds for later |
+| **Beta 1** | The prologue hills, the hideout and a ruined shrine; the main gate and its stretch of wall; the main street to the Hokage Residence (exterior and ground floor); the Academy (by hand) with its yard, library and workshop; the player's apartment block (all candidate flats for Varied) and ~12 homes around it; Ichiraku; the furniture shop, grocer and Inuzuka clinic (pets); the hospital; the shrine; the Hokage Rock with its four faces; a gate and main hall for each of the 15 noble clan quarters; the civilian market street and residential streets | The opening, the Academy, life sim, pets, the clans as neighbours from day one, seeds for later |
 | **Beta 2** | The Mission Desk (Residence ground floor); Training Ground 3 (by hand) and two pasted training grounds with the lake and the climbing cliff; the market street with the weapon shop and forge, scroll shop, tea house, barbecue house; the 15 noble clan quarters filled out; the 10 minor clans' neighbourhoods; bandit camps outside the wall; the east road and its waystation; the first far-location region (a border village) | Genin missions, training arcs, crafting, story C-ranks, clan techniques |
 | **Beta 3** | The Forest of Death (pasted trees, the tower by hand, 44 gates); the stadium with seated spectators; the exam hall in the Academy; foreign teams' lodging | The Chunin Exams and the attack |
 | Later | The rest of the homes and shops, police HQ, the full wall and all gates, ANBU HQ, the later arcs' story locations, the four vacant estates, the far regions of later arcs | Chunin to Hokage ([Story bible](#10-story-bible)) |
@@ -735,7 +735,7 @@ effort estimate) is in **[KONOHA_BUILD.md](KONOHA_BUILD.md)**.
 | System | Beta 1 (opening, Academy) | Beta 2 (Genin) | Beta 3 (Chunin Exams) |
 |---|---|---|---|
 | World creation | Classic or Varied, the save seed | — | — |
-| Character creation | Creator screen, one of 25 clans or clanless | — | — |
+| Character creation | Creator screen (no clan for now), roots, Roll a life | — | — |
 | Adventure rules | No breaking or placing | — | — |
 | Home and furniture | Apartment, furnish mode, chests | Forge for the apartment | — |
 | Ryo and shops | Stipend, jobs, furniture shop, grocer, Ichiraku | Mission pay, tool, weapon and scroll shops | Exam-week stalls |
@@ -762,19 +762,21 @@ The full design is in **[CHARACTER_CREATION.md](CHARACTER_CREATION.md)**. In sho
 
 - **World creation first:** a Shinobi tab on the Create World screen sets Classic or Varied, the
   save seed, difficulty, adventure rules and hand-sign input.
+- **For now the player is born to no clan:** an orphan of no clan with an ordinary family name, even
+  with the whole village; the player's own power is [Kindling Bond](#kindling-bond), opened by the
+  story. Every clan's creator rules stay in the data, so clan-born play can return as an option.
 - **The creator** opens at the start of the prologue, over a neutral *Who are you?* card, in seven
-  steps with a live preview of your child-stage model: **origin** (one of the 25 clans or
-  clanless, all pickable), **name** (a typed given name; the clan's family name, or an ordinary one
-  from `population.json` for the clanless), **body** (body A or B, the six complexions, eye shape,
-  brows, eye color), **hair**, **face** (up to two marks, headwear without a forehead protector),
-  **outfit** (the Academy collection, plus the clan's own Academy wear and colors) and a **review**.
-- **The clan-born** get their clan's looks, family name and kin from day one, and its technique and
-  kekkei genkai from Genin; the clanless get every collection's looks and earn their place. No
-  stats differ at creation; no personality or nature is picked (the nature waits for the Genin
-  ceremony).
-- **Locked:** name, body, complexion, eyes, origin. **Changeable:** hair, hair color, brows and
-  marks at a barber; outfits and headwear at home; a free restyle on the Years Later mirror at each
-  time skip, where hair grows and outfits follow the rank.
+  steps with a live preview of your child-stage model: **name** (first name typed, then a last name
+  from `population.json`'s ordinary family names, shown as *no clan*; pronouns), **body** (body A
+  or B, the six complexions, eye shape, brows, eye color), **hair**, **face** (marks, headwear
+  without a forehead protector), **outfit** (the Academy collection), **roots** (a temperament for
+  dialogue flavor, a combat knack, a nature affinity that the Genin ceremony shows as your leaning)
+  and a **review**.
+- **Starting stats** are the same for every player (combat's numbers: 10 hearts, chakra 53,
+  control 35, stamina 110, poise 20).
+- **Locked:** names, body, complexion, eyes, roots. **Changeable:** hair, hair color, brows and
+  marks at a barber; outfits and headwear at home; pronouns in the settings; a free restyle on the
+  Years Later mirror at each time skip, where hair grows and outfits follow the rank.
 - **Varied's Roll a life** rolls a whole character from the save seed (the same seed, the same
   suggestion); every row also has its own dice.
 - **Data and code:** `tools/creator/creator.json` compiled by `tools/creator/creator.py` (with
@@ -1223,7 +1225,7 @@ Deliverables name the mod they land in: **Core**, **Village**, **Combat**, **Lif
 
 **Deliverables:** chapters 0 to 7 and Beta 1's side quests ([section 8](#beta-1-the-opening-and-the-academy-4-h)); from [section 7](#systems-by-slice), every Beta 1 system; the Beta 1 districts ([schedule](#district-schedule)).
 
-- **Village:** the full creator screen, all 25 clans pickable; the population draw and the civilian collections; Academy outfits; Academy kids and
+- **Village:** the full creator screen ([CHARACTER_CREATION.md](CHARACTER_CREATION.md)); the population draw and the civilian collections; Academy outfits; Academy kids and
   the instructor with lesson routines; the Classic cast and Varied rolls; the child stage.
 - **Life:** apartment and furnish mode, the first Leaf furniture set, chests, ryo, stipend, jobs,
   the daily cycle and fatigue, hospital wakes, Leaf dish buffs, the workbench, pets.

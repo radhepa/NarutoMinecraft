@@ -30,6 +30,13 @@ public final class CreatorRules {
         }
     }
 
+    /**
+     * The Roots step and the pronouns: flavor and small leanings. {@code temperament} is a dialogue context tag,
+     * {@code knack} combat's starting leaning, {@code affinity} the nature shown as your leaning at the Genin
+     * ceremony, {@code pronouns} how text refers to you in the third person.
+     */
+    public record Roots(String pronouns, String temperament, String knack, String affinity) {}
+
     final Map<String, Object> data;
     private final Map<String, Outfit> outfits = new LinkedHashMap<>();
     public final int maxMarks, nameMin, nameMax;
@@ -62,6 +69,38 @@ public final class CreatorRules {
     }
 
     public List<String> origins() { return List.copyOf(origins0().keySet()); }
+
+    /** The origins the creator offers: for now only the clanless. The other origins' rules stay for a later option. */
+    public List<String> creatable() { return strings(data.get("creatable")); }
+
+    /** The Roots options for one of temperament, knack or affinity, and its default. */
+    public List<String> rootOptions(String field) { return strings(map(map(data.get("roots")).get(field)).get("options")); }
+    public String rootDefault(String field) { return (String) map(map(data.get("roots")).get(field)).get("default"); }
+
+    public List<String> pronouns() { return strings(map(data.get("pronouns")).get("options")); }
+    public String defaultPronouns(String body) { return (String) map(map(data.get("pronouns")).get("default_for_body")).get(body); }
+
+    /** The Roots the creator opens on for a body. */
+    public Roots defaultRoots(String body) {
+        return new Roots(defaultPronouns(body), rootDefault("temperament"), rootDefault("knack"), rootDefault("affinity"));
+    }
+
+    public List<String> validateRoots(Roots roots) {
+        var errors = new ArrayList<String>();
+        if (!pronouns().contains(roots.pronouns())) errors.add("pronouns " + roots.pronouns() + " are not offered");
+        if (!rootOptions("temperament").contains(roots.temperament())) errors.add("temperament " + roots.temperament() + " is not offered");
+        if (!rootOptions("knack").contains(roots.knack())) errors.add("knack " + roots.knack() + " is not offered");
+        if (!rootOptions("affinity").contains(roots.affinity())) errors.add("affinity " + roots.affinity() + " is not offered");
+        return errors;
+    }
+
+    /** The server's whole check of a creator submission: an origin the creator offers, the look, the Roots. */
+    public List<String> validateCreation(String origin, Look look, Roots roots) {
+        if (!creatable().contains(origin)) return List.of("origin " + origin + " is not offered at creation");
+        var errors = new ArrayList<>(validate(origin, AgeStage.CHILD, look));
+        errors.addAll(validateRoots(roots));
+        return errors;
+    }
 
     public boolean isClan(String origin) { return !CLANLESS.equals(origin) && origins0().containsKey(origin); }
 

@@ -110,6 +110,29 @@ class CreatorRulesTest {
     }
 
     @Test
+    void forNowTheCreatorOffersNoClan() {
+        assertEquals(List.of(CreatorRules.CLANLESS), r.creatable());
+        var look = r.defaults(CreatorRules.CLANLESS, "female");
+        var roots = r.defaultRoots("female");
+        assertEquals(List.of(), r.validateCreation(CreatorRules.CLANLESS, look, roots));
+        assertEquals(List.of("origin hyuga is not offered at creation"), r.validateCreation("hyuga", r.defaults("hyuga", "female"), roots));
+        assertTrue(r.choices(CreatorRules.CLANLESS, AgeStage.CHILD).hair().stream().noneMatch(h -> h.matches("h\\d{3,4}_.*") && !h.matches("h0\\d_.*")),
+                "no clan hairstyle reaches the player");
+    }
+
+    @Test
+    void rootsAndPronouns() {
+        assertEquals("she", r.defaultPronouns("female"));
+        assertEquals("he", r.defaultPronouns("male"));
+        assertTrue(r.pronouns().contains("they"));
+        assertEquals("undecided", r.rootDefault("affinity"));
+        assertTrue(r.rootOptions("affinity").containsAll(List.of("fire", "wind", "water", "earth", "lightning")));
+        assertEquals("balanced", r.rootDefault("knack"));
+        var bad = new CreatorRules.Roots("it", "brooding", "sealing", "wood");
+        assertEquals(4, r.validateRoots(bad).size());
+    }
+
+    @Test
     void aLookSurvivesTheSaveRoundTrip() {
         var look = r.defaults("inuzuka", "female");
         assertEquals(look, Look.fromMap(look.toMap()));

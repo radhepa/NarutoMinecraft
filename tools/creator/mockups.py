@@ -21,7 +21,7 @@ INK, SOFT, FAINT = (52, 34, 26), (112, 86, 66), (170, 146, 120)
 PAPER, PANEL, PANEL2 = (246, 236, 216), (236, 222, 196), (226, 208, 178)
 ACCENT, ACCENT_SOFT = (178, 58, 44), (232, 190, 160)
 LOCK = (120, 104, 96)
-STEPS = ["Origin", "Name", "Body", "Hair", "Face", "Outfit", "Review"]
+STEPS = ["Name", "Body", "Hair", "Face", "Outfit", "Roots", "Review"]
 
 
 def font(size, bold=False):
@@ -259,105 +259,89 @@ def toggle(d, x, y, on, label):
     d.text((x + 58, y + 2), label, font=font(16), fill=INK)
 
 
-def origin_screen(world, data, selected="nara"):
-    scr = Screen("Who are you?", 0)
-    d = scr.d
-    scr.heading(250, 86, "Born to a clan, or to none", "Most of the Leaf belongs to no clan. Your choice sets your family name and your kin.")
-    origins = data["origins"]
-    names = list(origins)
-    cols, tw_, th_ = 6, 150, 54
-    for i, oid in enumerate(names):
-        o = origins[oid]
-        x, y = 250 + (i % cols) * (tw_ + 10), 160 + (i // cols) * (th_ + 10)
-        on = oid == selected
-        d.rounded_rectangle((x, y, x + tw_, y + th_), 8, fill=PAPER if not on else (252, 244, 228), outline=ACCENT if on else FAINT, width=3 if on else 1)
-        if o["clan"]:
-            pid = world.clans[oid]["pool"]["palettes"][0]
-            ramps = world.palettes[pid]["ramps"]
-            for k, role in enumerate("PSA"):
-                d.rectangle((x + 8, y + 8 + k * 13, x + 20, y + 19 + k * 13), fill=W.hex_rgb(ramps[role][2]))
-            label = o["name"]
-            sub = "noble" if o["standing"] == "noble" else "minor"
-        else:
-            d.rectangle((x + 8, y + 8, x + 20, y + 46), fill=(200, 180, 150))
-            label, sub = "Clanless", "most of the village"
-        d.text((x + 30, y + 8), label, font=font(16, True), fill=INK)
-        d.text((x + 30, y + 30), sub, font=font(12), fill=SOFT)
-    # Detail panel.
-    o = origins[selected]
-    x0, y0 = 250, 160 + 5 * (th_ + 10) + 16
-    d.rounded_rectangle((x0, y0, 250 + cols * (tw_ + 10) - 10, SH - 90), 14, fill=PANEL)
-    title = o["name"] or "Clanless"
-    d.text((x0 + 20, y0 + 16), title, font=font(26, True), fill=INK)
-    y = paragraph(d, x0 + 20, y0 + 58, o["blurb"], 880, 16)
-    y += 6
-    d.text((x0 + 20, y), "Born to it means", font=font(16, True), fill=INK)
-    y += 26
-    if o["clan"]:
-        bullets = [f"Family name: {o['name']}. Kin in the village from day one; the clan starts a little warmer toward you",
-                   f"Quarter: {o['quarter']}",
-                   f"From Genin: {o['technique'] or 'no clan technique (a family of the village)'}"
-                   + (f"; kekkei genkai: {o['kekkei_genkai']}" if o["kekkei_genkai"] else ""),
-                   "Your clan's line plays as a homecoming; elders bring you requests; its customs bind you"]
-    else:
-        bullets = o["means"]
-    for b in bullets:
-        y = paragraph(d, x0 + 34, y, "· " + b, 860, 15, SOFT, 4)
-    # Right: the clan's opening look on both bodies.
-    px0 = 1230
-    d.rounded_rectangle((px0, 86, SW - 24, SH - 90), 14, fill=PANEL2)
-    d.text((px0 + 16, 98), "Opening look", font=font(16, True), fill=INK)
-    for i, b in enumerate(("male", "female")):
-        spec = C.spec(data, selected, o["defaults"][b], "child")
-        img = character_image(world, spec, 160, 440)
-        scr.img.paste(img, (px0 + 12 + i * 170, 190))
-    d.text((px0 + 16, 700), "Both bodies, in the clan's defaults.", font=font(13), fill=SOFT)
-    d.text((px0 + 16, 720), "You restyle everything next.", font=font(13), fill=SOFT)
-    scr.lock(px0 + 16, 750, "clan: locked after creation")
-    scr.footer()
-    scr.save("1_origin")
-
-
 def name_screen(world, data):
-    scr = Screen("Who are you?", 1)
+    scr = Screen("Who are you?", 0)
     d = scr.d
     o = data["origins"]["clanless"]
     look = o["defaults"]["female"]
     preview_panel(scr, world, C.spec(data, "clanless", look), (1140, 86, SW - 24, SH - 90))
-    scr.heading(250, 96, "Your name", "Residents, the journal and every line of dialogue use it.")
-    d.rounded_rectangle((250, 170, 750, 220), 8, fill=(255, 250, 240), outline=INK, width=2)
-    d.text((266, 182), "Kaede", font=font(22), fill=INK)
+    scr.heading(250, 96, "First name", "Residents, the journal and every line of dialogue use it.")
+    d.rounded_rectangle((250, 170, 750, 218), 8, fill=(255, 250, 240), outline=INK, width=2)
+    d.text((266, 181), "Kaede", font=font(22), fill=INK)
     cx = 270 + d.textlength("Kaede", font=font(22))
-    d.line((cx, 180, cx, 210), fill=INK, width=2)
-    d.text((250, 228), "2 to 16 letters, any script; spaces, apostrophes and hyphens are fine.", font=font(14), fill=SOFT)
-    scr.lock(250, 254, "given name: locked after creation")
-    scr.heading(250, 310, "Family name", "Clanless: the family name on your papers. Clan-born players carry the clan's name.")
-    d.rounded_rectangle((250, 384, 750, 434), 8, fill=(255, 250, 240), outline=INK, width=2)
-    d.text((266, 396), "Tanaka", font=font(22), fill=INK)
-    d.text((712, 394), "v", font=font(22, True), fill=INK)
-    scr.button((770, 384, 950, 434), "Roll", icon="dice")
+    d.line((cx, 180, cx, 208), fill=INK, width=2)
+    d.text((250, 226), "2 to 16 letters, any script; spaces, apostrophes and hyphens are fine.", font=font(14), fill=SOFT)
+    scr.lock(250, 250, "first name: locked after creation")
+    scr.heading(250, 296, "Last name", "An ordinary family name, on your papers. Pick one or roll.")
+    d.rounded_rectangle((250, 366, 750, 414), 8, fill=(255, 250, 240), outline=INK, width=2)
+    d.text((266, 377), "Tanaka", font=font(22), fill=INK)
+    d.text((712, 375), "v", font=font(22, True), fill=INK)
+    scr.button((770, 366, 920, 414), "Roll", icon="dice")
+    d.rounded_rectangle((940, 372, 1090, 408), 18, fill=PANEL2, outline=FAINT)
+    d.text((965, 380), "no clan", font=font(16, True), fill=SOFT)
     fam = o["family_names"]
-    for i, n in enumerate(fam[:24]):
-        x, y = 250 + (i % 6) * 118, 452 + (i // 6) * 32
+    for i, n in enumerate(fam[:18]):
+        x, y = 250 + (i % 6) * 118, 430 + (i // 6) * 32
         on = n == "Tanaka"
         d.rounded_rectangle((x, y, x + 110, y + 26), 6, fill=INK if on else PAPER, outline=FAINT)
         d.text((x + 8, y + 4), n, font=font(14), fill=PAPER if on else INK)
-    d.text((250, 584), f"... {len(fam)} ordinary family names in all (population.json)", font=font(13), fill=SOFT)
-    d.rounded_rectangle((250, 620, 1100, 790), 12, fill=PANEL)
-    d.text((270, 636), "How you will appear", font=font(16, True), fill=INK)
+    d.text((250, 530), f"... {len(fam)} ordinary family names in all; never a clan's", font=font(13), fill=SOFT)
+    scr.heading(250, 566, "Pronouns", "How text refers to you when someone talks about you. Changeable any time in the settings.")
+    for i, (label, on) in enumerate((("they / them", False), ("she / her", True), ("he / him", False))):
+        x = 250 + i * 170
+        d.rounded_rectangle((x, 630, x + 156, 668), 10, fill=INK if on else PAPER, outline=INK, width=2)
+        d.text((x + 78 - d.textlength(label, font=font(16, True)) / 2, 639), label, font=font(16, True), fill=PAPER if on else INK)
+    d.rounded_rectangle((250, 690, 1100, 800), 12, fill=PANEL)
+    d.text((270, 702), "How you will appear", font=font(15, True), fill=INK)
     rows = [("{player}", "Kaede", "friends, squad, most lines"), ("{player_full}", "Kaede Tanaka", "papers, the Hokage, the journal"),
-            ("{player_family}", "Tanaka", "elders and formal greetings (\"Tanaka-san\")"), ("{player_clan}", "(none)", "clan lines read it")]
+            ("{player_family}", "Tanaka", "formal greetings")]
     for i, (tok, val, use) in enumerate(rows):
-        y = 668 + i * 28
-        d.text((270, y), tok, font=font(15, True), fill=ACCENT)
-        d.text((450, y), val, font=font(15), fill=INK)
-        d.text((640, y), use, font=font(14), fill=SOFT)
+        y = 728 + i * 22
+        d.text((270, y), tok, font=font(14, True), fill=ACCENT)
+        d.text((450, y), val, font=font(14), fill=INK)
+        d.text((640, y), use, font=font(13), fill=SOFT)
     scr.footer()
-    scr.save("2_name")
+    scr.save("1_name")
+
+
+def roots_screen(world, data):
+    scr = Screen("Who are you?", 5)
+    d = scr.d
+    look = data["origins"]["clanless"]["defaults"]["male"]
+    preview_panel(scr, world, C.spec(data, "clanless", look), (1140, 86, SW - 24, SH - 90))
+    scr.heading(250, 86, "Roots", "Small things about you. None of them changes the story.")
+    blurbs = {
+        "temperament": ("Temperament", "How you carry yourself. Some lines notice it; friendships do not depend on it.",
+                        {"bold": "Bold", "steady": "Steady", "cheerful": "Cheerful", "quiet": "Quiet", "curious": "Curious", "stubborn": "Stubborn"}, "curious"),
+        "knack": ("Knack", "What comes easily at the Academy: +5% to it, and a practice item to start.",
+                  {"balanced": "Balanced", "taijutsu": "Taijutsu", "weapons": "Weapons", "ninjutsu": "Ninjutsu"}, "taijutsu"),
+        "affinity": ("Affinity", "The nature you lean toward. The Genin ceremony offers every nature; choosing this one there gives a bonus.",
+                     {"undecided": "Undecided", "fire": "Fire", "wind": "Wind", "water": "Water", "earth": "Earth", "lightning": "Lightning"}, "wind"),
+    }
+    colors = {"fire": (196, 74, 44), "wind": (110, 168, 120), "water": (70, 120, 190), "earth": (150, 112, 70), "lightning": (214, 180, 60)}
+    y = 160
+    for key, (title, sub, labels, sel) in blurbs.items():
+        d.text((250, y), title, font=font(20, True), fill=INK)
+        paragraph(d, 250, y + 30, sub, 840, 14, SOFT, 4)
+        for i, opt in enumerate(data["roots"][key]["options"]):
+            x = 250 + i * 142
+            on = opt == sel
+            d.rounded_rectangle((x, y + 66, x + 132, y + 108), 10, fill=INK if on else PAPER, outline=INK, width=2)
+            if opt in colors:
+                d.ellipse((x + 10, y + 79, x + 26, y + 95), fill=colors[opt], outline=INK)
+            lab = labels[opt]
+            tx = x + (36 if opt in colors else 66 - d.textlength(lab, font=font(15, True)) / 2)
+            d.text((tx, y + 77), lab, font=font(15, True), fill=PAPER if on else INK)
+        y += 150
+    scr.lock(250, 620, "roots: locked after creation (the ceremony still offers every nature)")
+    d.text((250, 650), "Starting numbers are the same for every player: 10 hearts, chakra 53, control 35, stamina 110, poise 20.",
+           font=font(14), fill=SOFT)
+    scr.footer()
+    scr.save("6_roots")
 
 
 def body_screen(world, data):
-    scr = Screen("Who are you?", 2)
+    scr = Screen("Who are you?", 1)
     d = scr.d
     look = dict(data["origins"]["clanless"]["defaults"]["female"], complexion=3, eye_color="JADE", eye_style="soft_glint")
     preview_panel(scr, world, C.spec(data, "clanless", look), (1140, 86, SW - 24, SH - 90))
@@ -384,7 +368,7 @@ def body_screen(world, data):
         d.rounded_rectangle((x, 444, x + 136, 486), 10, fill=INK if on else PAPER, outline=INK, width=2)
         d.text((x + 68 - d.textlength(label, font=font(17, True)) / 2, 454), label, font=font(17, True), fill=PAPER if on else INK)
     scr.changeable(650, 494, "brows: the barber")
-    scr.heading(250, 536, "Eyes", "Your clan's colors first, then the open ones. Kekkei genkai eyes are never picked here.")
+    scr.heading(250, 536, "Eyes", "Dark, sky blue, jade, hazel or grey.")
     eyes = data["origins"]["clanless"]["eye_colors"]
     swatch_row(scr, 250, 606, [eye_rgb(world, e) for e in eyes], eyes.index("JADE"), size=44, gap=16,
                labels=[world.eye_colors[e]["name"].replace("Kunoichi ", "") for e in eyes])
@@ -392,27 +376,29 @@ def body_screen(world, data):
     die(d, 250, 730, 22)
     d.text((282, 731), "Each row has its own dice, within what you are allowed. Roll a life (Varied) rolls everything.", font=font(14), fill=SOFT)
     scr.footer()
-    scr.save("3_body")
+    scr.save("2_body")
 
 
-def hair_screen(world, data, origin="uzumaki"):
-    scr = Screen("Who are you?", 3)
+def hair_screen(world, data, origin="clanless"):
+    scr = Screen("Who are you?", 2)
     d = scr.d
     o = data["origins"][origin]
     look = dict(o["defaults"]["female"])
     v = C.view(data, origin, "child")
     hair = v["hair"]
-    look["hair"] = hair[2]
-    look["hair_color"] = "UZUMAKI_SCARLET"
+    look["hair"] = "hg007_side_swept_bob"
+    look["hair_color"] = "AUBURN"
     preview_panel(scr, world, C.spec(data, origin, look), (1140, 86, SW - 24, SH - 90))
-    scr.heading(250, 86, "Hairstyle", f"{o['name']}-born: the clan's {len(world.clans[origin]['pool']['hair'])} styles first, then every collection's ({len(hair)} in all)")
-    tabs = ["Clan", "Short", "Long", "Tied", "All"]
+    scr.heading(250, 86, "Hairstyle", f"Every collection's styles: {len(hair)} at this age")
+    tabs = ["All", "Short", "Long", "Tied"]
     for i, t in enumerate(tabs):
         x = 250 + i * 104
         on = i == 0
         d.rounded_rectangle((x, 146, x + 96, 176), 8, fill=INK if on else PAPER, outline=INK, width=1)
         d.text((x + 48 - d.textlength(t, font=font(14, True)) / 2, 152), t, font=font(14, True), fill=PAPER if on else INK)
     thumbs = hair[:12]
+    if look["hair"] not in thumbs:
+        thumbs[2] = look["hair"]
     cw, chh = 140, 140
     for i, hid in enumerate(thumbs):
         x, y = 250 + (i % 6) * (cw + 8), 190 + (i // 6) * (chh + 30)
@@ -426,25 +412,22 @@ def hair_screen(world, data, origin="uzumaki"):
     d.text((250, 534), "Scroll for more  ·  styles that wait for a later age (beards, elders' styles) are not listed", font=font(13), fill=SOFT)
     scr.changeable(250, 556, "hairstyle: the barber (40 ryo), and free at each time skip")
     scr.heading(250, 600, "Hair color")
-    clan_cols = [c for c in v["hair_colors"] if world.reserved_to("hair_colors", c) == origin or c in world.clans[origin]["pool"]["hair_colors"]]
-    other = [c for c in v["hair_colors"] if c not in clan_cols]
-    d.text((250, 636), "Clan", font=font(14, True), fill=SOFT)
-    swatch_row(scr, 310, 630, [hair_rgb(world, c) for c in clan_cols], clan_cols.index("UZUMAKI_SCARLET"), size=34, gap=10, per_row=14)
-    d.text((250, 690), "Open", font=font(14, True), fill=SOFT)
-    swatch_row(scr, 310, 684, [hair_rgb(world, c) for c in other], -1, size=34, gap=10, per_row=14)
+    cols = v["hair_colors"]
+    swatch_row(scr, 250, 640, [hair_rgb(world, c) for c in cols], cols.index("AUBURN"), size=40, gap=12, per_row=13,
+               labels=[world.hair_colors[c]["name"].split()[0] for c in cols])
     scr.changeable(250, 738, "hair color: the barber (60 ryo)")
     scr.footer()
-    scr.save("4_hair")
+    scr.save("3_hair")
 
 
-def face_screen(world, data, origin="inuzuka"):
-    scr = Screen("Who are you?", 4)
+def face_screen(world, data, origin="clanless"):
+    scr = Screen("Who are you?", 3)
     d = scr.d
     o = data["origins"][origin]
-    look = dict(o["defaults"]["male"])
+    look = dict(o["defaults"]["male"], marks=["whiskers"], headwear="wg001_flight_goggles")
     preview_panel(scr, world, C.spec(data, origin, look), (1140, 86, SW - 24, SH - 90))
     v = C.view(data, origin, "child")
-    scr.heading(250, 96, "Marks", f"Up to {data['max_marks']}. Your clan's marks and face paint, and the open ones.")
+    scr.heading(250, 96, "Marks", f"Up to {data['max_marks']}, or none.")
     for i, m in enumerate(v["marks"]):
         x, y = 250 + i * 250, 170
         on = m in look["marks"]
@@ -456,10 +439,8 @@ def face_screen(world, data, origin="inuzuka"):
         if on:
             d.line((x + 164, y + 15, x + 170, y + 22, x + 179, y + 8), fill=PAPER, width=3)
         d.text((x + 160, y + 40), m.replace(origin + "_", "").replace("_", " "), font=font(14), fill=INK)
-    d.text((250, 340), "Not offered: marks a clan confers in the story, seals earned by mastery, and age lines before adulthood.",
-           font=font(14), fill=SOFT)
     scr.changeable(250, 366, "marks: the barber (30 ryo); scars the story gives stay")
-    scr.heading(250, 420, "Headwear", "Before Genin: goggles, headbands and your clan's own. The forehead protector comes at graduation.")
+    scr.heading(250, 420, "Headwear", "Before Genin: goggles or a headband. The forehead protector comes at graduation.")
     hw = v["headwear"]
     for i, h in enumerate(hw):
         x, y = 250 + i * 170, 490
@@ -472,18 +453,18 @@ def face_screen(world, data, origin="inuzuka"):
         d.text((x + 75 - d.textlength(name, font=font(13)) / 2, y + 158), name, font=font(13), fill=INK)
     scr.changeable(250, 690, "headwear: your home's wardrobe chest")
     scr.footer()
-    scr.save("5_face")
+    scr.save("4_face")
 
 
-def outfit_screen(world, data, origin="kurama"):
-    scr = Screen("Who are you?", 5)
+def outfit_screen(world, data, origin="clanless"):
+    scr = Screen("Who are you?", 4)
     d = scr.d
     o = data["origins"][origin]
     look = dict(o["defaults"]["female"])
     v = C.view(data, origin, "child")
     outfits = v["outfits"]["female"]
     preview_panel(scr, world, C.spec(data, origin, look), (1140, 86, SW - 24, SH - 90))
-    scr.heading(250, 86, "Starting outfit", "From the Academy collection, plus your clan's own Academy wear. Rank outfits come with each promotion.")
+    scr.heading(250, 86, "Starting outfit", "From the Academy collection. Rank outfits come with each promotion.")
     cw, chh = 150, 210
     for i, oo in enumerate(outfits[:10]):
         x, y = 250 + (i % 5) * (cw + 22), 150 + (i // 5) * (chh + 34)
@@ -499,49 +480,49 @@ def outfit_screen(world, data, origin="kurama"):
         if tag:
             d.rounded_rectangle((x + 4, y + 4, x + 44, y + 22), 5, fill=ACCENT)
             d.text((x + 10, y + 5), tag, font=font(11, True), fill=PAPER)
-    scr.heading(250, 650, "Colors", "The outfit's own palettes, then your clan's.")
+    scr.heading(250, 650, "Colors", "Each outfit's own palettes.")
     cur = next(x for x in outfits if x["id"] == look["outfit"])
     for i, pid in enumerate(cur["palettes"][:14]):
         palette_chip(scr, 250 + i * 52, 712, world, pid, pid == look["palette"])
     scr.changeable(250, 766, "outfit and colors: your home's wardrobe chest; the tailor sells more")
     scr.footer()
-    scr.save("6_outfit")
+    scr.save("5_outfit")
 
 
-def review_screen(world, data, origin="hyuga"):
+def review_screen(world, data, origin="clanless"):
     scr = Screen("Who are you?", 6)
     d = scr.d
     o = data["origins"][origin]
-    look = dict(o["defaults"]["female"], hair=world.clans[origin]["pool"]["hair"][1])
+    look = dict(o["defaults"]["male"], hair="hg006_short_spikes", hair_color="RAVEN", complexion=3, eye_color="SKY",
+                marks=["whiskers"], headwear="wg001_flight_goggles", outfit="academy_genin.cold_morning", palette="ACADEMY_GENIN_INDIGO")
     spec = C.spec(data, origin, look)
     img = character_image(world, spec, 420, 640)
     d.rounded_rectangle((240, 86, 680, SH - 90), 14, fill=PANEL2)
     scr.img.paste(img, (250, 96))
-    grown = P.grown(data, origin, look, "adult", next(x["id"] for x in C.view(data, origin, "adult")["outfits"]["female"] if x["rank"] == "jonin"))
+    grown = P.grown(data, origin, look, "adult", next(x["id"] for x in C.view(data, origin, "adult")["outfits"]["male"] if x["rank"] == "jonin"))
     img2 = character_image(world, C.spec(data, origin, grown, "adult"), 200, 330, stage="adult")
     d.rounded_rectangle((700, 86, 920, 470), 14, fill=PANEL2)
     scr.img.paste(img2, (710, 96))
     d.text((712, 436), "One day (a preview)", font=font(13), fill=SOFT)
     x = 950
-    d.text((x, 92), "Ren Hyuga", font=font(34, True), fill=INK)
-    d.text((x, 140), "Hyuga-born · Academy student · age 11", font=font(16), fill=SOFT)
-    rows = [("Origin", "Hyuga (noble clan)", True), ("Name", "Ren Hyuga", True), ("Body", "Body B", True),
-            ("Complexion", "Porcelain", True), ("Eyes", "Byakugan (the clan's eyes)", True),
-            ("Hairstyle", world.garments[look["hair"]].meta["name"], False),
-            ("Hair color", world.hair_colors[look["hair_color"]]["name"], False), ("Marks", "none", False),
-            ("Outfit", look["outfit"].split(".")[1].replace("_", " "), False), ("Headwear", "bare head", False)]
+    d.text((x, 92), "Ren Tanaka", font=font(34, True), fill=INK)
+    d.text((x, 140), "no clan · Academy student · age 11", font=font(16), fill=SOFT)
+    rows = [("Name", "Ren Tanaka (he / him)", True), ("Body", "Body A", True), ("Complexion", "Amber", True),
+            ("Eyes", "Sky Blue", True), ("Hairstyle", world.garments[look["hair"]].meta["name"], False),
+            ("Hair color", world.hair_colors[look["hair_color"]]["name"], False), ("Marks", "whiskers", False),
+            ("Outfit", look["outfit"].split(".")[1].replace("_", " "), False), ("Headwear", "flight goggles", False),
+            ("Roots", "steady · weapons · leans to fire", True)]
     for i, (k, val, locked) in enumerate(rows):
-        y = 190 + i * 40
+        y = 180 + i * 40
         d.line((x, y + 32, SW - 40, y + 32), fill=PANEL2)
         d.text((x, y + 6), k, font=font(16, True), fill=INK)
-        d.text((x + 170, y + 6), val, font=font(16), fill=INK)
+        d.text((x + 150, y + 6), val, font=font(16), fill=INK)
         if locked:
-            scr.lock(x + 420, y + 8, "locked")
+            scr.lock(x + 430, y + 8, "locked")
         else:
-            scr.changeable(x + 420, y + 8, "changeable later")
+            scr.changeable(x + 430, y + 8, "changeable later")
         d.text((SW - 76, y + 6), "edit", font=font(14, True), fill=ACCENT)
-    paragraph(d, x, 610, "Born to the Hyuga: kin in the village from day one; the Byakugan and the Gentle Fist from Genin. "
-                         "You begin the story with nothing but the clothes you stand in; your outfit waits at your apartment.",
+    paragraph(d, x, 610, "You begin the story with nothing but the clothes you stand in; your outfit waits at your apartment.",
               600, 15, SOFT)
     scr.footer("Begin", dice=False)
     scr.save("7_review")
@@ -579,12 +560,14 @@ def mirror_screen(world, data):
 def all_screens(world, data):
     OUT.mkdir(parents=True, exist_ok=True)
     world.data = data
+    for p in OUT.glob("screen_*.png"):
+        p.unlink()
     world_screen(world, data)
-    origin_screen(world, data)
     name_screen(world, data)
     body_screen(world, data)
     hair_screen(world, data)
     face_screen(world, data)
     outfit_screen(world, data)
+    roots_screen(world, data)
     review_screen(world, data)
     mirror_screen(world, data)

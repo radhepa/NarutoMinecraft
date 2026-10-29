@@ -5,14 +5,15 @@ import java.util.Map;
 
 /**
  * Changing your look after creation (CHARACTER_CREATION.md, "Locked and changeable"): the barber for hair, hair
- * color, brows and marks; your home's wardrobe chest for outfits and headwear; the rest is locked. Every change is
+ * color, brows and marks; your home's wardrobe chest for outfits and headwear; the settings screen for pronouns; the
+ * rest is locked. Every change is
  * checked against the same choices as the creator, for the player's origin and current stage, so a restyle can never
  * reach what the creator could not.
  */
 public final class Restyle {
     /** Where a change happens. */
     public enum Venue {
-        LOCKED, BARBER, HOME, TIME_SKIP;
+        LOCKED, BARBER, HOME, SETTINGS, TIME_SKIP;
         static Venue of(String id) { return valueOf(id.toUpperCase()); }
     }
 

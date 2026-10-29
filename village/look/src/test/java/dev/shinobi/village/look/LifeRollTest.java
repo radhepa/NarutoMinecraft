@@ -2,9 +2,7 @@ package dev.shinobi.village.look;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import org.junit.jupiter.api.Test;
 
 class LifeRollTest {
@@ -19,7 +17,13 @@ class LifeRollTest {
             var e = CreatorRules.map(p);
             long seed = ((Number) e.get("seed")).longValue();
             assertEquals(e.get("origin"), LifeRoll.origin(r, seed), "seed " + seed);
-            assertEquals(e.get("look"), LifeRoll.toMap(LifeRoll.look(r, seed, (String) e.get("origin"))), "seed " + seed);
+            var rolled = LifeRoll.look(r, seed, (String) e.get("origin"));
+            assertEquals(e.get("look"), LifeRoll.toMap(rolled), "seed " + seed);
+            var roots = LifeRoll.roots(r, seed, rolled.look().body());
+            var want = CreatorRules.map(e.get("roots"));
+            assertEquals(want.get("temperament"), roots.temperament(), "seed " + seed);
+            assertEquals(want.get("knack"), roots.knack(), "seed " + seed);
+            assertEquals(want.get("affinity"), roots.affinity(), "seed " + seed);
         }
     }
 
@@ -33,12 +37,12 @@ class LifeRollTest {
     }
 
     @Test
-    void rollsFollowThePopulationSoMostAreClanless() {
-        Map<String, Integer> count = new HashMap<>();
-        for (long seed = 0; seed < 4000; seed++) count.merge(LifeRoll.origin(r, seed), 1, Integer::sum);
-        double clanless = count.getOrDefault(CreatorRules.CLANLESS, 0) / 4000.0;
-        int total = r.population().values().stream().mapToInt(Integer::intValue).sum();
-        assertEquals(r.population().get(CreatorRules.CLANLESS) / (double) total, clanless, 0.03);
-        assertTrue(count.getOrDefault("hatake", 0) < count.getOrDefault("uchiha", 0));
+    void rollsOnlyOfferWhatTheCreatorOffers() {
+        for (long seed = 0; seed < 400; seed++) {
+            var a = LifeRoll.roll(r, seed);
+            assertTrue(r.creatable().contains(a.origin()), "seed " + seed);
+            var roots = LifeRoll.roots(r, seed, a.look().body());
+            assertEquals(List.of(), r.validateCreation(a.origin(), a.look(), roots), "seed " + seed);
+        }
     }
 }
