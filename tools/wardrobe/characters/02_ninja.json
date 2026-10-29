@@ -1,4 +1,5 @@
 {"id": "ninja", "name": "Leaf Ninja", "tagline": "Konoha flak vest, forehead protector, shinobi trousers and wraps",
  "face": "f01_shinobi", "hair": "h02_leaf_spikes", "headwear": "w02_forehead_protector",
  "top": "t02_konoha_flak_vest", "bottom": "b01_shinobi_trousers",
- "palette": "KONOHA_JONIN", "hair_color": "CHESTNUT", "eye_color": "DARK", "complexion": 2, "scale": 14}
+ "palette": "KONOHA_JONIN", "hair_color": "CHESTNUT", "eye_color": "DARK", "eye_style": "soft_glint", "feminine": false,
+ "complexion": 2, "scale": 14}

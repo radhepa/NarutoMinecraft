@@ -52,8 +52,7 @@
     "X2": 84
   },
   "faces": [
-    "f01_shinobi",
-    "f02_sharingan"
+    "f01_shinobi"
   ],
   "hair": [
     "h01_kage_spikes",
@@ -86,6 +85,8 @@
       "palette": "HOKAGE",
       "hair_color": "HOKAGE_GOLD",
       "eye_color": "SKY",
+      "eye_style": "starlit",
+      "feminine": false,
       "complexion": 1,
       "scale": 14
     },
@@ -101,6 +102,8 @@
       "palette": "KONOHA_JONIN",
       "hair_color": "CHESTNUT",
       "eye_color": "DARK",
+      "eye_style": "soft_glint",
+      "feminine": false,
       "complexion": 2,
       "scale": 14
     },
@@ -108,7 +111,7 @@
       "id": "uchiha",
       "name": "Uchiha",
       "tagline": "Sharingan, blue-black spikes, the clan crest on a high-collared shirt",
-      "face": "f02_sharingan",
+      "face": "f01_shinobi",
       "hair": "h03_uchiha_spikes",
       "headwear": "w02_forehead_protector",
       "top": "t03_uchiha_high_collar",
@@ -116,6 +119,8 @@
       "palette": "UCHIHA",
       "hair_color": "UCHIHA_BLACK",
       "eye_color": "SHARINGAN",
+      "eye_style": "starlit",
+      "feminine": false,
       "complexion": 0,
       "scale": 14
     }

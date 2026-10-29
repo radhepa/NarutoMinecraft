@@ -542,7 +542,7 @@ def load_characters() -> list[dict]:
 
 def load_eye_colors() -> dict:
     src = json.loads((TOOL / "eye_colors.json").read_text())
-    return {cid: {"name": c["name"], "ramp": c["ramp"]} for cid, c in src.items()}
+    return {cid: {k: c[k] for k in ("name", "ramp", "pattern", "glow") if k in c} for cid, c in src.items()}
 
 
 def catalog(garments: dict) -> dict:
@@ -568,6 +568,7 @@ def compatible(top: Garment, bottom: Garment) -> bool:
     return True
 
 
+EYE_STYLES = ("starlit", "soft_glint")   # the Living Eyes styles, see living_eyes.py
 CHARACTER_SLOTS = {"face": "faces", "hair": "hair", "headwear": "headwear", "top": "tops", "bottom": "bottoms"}
 
 
@@ -591,8 +592,16 @@ def validate_catalog(garments: dict, data: dict) -> list[str]:
         for field, table in (("palette", palettes), ("hair_color", hairs), ("eye_color", eyes)):
             if c.get(field) not in table:
                 errors.append(f"character {cid} names unknown {field} {c.get(field)}")
+        if c.get("eye_style") not in EYE_STYLES:
+            errors.append(f"character {cid} needs an eye_style: {', '.join(EYE_STYLES)}")
+        if not isinstance(c.get("feminine"), bool):
+            errors.append(f"character {cid} needs feminine: true or false")
         if c.get("complexion") not in range(6):
             errors.append(f"character {cid} needs a complexion 0-5")
+    for eid, e in eyes.items():
+        rows = e.get("pattern")
+        if rows is not None and (not rows or len(rows) != 2 * len(rows[0]) or any(len(r) != len(rows[0]) or set(r) - set(".01234") for r in rows)):
+            errors.append(f"eye color {eid} pattern must be rows of .01234, twice as tall as wide")
     for g in garments.values():
         if g.locked_to and (g.locked_to not in garments or garments[g.locked_to].locked_to != g.id):
             errors.append(f"{g.id} is locked to {g.locked_to}, which must lock back")

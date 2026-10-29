@@ -1,16 +1,16 @@
 # Naruto Minecraft
 
-A Naruto-themed Minecraft mod built on the resident model from Village Friends: the player mesh with its overlay layers, the six skin complexions, the Starlit pixel face and the palette-locked wardrobe of textured 3D pieces. This first stage is only about the look of the characters. It has no Java, entities or gameplay yet.
+A Naruto-themed Minecraft mod built on the resident model from Village Friends: the player mesh with its overlay layers, the six skin complexions, the Living Eyes face and the palette-locked wardrobe of textured 3D pieces. This first stage is only about the look of the characters. It has no Java, entities or gameplay yet.
 
 ![The line-up](docs/renders/lineup.png)
 
 ## Characters
 
-| Character | Face | Hair | Headwear | Top | Bottom | Palette |
+| Character | Eyes | Hair | Headwear | Top | Bottom | Palette |
 |---|---|---|---|---|---|---|
-| Hokage | Shinobi Face (blue eyes) | Kage Spikes (gold) | Kage Hat | Hokage Haori | Shinobi Trousers | Hokage |
-| Leaf Ninja | Shinobi Face | Leaf Spikes (chestnut) | Forehead Protector | Konoha Flak Vest | Shinobi Trousers | Konoha Jonin |
-| Uchiha | Sharingan Face (glows) | Uchiha Spikes (blue-black) | Forehead Protector | Uchiha High Collar | Uchiha Shorts | Uchiha |
+| Hokage | Starlit eyes, sky blue | Kage Spikes (gold) | Kage Hat | Hokage Haori | Shinobi Trousers | Hokage |
+| Leaf Ninja | Soft Glint eyes, dark | Leaf Spikes (chestnut) | Forehead Protector | Konoha Flak Vest | Shinobi Trousers | Konoha Jonin |
+| Uchiha | Starlit eyes, Sharingan (glows) | Uchiha Spikes (blue-black) | Forehead Protector | Uchiha High Collar | Uchiha Shorts | Uchiha |
 
 Each character has a sheet in `docs/renders/`, with front, side, back, mid-stride and close-up views.
 
@@ -19,8 +19,9 @@ Each character has a sheet in `docs/renders/`, with front, side, back, mid-strid
 The Village Friends wardrobe engine is kept in `tools/wardrobe/` and extended:
 
 - **Kinds:** besides hair, tops and bottoms there are **faces** (painted on the head, plus optional decal pieces) and **headwear** (hats and headbands over the hair). A headwear module can hide hair pieces by id prefix (`hides_hair`), so the kage hat hides the crown spikes but keeps the bangs.
-- **Eye colors:** the `E` key role resolves through `eye_colors.json` (Dark, Sky Blue, Sharingan), the way `H` resolves through hair colors.
-- **Decals:** small pieces drawn at 2x, 3x or 6x resolution through the piece `scale`: the 火 panel and back kanji, the swirls, the leaf plate, the Uchiha fan and the Sharingan eyes. A face with `"emissive": true` renders its decals fullbright.
+- **Living Eyes:** the face is the Village Friends one (`FaceDetails` and `ResidentModel`), ported in `tools/wardrobe/living_eyes.py`. Lashes, the tinted upper white, pupil, glint, iris, brows, mouth and neck shade are thin planes in front of the face, finer than a skin pixel, so they can blink and glance in game. Each character picks `eye_style` (`starlit`, three rows tall, or `soft_glint`, two rows, lower) and `feminine` (adds the lash wing, arched brows, rosy lips and blush). Brow and lash colors come from the hair, lid, lip and blush colors from the complexion.
+- **Eye colors:** the `E` key role resolves through `eye_colors.json` (Dark, Sky Blue, Sharingan), the way `H` resolves through hair colors. The face piece paints only the eye row the planes sample. An eye color with a `pattern` (rows of shades 0-4, twice as tall as wide) replaces the pupil and iris with one high-resolution decal, and `glow` draws it fullbright: that is the Sharingan, with its pupil and three tomoe.
+- **Decals:** small pieces drawn at 2x, 3x or 6x resolution through the piece `scale`: the 火 panel and back kanji, the swirls, the leaf plate, and the Uchiha fan.
 - **Palettes:** every Naruto palette keeps the same meaning per role, so pieces mix: `S` is white cloth and bandages, `A` red, `L` tan leather, `M` steel, `K` dark navy, `D` navy cloth. `P` is the character's main color: flak green for Hokage and Konoha Jonin, dark navy for Uchiha.
 - **Characters:** `tools/wardrobe/characters/*.json` dresses each character with one piece of each kind, a palette, hair and eye colors and a complexion.
 

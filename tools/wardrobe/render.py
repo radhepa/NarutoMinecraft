@@ -16,6 +16,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
+import living_eyes as LE
 import wardrobe as W
 
 BODY = W.ROOT / "src/main/resources/assets/narutominecraft/textures/body"
@@ -138,7 +139,8 @@ class Character:
         self.spec = spec
         palette = W.load_palettes()[spec["palette"]]
         hair = W.load_hair_colors()[spec["hair_color"]]["ramp"]
-        eyes = W.load_eye_colors()[spec["eye_color"]]["ramp"]
+        eye = W.load_eye_colors()[spec["eye_color"]]
+        eyes = eye["ramp"]
         top, bottom = garments[spec["top"]], garments[spec["bottom"]]
         face, hairdo = garments[spec["face"]], garments[spec["hair"]]
         hat = garments.get(spec.get("headwear"))
@@ -158,10 +160,29 @@ class Character:
                 if g is hairdo and hidden and p.id.startswith(hidden):
                     continue
                 self.pieces.append((p, tex, bool(g.meta.get("emissive"))))
+        # The Living Eyes planes take their colors the way ResidentSkins bakes them: brow and lash
+        # from the hair base, lids, lips and neck shade from the complexion's face skin.
+        rgb = W.hex_rgb
+        pattern = None
+        if eye.get("pattern"):
+            rows = eye["pattern"]
+            pattern = np.zeros((len(rows), len(rows[0]), 4), np.uint8)
+            for y, row in enumerate(rows):
+                for x, c in enumerate(row):
+                    if c != ".":
+                        pattern[y, x] = (*rgb(eyes[int(c)]), 255)
+        body = np.array(Image.open(BODY / f"{spec['complexion']}.png").convert("RGB"))
+        self.face = dict(style=spec["eye_style"], feminine=spec["feminine"], hair=rgb(hair[2]),
+                         skin=tuple(int(c) for c in body[12, 12]), iris=rgb(eyes[2]), white=rgb(eyes[4]),
+                         pattern=pattern, glow=bool(eye.get("glow")))
 
 
 # -- drawing ----------------------------------------------------------------------------------
-def render(canvas: Canvas, ch: Character, cx, cy, scale, yaw, pitch=-10, pose=None, head_only=False):
+def light_for(n, glow):
+    return 1.0 if glow else min(1.0, 0.58 + 0.30 * max(0, -n[1]) + 0.12 * max(0, -n[2]) + 0.06 * max(0, -n[0]))
+
+
+def render(canvas: Canvas, ch: Character, cx, cy, scale, yaw, pitch=-10, pose=None, head_only=False, blink=0.0):
     pose = pose or {}
     view = rot(pitch, 0, 0) @ rot(0, yaw, 0)
     bones = {b: (np.array(pivot, float), rot(*pose.get(b, (0, 0, 0)))) for b, pivot in W.BONE_PIVOT.items()}
@@ -185,9 +206,27 @@ def render(canvas: Canvas, ch: Character, cx, cy, scale, yaw, pitch=-10, pose=No
             n = view @ (brot @ (prot @ np.array(normal, float)))
             if n[2] >= -1e-6:
                 continue
-            light = 1.0 if glow else min(1.0, 0.58 + 0.30 * max(0, -n[1]) + 0.12 * max(0, -n[2]) + 0.06 * max(0, -n[0]))
             pts = [np.array([cx + (view @ wv)[0] * scale, cy + (view @ wv)[1] * scale, (view @ wv)[2]]) for wv in world]
-            canvas.quad(pts, uvs, tex, light)
+            canvas.quad(pts, uvs, tex, light_for(n, glow))
+    # Living Eyes face planes: north-facing quads on the head (and the neck shade on the torso).
+    for pl in LE.planes(blink=blink, **ch.face):
+        if head_only and pl.bone != "HEAD":
+            continue
+        bpivot, brot = bones[pl.bone]
+        n = view @ (brot @ np.array((0, 0, -1.0)))
+        if n[2] >= -1e-6:
+            continue
+        x0, x1, y0, y1 = pl.x - pl.w / 2, pl.x + pl.w / 2, pl.y - pl.h / 2, pl.y + pl.h / 2
+        corners = [(x1, y0), (x0, y0), (x0, y1), (x1, y1)]
+        if pl.pattern is not None:
+            tex = pl.pattern
+            th, tw = tex.shape[:2]
+            uvs = (tw, 0, 0, th) if pl.mirror else (0, 0, tw, th)
+        else:
+            tex, uvs = np.array([[(*pl.rgb, 255)]], np.uint8), (0, 0, 1, 1)
+        world = [bpivot + brot @ np.array((x, y, pl.z)) for x, y in corners]
+        pts = [np.array([cx + (view @ wv)[0] * scale, cy + (view @ wv)[1] * scale, (view @ wv)[2]]) for wv in world]
+        canvas.quad(pts, uvs, tex, light_for(n, pl.glow))
 
 
 def backdrop(w, h, top=(250, 238, 214), bottom=(226, 205, 168)):

@@ -1,23 +1,15 @@
-"""Shinobi Face: the Village Friends Starlit face, painted on the head: brows, lash line, eyes, mouth."""
+"""Shinobi Face: the Village Friends Living Eyes face. The lashes, pupils, glints, brows and mouth
+are face planes (see living_eyes.py), so the skin only carries the eye row they sample: the eye
+whites on the outer columns and the irises on the inner ones, painted from the eye color."""
 
-META = {"name": "Shinobi Face", "gender": "unisex", "description": "Starlit eyes looking forward, straight brows, small mouth."}
+META = {"name": "Shinobi Face", "gender": "unisex",
+        "description": "Living Eyes (Starlit or Soft Glint, set per character) in the character's eye color."}
 
-# Eyes sit in face columns 1-2 and 5-6 with the iris on the inner column, so the face looks at you.
-EYES = ((1, 2), (6, 5))   # (outer, inner) per eye
-
-
-def paint(g, brows: bool = True, eyes: bool = True):
-    f = g.part("head").front
-    for outer, inner in EYES:
-        if brows:
-            f.set(outer, 2, "H1"), f.set(inner, 2, "H1")
-        if eyes:
-            f.set(outer, 3, "E0"), f.set(inner, 3, "E0")
-            f.set(outer, 4, "E4"), f.set(inner, 4, "E0")
-            f.set(outer, 5, "E4"), f.set(inner, 5, "E2")
-    f.set(3, 6, "X1"), f.set(4, 6, "X1")
-    return f
+# Face row 4 (texture y 12): white, iris | skin | iris, white. Columns 3-4 stay skin for the lids.
+SAMPLES = {1: "E4", 2: "E2", 5: "E2", 6: "E4"}
 
 
 def build(g):
-    paint(g)
+    f = g.part("head").front
+    for x, key in SAMPLES.items():
+        f.set(x, 4, key)
