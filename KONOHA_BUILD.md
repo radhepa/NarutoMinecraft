@@ -34,11 +34,11 @@ vanilla mapping and painting) and [`tools/konoha/buildings.json`](tools/konoha/b
 
 | | Count |
 |---|---|
-| Custom blocks | **175** blocks, **386** counting colour, wood, crest and sign variants separately; **684** new 16 px textures; 95 of them functional (doors, beds, seats, lights, containers, item displays, workstations, shop counters, boards). Includes the items session's 120 requests for stations, furniture, displays and shop interiors |
+| Custom blocks | **201** blocks, **465** counting colour, wood, crest and sign variants separately; **774** new 16 px textures; 110 of them functional (doors, beds, seats, lights, containers, item displays, workstations, shop counters, boards). Includes the items session's 150 requests for stations, furniture (with the home session's catalogue), displays and shop interiors |
 | Vanilla mappings | **54** needs met with vanilla blocks or combinations (roofs, walls, streets, the Rock, the forest), plus one Village Friends block reused (the easel) |
 | Design programs | **31** Python programs (homes, apartments, shops, clan gates and houses, the wall, the forest's fence and trees, bridges, streets, training props, the Rock faces); 3 prototyped |
 | Buildings | **110** homes, **15** apartment buildings, **55** shops, **75** clan builds, **30** landmarks, **8** training grounds, **704** Forest of Death pieces (660 trees, 44 gates), **142** wall modules |
-| Agent effort | about **90 sessions** (~180 hours) for the whole village; **~81 sessions** (~162 hours) to the end of Beta 3 |
+| Agent effort | about **93 sessions** (~185 hours) for the whole village; **~83 sessions** (~166 hours) to the end of Beta 3 |
 | Your hours in Minecraft | about **80 hours** to the end of Beta 3 (finishing the Rock, terrain and landmarks), **~105 hours** for the whole village; plus ~20 hours reviewing renders |
 
 The detail behind each line is in sections 3, 4 and 7.
@@ -400,14 +400,14 @@ block's slice is the first slice that needs any of its variants.
 |---|---:|---:|---:|---:|
 | Roofs | 5 | 15 | 37 | 0 |
 | Facades and shop fronts | 10 | 71 | 102 | 3 |
-| Crests and banners | 4 | 58 | 99 | 0 |
+| Crests and banners | 5 | 58 | 100 | 0 |
 | Interior fittings | 5 | 13 | 26 | 2 |
 | Story pieces | 2 | 4 | 7 | 1 |
-| Lanterns | 2 | 7 | 16 | 2 |
+| Lanterns | 3 | 32 | 41 | 3 |
 | Streets | 8 | 22 | 30 | 2 |
 | Festival | 5 | 9 | 17 | 3 |
 | Shrine | 6 | 8 | 16 | 4 |
-| Furniture (the Leaf set) | 39 | 79 | 137 | 19 |
+| Furniture (the Leaf set) | 63 | 133 | 201 | 33 |
 | Training | 6 | 7 | 13 | 4 |
 | Academy, Residence, hospital, stadium | 15 | 20 | 45 | 7 |
 | Shops and food | 27 | 27 | 50 | 13 |
@@ -415,15 +415,15 @@ block's slice is the first slice that needs any of its variants.
 | Clan signatures | 3 | 6 | 6 | 0 |
 | Crafting stations | 9 | 10 | 26 | 8 |
 | Displays (item-rendering) | 27 | 27 | 53 | 27 |
-| **All custom blocks** | **175** | **386** | **684** | **95** |
+| **All custom blocks** | **201** | **465** | **774** | **110** |
 
 | By slice (new that slice) | Phase 0 | Beta 1 | Beta 2 | Beta 2.5 | Beta 3 | Later | Total |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Custom blocks (first needed) | 11 | 112 | 46 | 0 | 3 | 3 | 175 |
-| Custom block variants | 21 | 203 | 142 | 0 | 11 | 9 | 386 |
+| Custom blocks (first needed) | 11 | 128 | 51 | 0 | 3 | 8 | 201 |
+| Custom block variants | 21 | 225 | 194 | 0 | 11 | 14 | 465 |
 | Vanilla mappings | 23 | 15 | 10 | 0 | 5 | 1 | 54 |
 
-Complexity: 92 simple, 71 medium and 12 complex blocks (259, 108 and 19 with variants). Prototyped now: 11 blocks, 21 with variants.
+Complexity: 109 simple, 79 medium and 13 complex blocks (281, 164 and 20 with variants). Prototyped now: 11 blocks, 21 with variants.
 <!-- /gen:block-summary -->
 
 ### Vanilla mappings
@@ -525,8 +525,9 @@ Complexity: 92 simple, 71 medium and 12 complex blocks (259, 108 and 19 with var
 |---|---|---|---|---|---:|---|
 | **Leaf crest plaque**<br>`leaf_crest` | The Hidden Leaf mark on gates, the Academy, the Residence and protectors' racks | `leaf_crest_stone` Carved stone, one block; `leaf_crest_painted` Painted wood, one block; `leaf_crest_large` Large 3 x 3 relief (9 parts) | decor | simple | 11 | Beta 1 |
 | **Clan crest plaque**<br>`clan_crest` | A clan's crest on its gate and hall, one block, wall-mounted. Crests from the clan JSON and glyphs.py, the same ones the wardrobe stamps; a player clan's crest is a runtime decal on a blank plaque (later) | 25: Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka, Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko, Shiranui, Morino, Umino, Haruno, Namiashi, Hagane, Kinoshita, Tsuchigumo, Suzuran, Tobari | decor | simple | 26 | Beta 1 |
-| **Clan banner**<br>`clan_banner` | A hanging cloth banner, one wide and two tall, in the clan's palette with its crest | 26: Hidden Leaf, Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka, Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko, Shiranui, Morino, Umino, Haruno, Namiashi, Hagane, Kinoshita, Tsuchigumo, Suzuran, Tobari | decor | simple | 26 | Beta 1 |
+| **Clan banner**<br>`clan_banner` | A hanging cloth banner, one wide and two tall, in the clan's palette with its crest | 25: Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka, Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko, Shiranui, Morino, Umino, Haruno, Namiashi, Hagane, Kinoshita, Tsuchigumo, Suzuran, Tobari | decor | simple | 25 | Beta 2 |
 | **Crest mural**<br>`crest_mural` | A crest painted large on a wall, 3 x 3 blocks (9 parts): the Uchiha fan on the compound's walls | `uchiha_crest_mural` Uchiha fan; `uzumaki_crest_mural` Uzumaki spiral; `leaf_crest_mural` Hidden Leaf; `police_crest_mural` Military Police (Later) | decor | simple | 36 | Beta 2 |
+| **Leaf banner**<br>`leaf_banner` | A cloth banner with the Hidden Leaf mark, one wide and two tall; the heart of the Leaf set | `leaf_banner` Hidden Leaf | decor | simple | 2 | Beta 1 |
 
 #### Interior fittings
 
@@ -551,6 +552,7 @@ Complexity: 92 simple, 71 medium and 12 complex blocks (259, 108 and 19 with var
 |---|---|---|---|---|---:|---|
 | **Paper lantern** ★<br>`paper_lantern` | Chochin: ribbed paper lantern hanging from a cord or standing | `red_paper_lantern` Red; `white_paper_lantern` White with a red band; `festival_paper_lantern` Festival 祭 (Beta 2); `large_red_paper_lantern` Large red (the ramen stand) (Beta 1) | light | medium | 9 | Phase 0 |
 | **Stone lantern** ★<br>`stone_lantern` | Toro: granite lantern, two blocks tall (half: lower, upper) | `stone_lantern` Granite; `mossy_stone_lantern` Mossy; `charred_stone_lantern` Charred (a ruined shrine) (Beta 1) | light | complex | 7 | Phase 0 |
+| **Clan lantern**<br>`clan_lantern` | A paper lantern painted with a clan's crest | 25: Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka, Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko, Shiranui, Morino, Umino, Haruno, Namiashi, Hagane, Kinoshita, Tsuchigumo, Suzuran, Tobari | light | medium | 25 | Beta 2 |
 
 #### Streets
 
@@ -563,15 +565,15 @@ Complexity: 92 simple, 71 medium and 12 complex blocks (259, 108 and 19 with var
 | **Notice board**<br>`notice_board` | A roofed Konoha notice board | `village_notice_board` Village notices; `mission_notice_board` Mission board (Beta 2) | quest_board (VF quest/Board, a new model) | medium | 4 | Beta 1 |
 | **Post box**<br>`post_box` | The red letter box outside the post office | `post_box` Red | decor | simple | 2 | Beta 2 |
 | **Bridge post finial**<br>`bridge_finial` | Onion-shaped giboshi cap on bridge railing posts | `bronze_bridge_finial` Bronze; `red_bridge_finial` Vermilion | decor | medium | 2 | Beta 2 |
-| **Laundry line**<br>`laundry_line` | A line on a balcony with washing or an airing futon (axis) | `laundry_line_clothes` Washing; `laundry_line_futon` Airing futon; `laundry_line_empty` Empty | decor | simple | 3 | Beta 1 |
+| **Laundry line**<br>`laundry_line` | A line on a balcony with washing or an airing futon (axis) | `laundry_line` Washing; `laundry_line_futon` Airing futon; `laundry_line_empty` Empty | decor | simple | 3 | Beta 1 |
 
 #### Festival
 
 | Block | Purpose | Variants (slice) | Function | Model | Tex | First |
 |---|---|---|---|---|---:|---|
-| **Lantern garland**<br>`lantern_garland` | A string of small paper lanterns between poles (axis, sag) | `red_lantern_garland` Red; `mixed_lantern_garland` Red and white | light | simple | 2 | Beta 2 |
+| **Lantern string**<br>`lantern_string` | Festival lanterns on a string across a street, a room or a balcony (axis, sag) | `lantern_string` Red; `mixed_lantern_string` Red and white | light | simple | 2 | Beta 2 |
 | **Mask display**<br>`mask_display` | Board of festival masks | `mask_display` Wood | decor | simple | 1 | Beta 2 |
-| **Taiko drum**<br>`taiko` | Drum on a stand | `taiko` Lacquer | interact (Plays a beat) | medium | 2 | Beta 2 |
+| **Festival drum**<br>`festival_drum` | A taiko on a stand; give it a bang | `festival_drum` Lacquer | interact (Plays a beat) | medium | 2 | Beta 2 |
 | **Festival stall**<br>`festival_stall` | Yatai: a two-block food stall with a roof (part: left, right); the trade is its noren | `takoyaki_festival_stall` Takoyaki; `candy_apple_festival_stall` Candy apples; `masks_festival_stall` Masks; `yakitori_festival_stall` Yakitori (Beta 3) | decor | complex | 10 | Beta 2 |
 | **Goldfish pool**<br>`goldfish_pool` | Tub of goldfish for the scooping game | `goldfish_pool` Blue tub | interact (Festival game) | medium | 2 | Beta 2 |
 
@@ -615,7 +617,7 @@ Complexity: 92 simple, 71 medium and 12 complex blocks (259, 108 and 19 with var
 | **Bamboo vase**<br>`bamboo_vase` | A cut-bamboo vase with a stem | `bamboo_vase` Bamboo | decor | simple | 1 | Beta 1 |
 | **Ikebana**<br>`ikebana` | A flower arrangement in a low dish | `ikebana` Seasonal | decor | simple | 1 | Beta 1 |
 | **Hanging scroll**<br>`hanging_scroll` | Kakejiku, one wide and two tall. Was planned as painting variants; a block so furnish mode places it | `hanging_scroll_fire` 火; `hanging_scroll_shinobi` 忍; `hanging_scroll_harmony` 和; `hanging_scroll_landscape` Landscape; `hanging_scroll_crane` Crane; `hanging_scroll_leaf` Hidden Leaf | decor | simple | 12 | Beta 1 |
-| **Poster**<br>`poster` | A printed poster or a framed painting, 1 x 1 or 2 x 2 | `poster_academy` Academy; `poster_festival` Leaf Festival (Beta 2); `poster_wanted` Wanted (Beta 2); `poster_exams` Chunin Exams (Beta 3); `poster_village` A painting of the village; `poster_lake` A painting of the lake (Beta 2) | decor | simple | 12 | Beta 1 |
+| **Poster**<br>`poster` | A printed poster or a framed painting, 1 x 1 or 2 x 2 | 7: Academy, Leaf Festival, Wanted, Chunin Exams, A painting of the village, A painting of the lake, Ramen (the home's ramen corner) | decor | simple | 14 | Beta 1 |
 | **Wall clock**<br>`wall_clock` | A pendulum wall clock | `wall_clock` Wood | decor | medium | 2 | Beta 1 |
 | **Calendar scroll**<br>`calendar_scroll` | A wall calendar showing the season and day | `calendar_scroll` Paper | interact (Shows VF Calendar) | simple | 1 | Beta 1 |
 | **Wind chime**<br>`wind_chime` | Furin glass chime | `wind_chime` Glass | decor | simple | 1 | Beta 2 |
@@ -629,6 +631,30 @@ Complexity: 92 simple, 71 medium and 12 complex blocks (259, 108 and 19 with var
 | **Goldfish bowl**<br>`goldfish_bowl` | A glass bowl with a goldfish | `goldfish_bowl` Glass | decor | medium | 1 | Beta 2 |
 | **Go board**<br>`go_board` | A go board on legs | `go_board` Kaya wood | decor | simple | 2 | Beta 1 |
 | **Moving crate**<br>`moving_crate` | Packs furniture and chests with their contents for a move | `moving_crate` Wood | container (Keeps contents as an item) | simple | 1 | Later |
+| **Clan screen**<br>`clan_screen` | A folding screen painted with a clan's crest | 25: Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka, Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko, Shiranui, Morino, Umino, Haruno, Namiashi, Hagane, Kinoshita, Tsuchigumo, Suzuran, Tobari | decor | medium | 25 | Beta 2 |
+| **Curtains**<br>`curtains` | Cotton curtains for a window | `curtains` White; `indigo_curtains` Indigo; `red_curtains` Red; `green_curtains` Green; `yellow_curtains` Yellow; `brown_curtains` Brown | decor | simple | 6 | Beta 1 |
+| **Cupboard**<br>`cupboard` | A kitchen cupboard: a pantry for ingredients and dishes | `cupboard` Cupboard | container (27-slot inventory) | medium | 2 | Beta 1 |
+| **Icebox**<br>`icebox` | Keeps fresh ingredients from spoiling | `icebox` Icebox | container (Inventory that stops food spoiling (Items)) | medium | 2 | Beta 1 |
+| **Tea kettle**<br>`tea_kettle` | An iron kettle: brew tea at home | `tea_kettle` Tea kettle | station (Hearth & Harvest recipe hook (Items)) | simple | 1 | Beta 1 |
+| **Bowl shelf**<br>`bowl_shelf` | A shelf of ramen bowls for the ramen corner | `bowl_shelf` Bowl shelf | decor | simple | 1 | Beta 1 |
+| **Ramen cup tower**<br>`ramen_cup_tower` | A teetering stack of instant ramen cups. A monument | `ramen_cup_tower` Ramen cup tower | decor | simple | 2 | Beta 1 |
+| **Balcony planter**<br>`balcony_planter` | A long planter of herbs and flowers; water it | `balcony_planter` Balcony planter | interact (Grows when watered (Items)) | medium | 2 | Beta 1 |
+| **Balcony bench**<br>`balcony_bench` | A bench facing the Rock | `balcony_bench` Balcony bench | seat (VF Seat) | simple | 1 | Beta 1 |
+| **Meditation mat**<br>`meditation_mat` | Meditate here: chakra comes back a little faster | `meditation_mat` Meditation mat | seat (VF Seat with a meditation pose; Combat's chakra regen) | simple | 1 | Beta 1 |
+| **Weight rack**<br>`weight_rack` | Stone weights for strength training at home | `weight_rack` Weight rack | interact (Training action (Items)) | medium | 2 | Beta 2 |
+| **Tea table**<br>`tea_table` | A low lacquered table for the tea set | `tea_table` Tea table | decor | simple | 1 | Beta 1 |
+| **Fan display**<br>`fan_display` | A painted festival fan on a wall stand | `fan_display` Fan display | decor | simple | 1 | Beta 2 |
+| **Alarm clock**<br>`alarm_clock` | Rings at the hour you set | `alarm_clock` Alarm clock | interact (Sets the wake hour (Life)) | simple | 1 | Beta 1 |
+| **Shoe rack**<br>`shoe_rack` | For the entryway | `shoe_rack` Shoe rack | decor | simple | 1 | Beta 1 |
+| **Umbrella stand**<br>`umbrella_stand` | A ceramic stand for wet umbrellas | `umbrella_stand` Umbrella stand | decor | simple | 1 | Beta 1 |
+| **Bath mat**<br>`bath_mat` | A woven mat for the bath | `bath_mat` Bath mat | decor | simple | 1 | Beta 1 |
+| **Towel rack**<br>`towel_rack` | A bamboo towel rack | `towel_rack` Towel rack | decor | simple | 1 | Beta 1 |
+| **Photo frame**<br>`photo_frame` | Frames one photograph | `photo_frame` Photo frame | display, 1 slot (Item display block entity (one renderer for all)) | simple | 1 | Beta 1 |
+| **Wooden bed**<br>`wooden_bed` | A raised bed with a carved frame | `wooden_bed` Wooden bed | bed (vanilla BedBlock) | medium | 2 | Later |
+| **Double futon**<br>`double_futon` | A futon for two | `double_futon` Double futon | bed (vanilla BedBlock, two wide) | medium | 2 | Later |
+| **Child futon**<br>`child_futon` | A small futon | `child_futon` Child futon | bed (vanilla BedBlock) | simple | 1 | Later |
+| **Irori hearth**<br>`irori_hearth` | A sunken hearth in the floor: cook, warm and gather round | `irori_hearth` Irori hearth | station (Hearth & Harvest cooking; VF Seats around) | complex | 3 | Later |
+| **Engawa bench**<br>`engawa_bench` | A veranda bench along a house | `engawa_bench` Engawa bench | seat (VF Seat) | simple | 1 | Later |
 
 #### Training
 
@@ -881,12 +907,12 @@ from it, with margin for in-game fixes the renders cannot show:
 
 | Work | Phase 0 | Beta 1 | Beta 2 | Beta 3 | Later | Total |
 |---|---:|---:|---:|---:|---:|---:|
-| Block models and textures (164 blocks left, 365 variants, 634 textures) | 0.5 | 12 | 6 | 1 | 1 | **20.5** |
+| Block models and textures (190 blocks left, 444 variants, 724 textures) | 0.5 | 13.5 | 6.5 | 1 | 1.5 | **23** |
 | Java registration and block behaviour (the display block entity, seats, beds, containers, station hooks for Items' screens) | 2 | 6 | 4 | 1 | — | **13** |
 | Design programs (28 left) and `roads.py`, `sweep.py`, `rock_faces.py` | 1.5 | 7 | 3 | 3 | — | **14.5** |
 | Paste tooling, `layout.py`, layout files | 6 | 3 | 2 | 1 | 2 | **14** |
 | One-off landmark drafts | — | 12 | 6 | 4 | 6 | **28** |
-| **Total** | **10** | **40** | **21** | **10** | **9** | **~90** (~180 h) |
+| **Total** | **10** | **41.5** | **21.5** | **10** | **9.5** | **~93** (~185 h) |
 
 ### Your hours
 

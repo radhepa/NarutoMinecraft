@@ -581,11 +581,6 @@
    "purpose": "A hanging cloth banner, one wide and two tall, in the clan's palette with its crest",
    "variants": [
     {
-     "id": "clan_banner_leaf",
-     "label": "Hidden Leaf",
-     "slice": "B1"
-    },
-    {
      "id": "clan_banner_senju",
      "label": "Senju",
      "slice": "B2"
@@ -714,7 +709,7 @@
    "functional": null,
    "reuse": null,
    "complexity": "simple",
-   "textures": 26,
+   "textures": 25,
    "prototype": false
   },
   {
@@ -1115,18 +1110,18 @@
    "prototype": false
   },
   {
-   "id": "lantern_garland",
-   "name": "Lantern garland",
+   "id": "lantern_string",
+   "name": "Lantern string",
    "category": "festival",
-   "purpose": "A string of small paper lanterns between poles (axis, sag)",
+   "purpose": "Festival lanterns on a string across a street, a room or a balcony (axis, sag)",
    "variants": [
     {
-     "id": "red_lantern_garland",
+     "id": "lantern_string",
      "label": "Red",
      "slice": "B2"
     },
     {
-     "id": "mixed_lantern_garland",
+     "id": "mixed_lantern_string",
      "label": "Red and white",
      "slice": "B2"
     }
@@ -1271,7 +1266,7 @@
    "purpose": "A line on a balcony with washing or an airing futon (axis)",
    "variants": [
     {
-     "id": "laundry_line_clothes",
+     "id": "laundry_line",
      "label": "Washing",
      "slice": "B1"
     },
@@ -1995,13 +1990,13 @@
    "prototype": false
   },
   {
-   "id": "taiko",
-   "name": "Taiko drum",
+   "id": "festival_drum",
+   "name": "Festival drum",
    "category": "festival",
-   "purpose": "Drum on a stand",
+   "purpose": "A taiko on a stand; give it a bang",
    "variants": [
     {
-     "id": "taiko",
+     "id": "festival_drum",
      "label": "Lacquer",
      "slice": "B2"
     }
@@ -2860,12 +2855,17 @@
      "id": "poster_lake",
      "label": "A painting of the lake",
      "slice": "B2"
+    },
+    {
+     "id": "poster_ramen",
+     "label": "Ramen (the home's ramen corner)",
+     "slice": "B1"
     }
    ],
    "functional": null,
    "reuse": null,
    "complexity": "simple",
-   "textures": 12,
+   "textures": 14,
    "prototype": false,
    "requested_by": "items session"
   },
@@ -4339,6 +4339,766 @@
    "textures": 2,
    "prototype": false,
    "requested_by": "items session"
+  },
+  {
+   "id": "leaf_banner",
+   "name": "Leaf banner",
+   "category": "crest",
+   "purpose": "A cloth banner with the Hidden Leaf mark, one wide and two tall; the heart of the Leaf set",
+   "variants": [
+    {
+     "id": "leaf_banner",
+     "label": "Hidden Leaf",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "clan_screen",
+   "name": "Clan screen",
+   "category": "furniture",
+   "purpose": "A folding screen painted with a clan's crest",
+   "variants": [
+    {
+     "id": "clan_screen_senju",
+     "label": "Senju",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_uzumaki",
+     "label": "Uzumaki",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_uchiha",
+     "label": "Uchiha",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_hyuga",
+     "label": "Hyuga",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_nara",
+     "label": "Nara",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_akimichi",
+     "label": "Akimichi",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_yamanaka",
+     "label": "Yamanaka",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_inuzuka",
+     "label": "Inuzuka",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_sarutobi",
+     "label": "Sarutobi",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_aburame",
+     "label": "Aburame",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_hatake",
+     "label": "Hatake",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_kurama",
+     "label": "Kurama",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_shimura",
+     "label": "Shimura",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_yuhi",
+     "label": "Yuhi",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_gekko",
+     "label": "Gekko",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_shiranui",
+     "label": "Shiranui",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_morino",
+     "label": "Morino",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_umino",
+     "label": "Umino",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_haruno",
+     "label": "Haruno",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_namiashi",
+     "label": "Namiashi",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_hagane",
+     "label": "Hagane",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_kinoshita",
+     "label": "Kinoshita",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_tsuchigumo",
+     "label": "Tsuchigumo",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_suzuran",
+     "label": "Suzuran",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_screen_tobari",
+     "label": "Tobari",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 25,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "clan_lantern",
+   "name": "Clan lantern",
+   "category": "light",
+   "purpose": "A paper lantern painted with a clan's crest",
+   "variants": [
+    {
+     "id": "clan_lantern_senju",
+     "label": "Senju",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_uzumaki",
+     "label": "Uzumaki",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_uchiha",
+     "label": "Uchiha",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_hyuga",
+     "label": "Hyuga",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_nara",
+     "label": "Nara",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_akimichi",
+     "label": "Akimichi",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_yamanaka",
+     "label": "Yamanaka",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_inuzuka",
+     "label": "Inuzuka",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_sarutobi",
+     "label": "Sarutobi",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_aburame",
+     "label": "Aburame",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_hatake",
+     "label": "Hatake",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_kurama",
+     "label": "Kurama",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_shimura",
+     "label": "Shimura",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_yuhi",
+     "label": "Yuhi",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_gekko",
+     "label": "Gekko",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_shiranui",
+     "label": "Shiranui",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_morino",
+     "label": "Morino",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_umino",
+     "label": "Umino",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_haruno",
+     "label": "Haruno",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_namiashi",
+     "label": "Namiashi",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_hagane",
+     "label": "Hagane",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_kinoshita",
+     "label": "Kinoshita",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_tsuchigumo",
+     "label": "Tsuchigumo",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_suzuran",
+     "label": "Suzuran",
+     "slice": "B2"
+    },
+    {
+     "id": "clan_lantern_tobari",
+     "label": "Tobari",
+     "slice": "B2"
+    }
+   ],
+   "functional": "light",
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 25,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "curtains",
+   "name": "Curtains",
+   "category": "furniture",
+   "purpose": "Cotton curtains for a window",
+   "variants": [
+    {
+     "id": "curtains",
+     "label": "White",
+     "slice": "B1"
+    },
+    {
+     "id": "indigo_curtains",
+     "label": "Indigo",
+     "slice": "B1"
+    },
+    {
+     "id": "red_curtains",
+     "label": "Red",
+     "slice": "B1"
+    },
+    {
+     "id": "green_curtains",
+     "label": "Green",
+     "slice": "B1"
+    },
+    {
+     "id": "yellow_curtains",
+     "label": "Yellow",
+     "slice": "B1"
+    },
+    {
+     "id": "brown_curtains",
+     "label": "Brown",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 6,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "cupboard",
+   "name": "Cupboard",
+   "category": "furniture",
+   "purpose": "A kitchen cupboard: a pantry for ingredients and dishes",
+   "variants": [
+    {
+     "id": "cupboard",
+     "label": "Cupboard",
+     "slice": "B1"
+    }
+   ],
+   "functional": "container",
+   "reuse": "27-slot inventory",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "icebox",
+   "name": "Icebox",
+   "category": "furniture",
+   "purpose": "Keeps fresh ingredients from spoiling",
+   "variants": [
+    {
+     "id": "icebox",
+     "label": "Icebox",
+     "slice": "B1"
+    }
+   ],
+   "functional": "container",
+   "reuse": "Inventory that stops food spoiling (Items)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "tea_kettle",
+   "name": "Tea kettle",
+   "category": "furniture",
+   "purpose": "An iron kettle: brew tea at home",
+   "variants": [
+    {
+     "id": "tea_kettle",
+     "label": "Tea kettle",
+     "slice": "B1"
+    }
+   ],
+   "functional": "station",
+   "reuse": "Hearth & Harvest recipe hook (Items)",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "bowl_shelf",
+   "name": "Bowl shelf",
+   "category": "furniture",
+   "purpose": "A shelf of ramen bowls for the ramen corner",
+   "variants": [
+    {
+     "id": "bowl_shelf",
+     "label": "Bowl shelf",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "ramen_cup_tower",
+   "name": "Ramen cup tower",
+   "category": "furniture",
+   "purpose": "A teetering stack of instant ramen cups. A monument",
+   "variants": [
+    {
+     "id": "ramen_cup_tower",
+     "label": "Ramen cup tower",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "balcony_planter",
+   "name": "Balcony planter",
+   "category": "furniture",
+   "purpose": "A long planter of herbs and flowers; water it",
+   "variants": [
+    {
+     "id": "balcony_planter",
+     "label": "Balcony planter",
+     "slice": "B1"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Grows when watered (Items)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "balcony_bench",
+   "name": "Balcony bench",
+   "category": "furniture",
+   "purpose": "A bench facing the Rock",
+   "variants": [
+    {
+     "id": "balcony_bench",
+     "label": "Balcony bench",
+     "slice": "B1"
+    }
+   ],
+   "functional": "seat",
+   "reuse": "VF Seat",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "meditation_mat",
+   "name": "Meditation mat",
+   "category": "furniture",
+   "purpose": "Meditate here: chakra comes back a little faster",
+   "variants": [
+    {
+     "id": "meditation_mat",
+     "label": "Meditation mat",
+     "slice": "B1"
+    }
+   ],
+   "functional": "seat",
+   "reuse": "VF Seat with a meditation pose; Combat's chakra regen",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "weight_rack",
+   "name": "Weight rack",
+   "category": "furniture",
+   "purpose": "Stone weights for strength training at home",
+   "variants": [
+    {
+     "id": "weight_rack",
+     "label": "Weight rack",
+     "slice": "B2"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Training action (Items)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "tea_table",
+   "name": "Tea table",
+   "category": "furniture",
+   "purpose": "A low lacquered table for the tea set",
+   "variants": [
+    {
+     "id": "tea_table",
+     "label": "Tea table",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "fan_display",
+   "name": "Fan display",
+   "category": "furniture",
+   "purpose": "A painted festival fan on a wall stand",
+   "variants": [
+    {
+     "id": "fan_display",
+     "label": "Fan display",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "alarm_clock",
+   "name": "Alarm clock",
+   "category": "furniture",
+   "purpose": "Rings at the hour you set",
+   "variants": [
+    {
+     "id": "alarm_clock",
+     "label": "Alarm clock",
+     "slice": "B1"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Sets the wake hour (Life)",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "shoe_rack",
+   "name": "Shoe rack",
+   "category": "furniture",
+   "purpose": "For the entryway",
+   "variants": [
+    {
+     "id": "shoe_rack",
+     "label": "Shoe rack",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "umbrella_stand",
+   "name": "Umbrella stand",
+   "category": "furniture",
+   "purpose": "A ceramic stand for wet umbrellas",
+   "variants": [
+    {
+     "id": "umbrella_stand",
+     "label": "Umbrella stand",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "bath_mat",
+   "name": "Bath mat",
+   "category": "furniture",
+   "purpose": "A woven mat for the bath",
+   "variants": [
+    {
+     "id": "bath_mat",
+     "label": "Bath mat",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "towel_rack",
+   "name": "Towel rack",
+   "category": "furniture",
+   "purpose": "A bamboo towel rack",
+   "variants": [
+    {
+     "id": "towel_rack",
+     "label": "Towel rack",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "photo_frame",
+   "name": "Photo frame",
+   "category": "furniture",
+   "purpose": "Frames one photograph",
+   "variants": [
+    {
+     "id": "photo_frame",
+     "label": "Photo frame",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)",
+   "slots": 1
+  },
+  {
+   "id": "wooden_bed",
+   "name": "Wooden bed",
+   "category": "furniture",
+   "purpose": "A raised bed with a carved frame",
+   "variants": [
+    {
+     "id": "wooden_bed",
+     "label": "Wooden bed",
+     "slice": "later"
+    }
+   ],
+   "functional": "bed",
+   "reuse": "vanilla BedBlock",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "double_futon",
+   "name": "Double futon",
+   "category": "furniture",
+   "purpose": "A futon for two",
+   "variants": [
+    {
+     "id": "double_futon",
+     "label": "Double futon",
+     "slice": "later"
+    }
+   ],
+   "functional": "bed",
+   "reuse": "vanilla BedBlock, two wide",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "child_futon",
+   "name": "Child futon",
+   "category": "furniture",
+   "purpose": "A small futon",
+   "variants": [
+    {
+     "id": "child_futon",
+     "label": "Child futon",
+     "slice": "later"
+    }
+   ],
+   "functional": "bed",
+   "reuse": "vanilla BedBlock",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "irori_hearth",
+   "name": "Irori hearth",
+   "category": "furniture",
+   "purpose": "A sunken hearth in the floor: cook, warm and gather round",
+   "variants": [
+    {
+     "id": "irori_hearth",
+     "label": "Irori hearth",
+     "slice": "later"
+    }
+   ],
+   "functional": "station",
+   "reuse": "Hearth & Harvest cooking; VF Seats around",
+   "complexity": "complex",
+   "textures": 3,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
+  },
+  {
+   "id": "engawa_bench",
+   "name": "Engawa bench",
+   "category": "furniture",
+   "purpose": "A veranda bench along a house",
+   "variants": [
+    {
+     "id": "engawa_bench",
+     "label": "Engawa bench",
+     "slice": "later"
+    }
+   ],
+   "functional": "seat",
+   "reuse": "VF Seat",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session (home catalogue)"
   }
  ],
  "vanilla": [

@@ -660,9 +660,9 @@
     "semantic_hash": ""
   },
   "KONOHA_BUILD.md": {
-    "mtime": 1793310391.2708263,
-    "seen": 1793310403.634186,
-    "ast_hash": "f3db9abf0c7162c3a2e2100b425d7370",
+    "mtime": 1793310791.5968027,
+    "seen": 1793310797.2353349,
+    "ast_hash": "853b10992cf37396b006812f2308e805",
     "semantic_hash": ""
   },
   "tools/konoha/buildings/leaf_block.py": {

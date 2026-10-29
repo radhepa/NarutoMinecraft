@@ -1,7 +1,7 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 112 files · ~161,791 words
+- 112 files · ~162,558 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .properties 2, .jar 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `56270fae`
+- Built from commit: `332706cf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -613,7 +613,7 @@ Nodes (3): crest(), crest_patch(), cloth_shade()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Bonds` connect `Bonds` to `Memory`, `Person`, `.read`, `Story bible`, `Deed`, `Mood`, `Run`, `.test`, `Meters`, `Levels`, `Person`, `Personality`, `Village`?**
-  _High betweenness centrality (0.460) - this node is a cross-community bridge._
+  _High betweenness centrality (0.457) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `fabric()` (e.g. with `Shared helpers` and `Face`) actually correct?**
   _`fabric()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `TALK`, `GIFT_LOVED`, `GIFT_LIKED` to the rest of the system?**
@@ -625,4 +625,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Clans` be split into smaller, more focused modules?**
   _Cohesion score 0.13071895424836602 - nodes in this community are weakly interconnected._
 - **Why does `Shared helpers` connect `k` to `Clans`, `kit_hagane.py`, `kit_shimura.py`, `anime.py`, `strip_fabric`, `cel_box`, `bangs`, `Box`, `kit_shinobi.py`, `scalp`, `lock`, `fabric`?**
-  _High betweenness centrality (0.296) - this node is a cross-community bridge._
+  _High betweenness centrality (0.302) - this node is a cross-community bridge._
