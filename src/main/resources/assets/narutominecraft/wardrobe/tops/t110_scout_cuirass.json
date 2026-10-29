@@ -1,0 +1,77 @@
+{
+  "id": "t110_scout_cuirass",
+  "kind": "top",
+  "name": "Scout Cuirass",
+  "gender": "unisex",
+  "texture": "tops/t110_scout_cuirass.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "senju",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "plate_rim",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.9,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        -1
+      ],
+      "size": [
+        8,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short laced breastplate over a cream kimono shirt, elbow sleeves, dark gloves, navy sash."
+}

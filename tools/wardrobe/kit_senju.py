@@ -66,7 +66,7 @@ def lames(face, role: str, y0: int, y1: int, step: int = 2, lace: str | None = "
                 key = k(role, base - 1)
             else:
                 key = k(role, base)
-            if lace and r == step - 1 and x % 2 == 0:
+            if lace and r == step - 1 and x % 3 == 1:
                 key = lace
             face.set(x, y, key)
 
@@ -81,3 +81,11 @@ def plate(g, pid: str, bone: str, origin, size, role: str = "P", seed: int = 0, 
     fabric(box.top, role, "smooth", seed, 3)
     box.bottom.fill(k(role, 0))
     return box
+
+
+def shoulder_guards(g, prefix: str = "shoulder_guard", length: int = 6, seed: int = 0, role: str = "P",
+                    lace: str | None = "A2", flare: float = 14, depth: int = 5, top: float = -2.4):
+    """Sode: a laced plate hanging off the outside of each shoulder, flaring out at the hem."""
+    for side, bone, sign in (("right", "RIGHT_ARM", -1), ("left", "LEFT_ARM", 1)):
+        plate(g, f"{side}_{prefix}", bone, (-.5, 0, -depth / 2), (1, length, depth), role, seed + (sign > 0),
+              pivot=(3.45 * sign, top, 0), rotation=(0, 0, -flare * sign), step=3, lace=lace)
