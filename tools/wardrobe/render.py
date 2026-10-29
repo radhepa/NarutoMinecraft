@@ -176,7 +176,7 @@ class Character:
                          brows=spec.get("brows", "fine"), marks=tuple(spec.get("marks", [])), masked=bool(hat and hat.meta.get("covers_face")),
                          mouth=not (hat and hat.meta.get("covers_mouth")),
                          skin=tuple(int(c) for c in body[12, 12]), iris=rgb(eyes[2]), white=rgb(eyes[4]),
-                         pattern=pattern, glow=bool(eye.get("glow")))
+                         pattern=pattern, glow=bool(eye.get("glow")), mark_table=W.load_marks())
 
 
 # -- drawing ----------------------------------------------------------------------------------
@@ -308,6 +308,62 @@ def lineup(chars: list[Character], out: Path, subtitle: str = "Shinobi of the Hi
     print(out)
 
 
+def hair_chart(garments: dict, hair_ids: list[str], out: Path, title: str = "Hairstyles", base: dict | None = None,
+               colors=("RAVEN",)):
+    """Each hairstyle on a bare head and shoulders, from the front and from behind, cycling the hair colors."""
+    base = dict(base or {"id": "chart", "name": "", "face": "f01_shinobi", "headwear": None, "top": "t07_hyuga_robe",
+                         "bottom": "b01_shinobi_trousers", "palette": "HYUGA", "eye_color": "BYAKUGAN",
+                         "eye_style": "starlit", "complexion": 0, "rank": "genin"})
+    cell, view_dx = 400, 92
+    W_, H_ = cell * len(hair_ids) + 80, 640
+    w, h = W_ * SS, H_ * SS
+    canvas = Canvas(w, h, backdrop(w, h))
+    scale = 12 * SS
+    for i, hid in enumerate(hair_ids):
+        g = garments[hid]
+        spec = dict(base, hair=hid, hair_color=colors[i % len(colors)], feminine=g.gender == "female")
+        ch = Character(spec, garments)
+        cx = (40 + cell * i + cell // 2) * SS
+        for dx, yaw in ((-view_dx, -26), (view_dx, 154)):
+            render(canvas, ch, cx + dx * SS, 200 * SS + 8 * scale, scale, yaw, 8)
+    img = Image.fromarray(canvas.img.clip(0, 255).astype(np.uint8)).resize((W_, H_), Image.LANCZOS)
+    d = ImageDraw.Draw(img)
+    d.text((44, 30), "Naruto Minecraft", font=font(46, True), fill=(62, 38, 28))
+    d.text((46, 88), title, font=font(20), fill=(120, 92, 70))
+    for i, hid in enumerate(hair_ids):
+        name = garments[hid].meta["name"]
+        cx = 40 + cell * i + cell // 2
+        tw = d.textlength(name, font=font(22, True))
+        d.rectangle((cx - tw / 2 - 12, 580, cx + tw / 2 + 12, 616), fill=(246, 234, 210))
+        d.text((cx - tw / 2, 584), name, font=font(22, True), fill=(62, 38, 28))
+    out.parent.mkdir(parents=True, exist_ok=True)
+    img.save(out)
+    print(out)
+
+
+def clan_renders(clan_id: str, garments: dict):
+    """A clan's review set in docs/renders/clans/<id>/: its hairstyles in charts of five, every outfit
+    template as designed, and residents assembled at random the way the game will mix them."""
+    clan = W.load_clans()[clan_id]
+    out = OUT / "clans" / clan_id
+    pool = clan["pool"]
+    o0 = clan["outfits"][0]
+    base = {"id": "chart", "name": "", "face": "f01_shinobi", "headwear": None, "top": o0["top"], "bottom": o0["bottom"],
+            "palette": o0.get("palettes", pool["palettes"])[0], "eye_color": pool["eye_colors"][0], "eye_style": "starlit",
+            "complexion": pool.get("complexions", [0])[0], "rank": "genin"}
+    hair = pool["hair"]
+    for i in range(0, len(hair), 5):
+        hair_chart(garments, hair[i:i + 5], out / f"hair_{i // 5 + 1}.png", f"{clan['name']}: hairstyles", base,
+                   pool["hair_colors"])
+    templates = [Character(W.clan_resident(clan, garments, i, outfit=i, keep_bottom=True), garments)
+                 for i in range(len(clan["outfits"]))]
+    for i in range(0, len(templates), 5):
+        lineup(templates[i:i + 5], out / f"outfits_{i // 5 + 1}.png", f"{clan['name']}: outfits")
+    mixes = [Character(W.clan_resident(clan, garments, 100 + i), garments) for i in range(10)]
+    for i in range(0, 10, 5):
+        lineup(mixes[i:i + 5], out / f"mixes_{i // 5 + 1}.png", f"{clan['name']}: residents mixed at random")
+
+
 RANK_TITLES = {"academy": "Academy students", "genin": "Genin: the village's young ninja",
                "chunin": "Chunin", "jonin": "Jonin: the elite of the Hidden Leaf",
                "anbu": "ANBU Black Ops: the Hokage's masked guard", "kage": "Kage"}
@@ -318,7 +374,16 @@ def main():
     ap.add_argument("ids", nargs="*")
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--out")
+    ap.add_argument("--clan", help="render a clan's hair charts, outfit line-ups and random mixes")
+    ap.add_argument("--hair", nargs="+", help="a hair chart of these hairstyle ids")
+    ap.add_argument("--colors", nargs="+", default=["RAVEN"], help="hair colors the chart cycles through")
     a = ap.parse_args()
+    if a.clan:
+        clan_renders(a.clan, W.build_all())
+        return
+    if a.hair:
+        hair_chart(W.build_all(), a.hair, Path(a.out) if a.out else OUT / "hair_chart.png", colors=a.colors)
+        return
     specs = {c["id"]: c for c in W.load_characters()}
     wanted = list(specs) if a.all or not a.ids else a.ids
     garments = W.build_all()

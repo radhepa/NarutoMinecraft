@@ -33,9 +33,10 @@ def cel_box(box, seed: int, base: int = 2, ring: int | None = None, top_delta: i
 
 
 def lock(g, pid: str, pivot, rotation=(0, 0, 0), segments=((3, 3), (2, 2), (1, 1)), depth: int = 1, seed: int = 0,
-         base: int = 2, ring: int | None = 1, motion: str = "none", z_offset: float = 0):
-    """A tapered, pointed lock hanging along its local +y from the pivot: wide root to fine tip."""
-    y = 0.0
+         base: int = 2, ring: int | None = 1, motion: str = "none", z_offset: float = 0, y0: float = 0.0):
+    """A tapered, pointed lock hanging along its local +y from the pivot: wide root to fine tip. `y0`
+    starts it partway down, so a lock can continue another piece that shares its pivot."""
+    y = y0
     boxes = []
     for i, (w, h) in enumerate(segments):
         box = g.piece(f"{pid}_{i}" if len(segments) > 1 else pid, "HEAD", (-w / 2, y, -depth / 2 + z_offset), (w, h, depth),
@@ -89,3 +90,57 @@ def ring_shell(g, seed: int, base: int = 2, side_rows: int = 4, back_rows: int =
                 face.set(x, rows, k("H", base - 1))
     hat.front.hline(0, 7, 0, k("H", base))
     return hat
+
+
+def curtain(g, prefix: str, pivot, tilt, width: int, length: int, hem=(), seed: int = 0, base: int = 2, depth: int = 1,
+            motion: str = "sway", ring: int | None = 1):
+    """A sheet of straight hair hanging down the back from `pivot`, with a hem of pointed tips:
+    `hem` lists (x from the sheet's left edge, width, length) for each tip below the sheet."""
+    sheet = g.piece(prefix, "HEAD", (-width / 2, 0, -depth / 2), (width, length, depth), pivot=pivot, rotation=tilt,
+                    motion=motion)
+    cel_box(sheet, seed, base, ring=ring)
+    for i, (x, w, n) in enumerate(hem):
+        segs = [(w, n - 1), (max(1, w - 2), 1)] if n > 1 else [(w, 1)]
+        y = float(length)
+        for j, (sw, sh) in enumerate(segs):
+            tip = g.piece(f"{prefix}_tip_{i}_{j}", "HEAD", (-width / 2 + x + (w - sw) / 2, y, -depth / 2), (sw, sh, depth),
+                          pivot=pivot, rotation=tilt, motion=motion)
+            cel_box(tip, seed + 3 + i * 5 + j, base, top_delta=0)
+            y += sh
+    return sheet
+
+
+def tie(g, pid: str, pivot, rotation=(0, 0, 0), size=(3, 1, 2), y: float = 0.0, key: str | None = None, motion: str = "none"):
+    """A hair tie wrapped round a tail at local height `y`: dark hair shade, or a cloth key."""
+    w, h, d = size
+    box = g.piece(pid, "HEAD", (-w / 2, y, -d / 2), size, pivot=pivot, rotation=rotation, motion=motion)
+    if key:
+        for f in box.faces:
+            f.fill(key)
+        for f in box.sides:
+            f.hline(0, f.w - 1, 0, key[0] + str(min(4, int(key[1]) + 1)))
+    else:
+        cel_box(box, 97, base=0, top_delta=0)
+    return box
+
+
+def braid(g, prefix: str, pivot, rotation=(0, 0, 0), links: int = 6, width: int = 3, seed: int = 0, base: int = 2,
+          y0: float = 0.0, motion: str = "sway"):
+    """A three-strand braid: stacked links that step side to side, each crossed by a shaded diagonal,
+    narrowing over the last links to a small tuft."""
+    y = y0
+    for i in range(links):
+        w = width if i < links - 2 else max(2, width - 1)
+        h = 2
+        shift = .25 if i % 2 else -.25
+        box = g.piece(f"{prefix}_{i}", "HEAD", (-w / 2 + shift, y, -w / 2), (w, h, w), pivot=pivot, rotation=rotation,
+                      motion=motion)
+        cel_box(box, seed + i * 3, base, top_delta=0)
+        for f in box.sides:
+            for x in range(f.w):
+                yy = (x + i) % 2
+                f.set(x, yy, k("H", base + 1 if yy == 0 else base - 1))
+        y += h
+    end = g.piece(f"{prefix}_tuft", "HEAD", (-1, y, -1), (2, 2, 2), pivot=pivot, rotation=rotation, motion=motion)
+    cel_box(end, seed + 77, base, top_delta=0)
+    return y + 2

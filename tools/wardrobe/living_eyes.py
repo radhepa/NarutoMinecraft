@@ -42,8 +42,14 @@ def blush(skin): return blend(skin, (0xEC, 0x68, 0x76), .32)
 def mark(skin): return shade(skin, .62)
 
 
-# Cheek marks: (x from the face centre, y, width, height) per side, mirrored.
-MARKS = {"whiskers": [(3.3, -1.8, 1.3, .22), (3.4, -1.35, 1.3, .22), (3.3, -.9, 1.3, .22)]}
+# Face marks: rectangles (x from the face centre, y, width, height) drawn as planes on the face.
+# A mark with no color is a darker shade of the skin (whiskers); `mirror` repeats each rectangle
+# on the other side of the face. Clans add their own marks in tools/wardrobe/clans/*.json.
+MARKS = {"whiskers": {"rects": [(3.3, -1.8, 1.3, .22), (3.4, -1.35, 1.3, .22), (3.3, -.9, 1.3, .22)], "color": None,
+                      "mirror": True}}
+
+
+def hex_rgb(h): h = h.lstrip("#"); return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
 
 
 class Plane:
@@ -64,12 +70,13 @@ def fit(x, y, left, right, top, bottom, h=1.0):
 
 
 def planes(style, feminine, hair, skin, iris, white, pattern=None, glow=False, brows="fine", masked=False, marks=(),
-           mouth=True, blink=0.0, gaze=(0.0, 0.0)):
+           mouth=True, blink=0.0, gaze=(0.0, 0.0), mark_table=None):
     """Every face plane for one pose, laid out exactly as ResidentModel.layer + animateFace.
 
     Two additions to Village Friends: `brows="bold"` draws a full-pixel brow, wider than the eye
     (a taijutsu specialist's), `marks` adds thin cheek marks (whiskers) and `masked` (headwear that covers the face) leaves only
-    the neck shade. `mouth=False` (a cloth face mask) leaves out the lips.
+    the neck shade. `mouth=False` (a cloth face mask) leaves out the lips. `mark_table` is the full
+    set of marks (MARKS plus every clan's), see wardrobe.load_marks.
     """
     out = []
     if masked:
@@ -109,10 +116,13 @@ def planes(style, feminine, hair, skin, iris, white, pattern=None, glow=False, b
             out.append(Plane("HEAD", side * 2.1, bt + .3, -4.03, 2.6, 1.0, lash(hair)))
         else:
             out.append(Plane("HEAD", side * 2, bt + .275, -4.03, 2, .55, brow(hair)))
+    table = mark_table or MARKS
     for name in marks:
-        for x, y, w, h in MARKS[name]:
-            for side in (-1, 1):
-                out.append(Plane("HEAD", side * x, y, -4.02, w, h, mark(skin)))
+        m = table[name]
+        rgb = hex_rgb(m["color"]) if m.get("color") else mark(skin)
+        for x, y, w, h in m["rects"]:
+            for side in ((-1, 1) if m.get("mirror", True) else (1,)):
+                out.append(Plane("HEAD", side * x, y, -4.02, w, h, rgb))
     if mouth and feminine:
         out.append(Plane("HEAD", 0, -1.45, -4.02, 1, .5, rose_lip(skin)))
     elif mouth:

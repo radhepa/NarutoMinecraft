@@ -119,8 +119,25 @@ def ramp(base: str, dark: float = 1.0, light: float = 1.0) -> list[str]:
     return out
 
 
+def load_clans() -> dict:
+    """Every tools/wardrobe/clans/*.json by id: the clan's mixing pools, outfit templates and the
+    palettes, hair colors, eye colors and face marks it defines. See CLANS.md."""
+    return {c["id"]: c for c in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((TOOL / "clans").glob("*.json")))}
+
+
+def with_clans(src: dict, field: str) -> dict:
+    """A shared table plus the entries every clan file adds to it; an id may only be defined once."""
+    merged = dict(src)
+    for cid, clan in load_clans().items():
+        for key, value in clan.get(field, {}).items():
+            if key in merged:
+                raise ValueError(f"clan {cid} redefines {field} {key}")
+            merged[key] = value
+    return merged
+
+
 def load_palettes() -> dict:
-    src = json.loads((TOOL / "palettes.json").read_text())
+    src = with_clans(json.loads((TOOL / "palettes.json").read_text()), "palettes")
     result = {}
     for pid, p in src.items():
         ramps = {}
@@ -135,7 +152,7 @@ def load_palettes() -> dict:
 
 
 def load_hair_colors() -> dict:
-    src = json.loads((TOOL / "hair_colors.json").read_text())
+    src = with_clans(json.loads((TOOL / "hair_colors.json").read_text()), "hair_colors")
     return {cid: {"name": c["name"], "ramp": c["ramp"] if "ramp" in c else ramp(c["base"], **c.get("tuning", {}))}
             for cid, c in src.items()}
 
@@ -548,8 +565,14 @@ def load_characters() -> list[dict]:
 
 
 def load_eye_colors() -> dict:
-    src = json.loads((TOOL / "eye_colors.json").read_text())
+    src = with_clans(json.loads((TOOL / "eye_colors.json").read_text()), "eye_colors")
     return {cid: {k: c[k] for k in ("name", "ramp", "pattern", "glow") if k in c} for cid, c in src.items()}
+
+
+def load_marks() -> dict:
+    """Face marks: the built-in ones (living_eyes.MARKS) plus every clan's."""
+    import living_eyes
+    return with_clans(living_eyes.MARKS, "marks")
 
 
 def catalog(garments: dict) -> dict:
@@ -557,6 +580,8 @@ def catalog(garments: dict) -> dict:
     for kind in KINDS:
         data[kind] = [g.id for g in garments.values() if g.kind == kind]
     data["characters"] = load_characters()
+    data["marks"] = load_marks()
+    data["clans"] = list(load_clans().values())
     return data
 
 
@@ -577,7 +602,6 @@ def compatible(top: Garment, bottom: Garment) -> bool:
 
 EYE_STYLES = ("starlit", "soft_glint")   # the Living Eyes styles, see living_eyes.py
 BROWS = ("fine", "bold")
-MARKS = ("whiskers",)
 # The career ladder of the living village: every character is dressed for one rank. Signature
 # characters are one-off looks; the rest are role outfits the village mixes onto residents.
 RANKS = ("academy", "genin", "chunin", "jonin", "anbu", "kage")
@@ -586,7 +610,7 @@ CHARACTER_SLOTS = {"face": "faces", "hair": "hair", "headwear": "headwear", "top
 
 def validate_catalog(garments: dict, data: dict) -> list[str]:
     errors = []
-    palettes, hairs, eyes = load_palettes(), load_hair_colors(), load_eye_colors()
+    palettes, hairs, eyes, marks = load_palettes(), load_hair_colors(), load_eye_colors(), load_marks()
     ids = set()
     for c in data["characters"]:
         cid = c.get("id", "?")
@@ -609,7 +633,7 @@ def validate_catalog(garments: dict, data: dict) -> list[str]:
         if not isinstance(c.get("feminine"), bool):
             errors.append(f"character {cid} needs feminine: true or false")
         for m in c.get("marks", []):
-            if m not in MARKS:
+            if m not in marks:
                 errors.append(f"character {cid} names unknown cheek mark {m}")
         if c.get("brows", "fine") not in BROWS:
             errors.append(f"character {cid} brows must be one of {', '.join(BROWS)}")
@@ -623,10 +647,105 @@ def validate_catalog(garments: dict, data: dict) -> list[str]:
         rows = e.get("pattern")
         if rows is not None and (not rows or len(rows) != 2 * len(rows[0]) or any(len(r) != len(rows[0]) or set(r) - set(".01234") for r in rows)):
             errors.append(f"eye color {eid} pattern must be rows of .01234, twice as tall as wide")
+    for mid, m in marks.items():
+        if not m.get("rects") or any(len(r) != 4 for r in m["rects"]):
+            errors.append(f"mark {mid} needs rects of [x, y, width, height]")
+        if m.get("color") is not None and not re.fullmatch(r"#[0-9a-fA-F]{6}", m["color"]):
+            errors.append(f"mark {mid} color must be #rrggbb or null")
+    errors += validate_clans(garments, palettes, hairs, eyes, marks)
     for g in garments.values():
         if g.locked_to and (g.locked_to not in garments or garments[g.locked_to].locked_to != g.id):
             errors.append(f"{g.id} is locked to {g.locked_to}, which must lock back")
     return errors
+
+
+# -- clans ------------------------------------------------------------------------------------
+POOL_KINDS = {"hair": "hair", "headwear": "headwear", "bottoms": "bottoms"}
+
+
+def validate_clans(garments: dict, palettes: dict, hairs: dict, eyes: dict, marks: dict) -> list[str]:
+    errors = []
+    for cid, clan in load_clans().items():
+        pool, where = clan.get("pool", {}), f"clan {cid}"
+        for field, kind in POOL_KINDS.items():
+            for gid in pool.get(field, []):
+                if gid is None and field == "headwear":
+                    continue
+                if gid not in garments or garments[gid].kind != kind:
+                    errors.append(f"{where} pool {field} names unknown {kind} {gid}")
+        for field, table in (("palettes", palettes), ("hair_colors", hairs), ("eye_colors", eyes)):
+            if not pool.get(field):
+                errors.append(f"{where} pool needs {field}")
+            for v in pool.get(field, []):
+                if v not in table:
+                    errors.append(f"{where} pool {field} names unknown {v}")
+        for m in pool.get("marks", []):
+            if m.get("id") not in marks or not 0 < m.get("chance", 0) <= 1:
+                errors.append(f"{where} pool marks need a known id and a chance in (0, 1]: {m}")
+        if any(c not in range(6) for c in pool.get("complexions", [0])):
+            errors.append(f"{where} complexions must be 0-5")
+        if not pool.get("hair"):
+            errors.append(f"{where} pool needs hair")
+        seen = set()
+        for o in clan.get("outfits", []):
+            oid = o.get("id")
+            if oid in seen:
+                errors.append(f"{where} has two outfits {oid}")
+            seen.add(oid)
+            top, bottom = garments.get(o.get("top")), garments.get(o.get("bottom"))
+            if not top or top.kind != "tops" or not bottom or bottom.kind != "bottoms":
+                errors.append(f"{where} outfit {oid} names an unknown top or bottom")
+            elif not compatible(top, bottom):
+                errors.append(f"{where} outfit {oid} pairs incompatible pieces")
+            if o.get("rank", "genin") not in RANKS:
+                errors.append(f"{where} outfit {oid} rank must be one of {', '.join(RANKS)}")
+        if not clan.get("outfits"):
+            errors.append(f"{where} needs outfits")
+    return errors
+
+
+def clan_bottoms(clan: dict) -> list[str]:
+    """Every bottom a clan member may wear: the clan's outfit bottoms plus the pool's shared ones."""
+    seen = []
+    for gid in [o["bottom"] for o in clan["outfits"]] + clan.get("pool", {}).get("bottoms", []):
+        if gid not in seen:
+            seen.append(gid)
+    return seen
+
+
+def clan_resident(clan: dict, garments: dict, seed: int, outfit: int | None = None, keep_bottom: bool | None = None) -> dict:
+    """One clan member, assembled the Village Friends way (OutfitFactory): hair, hair color, eyes and
+    complexion come from the seed alone; an outfit template is picked and its bottom kept half the
+    time, otherwise swapped for any compatible bottom the clan wears. A locked set stays whole.
+    `outfit` forces a template and `keep_bottom` the bottom choice, for the clan line-ups."""
+    import random
+    rng = random.Random(f"{clan['id']}:{seed}")
+    pool = clan["pool"]
+    templates = clan["outfits"]
+    o = templates[outfit] if outfit is not None else None
+    if o is not None:
+        top = garments[o["top"]]
+        gender = top.gender if top.gender != "unisex" else ("male", "female")[seed % 2]
+    else:
+        gender = rng.choice(("male", "female"))
+        o = rng.choice([t for t in templates if garments[t["top"]].fits(gender) and garments[t["bottom"]].fits(gender)]
+                       or templates)
+    hair = rng.choice([h for h in pool["hair"] if garments[h].fits(gender)] or pool["hair"])
+    top, bottom = garments[o["top"]], garments[o["bottom"]]
+    keep = keep_bottom if keep_bottom is not None else rng.random() < .5
+    if not keep and not top.locked_to:
+        options = [b for b in clan_bottoms(clan) if garments[b].fits(gender) and compatible(top, garments[b])]
+        bottom = garments[rng.choice(options)] if options else bottom
+    spec = {"id": f"{clan['id']}_{seed}", "name": o.get("name", clan["name"]), "face": "f01_shinobi", "hair": hair,
+            "headwear": rng.choice(pool.get("headwear", [None])), "top": top.id, "bottom": bottom.id,
+            "palette": rng.choice(o.get("palettes", pool["palettes"])), "hair_color": rng.choice(pool["hair_colors"]),
+            "eye_color": rng.choice(pool["eye_colors"]), "eye_style": rng.choice(EYE_STYLES),
+            "feminine": gender == "female", "complexion": rng.choice(pool.get("complexions", [0, 1, 2])),
+            "rank": o.get("rank", "genin"), "scale": 14, "clan": clan["id"]}
+    marks = [m["id"] for m in pool.get("marks", []) if rng.random() < m["chance"]]
+    if marks:
+        spec["marks"] = marks
+    return spec
 
 
 def outputs(garments: dict, full: bool) -> dict[Path, bytes]:
