@@ -435,9 +435,9 @@ columns, squad or solo, requests by name, travel through the gates, reporting ba
 partial success and abandonment, grades S to C), the economy, recurring clients and chains, squad
 roles, and the catalogue (generated into [docs/missions/CATALOGUE.md](docs/missions/CATALOGUE.md)):
 
-- **101 templates:** 41 D-ranks of village life and 24 C-ranks with real fights in the beta; 14 B,
+- **103 templates:** 41 D-ranks of village life and 24 C-ranks with real fights in the beta; 16 B,
   10 A and 4 S templates and 6 ANBU operations laid out for the later arcs. Each has two or three
-  **twists**, rolled per mission, that switch the graph onto their own branch (221 in all).
+  **twists**, rolled per mission, that switch the graph onto their own branch (225 in all).
 - Templates also carry `twists`, `outcomes` (endings a `choose` step can lead to), bonus objectives
   for the grade, `party` (squad, solo or either), `contested` (the rival squad races you), `chain`
   (a recurring client) and the anchors and regions they need. `tools/missions/missions.py` compiles

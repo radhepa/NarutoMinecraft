@@ -46,9 +46,9 @@ python tools/missions/missions.py --check   # validate; fails if the compiled JS
 
 | | D | C | B | A | S | ANBU ops | All |
 |---|---|---|---|---|---|---|---|
-| Templates | 41 | 26 | 14 | 10 | 4 | 6 (1 B, 3 A, 2 S) | **101** |
+| Templates | 41 | 26 | 16 | 10 | 4 | 6 (1 B, 3 A, 2 S) | **103** |
 | In the beta | 41 | 24 | — | — | — | — | 65 |
-| Twists | 95 | 56 | 29 | 21 | 8 | 12 | 221 |
+| Twists | 95 | 56 | 33 | 21 | 8 | 12 | 225 |
 | Who takes them | Genin, Chunin | Genin (after Ch 11), Chunin, Jonin | Chunin and up | Jonin and up | Jonin at level 42+ | ANBU branch | |
 | Pay (ryo) | 60–150 | 300–600 | 800–1,500 | 2,000–4,000 | 6,000–12,000 | by rank | |
 | Length | 8–12 min | 20–35 min, often over a camp night | 35–45 min | 45–55 min | 55–70 min | | |
@@ -269,6 +269,7 @@ ROADMAP §5's board-mission example, grown into the full shape:
 | `places` | Derived by the compiler: every anchor tag and region the template touches |
 | `unlock`, `season`, `event` | Extra gates, in Core's condition language |
 | `contested`, `chain`, `classic` | A job the rival squad can race for; a recurring client's chain; in the Classic pool |
+| `trail_drop` | Later ranks: a chance and a pool of journal lines (the story session's) the mission can add to the journal on turn-in |
 
 **The checker** (`missions.py --check`) refuses: unknown objectives, conditions or actions; steps that
 are unreachable or never end; a branch on an undeclared twist, or a twist with no branch that is not a
@@ -330,8 +331,8 @@ Targets are roles (`role:target.warlord`, `role:target.minister`), bound when th
 
 | Rank | Templates |
 |---|---|
-| **B** (14) | Infiltrating a warlord's hill fort for a ledger; recovering a sealed scroll from two missing-nin; defending a border village against a mercenary band; ending a bandit warlord's hold on a valley (capture or eliminate); escorting a daimyo's envoy to court; a hostage rescue at a river mill; hunting a missing-nin pair; spoiling a foreign weapons depot; finding the spy in a post town; guarding a bridge-builder; a fever quarantine in a hill village; carrying a treaty draft to an allied village; bringing a deserter home alive; the kiln family's stolen glaze |
-| **A** (10) | Holding a river crossing against an enemy platoon; removing a war minister before an invasion; extracting a Leaf agent whose cover is blown; holding an outpost through the night; a forbidden scroll in a ruined fortress; the daimyo's pilgrimage; hunting an enemy cell through a far region; breaking a siege; a foreign spy ring's listening post in the market; the kiln family's eldest at court |
+| **B** (16) | Walking the east road to the border to report anything unusual; searching an abandoned carpenter's shop in a far region; infiltrating a warlord's hill fort for a ledger; recovering a sealed scroll from two missing-nin; defending a border village against a mercenary band; ending a bandit warlord's hold on a valley (capture or eliminate); escorting a daimyo's envoy to court; a hostage rescue at a river mill; hunting a missing-nin pair; spoiling a foreign weapons depot; finding the spy in a post town; guarding a bridge-builder; a fever quarantine in a hill village; carrying a treaty draft to an allied village; bringing a deserter home alive; the kiln family's stolen glaze |
+| **A** (10) | Holding a river crossing against an enemy platoon; removing a war minister before an invasion; extracting a Leaf agent whose cover is blown; holding an outpost through the night; a forbidden scroll in a ruined fortress; the daimyo's pilgrimage; hunting an enemy cell through a far region; breaking a siege; a foreign spy ring's listening post in the market; the kiln family's eldest at court; tracking a band of rogue ninja in a far region (the region is a slot) |
 | **S** (4) | A legendary missing-nin; a coup against the daimyo; a stolen forbidden technique in a foreign stronghold; guarding the five lands' peace summit |
 | **ANBU** (6) | Three nights watching a house from the rooftops (B); a silent extraction from an enemy camp, proof against a court official who sells border passes (keep it as leverage or expose it), hunting a missing-nin who carries the Leaf's secrets (A); five days under a false name in a foreign town, guarding the Leaf from the rooftops on festival night (S) |
 
@@ -347,7 +348,9 @@ Targets are roles (`role:target.warlord`, `role:target.minister`), bound when th
   decline. At most one at a time; about a quarter of days when someone qualifies.
 - **The merchant** (`role:merchant`, ROADMAP §8's Classic cast: a travelling merchant who keeps hiring the
   squad). After the second story escort, once a week the desk may post an escort or caravan job for him
-  by name (`chain.merchant`). Anything this chain means for the story is in the story bible.
+  by name (`chain.merchant`). On those runs, after Ch 14, one neutral step at camp lets the merchant talk
+  about the roads; it plays the same in every save and only counts the talks
+  (`story.merchant.camp_talks`). Anything this chain means for the story is in the story bible.
 - **The kiln family** (`chain.kiln`), a family of potters you work for from Genin to Jonin: the
   grandmother's night firing (D), the parent's pottery to the border market (C), the family's stolen glaze
   (B), and the eldest named court potter, guarded through a hostile court (A). Each stage needs the last

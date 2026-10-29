@@ -1,0 +1,172 @@
+{
+ "format": 1,
+ "id": "mission.b.false_floors",
+ "kind": "mission",
+ "rank": "b",
+ "category": "investigation",
+ "status": "later",
+ "title": "dlg:mission.b.false_floors.title",
+ "brief": "dlg:mission.b.false_floors.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.false_floors.brief",
+  "accept": "dlg:mission.b.false_floors.accept",
+  "decline": "dlg:mission.b.false_floors.decline",
+  "progress": "dlg:mission.b.false_floors.progress",
+  "success": "dlg:mission.b.false_floors.success",
+  "fail": "dlg:mission.b.false_floors.fail",
+  "report": "dlg:mission.b.false_floors.report"
+ },
+ "minutes": 40,
+ "party": "squad",
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "jonin"
+   }
+  },
+  "shop": {
+   "pick": "anchor",
+   "tag": "far.workshop"
+  },
+  "cellar": {
+   "pick": "anchor",
+   "tag": "far.workshop_cellar"
+  },
+  "squatters": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.smugglers",
+    "combat:group.rogue_pair"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "search"
+  },
+  "search": {
+   "objective": {
+    "type": "inspect",
+    "target": "workshop",
+    "at": "slot:shop",
+    "count": 5
+   },
+   "next": "cellar"
+  },
+  "cellar": {
+   "objective": {
+    "type": "inspect",
+    "target": "floorboards",
+    "at": "slot:cellar",
+    "count": 3
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "occupied"
+     },
+     "next": "fight"
+    }
+   ],
+   "next": "report"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:squatters",
+    "at": "slot:cellar"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:squatters",
+      "slot:cellar"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "occupied",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.b.false_floors.twist.occupied"
+  },
+  {
+   "id": "cold_trail",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.b.false_floors.twist.cold_trail"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "all_found"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.smugglers",
+  "combat:group.rogue_pair"
+ ],
+ "places": {
+  "anchors": [
+   "far.workshop",
+   "far.workshop_cellar",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:far_lands"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.5
+ },
+ "tags": [
+  "travel",
+  "investigation",
+  "stealth"
+ ],
+ "contested": false,
+ "trail_drop": {
+  "chance": 0.5,
+  "pool": "journal:trail.workshop"
+ },
+ "classic": true,
+ "banter": "dlg:mission.banter.investigation",
+ "_premise": "An empty workshop in the east: search an abandoned carpenter's shop in a far region.",
+ "_twists": {
+  "occupied": "Someone is still using the cellar.",
+  "cold_trail": "Whoever worked here left in a hurry, weeks ago."
+ }
+}

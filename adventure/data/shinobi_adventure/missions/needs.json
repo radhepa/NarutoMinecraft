@@ -55,6 +55,7 @@
    "mission.c.heirloom"
   ],
   "border.post": [
+   "mission.b.road_watch",
    "mission.c.border_patrol",
    "mission.c.courier_relay"
   ],
@@ -131,6 +132,12 @@
   "far.trail": [
    "mission.a.cell_hunt",
    "mission.anbu.hunter_nin"
+  ],
+  "far.workshop": [
+   "mission.b.false_floors"
+  ],
+  "far.workshop_cellar": [
+   "mission.b.false_floors"
   ],
   "farm_barn": [
    "mission.d.harvest"
@@ -219,6 +226,7 @@
    "mission.b.bridge_builders",
    "mission.b.capture_rogue",
    "mission.b.envoy_escort",
+   "mission.b.false_floors",
    "mission.b.fortress_infiltration",
    "mission.b.hostage_rescue",
    "mission.b.kiln_glaze",
@@ -395,10 +403,13 @@
    "mission.c.escort_traveller"
   ],
   "road.east_bend": [
+   "mission.b.road_watch",
+   "mission.c.caravan_guard",
    "mission.c.escort_merchant",
    "mission.c.lead_genin"
   ],
   "road.east_waystation": [
+   "mission.b.road_watch",
    "mission.c.caravan_guard",
    "mission.c.escort_merchant",
    "mission.c.haunted_inn",
@@ -501,6 +512,7 @@
   "region:border_village": [
    "mission.a.outpost_defence",
    "mission.b.kiln_glaze",
+   "mission.b.road_watch",
    "mission.b.village_defence",
    "mission.c.border_delivery",
    "mission.c.border_patrol",
@@ -521,9 +533,11 @@
    "mission.a.siege_relief"
   ],
   "region:coast_town": [
+   "mission.a.cell_hunt",
    "mission.b.bridge_builders"
   ],
   "region:east_road": [
+   "mission.b.road_watch",
    "mission.c.caravan_guard",
    "mission.c.escort_merchant",
    "mission.c.haunted_inn",
@@ -534,6 +548,7 @@
    "mission.a.cell_hunt",
    "mission.anbu.hunter_nin",
    "mission.anbu.silent_extraction",
+   "mission.b.false_floors",
    "mission.s.rogue_legend"
   ],
   "region:foreign_capital": [
@@ -558,9 +573,11 @@
    "mission.b.quarantine"
   ],
   "region:mountain_pass": [
+   "mission.a.cell_hunt",
    "mission.c.mountain_pass"
   ],
   "region:northern_forest": [
+   "mission.a.cell_hunt",
    "mission.b.capture_rogue",
    "mission.b.scroll_recovery"
   ],
@@ -693,13 +710,16 @@
    "mission.c.festival_guard"
   ],
   "combat:group.road_ambush": [
+   "mission.b.road_watch",
    "mission.c.caravan_guard",
    "mission.c.escort_merchant",
    "mission.c.haunted_inn",
    "mission.c.outpost_supply"
   ],
   "combat:group.rogue_pair": [
+   "mission.b.false_floors",
    "mission.b.missing_nin_hunt",
+   "mission.b.road_watch",
    "mission.b.scroll_recovery"
   ],
   "combat:group.ronin_band": [
@@ -710,6 +730,8 @@
    "mission.c.courier_relay"
   ],
   "combat:group.smugglers": [
+   "mission.b.false_floors",
+   "mission.b.road_watch",
    "mission.c.heirloom",
    "mission.c.smugglers_ford",
    "mission.c.warehouse_thefts"

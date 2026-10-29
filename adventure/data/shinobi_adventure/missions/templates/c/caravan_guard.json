@@ -88,7 +88,38 @@
     {
      "spawn_group": [
       "slot:raiders",
-      "road.east_bend"
+      "place:road.east_bend"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "all": [
+       {
+        "client_is": "role:merchant"
+       },
+       {
+        "flag": "story.ch14.done"
+       }
+      ]
+     },
+     "next": "merchant_talk"
+    }
+   ],
+   "next": "camp"
+  },
+  "merchant_talk": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client",
+    "dialogue": "dlg:mission.chain.merchant.camp_talk"
+   },
+   "on_done": [
+    {
+     "set_flag": [
+      "story.merchant.camp_talks",
+      "+1"
      ]
     }
    ],
@@ -204,6 +235,7 @@
  "places": {
   "anchors": [
    "road.campsite",
+   "road.east_bend",
    "road.east_waystation"
   ],
   "regions": [

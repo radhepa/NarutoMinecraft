@@ -160,6 +160,10 @@
   "sabotage"
  ],
  "contested": false,
+ "trail_drop": {
+  "chance": 0.25,
+  "pool": "journal:trail.roads"
+ },
  "classic": true,
  "banter": "dlg:mission.banter.sabotage",
  "_premise": "A foreign band is stockpiling weapons at a border depot; spoil the stockpile without starting a war.",

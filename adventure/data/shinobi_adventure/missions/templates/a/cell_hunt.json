@@ -29,6 +29,15 @@
     "group": "council"
    }
   },
+  "far": {
+   "pick": "region",
+   "from": [
+    "region:far_lands",
+    "region:northern_forest",
+    "region:mountain_pass",
+    "region:coast_town"
+   ]
+  },
   "trail": {
    "pick": "anchor",
    "tag": "far.trail"
@@ -127,7 +136,10 @@
    "gate.travel_desk"
   ],
   "regions": [
-   "region:far_lands"
+   "region:coast_town",
+   "region:far_lands",
+   "region:mountain_pass",
+   "region:northern_forest"
   ]
  },
  "pay": {
@@ -144,7 +156,7 @@
  "contested": false,
  "classic": true,
  "banter": "dlg:mission.banter.hunt",
- "_premise": "Track an enemy cell through a far region and bring it down.",
+ "_premise": "Track a band of rogue ninja in a far region.",
  "_twists": {
   "trap_lair": "The lair is bait.",
   "prisoners": "They are holding travellers."

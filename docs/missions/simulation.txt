@@ -1,5 +1,5 @@
 Mission Desk simulation, base seed 20261029, 24 seeds per row
-Catalogue: 101 templates (D 41 (41 beta), C 26 (24 beta), B 15, A 13, S 6)
+Catalogue: 103 templates (D 41 (41 beta), C 26 (24 beta), B 17, A 13, S 6)
 
 Beta 2: Genin life, 24 in-game days (board from Ch 9, C-ranks from Ch 11)
 | Mode | Player | D | C | B+ | Distinct | Repeats | Min gap | Twists | Clients | Grades S/A/B/C/part/fail | Req | Chain | Contest won | Ryo/day | Living/day | Saved | Ryo/D | Ryo/C | Board XP | Min/mission | Others took |
@@ -14,12 +14,12 @@ Beta 2: Genin life, 24 in-game days (board from Ch 9, C-ranks from Ch 11)
 The long run: 200 days (Chunin from day 60, Jonin from day 140, later templates allowed)
 | Mode | Player | D | C | B+ | Distinct | Repeats | Min gap | Twists | Clients | Grades S/A/B/C/part/fail | Req | Chain | Contest won | Ryo/day | Living/day | Saved | Ryo/D | Ryo/C | Board XP | Min/mission | Others took |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| classic | casual | 53.4 | 28.5 | 6.6 | 46.0 | 42.5 | 8 d | 49% | 43.2 | 11/21/41/17/5/5% | 28.7 | 6.0 | 1.3/3.8 | 133 | 47 | 17157 | 94 | 442 | 21k | 17.6 | 78.0 |
-| classic | steady | 47.4 | 47.7 | 48.0 | 60.2 | 82.9 | 8 d | 50% | 64.2 | 28/32/26/4/3/6% | 40.4 | 8.0 | 1.3/2.4 | 541 | 47 | 98762 | 106 | 476 | 76k | 26.5 | 75.9 |
-| classic | keen | 126.3 | 62.5 | 51.1 | 78.2 | 161.8 | 8 d | 48% | 108.4 | 59/24/10/1/2/4% | 44.9 | 11.8 | 5.0/5.9 | 689 | 47 | 128485 | 110 | 517 | 100k | 21.2 | 70.5 |
-| varied | casual | 54.5 | 27.7 | 5.5 | 43.3 | 44.5 | 8 d | 61% | 41.5 | 12/22/40/18/4/4% | 28.5 | 6.6 | 1.8/3.8 | 126 | 47 | 15817 | 95 | 453 | 20k | 17.1 | 78.9 |
-| varied | steady | 48.0 | 48.3 | 47.2 | 60.0 | 83.6 | 8 d | 63% | 64.8 | 27/32/28/4/3/6% | 42.3 | 6.8 | 1.4/2.5 | 533 | 47 | 97278 | 106 | 482 | 75k | 26.3 | 75.2 |
-| varied | keen | 125.7 | 63.3 | 50.7 | 77.9 | 161.8 | 8 d | 63% | 108.9 | 58/25/10/1/2/4% | 44.5 | 11.0 | 4.5/5.3 | 689 | 47 | 128516 | 110 | 524 | 101k | 21.2 | 69.7 |
+| classic | casual | 53.8 | 27.9 | 6.5 | 44.9 | 43.3 | 8 d | 49% | 42.3 | 12/22/40/17/5/5% | 28.9 | 6.4 | 1.5/4.0 | 134 | 47 | 17509 | 94 | 446 | 21k | 17.5 | 78.3 |
+| classic | steady | 47.0 | 50.0 | 47.8 | 61.9 | 83.0 | 8 d | 50% | 65.7 | 29/32/26/4/3/6% | 40.6 | 7.9 | 1.5/2.7 | 541 | 47 | 98929 | 106 | 476 | 76k | 26.5 | 74.8 |
+| classic | keen | 126.2 | 63.3 | 50.7 | 80.0 | 160.2 | 8 d | 48% | 107.3 | 60/24/9/1/2/3% | 44.3 | 12.0 | 4.3/5.4 | 694 | 47 | 129486 | 109 | 524 | 101k | 21.2 | 70.2 |
+| varied | casual | 54.3 | 27.1 | 7.1 | 44.5 | 43.9 | 8 d | 61% | 42.3 | 12/23/40/16/4/4% | 28.5 | 6.6 | 1.8/3.6 | 134 | 47 | 17450 | 95 | 462 | 22k | 17.4 | 78.5 |
+| varied | steady | 48.8 | 49.3 | 47.3 | 62.1 | 83.3 | 8 d | 65% | 66.5 | 27/32/28/4/3/6% | 42.7 | 6.8 | 1.4/2.5 | 538 | 47 | 98236 | 106 | 482 | 76k | 26.2 | 75.0 |
+| varied | keen | 126.1 | 63.2 | 50.9 | 79.5 | 160.6 | 8 d | 63% | 109.5 | 58/25/10/1/2/4% | 44.5 | 10.5 | 4.7/5.6 | 693 | 47 | 129198 | 110 | 520 | 101k | 21.2 | 70.4 |
 
 First Genin board, Classic: d.lost_pet+two_pets 85r; d.delivery_run 80r; d.bathhouse 95r; d.timber_haul+injured_apprentice 100r; d.drain_clearing+lost_ring 95r; d.messenger 90r; 
 First Genin board, Varied:  d.fishing_haul+big_one 100r; d.timber_haul 100r; d.shop_inventory 95r; d.laundry 85r; d.dog_walking+lost_collar 90r; d.messenger 90r; 

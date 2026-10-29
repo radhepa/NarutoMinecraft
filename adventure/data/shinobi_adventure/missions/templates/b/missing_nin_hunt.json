@@ -152,6 +152,10 @@
   "fight"
  ],
  "contested": false,
+ "trail_drop": {
+  "chance": 0.25,
+  "pool": "journal:trail.roads"
+ },
  "classic": true,
  "banter": "dlg:mission.banter.hunt",
  "_premise": "Hunt down a pair of missing-nin seen on the Fire Country's roads.",

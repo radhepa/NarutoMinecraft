@@ -220,6 +220,10 @@
   "travel"
  ],
  "contested": false,
+ "trail_drop": {
+  "chance": 0.25,
+  "pool": "journal:trail.roads"
+ },
  "classic": true,
  "banter": "dlg:mission.banter.infiltration",
  "_premise": "Slip into a bandit warlord's hill fort and bring out the ledger of who pays him.",
