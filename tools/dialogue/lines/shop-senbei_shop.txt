@@ -1,0 +1,49 @@
+# The senbei shop in the Uchiha quarter: rice crackers, grilled and glazed while you wait.
+#! fn: commerce
+
+## shop.senbei_shop.greet  shop=senbei_shop  fn=commerce
+Welcome! Hear that crackle? Fresh senbei off the grill.
+Come in, {player}. Soy, sugar or seaweed today?
+Hello! The whole quarter smells of toasted rice, and it's my fault.
+Welcome. Take a sample from the tray, it's broken but it's honest.
+
+## shop.senbei_shop.greet  shop=senbei_shop  clan=uchiha  fn=commerce,worldbuild
+Welcome. The police come here at the end of every shift. A good cracker steadies anyone.
+
+## shop.senbei_shop.browse  shop=senbei_shop  fn=commerce
+Soy-glazed, sugar-dusted, wrapped in seaweed. And the spicy ones, if you're brave.
+Big round ones for the table, little ones by the bag for your pouch.
+I grill them over charcoal one at a time and brush the glaze on as they puff.
+Broken pieces by the scoop, half price. Same taste, uglier.
+
+## shop.senbei_shop.buy  shop=senbei_shop  kind=cycle  fn=commerce
+{item}. {pay}. Eat them while they still crackle.
+Here you go. Keep the bag closed, or they'll go soft by tonight.
+That's {pay}. Thank you! Mind the crumbs.
+One {item}, hot off the grill. Blow on it first.
+{pay}. A good cracker for a good day.
+
+## shop.senbei_shop.cant_afford  shop=senbei_shop  kind=cycle  fn=commerce
+Short? The broken pieces are cheaper. Here, a scoop.
+Not quite enough for the big bag. A small one, then?
+
+## shop.senbei_shop.sold_out  shop=senbei_shop  kind=cycle  fn=commerce
+Out of {item}! The police shift change came through.
+No spicy ones left. Brave customers today.
+
+## shop.senbei_shop.haggle  shop=senbei_shop  fn=commerce,reveal_character
+A ryo a cracker, and it's been a ryo a cracker since my grandmother. I'll not break it.
+Buy a bag and I'll toss in a broken one. That's my bargain.
+
+## shop.senbei_shop.closing  shop=senbei_shop  time=evening|night  fn=commerce
+Last crackers on the grill! The charcoal's nearly gone.
+Closing up. Take a bag for tomorrow's breakfast.
+
+## shop.senbei_shop.recommend  shop=senbei_shop  fn=commerce,teach
+A small bag in your pouch for a long watch. They don't spoil and they keep you awake.
+The {item}. Soy with a little honey. My own idea.
+Try the seaweed ones with green tea. You'll never go back.
+
+## shop.senbei_shop.regular  shop=senbei_shop  level=3..10  fn=commerce,deepen_bond
+Here's my regular! I saved you the one that puffed up perfectly round.
+You walk all the way to the quarter for my crackers? I'm flattered. Have an extra.
