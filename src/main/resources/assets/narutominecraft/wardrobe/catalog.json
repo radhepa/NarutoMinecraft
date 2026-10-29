@@ -63,7 +63,22 @@
     "h06_low_ponytail",
     "h07_bowl_cut",
     "h08_short_crop",
-    "h09_high_ponytail"
+    "h09_high_ponytail",
+    "h1101_scarecrow_spikes",
+    "h1102_white_fang_ponytail",
+    "h1103_young_scarecrow",
+    "h1104_sixth_hokage",
+    "h1105_anbu_shag",
+    "h1106_windswept_bob",
+    "h1107_hound_tail",
+    "h1108_silver_shag",
+    "h1109_crescent_topknot",
+    "h1110_fang_ridge",
+    "h1111_long_white_fang",
+    "h1112_twin_fangs",
+    "h1113_cropped_spikes",
+    "h1114_sidelong_lock",
+    "h1115_braided_fang"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -74,7 +89,11 @@
     "w06_anbu_hawk_mask",
     "w07_root_mask",
     "w08_masked_protector",
-    "w09_bandana_protector"
+    "w09_bandana_protector",
+    "w1101_scarecrow_mask",
+    "w1102_hatake_cloth_mask",
+    "w1103_slanted_protector",
+    "w1104_anbu_hound_mask"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -97,7 +116,17 @@
     "t18_sentinel_vest",
     "t19_field_vest",
     "t20_kunoichi_jonin",
-    "t21_commander_coat"
+    "t21_commander_coat",
+    "t1101_scarecrow_vest",
+    "t1102_white_fang_vest",
+    "t1103_hound_anbu",
+    "t1104_prodigy_shirt",
+    "t1105_sixth_haori",
+    "t1106_retired_zip_jacket",
+    "t1107_ninken_handler",
+    "t1108_scarecrow_kunoichi",
+    "t1109_training_wrap",
+    "t1110_hatake_clan_coat"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -107,7 +136,11 @@
     "b05_green_leggings",
     "b06_anbu_greaves",
     "b07_cargo_shorts",
-    "b08_mesh_leggings"
+    "b08_mesh_leggings",
+    "b1101_scarecrow_trousers",
+    "b1102_prodigy_shorts",
+    "b1103_hound_wrap_skirt",
+    "b1104_night_trousers"
   ],
   "characters": [
     {
@@ -523,7 +556,335 @@
       ],
       "color": null,
       "mirror": true
+    },
+    "hatake_scar": {
+      "rects": [
+        [
+          2.0,
+          -5.1,
+          0.3,
+          2.3
+        ],
+        [
+          2.0,
+          -1.35,
+          0.3,
+          1.3
+        ]
+      ],
+      "color": "#9c5e57",
+      "mirror": false
     }
   },
-  "clans": []
+  "clans": [
+    {
+      "id": "hatake",
+      "name": "Hatake",
+      "tagline": "Silver hair that defies gravity, cloth masks and slanted protectors, the White Fang's tanto",
+      "palettes": {
+        "HATAKE_JONIN": {
+          "name": "Hatake Jonin",
+          "P": "#5f6e3c",
+          "S": "#e8e6df",
+          "A": "#b8372d",
+          "L": "#6b5a45",
+          "M": "#aeb6bc",
+          "K": "#1b1e27",
+          "D": "#283552"
+        },
+        "HATAKE_WHITE_FANG": {
+          "name": "White Fang",
+          "P": "#56603f",
+          "S": "#f1efe8",
+          "A": "#b02a2a",
+          "L": "#5e4e3e",
+          "M": "#b4bcc2",
+          "K": "#181a20",
+          "D": "#2e3647"
+        },
+        "HATAKE_SLATE": {
+          "name": "Hatake Slate",
+          "P": "#55606d",
+          "S": "#ebeae5",
+          "A": "#a8323a",
+          "L": "#4b4038",
+          "M": "#b4bcc2",
+          "K": "#16181d",
+          "D": "#27304a"
+        },
+        "HATAKE_NAVY": {
+          "name": "Hatake Navy",
+          "P": "#2c3652",
+          "S": "#e9e8e2",
+          "A": "#8a95a8",
+          "L": "#4b4038",
+          "M": "#aab3b9",
+          "K": "#14161d",
+          "D": "#3a445e"
+        },
+        "HATAKE_GREY": {
+          "name": "Hatake Grey",
+          "P": "#868b93",
+          "S": "#f0efe9",
+          "A": "#2f4a7a",
+          "L": "#4a4239",
+          "M": "#b8c0c6",
+          "K": "#1a1c22",
+          "D": "#2a3348"
+        },
+        "HATAKE_ANBU": {
+          "name": "Hatake ANBU",
+          "P": "#c8ccc8",
+          "S": "#f0efea",
+          "A": "#b5232b",
+          "L": "#3f3a36",
+          "M": "#b8c0c6",
+          "K": "#14161b",
+          "D": "#22262e"
+        }
+      },
+      "hair_colors": {
+        "HATAKE_SILVER": {
+          "name": "Hatake Silver",
+          "ramp": [
+            "#565b68",
+            "#80858f",
+            "#aeb2b9",
+            "#d3d6da",
+            "#eef0f1"
+          ]
+        },
+        "HATAKE_WHITE_FANG": {
+          "name": "White Fang",
+          "ramp": [
+            "#6c6f78",
+            "#999ca3",
+            "#c7c9cc",
+            "#e4e5e4",
+            "#fbfbf8"
+          ]
+        },
+        "HATAKE_ASH": {
+          "name": "Hatake Ash",
+          "ramp": [
+            "#45484f",
+            "#686c74",
+            "#8f939a",
+            "#b7babe",
+            "#dadcdd"
+          ]
+        }
+      },
+      "eye_colors": {
+        "HATAKE_GREY": {
+          "name": "Hatake Grey",
+          "ramp": [
+            "#0e0f12",
+            "#2a2d33",
+            "#454a52",
+            "#7b828c",
+            "#f1efe9"
+          ]
+        }
+      },
+      "marks": {
+        "hatake_scar": {
+          "rects": [
+            [
+              2.0,
+              -5.1,
+              0.3,
+              2.3
+            ],
+            [
+              2.0,
+              -1.35,
+              0.3,
+              1.3
+            ]
+          ],
+          "color": "#9c5e57",
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h1101_scarecrow_spikes",
+          "h1102_white_fang_ponytail",
+          "h1103_young_scarecrow",
+          "h1104_sixth_hokage",
+          "h1105_anbu_shag",
+          "h1106_windswept_bob",
+          "h1107_hound_tail",
+          "h1108_silver_shag",
+          "h1109_crescent_topknot",
+          "h1110_fang_ridge",
+          "h1111_long_white_fang",
+          "h1112_twin_fangs",
+          "h1113_cropped_spikes",
+          "h1114_sidelong_lock",
+          "h1115_braided_fang"
+        ],
+        "hair_colors": [
+          "HATAKE_SILVER",
+          "HATAKE_SILVER",
+          "HATAKE_SILVER",
+          "HATAKE_WHITE_FANG",
+          "HATAKE_WHITE_FANG",
+          "HATAKE_ASH",
+          "SILVER"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "DARK",
+          "HATAKE_GREY"
+        ],
+        "palettes": [
+          "HATAKE_JONIN",
+          "HATAKE_SLATE",
+          "HATAKE_NAVY",
+          "HATAKE_GREY"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          "w1101_scarecrow_mask",
+          "w1101_scarecrow_mask",
+          "w1102_hatake_cloth_mask",
+          "w1102_hatake_cloth_mask",
+          "w1103_slanted_protector",
+          "w02_forehead_protector",
+          "w1104_anbu_hound_mask"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers",
+          "b06_anbu_greaves"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "hatake_scar",
+            "chance": 0.12
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "scarecrow_jonin",
+          "name": "Scarecrow Jonin",
+          "top": "t1101_scarecrow_vest",
+          "bottom": "b1101_scarecrow_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "HATAKE_JONIN"
+          ]
+        },
+        {
+          "id": "white_fang",
+          "name": "White Fang",
+          "top": "t1102_white_fang_vest",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "HATAKE_WHITE_FANG"
+          ]
+        },
+        {
+          "id": "hound_anbu",
+          "name": "Hound ANBU",
+          "top": "t1103_hound_anbu",
+          "bottom": "b06_anbu_greaves",
+          "rank": "anbu",
+          "palettes": [
+            "HATAKE_ANBU"
+          ]
+        },
+        {
+          "id": "young_prodigy",
+          "name": "Young Prodigy",
+          "top": "t1104_prodigy_shirt",
+          "bottom": "b1102_prodigy_shorts",
+          "rank": "genin",
+          "palettes": [
+            "HATAKE_NAVY",
+            "HATAKE_SLATE"
+          ]
+        },
+        {
+          "id": "sixth_hokage",
+          "name": "Sixth Hokage",
+          "top": "t1105_sixth_haori",
+          "bottom": "b1101_scarecrow_trousers",
+          "rank": "kage",
+          "palettes": [
+            "HATAKE_JONIN"
+          ]
+        },
+        {
+          "id": "retired",
+          "name": "Retired Hatake",
+          "top": "t1106_retired_zip_jacket",
+          "bottom": "b1104_night_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "HATAKE_GREY",
+            "HATAKE_SLATE"
+          ]
+        },
+        {
+          "id": "ninken_handler",
+          "name": "Ninken Handler",
+          "top": "t1107_ninken_handler",
+          "bottom": "b1101_scarecrow_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "HATAKE_SLATE",
+            "HATAKE_GREY"
+          ]
+        },
+        {
+          "id": "scarecrow_kunoichi",
+          "name": "Scarecrow Kunoichi",
+          "top": "t1108_scarecrow_kunoichi",
+          "bottom": "b1103_hound_wrap_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "HATAKE_SLATE",
+            "HATAKE_NAVY",
+            "HATAKE_GREY"
+          ]
+        },
+        {
+          "id": "training_wrap",
+          "name": "Training Wrap",
+          "top": "t1109_training_wrap",
+          "bottom": "b1102_prodigy_shorts",
+          "rank": "academy",
+          "palettes": [
+            "HATAKE_NAVY",
+            "HATAKE_SLATE"
+          ]
+        },
+        {
+          "id": "clan_coat",
+          "name": "Hatake Clan Coat",
+          "top": "t1110_hatake_clan_coat",
+          "bottom": "b1104_night_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "HATAKE_SLATE",
+            "HATAKE_NAVY"
+          ]
+        }
+      ]
+    }
+  ]
 }

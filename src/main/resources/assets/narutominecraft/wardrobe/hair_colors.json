@@ -150,6 +150,36 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "HATAKE_SILVER": {
+      "name": "Hatake Silver",
+      "ramp": [
+        "#565b68",
+        "#80858f",
+        "#aeb2b9",
+        "#d3d6da",
+        "#eef0f1"
+      ]
+    },
+    "HATAKE_WHITE_FANG": {
+      "name": "White Fang",
+      "ramp": [
+        "#6c6f78",
+        "#999ca3",
+        "#c7c9cc",
+        "#e4e5e4",
+        "#fbfbf8"
+      ]
+    },
+    "HATAKE_ASH": {
+      "name": "Hatake Ash",
+      "ramp": [
+        "#45484f",
+        "#686c74",
+        "#8f939a",
+        "#b7babe",
+        "#dadcdd"
+      ]
     }
   }
 }
