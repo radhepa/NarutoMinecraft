@@ -1,0 +1,342 @@
+{
+  "id": "t210_mito_ceremonial_kimono",
+  "kind": "top",
+  "name": "Mito Ceremonial Kimono",
+  "gender": "unisex",
+  "texture": "tops/t210_mito_ceremonial_kimono.png",
+  "extrasHeight": 64,
+  "tags": [
+    "ceremonial",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_wide_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        1.0,
+        -3
+      ],
+      "size": [
+        6,
+        8,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "right_tamoto",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        9.0,
+        0.5
+      ],
+      "size": [
+        6,
+        5,
+        2
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "inflate": 0.05,
+      "motion": "sway"
+    },
+    {
+      "id": "left_wide_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        1.0,
+        -3
+      ],
+      "size": [
+        6,
+        8,
+        6
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_tamoto",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        9.0,
+        0.5
+      ],
+      "size": [
+        6,
+        5,
+        2
+      ],
+      "uv": [
+        25,
+        15
+      ],
+      "inflate": 0.05,
+      "motion": "sway"
+    },
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        6.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        30
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.4,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        29,
+        30
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "bow_loop_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        8.4,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        30
+      ],
+      "origin": [
+        -1.5,
+        -1.5,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        44
+      ]
+    },
+    {
+      "id": "bow_loop_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        8.4,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -30
+      ],
+      "origin": [
+        -1.5,
+        -1.5,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        11,
+        44
+      ]
+    },
+    {
+      "id": "bow_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.4,
+        2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        22,
+        44
+      ]
+    },
+    {
+      "id": "bow_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.8,
+        9.0,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        31,
+        44
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "bow_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.8,
+        9.0,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        38,
+        44
+      ],
+      "motion": "sway"
+    }
+  ],
+  "lockedTo": "b205_ceremonial_kimono_skirt",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Formal kimono with a red-crossed collar, long hanging sleeves, dark obi and back bow."
+}

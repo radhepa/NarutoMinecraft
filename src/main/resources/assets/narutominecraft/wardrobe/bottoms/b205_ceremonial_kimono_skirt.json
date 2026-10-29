@@ -1,0 +1,131 @@
+{
+  "id": "b205_ceremonial_kimono_skirt",
+  "kind": "bottom",
+  "name": "Ceremonial Kimono Skirt",
+  "gender": "unisex",
+  "texture": "bottoms/b205_ceremonial_kimono_skirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "ceremonial"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "kimono_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "kimono_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        12,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "kimono_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        11.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        12,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "kimono_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        11.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        12,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t210_mito_ceremonial_kimono",
+  "description": "Floor-length kimono skirt with a red wave hem, white tabi and dark zori."
+}

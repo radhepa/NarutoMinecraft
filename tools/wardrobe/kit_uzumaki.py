@@ -106,3 +106,31 @@ def seal_tags(face, y0: int, h: int, every: int = 3, paper: str = "S3", ink: str
         for y in range(y0, y0 + h):
             face.set(x, y, paper)
         seal_script(face, x, y0 + 1, max(1, h - 2), ink, seed + x)
+
+
+def wide_sleeves(g, role: str = "P", texture: str = "weave", seed: int = 0, base: int = 2, top: float = 1.0,
+                 length: int = 7, drop: int = 3, trim: str | None = None, tags: bool = False):
+    """Wide kimono sleeves: a loose box from the upper arm to the wrist and the hanging pocket (tamoto)
+    below it, trimmed at the opening; `tags` inks a row of seal tags round the opening."""
+    from kit import arm_bone, arm_x
+    from paint import strip_fabric
+    boxes = []
+    for side in ("right", "left"):
+        bone = arm_bone(side)
+        sleeve = g.piece(f"{side}_wide_sleeve", bone, (arm_x(side) - 1, top, -3), (6, length, 6), inflate=.05)
+        solid(sleeve, role, texture, seed + (side == "left"), base)
+        sleeve.bottom.fill(k(role, base - 2))
+        for f in sleeve.sides:
+            f.hline(0, f.w - 1, 0, k(role, base + 1))
+            if trim:
+                f.hline(0, f.w - 1, f.h - 1, trim)
+            if tags:
+                seal_tags(f, f.h - 3, 2, every=3, seed=seed + 5)
+        pocket = g.piece(f"{side}_tamoto", bone, (arm_x(side) - 1, top + length, .5), (6, drop, 2), inflate=.05,
+                         motion="sway")
+        solid(pocket, role, texture, seed + 3, base)
+        if trim:
+            for f in pocket.sides:
+                f.hline(0, f.w - 1, f.h - 1, trim)
+        boxes.append(sleeve)
+    return boxes
