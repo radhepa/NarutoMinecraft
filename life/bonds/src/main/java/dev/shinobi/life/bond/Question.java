@@ -63,7 +63,7 @@ public record Question(String id, Kind kind, int level, int depth, String follow
     /**
      * The dialogue data's compiled shape ({@code tools/dialogue}, {@code questions.json}): {@code axis} and {@code pole}
      * for contradictions, signed {@code values} an answer stands for, a {@code tone}, {@code follows} for deeper
-     * versions, {@code tags} for who may ask. Text fields ({@code asks}, {@code label}, {@code reply}, {@code mood}) and
+     * versions, {@code tags} for who may ask, and {@code sets} (on the question or an answer: a flag answering sets). Text fields ({@code asks}, {@code label}, {@code reply}, {@code mood}) and
      * Core {@code actions} are the dialogue glue's; {@code when} is checked by the glue's veto.
      */
     @SuppressWarnings("unchecked")
@@ -79,7 +79,7 @@ public record Question(String id, Kind kind, int level, int depth, String follow
             String tone = (String) a.getOrDefault("tone", "");
             int pole = (int) Math.signum(SaveFormat.dbl(a.getOrDefault("pole", 0)));
             answers.add(new Answer((String) a.get("id"), tone.isEmpty() ? List.of() : List.of(tone(tone)), pole > 0 ? "+" : pole < 0 ? "-" : "",
-                    (String) a.getOrDefault("sets", ""), null, 0, null, stands));
+                    (String) a.getOrDefault("sets", m.get("sets") instanceof String qs ? qs : ""), null, 0, null, stands));
         }
         Kind kind = m.containsKey("kind") ? Kind.of((String) m.get("kind")) : kindFromId(id);
         String follows = m.get("follows") instanceof String f ? f : "";
