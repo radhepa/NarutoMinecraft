@@ -57,7 +57,7 @@ Mention a crooked picture politely, your way. I mentioned one to my neighbour. T
 You'd leave a crooked picture be. I still couldn't. But I admire you for it.
 
 ## callback.answer.q.values.meti_good_enough.a1
-Good enough, sometimes. I left a fence unpainted on one side today, like you'd do. It nearly killed me. Not really.
+Good enough, sometimes. I left a fence unpainted on one side today, like you'd do. It nearly undid me.
 
 ## callback.answer.q.values.meti_good_enough.a2
 Good enough is never good enough, we agreed. I resanded the shelf twice. It's perfect now.

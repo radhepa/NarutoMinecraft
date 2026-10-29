@@ -423,5 +423,5 @@ My tin of tea for our afternoons is still full. Shall I bring it round to yours?
 They came to your flat, and stayed a while.
 You opened your door to them, and they came in.
 ## bond.memory.saw_photo_together  fn=callback  stage=child|teen|adult
-They saw the photo of the two of you on your wall.
+They saw a photo of you both, hung on your wall.
 You both stood in front of the same photo, remembering.
