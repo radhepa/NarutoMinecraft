@@ -1,0 +1,66 @@
+# Callbacks to training hangout highlights: spars, sessions and rooftop races, remembered a week or more later.
+#! kind: cycle
+#! fn: callback
+
+## callback.hangout.spar.highlight.1
+Remember when we hit each other at the same time and both went down? Best draw I've ever had.
+## callback.hangout.spar.highlight.2
+I still feel that first clean throw of yours in my back when it rains. Proudly.
+## callback.hangout.spar.highlight.3
+You blocking my best kick with one hand. I've been working on a better kick ever since.
+## callback.hangout.spar.highlight.4
+People still mention our spar with the crowd. They want a rematch. So do I.
+## callback.hangout.spar.highlight.5
+I kept the sleeve your kunai pinned to the post. It's hanging on my wall. Don't laugh.
+## callback.hangout.spar.highlight.6
+That butterfly that stopped our spar. I think of it every time I start a fight now.
+## callback.hangout.spar.highlight.7
+Your face when you fell for my feint! I've been saving that memory for bad days.
+## callback.hangout.spar.highlight.8
+Sparring in the rain, both too stubborn to stop. I caught a cold. Worth it.
+## callback.hangout.spar.highlight.9
+You helped me up in the middle of a match, then went right back at me. I think about that a lot.
+## callback.hangout.spar.highlight.10
+Twenty rounds. My legs still remember. Let's try for twenty-one.
+## callback.hangout.spar.highlight.11
+That Jonin who nodded at us. I've told everyone. I may have made the nod bigger each time.
+## callback.hangout.spar.highlight.12
+Sitting back to back after that spar, watching the sun go down. I'd do it all again for that.
+
+## callback.hangout.train.highlight.1
+Every kunai in the centre ring! I haven't managed it since. You must be my good luck.
+## callback.hangout.train.highlight.2
+Remember running the whole outer wall without stopping? I tell myself about it when I'm tired.
+## callback.hangout.train.highlight.3
+I fixed my stance, the one you spotted. My teacher noticed. I said it was a friend.
+## callback.hangout.train.highlight.4
+The groundskeeper's still asking who split that post. I haven't told. Our secret.
+## callback.hangout.train.highlight.5
+A whole minute on the tree, with you counting. I've done two since. I wanted you to know.
+## callback.hangout.train.highlight.6
+Those geese that marched through our drills! I saw them again by the river, still bossy.
+## callback.hangout.train.highlight.7
+That double clang when our kunai hit together. I can still hear it.
+## callback.hangout.train.highlight.8
+You stayed to help me finish when you didn't have to. That's stuck with me.
+## callback.hangout.train.highlight.9
+Five hundred strikes side by side. My shoulders still ache with pride.
+## callback.hangout.train.highlight.10
+Finishing at sunrise, light on the grass by the posts. I think about that morning often.
+
+## callback.hangout.roof_race.highlight.1
+That perfect tie over the main street! We should have had someone paint it.
+## callback.hangout.roof_race.highlight.2
+The shop owner with the broom still glares at me. I wave every time. You should too.
+## callback.hangout.roof_race.highlight.3
+Your jump over the bathhouse roof. I tried it after. I did not make it. Don't ask.
+## callback.hangout.roof_race.highlight.4
+The whole village gold in the sunset, from the tallest roof. I keep that view in my head.
+## callback.hangout.roof_race.highlight.5
+I caught your wrist on the slippery tile, and you still won. I'm still not over it.
+## callback.hangout.roof_race.highlight.6
+Running through that flock of pigeons. I swear I felt like we were flying.
+## callback.hangout.roof_race.highlight.7
+Those children cheering us from the street. One of them stopped me yesterday to ask when the next race is.
+## callback.hangout.roof_race.highlight.8
+Lying on the Academy roof laughing at the sky. Let's race there again soon.

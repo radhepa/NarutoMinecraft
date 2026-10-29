@@ -231,3 +231,36 @@ Suzuran gardens are planted by the moon. Roots at new moon, leaves at full, and 
 ## chat.clan  clan=tobari  fn=worldbuild
 Our breakfast is at sunset. Guests who come at dawn find the family yawning over bowls of soup.
 The lantern-keepers' oil is stored in our cellar. The whole lane smells faintly of it, and nobody here notices anymore.
+
+# -- to a clanless orphan -----------------------------------------------------------------------------------
+
+## chat.clan  clan=shiranui  clan_status=clanless  fn=worldbuild,deepen_bond
+No clan? Half the guard's clanless, {player}, and they throw as well as any of us. Come try the target wall.
+
+## chat.clan  clan=morino  clan_status=clanless  fn=worldbuild,reveal_character
+I asked about you, out of habit. Clanless, the Hokage's apartment, top marks for turning up on time. That's a cleaner file than most.
+
+## chat.clan  clan=umino  clan_status=clanless  fn=worldbuild,deepen_bond
+Plenty of my best pupils had no clan to lean on. They leaned on each other, and on their instructors. You can lean on us too.
+If nobody at home checks your homework, bring it to an Umino door. Somebody's always marking anyway.
+
+## chat.clan  clan=haruno  clan_status=clanless  fn=worldbuild,deepen_bond
+We're hardly a great clan ourselves, {player}. Shopkeepers with ninja children. You'd fit right in at our counter.
+
+## chat.clan  clan=namiashi  clan_status=clanless  fn=worldbuild,reveal_character
+You walk light for someone nobody taught. No family footwork, just your own. I'd like to see what the river stones make of it.
+
+## chat.clan  clan=hagane  clan_status=clanless  fn=worldbuild,deepen_bond
+Clanless kid in the Hokage's blocks, top of the gate gossip for a week. Don't worry, it was all nice. Mostly.
+
+## chat.clan  clan=kinoshita  clan_status=clanless  fn=worldbuild,deepen_bond
+On your own in a flat with nothing in it? Come by the yard. We always have an offcut stool going spare.
+
+## chat.clan  clan=tsuchigumo  clan_status=clanless  fn=worldbuild,reveal_character
+A child without a clan, alone in a loud village. We came down from the mountain the same way. It gets easier.
+
+## chat.clan  clan=suzuran  clan_status=clanless  fn=worldbuild,deepen_bond
+Living alone, are you eating properly? I can tell from here you're not. Take this tea home; it isn't poison, I promise.
+
+## chat.clan  clan=tobari  clan_status=clanless  fn=worldbuild,reveal_character
+I've seen your window lit late from the wall. Alone in the blocks, I'd guess. Sleep, {player}. The watch has the night.

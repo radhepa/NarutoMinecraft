@@ -303,3 +303,65 @@ I cough in the cold. I always have. A swordsman learns to make even a cough soun
 ## chat.clan  clan=gekko  fn=hook
 A named blade in the family was lent, against custom, and hasn't come back. Nobody will say who lent it. Everybody knows.
 
+
+# -- to a clanless orphan: curiosity, teasing and welcome ------------------------------------------------
+
+## chat.clan  clan=senju  clan_status=clanless  fn=worldbuild,deepen_bond
+No clan of your own? The founders started this village so that wouldn't matter. Come and have tea under the tree sometime.
+The tree in our hall shelters whoever sits under it, {player}. It has never once asked anybody for a family name.
+
+## chat.clan  clan=uzumaki  clan_status=clanless  fn=worldbuild,deepen_bond
+We know a little about being a family of few, {player}. You'll always be welcome to sit with us at the long table.
+A clanless child living alone in the blocks? Come to the memorial in spring and help us paint. We could use the noise.
+
+## chat.clan  clan=uchiha  clan_status=clanless  fn=worldbuild,reveal_character
+No crest at all? Hm. Then whatever you become, nobody will be able to say it was handed to you. I almost envy that.
+You stare at the fan on our gate like it might bite. It won't, {player}. Most of us only bite at the police station.
+
+## chat.clan  clan=hyuga  clan_status=clanless  fn=worldbuild,reveal_character
+You bowed at our gate like a startled crane. No clan to teach you, I suppose. Watch the gardener; a gardener's bow is the safest to copy.
+The elders asked who you were, and I said no one's. They found that very interesting. You may get invited to tea, which is terrifying.
+
+## chat.clan  clan=nara  clan_status=clanless  fn=worldbuild,deepen_bond
+No family telling you how to think? Lucky. Half my life is cousins explaining a strategy I already figured out.
+Clanless, living alone, and still turning up to the Academy every morning. That takes more effort than most Nara spend in a year.
+
+## chat.clan  clan=akimichi  clan_status=clanless  fn=worldbuild,deepen_bond
+You live alone in the blocks? Then who's feeding you? Never mind, I know the answer. Come to the kitchen hall on clan day.
+We set one more place than we need, remember. Most nights lately, I've been thinking of it as your place, {player}.
+
+## chat.clan  clan=yamanaka  clan_status=clanless  fn=worldbuild,deepen_bond
+No clan flower to call your own? Pick one. Go on, any flower in the shop. A person should have something that's theirs.
+The quiet ones without a family name often see the most. I'd wager you notice more of this street than you let on.
+
+## chat.clan  clan=inuzuka  clan_status=clanless  fn=worldbuild,deepen_bond
+No clan? No pack, then. That's no good. Come round the kennels; the pups don't care whose kid you are.
+The dogs keep sniffing round you, {player}. They do that with people who need a pack. Take the hint.
+
+## chat.clan  clan=sarutobi  clan_status=clanless  fn=worldbuild,deepen_bond
+The Will of Fire doesn't care who your family is. Every child of the Leaf carries it. That includes you, {player}.
+There's a seat by our hearth for anyone in the village, and especially for the ones who don't have a hearth of their own.
+
+## chat.clan  clan=aburame  clan_status=clanless  fn=worldbuild,reveal_character
+You have no clan's chakra pattern. The kikaichu found you very interesting for that reason. So do I, objectively speaking.
+A clanless student asks better questions about insects than our own children. I find that both encouraging and slightly embarrassing.
+
+## chat.clan  clan=hatake  clan_status=clanless  fn=reveal_character,deepen_bond
+An empty house and a flat on your own. We have that in common, more or less. Stop by if the quiet gets loud.
+The old ninken took a liking to you. They don't do that for clans; they do it for people.
+
+## chat.clan  clan=kurama  clan_status=clanless  fn=worldbuild,reveal_character
+A face with no family resemblance to anyone is a gift to a painter. You'd be a fascinating portrait, {player}.
+Clanless? Then nobody has told you what colours you're supposed to like. Lucky. Most of us were raised arguing about blue.
+
+## chat.clan  clan=shimura  clan_status=clanless  fn=worldbuild,reveal_character
+No clan behind you. Then your conduct will be your only name. Keep it clean.
+The clanless serve the village without asking what it owes their family. I respect that more than I say.
+
+## chat.clan  clan=yuhi  clan_status=clanless  fn=worldbuild,reveal_character
+No family grove to train in? The old trees don't check lineage. Come to the grove viewing in spring and see what they make of you.
+I was curious what a clanless orphan would make of our tea. You spotted it wasn't tea faster than my cousins do. Interesting.
+
+## chat.clan  clan=gekko  clan_status=clanless  fn=worldbuild,reveal_character
+You've no family blade to inherit, so the blade you carry one day will be named by you alone. That's a rare thing in this family's eyes.
+Clanless and up at dawn for practice? I passed you on my way home. A swordsman notices who keeps hours like that.

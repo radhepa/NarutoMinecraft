@@ -279,6 +279,6 @@ The Inuzuka compound is by the main gate. Follow the barking.
 
 ## chat.place  district=clan_quarter  fn=worldbuild,guide
 Visitors bow at a clan gate before stepping through. Not deeply; just enough to say you know whose ground it is.
-A clan-born Chunin can move into the family quarter. Most do; some stay in the apartment blocks for the noodles.
+Clan members who make Chunin often move back behind their family's gate. Plenty stay in the apartment blocks for the noodles.
 The clan registry at the Residence keeps the records of every quarter. If you want to know who lives behind a gate, start there.
 Clan quarters host clan days on different weeks, so somewhere in the Leaf there's nearly always a lantern on a gate.
