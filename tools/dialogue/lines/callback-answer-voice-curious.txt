@@ -24,13 +24,13 @@ Still wondering about your puzzle? Good. I'm still wondering about mine.
 More complicated than you thought, you said. That means you're close. Any closer?
 
 ## callback.answer.q.values.cur_rumours.a1
-You never believe rumours. I heard a wild one today and thought: what would you say? So I didn't believe it.
+You never believe rumours. I heard a wild one today and thought: what would you say? So I didn't swallow it.
 
 ## callback.answer.q.values.cur_rumours.a2
 Some rumours are true, you said. The trick is which. I've been keeping a tally. It's about half.
 
 ## callback.answer.q.values.cur_rumours.a3
-Only the fun rumours, you believe. There's a fun one about a giant carp in the river. Believe it?
+Only the fun rumours, you believe. There's a fun one about a giant carp in the river. True, do you think?
 
 ## callback.answer.q.pref.cur_ask_hokage.a1
 How does Lord Hokage do it all? Your question. I saw the lamp in the office window at midnight. Still wondering.

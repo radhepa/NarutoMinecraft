@@ -19,7 +19,7 @@ Q: Any progress? On the puzzle you told me about?
 
 ? q.values.cur_rumours | fn: deepen_bond reveal_character | kind: opinion | level: 2
 Q: Do you believe rumours?
-Q: When you hear something at the well, do you believe it?
+Q: When you hear gossip at the well, do you trust it?
 - Never :: Never? Not even the one about the dango seller's twin? Hm. Wise. {values:+honesty} {tone:cautious}
 - Some of them :: The trick is knowing which. I'm still working on it. {values:+knowledge} {tone:honest}
 - Only the fun ones :: Ha! Me too. Truth's overrated at the well. {values:+freedom} {tone:playful}
