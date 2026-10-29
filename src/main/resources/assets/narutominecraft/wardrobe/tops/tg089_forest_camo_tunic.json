@@ -1,0 +1,104 @@
+{
+  "id": "tg089_forest_camo_tunic",
+  "kind": "top",
+  "name": "Forest Camo Tunic",
+  "gender": "unisex",
+  "texture": "tops/tg089_forest_camo_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "chest_pouch_right",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        4.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "chest_pouch_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        4.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "net_scarf",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.4,
+        -2.7
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        14,
+        0
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Long-sleeved tunic in leaf-shadow camouflage, a leather harness with pouches, a netting scarf."
+}

@@ -1,0 +1,107 @@
+{
+  "id": "tg094_mountain_wrap",
+  "kind": "top",
+  "name": "Mountain Wrap",
+  "gender": "unisex",
+  "texture": "tops/tg094_mountain_wrap.png",
+  "extrasHeight": 16,
+  "tags": [
+    "jonin",
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "shoulder_drape",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.4,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "broad_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "sash_end",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Long cloth draped over the left shoulder across a mesh shirt, a broad sash, a bandaged right arm."
+}

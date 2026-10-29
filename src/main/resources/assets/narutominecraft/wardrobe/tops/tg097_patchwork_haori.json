@@ -1,0 +1,136 @@
+{
+  "id": "tg097_patchwork_haori",
+  "kind": "top",
+  "name": "Patchwork Haori",
+  "gender": "unisex",
+  "texture": "tops/tg097_patchwork_haori.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "coat",
+    "haori",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_wide_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.8,
+        1.6,
+        -2.8
+      ],
+      "size": [
+        5,
+        4,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_wide_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.8,
+        1.6,
+        -2.8
+      ],
+      "size": [
+        5,
+        4,
+        6
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "chest_cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "cord_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        4.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Hip-length haori patched all over, worn open over a pale undershirt, wide sleeves, a chest cord."
+}

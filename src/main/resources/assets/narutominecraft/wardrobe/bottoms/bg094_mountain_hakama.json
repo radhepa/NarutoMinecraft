@@ -1,0 +1,190 @@
+{
+  "id": "bg094_mountain_hakama",
+  "kind": "bottom",
+  "name": "Mountain Hakama",
+  "gender": "unisex",
+  "texture": "bottoms/bg094_mountain_hakama.png",
+  "extrasHeight": 32,
+  "tags": [
+    "hakama",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hakama_right",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        5,
+        10,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "hakama_left",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        5,
+        10,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "waist_rope",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        9.3,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "waist_rope_knot",
+      "bone": "TORSO",
+      "pivot": [
+        1.0,
+        9.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        16
+      ]
+    },
+    {
+      "id": "waist_rope_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        10.9,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        36,
+        16
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_rope_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.9,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        16
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "Full ankle-length hakama with a muddied hem, a thick rope belt, pale tabi and straw sandals."
+}

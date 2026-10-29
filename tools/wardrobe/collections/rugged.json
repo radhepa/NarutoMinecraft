@@ -1,0 +1,462 @@
+{
+  "id": "rugged",
+  "name": "Rugged",
+  "role": "shinobi",
+  "tagline": "Taijutsu fighters, travellers and wilderness shinobi: torn gi, bandages, fur, straw and rain capes in rust, moss, sand and storm grey.",
+  "palettes": {
+    "RUGGED_RUST": {
+      "name": "Rugged Rust",
+      "P": "#8a4a2c",
+      "S": "#dccdb0",
+      "A": "#c98a2e",
+      "L": "#5e4330",
+      "M": "#9a9a92",
+      "K": "#2a2420",
+      "D": "#3b4a4f"
+    },
+    "RUGGED_MOSS": {
+      "name": "Rugged Moss",
+      "P": "#5a6b3a",
+      "S": "#d6ccb0",
+      "A": "#a0522d",
+      "L": "#6a4f36",
+      "M": "#9ca29a",
+      "K": "#24271d",
+      "D": "#3a4a3e"
+    },
+    "RUGGED_SAND": {
+      "name": "Rugged Sand",
+      "P": "#b09668",
+      "S": "#ece2c8",
+      "A": "#8a3b2a",
+      "L": "#6e5038",
+      "M": "#a8a59a",
+      "K": "#2e2820",
+      "D": "#4a4e58"
+    },
+    "RUGGED_STORM": {
+      "name": "Rugged Storm",
+      "P": "#5c6670",
+      "S": "#d8d6cc",
+      "A": "#c8742c",
+      "L": "#5a4636",
+      "M": "#b0b4b8",
+      "K": "#1e2226",
+      "D": "#33404e"
+    },
+    "RUGGED_EMBER": {
+      "name": "Rugged Ember",
+      "P": "#b5602a",
+      "S": "#e2d6bc",
+      "A": "#3d5a4a",
+      "L": "#5c412e",
+      "M": "#9a968c",
+      "K": "#2a221c",
+      "D": "#3a3f48"
+    },
+    "RUGGED_STRAW": {
+      "name": "Rugged Straw",
+      "P": "#c1a35a",
+      "S": "#ece0c0",
+      "A": "#7a3a26",
+      "L": "#6b4a2e",
+      "M": "#a39e8e",
+      "K": "#2c261c",
+      "D": "#474a3e"
+    },
+    "RUGGED_BARK": {
+      "name": "Rugged Bark",
+      "P": "#6b4e36",
+      "S": "#d4c6a6",
+      "A": "#b0703a",
+      "L": "#4a3426",
+      "M": "#9a948a",
+      "K": "#221c18",
+      "D": "#3c4436"
+    },
+    "RUGGED_SLATE": {
+      "name": "Rugged Slate",
+      "P": "#4a525a",
+      "S": "#cfc8b8",
+      "A": "#9e3a2a",
+      "L": "#604a38",
+      "M": "#aeb2b4",
+      "K": "#1a1c20",
+      "D": "#2e3846"
+    },
+    "RUGGED_FERN": {
+      "name": "Rugged Fern",
+      "P": "#4c5e36",
+      "S": "#c9c09c",
+      "A": "#7a5a2e",
+      "L": "#5a4430",
+      "M": "#949888",
+      "K": "#20241a",
+      "D": "#36442e"
+    },
+    "RUGGED_CLAY": {
+      "name": "Rugged Clay",
+      "P": "#9a5a46",
+      "S": "#e0d2b8",
+      "A": "#4e6a5a",
+      "L": "#5e4432",
+      "M": "#a09a90",
+      "K": "#2a201c",
+      "D": "#3e4450"
+    },
+    "RUGGED_DUSK": {
+      "name": "Rugged Dusk",
+      "P": "#5a403a",
+      "S": "#d8ccb4",
+      "A": "#c49a3a",
+      "L": "#4e3a2c",
+      "M": "#a4a098",
+      "K": "#201a18",
+      "D": "#3a3440"
+    },
+    "RUGGED_SNOW": {
+      "name": "Rugged Snow",
+      "P": "#8f969a",
+      "S": "#eeeae0",
+      "A": "#7a3a2a",
+      "L": "#5c4636",
+      "M": "#b8bcc0",
+      "K": "#22262a",
+      "D": "#3e4a58"
+    },
+    "RUGGED_OCHRE": {
+      "name": "Rugged Ochre",
+      "P": "#a87e38",
+      "S": "#e6dcc2",
+      "A": "#4a5a6a",
+      "L": "#5e4430",
+      "M": "#a09a8c",
+      "K": "#28221a",
+      "D": "#3c4248"
+    },
+    "RUGGED_RAIN": {
+      "name": "Rugged Rain",
+      "P": "#3e5654",
+      "S": "#d4d0c2",
+      "A": "#b8862e",
+      "L": "#4e3e30",
+      "M": "#a0a8aa",
+      "K": "#1c2224",
+      "D": "#2e3c44"
+    }
+  },
+  "pool": {
+    "hair": [
+      "hg041_long_spikes",
+      "hg042_dreadlocks",
+      "hg043_shaved_sides",
+      "hg044_warrior_topknot",
+      "hg045_shaggy_mane",
+      "hg046_headband_swept",
+      "hg047_braided_tails",
+      "hg048_wind_tail",
+      "hg049_rough_crop",
+      "hg050_undercut_braid"
+    ],
+    "hair_colors": [
+      "RAVEN",
+      "ESPRESSO",
+      "CHESTNUT",
+      "AUBURN",
+      "GINGER",
+      "HONEY",
+      "WHEAT",
+      "ASH_BLONDE",
+      "SILVER",
+      "SNOW"
+    ],
+    "eye_colors": [
+      "DARK",
+      "DARK",
+      "SKY",
+      "JADE"
+    ],
+    "palettes": [
+      "RUGGED_RUST",
+      "RUGGED_MOSS",
+      "RUGGED_SAND",
+      "RUGGED_STORM",
+      "RUGGED_EMBER",
+      "RUGGED_STRAW",
+      "RUGGED_BARK",
+      "RUGGED_SLATE",
+      "RUGGED_FERN",
+      "RUGGED_CLAY",
+      "RUGGED_DUSK",
+      "RUGGED_SNOW",
+      "RUGGED_OCHRE",
+      "RUGGED_RAIN"
+    ],
+    "headwear": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "w02_forehead_protector",
+      "w02_forehead_protector",
+      "w09_bandana_protector",
+      "wg017_weathered_protector",
+      "wg018_fur_trapper_cap",
+      "wg019_twisted_headband",
+      "wg020_rain_hood"
+    ],
+    "bottoms": [
+      "b01_shinobi_trousers"
+    ],
+    "complexions": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "outfits": [
+    {
+      "id": "sleeveless_gi",
+      "name": "Sleeveless Gi",
+      "top": "tg081_sleeveless_gi",
+      "bottom": "bg081_baggy_fighting_trousers",
+      "rank": "genin",
+      "palettes": [
+        "RUGGED_RUST",
+        "RUGGED_EMBER",
+        "RUGGED_CLAY"
+      ]
+    },
+    {
+      "id": "chest_wraps",
+      "name": "Chest Wraps",
+      "top": "tg082_chest_wraps",
+      "bottom": "bg091_tattered_trousers",
+      "rank": "genin",
+      "palettes": [
+        "RUGGED_SAND",
+        "RUGGED_BARK",
+        "RUGGED_RUST"
+      ]
+    },
+    {
+      "id": "open_field_vest",
+      "name": "Open Field Vest",
+      "top": "tg083_open_field_vest",
+      "bottom": "bg083_greaved_trousers",
+      "rank": "chunin",
+      "palettes": [
+        "RUGGED_MOSS",
+        "RUGGED_STORM",
+        "RUGGED_FERN"
+      ]
+    },
+    {
+      "id": "fur_collar",
+      "name": "Fur-Collar Jacket",
+      "top": "tg084_fur_collar_jacket",
+      "bottom": "bg085_fur_lined_boots",
+      "rank": "jonin",
+      "palettes": [
+        "RUGGED_BARK",
+        "RUGGED_STORM",
+        "RUGGED_SNOW"
+      ]
+    },
+    {
+      "id": "blanket_poncho",
+      "name": "Blanket Poncho",
+      "top": "tg085_travel_poncho",
+      "bottom": "bg088_travel_gaiters",
+      "rank": "chunin",
+      "palettes": [
+        "RUGGED_EMBER",
+        "RUGGED_SAND",
+        "RUGGED_CLAY"
+      ]
+    },
+    {
+      "id": "shoulder_cape",
+      "name": "Shoulder Cape",
+      "top": "tg086_short_cape",
+      "bottom": "bg086_wrapped_shorts",
+      "rank": "chunin",
+      "palettes": [
+        "RUGGED_STORM",
+        "RUGGED_SLATE",
+        "RUGGED_MOSS"
+      ]
+    },
+    {
+      "id": "straw_rain_coat",
+      "name": "Straw Rain Coat",
+      "top": "tg087_straw_coat",
+      "bottom": "bg082_wrapped_hakama",
+      "rank": "jonin",
+      "palettes": [
+        "RUGGED_STRAW",
+        "RUGGED_SAND"
+      ]
+    },
+    {
+      "id": "rain_cape",
+      "name": "Rain Cape",
+      "top": "tg088_rain_cape",
+      "bottom": "bg097_ranger_boots",
+      "rank": "jonin",
+      "palettes": [
+        "RUGGED_RAIN",
+        "RUGGED_SLATE",
+        "RUGGED_STORM"
+      ]
+    },
+    {
+      "id": "forest_camo",
+      "name": "Forest Camo",
+      "top": "tg089_forest_camo_tunic",
+      "bottom": "bg087_camo_trousers",
+      "rank": "chunin",
+      "palettes": [
+        "RUGGED_FERN",
+        "RUGGED_MOSS"
+      ]
+    },
+    {
+      "id": "storm_layers",
+      "name": "Storm Layers",
+      "top": "tg090_storm_layers",
+      "bottom": "bg090_storm_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "RUGGED_STORM",
+        "RUGGED_SNOW",
+        "RUGGED_SLATE"
+      ]
+    },
+    {
+      "id": "training_dogi",
+      "name": "Training Dogi",
+      "top": "tg091_training_dogi",
+      "bottom": "bg092_shin_guard_shorts",
+      "rank": "genin",
+      "palettes": [
+        "RUGGED_RUST",
+        "RUGGED_SLATE",
+        "RUGGED_EMBER"
+      ]
+    },
+    {
+      "id": "wanderer",
+      "name": "Wanderer's Tunic",
+      "top": "tg092_wanderer_tunic",
+      "bottom": "bg084_rolled_trousers",
+      "rank": "genin",
+      "palettes": [
+        "RUGGED_SAND",
+        "RUGGED_CLAY",
+        "RUGGED_OCHRE"
+      ]
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter's Jerkin",
+      "top": "tg093_hunter_jerkin",
+      "bottom": "bg089_hunter_breeches",
+      "rank": "chunin",
+      "palettes": [
+        "RUGGED_MOSS",
+        "RUGGED_BARK",
+        "RUGGED_FERN"
+      ]
+    },
+    {
+      "id": "mountain_wrap",
+      "name": "Mountain Wrap",
+      "top": "tg094_mountain_wrap",
+      "bottom": "bg094_mountain_hakama",
+      "rank": "jonin",
+      "palettes": [
+        "RUGGED_EMBER",
+        "RUGGED_OCHRE",
+        "RUGGED_DUSK"
+      ]
+    },
+    {
+      "id": "wayfarer",
+      "name": "Wayfarer Mantle",
+      "top": "tg095_wayfarer_mantle",
+      "bottom": "bg093_waist_wrap_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "RUGGED_SAND",
+        "RUGGED_DUSK",
+        "RUGGED_STORM"
+      ]
+    },
+    {
+      "id": "padded_vest",
+      "name": "Padded Long Vest",
+      "top": "tg096_padded_vest",
+      "bottom": "bg099_greaved_hakama",
+      "rank": "jonin",
+      "palettes": [
+        "RUGGED_RUST",
+        "RUGGED_SLATE",
+        "RUGGED_DUSK"
+      ]
+    },
+    {
+      "id": "patchwork_haori",
+      "name": "Patchwork Haori",
+      "top": "tg097_patchwork_haori",
+      "bottom": "bg096_drawstring_trousers",
+      "rank": "chunin",
+      "palettes": [
+        "RUGGED_OCHRE",
+        "RUGGED_CLAY",
+        "RUGGED_BARK"
+      ]
+    },
+    {
+      "id": "scarf_runner",
+      "name": "Long-Scarf Runner",
+      "top": "tg098_scarf_tank",
+      "bottom": "bg098_climbing_pants",
+      "rank": "genin",
+      "palettes": [
+        "RUGGED_EMBER",
+        "RUGGED_MOSS",
+        "RUGGED_SLATE"
+      ]
+    },
+    {
+      "id": "lamellar",
+      "name": "Lamellar Vest",
+      "top": "tg099_lamellar_vest",
+      "bottom": "bg095_knee_bound_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "RUGGED_BARK",
+        "RUGGED_RUST",
+        "RUGGED_DUSK"
+      ]
+    },
+    {
+      "id": "snowfield",
+      "name": "Snowfield Parka",
+      "top": "tg100_snowfield_parka",
+      "bottom": "bg100_fur_wrapped_leggings",
+      "rank": "jonin",
+      "palettes": [
+        "RUGGED_SNOW",
+        "RUGGED_STORM",
+        "RUGGED_BARK"
+      ]
+    }
+  ]
+}

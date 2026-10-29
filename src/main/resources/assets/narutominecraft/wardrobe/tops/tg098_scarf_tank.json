@@ -1,0 +1,106 @@
+{
+  "id": "tg098_scarf_tank",
+  "kind": "top",
+  "name": "Long-Scarf Tank",
+  "gender": "unisex",
+  "texture": "tops/tg098_scarf_tank.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "scarf_ring",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -0.6,
+        -3
+      ],
+      "size": [
+        10,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "scarf_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        0.6,
+        3.1
+      ],
+      "rotation": [
+        14,
+        0,
+        10
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        15,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "scarf_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.0,
+        0.6,
+        3.2
+      ],
+      "rotation": [
+        18,
+        0,
+        -6
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        13,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Fitted sleeveless top, a long scarf with two tails streaming to the knees, wristbands, wrapped hands."
+}

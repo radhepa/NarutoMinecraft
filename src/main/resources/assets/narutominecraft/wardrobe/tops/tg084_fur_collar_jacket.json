@@ -1,0 +1,133 @@
+{
+  "id": "tg084_fur_collar_jacket",
+  "kind": "top",
+  "name": "Fur-Collar Jacket",
+  "gender": "unisex",
+  "texture": "tops/tg084_fur_collar_jacket.png",
+  "extrasHeight": 32,
+  "tags": [
+    "jacket",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fur_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -1.4,
+        -3
+      ],
+      "size": [
+        10,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "right_fur_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        7.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "left_fur_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "chest_pocket",
+      "bone": "TORSO",
+      "pivot": [
+        1.0,
+        3.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        10
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Hip-length twill jacket with leather toggles, a shaggy fur collar, fur cuffs and an elbow patch."
+}

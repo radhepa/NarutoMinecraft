@@ -1,0 +1,16 @@
+{
+  "id": "bg091_tattered_trousers",
+  "kind": "bottom",
+  "name": "Tattered Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bg091_tattered_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Trousers frayed off above the ankle, worn through at the knee, a thigh patch, rope belt, sandals."
+}

@@ -1,0 +1,136 @@
+{
+  "id": "tg081_sleeveless_gi",
+  "kind": "top",
+  "name": "Sleeveless Gi",
+  "gender": "unisex",
+  "texture": "tops/tg081_sleeveless_gi.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi",
+    "taijutsu",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "gi_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "belt_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "belt_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.5,
+        10.8,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "belt_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        10.8,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Heavy gi top with torn-off sleeves, crossed lapels, a dark knotted belt and bandaged forearms."
+}

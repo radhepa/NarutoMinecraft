@@ -1,0 +1,217 @@
+{
+  "id": "tg095_wayfarer_mantle",
+  "kind": "top",
+  "name": "Wayfarer Mantle",
+  "gender": "unisex",
+  "texture": "tops/tg095_wayfarer_mantle.png",
+  "extrasHeight": 32,
+  "tags": [
+    "cloak",
+    "jonin",
+    "mantle",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bandolier_pouch_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        4.8,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_pouch_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.4,
+        6.8,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        -0.8,
+        -3.2
+      ],
+      "size": [
+        11,
+        5,
+        7
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "right_drape",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        2.0,
+        -2.6
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ]
+    },
+    {
+      "id": "left_drape",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        2.0,
+        -2.6
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        13
+      ]
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -2.6,
+        3.2
+      ],
+      "rotation": [
+        -16,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        5,
+        3
+      ],
+      "uv": [
+        42,
+        13
+      ]
+    },
+    {
+      "id": "toggle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        22
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Hooded shoulder mantle with leather-bound edges over long sleeves, a bandolier of pouches."
+}
