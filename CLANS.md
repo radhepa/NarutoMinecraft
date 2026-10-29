@@ -52,6 +52,14 @@ hairstyles `gender: "unisex"` unless they are truly one-gender. Use `locked_to` 
 each other) only for a set that is one garment, like a full kimono or a jumpsuit. A hairstyle must
 not hang over the eyes (`wardrobe.py --check` enforces it); a fringe may reach the brows.
 
+## Reference images
+
+Design from real reference art, not memory alone. Before building a hairstyle or outfit, find
+images of the characters it is based on (the Naruto Fandom wiki, official anime and manga art
+across Part I, Shippuden and Boruto, the clan crest). Download them into a scratch folder outside
+the repo (never commit them), look at them, and compare each render side by side with its
+reference until the silhouette, hair shape, colors and details read as the character's style.
+
 ## Piece ids
 
 Every clan owns a block of ids so clans can be built in parallel without clashing:
