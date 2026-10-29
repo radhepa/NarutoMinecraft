@@ -72,7 +72,9 @@ The full list, with every premise and twist, is generated into
 ## 2. The Mission Desk
 
 *BUILD (Beta 2).* The desk is on the Hokage Residence's ground floor (`place:residence.mission_desk`),
-open 08:00 to 18:00 (ROADMAP §7, "The daily cycle"). It opens with Ch 9 ("The Mission Desk").
+open 08:00 to 18:00 (ROADMAP §7, "The daily cycle"). It opens with Ch 9 ("The Mission Desk"). Two Chunin clerks
+staff it (`role:desk_chunin_1`, `role:desk_chunin_2`, the ranks session's roster), and gate guards
+(`role:gate_guard_1`, `role:gate_guard_2`) keep the travel desk.
 
 ### 2.1 How missions are offered
 
@@ -118,7 +120,7 @@ The desk shows a **board**: a column per rank the player may take, each a few of
 |---|---|---|
 | In the village | Walk, run, roof-hop to the anchors | Minutes |
 | Outside the wall, inside the map | Out through a gate (main, east, the farm gate); bandit camps, farms, the outer training grounds, the east road and its waystation are open terrain | An hour or two of game time |
-| Far regions | The **travel desk** at the main gate (`place:gate.travel_desk`): a short travel scene of the road (ROADMAP §6), then the region's entry point. The scene can roll a road event: a traveller, an ambush, a night at camp | Half a day to a day each way |
+| Far regions | The **travel desk** at the main gate (`place:gate.travel_desk`): a short travel scene of the road (ROADMAP §6), then the region's entry point. The scene can roll a road event (35%, `desk.json` `road_events`): a traveller, an ambush, a night at camp, or on the east road an elite squad passing by (`role:elite_scout`) | Half a day to a day each way |
 
 - A C-rank of two days spends a **night at camp**: a bedroll at an anchor, a `camp_night` bond act with
   the squad, a campfire banter scene, and On Duty fatigue rules when the night is a watch.
