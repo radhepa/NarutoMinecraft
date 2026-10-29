@@ -12,7 +12,11 @@ lives under `docs/story/`. Read those files yourself; never repeat their content
 - **Story:** on branch `story`, not yet on `main`. Only `docs/story/` differs from main.
   - **Rounds:** three review rounds have run, and none has passed yet.
   - **Round 3:** its revisions are committed (`099baed`), and the log entry for it is `bfc9b7e`.
-- **Next step:** review round 4 on the current `story` head.
+  - **Round 4 (partial):** a partial pass followed, with fixes committed at `1e408d2`, the head of
+    `story`. Its scores were a 7, b 7, c 8, d 8, e 8, f 7, but its reports were never written into
+    `REVIEW_LOG.md`, so its blocking issues are lost.
+- **Next step:** run a fresh, full round 4 on `1e408d2`. Log it as round 4, and note the partial
+  pass's scores in that entry.
 
 ## Read first
 
