@@ -224,6 +224,25 @@ Story ties of board missions ([SYSTEMS.md](SYSTEMS.md) §1). The board's premise
 | `mission.b.false_floors` | The merchant's alibi (the carpenter's abandoned shop) or failed alibi (the tool marks) |
 | `mission.a.cell_hunt` (Jonin) | Cell members repeat orders whose meaning only Ch 49 reveals ("Mark the doors. Bring the paper.") |
 
+### Boss secrets
+
+Story fights in the combat session's boss files (`data/combat/bosses/<id>.json`, `"story": "bible:<id>"`). Public files carry only neutral loadouts.
+
+| Boss id | Chapter | Who and what | Secret mechanic |
+|---|---|---|---|
+| `combat:boss.ch14.road_ambush` | Ch 14.2 to 14.3 | A Yūgure hearth of three (road clothes, ash-violet scarves) holds the river crossing while the smuggler runs; the second and the blade cross ahead and never fight | **Cut bridge:** at a set time the blade's one stroke cuts the rope bridge behind them (an ink line that blocks pursuit); capturing the smuggler is the objective that sets `story.ch14.done` |
+| `combat:boss.ch16.forest_team` | Ch 16.3 | A hostile exam team of another village springs a ravine trap | **Ember interrupt:** at low player health a burning kunai pins the attacker (the second, "looking for her team"), ending the fight |
+| `combat:boss.ch19.stadium_cell` | Ch 19.2 to 19.6 | Yūgure hearths in the stands at the opening lantern-lighting | Protect objective: the Academy children down the east stair; the Fourth is hit on the stair by a scripted strike (`twist.fourth_fate`); a collapsing tier at 19.4 |
+| `combat:boss.ch19.finals` | — | The rival bout is scheduled last and **never fought** in the story (the attack comes first). The file can stay for NPC exam seasons | — |
+| `combat:boss.chunin.story_1` | Ch 24 | `lost_child`, hollowed, at the border post | **Hollow:** flat AI, no flinch, cycles three stolen natures; ordered to wound, never kill, the player; phase 2 begins when a friend falls (scripted kindle, story floor); ends when she sees the cord |
+| `combat:boss.chunin.story_2` | Ch 31.1 | A Yūgure hearth in the storm drain under the wall | **Smothered:** no sound cues; the player's first Ember Link (story floor) lets them see through allies' eyes |
+| `combat:boss.jonin.story_1` | Ch 37.3 | `yugure_blade` in the archive | Protect the stone basket (the Hearthstone); ink lines in the air deny areas; he retreats wounded |
+| `combat:boss.jonin.story_2` | Ch 35 | The nursery hearth's leader in the Valley of Ash | Avoidable: squad3_a's no-fight plan skips most of it; the children's cells are protect objectives |
+| `combat:boss.anbu.story_1` | N6 | The Undercroft's old masks, then `squad5_c` | Sealing traps; `squad5_c` can be talked down mid-fight (`ans.squad5_c.offer`), ending it |
+| `combat:boss.road.story_1` | Ch 51b | `yugure_blade`, last duel, on the rooftops | His best; ends on the player's answer (`ans.yugure_blade.why`), after which he turns |
+| `combat:boss.road.story_2` | Ch 47 | The hearths hunting the deserting `lost_child` at the shrine | Defend the stone basket and her; then the relighting (a scripted thread floor) |
+| `combat:boss.road.final` | Ch 52 to 53 | `yugure_leader` on the Rock | **Dark mirror:** a drain beam the player breaks by line of sight; unbroken anchors (`story.array.unbroken`) add hollow fighters; **every fire:** in the last phase the player's power grows with each flame given (the bond web tiers); the fight ends when his mirror turns on him |
+
 ### Clan lines
 
 | Quest | The truth |
