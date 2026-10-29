@@ -816,9 +816,29 @@ The full design is in **[CHARACTER_CREATION.md](CHARACTER_CREATION.md)**. In sho
 
 ### Your apartment and furniture
 
+The full design is in [docs/HOME.md](docs/HOME.md) (on the `home` branch until it merges; engine
+`life/home`, pure Java on `life/bonds`). In short:
+
+- **The Academy flat:** one room (6×6), a kitchenette, a bathroom, a genkan and a 4×2 balcony facing
+  the Hokage Rock. Classic always gets `flat.leaf_block.3a`; Varied rolls one of four equal
+  candidates. You start with a futon, a low table and a cupboard.
+- **The day at home:** the mirror and closet for outfits; the mailbox (the stipend envelope, notes,
+  invitations, clan summons); the cupboard (food goes stale as a joke: one Well Fed tier less, never
+  harm); the Hearth pot; the journal at the desk; and your own bed.
+- **Comfort** (diminishing per category, capped by the home) improves Well Rested (+10% to +15%
+  chakra regen, until 12:00 to 15:00; a bare home keeps the basic rule). Six furniture sets and 25
+  clan sets add comfort and a small perk each.
+- **Tidiness:** a light system (mess caps at 12, one quick clean clears it; a messy home costs at
+  most 5 comfort, never friendship).
+- **On show:** keepsakes and milestone photos in item frames and on shelves; givers notice a kept
+  gift. A houseplant that never dies; your pet lives here.
+- **Visitors:** drop-ins at bond level 3+, the squad after missions, the sensei's check-ins,
+  neighbours and hosted home hangouts, all reacting to decor and mess; spare keys at bond level 6.
+- **A training corner** at 40% of a training ground's value, capped at an hour a day.
+- **Content:** 151 furniture pieces (137 in the beta) and 39 keepsakes.
+
 Your home is a VF house: its House Plaque flood fill gives exact bounds (`home/HouseBounds`), and
-furnishing is only allowed inside them. In Varied saves the apartment is rolled from a set of
-candidate flats; in Classic it is always the same one.
+furnishing is only allowed inside them.
 
 - **Furnish mode.** Press `F` at home (or right-click your door plaque). Furniture items in your
   inventory show a ghost preview snapped to the block grid; scroll to rotate, click to place. Aim
@@ -1399,8 +1419,9 @@ What the roadmap needs from it, spoiler-free:
 | Clan founder | Your clan's estate |
 | Hokage | Quarters in the Residence |
 
-Moving is a mover NPC: furniture and chests are packed into moving crates (items that keep their
-contents) and placed again in furnish mode.
+Moving is a farewell quest, and everything comes along in moving crates (items that keep their
+contents), placed again in furnish mode. A spouse moves in, with a shared bed; children come later.
+In multiplayer (later), each player has their own home. Details in [docs/HOME.md](docs/HOME.md).
 
 ### Player clans
 
