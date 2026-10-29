@@ -348,7 +348,8 @@ Conditions in the beta: `flag`, `rank_at_least`, `level_at_least`, `quest_state`
 ([BONDS.md](BONDS.md#13-data-formats)): `friendship` reads the level a character acts on (lowered
 while a quarrel lasts), plus `bond_meter`, `bond_memory`, `bond_moment`, `bond_state`,
 `romance_stage`, `kindling`, `knows_fact`, `squad_cohesion`, `in_squad`, `squad_can_return`,
-`standing` and `jealous`. `role:squad` is the current teammates and sensei, `role:teammates` the
+`standing`, `jealous`, `clan_friendship`, `clan_relation`, `village_mood`, `hook_open`,
+`kindling_uses` and `bond_web`. `role:squad` is the current teammates and sensei, `role:teammates` the
 teammates alone; a role group passes only if every member does.
 
 Actions in the beta: `set_flag`, `start_quest`, `advance_quest`, `fail_quest`, `give_item`,
@@ -356,7 +357,8 @@ Actions in the beta: `set_flag`, `start_quest`, `advance_quest`, `fail_quest`, `
 `spawn_group` (enemies or residents at an anchor), `move_role` (send a character somewhere),
 `promote`, `unlock` (a place, a shop item, a recipe), `news` (VF village news), `set_time`; and
 the bond actions `bond_event`, `shared_moment`, `start_conflict`, `apologize`, `reconcile`, `mend`,
-`reveal_fact`, `romance`, `return_to_squad`, `favor`, `deed`, `celebrate_birthday` and `bond_flag`.
+`reveal_fact`, `romance`, `return_to_squad`, `favor`, `deed`, `celebrate_birthday`, `bond_flag`,
+`kindle`, `resolve_hook`, `clan_event`, `clan_deed` and `mood_event`.
 Reserved now for later arcs, so the format does not change: `time_skip`, `carve_face`,
 `set_hokage`, `remove_from_squad`, `found_clan`, `marry`.
 
@@ -624,6 +626,10 @@ curated draw, Varied saves roll it.
 | Clanless shinobi | ~28% | 84 | Mixed across the six shinobi collections; ordinary family names | Shinobi apartment blocks and ordinary streets, everywhere |
 | Minor clans (10) | ~15% | 45 | Their clan pieces | Mixed neighbourhoods, no walls |
 | Noble clans (15) | ~13% | 39 | Their clan pieces | Their clan seats; an Uchiha or a Hyuga is about 1 in 70 (4 or 5 each), a Hatake about 1 in 500 (one, if any) |
+
+**At village scale** the residents' relationships run on a sparse social graph with clan structures,
+inter-clan relations, moods and society hooks for side quests, not VF's every-pair meters
+([BONDS.md](BONDS.md#18-village-scale)).
 
 **Civilian districts and shops.** Civilians run the village's daily life: the grocer, the fish and
 vegetable stalls, the tea house, the furniture maker, the tailor, the bath house, the pawn shop,

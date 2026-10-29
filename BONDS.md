@@ -37,10 +37,13 @@ Life mod depends on it (`implementation project(':life:bonds')`) and adds the th
 | Quest and dialogue data | `BondConditions`, `BondEffects`, `BondDialogue` |
 | Save | `SaveFormat` |
 | Seed streams | `Seeds` |
+| The village at scale: the social graph, tiers, clans, moods, hooks | `Village`, `SocialTie`, `ClanProfile`, `ClanRelations`, `Mood`, `SocietyHook` |
+| Everyone you are close to, as one number | `BondWeb` |
 
 ```
-./gradlew :life:bonds:test                  # 61 tests
+./gradlew :life:bonds:test                  # 76 tests
 ./gradlew :life:bonds:simulate              # the 60-hour pacing tables (-Pseed=N, -Pexplain=role:teammate_a)
+./gradlew :life:bonds:simulateVillage       # a village of 300 for 180 days: cost, ties, clan drift, hooks
 ```
 
 ## 1. The data model
@@ -199,6 +202,9 @@ days; "kept" is permanent):
 | `helped_resident` | small | 60 | 2 / 2 / 0.5 / 0 | deed 5 | kindness |  |  |  |
 | `defended_village` | notable | 120 | 2.5 / 2.5 / 3.5 / 0 | deed 12 | courage, duty |  |  |  |
 | `apologized` | small | 30 | 1 / 1 / 0 / 0 |  |  |  |  |  |
+| `mediated` | notable | 90 | 2 / 3 / 2 / 0 | deed 4 | kindness |  |  |  |
+| `honored_custom` | notable | 90 | 2 / 2 / 1.5 / 0 | deed 4 | family, duty |  |  |  |
+| `guest_in_quarter` | small | 60 | 1 / 1 / 0 / 0 | deed 1 |  |  |  |  |
 | `reckless_charge` | small | 30 | 0 / -2 / 1 / 0 | professional | courage |  | recklessness | boldness→respect 2, boldness→trust 2 |
 | `disobeyed_orders` | notable | 45 | -0.5 / -3.5 / -0.5 / 0 | professional |  | duty | recklessness | boldness→respect 2, discipline→trust -2 |
 | `mission_failed` | notable | 30 | -0.5 / -1 / -1 / 0 | professional |  | duty |  |  |
@@ -210,6 +216,9 @@ days; "kept" is permanent):
 | `felt_overlooked` | small | 30 | -2 / -0.5 / 0 / 1 |  |  |  | neglect | pride→rivalry 2 |
 | `broke_promise` | notable | 60 | -2.5 / -6 / -0.5 / 0 |  |  | honesty | lateness |  |
 | `went_over_their_head` | notable | 60 | -2 / -5 / 0 / 0.5 |  |  | loyalty |  | discipline→trust 2.5 |
+| `sided_against` | notable | 60 | -3 / -3 / 0 / 1 |  |  | loyalty |  |  |
+| `insulted_clan` | notable | 60 | -5 / -3 / -1 / 0 | deed -8 |  | family | rudeness |  |
+| `failed_client` | notable | 60 | -2 / -3 / -1 / 0 | professional, deed -4 |  | duty |  |  |
 | `hurt_resident` | notable | 60 | -7 / -7 / -1 / 0 | deed -15 |  | kindness | cruelty |  |
 | `quarrel` | notable | 45 | -6 / -2.5 / 0 / 2 | quarrel, spreads |  |  |  | pride→affection -2 |
 | `mocked_dream` | big | kept | -6 / -3.5 / 0 / 2 | quarrel |  |  | rudeness |  |
@@ -402,8 +411,15 @@ puts it out.
 | technique | 3 | 1 | x1 | 3 in-game hours |
 | full | 5 | 1 | x1.5 | 2 in-game hours |
 
-Shinobi Combat's `kindle` effect spends a `Kindling.Grant`; Core's natures list gains a "borrowed"
-source.
+A **spouse is the strongest bond**: their full kindling burns twice as long and rekindles in half the
+time. Every use is counted (`kindle`, `kindling_uses`): after 12 with one person, a master's trial
+can make their nature yours for good. Shinobi Combat's `kindle` effect spends a `Kindling.Grant`;
+Core's natures list gains a "borrowed" source.
+
+**The bond web** (`BondWeb`) is everyone you are close to as one number: each bond at level 6 counts
+1, at 7 counts 2, at 8 counts 3, at 9 counts 4 and at 10 counts 6, plus 1 for every community (a
+clan, a district, a rank) holding at least one of them, so a web reaching across the village counts
+for more than a deep circle in one corner. Quests read it with `bond_web`.
 
 ## 12. The bond book
 
@@ -446,6 +462,12 @@ member does, and an action applies to each member.**
 {"squad_can_return": "role:teammate_b"}
 {"standing":         ["clan:nara", "good_neighbor"]}  at least this title
 {"jealous":          "role:teammate_b"}
+{"clan_friendship":  ["nara", 7]}                    someone of the clan at this level
+{"clan_relation":    ["inuzuka", "aburame", "rivals"]} at least this label (or a number)
+{"village_mood":     ["village", "festive"]}
+{"hook_open":        "hook.clan_feud.12"}
+{"kindling_uses":    ["role:teammate_a", 12]}
+{"bond_web":         40}
 ```
 
 **Actions:**
@@ -465,6 +487,11 @@ member does, and an action applies to each member.**
 {"deed":              {"act": "defended_village", "about": "", "witnesses": ["role:squad"]}}
 {"celebrate_birthday": "role:x"}
 {"bond_flag":         ["role:x", "met_family"]}
+{"kindle":            "role:teammate_a"}                a use of Kindling Bond, counted toward a master's trial
+{"resolve_hook":      ["hook.clan_feud.12", "mediated"]}
+{"clan_event":        ["inuzuka", "aburame", 10, "festival"]}
+{"clan_deed":         {"clan": "hyuga", "act": "honored_custom"}}
+{"mood_event":        ["village", 0.4, 0]}              cheer and tension: a festival, an attack
 ```
 
 An action returns "" or why it did nothing (`not_ready`, `not_eligible`, `level`...) for the quest
@@ -517,6 +544,9 @@ someone no longer in the pack is dropped.
             "knowers": {"role:sensei": {"how": "seen", "day": 33, "from": ""}}}]}
 ```
 
+- **The village** is a world attachment, `shinobi_life:village` (`Village.write`/`read`, `"format": 1`):
+  the ties, the moved clan relations and marriage bonds, the moods and the open hooks. Clan
+  structure is rebuilt from the people on load.
 - **Versioning:** every save carries `format`. `SaveFormat.FORMAT` is current; older formats
   migrate on load; a newer one is refused with a clear message instead of being misread.
 - **Format 0 is Village Friends' own friendship** (`FriendshipState` points, `BondState` trust and
@@ -569,7 +599,7 @@ acts on at the end of each chapter, and squad cohesion):
 | 14 | Second C-rank | 11.3 | 36 | 6 | 8 | 5 | 3 | 3 | 3 | 2 | 68 |
 | 16 | Forest of Death | 12.6 | 42 | 7 | 8 | 5 | 3 | 3 | 3 | 2 | 69 |
 | 19 | Chunin Exams finals | 14.1 | 50 | 7 | 9 | 5 | 3 | 3 | 3 | 2 | 71 |
-| 20 | Results | 14.3 | 51 | 7 | 9 | 6 | 3 | 3 | 3 | 3 | 71 |
+| 20 | Results | 14.3 | 51 | 8 | 9 | 6 | 3 | 3 | 3 | 3 | 71 |
 
 (Ch 12's dip is a scripted quarrel with teammate_b: argument, cold shoulder, making up, mended by
 Ch 13.) Across the three players:
@@ -578,7 +608,7 @@ Ch 13.) Across the three players:
 |---|---|---|---|
 | Academy end, teammates | 3 / 4 | 2 / 4 | 2 / 1 (a broken confidence) |
 | Ch 11 campfire | plays (6) | plays (5) | skipped (2) |
-| Beta end, teammates | 8 / 9 | 7 / 9 | 3 / 3 (one teammate left, replaced) |
+| Beta end, teammates | 8 / 9 | 8 / 9 | 3 / 3 (one teammate left, replaced) |
 | Quarrels / fallings-out | 0 / 0 | 2 / 0 | 3 / 1 |
 | Romance in the beta | none | none | none |
 | 60 h: bonds at level 10 | 3 | 2 | 0 |
@@ -614,9 +644,154 @@ Applied in the same branch, all format additions:
 - **Seed streams:** add `chemistry`, `romance`, `gossip`, `ties`, `recruit` and `household` rows.
 - **Friendship and bonds:** point to this file; levels come from the bond engine, not VF's points.
 - **Code by mod:** Life's pure core gains the `bond` package (`life/bonds`).
+- **Population:** the village's social graph, clan politics and society hooks live in the bond engine
+  (section 18); the side-quest generators bind to its hooks (section 19).
 - **Your squad and roles:** a teammate leaves after their bond stays low for 14 days, and can come back.
 
-## 18. Open questions
+## 18. Village scale
+
+The beta's Leaf has about 200 residents and the full village about 300 (45% civilians, 28% clanless
+shinobi, 15% in the 10 minor clans, 13% in the 15 noble clans), in 25 clan quarters and
+neighbourhoods and the civilian districts. VF's `Society` keeps a meter for every pair, which suits
+a village of 20 to 30; at 300 it would be about 45,000 pairs. The Leaf runs on a **sparse social
+graph** instead (`Village`):
+
+- **Real ties** (`SocialTie`), at most 8 chosen ones per resident: family and household, squad and
+  class, coworkers, the clan head and two clanmates, three neighbors, then friends, rivals, a
+  sweetheart or spouse. A tie works like VF's: a target from chemistry (and, across clans, a little
+  of the clans' relation), time known, days together, the last quarrel. When two people are tied
+  twice over, the closer kind wins.
+- **Everyone else is derived on demand:** `0.3 x their clans' relation + 10 x chemistry + 5 for
+  the same district`. Nothing is stored for them.
+- **Ties form and change** on each tie's and resident's weekly turn (a seventh of the village a
+  day): friends of friends who click become friends; ties that sour become rivals (and shinobi
+  peers' rivalries heat up); quarrels happen, likelier in a tense district and between the proud;
+  adults fall for each other, become sweethearts and marry after eight weeks, subject to their
+  clans' pressure to marry in.
+
+**Simulation tiers.** VF ticks residents' routines once a second; the bond engine's society ticks
+once a day:
+
+| Tier | Who | Updated |
+|---|---|---|
+| Cast | The bound roles | Every day: full bonds, squad dynamics, their ties |
+| Known | Residents the player has met | Every day: their bond with the player and their daily ties |
+| Background | Everyone else | Once a week, coarsely (a week of days together at once); their opinion of the player (from gossip) once a week |
+
+Meeting someone (`Village.meet`, any talk or shared act) promotes them to known for good.
+
+**Clans as structures** (`Village.House`, `ClanProfile`): the head (the senior adult), elders (three
+for the great noble clans, fewer for the rest), an heir (the head's child, else a younger member), a
+main and branch house where the clan has one (the Hyuga), and the households of the quarter. Each
+clan's upbringing adds its values and nudges its members' traits (the Hyuga dutiful and disciplined,
+the Akimichi warm, the Aburame private) and names its customs for quests and dialogue (the Akimichi
+share the feast, the Inuzuka respect the pack, the Hyuga bow to the main house). **Intermarriage:**
+each clan has a strictness (the Hyuga 0.85, the Uchiha 0.7, the minor clans about 0.1); a match
+across clans happens with chance `(1 - strictness A) x (1 - strictness B)`, and a refused one can
+raise a `forbidden_match` hook.
+
+**Clan politics** (`ClanRelations`): a symmetric matrix from -100 (feud) to 100 (sworn allies) over
+the 25 clans and the clanless and civilian groups. Bases come from old alliances (the Nara, Akimichi
+and Yamanaka; the Senju and Uzumaki), rivalries, grudges (the Inuzuka and Aburame), trade ties (the
+merchant clans and the civilians) and marriage ties. Events move it; it drifts back 5% of the gap a
+week; each marriage between two clans warms their base for good. Clans on bad terms have incidents
+(raising tension and `clan_feud` hooks); allies share good days. The player moves it by mediating
+feuds, taking sides, honoring or insulting customs (`clan_event`, `clan_deed`).
+
+**Clan standing with the player:** membership and invitations (section 10), honour
+(`honored_custom`, an elder's request done), insults (`insulted_clan`, a deed the whole clan hears
+of), being a guest in a quarter (`guest_in_quarter`). A **clan-born** player is one of their own: their
+clan starts 8 affection and 6 trust warmer, elders bring them requests, and their clan's customs bind
+them. A **clanless** player starts even everywhere, earns standing with `group:clanless`, can be
+invited into a clan, and learns a lesser technique from any clan where a friend is at level 7
+(`clan_friendship`).
+
+**Village-wide dynamics.**
+
+- **Districts and ranks** are communities with their own standing (section 8); respect follows rank.
+- **Gossip along ties:** news travels along real ties, by their closeness (spouse and household 4,
+  squad 3, friends and coworkers 2.5, clan 2, neighbors 1.5, rivals 0.5), slower across clans on bad
+  terms (`x (1 + relation / 200)`), faster when the village is tense or (for good news) cheerful.
+  News nobody passes on for three days has died down.
+- **Rumors bend** as they spread: each retelling keeps most of the teller's slant, leans the way the
+  teller feels about the player (a friend tells it kindly, someone cold tells it worse), and picks up
+  a little noise. The listener takes the news moved by its own size times the slant.
+- **Moods** (`Mood`): cheer and tension per community (the village, a district, a clan), pushed by
+  deeds, incidents and events (`mood_event` for a festival or an attack), easing 10% a day: festive,
+  proud, calm, uneasy, tense or grieving. Dialogue reads `village.mood.<label>`.
+
+## 19. Society hooks
+
+The simulation raises tensions, needs and opportunities as **hooks** for the side-quest generators
+to bind to (`SocietyHook`). Handcrafted quests stay with the quest engine; a generated quest names a
+hook type, fills its slots from the hook's roles, checks `requires`, and ends with `resolve_hook`.
+
+```json
+{"format": 1,
+ "id": "hook.clan_feud.12",
+ "type": "clan_feud",
+ "roles": {"clan_a": "inuzuka", "clan_b": "aburame", "a": "resident:41", "b": "resident:87"},
+ "place": "village",
+ "raised": 84, "expires": 98, "urgency": 0.42,
+ "requires": {"all": [{"rank_at_least": "genin"}]},
+ "stakes": {"relation": ["inuzuka", "aburame", 10]},
+ "outcomes": ["mediated", "sided_a", "sided_b"]}
+```
+
+| Type | Raised when | Roles | Lasts | Requires | Outcomes and what they do |
+|---|---|---|---|---|---|
+| `clan_feud` | An incident between clans on bad terms | `clan_a`, `clan_b`, `a`, `b` | 14 days | Genin | `mediated` (+10 relation, both remember it), `sided_a` / `sided_b` (-6, one stood by, one sided against) |
+| `favor_needed` | A known or nearby resident needs a hand | `client` | 7 | — | `done` (a helped deed), `refused` |
+| `quarrel_to_mediate` | Two friends quarrel, one of them known | `a`, `b` | until it heals (21) | friendship 3 with either | `mediated` (their quarrel forgiven), `failed` |
+| `secret_crush` | An adult falls for another adult | `admirer`, `beloved` | 28 | friendship 6 with the admirer, the player a teen or older | `helped` (sweethearts), `kept_quiet`, `told` (a broken promise) |
+| `lost_item` | A known or nearby resident lost something | `owner` | 5 | — | `returned` (a helped deed), `kept` (a hurt one) |
+| `newcomer` | Someone settles in the village | `newcomer` | 21 | — | `befriended` (a meal together), `ignored` |
+| `elder_request` | An elder of the player's clan, or of one where they are a Helping Hand | `elder`, `clan` | 14 | the clan, or that standing | `done` (the clan hears you honored its custom), `refused` |
+| `rivalry_heating` | Two shinobi peers' tie sours into rivalry | `a`, `b` | 14 | friendship 3 with either | `cooled` (friends again), `fanned` (a quarrel) |
+| `forbidden_match` | A couple's clans refuse the match | `a`, `b`, `clan_a`, `clan_b` | 28 | the player a teen or older | `supported` (they marry; their clans grumble), `discouraged` |
+
+At most 16 hooks are open at once and 4 of a type; the same roles never get the same hook twice.
+`Village.visibleHooks()` is what the player would come across: someone in it is known, or it is in
+their district or clan. Nothing romantic surfaces while the player is a child (the crush hooks wait
+for the teen stage), though adults still fall in love in the background.
+
+**The village simulation** (`./gradlew :life:bonds:simulateVillage`, seed 20261029: 301 residents
+by `population.json`'s weights plus the cast, 180 days, a player meeting two people a day and
+resolving some hooks):
+
+| Measure | Result |
+|---|---|
+| Cost | about 13 ms a simulated day on average, 39 ms at worst (a day is 20 real minutes); about 1,000 tie and resident updates a day |
+| Ties | about 1,800 (family 312, friends 522, neighbors 403, class 264, clan 107, spouses 94, work 85, rivals 26): 6.1 chosen ties per resident, 8 at most |
+| Marriages | 9 new in 180 days, 5 of them across clans or groups |
+| Clan drift | Inuzuka and Aburame: -11 to rivals (incidents outpaced mediation); others moved a few points (trade warming the civilians and the Hagane) and drifted back |
+| Hooks | about 9 a week raised and seen (favors 60, lost items 63, quarrels 60, elder requests 26, clan feuds 10, crushes 6 after the teen stage, rivalries 1): about one per in-game day, capped at 16 open |
+| Mood | festive at the festival, proud ten days on, calm again after |
+
+`VillageScaleTest` holds the bounds (cost, ties per resident, hooks a week) and determinism.
+
+## 20. What the roadmap asks of bonds
+
+| Roadmap need | Where |
+|---|---|
+| `friendship` condition, `add_friendship`, rewards to a role or `role:squad`, friendship branches, `kind: bond` quests | Section 13; the roadmap's quest example runs unchanged |
+| New meters readable by quest data without code | `bond_meter`, `bond_memory`, `bond_state` and the rest, registered as Core conditions |
+| Roles bound to VF residents with personality, family and meters, fixed per save; Varied rolls by personality; names in both | `Person` (role ids, family, personality); rolls from the `cast` stream (`Personality.rolled`, `ClanProfile.shape`) |
+| Bond quests (two per classmate, two per teammate), the squad beats, low friendship changing them | Moments by quest id (`shared_moment`), gates (section 3), the beats in the simulation (section 15) |
+| Teammates leaving and replaced; choosing who joins missions from Chunin | Section 7; mission companions are Progression's choice, reading `friendship` and `squad_cohesion` |
+| Rivals, classmates, sparring with ranked residents raises friendship | `spar_won` / `spar_lost` (respect and rivalry; affection for a good match) |
+| Mentors teach at friendship and level thresholds; the sensei's exam recommendation | `friendship` plus Core's `level_at_least`; the recommendation reads `bond_meter [role:sensei, trust, N]` and `friendship [role:sensei, N]` |
+| Clanless players learn one lesser technique per friendly clan at friendship 7 | `clan_friendship [clan, 7]` |
+| Kindling Bond: nature at 6, technique at 8, both and longer at 10 or with a teammate, sensei or spouse; a spouse strongest; borrowed natures learned by a trial | Section 11 |
+| Romance from the teen stage, never children, nothing in the beta, interest from personality and chemistry, dating at 7, confessing at 8 (village news) | Section 10 and `CourtshipTest`; the confession is a deed and village news |
+| Marriage: adults, level 10, a proposal and a shrine wedding; the spouse moves in; clan joining | `court(... "propose" / "wed")`; moving in and the clan change are Life's and Core's glue on the `wedding` event |
+| Children in the post-game | `Household` (section 10) |
+| Joining a clan by invitation (threshold proposed) | Pillar standing with the clan and two members at 8, or an elder at 9 (`Recruitment.invited`) |
+| Recruiting for a player clan: clanless, friendship 7+, personality decides; 3 / 8 / 20 | `Recruitment` (section 10) |
+| Standing: Good Neighbor to found a clan; the highest standing everywhere for Hokage; prices; dying on a mission costs standing with the client | Section 8; `failed_client` (a deed about the client); prices through VF's reputation hook |
+| Residents react to rank, separately from friendship; pet kindness a VF deed | Unchanged (VF and Village); a VF deed can feed the bond engine as a `deed` |
+
+## 21. Open questions
 
 - **Kindling Bond for the deepest bonds.** The roadmap says level 10 "(or a teammate, your sensei,
   your spouse)" gets both. Read here as: those three get the full tier from level 8. Or should
@@ -630,3 +805,7 @@ Applied in the same branch, all format additions:
   level falls only when closeness is 10 below it, so old friends drift but slowly.
 - **How visible are the numbers?** The book shows words for each meter; should it show the meters,
   or only words and the level?
+- **Hooks a week.** About nine a week (one per in-game day) once the player knows the neighborhood.
+  Too many to feel special, or right for a living village? The rates are one constant each.
+- **Clan drift.** Feuds can deepen if nobody mediates (the Inuzuka and Aburame slid to rivals in the
+  simulation). Should relations have a floor, or can two clans end up in an open feud?
