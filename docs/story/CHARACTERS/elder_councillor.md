@@ -71,7 +71,7 @@ never visible.
 - **Road to Hokage:** he supports the restoration at the registry (Ch 46: he waives the founding fee
   "on behalf of a debt"); in Ch 50 he opens the Senju quarter's anchors himself.
 - **Ending:** keeps his seat; at Ch 55 he hands the player the registry's first new page: the
-  restored stipend in the Fourth's name. A possible archive keeper.
+  stipend extended and made law in the Fourth's name. A possible archive keeper.
 
 ### If bound (the voice)
 
@@ -154,7 +154,7 @@ Nothing else differs before Ch 39.
 
 | Id | When | Question | Options | Honours / tests | Remembered | Changes him | Bound answer in Ch 39c |
 |---|---|---|---|---|---|---|---|
-| `ans.elder_councillor.stipend` | Ch 7 (graduation, level 1) | "The stipend ends today. Was it enough?" | It was a home / It was barely enough / It should never end for anyone | Duty | Ch 55: the restored stipend's terms | "Never end": he proposes a stipend for every Academy orphan until Chunin (innocent, Ch 40; the player can enact it in Ch 55) | "You said it was a home. I was keeping you on file in it." |
+| `ans.elder_councillor.stipend` | Ch 7 (graduation, level 1) | "You are a shinobi now, and the stipend is still yours. Was it enough, these weeks?" | It was a home / It was barely enough / It should never end for anyone | Duty | Ch 55: the restored stipend's terms | "Never end": he proposes a stipend for every Academy orphan until Chunin (innocent, Ch 40; the player can enact it in Ch 55) | "You said it was a home. I was keeping you on file in it." |
 | `ans.elder_councillor.debt` | Level 4 | "Does a grandchild owe for a grandparent's wrong?" | Yes / No, but they can choose to pay / Only if they keep the profits | His heart | Ch 39 or 40 | "Choose to pay" is the line he quotes at the council | "You said one can choose to pay. I chose a way that cost other people." |
 | `ans.elder_councillor.law` | Council day (Ch 12+), level 3 | "Are laws for the village or for the people in it?" | The village / the people / the people the village forgets | Duty against kindness | Ch 31 (his abstention speech, every save) | "The people the village forgets": his abstention adds "and a registry that forgets anyone is no registry" (both tracks). Unset: the plain line | — |
 | `ans.elder_councillor.sign` | Level 5 (Chunin) | "Would you put your seal on something you weren't sure of, if everyone you respected asked you to?" | No / Yes, and carry it / Yes, and read it aloud first | Tests his signature | Ch 37.0 to 40 | "Read it aloud first" becomes his rule as a councillor after Ch 40 | "I did, and I didn't read it aloud." |

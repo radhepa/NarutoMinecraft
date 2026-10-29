@@ -123,6 +123,14 @@ done when both are). Gates in the character briefs use them ("never before `stor
 **Story floor.** A scripted gift scene treats its scripted target as at the tier it needs (Ch 24:
 Spark; Ch 31: Flame), whatever the level.
 
+## Journal documents and other ids
+
+`doc.ledger_sample` (Ch 0), `doc.stipend_papers` (Ch 1), `doc.shelving_slip` (Ch 5),
+`doc.delivery_page` (Ch 11): journal documents the case board (Ch 38) compares. `ans.player.feast`
+(Ch 20, falls variant). `shared_moment bond.squad5_c.porter` (Ch 28.5). Act `saved_the_village`
+(end of Ch 53; a deed worth 40). `world.roster.<role>.gone` (set when a role leaves the roster:
+neutral aliases read by the ranks session): `hokage_4` at Ch 20 if `twist.fourth_fate = falls`; the bound candidate at Ch 39 if arrested; `sensei_2` and `elder_keeper` at Ch 51b.
+
 ## Tokens the story needs
 
 `{they:<role>}`, `{them:<role>}`, `{their:<role>}`, `{theirs:<role>}`, `{themself:<role>}` and verb

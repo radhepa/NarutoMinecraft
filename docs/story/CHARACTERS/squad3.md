@@ -157,7 +157,7 @@ after every shogi game she loses.
 | Values / peeves | kindness, family / cruelty, neglect |
 | Dream | Open a shop (a barbecue house of his own) *and* be a shinobi |
 | Tier | Story-driving |
-| First / last | Ch 1 / Ch 55 (restores the stipend with the player) |
+| First / last | Ch 1 / Ch 55 (stands beside the player when the stipend is extended and made law) |
 
 ### Arc
 
