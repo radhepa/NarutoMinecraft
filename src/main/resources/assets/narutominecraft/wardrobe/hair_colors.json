@@ -261,6 +261,36 @@
         "#566087"
       ]
     },
+    "HAGANE_IRON": {
+      "name": "Hagane Iron",
+      "ramp": [
+        "#111317",
+        "#1b1e23",
+        "#282d34",
+        "#3a4149",
+        "#55606a"
+      ]
+    },
+    "HAGANE_SOOT": {
+      "name": "Hagane Soot",
+      "ramp": [
+        "#141010",
+        "#201917",
+        "#2e2420",
+        "#42352d",
+        "#5b4a3e"
+      ]
+    },
+    "HAGANE_SLATE": {
+      "name": "Hagane Slate",
+      "ramp": [
+        "#1a1c20",
+        "#272a30",
+        "#373c44",
+        "#4c535d",
+        "#68717c"
+      ]
+    },
     "HATAKE_SILVER": {
       "name": "Hatake Silver",
       "ramp": [

@@ -288,7 +288,22 @@
     "h1512_shoulder_sweep",
     "h1513_strap_braid",
     "h1514_iai_gust",
-    "h1515_crossed_pin_bun"
+    "h1515_crossed_pin_bun",
+    "h2101_gatepost_spikes",
+    "h2102_hedgehog_crop",
+    "h2103_anvil_flat_top",
+    "h2104_rivet_buzz",
+    "h2105_spiked_tail",
+    "h2106_messenger_sweep",
+    "h2107_ridge_crest",
+    "h2108_bristle_bob",
+    "h2109_iron_topknot",
+    "h2110_side_swept_spikes",
+    "h2111_long_spiked_tail",
+    "h2112_scrap_buns",
+    "h2113_shaggy_mane",
+    "h2114_cowlick_shag",
+    "h2115_braided_spikes"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -337,7 +352,8 @@
     "w1402_crimson_protector",
     "w1501_proctor_bandana",
     "w1502_cat_mask",
-    "w1503_crescent_hachimaki"
+    "w1503_crescent_hachimaki",
+    "w2101_hachigane"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -510,7 +526,17 @@
     "t1507_convalescent_wrap",
     "t1508_practice_gi",
     "t1509_scarf_knit",
-    "t1510_tasuki_iaido"
+    "t1510_tasuki_iaido",
+    "t2101_gate_guard_vest",
+    "t2102_messenger_jacket",
+    "t2103_bracer_tee",
+    "t2104_mace_bearer",
+    "t2105_iron_coat",
+    "t2106_academy_ringer",
+    "t2107_smith_wrap",
+    "t2108_rivet_gambeson",
+    "t2109_runner_wrap",
+    "t2110_plated_vest"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -594,7 +620,11 @@
     "b1405_bandaged_shorts",
     "b1501_gekko_hakama",
     "b1502_swordsman_trousers",
-    "b1503_strap_leggings"
+    "b1503_strap_leggings",
+    "b2101_guard_trousers",
+    "b2102_runner_shorts",
+    "b2103_plated_wrap_skirt",
+    "b2104_greave_boots"
   ],
   "characters": [
     {
@@ -1160,6 +1190,24 @@
       ],
       "color": "#8d7a8e",
       "mirror": true
+    },
+    "hagane_nose_bandage": {
+      "rects": [
+        [
+          0,
+          -1.9,
+          4.6,
+          0.5
+        ],
+        [
+          0,
+          -2.0,
+          1.2,
+          0.7
+        ]
+      ],
+      "color": "#f6f2e6",
+      "mirror": false
     },
     "hatake_scar": {
       "rects": [
@@ -2564,6 +2612,280 @@
           "top": "t1510_tasuki_iaido",
           "bottom": "b1501_gekko_hakama",
           "rank": "jonin"
+        }
+      ]
+    },
+    {
+      "id": "hagane",
+      "name": "Hagane",
+      "tagline": "Steel-named gate guards and messengers of the Hidden Leaf: spiky dark hair, a bandage across the nose, steel-plated bracers and shin guards, a mace on the back, in gunmetal and rust-orange with off-white.",
+      "standing": "minor",
+      "ability": null,
+      "palettes": {
+        "HAGANE_GUNMETAL": {
+          "name": "Hagane Gunmetal",
+          "P": "#4a5159",
+          "S": "#e9e2cf",
+          "A": "#c25f2b",
+          "L": "#5b3f2c",
+          "M": "#a2acb5",
+          "K": "#1b1d21",
+          "D": "#2d3238"
+        },
+        "HAGANE_RUST": {
+          "name": "Hagane Rust",
+          "P": "#94482a",
+          "S": "#ebe4d1",
+          "A": "#d9823f",
+          "L": "#4e3527",
+          "M": "#a2acb5",
+          "K": "#1c1d20",
+          "D": "#30353c"
+        },
+        "HAGANE_ASH": {
+          "name": "Hagane Ash",
+          "P": "#6f767d",
+          "S": "#eee8d8",
+          "A": "#c4602a",
+          "L": "#5f432f",
+          "M": "#b4bdc5",
+          "K": "#1e2024",
+          "D": "#363b42"
+        },
+        "HAGANE_LINEN": {
+          "name": "Hagane Linen",
+          "P": "#cfc6b0",
+          "S": "#efe9da",
+          "A": "#bd5a28",
+          "L": "#5b3f2c",
+          "M": "#a2acb5",
+          "K": "#1b1d21",
+          "D": "#3a4048"
+        },
+        "HAGANE_GUARD": {
+          "name": "Hagane Guard",
+          "P": "#5a663e",
+          "S": "#e6dfcc",
+          "A": "#c25f2b",
+          "L": "#5b3f2c",
+          "M": "#a2acb5",
+          "K": "#1b1d21",
+          "D": "#2d3238"
+        }
+      },
+      "hair_colors": {
+        "HAGANE_IRON": {
+          "name": "Hagane Iron",
+          "ramp": [
+            "#111317",
+            "#1b1e23",
+            "#282d34",
+            "#3a4149",
+            "#55606a"
+          ]
+        },
+        "HAGANE_SOOT": {
+          "name": "Hagane Soot",
+          "ramp": [
+            "#141010",
+            "#201917",
+            "#2e2420",
+            "#42352d",
+            "#5b4a3e"
+          ]
+        },
+        "HAGANE_SLATE": {
+          "name": "Hagane Slate",
+          "ramp": [
+            "#1a1c20",
+            "#272a30",
+            "#373c44",
+            "#4c535d",
+            "#68717c"
+          ]
+        }
+      },
+      "eye_colors": {},
+      "marks": {
+        "hagane_nose_bandage": {
+          "rects": [
+            [
+              0,
+              -1.9,
+              4.6,
+              0.5
+            ],
+            [
+              0,
+              -2.0,
+              1.2,
+              0.7
+            ]
+          ],
+          "color": "#f6f2e6",
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h2101_gatepost_spikes",
+          "h2102_hedgehog_crop",
+          "h2103_anvil_flat_top",
+          "h2104_rivet_buzz",
+          "h2105_spiked_tail",
+          "h2106_messenger_sweep",
+          "h2107_ridge_crest",
+          "h2108_bristle_bob",
+          "h2109_iron_topknot",
+          "h2110_side_swept_spikes",
+          "h2111_long_spiked_tail",
+          "h2112_scrap_buns",
+          "h2113_shaggy_mane",
+          "h2114_cowlick_shag",
+          "h2115_braided_spikes"
+        ],
+        "hair_colors": [
+          "HAGANE_IRON",
+          "HAGANE_IRON",
+          "HAGANE_SOOT",
+          "HAGANE_SLATE",
+          "ESPRESSO"
+        ],
+        "eye_colors": [
+          "DARK"
+        ],
+        "palettes": [
+          "HAGANE_GUNMETAL",
+          "HAGANE_GUNMETAL",
+          "HAGANE_RUST",
+          "HAGANE_ASH",
+          "HAGANE_LINEN"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w2101_hachigane"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          1,
+          2,
+          3
+        ],
+        "marks": [
+          {
+            "id": "hagane_nose_bandage",
+            "chance": 0.45
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "gate_guard",
+          "name": "Gate Guard",
+          "top": "t2101_gate_guard_vest",
+          "bottom": "b2101_guard_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "HAGANE_GUARD"
+          ]
+        },
+        {
+          "id": "messenger",
+          "name": "Messenger",
+          "top": "t2102_messenger_jacket",
+          "bottom": "b2102_runner_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "bracer_tee",
+          "name": "Bracer Tee",
+          "top": "t2103_bracer_tee",
+          "bottom": "b2101_guard_trousers",
+          "rank": "genin",
+          "palettes": [
+            "HAGANE_GUNMETAL",
+            "HAGANE_RUST",
+            "HAGANE_ASH"
+          ]
+        },
+        {
+          "id": "mace_bearer",
+          "name": "Mace Bearer",
+          "top": "t2104_mace_bearer",
+          "bottom": "b2104_greave_boots",
+          "rank": "chunin",
+          "palettes": [
+            "HAGANE_GUNMETAL",
+            "HAGANE_ASH",
+            "HAGANE_RUST"
+          ]
+        },
+        {
+          "id": "iron_coat",
+          "name": "Iron Coat",
+          "top": "t2105_iron_coat",
+          "bottom": "b2104_greave_boots",
+          "rank": "jonin",
+          "palettes": [
+            "HAGANE_GUNMETAL",
+            "HAGANE_ASH"
+          ]
+        },
+        {
+          "id": "academy_ringer",
+          "name": "Academy Ringer",
+          "top": "t2106_academy_ringer",
+          "bottom": "b2102_runner_shorts",
+          "rank": "academy",
+          "palettes": [
+            "HAGANE_GUNMETAL",
+            "HAGANE_ASH"
+          ]
+        },
+        {
+          "id": "smith_wrap",
+          "name": "Smith Wrap",
+          "top": "t2107_smith_wrap",
+          "bottom": "b2103_plated_wrap_skirt",
+          "rank": "chunin"
+        },
+        {
+          "id": "rivet_gambeson",
+          "name": "Rivet Gambeson",
+          "top": "t2108_rivet_gambeson",
+          "bottom": "b2101_guard_trousers",
+          "rank": "genin",
+          "palettes": [
+            "HAGANE_GUNMETAL",
+            "HAGANE_RUST",
+            "HAGANE_ASH"
+          ]
+        },
+        {
+          "id": "runner_wrap",
+          "name": "Runner Wrap",
+          "top": "t2109_runner_wrap",
+          "bottom": "b2103_plated_wrap_skirt",
+          "rank": "genin"
+        },
+        {
+          "id": "clan_head",
+          "name": "Clan Head",
+          "top": "t2110_plated_vest",
+          "bottom": "b2104_greave_boots",
+          "rank": "jonin",
+          "palettes": [
+            "HAGANE_GUARD"
+          ]
         }
       ]
     },

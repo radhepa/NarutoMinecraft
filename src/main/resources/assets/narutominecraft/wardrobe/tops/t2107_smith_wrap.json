@@ -1,0 +1,215 @@
+{
+  "id": "t2107_smith_wrap",
+  "kind": "top",
+  "name": "Smith Wrap",
+  "gender": "unisex",
+  "texture": "tops/t2107_smith_wrap.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        4.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        4.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "hammer_head",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        10.0,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        3
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "hammer_haft",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        12.0,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        40,
+        8
+      ]
+    },
+    {
+      "id": "right_bracer",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        6.5,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    },
+    {
+      "id": "left_bracer",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        6.5,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        16
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Off-white wrap tunic with gunmetal edging, rolled sleeves, a leather belt with a hammer, bracers."
+}

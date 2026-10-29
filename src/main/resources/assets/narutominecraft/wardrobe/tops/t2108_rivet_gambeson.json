@@ -1,0 +1,106 @@
+{
+  "id": "t2108_rivet_gambeson",
+  "kind": "top",
+  "name": "Rivet Gambeson",
+  "gender": "unisex",
+  "texture": "tops/t2108_rivet_gambeson.png",
+  "extrasHeight": 32,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "right_bracer",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_bracer",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Padded gunmetal jacket with a stand collar, steel rivets down the front, rust side ties, bracers."
+}
