@@ -58,7 +58,7 @@ The bathhouse keeper asked after you. I said you'd gone soft. Prove me wrong?
 I've been ringing the shrine bell alone lately. It sounds thinner. Come with me again?
 ## followup.ritual_missed.pet_walk
 The dog keeps stopping at the corner where we used to meet you. Walk with us again?
-## followup.ritual_missed.home_dinner
+## followup.ritual_missed.home_dinner  stage=teen|adult
 There's been an empty place at my table for a month. It's yours. Come back to dinner.
 ## followup.ritual_missed.flower_viewing
 The blossoms won't wait for us forever. Will you come and see them again before they fall?

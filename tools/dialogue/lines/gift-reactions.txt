@@ -63,7 +63,7 @@ Is this what you think of me? I'm a bit hurt, honestly.
 Keep it. I mean it. I don't want it in my house.
 
 # -- loved, by personality -----------------------------------------------------------------------------
-## gift.loved.warmhearted  fn=react,deepen_bond
+## gift.loved.warmhearted  fn=react,deepen_bond  stage=teen|adult
 You shouldn't have! You really shouldn't! Come in, I'm feeding you for this.
 ## gift.loved.thoughtful  fn=react,deepen_bond
 You've chosen this with care. I can tell. That matters more than the gift itself.
@@ -83,7 +83,7 @@ It's beautiful. It's like someone caught a little piece of a dream and handed it
 Useful and well made. You know how to choose. I'm impressed. And grateful.
 ## gift.loved.curious  fn=react,deepen_bond
 Where did you find this? How? Who made it? Tell me everything. And thank you!
-## gift.loved.protective  fn=react,deepen_bond
+## gift.loved.protective  fn=react,deepen_bond  stage=teen|adult
 You spent your own ryo on me? Thank you. Now promise you've kept enough for yourself.
 ## gift.loved.gentle  fn=react,deepen_bond
 Oh... this is so lovely. I'll take such good care of it.
@@ -97,7 +97,7 @@ F-for me? Really? I... I love it. Thank you. [BLUSH]
 Well chosen. Thank you. I'll use it every day.
 
 # -- hated, by personality -----------------------------------------------------------------------------
-## gift.hated.warmhearted
+## gift.hated.warmhearted  stage=teen|adult
 Oh, dear. I don't want to hurt your feelings, but I really can't have this in the house.
 ## gift.hated.thoughtful
 I wonder what made you think I'd want this. I'd honestly like to know.
@@ -117,7 +117,7 @@ It's the colour of a bad dream. I'm sorry. I can't look at it.
 Waste of good ryo. I'd rather you'd kept your money.
 ## gift.hated.curious
 Why would anyone make one of these? Why would anyone GIVE one of these? I'm baffled.
-## gift.hated.protective
+## gift.hated.protective  stage=teen|adult
 Don't spend your coin on things like this for me. Please. I mean it.
 ## gift.hated.gentle
 Oh... I'm sorry, I just can't. Please don't be upset with me.
@@ -127,5 +127,5 @@ You insult me with this. Take it away.
 UGH! No! Anything but this! Why would you do this to me?!
 ## gift.hated.shy
 Oh. Um. I... don't really... I'm sorry. [GLOOM]
-## gift.hated.stern
+## gift.hated.stern  stage=teen|adult
 This is unacceptable. Learn what people value before you give them things.

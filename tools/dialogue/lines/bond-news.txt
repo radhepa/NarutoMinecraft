@@ -17,6 +17,7 @@ I was there when they brought your baby out. I've never seen you smile like that
 
 ## bond.heard.child_born  player_stage=adult
 Is it true? A new baby in your house? Congratulations!
+## bond.heard.child_born  player_stage=adult  stage=teen|adult
 The whole street's talking about your little one. I'll bring something round.
 
 ## bond.seen.defended_village
@@ -30,6 +31,7 @@ Word is you stood up for all of us. The tea house is full of it.
 
 ## bond.seen.failed_client
 I saw your client leave the Mission Desk in a temper. Rough day?
+## bond.seen.failed_client  stage=teen|adult
 I was there when the client came back unhappy. It happens. It shouldn't happen twice.
 
 ## bond.heard.failed_client

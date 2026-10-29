@@ -22,9 +22,9 @@ My parents taught me to ask why. They regret it at least once a day.
 I've a little cousin who copies everything I do. So I walk backwards everywhere now, just to see.
 ## talk.their_family.adventurous  fn=reveal_character
 My family has never left the Leaf. Not once in three generations. I'll be the first.
-## talk.their_family.meticulous  fn=reveal_character
+## talk.their_family.meticulous  fn=reveal_character  stage=teen|adult
 I keep the family calendar. Birthdays, anniversaries, the day the roof needs checking. Nobody else would.
-## talk.their_family.steadfast  fn=reveal_character
+## talk.their_family.steadfast  fn=reveal_character  stage=teen|adult
 I look after my parents now. It's no burden. They looked after me for long enough.
 ## talk.their_family.reserved  fn=reveal_character
 There's a few of us. We get on. Quietly.
@@ -34,7 +34,7 @@ My grandmother tells stories about a fox who lives in the well. I still check th
 Everyone in my house works. Even the youngest sorts the beans. That's how we get by.
 ## talk.their_family.curious  fn=reveal_character
 I've been piecing together our family tree. There's a whole branch nobody will tell me about. Probably dull.
-## talk.their_family.protective  fn=reveal_character
+## talk.their_family.protective  fn=reveal_character  stage=teen|adult
 I'd do anything for my family. Anything. I check the locks twice before bed.
 ## talk.their_family.gentle  fn=reveal_character
 My little sister is learning to read. I sit with her every evening. She's so proud of every word.
@@ -44,7 +44,7 @@ My family's name is older than the street it lives on. I carry it carefully.
 My family's the BEST! Loud, stubborn and the strongest grip on this side of the village!
 ## talk.their_family.shy  fn=reveal_character
 They're kind to me. They don't push. I'm grateful for that.
-## talk.their_family.stern  fn=reveal_character
+## talk.their_family.stern  fn=reveal_character  stage=teen|adult
 My parents served. Their parents served. I serve. It's what we do.
 
 # -- your story: you open up to them ----------------------------------------------------------------
@@ -59,7 +59,7 @@ We've talked a lot today. Let it settle, {player}. I'm not going anywhere.
 I'm glad you'd share, but maybe wait until you know me better.
 That sounds important. Keep it a while longer, until you're sure of me.
 
-## talk.your_story.warmhearted  fn=deepen_bond
+## talk.your_story.warmhearted  fn=deepen_bond  stage=teen|adult
 Oh, come here. You've been carrying that all alone? Not anymore. Eat something, and keep talking.
 ## talk.your_story.thoughtful  fn=deepen_bond
 I'll think about what you said. Carefully. It deserves that.
@@ -75,7 +75,7 @@ Then I'll be someone you can count on. Whatever comes. That's a promise.
 I... don't really know what to say. I'm not good with this sort of thing.
 ## talk.your_story.imaginative  fn=deepen_bond
 Thank you. Your story's still being written, you know. The best chapters might be the next ones.
-## talk.your_story.pragmatic  fn=deepen_bond
+## talk.your_story.pragmatic  fn=deepen_bond  stage=teen|adult
 That's hard. And you're still standing. That tells me more about you than any of it.
 ## talk.your_story.curious  fn=deepen_bond
 I've wondered about you for so long, and I'm glad I didn't have to ask. Thank you.
@@ -89,7 +89,7 @@ You've no reason to be ashamed of any of that. Hold your head up. I will, for yo
 That's so unfair! You don't deserve any of it! I'm on your side, {player}, always!
 ## talk.your_story.shy  fn=deepen_bond
 I... I know a little what that's like. Thank you for telling me. Really.
-## talk.your_story.stern  fn=deepen_bond
+## talk.your_story.stern  fn=deepen_bond  stage=teen|adult
 That took courage. More than most missions. I'm proud of you for saying it.
 
 # -- teasing ----------------------------------------------------------------------------------------
@@ -104,7 +104,7 @@ Running out of material, are we?
 We don't know each other well enough for that.
 Careful. Teasing's for friends, and we're not there yet.
 
-## talk.tease.warmhearted  fn=deepen_bond
+## talk.tease.warmhearted  fn=deepen_bond  stage=teen|adult
 Cheeky! See if I save you the crispy bit of the rice now.
 ## talk.tease.thoughtful  fn=deepen_bond
 Hm. That was actually quite clever. I'll laugh later, when I've thought of a reply.
@@ -120,7 +120,7 @@ Fair. I deserved that one. Next one's mine, though.
 ...Hm. Not bad.
 ## talk.tease.imaginative  fn=deepen_bond
 You've just given me an idea for a very unflattering painting of you. Thank you.
-## talk.tease.pragmatic  fn=deepen_bond
+## talk.tease.pragmatic  fn=deepen_bond  stage=teen|adult
 Funny. Charge you a ryo for every joke at my expense and I'd be rich.
 ## talk.tease.curious  fn=deepen_bond
 Wait, is that true? Do I really do that? I do, don't I. Oh no.
@@ -134,7 +134,7 @@ I beg your pardon? Do you know who you're talking to?
 WHAT?! Take that back! ...Okay, it was funny. TAKE IT BACK ANYWAY!
 ## talk.tease.shy  fn=react
 Oh... I didn't... is that what people think of me? [GLOOM]
-## talk.tease.stern  fn=react
+## talk.tease.stern  fn=react  stage=teen|adult
 That's enough. Mockery is a poor habit, {player}.
 
 # -- their values -----------------------------------------------------------------------------------
@@ -165,7 +165,7 @@ Duty and loyalty. Stand where you said you'd stand, with who you said you'd stan
 Honesty. And being left to live my own way.
 ## talk.their_values.imaginative  fn=reveal_character
 Make things. Make the world stranger and more beautiful. And let others do the same.
-## talk.their_values.pragmatic  fn=reveal_character
+## talk.their_values.pragmatic  fn=reveal_character  stage=teen|adult
 Tell the truth, pay your debts, do the work. Simple, not easy.
 ## talk.their_values.curious  fn=reveal_character
 Never stop asking questions. And never let anyone tell you that you can't.
@@ -210,7 +210,7 @@ Keep the promise you already made. Then worry about the next one.
 Say less. Watch more.
 ## talk.ask_advice.imaginative  fn=teach
 Imagine you're telling the story of it years from now. Which version would you be proud of?
-## talk.ask_advice.pragmatic  fn=teach
+## talk.ask_advice.pragmatic  fn=teach  stage=teen|adult
 What does it cost, and what's it worth? If you can't answer both, you're not ready.
 ## talk.ask_advice.curious  fn=teach
 Find out more first. Most bad choices are just choices made too early.
@@ -224,14 +224,15 @@ Do nothing you'd be ashamed to put your name to. That's my family's rule. Use it
 Go for it! Full force! If it goes wrong, go for it again!
 ## talk.ask_advice.shy  fn=teach
 Um. I'd... I'd do the thing that feels a bit brave. Small brave. That's usually right.
-## talk.ask_advice.stern  fn=teach
+## talk.ask_advice.stern  fn=teach  stage=teen|adult
 Stop asking and start doing. You already know the answer.
 
 # -- their dream ------------------------------------------------------------------------------------
 ## talk.their_dream  fn=reveal_character
 I've a dream I've never said out loud. I'll say it to you. Just this once.
-Everyone laughs when you're young and say what you want to be. I stopped saying it. I never stopped wanting it.
 Some mornings I wake up and the dream feels close enough to touch. Other mornings it's over the mountains.
+## talk.their_dream  fn=reveal_character  stage=teen|adult
+Everyone laughs when you're young and say what you want to be. I stopped saying it. I never stopped wanting it.
 ## talk.their_dream.again  fn=deepen_bond  kind=cycle
 I've said enough about my dream for one day. Let me keep a little of it to myself.
 You've heard it now. Hold me to it, {player}.
@@ -239,9 +240,9 @@ You've heard it now. Hold me to it, {player}.
 My dream? That's... not for someone I barely know.
 You haven't earned that one yet, {player}. Not yet.
 
-## talk.their_dream.warmhearted  fn=reveal_character
+## talk.their_dream.warmhearted  fn=reveal_character  stage=teen|adult
 I want a home full of people, all fed and safe. That's my dream. Is it too small? It feels big to me.
-## talk.their_dream.thoughtful  fn=reveal_character
+## talk.their_dream.thoughtful  fn=reveal_character  stage=teen|adult
 I want to understand one thing completely before I die. I haven't chosen which yet.
 ## talk.their_dream.playful  fn=reveal_character
 Promise you won't laugh. ...You can laugh a little. I mean it, though. Every word.
@@ -255,7 +256,7 @@ It's not a flashy dream. But I'll get there a day at a time. I always do.
 I've never told anyone. ...Don't make me regret it.
 ## talk.their_dream.imaginative  fn=reveal_character
 When I close my eyes I can see it already, every colour. I just have to make the world catch up.
-## talk.their_dream.pragmatic  fn=reveal_character
+## talk.their_dream.pragmatic  fn=reveal_character  stage=teen|adult
 A dream's just a plan nobody's paid for yet. I'm saving up.
 ## talk.their_dream.curious  fn=reveal_character
 I keep wondering whether my dream will look the way I picture it when I get there. Do you think it will?
@@ -269,14 +270,15 @@ My dream is worthy of my name. I'll reach it, or I'll fall trying. There's no th
 I'm going to do it! I'm going to do it if it takes a hundred years! You'll see!
 ## talk.their_dream.shy  fn=reveal_character
 I've only ever written it in my diary. Saying it out loud is... scary. Here goes.
-## talk.their_dream.stern  fn=reveal_character
+## talk.their_dream.stern  fn=reveal_character  stage=teen|adult
 A dream without discipline is a wish. Mine has a schedule.
 
 # -- what worries them ------------------------------------------------------------------------------
 ## talk.their_worries  fn=reveal_character
+I worry about the people I love more than I let them see.
+## talk.their_worries  fn=reveal_character  stage=teen|adult
 I worry I'm running out of time to become who I meant to be.
 Some nights I lie awake wondering if I've chosen the wrong road.
-I worry about the people I love more than I let them see.
 ## talk.their_worries.again  fn=deepen_bond  kind=cycle
 I've said my worries out loud once today. That's enough to get me to sleep.
 Thank you for listening earlier. Let's talk about something lighter.
@@ -284,15 +286,15 @@ Thank you for listening earlier. Let's talk about something lighter.
 My worries are my own, {player}.
 Let's not dig into that. Not with someone I've only just got to know.
 
-## talk.their_worries.warmhearted  fn=reveal_character
+## talk.their_worries.warmhearted  fn=reveal_character  stage=teen|adult
 I worry I'm not doing enough for everyone. There's always someone hungry I didn't notice.
 ## talk.their_worries.thoughtful  fn=reveal_character
 I worry that I think so much I never actually act. Then the moment's gone.
 ## talk.their_worries.playful  fn=reveal_character
 I worry people think I'm only a joke. That I'll never be taken seriously when it matters.
-## talk.their_worries.adventurous  fn=reveal_character
+## talk.their_worries.adventurous  fn=reveal_character  stage=teen|adult
 What if I never leave? What if I'm old in this same street, wondering what was out there?
-## talk.their_worries.meticulous  fn=reveal_character
+## talk.their_worries.meticulous  fn=reveal_character  stage=teen|adult
 I'm afraid of the mistake I didn't catch. The one that hurts somebody.
 ## talk.their_worries.steadfast  fn=reveal_character
 I worry about letting someone down. Once. When it matters. That's the one I couldn't live with.
@@ -300,7 +302,7 @@ I worry about letting someone down. Once. When it matters. That's the one I coul
 That I'll keep everyone at arm's length until there's no one left to reach.
 ## talk.their_worries.imaginative  fn=reveal_character
 I worry the colours will fade. That one day I'll look at the sky and just see sky.
-## talk.their_worries.pragmatic  fn=reveal_character
+## talk.their_worries.pragmatic  fn=reveal_character  stage=teen|adult
 Money. Always money. One bad season and everything I've built is gone.
 ## talk.their_worries.curious  fn=reveal_character
 I worry there's an answer I'll never find. It keeps me up, honestly.
@@ -314,7 +316,7 @@ I worry I'll shame my family. That I'm not as strong as they believe.
 I worry I'll give it everything and it still won't be enough. ...Don't tell anyone I said that.
 ## talk.their_worries.shy  fn=reveal_character
 That I'll never be brave enough to say the things I really mean.
-## talk.their_worries.stern  fn=reveal_character
+## talk.their_worries.stern  fn=reveal_character  stage=teen|adult
 That I've been too hard on the people I'm trying to make strong. That they'll only remember the hardness.
 
 # -- a shared memory (the reply is the highlight's callback; these play when none is ready) --------------

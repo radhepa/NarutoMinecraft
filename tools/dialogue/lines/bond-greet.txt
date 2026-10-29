@@ -12,9 +12,10 @@ You again! I was wondering if you'd pass this way.
 Back for another look around? The street's the same, but the bread's fresher.
 
 ## bond.greet.level.2  fn=deepen_bond
-{player}! Good timing. I was about to take a break.
 There you are. You walk past most days now, have you noticed?
 Morning, {player}. Or whatever hour it is. I lose track.
+## bond.greet.level.2  fn=deepen_bond  stage=teen|adult
+{player}! Good timing. I was about to take a break.
 
 ## bond.greet.level.3  fn=deepen_bond
 {player}! Come here, I've got something to tell you.
@@ -54,6 +55,7 @@ You and me, {player}. Same as ever. I've a small thing saved for you.
 ## bond.greet.level.10  fn=deepen_bond
 {player}. Whatever comes, you know I'm here. Now, sit and tell me everything.
 Years from now I'll still be saying hello to you like this. I'm sure of it.
+## bond.greet.level.10  fn=deepen_bond  stage=teen|adult
 Hello, my friend. Some people are just part of the furniture of a life. You're mine.
 
 # -- warmhearted ------------------------------------------------------------------------------------------
@@ -61,23 +63,23 @@ Hello, my friend. Some people are just part of the furniture of a life. You're m
 Oh, hello! You look half-starved. Have you eaten? I've got rice balls.
 ## bond.greet.level.1.warmhearted  fn=deepen_bond
 {player}! I hoped you'd come back. Your cheeks are cold, here, take my scarf a moment.
-## bond.greet.level.2.warmhearted  fn=deepen_bond
+## bond.greet.level.2.warmhearted  fn=deepen_bond  stage=teen|adult
 You're thinner than last week, I'm sure of it. Sit, I'll warm some soup.
-## bond.greet.level.3.warmhearted  fn=deepen_bond
+## bond.greet.level.3.warmhearted  fn=deepen_bond  stage=teen|adult
 {player}! I made extra pickles, and I was hoping you'd be the one to take them.
-## bond.greet.level.4.warmhearted  fn=deepen_bond
+## bond.greet.level.4.warmhearted  fn=deepen_bond  stage=teen|adult
 There you are, dear. I wrapped two sweet buns in a cloth for you this morning.
-## bond.greet.level.5.warmhearted  fn=deepen_bond
+## bond.greet.level.5.warmhearted  fn=deepen_bond  stage=teen|adult
 Come here, let me look at you. Tired eyes. You've been working too hard again.
-## bond.greet.level.6.warmhearted  fn=deepen_bond
+## bond.greet.level.6.warmhearted  fn=deepen_bond  stage=teen|adult
 I set a bowl for you without thinking this morning. Habit now, {player}.
-## bond.greet.level.7.warmhearted  fn=deepen_bond
+## bond.greet.level.7.warmhearted  fn=deepen_bond  stage=teen|adult
 {player}! Shoes off, kettle's on. You're family in this house, you know.
-## bond.greet.level.8.warmhearted  fn=deepen_bond
+## bond.greet.level.8.warmhearted  fn=deepen_bond  stage=teen|adult
 My favourite person! I've knitted you mittens. They're lumpy. Wear them anyway.
 ## bond.greet.level.9.warmhearted  fn=deepen_bond
 I kept the best persimmon for you. I always keep one back for you now.
-## bond.greet.level.10.warmhearted  fn=deepen_bond
+## bond.greet.level.10.warmhearted  fn=deepen_bond  stage=teen|adult
 Hello, dear friend. As long as I have a kitchen, you'll have a place at it.
 
 # -- thoughtful -------------------------------------------------------------------------------------------
@@ -111,7 +113,7 @@ Hey, new face! Want to see me balance a kunai on my nose? No? Your loss.
 It's you! I bet myself a dango you'd come back. I win. You owe me nothing.
 ## bond.greet.level.2.playful  fn=deepen_bond
 Tag! You're it. ...No? Fine. Hello, {player}.
-## bond.greet.level.3.playful  fn=deepen_bond
+## bond.greet.level.3.playful  fn=deepen_bond  stage=teen|adult
 {player}! Quick, look serious, the baker thinks I'm working.
 ## bond.greet.level.4.playful  fn=deepen_bond
 There's my partner in crime! I've got a dare for you. Later. Maybe.
@@ -191,7 +193,7 @@ There's a friend I can count on. Hello, {player}.
 You keep showing up. I notice that. It means something to me.
 ## bond.greet.level.6.steadfast  fn=deepen_bond
 {player}. Whatever you need today, say the word.
-## bond.greet.level.7.steadfast  fn=deepen_bond
+## bond.greet.level.7.steadfast  fn=deepen_bond  stage=teen|adult
 I'd stand a night watch for you without being asked. Hello, {player}.
 ## bond.greet.level.8.steadfast  fn=deepen_bond
 My best friend. Plain as that. Good to see you.
@@ -253,23 +255,23 @@ If my life were a scroll, {player}, you'd be on every page from here on.
 Need something? I'm busy, but I can spare a minute.
 ## bond.greet.level.1.pragmatic  fn=deepen_bond
 {player}. You came back. Most don't. Hello.
-## bond.greet.level.2.pragmatic  fn=deepen_bond
+## bond.greet.level.2.pragmatic  fn=deepen_bond  stage=teen|adult
 Morning. You've got the look of someone who'll do well. Don't waste it.
 ## bond.greet.level.3.pragmatic  fn=deepen_bond
 {player}. Good. I've a minute, and it's yours.
 ## bond.greet.level.4.pragmatic  fn=deepen_bond
 Time spent with you isn't wasted. That's high praise from me. Hello.
-## bond.greet.level.5.pragmatic  fn=deepen_bond
+## bond.greet.level.5.pragmatic  fn=deepen_bond  stage=teen|adult
 I put the ledger away for you. Don't tell my customers.
-## bond.greet.level.6.pragmatic  fn=deepen_bond
+## bond.greet.level.6.pragmatic  fn=deepen_bond  stage=teen|adult
 {player}. Worth more than a full till, you are. Sit.
 ## bond.greet.level.7.pragmatic  fn=deepen_bond
 I trust you with my keys, {player}. That's not something I say lightly.
-## bond.greet.level.8.pragmatic  fn=deepen_bond
+## bond.greet.level.8.pragmatic  fn=deepen_bond  stage=teen|adult
 Best friend. Best investment I ever made, and it cost me nothing. Hello.
-## bond.greet.level.9.pragmatic  fn=deepen_bond
+## bond.greet.level.9.pragmatic  fn=deepen_bond  stage=teen|adult
 Here. Your share for today. I set it aside before I open up.
-## bond.greet.level.10.pragmatic  fn=deepen_bond
+## bond.greet.level.10.pragmatic  fn=deepen_bond  stage=teen|adult
 Everything else goes up and down in price, {player}. You don't. Hello.
 
 # -- curious ----------------------------------------------------------------------------------------------
@@ -297,17 +299,17 @@ I found you something odd today. I always do now. Guess what it is!
 I still haven't run out of things to ask you, {player}. I don't think I ever will.
 
 # -- protective -------------------------------------------------------------------------------------------
-## bond.greet.level.0.protective  fn=react
+## bond.greet.level.0.protective  fn=react  stage=teen|adult
 Hello. Stay on the main road after dark, will you? Not everyone does.
 ## bond.greet.level.1.protective  fn=deepen_bond
 {player}. Glad you made it here in one piece. Hello.
-## bond.greet.level.2.protective  fn=deepen_bond
+## bond.greet.level.2.protective  fn=deepen_bond  stage=teen|adult
 You've a scrape on your arm. Training? Get it cleaned. Hello, {player}.
 ## bond.greet.level.3.protective  fn=deepen_bond
 {player}. I saw you on the rooftops yesterday. Careful on the loose tiles.
 ## bond.greet.level.4.protective  fn=deepen_bond
 There you are. I worry when you go a few days without stopping by.
-## bond.greet.level.5.protective  fn=deepen_bond
+## bond.greet.level.5.protective  fn=deepen_bond  stage=teen|adult
 You got home safe last night? Good. Then hello, properly.
 ## bond.greet.level.6.protective  fn=deepen_bond
 {player}. Anyone gives you trouble, you come to me. Now, how are you?
@@ -315,7 +317,7 @@ You got home safe last night? Good. Then hello, properly.
 I'd step in front of anything for you, {player}. Hello.
 ## bond.greet.level.8.protective  fn=deepen_bond
 My best friend, safe and sound. That's all I ever want to see.
-## bond.greet.level.9.protective  fn=deepen_bond
+## bond.greet.level.9.protective  fn=deepen_bond  stage=teen|adult
 Here, I packed you a little something for the road. Eat it, don't share it.
 ## bond.greet.level.10.protective  fn=deepen_bond
 As long as I'm breathing, {player}, you'll never stand alone. Hello.
@@ -417,27 +419,27 @@ Th-this is for you. I keep something aside every day. Is that strange?
 I used to be scared of everything, {player}. Not with you. Hello.
 
 # -- stern ------------------------------------------------------------------------------------------------
-## bond.greet.level.0.stern  fn=react
+## bond.greet.level.0.stern  fn=react  stage=teen|adult
 State your business.
 ## bond.greet.level.1.stern  fn=deepen_bond
 {player}. You returned. Punctual, at least.
-## bond.greet.level.2.stern  fn=deepen_bond
+## bond.greet.level.2.stern  fn=deepen_bond  stage=teen|adult
 Your posture's improved. Barely. Hello, {player}.
 ## bond.greet.level.3.stern  fn=deepen_bond
 {player}. You've earned a minute. Use it well.
-## bond.greet.level.4.stern  fn=deepen_bond
+## bond.greet.level.4.stern  fn=deepen_bond  stage=teen|adult
 I expect a lot of you. That's because I think a lot of you. Hello.
 ## bond.greet.level.5.stern  fn=deepen_bond
 You kept your word last time. Remember that I noticed. Hello, {player}.
 ## bond.greet.level.6.stern  fn=deepen_bond
 {player}. I don't say this often. I'm glad you're here.
-## bond.greet.level.7.stern  fn=deepen_bond
+## bond.greet.level.7.stern  fn=deepen_bond  stage=teen|adult
 I'd trust you with my back on any mission. Don't let it soften you.
-## bond.greet.level.8.stern  fn=deepen_bond
+## bond.greet.level.8.stern  fn=deepen_bond  stage=teen|adult
 My closest friend. Shoulders back. You carry that title now.
-## bond.greet.level.9.stern  fn=deepen_bond
+## bond.greet.level.9.stern  fn=deepen_bond  stage=teen|adult
 Take this. A soldier's ration, set aside daily. You'll need it more than I do.
-## bond.greet.level.10.stern  fn=deepen_bond
+## bond.greet.level.10.stern  fn=deepen_bond  stage=teen|adult
 Whatever you become, {player}, I'll be proud of it. I'll still correct your stance.
 
 # -- children: the kids of the street speak only from stage=child lines ----------------------------------

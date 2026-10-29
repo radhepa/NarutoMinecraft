@@ -69,7 +69,7 @@ That doesn't match what you said the other day, {player}.
 I keep track, you know. That's not the answer you gave me before.
 
 # -- personalities ------------------------------------------------------------------------------------
-## reaction.touched.warmhearted  fn=react,deepen_bond
+## reaction.touched.warmhearted  fn=react,deepen_bond  stage=teen|adult
 Oh, you dear thing. Come here, I'm putting the kettle on for that.
 ## reaction.touched.shy  fn=react,deepen_bond
 I... thank you. Nobody's ever... thank you. [BLUSH]
