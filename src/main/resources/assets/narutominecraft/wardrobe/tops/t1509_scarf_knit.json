@@ -1,0 +1,106 @@
+{
+  "id": "t1509_scarf_knit",
+  "kind": "top",
+  "name": "Winter Knit",
+  "gender": "unisex",
+  "texture": "tops/t1509_scarf_knit.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "scarf",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "scarf_front",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        1.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "scarf_back",
+      "bone": "TORSO",
+      "pivot": [
+        1.8,
+        1.2,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Soft knitted sweater, ribbed hem and cuffs, a long indigo scarf wound round the neck."
+}

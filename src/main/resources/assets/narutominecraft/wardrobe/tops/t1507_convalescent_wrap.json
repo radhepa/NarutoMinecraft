@@ -1,0 +1,132 @@
+{
+  "id": "t1507_convalescent_wrap",
+  "kind": "top",
+  "name": "Convalescent Wrap",
+  "gender": "unisex",
+  "texture": "tops/t1507_convalescent_wrap.png",
+  "extrasHeight": 16,
+  "tags": [
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "shawl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "shawl_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ]
+    },
+    {
+      "id": "shawl_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        1.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Pale wrapped kimono top with a slate over-collar, a knitted shawl round the shoulders, a narrow sash."
+}

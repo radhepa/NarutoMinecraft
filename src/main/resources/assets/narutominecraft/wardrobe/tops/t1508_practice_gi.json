@@ -1,0 +1,132 @@
+{
+  "id": "t1508_practice_gi",
+  "kind": "top",
+  "name": "Practice Gi",
+  "gender": "unisex",
+  "texture": "tops/t1508_practice_gi.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "bokken_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.4,
+        2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "bokken_guard",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.4,
+        2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "bokken_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.4,
+        2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "White wrapped gi with an indigo collar band, elbow sleeves, indigo belt, a wooden sword on the back."
+}

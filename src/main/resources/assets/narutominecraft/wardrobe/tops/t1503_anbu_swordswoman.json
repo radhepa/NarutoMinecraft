@@ -1,0 +1,103 @@
+{
+  "id": "t1503_anbu_swordswoman",
+  "kind": "top",
+  "name": "ANBU Swordswoman",
+  "gender": "unisex",
+  "texture": "tops/t1503_anbu_swordswoman.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "katana_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.2,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "katana_guard",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.2,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "katana_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.2,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "ANBU plated armor, white arm guards, the spiral tattoo, a katana on the back on a black strap."
+}

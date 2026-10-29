@@ -1,0 +1,161 @@
+{
+  "id": "t1504_strap_tunic",
+  "kind": "top",
+  "name": "Sword-Strap Tunic",
+  "gender": "unisex",
+  "texture": "tops/t1504_strap_tunic.png",
+  "extrasHeight": 32,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.9,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "katana_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.4,
+        2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ]
+    },
+    {
+      "id": "katana_guard",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.4,
+        2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "katana_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.4,
+        2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        9,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Slate tunic with short sleeves and a stand collar, a wide sword strap, a katana, wrapped forearms."
+}
