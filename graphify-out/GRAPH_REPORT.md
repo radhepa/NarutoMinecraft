@@ -1,7 +1,7 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 184 files · ~244,981 words
+- 184 files · ~245,009 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .properties 2, .jar 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2ac2ecec`
+- Built from commit: `a43c4487`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

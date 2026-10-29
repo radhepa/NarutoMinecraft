@@ -168,9 +168,9 @@
     "semantic_hash": ""
   },
   "ROADMAP.md": {
-    "mtime": 1793309971.6113799,
-    "seen": 1793309975.9230213,
-    "ast_hash": "51f045a207baf9fb2ad8b76fabd599e3",
+    "mtime": 1793310088.2513745,
+    "seen": 1793310096.8612456,
+    "ast_hash": "f604bce73da72b290e01ea8905e5c6a4",
     "semantic_hash": ""
   },
   "docs/story/STORY_BIBLE.md": {
@@ -282,8 +282,8 @@
     "semantic_hash": ""
   },
   "life/bonds/build.gradle": {
-    "mtime": 1793309931.8233814,
-    "seen": 1793309975.9228258,
+    "mtime": 1793309979.4838433,
+    "seen": 1793310096.8609195,
     "ast_hash": "db6693d36ce312762afdd54d275e8cec",
     "semantic_hash": ""
   },
@@ -792,8 +792,8 @@
     "semantic_hash": ""
   },
   "village/look/build.gradle": {
-    "mtime": 1793309836.2018964,
-    "seen": 1793309975.9229977,
+    "mtime": 1793309979.4838433,
+    "seen": 1793310096.861209,
     "ast_hash": "9dcce2c0f73025f8ebd905faf843a67c",
     "semantic_hash": ""
   },
