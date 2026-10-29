@@ -96,6 +96,7 @@ Jonin.
 | Bond ability | **Kindling Bond**: a top-tier bond ability whose power flows outward through people and grows with your web of bonds. It sees bonds, strengthens allies' own techniques, links a squad's chakra, and at its peak reaches deeply bonded allies across distance; it never copies techniques. Gated by bond depth; unlocked through the story ([Kindling Bond](#kindling-bond)). |
 | Hokage | All Hokage are original characters with custom faces. Four faces are on the Rock at the start; the player is meant to become the **Eighth**. Their **names are rolled per save**; their looks, clans and eras are fixed, because faces, portraits and statues are baked into the map. |
 | Names | **Most character names are rolled per save, in Classic and Varied alike**: squadmates, sensei, rivals, elders, recurring characters and the antagonists. Roles, personalities and looks stay as designed (Classic stays curated in everything but names). Given names come from seeded pools by gender; family names from the character's clan, or from the ordinary `family_names` pool in `tools/wardrobe/population.json`. All text uses name tokens ([Names](#names-rolled-per-save)). |
+| Name order | Full names read given name first, family name last ("Shigure Nara"), everywhere: dialogue, the journal, the Ledger and speech bubbles. Honorifics such as "Lord Fourth" and "Nara-sensei" are unchanged. |
 | Rotating story roles | Some story roles are assigned per save from a few candidates, each with its own seeded clue trail, so a twist still surprises a player who knows the answer from another save ([Rotating story roles](#rotating-story-roles)). Which roles rotate, and the candidates, are in the story bible only. |
 | Canon | Original characters only, maybe cameos of named characters. |
 | Players | **Single player first.** Multiplayer is later. The code stays server-authoritative (single player runs an integrated server). |
@@ -528,9 +529,13 @@ profile (Classic) or its rolled profile (Varied), so the same world file serves 
 - **Who:** every role-bound and fixed story character, in both modes; the Hokage's given names.
   Residents spawned from markers already get rolled names in Varied (VF's name pools are not used
   for Leaf residents).
-- **Tokens:** dialogue and quest text use `{name:<role>}` (full name), `{given:<role>}`,
+- **Name order:** full names display given name first and family name last, American style:
+  "Shigure Nara", not "Nara Shigure". Honorific forms ("Lord Fourth", "Nara-sensei") keep their
+  usual shape; the order rule is only about full names.
+- **Tokens:** dialogue and quest text use `{name:<role>}` (the full name, rendered "Given Family"), `{given:<role>}`,
   `{family:<role>}`, `{hokage:<n>}` and `{player}`; the journal, speech bubbles and VF's dialogue
-  bank resolve them. A name is never written into text.
+  bank resolve them. A name is never written into text. `{hokage:<n>}` renders the Hokage's given
+  name only.
 - **Checks:** `quests.py --check` and the dialogue compiler reject any literal from the name pools
   in authored text, and every token must name a role that exists.
 - **Stable within a save:** names are rolled once, at world creation, from the `names` stream and
