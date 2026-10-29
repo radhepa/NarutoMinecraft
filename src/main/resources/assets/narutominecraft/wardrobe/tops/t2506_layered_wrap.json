@@ -1,0 +1,136 @@
+{
+  "id": "t2506_layered_wrap",
+  "kind": "top",
+  "name": "Layered Wrap",
+  "gender": "unisex",
+  "texture": "tops/t2506_layered_wrap.png",
+  "extrasHeight": 32,
+  "tags": [
+    "genin",
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "capelet",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        -2.7,
+        -2.6
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "capelet_yoke",
+      "bone": "TORSO",
+      "pivot": [
+        0.4,
+        -0.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2.6
+      ],
+      "size": [
+        4,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        9.0,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "sash_end",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        11
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Crossed wrap top, a short pleated capelet over the left shoulder, a sash, grey forearm wraps."
+}

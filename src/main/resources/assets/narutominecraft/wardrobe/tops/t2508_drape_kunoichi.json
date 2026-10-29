@@ -1,0 +1,362 @@
+{
+  "id": "t2508_drape_kunoichi",
+  "kind": "top",
+  "name": "Drape Kunoichi",
+  "gender": "unisex",
+  "texture": "tops/t2508_drape_kunoichi.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "high_neck",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -1.2,
+        -1.5
+      ],
+      "size": [
+        5,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "drape_shoulder",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        17,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "drape_front",
+      "bone": "TORSO",
+      "pivot": [
+        2.7,
+        0.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "drape_back",
+      "bone": "TORSO",
+      "pivot": [
+        1.5,
+        0.2,
+        2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        6,
+        17,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        9.2,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        19
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "sash_end",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        19
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "lantern_cord",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        19
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_body",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2,
+        -1.5
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "uv": [
+        41,
+        19
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_rim_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.5,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        54,
+        19
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_rim_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        6,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        27
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_tassel",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        7,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        9,
+        27
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless high-neck top, a long pleated drape over the left shoulder to the knee, forearm wraps, a lantern."
+}

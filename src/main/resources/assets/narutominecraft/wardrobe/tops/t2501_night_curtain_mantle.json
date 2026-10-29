@@ -1,0 +1,453 @@
+{
+  "id": "t2501_night_curtain_mantle",
+  "kind": "top",
+  "name": "Night Curtain Mantle",
+  "gender": "unisex",
+  "texture": "tops/t2501_night_curtain_mantle.png",
+  "extrasHeight": 64,
+  "tags": [
+    "jonin",
+    "mantle",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mantle_lower",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        9,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "mantle_upper",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.55
+    },
+    {
+      "id": "mantle_right_capelet",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        4,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "mantle_left_capelet",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.4,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        4,
+        4,
+        5
+      ],
+      "uv": [
+        19,
+        15
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "mantle_hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.2,
+        3.1
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        -1
+      ],
+      "size": [
+        8,
+        4,
+        2
+      ],
+      "uv": [
+        38,
+        15
+      ]
+    },
+    {
+      "id": "mantle_hood_point",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.2,
+        3.1
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        25
+      ]
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.7,
+        2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.0,
+        0,
+        0
+      ],
+      "size": [
+        16,
+        14,
+        1
+      ],
+      "uv": [
+        11,
+        25
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        9.3,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        41
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "sash_end",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.3,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        41
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "lantern_cord",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        41
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_body",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2,
+        -1.5
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "uv": [
+        41,
+        41
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_rim_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.5,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        54,
+        41
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_rim_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        6,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        49
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_tassel",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        7,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        9,
+        49
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Two-tier pleated hooded mantle over a charcoal shirt, the curtain crest, a sash and a paper lantern."
+}

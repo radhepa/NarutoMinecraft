@@ -1,0 +1,310 @@
+{
+  "id": "w2504_owl_mask",
+  "kind": "headwear",
+  "name": "ANBU Owl Mask",
+  "gender": "unisex",
+  "texture": "headwear/w2504_owl_mask.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "strap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -5.4,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.55
+    },
+    {
+      "id": "mask",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.6,
+        -4.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8,
+        0,
+        -1
+      ],
+      "size": [
+        16,
+        15,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "tuft_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -22
+      ],
+      "origin": [
+        -1.5,
+        -2.0,
+        -1
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        35,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "tuft_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -22
+      ],
+      "origin": [
+        -1.0,
+        -3.0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        46,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "tuft_right_2",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -22
+      ],
+      "origin": [
+        -0.5,
+        -4.0,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        55,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "tuft_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        22
+      ],
+      "origin": [
+        -1.5,
+        -2.0,
+        -1
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "tuft_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        22
+      ],
+      "origin": [
+        -1.0,
+        -3.0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        11,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "tuft_left_2",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        22
+      ],
+      "origin": [
+        -0.5,
+        -4.0,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        20,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "beak",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.6,
+        -4.5
+      ],
+      "rotation": [
+        -10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        27,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": true,
+  "coversMouth": false,
+  "description": "White porcelain owl mask: amber-ringed round eye discs, a small hooked beak, short ear tufts."
+}

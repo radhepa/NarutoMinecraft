@@ -1,0 +1,133 @@
+{
+  "id": "w2501_night_muffler",
+  "kind": "headwear",
+  "name": "Night Muffler",
+  "gender": "unisex",
+  "texture": "headwear/w2501_night_muffler.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "muffler",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -1.6,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.4
+    },
+    {
+      "id": "muffler_lower",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0.4,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.6
+    },
+    {
+      "id": "muffler_end_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -0.4,
+        4.9
+      ],
+      "rotation": [
+        14,
+        0,
+        8
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        33,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "muffler_end_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.8,
+        -0.4,
+        4.9
+      ],
+      "rotation": [
+        14,
+        0,
+        -6
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        40,
+        11
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": true,
+  "description": "A thick knitted muffler pulled up over mouth and nose, wound twice, its ends hanging behind."
+}
