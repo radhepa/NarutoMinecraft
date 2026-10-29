@@ -1,12 +1,12 @@
 """Mito Twin Buns: hair parted down the middle and wound into two round buns high on either side of
-the crown, each pierced by a pair of beaded hairpins, with the rest falling long and straight down
+the crown, each pierced by a pair of beaded hairpins and hung with a kanji tag, three clips over the brow, with the rest falling long and straight down
 the back and two long locks framing the face."""
 from anime import curtain, lock, ring_shell, sidelocks
-from kit_uzumaki import bun, hairpin
-from paint import scalp
+from kit_uzumaki import bun, clip, hairpin
+from paint import scalp, solid
 
 META = {"name": "Mito Twin Buns", "gender": "female",
-        "description": "Middle part, twin buns with beaded hairpins, long straight hair down the back."}
+        "description": "Middle part, twin buns with beaded hairpins and kanji tags, three front clips, long straight hair down the back."}
 
 
 def build(g):
@@ -22,3 +22,11 @@ def build(g):
                                       (-2.6, ((2, 2), (1, 1)), 18), (2.6, ((2, 2), (1, 1)), -18))):
         lock(g, f"fringe_{i}", (x, -8.55, -4.35), (-10, 0, rz), segs, 1, 2066 + i * 7, ring=0)
     sidelocks(g, "frame", 13, seed=2068, x=4.3, z=-3.4, flare=3, width=2)
+    for i, x in enumerate((-1.6, 0, 1.6)):
+        clip(g, f"clip_{i}", (x, -8.75, -3.4), (-80, 0, 90), length=2, key="M")
+    for side, sign in (("right", -1), ("left", 1)):
+        tag = g.piece(f"tag_{side}", "HEAD", (-.5, 0, -.5), (1, 3, 1), pivot=(4.9 * sign, -7.6, 1.6),
+                      rotation=(0, 0, -10 * sign), motion="sway")
+        solid(tag, "S", "plain", 2069, 3, edge=False)
+        for f in tag.sides:
+            f.set(0, 1, "K1"), f.set(0, 2, "A2")

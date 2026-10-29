@@ -1,0 +1,15 @@
+{
+  "id": "b207_sensor_shorts",
+  "kind": "bottom",
+  "name": "Sensor Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/b207_sensor_shorts.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Short black shorts, black thigh-high stockings, sandals."
+}

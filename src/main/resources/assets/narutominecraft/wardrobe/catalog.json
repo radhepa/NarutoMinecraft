@@ -140,7 +140,8 @@
     "b203_sealer_shorts",
     "b204_tide_hakama",
     "b205_ceremonial_kimono_skirt",
-    "b206_rain_leggings"
+    "b206_rain_leggings",
+    "b207_sensor_shorts"
   ],
   "characters": [
     {
@@ -677,6 +678,16 @@
           "M": "#c9b98a",
           "K": "#1c1820",
           "D": "#3a2a40"
+        },
+        "UZUMAKI_SENSOR": {
+          "name": "Uzumaki Sensor",
+          "P": "#a08cc4",
+          "S": "#efeae0",
+          "A": "#7b5aa6",
+          "L": "#5c4434",
+          "M": "#aab3b9",
+          "K": "#1a1820",
+          "D": "#2a2836"
         }
       },
       "hair_colors": {
@@ -897,8 +908,13 @@
           "id": "sensor",
           "name": "Sensor",
           "top": "t204_sensor_jacket",
-          "bottom": "b203_sealer_shorts",
-          "rank": "genin"
+          "bottom": "b207_sensor_shorts",
+          "rank": "genin",
+          "palettes": [
+            "UZUMAKI_SENSOR",
+            "UZUMAKI_SENSOR",
+            "UZUMAKI_TIDE"
+          ]
         },
         {
           "id": "rain_wanderer",

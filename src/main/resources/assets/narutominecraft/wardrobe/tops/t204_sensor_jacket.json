@@ -4,7 +4,7 @@
   "name": "Sensor Jacket",
   "gender": "unisex",
   "texture": "tops/t204_sensor_jacket.png",
-  "extrasHeight": 32,
+  "extrasHeight": 16,
   "tags": [
     "genin",
     "shinobi"
@@ -42,35 +42,6 @@
       "inflate": 0.06
     },
     {
-      "id": "belt",
-      "bone": "TORSO",
-      "pivot": [
-        0,
-        0,
-        0
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "origin": [
-        -4.6,
-        8.8,
-        -2.6
-      ],
-      "size": [
-        9,
-        1,
-        5
-      ],
-      "uv": [
-        29,
-        0
-      ],
-      "inflate": 0.05
-    },
-    {
       "id": "left_crest",
       "bone": "LEFT_ARM",
       "pivot": [
@@ -94,8 +65,8 @@
         6
       ],
       "uv": [
-        0,
-        8
+        29,
+        0
       ],
       "scale": [
         0.5,
@@ -106,5 +77,5 @@
   ],
   "tucked": false,
   "coversWaist": false,
-  "description": "Fitted zip-up top with a high collar, dark belt, orange cuffs, a whirlpool on the shoulder."
+  "description": "Fitted cropped zip-up top with a high collar, accent cuffs, a whirlpool on the shoulder."
 }

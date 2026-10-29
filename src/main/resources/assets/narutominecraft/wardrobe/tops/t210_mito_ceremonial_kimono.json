@@ -4,7 +4,7 @@
   "name": "Mito Ceremonial Kimono",
   "gender": "unisex",
   "texture": "tops/t210_mito_ceremonial_kimono.png",
-  "extrasHeight": 64,
+  "extrasHeight": 48,
   "tags": [
     "ceremonial",
     "robe"
@@ -160,12 +160,12 @@
       "inflate": 0.15
     },
     {
-      "id": "back_crest",
+      "id": "high_collar",
       "bone": "TORSO",
       "pivot": [
         0,
-        0.4,
-        2.05
+        0,
+        0
       ],
       "rotation": [
         0,
@@ -173,31 +173,27 @@
         0
       ],
       "origin": [
-        -6.0,
-        0,
-        0
+        -4.5,
+        -2.0,
+        -2.6
       ],
       "size": [
-        12,
-        12,
-        1
+        9,
+        2,
+        5
       ],
       "uv": [
         29,
         30
       ],
-      "scale": [
-        0.5,
-        0.5,
-        0.5
-      ]
+      "inflate": 0.08
     },
     {
       "id": "bow_loop_0",
       "bone": "TORSO",
       "pivot": [
         -2.4,
-        8.4,
+        9.4,
         2.6
       ],
       "rotation": [
@@ -217,7 +213,7 @@
       ],
       "uv": [
         0,
-        44
+        40
       ]
     },
     {
@@ -225,7 +221,7 @@
       "bone": "TORSO",
       "pivot": [
         2.4,
-        8.4,
+        9.4,
         2.6
       ],
       "rotation": [
@@ -245,7 +241,7 @@
       ],
       "uv": [
         11,
-        44
+        40
       ]
     },
     {
@@ -253,7 +249,7 @@
       "bone": "TORSO",
       "pivot": [
         0,
-        8.4,
+        9.4,
         2.8
       ],
       "rotation": [
@@ -262,18 +258,51 @@
         0
       ],
       "origin": [
-        -1,
-        -1,
+        -1.5,
+        -1.5,
         0
       ],
       "size": [
-        2,
-        2,
+        3,
+        3,
         2
       ],
       "uv": [
         22,
-        44
+        40
+      ]
+    },
+    {
+      "id": "obi_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        7.9,
+        4.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "uv": [
+        33,
+        40
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     },
     {
@@ -281,7 +310,7 @@
       "bone": "TORSO",
       "pivot": [
         -0.8,
-        9.0,
+        10.0,
         3.0
       ],
       "rotation": [
@@ -300,8 +329,8 @@
         1
       ],
       "uv": [
-        31,
-        44
+        48,
+        40
       ],
       "motion": "sway"
     },
@@ -310,7 +339,7 @@
       "bone": "TORSO",
       "pivot": [
         0.8,
-        9.0,
+        10.0,
         3.0
       ],
       "rotation": [
@@ -329,8 +358,8 @@
         1
       ],
       "uv": [
-        38,
-        44
+        55,
+        40
       ],
       "motion": "sway"
     }
@@ -338,5 +367,5 @@
   "lockedTo": "b205_ceremonial_kimono_skirt",
   "tucked": false,
   "coversWaist": true,
-  "description": "Formal kimono with a red-crossed collar, long hanging sleeves, dark obi and back bow."
+  "description": "High-collared formal kimono, long hanging sleeves, dark obi with the whirlpool crest and a back bow."
 }

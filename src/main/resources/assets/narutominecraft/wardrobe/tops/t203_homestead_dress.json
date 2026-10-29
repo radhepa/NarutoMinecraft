@@ -4,7 +4,7 @@
   "name": "Homestead Dress",
   "gender": "unisex",
   "texture": "tops/t203_homestead_dress.png",
-  "extrasHeight": 16,
+  "extrasHeight": 32,
   "tags": [
     "dress",
     "village"
@@ -12,6 +12,35 @@
   "requires": [],
   "rejects": [],
   "pieces": [
+    {
+      "id": "blouse_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
     {
       "id": "waist_tie",
       "bone": "TORSO",
@@ -36,7 +65,7 @@
         5
       ],
       "uv": [
-        0,
+        29,
         0
       ],
       "inflate": 0.12
@@ -65,7 +94,7 @@
         1
       ],
       "uv": [
-        29,
+        58,
         0
       ],
       "motion": "sway"
@@ -94,8 +123,8 @@
         1
       ],
       "uv": [
-        34,
-        0
+        0,
+        8
       ],
       "motion": "sway"
     },
@@ -119,12 +148,12 @@
       ],
       "size": [
         9,
-        6,
+        8,
         1
       ],
       "uv": [
-        39,
-        0
+        5,
+        8
       ],
       "motion": "flap_front"
     },
@@ -148,11 +177,11 @@
       ],
       "size": [
         9,
-        6,
+        8,
         1
       ],
       "uv": [
-        0,
+        26,
         8
       ],
       "motion": "flap_back"
@@ -160,5 +189,5 @@
   ],
   "tucked": false,
   "coversWaist": true,
-  "description": "Sleeveless knee dress over a white long-sleeved blouse, waist tie, one wave band at the hem."
+  "description": "Long loose sleeveless dress over a high-collared blouse, waist tie, wave hem, left wristband."
 }
