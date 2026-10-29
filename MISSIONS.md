@@ -506,7 +506,9 @@ cohesion; and Beta 2's mission counts, savings and variety for a steady player.
 | **Life** | Ryo through the wallet; bedroll camping and On Duty; chores' work clips | all |
 | **Bonds** | The acts and deeds of §3.2 and §6 (`mission_success`, `failed_client`, `abandoned_mission`, `camp_night`, `helped_resident`); cohesion | all |
 
-The ids above are requests until the owning sessions confirm them in their registries.
+The Konoha build has placed all 88 beta anchor tags under these names ([KONOHA_BUILD.md](KONOHA_BUILD.md)
+§3, "Mission anchors"; generic tags get 4 to 8 instances); later regions' anchors wait for those regions.
+The other ids are requests until the owning sessions confirm them in their registries.
 
 ## 11. What waits for Phase 0
 
