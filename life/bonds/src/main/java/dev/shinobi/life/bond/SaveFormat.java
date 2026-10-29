@@ -34,7 +34,7 @@ public final class SaveFormat {
         for (var d : w.deeds) {
             var knowers = new LinkedHashMap<String, Object>();
             d.knowers.forEach((id, k) -> knowers.put(id, map("how", k.how().name().toLowerCase(), "day", k.day(), "from", k.from(), "slant", k.slant())));
-            deeds.add(map("serial", d.serial, "act", d.act.id(), "day", d.day, "about", d.about, "note", d.note, "knowers", knowers));
+            deeds.add(map("serial", d.serial, "act", d.act.id(), "day", d.day, "about", d.about, "note", d.note, "forgiven", d.forgiven, "knowers", knowers));
         }
         out.put("deeds", deeds);
         out.put("plans", w.plans.stream().map(p -> (Object) map("id", p.id(), "with", p.with(), "activity", p.activity(), "day", p.day(), "hour", p.hour(), "host", p.host())).toList());
@@ -113,6 +113,7 @@ public final class SaveFormat {
             var d = (Map<String, Object>) o;
             var deed = new Deed((int) lng(d.get("serial")), Act.of((String) d.get("act")), lng(d.get("day")), (String) d.getOrDefault("about", ""));
             deed.note = (String) d.getOrDefault("note", "");
+            deed.forgiven = Boolean.TRUE.equals(d.get("forgiven"));
             for (var k : ((Map<String, Object>) d.getOrDefault("knowers", Map.of())).entrySet()) {
                 var km = (Map<String, Object>) k.getValue();
                 deed.knowers.put(k.getKey(), new Deed.Know(Reaction.Source.valueOf(((String) km.get("how")).toUpperCase()), lng(km.get("day")), (String) km.getOrDefault("from", ""), dbl(km.getOrDefault("slant", 0))));

@@ -31,6 +31,7 @@ import java.util.Map;
  * {"set_flag":          ["story.kindling.awakened", true]} the flags the bond engine reads (Core keeps the rest)
  * {"kindle":            "role:teammate_a"}                 a use of Kindling Bond: counted, and it builds resonance
  * {"kindle":            {"who": "role:x", "floor": "spark"}}  a scripted gift beat: counts as at least this tier, this once
+ * {"thread":            {"who": "role:x", "floor": "spark", "style": "one_sided", "until": "story.flag"}}  Thread Sight shows it below 6
  * {"clear_bond_flag":   ["role:x", "hides:a_secret"]}
  * {"level_cap":         ["role:porter", 4, "story.ch28.done"]}  held at this level until the story flag is set
  * {"resolve_hook":      ["hook.clan_feud.12", "mediated"]} a side quest settles a society hook
@@ -97,6 +98,11 @@ public final class BondEffects {
                 var floor = arg instanceof Map<?, ?> m && m.get("floor") != null ? Kindling.Tier.of(str(m.get("floor"))) : Kindling.Tier.NONE;
                 yield each(w, ref, who -> w.kindle(who, floor).tier() != Kindling.Tier.NONE ? "" : "no_bond");
             }
+            case "thread" -> {
+                var spec = (Map<String, Object>) arg;
+                var floor = Kindling.Tier.of(str(spec.getOrDefault("floor", "spark")));
+                yield each(w, spec.get("who"), who -> { Kindling.scriptThread(w, who, floor, str(spec.getOrDefault("style", "")), str(spec.getOrDefault("until", ""))); return ""; });
+            }
             case "clear_bond_flag" -> each(w, at(arg, 0), who -> { w.clearBondFlag(who, str(at(arg, 1))); return ""; });
             case "level_cap" -> each(w, at(arg, 0), who -> { w.capLevel(who, (int) num(at(arg, 1)), str(at(arg, 2))); return ""; });
             case "resolve_hook" -> w.village() == null ? "no_village" : w.village().resolve(str(at(arg, 0)), str(at(arg, 1)));
@@ -125,7 +131,7 @@ public final class BondEffects {
     public static boolean known(String name) {
         return List.of("add_friendship", "bond_event", "shared_moment", "start_conflict", "apologize", "reconcile", "mend", "reveal_fact",
                 "romance", "marry", "remove_from_squad", "return_to_squad", "favor", "deed", "celebrate_birthday", "bond_flag", "set_flag",
-                "kindle", "resolve_hook", "clan_event", "clan_deed", "mood_event", "ask_question", "give_player", "clear_bond_flag", "level_cap").contains(name);
+                "kindle", "resolve_hook", "clan_event", "clan_deed", "mood_event", "ask_question", "give_player", "clear_bond_flag", "level_cap", "thread").contains(name);
     }
 
     private static String each(BondWorld w, Object ref, java.util.function.Function<String, String> f) {

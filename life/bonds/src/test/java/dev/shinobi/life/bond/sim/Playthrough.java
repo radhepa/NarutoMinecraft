@@ -273,7 +273,8 @@ public final class Playthrough {
         var r = new Run(w, profile, seed);
         var rows = new ArrayList<Row>();
         var standing = new java.util.TreeMap<Integer, Standings>();
-        for (var ch : chapters()) {
+        var path = chapters();
+        for (var ch : path) {
             r.notes.clear(); r.part++;
             for (int d = 0; d < ch.days; d++) {
                 if (d == 0) ch.start.accept(r);
@@ -283,6 +284,7 @@ public final class Playthrough {
                 for (var e : w.drainEvents()) { r.events.add(e); notable(r, e); }
             }
             r.hours += ch.hours;
+            if (ch == path.getLast()) { w.deed(Act.SAVED_THE_VILLAGE, "", List.of()); w.endDay(); w.drainEvents(); }
             for (int h : STANDING_HOURS) if (r.hours >= h && !standing.containsKey(h)) standing.put(h, standings(w));
             for (var f : Kindling.flames(w)) r.tierHours.putIfAbsent(f.tier().id(), Math.round(r.hours * 10) / 10.0);
             for (var f : Kindling.flames(w)) for (var t : Kindling.Tier.values())
@@ -564,12 +566,23 @@ public final class Playthrough {
         return sb.toString();
     }
 
+    /** {@code BondWeb.score} at the end of the path, per kind of player across seeds: for the finale's web tiers. */
+    public static String websAcross(long[] seeds) {
+        var sb = new StringBuilder("\n== Bond web at the finale (BondWeb.score) ==\n");
+        for (var profile : Profile.values()) {
+            var scores = java.util.Arrays.stream(seeds).mapToInt(s -> dev.shinobi.life.bond.BondWeb.score(play(s, profile).world())).sorted().toArray();
+            sb.append(String.format("  %-8s %s%n", profile.id(), java.util.Arrays.toString(scores)));
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         long seed = args.length > 0 ? Long.parseLong(args[0]) : 20261029L;
         System.out.println("Bond pacing, seed " + seed + " (levels are the level each person acts on; coh = squad cohesion)");
         for (var profile : Profile.values()) System.out.print(table(play(seed, profile)));
         System.out.print(bonfires(new long[]{seed, 7, 11, 99, 2024}));
         System.out.print(standingsAcross(new long[]{seed, 7, 11, 99, 2024}));
+        System.out.print(websAcross(new long[]{seed, 7, 11, 99, 2024}));
     }
 
     private Playthrough() {}

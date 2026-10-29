@@ -77,6 +77,16 @@ public final class Kindling {
         var t = tier(w, who);
         return t.compareTo(floor) >= 0 ? t : floor;
     }
+    /**
+     * The tier combat reads: from the level they hold (not the quarrel-capped one), one tier lower while a quarrel is
+     * active (Spark goes out), none after a falling-out. An offered flame still counts as Spark when the bond is calm.
+     */
+    public static Tier combatTier(BondWorld w, String who) {
+        var b = w.bond(who); var c = b.conflict();
+        var t = tier(unlocked(w), w.level(who), who.equals(w.spouse()), c);
+        if (t == Tier.NONE && unlocked(w) && !c.broken() && b.remembers(Act.OFFERED_FLAME)) t = Tier.SPARK;
+        return c.active() && t != Tier.NONE ? Tier.values()[t.ordinal() - 1] : t;
+    }
     /** How brightly someone's flame burns, 0 to 1 (0 when there is no flame). */
     public static double strength(BondWorld w, String who) { return strength(w, who, Tier.NONE); }
     static double strength(BondWorld w, String who, Tier floor) {
@@ -103,8 +113,30 @@ public final class Kindling {
         return new Flame(who, tier(w, who, floor), strength(w, who, floor), b.conflict().active(), b.resonance, b.resonance >= TRIAL_RESONANCE, b.kindled);
     }
 
-    /** Someone Thread Sight reads: {@code flicker} when they are hiding something (never what). */
-    public record Read(String who, boolean flicker) {}
+    /**
+     * Someone Thread Sight reads: {@code flicker} when they are hiding something (never what); {@code style} is how
+     * their thread to the player looks: "" (plain), "fraying" (a quarrel), or what a scripted thread asks for.
+     */
+    public record Read(String who, boolean flicker, String style) {
+        public Read(String who, boolean flicker) { this(who, flicker, ""); }
+    }
+    /** A scripted thread ({@code thread:<floor>:<style>:<until>}): shown below level 6 until the story flag is set. */
+    public static final String SCRIPTED = "thread:";
+    /** A story beat shows one thread below level 6 ({@code {"thread": {"who", "floor", "style", "until"}}}). */
+    public static void scriptThread(BondWorld w, String who, Tier floor, String style, String until) {
+        var b = w.bond(who);
+        b.flags.removeIf(f -> f.startsWith(SCRIPTED));
+        b.flags.add(SCRIPTED + floor.id() + ":" + style + ":" + until);
+    }
+    /** The live scripted thread's style, or null: one whose story flag has not been set yet. */
+    static String scripted(BondWorld w, Bond b) {
+        for (String f : b.flags) {
+            if (!f.startsWith(SCRIPTED)) continue;
+            var parts = f.substring(SCRIPTED.length()).split(":", 3);
+            if (parts.length == 3 && (parts[2].isEmpty() || !w.flag(parts[2])) && Tier.of(parts[0]) != Tier.NONE) return parts[1];
+        }
+        return null;
+    }
     /** A thread between two people the player can read: how close they are to each other, and whether they are at odds. */
     public record Thread(String a, String b, int level, boolean strained) {}
     public record Sight(List<Read> people, List<Thread> threads) {}
@@ -119,8 +151,10 @@ public final class Kindling {
         var people = new ArrayList<Read>();
         for (String who : w.bonded()) {
             var b = w.bond(who);
-            if (w.effectiveLevel(who) < Levels.KINDLE_NATURE || b.conflict().broken()) continue;
-            people.add(new Read(who, b.flags.stream().anyMatch(f -> f.startsWith(HIDING))));
+            String script = scripted(w, b);
+            if (script == null && (w.effectiveLevel(who) < Levels.KINDLE_NATURE || b.conflict().broken())) continue;
+            String style = script != null && !script.isEmpty() ? script : b.conflict().active() || b.conflict().broken() ? "fraying" : "";
+            people.add(new Read(who, b.flags.stream().anyMatch(f -> f.startsWith(HIDING)), style));
         }
         people.sort(Comparator.comparing(Read::who));
         var threads = new ArrayList<Thread>();

@@ -337,11 +337,13 @@ public final class BondWorld {
     public Deed deedOf(int serial) { return deeds.stream().filter(d -> d.serial == serial).findFirst().orElse(null); }
     /** A deed: whoever it was about lived it, the witnesses saw it, and from them word spreads. */
     public Deed deed(Act act, String about, Collection<String> witnesses) {
+        if (act.forgives) for (var old : deeds) if (!old.good()) old.forgiven = true;
         var d = new Deed(nextSerial++, act, day, about);
         deeds.add(d);
         if (village != null) village.onDeed(d);
         if (about != null && !about.isEmpty() && people.containsKey(about)) d.knowers.put(about, new Deed.Know(Source.SELF, day, ""));
         for (String w : witnesses) if (!d.knows(w) && people.containsKey(w)) { d.knowers.put(w, new Deed.Know(Source.SEEN, day, "")); absorb(w, d); }
+        if (act.lived) for (String w : List.copyOf(people.keySet())) if (!d.knows(w)) { d.knowers.put(w, new Deed.Know(Source.SELF, day, "")); absorb(w, d); }
         return d;
     }
     /** The player tells someone about a deed. False when they had already heard (word got there first). */

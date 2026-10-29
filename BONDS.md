@@ -429,6 +429,10 @@ and reads `Kindling.Flame` and `Kindling.Bonfire`; the story owns when it awaken
   shows *that* one of them hides something (a flicker, from a story bond flag `hides:<what>`), never
   *what*, and a thread between two others only when both are readable (how close they are, and
   whether they are at odds). Strangers and acquaintances stay unreadable.
+- **Scripted threads:** a story beat can show one thread below level 6,
+  `{"thread": {"who": "role:x", "floor": "spark", "style": "one_sided", "until": "<story flag>"}}`,
+  until its flag is set. Each read carries a `style`: plain, `fraying` (a quarrel or falling-out),
+  or the scripted one.
 - **A freely offered flame** (`offered_flame`, a kept moment) is the only way someone below level 6
   burns toward you (Spark). `gave_flame` is the player pouring their flame into someone (a kept
   moment). The story uses both at a few scripted beats.
@@ -464,7 +468,11 @@ kindle a squadmate on some missions after that):
 **Combat reads** (no dependency on this module's internals needed beyond these records):
 `Kindling.flames(world)` (brightest first: who, tier, strength, dimmed, resonance, trial ready,
 kindles), `Kindling.flame(world, who)`, `Kindling.emberLink(world)`, `Kindling.bonfire(world)` and
-`world.kindle(who)` to spend a kindle.
+`world.kindle(who)` to spend a kindle. Combat's own `Kindle.Bonds` (combat:core) is adapted in the
+Life glue: `tier(who)` = `Kindling.combatTier` (the held level's tier, one lower while a quarrel is
+active, none after a falling-out), `web()` = `Kindling.bonfire(world).strength()` (the tiered,
+dimmed web the Bonfire forms use; about 22 devoted, 19 typical, 3 reckless), and `bonfireOpen()` =
+`Kindling.bonfire(world).lit()`.
 
 ## 12. The bond book
 
@@ -689,8 +697,19 @@ Good Neighbor in every district and clan quarter):
 | | Devoted | Typical | Reckless |
 |---|---|---|---|
 | 45 h: village | Pillar (34 to 36), Hero in 1 of 5 | Pillar (32 to 34), never Hero | Good Neighbor (17 to 18) |
-| 60 h: village | Hero in 5 of 5 (38 to 40) | Hero in 5 of 5 (37 to 39) | Pillar (20 to 23), never Hero |
+| 60 h: village (after the finale) | Hero in 5 of 5 | Hero in 5 of 5 | Hero in 5 of 5 |
 | Good Neighbor everywhere | 5 of 5 at 45 h and 60 h | 5 of 5 at 45 h and 60 h | 3 of 5 at 45 h, 5 of 5 at 60 h |
+
+The story ends the last arc with `saved_the_village` (a deed worth 90 that the whole village lives
+through: everyone knows it firsthand at once). It also forgives old bad news: earlier bad deeds stop
+weighing on standing (memories stay). Even with nothing else to their name, a player who saved the
+village scores 40(1 - e^(-90/40)) = 35.8, so everyone who finishes reaches Hero with the village and
+level 50 is the Hokage's real filter. Before it, at 60 h: devoted 38 to 40, typical 37 to 39,
+reckless 20 to 23. After it: devoted 47 to 48, typical 46 to 47, reckless 42 (Hero is 35).
+
+**Bond web at the finale** (`BondWeb.score`, five seeds): devoted 42 to 50, typical 34 to 40,
+reckless 4 to 10. The story's finale tiers: under 20 small, 20 to 40 strong, 41 or more the whole
+village.
 
 Run `./gradlew :life:bonds:simulate` for the full tables, or `-Pexplain=role:teammate_a` to see
 where one bond's meters come from. `TimeAndPacingTest` holds these targets on five seeds.

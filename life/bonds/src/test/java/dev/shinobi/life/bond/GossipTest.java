@@ -81,4 +81,23 @@ class GossipTest {
         w.deed(Act.PROTECTED_THEM, "kid", List.of(COOK, "stranger"));
         assertTrue(w.meters(COOK).trust() > w.meters("stranger").trust(), "a parent hears it differently");
     }
+    @Test void savingTheVillageIsKnownFirsthandByEveryoneAtOnce() {
+        var w = Leaf.classic(3, 40);
+        double before = w.standing("village");
+        assertEquals("", BondEffects.apply(w, java.util.Map.of("deed", java.util.Map.of("act", "saved_the_village"))));
+        var d = w.deeds.getLast();
+        assertTrue(w.people().stream().allMatch(x -> d.know(x.id()) != null && d.know(x.id()).how() == Reaction.Source.SELF), "the whole village lived it");
+        assertTrue(w.standing("village") > before + 20);
+    }
+    @Test void savingTheVillageForgivesOldBadNewsSoEveryoneWhoFinishesIsAHero() {
+        var w = Leaf.classic(5, 40);
+        var all = w.people().stream().map(Person::id).toList();
+        for (int d = 0; d < 20; d++) { w.deed(Act.ABANDONED_MISSION, "", all); w.endDay(); }
+        assertTrue(w.standing("village") < 0, "a reckless history: " + w.standing("village"));
+        w.deed(Act.SAVED_THE_VILLAGE, "", List.of());
+        assertEquals(Standing.Title.HERO, w.title("village"), "score " + w.standing("village"));
+        assertTrue(w.deeds.stream().filter(x -> x.act() == Act.ABANDONED_MISSION).allMatch(Deed::forgiven));
+        var back = SaveFormat.read(SaveFormat.write(w), 5, new java.util.ArrayList<>(w.people()));
+        assertEquals(w.standing("village"), back.standing("village"), 1e-9, "a save keeps what was forgiven");
+    }
 }
