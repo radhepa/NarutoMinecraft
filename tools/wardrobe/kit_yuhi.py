@@ -104,24 +104,24 @@ def bandage_turns(face, x0: int, y0: int, x1: int, y1: int, role: str = "S", bas
     for y in range(y0, y1 + 1):
         for x in range(x0, x1 + 1):
             t = (x * lean + y) % 3
-            face.set(x, y, k(role, base - 1 if t == 0 else (base + 1 if t == 1 and rnd(x, y, 7) > .6 else base)))
+            face.set(x, y, k(role, base - 1 if t == 0 else (base + 1 if t == 1 and rnd(x, y, 7) > .75 else base)))
 
 
 def thorn_wrap(face, x0: int, y0: int, x1: int, y1: int, role: str = "P", thorn: str = "A", base: int = 2, seed: int = 0,
                step: int = 4):
-    """Kurenai's dress cloth: broad bandage turns printed with thorny stems. Every `step` columns a stem
-    snakes down the cloth in the thorn role, throwing a short thorn to alternate sides."""
-    bandage_turns(face, x0, y0, x1, y1, role, base, lean=-1)
+    """Kurenai's dress cloth: broad bandage turns printed with thorn twigs. Each twig is a three-texel
+    diagonal stem with one thorn off it, set on a staggered grid `step` texels apart, so the print
+    reads as a scatter of briars on the ivory wraps."""
+    bandage_turns(face, x0, y0, x1, y1, role, base + 1, lean=-1)
     off = int(rnd(seed, 5) * step)
+    twig = {(0, 2): 2, (1, 1): 2, (2, 0): 2, (0, 0): 1}
     for y in range(y0, y1 + 1):
-        for sx in range(x0 - step + off, x1 + 1, step):
-            x = sx + (1 if (y // 2) % 2 else 0)
-            if x0 <= x <= x1:
-                face.set(x, y, k(thorn, 2))
-            if y % 3 == 1:
-                tx = x + (1 if (y // 3) % 2 else -1)
-                if x0 <= tx <= x1:
-                    face.set(tx, y, k(thorn, 1))
+        row = (y - y0) // step
+        for x in range(x0, x1 + 1):
+            cx = (x - x0 + off + (row % 2) * (step // 2)) % step
+            shade = twig.get((cx, (y - y0) % step))
+            if shade is not None:
+                face.set(x, y, k(thorn, shade))
 
 
 def thorn_vine(face, x: int, y0: int, y1: int, thorn: str = "A", base: int = 2):
@@ -144,11 +144,12 @@ def thorn_band(face, y: int, thorn: str = "A", ground: str | None = None, base: 
 
 
 def mist_swirls(face, x0: int, y0: int, x1: int, y1: int, role: str = "S", base: int = 2):
-    """Genjutsu mist: loose spirals traced in a light shade over a cloth, two texels apart."""
+    """Genjutsu mist: soft streaks drifting across a cloth, each a wave that rises and falls a texel,
+    broken into wisps, three rows apart."""
     for y in range(y0, y1 + 1):
         for x in range(x0, x1 + 1):
-            u, v = (x - x0) % 6, (y - y0 + (x - x0) // 6 * 3) % 6
-            if (u, v) in ((1, 1), (2, 1), (3, 1), (4, 2), (4, 3), (3, 4), (2, 4), (2, 3)):
+            wave = (0, 0, 1, 1, 1, 0)[(x + y // 3 * 2) % 6]
+            if (y - y0 - wave) % 3 == 0 and (x + y) % 7 not in (0, 1):
                 face.set(x, y, k(role, base))
 
 

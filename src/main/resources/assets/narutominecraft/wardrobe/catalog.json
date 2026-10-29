@@ -89,7 +89,9 @@
     "w06_anbu_hawk_mask",
     "w07_root_mask",
     "w08_masked_protector",
-    "w09_bandana_protector"
+    "w09_bandana_protector",
+    "w1401_rose_hairpin",
+    "w1402_crimson_protector"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -112,7 +114,17 @@
     "t18_sentinel_vest",
     "t19_field_vest",
     "t20_kunoichi_jonin",
-    "t21_commander_coat"
+    "t21_commander_coat",
+    "t1401_rose_thorn_wrap",
+    "t1402_genjutsu_jonin_vest",
+    "t1403_striped_overshirt",
+    "t1404_crimson_kimono",
+    "t1405_bandage_bodice",
+    "t1406_mist_haori",
+    "t1407_thorn_sash_tunic",
+    "t1408_rose_wrap_blouse",
+    "t1409_simple_wrap_dress",
+    "t1410_illusion_cloak"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -122,7 +134,12 @@
     "b05_green_leggings",
     "b06_anbu_greaves",
     "b07_cargo_shorts",
-    "b08_mesh_leggings"
+    "b08_mesh_leggings",
+    "b1401_bandaged_thighs",
+    "b1402_wrapped_trousers",
+    "b1403_grey_slacks",
+    "b1404_thorn_hem_skirt",
+    "b1405_bandaged_shorts"
   ],
   "characters": [
     {
@@ -538,7 +555,381 @@
       ],
       "color": null,
       "mirror": true
+    },
+    "yuhi_violet_lids": {
+      "rects": [
+        [
+          1.2,
+          -4.3,
+          2.2,
+          0.22
+        ]
+      ],
+      "color": "#6c4a86",
+      "mirror": true
+    },
+    "yuhi_thorn_scar": {
+      "rects": [
+        [
+          2.7,
+          -2.0,
+          0.28,
+          1.1
+        ]
+      ],
+      "color": null,
+      "mirror": false
     }
   },
-  "clans": []
+  "clans": [
+    {
+      "id": "yuhi",
+      "name": "Yuhi",
+      "tagline": "Wild black waves and crimson eyes, rose-and-thorn bandage wraps, mist-grey haori: the genjutsu clan",
+      "palettes": {
+        "YUHI_THORN": {
+          "name": "Yuhi Thorn",
+          "P": "#e3d8c6",
+          "S": "#f1ece2",
+          "A": "#b01e2e",
+          "L": "#6b4a3a",
+          "M": "#aab3b9",
+          "K": "#1b1418",
+          "D": "#3b2a33"
+        },
+        "YUHI_CRIMSON": {
+          "name": "Yuhi Crimson",
+          "P": "#8f1d2a",
+          "S": "#efe7dc",
+          "A": "#e07a86",
+          "L": "#5e3f30",
+          "M": "#b5aa8a",
+          "K": "#1a1214",
+          "D": "#3a2128"
+        },
+        "YUHI_NOCTURNE": {
+          "name": "Yuhi Nocturne",
+          "P": "#2c252b",
+          "S": "#e6ddd6",
+          "A": "#c42a3c",
+          "L": "#4a3a33",
+          "M": "#9aa3aa",
+          "K": "#141013",
+          "D": "#3e2a34"
+        },
+        "YUHI_DUSK_ROSE": {
+          "name": "Yuhi Dusk Rose",
+          "P": "#b77f86",
+          "S": "#f3ebe4",
+          "A": "#7d1d2d",
+          "L": "#6b4a3a",
+          "M": "#b5aa8a",
+          "K": "#2a1e22",
+          "D": "#5b3b45"
+        },
+        "YUHI_MIST": {
+          "name": "Yuhi Mist",
+          "P": "#8a8190",
+          "S": "#ece7ee",
+          "A": "#b52638",
+          "L": "#5a4a44",
+          "M": "#aab3b9",
+          "K": "#1d1a22",
+          "D": "#3f3848"
+        },
+        "YUHI_JONIN": {
+          "name": "Yuhi Jonin",
+          "P": "#5f6e3c",
+          "S": "#e6e1d3",
+          "A": "#b8232f",
+          "L": "#7a6346",
+          "M": "#aab3b9",
+          "K": "#1b1518",
+          "D": "#3a2630"
+        },
+        "YUHI_BURGUNDY": {
+          "name": "Yuhi Burgundy",
+          "P": "#6c1f30",
+          "S": "#ece6dc",
+          "A": "#e0603e",
+          "L": "#a07a52",
+          "M": "#aab3b9",
+          "K": "#18141a",
+          "D": "#8b8a8f"
+        }
+      },
+      "hair_colors": {
+        "YUHI_BLACK": {
+          "name": "Yuhi Black",
+          "ramp": [
+            "#0c090c",
+            "#181216",
+            "#251b21",
+            "#3a2a32",
+            "#56404a"
+          ]
+        },
+        "YUHI_WINE_BLACK": {
+          "name": "Yuhi Wine Black",
+          "ramp": [
+            "#12070a",
+            "#22101a",
+            "#341824",
+            "#4f2434",
+            "#723447"
+          ]
+        },
+        "YUHI_UMBER": {
+          "name": "Yuhi Umber",
+          "ramp": [
+            "#140c0a",
+            "#251712",
+            "#38241c",
+            "#523629",
+            "#734c3a"
+          ]
+        },
+        "YUHI_ASH": {
+          "name": "Yuhi Ash",
+          "ramp": [
+            "#2e2a2e",
+            "#4a4549",
+            "#6b656a",
+            "#8f898d",
+            "#b5b0b3"
+          ]
+        }
+      },
+      "eye_colors": {
+        "YUHI_RED": {
+          "name": "Yuhi Red",
+          "ramp": [
+            "#14050a",
+            "#7a0f1c",
+            "#b81d2b",
+            "#e45663",
+            "#f3ece6"
+          ]
+        },
+        "YUHI_GARNET": {
+          "name": "Yuhi Garnet",
+          "ramp": [
+            "#120608",
+            "#5e1420",
+            "#8a2230",
+            "#b84a56",
+            "#f1ebe4"
+          ]
+        }
+      },
+      "marks": {
+        "yuhi_violet_lids": {
+          "rects": [
+            [
+              1.2,
+              -4.3,
+              2.2,
+              0.22
+            ]
+          ],
+          "color": "#6c4a86",
+          "mirror": true
+        },
+        "yuhi_thorn_scar": {
+          "rects": [
+            [
+              2.7,
+              -2.0,
+              0.28,
+              1.1
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h1401_kurenai_wild_mane",
+          "h1402_kurenai_shoulder_waves",
+          "h1403_shinku_shag",
+          "h1404_mirai_layered_bob",
+          "h1405_guard_tail",
+          "h1406_thorn_half_up",
+          "h1407_rose_bun",
+          "h1408_mist_veil",
+          "h1409_illusion_sweep",
+          "h1410_bramble_crop",
+          "h1411_wave_ponytail",
+          "h1412_thorn_braids",
+          "h1413_crimson_flare",
+          "h1414_elder_waves",
+          "h1415_wrapped_tail"
+        ],
+        "hair_colors": [
+          "YUHI_BLACK",
+          "YUHI_BLACK",
+          "YUHI_BLACK",
+          "YUHI_BLACK",
+          "YUHI_WINE_BLACK",
+          "YUHI_WINE_BLACK",
+          "YUHI_UMBER",
+          "YUHI_ASH"
+        ],
+        "eye_colors": [
+          "YUHI_RED",
+          "YUHI_RED",
+          "YUHI_RED",
+          "YUHI_RED",
+          "YUHI_GARNET",
+          "YUHI_GARNET",
+          "DARK"
+        ],
+        "palettes": [
+          "YUHI_THORN",
+          "YUHI_CRIMSON",
+          "YUHI_NOCTURNE",
+          "YUHI_DUSK_ROSE",
+          "YUHI_MIST"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w1401_rose_hairpin",
+          "w1401_rose_hairpin",
+          "w1402_crimson_protector",
+          "w02_forehead_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "yuhi_violet_lids",
+            "chance": 0.2
+          },
+          {
+            "id": "yuhi_thorn_scar",
+            "chance": 0.08
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "rose_thorn",
+          "name": "Rose Thorn",
+          "top": "t1401_rose_thorn_wrap",
+          "bottom": "b1401_bandaged_thighs",
+          "rank": "jonin",
+          "palettes": [
+            "YUHI_THORN"
+          ]
+        },
+        {
+          "id": "genjutsu_jonin",
+          "name": "Genjutsu Jonin",
+          "top": "t1402_genjutsu_jonin_vest",
+          "bottom": "b1402_wrapped_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "YUHI_JONIN"
+          ]
+        },
+        {
+          "id": "after_the_war",
+          "name": "After the War",
+          "top": "t1403_striped_overshirt",
+          "bottom": "b1403_grey_slacks",
+          "rank": "jonin",
+          "palettes": [
+            "YUHI_BURGUNDY"
+          ]
+        },
+        {
+          "id": "crimson_kimono",
+          "name": "Crimson Kimono",
+          "top": "t1404_crimson_kimono",
+          "bottom": "b1404_thorn_hem_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "YUHI_CRIMSON",
+            "YUHI_NOCTURNE"
+          ]
+        },
+        {
+          "id": "bandage_bodice",
+          "name": "Bandage Bodice",
+          "top": "t1405_bandage_bodice",
+          "bottom": "b1405_bandaged_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "mist_haori",
+          "name": "Mist Haori",
+          "top": "t1406_mist_haori",
+          "bottom": "b1402_wrapped_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "YUHI_MIST",
+            "YUHI_NOCTURNE"
+          ]
+        },
+        {
+          "id": "thorn_sash",
+          "name": "Thorn Sash",
+          "top": "t1407_thorn_sash_tunic",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "YUHI_NOCTURNE",
+            "YUHI_CRIMSON",
+            "YUHI_MIST"
+          ]
+        },
+        {
+          "id": "rose_wrap",
+          "name": "Rose Wrap",
+          "top": "t1408_rose_wrap_blouse",
+          "bottom": "b1405_bandaged_shorts",
+          "rank": "chunin",
+          "palettes": [
+            "YUHI_CRIMSON",
+            "YUHI_DUSK_ROSE"
+          ]
+        },
+        {
+          "id": "quiet_years",
+          "name": "Quiet Years",
+          "top": "t1409_simple_wrap_dress",
+          "bottom": "b1401_bandaged_thighs",
+          "rank": "jonin",
+          "palettes": [
+            "YUHI_DUSK_ROSE",
+            "YUHI_THORN"
+          ]
+        },
+        {
+          "id": "illusion_cloak",
+          "name": "Illusion Cloak",
+          "top": "t1410_illusion_cloak",
+          "bottom": "b1402_wrapped_trousers",
+          "rank": "anbu",
+          "palettes": [
+            "YUHI_NOCTURNE",
+            "YUHI_MIST"
+          ]
+        }
+      ]
+    }
+  ]
 }
