@@ -200,6 +200,7 @@ Q: Say your friend's cooking is terrible. Do you tell them?
   - `follows: q.<earlier>` with `depth: 2` and an optional `gap: <days>` (a deeper version, asked
     after the first is answered);
   - `public: yes` for opinions about clans, people or the village (the answer travels by gossip);
+  - `per_friend: yes` for a light opinion each close friend may ask once (instead of once in all);
   - `sets: <flag>` (a flag quests read);
   - `tags:` (context tags; `personality`, `role` and `clan` say who may ask);
   - `when:` (a Core condition).
