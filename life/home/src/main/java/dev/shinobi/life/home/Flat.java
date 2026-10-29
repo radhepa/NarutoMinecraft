@@ -29,15 +29,18 @@ public record Flat(String id, Tier tier, List<Room> rooms, int cells, int keys, 
     }
     public int floor() { return rooms.stream().mapToInt(Room::floor).sum(); }
 
-    /** The Classic flat: one room, a kitchenette, a bathroom and a little balcony facing the Hokage Rock. */
+    /**
+     * The Classic flat: one room, a kitchenette, a bathroom and a little balcony facing the Hokage Rock. Rooms are open
+     * floor; with the internal walls the flat is 10 wide and 8 deep inside (the Konoha build's Leaf block), and the
+     * balcony is an extra area outside the plaque's flood fill.
+     */
     public static final Flat CLASSIC = new Flat("flat.leaf_block.3a", Tier.ACADEMY_FLAT, List.of(
             new Room("main", 6, 6, 3), new Room("kitchenette", 3, 4, 3), new Room("bathroom", 3, 3, 3),
             new Room("genkan", 2, 1, 3), new Room("balcony", 4, 2, 0)), 22, 3, "hokage_rock", true);
 
     /** The Academy candidates a Varied save rolls from (the Classic flat among them). */
     public static final List<Flat> ACADEMY = List.of(CLASSIC,
-            new Flat("flat.leaf_block.2c", Tier.ACADEMY_FLAT, List.of(new Room("main", 7, 5, 3), new Room("kitchenette", 3, 3, 3),
-                    new Room("bathroom", 2, 3, 3), new Room("genkan", 2, 1, 3), new Room("balcony", 3, 2, 0)), 22, 3, "hokage_rock", true),
+            new Flat("flat.leaf_block.2c", Tier.ACADEMY_FLAT, CLASSIC.rooms(), 22, 3, "hokage_rock", true),
             new Flat("flat.riverside_row.1b", Tier.ACADEMY_FLAT, List.of(new Room("main", 6, 6, 3), new Room("kitchenette", 4, 3, 3),
                     new Room("bathroom", 3, 2, 3), new Room("genkan", 2, 1, 3), new Room("yard", 4, 3, 0)), 23, 3, "river", true),
             new Flat("flat.market_loft.4", Tier.ACADEMY_FLAT, List.of(new Room("main", 7, 6, 2), new Room("kitchenette", 3, 3, 2),

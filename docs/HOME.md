@@ -62,8 +62,11 @@ seed (`Flat.starting`, stream `home`). The Konoha build session builds them and 
 
 ### The Classic flat: `flat.leaf_block.3a`
 
-Third floor of the Leaf apartment block. Inside it is 9 blocks wide and 7 deep, ceilings 3 high,
-plus a 4 × 2 balcony. One block per character; north is up, toward the Hokage Rock.
+Third floor of the Leaf apartment block (4 floors, 3 flats a landing, an outdoor gallery and stair
+on the street side, the back toward the Hokage Rock). With its internal walls it is 10 blocks wide
+and 8 deep inside, ceilings 3 high, plus a 4 × 2 balcony outside the back wall (ground-floor flats
+get a 6 × 2 fenced yard). The sketch shows open floor, one block per character; north is up, toward
+the Rock.
 
 ```
                  +--------+
@@ -104,7 +107,7 @@ pieces none), room for **one bed**, and **3 spare keys**. It holds at most **60 
 | Id | Shape | View | Balcony |
 |---|---|---|---|
 | `flat.leaf_block.3a` | The Classic flat | Hokage Rock | 4 × 2 |
-| `flat.leaf_block.2c` | A corner flat: main room 7 × 5, smaller bathroom | Hokage Rock | 3 × 2 |
+| `flat.leaf_block.2c` | The same plan one floor down, on the corner | Hokage Rock | 4 × 2 |
 | `flat.riverside_row.1b` | Ground floor; a 4 × 3 yard instead of a balcony | The river | yard |
 | `flat.market_loft.4` | An attic over a shop: main room 7 × 6, low 2-block ceiling, a skylight | Rooftops | none (balcony pieces cannot be placed) |
 
@@ -307,8 +310,9 @@ Hosting adds a little mess (one per guest, one more for a meal).
 
 ### 9.2 Spare keys
 
-At **bond level 6** (Close Friend) you can give someone a spare key: a moment between you in the bond
-engine (`home.spare_key`). The Academy flat has three keys. Key holders drop by a little more often,
+At **bond level 6** (Close Friend) you can give someone a spare key: a little warmth and the bond
+flag `home.key` (quests read it with `bond_flag`). It is not a moment, so it never opens a story
+gate. The Academy flat has three keys. Key holders drop by a little more often,
 wait inside for you, and may leave food or tidy while you are away. You can take a key back
 quietly; nobody is told.
 
@@ -318,7 +322,8 @@ Short practice at home: the **training dummy** (taijutsu forms), **hand-sign dri
 needed), **meditation** on the mat (chakra control), and **study** at the scroll shelf or desk. It
 counts at **40% of a training ground's rate**, and at most **one in-game hour a day** counts (an
 hour and a half with the whole training set). One hand-sign drill a day counts toward mastering a
-jutsu. It fills a quiet evening; real training stays at the training grounds.
+jutsu. It is paid as player XP at Progression's training-ground rate (`ranks.json`), solo, so it is
+never shared with the squad. It fills a quiet evening; real training stays at the training grounds.
 
 ## 11. Money
 
@@ -515,6 +520,9 @@ shown like anything else.
 
 For the Konoha build session (the apartment block, the flats and `homes.json`):
 
+- **Built** on the Konoha branch as `tools/konoha/buildings/leaf_block.py` (flats 1a to 4c; 3a is the
+  Classic flat, 2c a Varied candidate, 1a the landlady, 4b a family with a child), with
+  `leaf_block.homes.json`. Cells and keys per player flat: 22 and 3.
 - **The Leaf apartment block** in the residential district, three or four floors, an outside
   stair, a landing per floor with two or three doors, a mailbox by each door, the landlady's flat
   on the ground floor, and a child's flat upstairs (the neighbour quests use it). Seen from the
@@ -554,7 +562,7 @@ letters as VF Sealed Letters, visitors walking in on VF routines.
 **Hooks into the bond engine** (no friendship numbers are duplicated): `BondWorld.effectiveLevel`,
 `bonded`, `Schedule.free` and the personality for who visits; `talk`, `together`,
 `act(HUNG_OUT)` and `addFriendship` for how a visit went; `Gifts.seenDisplayed` for a gift on show;
-`setBondFlag("home.noticed:<what>")` for a photo; `moment("home.spare_key")` for a key; `Together.invite` and `Together.go`
+`setBondFlag("home.noticed:<what>")` for a photo; `setBondFlag("home.key")` for a key; `Together.invite` and `Together.go`
 for hosted hangouts in its catalog. Requested from the bonds session: the home hangouts of section
 9.1 in `Activity.CATALOG`, and an act of its own for a visit to your home, in place of the plain
 `hung_out` used today. The squad-after-a-mission and away-all-day rules read Core's

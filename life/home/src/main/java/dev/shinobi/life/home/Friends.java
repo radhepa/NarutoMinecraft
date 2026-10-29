@@ -27,7 +27,7 @@ public interface Friends {
      * are in. Returns true the first time, when there is a line to play.
      */
     boolean noticed(String who, String what);
-    /** You gave them a spare key: a moment between you. */
+    /** You gave them a spare key (a bond flag, never a gate moment). */
     void keyGiven(String who);
     /**
      * You invite them over for a home hangout. Returns how it went ("great", "good", "fine", "rough") for those who
