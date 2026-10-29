@@ -68,7 +68,7 @@ for the village. After Ch 40, quieter; uses "I" for the first time. Never sneers
 Voice samples, not shipped lines:
 - "Welcome to the bottom! It's great down here! Lots of room to climb!"
 - "One day that's my face. Second from the left of the new ones. You can have the one after."
-- (Ch 40, on the steps) "She lied. For thirty years. And I'd have done the lantern walk for her with my eyes shut."
+- (Ch 40.2b, on the Rock) "She lied. For thirty years. And I'd have done the lantern walk for her with my eyes shut."
 - (Ch 42) "I'm with them."
 - (Ch 55) "Commander. Fine. Until I take your hat."
 
@@ -254,15 +254,20 @@ money in the Jonin arc to move his family into a house; he has told no one.
 | 3 Dusk | Ch 17: wins his preliminary in seconds. Ch 19.3: in the attack he joins the player's sensei against the blade on the arena floor, holds his own for six strokes, and takes a cut across the cheek. The blade, leaving, tells him "Good. Get a better sword." Promoted in Ch 20 |
 | 4 Embers | Chunin, then ANBU at the end of the arc, younger than anyone in years. Brilliant and alone |
 | 5 Ashes | Recruited by the Undercroft (money for his family, and the promise of real power: "We'll teach you what the ANBU won't"). Ch 44: on the same A-rank hill as the player, he is hunting the lost child under Undercroft orders; he backs off when the player's Genin are there |
-| 6 Night Watch | N4 to N6: he is among the Undercroft's guards; in N6 the Undercroft sends him to stop the player at the deepest cell. **Betray or not** (below) |
-| 7 Last Bonfire | Ch 47 (if the Night Watch was not finished): he arrives at the shrine with Undercroft orders to take her. **Betray or not** (below). Ch 51: whatever happened, he fights for the Leaf |
+| 6 Night Watch | N4: he guards the lost child's cell, masked; the player sees him through the bars. N6: he is the last of the old masks between the player and her. **Betray or not** (below) |
+| 7 Last Bonfire | Ch 47 (if the Night Watch was not played): he arrives at the shrine with Undercroft orders to take her. **Betray or not** (below); either way the orders reach the Seventh and the Undercroft is disbanded quietly. Ch 51: whatever happened, he fights for the Leaf at the wall |
 
-**Betray or not** (N6 or Ch 47, whichever comes first; `story.squad5_c.stand`):
+**Betray or not** (N6, or Ch 47 if the Night Watch was not played; `story.squad5_c.stand`). The
+player asks him: "What did they promise you?" His answer is `ans.squad5_c.offer` (his own words,
+picked by the state of his life: `power` "That I'd never be powerless again", `house` "A house.
+A door that locks", `teach` "Everything the ANBU won't teach", `nothing` "Nothing I wanted. I
+just said yes"). Then the player answers him, and his earlier answers decide whether the words
+reach him:
 
 | Outcome | Needs | What happens |
 |---|---|---|
-| **Stands down** | `friendship [squad5_c, 4]` and at least one of his answers below that gives him a way out (`ans.squad5_c.cage = key` or `ans.squad5_c.free = never`), or the player tells him the Undercroft's plan for the girl (from N4) | He lowers his sword: "They said she was a weapon. She's a kid from a cell." He turns on his own orders and holds the door while the player kindles her. Later he returns the Undercroft's money (`stood_down`) |
-| **Fights, then yields** | Otherwise | A full duel; beaten, he yields; arrested for the Undercroft; released for the war (Ch 51) where he fights at the player's side without a word (`fought`) |
+| **Stands down** (talked down) | `friendship [squad5_c, 4]` and the player's reply meets his offer (power → "Nobody who holds a cage is free"; house → "You'll have one. Not like this"; teach → "I'll teach you myself"; nothing → "Then say no now"), helped by `ans.squad5_c.cage = key` or `ans.squad5_c.free = never` (either lowers the friendship need to 3); or the player tells him the Undercroft's plan for her (seen in N4) | He lowers his sword: "They said she was a weapon. She's a kid from a cell." In N6 he opens the cell himself and walks out of the Undercroft with the player; in Ch 47 he turns and guards the shrine stair. He returns the Undercroft's money (`stood_down`) |
+| **Fights** | Otherwise | A full duel; beaten, he yields and leaves the ANBU (N6) or is arrested on the Seventh's order (Ch 47); released for the war, he returns in Ch 51 at the wall and fights without a word (`fought`) |
 
 He never kills anyone in either branch, and never fully joins the dark: the story says he was
 offered a cage with a key and had to choose to use the key.
@@ -279,7 +284,7 @@ about money plainly. Never brags. Never says "I need help".
 
 Voice samples, not shipped lines:
 - "Sloppy."
-- "You have a clan? No? Then you'll have to be better than them. Good. So do I."
+- "No clan either? Then you'll have to be better than them. Good. So do I."
 - (to the blade, Ch 19, through blood) "Again."
 - (Ch 44) "Orders. Go home, {given:player}. This isn't yours."
 - (stands down) "They said she was a weapon. She's a kid from a cell."
@@ -296,13 +301,17 @@ after Ch 28 ("He carried my sister's cot up four floors and wouldn't take a coin
 
 | Id | When | Question | Options | Honours / tests | Remembered | Changes him |
 |---|---|---|---|---|---|---|
-| `ans.squad5_c.clan` | Level 2 or Ch 17 | "Do you have a clan?" (For a clan-born player: "Then what did you earn yourself?") | I'm clanless too / I have one, it's not why I'm here / Does it matter? | Strength | His respect from then on; Ch 47: "You said ___" | Clanless player: rivalry with respect. Clan-born: he tests you harder |
+| `ans.squad5_c.clan` | Level 2 or Ch 17 | "No clan either, right? So what did you get instead?" | Friends / A sensei / Nothing, I took what I needed / Time to train | Strength | His respect from then on; Ch 47 or N6: "You said ___" before the duel | "Took what I needed" makes the fight likelier (he hears himself); "friends" makes him scoff, then remember it in the stand-down |
 | `ans.squad5_c.free` | Level 3 hangout (sharpening) | "Is power ever free?" | Never / Only when someone gives it / It is, if you take it | Strength | N6 / Ch 47: the stand-down condition | "Never" or "given" help him stand down; "take it" makes the fight more likely |
 | `ans.squad5_c.money` | Level 4 | "What would you do for money if you had none?" | Anything honest / Anything / Ask for help | Family, pride | N4: he admits the Undercroft's money | "Ask for help": in Ch 51 he does, once |
 | `ans.squad5_c.cage` | Level 5, Jonin arc (before Ch 44) | "If someone offered you a cage with a key inside it, would you go in?" | Yes, and use the key / No / Only for my family | Pride | N6 / Ch 47: the stand-down condition ("You said there was a key. Here it is.") | — |
 | `ans.squad5_c.taught` | Level 6 | "Who taught you, really? Not the Academy. Who?" | My sensei / The camps / People I watched / Myself, like you | Strength | Epilogue: his free class's first lesson repeats it | — |
 | `ans.squad5_c.porter` | After Ch 28, level 3 | "Did you hate him? The porter?" | No / I don't know / I miss him | Honesty | His only gentle line, at the shrine where the porter sweeps (Ch 47 or 54) | — |
 | `ans.squad5_c.thanks` | Ch 54 | "I never said thanks. For anything. Do I have to?" | No / Once would be nice / You just did | Pride | Epilogue | — |
+| `ans.squad5_c.offer` | N6 or Ch 47 | (His answer to "What did they promise you?"; the player's reply follows) | power / house / teach / nothing | Pride, family | The stand-down table above; epilogue: his free class's sign | — |
+| `ans.squad5_c.scar` | Ch 20 (the cheek still bandaged) | "He said get a better sword. Should I?" | Yes / Keep yours, get better / I'll help you pay for one | Pride | Ch 51: the sword he carries (a new one, the old one, or the one you bought with him); the blade's last duel (Ch 51.4) he asks "Better sword?" if he sees him | "Help pay": a level of trust (a favor he never forgets) |
+| `ans.squad5_c.anbu` | End of the Chunin arc (his ANBU appointment) | "They want me in a mask at sixteen. Should I?" | Yes, you've earned it / Not alone / Only if it pays your family | Strength, family | Ch 44: under the mask he says "You said ___" | "Not alone": he asks for you to be told where he is, a thread you can follow (Thread Sight) in Ch 44 |
+| `ans.squad5_c.sisters` | Level 4 | "My sisters want to meet the one who keeps beating me in races. Will you come?" | Yes / Bring food / Only if you stop letting me win | Family | A dinner-at-their-home hangout; Ch 47 or N6: the sisters are the reason his stand-down line works ("They asked about you") | — |
 
 **Unison technique (Blaze).** *Edge of Dawn*: his single perfect draw, kindled, becomes a cut of
 ember light that severs a cinder seal (or a dark mirror's line) without touching the person
@@ -311,8 +320,10 @@ behind it.
 **Variants.** Varied: always clanless and poor (a role trait), any temperament that fits pride.
 Flags: `story.squad5_c.stand` (`stood_down`, `fought`).
 
-**New flags.** `ans.squad5_c.clan` (clanless, have_one, matter), `ans.squad5_c.free` (never,
+**New flags.** `ans.squad5_c.clan` (friends, sensei, took, time), `ans.squad5_c.free` (never,
 given, take), `ans.squad5_c.money` (honest, anything, ask), `ans.squad5_c.cage` (key, no, family),
 `ans.squad5_c.taught` (sensei, camps, watched, myself), `ans.squad5_c.porter` (no, unsure,
-miss), `ans.squad5_c.thanks` (no, once, did); story flag `story.squad5_c.stand` (stood_down,
+miss), `ans.squad5_c.thanks` (no, once, did), `ans.squad5_c.offer` (power, house, teach,
+nothing), `ans.squad5_c.scar` (yes, keep, help_pay), `ans.squad5_c.anbu` (earned, not_alone,
+pays), `ans.squad5_c.sisters` (yes, food, stop_letting); story flag `story.squad5_c.stand` (stood_down,
 fought).
