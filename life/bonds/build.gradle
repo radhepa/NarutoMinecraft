@@ -1,0 +1,41 @@
+plugins {
+    id 'java-library'
+}
+
+// The bond engine of Shinobi Life (BONDS.md): pure Java, no Minecraft, deterministic and seeded.
+// Phase 0's Life mod depends on it (`implementation project(':life:bonds')`) and includes it in its jar.
+version = '0.1.0'
+group = 'dev.shinobi'
+base { archivesName = 'shinobi-life-bonds' }
+
+repositories { mavenCentral() }
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+test {
+    useJUnitPlatform()
+    testLogging { events 'failed'; exceptionFormat 'full' }
+}
+
+// Prints the seeded whole-save simulation: how each bond grows per chapter for three kinds of player.
+tasks.register('simulate', JavaExec) {
+    group = 'verification'
+    description = 'Plays the scripted 60-hour path and prints the bond pacing tables.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.shinobi.life.bond.sim.Playthrough'
+    args project.findProperty('seed') ?: '20261029'
+    if (project.hasProperty('explain')) systemProperty 'explain', project.property('explain')
+}
+
+// The village at scale: about 300 residents by the real population weights, with cost, ties, clan drift and hooks.
+tasks.register('simulateVillage', JavaExec) {
+    group = 'verification'
+    description = 'Lives a village of about 300 residents for 180 days and reports cost, ties, clan drift and hooks.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.shinobi.life.bond.sim.VillageSim'
+    args project.findProperty('seed') ?: '20261029'
+}

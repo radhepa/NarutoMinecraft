@@ -87,7 +87,7 @@ standard fields so tools and the journal can explain why a quest is or is not av
    {"rank_at_least": "academy"}, {"rank_at_most": "chunin"},
    {"at_place": "place:market.tea_house"},
    {"time_between": ["14:00", "19:00"]}, {"calendar": {"season": ["spring", "summer"]}},
-   {"standing_at_least": ["district:market", "newcomer"]}
+   {"standing": ["district:market", "newcomer"]}
  ]},
  "window": {"expires": "season_end"}}
 ```
@@ -200,8 +200,7 @@ back into the simulation. Handcrafted quests stay authored; only templates bind 
 
 ### 3.1 The hook schema
 
-The bond system's schema (branch `bonds`: `BONDS.md` §18 and §19, `SocietyHook.java`,
-`Village.java`). Templates read these fields and nothing else.
+The bond system's schema ([BONDS.md](BONDS.md) §18 and §19, `SocietyHook.java`, `Village.java`). Templates read these fields and nothing else.
 
 ```json
 {"format": 1,
@@ -275,8 +274,8 @@ plus any extra action the template adds.
 | `gen.newcomer_settle` | `newcomer` (21 days; none) | `newcomer` (two neighbours to introduce are cast from the district) | Show them around (go ×3), introduce them, share a meal | `befriended` → a meal together, new ties for the newcomer; `ignored` → they stay alone | Beta 1 |
 | `gen.clan_courtesy` | `elder_request` (14 days; the player's clan, or Helping Hand standing with it) | `elder`, `clan` | Learn the custom (talk), bring what it asks (collect or craft the clan's gift, attend a clan rite), present it properly (choose the right words) | `done` → the clan hears you honoured its custom (`clan_deed`); `refused` → nothing | Beta 2 |
 | `gen.rivalry_cool` | `rivalry_heating` (14 days; friendship 3 with either) | `a`, `b` (two residents, often young shinobi) | Referee their spar at a training ground, talk each down, or spar the hothead yourself, then bring them to shake hands | `cooled` → friends again; `fanned` → a quarrel (which may raise a `quarrel_to_mediate` hook) | Beta 1 |
-| `gen.matchmaking` | `secret_crush` (28 days; friendship 6 with the admirer and the player at least teen; adult residents only, never offered while the player is a child) | `admirer`, `beloved` | Learn what the beloved likes, help the admirer prepare, arrange a meeting | `helped` → they become sweethearts; `kept_quiet` → nothing changes; `told` → the beloved knows, the admirer is embarrassed | **Later** (post-beta) |
-| `gen.forbidden_match` | `forbidden_match` (28 days; the player at least teen, friendship 3 with either; adults) | `a`, `b`, `clan_a`, `clan_b` | Hear the couple, face each clan's objection, decide whether to stand with them | `supported` → they marry and their clans grumble; `discouraged` → they part | **Later** (post-beta) |
+| `gen.matchmaking` | `secret_crush` (28 days; friendship 6 with the admirer and the player at least teen; adult residents only, never offered while the player is a child) | `admirer`, `beloved` | Learn what the beloved likes, help the admirer prepare, arrange a meeting | `helped` → they become sweethearts; `kept_quiet` → nothing changes; `told` → a broken promise: the beloved knows, the admirer is hurt | **Later** (post-beta) |
+| `gen.forbidden_match` | `forbidden_match` (28 days; the player a teen or older; adults) | `a`, `b`, `clan_a`, `clan_b` | Hear the couple, face each clan's objection, decide whether to stand with them | `supported` → they marry and their clans grumble; `discouraged` → they part | **Later** (post-beta) |
 
 **In the beta:** 7 templates (`gen.mediate_feud`, `gen.mediate_quarrel`, `gen.favour` with its
 eight variants, `gen.lost_item_gossip`, `gen.newcomer_settle`, `gen.clan_courtesy`,
