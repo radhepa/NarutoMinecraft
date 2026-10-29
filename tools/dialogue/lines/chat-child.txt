@@ -1211,3 +1211,13 @@ I'm going to make the whole class laugh at the graduation party. I've been savin
 When I can't decide something, I flip a ryo. Then I do the opposite. It works every time.
 I talk to the moon before bed sometimes. Just to say goodnight. The moon doesn't mind.
 I'm going to remember everything about being a kid so I can tell my own students one day. Even the boring bits.
+
+## chat.child  stage=child  fn=reveal_character,filler
+I tried to sneak a dango into class in my sleeve. The sleeve was sticky all day. Worth it.
+My sandals are too small, but they're my lucky ones, so I'm wearing them until my toes give up.
+The Academy gate squeaks when you open it slowly. If you open it fast, it squeaks shorter. I've tested both.
+I wrapped my practice kunai in a cloth like a real ninja's. It looks very serious now. It's still blunt.
+I traded a shiny button for a hawk feather from the courier loft. Best trade of my whole life.
+I've decided my favourite number is twelve, because of the hand signs. My second favourite is three, because of dango.
+I saw a shooting star over the wall last night. I wished so hard I forgot what I wished for.
+When I grow up, I'm going to give every Academy kid a free dango on their first day. That's my promise.
