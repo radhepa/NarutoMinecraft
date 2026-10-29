@@ -1,0 +1,133 @@
+{
+  "id": "tg072_sensor_cowl",
+  "kind": "top",
+  "name": "Sensor Cowl",
+  "gender": "unisex",
+  "texture": "tops/tg072_sensor_cowl.png",
+  "extrasHeight": 32,
+  "tags": [
+    "genin",
+    "shinobi",
+    "tunic"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cowl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -1.6,
+        -3.0
+      ],
+      "size": [
+        10,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "cowl_drape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.2,
+        -3.1
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        3,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "hood_down",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        2.6
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "hood_point",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        2.6
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        25,
+        10
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless tunic with a loose cowl round the neck, hood hanging behind, wrapped forearms."
+}

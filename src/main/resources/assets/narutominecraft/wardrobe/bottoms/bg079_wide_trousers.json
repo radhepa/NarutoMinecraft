@@ -1,0 +1,132 @@
+{
+  "id": "bg079_wide_trousers",
+  "kind": "bottom",
+  "name": "Wide Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bg079_wide_trousers.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_wide_leg",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -2.6,
+        0.4,
+        -2.6
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "left_wide_leg",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -2.6,
+        0.4,
+        -2.6
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "right_ankle_tie",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_ankle_tie",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Loose wide-legged trousers gathered above the ankle with ties, sandals."
+}

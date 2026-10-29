@@ -1,0 +1,190 @@
+{
+  "id": "tg070_sensor_mantle",
+  "kind": "top",
+  "name": "Sensor Mantle",
+  "gender": "unisex",
+  "texture": "tops/tg070_sensor_mantle.png",
+  "extrasHeight": 32,
+  "tags": [
+    "chunin",
+    "mantle",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tunic_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.6,
+        -0.5,
+        -3.0
+      ],
+      "size": [
+        17,
+        5,
+        6
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "mantle_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.4,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        3,
+        1
+      ],
+      "uv": [
+        47,
+        8
+      ]
+    },
+    {
+      "id": "mantle_clasp",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        20
+      ]
+    },
+    {
+      "id": "hood_down",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        2.6
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        3
+      ],
+      "uv": [
+        7,
+        20
+      ]
+    },
+    {
+      "id": "hood_point",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        2.6
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        32,
+        20
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short hooded mantle over the shoulders with a metal clasp, hood down, over a belted tunic."
+}

@@ -1,0 +1,134 @@
+{
+  "id": "bg080_kobakama",
+  "kind": "bottom",
+  "name": "Kobakama",
+  "gender": "unisex",
+  "texture": "bottoms/bg080_kobakama.png",
+  "extrasHeight": 16,
+  "tags": [
+    "hakama",
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hakama_right",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        7
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "hakama_left",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -7
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "waist_hakama_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_hakama_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Short pleated hakama to the knee, wrapped shins, tabi and straw sandals."
+}

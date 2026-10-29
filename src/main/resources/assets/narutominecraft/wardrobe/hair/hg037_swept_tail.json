@@ -1,0 +1,297 @@
+{
+  "id": "hg037_swept_tail",
+  "kind": "hair",
+  "name": "Swept Tail",
+  "gender": "unisex",
+  "texture": "hair/hg037_swept_tail.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "swept_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.0,
+        -8.55,
+        -3.2
+      ],
+      "rotation": [
+        94,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "swept_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.0,
+        -8.55,
+        -3.2
+      ],
+      "rotation": [
+        94,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "swept_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.55,
+        -3.2
+      ],
+      "rotation": [
+        94,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "swept_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.55,
+        -3.2
+      ],
+      "rotation": [
+        94,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "swept_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.0,
+        -8.55,
+        -3.2
+      ],
+      "rotation": [
+        94,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        28,
+        0
+      ]
+    },
+    {
+      "id": "swept_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.0,
+        -8.55,
+        -3.2
+      ],
+      "rotation": [
+        94,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "nape_tie",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.2,
+        4.6
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "tail_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.8,
+        4.7
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        53,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.8,
+        4.7
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        3.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        6
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.8,
+        4.7
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        6
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Hair swept back off the forehead into a short tidy tail at the nape."
+}

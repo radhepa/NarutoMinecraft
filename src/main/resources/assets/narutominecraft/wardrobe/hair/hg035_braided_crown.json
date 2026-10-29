@@ -1,0 +1,130 @@
+{
+  "id": "hg035_braided_crown",
+  "kind": "hair",
+  "name": "Braided Crown",
+  "gender": "unisex",
+  "texture": "hair/hg035_braided_crown.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "braid_front",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -9.0,
+        -4.9
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "braid_right",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.9,
+        -8.4,
+        -4.5
+      ],
+      "size": [
+        1,
+        2,
+        9
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "braid_left",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        3.9,
+        -8.4,
+        -4.5
+      ],
+      "size": [
+        1,
+        2,
+        9
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "braid_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -7.6,
+        3.9
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.25
+    }
+  ],
+  "description": "Middle-parted hair drawn back into a braid wound round the head as a crown."
+}

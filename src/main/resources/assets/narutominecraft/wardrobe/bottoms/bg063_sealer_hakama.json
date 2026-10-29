@@ -1,0 +1,161 @@
+{
+  "id": "bg063_sealer_hakama",
+  "kind": "bottom",
+  "name": "Sealer Hakama",
+  "gender": "unisex",
+  "texture": "bottoms/bg063_sealer_hakama.png",
+  "extrasHeight": 32,
+  "tags": [
+    "hakama",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hakama_right",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        9,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "hakama_left",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        9,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "waist_hakama_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_hakama_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "waist_koshi_ita",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        15
+      ]
+    }
+  ],
+  "description": "Wide pleated hakama hemmed with seal tags, stiff back panel, tabi and sandals."
+}

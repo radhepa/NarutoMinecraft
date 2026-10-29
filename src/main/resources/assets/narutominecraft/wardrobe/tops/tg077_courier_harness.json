@@ -1,0 +1,217 @@
+{
+  "id": "tg077_courier_harness",
+  "kind": "top",
+  "name": "Courier Harness",
+  "gender": "unisex",
+  "texture": "tops/tg077_courier_harness.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi",
+    "tunic"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "harness_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -34
+      ],
+      "origin": [
+        -0.5,
+        -6.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        13,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "harness_back_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -34
+      ],
+      "origin": [
+        -0.5,
+        -6.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        13,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "harness_front_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        34
+      ],
+      "origin": [
+        -0.5,
+        -6.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        13,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "harness_back_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        34
+      ],
+      "origin": [
+        -0.5,
+        -6.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        13,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "harness_ring",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        20,
+        0
+      ]
+    },
+    {
+      "id": "message_tube",
+      "bone": "TORSO",
+      "pivot": [
+        -3.2,
+        1.0,
+        3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        10,
+        2
+      ],
+      "uv": [
+        27,
+        0
+      ]
+    },
+    {
+      "id": "harness_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved tunic, crossed leather chest harness, message tube on the back, wrapped forearms."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "bg073_runner_wraps",
+  "kind": "bottom",
+  "name": "Runner Wraps",
+  "gender": "unisex",
+  "texture": "bottoms/bg073_runner_wraps.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_cord",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.02
+    },
+    {
+      "id": "left_knee_cord",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.02
+    }
+  ],
+  "description": "Trousers wrapped from thigh to ankle, cord ties under the knee, split-toe soft boots."
+}
