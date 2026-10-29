@@ -1,0 +1,83 @@
+# Small talk from residents of no clan: clanless shinobi with ordinary family names, and civilian families.
+
+# -- clanless shinobi ----------------------------------------------------------------------------------
+
+## chat.clan  group=clanless  fn=reveal_character
+No compound, no crest, no elders telling me how to bow. Just a headband and a name my grandmother sold rice under.
+My family were farmers for six generations. I'm the first to throw a kunai, and they still don't know which end is sharp.
+Nobody expects anything of a clanless Genin. That's the best head start there is.
+I used to envy the clan kids their techniques. Then I watched one of them get lectured at the Hyuga gate for twenty minutes over a bow.
+My jutsu are the ones anybody can learn. I just learned them harder.
+I've got no clan day, so I made my own. Every year on the day I graduated, I buy myself the most expensive bowl at Ichiraku.
+Sometimes I walk past the Senju hall and wonder what it's like to have a tree older than your family's memory. Then I go home to my landlady's cat.
+My mother runs a laundry by the river. She irons my flak vest every week and tells the customers I'm in the guard, which is close enough.
+A clan teaches you who you are. Being clanless, you have to work it out yourself, and I think I got a good answer.
+When I made Chunin, the whole apartment block threw a party on the landing. Nobody had a crest; everybody had a pot of something.
+The clan kids have someone to teach them their family's way. Mine was the library, an old Jonin and a lot of bruises.
+My squad was an Inuzuka, a Hyuga and me. I was the one who kept the maps, carried the rice and got us home.
+
+## chat.clan  group=clanless  fn=worldbuild
+Most of the Leaf's shinobi are clanless. The clans are famous, but it's ordinary families who fill the Mission Desk queue every morning.
+Clanless shinobi live in the apartment blocks near the Residence. You can tell which flats are ours by the laundry: all headbands and no crests.
+The great clans have their quarters. We have the noodle shops, the bath house and the bench outside the Mission Desk, and I'd say we got the better deal.
+A clanless Genin can learn a lesser technique from a friendly clan, if they earn it. I'm working on the Nara. They're hard to impress, and very slow to say so.
+Clan days, the clanless shinobi cover the gate and the patrols so the clans can celebrate. Then they cover ours on New Year. It evens out.
+There's a bar near the barracks where the clanless Jonin drink. No crests on the walls, just a board with every name that's ever made Jonin from an ordinary family.
+
+## chat.clan  group=clanless  fn=reveal_character,react
+I'll admit it, I'm proud of it. Every rank I have, I got without anyone's grandfather putting in a word.
+Some evenings I'd like to go home to a big table and twenty cousins. Then I remember my flat is quiet, and I make tea, and it's fine.
+People ask me which clan I'm from all the time. I tell them the Leaf, and it's never once been wrong.
+
+## chat.clan  group=clanless  clan_status=clanless  fn=worldbuild,deepen_bond
+You're one of us, {player}: no crest, no compound, no rules about how deep to bow. Make your own name; it's the only kind we get.
+Clanless and in the Academy? Good. Learn from all of them. The clans only teach their own, but we can watch everyone.
+Don't let the clan kids make you feel small. Half the Hokage's guard grew up in an apartment block, same as you.
+
+## chat.clan  group=clanless  fn=hook
+The old Jonin in the flat below mine has stopped coming to the bench outside the Mission Desk. It's not like them. Someone should knock.
+A clanless Genin from my block keeps getting turned down for squad trials. I'd like someone with a clan to vouch for the kid once.
+
+## chat.clan  group=clanless  fn=worldbuild,reveal_character
+Our family's only heirloom is a bent kettle that went through three wars and a flood. We still use it. The tea tastes of history and rust.
+I joke that my family's secret technique is getting up early. It's not a joke. It's why I made Chunin.
+My grandfather says clans are like big trees. Fine to sit under, but you'll never see the sky.
+
+# -- civilians -----------------------------------------------------------------------------------------
+
+## chat.clan  group=civilian  fn=reveal_character
+We're not shinobi in this family. We bake. Every Genin squad that ever came back from a mission has eaten one of our buns.
+I've lived next door to a shinobi family for twenty years. You stop jumping when someone lands on your roof at night. Mostly.
+My daughter wanted to go to the Academy. We talked her round to the tea house instead. Some days I wonder if we did right.
+My son made Genin last spring. Nobody in our family had so much as touched a kunai. I polish his headband when he isn't looking.
+The village needs its shinobi, but it runs on its grocers, its cooks and its bath keepers. I'm proud of my apron.
+Civilians don't get clan days, but we've got Market Day, and nobody's ever had to bow to a cabbage.
+Our street is all civilian families: a cobbler, a laundress, two cooks and me. We share one garden and the arguments that come with it.
+I was a little afraid of shinobi as a child. Then a Chunin carried my grandmother home from the market in the rain, and I wasn't anymore.
+My grandfather says the Leaf was a farming village before it was a shinobi one. He likes to remind the Jonin of that at the bath house.
+I can't do a single hand sign, but I can carry four trays of tea up three flights without spilling. We all have our training.
+
+## chat.clan  group=civilian  fn=worldbuild
+About half the Leaf is ordinary people: shopkeepers, farmers, carpenters and children who'll never throw a shuriken in their lives.
+Civilian families live on the market street, the residential streets and down by the river. The shinobi are everywhere else, and on the roofs.
+The Academy takes anyone with the will to try. Most civilian children try for a year, and most come home and help in the family shop.
+Civilians pay the same ryo as anyone at Ichiraku. Shinobi just order more.
+When the village is quiet, nobody notices the shopkeepers. When the shops shut for a festival, everybody notices.
+We have our own customs: the first loaf of the year goes to the shrine, the first fish to the oldest neighbour, the first tea to whoever came furthest.
+The civilian families of the riverside have a rowing race every summer. No jutsu allowed. The shinobi bet on it anyway.
+Every civilian street has a shinobi family on it somewhere. They keep us safe; we keep them fed. That's the bargain, and it's a good one.
+
+## chat.clan  group=civilian  fn=reveal_character,react
+Shinobi land on my roof to cut across the street. I leave a sign saying "please walk on the left tiles". The good ones do.
+My neighbour is a Jonin. We swap pickles and gossip over the fence, and I've never once asked what the job's like.
+Sometimes I'm glad I'll never be called to the gate in the middle of the night. Sometimes I'm a little envious. Both are true.
+
+## chat.clan  group=civilian  fn=hook
+The cobbler on our street has gone quiet since the shop next door closed. I keep meaning to bring round some soup; maybe you could come too.
+Our street's well bucket keeps going missing, and turns up on a different roof every week. We suspect a Genin. We'd like it back.
+
+## chat.clan  group=civilian  fn=worldbuild,reveal_character
+My family has kept the same stall for a hundred years. Hokage come and go; the turnip price is eternal.
+I grew up thinking the Hokage Rock was where the Hokage slept. My mother let me think so until I was nine.
+Our family's training is the abacus. My little sister can add faster than a Chunin can throw, and she reminds them often.
+We civilians remember the shinobi who were kind to us as children. You'd be surprised how long that kindness lasts.

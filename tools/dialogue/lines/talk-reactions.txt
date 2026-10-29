@@ -1,0 +1,113 @@
+# Reactions to the player's answer to a resident's question (WRITING.md, Questions): said right after the
+# answer, before or instead of its own reply. Touched and pleased are warm; amused and impressed are lighter;
+# fine is neutral; stung_but_respects is an answer they didn't like but can't fault; hurt is a bad landing;
+# noticed_contradiction is when the answer doesn't match something you told them before.
+#! fn: react
+
+## reaction.touched  fn=react,deepen_bond
+Oh. That's... I didn't expect that. Thank you, {player}.
+You really mean that, don't you? I can tell.
+I'm going to remember you said that.
+That's a kind way to see it. Kinder than I'd have been.
+Give me a moment. That landed somewhere soft.
+I'm glad I asked you, of all people.
+
+## reaction.pleased
+Good answer. I hoped you'd say that.
+That's just what I'd have said. Great minds, {player}.
+Yes! Exactly. I knew we'd think alike.
+I like that. I like that a lot.
+Now that's a sensible way to look at it.
+Ha, good. You pass. Not that it was a test. It was a bit of a test.
+
+## reaction.amused
+Ha! I wasn't expecting that.
+You're joking. ...You're not joking? Even better.
+I'm going to be laughing about that all afternoon.
+That's the strangest answer I've heard all week. I love it.
+Well, that's one way to go about it!
+Pfft. Sorry. No, go on. I'm listening. Mostly laughing.
+
+## reaction.impressed
+Huh. I wouldn't have thought of that.
+That's clever, {player}. Really clever.
+You've thought about this before, haven't you? It shows.
+I'll be stealing that idea, if you don't mind.
+That's braver than I'd have been.
+Well. You've surprised me. In a good way.
+
+## reaction.fine
+Hm. Fair enough.
+All right. I can see that.
+That's an answer. Thank you.
+I suppose so, yes.
+Mm. I'll think about it.
+Not what I'd say, but it's not wrong.
+
+## reaction.stung_but_respects
+That's not what I wanted to hear. But it's honest, and I'll take honest.
+Ouch. All right. You're probably right.
+I don't like it. I can't argue with it, either.
+That stung a little. Thank you for not just saying what I wanted.
+Hm. You didn't soften it. I respect that, even if it smarts.
+Fine. You win that one. I'll be sulking quietly.
+
+## reaction.hurt
+Oh. I see. That's how you feel.
+I didn't think you'd say that, {player}.
+Right. Let's... talk about something else.
+That's not the {player} I thought I knew.
+I'll pretend I didn't hear that. Nearly.
+That hurt more than you'd think.
+
+## reaction.noticed_contradiction
+Wait. That's not what you told me before.
+Hm. Last time you said the opposite. Which is it?
+You've changed your tune since we last spoke. Have you changed your mind too?
+Funny. I remember you answering that differently.
+That doesn't match what you said the other day, {player}.
+I keep track, you know. That's not the answer you gave me before.
+
+# -- personalities ------------------------------------------------------------------------------------
+## reaction.touched.warmhearted  fn=react,deepen_bond
+Oh, you dear thing. Come here, I'm putting the kettle on for that.
+## reaction.touched.shy  fn=react,deepen_bond
+I... thank you. Nobody's ever... thank you. [BLUSH]
+## reaction.touched.reserved  fn=react,deepen_bond
+...Hm. Thank you. I mean it.
+## reaction.pleased.fiery
+YES! That's the answer! I knew you'd get it!
+## reaction.pleased.stern
+Correct. Good. Keep thinking like that.
+## reaction.pleased.meticulous
+Precisely right. I'll make a note of it.
+## reaction.amused.playful
+HA! Oh, that's going straight into my collection of best answers.
+## reaction.amused.proud
+I shouldn't laugh. I'm not laughing. ...Fine, I'm laughing a little.
+## reaction.impressed.thoughtful
+That's a better answer than the one in my book. I'm a little annoyed, honestly.
+## reaction.impressed.curious
+Wait, how did you come up with that? Walk me through it. Every step.
+## reaction.impressed.pragmatic
+That's practical. Practical impresses me. Well done.
+## reaction.fine.reserved
+Hm.
+## reaction.fine.adventurous
+Safe answer. Not the one I'd have picked, but safe.
+## reaction.stung_but_respects.proud
+I'd strike anyone else for saying that. You, I'll listen to. Barely.
+## reaction.stung_but_respects.steadfast
+That's hard to hear. But you said it straight, and that's what friends do.
+## reaction.hurt.gentle
+Oh... all right. I'll be quiet now. [GLOOM]
+## reaction.hurt.fiery
+WHAT? How could you say that?! I thought you were on my side!
+## reaction.hurt.protective
+I'd never say that about you. Remember that.
+## reaction.noticed_contradiction.meticulous
+I wrote down your last answer. It doesn't match. Which one should I cross out?
+## reaction.noticed_contradiction.stern
+You told me otherwise before. Say what you mean, and mean it every time.
+## reaction.noticed_contradiction.curious
+Ooh, you changed your answer! What changed your mind? I have to know.

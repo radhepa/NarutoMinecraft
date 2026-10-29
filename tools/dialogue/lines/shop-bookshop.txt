@@ -1,0 +1,53 @@
+# The bookshop: books, novels, maps, and packs of collector's cards.
+#! fn: commerce
+
+## shop.bookshop.greet  shop=bookshop  fn=commerce
+Welcome. Novels on the left, maps on the right, card packs at the counter.
+Come in, {player}. Browse as long as you like, reading the first page is free.
+Hello! Mind the stack by the door, it's the new arrivals and it's leaning.
+Good day. If you're looking for something, I've probably read it.
+
+## shop.bookshop.greet  shop=bookshop  stage=child|teen  fn=commerce,react
+Card packs? Top of the counter. The new set came in yesterday.
+
+## shop.bookshop.browse  shop=bookshop  fn=commerce
+Adventure novels, ghost stories, histories of the Land of Fire. Something for every mood.
+Maps of the village, the roads and the border country. The road maps are the best sellers.
+Card packs: shinobi of legend, five to a pack. Collect the set, trade the doubles.
+Cookbooks, poetry, books on herbs and birds. The quiet shelf, I call it.
+The children's corner has picture books and a cushion. Grown-ups use it too.
+
+## shop.bookshop.buy  shop=bookshop  kind=cycle  fn=commerce
+{item}. {pay}. Don't fold the corners, use a bookmark.
+Here you go. I'll wrap it in paper so the rain doesn't get it.
+That's {pay}. Come and tell me how it ends. Actually, don't, I know how it ends.
+One card pack, {pay}. Good luck! I hope it's a rare one.
+{pay}, thank you. A good book is the cheapest journey there is.
+
+## shop.bookshop.cant_afford  shop=bookshop  kind=cycle  fn=commerce
+Short. The secondhand shelf has the same stories for half the price.
+That one's dear, I know. Read the first chapter here and come back when you can.
+Not enough for the map. Copy the part you need, I won't tell.
+
+## shop.bookshop.sold_out  shop=bookshop  kind=cycle  fn=commerce
+Sold out of {item}. The printer in the capital is slow.
+No card packs left! The Academy let out an hour ago.
+
+## shop.bookshop.haggle  shop=bookshop  fn=commerce,reveal_character
+Haggle? Trade me a book you've finished and I'll take something off.
+The secondhand shelf is the haggling shelf. New books are new prices.
+
+## shop.bookshop.closing  shop=bookshop  time=evening|night  fn=commerce
+Closing soon. Finish the chapter, then off you go.
+I'm blowing out the lamps. The books need their dark too.
+
+## shop.bookshop.recommend  shop=bookshop  fn=commerce,teach
+A road map before any mission outside the wall. Getting lost costs more than the map.
+The {item}. I stayed up till dawn with it. Don't make my mistake, start it at noon.
+For a rainy day, a ghost story. For a sad day, a cookbook. Trust me.
+Buy a card pack and trade the doubles at the Academy. That's half the fun.
+
+## shop.bookshop.regular  shop=bookshop  level=3..10  fn=commerce,deepen_bond
+I put a book aside for you. Don't ask how I knew. I just knew.
+You've read more of my shop than I have, nearly. Nearly.
+Here's my best reader. Sit, there's tea in the back.

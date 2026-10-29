@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for adventurous residents. Their own life, in their voice.
+#! tags: personality=adventurous
+
+## chat.personal  fn=reveal_character
+Restless! I climbed the watchtower just to look at the hills past the wall. One day I'll walk to the far ridge.
+I traded a merchant from the east road a jar of pickles for a map. Half the map is wrong. I love it.
+I've been sleeping on the roof this week. The sky's bigger up there. My back disagrees.
+A trader told me about a village where the houses float on a lake. I've been dreaming of boats all morning.
+I keep a pack by my door, ready to go. Spare socks, rope, dried fish. I've never needed it. One day.
+I walked the whole length of the wall this morning. It's further than you'd think, and the view never gets old.
+My grandfather crossed three countries with a cart and a goat. I've only crossed the river. I've some catching up to do.
+I've been learning to read the clouds. The fisherfolk say a mackerel sky means rain by tomorrow. We'll see.
+I ate a fruit today I've never seen before. Spiky outside, sweet inside. The merchant said it comes from the south coast.
+I found a path behind the shrine that goes up into the trees. I followed it for an hour and found... more trees. Wonderful.
+My dream is to see the sea. Real salt water, waves bigger than the Hokage Rock. That's what they say, anyway.
+I've been collecting stones from every place I've been. The jar's half full. Most are from the riverbank, if I'm honest.
+A courier stopped at the tea house today, dusty to the knees. I bought the tea just to hear where the road had been.
+I tried to cook a dish I heard about from a traveller. Fish wrapped in leaves, buried in coals. The fish didn't survive.
+Every time the main gate opens I stop and watch. Carts, couriers, squads. I like guessing where they're headed.
+I swam across the river and back before breakfast. The cold makes you feel like you could do anything.
+I spent the morning drawing a map of the village from memory. Got the Rock right. Everything else wandered.
+They say there's a hot spring three days north. I'm saving up the time off. I've already packed a towel.
+I bought new sandals for walking. Broke them in by walking to the farms and back. Twice. Blisters, but happy.
+My wife and I are planning a trip to the border villages. She wants the markets. I want the mountains. We'll do both.
+I climbed the tallest tree in the training grounds. Saw smoke from the farms, a hawk below me, and my own house. Tiny.
+I keep asking couriers to bring back a postcard of something. One brought me a drawing of a cow. Best gift I've had.
+The fishermen took me out on their boat at dawn. I caught nothing and fell in. Best morning in months.
+I've been learning words in the trade dialect from the merchants. So far I can say "too expensive" and "where is the toilet".
+I keep the window open at night so I can hear the wind from the forest. It always sounds like it's got somewhere to be.
+There's a cave above the quarry I've been meaning to explore. Bats, probably. Maybe something better.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I'm a courier's apprentice now. Only inside the walls so far, but I run every route like it's a mountain pass.
+I sell maps at the market. Most people buy them to frame. I buy them back when they move. Maps should travel.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+My last mission took me past a waterfall taller than the Rock. I'd do a hundred D-ranks to see that again.
+I always volunteer for the escort missions on the east road. Every inn has its own pickles. I'm keeping score.
+Coming home over the hills after a mission, that first sight of the faces on the Rock. Nothing beats it.
+I slept under the stars for five nights on my last mission. Back in a bed, I can't sleep. Too soft, too quiet.
+
+## chat.personal  fn=worldbuild
+Travellers come in through the main gate and sign the guard's book. I've read it. People come from very far away.
+The east road has a waystation with a stone lantern. Squads leave a pebble on it when they come home safe.
+Merchants from the south bring salt and dried squid in autumn. The whole market street smells of the sea for a week.
+The Leaf sits in a bowl of hills, and every road in starts with a climb. That's why couriers have such good calves.
+
+## chat.personal  fn=hook
+My compass rolled off the bridge and into the reeds. It was my grandfather's. Points north and slightly to the left.
+A traveller left a sealed letter at the tea house for "whoever is going east". Nobody's going east. It's just sitting there.
+I've been trying to find the old trail to the lookout rock. The map says it's behind the Nara forest. I can't find the start.
+I lost my walking stick at the river crossing. It had a carved hawk on top. I'd hate for it to wash away.
+
+## chat.personal  fn=filler
+Good! Better if I were somewhere new, but good.
+Every day's an adventure if you walk a different street.
+
+## chat.personal  fn=reveal_character
+I learned to tie six knots from a ferryman today. A traveller should know at least six. I know four, properly.
+My boots are drying by the stove after a walk through the marsh by the farms. Worth every soggy step.
+I asked the gate guard what's the furthest anyone's come from. A dancer from beyond the desert. I've been dreaming of sand.

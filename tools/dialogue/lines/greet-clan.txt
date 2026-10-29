@@ -1,0 +1,602 @@
+# Greetings from inside a clan's life: customs, homes and habits, never its secrets.
+# same_clan=yes is kin greeting kin; clan_status=other and clanless are guests.
+
+## greet.clan  clan=senju  fn=worldbuild
+Welcome. If you have time, sit under the tree in our hall. Every guest is offered tea there.
+The tree in our hall dropped a leaf on my head this morning. My grandmother says that's luck.
+Hello. We water the hall's tree before we water ourselves. It's older than any of us.
+Good day. The founders' shrine needs sweeping every morning. Guess whose turn it is.
+Hello. We're a small clan now, but the tree remembers when we weren't.
+Every Senju child plants a sapling on their first clan day. Mine's taller than me now.
+Hello! The Uzumaki memorial's right next to our seat. We tend each other's paths. Old habit.
+
+## greet.clan  clan=senju  fn=reveal_character
+Good day. My family talks about the founders as if they'd only stepped out for a moment.
+Hello. I try to be patient like the tree. I'm closer to a weed, most days.
+
+## greet.clan  clan=senju  same_clan=yes  fn=deepen_bond
+Cousin! Come and see your sapling's spot by the hall. We've kept it ready for you.
+Hello, cousin. The tree knows its own, they say. I think it leaned towards you.
+Cousin {player}. Sit under the branches with me. That's what family's for.
+
+## greet.clan  clan=senju  clan_status=other  fn=worldbuild
+Welcome, friend of another house. The Senju have always kept the door open to the other clans.
+
+## greet.clan  clan=senju  clan_status=clanless  fn=worldbuild
+No clan of your own? The founders had nothing but a forest once. Tea under the tree is for everyone.
+
+## greet.clan  clan=uzumaki  fn=worldbuild
+Hello! Mind the wet ink on the memorial; we've just repainted the spring seals.
+Welcome! There aren't many of us left, so we make twice the noise to make up for it.
+Hello! Every name on the memorial gets said out loud once a year. It takes all afternoon. We do it gladly.
+Hey! A seal's only as good as the hand that paints it. Mine shook this morning. I'm starting over.
+Hello! The Senju next door keep sending us tea. We keep sending back noise. Fair trade.
+Hey! The spiral crest is on every door of the memorial. It means the circle goes on.
+Hello! We live long, we laugh loud and we never forget a name. That's the Uzumaki way.
+
+## greet.clan  clan=uzumaki  fn=reveal_character
+Hey! I practise brushwork every night. Seals have to be perfect, and I'm not, so I practise.
+Hello! I love the memorial, but I'd love a proper family dinner table even more someday.
+
+## greet.clan  clan=uzumaki  same_clan=yes  fn=deepen_bond
+Cousin! You've got the family grin. Come here, let me hug you!
+Hey, cousin! Another Uzumaki in the Leaf! That's one more name we get to say out loud, and it's a living one.
+Cousin {player}! I'll teach you to hold a seal brush. Our way. Steady hand, loud heart.
+
+## greet.clan  clan=uzumaki  clan_status=other  fn=worldbuild
+Welcome, friend! Every clan in the Leaf owes the Uzumaki a cup of tea, but we never collect.
+
+## greet.clan  clan=uzumaki  clan_status=clanless  fn=deepen_bond
+No clan? That's all right. The Uzumaki know what it's like to be few. You're welcome at the memorial.
+
+## greet.clan  clan=uchiha  fn=worldbuild
+Good day. If there's trouble on the street, the police quarter is past the market, by the outer wall.
+Hello. You'll see the fan crest on every wall in our quarter. We are what we wear.
+Hm. Good day. The patrol rotation's at noon, so forgive me if I'm brief.
+Good day. Every Uchiha takes the police oath at sixteen. We take it seriously, as you'd expect.
+Hello. Our quarter's a long walk from the centre. You get used to the walk. And to being apart.
+Good day. A street kept orderly is a street kept safe. That is the police's whole philosophy.
+Hello. A word of advice: guests in our quarter don't ask about eyes. It's simply manners.
+
+## greet.clan  clan=uchiha  fn=reveal_character
+Good day. I'm told I seem cold. I'm not cold. I'm on duty. Those look the same from outside.
+Hello. My father patrolled this same beat. So did his. I'll do it better than both.
+
+## greet.clan  clan=uchiha  same_clan=yes  fn=deepen_bond
+Cousin. Good. Stand with the clan and the clan stands with you.
+Hello, cousin. You're one of us. Hold your head as high as the crest on your back.
+Cousin {player}. If anyone in the village gives you trouble, the quarter hears about it.
+
+## greet.clan  clan=uchiha  clan_status=other  fn=worldbuild
+Good day. The Uchiha and the other houses keep a polite distance. Polite is the important word.
+
+## greet.clan  clan=uchiha  clan_status=clanless  fn=worldbuild
+Good day. Clan or no clan, the police protect every street equally. That's the oath.
+
+## greet.clan  clan=hyuga  fn=worldbuild
+Good day. You'll forgive the bow; we are taught its depth before we are taught to walk.
+Welcome. Tea at the estate is taken in silence. It is a comfortable silence, I promise.
+Good day. The koi in our pond are older than some of the branch-house children.
+Good morning. In our dojo, a spar is a conversation. The loser has simply run out of things to say.
+Good day. The estate has two halves, the main house and the branch house. Everyone knows which door is theirs.
+Good day. Our elders can tell your mood from how you set down a teacup. I'm still learning.
+Welcome. The dojo floor is polished every morning. You can see your own face in it.
+
+## greet.clan  clan=hyuga  fn=reveal_character
+Good day. I like the quiet of the estate. Though sometimes I go to the market just to hear noise.
+Good day. I was born to the branch house. I'm proud of my work. That's all I'll say about it.
+
+## greet.clan  clan=hyuga  same_clan=yes  fn=deepen_bond
+Cousin. You bow beautifully now. The elders noticed. So did I.
+Good day, cousin. Come to the dojo some morning. We spar as family, which means honestly.
+Cousin {player}. Sit with me by the koi pond. We needn't speak. That's the Hyuga way of saying I'm glad to see you.
+
+## greet.clan  clan=hyuga  clan_status=other  fn=worldbuild
+Good day. A guest of another clan is received at the front gate with a full bow. Allow me.
+
+## greet.clan  clan=hyuga  clan_status=clanless  fn=worldbuild
+Good day. The estate's manners may seem strange to you. Watch, copy, and nobody will mind.
+
+## greet.clan  clan=nara  fn=worldbuild
+Hey. Shogi on the porch later? It's that or work, and I know which I'd choose.
+Hello. The deer have wandered into the lane again. Don't feed them; they'll follow you home.
+Hey. The clouds are good today. Sit, look up. It's more productive than it sounds.
+Hello. We count the deer every year. It's tedious. Necessary, but tedious.
+Hey. People think we're lazy. We just don't waste effort on anything that doesn't need it.
+Hello. If you want a strategy, ask a Nara. If you want it delivered quickly, ask someone else.
+Hey. The Akimichi brought round a whole pot of stew for the porch. Alliances are wonderful.
+
+## greet.clan  clan=nara  fn=reveal_character
+Hey. I'm thinking ten moves ahead today. Move one is a nap.
+Hello. I like deer. They don't ask questions and they don't hurry.
+
+## greet.clan  clan=nara  same_clan=yes  fn=deepen_bond
+Hey, cousin. Come sit on the porch. The board's set up. You go first, I always do.
+Cousin. The deer let you walk right up to them. They know family.
+Hey, {player}. Cousin. You look tired. Lie on the grass a bit. That's an order. A lazy one.
+
+## greet.clan  clan=nara  clan_status=other  fn=worldbuild
+Hey. Your clan and ours get along fine. Not much point in not, really. Too much effort.
+
+## greet.clan  clan=nara  clan_status=clanless  fn=worldbuild
+Hey. No clan? You get to think for yourself without a family reputation. Sounds restful.
+
+## greet.clan  clan=akimichi  fn=worldbuild
+Hello! You're just in time, the kitchen hall's lunch is nearly ready. There's always enough.
+Welcome! Here, have a rice ball. First helping's a greeting. Second's friendship. Third you never refuse.
+Hello! The barbecue house is ours, you know. Tell them an Akimichi sent you and the meat comes thicker.
+Hey! The harvest feast smells are already drifting over the market. Count yourself invited.
+Hello! Strength is like a good meal in our clan: it's only worth anything if you share it.
+Hello! Our storehouse could feed the street for a week. Some weeks it has.
+Hey! A word of advice from a friend: never say the word fat in the kitchen hall. Never.
+
+## greet.clan  clan=akimichi  fn=reveal_character
+Hello! I'm learning to cook for forty. Cooking for four feels lonely now.
+Hey! Some days I'd rather be in the kitchen than on a mission. Don't tell the elders.
+
+## greet.clan  clan=akimichi  same_clan=yes  fn=deepen_bond
+Cousin! You look thin. That's a family emergency. Kitchen hall, now!
+Hello, cousin! I've set a bowl for you at the long table. I always set one now.
+Cousin {player}! Third helping today? Ha, I know you will. You're one of us.
+
+## greet.clan  clan=akimichi  clan_status=other  fn=worldbuild
+Hello, friend! It doesn't matter which clan you're from; at our table, everyone eats.
+
+## greet.clan  clan=akimichi  clan_status=clanless  fn=deepen_bond
+Hey! No clan's no problem. Come to the kitchen hall. Anyone we feed is family for the length of the meal.
+
+## greet.clan  clan=yamanaka  fn=worldbuild
+Hello! Come into the flower shop and smell the lilies. They came in this morning.
+Good day! A bouquet always says something. The trick is making sure it says the right thing.
+Hello! Yellow chrysanthemums for an apology, red camellias for admiration. Ask me before you buy.
+Welcome! The greenhouse behind the shop is warm even in winter. My favourite spot in the Leaf.
+Hello! The shop's at the front, the clan's at the back. Customers only ever see the petals.
+Hello! The Suzuran herb stall opened next to our flowers again. Herbs. Next to flowers. The nerve.
+Hello! Somebody bought marigolds for a sick friend this morning. I hope they knew what they meant.
+
+## greet.clan  clan=yamanaka  fn=reveal_character
+Hello! I notice things. Your face, for instance, says you need a bright flower today.
+Good day! I've been arranging since dawn. My fingers smell of roses. I won't wash them yet.
+
+## greet.clan  clan=yamanaka  same_clan=yes  fn=deepen_bond
+Cousin! I left a sprig of bellflower on your doorstep. It means faithful. Like family.
+Hello, cousin! Come help me in the shop later. You've got the family eye for colour.
+Cousin {player}! Take a flower from the front bucket. Family pays nothing. Ever.
+
+## greet.clan  clan=yamanaka  clan_status=other  fn=worldbuild
+Hello! Our families have always traded flowers on clan days. Bring your clan's colours and I'll make something.
+
+## greet.clan  clan=yamanaka  clan_status=clanless  fn=worldbuild
+Hello! You don't need a clan to read flowers. Learn three meanings and you're ahead of most of the village.
+
+## greet.clan  clan=inuzuka  fn=worldbuild
+Hey! Don't mind the barking, that's just hello in kennel talk. They like you.
+Hey! Mind the puppy. No, the other puppy. No, the... there are a lot of puppies.
+Hey there! The clinic by the gate's open all day. If an animal needs help, bring it in.
+Hey! On clan day every Inuzuka kid gets paired with a pup. The pup chooses, not the kid.
+Hey! Our run by the training fields is the loudest place in the Leaf. We're very proud.
+Hey! A dog's choice is final. If one of ours picks you, that's that.
+Hey! The Aburame say our dogs scare their bugs. We say their bugs are rude to our dogs. It's tradition.
+
+## greet.clan  clan=inuzuka  fn=reveal_character
+Hey! My partner's been sniffing you for a full minute. That's a compliment, trust me.
+Hey! I sleep in a pile with my dogs. Warmest bed in the village. Don't knock it.
+
+## greet.clan  clan=inuzuka  same_clan=yes  fn=deepen_bond
+Cousin! The dogs smell family on you. Look at their tails go!
+Hey, cousin! Come to the kennels. There's a pup that keeps staring at the gate like it's waiting for someone.
+Cousin {player}! Pack's not complete without you. Come run with us later!
+
+## greet.clan  clan=inuzuka  clan_status=other  fn=worldbuild
+Hey! Your clan, our clan, the dogs don't care. They judge by the nose.
+
+## greet.clan  clan=inuzuka  clan_status=clanless  fn=deepen_bond
+Hey! No clan? A dog doesn't care about family names. You'd make a fine pack member.
+
+## greet.clan  clan=sarutobi  fn=worldbuild
+Welcome! Come in, there's a seat by the hearth. Every guest gets one in this house.
+Hello! The Will of Fire is just a fancy way of saying look after the village. We take it to heart.
+Hello! We're making lanterns for the New Year walk. Want to fold one? Mind the wax.
+Good day! The staff yard's busy this morning. Our family has trained with the staff for generations.
+Hello! The monkey crest on our gate? We've never agreed on why. Every grandparent has a different story.
+Hello! The Shimura and our family sit on opposite sides of the council table. Always have.
+Good day! The fire in our hearth hasn't gone out in years. We take turns keeping it.
+
+## greet.clan  clan=sarutobi  fn=reveal_character
+Hello! I'd give anything for this village. Sometimes I forget to give anything to myself.
+Good day! My grandfather says I'm too serious for a Sarutobi. Then he makes me laugh to prove it.
+
+## greet.clan  clan=sarutobi  same_clan=yes  fn=deepen_bond
+Cousin! Your seat by the hearth's always warm. We made sure of it.
+Hello, cousin! You'll carry a lantern with the family at New Year, won't you? Promise me.
+Cousin {player}. The fire's in you too. I can see it.
+
+## greet.clan  clan=sarutobi  clan_status=other  fn=worldbuild
+Welcome, friend of another clan! The Will of Fire burns in every house in the Leaf. Not just ours.
+
+## greet.clan  clan=sarutobi  clan_status=clanless  fn=deepen_bond
+No clan? The whole village is your family, the way we see it. Come and sit by the hearth.
+
+## greet.clan  clan=aburame  fn=worldbuild
+Good day. Please do not swat. That moth is a guest of my family.
+Hello. If you visit the insect gardens, stand still. They will taste your chakra and decide.
+Good day. Insect night is coming. The fireflies over the gardens are worth the visit.
+Hello. The hive walls hum louder in warm weather. It is a pleasant sound, once you are used to it.
+Good day. Our collars are high and our lenses are dark. Our hospitality is neither.
+Hello. The Inuzuka dogs disturbed the gardens again. I have written a polite letter. My third.
+Good day. Our house is on the wooded edge for a reason. The insects prefer the trees.
+
+## greet.clan  clan=aburame  fn=reveal_character
+Hello. I am told I seem cold. I am simply thinking. The two are often confused.
+Good day. I prefer insects to most conversations. This one is an exception.
+
+## greet.clan  clan=aburame  same_clan=yes  fn=deepen_bond
+Cousin. The hive at the house recognised your chakra this morning. It was very calm. So was I.
+Hello, cousin. Visit the gardens with me. It would be logical, and also pleasant.
+Cousin {player}. You stand very still now. The insects approve. As do I.
+
+## greet.clan  clan=aburame  clan_status=other  fn=worldbuild
+Good day. Guests of other clans are always welcome in the gardens. Please keep your hands at your sides.
+
+## greet.clan  clan=aburame  clan_status=clanless  fn=worldbuild
+Hello. A family name is not required to be tasted by a beetle. They are very fair-minded.
+
+## greet.clan  clan=hatake  fn=reveal_character
+Hello. The house is quiet. The dogs make most of the conversation.
+Hm. You've met my dogs. They decided about you before I did.
+Hello. It's a big house for one person. You get used to the echo.
+Hm. Morning. I've just been to the memorial stone. I go most mornings.
+
+## greet.clan  clan=hatake  fn=worldbuild
+Hello. People nod at the gate of our house when they pass. Few come in. I don't mind.
+Hm. The ninken come and go as they please. They've always been more family than guests.
+Hello. Our yard's small and the lane's quiet. Suits the house.
+Hm. Hello. The kennel behind the house was built for a dozen dogs. Three still use it.
+Hello. The house hasn't been full in a long time. The dogs keep it from feeling empty.
+
+## greet.clan  clan=hatake  same_clan=yes  fn=deepen_bond
+...Cousin. I didn't think I'd say that word again. Come in. The dogs already like you.
+Hello, cousin. There's a room in the house with nobody in it. It could be yours, someday.
+Cousin {player}. The ninken waited at the gate all morning. Now I know who for.
+
+## greet.clan  clan=hatake  clan_status=other  fn=worldbuild
+Hello. Everyone respects the Hatake house. Hardly anyone visits. You're welcome to be the exception.
+
+## greet.clan  clan=hatake  clan_status=clanless  fn=deepen_bond
+Hm. No clan. Well, I'm nearly the last of mine. We're not so different.
+
+## greet.clan  clan=kurama  fn=worldbuild
+Good day. Please don't touch the screens in the studio. The paint takes a month to dry.
+Hello. A portrait in our house is a promise. Don't sit for one unless you mean it.
+Good afternoon. The light in the artists' lane is perfect at this hour. We all paint at once.
+Hello. An eye in a painting is never finished in front of anyone. Even family.
+Good day. Our scrolls have more colours in them than the market has names for.
+Hello. The Yuhi grow roses for their illusions. We grind ours from pigments. Each to their own.
+Good day. Our house smells of linseed oil and old paper. I wouldn't change it.
+
+## greet.clan  clan=kurama  fn=reveal_character
+Hello. I've been working on the same painting for a year. It's nearly the colour I imagined.
+Good day. Forgive the paint on my sleeves. I gave up on clean sleeves at six.
+
+## greet.clan  clan=kurama  same_clan=yes  fn=deepen_bond
+Cousin. Come to the studio. There's an empty easel by the window, and it's been waiting.
+Hello, cousin. You hold a brush like your grandmother did, I'm told. That's high praise in this house.
+Cousin {player}. I've started a small portrait of you. Don't worry, I'll finish the eyes in private.
+
+## greet.clan  clan=kurama  clan_status=other  fn=worldbuild
+Good day. Other clans commission our paintings for their halls. Perhaps yours has one of ours.
+
+## greet.clan  clan=kurama  clan_status=clanless  fn=worldbuild
+Hello. Art doesn't care about family names. If you want to learn to paint, the lane's open.
+
+## greet.clan  clan=shimura  fn=worldbuild
+Good day. Silence is a courtesy in our house. I'll keep this brief, as a courtesy to you.
+Hm. A sealed letter is never opened by its carrier. Remember that, if you ever carry one.
+Good day. The Sarutobi and my family disagree about everything. Even the weather.
+Good day. Our house is close to the Rock. We like to keep the village's history in sight.
+Hm. We don't decorate much. Plain rooms, plain words. It keeps the mind clear.
+Good day. Our children learn to wait before they learn to speak. The waiting is the harder lesson.
+
+## greet.clan  clan=shimura  fn=reveal_character
+Good day. I don't smile often. It doesn't mean I'm displeased.
+Hm. I serve the village in my own way. Quietly. That's enough said.
+Good day. I keep my word, and I keep it quietly. Both matter to me.
+
+## greet.clan  clan=shimura  same_clan=yes  fn=deepen_bond
+Cousin. ...I'm glad you're here. That's a great deal, from a Shimura.
+Good day, cousin. You hold your silence well. The family will be pleased.
+Cousin {player}. If you ever need counsel, come to the house. No questions asked. None answered either.
+
+## greet.clan  clan=shimura  clan_status=other  fn=worldbuild
+Good day. Another clan's child, in the Shimura lane. Mind your manners and you'll be treated with respect.
+
+## greet.clan  clan=shimura  clan_status=clanless  fn=worldbuild
+Hm. Clanless. Service to the village doesn't need a family name. Some of the best never had one.
+
+## greet.clan  clan=yuhi  fn=worldbuild
+Hello. Mind the roses at the gate. The thorns have opinions about strangers.
+Good day. Spring grove viewing is our favourite custom. The old trees are loveliest in blossom.
+Hello. A word of warning, kindly meant: at our house, the tea may not be tea.
+Good day. Every tree in the grove is older than the clan's oldest grandmother. We ask their pardon before we train.
+Hello. The Kurama paint their illusions. We grow ours. A polite rivalry, they call it.
+Good day. Red eyes run in the family. People stare. We stare back, politely.
+Hello. The grove's paths change if you're not paying attention. Not literally. Mostly.
+
+## greet.clan  clan=yuhi  fn=reveal_character
+Hello. I like a thing that looks one way and is another. Roses. Teacups. People.
+Good day. I've been pruning the roses since dawn. My fingers are scratched, and I'm content.
+
+## greet.clan  clan=yuhi  same_clan=yes  fn=deepen_bond
+Cousin. Come and walk the grove with me. The trees remember family.
+Hello, cousin. I've saved you a rose from the gate. No thorns. I checked.
+Cousin {player}. Real tea for you today. I promise. Probably.
+
+## greet.clan  clan=yuhi  clan_status=other  fn=worldbuild
+Good day. Visitors from other clans come for the grove viewing every spring. You'd be very welcome.
+
+## greet.clan  clan=yuhi  clan_status=clanless  fn=worldbuild
+Hello. No clan? Then the grove has no expectations of you. That's a freedom, you know.
+
+## greet.clan  clan=gekko  fn=worldbuild
+Good evening. Ah, it's not evening. Forgive me, I was up for the moon last night.
+Hello. Our blades are named, never lent. Please don't ask to borrow mine; it would be awkward.
+Good day. The moon-viewing platform at our dojo is the best seat in the Leaf on a clear night.
+Hello. The full moon duels are open to watch. Bring a cushion; they're very long and very quiet.
+Good day. The Namiashi think their footwork beats our blades. We let them think it on alternate weeks.
+Hello. Swordsmanship is mostly patience. The cutting is the smallest part.
+Good day. Our dojo is by the training grounds. You'll hear the practice blades from the path.
+
+## greet.clan  clan=gekko  fn=reveal_character
+Hello. I always look tired. I'm not, usually. It's a family face.
+Good day. I polish my blade every evening. It's the calmest hour of my day.
+
+## greet.clan  clan=gekko  same_clan=yes  fn=deepen_bond
+Cousin. Come to the platform at the next full moon. Sit with the family. It's your place too.
+Hello, cousin. When you've a blade of your own, I'll help you choose its name.
+Cousin {player}. You stand like a swordsman already. Grandfather would have liked to see it.
+
+## greet.clan  clan=gekko  clan_status=other  fn=worldbuild
+Good day. Guests of other houses may watch the moonlit kata. Only watch. And don't cough.
+
+## greet.clan  clan=gekko  clan_status=clanless  fn=worldbuild
+Hello. A blade doesn't care about a family name. Only the hand that holds it.
+
+## greet.clan  clan=shiranui  fn=worldbuild
+Hey. Don't mind the senbon. It's like a toothpick, only more useful.
+Hey. Our house is by the gate barracks. You'll know it by the wall full of tiny holes.
+Hey. Guard duty's dull right up until it isn't. That's why we stay cool.
+Hey. Senbon contest by the barracks this afternoon. Anyone can enter. Nobody else wins.
+Hey. The Namiashi and us share guard shifts. They're stiff. We're relaxed. It balances out.
+Hey. Easy smile, steady hand. That's what my family taught me, and not much else.
+
+## greet.clan  clan=shiranui  fn=reveal_character
+Hey. I look relaxed. I'm counting every exit in this street. Both are true.
+Hey. I've had this senbon in my mouth so long I forget it's there. Mother hates it.
+Hey. Some people do push-ups to relax. I throw needles at a wall. Same thing.
+
+## greet.clan  clan=shiranui  same_clan=yes  fn=deepen_bond
+Hey, cousin. Here, a practice senbon. Don't swallow it. Took me years to learn that.
+Cousin. Come by the barracks wall. I'll show you the family flick of the wrist.
+Hey, cousin {player}. Cool head, family. That's all you need to remember.
+
+## greet.clan  clan=shiranui  clan_status=other  fn=worldbuild
+Hey. Your clan's got its own tricks. We've got the senbon. Want to trade a lesson sometime?
+
+## greet.clan  clan=shiranui  clan_status=clanless  fn=worldbuild
+Hey. No clan? Neither does half the gate guard. Best guards I know.
+
+## greet.clan  clan=morino  fn=worldbuild
+Good day. The barred windows on our house frighten people. They're for the cats, mostly.
+Hm. Good day. People cross the street when they see the coat. I've stopped taking it personally.
+Good day. Our house is near the police headquarters. We argue with the Uchiha about whose cases are whose.
+Good day. My family asks questions for a living. Mostly I ask how people take their tea.
+Hm. An honest answer is the only kind I value. I'll give you the same.
+Good day. At home, my family is the gentlest on the street. You'd never believe it from the coats.
+
+## greet.clan  clan=morino  fn=reveal_character
+Good day. I make jam on my day off. Plum. Don't tell anyone at work.
+Hm. I don't frighten people on purpose. It just happens. I'm working on it.
+Good day. I can tell when you're lying. Relax, you aren't. Good.
+
+## greet.clan  clan=morino  same_clan=yes  fn=deepen_bond
+Cousin. Come home for dinner. We're much nicer without the coats.
+Good day, cousin. You've the family stare already. Use it gently.
+Cousin {player}. The house's door is always open to you. Even if the windows aren't.
+
+## greet.clan  clan=morino  clan_status=other  fn=worldbuild
+Good day. Other clans tend to whisper when we pass. You're not whispering. I appreciate that.
+
+## greet.clan  clan=morino  clan_status=clanless  fn=worldbuild
+Hm. Clanless. Then you've no family secrets to keep. Lucky. Most people have far too many.
+
+## greet.clan  clan=umino  fn=worldbuild
+Hello! Half the village was taught by an Umino. The other half was taught by someone an Umino taught.
+Good morning! Our houses line the Academy streets. You can hear the bell from every kitchen.
+Hello! The teachers' day is coming. The students leave apples on our doorsteps. And frogs, once.
+Hello! Patience is the family trade. Chalk dust is the family smell.
+Good day! When Umino children play pretend, they play classroom. It's very strict.
+Hello! Every Umino has marked a hundred essays before they're twenty. It shows in the handwriting.
+
+## greet.clan  clan=umino  fn=reveal_character
+Hello! I remember every student I've taught. Most of them remember me as the one with the voice.
+Hello! I stay up marking. Then I stay up worrying. Then I'm up for the bell.
+Good day! The proudest day of the year is graduation. I cry every time. Every single time.
+
+## greet.clan  clan=umino  same_clan=yes  fn=deepen_bond
+Cousin! Did you do your homework? Sorry, family habit. Hello!
+Hello, cousin! Come by after supper and I'll help with anything you're stuck on. That's what we do.
+Cousin {player}. You're a fine student. I'd say so even if you weren't family. I'd just say it quieter.
+
+## greet.clan  clan=umino  clan_status=other  fn=worldbuild
+Hello! Your clan's children sit in our classrooms too. Every family in the Leaf passes through an Umino's lessons.
+
+## greet.clan  clan=umino  clan_status=clanless  fn=deepen_bond
+Hello! No clan? In my classroom, nobody has a clan. Just a name on a desk and a head full of ideas.
+
+## greet.clan  clan=haruno  fn=worldbuild
+Hello! Welcome to the market street! Our family shop is the one with the pink awning. Can't miss it.
+Hello! The Haruno have sold on this street for longer than the street's had stones.
+Good morning! Our children went off to be shinobi, and we kept the shop. Someone has to.
+Hello! The cherry tree behind our house is the first to blossom every year. It's a family point of pride.
+Hello! The Kinoshita built our counter, and we sell their stools. Market and builders, hand in hand.
+Hello! Bargaining's a sport in our family. My grandmother is undefeated.
+
+## greet.clan  clan=haruno  fn=reveal_character
+Hello! I could've gone to the Academy, but I love the shop. Is that strange? I don't think so.
+Hello! I keep the shop's books on rest days, and I dream in numbers the night after.
+Good day! I'm cheerful because I've chosen to be. Every morning. It's a habit, like sweeping.
+
+## greet.clan  clan=haruno  same_clan=yes  fn=deepen_bond
+Cousin! Come and help in the shop later. Family discount for you: everything's free if you sweep.
+Hello, cousin! I saved you the pinkest rice cake. Family tradition.
+Cousin {player}! The whole street knows you're a Haruno now. Wear it with a smile.
+
+## greet.clan  clan=haruno  clan_status=other  fn=commerce
+Hello! Clan folk always pay full price in our shop. Ha, only joking. Mostly. Come in, come in!
+
+## greet.clan  clan=haruno  clan_status=clanless  fn=worldbuild
+Hello! We're merchants first. A family name never bought anything in our shop; ryo does.
+
+## greet.clan  clan=namiashi  fn=worldbuild
+Good day. Footwork like water: soft, then sudden. That's our whole art in five words.
+Hello. Our dojo is small, near the training grounds. Small floors make neat feet.
+Good day. We cross the river on the stepping stones every morning. No splash allowed.
+Hello. The Gekko think their blades are faster than our feet. We think a blade has to find you first.
+Good day. Our family has stood in the Hokage's guard alongside the Shiranui for generations.
+Hello. Every Namiashi child learns to walk on the dojo's wet floor. Then we learn to stand still on it.
+
+## greet.clan  clan=namiashi  fn=reveal_character
+Good day. I'm quiet because noise is wasted motion. So is fidgeting. I've given up fidgeting.
+Hello. I walk on the edges of my feet even at home. My mother says I sound like a ghost.
+Good day. I like the rain. Puddles are practice.
+
+## greet.clan  clan=namiashi  same_clan=yes  fn=deepen_bond
+Cousin. Come to the stepping stones at dawn. We'll cross together. Mind the third one.
+Good day, cousin. You walk like family already. Light on the heels.
+Cousin {player}. The dojo floor is wet for you any time. That means welcome, in our house.
+
+## greet.clan  clan=namiashi  clan_status=other  fn=worldbuild
+Good day. Your clan has its own ways of moving. I'd like to see them some time. A fair exchange.
+
+## greet.clan  clan=namiashi  clan_status=clanless  fn=worldbuild
+Hello. Footwork belongs to anyone who practises. Our stones are in the river for everyone.
+
+## greet.clan  clan=hagane  fn=worldbuild
+Hey! Heard the news? No? Stick around the gate and you'll hear everything by lunch.
+Hey there! Hagane, gate guard and messenger. If it comes through the gate, we saw it first.
+Hey! The forge beside our shop is the family's. Steel names, steel heads, steel noses. Mine's broken twice.
+Hey! The Tobari take the wall at night and we take it by day. We leave each other notes. Mostly rude.
+Hey! A message relay round the wall before the bell is a family pastime. I'm third fastest.
+Hey! The gate's boring for weeks, then everything happens in an hour. That's the job.
+
+## greet.clan  clan=hagane  fn=reveal_character
+Hey! I like a good mace. Simple tool. Does what it says.
+Hey! I know every merchant who comes through the gate by their cart's squeak.
+Hey! People think gate guards just stand around. We do. But very alertly.
+
+## greet.clan  clan=hagane  same_clan=yes  fn=deepen_bond
+Cousin! Come sit at the gate with us. Best gossip in the Leaf, family rate.
+Hey, cousin! Want a turn on the relay? I'll go easy. First time only.
+Cousin {player}! Here, I saved you a bandage for your nose. Family tradition. You'll need it eventually.
+
+## greet.clan  clan=hagane  clan_status=other  fn=worldbuild
+Hey! Every clan comes through our gate. I know your family's carts by their colours.
+
+## greet.clan  clan=hagane  clan_status=clanless  fn=worldbuild
+Hey! No clan? Half the gate's clanless. We don't care, so long as you show up on time.
+
+## greet.clan  clan=kinoshita  fn=worldbuild
+Hello! Smell that? Fresh-cut cedar. The yard's raising a roof today.
+Hello! The Kinoshita built half the houses in the Leaf and rebuilt the other half.
+Good day! Furniture for your flat? The yard makes it, the shops sell it. Better to come to the source.
+Hello! A good joint needs no nails. That's the family rule. My grandfather says it at every meal.
+Hello! The Haruno are always round for stools and counters. We trade gossip with every order.
+Good day! Our yard's on the carpenters' lane. Follow the sawdust.
+
+## greet.clan  clan=kinoshita  fn=reveal_character
+Hello! I can tell what wood a chair's made of by sitting on it. Party trick. Not a good party.
+Hello! I've got a splinter in every finger. Badges of honour.
+Good day! I'd rather build one good chair than ten cheap ones. Some people find that annoying.
+
+## greet.clan  clan=kinoshita  same_clan=yes  fn=deepen_bond
+Cousin! Come to the yard. There's a workbench with your name carved in it. Well, I carved it last night.
+Hello, cousin! When you want furniture for your place, don't you dare buy it from a shop.
+Cousin {player}! You've got family hands. Strong grip. Good for a plane and a saw.
+
+## greet.clan  clan=kinoshita  clan_status=other  fn=worldbuild
+Hello! Your clan hall's roof? Probably ours. We've worked on nearly every clan's buildings.
+
+## greet.clan  clan=kinoshita  clan_status=clanless  fn=worldbuild
+Hello! The yard takes apprentices from anywhere. Wood doesn't care who your parents were.
+
+## greet.clan  clan=tsuchigumo  fn=worldbuild
+Good day. Our houses are stone, at the quarry's edge. They stay cool in summer and stubborn in winter.
+Good day. The shrine ropes are renewed every year. Plaiting them takes the whole clan.
+Hm. Good day. The spider crest on our cloth means patience. A web isn't spun in a hurry.
+Good day. We keep to ourselves. Not out of pride. It's simply how the mountain taught us.
+Good day. The quarry dust gets in everything. We say you aren't a Tsuchigumo until you've coughed up gravel.
+Good day. Offerings at our shrine are small: a stone, a rice cake, a quiet minute. Anyone may leave one.
+
+## greet.clan  clan=tsuchigumo  fn=reveal_character
+Good day. I'm not used to the noise of the Leaf. I go up to the quarry to think.
+Hm. Good day. I trust slowly. Don't be offended. It's the same for everyone.
+Good day. I plait rope in the evenings. My hands like the work, even when my head is tired.
+
+## greet.clan  clan=tsuchigumo  same_clan=yes  fn=deepen_bond
+Cousin. Come up to the shrine with me. The mountain should know your face.
+Good day, cousin. Help with the ropes this year. Your hands are part of the plait now.
+Cousin {player}. The stone houses are cold, but our hearths aren't. Come in.
+
+## greet.clan  clan=tsuchigumo  clan_status=other  fn=worldbuild
+Good day. Other clans rarely climb to our shrine. Those that do are always treated as guests.
+
+## greet.clan  clan=tsuchigumo  clan_status=clanless  fn=worldbuild
+Good day. The shrine welcomes anyone who climbs the path with a quiet heart. Clan doesn't come into it.
+
+## greet.clan  clan=suzuran  fn=worldbuild
+Hello! Don't eat anything from our drying racks without asking. Some of it's medicine. Some of it isn't.
+Good day! The herb gardens by the hospital are ours. We supply half the medics' cupboards.
+Hello! The lily of the valley is our flower. Lovely, sweet, and poisonous. A family joke.
+Good day! We build up a tolerance to mild poisons from childhood. It makes family dinners interesting.
+Hello! The Yamanaka sell flowers for the heart. We sell herbs for the stomach. Both have their place.
+Good day! Every Suzuran child can name a hundred plants before they can count to a hundred.
+
+## greet.clan  clan=suzuran  fn=reveal_character
+Hello! I taste everything. Carefully. Mostly carefully.
+Good day! My hands smell of mint and bitter root. I've stopped noticing. Everyone else hasn't.
+Hello! I brew medicine all day and forget to drink my own tea.
+
+## greet.clan  clan=suzuran  same_clan=yes  fn=deepen_bond
+Cousin! Come to the gardens. I'll show you which leaves are tea and which are trouble.
+Hello, cousin! I've made you a pouch of herbs for colds. Family recipe. It tastes awful. It works.
+Cousin {player}! You've got good herb sense. You sniffed the right jar first try.
+
+## greet.clan  clan=suzuran  clan_status=other  fn=worldbuild
+Good day! Every clan in the Leaf has had a Suzuran tonic at some point. You'd be surprised who.
+
+## greet.clan  clan=suzuran  clan_status=clanless  fn=worldbuild
+Hello! Herb lore isn't a clan secret. Anyone who wants to learn can come weed the gardens. Weeding's step one.
+
+## greet.clan  clan=tobari  fn=worldbuild
+...Good day. Forgive the soft voice. Night-watch habit.
+Good day. Our shutters stay closed by day. We sleep while you shop, and watch while you sleep.
+Hm. Good day. The lanterns on the wall at night? We keep them. Every one.
+Good day. Our houses are in the dark lanes behind the wall. Quiet streets. We like them that way.
+Good day. The Hagane leave notes for us at the change of watch. We leave tidier ones back.
+Good day. Soft steps, muffled voices. A Tobari house sounds empty even when it's full.
+
+## greet.clan  clan=tobari  fn=reveal_character
+...Hello. Daylight's bright, isn't it. I'll get used to it by sunset.
+Good day. I can walk the whole wall without making a sound. Startling the cats is the only fun part.
+Hm. I like the hour before dawn. The village belongs to the watch, then.
+
+## greet.clan  clan=tobari  same_clan=yes  fn=deepen_bond
+...Cousin. Walk a watch with me someday. Quietly. You'll see the Leaf as we do.
+Good day, cousin. I left a lantern lit on your street last night. Family looks after family.
+Cousin {player}. You've soft feet already. The night will like you.
+
+## greet.clan  clan=tobari  clan_status=other  fn=worldbuild
+Good day. Every clan's lanterns get lit by a Tobari at some point. Yours too.
+
+## greet.clan  clan=tobari  clan_status=clanless  fn=worldbuild
+Good day. The night watch takes anyone who can keep quiet. Most people can't. Can you?

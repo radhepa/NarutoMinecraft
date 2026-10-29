@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for pragmatic residents. Costs, practicality, no nonsense.
+#! tags: personality=pragmatic
+
+## chat.personal  fn=reveal_character
+Profitable. Sold the last of the winter radishes before they went soft. Timing is everything.
+I fixed the roof myself. A carpenter wanted forty ryo. Two hours and a ladder, and I've saved enough for a month of tea.
+Rice, I buy in fifty-pound sacks. Cheaper by the sack. My wife says the pantry looks like a fortress. Good. It is one.
+I spent the morning comparing tea prices on the market street. Third stall from the bridge is two ryo cheaper. Same leaves.
+Sandals, I mend myself. Leather, needle, wax. Why would I pay someone for something I can do in ten minutes?
+My son wants a kunai set for his birthday. I said: earn half, I'll pay half. He's been weeding gardens for a week.
+I grow my own green onions in a pot on the windowsill. Cut them, they grow back. Best value in the Leaf.
+I sold my old cart and bought a better one with the money and a bit more. Now I carry twice the load. Simple maths.
+The festival's coming. Everyone's buying new yukata. I'm wearing last year's. It still fits and nobody remembers.
+There's a shortcut through the alley behind the bathhouse. Saves four minutes a day. That's a day a year.
+Cook once, eat three times. Monday stew is Tuesday soup and Wednesday rice topping. Waste nothing.
+Never buy fish in the afternoon. The good ones go by eight. That's the rule I live by.
+A merchant tried to sell me a "lucky" teapot today for triple the price. Luck isn't a glaze.
+I reuse the water from washing rice on the garden. The plants don't care. The water bill does.
+I lent my ladder to three neighbours this week. Next time, I'm charging in vegetables.
+I learned to sharpen my own knives. The smith charges three ryo a blade. That's a dango every time.
+Every coin under ten ryo goes in a jar. At the end of the season, it pays for a festival evening. Small change adds up.
+I don't buy things I can borrow, and I don't borrow things I'll need twice.
+My father taught me: if it's broken, fix it; if it can't be fixed, sell the parts. He sold a lot of parts.
+I spent the day planning next month's meals. Saves time and ryo and arguments.
+Same coat every season. Layers underneath. One coat, four seasons. Practical.
+I patched my roof with tiles from the old shed. They don't match. They don't leak, either.
+My house is four streets from the market and two from the river. That's why I chose it. Location, location, fish.
+The new tea house charges eight ryo a cup. The old one charges five and it's closer. I'm loyal to my wallet.
+I've started drying my own herbs on the porch. Saves money, and the house smells like a forest.
+I go to the bathhouse at the end of the day when it's half price. Same water. Fewer people.
+I'm teaching my daughter to haggle. She got a ryo off a bag of peaches today. I've never been prouder.
+Two lists: things I want, things I need. The second list gets bought. The first gets slept on.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I run a stall on the market street. Shinobi pay well, but they're never home. Civilians pay less, but they come back.
+I sell firewood. Winter's my season. I spend all summer chopping and all winter counting.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+A D-rank pays eighty ryo if you're quick. Two in a morning, and the rent's paid. Weeding's not glamorous. Rent isn't either.
+I buy my kunai in bulk from the smith. Discount for twenty. Sharp is sharp.
+I take the missions nobody wants. Fewer squads competing, and the clients are grateful. Grateful clients tip.
+Soldier pills cost sixty ryo. I carry one, never use it, and sell it back if it's close to expiry. Don't tell the Desk.
+
+## chat.personal  fn=worldbuild
+Market Day once a week is when the farmers bring their best. Prices drop by noon. That's when I buy.
+The pawn shop gives half the price of anything new. Half's better than a cupboard full of junk.
+The Leaf charges no gate tax on food coming in. That's why the farmers come here instead of the towns.
+Shops close by evening. Ichiraku stays open later. That's why it's always busy. Smart business.
+
+## chat.personal  fn=hook
+My scale at the stall's been weighing heavy. I need it checked before the inspector comes, and I can't leave the stall.
+Someone's been taking firewood from my stack at night. Not much. Enough that I've noticed. I'd like that stopped.
+I need a crate of nails from the Hagane shop. Twenty minutes there and back, and I can't spare twenty minutes.
+
+## chat.personal  fn=filler
+Fine. Busy. Busy is good.
+Not bad. Could be cheaper.
+
+## chat.personal  fn=reveal_character
+A new cart axle costs thirty ryo. I greased the old one instead. Squeaks less than my knees.
+My wife wanted new curtains. I traded a week of firewood for them. Nobody spent a ryo. Everyone's happy.

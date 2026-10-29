@@ -1,0 +1,132 @@
+# Board missions, C-rank: generic pools per template until the missions team fixes the ids.
+# mission.c.<template>.<part>. Lines tagged job=mission_desk are the Mission Desk clerk; untagged lines
+# are the client. Slots: {client} {target} {place} {count} {pay} {item}. C-ranks go out by squad and
+# leave the village; fights never kill.
+#! kind: cycle
+#! fn: quest
+
+# -- escort: {client} travels to {place} -------------------------------------------------------------
+
+## mission.c.escort.brief  job=mission_desk
+C-rank, escort. {client} travels to {place} and wants a squad alongside. Two days' walk. {pay}.
+Escort duty for {client}, as far as {place}. Bandits have been seen on that road. Stay sharp. {pay}.
+Your squad's first escort? {client} to {place}, door to door. Keep the client comfortable and alive to complain. {pay}.
+
+## mission.c.escort.brief
+I'm bound for {place} with my wares. I've heard stories about that road. I'd like some ninja with me.
+You're my escort? You look young. No offence. The last escort was all beard and no sense.
+Just see me to {place} in one piece. And my cart. Mostly my cart.
+
+## mission.c.escort.accept
+Good. We leave at dawn from the main gate. Don't be late.
+Excellent. I walk slowly and complain often. You've been warned.
+Right then. I'll pack an extra rice ball for each of you.
+
+## mission.c.escort.decline
+No? I'll wait for another squad. I'm not walking that road alone.
+Pity. I'll hire someone from the next village, if I live that long.
+Hm. Fine. The Mission Desk will find me someone braver.
+
+## mission.c.escort.progress
+How much further? My feet are writing letters of complaint.
+Did you hear that? In the trees? No? Just a bird? Good.
+We've made good time. At this pace, {place} by tomorrow evening.
+
+## mission.c.escort.success
+{place}! At last! I owe you a fine meal, all of you.
+Not a scratch on me or the cart. You're welcome to escort me any time.
+We're here. I didn't think we'd make it so smoothly. Tell the Leaf I said so.
+
+## mission.c.escort.fail
+I'll walk the rest myself. You've been more trouble than the road.
+My cart's in a ditch and my wares are in a river. Some escort.
+We turned back? After all that? I'll want words with your Mission Desk.
+
+## mission.c.escort.report  job=mission_desk
+Escort to {place}, complete. {client} wrote a letter. A long letter. Mostly good.
+Logged. Your first road out of the village and back. How was it?
+Good work. Escorts are the backbone of C-rank. Quiet, long, and worth every ryo.
+
+# -- bandit_clearing: {count} bandits near {place}, for {client} ----------------------------------------
+
+## mission.c.bandit_clearing.brief  job=mission_desk
+C-rank. {count} bandits are holding the road near {place}. {client} wants them gone. Drive them off or bring them in. {pay}.
+Bandit trouble at {place}. Thieves, not shinobi, as far as we know. {count} of them. Careful anyway. {pay}.
+{client} has lost three carts this month near {place}. Clear the bandits, bring back what you can. {pay}.
+
+## mission.c.bandit_clearing.brief
+They come out of the trees at {place}. {count}, maybe more. They took my whole harvest.
+We can't take our goods to market. Nobody can. Not with those bandits on the road.
+I'm not asking you to hurt them. Just make them leave. And maybe bring back my rice.
+
+## mission.c.bandit_clearing.accept
+Thank you. The bend by the twin pines is where they hide.
+Bring back what you can. Even half the rice would carry us through winter.
+Good. Be careful. They're cowards, but cowards in a crowd are bold.
+
+## mission.c.bandit_clearing.decline
+Then the road stays closed, and the market goes hungry.
+I see. I'll ask the Desk to post it again.
+No one wants to face them. I don't blame you, but I hoped.
+
+## mission.c.bandit_clearing.progress
+Did you find their camp? Are they still there?
+They say one of them has a club the size of a log. Mind that one.
+Fewer on the road this week. Something's working.
+
+## mission.c.bandit_clearing.success
+The road's open! We'll be at market by the weekend!
+You brought back my rice! And my cart! And... my neighbour's goat?
+No more bandits. I'll sleep tonight for the first time in a month.
+
+## mission.c.bandit_clearing.fail
+They're still out there. Worse, they're angry now.
+You let them go? All of them? With my rice?
+The road's no safer than it was. I'll wait for a stronger squad.
+
+## mission.c.bandit_clearing.report  job=mission_desk
+Bandits cleared from {place}. Those you brought in are with the police. Well done.
+Logged. {client} sent a sack of rice to the Desk. We're keeping it.
+Good. Remember this one: you won without hurting more than you had to. That's the job.
+
+# -- far_delivery: {item} to {target} at {place}, a town past the border -----------------------------------
+
+## mission.c.far_delivery.brief  job=mission_desk
+Long-distance delivery: {item} to {target}, all the way to {place}. Four days there and back. {pay}.
+C-rank courier work. {client} needs {item} in {target}'s hands at {place}. Sealed. Don't open it. {pay}.
+A far run for {client}: {place}, past the river crossing. The parcel is {item}. Pack for rain. {pay}.
+
+## mission.c.far_delivery.brief
+This {item} has to reach {target} in {place}. It can't go with the merchants. Too many hands.
+I'd go myself, but my knees and that road don't get along. Please, {place}, and quickly.
+Give it to {target} and no one else. If {target} isn't there, bring it home.
+
+## mission.c.far_delivery.accept
+Good. Here. Keep it dry and keep it close.
+Thank you. {target} will know it's from me by the knot.
+Safe travels. And bring back news of {place}, if you can.
+
+## mission.c.far_delivery.decline
+It's a long way, I know. I'll find someone.
+Then it waits. Some things are worth waiting for.
+No? Hm. The Desk will have another squad soon.
+
+## mission.c.far_delivery.progress
+Is it still sealed? Good. Good.
+How far to {place} now? Two more days, maybe less.
+Rest at the inn by the ford. They know the Leaf there.
+
+## mission.c.far_delivery.success
+All the way from the Leaf? For me? Thank {client} for me. Thank you, too.
+It's here, and it's sealed. You've no idea what this means.
+{target} has it. I can stop worrying now. Thank you.
+
+## mission.c.far_delivery.fail
+It's opened. The seal's broken. This is no use to anyone now.
+You lost it? On the road? Where on the road?
+Too late. {target} left {place} two days ago.
+
+## mission.c.far_delivery.report  job=mission_desk
+Delivery to {place}, confirmed. A thank-you letter came back by hawk this morning.
+Logged. Long road, that one. You've earned a bath and a hot meal.
+Good. Courier work across the border is how the Leaf keeps its friends. Remember that.

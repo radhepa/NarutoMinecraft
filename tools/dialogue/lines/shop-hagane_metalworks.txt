@@ -1,0 +1,57 @@
+# The Hagane metalworks on the market street, beside the forge: steel, wire, chain and powders for crafting (2 to 30
+# ryo). The Hagane are a minor clan of metalworkers.
+#! fn: commerce
+
+## shop.hagane_metalworks.greet  shop=hagane_metalworks  fn=commerce
+Come in, but keep clear of the quench tank. It bites.
+Hot in here, isn't it? You get used to it after twenty years.
+Welcome to the metalworks. Speak up, my ears went somewhere around my tenth year at the hammer.
+Hello, {player}. Steel, chain or powder? I've got all three today.
+
+## shop.hagane_metalworks.greet  shop=hagane_metalworks  clan=hagane  fn=commerce,worldbuild
+Welcome to the Hagane works. Our family has poured steel for the Leaf since the wall was wood.
+
+## shop.hagane_metalworks.browse  shop=hagane_metalworks  fn=commerce
+Steel bars on the rack, sold by the bar. Good for kunai, better for a tanto.
+Chain by the length. Light links for a weighted cord, heavy ones for a gate.
+Powders in the bins: black for bombs, grey for flux. Labelled, so read the labels.
+Wire on the drum. We draw it here, so it's stronger than the travelling stuff.
+Charcoal, files and whetstones. A smith's whole life fits on that shelf.
+
+## shop.hagane_metalworks.buy  shop=hagane_metalworks  kind=cycle  fn=commerce
+{item}. {pay}. Good metal, that.
+There. Wrap it before it rusts on the walk home.
+That's {pay}. Bring me what you make with it, I like to see.
+Paid. Don't drop it on your foot.
+{pay} and it's yours. Store it off the floor.
+Here's your {item}. I tested the batch myself.
+
+## shop.hagane_metalworks.cant_afford  shop=hagane_metalworks  kind=cycle  fn=commerce
+Short. Work a shift at the bellows next door and you'll have it by sunset.
+Not enough. Bring me salvage instead and I'll knock it off the price.
+That's beyond your purse. Start with a smaller bar.
+
+## shop.hagane_metalworks.sold_out  shop=hagane_metalworks  kind=cycle  fn=commerce
+No {item} left. The ore cart comes from the quarry every third day.
+Out of steel. The weapon shop took my last load for a big commission.
+Gone. Try again after Market Day.
+
+## shop.hagane_metalworks.haggle  shop=hagane_metalworks  fn=commerce,reveal_character
+Bring me good salvage and we'll call it a trade instead of a price.
+Price is price. But if you sweep up, I'll throw in a whetstone.
+A ryo off, because you asked politely. Don't make a habit of it.
+
+## shop.hagane_metalworks.closing  shop=hagane_metalworks  time=evening|night  fn=commerce
+I'm letting the coals die down. Last sale.
+Closing. The anvil needs its sleep, and so do I.
+
+## shop.hagane_metalworks.recommend  shop=hagane_metalworks  fn=commerce,teach
+The {item} is what I'd start with. Forgiving metal.
+Get a whetstone first. A dull blade is a heavy stick.
+Bandit salvage is half the price of bought steel once it's melted. Bring it to the forge.
+Black powder and paper make bombs at a workbench, once you're a Genin. Buy the powder dry.
+
+## shop.hagane_metalworks.regular  shop=hagane_metalworks  level=3..10  fn=commerce,deepen_bond
+You hold the tongs right now. I noticed. Don't let it go to your head.
+There's my almost-apprentice. Grab an apron.
+I kept back the cleanest bar from the last pour. It's yours at the usual price.

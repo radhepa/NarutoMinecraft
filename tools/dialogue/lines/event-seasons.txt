@@ -1,0 +1,86 @@
+# The year's quiet events: the first snow, cherry blossoms, moon viewing.
+
+## greet.event  event=first_snow  fn=react
+First snow! Look at the Hokage Rock, the faces have got white eyebrows.
+It's snowing, {player}! The first of the year. I always feel about six years old.
+The first snow came down overnight. The whole village sounds muffled.
+Snow! Mind the bridge, it ices before anything else does.
+Did you see the rooftops this morning? White from the gate to the Rock.
+
+## greet.event  event=first_snow  stage=child  fn=react
+It snowed! It snowed! Snowball fight at the Academy yard, everyone's going!
+First snow! I caught a flake on my tongue. It tasted like nothing. It was perfect.
+
+## chat.event  event=first_snow  fn=worldbuild
+On the first snow, people leave a cup of warm sake on the doorstep for the winter spirits. Old habit.
+The training grounds are slippery after the first snow. Half the Genin spend the day on their backs.
+The tea house brings out roasted tea on the first snow. Nobody announces it, everyone knows.
+The children always build a snow Hokage by the Academy gate. It's never a good likeness.
+The bath house is packed on first-snow evenings. Nothing beats hot water and cold air.
+First snow means the farm carts stop coming so often. Stock up on rice and pickles now.
+
+## chat.event  event=first_snow  personality=imaginative|thoughtful  fn=reveal_character
+I like the first snow because it covers every footprint. The village looks like nobody's been anywhere.
+
+## chat.event  event=first_snow  personality=protective|warmhearted  fn=reveal_character
+Have you got a proper coat? First snow is the coldest one, because nobody's ready for it.
+
+## chat.event  event=first_snow  stage=child  fn=worldbuild
+I built a snow dog. It looks more like a snow potato, but I know it's a dog.
+My hands are frozen, but I'm not going inside. Not ever.
+
+## greet.event  event=cherry_blossoms  fn=react
+The blossoms are out! The riverbank's gone pink overnight.
+Cherry blossom season, {player}. Have you been down to the river yet?
+Look up! There are petals in your hair already.
+The trees by the Academy are in full flower. The whole street smells sweet.
+Blossom week! Half the village is going to have a picnic under the trees today.
+
+## greet.event  event=cherry_blossoms  stage=child  fn=react
+The blossoms are out! We're having a picnic! My mother made the pink rice balls!
+
+## chat.event  event=cherry_blossoms  fn=worldbuild
+People spread mats under the trees along the river from dawn to claim the best spot.
+The dango stall sells the three-colour skewers only in blossom season. They sell out by noon.
+The petals fall within a week. That's what makes the viewing matter.
+The Academy holds lessons outside during blossom week. Not much gets learnt.
+At night they hang paper lanterns under the trees by the river. It's the prettiest walk in the Leaf.
+Somebody always falls asleep under a tree and wakes up covered in petals.
+The shrine has an old tree that blooms first every year. People bet on which day it opens.
+
+## chat.event  event=cherry_blossoms  personality=thoughtful|reserved  fn=reveal_character
+Blossoms remind me that good things don't stay. You have to stop and look while they're here.
+
+## chat.event  event=cherry_blossoms  personality=playful|fiery  fn=reveal_character
+I tried to catch a falling petal for an hour. I've decided it's a training exercise now.
+
+## chat.event  event=cherry_blossoms  stage=child  fn=worldbuild
+If you catch a falling petal before it touches the ground, you get a wish. I've had seven wishes today.
+We're making petal crowns. Mine keeps falling apart, so it's a petal pile.
+
+## greet.event  event=moon_viewing  fn=react
+Full moon tonight, and a clear sky! Perfect for moon viewing.
+Good evening, {player}. Are you going up the hill to see the moon?
+Moon-viewing night. Everyone's making moon dumplings, the whole street smells of rice.
+Look at that moon! Big as a lantern over the Hokage Rock.
+
+## greet.event  event=moon_viewing  stage=child  fn=react
+Moon night! We stacked the dumplings in a pyramid. I ate the top one. Don't tell.
+
+## chat.event  event=moon_viewing  fn=worldbuild
+People set pampas grass and white dumplings on their windowsills for the moon. It's an autumn custom.
+The best place to see the moon is the hill behind the shrine. Bring a blanket and something warm.
+Some say there's a rabbit on the moon, pounding rice. Look closely and you'll see its ears.
+On moon-viewing night the tea house serves a special roasted tea, very mellow.
+They say if you see the moon reflected in the river on viewing night, you'll have a good harvest.
+The old ones write short poems about the moon and pin them on the shrine gate.
+
+## chat.event  event=moon_viewing  personality=imaginative|gentle  fn=reveal_character
+I always think the moon looks a little lonely. That's why we all come out to keep it company.
+
+## chat.event  event=moon_viewing  personality=pragmatic|steadfast  fn=reveal_character
+A full moon means a bright night. Good for travellers, bad for anyone trying to sneak about.
+
+## chat.event  event=moon_viewing  stage=child  fn=worldbuild
+I'm looking for the moon rabbit. I see its ears! I think. Maybe they're clouds.
+We get to stay up late for the moon. I'm going to stare at it until I fall asleep.

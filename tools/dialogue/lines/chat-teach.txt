@@ -1,0 +1,226 @@
+# Residents teaching the beta's mechanics in their own words, one mechanic per line (ROADMAP §7).
+#! fn: teach
+
+# -- fatigue and sleep ---------------------------------------------------------------------------------
+
+## chat.teach
+Stay up past one in the morning and your legs go heavy and your chakra comes back slow. Tired is the body's polite warning.
+Push on to three and it stops being polite. Exhausted shinobi stumble, hit soft and miss their jumps.
+If the sun comes up and you still haven't slept, you'll drop where you stand and wake in your bed at noon. Ask anyone who's tried.
+Get into your own bed before midnight and you'll wake Well Rested. Your chakra comes back quicker all morning.
+Your own bed is the one that does the job properly. A hospital cot or a camp bedroll will clear the tiredness, but you won't wake fresh.
+Sleep at night and the hours just slip by. You lie down in the dark and open your eyes at six with the sparrows.
+A hot meal won't fix a sleepless night, but it does put some spring back in tired legs for an hour or so.
+
+## chat.teach  job=medic|nurse
+Half my night patients are Genin who stayed up and then wondered why their jutsu fizzled. Sleep before midnight. Doctor's orders.
+A cup of green tea pushes the tiredness back an hour. It doesn't cancel it; it just moves the bill to later.
+Exhausted is no state to train in. Your strikes lose a fifth of their force and the edges of everything go dark.
+
+## chat.teach  job=tea_master
+Green tea in the evening buys you another hour before the tiredness catches up. A pot at ten and you'll still be sharp at two.
+
+## chat.teach  personality=protective|warmhearted
+It's getting late. If you're out past one you'll start dragging your feet, so go home while it's still easy.
+
+# -- ryo, the stipend and money ------------------------------------------------------------------------
+
+## chat.teach
+Ryo comes in notes: ones, tens, hundreds and the big thousand note nobody ever wants to break. Keep them in a pouch or a chest.
+Academy pupils without family get a stipend of thirty ryo a day. It's not much, but it covers ramen and a little over.
+Notes are just paper. Put the big ones in a chest at home and carry only what you mean to spend.
+The cheapest meals in the village are three to ten ryo. A day's honest work covers that twice.
+Furniture sells back at half what it cost. Think before you buy the expensive lamp.
+The pawn shop buys bandit-camp salvage. That and selling furniture back are the only ways to turn things into ryo.
+
+## chat.teach  job=merchant|pawnbroker|grocer
+A thousand-ryo note is lovely to hold and terrible to spend. Change it at a big shop, never at a dango stall.
+
+## chat.teach  player_rank=academy
+The stipend stops when you graduate, so save a bit now. Genin pay their own way, mostly from missions.
+
+# -- your apartment, furniture and chests --------------------------------------------------------------
+
+## chat.teach
+Your flat is yours to arrange. Inside your own walls you can set furniture down, turn it and pick it back up again.
+Hold a piece of furniture at home and you'll see where it would go before you set it down. Turn it till it sits right.
+Pick a chest back up and everything inside comes with it. No need to empty it first.
+Step out of your own flat and you can't place furniture anymore. The landlady's hallway is not your living room.
+Whatever else you move, a home always keeps one bed. That's the one that clears tiredness properly.
+A chest at home is the safest place for ryo and spare kit. Nothing in a chest gets lost if you fall on a mission.
+Potted plants, scroll shelves, lamps, cushions: it all counts as furniture, and it all makes a flat feel like a home.
+A workbench in your flat means you can make smoke bombs and simple furniture without walking to the Academy.
+
+## chat.teach  job=carpenter
+Bring planks and cloth to a workbench and you can build simple furniture yourself. Cheaper than mine, though not as pretty.
+A full set of furniture for a flat takes about a week of honest work to pay for. Start with a table and build from there.
+
+## chat.teach  district=apartments
+You can put a pet bed by your futon. A pet that has its own spot settles at home much faster.
+
+# -- shops and part-time jobs --------------------------------------------------------------------------
+
+## chat.teach
+Shops open around seven. Come before that and you'll be knocking on shutters.
+Part-time shifts at Ichiraku, the grocer, the flower shop or the forge pay forty to eighty ryo. Ask the owner; they're always short-handed.
+A shift at a shop pays about as well as an easy D-rank. It's a good way to fill an afternoon between lessons.
+Work the forge often enough and the smith will start teaching you. Some trades pay in knowledge as well as ryo.
+Shopkeepers remember who works hard. Do a few good shifts and you'll get a friendlier price at the counter.
+
+## chat.teach  job=ramen_cook|grocer|florist|smith
+I'm always looking for help on busy shifts. Ask me when you've a few hours, and you'll go home with ryo in your pocket.
+
+## chat.teach  market=yes
+Market Day is when the shops need the most help. If you want a shift, today's the day to ask.
+
+# -- food and dish buffs -------------------------------------------------------------------------------
+
+## chat.teach
+Ramen puts a little chakra back in you. That's why Genin queue at Ichiraku straight off the training ground.
+Dango speed up how fast your chakra returns. A stick or two before training and you'll go longer between rests.
+Barbecue puts weight in your punches. Not a lot, but enough that the taijutsu crowd swears by it.
+Green tea holds the tiredness off. A cup late in the evening buys you an hour before your legs go heavy.
+The good feeling from a meal doesn't last forever. Eat close to when you need it, not at breakfast for a fight at dusk.
+You still need to eat ordinary food too. A buff won't fill an empty stomach.
+A cooking pot at home lets you make Leaf dishes yourself. Buy the ingredients at the grocer for a fraction of a shop meal.
+
+## chat.teach  job=cook|ramen_cook|dango_maker|barbecue_cook|tea_master
+Every dish in this village does something for you. Ramen for chakra, dango for recovery, barbecue for strength, tea for late nights. Pick your meal for your day.
+
+## chat.teach  personality=warmhearted|gentle
+Eat something before you train, please. A full belly carries you further and you'll get less tired on the way home.
+
+# -- pets ----------------------------------------------------------------------------------------------
+
+## chat.teach
+You can adopt a ninken pup at the Inuzuka clinic by the gate. Ask the vet; the pups do most of the deciding.
+The shelter has cats looking for homes. They're quieter than dogs and they'll keep the mice out of your rice.
+A pet follows you about and waits at home when you go somewhere it can't come. It'll be at the door when you get back.
+Pets sleep at the foot of your bed. Expect a warm lump on your feet every morning.
+Pets get knocked out, not killed. If yours gets hurt, it'll be back on its feet and sulking by evening.
+
+## chat.teach  job=vet|kennel_keeper
+Once you're a Genin, a ninken can follow scents on missions. A dog's nose finds what a squad's eyes miss.
+A pup wants feeding, walking and a corner of its own. Give it those and it'll give you everything else.
+
+## chat.teach  clan=inuzuka
+A ninken's partner feeds it first and eats second. That's the first thing we teach anyone who takes a pup home.
+
+# -- the Mission Desk ----------------------------------------------------------------------------------
+
+## chat.teach  player_rank=genin|chunin
+The Mission Desk is open eight till six on the Residence's ground floor. Come early; the good D-ranks go first.
+D-rank missions pay sixty to a hundred and fifty ryo. A day of them covers food and leaves you half to save.
+C-rank work pays three to six hundred. More ryo, more road and a lot more that can go wrong.
+Fall on a mission and it fails: no pay, and the client remembers. Know when to pull back.
+Missions give the most experience of anything you can do. A squad that takes them steadily levels up fastest.
+The desk staff remember who finishes their work. Turn in a sloppy D-rank and you'll get the next one cleaning gutters.
+
+## chat.teach  player_rank=academy
+The Mission Desk opens to you once you make Genin. Until then, it's lessons, part-time shifts and odd jobs for the neighbours.
+After graduation, the Residence's ground floor will be your second home. The Mission Desk hands out work from eight till six.
+
+# -- hand signs, chakra and meditation -----------------------------------------------------------------
+
+## chat.teach
+Twelve hand signs: Rat, Ox, Tiger, Hare, Dragon, Snake, Horse, Ram, Monkey, Bird, Dog and Boar. Every jutsu is a sentence made of them.
+Get one sign out of order and the jutsu fizzles. Nothing explodes; it just doesn't happen, and everyone sees.
+Each sign takes a moment to form. Long jutsu are slow, so start weaving before you need it, not after.
+Use a jutsu often enough and it becomes second nature. A mastered jutsu takes fewer signs and comes faster.
+Your chakra comes back slowly on its own. Crouch low and keep perfectly still, and it fills much faster.
+A soldier pill fills your chakra in a hurry. Sixty ryo each, and they taste like old boots.
+Your chakra grows with every level. The Genin who seemed to have endless chakra just trained more.
+Clone, Transformation and Substitution are the Academy's three. Learn the signs until your fingers do them in your sleep.
+
+## chat.teach  rank=chunin|jonin
+Meditating is just stillness. Sneak low, stop moving, breathe. The chakra comes back like a tide.
+Mentors teach jutsu when they trust you. Train with them, prove your level, and they'll show you the next one.
+
+## chat.teach  job=teacher
+Clone is Ram, Snake, Tiger. Say it out loud as you weave until your hands stop needing your mouth.
+Transformation is Dog, Boar, Ram. Practise on a friend's face first; at least they'll tell you when the nose is wrong.
+
+# -- taijutsu: combos, dodging, blocking, substitution -------------------------------------------------
+
+## chat.teach  rank=genin|chunin|jonin
+Three quick strikes make a chain, and the third knocks your opponent back. After it, give yourself a breath before the next.
+Hold a strike a moment longer and it lands as a heavy blow. Slower to come, much harder to stop.
+A dodge is a quick dash in any direction. For a heartbeat, nothing can touch you. It costs a little chakra and needs a moment to recover.
+Block with an open hand and you'll take less than half of what's coming. Better bruised than broken.
+Substitution is a dodge timed just as the hit lands, with enough chakra behind it. You're gone, and a log takes the blow.
+Substitution only works once every twenty seconds or so. Use it, then fight like you don't have it.
+Watch an enemy's shoulders before they swing. A long wind-up is your cue to dodge.
+Keep a chain going and your opponent never gets the breath to answer. Stop halfway and they will.
+
+## chat.teach
+Anyone can dodge. The trick is dodging toward the opening, not away from the fight.
+An empty hand blocks better than a kunai. Hold it up, take the hit on the forearm and keep your feet.
+
+# -- sparring, death and the hospital ------------------------------------------------------------------
+
+## chat.teach
+A spar ends at thirty percent health, or when someone yields. Nobody gets hurt badly, and nobody loses anything but pride.
+Sparring with a ranked resident at the training grounds is a good way to make a friend. Losing well counts too.
+Fall in a real fight and you wake in the hospital the next morning. No bill, and your tiredness is gone.
+A bad fall costs you a level's worth of progress. You never drop below your rank's floor, and you never lose the rank itself.
+Any kunai and shuriken you were carrying when you fell are gone. Keep your best kit in a chest at home.
+Fight experience falls off if you keep beating the same kind of opponent. Missions and training teach more.
+
+## chat.teach  job=medic|nurse
+Everyone who falls is brought here and revived. You'll wake in one of our beds at dawn, fatigue cleared, ready to go again.
+Your levels are safe above your rank's floor. A fall costs some progress, not your headband.
+
+## chat.teach  district=hospital
+Wake up here and the first thing you'll want to do is check your pouch. Thrown tools don't come back with you, I'm afraid.
+
+# -- the workbench and the smithy ----------------------------------------------------------------------
+
+## chat.teach
+The Academy workshop has a workbench anyone can use. Smoke bombs, wire and sealing tags start there.
+Paper bombs open up at the workbench once you're a Genin. Until then, it's smoke and string.
+Furniture can be made at a workbench from planks and cloth. It's slower than buying, and far cheaper.
+Recipes come from your rank, from mentors and from scrolls. The scroll shop sells some; the smith teaches others.
+
+## chat.teach  job=smith
+The forge at the weapon shop makes kunai, shuriken, senbon and tanto from steel. Buy the steel from me or bring salvage from bandit camps.
+A blade you forge yourself can be a grade better than my shop stock. That's the reward for sweating at the anvil.
+Work a few shifts at my forge and I'll teach you what I know. Recipes are earned in this shop, not bought.
+
+## chat.teach  player_rank=genin|chunin
+A small forge in your flat lets you make your own tools at home. Just warn the neighbours about the hammering.
+
+# -- kunai, shuriken and tools -------------------------------------------------------------------------
+
+## chat.teach
+A kunai is a weapon in the hand and a throw at range. Throw it, and you can pick it back up where it lands.
+Shuriken stack in a pouch and fly fast. Genin learn to throw three at once.
+A paper bomb sticks to a wall or a kunai. It hurts whoever's near and never so much as scratches a stone.
+Smoke bombs blind the room. Anyone who was chasing you loses track of you, if you're quick.
+Wire across a path makes a trip trap. Cheap, quiet and very embarrassing for whoever finds it.
+A tool pouch lets you throw from your belt without fumbling. Every Genin should have one.
+Practice kunai and shuriken are blunt and cheap. Learn on those before you spend forty ryo on good steel.
+
+# -- chakra movement -----------------------------------------------------------------------------------
+
+## chat.teach  player_rank=genin|chunin
+Tree walking is chakra in the soles of your feet. Too little and you slip, too much and you bounce off the bark.
+Water walking is the same trick, steadier. When you want to sink and swim, just let the chakra go.
+Running up a wall works for about three seconds. Pick where you're going before you start.
+Charge your chakra into your legs and jump. You'll go three times as high, and you won't feel the landing while your chakra lasts.
+The ninja run is faster than a sprint. Lean forward, arms back, and let your chakra carry you.
+Hopping from tree to tree, or roof to roof, gives you a push forward every time. The trick is never stopping.
+Every chakra movement costs a little chakra. Run out halfway across a lake and you'll get wet.
+
+## chat.teach  player_rank=academy
+Tree walking and water walking come after graduation. Until then, the trees are for climbing the ordinary way.
+
+## chat.teach  rank=chunin|jonin
+The lake on the far training grounds is where everyone learns to water-walk. The cliff beside it is for wall-running.
+Out of chakra mid-jump is the worst way to learn about falling. Watch your bar before you leap.
+
+# -- levels and growing stronger ------------------------------------------------------------------------
+
+## chat.teach
+Levels are strength; ranks are trust. Getting stronger never makes you a Chunin by itself. The exam does.
+Every level gives you a bit more chakra and a little more weight behind your strikes. Every sixth level brings another heart as well.
+Every rank exam asks for a minimum level. Train for it, and the exam will be waiting.

@@ -1,0 +1,259 @@
+# Hangouts over food (LIFE_TOGETHER.md §3): ramen at Ichiraku, dango at the tea house, barbecue, and dinner at
+# their home. ask: they invite you in person. invite: the note they leave you. yes / no.*: their answer when you
+# ask. arrive, then how it went (rough, fine, good, great), stood_up (you never came), ritual (it has become
+# "ours"), ritual_missed (it lapsed). Highlights are the beat a great evening leaves; callbacks are in
+# callback-hangout-meals.txt. These come round again, so they cycle.
+#! kind: cycle
+#! fn: deepen_bond
+
+# == ramen =========================================================================================
+## hangout.ramen.ask
+Ichiraku tonight? I'm starving, and I hate eating ramen alone.
+I'd kill for a bowl of miso ramen. Come with me, {player}? I'll get the eggs.
+The broth smells reached my window an hour ago. Ramen? Please say ramen.
+## hangout.ramen.invite
+Ramen at Ichiraku tonight, if you're free. I'll keep the stool by the end warm.
+A note, folded small: "Ichiraku, after sundown? Bring an appetite."
+## hangout.ramen.yes
+Ramen? Always. Let's go before the queue gets long.
+Yes! I've been thinking about pork broth since breakfast.
+## hangout.ramen.no.busy
+I can't right now, I'm stuck with work. {when}, though? I'd love a bowl then.
+Not today, I've got a shift. Ask me again {when}.
+## hangout.ramen.no.not_today
+I'm not hungry, oddly. Another day, {player}.
+Ramen sounds good, but not tonight. I'm worn out.
+## hangout.ramen.no.not_their_thing
+I'm sorry, I've never been much for ramen. Too heavy for me.
+## hangout.ramen.no.not_close_enough
+Ramen together? That's kind, but I barely know you yet.
+## hangout.ramen.arrive
+Two bowls, please! Extra pork in one. You know which.
+Here we are. Sit on the left, the right stool wobbles.
+## hangout.ramen.rough
+Well. The noodles were good, at least. Let's not do this again too soon.
+## hangout.ramen.fine
+That hit the spot. Thanks for coming along.
+## hangout.ramen.good
+I'm so full I might roll home. That was lovely, {player}.
+Good bowl, good company. Same again sometime?
+## hangout.ramen.great
+Best bowl I've had all year, and I think it's because of the company. Let's do this forever.
+I haven't laughed like that in ages. Ramen's better with you, {player}.
+## hangout.ramen.stood_up
+I sat at Ichiraku with two bowls going cold. Where were you, {player}?
+## hangout.ramen.ritual
+Our ramen nights. That's a thing now, isn't it? I like that it's a thing.
+## hangout.ramen.ritual_missed
+The cook asked where my friend was. I didn't know what to say. Our ramen's been missing.
+## hangout.ramen.highlight.1
+The bowl's tipping! ...You caught it! Not a drop spilled! [EXCLAIM]
+## hangout.ramen.highlight.2
+The cook just gave us both a free egg for "looking so hungry." I'll take it!
+## hangout.ramen.highlight.3
+We slurped at exactly the same time and the whole counter turned round. Ha!
+## hangout.ramen.highlight.4
+You got broth on your nose. No, other side. No... here, let me.
+## hangout.ramen.highlight.5
+A second bowl? You're mad. ...Make it two.
+## hangout.ramen.highlight.6
+It's raining on the curtain and we're all warm in here. I could stay all night.
+## hangout.ramen.highlight.7
+Did you just win the noodle-pulling bet against the cook? You did! Legendary!
+## hangout.ramen.highlight.8
+You split your last piece of pork with me. That's real friendship, that is.
+## hangout.ramen.highlight.9
+I've never noticed how many stars there are over the stand. Look up.
+## hangout.ramen.highlight.10
+The cook told us the story of the first bowl they ever made. Burnt, apparently!
+## hangout.ramen.highlight.11
+A stray cat sat between our stools and stared at us the whole time. We've been adopted.
+## hangout.ramen.highlight.12
+We talked so long the cook started stacking stools around us. Oops.
+
+# == dango =========================================================================================
+## hangout.dango.ask
+Dango at the tea house? They've got the three-colour ones today.
+I'd love a sweet skewer and a quiet cup. Join me, {player}?
+Let's go for dango. My treat, if you promise not to eat mine.
+## hangout.dango.invite
+Tea house this afternoon? I'll order the mitarashi before you get there.
+Dango and green tea, by the river window, if you'd like to meet.
+## hangout.dango.yes
+Dango! Yes. I'll even share the sauce.
+That sounds lovely. Let's sit by the window.
+## hangout.dango.no.busy
+I'm tied up just now. Could we go {when}?
+I've errands until late. {when}, maybe? I'll save my appetite.
+## hangout.dango.no.not_today
+I've had too many sweets already this week. Another time.
+Not today, {player}. I'm not in a tea house mood.
+## hangout.dango.no.not_their_thing
+I don't have much of a sweet tooth, I'm afraid. Dango's not for me.
+## hangout.dango.no.not_close_enough
+That's sweet of you. Maybe once we know each other a little better.
+## hangout.dango.arrive
+Two plates of dango and a pot of tea, please. The window seat's free!
+Here we are. Smell that? They've just brushed the fresh ones.
+## hangout.dango.rough
+That was a bit quiet, wasn't it. The dango was nice, anyway.
+## hangout.dango.fine
+Good tea, good dango. Thanks, {player}.
+## hangout.dango.good
+I feel sweet all the way through. Thank you, that was nice.
+Let's come back here. It's a good spot for us.
+## hangout.dango.great
+I'm going to remember this afternoon. Sun, tea, sticky fingers and you.
+That was perfect. The kind of afternoon people write poems about.
+## hangout.dango.stood_up
+I ate both plates of dango waiting for you. I didn't even enjoy the second.
+## hangout.dango.ritual
+Our dango afternoons. The tea seller pours two cups the moment we walk in now.
+## hangout.dango.ritual_missed
+I walked past the tea house today and didn't go in. It's ours. It didn't feel right alone.
+## hangout.dango.highlight.1
+The sparrows are stealing crumbs from our plate! Look at that brave one!
+## hangout.dango.highlight.2
+You got the skewer with four balls instead of three. That's lucky, you know.
+## hangout.dango.highlight.3
+Sauce on your chin. And your sleeve. And somehow your hair. Impressive.
+## hangout.dango.highlight.4
+A petal fell right into my tea. That's got to mean something good.
+## hangout.dango.highlight.5
+The tea master gave us a taste of the special blend. I feel very grown up.
+## hangout.dango.highlight.6
+We sat here so long the shadows moved right across the table.
+## hangout.dango.highlight.7
+You made me laugh so hard I snorted tea. Out of my NOSE, {player}.
+## hangout.dango.highlight.8
+A little one at the next table waved at us the whole time. So we waved back the whole time.
+## hangout.dango.highlight.9
+We tried every colour of dango they had. Seven! I'm never eating again.
+## hangout.dango.highlight.10
+Rain started and we stayed, listening to it on the roof. Best part of the day.
+
+# == barbecue ======================================================================================
+## hangout.barbecue.ask
+Barbecue tonight? I've been craving grilled beef all week.
+Let's get a grill and a pile of meat, {player}. My stomach's demanding it.
+The barbecue house has a free table at seven. Come with me?
+## hangout.barbecue.invite
+A table at the barbecue house, after dark. I've booked for us.
+Barbecue tonight? I'll start the grill. You bring the hunger.
+## hangout.barbecue.yes
+Barbecue! You're speaking my language.
+Yes. I'll man the tongs. You stay back from the fire.
+## hangout.barbecue.no.busy
+I can't tonight. Could we go {when}? I'll be twice as hungry by then.
+Busy till late, I'm afraid. {when} instead?
+## hangout.barbecue.no.not_today
+I've already eaten, sadly. Another night.
+Not tonight. The smoke gets in my eyes when I'm tired.
+## hangout.barbecue.no.not_their_thing
+Grilled meat and smoke? Not really for me. Sorry.
+## hangout.barbecue.no.not_close_enough
+A whole evening at the barbecue? Let's get to know each other a bit first.
+## hangout.barbecue.arrive
+Grill's hot! Beef first, then the onions. Trust me on the onions.
+Here we are. Sit on this side, the smoke drifts the other way.
+## hangout.barbecue.rough
+That got a bit awkward, didn't it. Well, the meat was good.
+## hangout.barbecue.fine
+Good food. I smell like a bonfire now. Worth it.
+## hangout.barbecue.good
+I'm stuffed. That was a proper feast, {player}. Thank you.
+Same table next time? I'm already looking forward to it.
+## hangout.barbecue.great
+That was a feast for the ages. I'll be telling people about tonight.
+I can't remember the last time I laughed this much with my mouth full.
+## hangout.barbecue.stood_up
+I grilled for two and ate for two, alone. Thanks for nothing, {player}.
+## hangout.barbecue.ritual
+Barbecue night, you and me. It's tradition now. Don't argue.
+## hangout.barbecue.ritual_missed
+The barbecue house keeps our table empty out of habit. I've stopped going.
+## hangout.barbecue.highlight.1
+The flames jumped and singed your eyebrow! Just one! You look so surprised!
+## hangout.barbecue.highlight.2
+You flipped every piece perfectly. Not one burnt. Who taught you that?
+## hangout.barbecue.highlight.3
+The owner sent over a plate of the special cut, on the house. We must look trustworthy.
+## hangout.barbecue.highlight.4
+Ha! We reached for the last piece at the same time. Rock, paper, scissors for it?
+## hangout.barbecue.highlight.5
+The whole table next to us joined in our toast. Everyone's cheering!
+## hangout.barbecue.highlight.6
+I ate so much I had to undo my sash. Don't look. Okay, look, it's funny.
+## hangout.barbecue.highlight.7
+You let me have the crispy bits. You're a true friend, {player}.
+## hangout.barbecue.highlight.8
+We stayed till the coals went orange and low. That's the best part.
+## hangout.barbecue.highlight.9
+A spark landed on your sleeve and you put it out without even stopping talking. Ha!
+## hangout.barbecue.highlight.10
+The grill master taught us the secret sauce! Well, half of it. The other half's a family secret.
+
+# == dinner at their home ==========================================================================
+## hangout.home_dinner.ask
+Come to dinner at mine tonight? Nothing fancy. Just rice, fish and us.
+I'd like you to eat at my table, {player}. Tonight, if you can.
+I'm cooking tonight and I always make too much. Come and help me eat it.
+## hangout.home_dinner.invite
+Dinner at my house tonight. Come hungry, and don't bring anything. I mean it.
+A note: "Supper at mine. Six bells. Your place is already set."
+## hangout.home_dinner.yes
+Dinner at yours? I'd love that. I'll be there on time.
+Thank you. I'll bring a good appetite.
+## hangout.home_dinner.no.busy
+Tonight's no good, sadly. {when}? I'll cook something special.
+I'm busy this evening. Could you come {when} instead?
+## hangout.home_dinner.no.not_today
+The house is a mess tonight. Another evening, {player}.
+Not tonight. I'm too tired to cook, and I won't feed you leftovers.
+## hangout.home_dinner.no.not_their_thing
+I don't really have people over. I'm sorry. Let's eat out instead some time.
+## hangout.home_dinner.no.not_close_enough
+At my home? I don't have many people over. Maybe when we're closer.
+## hangout.home_dinner.arrive
+Come in, shoes there. Sit, sit. The soup's nearly ready.
+Welcome! Mind the low beam. Everyone hits it once.
+## hangout.home_dinner.rough
+Well. That was a little stiff, wasn't it. Thank you for coming all the same.
+## hangout.home_dinner.fine
+Thank you for coming. It was nice to cook for someone.
+## hangout.home_dinner.good
+You ate everything! That's the best compliment a cook can get.
+That was a warm evening. You're welcome back any night.
+## hangout.home_dinner.great
+That felt like family. Like you'd always been at that table.
+I'll remember tonight. All of us round the table, and you right in the middle of it.
+## hangout.home_dinner.stood_up
+I set the table for you. The rice went cold. Everyone kept looking at the door.
+## hangout.home_dinner.ritual
+You've got your own bowl at my house now. It lives on the shelf, waiting for you.
+## hangout.home_dinner.ritual_missed
+Your bowl's still on my shelf. It hasn't been used in weeks.
+## hangout.home_dinner.highlight.1
+You've got your own bowl now. I bought it this week. It's got a little leaf on it.
+## hangout.home_dinner.highlight.2
+The little ones made you a seat cushion. It's lumpy. They're so proud.
+## hangout.home_dinner.highlight.3
+The rice came out perfect, every grain shining. I never manage that! You're lucky.
+## hangout.home_dinner.highlight.4
+My grandmother told her ghost story, the one about the fox, and you jumped! Ha!
+## hangout.home_dinner.highlight.5
+We all cleared the table together and sang the washing-up song. You learned it so fast.
+## hangout.home_dinner.highlight.6
+The power of the hot pot! Everyone's cheeks are red and nobody can stop smiling.
+## hangout.home_dinner.highlight.7
+The cat climbed into your lap and fell asleep. It's never done that with anyone.
+## hangout.home_dinner.highlight.8
+You helped me fold the dumplings. Yours look like little hats. I love them.
+## hangout.home_dinner.highlight.9
+Second helpings, third helpings! The pot's empty. That's never happened in this house.
+## hangout.home_dinner.highlight.10
+We stayed up talking by the brazier after everyone else went to bed.
+## hangout.home_dinner.highlight.11
+The neighbours heard us laughing and came over with sweets. The whole lane's here now!
+## hangout.home_dinner.highlight.12
+My father toasted you at the table. He never toasts anyone. He meant it.

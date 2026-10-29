@@ -1,0 +1,42 @@
+# The hospital dispensary: the counter where the hospital hands out bandages, medicine and supplies.
+#! fn: commerce
+
+## shop.hospital_dispensary.greet  shop=hospital_dispensary  fn=commerce
+Dispensary. Name, and what you need, please.
+Hello. Take a number from the hook, I'll be with you shortly.
+Come up to the counter, {player}. Supplies, or a prescription?
+Good day. Quietly, please, there are patients sleeping upstairs.
+
+## shop.hospital_dispensary.browse  shop=hospital_dispensary  fn=commerce
+Bandages, gauze, splints and disinfectant. The mission kits are on the bottom shelf.
+Medicine by prescription from the healers. Supplies anyone can buy.
+The squad kit has everything for four: bandages, salve, a splint and a needle.
+Ice wraps for sprains. Training season, we sell a lot of those.
+
+## shop.hospital_dispensary.buy  shop=hospital_dispensary  kind=cycle  fn=commerce
+{item}. {pay}. Follow the healer's instructions, not your friend's.
+Here you are. Sign the book, please.
+That's {pay}. Keep it in your pouch, not your pocket.
+{pay}. If it gets worse, come straight back upstairs.
+
+## shop.hospital_dispensary.cant_afford  shop=hospital_dispensary  kind=cycle  fn=commerce
+Short? Treatment upstairs is free. It's only the supplies that cost.
+Not enough for the full kit. Take the bandages, they matter most.
+
+## shop.hospital_dispensary.sold_out  shop=hospital_dispensary  kind=cycle  fn=commerce
+We're out of {item}. The delivery from the pharmacy comes this afternoon.
+No squad kits left. A whole wave of Genin went out this morning.
+
+## shop.hospital_dispensary.closing  shop=hospital_dispensary  time=night|late  fn=commerce
+The counter closes for the night. The healers upstairs never do.
+Last supplies of the day. Anything after this, ask the night nurse.
+
+## shop.hospital_dispensary.recommend  shop=hospital_dispensary  fn=commerce,teach
+A squad kit before any mission past the gate. Your teammates will thank you.
+If you wake up here after a bad day, don't worry about a bill. There isn't one.
+The {item}. The healers recommend it for training injuries.
+Rest is the best medicine we have, and we don't even sell it.
+
+## shop.hospital_dispensary.regular  shop=hospital_dispensary  level=3..10  fn=commerce,deepen_bond
+You again. I'd rather see you less often, you know. For your sake.
+I keep your usual roll of bandages behind the counter. Saves time.

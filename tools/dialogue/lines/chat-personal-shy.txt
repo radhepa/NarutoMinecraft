@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for shy residents. Short, hesitant, brave in small ways.
+#! tags: personality=shy
+
+## chat.personal  fn=reveal_character
+It's... fine. I said good morning to the baker today. Out loud. First time.
+I tried to order at the new tea house, but I pointed instead. They understood. I think. I got something.
+I've been... drawing. Just small things. Teacups, mostly. You don't have to look. It's fine.
+My sister made me go to the festival meeting. I sat in the corner. Someone asked my opinion. I said "yes". To what, I'm not sure.
+One tomato. That's what I grew. It's very red. I haven't told anyone. Except you now. Um.
+Someone smiled at me at the market and I walked into a pole. It's fine. The pole's fine.
+I wrote a letter to the shrine priest asking to help with the festival. I haven't sent it. Maybe tomorrow.
+The library's nice. It's quiet, and nobody expects you to talk. I read about birds today.
+I baked cookies for my neighbour, but I left them on the step and ran. I hope they knew they were from me. Or didn't. Either.
+There's a cat... well, the cat has me, really. It's the only one I talk to without stammering.
+I sang a song in the bath. The neighbour knocked on the wall. I don't think I'll sing again for a while.
+My mother says I need to speak up. I'm trying. I'm speaking up now. This is me speaking up.
+I fold paper animals. Little ones. I leave them in places for people to find. It's my secret. Was. Oops.
+I raised my hand at the town meeting. Then put it down. Then raised it again. Then the meeting ended.
+I keep a little notebook of things I want to say to people. Mostly "thank you". I'll say them. Someday.
+Mirrors are very easy to talk to. I practise conversations in mine. 
+Someone complimented my scarf today. I said "you too". They weren't wearing a scarf.
+I made a friend at the bathhouse. We sat in silence for an hour. It was the nicest hour.
+Ducks are kind. I fed them by the river. They didn't mind that I didn't say anything.
+I helped carry a box for an old woman. She asked my name and I said it too quietly. She called me something else. I didn't correct her.
+I've been learning the koto. Only when nobody's home. The walls are thin, so... maybe people know.
+Rainy days are my favourite. Nobody expects you to go out. I can read by the window and feel... ordinary.
+There's a lantern-folding group I joined. There are six of us. Five talk. I fold. It works.
+My brother says I'm braver than I think. I don't know. I did ask for extra pickles at Ichiraku today.
+Earlier I wanted to say hello to you, but... you were busy. Or I was. Anyway. Hello.
+Sorry, I'm not good at this. My day was... nice? I watered the plants. They're doing better than me.
+I found a quiet spot by the old willow. I go there to think. Sometimes I just sit. Is that weird?
+
+## chat.personal  rank=civilian  fn=reveal_character
+I work in the back of the bakery. Kneading's nice. Dough doesn't look at you.
+I sort letters at the courier's office. I know everyone's name and nobody knows mine. It's... comfortable.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+My squad's very loud. I like them, though. They ask what I think. Sometimes I even tell them.
+I gave the mission report myself today. My voice shook. The desk clerk said "good work". I've been smiling all afternoon.
+I'm good at hiding. On missions it's useful. At parties it's... also useful.
+
+## chat.personal  fn=worldbuild
+The library has little desks by the windows that face the Rock. People mostly leave you alone there. It's nice.
+At the festival, the shrine hangs wish slips on a rope. You don't have to sign them. I write one every year.
+The bathhouse has a quiet hour in the morning. You're not meant to talk. I... look forward to it.
+
+## chat.personal  fn=hook
+I dropped my notebook somewhere in the market. It's... private. Blue cover. Please don't read it if you find it.
+There's a cat stuck in the tree by my window. It's been crying all morning. I'm too scared of heights, and of asking.
+I'm meant to bring tea to the shrine priest every morning, but I'm sick and... could someone? No. Never mind. Unless...
+
+## chat.personal  fn=filler
+Um. Good. You?
+Okay. It's been okay. Thank you for asking. Really.
+
+## chat.personal  fn=reveal_character
+I waved at someone today. They waved back. Then I realised they were waving at someone behind me. Still... nice.
+I made onigiri for the lantern group... and left them by the door. Nobody knew who made them. They ate them all, so...
+I sat at the front of the shrine talk today. Not the very front. Second row. That's... very front for me.
+I bought a bell for my cat so I'd always know where it is. Now it knows where I am too. We're even.
+I was asked to read a poem at the shrine. I said maybe. Maybe means no. Maybe means yes? I don't know yet.

@@ -1,0 +1,85 @@
+# Ichiraku: the ramen stand on the main street. Ramen restores a little chakra (ROADMAP §7, Food).
+#! fn: commerce
+
+## shop.ichiraku.greet  shop=ichiraku  fn=commerce
+Welcome to Ichiraku! Sit anywhere the stool isn't wobbling.
+Pull up a stool, {player}. The broth's been going since four this morning.
+Come in, come in. Mind the curtain, it drips when it's steamy.
+Hungry? Of course you're hungry. Nobody walks under that curtain full.
+Smell that? Pork bones, twelve hours. Sit down before it gets you.
+There's a free stool at the end, right next to the pepper.
+
+## shop.ichiraku.greet  shop=ichiraku  time=morning|dawn  fn=commerce,react
+Early! The noodles are fresh cut, but the eggs are still soaking. Give them ten minutes.
+Ramen for breakfast? The best people in the Leaf do it. Sit.
+
+## shop.ichiraku.greet  shop=ichiraku  time=night|late  fn=commerce,react
+Last bowls of the night. You caught the pot just before I scrape it.
+Late one, {player}? The night watch eats here too. You're in good company.
+
+## shop.ichiraku.greet  shop=ichiraku  weather=rain  fn=commerce,react
+Get under the curtain before you drown! Rainy days are ramen days.
+
+## shop.ichiraku.browse  shop=ichiraku  fn=commerce
+The board's above the counter: miso, shoyu, salt and pork bone. Toppings on the side.
+Take your time. The noodles don't start until you say so.
+Extra chashu is two ryo more. Everyone says they don't want it, then they want it.
+Menma, soft egg, nori, fishcake swirls. Pick two, or pick everything, I don't judge.
+The large bowl is for people who've been training all day. Be honest with yourself.
+
+## shop.ichiraku.buy  shop=ichiraku  kind=cycle  fn=commerce
+One {item}, coming up! Give it three minutes.
+{item}, hot as the sun. Blow on it first.
+There you go. {pay}, and the refill of broth is free.
+Thanks! Chopsticks are in the cup, napkins under the counter.
+That's {pay}. Eat it before the noodles soften!
+Order's in. Hear that sizzle? That's your chashu.
+Here's your {item}. I put an extra slice of fishcake on top, don't tell anyone.
+{pay} even. Slurp loud, it's polite here.
+
+## shop.ichiraku.cant_afford  shop=ichiraku  kind=cycle  fn=commerce
+Short a few ryo? The small bowl is cheaper, and it's the same broth.
+Not quite enough there. Come back after a shift, the pot isn't going anywhere.
+That's a little under. I can do you a bowl of plain broth to tide you over, though.
+Hmm, count it again? I make it a few ryo short.
+
+## shop.ichiraku.sold_out  shop=ichiraku  kind=cycle  fn=commerce
+Out of {item}, sorry! The night watch came through like locusts.
+Chashu's all gone for today. The pork comes in fresh tomorrow at six.
+No more eggs. I can give you double menma instead?
+
+## shop.ichiraku.haggle  shop=ichiraku  fn=commerce,reveal_character
+Haggle over ramen? The price hasn't moved in nine years, and it won't move for you.
+I don't bargain, but I've been known to forget to charge for the extra noodles.
+You want a discount? Wash a stack of bowls out back and we'll talk.
+My prices are on the board, and the board is nailed to the wall.
+
+## shop.ichiraku.closing  shop=ichiraku  time=night|late  fn=commerce
+Pot's nearly empty. Order now or dream about it.
+I'm wiping down soon. One last bowl?
+Curtain comes down in a few minutes, {player}. Last call for broth.
+Last orders! After this the stools go up and I go home.
+
+## shop.ichiraku.recommend  shop=ichiraku  fn=commerce,teach
+Try the {special} today. I've been tinkering with that broth all week.
+Heading out to train? Get the miso. A bowl of ramen puts a little chakra back in you.
+If you've never had pork bone, today's the day. It's richer than it looks.
+The salt ramen is light. Good for a hot afternoon, when miso feels like a blanket.
+After a long mission, take the large bowl with an egg. Your chakra will thank you.
+Shoyu with extra menma. Simple, honest, the way my teacher made it.
+
+## shop.ichiraku.regular  shop=ichiraku  level=3..10  fn=commerce,deepen_bond
+The usual? I started the noodles when I saw you at the end of the street.
+There's my favourite stool-warmer. Same as last time, extra egg?
+You've eaten here so often I'm thinking of carving your name into a stool.
+I saved the last of the chashu. Don't ask who I had to turn away.
+Sit, sit. You don't need to read the board anymore, do you?
+
+## shop.ichiraku.regular  shop=ichiraku  level=8..10  fn=commerce,deepen_bond
+Put your ryo away tonight. You've kept this stand warm for a whole season.
+
+## shop.ichiraku.order_ready  shop=ichiraku  kind=cycle  fn=commerce
+{item}, up! Slide it over carefully, the bowl's full to the rim.
+Order's ready! Eat it while the noodles still have their bite.
+Here's your bowl, {player}. Egg's just set, perfect timing.
+One {item}, steaming. Chopsticks are in the cup.

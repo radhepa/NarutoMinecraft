@@ -1,0 +1,74 @@
+# Following up (LIFE_TOGETHER.md §5): you told them what was coming up, and now they ask how it went. A lapsed
+# ritual follows up the same way: four weeks without it, they ask to pick it up again.
+#! fn: callback
+
+## followup.exam
+So? The exam! How did it go? Don't make me guess, {player}.
+You had that exam, didn't you? I've been wondering all week. Tell me.
+I kept my fingers crossed through the whole exam morning. Did it work?
+
+## followup.mission
+You're back! How was the mission? All in one piece, I see. Mostly.
+I heard your squad came in through the gate. How did the mission go?
+You said you were heading out on a mission. I watched the road until I heard you were home. How was it?
+
+## followup.festival
+How was the festival? Did you win anything at the stalls? Eat anything ridiculous?
+You went to the festival, didn't you? Tell me about the lanterns. I missed half of it.
+I looked for you at the festival but the crowds were too thick. Did you have fun?
+
+## followup.training
+How's the training coming along? Did you get that move you were stuck on?
+You said you'd be training hard this week. Show me your hands. Ha, blisters. Good.
+So, did all that training pay off, or are you just more bruised?
+
+## followup.date  stage=teen|adult  player_stage=teen|adult
+Well? How did the evening go? You can't just tell me about it and then not tell me!
+You had that evening out planned. I want every detail. The good ones, anyway.
+So? Did you have a nice time with them? You're smiling. That's an answer.
+
+# -- a lapsed ritual: they'd like it back --------------------------------------------------------------
+## followup.ritual_missed.ramen
+We haven't had our ramen in ages. The stool at the end has gone cold. Tonight?
+## followup.ritual_missed.dango
+Our dango afternoons stopped, {player}. The tea house keeps asking where you've been.
+## followup.ritual_missed.barbecue
+It's been weeks since our barbecue night. The grill misses us. So do I.
+## followup.ritual_missed.spar
+We haven't sparred in a month. I'm getting soft. Help me fix that?
+## followup.ritual_missed.train
+Training Ground 3's been lonely without our sessions. Same time as before?
+## followup.ritual_missed.fishing
+The fish are biting at dawn again and nobody's sitting in your spot. Come back to the river?
+## followup.ritual_missed.stargazing
+I went up the Rock alone last night. The stars were fine. Not as good without you naming them wrong.
+## followup.ritual_missed.painting
+My brushes are drying out. We used to paint at the overlook. Shall we, again?
+## followup.ritual_missed.shogi
+The shogi board's gathering dust. I've been practising alone, so be warned.
+## followup.ritual_missed.library
+I still save the table by the window at the library, out of habit. Come back and use it.
+## followup.ritual_missed.market_stroll
+I walked the market alone last week. Bought nothing. It's no fun without you haggling.
+## followup.ritual_missed.roof_race
+Nobody's raced me over the rooftops in weeks. I'm winning by default. That's no way to win.
+## followup.ritual_missed.bathhouse
+The bathhouse keeper asked after you. I said you'd gone soft. Prove me wrong?
+## followup.ritual_missed.shrine_visit
+I've been ringing the shrine bell alone lately. It sounds thinner. Come with me again?
+## followup.ritual_missed.pet_walk
+The dog keeps stopping at the corner where we used to meet you. Walk with us again?
+## followup.ritual_missed.home_dinner
+There's been an empty place at my table for a month. It's yours. Come back to dinner.
+## followup.ritual_missed.flower_viewing
+The blossoms won't wait for us forever. Will you come and see them again before they fall?
+## followup.ritual_missed.lake_swim
+The lake's still warm. Our swims stopped. Let's not waste the rest of the summer.
+## followup.ritual_missed.moon_viewing
+The moon's been full twice since we last watched it together. Let's not miss a third.
+## followup.ritual_missed.snowball_fight
+There's fresh snow and no one to throw it at. You know what that means.
+## followup.ritual_missed.evening_walk  stage=teen|adult  player_stage=teen|adult
+I walked by the river alone last evening. It was too quiet. I'd like our walks back.
+## followup.ritual_missed.lantern_night  stage=teen|adult  player_stage=teen|adult
+I haven't sent a lantern out on the lake since we stopped going. I've been saving one for us.

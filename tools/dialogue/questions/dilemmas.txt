@@ -1,0 +1,103 @@
+# Friendship questions: small dilemmas. Found purses, cheating friends, the last dango.
+# Axis poles: honesty_vs_kindness (1 honesty, -1 kindness), rules_or_results (1 rules, -1 results),
+# caution_or_daring (1 caution, -1 daring).
+
+? q.dilemma.found_purse | fn: deepen_bond reveal_character | level: 2 | axis: rules_or_results
+Q: You find a purse full of ryo by the river. What do you do?
+Q: Say there's a fat coin purse lying on the bridge, no one about. Then what?
+- Take it to the police :: The proper way. The Uchiha police keep a lost-and-found, you know. {values:+honesty +duty} {tone:stern} {pole:1}
+- Find the owner myself :: Asking around the market? That's a kind afternoon's work. {values:+kindness +honesty} {tone:warm} {pole:-1}
+- Keep it if nobody asks :: Hm. I'll keep a close eye on my own purse, then. {values:+freedom -honesty} {tone:evasive}
+- Ramen for everyone :: Ha! Generous with someone else's coin. I'll pretend I didn't hear. {values:+kindness -honesty} {tone:joking}
+
+? q.dilemma.rude_owner | fn: deepen_bond reveal_character | level: 4 | follows: q.dilemma.found_purse | depth: 2 | axis: honesty_vs_kindness
+Q: And if the purse belonged to someone who'd been rude to you?
+Q: Same purse, but the owner's the grump who shouted at you last week. Still give it back?
+- Give it back anyway :: Good. Their manners are their business. Yours are yours. {values:+honesty +kindness} {tone:humble} {pole:1}
+- Give it back with a look :: Ha! A small, satisfied look. I'll allow it. {values:+honesty} {tone:joking} {pole:1}
+- Let someone else do it :: Hm. It gets back either way, I suppose. {values:+freedom} {tone:evasive}
+
+? q.dilemma.shogi_cheat | fn: deepen_bond reveal_character | level: 3 | axis: honesty_vs_kindness
+Q: Your friend is cheating at shogi against an old man in the park. Do you say something?
+Q: You catch a friend sneaking an extra piece onto the shogi board. Do you speak up?
+- Call it out right there :: Bold. They'll be embarrassed, but they'll remember. {values:+honesty} {tone:blunt} {pole:1}
+- Have a word in private :: Kind and honest. That's the hardest balance there is. {values:+honesty +kindness} {tone:warm}
+- Say nothing :: Loyal to your friend. I'm not sure the old fellow would agree. {values:+loyalty -honesty} {tone:evasive} {pole:-1}
+
+? q.dilemma.friend_angry | fn: deepen_bond reveal_character | level: 5 | follows: q.dilemma.shogi_cheat | depth: 2 | axis: honesty_vs_kindness
+Q: Suppose you spoke up about the cheating, and your friend got angry with you. Then what?
+Q: What if telling the truth cost you a friend, at least for a while?
+- Worth it :: A friend worth having comes round. Truth holds. {values:+honesty} {tone:stern} {pole:1}
+- I'd say sorry :: Sorry for the hurt, not for the truth, I hope. {values:+kindness} {tone:humble} {pole:-1}
+- Let them cool off :: A day or two of silence. Then dango. Then it's over. {values:+loyalty} {tone:warm}
+
+? q.dilemma.last_dango | fn: deepen_bond reveal_character | level: 2
+Q: There's one dango left on the plate and two of you. What happens?
+Q: Last dango. You and a friend both reach for it. Who gets it?
+- They can have it :: That's a real friend. Or a full stomach. {values:+kindness} {tone:warm}
+- Split it in half :: Fair's fair. Half a dango is still a dango. {values:+family +honesty} {tone:humble}
+- Race them for it :: Ha! Ninja reflexes for dessert. I like it. {values:+strength} {tone:joking}
+- Already ate it :: Ha! Fast hands. Shameless, but fast. {values:+freedom -kindness} {tone:bold}
+
+? q.dilemma.worrying_secret | fn: deepen_bond reveal_character | level: 5
+Q: A friend tells you a secret, and it worries you. Do you keep it?
+Q: If keeping a friend's secret might let them get hurt, would you still keep it?
+- Keep it :: Loyal to the end. Just make sure the secret doesn't cost them. {values:+loyalty} {tone:stern}
+- Tell an adult :: The hard choice, and probably the right one. {values:+duty +kindness -loyalty} {tone:humble}
+- Talk to my friend first :: Give them the chance to fix it themselves. Wise. {values:+loyalty +kindness} {tone:warm}
+
+? q.dilemma.hard_secret | fn: deepen_bond reveal_character | kind: player_past | level: 7 | follows: q.dilemma.worrying_secret | depth: 2
+Q: Have you ever kept a secret that was really hard to keep?
+Q: Is there a secret you've carried a long time? You don't have to say what.
+- Yes, and I kept it :: Then you're someone people can trust. That's worth a lot. {values:+loyalty +honesty} {tone:humble}
+- No one tells me secrets :: Ha! They will. You've the face for it. {values:+honesty} {tone:joking}
+- I'd rather not say :: That's an answer too. A careful one. {values:+loyalty} {tone:evasive}
+
+? q.dilemma.promise_or_stranger | fn: deepen_bond reveal_character | level: 3 | axis: rules_or_results
+Q: You promised to meet a friend, but on the way a stranger needs help. What do you do?
+Q: Late for a friend, and someone's cart has lost a wheel in front of you. Stop or keep going?
+- Help the stranger :: Your friend will understand. A good friend always does. {values:+kindness} {tone:warm} {pole:-1}
+- Keep my promise :: Your word first. The stranger will find someone. {values:+honesty +loyalty} {tone:stern} {pole:1}
+- Help fast, then run :: Ha! The ninja answer: do both, quickly. {values:+kindness +duty} {tone:bold}
+
+? q.dilemma.extra_change | fn: deepen_bond reveal_character | level: 2 | axis: honesty_vs_kindness
+Q: A shopkeeper gives you too much change. Do you say anything?
+Q: The grocer counts your change wrong, in your favour. Do you point it out?
+- Give it back :: Good. The grocer will remember that, too. {values:+honesty} {tone:blunt} {pole:1}
+- Keep quiet :: Hm. Lucky for you I'm not the grocer. {values:+freedom -honesty} {tone:evasive}
+- Spend it in the shop :: Ha! It goes back to them either way. Sly. {values:+creativity} {tone:joking}
+
+? q.dilemma.hurt_rival | fn: deepen_bond reveal_character | level: 4
+Q: Your rival twists an ankle right before your match. Do you still fight?
+Q: Would you take a win against someone who's hurt?
+- Wait till they're healed :: A win means more when it's fair. Good. {values:+kindness +honesty} {tone:warm}
+- Fight, they'd want it :: You know your rival. Maybe they'd be insulted otherwise. {values:+strength} {tone:bold}
+- Ask them :: Let them choose. That's respect. {values:+honesty} {tone:humble}
+
+? q.dilemma.blamed | fn: deepen_bond reveal_character | level: 2 | axis: honesty_vs_kindness
+Q: A classmate breaks something and blames you. What do you do?
+Q: Someone points at you for a mess they made. How do you handle it?
+- Tell the truth :: Straight out. Good. Nobody should carry someone else's broken pot. {values:+honesty} {tone:blunt} {pole:1}
+- Take the blame :: That's kind. Maybe too kind. Don't make a habit of it. {values:+kindness -honesty} {tone:humble} {pole:-1}
+- Talk to them first :: Give them the chance to own up. That's generous. {values:+kindness +honesty} {tone:warm}
+
+? q.dilemma.shortcut | fn: deepen_bond reveal_character | level: 3 | axis: caution_or_daring
+Q: Your squad wants a shortcut through dangerous woods to finish faster. Do you agree?
+Q: The long road is safe. The short one goes through bear country. Which do you take?
+- The long road :: Slow and sure. Your sensei will approve. {values:+duty} {tone:humble} {pole:1}
+- The shortcut :: Brave! Keep your eyes open and your kunai ready. {values:+courage} {tone:bold} {pole:-1}
+- Scout it first :: Look before you leap. That's a good shinobi talking. {values:+knowledge} {tone:curious}
+
+? q.dilemma.regret_risk | fn: deepen_bond reveal_character | kind: player_past | level: 5 | follows: q.dilemma.shortcut | depth: 2 | axis: caution_or_daring
+Q: Have you ever taken a risk you regretted?
+Q: The shortcut talk got me thinking. Ever jumped too fast and wished you hadn't?
+- Yes, and I learned :: Then it paid for itself. That's how I see mine. {values:+knowledge} {tone:humble} {pole:1}
+- No, never :: Never? Either you're very lucky or very careful. {values:+courage} {tone:proud}
+- Regrets come later :: Ha! Jump first, worry after. Bold. {values:+courage +freedom} {tone:bold} {pole:-1}
+
+? q.dilemma.stuck_cart | fn: deepen_bond reveal_character | level: 3 | axis: rules_or_results
+Q: On a mission, you pass a farmer with a cart stuck in the mud. Stop to help, or keep going?
+Q: The mission has a deadline, but someone on the road needs a hand. What wins?
+- Stay on the mission :: The client's paying for your time. Fair enough. {values:+duty} {tone:stern} {pole:1}
+- Stop and help :: The Leaf's ninja helping on the road. That's how we got our good name. {values:+kindness} {tone:warm} {pole:-1}
+- Help, but quickly :: A quick shove and away. Practical. {values:+kindness +duty} {tone:bold}

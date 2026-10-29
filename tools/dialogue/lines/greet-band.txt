@@ -1,0 +1,359 @@
+# Greetings by how well the speaker knows the player. Strangers introduce themselves by trade or clan, never by name.
+
+## greet.band  band=stranger  fn=reveal_character
+New face! I don't think we've met. I'm from this end of the village, born and raised.
+Hello there. You're the one who moved into the apartment block, aren't you? Welcome to the street.
+I don't believe we've been introduced. I'm a neighbour, more or less. Everyone here is, more or less.
+Hello. Sorry, have we met? I'm terrible with faces, but I'd remember yours, I think.
+You look a little lost. I've lived here thirty years, so ask away.
+First time we've spoken, isn't it? I've seen you around. Hard to miss someone new.
+Hello! You don't know me, but I know the shopkeepers on this street, and they're all talking about the new arrival.
+Afternoon, stranger. Don't worry, nobody stays a stranger in the Leaf for long.
+
+## greet.band  band=stranger  group=civilian  fn=reveal_character
+Hello! No headband on me, just an honest civilian who keeps the village fed and fixed.
+Haven't met you yet. I'm nobody important, just one of the folk who keep the shops open while the shinobi go off saving things.
+
+## greet.band  band=stranger  rank=genin  fn=reveal_character
+Hey. Haven't seen you around the Mission Desk. I'm a Genin, two years in. Still mostly catching cats.
+
+## greet.band  band=stranger  rank=chunin  fn=reveal_character
+Hello. I'm a Chunin. I help run squads out of the Mission Desk, so you'll probably see me there.
+
+## greet.band  band=stranger  rank=jonin  fn=reveal_character
+We haven't met. I'm a Jonin. Don't look so worried, I'm off duty.
+
+## greet.band  band=stranger  job=ramen_cook  fn=reveal_character
+New customer? I'm the one behind the counter at Ichiraku. Sit down any time and I'll fix you a bowl.
+
+## greet.band  band=stranger  job=grocer  fn=reveal_character
+Hello! I run the grocery on the market street. If it grows in the Leaf, I sell it. If it doesn't, I can order it.
+
+## greet.band  band=stranger  job=smith  fn=reveal_character
+New, eh? I work the forge behind the weapon shop. You'll know me by the burn marks and the bad hearing.
+
+## greet.band  band=stranger  job=florist  fn=reveal_character
+Hello there! I'm from the flower shop. You've probably walked past my buckets a dozen times.
+
+## greet.band  band=stranger  job=medic  fn=reveal_character
+Hello. I'm one of the medics at the hospital. Let's hope we only ever meet like this, out on the street.
+
+## greet.band  band=stranger  job=teacher  fn=reveal_character
+Hello. I teach at the Academy. Don't panic, it's not about homework. I'm just saying hello.
+
+## greet.band  band=stranger  job=gate_guard  fn=reveal_character
+Hello. I'm on the main gate most days. If you ever go out on a mission, I'm the one who writes your name in the book.
+
+## greet.band  band=stranger  job=carpenter  fn=reveal_character
+We haven't met. I'm a carpenter; half the roofs on your street I've had a hand in.
+
+## greet.band  band=stranger  job=tea_master  fn=reveal_character
+Welcome. I keep the tea house by the main street. Come and sit sometime; the first cup is on me.
+
+## greet.band  band=stranger  job=fishmonger  fn=reveal_character
+New to the street? I sell fish by the river. You'll smell me before you see me, and I mean that kindly.
+
+## greet.band  band=stranger  job=tailor  fn=reveal_character
+Hello! I'm the tailor two doors from the bathhouse. That sleeve of yours could use a stitch, by the way.
+
+## greet.band  band=stranger  job=librarian  fn=reveal_character
+Good day. I keep the Academy library. Quietly, mostly. You're welcome to visit.
+
+## greet.band  band=stranger  job=bath_keeper  fn=reveal_character
+Hello! I run the bathhouse. If you ever ache after training, I'm the cure.
+
+## greet.band  band=stranger  job=priest  fn=reveal_character
+Hello, and welcome. I keep the shrine at the top of the steps. Visitors are always welcome, even just to sit.
+
+## greet.band  band=stranger  job=vet  fn=reveal_character
+Hello there! I work at the clinic by the gate. If you ever have a pet, bring it round for a look.
+
+## greet.band  band=stranger  job=farmer  fn=reveal_character
+New here? I farm the plots just outside the wall. The vegetables you eat may well be mine.
+
+## greet.band  band=stranger  clan=akimichi  fn=reveal_character
+Hello! You're new. I'm from the Akimichi. Come by our kitchen hall some time, we always cook extra.
+
+## greet.band  band=stranger  clan=nara  fn=reveal_character
+Hey. Nara clan, from the house by the deer forest. If you see a deer in the street, it's probably ours.
+
+## greet.band  band=stranger  clan=inuzuka  fn=reveal_character
+Hey there! Inuzuka, from the kennels by the gate. My dog's already sniffed you, so we're basically friends.
+
+## greet.band  band=stranger  clan=yamanaka  fn=reveal_character
+Hello! My family's the Yamanaka. You'll know the flower shop on the main street; that's ours.
+
+## greet.band  band=stranger  clan=hyuga  fn=reveal_character
+Good day. I am of the Hyuga. We have not been introduced, so allow me to greet you properly.
+
+## greet.band  band=stranger  clan=umino  fn=reveal_character
+Hello! I'm an Umino. Half the village has had one of us as a teacher. We're very hard to avoid.
+
+## greet.band  band=stranger  clan=kinoshita  fn=reveal_character
+Hello. I'm from the Kinoshita yard, the carpenters. If you've sat on a chair in this village, you've sat on our work.
+
+## greet.band  band=stranger  personality=shy  fn=reveal_character
+Um, hello. We haven't... I mean, I've seen you, but we haven't talked. This is me talking. Hello.
+
+## greet.band  band=stranger  personality=stern  fn=reveal_character
+I don't know you. That can change, if you're worth knowing.
+
+## greet.band  band=stranger  personality=playful  fn=reveal_character
+A stranger! Quick, tell me three things about yourself and one of them must be a lie.
+
+## greet.band  band=stranger  personality=reserved  fn=reveal_character
+...Hello. We haven't met.
+
+## greet.band  band=acquaintance  fn=deepen_bond
+It's {player}, isn't it? I remembered! I'm getting better at names.
+You again! Good. I was wondering how you were getting on.
+Hello, {player}. I keep seeing you around. Settling in all right?
+{player}! You stopped by the other day, didn't you? I've been meaning to say hello properly.
+Back again, {player}? Good to see a familiar face.
+Morning, {player}. The street's getting used to you, you know. People ask after you.
+Hello again. I'm starting to look out for you when I pass.
+Oh, {player}. I mentioned you to my neighbour. Only good things.
+You're becoming a regular around here, {player}. I like it.
+There's that face again. How's the new place treating you?
+
+## greet.band  band=acquaintance  fn=reveal_character
+Hello, {player}. You'll forgive me if I'm still a bit formal. I take a while to warm up to people.
+Good to see you, {player}. I've been in the village my whole life, so ask me if you ever need directions.
+Hello again. Don't mind me, I'm always this busy. It's how I like it.
+It's you! I was just thinking about lunch. Not about you. Well, both, now.
+
+## greet.band  band=acquaintance  personality=warmhearted  fn=deepen_bond
+{player}! You look thinner than last time. Are you eating? I worry, you know.
+
+## greet.band  band=acquaintance  personality=fiery  fn=deepen_bond
+Hey, {player}! I remember you! I never forget a face, especially one I might have to beat in a spar!
+
+## greet.band  band=acquaintance  personality=meticulous  fn=reveal_character
+{player}. Third time we've spoken this month. I keep track; it's a habit.
+
+## greet.band  band=acquaintance  personality=curious  fn=deepen_bond
+{player}! I've been wondering what you do all day. Tell me one thing. Just one.
+
+## greet.band  band=acquaintance  personality=reserved  fn=deepen_bond
+...{player}. Hello.
+
+## greet.band  band=acquaintance  personality=proud  fn=reveal_character
+Ah, {player}. I suppose you're becoming someone I recognise. That's a compliment, by the way.
+
+## greet.band  band=acquaintance  personality=gentle  fn=deepen_bond
+Hello, {player}. It's nice to see you again. You always look like you're in a hurry; slow down sometimes.
+
+## greet.band  band=acquaintance  personality=shy  fn=deepen_bond
+Oh! H-hello, {player}. I remembered your name. I practised it.
+
+## greet.band  band=acquaintance  personality=pragmatic  fn=reveal_character
+{player}. Good. Familiar faces mean fewer surprises. I like fewer surprises.
+
+## greet.band  band=acquaintance  personality=stern  fn=deepen_bond
+{player}. You're still around. Good. Let's see if you keep at it.
+
+## greet.band  band=acquaintance  personality=imaginative  fn=reveal_character
+{player}! You look like a story someone's only told the first chapter of.
+
+## greet.band  band=acquaintance  personality=protective  fn=deepen_bond
+{player}. Doing all right? You'd tell someone if you weren't, wouldn't you?
+
+## greet.band  band=acquaintance  personality=adventurous  fn=deepen_bond
+{player}! Been anywhere interesting since I last saw you? Even across the river counts.
+
+## greet.band  band=acquaintance  personality=thoughtful  fn=deepen_bond
+Hello, {player}. I was thinking about something you said last time. It's still rattling around.
+
+## greet.band  band=acquaintance  personality=playful  fn=deepen_bond
+{player}! I'll get your name wrong on purpose one day, just to see your face.
+
+## greet.band  band=acquaintance  personality=steadfast  fn=deepen_bond
+Hello, {player}. Good to see you again. Same as last time.
+
+## greet.band  band=friend  fn=deepen_bond
+There you are, {player}! I was hoping you'd pass by today.
+{player}! Come here. I saved you the good seat on the bench.
+My favourite face on the street. Hello, {player}.
+{player}! You won't believe the morning I've had. Sit down, I'll tell you everything.
+Hey, {player}. Ah, that's better. The day's improved already.
+Hello, friend. I mean that, you know. Friend.
+{player}! I knew it was you from the way you walk. Don't ask me to explain.
+There's my friend. Have you eaten? I've got two of everything today.
+Good timing, {player}. I needed someone to talk to who wouldn't just nod.
+{player}! I told the grocer you'd be by. Don't make me a liar.
+Hey, it's you. I bought dango and somehow there's an extra stick. Strange how that happens.
+{player}. You have no idea how glad I am that it's you and not the landlord.
+
+## greet.band  band=friend  fn=reveal_character
+Hey, {player}. Can I tell you something silly? I was nervous all morning, for no reason. I feel better now.
+{player}! You're the only one I can complain about the weather to without getting a lecture.
+Hello, {player}. You know, I used to eat lunch alone every day before you started stopping by.
+There you are. I've been keeping a list of things to tell you. It's getting long.
+
+## greet.band  band=friend  personality=warmhearted  fn=deepen_bond
+{player}! I made extra rice again. You know I always make extra now. Sit, sit. [HEART]
+
+## greet.band  band=friend  personality=fiery  fn=deepen_bond
+{player}! My rival-slash-friend! Or friend-slash-rival! Either way, let's go!
+
+## greet.band  band=friend  personality=reserved  fn=deepen_bond
+{player}. ...I'm glad it's you.
+
+## greet.band  band=friend  personality=playful  fn=deepen_bond
+{player}! I've invented a new game. You'll hate it. You'll love it. Probably both.
+
+## greet.band  band=friend  personality=stern  fn=deepen_bond
+{player}. You're looking stronger. Don't let it go to your head. ...I'm glad, though.
+
+## greet.band  band=friend  personality=shy  fn=deepen_bond
+{player}! I, um, I was hoping I'd see you. That's all. That's the whole thing.
+
+## greet.band  band=friend  personality=pragmatic  fn=deepen_bond
+{player}. I don't make friends lightly. You're one of four. Make it count.
+
+## greet.band  band=friend  personality=curious  fn=deepen_bond
+{player}! I've got about a hundred questions saved up for you. Ready?
+
+## greet.band  band=friend  personality=proud  fn=deepen_bond
+{player}. I'll admit it, talking to you is the best part of my afternoon. Don't tell anyone.
+
+## greet.band  band=friend  personality=gentle  fn=deepen_bond
+Hello, {player}. You look tired. Sit with me a moment; nobody will mind.
+
+## greet.band  band=friend  personality=imaginative  fn=deepen_bond
+{player}! I dreamt you were a heron last night. A very determined heron.
+
+## greet.band  band=friend  personality=meticulous  fn=deepen_bond
+{player}. I've pencilled you into my afternoons, you know. Unofficially.
+
+## greet.band  band=friend  personality=adventurous  fn=deepen_bond
+{player}! When I finally go travelling, you're coming with me. That's settled.
+
+## greet.band  band=friend  personality=protective  fn=deepen_bond
+{player}. Good, you're in one piece. I always feel better once I've seen you.
+
+## greet.band  band=friend  personality=thoughtful  fn=deepen_bond
+{player}. I've been saving a question for you. Not today, maybe. But I've been saving it.
+
+## greet.band  band=friend  personality=steadfast  fn=deepen_bond
+{player}. Whatever you need this week, ask. I mean it.
+
+## greet.band  band=close  fn=deepen_bond
+{player}! I told my family about you. They say you're to come to dinner, no excuses.
+There you are. I worry less when I've seen you, did you know that?
+{player}. I'm so glad you're here. Today's been a lot.
+Hey, you. Sit down, I'll make tea. You know where the cups are.
+{player}! I keep a spare cushion by the door now. Guess who it's for.
+Good, it's you. I can stop pretending everything's fine for a minute.
+{player}, I found something at the market that made me think of you. I bought it before I could stop myself.
+Here comes trouble. My favourite kind.
+You look worn out, {player}. Tell me what happened. All of it.
+Hello, you. I don't have to say much, do I? You always know.
+{player}! I was going to walk over to your apartment if you didn't turn up today.
+There's my person. Come on, the bench is waiting.
+
+## greet.band  band=close  fn=reveal_character
+{player}, can I tell you something I haven't told anyone? I'm scared of deep water. There. Now you know.
+You know, {player}, I wasn't sure I'd ever have someone to tell my silly worries to. And now look.
+I've been thinking. Before you came along, I didn't really talk to anyone on this street. Odd, isn't it?
+{player}. I'd like to show you the place where I go when I need quiet. Some day soon.
+
+## greet.band  band=close  personality=warmhearted  fn=deepen_bond
+{player}! I've started cooking your favourite on the days I think you'll come. I'm usually right.
+
+## greet.band  band=close  personality=reserved  fn=deepen_bond
+{player}. ...You're one of the few people I don't mind talking to. Hello.
+
+## greet.band  band=close  personality=fiery  fn=deepen_bond
+{player}! You're my best rival and my best friend and I've decided that's allowed!
+
+## greet.band  band=close  personality=shy  fn=deepen_bond
+{player}. I don't get nervous around you anymore. I noticed today. It's nice.
+
+## greet.band  band=close  personality=stern  fn=deepen_bond
+{player}. I'm hard on you because I think you can be better than all of us. You know that, don't you?
+
+## greet.band  band=close  personality=playful  fn=deepen_bond
+{player}! I've told everyone you're my sworn sibling. Too late to object, it's official.
+
+## greet.band  band=close  personality=proud  fn=deepen_bond
+{player}. I don't say this to many people, so listen: I'm proud to know you.
+
+## greet.band  band=close  personality=protective  fn=deepen_bond
+{player}. If anyone gives you trouble, anyone at all, you come to me first.
+
+## greet.band  band=close  personality=gentle  fn=deepen_bond
+{player}. I pressed a flower for you from the river path. It's in a book, waiting for you.
+
+## greet.band  band=close  personality=curious  fn=deepen_bond
+{player}! I don't even have a question today. I just wanted to see you. That's new for me.
+
+## greet.band  band=close  personality=pragmatic  fn=deepen_bond
+{player}. I've put you down in my book as someone I'd lend money to. That list has two names.
+
+## greet.band  band=close  personality=meticulous  fn=deepen_bond
+{player}. I've stopped writing you into my schedule. You just fit, now. It's strange.
+
+## greet.band  band=best  fn=deepen_bond
+{player}. Whatever today brings, I've got your back. You know that.
+There you are. Honestly, the day doesn't feel started until you show up.
+{player}! My best friend in the whole Leaf. Come here.
+You don't even have to say anything. I can tell how your day's going from across the street.
+Hey, {player}. Do you remember when we barely knew each other? I can't anymore.
+{player}. If you ever need somewhere to stay, my door's never locked for you.
+It's you. Good. Everything's easier when it's you.
+{player}! I've been saving up stories since yesterday. All of them are for you.
+I think about how lucky I was that you turned up on this street, {player}. Just so you know.
+Look who it is. My favourite person, and that's not up for debate.
+{player}. I'm not going anywhere. Whatever happens, I'm right here.
+You look like you need a laugh, {player}. Lucky for you, I've had a terrible morning.
+
+## greet.band  band=best  fn=reveal_character
+{player}, I've never told anyone this, but you're the reason I stopped being lonely here.
+Do you know, {player}, I keep a little box of things from our days out. Ticket stubs, a dango stick. Don't laugh.
+I used to think friends were people you saw at festivals. Then you happened, {player}.
+{player}. When things got hard last season, the thing that kept me going was knowing you'd stop by.
+
+## greet.band  band=best  personality=warmhearted  fn=deepen_bond
+{player}! Your bowl's already on the table. It always is, now. [HEART]
+
+## greet.band  band=best  personality=reserved  fn=deepen_bond
+{player}. ...You're the only one I'd say this to: I missed you. Even since yesterday.
+
+## greet.band  band=best  personality=fiery  fn=deepen_bond
+{player}! Partner! Whatever you're doing today, I'm doing it too! Don't argue!
+
+## greet.band  band=best  personality=stern  fn=deepen_bond
+{player}. I would follow you into any fight. I'll only say it once.
+
+## greet.band  band=best  personality=shy  fn=deepen_bond
+{player}. With you I'm not shy at all. Isn't that funny? You're my brave place.
+
+## greet.band  band=best  personality=playful  fn=deepen_bond
+{player}! You're stuck with me forever. I checked the rules. There's no way out. [HEART]
+
+## greet.band  band=best  personality=proud  fn=deepen_bond
+{player}. My family name means a great deal to me. You mean about the same. Don't make me say it twice.
+
+## greet.band  band=best  personality=thoughtful  fn=deepen_bond
+{player}. I've read hundreds of books about friendship. None of them got it right. Not like this.
+
+## greet.band  band=best  personality=gentle  fn=deepen_bond
+{player}. You're the kindest thing that's happened to me. I hope you know how much.
+
+## greet.band  band=best  personality=imaginative  fn=deepen_bond
+{player}. If my life were a painting, you'd be the bit everyone stops to look at.
+
+## greet.band  band=best  personality=adventurous  fn=deepen_bond
+{player}. I used to dream of leaving the Leaf. Now I dream of leaving it with you, and coming back.
+
+## greet.band  band=best  personality=protective  fn=deepen_bond
+{player}. I'd stand in front of anything for you. I hope I never have to, but I would.
+
+## greet.band  band=close  fn=deepen_bond
+{player}, you've got ink on your cheek. Hold still. There. You'd have gone all day like that.
+Has it really only been a season since we met? Feels like years, the good kind.
+
+## greet.band  band=best  fn=deepen_bond
+{player}! I knew you'd come by. I already put the kettle on before I heard your knock.
+Don't even start, {player}, I can see it on your face. Sit down. Tell me everything.

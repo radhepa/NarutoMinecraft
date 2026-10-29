@@ -1,0 +1,131 @@
+# Gift reactions (BONDS.md §2, §5): tastes come from personality. Loved is warm and specific, liked is pleased,
+# plain is polite, disliked is a gracious wince, hated is an upset that becomes a memory.
+#! fn: react
+
+## gift.loved  fn=react,deepen_bond
+For me? Oh, {player}, this is exactly what I wanted. How did you know?
+I'm going to keep this somewhere I can see it every morning.
+You remembered! I mentioned this once, months ago, and you remembered.
+This is perfect. I don't have the words. Just... thank you.
+I've been eyeing one of these at the market for weeks. You wonderful person.
+I'll treasure it. Truly. Nobody's given me anything this right in years.
+Oh! Oh, look at it. Sit down, I have to show everyone in the house.
+You must have gone all over the village to find this. Thank you, {player}.
+This is going on the shelf of things I'd save in a fire.
+I'm grinning like a fool, aren't I? I can't help it. Thank you.
+
+## gift.liked
+Thank you, {player}! That's very thoughtful.
+Oh, nice. I'll use this, I really will.
+How kind of you. You didn't have to.
+I like it! It'll come in handy, I'm sure.
+That's lovely. Thank you for thinking of me.
+Ooh, I've not had one of these in a while. Thanks!
+A present! You've brightened my afternoon.
+Thank you. That's a good choice, you know.
+That's sweet of you. I'll find a good spot for it.
+Well, isn't that nice. Thank you, {player}.
+
+## gift.plain  fn=react
+Thank you. That's kind.
+Oh. A {gift}. Thank you, {player}.
+I'll find a use for it. Thanks.
+That's thoughtful of you.
+How nice. Thank you.
+Thanks. I'll put it with the others.
+Oh, for me? Well, thank you.
+That'll do nicely. Thanks.
+You're kind to think of me.
+Thank you. I'm sure it'll be useful.
+
+## gift.disliked
+Oh. Thank you. It's... the thought that counts, isn't it?
+That's, um. Very kind. I'll find somewhere for it.
+I'm not really one for these, but thank you, {player}.
+Ah. Well. I'll pass it on to someone who'll love it. Not that I don't! I just...
+Thank you. I'll try to like it. I promise I'll try.
+Hm. Not quite my taste. But thank you for trying.
+Oh. You... didn't know. That's fine. Thank you anyway.
+I'll keep it. In a drawer. A nice drawer.
+That's thoughtful. It's also not something I'd ever use. Sorry. Thank you.
+I appreciate it. Really. Let's say no more about it.
+
+## gift.hated
+You thought I'd want this? I... no. Take it back, please.
+Is this a joke, {player}? Because it isn't funny.
+I can't stand these. I thought you'd know that by now.
+Oh. Wow. You really don't know me at all, do you?
+I'd rather you hadn't given me anything than this.
+Please don't bring me one of these again. Ever.
+That's... no. No, thank you. Put it away.
+I've told people I hate these. I suppose you weren't listening.
+Is this what you think of me? I'm a bit hurt, honestly.
+Keep it. I mean it. I don't want it in my house.
+
+# -- loved, by personality -----------------------------------------------------------------------------
+## gift.loved.warmhearted  fn=react,deepen_bond
+You shouldn't have! You really shouldn't! Come in, I'm feeding you for this.
+## gift.loved.thoughtful  fn=react,deepen_bond
+You've chosen this with care. I can tell. That matters more than the gift itself.
+## gift.loved.playful  fn=react,deepen_bond
+WAIT. Is this for ME? I'm doing a little dance. You can't stop me.
+## gift.loved.adventurous  fn=react,deepen_bond
+This is coming with me on every journey I ever take. Thank you!
+## gift.loved.meticulous  fn=react,deepen_bond
+Perfect condition, the right kind, and wrapped neatly. You've thought of everything.
+## gift.loved.steadfast  fn=react,deepen_bond
+Thank you, {player}. I'll look after it. I'll have it for years.
+## gift.loved.reserved  fn=react,deepen_bond
+...This is good. Very good. Thank you.
+## gift.loved.imaginative  fn=react,deepen_bond
+It's beautiful. It's like someone caught a little piece of a dream and handed it to me.
+## gift.loved.pragmatic  fn=react,deepen_bond
+Useful and well made. You know how to choose. I'm impressed. And grateful.
+## gift.loved.curious  fn=react,deepen_bond
+Where did you find this? How? Who made it? Tell me everything. And thank you!
+## gift.loved.protective  fn=react,deepen_bond
+You spent your own ryo on me? Thank you. Now promise you've kept enough for yourself.
+## gift.loved.gentle  fn=react,deepen_bond
+Oh... this is so lovely. I'll take such good care of it.
+## gift.loved.proud  fn=react,deepen_bond
+This is worthy of my house. You have excellent taste, {player}. I'll say that once.
+## gift.loved.fiery  fn=react,deepen_bond
+THIS IS THE BEST GIFT EVER! I'm telling everyone! Everyone!
+## gift.loved.shy  fn=react,deepen_bond
+F-for me? Really? I... I love it. Thank you. [BLUSH]
+## gift.loved.stern  fn=react,deepen_bond
+Well chosen. Thank you. I'll use it every day.
+
+# -- hated, by personality -----------------------------------------------------------------------------
+## gift.hated.warmhearted
+Oh, dear. I don't want to hurt your feelings, but I really can't have this in the house.
+## gift.hated.thoughtful
+I wonder what made you think I'd want this. I'd honestly like to know.
+## gift.hated.playful
+Ha. Ha. Very funny. ...This isn't a prank? Oh no. It isn't a prank.
+## gift.hated.adventurous
+I'd leave this on the side of the road. Sorry, {player}. Really not for me.
+## gift.hated.meticulous
+This is the one thing I asked people never to give me. I keep a list. You could have asked.
+## gift.hated.steadfast
+I'll be honest with you, since that's what friends are for. I hate this.
+## gift.hated.reserved
+No.
+## gift.hated.imaginative
+It's the colour of a bad dream. I'm sorry. I can't look at it.
+## gift.hated.pragmatic
+Waste of good ryo. I'd rather you'd kept your money.
+## gift.hated.curious
+Why would anyone make one of these? Why would anyone GIVE one of these? I'm baffled.
+## gift.hated.protective
+Don't spend your coin on things like this for me. Please. I mean it.
+## gift.hated.gentle
+Oh... I'm sorry, I just can't. Please don't be upset with me.
+## gift.hated.proud
+You insult me with this. Take it away.
+## gift.hated.fiery
+UGH! No! Anything but this! Why would you do this to me?!
+## gift.hated.shy
+Oh. Um. I... don't really... I'm sorry. [GLOOM]
+## gift.hated.stern
+This is unacceptable. Learn what people value before you give them things.

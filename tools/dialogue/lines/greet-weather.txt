@@ -1,0 +1,169 @@
+# Greetings by weather. Voiced variants of one idea live in seeds/greet-weather.txt.
+
+## greet.weather  weather=rain  fn=react
+Soaked through, {player}? Come stand under the awning till it eases off.
+Rain again! The gutters on our street are singing like a choir with one note.
+Wet day. You picked a fine time to be out walking.
+Look at you, dripping on my doorstep. Here, shake off first.
+Rain, rain. The Academy kids will be stuck indoors and climbing the walls.
+Lovely day for frogs. The ones under the second bridge are having a festival.
+
+## greet.weather  weather=rain  fn=teach
+Careful on the roofs in this. Wet tiles want more chakra in your feet, or you'll go straight off the edge.
+Rain makes the training grounds mud to the ankle. Good for footwork, bad for sandals.
+Wet paper tags don't stick well. Keep your seals dry in an oiled pouch if you're out in this.
+If you're going on a mission in the rain, pack dry socks. Trust me, just pack them.
+
+## greet.weather  weather=rain  fn=guide
+The tea house lends umbrellas on rainy days. Bring them back, or the owner remembers your face forever.
+If you want somewhere dry, the Academy library is open to anyone who wipes their feet.
+The bathhouse is half empty in the rain. Strange, since everyone's already wet.
+The covered walk along the market street keeps you dry nearly all the way to the gate.
+
+## greet.weather  weather=rain  fn=worldbuild
+The river's up under the bridges. The ferry won't run if it rises another hand.
+Every round water tank on every roof is filling. You can hear them drumming from here.
+Ichiraku's curtain is dripping, but the counter's under cover. Best place in the village to watch rain.
+The Kinoshita carpenters will be busy tomorrow. Every leaky roof in the Leaf just announced itself.
+Half the apartments just ran out to save their laundry. The other half gave up.
+The fishmongers love rain. Says the fish bite better. The fish have not been asked.
+Rain on the Hokage Rock makes the faces look like they're crying. Old folk say it means a good harvest.
+The dango stall by the bridge has packed up. Rain gets in the syrup.
+The lanterns hiss when the rain hits them. Like a whole street full of kettles.
+The Mission Desk floor is all mud prints today. The clerks are not happy.
+The paper umbrella shop does more trade on a day like this than all the rest of the month.
+
+## greet.weather  weather=rain  fn=filler
+Bit wet, isn't it?
+
+## greet.weather  weather=rain  personality=fiery  fn=react
+Rain?! Who cares! I'm training anyway! Mud makes you stronger! [EXCLAIM]
+
+## greet.weather  weather=rain  personality=gentle  fn=reveal_character
+I put a saucer of milk under the porch for the stray kittens. They hate the rain more than anyone.
+
+## greet.weather  weather=rain  personality=imaginative  fn=reveal_character
+Each drop makes a little crown on the puddle. Thousands of tiny coronations, every minute.
+
+## greet.weather  weather=rain  personality=pragmatic  fn=reveal_character
+Rain's good for business. Umbrella sales, tea sales, and nobody haggles when they're wet.
+
+## greet.weather  weather=rain  personality=shy  fn=reveal_character
+I like the rain. Nobody notices you much. Um, except you just did.
+
+## greet.weather  weather=rain  personality=stern  fn=teach
+Rain is no excuse. Missions don't wait for dry weather, and neither do enemies.
+
+## greet.weather  weather=rain  personality=playful  fn=react
+Puddle-jumping contest? Biggest splash wins. I'm undefeated. Mostly because no one else enters.
+
+## greet.weather  weather=rain  personality=thoughtful  fn=reveal_character
+I always read in the rain. A book sounds different with the roof drumming over it.
+
+## greet.weather  weather=thunder  fn=teach
+Stay off the high ground in this. Lightning loves the tall trees on the training grounds.
+Don't try wall-running on the cliff in a storm. Wet rock and a flash in your eyes is a bad pairing.
+Count between the flash and the boom, {player}. Fewer than five and the storm's right on top of us.
+Metal draws the strike. Wrap your kunai pouch, or better yet, get inside.
+
+## greet.weather  weather=thunder  fn=guide
+Get under a roof, {player}! The tea house has room, and the owner's handing out hot barley tea.
+If you're caught out in this, the gate guardhouse lets anyone shelter. Just don't touch their kettle.
+The Academy's doors stay open in a storm. Nobody's turned away.
+
+## greet.weather  weather=thunder  fn=react
+Did you hear that one? It shook the cups on my shelf!
+What a storm! I've never seen the sky go that purple.
+You're out in this? Come in, come in, quick!
+That last flash lit up the whole Rock. Every face, clear as noon.
+Thunder! My windows are rattling like teeth.
+That was close! I felt it in my sandals.
+
+## greet.weather  weather=thunder  fn=worldbuild
+Every dog in the village is under a bed somewhere. The Inuzuka kennels sound like a choir.
+The lanterns on the utility poles keep flickering. Somebody up at the Residence will be cursing.
+The storm shutters are going up all down the main street. Clack, clack, clack.
+Old folk say a thunderstorm is the sky practising its jutsu. It's still bad at aiming.
+The fishermen have pulled every boat up the bank. Even the ferry's tied off.
+The Academy kids are pressed to the windows, counting flashes and shrieking at every boom.
+The gate guards shut the outer doors in a storm. No caravans tonight.
+The shrine bell rings itself when the wind's this strong. The priest says that's a good sign.
+Lightning-nature shinobi say they love a storm. I think they just like to show off.
+
+## greet.weather  weather=thunder  fn=filler
+Loud out there.
+
+## greet.weather  weather=thunder  personality=shy  fn=reveal_character
+I d-don't like thunder. Can I stand next to you until it passes? [SWEAT]
+
+## greet.weather  weather=thunder  personality=fiery  fn=react
+Listen to that sky roar! That's the kind of noise I want my jutsu to make!
+
+## greet.weather  weather=thunder  personality=protective  fn=react
+Inside. Now. You can argue with me once the storm's gone.
+
+## greet.weather  weather=thunder  personality=reserved  fn=reveal_character
+A storm. ...I don't mind it. It drowns out everything else.
+
+## greet.weather  weather=thunder  personality=curious  fn=react
+Did you see the lightning hit the river? I want to know if it cooked any fish. I might go and look.
+
+## greet.weather  weather=thunder  personality=adventurous  fn=reveal_character
+I've seen storms in the mountains past the border that make this one look polite.
+
+## greet.weather  weather=thunder  personality=warmhearted  fn=react
+Quick, out of the storm! I've got the kettle going and a blanket you can borrow.
+
+## greet.weather  weather=snow  fn=react
+Snow! Look at the Rock, every face has a white hat on.
+Brr! Your nose has gone red, {player}. Get somewhere warm.
+First good snow of the year. Listen how quiet it makes everything.
+Mind the ice on the bridges. I've already seen three people go down this morning.
+You've snow on your shoulders. Here, let me brush it off.
+The whole village looks like rice paper.
+
+## greet.weather  weather=snow  fn=teach
+Fresh snow shows every footprint. Good for tracking, terrible for sneaking.
+Cold muscles tear. Warm up properly before you spar in this.
+Water-walking's easy when the lake freezes. Standing up on the ice is the hard part.
+Keep your fingers warm, or your hand signs will go clumsy. Mittens off only for the jutsu.
+
+## greet.weather  weather=snow  fn=guide
+The bathhouse is the warmest building in the Leaf on a day like this. Go and thaw out.
+The sweet potato cart sets up by the main street when it snows. Follow the smoke.
+Ichiraku's steam is a beacon on snow days. You can see it from the bridge.
+
+## greet.weather  weather=snow  fn=worldbuild
+The Academy yard is a battlefield. There must be forty snowballs in the air at once.
+Somebody built a snowman by the gate and gave it a forehead protector. The guards are pretending not to see.
+The Inuzuka dogs go mad for snow. They've dug a tunnel right under the clinic fence.
+Every roof in the residential streets has somebody up on it, shovelling.
+The Academy swing tree's branches are bending with snow. The swing's frozen solid.
+The Nara deer come right up to the edge of the forest when it snows. You can see them from the road.
+Kotatsu weather. Half the village is under a blanket and won't come out till spring.
+The river's frozen along the edges. The fishermen are cutting holes in it and calling it a holiday.
+Snow on the training grounds. Someone's practising taijutsu and leaving very confused footprints.
+
+## greet.weather  weather=snow  fn=filler
+Cold one today.
+
+## greet.weather  weather=snow  personality=playful  fn=react
+Duck! Ha, missed. I had another in my other hand, though. [EXCLAIM]
+
+## greet.weather  weather=snow  personality=gentle  fn=reveal_character
+I've been putting out seed for the sparrows. Snow's hard on the little ones.
+
+## greet.weather  weather=snow  personality=meticulous  fn=reveal_character
+I've swept my step four times this morning. The snow keeps undoing my work.
+
+## greet.weather  weather=snow  personality=imaginative  fn=reveal_character
+Snowflakes are like letters from the clouds, and every one's in different handwriting.
+
+## greet.weather  weather=snow  personality=stern  fn=teach
+Snow. Good. Train in it. Comfortable weather teaches you nothing.
+
+## greet.weather  weather=snow  personality=warmhearted  fn=react
+You're shivering! Here, take my scarf. No, keep it, I've got three.
+
+## greet.weather  weather=snow  personality=proud  fn=reveal_character
+I built the best snow lantern on the street. Some of the neighbours tried to compete. Poor things.
