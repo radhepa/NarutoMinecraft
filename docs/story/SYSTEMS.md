@@ -96,9 +96,7 @@ finale reading each bond at 6+ in a fixed order (spouse, teammates, sensei, riva
 
 ## 4. Clans
 
-- **Clan-born players**: their clan's elder brings them requests; they can stay in their clan and still
-  restore the Kagari shrine as its keeper (Ch 46); the other parent's clan is never contradicted
-  (the story never names which parent was of the clan).
+- **The player is a clanless orphan** (a user decision "for now"; clan-born play may return later). Clans reach the player as hosts and teachers: a lesser technique from the clan of their closest classmate (Ch 12), welcome quests, invitations at high friendship (BONDS §10), and the Legacy steps.
 - **Clan politics in the plot**: the Tobari crisis (Ch 30 to 31) is a clan story told through the
   bond engine's relations (`clan_relation tobari hagane`, moods); the council (Ch 40) moves every
   founding clan's relation with the village; the Legacy steps decide who stands with you in Ch 51.

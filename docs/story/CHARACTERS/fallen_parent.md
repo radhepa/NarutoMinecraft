@@ -25,13 +25,17 @@ Ash Road to test them. The team was three: the sensei, `fallen_parent` and `sens
 a Yuhi genjutsu user), whom the sensei sent back to signal for help. They died; the sensei was
 burned pulling them out; `sensei_3` came back with help too late.
 
-**Lineage B only.** They married a civilian of a border village and kept the child there, far from
-the village's eyes. They were the one who carved the pair of watch-fire charms (they didn't know
-the custom's meaning, only that their grandmother did it). After the ambush the spouse fled with
-the child to a sister's house with a persimmon tree.
+**In every save** they had a young child with a civilian spouse in a border village, kept far from
+the village's eyes. After the Ash Road ambush the report lists the spouse and child as "lost". The
+sensei and `sensei_3` know a child was lost and never speak of it before Ch 48. They carved a pair
+of watch-fire charms for the child (they didn't know the custom's meaning, only that their
+grandmother did it).
 
-**Lineage A.** No child. The persimmons were only their favourite fruit; the song only a song their
-grandmother sang.
+**Lineage A.** The spouse and child truly died after the ambush. The charms were lost with them.
+
+**Lineage B.** The child is the player: the spouse fled with them to the spouse's sister in the
+house with the persimmon tree, and Yūgure found it two years later. One charm half stayed in the
+box the sensei took from the team's camp; the other was sewn into the child's sleeve.
 
 ## What remains of them
 
@@ -43,7 +47,7 @@ grandmother sang.
 | Their grandmother's line on the renaming list | The archive, Ch 37 | Both |
 | Their forehead protector | The sensei's box | Both (the box exists in both saves; seen only in B) |
 | Half a watch-fire charm | The sensei's box | **B only** |
-| A letter, never sent, to "the little one" ("If the fire ever leans toward you, it means someone loves you. Let it.") | The box | **B only**, read at Ch 48 |
+| A letter, never sent, to "the little one" ("If the fire ever leans toward you, it means someone loves you. Let it.") | The box | **B only**, read at Ch 48 (in A the box holds only the forehead protector and the team letter) |
 | A team letter to the sensei ("If I'm late, eat my share") | The sensei keeps it in a pocket | Both; the sensei shows it at level 7 |
 
 ## Brief for lines about them
@@ -60,10 +64,13 @@ Others speak of them; they never speak. Rules:
 - **Lineage B, Ch 48:** the sensei tells the story of the ambush in full and reads the unsent letter.
   The player's answer is `ans.player.parent_meet` ("You found me anyway" / "You should have looked" /
   say their teammate's name).
+- **The lost child (theirs)** is never mentioned by anyone before Ch 48 in either save. In lineage A,
+  after Ch 48, the sensei tells you: "They had a little one. We lost them both that year. When I
+  carried you over the ravine I thought of them, and didn't let myself think more."
 - **Lineage A:** at Ch 48 to 49 the sensei says, of the second: "They'd have liked her. They liked
   anyone who fought for kids."
 - **Never reveal before:** that they were Kagari (Ch 25 for the flame, Ch 37 for the line); that
-  Yūgure killed them (Ch 36); the box's charm (B, Ch 48).
+  Yūgure killed them (Ch 36); the box's charm (B, Ch 48); that they had a child at all (Ch 48, both saves).
 
 ## Questions
 

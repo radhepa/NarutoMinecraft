@@ -85,7 +85,7 @@ the Night Watch). Gates in the character briefs use them ("never before `story.c
 | `story.nightwatch.pretend` | N5 | N6 |
 | `story.nightwatch.undercroft` (`disbanded`, `sworn`, `exposed`) | N7 | Ch 50, 51 |
 | `story.lost_child.home` (`nightwatch`, `shrine`) | N6 or Ch 47 | Ch 53, 55 |
-| `story.clan.choice` (`kagari`, `own`, `keeper`) | Ch 46 | Ch 50, 55 |
+| `story.clan.choice` (`kagari`, `own`) | Ch 46 | Ch 50, 55 |
 | `story.hollow_crown.known` | Ch 49 | Ch 50 |
 | `story.array.unbroken` (0 to 81) | Ch 50 | Ch 51 to 53 |
 | `story.finale.reached` | Ch 52.3 | Ch 55 epilogue line |

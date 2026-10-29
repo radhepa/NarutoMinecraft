@@ -17,7 +17,7 @@ player knows.
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 46.1 | The registry | the Seventh, the registry clerk | The registry offers a founding path no one has offered in eighty years: **restore the Kagari** under their old name and crest, on their old ground (the vacant estate nearest the south gate, and the shrine in the hills as the clan shrine), with the gift as the clan art. Or found a clan of your own | plot (`found_clan`) | Restore the Kagari / found your own clan (`story.clan.choice`). Both are honoured; the story calls your clan "your house" either way. A clan-born player may stay in their clan and still restore the shrine as its keeper |
+| 46.1 | The registry | the Seventh, the registry clerk | The registry offers a founding path no one has offered in eighty years: **restore the Kagari** under their old name and crest, on their old ground (the vacant estate nearest the south gate, and the shrine in the hills as the clan shrine), with the gift as the clan art. Or found a clan of your own | plot (`found_clan`) | Restore the Kagari / found your own clan (`story.clan.choice`). Both are honoured; the story calls your clan "your house" either way. The registry also lets you take your house's name as your family name, or keep the one you remembered |
 | 46.2 | The shrine | Player, `classmate_c` | Clear the burned shrine; the stone watch-fire basket from Ch 0 stands. classmate_c's family builds the hall's door and carves into it what they would make for someone they never met (`ans.classmate_c.make`) | plot, bond | — |
 | 46.3 | The first members | descendants | Descendants who chose to be named (by `ans.hokage_6.names`) come to the shrine. Some want to join; some only want to see. Recruitment (systemic, BONDS §10) | systems | Who you invite |
 
@@ -124,7 +124,7 @@ The assault on the Leaf. A sequence of set-pieces, each led by a character the p
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
 | 54.1 | After | the village | Smoke, rubble dressing, people finding each other in the streets. Your order at Ichiraku, from a stand set up in the street | life, bond | — |
-| 54.2 | Funerals | the village | The keeper; the blade (if you ask, buried outside the wall with his sword); the second (if she died); the fallen of the war | bond | — |
+| 54.2 | Funerals | the village, `sensei` | The keeper; `sensei_2` (your sensei finds his notebook of their contests: the last entry, in a shaky hand, "Held the gate longer than you would have. Mine."); the blade (if you ask, buried outside the wall with his sword); the second (if she died); the fallen of the war | bond | — |
 | 54.3 | The leader's name | the Seventh, Player | What to do with his name: carve it among the Kagari / leave him off / carve it apart, with the year he was nine (`ans.player.leader_name`) | plot, bond | — |
 | 54.4 | Successor | the Seventh | On the Rock: "When you're ready. I'll still be around to complain." The Seventh names you their successor (the requirements are now systemic: level 50 and Hero standing everywhere) | plot | — |
 

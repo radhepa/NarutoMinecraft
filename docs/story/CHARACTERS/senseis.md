@@ -67,18 +67,20 @@ it is the only way he knows to say that the sensei still matters to him.
 
 | Arc | Change |
 |---|---|
-| 2 Paper Trail | The comic rival: challenges the player's sensei on the spot at assignment (Ch 8: "Who can say less. Starting now." He loses in four seconds) |
+| 2 Paper Trail | The comic rival: drops out of a tree at Training Ground 3 to challenge the player's sensei (Ch 8.2: who can stay silent longest; the sensei wins without noticing there was a contest) |
 | 3 Dusk | Guards the Kage box when the attack starts; holds it while the Fourth's fate plays out (Ch 19). Afterwards he stops joking for a week |
-| 4 Embers | Leads the Empty Seat rescue (Ch 21c). The Fifth makes him Jonin Commander: he enforces a curfew he hates, strictly and fairly, teasing the player while writing their name in the night log. At the Tobari council (Ch 31) he speaks against his own Hokage's lockdown. The first serious thing he has ever said in public |
+| 4 Embers | Leads the Empty Seat rescue (Ch 21c). The Fifth makes him Jonin Commander: he enforces a curfew he hates, strictly and fairly, teasing the player while writing their name in the night log. At the Tobari council (Ch 31.3) he puts down the Commander's armband in front of his own Hokage: "I'm with the kid." The first serious thing he has ever said in public |
 | 5 Ashes | One of the two examiners in the player's Jonin trial (Ch 33.2). Kneels first to the Seventh (Ch 42): "Two hundred and eleven to two hundred and nine. You win this one. Don't get used to it." |
-| 7 Last Bonfire | Holds the main gate in the war (Ch 51.1) and dies there |
+| 7 Last Bonfire | Holds the main gate in the war (Ch 51.1) until the evacuation is through, and dies there; "You won" |
 
-**His ending (every save).** At the main gate in Ch 51 the first wave breaks on him and his squad
-(the rival, c and d, now Jonin and Chunin). He sends them to the market street, holds the gate alone
-long enough for the Tobari to seal the wall's lanes, and dies there. The player's sensei, as the
-Seventh, arrives too late. In Ch 54 the sensei finds the notebook; the last line is: *"Held the
-gate longer than you would have. 212 to 211. Mine."* If `ans.sensei_2.on_purpose` is `counts`, the
-sensei reads it aloud and laughs, the first time anyone has heard them laugh.
+**His ending (every save).** In Ch 51 he holds the main gate with a handful of Chunin against the
+leader's strongest cells until the evacuation is through (he has already sent his own squad, the
+rival, c and d, to the market street). When the player's sensei, now the Seventh, reaches him he is
+dying, and asks: "Did I win?" "You won," the Seventh says: the only contest they ever conceded. In
+Ch 54 the Seventh finds the notebook; the last line, written before the gate, is: *"If I'm not
+around to collect: 212 to 211. Mine."* If `ans.sensei_2.on_purpose` is `counts`, the Seventh reads
+it aloud and laughs, the first time anyone has heard them laugh; if `doesnt`, they write "Counts."
+under it.
 
 ### Relationships
 
@@ -100,7 +102,8 @@ Voice samples, not shipped lines:
 - "Curfew's ten. It's ten-oh-two. I'm writing 'ten-oh-one'. You owe me."
 - "You want to know a secret? He's terrible at this. Has been since we were nine."
 - (Ch 31, plain) "No. Not like this. I'll say it to her face."
-- (Ch 51) "Go. That's an order. I'm winning this one."
+- (Ch 51, to his squad) "Go. That's an order. I'm winning this one."
+- (Ch 51, dying) "Did I win?"
 
 **Topics.**
 
@@ -133,6 +136,12 @@ Voice samples, not shipped lines:
 | `ans.sensei_2.on_purpose` | Ch 42 (after he kneels) | "If I lost a contest on purpose, would it still count?" | It counts / It doesn't / Only if they never find out | Freedom, loyalty | Ch 51 and Ch 54 (the last line of the tally) | "Counts": the Seventh laughs reading it. "Doesn't": the Seventh says "It counts" anyway |
 | `ans.sensei_2.wasnt_there` | Level 7 hangout, Jonin arc | "Ever been somewhere you weren't, in your head? Some night you should've been at?" | Yes, the night they took the girl / No / Every day | Honesty | Ch 51: his last order quotes it ("Not this time") | Opens his Ash Road confession |
 | `ans.sensei_2.nickname` | Any hangout, level 3 | "Everybody gets a nickname. What's yours going to be?" | Pick from three he offers ("Matchstick", "Stray", "Trouble") / refuse | Playfulness | He uses it forever; it is the last word in the notebook's margin | — |
+| `ans.sensei_2.contest` | Level 2, a rooftop race | "Name a contest. Anything. I'll beat you at it." | Who can eat more ramen / Who can stay awake longer / Who can make my sensei talk first | Freedom | His greetings keep your running score; the third becomes a joint campaign (he and you vs the sensei) | — |
+| `ans.sensei_2.armband` | Ch 31 (after the council) | "I just put down the best job I ever hated. Was that stupid?" | No, it was right / A little, and right / You'll get it back | Loyalty vs duty | Ch 42: when the Seventh offers him the armband back, he takes it if you said "get it back", else he asks to stay at the gate | Where he serves in the war (Ch 51: the gate either way) |
+| `ans.sensei_2.squad` | Level 5, Chunin arc | "My Sunshine still doesn't smile. Should I make them, or leave them be?" | Make them / Leave them be / Make them fight beside someone | His teaching | The rival's Ch 43 ceremony: he is there (make them), absent with a note (leave), or brings the whole squad (fight beside) | The rival's ally arc moves a little faster with "fight beside" |
+| `ans.sensei_2.tally_end` | Level 6 | "What happens to the tally when one of us is gone?" | It stops / The other one keeps it / Someone new picks it up | Loyalty | Ch 54: the Seventh keeps the notebook (other one), closes it (stops), or gives it to you (someone new; you inherit a contest line in the epilogue) | — |
+| `ans.sensei_2.serious` | Level 7, Jonin arc | "Ever wish I'd be serious? Honest." | No, you're right as you are / Sometimes / You are serious, you just hide it | Honesty | Ch 51: his last joke, or his last plain sentence | "You hide it": his final line is plain ("Tell them I was there") instead of "Did I win?" followed by a joke |
+| `ans.sensei_2.gate` | Ch 49 (the war council) | "Someone has to hold the main gate. Who'd you pick?" | You / My sensei / Whoever volunteers / Nobody alone | Duty | Ch 51.1: "You said me. Good pick." / "Nobody alone. So I brought a handful." | — |
 
 **What his lines are for.** Comedy that carries feeling (life, bond); the curfew system's teacher
 (teach, Ch 22 to 31: passes, night logs); the Ch 31 turn (plot); the war's first sacrifice
@@ -148,7 +157,11 @@ becomes a rain of ember-gold needles that pin a whole cell's shadows at once.
 **New flags.** `ans.sensei_2.laugh` (never, unseen, make_them), `ans.sensei_2.liked_right`
 (liked, right, both), `ans.sensei_2.curfew_friend` (yes, pass, depends),
 `ans.sensei_2.on_purpose` (counts, doesnt, secret), `ans.sensei_2.wasnt_there` (girl_night, no,
-every_day), `ans.sensei_2.nickname` (matchstick, stray, trouble, none).
+every_day), `ans.sensei_2.nickname` (matchstick, stray, trouble, none), `ans.sensei_2.contest`
+(ramen, awake, make_talk), `ans.sensei_2.armband` (right, little, get_back), `ans.sensei_2.squad`
+(make, leave, fight_beside), `ans.sensei_2.tally_end` (stops, keeps, someone_new),
+`ans.sensei_2.serious` (as_you_are, sometimes, hide_it), `ans.sensei_2.gate` (you, sensei,
+volunteers, nobody_alone).
 
 ---
 

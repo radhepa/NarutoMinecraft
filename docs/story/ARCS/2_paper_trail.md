@@ -71,7 +71,7 @@ After Ch 9 the board, `Dogs and Bugs` and the market's price war open (second si
 |---|---|---|---|---|---|
 | 12.1 | The lake | `sensei`, squad | Water walking; teammate_b falls in eleven times | teach, life | — |
 | 12.2 | The ceremony | a nature master | Chakra paper again (ordinary paper): your first nature is chosen. The master notes, puzzled, that your paper "warmed" before it showed your nature | teach, seed | Choose your first nature |
-| 12.3 | The clan lesson | your clan's elder, or a friendly clan's teacher | A clan-born player's homecoming: kin you never met, and the clan's first technique. A clanless player learns a lesser technique from the clan of their closest classmate's family | teach, bond | — |
+| 12.3 | The clan lesson | a friendly clan's teacher | You have no clan, so a clan teaches you: the clan of the classmate you are closest to (by friendship; teammate_a's Kurama in Classic if tied) offers a lesser technique, and with it the first look inside a clan's home and customs | teach, bond (`guest_in_quarter`) | Which clan's offer to accept, if two are tied |
 
 After Ch 12: Lanterns on the Lake, the hospital night shift, the clan welcomes (wave 1), the council
 day (third side wave).
