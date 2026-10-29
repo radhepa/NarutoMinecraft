@@ -88,6 +88,12 @@
                  "female": {"hair": "hg009_stubby_ponytail", "hair_color": "CHESTNUT", "outfit": "academy_genin.picture_book", "palette": "ACADEMY_GENIN_TEAL"}}
   },
 
+  "starting_key_item": {
+    "_doc": "The one thing the player starts with, shown in hand on the review screen (the story session's item; the items session registers the id). It cannot be dropped, sold or stored away.",
+    "item": "half_charm",
+    "line": "creator.review.key_item"
+  },
+
   "prologue_look": {
     "_doc": "Worn through the prologue (Ch 0): your own hair, eyes and marks, in plain worn clothes. The outfit you chose is waiting at the apartment in Ch 1.",
     "top": "tg011_striped_sweater", "bottom": "bg010_patched_trousers", "palette": "ACADEMY_GENIN_SAND", "headwear": null
@@ -96,7 +102,7 @@
   "changes": {
     "_doc": "Where each choice can change after creation: locked (the story or a life event may still change it), barber, home, or the settings screen.",
     "given_name": {"where": "locked"},
-    "family_name": {"where": "locked", "except": "a life event the story or Shinobi Life allows (marriage, joining or founding a clan)"},
+    "family_name": {"where": "locked", "except": "the clan registry: founding a clan (from Chunin), or joining one by invitation or marriage, offers to take the clan's name or keep yours"},
     "pronouns": {"where": "settings"},
     "temperament": {"where": "locked"},
     "knack": {"where": "locked"},

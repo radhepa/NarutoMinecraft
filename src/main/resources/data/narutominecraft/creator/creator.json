@@ -74,7 +74,7 @@
   },
   "family_name": {
    "where": "locked",
-   "except": "a life event the story or Shinobi Life allows (marriage, joining or founding a clan)"
+   "except": "the clan registry: founding a clan (from Chunin), or joining one by invitation or marriage, offers to take the clan's name or keep yours"
   },
   "pronouns": {
    "where": "settings"
@@ -190,6 +190,10 @@
   "bottom": "bg010_patched_trousers",
   "palette": "ACADEMY_GENIN_SAND",
   "headwear": null
+ },
+ "starting_key_item": {
+  "item": "half_charm",
+  "line": "creator.review.key_item"
  },
  "creatable": [
   "clanless"

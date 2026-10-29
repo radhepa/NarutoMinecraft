@@ -168,15 +168,15 @@
     "semantic_hash": ""
   },
   "ROADMAP.md": {
-    "mtime": 1793309727.143515,
-    "seen": 1793309752.835145,
-    "ast_hash": "a8f1bd73c578a7e58ed78436128a6824",
+    "mtime": 1793309840.8632925,
+    "seen": 1793309920.7906523,
+    "ast_hash": "6a7034c728e3007f5912543bde41bcd0",
     "semantic_hash": ""
   },
   "docs/story/STORY_BIBLE.md": {
-    "mtime": 1793309118.643289,
-    "seen": 1793309752.8351493,
-    "ast_hash": "e8c282d47214ed86a04958419bb18bdb",
+    "mtime": 1793309840.8632925,
+    "seen": 1793309920.7906566,
+    "ast_hash": "225b0dddc145c9e533c4ab27bba0b726",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_haruno.py": {
@@ -774,15 +774,15 @@
     "semantic_hash": ""
   },
   "tools/creator/creator.py": {
-    "mtime": 1793309371.8384266,
-    "seen": 1793309752.834955,
-    "ast_hash": "c7ef07c3556ba72b9a98ff0e256f2e32",
+    "mtime": 1793309859.844442,
+    "seen": 1793309920.790467,
+    "ast_hash": "726450ffdfc76defee1880943020e56c",
     "semantic_hash": ""
   },
   "tools/creator/mockups.py": {
-    "mtime": 1793309479.751271,
-    "seen": 1793309752.8349576,
-    "ast_hash": "4f3c958263d3e1df06c42a90735f8023",
+    "mtime": 1793309876.2413037,
+    "seen": 1793309920.7904713,
+    "ast_hash": "4389b3afe5fb798d95c3f88350c145a2",
     "semantic_hash": ""
   },
   "tools/creator/preview.py": {
@@ -834,9 +834,9 @@
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/Names.java": {
-    "mtime": 1793308307.7315862,
-    "seen": 1793309752.8351097,
-    "ast_hash": "778b87d98e0757be6ff6b12222593ace",
+    "mtime": 1793309859.8448346,
+    "seen": 1793309920.7906177,
+    "ast_hash": "e9ba6a966423413588d8b13438723487",
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/Restyle.java": {
@@ -876,9 +876,9 @@
     "semantic_hash": ""
   },
   "village/look/src/test/java/dev/shinobi/village/look/NamesTest.java": {
-    "mtime": 1793308389.715241,
-    "seen": 1793309752.835123,
-    "ast_hash": "b1a5392b1a7167299a473fd5f88d4c71",
+    "mtime": 1793309859.8452098,
+    "seen": 1793309920.790632,
+    "ast_hash": "9ca9d2a38c7755e0b72ccabc3e17db01",
     "semantic_hash": ""
   },
   "village/look/src/test/java/dev/shinobi/village/look/RestyleAndGrowUpTest.java": {
@@ -888,9 +888,9 @@
     "semantic_hash": ""
   },
   "CHARACTER_CREATION.md": {
-    "mtime": 1793309699.1248646,
-    "seen": 1793309752.8351307,
-    "ast_hash": "7f39ed204ecfa746f8e5ae33b86a94fb",
+    "mtime": 1793309902.4440742,
+    "seen": 1793309920.790639,
+    "ast_hash": "ce89457eb7413c66ca5b5277f96bb5f4",
     "semantic_hash": ""
   }
 }

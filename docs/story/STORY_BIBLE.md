@@ -116,11 +116,6 @@ A clan-born player's other parent was of that clan; a clanless player's Kagari b
 have. Later, the player clan registry lets you restore the Kagari under their old name and crest
 (with Kindling Bond as the clan art), or found a new clan.
 
-- **creator.reserved_family_names**: Kagari
-  (The character creator offers the clanless only `population.json`'s family names;
-  `tools/creator/creator.py --check` reads this line and fails if the pool or a clan carries a
-  reserved name, so no player starts with it.)
-
 ## Reveal pacing
 
 | By the end of | The player knows | The player suspects |

@@ -293,6 +293,7 @@ class World:
             "grows_into": {k: v for k, v in r["grows_into"].items() if not k.startswith("_")},
             "stage_hair": {k: v for k, v in r["stage_hair"].items() if not k.startswith("_")},
             "prologue_look": {k: v for k, v in r["prologue_look"].items() if not k.startswith("_")},
+            "starting_key_item": {k: v for k, v in r["starting_key_item"].items() if not k.startswith("_")},
             "creatable": creatable,
             "pronouns": {k: v for k, v in r["pronouns"].items() if not k.startswith("_")},
             "roots": {k: v for k, v in r["roots"].items() if not k.startswith("_")},
