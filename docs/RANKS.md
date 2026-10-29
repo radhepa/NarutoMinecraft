@@ -177,7 +177,7 @@ So about one clanless shinobi in five beats the great clans' median at their ran
 - **Strongest of all:** the squad a year ahead's clanless prodigy.
 - **Lowest at first, then catching up:** the loud clanless teammate and the Inuzuka.
 
-**Your class leans toward the important clans**, so familiar names appear early. The village
+**Your classmates lean toward the important clans** (you are a clanless orphan), so familiar names appear early. The village
 population stays as it is, with noble clans rare.
 
 - **The class.** `class_clan_weights` in `roster.json` rolls the eleven classmates in a Varied save:
@@ -495,7 +495,7 @@ Each person has their own XP on the player's curve (about 50 minutes a level in 
   higher: about 2 by the exams, 4 at level 50. A teammate a little behind you overall is still the
   one you want for genjutsu, tracking or a blade.
 - **Techniques you see them learn.** Each person has a kit: the Academy three, two niche techniques,
-  a nature, a clan technique for the clan-born, the exam reward, then the later arcs. Each technique
+  a nature, a clan technique for clan-born classmates, the exam reward, then the later arcs. Each technique
   has a minimum level and a moment.
   - The moment is a story beat (`ch12.natures`) or **training the player shares**.
   - A technique whose moment came before they were ready shows at the next beat or training where
