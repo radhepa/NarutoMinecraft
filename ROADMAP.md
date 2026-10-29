@@ -80,6 +80,22 @@ hand-built map (VF villages are procedural), and anything Japanese in its buildi
 
 ## 3. The map
 
+### References
+
+The layout follows the Narutopedia (Naruto Fandom wiki) pages cited in each row. Image downloads
+and the wiki itself were blocked by this session's network policy, so the descriptions come from
+the wiki text quoted in search results, not from the art. Check each district against the images on
+those pages before building it.
+
+- **Overall shape** ([Konohagakure](https://naruto.fandom.com/wiki/Konohagakure), [Hokage Rock](https://naruto.fandom.com/wiki/Hokage_Rock)): the village
+  is laid out in a fan around the Hokage Rock, the mountain with the Hokage faces carved into it.
+  Streets of shops and buildings run out from it. The Hokage Residence always sits in the middle,
+  right below the faces. The village is walled on every side, and the hiragana あん is painted on
+  its entrance gates, one character per door.
+- **Inspiration:** Kishimoto has said Konoha is modelled on his hometown in Okayama Prefecture,
+  which had training fields from a nearby military base. That explains the low hills and fields
+  around the walls.
+
 ### Scale
 
 A Minecraft player is 1.8 m tall and a block is 1 m. Keep **heights and interiors at 1:1** so
@@ -89,7 +105,8 @@ kilometres across, which in Minecraft would be empty walking.
 - **Inside the wall:** a rough circle about **640 blocks across** (40 chunks). Sprinting across
   takes about two minutes; roof-hopping with chakra about one. That fits roughly 250 to 400
   buildings, of which perhaps 180 homes.
-- **Hokage Rock:** a cliff on the north edge about 70 blocks high; each face about 24 blocks tall.
+- **Hokage Rock:** a cliff behind the village about 70 blocks high, each face about 24 blocks tall.
+  The streets fan out from its foot, so the Rock is visible from every street.
 - **Outside the wall:** the Forest of Death, outer training grounds and roads to the gates, about
   a 1,200 × 1,200 block map in all. Beyond that, ordinary generated terrain with VF villages
   switched off (see open questions).
@@ -105,19 +122,19 @@ map builder can place it again.
 
 | District / landmark | How | Notes |
 |---|---|---|
-| Homes, apartments, shops, tea houses | Generated | Konoha kit: plaster walls in cream and terracotta, round water tanks on flat roofs, awnings, paper lanterns, stacked apartment blocks. Rooms must follow VF's lot contract (beds in enclosed rooms, doors with two clear blocks) so Homes can assign beds |
+| Homes, apartments, shops, tea houses | Generated | Konoha kit: plaster walls in cream and terracotta, round water tanks on flat roofs (check against the art), awnings, paper lanterns, stacked apartment blocks. Rooms must follow VF's lot contract (beds in enclosed rooms, doors with two clear blocks) so Homes can assign beds |
 | Streets, alleys, bridges, the river | Generated | A Konoha `roads.py`: packed dirt and stone lanes, utility poles, signs |
-| Wall and gates | Generated modules, gates by hand | Wall segments are one repeated module; the great A-UN gate and guard booth are hand-built |
-| Hokage Rock | By hand | Voxel sculpting; one empty face is kept for the player (Phase 6) |
-| Hokage Residence / Administration (the round red building) | By hand | Mission desk on the ground floor, Hokage's office on top |
-| Ninja Academy | By hand | Classroom, yard with the swing tree, target posts; the vertical slice |
+| Wall and gates | Generated modules, gates by hand | Wall segments are one repeated module. The main gate, with あん painted across its doors, and the guard booth are hand-built ([Konohagakure](https://naruto.fandom.com/wiki/Konohagakure)) |
+| Hokage Rock | By hand | Voxel sculpting; one empty face is kept for the player (Phase 6). The village expands onto the plateau above it only in a much later era, so leave the top as forest ([Hokage Rock](https://naruto.fandom.com/wiki/Hokage_Rock)) |
+| Hokage Residence | By hand | Circular, one of the largest buildings in the village, with 火 (fire) painted on the roof. It stands near the Academy, right below the faces. Mission desk on the ground floor, the Hokage's office upstairs ([Hokage Residence](https://naruto.fandom.com/wiki/Hokage_Residence)) |
+| Ninja Academy | By hand | A large building at the base of the Hokage Rock, recognizable by the tree with a swing out front and a big 火 sign. Classroom, yard, target posts; the vertical slice. The office part is often confused with the Hokage Residence, but they are two buildings ([Ninja Academy file](https://naruto.fandom.com/wiki/File:Ninja_Academy.png), [Hokage Residence](https://naruto.fandom.com/wiki/Hokage_Residence)) |
 | Ichiraku Ramen | By hand (small) | A VF tavern building, so the tavern code seats and serves residents |
 | Barbecue house, dango shop, flower shop, weapon shop | Generated or small hand builds | Flower shop belongs to the Yamanaka compound |
-| Clan compounds (8) | Hand-built core, generated houses | Each has a gate, a main hall, a training yard and a few homes. Senju: wood and tree motifs; Uzumaki: memorial shrine with spiral crests; Uchiha: walled quarter with the fan crest and police HQ; Hyuga: formal estate with a dojo; Nara: house by the deer forest; Akimichi: big kitchen hall; Yamanaka: flower shop and greenhouse; Inuzuka: kennels and an open run |
-| Training grounds | Generated props, Ground 3 by hand | Ground 3: three posts, the river and the memorial stone. Others: target posts, logs, a lake for water-walking, a cliff for wall-running |
+| Clan compounds (8) | Hand-built core, generated houses | Each has a gate, a main hall, a training yard and a few homes. Senju: wood and tree motifs; Uzumaki: memorial shrine with spiral crests; Uchiha: walled quarter on the village's outskirts with the fan crest, and the Military Police HQ in a remote part of the village ([Uchiha Clan](https://naruto.fandom.com/wiki/Uchiha_Clan)); Hyuga: formal estate with a dojo; Nara: house by the deer forest; Akimichi: big kitchen hall; Yamanaka: flower shop and greenhouse; Inuzuka: kennels and an open run |
+| Training grounds | Generated props, Ground 3 by hand | Ground 3: a glade with three stumps in a row, a polished kunai-shaped memorial stone below them, a large deep river with forest on both banks and mountains in view ([Third Training Ground](https://naruto.fandom.com/wiki/Third_Training_Ground)). The Ino-Shika-Cho memorial goes near the Nara forest ([Yamanaka, Nara, and Akimichi Clan Memorial](https://naruto.fandom.com/wiki/Yamanaka,_Nara,_and_Akimichi_Clan_Memorial)). Others: target posts, logs, a lake for water-walking, a cliff for wall-running |
 | Hospital | By hand | Works with VF knockouts: revival happens here |
-| Chunin Exam arena | By hand | About 64 blocks across the floor, tiered seating for ~150 residents on VF `Seat` entities, a Kage box |
-| Forest of Death | Generated | Fenced 384 × 384 block area outside the wall, 44 gates, a tower in the middle (by hand). Giant trees 4 to 7 blocks thick and 60 to 90 tall from a tree generator, so they are tree-hopping terrain |
+| Chunin Exam arena | By hand | The stadium for the finals: about 64 blocks across the floor, tiered seating for ~150 residents on VF `Seat` entities, a Kage box. The search found no canon description, so design it from the anime art ([Chūnin Exams](https://naruto.fandom.com/wiki/Ch%C5%ABnin_Exams)) |
+| Forest of Death | Generated | Training Ground 44, north of Training Ground 43. A metal fence with 44 evenly spaced gates, a river through it, and a tower in the exact centre (by hand) holding an arena for the preliminaries. Its canon radius of about 10 km is compressed to a 384-block circle outside the wall. Giant trees 4 to 7 blocks thick and 60 to 90 tall from a tree generator make it tree-hopping terrain ([Forest of Death](https://naruto.fandom.com/wiki/Forest_of_Death)) |
 | ANBU HQ | By hand, hidden | Under the Hokage Rock, only reachable as ANBU |
 | Police HQ, the market, the main street | Generated around hand-built centres | |
 
@@ -179,11 +196,12 @@ event. Optional milestones speed things up or unlock extras.
   1. **Written test** in an Academy hall: ten questions too hard to answer; the real test is
      gathering answers unseen (Byakugan, transformation, a clone in the rafters, bribing a proctor
      in dialogue). Caught three times and your team is out.
-  2. **Forest of Death:** your team gets one scroll of a pair (Heaven or Earth) and has five game
+  2. **[Forest of Death](https://naruto.fandom.com/wiki/Forest_of_Death):** your team gets one scroll of a pair (Heaven or Earth) and has five game
      days to reach the tower with both. Rival NPC teams carry the other scrolls. Survival, ambushes,
      traps, camping.
-  3. **Preliminaries and finals** in the arena: one-on-one bouts with residents watching from the
-     stands. Promotion is judged on how you fought (techniques used, tactics, teamwork earlier),
+  3. **Preliminaries and finals:** if too many teams reach the tower, one-on-one preliminaries run
+     in the arena inside the tower. The finals follow in the stadium, with residents watching from
+     the stands. Promotion is judged on how you fought (techniques used, tactics, teamwork earlier),
      not only on winning, so losing a good final can still make you Chunin.
 - **Unlocks:** the Chunin flak vest (wardrobe to build), B-rank missions, leading a Genin squad
   on missions, the outer training grounds, the hospital's back rooms, a second elemental nature.
