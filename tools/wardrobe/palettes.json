@@ -1,5 +1,7 @@
 {
   "HOKAGE": {"name": "Hokage", "P": "#5f6e3c", "S": "#ecebe3", "A": "#cc3a1f", "L": "#7a6346", "M": "#aab3b9", "K": "#1d2236", "D": "#2d3c60"},
   "KONOHA_JONIN": {"name": "Konoha Jonin", "P": "#5f6e3c", "S": "#e6e1d3", "A": "#b8372d", "L": "#7a6346", "M": "#aab3b9", "K": "#1d2236", "D": "#2d3c60"},
-  "UCHIHA": {"name": "Uchiha", "P": "#262a40", "S": "#e9e6dd", "A": "#c4282b", "L": "#6b5a45", "M": "#aab3b9", "K": "#14161f", "D": "#3a4466"}
+  "UCHIHA": {"name": "Uchiha", "P": "#262a40", "S": "#e9e6dd", "A": "#c4282b", "L": "#6b5a45", "M": "#aab3b9", "K": "#14161f", "D": "#3a4466"},
+  "LEAF_GENIN": {"name": "Leaf Genin", "P": "#f88b2c", "S": "#ecebe3", "A": "#c4302b", "L": "#7a6346", "M": "#aab3b9", "K": "#1b1f2e", "D": "#2d3c60"},
+  "KUNOICHI": {"name": "Kunoichi", "P": "#c8303a", "S": "#ecebe3", "A": "#b02a33", "L": "#7a6346", "M": "#aab3b9", "K": "#23262f", "D": "#2d3c60"}
 }

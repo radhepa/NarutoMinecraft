@@ -1,0 +1,114 @@
+{
+  "id": "t04_genin_track_jacket",
+  "kind": "top",
+  "name": "Genin Track Jacket",
+  "gender": "unisex",
+  "texture": "tops/t04_genin_track_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_swirl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.6,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        27,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "zip_pull",
+      "bone": "TORSO",
+      "pivot": [
+        0.1,
+        1.2,
+        -2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Orange zip-up with navy shoulders, white collar and the red swirl on the back."
+}

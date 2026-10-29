@@ -295,5 +295,10 @@
       ]
     }
   ],
+  "hidesHair": [
+    "crown",
+    "nape"
+  ],
+  "coversFace": false,
   "description": "Stepped red kasa, white front panel with the fire kanji, white veil."
 }

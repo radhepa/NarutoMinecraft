@@ -118,5 +118,25 @@
       "#f2cd55",
       "#fbe58c"
     ]
+  },
+  "SUN_BLOND": {
+    "name": "Sun Blond",
+    "ramp": [
+      "#8a5a10",
+      "#c98a14",
+      "#efb820",
+      "#fbd640",
+      "#fff08a"
+    ]
+  },
+  "BLOSSOM_PINK": {
+    "name": "Blossom Pink",
+    "ramp": [
+      "#a8436a",
+      "#d0638a",
+      "#ec8fb0",
+      "#f7b4cb",
+      "#fdd9e6"
+    ]
   }
 }

@@ -173,13 +173,19 @@ class Character:
                         pattern[y, x] = (*rgb(eyes[int(c)]), 255)
         body = np.array(Image.open(BODY / f"{spec['complexion']}.png").convert("RGB"))
         self.face = dict(style=spec["eye_style"], feminine=spec["feminine"], hair=rgb(hair[2]),
+                         brows=spec.get("brows", "fine"), marks=tuple(spec.get("marks", [])), masked=bool(hat and hat.meta.get("covers_face")),
                          skin=tuple(int(c) for c in body[12, 12]), iris=rgb(eyes[2]), white=rgb(eyes[4]),
                          pattern=pattern, glow=bool(eye.get("glow")))
 
 
 # -- drawing ----------------------------------------------------------------------------------
-def light_for(n, glow):
-    return 1.0 if glow else min(1.0, 0.58 + 0.30 * max(0, -n[1]) + 0.12 * max(0, -n[2]) + 0.06 * max(0, -n[0]))
+def light_for(w, glow):
+    """Minecraft's flat entity shading from the world-space normal: tops full, front and back .85,
+    sides .7, undersides .55. Glowing planes ignore it."""
+    if glow:
+        return 1.0
+    x, y, z = w
+    return x * x * .70 + z * z * .85 + y * y * (1.0 if y < 0 else .55)
 
 
 def render(canvas: Canvas, ch: Character, cx, cy, scale, yaw, pitch=-10, pose=None, head_only=False, blink=0.0):
@@ -203,18 +209,18 @@ def render(canvas: Canvas, ch: Character, cx, cy, scale, yaw, pitch=-10, pose=No
         bpivot, brot = bones[bone]
         for verts, uvs, normal in cube_quads(origin, size, uv, inflate, pscale or (1, 1, 1)):
             world = [bpivot + brot @ (ppivot + prot @ v) for v in verts]
-            n = view @ (brot @ (prot @ np.array(normal, float)))
-            if n[2] >= -1e-6:
+            wn = brot @ (prot @ np.array(normal, float))
+            if (view @ wn)[2] >= -1e-6:
                 continue
             pts = [np.array([cx + (view @ wv)[0] * scale, cy + (view @ wv)[1] * scale, (view @ wv)[2]]) for wv in world]
-            canvas.quad(pts, uvs, tex, light_for(n, glow))
+            canvas.quad(pts, uvs, tex, light_for(wn, glow))
     # Living Eyes face planes: north-facing quads on the head (and the neck shade on the torso).
     for pl in LE.planes(blink=blink, **ch.face):
         if head_only and pl.bone != "HEAD":
             continue
         bpivot, brot = bones[pl.bone]
-        n = view @ (brot @ np.array((0, 0, -1.0)))
-        if n[2] >= -1e-6:
+        wn = brot @ np.array((0, 0, -1.0))
+        if (view @ wn)[2] >= -1e-6:
             continue
         x0, x1, y0, y1 = pl.x - pl.w / 2, pl.x + pl.w / 2, pl.y - pl.h / 2, pl.y + pl.h / 2
         corners = [(x1, y0), (x0, y0), (x0, y1), (x1, y1)]
@@ -226,7 +232,7 @@ def render(canvas: Canvas, ch: Character, cx, cy, scale, yaw, pitch=-10, pose=No
             tex, uvs = np.array([[(*pl.rgb, 255)]], np.uint8), (0, 0, 1, 1)
         world = [bpivot + brot @ np.array((x, y, pl.z)) for x, y in corners]
         pts = [np.array([cx + (view @ wv)[0] * scale, cy + (view @ wv)[1] * scale, (view @ wv)[2]]) for wv in world]
-        canvas.quad(pts, uvs, tex, light_for(n, pl.glow))
+        canvas.quad(pts, uvs, tex, light_for(wn, pl.glow))
 
 
 def backdrop(w, h, top=(250, 238, 214), bottom=(226, 205, 168)):

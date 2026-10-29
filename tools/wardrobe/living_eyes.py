@@ -39,6 +39,11 @@ def pupil(iris): return shade(iris, .5)
 def lip(skin): return blend(shade(skin, .78), (0xA0, 0x46, 0x48), .18)
 def rose_lip(skin): return blend(shade(skin, .84), (0xCD, 0x4E, 0x62), .42)
 def blush(skin): return blend(skin, (0xEC, 0x68, 0x76), .32)
+def mark(skin): return shade(skin, .62)
+
+
+# Cheek marks: (x from the face centre, y, width, height) per side, mirrored.
+MARKS = {"whiskers": [(3.3, -1.8, 1.3, .22), (3.4, -1.35, 1.3, .22), (3.3, -.9, 1.3, .22)]}
 
 
 class Plane:
@@ -58,9 +63,17 @@ def fit(x, y, left, right, top, bottom, h=1.0):
     return (x0 + x1) / 2, (y0 + y1) / 2, x1 - x0, y1 - y0
 
 
-def planes(style, feminine, hair, skin, iris, white, pattern=None, glow=False, blink=0.0, gaze=(0.0, 0.0)):
-    """Every face plane for one pose, laid out exactly as ResidentModel.layer + animateFace."""
+def planes(style, feminine, hair, skin, iris, white, pattern=None, glow=False, brows="fine", masked=False, marks=(),
+           blink=0.0, gaze=(0.0, 0.0)):
+    """Every face plane for one pose, laid out exactly as ResidentModel.layer + animateFace.
+
+    Two additions to Village Friends: `brows="bold"` draws a full-pixel brow, wider than the eye
+    (a taijutsu specialist's), `marks` adds thin cheek marks (whiskers) and `masked` (headwear that covers the face) leaves only
+    the neck shade.
+    """
     out = []
+    if masked:
+        return [Plane("TORSO", 0, .35, -2.055, 4, .7, shadow(skin))]
     starlit = style == "starlit"
     top, bottom = eye_top(style), EYE_BOTTOM
     lh, lb = lash_height(blink), lash_bottom(style, blink)
@@ -92,8 +105,14 @@ def planes(style, feminine, hair, skin, iris, white, pattern=None, glow=False, b
             out.append(Plane("HEAD", side * 1.75, bt + .175, -4.03, 1.5, .45, brow(hair)))
             out.append(Plane("HEAD", side * 2.75, bt + .375, -4.03, .5, .35, brow(hair)))
             out.append(Plane("HEAD", side * 2.875, -1.725, -4.02, 1.25, .55, blush(skin)))
+        elif brows == "bold":
+            out.append(Plane("HEAD", side * 2.1, bt - .1, -4.03, 2.6, 1.1, lash(hair)))
         else:
             out.append(Plane("HEAD", side * 2, bt + .275, -4.03, 2, .55, brow(hair)))
+    for name in marks:
+        for x, y, w, h in MARKS[name]:
+            for side in (-1, 1):
+                out.append(Plane("HEAD", side * x, y, -4.02, w, h, mark(skin)))
     if feminine:
         out.append(Plane("HEAD", 0, -1.45, -4.02, 1, .5, rose_lip(skin)))
     else:

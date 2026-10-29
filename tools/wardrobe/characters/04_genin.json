@@ -1,0 +1,5 @@
+{"id": "genin", "name": "Leaf Genin", "tagline": "Orange track suit, whisker marks and a brand-new forehead protector",
+ "face": "f01_shinobi", "hair": "h02_leaf_spikes", "headwear": "w02_forehead_protector",
+ "top": "t04_genin_track_jacket", "bottom": "b03_genin_track_pants",
+ "palette": "LEAF_GENIN", "hair_color": "SUN_BLOND", "eye_color": "SKY", "eye_style": "starlit", "feminine": false,
+ "marks": ["whiskers"], "complexion": 1, "scale": 14}

@@ -158,5 +158,7 @@
       "motion": "sway"
     }
   ],
+  "hidesHair": [],
+  "coversFace": false,
   "description": "Navy band, riveted steel plate with the leaf mark, knot tails at the back."
 }

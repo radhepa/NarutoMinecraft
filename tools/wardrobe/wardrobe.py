@@ -376,6 +376,9 @@ class Garment:
                 "rejects": sorted(m.get("rejects", [])), "pieces": [p.json() for p in self.pieces]}
         if self.locked_to:
             data["lockedTo"] = self.locked_to
+        if self.kind == "headwear":
+            data["hidesHair"] = list(m.get("hides_hair", []))
+            data["coversFace"] = bool(m.get("covers_face", False))
         if self.kind == "tops":
             data["tucked"] = bool(m.get("tucked", False))
             data["coversWaist"] = bool(m.get("covers_waist", False))
@@ -418,7 +421,7 @@ class Garment:
                     if 40 <= x < 48 and 11 <= y < 16 and 1 <= x - 40 <= 6:
                         errors.append(f"hair hat-layer covers eyes/nose/mouth at {x},{y}")
         for p in self.pieces:
-            if kind in ("hair", "headwear"):
+            if kind in ("hair", "headwear") and not self.meta.get("covers_face"):
                 lo, hi = world_bounds(p)
                 if lo[2] < -4.1 and lo[0] < 3 and hi[0] > -3 and hi[1] > -5.02 and lo[1] < 0:
                     errors.append(f"piece {p.id} hangs over the eyes/nose/mouth")
@@ -569,6 +572,8 @@ def compatible(top: Garment, bottom: Garment) -> bool:
 
 
 EYE_STYLES = ("starlit", "soft_glint")   # the Living Eyes styles, see living_eyes.py
+BROWS = ("fine", "bold")
+MARKS = ("whiskers",)
 CHARACTER_SLOTS = {"face": "faces", "hair": "hair", "headwear": "headwear", "top": "tops", "bottom": "bottoms"}
 
 
@@ -596,6 +601,11 @@ def validate_catalog(garments: dict, data: dict) -> list[str]:
             errors.append(f"character {cid} needs an eye_style: {', '.join(EYE_STYLES)}")
         if not isinstance(c.get("feminine"), bool):
             errors.append(f"character {cid} needs feminine: true or false")
+        for m in c.get("marks", []):
+            if m not in MARKS:
+                errors.append(f"character {cid} names unknown cheek mark {m}")
+        if c.get("brows", "fine") not in BROWS:
+            errors.append(f"character {cid} brows must be one of {', '.join(BROWS)}")
         if c.get("complexion") not in range(6):
             errors.append(f"character {cid} needs a complexion 0-5")
     for eid, e in eyes.items():

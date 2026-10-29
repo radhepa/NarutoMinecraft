@@ -57,7 +57,8 @@
   "hair": [
     "h01_kage_spikes",
     "h02_leaf_spikes",
-    "h03_uchiha_spikes"
+    "h03_uchiha_spikes",
+    "h04_long_straight"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -66,11 +67,15 @@
   "tops": [
     "t01_hokage_haori",
     "t02_konoha_flak_vest",
-    "t03_uchiha_high_collar"
+    "t03_uchiha_high_collar",
+    "t04_genin_track_jacket",
+    "t05_kunoichi_qipao"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
-    "b02_uchiha_shorts"
+    "b02_uchiha_shorts",
+    "b03_genin_track_pants",
+    "b04_kunoichi_shorts"
   ],
   "characters": [
     {
@@ -121,6 +126,43 @@
       "eye_color": "SHARINGAN",
       "eye_style": "starlit",
       "feminine": false,
+      "complexion": 0,
+      "scale": 14
+    },
+    {
+      "id": "genin",
+      "name": "Leaf Genin",
+      "tagline": "Orange track suit, whisker marks and a brand-new forehead protector",
+      "face": "f01_shinobi",
+      "hair": "h02_leaf_spikes",
+      "headwear": "w02_forehead_protector",
+      "top": "t04_genin_track_jacket",
+      "bottom": "b03_genin_track_pants",
+      "palette": "LEAF_GENIN",
+      "hair_color": "SUN_BLOND",
+      "eye_color": "SKY",
+      "eye_style": "starlit",
+      "feminine": false,
+      "marks": [
+        "whiskers"
+      ],
+      "complexion": 1,
+      "scale": 14
+    },
+    {
+      "id": "kunoichi",
+      "name": "Kunoichi",
+      "tagline": "Red qipao with side slits, long blossom-pink hair, the protector worn as a hairband",
+      "face": "f01_shinobi",
+      "hair": "h04_long_straight",
+      "headwear": "w02_forehead_protector",
+      "top": "t05_kunoichi_qipao",
+      "bottom": "b04_kunoichi_shorts",
+      "palette": "KUNOICHI",
+      "hair_color": "BLOSSOM_PINK",
+      "eye_color": "JADE",
+      "eye_style": "starlit",
+      "feminine": true,
       "complexion": 0,
       "scale": 14
     }
