@@ -414,6 +414,16 @@
     "hg018_side_part",
     "hg019_shaggy_mop",
     "hg020_braided_tail",
+    "hg021_tied_long_straight",
+    "hg022_high_side_ponytail",
+    "hg023_nape_double_buns",
+    "hg024_braid_crown",
+    "hg025_twin_shoulder_braids",
+    "hg026_short_hime",
+    "hg027_long_waves",
+    "hg028_chin_bob",
+    "hg029_asymmetric_bob",
+    "hg030_half_up_knot",
     "hg031_neat_side_part",
     "hg032_top_knot",
     "hg033_slicked_back",
@@ -497,6 +507,9 @@
     "wg006_long_tail_protector",
     "wg007_field_hood",
     "wg008_side_knot_protector",
+    "wg009_hairband_protector",
+    "wg010_kanzashi_pins",
+    "wg011_infiltration_hood",
     "wg013_medic_kerchief",
     "wg014_seal_tag_band",
     "wg015_tracker_hood",
@@ -784,6 +797,26 @@
     "tg038_kosode_vest",
     "tg039_medic_field_vest",
     "tg040_bandaged_combat_wrap",
+    "tg041_crossed_wrap_top",
+    "tg042_cropped_mesh_jacket",
+    "tg043_high_collar_sleeveless",
+    "tg044_qipao_tunic",
+    "tg045_armored_bodice",
+    "tg046_kimono_sleeve_obi",
+    "tg047_halter_mesh_top",
+    "tg048_flak_wrap",
+    "tg049_infiltration_top",
+    "tg050_shoulder_cape_top",
+    "tg051_bolero_tunic",
+    "tg052_vented_long_tunic",
+    "tg053_short_haori",
+    "tg054_sarashi_jacket",
+    "tg055_medic_tunic",
+    "tg056_corset_obi_top",
+    "tg057_taijutsu_gi",
+    "tg058_split_sleeve_tunic",
+    "tg059_scale_vest",
+    "tg060_sleeveless_long_coat",
     "tg061_medic_coat",
     "tg062_field_medic_vest",
     "tg063_ward_tunic",
@@ -960,6 +993,26 @@
     "bg038_three_quarter_trousers",
     "bg039_scroll_belt_trousers",
     "bg040_padded_greaves",
+    "bg041_split_skirt_shorts",
+    "bg042_apron_skirt_leggings",
+    "bg043_mesh_leggings_kneepads",
+    "bg044_wrapped_capris",
+    "bg045_hakama_skirt",
+    "bg046_long_slit_skirt",
+    "bg047_shorts_thigh_wraps",
+    "bg048_armored_tassets",
+    "bg049_wrap_skirt_boots",
+    "bg050_flared_trousers",
+    "bg051_tabi_leggings",
+    "bg052_pleated_skort",
+    "bg053_sash_trousers",
+    "bg054_cargo_capris",
+    "bg055_asymmetric_skirt",
+    "bg056_stocking_shorts",
+    "bg057_narrow_hakama",
+    "bg058_mesh_shorts_boots",
+    "bg059_tail_skirt",
+    "bg060_kunoichi_greaves",
     "bg061_ward_trousers",
     "bg062_medic_slacks",
     "bg063_sealer_hakama",
@@ -10554,6 +10607,475 @@
           "palettes": [
             "FIELD_DUSK",
             "FIELD_UMBER"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kunoichi",
+      "name": "Kunoichi",
+      "role": "shinobi",
+      "tagline": "Fitted, agile wear for the village's clanless kunoichi and anyone who likes it: wraps, qipao cuts, obi, split skirts and mesh.",
+      "palettes": {
+        "KUNOICHI_PLUM": {
+          "name": "Kunoichi Plum",
+          "P": "#6a2f5a",
+          "S": "#e8dccf",
+          "A": "#d4a03a",
+          "L": "#6b4a35",
+          "M": "#a9adb3",
+          "K": "#1f1820",
+          "D": "#353a5a"
+        },
+        "KUNOICHI_CRIMSON": {
+          "name": "Kunoichi Crimson",
+          "P": "#9b2a32",
+          "S": "#efe3cf",
+          "A": "#2f2a3a",
+          "L": "#5e3d2a",
+          "M": "#b0b4b8",
+          "K": "#1c1416",
+          "D": "#2e3550"
+        },
+        "KUNOICHI_TEAL": {
+          "name": "Kunoichi Teal",
+          "P": "#2f7a78",
+          "S": "#e6e0cc",
+          "A": "#d9824a",
+          "L": "#6a4b33",
+          "M": "#a7b1b5",
+          "K": "#172022",
+          "D": "#2b3f52"
+        },
+        "KUNOICHI_SAKURA": {
+          "name": "Kunoichi Sakura",
+          "P": "#d98ba0",
+          "S": "#f4ecdf",
+          "A": "#6a3c64",
+          "L": "#7a5640",
+          "M": "#b6b2ad",
+          "K": "#2a1e26",
+          "D": "#3e3a5a"
+        },
+        "KUNOICHI_INDIGO": {
+          "name": "Kunoichi Indigo",
+          "P": "#33356e",
+          "S": "#d7d2e2",
+          "A": "#c2465a",
+          "L": "#574235",
+          "M": "#a8adbb",
+          "K": "#15131f",
+          "D": "#262a48"
+        },
+        "KUNOICHI_MOSS": {
+          "name": "Kunoichi Moss",
+          "P": "#5e6b3a",
+          "S": "#e2dbc0",
+          "A": "#b5452f",
+          "L": "#6a4a2e",
+          "M": "#a6a690",
+          "K": "#1b1d14",
+          "D": "#33402e"
+        },
+        "KUNOICHI_SLATE": {
+          "name": "Kunoichi Slate",
+          "P": "#4a5560",
+          "S": "#d6d8d3",
+          "A": "#7fb0c4",
+          "L": "#4b3d33",
+          "M": "#b8bec4",
+          "K": "#15181c",
+          "D": "#2a3240"
+        },
+        "KUNOICHI_AMBER": {
+          "name": "Kunoichi Amber",
+          "P": "#b8732e",
+          "S": "#f0e4c8",
+          "A": "#3c5a72",
+          "L": "#6b4528",
+          "M": "#b9ad8e",
+          "K": "#241a12",
+          "D": "#30384e"
+        },
+        "KUNOICHI_LILAC": {
+          "name": "Kunoichi Lilac",
+          "P": "#8a74b4",
+          "S": "#f0ecf2",
+          "A": "#3d8a7c",
+          "L": "#6c5844",
+          "M": "#b4b8c0",
+          "K": "#221c2c",
+          "D": "#3c3858"
+        },
+        "KUNOICHI_NIGHT": {
+          "name": "Kunoichi Night",
+          "P": "#1f2230",
+          "S": "#8c8fa0",
+          "A": "#8e3550",
+          "L": "#3a2e2a",
+          "M": "#9aa0aa",
+          "K": "#0e0f14",
+          "D": "#20263a"
+        },
+        "KUNOICHI_JADE": {
+          "name": "Kunoichi Jade",
+          "P": "#3f8a5e",
+          "S": "#ece6d2",
+          "A": "#c9a23c",
+          "L": "#5e4630",
+          "M": "#a9b0a8",
+          "K": "#18201a",
+          "D": "#2a3a3a"
+        },
+        "KUNOICHI_SAND": {
+          "name": "Kunoichi Sand",
+          "P": "#c2a77a",
+          "S": "#f3ecdc",
+          "A": "#8b3a3a",
+          "L": "#6e5236",
+          "M": "#b2aa96",
+          "K": "#2a2218",
+          "D": "#3d3a40"
+        }
+      },
+      "eye_colors": {
+        "KUNOICHI_HAZEL": {
+          "name": "Kunoichi Hazel",
+          "ramp": [
+            "#120c08",
+            "#5a3b1c",
+            "#8a6232",
+            "#c49a5c",
+            "#f1efe6"
+          ]
+        },
+        "KUNOICHI_GREY": {
+          "name": "Kunoichi Grey",
+          "ramp": [
+            "#0c0d10",
+            "#3d4652",
+            "#66727f",
+            "#a3aeb8",
+            "#f1efe6"
+          ]
+        }
+      },
+      "pool": {
+        "hair": [
+          "hg021_tied_long_straight",
+          "hg022_high_side_ponytail",
+          "hg023_nape_double_buns",
+          "hg024_braid_crown",
+          "hg025_twin_shoulder_braids",
+          "hg026_short_hime",
+          "hg027_long_waves",
+          "hg028_chin_bob",
+          "hg029_asymmetric_bob",
+          "hg030_half_up_knot"
+        ],
+        "hair_colors": [
+          "RAVEN",
+          "RAVEN",
+          "ESPRESSO",
+          "ESPRESSO",
+          "CHESTNUT",
+          "CHESTNUT",
+          "AUBURN",
+          "GINGER",
+          "HONEY",
+          "WHEAT",
+          "ASH_BLONDE",
+          "SILVER",
+          "BLOSSOM_PINK",
+          "VIOLET"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "DARK",
+          "SKY",
+          "JADE",
+          "KUNOICHI_HAZEL",
+          "KUNOICHI_GREY"
+        ],
+        "palettes": [
+          "KUNOICHI_PLUM",
+          "KUNOICHI_CRIMSON",
+          "KUNOICHI_TEAL",
+          "KUNOICHI_SAKURA",
+          "KUNOICHI_INDIGO",
+          "KUNOICHI_MOSS",
+          "KUNOICHI_SLATE",
+          "KUNOICHI_AMBER",
+          "KUNOICHI_LILAC",
+          "KUNOICHI_NIGHT",
+          "KUNOICHI_JADE",
+          "KUNOICHI_SAND"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "wg009_hairband_protector",
+          "wg009_hairband_protector",
+          "wg010_kanzashi_pins",
+          "wg011_infiltration_hood"
+        ],
+        "bottoms": [
+          "b04_kunoichi_shorts",
+          "b08_mesh_leggings"
+        ],
+        "complexions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "outfits": [
+        {
+          "id": "wrap_runner",
+          "name": "Wrap Runner",
+          "top": "tg041_crossed_wrap_top",
+          "bottom": "bg041_split_skirt_shorts",
+          "rank": "genin",
+          "palettes": [
+            "KUNOICHI_PLUM",
+            "KUNOICHI_SAKURA",
+            "KUNOICHI_TEAL"
+          ]
+        },
+        {
+          "id": "mesh_jacket",
+          "name": "Mesh Jacket",
+          "top": "tg042_cropped_mesh_jacket",
+          "bottom": "bg058_mesh_shorts_boots",
+          "rank": "chunin",
+          "palettes": [
+            "KUNOICHI_SLATE",
+            "KUNOICHI_INDIGO",
+            "KUNOICHI_CRIMSON"
+          ]
+        },
+        {
+          "id": "high_collar",
+          "name": "High Collar",
+          "top": "tg043_high_collar_sleeveless",
+          "bottom": "bg047_shorts_thigh_wraps",
+          "rank": "genin",
+          "palettes": [
+            "KUNOICHI_CRIMSON",
+            "KUNOICHI_JADE",
+            "KUNOICHI_LILAC"
+          ]
+        },
+        {
+          "id": "qipao_scout",
+          "name": "Qipao Scout",
+          "top": "tg044_qipao_tunic",
+          "bottom": "bg051_tabi_leggings",
+          "rank": "chunin",
+          "palettes": [
+            "KUNOICHI_CRIMSON",
+            "KUNOICHI_JADE",
+            "KUNOICHI_INDIGO"
+          ]
+        },
+        {
+          "id": "armored_bodice",
+          "name": "Armored Bodice",
+          "top": "tg045_armored_bodice",
+          "bottom": "bg060_kunoichi_greaves",
+          "rank": "jonin",
+          "palettes": [
+            "KUNOICHI_MOSS",
+            "KUNOICHI_NIGHT",
+            "KUNOICHI_CRIMSON"
+          ]
+        },
+        {
+          "id": "kimono_sleeve",
+          "name": "Kimono Sleeve",
+          "top": "tg046_kimono_sleeve_obi",
+          "bottom": "bg045_hakama_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "KUNOICHI_INDIGO",
+            "KUNOICHI_PLUM",
+            "KUNOICHI_SAKURA"
+          ]
+        },
+        {
+          "id": "halter_skort",
+          "name": "Halter and Skort",
+          "top": "tg047_halter_mesh_top",
+          "bottom": "bg052_pleated_skort",
+          "rank": "genin",
+          "palettes": [
+            "KUNOICHI_TEAL",
+            "KUNOICHI_SAKURA",
+            "KUNOICHI_LILAC"
+          ]
+        },
+        {
+          "id": "flak_wrap",
+          "name": "Flak Wrap",
+          "top": "tg048_flak_wrap",
+          "bottom": "bg059_tail_skirt",
+          "rank": "jonin",
+          "palettes": [
+            "KUNOICHI_MOSS",
+            "KUNOICHI_JADE"
+          ]
+        },
+        {
+          "id": "infiltrator",
+          "name": "Infiltrator",
+          "top": "tg049_infiltration_top",
+          "bottom": "bg043_mesh_leggings_kneepads",
+          "rank": "chunin",
+          "palettes": [
+            "KUNOICHI_NIGHT",
+            "KUNOICHI_INDIGO"
+          ]
+        },
+        {
+          "id": "half_cape",
+          "name": "Half Cape",
+          "top": "tg050_shoulder_cape_top",
+          "bottom": "bg049_wrap_skirt_boots",
+          "rank": "jonin",
+          "palettes": [
+            "KUNOICHI_AMBER",
+            "KUNOICHI_TEAL",
+            "KUNOICHI_CRIMSON"
+          ]
+        },
+        {
+          "id": "bolero",
+          "name": "Bolero",
+          "top": "tg051_bolero_tunic",
+          "bottom": "bg056_stocking_shorts",
+          "rank": "genin",
+          "palettes": [
+            "KUNOICHI_AMBER",
+            "KUNOICHI_TEAL",
+            "KUNOICHI_SAND"
+          ]
+        },
+        {
+          "id": "long_tunic",
+          "name": "Long Tunic",
+          "top": "tg052_vented_long_tunic",
+          "bottom": "bg044_wrapped_capris",
+          "rank": "genin",
+          "palettes": [
+            "KUNOICHI_SAND",
+            "KUNOICHI_MOSS",
+            "KUNOICHI_SLATE"
+          ]
+        },
+        {
+          "id": "short_haori",
+          "name": "Short Haori",
+          "top": "tg053_short_haori",
+          "bottom": "bg057_narrow_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "KUNOICHI_PLUM",
+            "KUNOICHI_INDIGO",
+            "KUNOICHI_NIGHT"
+          ]
+        },
+        {
+          "id": "sarashi",
+          "name": "Sarashi Jacket",
+          "top": "tg054_sarashi_jacket",
+          "bottom": "bg054_cargo_capris",
+          "rank": "chunin",
+          "palettes": [
+            "KUNOICHI_AMBER",
+            "KUNOICHI_SAND",
+            "KUNOICHI_MOSS"
+          ]
+        },
+        {
+          "id": "field_medic",
+          "name": "Field Medic",
+          "top": "tg055_medic_tunic",
+          "bottom": "bg042_apron_skirt_leggings",
+          "rank": "chunin",
+          "palettes": [
+            "KUNOICHI_JADE",
+            "KUNOICHI_LILAC",
+            "KUNOICHI_SAKURA"
+          ]
+        },
+        {
+          "id": "corset_obi",
+          "name": "Corset Obi",
+          "top": "tg056_corset_obi_top",
+          "bottom": "bg046_long_slit_skirt",
+          "rank": "jonin",
+          "palettes": [
+            "KUNOICHI_CRIMSON",
+            "KUNOICHI_PLUM",
+            "KUNOICHI_NIGHT"
+          ]
+        },
+        {
+          "id": "taijutsu",
+          "name": "Taijutsu Gi",
+          "top": "tg057_taijutsu_gi",
+          "bottom": "bg050_flared_trousers",
+          "rank": "genin",
+          "palettes": [
+            "KUNOICHI_CRIMSON",
+            "KUNOICHI_INDIGO",
+            "KUNOICHI_AMBER"
+          ]
+        },
+        {
+          "id": "split_sleeve",
+          "name": "Split Sleeve",
+          "top": "tg058_split_sleeve_tunic",
+          "bottom": "bg055_asymmetric_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "KUNOICHI_LILAC",
+            "KUNOICHI_SAKURA",
+            "KUNOICHI_TEAL"
+          ]
+        },
+        {
+          "id": "scale_guard",
+          "name": "Scale Guard",
+          "top": "tg059_scale_vest",
+          "bottom": "bg048_armored_tassets",
+          "rank": "jonin",
+          "palettes": [
+            "KUNOICHI_NIGHT",
+            "KUNOICHI_CRIMSON",
+            "KUNOICHI_SLATE"
+          ]
+        },
+        {
+          "id": "travel_coat",
+          "name": "Travel Coat",
+          "top": "tg060_sleeveless_long_coat",
+          "bottom": "bg053_sash_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "KUNOICHI_SLATE",
+            "KUNOICHI_AMBER",
+            "KUNOICHI_INDIGO"
           ]
         }
       ]
