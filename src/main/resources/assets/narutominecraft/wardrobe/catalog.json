@@ -63,7 +63,22 @@
     "h06_low_ponytail",
     "h07_bowl_cut",
     "h08_short_crop",
-    "h09_high_ponytail"
+    "h09_high_ponytail",
+    "h501_pineapple_tail",
+    "h502_shadow_sideburns",
+    "h503_sprout_tail",
+    "h504_low_tail",
+    "h505_twin_sprouts",
+    "h506_loose_wisps",
+    "h507_lazy_bedhead",
+    "h508_antler_tufts",
+    "h509_shogi_knot",
+    "h510_herder_wrap",
+    "h511_drooping_tail",
+    "h512_side_tail",
+    "h513_tail_let_down",
+    "h514_cropped_spikes",
+    "h515_swept_sprout"
   ],
   "headwear": [
     "w01_kage_hat",
