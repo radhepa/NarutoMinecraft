@@ -1,0 +1,527 @@
+{
+  "id": "h1914_half_up_bun",
+  "kind": "hair",
+  "name": "Half-Up Bun",
+  "gender": "unisex",
+  "texture": "hair/h1914_half_up_bun.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "brow_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        44
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "brow_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        44
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "brow_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -44
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "brow_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -44
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "frame_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.35,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        24,
+        0
+      ]
+    },
+    {
+      "id": "frame_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.35,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "frame_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.35,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "frame_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.35,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ]
+    },
+    {
+      "id": "bun",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.0,
+        5.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.5,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        3
+      ],
+      "uv": [
+        44,
+        0
+      ]
+    },
+    {
+      "id": "back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.0,
+        4.45
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        8,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.0,
+        4.45
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.0,
+        4.45
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        10.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        26,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.0,
+        4.45
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        31,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.0,
+        4.45
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        11.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        38,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.0,
+        4.45
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        0.0,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        43,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.0,
+        4.45
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        0.5,
+        11.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        50,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.0,
+        4.45
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        2.0,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        55,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.0,
+        4.45
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        2.5,
+        10.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        18
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Small bun at the back of the crown, the rest loose to the shoulder blades, open forehead."
+}

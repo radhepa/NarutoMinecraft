@@ -1,0 +1,190 @@
+{
+  "id": "t1904_kimono_trim_blouse",
+  "kind": "top",
+  "name": "Kimono Trim Blouse",
+  "gender": "unisex",
+  "texture": "tops/t1904_kimono_trim_blouse.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_wide_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        1.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_wide_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "bow_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.4,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -30
+      ],
+      "origin": [
+        -3,
+        -1,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        10
+      ]
+    },
+    {
+      "id": "bow_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.4,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        30
+      ],
+      "origin": [
+        0,
+        -1,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        38,
+        10
+      ]
+    },
+    {
+      "id": "bow_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.6,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        10
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short kimono-cut blouse with a cream-banded crossed collar, wide banded elbow sleeves, a sash with a back bow."
+}

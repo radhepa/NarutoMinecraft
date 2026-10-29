@@ -1,0 +1,178 @@
+{
+  "id": "t1909_shop_haori",
+  "kind": "top",
+  "name": "Shop Haori",
+  "gender": "unisex",
+  "texture": "tops/t1909_shop_haori.png",
+  "extrasHeight": 32,
+  "tags": [
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_hanging_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        2.5,
+        -2.6
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1,
+      "motion": "sway"
+    },
+    {
+      "id": "left_hanging_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        2.5,
+        -2.6
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1,
+      "motion": "sway"
+    },
+    {
+      "id": "mon_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        1.4,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        -1
+      ],
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "mon_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        1.4,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        -1
+      ],
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.0,
+        2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        15,
+        12
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Open beige haori over a cream kimono, accent-lined fronts, wide hanging sleeves, circle mon and back crest."
+}
