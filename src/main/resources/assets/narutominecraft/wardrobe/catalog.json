@@ -63,7 +63,22 @@
     "h06_low_ponytail",
     "h07_bowl_cut",
     "h08_short_crop",
-    "h09_high_ponytail"
+    "h09_high_ponytail",
+    "h101_hashirama_mane",
+    "h102_tobirama_spikes",
+    "h103_twin_low_tails",
+    "h104_nawaki_spikes",
+    "h105_war_mane",
+    "h106_warring_topknot",
+    "h107_wrapped_tail",
+    "h108_village_bob",
+    "h109_swept_mane",
+    "h110_forest_braid",
+    "h111_wild_high_tail",
+    "h112_shaggy_nape",
+    "h113_layered_flick",
+    "h114_half_up_knot",
+    "h115_nape_chignon"
   ],
   "headwear": [
     "w01_kage_hat",
