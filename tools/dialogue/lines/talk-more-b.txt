@@ -82,7 +82,7 @@ You've done a lot of growing up on your own. You don't have to do the rest of it
 If anyone gives you trouble over any of that, you send them to me.
 
 ## talk.your_story.warmhearted  fn=deepen_bond
-Oh, sweetheart of a friend. Come and sit by me. You don't have to finish if you don't want to.
+Oh, my dear friend. Come and sit by me. You don't have to finish if you don't want to.
 ## talk.your_story.thoughtful  fn=deepen_bond
 Can I ask one question about it? Just one. Then I'll only listen.
 ## talk.your_story.playful  fn=deepen_bond
@@ -127,7 +127,7 @@ I'm glad you're my friend. That's all. I'm just glad.
 Oh, you think you're so funny. ...You are, a little.
 Ha! Just you wait. I know where you live.
 That's it. You're getting a snowball down the back of the neck next winter.
-I'll pretend I didn't hear that. Badly.
+My ears have stopped working. Very convenient timing.
 How dare you. ...How dare you be right.
 Fine. Fine! I'm writing that one down for revenge.
 Rude. Accurate, but rude.
