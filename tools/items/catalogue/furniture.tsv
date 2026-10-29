@@ -60,7 +60,7 @@ tailor_table	Tailor's Table	station	craft	chunin	later	1	400	-	Sewing frame and 
 cooking_pot	Cooking Pot	station	cook	any	beta1	1	80	vf	Village Friends' pot over a fire: pot dishes	-	vf	vf=villagefriends:cooking_pot;station=pot
 clay_oven	Clay Oven	station	cook	any	beta1	1	150	vf	Village Friends' oven	-	vf	vf=villagefriends:clay_oven;station=oven
 prep_table	Prep Table	station	cook	any	beta1	1	70	vf	Village Friends' prep table	-	vf	vf=villagefriends:prep_table;station=prep
-moving_crate	Moving Crate	container	crate	chunin	later	1	0	service:movers	Furniture and a chest's contents packed for the mover	-	block	block=moving_crate;keeps_contents=yes
+moving_crate	Moving Crate	container	crate	chunin	later	1	0	home:moving	Furniture and a chest's contents packed on moving day (friends help; moving is free)	-	block	block=moving_crate;keeps_contents=yes
 display_case	Display Case	furniture	display	any	beta1	1	130	-	A glass-topped case that shows four keepsakes, curios or weapons	-	block	block=glass_case;slots=4
 wall_mount	Wall Mount	furniture	display	any	beta1	1	45	-	A wooden wall bracket that shows one item: a blade, a mask, a fan, a curio	-	block	block=wall_mount;slots=1
 curio_cabinet	Curio Cabinet	furniture	display	any	beta2	1	220	-	A crowded cabinet of little shelves that shows twelve small things	-	block	block=curio_shelf;slots=12
@@ -96,3 +96,4 @@ engawa_bench	Engawa Bench	furniture	seat	any	later	1	250	-	A veranda bench along
 clan_banner	Clan Banner	furniture	wall	any	beta2	1	60	clan	A banner in a clan's colours, sold in its quarter (wave 2 clans from Beta 2.5)	-	block	block=clan_banner;variant=clan:25
 clan_screen	Clan Screen	furniture	screen	any	beta2	1	120	clan	A folding screen with a clan's crest	-	block	block=clan_screen;variant=clan:25
 clan_lantern	Clan Lantern	furniture	light	any	beta2	1	70	clan	A lantern painted with a clan's crest	-	block	block=clan_lantern;variant=clan:25;light=12
+pinboard	Pinboard	furniture	wall	any	later	1	40	-	A cork board for notes, maps and clues pinned to the wall	-	block	block=pinboard;slots=6

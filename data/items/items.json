@@ -1,7 +1,7 @@
 {
  "format": 1,
  "_doc": "Compiled by tools/items/items.py from tools/items/catalogue/*.tsv. Do not edit.",
- "count": 558,
+ "count": 559,
  "items": [
   {
    "id": "flash_bomb",
@@ -1412,9 +1412,9 @@
    "price": 0,
    "sell": 0,
    "sources": [
-    "service:movers"
+    "home:moving"
    ],
-   "use": "Furniture and a chest's contents packed for the mover",
+   "use": "Furniture and a chest's contents packed on moving day (friends help; moving is free)",
    "art": "block",
    "props": {
     "block": "moving_crate",
@@ -7747,6 +7747,29 @@
    }
   },
   {
+   "id": "pinboard",
+   "registry": "shinobi_life:pinboard",
+   "new": true,
+   "name": "Pinboard",
+   "mod": "shinobi_life",
+   "category": "furniture",
+   "group": "wall",
+   "rank": "any",
+   "slice": "later",
+   "stack": 1,
+   "price": 40,
+   "sell": 20,
+   "sources": [
+    "shop:furniture_shop"
+   ],
+   "use": "A cork board for notes, maps and clues pinned to the wall",
+   "art": "block",
+   "props": {
+    "block": "pinboard",
+    "slots": "6"
+   }
+  },
+  {
    "id": "poster",
    "registry": "shinobi_life:poster",
    "new": true,
@@ -12090,7 +12113,7 @@
    "id": "half_charm",
    "registry": "shinobi_progression:half_charm",
    "new": true,
-   "name": "Half Charm",
+   "name": "Half a Charm",
    "mod": "shinobi_progression",
    "category": "key",
    "group": "story",
@@ -12102,7 +12125,7 @@
    "sources": [
     "kit:start"
    ],
-   "use": "Half of a small charm. You have always had it",
+   "use": "Charred wood, carved by hand. Half of a pair.",
    "art": "icon",
    "props": {
     "bind": "player",

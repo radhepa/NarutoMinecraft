@@ -1906,6 +1906,13 @@
      "qty": 1,
      "restock": "weekly",
      "pool": "core"
+    },
+    {
+     "item": "pinboard",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
     }
    ],
    "jobs": [
@@ -3979,15 +3986,6 @@
    "price": 30000,
    "effect": "Buy a small house",
    "note": "The home session's number (no rent: homes are bought or given)"
-  },
-  {
-   "id": "service.movers",
-   "provider": "housing_office",
-   "rank": "chunin",
-   "slice": "later",
-   "price": 200,
-   "effect": "The mover packs your furniture and chests into moving crates",
-   "note": "Per move; the home session's number"
   },
   {
    "id": "service.found_clan",

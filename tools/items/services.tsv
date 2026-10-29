@@ -20,7 +20,6 @@ service.shrine_offering	shrine_office	any	beta1	5	An offering: a day of the shri
 service.adoption.pup	inuzuka_clinic	any	beta1	100	Adopt a ninken pup	Includes a collar and a day of kibble
 service.adoption.cat	cat_shelter	any	beta1	40	Adopt a cat	Includes a collar
 service.house	housing_office	jonin	later	30000	Buy a small house	The home session's number (no rent: homes are bought or given)
-service.movers	housing_office	chunin	later	200	The mover packs your furniture and chests into moving crates	Per move; the home session's number
 service.found_clan	clan_registry	chunin	later	20000	Found a clan	ROADMAP §11 Player clans
 service.estate_hall	clan_registry	chunin	later	5000	Open one hall of your estate	5,000 to 15,000 by hall
 service.travel	travel_desk	genin	later	50	A personal trip to an open far region	Free on missions

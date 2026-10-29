@@ -1,7 +1,7 @@
 {
  "format": 1,
  "_doc": "Blocks asked of the Konoha build session (its tools/konoha/blocks.json owns them). Compiled from the catalogue, shops.tsv, stations.tsv and blocks.tsv.",
- "count": 149,
+ "count": 150,
  "blocks": [
   {
    "block": "block:bolt_shelf",
@@ -628,7 +628,7 @@
    "block": "block:moving_crate",
    "kind": "furniture",
    "item": "item:moving_crate",
-   "description": "Furniture and a chest's contents packed for the mover",
+   "description": "Furniture and a chest's contents packed on moving day (friends help; moving is free)",
    "used_by": []
   },
   {
@@ -668,6 +668,13 @@
    "kind": "furniture",
    "item": "item:photo_frame",
    "description": "Frames one photograph",
+   "used_by": []
+  },
+  {
+   "block": "block:pinboard",
+   "kind": "furniture",
+   "item": "item:pinboard",
+   "description": "A cork board for notes, maps and clues pinned to the wall",
    "used_by": []
   },
   {

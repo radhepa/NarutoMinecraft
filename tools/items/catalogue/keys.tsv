@@ -20,4 +20,4 @@ bounty_token	Bandit Bounty Token	key	mission	genin	beta2	64	0	mission:c;drop:ban
 festival_ticket	Festival Game Ticket	key	event	any	beta2	64	2	event:leaf_festival	One try at a festival game	-	icon	-
 prize_token	Prize Token	currency	event	any	beta2	64	0	event:leaf_festival;event:chunin_exams	Won at games; trade at the prize stall	-	icon	-
 spare_key	Spare Key	key	home	any	beta1	1	0	service:locksmith	A spare key to your home, to give to someone you trust	-	icon	mod=shinobi_life
-half_charm	Half Charm	key	story	any	beta1	1	0	kit:start	Half of a small charm. You have always had it	-	icon	bind=player;named_by=story;no_drop=yes;no_sell=yes;no_store=yes
+half_charm	Half a Charm	key	story	any	beta1	1	0	kit:start	Charred wood, carved by hand. Half of a pair.	-	icon	bind=player;named_by=story;no_drop=yes;no_sell=yes;no_store=yes
