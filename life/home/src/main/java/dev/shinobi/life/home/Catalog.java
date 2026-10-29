@@ -125,11 +125,11 @@ public final class Catalog {
         p("folding_screen", Category.DECOR, 1, 3, 1, 220, "", "b2", Source.SHOP);
         p("kotatsu", Category.TABLE, 6, 2, 2, 280, "", "b2", Source.SHOP, "winter", "meal");
         p("bedroll", Category.BED, 1, 0, 1, 80, "", "b3", Source.SHOP, "camp");
-        shelf("display_shelf", Category.DISPLAY, 1, 0, 45, "b1", 6, "keepsake");
-        shelf("wall_mount", Category.DISPLAY, 1, 0, 15, "b1", 1, "keepsake");
+        shelf("display_shelf", Category.DISPLAY, 1, 0, 75, "b1", 6, "keepsake");
+        shelf("wall_mount", Category.DISPLAY, 1, 0, 45, "b1", 1, "keepsake");
         shelf("photo_frame", Category.DISPLAY, 1, 0, 15, "b1", 1, "photo");
         shelf("display_case", Category.DISPLAY, 2, 1, 130, "b2", 4, "keepsake");
-        shelf("curio_cabinet", Category.DISPLAY, 2, 1, 200, "b2", 12, "keepsake");
+        shelf("curio_cabinet", Category.DISPLAY, 2, 1, 220, "b2", 12, "keepsake");
 
         // Later homes (designed now, built after the beta): a bigger bed, a hearth, a partner's and a child's things.
         p("wooden_bed", Category.BED, 9, 3, 3, 600, "", "later", Source.SHOP, "bed");

@@ -210,7 +210,8 @@ a curio cabinet 12, a wall mount 1, a weapon rack 4. Each thing on show adds 1 s
 curios on show get remarked on (`home.visit.curios`).
 
 When a friend visits and sees **their gift on show**, they notice it, once (`home.visit.kept_gift`):
-the bond engine's `Gifts.seenDisplayed`, which the giver remembers (`saw_gift_displayed`). Gifts
+the bond engine's `Gifts.noticed`, which the giver remembers (`saw_gift_displayed`); someone in a
+photo on the wall remembers that too (`saw_photo_together`), once per version. Gifts
 come from the bond engine's record of what you were given (`Gifts.received`: who, what, when, the
 occasion).
 
@@ -289,21 +290,21 @@ from these pools (each may have per-personality variants, `.<archetype>`):
 | `home.note.<kind>` | Notes left in the mailbox (`drop_in`, `sensei_check`, `left_food`, `tidied`, `neighbour.<why>`...) |
 
 How much they enjoyed it (0 to 1) goes to the bond engine: any visit is contact and warmth; a good
-one (0.4+) is the `hung_out` shared experience; a very good one (0.65+) a little more warmth. A mess
+one (0.4+) is its `visited_home` act (a shared experience); a very good one (0.65+) a little more
+warmth. A mess
 lowers how much they enjoyed it, never the bond.
 
 ### 9.1 Home hangouts
 
-Proposed to the bond engine as activities at `home` (hosted by you), so asking, tastes, highlights
-and rituals work as they do at Ichiraku. `home_dinner` is already in its catalog; the others count
-as a plain shared experience until it carries them.
+Activities in the bond engine's catalog at `home` (hosted by you), so asking, tastes, highlights
+and rituals work as they do at Ichiraku: a friend can say "not today" to a study night too.
 
 | Hangout | Hours | From level | Up to | Act | Loved by | Slice |
 |---|---|---|---|---|---|---|
 | `study_night` | 18–23 | 2 | 4 | studying | thoughtful, meticulous, curious, shy | Beta 1 |
 | `cook_together` | 17–22 | 3 | 4 | a meal | warmhearted, playful, gentle | Beta 1 |
 | `balcony_stargazing` | 20–24 | 4 | 3 | hanging out | curious, imaginative, shy, thoughtful | Beta 1 |
-| `home_dinner` (exists) | 18–21 | 5 | 6 | a meal | warmhearted, protective, steadfast | Beta 1 |
+| `home_dinner` | 18–21 | 5 | 6 | a meal | warmhearted, protective, steadfast | Beta 1 |
 | `squad_crash` | 18–23 | 3 | 3 | hanging out | fiery, adventurous, playful | Beta 2 |
 | `tea_at_home` | 13–20 | 4 | 3 | hanging out | thoughtful, stern, gentle, pragmatic | Beta 2 |
 
@@ -312,8 +313,8 @@ Hosting adds a little mess (one per guest, one more for a meal).
 ### 9.2 Spare keys
 
 At **bond level 6** (Close Friend) you can give someone a spare key: a little warmth and the bond
-flag `home.key` (quests read it with `bond_flag`). It is not a moment, so it never opens a story
-gate. The Academy flat has three keys. Key holders drop by a little more often,
+flag `home.key` (quests read it with `bond_flag`; the warmth only the first time, so taking a key
+back and giving it again earns nothing). It is not a moment, so it never opens a story gate. The Academy flat has three keys. Key holders drop by a little more often,
 wait inside for you, and may leave food or tidy while you are away. You can take a key back
 quietly; nobody is told.
 
@@ -451,8 +452,8 @@ items session's `economy.json`. Comfort / style / floor cells.
 | `barrel` | 0 / 1 / 1 | 15 | a vanilla barrel, 27 slots |
 | `workbench` | 0 / 0 / 2 | 250 | the apartment's workbench (ROADMAP.md §7) |
 | `tansu_chest` | 1 / 3 / 1 | 180 | a chest, 27 slots |
-| `display_shelf` | 0 / 1 / 0 | 45 | shows 6 |
-| `wall_mount` | 0 / 1 / 0 | 15 | shows 1 |
+| `display_shelf` | 0 / 1 / 0 | 75 | shows 6 |
+| `wall_mount` | 0 / 1 / 0 | 45 | shows 1 |
 | `photo_frame` | 0 / 1 / 0 | 15 | hangs 1 photo |
 
 ### Beta 2
@@ -474,7 +475,7 @@ items session's `economy.json`. Comfort / style / floor cells.
 | `folding_screen` | 1 / 3 / 1 | 220 | the painted byobu |
 | `kotatsu` | 6 / 2 / 2 | 280 | counts double in winter |
 | `display_case` | 0 / 2 / 1 | 130 | shows 4 |
-| `curio_cabinet` | 0 / 2 / 1 | 200 | shows 12 |
+| `curio_cabinet` | 0 / 2 / 1 | 220 | shows 12 |
 | `step_tansu` | 1 / 3 / 2 | 320 | a chest, 27 slots |
 | `clan_banner@<clan>`, `clan_screen@<clan>`, `clan_lantern@<clan>` | 0/3/0, 1/2/1, 2/2/1 | 60, 120, 70 | for the 8 wave-1 clans, sold in their quarters |
 
@@ -555,15 +556,13 @@ letters as VF Sealed Letters, visitors walking in on VF routines.
 | `Pantry`, `Plant`, `Mailbox` | The cupboard and staleness; the houseplant; the mailbox |
 | `Visits` | Who comes to the door, notes and waiting inside, reactions, hosting, spare keys |
 | `Practice` | Home practice, capped |
-| `Friends`, `BondFriends`, `HomeHangout` | The bridge to the bond engine, and the proposed home activities |
+| `Friends`, `BondFriends` | The bridge to the bond engine |
 
 **Hooks into the bond engine** (no friendship numbers are duplicated): `BondWorld.effectiveLevel`,
 `bonded`, `Schedule.free` and the personality for who visits; `talk`, `together`,
-`act(HUNG_OUT)` and `addFriendship` for how a visit went; `Gifts.seenDisplayed` for a gift on show;
-`setBondFlag("home.noticed:<what>")` for a photo; `setBondFlag("home.key")` for a key; `Together.invite` and `Together.go`
-for hosted hangouts in its catalog. Requested from the bonds session: the home hangouts of section
-9.1 in `Activity.CATALOG`, and an act of its own for a visit to your home, in place of the plain
-`hung_out` used today. The squad-after-a-mission and away-all-day rules read Core's
+`act(VISITED_HOME)` and `addFriendship` for how a visit went; `Gifts.noticed` for a gift or a photo
+on show (it sets `home.noticed:<what>` itself); `setBondFlag` and `clearBondFlag("home.key")` for a
+key; `Together.invite` and `Together.go` for every home hangout. The squad-after-a-mission and away-all-day rules read Core's
 `MissionEnded` event (`with_squad`, `slept_away`; MISSIONS.md §11).
 
 **Tests** (`./gradlew :life:home:test`, 44): the catalog's shape and counts, the Classic and Varied
@@ -591,7 +590,7 @@ time.
 
 | Slice | Days | Nights home / away | Real minutes awake at home a day | Visitors a week | Met / notes | Well Rested nights |
 |---|---|---|---|---|---|---|
-| Beta 1 | 12 | 12 / 0 | 4.2 | 0.6 | 1 / 0 | 10 of 12 |
+| Beta 1 | 12 | 12 / 0 | 4.2 | 0 to 1.2 (seeds vary) | 0 / 0 | 10 of 12 |
 | Beta 2 | 24 | 16 / 8 | 3.6 | 2.9 | 7 / 3 | 16 of 16 |
 | Beta 3 | 10 | 5 / 5 | 4.5 | 2.1 | 0 / 2 | 5 of 5 |
 
