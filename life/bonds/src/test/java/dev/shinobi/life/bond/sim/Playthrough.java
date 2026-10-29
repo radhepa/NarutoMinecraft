@@ -566,12 +566,23 @@ public final class Playthrough {
         return sb.toString();
     }
 
+    /** {@code BondWeb.score} at the end of the path, per kind of player across seeds: for the finale's web tiers. */
+    public static String websAcross(long[] seeds) {
+        var sb = new StringBuilder("\n== Bond web at the finale (BondWeb.score) ==\n");
+        for (var profile : Profile.values()) {
+            var scores = java.util.Arrays.stream(seeds).mapToInt(s -> dev.shinobi.life.bond.BondWeb.score(play(s, profile).world())).sorted().toArray();
+            sb.append(String.format("  %-8s %s%n", profile.id(), java.util.Arrays.toString(scores)));
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         long seed = args.length > 0 ? Long.parseLong(args[0]) : 20261029L;
         System.out.println("Bond pacing, seed " + seed + " (levels are the level each person acts on; coh = squad cohesion)");
         for (var profile : Profile.values()) System.out.print(table(play(seed, profile)));
         System.out.print(bonfires(new long[]{seed, 7, 11, 99, 2024}));
         System.out.print(standingsAcross(new long[]{seed, 7, 11, 99, 2024}));
+        System.out.print(websAcross(new long[]{seed, 7, 11, 99, 2024}));
     }
 
     private Playthrough() {}

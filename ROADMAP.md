@@ -373,7 +373,7 @@ Actions in the beta: `set_flag`, `start_quest`, `advance_quest`, `fail_quest`, `
 the bond actions `bond_event`, `shared_moment`, `start_conflict`, `apologize`, `reconcile`, `mend`,
 `reveal_fact`, `romance`, `return_to_squad`, `favor`, `deed`, `celebrate_birthday`, `bond_flag`,
 `kindle`, `resolve_hook`, `clan_event`, `clan_deed`, `mood_event`, `ask_question`, `give_player`,
-`clear_bond_flag` and `level_cap`.
+`clear_bond_flag`, `level_cap` and `thread`.
 Reserved now for later arcs, so the format does not change: `time_skip`, `carve_face`,
 `set_hokage`, `remove_from_squad`, `found_clan`, `marry`.
 

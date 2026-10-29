@@ -180,4 +180,14 @@ class KindlingAndBookTest {
         w.quarrel(TEAMMATE_B, Act.QUARREL);
         assertEquals(Tier.values()[calm.ordinal() - 1], Kindling.combatTier(w, TEAMMATE_B));
     }
+    @Test void aScriptedThreadShowsBelowLevelSixUntilItsFlag() {
+        var w = Leaf.classic(3, 0);
+        w.setFlag(Kindling.UNLOCK_FLAG, true);
+        w.bond(RIVAL).meet(0);
+        assertTrue(Kindling.threadSight(w).people().isEmpty());
+        assertEquals("", BondEffects.apply(w, java.util.Map.of("thread", java.util.Map.of("who", RIVAL, "floor", "spark", "style", "one_sided", "until", "story.test.seen"))));
+        assertEquals(List.of(new Kindling.Read(RIVAL, false, "one_sided")), Kindling.threadSight(w).people());
+        w.setFlag("story.test.seen", true);
+        assertTrue(Kindling.threadSight(w).people().isEmpty(), "gone once the beat has passed");
+    }
 }

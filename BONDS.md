@@ -429,6 +429,10 @@ and reads `Kindling.Flame` and `Kindling.Bonfire`; the story owns when it awaken
   shows *that* one of them hides something (a flicker, from a story bond flag `hides:<what>`), never
   *what*, and a thread between two others only when both are readable (how close they are, and
   whether they are at odds). Strangers and acquaintances stay unreadable.
+- **Scripted threads:** a story beat can show one thread below level 6,
+  `{"thread": {"who": "role:x", "floor": "spark", "style": "one_sided", "until": "<story flag>"}}`,
+  until its flag is set. Each read carries a `style`: plain, `fraying` (a quarrel or falling-out),
+  or the scripted one.
 - **A freely offered flame** (`offered_flame`, a kept moment) is the only way someone below level 6
   burns toward you (Spark). `gave_flame` is the player pouring their flame into someone (a kept
   moment). The story uses both at a few scripted beats.
@@ -702,6 +706,10 @@ weighing on standing (memories stay). Even with nothing else to their name, a pl
 village scores 40(1 - e^(-90/40)) = 35.8, so everyone who finishes reaches Hero with the village and
 level 50 is the Hokage's real filter. Before it, at 60 h: devoted 38 to 40, typical 37 to 39,
 reckless 20 to 23. After it: devoted 47 to 48, typical 46 to 47, reckless 42 (Hero is 35).
+
+**Bond web at the finale** (`BondWeb.score`, five seeds): devoted 42 to 50, typical 34 to 40,
+reckless 4 to 10. The story's finale tiers: under 20 small, 20 to 40 strong, 41 or more the whole
+village.
 
 Run `./gradlew :life:bonds:simulate` for the full tables, or `-Pexplain=role:teammate_a` to see
 where one bond's meters come from. `TimeAndPacingTest` holds these targets on five seeds.
