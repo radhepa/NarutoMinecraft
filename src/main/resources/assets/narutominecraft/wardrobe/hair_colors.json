@@ -151,6 +151,316 @@
         "#8662b5"
       ]
     },
+    "ABURAME_UMBER": {
+      "name": "Aburame Umber",
+      "ramp": [
+        "#160f0b",
+        "#24180f",
+        "#352418",
+        "#4b3523",
+        "#634a33"
+      ]
+    },
+    "ABURAME_BLACK": {
+      "name": "Aburame Black",
+      "ramp": [
+        "#0d0e0c",
+        "#171915",
+        "#22251f",
+        "#30352b",
+        "#434a3b"
+      ]
+    },
+    "ABURAME_ASH": {
+      "name": "Aburame Ash",
+      "ramp": [
+        "#24201b",
+        "#352f28",
+        "#4a4339",
+        "#62594c",
+        "#7d7363"
+      ]
+    },
+    "AKIMICHI_RUST": {
+      "name": "Akimichi Rust",
+      "ramp": [
+        "#43180f",
+        "#6a2716",
+        "#93391d",
+        "#b85428",
+        "#d9773c"
+      ]
+    },
+    "AKIMICHI_MAHOGANY": {
+      "name": "Akimichi Mahogany",
+      "ramp": [
+        "#2a0f0e",
+        "#451917",
+        "#642521",
+        "#86372c",
+        "#a8503b"
+      ]
+    },
+    "AKIMICHI_COPPER": {
+      "name": "Akimichi Copper",
+      "ramp": [
+        "#5a2010",
+        "#8a3418",
+        "#b44c22",
+        "#d66c33",
+        "#ef9455"
+      ]
+    },
+    "AKIMICHI_COCOA": {
+      "name": "Akimichi Cocoa",
+      "ramp": [
+        "#1e110e",
+        "#311b16",
+        "#46281f",
+        "#5f382a",
+        "#7e4d39"
+      ]
+    },
+    "GEKKO_BROWN": {
+      "name": "Gekko Brown",
+      "ramp": [
+        "#2a1a12",
+        "#432a1d",
+        "#5f3d29",
+        "#7d5539",
+        "#9f7250"
+      ]
+    },
+    "GEKKO_ASH": {
+      "name": "Gekko Ash",
+      "ramp": [
+        "#241f1c",
+        "#3a322d",
+        "#524840",
+        "#6d6157",
+        "#8c8074"
+      ]
+    },
+    "GEKKO_PLUM": {
+      "name": "Gekko Plum",
+      "ramp": [
+        "#1f1428",
+        "#33213f",
+        "#4c3160",
+        "#684684",
+        "#8a65a8"
+      ]
+    },
+    "GEKKO_INDIGO": {
+      "name": "Gekko Indigo",
+      "ramp": [
+        "#10121c",
+        "#1b1e2e",
+        "#282c44",
+        "#3a4062",
+        "#566087"
+      ]
+    },
+    "HATAKE_SILVER": {
+      "name": "Hatake Silver",
+      "ramp": [
+        "#565b68",
+        "#80858f",
+        "#aeb2b9",
+        "#d3d6da",
+        "#eef0f1"
+      ]
+    },
+    "HATAKE_WHITE_FANG": {
+      "name": "White Fang",
+      "ramp": [
+        "#6c6f78",
+        "#999ca3",
+        "#c7c9cc",
+        "#e4e5e4",
+        "#fbfbf8"
+      ]
+    },
+    "HATAKE_ASH": {
+      "name": "Hatake Ash",
+      "ramp": [
+        "#45484f",
+        "#686c74",
+        "#8f939a",
+        "#b7babe",
+        "#dadcdd"
+      ]
+    },
+    "HYUGA_INDIGO": {
+      "name": "Hyuga Indigo",
+      "ramp": [
+        "#14141f",
+        "#1f2033",
+        "#2c2e4a",
+        "#3f4268",
+        "#5c6191"
+      ]
+    },
+    "HYUGA_UMBER": {
+      "name": "Hyuga Umber",
+      "ramp": [
+        "#22140d",
+        "#3a2316",
+        "#553421",
+        "#714830",
+        "#946447"
+      ]
+    },
+    "HYUGA_ELDER_ASH": {
+      "name": "Hyuga Elder Ash",
+      "ramp": [
+        "#3a3634",
+        "#57514d",
+        "#77706a",
+        "#9a938b",
+        "#bdb6ad"
+      ]
+    },
+    "INUZUKA_BROWN": {
+      "name": "Inuzuka Brown",
+      "ramp": [
+        "#24150e",
+        "#3a2316",
+        "#55331f",
+        "#74482b",
+        "#98643c"
+      ]
+    },
+    "INUZUKA_MANE": {
+      "name": "Inuzuka Mane",
+      "ramp": [
+        "#160e0b",
+        "#231612",
+        "#33211a",
+        "#4a3125",
+        "#664535"
+      ]
+    },
+    "INUZUKA_UMBER": {
+      "name": "Inuzuka Umber",
+      "ramp": [
+        "#2e1a10",
+        "#4a2c1a",
+        "#6a4126",
+        "#8c5a35",
+        "#b07a4b"
+      ]
+    },
+    "KURAMA_TEA": {
+      "name": "Kurama Tea Brown",
+      "ramp": [
+        "#3d2617",
+        "#5e3c24",
+        "#82573a",
+        "#a77852",
+        "#c99c72"
+      ]
+    },
+    "KURAMA_UMBER": {
+      "name": "Kurama Umber",
+      "ramp": [
+        "#21150f",
+        "#352219",
+        "#4c3224",
+        "#664634",
+        "#86604a"
+      ]
+    },
+    "KURAMA_INK": {
+      "name": "Kurama Ink",
+      "ramp": [
+        "#121118",
+        "#1c1a24",
+        "#282533",
+        "#383447",
+        "#4d4860"
+      ]
+    },
+    "KURAMA_ASHEN": {
+      "name": "Kurama Ashen",
+      "ramp": [
+        "#3a3633",
+        "#57514c",
+        "#7a726a",
+        "#9c948a",
+        "#bfb8ac"
+      ]
+    },
+    "KURAMA_MAUVE": {
+      "name": "Kurama Mauve Brown",
+      "ramp": [
+        "#2e1f26",
+        "#47303a",
+        "#634552",
+        "#80606c",
+        "#a0828c"
+      ]
+    },
+    "NARA_PITCH": {
+      "name": "Nara Pitch",
+      "ramp": [
+        "#0f0e0f",
+        "#1a1819",
+        "#272425",
+        "#3a3535",
+        "#56504d"
+      ]
+    },
+    "NARA_UMBER": {
+      "name": "Nara Umber",
+      "ramp": [
+        "#160f0b",
+        "#231912",
+        "#33251b",
+        "#4a3627",
+        "#6a5039"
+      ]
+    },
+    "NARA_SMOKE": {
+      "name": "Nara Smoke",
+      "ramp": [
+        "#2a2a2c",
+        "#3e3e41",
+        "#58585b",
+        "#77777a",
+        "#9c9c9e"
+      ]
+    },
+    "SARUTOBI_BARK": {
+      "name": "Sarutobi Bark",
+      "ramp": [
+        "#140d09",
+        "#21150e",
+        "#311f15",
+        "#48301f",
+        "#664430"
+      ]
+    },
+    "SARUTOBI_SOOT": {
+      "name": "Sarutobi Soot",
+      "ramp": [
+        "#0e0c0b",
+        "#181412",
+        "#231d1a",
+        "#342b26",
+        "#4c403a"
+      ]
+    },
+    "SARUTOBI_ELDER": {
+      "name": "Sarutobi Elder",
+      "ramp": [
+        "#3e3c3a",
+        "#5b5856",
+        "#7d7a77",
+        "#a19e9a",
+        "#c8c5c0"
+      ]
+    },
     "SENJU_WOOD_BLACK": {
       "name": "Senju Wood Black",
       "ramp": [
@@ -189,6 +499,206 @@
         "#bf9744",
         "#dcbb63",
         "#f1d98e"
+      ]
+    },
+    "SHIMURA_INK": {
+      "name": "Shimura Ink",
+      "ramp": [
+        "#0c0d12",
+        "#15171f",
+        "#1f222d",
+        "#2f3342",
+        "#474d63"
+      ]
+    },
+    "SHIMURA_CHARCOAL": {
+      "name": "Shimura Charcoal",
+      "ramp": [
+        "#151313",
+        "#221f1e",
+        "#302c2a",
+        "#433e3b",
+        "#5d5752"
+      ]
+    },
+    "SHIMURA_GREY": {
+      "name": "Shimura Grey",
+      "ramp": [
+        "#3a3a3c",
+        "#565658",
+        "#77777a",
+        "#9a9a9c",
+        "#bdbdbe"
+      ]
+    },
+    "UCHIHA_INK": {
+      "name": "Uchiha Ink",
+      "ramp": [
+        "#08090d",
+        "#111319",
+        "#1c1f29",
+        "#2c3140",
+        "#4a536b"
+      ]
+    },
+    "UCHIHA_BLUE_BLACK": {
+      "name": "Uchiha Blue-Black",
+      "ramp": [
+        "#0c0f1c",
+        "#172038",
+        "#24325a",
+        "#37508a",
+        "#5f7fc0"
+      ]
+    },
+    "UCHIHA_UMBER": {
+      "name": "Uchiha Umber",
+      "ramp": [
+        "#110c0a",
+        "#21170f",
+        "#33241a",
+        "#4b3628",
+        "#6a4e3a"
+      ]
+    },
+    "UZUMAKI_CRIMSON": {
+      "name": "Uzumaki Crimson",
+      "ramp": [
+        "#4a0d14",
+        "#7a1622",
+        "#a8202d",
+        "#d0383c",
+        "#ee6c5e"
+      ]
+    },
+    "UZUMAKI_SCARLET": {
+      "name": "Uzumaki Scarlet",
+      "ramp": [
+        "#5a130d",
+        "#8f2014",
+        "#c4321e",
+        "#e65430",
+        "#f8885c"
+      ]
+    },
+    "UZUMAKI_GARNET": {
+      "name": "Uzumaki Garnet",
+      "ramp": [
+        "#2a080e",
+        "#460f19",
+        "#681926",
+        "#8a2536",
+        "#b03c4c"
+      ]
+    },
+    "UZUMAKI_ROSEWOOD": {
+      "name": "Uzumaki Rosewood",
+      "ramp": [
+        "#3d1113",
+        "#621c1f",
+        "#88292a",
+        "#ad3c38",
+        "#cf5d52"
+      ]
+    },
+    "UZUMAKI_EMBER": {
+      "name": "Uzumaki Ember",
+      "ramp": [
+        "#5c1d0a",
+        "#8e3010",
+        "#c04a18",
+        "#e06a28",
+        "#f6974c"
+      ]
+    },
+    "UZUMAKI_CORAL": {
+      "name": "Uzumaki Coral",
+      "ramp": [
+        "#6b1a26",
+        "#9c2a39",
+        "#c9404d",
+        "#e56669",
+        "#f6988e"
+      ]
+    },
+    "YAMANAKA_PLATINUM": {
+      "name": "Yamanaka Platinum",
+      "ramp": [
+        "#7d7356",
+        "#a99d74",
+        "#d2c793",
+        "#ebe2b4",
+        "#fbf6dc"
+      ]
+    },
+    "YAMANAKA_STRAW": {
+      "name": "Yamanaka Straw",
+      "ramp": [
+        "#7a5a22",
+        "#a77f33",
+        "#cfa64b",
+        "#e5c56c",
+        "#f6e29a"
+      ]
+    },
+    "YAMANAKA_ASH": {
+      "name": "Yamanaka Ash",
+      "ramp": [
+        "#706d5c",
+        "#9b9781",
+        "#c6c1a6",
+        "#e0dcc4",
+        "#f7f5e6"
+      ]
+    },
+    "YAMANAKA_RED": {
+      "name": "Yamanaka Red",
+      "ramp": [
+        "#4a1414",
+        "#74201d",
+        "#a2302a",
+        "#c64a3a",
+        "#e2735a"
+      ]
+    },
+    "YUHI_BLACK": {
+      "name": "Yuhi Black",
+      "ramp": [
+        "#0c090c",
+        "#181216",
+        "#251b21",
+        "#3a2a32",
+        "#56404a"
+      ]
+    },
+    "YUHI_WINE_BLACK": {
+      "name": "Yuhi Wine Black",
+      "ramp": [
+        "#12070a",
+        "#22101a",
+        "#341824",
+        "#4f2434",
+        "#723447"
+      ]
+    },
+    "YUHI_UMBER": {
+      "name": "Yuhi Umber",
+      "ramp": [
+        "#140c0a",
+        "#251712",
+        "#38241c",
+        "#523629",
+        "#734c3a"
+      ]
+    },
+    "YUHI_ASH": {
+      "name": "Yuhi Ash",
+      "ramp": [
+        "#2e2a2e",
+        "#4a4549",
+        "#6b656a",
+        "#8f898d",
+        "#b5b0b3"
       ]
     }
   }
