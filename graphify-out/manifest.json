@@ -1,2941 +1,2941 @@
 {
   "tools/wardrobe/anime.py": {
-    "mtime": 1793298861.6617742,
-    "seen": 1793311378.4626405,
+    "mtime": 1793299231.0414755,
+    "seen": 1793311441.8132107,
     "ast_hash": "ccfd5c055da4c2da9da9ac7c1ab50259",
     "semantic_hash": ""
   },
   "tools/wardrobe/glyphs.py": {
-    "mtime": 1793294178.0561597,
-    "seen": 1793311378.4626424,
+    "mtime": 1793299231.042287,
+    "seen": 1793311441.8132124,
     "ast_hash": "a5933d737d3251c2477bf391b39b1962",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit.py": {
-    "mtime": 1793293668.2658365,
-    "seen": 1793311378.4626439,
+    "mtime": 1793299231.043725,
+    "seen": 1793311441.8132143,
     "ast_hash": "6551015bee97fb7e2345848bcc660020",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_shinobi.py": {
-    "mtime": 1793298380.9366143,
-    "seen": 1793311378.46267,
+    "mtime": 1793299231.043725,
+    "seen": 1793311441.8132582,
     "ast_hash": "6b48ddf73d5251f05e329be19a131db5",
     "semantic_hash": ""
   },
   "tools/wardrobe/living_eyes.py": {
-    "mtime": 1793299032.3431902,
-    "seen": 1793311378.4626815,
+    "mtime": 1793299231.043725,
+    "seen": 1793311441.813277,
     "ast_hash": "7f5b5fb1aa7f9f92827e9a48ee4d5ed4",
     "semantic_hash": ""
   },
   "tools/wardrobe/masks.py": {
-    "mtime": 1793297718.1194913,
-    "seen": 1793311378.4626827,
+    "mtime": 1793299231.043725,
+    "seen": 1793311441.8132787,
     "ast_hash": "8b187e54f0fbdbb2ba3347b4fa673238",
     "semantic_hash": ""
   },
   "tools/wardrobe/paint.py": {
-    "mtime": 1793293668.2658176,
-    "seen": 1793311378.462684,
+    "mtime": 1793299231.043725,
+    "seen": 1793311441.8132803,
     "ast_hash": "ad94d8936df39ee76c0c3a9ea2928172",
     "semantic_hash": ""
   },
   "tools/wardrobe/render.py": {
-    "mtime": 1793308397.7022212,
-    "seen": 1793311378.462685,
+    "mtime": 1793309295.3761775,
+    "seen": 1793311441.813282,
     "ast_hash": "7f9abcca1215b9b97bb87d6c9e11da97",
     "semantic_hash": ""
   },
   "tools/wardrobe/wardrobe.py": {
-    "mtime": 1793308363.4652507,
-    "seen": 1793311378.4626863,
+    "mtime": 1793309295.3775346,
+    "seen": 1793311441.813284,
     "ast_hash": "34d6278951c1ed3c540b6e296cb3b72b",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1793302825.488698,
-    "seen": 1793311378.4627428,
+    "mtime": 1793307395.839147,
+    "seen": 1793311441.8133717,
     "ast_hash": "9de3960947ee14e32790a9a34b552b1a",
     "semantic_hash": ""
   },
   "CLANS.md": {
-    "mtime": 1793301769.300427,
-    "seen": 1793311378.4627247,
+    "mtime": 1793307395.839147,
+    "seen": 1793311441.813358,
     "ast_hash": "633598775a3686ee3f11cdfc6ab545a9",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1793310273.7375436,
-    "seen": 1793311378.4627256,
+    "mtime": 1793310763.3196392,
+    "seen": 1793311441.81336,
     "ast_hash": "6c75fa519347559a8905c8f766fc6fc9",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_senju.py": {
-    "mtime": 1793301472.575782,
-    "seen": 1793311378.4626682,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132548,
     "ast_hash": "6f3017bb07df077780e249fce8e77b5f",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_aburame.py": {
-    "mtime": 1793301480.1677818,
-    "seen": 1793311378.4626453,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132164,
     "ast_hash": "c5a6c1181d50583cbc8caa3f4fb9bcab",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_akimichi.py": {
-    "mtime": 1793301479.2077818,
-    "seen": 1793311378.4626482,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.813222,
     "ast_hash": "96f4b036efc6a875c713044dc0c31c0e",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_gekko.py": {
-    "mtime": 1793301481.2557817,
-    "seen": 1793311378.46265,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132255,
     "ast_hash": "42b5014105246d865a6d4327dd5d5f8c",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_hatake.py": {
-    "mtime": 1793301480.347782,
-    "seen": 1793311378.4626534,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132308,
     "ast_hash": "619d0ea32fea616176233784f9f46595",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_hyuga.py": {
-    "mtime": 1793301478.827782,
-    "seen": 1793311378.4626555,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132343,
     "ast_hash": "4e65802df52d94ca662f367d26734143",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_inuzuka.py": {
-    "mtime": 1793301479.659782,
-    "seen": 1793311378.4626565,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132362,
     "ast_hash": "0271abc2955a68fa03eaeffab944444e",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_kurama.py": {
-    "mtime": 1793301480.5557818,
-    "seen": 1793311378.4626606,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132412,
     "ast_hash": "60ec34d44e43d3ae8a081a3587b1740b",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_nara.py": {
-    "mtime": 1793301479.031782,
-    "seen": 1793311378.4626648,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132498,
     "ast_hash": "316c1ad5414ab807e578c292ed5e38f0",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_sarutobi.py": {
-    "mtime": 1793301479.9277818,
-    "seen": 1793311378.462667,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132534,
     "ast_hash": "bf7bf6b286ee9c141f8e0ca84a4ab932",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_shimura.py": {
-    "mtime": 1793301480.791782,
-    "seen": 1793311378.4626691,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132567,
     "ast_hash": "8500b7301d9fccdef7096f3a229d3a45",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_uchiha.py": {
-    "mtime": 1793301478.659782,
-    "seen": 1793311378.4626763,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132682,
     "ast_hash": "e331737fcb92a903fd2e299599a51761",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_uzumaki.py": {
-    "mtime": 1793301472.719782,
-    "seen": 1793311378.4626782,
+    "mtime": 1793307396.671147,
+    "seen": 1793311441.8132718,
     "ast_hash": "9a6cf80a99f6ed824ecc5933b8f89b29",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_yamanaka.py": {
-    "mtime": 1793301479.4277818,
-    "seen": 1793311378.4626796,
+    "mtime": 1793307396.671147,
+    "seen": 1793311441.8132734,
     "ast_hash": "787ac8f3087115c287581e69a4ec161f",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_yuhi.py": {
-    "mtime": 1793301481.0637817,
-    "seen": 1793311378.4626806,
+    "mtime": 1793307396.671147,
+    "seen": 1793311441.8132746,
     "ast_hash": "b668b4fdb86cf2d58f5170a1bc9d24d9",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_hagane.py": {
-    "mtime": 1793302921.0446937,
-    "seen": 1793311378.4626515,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132274,
     "ast_hash": "16e8875834f472feb20114f5dc2ebff3",
     "semantic_hash": ""
   },
   "ROADMAP.md": {
-    "mtime": 1793310858.9793398,
-    "seen": 1793311378.462744,
+    "mtime": 1793311401.8276994,
+    "seen": 1793311441.8133738,
     "ast_hash": "8e156c7f039639b8aca4d8f079a0f92b",
     "semantic_hash": ""
   },
   "docs/story/STORY_BIBLE.md": {
-    "mtime": 1793309971.6139872,
-    "seen": 1793311378.4627523,
+    "mtime": 1793309989.9553013,
+    "seen": 1793311441.8133903,
     "ast_hash": "e8c282d47214ed86a04958419bb18bdb",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_haruno.py": {
-    "mtime": 1793302966.943668,
-    "seen": 1793311378.4626527,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.813229,
     "ast_hash": "7d95906720e09ee35abe5b62ddbf0817",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_morino.py": {
-    "mtime": 1793302968.1901813,
-    "seen": 1793311378.4626627,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132455,
     "ast_hash": "c414e6a8dda48ca404535920de4cd06a",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_namiashi.py": {
-    "mtime": 1793302968.8556707,
-    "seen": 1793311378.462664,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132474,
     "ast_hash": "3522c28f2d65026c3fb62c282ae1829d",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_suzuran.py": {
-    "mtime": 1793302965.285237,
-    "seen": 1793311378.4626732,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132632,
     "ast_hash": "a98a81f49e1194875233c599bcbeca47",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_tobari.py": {
-    "mtime": 1793302966.1391273,
-    "seen": 1793311378.4626741,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.813265,
     "ast_hash": "325b016ad3a2489cc08178f094153a09",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_tsuchigumo.py": {
-    "mtime": 1793302967.5599694,
-    "seen": 1793311378.462675,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132668,
     "ast_hash": "0ebd152e45af553f06e80ca5b506afc0",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_academy.py": {
-    "mtime": 1793303092.2506058,
-    "seen": 1793311378.462647,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132198,
     "ast_hash": "320dad4ffdccf6fb82b615ee5d2c9b78",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_specialist.py": {
-    "mtime": 1793303160.8824964,
-    "seen": 1793311378.4626722,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132615,
     "ast_hash": "ebf05d4785e4ffaff781ae0d95434e15",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_field.py": {
-    "mtime": 1793303216.8443155,
-    "seen": 1793311378.462649,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132238,
     "ast_hash": "2c0af4984d12e32a3be7a1333c3f9056",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_kunoichi.py": {
-    "mtime": 1793303272.572952,
-    "seen": 1793311378.4626591,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132398,
     "ast_hash": "1641523af365a5d76faf6b2b36dd1f4a",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_household.py": {
-    "mtime": 1793303375.007459,
-    "seen": 1793311378.4626544,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132327,
     "ast_hash": "c97406c0981955c1398edc0d477a5871",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_shiranui.py": {
-    "mtime": 1793303437.1686707,
-    "seen": 1793311378.462671,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132598,
     "ast_hash": "5636ff3748677d9cab4559097e3bd87c",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_market.py": {
-    "mtime": 1793303483.4262755,
-    "seen": 1793311378.4626617,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132436,
     "ast_hash": "64b52b726449351e0392ac0817a4ce6d",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_rugged.py": {
-    "mtime": 1793303543.8654153,
-    "seen": 1793311378.462666,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.8132515,
     "ast_hash": "56ea855a5c1de3a98dc89455516f55ee",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_umino.py": {
-    "mtime": 1793303592.7244313,
-    "seen": 1793311378.462677,
+    "mtime": 1793307396.671147,
+    "seen": 1793311441.8132699,
     "ast_hash": "a6e06fa28a54151cbfb8cf49b157e5fe",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_kinoshita.py": {
-    "mtime": 1793303657.2814307,
-    "seen": 1793311378.4626577,
+    "mtime": 1793307396.6671472,
+    "seen": 1793311441.813238,
     "ast_hash": "ba16f33374f7099ce9e0975dbd05af9f",
     "semantic_hash": ""
   },
   "gradlew": {
-    "mtime": 1793306490.166346,
-    "seen": 1793311378.4624104,
+    "mtime": 1793307396.3569572,
+    "seen": 1793311441.8127942,
     "ast_hash": "a43be8432bac3ffd05b3769aa42fe996",
     "semantic_hash": ""
   },
   "life/bonds/build.gradle": {
-    "mtime": 1793311371.7116635,
-    "seen": 1793311378.462418,
+    "mtime": 1793307396.4536767,
+    "seen": 1793311441.8128045,
     "ast_hash": "db6693d36ce312762afdd54d275e8cec",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Act.java": {
-    "mtime": 1793310859.02734,
-    "seen": 1793311378.4624217,
+    "mtime": 1793311402.2903173,
+    "seen": 1793311441.812809,
     "ast_hash": "412f376b9307d0d9e18a8aec86f5f73c",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Bond.java": {
-    "mtime": 1793308651.147439,
-    "seen": 1793311378.46243,
+    "mtime": 1793309295.36326,
+    "seen": 1793311441.8128188,
     "ast_hash": "6312e61251cf2ec4df106ffe80c4530c",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondBook.java": {
-    "mtime": 1793310859.02734,
-    "seen": 1793311378.4624326,
+    "mtime": 1793311402.293984,
+    "seen": 1793311441.8128207,
     "ast_hash": "6933a1795e56310471388dcd2968946b",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondConditions.java": {
-    "mtime": 1793310748.2653377,
-    "seen": 1793311378.4624343,
+    "mtime": 1793311402.293984,
+    "seen": 1793311441.8128228,
     "ast_hash": "8636c4a8b74e50fcb7a50aed10fec135",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondDialogue.java": {
-    "mtime": 1793309922.703382,
-    "seen": 1793311378.4624357,
+    "mtime": 1793309990.0193012,
+    "seen": 1793311441.8128247,
     "ast_hash": "1e38b3f170592af75d478ac3b80f0777",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondEffects.java": {
-    "mtime": 1793310859.02734,
-    "seen": 1793311378.4624374,
+    "mtime": 1793311402.293984,
+    "seen": 1793311441.8128276,
     "ast_hash": "5dfe3001f4bd8a28dc4279a2f7f98762",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondEvent.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.462439,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128302,
     "ast_hash": "d5187b8439fa513053c4552a6557a5c8",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondWeb.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624407,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128316,
     "ast_hash": "56ea1eb63e28813390cfaa8e06c368f9",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondWorld.java": {
-    "mtime": 1793310859.02734,
-    "seen": 1793311378.4624422,
+    "mtime": 1793311402.293984,
+    "seen": 1793311441.8128343,
     "ast_hash": "bcf0d4eab81d4f8eefcaac528805b725",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/ClanProfile.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624436,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128371,
     "ast_hash": "430a4b412101615d4f514d02bcfee699",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/ClanRelations.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624448,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128397,
     "ast_hash": "488dc8527a072820ea689027cf337196",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Conflict.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624457,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128414,
     "ast_hash": "e20f06918782463bebb60a32f146fbb8",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Courtship.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624484,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128455,
     "ast_hash": "e0eb8b61fe14b4e6e07113c4543f81ff",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Deed.java": {
-    "mtime": 1793308194.2954595,
-    "seen": 1793311378.4624496,
+    "mtime": 1793309295.3660495,
+    "seen": 1793311441.8128479,
     "ast_hash": "92cd7d447d9e1306961cad0083958bd4",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Gossip.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624546,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.812855,
     "ast_hash": "276f38da5021400a07e4a9edc3599e5f",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Household.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624557,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128572,
     "ast_hash": "fecf64ba8e4d3fec83d82820505dbeba",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Kindling.java": {
-    "mtime": 1793310859.02734,
-    "seen": 1793311378.4624574,
+    "mtime": 1793311402.2959127,
+    "seen": 1793311441.8128588,
     "ast_hash": "9afa54ae767b5eae95a22aef4f1f595b",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Levels.java": {
-    "mtime": 1793308651.151439,
-    "seen": 1793311378.4624593,
+    "mtime": 1793309295.3660495,
+    "seen": 1793311441.8128612,
     "ast_hash": "3e1335cd2583f558e07e1155247f3879",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Memory.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624624,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128705,
     "ast_hash": "3fbb1643736ddfd677bb028303e4df92",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Meter.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.462464,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128726,
     "ast_hash": "3edb0e6363c84f3708e4cce504533d27",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Meters.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624655,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128748,
     "ast_hash": "a1b9d4f119336f49508185e166f2bb35",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Mood.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624665,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.812877,
     "ast_hash": "4c5ce14ee262126bc491fedf210def82",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Person.java": {
-    "mtime": 1793308194.2954595,
-    "seen": 1793311378.462468,
+    "mtime": 1793309295.3660495,
+    "seen": 1793311441.8128793,
     "ast_hash": "9f08d6a5b50b7430ce9b004ea61e4633",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Personality.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624689,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128817,
     "ast_hash": "cc459d83edbb9081551b20a9d5525807",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Reaction.java": {
-    "mtime": 1793308194.2954595,
-    "seen": 1793311378.4624724,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.812887,
     "ast_hash": "eb3379bcee92c79a11c3db0ae9189b2c",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Recruitment.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624736,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128889,
     "ast_hash": "b9980cd7b9fd999fb30d4447d96342c3",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/SaveFormat.java": {
-    "mtime": 1793308985.312344,
-    "seen": 1793311378.462475,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8128915,
     "ast_hash": "fac8b0fff44eaebab21026bdf2d5d5d9",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Seeds.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624772,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128958,
     "ast_hash": "6e7160be357928ca576a5230e1d18d5e",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/SocialTie.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624784,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8128972,
     "ast_hash": "1a3e17a1c8968396e125378b9de8da36",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/SocietyHook.java": {
-    "mtime": 1793307546.5190024,
-    "seen": 1793311378.4624794,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8128996,
     "ast_hash": "aea8c2fec7e7f5233b2757d23d834b2d",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Squad.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.4624805,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.8129017,
     "ast_hash": "13f1cc791a1f16290f5eaa2f2fe7f080",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Standing.java": {
-    "mtime": 1793306490.1882246,
-    "seen": 1793311378.462482,
+    "mtime": 1793307396.454024,
+    "seen": 1793311441.812904,
     "ast_hash": "29aa9855bc7f515380fe895a705d04e4",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Village.java": {
-    "mtime": 1793307546.519764,
-    "seen": 1793311378.4624841,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.812908,
     "ast_hash": "a9e96d0c46f6282a60e356a6979b153d",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/BondDialogueTest.java": {
-    "mtime": 1793309922.703382,
-    "seen": 1793311378.4624853,
+    "mtime": 1793309990.0193012,
+    "seen": 1793311441.8129103,
     "ast_hash": "5f4c155fc507fb430bc3bb1dbff309a3",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/ConditionsAndEffectsTest.java": {
-    "mtime": 1793308651.151439,
-    "seen": 1793311378.4624865,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8129122,
     "ast_hash": "550af1ec2ba5ebd64bad833ebe903df2",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/ConflictTest.java": {
-    "mtime": 1793306490.1897385,
-    "seen": 1793311378.4624875,
+    "mtime": 1793307396.4569492,
+    "seen": 1793311441.8129141,
     "ast_hash": "0e297e58753bc4d90ead6c8b00fff807",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/CourtshipTest.java": {
-    "mtime": 1793306490.1897385,
-    "seen": 1793311378.462489,
+    "mtime": 1793307396.4569492,
+    "seen": 1793311441.8129158,
     "ast_hash": "3bdf61c344beb0b658ec90be451e9691",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/GossipTest.java": {
-    "mtime": 1793306490.1897385,
-    "seen": 1793311378.4624927,
+    "mtime": 1793307396.4569492,
+    "seen": 1793311441.8129225,
     "ast_hash": "5f1a18a659e5fab98e46264ae737d016",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/KindlingAndBookTest.java": {
-    "mtime": 1793310859.02734,
-    "seen": 1793311378.4624941,
+    "mtime": 1793311402.2959127,
+    "seen": 1793311441.8129246,
     "ast_hash": "6a2d88b0f699af29c400fcce6a13daa4",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/Leaf.java": {
-    "mtime": 1793306490.1897385,
-    "seen": 1793311378.4624953,
+    "mtime": 1793307396.4569492,
+    "seen": 1793311441.8129265,
     "ast_hash": "0b5c125f1a95fd67c049eb3e1370373d",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/LevelsTest.java": {
-    "mtime": 1793306490.1897385,
-    "seen": 1793311378.4624965,
+    "mtime": 1793307396.4569492,
+    "seen": 1793311441.8129284,
     "ast_hash": "df53be4f1f0df2eeab73e88d903947da",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/MemoryTest.java": {
-    "mtime": 1793307546.519764,
-    "seen": 1793311378.4624975,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8129306,
     "ast_hash": "d599d11991cb56713999fa8a875f9a26",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/ReactionTest.java": {
-    "mtime": 1793306490.1897385,
-    "seen": 1793311378.462501,
+    "mtime": 1793307396.4569492,
+    "seen": 1793311441.812937,
     "ast_hash": "653cc162affa0a30b0dd2660783357a5",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/SaveFormatTest.java": {
-    "mtime": 1793306490.1897385,
-    "seen": 1793311378.462503,
+    "mtime": 1793307396.4569492,
+    "seen": 1793311441.8129418,
     "ast_hash": "fca5158117ad0ab7ac36e4f409ed1f86",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/SquadTest.java": {
-    "mtime": 1793306490.1897385,
-    "seen": 1793311378.462504,
+    "mtime": 1793307396.4569492,
+    "seen": 1793311441.8129442,
     "ast_hash": "5aaecfdda22f8afb4fd7edba242d19ba",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/TimeAndPacingTest.java": {
-    "mtime": 1793308194.2954595,
-    "seen": 1793311378.462505,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8129463,
     "ast_hash": "5227911d7817769abf0038f43af3e7d4",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/VillageScaleTest.java": {
-    "mtime": 1793308651.151439,
-    "seen": 1793311378.4625072,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8129506,
     "ast_hash": "436a8ed3edb3dfada7d5b96f6875da35",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/VillageTest.java": {
-    "mtime": 1793306490.1897385,
-    "seen": 1793311378.4625082,
+    "mtime": 1793307396.4569492,
+    "seen": 1793311441.812952,
     "ast_hash": "b3543a0c526cb88cfd65d461995d8c2d",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/sim/Playthrough.java": {
-    "mtime": 1793310859.02734,
-    "seen": 1793311378.4625092,
+    "mtime": 1793311402.2959127,
+    "seen": 1793311441.8129704,
     "ast_hash": "a9b6c73c08bae5ee3b6a96ee201a5baf",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/sim/VillageSim.java": {
-    "mtime": 1793306490.1908038,
-    "seen": 1793311378.46251,
+    "mtime": 1793307396.4581401,
+    "seen": 1793311441.812974,
     "ast_hash": "404e3a19a234ce1fddf97829b531d258",
     "semantic_hash": ""
   },
   "settings.gradle": {
-    "mtime": 1793310982.1913345,
-    "seen": 1793311378.4626124,
+    "mtime": 1793311402.3058708,
+    "seen": 1793311441.8131607,
     "ast_hash": "71a23d183db9e978aceb29cdcacfd551",
     "semantic_hash": ""
   },
   "BONDS.md": {
-    "mtime": 1793310858.9793398,
-    "seen": 1793311378.4627225,
+    "mtime": 1793311401.8223171,
+    "seen": 1793311441.8133543,
     "ast_hash": "315cc581abf69acee6893bb89f634122",
     "semantic_hash": ""
   },
   "SIDE_QUESTS.md": {
-    "mtime": 1793310634.5995867,
-    "seen": 1793311378.4627452,
+    "mtime": 1793310763.327236,
+    "seen": 1793311441.8133755,
     "ast_hash": "3947c49c3a0343a4eb2f0ed8c20fa291",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Activity.java": {
-    "mtime": 1793310748.2653377,
-    "seen": 1793311378.4624248,
+    "mtime": 1793311402.293984,
+    "seen": 1793311441.8128133,
     "ast_hash": "b8e6020ff9799ce246e9360ad22bd7af",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Conversation.java": {
-    "mtime": 1793307546.5188465,
-    "seen": 1793311378.4624472,
+    "mtime": 1793309295.3660495,
+    "seen": 1793311441.8128438,
     "ast_hash": "39178bc3d11eefa1dc2aa454e77824bc",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/DialogueKeys.java": {
-    "mtime": 1793310859.02734,
-    "seen": 1793311378.462451,
+    "mtime": 1793311402.293984,
+    "seen": 1793311441.8128498,
     "ast_hash": "915ad61e2a59d89fbd65017e63137fdf",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/LifeEvents.java": {
-    "mtime": 1793307546.5190024,
-    "seen": 1793311378.462461,
+    "mtime": 1793309295.3660495,
+    "seen": 1793311441.812868,
     "ast_hash": "6659e657959ab5706358144ce3945683",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Schedule.java": {
-    "mtime": 1793307546.5190024,
-    "seen": 1793311378.462476,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8128934,
     "ast_hash": "0df91bcbc32086d57ecfa14977ab6289",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Together.java": {
-    "mtime": 1793307546.519764,
-    "seen": 1793311378.462483,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8129063,
     "ast_hash": "df561e52552242cc18f77784e4e7aede",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/DialogueKeysTest.java": {
-    "mtime": 1793307546.519764,
-    "seen": 1793311378.46249,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.812918,
     "ast_hash": "8e024a087daea3ba0c3b3828d041851c",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/TogetherTest.java": {
-    "mtime": 1793307546.519764,
-    "seen": 1793311378.4625063,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8129487,
     "ast_hash": "601cb5768d4dab0f1bf84c8f5633ffae",
     "semantic_hash": ""
   },
   "LIFE_TOGETHER.md": {
-    "mtime": 1793310748.227345,
-    "seen": 1793311378.4627407,
+    "mtime": 1793311401.8248968,
+    "seen": 1793311441.8133678,
     "ast_hash": "77205e701737df2135624f72d90cad4b",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/AnswerTag.java": {
-    "mtime": 1793308194.2914596,
-    "seen": 1793311378.4624279,
+    "mtime": 1793309295.3592598,
+    "seen": 1793311441.8128166,
     "ast_hash": "360ddd9e324a2ef26a0849a1e21181ce",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Question.java": {
-    "mtime": 1793309516.0877743,
-    "seen": 1793311378.46247,
+    "mtime": 1793309990.0193012,
+    "seen": 1793311441.8128834,
     "ast_hash": "4edb28bcba84c1fb9048cb78aaf8c251",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Questions.java": {
-    "mtime": 1793308651.151439,
-    "seen": 1793311378.4624715,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8128853,
     "ast_hash": "c25e96a2dd1cb7b2dce4e8c5e52071f1",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/QuestionsTest.java": {
-    "mtime": 1793308194.2954595,
-    "seen": 1793311378.4624999,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8129349,
     "ast_hash": "8c03b494c94a0b3af657ce5c5185afd5",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/SampleQuestions.java": {
-    "mtime": 1793308194.2954595,
-    "seen": 1793311378.462502,
+    "mtime": 1793309295.3683975,
+    "seen": 1793311441.8129392,
     "ast_hash": "45572d24867493302edabfce135d3e6f",
     "semantic_hash": ""
   },
   "life/home/build.gradle": {
-    "mtime": 1793311121.119328,
-    "seen": 1793311378.4625332,
+    "mtime": 1793310763.4316392,
+    "seen": 1793311441.8130152,
     "ast_hash": "a8e689af4d45624cf4a1afd6943b4145",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/BondFriends.java": {
-    "mtime": 1793311112.2553284,
-    "seen": 1793311378.4625347,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8130174,
     "ast_hash": "ad84a46767ca742f800fd2b800b35a01",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Catalog.java": {
-    "mtime": 1793311112.2553284,
-    "seen": 1793311378.4625356,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8130193,
     "ast_hash": "bf4940aaf944a1e004231c42aac43433",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Comfort.java": {
-    "mtime": 1793310634.34315,
-    "seen": 1793311378.4625363,
+    "mtime": 1793310763.4365416,
+    "seen": 1793311441.8130217,
     "ast_hash": "4616894f8b3f7f9abe9cac955a579019",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Flat.java": {
-    "mtime": 1793310747.823345,
-    "seen": 1793311378.4625378,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.813024,
     "ast_hash": "372c43caa370ccb8dcd5a1c97b200b08",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Friends.java": {
-    "mtime": 1793311112.2553284,
-    "seen": 1793311378.4625385,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8130255,
     "ast_hash": "32728aeedee6dc39e0e0605d845d7e06",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/FurnitureSet.java": {
-    "mtime": 1793310265.3938186,
-    "seen": 1793311378.4625394,
+    "mtime": 1793310763.4365416,
+    "seen": 1793311441.8130271,
     "ast_hash": "bf09484e57ed4b4ca8a421d23c3aca73",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Home.java": {
-    "mtime": 1793310634.34315,
-    "seen": 1793311378.4625406,
+    "mtime": 1793310763.4365416,
+    "seen": 1793311441.8130286,
     "ast_hash": "64df51ac924ef9753251f68fceae73fa",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Keepsake.java": {
-    "mtime": 1793310634.34335,
-    "seen": 1793311378.4625416,
+    "mtime": 1793310763.4365416,
+    "seen": 1793311441.8130307,
     "ast_hash": "76f10869f9d0a7cd4ec87d9429154b90",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Mailbox.java": {
-    "mtime": 1793310634.34335,
-    "seen": 1793311378.4625425,
+    "mtime": 1793310763.4365416,
+    "seen": 1793311441.8130326,
     "ast_hash": "54d35b37d30f0dcf015635c4032277b3",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Pantry.java": {
-    "mtime": 1793310265.3938186,
-    "seen": 1793311378.462544,
+    "mtime": 1793310763.4365416,
+    "seen": 1793311441.8130352,
     "ast_hash": "ababf22df3bacb8387e14a733dbf9447",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Photo.java": {
-    "mtime": 1793310265.3938186,
-    "seen": 1793311378.462545,
+    "mtime": 1793310763.4365416,
+    "seen": 1793311441.813038,
     "ast_hash": "626f9070b3728ad3a4cb182fea67ad53",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Piece.java": {
-    "mtime": 1793310265.3938186,
-    "seen": 1793311378.4625456,
+    "mtime": 1793310763.4365416,
+    "seen": 1793311441.8130398,
     "ast_hash": "ce005edd52b586ec73e8007a70dd72b5",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Plant.java": {
-    "mtime": 1793310265.3938186,
-    "seen": 1793311378.4625466,
+    "mtime": 1793310763.4365416,
+    "seen": 1793311441.8130417,
     "ast_hash": "85e08d15dad755ef39b275f056f5bbf5",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Practice.java": {
-    "mtime": 1793310942.327336,
-    "seen": 1793311378.4625475,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.813043,
     "ast_hash": "e6ac6ef77b801e0f4c55baec09b6e07a",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Rest.java": {
-    "mtime": 1793310265.3938186,
-    "seen": 1793311378.4625485,
+    "mtime": 1793310763.4365416,
+    "seen": 1793311441.813045,
     "ast_hash": "7fd542d924a7a86b431de406c8ba9a09",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Visits.java": {
-    "mtime": 1793311112.2553284,
-    "seen": 1793311378.4625494,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8130467,
     "ast_hash": "3f8d4b981b6f9097d46bae92354b5392",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/Cast.java": {
-    "mtime": 1793310265.3945885,
-    "seen": 1793311378.4625502,
+    "mtime": 1793310763.4375648,
+    "seen": 1793311441.8130486,
     "ast_hash": "c583a84874c23e99a89f58e3334a63e9",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/CatalogTest.java": {
-    "mtime": 1793310942.327336,
-    "seen": 1793311378.4625514,
+    "mtime": 1793311402.3023171,
+    "seen": 1793311441.8130503,
     "ast_hash": "9729a1652c668c1c5a6823153630c2f6",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/ComfortTest.java": {
-    "mtime": 1793310942.327336,
-    "seen": 1793311378.4625523,
+    "mtime": 1793311402.3023171,
+    "seen": 1793311441.813052,
     "ast_hash": "6f32b5ecabb2e3ab376be9cac2ae507a",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/LivingTest.java": {
-    "mtime": 1793310634.34335,
-    "seen": 1793311378.4625533,
+    "mtime": 1793310763.4376483,
+    "seen": 1793311441.8130538,
     "ast_hash": "ac1d5ec9f3cc81a540fbded90bc39a40",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/MoveTest.java": {
-    "mtime": 1793310942.327336,
-    "seen": 1793311378.4625545,
+    "mtime": 1793311402.3023171,
+    "seen": 1793311441.8130562,
     "ast_hash": "16ad5ca80c02e71dcd939d66f8ed4d14",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/RestTest.java": {
-    "mtime": 1793310942.327336,
-    "seen": 1793311378.4625554,
+    "mtime": 1793311402.3023171,
+    "seen": 1793311441.8130584,
     "ast_hash": "570e4fd98ad92b334b266ca2b216b2b1",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/VisitsTest.java": {
-    "mtime": 1793311112.2553284,
-    "seen": 1793311378.4625561,
+    "mtime": 1793311402.3023171,
+    "seen": 1793311441.8130598,
     "ast_hash": "2ed9e0d11ad7e6e937dc37fa2ca23aa7",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/sim/FirstFifteenHours.java": {
-    "mtime": 1793310942.327336,
-    "seen": 1793311378.4625568,
+    "mtime": 1793311402.3056147,
+    "seen": 1793311441.8130617,
     "ast_hash": "f18074bf3385a56ae6246075ca455c25",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/sim/FirstFifteenHoursTest.java": {
-    "mtime": 1793310634.347184,
-    "seen": 1793311378.462558,
+    "mtime": 1793310763.4382467,
+    "seen": 1793311441.8130634,
     "ast_hash": "1ebc2282d6c780bae30c5350ea03c56e",
     "semantic_hash": ""
   },
   "docs/HOME.md": {
-    "mtime": 1793311112.2033286,
-    "seen": 1793311378.4627461,
+    "mtime": 1793311401.829698,
+    "seen": 1793311441.8133771,
     "ast_hash": "85e45576b043c105552af08b6228faf1",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Gifts.java": {
-    "mtime": 1793310748.2653377,
-    "seen": 1793311378.462453,
+    "mtime": 1793311402.293984,
+    "seen": 1793311441.8128526,
     "ast_hash": "a18e12fc9fc5e16a819569bfa977bb3f",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/GiftsTest.java": {
-    "mtime": 1793310748.2653377,
-    "seen": 1793311378.4624918,
+    "mtime": 1793311402.2959127,
+    "seen": 1793311441.8129203,
     "ast_hash": "35a73dc17b589361d5f0733481662509",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/QuestionsCompiledTest.java": {
-    "mtime": 1793309516.0877743,
-    "seen": 1793311378.462499,
+    "mtime": 1793309990.0193012,
+    "seen": 1793311441.8129325,
     "ast_hash": "e13310029e31520f5ec12192016de342",
     "semantic_hash": ""
   },
   "progression/missions/build.gradle": {
-    "mtime": 1793311121.143393,
-    "seen": 1793311378.4625833,
+    "mtime": 1793309990.023771,
+    "seen": 1793311441.8131042,
     "ast_hash": "3f93dcb2ca7d9bbbcaec1f16ee560b7e",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Catalogue.java": {
-    "mtime": 1793309468.2220771,
-    "seen": 1793311378.4625843,
+    "mtime": 1793309990.0239582,
+    "seen": 1793311441.8131068,
     "ast_hash": "01bbe9788ed254c8a931513cedea3ff2",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Clients.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4625854,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.813109,
     "ast_hash": "1cb962f61904803d2b19042db543c268",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Desk.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4625862,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131108,
     "ast_hash": "31542eb7e1b61ffbe2c2f98a28d36110",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Economy.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4625876,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.813113,
     "ast_hash": "108c6b9bfd13a54d1909b55f1edbb7e8",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Grade.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.462589,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131154,
     "ast_hash": "4fe2ce4076559b8cfc42de6d36d26c24",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Json.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4625905,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131177,
     "ast_hash": "ae74dc165c66be84e85ab653db5fb613",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Offer.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.462592,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131196,
     "ast_hash": "84d11187da3cbbe180f40ec681da38b2",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Player.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4625933,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131218,
     "ast_hash": "43fcf77408b73a023e62c531fb97e567",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Rank.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4625943,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131244,
     "ast_hash": "af23f21beaf9d2c0c0d0345a4faa57e1",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Resident.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4625952,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.813126,
     "ast_hash": "ff967ab73deea6b4bfe38bbc119ebb1d",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Seeds.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4625964,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131282,
     "ast_hash": "a391b15735916d2085e1f7125df390a4",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/SlotFiller.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4625974,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131301,
     "ast_hash": "6c028a6c77c4a5b080c3ebd86f8509fc",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/SquadPlan.java": {
-    "mtime": 1793309603.4696229,
-    "seen": 1793311378.4625983,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131323,
     "ast_hash": "96712c0a8763f4ddbb6d1b6b16993372",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Template.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4625995,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131342,
     "ast_hash": "449b738f347d414eb791d5fd26c6a636",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Unlocks.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4626005,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.8131359,
     "ast_hash": "62639e223d77723bfdccfb924a215a0a",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/VarietyGuard.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4626014,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.813138,
     "ast_hash": "57fc5f3069d6558859d8777b60aabf8d",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/World.java": {
-    "mtime": 1793309468.2221267,
-    "seen": 1793311378.4626024,
+    "mtime": 1793309990.024051,
+    "seen": 1793311441.81314,
     "ast_hash": "5e473e08e1e048105431e5a188ec7f7c",
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/CatalogueTest.java": {
-    "mtime": 1793309468.2228584,
-    "seen": 1793311378.4626033,
+    "mtime": 1793309990.0251365,
+    "seen": 1793311441.813142,
     "ast_hash": "314fc83a4378990b59dad1ca5ed790b2",
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/ClientsAndSquadTest.java": {
-    "mtime": 1793309603.4696229,
-    "seen": 1793311378.4626045,
+    "mtime": 1793309990.02525,
+    "seen": 1793311441.813144,
     "ast_hash": "fbae09539d3291409c8e7b4f6e1b045e",
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/DeskTest.java": {
-    "mtime": 1793309468.2229238,
-    "seen": 1793311378.4626055,
+    "mtime": 1793309990.02525,
+    "seen": 1793311441.8131459,
     "ast_hash": "0bf225b13ce53be493b41037f9531e33",
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/EconomyTest.java": {
-    "mtime": 1793309468.2229238,
-    "seen": 1793311378.4626067,
+    "mtime": 1793309990.02525,
+    "seen": 1793311441.8131483,
     "ast_hash": "5c003e56d3cc43b69bfe97179a297331",
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/SampleVillage.java": {
-    "mtime": 1793309468.2229238,
-    "seen": 1793311378.4626076,
+    "mtime": 1793309990.02525,
+    "seen": 1793311441.8131506,
     "ast_hash": "ce677ef2d176d81ba884c8e2856572c6",
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/SeedsTest.java": {
-    "mtime": 1793309468.2229238,
-    "seen": 1793311378.4626086,
+    "mtime": 1793309990.02525,
+    "seen": 1793311441.8131528,
     "ast_hash": "c441eb694d3a4fcc25b5a53f87614487",
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/SimulationTest.java": {
-    "mtime": 1793309468.2229238,
-    "seen": 1793311378.4626098,
+    "mtime": 1793309990.02525,
+    "seen": 1793311441.8131545,
     "ast_hash": "2915c4524d8122085b9aefd846c991db",
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/SlotFillerTest.java": {
-    "mtime": 1793309468.2229238,
-    "seen": 1793311378.4626105,
+    "mtime": 1793309990.02525,
+    "seen": 1793311441.8131568,
     "ast_hash": "0cad339160f5a2576fc461840eed58ca",
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/sim/DeskDays.java": {
-    "mtime": 1793309468.2229238,
-    "seen": 1793311378.4626114,
+    "mtime": 1793309990.02525,
+    "seen": 1793311441.8131588,
     "ast_hash": "e0b605e10bd4fb94cb91ba85de2c43db",
     "semantic_hash": ""
   },
   "tools/creator/creator.py": {
-    "mtime": 1793309971.601262,
-    "seen": 1793311378.4626138,
+    "mtime": 1793310020.0847433,
+    "seen": 1793311441.8131628,
     "ast_hash": "726450ffdfc76defee1880943020e56c",
     "semantic_hash": ""
   },
   "tools/creator/mockups.py": {
-    "mtime": 1793310241.8393676,
-    "seen": 1793311378.4626148,
-    "ast_hash": "0cc2860c7562655b7072d65ea5e4d891",
+    "mtime": 1793311419.10152,
+    "seen": 1793311441.8131647,
+    "ast_hash": "339b2a32e235cca5e6fe4a6bd4f62816",
     "semantic_hash": ""
   },
   "tools/creator/preview.py": {
-    "mtime": 1793309806.2537687,
-    "seen": 1793311378.462616,
+    "mtime": 1793309479.7532437,
+    "seen": 1793311441.8131666,
     "ast_hash": "30834bc974df1a3fe82ca5105f747336",
     "semantic_hash": ""
   },
   "tools/konoha/blocks.py": {
-    "mtime": 1793309192.5414293,
-    "seen": 1793311378.4626212,
+    "mtime": 1793309295.375663,
+    "seen": 1793311441.8131766,
     "ast_hash": "3720f0f45da74b624d5bc28499fd0571",
     "semantic_hash": ""
   },
   "tools/konoha/buildings/home_plaster_2f.py": {
-    "mtime": 1793309192.5418527,
-    "seen": 1793311378.4626222,
+    "mtime": 1793309295.3761775,
+    "seen": 1793311441.813178,
     "ast_hash": "3145fbe787ceec65462e503229e8b5ba",
     "semantic_hash": ""
   },
   "tools/konoha/buildings/shop_tea_house.py": {
-    "mtime": 1793309192.5418527,
-    "seen": 1793311378.4626253,
+    "mtime": 1793309295.3761775,
+    "seen": 1793311441.8131828,
     "ast_hash": "dfdc2fe10ed3cad2bdf6e3d4cd64ff00",
     "semantic_hash": ""
   },
   "tools/konoha/catalogue.py": {
-    "mtime": 1793311262.1233218,
-    "seen": 1793311378.4626265,
+    "mtime": 1793311402.3866076,
+    "seen": 1793311441.813185,
     "ast_hash": "58bc1ff318970634d02f29d913df4b01",
     "semantic_hash": ""
   },
   "tools/konoha/kit.py": {
-    "mtime": 1793309192.5419931,
-    "seen": 1793311378.4626276,
+    "mtime": 1793309295.3761775,
+    "seen": 1793311441.8131871,
     "ast_hash": "3b9d35c37b3eb467be3e3b131d4b3857",
     "semantic_hash": ""
   },
   "tools/konoha/pixels.py": {
-    "mtime": 1793309192.5419931,
-    "seen": 1793311378.462629,
+    "mtime": 1793309295.3761775,
+    "seen": 1793311441.813189,
     "ast_hash": "c8a24d56b96a4470278d53bd12e0bf05",
     "semantic_hash": ""
   },
   "tools/konoha/preview.py": {
-    "mtime": 1793309192.5419931,
-    "seen": 1793311378.4626298,
+    "mtime": 1793309295.3761775,
+    "seen": 1793311441.813191,
     "ast_hash": "35e74f97d624a22f5cd18a8485c37282",
     "semantic_hash": ""
   },
   "tools/konoha/render_kit.py": {
-    "mtime": 1793309192.5419931,
-    "seen": 1793311378.4626312,
+    "mtime": 1793309295.3761775,
+    "seen": 1793311441.8131926,
     "ast_hash": "b1c5e26b796a3743c9646f3d5de23ae1",
     "semantic_hash": ""
   },
   "tools/konoha/street.py": {
-    "mtime": 1793311262.1233218,
-    "seen": 1793311378.4626322,
+    "mtime": 1793311402.3866076,
+    "seen": 1793311441.8131948,
     "ast_hash": "a9fc61382d4806aa90831c7a6755d90f",
     "semantic_hash": ""
   },
   "tools/missions/catalogue/c_rank.py": {
-    "mtime": 1793309872.9642282,
-    "seen": 1793311378.462633,
+    "mtime": 1793309990.030364,
+    "seen": 1793311441.813197,
     "ast_hash": "ca77f0b4ff49ee59c25e0b4e4b273b0c",
     "semantic_hash": ""
   },
   "tools/missions/catalogue/d_rank.py": {
-    "mtime": 1793309468.2242963,
-    "seen": 1793311378.4626343,
+    "mtime": 1793309990.030667,
+    "seen": 1793311441.8131986,
     "ast_hash": "db5e0dd440cd487b59fd9fdcd0301bdc",
     "semantic_hash": ""
   },
   "tools/missions/catalogue/later_ranks.py": {
-    "mtime": 1793309872.9642282,
-    "seen": 1793311378.4626353,
+    "mtime": 1793309990.0310125,
+    "seen": 1793311441.8132007,
     "ast_hash": "f63ec8aea0e745dc5c52f3a0db0bfb2a",
     "semantic_hash": ""
   },
   "tools/missions/catalogue/tables.py": {
-    "mtime": 1793309689.6553924,
-    "seen": 1793311378.462636,
+    "mtime": 1793309990.0310125,
+    "seen": 1793311441.8132026,
     "ast_hash": "2484d40aac751d487bb99a75f82384fa",
     "semantic_hash": ""
   },
   "tools/missions/missions.py": {
-    "mtime": 1793309872.9642282,
-    "seen": 1793311378.462637,
+    "mtime": 1793309990.0310125,
+    "seen": 1793311441.8132045,
     "ast_hash": "06868528d8b99eca20ce5c9019cece48",
     "semantic_hash": ""
   },
   "tools/missions/mkit.py": {
-    "mtime": 1793309872.9642282,
-    "seen": 1793311378.462638,
+    "mtime": 1793309990.0310125,
+    "seen": 1793311441.8132064,
     "ast_hash": "19abd9670551a79ef04328f505490af2",
     "semantic_hash": ""
   },
   "village/look/build.gradle": {
-    "mtime": 1793311121.1477292,
-    "seen": 1793311378.4627063,
+    "mtime": 1793308235.311724,
+    "seen": 1793311441.8133183,
     "ast_hash": "9dcce2c0f73025f8ebd905faf843a67c",
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/AgeStage.java": {
-    "mtime": 1793309806.2541106,
-    "seen": 1793311378.4627075,
+    "mtime": 1793308266.8183408,
+    "seen": 1793311441.8133204,
     "ast_hash": "cabb66bc9a69a9f85656f65c755230de",
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/CreatorRules.java": {
-    "mtime": 1793309806.2541535,
-    "seen": 1793311378.4627085,
+    "mtime": 1793309412.627267,
+    "seen": 1793311441.8133223,
     "ast_hash": "6eba969f49b44f4c6c0098384361885a",
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/GrowUp.java": {
-    "mtime": 1793309806.2541535,
-    "seen": 1793311378.4627092,
+    "mtime": 1793308331.3441653,
+    "seen": 1793311441.813324,
     "ast_hash": "a463ec96eeb507ac5e7bd65986a98ce4",
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/Json.java": {
-    "mtime": 1793309806.2541535,
-    "seen": 1793311378.4627106,
+    "mtime": 1793308266.8147554,
+    "seen": 1793311441.8133266,
     "ast_hash": "fb0dffa48b43157953fafeeb2972b7a6",
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/LifeRoll.java": {
-    "mtime": 1793309806.2541535,
-    "seen": 1793311378.4627113,
+    "mtime": 1793309412.6293573,
+    "seen": 1793311441.8133287,
     "ast_hash": "f462ce058bbd4c6ff029f7acdcb4235a",
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/Look.java": {
-    "mtime": 1793309806.2541535,
-    "seen": 1793311378.4627128,
+    "mtime": 1793308266.8197885,
+    "seen": 1793311441.8133345,
     "ast_hash": "12fa0e699adf1d0ee305cc81c293e84f",
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/Names.java": {
-    "mtime": 1793309971.601262,
-    "seen": 1793311378.4627137,
+    "mtime": 1793310020.0850005,
+    "seen": 1793311441.8133373,
     "ast_hash": "e9ba6a966423413588d8b13438723487",
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/Restyle.java": {
-    "mtime": 1793310241.8393676,
-    "seen": 1793311378.4627144,
+    "mtime": 1793310212.5151117,
+    "seen": 1793311441.8133395,
     "ast_hash": "639395283bd85fefd2f66762a9fe66e7",
     "semantic_hash": ""
   },
   "village/look/src/main/java/dev/shinobi/village/look/Seeds.java": {
-    "mtime": 1793309806.2541535,
-    "seen": 1793311378.4627154,
+    "mtime": 1793308266.815199,
+    "seen": 1793311441.8133411,
     "ast_hash": "df71599c6818a909d0edab1c061f8c96",
     "semantic_hash": ""
   },
   "village/look/src/test/java/dev/shinobi/village/look/AgeStageTest.java": {
-    "mtime": 1793309806.2546005,
-    "seen": 1793311378.4627163,
+    "mtime": 1793308389.7114873,
+    "seen": 1793311441.813343,
     "ast_hash": "4b12b4a1c10110b5d08255c91820a07e",
     "semantic_hash": ""
   },
   "village/look/src/test/java/dev/shinobi/village/look/CreatorRulesTest.java": {
-    "mtime": 1793309806.2546372,
-    "seen": 1793311378.4627173,
+    "mtime": 1793309412.6484206,
+    "seen": 1793311441.8133447,
     "ast_hash": "4478e34206a49cb1fac5b72d05ca3a1d",
     "semantic_hash": ""
   },
   "village/look/src/test/java/dev/shinobi/village/look/Data.java": {
-    "mtime": 1793309806.2546372,
-    "seen": 1793311378.4627182,
+    "mtime": 1793308389.707206,
+    "seen": 1793311441.8133466,
     "ast_hash": "69bc99ee130e8dfcda6e5cb3ac1698f5",
     "semantic_hash": ""
   },
   "village/look/src/test/java/dev/shinobi/village/look/LifeRollTest.java": {
-    "mtime": 1793309806.2546372,
-    "seen": 1793311378.4627192,
+    "mtime": 1793309412.6479754,
+    "seen": 1793311441.8133485,
     "ast_hash": "4ecf22a602117a3f48f64e5c6353f710",
     "semantic_hash": ""
   },
   "village/look/src/test/java/dev/shinobi/village/look/NamesTest.java": {
-    "mtime": 1793309971.601262,
-    "seen": 1793311378.4627202,
+    "mtime": 1793310020.0850005,
+    "seen": 1793311441.8133507,
     "ast_hash": "9ca9d2a38c7755e0b72ccabc3e17db01",
     "semantic_hash": ""
   },
   "village/look/src/test/java/dev/shinobi/village/look/RestyleAndGrowUpTest.java": {
-    "mtime": 1793309806.2546372,
-    "seen": 1793311378.4627213,
+    "mtime": 1793309412.648806,
+    "seen": 1793311441.8133523,
     "ast_hash": "a305210df6b6ca1204bf4de0255ebf51",
     "semantic_hash": ""
   },
   "CHARACTER_CREATION.md": {
-    "mtime": 1793310838.5326877,
-    "seen": 1793311378.4627235,
-    "ast_hash": "55811af0772dec5bc622825fd8e1ddc2",
+    "mtime": 1793311419.1011956,
+    "seen": 1793311441.813356,
+    "ast_hash": "51867fbaeab18f7eb565f3bdb0d5d22f",
     "semantic_hash": ""
   },
   "KONOHA_BUILD.md": {
-    "mtime": 1793311262.0553217,
-    "seen": 1793311378.4627395,
+    "mtime": 1793311401.8248968,
+    "seen": 1793311441.8133657,
     "ast_hash": "ca17a1479885a146767e11ba20335e28",
     "semantic_hash": ""
   },
   "MISSIONS.md": {
-    "mtime": 1793309872.9193842,
-    "seen": 1793311378.462742,
+    "mtime": 1793309989.9456737,
+    "seen": 1793311441.8133698,
     "ast_hash": "b0d5f1c0f973f7df6518a4fdfb1e1db3",
     "semantic_hash": ""
   },
   "docs/missions/CATALOGUE.md": {
-    "mtime": 1793309872.9233842,
-    "seen": 1793311378.4627495,
+    "mtime": 1793309989.952914,
+    "seen": 1793311441.8133867,
     "ast_hash": "57224bfb5b36715d2c1342dade913cd1",
     "semantic_hash": ""
   },
   "docs/missions/simulation.txt": {
-    "mtime": 1793309872.9233842,
-    "seen": 1793311378.4627512,
+    "mtime": 1793309989.9533296,
+    "seen": 1793311441.8133888,
     "ast_hash": "759d41e7fd1d1293ce1cd4bec5b1781b",
     "semantic_hash": ""
   },
   "life/roster/build.gradle": {
-    "mtime": 1793311121.1323438,
-    "seen": 1793311378.4625595,
+    "mtime": 1793310763.4382467,
+    "seen": 1793311441.813066,
     "ast_hash": "b1b808246f648418d5a0f1c5091d90bf",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/BondInput.java": {
-    "mtime": 1793310709.7033465,
-    "seen": 1793311378.4625607,
+    "mtime": 1793310763.4385662,
+    "seen": 1793311441.813068,
     "ast_hash": "bb0e9f8135cc35a395cd8c6f26f8638c",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/ClanPower.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.462562,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.81307,
     "ast_hash": "8df9f28c1382ff4f307bc92a497974fc",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Contribution.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.4625638,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.813072,
     "ast_hash": "9b6c0c8a2db2a2e67c0cda0ba8c36bfa",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Curve.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.4625652,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.8130744,
     "ast_hash": "149208bffb03e92359580ca27f08a2de",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Day.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.4625661,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.8130767,
     "ast_hash": "e8b07eae814fe76f752f94eb3b39bb31",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/GrowthEvent.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.4625673,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.8130786,
     "ast_hash": "b9ee5d5983739e66ac0146853fdcd0df",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Niche.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.4625688,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.8130813,
     "ast_hash": "188b13dafcc1017671cb7f9532975dd3",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Peer.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.4625702,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.8130834,
     "ast_hash": "e775383b215e394404dad5d71e097601",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Roster.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.4625714,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.8130856,
     "ast_hash": "b8c952f6ae41380ea29eb37841c0390d",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Seeds.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.4625723,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.8130872,
     "ast_hash": "e9c33d3033912d83be215647017c66a9",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Technique.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.4625735,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.8130896,
     "ast_hash": "5c8760c00fbafc25328c94d323571622",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Tier.java": {
-    "mtime": 1793310532.5405445,
-    "seen": 1793311378.4625752,
+    "mtime": 1793310763.4386377,
+    "seen": 1793311441.8130913,
     "ast_hash": "5339fdc6b227d2a0e890800d955583da",
     "semantic_hash": ""
   },
   "life/roster/src/test/java/dev/shinobi/life/roster/ClanPowerTest.java": {
-    "mtime": 1793310532.5421832,
-    "seen": 1793311378.4625764,
+    "mtime": 1793310763.4393463,
+    "seen": 1793311441.8130932,
     "ast_hash": "8506779e15d6ef0341af66c99a437177",
     "semantic_hash": ""
   },
   "life/roster/src/test/java/dev/shinobi/life/roster/CurveAndTierTest.java": {
-    "mtime": 1793310532.5422847,
-    "seen": 1793311378.4625776,
+    "mtime": 1793310763.4393964,
+    "seen": 1793311441.813095,
     "ast_hash": "f0f369275f5b6700d54f1a69d6c78645",
     "semantic_hash": ""
   },
   "life/roster/src/test/java/dev/shinobi/life/roster/RosterTest.java": {
-    "mtime": 1793310532.5422847,
-    "seen": 1793311378.462579,
+    "mtime": 1793310763.4393964,
+    "seen": 1793311441.8130968,
     "ast_hash": "07f9539b79765c2cfc381a2b8412bb9f",
     "semantic_hash": ""
   },
   "life/roster/src/test/java/dev/shinobi/life/roster/SeasonTest.java": {
-    "mtime": 1793310532.5422847,
-    "seen": 1793311378.46258,
+    "mtime": 1793310763.4393964,
+    "seen": 1793311441.8130984,
     "ast_hash": "cc29ced2df2befa459276f175c1335fa",
     "semantic_hash": ""
   },
   "life/roster/src/test/java/dev/shinobi/life/roster/TechniqueTest.java": {
-    "mtime": 1793310532.5422847,
-    "seen": 1793311378.4625812,
+    "mtime": 1793310763.4393964,
+    "seen": 1793311441.8131003,
     "ast_hash": "2622af9e1e19bfa48253b10d7618502b",
     "semantic_hash": ""
   },
   "life/roster/src/test/java/dev/shinobi/life/roster/sim/Season.java": {
-    "mtime": 1793310532.5422847,
-    "seen": 1793311378.4625823,
+    "mtime": 1793310763.4393964,
+    "seen": 1793311441.8131022,
     "ast_hash": "ef54076c84a74e3e63be2a1b2c11daef",
     "semantic_hash": ""
   },
   "tools/roster/roster.py": {
-    "mtime": 1793310532.5453503,
-    "seen": 1793311378.462639,
+    "mtime": 1793310763.4408877,
+    "seen": 1793311441.8132083,
     "ast_hash": "ab6bc26ec4a2bede4fd03414dfb97212",
     "semantic_hash": ""
   },
   "docs/RANKS.md": {
-    "mtime": 1793310709.6859407,
-    "seen": 1793311378.462747,
+    "mtime": 1793310763.3281162,
+    "seen": 1793311441.8133786,
     "ast_hash": "af19b3e16c0b63c6c70be29554b1eb00",
     "semantic_hash": ""
   },
   "life/economy/build.gradle": {
-    "mtime": 1793311121.1073282,
-    "seen": 1793311378.4625113,
+    "mtime": 1793311402.2983172,
+    "seen": 1793311441.8129768,
     "ast_hash": "34d702f69d324cd512871b1dfc8582d0",
     "semantic_hash": ""
   },
   "life/economy/src/main/java/dev/shinobi/life/economy/Catalogue.java": {
-    "mtime": 1793310787.9733799,
-    "seen": 1793311378.4625132,
+    "mtime": 1793311402.3002493,
+    "seen": 1793311441.8129797,
     "ast_hash": "719d1feab97cbd72bf7f9f0e0e30e713",
     "semantic_hash": ""
   },
   "life/economy/src/main/java/dev/shinobi/life/economy/Grades.java": {
-    "mtime": 1793310787.9734528,
-    "seen": 1793311378.4625144,
+    "mtime": 1793311402.300419,
+    "seen": 1793311441.812982,
     "ast_hash": "50a7e3bded1916cb0bb129b01c86c2ba",
     "semantic_hash": ""
   },
   "life/economy/src/main/java/dev/shinobi/life/economy/Json.java": {
-    "mtime": 1793310787.9734528,
-    "seen": 1793311378.462516,
+    "mtime": 1793311402.300419,
+    "seen": 1793311441.8129838,
     "ast_hash": "e36ab5fa07d1e9a965a11399536874d6",
     "semantic_hash": ""
   },
   "life/economy/src/main/java/dev/shinobi/life/economy/Ladder.java": {
-    "mtime": 1793310787.9734528,
-    "seen": 1793311378.4625173,
+    "mtime": 1793311402.300419,
+    "seen": 1793311441.8129854,
     "ast_hash": "102cc2ca503415df42da4666153afda0",
     "semantic_hash": ""
   },
   "life/economy/src/main/java/dev/shinobi/life/economy/Prices.java": {
-    "mtime": 1793310787.9734528,
-    "seen": 1793311378.4625185,
+    "mtime": 1793311402.300419,
+    "seen": 1793311441.8129878,
     "ast_hash": "d2883a91dbb9f4ea8d005a6e01ddac7c",
     "semantic_hash": ""
   },
   "life/economy/src/main/java/dev/shinobi/life/economy/Ryo.java": {
-    "mtime": 1793310787.9734528,
-    "seen": 1793311378.46252,
+    "mtime": 1793311402.300419,
+    "seen": 1793311441.8129902,
     "ast_hash": "d33205725dbb77a810762cc798398680",
     "semantic_hash": ""
   },
   "life/economy/src/main/java/dev/shinobi/life/economy/Stock.java": {
-    "mtime": 1793310787.9734528,
-    "seen": 1793311378.4625208,
+    "mtime": 1793311402.300419,
+    "seen": 1793311441.812992,
     "ast_hash": "3e863c958ddb4eaa332ee9ab2bd1ca04",
     "semantic_hash": ""
   },
   "life/economy/src/main/java/dev/shinobi/life/economy/Streams.java": {
-    "mtime": 1793310787.9734528,
-    "seen": 1793311378.4625216,
+    "mtime": 1793311402.300419,
+    "seen": 1793311441.8129935,
     "ast_hash": "0b3aec1112feb3e15df821bc94cd0516",
     "semantic_hash": ""
   },
   "life/economy/src/test/java/dev/shinobi/life/economy/CatalogueTest.java": {
-    "mtime": 1793310787.9737117,
-    "seen": 1793311378.462523,
+    "mtime": 1793311402.3008153,
+    "seen": 1793311441.812996,
     "ast_hash": "7deff8603be864e6e6327f1235391fa7",
     "semantic_hash": ""
   },
   "life/economy/src/test/java/dev/shinobi/life/economy/Data.java": {
-    "mtime": 1793310787.9737744,
-    "seen": 1793311378.4625242,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8129978,
     "ast_hash": "7f7adab0a24874643720e25d88bb4468",
     "semantic_hash": ""
   },
   "life/economy/src/test/java/dev/shinobi/life/economy/GradesTest.java": {
-    "mtime": 1793310787.9737744,
-    "seen": 1793311378.4625251,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8129997,
     "ast_hash": "a57b1dfb00c8e05d54e27231426a1f26",
     "semantic_hash": ""
   },
   "life/economy/src/test/java/dev/shinobi/life/economy/JsonTest.java": {
-    "mtime": 1793310787.9737744,
-    "seen": 1793311378.4625263,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8130014,
     "ast_hash": "953287c9ebff79a31d7f5a0873a614bf",
     "semantic_hash": ""
   },
   "life/economy/src/test/java/dev/shinobi/life/economy/PricesTest.java": {
-    "mtime": 1793310787.9737744,
-    "seen": 1793311378.4625273,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8130033,
     "ast_hash": "bcd06205e49d638ed09c736bff36b6dc",
     "semantic_hash": ""
   },
   "life/economy/src/test/java/dev/shinobi/life/economy/RuleOfThumbTest.java": {
-    "mtime": 1793310787.9737744,
-    "seen": 1793311378.4625282,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.813005,
     "ast_hash": "a0018d97c876e0c8904913ad85bf8e5b",
     "semantic_hash": ""
   },
   "life/economy/src/test/java/dev/shinobi/life/economy/RyoTest.java": {
-    "mtime": 1793310787.9737744,
-    "seen": 1793311378.462529,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8130069,
     "ast_hash": "b22817858d8d9b3f0e6977a3040797d4",
     "semantic_hash": ""
   },
   "life/economy/src/test/java/dev/shinobi/life/economy/StockTest.java": {
-    "mtime": 1793310787.9737744,
-    "seen": 1793311378.4625301,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8130088,
     "ast_hash": "66b4686a4b80cc44ca0c31139ac1c076",
     "semantic_hash": ""
   },
   "life/economy/src/test/java/dev/shinobi/life/economy/StreamsTest.java": {
-    "mtime": 1793310787.9737744,
-    "seen": 1793311378.4625309,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.8130107,
     "ast_hash": "60b2a071b3226a07e385f87992dfa99e",
     "semantic_hash": ""
   },
   "life/economy/src/test/java/dev/shinobi/life/economy/sim/EconomySim.java": {
-    "mtime": 1793310787.9737744,
-    "seen": 1793311378.4625318,
+    "mtime": 1793311402.3008814,
+    "seen": 1793311441.813013,
     "ast_hash": "956f6cefa244ff68068af8a3016bafd3",
     "semantic_hash": ""
   },
   "tools/items/items.py": {
-    "mtime": 1793310787.975625,
-    "seen": 1793311378.462619,
+    "mtime": 1793311402.3810735,
+    "seen": 1793311441.8131728,
     "ast_hash": "c625720e5bdfe59684db15bc4d72680e",
     "semantic_hash": ""
   },
   "tools/items/sprites.py": {
-    "mtime": 1793310787.975625,
-    "seen": 1793311378.4626205,
+    "mtime": 1793311402.3810735,
+    "seen": 1793311441.8131747,
     "ast_hash": "d2377a7da8d441ad8eb940ea7defdbb3",
     "semantic_hash": ""
   },
   "ITEMS.md": {
-    "mtime": 1793310912.1708782,
-    "seen": 1793311378.4627368,
+    "mtime": 1793311401.8248968,
+    "seen": 1793311441.813364,
     "ast_hash": "9b4d9ccb387a1541b7b1802c7be94d7b",
     "semantic_hash": ""
   },
   "docs/items/CATALOGUE.md": {
-    "mtime": 1793310912.1735094,
-    "seen": 1793311378.462748,
+    "mtime": 1793311401.8303173,
+    "seen": 1793311441.8133802,
     "ast_hash": "a46f9e4660bee0bf58f523e9ec07fed2",
     "semantic_hash": ""
   },
   "tools/dialogue/compose.py": {
-    "mtime": 1793310972.5296905,
-    "seen": 1793311378.4626172,
+    "mtime": 1793311402.3443193,
+    "seen": 1793311441.813169,
     "ast_hash": "098701c01cd182fd83ff4fa9d1792c0e",
     "semantic_hash": ""
   },
   "tools/dialogue/dialogue.py": {
-    "mtime": 1793311359.6953175,
-    "seen": 1793311378.4626184,
+    "mtime": 1793311402.3449943,
+    "seen": 1793311441.8131707,
     "ast_hash": "ba68590aad59ec6fbc5a6a62ce476051",
     "semantic_hash": ""
   },
   "village/dialogue/build.gradle": {
-    "mtime": 1793311371.723317,
-    "seen": 1793311378.4626873,
+    "mtime": 1793311402.3866076,
+    "seen": 1793311441.8132856,
     "ast_hash": "48f90eba7a30d30ea9e4585a250752ec",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Bank.java": {
-    "mtime": 1793310972.5499444,
-    "seen": 1793311378.4626882,
+    "mtime": 1793311402.3881092,
+    "seen": 1793311441.8132877,
     "ast_hash": "3776d48e4f670b0f18900f7ea40198e1",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Conditions.java": {
-    "mtime": 1793310972.5499928,
-    "seen": 1793311378.4626896,
+    "mtime": 1793311402.3882225,
+    "seen": 1793311441.8132892,
     "ast_hash": "935bdfae4ecfd396441e98ea78588a44",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Context.java": {
-    "mtime": 1793310972.5499928,
-    "seen": 1793311378.4626906,
+    "mtime": 1793311402.3882225,
+    "seen": 1793311441.8132913,
     "ast_hash": "093889f998860180113de5eb6326fdaf",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Heard.java": {
-    "mtime": 1793311359.6993175,
-    "seen": 1793311378.4626918,
+    "mtime": 1793311402.3882225,
+    "seen": 1793311441.8132927,
     "ast_hash": "6be9fbd65ac12727ac0053e45db6a392",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Json.java": {
-    "mtime": 1793310972.5499928,
-    "seen": 1793311378.462693,
+    "mtime": 1793311402.3882225,
+    "seen": 1793311441.8132946,
     "ast_hash": "46ed2ce94c78994b5dcebb082f139aee",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Line.java": {
-    "mtime": 1793310972.5499928,
-    "seen": 1793311378.4626937,
+    "mtime": 1793311402.3882225,
+    "seen": 1793311441.8132966,
     "ast_hash": "896904e7a5de7050614a3e94666338c3",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Names.java": {
-    "mtime": 1793310972.5499928,
-    "seen": 1793311378.4626946,
+    "mtime": 1793311402.3882225,
+    "seen": 1793311441.8132985,
     "ast_hash": "97462e6299c8fa2bc98e979b41a3ff58",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Question.java": {
-    "mtime": 1793311359.6993175,
-    "seen": 1793311378.4626956,
+    "mtime": 1793311402.3882225,
+    "seen": 1793311441.8132997,
     "ast_hash": "c2a3b6f0519be534c5e65a8ef7448e87",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Rules.java": {
-    "mtime": 1793311359.6993175,
-    "seen": 1793311378.4626966,
+    "mtime": 1793311402.3882225,
+    "seen": 1793311441.8133016,
     "ast_hash": "30f341d500d2341671b298cfc5e379c7",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Tags.java": {
-    "mtime": 1793310972.5499928,
-    "seen": 1793311378.4626975,
+    "mtime": 1793311402.3882225,
+    "seen": 1793311441.8133032,
     "ast_hash": "22a59a53a80c7eadd0d12415fac071ba",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Talk.java": {
-    "mtime": 1793311359.6993175,
-    "seen": 1793311378.4626987,
+    "mtime": 1793311402.3882225,
+    "seen": 1793311441.813305,
     "ast_hash": "cd74ef3f0b12465af3c6c69660f6dbb8",
     "semantic_hash": ""
   },
   "village/dialogue/src/main/java/dev/shinobi/village/dialogue/Tokens.java": {
-    "mtime": 1793310972.5499928,
-    "seen": 1793311378.4627,
+    "mtime": 1793311402.3890765,
+    "seen": 1793311441.8133066,
     "ast_hash": "5dc2f3d8ecae8b2082a40a4c4d54bc1a",
     "semantic_hash": ""
   },
   "village/dialogue/src/test/java/dev/shinobi/village/dialogue/Fixture.java": {
-    "mtime": 1793311359.6993175,
-    "seen": 1793311378.462701,
+    "mtime": 1793311402.3892431,
+    "seen": 1793311441.8133087,
     "ast_hash": "09fb9934db334b2dd04b17d43c71ce1f",
     "semantic_hash": ""
   },
   "village/dialogue/src/test/java/dev/shinobi/village/dialogue/QuestionsAndLedgerTest.java": {
-    "mtime": 1793311359.7039685,
-    "seen": 1793311378.462702,
+    "mtime": 1793311402.3893497,
+    "seen": 1793311441.8133106,
     "ast_hash": "850f3bc27e844a8e8d326da116970667",
     "semantic_hash": ""
   },
   "village/dialogue/src/test/java/dev/shinobi/village/dialogue/TalkTest.java": {
-    "mtime": 1793311359.7042356,
-    "seen": 1793311378.462703,
+    "mtime": 1793311402.3893497,
+    "seen": 1793311441.8133123,
     "ast_hash": "6bd88b1a48d2bff72e487e922aaa1fc1",
     "semantic_hash": ""
   },
   "village/dialogue/src/test/java/dev/shinobi/village/dialogue/sim/BetaTalk.java": {
-    "mtime": 1793310972.5506532,
-    "seen": 1793311378.4627042,
+    "mtime": 1793311402.3893497,
+    "seen": 1793311441.8133142,
     "ast_hash": "7048575608d3d58cbb04ce80ba8cbdb0",
     "semantic_hash": ""
   },
   "village/dialogue/src/test/java/dev/shinobi/village/dialogue/sim/BondKeys.java": {
-    "mtime": 1793310972.5509236,
-    "seen": 1793311378.4627051,
+    "mtime": 1793311402.3897464,
+    "seen": 1793311441.8133159,
     "ast_hash": "64ab24dc25d31b8e2e01e6f2efd2c863",
     "semantic_hash": ""
   },
   "DIALOGUE.md": {
-    "mtime": 1793311359.6374395,
-    "seen": 1793311378.4627266,
+    "mtime": 1793311401.8245623,
+    "seen": 1793311441.813362,
     "ast_hash": "083ecb0c3d52501da725efb455e4d093",
     "semantic_hash": ""
   },
   "docs/story/dialogue/lines/pilot.txt": {
-    "mtime": 1793310972.4663556,
-    "seen": 1793311378.4627533,
+    "mtime": 1793311401.853216,
+    "seen": 1793311441.8133917,
     "ast_hash": "2b7deaedea8f40e7ac023b1cf22af22f",
     "semantic_hash": ""
   },
   "docs/story/dialogue/spoiler_terms.txt": {
-    "mtime": 1793310972.4665577,
-    "seen": 1793311378.462755,
+    "mtime": 1793311401.8533092,
+    "seen": 1793311441.8133938,
     "ast_hash": "7dd47ec783158ce7b50aba5f30b225cb",
     "semantic_hash": ""
   },
   "tools/dialogue/WRITING.md": {
-    "mtime": 1793311359.6953175,
-    "seen": 1793311378.4627566,
+    "mtime": 1793311402.3440855,
+    "seen": 1793311441.8133957,
     "ast_hash": "ce44aa1dd92a889e3c81938904d45987",
     "semantic_hash": ""
   },
   "tools/dialogue/bond_keys.txt": {
-    "mtime": 1793310972.5296905,
-    "seen": 1793311378.462758,
+    "mtime": 1793311402.3443193,
+    "seen": 1793311441.8133972,
     "ast_hash": "b77c4b67dcda11f24c80f791f36fa923",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-clan.txt": {
-    "mtime": 1793310972.5302444,
-    "seen": 1793311378.4627597,
+    "mtime": 1793311402.3449943,
+    "seen": 1793311441.813399,
     "ast_hash": "fa60d5a49faab2e254966bda2bd076b9",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-couple.txt": {
-    "mtime": 1793310972.5303721,
-    "seen": 1793311378.4627607,
+    "mtime": 1793311402.345328,
+    "seen": 1793311441.8134007,
     "ast_hash": "59dc8be1f79a1409484a690f220be166",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-coworkers.txt": {
-    "mtime": 1793310972.5303721,
-    "seen": 1793311378.4627619,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134027,
     "ast_hash": "2423dba7c1aaf29752f9b764d70a3a8a",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-customers.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.462763,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134043,
     "ast_hash": "c09618430abe82db5f85846c51088a70",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-elders.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627645,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134058,
     "ast_hash": "71e121b1e8086bf361496cd1a3e23f7c",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-events.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627652,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134074,
     "ast_hash": "a924cd94105651b4958b8ccf1b6ee2f4",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-family.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627664,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.813409,
     "ast_hash": "0fffcfdff916dcdffab10fb908fb03e6",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-friends.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627674,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134108,
     "ast_hash": "b327151ef1467ec0782f0881a2d0726c",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-kids.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.462768,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134127,
     "ast_hash": "520d77156348c2493f0953fab2415a42",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-neighbors.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627695,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.813414,
     "ast_hash": "b6d4f2edd9e06546c49e2a4deca915aa",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-parent_child.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627705,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.813416,
     "ast_hash": "9e2068af61216d22a255ff2157e66850",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-rivals.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627714,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134174,
     "ast_hash": "1d49ca8b3f2c567fc78c13c2ec40a52e",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/ambient-shinobi.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627721,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.813419,
     "ast_hash": "512343a17c6e41fc54c089c34e78a24f",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/hooks-favor_needed.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627733,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134203,
     "ast_hash": "7a84bbe6c3720eaf067c474c7ec38e5e",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/hooks-lost_item.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627745,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134217,
     "ast_hash": "946abe7351b01c2a412e64442defc5ce",
     "semantic_hash": ""
   },
   "tools/dialogue/exchanges/hooks-society.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627757,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134234,
     "ast_hash": "414da9b03222bad9252a0568ede58b11",
     "semantic_hash": ""
   },
   "tools/dialogue/generated/gen-greet-band.txt": {
-    "mtime": 1793310972.5304253,
-    "seen": 1793311378.4627771,
+    "mtime": 1793311402.3453574,
+    "seen": 1793311441.8134248,
     "ast_hash": "73de99805a1db1222aebb9842faf9665",
     "semantic_hash": ""
   },
   "tools/dialogue/generated/gen-greet-rank.txt": {
-    "mtime": 1793310972.5310078,
-    "seen": 1793311378.462778,
+    "mtime": 1793311402.3463516,
+    "seen": 1793311441.8134265,
     "ast_hash": "8776cee02760db887d37023ae9a4a013",
     "semantic_hash": ""
   },
   "tools/dialogue/generated/gen-greet-time.txt": {
-    "mtime": 1793310972.5310078,
-    "seen": 1793311378.4627793,
+    "mtime": 1793311402.3463516,
+    "seen": 1793311441.8134282,
     "ast_hash": "895eb5f71b628ddac640f099b5525cc1",
     "semantic_hash": ""
   },
   "tools/dialogue/generated/gen-greet-weather.txt": {
-    "mtime": 1793310972.5310078,
-    "seen": 1793311378.4627802,
+    "mtime": 1793311402.3465996,
+    "seen": 1793311441.8134296,
     "ast_hash": "6a4a9eb7555aec1684b063cd53b16117",
     "semantic_hash": ""
   },
   "tools/dialogue/generated/gen-shop-keepers.txt": {
-    "mtime": 1793310972.5310078,
-    "seen": 1793311378.4627812,
+    "mtime": 1793311402.34681,
+    "seen": 1793311441.8134313,
     "ast_hash": "f2c3ea5d3288f2a249b31985bd7ebdc4",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/bond-book.txt": {
-    "mtime": 1793310972.5313349,
-    "seen": 1793311378.4627821,
+    "mtime": 1793311402.3503172,
+    "seen": 1793311441.813433,
     "ast_hash": "7d5ebb11605f492b6c46c50376f8b9e6",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/bond-extra.txt": {
-    "mtime": 1793311071.888725,
-    "seen": 1793311378.4627833,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134346,
     "ast_hash": "e03299711d7713d2b1e9e91949257dc4",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/bond-greet.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627843,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134363,
     "ast_hash": "c85f12dd934a7a09c3e80ed2c7628970",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/bond-level.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627852,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134377,
     "ast_hash": "ebe713eebd8f71d271a916b75fdb4cc5",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/bond-memory.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627867,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134394,
     "ast_hash": "3f465f224504d93b092d27372f6e8370",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/bond-news.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627876,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134413,
     "ast_hash": "c11bbfdf79dd0d5db085e96ec31efb83",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/bond-quarrel.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627888,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134425,
     "ast_hash": "41cbed62969c1cf91eb15cd32814db38",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/bond-romance.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627898,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134441,
     "ast_hash": "2ef51f42a73e7f67e2a10d7022df313d",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-advice.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627912,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134456,
     "ast_hash": "54bfd33cd4ac7c7724f05c43be154909",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-confess.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627924,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134475,
     "ast_hash": "59a867b5df6244a4b627949bd39b1377",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-contradict.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627938,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134494,
     "ast_hash": "041e8eb2fea90b210e6c0863a14db929",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-deeper.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627948,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134508,
     "ast_hash": "a26689cd8e361a65bf5b5633836ef435",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-dilemmas.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627962,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134525,
     "ast_hash": "5cc9416f11aa6cb7fbc4021eaff50536",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-everyday.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627974,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134542,
     "ast_hash": "4330b8d2668b00d205c69903bdcbf2fe",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-past.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627984,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134556,
     "ast_hash": "49be9309cafd8ea14848000d53709678",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-plans.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4627993,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.813457,
     "ast_hash": "3aa4b78e519d07aa86ff0e4eb4423e4a",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-prefs.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628005,
+    "mtime": 1793311402.3533792,
+    "seen": 1793311441.8134584,
     "ast_hash": "8b52a9038c2329d999832cc2fb36d668",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-values.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628017,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.81346,
     "ast_hash": "e65e866d5d8bfe6509035cb62e4a6442",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-village.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628026,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134615,
     "ast_hash": "1ee91661a40d561c10046a246b261d41",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-adventurous.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628034,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.813463,
     "ast_hash": "9ee3580b479de2c3fb1b36ac200ceed3",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-curious.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628048,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134646,
     "ast_hash": "474ded6becbb72a1848100975c806277",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-fiery.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.462806,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134663,
     "ast_hash": "31207a6b1936b8ac655cbdf80c95fe3f",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-gentle.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.462807,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.813468,
     "ast_hash": "f04944aabdf307b73f74230b43615158",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-imaginative.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628081,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134694,
     "ast_hash": "505cfb36c2840f020b1805506b107ac9",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-meticulous.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.462809,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.813471,
     "ast_hash": "0924f8152e9aaefecb6bfcaa14052dea",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-playful.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628103,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134725,
     "ast_hash": "85442ee820c306155f34c9375473c670",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-pragmatic.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628115,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134744,
     "ast_hash": "1ec3412e1e165aec57eb6939ea9be412",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-protective.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628127,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134758,
     "ast_hash": "9d3ec4d8add81ca2b1b33b3781ddcdac",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-proud.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628136,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134773,
     "ast_hash": "37ed76a403a14cc79d0b0548d25ee024",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-reserved.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628148,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.813479,
     "ast_hash": "7a551ffd1d2a452f15b72d24b3d7e23d",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-shy.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628158,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134804,
     "ast_hash": "25a62c665d44a5a40827b5a8df460786",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-steadfast.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.462817,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.813482,
     "ast_hash": "c2d45458f91e089a1bc83bf14a5be3b5",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-stern.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628184,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134837,
     "ast_hash": "9bc4b10e686dacbf68150582d4d9684c",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-thoughtful.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628196,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134856,
     "ast_hash": "52e090313fb0cb91632c477ec4f7d121",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-answer-voice-warmhearted.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628205,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134878,
     "ast_hash": "c4a9e82f3f420fd6f5c2295175ad5967",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-hangout-dates.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628217,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134894,
     "ast_hash": "0b3e06cce261851b0d7f5716591ef08e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-hangout-meals.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628227,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.813491,
     "ast_hash": "897c93d1b565e1e96381483cf1341d7e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-hangout-quiet.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628236,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.813493,
     "ast_hash": "0b7ad82ce8456c6c58125fbc819de627",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-hangout-seasons.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628248,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134947,
     "ast_hash": "5f41f2de906dee4005f72799b227c085",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-hangout-town.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.462826,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8134966,
     "ast_hash": "5e220d0f9b17039116cf364c5d26119f",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/callback-hangout-training.txt": {
-    "mtime": 1793310972.5338485,
-    "seen": 1793311378.4628272,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.813498,
     "ast_hash": "8530132bb08e4375294944001e8b02e5",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-child.txt": {
-    "mtime": 1793310972.5366597,
-    "seen": 1793311378.4628289,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8135,
     "ast_hash": "d2fac9baf07de121ed7b05d752295a82",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-clan-groups.txt": {
-    "mtime": 1793310972.5368192,
-    "seen": 1793311378.46283,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8135011,
     "ast_hash": "a5f272f7531453c7b2e915886d9c50d2",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-clan-minor.txt": {
-    "mtime": 1793310972.5369587,
-    "seen": 1793311378.4628313,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8135028,
     "ast_hash": "4a3a4c0fdaee1530051c93dcf50ee76d",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-clan-noble.txt": {
-    "mtime": 1793310972.5371583,
-    "seen": 1793311378.4628327,
+    "mtime": 1793311402.3543172,
+    "seen": 1793311441.8135042,
     "ast_hash": "6263c76f79f2f1b200e0725d654b2084",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-job.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628336,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.813506,
     "ast_hash": "7e75eb77513d09546f8e490ecfae5de8",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-adventurous.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628346,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.813507,
     "ast_hash": "b1d42ec12c2b607a25c4ce1157f5481a",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-curious.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628358,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135085,
     "ast_hash": "78e05423b4bee36745cabaac1356f08b",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-fiery.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628367,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.81351,
     "ast_hash": "53f8b7cfb7fbe2d2a463f2b94b5e4e46",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-gentle.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628375,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135114,
     "ast_hash": "dd1bfd8f6f42b2cf6dd80b8cbeb9c7d8",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-imaginative.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628384,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135128,
     "ast_hash": "431aa9ff04ae688fbd98924cd9fd3650",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-meticulous.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628394,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135142,
     "ast_hash": "9d94ca7717d6f8073731bec190018e89",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-playful.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628406,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135157,
     "ast_hash": "dfd7c5643e6d7b1e8c9a002548ee558f",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-pragmatic.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628415,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135173,
     "ast_hash": "46cdfaab28cb0e54b93b22ba3c7edc56",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-protective.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628427,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135195,
     "ast_hash": "0d8cdf2d5cecbb34bf8d3ea19493b159",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-proud.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628437,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135207,
     "ast_hash": "d88ad2f94d238a1270faa2d520535711",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-reserved.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628446,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135223,
     "ast_hash": "eedf43de1db752dbf749c945c6b5c203",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-shy.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628458,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.813524,
     "ast_hash": "cd72008dd89bd2c0bafb82158c7c2a4c",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-steadfast.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628468,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.813525,
     "ast_hash": "23337449f5e924c8ba3aa78d171a02a0",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-stern.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628477,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135262,
     "ast_hash": "105d7bc3585ec32d902cbed781a1e72b",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-thoughtful.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628484,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135276,
     "ast_hash": "be6bc4c52b10a0972aaedb756243986f",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personal-warmhearted.txt": {
-    "mtime": 1793310972.5373812,
-    "seen": 1793311378.4628496,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.813529,
     "ast_hash": "5c01e0a7b523db97ffdba08d29f45365",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-place.txt": {
-    "mtime": 1793310972.538386,
-    "seen": 1793311378.4628508,
+    "mtime": 1793311402.3583171,
+    "seen": 1793311441.8135314,
     "ast_hash": "d8112cca327c2957d263290c57e30ff1",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-rank.txt": {
-    "mtime": 1793310972.5389419,
-    "seen": 1793311378.4628518,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135338,
     "ast_hash": "b846c6a5d46b74164642819b0a23a1a9",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-season.txt": {
-    "mtime": 1793310972.539026,
-    "seen": 1793311378.462853,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.813535,
     "ast_hash": "5517c230c314e2801883189c90a29bc4",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-teach.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628541,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135364,
     "ast_hash": "86b8a257bebc8b489a11225cf5340d9e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-time.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628553,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.813538,
     "ast_hash": "a790aff2ca85cc3046b9bfe11c5352c9",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-village.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628565,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135395,
     "ast_hash": "cd0fd99ba919fa23cbc12d94d3722332",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-weather.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628575,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135414,
     "ast_hash": "cb181bef3d5943563d8511b565e40d7f",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/combat-ally.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628584,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135428,
     "ast_hash": "9fdc84027128067e6a041c0d6428ddad",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/combat-bandit.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628599,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135445,
     "ast_hash": "134133ceaac30558bfd33f9f9c3f9e67",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/combat-bystander.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.462861,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135457,
     "ast_hash": "0762ae861039d0fa5c76922c3aeb7095",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/combat-exam.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628623,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135476,
     "ast_hash": "30d39d35a1cddeeeb676bd44864f9883",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/combat-rogue.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628634,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135488,
     "ast_hash": "b97ea9016504b672feaa3753d2a6431c",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/combat-sensei-tips.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628642,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135502,
     "ast_hash": "e03a1aaab8b8de1e2ebec31d4af0d82f",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/combat-spar.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.462865,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.813552,
     "ast_hash": "effe42b0ffd29ac5db91692859f608f5",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-birthday.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628665,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135536,
     "ast_hash": "2b536c9ede439fa85e37bafa69e45fa6",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-chunin_exams.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628673,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.813555,
     "ast_hash": "5b1c74036d092c657d056baf6deb276e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-clan_day.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628682,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135567,
     "ast_hash": "6e39c0f33fd5c899d023141fc1ed0e6d",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-exam_week.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628692,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.813558,
     "ast_hash": "4ed70f7749583e25bf211a145445770b",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-graduation.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628704,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135598,
     "ast_hash": "e90d9498fec5bb32ef6115e91c0966e1",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-leaf_festival.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628713,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135612,
     "ast_hash": "4f3e275228b211bc0c7c9da677bb8a50",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-market_day.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.462872,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135626,
     "ast_hash": "efdc06680fe66677875206013f60352e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-mood.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628727,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.813564,
     "ast_hash": "0541236a40f9c71fe0a01cc199ad0e4e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-new_year.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.462874,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135657,
     "ast_hash": "ead202295f146e512821433259f71745",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-seasons.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.462875,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.813567,
     "ast_hash": "073b1ff2fbc85f4721ef65a7352570ae",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/event-wedding.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.4628758,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135684,
     "ast_hash": "04769e119aa9aa129d70260e7a484c91",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/followup-all.txt": {
-    "mtime": 1793310972.539115,
-    "seen": 1793311378.462877,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135698,
     "ast_hash": "d6252bb890149dd2f8cee3399a419588",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/gift-reactions.txt": {
-    "mtime": 1793310972.5404975,
-    "seen": 1793311378.4628778,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135712,
     "ast_hash": "a607b5d2ce8cce85e980897e3e7ee710",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-band.txt": {
-    "mtime": 1793310972.5404975,
-    "seen": 1793311378.4628787,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135726,
     "ast_hash": "c5223109c56ba5a5396e830e18ef422b",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-child.txt": {
-    "mtime": 1793310972.5407717,
-    "seen": 1793311378.4628797,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135743,
     "ast_hash": "943e86cd54b3b24a50e28033c4ca940c",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-clan.txt": {
-    "mtime": 1793310972.541159,
-    "seen": 1793311378.4628808,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.813576,
     "ast_hash": "63ee6eff5a46ba9b37f85b6fb012f5e7",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-event-child.txt": {
-    "mtime": 1793310972.5416646,
-    "seen": 1793311378.462882,
+    "mtime": 1793311402.3623862,
+    "seen": 1793311441.8135774,
     "ast_hash": "8c9239e9b512b4570778eae78526796a",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-job.txt": {
-    "mtime": 1793310972.5418386,
-    "seen": 1793311378.4628832,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.813579,
     "ast_hash": "8d959e808bee966ed3b55570227a2f74",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-personality.txt": {
-    "mtime": 1793310972.541978,
-    "seen": 1793311378.4628844,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135808,
     "ast_hash": "08d9cffee590727bf7e970ccd27025bc",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-place.txt": {
-    "mtime": 1793310972.5420756,
-    "seen": 1793311378.4628851,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135824,
     "ast_hash": "595429e98b6fcfd3a05e76b099cc8336",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-rank.txt": {
-    "mtime": 1793310972.5422137,
-    "seen": 1793311378.462886,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135839,
     "ast_hash": "183b8adfa2fe2f06e05abe5d3352a1b7",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-season.txt": {
-    "mtime": 1793310972.5423033,
-    "seen": 1793311378.4628873,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.813585,
     "ast_hash": "5337b829a4b56cf7b3fc15fc3ad8d69a",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-time.txt": {
-    "mtime": 1793310972.5424104,
-    "seen": 1793311378.4628885,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135867,
     "ast_hash": "24e368e1dfec990dfe10fe8b46800bdf",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greet-weather.txt": {
-    "mtime": 1793310972.5424857,
-    "seen": 1793311378.4628892,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135881,
     "ast_hash": "a2132c8191d6f291bb45dafbe530cb0a",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/hangout-dates.txt": {
-    "mtime": 1793310972.5424857,
-    "seen": 1793311378.4628901,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135896,
     "ast_hash": "d61b1543ac99515c2185164b411ff0bc",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/hangout-meals.txt": {
-    "mtime": 1793310972.542622,
-    "seen": 1793311378.462891,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135908,
     "ast_hash": "b095928fdc59bd54056bc0720d8fa42b",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/hangout-quiet.txt": {
-    "mtime": 1793310972.5427086,
-    "seen": 1793311378.462892,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.813592,
     "ast_hash": "aa0439ef54989186ca46ae28f50d2ee9",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/hangout-seasons.txt": {
-    "mtime": 1793310972.5427086,
-    "seen": 1793311378.462893,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135936,
     "ast_hash": "9f721ca338bdeafde97285f05435f48e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/hangout-town.txt": {
-    "mtime": 1793310972.542853,
-    "seen": 1793311378.4628937,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135948,
     "ast_hash": "6d7cac37c6ac354ffe1d686a8c822a37",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/hangout-training.txt": {
-    "mtime": 1793310972.5429506,
-    "seen": 1793311378.462895,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135965,
     "ast_hash": "fd13ba732c8772f8cb292f09034df1a9",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/home-door.txt": {
-    "mtime": 1793310972.5429506,
-    "seen": 1793311378.4628956,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.813598,
     "ast_hash": "4cf1b48b2fbade991e2218bdca30df6c",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/home-hangouts.txt": {
-    "mtime": 1793310972.5431669,
-    "seen": 1793311378.4628966,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8135989,
     "ast_hash": "f636e5c47af47a13724e68ec6d0833c4",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/home-keys.txt": {
-    "mtime": 1793310972.5431669,
-    "seen": 1793311378.4628978,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.8136005,
     "ast_hash": "ea5cd0b00946e386a3f22c38f08debd1",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/home-pantry.txt": {
-    "mtime": 1793310972.5431669,
-    "seen": 1793311378.4628987,
+    "mtime": 1793311402.3663173,
+    "seen": 1793311441.813602,
     "ast_hash": "21f80ba34e6887491b8d137e78278f3a",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/home-visit.txt": {
-    "mtime": 1793310972.5434482,
-    "seen": 1793311378.4628994,
+    "mtime": 1793311402.3708062,
+    "seen": 1793311441.8136039,
     "ast_hash": "8a14ea8ed418c4bbdb3bc3116e9a14a3",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/hook-society.txt": {
-    "mtime": 1793310972.543523,
-    "seen": 1793311378.4629004,
+    "mtime": 1793311402.3708062,
+    "seen": 1793311441.8136053,
     "ast_hash": "89d70e8a4eeb5e7f1f98a3541039bd7e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/life-events.txt": {
-    "mtime": 1793310972.543716,
-    "seen": 1793311378.4629016,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136075,
     "ast_hash": "7087faf725f1d9698e498c4e42c75a43",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/missions-banter-bands.txt": {
-    "mtime": 1793310972.5438235,
-    "seen": 1793311378.4629025,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.813609,
     "ast_hash": "1421d445977f4ff5a35594294ce54aac",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/missions-banter.txt": {
-    "mtime": 1793310972.5439105,
-    "seen": 1793311378.4629035,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136106,
     "ast_hash": "3373f3944f592f0351f3d1ba69b93103",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/missions-c1.txt": {
-    "mtime": 1793310972.5440087,
-    "seen": 1793311378.4629042,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136122,
     "ast_hash": "d3c3ec356828d39728fb936a0ae4401e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/missions-c2.txt": {
-    "mtime": 1793310972.5441577,
-    "seen": 1793311378.4629054,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.813614,
     "ast_hash": "7028867a5d061a82b938afc15ef38848",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/missions-d1.txt": {
-    "mtime": 1793310972.5443494,
-    "seen": 1793311378.4629064,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136153,
     "ast_hash": "e220fd6f1ecd1c0b2c9771cdec9ae34f",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/missions-d2.txt": {
-    "mtime": 1793310972.544553,
-    "seen": 1793311378.462907,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.813617,
     "ast_hash": "c38ccbea1af6f490d6cc42a6f7a00900",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/missions-desk.txt": {
-    "mtime": 1793310972.5446649,
-    "seen": 1793311378.4629083,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136184,
     "ast_hash": "45a6bcfd908e45045d19e5ba795e4b5d",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/repeat-personalities.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629092,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136199,
     "ast_hash": "81f020cbb6864d6993ee39388c3cb63c",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/repeat.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629102,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136215,
     "ast_hash": "69c512aa49637543b080a0b942fcf045",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-academy_supply.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629111,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.813623,
     "ast_hash": "e4fcd69668bff28ac2281de3aaab0e02",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-barbecue_house.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.462912,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136249,
     "ast_hash": "8c62f1c66fcce38b7f6e834853502bfd",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-barber.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.462913,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136263,
     "ast_hash": "e921957ff732cbc5c8401772ab3321c7",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-bath_house.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629142,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.813628,
     "ast_hash": "8e9de64d3eb86ebe58d62ad52ee0b082",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-bookshop.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629152,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136294,
     "ast_hash": "623117c0b65ae27ff1440ca655a52cbc",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-cat_shelter.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629161,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.813631,
     "ast_hash": "56ed9c3e499f0f31b547977ed9f5edfc",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-dango_stand.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.462917,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136327,
     "ast_hash": "5d09d3e140f39b237374a485f80ec24c",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-fishmonger.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629178,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136344,
     "ast_hash": "90bc3efa90036d486944565e008a486f",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-flower_shop.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.462919,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136356,
     "ast_hash": "1bcc409f6f11e32588525e0db58520b5",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-furniture_shop.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629197,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.813637,
     "ast_hash": "5e53c39fa895d50fa744b7e8b61e8ebc",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-grocer.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.462921,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136384,
     "ast_hash": "3100949472d8cf8e665c6c21f7b3a430",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-hagane_metalworks.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.462922,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136399,
     "ast_hash": "0f1d396fef6b94d7bb81319705c132c6",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-haruno_store.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629228,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136415,
     "ast_hash": "81db5a19db18abb5028407bfd78fe2b5",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-hospital_dispensary.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629238,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.813643,
     "ast_hash": "5cc5076bebc083275adc4ca8ff8a8067",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-ichiraku.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629247,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136442,
     "ast_hash": "7a3e30f08b3142e7a13a2d860e784feb",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-inuzuka_clinic.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.462926,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136456,
     "ast_hash": "8b61124925719037a2ba27fd6676202d",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-jobs.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629269,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.813647,
     "ast_hash": "2e906d2fd9f49d5d25f1d6a5609479ef",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-kinoshita_yard.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629278,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136487,
     "ast_hash": "7172634ada563ede20b46647f94ee40e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-painters_studio.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629292,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136501,
     "ast_hash": "88ec2e95e3ba3e9a2bc19e496042d6d3",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-pawn_shop.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.46293,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136518,
     "ast_hash": "3e6ff0356ab23ea68f84b7a09284e485",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-pharmacy.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.462931,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136532,
     "ast_hash": "db4aca487110f3e9ffa56054becaabcd",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-scroll_shop.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629319,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136544,
     "ast_hash": "c4237d13025a2c77d228c701a4aa4ae9",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-senbei_shop.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629328,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136563,
     "ast_hash": "47a2d4f3ed2a2a02eaef97cc9b230785",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-shrine_office.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629338,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136575,
     "ast_hash": "0fa5deeab17d8d11e337361b9d2691ea",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-stalls.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629347,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136592,
     "ast_hash": "5d041a506dbeec21125067b3851bc3f8",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-tailor.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.462936,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136606,
     "ast_hash": "3438603131be78efaa2e021fa248885e",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-tea_house.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629366,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136623,
     "ast_hash": "a9e8527ead5a87181e935e77b8992571",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-tea_house_rival.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629376,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.813664,
     "ast_hash": "4bbc6b4c46ce3eaee3258bc60d40af02",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-tool_shop.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629385,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136659,
     "ast_hash": "68c564f42df65e8097d148f931838f9a",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/shop-weapon_shop.txt": {
-    "mtime": 1793310972.5448003,
-    "seen": 1793311378.4629397,
+    "mtime": 1793311402.3712204,
+    "seen": 1793311441.8136675,
     "ast_hash": "2289b2b013d3fbeea229e6e9e74ea55c",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/talk-deep.txt": {
-    "mtime": 1793310972.5474784,
-    "seen": 1793311378.4629407,
+    "mtime": 1793311402.3743172,
+    "seen": 1793311441.8136692,
     "ast_hash": "49a17f5a50903bc81803374516c46632",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/talk-light.txt": {
-    "mtime": 1793310972.5474784,
-    "seen": 1793311378.4629416,
+    "mtime": 1793311402.376361,
+    "seen": 1793311441.8136706,
     "ast_hash": "8b79544722546b9008d1b50d284dfe09",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/talk-more-a.txt": {
-    "mtime": 1793310972.5474784,
-    "seen": 1793311378.4629424,
+    "mtime": 1793311402.3766234,
+    "seen": 1793311441.8136725,
     "ast_hash": "21d7bb5db33aaf933a4deb9ecdbffeae",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/talk-more-b.txt": {
-    "mtime": 1793310972.5474784,
-    "seen": 1793311378.4629436,
+    "mtime": 1793311402.3770797,
+    "seen": 1793311441.813674,
     "ast_hash": "98b6356d1c546592aefdc141aa3e608c",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/talk-reactions.txt": {
-    "mtime": 1793310972.5474784,
-    "seen": 1793311378.4629445,
+    "mtime": 1793311402.3774402,
+    "seen": 1793311441.8136754,
     "ast_hash": "219acfae665b54351fc002bf51a03b1b",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/advice.txt": {
-    "mtime": 1793310972.5474784,
-    "seen": 1793311378.4629457,
+    "mtime": 1793311402.3774402,
+    "seen": 1793311441.813677,
     "ast_hash": "3d3789e9068ea26dd2cea1496deeb4f9",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/confess.txt": {
-    "mtime": 1793310972.5480258,
-    "seen": 1793311378.462947,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.8136783,
     "ast_hash": "81388a29f45fbf748bf2b0248149128d",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/deeper.txt": {
-    "mtime": 1793310972.5480258,
-    "seen": 1793311378.462948,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.81368,
     "ast_hash": "fc14266a91311b17cf459274657a8369",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/dilemmas.txt": {
-    "mtime": 1793310972.5480258,
-    "seen": 1793311378.462949,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.8136814,
     "ast_hash": "ea567612bf01232f995755affbb0f541",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/everyday.txt": {
-    "mtime": 1793311359.6993175,
-    "seen": 1793311378.4629502,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.813683,
     "ast_hash": "28f06b0687df0f77e9ed7f5a17d47bb1",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/past.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629512,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.8136845,
     "ast_hash": "2f0a2f3e06d6f9318abaa094f1d9b463",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/plans.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.462952,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.8136861,
     "ast_hash": "7fe110124e16bf69027617aeb268913b",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/prefs.txt": {
-    "mtime": 1793311359.6993175,
-    "seen": 1793311378.4629529,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.8136876,
     "ast_hash": "464e00f98ea2f6144ea24ecd010c50f9",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/values.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.462954,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.813689,
     "ast_hash": "12b0835b054ae7012f5043a09d0c7914",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/village.txt": {
-    "mtime": 1793311359.6993175,
-    "seen": 1793311378.462955,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.8136907,
     "ast_hash": "923ef2d82a529d7277c76bb8080bfb8c",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-adventurous.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629562,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.813692,
     "ast_hash": "707a6447fb6761a1539857f135e55f90",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-curious.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629574,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.8136938,
     "ast_hash": "ffbef22c36028f993f4fa259554b05f9",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-fiery.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629586,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.8136952,
     "ast_hash": "99f10a04a0dc988cf5df18269fcfa2c9",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-gentle.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629593,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.8136966,
     "ast_hash": "c88ff81bcd8b667922c64096ae9232ee",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-imaginative.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629605,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.813698,
     "ast_hash": "d4cc83f8529951232becd474debaed17",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-meticulous.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629614,
+    "mtime": 1793311402.3776686,
+    "seen": 1793311441.8136995,
     "ast_hash": "ac2b6f10b1f0e8f403c91ec78a036436",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-playful.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629626,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.8137012,
     "ast_hash": "7b29c128d216d76c6f6b2b3aaf42d5d5",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-pragmatic.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629638,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.8137026,
     "ast_hash": "2f8117d362c2805fddb5325be6f8dfeb",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-protective.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629653,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.8137045,
     "ast_hash": "7cf31100065aca3576c22d39557dbd62",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-proud.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.462966,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.8137062,
     "ast_hash": "b3634eb1979c468e8b16a6660a650dd7",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-reserved.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629674,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.8137078,
     "ast_hash": "8418214aedb6b55b34d68c7a29dd44c4",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-shy.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629683,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.8137095,
     "ast_hash": "c7d36a44487bce63d38e5ef4fc2e98b1",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-steadfast.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629693,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.8137112,
     "ast_hash": "6f5e10817e8863428acfb33aa6e56858",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-stern.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629703,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.8137126,
     "ast_hash": "a79d70acb82cab459e9f35a013d89503",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-thoughtful.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629717,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.8137143,
     "ast_hash": "f45f08b49eb8d47648a378cd958e81d0",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/voice-warmhearted.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629724,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.813716,
     "ast_hash": "d93141196b43e18fc04b97c343daa4bd",
     "semantic_hash": ""
   },
   "tools/dialogue/seeds/greet-band.txt": {
-    "mtime": 1793310972.5481586,
-    "seen": 1793311378.4629734,
+    "mtime": 1793311402.3793726,
+    "seen": 1793311441.8137174,
     "ast_hash": "3ceecc086f3578cc6ee5def2f1b3f698",
     "semantic_hash": ""
   },
   "tools/dialogue/seeds/greet-rank.txt": {
-    "mtime": 1793310972.5496435,
-    "seen": 1793311378.4629745,
+    "mtime": 1793311402.380255,
+    "seen": 1793311441.8137188,
     "ast_hash": "167df97907cad0692d02887f82b1c3f0",
     "semantic_hash": ""
   },
   "tools/dialogue/seeds/greet-time.txt": {
-    "mtime": 1793310972.5496435,
-    "seen": 1793311378.4629755,
+    "mtime": 1793311402.380255,
+    "seen": 1793311441.81372,
     "ast_hash": "8e40c482815b7367d3b63ec1fd7cd474",
     "semantic_hash": ""
   },
   "tools/dialogue/seeds/greet-weather.txt": {
-    "mtime": 1793310972.5496435,
-    "seen": 1793311378.4629762,
+    "mtime": 1793311402.380255,
+    "seen": 1793311441.8137214,
     "ast_hash": "3f930497b65e52702b411b4f8d1c62da",
     "semantic_hash": ""
   },
   "tools/dialogue/seeds/shop-keepers.txt": {
-    "mtime": 1793310972.5496435,
-    "seen": 1793311378.4629776,
+    "mtime": 1793311402.3803766,
+    "seen": 1793311441.8137228,
     "ast_hash": "5ea25987981b0dbc1e1e593f53a1f7c5",
     "semantic_hash": ""
   },
   "tools/konoha/buildings/leaf_block.py": {
-    "mtime": 1793311262.1233218,
-    "seen": 1793311378.462624,
+    "mtime": 1793311402.3866076,
+    "seen": 1793311441.8131802,
     "ast_hash": "4438fcdf550d6e45918176eeb4e5d771",
     "semantic_hash": ""
   }
