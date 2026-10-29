@@ -8,8 +8,8 @@ import preview as P
 
 BLUEPRINTS = Path(__file__).with_name("blueprints")
 NS = "narutominecraft:"
-PLOTS = (("home_plaster_2f", 0), ("shop_tea_house", 12), ("apartment_block", 24))
-LENGTH = 40
+PLOTS = (("home_plaster_2f", 0), ("shop_tea_house", 12), ("leaf_block", 24))
+LENGTH = 61
 
 
 def paste(sc, name, ox, oz=0):
@@ -31,7 +31,7 @@ def scene():
     for name, ox in PLOTS:
         paste(sc, name, ox)
     # poles at the street's north edge every twelve blocks, wires between
-    poles = (-1, 11, 23, 38)
+    poles = (-1, 11, 23, 35, 47, 59)
     for i, px in enumerate(poles):
         for y in range(1, 6):
             sc.put((px, y, 11), NS + "utility_pole[axis=z,part=pole]")
@@ -51,7 +51,7 @@ def scene():
                 if abs(x - 11) + abs(z - 4) + abs(y - 5) <= 3:
                     if (x, y, z) != (11, 4, 4):
                         sc.put((x, y, z), "cherry_leaves")
-    for x in (6, 18, 30):
+    for x in (6, 18, 30, 42, 54):
         sc.put((x, 1, 16), NS + "stone_lantern[facing=north,half=lower]")
         sc.put((x, 2, 16), NS + "stone_lantern[facing=north,half=upper]")
     return sc
