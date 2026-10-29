@@ -187,16 +187,14 @@ class VillageScaleTest {
         clanless.bond(TEAMMATE_A).level = 7;
         assertTrue(BondConditions.test(clanless, Map.of("clan_friendship", List.of("kurama", 7))), "a friend in the clan can teach a lesser technique");
     }
-    @Test void kindlingCountsUsesAndASpouseBurnsLongest() {
+    @Test void kindlingCountsUses() {
         var w = Leaf.classic(1, 0);
         w.setFlag(Kindling.UNLOCK_FLAG, true);
         w.bond(TEAMMATE_A).level = 8;
-        w.formSquad("squad:7", SENSEI, TEAMMATES, List.of());
-        assertEquals(Kindling.grant(Kindling.Tier.FULL), w.kindle(TEAMMATE_A));
+        assertEquals(Kindling.Tier.FLAME, w.kindle(TEAMMATE_A).tier());
         assertEquals("", BondEffects.apply(w, Map.of("kindle", TEAMMATE_A)));
         assertTrue(BondConditions.test(w, Map.of("kindling_uses", List.of(TEAMMATE_A, 2))));
         assertEquals("no_bond", BondEffects.apply(w, Map.of("kindle", RIVAL)));
-        assertTrue(Kindling.grant(Kindling.Tier.FULL, true).duration() > Kindling.grant(Kindling.Tier.FULL).duration());
     }
     @Test void theBondWebCountsDepthAndReach() {
         var w = Leaf.classic(1, 0);

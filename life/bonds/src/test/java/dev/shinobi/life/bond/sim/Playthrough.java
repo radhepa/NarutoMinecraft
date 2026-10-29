@@ -70,6 +70,9 @@ public final class Playthrough {
         double hours; int bondQuests, part; long betaEnd = -1;
         int asked, hangouts, invited, acceptedInvites, stoodUp, highlights, rituals, newsTold, newsAnswered, deepTalks, questions, contradictions, noticed;
         final Map<String, Integer> questionsBy = new java.util.TreeMap<>();
+        /** The hour each Kindling tier was first reached with anyone. */
+        final Map<String, Double> tierHours = new java.util.LinkedHashMap<>();
+        int kindles;
         Run(BondWorld w, Profile p, long seed) {
             this.w = w; this.p = p; this.rng = Seeds.stream(seed, "playthrough", p.id());
             for (var person : w.people()) if (person.id().startsWith("resident:")) villagers.add(person.id());
@@ -255,6 +258,9 @@ public final class Playthrough {
                 for (var e : w.drainEvents()) { r.events.add(e); notable(r, e); }
             }
             r.hours += ch.hours;
+            for (var f : Kindling.flames(w)) r.tierHours.putIfAbsent(f.tier().id(), Math.round(r.hours * 10) / 10.0);
+            for (var f : Kindling.flames(w)) for (var t : Kindling.Tier.values())
+                if (t != Kindling.Tier.NONE && t.compareTo(f.tier()) <= 0) r.tierHours.putIfAbsent(t.id(), Math.round(r.hours * 10) / 10.0);
             if (ch.id.equals("Ch 7")) r.checks.put("academy end: teammates level", w.level(TEAMMATE_A) + " / " + w.level(TEAMMATE_B));
             if (ch.id.equals("Ch 20")) r.betaEnd = w.day();
             if (ch.id.equals("Ch 20")) r.checks.put("beta end: teammates level", r.teammates().stream().map(t -> t.substring(5) + " " + w.level(t)).toList().toString());
@@ -299,6 +305,9 @@ public final class Playthrough {
                     if (r.roll(p == Profile.RECKLESS ? .4 : .8)) w.act(r.villager(), Act.HELPED_RESIDENT, squad);
                     if (p == Profile.RECKLESS && r.roll(.35)) for (String t : r.teammates()) w.act(t, Act.RECKLESS_CHARGE);
                     w.act(SENSEI, r.roll(p.orders) ? Act.FOLLOWED_ORDERS : Act.DISOBEYED_ORDERS);
+                    // Once the gift awakens, kindle a squadmate in the fight now and then.
+                    if (Kindling.unlocked(w)) for (String m : squad)
+                        if (Kindling.tier(w, m) != Kindling.Tier.NONE && r.roll(p == Profile.DEVOTED ? .5 : p == Profile.TYPICAL ? .3 : .2)) { w.kindle(m); r.kindles++; }
                     w.act(SENSEI, r.roll(p == Profile.RECKLESS ? .7 : .92) ? Act.MISSION_SUCCESS : Act.MISSION_FAILED);
                 } else if (p == Profile.RECKLESS && r.roll(.5)) { for (String m : squad) w.act(m, Act.SKIPPED_TRAINING); }
                 else w.experience(Act.TRAINED_TOGETHER, squad);
@@ -440,6 +449,11 @@ public final class Playthrough {
 
     static void epilogue(Run r) {
         var w = r.w;
+        var fire = Kindling.bonfire(w);
+        long trials = Kindling.flames(w).stream().filter(Kindling.Flame::natureTrialReady).count();
+        r.checks.put("kindling", String.format("first spark %s h, flame %s h, blaze %s h; %d flames, kindled %d times, %d nature trials ready; bonfire %.1f (%s)",
+                r.tierHours.getOrDefault("spark", -1.0), r.tierHours.getOrDefault("flame", -1.0), r.tierHours.getOrDefault("blaze", -1.0),
+                Kindling.flames(w).size(), r.kindles, trials, fire.strength(), fire.form()));
         r.checks.put("kindling with teammates", r.teammates().stream().map(t -> t.substring(5) + " " + Kindling.tier(w, t).id()).toList().toString());
         r.checks.put("spouse", w.spouse().isEmpty() ? "none" : w.spouse());
         int joined = 0;
@@ -494,10 +508,23 @@ public final class Playthrough {
         return sb.toString();
     }
 
+    /** The Bonfire across seeds, per kind of player: min, median and max strength, and the forms. */
+    public static String bonfires(long[] seeds) {
+        var sb = new StringBuilder("\n== Bonfire across seeds ==\n");
+        for (var profile : Profile.values()) {
+            var strengths = new ArrayList<Double>(); var forms = new java.util.TreeMap<String, Integer>();
+            for (long seed : seeds) { var b = Kindling.bonfire(play(seed, profile).world()); strengths.add(b.strength()); forms.merge(b.form(), 1, Integer::sum); }
+            java.util.Collections.sort(strengths);
+            sb.append(String.format("  %-8s min %.1f, median %.1f, max %.1f; %s%n", profile.id(), strengths.getFirst(), strengths.get(strengths.size() / 2), strengths.getLast(), forms));
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         long seed = args.length > 0 ? Long.parseLong(args[0]) : 20261029L;
         System.out.println("Bond pacing, seed " + seed + " (levels are the level each person acts on; coh = squad cohesion)");
         for (var profile : Profile.values()) System.out.print(table(play(seed, profile)));
+        System.out.print(bonfires(new long[]{seed, 7, 11, 99, 2024}));
     }
 
     private Playthrough() {}
