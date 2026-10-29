@@ -236,10 +236,10 @@ Story fights in the combat session's boss files (`data/combat/bosses/<id>.json`,
 | `combat:boss.ch19.finals` | — | The rival bout is scheduled last and **never fought** in the story (the attack comes first). The file can stay for NPC exam seasons | — |
 | `combat:boss.chunin.story_1` | Ch 24 | `lost_child`, hollowed, at the border post | **Hollow:** flat AI, no flinch, cycles three stolen natures; ordered to wound, never kill, the player; phase 2 begins when a friend falls (scripted kindle, story floor); ends when she sees the cord |
 | `combat:boss.chunin.story_2` | Ch 31.1 | A Yūgure hearth in the storm drain under the wall | **Smothered:** no sound cues; the player's first Ember Link (story floor) lets them see through allies' eyes |
-| `combat:boss.jonin.story_1` | Ch 37.3 | `yugure_blade` in the archive | Protect the stone basket (the Hearthstone); ink lines in the air deny areas; he retreats wounded |
+| `combat:boss.jonin.story_1` | Ch 37.3 | `yugure_blade` in the archive (loadout `combat:enemy.lone_duellist`) | Protect the stone basket (the Hearthstone); ink lines in the air deny areas; he retreats wounded |
 | `combat:boss.jonin.story_2` | Ch 35 | The nursery hearth's leader in the Valley of Ash | Avoidable: squad3_a's no-fight plan skips most of it; the children's cells are protect objectives |
 | `combat:boss.anbu.story_1` | N6 | The Undercroft's old masks, then `squad5_c` | Sealing traps; `squad5_c` can be talked down mid-fight (`ans.squad5_c.offer`), ending it |
-| `combat:boss.road.story_1` | Ch 51b | `yugure_blade`, last duel, on the rooftops | His best; ends on the player's answer (`ans.yugure_blade.why`), after which he turns |
+| `combat:boss.road.story_1` | Ch 51b | `yugure_blade`, last duel, on the rooftops (loadout `combat:enemy.lone_duellist`) | His best; ends on the player's answer (`ans.yugure_blade.why`), after which he turns |
 | `combat:boss.road.story_2` | Ch 47 | The hearths hunting the deserting `lost_child` at the shrine | Defend the stone basket and her; then the relighting (a scripted thread floor) |
 | `combat:boss.road.final` | Ch 52 to 53 | `yugure_leader` on the Rock | **Dark mirror:** a drain beam the player breaks by line of sight; unbroken anchors (`story.array.unbroken`) add hollow fighters; **every fire:** in the last phase the player's power grows with each flame given (the bond web tiers); the fight ends when his mirror turns on him |
 
