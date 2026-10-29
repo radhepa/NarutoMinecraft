@@ -90,7 +90,7 @@
 
   "starting_key_item": {
     "_doc": "The one thing the player starts with, shown in hand on the review screen (the story session's item; the items session registers the id). It cannot be dropped, sold or stored away.",
-    "item": "half_charm",
+    "item": "item:half_charm",
     "line": "creator.review.key_item"
   },
 
