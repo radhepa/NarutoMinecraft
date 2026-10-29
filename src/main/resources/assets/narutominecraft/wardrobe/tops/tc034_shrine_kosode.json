@@ -1,0 +1,136 @@
+{
+  "id": "tc034_shrine_kosode",
+  "kind": "top",
+  "name": "Shrine Kosode",
+  "gender": "unisex",
+  "texture": "tops/tc034_shrine_kosode.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "kimono",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sleeve_right",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "sleeve_left",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "right_sleeve_cord",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -1.0,
+        9.9,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_sleeve_cord",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        9.9,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "White kosode with a red under-collar line, deep white sleeves with red sleeve cords at the hem."
+}

@@ -1,0 +1,132 @@
+{
+  "id": "bc027_village_hakama",
+  "kind": "bottom",
+  "name": "Village Hakama",
+  "gender": "unisex",
+  "texture": "bottoms/bc027_village_hakama.png",
+  "extrasHeight": 32,
+  "tags": [
+    "civilian",
+    "hakama"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hakama_right",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        10,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "hakama_left",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        10,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "waist_tie",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "waist_board",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        16
+      ]
+    }
+  ],
+  "description": "Wide striped hakama with pleats, front ties and a back board, white tabi and zori."
+}

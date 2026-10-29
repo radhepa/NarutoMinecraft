@@ -1,0 +1,302 @@
+{
+  "id": "tc035_padded_hanten",
+  "kind": "top",
+  "name": "Padded Hanten",
+  "gender": "unisex",
+  "texture": "tops/tc035_padded_hanten.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "jacket",
+    "kimono"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tie_0_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        3.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tie_0_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.4,
+        3.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "tie_1_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        6.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "tie_1_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.4,
+        6.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        20,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "hem_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        11.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "hem_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        11.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        1,
+        4
+      ],
+      "uv": [
+        11,
+        4
+      ]
+    },
+    {
+      "id": "right_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.4,
+        7.0,
+        -2.4
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        22,
+        4
+      ]
+    },
+    {
+      "id": "left_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.4,
+        7.0,
+        -2.4
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        43,
+        4
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Quilted winter jacket with a dark satin collar band, open over a striped kimono, chest ties."
+}

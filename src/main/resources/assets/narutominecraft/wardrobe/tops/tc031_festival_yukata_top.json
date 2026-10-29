@@ -1,0 +1,249 @@
+{
+  "id": "tc031_festival_yukata_top",
+  "kind": "top",
+  "name": "Festival Yukata Top",
+  "gender": "female",
+  "texture": "tops/tc031_festival_yukata_top.png",
+  "extrasHeight": 32,
+  "tags": [
+    "civilian",
+    "kimono",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sleeve_right",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "sleeve_left",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        6.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "obi_bow",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.1,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        29,
+        14
+      ]
+    },
+    {
+      "id": "obi_wing_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        8.1,
+        3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -2,
+        -1.5,
+        0
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        38,
+        14
+      ]
+    },
+    {
+      "id": "obi_wing_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.0,
+        8.1,
+        3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        0,
+        -1.5,
+        0
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        45,
+        14
+      ]
+    },
+    {
+      "id": "obi_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        8.7,
+        3.2
+      ],
+      "rotation": [
+        4,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        52,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "obi_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        8.7,
+        3.2
+      ],
+      "rotation": [
+        4,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        57,
+        14
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "Morning-glory yukata with wide sleeves, a white under-collar and a broad obi in a butterfly bow."
+}

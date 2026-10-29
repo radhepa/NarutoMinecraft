@@ -1,0 +1,104 @@
+{
+  "id": "wc009_elders_cap",
+  "kind": "headwear",
+  "name": "Elder's Cap",
+  "gender": "unisex",
+  "texture": "headwear/wc009_elders_cap.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cap_band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.64
+    },
+    {
+      "id": "cap_crown",
+      "bone": "HEAD",
+      "pivot": [
+        0.3,
+        -8.4,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -4.5,
+        -2,
+        -4.5
+      ],
+      "size": [
+        9,
+        2,
+        9
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "cap_stalk",
+      "bone": "HEAD",
+      "pivot": [
+        0.1,
+        -10.4,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        11
+      ]
+    }
+  ],
+  "hidesHair": [
+    "*"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Soft round brimless felt cap with a puffed crown and a little stalk, worn a touch to one side."
+}

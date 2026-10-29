@@ -1,0 +1,193 @@
+{
+  "id": "tc026_everyday_kimono",
+  "kind": "top",
+  "name": "Everyday Kimono",
+  "gender": "unisex",
+  "texture": "tops/tc026_everyday_kimono.png",
+  "extrasHeight": 32,
+  "tags": [
+    "civilian",
+    "kimono",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sleeve_right",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "sleeve_left",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "obi_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.799999999999999,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        11
+      ]
+    },
+    {
+      "id": "obi_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.9,
+        9.2,
+        2.8
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        38,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "obi_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        9.2,
+        2.8
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        43,
+        11
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "Kasuri-flecked cotton kimono, contrasting collar, loose elbow sleeves, narrow obi tied at the back."
+}

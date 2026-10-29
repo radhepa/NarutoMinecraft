@@ -1,0 +1,46 @@
+{
+  "id": "bc040_festival_momohiki",
+  "kind": "bottom",
+  "name": "Festival Momohiki",
+  "gender": "unisex",
+  "texture": "bottoms/bc040_festival_momohiki.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "trousers"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.16
+    }
+  ],
+  "description": "Close-fitting white leggings, a dark waist sash, black split-toe jika-tabi."
+}

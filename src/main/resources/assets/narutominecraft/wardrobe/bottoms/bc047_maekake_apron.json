@@ -1,0 +1,76 @@
+{
+  "id": "bc047_maekake_apron",
+  "kind": "bottom",
+  "name": "Maekake Apron",
+  "gender": "unisex",
+  "texture": "bottoms/bc047_maekake_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "trousers",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "apron",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_apron_tie",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.2
+    }
+  ],
+  "description": "Heavy apron with a white hem band and circle mark over dark trousers, cloth shoes."
+}

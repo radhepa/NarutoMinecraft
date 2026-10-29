@@ -1,0 +1,277 @@
+{
+  "id": "tc050_miko_chihaya",
+  "kind": "top",
+  "name": "Miko Chihaya",
+  "gender": "unisex",
+  "texture": "tops/tc050_miko_chihaya.png",
+  "extrasHeight": 32,
+  "tags": [
+    "civilian",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cord_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "cord_tassel_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.9,
+        4.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "cord_tassel_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.4,
+        4.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "chihaya_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        17,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "chihaya_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "chihaya_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        0,
+        6
+      ]
+    },
+    {
+      "id": "chihaya_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        11,
+        6
+      ]
+    },
+    {
+      "id": "sleeve_right",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        1.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        9,
+        5
+      ],
+      "uv": [
+        22,
+        6
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "sleeve_left",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        9,
+        5
+      ],
+      "uv": [
+        43,
+        6
+      ],
+      "inflate": 0.14
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Sheer white pine-printed over-robe tied with a red chest cord over a red-collared kosode."
+}

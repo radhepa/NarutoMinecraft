@@ -1,0 +1,192 @@
+{
+  "id": "tc048_michiyuki_coat",
+  "kind": "top",
+  "name": "Michiyuki Coat",
+  "gender": "unisex",
+  "texture": "tops/tc048_michiyuki_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "civilian",
+    "coat",
+    "kimono"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "coat_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "coat_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "coat_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    },
+    {
+      "id": "sleeve_right",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "sleeve_left",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        21,
+        11
+      ],
+      "inflate": 0.14
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Knee-length velvet coat with a framed square neckline over the kimono collar, covered buttons."
+}

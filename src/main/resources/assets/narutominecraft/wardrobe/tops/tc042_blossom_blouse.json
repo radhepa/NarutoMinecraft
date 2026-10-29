@@ -1,0 +1,161 @@
+{
+  "id": "tc042_blossom_blouse",
+  "kind": "top",
+  "name": "Blossom Blouse",
+  "gender": "female",
+  "texture": "tops/tc042_blossom_blouse.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "civilian"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_puff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_puff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "collar_right",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        -0.3,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "collar_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        -0.3,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    },
+    {
+      "id": "bow",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Blossom-print cotton blouse with puffed short sleeves, a rounded white collar and a ribbon bow."
+}

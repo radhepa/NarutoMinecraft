@@ -1,0 +1,18 @@
+{
+  "id": "tc036_play_tee",
+  "kind": "top",
+  "name": "Play Tee",
+  "gender": "unisex",
+  "texture": "tops/tc036_play_tee.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "civilian"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Banded jersey play shirt with a contrasting neck rib, short sleeves, crooked pocket and star appliqué."
+}

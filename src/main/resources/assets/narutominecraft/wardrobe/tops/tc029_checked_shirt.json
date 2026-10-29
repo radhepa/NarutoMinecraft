@@ -1,0 +1,75 @@
+{
+  "id": "tc029_checked_shirt",
+  "kind": "top",
+  "name": "Checked Shirt",
+  "gender": "unisex",
+  "texture": "tops/tc029_checked_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "civilian"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar_right",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        -0.3,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        30
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "collar_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        -0.3,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        -30
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved gingham shirt with an open camp collar, a breast pocket and pale buttons."
+}

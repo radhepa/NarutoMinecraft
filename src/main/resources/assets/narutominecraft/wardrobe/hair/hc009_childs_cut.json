@@ -1,0 +1,182 @@
+{
+  "id": "hc009_childs_cut",
+  "kind": "hair",
+  "name": "Child's Cut",
+  "gender": "unisex",
+  "texture": "hair/hc009_childs_cut.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fringe_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        6
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "fringe_2",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "tuft_0",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -8.4,
+        0.4
+      ],
+      "rotation": [
+        160,
+        0,
+        -12
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        28,
+        0
+      ]
+    },
+    {
+      "id": "tuft_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -8.4,
+        0.4
+      ],
+      "rotation": [
+        160,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    }
+  ],
+  "description": "Rounded home cut, straight fringe at the brows, close nape and one tuft standing up on the crown."
+}

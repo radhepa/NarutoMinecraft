@@ -1,0 +1,74 @@
+{
+  "id": "bc033_play_shorts",
+  "kind": "bottom",
+  "name": "Play Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/bc033_play_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "civilian",
+    "shorts"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_hem",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_hem",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Sturdy short shorts with a patched seat, elastic waist, long striped socks, cloth shoes."
+}
