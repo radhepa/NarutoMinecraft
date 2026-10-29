@@ -18,5 +18,6 @@
   "SCROLL_BEARER": {"name": "Scroll Bearer", "P": "#3d6a9e", "S": "#ecebe3", "A": "#b23a3a", "L": "#6b5236", "M": "#aab3b9", "K": "#23262f", "D": "#2d3c60"},
   "JONIN_SENTINEL": {"name": "Jonin Sentinel", "P": "#57663a", "S": "#e6e1d3", "A": "#b8372d", "L": "#7a6346", "M": "#aab3b9", "K": "#1b1e27", "D": "#283552"},
   "JONIN_FIELD": {"name": "Jonin Field", "P": "#66693a", "S": "#e6e1d3", "A": "#b8372d", "L": "#7a5a3c", "M": "#aab3b9", "K": "#2a2c33", "D": "#3d4049"},
-  "JONIN_KUNOICHI": {"name": "Jonin Kunoichi", "P": "#5f6e3c", "S": "#e6e1d3", "A": "#b8372d", "L": "#7a6346", "M": "#aab3b9", "K": "#1d2236", "D": "#6b2a3a"}
+  "JONIN_KUNOICHI": {"name": "Jonin Kunoichi", "P": "#5f6e3c", "S": "#e6e1d3", "A": "#b8372d", "L": "#7a6346", "M": "#aab3b9", "K": "#1d2236", "D": "#6b2a3a"},
+  "JONIN_COMMANDER": {"name": "Jonin Commander", "P": "#5f6e3c", "S": "#ecebe3", "A": "#b8302a", "L": "#7a6346", "M": "#aab3b9", "K": "#1d2236", "D": "#24304f"}
 }

@@ -96,7 +96,8 @@
     "t17_scroll_bearer",
     "t18_sentinel_vest",
     "t19_field_vest",
-    "t20_kunoichi_jonin"
+    "t20_kunoichi_jonin",
+    "t21_commander_coat"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -471,11 +472,29 @@
       "top": "t20_kunoichi_jonin",
       "bottom": "b08_mesh_leggings",
       "palette": "JONIN_KUNOICHI",
-      "hair_color": "AUBURN",
+      "hair_color": "RAVEN",
       "eye_color": "JADE",
       "eye_style": "starlit",
       "feminine": true,
       "complexion": 1,
+      "scale": 14,
+      "rank": "jonin"
+    },
+    {
+      "id": "jonin_commander",
+      "name": "Jonin Commander",
+      "tagline": "A long navy coat trimmed in red over the flak vest, the leaf crest in white across the back",
+      "face": "f01_shinobi",
+      "hair": "h01_kage_spikes",
+      "headwear": "w02_forehead_protector",
+      "top": "t21_commander_coat",
+      "bottom": "b01_shinobi_trousers",
+      "palette": "JONIN_COMMANDER",
+      "hair_color": "SILVER",
+      "eye_color": "DARK",
+      "eye_style": "soft_glint",
+      "feminine": false,
+      "complexion": 2,
       "scale": 14,
       "rank": "jonin"
     }
