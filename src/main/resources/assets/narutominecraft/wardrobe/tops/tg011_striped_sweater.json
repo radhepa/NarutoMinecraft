@@ -1,0 +1,75 @@
+{
+  "id": "tg011_striped_sweater",
+  "kind": "top",
+  "name": "Striped Sweater",
+  "gender": "unisex",
+  "texture": "tops/tg011_striped_sweater.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        3.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Chunky knit sweater in broad stripes, sleeves shoved past the elbow, ribbed collar and hem."
+}

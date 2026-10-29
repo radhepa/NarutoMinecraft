@@ -1,0 +1,45 @@
+{
+  "id": "bg014_tabi_trousers",
+  "kind": "bottom",
+  "name": "Tabi Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bg014_tabi_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        0.5,
+        9.4,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "Slim trousers tucked into split-toe tabi boots that lace up the shin."
+}

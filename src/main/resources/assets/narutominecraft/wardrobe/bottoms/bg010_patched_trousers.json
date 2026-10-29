@@ -1,0 +1,73 @@
+{
+  "id": "bg010_patched_trousers",
+  "kind": "bottom",
+  "name": "Patched Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bg010_patched_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_roll",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Denim trousers rolled to mid-shin, a patch over the right knee, open-toe sandals."
+}

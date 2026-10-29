@@ -1,0 +1,159 @@
+{
+  "id": "tg019_bandolier_shirt",
+  "kind": "top",
+  "name": "Bandolier Shirt",
+  "gender": "unisex",
+  "texture": "tops/tg019_bandolier_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bandolier",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.6,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -7,
+        -0.5
+      ],
+      "size": [
+        1,
+        14,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.6,
+        2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -7,
+        -0.5
+      ],
+      "size": [
+        1,
+        14,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_pouch_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.6,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -1,
+        -3.2,
+        -1.6
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_pouch_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.6,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -1,
+        -0.8,
+        -1.6
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        17,
+        0
+      ]
+    },
+    {
+      "id": "bandolier_pouch_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.6,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -1,
+        1.6,
+        -1.6
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        24,
+        0
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "Short-sleeved button shirt with a leather bandolier across the chest carrying three pouches."
+}

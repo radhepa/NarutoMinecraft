@@ -1,0 +1,52 @@
+{
+  "id": "tg001_academy_tee",
+  "kind": "top",
+  "name": "Academy Tee",
+  "gender": "unisex",
+  "texture": "tops/tg001_academy_tee.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "chest_leaf",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        2.4,
+        -2.02
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        -1
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved tee with a contrast ringer collar and sleeve bands, a small leaf on the chest."
+}

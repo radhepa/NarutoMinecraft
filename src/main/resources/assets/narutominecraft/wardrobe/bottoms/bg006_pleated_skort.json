@@ -1,0 +1,76 @@
+{
+  "id": "bg006_pleated_skort",
+  "kind": "bottom",
+  "name": "Pleated Skort",
+  "gender": "female",
+  "texture": "bottoms/bg006_pleated_skort.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Short pleated skirt over snug shorts, striped knee socks and canvas shoes."
+}

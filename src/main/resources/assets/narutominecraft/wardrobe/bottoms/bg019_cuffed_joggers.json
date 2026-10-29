@@ -1,0 +1,16 @@
+{
+  "id": "bg019_cuffed_joggers",
+  "kind": "bottom",
+  "name": "Cuffed Joggers",
+  "gender": "unisex",
+  "texture": "bottoms/bg019_cuffed_joggers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Tapered joggers with ribbed ankle cuffs, a drawstring waist and high-top canvas shoes."
+}

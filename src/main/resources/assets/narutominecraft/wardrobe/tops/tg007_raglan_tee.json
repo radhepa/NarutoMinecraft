@@ -1,0 +1,18 @@
+{
+  "id": "tg007_raglan_tee",
+  "kind": "top",
+  "name": "Raglan Tee",
+  "gender": "unisex",
+  "texture": "tops/tg007_raglan_tee.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Baseball tee with contrast three-quarter raglan sleeves, slanted seams and a chest pocket."
+}

@@ -1,0 +1,101 @@
+{
+  "id": "bg009_knee_breeches",
+  "kind": "bottom",
+  "name": "Knee Breeches",
+  "gender": "unisex",
+  "texture": "bottoms/bg009_knee_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_blouse",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_knee_blouse",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "waist_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5,
+        9.4,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    }
+  ],
+  "description": "Breeches bloused at the knee, ribbed leg warmers to the ankle and open-toe sandals."
+}

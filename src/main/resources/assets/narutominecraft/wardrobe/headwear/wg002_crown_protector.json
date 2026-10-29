@@ -1,0 +1,137 @@
+{
+  "id": "wg002_crown_protector",
+  "kind": "headwear",
+  "name": "Crown Protector",
+  "gender": "unisex",
+  "texture": "headwear/wg002_crown_protector.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8,
+        -2.6
+      ],
+      "size": [
+        8,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.66
+    },
+    {
+      "id": "band_right",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        -7.6,
+        -2.6
+      ],
+      "size": [
+        1,
+        6,
+        2
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.66
+    },
+    {
+      "id": "band_left",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        3.0,
+        -7.6,
+        -2.6
+      ],
+      "size": [
+        1,
+        6,
+        2
+      ],
+      "uv": [
+        28,
+        0
+      ],
+      "inflate": 0.66
+    },
+    {
+      "id": "plate",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.3,
+        -3.2
+      ],
+      "rotation": [
+        -58,
+        0,
+        0
+      ],
+      "origin": [
+        -9,
+        -4,
+        -2
+      ],
+      "size": [
+        18,
+        8,
+        2
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Forehead protector worn high as a hair band, arching over the crown, the plate at the hairline."
+}

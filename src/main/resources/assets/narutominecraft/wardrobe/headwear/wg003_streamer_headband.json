@@ -1,0 +1,132 @@
+{
+  "id": "wg003_streamer_headband",
+  "kind": "headwear",
+  "name": "Streamer Headband",
+  "gender": "unisex",
+  "texture": "headwear/wg003_streamer_headband.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -7.0,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.68
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        4.7,
+        -6.6,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        -1,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "streamer_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.9,
+        -6.2,
+        -1.0
+      ],
+      "rotation": [
+        64,
+        -24,
+        -20
+      ],
+      "origin": [
+        0,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "streamer_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.9,
+        -6.2,
+        -0.4
+      ],
+      "rotation": [
+        48,
+        -40,
+        -20
+      ],
+      "origin": [
+        0,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Bright cloth headband knotted over the left temple, two long ends streaming behind."
+}

@@ -1,0 +1,491 @@
+{
+  "id": "academy_genin",
+  "name": "Academy and Genin",
+  "role": "shinobi",
+  "tagline": "Academy students and fresh genin: hoodies, tees, track tops and short jackets over shorts, capris and wrapped shins, in bright everyday colors.",
+  "palettes": {
+    "ACADEMY_GENIN_SUNRISE": {
+      "name": "Academy Sunrise",
+      "P": "#e8743b",
+      "S": "#f1ead8",
+      "A": "#2f8f8a",
+      "L": "#7a5a3e",
+      "M": "#b3bcc2",
+      "K": "#22252f",
+      "D": "#2e3d63"
+    },
+    "ACADEMY_GENIN_SKY": {
+      "name": "Academy Sky",
+      "P": "#4e9ad4",
+      "S": "#f3f1ea",
+      "A": "#f0bd2e",
+      "L": "#7a6346",
+      "M": "#aab3b9",
+      "K": "#1f2430",
+      "D": "#34394a"
+    },
+    "ACADEMY_GENIN_MOSS": {
+      "name": "Academy Moss",
+      "P": "#6e9a4c",
+      "S": "#efe6cf",
+      "A": "#c0552f",
+      "L": "#6d5038",
+      "M": "#a9b0aa",
+      "K": "#23261f",
+      "D": "#5a4a36"
+    },
+    "ACADEMY_GENIN_PLUM": {
+      "name": "Academy Plum",
+      "P": "#87508e",
+      "S": "#efe9ef",
+      "A": "#e2b23c",
+      "L": "#6b4f3f",
+      "M": "#b0b3bd",
+      "K": "#1e1b26",
+      "D": "#3a3e55"
+    },
+    "ACADEMY_GENIN_TOMATO": {
+      "name": "Academy Tomato",
+      "P": "#d5473a",
+      "S": "#f2ecdd",
+      "A": "#284f86",
+      "L": "#7a5a3e",
+      "M": "#aab3b9",
+      "K": "#20232c",
+      "D": "#303850"
+    },
+    "ACADEMY_GENIN_MINT": {
+      "name": "Academy Mint",
+      "P": "#63bf9f",
+      "S": "#f5f3ec",
+      "A": "#e86f5a",
+      "L": "#7b6249",
+      "M": "#b6bec3",
+      "K": "#1d2830",
+      "D": "#2c3f5c"
+    },
+    "ACADEMY_GENIN_MUSTARD": {
+      "name": "Academy Mustard",
+      "P": "#d9a631",
+      "S": "#f2e9d2",
+      "A": "#a93c30",
+      "L": "#6b4a33",
+      "M": "#aab0b2",
+      "K": "#262320",
+      "D": "#4f5636"
+    },
+    "ACADEMY_GENIN_INDIGO": {
+      "name": "Academy Indigo",
+      "P": "#3e4f99",
+      "S": "#efe8d6",
+      "A": "#ef8a35",
+      "L": "#6e5a46",
+      "M": "#b3bac0",
+      "K": "#1b1e2c",
+      "D": "#4b4f5c"
+    },
+    "ACADEMY_GENIN_ROSE": {
+      "name": "Academy Rose",
+      "P": "#e07c99",
+      "S": "#fbf5f1",
+      "A": "#7a3f7d",
+      "L": "#7e5d4c",
+      "M": "#b9bcc4",
+      "K": "#262130",
+      "D": "#2f3a5a"
+    },
+    "ACADEMY_GENIN_TEAL": {
+      "name": "Academy Teal",
+      "P": "#2e8a8c",
+      "S": "#eee2c8",
+      "A": "#e88a6d",
+      "L": "#6c4e36",
+      "M": "#a7b2b4",
+      "K": "#1c2526",
+      "D": "#5b4632"
+    },
+    "ACADEMY_GENIN_LEMON": {
+      "name": "Academy Lemon",
+      "P": "#e9d257",
+      "S": "#f6f2e4",
+      "A": "#4a7ec2",
+      "L": "#7a6346",
+      "M": "#aab3b9",
+      "K": "#24262d",
+      "D": "#4a5260"
+    },
+    "ACADEMY_GENIN_BERRY": {
+      "name": "Academy Berry",
+      "P": "#b03b5d",
+      "S": "#f3ebe2",
+      "A": "#3fa39a",
+      "L": "#6e4a3a",
+      "M": "#b0b4bb",
+      "K": "#201c24",
+      "D": "#2e3552"
+    },
+    "ACADEMY_GENIN_LAVENDER": {
+      "name": "Academy Lavender",
+      "P": "#9b8cd0",
+      "S": "#f6f4fa",
+      "A": "#6ec5a0",
+      "L": "#77614e",
+      "M": "#b7bcc6",
+      "K": "#23222f",
+      "D": "#3f4660"
+    },
+    "ACADEMY_GENIN_FOREST": {
+      "name": "Academy Forest",
+      "P": "#336d49",
+      "S": "#ede5cf",
+      "A": "#e3a33a",
+      "L": "#6a5034",
+      "M": "#a9b0aa",
+      "K": "#1d2420",
+      "D": "#6b5f45"
+    },
+    "ACADEMY_GENIN_SAND": {
+      "name": "Academy Sand",
+      "P": "#d6bf93",
+      "S": "#f4efe2",
+      "A": "#3f8a56",
+      "L": "#6e5038",
+      "M": "#aab3b9",
+      "K": "#25231f",
+      "D": "#2b3a5c"
+    },
+    "ACADEMY_GENIN_CORAL": {
+      "name": "Academy Coral",
+      "P": "#ee8a6c",
+      "S": "#fdf6ec",
+      "A": "#2e6f8e",
+      "L": "#7a5d48",
+      "M": "#b3bac0",
+      "K": "#22242c",
+      "D": "#3a3f52"
+    }
+  },
+  "pool": {
+    "hair": [
+      "hg001_messy_mop",
+      "hg002_cowlick_crop",
+      "hg003_short_twin_tails",
+      "hg004_low_pigtails",
+      "hg005_messy_buns",
+      "hg006_short_spikes",
+      "hg007_side_swept_bob",
+      "hg008_shaggy_layers",
+      "hg009_stubby_ponytail",
+      "hg010_fluffy_curls"
+    ],
+    "hair_colors": [
+      "RAVEN",
+      "RAVEN",
+      "ESPRESSO",
+      "ESPRESSO",
+      "CHESTNUT",
+      "CHESTNUT",
+      "AUBURN",
+      "GINGER",
+      "HONEY",
+      "WHEAT",
+      "ASH_BLONDE",
+      "SILVER",
+      "BLOSSOM_PINK",
+      "VIOLET"
+    ],
+    "eye_colors": [
+      "DARK",
+      "DARK",
+      "SKY",
+      "JADE"
+    ],
+    "palettes": [
+      "ACADEMY_GENIN_SUNRISE",
+      "ACADEMY_GENIN_SKY",
+      "ACADEMY_GENIN_MOSS",
+      "ACADEMY_GENIN_PLUM",
+      "ACADEMY_GENIN_TOMATO",
+      "ACADEMY_GENIN_MINT",
+      "ACADEMY_GENIN_MUSTARD",
+      "ACADEMY_GENIN_INDIGO",
+      "ACADEMY_GENIN_ROSE",
+      "ACADEMY_GENIN_TEAL",
+      "ACADEMY_GENIN_LEMON",
+      "ACADEMY_GENIN_BERRY",
+      "ACADEMY_GENIN_LAVENDER",
+      "ACADEMY_GENIN_FOREST",
+      "ACADEMY_GENIN_SAND",
+      "ACADEMY_GENIN_CORAL"
+    ],
+    "headwear": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      "w02_forehead_protector",
+      "w02_forehead_protector",
+      "w02_forehead_protector",
+      "wg001_flight_goggles",
+      "wg002_crown_protector",
+      "wg002_crown_protector",
+      "wg003_streamer_headband"
+    ],
+    "bottoms": [
+      "bg006_pleated_skort",
+      "bg018_wrap_skirt"
+    ],
+    "complexions": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "outfits": [
+    {
+      "id": "first_day",
+      "name": "First Day",
+      "top": "tg001_academy_tee",
+      "bottom": "bg001_academy_shorts",
+      "rank": "academy",
+      "palettes": [
+        "ACADEMY_GENIN_SUNRISE",
+        "ACADEMY_GENIN_SKY",
+        "ACADEMY_GENIN_MINT"
+      ]
+    },
+    {
+      "id": "cold_morning",
+      "name": "Cold Morning",
+      "top": "tg002_pullover_hoodie",
+      "bottom": "bg004_track_pants",
+      "rank": "academy",
+      "palettes": [
+        "ACADEMY_GENIN_TOMATO",
+        "ACADEMY_GENIN_INDIGO",
+        "ACADEMY_GENIN_BERRY"
+      ]
+    },
+    {
+      "id": "lap_runner",
+      "name": "Lap Runner",
+      "top": "tg003_track_top",
+      "bottom": "bg019_cuffed_joggers",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_SKY",
+        "ACADEMY_GENIN_FOREST",
+        "ACADEMY_GENIN_CORAL"
+      ]
+    },
+    {
+      "id": "taijutsu_drill",
+      "name": "Taijutsu Drill",
+      "top": "tg004_wrapped_tank",
+      "bottom": "bg017_bandaged_shorts",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_MOSS",
+        "ACADEMY_GENIN_MUSTARD",
+        "ACADEMY_GENIN_TEAL"
+      ]
+    },
+    {
+      "id": "kimono_jacket",
+      "name": "Kimono Jacket",
+      "top": "tg005_short_kimono_jacket",
+      "bottom": "bg003_laced_shin_trousers",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_PLUM",
+        "ACADEMY_GENIN_INDIGO",
+        "ACADEMY_GENIN_TEAL"
+      ]
+    },
+    {
+      "id": "first_mission",
+      "name": "First Mission",
+      "top": "tg006_vest_over_tee",
+      "bottom": "bg005_cargo_capris",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_FOREST",
+        "ACADEMY_GENIN_SAND",
+        "ACADEMY_GENIN_MUSTARD"
+      ]
+    },
+    {
+      "id": "ball_game",
+      "name": "Ball Game",
+      "top": "tg007_raglan_tee",
+      "bottom": "bg011_shorts_knee_socks",
+      "rank": "academy",
+      "palettes": [
+        "ACADEMY_GENIN_LEMON",
+        "ACADEMY_GENIN_SKY",
+        "ACADEMY_GENIN_ROSE"
+      ]
+    },
+    {
+      "id": "old_manuals",
+      "name": "Old Manuals",
+      "top": "tg008_stand_collar_shirt",
+      "bottom": "bg014_tabi_trousers",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_INDIGO",
+        "ACADEMY_GENIN_TEAL",
+        "ACADEMY_GENIN_PLUM"
+      ]
+    },
+    {
+      "id": "tabard",
+      "name": "Tabard",
+      "top": "tg009_tabard_tunic",
+      "bottom": "bg013_ankle_tie_trousers",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_MOSS",
+        "ACADEMY_GENIN_SAND",
+        "ACADEMY_GENIN_BERRY"
+      ]
+    },
+    {
+      "id": "rain_patrol",
+      "name": "Rain Patrol",
+      "top": "tg010_half_zip_anorak",
+      "bottom": "bg016_kneepad_pants",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_CORAL",
+        "ACADEMY_GENIN_MINT",
+        "ACADEMY_GENIN_FOREST"
+      ]
+    },
+    {
+      "id": "hand_me_down",
+      "name": "Hand-Me-Down",
+      "top": "tg011_striped_sweater",
+      "bottom": "bg002_striped_capris",
+      "rank": "academy",
+      "palettes": [
+        "ACADEMY_GENIN_MUSTARD",
+        "ACADEMY_GENIN_ROSE",
+        "ACADEMY_GENIN_LAVENDER"
+      ]
+    },
+    {
+      "id": "layers",
+      "name": "Layers",
+      "top": "tg012_layered_tee",
+      "bottom": "bg012_shorts_over_leggings",
+      "rank": "academy",
+      "palettes": [
+        "ACADEMY_GENIN_TOMATO",
+        "ACADEMY_GENIN_SUNRISE",
+        "ACADEMY_GENIN_SKY"
+      ]
+    },
+    {
+      "id": "festival",
+      "name": "Festival",
+      "top": "tg013_happi_jacket",
+      "bottom": "bg015_sash_shorts",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_SUNRISE",
+        "ACADEMY_GENIN_LEMON",
+        "ACADEMY_GENIN_BERRY"
+      ]
+    },
+    {
+      "id": "always_moving",
+      "name": "Always Moving",
+      "top": "tg014_sleeveless_hoodie",
+      "bottom": "bg007_drawstring_shorts",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_MINT",
+        "ACADEMY_GENIN_LAVENDER",
+        "ACADEMY_GENIN_CORAL"
+      ]
+    },
+    {
+      "id": "picture_book",
+      "name": "Picture Book",
+      "top": "tg015_scarf_tee",
+      "bottom": "bg010_patched_trousers",
+      "rank": "academy",
+      "palettes": [
+        "ACADEMY_GENIN_SAND",
+        "ACADEMY_GENIN_TEAL",
+        "ACADEMY_GENIN_SKY"
+      ]
+    },
+    {
+      "id": "summer_heat",
+      "name": "Summer Heat",
+      "top": "tg016_jinbei_top",
+      "bottom": "bg008_baggy_pants",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_TEAL",
+        "ACADEMY_GENIN_LEMON",
+        "ACADEMY_GENIN_MOSS"
+      ]
+    },
+    {
+      "id": "borrowed_jacket",
+      "name": "Borrowed Jacket",
+      "top": "tg017_bomber_jacket",
+      "bottom": "bg012_shorts_over_leggings",
+      "rank": "academy",
+      "palettes": [
+        "ACADEMY_GENIN_PLUM",
+        "ACADEMY_GENIN_ROSE",
+        "ACADEMY_GENIN_INDIGO"
+      ]
+    },
+    {
+      "id": "chunin_dreams",
+      "name": "Chunin Dreams",
+      "top": "tg018_mesh_tank",
+      "bottom": "bg009_knee_breeches",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_FOREST",
+        "ACADEMY_GENIN_TOMATO",
+        "ACADEMY_GENIN_MUSTARD"
+      ]
+    },
+    {
+      "id": "packed",
+      "name": "Packed for Anything",
+      "top": "tg019_bandolier_shirt",
+      "bottom": "bg001_academy_shorts",
+      "rank": "genin",
+      "palettes": [
+        "ACADEMY_GENIN_SKY",
+        "ACADEMY_GENIN_CORAL",
+        "ACADEMY_GENIN_SAND"
+      ]
+    },
+    {
+      "id": "dungarees",
+      "name": "Dungarees",
+      "top": "tg020_dungaree_bib",
+      "bottom": "bg020_dungaree_shorts",
+      "rank": "academy",
+      "palettes": [
+        "ACADEMY_GENIN_SUNRISE",
+        "ACADEMY_GENIN_LAVENDER",
+        "ACADEMY_GENIN_MINT",
+        "ACADEMY_GENIN_LEMON"
+      ]
+    }
+  ]
+}

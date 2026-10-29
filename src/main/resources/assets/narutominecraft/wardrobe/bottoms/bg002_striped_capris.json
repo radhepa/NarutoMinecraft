@@ -1,0 +1,16 @@
+{
+  "id": "bg002_striped_capris",
+  "kind": "bottom",
+  "name": "Striped Capris",
+  "gender": "unisex",
+  "texture": "bottoms/bg002_striped_capris.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Mid-shin trousers with a contrast side stripe, banded cuffs and open-toe sandals."
+}

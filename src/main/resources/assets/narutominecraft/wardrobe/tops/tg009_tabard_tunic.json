@@ -1,0 +1,164 @@
+{
+  "id": "tg009_tabard_tunic",
+  "kind": "top",
+  "name": "Tabard Tunic",
+  "gender": "unisex",
+  "texture": "tops/tg009_tabard_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "cord_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.8,
+        9.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cord_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        9.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "panel_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        3,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "panel_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Sleeveless side-slit tunic in two short panels, a rope cord belt, long sleeves and wrapped wrists."
+}

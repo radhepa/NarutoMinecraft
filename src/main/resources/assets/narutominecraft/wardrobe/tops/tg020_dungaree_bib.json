@@ -1,0 +1,19 @@
+{
+  "id": "tg020_dungaree_bib",
+  "kind": "top",
+  "name": "Dungaree Bib",
+  "gender": "unisex",
+  "texture": "tops/tg020_dungaree_bib.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "lockedTo": "bg020_dungaree_shorts",
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Dungaree bib with a front pocket and buttoned straps over a short-sleeved tee."
+}

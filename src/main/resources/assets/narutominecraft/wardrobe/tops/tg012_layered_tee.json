@@ -1,0 +1,52 @@
+{
+  "id": "tg012_layered_tee",
+  "kind": "top",
+  "name": "Layered Tee",
+  "gender": "unisex",
+  "texture": "tops/tg012_layered_tee.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.4,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved tee over a striped long-sleeved undershirt, a swirl printed on the back."
+}

@@ -1,0 +1,73 @@
+{
+  "id": "bg007_drawstring_shorts",
+  "kind": "bottom",
+  "name": "Drawstring Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/bg007_drawstring_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "thigh_wrap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        4.2,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "holster",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -3.0,
+        4.0,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Above-knee running shorts with side vents and a drawstring, thigh holster and sandals."
+}
