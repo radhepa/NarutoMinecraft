@@ -1,0 +1,131 @@
+{
+  "id": "t1510_tasuki_iaido",
+  "kind": "top",
+  "name": "Tasuki Iaido",
+  "gender": "unisex",
+  "texture": "tops/t1510_tasuki_iaido.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "katana_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        9.6,
+        -2.9
+      ],
+      "rotation": [
+        62,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "katana_guard",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        9.6,
+        -2.9
+      ],
+      "rotation": [
+        62,
+        0,
+        -14
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "katana_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        9.6,
+        -2.9
+      ],
+      "rotation": [
+        62,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Dark kimono top, sleeves tied back by a cord crossed over the back, a katana at the left hip."
+}

@@ -7,14 +7,14 @@ from glyphs import stamp
 from paint import fabric, k, solid
 
 # The crescent moon, drawn at double resolution on a half-scale decal (8 x 8 texels).
-CRESCENT = ["...###..",
-            ".##.....",
+CRESCENT = ["..####..",
+            ".###....",
+            "###.....",
             "##......",
-            "#.......",
-            "#.......",
             "##......",
-            ".##.....",
-            "...###.."]
+            "###.....",
+            ".###....",
+            "..####.."]
 
 
 def katana(g, prefix: str = "katana", pivot=(-1.4, 2.2, 2.95), rotation=(0, 0, -27), bone: str = "TORSO", length: int = 11,

@@ -1,0 +1,193 @@
+{
+  "id": "t1505_moon_dancer",
+  "kind": "top",
+  "name": "Crescent Dancer",
+  "gender": "unisex",
+  "texture": "tops/t1505_moon_dancer.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "breast_crescent",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        3.4,
+        -2.32
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -4,
+        -1
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "katana_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        9.6,
+        -2.9
+      ],
+      "rotation": [
+        62,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        19,
+        8
+      ]
+    },
+    {
+      "id": "katana_guard",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        9.6,
+        -2.9
+      ],
+      "rotation": [
+        62,
+        0,
+        -14
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        24,
+        8
+      ]
+    },
+    {
+      "id": "katana_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        9.6,
+        -2.9
+      ],
+      "rotation": [
+        62,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        33,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Fitted jacket with a silver-trimmed crossed collar, a crescent on the breast, a katana at the hip."
+}
