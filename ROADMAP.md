@@ -1222,7 +1222,7 @@ About 4 hours of authored chapters and 4 hours of systemic play: about 12 board 
 
 | Ch | Chapter | Time | Content | Teaches |
 |---|---|---|---|---|
-| 8 | Team assignment | 35 min | Your squad and sensei; the bell test at Training Ground 3 | Squad commands, parry, teamwork |
+| 8 | Team assignment | 35 min | Your squad and sensei; the cord test at Training Ground 3 | Squad commands, parry, teamwork |
 | 9 | The Mission Desk | 15 min | The squad's first D-rank; the board opens | Board missions, mission pay, failure on death |
 | 10 | Tree walking | 25 min | Chakra training at Training Ground 3 | Tree walking, wall-running, chakra jump, roof hopping |
 | 11 | First C-rank | 45 min | Escorting a merchant east; bandits on the road; a night at camp | Escort, defeat, inspect, camping, bond |
@@ -1238,7 +1238,7 @@ not a time skip.
 
 | Ch | Chapter | Time | Content | Teaches |
 |---|---|---|---|---|
-| 15 | Written test | 20 min | Ten impossible questions; gather answers unseen | Stealth objectives, choice |
+| 15 | Written test | 20 min | A test of what you notice | Observation, choice |
 | 16 | Forest of Death | 60 min | One scroll of a pair and five in-game days to reach the tower with both | Survival, bedroll camping, On Duty, tree-hopping fights |
 | 17 | Preliminaries | 20 min | One-on-one bouts in the tower's arena | Duels, judged performance |
 | 18 | Six days | 30 min | Six days of training with your sensei; festival crowds | Systemic: training, crafting, side quests; your exam reward technique |
@@ -1248,7 +1248,7 @@ not a time skip.
 ### The squad bonding arc
 
 Bond quests (`kind: bond`) carry the squad through the beta, gated by friendship: a study night
-(Ch 6), one bond quest per classmate in Beta 1, the bell test (Ch 8), a campfire talk (Ch 11), two
+(Ch 6), one bond quest per classmate in Beta 1, the cord test (Ch 8), a campfire talk (Ch 11), two
 bond quests per teammate and a squad dinner in Beta 2, a choice about a teammate (Ch 13), the
 forest night watch (Ch 16) and the finals (Ch 19). Low friendship changes how these play out.
 
@@ -1365,7 +1365,7 @@ generated courtesy quests are in Beta 2; only the other 17 welcome quests wait f
 - **Progression:** the Mission Desk with D-rank (41 templates) and C-rank (24 templates: escorts,
   bandits, beasts, deliveries to the far region, investigations and more) board missions, paid in
   ryo and XP by grade and failing on death ([MISSIONS.md](MISSIONS.md));
-  team assignment and the bell test; teammates who can leave; mentors; levels 5 to 15; the event
+  team assignment and the cord test; teammates who can leave; mentors; levels 5 to 15; the event
   director with the Leaf Festival and New Year.
 - **Combat:** chakra movement; parry and launcher; the nature ceremony and one jutsu per nature;
   the clan techniques of the 15 noble clans and the three minor clans with abilities, and the
@@ -1519,7 +1519,7 @@ another's techniques. When and how the player gets it belongs to the story.
 
 | Tier | Bond gate | What opens |
 |---|---|---|
-| **Spark** | Friendship 6 with an ally | **Thread Sight**: bonds appear as threads of light; you sense bonded allies anywhere, and a bonded speaker's lie shows as a flicker (strangers and enemies read poorly). Small kindles that steady an ally |
+| **Spark** | Friendship 6 with an ally | **Thread Sight**: bonds appear as threads of light; you sense bonded allies anywhere, and a bonded person who is hiding something shows a steady flicker in their thread (it shows that something is hidden, never what, and it is not a lie detector) (strangers and enemies read poorly). Small kindles that steady an ally |
 | **Flame** | Friendship 8 | **Kindle**: empower an ally's own technique past its usual limits. **Ember Link**: a shared chakra pool, damage spread across the linked squad, and seeing through an ally's eyes |
 | **Blaze** | Friendship 10, or your spouse | **Ember Mark**: travel to a deeply bonded ally, or call them to you. **Unison techniques**, one per bonded pairing |
 | **Bonfire** | The whole bond web | The ultimate, scaling with every bond you hold |
