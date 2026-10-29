@@ -1,0 +1,145 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "wire": "narutominecraft:block/konoha/power_wire",
+  "particle": "narutominecraft:block/konoha/power_wire"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    12.6,
+    2
+   ],
+   "to": [
+    16,
+    13,
+    2.5
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      3,
+      16,
+      3.4
+     ],
+     "texture": "#wire"
+    },
+    "south": {
+     "uv": [
+      0,
+      3,
+      16,
+      3.4
+     ],
+     "texture": "#wire"
+    },
+    "east": {
+     "uv": [
+      13.5,
+      3,
+      14,
+      3.4
+     ],
+     "texture": "#wire"
+    },
+    "west": {
+     "uv": [
+      2,
+      3,
+      2.5,
+      3.4
+     ],
+     "texture": "#wire"
+    },
+    "up": {
+     "uv": [
+      0,
+      2,
+      16,
+      2.5
+     ],
+     "texture": "#wire"
+    },
+    "down": {
+     "uv": [
+      0,
+      13.5,
+      16,
+      14
+     ],
+     "texture": "#wire"
+    }
+   }
+  },
+  {
+   "from": [
+    0,
+    12.6,
+    13.5
+   ],
+   "to": [
+    16,
+    13,
+    14.0
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      3,
+      16,
+      3.4
+     ],
+     "texture": "#wire"
+    },
+    "south": {
+     "uv": [
+      0,
+      3,
+      16,
+      3.4
+     ],
+     "texture": "#wire"
+    },
+    "east": {
+     "uv": [
+      2.0,
+      3,
+      2.5,
+      3.4
+     ],
+     "texture": "#wire"
+    },
+    "west": {
+     "uv": [
+      13.5,
+      3,
+      14.0,
+      3.4
+     ],
+     "texture": "#wire"
+    },
+    "up": {
+     "uv": [
+      0,
+      13.5,
+      16,
+      14.0
+     ],
+     "texture": "#wire"
+    },
+    "down": {
+     "uv": [
+      0,
+      2.0,
+      16,
+      2.5
+     ],
+     "texture": "#wire"
+    }
+   }
+  }
+ ]
+}

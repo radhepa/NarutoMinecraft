@@ -1,0 +1,11 @@
+{
+ "variants": {
+  "axis=z": {
+   "model": "narutominecraft:block/konoha/tatami"
+  },
+  "axis=x": {
+   "model": "narutominecraft:block/konoha/tatami",
+   "y": 90
+  }
+ }
+}

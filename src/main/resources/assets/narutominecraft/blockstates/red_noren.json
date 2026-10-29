@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "narutominecraft:block/konoha/red_noren"
+  },
+  "facing=east": {
+   "model": "narutominecraft:block/konoha/red_noren",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "narutominecraft:block/konoha/red_noren",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "narutominecraft:block/konoha/red_noren",
+   "y": 270
+  }
+ }
+}

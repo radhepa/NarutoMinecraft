@@ -710,6 +710,10 @@ off (closed gates, streets under repair) or is not built yet.
 
 ### How the map is made
 
+The concrete build plan (the Konoha kit's palettes, every building with its count and slice, the
+block catalogue, the tooling, the order of work, the steps that need you in Minecraft, and the
+effort estimate) is in **[KONOHA_BUILD.md](KONOHA_BUILD.md)**.
+
 1. A **map layout file** (`tools/konoha/layout.json`) places every district: polygon, streets,
    plots, which designs go on which plots, the landmarks' positions and rotations, the **anchors**
    quests refer to, the resident **markers**, the candidate flats and the vacant estates.

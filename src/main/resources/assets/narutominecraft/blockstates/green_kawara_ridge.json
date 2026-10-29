@@ -1,0 +1,11 @@
+{
+ "variants": {
+  "axis=x": {
+   "model": "narutominecraft:block/konoha/green_kawara_ridge"
+  },
+  "axis=z": {
+   "model": "narutominecraft:block/konoha/green_kawara_ridge",
+   "y": 90
+  }
+ }
+}
