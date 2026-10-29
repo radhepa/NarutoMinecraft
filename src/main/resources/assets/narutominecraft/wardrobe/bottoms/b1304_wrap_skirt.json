@@ -1,0 +1,188 @@
+{
+  "id": "b1304_wrap_skirt",
+  "kind": "bottom",
+  "name": "Wrap Skirt",
+  "gender": "female",
+  "texture": "bottoms/b1304_wrap_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        11.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        11,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        20,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_edge",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        11.6,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.05,
+        11.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.05,
+        11.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        0,
+        15
+      ]
+    }
+  ],
+  "description": "Long charcoal wrap skirt split at the front over dark leggings, a dark-red edge, sandals."
+}

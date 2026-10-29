@@ -1,0 +1,168 @@
+{
+  "id": "t1309_mourning_haori",
+  "kind": "top",
+  "name": "Mourning Haori",
+  "gender": "unisex",
+  "texture": "tops/t1309_mourning_haori.png",
+  "extrasHeight": 32,
+  "tags": [
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_bag",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.3,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        5,
+        8,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_sleeve_bag",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.3,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        5,
+        8,
+        3
+      ],
+      "uv": [
+        17,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "haori_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "haori_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.2,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        21,
+        12
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Closed black haori over an off-white collar, wide long sleeves, crests on the back and breasts, to the knee."
+}

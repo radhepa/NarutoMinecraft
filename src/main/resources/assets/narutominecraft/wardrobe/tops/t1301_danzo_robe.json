@@ -1,0 +1,190 @@
+{
+  "id": "t1301_danzo_robe",
+  "kind": "top",
+  "name": "Danzo Robe",
+  "gender": "unisex",
+  "texture": "tops/t1301_danzo_robe.png",
+  "extrasHeight": 48,
+  "tags": [
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_drape",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        13,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.7,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "robe_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        19
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "robe_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        19
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "cane",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        8.6,
+        -1.2
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        13,
+        1
+      ],
+      "uv": [
+        42,
+        19
+      ]
+    },
+    {
+      "id": "cane_grip",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        8.6,
+        -1.2
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        47,
+        19
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Grey robe draped over the right shoulder hiding the arm, an off-white high collar and sleeve, a cane."
+}

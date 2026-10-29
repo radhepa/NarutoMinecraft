@@ -150,6 +150,36 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "SHIMURA_INK": {
+      "name": "Shimura Ink",
+      "ramp": [
+        "#0c0d12",
+        "#15171f",
+        "#1f222d",
+        "#2f3342",
+        "#474d63"
+      ]
+    },
+    "SHIMURA_CHARCOAL": {
+      "name": "Shimura Charcoal",
+      "ramp": [
+        "#151313",
+        "#221f1e",
+        "#302c2a",
+        "#433e3b",
+        "#5d5752"
+      ]
+    },
+    "SHIMURA_GREY": {
+      "name": "Shimura Grey",
+      "ramp": [
+        "#3a3a3c",
+        "#565658",
+        "#77777a",
+        "#9a9a9c",
+        "#bdbdbe"
+      ]
     }
   }
 }
