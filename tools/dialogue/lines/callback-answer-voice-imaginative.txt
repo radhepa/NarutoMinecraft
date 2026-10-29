@@ -1,0 +1,114 @@
+# Callbacks for questions/voice-imaginative.txt, in the imaginative asker's voice.
+#! fn: callback
+#! tags: personality=imaginative
+
+## callback.answer.q.pref.imag_your_colour.a1
+I saw a lantern lit at dusk and thought: there's your colour. Orange. Exactly you.
+
+## callback.answer.q.pref.imag_your_colour.a2
+The river was your colour last night. Deep blue, with a moon floating in it.
+
+## callback.answer.q.pref.imag_your_colour.a3
+Leaf green, you said. The new leaves came out on the cedar today. Your colour, everywhere.
+
+## callback.answer.q.pref.imag_your_colour.a4
+A rainbow came out after the rain and I thought, there you are. All the colours.
+
+## callback.answer.q.pref.imag_colour_feel.a1
+Your colour feels like warmth, like a teacup in both hands. I painted that. Badly. Want to see?
+
+## callback.answer.q.pref.imag_colour_feel.a2
+The quiet between raindrops. Your colour. I listened for it in the rain this morning.
+
+## callback.answer.q.pref.imag_colour_feel.a3
+A colour with the sky in it. I looked up today and the whole sky agreed with you.
+
+## callback.answer.q.pref.imag_colour_feel.a4
+Colours don't need reasons, you said. I've stopped explaining mine. It's freeing.
+
+## callback.answer.q.pref.imag_cloud.a1
+I saw your dragon cloud again! Or its cousin. Curly tail and everything.
+
+## callback.answer.q.pref.imag_cloud.a2
+There's a cloud over the market shaped like your bowl of ramen. Are you hungry? You're hungry.
+
+## callback.answer.q.pref.imag_cloud.a3
+A sleeping-cat cloud over the shrine today. I thought of you. It had its paws tucked in.
+
+## callback.answer.q.pref.imag_cloud.a4
+Just a cloud, you said. I keep laughing about it. I needed my feet on the ground that day.
+
+## callback.answer.q.plans.imag_animal_day.a1
+A hawk circled the Hokage Rock this morning. Was it you, for a day, like you wanted?
+
+## callback.answer.q.plans.imag_animal_day.a2
+I watched the fish under the bridge and wondered what you'd see, down there, as one.
+
+## callback.answer.q.plans.imag_animal_day.a3
+A fox crossed the road by the forest. It looked at me very slyly. I thought of you.
+
+## callback.answer.q.plans.imag_animal_day.a4
+The bathhouse cat lay in a sunbeam all afternoon. Your animal for a day. So wise.
+
+## callback.answer.q.values.imag_dreams_mean.a1
+Dreams mean something, we agreed. I dreamt of a door made of water last night. What does that mean?
+
+## callback.answer.q.values.imag_dreams_mean.a2
+Just supper, you said, dreams. I skipped the pickled radish last night. Dreamt of nothing. You're right.
+
+## callback.answer.q.values.imag_dreams_mean.a3
+Keep the good dreams, forget the rest. Your rule. I've been keeping a list of good ones.
+
+## callback.answer.q.past.imag_last_dream.a1
+You dreamt of flying over the rooftops. I dreamt the same last night! We should compare routes.
+
+## callback.answer.q.past.imag_last_dream.a2
+Your falling dream. Did you ever reach the bottom? I hope it was soft. Feathers.
+
+## callback.answer.q.past.imag_last_dream.a3
+Your feast dream, a good omen, I said. Did it come true? Any feasts lately?
+
+## callback.answer.q.past.imag_last_dream.a4
+Did you keep a brush by your bed, like I said? I want to hear your dreams.
+
+## callback.answer.q.pref.imag_paint_village.a1
+I tried painting the Hokage Rock in morning light, your choice. The faces came out like dumplings.
+
+## callback.answer.q.pref.imag_paint_village.a2
+The river at sunset, your painting. I sat by the bridge last evening and saw it exactly as you said.
+
+## callback.answer.q.pref.imag_paint_village.a3
+The market crowds, your painting. I started a sketch. Forty faces so far. Six are the fishmonger.
+
+## callback.answer.q.pref.imag_paint_village.a4
+The view from your window. I'd love to paint it someday, if you'd let me.
+
+## callback.answer.q.plans.imag_story_title.a1
+"Never Giving Up." Your story. I'd buy it. I'd buy it twice.
+
+## callback.answer.q.plans.imag_story_title.a2
+"The Quiet One." I started writing it. Just a page. You're very mysterious in it.
+
+## callback.answer.q.plans.imag_story_title.a3
+"Ramen and Glory." The scroll shop owner laughed when I told them. They want a copy.
+
+## callback.answer.q.plans.imag_story_title.a4
+Your story's not written yet. Still in the first chapters. I like knowing that.
+
+## callback.answer.q.plans.imag_story_end.a1
+Your story ends happily. I made sure of it, in my head. Every version.
+
+## callback.answer.q.plans.imag_story_end.a2
+A new beginning, the end of your story. One door closing, another opening. I dreamt of doors.
+
+## callback.answer.q.plans.imag_story_end.a3
+Your story never ends. I love that. On and on, like the river.
+
+## callback.answer.q.values.imag_art_rules.a1
+Some rules hold the brush steady, you said. I tried the old crane rules. My crane looked like a crane.
+
+## callback.answer.q.values.imag_art_rules.a2
+I painted a purple crane, because of you. The teacher gasped. I've never been happier.
+
+## callback.answer.q.values.imag_art_rules.a3
+Learn the rules, then break them. The old painters' secret. I'm halfway there. The learning half.

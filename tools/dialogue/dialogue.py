@@ -99,9 +99,9 @@ CONDITIONS = {'all', 'any', 'not', 'flag', 'rank_at_least', 'rank_at_most', 'lev
 ACTIONS = {'set_flag', 'start_quest', 'advance_quest', 'give_item', 'take_item', 'give_ryo', 'add_friendship',
            'bond_event', 'shared_moment', 'reveal_fact', 'favor', 'deed', 'bond_flag', 'news', 'unlock', 'resolve_hook'}
 MAX_LINE, MAX_LABEL = 300, 34
-ALL_AGES = ('bond.', 'talk.', 'hangout.', 'gift.', 'reaction.', 'life.', 'followup.', 'callback.', 'again', 'close')
+ALL_AGES = ('home.', 'bond.', 'talk.', 'hangout.', 'gift.', 'reaction.', 'life.', 'followup.', 'callback.', 'again', 'close')
 # Families whose keys may end in a personality (BondDialogue's <key>.<archetype>); elsewhere ".proud" is just a word.
-PERSONALITY_SUFFIXED = ('bond.greet', 'bond.levelup', 'bond.jealous', 'bond.birthday', 'bond.romance', 'talk.', 'life.', 'hangout.', 'gift.',
+PERSONALITY_SUFFIXED = ('home.', 'bond.greet', 'bond.levelup', 'bond.jealous', 'bond.birthday', 'bond.romance', 'talk.', 'life.', 'hangout.', 'gift.',
                         'reaction', 'callback.contradict', 'again', 'close', 'followup.', 'combat.')
 ROMANCE = re.compile(r"\b(kiss\w*|flirt\w*|crush(es)?|sweetheart\w*|darling|romanc\w*|romantic|in love|love letter\w*|"
                      r"go(ing)? on a date|dating|marry me|propos\w+ to|handsome|gorgeous|blush\w* at you)\b", re.I)
@@ -686,7 +686,7 @@ def family(pool):
 
 
 FILES = ['greet', 'chat', 'talk', 'bond', 'hangout', 'callback', 'followup', 'life', 'village', 'hook', 'shop', 'mission',
-         'combat', 'ambient', 'event', 'again', 'close', 'react', 'teach', 'job', 'reaction', 'gift']
+         'combat', 'ambient', 'event', 'again', 'close', 'react', 'teach', 'job', 'reaction', 'gift', 'home']
 
 
 def build():
