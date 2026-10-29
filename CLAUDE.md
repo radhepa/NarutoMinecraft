@@ -2,7 +2,9 @@
 
 A Minecraft mod of the Hidden Leaf, built on the Village Friends resident model. The wardrobe is
 authored in Python under `tools/wardrobe/` and compiled into `src/main/resources/`. Read
-[README.md](README.md) for the village and [CLANS.md](CLANS.md) for building a clan.
+[README.md](README.md) for the village and [CLANS.md](CLANS.md) for building a clan. The friendship
+system is [BONDS.md](BONDS.md); its engine is the pure Java module `life/bonds` (JDK 25:
+`./gradlew :life:bonds:test`, `./gradlew :life:bonds:simulate` for the pacing tables).
 
 ## Commits
 
