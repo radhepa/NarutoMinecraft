@@ -1,0 +1,5 @@
+{"id": "jonin_sentinel", "name": "Jonin Sentinel", "tagline": "Flak vest, a cloth mask over the nose and mouth, steel-plated gloves and a tanto across the back",
+ "face": "f01_shinobi", "hair": "h08_short_crop", "headwear": "w08_masked_protector",
+ "top": "t18_sentinel_vest", "bottom": "b01_shinobi_trousers",
+ "palette": "JONIN_SENTINEL", "hair_color": "ESPRESSO", "eye_color": "DARK", "eye_style": "soft_glint", "feminine": false,
+ "complexion": 1, "scale": 14, "rank": "jonin"}

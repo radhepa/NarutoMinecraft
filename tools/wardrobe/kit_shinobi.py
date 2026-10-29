@@ -1,7 +1,7 @@
 """Shinobi building blocks: open-toe sandals, bandage wraps, chain mesh, the Konoha flak vest, ANBU
 chest plates, a tanto and the steel plate of a forehead protector."""
 from glyphs import LEAF, SWIRL, SWIRL_SMALL, stamp
-from paint import cap, fabric, solid, strip_fabric
+from paint import cap, fabric, k, solid, strip_fabric
 
 
 def sandals(g):
@@ -49,6 +49,23 @@ def protector_plate(face, x0: int = 0):
     for x in (2, 15):
         face.set(x0 + x, 2, "M1"), face.set(x0 + x, 5, "M1")
     stamp(face, LEAF, x0 + 5, 0, {"#": "M0"})
+
+
+def forehead_protector(g, band: str = "D", seed: int = 61):
+    """The forehead protector: a cloth band tied at the back, with a steel plate engraved with the
+    Hidden Leaf mark, drawn at triple resolution so the mark reads."""
+    ring = g.piece("band", "HEAD", (-4, -7.6, -4), (8, 1, 8), inflate=.6)
+    solid(ring, band, "weave", seed, 2, edge=False)
+    plate = g.piece("plate", "HEAD", (-9, -4, -2), (18, 8, 2), pivot=(0, -7.0, -4.62), scale=(1 / 3, 1 / 3, 1 / 3))
+    for face in plate.faces:
+        fabric(face, "M", "plain", seed + 1, 2)
+    protector_plate(plate.front)
+    knot = g.piece("knot", "HEAD", (-1, -1, 0), (2, 2, 1), pivot=(0, -7.1, 4.6))
+    solid(knot, band, "weave", seed + 3, 2)
+    for i, (x, rz) in enumerate(((-.6, 14), (.6, -10))):
+        tail = g.piece(f"tail_{i}", "HEAD", (-.5, 0, 0), (1, 5, 1), pivot=(x, -6.4, 4.9), rotation=(22, 0, rz), motion="sway")
+        solid(tail, band, "weave", seed + 4 + i, 2)
+        tail.back.set(0, 4, k(band, 1))
 
 
 def flak_vest(g, shoulder_swirls: bool = True, seed: int = 52):
