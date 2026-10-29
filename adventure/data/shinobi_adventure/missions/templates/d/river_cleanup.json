@@ -45,7 +45,7 @@
   "clean": {
    "objective": {
     "type": "collect",
-    "target": "river_rubbish",
+    "target": "item:mission_river_rubbish",
     "at": "slot:bank",
     "count": 12
    },
@@ -74,7 +74,7 @@
   "bottle": {
    "objective": {
     "type": "deliver",
-    "item": "bottled_letter",
+    "item": "item:mission_bottled_letter",
     "to": "slot:addressee"
    },
    "next": "report"

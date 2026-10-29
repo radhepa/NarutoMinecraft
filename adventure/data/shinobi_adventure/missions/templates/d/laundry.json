@@ -69,7 +69,7 @@
   "sheet": {
    "objective": {
     "type": "collect",
-    "target": "sheet",
+    "target": "item:mission_sheet",
     "count": 1
    },
    "next": "deliver"
@@ -86,7 +86,7 @@
   "deliver": {
    "objective": {
     "type": "deliver",
-    "item": "linen",
+    "item": "item:mission_linen",
     "to": "slot:inn"
    },
    "next": "report"

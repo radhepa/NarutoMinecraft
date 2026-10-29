@@ -80,7 +80,7 @@
   "lure": {
    "objective": {
     "type": "collect",
-    "target": "honeycomb",
+    "target": "item:mission_honeycomb",
     "at": "slot:honey"
    },
    "next": "lead"

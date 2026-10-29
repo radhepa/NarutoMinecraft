@@ -177,55 +177,55 @@
   "grade_at_least": "B",
   "by_job": {
    "farmer": [
-    "item:food.vegetables"
+    "item:vegetable_basket"
    ],
    "fisher": [
-    "item:food.grilled_fish"
+    "item:grilled_fish"
    ],
    "cook": [
-    "item:food.onigiri"
+    "item:onigiri"
    ],
    "stallholder": [
-    "item:food.dango"
+    "item:dango"
    ],
    "florist": [
-    "item:decor.pressed_flower"
+    "item:pressed_flower"
    ],
    "vet": [
-    "item:pet.treats"
+    "item:pet_treat"
    ],
    "medic": [
-    "item:tool.bandage",
-    "item:tool.soldier_pill"
+    "item:bandage_wrap",
+    "item:soldier_pill"
    ],
    "priest": [
-    "item:charm.shrine_luck"
+    "item:luck_charm"
    ],
    "shopkeeper": [
-    "item:tool.kunai_bundle"
+    "item:kunai"
    ],
    "trader": [
-    "item:material.steel",
-    "item:material.cloth"
+    "item:steel_ingot",
+    "item:cotton_cloth"
    ],
    "teacher": [
-    "item:scroll.study_notes"
+    "item:study_notes"
    ],
    "groundskeeper": [
-    "item:tool.wire"
+    "item:ninja_wire"
    ],
    "clerk": [
-    "item:food.tea"
+    "item:tea_tin"
    ],
    "bath_keeper": [
-    "item:food.milk"
+    "item:milk"
    ],
    "porter": [
-    "item:food.onigiri"
+    "item:onigiri"
    ],
    "*": [
-    "item:food.onigiri",
-    "item:food.tea"
+    "item:onigiri",
+    "item:tea_tin"
    ]
   }
  },
@@ -237,6 +237,7 @@
    "a": 0.35,
    "s": 0.5
   },
+  "item": "item:technique_scroll",
   "pools": {
    "c": "pool:scroll.c_rank",
    "b": "pool:scroll.b_rank",
@@ -325,9 +326,10 @@
    }
   },
   "cards": {
-   "_doc": "Ninja info cards: one per enemy kind defeated (first time) and per person met on a mission (the client on turn-in, named mission roles on meeting).",
-   "enemy": "card:enemy.<enemy id>",
-   "person": "card:person.<role or resident id>",
+   "_doc": "Ninja info cards: the item item:info_card with a variant, one per enemy kind defeated (first time) and per person met on a mission (the client on turn-in, named mission roles on meeting).",
+   "item": "item:info_card",
+   "enemy": "enemy.<combat enemy id>",
+   "person": "person.<role or resident id>",
    "rank_backs": {
     "d": "plain",
     "c": "bronze",
@@ -338,26 +340,26 @@
   },
   "keepsakes": {
    "_doc": "Unique keepsakes from memorable missions: the first finish at grade A or better. Display items for the home.",
-   "mission.d.festival_setup": "item:keepsake.festival_lantern",
-   "mission.d.kiln_firing": "item:keepsake.first_firing_cup",
-   "mission.d.lost_pet": "item:keepsake.pet_collar_charm",
-   "mission.d.river_cleanup": "item:keepsake.bottle_letter",
-   "mission.d.snow_clearing": "item:keepsake.snow_rabbit",
-   "mission.c.escort_merchant": "item:keepsake.trader_map",
-   "mission.c.bandit_clearing": "item:keepsake.bandit_banner",
-   "mission.c.beast_hunt": "item:keepsake.boar_tusk",
-   "mission.c.bear": "item:keepsake.honey_pot",
-   "mission.c.haunted_inn": "item:keepsake.ghost_lantern",
-   "mission.c.dojo_challenge": "item:keepsake.dojo_signboard",
-   "mission.c.contest_thief": "item:keepsake.burglar_mask",
-   "mission.c.noble_child": "item:keepsake.noble_fan",
-   "mission.c.kiln_delivery": "item:keepsake.market_bowl",
-   "mission.b.kiln_glaze": "item:keepsake.glaze_tile",
-   "mission.b.bridge_builders": "item:keepsake.bridge_plank",
-   "mission.a.kiln_court": "item:keepsake.court_vase",
-   "mission.a.siege_relief": "item:keepsake.castle_banner",
-   "mission.s.peace_summit": "item:keepsake.summit_seal",
-   "mission.anbu.village_shadow": "item:keepsake.festival_mask"
+   "mission.d.festival_setup": "item:keepsake_festival_lantern",
+   "mission.d.kiln_firing": "item:keepsake_first_firing_cup",
+   "mission.d.lost_pet": "item:keepsake_pet_collar_charm",
+   "mission.d.river_cleanup": "item:keepsake_bottle_letter",
+   "mission.d.snow_clearing": "item:keepsake_snow_rabbit",
+   "mission.c.escort_merchant": "item:keepsake_trader_map",
+   "mission.c.bandit_clearing": "item:keepsake_bandit_banner",
+   "mission.c.beast_hunt": "item:keepsake_boar_tusk",
+   "mission.c.bear": "item:keepsake_honey_pot",
+   "mission.c.haunted_inn": "item:keepsake_ghost_lantern",
+   "mission.c.dojo_challenge": "item:keepsake_dojo_signboard",
+   "mission.c.contest_thief": "item:keepsake_burglar_mask",
+   "mission.c.noble_child": "item:keepsake_noble_fan",
+   "mission.c.kiln_delivery": "item:keepsake_market_bowl",
+   "mission.b.kiln_glaze": "item:keepsake_glaze_tile",
+   "mission.b.bridge_builders": "item:keepsake_bridge_plank",
+   "mission.a.kiln_court": "item:keepsake_court_vase",
+   "mission.a.siege_relief": "item:keepsake_castle_banner",
+   "mission.s.peace_summit": "item:keepsake_summit_seal",
+   "mission.anbu.village_shadow": "item:keepsake_festival_mask"
   }
  },
  "standing": {

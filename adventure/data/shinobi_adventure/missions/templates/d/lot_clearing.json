@@ -42,7 +42,7 @@
   "clear": {
    "objective": {
     "type": "collect",
-    "target": "debris",
+    "target": "item:mission_debris",
     "at": "slot:lot",
     "count": 16
    },

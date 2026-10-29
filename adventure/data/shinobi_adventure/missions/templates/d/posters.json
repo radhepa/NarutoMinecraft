@@ -100,7 +100,7 @@
   "reprint": {
    "objective": {
     "type": "craft",
-    "item": "poster",
+    "item": "item:mission_poster",
     "count": 8
    },
    "next": "post"
@@ -108,7 +108,7 @@
   "chase": {
    "objective": {
     "type": "collect",
-    "target": "poster",
+    "target": "item:mission_poster",
     "count": 5
    },
    "next": "post2"

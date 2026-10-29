@@ -73,7 +73,7 @@
   "vault": {
    "objective": {
     "type": "collect",
-    "target": "forbidden_scroll",
+    "target": "item:mission_forbidden_scroll",
     "at": "slot:vault"
    },
    "next": "out"
@@ -112,7 +112,7 @@
   "report": {
    "objective": {
     "type": "deliver",
-    "item": "forbidden_scroll",
+    "item": "item:mission_forbidden_scroll",
     "to": "slot:client"
    },
    "next": null

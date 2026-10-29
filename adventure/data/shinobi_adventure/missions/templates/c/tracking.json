@@ -138,7 +138,7 @@
   "report": {
    "objective": {
     "type": "deliver",
-    "item": "stolen_goods",
+    "item": "item:stolen_goods",
     "to": "slot:client"
    },
    "next": null

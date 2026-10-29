@@ -2,6 +2,44 @@
  "format": 1,
  "_doc": "The Mission Desk on the Hokage Residence's ground floor. MISSIONS.md section 2.",
  "place": "place:residence.mission_desk",
+ "clerks": [
+  "role:desk_chunin_1",
+  "role:desk_chunin_2"
+ ],
+ "travel_desk": {
+  "place": "place:gate.travel_desk",
+  "guards": [
+   "role:gate_guard_1",
+   "role:gate_guard_2"
+  ]
+ },
+ "road_events": {
+  "_doc": "What a travel scene can roll on the way to a far region (ROADMAP section 6). Roles are the ranks session's (provisional).",
+  "chance": 0.35,
+  "events": [
+   {
+    "id": "traveller",
+    "weight": 3
+   },
+   {
+    "id": "ambush",
+    "weight": 2,
+    "group": "combat:group.road_ambush"
+   },
+   {
+    "id": "camp_night",
+    "weight": 2
+   },
+   {
+    "id": "passing_elite",
+    "weight": 1,
+    "role": "role:elite_scout",
+    "regions": [
+     "region:east_road"
+    ]
+   }
+  ]
+ },
  "hours": [
   "08:00",
   "18:00"

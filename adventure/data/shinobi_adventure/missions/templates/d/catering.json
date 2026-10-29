@@ -46,7 +46,7 @@
   "pick_up": {
    "objective": {
     "type": "collect",
-    "target": "catering_box",
+    "target": "item:mission_catering_box",
     "at": "slot:kitchen",
     "count": 3
    },
@@ -55,7 +55,7 @@
   "carry": {
    "objective": {
     "type": "deliver",
-    "item": "catering_box",
+    "item": "item:mission_catering_box",
     "to": "slot:ground"
    },
    "branch": [
@@ -84,7 +84,7 @@
   "carry2": {
    "objective": {
     "type": "deliver",
-    "item": "catering_box",
+    "item": "item:mission_catering_box",
     "to": "slot:ground"
    },
    "next": "report"
@@ -92,7 +92,7 @@
   "spill": {
    "objective": {
     "type": "collect",
-    "target": "catering_box",
+    "target": "item:mission_catering_box",
     "at": "slot:kitchen"
    },
    "next": "carry2"

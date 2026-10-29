@@ -65,7 +65,7 @@
   "recopy": {
    "objective": {
     "type": "craft",
-    "item": "copied_report",
+    "item": "item:mission_copied_report",
     "count": 2
    },
    "next": "report"

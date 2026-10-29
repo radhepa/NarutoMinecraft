@@ -743,190 +743,190 @@
   ]
  },
  "items": {
-  "beetle": [
-   "mission.d.insect_garden"
-  ],
-  "bottled_letter": [
-   "mission.d.river_cleanup"
-  ],
-  "bouquet": [
-   "mission.d.flower_order"
-  ],
-  "cart_axle": [
-   "mission.d.harvest"
-  ],
-  "cart_wheel": [
-   "mission.c.caravan_guard"
-  ],
   "cat": [
    "mission.d.roof_repair"
-  ],
-  "catering_box": [
-   "mission.d.catering"
-  ],
-  "chest": [
-   "mission.d.moving_day"
-  ],
-  "copied_report": [
-   "mission.d.scroll_sorting"
-  ],
-  "crop": [
-   "mission.d.harvest"
-  ],
-  "debris": [
-   "mission.d.lot_clearing"
-  ],
-  "dojo_signboard": [
-   "mission.c.dojo_challenge"
-  ],
-  "drain_muck": [
-   "mission.d.drain_clearing"
-  ],
-  "fence_post": [
-   "mission.d.fence_mending"
-  ],
-  "firewood": [
-   "mission.d.kiln_firing"
-  ],
-  "fireworks_crate": [
-   "mission.c.festival_guard",
-   "mission.d.festival_setup"
-  ],
-  "fish_crate": [
-   "mission.d.fishing_haul"
-  ],
-  "flower": [
-   "mission.d.flower_order"
-  ],
-  "forbidden_scroll": [
-   "mission.a.forbidden_scroll",
-   "mission.s.stronghold"
   ],
   "frog": [
    "mission.d.drain_clearing"
   ],
-  "glaze_recipe": [
-   "mission.b.kiln_glaze"
+  "item:bouquet": [
+   "mission.d.flower_order"
   ],
-  "groceries": [
+  "item:grocery_order": [
    "mission.d.elder_errands"
   ],
-  "heirloom": [
-   "mission.c.heirloom",
-   "mission.d.moving_day"
-  ],
-  "herb": [
+  "item:healing_herb": [
    "mission.d.herb_gathering",
    "mission.d.hospital_orderly"
   ],
-  "honeycomb": [
-   "mission.c.bear"
-  ],
-  "lamp_oil": [
+  "item:lamp_oil": [
    "mission.d.elder_errands",
    "mission.d.night_lamps"
   ],
-  "ledger": [
+  "item:mission_beetle": [
+   "mission.d.insect_garden"
+  ],
+  "item:mission_bottled_letter": [
+   "mission.d.river_cleanup"
+  ],
+  "item:mission_cart_axle": [
+   "mission.d.harvest"
+  ],
+  "item:mission_cart_wheel": [
+   "mission.c.caravan_guard"
+  ],
+  "item:mission_catering_box": [
+   "mission.d.catering"
+  ],
+  "item:mission_chest": [
+   "mission.d.moving_day"
+  ],
+  "item:mission_copied_report": [
+   "mission.d.scroll_sorting"
+  ],
+  "item:mission_crop": [
+   "mission.d.harvest"
+  ],
+  "item:mission_debris": [
+   "mission.d.lot_clearing"
+  ],
+  "item:mission_dojo_signboard": [
+   "mission.c.dojo_challenge"
+  ],
+  "item:mission_drain_muck": [
+   "mission.d.drain_clearing"
+  ],
+  "item:mission_fence_post": [
+   "mission.d.fence_mending"
+  ],
+  "item:mission_firewood": [
+   "mission.d.kiln_firing"
+  ],
+  "item:mission_fireworks_crate": [
+   "mission.c.festival_guard",
+   "mission.d.festival_setup"
+  ],
+  "item:mission_fish_crate": [
+   "mission.d.fishing_haul"
+  ],
+  "item:mission_flower": [
+   "mission.d.flower_order"
+  ],
+  "item:mission_forbidden_scroll": [
+   "mission.a.forbidden_scroll",
+   "mission.s.stronghold"
+  ],
+  "item:mission_glaze_recipe": [
+   "mission.b.kiln_glaze"
+  ],
+  "item:mission_heirloom": [
+   "mission.c.heirloom",
+   "mission.d.moving_day"
+  ],
+  "item:mission_honeycomb": [
+   "mission.c.bear"
+  ],
+  "item:mission_ledger": [
    "mission.b.fortress_infiltration"
   ],
-  "linen": [
+  "item:mission_linen": [
    "mission.d.hospital_orderly",
    "mission.d.laundry"
   ],
-  "medicine": [
+  "item:mission_medicine": [
    "mission.d.babysitting"
   ],
-  "medicine_crate": [
+  "item:mission_medicine_crate": [
    "mission.b.quarantine",
    "mission.c.border_delivery"
   ],
-  "moving_crate": [
+  "item:mission_moving_crate": [
    "mission.d.moving_day"
   ],
-  "net_patch": [
+  "item:mission_net_patch": [
    "mission.d.fishing_haul"
   ],
-  "ninken": [
-   "mission.d.dog_walking"
-  ],
-  "offering": [
+  "item:mission_offering": [
    "mission.d.shrine_cleaning"
   ],
-  "old_kunai_cache": [
+  "item:mission_old_kunai_cache": [
    "mission.d.farm_weeding"
   ],
-  "parcel": [
-   "mission.d.delivery_run"
-  ],
-  "pass_ledger": [
+  "item:mission_pass_ledger": [
    "mission.anbu.corrupt_official"
   ],
-  "persimmon": [
+  "item:mission_persimmon": [
    "mission.d.orchard"
   ],
-  "poster": [
+  "item:mission_poster": [
    "mission.d.posters"
   ],
-  "pottery_crate": [
+  "item:mission_pottery_crate": [
    "mission.c.kiln_delivery"
   ],
-  "practice_kunai": [
-   "mission.d.academy_assist"
-  ],
-  "recipe_copy": [
+  "item:mission_recipe_copy": [
    "mission.b.kiln_glaze"
   ],
-  "ring": [
+  "item:mission_ring": [
    "mission.d.drain_clearing"
   ],
-  "river_rubbish": [
+  "item:mission_river_rubbish": [
    "mission.d.river_cleanup"
   ],
-  "roof_tile": [
+  "item:mission_roof_tile": [
    "mission.d.roof_repair"
   ],
-  "sealed_letter": [
-   "mission.d.messenger"
-  ],
-  "sealed_message": [
+  "item:mission_sealed_message": [
    "mission.c.courier_relay"
   ],
-  "sealed_scroll": [
+  "item:mission_sealed_scroll": [
    "mission.b.scroll_recovery"
   ],
-  "shed_antler": [
+  "item:mission_shed_antler": [
    "mission.d.deer_count"
   ],
-  "sheet": [
+  "item:mission_sheet": [
    "mission.d.laundry"
   ],
-  "spice": [
+  "item:mission_spice": [
    "mission.d.kitchen_help"
   ],
-  "stolen_goods": [
+  "item:mission_stray_shuriken": [
+   "mission.d.training_upkeep"
+  ],
+  "item:mission_supply_crate": [
+   "mission.a.siege_relief",
+   "mission.c.outpost_supply"
+  ],
+  "item:mission_timber": [
+   "mission.d.timber_haul"
+  ],
+  "item:mission_treaty_draft": [
+   "mission.b.allied_courier"
+  ],
+  "item:practice_kunai": [
+   "mission.d.academy_assist"
+  ],
+  "item:quest_letter": [
+   "mission.d.messenger"
+  ],
+  "item:quest_parcel": [
+   "mission.d.delivery_run"
+  ],
+  "item:stolen_goods": [
    "mission.c.bandit_clearing",
    "mission.c.tracking",
    "mission.d.market_stall",
    "mission.d.night_lamps"
   ],
-  "stray_pet": [
-   "mission.d.lost_pet"
-  ],
-  "stray_shuriken": [
-   "mission.d.training_upkeep"
-  ],
-  "supply_crate": [
-   "mission.a.siege_relief",
-   "mission.c.outpost_supply"
-  ],
-  "tea_leaves": [
+  "item:tea_leaves": [
    "mission.d.elder_errands"
   ],
-  "timber": [
-   "mission.d.timber_haul"
+  "ninken": [
+   "mission.d.dog_walking"
   ],
-  "treaty_draft": [
-   "mission.b.allied_courier"
+  "stray_pet": [
+   "mission.d.lost_pet"
   ]
  },
  "performs": {
@@ -1144,26 +1144,26 @@
   ]
  },
  "collectibles": {
-  "mission.d.festival_setup": "item:keepsake.festival_lantern",
-  "mission.d.kiln_firing": "item:keepsake.first_firing_cup",
-  "mission.d.lost_pet": "item:keepsake.pet_collar_charm",
-  "mission.d.river_cleanup": "item:keepsake.bottle_letter",
-  "mission.d.snow_clearing": "item:keepsake.snow_rabbit",
-  "mission.c.escort_merchant": "item:keepsake.trader_map",
-  "mission.c.bandit_clearing": "item:keepsake.bandit_banner",
-  "mission.c.beast_hunt": "item:keepsake.boar_tusk",
-  "mission.c.bear": "item:keepsake.honey_pot",
-  "mission.c.haunted_inn": "item:keepsake.ghost_lantern",
-  "mission.c.dojo_challenge": "item:keepsake.dojo_signboard",
-  "mission.c.contest_thief": "item:keepsake.burglar_mask",
-  "mission.c.noble_child": "item:keepsake.noble_fan",
-  "mission.c.kiln_delivery": "item:keepsake.market_bowl",
-  "mission.b.kiln_glaze": "item:keepsake.glaze_tile",
-  "mission.b.bridge_builders": "item:keepsake.bridge_plank",
-  "mission.a.kiln_court": "item:keepsake.court_vase",
-  "mission.a.siege_relief": "item:keepsake.castle_banner",
-  "mission.s.peace_summit": "item:keepsake.summit_seal",
-  "mission.anbu.village_shadow": "item:keepsake.festival_mask"
+  "mission.d.festival_setup": "item:keepsake_festival_lantern",
+  "mission.d.kiln_firing": "item:keepsake_first_firing_cup",
+  "mission.d.lost_pet": "item:keepsake_pet_collar_charm",
+  "mission.d.river_cleanup": "item:keepsake_bottle_letter",
+  "mission.d.snow_clearing": "item:keepsake_snow_rabbit",
+  "mission.c.escort_merchant": "item:keepsake_trader_map",
+  "mission.c.bandit_clearing": "item:keepsake_bandit_banner",
+  "mission.c.beast_hunt": "item:keepsake_boar_tusk",
+  "mission.c.bear": "item:keepsake_honey_pot",
+  "mission.c.haunted_inn": "item:keepsake_ghost_lantern",
+  "mission.c.dojo_challenge": "item:keepsake_dojo_signboard",
+  "mission.c.contest_thief": "item:keepsake_burglar_mask",
+  "mission.c.noble_child": "item:keepsake_noble_fan",
+  "mission.c.kiln_delivery": "item:keepsake_market_bowl",
+  "mission.b.kiln_glaze": "item:keepsake_glaze_tile",
+  "mission.b.bridge_builders": "item:keepsake_bridge_plank",
+  "mission.a.kiln_court": "item:keepsake_court_vase",
+  "mission.a.siege_relief": "item:keepsake_castle_banner",
+  "mission.s.peace_summit": "item:keepsake_summit_seal",
+  "mission.anbu.village_shadow": "item:keepsake_festival_mask"
  },
  "beta": {
   "anchors": [
@@ -1277,57 +1277,57 @@
    "combat:group.wolves_pack"
   ],
   "items": [
-   "beetle",
-   "bottled_letter",
-   "bouquet",
-   "cart_axle",
-   "cart_wheel",
    "cat",
-   "catering_box",
-   "chest",
-   "copied_report",
-   "crop",
-   "debris",
-   "dojo_signboard",
-   "drain_muck",
-   "fence_post",
-   "firewood",
-   "fireworks_crate",
-   "fish_crate",
-   "flower",
    "frog",
-   "groceries",
-   "heirloom",
-   "herb",
-   "honeycomb",
-   "lamp_oil",
-   "linen",
-   "medicine",
-   "medicine_crate",
-   "moving_crate",
-   "net_patch",
+   "item:bouquet",
+   "item:grocery_order",
+   "item:healing_herb",
+   "item:lamp_oil",
+   "item:mission_beetle",
+   "item:mission_bottled_letter",
+   "item:mission_cart_axle",
+   "item:mission_cart_wheel",
+   "item:mission_catering_box",
+   "item:mission_chest",
+   "item:mission_copied_report",
+   "item:mission_crop",
+   "item:mission_debris",
+   "item:mission_dojo_signboard",
+   "item:mission_drain_muck",
+   "item:mission_fence_post",
+   "item:mission_firewood",
+   "item:mission_fireworks_crate",
+   "item:mission_fish_crate",
+   "item:mission_flower",
+   "item:mission_heirloom",
+   "item:mission_honeycomb",
+   "item:mission_linen",
+   "item:mission_medicine",
+   "item:mission_medicine_crate",
+   "item:mission_moving_crate",
+   "item:mission_net_patch",
+   "item:mission_offering",
+   "item:mission_old_kunai_cache",
+   "item:mission_persimmon",
+   "item:mission_poster",
+   "item:mission_pottery_crate",
+   "item:mission_ring",
+   "item:mission_river_rubbish",
+   "item:mission_roof_tile",
+   "item:mission_sealed_message",
+   "item:mission_shed_antler",
+   "item:mission_sheet",
+   "item:mission_spice",
+   "item:mission_stray_shuriken",
+   "item:mission_supply_crate",
+   "item:mission_timber",
+   "item:practice_kunai",
+   "item:quest_letter",
+   "item:quest_parcel",
+   "item:stolen_goods",
+   "item:tea_leaves",
    "ninken",
-   "offering",
-   "old_kunai_cache",
-   "parcel",
-   "persimmon",
-   "poster",
-   "pottery_crate",
-   "practice_kunai",
-   "ring",
-   "river_rubbish",
-   "roof_tile",
-   "sealed_letter",
-   "sealed_message",
-   "shed_antler",
-   "sheet",
-   "spice",
-   "stolen_goods",
-   "stray_pet",
-   "stray_shuriken",
-   "supply_crate",
-   "tea_leaves",
-   "timber"
+   "stray_pet"
   ],
   "performs": [
    "carry_gently",

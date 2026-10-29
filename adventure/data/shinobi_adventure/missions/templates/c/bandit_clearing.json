@@ -184,7 +184,7 @@
   "loot": {
    "objective": {
     "type": "collect",
-    "target": "stolen_goods",
+    "target": "item:stolen_goods",
     "at": "slot:camp",
     "count": 4
    },
