@@ -1,0 +1,102 @@
+# Callbacks to hangout highlights over food (LIFE_TOGETHER.md §3): a week or more later they bring the beat up
+# again, and it opens the shared_memory topic. Each pool remembers the highlight of the same number.
+#! kind: cycle
+#! fn: callback
+
+## callback.hangout.ramen.highlight.1
+I still can't believe you caught that tipping bowl at Ichiraku. Not a drop! I tell everyone.
+## callback.hangout.ramen.highlight.2
+Remember the free eggs for looking hungry? I've been practising my hungry face since.
+## callback.hangout.ramen.highlight.3
+Every time I slurp now I think of that whole counter turning round to stare at us.
+## callback.hangout.ramen.highlight.4
+Broth on your nose. I still laugh about it when I'm eating alone.
+## callback.hangout.ramen.highlight.5
+The night of two bowls each! My stomach's never forgiven you, {player}.
+## callback.hangout.ramen.highlight.6
+I keep thinking of the rain on the curtain at Ichiraku, and how warm it was inside.
+## callback.hangout.ramen.highlight.7
+The cook still talks about you winning the noodle-pulling bet. You're famous at the stand.
+## callback.hangout.ramen.highlight.8
+You gave me half your last piece of pork once. I haven't forgotten.
+## callback.hangout.ramen.highlight.9
+Do you remember all those stars over the ramen stand? I look up every time I pass now.
+## callback.hangout.ramen.highlight.10
+The cook's burnt first bowl! I think of that story whenever my own cooking goes wrong.
+## callback.hangout.ramen.highlight.11
+That stray cat from Ichiraku follows me home sometimes now. I think it's looking for you.
+## callback.hangout.ramen.highlight.12
+We talked so long they stacked the stools around us. We should do that again.
+
+## callback.hangout.dango.highlight.1
+That brave sparrow at the tea house came back to my window. I swear it's the same one.
+## callback.hangout.dango.highlight.2
+Your lucky four-ball skewer! Has your luck been good since? Mine has, a bit.
+## callback.hangout.dango.highlight.3
+Sauce in your hair. I still don't understand how you managed it.
+## callback.hangout.dango.highlight.4
+That petal in my tea. I pressed it, you know. It's in a book at home.
+## callback.hangout.dango.highlight.5
+I still think about that special blend the tea master let us try. I've been back to beg for more.
+## callback.hangout.dango.highlight.6
+Remember sitting at the tea house till the shadows crossed the table? Let's lose an afternoon like that again.
+## callback.hangout.dango.highlight.7
+I can't drink green tea now without thinking of snorting it out of my nose. Thanks for that.
+## callback.hangout.dango.highlight.8
+The little one from the next table waved at me in the street yesterday. They remembered us!
+## callback.hangout.dango.highlight.9
+Seven colours of dango in one sitting. I've told people. They don't believe me.
+## callback.hangout.dango.highlight.10
+Whenever it rains I think of the two of us at the tea house, listening to the roof.
+
+## callback.hangout.barbecue.highlight.1
+Your eyebrow's grown back, I see. I still laugh at that singed look on your face.
+## callback.hangout.barbecue.highlight.2
+Not one burnt piece that night at the barbecue! I've tried to copy your flipping. I can't.
+## callback.hangout.barbecue.highlight.3
+The owner still waves at me. Ever since the special cut, we're practically family.
+## callback.hangout.barbecue.highlight.4
+I still say I'd have won that rock, paper, scissors for the last piece if you hadn't cheated.
+## callback.hangout.barbecue.highlight.5
+The whole next table joining our toast! That's one of my favourite nights.
+## callback.hangout.barbecue.highlight.6
+I've had to loosen my sash twice since that barbecue just remembering it.
+## callback.hangout.barbecue.highlight.7
+You gave me all the crispy bits. I owe you a hundred crispy bits by now.
+## callback.hangout.barbecue.highlight.8
+Those last orange coals at the barbecue house. Watching them with you was the best part.
+## callback.hangout.barbecue.highlight.9
+The spark on your sleeve! You just kept talking. I've never seen anything so calm.
+## callback.hangout.barbecue.highlight.10
+I've been trying to work out the other half of that secret sauce. No luck. Come help me guess.
+
+## callback.hangout.home_dinner.highlight.1
+Your bowl with the little leaf is still on my shelf. Nobody else is allowed to use it.
+## callback.hangout.home_dinner.highlight.2
+The little ones keep asking when the friend with the lumpy cushion is coming back.
+## callback.hangout.home_dinner.highlight.3  stage=teen|adult
+I've never made rice that perfect since. You must have brought the luck with you.
+## callback.hangout.home_dinner.highlight.4
+My grandmother still tells the fox story and says, "Your friend jumped!" Every time.
+## callback.hangout.home_dinner.highlight.5
+The washing-up song! I caught myself humming it this morning and thought of you.
+## callback.hangout.home_dinner.highlight.6
+That hot-pot night, everyone red-cheeked and laughing. I'd like a hundred more like it.
+## callback.hangout.home_dinner.highlight.7
+The cat still sits on the cushion where you sat. Waiting, I think.
+## callback.hangout.home_dinner.highlight.8  stage=teen|adult
+I froze some of your little hat-shaped dumplings. I can't bring myself to eat them.
+## callback.hangout.home_dinner.highlight.9
+The night the pot went empty. My family still talks about your appetite.
+## callback.hangout.home_dinner.highlight.10
+Talking by the brazier after everyone went to bed. That's one of my favourite memories.
+## callback.hangout.home_dinner.highlight.11
+The neighbours still talk about the night the whole lane came over. You started that.
+## callback.hangout.home_dinner.highlight.12
+My father still mentions that toast he made to you. He doesn't mention much.
+
+# == children ======================================================================================
+## callback.hangout.home_dinner.highlight.3  stage=child
+Remember your cat-shaped rice ball at my house? My dad still talks about it.
+## callback.hangout.home_dinner.highlight.8  stage=child
+Your dumplings looked like little hats! My mum keeps asking when the hat-maker's coming back.

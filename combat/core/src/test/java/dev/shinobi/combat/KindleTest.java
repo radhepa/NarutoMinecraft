@@ -45,14 +45,14 @@ class KindleTest {
         assertThrows(IllegalArgumentException.class, () -> new Kindle.EmberLink(Map.of("a", 1.0, "b", 1.0, "c", 1.0, "d", 1.0, "e", 1.0)));
     }
     @Test void bonfireScalesWithTheWholeBondWeb() {
-        var candle = Kindle.bonfire(0);
-        var squad = Kindle.bonfire(15);
-        var strong = Kindle.bonfire(40);
-        var village = Kindle.bonfire(70);
-        assertEquals(1.0, candle.damage(), 1e-9, "a loner gets a candle");
-        assertTrue(squad.damage() < strong.damage() && strong.damage() < village.damage());
-        assertTrue(village.damage() > 2.2 && village.damage() < 2.5, "monstrous but bounded: " + village.damage());
-        assertTrue(village.taken() < squad.taken());
+        var candle = Kindle.bonfire(3);
+        var typical = Kindle.bonfire(19);
+        var devoted = Kindle.bonfire(22);
+        assertEquals(1.0, Kindle.bonfire(0).damage(), 1e-9);
+        assertTrue(candle.damage() < 1.15, "a loner gets a candle: " + candle.damage());
+        assertEquals(1.63, typical.damage(), 0.01, "the bond engine's typical player at 60 hours");
+        assertEquals(1.70, devoted.damage(), 0.01);
+        assertTrue(devoted.taken() < candle.taken());
         assertTrue(Kindle.bonfire(200).damage() < 2.5 + 1e-9, "diminishing returns");
     }
     @Test void threadSightWarnsOnlyForBondedAllies() {

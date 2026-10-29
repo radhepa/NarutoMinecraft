@@ -1,0 +1,147 @@
+# Small talk, part A: what this hour is like in the Leaf, and what's open.
+
+## chat.time  time=dawn  fn=react
+Dawn's my favourite hour. The Rock goes pink, the river steams, and nobody's asked me for anything yet.
+Bakers have been up for an hour already. You can smell the first loaves from here.
+Out on the river, the fishermen are just pushing off. If you want the best catch, you'll be at the river bank in an hour.
+About now the night guards are handing over at the gate. Tired faces going home, fresh ones coming out.
+Up this early? Me too. The birds are louder than the whole market at this hour.
+One by one, the lamp keepers are putting out the street lanterns. You can watch the dark fold up behind them.
+I like walking the main street at dawn. Every shutter's closed, and the whole village feels like it's holding its breath.
+Hear the shrine bell? That's dawn. Some people say a prayer. Most just roll over.
+At this hour the training grounds belong to the early risers. Hear the thuds? Someone's been at it since dark.
+Mist off the river at this hour makes the bridges look like they're floating.
+
+## chat.time  time=dawn  fn=teach
+Shops won't open until about seven. If you're hungry now, the bakery sells from its back door.
+Most folk wake around six. If you slept before midnight, you'll feel it. Chakra comes easier all morning.
+The Mission Desk opens at eight. Squads start queuing well before. Bring breakfast.
+
+## chat.time  time=dawn  fn=filler
+Morning already. The sun never asks if I'm ready.
+Early, isn't it? Still, a good early.
+
+## chat.time  time=morning  fn=react
+Shutters are going up all down the market street. The grocer's already arguing with a customer about leeks.
+Any moment now the Academy bell rings. Look at the children running. The late ones run the fastest.
+Look at that line at the Mission Desk, out the door already. Every Genin squad in the Leaf wants the easy D-ranks.
+Morning's when the market's freshest. The vegetables still have dew on them.
+Squads are heading out through the gate. You can tell the C-rank ones by how heavy their packs are.
+Every morning the tea house fills up with old folk. Same seats, same tea, same arguments as yesterday.
+Washing's out on every balcony. On a sunny morning, the whole village looks like it's waving.
+Forge's morning shift has started. Listen. That's three hammers, and one of them's out of time.
+Mornings, the flower shop gets its deliveries, and the whole main street smells of lilies until ten.
+Every morning the herbalists put their racks out by the hospital. By noon the air there smells like medicine and mint.
+
+## chat.time  time=morning  fn=teach
+Shops open around seven and stay open until evening. Morning's the best time if you want first pick.
+The Mission Desk is open from eight to six. The best D-ranks go early, so don't dawdle.
+Academy lessons run from nine till noon on weekdays. After that, the yard's a madhouse.
+
+## chat.time  time=morning  fn=filler
+A fresh morning. Anything could happen.
+Good morning, properly. The day's still clean.
+
+## chat.time  time=noon  fn=react
+Noon already? The Academy's just let out. Listen to that racket. Like a flock of sparrows let out of a cage.
+Ichiraku's busiest at noon. You'll wait for a stool, but the line moves quick.
+Everyone eats at noon here. Look, even the guards on the wall have their lunch boxes open.
+Sun's right over the Rock. No shade anywhere. The cats have all gone under the porches.
+Noon is when the market gets loud. Every stall's shouting its best price before the afternoon slump.
+Quietest hour at the shrine is noon. Everyone's eating. Good time to sit up there and think.
+Hear the forge stop? That's the smiths at lunch. The silence is almost odd.
+At noon the tea house does a cheap lunch set. Rice, soup, pickles and a fish. Best bargain in the Leaf.
+Squads that left at dawn on short D-ranks start coming back about now, muddy and starving.
+At noon the river's full of children cooling off. The water's cold enough to shout about.
+
+## chat.time  time=noon  fn=teach
+If you slept well last night, that extra spring in your chakra's about to wear off. It lasts until noon.
+Academy lessons end at noon. If you want the library quiet, go before then. After lunch it's full.
+
+## chat.time  time=noon  fn=filler
+Lunch time. That's the best time.
+Half the day gone. Not bad, so far.
+
+## chat.time  time=afternoon  fn=react
+Afternoons are for training. Hear the training grounds? Kunai thunking into posts from here to the river.
+Market's slowed right down. The stallholders are fanning themselves and playing cards.
+Afternoon sun makes the Rock look carved out of honey. Painters love this hour.
+After lunch, everyone gets a little slow. Even the dogs.
+Nobody's at the bathhouse in the afternoon. Best time to go, if you want the hot water to yourself.
+Squads with long D-ranks are still out in the farms. You'll see them stagger home near dusk.
+In the afternoon the kites come out. Children fly them off the bridges. Some of them even come back down.
+Every afternoon the old shogi players set up their boards on the benches by the river. Nobody's allowed to watch silently.
+The tea house is full of people pretending they're not napping. The owner pretends not to notice.
+Afternoon is when the part-time shifts start. Ichiraku needs onion choppers, the forge needs coal haulers.
+
+## chat.time  time=afternoon  fn=teach
+The Mission Desk is open until six. If you want a mission today, now's the time.
+Shops close in the evening, so if you need supplies, don't leave it much later.
+Plenty of folk take part-time jobs in the afternoon. Ask at Ichiraku, the grocer, the flower shop or the forge.
+
+## chat.time  time=afternoon  fn=filler
+A slow afternoon. I don't mind them.
+Long day yet. Plenty of time.
+
+## chat.time  time=evening  fn=react
+Lanterns are going up along the main street. Evening in the Leaf always smells of grilling fish.
+Evening's when Ichiraku really comes alive. Shinobi coming off missions, families out for dinner.
+One by one, the shops are shuttering. That clatter's the sound of the Leaf saying "enough work for today".
+Look at the sky behind the Rock. Orange, then purple. The faces look like they're glowing.
+Squads are back from the day's missions. Listen to them bragging on the bridge.
+At dusk the river fills with lantern reflections. Some people sit on the banks and do nothing else.
+Evening's when the barbecue house fills up. The smoke over the Akimichi roofs is a kind of dinner bell.
+Mothers are calling children home all over the residential streets. Some of the names get shouted three times.
+There goes the dusk bell from the shrine. Half the village stops for a breath. The other half doesn't hear it over dinner.
+Cicadas start up at dusk. In summer, they're louder than the market at noon.
+
+## chat.time  time=evening  fn=teach
+The Mission Desk closes at six. If you've a report to hand in, you'll have to wait for morning now.
+Most shops close in the evening. Ichiraku's still open. So are the bathhouses, for an hour or two.
+Festivals and events go on in the evening, but they're done by midnight. The Leaf goes to bed on time.
+
+## chat.time  time=evening  fn=filler
+Evening already. Where did the day go?
+Nice evening. The kind you want to keep.
+
+## chat.time  time=night  fn=react
+How fast the village goes quiet at night. One minute the main street's full, the next it's just lanterns and cats.
+At night you can see the lanterns on the wall from anywhere in the Leaf. A ring of little fires.
+Every night the watch walks past my window at the same time. I've started waving. They wave back.
+At night the Rock's just a shadow. You can only see the faces when the moon's out.
+Bathhouse steam rises white in the dark. It's nice to walk past on a cold night.
+I like the sound of the river at night. You can't hear it during the day over all the noise.
+Police are out on the main street at this hour. Strict, but they'll walk you home if you ask.
+So many stars over the Leaf tonight. Less light from the shops, more from the sky.
+Owls are out. One's been sitting on the Academy swing all night. Thinks it's a student.
+Last of the ramen customers are leaving Ichiraku now. Sleepy faces, full bellies.
+
+## chat.time  time=night  fn=teach
+Sleep before midnight and you'll wake Well Rested. Your chakra comes back quicker all morning.
+If you can't sleep, a cup of green tea will keep the tiredness off for an hour. Don't make a habit of it.
+Your own bed's the best place to sleep. You'll wake at six, fresh, and ready.
+
+## chat.time  time=night  fn=filler
+Getting late. Time to think about bed.
+Quiet night. I like them.
+
+## chat.time  time=late  fn=react
+Still up? The whole village is asleep. Even the dogs.
+This late, it's just the night watch and the owls. And us, apparently.
+I can't sleep. I've been sitting on my step listening to the wind in the training ground trees.
+Main street lanterns have burned low. Some have gone out altogether.
+In a few hours the bakers'll be up. That's how late it is. Nearly early.
+Past midnight. The Leaf belongs to the cats now.
+At this hour, even the river sounds sleepy.
+I heard the night watch change on the wall a while ago. That's how I know it's very late.
+
+## chat.time  time=late  fn=teach
+Past one, and you'll start to feel it. Heavy legs, slow chakra. Bed's the only cure.
+Stay up past three and you'll be stumbling. Chakra jumps go short, kunai fly wide. Get some sleep.
+If you're still awake at six, you'll drop where you stand and wake at noon. Ask me how I know.
+Any bed will clear your tiredness, but only your own bed before midnight leaves you Well Rested. Too late for that now.
+A hot meal helps when you've been up too long. Takes the weight off your legs for an hour.
+
+## chat.time  time=late  fn=filler
+It's very late. Go to bed. I'm going to.
+Late, late, late. What are we doing up?

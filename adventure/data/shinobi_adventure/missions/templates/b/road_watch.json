@@ -1,0 +1,194 @@
+{
+ "format": 1,
+ "id": "mission.b.road_watch",
+ "kind": "mission",
+ "rank": "b",
+ "category": "patrol",
+ "status": "later",
+ "title": "dlg:mission.b.road_watch.title",
+ "brief": "dlg:mission.b.road_watch.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.road_watch.brief",
+  "accept": "dlg:mission.b.road_watch.accept",
+  "decline": "dlg:mission.b.road_watch.decline",
+  "progress": "dlg:mission.b.road_watch.progress",
+  "success": "dlg:mission.b.road_watch.success",
+  "fail": "dlg:mission.b.road_watch.fail",
+  "report": "dlg:mission.b.road_watch.report"
+ },
+ "minutes": 35,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "jonin"
+   }
+  },
+  "road": {
+   "pick": "anchor",
+   "tag": "road.east_bend"
+  },
+  "waystation": {
+   "pick": "anchor",
+   "tag": "road.east_waystation"
+  },
+  "post": {
+   "pick": "anchor",
+   "tag": "border.post"
+  },
+  "trouble": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.road_ambush",
+    "combat:group.smugglers",
+    "combat:group.rogue_pair"
+   ]
+  }
+ },
+ "start": "road",
+ "steps": {
+  "road": {
+   "objective": {
+    "type": "inspect",
+    "target": "road_signs",
+    "at": "slot:road",
+    "count": 3
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "ambush"
+     },
+     "next": "fight"
+    }
+   ],
+   "next": "waystation"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:trouble",
+    "at": "slot:road"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:trouble",
+      "slot:road"
+     ]
+    }
+   ],
+   "next": "waystation"
+  },
+  "waystation": {
+   "objective": {
+    "type": "talk",
+    "who": "innkeeper"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "rumour"
+     },
+     "next": "rumour"
+    }
+   ],
+   "next": "post"
+  },
+  "rumour": {
+   "objective": {
+    "type": "inspect",
+    "target": "abandoned_camp",
+    "at": "slot:waystation",
+    "count": 2
+   },
+   "next": "post"
+  },
+  "post": {
+   "objective": {
+    "type": "go",
+    "place": "slot:post"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "ambush",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.b.road_watch.twist.ambush"
+  },
+  {
+   "id": "rumour",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.b.road_watch.twist.rumour"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "all_found"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.road_ambush",
+  "combat:group.smugglers",
+  "combat:group.rogue_pair"
+ ],
+ "places": {
+  "anchors": [
+   "border.post",
+   "road.east_bend",
+   "road.east_waystation"
+  ],
+  "regions": [
+   "region:border_village",
+   "region:east_road"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.45
+ },
+ "tags": [
+  "road",
+  "patrol",
+  "travel"
+ ],
+ "contested": false,
+ "trail_drop": {
+  "chance": 0.35,
+  "pool": "journal:trail.roads"
+ },
+ "classic": true,
+ "banter": "dlg:mission.banter.patrol",
+ "_premise": "Trouble on the roads: walk the east road to the border and report anything unusual.",
+ "_twists": {
+  "ambush": "Whatever is wrong on the road finds you first.",
+  "rumour": "The innkeeper saw campfires where nobody should camp."
+ }
+}

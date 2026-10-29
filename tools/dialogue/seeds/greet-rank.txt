@@ -1,0 +1,37 @@
+# Rank greetings, one idea in several voices (compose.py writes generated/gen-greet-rank.txt).
+
+## greet.rank  player_rank=academy  fn=react
+* academy_homework
+warm:    Academy student! Have you had a proper lunch? You can't learn hand signs on an empty stomach.
+bright:  How's the Academy? What did you learn today? Show me a hand sign! Which one's that?
+bold:    Academy, {player}! Work hard, graduate fast, and then we'll go on adventures!
+calm:    The Academy years are short, {player}. Learn the dull things well. They carry you later.
+precise: Academy student. Keep your shuriken sharpened and your notes in order. Both matter.
+quiet:   Academy. ...I was terrible at it. You'll be fine.
+proud:   An Academy student. Aim for top of the class. Second is just the first of the losers.
+dreamy:  The Academy! I still dream about the smell of the classroom chalk.
+guard:   Academy student? Don't let the older ones push you around in the yard. Tell a teacher.
+
+## greet.rank  player_rank=genin  fn=react
+* genin_headband
+warm:    Our {player}, a Genin! I could cry. I am crying. Come here and let me look at that headband.
+bright:  A Genin! What's your first mission? What's your sensei like? Do you get a weapon pouch? Tell me!
+bold:    Genin! Now the real adventures start! Bandits! Borders! Well, cats first. Then bandits!
+calm:    A Genin now, {player}. Congratulations. Wear it well, and keep learning.
+precise: Genin. Remember: check your gear every morning. Kunai, wire, bandages, ration. In that order.
+quiet:   You graduated. ...Congratulations. I'm happy for you.
+proud:   A Genin. Good. Now prove the headband wasn't a mistake.
+dreamy:  That headband shines like a little moon on your forehead, {player}.
+guard:   A Genin now. Out on missions. Promise me you'll be careful past the wall.
+
+## greet.rank  player_rank=chunin  fn=react
+* chunin_vest
+warm:    Chunin {player}! I made red bean rice to celebrate. Don't you dare say you've already eaten.
+bright:  A Chunin! What's it like? Do you get to boss Genin around? Is the vest itchy?
+bold:    Chunin! Next stop, Jonin! Then who knows! The sky! The Hokage Rock!
+calm:    A Chunin. You've worked hard for it, {player}. Rest a day before the next climb.
+precise: Chunin. More responsibility, more reports. Keep a ledger; you'll thank me.
+quiet:   Chunin. ...Well done. Really.
+proud:   A Chunin. Respectable. Don't stop there; nobody worth knowing does.
+dreamy:  A Chunin! I can see you leading a squad over the treetops, all of you like swallows.
+guard:   Chunin now. People will follow you. Bring every one of them home.

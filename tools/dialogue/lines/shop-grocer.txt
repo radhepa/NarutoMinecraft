@@ -1,0 +1,72 @@
+# The grocer on the market street: vegetables, rice, eggs, onigiri, pickles. Part-time shifts here too.
+#! fn: commerce
+
+## shop.grocer.greet  shop=grocer  fn=commerce
+Morning greens, evening greens, all day greens! Come and look.
+Welcome in. Watch the step, the potato sacks have taken over.
+Hello, {player}. Basket's by the door if you need one.
+Come in out of the street. Everything in here grew within a day's walk of the gate.
+Fresh daikon, fresh eggs, fresh gossip. Two of those are for sale.
+
+## shop.grocer.greet  shop=grocer  market=yes  fn=commerce,react
+Market Day! Half the village is in here, so grab what you need before it's gone.
+Busy, busy! The farm carts came in at dawn. Squeeze past the onion crates.
+
+## shop.grocer.greet  shop=grocer  season=winter  fn=commerce,react
+Winter stock: roots, pickles and dried persimmons. The greens will be back in spring.
+
+## shop.grocer.browse  shop=grocer  fn=commerce
+Onigiri on the left, salted plum or kelp. Rice by the scoop on the right.
+The cabbages are heavy this week. Pick one up, you'll see.
+Those eggs came from the farm past the east fields. Still warm when I bought them.
+Pickles are in the barrels at the back. Lift the lid and let it breathe first.
+Mushrooms from the forest edge, picked by people who know which ones are which.
+Take your time. I'll be weighing beans if you need me.
+
+## shop.grocer.buy  shop=grocer  kind=cycle  fn=commerce
+{item}, wrapped. That's {pay}.
+Here you go. Keep the onigiri out of the sun and they'll last till supper.
+{pay}, thank you kindly. Next!
+Lovely choice. I'd have taken that one home myself.
+One {item}. I put it in paper so it doesn't bruise.
+That comes to {pay}. Mind the bag, it's a little damp from the greens.
+Sold! Come back when you run out.
+Thank you. Tell your neighbours the turnips are sweet this week.
+
+## shop.grocer.cant_afford  shop=grocer  kind=cycle  fn=commerce
+That's more than you've got on you. Want me to set it aside till evening?
+Not enough, I'm afraid. A rice ball is cheaper and it'll fill you up.
+A few ryo short. I'm hiring for a shift tomorrow, if you're looking for work.
+You're just under. Put something back and we'll make it fit.
+
+## shop.grocer.sold_out  shop=grocer  kind=cycle  fn=commerce
+Gone, every last one of the {item}. The farm cart comes again in two days.
+Sold out of onigiri. The Academy lunch crowd got here first.
+No eggs left today. The hens are on strike, the farmer says.
+
+## shop.grocer.haggle  shop=grocer  fn=commerce,reveal_character
+A ryo off if you take the bruised ones. They taste the same.
+You've got a merchant's tongue! Fine, I'll throw in a carrot. One carrot.
+Haggling over turnips? My grandmother would have liked you.
+Buy three and I'll knock a little off. That's my only deal, and it's a good one.
+
+## shop.grocer.closing  shop=grocer  time=evening|night  fn=commerce
+Closing soon! The last of the greens are half price, they won't last the night.
+I'm bringing the crates in. Anything you want, grab it now.
+Evening already. Whatever onigiri's left goes home with me otherwise.
+Shutters in a minute. Quick, before I count the till.
+
+## shop.grocer.recommend  shop=grocer  fn=commerce,teach
+Cooking at home? Rice, an egg and some greens in the pot makes a meal that sees you through the afternoon.
+Take the {item}. It's at its best right now, and next week it won't be.
+Salted plum onigiri for a long walk. They keep, and the salt keeps you going.
+Got a cooking pot? Buy a little of everything. Your own cooking is cheaper than eating out.
+If you're tired from a late night, a proper meal takes the drag out of your legs for a while.
+The {special}. I wouldn't put it at the front if I didn't eat it myself.
+
+## shop.grocer.regular  shop=grocer  level=3..10  fn=commerce,deepen_bond
+Saved you the good cabbage. Don't tell the lady from the tea house.
+My best customer! I can tell by the empty basket you've come to fill it.
+I put a little bag of dried persimmon aside. It's yours, no charge.
+You know where everything is now. I'll stop pointing.
+Back again? You eat better than half the Jonin in this village.

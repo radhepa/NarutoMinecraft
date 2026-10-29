@@ -93,9 +93,10 @@ Jonin.
 | Minecraft version | Stay on VF's version, **Minecraft 26.3, Fabric Loader 0.19.5**, pinned for the whole beta. No version chasing mid-beta; port only between beta slices, if VF moves. |
 | Story and villain | An original antagonist and plot, kept in the developers-only [story bible](docs/story/STORY_BIBLE.md). The story specifics are the developers' creative call, so the owner can play it unspoiled. |
 | No spoilers | ROADMAP.md and the README stay spoiler-free: systems, formats, the map, the delivery plan and neutral chapter descriptions only. Every twist lives in the story bible. |
-| Bond ability | **Kindling Bond**: you can kindle a bonded ally's chakra nature or technique and borrow it briefly; deeper bonds (teammates, sensei, friends, spouse) unlock more, and it is one of the ways to gain more natures. A bond-flame flickers between you and the ally. Unlocked by a story moment after the beta ([Kindling Bond](#kindling-bond)). |
+| Bond ability | **Kindling Bond**: a top-tier bond ability whose power flows outward through people and grows with your web of bonds. It sees bonds, strengthens allies' own techniques, links a squad's chakra, and at its peak reaches deeply bonded allies across distance; it never copies techniques. Gated by bond depth; unlocked through the story ([Kindling Bond](#kindling-bond)). |
 | Hokage | All Hokage are original characters with custom faces. Four faces are on the Rock at the start; the player is meant to become the **Eighth**. Their **names are rolled per save**; their looks, clans and eras are fixed, because faces, portraits and statues are baked into the map. |
 | Names | **Most character names are rolled per save, in Classic and Varied alike**: squadmates, sensei, rivals, elders, recurring characters and the antagonists. Roles, personalities and looks stay as designed (Classic stays curated in everything but names). Given names come from seeded pools by gender; family names from the character's clan, or from the ordinary `family_names` pool in `tools/wardrobe/population.json`. All text uses name tokens ([Names](#names-rolled-per-save)). |
+| Name order | Full names read given name first, family name last ("Shigure Nara"), everywhere: dialogue, the journal, the Ledger and speech bubbles. Honorifics such as "Lord Fourth" and "Nara-sensei" are unchanged. |
 | Rotating story roles | Some story roles are assigned per save from a few candidates, each with its own seeded clue trail, so a twist still surprises a player who knows the answer from another save ([Rotating story roles](#rotating-story-roles)). Which roles rotate, and the candidates, are in the story bible only. |
 | Canon | Original characters only, maybe cameos of named characters. |
 | Players | **Single player first.** Multiplayer is later. The code stays server-authoritative (single player runs an integrated server). |
@@ -105,17 +106,19 @@ Jonin.
 | Content mod id | `narutominecraft`, kept. |
 | VF's RPG add-on | Not shipped. |
 | VF changes | *Default:* fine to add small public APIs to VF: extra wardrobe namespaces, a currency item, hand-built taverns, and a resident appearance seed (for Varied saves). |
-| Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe, and clan or clanless. |
+| Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe. For now the player is born to no clan; clan-born play stays in the data as a later option ([CHARACTER_CREATION.md](CHARACTER_CREATION.md)). |
 | Growing up | Academy kid, teen, adult, then adult for good. No old age and no death of age. |
-| Clans | 25 clans: the 15 noble clans and 10 minor clans ([CLANS.md](CLANS.md)). Born into one of them or clanless. *Default:* all 25 pickable at creation, alongside clanless; a player can also create their own clan. *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship. |
+| Clans | 25 clans: the 15 noble clans and 10 minor clans ([CLANS.md](CLANS.md)). *Decided:* for now the player is born to no clan (clan-born play stays in the creator's data as a later option, [CHARACTER_CREATION.md](CHARACTER_CREATION.md)); a player can also create their own clan. *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship. Clan side quests work for a clanless player through standing and friendship. |
 | Population | The village is mostly clanless, drawn by clan rarity from `tools/wardrobe/population.json` (weights per thousand): about 45% civilians, 28% clanless shinobi with ordinary family names, 15% from the 10 minor clans and 13% from the 15 noble clans (an Uchiha or a Hyuga about 1 in 70, a Hatake about 1 in 500). Civilians wear their own clothing collections (market and household); the general shinobi wardrobe adds 100 tops, 100 bottoms and 50 hairstyles ([Population](#population)). |
-| Kekkei genkai | Playable through clan membership. Out of scope for now: summoning, and with it tailed beasts. |
+| Kekkei genkai | A bloodline of its clan: residents, teammates and enemies of those clans use them. The player, a clanless orphan for now, does not have one. Out of scope for now: summoning, and with it tailed beasts. |
 | Squad | Teammates and sensei are original characters with personalities, friendship levels and connections, fixed per save (curated in Classic, rolled in Varied). They can leave the squad. |
 | Romance | Friendships can grow into romance and marriage, from the teen stage. Foundation only for now: nothing romantic in the beta, and the beta does not end on a time skip or a dating unlock. |
 | Children | A married player can have children in the post-game (a life-sim foundation). |
 | Pets | Adopt a pet that follows you: a ninken pup or a cat. No summons. |
 | Hunger | Vanilla hunger stays; food from shops and Ichiraku adds small buffs. |
 | Gear | Shops, plus crafting at a **smithy** (kunai, shuriken, blades) and a **workbench** (paper bombs, smoke bombs, tags, furniture), station blocks in the world and in your apartment. |
+| No rent | Homes never cost rent, and the orphan's stipend continues all game. |
+| Collecting | No collection book. Storage is plain vanilla chests and barrels at home, with more chests from furniture. Curios (useless but charming loot), gifts and keepsakes are ordinary items you keep; displays use item frames and shelves. No completion milestones and no custom sort or search. |
 | ANBU | An optional branch from Jonin, not a required rung. |
 | Hand signs | Both typed key sequences and a radial menu, chosen in the settings. |
 | Learning jutsu | A mix of mentors, scrolls bought with ryo, and mission rewards. |
@@ -249,7 +252,11 @@ Core:
 This repository becomes a Gradle multi-project, the way VF hosts `rpg/`: `core/`, `village/`
 (today's wardrobe resources move here), `combat/`, `life/`, `progression/`, `adventure/` (the
 datapack, blueprints and paste scripts) and `pack/` (the manifest). The root build and the first
-module already exist: `life/bonds`, Shinobi Life's pure bond engine ([BONDS.md](BONDS.md)). Python authoring tools stay
+modules already exist: `life/bonds`, Shinobi Life's pure bond engine ([BONDS.md](BONDS.md)), and
+`progression/missions`, Shinobi Progression's pure mission generator ([MISSIONS.md](MISSIONS.md)),
+whose templates are the first data in `adventure/`, and `village/look`, Shinobi Village's player look,
+the creator's rules and age stages ([CHARACTER_CREATION.md](CHARACTER_CREATION.md)), and `life/roster`, the pure
+squad-growth model beside `life/bonds` ([docs/RANKS.md](docs/RANKS.md), on the `ranks` branch until it merges). Python authoring tools stay
 under `tools/`. Each mod has its own version; the pack manifest pins a tested set.
 
 The master world is **not** in git. It ships as a zipped save on GitHub Releases; the repository
@@ -262,7 +269,7 @@ keeps only what rebuilds or checks it: blueprints, paste scripts and the datapac
 | Core | `record`, `seed`, `logic` (conditions, actions), `flags`, `events`, `stats`, `data`, `settings`, `wallet`, `region` | `SaveSeed`, `Conditions`, `FlagStore`, `Difficulty`, `StatMath` |
 | Village | `wardrobe`, `clan`, `resident` (markers, cast), `look` (creator, age stages), client `render` | `ClanFile`, `CastRoll`, `AgeStage` |
 | Combat | `chakra`, `technique`, `combat`, `movement`, `tools`, `shinobi`, client `anim`, `hud`, `signs` | `SignSequence`, `Mastery`, `Costs`, `ComboTiming`, `HitArc`, `WallRun`, `RangeBands` |
-| Life | `rules`, `home`, `furniture`, `economy`, `craft`, `food`, `pet`, `romance`, `day`, `bond` (the pure engine in `life/bonds`, [BONDS.md](BONDS.md)), client `furnish`, `hud`, `bondbook` | `Fatigue`, `DayClock`, `FurnishRules`, `Prices`, `Courtship`, `BondWorld`, `Levels`, `Squad`, `Gossip` |
+| Life | `rules`, `home`, `furniture`, `economy`, `craft`, `food`, `pet`, `romance`, `day`, `bond` (the pure engine in `life/bonds`, [BONDS.md](BONDS.md)), `roster` (`life/roster`), client `furnish`, `hud`, `bondbook` | `Fatigue`, `DayClock`, `FurnishRules`, `Prices`, `Courtship`, `BondWorld`, `Levels`, `Squad`, `Gossip`, `Roster`, `Curve`, `ClanPower` |
 | Progression | `rank`, `level`, `quest`, `mission`, `exam`, `event`, `squad`, `cutscene`, `playerclan`, `reaction`, client `journal`, `screens` | `Ladder`, `Levels`, `QuestGraph`, `MissionRoll`, `Judging`, `RoleBinding`, `Recruiting` |
 
 Every mod follows the VF pattern: pure classes with JUnit tests, thin world glue, and client game
@@ -352,7 +359,8 @@ while a quarrel lasts), plus `bond_meter`, `bond_memory`, `bond_moment`, `bond_s
 `romance_stage`, `kindling`, `knows_fact`, `squad_cohesion`, `in_squad`, `squad_can_return`,
 `standing` (a district or clan and a title, such as `["clan:nara", "good_neighbor"]`), `jealous`,
 `clan_friendship`, `clan_relation` (the relation between two clans, at least a label such as
-`rivals` or a number), `village_mood`, `hook_open`, `kindling_uses` and `bond_web`. Side quests use
+`rivals` or a number), `village_mood`, `hook_open`, `kindling_uses`, `bond_web`, `ritual`, `hangouts`, `bond_flag` (a spare key, a keepsake noticed), `gifts_from` and `answered` (an answer the player gave to
+a resident's question). Side quests use
 these directly: there is no separate `standing_at_least` or `bond_at_least`. `role:squad` is the
 current teammates and sensei, `role:teammates` the teammates alone; a role group passes only if
 every member does. The hook actions (`resolve_hook`, `clan_event`, `clan_deed`, `mood_event`) are in
@@ -364,7 +372,8 @@ Actions in the beta: `set_flag`, `start_quest`, `advance_quest`, `fail_quest`, `
 `promote`, `unlock` (a place, a shop item, a recipe), `news` (VF village news), `set_time`; and
 the bond actions `bond_event`, `shared_moment`, `start_conflict`, `apologize`, `reconcile`, `mend`,
 `reveal_fact`, `romance`, `return_to_squad`, `favor`, `deed`, `celebrate_birthday`, `bond_flag`,
-`kindle`, `resolve_hook`, `clan_event`, `clan_deed` and `mood_event`.
+`kindle`, `resolve_hook`, `clan_event`, `clan_deed`, `mood_event`, `ask_question`, `give_player`,
+`clear_bond_flag` and `level_cap`.
 Reserved now for later arcs, so the format does not change: `time_skip`, `carve_face`,
 `set_hokage`, `remove_from_squad`, `found_clan`, `marry`.
 
@@ -424,6 +433,22 @@ seed:
  "pay": {"band": "d", "xp_band": "d"}}
 ```
 
+The full design is in **[MISSIONS.md](MISSIONS.md)**: the Mission Desk's flow (rank-gated board
+columns, squad or solo, requests by name, travel through the gates, reporting back, failure,
+partial success and abandonment, grades S to C), the economy, recurring clients and chains, squad
+roles, and the catalogue (generated into [docs/missions/CATALOGUE.md](docs/missions/CATALOGUE.md)):
+
+- **103 templates:** 41 D-ranks of village life and 24 C-ranks with real fights in the beta; 16 B,
+  10 A and 4 S templates and 6 ANBU operations laid out for the later arcs. Each has two or three
+  **twists**, rolled per mission, that switch the graph onto their own branch (225 in all).
+- Templates also carry `twists`, `outcomes` (endings a `choose` step can lead to), bonus objectives
+  for the grade, `party` (squad, solo or either), `contested` (the rival squad races you), `chain`
+  (a recurring client) and the anchors and regions they need. `tools/missions/missions.py` compiles
+  them to the Adventure datapack and checks them.
+- **The generator** is pure Java in `progression/missions` (`MissionRoll`'s home): it rolls the
+  board from the `missions` stream, casts slots, guards variety (a taken template stays away for
+  days), and simulates Genin life's board for three kinds of player.
+
 ### Ranks and milestones
 
 `ranks.json` defines the **whole ladder now**, including ranks the beta does not reach, so the
@@ -467,7 +492,8 @@ know their shape.
 - **Templates:** `tools/quests/new.py <template> <id>` scaffolds the common shapes (fetch, deliver,
   escort, defeat, investigate, talk chain, filler arc of N parts) so a side quest starts as a
   filled-in file.
-- **Dialogue** uses VF's dialogue text format and compiler (`tools/dialogue/`), with our pools.
+- **Dialogue** uses VF's dialogue text format, extended with context tags, functions and kinds,
+  compiled by `tools/dialogue/dialogue.py` ([DIALOGUE.md](DIALOGUE.md)).
 - **In game (builder mode):** `/shinobi quest start|step|reset <id>`, a flag inspector
   (`/shinobi flags`), role and anchor inspectors, `/reload` for hot reload, and a debug overlay
   that draws anchors and the active objective.
@@ -527,9 +553,13 @@ profile (Classic) or its rolled profile (Varied), so the same world file serves 
 - **Who:** every role-bound and fixed story character, in both modes; the Hokage's given names.
   Residents spawned from markers already get rolled names in Varied (VF's name pools are not used
   for Leaf residents).
-- **Tokens:** dialogue and quest text use `{name:<role>}` (full name), `{given:<role>}`,
+- **Name order:** full names display given name first and family name last, American style:
+  "Shigure Nara", not "Nara Shigure". Honorific forms ("Lord Fourth", "Nara-sensei") keep their
+  usual shape; the order rule is only about full names.
+- **Tokens:** dialogue and quest text use `{name:<role>}` (the full name, rendered "Given Family"), `{given:<role>}`,
   `{family:<role>}`, `{hokage:<n>}` and `{player}`; the journal, speech bubbles and VF's dialogue
-  bank resolve them. A name is never written into text.
+  bank resolve them. A name is never written into text. `{hokage:<n>}` renders the Hokage's given
+  name only.
 - **Checks:** `quests.py --check` and the dialogue compiler reject any literal from the name pools
   in authored text, and every token must name a role that exists.
 - **Stable within a save:** names are rolled once, at world creation, from the `names` stream and
@@ -651,7 +681,7 @@ clan's style, for their few members (2 to 6). The seven smaller noble clans have
 one hand-built house or dojo with its signature feature. The ten **minor clans** have no walls: they
 share mixed neighbourhoods with civilians and clanless shinobi, with a family house or workshop
 that marks each one. Each quarter is one plot group in the map layout file, filled from its clan
-JSON. A clan-born player can move into their clan's quarter from Chunin on.
+JSON. A player who joins a clan later (by marriage or invitation) can move into its quarter.
 
 | Clan | Kind | Where | Signature build |
 |---|---|---|---|
@@ -694,12 +724,16 @@ off (closed gates, streets under repair) or is not built yet.
 | By | Districts and landmarks | Why |
 |---|---|---|
 | Phase 0 | One test street of pasted homes with plaques and a Village Marker | Proves pasting, homes, residents and ryo trades on a hand-made map |
-| **Beta 1** | The prologue hills, the hideout and a ruined shrine; the main gate and its stretch of wall; the main street to the Hokage Residence (exterior and ground floor); the Academy (by hand) with its yard, library and workshop; the player's apartment block (all candidate flats for Varied) and ~12 homes around it; Ichiraku; the furniture shop, grocer and Inuzuka clinic (pets); the hospital; the shrine; the Hokage Rock with its four faces; a gate and main hall for each of the 15 noble clan quarters; the civilian market street and residential streets | The opening, the Academy, life sim, pets, clan-born kin from day one, seeds for later |
-| **Beta 2** | The Mission Desk (Residence ground floor); Training Ground 3 (by hand) and two pasted training grounds with the lake and the climbing cliff; the market street with the weapon shop and forge, scroll shop, tea house, barbecue house; the 15 noble clan quarters filled out; the 10 minor clans' neighbourhoods; bandit camps outside the wall; the east road and its waystation; the first far-location region (a border village) | Genin missions, training arcs, crafting, story C-ranks, clan techniques |
+| **Beta 1** | The prologue hills, the hideout and a ruined shrine; the main gate and its stretch of wall; the main street to the Hokage Residence (exterior and ground floor); the Academy (by hand) with its yard, library and workshop; the player's apartment block (all candidate flats for Varied) and ~12 homes around it; Ichiraku; the furniture shop, grocer, weapon shop (practice gear until Genin) and Inuzuka clinic (pets); the hospital; the shrine; the Hokage Rock with its four faces; a gate and main hall for each of the 15 noble clan quarters; the civilian market street and residential streets | The opening, the Academy, life sim, pets, the clans as neighbours from day one, seeds for later |
+| **Beta 2** | The Mission Desk (Residence ground floor); Training Ground 3 (by hand) and two pasted training grounds with the lake and the climbing cliff; the market street with the forge (the weapon shop opened in Beta 1), scroll shop, tea house, barbecue house; the 15 noble clan quarters filled out; the 10 minor clans' neighbourhoods; bandit camps outside the wall; the east road and its waystation; the first far-location region (a border village) | Genin missions, training arcs, crafting, story C-ranks, clan techniques |
 | **Beta 3** | The Forest of Death (pasted trees, the tower by hand, 44 gates); the stadium with seated spectators; the exam hall in the Academy; foreign teams' lodging | The Chunin Exams and the attack |
 | Later | The rest of the homes and shops, police HQ, the full wall and all gates, ANBU HQ, the later arcs' story locations, the four vacant estates, the far regions of later arcs | Chunin to Hokage ([Story bible](#10-story-bible)) |
 
 ### How the map is made
+
+The concrete build plan (the Konoha kit's palettes, every building with its count and slice, the
+block catalogue, the tooling, the order of work, the steps that need you in Minecraft, and the
+effort estimate) is in **[KONOHA_BUILD.md](KONOHA_BUILD.md)**.
 
 1. A **map layout file** (`tools/konoha/layout.json`) places every district: polygon, streets,
    plots, which designs go on which plots, the landmarks' positions and rotations, the **anchors**
@@ -721,7 +755,7 @@ off (closed gates, streets under repair) or is not built yet.
 | System | Beta 1 (opening, Academy) | Beta 2 (Genin) | Beta 3 (Chunin Exams) |
 |---|---|---|---|
 | World creation | Classic or Varied, the save seed | — | — |
-| Character creation | Creator screen, one of 25 clans or clanless | — | — |
+| Character creation | Creator screen (no clan for now), roots, Roll a life | — | — |
 | Adventure rules | No breaking or placing | — | — |
 | Home and furniture | Apartment, furnish mode, chests | Forge for the apartment | — |
 | Ryo and shops | Stipend, jobs, furniture shop, grocer, Ichiraku | Mission pay, tool, weapon and scroll shops | Exam-week stalls |
@@ -731,10 +765,11 @@ off (closed gates, streets under repair) or is not built yet.
 | Pets | Adopt a pup or a cat | Ninken tracking on missions | — |
 | Friendship | VF friendship levels with classmates and neighbours; squad roles bound | Bond stories, teammates can leave | Bond payoffs in the forest and finals |
 | Levels | 1 to 5, death penalty, floors | 5 to 15 | 15 to 18 |
+| Squad growth | Classmates level with you (`life:roster`) | Squads track you; techniques at beats | Exams: everyone's levels feed the bouts |
 | Ranks | Academy → Genin | Chunin Exam eligibility | Genin → Chunin (judged) |
 | Growing up | Child stage (the whole beta) | — | — |
 | Hand signs and chakra | Chakra bar, typed and radial signs | — | — |
-| Jutsu | Clone, Transformation, Substitution | Nature ceremony, one jutsu per nature, clan technique first tier, kekkei genkai first stage | One exam reward technique |
+| Jutsu | Clone, Transformation, Substitution | Nature ceremony, one jutsu per nature, a friendly clan's lesser technique | One exam reward technique |
 | Taijutsu | Three-hit combo, heavy, dodge, block | Parry, launcher | — |
 | Chakra movement | — | Tree walking, wall-running, water-walking, chakra jump, ninja run | — |
 | Tools | Practice kunai and shuriken | Thrown kunai, shuriken, paper and smoke bombs, tool pouch | — |
@@ -744,9 +779,34 @@ off (closed gates, streets under repair) or is not built yet.
 
 ### Character creation
 
-A creator screen in the prologue: hair, eyes, skin (the six complexions), marks and a starting
-outfit from the wardrobe, shown on your child-stage model; then born to one of the 25 clans (its
-look, and from Genin its technique and kekkei genkai) or clanless.
+The full design is in **[CHARACTER_CREATION.md](CHARACTER_CREATION.md)**. In short:
+
+- **World creation first:** a Shinobi tab on the Create World screen sets Classic or Varied, the
+  save seed, difficulty, adventure rules and hand-sign input.
+- **For now the player is born to no clan:** an orphan of no clan with an ordinary family name, and
+  publicly known as one; the player's own power is [Kindling Bond](#kindling-bond), opened by the
+  story. Every clan's creator rules stay in the data, so clan-born play can return as an option.
+- **The creator** opens at the start of the prologue, over a neutral *Who are you?* card, in seven
+  steps with a live preview of your child-stage model: **name** (first name typed, then a last name
+  from `population.json`'s ordinary family names, shown as *no clan*; pronouns), **body** (body A
+  or B, the six complexions, eye shape, brows, eye color), **hair**, **face** (marks, headwear
+  without a forehead protector), **outfit** (the Academy collection), **roots** (a temperament for
+  dialogue flavor, a combat knack, a nature affinity that the Genin ceremony shows as your leaning)
+  and a **review**, with the starting key item in hand.
+- **Starting stats** are the same for every player (combat's numbers: 10 hearts, chakra 53,
+  control 35, stamina 110, poise 20).
+- **Locked:** names, body, complexion, eyes, roots. **Changeable:** hair, hair color, brows and
+  marks at a barber; outfits and headwear at home; pronouns in the settings; a free restyle on the
+  Years Later mirror at each time skip, where hair grows and outfits follow the rank.
+  You pick a given name and an ordinary family name; the family name changes only at the clan
+  registry (founding or joining a clan: take the clan's
+  name or keep yours).
+- **Varied's Roll a life** rolls a whole character from the save seed (the same seed, the same
+  suggestion); every row also has its own dice.
+- **Data and code:** `tools/creator/creator.json` compiled by `tools/creator/creator.py` (with
+  `--check`, previews and mock-ups) into `data/narutominecraft/creator/creator.json`; the pure Java
+  in `village/look` (age stages, the server's check of a creator submission, names, Roll a life,
+  restyling, growing up), with tests.
 
 ### Adventure rules
 
@@ -760,9 +820,31 @@ look, and from Genin its technique and kekkei genkai) or clanless.
 
 ### Your apartment and furniture
 
+The full design is in [docs/HOME.md](docs/HOME.md) (on the `home` branch until it merges; engine
+`life/home`, pure Java on `life/bonds`). In short:
+
+- **The Academy flat:** one room (6×6), a kitchenette, a bathroom, a genkan and a 4×2 balcony facing
+  the Hokage Rock. Classic always gets `flat.leaf_block.3a`; Varied rolls one of four equal
+  candidates. You move in with a futon, a low table, a cupboard, a storage chest, the wardrobe
+  cabinet and a cooking pot.
+- **The day at home:** the mirror and closet for outfits; the mailbox (the stipend envelope, notes,
+  invitations, clan summons); the cupboard (food goes stale as a joke: one Well Fed tier less, never
+  harm); the Hearth pot; the journal at the desk; and your own bed.
+- **Comfort** (diminishing per category, capped by the home) improves Well Rested (+10% to +15%
+  chakra regen, until 12:00 to 15:00; a bare home keeps the basic rule). Six furniture sets and 25
+  clan sets add comfort and a small perk each.
+- **Tidiness:** a light system (mess caps at 12, one quick clean clears it; a messy home costs at
+  most 5 comfort, never friendship).
+- **On show:** curios (charming loot), keepsakes, gifts and milestone photos are ordinary items: up
+  to six stand on their own, and display shelves, cases, cabinets and wall mounts hold more. A giver
+  notices their gift on show once. A houseplant that never dies; your pet lives here.
+- **Visitors:** drop-ins at bond level 3+, the squad after missions, the sensei's check-ins,
+  neighbours and hosted home hangouts, all reacting to decor and mess; spare keys at bond level 6.
+- **A training corner** at 40% of a training ground's value, capped at an hour a day.
+- **Content:** 156 furniture pieces (143 in the beta), 39 keepsakes and 52 curios.
+
 Your home is a VF house: its House Plaque flood fill gives exact bounds (`home/HouseBounds`), and
-furnishing is only allowed inside them. In Varied saves the apartment is rolled from a set of
-candidate flats; in Classic it is always the same one.
+furnishing is only allowed inside them.
 
 - **Furnish mode.** Press `F` at home (or right-click your door plaque). Furniture items in your
   inventory show a ghost preview snapped to the block grid; scroll to rotate, click to place. Aim
@@ -775,26 +857,40 @@ candidate flats; in Classic it is always the same one.
 - **Your bed** is furniture too, but every home always keeps one bed; it is the bed that clears
   fatigue.
 - **Upgrades** (a flat, a house, a clan room, an estate) come after the beta ([Later systems](#11-later-systems)).
+- **Collecting and storage:** plain chests and barrels (27 slots each), with more chests from
+  furniture you buy; no custom storage screen, no decay, no weight, no collection book.
 
 ### Ryo
 
-Ryo is the only money: notes as items (1, 10, 100 and 1,000 ryo), so it works with vanilla
-trading, fits in chests and shows on the HUD as a total. VF's notice rewards and trades use ryo
-through the currency API. The economy is small and closed; rule of thumb: a day of D-rank missions
-covers food and leaves about half to save, and the first proper furniture set takes about an
-in-game week (a little over two hours) of play.
+Ryo is the only money: notes as items (1, 10, 100 and 1,000 ryo), so it works with vanilla trading, fits in chests
+and shows on the HUD as a total; a purchase takes notes and gives change in the fewest notes. The economy is small
+and closed. The orphan's stipend, **30 ryo every morning for the whole game** (there is no rent), covers a frugal
+day's meals and nothing more; missions, jobs and quests pay for everything else. Rules of thumb, held by the
+seeded simulation in `life/economy` over the beta's 48 days: a day of D-rank missions covers food and leaves about
+half to save (a typical Genin keeps 59%), and the first proper furniture set (325 ryo) takes about an in-game
+week (a typical player finishes it on day 6 to 8). The full design, every price, shop and sink is in
+**[ITEMS.md](ITEMS.md)**.
 
 | Earn (beta) | Ryo | Spend (beta) | Ryo |
 |---|---|---|---|
-| Orphan's stipend (Academy only) | 30 a day | Ramen, onigiri, tea | 3 to 10 |
-| Part-time jobs (Ichiraku, grocer, flower shop, forge) | 40 to 80 a shift | Kunai, shuriken, smoke and paper bombs | 5 to 40 each |
-| D-rank mission | 60 to 150 | Soldier pill | 60 |
-| C-rank mission | 300 to 600 | Furniture | 20 to 800 a piece |
-| Side quests | 20 to 300 | Outfit variants (rank outfits are given) | 100 to 600 |
-| Festival games | small prizes | Crafting materials (steel, paper, powder) | 2 to 30 |
+| Orphan's stipend (all game) | 30 a day | Ramen, onigiri, tea, dango | 3 to 15 |
+| Part-time jobs (Ichiraku, grocer, flower shop, tea house, Haruno's, furniture deliveries; the forge, bath house, Kinoshita yard and pharmacy from Genin) | 40 to 80 a shift | Kunai, shuriken, smoke and paper bombs | 2 to 30 each |
+| D-rank mission (a steady median of 105) | 60 to 150 | Soldier pill | 60 |
+| C-rank mission | 300 to 600 | Furniture | 10 to 900 a piece |
+| Side quests | 10 to 400 | Outfits (rank outfits are given) | 100 to 480 |
+| Festival games | small prizes | Crafting materials (steel, paper, powder) | 1 to 45 |
+| Pawning camp loot and curios | 1 to 30 each | Technique scrolls, services (bath, lessons, repairs, restyles) | 5 to 600 |
 
-Furniture sells back at half price; loot from bandit camps sells at the pawn shop. There is no
-other way to turn things into money.
+Shops discount by your standing (up to 15% with the keeper's friendship) and only stalls and the pawn shop
+haggle. Furniture sells back at half price; loot from bandit camps and curios sell at the pawn shop, which has a
+daily till. There is no other way to turn things into money, and crafting never pays more than its inputs cost.
+
+**Mission pay** ([MISSIONS.md](MISSIONS.md#3-ranks-and-the-economy)) is the player's share, set
+within the rank's band by the template and scaled by the grade (S ×1.25, A ×1.1, B ×1, C ×0.85;
+half for a partial success, nothing for a failure): D 60 to 150, C 300 to 600, and later B 800 to
+1,500, A 2,000 to 4,000, S 6,000 to 12,000. A Genin takes at most two D-ranks a day and one board
+C-rank a week. In the desk simulation a steady player earns about 100 ryo a day in Genin life
+against about 47 for food and tools, which keeps the rule of thumb above.
 
 ### The daily cycle
 
@@ -835,22 +931,29 @@ Forest of Death) gives *On Duty*, delaying fatigue by three hours.
 
 ### Food
 
-Vanilla hunger stays. Leaf dishes from Ichiraku, the barbecue house, the tea house, the grocer or
-your own cooking pot add small, short buffs through VF's `WellFed` tiers: ramen restores a little
-chakra, dango speeds chakra regen, barbecue raises taijutsu damage slightly, green tea holds off
-fatigue.
+Vanilla hunger stays. Leaf dishes from Ichiraku, the barbecue house, the tea houses, the dango stand, the grocer or
+your own cooking pot add small, short buffs through VF's `WellFed` tiers: ramen restores a little chakra, dango
+speeds chakra regen, barbecue raises taijutsu damage slightly, green tea holds off fatigue, and every proper meal
+halves fatigue's movement penalty for an hour. There are 55 dishes; 41 of them cook at VF's Hearth & Harvest pot,
+oven and prep table from ingredients the grocer and the fish stall sell, cheaper than eating out
+([ITEMS.md](ITEMS.md#13-highlights-by-family)).
 
 ### Gear and crafting
 
 | Station | Where | From | Makes |
 |---|---|---|---|
-| Workbench | The Academy workshop; one for your apartment | Beta 1 | Smoke bombs, wire, sealing tags, paper bombs (from Genin), furniture from planks and cloth |
-| Smithy (forge and anvil) | The weapon shop's forge; a small forge for your apartment | Beta 2 | Kunai, shuriken, senbon, a tanto, from steel bought at the smithy and salvage from bandit camps |
+| Workbench | The Academy workshop and the Kinoshita yard; one for your apartment | Beta 1 | Smoke bombs, wire, sealing tags, paper bombs (from Genin), pouches, furniture from planks, paper and cloth |
+| Smithy (forge and anvil) | The weapon shop's forge; a small forge for your apartment | Beta 2 | Kunai, shuriken, senbon, caltrops, a tanto, guards and chains from steel bought at Hagane Metalworks and salvage from bandit camps; repairs and upgrades |
 | Cooking station | VF Hearth & Harvest pot, oven, prep table | Beta 1 | Leaf dishes |
+| Apothecary table | The Suzuran pharmacy and the hospital; one for your apartment | Beta 2 | Poultices, salves, antidotes, pills, venom, numbing and sleep coatings, Forest of Death wards |
+| Tailor's table | The tailor | Beta 1 | Cloth gear, pet accessories, bandages, outfit recolouring |
+| Sealing desk | The scroll shop | Beta 2 | Blank and storage scrolls; advanced tags from Chunin |
 
-Recipes unlock by rank, by mentors (the smith teaches you after a few jobs at the forge) and by
-scrolls. Crafted tools can be a grade better than shop stock. Stations reuse VF's workstation
-pattern (`WorkstationBlock`, Hearth's `StationBlock` and its screens), with recipes as data.
+Recipes unlock by rank, by part-time jobs (the smith teaches you after a few shifts at the forge), by mentors,
+books, furniture plans, clan friendship (a clan teaches its recipes once its welcome quest is done) and VF recipe
+cards. Crafted tools roll a grade (standard, fine or masterwork) from your mastery at the station, so they can beat
+shop stock. Stations reuse VF's workstation pattern (`WorkstationBlock`, Hearth's `StationBlock` and its screens),
+with recipes as data. Every item, recipe, station and loot table is in [ITEMS.md](ITEMS.md).
 
 ### Pets
 
@@ -865,15 +968,17 @@ knocked out, never killed. No summons.
 The squad, classmates and neighbours are VF residents, so friendship keeps VF's ten levels, gifts,
 speech bubbles and dialogue; the levels come from Shinobi Life's bond engine
 ([BONDS.md](BONDS.md)): five meters (affection, trust, respect, rivalry, romance), memories that
-fade or stay, personalities, story gates, squad dynamics, community standing and quarrel arcs. The beta adds **bond quests** (`kind:
-bond`) gated by friendship (bond levels also feed [Kindling Bond](#kindling-bond) after the beta): one per classmate in Beta 1, two per teammate in Beta 2, and one
+fade or stay, personalities, story gates, squad dynamics, community standing and quarrel arcs; and
+time together ([LIFE_TOGETHER.md](LIFE_TOGETHER.md)): hangouts at 22 places, invitations both
+ways, rituals, residents' own lives, follow-ups and conversations that deepen with the bond. The beta adds **bond quests** (`kind:
+bond`) gated by friendship (bond levels also gate [Kindling Bond](#kindling-bond)): one per classmate in Beta 1, two per teammate in Beta 2, and one
 per teammate in Beta 3. Romance waits for the teen stage, after the beta; children have friendships and
 VF's harmless crushes in dialogue only, enforced in code.
 
 ### Levels
 
 Levels are power; ranks are story. Every rank exam asks for a minimum level, and reaching a level
-never promotes you by itself.
+never promotes you by itself. NPC power tiers E to S read the same curve ([Ranks and power](#ranks-and-power)).
 
 - **Each level:** +3 maximum chakra and +1% taijutsu damage; +1 heart every 6 levels (10 hearts at
   level 1). Jutsu have a minimum level as well as a rank.
@@ -897,6 +1002,44 @@ In the beta a level takes about 45 to 50 minutes of main path; later about 65 to
 Level 60 is post-game. Side quests add XP, so a player who does them reaches gates earlier and can
 skip some board missions.
 
+Mission XP is fixed per rank: a share of a level at the rank's reference level (a D-rank is about a
+fifth of a level at level 7, less as you grow), scaled by the grade. In the desk simulation a steady
+Genin's board missions give about two fifths of the XP from level 5 to 15
+([MISSIONS.md](MISSIONS.md#71-pacing-in-the-beta)).
+
+### Ranks and power
+
+The full design is in [docs/RANKS.md](docs/RANKS.md) (on the `ranks` branch until it merges). Rank
+is trust and power is level, kept separate as in the show.
+
+- **Power tiers** sit on the player's level curve: E (Academy) 1 to 4, D (Genin) 5 to 14, C
+  (Chunin) 15 to 29, B (Jonin) 30 to 41, A (elite) 42 to 49, S (kage-level) 50 and up. The beta
+  tops out at C. Strong ninja are felt through showcase scenes, scheduled elite spars at the
+  training grounds, elites passing on missions, legends spoken of, and a tier glyph over residents
+  that reads "beyond you" more than two tiers up.
+- **Hierarchy:** the Hokage; three council elders; the Jonin Commander; masked ANBU; elite jonin,
+  jonin and special jonin; chunin (the desk, the gate, the wall watch, police, medics, teachers);
+  genin squads of three; the Academy; retired shinobi.
+- **Head counts:** of about 300 residents, 166 are in shinobi families: Hokage 1, elders 3, Jonin
+  Commander 1, ANBU 6, elite jonin 4, jonin 18, special jonin 8, chunin 41, genin 32, Academy 32,
+  retired 20. On a typical day 25% to 50% of the active ranks are away on missions. The player meets
+  64 named shinobi across the beta; the lore puts the whole village at about 1,100 active shinobi.
+- **Roster data:** `tools/roster/roster.json` holds 65 named shinobi with importance
+  (story-driving, fan-favourite, background) and spotlight (pillar, named, background);
+  `rank_distribution.json` drives the sampler's ranks and levels; both are checked by
+  `tools/roster/roster.py --check`.
+- **Clan power (NPCs):** great clans (Uchiha, Hyuga, Senju, Uzumaki), strong (the other noble
+  clans), minor and clanless shift levels within a rank, with overlap: about one clanless shinobi
+  in five beats the great clans' median. The player's class leans noble (`class_clan_weights`,
+  68/20/12).
+- **Squad growth (`life:roster`):** your year and the squad a year ahead grow beside you within a
+  band of where they belong (your level plus an offset); the rival runs about a level ahead. They
+  earn shared XP on days together and train on days apart, with catch-up and slowdown; teammates are
+  better in their niche, bonds add +2% training XP per bond level, and Kindling Bond makes them
+  stronger. Their techniques show only at story beats and training you see. Checked by 29 tests and
+  `./gradlew :life:roster:simulate` (60 hours, three play styles, five seeds: teammates stay in the
+  band).
+
 ### Growing up
 
 | Stage | Age | When | Model |
@@ -910,7 +1053,8 @@ outfits line up with the stages. Your classmates and squad are adult VF resident
 tag and the same scale values, so they grow up alongside you (VF's own children stay vanilla
 babies with their games and lessons). The calendar alone would age you less than two years in 60
 hours, so the story uses two time skips: about a year after the Chunin Exams (opening the Chunin arc,
-after the beta) and about three years before the Jonin trial.
+after the beta) and about four years before the Jonin trial, so the player is an adult (18) when the
+Jonin arc opens.
 
 ### Your squad and roles
 
@@ -931,6 +1075,11 @@ village and a name from VF's name pools; once rolled they are fixed for the save
 leave the squad (a bond that stays low for two weeks, a failed exam, or the story), stays in the
 village and is replaced by a classmate; once the bond recovers, a return quest can bring them back
 ([BONDS.md](BONDS.md#7-the-squad)). Squad members are knocked out, never killed.
+
+On missions the player gives each teammate a role at the briefing (point, guard, tracker or
+support); a teammate suited to a role the mission wants is a good call that lifts the grade, and the
+squad's cohesion sets how well they work together, from assisting your combos to ignoring an order
+([MISSIONS.md](MISSIONS.md#6-squad-missions)).
 
 ### Combat in the beta
 
@@ -954,6 +1103,26 @@ combat is the core of the full system; later ranks add techniques, not new rules
 
 The duel simulator's balance tables are in [docs/COMBAT.md §15](docs/COMBAT.md#15-balance): on Story every
 build beats every beta boss; on Shinobi every build stays viable against level-matched elites.
+
+### Dialogue
+
+Residents' talk comes from Shinobi Village's dialogue engine ([DIALOGUE.md](DIALOGUE.md), on the
+`dialogue` branch until it merges; pure Java in `village/dialogue`, authored in `tools/dialogue/`).
+The owner's rule is that once a line is used it is never used again.
+
+- Every line has a stable id, and a per-save heard ledger (a bitset, a few KB) spends each line the
+  player hears, from anyone.
+- Each resident has a talk budget: a few fresh exchanges a day (3 for residents, 6 for the cast)
+  and a lifetime allowance that grows with the bond.
+- Past the budget, or when nothing fresh fits, they repeat in three steps: a "we already talked"
+  line in their voice, a line they said before, then a polite close.
+- Selection: the most specific line wins (personality, clan, rank, job, relationship, the time, the
+  weather, the place, events, story flags). Every line carries a function tag (teach, guide, quest,
+  worldbuild, react, deepen_bond...), and filler is capped at a fifth.
+- Residents ask the player questions with 2 to 4 answers. The answers feed the bond engine and are
+  called back later, and a contradiction is noticed.
+- Combat barks, shop transactions and overheard chatter cycle instead: every line once before any
+  comes back.
 
 ### Residents react to your rank
 
@@ -989,15 +1158,15 @@ working titles; the story behind each chapter is in the story bible.
 ### Beta 2: Genin life (~8 h)
 
 About 4 hours of authored chapters and 4 hours of systemic play: about 12 board D-ranks (~2 h),
-3 board C-ranks (~1.5 h), training and your clan's lesson (~0.5 h), over about 24 in-game days.
+3 board C-ranks (~1.5 h), training (~0.5 h), over about 24 in-game days.
 
 | Ch | Chapter | Time | Content | Teaches |
 |---|---|---|---|---|
-| 8 | Team assignment | 35 min | Your squad and sensei; the bell test at Training Ground 3 | Squad commands, parry, teamwork |
+| 8 | Team assignment | 35 min | Your squad and sensei; the cord test at Training Ground 3 | Squad commands, parry, teamwork |
 | 9 | The Mission Desk | 15 min | The squad's first D-rank; the board opens | Board missions, mission pay, failure on death |
 | 10 | Tree walking | 25 min | Chakra training at Training Ground 3 | Tree walking, wall-running, chakra jump, roof hopping |
 | 11 | First C-rank | 45 min | Escorting a merchant east; bandits on the road; a night at camp | Escort, defeat, inspect, camping, bond |
-| 12 | Water walking and natures | 30 min | The lake; the nature ceremony; your clan's lesson (or a friendly clan's) | Water-walking, natures, the first elemental jutsu, the clan technique, the scroll shop |
+| 12 | Water walking and natures | 30 min | The lake; the nature ceremony; a friendly clan's lesson | Water-walking, natures, the first elemental jutsu, the clan technique, the scroll shop |
 | 13 | A far village | 45 min | The first far region and an investigation there | Travel, investigation, ninken tracking |
 | 14 | Second C-rank | 50 min | Another escort east, and a recommendation for the Chunin Exams | Enemy cells, smoke and paper bombs |
 
@@ -1009,17 +1178,17 @@ not a time skip.
 
 | Ch | Chapter | Time | Content | Teaches |
 |---|---|---|---|---|
-| 15 | Written test | 20 min | Ten impossible questions; gather answers unseen | Stealth objectives, choice |
+| 15 | Written test | 20 min | A test of what you notice | Observation, choice |
 | 16 | Forest of Death | 60 min | One scroll of a pair and five in-game days to reach the tower with both | Survival, bedroll camping, On Duty, tree-hopping fights |
 | 17 | Preliminaries | 20 min | One-on-one bouts in the tower's arena | Duels, judged performance |
-| 18 | Training break | 30 min | Six days of training with your sensei; festival crowds | Systemic: training, crafting, side quests; your exam reward technique |
-| 19 | Chunin Exams finals | 40 min | The finals in the stadium before the whole village | Duels and protect objectives, the cinematic camera |
-| 20 | Results | 10 min | Promotion results, judged on how you fought | Promotion |
+| 18 | Six days | 30 min | Six days of training with your sensei; festival crowds | Systemic: training, crafting, side quests; your exam reward technique |
+| 19 | Chunin Exams finals | 35 min | The finals in the stadium before the whole village | Duels and protect objectives, the cinematic camera |
+| 20 | Results | 15 min | Promotion results, judged on how you fought | Promotion |
 
 ### The squad bonding arc
 
 Bond quests (`kind: bond`) carry the squad through the beta, gated by friendship: a study night
-(Ch 6), one bond quest per classmate in Beta 1, the bell test (Ch 8), a campfire talk (Ch 11), two
+(Ch 6), one bond quest per classmate in Beta 1, the cord test (Ch 8), a campfire talk (Ch 11), two
 bond quests per teammate and a squad dinner in Beta 2, a choice about a teammate (Ch 13), the
 forest night watch (Ch 16) and the finals (Ch 19). Low friendship changes how these play out.
 
@@ -1104,7 +1273,7 @@ Deliverables name the mod they land in: **Core**, **Village**, **Combat**, **Lif
 
 **Deliverables:** chapters 0 to 7 and Beta 1's side quests ([section 8](#beta-1-the-opening-and-the-academy-4-h)); from [section 7](#systems-by-slice), every Beta 1 system; the Beta 1 districts ([schedule](#district-schedule)).
 
-- **Village:** the full creator screen, all 25 clans pickable; the population draw and the civilian collections; Academy outfits; Academy kids and
+- **Village:** the full creator screen ([CHARACTER_CREATION.md](CHARACTER_CREATION.md)); the population draw and the civilian collections; Academy outfits; Academy kids and
   the instructor with lesson routines; the Classic cast and Varied rolls; the child stage.
 - **Life:** apartment and furnish mode, the first Leaf furniture set, chests, ryo, stipend, jobs,
   the daily cycle and fatigue, hospital wakes, Leaf dish buffs, the workbench, pets.
@@ -1133,12 +1302,15 @@ council day (watch only) and the eight great clans' welcome quests (wave 1, [SID
 every Beta 2 system; the Beta 2 districts. All 25 clans' quarters, residents, clan techniques and
 generated courtesy quests are in Beta 2; only the other 17 welcome quests wait for Beta 2.5.
 
-- **Progression:** the Mission Desk with D-rank (five templates) and C-rank (escort, bandit
-  clearing, delivery to a far region) board missions, paid in ryo and XP and failing on death;
-  team assignment and the bell test; teammates who can leave; mentors; levels 5 to 15; the event
+- **Progression:** the Mission Desk with D-rank (41 templates) and C-rank (24 templates: escorts,
+  bandits, beasts, deliveries to the far region, investigations and more) board missions, paid in
+  ryo and XP by grade and failing on death ([MISSIONS.md](MISSIONS.md));
+  team assignment and the cord test; teammates who can leave; mentors; levels 5 to 15; the event
   director with the Leaf Festival and New Year.
 - **Combat:** chakra movement; parry and launcher; the nature ceremony and one jutsu per nature;
-  the clan techniques (first tier) of the 15 noble clans and the three minor clans with abilities and the first kekkei genkai stages; thrown tools and bombs;
+  the clan techniques of the 15 noble clans and the three minor clans with abilities, and the
+  kekkei genkai, for clan members (teammates, sparring partners, enemies), with lesser techniques
+  the clanless player learns from friendly clans; thrown tools and bombs;
   the shinobi entity and brain v1 (bandits, rogue ninja, enemy scouts and cells).
 - **Life:** the tool, weapon and scroll shops; the smithy and its recipes; crafted grades.
 - **Core:** the region interface and the first far region.
@@ -1149,8 +1321,8 @@ generated courtesy quests are in Beta 2; only the other 17 welcome quests wait f
   path), learning jutsu from a mentor, a bought scroll and a mission reward.
 - Every mission template completes, and fails on death, in a client game test; a Varied save's
   board differs from a Classic save's and is the same for the same seed.
-- Bandits use at least four techniques and dodge; each clan technique works for a clan-born player
-  and a clan sparring partner.
+- Bandits use at least four techniques and dodge; each clan's techniques work for a clan sparring
+  partner, and each lesser technique works for the player.
 
 ### Beta 2.5: clan welcomes, wave 2 (content drop)
 
@@ -1160,8 +1332,7 @@ techniques of the clans that have one. Data, dialogue and small builds only; no 
 ships as a datapack and map update between Beta 2 and Beta 3 and is played during Genin life.
 
 **Exit criteria**
-- Every clan's welcome quest completes for a clanless player, a member of another clan and a
-  clan-born player (a client game test per clan).
+- Every clan's welcome quest completes for a clanless player (a client game test per clan).
 - `quests.py --check` passes with all 25 welcome quests, and their keepsakes place in the
   apartment.
 
@@ -1172,7 +1343,7 @@ districts.
 
 - **Progression:** the Chunin Exams as a calendar event, with NPC teams every season and results in
   village news; the three stages; judged promotion; the exam reward technique.
-- **Combat:** the finals' enemy loadouts; the Sharingan's awakening.
+- **Combat:** the finals' enemy loadouts.
 - **Life:** bedroll camping and On Duty fatigue.
 - **Village:** the Chunin wardrobe.
 - **Map:** the Forest of Death, the stadium with seated spectators, the attack dressing (smoke,
@@ -1226,25 +1397,26 @@ What the roadmap needs from it, spoiler-free:
 | Rank | Requirements | Unlocks |
 |---|---|---|
 | Chunin | Promotion in Beta 3 | B-rank missions, leading NPC Genin on missions, the outer training grounds, a flat or a clan room, founding a clan, the second-nature trials |
-| Jonin | Level 30, 10 B-rank and 2 A-rank missions, lead three squad missions without losing a teammate, master one A-rank jutsu; a trial bout and a council review | The Jonin wardrobe, A-rank missions, your own NPC Genin team, the standby station, clan masters, the third nature |
+| Jonin | Level 30, 10 B-rank missions and one A-rank mission led under a Jonin's supervision, lead three squad missions without losing a teammate, master one A-rank jutsu; a trial bout and a council review | The Jonin wardrobe, A-rank missions, your own NPC Genin team, the standby station, clan masters, the third nature |
 | ANBU (optional branch) | An invitation at level 35 with a stealth record and no bad deeds in the last season; a night infiltration test | Masks and armor, ANBU HQ, S-rank and covert missions; the mask hides your identity from residents; you can return to regular duty at any time |
-| Hokage | Jonin (ANBU or not), level 50, the highest standing in every district and clan quarter, the last arc | The Kage hat and haori, the office and quarters, assigning NPC teams, setting festivals, approving promotions and clan estates, your face as the Eighth |
+| Hokage | Jonin (ANBU or not), level 50, Hero standing with the village and at least Good Neighbor in every district and clan quarter, the last arc (defending the village in it counts toward standing) | The Kage hat and haori, the office and quarters, assigning NPC teams, setting festivals, approving promotions and clan estates, your face as the Eighth |
 
 ### Homes after the beta
 
 | Rank | Home |
 |---|---|
-| Chunin | Rent a two-room flat with a balcony (300 ryo a week), or move into your clan's quarter if clan-born |
+| Chunin | A two-room flat with a balcony comes with the promotion (no rent), or a clan's quarter if you have joined one |
 | Jonin | Buy a small house (about 30,000 ryo), or a larger clan room |
 | Clan founder | Your clan's estate |
 | Hokage | Quarters in the Residence |
 
-Moving is a mover NPC: furniture and chests are packed into moving crates (items that keep their
-contents) and placed again in furnish mode.
+Moving is free and a farewell quest, and everything comes along in moving crates (items that keep their
+contents), placed again in furnish mode. A spouse moves in, with a shared bed; children come later.
+In multiplayer (later), each player has their own home. Details in [docs/HOME.md](docs/HOME.md).
 
 ### Player clans
 
-A clanless player (or a clan-born player leaving their clan) can found a clan at the registry in
+A clanless player can found a clan at the registry in
 the Hokage Residence: Chunin, level 20, 20,000 ryo, and Good Neighbor standing or better.
 
 - **The clan file:** saved as a clan JSON in exactly the [CLANS.md](CLANS.md) format, in the world
@@ -1273,7 +1445,7 @@ marriage after 30 to 150 days at 65 or more). Shinobi Life extends it to the pla
 - **Dating:** at friendship level 7 ("spend time together": walks, ramen, festival nights);
   confessing at level 8 makes you sweethearts (village news).
 - **Marriage:** adults only, at level 10, a proposal and a wedding at the shrine; a spouse is the
-  strongest [Kindling Bond](#kindling-bond). Your spouse moves
+  strongest [Kindling Bond](#kindling-bond) (a spouse opens its Blaze tier). Your spouse moves
   in; a clanless player may join the spouse's clan, or the spouse may join yours.
 - **Children (post-game):** a married player can have children. They are VF residents born into
   your household (VF already records parents, households and surnames for residents' babies),
@@ -1281,22 +1453,26 @@ marriage after 30 to 150 days at 65 or more). Shinobi Life extends it to the pla
 
 ### Kindling Bond
 
-*Decided.* A bond ability the player unlocks at a story moment after the beta (the beta at most
-foreshadows it).
+*Decided.* A top-tier bond ability: its power flows outward through the people you are bonded to,
+and grows with your whole web of bonds. It is not a copying eye: it never takes or borrows
+another's techniques. When and how the player gets it belongs to the story.
 
-- **What it does:** kindle a bonded ally's chakra nature or one of their techniques and borrow it
-  briefly: a few casts of their nature's jutsu, or one use of their signature technique, then the
-  flame needs time to rekindle.
-- **Bonds decide what you can borrow:** friendship level 6 lets you borrow an ally's nature, level 8
-  one of their techniques, level 10 (or a teammate, your sensei, your spouse) both and for longer.
-  It ties combat to the friendship and romance systems: the village you befriend is your arsenal.
-- **Natures:** one of the ways to gain more elements. A nature borrowed often enough can be learned
-  for good with a master's trial.
-- **How it looks:** a bond-flame, a small watch-fire, flickers between you and the ally, and your
-  chakra takes their nature's colour while it burns.
-- **In the systems:** Shinobi Combat adds a `kindle` effect type; Shinobi Life's friendship and
-  romance levels are its bond levels; Core's natures list gains a "borrowed" source; Progression
-  unlocks it with a story flag.
+| Tier | Bond gate | What opens |
+|---|---|---|
+| **Spark** | Friendship 6 with an ally | **Thread Sight**: bonds appear as threads of light; you sense bonded allies anywhere, and a bonded person who is hiding something shows a steady flicker in their thread (it shows that something is hidden, never what, and it is not a lie detector) (strangers and enemies read poorly). Small kindles that steady an ally |
+| **Flame** | Friendship 8 | **Kindle**: empower an ally's own technique past its usual limits. **Ember Link**: a shared chakra pool, damage spread across the linked squad, and seeing through an ally's eyes |
+| **Blaze** | Friendship 10, or your spouse | **Ember Mark**: travel to a deeply bonded ally, or call them to you. **Unison techniques**, one per bonded pairing |
+| **Bonfire** | The whole bond web | The ultimate, scaling with every bond you hold |
+
+- **Costs:** you feel the pain of linked allies; overuse burns chakra and stamina; a quarrel dims a
+  bond's flame and a falling-out snuffs it out until the bond is mended.
+- **Natures:** learned by resonance: fight beside someone who has a nature, then pass their trial.
+- **How it looks:** an ember mark on the palm or chest, threads of light between bonded people, and
+  ember-gold chakra.
+- **Ownership:** Shinobi Combat models the techniques (the `kindle` action and its effects), the
+  bond system owns the gates, flame strength, resonance and the Bonfire's size (`kindling`,
+  `kindling_uses`, `resonance`, `bonfire`, `bond_web`; [BONDS.md](BONDS.md#11-kindling-bond)), and the story owns the lore
+  and the timing.
 
 ### Elemental natures
 
@@ -1305,7 +1481,7 @@ foreshadows it).
 | First | Chosen at the Genin ceremony (Beta 2); the creator's affinity is shown there as your leaning |
 | Second | Chunin: a nature master's three trials |
 | Third | Jonin: a clan master or a mission line |
-| More | Through bonds, by resonance ([Kindling Bond](#kindling-bond)), and rare milestones in the later arcs |
+| More | Resonance through [Kindling Bond](#kindling-bond) (fight beside someone with the nature, then pass their trial) and rare milestones in the later arcs |
 
 Your natures' jutsu cost 25% less; other natures' jutsu cannot be learned. The triangle, clashes and every
 nature's techniques from D to S are in [docs/COMBAT.md](docs/COMBAT.md#2-damage-armour-and-the-nature-triangle).
@@ -1317,7 +1493,9 @@ where they have one (Byakugan, Sharingan, Wood Release), passives, and a lesser 
 at clan friendship 7: the tables are in [docs/COMBAT.md §7](docs/COMBAT.md#7-clans) and
 [docs/combat/clans.md](docs/combat/clans.md). The player is clanless, so clan tiers are the kits of clan
 residents, teammates, rivals and enemies; the player's clan route is the lesser techniques, clan weapons and
-clan-taught styles. Summoning, and with it tailed beasts, are out of scope.
+clan-taught styles. Joining a clan later (by marriage or invitation) teaches its signature technique (tier 1),
+but never a bloodline; a clan-born start may return later as an option. Summoning, and with it tailed beasts,
+are out of scope.
 
 ### Later techniques and combat
 

@@ -1,0 +1,162 @@
+{
+ "format": 1,
+ "id": "mission.d.night_lamps",
+ "kind": "mission",
+ "rank": "d",
+ "category": "festival",
+ "status": "beta",
+ "title": "dlg:mission.d.night_lamps.title",
+ "brief": "dlg:mission.d.night_lamps.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.night_lamps.brief",
+  "accept": "dlg:mission.d.night_lamps.accept",
+  "decline": "dlg:mission.d.night_lamps.decline",
+  "progress": "dlg:mission.d.night_lamps.progress",
+  "success": "dlg:mission.d.night_lamps.success",
+  "fail": "dlg:mission.d.night_lamps.fail",
+  "report": "dlg:mission.d.night_lamps.report"
+ },
+ "minutes": 8,
+ "party": "solo",
+ "unlock": {
+  "time_between": [
+   "16:00",
+   "20:00"
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "lamplighter"
+   }
+  },
+  "lamps": {
+   "pick": "anchor",
+   "tag": "street_lamp"
+  },
+  "prowler": {
+   "pick": "resident"
+  }
+ },
+ "start": "oil",
+ "steps": {
+  "oil": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "light"
+  },
+  "light": {
+   "objective": {
+    "type": "perform",
+    "what": "light_lamp",
+    "at": "slot:lamps",
+    "count": 10
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "oil_shortage"
+     },
+     "next": "oil2"
+    },
+    {
+     "if": {
+      "twist": "prowler"
+     },
+     "next": "prowl"
+    }
+   ],
+   "next": "report"
+  },
+  "oil2": {
+   "objective": {
+    "type": "buy",
+    "item": "item:lamp_oil",
+    "at": "place:market.oil",
+    "count": 2
+   },
+   "next": "light2"
+  },
+  "light2": {
+   "objective": {
+    "type": "perform",
+    "what": "light_lamp",
+    "at": "slot:lamps",
+    "count": 4
+   },
+   "next": "report"
+  },
+  "prowl": {
+   "objective": {
+    "type": "collect",
+    "target": "item:stolen_goods",
+    "at": "slot:prowler"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "oil_shortage",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.night_lamps.twist.oil_shortage"
+  },
+  {
+   "id": "prowler",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.night_lamps.twist.prowler"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast"
+ ],
+ "fast_hours": 1,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "market.oil",
+   "street_lamp"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.25
+ },
+ "tags": [
+  "village",
+  "night",
+  "timed"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.festival",
+ "_premise": "Light a district's street lamps at dusk before full dark.",
+ "_twists": {
+  "oil_shortage": "The oil runs out with half the street still dark.",
+  "prowler": "Someone is using the dark to try the doors."
+ }
+}

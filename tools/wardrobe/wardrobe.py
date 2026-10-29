@@ -729,6 +729,10 @@ def validate_clans(garments: dict, palettes: dict, hairs: dict, eyes: dict, mark
             errors.append(f"clan {cid} has no weight in population.json")
     if not pop.get("family_names"):
         errors.append("population.json needs family_names")
+    clan_names = {cid.lower() for cid in load_clans()} | {c["name"].lower() for c in load_clans().values()}
+    for fam in pop.get("family_names", []):
+        if fam.lower() in clan_names:
+            errors.append(f"family name {fam} is a clan's name: clanless residents must not share one")
     return errors
 
 

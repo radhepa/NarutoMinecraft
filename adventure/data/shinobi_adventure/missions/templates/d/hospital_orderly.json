@@ -1,0 +1,162 @@
+{
+ "format": 1,
+ "id": "mission.d.hospital_orderly",
+ "kind": "mission",
+ "rank": "d",
+ "category": "hospital",
+ "status": "beta",
+ "title": "dlg:mission.d.hospital_orderly.title",
+ "brief": "dlg:mission.d.hospital_orderly.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.hospital_orderly.brief",
+  "accept": "dlg:mission.d.hospital_orderly.accept",
+  "decline": "dlg:mission.d.hospital_orderly.decline",
+  "progress": "dlg:mission.d.hospital_orderly.progress",
+  "success": "dlg:mission.d.hospital_orderly.success",
+  "fail": "dlg:mission.d.hospital_orderly.fail",
+  "report": "dlg:mission.d.hospital_orderly.report"
+ },
+ "minutes": 10,
+ "party": "squad",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "medic"
+   }
+  },
+  "ward": {
+   "pick": "anchor",
+   "tag": "hospital.ward"
+  },
+  "garden": {
+   "pick": "anchor",
+   "tag": "herb_garden"
+  },
+  "wanderer": {
+   "pick": "resident",
+   "where": {
+    "age": "elder"
+   }
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "rounds"
+  },
+  "rounds": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:mission_linen",
+    "to": "slot:ward"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "wanderer"
+     },
+     "next": "find"
+    },
+    {
+     "if": {
+      "twist": "herb_shortage"
+     },
+     "next": "herbs"
+    }
+   ],
+   "next": "meals"
+  },
+  "find": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:wanderer",
+    "to": "slot:ward"
+   },
+   "next": "meals"
+  },
+  "herbs": {
+   "objective": {
+    "type": "collect",
+    "target": "item:healing_herb",
+    "at": "slot:garden",
+    "count": 6
+   },
+   "next": "meals"
+  },
+  "meals": {
+   "objective": {
+    "type": "perform",
+    "what": "serve_meal",
+    "at": "slot:ward",
+    "count": 6
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "wanderer",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.hospital_orderly.twist.wanderer"
+  },
+  {
+   "id": "herb_shortage",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.hospital_orderly.twist.herb_shortage"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "gentle",
+  "fast"
+ ],
+ "fast_hours": 3,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "herb_garden",
+   "hospital.ward"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.4
+ },
+ "tags": [
+  "village",
+  "hospital"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.hospital",
+ "_premise": "Help on the wards for a day: linens, meals and errands for the medics.",
+ "_twists": {
+  "wanderer": "A confused old patient has walked out in his slippers.",
+  "herb_shortage": "The medics are out of a herb only the Suzuran gardens grow."
+ }
+}

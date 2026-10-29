@@ -1,0 +1,166 @@
+{
+ "format": 1,
+ "id": "mission.b.allied_courier",
+ "kind": "mission",
+ "rank": "b",
+ "category": "courier",
+ "status": "later",
+ "title": "dlg:mission.b.allied_courier.title",
+ "brief": "dlg:mission.b.allied_courier.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.allied_courier.brief",
+  "accept": "dlg:mission.b.allied_courier.accept",
+  "decline": "dlg:mission.b.allied_courier.decline",
+  "progress": "dlg:mission.b.allied_courier.progress",
+  "success": "dlg:mission.b.allied_courier.success",
+  "fail": "dlg:mission.b.allied_courier.fail",
+  "report": "dlg:mission.b.allied_courier.report"
+ },
+ "minutes": 35,
+ "party": "squad",
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "jonin"
+   }
+  },
+  "gate": {
+   "pick": "anchor",
+   "tag": "allied.gate"
+  },
+  "hunters": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.hunter_squad"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "road"
+  },
+  "road": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:gate"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "hunters"
+     },
+     "next": "fight"
+    }
+   ],
+   "bonus": [
+    "unseen"
+   ],
+   "next": "deliver"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:hunters",
+    "at": "slot:gate"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:hunters",
+      "slot:gate"
+     ]
+    }
+   ],
+   "next": "deliver"
+  },
+  "deliver": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:mission_treaty_draft",
+    "to": "slot:gate"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "hunters",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.b.allied_courier.twist.hunters"
+  },
+  {
+   "id": "cipher",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.b.allied_courier.twist.cipher"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "fast"
+ ],
+ "fast_hours": 24,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.hunter_squad"
+ ],
+ "places": {
+  "anchors": [
+   "allied.gate",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:allied_village"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.5
+ },
+ "tags": [
+  "travel",
+  "courier",
+  "stealth"
+ ],
+ "contested": false,
+ "trail_drop": {
+  "chance": 0.25,
+  "pool": "journal:trail.roads"
+ },
+ "classic": true,
+ "banter": "dlg:mission.banter.courier",
+ "_premise": "Carry a treaty draft to an allied village, through land where others would like to read it.",
+ "_twists": {
+  "hunters": "A hunter squad has been sent to take it from you.",
+  "cipher": "The allies want the draft read aloud in cipher at the gate."
+ }
+}

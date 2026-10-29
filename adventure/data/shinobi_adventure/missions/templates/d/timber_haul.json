@@ -1,0 +1,156 @@
+{
+ "format": 1,
+ "id": "mission.d.timber_haul",
+ "kind": "mission",
+ "rank": "d",
+ "category": "construction",
+ "status": "beta",
+ "title": "dlg:mission.d.timber_haul.title",
+ "brief": "dlg:mission.d.timber_haul.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.timber_haul.brief",
+  "accept": "dlg:mission.d.timber_haul.accept",
+  "decline": "dlg:mission.d.timber_haul.decline",
+  "progress": "dlg:mission.d.timber_haul.progress",
+  "success": "dlg:mission.d.timber_haul.success",
+  "fail": "dlg:mission.d.timber_haul.fail",
+  "report": "dlg:mission.d.timber_haul.report"
+ },
+ "minutes": 10,
+ "party": "squad",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "clan": "kinoshita"
+   }
+  },
+  "woodlot": {
+   "pick": "anchor",
+   "tag": "woodlot"
+  },
+  "yard": {
+   "pick": "anchor",
+   "tag": "carpenters_yard"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "haul"
+  },
+  "haul": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:mission_timber",
+    "to": "slot:yard"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "log_roll"
+     },
+     "next": "roll"
+    },
+    {
+     "if": {
+      "twist": "injured_apprentice"
+     },
+     "next": "carry"
+    }
+   ],
+   "next": "report"
+  },
+  "roll": {
+   "objective": {
+    "type": "collect",
+    "target": "item:mission_timber",
+    "at": "slot:woodlot",
+    "count": 3
+   },
+   "next": "haul2"
+  },
+  "haul2": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:mission_timber",
+    "to": "slot:yard"
+   },
+   "next": "report"
+  },
+  "carry": {
+   "objective": {
+    "type": "escort",
+    "who": "apprentice",
+    "to": "place:hospital.desk"
+   },
+   "next": "haul2"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "log_roll",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.timber_haul.twist.log_roll"
+  },
+  {
+   "id": "injured_apprentice",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.timber_haul.twist.injured_apprentice"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "teamwork",
+  "fast"
+ ],
+ "fast_hours": 3,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "carpenters_yard",
+   "hospital.desk",
+   "woodlot"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.4
+ },
+ "tags": [
+  "outdoors",
+  "repairs"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.construction",
+ "_premise": "Haul timber for the Kinoshita yard from the outer woodlot.",
+ "_twists": {
+  "log_roll": "The stack gives way and three logs roll for the river.",
+  "injured_apprentice": "An apprentice crushes a foot; get them to the hospital first."
+ }
+}

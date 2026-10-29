@@ -1,0 +1,60 @@
+# Overheard talk between a shopkeeper and a customer, or two customers in a queue.
+#! tags: relation=customers
+
+## ambient.customers  fn=commerce
+A: How much for the cabbage?
+B: Three ryo.
+A: Three? It was two last week.
+B: Last week it was smaller.
+
+A: Is the eel fresh?
+B: It's still moving. You tell me.
+
+A: Can you hold this jacket till Market Day?
+B: For you, till the day after.
+
+A: Two bowls of miso, one extra egg.
+B: Who gets the egg?
+A: Whoever argues best.
+
+A: Do you sell fruit milk?
+B: In the cooler. Strawberry's nearly gone.
+
+A: I bought this lamp here a year ago. Still working.
+B: Of course it is. I don't sell lamps that give up.
+
+A: The tea across the street is cheaper.
+B: Then why are you standing in my shop?
+A: Because yours is better. Don't tell them I said so.
+
+A: Do you have any more of the sesame dango?
+B: Last skewer. It's yours if you're quick.
+
+## ambient.customers  fn=worldbuild
+A: Long queue at Ichiraku tonight.
+B: Academy graduates. They've been here an hour.
+A: Then I'll wait. It's worth it.
+
+A: Have you tried the senbei shop in the Uchiha quarter?
+B: Every week. The soy ones. I walk all the way there.
+
+A: The grocer's got persimmons in.
+B: Already? Then autumn's properly here.
+
+A: They say the bookshop's got the new card set.
+B: My nephew's been waiting a month. I'd better hurry.
+
+A: You're buying flowers?
+B: For the hospital. A friend broke an ankle on the climbing cliff.
+A: Cut flowers, then. Never a potted plant for the sick.
+
+## ambient.customers  fn=react
+A: Sorry, I've only got a thousand-ryo note.
+B: For a dango? You'll take my whole till in change!
+
+A: Is it always this busy?
+B: Only on Market Day. And festival days. And every day ending in -day.
+
+## ambient.customers  fn=filler
+A: Thank you, come again.
+B: I always do.

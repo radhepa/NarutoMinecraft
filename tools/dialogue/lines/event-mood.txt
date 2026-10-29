@@ -1,0 +1,71 @@
+# The village's mood (BONDS.md §18): what residents remark on when the Leaf is festive, proud, calm, uneasy,
+# tense or grieving. Kept generic: no causes, no plot.
+
+## village.mood.festive  mood=festive  fn=react
+The whole village is in a good mood. Even the gate guards are smiling.
+Everybody's humming today. I heard the fishmonger singing.
+You can feel it in the streets, can't you? Everyone's cheerful.
+Lanterns still up on every street. Nobody wants to take them down.
+The tea house is full of laughing. I could barely hear my own order.
+There's music somewhere every evening this week. The village is enjoying itself.
+Strangers are saying hello to each other in the market. That only happens when the Leaf's happy.
+My neighbours invited the whole lane for supper. Days like this, people share.
+
+## village.mood.festive  mood=festive  stage=child  fn=react
+Everyone's so happy! The candy stall gave me two sweets for the price of one!
+
+## village.mood.proud  mood=proud  fn=react
+People are walking a bit taller this week. You can see it.
+The village is proud of itself right now. I like it, as long as it doesn't go to our heads.
+Everyone's talking about the Leaf as if it's their own family. I suppose it is.
+I hung the village banner out of my window this morning. So did half the street.
+The old ones are telling stories about the founding again. They do that when we're proud.
+Even the civilians say "we" when they talk about the shinobi this week.
+The Hokage Rock looks especially good today, doesn't it? Or maybe that's just me.
+There's a buzz on the main street. Everyone feels like they belong to something good.
+
+## village.mood.calm  mood=calm  fn=react
+A quiet sort of week. The best kind, if you ask me.
+Nothing much happening. The river's slow, the market's easy, and I'm not complaining.
+It's peaceful. I took my tea outside this morning and just listened to the birds.
+The village is calm today. Even the Academy children are behaving.
+Days like this, you forget there's a world outside the wall.
+Everyone's just getting on with things. Washing out, shops open, ramen on.
+Calm weeks are when the carpenters get their work done. You can hear the hammering everywhere.
+Quiet streets, full bellies. That's all the Leaf needs most days.
+
+## village.mood.uneasy  mood=uneasy  fn=react
+People are a bit on edge lately. I couldn't tell you why.
+The market's quieter than it should be. Folk are buying, then going straight home.
+Have you noticed? People keep looking over their shoulders.
+Nobody's said anything, but the whole village feels uneasy.
+I double-checked my shutters last night. I never do that.
+Everyone's polite, but nobody's chatting. It's an odd sort of feeling.
+The tea house was half empty this afternoon. People are staying in.
+I don't like this mood in the village. Let's hope it passes quickly.
+
+## village.mood.tense  mood=tense  fn=react
+Everyone's tense today. Best keep your head down and your voice low.
+There are more guards on the streets than usual. I'm sure it's nothing. Probably.
+Tempers are short this week. Two stallkeepers nearly came to blows over a crate.
+I can feel it in the air, the whole Leaf is holding its breath.
+The Mission Desk is busier than ever, and nobody's smiling there.
+People are hurrying everywhere. Nobody stops to talk.
+Shinobi on every rooftop this evening. It makes the street feel very small.
+I've never seen the main street so quiet at noon. It's not right.
+
+## village.mood.tense  mood=tense  stage=child  fn=react
+My mother told me to come straight home today. She didn't say why.
+
+## village.mood.grieving  mood=grieving  fn=react
+The whole village feels heavy today. People are speaking softly.
+There are flowers at the shrine gate. Nobody's touched them.
+The market's open, but nobody's shouting their wares.
+Even Ichiraku's quiet. People come, eat, and leave without a word.
+It's a sad time in the Leaf. Be gentle with people, all right?
+The shrine bell rang slowly this morning, once every few breaths.
+The lanterns are white this week. That's how the Leaf mourns.
+People are bringing food to each other's doors. It's how we look after one another when it's hard.
+
+## village.mood.grieving  mood=grieving  stage=child  fn=react
+Everyone's sad. I don't really know what to say, so I just sat with my grandmother.

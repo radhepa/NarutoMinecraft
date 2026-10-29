@@ -44,7 +44,7 @@ class ConditionsAndEffectsTest {
         assertTrue(BondConditions.test(w, c("romance_stage", List.of(TEAMMATE_A, "none"))));
         assertFalse(BondConditions.test(w, c("romance_stage", List.of(TEAMMATE_A, "dating"))));
         assertTrue(BondConditions.test(w, c("kindling", List.of(TEAMMATE_A, "none"))));
-        assertFalse(BondConditions.test(w, c("kindling", List.of(TEAMMATE_A, "nature"))));
+        assertFalse(BondConditions.test(w, c("kindling", List.of(TEAMMATE_A, "spark"))));
         assertTrue(BondConditions.test(w, c("squad_cohesion", 0)));
         assertFalse(BondConditions.test(w, c("squad_can_return", TEAMMATE_B)));
         assertTrue(BondConditions.test(w, c("standing", List.of("village", "newcomer"))));

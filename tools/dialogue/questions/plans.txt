@@ -1,0 +1,88 @@
+# Friendship questions about the player's plans: what kind of shinobi, how far, how fast.
+# Axis poles: stay_or_see_world (1 stay, -1 see the world), caution_or_daring (1 caution, -1 daring),
+# alone_or_together (1 alone, -1 together).
+
+? q.plans.shinobi_kind | fn: deepen_bond reveal_character | level: 2
+Q: What kind of shinobi do you want to be?
+Q: Years from now, in a Jonin vest, what kind of ninja will you be?
+- One who protects people :: A shield, then. The village needs those more than swords. {values:+loyalty +kindness} {tone:warm}
+- The strongest one :: Big dream! Train hard enough and who knows. {values:+strength} {tone:bold}
+- The cleverest one :: Brains over brawn. The Nara would like you. {values:+knowledge} {tone:curious}
+- One who sees the world :: Out past every border. I hope you write. {values:+freedom} {tone:bold}
+
+? q.plans.why_that | fn: deepen_bond reveal_character | kind: player_past | level: 5 | follows: q.plans.shinobi_kind | depth: 2
+Q: You told me what kind of shinobi you want to be. What made you want that?
+Q: Where did that dream come from, if you don't mind me asking?
+- Someone I admire :: Then they did something right. You should tell them one day. {values:+loyalty} {tone:humble}
+- I want to prove myself :: To who? No, don't answer. Just prove it to yourself first. {values:+strength} {tone:proud}
+- I just know :: Some people just know. That's rarer than you'd think. {values:+courage} {tone:bold}
+- It's hard to explain :: That's all right. The best reasons often are. {values:+honesty} {tone:gentle}
+
+? q.plans.stay_or_travel | fn: deepen_bond reveal_character | level: 2 | axis: stay_or_see_world
+Q: Would you spend your whole life in the Leaf, or do you want to travel?
+Q: Stay here forever, or see what's past the hills?
+- Stay in the Leaf :: Roots are a good thing to have. This is a fine place to grow them. {values:+family +duty} {tone:warm} {pole:1}
+- See the world :: The roads go a long way. Don't forget the way back. {values:+freedom} {tone:bold} {pole:-1}
+- Travel, then come home :: The best of both. That's what I'd choose. {values:+freedom +loyalty} {tone:humble}
+
+? q.plans.year_away | fn: deepen_bond reveal_character | level: 5 | follows: q.plans.stay_or_travel | depth: 2 | axis: stay_or_see_world
+Q: If a mission would take you away for a whole year, would you go?
+Q: A year on the road, far from everyone here. Would you take it?
+- Gladly :: A year's nothing to a heart that wants to roam. Just come back. {values:+freedom +courage} {tone:bold} {pole:-1}
+- Only with my squad :: Then home comes with you. Clever. {values:+loyalty} {tone:warm}
+- I'd stay :: Some people are needed where they are. No shame in that. {values:+family +duty} {tone:humble} {pole:1}
+
+? q.plans.hokage | fn: deepen_bond reveal_character | level: 2
+Q: Would you ever want to be Hokage?
+Q: Can you see your face up on the Hokage Rock one day?
+- Yes, absolutely :: Ha! Then I'd better be nice to you now. {values:+duty +courage} {tone:bold}
+- Too much paperwork :: Ha! You've seen the stacks on that desk, haven't you? {values:+freedom} {tone:joking}
+- Maybe, one day :: That's how every Hokage started, I bet. {values:+duty} {tone:humble}
+- Someone better should :: Modest. The best ones usually are. {values:+honesty} {tone:gentle}
+
+? q.plans.chunin_hurry | fn: deepen_bond reveal_character | level: 2 | axis: caution_or_daring
+Q: Are you in a hurry to make Chunin?
+Q: Some Genin rush the exams, some wait years. Which are you?
+- As soon as I can :: Fast and fearless. Just don't skip the lessons on the way. {values:+courage +strength} {tone:bold} {pole:-1}
+- When I'm ready :: The vest will wait. Better to earn it than grab it. {values:+duty} {tone:humble} {pole:1}
+- Rank doesn't matter :: A rare thing to hear from a shinobi. I like it. {values:+freedom} {tone:evasive}
+
+? q.plans.ten_years | fn: deepen_bond reveal_character | level: 4
+Q: Where do you think you'll be in ten years?
+Q: Picture yourself ten years from now. What are you doing?
+- Leading a squad :: Captain. I can see it. Be the kind you'd want to follow. {values:+duty +loyalty} {tone:bold}
+- Running a shop :: A ninja shopkeeper! Mind you keep the prices fair. {values:+creativity} {tone:joking}
+- Out on the road :: Somewhere far off, with stories to send home. {values:+freedom} {tone:curious}
+- Here, with my friends :: Then I'll save you a seat for ten years. {values:+loyalty +family} {tone:warm}
+
+? q.plans.pick_nature | fn: deepen_bond reveal_character | level: 2
+Q: If you could pick any chakra nature, which would you choose?
+Q: Fire, water, wind, earth, lightning. Which one feels like you?
+- Fire :: Bright and bold. The Sarutobi would cheer. {values:+courage} {tone:bold}
+- Water :: Calm on top, strong underneath. A good nature. {values:+kindness} {tone:warm}
+- Wind :: Quick and sharp. You'd never stand still. {values:+freedom} {tone:joking}
+- Earth or lightning :: Can't decide? Steady ground or a flash in the dark. Both good. {values:+strength} {tone:curious}
+
+? q.plans.dream_home | fn: deepen_bond reveal_character | level: 3 | axis: alone_or_together
+Q: What would your dream home be like?
+Q: If you could build any house you liked, what would it be?
+- A big house, full of people :: A table that seats twenty and a door that's never locked. Lovely. {values:+family} {tone:warm} {pole:-1}
+- Quiet, by the river :: Water outside the window, nobody knocking. Peaceful. {values:+freedom} {tone:gentle} {pole:1}
+- Anywhere with a kitchen :: Ha! Priorities. I respect that. {values:+family} {tone:joking}
+- A tent, always moving :: A home on your back. Very free. Very damp, I'd guess. {values:+freedom} {tone:bold}
+
+? q.plans.remembered_for | fn: deepen_bond reveal_character | level: 6
+Q: What would you want people to remember you for?
+Q: Long after, when people talk about you, what should they say?
+- Being kind :: That's the best thing anyone can be remembered for. {values:+kindness} {tone:warm}
+- Being strong :: Strong for others, I hope. Then they'll remember it fondly. {values:+strength} {tone:proud}
+- Keeping my word :: "They always kept their word." A fine thing to have carved on a stone. {values:+honesty +loyalty} {tone:stern}
+- Making them laugh :: The village always needs one of those. Don't stop. {values:+creativity +kindness} {tone:joking}
+
+? q.plans.first_jutsu | fn: deepen_bond reveal_character | level: 2
+Q: If you could learn any jutsu tomorrow, what kind would it be?
+Q: Dream jutsu: what does it do?
+- Something flashy :: Fireworks from your hands! Very showy. {values:+courage} {tone:bold}
+- Something that heals :: A medic's touch. The hospital always needs more of those. {values:+kindness} {tone:warm}
+- Something sneaky :: Invisible, silent, gone. Mind you don't use it to skip chores. {values:+freedom} {tone:joking}
+- Something that protects :: A wall between your friends and trouble. I like that. {values:+loyalty} {tone:humble}

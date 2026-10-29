@@ -1,0 +1,188 @@
+{
+ "format": 1,
+ "id": "mission.d.academy_assist",
+ "kind": "mission",
+ "rank": "d",
+ "category": "academy",
+ "status": "beta",
+ "title": "dlg:mission.d.academy_assist.title",
+ "brief": "dlg:mission.d.academy_assist.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.academy_assist.brief",
+  "accept": "dlg:mission.d.academy_assist.accept",
+  "decline": "dlg:mission.d.academy_assist.decline",
+  "progress": "dlg:mission.d.academy_assist.progress",
+  "success": "dlg:mission.d.academy_assist.success",
+  "fail": "dlg:mission.d.academy_assist.fail",
+  "report": "dlg:mission.d.academy_assist.report"
+ },
+ "minutes": 10,
+ "party": "squad",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "teacher"
+   }
+  },
+  "yard": {
+   "pick": "anchor",
+   "tag": "academy.yard"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "set_up"
+  },
+  "set_up": {
+   "objective": {
+    "type": "perform",
+    "what": "set_targets",
+    "at": "slot:yard",
+    "count": 6
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "prankster"
+     },
+     "next": "prank"
+    }
+   ],
+   "next": "class"
+  },
+  "prank": {
+   "objective": {
+    "type": "inspect",
+    "target": "rigged_target",
+    "at": "slot:yard",
+    "count": 3
+   },
+   "next": "class"
+  },
+  "class": {
+   "objective": {
+    "type": "perform",
+    "what": "coach_throw",
+    "at": "slot:yard",
+    "count": 5
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "demonstration"
+     },
+     "next": "demo"
+    }
+   ],
+   "next": "tidy"
+  },
+  "demo": {
+   "objective": {
+    "type": "perform",
+    "what": "combo:three_hit",
+    "at": "slot:yard"
+   },
+   "next": "tidy"
+  },
+  "tidy": {
+   "objective": {
+    "type": "collect",
+    "target": "item:practice_kunai",
+    "at": "slot:yard",
+    "count": 12
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "lost_kunai"
+     },
+     "next": "search"
+    }
+   ],
+   "next": "report"
+  },
+  "search": {
+   "objective": {
+    "type": "collect",
+    "target": "item:practice_kunai",
+    "at": "place:academy.grounds",
+    "count": 4
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "prankster",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.academy_assist.twist.prankster"
+  },
+  {
+   "id": "demonstration",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.academy_assist.twist.demonstration"
+  },
+  {
+   "id": "lost_kunai",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.academy_assist.twist.lost_kunai"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "all_found",
+  "teamwork"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "academy.grounds",
+   "academy.yard"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.35
+ },
+ "tags": [
+  "village",
+  "academy",
+  "children"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.academy",
+ "_premise": "Help an Academy teacher run a target-practice class for the youngest year.",
+ "_twists": {
+  "prankster": "Someone has rigged the targets to fall on the first hit.",
+  "demonstration": "The class wants to see a Genin's combo, up close.",
+  "lost_kunai": "Four practice kunai flew over the wall."
+ }
+}

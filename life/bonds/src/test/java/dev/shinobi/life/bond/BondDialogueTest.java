@@ -27,4 +27,11 @@ class BondDialogueTest {
         assertEquals("bond.heard.saved_life", BondDialogue.news(w, CLASSMATE_C).orElseThrow(), "the village heard the next day");
         assertTrue(BondDialogue.news(w, TEAMMATE_B).isEmpty(), "they lived it; nothing to report");
     }
+    @Test void aLevelUpIsSpokenFromItsOwnPool() {
+        var w = Leaf.classic(4, 0);
+        assertEquals(List.of("bond.levelup.3.proud", "bond.levelup.3"), BondDialogue.levelUp(w, new BondEvent(0, RIVAL, "level_up", "3")));
+        assertTrue(BondDialogue.levelUp(w, new BondEvent(0, RIVAL, "level_down", "2")).isEmpty());
+        assertTrue(BondDialogue.levelUp(w, new BondEvent(0, RIVAL + ">" + TEAMMATE_A, "level_up", "3")).isEmpty(), "ties between residents stay quiet");
+        assertTrue(DialogueKeys.required().contains("bond.levelup.10"));
+    }
 }

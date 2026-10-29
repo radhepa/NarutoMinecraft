@@ -1,0 +1,74 @@
+# Questions only a stern resident asks: discipline, weakness, orders, the hour you rise.
+# Axis poles: rules_or_results (1 rules, -1 results).
+#! tags: personality=stern
+
+? q.values.stern_unwatched | fn: deepen_bond reveal_character | kind: opinion | level: 3 | axis: rules_or_results
+Q: Do you train when no one is watching?
+Q: When your sensei isn't there to check, do you still do the drills?
+- Every day :: Good. Discipline is what you do when no one is counting. {values:+duty} {tone:stern} {pole:1}
+- When I feel like it :: Then you'll be strong when you feel like it. Think on that. {values:+freedom} {tone:blunt} {pole:-1}
+- I do my own drills :: Your own way. Acceptable, if you do them. {values:+creativity +duty} {tone:proud}
+
+? q.values.stern_last_skipped | fn: deepen_bond reveal_character | kind: confession | level: 5 | follows: q.values.stern_unwatched | depth: 2
+Q: When did you last skip training? Answer honestly.
+Q: The last time you missed a session. When was it, and why?
+- This week :: Honest. Don't make it two weeks. {values:+honesty} {tone:honest}
+- Never :: Never. Hm. Good. Don't let it start. {values:+duty} {tone:dutiful}
+- I don't remember :: Then it was too long ago to matter, or too often to count. Which? {values:+honesty} {tone:evasive}
+
+? q.values.stern_discipline_talent | fn: deepen_bond reveal_character | kind: opinion | level: 2
+Q: Discipline or talent. Which matters more?
+Q: A gifted student who coasts, or an ordinary one who never stops. Who goes further?
+- Discipline :: Correct. Talent is a loan. Discipline is the interest. {values:+duty} {tone:stern}
+- Talent :: Wrong, mostly. But talent with discipline is unstoppable. {values:+strength} {tone:blunt}
+- Discipline, in time :: Exactly. Talent wins early. Discipline wins late. Late is longer. {values:+duty +knowledge} {tone:cautious}
+
+? q.plans.stern_weakness | fn: deepen_bond reveal_character | level: 4
+Q: What is your greatest weakness as a shinobi?
+Q: Name your weakest point. No modesty, no excuses.
+- Patience :: Patience. Train it like a muscle. Sit still for ten minutes a day. {values:+honesty} {tone:honest}
+- Chakra control :: Control. Leaf-balancing, every night. No shortcuts. {values:+honesty +knowledge} {tone:dutiful}
+- My guard :: Your guard. I've seen it drop. Fix it. {values:+honesty} {tone:blunt}
+- I don't know yet :: Then find out before an enemy does. {values:+knowledge} {tone:cautious}
+
+? q.plans.stern_weakness_fix | fn: deepen_bond reveal_character | level: 6 | follows: q.plans.stern_weakness | depth: 2 | gap: 5
+Q: That weakness. What are you doing about it?
+Q: You named your weakness. Now: what's the plan?
+- Drilling it daily :: Daily. Good. Report back in a month. {values:+duty +strength} {tone:dutiful}
+- Asking for help :: Wise. Pride is the second weakness. You've beaten that one. {values:+knowledge +honesty} {tone:humble}
+- Nothing yet :: Nothing. Start tomorrow. At dawn. {values:+honesty} {tone:honest}
+
+? q.dilemma.stern_wrong_order | fn: deepen_bond reveal_character | level: 4 | axis: rules_or_results
+Q: Your captain gives an order you believe is wrong. What do you do?
+Q: An order from above, and you're sure it's a mistake. Obey?
+- Obey :: Obey. Then ask afterwards. A squad that argues mid-mission loses. {values:+duty} {tone:dutiful} {pole:1}
+- Question it at once :: Speak up. Quickly, clearly, once. Then do as you're told. {values:+honesty +courage} {tone:bold} {pole:-1}
+- Obey, then report it :: Correct. The chain exists for a reason. Use it. {values:+duty +honesty} {tone:stern} {pole:1}
+
+? q.values.stern_lateness | fn: deepen_bond reveal_character | kind: opinion | level: 2
+Q: Is lateness a small fault?
+Q: Someone is always a little late. Does it matter?
+- Yes, a small one :: Small faults grow. Start with the small ones. {values:+freedom} {tone:free}
+- No, it's disrespect :: It is. It tells others their time is worth less than yours. {values:+duty} {tone:stern}
+- Depends on the cause :: A sick child, fine. A long breakfast, no. {values:+kindness} {tone:honest}
+
+? q.pref.stern_rise | fn: deepen_bond reveal_character | level: 2
+Q: When do you rise?
+Q: What hour do you get up? Exactly.
+- Before dawn :: Good. The best training is done in the dark. {values:+duty} {tone:dutiful}
+- At dawn :: Acceptable. Aim for an hour earlier. {values:+duty} {tone:stern}
+- Late :: Late. We'll fix that. {values:+freedom} {tone:free}
+
+? q.pref.stern_rise_why | fn: deepen_bond reveal_character | level: 4 | follows: q.pref.stern_rise | depth: 2
+Q: And why that hour?
+Q: Your hour of rising. Habit, or choice?
+- To train :: The right answer. {values:+duty +strength} {tone:dutiful}
+- Habit :: Habit is discipline that stopped complaining. Good. {values:+duty} {tone:honest}
+- I like sleep :: Hm. Honest. Sleep is training too. Up to a point. {values:+honesty} {tone:joking}
+
+? q.values.stern_comfort | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Is comfort the enemy of growth?
+Q: A warm bed, a full belly, an easy day. Good for a shinobi, or bad?
+- Yes :: Yes. Comfort is where strength goes to nap. {values:+strength +duty} {tone:stern}
+- No, rest matters :: Rest matters. I'll concede it. Rest is not comfort, though. {values:+knowledge} {tone:honest}
+- Too much of it is :: Precisely. A little, earned. Never a lot, unearned. {values:+duty} {tone:cautious}

@@ -1,0 +1,184 @@
+{
+ "format": 1,
+ "id": "mission.a.forbidden_scroll",
+ "kind": "mission",
+ "rank": "a",
+ "category": "recovery",
+ "status": "later",
+ "title": "dlg:mission.a.forbidden_scroll.title",
+ "brief": "dlg:mission.a.forbidden_scroll.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.forbidden_scroll.brief",
+  "accept": "dlg:mission.a.forbidden_scroll.accept",
+  "decline": "dlg:mission.a.forbidden_scroll.decline",
+  "progress": "dlg:mission.a.forbidden_scroll.progress",
+  "success": "dlg:mission.a.forbidden_scroll.success",
+  "fail": "dlg:mission.a.forbidden_scroll.fail",
+  "report": "dlg:mission.a.forbidden_scroll.report"
+ },
+ "minutes": 50,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "jonin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "council"
+   }
+  },
+  "ruin": {
+   "pick": "anchor",
+   "tag": "ruin.vault"
+  },
+  "rivals": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.foreign_squad"
+   ]
+  },
+  "guardian": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:enemy.giant_snake"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "ruin"
+  },
+  "ruin": {
+   "objective": {
+    "type": "inspect",
+    "target": "seal",
+    "at": "slot:ruin",
+    "count": 3
+   },
+   "next": "vault"
+  },
+  "vault": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:guardian",
+    "at": "slot:ruin"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:guardian",
+      "slot:ruin"
+     ]
+    }
+   ],
+   "next": "scroll"
+  },
+  "scroll": {
+   "objective": {
+    "type": "collect",
+    "target": "item:mission_forbidden_scroll",
+    "at": "slot:ruin"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "rivals"
+     },
+     "next": "rivals"
+    }
+   ],
+   "next": "report"
+  },
+  "rivals": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:rivals",
+    "at": "slot:ruin"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:rivals",
+      "slot:ruin"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:mission_forbidden_scroll",
+    "to": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "rivals",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.a.forbidden_scroll.twist.rivals"
+  },
+  {
+   "id": "seal_trap",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.a.forbidden_scroll.twist.seal_trap"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "clean_record"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.foreign_squad",
+  "combat:enemy.giant_snake"
+ ],
+ "places": {
+  "anchors": [
+   "gate.travel_desk",
+   "ruin.vault"
+  ],
+  "regions": [
+   "region:ruins"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "recovery",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.recovery",
+ "_premise": "A forbidden scroll stolen generations ago has surfaced in a ruined fortress; recover it before anyone else.",
+ "_twists": {
+  "rivals": "Another village's team arrives on the same night.",
+  "seal_trap": "The scroll's seal is a trap for anyone who breaks it."
+ }
+}

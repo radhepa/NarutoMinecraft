@@ -1,0 +1,285 @@
+# The bond book's shared memories (BONDS.md §4, §12): one line per act, in the book's voice, second person,
+# "them" for the person whose page it is. ".seen" and ".heard" are memories of something they only saw or
+# heard of. Shown each time the book opens, so they cycle; every age of resident has a page.
+#! fn: callback
+#! kind: cycle
+#! tags: stage=child|teen|adult
+
+## bond.memory.answered
+You answered a question that mattered to them.
+They asked what you thought, and you told them.
+
+## bond.memory.caught_contradiction
+They caught you saying one thing, then another.
+
+## bond.memory.saw_gift_displayed
+They saw the gift they gave you, kept where it could be seen.
+
+## bond.memory.apologized
+You said sorry to them, and meant it.
+
+## bond.memory.asked_advice
+You asked for their advice, and listened.
+You came to them for advice.
+
+## bond.memory.asked_after_them
+You asked how things turned out for them.
+
+## bond.memory.awkward_hangout
+An outing with them that never quite came together.
+
+## bond.memory.birthday_remembered
+You remembered their birthday.
+
+## bond.memory.bond_moment
+A moment between you that neither of you will forget.
+
+## bond.memory.bragged
+You bragged in front of them.
+
+## bond.memory.broke_promise
+You broke a promise you made them.
+
+## bond.memory.broke_secret
+They told you a secret, and you didn't keep it.
+
+## bond.memory.camp_night
+A night by the campfire, side by side.
+
+## bond.memory.celebrated_with_them
+You celebrated their good news with them.
+
+## bond.memory.comforted
+You comforted them when things were hard.
+
+## bond.memory.confession_accepted  stage=teen|adult  player_stage=teen|adult
+You told them how you felt, and they felt the same.
+
+## bond.memory.date  stage=teen|adult  player_stage=teen|adult
+An evening out together, just the two of you.
+
+## bond.memory.disobeyed_orders
+You disobeyed orders in front of them.
+
+## bond.memory.felt_overlooked
+They felt you'd forgotten about them.
+
+## bond.memory.festival_together
+A festival night together, lanterns and all.
+
+## bond.memory.followed_orders
+You followed orders when it counted, and they saw it.
+
+## bond.memory.gift_loved
+You gave them something they loved.
+A gift from you that they treasure.
+
+## bond.memory.gift_disliked
+You gave them a gift they didn't care for.
+
+## bond.memory.gift_hated
+You gave them a gift that upset them.
+
+## bond.memory.heart_to_heart
+A heart-to-heart, late into the evening.
+You talked with them about the things that matter.
+
+## bond.memory.highlight
+A day out with them that turned out wonderful.
+One of your best times together.
+
+## bond.memory.hung_out
+Time spent together, for no reason but the company.
+An easy afternoon with them.
+
+## bond.memory.kept_promise
+You kept your promise to them.
+
+## bond.memory.kept_secret
+You kept their secret.
+
+## bond.memory.meal_together
+A meal together.
+You shared a table and a good bowl.
+
+## bond.memory.missed_birthday
+You missed their birthday.
+
+## bond.memory.mission_failed
+A mission with them that went wrong.
+
+## bond.memory.mission_success
+A mission they saw you bring home.
+
+## bond.memory.mission_together
+A mission together, side by side.
+You went out on duty together and came back together.
+
+## bond.memory.mocked_dream
+You laughed at their dream.
+
+## bond.memory.pried
+You pried into something they weren't ready to share.
+
+## bond.memory.proposal_accepted  stage=adult  player_stage=adult
+You asked them to share a life with you, and they said yes.
+
+## bond.memory.reckless_charge
+You charged in recklessly while they watched.
+
+## bond.memory.reconciled
+You quarrelled, and you mended it. The bond is stronger for it.
+
+## bond.memory.rude
+You were rude to them.
+
+## bond.memory.saved_by_them
+They saved your life.
+
+## bond.memory.sided_against
+You took a side against them.
+
+## bond.memory.skipped_training
+You skipped training they'd counted on.
+
+## bond.memory.spar_won
+You beat them in a spar.
+
+## bond.memory.spar_lost
+They beat you in a spar.
+
+## bond.memory.stood_by_them
+You stood by them when they needed it.
+
+## bond.memory.stood_up
+You never showed up to plans you'd made with them.
+
+## bond.memory.studied_together
+You studied together.
+An afternoon over books and scrolls with them.
+
+## bond.memory.supported_dream
+You believed in their dream.
+
+## bond.memory.trained_together
+You trained together.
+Sweat and bruises on the training ground, side by side.
+
+## bond.memory.went_over_their_head
+You went over their head.
+
+## bond.memory.years_together
+Years of friendship, and counting.
+
+# -- deeds that spread: lived, seen, heard ------------------------------------------------------------
+## bond.memory.abandoned_mission
+You abandoned a mission they were part of.
+## bond.memory.abandoned_mission.seen
+They saw you abandon a mission.
+## bond.memory.abandoned_mission.heard
+They heard you abandoned a mission.
+
+## bond.memory.child_born
+A child was born to you, and they were there.
+## bond.memory.child_born.seen
+They were there to see your child born.
+## bond.memory.child_born.heard
+They heard about your new child.
+
+## bond.memory.defended_village
+You defended the village beside them.
+## bond.memory.defended_village.seen
+They saw you defend the village.
+## bond.memory.defended_village.heard
+They heard you defended the village.
+
+## bond.memory.failed_client
+You failed a client they cared about.
+## bond.memory.failed_client.seen
+They saw you let a client down.
+## bond.memory.failed_client.heard
+They heard you let a client down.
+
+## bond.memory.guest_in_quarter
+You were a guest in their clan's quarter.
+## bond.memory.guest_in_quarter.seen
+They saw you welcomed as a guest in a clan quarter.
+## bond.memory.guest_in_quarter.heard
+They heard you'd been a guest in a clan quarter.
+
+## bond.memory.helped_resident
+You helped them out.
+## bond.memory.helped_resident.seen
+They saw you help someone out.
+## bond.memory.helped_resident.heard
+They heard you'd helped someone in the village.
+
+## bond.memory.honored_custom
+You honoured one of their customs.
+## bond.memory.honored_custom.seen
+They saw you honour a clan's custom.
+## bond.memory.honored_custom.heard
+They heard you'd honoured a clan's custom.
+
+## bond.memory.hurt_resident
+You hurt them.
+## bond.memory.hurt_resident.seen
+They saw you hurt someone.
+## bond.memory.hurt_resident.heard
+They heard you'd hurt someone.
+
+## bond.memory.insulted_clan
+You insulted their clan.
+## bond.memory.insulted_clan.seen
+They saw you insult a clan.
+## bond.memory.insulted_clan.heard
+They heard you'd insulted a clan.
+
+## bond.memory.left_them_behind
+You left them behind.
+## bond.memory.left_them_behind.seen
+They saw you leave someone behind.
+## bond.memory.left_them_behind.heard
+They heard you'd left someone behind.
+
+## bond.memory.mediated
+You settled a quarrel of theirs.
+## bond.memory.mediated.seen
+They saw you settle someone's quarrel.
+## bond.memory.mediated.heard
+They heard you'd made peace between two people.
+
+## bond.memory.protected_them
+You protected them.
+## bond.memory.protected_them.seen
+They saw you protect someone.
+## bond.memory.protected_them.heard
+They heard you'd protected someone.
+
+## bond.memory.quarrel
+You quarrelled.
+## bond.memory.quarrel.seen
+They saw you quarrel with someone.
+## bond.memory.quarrel.heard
+They heard about a quarrel of yours.
+
+## bond.memory.rank_up
+You rose in rank, and they were glad of it.
+## bond.memory.rank_up.seen
+They were there when you were promoted.
+## bond.memory.rank_up.heard
+They heard you'd been promoted.
+
+## bond.memory.saved_life
+You saved their life.
+## bond.memory.saved_life.seen
+They saw you save a life.
+## bond.memory.saved_life.heard
+They heard you'd saved someone's life.
+
+## bond.memory.wedding  stage=adult  player_stage=adult
+Your wedding day, together at the shrine.
+## bond.memory.wedding.seen  player_stage=adult
+They were at your wedding.
+## bond.memory.wedding.heard  player_stage=adult
+They heard about your wedding.

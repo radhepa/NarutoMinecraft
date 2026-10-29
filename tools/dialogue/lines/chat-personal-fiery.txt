@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for fiery residents. Loud, eager, impatient, big feelings.
+#! tags: personality=fiery
+
+## chat.personal  fn=reveal_character
+Amazing! I ran around the wall twice before breakfast! My legs are jelly! I'm going again tonight! [EXCLAIM]
+I burned the rice. Then the fish. Then the tea. I've decided cooking is my enemy, and I will defeat it!
+I argued with the fishmonger for twenty minutes about the price of eel. I lost. I'm going back tomorrow. With a plan!
+My brother said I couldn't lift the big rock by the river. I lifted it! Then I dropped it on my foot. Still counts!
+I yelled at a cloud today. It was blocking the sun on my laundry! It moved. Coincidence? I don't think so!
+I'm going to win the festival eating contest this year! I've been stretching my stomach with rice all week!
+Somebody cut in line at the bathhouse, so I gave them a speech about fairness. The whole line clapped!
+The tea house was out of my favourite dumplings. Out! On a Fireday! I'll be there at opening tomorrow.
+My wife says I wake up like a kettle boiling over. I don't see what's wrong with that. Mornings are great!
+I chopped enough firewood for the whole winter! In one day! My arms are on fire! Worth it!
+I lost a race to a dog. A small dog. We're racing again tomorrow, and this time I'm wearing proper sandals.
+I tried to be patient today. I lasted until breakfast. Patience is overrated!
+My shogi opponent at the tea house took an hour to make one move. One hour! I nearly flipped the board. Nearly.
+I'm painting my house bright red! The neighbours will hate it! I love it!
+I finally finished the shelf I started last spring! It's crooked! It's perfect! It's mine!
+My kids challenged me to a snowball fight. I lost to three people under ten. I demand a rematch!
+I sang at the tea house last night. Loudly. I was asked to sing more quietly. I don't have a quiet setting!
+I swam the river in one breath! Almost one breath. Two breaths. It was a big river!
+I'm learning the drums for the festival. My neighbours are learning to sleep through drums.
+Nothing makes me madder than soggy tempura. Nothing! I sent it back twice. The third one was perfect. We're friends now.
+My sister borrowed my best sandals and broke the strap! I'm furious! And I forgave her already. That's how it is.
+I climbed to the top of the Hokage Rock and shouted good morning to the whole village. Some of them shouted back!
+I can't sit still. I tried meditating with my cousin. I lasted forty seconds. That's a record!
+I made the spiciest curry in the Leaf! My eyes are still watering. My tongue's on holiday.
+I got so excited about the first snow I ran outside in my sleeping robe. The neighbours saw. I don't care!
+I'm going to beat the old man at the dango stand at arm wrestling one day. Twelve losses so far. Thirteen's my number!
+
+## chat.personal  rank=civilian  fn=reveal_character
+I sell grilled squid on the market street! I shout the loudest! I sell the most! Coincidence? No!
+I'm not a shinobi, but I'll race any Genin to the bridge! Most of them win. Not all! Two didn't!
+
+## chat.personal  rank=!civilian  fn=reveal_character
+I finished my D-rank in an hour! Then asked for another! The Desk ran out! I'm going to train instead!
+My sensei says I charge in too fast. I say the enemy's too slow! We've agreed to disagree loudly.
+I've been practising a fire jutsu all week. I singed my eyebrows. They'll grow back! The jutsu won't wait!
+My rival beat me in the sparring ring today. I'm not angry! I'm fired up! Tomorrow it's my turn!
+
+## chat.personal  fn=worldbuild
+Every Leaf Festival the shinobi hold a roof race across the market street! The crowd goes wild! I've never won! Yet!
+The barbecue house has a wall of fame for the biggest appetites! There's a gap on it with my name invisibly written!
+The training grounds stay open all night! That's how you know this village means business!
+
+## chat.personal  fn=hook
+Somebody stole my drum for the festival! I'll find them! Probably! Help me look, would you?
+The old boat by the river's got a hole in it, and I promised to row the kids across at the festival! It's in three days!
+My sandal flew off during a kick and landed on the Academy roof! I'm not climbing it in front of the teachers!
+
+## chat.personal  fn=filler
+Great! Fantastic! Let's do something!
+Good! Could be better! Let's make it better!
+
+## chat.personal  fn=reveal_character
+I fixed the leak in my roof in the pouring rain! Soaked to the bone! The roof's dry! I'm not!
+I entered the shrine's bell-ringing for the New Year! Loudest ring in years! The priest flinched!
+Someone said my pickles were too sour! Too sour! I made them sourer! They came back for more!
+I lost my temper at a stubborn jar lid. Then I won. Then I ate the whole jar! Glorious!
+My neighbour planted their pumpkins right by my fence! Now we're competing for the biggest! Mine's winning!

@@ -1,0 +1,25 @@
+{
+ "variants": {
+  "axis=x,part=pole": {
+   "model": "narutominecraft:block/konoha/utility_pole_pole"
+  },
+  "axis=x,part=top": {
+   "model": "narutominecraft:block/konoha/utility_pole_top"
+  },
+  "axis=x,part=transformer": {
+   "model": "narutominecraft:block/konoha/utility_pole_transformer"
+  },
+  "axis=z,part=pole": {
+   "model": "narutominecraft:block/konoha/utility_pole_pole",
+   "y": 90
+  },
+  "axis=z,part=top": {
+   "model": "narutominecraft:block/konoha/utility_pole_top",
+   "y": 90
+  },
+  "axis=z,part=transformer": {
+   "model": "narutominecraft:block/konoha/utility_pole_transformer",
+   "y": 90
+  }
+ }
+}

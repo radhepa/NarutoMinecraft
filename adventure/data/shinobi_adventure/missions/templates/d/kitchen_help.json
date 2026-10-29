@@ -1,0 +1,164 @@
+{
+ "format": 1,
+ "id": "mission.d.kitchen_help",
+ "kind": "mission",
+ "rank": "d",
+ "category": "cooking",
+ "status": "beta",
+ "title": "dlg:mission.d.kitchen_help.title",
+ "brief": "dlg:mission.d.kitchen_help.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.kitchen_help.brief",
+  "accept": "dlg:mission.d.kitchen_help.accept",
+  "decline": "dlg:mission.d.kitchen_help.decline",
+  "progress": "dlg:mission.d.kitchen_help.progress",
+  "success": "dlg:mission.d.kitchen_help.success",
+  "fail": "dlg:mission.d.kitchen_help.fail",
+  "report": "dlg:mission.d.kitchen_help.report"
+ },
+ "minutes": 10,
+ "party": "squad",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "clan": "akimichi"
+   }
+  },
+  "kitchen": {
+   "pick": "anchor",
+   "tag": "barbecue_house"
+  },
+  "grocer": {
+   "pick": "anchor",
+   "tag": "market.grocer"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "prep"
+  },
+  "prep": {
+   "objective": {
+    "type": "perform",
+    "what": "prep_ingredients",
+    "at": "slot:kitchen",
+    "count": 6
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "missing_spice"
+     },
+     "next": "spice"
+    },
+    {
+     "if": {
+      "twist": "taste_test"
+     },
+     "next": "taste"
+    }
+   ],
+   "next": "serve"
+  },
+  "spice": {
+   "objective": {
+    "type": "buy",
+    "item": "item:mission_spice",
+    "at": "slot:grocer",
+    "count": 1
+   },
+   "next": "serve"
+  },
+  "taste": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "honest": null,
+     "polite": null
+    },
+    "dialogue": "dlg:mission.d.kitchen_help.choice.taste"
+   },
+   "next": "serve"
+  },
+  "serve": {
+   "objective": {
+    "type": "perform",
+    "what": "serve_table",
+    "at": "slot:kitchen",
+    "count": 5
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "missing_spice",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.kitchen_help.twist.missing_spice"
+  },
+  {
+   "id": "taste_test",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.kitchen_help.twist.taste_test"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0,
+   "clan_deed": [
+    "akimichi",
+    "helped_resident"
+   ]
+  }
+ },
+ "bonus": [
+  "fast",
+  "extra_mile"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "barbecue_house",
+   "market.grocer"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.35
+ },
+ "tags": [
+  "village",
+  "cooking"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.cooking",
+ "_premise": "Help the barbecue house's kitchen through a big party's order.",
+ "_twists": {
+  "missing_spice": "The house spice ran out mid-service.",
+  "taste_test": "The chef wants your honest opinion of a new sauce. It is not good."
+ }
+}

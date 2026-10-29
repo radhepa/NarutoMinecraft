@@ -1,0 +1,199 @@
+{
+ "format": 1,
+ "id": "mission.a.listening_post",
+ "kind": "mission",
+ "rank": "a",
+ "category": "investigation",
+ "status": "later",
+ "title": "dlg:mission.a.listening_post.title",
+ "brief": "dlg:mission.a.listening_post.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.listening_post.brief",
+  "accept": "dlg:mission.a.listening_post.accept",
+  "decline": "dlg:mission.a.listening_post.decline",
+  "progress": "dlg:mission.a.listening_post.progress",
+  "success": "dlg:mission.a.listening_post.success",
+  "fail": "dlg:mission.a.listening_post.fail",
+  "report": "dlg:mission.a.listening_post.report"
+ },
+ "minutes": 45,
+ "party": "squad",
+ "unlock": {
+  "rank_at_least": "jonin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "council"
+   }
+  },
+  "market": {
+   "pick": "anchor",
+   "tag": "market.rooftops"
+  },
+  "drop": {
+   "pick": "anchor",
+   "tag": "village.dead_drop"
+  },
+  "suspect_a": {
+   "pick": "resident",
+   "where": {
+    "job": "trader",
+    "resident_of": "any"
+   }
+  },
+  "suspect_b": {
+   "pick": "resident",
+   "where": {
+    "job": "innkeeper",
+    "resident_of": "any"
+   }
+  },
+  "suspect_c": {
+   "pick": "resident",
+   "where": {
+    "job": "porter",
+    "resident_of": "any"
+   }
+  },
+  "ring": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.cell_pair"
+   ]
+  }
+ },
+ "start": "watch",
+ "steps": {
+  "watch": {
+   "objective": {
+    "type": "inspect",
+    "target": "signal",
+    "at": "slot:market",
+    "count": 4
+   },
+   "next": "drop"
+  },
+  "drop": {
+   "objective": {
+    "type": "wait_until",
+    "time": "01:00",
+    "at": "slot:drop"
+   },
+   "next": "follow"
+  },
+  "follow": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:drop"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "accuse"
+  },
+  "accuse": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "a": null,
+     "b": null,
+     "c": null
+    },
+    "dialogue": "dlg:mission.a.listening_post.choice.accuse"
+   },
+   "next": "close"
+  },
+  "close": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:ring",
+    "at": "slot:drop"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:ring",
+      "slot:drop"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "post_a",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.a.listening_post.twist.post_a"
+  },
+  {
+   "id": "post_b",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.a.listening_post.twist.post_b"
+  },
+  {
+   "id": "post_c",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.a.listening_post.twist.post_c"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "no_alarm",
+  "spared"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.cell_pair"
+ ],
+ "places": {
+  "anchors": [
+   "market.rooftops",
+   "village.dead_drop"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.55
+ },
+ "tags": [
+  "village",
+  "investigation",
+  "stealth"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.investigation",
+ "_premise": "A foreign spy ring keeps a listening post somewhere in the Leaf's market district; find it and close it quietly.",
+ "_twists": {
+  "post_a": "The rolled listening post is the first suspect's.",
+  "post_b": "The second's.",
+  "post_c": "The third's."
+ }
+}

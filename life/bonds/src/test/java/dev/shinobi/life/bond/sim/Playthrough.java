@@ -8,6 +8,16 @@ import dev.shinobi.life.bond.BondWorld;
 import dev.shinobi.life.bond.Conflict;
 import dev.shinobi.life.bond.Household;
 import dev.shinobi.life.bond.Kindling;
+import dev.shinobi.life.bond.Standing;
+import dev.shinobi.life.bond.Activity;
+import dev.shinobi.life.bond.BondDialogue;
+import dev.shinobi.life.bond.Conversation;
+import dev.shinobi.life.bond.LifeEvents;
+import dev.shinobi.life.bond.Schedule;
+import dev.shinobi.life.bond.Together;
+import dev.shinobi.life.bond.Question;
+import dev.shinobi.life.bond.Questions;
+import dev.shinobi.life.bond.SampleQuestions;
 import dev.shinobi.life.bond.Leaf;
 import dev.shinobi.life.bond.Levels;
 import dev.shinobi.life.bond.Person;
@@ -49,7 +59,30 @@ public final class Playthrough {
         Chapter(String id, String title, double hours, int days, Phase phase, Consumer<Run> start) { this(id, title, hours, days, phase, start, null); }
     }
     public record Row(String chapter, String title, double hours, long day, Map<String, Integer> levels, double cohesion, String village, String notes) {}
-    public record Result(Profile profile, List<Row> rows, Map<String, String> checks, BondWorld world, List<BondEvent> events) {}
+    public record Result(Profile profile, List<Row> rows, Map<String, String> checks, BondWorld world, List<BondEvent> events, Map<Integer, Standings> standing) {}
+    /**
+     * Standing at a checkpoint: with the village overall (the Hokage needs Hero), and in every district and clan quarter
+     * (the Hokage needs Good Neighbor in each); {@code lowest} is the weakest of those.
+     */
+    public record Standings(double village, String villageTitle, int goodNeighbor, int communities, String lowest, String lowestTitle) {
+        public boolean hero() { return villageTitle.equals("hero"); }
+        public boolean everywhere() { return goodNeighbor == communities; }
+        @Override public String toString() {
+            return String.format("village %s (%.1f); good neighbor in %d of %d districts and clans, lowest %s %s", villageTitle, village, goodNeighbor, communities, lowest, lowestTitle);
+        }
+    }
+    public static final int[] STANDING_HOURS = {45, 60};
+    static Standings standings(BondWorld w) {
+        var places = new java.util.TreeSet<String>();
+        for (var p : w.people()) for (String c : p.communities()) if (c.startsWith("district:") || c.startsWith("clan:")) places.add(c);
+        int good = 0; String lowest = ""; double low = Double.POSITIVE_INFINITY;
+        for (String c : places) {
+            double s = w.standing(c);
+            if (s >= Standing.Title.GOOD_NEIGHBOR.from) good++;
+            if (s < low) { low = s; lowest = c; }
+        }
+        return new Standings(w.standing("village"), w.title("village").id(), good, places.size(), lowest, places.isEmpty() ? "" : Standing.Title.of(low).id());
+    }
 
     public static final List<String> SHOWN = List.of(TEAMMATE_A, TEAMMATE_B, SENSEI, INSTRUCTOR, CLASSMATE_C, CLASSMATE_D, RIVAL);
 
@@ -59,6 +92,11 @@ public final class Playthrough {
         final Map<String, String> checks = new LinkedHashMap<>(); final List<BondEvent> events = new ArrayList<>();
         final List<String> villagers = new ArrayList<>();
         double hours; int bondQuests, part; long betaEnd = -1;
+        int asked, hangouts, invited, acceptedInvites, stoodUp, highlights, rituals, newsTold, newsAnswered, deepTalks, questions, contradictions, noticed;
+        final Map<String, Integer> questionsBy = new java.util.TreeMap<>();
+        /** The hour each Kindling tier was first reached with anyone. */
+        final Map<String, Double> tierHours = new java.util.LinkedHashMap<>();
+        int kindles;
         Run(BondWorld w, Profile p, long seed) {
             this.w = w; this.p = p; this.rng = Seeds.stream(seed, "playthrough", p.id());
             for (var person : w.people()) if (person.id().startsWith("resident:")) villagers.add(person.id());
@@ -231,8 +269,10 @@ public final class Playthrough {
     /** Plays one profile through the whole path. */
     public static Result play(long seed, Profile profile) {
         var w = Leaf.classic(seed, 40);
+        Questions.load(w, SampleQuestions.bank());
         var r = new Run(w, profile, seed);
         var rows = new ArrayList<Row>();
+        var standing = new java.util.TreeMap<Integer, Standings>();
         for (var ch : chapters()) {
             r.notes.clear(); r.part++;
             for (int d = 0; d < ch.days; d++) {
@@ -243,6 +283,10 @@ public final class Playthrough {
                 for (var e : w.drainEvents()) { r.events.add(e); notable(r, e); }
             }
             r.hours += ch.hours;
+            for (int h : STANDING_HOURS) if (r.hours >= h && !standing.containsKey(h)) standing.put(h, standings(w));
+            for (var f : Kindling.flames(w)) r.tierHours.putIfAbsent(f.tier().id(), Math.round(r.hours * 10) / 10.0);
+            for (var f : Kindling.flames(w)) for (var t : Kindling.Tier.values())
+                if (t != Kindling.Tier.NONE && t.compareTo(f.tier()) <= 0) r.tierHours.putIfAbsent(t.id(), Math.round(r.hours * 10) / 10.0);
             if (ch.id.equals("Ch 7")) r.checks.put("academy end: teammates level", w.level(TEAMMATE_A) + " / " + w.level(TEAMMATE_B));
             if (ch.id.equals("Ch 20")) r.betaEnd = w.day();
             if (ch.id.equals("Ch 20")) r.checks.put("beta end: teammates level", r.teammates().stream().map(t -> t.substring(5) + " " + w.level(t)).toList().toString());
@@ -256,7 +300,16 @@ public final class Playthrough {
         r.checks.put("romance before the first time skip", r.events.stream().anyMatch(e -> e.kind().equals("romance") && e.day() < r.betaEnd) ? "YES (bug)" : "none");
         r.checks.put("bonds at level 10", Long.toString(w.bonded().stream().filter(id -> w.level(id) >= 10).count()));
         r.checks.put("bond quests played", Integer.toString(r.bondQuests));
-        return new Result(profile, rows, r.checks, w, r.events);
+        r.checks.put("time together", String.format("asked %d, hung out %d, highlights %d, rituals %d; invited %d times, accepted %d; stood someone up %d",
+                r.asked, r.hangouts, r.highlights, r.rituals, r.invited, r.acceptedInvites, r.stoodUp));
+        var close = w.bonded().stream().filter(id -> w.level(id) >= 5).toList();
+        double perClose = close.stream().mapToInt(id -> r.questionsBy.getOrDefault(id, 0)).average().orElse(0);
+        int maxClose = close.stream().mapToInt(id -> r.questionsBy.getOrDefault(id, 0)).max().orElse(0);
+        r.checks.put("questions", String.format("%d asked; %.1f per close friend (level 5+, %d of them), %d at most; contradictions %d, noticed %d; bank ran dry %d times",
+                r.questions, perClose, close.size(), maxClose, r.contradictions, r.noticed, w.questionsDry()));
+        r.checks.put("their lives", String.format("news told %d, responded to %d; deeper talks %d", r.newsTold, r.newsAnswered, r.deepTalks));
+        for (int h : STANDING_HOURS) { standing.putIfAbsent(h, standings(w)); r.checks.put("standing at " + h + " h", standing.get(h).toString()); }
+        return new Result(profile, rows, r.checks, w, r.events, Map.copyOf(standing));
     }
 
     /** One in-game day of systemic play around the chapter's beat. */
@@ -267,8 +320,8 @@ public final class Playthrough {
                 for (String c : CLASSMATES) w.together(c);
                 w.together(INSTRUCTOR);
                 if (index % 2 == 1) w.experience(Act.STUDIED_TOGETHER, List.of(CLASSMATES.get(r.rng.below(CLASSMATES.size()))));
+                // Beta 1: one bond quest per classmate (ROADMAP.md, "Friendship and bonds").
                 for (String c : CLASSMATES) r.bondQuest(c, 1, Levels.FIRST_BOND_QUEST, null);
-                for (String c : CLASSMATES) r.bondQuest(c, 2, 3, null);
             }
             case GENIN, EXAMS, LATER -> {
                 var squad = r.squad();
@@ -279,10 +332,15 @@ public final class Playthrough {
                     if (r.roll(p == Profile.RECKLESS ? .4 : .8)) w.act(r.villager(), Act.HELPED_RESIDENT, squad);
                     if (p == Profile.RECKLESS && r.roll(.35)) for (String t : r.teammates()) w.act(t, Act.RECKLESS_CHARGE);
                     w.act(SENSEI, r.roll(p.orders) ? Act.FOLLOWED_ORDERS : Act.DISOBEYED_ORDERS);
+                    // Once the gift awakens, kindle a squadmate in the fight now and then.
+                    if (Kindling.unlocked(w)) for (String m : squad)
+                        if (Kindling.tier(w, m) != Kindling.Tier.NONE && r.roll(p == Profile.DEVOTED ? .5 : p == Profile.TYPICAL ? .3 : .2)) { w.kindle(m); r.kindles++; }
                     w.act(SENSEI, r.roll(p == Profile.RECKLESS ? .7 : .92) ? Act.MISSION_SUCCESS : Act.MISSION_FAILED);
                 } else if (p == Profile.RECKLESS && r.roll(.5)) { for (String m : squad) w.act(m, Act.SKIPPED_TRAINING); }
                 else w.experience(Act.TRAINED_TOGETHER, squad);
+                // Beta 2: two per teammate; Beta 3: one more per teammate, in the training break.
                 if (phase == Phase.GENIN) for (String t : r.teammates()) { r.bondQuest(t, 3, 4, null); r.bondQuest(t, 4, 5, Act.SUPPORTED_DREAM); }
+                if (phase == Phase.EXAMS && index >= 1) for (String t : r.teammates()) r.bondQuest(t, 5, 5, Act.HEART_TO_HEART);
                 if (phase == Phase.LATER) later(r, index);
                 if (r.roll(.3)) w.talk(CLASSMATES.get(r.rng.below(CLASSMATES.size())));
             }
@@ -295,6 +353,7 @@ public final class Playthrough {
         if (r.roll(p.gift)) { String who = r.pick(); w.gift(who, r.item(who)); }
         if (r.roll(p.gift * .6)) { String who = r.pick(); w.experience(Act.MEAL_TOGETHER, List.of(who)); w.favor(who, 2); }
         for (String who : w.bonded()) if (w.birthday(who) && r.roll(p.birthdays)) w.celebrate(who);
+        together(r);
         // Quarrels: say sorry, then make up when they are ready.
         for (String who : w.bonded()) {
             var c = w.bond(who).conflict();
@@ -302,6 +361,80 @@ public final class Playthrough {
             if (c.canReconcile() && r.roll(p.apologizes)) { w.reconcile(who); r.note("made up with " + who.substring(5)); }
         }
         if (w.squad() != null) for (String gone : w.squad().departed().keySet()) if (w.canReturn(gone) && r.roll(p.sideQuests)) { w.returnToSquad(gone); r.note(gone.substring(5) + " came back"); }
+    }
+
+    /** How often each kind of player hangs out, answers invitations, turns up, responds to news and talks deeper. */
+    static final java.util.Map<Profile, double[]> TOGETHER = java.util.Map.of(
+            // ask every n days, accept an invitation, turn up, respond kindly to news, a deeper talk a day
+            Profile.DEVOTED, new double[]{2, .9, 1, .95, .8},
+            Profile.TYPICAL, new double[]{4, .6, .95, .7, .35},
+            Profile.RECKLESS, new double[]{10, .3, .6, .3, .05});
+
+    /** One day of time together: invitations answered, a hangout asked for, plans kept, news heard, a conversation. */
+    static void together(Run r) {
+        var w = r.w; var t = TOGETHER.get(r.p);
+        for (var inv : Together.invitations(w)) {
+            r.invited++;
+            boolean yes = r.roll(t[1]);
+            if (Together.answer(w, inv.id(), yes) != null) r.acceptedInvites++;
+        }
+        for (var plan : Together.plans(w)) if (plan.day() == w.day()) {
+            boolean came = r.roll(t[2]);
+            var out = Together.go(w, plan.id(), came);
+            if (!came) r.stoodUp++; else { r.hangouts++; if (out.highlight() != null) r.highlights++; r.rituals += out.newRituals().size(); }
+        }
+        if (w.day() % (long) t[0] == 0) {
+            var friends = w.bonded().stream().filter(id -> w.effectiveLevel(id) >= 1 && !id.equals(MERCHANT)).limit(6).toList();
+            if (!friends.isEmpty()) {
+                // Most hangouts are with the teammate they favor; the rest go around their circle.
+                String who = w.squad() != null && r.roll(r.p.favoriteBias) ? r.pick() : friends.get(r.rng.below(friends.size()));
+                String act = w.bond(who).facts().contains("favorite_hangout") ? Activity.favorite(w.seed(), who)
+                        : List.of("ramen", "dango", "spar", "market_stroll", "train").get(r.rng.below(5));
+                var slot = Schedule.nextFree(w.seed(), List.of(w.person(who)), Activity.of(act), w.day() + 1, 10, 3);
+                if (slot != null) { r.asked++; Together.invite(w, List.of(who), act, slot[0], (int) slot[1]); }
+            }
+        }
+        for (String who : w.bonded()) {
+            if (w.bond(who).contactDays() == 0 || w.bond(who).talkDayIsToday(w.day())) {
+                var news = LifeEvents.tell(w, who);
+                if (news.isPresent()) {
+                    r.newsTold++;
+                    boolean hard = LifeEvents.Kind.of(news.get().substring(5)).valence < 0;
+                    String response = r.roll(t[3]) ? (hard ? "comfort" : "congratulate") : "shrug";
+                    if (LifeEvents.respond(w, who, response).isEmpty()) r.newsAnswered++;
+                }
+                BondDialogue.followUp(w, who);
+                question(r, who);
+            }
+        }
+        if (r.roll(t[4])) {
+            var close = w.bonded().stream().filter(id -> w.effectiveLevel(id) >= 2).toList();
+            if (!close.isEmpty()) {
+                String who = close.get(r.rng.below(close.size()));
+                var topics = Conversation.topics(w, who);
+                Conversation.talk(w, who, topics.getLast(), null);
+                r.deepTalks++;
+            }
+        }
+    }
+
+    /** A question from someone the player talked to today, answered as this kind of player would. */
+    static void question(Run r, String who) {
+        var w = r.w;
+        var q = Questions.next(w, who);
+        if (q.isEmpty()) return;
+        Question.Answer pick;
+        var answers = q.get().answers();
+        var best = answers.stream().max(java.util.Comparator.comparingDouble(a -> {
+            var d = Questions.preview(w, who, q.get(), a.id()); return d.affection() + d.trust() + .5 * d.respect(); })).orElseThrow();
+        var worst = answers.stream().min(java.util.Comparator.comparingDouble(a -> {
+            var d = Questions.preview(w, who, q.get(), a.id()); return d.affection() + d.trust() + .5 * d.respect(); })).orElseThrow();
+        double reads = switch (r.p) { case DEVOTED -> .85; case TYPICAL -> .5; case RECKLESS -> .1; };
+        pick = r.roll(reads) ? best : r.p == Profile.RECKLESS && r.roll(.5) ? worst : answers.get(r.rng.below(answers.size()));
+        var out = Questions.answer(w, who, q.get().id(), pick.id());
+        r.questions++; r.questionsBy.merge(who, 1, Integer::sum);
+        if (out.contradiction()) r.contradictions++;
+        if (out.noticed()) r.noticed++;
     }
 
     /** The later arcs: bond moments, romance, a clan. */
@@ -343,6 +476,11 @@ public final class Playthrough {
 
     static void epilogue(Run r) {
         var w = r.w;
+        var fire = Kindling.bonfire(w);
+        long trials = Kindling.flames(w).stream().filter(Kindling.Flame::natureTrialReady).count();
+        r.checks.put("kindling", String.format("first spark %s h, flame %s h, blaze %s h; %d flames, kindled %d times, %d nature trials ready; bonfire %.1f (%s)",
+                r.tierHours.getOrDefault("spark", -1.0), r.tierHours.getOrDefault("flame", -1.0), r.tierHours.getOrDefault("blaze", -1.0),
+                Kindling.flames(w).size(), r.kindles, trials, fire.strength(), fire.form()));
         r.checks.put("kindling with teammates", r.teammates().stream().map(t -> t.substring(5) + " " + Kindling.tier(w, t).id()).toList().toString());
         r.checks.put("spouse", w.spouse().isEmpty() ? "none" : w.spouse());
         int joined = 0;
@@ -397,10 +535,41 @@ public final class Playthrough {
         return sb.toString();
     }
 
+    /** The Bonfire across seeds, per kind of player: min, median and max strength, and the forms. */
+    public static String bonfires(long[] seeds) {
+        var sb = new StringBuilder("\n== Bonfire across seeds ==\n");
+        for (var profile : Profile.values()) {
+            var strengths = new ArrayList<Double>(); var forms = new java.util.TreeMap<String, Integer>();
+            for (long seed : seeds) { var b = Kindling.bonfire(play(seed, profile).world()); strengths.add(b.strength()); forms.merge(b.form(), 1, Integer::sum); }
+            java.util.Collections.sort(strengths);
+            sb.append(String.format("  %-8s min %.1f, median %.1f, max %.1f; %s%n", profile.id(), strengths.getFirst(), strengths.get(strengths.size() / 2), strengths.getLast(), forms));
+        }
+        return sb.toString();
+    }
+
+    /** The Hokage's standing across seeds, per kind of player and checkpoint: Hero with the village, Good Neighbor everywhere. */
+    public static String standingsAcross(long[] seeds) {
+        var sb = new StringBuilder("\n== Standing across seeds (Hero with the village; Good Neighbor in every district and clan) ==\n");
+        for (var profile : Profile.values()) {
+            var runs = java.util.Arrays.stream(seeds).mapToObj(s -> play(s, profile).standing()).toList();
+            for (int h : STANDING_HOURS) {
+                var at = runs.stream().map(m -> m.get(h)).toList();
+                var villages = at.stream().mapToDouble(Standings::village).sorted().toArray();
+                sb.append(String.format("  %-8s %2d h  village %.1f to %.1f, hero in %d of %d; good neighbor everywhere in %d of %d (places: %d to %d)%n",
+                        profile.id(), h, villages[0], villages[villages.length - 1], at.stream().filter(Standings::hero).count(), seeds.length,
+                        at.stream().filter(Standings::everywhere).count(), seeds.length, at.stream().mapToInt(Standings::goodNeighbor).min().orElse(0),
+                        at.stream().mapToInt(Standings::communities).min().orElse(0), at.stream().mapToInt(Standings::communities).max().orElse(0)));
+            }
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         long seed = args.length > 0 ? Long.parseLong(args[0]) : 20261029L;
         System.out.println("Bond pacing, seed " + seed + " (levels are the level each person acts on; coh = squad cohesion)");
         for (var profile : Profile.values()) System.out.print(table(play(seed, profile)));
+        System.out.print(bonfires(new long[]{seed, 7, 11, 99, 2024}));
+        System.out.print(standingsAcross(new long[]{seed, 7, 11, 99, 2024}));
     }
 
     private Playthrough() {}

@@ -1,0 +1,197 @@
+{
+ "format": 1,
+ "id": "mission.c.courier_relay",
+ "kind": "mission",
+ "rank": "c",
+ "category": "courier",
+ "status": "beta",
+ "title": "dlg:mission.c.courier_relay.title",
+ "brief": "dlg:mission.c.courier_relay.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.courier_relay.brief",
+  "accept": "dlg:mission.c.courier_relay.accept",
+  "decline": "dlg:mission.c.courier_relay.decline",
+  "progress": "dlg:mission.c.courier_relay.progress",
+  "success": "dlg:mission.c.courier_relay.success",
+  "fail": "dlg:mission.c.courier_relay.fail",
+  "report": "dlg:mission.c.courier_relay.report"
+ },
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch13.far_village",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "clerk"
+   }
+  },
+  "post": {
+   "pick": "anchor",
+   "tag": "border.post"
+  },
+  "pass": {
+   "pick": "anchor",
+   "tag": "road.hill_pass"
+  },
+  "scouts": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.scout_pair"
+   ]
+  }
+ },
+ "start": "collect",
+ "steps": {
+  "collect": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "travel"
+  },
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "pass"
+  },
+  "pass": {
+   "objective": {
+    "type": "go",
+    "place": "slot:pass"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "interceptors"
+     },
+     "next": "intercept"
+    }
+   ],
+   "next": "post"
+  },
+  "intercept": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:scouts",
+    "at": "slot:pass"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:scouts",
+      "slot:pass"
+     ]
+    }
+   ],
+   "next": "post"
+  },
+  "post": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:mission_sealed_message",
+    "to": "slot:post"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "wait_answer"
+     },
+     "next": "answer"
+    }
+   ],
+   "next": "report"
+  },
+  "answer": {
+   "objective": {
+    "type": "wait_until",
+    "time": "+2h",
+    "at": "slot:post"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "interceptors",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.c.courier_relay.twist.interceptors"
+  },
+  {
+   "id": "wait_answer",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.c.courier_relay.twist.wait_answer"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "no_knockouts",
+  "unseen"
+ ],
+ "fast_hours": 12,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [
+  "combat:group.scout_pair"
+ ],
+ "places": {
+  "anchors": [
+   "border.post",
+   "gate.travel_desk",
+   "road.hill_pass"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.5
+ },
+ "tags": [
+  "travel",
+  "timed",
+  "fight",
+  "movement"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.courier",
+ "_premise": "Rush a sealed message to the border post within a day.",
+ "_twists": {
+  "interceptors": "Two enemy scouts are waiting at the pass for exactly this message.",
+  "wait_answer": "The post commander wants you to carry the answer back."
+ }
+}

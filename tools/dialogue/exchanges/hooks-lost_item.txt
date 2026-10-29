@@ -1,0 +1,85 @@
+# Overheard leads for lost_item hooks (gen.lost_item_gossip): someone lost something, and the trail starts here.
+#! fn: hook
+
+## ambient.hook.lost_item  fn=hook
+A: {friend} lost a {item} somewhere between the market and {place}.
+B: Again? Ask the stallkeepers. They see everything that falls.
+lead: hook.lost_item
+
+A: Did you hear? {neighbor} dropped a purse at the bath house and nobody handed it in.
+B: Somebody must have it. The attendants are always gossiping, they'd know.
+lead: hook.lost_item
+
+A: {friend} is beside themselves. The {item} from their grandmother is gone.
+B: Last time I saw it was at {place}. Somebody should ask there.
+lead: hook.lost_item
+
+A: I left my {item} on a bench by the river, and now it's not there.
+B: The ferryman sees everyone who sits on those benches. Try asking.
+lead: hook.lost_item
+
+A: {neighbor} came home without a {item}. Swears it was in the basket at the grocer's.
+B: Then someone at the grocer's knows where it went.
+lead: hook.lost_item
+
+A: Have you seen a little wooden box with a crane carved on the lid?
+B: No. Whose is it? {friend}'s? Somebody at {place} might have picked it up.
+lead: hook.lost_item
+
+A: {friend} lost the key to the shop. Can't open up tomorrow without it.
+B: Was it on that string round the wrist? It must have snapped somewhere near {place}.
+lead: hook.lost_item
+
+A: The flute {neighbor} plays at the shrine every evening has gone missing.
+B: The shrine's been so quiet. Somebody ought to look.
+lead: hook.lost_item
+
+## ambient.hook.lost_item  fn=hook,react
+A: {friend}'s headband came off during training, and they can't find it anywhere.
+B: A Genin without a headband? That's a long talk with the Mission Desk. Someone should search the training grounds.
+lead: hook.lost_item
+
+A: A {item} turned up at the tea house. Nobody's claimed it.
+B: I think it's {neighbor}'s. Someone should find out before the tea house sells it to the pawn shop.
+lead: hook.lost_item
+
+A: Somebody's dropped a letter by the well. Still sealed.
+B: Then it hasn't reached whoever it was for. That's worse than losing it.
+lead: hook.lost_item
+
+A: {friend}'s lucky charm from the shrine went missing at the festival.
+B: In that crowd? It could be anywhere. Though the mask stall picks up whatever falls.
+lead: hook.lost_item
+
+A: {neighbor} misplaced the ledger for the month. All the accounts.
+B: Last seen at {place}. If it's lost for good, it's a whole month of sums to redo.
+lead: hook.lost_item
+
+A: I'm sure I left my {item} on the counter at Ichiraku.
+B: Then ask at the stand. Or ask whoever was on the next stool.
+lead: hook.lost_item
+
+A: {friend} lost a whole spool of ninja wire near the training grounds.
+B: Somebody'll trip on that. Better find it before a child does.
+lead: hook.lost_item
+
+## ambient.hook.lost_item  stage=child  fn=hook
+A: I lost my spinning top. The red one. It rolled away by {place}.
+B: Maybe the big kids took it. Or maybe it's under the steps. Let's ask someone.
+lead: hook.lost_item
+
+A: My little brother lost his marbles. Like, actually lost them. All of them.
+B: I saw marbles near {place} yesterday! But I don't know whose they were.
+lead: hook.lost_item
+
+A: I dropped my lunch money somewhere and now I'm going to starve.
+B: You won't starve, you ate three buns this morning. But we should look.
+lead: hook.lost_item
+
+A: Somebody took my practice kunai from the Academy yard.
+B: Maybe somebody just borrowed it? Let's ask around the yard tomorrow.
+lead: hook.lost_item
+
+A: I lost the hair ribbon my aunt gave me. She's going to ask about it.
+B: Did you have it at {place}? Let's go back and look.
+lead: hook.lost_item

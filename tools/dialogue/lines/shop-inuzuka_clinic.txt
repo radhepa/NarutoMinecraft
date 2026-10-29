@@ -1,0 +1,64 @@
+# The Inuzuka veterinary clinic and kennels by the main gate: ninken pups to adopt, a vet, food and pet beds.
+# Pets are knocked out, never killed; from Beta 2 a ninken can track scents on missions (ROADMAP §7, Pets).
+#! fn: commerce
+
+## shop.inuzuka_clinic.greet  shop=inuzuka_clinic  fn=commerce
+Welcome to the clinic! Mind the pups, they'll try to eat your shoelaces.
+Come in. Don't mind the barking, it's how they say hello.
+Hello, {player}. Here for a pup, or is a friend of yours unwell?
+In you come. Let them sniff your hand first, then they'll let you through.
+Welcome. Wipe your feet, or don't. The floor's seen worse.
+
+## shop.inuzuka_clinic.greet  shop=inuzuka_clinic  clan=inuzuka  fn=commerce,worldbuild
+Welcome to the kennels. Every dog here knows the Inuzuka name before it knows its own.
+
+## shop.inuzuka_clinic.browse  shop=inuzuka_clinic  fn=commerce
+The pups in the run are ready for homes. Sit on the floor and see who comes to you.
+Dried meat in the jar, chew bones in the basket, brushes on the hook.
+Collars and leads behind the counter. Every ninken should wear its owner's mark.
+Pet beds are by the door. A pup that sleeps well behaves well.
+That's the treatment room. Sick ones in there, healthy ones out here making noise.
+
+## shop.inuzuka_clinic.buy  shop=inuzuka_clinic  kind=cycle  fn=commerce
+{item}, here you go. {pay}. Your pup will love you for it.
+That's {pay}. Give them one now, it's how you make friends.
+Done. Keep the meat dry or it'll go soft.
+Here. A good brush every evening and the coat will shine.
+{pay}, thank you. Bring the pup in for a check every season.
+There you are. Your ninken is lucky to have you.
+
+## shop.inuzuka_clinic.cant_afford  shop=inuzuka_clinic  kind=cycle  fn=commerce
+Not quite enough. The plain biscuits are cheaper, and the pups don't know the difference.
+You're short. Muck out the kennels for an afternoon and we'll call it even.
+That's more than you've got. Come back later, nobody's running off with it.
+A little under. Here, take a bone for the pup anyway.
+
+## shop.inuzuka_clinic.sold_out  shop=inuzuka_clinic  kind=cycle  fn=commerce
+Out of {item}, sorry. The whole kennel ate through it in a week.
+No pups ready right now. The next litter's weaned in about a month.
+None left. The supplier from the farms comes in two days.
+
+## shop.inuzuka_clinic.haggle  shop=inuzuka_clinic  fn=commerce,reveal_character
+Haggle over dog food? The dogs would be insulted.
+Walk three of the kennel dogs round the training fields and I'll knock some off.
+I'll not bargain over medicine. But I'll never turn away a sick animal for want of ryo.
+Buy the bed and I'll throw in a chew. That's my best offer.
+
+## shop.inuzuka_clinic.closing  shop=inuzuka_clinic  time=evening|night  fn=commerce
+Feeding time soon, then I lock up. They get very loud, you've been warned.
+Closing for the night, unless it's an emergency. Is it?
+Last call. If your pup needs looking at, now's the time.
+
+## shop.inuzuka_clinic.recommend  shop=inuzuka_clinic  fn=commerce,teach
+A pup will follow you everywhere, and wait at home when it can't go on a mission with you.
+If your dog gets hurt, don't panic. Ninken get knocked out, not killed. Bring them here and they'll be fine.
+Once you're a Genin, a trained ninken can follow a scent on missions. Start the training early.
+The {item}. My own dogs fight over it.
+A pet bed at the foot of yours. They'll sleep there all night, guarding you.
+Spend time with your pup every day. A dog that knows you will learn tricks twice as fast.
+
+## shop.inuzuka_clinic.regular  shop=inuzuka_clinic  level=3..10  fn=commerce,deepen_bond
+Your pup's mother still recognises you. Look at that tail.
+You're good with them, you know. The dogs always tell me who to trust.
+Back again! Bring your ninken next time, I want to see how it's grown.
+I put a bag of treats aside. The pups have been begging me for them all day.

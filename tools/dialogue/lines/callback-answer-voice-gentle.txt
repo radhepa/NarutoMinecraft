@@ -1,0 +1,102 @@
+# Callbacks for questions/voice-gentle.txt, in the gentle asker's voice.
+#! fn: callback
+#! tags: personality=gentle
+
+## callback.answer.q.pref.gentle_talk_animals.a1
+You talk to animals all the time too. The sparrows asked after you this morning. Well, I like to think so.
+
+## callback.answer.q.pref.gentle_talk_animals.a2
+Stray cats, you talk to. There's a grey one by the bathhouse who looks lonely. I thought of you.
+
+## callback.answer.q.pref.gentle_talk_animals.a3
+No animal friends yet, you said. Has one chosen you since? I hope so.
+
+## callback.answer.q.pref.gentle_animal_friend.a1
+How's your stray cat? I saved a little fish skin for it. Here.
+
+## callback.answer.q.pref.gentle_animal_friend.a2
+Your window birds. They'll remember your face, I said. Do they come when you open the shutter?
+
+## callback.answer.q.pref.gentle_animal_friend.a3
+No animal friend yet. When one chooses you, you'll know. I'm still sure of it.
+
+## callback.answer.q.values.gentle_harsh_words.a1
+Harsh words help sometimes, you said. A loud word to wake someone up. I've been thinking about that.
+
+## callback.answer.q.values.gentle_harsh_words.a2
+Never harsh words, we agreed. There's always a softer way. I found one today, with my neighbour.
+
+## callback.answer.q.values.gentle_harsh_words.a3
+Harsh words only from someone who loves you. I keep coming back to that. It's true.
+
+## callback.answer.q.pref.gentle_flower.a1
+I pressed a cherry blossom for you, from the last of the spring. Your favourite, you said.
+
+## callback.answer.q.pref.gentle_flower.a2
+A sunflower, for you. Always turning to the light, like I said. Here.
+
+## callback.answer.q.pref.gentle_flower.a3
+The morning glories opened on my fence at dawn. Your flower. I wished you'd seen them.
+
+## callback.answer.q.pref.gentle_flower.a4
+You had no favourite flower, so I found you one. A little violet. I think it suits you.
+
+## callback.answer.q.dilemma.gentle_hurt_bird.a1
+You'd take a hurt bird to the animal clinic. I did, yesterday. A pigeon. They say it'll fly.
+
+## callback.answer.q.dilemma.gentle_hurt_bird.a2
+A box and soft cloth, your way with a hurt bird. I've kept a box ready since you said that.
+
+## callback.answer.q.dilemma.gentle_hurt_bird.a3
+Leave it to nature, you said. I understand. I still can't, though.
+
+## callback.answer.q.dilemma.gentle_bird_free.a1
+It belongs to the sky, you said. I let a sparrow go this week. It hurt a little to watch. Like you said.
+
+## callback.answer.q.dilemma.gentle_bird_free.a2
+Keep it safe, you'd do. It would be loved. I keep thinking of the bird that would live with you.
+
+## callback.answer.q.dilemma.gentle_bird_free.a3
+Open the window and let it choose. Your answer is my favourite thing anyone's said all season.
+
+## callback.answer.q.values.gentle_strong_soft.a1
+Strong and gentle at once, you said, of course. I've been watching for it in people. You're one.
+
+## callback.answer.q.values.gentle_strong_soft.a2
+Gentleness isn't strength, you said. I'm still hoping to change your mind. Gently.
+
+## callback.answer.q.values.gentle_strong_soft.a3
+The strongest are the gentlest. Your words. I told a crying Academy child that today.
+
+## callback.answer.q.past.gentle_kindest_thing.a1
+Someone fed you, the kindest thing. So here's a little rice cake. Passing it along.
+
+## callback.answer.q.past.gentle_kindest_thing.a2
+Someone listened to you, the kindest thing. I'm listening now, if you'd like to talk.
+
+## callback.answer.q.past.gentle_kindest_thing.a3
+Someone showed you around when you were new. I showed a new family the market today. Because of you.
+
+## callback.answer.q.past.gentle_kindest_thing.a4
+Someone stood up for you once. I'm so glad they were there. I'd stand up for you too.
+
+## callback.answer.q.past.gentle_thanked.a1
+You thanked the person who was kind to you. I'm sure it made their whole week.
+
+## callback.answer.q.past.gentle_thanked.a2
+You haven't thanked them yet. It doesn't have to be grand. A rice ball and a word.
+
+## callback.answer.q.past.gentle_thanked.a3
+Passing it on, your thanks. I've seen you do it. I think they'd be proud.
+
+## callback.answer.q.pref.gentle_peaceful_place.a1
+The shrine, your peaceful place. The bell rang softly this morning. I thought of you.
+
+## callback.answer.q.pref.gentle_peaceful_place.a2
+The little garden by the river. Someone lit the stone lantern there last night. So pretty.
+
+## callback.answer.q.pref.gentle_peaceful_place.a3
+Your own window and the sky. That's enough, you said. I sat at mine this morning. You're right.
+
+## callback.answer.q.pref.gentle_peaceful_place.a4
+The Yamanaka flower shop. I went in for no reason at all today. Just to stand in the smell.

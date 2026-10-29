@@ -1,0 +1,747 @@
+# Small talk about work: the trade from the inside, its customers, tools and prices in ryo.
+# One block per job; the heading's fn says what the lines do.
+
+# -- ramen cook ---------------------------------------------------------------------------------------
+
+## chat.job  job=ramen_cook  fn=worldbuild
+The broth goes on at four in the morning: pork bones, kelp and a lot of patience. By the lunch rush it has had eight hours, and you can taste every one.
+Noodles get cut fresh twice a day. Come at three and you get the second batch, which between us is the better one.
+Running a noodle counter is nine parts washing up and one part cooking. Nobody mentions that when you pick up the ladle.
+Everyone thinks the secret is the broth. It's the soy base underneath, and that pot never leaves my sight.
+You can spot a Jonin at the counter: they eat fast, say nothing and always take the stool facing the door.
+Rain is the best thing that can happen to a ramen shop. Nobody wants cold rice when the street turns into a river.
+
+## chat.job  job=ramen_cook  fn=reveal_character
+I burned my first hundred pots of broth. The hundred-and-first I served, and the customer came back the next day. That was enough.
+The third stool wobbles and I won't fix it. The regular who sits there says it keeps a person humble.
+I've fed three generations of Genin at this counter. They come back as Jonin and still order the same bowl.
+
+## chat.job  job=ramen_cook  fn=commerce
+A plain bowl is six ryo, miso seven, and the special is whatever I was brave enough to try this morning.
+Ramen puts a little chakra back in you. Ask any Genin who comes in straight off the training ground.
+I take part-time help at the counter: scallions, bowls, the mop. Seventy ryo a shift, if nothing gets broken.
+Extra pork is two ryo, and I've seen customers argue over it like it was a border treaty.
+
+## chat.job  job=ramen_cook  fn=hook
+The boat that brings the pink swirl fish cake has been late three days running. If it misses tomorrow, the bowls go out bare.
+Somebody leaves exact change on the end stool before we open, every morning, with the shutter still locked. I would love to know how.
+
+# -- cook ----------------------------------------------------------------------------------------------
+
+## chat.job  job=cook  fn=worldbuild
+A good kitchen in the Leaf runs on rice. Two pots on the go from dawn, and if the second one burns, the whole lunch rush burns with it.
+Shinobi eat at odd hours. I keep a pot of miso warm until midnight for whoever comes back late from the gate.
+The tea houses buy my pickles by the jar. Plum, radish and ginger, salted for a month in the cellar.
+Onigiri are a cook's handshake. Square ones say the cook was in a hurry; round ones say they cared.
+Mackerel on Market Day, tofu the rest of the week, and eel only when the river is generous.
+
+## chat.job  job=cook  fn=reveal_character
+I learned to cook in my grandmother's kitchen by being told I was wrong every day for six years. She was right every time.
+I wanted to be a shinobi once. Now I feed them, which I think is the better half of the deal.
+I taste everything twice. Once for salt and once to be sure I wasn't fooling myself the first time.
+
+## chat.job  job=cook  fn=commerce
+A bento is eight ryo: rice, an egg roll, pickles, and fish if the boats came in.
+A full meal steadies the legs. Eat before a long night and you won't stagger home half as badly.
+If you have a cooking pot at home, buy the rice dry from the grocer. It works out at about a third of the price of mine.
+
+## chat.job  job=cook  fn=hook
+My big iron pan went missing from the back step. Iron that heavy doesn't wander off on its own.
+Someone keeps ordering a bento for a name nobody here knows, and paying in advance. The box always gets collected.
+
+# -- grocer --------------------------------------------------------------------------------------------
+
+## chat.job  job=grocer  fn=worldbuild
+The cabbages come in through the main gate before sunrise. If the cart's late, the whole market eats less salad.
+Rice sells by the scoop, miso by the cup, and soy by the bottle you bring yourself. Forget the bottle and you pay for one.
+Shinobi buy the strangest lists: twenty eggs, a sack of flour and eighty sheets of plain paper. I've stopped asking.
+Spring is bamboo shoots, summer is cucumbers, autumn is chestnuts and winter is whatever kept in the cellar.
+Half my shop is on shelves and half is in the storeroom behind, sorted by the date it came in. Oldest sells first.
+
+## chat.job  job=grocer  fn=reveal_character
+I can tell a good melon by knocking on it. My father could tell by looking. I'm still working on that.
+Ten years behind this counter and I've never once taken a day off on Market Day. It feels like skipping my own birthday.
+I keep a slate of who owes me what. Most of the names on it are Academy children who'll pay me back as Genin.
+
+## chat.job  job=grocer  fn=commerce
+An onigiri is three ryo and a bag of rice is twelve. If you cook for yourself, the rice goes further.
+I need someone to stock shelves on busy mornings. Forty ryo a shift, fifty if you can carry a sack of rice up the stairs.
+Dried fish keeps for a mission. Fresh fish keeps until noon. Buy accordingly.
+
+## chat.job  job=grocer  fn=hook
+Every third night a sack of chestnuts goes missing from the storeroom, and the window is far too small for a thief.
+The farmer who grows my radishes hasn't come in for a week. The gate guards say the cart never passed.
+
+# -- fishmonger ----------------------------------------------------------------------------------------
+
+## chat.job  job=fishmonger  fn=worldbuild
+River fish in the morning, sea fish twice a week on the coastal cart, and the eel are only for those who order a day ahead.
+Ice is the dearest thing on this stall. A water-style Genin earns good pocket money keeping my boxes cold in summer.
+You learn to read a fish by its eye. Clear and it swam this morning; cloudy and it's been travelling.
+The stall smells of the river no matter how often I scrub it. My family says I smell of it too.
+Mackerel goes salted for the Akimichi, filleted for the tea houses and whole for anyone who knows what they're doing.
+
+## chat.job  job=fishmonger  fn=reveal_character
+My hands haven't been warm since I was twelve. Twenty years of cold water and colder fish.
+I was the slowest gutter in my family. Now I'm the fastest on the street, because I was too stubborn to stay slow.
+The old neighbour upstairs buys one sardine a day for a cat, and pays in exact coins. I always slip in a second.
+
+## chat.job  job=fishmonger  fn=commerce
+Sardines are a ryo apiece, trout four, and eel I won't quote until I see what the river gives me.
+Fish grilled with salt is about the best thing a tired shinobi can eat. Cheaper than ramen, too.
+I'll trade you a fillet for an hour of carrying boxes. Fish now, or forty ryo at closing.
+
+## chat.job  job=fishmonger  fn=hook
+The drying racks behind the stall were picked clean two nights running. Whatever took the fish left the nets tied neatly.
+The coastal cart is two days late, and the driver has never once been late in eleven years.
+
+# -- farmer --------------------------------------------------------------------------------------------
+
+## chat.job  job=farmer  fn=worldbuild
+The fields outside the wall feed half the village. Every cabbage you eat came past the gate guards first.
+We plant rice in spring with the whole family in the paddy, knee-deep, singing badly to keep time.
+Shinobi trample the edges of the east field cutting across to the training grounds. We put up a fence; they jump it.
+A farmer's day starts before the shrine bell and ends when the light goes. The village sleeps on our schedule, not the other way round.
+The best fertilizer is the bath house's old straw. The bath keeper gives it free if we cart it ourselves.
+
+## chat.job  job=farmer  fn=reveal_character
+I've never been past the far hills and never wanted to. Everything I need grows on four fields.
+I name the scarecrows after Hokage. Out of respect, mind you. The crows have never shown them any.
+My grandfather planted the persimmon tree by the gate road. I eat the first one every autumn standing under it.
+
+## chat.job  job=farmer  fn=commerce
+Pulling weeds pays forty ryo a morning, and you get to take home whatever's bruised.
+I sell straight from the cart on Market Day. A cabbage is two ryo; the grocer sells the same one for three.
+
+## chat.job  job=farmer  fn=hook
+Something has been digging up the sweet potatoes on the far field, neat rows of holes, and not a footprint anywhere.
+The gate wants new paperwork for every cart now. My cabbages wait in the sun while the stamp goes round.
+The irrigation ditch by the old mill keeps silting up overnight. Someone's damming it upstream, or something is.
+
+# -- carpenter -----------------------------------------------------------------------------------------
+
+## chat.job  job=carpenter  fn=worldbuild
+A good Leaf house is joined, not nailed. Cut the joints true and the beams hold each other up for a hundred years.
+Cedar for the frames, cypress for the baths, and pine for anything a shinobi is likely to break.
+Half our work is repair. Training accidents, a stray paper bomb, a Genin who missed the roof they were jumping to.
+Tatami frames are cut to one size across the whole village. Your room is measured in mats, not in feet.
+The carpenters' lane wakes up to the sound of planes on cedar. You can find the yard with your eyes shut.
+
+## chat.job  job=carpenter  fn=reveal_character
+I keep my first chisel on a nail above the bench. It's blunt, chipped and worth more to me than the rest of the rack.
+I count the rings of every board before I cut it. Feels rude not to know how old something is before you saw it in half.
+I can't sit on a chair without checking the joints. My family has learned to stop asking why I'm on the floor.
+
+## chat.job  job=carpenter  fn=commerce
+A low table runs about sixty ryo. A full set for a flat is a week's work for a Genin, but it lasts a lifetime.
+Furniture sells back at half what you paid, so buy the piece you actually want the first time.
+Bring your own planks and cloth to a workbench and you can build simple pieces yourself. Just don't ask me to fix them after.
+
+## chat.job  job=carpenter  fn=hook
+A whole stack of seasoned cedar vanished from the yard overnight. Too heavy for one person to carry, and nobody heard a cart.
+The landlady on the corner wants the roof fixed before the rains, and pays in pickles. I'll need a pair of hands.
+
+# -- tailor --------------------------------------------------------------------------------------------
+
+## chat.job  job=tailor  fn=worldbuild
+Mission clothes come back to me in three states: torn, scorched or something I'd rather not ask about.
+Every Genin squad orders new outfits within a month of graduating. Then they ruin them within a month of that.
+Shinobi cloth is double-stitched at the knees and elbows. Civilians ask why; shinobi never do.
+Festival week is my busiest. Everyone wants a yukata, and nobody remembers to order it until three days before.
+The dye vats out the back run indigo, rust and dark green. Somehow every clan wants a shade that's just slightly different.
+
+## chat.job  job=tailor  fn=reveal_character
+I can guess a person's measurements across a crowded street. It makes me terrible company at festivals.
+My mother sewed for the old Hokage's household. She said a hem tells you whether the wearer runs or walks.
+I've stuck myself with a needle so many times my thumb has a callus shaped like a thimble.
+
+## chat.job  job=tailor  fn=commerce
+Rank outfits are issued, but a variant of your own runs a hundred ryo for the simple cut and up to six hundred for the fine one.
+A patch is five ryo, a new sleeve twenty, and a whole new jacket if you've been setting yourself on fire again.
+
+## chat.job  job=tailor  fn=hook
+Someone ordered a full mourning set, paid in advance, and never came to collect it. The name on the slip isn't anyone in the village.
+My bolt of good festival silk is gone. The shutter was locked, and the only thing out of place is a single loose thread on the step.
+
+# -- smith ---------------------------------------------------------------------------------------------
+
+## chat.job  job=smith  fn=worldbuild
+A kunai is three things: the point, the balance and the ring. Get the ring wrong and you can't hang it on a finger to throw.
+The forge never goes fully cold. I bank the coals at night and wake them at dawn with the bellows.
+Shuriken are punched from sheet steel, then filed by hand. The filing is where a cheap star and a good one part ways.
+Most of my steel comes from the quarry road and the rest from what Genin drag back from bandit camps.
+A tempered blade is the colour of straw at the edge and blue at the spine. Too far either way and it's a paperweight.
+
+## chat.job  job=smith  fn=reveal_character
+I lost the tip of a finger to my first anvil. The anvil's still here and so am I, so I call it even.
+I don't like making swords. A kunai builds a fence or saves a life; a sword only has the one use.
+My apprentice years were spent pumping bellows until my arms shook. I'd do it all again.
+
+## chat.job  job=smith  fn=commerce
+Kunai run five ryo for practice grade and up to forty for proper steel. Shuriken are cheaper, but you lose more of them.
+Work a few shifts at the forge, eighty ryo each, and I'll start teaching you what the anvil is for.
+Steel is ten ryo a bar from the rack, if you've got a forge at home and the nerve to use it.
+A blade you forge yourself can come out better than my shop stock, if your hammer is honest.
+
+## chat.job  job=smith  fn=hook
+Someone is buying up all the senbon wire in the market. A whole spool at a time, from every stall.
+
+# -- florist -------------------------------------------------------------------------------------------
+
+## chat.job  job=florist  fn=worldbuild
+Every flower in the shop means something. Hand someone yellow chrysanthemums by mistake and you'll spend the evening explaining.
+The cut flowers come in before dawn and go into cold water within the hour, or they sulk all day.
+Hospital visitors buy small bunches, nothing with a strong smell. The nurses have rules about that.
+Funerals take white, graduations take something bright, and apologies take whatever the shop has most of.
+Camellias drop their heads whole. Some families won't have them in the house, and I never argue.
+
+## chat.job  job=florist  fn=reveal_character
+I talk to the plants in the greenhouse. They don't answer, which makes them better listeners than most customers.
+My favourite is the plain white bellflower. It never sells, so I keep one on the counter for myself.
+I could never be a medic. I cried for an hour when the hydrangeas froze.
+
+## chat.job  job=florist  fn=commerce
+A single stem is three ryo, a small bunch twelve, and a proper arrangement starts at thirty.
+I take on help for watering and wrapping. Fifty ryo a shift and you go home smelling far better than a ramen cook.
+A potted plant brightens a flat for years. It counts as furniture, and it's the only furniture that grows.
+
+## chat.job  job=florist  fn=hook
+A bouquet of red spider lilies turns up on the step every week, unsigned. We don't even sell them.
+
+# -- teacher -------------------------------------------------------------------------------------------
+
+## chat.job  job=teacher  fn=worldbuild
+Lessons run nine till noon on weekdays. The afternoons are for marking, and the evenings are for wondering where the afternoon went.
+The first term is hand signs until the children dream of them. Rat, Ox, Tiger, over and over, until their fingers stop arguing.
+Every class has one child who can't sit still, one who won't speak and one who will be Hokage. Usually they're the same child.
+The target posts in the yard have been replaced six times this year. The children are getting better, which is the problem.
+History is the lesson they groan at, and it's the one that matters most once they're out past the wall.
+
+## chat.job  job=teacher  fn=reveal_character
+I keep every graduation photograph on the staff room wall. I can name every face, even the ones who didn't make it to Chunin.
+I failed the Academy exam my first year. I tell every class that, and it's the only lesson they never forget.
+Some nights I correct papers by lantern light until the ink runs out. My spouse says I'm married to the red brush.
+
+## chat.job  job=teacher  fn=hook
+Someone keeps leaving perfect answers to tomorrow's test on the blackboard before dawn. In chalk, in my own handwriting.
+One of my pupils has stopped coming to afternoon practice. The family says the child leaves every day at noon.
+
+## chat.job  job=teacher  fn=worldbuild,reveal_character
+A Clone that falls over is still a Clone. I mark the effort first and the jutsu second.
+The swing by the old tree out front has outlasted four instructors. We'd riot if anyone took it down.
+Parents ask me whether their child will make Genin. I tell them honestly: the child decides that, not me.
+
+# -- medic ---------------------------------------------------------------------------------------------
+
+## chat.job  job=medic  fn=worldbuild
+A medic's chakra has to be thinner than thread. Push too hard and you heal the wound and bruise everything around it.
+Mission season fills the third floor. Sprains, burns, a kunai in the shoulder, and one Genin a week who tried to catch a paper bomb.
+Every medic learns anatomy from scrolls first, then fish, then each other. In that order, thankfully.
+We revive anyone brought in knocked out, no questions asked and no bill sent. The village pays for that, and it's worth it.
+A field kit holds bandages, a needle, a splint and a soldier pill. Most of the job is the bandages.
+
+## chat.job  job=medic  fn=reveal_character
+I fainted at the sight of blood in my first week. My instructor made me hold the bowl for a month. I don't faint anymore.
+I count the patients I've sent home, not the ones I couldn't. It's the only way to sleep after a night shift.
+My hands shake when I'm not working. As soon as there's a wound in front of me, they go perfectly still.
+
+## chat.job  job=medic  fn=commerce
+Soldier pills are sixty ryo at the hospital stall. They refill chakra in a hurry, and taste like a punishment.
+Fall in the field and you wake up here in the morning, patched and rested. No bill, but your thrown kit stays wherever you dropped it.
+
+## chat.job  job=medic  fn=hook
+The herb room's stock of numbing salve keeps running out a week early. Somebody is either very clumsy or very careful.
+A patient on the third floor won't say what happened to their hands. I'd like to know before they leave.
+
+# -- nurse ---------------------------------------------------------------------------------------------
+
+## chat.job  job=nurse  fn=worldbuild
+The medics get the glory; the nurses get the sheets. Forty beds, changed every morning before the medics have had their tea.
+Visiting hours are ten to six. Shinobi come in through the window at midnight anyway, and I've stopped shouting about it.
+Every bed on the second floor has a bell. The one by the window has been rung more than all the others together.
+Genin are the worst patients. They try to leave the moment they can stand, and half of them can't.
+The hospital kitchen makes rice porridge for everyone, no matter what's wrong with them. It works more often than you'd think.
+
+## chat.job  job=nurse  fn=reveal_character
+I'm not a shinobi and never will be. But I've held the hand of more Jonin than most Jonin have met.
+I knit between rounds. The children's ward has a scarf on every bed, and none of them match.
+My worst habit is checking everyone's pulse when I shake their hand. My friends have learned to wave instead.
+
+## chat.job  job=nurse  fn=hook
+The night shift is short two nurses this week. Someone who can stay awake until dawn would be a real help, and the tea's free.
+An old patient keeps asking for the same visitor by a name none of us recognise. I'd like to find them before the week is out.
+The children's ward has lost its picture book, the one with the frog Hokage. It's the only thing that gets them to sleep.
+
+## chat.job  job=nurse  fn=worldbuild,reveal_character
+Flowers go on the sill, not the bedside table. Too many patients have knocked a vase onto a fresh bandage.
+The worst noise in this building is a quiet ward. I'd take a room full of complaining Genin over silence any day.
+
+# -- guard ---------------------------------------------------------------------------------------------
+
+## chat.job  job=guard  fn=worldbuild
+A patrol walks the same streets in a different order every night. Predictable is the one thing a guard must never be.
+Most of my shifts are lost children, lost purses and lost tempers outside the bath house at closing.
+The guard house keeps a lantern burning on every corner it watches. Count them from the Rock and you can see our route.
+Fights on Market Day are always over the same three things: the last eel, the best stall and whose dog it was.
+We relieve the watch at six and at six. Twelve hours on the cobbles and you learn which stones wobble.
+
+## chat.job  job=guard  fn=reveal_character
+I joined the guard because I wasn't fast enough for the field. Turns out walking slowly and watching closely is its own skill.
+I know every cat on my route by sight. They're better informants than the people.
+I've never drawn my blade in the street. I mean to keep it that way until I retire.
+
+## chat.job  job=guard  fn=hook
+Lanterns on the east lane keep going out at the same hour every night. Not blown out: someone turns the wick right down.
+A shopkeeper on the market street swears the shutters were locked from the inside after a theft. I'm still turning that one over.
+Someone's been chalking little arrows on the walls along my route. They don't point anywhere I can see.
+
+# -- gate guard ----------------------------------------------------------------------------------------
+
+## chat.job  job=gate_guard  fn=worldbuild
+Every traveller signs the book: name, village, purpose and how long. We fill one book a month and the archive keeps them all.
+Carts come in at dawn, squads go out at eight, merchants arrive at noon. You could set a clock by the gate.
+The booth has two chairs, one cushion and a kettle that's older than both of us.
+The painted characters on the doors get touched up every spring. Climbing up there is the most exciting thing that happens all season.
+A squad leaving on a mission salutes the booth. A squad coming back usually just waves, if they can lift an arm.
+
+## chat.job  job=gate_guard  fn=reveal_character
+Nine years at this gate. I've seen everyone leave, and nearly everyone come back. The nearly is the part I think about.
+People think gate duty is boring. It is. That's how you know it's working.
+We play shogi between carts. The board's been on the counter so long the pieces have worn smooth.
+
+## chat.job  job=gate_guard  fn=guide
+Past the gate is the outer road and the training fields. Beyond the far hills you need a mission scroll and a stamped pass.
+Squads leave from here, but the paperwork starts at the Mission Desk. Get it stamped there first or you'll be turned round.
+
+## chat.job  job=gate_guard  fn=hook
+A farmer's cart has been stuck at the booth all morning over a missing stamp. The cabbages are not getting any fresher.
+Three travellers this month signed the book in the same handwriting under different names. Probably nothing. Probably.
+
+# -- merchant ------------------------------------------------------------------------------------------
+
+## chat.job  job=merchant  fn=worldbuild
+I buy cloth from the coastal towns, sell it here, buy tea here and sell it there. The road between is where the money goes.
+The Leaf is the safest market on the road, which means it's also the one where everyone haggles hardest.
+Market Day draws carts from three valleys. I've done more business by noon on a Market Day than in the rest of the week.
+A merchant's caravan hires Genin to guard it. Cheap, eager and they mostly know which end of a kunai goes forward.
+
+## chat.job  job=merchant  fn=reveal_character
+I've crossed the far hills forty times. The only thing I've never got used to is coming home and finding the village bigger.
+My ledger is older than I am. My grandmother started it, and I still write in her columns.
+I can't sleep in a bed that doesn't move. Too many nights on a cart.
+
+## chat.job  job=merchant  fn=commerce
+Everything has a price, and in the Leaf it's usually in ryo notes. Coins are for the road, where nobody trusts paper.
+The pawn shop gives half what a thing's worth. I give sixty percent, if you can wait until my cart's back.
+Prices go up three days before a festival and fall the morning after. Buy your lanterns in the quiet weeks.
+Hiring a squad of Genin for a D-rank costs less than you'd think. Getting them to stop chasing the client's cat is extra.
+
+## chat.job  job=merchant  fn=hook
+A crate of mine came in with the seals intact and half the tea missing. Nobody on my side opened it, and I'd swear to that.
+My usual supplier in the river town hasn't answered three letters. Either they're ill, or they've found a better buyer.
+
+# -- librarian -----------------------------------------------------------------------------------------
+
+## chat.job  job=librarian  fn=worldbuild
+The Academy library has four thousand scrolls and one rule: nothing leaves the room still rolled the wrong way.
+Children borrow the jutsu scrolls and bring them back with fingerprints on the hand sign pages. That's how I know they read them.
+The history shelf is the dustiest and the most important. I give it a wipe every Metalday and nobody notices.
+Overdue books get a reminder slip, then a visit, then a note to the instructor. The note usually works.
+A library is the quietest place in a loud village. Even the Inuzuka children whisper in here.
+
+## chat.job  job=librarian  fn=reveal_character
+I read every scroll before it goes on the shelf. I've read some of them four times. The cookery ones mostly.
+I wanted to be a scholar in the capital. Then I found out the Leaf's library needed someone, and I never left.
+I can't stand a bent corner. It's not personal. It's just wrong.
+
+## chat.job  job=librarian  fn=guide
+The beginners' scrolls on chakra control are on the lowest shelf by the window. Start there, not with the fire jutsu.
+The workshop is through the door at the end of the library. Mind the shavings; nobody sweeps them up.
+
+## chat.job  job=librarian  fn=hook
+Eleven scrolls are overdue, scattered across the whole village. If someone could fetch them back, I'd stop dreaming about them.
+Somebody returns a scroll to the wrong shelf every night. Always the same one, always one shelf to the left.
+
+# -- tea master ----------------------------------------------------------------------------------------
+
+## chat.job  job=tea_master  fn=worldbuild
+Green tea for the morning, roasted tea after dinner and barley tea in summer. Serve them in the wrong order and the regulars notice.
+The water comes from the shrine spring, carried up in the morning. Tap water makes good tea; spring water makes better.
+A tea house is the village's parlour. Half of the Leaf's marriages, quarrels and business deals started on these cushions.
+Whisk the matcha until the foam is like a calm pond. If you can see the bottom of the bowl, start again.
+The ceremony room upstairs has one rule: shinobi leave their pouches at the door. Even the Jonin.
+
+## chat.job  job=tea_master  fn=reveal_character
+I've poured tea for two Hokage in this room. Both of them asked for a second cup, and both of them forgot to pay.
+I spent three years learning to fold a cloth. People laugh, until they see what a badly folded cloth does to a ceremony.
+My mother ran this house and her mother before. I'll be the first to run it without a cat on the counter. I miss the cat.
+
+## chat.job  job=tea_master  fn=commerce
+A pot of green tea is four ryo. Drink it in the evening and you'll stay sharp an hour longer than you should.
+Dango with tea is the classic pairing. My dango aren't the best on the street, but they're the best with tea.
+I need someone to sweep the garden path and change the hanging scroll. Fifty ryo a shift, and all the tea you want.
+
+## chat.job  job=tea_master  fn=hook
+The tea house across the corner dropped its prices again. One more week of this and one of us closes.
+
+# -- bath keeper ---------------------------------------------------------------------------------------
+
+## chat.job  job=bath_keeper  fn=worldbuild
+The boilers go on at three in the afternoon and the first bathers arrive at four. By six the steam's so thick you can't see the mural.
+Wash first, then soak. I've watched Jonin shrink like children when I catch them skipping the stools.
+The mural on the big wall is the Hokage Rock at sunrise. It's been repainted twice, and the second time someone gave the third face a moustache.
+Training ground regulars come in caked in mud at sundown. I keep a separate tub for them, and I'm not ashamed.
+Everyone in the village passes through here sooner or later. A bath house hears more news than the Residence.
+
+## chat.job  job=bath_keeper  fn=reveal_character
+I've never once had a bath in my own bath house. By closing, the last thing I want is more hot water.
+I keep a list of who sings in the tubs. It's longer than you'd expect, and it includes a council member.
+My grandfather built the boiler. I talk to it every morning, and it starts more willingly when I do.
+
+## chat.job  job=bath_keeper  fn=commerce
+A soak is three ryo, a towel one more, and the milk in the cold box is two. It's the best seven ryo in the Leaf.
+A long soak after a hard day eases the legs. You won't wake up stiff, and you'll sleep like a stone.
+
+## chat.job  job=bath_keeper  fn=hook
+The lost and found basket is full again: a comb, a single sandal and a wooden charm. Somebody must miss them.
+The boiler's been coughing all week. If it gives out before the festival, the whole village goes unwashed.
+
+# -- pawnbroker ----------------------------------------------------------------------------------------
+
+## chat.job  job=pawnbroker  fn=worldbuild
+Everything on these shelves has a story. Most of them start with somebody needing ryo in a hurry.
+Bandit camp loot comes through my door every week. I don't ask where it came from, because I already know.
+The back room is for things people promised to come back for. Some of them have waited longer than I have.
+I'm the only shop in the Leaf where a rusty sword and a silver hairpin sit side by side, and I like it that way.
+
+## chat.job  job=pawnbroker  fn=reveal_character
+I keep a ledger of every pledge, every name and every date. Some days I read it the way other people read novels.
+I hate selling a pledge that wasn't collected. I give it a month longer than the law says, every time.
+A child once pawned a marble to buy a parent's birthday present. I still have the marble. The child is a Chunin now.
+
+## chat.job  job=pawnbroker  fn=commerce
+I pay half the value, in notes, on the spot. If you want the full price, go and haggle in the market.
+Salvage from a bandit camp is the only loot worth bringing in. Leaves and rocks I can find on my own.
+Buy back a pledged piece within the month and you pay what I paid plus a tenth. After that, it's on the shelf.
+
+## chat.job  job=pawnbroker  fn=hook
+Somebody pawned a forehead protector with a village mark I've never seen. They left before I could ask a single question.
+A family heirloom came in that I'm almost sure was reported stolen. I'd rather return it than sell it.
+
+# -- vet -----------------------------------------------------------------------------------------------
+
+## chat.job  job=vet  fn=worldbuild
+Ninken come in with thorns in their pads, ticks in their ears and, once a month, a kunai in somewhere awkward.
+The clinic sees more dogs than anything else, but I've stitched a cat, two hawks and a very offended tortoise.
+A ninken's nose is a weapon. I treat it like one: no smoke, no perfume and no spicy food within reach.
+Every pup in the clan gets checked at six weeks, weighed at twelve and paired with a partner at the clan day.
+Village cats are the hardest patients. A ninken will hold still for a stitch. A cat considers it a challenge.
+
+## chat.job  job=vet  fn=reveal_character
+I was bitten twenty-three times in my first year. I stopped counting after that, which is a kind of progress.
+I wanted to be a medic, but people complain too much. Dogs just look at you, and you know.
+My own dog is fourteen and grey round the muzzle. It still meets me at the gate every evening.
+
+## chat.job  job=vet  fn=commerce
+Adopting a pup is free; feeding it isn't. Budget a few ryo a day for meat, more once it starts growing.
+A check-up is five ryo, a stitched paw fifteen. Pets are knocked out, never killed, but they still need mending afterwards.
+
+## chat.job  job=vet  fn=hook
+Three ninken came in this week with the same scratch on the same leg. Something near the wall has thorns we don't know.
+A stray cat keeps bringing kittens to the clinic step, one a day, as if it's lending them to us.
+
+# -- priest --------------------------------------------------------------------------------------------
+
+## chat.job  job=priest  fn=worldbuild
+The shrine bell rings at dawn and dusk, and once more at midnight on New Year. The rest of the year, the crows do the ringing.
+Wish plaques go on the wall by the gate. I read them all, though I'm only supposed to burn them at year's end.
+Shinobi come here the night before a long mission. They don't pray, mostly. They just stand under the tree for a while.
+The rope over the main hall is renewed every autumn. It takes eight people and an argument to tie the knots.
+Weddings in spring, the dead in autumn and children's blessings on the first warm day. The shrine keeps the village's calendar.
+
+## chat.job  job=priest  fn=reveal_character
+I sweep the steps every morning. All two hundred of them. It's the only part of the job I'm sure I'm doing right.
+I was a Genin once, for a year. I found I preferred keeping lanterns lit to blowing things up.
+The fox statues by the gate wear the knitted caps I make them each winter. Somebody steals one every year, and I knit another.
+
+## chat.job  job=priest  fn=commerce
+A wish plaque is five ryo and a charm for safe travel ten. The money goes on lamp oil and rope.
+Fortunes are two ryo. Bad ones get tied to the branch outside and left behind for the wind to take.
+
+## chat.job  job=priest  fn=hook
+Somebody has been granting the small wishes on the plaques before I can read them. A lost doll found, a fence mended. I'd like to thank them.
+The old stone lantern on the lower steps has a crack running through it, and it grows a little every week.
+
+# -- painter -------------------------------------------------------------------------------------------
+
+## chat.job  job=painter  fn=worldbuild
+Half my work is shop signs. The other half is fixing shop signs after Genin practise their throws on them.
+The best light in the village is on the old artists' lane at four in the afternoon. Every painter in the Leaf knows it.
+I grind my own colours: red from cinnabar, blue from the river stones and black from the soot of the tea house chimney.
+The Hokage Rock is the hardest thing to paint. The faces change every hour with the light, and they never sit still.
+Lanterns for the festival are painted in the last week before it. The lane smells of glue and paper for days.
+
+## chat.job  job=painter  fn=reveal_character
+I paint the same view of the river every morning. Two hundred paintings so far, and none of them are right.
+My first commission was a ramen shop's menu. I misspelled miso, and they kept it up for four years out of spite.
+I can't stand a crooked frame in anyone's house. I've straightened pictures at funerals.
+
+## chat.job  job=painter  fn=commerce
+A small scroll painting is forty ryo and a poster for your wall twenty. Furniture's fine, but a wall wants something to look at.
+I'll paint a nameplate for your door for ten ryo. Be sure of the spelling first.
+
+## chat.job  job=painter  fn=hook
+My best brush went missing from the studio, and a painting of a heron turned up on the bath house wall the same night. Not bad, either.
+
+# -- courier -------------------------------------------------------------------------------------------
+
+## chat.job  job=courier  fn=worldbuild
+A courier knows every shortcut in the village: the alley behind the tea house, the steps under the bridge, and which roofs hold.
+Letters inside the village go by foot, letters outside by hawk, and the urgent ones by a Genin with very fast legs.
+The Residence sends a sealed bundle to the clan seats every morning. A sealed letter is never opened by its carrier.
+Rain is bad, snow is worse and Market Day is a nightmare. You can't run a parcel through that crowd.
+I've delivered to every door in the Leaf. Some I've knocked on so often the dogs stopped barking at me.
+
+## chat.job  job=courier  fn=reveal_character
+I can't walk anywhere slowly anymore. My family says I go to the bath house like there's a fire.
+My first delivery was a cake. I ran so fast the cake didn't arrive as a cake.
+I keep a map of the village in my head that's better than the one at the Residence. Nobody believes me until they're lost.
+
+## chat.job  job=courier  fn=commerce
+Inside the wall, a letter is a ryo and a parcel three. Past the gate, the hawk charges more than I do.
+I need runners on festival days. Sixty ryo a shift, and you get to see every corner of the village before lunch.
+
+## chat.job  job=courier  fn=hook
+A parcel came in addressed to a house that's been empty for ten years. Somebody has to know who sent it.
+A letter on my round has gone missing twice, the same letter, sent again. I'd like to know where it keeps ending up.
+
+# -- dango maker ---------------------------------------------------------------------------------------
+
+## chat.job  job=dango_maker  fn=worldbuild
+Three colours on a stick: pink for spring, white for winter and green for summer. Autumn is the stick, I suppose.
+The rice flour gets kneaded by hand until it's as soft as an earlobe. That's the old test and nobody has found a better one.
+Grilled dango with sweet soy go on the brazier out front. The smell brings in more customers than any sign.
+Cherry blossom season sells more dango in a week than the whole of winter. We work through the night for it.
+A dango stick has to be bamboo, split thin. Pine splinters and cedar tastes, and both are bad for business.
+
+## chat.job  job=dango_maker  fn=reveal_character
+I ate dango for breakfast every day of my childhood. My teeth have opinions about that now.
+I tried to invent a fourth colour once. Purple. The customers called it bruised dango and I gave up within a week.
+I never sell the last stick of the day. That one is mine, and it's always the best one.
+
+## chat.job  job=dango_maker  fn=commerce
+Three ryo a stick, eight for three. A stick or two speeds your chakra back up, so the training ground crowd buys them by the dozen.
+Sweet soy or bean paste, take your pick. The soy ones keep better in a pouch, if you're taking them on a mission.
+
+## chat.job  job=dango_maker  fn=hook
+Someone has been buying exactly forty sticks every morning for a week and carrying them toward the Hokage Rock.
+
+# -- barbecue cook -------------------------------------------------------------------------------------
+
+## chat.job  job=barbecue_cook  fn=worldbuild
+The grills here burn charcoal, never wood. Wood smoke tastes of the forest; charcoal tastes of nothing, so the meat can talk.
+A squad celebrating a mission orders three plates of beef, two of pork and whatever the loudest member can't finish.
+Every table has its own grill, and every table has one person who insists on doing all the turning.
+The marinade is soy, pear, garlic and something the clan won't let me write down.
+After the Chunin Exams, the whole house is booked for a week. Winners and losers both eat here, just at different tables.
+
+## chat.job  job=barbecue_cook  fn=reveal_character
+I stopped smelling smoke years ago. My clothes haven't, and my family hangs them on the porch at night.
+I can tell when beef is done by the sound. A good sizzle says turn me. A loud one says too late.
+Some cooks get burns on their hands. I get them on my forearms, from leaning over to steal a bite.
+
+## chat.job  job=barbecue_cook  fn=commerce
+A plate of beef is twelve ryo, pork ten, and the vegetables are free for anyone who actually eats them.
+Barbecue before a spar puts power in your fists. Not much, but enough for the taijutsu crowd to swear by it.
+
+## chat.job  job=barbecue_cook  fn=hook
+The charcoal merchant hasn't come in two weeks. If the stock runs out, we're cooking on the shrine's candles.
+
+# -- ferryman ------------------------------------------------------------------------------------------
+
+## chat.job  job=ferryman  fn=worldbuild
+The ferry crosses where the river is too wide for stepping stones and too slow for anything else. Fifteen crossings on a good day.
+Shinobi can walk across the water, so they think the ferry is for old people. Then their chakra runs out halfway.
+The river is three different rivers: brown in spring, green in summer and grey all winter.
+I pole the boat, I don't row it. A pole knows the bottom; an oar only knows the surface.
+The river people mend nets on the far bank in the mornings. If you want to know anything, ask there, not in the market.
+
+## chat.job  job=ferryman  fn=reveal_character
+I've poled this ferry for thirty-one years. My father did it for forty. I don't think I'll beat him.
+I talk to the herons. They don't trust me yet, but they're closer than they used to be.
+I've never learned to swim. Nobody believes it, and I'm too old to start now.
+
+## chat.job  job=ferryman  fn=commerce
+A crossing is one ryo. Carts are five, and dogs are free if they sit still.
+
+## chat.job  job=ferryman  fn=hook
+They're building a new bridge downstream. When it opens, nobody will need the ferry. I'd like one good season first.
+Somebody keeps untying the boat at night and bringing it back before dawn, tied to the wrong post.
+
+# -- herbalist -----------------------------------------------------------------------------------------
+
+## chat.job  job=herbalist  fn=worldbuild
+The herb gardens by the hospital grow eighty plants, and seven of them could kill you. We label those twice.
+Drying racks need shade and wind, never sun. Sun cooks the leaves and leaves you with expensive hay.
+Medics buy salves, cooks buy spices, and the Academy buys everything that smells strong enough to wake a class.
+Half of a good herbalist's work is knowing which plant looks almost exactly like the one you want.
+Pick yarrow at dawn, mugwort at noon and moonflower only after dark. Plants have schedules too.
+
+## chat.job  job=herbalist  fn=reveal_character
+I taste a little of every new batch. My tongue can name a bitter root from across the room.
+I can't walk past a weed without checking what it is. It makes my walks very slow.
+My grandmother said a garden tells you about the gardener. Mine says I never have enough time.
+
+## chat.job  job=herbalist  fn=commerce
+A burn salve is ten ryo and a sleep tea four. I only sell the strong mixes to medics.
+Weeding the gardens pays forty ryo a morning, and you'll learn three plants that save lives.
+
+## chat.job  job=herbalist  fn=hook
+The hospital is short on fever root, and the patch by the river that usually supplies it has been dug up.
+A whole tray of drying moonflower vanished overnight. It's useless to anyone who doesn't know how to brew it.
+
+# -- kennel keeper -------------------------------------------------------------------------------------
+
+## chat.job  job=kennel_keeper  fn=worldbuild
+Forty dogs, forty bowls, forty names. Feeding time is the loudest ten minutes in the whole village.
+A ninken pup sleeps in a pile with its littermates until it chooses a partner. After that, it sleeps at its partner's feet.
+The run behind the kennels is the length of three training grounds. The dogs still find a way to dig under the fence.
+Every kennel has a slate with the dog's name, age, partner and favourite food. The food column causes the most arguments.
+The old ninken get the sunny kennels. They've earned the warm floor more than any of us.
+
+## chat.job  job=kennel_keeper  fn=reveal_character
+I've been bitten, chased, licked and sat on, sometimes all by the same dog before breakfast.
+I keep a jar of dried fish in my pocket. My family complains, but every dog in the village knows my name.
+When a dog retires, it comes home with me. I've got six now, and a very small flat.
+
+## chat.job  job=kennel_keeper  fn=commerce
+A pup is yours to adopt at the clinic. Just know it'll want feeding, walking and the best spot on your bed.
+I pay forty ryo a shift for kennel help: brushing, bowls and the bit we don't talk about.
+
+## chat.job  job=kennel_keeper  fn=hook
+One of the young ninken slips its kennel every night and comes back at dawn smelling of the river.
+
+# -- second helpings: more from each trade -----------------------------------------------------------------
+
+## chat.job  job=barbecue_cook  fn=worldbuild,commerce
+The tongs are the cook's, the grill is the guest's. Reach for my tongs and you'll be eating your beef raw.
+Lunch is quiet, the dinner rush is a battle, and the last table always wants one more plate just as the coals die.
+A squad's first meal after graduating is on the house. It's the oldest custom on this street, and the best advertising.
+
+## chat.job  job=dango_maker  fn=worldbuild,reveal_character
+The brazier takes an hour to come up to heat, so I light it before I've even had my tea.
+Children count their pocket money at my counter one coin at a time. I never hurry them; they're my future regulars.
+Regulars at the tea house next door order from me through the window. We've passed sticks across that gap for twenty years.
+On festival nights I sell dango from a tray round my neck. My shoulders remember it for a week.
+
+## chat.job  job=ferryman  fn=worldbuild,reveal_character
+Fog on the river at dawn is so thick I steer by the sound of the bank. The frogs tell me where the shallows are.
+The boat's had three new hulls and four new poles, but the bench is the one my father carved. That makes it the same boat.
+Market Day mornings, the ferry carries more vegetables than people. The cabbages are better company.
+Anglers on the far bank wave me over just to ask what's biting. I always tell them trout, and I'm usually right.
+
+## chat.job  job=guard  fn=worldbuild,reveal_character
+The night shift's worst enemy isn't thieves. It's the bakery on the corner at four, when the first loaves come out.
+A guard learns the village by its sounds. The tea house shutters at ten, the bath house boiler at eleven, the last dog at midnight.
+My boots get resoled every season. I wear through the left one first, and nobody can tell me why.
+
+## chat.job  job=kennel_keeper  fn=worldbuild,reveal_character
+Bath day for the kennels is a war. The dogs win every time, and I go home wetter than they do.
+A ninken that won't eat is the first sign of trouble. I check every bowl at sundown, all forty of them.
+The pups learn their names in a week, their partner's scent in a day and the sound of the treat jar in an hour.
+
+## chat.job  job=painter  fn=worldbuild,reveal_character
+Festival masks are the best-paid work of the year. Fox, cat and crane sell out; nobody ever wants the frog.
+I carry a stub of charcoal and a folded sheet in my sleeve. You never know when a cloud will do something worth keeping.
+A painter's apprentice spends a year mixing colours before touching a brush. I spent two, because I kept eating the persimmon black.
+Ink for a scroll has to dry in the shade. In the sun it cracks, and the crack runs right through the Hokage's nose.
+
+## chat.job  job=bath_keeper  fn=worldbuild,reveal_character
+Steam rooms are for the old regulars at dawn. They've had the same seats for forty years, and they'll tell you so.
+The pails are cypress, the stools are cypress, and the whole place smells like a forest after rain. I'll fight anyone who brings in plastic buckets.
+Closing is midnight. I scrub the tiles till one, and I've never once been too tired to enjoy the quiet.
+
+## chat.job  job=courier  fn=worldbuild,reveal_character
+The hawk loft is on the roof of the Residence. The birds go out at dawn and come home by dusk, and a late hawk is a worry.
+I've worn out more sandals than any shinobi in the Leaf. The cobbler on the main street gives me a regular's price.
+Every courier has a route they hate. Mine is the steps up to the shrine, all two hundred of them, with a parcel of lamp oil.
+
+## chat.job  job=florist  fn=worldbuild,reveal_character
+A Genin bought a single sunflower every day for a week and wouldn't say who for. I wrapped each one a little nicer.
+The greenhouse has to be warm in winter, cool in summer and damp all year. It's more demanding than any customer.
+Market Day I set out buckets on the street. By noon the lilies are gone and only the stubborn carnations are left.
+
+## chat.job  job=gate_guard  fn=worldbuild,reveal_character
+The kettle in the booth goes on before the first cart and doesn't go off until the last squad's home.
+Travellers always ask how far to the Hokage Rock. I point up. They look up. That's usually the best part of my day.
+Foreign merchants try to tip us. Rules say no, so we point them to the dango stall instead. The dango maker loves us.
+
+## chat.job  job=herbalist  fn=worldbuild,reveal_character
+Mint spreads like gossip. Plant it anywhere but a pot and it'll be in your neighbour's garden by summer.
+Every jar on my shelf is labelled in two hands: mine, and the hand of whoever taught me. The second hand is fading.
+The bees from the Aburame gardens visit my lavender. We've never spoken about it, but I think they approve.
+
+## chat.job  job=librarian  fn=worldbuild,reveal_character
+The reading tables are oak and older than the Academy itself. Every one is carved with initials I pretend not to see.
+I keep a pot of tea behind the desk and a blanket for anyone who falls asleep over the history scrolls.
+Spring is the busiest season here. The final-year pupils remember the exam exists and descend on the jutsu shelves.
+
+## chat.job  job=medic  fn=worldbuild,reveal_character
+A medic's first lesson is to heal a fish without killing it. My first fish didn't survive. Neither did my second.
+The night rotation is quiet until it isn't. Two in the morning is when a squad comes in from the road.
+We keep a shelf of fresh clothes by the ward door, because nobody should leave a hospital in what they arrived in.
+
+## chat.job  job=pawnbroker  fn=worldbuild,reveal_character
+The bell over the door is a bandit's bell I bought for three ryo. It's the only honest thing a bandit ever gave anyone.
+Rainy days, people come in to sell. Sunny days, they come in to buy back. I could predict the weather by my ledger.
+I polish every blade that comes in, even the ones nobody will buy. A thing deserves to be looked after while it waits.
+
+## chat.job  job=priest  fn=worldbuild,reveal_character
+The big cedar behind the hall is older than the village. We don't tie anything to it; it has seen enough.
+Children dare each other to ring the bell at night. I pretend to sleep through it. It's cheaper than buying a lock.
+New Year's Eve, the queue for the bell reaches the bottom step. I hand out hot sweet sake to everyone old enough.
+
+## chat.job  job=tailor  fn=worldbuild,reveal_character
+Pockets inside the sleeve are a shinobi favourite. Civilians want them too now, for snacks, mostly.
+The fitting room curtain is the oldest thing in the shop. Everyone in the Leaf has stood behind it at least once.
+Chunin vests are made elsewhere, but they all come here to have the straps let out after a winter of good dinners.
+
+## chat.job  job=tea_master  fn=worldbuild,reveal_character
+The hanging scroll changes with the season. Plum blossom in spring, a waterfall in summer, a single persimmon in autumn.
+Guests sit on the cushion facing the garden. Hosts sit facing the guests. Nobody sits facing the door, not even Jonin.
+The best tea in the house is the one I pour for myself at closing, when the cushions are empty and the garden is dark.
+
+## chat.job  job=vet  fn=worldbuild,reveal_character
+Hawks from the courier loft come here for their claws. They hate me, and I can't blame them.
+The waiting room is half dogs, half children holding dogs, and one cat glaring at all of them from the top shelf.
+The clinic's own dog sleeps under my desk and growls at anyone who comes in with a needle.
+
+## chat.job  job=carpenter  fn=worldbuild
+Screens are the hardest piece to make well. Paper that sags tells everyone your frame was off by a hair.
+
+## chat.job  job=cook  fn=worldbuild
+The kitchen fire goes out at nine, but the rice for tomorrow soaks overnight. Every good day starts the evening before.
+
+## chat.job  job=farmer  fn=worldbuild
+Harvest week the whole field shuts its gate at dawn and opens it at dusk. Anyone who helps eats dinner with the family.
+
+## chat.job  job=fishmonger  fn=worldbuild
+The gutting knife is sharpened every morning on the same stone. The stone has a dip in it now, the shape of my wrist.
+
+## chat.job  job=grocer  fn=worldbuild
+Shinobi families buy rice in big sacks and forget to come back for the change. I keep an envelope for each of them.
+
+## chat.job  job=merchant  fn=worldbuild
+Caravans leave in the cool before dawn and stop at noon. The road teaches you patience whether you want it or not.
+
+## chat.job  job=nurse  fn=worldbuild
+Nurses carry three things everywhere: a watch, a pencil and a sweet for whichever child is crying the loudest.
+
+## chat.job  job=smith  fn=worldbuild
+Shinobi bring blades back nicked and ask for them sharpened by morning. Morning, always. Nobody ever asks for next week.
+
+## chat.job  job=teacher  fn=worldbuild
+Graduation day, the instructors tie each headband by hand. Mine shake every year, and I've done it for twelve.
+
+## chat.job  job=ramen_cook  fn=worldbuild
+The lanterns over the counter go on at dusk, and that's when the regulars start coming in from the training grounds.

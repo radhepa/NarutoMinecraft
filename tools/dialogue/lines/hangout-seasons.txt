@@ -1,0 +1,233 @@
+# Seasonal hangouts (LIFE_TOGETHER.md §3): flower viewing in spring, swimming at the lake in summer, moon
+# viewing in autumn, a snowball fight in winter. Parts as in hangout-meals.txt; callbacks in
+# callback-hangout-seasons.txt.
+#! kind: cycle
+#! fn: deepen_bond
+
+# == flower viewing (spring) =======================================================================
+## hangout.flower_viewing.ask
+The blossoms are out in the flower park! Come and sit under them with me?
+Flower viewing, {player}? I'll pack a lunch box. You bring a mat.
+The cherry trees won't last the week. Let's see them while they're perfect.
+## hangout.flower_viewing.invite
+Flower park, midday. I've claimed a spot under the biggest tree.
+A note with a petal pressed inside: "Blossoms are out. Come and look with me."
+## hangout.flower_viewing.yes
+Flower viewing? Oh, yes. I've been waiting all year.
+I'd love to. I'll make sweet rice cakes for under the trees.
+## hangout.flower_viewing.no.busy
+I'm busy today. {when}? Let's hope the petals hold.
+Can't right now. {when}, before they fall?
+## hangout.flower_viewing.no.not_today
+The pollen's making me sneeze. Another day.
+It's too windy today. The petals are all blowing off.
+## hangout.flower_viewing.no.not_their_thing
+Sitting under trees looking at flowers? Not really my thing. Sorry.
+## hangout.flower_viewing.no.not_close_enough
+A whole afternoon under the blossoms? Let's know each other better first.
+## hangout.flower_viewing.arrive
+Mat down, shoes off. Now look up. Isn't it something?
+Here's our spot. Pink above, pink below. Sit, sit.
+## hangout.flower_viewing.rough
+Crowded, windy, and we didn't have much to say. The flowers were pretty, though.
+## hangout.flower_viewing.fine
+A pleasant afternoon under the trees. Thank you.
+## hangout.flower_viewing.good
+I'm covered in petals and I don't mind at all. Lovely day, {player}.
+That was so peaceful. Let's do it every spring.
+## hangout.flower_viewing.great
+That was the most beautiful afternoon. I'll think of it every spring for the rest of my life.
+Petals, sunshine, sweet rice and you. I couldn't ask for more.
+## hangout.flower_viewing.stood_up
+I sat under the blossoms alone all afternoon. They fell on the empty half of the mat.
+## hangout.flower_viewing.ritual
+Our flower viewing. The same tree every spring. It's ours now.
+## hangout.flower_viewing.ritual_missed
+Our tree's in bloom and we haven't been. It feels like a waste of a whole spring.
+## hangout.flower_viewing.highlight.1
+A petal landed right in your cup! That's good luck for a whole year!
+## hangout.flower_viewing.highlight.2
+A gust shook the tree and it's snowing blossoms all over us! Look!
+## hangout.flower_viewing.highlight.3
+The families on the next mat shared their sweets with us. Everyone's so happy today.
+## hangout.flower_viewing.highlight.4
+You've got petals in your hair. Don't brush them out. They suit you.
+## hangout.flower_viewing.highlight.5
+We fell asleep under the tree and woke up covered in pink. Like a blanket!
+## hangout.flower_viewing.highlight.6
+An old couple played the flute under the next tree. We just listened, all afternoon.
+## hangout.flower_viewing.highlight.7
+We tried catching falling petals. You caught three! I caught a leaf.
+## hangout.flower_viewing.highlight.8
+The lanterns came on in the park as we were leaving. The blossoms glowed.
+
+# == swimming at the lake (summer) =================================================================
+## hangout.lake_swim.ask
+It's boiling. Swim in the lake with me? Last one in's a soggy rice cake!
+Let's go swimming, {player}. The lake's perfect this time of year.
+The lake! Today! I'll race you to the rock in the middle.
+## hangout.lake_swim.invite
+The lake, after lunch. Bring a towel and a brave face, the water's cold at first.
+A note, a bit damp: "Swim tomorrow? Meet at the jetty."
+## hangout.lake_swim.yes
+A swim? Yes, please. I'm melting.
+Let's go! I'll race you to the jetty.
+## hangout.lake_swim.no.busy
+I'm busy today. {when}? It'll still be hot.
+Can't right now. {when} works.
+## hangout.lake_swim.no.not_today
+I've a cold coming on. Better not.
+Not today. The water's choppy and I'm tired.
+## hangout.lake_swim.no.not_their_thing
+I'm not much of a swimmer, honestly. I'll sit this one out.
+## hangout.lake_swim.no.not_close_enough
+Swimming together? Let's get to know each other first.
+## hangout.lake_swim.arrive
+Here's the jetty. Count of three. One... two... I'm already in!
+The water's lovely! Well, it's cold. Then it's lovely. Get in!
+## hangout.lake_swim.rough
+Cold water, cold mood. We'll try again on a warmer day.
+## hangout.lake_swim.fine
+A good swim. I'll sleep well tonight.
+## hangout.lake_swim.good
+That was so refreshing! I feel brand new.
+Great swim, {player}. You're faster than you look.
+## hangout.lake_swim.great
+Best summer day ever. The sun, the water, you trying to dunk me. Perfect.
+I haven't had that much fun since I was little. Let's do it again tomorrow!
+## hangout.lake_swim.stood_up
+I swam out to the rock and back three times, waiting. Then I just floated and sulked.
+## hangout.lake_swim.ritual
+Our summer swims. The jetty's ours till the leaves turn.
+## hangout.lake_swim.ritual_missed
+Summer's passing and we haven't been in the lake for weeks. Let's not lose it.
+## hangout.lake_swim.highlight.1
+We reached the rock in the middle at exactly the same time! Another tie!
+## hangout.lake_swim.highlight.2
+A fish just swam right past my toes! Did you feel it? It tickled!
+## hangout.lake_swim.highlight.3
+You did a flip off the jetty! A real flip! Do it again!
+## hangout.lake_swim.highlight.4
+We floated on our backs and watched the clouds go by for ages.
+## hangout.lake_swim.highlight.5
+A dragonfly landed on your nose while you were floating. You didn't even notice!
+## hangout.lake_swim.highlight.6
+Splash war! I surrender! I surrender! No more!
+## hangout.lake_swim.highlight.7
+We dried off on the warm rocks and ate watermelon until we were sticky all over.
+## hangout.lake_swim.highlight.8
+You found a perfect flat stone on the bottom and skipped it nine times!
+
+# == moon viewing (autumn) =========================================================================
+## hangout.moon_viewing.ask
+It's the harvest moon tonight. Come up the Hokage Rock and watch it rise with me?
+Moon viewing, {player}? I've made rice dumplings, the round white kind.
+Let's watch the moon tonight. It's going to be enormous.
+## hangout.moon_viewing.invite
+The Rock, at moonrise. I'll bring the dumplings and the pampas grass.
+A note: "The moon's full tonight. Watch it with me?"
+## hangout.moon_viewing.yes
+Moon viewing? Yes. I'll bring tea.
+I'd love to. Let's get there before it rises.
+## hangout.moon_viewing.no.busy
+I'm busy tonight. {when}? It'll still be nearly full.
+Can't tonight. {when}, maybe?
+## hangout.moon_viewing.no.not_today
+It's too cloudy. We wouldn't see a thing.
+Not tonight. I need an early night.
+## hangout.moon_viewing.no.not_their_thing
+Staring at the moon for hours? Not my thing, I'm afraid.
+## hangout.moon_viewing.no.not_close_enough
+Moon viewing's a quiet, close sort of thing. Maybe once we know each other better.
+## hangout.moon_viewing.arrive
+Here. Sit facing east. It'll come up right over the hills.
+Dumplings on the tray, grass in the vase. Now we wait.
+## hangout.moon_viewing.rough
+Clouds covered it most of the night. And we couldn't find much to say.
+## hangout.moon_viewing.fine
+A pretty moon. A nice, quiet evening.
+## hangout.moon_viewing.good
+Look how bright it is. Thank you for watching it with me.
+That was beautiful. The dumplings were good too.
+## hangout.moon_viewing.great
+I've watched the moon every autumn of my life. This was the first time it felt like it was watching back.
+That was perfect. I'll remember this moon for a long, long time.
+## hangout.moon_viewing.stood_up
+I watched the moon rise alone and ate all the dumplings. Every single one.
+## hangout.moon_viewing.ritual
+Our moon nights. I'll set out two cups every full moon now.
+## hangout.moon_viewing.ritual_missed
+The moon's been full and I've watched it alone. It looked smaller.
+## hangout.moon_viewing.highlight.1
+There it is! Coming up over the hills, huge and orange! Look at it!
+## hangout.moon_viewing.highlight.2
+Can you see the rabbit on the moon? Pounding rice cakes. There, see its ears?
+## hangout.moon_viewing.highlight.3
+A flock of geese just flew right across the moon. Like a painting!
+## hangout.moon_viewing.highlight.4
+We made up a poem about the moon together. It's terrible. I love it.
+## hangout.moon_viewing.highlight.5
+The crickets started all at once, as soon as the moon cleared the trees.
+## hangout.moon_viewing.highlight.6
+The moon's reflected in your tea cup. You're holding the moon, {player}!
+## hangout.moon_viewing.highlight.7
+A wisp of cloud passed over it like a veil, then slid away. Did you see?
+## hangout.moon_viewing.highlight.8
+We stayed until the moon was high and silver and small. All night, almost.
+
+# == a snowball fight (winter) =====================================================================
+## hangout.snowball_fight.ask
+Snow! Real snow! Snowball fight at the training ground, right now!
+I've got a pile of snowballs ready and nobody to throw them at. Help me out, {player}?
+Fresh snow. You know what that means. Training ground. Bring your mittens.
+## hangout.snowball_fight.invite
+Training ground, after breakfast. Wear something warm. You'll need it.
+A note, slightly wet: "Snowball fight. Today. You can't hide forever."
+## hangout.snowball_fight.yes
+Snowball fight? You're going down!
+Yes! I've been building a fort in my head all morning.
+## hangout.snowball_fight.no.busy
+I'm busy right now. {when}? The snow should last.
+Can't now, I've chores. {when}, and I'll bring an arsenal.
+## hangout.snowball_fight.no.not_today
+My hands are still frozen from yesterday. Another day.
+Not today. I'm already cold enough.
+## hangout.snowball_fight.no.not_their_thing
+Getting snow down my collar on purpose? No, thank you.
+## hangout.snowball_fight.no.not_close_enough
+A snowball fight with someone I barely know? I'd feel bad hitting you.
+## hangout.snowball_fight.arrive
+Fort building first! Five minutes! Then war!
+Here we are. The snow's perfect, sticky and soft. Ready...
+## hangout.snowball_fight.rough
+Someone threw too hard and it stopped being fun. Let's warm up and forget it.
+## hangout.snowball_fight.fine
+My nose is frozen, but that was fun.
+## hangout.snowball_fight.good
+I've got snow in places snow shouldn't be, and I don't care! Great fight!
+Hot tea? Hot tea. That was brilliant, {player}.
+## hangout.snowball_fight.great
+That was the best snow day I've ever had! My cheeks hurt from laughing!
+I'm soaked to the bone and happier than I've been all winter.
+## hangout.snowball_fight.stood_up
+I built a whole fort and nobody came to attack it. It's still standing. Lonely.
+## hangout.snowball_fight.ritual
+Our snowball fights. First snow, training ground, no mercy. Tradition.
+## hangout.snowball_fight.ritual_missed
+It's snowed twice and we haven't had our fight. My throwing arm's restless.
+## hangout.snowball_fight.highlight.1
+Direct hit! Right on the back of the head! I'm sorry! I'm not sorry!
+## hangout.snowball_fight.highlight.2
+The other kids joined in and now it's a war! Us against everyone!
+## hangout.snowball_fight.highlight.3
+Our fort's the biggest on the training ground! It's got a tower!
+## hangout.snowball_fight.highlight.4
+We both threw at the same time and the snowballs hit each other in the air!
+## hangout.snowball_fight.highlight.5
+A Chunin walked past and you got them by accident. They threw one back! At us!
+## hangout.snowball_fight.highlight.6
+We made snow angels side by side when we were too tired to throw any more.
+## hangout.snowball_fight.highlight.7
+You built a snowman that looks exactly like the Academy instructor. Exactly!
+## hangout.snowball_fight.highlight.8
+We sat in our fort drinking hot tea as the snow fell. Winter's perfect.

@@ -1,0 +1,205 @@
+{
+ "format": 1,
+ "_doc": "How the Leaf's residents get their ranks and levels (docs/RANKS.md, \"Head counts\" and \"Clan power\"). A proposal for the population sampler in tools/wardrobe/: it reads this file and does not change population.json. A marker bound to a named role takes the role's rank from roster.json; a marker's own rank (or a workplace's rank_min) pins one; a marker with a job takes the job's rank below. Every other resident draws a rank by weight for their group (civilian, clanless, minor clan or noble clan), from the save seed's population stream, and a level inside the rank's spread, shifted by clan power. The unique posts (Hokage, elders, the Jonin Commander's post, ANBU) are never drawn: they exist only as fixed markers. Weights are residents per group at the village's 300; tools/roster/roster.py --check holds them to the targets and population.json's shares.",
+ "residents": 300,
+ "fixed": {
+  "kage": 1,
+  "elder": 3,
+  "jonin_commander": 1,
+  "anbu": 6
+ },
+ "fixed_groups": {
+  "kage": {
+   "noble": 1
+  },
+  "elder": {
+   "noble": 2,
+   "clanless": 1
+  },
+  "jonin_commander": {
+   "noble": 1
+  },
+  "anbu": {
+   "clanless": 6
+  }
+ },
+ "by_group": {
+  "civilian": {
+   "civilian": 134
+  },
+  "clanless": {
+   "academy": 16,
+   "genin": 17,
+   "chunin": 23,
+   "special_jonin": 4,
+   "jonin": 5,
+   "elite_jonin": 2,
+   "retired": 10
+  },
+  "minor": {
+   "academy": 8,
+   "genin": 8,
+   "chunin": 13,
+   "special_jonin": 3,
+   "jonin": 5,
+   "retired": 8
+  },
+  "noble": {
+   "academy": 8,
+   "genin": 7,
+   "chunin": 5,
+   "special_jonin": 1,
+   "jonin": 8,
+   "elite_jonin": 2,
+   "retired": 2
+  }
+ },
+ "targets": {
+  "kage": 1,
+  "elder": 3,
+  "jonin_commander": 1,
+  "anbu": 6,
+  "elite_jonin": 4,
+  "jonin": 18,
+  "special_jonin": 8,
+  "chunin": 41,
+  "genin": 32,
+  "academy": 32,
+  "retired": 20,
+  "civilian": 134
+ },
+ "rank_levels": {
+  "_doc": "Each rank's level spread for drawn residents: mean, standard deviation, lowest, highest. Rank is trust, the level is power: the spread crosses tier lines on purpose.",
+  "academy": [
+   2.5,
+   1,
+   1,
+   4
+  ],
+  "genin": [
+   9,
+   3,
+   5,
+   16
+  ],
+  "chunin": [
+   21,
+   4,
+   15,
+   30
+  ],
+  "special_jonin": [
+   31,
+   3,
+   26,
+   38
+  ],
+  "jonin": [
+   35,
+   3,
+   30,
+   41
+  ],
+  "elite_jonin": [
+   45,
+   2,
+   42,
+   49
+  ],
+  "retired": [
+   28,
+   8,
+   12,
+   46
+  ],
+  "civilian": [
+   1,
+   0,
+   1,
+   1
+  ]
+ },
+ "clan_power": {
+  "_doc": "NPCs of powerful clans are stronger on average, never by rule (life:roster's ClanPower): shift moves a resident within their rank's spread, in standard deviations; class_shift is where a rolled classmate belongs against the player, in levels; drive is how hard they train. The player starts clanless and is outside this table.",
+  "great": {
+   "clans": [
+    "uchiha",
+    "hyuga",
+    "senju",
+    "uzumaki"
+   ],
+   "shift": 0.6,
+   "class_shift": 0.8,
+   "drive": 1.06
+  },
+  "strong": {
+   "clans": "the other eleven noble clans",
+   "shift": 0.3,
+   "class_shift": 0.3,
+   "drive": 1.03
+  },
+  "minor": {
+   "clans": "the ten minor clans",
+   "shift": 0.0,
+   "class_shift": -0.1,
+   "drive": 1.0
+  },
+  "clanless": {
+   "clans": "none",
+   "shift": -0.2,
+   "class_shift": -0.3,
+   "drive": 1.0
+  }
+ },
+ "outfit_rank": {
+  "kage": "kage",
+  "elder": "civilian",
+  "jonin_commander": "jonin",
+  "anbu": "anbu",
+  "elite_jonin": "jonin",
+  "jonin": "jonin",
+  "special_jonin": "jonin",
+  "chunin": "chunin",
+  "genin": "genin",
+  "academy": "academy",
+  "retired": "civilian",
+  "civilian": "civilian"
+ },
+ "jobs": {
+  "_doc": "Konoha's marker job ids (KONOHA_BUILD.md §3, \"Markers\") and the rank each one takes by default; a marker's rank or a workplace's rank_min overrides it.",
+  "mission_desk": "chunin",
+  "jonin_standby": "jonin",
+  "gate_guard": "chunin",
+  "wall_watch": "chunin",
+  "police": "chunin",
+  "interrogator": "special_jonin",
+  "anbu": "anbu",
+  "academy_teacher": "chunin",
+  "medic": "chunin",
+  "shopkeeper": "civilian",
+  "residence_clerk": "civilian"
+ },
+ "away": {
+  "_doc": "Each day, about this share of each rank is away on missions: VF's schedule keeps them off the map (at the gate, out of the village). The rest are home, training or on duty.",
+  "genin": 0.25,
+  "chunin": 0.35,
+  "special_jonin": 0.3,
+  "jonin": 0.4,
+  "elite_jonin": 0.5,
+  "anbu": 0.5
+ },
+ "lore": {
+  "_doc": "The village's whole forces as the dialogue, the standby roster boards and the mission logs speak of them. The map holds about one in ten of the Leaf's active shinobi (113 of about 1,100).",
+  "kage": 1,
+  "elder": 3,
+  "jonin_commander": 1,
+  "anbu": 90,
+  "elite_jonin": 20,
+  "jonin": 110,
+  "special_jonin": 45,
+  "chunin": 480,
+  "genin": 360,
+  "academy": 240,
+  "retired": 300
+ }
+}

@@ -1,0 +1,82 @@
+# The furniture shop (made in the Kinoshita carpenters' lane): futons, low tables, cushions, tatami, screens,
+# scroll shelves, lamps, plants, posters, a weapon rack, a training dummy, a pet bed. 20 to 800 ryo a piece;
+# furniture sells back at half price (ROADMAP §7, Your apartment and furniture).
+#! fn: commerce
+
+## shop.furniture_shop.greet  shop=furniture_shop  fn=commerce
+Welcome! Smell that? Fresh cedar. Every piece here came off a bench in the carpenters' lane.
+Come in, mind the screens, they're on display, not for leaning.
+Furnishing a place, {player}? You've come to the right door.
+Hello there. Sit on anything you like, that's what it's for.
+In you come. Shoes off on the tatami samples, please.
+
+## shop.furniture_shop.greet  shop=furniture_shop  player_rank=academy  fn=commerce,react
+A new apartment and nothing in it? Everyone starts with a futon and a lamp. We'll fix the rest later.
+
+## shop.furniture_shop.browse  shop=furniture_shop  fn=commerce
+Futons to the left, low tables in the middle, screens along the back wall.
+That weapon rack is solid oak. Holds a dozen kunai and never wobbles.
+Cushions come in six colours. The indigo ones hide tea stains best.
+The training dummy is straw over a cedar core. Hit it all you like.
+Scroll shelves, lamps, potted plants. A room starts feeling lived in with those three.
+The pet bed is new. The Inuzuka kennel keeper tested it with three pups.
+Posters are cheap and cheerful. The Hokage Rock one sells best.
+
+## shop.furniture_shop.buy  shop=furniture_shop  kind=cycle  fn=commerce
+One {item}. That's {pay}. It'll outlive both of us.
+Sold! Want me to tie it up, or will you carry it as is?
+{pay}, thank you. Press F at home and set it where the light's best.
+There, it's yours. If the joints ever squeak, bring it back and we'll oil them.
+A fine pick. {pay}, and I'll throw in a pair of felt pads for the feet.
+That's {pay}. Take it slow on the stairs.
+Good choice, that {item}. My uncle cut that grain himself.
+
+## shop.furniture_shop.cant_afford  shop=furniture_shop  kind=cycle  fn=commerce
+That piece is out of reach today. The cushions are kinder on a purse.
+Not enough for that one, I'm afraid. A few more missions and it's yours.
+You're short. I can hold it a day or two if you're close.
+Save up for it. Good furniture is worth the wait, cheap furniture is worth nothing.
+
+## shop.furniture_shop.sold_out  shop=furniture_shop  kind=cycle  fn=commerce
+Last {item} went this morning. The lane will have another off the bench by next week.
+Out of those, sorry. Carpenters only have so many hands.
+Sold the display one, even. Try the one in the other wood?
+
+## shop.furniture_shop.sell_back  shop=furniture_shop  kind=cycle  fn=commerce,teach
+I'll take it back at half what you paid. That's the rule, same for everyone.
+Half price for anything from this shop, as long as it's whole. Bring it in.
+Selling the {item}? Half the price, and it goes back on the floor for someone else.
+Changing your room around? I buy back at half. No shame in it.
+I buy only what came from here. Bandit junk goes to the pawn shop down the street.
+
+## shop.furniture_shop.haggle  shop=furniture_shop  fn=commerce,reveal_character
+Haggle with me? I'd be haggling with the carpenter who made it, and that carpenter is my aunt.
+I can't lower the price of the wood, but I can round down the last few ryo.
+Buy the table and the cushions together and I'll take a little off the cushions.
+Every price here pays a carpenter's supper. I'll be fair, but I won't be cheap.
+
+## shop.furniture_shop.closing  shop=furniture_shop  time=evening|night  fn=commerce
+Closing up soon. Decide on that lamp before I blow mine out.
+I'm sweeping the shavings out in a minute. Last chance tonight.
+We shut at dusk. The furniture will still be here tomorrow, I promise.
+Nearly closing time. I can hold anything you've got your eye on.
+
+## shop.furniture_shop.recommend  shop=furniture_shop  fn=commerce,teach
+Start with the {item}. It makes the room feel like yours straight away.
+A lamp and a potted plant. Cheap, and you'll stop feeling like you live in a box.
+A weapon rack keeps your kunai off the floor. Your feet will thank you at night.
+If you have a pet, the pet bed. It'll sleep there instead of on your face.
+The training dummy, if you've the space. Saves walking to the training grounds every evening.
+A scroll shelf. Every shinobi I know ends up with more scrolls than floor.
+
+## shop.furniture_shop.regular  shop=furniture_shop  level=3..10  fn=commerce,deepen_bond
+How's the room looking? I like to picture where my pieces end up.
+You again! Your apartment must be the best furnished on the block by now.
+I set aside an offcut of cedar for you. Make a little shelf of it, if you like.
+My regulars get first look at the new pieces. Come round the back.
+
+## shop.furniture_shop.order_ready  shop=furniture_shop  kind=cycle  fn=commerce
+Your {item} is finished! The lane sent it over this morning, still smelling of cedar.
+The piece you ordered is in. Come and run your hand along that finish.
+All done and waiting by the door. Need help carrying it?
+Your order's ready. I oiled the joints myself before it left the bench.

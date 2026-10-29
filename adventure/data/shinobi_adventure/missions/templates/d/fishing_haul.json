@@ -1,0 +1,162 @@
+{
+ "format": 1,
+ "id": "mission.d.fishing_haul",
+ "kind": "mission",
+ "rank": "d",
+ "category": "river",
+ "status": "beta",
+ "title": "dlg:mission.d.fishing_haul.title",
+ "brief": "dlg:mission.d.fishing_haul.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.fishing_haul.brief",
+  "accept": "dlg:mission.d.fishing_haul.accept",
+  "decline": "dlg:mission.d.fishing_haul.decline",
+  "progress": "dlg:mission.d.fishing_haul.progress",
+  "success": "dlg:mission.d.fishing_haul.success",
+  "fail": "dlg:mission.d.fishing_haul.fail",
+  "report": "dlg:mission.d.fishing_haul.report"
+ },
+ "minutes": 10,
+ "party": "squad",
+ "unlock": {
+  "time_between": [
+   "05:00",
+   "10:00"
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "fisher"
+   }
+  },
+  "boat": {
+   "pick": "anchor",
+   "tag": "river_jetty"
+  },
+  "stall": {
+   "pick": "anchor",
+   "tag": "market.fish"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "haul"
+  },
+  "haul": {
+   "objective": {
+    "type": "perform",
+    "what": "haul_net",
+    "at": "slot:boat",
+    "count": 4
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "big_one"
+     },
+     "next": "big"
+    },
+    {
+     "if": {
+      "twist": "net_tear"
+     },
+     "next": "mend"
+    }
+   ],
+   "next": "carry"
+  },
+  "big": {
+   "objective": {
+    "type": "perform",
+    "what": "hold_line",
+    "at": "slot:boat"
+   },
+   "next": "carry"
+  },
+  "mend": {
+   "objective": {
+    "type": "craft",
+    "item": "item:mission_net_patch",
+    "count": 1
+   },
+   "next": "carry"
+  },
+  "carry": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:mission_fish_crate",
+    "to": "slot:stall"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "big_one",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.fishing_haul.twist.big_one"
+  },
+  {
+   "id": "net_tear",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.fishing_haul.twist.net_tear"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "careful"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "market.fish",
+   "river_jetty"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.35
+ },
+ "tags": [
+  "outdoors",
+  "river",
+  "market"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.river",
+ "_premise": "Help the fish stall's supplier land the morning catch.",
+ "_twists": {
+  "big_one": "Something enormous takes the line.",
+  "net_tear": "The net tears with the catch half in."
+ }
+}

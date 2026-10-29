@@ -1,0 +1,73 @@
+# The barbecue house by the market street (Akimichi-run, Beta 2): grilled meat raises taijutsu damage a little.
+#! fn: commerce
+
+## shop.barbecue_house.greet  shop=barbecue_house  fn=commerce
+Welcome! Grab a table with a grill, they're all hot.
+Come in, come in! Smell that? That's the good stuff.
+Hello, {player}! Table for one, or are friends on the way?
+Welcome to the barbecue house. Eat until you can't, then eat a little more.
+There's a free grill by the window. Sit, I'll bring the tongs.
+
+## shop.barbecue_house.greet  shop=barbecue_house  clan=akimichi  fn=commerce,worldbuild
+Welcome to our house! In the Akimichi kitchen, nobody leaves hungry. Not once, not ever.
+
+## shop.barbecue_house.browse  shop=barbecue_house  fn=commerce
+Pork belly, beef tongue, chicken thigh, and the vegetables nobody orders.
+The platters are for squads. One plate of everything, three hungry Genin, one sweaty grill.
+Marinated or salted? Salted for the first plate, marinated for the second, that's the rule.
+Rice comes in bowls or buckets. I'm only half joking.
+Grilled onigiri too, crusty with soy. Order them before the meat or they'll get forgotten.
+
+## shop.barbecue_house.buy  shop=barbecue_house  kind=cycle  fn=commerce
+A plate of {item}! Lay it flat, don't crowd the grill.
+{pay}. Turn it once, only once.
+Here's your plate. Tongs for the raw, chopsticks for the cooked. Don't mix them.
+That's {pay}. Shout if the grill needs more coals.
+Coming right up! Big appetite today, I see.
+{item}, sliced thin. That's {pay}.
+There you go! Wait for the sizzle before you flip.
+
+## shop.barbecue_house.cant_afford  shop=barbecue_house  kind=cycle  fn=commerce
+Not quite enough for the platter. A single plate, then?
+You're short. The grilled onigiri are cheaper and they're half the joy.
+Hmm, that won't cover it. Come back with your squad and split it.
+A few ryo under. Eat what you can afford, and come back richer.
+
+## shop.barbecue_house.sold_out  shop=barbecue_house  kind=cycle  fn=commerce
+Out of {item}! A table of Chunin just ate the whole cut.
+No more tongue tonight. The butcher comes at dawn.
+All gone. The last squad was very, very hungry.
+
+## shop.barbecue_house.haggle  shop=barbecue_house  fn=commerce,reveal_character
+Haggle? Eat more. That's the only discount in here: the third plate is cheaper.
+No, but a squad that cleans its plates gets a free dessert.
+I don't cut prices, I cut meat. Thick, thin, however you like it.
+Help scrub the grills tonight and the next plate's on the house.
+
+## shop.barbecue_house.closing  shop=barbecue_house  time=night|late  fn=commerce
+Last orders for the grill! After this the coals go out.
+We're closing soon. One more plate for the road?
+The kitchen's winding down. Order now or dream about pork belly.
+
+## shop.barbecue_house.recommend  shop=barbecue_house  fn=commerce,teach
+Sparring tomorrow? Eat barbecue tonight. It puts a little more weight behind your punches for a while.
+The {special}, today only. Cut this morning.
+Pork belly first. Fat on the grill makes everything after it taste better.
+The {item}. Don't argue, just try it.
+Before a taijutsu lesson, a plate of beef. Your fists will feel it.
+Come with your whole squad. Barbecue tastes better split four ways.
+
+## shop.barbecue_house.regular  shop=barbecue_house  level=3..10  fn=commerce,deepen_bond
+You again! Your usual table's free. I wiped it twice.
+I'm starting to think you live on barbecue. Good. I approve.
+A regular! There's an extra plate of vegetables for you. You're welcome, and eat them.
+Your grill's already heating. I saw you coming down the street.
+
+## shop.barbecue_house.order_ready  shop=barbecue_house  kind=cycle  fn=commerce
+Your table's ready! The grill's lit and the first plate's on its way.
+{item}, coming through! Hot plate, mind your sleeves.
+Reservation for your squad? Back corner, the big grill. All set.
+Your platter's up. Lay it on slowly, let the fat talk.
+
+## shop.barbecue_house.browse  shop=barbecue_house  fn=commerce,teach
+Coming with a squad? Book a table a day ahead. On a busy night there's not a free grill in the house.

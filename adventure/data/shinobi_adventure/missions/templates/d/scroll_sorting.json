@@ -1,0 +1,143 @@
+{
+ "format": 1,
+ "id": "mission.d.scroll_sorting",
+ "kind": "mission",
+ "rank": "d",
+ "category": "inventory",
+ "status": "beta",
+ "title": "dlg:mission.d.scroll_sorting.title",
+ "brief": "dlg:mission.d.scroll_sorting.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.scroll_sorting.brief",
+  "accept": "dlg:mission.d.scroll_sorting.accept",
+  "decline": "dlg:mission.d.scroll_sorting.decline",
+  "progress": "dlg:mission.d.scroll_sorting.progress",
+  "success": "dlg:mission.d.scroll_sorting.success",
+  "fail": "dlg:mission.d.scroll_sorting.fail",
+  "report": "dlg:mission.d.scroll_sorting.report"
+ },
+ "minutes": 10,
+ "party": "squad",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "clerk"
+   }
+  },
+  "room": {
+   "pick": "anchor",
+   "tag": "residence.records"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "sort"
+  },
+  "sort": {
+   "objective": {
+    "type": "perform",
+    "what": "sort_scrolls",
+    "at": "slot:room",
+    "count": 5
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "ink_spill"
+     },
+     "next": "recopy"
+    },
+    {
+     "if": {
+      "twist": "paper_moths"
+     },
+     "next": "moths"
+    }
+   ],
+   "next": "report"
+  },
+  "recopy": {
+   "objective": {
+    "type": "craft",
+    "item": "item:mission_copied_report",
+    "count": 2
+   },
+   "next": "report"
+  },
+  "moths": {
+   "objective": {
+    "type": "perform",
+    "what": "smoke_out",
+    "at": "slot:room",
+    "count": 3
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "ink_spill",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.scroll_sorting.twist.ink_spill"
+  },
+  {
+   "id": "paper_moths",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.scroll_sorting.twist.paper_moths"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "careful",
+  "fast"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "residence.records"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "village",
+  "indoors"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.inventory",
+ "_premise": "Sort a season of mission reports in the Hokage Residence's records room.",
+ "_twists": {
+  "ink_spill": "A jar tips over two reports; copy them again before the clerk notices.",
+  "paper_moths": "Paper moths are eating the bottom shelf."
+ }
+}

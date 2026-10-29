@@ -1,0 +1,131 @@
+# Children greeting the player on an event day. Every heading carries stage=child.
+
+## greet.event  stage=child  event=leaf_festival  fn=react
+{player}! The festival's on! I'm wearing my yukata! It's got goldfish on it! Look!
+Hi {player}! I won a prize at the ring toss! It's a whistle! Listen! ...Okay, it's broken.
+{player}! There's a goldfish scooping stall! My paper net broke straight away! Again!
+Hi {player}! Fireworks tonight! Let's find a spot on the bridge before the grown-ups take them all!
+{player}! I've had candied apple, grilled corn and two dango! My tummy's a festival too!
+Hi {player}! I'm wearing a fox mask! You don't know it's me! ...How did you know it was me?
+{player}! The drums are so loud I can feel them in my teeth! Come and dance!
+Hi {player}! My mum gave me festival money! I've spent it all already! Can we just look at things now?
+
+## greet.event  stage=child  event=new_year  fn=react
+{player}! Happy New Year! I got a red envelope! Three whole ryo!
+Hi {player}! We're going to the shrine to ring the bell! You have to make a wish! Don't say it out loud!
+{player}! I stayed up till midnight! Well, nearly! I fell asleep at eleven and my dad woke me up!
+Hi {player}! I ate so much mochi I can't feel my jaw! Happy New Year!
+{player}! The Sarutobi lantern walk was SO pretty! Did you see it? All the lights going up the street!
+Hi {player}! I drew a fortune! Small luck! That's still luck! What did you get?
+{player}! New year means I'm a whole year older! I feel older! I feel about the same!
+Hi {player}! I'm wearing my new year clothes! They're stiff! I can't bend my arms! Happy New Year!
+
+## greet.event  stage=child  event=chunin_exams  fn=react
+{player}! There are ninja from other villages here! Real ones! One had a giant fan!
+Hi {player}! Are you going to watch the Exams? I want to sit at the very front!
+{player}! The stadium is HUGE! I went to look at it! The seats go all the way up!
+Hi {player}! My big cousin's in the Exams! I made a sign! It says GO! That's all, I ran out of paint!
+{player}! When I'm older I'll be in the Chunin Exams! I'll win in one second! Maybe two!
+Hi {player}! The foreign ninja look scary. One of them said hello to me, though. Politely!
+{player}! Everyone's talking about the Exams! The grown-ups are betting on it! I'm betting a marble!
+Hi {player}! I practised being an Exam proctor! I said "begin!" really loud! My cat began nothing!
+
+## greet.event  stage=child  event=graduation  fn=react
+{player}! It's graduation day! Everyone's getting their headbands! I'm so jealous I could burst!
+Hi {player}! The graduates are all standing so straight! Even the one who always slouches!
+{player}! When I graduate I'm going to tie my headband on my arm! No, my head! No, my arm!
+Hi {player}! The teachers are crying! The teachers! Is that allowed?
+{player}! Next year it's my turn! I'm going to practise the clone every single day! Starting tomorrow!
+Hi {player}! The swing tree's full of old practice headbands! The graduates tie them on! It's tradition!
+{player}! Graduation means a party at the barbecue house! I heard! Is everyone invited? Are kids?
+Hi {player}! My brother graduated! He let me hold his headband! For a whole minute!
+
+## greet.event  stage=child  event=clan_day  fn=react
+{player}! It's clan day! The whole village has flags out! Every clan's got different colours!
+Hi {player}! The Akimichi are cooking in the street! They gave me a skewer for free!
+{player}! The Inuzuka kids got their puppies today! I watched! One puppy licked the elder's nose!
+Hi {player}! My family's not a clan, so we just watch. Watching's the best part anyway!
+{player}! The Yamanaka gave everyone a flower! I got a yellow one! What does yellow mean?
+Hi {player}! The Senju kids planted little trees! Mine would be a dango tree, if I had one!
+{player}! There's a parade of crests down the main street! I'm counting them! I'm on twelve!
+Hi {player}! Clan day is my favourite! Everyone gives you food just for walking past!
+
+## greet.event  stage=child  event=wedding  fn=react
+{player}! There's a wedding at the shrine! Everyone's in their best clothes! Even me!
+Hi {player}! I'm supposed to stay quiet at the wedding. I'm being so quiet. This is my quiet voice.
+{player}! Wedding food! There are little sweets shaped like cranes! I've had six cranes!
+Hi {player}! The wedding drums made the shrine crows fly off all at once! Whoosh!
+{player}! My auntie's getting married! She cried and laughed at the same time! Grown-ups are weird!
+Hi {player}! I threw rice at the end! Some of it went in the priest's hat!
+{player}! I wore my good sandals and they pinch. Weddings are long. But the cake was worth it!
+Hi {player}! At the wedding everyone bowed at the same time! I bowed late! Nobody noticed! I think!
+
+## greet.event  stage=child  event=birthday  fn=react
+{player}! It's someone's birthday! There's cake! Whose birthday is it? Doesn't matter! Cake!
+Hi {player}! I helped make the birthday cake! I put the strawberries on! I ate some strawberries too!
+{player}! We're playing birthday games! Pin the tail on the badger! Come play!
+Hi {player}! I made a birthday card with a dragon on it! The dragon's eating a cake!
+{player}! At birthdays you get to choose dinner! I'd choose ramen. And dango. And more ramen.
+Hi {player}! Birthday party! There are balloons! One popped and everyone screamed!
+{player}! When it's my birthday I'm going to be eleven! Or twelve! I'll be older, anyway!
+Hi {player}! We sang the birthday song so loud the neighbours joined in!
+
+## greet.event  stage=child  event=border_incident  fn=react
+{player}... the grown-ups are all whispering today. My mum says it's nothing for kids to worry about.
+Hi {player}. There are lots more guards at the gate today. They're not smiling as much.
+{player}, the teacher kept us in the Academy all lunch today. The teacher said it was just to be safe.
+Hi {player}. I'm not scared. The shinobi will sort it out. They always do. Right?
+{player}, my dad went out on a mission this morning in a hurry. He gave me a really long hug.
+Hi {player}. Can I walk with you? Everybody's being serious and it's making my tummy feel funny.
+{player}, I asked the gate guard what's happening and just got a pat on the head. Grown-ups never tell you anything.
+Hi {player}. I'm being extra good today so my mum doesn't worry. I even ate my vegetables.
+
+## greet.event  stage=child  event=market_day  fn=react
+{player}! Market Day! There's a man juggling oranges by the grocer! He dropped one! I caught it!
+Hi {player}! I'm helping at my family's stall today! I'm in charge of saying "welcome!" Welcome!
+{player}! There's a sweet stall that does sugar animals! I got a rabbit! It's sticky!
+Hi {player}! The farmers brought a goat! It ate a merchant's hat! Everyone laughed except the merchant!
+{player}! I've been to every stall! Twice! I didn't buy anything! I just looked very hard!
+Hi {player}! Market Day's so crowded I lost my mum! Then I found her! She was at the pickle stall!
+{player}! The travelling merchant has a bird that talks! It said hello! Then it said a rude word!
+Hi {player}! I've got one ryo for Market Day. I've been deciding what to buy since breakfast.
+
+## greet.event  stage=child  event=exam_week  fn=react
+{player}! It's exam week! I studied so hard my brain's tired! Is your brain tired?
+Hi {player}. I've got the written test tomorrow. I keep forgetting which hand sign is Ram.
+{player}! The teachers are all being extra strict this week! One of them didn't even smile at me!
+Hi {player}! Do you want to test me on hand signs? Say one and I'll do it! Go!
+{player}! I'm so nervous for the throwing test! What if I miss? What if I hit the teacher?
+Hi {player}! My mum made me a special exam breakfast. It was an egg. A special egg.
+{player}! I wrote all the answers on my hand! No, I'm joking! I washed it off! I'm joking!
+Hi {player}. Exam week means no playing after lessons. It's the worst week. Until next exam week.
+
+## greet.event  stage=child  event=first_snow  fn=react
+{player}! FIRST SNOW! It's snowing! Did you see? Look up! It's in my eyelashes!
+Hi {player}! I caught the first snowflake! On my tongue! It tasted like cold!
+{player}! The whole Academy ran out into the yard when it started snowing! The teacher too!
+Hi {player}! First snow means you can make a wish! My granny said! I wished for more snow!
+{player}! It's not enough for a snowman yet! I made a snow pebble! Look how small!
+Hi {player}! I'm wearing my winter coat for the first time this year! It's too short in the arms!
+{player}! The Rock's faces have tiny white eyebrows now! Look!
+Hi {player}! First snow! I'm going to stay out until my fingers fall off! Not really. Until lunch.
+
+## greet.event  stage=child  event=cherry_blossoms  fn=react
+{player}! The cherry trees are all pink! It looks like the sky's raining petals!
+Hi {player}! We're having a picnic under the blossom! My mum made rice balls with pink bits in!
+{player}! I caught a petal before it hit the ground! That's good luck! Try and catch one!
+Hi {player}! The river's covered in petals! It looks like a pink road!
+{player}! I put blossoms in my hair! And my pockets! And my lunch box, by accident!
+Hi {player}! The grown-ups are all sitting under the trees being slow. Come play by the river instead!
+{player}! The Academy gave us a lesson outside under the blossom! I didn't listen! It was too pretty!
+Hi {player}! There's a dango stall doing three colours! Pink, white and green! I've had them all!
+
+## greet.event  stage=child  event=moon_viewing  fn=react
+{player}! Look at the moon! It's so big and round! It looks like a rice cake!
+Hi {player}! My granny says there's a rabbit in the moon making mochi. I can see its ears!
+{player}! We're allowed to stay up late tonight for the moon! It's the best night of the year!
+Hi {player}! There are moon dumplings stacked up on every porch! Can we eat them? When can we eat them?
+{player}! The Gekko are doing sword dances on their platform! Everyone's watching! It's so quiet!
+Hi {player}! I'm going to stare at the moon until it moves! It hasn't moved yet. I'll wait.
+{player}! The moon makes the river all silver! Come look from the bridge!
+Hi {player}! I made a paper rabbit for moon viewing! It's a bit lopsided, like the moon one!

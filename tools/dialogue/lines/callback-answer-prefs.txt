@@ -1,0 +1,150 @@
+# Callbacks for questions/prefs.txt: what a resident says later, remembering the player's answer.
+#! fn: callback
+
+## callback.answer.q.pref.favorite_food.a1
+Ramen, you said. Ichiraku's doing a double-pork bowl this week. Thought you'd want to know.
+I walked past Ichiraku and thought of you. Your favourite, wasn't it?
+
+## callback.answer.q.pref.favorite_food.a2
+Here. Three dango, sweet sauce. You said they were your favourite, so I bought an extra skewer.
+
+## callback.answer.q.pref.favorite_food.a3
+The fishmonger had beautiful sweetfish this morning. Grilled fish is your favourite, isn't it?
+
+## callback.answer.q.pref.favorite_food.a4
+"Whatever's free." I have a leftover rice ball. It's free. You're welcome.
+
+## callback.answer.q.pref.cook_for_friends.a1
+That hot pot you'd make for all your friends. When's it happening? I'm bringing the tofu.
+
+## callback.answer.q.pref.cook_for_friends.a2
+Did you ever cook that dish you invented? I'm brave enough to try it. Probably.
+
+## callback.answer.q.pref.cook_for_friends.a3
+Takeout from Ichiraku for a party, you said. I've decided that's genius.
+
+## callback.answer.q.pref.season.a1
+The cherry trees by the river are budding. Spring's your season, isn't it? Not long now.
+
+## callback.answer.q.pref.season.a2
+Summer's your favourite, you told me. I hope the festival this year is worth the wait.
+
+## callback.answer.q.pref.season.a3
+You love the autumn leaves, you said. I pressed a red maple leaf for you. Here.
+
+## callback.answer.q.pref.season.a4
+Winter was your pick, I remember. Brave. I'm wearing three layers and still cold.
+
+## callback.answer.q.pref.train_how.a1
+Training alone at dawn, you said. I've seen the dew still on the training posts and wondered if you'd been there.
+
+## callback.answer.q.pref.train_how.a2
+You train best sparring with friends. If you need a partner, I'll be at the grounds after lunch.
+
+## callback.answer.q.pref.train_how.a3
+You like learning from the scrolls. The library got new ones in last week. Taijutsu, I think.
+
+## callback.answer.q.pref.train_how.a4
+"Until I drop," you said. Please don't. Eat something first, at least.
+
+## callback.answer.q.pref.hardest_training.a1
+Patience is the hardest part, you told me. How's it coming along? No rush. Ha.
+
+## callback.answer.q.pref.hardest_training.a2
+Losing is hard, you said. For what it's worth, the best people I know have lost plenty.
+
+## callback.answer.q.pref.hardest_training.a3
+You said trusting others is the hardest. I hope you know you can trust me.
+
+## callback.answer.q.pref.hardest_training.a4
+Still at war with early mornings? I've got strong tea. It helps.
+
+## callback.answer.q.pref.morning_or_night.a1
+A morning person! I knew I'd find you up and about at this hour.
+
+## callback.answer.q.pref.morning_or_night.a2
+You're a night owl, I remember. You look half asleep. Too early for you?
+
+## callback.answer.q.pref.morning_or_night.a3
+It's nearly noon. Nap time, for you, if I remember rightly.
+
+## callback.answer.q.pref.rainy_day.a1
+Raining again. Off to train anyway, I suppose? Take a towel.
+
+## callback.answer.q.pref.rainy_day.a2
+Rainy days are for reading, you said. I've got a scroll you might like. Adventures on the far coast.
+
+## callback.answer.q.pref.rainy_day.a3
+Rain tonight. Puddle weather. Mind you keep one pair of sandals dry.
+
+## callback.answer.q.pref.rainy_day.a4
+Hear that rain? Perfect sleeping weather, you'd say. I'm half tempted myself.
+
+## callback.answer.q.pref.thinking_spot.a1
+You think best on the Hokage Rock. Was that you up there at sunset? I couldn't tell from the market.
+
+## callback.answer.q.pref.thinking_spot.a2
+The river's your thinking spot. If you ever want company there, quiet company, ask.
+
+## callback.answer.q.pref.thinking_spot.a3
+You think things through at the training grounds. Something on your mind lately? You can tell me.
+
+## callback.answer.q.pref.thinking_spot.a4
+Your rooftop thinking spot is safe with me. I haven't told a soul.
+
+## callback.answer.q.pref.best_gift.a1
+Something handmade, you said. So I made you this. Don't laugh. It's meant to be a fox.
+
+## callback.answer.q.pref.best_gift.a2
+You said time is the best gift. So I've cleared my afternoon. What shall we do?
+
+## callback.answer.q.pref.best_gift.a3
+The best gift is a good meal, you told me. Sit down. I've made too much again.
+
+## callback.answer.q.pref.best_gift.a4
+A new scroll. That's the gift you'd want most. I'm keeping an eye out at the scroll shop.
+
+## callback.answer.q.pref.cats_or_dogs.a1
+You're a dog person, I remember. The Inuzuka puppies are out on the green today. Go and see.
+
+## callback.answer.q.pref.cats_or_dogs.a2
+There's a new cat sleeping on the bathhouse steps. Thought of you, cat person.
+
+## callback.answer.q.pref.cats_or_dogs.a3
+A heron landed by the second bridge this morning. You'd have loved it, bird lover.
+
+## callback.answer.q.pref.cats_or_dogs.a4
+Any animal at all, you said. There's a goat loose behind the grocer's. Your kind of afternoon.
+
+## callback.answer.q.pref.festival_part.a1
+The food stalls, you said, best part of the festival. I'm making a map of them this year.
+
+## callback.answer.q.pref.festival_part.a2
+Fireworks are your favourite. I know a good spot on the hill to watch them. Next festival?
+
+## callback.answer.q.pref.festival_part.a3
+Goldfish scoop, next festival. You and me. You said you love the games, so no backing out.
+
+## callback.answer.q.pref.festival_part.a4
+You go to festivals for the friends, you told me. Then you'll come with us next time, I hope.
+
+## callback.answer.q.pref.free_day.a1
+Explore past the gate on a day off, you said. Find anything out there yet?
+
+## callback.answer.q.pref.free_day.a2
+Found a new lane yet, wandering the village on your days off? I hear there's a tea house behind the potter's.
+
+## callback.answer.q.pref.free_day.a3
+Your perfect day off: sleep till noon. You look like you could use one.
+
+## callback.answer.q.pref.free_day.a4
+A free day with friends, you said, doesn't matter where. Your next one, come find me.
+
+## callback.answer.q.pref.sweet_or_salty.a1
+Sweet tooth! Here, a red bean bun. Still warm.
+
+## callback.answer.q.pref.sweet_or_salty.a2
+You're a salty sort, I remember. I brought rice crackers. The good ones, with seaweed.
+
+## callback.answer.q.pref.sweet_or_salty.a3
+Sweet soy dango, the best of both, you said. I've been eating nothing else since.

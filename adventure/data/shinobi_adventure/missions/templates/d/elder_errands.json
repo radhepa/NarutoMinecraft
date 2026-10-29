@@ -1,0 +1,170 @@
+{
+ "format": 1,
+ "id": "mission.d.elder_errands",
+ "kind": "mission",
+ "rank": "d",
+ "category": "elders",
+ "status": "beta",
+ "title": "dlg:mission.d.elder_errands.title",
+ "brief": "dlg:mission.d.elder_errands.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.elder_errands.brief",
+  "accept": "dlg:mission.d.elder_errands.accept",
+  "decline": "dlg:mission.d.elder_errands.decline",
+  "progress": "dlg:mission.d.elder_errands.progress",
+  "success": "dlg:mission.d.elder_errands.success",
+  "fail": "dlg:mission.d.elder_errands.fail",
+  "report": "dlg:mission.d.elder_errands.report"
+ },
+ "minutes": 8,
+ "party": "solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "age": "elder"
+   }
+  },
+  "shop1": {
+   "pick": "anchor",
+   "tag": "market.grocer"
+  },
+  "shop2": {
+   "pick": "anchor",
+   "tag": "market.tea"
+  }
+ },
+ "start": "list",
+ "steps": {
+  "list": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "grocer"
+  },
+  "grocer": {
+   "objective": {
+    "type": "buy",
+    "item": "item:grocery_order",
+    "at": "slot:shop1",
+    "count": 1
+   },
+   "next": "tea"
+  },
+  "tea": {
+   "objective": {
+    "type": "buy",
+    "item": "item:tea_leaves",
+    "at": "slot:shop2",
+    "count": 1
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "forgot_one"
+     },
+     "next": "again"
+    }
+   ],
+   "next": "home"
+  },
+  "again": {
+   "objective": {
+    "type": "buy",
+    "item": "item:lamp_oil",
+    "at": "place:market.oil",
+    "count": 1
+   },
+   "next": "home"
+  },
+  "home": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:grocery_order",
+    "to": "slot:client"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "story_time"
+     },
+     "next": "story"
+    }
+   ],
+   "next": null
+  },
+  "story": {
+   "objective": {
+    "type": "perform",
+    "what": "listen",
+    "at": "slot:client"
+   },
+   "on_done": [
+    {
+     "bond_event": [
+      "slot:client",
+      "heart_to_heart"
+     ]
+    }
+   ],
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "forgot_one",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.elder_errands.twist.forgot_one"
+  },
+  {
+   "id": "story_time",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.elder_errands.twist.story_time"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "extra_mile"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "market.grocer",
+   "market.oil",
+   "market.tea"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.2
+ },
+ "tags": [
+  "village",
+  "talk",
+  "market"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.elders",
+ "_premise": "Run a shopping list of errands for an elderly resident.",
+ "_twists": {
+  "forgot_one": "They remember one more thing, and then another.",
+  "story_time": "They want you to stay for tea and a story of the old days."
+ }
+}

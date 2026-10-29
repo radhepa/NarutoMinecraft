@@ -1,6 +1,15 @@
 // The Shinobi Modpack as a Gradle multi-project (ROADMAP.md, "Repository layout"). Phase 0 adds the
-// mods (core, village, combat, life, progression) and the pack; today the pure engines are here: the
-// bond engine of Shinobi Life at life/bonds and the combat core of Shinobi Combat at combat/core.
+// mods (core, village, combat, life, progression) and the pack; today the pure engines are here: Shinobi Life's
+// bond engine at life/bonds, ryo economy at life/economy, home engine at life/home and roster growth at
+// life/roster, Shinobi Progression's mission generator at progression/missions, Shinobi Village's player
+// look (the creator and age stages) at village/look and dialogue engine at village/dialogue, and Shinobi
+// Combat's combat core at combat/core.
 rootProject.name = 'shinobi-modpack'
 include 'life:bonds'
+include 'life:economy'
+include 'life:home'
+include 'life:roster'
+include 'progression:missions'
+include 'village:dialogue'
+include 'village:look'
 include 'combat:core'

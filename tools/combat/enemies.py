@@ -389,3 +389,33 @@ JUDGING = {
                 "smart_counters (nature advantage, genjutsu released fast, sensing used)", "yielded", "knocked_out"],
     "note": "Promotion is judged on how you fought (ROADMAP Ch 20): variety and protecting others count as much as winning",
 }
+
+
+# Ally kits: every named shinobi in the ranks session's roster has kit combat:ally.<role>. A kit is built
+# from the person's level, niche, clan and nature by these rules, so 70 people need no hand-written file;
+# the named kits below override the rule for the Classic squad (ROADMAP "The Classic cast").
+ALLY_KITS = {
+    "rule": {
+        "build": "a player-like build at the person's level (the same pillar scaling as the player, Scaling.pillarCap), focused by niche",
+        "niche_focus": {"genjutsu": "ninjutsu (genjutsu techniques first)", "taijutsu": "taijutsu", "ninjutsu": "ninjutsu",
+                        "weapons": "weapons", "medical": "balanced, with the medical techniques", "sensing": "balanced, with the sensing techniques"},
+        "niche_edge": "they fight niche_edge levels higher in their niche (the roster's value)",
+        "clan": "clan members add their clan's techniques of every tier their level reaches (10, 20, 32, 44) and the kekkei genkai stage; clanless add the lesser techniques of up to two friendly clans",
+        "nature": "the roster's nature, else the clan's suggested nature, else rolled from the combat stream (domain combat, key the role)",
+        "style": "taijutsu niche: Strong Fist (or the clan style); weapons niche: the clan's weapon style, else Crescent Moon from level 15",
+        "ai": "Fighter skill by rank: genin average, chunin and up skilled; squad role from Progression (vanguard, support, sensor, medic)",
+        "never_killed": "allies are knocked out at 30% health and can be revived",
+    },
+    "named": {
+        "combat:ally.teammate_a": {"niche": "genjutsu", "clan": "kurama", "nature": "water", "pet": None,
+                                   "signature": ["combat:kurama.painted_illusion", "combat:kurama.painted_beasts", "combat:gen.hell_viewing", "combat:gen.mist_servant"]},
+        "combat:ally.teammate_b": {"niche": "taijutsu", "clan": None, "nature": "earth", "pet": "ninken pup (bites every third landed hit; grows with its owner's level)",
+                                   "signature": ["combat:style.strong_fist", "combat:nin.body_flicker", "combat:earth.headhunter"]},
+        "combat:ally.rival": {"niche": "ninjutsu", "clan": "uchiha", "nature": "fire",
+                              "signature": ["combat:fire.great_fireball", "combat:uchiha.phoenix_shuriken", "combat:fire.phoenix_flower"]},
+        "combat:ally.sensei": {"niche": "ninjutsu", "clan": None, "nature": "rolled", "rank": "jonin",
+                               "signature": ["combat:nin.shadow_clone", "combat:nin.body_flicker", "combat:earth.headhunter"]},
+        "combat:ally.instructor": {"niche": "taijutsu", "clan": None, "nature": "rolled", "rank": "chunin", "signature": ["combat:style.iron_guard"]},
+        "combat:ally.medic": {"niche": "medical", "clan": None, "nature": "rolled", "rank": "chunin", "signature": ["combat:med.mystical_palm", "combat:nin.first_aid"]},
+    },
+}

@@ -85,6 +85,7 @@ def build():
     for b in enemies.BOSSES:
         write("bosses/%s.json" % short(b["id"])[len("boss."):], b)
 
+    write("allies/_kits.json", enemies.ALLY_KITS)
     write("rules/sparring.json", enemies.SPARRING)
     write("rules/judging.json", enemies.JUDGING)
     write("rules/pvp.json", squad.PVP)

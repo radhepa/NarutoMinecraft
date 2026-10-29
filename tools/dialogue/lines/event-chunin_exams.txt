@@ -1,0 +1,70 @@
+# The Chunin Exams, spring 15 to 21 and autumn 15 to 21, as a public village event: visiting teams, crowds,
+# betting on teams, full inns. Nothing about how the exams go.
+#! tags: event=chunin_exams
+
+## greet.event  fn=react
+Exam season! The streets are full of headbands from other villages.
+Morning, {player}. The inns are full and the tea houses are fuller. Chunin Exams, you know.
+Have you seen the visiting teams? They walk about like they own the main street.
+The Chunin Exams are on, so the whole village is talking about nothing else.
+Busy day! Every stall's doubled its prices for the visitors. Don't pay them.
+
+## greet.event  personality=fiery|adventurous  fn=react
+The exams! Shinobi from all over, right here in the Leaf! Isn't it brilliant?
+
+## greet.event  personality=protective|stern  fn=react
+Lots of strangers in the village this week. Keep to the busy streets, all right?
+
+## greet.event  stage=child  fn=react
+Did you see the visitors? One of them had a scroll on their back as tall as me!
+The exams are on! I'm going to watch every match I can get into.
+
+## chat.event  fn=worldbuild
+The visiting teams stay in the guest lodging by the stadium. Lights on all night over there.
+Every tea house has a betting board up. Half the village has a few ryo on some team or other.
+I put five ryo on a team from a village I'd never heard of. Don't ask me why, I liked their hats.
+The stadium seats sell out for the finals the same day they go on sale.
+The bakers make special exam buns. Sweet bean inside, a little headband drawn in sesame on top.
+Merchants follow the visiting teams. There are stalls in the market street I've never seen before.
+The guards at the gate are checking travel papers twice over this week.
+The noise from the stadium on finals day carries all the way to the river.
+The visitors stare at the Hokage Rock like they've never seen a carved mountain before. They haven't.
+Exam weeks are good for business and bad for sleep. My inn hasn't had a quiet night since the fourteenth.
+Some of the visiting shinobi bought out the whole dango stall. Twice.
+The written test is on the first day, they say. After that, nobody outside knows much until the finals.
+
+## chat.event  fn=teach
+The betting boards are for fun. Lose a few ryo, not your rent.
+The finals are open to anyone with a seat. The stalls outside sell cushions, bring one.
+
+## chat.event  personality=pragmatic|meticulous  fn=reveal_character
+I keep a ledger of every team's odds. Not to bet. Just to see who's right.
+Exam weeks, the grocer orders triple. Visitors eat like they've never seen a vegetable.
+
+## chat.event  personality=curious|thoughtful  fn=reveal_character
+Every visiting team wears its headbands differently. One ties them round the arm, another round the waist.
+I wonder what the visitors think of us. Our food, our streets, our stone faces.
+
+## chat.event  rank=genin|chunin|jonin  fn=reveal_character
+I remember my first exam. My hands shook so hard I could barely hold the pencil.
+Every young shinobi in the Leaf is watching the visitors and sizing them up. Me included.
+
+## chat.event  group=civilian  fn=reveal_character
+I don't follow the matches, I just like the crowds. The whole village feels bigger for a week.
+
+## chat.event  stage=child  fn=worldbuild
+I'm going to be in the Chunin Exams one day. I'll win it in a single day.
+My dad put a ryo on a team for me. If they win, I get two ryo!
+We sneaked to the stadium wall to listen. You can hear the crowd roar from outside.
+
+## chat.event  job=merchant|cook|grocer|ramen_cook|dango_maker  fn=reveal_character
+I've sold more in exam week than in the whole season before it. My feet are begging for the finals.
+
+## chat.event  personality=warmhearted|gentle  fn=reveal_character
+Some of the visiting Genin look so young. I gave a few of them rice balls. They're far from home.
+
+## chat.event  personality=playful|fiery  fn=reveal_character
+I've got two ryo on the team with the loudest captain. If they're loud, they're winning. That's my system.
+
+## chat.event  district=stadium  fn=worldbuild
+The stadium's been swept top to bottom for the finals. Even the seat cushions have been beaten.

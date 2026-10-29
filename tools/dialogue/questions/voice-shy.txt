@@ -1,0 +1,75 @@
+# Questions only a shy resident asks: short, hesitant, brave in small ways.
+#! tags: personality=shy
+
+? q.pref.shy_quiet_time | fn: deepen_bond reveal_character | level: 2
+Q: Um... what do you like doing, when it's quiet?
+Q: When there's nobody around... what do you do?
+- Reading :: Oh! Me too. I... I could lend you something. If you want. {values:+knowledge} {tone:gentle}
+- Drawing :: Drawing? I... I draw too. A little. {values:+creativity} {tone:humble}
+- Long walks :: Walks are nice. Nobody expects you to talk. {values:+freedom} {tone:free}
+- Napping :: Ha... yes. Naps are the best quiet thing. {values:+honesty} {tone:joking}
+
+? q.values.shy_small_brave | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Do you think... small brave things count? Like, really count?
+Q: Is it still brave if it's only a little thing?
+- Yes, the most :: Oh. That's... thank you. I needed that. {values:+courage +kindness} {tone:warm}
+- Big ones matter more :: Oh. Maybe. Big ones start small, though. Don't they? {values:+courage} {tone:blunt}
+- All of them count :: All of them. Okay. I'll... count mine, then. {values:+courage} {tone:kind}
+
+? q.past.shy_brave_thing | fn: deepen_bond reveal_character | level: 5 | follows: q.values.shy_small_brave | depth: 2
+Q: What's a small brave thing you've done? You don't have to... I just wondered.
+Q: Can you tell me about a time you were brave? Even a tiny bit?
+- Spoke up in class :: In front of everyone? Wow. I could never. Not yet. {values:+courage} {tone:honest}
+- Made a new friend :: That's the scariest one, I think. You're very brave. {values:+courage +loyalty} {tone:warm}
+- Tried something new :: New things... yes. My hands shake just thinking about it. {values:+courage} {tone:humble}
+- I can't think of one :: That's okay. I think... talking to me counts. A bit. {values:+honesty} {tone:gentle}
+
+? q.pref.shy_crowds | fn: deepen_bond reveal_character | level: 2
+Q: Do crowds... bother you? Like on Market Day?
+Q: Is it just me, or are festivals very... loud?
+- Yes, a bit :: Oh good. I mean, not good. But... I'm not the only one. {values:+honesty} {tone:honest}
+- No, I like them :: You like them? Maybe... I could stand next to you, next time. {values:+family} {tone:warm}
+- With a friend, they're fine :: With a friend. Yes. That helps. That helps a lot. {values:+loyalty} {tone:gentle}
+
+? q.dilemma.shy_know_answer | fn: deepen_bond reveal_character | level: 3
+Q: If you knew the answer in class, but you were scared... would you still say it?
+Q: Hand up, or keep quiet? When you know, but everyone's looking?
+- Yes, I'd say it :: Even with everyone looking? You're... really brave. {values:+courage +honesty} {tone:bold}
+- I'd whisper to a friend :: Oh. That's what I do. Then they say it. {values:+loyalty} {tone:gentle}
+- No, I'd keep quiet :: Me too. Usually. Maybe we can... both try. Sometime. {values:+honesty} {tone:cautious}
+
+? q.dilemma.shy_practise_speaking | fn: deepen_bond | level: 5 | follows: q.dilemma.shy_know_answer | depth: 2
+Q: Could you... help me practise speaking up? What should I say first?
+Q: If I wanted to be braver at talking to people, where would I even start?
+- Just say hello :: Hello. Okay. Hello. ...Hello! I did it. {values:+courage} {tone:warm}
+- Ask one question :: One question. "Is this seat free?" I can... I can do that. {values:+courage +knowledge} {tone:kind}
+- Just say your name :: My name. Out loud. To a stranger. ...Next week. {values:+courage} {tone:joking}
+
+? q.pref.shy_make_things | fn: deepen_bond reveal_character | level: 3
+Q: I draw sometimes. Um. Do you make anything?
+Q: Do you... make things? With your hands, I mean?
+- I draw too :: You do? Could we... draw together? Sometime? Not now. Sometime. {values:+creativity} {tone:gentle}
+- I cook :: Cooking is making too. The best kind. You can eat it. {values:+family +creativity} {tone:warm}
+- I write things down :: Writing. I'd... like to read it. If you'd let me. {values:+creativity} {tone:curious}
+- Not really :: That's okay. Watching is nice too. {values:+honesty} {tone:honest}
+
+? q.values.shy_quiet_friends | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Can quiet people be good friends? Even if they don't say much?
+Q: Do you think a friend has to talk a lot?
+- The very best :: Oh. I... I'll remember you said that. {values:+loyalty +kindness} {tone:warm}
+- Yes, of course :: Of course. Okay. I always wondered. {values:+loyalty} {tone:honest}
+- Talking doesn't matter :: Not talking is fine? Oh, good. That's... a relief. {values:+loyalty} {tone:gentle}
+
+? q.values.shy_are_we_friends | fn: deepen_bond | kind: confession | level: 6 | follows: q.values.shy_quiet_friends | depth: 2 | gap: 5
+Q: Are we... friends? I mean, would you say we are?
+Q: Can I ask... do you think of me as a friend?
+- Yes, of course :: Oh! Oh. Okay. I... I'm going to remember this. {values:+loyalty} {tone:warm}
+- Good friends :: Good friends. ...I'm smiling. Sorry. I can't stop. {values:+loyalty +kindness} {tone:kind}
+- Getting there :: Getting there. That's... that's still good. Yes. {values:+honesty} {tone:honest}
+
+? q.past.shy_first_talk | fn: deepen_bond | level: 4
+Q: Do you remember the first time we spoke? I was so nervous.
+Q: The first time we talked... did I seem strange? I felt strange.
+- Yes, I remember :: You do? Oh no. Ha. I mean... oh, that's nice. {values:+loyalty} {tone:warm}
+- Not really, sorry :: That's okay! Actually... that's a relief. {values:+honesty} {tone:honest}
+- I was nervous too :: You were? Really? Oh. That makes it so much better. {values:+honesty +kindness} {tone:gentle}

@@ -1,0 +1,75 @@
+# Questions only a pragmatic resident asks: costs, value, sensible choices.
+#! tags: personality=pragmatic
+
+? q.pref.prag_thousand_ryo | fn: deepen_bond reveal_character | level: 2
+Q: Say you had a thousand ryo, all at once. What would you do with it?
+Q: A thousand ryo lands in your lap. Spend it, save it, or invest it?
+- Save it :: Good. A thousand saved is two thousand later, if you're patient. {values:+duty} {tone:cautious}
+- Better gear :: A sound investment. Good tools save lives. {values:+strength} {tone:blunt}
+- Treat my friends :: Generous. Not the best return, but a fine one. {values:+loyalty +kindness} {tone:warm}
+- Ramen, for a year :: Ha! Three hundred bowls. I did the sums. {values:+freedom} {tone:joking}
+
+? q.pref.prag_regret_spend | fn: deepen_bond reveal_character | kind: confession | level: 4 | follows: q.pref.prag_thousand_ryo | depth: 2
+Q: Spent any ryo lately you regret? I won't judge. Much.
+Q: What's the worst thing you've ever spent money on?
+- Too many sweets :: Sweets. The silent purse-thief. Everyone's weakness. {values:+honesty} {tone:honest}
+- Nothing, I'm careful :: Careful! I knew I liked you. {values:+duty} {tone:proud}
+- A gift nobody liked :: Ouch. Well, the thought had value. The gift, less so. {values:+kindness} {tone:humble}
+
+? q.values.prag_worth_double | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Is anything worth paying double for?
+Q: What's one thing you'd never buy cheap?
+- Good tools :: Agreed. A cheap kunai costs twice: once to buy, once to replace. {values:+strength +duty} {tone:dutiful}
+- Good food :: Fair. You are what you eat, and I'd rather be good rice. {values:+family} {tone:warm}
+- Nothing, ever :: Ha! A hard bargainer. The market fears you. {values:+duty} {tone:proud}
+- Time with friends :: Time's not for sale. But if it were, yes. Good answer. {values:+loyalty} {tone:gentle}
+
+? q.dilemma.prag_cheap_kunai | fn: deepen_bond reveal_character | level: 2
+Q: Cheap kunai that might snap, or good ones that cost a week's pay?
+Q: The Hagane forge or the bargain bin: where do you buy your kunai?
+- The good ones :: Sensible. The Hagane charge for a reason. {values:+duty +strength} {tone:dutiful}
+- The cheap ones :: Hm. Carry spares, then. Lots of spares. {values:+freedom} {tone:bold}
+- Borrow and make do :: Ha! The cheapest of all. Mind you give them back. {values:+creativity} {tone:joking}
+
+? q.values.prag_hard_or_clever | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Hard work or clever work: which gets you further?
+Q: Graft or wits? Which one pays better in the long run?
+- Hard work :: Steady work never goes out of fashion. True. {values:+duty +strength} {tone:dutiful}
+- Clever work :: Work smarter. The best merchants agree with you. {values:+knowledge} {tone:curious}
+- Both, together :: Ha! The full ledger. You'll go far. {values:+duty +knowledge} {tone:ambitious}
+
+? q.past.prag_shortcut_backfired | fn: deepen_bond reveal_character | level: 5 | follows: q.values.prag_hard_or_clever | depth: 2
+Q: Ever found a clever shortcut that turned out badly?
+Q: Has a smart idea of yours ever cost more than it saved?
+- Yes, once :: Once is tuition. Twice is carelessness. You've paid your tuition. {values:+honesty +knowledge} {tone:honest}
+- Never :: Never? Then you haven't tried enough shortcuts. Ha. {values:+duty} {tone:proud}
+- All the time :: Ha! At least you're consistent. {values:+honesty} {tone:joking}
+
+? q.plans.prag_save_pay | fn: deepen_bond reveal_character | level: 3
+Q: Do you save any of your mission pay?
+Q: When the Mission Desk pays you, where does the ryo go?
+- Half, at least :: Half! Remarkable discipline. You'll own a house before me. {values:+duty} {tone:dutiful}
+- A little :: A little is far better than none. Keep at it. {values:+duty} {tone:humble}
+- I spend it all :: All of it? Hm. We'll talk. {values:+freedom} {tone:free}
+
+? q.plans.prag_saving_for | fn: deepen_bond reveal_character | level: 5 | follows: q.plans.prag_save_pay | depth: 2
+Q: What are you saving towards, then?
+Q: Saving's easier with a goal. What's yours?
+- Better gear :: An investment in staying alive. The best kind. {values:+strength} {tone:cautious}
+- A home someday :: A home of your own. That's worth every ryo. {values:+family} {tone:warm}
+- Just in case :: The rainy-day fund. Wise. Rain always comes. {values:+duty} {tone:dutiful}
+- A gift for someone :: Saving for someone else. That's a different kind of rich. {values:+kindness +loyalty} {tone:kind}
+
+? q.advice.prag_raise_prices | fn: deepen_bond reveal_character | level: 3
+Q: Rice costs more this year. Do I raise my prices, or swallow the cost?
+Q: My costs are up. My regulars are poor. Raise prices or not?
+- Raise them :: Business is business. You're right. I'll grit my teeth and do it. {values:+duty +honesty} {tone:blunt}
+- Swallow the cost :: For a season, maybe. For my regulars. Hm. Kind of you. {values:+kindness +loyalty} {tone:kind}
+- A little, and explain :: A sign by the till: "Rice is dear this year." Honest and fair. Good. {values:+honesty} {tone:honest}
+
+? q.values.prag_braggers | fn: deepen_bond reveal_character | kind: opinion | level: 2
+Q: People who brag about their missions. Annoying, or fair enough?
+Q: A Genin tells you about the same C-rank for the fourth time. Your reaction?
+- Annoying :: Agreed. Talk is cheap. Results aren't. {values:+honesty} {tone:blunt}
+- Fair, if it's true :: True bragging is just reporting. Loudly. Fair. {values:+honesty +strength} {tone:honest}
+- Fun to listen to :: Ha! You're kinder than me. {values:+kindness} {tone:gentle}

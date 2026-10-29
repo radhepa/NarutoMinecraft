@@ -1,0 +1,210 @@
+{
+ "format": 1,
+ "id": "mission.c.tracking",
+ "kind": "mission",
+ "rank": "c",
+ "category": "tracking",
+ "status": "beta",
+ "title": "dlg:mission.c.tracking.title",
+ "brief": "dlg:mission.c.tracking.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.tracking.brief",
+  "accept": "dlg:mission.c.tracking.accept",
+  "decline": "dlg:mission.c.tracking.decline",
+  "progress": "dlg:mission.c.tracking.progress",
+  "success": "dlg:mission.c.tracking.success",
+  "fail": "dlg:mission.c.tracking.fail",
+  "report": "dlg:mission.c.tracking.report"
+ },
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "shopkeeper"
+   }
+  },
+  "shop": {
+   "pick": "anchor",
+   "tag": "market.stall"
+  },
+  "forest": {
+   "pick": "anchor",
+   "tag": "outside.forest_trail"
+  },
+  "hideout": {
+   "pick": "anchor",
+   "tag": "outside.hollow"
+  },
+  "thief": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:enemy.cat_burglar"
+   ]
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "scene"
+  },
+  "scene": {
+   "objective": {
+    "type": "inspect",
+    "target": "scent",
+    "at": "slot:shop"
+   },
+   "next": "trail"
+  },
+  "trail": {
+   "objective": {
+    "type": "inspect",
+    "target": "tracks",
+    "at": "slot:forest",
+    "count": 5
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "false_trail"
+     },
+     "next": "false"
+    }
+   ],
+   "next": "hideout"
+  },
+  "false": {
+   "objective": {
+    "type": "inspect",
+    "target": "tracks",
+    "at": "slot:forest",
+    "count": 3
+   },
+   "next": "hideout"
+  },
+  "hideout": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:thief",
+    "at": "slot:hideout"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:thief",
+      "slot:hideout"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "thief_is_child"
+     },
+     "next": "child"
+    }
+   ],
+   "next": "report"
+  },
+  "child": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "bring_in": null,
+     "plead": "pleaded_for_child"
+    },
+    "dialogue": "dlg:mission.c.tracking.choice.child"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:stolen_goods",
+    "to": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "false_trail",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.tracking.twist.false_trail"
+  },
+  {
+   "id": "thief_is_child",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.c.tracking.twist.thief_is_child"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "pleaded_for_child": {
+   "pay": 0.9,
+   "standing": 0,
+   "deed": "helped_resident"
+  }
+ },
+ "bonus": [
+  "fast",
+  "spared"
+ ],
+ "fast_hours": 6,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:enemy.cat_burglar"
+ ],
+ "places": {
+  "anchors": [
+   "market.stall",
+   "outside.forest_trail",
+   "outside.hollow"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.4
+ },
+ "tags": [
+  "outside",
+  "tracking",
+  "ninken"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.tracking",
+ "_premise": "Track a thief who robbed a shop and fled into the forest.",
+ "_twists": {
+  "false_trail": "The thief doubled back through a stream to throw off the dogs.",
+  "thief_is_child": "The thief is a runaway child stealing for a sick parent."
+ }
+}

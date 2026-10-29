@@ -1,0 +1,143 @@
+{
+ "format": 1,
+ "id": "mission.d.lot_clearing",
+ "kind": "mission",
+ "rank": "d",
+ "category": "clearing",
+ "status": "beta",
+ "title": "dlg:mission.d.lot_clearing.title",
+ "brief": "dlg:mission.d.lot_clearing.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.lot_clearing.brief",
+  "accept": "dlg:mission.d.lot_clearing.accept",
+  "decline": "dlg:mission.d.lot_clearing.decline",
+  "progress": "dlg:mission.d.lot_clearing.progress",
+  "success": "dlg:mission.d.lot_clearing.success",
+  "fail": "dlg:mission.d.lot_clearing.fail",
+  "report": "dlg:mission.d.lot_clearing.report"
+ },
+ "minutes": 10,
+ "party": "squad",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "groundskeeper"
+   }
+  },
+  "lot": {
+   "pick": "anchor",
+   "tag": "overgrown_lot"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "clear"
+  },
+  "clear": {
+   "objective": {
+    "type": "collect",
+    "target": "item:mission_debris",
+    "at": "slot:lot",
+    "count": 16
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "old_trap"
+     },
+     "next": "trap"
+    },
+    {
+     "if": {
+      "twist": "hornets"
+     },
+     "next": "hornets"
+    }
+   ],
+   "next": "report"
+  },
+  "trap": {
+   "objective": {
+    "type": "perform",
+    "what": "disarm_wire",
+    "at": "slot:lot",
+    "count": 2
+   },
+   "next": "report"
+  },
+  "hornets": {
+   "objective": {
+    "type": "perform",
+    "what": "smoke_bomb",
+    "at": "slot:lot"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "old_trap",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.d.lot_clearing.twist.old_trap"
+  },
+  {
+   "id": "hornets",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.lot_clearing.twist.hornets"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "fast"
+ ],
+ "fast_hours": 3,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "overgrown_lot"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "outdoors",
+  "clearing"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.clearing",
+ "_premise": "Clear an overgrown lot for a new training post.",
+ "_twists": {
+  "old_trap": "An old training trap is still armed under the weeds.",
+  "hornets": "Hornets have claimed the woodpile."
+ }
+}

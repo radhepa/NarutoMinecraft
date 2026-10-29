@@ -1,0 +1,33 @@
+plugins {
+    id 'java-library'
+}
+
+// The home engine of Shinobi Life (docs/HOME.md): pure Java, no Minecraft, deterministic and seeded. It reads and
+// writes friendships through the bond engine (life/bonds). Phase 0's Life mod depends on both and includes them.
+version = '0.1.0'
+group = 'dev.shinobi'
+base { archivesName = 'shinobi-life-home' }
+
+repositories { mavenCentral() }
+dependencies {
+    api project(':life:bonds')
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+test {
+    useJUnitPlatform()
+    testLogging { events 'failed'; exceptionFormat 'full' }
+}
+
+// Prints the seeded first-15-hours simulation: time at home, visitors a week, comfort over time.
+tasks.register('simulate', JavaExec) {
+    group = 'verification'
+    description = 'Plays a typical player through the beta (about 15 hours) and prints the home pacing tables.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.shinobi.life.home.sim.FirstFifteenHours'
+    args project.findProperty('seed') ?: '20261029'
+    if (project.hasProperty('levels')) systemProperty 'levels', 'true'
+}

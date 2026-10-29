@@ -19,7 +19,7 @@ public final class Kindle {
     /** What combat reads from the bond engine. The bonds session implements it; a quarrel dims a tier, a falling-out puts it out. */
     public interface Bonds {
         Tier tier(String who);
-        /** The bond web's score (BondWeb), which sizes Bonfire. */
+        /** Bonfire's strength from the bond engine (Kindling.bonfire(w).strength(): each flame by tier times its strength, plus each community reached). */
         double web();
         /** Whether the story and the bond engine have opened Bonfire. */
         boolean bonfireOpen();
@@ -98,8 +98,8 @@ public final class Kindle {
     }
 
     /**
-     * Bonfire, the ultimate: a form fed by every bond. Its strength follows the bond web's score with diminishing
-     * returns, so a player who befriended half the village burns like a beacon and a loner gets a candle.
+     * Bonfire, the ultimate: a form fed by every bond. Its strength comes from the bond engine with diminishing
+     * returns: about 1.1 for a loner, 1.6 for a typical player at 60 hours, 1.7 for a devoted one.
      */
     public record Form(double damage, double taken, double regen, double allyPower, int ticks) {}
     public static final int BONFIRE_TICKS = 400, BONFIRE_BURNOUT = 1200;

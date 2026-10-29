@@ -1,0 +1,535 @@
+# Board missions, C-rank (part 2): the missions team's templates, one block per template.
+# Same conventions as missions-d1.txt: job=mission_desk is the clerk, untagged lines the client.
+#! kind: cycle
+#! fn: quest
+
+# -- escort_traveller: a scholar through the hills. Slots: client (scholar), pass, camp, village, healer
+
+## mission.c.escort_traveller.title
+Escort a Scholar to the Border
+
+## mission.c.escort_traveller.brief  job=mission_desk  fn=quest,guide
+C-rank, two days. Escort {client}, a scholar, through the hills to {village}. The road goes over {pass}. {pay}.
+
+## mission.c.escort_traveller.brief  fn=quest,guide
+I have business in the border village. Books to see, people to ask. I've never walked the hills before.
+Two days, they tell me. Over {pass}, a night at {camp}, then down to {village}. How hard can it be?
+
+## mission.c.escort_traveller.accept
+Splendid. I've packed three books and one spare sock. Is that enough?
+Thank you. I promise to complain only about the important things.
+
+## mission.c.escort_traveller.decline
+Then I'll wait for the next squad. My research has waited this long.
+No? I'll read about the hills instead. Much less walking.
+
+## mission.c.escort_traveller.progress
+Is it always this steep? Don't answer that.
+I've filled four pages with notes already. The wildflowers here are extraordinary.
+
+## mission.c.escort_traveller.success
+We're here. I can't feel my feet, but we're here. Thank you, truly.
+Safe in the border village, and with my books dry. You're a credit to the Leaf.
+
+## mission.c.escort_traveller.fail
+I'll go home. The hills won this time. Thank you for getting me back.
+It didn't work out. I'm not cut out for mountains, it seems.
+
+## mission.c.escort_traveller.report  job=mission_desk
+Scholar delivered safely. {client} wrote a whole page about how brave you were. It's quite flowery. Logged.
+C-rank, done. A client who arrived healthier than they left. That's good escort work.
+
+## mission.c.escort_traveller.twist.sick_on_road  fn=quest,react
+{client} is pale and sweating at the pass, sitting down every ten steps. The hills have got to them.
+
+## mission.c.escort_traveller.twist.client_secret  fn=quest,react
+By the fire, {client} goes quiet, then admits the real reason for the trip. Harmless, and private. "Please don't tell anyone."
+
+## mission.c.escort_traveller.choice.choice
+{client} asked you to keep the secret. Keep it, or put it in the mission report?
+
+# -- caravan_guard: three carts, two days. Slots: client (trader), camp, waystation, hand_a, hand_b
+
+## mission.c.caravan_guard.title
+Guard a Caravan, East Road
+
+## mission.c.caravan_guard.brief  job=mission_desk  fn=quest,guide
+C-rank, two days. Guard {client}'s three-cart caravan on the east road as far as {waystation}. Raiders are active. {pay}.
+
+## mission.c.caravan_guard.brief  fn=quest,guide
+Three carts, two drivers I trust, and a lot of road. We camp at {camp} and reach {waystation} the second evening.
+The raiders on this road hit fast and run. Keep your eyes on the treeline and your hands near your kunai.
+
+## mission.c.caravan_guard.accept
+Good. You'll ride the middle cart. Best view, worst seat.
+Thank you. My drivers are {hand_a} and {hand_b}. They know the road. Listen to them.
+
+## mission.c.caravan_guard.decline
+Then I'll wait. The goods will wait too, more or less.
+No? I'll double the drivers and hope for the best.
+
+## mission.c.caravan_guard.progress
+First day done. We're on schedule. Don't jinx it.
+The oxen are nervous. They smell something we don't.
+
+## mission.c.caravan_guard.success
+Three carts in, three carts whole. I'll hire your squad again, for every trip.
+Every crate accounted for at the waystation. That's a good guard.
+
+## mission.c.caravan_guard.fail
+We lost a cart. Maybe more. At least we're alive.
+It went badly. I'll be counting losses for a week.
+
+## mission.c.caravan_guard.report  job=mission_desk
+Caravan guarded to the waystation. {client} is ordering their next run through us. Logged.
+C-rank, done. Two days, three carts, one tired squad. Paid.
+
+## mission.c.caravan_guard.twist.inside_job  fn=quest,react
+A mirror flash from the second cart. Someone in the caravan is signalling the raiders.
+
+## mission.c.caravan_guard.twist.sabotage  fn=quest,react
+This wheel's been cut halfway through. Clean cut, fresh sawdust. Somebody did it in the night.
+
+## mission.c.caravan_guard.choice.accuse
+The signals came from inside the caravan. Accuse {hand_a}, accuse {hand_b}, or say nothing until you're sure?
+
+# -- festival_guard: pickpockets in the crowd. Slots: client (organiser), street, den, guest ----
+
+## mission.c.festival_guard.title
+Festival Watch: Pickpockets
+
+## mission.c.festival_guard.brief  job=mission_desk  fn=quest,guide
+C-rank. A pickpocket gang is working the festival crowd on {street}. {client} wants it stopped tonight. {pay}.
+
+## mission.c.festival_guard.brief  fn=quest,guide
+Four purses gone last night and three the night before. They work in pairs. One bumps, one lifts.
+Walk the crowd on {street}. Watch the hands, not the faces. Faces always look innocent.
+
+## mission.c.festival_guard.accept
+Good. Wear something festive. A squad in uniform scares the thieves off before you can catch them.
+Thank you. If you can, enjoy a little of the festival too. Just a little.
+
+## mission.c.festival_guard.decline
+Then I'll warn people to hold their purses tight and hope.
+No? The gang will have a very good night, then.
+
+## mission.c.festival_guard.progress
+Anything? I saw a pair near the goldfish stall acting oddly.
+Another purse gone by the lantern arch. They're bold.
+
+## mission.c.festival_guard.success
+The gang's caught and the purses are back with their owners. The festival can breathe.
+A quiet night! Not one purse lost after you caught them. Thank you.
+
+## mission.c.festival_guard.fail
+They got away with half the market's takings. We'll do better next year.
+Not tonight. They're slippery. Thank you for trying.
+
+## mission.c.festival_guard.report  job=mission_desk
+Pickpocket gang, caught. Did you at least eat some yakitori while you were out there? Logged.
+C-rank, done. The festival committee is very relieved. Paid.
+
+## mission.c.festival_guard.twist.fireworks_theft  fn=quest,react
+The purses were a distraction. The gang's real target is the fireworks crate behind the stage.
+
+## mission.c.festival_guard.twist.lost_guest  fn=quest,react
+{guest}'s child has slipped the guards to see the stalls alone. Somewhere in this crowd.
+
+# -- smugglers_ford: a crew at night. Slots: client (a Hagane), ford, crew, hide ---------------
+
+## mission.c.smugglers_ford.title
+Smugglers at the Ford
+
+## mission.c.smugglers_ford.brief  job=mission_desk  fn=quest,guide
+C-rank, night work. A smuggling crew crosses the river at {ford} after dark. Hide in {hide}, wait, and stop them. {pay}.
+
+## mission.c.smugglers_ford.brief  fn=quest,guide
+Untaxed metal, mostly. Bad blades that undercut honest smiths. They cross {ford} at moonrise.
+The reeds at {hide} are good cover. Cold and wet, but good cover.
+
+## mission.c.smugglers_ford.accept
+Good. Dark clothes, no lamps. And don't sneeze.
+Thank you. The Hagane forges can't compete with stolen metal. Stop them.
+
+## mission.c.smugglers_ford.decline
+Then they cross again tonight, and the night after.
+No? I'll report it to the guard again. They'll do nothing again.
+
+## mission.c.smugglers_ford.progress
+Moonrise soon. Stay low in the reeds.
+Hear that? Oars. Quiet ones. They're coming.
+
+## mission.c.smugglers_ford.success
+The crew's caught and the cargo seized. The honest forges thank you.
+That ford will be quiet for a long while now. Good.
+
+## mission.c.smugglers_ford.fail
+They crossed. We'll see their blades in the market by next week.
+Not tonight. They were quicker than we thought.
+
+## mission.c.smugglers_ford.report  job=mission_desk
+Smuggling crew, stopped. You're wet to the waist. Reeds, was it? Logged.
+C-rank, done. {client} says the forge district will sleep easier. Paid.
+
+## mission.c.smugglers_ford.twist.animals  fn=quest,react
+Not metal. The crates are full of animals. Rare ones, crammed into cages far too small.
+
+## mission.c.smugglers_ford.twist.decoy  fn=quest,react
+The first boat's empty. A decoy. The real one is crossing downstream right now!
+
+## mission.c.smugglers_ford.choice.animals
+Cramped cages full of rare animals. Free them here by the river, or hand them over as evidence?
+
+# -- haunted_inn: the east road waystation. Slots: client (innkeeper), inn, cellar, gang -------
+
+## mission.c.haunted_inn.title
+The Haunted Waystation Inn
+
+## mission.c.haunted_inn.brief  job=mission_desk  fn=quest,guide
+C-rank, two days. The inn at {inn} has a ghost story, and travellers who never checked out. {client} wants it looked into. {pay}.
+
+## mission.c.haunted_inn.brief  fn=quest,guide
+Footsteps at night, cold drafts, a face at the window. Guests leave in the dark without paying. Some don't leave at all.
+Stay a night at {inn}. See it for yourselves. And please, please tell me it's not real.
+
+## mission.c.haunted_inn.accept
+Thank you. Your rooms are free, of course. Room six is the worst one. You're in room six.
+Good. Don't go in the cellar alone. Don't go in the cellar at all, actually.
+
+## mission.c.haunted_inn.decline
+Then I'll lose more guests. And maybe my mind.
+No? I'll ask the priest to come again. It didn't work last time.
+
+## mission.c.haunted_inn.progress
+Did you hear it last night? The knocking? Tell me you heard it.
+Cold spot on the stairs again. I don't go up there after dark.
+
+## mission.c.haunted_inn.success
+No ghost. Just people, and they're gone now. My inn is mine again.
+I can sleep through the night! I've forgotten what that feels like. Thank you.
+
+## mission.c.haunted_inn.fail
+The knocking's still there. Maybe it is a ghost. Maybe I'll sell.
+Nothing solved. I'll keep the lamps lit all night again.
+
+## mission.c.haunted_inn.report  job=mission_desk
+Haunted inn, investigated. No ghosts on file. I'm relieved. I don't know what form I'd use. Logged.
+C-rank, done. The waystation inn is open for business, minus the haunting. Paid.
+
+## mission.c.haunted_inn.twist.gang_in_cellar  fn=quest,react
+Fresh footprints in the cellar dust, and a passage behind the casks. A gang has been robbing the sleeping guests.
+
+## mission.c.haunted_inn.twist.just_a_story  fn=quest,react
+{client} finally admits it: grandfather made the ghost up, years ago, to bring curious guests in. It worked too well.
+
+# -- warehouse_thefts: a stakeout. Slots: client (trader), warehouse, night_guard, clerk, porter --
+
+## mission.c.warehouse_thefts.title
+Stakeout: Warehouse Thefts
+
+## mission.c.warehouse_thefts.brief  job=mission_desk  fn=quest,guide
+C-rank. Goods keep vanishing from {warehouse}. Interview the staff, stake it out, find out who. {pay}.
+
+## mission.c.warehouse_thefts.brief  fn=quest,guide
+A crate a week, never more. No broken locks. Whoever it is has a key, or knows where one hangs.
+Three people work nights: {night_guard}, {clerk} and {porter}. I trust them all. That's the problem.
+
+## mission.c.warehouse_thefts.accept
+Thank you. Be fair to them. Whoever it isn't deserves that.
+Good. Watch the back door. That's where I'd go.
+
+## mission.c.warehouse_thefts.decline
+Then I'll change the locks and hope. Again.
+No? I'll keep counting crates and losing sleep.
+
+## mission.c.warehouse_thefts.progress
+Have you spoken to all three yet? What did they say?
+Another crate missing last night. Right under our noses.
+
+## mission.c.warehouse_thefts.success
+Now I know. It hurts, but I know. Thank you.
+The thefts have stopped. The warehouse feels like mine again.
+
+## mission.c.warehouse_thefts.fail
+Still vanishing. I'll be suspecting everyone forever now.
+No answer. I'll have to look at all of them differently. I hate that.
+
+## mission.c.warehouse_thefts.report  job=mission_desk
+Warehouse thefts, solved. {client} is relieved and a little sad. That's how these usually end. Logged.
+C-rank, done. Stakeouts are mostly waiting. You waited well. Paid.
+
+## mission.c.warehouse_thefts.twist.culprit_guard  fn=quest,react
+The key that opens the back door hangs on {night_guard}'s belt. And the mud on those sandals matches the alley.
+
+## mission.c.warehouse_thefts.twist.culprit_clerk  fn=quest,react
+The ledger's been changed in {clerk}'s hand. Every missing crate, written out of the books afterwards.
+
+## mission.c.warehouse_thefts.twist.culprit_porter  fn=quest,react
+{porter} carries crates out every night, and one more always goes out the back than came in the front.
+
+## mission.c.warehouse_thefts.choice.accuse
+You've heard all three and seen the clues. Name the thief: {night_guard}, {clerk} or {porter}?
+
+# -- water_dispute: two hamlets and a stream. Slots: client (headman), stream, other_headman ----
+
+## mission.c.water_dispute.title
+Keep the Peace at the Stream
+
+## mission.c.water_dispute.brief  job=mission_desk  fn=quest,guide
+C-rank. Two hamlets near the border are fighting over {stream}. Keep the peace until the magistrate comes. {client} asked for us. {pay}.
+
+## mission.c.water_dispute.brief  fn=quest,guide
+They've dammed {stream} above our fields. My rice is drying out. {other_headman} says it was always theirs.
+Hear us both, if you must. Just make sure nobody gets hurt before the magistrate arrives.
+
+## mission.c.water_dispute.accept
+Thank you. You'll see we're in the right. Look at our fields.
+Good. My people are angry. Your being here will calm them.
+
+## mission.c.water_dispute.decline
+Then someone will get hurt. I can feel it coming.
+No? The magistrate is a week away. It's a long week.
+
+## mission.c.water_dispute.progress
+Did you talk to {other_headman}? What did they say? Lies, I expect.
+The weir is still blocked. My people are gathering with spades.
+
+## mission.c.water_dispute.success
+Water flows to both hamlets. Nobody hurt. The magistrate will have little to do.
+Peace. Fragile, but peace. Thank you for listening to both of us.
+
+## mission.c.water_dispute.fail
+It came to blows. The magistrate will have a lot to say.
+Nothing settled. Both sides angrier than before.
+
+## mission.c.water_dispute.report  job=mission_desk
+Water dispute, calmed. The magistrate arrived to find almost nothing to do. That's a compliment. Logged.
+C-rank, done. Diplomacy is harder than fighting. You managed it. Paid.
+
+## mission.c.water_dispute.twist.hired_muscle  fn=quest,react
+Strangers with clubs on the weir. One headman has hired muscle to settle the stream by force.
+
+## mission.c.water_dispute.twist.dry_season  fn=quest,react
+Look at the banks. Cracked mud a hand's width down. It's a dry season, and there's barely enough for one hamlet.
+
+## mission.c.water_dispute.choice.settle
+The magistrate isn't here yet, and someone must decide. Share the water, give it upstream, or give it downstream?
+
+# -- border_patrol: markers and posts. Slots: client (a Chunin), markers, post, lost -----------
+
+## mission.c.border_patrol.title
+Border Patrol with a Chunin
+
+## mission.c.border_patrol.brief  job=mission_desk  fn=quest,guide
+C-rank. Walk a stretch of the border with {client}, checking the markers at {markers} and the watch at {post}. {pay}.
+
+## mission.c.border_patrol.brief  fn=quest,guide
+We walk the line from {markers} to {post}. Every stone checked, every post visited. It's long and mostly dull.
+Mostly. If you see someone on the wrong side of a marker, you tell me before you do anything.
+
+## mission.c.border_patrol.accept
+Good. Bring water and good sandals. We'll walk a long way.
+Right. Quiet on the line. Voices carry along the ridge.
+
+## mission.c.border_patrol.decline
+Fine. I'll walk it alone. It's quieter that way.
+No? Another squad will come. The border isn't going anywhere.
+
+## mission.c.border_patrol.progress
+That's the fourth marker. Straight and unmoved. Good.
+The watch post is past the next ridge. Keep pace.
+
+## mission.c.border_patrol.success
+Line walked, markers checked, posts visited. A clean patrol.
+Good work. You kept your eyes open. That's all a patrol really is.
+
+## mission.c.border_patrol.fail
+We'll turn back. The patrol's compromised. Report it as it happened.
+Not a clean walk. We'll report it and send another squad.
+
+## mission.c.border_patrol.report  job=mission_desk
+Border patrol, done. {client} says your squad kept up and kept quiet. Logged.
+C-rank complete. The line is where it should be. Paid.
+
+## mission.c.border_patrol.twist.scouts  fn=quest,react
+Two figures by the watch post with a drawing board. Foreign scouts, mapping every post on the line.
+
+## mission.c.border_patrol.twist.lost_genin  fn=quest,react
+{lost} is crouched beyond the marker stones, a Genin from another village, lost and very frightened.
+
+# -- protect_shop: through the week's big sale. Slots: client (shopkeeper), shop, rival, thugs --
+
+## mission.c.protect_shop.title
+Guard a Shop Through the Sale
+
+## mission.c.protect_shop.brief  job=mission_desk  fn=quest,guide
+C-rank. {client} at {shop} is being threatened by a rival's hired thugs. Protect the shop through the week's big sale. {pay}.
+
+## mission.c.protect_shop.brief  fn=quest,guide
+They broke a window last week and told my customers to shop elsewhere. My stall, at {shop}. My living.
+I know who's paying them. {rival}. Nobody will say so out loud.
+
+## mission.c.protect_shop.accept
+Thank you. Stand where people can see you. That alone might be enough.
+Good. If they come, they come at closing. That's when they always come.
+
+## mission.c.protect_shop.decline
+Then I'll close for the week. And lose the sale, and maybe the shop.
+No? I'll board the windows and pray.
+
+## mission.c.protect_shop.progress
+They walked past twice this morning. Looking. Just looking.
+Sales are good! People feel safe with a squad here.
+
+## mission.c.protect_shop.success
+The sale's over and the shop's whole. Best week I've had all year.
+No broken windows, no frightened customers. Thank you.
+
+## mission.c.protect_shop.fail
+They got in. Broken stock, frightened customers. I don't know what I'll do.
+It didn't work. Maybe nothing would have. Thank you for standing with me.
+
+## mission.c.protect_shop.report  job=mission_desk
+Shop protected through the sale. The market's talking about it. Logged.
+C-rank, done. Sometimes guarding is about standing still and being seen. Paid.
+
+## mission.c.protect_shop.twist.bribe  fn=quest,react
+The rival's man leans close. Twice the fee to be somewhere else at closing. Coins already in hand.
+
+## mission.c.protect_shop.twist.client_started_it  fn=quest,react
+The ledger tells a different story. {client} started this feud, years ago, by undercutting {rival}.
+
+## mission.c.protect_shop.choice.bribe
+Twice the fee to look away. Refuse the coins, or take them?
+
+## mission.c.protect_shop.choice.mediate
+Both shopkeepers share the blame. Bring them together to talk it out, or stand by your client?
+
+# -- heirloom: a pawn ring in the border village. Slots: client, pawn, back_room, ring ----------
+
+## mission.c.heirloom.title
+Recover a Stolen Heirloom
+
+## mission.c.heirloom.brief  job=mission_desk  fn=quest,guide
+C-rank. {client}'s family heirloom was stolen and turned up at a pawnshop in the border village, at {pawn}. Recover it. {pay}.
+
+## mission.c.heirloom.brief  fn=quest,guide
+A lacquered box, black with a gold crane on the lid. My family has kept it for five generations.
+Someone saw it in the back of {pawn}. They won't sell it back. They say they never had it.
+
+## mission.c.heirloom.accept
+Thank you. It's not worth much to anyone else. It's worth everything to us.
+Good. The pawnbroker isn't alone. There's a whole ring behind that counter. Be careful.
+
+## mission.c.heirloom.decline
+Then it's gone. Five generations, and I'm the one who lost it.
+No? I'll keep writing to the magistrate. For all the good it does.
+
+## mission.c.heirloom.progress
+Did you see it? Is it there? Is it whole?
+The ledger says they bought it a month ago. From whom, I wonder.
+
+## mission.c.heirloom.success
+That's it. That's the crane. Thank you. You've no idea.
+Home. Back on the shelf where it belongs. My grandmother would weep.
+
+## mission.c.heirloom.fail
+It's still in their hands. Or sold on. I'll never know.
+Gone. Thank you for trying. It mattered that someone tried.
+
+## mission.c.heirloom.report  job=mission_desk
+Heirloom recovered. {client} came by to say thank you in person. Twice. Logged.
+C-rank, done. Some things matter far more than their price. Paid.
+
+## mission.c.heirloom.twist.fake  fn=quest,react
+This box in the back room is a copy. Wrong weight, wrong lacquer. The real one is out on the counter, in plain sight.
+
+## mission.c.heirloom.twist.caught  fn=quest,react
+Boots on the stairs. The pawnbroker's men are back early, and the back room has one door.
+
+# -- missing_woodcutter: lost in the hills. Slots: client, woods, ravine, wolves --------------
+
+## mission.c.missing_woodcutter.title
+Find the Missing Woodcutter
+
+## mission.c.missing_woodcutter.brief  job=mission_desk  fn=quest,guide
+C-rank, rescue. A woodcutter didn't come home from {woods} last night. {client}'s household is frantic. Find them. {pay}.
+
+## mission.c.missing_woodcutter.brief  fn=quest,guide
+Our woodcutter went up the path at {woods} yesterday morning and never came back. The axe is gone too.
+Follow the path. There'll be fresh chips where the cutting stopped. Please hurry.
+
+## mission.c.missing_woodcutter.accept
+Thank you. Take this blanket. And this water. And please, please hurry.
+Good. I'll keep the fire high so you can see the house from the hill.
+
+## mission.c.missing_woodcutter.decline
+Then I'll go up myself. In the dark, if I have to.
+No? We'll gather the neighbours with torches.
+
+## mission.c.missing_woodcutter.progress
+Any sign? Chips, footprints? Anything?
+The light's going. Please keep looking.
+
+## mission.c.missing_woodcutter.success
+Home! Hurt, but home. Thank you. I'll never forget this.
+You found them. Alive. I don't know how to thank you.
+
+## mission.c.missing_woodcutter.fail
+Nothing. We'll keep searching at first light.
+You came back without them. I know you tried. I know.
+
+## mission.c.missing_woodcutter.report  job=mission_desk
+Missing woodcutter, found and home. The hospital says a broken leg and a lot of luck. Logged.
+C-rank rescue, done. The best reports are the ones where everyone comes home. Paid.
+
+## mission.c.missing_woodcutter.twist.ravine  fn=quest,react
+A shout from below. The woodcutter fell into the ravine at {ravine}, and the only way down is the cliff face.
+
+## mission.c.missing_woodcutter.twist.wolves_close_in  fn=quest,react
+Howling, closer than it should be. The wolves smelled the blood before you found the woodcutter.
+
+# -- tracking: a thief in the forest. Slots: client (shopkeeper), shop, forest, hideout, thief -
+
+## mission.c.tracking.title
+Track the Thief into the Forest
+
+## mission.c.tracking.brief  job=mission_desk  fn=quest,guide
+C-rank. A thief robbed {client}'s stall at {shop} and fled into the forest along {forest}. Track them down. {pay}.
+
+## mission.c.tracking.brief  fn=quest,guide
+Grabbed the cash box and a sack of rice, then ran for the trees at {forest}. Fast, and small.
+The tracks start at my back door. After that, the forest. I don't know the forest.
+
+## mission.c.tracking.accept
+Thank you. The box has my mark on the lid. A circle with a line.
+Good. Bring my money back. And the rice, if it's still whole.
+
+## mission.c.tracking.decline
+Then it's gone. A month's takings, gone.
+No? I'll put a lock on the door. Too late, as always.
+
+## mission.c.tracking.progress
+Found the trail? Good. It was going towards the stream when I lost it.
+The forest's thick out there. Don't get lost yourselves.
+
+## mission.c.tracking.success
+My box! And most of the coins. Thank you. I didn't think I'd see it again.
+Found, and brought back. You're better at this than the guards.
+
+## mission.c.tracking.fail
+The trail went cold. So did my hopes. Thank you anyway.
+Gone into the forest for good, then. I'll start saving again.
+
+## mission.c.tracking.report  job=mission_desk
+Thief tracked and stall money returned. You've pine needles in your collar. Logged.
+C-rank, done. Tracking's patience more than speed. You had both. Paid.
+
+## mission.c.tracking.twist.false_trail  fn=quest,react
+The tracks stop dead at the stream. The thief doubled back through the water to throw off the dogs.
+
+## mission.c.tracking.twist.thief_is_child  fn=quest,react
+The thief is a child. Thin, frightened, guarding the rice like treasure. It was for a sick parent at home.
+
+## mission.c.tracking.choice.child
+A runaway child stealing for a sick parent. Bring them in as the job says, or plead their case to {client}?

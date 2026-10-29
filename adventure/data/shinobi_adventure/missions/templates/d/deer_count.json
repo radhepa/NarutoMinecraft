@@ -1,0 +1,147 @@
+{
+ "format": 1,
+ "id": "mission.d.deer_count",
+ "kind": "mission",
+ "rank": "d",
+ "category": "clans",
+ "status": "beta",
+ "title": "dlg:mission.d.deer_count.title",
+ "brief": "dlg:mission.d.deer_count.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.deer_count.brief",
+  "accept": "dlg:mission.d.deer_count.accept",
+  "decline": "dlg:mission.d.deer_count.decline",
+  "progress": "dlg:mission.d.deer_count.progress",
+  "success": "dlg:mission.d.deer_count.success",
+  "fail": "dlg:mission.d.deer_count.fail",
+  "report": "dlg:mission.d.deer_count.report"
+ },
+ "minutes": 10,
+ "party": "squad",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "clan": "nara"
+   }
+  },
+  "forest": {
+   "pick": "anchor",
+   "tag": "clan.nara.forest"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "count"
+  },
+  "count": {
+   "objective": {
+    "type": "inspect",
+    "target": "deer",
+    "at": "slot:forest",
+    "count": 12
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "fawn_stuck"
+     },
+     "next": "fawn"
+    },
+    {
+     "if": {
+      "twist": "antler_shed"
+     },
+     "next": "antlers"
+    }
+   ],
+   "next": "report"
+  },
+  "fawn": {
+   "objective": {
+    "type": "perform",
+    "what": "free_fawn",
+    "at": "slot:forest"
+   },
+   "next": "report"
+  },
+  "antlers": {
+   "objective": {
+    "type": "collect",
+    "target": "item:mission_shed_antler",
+    "at": "slot:forest",
+    "count": 3
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "fawn_stuck",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.deer_count.twist.fawn_stuck"
+  },
+  {
+   "id": "antler_shed",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.deer_count.twist.antler_shed"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0,
+   "clan_deed": [
+    "nara",
+    "helped_resident"
+   ]
+  }
+ },
+ "bonus": [
+  "gentle",
+  "all_found"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "clan.nara.forest"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.35
+ },
+ "tags": [
+  "outdoors",
+  "animal",
+  "clan"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.clans",
+ "_premise": "Help the Nara count their deer in the clan forest.",
+ "_twists": {
+  "fawn_stuck": "A fawn is caught in a bramble and its mother will not let you near.",
+  "antler_shed": "The clan's medicine-makers want this season's shed antlers too."
+ }
+}

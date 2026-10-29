@@ -1,0 +1,281 @@
+"""The Mission Desk's numbers: pay and XP bands, grades, the desk's board rules, clients and the squad.
+
+Compiled to economy.json, desk.json, clients.json and squad.json next to the templates. Every number is
+data, so a balance pass is a datapack update (ROADMAP section 9, "Playtesting"). MISSIONS.md explains them.
+"""
+
+# Mission items in the items session's registry: reused ids; every other bare item is item:mission_<name>;
+# creatures are followers, not items.
+REUSED_ITEMS = {"bouquet": "item:bouquet", "lamp_oil": "item:lamp_oil", "practice_kunai": "item:practice_kunai",
+                "stolen_goods": "item:stolen_goods", "tea_leaves": "item:tea_leaves", "herb": "item:healing_herb",
+                "groceries": "item:grocery_order", "parcel": "item:quest_parcel", "sealed_letter": "item:quest_letter"}
+CREATURES = {"cat", "ninken", "frog", "stray_pet"}
+
+RANK_GATES = {
+    "d": {"all": [{"rank_at_least": "genin"}, {"rank_at_most": "chunin"},
+                  {"quest_state": ["main.ch9.small_jobs", "done"]}]},
+    "c": {"all": [{"rank_at_least": "genin"}, {"rank_at_most": "jonin"},
+                  {"quest_state": ["main.ch11.paper_trail", "done"]}]},
+    "b": {"rank_at_least": "chunin"},
+    "a": {"rank_at_least": "jonin"},
+    "s": {"all": [{"rank_at_least": "jonin"}, {"level_at_least": 42}]},
+}
+
+ECONOMY = {
+    "format": 1,
+    "_doc": "Pay is the player's share in ryo. XP is a share of the XP one level takes at the rank's reference level, so a D-rank is worth less of a level the higher you are. MISSIONS.md section 3.",
+    "ranks": {
+        "d": {"ryo": [60, 150], "xp": [0.15, 0.25], "ref_level": 7, "minutes": [8, 12]},
+        "c": {"ryo": [300, 600], "xp": [0.5, 0.7], "ref_level": 12, "minutes": [20, 35]},
+        "b": {"ryo": [800, 1500], "xp": [0.6, 0.9], "ref_level": 22, "minutes": [35, 45]},
+        "a": {"ryo": [2000, 4000], "xp": [0.9, 1.3], "ref_level": 36, "minutes": [45, 55]},
+        "s": {"ryo": [6000, 12000], "xp": [1.8, 2.6], "ref_level": 46, "minutes": [55, 70]},
+    },
+    "jitter": 0.12,
+    "round_to": 5,
+    "twist_harder": 0.1,
+    "requested": 1.15,
+    "grades": [
+        {"grade": "S", "min": 100, "pay": 1.25, "xp": 1.25, "rapport": 2.0, "standing": 2},
+        {"grade": "A", "min": 85, "pay": 1.1, "xp": 1.1, "rapport": 1.5, "standing": 1},
+        {"grade": "B", "min": 65, "pay": 1.0, "xp": 1.0, "rapport": 1.0, "standing": 0},
+        {"grade": "C", "min": 0, "pay": 0.85, "xp": 0.85, "rapport": 0.5, "standing": 0},
+    ],
+    "score": {"base": 60, "bonuses": 40, "knockout": -8, "client_hurt": -15, "alarm": -10, "late": -10,
+              "good_assignment": 4, "cohesion": [[75, 5], [50, 0], [30, -5], [0, -10]]},
+    "partial": {"pay": 0.5, "xp": 0.6, "rapport": 0.0, "grade_cap": "C"},
+    "fail": {"pay": 0.0, "xp": 0.1, "rapport": -2.0, "standing": -2, "act": "failed_client"},
+    "handed_back": {"rapport": -0.5, "desk": -1},
+    "abandoned": {"rapport": -4.0, "standing": -4, "act": "abandoned_mission"},
+    "gifts": {
+        "_doc": "Besides pay: a thank-you from the client's trade, VF notice-board style. Item ids are requests to the items session.",
+        "chance": {"d": 0.3, "c": 0.35, "b": 0.25, "a": 0.2, "s": 0.2},
+        "grade_at_least": "B",
+        "by_job": {
+            "farmer": ["item:vegetable_basket"], "fisher": ["item:grilled_fish"], "cook": ["item:onigiri"],
+            "stallholder": ["item:dango"], "florist": ["item:pressed_flower"], "vet": ["item:pet_treat"],
+            "medic": ["item:bandage_wrap", "item:soldier_pill"], "priest": ["item:luck_charm"],
+            "shopkeeper": ["item:kunai"], "trader": ["item:steel_ingot", "item:cotton_cloth"],
+            "teacher": ["item:study_notes"], "groundskeeper": ["item:ninja_wire"], "clerk": ["item:tea_tin"],
+            "bath_keeper": ["item:milk"], "porter": ["item:onigiri"], "*": ["item:onigiri", "item:tea_tin"],
+        },
+    },
+    "technique_scrolls": {
+        "_doc": "Learning jutsu from mission rewards (ROADMAP section 7): the first S grade on a C-rank or above can carry a scroll from the rank's pool (combat session ids).",
+        "chance": {"c": 0.25, "b": 0.3, "a": 0.35, "s": 0.5},
+        "item": "item:technique_scroll", "pools": {"c": "pool:scroll.c_rank", "b": "pool:scroll.b_rank", "a": "pool:scroll.a_rank", "s": "pool:scroll.s_rank"},
+    },
+    "collectibles": {
+        "_doc": "Drop sources for collectibles (ordinary items kept in chests; no collection book): curios, ninja info cards and keepsakes. The items session registers the item ids and loot tables; these are the requests.",
+        "curios": {
+            "_doc": "Useless, charming things with flavor text. Rolled on turn-in at grade B or better; the table is the first tag the template has.",
+            "chance": {"d": 0.12, "c": 0.35, "b": 0.45, "a": 0.5, "s": 0.6},
+            "chance_on_defeat": 0.15,
+            "tables": [
+                ["anbu", "loot:curio.covert"], ["war", "loot:curio.battlefield"], ["travel", "loot:curio.far_lands"],
+                ["road", "loot:curio.road"], ["river", "loot:curio.river"], ["shrine", "loot:curio.shrine"],
+                ["academy", "loot:curio.academy"], ["market", "loot:curio.market"], ["farm", "loot:curio.fields"],
+                ["outside", "loot:curio.wilds"], ["outdoors", "loot:curio.wilds"], ["village", "loot:curio.village"],
+                ["*", "loot:curio.village"],
+            ],
+            "on_defeat": {"_doc": "Curios carried by defeated enemies, by the enemy's kind.",
+                          "combat:group.bandits_small": "loot:curio.bandit", "combat:group.bandits_camp": "loot:curio.bandit",
+                          "combat:group.road_ambush": "loot:curio.bandit", "combat:enemy.bandit_chief": "loot:curio.bandit_chief",
+                          "combat:group.smugglers": "loot:curio.smuggler", "combat:group.scout_pair": "loot:curio.foreign",
+                          "combat:enemy.bandit_ronin": "loot:curio.ronin", "combat:group.cell_pair": "loot:curio.foreign",
+                          "beast": "loot:curio.beast", "*": "loot:curio.bandit"},
+        },
+        "cards": {
+            "_doc": "Ninja info cards: the item item:info_card with a variant, one per enemy kind defeated (first time) and per person met on a mission (the client on turn-in, named mission roles on meeting).",
+            "item": "item:info_card",
+            "enemy": "enemy.<combat enemy id>",
+            "person": "person.<role or resident id>",
+            "rank_backs": {"d": "plain", "c": "bronze", "b": "silver", "a": "gold", "s": "black"},
+        },
+        "keepsakes": {
+            "_doc": "Unique keepsakes from memorable missions: the first finish at grade A or better. Display items for the home.",
+            "mission.d.festival_setup": "item:keepsake_festival_lantern",
+            "mission.d.kiln_firing": "item:keepsake_first_firing_cup",
+            "mission.d.lost_pet": "item:keepsake_pet_collar_charm",
+            "mission.d.river_cleanup": "item:keepsake_bottle_letter",
+            "mission.d.snow_clearing": "item:keepsake_snow_rabbit",
+            "mission.c.escort_merchant": "item:keepsake_trader_map",
+            "mission.c.bandit_clearing": "item:keepsake_bandit_banner",
+            "mission.c.beast_hunt": "item:keepsake_boar_tusk",
+            "mission.c.bear": "item:keepsake_honey_pot",
+            "mission.c.haunted_inn": "item:keepsake_ghost_lantern",
+            "mission.c.dojo_challenge": "item:keepsake_dojo_signboard",
+            "mission.c.contest_thief": "item:keepsake_burglar_mask",
+            "mission.c.noble_child": "item:keepsake_noble_fan",
+            "mission.c.kiln_delivery": "item:keepsake_market_bowl",
+            "mission.b.kiln_glaze": "item:keepsake_glaze_tile",
+            "mission.b.bridge_builders": "item:keepsake_bridge_plank",
+            "mission.a.kiln_court": "item:keepsake_court_vase",
+            "mission.a.siege_relief": "item:keepsake_castle_banner",
+            "mission.s.peace_summit": "item:keepsake_summit_seal",
+            "mission.anbu.village_shadow": "item:keepsake_festival_mask",
+        },
+    },
+    "standing": {
+        "_doc": "Village reputation (BONDS.md section 8): a finished mission is a deed about the client, witnessed by the squad; the grade's standing goes to the client's district and clan.",
+        "success_act": "helped_resident", "failure_act": "failed_client", "abandon_act": "abandoned_mission",
+    },
+    "xp_curve": {"base": 200, "per_level": 40, "_doc": "Provisional: XP to the next level. Progression's ranks.json owns the real curve."},
+    "living": {"_doc": "The beta's rule of thumb, for the simulation: a day of D-ranks covers food and leaves about half to save.",
+               "food_per_day": [30, 45], "tools_per_week": [40, 90]},
+}
+
+DESK = {
+    "format": 1,
+    "_doc": "The Mission Desk on the Hokage Residence's ground floor. MISSIONS.md section 2.",
+    "place": "place:residence.mission_desk",
+    "clerks": ["role:desk_chunin_1", "role:desk_chunin_2"],
+    "travel_desk": {"place": "place:gate.travel_desk", "guards": ["role:gate_guard_1", "role:gate_guard_2"]},
+    "road_events": {
+        "_doc": "What a travel scene can roll on the way to a far region (ROADMAP section 6). Roles are the ranks session's (provisional).",
+        "chance": 0.35,
+        "events": [
+            {"id": "traveller", "weight": 3},
+            {"id": "ambush", "weight": 2, "group": "combat:group.road_ambush"},
+            {"id": "camp_night", "weight": 2},
+            {"id": "passing_elite", "weight": 1, "role": "role:elite_scout", "regions": ["region:east_road"]},
+        ],
+    },
+    "hours": ["08:00", "18:00"],
+    "rank_gates": RANK_GATES,
+    "board": {
+        "genin": {"d": 5, "c": 2},
+        "chunin": {"d": 2, "c": 3, "b": 3},
+        "jonin": {"c": 1, "b": 2, "a": 3},
+        "anbu": {"b": 1, "a": 2, "s": 1},
+        "hokage": {},
+    },
+    "refresh_days": {"d": 1, "c": 3, "b": 3, "a": 7, "s": 28},
+    "caps": {
+        "per_day": 2,
+        "in_hand": 1,
+        "per_week": {"c": {"genin": 1, "chunin": 3, "jonin": 3}, "b": {"chunin": 2, "jonin": 2, "anbu": 2},
+                     "a": {"jonin": 1, "anbu": 1}, "s": {"jonin": 1, "anbu": 1}},
+        "s_per_season": 1,
+    },
+    "variety": {
+        "template_gap_days": {"d": 8, "c": 12, "b": 14, "a": 21, "s": 56},
+        "client_gap_days": 4,
+        "anchor_gap_days": 2,
+        "region_gap_days": 0,
+        "max_same_category": 1,
+        "twist_gap_days": 10,
+    },
+    "twist_chance": {"classic": 0.45, "varied": 0.6},
+    "varied_weight_range": [0.5, 1.5],
+    "classic_opening": [
+        "mission.d.lost_pet", "mission.d.delivery_run", "mission.d.farm_weeding", "mission.d.academy_assist",
+        "mission.d.elder_errands", "mission.d.roof_repair", "mission.d.market_stall", "mission.d.river_cleanup",
+    ],
+    "offer_lifetime_days": {"d": 2, "c": 4, "b": 4, "a": 7, "s": 14},
+    "solo_when": "party is solo or squad_or_solo; from Chunin every D and C may be taken solo",
+}
+
+CLIENTS = {
+    "format": 1,
+    "_doc": "Client rapport, requests by name, recurring clients and chains, rival squads. MISSIONS.md section 5.",
+    "rapport": {
+        "tiers": [["stranger", -99], ["known", 1], ["regular", 3], ["trusted", 6], ["patron", 10]],
+        "soured_below": -2,
+        "_doc": "Points per mission by grade come from economy.json; a client below `soured_below` stops posting to you for 14 days.",
+    },
+    "requests": {
+        "min_tier": "known",
+        "min_avg_score": 85,
+        "chance_per_day": 0.25,
+        "max_on_board": 1,
+        "expires_days": 4,
+        "pay": 1.15,
+        "decline": "free",
+    },
+    "chains": [
+        {"id": "chain.merchant", "role": "role:merchant", "_doc": "The travelling merchant who keeps hiring the squad (ROADMAP Classic cast).",
+         "unlock": {"quest_state": ["main.ch14.second_escort", "done"]},
+         "templates": ["mission.c.escort_merchant", "mission.c.caravan_guard"], "per_week": 1},
+        {"id": "chain.kiln", "_doc": "A family of potters you work for from Genin to Jonin.",
+         "roles": {"role:client.kiln_grandmother": "an elderly civilian potter", "role:client.kiln_parent": "a civilian potter, her child",
+                   "role:client.kiln_heir": "the parent's eldest, an apprentice potter"},
+         "unlock": {"flag": "story.ch10.done"},
+         "stages": [
+             {"template": "mission.d.kiln_firing", "after": None},
+             {"template": "mission.c.kiln_delivery", "after": "mission.d.kiln_firing", "min_tier": "known"},
+             {"template": "mission.b.kiln_glaze", "after": "mission.c.kiln_delivery", "min_tier": "regular"},
+             {"template": "mission.a.kiln_court", "after": "mission.b.kiln_glaze", "min_tier": "trusted"},
+         ],
+         "per_week": 1},
+    ],
+    "returning": {
+        "_doc": "When the board casts a client, it first tries someone you have already worked for (known or better, and not too recently), so the village's regulars come back.",
+        "chance": 0.3,
+        "min_tier": "known",
+    },
+    "rival_squads": {
+        "rival": {"role": "role:rival_squad", "members": ["role:rival", "role:classmate_c", "role:classmate_d"],
+                  "unlock": {"quest_state": ["main.ch9.small_jobs", "done"]},
+                  "contests_per_week": 1, "win_chance": {"genin": 0.45, "chunin": 0.5}},
+        "npc_squads": {"count": 4, "take_unclaimed_after_days": 1, "chance": 0.2,
+                       "_doc": "Other Genin squads take offers you leave on the board; the board says who took it."},
+    },
+}
+
+SQUAD = {
+    "format": 1,
+    "_doc": "Teammates' roles in missions and how cohesion shows. MISSIONS.md section 6.",
+    "roles": {
+        "point": "Leads, scouts ahead, first into a fight",
+        "guard": "Stays with the client or the cargo",
+        "tracker": "Follows scent and signs (a ninken, a sensor, Byakugan)",
+        "support": "Traps, illusions, first aid, tools",
+    },
+    "wanted": {
+        "escort": ["guard", "point"], "guard": ["guard", "support"], "bodyguard": ["guard", "support"],
+        "bandits": ["point", "support"], "beasts": ["tracker", "point"], "tracking": ["tracker", "point"],
+        "rescue": ["tracker", "support"], "investigation": ["tracker", "support"], "protection": ["guard", "point"],
+        "delivery": ["guard", "point"], "interdiction": ["point", "support"], "courier": ["point", "tracker"],
+        "patrol": ["tracker", "point"], "recovery": ["point", "support"], "mediation": ["support", "guard"],
+        "contest": ["point", "tracker"], "duel": ["point", "support"], "leadership": ["point", "guard"],
+        "pets": ["tracker", "support"], "childcare": ["guard", "support"], "harvest": ["point", "support"],
+        "festival": ["point", "support"], "repairs": ["support", "point"], "clearing": ["support", "point"],
+        "river": ["support", "tracker"], "household": ["guard", "support"], "construction": ["point", "support"],
+        "farm": ["support", "tracker"], "*": ["point", "support"],
+    },
+    "aptitude": {
+        "_doc": "A teammate's best roles, from their profile; the first matching rule wins for each slot.",
+        "rules": [
+            {"if": {"has_ninken": True}, "roles": ["tracker"]},
+            {"if": {"clan": ["hyuga", "aburame", "inuzuka", "hatake"]}, "roles": ["tracker"]},
+            {"if": {"clan": ["kurama", "yuhi", "yamanaka", "suzuran"]}, "roles": ["support"]},
+            {"if": {"clan": ["akimichi", "gekko", "uchiha", "senju"]}, "roles": ["point"]},
+            {"if": {"trait": "discipline"}, "roles": ["guard"]},
+            {"if": {"trait": "boldness"}, "roles": ["point"]},
+            {"if": {"trait": "warmth"}, "roles": ["guard", "support"]},
+            {"if": {}, "roles": ["support"]},
+        ],
+    },
+    "assignment": {"good_call": 4, "favor": 1, "_doc": "A role that matches the teammate's aptitude and the mission adds to the grade score; every assignment is attention for the jealousy rules (BONDS.md section 7)."},
+    "cohesion": [
+        {"min": 75, "name": "in_step", "score": 5, "assists": True, "disobey": 0.0},
+        {"min": 50, "name": "steady", "score": 0, "assists": True, "disobey": 0.0},
+        {"min": 30, "name": "ragged", "score": -5, "assists": False, "disobey": 0.05},
+        {"min": 0, "name": "split", "score": -10, "assists": False, "disobey": 0.15},
+    ],
+    "acts": {
+        "success": [["role:squad", "mission_together"], ["role:squad", "mission_success"]],
+        "failure": [["role:squad", "mission_together"], ["role:squad", "mission_failed"]],
+        "camp": [["role:squad", "camp_night"]],
+        "_doc": "Bond acts the desk applies on turn-in (BONDS.md section 4); templates add their own.",
+    },
+    "banter": {
+        "_doc": "The dialogue session's scheme, most specific first: dlg:mission.banter.<category>.<moment>.<speaker_kind>.<band>, then without the band, then without the category.",
+        "key": "dlg:mission.banter.[<category>.]<moment>.<speaker_kind>[.<band>]",
+        "moments": ["brief", "depart", "travel", "arrive", "ambush", "twist", "fight", "low_health", "choice", "camp",
+                    "victory", "grade_s", "partial", "fail", "report"],
+        "speaker_kinds": ["sensei", "teammate", "client"],
+        "cohesion": ["in_step", "steady", "ragged", "split"],
+    },
+}

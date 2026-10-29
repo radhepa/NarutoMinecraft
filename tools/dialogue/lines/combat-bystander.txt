@@ -1,0 +1,209 @@
+# Combat barks: residents watching, or getting out of the way of, a fight in the village. They react
+# to the fight around them, mostly to the player's part in it. Pools are
+# combat.<event>.resident_bystander. Children watching use the stage=child headings. Under 80 characters.
+#! kind: cycle
+#! fn: react
+
+## combat.fight_start.resident_bystander
+Get back! They're fighting in the street!
+Somebody fetch the police! Quick!
+Mind the fruit stall! Not the fruit stall!
+Inside, everyone! Shut the shutters!
+Here we go again. Third time this month.
+Someone run to the guard post at the gate!
+Clear the bridge! Give them room!
+
+## combat.fight_start.resident_bystander  stage=child
+Whoa! A real fight! Everyone come look!
+Go get my big sister! She's a Genin!
+
+## combat.taunt.resident_bystander
+Go on! Show them out of the village!
+Don't let them push you around!
+Teach that troublemaker some manners!
+That's it! Give them a taste of the Leaf!
+You can take them! I've seen you train!
+Out of our market, you rascal!
+
+## combat.taunt.resident_bystander  stage=child
+Get 'em! Get 'em!
+Do the thing with the hand signs!
+
+## combat.low_health.resident_bystander
+They're hurt! Someone help!
+Hold on! Help is coming!
+Fall back! Nobody needs to be a hero today!
+Run to the hospital, somebody! Now!
+Careful! Watch your left!
+Please, get out of there!
+
+## combat.ally_down.resident_bystander
+They knocked out the dango seller!
+Get them off the street before they're trampled!
+Drag them into the doorway! Gently!
+Is anyone a medic? Anyone?
+Oh no, not the old gate guard!
+Fan them, quickly! They're coming round, I think.
+
+## combat.knocked_out.resident_bystander
+Ooh... my head...
+I only came out for tofu...
+Tell the shop... I'll be late...
+Everything's... spinning...
+
+## combat.flee.resident_bystander
+Run! Run!
+Not my shop! Not again!
+Grab the children and go!
+I'm too old for this! Out of my way!
+I'll be in the cellar if anyone needs me!
+Leave the cart, just go!
+
+## combat.flee.resident_bystander  stage=child
+Mama! Wait for me!
+Hide behind the rain barrel!
+
+## combat.victory.resident_bystander
+They did it! They really did it!
+Three cheers for our ninja!
+That's the Leaf for you!
+Somebody get that one a bowl of ramen!
+I knew it! Didn't I say they'd win?
+Well fought! Wait till the whole street hears!
+
+## combat.victory.resident_bystander  stage=child
+That was the coolest thing I've ever seen!
+I'm gonna be a ninja too! Just like that!
+
+## combat.defeat.resident_bystander
+No! Get up! Please get up!
+Somebody help them!
+Fetch a medic! And the police!
+Don't move them! Wait for help!
+Shame on you! Picking on our own!
+
+## combat.yield.resident_bystander
+They gave up! Good riddance!
+Tie them up before they change their mind!
+Hands where we can see them, troublemaker!
+That's right! Nobody wins against the Leaf!
+
+## combat.parry_landed.resident_bystander
+Did you see that? Blocked it clean!
+What a catch!
+Ha! Turned it right back!
+Such quick hands!
+
+## combat.combo_finisher_landed.resident_bystander
+Ooh! That one landed!
+That'll leave a mark!
+Bang! Right on the mark!
+One, two, three! Beautiful!
+
+## combat.jutsu_cast.resident_bystander
+Was that {technique}? Right here on the street?
+Everybody down! It's {technique}!
+{technique}! Like the stories!
+Not near the paper lanterns! Not {technique}!
+Hand signs! Stand back, it's a jutsu!
+
+## combat.jutsu_cast.resident_bystander  stage=child
+{technique}! I saw {technique}! Wait till class hears!
+
+## combat.genjutsu_caught.resident_bystander
+Why are there two moons?
+The street's tilting! Is the street tilting?
+Did that lantern just wink at me?
+
+## combat.smoke_bomb.resident_bystander
+Cough! What's that smell?
+Smoke! Get the water buckets!
+Open the windows! I can't see the counter!
+Is it fire? Tell me it's not fire!
+
+## combat.substitution.resident_bystander
+Where did that log come from?
+They turned into a log! A whole log!
+Ha! That troublemaker's punching firewood!
+Look, a log! The oldest trick there is!
+
+# -- more ---------------------------------------------------------------------------------------------
+
+## combat.fight_start.resident_bystander
+Not in front of the bathhouse! Take it to the training grounds!
+Grab the laundry off the line, it's a fight!
+
+## combat.taunt.resident_bystander
+Go on, ninja! Make the street proud!
+Watch out for the rain barrel, it's new!
+
+## combat.low_health.resident_bystander
+Someone fetch water for them! And a bandage!
+Stay back from the edge, dear! Mind the canal!
+
+## combat.ally_down.resident_bystander
+They knocked over the noodle cart! And the cook!
+Carry them to the clinic, gently now!
+
+## combat.knocked_out.resident_bystander
+Who put... the ground... up here?
+
+## combat.flee.resident_bystander
+Take the back lane! Behind the tofu shop!
+Save the pickles! Save the pickles!
+
+## combat.victory.resident_bystander
+Free dango at my stall for the hero!
+I'll tell my grandchildren about this one.
+
+## combat.defeat.resident_bystander
+Fetch the Jonin! Anyone in a flak vest!
+Leave our ninja alone, you brute!
+
+## combat.yield.resident_bystander
+Look at that troublemaker beg! Good!
+
+## combat.parry_landed.resident_bystander
+Like a cat batting a fly!
+
+## combat.combo_finisher_landed.resident_bystander
+Down they go! Mind my potted plants!
+
+## combat.jutsu_cast.resident_bystander
+Careful with {technique}! My roof is thatch!
+
+## combat.genjutsu_caught.resident_bystander
+Why is the fishmonger's sign singing?
+
+## combat.smoke_bomb.resident_bystander
+My laundry! It'll smell of smoke for a week!
+
+## combat.substitution.resident_bystander
+They hit a log! Good, that troublemaker can split my firewood next!
+
+## combat.low_health.resident_bystander  stage=child
+Don't give up! Please don't give up!
+
+## combat.parry_landed.resident_bystander  stage=child
+Whoa! Did you see that block?
+
+## combat.smoke_bomb.resident_bystander  stage=child
+Ninja smoke! It smells like fireworks!
+
+## combat.substitution.resident_bystander  stage=child
+A log! Teach me how to do the log thing!
+
+## combat.defeat.resident_bystander  stage=child
+Get up! You can't lose! You're a ninja!
+
+## combat.ally_down.resident_bystander  stage=child
+The dango lady fell over! Somebody help her!
+
+## combat.combo_finisher_landed.resident_bystander  stage=child
+Pow! Right in the tummy!
+
+## combat.yield.resident_bystander  stage=child
+They gave up! We win! The Leaf wins!
+
+## combat.genjutsu_caught.resident_bystander  stage=child
+The ground's all wiggly! Is this a jutsu?

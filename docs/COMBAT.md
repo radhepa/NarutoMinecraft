@@ -329,7 +329,8 @@ tier 2 Chunin, 20; tier 3 Jonin, 32; tier 4 the road to Hokage, 44), kekkei genk
 and a **lesser technique** a friend can learn. **The player is clanless**, so clan tiers and kekkei genkai are
 the kits of clan residents, teammates, rivals, sparring partners and enemies; the player's clan route is each
 clan's lesser technique at clan friendship 7, the clan's weapon after its welcome, and the styles clans teach.
-The clan files keep the full tiers so clan-born play can return without new data.
+Joining a clan later (by marriage or invitation) teaches its signature technique (tier 1), never a
+bloodline. The clan files keep the full tiers so clan-born play can return without new data.
 
 | Clan | Tier 1 (Genin) | Tier 2 (Chunin) | Tier 3 (Jonin) | Tier 4 (road) | Lesser |
 |---|---|---|---|---|---|
@@ -403,8 +404,10 @@ jutsu deal 25% to allies).
 *Data: `core/kindle.json`. Code: `Kindle`, played by the duel simulator.* The owner approved this design. Power
 flows outward, through people: it grows with how many people you have truly bonded with and how deep those
 bonds go. It is meant to be as strong as the great eye techniques without reading as a copying eye. The bond
-engine (Shinobi Life) owns bond levels, tiers and gates; combat reads them through `Kindle.Bonds`
-(`tier(who)`, `web()`, `bonfireOpen()`).
+engine (Shinobi Life) owns bond levels, tiers and gates; combat reads them through `Kindle.Bonds`, which
+Shinobi Life's glue adapts: `tier(who)` = `Kindling.combatTier`, `web()` = Bonfire's strength
+(`Kindling.bonfire(w).strength()`), `bonfireOpen()` = `Kindling.bonfire(w).lit()`. An active quarrel drops a
+bond exactly one tier (a Spark goes out), a falling-out puts it out, and nothing burns before the story's awakening.
 
 | Tier | Gate (the bond engine's) | Opens |
 |---|---|---|
@@ -430,10 +433,12 @@ engine (Shinobi Life) owns bond levels, tiers and gates; combat reads them throu
   Burning Seal with a sealer. 25 chakra each, once a fight a pairing: two A-rank casts in one blow.
 - **Ember Mark** (Blaze): an ember left in a deeply bonded ally: travel to their side or summon them to yours
   across any distance; in a fight, once, swap places with them.
-- **Bonfire** (the ultimate): draw on every bond at once for 20 s. With m = 1 + 1.5 (1 - e^(-web / 35)), your
-  damage x m, damage taken x 1 / sqrt(m), chakra regen x (1 + web / 25), allies' power x (1 + (m - 1) / 2). A
-  bond web of 15 gives x1.5, 40 x2.0, 70 x2.3: a player who befriended half the village burns like a beacon,
-  a loner gets a candle. Afterwards 60 s of burnout.
+- **Bonfire** (the ultimate): draw on every bond at once for 20 s. Its strength is the bond engine's (each
+  flame weighted by tier 1, 2 or 4 times its strength, dimmed by quarrels, plus 0.5 for each community
+  reached). With m = 1 + 1.5 (1 - e^(-strength / 35)): your damage x m, damage taken x 1 / sqrt(m), chakra
+  regen x (1 + strength / 25), allies' power x (1 + (m - 1) / 2). A loner (strength 2 to 4) gets x1.1, a
+  candle; 12 x1.44, a campfire; a typical player at 60 hours (19) x1.63, a bonfire; a devoted one (22) x1.70,
+  an inferno. Afterwards 60 s of burnout.
 
 **Costs**: while linked you feel your allies' pain; past three kindles in a minute each burns 10% of your
 chakra bar and 30 stamina; a quarrel dims that person's tier, a falling-out snuffs it; it is useless with
@@ -672,28 +677,41 @@ Story is forgiving (90 to 100% at average skill, 78 to 100% for novices); Shinob
 (38 to 100%). Boss fights run 7 to 20 s of simulated time. The bell test is a scripted objective, not
 simulated.
 
-**Teammates' contribution** (the ranks session's typical player; target 70 to 110% of the player's damage
-and control combined, Shinobi, the squad against two rogue genin and a rogue chunin):
+**Teammates' contribution** (the ranks session's typical player with its tuned offsets; target 70 to 110% of
+the player's damage and control combined, Shinobi, the squad against two rogue genin and a rogue chunin):
 
-| Chapter | Player level | teammate_a (genjutsu) combined | teammate_b (taijutsu, pup) combined |
+| Chapter | Player level | teammate_a (genjutsu): damage / control / combined | teammate_b (taijutsu, pup): damage / control / combined |
 |---|---|---|---|
-| Ch 8 | 6 | 74% | 209% |
-| Ch 11 | 11 | 55% (control 479%) | 94% |
-| Ch 14 | 15 | 65% | 113% |
-| Ch 16 | 17 | 67% | 119% |
-| Ch 20 | 18 | 61% | 122% |
-| 28 h | 30 | 56% | 107% |
-| 45 h | 41 | 82% | 101% |
-| 60 h | 50 | 73% | 76% |
+| Ch 8 | 6 | 68% / 0% / 75% | 211% / 0% / 211% |
+| Ch 11 | 11 | 45% / 475% / 55% | 92% / 56% / 91% |
+| Ch 14 | 15 | 77% / 120% / 78% | 117% / 152% / 118% |
+| Ch 16 | 17 | 76% / 89% / 77% | 120% / 154% / 121% |
+| Ch 20 | 18 | 57% / 106% / 58% | 117% / 378% / 123% |
+| 28 h | 30 | 76% / 55% / 75% | 71% / 140% / 73% |
+| 45 h | 41 | 83% / 173% / 85% | 94% / 244% / 96% |
+| 60 h | 50 | 71% / 266% / 74% | 77% / 25% / 76% |
 
-teammate_a holds enemies far more than the player but deals 44 to 81% of its damage; teammate_b out-hits a
-balanced player at Ch 8 (no damaging jutsu before level 8) and runs a little hot through Beta 3. The
-ranks session adjusts the offsets.
+One control-second counts as half a second of the player's damage. teammate_a now sits in the band from Ch 14
+on except at Ch 20 (58%) and Ch 11 (55%), where it holds enemies five times as long as the player but deals
+under half the damage; teammate_b out-hits a balanced player at Ch 8 (no damaging jutsu before level 8) and
+runs a little hot through Beta 3.
 
 **Kindling Bond** (the squad against a bounty boss two levels up and an elite, Shinobi; win rate, seconds,
-player health left): none 94% 10 s 3% at level 30 (77% at 45); Spark 98% 9 s 5%; Flame (with Ember Link) 93%
-7 s 37%; Blaze (with a unison) 96% 7 s 44%; Blaze and Bonfire at web 15 100% 5 s 60%, web 40 100% 3 s 72%,
-web 70 100% 3 s 74%. The link moves damage off the player; Bonfire grows with the web.
+player health left; Bonfire at the bond engine's strengths):
+
+| Kindling | Level 30 | Level 45 |
+|---|---|---|
+| none | 95% 10 s 4% | 77% 11 s 4% |
+| Spark (kindle) | 98% 9 s 5% | 82% 10 s 4% |
+| Flame (kindle, Ember Link) | 93% 7 s 37% | 74% 10 s 36% |
+| Blaze (and a unison technique) | 96% 7 s 44% | 86% 10 s 36% |
+| Blaze and Bonfire, strength 3 (a loner) | 99% 6 s 49% | 97% 8 s 47% |
+| Blaze and Bonfire, strength 12 | 100% 6 s 59% | 99% 5 s 65% |
+| Blaze and Bonfire, strength 19 (typical at 60 h) | 100% 5 s 62% | 99% 5 s 65% |
+| Blaze and Bonfire, strength 22 (devoted) | 100% 5 s 63% | 99% 5 s 68% |
+
+Kindles give a steady edge; Ember Link moves damage off the player (4% health left to 37%); Bonfire turns a
+hard fight into a rout and grows with the bond web.
 
 **Guards** (`BalanceTest`): on Story every build beats every beta boss 80% of the time (novices 60%); on Shinobi
 no beta boss is under 25% for any build; every build beats a level-matched elite 90% on Story and 40% on
@@ -748,7 +766,9 @@ All ids are `combat:` namespaced (`combat:fire.great_fireball`, `combat:style.st
 - **Dialogue**: barks `dlg:combat.<event>.<speaker>`, `dlg:combat.sensei_tip.<habit>`,
   `dlg:combat.boss.<boss id>.phase_<n>` (`data/combat/barks.json`).
 - **Bonds**: `Kindle.Bonds`; squad cohesion and friendship read from Shinobi Life.
-- **Ranks**: NPC fields level, rank, tier, clan, kit, niche and niche edge; stats derive from level.
+- **Ranks**: NPC fields level, rank, tier, clan, kit, niche and niche edge; stats derive from level. A kit
+  `combat:ally.<role>` is built by rule from those fields (`data/combat/allies/_kits.json`: niche to focus,
+  clan tiers by level, nature, style), with named kits for the Classic squad.
 
 ## 19. Open questions
 
@@ -761,6 +781,7 @@ All ids are `combat:` namespaced (`combat:fire.great_fireball`, `combat:style.st
 - **Burst late game.** Should A and S rank one-shot mooks (fast and showy), or should mook health grow faster
   so taijutsu's steady pace keeps up?
 - **Kindling Bond in the beta**: none of it ships. Should Spark appear in Beta 3 as a teaser, or wait for the story?
-- **Teammate shares**: teammate_a is under target from Ch 11 to 28 h; raise their level offset, or move Painted
-  Beasts earlier?
+- **Teammate shares**: Painted Beasts now opens at level 15 for the Kurama (an exception to tier 2 at 20) and
+  the ninken grows with its owner; teammate_a is still under target at Ch 11 and Ch 20, and teammate_b over at
+  Ch 8 and Beta 3. More kit or offset tuning?
 - **PvP** is untuned beyond the guard; it waits for multiplayer.

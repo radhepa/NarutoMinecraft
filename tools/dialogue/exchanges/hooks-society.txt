@@ -1,0 +1,194 @@
+# Overheard leads for the society hooks (BONDS.md §19): newcomers, quarrels to mediate, elders' requests, clan
+# feuds and rivalries heating up. Each exchange is a lead in the journal.
+#! fn: hook
+
+## ambient.hook.newcomer  fn=hook
+A: There's a new family in the house by {place}. Moved in three days ago.
+B: I've not seen them out once. Someone ought to say hello.
+lead: hook.newcomer
+
+A: The new tenant on the second floor keeps to themselves.
+B: New to the Leaf, I heard. Doesn't know a soul. That's a lonely way to start.
+lead: hook.newcomer
+
+A: Someone's moved into the empty shop on the corner.
+B: A weaver, from a village down the east road. Doesn't know where anything is yet.
+lead: hook.newcomer
+
+A: That new face at the tea house, every afternoon, always alone.
+B: Moved here last week, I think. Somebody should show them round.
+lead: hook.newcomer
+
+A: The new carpenter at the Kinoshita yard asked me where the market was.
+B: The market! Imagine not knowing the market. Somebody needs to give them a proper tour.
+lead: hook.newcomer
+
+A: A new family on our lane, and the children haven't made a single friend yet.
+B: The Academy's hard when you start late. Someone could introduce them.
+lead: hook.newcomer
+
+A: {neighbor} says the new healer at the hospital eats every meal alone.
+B: Somebody should take them to Ichiraku. Nobody stays lonely at Ichiraku.
+lead: hook.newcomer
+
+## ambient.hook.newcomer  stage=child  fn=hook
+A: There's a new kid in our class. Sits by the window and doesn't talk to anyone.
+B: Maybe they're shy. We could ask them to play at lunch?
+lead: hook.newcomer
+
+A: The new kid on my street has a pet turtle. Nobody's even asked its name.
+B: I want to know the turtle's name! Let's go say hi.
+lead: hook.newcomer
+
+## ambient.hook.quarrel_to_mediate  fn=hook
+A: {friend} and {neighbor} haven't spoken in a week.
+B: Over a fence, of all things. Someone they both trust should knock some sense into them.
+lead: hook.quarrel_to_mediate
+
+A: Did you see {friend} cross the street to avoid {other}'s cousin?
+B: They used to be inseparable. Whatever happened, it needs mending.
+lead: hook.quarrel_to_mediate
+
+A: {friend} said something unkind at the tea house, and now {neighbor} won't come.
+B: Both of them are too proud to say sorry first. Someone should carry the message.
+lead: hook.quarrel_to_mediate
+
+A: {friend} and {neighbor} share a wall and won't share a word.
+B: It's been like that since the festival. A silly thing that grew.
+lead: hook.quarrel_to_mediate
+
+A: {friend} borrowed ryo from {neighbor} and paid it back late. Now neither will look at the other.
+B: Late's not never. Someone ought to sit them down together.
+lead: hook.quarrel_to_mediate
+
+A: The two stallkeepers by the bridge are shouting at each other again.
+B: Over customers, as usual. It's bad for business, and bad for the street.
+lead: hook.quarrel_to_mediate
+
+A: {friend} misses {neighbor}. Won't say it, but it's written all over that face.
+B: Then someone should tell {neighbor}. Before it's too late to fix.
+lead: hook.quarrel_to_mediate
+
+## ambient.hook.quarrel_to_mediate  stage=child  fn=hook
+A: {friend} said I cheated at tag, and I didn't, and now we're not friends.
+B: That's silly. You two always play together. Somebody has to make you make up.
+lead: hook.quarrel_to_mediate
+
+A: {friend} and {neighbor} broke the kite together and now they both say it was the other one.
+B: They won't sit together at lunch anymore. It's weird.
+lead: hook.quarrel_to_mediate
+
+## ambient.hook.elder_request  fn=hook
+A: Our elder wants the old custom done properly this year. The gift at the gate, the right words and all.
+B: Nobody remembers the right words. Someone would have to go and learn them from the elder.
+lead: hook.elder_request
+
+A: The clan elder asked for the shrine at the clan hall to be tended, the old way.
+B: That takes a whole day and a steady hand. The young ones are all on missions.
+lead: hook.elder_request
+
+A: Our elder is upset. Nobody's brought the season's first fruit to the clan altar.
+B: It's a small thing, but it matters to the old ones. Someone should do it properly.
+lead: hook.elder_request
+
+A: The elder wants a guest to attend the clan rite. Someone from outside who honours it.
+B: That's an honour, not a chore. Whoever does it will be remembered.
+lead: hook.elder_request
+
+## ambient.hook.elder_request  clan=akimichi  fn=hook
+A: The elder wants the old feast dish made for the clan table. The one with seven kinds of root.
+B: Nobody makes it anymore. Somebody would have to gather all seven.
+lead: hook.elder_request
+
+## ambient.hook.elder_request  clan=nara  fn=hook
+A: The elder says the deer shrine in the forest needs fresh offerings. Hasn't been seen to since the thaw.
+B: It's a long walk in. Someone patient should go.
+lead: hook.elder_request
+
+## ambient.hook.elder_request  clan=yamanaka  fn=hook
+A: The elder wants the first bloom of the year carried to the memorial. The old way, in both hands.
+B: The greenhouse is too busy. Someone else will have to carry it.
+lead: hook.elder_request
+
+## ambient.hook.elder_request  clan=inuzuka  fn=hook
+A: The elder wants a gift for the old lead dog of the kennels. Proper respect, the way it used to be done.
+B: A bone from the butcher and the right words. Someone should do it before the old dog's day.
+lead: hook.elder_request
+
+## ambient.hook.clan_feud  fn=hook
+A: Two clans glaring at each other over the market street again. It's getting ugly.
+B: Nobody remembers who started it. Someone neutral should hear both sides.
+lead: hook.clan_feud
+
+A: Our clan elder refuses to sit in the same room as theirs now.
+B: Over a boundary stone. A stone! Somebody needs to look at where it really stands.
+lead: hook.clan_feud
+
+A: The clan meeting ended in shouting. Their spokesperson walked out.
+B: If it goes on, the whole district will take sides. Someone has to step between them.
+lead: hook.clan_feud
+
+A: Neither clan will buy from the other's shops anymore. The whole street's suffering.
+B: Somebody outside both clans could carry a word. It has to start somewhere.
+lead: hook.clan_feud
+
+## ambient.hook.clan_feud  clan=inuzuka  fn=hook
+A: The Aburame say our dogs dug up their insect gardens again.
+B: The dogs say nothing, as usual. Someone should go and see what really happened.
+lead: hook.clan_feud
+
+A: Their elder sent a letter. Very polite. Very cold. About the dogs and the hives.
+B: Then it's serious. We need someone they'll listen to.
+lead: hook.clan_feud
+
+## ambient.hook.clan_feud  clan=aburame  fn=hook
+A: The kennel dogs trampled the beds behind the hive wall. A season's work, gone.
+B: The Inuzuka will say it wasn't their dogs. Someone should look at the tracks before the rain does.
+lead: hook.clan_feud
+
+A: We should not raise our voices. But the gardens cannot go on like this.
+B: Agreed. Someone from outside both clans should carry our words.
+lead: hook.clan_feud
+
+## ambient.hook.rivalry_heating  fn=hook
+A: {friend} and {rival} sparred again this morning. Neither would stop when the bell rang.
+B: Someone's going to get hurt. They need a referee, or a good talking-to.
+lead: hook.rivalry_heating
+
+A: Did you hear {friend} challenge {rival} in the middle of the mission hall?
+B: The whole room went quiet. That's not friendly rivalry anymore.
+lead: hook.rivalry_heating
+
+A: {friend} has been training till midnight, just to beat {rival}.
+B: That's not training, that's a grudge. Someone should talk sense to one of them.
+lead: hook.rivalry_heating
+
+A: They used to train together, {friend} and {rival}. Now they won't share a training ground.
+B: A pity. They pushed each other well, back when it was friendly.
+lead: hook.rivalry_heating
+
+A: {rival} says {friend} cheated in the last spar. {friend} says {rival} is a sore loser.
+B: And both of them are looking for a rematch. Somebody had better be there.
+lead: hook.rivalry_heating
+
+A: {friend} came home with a split lip from a "friendly" spar with {rival}.
+B: Friendly. Right. Someone should make them shake hands before it gets worse.
+lead: hook.rivalry_heating
+
+## ambient.hook.rivalry_heating  rank=genin|chunin  fn=hook
+A: I'm sick of it. {rival} keeps showing off at the training grounds, just to get at {friend}.
+B: And {friend} keeps taking the bait. Someone needs to cool them both down.
+lead: hook.rivalry_heating
+
+A: The two of them are meeting at the training ground at dawn. "To settle it."
+B: Settle what? It'll only make it worse. Someone ought to referee it, at least.
+lead: hook.rivalry_heating
+
+## ambient.hook.rivalry_heating  stage=child  fn=hook
+A: {friend} and {rival} had a race and both say they won and now they're going to fight.
+B: A real fight? Someone should tell them it was a tie. It was nearly a tie.
+lead: hook.rivalry_heating
+
+A: {rival} keeps calling {friend} slowpoke, and {friend} threw a shoe.
+B: It's getting silly. Someone big should make them stop.
+lead: hook.rivalry_heating

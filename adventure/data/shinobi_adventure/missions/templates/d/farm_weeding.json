@@ -1,0 +1,203 @@
+{
+ "format": 1,
+ "id": "mission.d.farm_weeding",
+ "kind": "mission",
+ "rank": "d",
+ "category": "farm",
+ "status": "beta",
+ "title": "dlg:mission.d.farm_weeding.title",
+ "brief": "dlg:mission.d.farm_weeding.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.farm_weeding.brief",
+  "accept": "dlg:mission.d.farm_weeding.accept",
+  "decline": "dlg:mission.d.farm_weeding.decline",
+  "progress": "dlg:mission.d.farm_weeding.progress",
+  "success": "dlg:mission.d.farm_weeding.success",
+  "fail": "dlg:mission.d.farm_weeding.fail",
+  "report": "dlg:mission.d.farm_weeding.report"
+ },
+ "minutes": 10,
+ "party": "squad_or_solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "farmer"
+   }
+  },
+  "field": {
+   "pick": "anchor",
+   "tag": "farm_field"
+  },
+  "desk": {
+   "pick": "anchor",
+   "tag": "residence.mission_desk"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "weed"
+  },
+  "weed": {
+   "objective": {
+    "type": "perform",
+    "what": "pull_weeds",
+    "at": "slot:field",
+    "count": 20
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "crows"
+     },
+     "next": "crows"
+    },
+    {
+     "if": {
+      "twist": "boar_tracks"
+     },
+     "next": "tracks"
+    },
+    {
+     "if": {
+      "twist": "buried_cache"
+     },
+     "next": "cache"
+    }
+   ],
+   "next": "report"
+  },
+  "crows": {
+   "objective": {
+    "type": "perform",
+    "what": "scare_crows",
+    "at": "slot:field",
+    "count": 3
+   },
+   "next": "report"
+  },
+  "tracks": {
+   "objective": {
+    "type": "inspect",
+    "target": "boar_tracks",
+    "at": "slot:field",
+    "count": 3
+   },
+   "on_done": [
+    {
+     "lead": "mission.c.beast_hunt"
+    }
+   ],
+   "next": "report"
+  },
+  "cache": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "turn_in": null,
+     "keep": "kept_cache"
+    },
+    "dialogue": "dlg:mission.d.farm_weeding.choice.cache"
+   },
+   "branch": [
+    {
+     "if": {
+      "chose": [
+       "cache",
+       "turn_in"
+      ]
+     },
+     "next": "turn_in"
+    }
+   ],
+   "next": "report"
+  },
+  "turn_in": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:mission_old_kunai_cache",
+    "to": "slot:desk"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "crows",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.farm_weeding.twist.crows"
+  },
+  {
+   "id": "boar_tracks",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.farm_weeding.twist.boar_tracks"
+  },
+  {
+   "id": "buried_cache",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.farm_weeding.twist.buried_cache"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "kept_cache": {
+   "pay": 1.0,
+   "standing": 0,
+   "item": "old_kunai_cache",
+   "clean_record": false
+  }
+ },
+ "bonus": [
+  "fast",
+  "clean_record"
+ ],
+ "fast_hours": 3,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "farm_field",
+   "residence.mission_desk"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.2
+ },
+ "tags": [
+  "outdoors",
+  "farm"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.farm",
+ "_premise": "Weed a farmer's field outside the wall before the planting.",
+ "_twists": {
+  "crows": "The crows have no respect for the scarecrow.",
+  "boar_tracks": "Fresh boar tracks cross the field; the desk will want to know.",
+  "buried_cache": "Your hand closes on an old cache of kunai buried under the rows."
+ }
+}

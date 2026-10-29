@@ -1,0 +1,157 @@
+{
+ "format": 1,
+ "id": "mission.d.laundry",
+ "kind": "mission",
+ "rank": "d",
+ "category": "household",
+ "status": "beta",
+ "title": "dlg:mission.d.laundry.title",
+ "brief": "dlg:mission.d.laundry.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.laundry.brief",
+  "accept": "dlg:mission.d.laundry.accept",
+  "decline": "dlg:mission.d.laundry.decline",
+  "progress": "dlg:mission.d.laundry.progress",
+  "success": "dlg:mission.d.laundry.success",
+  "fail": "dlg:mission.d.laundry.fail",
+  "report": "dlg:mission.d.laundry.report"
+ },
+ "minutes": 8,
+ "party": "solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "washer"
+   }
+  },
+  "bank": {
+   "pick": "anchor",
+   "tag": "riverbank"
+  },
+  "inn": {
+   "pick": "anchor",
+   "tag": "inn"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "wash"
+  },
+  "wash": {
+   "objective": {
+    "type": "perform",
+    "what": "wash_linen",
+    "at": "slot:bank",
+    "count": 8
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "sheet_in_wind"
+     },
+     "next": "sheet"
+    },
+    {
+     "if": {
+      "twist": "dye_mixup"
+     },
+     "next": "dye"
+    }
+   ],
+   "next": "deliver"
+  },
+  "sheet": {
+   "objective": {
+    "type": "collect",
+    "target": "item:mission_sheet",
+    "count": 1
+   },
+   "next": "deliver"
+  },
+  "dye": {
+   "objective": {
+    "type": "inspect",
+    "target": "dyed_linen",
+    "at": "slot:bank",
+    "count": 3
+   },
+   "next": "deliver"
+  },
+  "deliver": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:mission_linen",
+    "to": "slot:inn"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "sheet_in_wind",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.laundry.twist.sheet_in_wind"
+  },
+  {
+   "id": "dye_mixup",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.laundry.twist.dye_mixup"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "careful"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "inn",
+   "riverbank"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.2
+ },
+ "tags": [
+  "village",
+  "river",
+  "household"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.household",
+ "_premise": "Help the riverside washerwomen with a hotel's laundry.",
+ "_twists": {
+  "sheet_in_wind": "A sheet takes off across the rooftops like a kite.",
+  "dye_mixup": "Someone washed red with white; find which loads can be saved."
+ }
+}

@@ -75,8 +75,10 @@ public final class Balance {
                 .append(" (win rate, mean seconds, player health left)\n\n| Kindling | Level 30 | Level 45 |\n|---|---|---|\n");
         Object[][] rows = {{"none", dev.shinobi.combat.Kindle.Tier.NONE, 0.0, false}, {"Spark (kindle)", dev.shinobi.combat.Kindle.Tier.SPARK, 0.0, false},
                 {"Flame (kindle, Ember Link)", dev.shinobi.combat.Kindle.Tier.FLAME, 0.0, false}, {"Blaze (and a unison technique)", dev.shinobi.combat.Kindle.Tier.BLAZE, 0.0, false},
-                {"Blaze + Bonfire, web 15", dev.shinobi.combat.Kindle.Tier.BLAZE, 15.0, true}, {"Blaze + Bonfire, web 40", dev.shinobi.combat.Kindle.Tier.BLAZE, 40.0, true},
-                {"Blaze + Bonfire, web 70", dev.shinobi.combat.Kindle.Tier.BLAZE, 70.0, true}};
+                {"Blaze + Bonfire, strength 3 (a loner)", dev.shinobi.combat.Kindle.Tier.BLAZE, 3.0, true},
+                {"Blaze + Bonfire, strength 12", dev.shinobi.combat.Kindle.Tier.BLAZE, 12.0, true},
+                {"Blaze + Bonfire, strength 19 (typical at 60 h)", dev.shinobi.combat.Kindle.Tier.BLAZE, 19.0, true},
+                {"Blaze + Bonfire, strength 22 (devoted)", dev.shinobi.combat.Kindle.Tier.BLAZE, 22.0, true}};
         for (var r : rows) {
             t.append("| ").append(r[0]).append(" |");
             for (int lv : new int[]{30, 45}) {
@@ -88,9 +90,9 @@ public final class Balance {
         return t.toString();
     }
 
-    /** The ranks session's typical player (seed 20261029): chapter, player level, teammate_a's, teammate_b's (docs/RANKS.md). */
-    static final double[][] SQUAD_LEVELS = {{8, 5.8, 5.5, 5.6}, {11, 10.7, 10.0, 10.4}, {14, 15.2, 14.4, 14.9}, {16, 16.6, 15.9, 16.2},
-            {20, 18.3, 17.9, 18.3}, {28, 29.9, 29.4, 29.8}, {45, 41.4, 41.0, 41.6}, {60, 50.0, 48.4, 48.8}};
+    /** The ranks session's typical player (seed 20261029, its tuned offsets): chapter, player level, teammate_a's, teammate_b's (RANKS.md §8). */
+    static final double[][] SQUAD_LEVELS = {{8, 5.8, 5.7, 5.3}, {11, 10.7, 10.7, 9.4}, {14, 15.2, 15.2, 14.2}, {16, 16.6, 16.6, 15.6},
+            {20, 18.3, 18.6, 17.6}, {28, 29.9, 30.2, 29.1}, {45, 41.4, 41.8, 40.8}, {60, 50.0, 49.2, 48.0}};
 
     /** Damage and control shares of each teammate against the player's, in a squad fight against level-matched enemies. */
     record Share(double damage, double control, double combined) {}

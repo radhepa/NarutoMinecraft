@@ -2565,9 +2565,9 @@
     "combat:nin.body_flicker",
     "combat:water.wild_wave",
     "combat:water.water_bullet",
-    "combat:kurama.painted_illusion",
     "combat:gen.sly_mind",
-    "combat:gen.mist_servant"
+    "combat:gen.mist_servant",
+    "combat:kurama.painted_beasts"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
@@ -2667,9 +2667,9 @@
     "combat:nin.body_flicker",
     "combat:water.wild_wave",
     "combat:water.water_bullet",
-    "combat:kurama.painted_illusion",
     "combat:gen.sly_mind",
-    "combat:gen.mist_servant"
+    "combat:gen.mist_servant",
+    "combat:kurama.painted_beasts"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 2,
@@ -2769,9 +2769,9 @@
     "combat:nin.body_flicker",
     "combat:water.wild_wave",
     "combat:water.water_bullet",
-    "combat:kurama.painted_illusion",
     "combat:gen.sly_mind",
-    "combat:gen.mist_servant"
+    "combat:gen.mist_servant",
+    "combat:kurama.painted_beasts"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 2,
@@ -2871,9 +2871,9 @@
     "combat:nin.body_flicker",
     "combat:water.wild_wave",
     "combat:water.water_bullet",
-    "combat:kurama.painted_illusion",
     "combat:gen.sly_mind",
-    "combat:gen.mist_servant"
+    "combat:gen.mist_servant",
+    "combat:kurama.painted_beasts"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 2,
@@ -2973,9 +2973,9 @@
     "combat:nin.body_flicker",
     "combat:water.wild_wave",
     "combat:water.water_bullet",
-    "combat:kurama.painted_illusion",
     "combat:gen.sly_mind",
-    "combat:gen.mist_servant"
+    "combat:gen.mist_servant",
+    "combat:kurama.painted_beasts"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 2,

@@ -54,7 +54,7 @@
    "kind": "clan",
    "nature": "none",
    "rank": "b",
-   "level": 20,
+   "level": 15,
    "signs": [
     "ram",
     "ox",
@@ -84,7 +84,7 @@
    "teach": [
     "mentor:role:clan_elder.kurama"
    ],
-   "slice": "chunin",
+   "slice": "beta3",
    "clan": "kurama",
    "tier": 2
   },

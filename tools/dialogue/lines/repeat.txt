@@ -1,0 +1,21 @@
+# The repeatable set: what a resident says once they have nothing fresh for you, or you have used up their time
+# today (DIALOGUE.md, "Beyond the budget"). Never spent: these may come back.
+#! kind: repeat
+#! fn: react
+
+## again
+We already caught up today, {player}. Come by tomorrow.
+I think I've told you everything I know for one day.
+You'll wear my voice out. Tomorrow, all right?
+
+## again personality=fiery
+Again? Ha! I like you, but I'm out of stories till tomorrow!
+I've talked myself hoarse. Train with me tomorrow instead!
+
+## again personality=stern
+We have spoken enough for one day. Go and do something useful with it.
+I said what I had to say. Repetition doesn't improve it.
+
+## close
+Well, I'd better get back to it. Take care, {player}. [NOTE]
+That's me done for now. See you around.

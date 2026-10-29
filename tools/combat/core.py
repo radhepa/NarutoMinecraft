@@ -292,9 +292,9 @@ KINDLE = {
     "status": "designed (the owner approved the redesign); unlock timing is the story's, bond tiers are the bond engine's",
     "concept": "Power flows outward, through people: it grows with how many people you have truly bonded with and how deep those bonds go",
     "contract": {
-        "reads": "dev.shinobi.combat.Kindle.Bonds, implemented by the bond engine (Shinobi Life): tier(who), web(), bonfireOpen()",
+        "reads": "dev.shinobi.combat.Kindle.Bonds, adapted by Shinobi Life's glue: tier(who) = Kindling.combatTier(w, who); web() = Kindling.bonfire(w).strength(); bonfireOpen() = Kindling.bonfire(w).lit()",
         "tiers": {"spark": "friendship 6", "flame": "friendship 8", "blaze": "friendship 10 or a spouse", "bonfire": "a large bond web (the bond engine's gate)"},
-        "quarrels": "a quarrel dims that person's tier by one; a falling-out puts it out (the bond engine decides; combat reads the tier)",
+        "quarrels": "an active quarrel drops exactly one tier (a Spark goes out); a falling-out puts it out; nothing before the story's awakening (the bond engine decides; combat reads the tier)",
     },
     "thread_sight": {
         "tier": "spark", "always_on": True,
@@ -337,8 +337,10 @@ KINDLE = {
     },
     "bonfire": {
         "tier": "bonfire", "ticks": 400, "burnout_ticks": 1200,
-        "formula": "m = 1 + 1.5 x (1 - e^(-web / 35)): your damage x m, damage taken x 1/sqrt(m), chakra regen x (1 + web / 25), allies' power x (1 + (m - 1) / 2)",
-        "scale": {"web 0": "a candle (x1.0)", "web 15": "x1.52", "web 40": "x2.02", "web 70": "x2.30"},
+        "strength": "the bond engine's Bonfire strength (Kindling.bonfire(w).strength(): each flame by tier 1/2/4 times its strength, dimmed by quarrels, plus 0.5 per community reached)",
+        "formula": "m = 1 + 1.5 x (1 - e^(-strength / 35)): your damage x m, damage taken x 1/sqrt(m), chakra regen x (1 + strength / 25), allies' power x (1 + (m - 1) / 2)",
+        "scale": {"a loner (2 to 4)": "x1.1, a candle", "12": "x1.44, a campfire", "typical at 60 h (19)": "x1.63, a bonfire", "devoted (22)": "x1.70, an inferno"},
+        "forms": "candle under 5, campfire under 12, bonfire under 21, inferno above (the bond engine's names; the visuals match)",
         "burnout": "afterwards no kindling of any kind for 60 s, and the chakra bar empties",
     },
     "costs": ["while linked you feel your allies' pain (the damage split)", "past three kindles in a minute each burns 10% of your chakra bar and 30 stamina",

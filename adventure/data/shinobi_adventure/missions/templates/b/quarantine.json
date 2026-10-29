@@ -1,0 +1,144 @@
+{
+ "format": 1,
+ "id": "mission.b.quarantine",
+ "kind": "mission",
+ "rank": "b",
+ "category": "medical",
+ "status": "later",
+ "title": "dlg:mission.b.quarantine.title",
+ "brief": "dlg:mission.b.quarantine.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.quarantine.brief",
+  "accept": "dlg:mission.b.quarantine.accept",
+  "decline": "dlg:mission.b.quarantine.decline",
+  "progress": "dlg:mission.b.quarantine.progress",
+  "success": "dlg:mission.b.quarantine.success",
+  "fail": "dlg:mission.b.quarantine.fail",
+  "report": "dlg:mission.b.quarantine.report"
+ },
+ "minutes": 40,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "medic"
+   }
+  },
+  "village": {
+   "pick": "anchor",
+   "tag": "hills.village"
+  },
+  "well": {
+   "pick": "anchor",
+   "tag": "hills.well"
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "deliver"
+  },
+  "deliver": {
+   "objective": {
+    "type": "deliver",
+    "item": "item:mission_medicine_crate",
+    "to": "slot:village"
+   },
+   "next": "order"
+  },
+  "order": {
+   "objective": {
+    "type": "perform",
+    "what": "calm_crowd",
+    "at": "slot:village",
+    "count": 3
+   },
+   "next": "source"
+  },
+  "source": {
+   "objective": {
+    "type": "inspect",
+    "target": "water_sample",
+    "at": "slot:well",
+    "count": 3
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "looters",
+   "weight": 2,
+   "harder": true,
+   "modifier": true,
+   "premise": "dlg:mission.b.quarantine.twist.looters"
+  },
+  {
+   "id": "poisoned_well",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.b.quarantine.twist.poisoned_well"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "kind_choice",
+  "fast"
+ ],
+ "fast_hours": 24,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "gate.travel_desk",
+   "hills.village",
+   "hills.well"
+  ],
+  "regions": [
+   "region:hill_village"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.5
+ },
+ "tags": [
+  "travel",
+  "medical",
+  "investigation"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.medical",
+ "_premise": "A fever has closed a hill village; bring medicine in, keep order, and find the source.",
+ "_twists": {
+  "looters": "Looters move in on the empty houses.",
+  "poisoned_well": "The fever is no fever: someone poisoned the well."
+ }
+}
