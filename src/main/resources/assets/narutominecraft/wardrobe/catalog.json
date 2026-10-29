@@ -63,7 +63,22 @@
     "h06_low_ponytail",
     "h07_bowl_cut",
     "h08_short_crop",
-    "h09_high_ponytail"
+    "h09_high_ponytail",
+    "h701_ino_ponytail",
+    "h702_mind_walker_tail",
+    "h703_inojin_tail",
+    "h704_root_low_tail",
+    "h705_petal_bob",
+    "h706_florist_bun",
+    "h707_sensor_spikes",
+    "h708_petal_twin_tails",
+    "h709_loose_sweep",
+    "h710_side_braid",
+    "h711_half_up_tail",
+    "h712_swept_crop",
+    "h713_bloom_ponytail",
+    "h714_elder_mane",
+    "h715_sensor_topknot"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -74,7 +89,9 @@
     "w06_anbu_hawk_mask",
     "w07_root_mask",
     "w08_masked_protector",
-    "w09_bandana_protector"
+    "w09_bandana_protector",
+    "w701_sensor_headset",
+    "w702_florist_kerchief"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -97,7 +114,17 @@
     "t18_sentinel_vest",
     "t19_field_vest",
     "t20_kunoichi_jonin",
-    "t21_commander_coat"
+    "t21_commander_coat",
+    "t701_mind_bloom_crop",
+    "t702_mind_walker_coat",
+    "t703_ink_crop_jacket",
+    "t704_florist_apron",
+    "t705_florist_wrap",
+    "t706_sensor_corps_tunic",
+    "t707_interrogation_coat",
+    "t708_genin_zip_top",
+    "t709_elder_haori",
+    "t710_lily_blouse"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -107,7 +134,13 @@
     "b05_green_leggings",
     "b06_anbu_greaves",
     "b07_cargo_shorts",
-    "b08_mesh_leggings"
+    "b08_mesh_leggings",
+    "b701_slit_apron_skirt",
+    "b702_bandaged_shorts",
+    "b703_wrapped_trousers",
+    "b704_florist_trousers",
+    "b705_long_slit_skirt",
+    "b706_sensor_trousers"
   ],
   "characters": [
     {
@@ -523,7 +556,362 @@
       ],
       "color": null,
       "mirror": true
+    },
+    "yamanaka_beauty_mark": {
+      "rects": [
+        [
+          2.7,
+          -1.7,
+          0.45,
+          0.45
+        ]
+      ],
+      "color": null,
+      "mirror": false
+    },
+    "yamanaka_blush": {
+      "rects": [
+        [
+          2.5,
+          -1.6,
+          1.3,
+          0.35
+        ]
+      ],
+      "color": "#e79aa6",
+      "mirror": true
     }
   },
-  "clans": []
+  "clans": [
+    {
+      "id": "yamanaka",
+      "name": "Yamanaka",
+      "tagline": "Platinum ponytails, sleek purple and lavender, bandaged limbs, the flower shop and the sensor corps",
+      "palettes": {
+        "YAMANAKA_VIOLET": {
+          "name": "Yamanaka Violet",
+          "P": "#6e3f96",
+          "S": "#ddd2e8",
+          "A": "#e06a9a",
+          "L": "#6b5a45",
+          "M": "#aab3b9",
+          "K": "#241d2e",
+          "D": "#3d3557"
+        },
+        "YAMANAKA_LAVENDER": {
+          "name": "Yamanaka Lavender",
+          "P": "#a587c7",
+          "S": "#f1ecf4",
+          "A": "#8a3e8f",
+          "L": "#7a6346",
+          "M": "#b8bec4",
+          "K": "#2a2433",
+          "D": "#4a4266"
+        },
+        "YAMANAKA_FLORIST": {
+          "name": "Yamanaka Florist",
+          "P": "#7d5aa6",
+          "S": "#efe6d2",
+          "A": "#e2a43a",
+          "L": "#7a5a3a",
+          "M": "#aab3b9",
+          "K": "#262230",
+          "D": "#3d3a5c"
+        },
+        "YAMANAKA_SENSOR": {
+          "name": "Yamanaka Sensor",
+          "P": "#3d3650",
+          "S": "#bdb5cd",
+          "A": "#4fb8b8",
+          "L": "#4b4038",
+          "M": "#aab3b9",
+          "K": "#16141c",
+          "D": "#2a2638"
+        },
+        "YAMANAKA_PLUM": {
+          "name": "Yamanaka Plum",
+          "P": "#5c2e5e",
+          "S": "#e6d8e0",
+          "A": "#d8b250",
+          "L": "#6b4a3a",
+          "M": "#b5aa8a",
+          "K": "#1e1520",
+          "D": "#3a2a40"
+        }
+      },
+      "hair_colors": {
+        "YAMANAKA_PLATINUM": {
+          "name": "Yamanaka Platinum",
+          "ramp": [
+            "#7d7356",
+            "#a99d74",
+            "#d2c793",
+            "#ebe2b4",
+            "#fbf6dc"
+          ]
+        },
+        "YAMANAKA_STRAW": {
+          "name": "Yamanaka Straw",
+          "ramp": [
+            "#7a5a22",
+            "#a77f33",
+            "#cfa64b",
+            "#e5c56c",
+            "#f6e29a"
+          ]
+        },
+        "YAMANAKA_ASH": {
+          "name": "Yamanaka Ash",
+          "ramp": [
+            "#706d5c",
+            "#9b9781",
+            "#c6c1a6",
+            "#e0dcc4",
+            "#f7f5e6"
+          ]
+        },
+        "YAMANAKA_RED": {
+          "name": "Yamanaka Red",
+          "ramp": [
+            "#4a1414",
+            "#74201d",
+            "#a2302a",
+            "#c64a3a",
+            "#e2735a"
+          ]
+        }
+      },
+      "eye_colors": {
+        "YAMANAKA": {
+          "name": "Yamanaka Aqua",
+          "ramp": [
+            "#0a1416",
+            "#1f6f78",
+            "#3fa8b0",
+            "#8fdbdc",
+            "#f1efe6"
+          ]
+        },
+        "YAMANAKA_TEAL": {
+          "name": "Yamanaka Teal",
+          "ramp": [
+            "#0a1412",
+            "#1d5f58",
+            "#2f8f85",
+            "#79c9bd",
+            "#f1efe6"
+          ]
+        }
+      },
+      "marks": {
+        "yamanaka_beauty_mark": {
+          "rects": [
+            [
+              2.7,
+              -1.7,
+              0.45,
+              0.45
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        },
+        "yamanaka_blush": {
+          "rects": [
+            [
+              2.5,
+              -1.6,
+              1.3,
+              0.35
+            ]
+          ],
+          "color": "#e79aa6",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h701_ino_ponytail",
+          "h702_mind_walker_tail",
+          "h703_inojin_tail",
+          "h704_root_low_tail",
+          "h705_petal_bob",
+          "h706_florist_bun",
+          "h707_sensor_spikes",
+          "h708_petal_twin_tails",
+          "h709_loose_sweep",
+          "h710_side_braid",
+          "h711_half_up_tail",
+          "h712_swept_crop",
+          "h713_bloom_ponytail",
+          "h714_elder_mane",
+          "h715_sensor_topknot"
+        ],
+        "hair_colors": [
+          "YAMANAKA_PLATINUM",
+          "YAMANAKA_PLATINUM",
+          "YAMANAKA_PLATINUM",
+          "YAMANAKA_PLATINUM",
+          "YAMANAKA_STRAW",
+          "YAMANAKA_STRAW",
+          "YAMANAKA_ASH",
+          "YAMANAKA_ASH",
+          "YAMANAKA_RED"
+        ],
+        "eye_colors": [
+          "YAMANAKA",
+          "YAMANAKA",
+          "YAMANAKA_TEAL"
+        ],
+        "palettes": [
+          "YAMANAKA_VIOLET",
+          "YAMANAKA_LAVENDER",
+          "YAMANAKA_FLORIST",
+          "YAMANAKA_SENSOR",
+          "YAMANAKA_PLUM"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w701_sensor_headset",
+          "w702_florist_kerchief",
+          "w02_forehead_protector"
+        ],
+        "bottoms": [
+          "b08_mesh_leggings"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "yamanaka_beauty_mark",
+            "chance": 0.12
+          },
+          {
+            "id": "yamanaka_blush",
+            "chance": 0.15
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "mind_bloom",
+          "name": "Mind Bloom",
+          "top": "t701_mind_bloom_crop",
+          "bottom": "b701_slit_apron_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "YAMANAKA_VIOLET",
+            "YAMANAKA_LAVENDER"
+          ]
+        },
+        {
+          "id": "mind_walker",
+          "name": "Mind Walker",
+          "top": "t702_mind_walker_coat",
+          "bottom": "b703_wrapped_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "YAMANAKA_VIOLET",
+            "YAMANAKA_PLUM",
+            "YAMANAKA_SENSOR"
+          ]
+        },
+        {
+          "id": "ink_painter",
+          "name": "Ink Painter",
+          "top": "t703_ink_crop_jacket",
+          "bottom": "b702_bandaged_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "shop_apron",
+          "name": "Flower Shop",
+          "top": "t704_florist_apron",
+          "bottom": "b704_florist_trousers",
+          "rank": "genin",
+          "palettes": [
+            "YAMANAKA_FLORIST",
+            "YAMANAKA_LAVENDER"
+          ]
+        },
+        {
+          "id": "florist_wrap",
+          "name": "Florist Wrap",
+          "top": "t705_florist_wrap",
+          "bottom": "b705_long_slit_skirt",
+          "rank": "genin",
+          "palettes": [
+            "YAMANAKA_FLORIST",
+            "YAMANAKA_LAVENDER",
+            "YAMANAKA_VIOLET"
+          ]
+        },
+        {
+          "id": "sensor_corps",
+          "name": "Sensor Corps",
+          "top": "t706_sensor_corps_tunic",
+          "bottom": "b706_sensor_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "YAMANAKA_SENSOR",
+            "YAMANAKA_VIOLET"
+          ]
+        },
+        {
+          "id": "interrogation",
+          "name": "Interrogation",
+          "top": "t707_interrogation_coat",
+          "bottom": "b703_wrapped_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "YAMANAKA_SENSOR",
+            "YAMANAKA_PLUM"
+          ]
+        },
+        {
+          "id": "genin_zip",
+          "name": "Genin Zip",
+          "top": "t708_genin_zip_top",
+          "bottom": "b702_bandaged_shorts",
+          "rank": "genin",
+          "palettes": [
+            "YAMANAKA_VIOLET",
+            "YAMANAKA_LAVENDER"
+          ]
+        },
+        {
+          "id": "elder_haori",
+          "name": "Elder Haori",
+          "top": "t709_elder_haori",
+          "bottom": "b704_florist_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "YAMANAKA_PLUM",
+            "YAMANAKA_VIOLET"
+          ]
+        },
+        {
+          "id": "lily_blouse",
+          "name": "Lily Blouse",
+          "top": "t710_lily_blouse",
+          "bottom": "b705_long_slit_skirt",
+          "rank": "jonin",
+          "palettes": [
+            "YAMANAKA_VIOLET",
+            "YAMANAKA_LAVENDER",
+            "YAMANAKA_PLUM"
+          ]
+        }
+      ]
+    }
+  ]
 }

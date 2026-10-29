@@ -103,6 +103,26 @@
         "...111111...",
         "....1111...."
       ]
+    },
+    "YAMANAKA": {
+      "name": "Yamanaka Aqua",
+      "ramp": [
+        "#0a1416",
+        "#1f6f78",
+        "#3fa8b0",
+        "#8fdbdc",
+        "#f1efe6"
+      ]
+    },
+    "YAMANAKA_TEAL": {
+      "name": "Yamanaka Teal",
+      "ramp": [
+        "#0a1412",
+        "#1d5f58",
+        "#2f8f85",
+        "#79c9bd",
+        "#f1efe6"
+      ]
     }
   }
 }

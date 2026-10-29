@@ -150,6 +150,46 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "YAMANAKA_PLATINUM": {
+      "name": "Yamanaka Platinum",
+      "ramp": [
+        "#7d7356",
+        "#a99d74",
+        "#d2c793",
+        "#ebe2b4",
+        "#fbf6dc"
+      ]
+    },
+    "YAMANAKA_STRAW": {
+      "name": "Yamanaka Straw",
+      "ramp": [
+        "#7a5a22",
+        "#a77f33",
+        "#cfa64b",
+        "#e5c56c",
+        "#f6e29a"
+      ]
+    },
+    "YAMANAKA_ASH": {
+      "name": "Yamanaka Ash",
+      "ramp": [
+        "#706d5c",
+        "#9b9781",
+        "#c6c1a6",
+        "#e0dcc4",
+        "#f7f5e6"
+      ]
+    },
+    "YAMANAKA_RED": {
+      "name": "Yamanaka Red",
+      "ramp": [
+        "#4a1414",
+        "#74201d",
+        "#a2302a",
+        "#c64a3a",
+        "#e2735a"
+      ]
     }
   }
 }
