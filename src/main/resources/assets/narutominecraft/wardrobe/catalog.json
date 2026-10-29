@@ -59,7 +59,8 @@
     "h02_leaf_spikes",
     "h03_uchiha_spikes",
     "h04_long_straight",
-    "h05_swept_spikes"
+    "h05_swept_spikes",
+    "h06_low_ponytail"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -72,7 +73,8 @@
     "t03_uchiha_high_collar",
     "t04_genin_track_jacket",
     "t05_kunoichi_qipao",
-    "t06_anbu_armor"
+    "t06_anbu_armor",
+    "t07_hyuga_robe"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -184,6 +186,23 @@
       "eye_style": "soft_glint",
       "feminine": false,
       "complexion": 1,
+      "scale": 14
+    },
+    {
+      "id": "hyuga",
+      "name": "Hyuga",
+      "tagline": "Wrapped off-white robe and dark sash, a low ponytail and the pale Byakugan",
+      "face": "f01_shinobi",
+      "hair": "h06_low_ponytail",
+      "headwear": "w02_forehead_protector",
+      "top": "t07_hyuga_robe",
+      "bottom": "b01_shinobi_trousers",
+      "palette": "HYUGA",
+      "hair_color": "ESPRESSO",
+      "eye_color": "BYAKUGAN",
+      "eye_style": "starlit",
+      "feminine": false,
+      "complexion": 0,
       "scale": 14
     }
   ]

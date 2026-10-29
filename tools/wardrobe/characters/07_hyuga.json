@@ -1,0 +1,5 @@
+{"id": "hyuga", "name": "Hyuga", "tagline": "Wrapped off-white robe and dark sash, a low ponytail and the pale Byakugan",
+ "face": "f01_shinobi", "hair": "h06_low_ponytail", "headwear": "w02_forehead_protector",
+ "top": "t07_hyuga_robe", "bottom": "b01_shinobi_trousers",
+ "palette": "HYUGA", "hair_color": "ESPRESSO", "eye_color": "BYAKUGAN", "eye_style": "starlit", "feminine": false,
+ "complexion": 0, "scale": 14}

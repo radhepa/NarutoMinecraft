@@ -4,5 +4,6 @@
   "UCHIHA": {"name": "Uchiha", "P": "#262a40", "S": "#e9e6dd", "A": "#c4282b", "L": "#6b5a45", "M": "#aab3b9", "K": "#14161f", "D": "#3a4466"},
   "LEAF_GENIN": {"name": "Leaf Genin", "P": "#f88b2c", "S": "#ecebe3", "A": "#c4302b", "L": "#7a6346", "M": "#aab3b9", "K": "#1b1f2e", "D": "#2d3c60"},
   "KUNOICHI": {"name": "Kunoichi", "P": "#c8303a", "S": "#ecebe3", "A": "#b02a33", "L": "#7a6346", "M": "#aab3b9", "K": "#23262f", "D": "#2d3c60"},
-  "ANBU": {"name": "ANBU", "P": "#c9cdc8", "S": "#efeee8", "A": "#b5232b", "L": "#4b4038", "M": "#aab3b9", "K": "#15171c", "D": "#23262d"}
+  "ANBU": {"name": "ANBU", "P": "#c9cdc8", "S": "#efeee8", "A": "#b5232b", "L": "#4b4038", "M": "#aab3b9", "K": "#15171c", "D": "#23262d"},
+  "HYUGA": {"name": "Hyuga", "P": "#e4ddcf", "S": "#f2f0ea", "A": "#7a6a99", "L": "#6b5a45", "M": "#aab3b9", "K": "#1d1b26", "D": "#3d3850"}
 }
