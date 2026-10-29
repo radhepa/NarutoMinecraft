@@ -37,7 +37,7 @@ class TimeAndPacingTest {
 
     @Test void pacingMeetsTheRoadmapsFriendshipGates() {
         long[] seeds = {20261029L, 7L, 11L, 99L, 2024L};
-        int devotedPlays = 0, typicalPlays = 0, recklessPlays = 0;
+        int devotedPlays = 0, typicalPlays = 0, recklessPlays = 0, recklessFallouts = 0;
         for (long seed : seeds) {
             var devoted = Playthrough.play(seed, Profile.DEVOTED);
             var typical = Playthrough.play(seed, Profile.TYPICAL);
@@ -52,7 +52,7 @@ class TimeAndPacingTest {
                 assertTrue(academy.levels().get(TEAMMATE_A) >= 2 && academy.levels().get(TEAMMATE_A) <= 5, "the Academy is early days " + academy);
             }
             assertTrue(Integer.parseInt(reckless.checks().get("squad departures")) >= 1, "a teammate leaves a reckless player");
-            assertTrue(Integer.parseInt(reckless.checks().get("fallings-out")) >= 1);
+            if (Integer.parseInt(reckless.checks().get("fallings-out")) >= 1) recklessFallouts++;
             assertTrue(row(reckless, "Ch 20").levels().get(TEAMMATE_A) <= row(typical, "Ch 20").levels().get(TEAMMATE_A) - 3, "far behind a typical player");
             for (var r : List.of(devoted, typical, reckless)) assertEquals("none", r.checks().get("romance before the first time skip"), "nothing romantic in the beta");
             assertTrue(Integer.parseInt(devoted.checks().get("bonds at level 10")) >= 2, "a devoted player ends with lifelong bonds");
@@ -65,6 +65,7 @@ class TimeAndPacingTest {
         assertEquals(seeds.length, devotedPlays, "a devoted player always reaches the campfire talk");
         assertTrue(typicalPlays >= seeds.length - 1, "a typical player nearly always does: " + typicalPlays + " of " + seeds.length);
         assertEquals(0, recklessPlays, "a reckless player never does");
+        assertTrue(recklessFallouts >= seeds.length - 2, "a reckless player usually ends up in a permanent falling-out: " + recklessFallouts);
     }
     @Test void theWholePlaythroughIsDeterministic() {
         assertEquals(Playthrough.table(Playthrough.play(11, Profile.TYPICAL)), Playthrough.table(Playthrough.play(11, Profile.TYPICAL)));

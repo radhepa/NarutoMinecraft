@@ -10,8 +10,9 @@ score, memories that fade or stay, personalities that take the same act differen
 its own dynamics, a village that talks, quarrels with arcs, romance and family after the beta, and
 Kindling Bond.
 
-Spending time together (hangouts, invitations, rituals, residents' own lives, follow-ups and
-conversation topics) is in [LIFE_TOGETHER.md](LIFE_TOGETHER.md).
+Spending time together (hangouts, invitations, rituals, residents' own lives, follow-ups,
+conversation topics, and the questions residents ask the player) is in
+[LIFE_TOGETHER.md](LIFE_TOGETHER.md).
 
 **No spoilers here.** This file describes systems and formats. Story-specific bond content (who
 confides what, whose arc pays off where) belongs in the developers-only
@@ -44,7 +45,7 @@ Life mod depends on it (`implementation project(':life:bonds')`) and adds the th
 | Everyone you are close to, as one number | `BondWeb` |
 
 ```
-./gradlew :life:bonds:test                  # 93 tests
+./gradlew :life:bonds:test                  # 102 tests
 ./gradlew :life:bonds:simulate              # the 60-hour pacing tables (-Pseed=N, -Pexplain=role:teammate_a)
 ./gradlew :life:bonds:simulateVillage       # a village of 300 for 180 days: cost, ties, clan drift, hooks
 ```
@@ -473,6 +474,7 @@ member does, and an action applies to each member.**
 {"bond_web":         40}
 {"ritual":           ["role:teammate_b", "ramen"]}   time together (LIFE_TOGETHER.md)
 {"hangouts":         ["role:teammate_b", 5]}
+{"answered":         ["role:teammate_b", "q.advice.first_mission", "go_for_it"]}   the answer is optional
 ```
 
 **Actions:**
@@ -497,6 +499,7 @@ member does, and an action applies to each member.**
 {"clan_event":        ["inuzuka", "aburame", 10, "festival"]}
 {"clan_deed":         {"clan": "hyuga", "act": "honored_custom"}}
 {"mood_event":        ["village", 0.4, 0]}              cheer and tension: a festival, an attack
+{"ask_question":      ["role:teammate_b", "q.advice.first_mission"]}  a scene asks it now
 ```
 
 An action returns "" or why it did nothing (`not_ready`, `not_eligible`, `level`...) for the quest
@@ -593,34 +596,34 @@ acts on at the end of each chapter, and squad cohesion):
 | 3 | Chakra | 1.4 | 6 | 1 | 2 | 1 | 2 | 1 | 1 | 1 | — |
 | 4 | Night | 1.8 | 7 | 1 | 2 | 1 | 2 | 1 | 1 | 1 | — |
 | 5 | Errands at the Academy | 2.1 | 8 | 1 | 2 | 1 | 2 | 1 | 1 | 1 | — |
-| 6 | Exam eve | 2.4 | 10 | 2 | 4 | 1 | 2 | 2 | 2 | 1 | — |
-| 7 | Graduation | 2.8 | 12 | 2 | 4 | 1 | 3 | 2 | 2 | 2 | — |
-| 8 | Team assignment | 3.7 | 15 | 3 | 6 | 3 | 3 | 2 | 2 | 2 | 41 |
-| 9 | The Mission Desk | 5.0 | 19 | 4 | 6 | 3 | 3 | 2 | 2 | 2 | 44 |
-| 10 | Tree walking | 6.0 | 22 | 4 | 6 | 3 | 3 | 3 | 2 | 2 | 47 |
-| 11 | First C-rank | 7.3 | 26 | 4 | 7 | 3 | 3 | 3 | 2 | 2 | 53 |
-| 12 | Water walking and natures | 8.4 | 29 | 4 | 5 | 3 | 3 | 3 | 2 | 2 | 42 |
-| 13 | A far village | 9.8 | 32 | 4 | 7 | 3 | 3 | 3 | 2 | 2 | 58 |
-| 14 | Second C-rank | 11.3 | 36 | 6 | 8 | 4 | 3 | 3 | 2 | 2 | 67 |
-| 16 | Forest of Death | 12.6 | 42 | 7 | 9 | 4 | 3 | 3 | 2 | 2 | 69 |
-| 19 | Chunin Exams finals | 14.1 | 50 | 8 | 9 | 5 | 3 | 3 | 3 | 2 | 71 |
-| 20 | Results | 14.3 | 51 | 8 | 9 | 5 | 3 | 3 | 3 | 2 | 72 |
+| 6 | Exam eve | 2.4 | 10 | 3 | 4 | 1 | 2 | 2 | 2 | 1 | — |
+| 7 | Graduation | 2.8 | 12 | 3 | 4 | 1 | 3 | 2 | 2 | 2 | — |
+| 8 | Team assignment | 3.7 | 15 | 4 | 6 | 3 | 3 | 2 | 2 | 2 | 42 |
+| 9 | The Mission Desk | 5.0 | 19 | 4 | 6 | 4 | 3 | 2 | 2 | 2 | 46 |
+| 10 | Tree walking | 6.0 | 22 | 5 | 6 | 4 | 3 | 2 | 2 | 2 | 49 |
+| 11 | First C-rank | 7.3 | 26 | 7 | 7 | 5 | 3 | 2 | 3 | 2 | 57 |
+| 12 | Water walking and natures | 8.4 | 29 | 7 | 6 | 5 | 3 | 3 | 3 | 2 | 47 |
+| 13 | A far village | 9.8 | 32 | 7 | 7 | 5 | 3 | 3 | 3 | 2 | 62 |
+| 14 | Second C-rank | 11.3 | 36 | 7 | 9 | 6 | 3 | 3 | 3 | 2 | 70 |
+| 16 | Forest of Death | 12.6 | 42 | 8 | 9 | 6 | 3 | 3 | 4 | 2 | 71 |
+| 19 | Chunin Exams finals | 14.1 | 50 | 9 | 9 | 6 | 3 | 3 | 4 | 3 | 73 |
+| 20 | Results | 14.3 | 51 | 9 | 9 | 6 | 4 | 3 | 4 | 3 | 73 |
 
-With this seed the typical player reaches Ch 11 with teammate_a one point short of level 5 (they
-forgot teammate_a's birthday), so the campfire talk does not play: low friendship changing a scene,
-as the roadmap intends. Across five seeds a typical player reaches it in four. Across the three
+With this seed the typical player reaches the Ch 11 campfire talk with teammate_a at level 6. Across
+five seeds a typical player reaches it in at least four; one who forgot teammate_a's birthday can fall
+a point short, and the scene plays differently, as the roadmap intends. Across the three
 players:
 
 | | Devoted | Typical | Reckless |
 |---|---|---|---|
-| Academy end, teammates | 3 / 4 | 2 / 4 | 2 / 1 (a broken confidence) |
-| Ch 11 campfire | plays (6) | skipped (4); plays in 4 of 5 seeds | skipped (2) |
-| Beta end, teammates | 9 / 9 | 8 / 9 | 3 / 3 (one teammate left, replaced) |
+| Academy end, teammates | 3 / 5 | 3 / 4 | 2 / 1 (a broken confidence) |
+| Ch 11 campfire | plays (7) | plays (6); at least 4 of 5 seeds | skipped |
+| Beta end, teammates | 9 / 9 | 9 / 9 | 3 / 3 (one teammate left, replaced) |
 | 60 h: bonds at level 10 (with time together) | 3 | 3 | 0 |
 | Romance in the beta | none | none | none |
 | 60 h: romance | married, a child in the post-game | married | none |
 | Kindling with teammates | full / full | full / full | nature / nature |
-| Quarrels / fallings-out | 0 / 0 | 1 / 0 | 3 / 1 |
+| Quarrels / fallings-out | 0 / 0 | 5 / 0 | 3 / 1 |
 
 Run `./gradlew :life:bonds:simulate` for the full tables, or `-Pexplain=role:teammate_a` to see
 where one bond's meters come from. `TimeAndPacingTest` holds these targets on five seeds.

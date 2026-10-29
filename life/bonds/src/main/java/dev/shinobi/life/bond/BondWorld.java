@@ -43,6 +43,11 @@ public final class BondWorld {
     final List<Together.Invitation> invitations = new ArrayList<>();
     final Map<String, Long> invitedOn = new TreeMap<>();
     int planSerial;
+    /** Questions asked across everyone today (the daily budget). */
+    int questionsToday, questionsDry;
+    long questionsDay = -1;
+    /** The questions residents can ask (content, loaded by the glue from the dialogue data; not saved). */
+    final List<Question> questionBank = new ArrayList<>();
 
     public BondWorld(long seed, long day) { this.seed = seed; this.day = day; }
 
@@ -197,6 +202,19 @@ public final class BondWorld {
         return Kindling.grant(tier, who.equals(spouse()));
     }
     public void setBondFlag(String who, String f) { bond(who).flags.add(f); }
+
+    /** A change worked out elsewhere (an answer to a question), remembered as {@code act}: contact, memory, a possible quarrel, a level-up. */
+    Meters applyDelta(String who, Act act, Meters delta) {
+        var p = need(who); var b = bond(who);
+        b.contact(day);
+        var d = romanceOpen(who) ? delta : delta.with(Meter.ROMANCE, 0);
+        b.remember(act, d, Source.SELF, "", day);
+        hurt(b, p, act, d, who);
+        rise(b);
+        return d;
+    }
+    /** Times the engine had a question budget for someone but nothing left to ask them (the bank is too small). */
+    public int questionsDry() { return questionsDry; }
 
     /** Something they feel about the player without the player being there (overlooked, let down). */
     void npcFelt(String who, Act act) { apply(who, act, Source.SELF, "", null, List.of(), false); }
