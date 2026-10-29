@@ -15,12 +15,12 @@
   "lesser": 25,
   "clans": 25,
   "taijutsu_styles": 9,
-  "weapon_styles": 12,
-  "moves": 105,
+  "weapon_styles": 13,
+  "moves": 112,
   "weapons": 25,
   "tools": 24,
-  "enemies": 52,
-  "human_enemies": 41,
+  "enemies": 53,
+  "human_enemies": 42,
   "animal_enemies": 11,
   "bosses": 21,
   "beta_bosses": 9,
@@ -28,7 +28,7 @@
   "nature_combos": 7,
   "squad_combos": 11,
   "movement": 9,
-  "clips": 233,
+  "clips": 239,
   "beta_techniques": 50
  }
 }

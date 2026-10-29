@@ -159,7 +159,7 @@ Silent senbon at pressure points: numb, slow and paralyse rather than kill. Who:
 
 ## Crescent Moon kenjutsu (`combat:style.crescent_moon`, weapons)
 
-The Gekko's kenjutsu: wide arcs, a draw-cut counter and the Dance of the Crescent Moon. Who: anyone at weapons rank 4; the Gekko (clan-born) from Genin. Mentor: clan_elder.gekko. From beta3.
+The Gekko's kenjutsu: wide arcs, a draw-cut counter and the Dance of the Crescent Moon. Who: the Gekko's clan art: Gekko members, and friends the Gekko dojo teaches (clan friendship 7, weapons rank 4). Mentor: clan_elder.gekko. From beta3.
 
 | Move | Input | Tier | Damage | Poise | Frames | Window | Stamina | Effects | Slice |
 |---|---|---|---|---|---|---|---|---|---|
@@ -169,6 +169,20 @@ The Gekko's kenjutsu: wide arcs, a draw-cut counter and the Dance of the Crescen
 | draw_cut | P L | 1 | 2.0 | 12 | 1/2/6 | 0-8 | 3 | weapon_mult, counter | beta3 |
 | moon_rising | L L H | 1 | 1.6 | 14 | 5/3/8 | 0-10 | 15 | weapon_mult, launches | beta3 |
 | crescent_finish | L L L H | 1 | 3.5 | 40 | 6/6/14 | 0-0 | 10 | momentum 70, weapon_mult, finisher, cinematic | chunin |
+
+## Long-blade kenjutsu (`combat:style.long_blade`, weapons)
+
+Plain, deadly sword work with a single long blade: committed cuts, a reading guard and one decisive stroke. Who: anyone at weapons rank 4: the weapon master teaches it (no clan's art). Mentor: weapon_master. From beta3.
+
+| Move | Input | Tier | Damage | Poise | Frames | Window | Stamina | Effects | Slice |
+|---|---|---|---|---|---|---|---|---|---|
+| cut_1 | L | 1 | 1.0 | 4 | 3/2/5 | 0-8 | 3 | weapon_mult | beta3 |
+| cut_2 | L L | 1 | 1.0 | 4 | 3/2/5 | 0-8 | 3 | weapon_mult | beta3 |
+| cut_3 | L L L | 1 | 1.4 | 10 | 4/3/10 | 0-0 | 3 | weapon_mult, knockback 1.5 | beta3 |
+| thrust | H | 1 | 2.2 | 14 | 9/3/12 | 0-0 | 12 | weapon_mult | beta3 |
+| reading_guard | P L | 1 | 2.0 | 12 | 1/2/6 | 0-8 | 3 | weapon_mult, counter | beta3 |
+| rising_cut | L L H | 1 | 1.6 | 14 | 5/3/8 | 0-10 | 15 | weapon_mult, launches | beta3 |
+| single_stroke | L L L H | 1 | 3.5 | 40 | 8/3/16 | 0-0 | 10 | momentum 70, weapon_mult, finisher, cinematic | chunin |
 
 ## Wave-foot kenjutsu (`combat:style.wave_foot`, weapons)
 

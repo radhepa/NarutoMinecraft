@@ -4,7 +4,7 @@
  "name": "Story boss",
  "chapter": "road",
  "slice": "road",
- "base": "combat:enemy.cell_veteran",
+ "base": "combat:enemy.lone_duellist",
  "level": 45,
  "nonlethal": false,
  "arena": null,
@@ -14,10 +14,6 @@
  "hp_mult": 7.0,
  "poise": 100,
  "damage_mult": 1.15,
- "weapons": [
-  "item:katana"
- ],
- "style": "combat:style.crescent_moon",
  "notes": "The jonin.story_1 duellist's best loadout",
  "story": "bible:combat:boss.road.story_1",
  "scripted": [

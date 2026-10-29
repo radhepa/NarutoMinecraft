@@ -28,11 +28,11 @@ python3 tools/combat/build.py --check     # compile data/combat/ and docs/combat
 | Counts | |
 |---|---|
 | Techniques | 220: 95 in the catalogue, 100 clan techniques (25 clans x 4 tiers), 25 lesser techniques; by rank E 6, D 12, C 74, B 51, A 43, S 34 |
-| Styles | 9 taijutsu and 12 weapon styles, 105 moves, 8 inner gates |
+| Styles | 9 taijutsu and 13 weapon styles, 112 moves, 8 inner gates |
 | Weapons and tools | 25 weapons, 24 tools and consumables, 3 coatings (stats keyed by the items session's item ids) |
-| Enemies | 40 human and 11 animal types, 23 groups, 21 bosses (9 in the beta) |
+| Enemies | 42 human and 11 animal types, 24 groups, 21 bosses (9 in the beta) |
 | Combos | 7 nature combos, 11 squad combos, 7 unison families, 9 commands, 5 formations |
-| Clips | 233 animation clips (P0 62, P1 107, P2 28, P3 36) |
+| Clips | 239 animation clips (P0 62, P1 107, P2 33, P3 37) |
 
 ## Contents
 
@@ -212,7 +212,7 @@ blade's edge is reach, slashing, parry frames and its techniques, never twice a 
 | `item:kunai` | 2.0 pierce (thrown 3.0) | 2.6 | Academy blade | Beta 2 |
 | `item:tanto` | 2.3 slash | 2.8 | Academy blade | Beta 2 |
 | `item:bokken` | 1.8 blunt | 3.3 | Crescent Moon | Beta 2 (Gekko dojo) |
-| `item:ninjato`, `item:katana` | 2.5, 2.7 slash | 3.2, 3.5 | Crescent Moon | Beta 3 |
+| `item:ninjato`, `item:katana` | 2.5, 2.7 slash | 3.2, 3.5 | Long-blade kenjutsu | Beta 3 |
 | `item:kokuto` | 2.5 slash, silent | 3.2 | Wave-foot | Beta 2.5 (from the Namiashi) |
 | `item:sarutobi_staff`, `item:bo_staff` | 2.2, 1.9 blunt | 4.5, 4.0 | Monkey King staff | Beta 2 |
 | `item:iron_mace` | 2.6 blunt, guard x2 | 3.0 | Mace arts | Beta 2.5 (from the Hagane) |
@@ -243,8 +243,10 @@ ninja wire (tripwires, tethers, binds, a fire line), makibishi, sealing tags (ca
 **Coatings** (Suzuran poisons, crafted at the apothecary table): numbing (6 hits), sleep (4 hits; bosses only
 drowsy) and venom (6 hits) on a blade, kunai, shuriken or senbon.
 
-**Weapon styles.** Academy blade, throwing arts, needle arts (Shiranui), Crescent Moon kenjutsu (the Gekko:
-wide arcs, a draw-cut counter, the Dance of the Crescent Moon), wave-foot kenjutsu (the Namiashi: short silent
+**Weapon styles.** Academy blade, throwing arts, needle arts (Shiranui), long-blade kenjutsu (no clan's art:
+the weapon master teaches committed cuts, a reading guard and a single decisive stroke), Crescent Moon
+kenjutsu (the Gekko's clan art, taught to friends at their dojo: wide arcs, a draw-cut counter, the Dance of
+the Crescent Moon), wave-foot kenjutsu (the Namiashi: short silent
 strokes, a guard that steps aside and cuts back), White Fang (Hatake), Monkey King staff (Sarutobi), chain
 arts, fan arts, mace arts (Hagane), wire arts (Kinoshita) and Iaido (post-game).
 
@@ -489,8 +491,8 @@ archer, brute, ronin, chief); village trouble (street toughs, pickpockets, a cat
 genin, rogue bombers and illusionists, rogue chunin; enemy scouts, sensors and cells (a vanguard and a support
 who fight in pairs); foreign exam genin (fan, sonic, puppeteer, needles, brawler); later rogue jonin, hunter-nin,
 foreign chunin and jonin, samurai (armour that turns ninjutsu), mercenary captains, a bandit warlord, puppet
-masters, sealing adepts, sensor leaders, assassins, cell veterans, chakra absorbers (they drink ninjutsu) and
-a legendary missing-nin. Animals: wolves, boars, bears, thieving monkeys, hawks, deer (never hostile), and
+masters, sealing adepts, sensor leaders, assassins, cell veterans, chakra absorbers (they drink ninjutsu), a
+lone duellist with a single long blade, flat-eyed fighters, and a legendary missing-nin. Animals: wolves, boars, bears, thieving monkeys, hawks, deer (never hostile), and
 in the Forest of Death giant centipedes, leeches, snakes (wild animals, not summons), tigers and, later,
 spiders.
 
@@ -566,7 +568,7 @@ friendly clans and the Hokage's archive.
 |---|---|---|---|
 | Academy (Beta 1, 0 to 4 h) | 1 to 5 | 5 | Academy taijutsu (block, dodge), practice kunai and shuriken, smoke bombs and wire; the chakra bar and signs; Clone, Transformation, Substitution, Release, Rope Escape, First Aid; roof hopping |
 | Genin (Beta 2, 4 to 12 h) | 5 to 15 | 10 | parry and counter, launcher and air combos, palm rush; Strong Fist and Iron Guard; kunai, shuriken, senbon, tanto, bombs, tags, the pouch, coatings, clan weapons and clan-taught styles; chakra movement; Body Flicker, Hiding in Camouflage; the nature ceremony's C-rank and the scroll shop's D-ranks; genjutsu basics, Binding Tag; lesser clan techniques |
-| Chunin Exams (Beta 3, 12 to 15 h) | 15 to 18 | 12 | the exam reward (one C-rank chosen by the sensei); Leaf Great Whirlwind; bokken, ninjato, katana and Crescent Moon; the weighted chain; Mystical Palm, Chakra Sensing, Four-Tag Barrier, Hiding Mist, Mist Servant, blade flows |
+| Chunin Exams (Beta 3, 12 to 15 h) | 15 to 18 | 12 | the exam reward (one C-rank chosen by the sensei); Leaf Great Whirlwind; bokken, ninjato, katana, long-blade kenjutsu and the Gekko dojo's Crescent Moon; the weighted chain; Mystical Palm, Chakra Sensing, Four-Tag Barrier, Hiding Mist, Mist Servant, blade flows |
 | Chunin (15 to 28 h) | 18 to 30 | 18 | B-rank; the second nature; Shadow Clone; gates 1 and 2, Primary Lotus; Swaying Willow, Blossom Strength (Haruno); windmill shuriken, kusarigama and the fans; storage scrolls; Kindling Bond's Spark when the story opens it |
 | Jonin (28 to 45 h) | 30 to 42 | 24 | A-rank (Lightning Blade, Spiralling Sphere, Multi Shadow Clone); the third nature; gates 3 and 4; Lightning Body, White Fang; Resuscitation, Five Elements Seal; Flame and Blaze |
 | ANBU (optional) | from 35 | — | stealth, ANBU armour, assassin tools |
@@ -584,7 +586,7 @@ Chunin Exams.
 - **Weapons**: practice kunai and shuriken, kunai, shuriken, manji, senbon, tanto, bokken, ninjato, katana,
   kokuto, the Sarutobi staff, bo staff, weighted chain, iron mace, fist wraps and steel tekko; paper, smoke,
   flash and stink bombs, wire, makibishi, sealing and barrier tags, both pouches, pills, salves and the three
-  coatings; ten weapon styles; throws with retrieval and tethers, the pouch, coatings, blade flows, bomb mines.
+  coatings; eleven weapon styles; throws with retrieval and tethers, the pouch, coatings, blade flows, bomb mines.
 - **Ninjutsu**: 32 catalogue techniques (Academy 5, Body Flicker, Hiding in Camouflage, the five ceremony
   C-ranks, the five D-ranks, the second C-ranks of the exam reward, genjutsu basics, Mystical Palm, Chakra
   Sensing, Binding Tag, the weapon techniques up to C) and 25 lesser clan techniques; typed and radial signs
@@ -670,7 +672,7 @@ round out, wins most pairings. PvP is a later system; this is a guard, not a tar
 | ch14.road_ambush | +2 | 100% (99%) / 100% / 99% (93%) / 100% | 86% (79%) / 96% (97%) / 89% (72%) / 87% (82%) |
 | ch16.forest_beast | +2 | 100% / 100% / 100% / 100% | 100% / 100% / 100% / 100% |
 | ch16.forest_team | +2 | 100% / 100% / 100% / 100% | 80% (70%) / 97% (95%) / 61% (50%) / 69% (66%) |
-| ch17.prelim | alone | 100% / 100% / 100% / 100% | 77% (74%) / 87% (86%) / 78% (72%) / 72% (61%) |
+| ch17.prelim | alone | 100% / 100% / 100% / 100% | 77% (74%) / 89% (88%) / 78% (72%) / 72% (61%) |
 | ch19.stadium_cell | +2 | 100% / 100% / 100% / 100% | 93% (84%) / 95% (94%) / 93% (81%) / 97% (92%) |
 
 Story is forgiving (99 to 100% at average skill, 93 to 100% for novices); Shinobi is a challenge, not a wall
@@ -683,14 +685,14 @@ the player's damage and control combined, Shinobi, the squad against two rogue g
 
 | Chapter | Player level | teammate_a (genjutsu): damage / control / combined | teammate_b (taijutsu, pup): damage / control / combined |
 |---|---|---|---|
-| Ch 8 | 6 | 68% / 0% / 75% | 211% / 0% / 211% |
-| Ch 11 | 11 | 45% / 475% / 55% | 92% / 56% / 91% |
-| Ch 14 | 15 | 77% / 120% / 78% | 117% / 152% / 118% |
-| Ch 16 | 17 | 76% / 89% / 77% | 120% / 154% / 121% |
-| Ch 20 | 18 | 57% / 106% / 58% | 117% / 378% / 123% |
-| 28 h | 30 | 76% / 55% / 75% | 71% / 140% / 73% |
-| 45 h | 41 | 83% / 173% / 85% | 94% / 244% / 96% |
-| 60 h | 50 | 71% / 266% / 74% | 77% / 25% / 76% |
+| Ch 8 | 6 | 67% / 0% / 74% | 204% / 0% / 204% |
+| Ch 11 | 11 | 45% / 472% / 56% | 87% / 66% / 86% |
+| Ch 14 | 15 | 76% / 122% / 77% | 113% / 151% / 114% |
+| Ch 16 | 17 | 76% / 90% / 76% | 115% / 135% / 116% |
+| Ch 20 | 18 | 57% / 106% / 58% | 116% / 377% / 122% |
+| 28 h | 30 | 75% / 55% / 75% | 71% / 138% / 72% |
+| 45 h | 41 | 84% / 173% / 85% | 96% / 244% / 98% |
+| 60 h | 50 | 71% / 266% / 74% | 76% / 25% / 75% |
 
 One control-second counts as half a second of the player's damage. teammate_a now sits in the band from Ch 14
 on except at Ch 20 (58%) and Ch 11 (55%), where it holds enemies five times as long as the player but deals
@@ -783,6 +785,6 @@ All ids are `combat:` namespaced (`combat:fire.great_fireball`, `combat:style.st
   so taijutsu's steady pace keeps up?
 - **Kindling Bond in the beta**: none of it ships. Should Spark appear in Beta 3 as a teaser, or wait for the story?
 - **Teammate shares**: Painted Beasts now opens at level 15 for the Kurama (an exception to tier 2 at 20) and
-  the ninken's bite grows only from the Chunin arc; teammate_a is still under target at Ch 11 and Ch 20, and teammate_b over at
+  the ninken bites every fourth hit and grows only from the Chunin arc; teammate_a is still under target at Ch 11 and Ch 20, and teammate_b over at
   Ch 8 and Beta 3. More kit or offset tuning?
 - **PvP** is untuned beyond the guard; it waits for multiplayer.

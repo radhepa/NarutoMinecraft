@@ -4,7 +4,7 @@
  "name": "Story boss",
  "chapter": "jonin",
  "slice": "jonin",
- "base": "combat:enemy.cell_veteran",
+ "base": "combat:enemy.lone_duellist",
  "level": 34,
  "nonlethal": false,
  "arena": null,
@@ -14,10 +14,6 @@
  "hp_mult": 7.0,
  "poise": 100,
  "damage_mult": 1.15,
- "weapons": [
-  "item:katana"
- ],
- "style": "combat:style.crescent_moon",
  "story": "bible:combat:boss.jonin.story_1",
  "scripted": [
   {

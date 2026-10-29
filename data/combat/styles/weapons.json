@@ -436,7 +436,7 @@
     "item:katana",
     "item:tanto"
    ],
-   "who": "anyone at weapons rank 4; the Gekko (clan-born) from Genin",
+   "who": "the Gekko's clan art: Gekko members, and friends the Gekko dojo teaches (clan friendship 7, weapons rank 4)",
    "mentor": "role:clan_elder.gekko",
    "slice": "beta3",
    "feel": "The Gekko's kenjutsu: wide arcs, a draw-cut counter and the Dance of the Crescent Moon.",
@@ -608,6 +608,212 @@
     }
    ],
    "clan": "gekko"
+  },
+  {
+   "id": "combat:style.long_blade",
+   "name": "Long-blade kenjutsu",
+   "pillar": "weapons",
+   "weapons": [
+    "item:katana",
+    "item:ninjato",
+    "item:tanto"
+   ],
+   "who": "anyone at weapons rank 4: the weapon master teaches it (no clan's art)",
+   "mentor": "role:weapon_master",
+   "slice": "beta3",
+   "feel": "Plain, deadly sword work with a single long blade: committed cuts, a reading guard and one decisive stroke.",
+   "moves": [
+    {
+     "id": "cut_1",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 4,
+     "frames": [
+      3,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "cut_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 4,
+     "frames": [
+      3,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "cut_3",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.4,
+     "poise": 10,
+     "frames": [
+      4,
+      3,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true,
+      "knockback": 1.5
+     }
+    },
+    {
+     "id": "thrust",
+     "input": [
+      "H"
+     ],
+     "state": "ground",
+     "damage": 2.2,
+     "poise": 14,
+     "frames": [
+      9,
+      3,
+      12
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "reading_guard",
+     "input": [
+      "P",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.0,
+     "poise": 12,
+     "frames": [
+      1,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true,
+      "counter": true
+     }
+    },
+    {
+     "id": "rising_cut",
+     "input": [
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 1.6,
+     "poise": 14,
+     "frames": [
+      5,
+      3,
+      8
+     ],
+     "window": [
+      0,
+      10
+     ],
+     "stamina": 15,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true,
+      "launches": true
+     }
+    },
+    {
+     "id": "single_stroke",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 3.5,
+     "poise": 40,
+     "frames": [
+      8,
+      3,
+      16
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 10,
+     "type": "physical.slash",
+     "tier": 1,
+     "momentum_cost": 70,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true,
+      "finisher": true,
+      "cinematic": true
+     }
+    }
+   ]
   },
   {
    "id": "combat:style.wave_foot",

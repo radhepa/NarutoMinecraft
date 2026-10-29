@@ -165,6 +165,9 @@ clip("wpn.throw.catch", 6, P2, fp=True, note="Windmill return, kunai catch on pa
 for n, t in [("arc_1", 10), ("arc_2", 10), ("arc_3", 17), ("draw_cut", 9), ("moon_rising", 16), ("unsheathe", 8), ("sheathe", 10)]:
     clip("wpn.kenjutsu." + n, t, P2, fp=True)
 clip("wpn.kenjutsu.crescent_finish", 26, P3)
+for n, t in [("cut", 10), ("cut_3", 17), ("thrust", 24), ("reading_guard", 9), ("rising_cut", 16)]:
+    clip("wpn.long_blade." + n, t, P2, fp=True)
+clip("wpn.long_blade.single_stroke", 27, P3)
 clip("wpn.kenjutsu.iaido_stance", 40, P3, loop=True)
 for n, t in [("ripple", 8), ("undertow", 15), ("side_step_cut", 10), ("guard_of_waves", 10)]:
     clip("wpn.wave_foot." + n, t, P1, fp=True)

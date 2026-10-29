@@ -1,0 +1,37 @@
+{
+ "format": 1,
+ "id": "combat:enemy.lone_duellist",
+ "name": "Lone duellist",
+ "kind": "human",
+ "tier": "miniboss",
+ "rank": "jonin",
+ "levels": [
+  30,
+  50
+ ],
+ "band": "close",
+ "slice": "jonin",
+ "style": "combat:style.long_blade",
+ "weapons": [
+  "item:katana"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.body_flicker"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "ink_lines",
+  "parries"
+ ],
+ "ai": {
+  "parry": 0.35
+ },
+ "barks": "cell",
+ "note": "A single long blade, no clan's art; ink_lines (short-lived area-denial lines after each slash) is its signature"
+}
