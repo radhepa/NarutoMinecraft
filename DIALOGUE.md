@@ -199,8 +199,8 @@ the player can do, and where the lines come from:
 | **Bond moments** | `bond.level.<n>` on a level-up, `bond.memory.*` and `bond.perk.*` in the bond book, `hangout.*` scenes, `callback.*`, `followup.*`, `life.*` news and your response | Exempt from the budget |
 | **Rumours and hooks** | `hook.<type>.offer` and outcomes; `ambient.hook.*` exchanges with a `lead:` | A lead lands in the journal (SIDE_QUESTS §2.3) |
 | **Shop talk** | `shop.<shop>.<part>` (greet, browse, buy, can't afford, sold out, sell back, haggle, closing, recommend, regulars) | Transactions cycle; shop chat is fresh |
-| **Missions** | `mission.<rank>.<template>.<part>` (brief, accept, decline, progress, success, fail, report) and `mission.banter.<moment>.<speaker>` | Pending the missions session's template ids |
-| **Combat barks** | `combat.<event>.<speaker kind>`, `combat.sensei_tip.<habit>`, `combat.boss.<id>.phase_<n>` | The combat session's keys; cycling, throttled by Combat (one per speaker per 6 s) |
+| **Missions** | `mission.<rank>.<template>.<part>` (title, brief, accept, decline, progress, success, fail, report), `.twist.<id>`, `.choice.<step>`; `mission.banter.<moment>.<speaker>[.<band>]`; `mission.desk.*` | The missions session's 65 beta templates; slot names are tokens; the clerk speaks the report, the client success and fail |
+| **Combat barks** | `combat.<event>.<speaker kind>`, `combat.command_ack.<order>` (`speaker=player_ally`), `combat.sensei_tip.<habit>`, `combat.boss.<id>.phase_<n>` | The combat session's keys; cycling, throttled by Combat (one per speaker per 6 s) |
 | **Overheard chatter** | `ambient.<relation>`: two residents' exchange, shown as subtitles when the player walks by; stopping to listen turns a lead into a journal entry | Cycling; VF's neighbour chats (`chat_speak`, `chat_listen`) |
 | **Events** | `greet.event`, `chat.event` with `event=` (the Leaf Festival, New Year, Market Day, graduations, the exam weeks, clan days, the first snow...), `village.mood.<label>` | The event facet weighs most on its day |
 | **Repeats** | `again`, `close` (per personality) | Section 3 |
@@ -293,8 +293,9 @@ Compiled (`questions.json`): `{"id", "num" (the ledger id), "fn", "level", "kind
   fresh exchange left in the speaker's budget (a question costs one). `Talk.ask` mirrors the pacing
   for the simulation (`rules.json`, `questions`).
 - **How many.** Over 60 hours a close friend draws on 30 to 40 questions open to them. So the beta
-  needs about **150 general questions** (about 10 per personality) and 10 to 15 per major character
-  (those wait for the story briefs).
+  needs about 150 general questions (about 10 per personality) and 10 to 15 per major character.
+  The bank has **310** (150 general, 10 per personality, a third of them follow-ups); the cast's own
+  wait for the story briefs.
 
 ## 9. Mass production
 
@@ -332,7 +333,34 @@ Compiled (`questions.json`): `{"id", "num" (the ledger id), "fn", "level", "kind
 
 ### The bank today
 
-<!-- counts -->
+**15,766 pieces of dialogue** (`dialogue.py --stats`): 15,154 lines in 3,780 pools, 302 overheard
+exchanges (696 turns) and 310 questions (1,043 answers), with 8 story-gated pilot lines. By kind,
+10,050 lines are said once per save, 5,232 cycle and 174 are in the repeatable set.
+
+| Family | Lines | What |
+|---|---|---|
+| `chat.*` | 3,836 | Small talk: 45 per personality, rank life, the village, jobs (28), clans (25 plus the clanless and civilian), districts, weather, time, seasons, 122 tutorial helpers, 931 children's lines |
+| `greet.*` | 2,558 | Greetings by time (300), weather, season, relationship band, the player's rank, personality (20 each), clan (14 each), job, place, Market Day, events, 437 children's |
+| `mission.*` | 1,667 | Every key of the missions session's 65 beta templates (titles, briefs, outcomes, 147 twists, 23 choices), 105 banter pools with cohesion bands, the desk clerk |
+| `callback.*` | 1,318 | A callback for every one of the 1,043 answers, contradictions, 250 hangout highlights |
+| `shop.*`, `job.*` | 1,414 | The items session's 31 shops by part, the 10 part-time jobs |
+| `hangout.*` | 939 | 27 activities (22 plus the 5 hosted at home): every part, highlights |
+| `talk.*` | 803 | The bond engine's conversation topics: about 18 general, 2 per personality and 6 for children per topic |
+| `combat.*` | 798 | Barks for bandits, rogues, bystanders, sparring partners and exam Genin; a pilot for allies and the rival; sensei tips |
+| `bond.*` | 655 | Greetings by level and quarrel state, level-ups, news, the bond book (memories, facts, feelings, perks, goals, kindling, level names) |
+| `home.*` | 438 | The home session's visits, notes, pantry, keys |
+| Others | 750 | Life events (235), gifts, hooks, reactions, follow-ups, village moods, the repeatable "again" and "close" sets by personality |
+| Exchanges | 302 | Overheard talk by relation (212) and 90 hook leads |
+| Questions | 310 | 150 general and 10 per personality; 101 follow-ups; levels 2 to 7; six contradiction axes |
+
+**Coverage.** Every pool the bond engine asks for exists (`DialogueKeys.required()` on `bonds-2`:
+1,371 of 1,371). For every personality × clan voice × rank × relationship band (8,400 cells, a
+spring morning at the market, a Genin player), a speaker can reach at least 86 fresh greetings
+(median 112) and 404 fresh small-talk pieces (median 466).
+
+**The function mix** (primary function): react 21.7%, reveal_character 19.2%, worldbuild 13.0%,
+deepen_bond 11.0%, callback 10.0%, commerce 9.5%, quest 8.2%, teach 3.4%, hook 2.1%, guide 1.2%,
+**filler 0.7%** (at most 5.2% in any family: small talk).
 
 ## 10. Pool sizing
 
@@ -394,7 +422,34 @@ show where the next writing must go first.
 exam weeks, the Leaf Festival) and the player's rank and stage by slice. The player meets known faces
 first and someone new now and then, and asks topics and answers questions at the rates above.
 
-<!-- simulation -->
+Seed 20261029, the bank above:
+
+| A thorough player's beta (75 days, 975 conversations, 168 people) | Requests | Fresh | Past the budget | Nothing fresh left |
+|---|---|---|---|---|
+| Residents' small talk | 829 | 96.4% | 3.6% | 0 |
+| Children's small talk (residents) | 341 | 93.8% | 6.2% | 0 |
+| The cast's small talk (adult / child) | 203 / 252 | 98.5% / 99.2% | 1.5% / 0.8% | 0 / 0 |
+| Greetings, all speakers | 975 | 97.6% | 1.2% | 1.1% (children and child cast only) |
+| Bond topics, all speakers | 272 | 94.1% | 5.1% | 0.7% |
+| **Everything** | **2,872** | **96.7%** | **2.9%** | **0.45%** |
+
+- **Lines repeat for 0.45% of requests** in a thorough player's beta, and the first pool ever to run
+  dry does so on day 74 of 75. Conversations reach a speaker's budget 4.3% of the time. 35
+  questions are answered (one contradicting an earlier answer), the filler share of fresh lines is
+  1.5%, 2,812 lines are heard, and the ledger is 13 KB.
+- **A player who talks to everyone** (eight residents per part of the day, seven of the cast, three
+  to six exchanges each) reaches a speaker's budget in 32% of conversations and finds nothing fresh
+  in 31% of requests from day 24. That is the rule working as designed: they have used up their
+  time, and residents say "we already talked", repeat a line and close the chat.
+- **The whole game on the beta's pools alone** (300 days) runs dry for 42% of requests after day
+  74. This is expected: later slices bring their own pools (rank, stage, events, districts, the
+  cast's story voices). The ledger reaches 24 KB.
+- **What it took.** The first run (11,000 lines) repeated for 20% of requests from day 20, because
+  the beta's classmates and teammates are children and children could speak only from children's
+  pools. Opening the bond engine's pools to every age (with adult-only lines tagged), 1,100 more
+  children's lines and 480 more topic lines brought it to 0.45%. The pools most used at the
+  beta's end are the bond topics (compliments 50 of 56, food 44 of 58), the children's greetings
+  (328 of 437) and the season talk (75 of 120): the next writing goes there.
 
 ## 12. Story-gated pools
 
@@ -415,14 +470,13 @@ them: a `role=` tag outweighs every other tag.
 
 | What | Waits for |
 |---|---|
-| The glue: building a `Context` from a resident and the world, the conversation window's topics and questions, the attachment and Codec for the ledger, Core's condition registry behind `Conditions`, the name resolver behind `Names` (the cast and rolled names), speech bubbles from `mood` | Phase 0 (Village mod, Core) |
-| The cast's voices and story pools | The story lock and the character briefs |
-| Shop ids and wares | The items session's shop list (the pools use ROADMAP's shops for now) |
-| Mission template ids, slots and banter moments | The missions session (generic pools for now) |
-| The final bark list | The combat session's `data/combat/barks.json` |
-| How the player is addressed (tokens, pronouns, nickname) | The character creation session |
+| The glue: building a `Context` from a resident and the world (including `speaker` for barks and `job=mission_desk` for the clerk), the conversation window's topics and questions, the ledger's attachment and Codec, Core's condition registry behind `Conditions`, the name resolver behind `Names` (the cast, rolled names, pronouns, pets), speech bubbles from `mood` | Phase 0 (the Village mod and Core) |
+| The cast's voices: role-tagged greetings, topics, hangouts, life events, their questions (10 to 15 each), the `player_ally` and `rival` barks beyond the pilot, mission banter by role, and the story-gated pools | The story lock and the character briefs (the story session, `docs/story/DIALOGUE_BRIEFS.md`) |
+| Category-flavoured mission banter (`mission.banter.<category>.*`) | Later, as flavour (the missions session: delivery, pets, escort, beasts and guard first) |
+| The final bark list | The combat session's `data/combat/barks.json` (the pools follow its keys already) |
 | Districts and anchors | The Konoha build's `districts.json` (the `district` tag's list is provisional) |
 | Moving the compiled bank to `village/src/main/resources` | Phase 0's repository layout |
+| A JDK 25 run of the tests | This session's container had JDK 21 (`-PjavaRelease=21`) |
 
 ## 14. Open questions
 
