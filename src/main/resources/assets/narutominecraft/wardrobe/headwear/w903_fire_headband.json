@@ -1,0 +1,165 @@
+{
+  "id": "w903_fire_headband",
+  "kind": "headwear",
+  "name": "Fire Headband",
+  "gender": "unisex",
+  "texture": "headwear/w903_fire_headband.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -7.6,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.6
+    },
+    {
+      "id": "crest",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.0,
+        -4.62
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -5,
+        -1
+      ],
+      "size": [
+        10,
+        10,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.1,
+        4.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ]
+    },
+    {
+      "id": "tail_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.6,
+        -6.4,
+        4.9
+      ],
+      "rotation": [
+        20,
+        0,
+        16
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -6.4,
+        4.9
+      ],
+      "rotation": [
+        20,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        5,
+        12
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Red cloth headband with the Sarutobi crest at the brow and long tails at the back."
+}

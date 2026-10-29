@@ -1,0 +1,136 @@
+{
+  "id": "t909_corps_hoodie",
+  "kind": "top",
+  "name": "Corps Hoodie",
+  "gender": "unisex",
+  "texture": "tops/t909_corps_hoodie.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "genin"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.2,
+        3.0
+      ],
+      "rotation": [
+        24,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        9,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "hood_ear_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        -0.6,
+        3.2
+      ],
+      "rotation": [
+        24,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "hood_ear_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        -0.6,
+        3.2
+      ],
+      "rotation": [
+        24,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    },
+    {
+      "id": "chest_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.6,
+        -2.08
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        -1
+      ],
+      "size": [
+        10,
+        10,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Pullover hoodie, hood down with monkey ears, the crest on the chest, striped cuffs."
+}

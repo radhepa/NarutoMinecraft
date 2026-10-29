@@ -1,0 +1,132 @@
+{
+  "id": "w902_kid_goggles",
+  "kind": "headwear",
+  "name": "Kid Goggles",
+  "gender": "unisex",
+  "texture": "headwear/w902_kid_goggles.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "strap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -7.8,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "goggle_right",
+      "bone": "HEAD",
+      "pivot": [
+        -2.2,
+        -7.0,
+        -4.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.5,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "goggle_left",
+      "bone": "HEAD",
+      "pivot": [
+        2.2,
+        -7.0,
+        -4.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.5,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "bridge",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.2,
+        -5.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    }
+  ],
+  "hidesHair": [
+    "fringe"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Big round tinted goggles pushed up on the forehead on a broad strap."
+}

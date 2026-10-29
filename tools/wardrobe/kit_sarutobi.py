@@ -176,3 +176,33 @@ def flame_hem(face, y0: int, key: str, core: str, x0: int = 0):
                 face.set(x, y0 + dy, key)
             elif ch == "+":
                 face.set(x, y0 + dy, core)
+
+
+# -- trench knives ---------------------------------------------------------------------------
+def trench_knife(g, side: str = "right", seed: int = 9550, sheathed: bool = False):
+    """Asuma's chakra blade: a steel knuckle guard over the fist and a broad blade with a zigzag
+    edge jutting past the knuckles. `sheathed` straps it to the outside of the thigh-high hip
+    instead, on the torso, for tops that carry the knives rather than hold them."""
+    if sheathed:
+        sign = -1 if side == "right" else 1
+        sheath = g.piece(f"{side}_knife_sheath", "TORSO", (-.5, 0, -1), (1, 5, 2), pivot=(4.7 * sign, 8.6, 0),
+                         rotation=(0, 0, -8 * sign))
+        solid(sheath, "L", "leather", seed, 2)
+        ring = g.piece(f"{side}_knife_grip", "TORSO", (-.5, -2, -1), (1, 2, 2), pivot=(4.7 * sign, 8.6, 0),
+                       rotation=(0, 0, -8 * sign))
+        solid(ring, "M", "smooth", seed + 1, 3)
+        ring.right.set(0, 1, k("M", 0)) if side == "right" else ring.left.set(1, 1, k("M", 0))
+        return
+    bone = "RIGHT_ARM" if side == "right" else "LEFT_ARM"
+    x0 = -3.0 if side == "right" else -1.0
+    guard = g.piece(f"{side}_knife_guard", bone, (x0 - .1, 8.2, -2.7), (4, 2, 1), inflate=.05)
+    solid(guard, "M", "smooth", seed, 3)
+    for x in (0, 1, 2, 3):
+        guard.front.set(x, 1, k("M", 1 if x % 2 else 4))
+    blade = g.piece(f"{side}_knife_blade", bone, (-.5, 0, -.5), (1, 5, 1), pivot=(x0 + 2, 10.0, -2.4),
+                    rotation=(-18, 0, 0))
+    solid(blade, "M", "smooth", seed + 1, 3)
+    for f in blade.sides:
+        for y in range(5):
+            f.set(0, y, k("M", 4 if y % 2 else 2))
+    blade.bottom.fill(k("M", 4))
