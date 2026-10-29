@@ -219,17 +219,17 @@ Every player starts with the same numbers; Roots add only small leanings. From t
 | Stamina | 110 (100 base, +10 for a player of no clan) | Combat |
 | Poise | 20 | Combat |
 | Taijutsu | Academy basics | Combat |
-| Knack | +5% to the chosen kind, and its practice item | Combat, Items |
+| Knack | +5% to the chosen kind (combat), and its kit: `kit:knack.taijutsu` (`item:knuckle_wraps`), `kit:knack.weapons` (5 `item:practice_kunai` of fine grade), `kit:knack.ninjutsu` (`item:hand_sign_primer`); balanced has none | Combat, Items |
 | Techniques, nature | None; Clone, Transformation and Substitution are learned in Beta 1; the first nature at the Genin ceremony | Combat |
-| Key item, from the creator | `half_charm`: a small charred wooden charm, half of a matched pair; cannot be dropped, sold or stored away | Story, Items |
+| Key item, from the creator | `item:half_charm`: a small charred wooden charm, half of a matched pair; bound to the player, cannot be dropped, sold or stored away (given at the creator screen, in `kit:start`) | Story, Items |
 | In the prologue | The charm and the prologue clothes | Items |
-| At the apartment, Ch 1 (`kit:start`) | `item:apartment_key`, `item:futon`, `item:storage_chest`, `item:wardrobe_cabinet` (your chosen outfit already inside, as an `item:folded_outfit`), `item:mailbox`, `item:cooking_pot`; 100 ryo on day 1 (the first 30-ryo stipend and a 70-ryo welcome gift), then 30 ryo every morning | Items, Life |
+| At the apartment, Ch 1 (`kit:start`) | `item:apartment_key`, `item:futon`, `item:storage_chest`, `item:low_table`, `item:cupboard`, `item:cooking_pot`; the flat's built-in `wardrobe_cabinet` holds your chosen outfit as an `item:folded_outfit`; 100 ryo on day 1 (the first 30-ryo stipend and a 70-ryo welcome gift), then 30 ryo every morning | Items, Life |
 | At enrolment, Ch 1 (`kit:academy`) | `item:enrolment_form`, `item:academy_textbook` | Items |
 | From the instructor, Ch 2 | `item:practice_kunai` ×5, `item:practice_shuriken` ×10, `item:training_headband`, `item:ninja_sandals` | Items |
 | At promotion | `kit:genin` (forehead protector, tool pouch, kunai, shuriken, ration bars, a Genin outfit); `kit:chunin` (flak vest, a Chunin outfit) | Items |
 
 The kit ids are the items session's (`data/items/kits.json`). Your outfits live in the
-`wardrobe_cabinet`, a furniture block in your home: you change clothes there, and every outfit you
+`wardrobe_cabinet`, your flat's built-in closet: you change clothes there, and every outfit you
 are given or buy goes into it as a folded outfit.
 
 ## 7. Locked and changeable
@@ -469,8 +469,5 @@ Roll a life in Varied only.
 
 Asked of the sibling sessions (owners decide):
 
-- **Combat:** the knack's +5% and practice item, and the affinity bonus at the ceremony, as ids in
-  its data.
-- **Items:** `half_charm` (an undroppable key item), the Ch 1 apartment kit, the practice tools and
-  the knack's practice items as ids in the items registry (the starting kits are registered as `kit:start`, `kit:academy`, `kit:genin`, `kit:chunin`).
+- **Combat:** the knack's +5% and the affinity bonus at the ceremony, as ids in its data.
 - **Dialogue:** the tokens and the address rules (§10), `player.temperament` as a context tag.
