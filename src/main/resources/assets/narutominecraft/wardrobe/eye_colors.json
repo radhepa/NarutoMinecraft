@@ -244,6 +244,16 @@
         "#f1ede3"
       ]
     },
+    "SHIRANUI_AMBER": {
+      "name": "Shiranui Amber",
+      "ramp": [
+        "#0d0a09",
+        "#3d2a16",
+        "#654624",
+        "#93703e",
+        "#f0ece2"
+      ]
+    },
     "SUZURAN_CELADON": {
       "name": "Suzuran Celadon",
       "ramp": [

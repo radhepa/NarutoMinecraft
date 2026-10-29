@@ -681,6 +681,46 @@
         "#bdbdbe"
       ]
     },
+    "SHIRANUI_SAND": {
+      "name": "Shiranui Sand",
+      "ramp": [
+        "#3b2a1c",
+        "#5e4430",
+        "#86654a",
+        "#a98a68",
+        "#c9ad8a"
+      ]
+    },
+    "SHIRANUI_CARAMEL": {
+      "name": "Shiranui Caramel",
+      "ramp": [
+        "#3a2314",
+        "#5c3a22",
+        "#80553a",
+        "#a3744f",
+        "#c49670"
+      ]
+    },
+    "SHIRANUI_TAWNY": {
+      "name": "Shiranui Tawny",
+      "ramp": [
+        "#33291f",
+        "#524334",
+        "#74624e",
+        "#958169",
+        "#b3a088"
+      ]
+    },
+    "SHIRANUI_HONEY": {
+      "name": "Shiranui Honey",
+      "ramp": [
+        "#402a12",
+        "#664420",
+        "#8f6533",
+        "#b88a4e",
+        "#d6ad72"
+      ]
+    },
     "SUZURAN_GREEN_BLACK": {
       "name": "Suzuran Green-Black",
       "ramp": [
