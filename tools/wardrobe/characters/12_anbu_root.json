@@ -1,0 +1,5 @@
+{"id": "anbu_root", "name": "Root Agent", "tagline": "Blank mask, dark high-collared tunic, an ink scroll at the hip and a tanto down the back",
+ "face": "f01_shinobi", "hair": "h08_short_crop", "headwear": "w07_root_mask",
+ "top": "t12_root_tunic", "bottom": "b06_anbu_greaves",
+ "palette": "ANBU_ROOT", "hair_color": "RAVEN", "eye_color": "DARK", "eye_style": "soft_glint", "feminine": false,
+ "complexion": 0, "scale": 14, "rank": "anbu"}

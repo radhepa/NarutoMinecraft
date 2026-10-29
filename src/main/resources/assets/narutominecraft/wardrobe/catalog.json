@@ -61,7 +61,8 @@
     "h04_long_straight",
     "h05_swept_spikes",
     "h06_low_ponytail",
-    "h07_bowl_cut"
+    "h07_bowl_cut",
+    "h08_short_crop"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -69,7 +70,8 @@
     "w03_anbu_mask",
     "w04_anbu_cat_hood",
     "w05_anbu_wolf_mask",
-    "w06_anbu_hawk_mask"
+    "w06_anbu_hawk_mask",
+    "w07_root_mask"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -82,7 +84,8 @@
     "t08_green_jumpsuit",
     "t09_anbu_cloak",
     "t10_anbu_captain",
-    "t11_anbu_tracker"
+    "t11_anbu_tracker",
+    "t12_root_tunic"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -297,6 +300,24 @@
       "eye_style": "starlit",
       "feminine": true,
       "complexion": 1,
+      "scale": 14,
+      "rank": "anbu"
+    },
+    {
+      "id": "anbu_root",
+      "name": "Root Agent",
+      "tagline": "Blank mask, dark high-collared tunic, an ink scroll at the hip and a tanto down the back",
+      "face": "f01_shinobi",
+      "hair": "h08_short_crop",
+      "headwear": "w07_root_mask",
+      "top": "t12_root_tunic",
+      "bottom": "b06_anbu_greaves",
+      "palette": "ANBU_ROOT",
+      "hair_color": "RAVEN",
+      "eye_color": "DARK",
+      "eye_style": "soft_glint",
+      "feminine": false,
+      "complexion": 0,
       "scale": 14,
       "rank": "anbu"
     }

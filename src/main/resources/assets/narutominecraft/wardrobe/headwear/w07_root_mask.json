@@ -1,0 +1,81 @@
+{
+  "id": "w07_root_mask",
+  "kind": "headwear",
+  "name": "Root Mask",
+  "gender": "unisex",
+  "texture": "headwear/w07_root_mask.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "strap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -5.4,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.55
+    },
+    {
+      "id": "mask",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.6,
+        -4.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8,
+        0,
+        -1
+      ],
+      "size": [
+        16,
+        15,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "hidesHair": [
+    "fringe"
+  ],
+  "coversFace": true,
+  "coversMouth": false,
+  "description": "Blank white mask with narrow eye slits and one thin red line on the brow."
+}
