@@ -59,7 +59,9 @@ or more**. Hokage is earned through requirements, exams and story, not padding.
 slices: Beta 1, the opening and the Academy (~4 h); Beta 2, Genin life (~8 h); Beta 3, the Chunin
 Exams (~3 h). Side quests come on top of each slice.
 
-The village matters more than the fighting. Residents wake, work, eat at Ichiraku, gossip, train,
+The village matters more than the fighting, and most of it belongs to no great clan: civilians,
+clanless shinobi with ordinary family names, and families of the minor clans. Residents wake, work, eat at Ichiraku, gossip,
+train,
 fall in love and remember what you did. That is VF's resident model, which already runs routines,
 friendships, romance, families, deeds and notice boards. The Shinobi Modpack dresses those
 residents as shinobi and civilians of the Leaf, gives each one a rank, and adds what VF lacks:
@@ -98,10 +100,12 @@ Jonin.
 | VF changes | *Default:* fine to add small public APIs to VF: extra wardrobe namespaces, a currency item, hand-built taverns, and a resident appearance seed (for Varied saves). |
 | Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe, and clan or clanless. |
 | Growing up | Academy kid, teen, adult, then adult for good. No old age and no death of age. |
-| Clans | Born into one of the 15 clans or clanless. *Default:* all 15 pickable at creation. *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship. A player can found a clan, including restoring the Kagari. |
+| Clans | 25 clans: the 15 noble clans and 10 minor clans ([CLANS.md](CLANS.md)). Born into one of them or clanless. *Default:* all 25 pickable at creation, alongside clanless; a player can also create their own clan. *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship. Creating a clan includes restoring the Kagari. |
+| Population | The village is mostly clanless, drawn by clan rarity from `tools/wardrobe/population.json` (weights per thousand): about 45% civilians, 28% clanless shinobi with ordinary family names, 15% from the 10 minor clans and 13% from the 15 noble clans (an Uchiha or a Hyuga about 1 in 70, a Hatake about 1 in 500). Civilians wear their own clothing collections (market and household); the general shinobi wardrobe adds 100 tops, 100 bottoms and 50 hairstyles ([Population](#population)). |
 | Kekkei genkai | Playable through clan membership. Out of scope for now: summoning, and with it tailed beasts. |
 | Squad | Teammates and sensei are original characters with personalities, friendship levels and connections, fixed per save (curated in Classic, rolled in Varied). They can leave the squad. |
-| Romance | Friendships can grow into romance and marriage (from the teen stage, after the beta). |
+| Romance | Friendships can grow into romance and marriage, from the teen stage. Foundation only for now: nothing romantic in the beta, and the beta does not end on a time skip or a dating unlock. |
+| Children | A married player can have children in the post-game (a life-sim foundation). |
 | Pets | Adopt a pet that follows you: a ninken pup or a cat. No summons. |
 | Hunger | Vanilla hunger stays; food from shops and Ichiraku adds small buffs. |
 | Gear | Shops, plus crafting at a **smithy** (kunai, shuriken, blades) and a **workbench** (paper bombs, smoke bombs, tags, furniture), station blocks in the world and in your apartment. |
@@ -122,12 +126,15 @@ Jonin.
 | Naruto wardrobe: hair, tops, bottoms, headwear, faces, palettes, eye colors (Sharingan, Byakugan), compiled from Python | `tools/wardrobe/` → `src/main/resources/assets/narutominecraft/wardrobe/` |
 | 21 characters with a `rank`: Genin, Jonin, ANBU and kage/signature looks | `tools/wardrobe/characters/`, renders in `docs/renders/` |
 | Clan system: clan JSON, resident mixing after VF's OutfitFactory, id blocks per clan | [CLANS.md](CLANS.md), `tools/wardrobe/clans/` |
-| Fifteen clans with id blocks: Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka, Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko | in progress on `clan/*` branches |
+| The 15 noble clans merged into the wardrobe (535 compiled pieces): Senju, Uzumaki, Uchiha, Hyuga, Nara, Akimichi, Yamanaka, Inuzuka, Sarutobi, Aburame, Hatake, Kurama, Shimura, Yuhi, Gekko | `tools/wardrobe/clans/`, renders in `docs/renders/clans/` |
+| Id blocks for 10 minor clans: Shiranui, Morino, Umino, Haruno, Namiashi, Hagane, Kinoshita, Tsuchigumo, Suzuran, Tobari | [CLANS.md](CLANS.md) |
+| Population weights and collections: residents drawn by clan rarity; clanless and civilian residents mix across collections (core, academy_genin, field, kunoichi, specialist, rugged for shinobi; market and household for civilians) and take ordinary family names | `tools/wardrobe/population.json`, `tools/wardrobe/collections/`, `render.py --village` |
 
 | Missing | Notes |
 |---|---|
 | Any Java: no mod, entities, items or gameplay | Phase 0 |
-| Academy, Chunin and civilian outfits | README notes Academy and Chunin are still to come; civilians (shopkeepers, the ramen cook, farmers) have no Naruto wardrobe at all |
+| The minor clans' and new collections' pieces | Id blocks are reserved; the market and household collections are the civilians' wardrobe |
+| Chunin outfits | Still to come (README) |
 | Buildings, furniture, the map, animations for ninja | Phase 0 to Beta 3 |
 
 ### What Village Friends already gives us
@@ -188,7 +195,7 @@ dependencies run one way. Village Friends stays its own mod; we only add small p
 |---|---|---|---|
 | **Village Friends** | `villagefriends` | Residents, routines, society, dialogue, homes, taverns, notice boards, calendar, knockouts, pets, animation clips | Fabric API. Unchanged except small public APIs: extra wardrobe namespaces, a currency item, hand-built taverns, a resident appearance seed |
 | **Shinobi Core** | `shinobi_core` | The shared player record (rank, level, age stage, clan id, difficulty), the **save seed** and its derived streams, the **condition and action language**, story flags, the event bus, stat modifiers, data loading and validation, settings, the wallet and region interfaces | Fabric API |
-| **Shinobi Village** (the Naruto content mod) | `narutominecraft` | The wardrobe, the 15 clans and the clan loader, Leaf residents spawned from map markers (curated or rolled), resident ranks, the character creator and the player's look, age-stage scaling, the resident animation pack and dialogue pools, Konoha decor blocks | Village Friends, Shinobi Core |
+| **Shinobi Village** (the Naruto content mod) | `narutominecraft` | The wardrobe, the 25 clans, the collections, the population draw and the clan loader, Leaf residents spawned from map markers (curated or rolled), resident ranks, the character creator and the player's look, age-stage scaling, the resident animation pack and dialogue pools, Konoha decor blocks | Village Friends, Shinobi Core |
 | **Shinobi Combat** | `shinobi_combat` | Chakra, techniques, hand-sign input, elemental natures, kekkei genkai, genjutsu, taijutsu, chakra movement, ninja tools, the shinobi enemy entity and its AI, sparring, the player poser | Shinobi Core, Shinobi Village |
 | **Shinobi Life** | `shinobi_life` | Adventure rules, the player's home, furniture and furnish mode, moving, ryo, shops and jobs, crafting stations, food buffs, pets, player romance, the daily cycle, sleep, fatigue, waking at home or in hospital | Shinobi Core, Village Friends |
 | **Shinobi Progression** | `shinobi_progression` | Ranks and milestones, levels and XP, the death penalty, the **quest engine** (main chapters, side quests, filler arcs, board missions), exams, the event director, the squad and roles, cutscenes and time skips, player clans, residents reacting to rank | Shinobi Core, Shinobi Village, Shinobi Combat, Shinobi Life, Village Friends |
@@ -468,7 +475,7 @@ stream(domain, key) = SplitMix64(hash64(saveSeed, domain, key))
 | Domain | Key | Rolls | Mod |
 |---|---|---|---|
 | `cast` | role id | Squad, rival and classmate looks, personality, family | Village (Varied only) |
-| `residents` | map marker id | Each resident's appearance, name, family, clan member | Village (Varied only; via VF's appearance seed API) |
+| `residents` | map marker id | Each `any` marker's group (by the population weights), then the resident's appearance, name and family | Village (Varied only; via VF's appearance seed API) |
 | `apartment` | — | Which candidate flat is yours | Life (Varied only) |
 | `sidequests` | arc slot | Which arcs appear and in what order | Progression (Varied only) |
 | `missions` | board id + day | The board's missions and their slots | Progression |
@@ -521,7 +528,8 @@ kilometres across, which in Minecraft would be empty walking.
   scenes at the border gates, not open terrain.
 - **No generation:** the shipped world uses an empty generator outside the map; vanilla structures
   and VF villages are switched off by a data pack.
-- **Population:** about 150 to 250 residents to start. VF residents tick routines once a second,
+- **Population:** about 300 residents when the whole village is built, about 200 in the beta's
+  districts. VF residents tick routines once a second, so measure before going higher.
   so measure before going higher.
 
 ### Pasted or built by hand
@@ -553,13 +561,35 @@ the map tools paste it at a fixed spot. Anything that appears once and defines t
 | ANBU HQ | By hand, hidden | Under the Hokage Rock, only reachable on the ANBU branch |
 | Police HQ, the market, the main street | Pasted around hand-built centres | |
 
+### Population
+
+Most of the Leaf belongs to no great clan. Every resident comes from a map **marker** (a spot with
+a home, a job and a group tag). A marker either names its group (a clan elder in a clan seat, the
+ramen cook) or says `any`, and then the group is drawn by weight from
+[`population.json`](tools/wardrobe/population.json) through the save seed: Classic saves use the
+curated draw, Varied saves roll it.
+
+| Group | Share | About, of 300 | Look | Where they live |
+|---|---|---|---|---|
+| Civilians | ~45% | 135 | The market and household collections; ordinary family names | Civilian districts: the market street, the residential streets, the riverside |
+| Clanless shinobi | ~28% | 84 | Mixed across the six shinobi collections; ordinary family names | Shinobi apartment blocks and ordinary streets, everywhere |
+| Minor clans (10) | ~15% | 45 | Their clan pieces | Mixed neighbourhoods, no walls |
+| Noble clans (15) | ~13% | 39 | Their clan pieces | Their clan seats; an Uchiha or a Hyuga is about 1 in 70 (4 or 5 each), a Hatake about 1 in 500 (one, if any) |
+
+**Civilian districts and shops.** Civilians run the village's daily life: the grocer, the fish and
+vegetable stalls, the tea house, the furniture maker, the tailor, the bath house, the pawn shop,
+the flower stalls, Ichiraku. Their shops are where you spend ryo and take part-time jobs, and their
+streets are where most D-rank missions happen. VF's professions map onto them (farmers,
+fishermen, cooks, tailors, carpenters), and VF's routines give them their days.
+
 ### Clan quarters
 
-Fifteen clans live in the village ([CLANS.md](CLANS.md)). The eight large clans get a **compound**:
-a gate, a main hall, a training yard and 6 to 12 pasted homes in the clan's style, with 15 to 30
-residents. The seven small clans get a **clan home**: one hand-built house or dojo with its
-signature feature, plus 2 to 5 pasted homes in an ordinary district, with 4 to 10 residents. Each
-quarter is one plot group in the map layout file, filled with that clan's residents from its clan
+Twenty-five clans live in the village ([CLANS.md](CLANS.md)), sized to their rarity. The eight
+great noble clans have a **clan seat**: a gate, a main hall, a training yard and 1 to 3 homes in the
+clan's style, for their few members (2 to 6). The seven smaller noble clans have a **clan home**:
+one hand-built house or dojo with its signature feature. The ten **minor clans** have no walls: they
+share mixed neighbourhoods with civilians and clanless shinobi, with a family house or workshop
+that marks each one. Each quarter is one plot group in the map layout file, filled from its clan
 JSON. A clan-born player can move into their clan's quarter from Chunin on.
 
 | Clan | Kind | Where | Signature build |
@@ -580,6 +610,21 @@ JSON. A clan-born player can move into their clan's quarter from Chunin on.
 | Yuhi | Clan home | Residential district with gardens | House in a grove of old trees used for genjutsu training |
 | Gekko | Clan home | By the training grounds | Kenjutsu dojo with a moon-viewing platform |
 
+The minor clans, in mixed neighbourhoods:
+
+| Minor clan | Neighbourhood | Marks it | Ability |
+|---|---|---|---|
+| Shiranui | Near the gate barracks | A family house with a senbon target wall | — |
+| Morino | Near the police HQ | A severe house with barred windows | — |
+| Umino | The Academy streets | Teachers' houses by the Academy | — |
+| Haruno | A residential street | A neat family house and garden | — |
+| Namiashi | Near the training grounds | A small dojo for footwork | — |
+| Hagane | The market street | A metalworker's shop beside the forge | — |
+| Kinoshita | The carpenters' lane | The carpenters' and builders' yard (furniture is made here) | — (original; carpenters and builders) |
+| Tsuchigumo | The quarry edge of the village | Stone houses by the quarry | Earth and web-like binding techniques (the canon anime clan) |
+| Suzuran | The herb gardens by the hospital | Herbalists' houses and drying racks | Poison resistance and herbal medicine (original) |
+| Tobari | Dark lanes behind the wall | Shuttered houses with sound-dampened walls | Sound-smothering night scouting (original) |
+
 ### District schedule
 
 What must exist, playable and populated, by the end of each slice. Everything else stays sealed
@@ -588,8 +633,8 @@ off (closed gates, streets under repair) or is not built yet.
 | By | Districts and landmarks | Why |
 |---|---|---|
 | Phase 0 | One test street of pasted homes with plaques and a Village Marker | Proves pasting, homes, residents and ryo trades on a hand-made map |
-| **Beta 1** | The prologue hills and the Yūgure hideout (with the burnt shrine nearby); the main gate and its stretch of wall; the main street to the Hokage Residence (exterior and ground floor); the Academy (by hand) with its yard, library and workshop; the player's apartment block (all candidate flats for Varied) and ~12 homes around it; Ichiraku; the furniture shop, grocer and Inuzuka clinic (pets); the hospital; the shrine; the Hokage Rock with its four faces and the sealed door at its foot; a gate and main hall for each of the 15 clan quarters | The opening, the Academy, life sim, pets, clan-born kin from day one, seeds for later |
-| **Beta 2** | The Mission Desk (Residence ground floor); Training Ground 3 (by hand) and two pasted training grounds with the lake and the climbing cliff; the market street with the weapon shop and forge, scroll shop, tea house, barbecue house; the 15 clan quarters filled out; bandit camps outside the wall; the east road and its waystation; the first far-location region (a border village) | Genin missions, training arcs, crafting, story C-ranks, clan techniques |
+| **Beta 1** | The prologue hills and the Yūgure hideout (with the burnt shrine nearby); the main gate and its stretch of wall; the main street to the Hokage Residence (exterior and ground floor); the Academy (by hand) with its yard, library and workshop; the player's apartment block (all candidate flats for Varied) and ~12 homes around it; Ichiraku; the furniture shop, grocer and Inuzuka clinic (pets); the hospital; the shrine; the Hokage Rock with its four faces and the sealed door at its foot; a gate and main hall for each of the 15 noble clan quarters; the civilian market street and residential streets | The opening, the Academy, life sim, pets, clan-born kin from day one, seeds for later |
+| **Beta 2** | The Mission Desk (Residence ground floor); Training Ground 3 (by hand) and two pasted training grounds with the lake and the climbing cliff; the market street with the weapon shop and forge, scroll shop, tea house, barbecue house; the 15 noble clan quarters filled out; the 10 minor clans' neighbourhoods; bandit camps outside the wall; the east road and its waystation; the first far-location region (a border village) | Genin missions, training arcs, crafting, story C-ranks, clan techniques |
 | **Beta 3** | The Forest of Death (pasted trees, the tower by hand, 44 gates); the stadium with seated spectators; the exam hall in the Academy; foreign teams' lodging | The Chunin Exams and the attack |
 | Later | The rest of the homes and shops, police HQ, the full wall and all gates, ANBU HQ, the Second's sealed archive under the Rock, the four vacant estates (one on the old Kagari land), the far regions of later arcs | Chunin to Hokage ([Story bible](#10-story-bible)) |
 
@@ -615,7 +660,7 @@ off (closed gates, streets under repair) or is not built yet.
 | System | Beta 1 (opening, Academy) | Beta 2 (Genin) | Beta 3 (Chunin Exams) |
 |---|---|---|---|
 | World creation | Classic or Varied, the save seed | — | — |
-| Character creation | Creator screen, clan or clanless | — | Restyle at the time skip |
+| Character creation | Creator screen, one of 25 clans or clanless | — | — |
 | Adventure rules | No breaking or placing | — | — |
 | Home and furniture | Apartment, furnish mode, chests | Forge for the apartment | — |
 | Ryo and shops | Stipend, jobs, furniture shop, grocer, Ichiraku | Mission pay, tool, weapon and scroll shops | Exam-week stalls |
@@ -626,7 +671,7 @@ off (closed gates, streets under repair) or is not built yet.
 | Friendship | VF friendship levels with classmates and neighbours; squad roles bound | Bond stories, teammates can leave | Bond payoffs in the forest and finals |
 | Levels | 1 to 5, death penalty, floors | 5 to 15 | 15 to 18 |
 | Ranks | Academy → Genin | Chunin Exam eligibility | Genin → Chunin (judged) |
-| Growing up | Child stage | — | Time skip to teen (the beta's final scene) |
+| Growing up | Child stage (the whole beta) | — | — |
 | Hand signs and chakra | Chakra bar, typed and radial signs | — | — |
 | Jutsu | Clone, Transformation, Substitution | Nature ceremony, one jutsu per nature, clan technique first tier, kekkei genkai first stage | One exam reward technique |
 | Taijutsu | Three-hit combo, heavy, dodge, block | Parry, launcher | — |
@@ -639,7 +684,7 @@ off (closed gates, streets under repair) or is not built yet.
 ### Character creation
 
 A creator screen in the prologue: hair, eyes, skin (the six complexions), marks and a starting
-outfit from the wardrobe, shown on your child-stage model; then born to one of the 15 clans (its
+outfit from the wardrobe, shown on your child-stage model; then born to one of the 25 clans (its
 look, and from Genin its technique and kekkei genkai) or clanless. Whatever you pick, the story
 gives you Kagari blood.
 
@@ -794,16 +839,16 @@ skip some board missions.
 
 | Stage | Age | When | Model |
 |---|---|---|---|
-| Child | 11 to 12 | The whole beta until its last scene | The player model at **0.78** scale through vanilla's `scale` attribute (hitbox, eye height and reach follow it), with the head drawn 10% larger by the player poser |
-| Teen | 13 to 17 | From the time skip that closes the beta | **0.9** scale, normal head |
+| Child | 11 to 12 | The whole beta | The player model at **0.78** scale through vanilla's `scale` attribute (hitbox, eye height and reach follow it), with the head drawn 10% larger by the player poser |
+| Teen | 13 to 17 | From the time skip that opens the Chunin arc (after the beta) | **0.9** scale, normal head |
 | Adult | 18 and up | From the second time skip, before the Jonin trial (later) | **1.0** scale, forever |
 
 The same wardrobe pieces fit every stage, because the model is scaled, not changed; the rank
 outfits line up with the stages. Your classmates and squad are adult VF residents with a `stage`
 tag and the same scale values, so they grow up alongside you (VF's own children stay vanilla
 babies with their games and lessons). The calendar alone would age you less than two years in 60
-hours, so the story uses two time skips: about a year after the Chunin Exams (the beta's last
-scene) and about three years before the Jonin trial.
+hours, so the story uses two time skips: about a year after the Chunin Exams (opening the Chunin arc,
+after the beta) and about three years before the Jonin trial.
 
 ### Your squad and roles
 
@@ -820,7 +865,7 @@ Quests refer to characters by **role**; the save binds each role to a character.
 | `role:akari` | The child left behind in the hideout | Fixed (story bible) | Fixed |
 | Fixed story roles | The Fourth Hokage, the elder, the librarian, Yūgure's members | Fixed | Fixed |
 
-Rolled characters take a look from the wardrobe and clan pools, a VF personality, a family in the
+Rolled characters take a group by the population weights (shinobi groups only, so most are clanless), a look from that group's pieces, a VF personality, a family in the
 village and a name from VF's name pools; once rolled they are fixed for the save. A teammate can
 leave the squad (low friendship that stays low, a failed exam, or the story), stays in the village
 and is replaced by a classmate. Squad members are knocked out, never killed.
@@ -867,7 +912,7 @@ and **mission rewards**.
 | Transformation | Dog-Boar-Ram | Your render becomes a chosen resident's look; mobs lose their target; residents do not recognize you | Beta 1, lessons |
 | Substitution | (dodge timing) | See taijutsu | Beta 1, lessons |
 | Nature jutsu (one per nature) | e.g. Snake-Ram-Monkey-Boar-Horse-Tiger (Fireball) | Fire: a projectile that sets mobs alight; Wind: a wind-charge gust; Water: a pushing wave that puts out fire; Earth: a short-lived wall entity; Lightning: a stunning palm strike | Beta 2, the nature ceremony (you choose your first nature) |
-| Clan technique, first tier | per clan | For example Shadow Possession (Nara), Expansion (Akimichi), Gentle Fist (Hyuga), Fang over Fang with your ninken (Inuzuka), Insect swarm (Aburame); the full table is in [Later systems](#clan-techniques-and-kekkei-genkai) | Beta 2, your clan's elder (clan-born); clanless players learn one lesser technique from a friendly clan |
+| Clan technique, first tier | per clan (the noble clans and the three minor clans with abilities: Tsuchigumo, Suzuran, Tobari) | For example Shadow Possession (Nara), Expansion (Akimichi), Gentle Fist (Hyuga), Fang over Fang with your ninken (Inuzuka), Insect swarm (Aburame); the full table is in [Later systems](#clan-techniques-and-kekkei-genkai) | Beta 2, your clan's elder (clan-born); clanless players learn one lesser technique from a friendly clan |
 | Kekkei genkai, first stage | — | Byakugan's sight through walls within 16 blocks; the Sharingan's first tomoe (earlier telegraphs); Wood Release's binding roots | Beta 2 (Byakugan, Wood), Beta 3 (the Sharingan awakens in the forest) |
 | Exam reward | — | One C-rank technique chosen by your sensei after the preliminaries | Beta 3 |
 
@@ -955,7 +1000,7 @@ About 4 hours of authored chapters and 4 hours of systemic play: about 12 board 
 
 ### Beta 3: the Chunin Exams (~3 h)
 
-About 2.5 hours authored and 0.5 hours systemic (the training break). The exams are also a
+About 2.5 hours authored and 0.5 hours systemic (the training break). The beta ends with the promotion, not a time skip. The exams are also a
 calendar event that runs with NPC teams every season.
 
 | Ch | Title | Time | What happens | Teaches | Seeds |
@@ -965,7 +1010,7 @@ calendar event that runs with NPC teams every season.
 | 17 | The Tower | 20 min | One-on-one preliminaries in the tower's arena | Duels, judged performance | — |
 | 18 | One Month | 30 min | The training break, compressed to six days: the *sensei* teaches your exam reward technique; festival crowds and stalls | Systemic: training, crafting, side quests | — |
 | 19 | Dusk over the Stadium | 40 min | The finals before the whole village. Yūgure attacks: smoke, fire, two-man cells in the stands. In the chaos **Hotaru** stops in front of you and says the name **Kagari**. The Fourth Hokage falls defending the stadium | Defence, protect objectives, the cinematic camera | `story.ch19.kagari_named`; `world.hokage = 4 → 5` |
-| 20 | Embers | 10 min | The funeral. **Hyuga Sayo** is named the Fifth Hokage. Promotion results (judged on how you fought). The time-skip montage: a year passes, you grow into a teen in the mirror, the Fifth's face is carved. End of the beta | Promotion, time skip, restyle | The teen stage; the Fifth's hard line |
+| 20 | Embers | 10 min | The funeral. **Hyuga Sayo** is named the Fifth Hokage. Promotion results (judged on how you fought). The squad's evening at Ichiraku, and the *sensei*'s warning that Yūgure will come again. End of the beta: you are still a child, and the time skip opens the Chunin arc later | Promotion | The Fifth's hard line |
 
 ### The squad bonding arc
 
@@ -990,16 +1035,16 @@ the Adventure datapack, unlocked by rank, place, friendship, clan and events.
 | Slice | Target | Includes |
 |---|---|---|
 | Beta 1 | 10 | The filler arc **The Ramen Thief** (3 parts: who keeps eating Ichiraku's stock at night?); 4 bond quests; one-offs like the lost Academy cat, the old shogi player, the flower shop's delivery |
-| Beta 2 | 20 + 15 clan quests | The filler arcs **Lanterns on the Lake** (4 parts: a ghost light over the training lake) and **Dogs and Bugs** (3 parts: an Inuzuka-Aburame feud over a missing beetle); 4 bond quests; one-offs (the pawn shop's forged scroll, the forge's apprentice, a festival lost child); one quest per clan for its members and friends |
+| Beta 2 | 20 + 25 clan quests | The filler arcs **Lanterns on the Lake** (4 parts: a ghost light over the training lake) and **Dogs and Bugs** (3 parts: an Inuzuka-Aburame feud over a missing beetle); 4 bond quests; one-offs (the pawn shop's forged scroll, the forge's apprentice, a festival lost child); one quest per clan (noble and minor) for its members and friends; civilian quests on the market street |
 | Beta 3 | 4 | Exam week: a lost foreign Genin, a stall thief, the *rival*'s younger sibling, the hospital's missing supplies |
 
-That is about 34 side quests plus 15 clan quests, roughly 8 to 10 hours of optional play. In
+That is about 34 side quests plus 25 clan quests, roughly 8 to 10 hours of optional play. In
 Varied saves each slice draws from a larger pool (for example 30 Beta 2 one-offs, 12 shown) and
 the filler arcs come in a rolled order; Classic uses a fixed selection.
 
 ### The Classic cast
 
-The curated cast of a Classic save (all original). Varied saves roll these roles.
+The curated cast of a Classic save (all original), mostly clanless like the village. Varied saves roll these roles by the population weights (shinobi groups only).
 
 | Role | Classic character |
 |---|---|
@@ -1007,8 +1052,8 @@ The curated cast of a Classic save (all original). Varied saves roll these roles
 | `role:instructor` | **Ibuki Sora**, a cheerful Chunin who believes in everyone |
 | `role:medic` | **Hoshino Yūna**, the hospital's young medic |
 | `role:teammate_a` | **Kurama Tōji**, shy, imaginative, paints, a born genjutsu user |
-| `role:teammate_b` | **Inuzuka Mei**, loud and fearless, with her pup Kōta |
-| `role:classmate_c`, `role:classmate_d` | **Aburame Shion** (thoughtful) and **Gekko Ryō** (protective, a kenjutsu prodigy) |
+| `role:teammate_b` | **Tanaka Mei**, clanless, loud and fearless, with a stray pup she named Kōta |
+| `role:classmate_c`, `role:classmate_d` | **Kinoshita Shion** (a carpenter's child, thoughtful) and **Gekko Ryō** (protective, a kenjutsu prodigy) |
 | `role:rival` | **Uchiha Hikaru**, proud and lonely |
 | `role:merchant_kenta` | **Kenta**, a travelling merchant who keeps hiring the squad |
 
@@ -1055,7 +1100,7 @@ Deliverables name the mod they land in: **Core**, **Village**, **Combat**, **Lif
 
 **Deliverables:** chapters 0 to 7 and Beta 1's side quests ([section 8](#beta-1-the-opening-and-the-academy-4-h)); from [section 7](#systems-by-slice), every Beta 1 system; the Beta 1 districts ([schedule](#district-schedule)).
 
-- **Village:** the full creator screen, all 15 clans pickable; Academy outfits; Academy kids and
+- **Village:** the full creator screen, all 25 clans pickable; the population draw and the civilian collections; Academy outfits; Academy kids and
   the instructor with lesson routines; the Classic cast and Varied rolls; the child stage.
 - **Life:** apartment and furnish mode, the first Leaf furniture set, chests, ryo, stipend, jobs,
   the daily cycle and fatigue, hospital wakes, Leaf dish buffs, the workbench, pets.
@@ -1087,7 +1132,7 @@ the Beta 2 districts.
   team assignment and the bell test; teammates who can leave; mentors; levels 5 to 15; the event
   director with the Leaf Festival and New Year.
 - **Combat:** chakra movement; parry and launcher; the nature ceremony and one jutsu per nature;
-  the 15 clan techniques (first tier) and the first kekkei genkai stages; thrown tools and bombs;
+  the clan techniques (first tier) of the 15 noble clans and the three minor clans with abilities and the first kekkei genkai stages; thrown tools and bombs;
   the shinobi entity and brain v1 (bandits, rogue ninja, Yūgure scouts and the first two-man cell).
 - **Life:** the tool, weapon and scroll shops; the smithy and its recipes; crafted grades.
 - **Core:** the region interface and the first far region.
@@ -1107,12 +1152,12 @@ the Beta 2 districts.
 districts.
 
 - **Progression:** the Chunin Exams as a calendar event, with NPC teams every season and results in
-  village news; the three stages; judged promotion; the time skip to the teen stage; the Fifth
+  village news; the three stages; judged promotion; the Fifth
   Hokage (`world.hokage = 5`) and her face on the Rock; the exam reward technique.
 - **Combat:** Yūgure two-man cells with their own loadouts; the Sharingan's awakening; the
   uncontrolled Kagari flare as a story moment.
 - **Life:** bedroll camping and On Duty fatigue.
-- **Village:** the Chunin wardrobe; teen-stage outfit checks.
+- **Village:** the Chunin wardrobe.
 - **Map:** the Forest of Death, the stadium with seated spectators, the attack dressing (smoke,
   rubble entities, closed streets).
 
@@ -1229,8 +1274,8 @@ Eighth. All are original characters with custom faces.
 |---|---|---|---|---|
 | Academy | **Cinders** | ~4 | The rescue; the apartment; the flare; the sinking sun on your door; the missing page; graduation | Beta 1 |
 | Genin | **Paper Trail** | ~8 | The squad and the bell test; tree and water walking; chakra paper in Kenta's cart; the empty bed in the border village; the stranger and *teammate_b*; "Yūgure" | Beta 2 |
-| Chunin Exams | **Dusk over the Stadium** | ~3 | The written test; the forest and the false team; the tower; the attack; "Kagari"; the Fourth's fall; the Fifth; the time skip | Beta 3 |
-| Chunin | **Embers** | ~13 | A year later, a teen. The Fifth's curfews and suspicion; your fire awakens and must be trained in secret with Fumiko and the sensei; B-rank missions on Yūgure's trail; Akari returns in a raid on a border post; *teammate_b*'s choice pays off; you can found a clan; a Yūgure strike sets a clan quarter against the Fifth, who steps down; the Sixth is named | Later |
+| Chunin Exams | **Dusk over the Stadium** | ~3 | The written test; the forest and the false team; the tower; the attack; "Kagari"; the Fourth's fall; the Fifth; promotion | Beta 3 |
+| Chunin | **Embers** | ~13 | Opens with the first time skip: a year later, a teen. The Fifth's curfews and suspicion; your fire awakens and must be trained in secret with Fumiko and the sensei; B-rank missions on Yūgure's trail; Akari returns in a raid on a border post; *teammate_b*'s choice pays off; you can found a clan; a Yūgure strike sets a clan quarter against the Fifth, who steps down; the Sixth is named | Later |
 | Jonin | **Ashes** | ~17 | Three years later, an adult and a Jonin. Your own Genin team; A-rank hunts for cells in far regions; the Sixth opens the archive with you: the Third's letter and the missing page reveal the Kagari purge; Elder Mibu is unmasked as the traitor; the truth is made public and the Kagari get a memorial; the Sixth resigns and the sensei becomes the Seventh; romance can lead to marriage | Later |
 | ANBU (optional) | **Night Watch** | +~8 | Masks and covert operations against Yūgure's cells; the Shimura storyline (a hidden faction that wants to use you as a weapon); the best path to bring Akari home | Later |
 | Road to Hokage | **The Last Bonfire** | ~15 | Restore the Kagari on their old land by the burnt shrine, or found your own clan; Hotaru defects and leads you to Seiren, your grandparent; Yūgure lights the Last Bonfire at the Leaf; the whole village defends itself, every friendship and clan you built counts; you face Seiren; the Seventh names you successor; the inauguration and your face as the Eighth | Later |
@@ -1313,11 +1358,15 @@ VF runs romance between residents (`social/`: meters, `Chemistry`, sweethearts a
 marriage after 30 to 150 days at 65 or more). Shinobi Life extends it to the player:
 
 - **Who:** single residents of the same age stage (teen with teen, adult with adult), including
-  squadmates; their personality and chemistry decide interest. Children never.
+  squadmates; their personality and chemistry decide interest. Never children, and nothing in the
+  beta.
 - **Dating:** at friendship level 7 ("spend time together": walks, ramen, festival nights);
   confessing at level 8 makes you sweethearts (village news).
 - **Marriage:** adults only, at level 10, a proposal and a wedding at the shrine. Your spouse moves
   in; a clanless player may join the spouse's clan, or the spouse may join yours.
+- **Children (post-game):** a married player can have children. They are VF residents born into
+  your household (VF already records parents, households and surnames for residents' babies),
+  grow up through VF's children's routines, games and lessons, and can enrol at the Academy.
 
 ### Elemental natures
 
@@ -1352,6 +1401,9 @@ Summoning, and with it tailed beasts, are out of scope.
 | Kurama | Painted illusion | Genjutsu: a painted world closes over one target for 6 s | brush strokes in the air |
 | Shimura | Vacuum blades, sealing | Wind blades in a fan that break through a guard; a sealing curse used on ANBU-branch missions | breath blades |
 | Yuhi | Tree binding | Genjutsu: the target sees itself bound by a tree and cannot move for 4 s; the caster appears behind it | sign, step-behind |
+| Tsuchigumo (minor) | Earth binding | Earth-style ninjutsu and a web-like binding trap that holds one target | sign, ground slam |
+| Suzuran (minor) | Herbalist | Immunity to poison, and herbal poultices and poison coatings crafted at the workbench | — |
+| Tobari (minor) | Smothering | Silences your footsteps and techniques within a few blocks at night: enemies do not hear you | sign |
 | Gekko | Dance of the Crescent Moon | Kenjutsu: two short-lived clones appear and all three strike a target at once from three sides | three-way slash |
 
 **Genjutsu.** Three clans (Kurama, Yuhi, Uchiha) use illusions, so genjutsu is one shared effect
@@ -1381,7 +1433,7 @@ the Leaf Festival, New Year and the Chunin Exams; the rest arrive with the later
 | Chunin Exams | Spring 15 to 21 and Autumn 15 to 21 | Written test (day 15), Forest of Death (16 to 20), finals (21). Run every season with NPC teams; the player joins when eligible | Fishing `Contest` as the pattern for entrants and results; `Seat` for spectators |
 | Academy graduation | Spring 7 and Autumn 7 | Ceremony in the yard; the player's own graduation is the first one they pass | Lessons in VF's routine |
 | Weddings | When a couple marries (residents or the player) | A ceremony at the shrine with family and friends, then a party | VF romance and marriage, party behavior |
-| Clan days (15, plus player clans) | One per clan per year, spread so no two fall in the same week | Senju and Uzumaki: founders' memorial at the shrine (Spring); Hyuga: main and branch house ceremony; Akimichi: harvest feast (Autumn); Inuzuka: ninken pairing, where children get their first pup; Nara: deer count in the forest; Yamanaka: flower festival (Spring); Uchiha: police parade; Sarutobi: the Will of Fire lantern walk (New Year eve); Aburame: insect night, with fireflies over the gardens (Summer); Hatake: a quiet visit to the memorial stone; Kurama: painting exhibition; Yuhi: grove viewing (Spring); Gekko: moon-viewing kenjutsu duels (Autumn full moon); Shimura: none in public, a beat of the ANBU branch instead; player clans: their chosen day | Party behavior, Hearth & Harvest dishes, VF pets for the pups |
+| Clan days (15 noble clans, a shared day for the minor clans' neighbourhoods, plus player clans) | One per clan per year, spread so no two fall in the same week | Senju and Uzumaki: founders' memorial at the shrine (Spring); Hyuga: main and branch house ceremony; Akimichi: harvest feast (Autumn); Inuzuka: ninken pairing, where children get their first pup; Nara: deer count in the forest; Yamanaka: flower festival (Spring); Uchiha: police parade; Sarutobi: the Will of Fire lantern walk (New Year eve); Aburame: insect night, with fireflies over the gardens (Summer); Hatake: a quiet visit to the memorial stone; Kurama: painting exhibition; Yuhi: grove viewing (Spring); Gekko: moon-viewing kenjutsu duels (Autumn full moon); Shimura: none in public, a beat of the ANBU branch instead; player clans: their chosen day | Party behavior, Hearth & Harvest dishes, VF pets for the pups |
 | Border incident | Random, about weekly | Rogue ninja or bandits at a gate or on a road; a short fight, a deed, a small reward | VF guard call-out |
 | Crisis arcs | Story-gated | The unique ninja plot, once each: Yūgure ([story bible](#10-story-bible)): watchers in the Academy years, cells brushing past your Genin missions, the attack on the Chunin Exam finals, then (in outline) the traitor elder, the truth about the Kagari, and the leader's attack that decides the succession | Guards, knockouts, the arena |
 
@@ -1411,7 +1463,7 @@ data ([Regions](#regions)). Multiplayer comes after the single-player story ([Mu
 | Version churn | VF or Minecraft moving mid-beta | Minecraft 26.3 and Loader 0.19.5 pinned for the whole beta; port only between slices |
 | Romance and age | The beta's characters are children | Romance only within the same age stage and from teen, enforced in code; nothing romantic in the beta |
 | Combat feel | Minecraft combat is coarse | Server-decided hits, generous windows on Story difficulty |
-| Map building cost | The beta alone needs the Academy district, 15 clan quarters, training grounds, the forest and the stadium | Paste everything repeatable; hand-build only landmarks; clan quarters as cores in Beta 1 |
+| Map building cost | The beta alone needs the Academy district, the civilian streets, 15 noble clan quarters, 10 minor clan neighbourhoods, training grounds, the forest and the stadium | Paste everything repeatable; hand-build only landmarks; clan quarters as cores in Beta 1 |
 | Economy and fatigue balance | Too easy or too harsh | Every number in data; playtest each slice |
 | Performance | 150 to 250 residents in one area | Measure in Phase 0 and Beta 3; split Konoha into several VF settlements if needed |
 | Naming and IP | Naruto names, symbols and places belong to their owners | Original characters, Hokage and plot; cameos only; the pack's own name; a free fan project |
@@ -1423,6 +1475,3 @@ data ([Regions](#regions)). Multiplayer comes after the single-player story ([Mu
 2. **Story bible approval.** The Hokage line (names and legacies), the Classic cast, Seiren as your
    grandparent, and Elder Mibu as the traitor are proposals inside the approved Yūgure premise.
    Confirm or change before Beta 1's dialogue is written.
-3. **Children.** Can a married player have children in the post-game?
-4. **The end of the beta.** The beta ends on the time skip into the teen stage. Should dating unlock
-   there as a teaser, or wait for the Chunin arc?
