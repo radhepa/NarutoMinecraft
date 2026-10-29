@@ -54,6 +54,13 @@ public final class Bond {
     /** What is going on in their life, and what either of you means to ask about later. */
     final List<LifeEvents.News> news = new ArrayList<>();
     final List<Together.FollowUp> followUps = new ArrayList<>();
+    /** Questions: what they asked and what the player answered, the question waiting for an answer, and how answers shaped them. */
+    final List<Questions.Answered> answers = new ArrayList<>();
+    String pendingQuestion = "";
+    long pendingSince = -1, lastQuestion = -1;
+    final java.util.Map<String, Double> nudges = new TreeMap<>();
+    String mood = "";
+    long moodDay = -1;
     /** Conversation topics already raised today. */
     final Set<String> topicsToday = new TreeSet<>();
     long topicsDay = -1;
@@ -94,6 +101,10 @@ public final class Bond {
     public int declinedByYou() { return declinedByYou; }
     /** Whether the player talked with them today. */
     public boolean talkDayIsToday(long day) { return talkDay == day; }
+    public List<Questions.Answered> answers() { return List.copyOf(answers); }
+    public java.util.Map<String, Double> nudges() { return java.util.Map.copyOf(nudges); }
+    /** Their mood from the last answer, today only: touched, pleased, amused, impressed, fine, stung_but_respects, hurt, noticed_contradiction. */
+    public String mood(long day) { return moodDay == day ? mood : ""; }
 
     void meet(long day) { if (met < 0) met = day; }
     /** A day with any contact at all (a talk, a lesson, a mission). */

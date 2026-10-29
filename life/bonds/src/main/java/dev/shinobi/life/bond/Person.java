@@ -52,5 +52,6 @@ public record Person(String id, String clan, String district, int rank, Stage st
     }
     public Person withStage(Stage next) { return new Person(id, clan, district, rank, next, personality, gender, attraction, birthday, family, circles); }
     public Person withRank(int next) { return new Person(id, clan, district, next, stage, personality, gender, attraction, birthday, family, circles); }
+    public Person withPersonality(Personality next) { return new Person(id, clan, district, rank, stage, next, gender, attraction, birthday, family, circles); }
     public Person withClan(String next) { return new Person(id, next, district, rank, stage, personality, gender, attraction, birthday, family, circles); }
 }

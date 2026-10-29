@@ -23,12 +23,15 @@ public final class Reaction {
         Source(double weight) { this.weight = weight; }
     }
 
-    public static Meters react(Personality p, Act act) {
-        Meters d = act.base;
-        for (var lean : act.leans) d = d.plus(lean.meter(), lean.amount() * p.trait(lean.trait()));
-        if (honors(p, act)) d = d.gains(HONOR).plus(Meter.AFFECTION, .5);
-        if (violates(p, act)) d = d.losses(VIOLATE).plus(Meter.TRUST, -1);
-        if (act.peeve != null && p.minds(act.peeve)) d = d.losses(PEEVE).plus(Meter.AFFECTION, -2);
+    public static Meters react(Personality p, Act act) { return react(p, act.base, act.leans, act.honors, act.violates, act.peeve); }
+    /** The same rules for anything with an effect, leans, values and a peeve (an act, an answer's tag). */
+    public static Meters react(Personality p, Meters base, java.util.List<Act.Lean> leans, java.util.Set<Value> honors, java.util.Set<Value> violates,
+            Personality.Peeve peeve) {
+        Meters d = base;
+        for (var lean : leans) d = d.plus(lean.meter(), lean.amount() * p.trait(lean.trait()));
+        if (honors.stream().anyMatch(p::holds)) d = d.gains(HONOR).plus(Meter.AFFECTION, .5);
+        if (violates.stream().anyMatch(p::holds)) d = d.losses(VIOLATE).plus(Meter.TRUST, -1);
+        if (peeve != null && p.minds(peeve)) d = d.losses(PEEVE).plus(Meter.AFFECTION, -2);
         if (d.affection() < 0) d = d.with(Meter.AFFECTION, d.affection() * (1 - .25 * p.warmth() + .15 * Math.max(0, p.pride())));
         return d;
     }

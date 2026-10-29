@@ -34,13 +34,14 @@ public final class SaveFormat {
         for (var d : w.deeds) {
             var knowers = new LinkedHashMap<String, Object>();
             d.knowers.forEach((id, k) -> knowers.put(id, map("how", k.how().name().toLowerCase(), "day", k.day(), "from", k.from(), "slant", k.slant())));
-            deeds.add(map("serial", d.serial, "act", d.act.id(), "day", d.day, "about", d.about, "knowers", knowers));
+            deeds.add(map("serial", d.serial, "act", d.act.id(), "day", d.day, "about", d.about, "note", d.note, "knowers", knowers));
         }
         out.put("deeds", deeds);
         out.put("plans", w.plans.stream().map(p -> (Object) map("id", p.id(), "with", p.with(), "activity", p.activity(), "day", p.day(), "hour", p.hour(), "host", p.host())).toList());
         out.put("invitations", w.invitations.stream().map(i -> (Object) map("id", i.id(), "from", i.from(), "activity", i.activity(), "day", i.day(), "hour", i.hour(), "expires", i.expires())).toList());
         out.put("invited_on", new TreeMap<>(w.invitedOn));
         out.put("plan_serial", w.planSerial);
+        out.put("questions_today", w.questionsToday); out.put("questions_day", w.questionsDay);
         return out;
     }
 
@@ -68,6 +69,10 @@ public final class SaveFormat {
         m.put("last_asked", b.lastAsked); m.put("quiet_until", b.quietUntil); m.put("declined_by_them", b.declinedByThem); m.put("declined_by_you", b.declinedByYou);
         m.put("news", b.news.stream().map(n -> (Object) map("kind", n.kind().id(), "day", n.day(), "shared", n.shared(), "shared_day", n.sharedDay(), "response", n.response())).toList());
         m.put("follow_ups", b.followUps.stream().map(f -> (Object) map("topic", f.topic(), "due", f.due(), "they_ask", f.theyAsk())).toList());
+        m.put("answers", b.answers.stream().map(a -> (Object) map("question", a.question(), "answer", a.answer(), "day", a.day(), "about", a.about(),
+                "stance", a.stance(), "recalled", a.recalled())).toList());
+        m.put("pending_question", b.pendingQuestion); m.put("pending_since", b.pendingSince); m.put("last_question", b.lastQuestion);
+        m.put("nudges", new TreeMap<>(b.nudges)); m.put("mood", b.mood); m.put("mood_day", b.moodDay);
         m.put("moments", List.copyOf(b.moments)); m.put("facts", List.copyOf(b.facts)); m.put("flags", List.copyOf(b.flags));
         var c = b.conflict;
         m.put("conflict", map("state", c.state().id(), "since", c.since(), "until", c.until(), "severity", c.severity(),
@@ -104,6 +109,7 @@ public final class SaveFormat {
         for (Object o : (List<Object>) in.getOrDefault("deeds", List.of())) {
             var d = (Map<String, Object>) o;
             var deed = new Deed((int) lng(d.get("serial")), Act.of((String) d.get("act")), lng(d.get("day")), (String) d.getOrDefault("about", ""));
+            deed.note = (String) d.getOrDefault("note", "");
             for (var k : ((Map<String, Object>) d.getOrDefault("knowers", Map.of())).entrySet()) {
                 var km = (Map<String, Object>) k.getValue();
                 deed.knowers.put(k.getKey(), new Deed.Know(Reaction.Source.valueOf(((String) km.get("how")).toUpperCase()), lng(km.get("day")), (String) km.getOrDefault("from", ""), dbl(km.getOrDefault("slant", 0))));
@@ -120,6 +126,12 @@ public final class SaveFormat {
         }
         ((Map<String, Object>) in.getOrDefault("invited_on", Map.of())).forEach((k, v) -> w.invitedOn.put(k, lng(v)));
         w.planSerial = (int) lng(in.getOrDefault("plan_serial", 0));
+        w.questionsToday = (int) lng(in.getOrDefault("questions_today", 0)); w.questionsDay = lng(in.getOrDefault("questions_day", -1));
+        // Answers that shaped someone: their personality as the answers left it.
+        for (var b : w.bonds.values()) for (var n : b.nudges.entrySet()) {
+            var p = w.person(b.from);
+            w.add(p.withPersonality(Questions.shifted(p.personality(), Personality.Trait.valueOf(n.getKey()), n.getValue())));
+        }
         return w;
     }
     @SuppressWarnings("unchecked")
@@ -142,6 +154,15 @@ public final class SaveFormat {
         b.moments.addAll((List<String>) m.getOrDefault("moments", List.of()));
         ((Map<String, Object>) m.getOrDefault("hangouts", Map.of())).forEach((k, v) -> b.hangouts.put(k, new ArrayList<>(((List<Object>) v).stream().map(SaveFormat::lng).toList())));
         b.rituals.addAll((List<String>) m.getOrDefault("rituals", List.of()));
+        for (Object o : (List<Object>) m.getOrDefault("answers", List.of())) {
+            var a = (Map<String, Object>) o;
+            b.answers.add(new Questions.Answered((String) a.get("question"), (String) a.get("answer"), lng(a.get("day")), (String) a.get("about"),
+                    (String) a.get("stance"), (Boolean) a.get("recalled")));
+        }
+        b.pendingQuestion = (String) m.getOrDefault("pending_question", ""); b.pendingSince = lng(m.getOrDefault("pending_since", -1));
+        b.lastQuestion = lng(m.getOrDefault("last_question", -1));
+        ((Map<String, Object>) m.getOrDefault("nudges", Map.of())).forEach((k, v) -> b.nudges.put(k, dbl(v)));
+        b.mood = (String) m.getOrDefault("mood", ""); b.moodDay = lng(m.getOrDefault("mood_day", -1));
         for (Object o : (List<Object>) m.getOrDefault("highlights", List.of())) {
             var h = (Map<String, Object>) o;
             b.highlights.add(new Together.Highlight((String) h.get("activity"), lng(h.get("day")), (String) h.get("key"), (List<String>) h.get("with")));

@@ -23,6 +23,8 @@ public final class Deed {
     final Act act;
     final long day;
     final String about;
+    /** What was said, for a {@link Act#STATED} deed: {@code <axis>=<stance>} (see {@link Questions}). */
+    String note = "";
     final Map<String, Know> knowers = new TreeMap<>();
     /** Days in a row nobody new heard it: after {@link Gossip#DIES_DOWN} the news has died down and stops spreading. */
     int quiet;
@@ -33,6 +35,7 @@ public final class Deed {
     public Act act() { return act; }
     public long day() { return day; }
     public String about() { return about; }
+    public String note() { return note; }
     public boolean knows(String id) { return knowers.containsKey(id); }
     public Know know(String id) { return knowers.get(id); }
     public Map<String, Know> knowers() { return Map.copyOf(knowers); }

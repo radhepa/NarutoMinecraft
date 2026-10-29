@@ -44,12 +44,26 @@ public final class DialogueKeys {
         }
         for (String topic : List.of("exam", "mission", "festival", "training", "date")) keys.add("followup." + topic);
         for (var label : Mood.Label.values()) keys.add("village.mood." + label.id());
+        for (String r : REACTIONS) keys.add("reaction." + r);
         for (var e : SocietyHook.OUTCOMES.entrySet()) {
             keys.add("hook." + e.getKey() + ".offer");
             for (String o : e.getValue()) keys.add("hook." + e.getKey() + "." + o);
         }
         return List.copyOf(keys);
     }
+    /** The pools a question bank needs: the question, each answer, the reaction, the callback and the contradiction line. */
+    public static List<String> forQuestions(List<Question> bank) {
+        var keys = new TreeSet<String>();
+        for (var q : bank) {
+            keys.add("question." + q.id());
+            for (var a : q.answers()) { keys.add("answer." + q.id() + "." + a.id()); keys.add("callback.answer." + q.id() + "." + a.id()); }
+            if (!q.about().isEmpty()) keys.add("answer.contradiction." + q.about());
+        }
+        for (String r : REACTIONS) keys.add("reaction." + r);
+        return List.copyOf(keys);
+    }
+    public static final List<String> REACTIONS = List.of("touched", "pleased", "amused", "impressed", "fine", "stung_but_respects", "hurt", "noticed_contradiction");
+
     /** Optional per-archetype variants: {@code <key>.<archetype>} for the pools a personality colors most. */
     public static List<String> optional() {
         var out = new ArrayList<String>();
