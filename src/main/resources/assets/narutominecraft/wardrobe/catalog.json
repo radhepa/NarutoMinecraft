@@ -633,6 +633,16 @@
           "K": "#171319",
           "D": "#2b2333"
         },
+        "UCHIHA_HOMESTEAD": {
+          "name": "Uchiha Homestead",
+          "P": "#3d2a4d",
+          "S": "#ece8df",
+          "A": "#c4282b",
+          "L": "#6b5a45",
+          "M": "#aab3b9",
+          "K": "#1a1520",
+          "D": "#7a2f45"
+        },
         "UCHIHA_PALE": {
           "name": "Uchiha Pale",
           "P": "#d9d6ce",
@@ -665,14 +675,14 @@
             "#5f7fc0"
           ]
         },
-        "UCHIHA_GRAPHITE": {
-          "name": "Uchiha Graphite",
+        "UCHIHA_UMBER": {
+          "name": "Uchiha Umber",
           "ramp": [
-            "#0f0f10",
-            "#1d1c1e",
-            "#2c2a2d",
-            "#433f43",
-            "#625c60"
+            "#110c0a",
+            "#21170f",
+            "#33241a",
+            "#4b3628",
+            "#6a4e3a"
           ]
         }
       },
@@ -727,7 +737,7 @@
           "UCHIHA_BLUE_BLACK",
           "UCHIHA_INK",
           "RAVEN",
-          "UCHIHA_GRAPHITE"
+          "UCHIHA_UMBER"
         ],
         "eye_colors": [
           "DARK",
@@ -830,6 +840,7 @@
           "bottom": "b305_fan_skirt",
           "rank": "genin",
           "palettes": [
+            "UCHIHA_HOMESTEAD",
             "UCHIHA",
             "UCHIHA_PLUM",
             "UCHIHA_INDIGO",

@@ -1,13 +1,14 @@
 """Police Vest: the Konoha Military Police uniform, a dark long-sleeved shirt under a padded vest
-with a high collar, the Uchiha crest on its back and the force's fan badge on the left arm."""
+with a high collar, the Uchiha crest on its back and the force's badge, a four-point shuriken star with
+the crest at its heart, on both shoulders."""
 from kit import arm_bone, arm_x, belt
-from kit_uchiha import arm_crest, back_crest
+from kit_uchiha import back_crest, police_badge
 from paint import cap, fabric, solid, strip_fabric
 
 META = {
     "name": "Police Vest",
     "gender": "unisex",
-    "description": "Military Police vest over a dark long-sleeved shirt, crest on the back, fan badge on the arm.",
+    "description": "Military Police vest over a dark long-sleeved shirt, crest on the back, shuriken-star badges on the shoulders.",
     "tags": ["shinobi", "vest", "uchiha"],
 }
 
@@ -46,4 +47,5 @@ def build(g):
         arm.strip.hline(0, arm.strip.w - 1, 10, "D1")
         cuff = g.piece(f"{side}_cuff", arm_bone(side), (arm_x(side) - .3, 8.6, -2.3), (4, 1, 4), inflate=.12)
         solid(cuff, "D", "weave", 3823, 3)
-    arm_crest(g, "left", "D", seed=3824)
+    for side in ("right", "left"):
+        police_badge(g, side, "D", seed=3824)

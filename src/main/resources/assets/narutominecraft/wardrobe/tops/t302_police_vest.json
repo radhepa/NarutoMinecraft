@@ -4,7 +4,7 @@
   "name": "Police Vest",
   "gender": "unisex",
   "texture": "tops/t302_police_vest.png",
-  "extrasHeight": 48,
+  "extrasHeight": 80,
   "tags": [
     "shinobi",
     "uchiha",
@@ -219,11 +219,11 @@
       "inflate": 0.12
     },
     {
-      "id": "left_arm_crest",
-      "bone": "LEFT_ARM",
+      "id": "right_police_badge",
+      "bone": "RIGHT_ARM",
       "pivot": [
-        3.05,
-        0.6,
+        -3.55,
+        0.2,
         0
       ],
       "rotation": [
@@ -234,12 +234,12 @@
       "origin": [
         0,
         0,
-        -3
+        -5
       ],
       "size": [
         1,
-        9,
-        6
+        10,
+        10
       ],
       "uv": [
         34,
@@ -250,9 +250,42 @@
         0.5,
         0.5
       ]
+    },
+    {
+      "id": "left_police_badge",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        3.05,
+        0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -5
+      ],
+      "size": [
+        1,
+        10,
+        10
+      ],
+      "uv": [
+        0,
+        47
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
     }
   ],
   "tucked": false,
   "coversWaist": false,
-  "description": "Military Police vest over a dark long-sleeved shirt, crest on the back, fan badge on the arm."
+  "description": "Military Police vest over a dark long-sleeved shirt, crest on the back, shuriken-star badges on the shoulders."
 }

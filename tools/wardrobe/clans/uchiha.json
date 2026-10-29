@@ -9,12 +9,13 @@
     "UCHIHA_WAR": {"name": "Uchiha War Red", "P": "#8e1e22", "S": "#e3dccb", "A": "#d23a33", "L": "#4a3426", "M": "#a8a9a3", "K": "#141317", "D": "#2b2530"},
     "UCHIHA_ASH": {"name": "Uchiha Ash", "P": "#44454d", "S": "#ebe8e0", "A": "#b3262c", "L": "#5c4b3c", "M": "#aab3b9", "K": "#18191d", "D": "#2a2c35"},
     "UCHIHA_PLUM": {"name": "Uchiha Plum", "P": "#3b2438", "S": "#ece6e0", "A": "#c4282b", "L": "#5f4a3f", "M": "#aab3b9", "K": "#171319", "D": "#2b2333"},
+    "UCHIHA_HOMESTEAD": {"name": "Uchiha Homestead", "P": "#3d2a4d", "S": "#ece8df", "A": "#c4282b", "L": "#6b5a45", "M": "#aab3b9", "K": "#1a1520", "D": "#7a2f45"},
     "UCHIHA_PALE": {"name": "Uchiha Pale", "P": "#d9d6ce", "S": "#f2f0ea", "A": "#c4282b", "L": "#6b5a45", "M": "#aab3b9", "K": "#16171d", "D": "#2b3048"}
   },
   "hair_colors": {
     "UCHIHA_INK": {"name": "Uchiha Ink", "ramp": ["#08090d", "#111319", "#1c1f29", "#2c3140", "#4a536b"]},
     "UCHIHA_BLUE_BLACK": {"name": "Uchiha Blue-Black", "ramp": ["#0c0f1c", "#172038", "#24325a", "#37508a", "#5f7fc0"]},
-    "UCHIHA_GRAPHITE": {"name": "Uchiha Graphite", "ramp": ["#0f0f10", "#1d1c1e", "#2c2a2d", "#433f43", "#625c60"]}
+    "UCHIHA_UMBER": {"name": "Uchiha Umber", "ramp": ["#110c0a", "#21170f", "#33241a", "#4b3628", "#6a4e3a"]}
   },
   "eye_colors": {
     "UCHIHA_ONYX": {"name": "Uchiha Onyx", "ramp": ["#08080a", "#1a1a20", "#2c2c35", "#4f4f5c", "#f1ede3"]}
@@ -26,7 +27,7 @@
     "hair": ["h301_avenger_spikes", "h302_crow_tail", "h303_war_mane", "h304_goggle_spikes", "h305_flicker_curls",
              "h306_matriarch_long", "h307_little_brother", "h308_captain_swept", "h309_new_moon_bob", "h310_mirror_wave",
              "h311_sage_topknot", "h312_wanderer_shag", "h313_warring_tail", "h314_hime_cut", "h315_raven_feathers"],
-    "hair_colors": ["UCHIHA_BLACK", "UCHIHA_BLACK", "UCHIHA_BLUE_BLACK", "UCHIHA_BLUE_BLACK", "UCHIHA_INK", "RAVEN", "UCHIHA_GRAPHITE"],
+    "hair_colors": ["UCHIHA_BLACK", "UCHIHA_BLACK", "UCHIHA_BLUE_BLACK", "UCHIHA_BLUE_BLACK", "UCHIHA_INK", "RAVEN", "UCHIHA_UMBER"],
     "eye_colors": ["DARK", "DARK", "DARK", "DARK", "DARK", "UCHIHA_ONYX", "UCHIHA_ONYX", "UCHIHA_ONYX", "SHARINGAN"],
     "palettes": ["UCHIHA", "UCHIHA", "UCHIHA_NIGHT", "UCHIHA_INDIGO", "UCHIHA_ASH", "UCHIHA_PLUM"],
     "headwear": [null, null, null, null, null, "w02_forehead_protector", "w02_forehead_protector"],
@@ -44,7 +45,7 @@
     {"id": "academy_zip", "name": "Academy Zip", "top": "t304_fan_zip_jacket", "bottom": "b304_warmer_shorts", "rank": "academy",
      "palettes": ["UCHIHA", "UCHIHA_INDIGO", "UCHIHA_ASH"]},
     {"id": "clan_tunic", "name": "Clan Tunic", "top": "t305_clan_tunic", "bottom": "b305_fan_skirt", "rank": "genin",
-     "palettes": ["UCHIHA", "UCHIHA_PLUM", "UCHIHA_INDIGO", "UCHIHA_PALE"]},
+     "palettes": ["UCHIHA_HOMESTEAD", "UCHIHA", "UCHIHA_PLUM", "UCHIHA_INDIGO", "UCHIHA_PALE"]},
     {"id": "crow_mesh", "name": "Crow Mesh", "top": "t306_crow_mesh_shirt", "bottom": "b01_shinobi_trousers", "rank": "chunin",
      "palettes": ["UCHIHA_NIGHT", "UCHIHA", "UCHIHA_ASH"]},
     {"id": "fan_jonin", "name": "Fan Jonin", "top": "t307_fan_jonin_vest", "bottom": "b303_wanderer_trousers", "rank": "jonin",

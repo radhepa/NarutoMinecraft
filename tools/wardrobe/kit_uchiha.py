@@ -108,3 +108,31 @@ def lamellar(face, role: str = "P", lace: str = "K2", seed: int = 3996, x0: int 
                 face.set(x, y, k(role, 1))
             if row == step - 1 and (x + (y - y0) // step) % 4 == 1:
                 face.set(x, y, lace)
+
+
+# The Konoha Military Police badge: a four-point shuriken star with the crest at its heart.
+POLICE_STAR = ["....##....",
+               "....##....",
+               "...####...",
+               "##.####.##",
+               "##########",
+               "##########",
+               "##.####.##",
+               "...####...",
+               "....##....",
+               "....##...."]
+
+
+def police_badge(g, side: str, role: str = "D", y: float = .2, out: float = 3.05, seed: int = 3997):
+    """The police badge on the outer shoulder, at double resolution: a steel star, the crest inside."""
+    x = -out - .5 if side == "right" else out
+    patch = g.piece(f"{side}_police_badge", arm_bone(side), (0, 0, -5), (1, 10, 10), pivot=(x, y, 0), scale=(.5, .5, .5))
+    for face in patch.faces:
+        fabric(face, role, "weave", seed, 2)
+    outer = patch.right if side == "right" else patch.left
+    for yy, row in enumerate(POLICE_STAR):
+        for xx, ch in enumerate(row):
+            if ch == "#":
+                outer.set(xx, yy, "M3" if (xx + yy) % 5 else "M4")
+    crest(outer, 3, 2, size=4, handle=2)
+    return patch

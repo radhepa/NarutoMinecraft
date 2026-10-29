@@ -171,14 +171,14 @@
         "#5f7fc0"
       ]
     },
-    "UCHIHA_GRAPHITE": {
-      "name": "Uchiha Graphite",
+    "UCHIHA_UMBER": {
+      "name": "Uchiha Umber",
       "ramp": [
-        "#0f0f10",
-        "#1d1c1e",
-        "#2c2a2d",
-        "#433f43",
-        "#625c60"
+        "#110c0a",
+        "#21170f",
+        "#33241a",
+        "#4b3628",
+        "#6a4e3a"
       ]
     }
   }
