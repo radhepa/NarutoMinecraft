@@ -168,7 +168,7 @@ score = 60                                   (the job is done)
 | **C** | below 65 | ×0.85 | ×0.85 | +0.5 | 0 |
 
 An S needs every bonus objective. The bonuses (`mkit.BONUSES`): `fast` (within the template's fast
-time), `unseen`, `no_knockouts`, `client_unharmed`, `all_found`, `gentle` (the animal or person unhurt),
+time), `unseen` (never `combat:spotted`), `no_knockouts`, `client_unharmed`, `all_found`, `gentle` (the animal or person unhurt),
 `kind_choice` (the choice the client hoped for), `no_alarm`, `spared` (enemies captured or routed),
 `teamwork` (every teammate's role used), `careful` (nothing fragile broken), `extra_mile` (an optional
 step for the client) and `clean_record` (nothing kept that was not yours).
@@ -505,7 +505,7 @@ cohesion; and Beta 2's mission counts, savings and variety for a steady player.
 |---|---|---|
 | **Konoha build** (anchors in `districts.json`) | 88 anchor tags in the beta: in-village spots (`academy.yard`, `market.stall`, `riverbank`, `street_drain`, `client_home`, `pet_hideout`, `poster_board`, `residence.mission_desk`, `residence.records`, `gate.travel_desk`, `kiln_yard` and more), outside the wall (`farm_field`, `orchard`, `woodlot`, `herb_slope`, `outside.bandit_camp`, `outside.wolf_den`, `outside.ravine`), the east road (`road.east_bend`, `road.campsite`, `road.east_waystation`, `road.ford`, `road.inn_cellar`) and the border village (`border.square`, `border.healer`, `border.post`, `border.market`, `border.pawnshop`). Generic tags (`client_home`, `pet_hideout`, `farm_field`) want several instances each; named places one | 88 of 133 |
 | **Map** | Regions `region:east_road` and `region:border_village` (Beta 2); 21 later regions (hill fort, post town, capital, coast town, mountain pass, far lands and more) | 2 of 23 |
-| **Combat** (enemy groups and loadouts) | 14 in the beta, from the combat session's registry: `combat:group.bandits_small`, `.road_ambush`, `.bandits_camp`, `.smugglers`, `.scout_pair`, `.wolves_pack`, `combat:enemy.bandit_chief`, `.bandit_archer`, `.bandit_ronin`, `.boar`, `.bear`; requested and not yet registered: `combat:group.hired_thugs`, `combat:group.pickpockets` (village street fights, non-lethal) and `combat:enemy.cat_burglar`. 17 later (`combat:group.rogue_pair`, `.cell_pair`, `combat:enemy.rogue_chunin`, `.foreign_jonin`, `.giant_snake` and others; requested: `fort_guards`, `mercenary_band`, `foreign_squad`, `hunter_squad`, `foreign_platoon`, `assassins`, `kidnappers`, `ronin_band`, `combat:enemy.warlord`, `.legend_rogue`). Plus the technique scroll pools and the combat performs. Combat emits the hooks the objectives listen to (`combat:defeated`, `combat:surrendered`, `combat:captured`) | 14 of 31 |
+| **Combat** (enemy groups and loadouts) | 14 in the beta, from the combat session's registry: `combat:group.bandits_small`, `.road_ambush`, `.bandits_camp`, `.smugglers`, `.scout_pair`, `.wolves_pack`, `combat:enemy.bandit_chief`, `.bandit_archer`, `.bandit_ronin`, `.boar`, `.bear``combat:group.hired_thugs`, `combat:group.pickpockets` (village street fights, non-lethal) and `combat:enemy.cat_burglar`. 17 later (`combat:group.rogue_pair`, `.cell_pair`, `.fort_guards`, `.mercenary_band`, `.foreign_squad`, `.hunter_squad`, `.foreign_platoon`, `.assassins`, `.kidnappers`, `.ronin_band`, `combat:enemy.rogue_chunin`, `.foreign_jonin`, `.giant_snake`, `.warlord`, `.legend_rogue` and others), all registered. Plus the technique scroll pools and the combat performs. Combat emits the hooks the objectives and bonuses listen to: `combat:defeated` (defeat), `combat:surrendered` and `combat:captured` (`spared`), `combat:spotted` (breaks `unseen`) | 14 of 31 |
 | **Items** | Registered by the items session: mission items as `item:mission_<name>` (nine reuse existing items, such as `item:quest_parcel`; the cat, the ninken, the frog and a stray pet are followers, not items), the gifts' items, the 17 curio loot tables, `item:info_card`, `item:technique_scroll` and 20 `item:keepsake_<name>` (`economy.json` `gifts` and `collectibles`; the compiler maps the authoring names) | 51 of 58 |
 | **Dialogue** | Every template's `title`, `brief`, twist premises and choices; the banter keys (§6); the desk clerk's lines; NPC squads' and the rival squad's board lines | all |
 | **Life** | Ryo through the wallet; bedroll camping and On Duty; chores' work clips | all |
@@ -513,7 +513,7 @@ cohesion; and Beta 2's mission counts, savings and variety for a steady player.
 
 The Konoha build has placed all 88 beta anchor tags under these names ([KONOHA_BUILD.md](KONOHA_BUILD.md)
 §3, "Mission anchors"; generic tags get 4 to 8 instances); later regions' anchors wait for those regions.
-The other ids are requests until the owning sessions confirm them in their registries.
+The combat session has registered every enemy and group id above, and the items session every item, loot table, keepsake and card id.
 
 ## 11. What waits for Phase 0
 
