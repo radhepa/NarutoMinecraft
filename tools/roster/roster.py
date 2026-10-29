@@ -31,6 +31,8 @@ TIERS = (("S", 50), ("A", 42), ("B", 30), ("C", 15), ("D", 5), ("E", 1))
 GREAT = {"uchiha", "hyuga", "senju", "uzumaki"}
 MINOR = {"shiranui", "morino", "umino", "haruno", "namiashi", "hagane", "kinoshita", "tsuchigumo", "suzuran", "tobari"}
 CLAN_POWER = ("great", "strong", "minor", "clanless")
+# Combat's niches (combat:core Scaling); a niche edge is 1 + 0.06 x level.
+COMBAT_NICHES = {"genjutsu", "taijutsu", "ninjutsu", "weapons", "medical", "sensing"}
 # Words that would hint at a story secret; this file is read by people who play the game.
 SPOILER_WORDS = re.compile(r"\b(traitor|betray\w*|suspicious|suspect\w*|spy|mole|twist|fate|dies|death|killed|secret\w*|kagari|y[uū]gure|"
                            r"hokage_[5-8]|fifth|sixth|seventh|eighth|future hokage|lineage)\b", re.I)
@@ -142,6 +144,8 @@ def check(roster: dict, dist: dict) -> list[str]:
             errors.append(f"{role}: clan_power should be {power_of(p['clan'])}")
         if p.get("look") and p["look"] not in looks:
             errors.append(f"{role}: unknown look {p['look']} (tools/wardrobe/characters)")
+        if p.get("niche") not in COMBAT_NICHES or not str(p.get("kit", "")).startswith("combat:") or not isinstance(p.get("niche_edge"), (int, float)):
+            errors.append(f"{role}: combat needs niche ({', '.join(sorted(COMBAT_NICHES))}), niche_edge and a combat: kit id")
         if p.get("job") and p["job"] not in dist["jobs"]:
             errors.append(f"{role}: unknown job {p['job']} (rank_distribution.json jobs)")
         lv = p.get("levels", {})
