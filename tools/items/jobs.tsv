@@ -1,0 +1,14 @@
+# Part-time jobs (ROADMAP §7 Ryo). One shift per workplace a day, at most two shifts a day; a shift is a short
+# objective loop at the shop during its window. pay is per shift at job level 0; it rises 10% at 5, 15 and 30
+# shifts (capped at 80, economy.json "jobs"). teaches: what the keeper teaches after that many shifts.
+id	shop	rank	slice	window	hours	pay	task	teaches
+job.ichiraku	ichiraku	academy	beta1	17:00-21:00	3	50	Carry bowls to the counter in order and clear them; the evening rush doubles the orders	3:recipe:shio_ramen;8:recipe:miso_ramen
+job.grocer	grocer	academy	beta1	07:00-12:00	3	45	Stock the shelves to the list and run two deliveries to the residential streets	5:discount:grocer:5%
+job.flower_shop	flower_shop	academy	beta1	08:00-12:00	3	40	Water the buckets, then deliver bouquets; each bouquet's flowers must match what it says	4:recipe:ikebana;6:standing:clan:yamanaka:1
+job.tea_house	tea_house	academy	beta1	13:00-18:00	3	45	Serve tea to the right cushions; refill and bow	5:recipe:matcha
+job.haruno_store	haruno_store	academy	beta1	09:00-15:00	3	40	Sell, stock and bargain at the family counter	5:discount:haruno_store:5%
+job.furniture_shop	furniture_shop	academy	beta1	09:00-15:00	3	50	Carry deliveries across the village; place them where the customer points	4:blueprint:low_desk;10:blueprint:step_tansu
+job.forge	weapon_shop	genin	beta2	08:00-14:00	3	70	Pump the bellows to the colour the smith calls, quench on time, sweep	3:recipe:kunai;3:recipe:shuriken;6:recipe:tanto;10:station:weapon_shop_forge
+job.bath_house	bath_house	genin	beta2	16:00-22:00	3	55	Fold towels, stoke the boiler to the right heat, keep the floor dry	5:service:bath_free
+job.kinoshita_yard	kinoshita_yard	genin	beta2	07:00-12:00	3	65	Carry and stack timber; plane boards to the master's line	5:blueprint:kotatsu;10:blueprint:folding_screen
+job.pharmacy	pharmacy	genin	beta2	08:00-12:00	3	60	Sort herbs from the drying racks, grind for the herbalist	4:recipe:antidote;8:recipe:coating_venom

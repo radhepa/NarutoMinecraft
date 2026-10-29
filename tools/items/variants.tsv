@@ -1,0 +1,23 @@
+# Variants: items that are one registry entry with a component, listed where the variant changes the price or
+# the slice. Technique ids are PROVISIONAL until the combat session's technique registry confirms them
+# (ITEMS.md, "Coordination"). Scroll price bands: E 150, D 300, C 600, B 1,500, A 4,000; your natures' scrolls
+# are 25% off at the scroll shop (other natures' cannot be learned and are not offered).
+item	variant	name	rank	slice	price	notes
+technique_scroll	general.rope_escape	Rope Escape	genin	beta2	150	E rank; slip any bind faster
+technique_scroll	general.camouflage	Camouflage Cloak	genin	beta2	300	D rank; blend into a wall while still
+technique_scroll	general.body_flicker	Body Flicker	genin	beta2	600	C rank; a short blink in smoke
+technique_scroll	genjutsu.false_surroundings	False Surroundings	genin	beta2	300	D rank; a target sees the wrong room for a moment
+technique_scroll	fire.phoenix_flower	Phoenix Flower	genin	beta2	300	D rank; fire nature only
+technique_scroll	water.water_bullet	Water Bullet	genin	beta2	300	D rank; water nature only
+technique_scroll	wind.gale_palm	Gale Palm	genin	beta2	300	D rank; wind nature only
+technique_scroll	earth.mud_wall	Mud Wall	genin	beta2	300	D rank; earth nature only
+technique_scroll	lightning.static_needle	Static Needle	genin	beta2	300	D rank; lightning nature only
+technique_scroll	water.hidden_mist	Hidden Mist	genin	beta3	600	C rank; water nature only; exam-week stock
+technique_scroll	fire.dragon_flame	Dragon Flame	chunin	later	600	C rank; fire nature only
+technique_scroll	medical.mystical_palm	Healing Palm	chunin	later	1500	B rank; medic line
+technique_scroll	general.shadow_clone	Shadow Clone	chunin	later	0	Taught, never sold (ROADMAP §11)
+hokage_figurine	1-4	First to Fourth Hokage	any	beta1	40	One per face on the Rock; more arrive with later Hokage
+info_card	famous	Famous Figures	any	beta1	0	60 cards from packs: Hokage, clans, famous techniques, Academy legends; enemy and person cards come from missions
+pressed_flower	14	Pressed Flowers	any	beta1	6	The flower shop's fourteen, by season
+adventure_novel	1-5	The Lantern Road, volumes 1 to 5	any	beta1	25	A new volume at the bookshop every two weeks
+festival_mask	6	Festival Masks	any	beta2	20	Fox, cat, tengu, okame, the First Hokage, a hero of a play

@@ -1,0 +1,26 @@
+# Kits: what the story hands you (character creation session and main chapters). The creator's outfit is the
+# Academy outfit picked on the creator screen (a folded_outfit of the academy rank). ryo is given as notes.
+kit	when	item	count	note
+kit:start	main.ch1 (the apartment)	apartment_key	1	-
+kit:start	main.ch1 (the apartment)	futon	1	The home's bed, already laid out
+kit:start	main.ch1 (the apartment)	mailbox	1	Already on the door
+kit:start	main.ch1 (the apartment)	storage_chest	1	-
+kit:start	main.ch1 (the apartment)	wardrobe_cabinet	1	The flat's wardrobe: your outfits live here
+kit:start	main.ch1 (the apartment)	cooking_pot	1	Over the flat's little hearth
+kit:start	main.ch1 (the Hokage)	ryo_100	1	The first stipend (30) and a welcome gift (70); the stipend then comes every morning, all game
+kit:start	main.ch1 (Ichiraku)	miso_ramen	1	The instructor's treat
+kit:academy	main.ch1 (enrolment)	enrolment_form	1	-
+kit:academy	main.ch1 (enrolment)	academy_textbook	1	-
+kit:academy	main.ch1 (enrolment)	folded_outfit	1	The Academy outfit chosen on the creator screen
+kit:academy	main.ch2 (first lessons)	practice_kunai	5	-
+kit:academy	main.ch2 (first lessons)	practice_shuriken	10	-
+kit:academy	main.ch2 (first lessons)	training_headband	1	-
+kit:academy	main.ch2 (first lessons)	ninja_sandals	1	-
+kit:genin	main.ch7 (graduation)	forehead_protector	1	-
+kit:genin	main.ch9 (the Mission Desk)	tool_pouch	1	-
+kit:genin	main.ch9 (the Mission Desk)	kunai	3	-
+kit:genin	main.ch9 (the Mission Desk)	shuriken	6	-
+kit:genin	main.ch9 (the Mission Desk)	ration_bar	4	-
+kit:genin	main.ch7 (graduation)	folded_outfit	1	A Genin outfit of your clan or collection
+kit:chunin	main.ch20 (results, if promoted)	flak_vest	1	-
+kit:chunin	main.ch20 (results, if promoted)	folded_outfit	1	A Chunin outfit of your clan or collection

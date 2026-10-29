@@ -1,0 +1,21 @@
+# Quest and key items (Shinobi Progression). Story key items are instances of the generic types below: the quest
+# sets their name and text through keys in the dialogue bank, so this registry never names a plot object.
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+apartment_key	Apartment Key	key	home	any	beta1	1	0	quest:main.ch1	The key to your flat; right-click your door plaque with it to furnish	-	icon	mod=shinobi_life;bind=player
+enrolment_form	Academy Enrolment Form	key	academy	academy	beta1	1	0	quest:main.ch1	Your papers for the Academy	-	icon	bind=quest
+training_bell	Training Bell	key	exam	academy	beta2	1	0	quest:main.ch8	A little bell on a string	-	icon	bind=quest
+quest_item	Quest Item	key	generic	any	beta1	16	0	quest	A thing a quest needs; its name, look and text are set by the quest	-	icon	named_by=quest;variant=look
+quest_letter	Letter	key	generic	any	beta1	16	0	quest;mission:d	A sealed or open letter for a quest	-	icon	named_by=quest
+quest_parcel	Parcel	key	generic	any	beta1	16	0	quest;mission:d	A wrapped package to deliver	-	icon	named_by=quest;variant=size
+quest_evidence	Evidence	key	generic	any	beta1	16	0	quest	Something found while investigating; the journal says what it means	-	icon	named_by=quest;variant=look
+lost_item	Lost Item	key	generic	any	beta1	16	0	quest;mission:d	Someone's lost thing, to return	-	icon	named_by=quest;variant=look
+library_book	Overdue Library Book	key	academy	academy	beta1	16	0	quest:district.b1.academy.overdue	Stamped with the Academy library's mark	-	icon	bind=quest
+janitor_keys	Ring of Keys	key	academy	academy	beta1	1	0	quest:district.b1.academy.keys	Every door of the Academy, maybe	-	icon	bind=quest
+wish_plaque	Wish Plaque	key	shrine	any	beta1	16	5	quest:district.b1.shrine.wishes	A wooden ema: write a wish and hang it at the shrine	-	icon	-
+grocery_order	Grocery Order	key	mission	genin	beta2	16	0	mission:d	A neighbour's list and the bag to go with it	-	icon	bind=quest
+scent_cloth	Scent Cloth	key	mission	genin	beta2	1	0	mission:d;mission:c	Something that smells of who you are looking for: a ninken tracks it	-	icon	bind=quest
+escort_pass	Escort Pass	key	mission	genin	beta2	1	0	mission:c	The Leaf's pass for an escort on the road	-	icon	bind=quest
+travel_permit	Travel Permit	key	travel	genin	beta2	1	0	mission:c;quest:main.ch13	Lets the travel desk send you beyond the border	-	icon	bind=quest
+bounty_token	Bandit Bounty Token	key	mission	genin	beta2	64	0	mission:c;drop:bandit_leader	Proof a camp was cleared: hand it in for the bounty	-	icon	bind=quest
+festival_ticket	Festival Game Ticket	key	event	any	beta2	64	2	event:leaf_festival	One try at a festival game	-	icon	-
+prize_token	Prize Token	currency	event	any	beta2	64	0	event:leaf_festival;event:chunin_exams	Won at games; trade at the prize stall	-	icon	-

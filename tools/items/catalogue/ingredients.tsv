@@ -1,0 +1,50 @@
+# Kitchen ingredients the shops sell. Rows with vanilla= or vf= are not new items: they give a price to an item
+# Minecraft or Village Friends already has, so shops and recipes can use it.
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+rice	Rice	ingredient	staple	any	beta1	64	1	-	Short-grain rice, cooked in a pot	-	sprite	-
+ramen_noodles	Ramen Noodles	ingredient	staple	any	beta1	64	2	-	Fresh wheat noodles	-	icon	-
+buckwheat_noodles	Buckwheat Noodles	ingredient	staple	any	beta1	64	2	-	For soba	-	icon	-
+udon_noodles	Udon Noodles	ingredient	staple	any	beta2	64	2	-	Thick wheat noodles	-	icon	-
+mochi	Mochi	ingredient	staple	any	beta1	64	2	-	Pounded rice cake	-	icon	-
+rice_flour	Rice Flour	ingredient	staple	any	beta1	64	1	-	For dango and sweets	-	icon	-
+miso_paste	Miso Paste	ingredient	seasoning	any	beta1	64	2	-	Fermented soybean paste	-	icon	-
+soy_sauce	Soy Sauce	ingredient	seasoning	any	beta1	64	1	-	A bottle of shoyu	-	icon	-
+curry_roux	Curry Roux	ingredient	seasoning	any	beta2	64	3	-	A block of spiced curry base	-	icon	-
+sesame	Sesame Seeds	ingredient	seasoning	any	beta1	64	1	-	Toasted sesame	-	icon	-
+nori	Nori	ingredient	sea	any	beta1	64	1	-	Pressed seaweed sheets	-	icon	-
+kombu	Kombu	ingredient	sea	any	beta1	64	1	-	Dried kelp for stock	-	icon	-
+bonito_flakes	Bonito Flakes	ingredient	sea	any	beta1	64	1	-	Shaved dried bonito (okaka)	-	icon	-
+umeboshi	Umeboshi	ingredient	pickle	any	beta1	64	1	-	Salted sour plums	-	icon	-
+tofu	Tofu	ingredient	fresh	any	beta1	64	2	-	A soft white block	-	icon	-
+green_onion	Green Onion	ingredient	fresh	any	beta1	64	1	-	Scallions	-	icon	-
+daikon	Daikon	ingredient	fresh	any	beta1	64	1	-	A long white radish	-	icon	-
+bamboo_shoot	Bamboo Shoot	ingredient	fresh	any	beta1	64	1	gather:bamboo_grove	Tender spring shoots	-	icon	-
+shiitake	Shiitake	ingredient	fresh	any	beta1	64	1	gather:forest_floor	Dark forest mushrooms	-	icon	-
+red_beans	Red Beans	ingredient	fresh	any	beta1	64	1	-	Azuki beans for sweet paste	-	icon	-
+red_bean_paste	Red Bean Paste	ingredient	prepared	any	beta1	64	2	-	Sweet anko	-	icon	-
+tea_leaves	Tea Leaves	ingredient	tea	any	beta1	64	1	-	Loose green tea	food:green_tea	icon	-
+matcha_powder	Matcha Powder	ingredient	tea	any	beta1	64	3	-	Stone-ground tea powder	-	icon	-
+roasted_tea	Roasted Tea	ingredient	tea	any	beta2	64	1	-	Hojicha leaves	-	icon	-
+mackerel	Mackerel	ingredient	fish	any	beta1	64	2	gather:river	A fresh saba from the fish stall	-	icon	tags=villagefriends:cooking/fish
+octopus	Octopus	ingredient	fish	any	beta2	64	3	-	For takoyaki	-	icon	-
+prawn	Prawn	ingredient	fish	any	beta2	64	2	-	For tempura	-	icon	-
+fish_cake	Fish Cake	ingredient	fish	any	beta1	64	1	-	The spiral narutomaki and other fish cakes	-	icon	-
+pork_belly	Pork Belly	ingredient	meat	any	beta1	64	3	-	For chashu	-	icon	-
+egg	Egg	ingredient	fresh	any	beta1	16	1	vanilla	-	-	vanilla	vanilla=minecraft:egg
+beef	Beef	ingredient	meat	any	beta1	64	3	vanilla	-	-	vanilla	vanilla=minecraft:beef
+chicken	Chicken	ingredient	meat	any	beta1	64	2	vanilla	-	-	vanilla	vanilla=minecraft:chicken
+salmon	Salmon	ingredient	fish	any	beta1	64	2	vanilla;gather:river	-	-	vanilla	vanilla=minecraft:salmon
+potato	Potato	ingredient	fresh	any	beta1	64	1	vanilla	-	-	vanilla	vanilla=minecraft:potato
+carrot	Carrot	ingredient	fresh	any	beta1	64	1	vanilla	-	-	vanilla	vanilla=minecraft:carrot
+pumpkin	Pumpkin	ingredient	fresh	any	beta2	64	2	vanilla	-	-	vanilla	vanilla=minecraft:pumpkin
+sugar	Sugar	ingredient	seasoning	any	beta1	64	1	vanilla	-	-	vanilla	vanilla=minecraft:sugar
+milk	Milk	ingredient	fresh	any	beta1	1	3	vanilla	-	-	vanilla	vanilla=minecraft:milk_bucket
+apple	Apple	ingredient	fresh	any	beta1	64	1	vanilla	-	-	vanilla	vanilla=minecraft:apple
+honey	Honey	ingredient	fresh	any	beta1	16	4	vanilla	-	food:honey	vanilla	vanilla=minecraft:honey_bottle
+bowl	Bowl	ingredient	vessel	any	beta1	64	1	vanilla	-	-	vanilla	vanilla=minecraft:bowl
+glass_bottle	Glass Bottle	ingredient	vessel	any	beta1	64	1	vanilla	-	-	vanilla	vanilla=minecraft:glass_bottle
+onion	Onion	ingredient	fresh	any	beta1	64	1	vf	-	-	vf	vf=villagefriends:onion
+cabbage	Cabbage	ingredient	fresh	any	beta1	64	1	vf	-	-	vf	vf=villagefriends:cabbage
+garlic	Garlic	ingredient	fresh	any	beta1	64	1	vf	-	-	vf	vf=villagefriends:garlic
+kitchen_herbs	Kitchen Herbs	ingredient	fresh	any	beta1	64	1	vf	-	-	vf	vf=villagefriends:herbs
+flour	Flour	ingredient	staple	any	beta1	64	1	vf	-	-	vf	vf=villagefriends:flour

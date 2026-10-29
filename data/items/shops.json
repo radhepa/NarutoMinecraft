@@ -1,0 +1,3904 @@
+{
+ "format": 1,
+ "_doc": "Compiled from tools/items/shops.tsv, stock.tsv, jobs.tsv and services.tsv. Do not edit.",
+ "shops": [
+  {
+   "id": "ichiraku",
+   "name": "Ichiraku Ramen",
+   "district": "main_street",
+   "keeper": "role:shop.ichiraku.cook",
+   "staff": [
+    "role:shop.ichiraku.helper"
+   ],
+   "hours": {
+    "opens": "11:00",
+    "closes": "23:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:main_street",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 1,
+   "orders": [
+    "catering"
+   ],
+   "interior": [
+    "ramen_counter",
+    "ramen_stool",
+    "noodle_kitchen",
+    "menu_board",
+    "shop_noren@ramen_noren"
+   ],
+   "stock": [
+    {
+     "item": "shio_ramen",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "shoyu_ramen",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "miso_ramen",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "miso_chashu_ramen",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "tonkotsu_ramen",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "ichiraku_special",
+     "qty": 10,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "gyoza",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "green_tea",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    }
+   ],
+   "jobs": [
+    "job.ichiraku"
+   ]
+  },
+  {
+   "id": "grocer",
+   "name": "Market Grocer",
+   "district": "market",
+   "keeper": "role:shop.grocer.keeper",
+   "staff": [
+    "role:shop.grocer.porter"
+   ],
+   "hours": {
+    "opens": "07:00",
+    "closes": "19:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:market",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [],
+   "interior": [
+    "shop_counter",
+    "produce_crate_display",
+    "goods_shelf",
+    "rice_sack_pile",
+    "menu_board",
+    "shop_noren@grocer_noren"
+   ],
+   "stock": [
+    {
+     "item": "rice",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "onigiri",
+     "qty": 24,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "onigiri_umeboshi",
+     "qty": 12,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "onigiri_okaka",
+     "qty": 12,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "onigiri_salmon",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "onigiri_kombu",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "bento",
+     "qty": 6,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "instant_ramen",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "ramen_noodles",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "buckwheat_noodles",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "udon_noodles",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "mochi",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "rice_flour",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "miso_paste",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "soy_sauce",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "curry_roux",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "sesame",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "nori",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "kombu",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "bonito_flakes",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "umeboshi",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "tofu",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "green_onion",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "daikon",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "red_beans",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "red_bean_paste",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "tea_leaves",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "egg",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "beef",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "chicken",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "pork_belly",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "potato",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "carrot",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "onion",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "cabbage",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "garlic",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "kitchen_herbs",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "flour",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "sugar",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "milk",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "apple",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "honey",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "bowl",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "glass_bottle",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "tsukemono",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "shiitake",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "rot"
+    },
+    {
+     "item": "bamboo_shoot",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "rot"
+    },
+    {
+     "item": "pumpkin",
+     "slice": "beta2",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "rot"
+    },
+    {
+     "item": "ginger_root",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "rot"
+    }
+   ],
+   "jobs": [
+    "job.grocer"
+   ]
+  },
+  {
+   "id": "fishmonger",
+   "name": "Fish Stall",
+   "district": "market",
+   "keeper": "role:shop.fishmonger.keeper",
+   "staff": [],
+   "hours": {
+    "opens": "06:00",
+    "closes": "13:00",
+    "closed": "Moonday"
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:market",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 1,
+   "orders": [],
+   "interior": [
+    "market_stall",
+    "fish_ice_display",
+    "shop_noren@fish_noren"
+   ],
+   "stock": [
+    {
+     "item": "mackerel",
+     "qty": 32,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "salmon",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "fish_cake",
+     "qty": 32,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "grilled_fish",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "octopus",
+     "slice": "beta2",
+     "qty": 12,
+     "restock": "daily",
+     "pool": "rot"
+    },
+    {
+     "item": "prawn",
+     "slice": "beta2",
+     "qty": 12,
+     "restock": "daily",
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "dango_stand",
+   "name": "Dango Stand",
+   "district": "main_street",
+   "keeper": "role:shop.dango.keeper",
+   "staff": [],
+   "hours": {
+    "opens": "10:00",
+    "closes": "20:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:main_street",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 1,
+   "orders": [],
+   "interior": [
+    "dango_grill",
+    "shop_counter",
+    "bench_red_cloth",
+    "parasol",
+    "menu_board"
+   ],
+   "stock": [
+    {
+     "item": "dango",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "mitarashi_dango",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "anko_dango",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "dango_platter",
+     "qty": 4,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "green_tea",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "sakura_mochi",
+     "qty": 12,
+     "restock": "daily",
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "tea_house",
+   "name": "Willow Tea House",
+   "district": "market",
+   "keeper": "role:shop.tea_house.owner",
+   "staff": [
+    "role:shop.tea_house.server"
+   ],
+   "hours": {
+    "opens": "09:00",
+    "closes": "21:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:market",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [],
+   "interior": [
+    "tea_counter",
+    "low_table",
+    "zabuton",
+    "tea_set",
+    "menu_board",
+    "shop_noren@tea_noren"
+   ],
+   "stock": [
+    {
+     "item": "green_tea",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "matcha",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "hojicha",
+     "slice": "beta2",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "wagashi",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "anmitsu",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "zenzai",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "tea_tin",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "matcha_powder",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "kakigori",
+     "slice": "beta2",
+     "qty": null,
+     "restock": "daily",
+     "pool": "rot"
+    },
+    {
+     "item": "sakura_mochi",
+     "qty": null,
+     "restock": "daily",
+     "pool": "rot"
+    }
+   ],
+   "jobs": [
+    "job.tea_house"
+   ]
+  },
+  {
+   "id": "tea_house_rival",
+   "name": "Lantern Tea House",
+   "district": "market",
+   "keeper": "role:shop.tea_house_rival.owner",
+   "staff": [
+    "role:shop.tea_house_rival.server"
+   ],
+   "hours": {
+    "opens": "09:00",
+    "closes": "21:00",
+    "closed": null
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "district:market",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [],
+   "interior": [
+    "tea_counter",
+    "low_table",
+    "zabuton",
+    "tea_set",
+    "menu_board",
+    "shop_noren@tea_noren"
+   ],
+   "stock": [
+    {
+     "item": "green_tea",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "hojicha",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "roasted_tea",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "wagashi",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "zenzai",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "taiyaki",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "tea_tin",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "kakigori",
+     "qty": null,
+     "restock": "daily",
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "barbecue_house",
+   "name": "Barbecue House",
+   "district": "market",
+   "keeper": "role:shop.barbecue.owner",
+   "staff": [
+    "role:shop.barbecue.server"
+   ],
+   "hours": {
+    "opens": "11:00",
+    "closes": "22:00",
+    "closed": null
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "clan:akimichi",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 1,
+   "orders": [
+    "reservation"
+   ],
+   "interior": [
+    "barbecue_table",
+    "bench_seat",
+    "shop_counter",
+    "menu_board",
+    "shop_noren@barbecue_noren"
+   ],
+   "stock": [
+    {
+     "item": "yakiniku_set",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "kalbi_plate",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "grilled_vegetables",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "barbecue_feast",
+     "qty": 2,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "green_tea",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "okonomiyaki",
+     "qty": null,
+     "restock": "daily",
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "weapon_shop",
+   "name": "Weapon Shop",
+   "district": "market",
+   "keeper": "role:shop.weapon.smith",
+   "staff": [
+    "role:shop.weapon.apprentice"
+   ],
+   "hours": {
+    "opens": "08:00",
+    "closes": "19:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:market",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [
+    "commission",
+    "repair"
+   ],
+   "interior": [
+    "shop_counter",
+    "weapon_display_wall",
+    "weapon_rack",
+    "glass_case",
+    "forge",
+    "anvil",
+    "quench_trough",
+    "whetstone_wheel",
+    "shop_noren@weapon_noren"
+   ],
+   "stock": [
+    {
+     "item": "practice_kunai",
+     "rank": "academy",
+     "qty": null,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "practice_shuriken",
+     "rank": "academy",
+     "qty": null,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "whetstone",
+     "qty": 8,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "kunai",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 30,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "shuriken",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 96,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "senbon",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 64,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "tanto",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "knuckle_guards",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "bo_staff",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "weighted_chain",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "bokken",
+     "slice": "beta2",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "arm_guards",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "shin_guards",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "mesh_shirt",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "weapon_rack",
+     "rank": "genin",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "ninjato",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "kusarigama",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "iron_mace",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "war_fan",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "fuma_shuriken",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "battle_fan",
+     "rank": "jonin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "chakra_blades",
+     "rank": "jonin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "manji_shuriken",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 32,
+     "restock": "3d",
+     "pool": "rot"
+    },
+    {
+     "item": "katana",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    }
+   ],
+   "jobs": [
+    "job.forge"
+   ]
+  },
+  {
+   "id": "tool_shop",
+   "name": "Ninja Tool Shop",
+   "district": "market",
+   "keeper": "role:shop.tools.keeper",
+   "staff": [],
+   "hours": {
+    "opens": "08:00",
+    "closes": "20:00",
+    "closed": null
+   },
+   "slice": "beta2",
+   "rank": "genin",
+   "standing": "district:market",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [],
+   "interior": [
+    "shop_counter",
+    "goods_shelf",
+    "glass_case",
+    "pouch_hooks",
+    "shop_noren@tools_noren"
+   ],
+   "stock": [
+    {
+     "item": "tool_pouch",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "leg_holster",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "tool_pouch_large",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "medic_pouch",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "ninja_wire",
+     "qty": 32,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "makibishi",
+     "qty": 16,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "smoke_bomb",
+     "qty": 24,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "flash_bomb",
+     "qty": 8,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "paper_bomb",
+     "qty": 12,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "sealing_tag",
+     "qty": 16,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "soldier_pill",
+     "qty": 5,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "food_pill",
+     "qty": 10,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "ration_bar",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "camp_kit",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "bedroll",
+     "slice": "beta3",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "travel_cloak",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "kasa_hat",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "tabi_boots",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "fingerless_gloves",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "training_weights",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "insect_repellent",
+     "slice": "beta3",
+     "qty": 8,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "scent_powder",
+     "slice": "beta3",
+     "qty": 4,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "paper_bomb_chain",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 4,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "barrier_tag",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 4,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "scroll_case",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "scroll_shop",
+   "name": "Scroll Shop",
+   "district": "academy_streets",
+   "keeper": "role:shop.scrolls.keeper",
+   "staff": [],
+   "hours": {
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": "Moonday"
+   },
+   "slice": "beta2",
+   "rank": "genin",
+   "standing": "district:academy_streets",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [
+    "order_scroll"
+   ],
+   "interior": [
+    "shop_counter",
+    "scroll_rack",
+    "scroll_display_case",
+    "calligraphy_desk",
+    "shop_noren@scroll_noren"
+   ],
+   "stock": [
+    {
+     "item": "blank_scroll",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "washi_paper",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "ink",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "brush",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "chakra_paper",
+     "qty": 16,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "sealing_scroll",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "konoha_map",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "general.rope_escape",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "general.camouflage",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "genjutsu.false_surroundings",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "general.body_flicker",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "fire.phoenix_flower",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "water.water_bullet",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "wind.gale_palm",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "earth.mud_wall",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "lightning.static_needle",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "storage_scroll_large",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "fire.dragon_flame",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "flower_shop",
+   "name": "Yamanaka Flowers",
+   "district": "main_street",
+   "keeper": "role:shop.flowers.keeper",
+   "staff": [
+    "role:shop.flowers.runner"
+   ],
+   "hours": {
+    "opens": "08:00",
+    "closes": "19:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "clan:yamanaka",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [
+    "bouquet"
+   ],
+   "interior": [
+    "shop_counter",
+    "flower_bucket_stand",
+    "flower_pot_tiers",
+    "arranging_table",
+    "shop_noren@flower_noren"
+   ],
+   "stock": [
+    {
+     "item": "bouquet",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "ikebana",
+     "qty": 4,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "potted_fern",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "potted_bonsai",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pressed_flower",
+     "qty": 6,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "bamboo_vase",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "healing_herb",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "rot"
+    }
+   ],
+   "jobs": [
+    "job.flower_shop"
+   ]
+  },
+  {
+   "id": "furniture_shop",
+   "name": "Furniture Shop",
+   "district": "carpenters_lane",
+   "keeper": "role:shop.furniture.keeper",
+   "staff": [
+    "role:shop.furniture.porter"
+   ],
+   "hours": {
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": "Moonday"
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:carpenters_lane",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 3,
+   "orders": [
+    "custom_colour"
+   ],
+   "interior": [
+    "shop_counter",
+    "showroom_plinth",
+    "catalogue_lectern",
+    "shop_noren@furniture_noren"
+   ],
+   "stock": [
+    {
+     "item": "futon",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "futon_deluxe",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "low_table",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "low_desk",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "zabuton",
+     "qty": 8,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "zaisu",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "tatami",
+     "qty": 16,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "rug",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "shoji_screen",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "noren",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "bamboo_blind",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "scroll_shelf",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "bookcase",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "display_shelf",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "tansu_chest",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "storage_chest",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "wardrobe_cabinet",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "dresser_mirror",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "andon_lamp",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "paper_lantern",
+     "qty": 8,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "wall_clock",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "calendar_scroll",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "wind_chime",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "kamidana",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "incense_burner",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "training_dummy",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "target_board",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pet_bed",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pet_bowl",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "shogi_board",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "workbench",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "cooking_pot",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "clay_oven",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "prep_table",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "kotatsu",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "folding_screen",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "stone_lantern",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "step_tansu",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "memorial_altar",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "tea_set",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "go_board",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "apothecary_table",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "sealing_desk",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "tailor_table",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "display_case",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "wall_mount",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "barrel",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "curio_cabinet",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    }
+   ],
+   "jobs": [
+    "job.furniture_shop"
+   ]
+  },
+  {
+   "id": "kinoshita_yard",
+   "name": "Kinoshita Yard",
+   "district": "carpenters_lane",
+   "keeper": "role:clan.kinoshita.master",
+   "staff": [
+    "role:clan.kinoshita.apprentice"
+   ],
+   "hours": {
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": "Moonday"
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "clan:kinoshita",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [
+    "custom_furniture"
+   ],
+   "interior": [
+    "workbench",
+    "lumber_rack",
+    "sawhorse",
+    "shop_counter"
+   ],
+   "stock": [
+    {
+     "item": "hinoki_planks",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "lacquer",
+     "qty": 16,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "tatami_rush",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "bamboo",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "blueprint",
+     "qty": 2,
+     "restock": "weekly",
+     "price": 40,
+     "pool": "rot"
+    },
+    {
+     "item": "workbench",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "small_forge",
+     "rank": "genin",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    }
+   ],
+   "jobs": [
+    "job.kinoshita_yard"
+   ]
+  },
+  {
+   "id": "tailor",
+   "name": "Tailor",
+   "district": "market",
+   "keeper": "role:shop.tailor.keeper",
+   "staff": [
+    "role:shop.tailor.seamstress"
+   ],
+   "hours": {
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": "Moonday"
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:market",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 4,
+   "orders": [
+    "custom_outfit",
+    "alteration"
+   ],
+   "interior": [
+    "shop_counter",
+    "bolt_shelf",
+    "mannequin",
+    "fitting_screen",
+    "tailor_table",
+    "shop_noren@tailor_noren"
+   ],
+   "stock": [
+    {
+     "item": "cotton_cloth",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "silk",
+     "slice": "beta2",
+     "qty": 16,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "thread",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "dye",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "ribbon",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "handkerchief",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "training_headband",
+     "rank": "academy",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "ninja_sandals",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "goggles",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "folded_outfit",
+     "variant": "collections",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "forehead_protector",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "flak_vest",
+     "rank": "chunin",
+     "slice": "beta3",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "pawn_shop",
+   "name": "Pawn Shop",
+   "district": "market",
+   "keeper": "role:shop.pawn.keeper",
+   "staff": [],
+   "hours": {
+    "opens": "10:00",
+    "closes": "20:00",
+    "closed": null
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "district:market",
+   "haggle": "pawn",
+   "markup": 1.2,
+   "rotating": 3,
+   "orders": [],
+   "interior": [
+    "pawn_counter_grille",
+    "curio_shelf",
+    "glass_case",
+    "shop_noren@pawn_noren"
+   ],
+   "stock": [
+    {
+     "item": "bandit_trinket",
+     "qty": null,
+     "restock": "weekly",
+     "price": 15,
+     "pool": "rot"
+    },
+    {
+     "item": "adventure_novel",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "hand_mirror",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "kunai",
+     "rank": "genin",
+     "qty": 8,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "tanto",
+     "rank": "genin",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "hairpin",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "hokage_figurine",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "go_board",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "curio_old_coin",
+     "qty": 1,
+     "restock": "weekly",
+     "price": 12,
+     "pool": "rot"
+    },
+    {
+     "item": "curio_chipped_lucky_cat",
+     "qty": 1,
+     "restock": "weekly",
+     "price": 12,
+     "pool": "rot"
+    },
+    {
+     "item": "curio_fishing_float",
+     "qty": 1,
+     "restock": "weekly",
+     "price": 15,
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "bath_house",
+   "name": "Bath House",
+   "district": "riverside",
+   "keeper": "role:shop.bath.keeper",
+   "staff": [
+    "role:shop.bath.attendant"
+   ],
+   "hours": {
+    "opens": "15:00",
+    "closes": "24:00",
+    "closed": "Moonday"
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "district:riverside",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 0,
+   "orders": [],
+   "interior": [
+    "bath_counter",
+    "locker_shelf",
+    "wash_stool",
+    "shop_noren@bath_noren"
+   ],
+   "stock": [
+    {
+     "item": "onsen_egg",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "refreshing_towel",
+     "qty": null,
+     "restock": "daily",
+     "price": 3,
+     "pool": "core"
+    },
+    {
+     "item": "green_tea",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    }
+   ],
+   "jobs": [
+    "job.bath_house"
+   ]
+  },
+  {
+   "id": "pharmacy",
+   "name": "Suzuran Pharmacy",
+   "district": "hospital",
+   "keeper": "role:clan.suzuran.herbalist",
+   "staff": [
+    "role:clan.suzuran.apprentice"
+   ],
+   "hours": {
+    "opens": "08:00",
+    "closes": "20:00",
+    "closed": null
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "clan:suzuran",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [],
+   "interior": [
+    "shop_counter",
+    "medicine_drawer_wall",
+    "herb_drying_rack",
+    "apothecary_table",
+    "shop_noren@medicine_noren"
+   ],
+   "stock": [
+    {
+     "item": "herbal_poultice",
+     "qty": 12,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "burn_salve",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "antidote",
+     "qty": 6,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "eye_drops",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "bandage_wrap",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "smelling_salts",
+     "qty": 4,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "blood_pill",
+     "slice": "beta3",
+     "qty": 4,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "healing_herb",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "bellflower_root",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "aloe",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "beeswax",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "field_guide_herbs",
+     "qty": 1,
+     "restock": "once",
+     "pool": "core"
+    },
+    {
+     "item": "insect_repellent",
+     "slice": "beta3",
+     "qty": 8,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "lily_of_the_valley",
+     "rank": "genin",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "rot"
+    },
+    {
+     "item": "nightshade",
+     "rank": "genin",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "rot"
+    },
+    {
+     "item": "strong_antidote",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 4,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "revival_tonic",
+     "rank": "chunin",
+     "slice": "later",
+     "qty": 2,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "coating_venom",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 4,
+     "restock": "3d",
+     "pool": "rot"
+    },
+    {
+     "item": "coating_numbing",
+     "rank": "genin",
+     "slice": "beta3",
+     "qty": 4,
+     "restock": "3d",
+     "pool": "rot"
+    },
+    {
+     "item": "coating_sleep",
+     "rank": "genin",
+     "slice": "beta3",
+     "qty": 4,
+     "restock": "3d",
+     "pool": "rot"
+    }
+   ],
+   "jobs": [
+    "job.pharmacy"
+   ]
+  },
+  {
+   "id": "hospital_dispensary",
+   "name": "Hospital Dispensary",
+   "district": "hospital",
+   "keeper": "role:medic.dispensary",
+   "staff": [],
+   "hours": {
+    "opens": "00:00",
+    "closes": "24:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:hospital",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 0,
+   "orders": [],
+   "interior": [
+    "hospital_counter",
+    "medicine_drawer_wall"
+   ],
+   "stock": [
+    {
+     "item": "bandage_wrap",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "herbal_poultice",
+     "slice": "beta2",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "burn_salve",
+     "slice": "beta2",
+     "qty": 4,
+     "restock": "daily",
+     "pool": "core"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "bookshop",
+   "name": "Bookshop",
+   "district": "academy_streets",
+   "keeper": "role:shop.books.keeper",
+   "staff": [],
+   "hours": {
+    "opens": "09:00",
+    "closes": "19:00",
+    "closed": null
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "district:academy_streets",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [],
+   "interior": [
+    "shop_counter",
+    "bookshelf_tall",
+    "book_display_table",
+    "shop_noren@books_noren"
+   ],
+   "stock": [
+    {
+     "item": "adventure_novel",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "konoha_map",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "field_guide_herbs",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "sketchbook",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "info_card_pack",
+     "qty": 10,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "calendar_scroll",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "poster",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "haruno_store",
+   "name": "Haruno General Store",
+   "district": "market",
+   "keeper": "role:clan.haruno.shopkeeper",
+   "staff": [
+    "role:clan.haruno.child"
+   ],
+   "hours": {
+    "opens": "08:00",
+    "closes": "19:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "clan:haruno",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 3,
+   "orders": [],
+   "interior": [
+    "shop_counter",
+    "general_store_shelf",
+    "goods_shelf",
+    "crate_display",
+    "shop_noren@general_noren"
+   ],
+   "stock": [
+    {
+     "item": "washi_paper",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "ink",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "brush",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "thread",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "lamp_oil",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "paper_lantern_hand",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "hard_candy",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "senbei",
+     "slice": "beta2",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "spinning_top",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "kendama",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "kite",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "handkerchief",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "hand_mirror",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "hairpin",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "incense_sticks",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "poster",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "wind_chime",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "sparkler",
+     "slice": "beta2",
+     "qty": 16,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "adventure_novel",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "info_card_pack",
+     "qty": 6,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "konoha_map",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    }
+   ],
+   "jobs": [
+    "job.haruno_store"
+   ]
+  },
+  {
+   "id": "academy_supply",
+   "name": "Academy Supply Counter",
+   "district": "academy",
+   "keeper": "role:academy.supply_clerk",
+   "staff": [],
+   "hours": {
+    "opens": "08:00",
+    "closes": "16:00",
+    "closed": "Market Day"
+   },
+   "slice": "beta1",
+   "rank": "academy",
+   "standing": "district:academy_streets",
+   "haggle": "no",
+   "markup": 0.8,
+   "rotating": 0,
+   "orders": [],
+   "interior": [
+    "shop_counter",
+    "goods_shelf"
+   ],
+   "stock": [
+    {
+     "item": "smoke_powder",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "washi_paper",
+     "qty": 32,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "steel_wire",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "thread",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "cotton_cloth",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "ink",
+     "qty": 8,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "practice_kunai",
+     "qty": 10,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "practice_shuriken",
+     "qty": 20,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "chakra_candy",
+     "qty": 10,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "knuckle_wraps",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "academy_textbook",
+     "rank": "academy",
+     "qty": null,
+     "restock": "weekly",
+     "price": 15,
+     "pool": "core"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "inuzuka_clinic",
+   "name": "Inuzuka Clinic",
+   "district": "gate",
+   "keeper": "role:clan.inuzuka.vet",
+   "staff": [
+    "role:clan.inuzuka.kennel_hand"
+   ],
+   "hours": {
+    "opens": "07:00",
+    "closes": "19:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "clan:inuzuka",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 1,
+   "orders": [
+    "adoption"
+   ],
+   "interior": [
+    "shop_counter",
+    "kennel",
+    "vet_table",
+    "pet_supply_shelf"
+   ],
+   "stock": [
+    {
+     "item": "pet_treat",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "ninken_kibble",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "pet_collar",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pet_bandana",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pet_brush",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pet_whistle",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pet_toy",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pet_bed",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pet_bowl",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "ninken_vest",
+     "rank": "genin",
+     "slice": "later",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "cat_shelter",
+   "name": "Cat Shelter",
+   "district": "residential",
+   "keeper": "role:shop.shelter.keeper",
+   "staff": [],
+   "hours": {
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:residential",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 0,
+   "orders": [
+    "adoption"
+   ],
+   "interior": [
+    "shop_counter",
+    "cat_tower",
+    "pet_bed",
+    "pet_supply_shelf"
+   ],
+   "stock": [
+    {
+     "item": "cat_food",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "pet_collar",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pet_toy",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "cat_tower",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "hagane_metalworks",
+   "name": "Hagane Metalworks",
+   "district": "market",
+   "keeper": "role:clan.hagane.metalworker",
+   "staff": [],
+   "hours": {
+    "opens": "08:00",
+    "closes": "18:00",
+    "closed": null
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "clan:hagane",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 1,
+   "orders": [],
+   "interior": [
+    "shop_counter",
+    "metal_stock_rack",
+    "anvil",
+    "goods_shelf"
+   ],
+   "stock": [
+    {
+     "item": "steel_ingot",
+     "qty": 32,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "refined_steel",
+     "rank": "genin",
+     "qty": 8,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "iron_sand",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "charcoal",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "steel_wire",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "chain_links",
+     "qty": 16,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "leather_strip",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "whetstone",
+     "qty": 8,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "blasting_powder",
+     "rank": "genin",
+     "qty": 16,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "flash_powder",
+     "rank": "genin",
+     "qty": 16,
+     "restock": "3d",
+     "pool": "core"
+    },
+    {
+     "item": "smoke_powder",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "chakra_metal",
+     "rank": "jonin",
+     "slice": "later",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "shrine_office",
+   "name": "Shrine Office",
+   "district": "shrine",
+   "keeper": "role:shrine.priest",
+   "staff": [
+    "role:shrine.attendant"
+   ],
+   "hours": {
+    "opens": "06:00",
+    "closes": "18:00",
+    "closed": null
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:shrine",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 1,
+   "orders": [],
+   "interior": [
+    "charm_stall",
+    "ema_rack",
+    "omikuji_rack",
+    "offering_box"
+   ],
+   "stock": [
+    {
+     "item": "luck_charm",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "study_charm",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "safety_charm",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "omikuji",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "wish_plaque",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "incense_sticks",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "kamidana",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "painters_studio",
+   "name": "Painters' Studio",
+   "district": "artists_lane",
+   "keeper": "role:clan.kurama.painter",
+   "staff": [],
+   "hours": {
+    "opens": "10:00",
+    "closes": "18:00",
+    "closed": "Moonday"
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "clan:kurama",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 2,
+   "orders": [
+    "portrait"
+   ],
+   "interior": [
+    "easel_canvas",
+    "paint_display",
+    "shop_counter",
+    "hanging_scroll"
+   ],
+   "stock": [
+    {
+     "item": "paint_set",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "sketchbook",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "brush",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "ink_stone",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "hanging_scroll",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "folding_screen",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "poster",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "senbei_shop",
+   "name": "Rice Cracker Shop",
+   "district": "uchiha_quarter",
+   "keeper": "role:clan.uchiha.cracker_baker",
+   "staff": [],
+   "hours": {
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": null
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "clan:uchiha",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 1,
+   "orders": [],
+   "interior": [
+    "cracker_grill",
+    "jar_shelf",
+    "shop_counter",
+    "shop_noren@sweets_noren"
+   ],
+   "stock": [
+    {
+     "item": "senbei",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "green_tea",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "market_day_stalls",
+   "name": "Market Day Stalls",
+   "district": "market",
+   "keeper": "role:merchant",
+   "staff": [
+    "role:market.stallholder"
+   ],
+   "hours": {
+    "opens": "07:00",
+    "closes": "15:00",
+    "closed": "not_market_day"
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:market",
+   "haggle": "yes",
+   "markup": 1.0,
+   "rotating": 6,
+   "orders": [],
+   "interior": [
+    "market_stall",
+    "crate_display",
+    "parasol"
+   ],
+   "stock": [
+    {
+     "item": "silk",
+     "slice": "beta2",
+     "qty": 16,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "refined_steel",
+     "rank": "genin",
+     "slice": "beta2",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "ginseng_root",
+     "slice": "beta3",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "lacquer",
+     "qty": 8,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "potted_bonsai",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "tea_tin",
+     "qty": 4,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "hairpin",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "adventure_novel",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "stone_lantern",
+     "slice": "beta2",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "yakitori",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "pumpkin",
+     "qty": 16,
+     "restock": "weekly",
+     "pool": "rot"
+    },
+    {
+     "item": "mackerel",
+     "qty": 16,
+     "restock": "weekly",
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "festival_stalls",
+   "name": "Leaf Festival Stalls",
+   "district": "main_street",
+   "keeper": "role:festival.stallholder",
+   "staff": [],
+   "hours": {
+    "opens": "17:00",
+    "closes": "24:00",
+    "closed": "event:leaf_festival"
+   },
+   "slice": "beta2",
+   "rank": "any",
+   "standing": "village",
+   "haggle": "yes",
+   "markup": 1.3,
+   "rotating": 0,
+   "orders": [],
+   "interior": [
+    "festival_stall",
+    "goldfish_pool",
+    "target_game_booth",
+    "prize_shelf",
+    "paper_lantern"
+   ],
+   "stock": [
+    {
+     "item": "yakitori",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "takoyaki",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "taiyaki",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "candied_apple",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "cotton_candy",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "kakigori",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "okonomiyaki",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "festival_mask",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "festival_ticket",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "firework",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "sparkler",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "paper_lantern",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "folded_outfit",
+     "variant": "festival",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "goldfish_bowl",
+     "qty": 4,
+     "restock": "daily",
+     "pool": "core"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "exam_stalls",
+   "name": "Exam-Week Stalls",
+   "district": "stadium_streets",
+   "keeper": "role:exam.stallholder",
+   "staff": [],
+   "hours": {
+    "opens": "08:00",
+    "closes": "22:00",
+    "closed": "event:chunin_exams"
+   },
+   "slice": "beta3",
+   "rank": "any",
+   "standing": "village",
+   "haggle": "yes",
+   "markup": 1.2,
+   "rotating": 4,
+   "orders": [],
+   "interior": [
+    "festival_stall",
+    "market_stall",
+    "prize_shelf"
+   ],
+   "stock": [
+    {
+     "item": "yakitori",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "takoyaki",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "katsudon",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "green_tea",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "soldier_pill",
+     "rank": "genin",
+     "qty": 3,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "blood_pill",
+     "rank": "genin",
+     "qty": 3,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "festival_mask",
+     "qty": null,
+     "restock": "daily",
+     "pool": "core"
+    },
+    {
+     "item": "technique_scroll",
+     "variant": "water.hidden_mist",
+     "rank": "genin",
+     "qty": 1,
+     "restock": "once",
+     "pool": "rot"
+    },
+    {
+     "item": "hokage_figurine",
+     "qty": null,
+     "restock": "daily",
+     "pool": "rot"
+    },
+    {
+     "item": "info_card_pack",
+     "qty": null,
+     "restock": "daily",
+     "pool": "rot"
+    },
+    {
+     "item": "kunai",
+     "rank": "genin",
+     "qty": 16,
+     "restock": "daily",
+     "pool": "rot"
+    },
+    {
+     "item": "paper_bomb",
+     "rank": "genin",
+     "qty": 6,
+     "restock": "daily",
+     "pool": "rot"
+    }
+   ],
+   "jobs": []
+  },
+  {
+   "id": "barber",
+   "name": "Barber",
+   "district": "market",
+   "keeper": "role:shop.barber.keeper",
+   "staff": [],
+   "hours": {
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": "Moonday"
+   },
+   "slice": "beta1",
+   "rank": "any",
+   "standing": "district:market",
+   "haggle": "no",
+   "markup": 1.0,
+   "rotating": 0,
+   "orders": [
+    "restyle"
+   ],
+   "interior": [
+    "barber_chair",
+    "dresser_mirror",
+    "shop_counter",
+    "shop_noren@barber_noren"
+   ],
+   "stock": [
+    {
+     "item": "dresser_mirror",
+     "qty": 1,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "ribbon",
+     "qty": null,
+     "restock": "weekly",
+     "pool": "core"
+    },
+    {
+     "item": "hairpin",
+     "qty": 2,
+     "restock": "weekly",
+     "pool": "core"
+    }
+   ],
+   "jobs": []
+  }
+ ],
+ "jobs": [
+  {
+   "id": "job.ichiraku",
+   "shop": "ichiraku",
+   "rank": "academy",
+   "slice": "beta1",
+   "window": "17:00-21:00",
+   "hours": 3,
+   "pay": 50,
+   "task": "Carry bowls to the counter in order and clear them; the evening rush doubles the orders",
+   "teaches": [
+    {
+     "after": 3,
+     "what": "recipe:shio_ramen"
+    },
+    {
+     "after": 8,
+     "what": "recipe:miso_ramen"
+    }
+   ]
+  },
+  {
+   "id": "job.grocer",
+   "shop": "grocer",
+   "rank": "academy",
+   "slice": "beta1",
+   "window": "07:00-12:00",
+   "hours": 3,
+   "pay": 45,
+   "task": "Stock the shelves to the list and run two deliveries to the residential streets",
+   "teaches": [
+    {
+     "after": 5,
+     "what": "discount:grocer:5%"
+    }
+   ]
+  },
+  {
+   "id": "job.flower_shop",
+   "shop": "flower_shop",
+   "rank": "academy",
+   "slice": "beta1",
+   "window": "08:00-12:00",
+   "hours": 3,
+   "pay": 40,
+   "task": "Water the buckets, then deliver bouquets; each bouquet's flowers must match what it says",
+   "teaches": [
+    {
+     "after": 4,
+     "what": "recipe:ikebana"
+    },
+    {
+     "after": 6,
+     "what": "standing:clan:yamanaka:1"
+    }
+   ]
+  },
+  {
+   "id": "job.tea_house",
+   "shop": "tea_house",
+   "rank": "academy",
+   "slice": "beta1",
+   "window": "13:00-18:00",
+   "hours": 3,
+   "pay": 45,
+   "task": "Serve tea to the right cushions; refill and bow",
+   "teaches": [
+    {
+     "after": 5,
+     "what": "recipe:matcha"
+    }
+   ]
+  },
+  {
+   "id": "job.haruno_store",
+   "shop": "haruno_store",
+   "rank": "academy",
+   "slice": "beta1",
+   "window": "09:00-15:00",
+   "hours": 3,
+   "pay": 40,
+   "task": "Sell, stock and bargain at the family counter",
+   "teaches": [
+    {
+     "after": 5,
+     "what": "discount:haruno_store:5%"
+    }
+   ]
+  },
+  {
+   "id": "job.furniture_shop",
+   "shop": "furniture_shop",
+   "rank": "academy",
+   "slice": "beta1",
+   "window": "09:00-15:00",
+   "hours": 3,
+   "pay": 50,
+   "task": "Carry deliveries across the village; place them where the customer points",
+   "teaches": [
+    {
+     "after": 4,
+     "what": "blueprint:low_desk"
+    },
+    {
+     "after": 10,
+     "what": "blueprint:step_tansu"
+    }
+   ]
+  },
+  {
+   "id": "job.forge",
+   "shop": "weapon_shop",
+   "rank": "genin",
+   "slice": "beta2",
+   "window": "08:00-14:00",
+   "hours": 3,
+   "pay": 70,
+   "task": "Pump the bellows to the colour the smith calls, quench on time, sweep",
+   "teaches": [
+    {
+     "after": 3,
+     "what": "recipe:kunai"
+    },
+    {
+     "after": 3,
+     "what": "recipe:shuriken"
+    },
+    {
+     "after": 6,
+     "what": "recipe:tanto"
+    },
+    {
+     "after": 10,
+     "what": "station:weapon_shop_forge"
+    }
+   ]
+  },
+  {
+   "id": "job.bath_house",
+   "shop": "bath_house",
+   "rank": "genin",
+   "slice": "beta2",
+   "window": "16:00-22:00",
+   "hours": 3,
+   "pay": 55,
+   "task": "Fold towels, stoke the boiler to the right heat, keep the floor dry",
+   "teaches": [
+    {
+     "after": 5,
+     "what": "service:bath_free"
+    }
+   ]
+  },
+  {
+   "id": "job.kinoshita_yard",
+   "shop": "kinoshita_yard",
+   "rank": "genin",
+   "slice": "beta2",
+   "window": "07:00-12:00",
+   "hours": 3,
+   "pay": 65,
+   "task": "Carry and stack timber; plane boards to the master's line",
+   "teaches": [
+    {
+     "after": 5,
+     "what": "blueprint:kotatsu"
+    },
+    {
+     "after": 10,
+     "what": "blueprint:folding_screen"
+    }
+   ]
+  },
+  {
+   "id": "job.pharmacy",
+   "shop": "pharmacy",
+   "rank": "genin",
+   "slice": "beta2",
+   "window": "08:00-12:00",
+   "hours": 3,
+   "pay": 60,
+   "task": "Sort herbs from the drying racks, grind for the herbalist",
+   "teaches": [
+    {
+     "after": 4,
+     "what": "recipe:antidote"
+    },
+    {
+     "after": 8,
+     "what": "recipe:coating_venom"
+    }
+   ]
+  }
+ ],
+ "services": [
+  {
+   "id": "service.bath",
+   "provider": "bath_house",
+   "rank": "any",
+   "slice": "beta2",
+   "price": 8,
+   "effect": "Refreshed: fatigue cleared to the start of Tired and Well Rested for two hours",
+   "note": "Once a day"
+  },
+  {
+   "id": "service.repair",
+   "provider": "weapon_shop",
+   "rank": "any",
+   "slice": "beta2",
+   "price": null,
+   "effect": "Restores a weapon's durability",
+   "note": "ceil(base price x missing durability x 0.3); masterwork x1.5"
+  },
+  {
+   "id": "service.sharpen",
+   "provider": "weapon_shop",
+   "rank": "any",
+   "slice": "beta2",
+   "price": 5,
+   "effect": "A quarter of a blade's durability while you wait",
+   "note": ""
+  },
+  {
+   "id": "service.commission",
+   "provider": "weapon_shop",
+   "rank": "genin",
+   "slice": "beta2",
+   "price": null,
+   "effect": "A fine-grade weapon in three days",
+   "note": "2.2 x base price; half as a deposit"
+  },
+  {
+   "id": "service.alteration",
+   "provider": "tailor",
+   "rank": "any",
+   "slice": "beta1",
+   "price": 30,
+   "effect": "Change a folded outfit's palette to another of its own",
+   "note": ""
+  },
+  {
+   "id": "service.dye",
+   "provider": "tailor",
+   "rank": "any",
+   "slice": "beta1",
+   "price": 20,
+   "effect": "Recolour one role of an outfit to any wardrobe colour",
+   "note": ""
+  },
+  {
+   "id": "service.custom_outfit",
+   "provider": "tailor",
+   "rank": "genin",
+   "slice": "beta2",
+   "price": null,
+   "effect": "An outfit of the collections in your clan's palette (clan members) or your own colours",
+   "note": "1.5 x the outfit's price; three days"
+  },
+  {
+   "id": "service.custom_colour",
+   "provider": "furniture_shop",
+   "rank": "any",
+   "slice": "beta1",
+   "price": null,
+   "effect": "Any furniture piece in a chosen wood or colour",
+   "note": "1.2 x price; two days"
+  },
+  {
+   "id": "service.custom_furniture",
+   "provider": "kinoshita_yard",
+   "rank": "genin",
+   "slice": "beta2",
+   "price": null,
+   "effect": "A fine-grade piece from the yard's blueprints",
+   "note": "2 x price; three days"
+  },
+  {
+   "id": "service.catering",
+   "provider": "ichiraku",
+   "rank": "genin",
+   "slice": "beta2",
+   "price": 60,
+   "effect": "Ramen for the squad delivered to a training ground or your flat",
+   "note": "Feeds four; counts as a squad meal (bond experience)"
+  },
+  {
+   "id": "service.reservation",
+   "provider": "barbecue_house",
+   "rank": "genin",
+   "slice": "beta2",
+   "price": 20,
+   "effect": "A table held for the squad's evening",
+   "note": "Required for the squad dinner after Ch 14; refunded against the bill"
+  },
+  {
+   "id": "service.order_scroll",
+   "provider": "scroll_shop",
+   "rank": "genin",
+   "slice": "beta2",
+   "price": null,
+   "effect": "Order a technique scroll of your natures not in this week's stock",
+   "note": "1.25 x price; five days"
+  },
+  {
+   "id": "service.bouquet",
+   "provider": "flower_shop",
+   "rank": "any",
+   "slice": "beta1",
+   "price": 25,
+   "effect": "A bouquet delivered to a resident's door with your note",
+   "note": "Counts as a gift; one a day"
+  },
+  {
+   "id": "service.portrait",
+   "provider": "painters_studio",
+   "rank": "any",
+   "slice": "beta2",
+   "price": 150,
+   "effect": "A painted portrait of you, or of you with a friend (a hanging scroll)",
+   "note": "Five days"
+  },
+  {
+   "id": "service.lesson.gekko",
+   "provider": "place:gekko.dojo",
+   "rank": "genin",
+   "slice": "beta2_5",
+   "price": 60,
+   "effect": "A kenjutsu lesson at the Gekko dojo: training XP and blade proficiency",
+   "note": "Once a day; after clan.gekko.1"
+  },
+  {
+   "id": "service.lesson.namiashi",
+   "provider": "place:namiashi.dojo",
+   "rank": "genin",
+   "slice": "beta2_5",
+   "price": 50,
+   "effect": "A footwork lesson: training XP and a shorter dodge cooldown for the day",
+   "note": "Once a day; after clan.namiashi.1"
+  },
+  {
+   "id": "service.shrine_offering",
+   "provider": "shrine_office",
+   "rank": "any",
+   "slice": "beta1",
+   "price": 5,
+   "effect": "An offering: a day of the shrine's small luck",
+   "note": "Once a day"
+  },
+  {
+   "id": "service.adoption.pup",
+   "provider": "inuzuka_clinic",
+   "rank": "any",
+   "slice": "beta1",
+   "price": 100,
+   "effect": "Adopt a ninken pup",
+   "note": "Includes a collar and a day of kibble"
+  },
+  {
+   "id": "service.adoption.cat",
+   "provider": "cat_shelter",
+   "rank": "any",
+   "slice": "beta1",
+   "price": 40,
+   "effect": "Adopt a cat",
+   "note": "Includes a collar"
+  },
+  {
+   "id": "service.house",
+   "provider": "housing_office",
+   "rank": "jonin",
+   "slice": "later",
+   "price": 30000,
+   "effect": "Buy a small house",
+   "note": "The home session's number (no rent: homes are bought or given)"
+  },
+  {
+   "id": "service.movers",
+   "provider": "housing_office",
+   "rank": "chunin",
+   "slice": "later",
+   "price": 200,
+   "effect": "The mover packs your furniture and chests into moving crates",
+   "note": "Per move; the home session's number"
+  },
+  {
+   "id": "service.found_clan",
+   "provider": "clan_registry",
+   "rank": "chunin",
+   "slice": "later",
+   "price": 20000,
+   "effect": "Found a clan",
+   "note": "ROADMAP §11 Player clans"
+  },
+  {
+   "id": "service.estate_hall",
+   "provider": "clan_registry",
+   "rank": "chunin",
+   "slice": "later",
+   "price": 5000,
+   "effect": "Open one hall of your estate",
+   "note": "5,000 to 15,000 by hall"
+  },
+  {
+   "id": "service.travel",
+   "provider": "travel_desk",
+   "rank": "genin",
+   "slice": "later",
+   "price": 50,
+   "effect": "A personal trip to an open far region",
+   "note": "Free on missions"
+  },
+  {
+   "id": "service.restyle.hair",
+   "provider": "barber",
+   "rank": "any",
+   "slice": "beta1",
+   "price": 40,
+   "effect": "A new hairstyle from those you have unlocked",
+   "note": "The character creation session's price"
+  },
+  {
+   "id": "service.restyle.hair_colour",
+   "provider": "barber",
+   "rank": "any",
+   "slice": "beta1",
+   "price": 60,
+   "effect": "A new hair colour",
+   "note": "The character creation session's price"
+  },
+  {
+   "id": "service.restyle.marks",
+   "provider": "barber",
+   "rank": "any",
+   "slice": "beta1",
+   "price": 30,
+   "effect": "Add, change or remove face marks",
+   "note": "The character creation session's price"
+  }
+ ]
+}

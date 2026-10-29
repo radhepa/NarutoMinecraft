@@ -1,0 +1,152 @@
+{
+ "format": 1,
+ "_doc": "Compiled from tools/items/kits.tsv. Do not edit.",
+ "kits": {
+  "kit:start": [
+   {
+    "item": "apartment_key",
+    "count": 1,
+    "when": "main.ch1 (the apartment)",
+    "note": null
+   },
+   {
+    "item": "futon",
+    "count": 1,
+    "when": "main.ch1 (the apartment)",
+    "note": "The home's bed, already laid out"
+   },
+   {
+    "item": "mailbox",
+    "count": 1,
+    "when": "main.ch1 (the apartment)",
+    "note": "Already on the door"
+   },
+   {
+    "item": "storage_chest",
+    "count": 1,
+    "when": "main.ch1 (the apartment)",
+    "note": null
+   },
+   {
+    "item": "wardrobe_cabinet",
+    "count": 1,
+    "when": "main.ch1 (the apartment)",
+    "note": "The flat's wardrobe: your outfits live here"
+   },
+   {
+    "item": "cooking_pot",
+    "count": 1,
+    "when": "main.ch1 (the apartment)",
+    "note": "Over the flat's little hearth"
+   },
+   {
+    "item": "ryo_100",
+    "count": 1,
+    "when": "main.ch1 (the Hokage)",
+    "note": "The first stipend (30) and a welcome gift (70); the stipend then comes every morning, all game"
+   },
+   {
+    "item": "miso_ramen",
+    "count": 1,
+    "when": "main.ch1 (Ichiraku)",
+    "note": "The instructor's treat"
+   }
+  ],
+  "kit:academy": [
+   {
+    "item": "enrolment_form",
+    "count": 1,
+    "when": "main.ch1 (enrolment)",
+    "note": null
+   },
+   {
+    "item": "academy_textbook",
+    "count": 1,
+    "when": "main.ch1 (enrolment)",
+    "note": null
+   },
+   {
+    "item": "folded_outfit",
+    "count": 1,
+    "when": "main.ch1 (enrolment)",
+    "note": "The Academy outfit chosen on the creator screen"
+   },
+   {
+    "item": "practice_kunai",
+    "count": 5,
+    "when": "main.ch2 (first lessons)",
+    "note": null
+   },
+   {
+    "item": "practice_shuriken",
+    "count": 10,
+    "when": "main.ch2 (first lessons)",
+    "note": null
+   },
+   {
+    "item": "training_headband",
+    "count": 1,
+    "when": "main.ch2 (first lessons)",
+    "note": null
+   },
+   {
+    "item": "ninja_sandals",
+    "count": 1,
+    "when": "main.ch2 (first lessons)",
+    "note": null
+   }
+  ],
+  "kit:genin": [
+   {
+    "item": "forehead_protector",
+    "count": 1,
+    "when": "main.ch7 (graduation)",
+    "note": null
+   },
+   {
+    "item": "tool_pouch",
+    "count": 1,
+    "when": "main.ch9 (the Mission Desk)",
+    "note": null
+   },
+   {
+    "item": "kunai",
+    "count": 3,
+    "when": "main.ch9 (the Mission Desk)",
+    "note": null
+   },
+   {
+    "item": "shuriken",
+    "count": 6,
+    "when": "main.ch9 (the Mission Desk)",
+    "note": null
+   },
+   {
+    "item": "ration_bar",
+    "count": 4,
+    "when": "main.ch9 (the Mission Desk)",
+    "note": null
+   },
+   {
+    "item": "folded_outfit",
+    "count": 1,
+    "when": "main.ch7 (graduation)",
+    "note": "A Genin outfit of your clan or collection"
+   }
+  ],
+  "kit:chunin": [
+   {
+    "item": "flak_vest",
+    "count": 1,
+    "when": "main.ch20 (results, if promoted)",
+    "note": null
+   },
+   {
+    "item": "folded_outfit",
+    "count": 1,
+    "when": "main.ch20 (results, if promoted)",
+    "note": "A Chunin outfit of your clan or collection"
+   }
+  ]
+ }
+}

@@ -1,0 +1,589 @@
+{
+ "format": 1,
+ "_doc": "Loot tables (curios, salvage, drops, gathering, festival prizes), compiled from tools/items/loot.tsv. Do not edit.",
+ "tables": {
+  "curio.academy": [
+   {
+    "item": "curio_graded_test",
+    "weight": 4,
+    "count": "1"
+   },
+   {
+    "item": "curio_chalk_stub",
+    "weight": 4,
+    "count": "1"
+   },
+   {
+    "item": "curio_named_kunai",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_academy_pin",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "curio.bandit": [
+   {
+    "item": "curio_bandit_dice",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_torn_wanted_poster",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_tarnished_ring",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "bandit_trinket",
+    "weight": 3,
+    "count": "1"
+   }
+  ],
+  "curio.bandit_chief": [
+   {
+    "item": "curio_tally_stick",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_gang_seal",
+    "weight": 1,
+    "count": "1"
+   },
+   {
+    "item": "curio_map_fragment",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "curio.battlefield": [
+   {
+    "item": "curio_arrowhead",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_dented_plate",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "curio.beast": [
+   {
+    "item": "curio_giant_scale",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_huge_claw",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_tuft_of_fur",
+    "weight": 3,
+    "count": "1"
+   }
+  ],
+  "curio.covert": [
+   {
+    "item": "curio_blank_mask",
+    "weight": 1,
+    "count": "1"
+   },
+   {
+    "item": "curio_burnt_order",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "curio.far_lands": [
+   {
+    "item": "curio_foreign_coin",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_foreign_headband",
+    "weight": 1,
+    "count": "1"
+   },
+   {
+    "item": "curio_sand_vial",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "curio.festival": [
+   {
+    "item": "curio_prize_whistle",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_spent_firework",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "goldfish",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "curio.fields": [
+   {
+    "item": "curio_scarecrow_hat",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_ox_bell",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_frog_figurine",
+    "weight": 3,
+    "count": "1"
+   }
+  ],
+  "curio.foreign": [
+   {
+    "item": "curio_cracked_mask",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_cipher_wheel",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_foreign_headband",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "curio.market": [
+   {
+    "item": "curio_counterfeit_coin",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_chipped_lucky_cat",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_endless_receipt",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_old_coin",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "curio.river": [
+   {
+    "item": "curio_river_kunai",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_jade_pebble",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_fishing_float",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "curio.road": [
+   {
+    "item": "curio_odd_sandal",
+    "weight": 4,
+    "count": "1"
+   },
+   {
+    "item": "curio_waystation_token",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_faded_road_charm",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "curio.ronin": [
+   {
+    "item": "curio_broken_tsuba",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_sword_tassel",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_unsent_letter",
+    "weight": 3,
+    "count": "1"
+   }
+  ],
+  "curio.shrine": [
+   {
+    "item": "curio_faded_shrine_charm",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_cracked_ema",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_fox_ear",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "curio.smuggler": [
+   {
+    "item": "curio_false_bottom_box",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_cipher_page",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_foreign_coin",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "curio.village": [
+   {
+    "item": "curio_paper_crane",
+    "weight": 4,
+    "count": "1"
+   },
+   {
+    "item": "curio_crest_button",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_old_coin",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_tin_shinobi",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "curio.wilds": [
+   {
+    "item": "curio_carved_stone",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "curio_fossil_shell",
+    "weight": 1,
+    "count": "1"
+   },
+   {
+    "item": "curio_odd_pinecone",
+    "weight": 4,
+    "count": "1"
+   }
+  ],
+  "drop.bandit": [
+   {
+    "item": "rusty_kunai",
+    "weight": 4,
+    "count": "1-2"
+   },
+   {
+    "item": "scrap_steel",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "bandit_purse",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "broken_blade",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.boar": [
+   {
+    "item": "boar_tusk",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "leather_strip",
+    "weight": 4,
+    "count": "1-2"
+   }
+  ],
+  "drop.forest_tiger": [
+   {
+    "item": "tiger_pelt",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.giant_centipede": [
+   {
+    "item": "centipede_plate",
+    "weight": 1,
+    "count": "1-2"
+   }
+  ],
+  "drop.giant_snake": [
+   {
+    "item": "snake_skin",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.giant_spider": [
+   {
+    "item": "spider_silk",
+    "weight": 1,
+    "count": "1-3"
+   }
+  ],
+  "drop.wild_wolf": [
+   {
+    "item": "wolf_pelt",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "festival.prize_stall": [
+   {
+    "item": "goldfish",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "festival_mask",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_prize_whistle",
+    "weight": 4,
+    "count": "1"
+   },
+   {
+    "item": "sparkler",
+    "weight": 4,
+    "count": "2-4"
+   },
+   {
+    "item": "hard_candy",
+    "weight": 5,
+    "count": "3"
+   }
+  ],
+  "gather.bamboo_grove": [
+   {
+    "item": "bamboo",
+    "weight": 5,
+    "count": "2-4"
+   },
+   {
+    "item": "bamboo_shoot",
+    "weight": 3,
+    "count": "1-2"
+   }
+  ],
+  "gather.cliff_nest": [
+   {
+    "item": "hawk_feather",
+    "weight": 4,
+    "count": "1-2"
+   },
+   {
+    "item": "curio_fossil_shell",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "gather.forest_floor": [
+   {
+    "item": "shiitake",
+    "weight": 4,
+    "count": "1-3"
+   },
+   {
+    "item": "healing_herb",
+    "weight": 4,
+    "count": "1-2"
+   },
+   {
+    "item": "nightshade",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_odd_pinecone",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "gather.forest_of_death": [
+   {
+    "item": "ginseng_root",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "snake_skin",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "healing_herb",
+    "weight": 4,
+    "count": "1-3"
+   },
+   {
+    "item": "curio_huge_claw",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "gather.herb_garden": [
+   {
+    "item": "healing_herb",
+    "weight": 6,
+    "count": "1-3"
+   },
+   {
+    "item": "bellflower_root",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "aloe",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "ginger_root",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "lily_of_the_valley",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "gather.river": [
+   {
+    "item": "mackerel",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "salmon",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_river_kunai",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "gather.river_bend": [
+   {
+    "item": "iron_sand",
+    "weight": 5,
+    "count": "2-4"
+   },
+   {
+    "item": "curio_jade_pebble",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "salvage.bandit_camp": [
+   {
+    "item": "scrap_steel",
+    "weight": 6,
+    "count": "2-5"
+   },
+   {
+    "item": "broken_blade",
+    "weight": 4,
+    "count": "1-2"
+   },
+   {
+    "item": "rusty_kunai",
+    "weight": 4,
+    "count": "1-4"
+   },
+   {
+    "item": "steel_ingot",
+    "weight": 1,
+    "count": "1"
+   },
+   {
+    "item": "blasting_powder",
+    "weight": 2,
+    "count": "1-3"
+   },
+   {
+    "item": "bandit_purse",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "bandit_trinket",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "stolen_goods",
+    "weight": 1,
+    "count": "1"
+   },
+   {
+    "item": "curio_bandit_dice",
+    "weight": 1,
+    "count": "1"
+   }
+  ]
+ }
+}
