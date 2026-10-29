@@ -210,6 +210,13 @@
    "makes": "landmarks",
    "first": "B1",
    "status": "planned"
+  },
+  {
+   "id": "farm",
+   "name": "Farmhouse, barn, pen and field plots",
+   "makes": "landmarks",
+   "first": "B2",
+   "status": "planned"
   }
  ],
  "buildings": [
@@ -328,11 +335,10 @@
    "footprint": "13 x 11",
    "counts": {
     "B1": 2,
-    "B2": 1,
-    "B3": 1,
+    "B2": 2,
     "later": 2
    },
-   "notes": "4 flats over 2 shops; the Beta 3 one is the foreign teams' inn"
+   "notes": "4 flats over 2 shops; the Beta 2 ones include the village inn, which lodges the foreign teams in Beta 3"
   },
   {
    "group": "shops",
@@ -369,10 +375,10 @@
    "footprint": "17 x 13",
    "counts": {
     "B1": 2,
-    "B2": 1,
+    "B2": 3,
     "later": 2
    },
-   "notes": "The furniture shop and its showroom, and the weapon shop with its forge room (B1); the post office (B2)"
+   "notes": "The furniture shop and its showroom, and the weapon shop with its forge room (B1); the post office (B2); two warehouses by the market (B2)"
   },
   {
    "group": "shops",
@@ -579,6 +585,39 @@
   },
   {
    "group": "landmarks",
+   "id": "park",
+   "name": "Village park",
+   "how": "hand",
+   "footprint": "~40 x 40",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "Trees, a pond, benches; missions' park and pet hideouts"
+  },
+  {
+   "group": "landmarks",
+   "id": "kiln_yard",
+   "name": "Potter's kiln yard",
+   "how": "one-off + hand finish",
+   "footprint": "15 x 15",
+   "counts": {
+    "B2": 1
+   },
+   "notes": "A potter family's climbing kiln and drying racks; a potter's stall on the market street"
+  },
+  {
+   "group": "landmarks",
+   "id": "farmstead",
+   "name": "Farmstead outside the gate",
+   "how": "program `farm` + hand terrain",
+   "footprint": "~40 x 30",
+   "counts": {
+    "B2": 2
+   },
+   "notes": "Farmhouse, barn, pen and fields; an orchard and a woodlot nearby"
+  },
+  {
+   "group": "landmarks",
    "id": "smithy",
    "name": "Smithy and forge",
    "how": "one-off + hand finish",
@@ -630,7 +669,7 @@
    "counts": {
     "B2": 1
    },
-   "notes": ""
+   "notes": "With the roadside inn and its cellar; the east road's bridge, ford, bend, reeds and hill pass are terrain anchors"
   },
   {
    "group": "landmarks",
