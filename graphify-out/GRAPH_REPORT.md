@@ -1,17 +1,17 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 164 files · ~223,266 words
+- 164 files · ~223,301 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .properties 2, .jar 1)
 
 ## Summary
-- 3014 nodes · 7169 edges · 163 communities (118 shown, 45 thin omitted)
-- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 788 edges (avg confidence: 0.88)
+- 3014 nodes · 7170 edges · 172 communities (117 shown, 55 thin omitted)
+- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 789 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1ff96d88`
+- Built from commit: `ab7b2e1f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -74,7 +74,7 @@
 - Stage
 - BondWorld
 - kit_hagane.py
-- BondWorld
+- .tier
 - World
 - .classic
 - Person
@@ -83,7 +83,7 @@
 - Village
 - VillageScaleTest
 - Bond
-- org.junit.jupiter.api.Test
+- .classmate
 - Bonds
 - Squad
 - Def
@@ -168,6 +168,15 @@
 - bandaged_arm
 - bandolier
 - wrap_tie
+- .effectiveLevel
+- .name
+- .read
+- .populate
+- Question
+- .write
+- ConflictTest
+- Trait
+- .theCompiledShapeParses
 
 ## God Nodes (most connected - your core abstractions)
 1. `k()` - 227 edges
@@ -196,7 +205,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (163 total, 45 thin omitted)
+## Communities (172 total, 55 thin omitted)
 
 ### Community 0 - "stamp"
 Cohesion: 0.11
@@ -288,7 +297,7 @@ Nodes (10): decal(), hood_down(), lantern(), lantern_tag(), mantle(), muffler(),
 
 ### Community 22 - ".friends"
 Cohesion: 0.10
-Nodes (13): BondEvent, Conversation, Reply, Topic, Answer, Highlight, Invitation, Outcome (+5 more)
+Nodes (10): BondEvent, Answer, FollowUp, Highlight, Invitation, Outcome, Plan, Together (+2 more)
 
 ### Community 24 - "Desk"
 Cohesion: 0.12
@@ -363,12 +372,12 @@ Cohesion: 0.18
 Nodes (4): deep_hood(), high_collar(), hood_down(), lenses()
 
 ### Community 44 - "Playthrough"
-Cohesion: 0.08
+Cohesion: 0.09
 Nodes (14): Chapter, Phase, ACADEMY, EXAMS, GENIN, LATER, Playthrough, Profile (+6 more)
 
 ### Community 45 - "Question"
-Cohesion: 0.11
-Nodes (7): Answer, Question, Answered, Outcome, Questions, QuestionsCompiledTest, QuestionsTest
+Cohesion: 0.17
+Nodes (4): Answered, Outcome, Questions, QuestionsTest
 
 ### Community 46 - ".strings"
 Cohesion: 0.25
@@ -402,25 +411,21 @@ Nodes (21): 10. Romance and family (after the beta), Activity, Courtship, Stage,
 Cohesion: 0.16
 Nodes (6): bracers(), crown(), harness(), mace(), plate(), shin_guards()
 
-### Community 58 - "BondWorld"
-Cohesion: 0.07
-Nodes (9): 11. Kindling Bond, BondDialogue, BondWeb, BondWorld, Household, Bonfire, Flame, Kindling (+1 more)
+### Community 58 - ".tier"
+Cohesion: 0.12
+Nodes (6): 11. Kindling Bond, Household, Bonfire, Flame, Kindling, Recruitment
 
 ### Community 59 - "World"
 Cohesion: 0.16
 Nodes (6): 11. What waits for Phase 0, 9. The generator, Resident, SlotFiller, World, SampleVillage
 
 ### Community 61 - ".classic"
-Cohesion: 0.19
-Nodes (3): BondDialogueTest, ConditionsAndEffectsTest, VillageTest
+Cohesion: 0.12
+Nodes (4): BondDialogueTest, ConditionsAndEffectsTest, KindlingAndBookTest, VillageTest
 
 ### Community 62 - "Person"
-Cohesion: 0.12
-Nodes (6): Person, Stage, ADULT, CHILD, TEEN, Schedule
-
-### Community 63 - "Personality"
 Cohesion: 0.13
-Nodes (3): 20. What the roadmap asks of bonds, Personality, ReactionTest
+Nodes (6): Person, Stage, ADULT, CHILD, TEEN, Schedule
 
 ### Community 65 - "blocks.py"
 Cohesion: 0.16
@@ -428,34 +433,22 @@ Nodes (15): Streets, auto_uv(), block(), Block, box(), check(), compile_all(), m
 
 ### Community 66 - "Village"
 Cohesion: 0.11
-Nodes (5): Tier, BACKGROUND, CAST, KNOWN, Village
-
-### Community 67 - "VillageScaleTest"
-Cohesion: 0.13
-Nodes (3): Report, VillageSim, VillageScaleTest
-
-### Community 68 - "Bond"
-Cohesion: 0.05
-Nodes (3): Bond, BondConditions, FollowUp
-
-### Community 69 - "org.junit.jupiter.api.Test"
-Cohesion: 0.12
-Nodes (4): ConflictTest, KindlingAndBookTest, MemoryTest, SeedsTest
+Nodes (7): 18. Village scale, House, Tier, BACKGROUND, CAST, KNOWN, Village
 
 ### Community 70 - "Bonds"
 Cohesion: 0.13
 Nodes (13): 16. What stays in Village Friends, and what moves, 17. Proposed ROADMAP edits, 19. Society hooks, 1. The data model, 21. Open questions, 2. The meters, 4. Memories, 5. Personality (+5 more)
 
 ### Community 71 - "Squad"
-Cohesion: 0.08
-Nodes (5): 14. Save format and versioning, SaveFormat, Departure, Squad, SaveFormatTest
+Cohesion: 0.07
+Nodes (4): BondDialogue, BondEffects, Departure, Squad
 
 ### Community 72 - "Def"
 Cohesion: 0.07
 Nodes (15): Def, Experience, CAMP, DATE, FESTIVAL, HANGOUT, MEAL, MISSION (+7 more)
 
 ### Community 73 - "Levels"
-Cohesion: 0.11
+Cohesion: 0.16
 Nodes (3): 3. Levels and story gates, Levels, LevelsTest
 
 ### Community 74 - "Deed"
@@ -487,8 +480,8 @@ Cohesion: 0.11
 Nodes (12): ClanProfile, Value, COURAGE, CREATIVITY, DUTY, FAMILY, FREEDOM, HONESTY (+4 more)
 
 ### Community 81 - "Mood"
-Cohesion: 0.12
-Nodes (10): 18. Village scale, Label, CALM, FESTIVE, GRIEVING, PROUD, TENSE, UNEASY (+2 more)
+Cohesion: 0.14
+Nodes (8): Label, CALM, FESTIVE, GRIEVING, PROUD, TENSE, UNEASY, Mood
 
 ### Community 83 - "4.3 The noble clans"
 Cohesion: 0.12
@@ -499,8 +492,8 @@ Cohesion: 0.25
 Nodes (4): 6. Squad missions, travel(), S, twist()
 
 ### Community 85 - ".page"
-Cohesion: 0.23
-Nodes (5): 12. The bond book, BondBook, Fact, MemoryLine, Page
+Cohesion: 0.18
+Nodes (6): 12. The bond book, BondBook, Fact, MemoryLine, Page, BondWeb
 
 ### Community 86 - "Peeve"
 Cohesion: 0.14
@@ -515,8 +508,8 @@ Cohesion: 0.11
 Nodes (13): flick(), puff(), quilt(), band(), cloth_shade(), curls_box(), curls_face(), hair_box() (+5 more)
 
 ### Community 91 - "Meter"
-Cohesion: 0.10
-Nodes (13): Lean, Meter, AFFECTION, RESPECT, RIVALRY, ROMANCE, TRUST, Trait (+5 more)
+Cohesion: 0.13
+Nodes (7): Lean, Meter, AFFECTION, RESPECT, RIVALRY, ROMANCE, TRUST
 
 ### Community 92 - "End"
 Cohesion: 0.40
@@ -529,10 +522,6 @@ Nodes (4): Code by mod, _key(), mission(), outcome()
 ### Community 94 - "pathlib"
 Cohesion: 0.11
 Nodes (5): build(), build(), build(), paste(), scene()
-
-### Community 95 - "Conflict"
-Cohesion: 0.12
-Nodes (8): 13. Data formats, Conflict, State, ARGUMENT, COLD_SHOULDER, FALLING_OUT, MAKING_UP, NONE
 
 ### Community 96 - "Side quests"
 Cohesion: 0.18
@@ -663,32 +652,48 @@ Cohesion: 0.29
 Nodes (3): crescent(), hip_katana(), katana()
 
 ### Community 138 - ".everyKeyTheEngineEmitsIsListed"
-Cohesion: 0.43
+Cohesion: 0.33
 Nodes (3): DialogueKeys, DialogueKeysTest, 10. Content plan
 
 ### Community 139 - "armband"
 Cohesion: 0.33
 Nodes (4): arm_bone(), arm_x(), armband(), roll()
 
+### Community 163 - ".effectiveLevel"
+Cohesion: 0.18
+Nodes (4): Conversation, Reply, Topic, 6. Conversation
+
+### Community 164 - ".name"
+Cohesion: 0.13
+Nodes (6): State, ARGUMENT, COLD_SHOULDER, FALLING_OUT, MAKING_UP, NONE
+
+### Community 166 - ".populate"
+Cohesion: 0.27
+Nodes (3): 20. What the roadmap asks of bonds, Report, VillageSim
+
+### Community 170 - "Trait"
+Cohesion: 0.33
+Nodes (6): Trait, BOLDNESS, DISCIPLINE, OPENNESS, PRIDE, WARMTH
+
 ## Knowledge Gaps
 - **226 isolated node(s):** `TALK`, `GIFT_LOVED`, `GIFT_LIKED`, `GIFT_PLAIN`, `GIFT_DISLIKED` (+221 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1154 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **45 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **55 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `BondWorld` connect `BondWorld` to `News`, `.contacts`, `.friends`, `Playthrough`, `Question`, `Stage`, `BondWorld`, `map`, `.classic`, `Person`, `Village`, `VillageScaleTest`, `Bond`, `org.junit.jupiter.api.Test`, `Squad`, `Deed`, `SquadTest`, `.page`, `.of`, `Playthrough.java`, `Title`, `.receive`, `VillageSim.java`?**
-  _High betweenness centrality (0.107) - this node is a cross-community bridge._
+- **Why does `BondWorld` connect `BondWorld` to `News`, `.contacts`, `.friends`, `.effectiveLevel`, `.read`, `.populate`, `Question`, `.write`, `ConflictTest`, `Playthrough`, `Question`, `Stage`, `.tier`, `map`, `.classic`, `Person`, `Village`, `VillageScaleTest`, `Bond`, `Squad`, `Deed`, `SquadTest`, `.page`, `.of`, `Playthrough.java`, `Title`, `.receive`, `VillageSim.java`?**
+  _High betweenness centrality (0.108) - this node is a cross-community bridge._
 - **What connects `TALK`, `GIFT_LOVED`, `GIFT_LIKED` to the rest of the system?**
   _226 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `stamp` be split into smaller, more focused modules?**
   _Cohesion score 0.11 - nodes in this community are weakly interconnected._
-- **Why does `Bonds` connect `Bonds` to `Story bible`, `Squad`, `Levels`, `Deed`, `Meters`, `Value`, `Mood`, `.romance`, `.page`, `.friends`, `Stage`, `TimeAndPacingTest`, `ClanRelations`, `BondWorld`, `Personality`, `Person`, `Conflict`?**
-  _High betweenness centrality (0.096) - this node is a cross-community bridge._
+- **Why does `Bonds` connect `Bonds` to `Story bible`, `.friends`, `.populate`, `.write`, `Stage`, `.tier`, `Person`, `Personality`, `Village`, `Levels`, `Deed`, `Meters`, `Value`, `Mood`, `.page`, `ClanRelations`, `TimeAndPacingTest`, `Conflict`, `.romance`?**
+  _High betweenness centrality (0.095) - this node is a cross-community bridge._
 - **Should `render.py` be split into smaller, more focused modules?**
   _Cohesion score 0.12462462462462462 - nodes in this community are weakly interconnected._
-- **Why does `Act` connect `Act` to `News`, `.friends`, `Playthrough`, `Question`, `Stage`, `BondWorld`, `BondWorld`, `Personality`, `Bond`, `org.junit.jupiter.api.Test`, `Squad`, `Def`, `Deed`, `Meters`, `Value`, `Peeve`, `Meter`, `Conflict`, `Playthrough.java`, `VillageSim.java`?**
+- **Why does `k()` connect `k` to `cap`, `stamp`, `kit_nara.py`, `forehead_protector`, `kit_namiashi.py`, `kit_senju.py`, `kit_academy.py`, `kit_yamanaka.py`, `kit_kurama.py`, `kit_gekko.py`, `kit_yuhi.py`, `kit_inuzuka.py`, `kit_kunoichi.py`, `armband`, `furoshiki`, `kit_suzuran.py`, `kit_umino.py`, `kit_tsuchigumo.py`, `cel_box`, `snack_pouch`, `sode`, `kit_household.py`, `mandarin_collar`, `obi`, `bib`, `gathered_ankles`, `Shared helpers`, `kit_market.py`, `kit_kinoshita.py`, `geta`, `rolled_cuffs`, `kit_field.py`, `tasuki`, `coat_skirts`, `wave_band`, `pauldron`, `bandolier`, `wrap_tie`, `kit_uzumaki.py`, `kit_aburame.py`, `Face`, `ring_shell`, `kit_hagane.py`, `fabric`, `bandage_turns`, `paint.py`, `kit_rugged.py`, `kit_shinobi.py`, `kit_specialist.py`, `strip_fabric`, `solid`, `kit_uchiha.py`, `kit_sarutobi.py`, `kit_shiranui.py`?**
   _High betweenness centrality (0.074) - this node is a cross-community bridge._
 - **Should `kit_academy.py` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
