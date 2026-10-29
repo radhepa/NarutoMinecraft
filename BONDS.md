@@ -44,7 +44,7 @@ Life mod depends on it (`implementation project(':life:bonds')`) and adds the th
 | Everyone you are close to, as one number | `BondWeb` |
 
 ```
-./gradlew :life:bonds:test                  # 91 tests
+./gradlew :life:bonds:test                  # 93 tests
 ./gradlew :life:bonds:simulate              # the 60-hour pacing tables (-Pseed=N, -Pexplain=role:teammate_a)
 ./gradlew :life:bonds:simulateVillage       # a village of 300 for 180 days: cost, ties, clan drift, hooks
 ```
@@ -574,7 +574,7 @@ breaks a confidence, disobeys and abandons a mission.
 | By | Hours | Typical player | Gates in the roadmap |
 |---|---|---|---|
 | Ch 1 | 0.7 | Everyone met is level 1 | — |
-| Academy end (Ch 7) | ~3 to 4 | Classmates 2 to 4: two bond quests each open at 2 and 3 | Beta 1's classmate bond quests |
+| Academy end (Ch 7) | ~3 to 4 | Classmates 2 to 4: one bond quest each, from level 2 | Beta 1's classmate bond quests |
 | Team assignment (Ch 8) | ~4 | Teammates 4 to 6; sensei 3 | The bell test (a moment) |
 | First C-rank (Ch 11) | ~7 | **teammate_a 5 or more** | The campfire branch: `friendship [teammate_a, 5]` |
 | Beta end (Ch 20) | ~15 | Teammates 6 to 8, sensei 5 to 6, classmates 3 | Bond payoffs in the forest and the finals |
@@ -596,15 +596,15 @@ acts on at the end of each chapter, and squad cohesion):
 | 6 | Exam eve | 2.4 | 10 | 2 | 4 | 1 | 2 | 2 | 2 | 1 | — |
 | 7 | Graduation | 2.8 | 12 | 2 | 4 | 1 | 3 | 2 | 2 | 2 | — |
 | 8 | Team assignment | 3.7 | 15 | 3 | 6 | 3 | 3 | 2 | 2 | 2 | 41 |
-| 9 | The Mission Desk | 5.0 | 19 | 4 | 6 | 3 | 3 | 2 | 2 | 2 | 45 |
+| 9 | The Mission Desk | 5.0 | 19 | 4 | 6 | 3 | 3 | 2 | 2 | 2 | 44 |
 | 10 | Tree walking | 6.0 | 22 | 4 | 6 | 3 | 3 | 3 | 2 | 2 | 47 |
-| 11 | First C-rank | 7.3 | 26 | 4 | 6 | 3 | 3 | 3 | 2 | 2 | 53 |
-| 12 | Water walking and natures | 8.4 | 29 | 4 | 5 | 3 | 3 | 3 | 2 | 2 | 43 |
+| 11 | First C-rank | 7.3 | 26 | 4 | 7 | 3 | 3 | 3 | 2 | 2 | 53 |
+| 12 | Water walking and natures | 8.4 | 29 | 4 | 5 | 3 | 3 | 3 | 2 | 2 | 42 |
 | 13 | A far village | 9.8 | 32 | 4 | 7 | 3 | 3 | 3 | 2 | 2 | 58 |
-| 14 | Second C-rank | 11.3 | 36 | 6 | 8 | 4 | 3 | 3 | 3 | 2 | 67 |
-| 16 | Forest of Death | 12.6 | 42 | 7 | 9 | 5 | 3 | 3 | 3 | 2 | 69 |
-| 19 | Chunin Exams finals | 14.1 | 50 | 7 | 9 | 5 | 3 | 3 | 4 | 2 | 71 |
-| 20 | Results | 14.3 | 51 | 8 | 9 | 6 | 3 | 3 | 4 | 2 | 71 |
+| 14 | Second C-rank | 11.3 | 36 | 6 | 8 | 4 | 3 | 3 | 2 | 2 | 67 |
+| 16 | Forest of Death | 12.6 | 42 | 7 | 9 | 4 | 3 | 3 | 2 | 2 | 69 |
+| 19 | Chunin Exams finals | 14.1 | 50 | 8 | 9 | 5 | 3 | 3 | 3 | 2 | 71 |
+| 20 | Results | 14.3 | 51 | 8 | 9 | 5 | 3 | 3 | 3 | 2 | 72 |
 
 With this seed the typical player reaches Ch 11 with teammate_a one point short of level 5 (they
 forgot teammate_a's birthday), so the campfire talk does not play: low friendship changing a scene,
@@ -613,14 +613,14 @@ players:
 
 | | Devoted | Typical | Reckless |
 |---|---|---|---|
-| Academy end, teammates | 3 / 5 | 2 / 4 | 2 / 1 (a broken confidence) |
-| Ch 11 campfire | plays (5) | skipped (4); plays in 4 of 5 seeds | skipped (2) |
-| Beta end, teammates | 8 / 9 | 8 / 9 | 3 / 3 (one teammate left, replaced) |
+| Academy end, teammates | 3 / 4 | 2 / 4 | 2 / 1 (a broken confidence) |
+| Ch 11 campfire | plays (6) | skipped (4); plays in 4 of 5 seeds | skipped (2) |
+| Beta end, teammates | 9 / 9 | 8 / 9 | 3 / 3 (one teammate left, replaced) |
 | 60 h: bonds at level 10 (with time together) | 3 | 3 | 0 |
 | Romance in the beta | none | none | none |
 | 60 h: romance | married, a child in the post-game | married | none |
-| Kindling with teammates | full / full | full / full | nature / none |
-| Quarrels / fallings-out | 0 / 0 | 1 / 0 | 4 / 1 |
+| Kindling with teammates | full / full | full / full | nature / nature |
+| Quarrels / fallings-out | 0 / 0 | 1 / 0 | 3 / 1 |
 
 Run `./gradlew :life:bonds:simulate` for the full tables, or `-Pexplain=role:teammate_a` to see
 where one bond's meters come from. `TimeAndPacingTest` holds these targets on five seeds.
@@ -756,6 +756,12 @@ hook type, fills its slots from the hook's roles, checks `requires`, and ends wi
 | `elder_request` | An elder of the player's clan, or of one where they are a Helping Hand | `elder`, `clan` | 14 | the clan, or that standing | `done` (the clan hears you honored its custom), `refused` |
 | `rivalry_heating` | Two shinobi peers' tie sours into rivalry | `a`, `b` | 14 | friendship 3 with either | `cooled` (friends again), `fanned` (a quarrel) |
 | `forbidden_match` | A couple's clans refuse the match | `a`, `b`, `clan_a`, `clan_b` | 28 | the player a teen or older | `supported` (they marry; their clans grumble), `discouraged` |
+| `estrangement` | Two relatives stopped speaking four weeks ago (family quarrels are rarer, and keep a 15-point grudge until mended) | `a`, `b` | 42, or until mended | the player a teen or older; friendship 3 with either | `reconciled` (the quarrel mended, both remember it), `failed` |
+
+A `favor_needed` hook says what kind of help in `stakes.variant`, picked from the client's life:
+`neighbor`, `lost_pet`, `sick_relative` (they have family), `shop_trouble`, `escort` and `apprentice`
+(a working civilian; `apprentice` also for a senior shinobi), `elder_errand` (a clan head or elder,
+or a senior adult) and `festival_help` (while the village is cheerful).
 
 At most 16 hooks are open at once and 4 of a type; the same roles never get the same hook twice.
 `Village.visibleHooks()` is what the player would come across: someone in it is known, or it is in
@@ -768,11 +774,11 @@ resolving some hooks):
 
 | Measure | Result |
 |---|---|
-| Cost | about 13 ms a simulated day on average, 39 ms at worst (a day is 20 real minutes); about 1,000 tie and resident updates a day |
+| Cost | about 14 ms a simulated day on average, 32 ms at worst (a day is 20 real minutes); about 1,000 tie and resident updates a day |
 | Ties | about 1,800 (family 312, friends 522, neighbors 403, class 264, clan 107, spouses 94, work 85, rivals 26): 6.1 chosen ties per resident, 8 at most |
 | Marriages | 9 new in 180 days, 5 of them across clans or groups |
-| Clan drift | Inuzuka and Aburame: -11 to rivals (incidents outpaced mediation); others moved a few points (trade warming the civilians and the Hagane) and drifted back |
-| Hooks | about 9 a week raised and seen (favors 60, lost items 63, quarrels 60, elder requests 26, clan feuds 10, crushes 6 after the teen stage, rivalries 1): about one per in-game day, capped at 16 open |
+| Clan drift | Inuzuka and Aburame: -17, to a feud (incidents outpaced mediation); others moved a few points (trade warming the civilians and the Hagane) and drifted back |
+| Hooks | about 9 a week raised and seen (favors 59, lost items 60, quarrels 64, elder requests 22, clan feuds 10, and after the teen stage estrangements 13 and crushes 6; rivalries 1): about one per in-game day, capped at 16 open |
 | Mood | festive at the festival, proud ten days on, calm again after |
 
 `VillageScaleTest` holds the bounds (cost, ties per resident, hooks a week) and determinism.
@@ -784,7 +790,7 @@ resolving some hooks):
 | `friendship` condition, `add_friendship`, rewards to a role or `role:squad`, friendship branches, `kind: bond` quests | Section 13; the roadmap's quest example runs unchanged |
 | New meters readable by quest data without code | `bond_meter`, `bond_memory`, `bond_state` and the rest, registered as Core conditions |
 | Roles bound to VF residents with personality, family and meters, fixed per save; Varied rolls by personality; names in both | `Person` (role ids, family, personality); rolls from the `cast` stream (`Personality.rolled`, `ClanProfile.shape`) |
-| Bond quests (two per classmate, two per teammate), the squad beats, low friendship changing them | Moments by quest id (`shared_moment`), gates (section 3), the beats in the simulation (section 15) |
+| Bond quests (one per classmate in Beta 1, two per teammate in Beta 2, one per teammate in Beta 3), the squad beats, low friendship changing them | Moments by quest id (`shared_moment`), gates (section 3), the beats in the simulation (section 15) |
 | Teammates leaving and replaced; choosing who joins missions from Chunin | Section 7; mission companions are Progression's choice, reading `friendship` and `squad_cohesion` |
 | Rivals, classmates, sparring with ranked residents raises friendship | `spar_won` / `spar_lost` (respect and rivalry; affection for a good match) |
 | Mentors teach at friendship and level thresholds; the sensei's exam recommendation | `friendship` plus Core's `level_at_least`; the recommendation reads `bond_meter [role:sensei, trust, N]` and `friendship [role:sensei, N]` |

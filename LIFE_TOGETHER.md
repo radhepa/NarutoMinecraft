@@ -204,16 +204,16 @@ accepts and sometimes does not show.
 
 | Over 60 hours | Devoted | Typical | Reckless |
 |---|---|---|---|
-| Hangouts asked for / held | 94 / 188 | 47 / 96 | 20 / 12 |
-| Invitations from friends / accepted | 127 / 113 | 94 / 57 | 9 / 3 |
-| Stood someone up | 0 | 2 | 2 |
-| Highlights / rituals formed | 21 / 14 | 12 / 5 | 0 / 0 |
-| Their news heard and answered | 130 | 97 | 51 (mostly shrugged off) |
-| Deeper conversations | 157 | 71 | 12 |
+| Hangouts asked for / held | 94 / 196 | 47 / 96 | 20 / 11 |
+| Invitations from friends / accepted | 134 / 117 | 103 / 63 | 11 / 3 |
+| Stood someone up | 0 | 7 | 4 |
+| Highlights / rituals formed | 25 / 11 | 7 / 6 | 0 / 0 |
+| Their news heard and answered | 117 | 93 | 51 (mostly shrugged off) |
+| Deeper conversations | 154 | 85 | 13 |
 | Bonds at level 10 | 3 | 3 | 0 |
 
-That is, for a typical player, about one hangout and one invitation every two hours of play from
-the squad and friends, and a piece of someone's news every forty minutes. The beta's friendship
+That is, for a typical player, about one hangout and one invitation every other in-game day (every
+35 to 40 minutes of play) from the squad and friends, and a piece of someone's news about as often. The beta's friendship
 gates still hold: across five seeds a devoted player always reaches the Ch 11 campfire talk, a
 typical player in four of five (the one who missed had forgotten teammate_a's birthday), a reckless
 one never (`TimeAndPacingTest`). Time together mostly widens the circle: classmates, the instructor
@@ -230,10 +230,10 @@ per-personality variants that override a general pool.
 | Required pools (greetings by level and state, memories, facts, feelings, goals, hangout asks, answers and outcomes, highlights and callbacks, conversation topics, life events and responses, follow-ups, moods, hook offers and outcomes) | 1,178 | 3 each | ~3,500 |
 | Personality variants (16 archetypes on greetings, topics, life events and hangouts) | 7,952 possible | write the 20% that matter most, 2 each | ~3,200 |
 | The cast's own voices (about 10 beta roles: their own greetings, hangout lines, highlights, topic answers and life events) | ~150 per character | 2 each | ~3,000 |
-| Bond quests (two per classmate in Beta 1, two per teammate in Beta 2, payoffs in Beta 3) and the squad beats | ~40 quests | scenes | ~40 scenes |
+| Bond quests (one per classmate in Beta 1, two per teammate in Beta 2, one per teammate in Beta 3) and the squad beats | ~20 quests and 7 beats | scenes | ~30 scenes |
 | Hangout scenes (Minecraft): anchors, seats, clips, the highlight beat | 22 activities | 1 scene each, ~10 highlight beats | 22 scenes |
 | Clan customs, elders' requests, feud and match hooks | 25 clans, 9 hook types | | ~800 |
-| **Beta's social layer, about** | | | **~10,000 lines, 60 scenes** |
+| **Beta's social layer, about** | | | **~10,000 lines, 50 scenes** |
 
 VF's 5,898 existing lines stay as the residents' everyday talk; ours sit on top. Work order:
 (1) the required general pools, so nothing is ever silent; (2) the beta cast's voices, since they
@@ -244,8 +244,8 @@ only, no literal names, `{name:<role>}` and `{given:<role>}`; dialogue text form
 
 ## 10. Open questions
 
-- **How often should friends invite you?** About one invitation every two hours of play for a
-  typical player. More makes the village feel alive; too many feels needy.
+- **How often should friends invite you?** About one invitation every other in-game day (every 35
+  to 40 minutes of play) for a typical player. More makes the village feel alive; too many feels needy.
 - **Ryo for hangouts:** who pays? Today the activity has a cost the glue charges the player. Should
   close friends sometimes treat you, or split it?
 - **Group hangouts** cap at the activity's size (2 for a spar, 6 for a barbecue, 8 for a snowball
