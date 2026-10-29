@@ -129,6 +129,44 @@ class VillageScaleTest {
         assertNull(v.hook(lapse.id()), "an unanswered hook lapses");
         assertThrows(IllegalArgumentException.class, () -> new SocietyHook("x", "dragon", Map.of(), "", 0, 1, 0, List.of(), Map.of()));
     }
+    @Test void favorsSayWhatKindOfHelp() {
+        var r = VillageSim.run(5, 300, 56, 2);
+        var favors = r.world().village().hooks().stream().filter(h -> h.type().equals("favor_needed")).toList();
+        var w = r.world();
+        for (var h : favors) assertTrue(SocietyHook.FAVOR_VARIANTS.contains((String) h.stakes().get("variant")), h.stakes().toString());
+        var shopkeeper = w.people().stream().filter(p -> !p.shinobi() && p.circles().stream().anyMatch(c -> c.startsWith("work:"))).findFirst().orElseThrow();
+        var seen = new java.util.TreeSet<String>();
+        for (long d = 0; d < 200; d++) seen.add(w.village().favorVariant(shopkeeper, d));
+        assertTrue(seen.contains("shop_trouble") && !seen.contains("festival_help") || w.village().mood("village").cheer() >= .2, seen.toString());
+    }
+    @Test void relativesWhoStopSpeakingBecomeAnEstrangementAfterTheBeta() {
+        var w = new BondWorld(9, 0);
+        var mother = new Person("mother", "", "x", Person.CIVILIAN, Person.Stage.ADULT, Personality.of("proud", ""), "FEMALE", "MALE", 1, Map.of("son", "child"), List.of());
+        var son = new Person("son", "", "x", Person.CIVILIAN, Person.Stage.ADULT, Personality.of("fiery", ""), "MALE", "FEMALE", 2, Map.of("mother", "parent"), List.of());
+        w.add(mother); w.add(son);
+        var v = Village.settle(w);
+        v.meet("son");
+        double close = v.affinity("mother", "son");
+        String key = ClanRelations.pair("mother", "son");
+        v.ties.put(key, v.tie("mother", "son").quarrel(w.day()));
+        w.advance(Village.ESTRANGED_DAYS + 14);
+        var sore = v.tie("mother", "son");
+        double withQuarrel = v.affinity("mother", "son");
+        v.ties.put(key, sore.reconciled());
+        double without = v.affinity("mother", "son");
+        v.ties.put(key, sore);
+        assertEquals(without - Village.KIN_GRUDGE, withQuarrel, 1e-9, "a family quarrel does not just fade");
+        assertTrue(close > 0);
+        assertTrue(v.hooks().stream().noneMatch(h -> h.type().equals("estrangement")), "not while the player is a child");
+        w.setPlayerStage(Person.Stage.TEEN);
+        w.advance(Village.WEEK + 1);
+        var h = v.hooks().stream().filter(x -> x.type().equals("estrangement")).findFirst().orElseThrow();
+        assertEquals(Map.of("a", "mother", "b", "son"), h.roles());
+        assertEquals(List.of("reconciled", "failed"), h.toMap().get("outcomes"));
+        assertEquals("", v.resolve(h.id(), "reconciled"));
+        assertTrue(v.tie("mother", "son").quarrel() < 0);
+        assertTrue(w.bond("son").remembers(Act.MEDIATED));
+    }
     @Test void secretCrushHooksWaitForThePostBetaRules() {
         var w = new BondWorld(7, 0);
         var x = Leaf.person("x", "", "x", 1, Person.Stage.ADULT, Personality.of("warmhearted", ""), "FEMALE", "ANY", 1, List.of());
