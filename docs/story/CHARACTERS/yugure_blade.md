@@ -95,6 +95,9 @@ hollow, the player sees his thread go taut and then dark; that is the moment he 
 | `ans.yugure_blade.country` | Ch 37.3, after the duel, as he backs into the dark | "Do you know what the Reed Marshes were?" | no (tell me), a country the great villages burned, should I? | Knowledge / honesty | Ch 52.5: if he told it, his last words include "Bury me facing the reeds" (the player can honour it in Ch 54.2) | Being asked lets him say the country's name out loud for the first time in the game |
 | `ans.yugure_blade.why` | Ch 51.4 | "Why did you never kill me?" | kunai ("Because you let me pick up the kunai"), her ("Because she wouldn't want it"), see ("Because I want you to see what he's doing"); plus "She asked me to" if `ans.yugure_second.blade = yes` | Each sends him to the Rock | Ch 52.5: his turn is coloured by it (kunai: a salute to the player first; her: he goes to the second first; see: he looks at the array, then turns) | — |
 | `ans.yugure_blade.sword` | Ch 52.5, dying | "Take it. Last Light. Don't hang it on a wall." | take it, bury it with you, give it to her | Duty / family | Ch 54.2 and the epilogue: the sword in your house's hall, in his grave, or at the second's side (if she lives) | — |
+| `ans.yugure_blade.stance` | Ch 27.2, mid-duel, after the first exchange | "Who taught you to stand like that?" | my sensei; no one; the camps | Honesty | Ch 37.3: "Your guard is your sensei's. Your feet are your own" (varies: "the camps" makes him say "Your feet are the camps'. Unlearn them") | — |
+| `ans.yugure_blade.burn` | Ch 37.3, among the shelves, before he strikes | "Would you burn this place to keep what's in it secret?" | yes; no; it's been burning for eighty years | Honesty / theme | Ch 51.4: he has read nothing from the archive, but the third answer makes him ask what was in it | "Eighty years" seeds his doubt one arc early |
+| `ans.yugure_blade.dusk` | Ch 51.4, before the last duel | "Do you know what dusk is for?" | the end; the night; the morning after | Theme | Ch 52.5: his last line ("Dusk was supposed to end in morning") is his own if "morning", and an answer to the player's if not | — |
 
 ### What his lines are for
 
@@ -118,3 +121,6 @@ hollow, the player sees his thread go taut and then dark; that is the moment he 
 - `ans.yugure_blade.fight` (friends, village, never_taken, dont_know)
 - `ans.yugure_blade.country` (tell_me, burned, should_i)
 - `ans.yugure_blade.sword` (take, bury, her)
+- `ans.yugure_blade.stance` (sensei, no_one, camps)
+- `ans.yugure_blade.burn` (yes, no, eighty_years)
+- `ans.yugure_blade.dusk` (end, night, morning)

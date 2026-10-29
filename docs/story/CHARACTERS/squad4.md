@@ -107,18 +107,22 @@ warm under the form.
 | Id | When | Question | Options | Honours / tests | Remembered | How it changes her |
 |---|---|---|---|---|---|---|
 | `ans.squad4_a.shadow` | Ch 22, the first day | "May I follow you closely, or would you prefer I follow from a distance?" | closely, distance, "walk with me instead" | "With me" breaks protocol and honours loyalty | Her report to the Fifth (Ch 31) | "with me" starts the friendship |
-| `ans.squad4_a.pass` | Embers, curfew, level 3 | "You need a night pass and you will not tell me why. Do I write it?" | "trust me", "come with me and see", "write it down, I'll take the blame" | Loyalty against duty | Ch 28 stake-out: she is there (come) or she covers (trust) | Teaches her to choose |
+| `ans.squad4_a.pass` | Ch 30.4, the night pass to get squad5_b out of the locked Tobari quarter | "You need a night pass and you will not tell me why. Do I write it?" | "trust me", "come with me and see", "write it down, I'll take the blame" | Loyalty against duty | Ch 31 testimony: she was there (come), she covered (trust), or her log names you and she defends it (blame) | Teaches her to choose |
 | `ans.squad4_a.choose` | Before Ch 31, level 5 | "If duty and fairness point different ways, which do I follow?" | duty, fairness, "the one you can explain to the person it hurts" | Tests her core | Ch 31 testimony; Ch 40 staying; her ending | Decides her ending |
 | `ans.squad4_a.aunt` | After Ch 31.4, level 5 | "She stepped down. Was I a traitor to my family?" | "no, you were honest with it", "you were a little, and it was right", "ask her" | Honesty, family | Ch 51: her aunt fights on the wall and says one line to her (by answer) | "ask her" gives a reconciliation scene (Ch 32) |
 | `ans.squad4_a.petition` | Level 7 | "I have carried petitions no one reads. Should I read them aloud myself?" | yes, "only with the branch house beside you", "not yet" | Fairness | `clan.hyuga.4`; Ch 55 | — |
 | `ans.squad4_a.calligraphy` | Hobby, level 2 | "Write a character for me. Any one. I want to see a stroke that isn't perfect." | fire, home, friend | Creativity | She hangs it in her room; it appears in Ch 55's montage | — |
+| `ans.squad4_a.bow` | Cinders, level 1 (the Academy yard) | "How deeply should I bow to you? You have no rank and no clan. I do not know the rule." | "don't bow", "the same as you'd bow to anyone", "a nod, like friends" | Duty against freedom | Every greeting: her bow or nod to you | Her first broken rule |
+| `ans.squad4_a.prelim` | Ch 17, after her bout with squad4_b | "I beat him and he cheered. Should I have lost?" | "no, he wanted you to win", "you should thank him", "beat him again next time, he'd love it" | Strength, kindness | squad4_b's party (`side.c.third_time`): her toast | — |
+| `ans.squad4_a.log` | Embers, level 4 (the shadow's log) | "My log of you has three hundred pages. Would you like to read it?" | "yes", "no, keep it", "burn the parts about my friends" | Honesty, loyalty | Ch 31: the log is her evidence (yes: you know what is in it; burn: she testifies from memory) | — |
+| `ans.squad4_a.branch` | Ashes, level 5 | "A branch-house girl asked me if I would ever bow to her. What should I say?" | "yes, first", "when your house bows to hers too", "ask her what she wants" | Fairness | `clan.hyuga.4`; Ch 55's montage | — |
+| `ans.squad4_a.eyes` | Ch 50, before the war | "The Seventh wants me on the Rock as their eyes. I would rather fight beside you. Which?" | "be their eyes", "beside me", "both: link with me" (Ember Link if Flame) | Duty against loyalty | Ch 51: where she stands; "link" lets the player see her Byakugan view in Ch 51 | — |
 
 **What her lines are for.** Plot (Ch 22 watch, Ch 31 testimony, Ch 51 eyes), teach (curfew and
 night passes in Ch 22 are taught through her), bond (watcher to friend), life (reports as humour).
 Mood states: on duty (Ch 22 to 31), after the testimony, at war.
 
-**Variants.** Clan fixed. If the player is clan-born Hyuga, she is a cousin; the Ch 22 assignment
-becomes "watching family", and her testimony costs her more. In Varied, if the rolled Fifth's niece
+**Variants.** Clan fixed. In Varied, if the rolled Fifth's niece
 draws a branch-house look, the house split stays: she is main-house by adoption.
 
 **Unison technique (Blaze).** *Open Paths*: her Byakugan through the player's link: every ally
@@ -198,6 +202,10 @@ family (4: a pack of siblings and a mother who runs the clinic), worries (7: bei
 | `ans.squad4_b.joke` | Embers, after a failed exam, level 4 | "Be honest. Am I the joke?" | "you're the best part", "only when you want to be", "yes, and it's a good joke" | Honesty; the last is brave | `side.c.third_time` party speech | "only when you want to be" makes him study |
 | `ans.squad4_b.b` | Ch 26 (if b left) | "They won't talk to me either. Should I keep going to the bridge?" | "yes, every night", "give them space", "bring them food" | Loyalty | Ch 32: b's return lines mention him | — |
 | `ans.squad4_b.hokage` | Jonin arc, level 6 | "If I said I wanted to be Hokage, would you laugh?" | "no", "yes, then I'd vote for you", "you'd be a good one" | — | Ch 55: he's the first to bow, then the first to laugh | — |
+| `ans.squad4_b.goat` | Ch 9, after the goat | "Okay, the goat was my fault. Do you forgive me or my dog?" | "you", "the dog", "neither, buy ramen" | — | His Ch 14 squad-dinner apology bowl | Filler |
+| `ans.squad4_b.beetle` | `filler.dogs_and_bugs` finale | "He didn't eat the beetle! Did you ever think he did? Be honest." | "never", "a little", "yes, completely" | Honesty | He tells the story at every festival with your answer in it | — |
+| `ans.squad4_b.test` | Embers, before his third try, level 4 | "Quiz me. If I get one wrong, I'm doomed. Ask me anything." | an easy one, a hard one, "what's your dog's favourite food?" | Kindness | `side.c.third_time`: the question on the real test is yours | — |
+| `ans.squad4_b.dog_hurt` | After Ch 51, level 5 | "He's going to be okay. Right? Say right." | "right", "I'll sit with him tonight", "he's the bravest dog in the Leaf" | — | Ch 55's montage: the dog wearing a medal | — |
 
 **What his lines are for.** Life and filler (the village's comic noise), bond, small plot assists
 (Ch 26 lead, Ch 35 entrance, Ch 51 market). Pools: greetings, eating-contest lines, dog lines.
@@ -323,6 +331,11 @@ shy. Teen: steady. Adult: calm in every storm.
 | `ans.squad4_c.roster` | Ch 38, after the page | "Should I have read it sooner?" | "you couldn't have known", "yes, and you'll read everything now", "it's not your fault, it's theirs" | — | Her ending (meticulous or gentle) | Shifts her archetype toward meticulous ("yes") |
 | `ans.squad4_c.lost_child` | After the lost child's return | "She asked me what her real name was. I don't know. Do I tell her I don't know?" | "tell her", "help her find it", "let her choose one" | Honesty; freedom | `story.lost_child.family_known`: her name scene | — |
 | `ans.squad4_c.notebook` | Level 7 | "This is everyone I couldn't save. Do you want to see?" | "yes", "only if you want me to", "burn it" | Respect | Ch 55: the crossed-out name | — |
+| `ans.squad4_c.bruise` | After Ch 2, level 1 (she patches the class) | "Did the rival do this or did you do it falling?" | "the rival", "me, falling", "the camps taught me to fall" | Honesty | She asks the rival to spar more gently, or teaches you to fall better | Filler |
+| `ans.squad4_c.medic` | Paper Trail, level 3 | "I want to be a medic like {name:medic}. Is that a good thing to want?" | "yes", "be a medic like you", "be better than them" | Kindness, knowledge | Ch 39 or Ch 40: how she speaks of the medic once the truth is out | Her admiration's shape |
+| `ans.squad4_c.forest` | Ch 16, treating a teammate at camp, level 3 | "If two people are hurt and I can only help one, how do I choose?" | "the worse hurt", "the one who can still fight", "ask them" | Kindness against duty | Ch 51: whom she treats first at the Academy | — |
+| `ans.squad4_c.herb` | Ashes, level 5 (a herb walk) | "Lily of the valley is poison and medicine. Which are you?" | "medicine", "poison", "depends on the hand" | Creativity, honesty | Her Ch 53 line when the player kindles her | — |
+| `ans.squad4_c.second` | Ch 49 to 52, if the second is with the Leaf, level 4+ | "She tore half the village. Would you want me to save her, if it came to it?" | "yes", "only if she wants it", "save someone else first" | Kindness against justice | Ch 53.6: "yes" or "only if she wants it" lets her try the revival; "someone else first" she treats the wounded instead and the revival needs another path | Gates her revival |
 
 **What her lines are for.** Clue (the roster, Ch 38; identical before), plot (the lost child's care,
 the Ch 53 revival), bond, teach (herb items, healing buffs), life. Mood states: by the medic's
@@ -357,4 +370,18 @@ slowly mends if she visits the cell.
 - `ans.squad4_c.roster` (couldnt_know, read_all, theirs)
 - `ans.squad4_c.lost_child` (tell, find, choose)
 - `ans.squad4_c.notebook` (yes, if_you_want, burn)
+- `ans.squad4_a.bow` (dont, same, nod)
+- `ans.squad4_a.prelim` (no, thank, again)
+- `ans.squad4_a.log` (yes, keep, burn_friends)
+- `ans.squad4_a.branch` (first, both, ask)
+- `ans.squad4_a.eyes` (theirs, beside, link)
+- `ans.squad4_b.goat` (you, dog, ramen)
+- `ans.squad4_b.beetle` (never, little, yes)
+- `ans.squad4_b.test` (easy, hard, dog_food)
+- `ans.squad4_b.dog_hurt` (right, sit, bravest)
+- `ans.squad4_c.bruise` (rival, falling, camps)
+- `ans.squad4_c.medic` (yes, like_you, better)
+- `ans.squad4_c.forest` (worse, can_fight, ask)
+- `ans.squad4_c.herb` (medicine, poison, hand)
+- `ans.squad4_c.second` (yes, if_wants, someone_else)
 - Token: `{pet:squad4_b}` (the ninken's rolled name)

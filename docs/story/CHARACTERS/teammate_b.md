@@ -153,6 +153,9 @@ Voice samples, not shipped lines:
 | `ans.teammate_b.loud` (new) | Genin hangout, rooftop race (L3) | "Am I too loud? Grandma says I'm too loud." | yes, and don't stop / sometimes / you're as loud as you need | freedom, kindness | Ch 33 (captain's voice) | Whether they learn quiet or keep the noise as theirs |
 | `ans.teammate_b.cloak` (new) | Ch 26 *nearly* or *left* return | "What would you have done if I'd put it on?" | come after you / let you go / put one on too, to drag you out | loyalty | Ch 51 (if the parent offers b a cloak again, b answers with yours) | |
 | `ans.teammate_b.parent_hate` (new) | Jonin, level 7 talk (worries), after Ch 40 | "The village erased a whole clan and called it peace. Maybe my parent wasn't wrong to leave." | they weren't wrong to be angry / they were wrong to leave you / both | honesty | Ch 51 parent scene (b quotes you) | Lets b grant the parent's grievance without excusing them |
+| `ans.teammate_b.squad4` (new) | Genin, after a squad4_b brawl (L3) | "squad4_b says their dog's braver than mine. Settle it." | yours / theirs / have a race and find out | playful, filler with payoff | Ch 33 (a race at the Jonin promotion), Ch 51 (the two dogs side by side) | A rivalry that keeps b anchored to the village |
+| `ans.teammate_b.grandma` (new) | Life event: the grandmother sick (L4) | "If she goes, I've got nobody. Don't say I've got you, that's cheesy." | you've got me anyway / you've got the squad / you've got the pup, at least | family | Ch 26 (on the *nearly* path, your answer is what stops them at the well) | Who b counts as family |
+| `ans.teammate_b.stranger_face` (new) | Ch 49, after the second's truth (L6) | "She knew my parent. Should I ask her about them, or is that like forgiving her?" | ask her, knowing isn't forgiving / don't, it's hers to offer / I'll come with you | honesty | Ch 51 (b knows the parent's side, or not, before the meeting) | Prepares b for Ch 51 |
 | `ans.teammate_b.after` (new) | Ch 54 Morning | "So. Now what?" | ramen / sleep for a week / go see your grandmother | warm, filler | Epilogue | Last shared ritual |
 
 ### What their lines are for
@@ -187,6 +190,9 @@ reconciliation; on *left*, until the return quest.
 ## New flags
 
 - `ans.teammate_b.pup_name` (food / jutsu / player_choice / pup) and the token `{pet:role:teammate_b}` (request to dialogue session)
+- `ans.teammate_b.squad4` (yours / theirs / race)
+- `ans.teammate_b.grandma` (me / squad / pup)
+- `ans.teammate_b.stranger_face` (ask / wait / come_with)
 - `ans.teammate_b.loud` (dont_stop / sometimes / as_needed)
 - `ans.teammate_b.cloak` (come_after / let_go / drag_out)
 - `ans.teammate_b.parent_hate` (angry_ok / wrong_to_leave / both)

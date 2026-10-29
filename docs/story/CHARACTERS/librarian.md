@@ -171,6 +171,10 @@ goes out.
 | `ans.librarian.name` | Level 6 | "If you found out your family had another name once, would you take it back?" | Yes / No, I'm who I've become / I'd carry both | The heart of her and of the player's future | Ch 46 (the house's founding) | "Both": she proposes the restored house keep the renamed families' Leaf names beside the old one | "He said I could have it back. I wanted it so much I didn't ask the price." |
 | `ans.librarian.fire` | Level 7 (Chunin) | "Is it ever right to burn something to make people see it?" | Never / Only your own things / Sometimes nothing else works | Tests her secret creed ("even by fire") | Bound: Ch 39 opens with it. Innocent: Ch 51 (she saves the library's histories from the fire) | Innocent: if "sometimes", she worries for the player and warns the keeper about Yūgure's interest in the archive | "You said never. You were right and I wasn't listening." |
 | `ans.librarian.song` | Ch 25.3 (innocent) or level 6 (bound, Ch 26 to 32) | "Will you sing it for me? Just once, so I know it's real." | Sing / Not yet / Teach me the words first | Kindness | Innocent: she sings with the player at the memorial (Ch 41). Bound: she sings it alone in her cell (heard in Ch 54) | — | "I asked you to sing it so I could tell him how it sounded. I didn't. I kept that one." |
+| `ans.librarian.read` | Ch 5 (level 0) | "Can you read well? Some children from... far away never had the chance." | Yes / a little / they taught us numbers, not words | Kindness; "numbers" is the nurseries (identical line in both tracks) | Her book gifts are pitched to the answer; Ch 39 (bound): "You told me they taught you numbers. I knew which number" | "A little": she starts a reading hour the player can attend (life, studied_together) | — |
+| `ans.librarian.shelf` | Level 2 | "If someone wrote a book about you, which shelf would it go on?" | Adventures / history / the lost-and-found box / it isn't written yet | Imagination | Epilogue: her history of the Leaf (innocent) or a bound copy she sends from her cell (bound) shelves the player's chapter there | — | — |
+| `ans.librarian.circle` | Level 3 (after Ch 7) | "If someone had put a little circle by your name, meaning 'needs more', would you want to know?" | Yes / no / only if they'd help | Honesty; identical in both tracks before Ch 39 | Innocent: she shows the player their own aptitude scroll, with a circle (Ch 40). Bound: Ch 39, the circle beside S-114's shelf mark on the list | — | — |
+| `ans.librarian.who_sang` | Level 4 (Paper Trail) | "Who sang to you when you were small? Everyone has someone." | I don't remember / someone in a house with a tree / no one | Her own grandmother; a small confession back ("Mine did. Once") | Ch 25.3 (innocent): she starts with it. Bound: Ch 39c | "A tree": she goes very still (both tracks; a fair tell of her heritage, not of the voice) | — |
 
 ### What their lines are for
 
@@ -191,4 +195,4 @@ goes out.
 ## New flags
 
 `ans.librarian.book`, `ans.librarian.history`, `ans.librarian.lie`, `ans.librarian.name`,
-`ans.librarian.fire`, `ans.librarian.song`, `bond_flag notebook_secret`, `story.ch25.done`.
+`ans.librarian.fire`, `ans.librarian.song`, `bond_flag notebook_secret`, `story.ch25.done`, `ans.librarian.read`, `ans.librarian.shelf`, `ans.librarian.circle`, `ans.librarian.who_sang`.

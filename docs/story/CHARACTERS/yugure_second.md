@@ -89,7 +89,7 @@
    leader's own reports and could not stay away.
 6. **Ch 48:** At the persimmon house's ruins she waits, unarmed. The halves fit.
 7. **Ch 52:** She shields the player as a mother.
-8. **Ch 53:** Lives (rekindled) or dies at dawn with both halves of the charm in her hand.
+8. **Ch 53:** Lives (by the gate above) or dies at dawn with both halves of the charm in her hand.
 
 ### Lineage B track (the fallen Leaf shinobi was the player's parent)
 
@@ -103,7 +103,10 @@
 6. **Ch 49:** She tells the council the plan. She tells the player about her son once, flatly,
    and never again.
 7. **Ch 52:** She shields the player as a debt to her son.
-8. **Ch 53:** Lives (rekindled) or dies at dawn; the player can lay her under the persimmon tree.
+8. **Ch 53:** Lives (by the gate above) or dies at dawn; the player can lay her under the persimmon tree.
+
+(In both lineages `fallen_parent` also had a child "lost" after the Ash Road ambush: in A that
+child truly died, in B it is the player. She does not know of it; it never touches her lines.)
 
 ### Her thread (Thread Sight)
 
@@ -120,9 +123,12 @@ She has a bond with the player from Ch 13 (level 0, met at the bridge if the pla
 While she is an enemy it grows only through story moments, never talk or gifts: sparing (Ch 16),
 the warning (Ch 27), the memorial conversation (Ch 41). **Her bond levels open properly from
 Ch 41**, and conversation and hangouts only after her defection (Ch 48 in A, Ch 49 in B), when she
-lives under the Seventh's watch at the shrine. Her questions below are spaced so a player who
-spends time with her between Ch 49 and Ch 52 can reach level 4 (the Ch 53 survival gate) without
-grinding: two shared experiences (the anchor hunt, a meal) and one moment (her questions 3 or 4).
+lives under the Seventh's watch at the shrine. The Ch 49 truth scene gives a `shared_moment bond.second.truth`; with the
+anchor hunt and the last meal (two shared experiences) a player who spends time with her between
+Ch 49 and Ch 52 reaches level 4 (the Ch 53 survival gate) without grinding.
+
+**She lives in Ch 53** if any of: `friendship [yugure_second, 4]`, `bond_web 40`, or `squad4_c`'s
+kindled healing (`friendship [squad4_c, 6]`). Otherwise she dies at dawn.
 
 ## Dialogue brief
 
@@ -187,6 +193,11 @@ grinding: two shared experiences (the anchor hunt, a meal) and one moment (her q
 | `ans.yugure_second.after` | Ch 50, the last night before Dusk | "When this is over, where does someone like me go?" | your house (with me), the shrine, wherever you want, away from here | Freedom vs family | Epilogue (if she lives): where she is | Sets her epilogue home |
 | `ans.yugure_second.call` | A only, Ch 49 or 50, a hangout | "What do I call you? Not the number. Not the name they gave you. What do *you* want?" | my name ({player}), whatever you called me before, you choose | Family | Her form of address for the rest of the game | If "whatever you called me before": she uses a soft baby-name she gave the child (an authored nickname, the only one in the game; dialogue session writes one Japanese diminutive, not a real name) |
 | `ans.yugure_second.son` | B only, Ch 49 or 50 | "Would you have liked him? My son?" | yes, I'd have looked out for him, tell me about him | Kindness / family | Epilogue: if she lives and "tell me", she tells one story about him at the shrine; if she dies, the player finds his name carved small on the stone basket | Her one moment of warmth in B |
+| `ans.yugure_second.cloaks` | Ch 49, after the truth scene (the `shared_moment bond.second.truth`) | "When you were in the cells, were you afraid of us? Of the cloaks?" | yes, not of you (you spared me), I was afraid of everyone | Honesty | Ch 52.4: if "not of you", her last look before the mirror is relief | "Afraid of everyone" makes her ask the next questions more gently |
+| `ans.yugure_second.b_sorry` | Ch 49 or 50, after she sees teammate_b | "Your friend. The one I lured on the bridge. If I say I'm sorry, is that for them or for me?" | for them, for you (and that's allowed), say it anyway | Honesty / kindness | Ch 51.3: if she apologised (any answer leads her to; "say it anyway" makes her do it before Dusk), b mentions it to their parent | She says "I'm sorry" for the first time in the game, to b |
+| `ans.yugure_second.thread` | Ch 50, when the player looks at her with Thread Sight | "You're looking at me the way he never did. What do you see?" | a thread to me, a thread to the swordsman, a thread that's still tying | Honesty | Ch 52.4 (the thread the mirror tears); Ch 53.6 (if she lives: "Is it still there?") | "A thread to me" in B makes her tell the player about her son if not already asked |
+| `ans.yugure_second.recruits` | Ch 50, during the anchor hunt | "I recruited children for him. Some are in the cells you emptied. Should their families hear it from me?" | yes, from you; let the archive tell them; after the war | Duty / honesty | Epilogue (if she lives): she visits the Valley children's families, or not | "From you" adds a `side.r.second_amends` quest to the post-game |
+| `ans.yugure_second.table` | Ch 50, the last meal before Dusk (level 3+) | "What does a family eat together here? I've forgotten how it goes." | ramen (your order), whatever I cook, anything, as long as we sit | Family | Epilogue: what she eats at the house's table; if she died, the player sets that bowl at her grave on the Ash Road anniversary | — |
 
 ### What her lines are for
 
@@ -217,3 +228,8 @@ grinding: two shared experiences (the anchor hunt, a meal) and one moment (her q
 - `ans.yugure_second.after` (house, shrine, anywhere, away)
 - `ans.yugure_second.call` (A only: name, before, you_choose)
 - `ans.yugure_second.son` (B only: yes, looked_out, tell_me)
+- `ans.yugure_second.cloaks` (yes, not_you, everyone)
+- `ans.yugure_second.b_sorry` (for_them, for_you, say_it)
+- `ans.yugure_second.thread` (to_me, to_blade, tying)
+- `ans.yugure_second.recruits` (from_you, archive, after)
+- `ans.yugure_second.table` (ramen, i_cook, sit)

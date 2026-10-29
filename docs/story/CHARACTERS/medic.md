@@ -138,6 +138,10 @@ Voice samples, not shipped lines:
 | `ans.medic.crane` | Level 6, a dango hangout | "I fold one for every patient. Want to fold one for someone?" | for the lost girl / for my teammate / for me | — | Ch 47 or N6: the crane is on her pillow | — |
 | `ans.medic.lost_child` | Ch 25 (after Ch 24) | "She was hollow. Do you think she can come back?" | yes, I'll bring her / I don't know / not without help | Kindness | N6 / Ch 47 | Bound: the question is their confession in disguise |
 | `ans.medic.ruling` | Ch 55 (bound and arrested) or Ch 40 (innocent) | Bound: "What should happen to me?" Innocent: "Would you have believed it, if it was me?" | Bound: pardon / service / exile. Innocent: yes / no / I'd have checked first | Honesty | Bound: weighs on the Ch 55 ruling | — |
+| `ans.medic.sleep` | Ch 4 aftermath (fatigue), level 1 | "How many hours did you sleep? Lie and I'll know." | the truth / round up / I don't sleep well since the camps | Honesty | Ch 21 (they ask again, a year later, and compare) | "The camps": they give you a tea that helps (a small Well Rested item) |
+| `ans.medic.records` | Ch 12 to 14, level 3 | "Should records ever be private from the people they're about?" | never / sometimes, to protect them / only if they ask | Knowledge, duty | Ch 38 (they open your file to you at the case board, every save) | — |
+| `ans.medic.too_late` | Ch 20 (after the stadium), level 4 | "I was too late for someone today. What do you do with that?" | you carry it / you put it down / you tell someone, like now | Comfort (a hard-news response) | Ch 51 (they say your words back to you over a wounded friend) | Counts as `comfort` for the bond gate |
+| `ans.medic.strangers` | Level 7 (innocent: Ch 40; bound: before Ch 39 as a half-confession) | "If you found the people who saved you were bad people, would you still be grateful?" | yes / no / for that one day, yes | Tests their secret | Bound Ch 39c; innocent Ch 40 (the outpost letters) | Innocent: they burn the letters, or keep them, by your answer |
 
 ### What their lines are for
 
@@ -163,3 +167,7 @@ Voice samples, not shipped lines:
 - `ans.medic.crane` (lost_child, teammate, self)
 - `ans.medic.lost_child` (yes, unknown, help)
 - `ans.medic.ruling` (bound: pardon, service, exile; innocent: yes, no, checked)
+- `ans.medic.sleep` (truth, round_up, camps)
+- `ans.medic.records` (never, protect, ask)
+- `ans.medic.too_late` (carry, put_down, tell)
+- `ans.medic.strangers` (yes, no, that_day)

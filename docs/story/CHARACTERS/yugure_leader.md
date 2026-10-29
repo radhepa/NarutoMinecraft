@@ -152,6 +152,12 @@ the wick; every question is also him reading them.
 | `story.finale.reached` | Ch 52.3 | (The offer: "Take it from me instead.") | refuse, reach for it | The dark mirror | Epilogue line: "You reached, and came back" | If reached, he smiles: "There. You see?" The vision plays; the player lets go either way |
 | `ans.yugure_leader.why_fear` | Ch 52.2 (player asks him; optional) | (Player: "Why did they fear us?") | ask, don't | — | If asked, the Valley story; in Ch 54 the player can tell the Seventh "It was one man, his uncle" (a council line) | Asking makes him tell the truth about his uncle, the one thing he is ashamed of |
 | `ans.yugure_leader.song` | Ch 53.5 (only if `story.finale.offered_leader`) | "Do you know how it ends? The song. I lost the last line somewhere in the hills" | sing it, hum it, stay silent | Family / memory | Epilogue: if sung, the last image's caption is the line; if silent, the leader's grave (if any) has no words | Sung: he sings it with you and dies at peace. Hummed: he finds the words himself and says "Ah. That's it." Silent: he hums two lines and stops |
+| `ans.yugure_leader.feel` | Ch 51.6, through the array (the player climbing) | "Can you feel them? Which one is loudest?" | my squad, my sensei, all of them, none (I'm blocking you out) | Family | Ch 53.2: the loudest the player named kindles first, before the fixed order | "None" annoys him: the only time his voice sharpens |
+| `ans.yugure_leader.climb` | Ch 51.6 | "Why climb, little flame? You could run. I'd let you, for an hour." | to stop you, to see you, because they're down there | Courage | Ch 52.1: his greeting | "To see you" makes him tell his story at more length (52.2 opens all five topics) |
+| `ans.yugure_leader.cells` | Ch 52.2 | "Do you remember the cells at all kindly? I tried to make them kind. Warm food. No beatings." | no; the girl next door; the food was warm | Honesty | Ch 53.5: if "the girl", he asks after her ("Did she come home?") and the answer reads `story.lost_child.home` | — |
+| `ans.yugure_leader.threads` | Ch 52.2, if the player opens Thread Sight on him | "You're looking at me strangely. What do you see?" | nothing; you're alone; an old man | Honesty | 53.5: "You said I was alone. You were the first to say it" (if "alone") | It is the line that makes him falter for the first time |
+| `ans.yugure_leader.why_given` | Ch 53.4, as the fire refuses him | "Why would they give it to you? What did you promise them?" | nothing; I asked; I didn't even ask | Theme | Epilogue caption: "They gave it because they wanted to" / "because you asked" / "before you asked" | — |
+| `ans.yugure_leader.remember` | Ch 53.5 | "Will anyone remember us? The Kagari?" | I will; the stone will; my house will | Memory | Ch 54.3 (the name choice is framed by it); epilogue | Whatever the answer, he believes it, and that is how he dies |
 
 ### What his lines are for
 
@@ -181,3 +187,9 @@ the wick; every question is also him reading them.
 - `ans.yugure_leader.forgive` (yes, never, remember)
 - `ans.yugure_leader.why_fear` (asked, not_asked)
 - `ans.yugure_leader.song` (sing, hum, silent)
+- `ans.yugure_leader.feel` (squad, sensei, all, none)
+- `ans.yugure_leader.climb` (stop, see, them)
+- `ans.yugure_leader.cells` (no, girl, food)
+- `ans.yugure_leader.threads` (nothing, alone, old_man)
+- `ans.yugure_leader.why_given` (nothing, asked, didnt_ask)
+- `ans.yugure_leader.remember` (i_will, stone, house)

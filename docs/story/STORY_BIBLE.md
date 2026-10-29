@@ -43,6 +43,12 @@ canon characters appear only as cameos.
 - **All text uses tokens** (`{name:role:sensei}`, `{hokage:4}`, `{twist:traitor}`), never a literal
   name; pronouns of rolled-look roles are tokens too ([WORLD.md](WORLD.md#conventions)).
 
+## Keys read by tools
+
+Lines other sessions' checkers parse. Keep the key names stable.
+
+- **creator.reserved_family_names**: Kagari
+
 ## Twist slots
 
 | Slot | Candidates | Bound at | Revealed |

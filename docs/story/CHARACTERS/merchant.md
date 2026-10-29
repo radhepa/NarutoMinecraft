@@ -145,6 +145,11 @@ bandit story (innocent: and the flicker goes out; bound: it stays, because there
 | `ans.merchant.debt` | Level 4 | "Would you borrow from someone you didn't trust, if it was that or lose everything?" | No / Yes, and pay it back fast / I'd ask a friend first | Tests their secret | Ch 39 or 40 | "Ask a friend": in the innocent track, they ask the player for help with the debt (a side quest) instead of the lender | "I didn't have a friend to ask. Then I did, and it was too late." |
 | `ans.merchant.cargo` | Level 5 (Chunin) | "If you found out what you were carrying hurt someone, would you put it down, even if it ruined you?" | Yes / I'd find out who it hurt first / I'd carry it somewhere safe instead | The heart of both tracks | Ch 39 opens with it (bound); Ch 40 (innocent: "I put it down") | Innocent: "put it down": they come forward about the threat a chapter early (Ch 27) | "You said yes. I said yes too. I just never said it out loud." |
 | `ans.merchant.home` | Level 6 | "Where's home, for someone always on the road?" | Wherever you eat / the people / here | Kindness | The shop's sign (innocent), their cell's one request (bound: a window facing the market) | — | — |
+| `ans.merchant.haggle` | Ch 11 (level 0) | "Go on, haggle me. Everyone haggles. Ten ryo for an apple, what do you say?" | Five / ten, it looks like a good apple / I'll carry the crates for it | Life, freedom | Every later sale: their running joke price | "Carry the crates": they call the player "partner" thereafter | — |
+| `ans.merchant.mule` | Level 2 (after Ch 14) | "I've got a new mule. Name her." | A food name / a Hokage's name / Partner | Life (filler) | They use the name forever; Ch 39 or 40 (the mule in the rain or at the new shop) | — | — |
+| `ans.merchant.rich` | Level 3 | "If you were rich, what's the first thing you'd buy?" | A real bed / ramen for everyone / a door with a lock / nothing, I'd save it | Their dream (the shop) | Innocent: the shop's first sale. Bound: Ch 39 | — | "I'd have bought a roof. I bought a cart with a floor under the floor." |
+| `ans.merchant.bandit` | Level 5 (Chunin) | "Do you think a bandit can become an honest man? Asking for a friend." | Yes / only if he pays it back / he already is, if he's asking | Their every-save secret (the old bandit smuggling); identical in both tracks | Level 7 confession of the smuggling; Ch 39c or Ch 40 | "Already is": they confess the bandit years at level 6 instead of 7 | "You said I already was, if I was asking. I stopped asking." |
+| `ans.merchant.scared` | Level 4 (on a road mission) | "What do you do when you're scared on a road?" | Sing / count steps / keep talking, like you / walk closer to my friends | Kindness | Ch 51 (both tracks reach a scene in the war: innocent, they drive supplies; bound and turned, the false cargo) they do what you said | — | — |
 
 ### What their lines are for
 
@@ -153,6 +158,16 @@ bandit story (innocent: and the flicker goes out; bound: it stays, because there
 - **Mood states:** `chatty` (default), `nervous` (eastern roads, Chunin arc), `relieved` (innocent
   after Ch 40), `ashamed` (bound after Ch 39).
 - **Pools:** `npc.merchant.*`, `talk.q.merchant.<topic>`, `story.ch25.note.merchant.<bound|innocent>`.
+
+### Board chains (missions session)
+
+After Ch 14 the merchant posts a weekly chain on the board (`mission.c.escort_merchant`,
+`mission.c.caravan_guard`). **No bound-only clue steps before Ch 39.** Each run may include one
+neutral camp step identical in every save: the merchant shows the delivery book again (the notation
+stays in view) or talks about the roads. The every-save flicker applies to Thread Sight as above.
+After Ch 40, an innocent merchant's chain becomes the **informant chain** (road gossip, waystation
+contacts, trail drops). After an arrest the chain ends; a turned merchant's chain is suspended
+(they are running false cargo).
 
 ### Variants
 
@@ -166,4 +181,4 @@ bandit story (innocent: and the flicker goes out; bound: it stays, because there
 ## New flags
 
 `ans.merchant.food`, `ans.merchant.pace`, `ans.merchant.road`, `ans.merchant.debt`,
-`ans.merchant.cargo`, `ans.merchant.home`.
+`ans.merchant.cargo`, `ans.merchant.home`, `ans.merchant.haggle`, `ans.merchant.mule`, `ans.merchant.rich`, `ans.merchant.bandit`, `ans.merchant.scared`.

@@ -113,6 +113,11 @@ it until Ch 40, and when she learns it, it is the worst day of her life).
 | `ans.hokage_5.wrong` | Ch 32 to 40, a visit to her after she steps down | "Was I wrong to be afraid? Or only wrong in what I did?" | wrong to be afraid, only in what you did, neither | Honesty; "only in what you did" honours her duty | Ch 40: she stays at the council; Ch 51.1 | "Only in what you did" lets her come back to serve; "wrong to be afraid" makes her train sensors to look for help, not threats (a line in Ch 51) |
 | `ans.hokage_5.hyuga` | Ch 40, after the council | "My uncle walked out. Should the Hyuga apologise too? We were in that valley. We were on that council." | yes, it's not your crime, only if you mean it | Family vs honesty | Ch 51.1 (she fights beside the Tobari; if "yes", the Hyuga main house sends its sensors to the wall) | Moves `clan_relation hyuga` with the village and the Tobari |
 | `ans.hokage_5.beside` | Ch 51.1 | "Will you let me fight beside you? I owe you a wall." | yes, you owe the Tobari not me, go where you're needed | Loyalty | Ch 55: she stands at the inauguration on the player's left or with the Tobari | — |
+| `ans.hokage_5.lean` | Ch 22.2, after the word | "Your chakra leans toward your sensei when you are afraid. Do you know why?" | they saved me; I don't know; does yours lean toward anyone? | Honesty; the last tests her | Ch 31.4: if asked about hers, she answers it there: "Toward my niece. I never told her" | Asking makes her human in the player's eyes earlier (a `squad4_a` line about it later) |
+| `ans.hokage_5.curfew` | Ch 25 to 30, the first night-pass request | "You requested a night pass. For what?" | training; a friend; I don't owe you that | Honesty vs freedom | Ch 31.3 (the council hears whether the player ever lied to her) | "I don't owe you that" makes her deny the pass and respect the answer |
+| `ans.hokage_5.successor` | Ch 31.4 | "Who should come after me? You may answer. Hyuga do not usually ask." | the Yamanaka, your Jonin Commander, someone who isn't afraid | Duty | Ch 32.1: she names the Sixth either way, but quotes you if "isn't afraid" ("I was told someone who isn't afraid. He is afraid of nothing but lying") | — |
+| `ans.hokage_5.niece` | Ch 32 to 40, a visit | "My niece still follows you, off duty now. Should I worry?" | no, she's my friend; she's better than her orders were; ask her | Family | `squad4_a`'s own arc (her aunt's blessing or worry) | "Ask her" makes the Fifth talk to her niece, a reconciliation in their house |
+| `ans.hokage_5.face` | Ch 55, at the inauguration | "Will you keep my face on the Rock? After what I did?" | yes; yes, with the Tobari's story beside it; it isn't mine to decide | Duty / honesty | Epilogue: a plaque beside her face, or nothing | — |
 
 ### What her lines are for
 
@@ -137,3 +142,8 @@ it until Ch 40, and when she learns it, it is the worst day of her life).
 - `ans.hokage_5.wrong` (afraid, what_you_did, neither)
 - `ans.hokage_5.hyuga` (yes, not_your_crime, mean_it)
 - `ans.hokage_5.beside` (yes, tobari, needed)
+- `ans.hokage_5.lean` (saved_me, dont_know, yours)
+- `ans.hokage_5.curfew` (training, friend, dont_owe)
+- `ans.hokage_5.successor` (yamanaka, commander, unafraid)
+- `ans.hokage_5.niece` (friend, better, ask_her)
+- `ans.hokage_5.face` (yes, tobari_plaque, not_mine)

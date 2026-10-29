@@ -87,6 +87,11 @@ truth to a village that cannot bear it, and break it.
 | `ans.hokage_6.names` | Ch 40.1 | How much to say at the council | everything, all_but_names, families_decide | Honesty vs kindness | Ch 46 recruitment; the `side.j.roots` wave | Shapes the council speech |
 | `ans.hokage_6.flower` | A hangout or talk at `friendship 4`, Jonin arc | "If you had to apologise to someone with one flower, which would you send?" | something honest and plain, something beautiful, I'd go myself | Honesty / kindness | Ch 40.2: he wears the flower your answer suggests when he speaks to the clan heads; Ch 42: he sends you that flower | — |
 | `ans.hokage_6.leave` | Ch 42.1 | "Will you think less of me for leaving?" | no, a little, I'd think less if you stayed | Honesty | Ch 51: at the Academy, "You said ___. I'm teaching. It turns out that's what I'm for" | "I'd think less if you stayed" makes him laugh out loud for the only time |
+| `ans.hokage_6.rumour` | Ch 33, after the review | "The rumours about your blood. Shall I stop them, or will you answer them yourself?" | stop them; let me answer; let them talk | Honesty vs kindness | Ch 40.2 (whether the council has heard the player speak before) | "Let me answer" gives the player a small extra testimony line in Ch 40 |
+| `ans.hokage_6.letter` | Ch 36.7, after the Third's letter | "She asked whoever came to say it for her. Will you, or shall I?" | you; me; together | Duty | Ch 40.2: who speaks first at the council | — |
+| `ans.hokage_6.certain` | Ch 38.6, before the accusation (if the player brings it to him) | "Are you certain? Certain enough to ruin them if you're wrong?" | yes; no, but I have to; help me be sure | Honesty | Ch 40.3: if an innocent was accused after "help me", he shares the blame publicly | "Help me" lets him point out one missing proof (a hint, not the answer) |
+| `ans.hokage_6.last_line` | Ch 41, before the unveiling | "The memorial needs a last line under the names. What should it say?" | their names were theirs; we did this; come home | Theme | The memorial's inscription for the rest of the game | — |
+| `ans.hokage_6.children` | Ch 51.2, at the Academy | "What do I tell the children is happening?" | the truth; that we're keeping them safe; a story | Kindness / honesty | Epilogue: an Academy child repeats what he told them | — |
 
 ### What his lines are for
 
@@ -112,3 +117,8 @@ truth to a village that cannot bear it, and break it.
 - `ans.hokage_6.read` (yes, no, ask)
 - `ans.hokage_6.flower` (honest, beautiful, go_myself)
 - `ans.hokage_6.leave` (no, a_little, if_stayed)
+- `ans.hokage_6.rumour` (stop, answer, let_talk)
+- `ans.hokage_6.letter` (you, me, together)
+- `ans.hokage_6.certain` (yes, have_to, help_me)
+- `ans.hokage_6.last_line` (theirs, we_did, come_home)
+- `ans.hokage_6.children` (truth, safe, story)

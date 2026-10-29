@@ -115,7 +115,7 @@ role traits:
 | Role | Fixed trait | Arc in one line |
 |---|---|---|
 | `genin_1` | If `ans.player.ch0.freed_boy = freed`, he is the boy from the third cell, grown (fixed male, fixed look then); else rolled | Wants to be like the person who opened his door; learns to open doors for others (he leads the Academy children out in Ch 51.2) |
-| `genin_2` | A Valley of Ash child if `story.clue.list_found`? no: a rolled clan or clanless child, the team's loud one | Wants to beat the other two; learns the bell test's lesson from your test |
+| `genin_2` | A rolled clan or clanless child; the team's loud one | Wants to beat the other two; learns the bell test's lesson from your test |
 | `genin_3` | A Kagari descendant with a faint sealed flame (`story.seed.genin_flame`) | Afraid of what they are once they know; the Undercroft targets them in N5 if the player refuses; in Ch 53 their flame is one of the first to kindle toward you |
 
 **Voice.** Genin energy: arguments, eating, competing for your attention (jealousy is live: the

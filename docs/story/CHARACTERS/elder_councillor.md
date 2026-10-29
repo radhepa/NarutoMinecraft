@@ -152,6 +152,10 @@ The Ch 31 vote is a soft divergence: either way he ends voting with the player.
 | `ans.elder_councillor.fear` | Ch 31 (after the testimony, level 5) | "What should a council fear most?" | Its enemies / its own people / being wrong out loud | Duty | Ch 40 | "Being wrong out loud": he is the first to stand in Ch 40 | "I feared being wrong out loud. So I was wrong in letters." |
 | `ans.elder_councillor.pine` | Level 2 | "Do you know why my seal is a pine? Guess." | It lives a long time / it stays green / you like pine nuts | Life (filler with a payoff) | Ch 55: he answers it ("Pines grow where the old trees burned.") | — | — |
 | `ans.elder_councillor.vote` | Ch 40 (innocent, before the council) | "If I stand up first, will you stand second?" | Yes / I'll stand first / Stand alone; it's yours to do | Loyalty | Ch 40.2 staging | Who speaks first at the council | — |
+| `ans.elder_councillor.flat` | After Ch 1 (level 1) | "Is the flat in good order? Anything broken, anything missing?" | It's perfect / the door sticks (fixed already) / it's lonely | Duty, kindness; "lonely" is a small confession | Ch 25 hospital visit line (both tracks): he asks about the flat again | "Lonely": he sends a potted pine for the sill (a furniture keepsake) | — |
+| `ans.elder_councillor.change` | Paper Trail, after council day (level 3) | "If you sat on the council, what would you change first?" | The stipend / who gets heard / nothing, I'd listen first | Duty | Ch 40: he recalls it voting | "Who gets heard": the Chunin testimony rule (Ch 31) is his proposal, credited to the player | — |
+| `ans.elder_councillor.proud` | Level 4 | "Is there someone you'd want to be proud of you? Living or not." | The captain / the girl from the cell / my parents, whoever they were / no one | Family; opens his grandfather story | Ch 39 or 40 | — | — |
+| `ans.elder_councillor.clans` | Embers, level 5 (after Ch 30) | "Which part of the village do you think the council hears least?" | The minor clans / the civilians / the orphans / the Tobari, this month | Duty against fear | Ch 31 vote | "The Tobari": he speaks against the lockdown before the testimony | — |
 
 ### What their lines are for
 
@@ -166,11 +170,10 @@ The Ch 31 vote is a soft divergence: either way he ends voting with the player.
 - Identical in Classic and Varied; name rolled, family name Senju.
 - `twist.traitor = elder_councillor`: the bound track. Note the rotation matrix's watch item: with
   `twist.lineage = fallen`, the reveal adds the Ash Road line.
-- A clan-born Senju player: he is kin; his Ch 1 line adds "and you are ours twice over", and the Senju
-  line's Heart step is personal.
+- The player is always a clanless orphan: his Ch 1 kindness is to a stranger in every save.
 
 ## New flags
 
 `ans.elder_councillor.stipend`, `ans.elder_councillor.debt`, `ans.elder_councillor.law`,
 `ans.elder_councillor.sign`, `ans.elder_councillor.fear`, `ans.elder_councillor.pine`,
-`ans.elder_councillor.vote`.
+`ans.elder_councillor.vote`, `ans.elder_councillor.flat`, `ans.elder_councillor.change`, `ans.elder_councillor.proud`, `ans.elder_councillor.clans`.

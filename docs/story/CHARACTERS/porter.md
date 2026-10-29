@@ -116,6 +116,8 @@ with him afterwards (`ans.porter.after = now`), his thread at 6+ is clear and st
 | `ans.porter.heavy` | Level 2 | "What's the heaviest thing you've ever carried?" | Someone / a secret / nothing yet | Ch 28 | "Someone": he says "Me too" and doesn't explain (the children in carts) |
 | `ans.porter.end` | Ch 28.4 | (Hold him while it burns / call for the medic / ask one more question) | hold, medic, ask | Epilogue: "Doors should open for you" if held | Held: he keeps the feeling of the player after the burn; his post-28 greeting to the player is warmer |
 | `ans.porter.after` | After Ch 28, level 1 (re-met) | "Did we know each other? You look at me like we did." | Yes, you were kind to me / No / We will now | Shrine scenes, epilogue | "We will now" restarts his bond at 1 and lets it grow (a new friendship with the man he became) |
+| `ans.porter.carry` | Ch 4 (stairwell, level 1) | "Want to take the other end? It's a basin. It's heavier than it looks." | Help / not today | Kindness; a small shared act (`favor`) | After Ch 28 he asks again, and if you helped then: "I feel like we've done this" | Helping keeps his level at 3 by Ch 28 (never 6) |
+| `ans.porter.shrine` | After Ch 28, level 2 (at the shrine) | "Do you think the people who lived here were happy, once?" | Yes, before / they will be again / I don't know | Grace | Ch 46: he sweeps the restored shrine and repeats the answer to new members | — |
 
 ### What their lines are for
 
@@ -133,4 +135,4 @@ with him afterwards (`ans.porter.after = now`), his thread at 6+ is clear and st
 
 ## New flags
 
-`ans.porter.home`, `ans.porter.family`, `ans.porter.heavy`, `ans.porter.after`.
+`ans.porter.home`, `ans.porter.family`, `ans.porter.heavy`, `ans.porter.after`. Also: `ans.porter.carry`, `ans.porter.shrine`.

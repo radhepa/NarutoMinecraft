@@ -214,7 +214,7 @@ She never speaks of `fallen_parent`'s home life or family before Ch 48.
 | 2 Paper Trail | Ch 10: at the memorial stone at dusk with the player's sensei; they stand two metres apart and do not speak. The player sees it |
 | 3 Dusk | In the forest, she is a proctor at a tower gate; she lets the player's squad rest an hour longer than the rules allow (a kindness the player can notice) |
 | 4 Embers | Ch 25: after the sensei tells her, she seeks out the player once: "He told you? Then you know I left." |
-| 5 Ashes | Ch 36: reads the sealed report with the sensei; on the Rock afterwards they finally talk (offscreen if the player stayed with the keeper, onscreen if the player followed). She asks the sensei to blame her, and they refuse, and then they say "I was angry you went. I was glad you lived." It is enough |
+| 5 Ashes | Ch 36.6: stays when the sensei walks out, reads the report twice, and says the thing she has never said: "They sent me back so I'd live. I've been angry at them for eight years for it." Later, on the Rock, the two finally talk (onscreen if the player followed the sensei, told by her afterwards if the player stayed). She asks the sensei to blame her; they refuse, then say "I was angry you went. I was glad you lived." It is enough |
 | 7 Last Bonfire | Ch 51.2: her genjutsu hides the Academy's evacuation, a whole grove over the streets; she stays behind in the illusion until the last child is out. She is spared again, and this time she lets herself be |
 
 **Endings.** She lives. Epilogue: she and the sensei leave persimmons at the stone together.
@@ -271,6 +271,11 @@ Voice samples, not shipped lines:
 | `ans.sensei_3.flower` | Level 3 | "Which flower should I press for you?" | Persimmon blossom / Rose / A weed from the training ground | Kindness | She gives it; it is in your apartment as a keepsake | — |
 | `ans.sensei_3.say_it` | Ch 41 (at the memorial) | "Is there anyone on this stone you'd say something to?" | The girl's family / My parent, whoever they were / Nobody yet | Grief | Ch 54: she stands with you at the stone and says it with you | — |
 | `ans.sensei_3.squad` | Level 6, Jonin arc | "If one of mine froze, and someone got hurt, would you tell them it wasn't their fault?" | Yes / No, I'd tell them it's how they learn / I'd tell them I froze once too | Kindness | Ch 51: what she says to squad3_a when the gate falls | squad3_a's growth line |
+| `ans.sensei_3.festival` | Level 2, the Leaf Festival (Beta 2) | "Do you like festivals, or do you like watching them?" | Being in them / Watching / Watching with someone | Kindness | Her greetings at every festival after; Ch 54's epilogue festival ("With someone, you said. I'm trying it") | Seeds her "bored with him, at festivals" dream |
+| `ans.sensei_3.angry` | Ch 36, after her line | "Is it wrong to be angry at someone for saving you?" | No / Yes, but it's human / Tell them, then decide | Honesty with herself | The Rock talk: what she says first to the sensei | "Tell them" makes the Rock talk happen the same night, not weeks later |
+| `ans.sensei_3.genjutsu` | Level 3 (a training hangout) | "If I put you in a genjutsu of your happiest day, what would I see?" | The bell test / A bowl of ramen / A house with a tree / I don't have one yet | Openness | Ch 51: the grove she spreads over the Academy shows a glimpse of your answer as you run through | "Don't have one yet": she makes one for you in the epilogue (a pressed-flower card) |
+| `ans.sensei_3.trio` | Level 4, Genin arc | "My three argue about who matters most in a team. What do you think?" | The planner / The one who holds the line / The one who keeps everyone talking | Family | Ch 51: she repeats it to squad3_a, b and c when the gate falls | — |
+| `ans.sensei_3.persimmon` | Ch 21.3 (the anniversary; she watches from the path) | "He leaves one every year. Should I leave one too?" | Yes / Leave it with them, together / Leave something of your own | Grief | Epilogue: the two leave persimmons together (together), she leaves a pressed flower (own), or she leaves her own the next year (yes) | — |
 
 **What her lines are for.** The Ash Road's living witness (seed, plot); a gentle adult for the
 player in the Chunin years (bond); the trio's teacher (ensemble). Pools: greetings by arc; a
@@ -286,7 +291,10 @@ asked." `= second`: she says nothing new.
 **New flags.** `ans.sensei_3.spared` (saved, stay, together), `ans.sensei_3.coward` (trust,
 sometimes, forgivable), `ans.sensei_3.illusion` (break, keep, if_asked), `ans.sensei_3.flower`
 (persimmon, rose, weed), `ans.sensei_3.say_it` (girl_family, my_parent, nobody),
-`ans.sensei_3.squad` (not_fault, learn, froze_too).
+`ans.sensei_3.squad` (not_fault, learn, froze_too), `ans.sensei_3.festival` (in_them, watching,
+with_someone), `ans.sensei_3.angry` (no, human, tell_them), `ans.sensei_3.genjutsu` (bell, ramen,
+tree_house, none_yet), `ans.sensei_3.trio` (planner, line, talker), `ans.sensei_3.persimmon` (yes,
+together, own).
 
 ---
 
@@ -396,6 +404,11 @@ Voice samples, not shipped lines:
 | `ans.sensei_4.second_chance` | Ch 40 (after the reveal) | "Do people deserve a second chance after they've lied to you?" | Yes / If they tell the truth now / No | Duty vs kindness | Ch 55: his line about your ruling on the voice | — |
 | `ans.sensei_4.bread` | Level 5 (he admits it) | "Don't tell anyone." | Promise / Tell them anyway / Ask to learn | Trust | Epilogue: the line of children | "Learn": a baking hangout opens |
 | `ans.sensei_4.feared` | Level 6, Jonin arc | "Would you rather be feared and right, or trusted and wrong?" | Feared and right / Trusted and wrong / Neither, I'd work harder | His dream | Ch 51: at the hospital he says which he chose | — |
+| `ans.sensei_4.smuggler` | Ch 14 (after the night's questioning) | "One word in a whole night. Was I too hard, or not hard enough?" | Too hard / Not hard enough / Fear doesn't talk | Honesty | Ch 23 (the tester): he questions harder, gentler, or offers the tester food first | Sets his method in Ch 23 |
+| `ans.sensei_4.porter` | Ch 28 (after the seal) | "I had my hands on that seal. Could I have done anything?" | No / Faster, maybe / You stayed with him; that was something | Duty | Ch 38: he keeps the porter's words pinned at the top of the board | "Stayed with him": he visits the porter at the shrine in the epilogue |
+| `ans.sensei_4.flicker` | Ch 38 (if you mention Thread Sight) | "Your threads show who's hiding something. Does that make them guilty?" | No, everyone hides something / It makes them worth asking / Yes | Honesty | Ch 39 (a wrong accusation): "You said ___. Remember it now." | "Yes": he presses harder for paper proof before the arrest |
+| `ans.sensei_4.squad_noise` | Level 3, Genin arc | "My dog boy is loud, my Hyuga is quiet and my herbalist hides in the greenhouse. How do I make them a squad?" | Feed them / Give them one problem none can solve alone / Let them fight it out | Family | squad4's Chunin-arc bond beats (a shared meal, a joint mission, a sparring brawl) | — |
+| `ans.sensei_4.sign` | Ch 39 (before any accusation) | "When you sign this, it's your name on it. Still sure?" | Yes / Give me a day / Sign it with me | Duty | Ch 40: the council hears whose names are on the arrest | "With me": both names on the warrant; his clan's standing rises with yours |
 
 **What his lines are for.** The interrogations and the case board (clue: he frames, never solves);
 the fairness of the mystery made visible (he refuses to treat a flicker as evidence); his squad's
@@ -411,7 +424,9 @@ light that holds a target without hurting it.
 **New flags.** `ans.sensei_4.see_first` (coat, scars, flour), `ans.sensei_4.worse` (trust_liar,
 doubt_honest, unchecked), `ans.sensei_4.confess` (egg, curfew, nothing), `ans.sensei_4.second_chance`
 (yes, if_truth, no), `ans.sensei_4.bread` (promise, tell, learn), `ans.sensei_4.feared` (feared,
-trusted, neither).
+trusted, neither), `ans.sensei_4.smuggler` (too_hard, not_enough, fear), `ans.sensei_4.porter` (no,
+faster, stayed), `ans.sensei_4.flicker` (everyone, worth_asking, yes), `ans.sensei_4.squad_noise`
+(feed, one_problem, fight), `ans.sensei_4.sign` (yes, a_day, with_me).
 
 ---
 

@@ -104,6 +104,12 @@ Voice samples, not shipped lines:
 | `ans.classmate_c.last` (new) | c, Genin hangout (L4) | "What's the oldest thing you've ever touched?" | the memorial stone / the cord / my charm / the Rock | Ch 41: they show you the oldest stone they carve |
 | `ans.classmate_c.argue` (new) | c, Chunin (L5), after the rival squad quarrels | "When friends fight, do you take a side or hold the ladder?" | take a side / hold the ladder / walk away until they cool | How c mediates in Ch 40's aftermath wave (a scene in `side.j.roots`) |
 | `ans.classmate_c.rebuild` (new) | c, Ch 54 | "Rebuild it like it was, or better?" | like it was / better / ask the people who live there | The market's new look in the epilogue |
+| `ans.classmate_c.table` (new) | c, Ch 6 study night (L1) | "Is it weird, eating with a family this loud?" | it's nice / it's a lot / I've never had one | family | Ch 46 (they invite your house to dinner) | They make you a standing place at the table |
+| `ans.classmate_c.squad2` (new) | c, Genin (L3) | "How do I keep the rival and d from fighting?" | feed them / give them the same enemy / let them, then fix it | knowledge, kindness | Ch 33 (they keep the peace at the trial), epilogue | Their way of leading |
+| `ans.classmate_c.war` (new) | c, Ch 50 (L5) | "Everything I built might burn tomorrow. Was it worth building?" | yes / build it again after / that's why it matters | building | Ch 54 rebuild (`ans.classmate_c.rebuild` reads it too) | Their resolve |
+| `ans.classmate_d.guard` (new) | d, Chunin (L4) | "My sibling says the guard is boring. Is it wrong to want boring?" | no, boring means everyone's safe / a little / you'll never be bored next to me | loyalty | Ch 55 guard post line | Confirms the dream |
+| `ans.classmate_d.sensei2` (new) | d, Genin (L3) | "Our sensei teases yours constantly. Should I stop them?" | no, it's how they say they like each other / yes / join in | playful | Ch 42 (d laughs at sensei_2's speech) | Small: lightness |
+| `ans.classmate_d.night` (new) | d, Ch 51 night before (L6) | "If I fall tomorrow, who do I tell first?" | your sibling / me / no one, you won't fall | family, protective | Ch 51 (d holds the Residence steps; if *no one*, they joke about it mid-fight) | Their courage under fear |
 | `ans.classmate_d.stand` | d, B1 bond (L3) | "Is it braver to stand in front of someone or beside them?" | in front / beside / behind, to catch them | Ch 55: their post as your guard, in that position, and their line |
 | `ans.classmate_d.hesitate` (new) | d, Ch 17 after the bout | "I hesitated, once. Did you see?" | yes / no / hesitating isn't the same as failing | Their Chunin promotion speech; their training ritual with you |
 | `ans.classmate_d.reckless` (new) | d, after Ch 24 (L5) | "You stayed when your sensei said fall back. Was it brave or stupid?" | brave / stupid / both, and I'd do it again | Ch 51 (d covers your left without asking, or argues first) |
@@ -142,6 +148,12 @@ Kindled into a bridge or wall in seconds; a rescue technique); d and you: "Cresc
 
 ## New flags
 
+- `ans.classmate_c.table` (nice / a_lot / never_had)
+- `ans.classmate_c.squad2` (feed / same_enemy / let_them)
+- `ans.classmate_c.war` (yes / again / matters)
+- `ans.classmate_d.guard` (safe / little / never_bored)
+- `ans.classmate_d.sensei2` (no / yes / join)
+- `ans.classmate_d.night` (sibling / me / no_one)
 - `ans.classmate_c.make` (door / bowl / name_plate / bed)
 - `ans.classmate_c.last` (stone / cord / charm / rock)
 - `ans.classmate_c.argue` (side / ladder / walk_away)

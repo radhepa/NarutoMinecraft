@@ -252,8 +252,7 @@ how he says everything), life and filler (food), teach (dish buffs in his kitche
 states: by fate variant from Ch 19; grief pool (falls) for Ch 20 to 21; caretaker pool (crippled,
 taken). Pools: greetings by variant, food lines, a "host" pool for the barbecue hangout.
 
-**Variants.** Clan fixed (Akimichi), look rolled. Fate variants above. If the player is clan-born
-Akimichi, he is the player's cousin by clan, and his Ch 6 line becomes "Family eats first."
+**Variants.** Clan fixed (Akimichi), look rolled. Fate variants above.
 
 **Unison technique (Blaze).** *Hearth Boulder*: his rolling charge wrapped in the player's ember,
 leaving a trail of fire that heals allies who stand in it (his kindness made literal).
@@ -370,8 +369,7 @@ eerie. Teen: blunt. Adult: gentle, and still blunt.
 **What his lines are for.** Clue and seed (Ch 3, Ch 22), plot (Ch 44, Ch 49 to 50), bond (guilt to
 trust), life (flowers). Mood states: before Ch 22, after Ch 22 (guilt), after `ans.squad3_c.read`.
 
-**Variants.** Clan fixed (Yamanaka), look rolled. If the player is clan-born Yamanaka, the Sixth
-is the player's clan uncle in name too, and squad3_c's Ch 22 flag is a family scandal.
+**Variants.** Clan fixed (Yamanaka), look rolled.
 
 **Unison technique (Blaze).** *Lantern Net*: his sensing spread through the player's threads, so
 every bonded ally becomes a sensor point; for a moment the linked squad sees the whole battlefield.

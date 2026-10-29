@@ -16,7 +16,7 @@
 | Archetype (after return) | Rolled from **reserved** at first, moving toward **curious** as she heals (the bond engine's personality is set to reserved at her return; her answers to your questions nudge it, see below) |
 | Values (after return) | freedom, honesty → plus whatever the player helps her choose |
 | Peeves | being touched without warning; being called by a number |
-| Dream | At return: none ("I don't have one"); she chooses one in Ch 47/the Warm Room |
+| Dream | At return: none ("I don't have one"); she chooses one in Ch 47 / Home Fires |
 | Bond | Created at level 2 in Ch 0 with `bond_flag red_cord`; frozen while she is gone; grows from 2 after her return |
 | First / last | Ch 0 / Ch 55 (the last image: a red cord tied on the stone watch-fire basket) |
 
@@ -61,7 +61,7 @@ Yūgure cells in Ch 44).
 | Epilogue | Chooses a life (by her answers): the shrine's keeper, a medic's apprentice, a shinobi of your house, or a traveller who writes |
 
 **Endings and variants.**
-- **Home by Night Watch (N6)**: the fullest version; Ch 47 is *The Warm Room*. She is home by Ch 49
+- **Home by Night Watch (N6)**: the fullest version; Ch 47 is *Home Fires*. She is home by Ch 49
   and helps map the hills.
 - **Home by the shrine (Ch 47)**: shorter recovery; she still asks the questions, compressed into
   Ch 47 to Ch 54.
@@ -121,7 +121,7 @@ Voice samples, not shipped lines:
 
 ### Questions for the player
 
-She asks the questions she never got to ask anyone. Most come after her return (N6/the Warm Room,
+She asks the questions she never got to ask anyone. Most come after her return (N6 and Home Fires,
 or compressed into Ch 47 to 54). Her answers to *you* (the player's choices) shape what she becomes.
 
 | Id | When | Question | Options | Honours / tests | Remembered | Changes her |
@@ -134,6 +134,11 @@ or compressed into Ch 47 to 54). Her answers to *you* (the player's choices) sha
 | `ans.lost_child.blame` (new) | Home, L5 | "I hurt people at the border post. Your friend. Do they hate me?" | no / ask them yourself / yes, and that's theirs to give up | honesty | A scene with the teammate who fell in Ch 24 (if *ask them*: a reconciliation between them, a `reconciled` moment for both) | Whether she faces it |
 | `ans.lost_child.leader` (new) | After Ch 49, L5 | "He sang to me. The same song you know. Was he ever good?" | once, before they burned his home / no / maybe that's not the question | honesty | Ch 54 leader's name choice (she says her view) | Her mercy or her hardness |
 | `ans.lost_child.dream` (new) | Ch 47 or later, L6 | "I think I want something. Is it allowed, to want things this late?" | yes: what is it? / it's never late / you can want many things | freedom | Epilogue: she chooses between shrine keeper (if she spent time at the shrine), medic's apprentice (if her bond with the medic is 4+), shinobi of your house, traveller | Her dream is set |
+| `ans.lost_child.number` (new) | Home, first week | "They called me Seven. They called you Nine. Do you ever forget it's not your name?" | never, it's in me / sometimes, on bad nights / I forget it on purpose every morning | honesty | Ch 55 epilogue (she burns the nursery list's page with your name and hers, or keeps it) | Whether she makes peace with the past or burns it |
+| `ans.lost_child.squad5_c` (new) | After Home Fires, if `squad5_c` hunted her (Ch 44, Ch 47, N-branch) | "The one who hunted me says sorry every time they see me. Do I have to forgive them?" | no / not yet / forgiving is yours, not theirs | honesty, freedom | Ch 53 (squad5_c's flame comes after hers, or apart) | Her first choice about someone who wronged her |
+| `ans.lost_child.ramen` (new) | First ramen, Ichiraku (hangout) | "Is this your order? Can it be mine too?" | yes, it's ours / no, pick your own / try every one | filler with payoff | The cook calls her order from then on | A ritual (`ritual ramen`) |
+| `ans.lost_child.shrine` (new) | Shrine visit hangout (L3) | "This is where he hid when they burned it. Should I hate the place?" | no, it's ours now / it's allowed / we'll make new memories here | kindness | The epilogue (shrine keeper path) | Pulls her toward the shrine |
+| `ans.lost_child.thread` (new) | L6, after you tell her about Thread Sight | "What does my thread look like now?" | copper, and getting brighter / tangled, like mine / it's yours, you choose | honesty | Ch 53 (her flame's colour line) | She watches her own recovery through your eyes |
 | `ans.lost_child.cord` (new) | Ch 54 Morning | "Do you still have it? The cord?" | give it back / keep it / tie it on the shrine basket together | — | The epilogue's last image (the basket is the default; *give back*: she wears it; *keep*: you do) | The last image |
 
 ### What her lines are for
@@ -157,6 +162,13 @@ or compressed into Ch 47 to 54). Her answers to *you* (the player's choices) sha
   answered (she must have chosen something for herself first). Gated by level 7 and the usual
   chemistry.
 
+### Who hunts her
+
+`squad5_c` (the clanless prodigy of the senior squad) is ordered to hunt her after Ch 44 (in the
+N-branch, the Undercroft takes over that order; outside it, the Seventh's ANBU do). squad5_c is the one
+who nearly catches her in Ch 47 before she reaches the shrine, and afterwards apologises every time
+they see her. Her question (`ans.lost_child.squad5_c`) settles it.
+
 ### Thread Sight and her
 
 - **Hollow (Ch 24, Ch 44):** when your Thread Sight opens in Ch 24, she has no threads at all, to
@@ -172,6 +184,11 @@ or compressed into Ch 47 to 54). Her answers to *you* (the player's choices) sha
 ## New flags
 
 - `story.lost_child.family_known` (Ch 38, from the decoded list)
+- `ans.lost_child.number` (in_me / bad_nights / forget)
+- `ans.lost_child.squad5_c` (no / not_yet / yours)
+- `ans.lost_child.ramen` (ours / own / every_one)
+- `ans.lost_child.shrine` (ours / allowed / new)
+- `ans.lost_child.thread` (copper / tangled / yours)
 - `ans.lost_child.name` (didnt_know / asked_medic / cord_girl)
 - `ans.lost_child.what_like` (try / forget_time / ask_friend)
 - `ans.lost_child.voices` (in_time / live_with / sit_with)

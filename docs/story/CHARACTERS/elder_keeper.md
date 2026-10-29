@@ -144,6 +144,10 @@ flicker is gone; a player who watched it vanish gets his line: "There. Nothing l
 | `ans.elder_keeper.forgive` | Ch 40 (after the council, level 6) | "Should the village forgive the people who kept quiet?" | Yes, once they speak / No, but it should let them help / It's not my forgiveness to give | Asks for himself without saying so | Ch 51: his last words read it ("You said once they speak. I spoke.") | The answer is the last thing he asks about |
 | `ans.elder_keeper.third` | Ch 36 (after the letter) | "She asked whoever reads it to say it for her. Will you?" | Yes, all of it / Yes, but my way / Say it with me | Duty handed on | Ch 40 testimony line; Ch 51 "You say it now" | "Say it with me" makes him stand and speak first at the council (40.2) |
 | `ans.elder_keeper.valley` | Ch 36 (the Valley of Ash, scene 36.5) | "One man did that. Should his whole clan have paid?" | No, never / No, but I understand why they were afraid / The village should pay now | Tests the player's view of collective guilt | Ch 54 (the leader's name): he is dead, but his notes on the archive desk quote it | Feeds the player's council testimony options |
+| `ans.elder_keeper.night` | After Ch 4 (level 1, if met at the door) | "Why were you out so late? Children sleep." | I couldn't sleep / I was chasing someone / Why were *you* out? | Tests the player's honesty; the last answer tests him | Ch 32 walk: "You asked me why I was out. I was guarding a door from you" | "Why were you" makes him avoid the player for the rest of the beta (a stronger red herring) |
+| `ans.elder_keeper.stone` | Paper Trail, level 2 (at the memorial stone at night, after Ch 10) | "Do you know why names go on stone?" | So they're remembered / so they can't be changed / so someone has to look at them | Duty; the third option is his guilt | Ch 41 re-carving: he stands by the gap and repeats your answer | "Can't be changed": in Ch 41 he says "I was wrong; they can. That's worse, and better" |
+| `ans.elder_keeper.afraid` | After Ch 19 (level 2, at the archive door the morning after the attack) | "Were you afraid, in the stadium?" | Yes / No / Only for my friends | Small confession invited; he admits he stayed at the door | Ch 51: "You asked me nothing then. I'll tell you now: I was afraid the whole night" (he answers his own question) | "Only for my friends": he begins to trust the player (trust +) |
+| `ans.elder_keeper.teacher` | Embers, level 4 | "Who taught you the most? Not the most jutsu. The most." | My sensei / the camps / my friends / you, maybe | His past: the Third; "you, maybe" disarms him | Ch 36 (before the letter): "She taught me the most. Mostly what not to do" | "You": he gives the player his old archive ledger pen (a keepsake) |
 
 ### What their lines are for
 
@@ -168,4 +172,4 @@ flicker is gone; a player who watched it vanish gets his line: "There. Nothing l
 
 `ans.elder_keeper.late`, `ans.elder_keeper.oath`, `ans.elder_keeper.who_keeps`,
 `ans.elder_keeper.forgive`, `ans.elder_keeper.third`, `ans.elder_keeper.valley`,
-`story.suspected.keeper`, `story.ch36.done`, `story.ch37.done`.
+`story.suspected.keeper`, `story.ch36.done`, `story.ch37.done`. Also: `ans.elder_keeper.night`, `ans.elder_keeper.stone`, `ans.elder_keeper.afraid`, `ans.elder_keeper.teacher`.

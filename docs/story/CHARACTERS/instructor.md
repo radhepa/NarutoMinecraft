@@ -111,6 +111,11 @@ Voice samples, not shipped lines:
 | `ans.instructor.number` | Level 5, Ch 21 to 31 (the night lessons) | "Some of these kids only answer to numbers. Should I make them use their names?" | yes, names are theirs / let them choose when / use both until they're ready | Kindness, freedom | Ch 35.4 (how the Valley children are greeted) | Shapes how the Leaf receives nursery children for the rest of the game |
 | `ans.instructor.teach` | Ch 40, level 6 | "Would you teach a class here? One class. On the twenty-seven." | yes / not yet / only if a descendant teaches with me | — | Jonin systemic (a class you can teach once a week) | "Descendant": genin_3 or the librarian teaches with you |
 | `ans.instructor.list` | Level 7 | They let you read your entry on their list. "Is it right? Did I get you right?" | yes / it's kinder than me / add something (you choose a word) | — | Ch 55 epilogue: the word is on the Academy's wall | — |
+| `ans.instructor.recess` | Ch 2, level 1 | "Recess! Join the tag game or keep training?" | play / train / watch first | Kindness, freedom | Ch 6 study night (they seat you by the kids you played with) | — (life with a function: who your first friends are) |
+| `ans.instructor.rival` | Ch 2 to 4, level 2 | "The {family:rival} kid. Should I make you two partners?" | yes / no / let us decide | Kindness | Ch 8.1 (they say, at the assignment, "I asked for you two to be apart. Sorry. Or not") | Shapes the rival's first-month greetings (warmer if "yes") |
+| `ans.instructor.flare` | Ch 31, level 5 (after the gift is public) | "I hushed you, that day with the post. Should I have asked you first?" | yes / no, you protected me / I didn't know what to say either | Kindness, honesty | Ch 40 (they speak at the council for the descendants if "yes") | "Yes": they start asking children before deciding for them |
+| `ans.instructor.raid` | Level 6, a ramen hangout | "Do you remember me at the raid? I was the loud one." | yes, you carried two kids / no / I remember your voice | — (their past) | Ch 51.2 (they tell the Academy children your answer as a story) | — |
+| `ans.instructor.war` | Ch 51.2 eve (Ch 50), level 5 | "If it comes to it, do I keep the kids inside, or run them out?" | inside, with you / out, through the north gate / ask the Seventh | Duty | Ch 51.2 (where the children are when the cell arrives) | Changes the Academy set-piece (siege or escort) |
 
 ### What their lines are for
 
@@ -134,3 +139,8 @@ Voice samples, not shipped lines:
 - `ans.instructor.number` (names, choose, both)
 - `ans.instructor.teach` (yes, not_yet, with_descendant)
 - `ans.instructor.list` (yes, kinder, add_word)
+- `ans.instructor.recess` (play, train, watch)
+- `ans.instructor.rival` (yes, no, our_choice)
+- `ans.instructor.flare` (yes, protected, didnt_know)
+- `ans.instructor.raid` (carried, no, voice)
+- `ans.instructor.war` (inside, out, seventh)

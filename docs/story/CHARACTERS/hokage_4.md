@@ -102,6 +102,12 @@ Voice samples, not shipped lines:
 | `ans.hokage_4.stipend` | Ch 7.3 aside (level 2) | "When you're grown, would you keep it going? The stipend?" | yes / for every village / I'll do better | — | Ch 55.3 (restoring it in his name) | "Every village": his dream line changes |
 | `ans.hokage_4.hard` | Crippled/taken: Ch 22 to 31, visiting him | "Is she too hard on you? The Fifth?" | yes / she's scared / she's right to watch me | Kindness | Ch 31.4 (he visits her after she steps down and repeats it) | "She's scared": he softens the village toward her after she steps down |
 | `ans.hokage_4.didnt_ask` | Living, Ch 40 | "I chose not to ask what was under the Rock. Would you have asked?" | yes / no / I'd have asked the keeper to tell me himself | Honesty | Ch 49 war council | — |
+| `ans.hokage_4.bun` | Ch 18.3 | "Pork or bean paste?" (the buns) | pork / bean / both / for my squad first | Family | Ch 21 (falls: his daughter knows your bun; living: he brings it) | — (life with a function: a memory to grieve or keep) |
+| `ans.hokage_4.office` | Ch 1, after the stipend (level 1) | "Big office, isn't it? Too big?" | too big / just right / it smells like food | — | Ch 20 (falls: the empty office; crippled/taken: he asks again from his bed) | — |
+| `ans.hokage_4.council` | Ch 9 to 14, a village meeting (level 2) | "The council wants me to be harder. Should a Hokage be feared a little?" | yes, a little / never / feared by enemies only | Kindness | Ch 20 (crippled: he cites it naming the Fifth); Ch 31 | — |
+| `ans.hokage_4.daughter` | Level 3, at the barbecue house | "My girl wants to close early on festival nights. Should I let her?" | yes / no, the village needs the grill / ask her why | Family | Ch 21 (falls: she tells you he took your advice) | — |
+| `ans.hokage_4.practised` | Taken: Ch 21.2c; crippled: Ch 22 to 25 | "Do you want to know what they did to me? Some people don't." | yes / not now / only what helps us stop them | — | Ch 49.3 (how much he tells the council) | Sets how much of the dark mirror he describes |
+| `ans.hokage_4.inauguration` | Ch 55 (living fates) | "Can I still call you little one? Just once more." | yes / only in private / call me Lord Eighth | — (warmth) | Epilogue line | — |
 
 ### What their lines are for
 
@@ -121,3 +127,9 @@ All by `twist.fourth_fate`. No beta line may imply one fate over another.
 - `ans.hokage_4.stipend` (yes, every_village, better)
 - `ans.hokage_4.hard` (yes, scared, right)
 - `ans.hokage_4.didnt_ask` (yes, no, keeper)
+- `ans.hokage_4.bun` (pork, bean, both, squad)
+- `ans.hokage_4.office` (too_big, right, food)
+- `ans.hokage_4.council` (a_little, never, enemies)
+- `ans.hokage_4.daughter` (yes, no, ask_why)
+- `ans.hokage_4.practised` (yes, not_now, helps)
+- `ans.hokage_4.inauguration` (yes, private, lord)

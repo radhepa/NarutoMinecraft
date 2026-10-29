@@ -32,8 +32,11 @@ signed the report).
   Yūgure; they did not know then, but they chose not to ask).
 - They know the watch-fire song from `fallen_parent`, who hummed it on missions (Ch 18).
 - They saw a campfire lean toward their old team. They recognise your flame (Ch 14).
-- *Lineage B only:* they keep a box with `fallen_parent`'s forehead protector and half a watch-fire
-  charm. They do not know the child had the other half until Ch 48.
+- They keep a box with `fallen_parent`'s forehead protector (every save). *Lineage B only:* it also
+  holds half a watch-fire charm and an unsent letter; they do not know the child had the other half
+  until Ch 48.
+- `fallen_parent` had a young child, reported "lost" with the spouse after the ambush. The sensei
+  never speaks of it before Ch 48 (in A the child truly died; in B it is you).
 - They leave a persimmon at the memorial stone every year on the Ash Road anniversary.
 - The Ash Road team was three: the sensei, `fallen_parent` and `sensei_3` (Classic: a Yuhi genjutsu
   user). `sensei_3` survived uninjured because the sensei ordered her back to signal for help; the
@@ -127,7 +130,8 @@ Voice samples, not shipped lines:
 | The song is their teammate's song | Ch 25; before, they only react (turn away) |
 | The Ash Road was Yūgure; they signed the sealed report | Ch 36 |
 | The persimmon at the stone is for their teammate (they may leave it in view in Ch 21; the reason only at Ch 21.3 as "They loved these") | Ch 21 |
-| The box and the charm half (lineage B only) | Ch 48; never in lineage A saves |
+| The box (shown) | Ch 48 in both saves; the charm half and letter exist only in lineage B |
+| That `fallen_parent` had a child | Ch 48, both saves |
 | "Your parent" (either lineage) | Ch 48 |
 | The second's name or identity | Ch 26 (her face) / Ch 48 to 49 |
 | Anything about the Quiet Ending | Ch 36 |
@@ -147,6 +151,10 @@ Voice samples, not shipped lines:
 | `ans.sensei.apple` | Level 4, a training hangout | "Why do you think I'm always eating something when I'm worried?" | to look calm / to have something to do with my hands / you're just hungry | — (filler with a function: shows they know you see them) | Ch 49 war council: they hold an apple and don't eat it | — |
 | `ans.sensei.hat` | Ch 42, before the succession (level 6) | "Should someone who signed a lie be Hokage?" | yes, because you know the cost / no, but you're the best we have / only if you say it out loud | Honesty | Ch 42 speech: they confess the signature in public if "say it out loud" | Changes the Seventh's first act: a public confession, or a quiet one to the council |
 | `ans.sensei.successor` | Ch 54.4 | "Do you want it? Honestly." | yes / not yet / only if you stay near | — | Ch 55.2 | "Only if you stay near": they become your advisor in the post-game |
+| `ans.sensei.late` | Ch 9 to 10, level 3 (after they arrive late again) | "Do you think I'm late on purpose?" | yes, to test us / no, you're lazy / yes, but not to test us | Their freedom; "lazy" tests their pride a little | Ch 33.4 (they arrive on time for your promotion and say "Your answer was right") | "Not to test us": they admit at level 7 they stop at the stone every morning first |
+| `ans.sensei.fear_squad` | Ch 16 tower or Ch 18 training, level 4 | "Which of you three do I worry about most?" | me / teammate_a / teammate_b / all of us the same | Honesty (they answer truthfully whatever you say) | Ch 24.4 (the one they named is the one they look for first when the fire leans) | Changes the order they check on you all in Ch 19 and Ch 51 |
+| `ans.sensei.revenge` | Ch 36.6 (if you follow them to the Rock), else Ch 37 | "Should I find the ones who did the Ash Road, before anything else?" | yes, they owe it / no, the living first / only if they're still killing | Loyalty to the dead against duty | Ch 51.4 (whether the Seventh personally hunts cells during the war council) | "The living first": the Seventh's war plan protects the Academy before striking cells |
+| `ans.sensei.sensei_3` | Ch 25 to 31, level 6, a training hangout | "There was a third of us that night. I sent them back. Should I have?" | yes, one of you lived / no, you needed them / ask them, not me | Honesty | Ch 41 (the memorial: they stand next to `sensei_3`, or apart) | "Ask them": they finally talk to `sensei_3` (ensemble scene) |
 
 ### What their lines are for
 
@@ -179,3 +187,7 @@ Voice samples, not shipped lines:
 - `ans.sensei.apple` (to_look_calm, hands, hungry)
 - `ans.sensei.hat` (yes_cost, best_we_have, out_loud)
 - `ans.sensei.successor` (yes, not_yet, stay_near)
+- `ans.sensei.late` (test, lazy, not_test)
+- `ans.sensei.fear_squad` (player, teammate_a, teammate_b, all)
+- `ans.sensei.revenge` (owed, living_first, still_killing)
+- `ans.sensei.sensei_3` (yes, no, ask_them)

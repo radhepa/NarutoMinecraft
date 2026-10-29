@@ -123,7 +123,7 @@ Voice samples, not shipped lines:
 
 | Secret / fact | Gate |
 |---|---|
-| Nobody came to their graduation | Ch 43 (said); seen in Ch 7 only as a staged beat |
+| Nobody came to their graduation | Ch 43 (said); seen in Ch 7.3b, where the player can go to them or let them be |
 | The sibling's secret training | `side.b3.rivals_sibling` (the sibling tells you, not the rival) |
 | The fear about gifts | Ch 29 |
 | Any warmth toward you in words | Ch 43 |
@@ -140,6 +140,11 @@ Voice samples, not shipped lines:
 | `ans.rival.finals` (new) | Ch 20.4 or Chunin talk (L3) | "Who would have won the finals?" | you / me / we'll never know, so let's find out | pride | Ch 33 trial line; epilogue spar | *let's find out*: a ritual spar on the Rock each year |
 | `ans.rival.clan` (new) | Ch 40 aftermath (L6) | "My clan's elder forged it. Do I carry that?" | no, you weren't born / yes, we all carry the village's / carry it by making it right | family, honesty | Ch 40 council break; Ch 51 (they fight beside the Kagari house's members) | Whether they stand up in the council |
 | `ans.rival.ordinary` (new) | Jonin, level 7 (worries) | "What if I'm just... ordinary? Good, but ordinary." | then be the best ordinary there is / you're not / ordinary people held the wall in the war | honesty | Ch 51 wall scene (if "ordinary people" — they say it to the defenders) | Settles their fear |
+| `ans.rival.graduation` | Ch 7.3b | (the rival alone after the speech; nobody came for them) | go to them / let them be | *go*: they snap "What?", then don't leave; respect for leaving them their pride if *let go* | Ch 43.1 ("You came over at graduation. I hated it. I've thought about it every year." / "You left me alone at graduation. That was the kindest thing anyone did that day.") | Whether the Ch 43 invitation is a return of a favour or a first reach |
+| `ans.rival.forest` (new) | Ch 16, after the ravine glimpse (L3) | "You saw my eyes. Don't tell anyone until I show them." | I won't / you should be proud of them / they suit you | honesty, pride | Ch 19 finals (they reveal them with a glance at you) | *won't*: trust +; *proud*: they're annoyed and pleased |
+| `ans.rival.team` (new) | Genin, after `sensei_2`'s teasing (L3) | "Is your sensei as embarrassing as mine?" | worse / mine eats apples to look mysterious / yours is great, actually | playful (filler) | A running joke; Ch 42 (sensei_2 at the Seventh's naming, and the rival's line) | Small: their softening toward their own sensei |
+| `ans.rival.give_up` (new) | Ch 31 aftermath (L5) | "You stood up in front of the whole council for a clan that isn't yours. Why?" | because they were right / because no one stood up for mine / because I could | loyalty, family | Ch 40 (the rival stands in the council for the truth) | Teaches them public courage |
+| `ans.rival.spar_last` (new) | Ch 50, before Dusk (L6) | "If we live through tomorrow, you owe me a real finals." | deal / we'll call it a draw forever / you'll win | rivalry | Ch 55 epilogue: the finals rematch on the Rock, and its result (or none) | The last image of the rivalry |
 | `ans.rival.hokage` (new) | Ch 54 | "You'll be Hokage. I'd have liked it to be me." | it should have been both of us / you'll be my right hand / you'll surpass me yet | pride | Ch 55 epilogue (their post: captain of the guard's training, or the Academy's hardest teacher) | Their post-game role |
 
 ### What their lines are for
@@ -166,12 +171,18 @@ rival role (pride is lifted to at least .5 for the role) but the cover changes:
 | Reserved, thoughtful, curious | Quiet superiority, books | A family that sends a letter instead of coming |
 | Warm, playful, gentle | Joking competition that hides hurt | A household too busy (a shop, a clinic) to notice |
 
-Clan: an Uchiha rival awakens the Sharingan offscreen before Ch 19 (they show it in the finals); a
+Clan: an Uchiha rival awakens the Sharingan in the Forest of Death (Ch 16.5), glimpsed by the player
+across the ravine as two red points in the dark; they never mention it until the finals; a
 rival of another clan shows that clan's first-tier art; a clanless rival's pride is in being
 self-taught.
 
 ## New flags
 
+- `ans.rival.graduation` (went / let_go)
+- `ans.rival.forest` (wont_tell / proud / suit)
+- `ans.rival.team` (worse / apples / great)
+- `ans.rival.give_up` (right / no_one / could)
+- `ans.rival.spar_last` (deal / draw / you_win)
 - `ans.rival.score` (deal / keep_book / just_train)
 - `ans.rival.sibling` (they_asked / better / should_have)
 - `ans.rival.finals` (you / me / find_out)
