@@ -58,6 +58,8 @@ public enum Act {
     SAVED_BY_THEM(def(Size.BIG, 0).meters(5, 3.5, 0, 0).moment().lean(Trait.WARMTH, Meter.AFFECTION, 2)),
     KEPT_SECRET(def(Size.BIG, 0).meters(2.5, 8.5, 1, 0).moment().honors(Value.LOYALTY, Value.HONESTY)),
     SUPPORTED_DREAM(def(Size.BIG, 0).meters(3.5, 3, 2, 0).moment()),
+    OFFERED_FLAME(def(Size.BIG, 0).meters(3, 4, 1, 0).moment()),
+    GAVE_FLAME(def(Size.BIG, 0).meters(4, 3.5, 1, 0).moment()),
     RECONCILED(def(Size.BIG, 0).meters(2.5, 3.5, 0.5, 0).moment()),
     YEARS_TOGETHER(def(Size.BIG, 0).meters(2.5, 3, 1, 0)),
 

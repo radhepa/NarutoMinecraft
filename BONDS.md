@@ -152,6 +152,10 @@ below the level's threshold, one level a day. A level carried over from VF is a 
 goal line says what is missing: `bond.goal.points:N`, `bond.goal.experience`, `bond.goal.moment`
 or `bond.goal.time`.
 
+**Held roles.** The story can hold one person's level with the player until a story flag is set:
+`{"level_cap": ["role:porter", 4, "story.ch28.done"]}` (kept as a bond flag, so saves carry it). While
+held, the goal line reads `bond.goal.held`; once the flag is set, the level is free to rise.
+
 ## 4. Memories
 
 Every act a person lives through becomes a memory with its own effect on their meters
@@ -421,6 +425,18 @@ and reads `Kindling.Flame` and `Kindling.Bonfire`; the story owns when it awaken
   quarrel left unmended for a month 0.2), plus 0.1 if you fought side by side this week. A
   falling-out snuffs it out (tier none) until the story mends it. Because the tier reads the level
   they act on, a quarrel can also drop a tier.
+- **Thread Sight** (`Kindling.threadSight`) reads only people bonded to you at level 6 or more. It
+  shows *that* one of them hides something (a flicker, from a story bond flag `hides:<what>`), never
+  *what*, and a thread between two others only when both are readable (how close they are, and
+  whether they are at odds). Strangers and acquaintances stay unreadable.
+- **A freely offered flame** (`offered_flame`, a kept moment) is the only way someone below level 6
+  burns toward you (Spark). `gave_flame` is the player pouring their flame into someone (a kept
+  moment). The story uses both at a few scripted beats.
+- **Story floor:** a scripted gift beat can count its target as a tier for that one kindle,
+  `{"kindle": {"who": "role:x", "floor": "spark"}}`; the use and its resonance count, and the
+  tier goes back to what the bond says afterwards.
+- **Costs** (combat owns the numbers): you feel linked allies' pain; overuse burns chakra and
+  stamina; a quarrel dims a flame and a falling-out snuffs it.
 - **Ember Link** joins the squad members at Flame or above (`Kindling.emberLink`).
 - **Resonance** toward a nature: each day you fight beside someone at Spark or above (a mission, a
   spar, training, defending the village, a kindle) counts once; at 30 their trial can teach you
@@ -666,6 +682,15 @@ players:
 | 60 h: romance | married, a child in the post-game | married | none |
 | Kindling with teammates | blaze / blaze | blaze / blaze | spark / spark |
 | Quarrels / fallings-out | 0 / 0 | 5 / 0 | 3 / 1 |
+
+**Standing** (`Playthrough.standingsAcross`, five seeds; the Hokage needs Hero with the village and
+Good Neighbor in every district and clan quarter):
+
+| | Devoted | Typical | Reckless |
+|---|---|---|---|
+| 45 h: village | Pillar (34 to 36), Hero in 1 of 5 | Pillar (32 to 34), never Hero | Good Neighbor (17 to 18) |
+| 60 h: village | Hero in 5 of 5 (38 to 40) | Hero in 5 of 5 (37 to 39) | Pillar (20 to 23), never Hero |
+| Good Neighbor everywhere | 5 of 5 at 45 h and 60 h | 5 of 5 at 45 h and 60 h | 3 of 5 at 45 h, 5 of 5 at 60 h |
 
 Run `./gradlew :life:bonds:simulate` for the full tables, or `-Pexplain=role:teammate_a` to see
 where one bond's meters come from. `TimeAndPacingTest` holds these targets on five seeds.
