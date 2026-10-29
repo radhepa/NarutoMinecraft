@@ -15,7 +15,7 @@
 | Values | Duty, loyalty |
 | Peeves | Recklessness, lateness |
 | Dream | Protect the village |
-| First appears | Ch 19 (in the Kage box beside the Fourth, a sensor captain) |
+| First appears | Ch 19 (beside the Hokage's seat at the stadium, a sensor captain) |
 | Named | Ch 20.2 |
 | Steps down | Ch 31.4 |
 | Last appears | Ch 51a (on the wall), Ch 55 (at the inauguration) |
@@ -104,6 +104,8 @@ it until Ch 40, and when she learns it, it is the worst day of her life).
 | The word "Kagari" from her own mouth | Ch 31.4 |
 
 ### Questions for the player
+
+Every main-path read below has an unset default: the neutral version of the line, or no callback.
 
 | Id | When | Question | Options | Honours / tests | Remembered | How it changes her |
 |---|---|---|---|---|---|---|

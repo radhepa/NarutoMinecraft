@@ -90,6 +90,8 @@ player sees no thread of his (he is not bonded to the player at 6+).
 
 ### Questions for the player
 
+Every main-path read below has an unset default: the neutral version of the line, or no callback.
+
 | Id | When | Question | Options | Honours / tests | Remembered | How it changes him |
 |---|---|---|---|---|---|---|
 | `ans.yugure_blade.fight` | Ch 27.2, mid-duel, as he lets the player pick up the kunai | "Why do you fight?" | for my friends, for the village, so no one takes me again, I don't know yet | Loyalty / duty; "I don't know yet" honours honesty (he respects it most) | Ch 51b: "You told me once you fought for ___. Still?" | His Ch 51 stance: he fights harder against "for the village" (his enemy's reason), more gently against "for my friends" |

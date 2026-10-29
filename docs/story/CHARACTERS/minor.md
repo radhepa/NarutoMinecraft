@@ -2,7 +2,8 @@
 
 > **SPOILERS: for developers only.** Part of the [story bible](../STORY_BIBLE.md).
 
-Smaller parts that recur, each with a compact brief. Roles marked *rolled* have a rolled look and
+Smaller parts that recur, each with a compact brief. Every main-path read of an `ans.*` flag here has
+an unset default: the neutral line, or no callback. Roles marked *rolled* have a rolled look and
 gender in Varied (pronoun tokens; *they* here); *fixed* roles have a fixed look and gender.
 
 ---
@@ -63,28 +64,32 @@ They ordered yours and stared at it. Go find them."
 
 **Arc.** The Undercroft is the heirs of the **sealing team that sealed the twenty-seven** in the
 Quiet Ending: a mixed-clan oath society of old ANBU and sealers who never stopped believing the
-gift must be sealed and used. A Shimura elder shelters them under the Shimura house (the Shimura are
-complicit, not the faction). She is the sealing team leader's granddaughter, sworn in as a child,
+gift must be sealed and used. Their hall is the sealing team's **derelict sealing hall under the old
+quarry**; the Shimura have no part in it (a Shimura is among those who expose it: in `clan.shimura.3`
+a Shimura finds a stranger using their cellar as a mail drop for sealed letters, and helping finds
+the Undercroft's courier, which opens N3). She is the sealing team leader's granddaughter, sworn in
+as a child,
 and commanded ANBU under the Third. She believes the Quiet Ending's only mistake was waste. She has
 intercepted Yūgure's mail for years and knows the player's nursery number. She wants the gift caged
-and aimed. She does not resist arrest (N7): "You will need us when he comes," and in every path she
+and aimed: in N4 to N5 her plan is **the jar**, their old sealed jar, with the lost child as its
+mouth. She does not resist arrest (N7): "You will need us when he comes," and in every path she
 fights at the wall in Ch 51a.
 
 **Voice.** Precise, unhurried, contemptuous of sentiment, never raises her voice. Calls the player
-"Nine" until N7, then "Hokage's hound", then (Ch 51, if she survives the night) by name.
+"Nine" until N7, then "Hokage's hound", then (Ch 51a, if she survives the night) by name.
 
 *Voice samples, not shipped lines:* "Nine. We have your reports too." · "Sentiment is a fire with no
 hearth. It burns the house down."
 
 **Never reveal before.** The Undercroft's existence: N3. That she knows "Nine": N3 (N3 is reachable
-only after Ch 38, so it never pre-empts the voice's slip; see note below).
+only after Ch 44, so it never pre-empts the voice's slip; see note below).
 
 **Questions.**
 
 | Id | When | Question | Options | Remembered |
 |---|---|---|---|---|
 | `ans.undercroft_head.offer` | N3.3 | "Join us, and no child will be taken again." | listen (pretend), refuse, walk_out | N5's opening, N7's choice framing |
-| `ans.undercroft_head.waste` | N7 | "The Leaf burned your clan and wasted it. Would you rather it had kept you in a cellar?" | no, I'd rather it had kept us as people, ask the lost child | Ch 51: her last line on the wall ("You said 'as people'. Then go and be one") |
+| `ans.undercroft_head.waste` | N7 | "The Leaf burned your clan and wasted it. Would you rather it had kept you in a jar?" | no, I'd rather it had kept us as people, ask the lost child | Ch 51a: her last line on the wall ("You said 'as people'. Then go and be one") |
 
 **Lines are for:** the ANBU branch's moral opponent; the Leaf's shadow version of the leader.
 
@@ -119,7 +124,7 @@ role traits:
 | Role | Fixed trait | Arc in one line |
 |---|---|---|
 | `genin_1` | If `ans.player.ch0.freed_boy = freed`, he is the boy from the third cell, grown (fixed male, fixed look then); else rolled | Wants to be like the person who opened his door; learns to open doors for others (he leads the Academy children out in Ch 51a) |
-| `genin_2` | A rolled clan or clanless child; the team's loud one | Wants to beat the other two; learns the bell test's lesson from your test |
+| `genin_2` | A rolled clan or clanless child; the team's loud one | Wants to beat the other two; learns the cord test's lesson from your test |
 | `genin_3` | A Kagari descendant with a faint sealed flame (`story.seed.genin_flame`) | Afraid of what they are once they know; the Undercroft targets them in N5 if the player refuses; in Ch 53 their flame is one of the first to kindle toward you |
 
 **Voice.** Genin energy: arguments, eating, competing for your attention (jealousy is live: the
@@ -175,20 +180,22 @@ no: let them go). They live in all three.
 
 | | |
 |---|---|
-| Role | The real foreign Genin used as cover by the disguised foreign team (Ch 15 to 16; `side.b3.lost_genin`) |
+| Role | One of the three real Genin of the small foreign team whose adult escorts are the second and the blade under false papers (Ch 15 to 19; `side.b3.lost_genin`). Innocent |
 | Look | Rolled, a small foreign village's outfit |
 | Pronouns | They (rolled) |
 | Archetype | `shy` |
 
-**Arc.** Put on a team with two strangers a week before the exam and told to keep quiet; abandoned
-tied in a tree in the forest. If freed, they go home safe and write to the player once a year (a
-letter in the mailbox each New Year).
+**Arc.** A real Genin of a small village, sent to the Leaf's exam with two new escorts their
+village hired on good papers. In the Forest of Death (16.4) the player finds them lost, looking for
+escorts who left the forest early; before the finals the escorts vanish altogether. After the
+attack they realise who the escorts were. They go home safe and write to the player once a year
+(a letter in the mailbox each New Year).
 
 **Questions.**
 
 | Id | When | Question | Options | Remembered |
 |---|---|---|---|---|
-| `ans.foreign_genin.home` | Ch 16.4, freed | "Should I tell my village what happened? They'll say I was stupid." | tell them, tell them we caught it, it's your choice | Their yearly letter's tone |
+| `ans.foreign_genin.home` | Ch 20, before they leave for home | "Should I tell my village who our escorts were? They'll say we were stupid." | tell them, tell them we caught it, it's your choice | Their yearly letter's tone |
 | `ans.foreign_genin.again` | First letter (after Ch 20) | "Will you be at the next exam? I want a real fight." | yes, I'm Chunin now (no), as a proctor | Their Chunin-arc cameo: a friendly bout at the next season's exam (if yes or proctor) |
 
 ---
@@ -249,7 +256,7 @@ stipend list at dinner. Every name").
 
 ## Note on the Undercroft and the slip
 
-The Undercroft knows the player's nursery number. N1 to N2 open after Ch 39 and N3 (the cellar)
+The Undercroft knows the player's nursery number. N1 to N2 open after Ch 39 and N3 (the quarry hall)
 only after Ch 44, so the head's "Nine" always comes after the voice's case is closed and never
 muddies the Ch 25 slip.
 

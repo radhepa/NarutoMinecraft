@@ -37,7 +37,7 @@ and the other is a bug.
 
 **A fire you take burns out; a fire you share keeps everyone warm.** Every strand of the story is
 a version of it: Kindling Bond against the dark mirror, a village that keeps its fire by keeping
-its people against a village that once kept its peace by erasing them, a squad that passes the bell
+its people against a village that once kept its peace by erasing them, a squad that passes the cord
 test only together, a leader who wants to hold everything and a player who wins by being held.
 
 Three questions the story asks the player, again and again, through choices and through the

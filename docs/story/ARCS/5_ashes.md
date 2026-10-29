@@ -12,7 +12,8 @@ runs about a year of story time (to Y+7). Levels 30 to 42. The optional ANBU bra
 Ch 44.
 
 **Where the systemic play sits.** A-rank hunts and Genin missions fill the gaps between Ch 34 and
-35, Ch 37 and 38 (so Ch 36 to 41 is not one unbroken run of reveals), and Ch 42 and 44.
+35, Ch 37 and 38, Ch 40 and 41 (the roots wave and hunts; so Ch 36 to 41 is not one unbroken run
+of reveals), and Ch 42 and 44.
 
 **What the arc is for.** The truth comes out, and the player is the one who must say it aloud. The
 village's founding crime, the voice inside, the names under the chisel. The player becomes a
@@ -27,7 +28,7 @@ is the player's own sensei, and a warning that Yūgure wants something worse tha
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
 | 33.1 | Four years | Player, squad | Adult now, 18. Montage vignettes of the class grown up: the squad as Chunin captains, the rival's rise, `squad3_b` running his mother's grill on rest days, `squad5_a` campaigning (cheerfully, uninvited) to be the next Hokage, `squad5_c` gone into the ANBU, `squad4_b` finally a Chunin, a wedding or two in the village | plot (`time_skip`) | — |
-| 33.2 | The bout | `rival`, two examiners | The Jonin trial bout: you and the rival as a pair against two examiners. The rival hates needing you and fights better beside you than anyone | teach, bond | — |
+| 33.2 | The bout | `rival`, two examiners (`sensei_2` one of them) | The Jonin trial bout: you and the rival as a pair against two examiners. The rival hates needing you and fights better beside you than anyone. On the story path the trial bout counts as the A-rank requirement of ROADMAP §11 (A-ranks only unlock at Jonin) | teach, bond | — |
 | 33.3 | The review | `hokage_6`, the council | The council review. The `elder_hyuga` asks about "the rumour of your blood" (Ch 31 was seen by half a quarter), and reads back how you testified at the Tobari council (`ans.player.testify`: for the Tobari → "You spoke for a quarter against a Hokage"; against the lockdown → "You spoke against a lawful order"; for the Fifth's right to fear → "You granted her fear and still opposed her"; unset → "You testified, I am told"). The Sixth stops him. Then asks you, gently, one question | plot, bond | "What is a Hokage for?" To protect the village / To protect the people the village forgets / To carry what no one else should (`ans.hokage_6.for`). The Sixth's resignation (Ch 42) answers it |
 | 33.4 | Jonin | squad, `sensei` | Promotion. The sensei gives you their old Jonin vest's spare patch | plot (`promote jonin`), bond | — |
 
@@ -38,8 +39,10 @@ is the player's own sensei, and a warning that Yūgure wants something worse tha
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
 | 34.1 | Your team | `genin_1`, `genin_2`, `genin_3` | You are given three Genin (rolled). If you freed the boy in the third cell (Ch 0), `genin_1` is him, grown: "You don't remember me. You opened my door" | plot, bond | — |
-| 34.2 | Your test | the Genin | Design their test: the bells on one cord (as your sensei did) / a test of your own (a choice of three: a rescue drill, a stolen scroll, a night watch) (`ans.player.own_test`). Your sensei watches from a tree, eating an apple. If you once gave your own bell away (`ans.player.bell_given`), the sensei tells your Genin the story before the test: "Your teacher once handed theirs away. Don't expect the same from them." Each test choice opens a different first bond quest for the Genin (`bond.j.genin.<own_test>`) | teach, bond | — |
-| 34.3 | The flicker | `genin_3` | In the test, `genin_3`'s chakra flickers warm when they help a teammate. A sealed flame, faint. A descendant | seed (`story.seed.genin_flame`) | Tell them / watch over them quietly / report it to the sensor corps (`ans.player.genin_flame`). Reporting it: the Sixth thanks you and does nothing; the genin hears of it and trusts you less |
+| 34.2 | Your test | the Genin | Design their test: the cord with three tags (as your sensei did) / a test of your own (a choice of three: a rescue drill, a stolen scroll, a night watch) (`ans.player.own_test`). Your sensei watches from a tree, eating an apple. If you once handed the cord to your teammates (`ans.player.cord_given = handed`), the sensei tells your Genin the story before the test: "Your teacher once handed the whole cord over. Don't expect the same from them." (`together` or unset: no line.) Each test choice opens a different first bond quest for the Genin (`bond.j.genin.<own_test>`) | teach, bond | — |
+| 34.3 | The flicker | `genin_3` | In the test, `genin_3`'s chakra flickers warm when they help a teammate. A sealed flame, faint. A descendant | seed (`story.seed.genin_flame`) | Tell them / watch over them quietly / report it to the sensor corps (`ans.player.genin_flame`). Reporting it: the Sixth thanks you and does nothing; the genin hears of it and trusts you less, and the report reaches the Undercroft, which makes genin_3 their fallback in N5 (if refused) |
+
+| 34.4 | First job | the Genin | Your team's first D-rank is a disaster you can only laugh at: a client's prize carp, a borrowed rowboat, genin_2 falling in eleven times (the same lake, the same number your old teammate managed), and the client paying you in carp. Your sensei, watching from the bank, keeps the receipt | life, bond (`mission_together`) | — |
 
 Your Genin team is a systemic companion group for the rest of the game (D- and C-ranks you lead,
 small bond quests; see [SYSTEMS.md](../SYSTEMS.md)).
@@ -118,7 +121,7 @@ The reveal ([ROTATIONS.md](../ROTATIONS.md) §1: the four scenes, the accusation
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
 | 40.1 | Before the council | `hokage_6`, Player | The Sixth asks you how much to say | bond | Everything / Everything but the renamed families' names / Let each family decide whether to be named (`ans.hokage_6.names`; table below) |
-| 40.2 | The council | the clan heads, the village | The Sixth makes the Quiet Ending public, with you as witness. The Senju head bows to the floor; the Uchiha head protests that a dead elder's forgery is not his clan's crime; the elder_hyuga walks out, and his grand-niece `squad4_a` does not follow him; `squad5_a`, whose clan's Hokage kept the silence for thirty years, stands up in the gallery and sits down again without a word | plot, mood (`mood_event village grieving`) | Your testimony: for the dead / for the living descendants / against the silence (`ans.player.council_testimony`) |
+| 40.2 | The council | the clan heads, the village | The Sixth makes the Quiet Ending public, with you as witness. The Senju head bows to the floor; the Uchiha head protests that a dead elder's forgery is not his clan's crime; the elder_hyuga walks out, and his grand-niece `squad4_a` does not follow him; `squad5_a`, whose clan's Hokage kept the silence for thirty years, stands up in the gallery and stays standing through the whole session, without a word, and sits only when the vote is called | plot, mood (`mood_event village grieving`) | Your testimony: for the dead / for the living descendants / against the silence (`ans.player.council_testimony`) |
 | 40.2b | Faith | `squad5_a` | That night, on the Rock under the Third's face, `squad5_a` asks you the question he can't ask anyone in his family | bond | "Does it still count, the Will of Fire, if the one who taught it to us kept this quiet?" It counts more now / It never counted / It counts if we say it out loud (`ans.squad5_a.will`). He stands with the Seventh in Ch 42 either way; the answer is his speech when he becomes your Commander (Ch 55) |
 | 40.3 | The cleared | the innocent candidates | Each cleared candidate's scene (ROTATIONS §1) | bond | — |
 | 40.4 | The village | residents | A side-quest wave: families learning their roots (`side.j.roots`, shaped by `ans.hokage_6.names` and `ans.player.council_testimony`), old friends quarrelling over blame, a Kurama painter bringing out a hidden painting of the shrine (`clan.kurama.3`) | life, systems | — |
@@ -154,7 +157,7 @@ living descendant, or an old Leaf family who kept silent).
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
 | 42.1 | Resignation | `hokage_6` | The Sixth resigns to take responsibility for the Leaf's buried crime: "A Hokage is for..." (answers `ans.hokage_6.for`) | plot | — |
-| 42.2 | The Seventh | `sensei`, the council, `squad5_a`, `sensei_2`, the village | The council balks: the sensei's own field report of the Ash Road was rewritten above their name and they signed it; the `elder_hyuga` says a Hokage who signed a lie cannot ask the village to tell the truth. `sensei_2` kneels first. Then `squad5_a`, the Sarutobi heir whose clan's Hokage kept the silence, stands up in the gallery: "I'm with them. Because they're the one who'll say it was wrong." The vote carries. New Year: the sensei is named Seventh Hokage. Their speech quotes your Ch 8 answer about wrong orders (`ans.sensei.orders`; unset: "One of my students once told me nothing at all, and did the right thing anyway") and, if you once gave your own bell away (`ans.player.bell_given`), "and one of them once gave away their bell" | plot (`set_hokage 7`, `carve_face 6`), bond | — |
+| 42.2 | The Seventh | `sensei`, the council, `squad5_a`, `sensei_2`, the village | The council balks: the sensei signed the Ash Road field report, the elders rewrote it above their name, and when the sensei saw the rewrite years later they said nothing, to keep their post; the `elder_hyuga` says a Hokage who signed a lie cannot ask the village to tell the truth. `sensei_2` kneels first. Then `squad5_a`, the Sarutobi heir whose clan's Hokage kept the silence, stands up in the gallery: "I'm with them. Because they're the one who'll say it was wrong." The vote carries. `sensei_2`, kneeling, mutters to your sensei: "That's 51 to 289. You win this one too." (51 to 290.) New Year: the sensei is named Seventh Hokage. Their speech quotes your Ch 8 answer about wrong orders (`ans.sensei.orders`; unset: "One of my students once told me nothing at all, and did the right thing anyway") and, if you once handed the cord over (`ans.player.cord_given = handed`), "and one of them once handed the whole cord to the others" | plot (`set_hokage 7`, `carve_face 6`), bond | — |
 | 42.3 | The face | the Rock | The Seventh's face begins to be carved. The instructor's Ch 5 question is called back (`ans.instructor.face`) | bond | — |
 
 ---
@@ -197,4 +200,5 @@ needs adults and level 10 (BONDS.md §10). Story beats that read it:
   blessing, by personality) in the next squad dinner.
 - **The wedding** at the shrine is an event chapter (`event.wedding.player`) whenever it happens; the
   squad, the sensei (as Hokage, if after Ch 42) and anyone at level 6+ attend.
-- **The finale reads it.** A spouse is the strongest flame in Ch 53; their line comes first.
+- **The finale reads it.** A spouse is the strongest bond; their flame comes third in Ch 53, after the
+  red cord and the sensei.

@@ -137,10 +137,14 @@ state from one `hides:` bond flag, never a lie detector. The exceptions, each a 
 The porter and every traitor candidate are never exceptions before Ch 39. The leader has no
 threads.
 
-**The bond web's sizes are data.** `BondWeb.score` ([BONDS.md](../../BONDS.md) §11) maps to four tiers:
-a small fire, strong, great, the whole village. The thresholds live in the datapack and are
-calibrated by the bonds session's simulation so a typical player reaches "strong" and a devoted one
-"the whole village". Story conditions read the tier (`bond_web_tier strong`), never a raw number.
+**The bond web's sizes are data.** `BondWeb.score` ([BONDS.md](../../BONDS.md) §11) maps to three tiers,
+calibrated by the bonds session's simulation (at 60 h: reckless 4 to 10, typical 34 to 40, devoted
+42 to 50): **a small fire** (under 20), **strong** (from 20), **the whole village** (from 41). The
+thresholds live in the datapack. Story conditions read the tier (`bond_web_tier strong`), never a
+raw number.
+
+**Scripted thread form** (bonds session): `{"thread": {"who": "role:x", "floor": "spark", "style":
+"one_sided" | "fraying", "until": "<story flag>"}}`; it shows only after `story.kindling.awakened`.
 
 ## Journal documents and other ids
 

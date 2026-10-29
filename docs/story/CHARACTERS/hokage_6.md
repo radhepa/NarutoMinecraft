@@ -79,6 +79,8 @@ truth to a village that cannot bear it, and break it.
 
 ### Questions for the player
 
+Every main-path read below has an unset default: the neutral version of the line, or no callback.
+
 | Id | When | Question | Options | Honours / tests | Remembered | How it changes him |
 |---|---|---|---|---|---|---|
 | `ans.hokage_6.got_right` | Ch 32.1, after his naming | "What did the Fifth get right? I want to keep it." | she watched closely, she took responsibility, nothing | Kindness / honesty | Ch 33 to 40: he keeps a sensor watch (watched), or makes taking responsibility his habit (it is what he does in Ch 42); "nothing" makes him visit her and come back with an answer of his own | A small policy colour across the Jonin arc |

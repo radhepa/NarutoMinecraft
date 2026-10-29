@@ -261,8 +261,8 @@ quest actions and conditions on roles, never code. Questions and answers: [DIALO
 | Ch 46, your house | descendants, friends | Recruitment (BONDS §10) |
 | N6 / Ch 47, giving flame | `lost_child` | `gave_flame` (requested act); her bond grows from 2 |
 | Ch 50, the doors | clans and districts | `standing` gates per quarter |
-| Ch 53, every fire | everyone at 6+ | The watch-fire's size is `BondWeb.score` ([BONDS.md](../../BONDS.md) §11), in four tiers (a small fire, strong, great, the whole village). The thresholds are data, calibrated by the bonds session's simulation so a typical player reaches "strong" and a devoted one "the whole village" |
+| Ch 53, every fire | everyone at 6+ | The watch-fire's size is `BondWeb.score` ([BONDS.md](../../BONDS.md) §11), in three tiers: a small fire (under 20), strong (from 20), the whole village (from 41). The thresholds are data, calibrated by the bonds session's simulation (60 h: reckless 4 to 10, typical 34 to 40, devoted 42 to 50) |
 | Ch 53, the spoken flames | `lost_child`, `sensei`, spouse, the friend who fell in Ch 24, the other teammate, `rival` | Fixed order; the red cord and the sensei kindle first in every save at any level (the lonely floor; the sensei's flame overrides a falling-out); then faces without spoken lines |
-| Ch 53, the second | `yugure_second` | Lives in any of three ways: the web at "strong" or above; `friendship [yugure_second, 4]`; or `friendship [squad4_c, 6]` with `ans.squad4_c.second` not "someone else first". Resolved before the leader's end (53.5) |
+| Ch 53, the second | `yugure_second` | Lives in any of three ways: the web at "strong" (score 20 or more); `friendship [yugure_second, 4]`; or `friendship [squad4_c, 6]` with `ans.squad4_c.second` not "someone else first". Resolved before the leader's end (53.5) |
 | The librarian teaches the gift's old forms | `librarian` | Before Ch 39, identical in every save: `friendship [librarian, 7]` and `story.kindling.awakened` (lore and practice: the songs, keeping the flame, the ember mark). After Ch 40 only if innocent |
 | The merchant turns informant (innocent) | `merchant` | `friendship [merchant, 6]` after Ch 40 |

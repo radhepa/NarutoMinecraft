@@ -9,9 +9,9 @@
 |---|---|
 | Role | Yūgure's second-in-command; half of the only pair the leader ever allowed (with the blade); an ember user; a `twist.lineage` candidate (the player's mother in lineage A) |
 | Look (fixed) | Tall, lean, about thirty-four at Y0. Dark red-brown hair cut at the jaw, one lock singed shorter than the rest. Hands scarred like a smith's from her own ember chakra (the burns are the tell the player can notice in Ch 15). Ordinary road clothes: a plain grey travelling coat. A sinking sun drawn in soot on the inside of her left wrist (Yūgure's sign). An ash-violet scarf over her face only when she means to be seen (the stadium). Her half of the watch-fire charm hangs on a cord under her collar, never shown before Ch 48 |
-| Disguise (Ch 15 to 17) | A tall Genin girl of a small foreign village, under Transformation; the burned hands do not change |
+| Cover (Ch 15 to 19) | Openly an adult: one of two escorts (with the blade) of a real, innocent foreign team of three Genin from a small village, under false papers. No Transformation; the burned hands are the tell |
 | Pronouns | She / her |
-| Clan | No clan. An ordinary family name (rolled from the `family_names` pool; Given Family order). A Kagari descendant: her great-grandmother was one of the twenty-seven, renamed into a Leaf household, who later left the Leaf for a border town. Her flame broke its seal as ember chakra |
+| Clan | No clan. An ordinary family name (rolled from the `family_names` pool; Given Family order). A Kagari descendant: her grandmother was one of the twenty-seven, renamed into a Leaf household, who later left the Leaf for a border town. Her flame broke its seal as ember chakra |
 | Rank | Missing-nin; Jonin-level. Yūgure's second since about Y-15 |
 | Archetype (bond engine) | `reserved` leaning `protective` (warmth .1, bold .4, pride .3, discipline .6, open -.7) |
 | Values | Loyalty, family |
@@ -55,9 +55,9 @@
 
 | By | She knows | She does not know |
 |---|---|---|
-| Ch 0 | The southern hills hideout was "emptying" children (the leader's test). She sends the map. (She never learns that the voice warned him and he let the raid happen: "Let the Leaf raise my fire.") | That the strongest child there was hers (A) or that the child exists at all |
+| Ch 0 | The southern hills hideout was "emptying" children (the leader's test). She sends the map. (She never learns that the hand warned him and he let the raid happen: "Let the Leaf raise my fire.") | That the strongest child there was hers (A) or that the child exists at all |
 | Ch 13 | Her orders: recruit the orphan whose parent serves Yūgure | Who the player is |
-| Ch 16 | A Kagari flame in the forest, stronger than hers; a child who hums the watch-fire song | Whose child |
+| Ch 16 | A Kagari flame in the forest, stronger than hers (felt while she searches for "her" team as their escort); a child who hums the watch-fire song | Whose child |
 | Ch 19 | Her order: "Find the strongest flame and tell me how it burns." (A test of *her*: he already knows.) Nobody is ordered to take the player. When she sees the flame she names it aloud instead of reporting it | That it was a test, and why he wants it. In A she does not let herself believe the child is hers |
 | Ch 27 | That the leader calls the child "the candle" in his orders | What a candle is for |
 | Ch 41 | That the Bonfire needs something from the Leaf she has not been told. She doubts | The Hollow Crown |
@@ -82,40 +82,49 @@
 2. **Y-6:** The cells take the child. The leader tells her the house burned with everyone in it.
    She grieves in his presence, and he comforts her. (The cruellest thing in the story; the player
    learns it in Ch 48.)
-3. **Ch 16:** In the forest she feels the flame and spares the child; that night she hears the song
-   from the trees. She does not let herself believe it.
+3. **Ch 16:** In the forest, as an escort "looking for her team", she feels the flame and saves
+   the child from another team's trap; that night she hears the song from the trees. She does not
+   let herself believe it.
 4. **Ch 19:** Sent to find the strongest flame and report how it burns, she names it aloud instead: "Kagari." She means: *you are what I am.* She half means: *you are mine.*
 5. **Ch 27:** The persimmon on the sill is hers. She found out where the child lives from the
    leader's own reports and could not stay away.
-6. **Ch 48:** At the persimmon house's ruins she waits, unarmed. The halves fit. Before the player answers (`ans.player.parent_meet`), she tells them the Ch 0 map was hers, so "You saved me twice" is a choice the player can make knowingly.
+6. **Ch 48:** At the persimmon house's ruins she waits, unarmed. The halves fit. Of the stadium she
+   says: "I nearly told him how you burn." Before the player answers (`ans.player.parent_meet`), she tells them the Ch 0 map was hers, so "You saved me twice" is a choice the player can make knowingly.
 7. **Ch 52:** She shields the player as a mother.
-8. **Ch 53:** Lives (by the gate above) or dies at dawn with both halves of the charm in her hand.
+8. **Ch 53.5:** Lives (by the gate below), or dies at dawn holding both halves of the charm. Her
+   grave is under the persimmon tree.
 
 ### Lineage B track (the fallen Leaf shinobi was the player's parent)
 
 1. **Y-9 to Y-8:** Her son, a nursery child, dies of fever at five. She stays in Yūgure because
    leaving would mean admitting what she had given him to.
-2. **Ch 16:** She feels a flame she has only ever felt in herself; she spares a nursery child she
-   swore, years ago, to protect. The song stops her in the trees because her mother sang it.
+2. **Ch 16:** As an escort "looking for her team", she feels a flame she has only ever felt in
+   herself and saves a nursery child she swore, years ago, to protect, from another team's trap. The song stops her in the trees because her mother sang it.
 3. **Ch 19:** Sent to find and report the flame, she names it aloud instead: "Kagari." She means: *you are what I am, and they will use you as they used him.*
 4. **Ch 27:** No persimmon (that is the sensei's). Her warning is the whole of her gift.
-5. **Ch 48:** Not present. That night her letter reaches the Seventh: she has left Yūgure.
+5. **Ch 48:** Not present. What sent her into the leader's notes: the Valley of Ash rescue (Ch 35)
+   reached Yūgure's ears, and the children she later questioned told her what the nursery was
+   for. In his notes she found Nine named as the wick. That night her letter reaches the Seventh:
+   she has left Yūgure.
 6. **Ch 49:** She tells the council the plan. She tells the player about her son once, flatly,
    and never again.
 7. **Ch 52:** She shields the player as a debt to her son.
-8. **Ch 53:** Lives (by the gate above) or dies at dawn; the player can lay her under the persimmon tree.
+8. **Ch 53.5:** Lives (by the gate below), or dies at dawn with her son's name on her lips. Her
+   grave is at the shrine beside the stone basket, her son's name carved on it.
 
 (In both lineages `fallen_parent` also had a child "lost" after the Ash Road ambush: in A that
 child truly died, in B it is the player. She does not know of it; it never touches her lines.)
 
 ### Her thread (Thread Sight)
 
-From Ch 27, when the player has Thread Sight, a **faint, one-sided thread** runs from her toward
-the player: she feels for a child she cannot name. It shows in both lineages (in A it is a
-mother's; in B it is for her son, landing on the nearest child of the nurseries) and must never
-be explained before Ch 48. She has no thread the player could read toward anyone else in Yūgure
-except one, strong and old, to the blade. After her defection the thread becomes two-sided as her
-bond with the player grows; in Ch 52 it is the thread the leader's mirror tears.
+From Ch 27, a **faint, one-sided thread** runs from her toward the player: she feels for a child
+she cannot name. It is a scripted exception (a `thread_floor`), not a level: the player is far
+below 6 with her. It shows in both lineages (in A it is a mother's; in B it is for her son,
+landing on the nearest child of the nurseries) and must never be explained before Ch 48. It
+**frays** from Ch 49 to Ch 52 (her guilt, her fear of the leader). The player sees no other thread
+of hers; her strong old thread to the blade is shown only in Ch 52. In Ch 52.4 it is the thread
+the leader's mirror tears; in Ch 53.5, if she lives, the player holds that frayed thread and pours
+flame into it.
 
 ### Her bond
 
@@ -125,10 +134,16 @@ the warning (Ch 27), the memorial conversation (Ch 41). **Her bond levels open p
 Ch 41**, and conversation and hangouts only after her defection (Ch 48 in A, Ch 49 in B), when she
 lives under the Seventh's watch at the shrine. The Ch 49 truth scene gives a `shared_moment bond.second.truth`; with the
 anchor hunt and the last meal (two shared experiences) a player who spends time with her between
-Ch 49 and Ch 52 reaches level 4 (the Ch 53 survival gate) without grinding.
+Ch 49 and Ch 52 reaches level 4 (one of the Ch 53.5 survival gates) without grinding. Every
+main-path read of her `ans.*` flags has an unset default (a neutral line, or no callback).
 
-**She lives in Ch 53** if any of: `friendship [yugure_second, 4]`, `bond_web 40`, or `squad4_c`'s
-kindled healing (`friendship [squad4_c, 6]`). Otherwise she dies at dawn.
+**Her fate resolves in Ch 53.5, before the leader's end (53.6).** She lives if any of: the web at
+the **"strong"** tier or above (the tier the bonds session calibrates; not a raw number),
+`friendship [yugure_second, 4]`, or `friendship [squad4_c, 6]` with `ans.squad4_c.second` not
+"someone else first". Survival is shown as the player holding her frayed thread and pouring flame
+into it. Otherwise she dies at dawn, by lineage: **A** holding both halves of the charm, buried
+under the persimmon tree; **B** with her son's name on her lips, buried at the shrine beside the
+basket with his name carved on it.
 
 ## Dialogue brief
 
@@ -164,7 +179,7 @@ kindled healing (`friendship [squad4_c, 6]`). Otherwise she dies at dawn.
 | 0 to 2 | Yūgure's cells and habits (tactical, she answers precisely); the weather on the road; food (she eats standing) |
 | 3 | The nurseries (what they were like from the other side); the blade ("He's the only honest man in Yūgure") |
 | 4 | The persimmon house (A) or her son (B); the watch-fire song |
-| 5 | Her own great-grandmother, the renamed child who left the Leaf; why she believed |
+| 5 | Her own grandmother, the renamed child who left the Leaf; why she believed |
 | 6+ | What she would have been if the Leaf had kept the fourth clause; what she wants now (nothing; then, when pressed, "a table") |
 
 ### Never reveal before
@@ -188,14 +203,14 @@ kindled healing (`friendship [squad4_c, 6]`). Otherwise she dies at dawn.
 | `ans.yugure_second.fire` | Ch 41.4 | "What will you do with that fire when they come for it?" | give, keep, share | Share honours loyalty (she hears the old Kagari way); keep honours her protectiveness; give tests her (it is what the leader wants) | Ch 49 (to the council: "This one told me they'd share it. I didn't know what that meant. Now I do") / Ch 52.4 (her last words before the mirror read it: give: "Don't give it to him"; keep: "Keep it, then"; share: "Share it. The way it's meant") | Share or keep: she leaves Yūgure sooner in her own telling (a line in Ch 49) |
 | `ans.yugure_second.hate` | Ch 48 (A) / Ch 49 (B), the first night after defection | A: "Do you hate me?" B: "Do you hate what I was?" | yes, no, not yet | "Not yet" honours honesty (she trusts it most); "no" she does not believe, at first | Ch 52.4 and the epilogue: "not yet" earns "You said not yet. I'll take it" | "Yes" sets her to earn it: she volunteers for the most dangerous anchor in Ch 50 |
 | `ans.yugure_second.lock` | Ch 49, before the council | "If they lock me up, will you let them?" | yes (it's fair), no (I'll speak for you), it's your choice | Tests loyalty against duty; "your choice" honours freedom she has never had | Ch 49.1 (`ans.player.vouch` is the act; this is the promise) and Ch 54 (if she lives, the Seventh asks you what to do with her and this answer is quoted) | "Yes" and she lets them; she is let out for Ch 50 under watch. "No": she is grateful and uneasy |
-| `ans.yugure_second.blade` | Ch 50, during the anchor hunt | "He'll come at you. If you beat him, will you leave him alive?" | yes, if I can, no promises | Honours loyalty (she cares for him); "no promises" honours honesty | Ch 51b (the blade's duel): the player's line to the blade can quote her ("She asked me to") as a fourth option; Ch 52.5: if "yes", she calls his name as he turns | If "yes" and the player keeps it, the blade's turn in 52.5 includes a last exchange with her |
-| `ans.yugure_second.song` | A: Ch 48 after the halves fit. B: Ch 50, at the shrine | A: "Do you still know the song? All of it?" B: "Who sang it to you?" | A: sing it, hum it, only the first line. B: I don't remember, someone in the persimmon house, you'd know better than me | A: singing honours family; B: honesty | Ch 53.5: the line the player sings to the leader; if A and "only the first line", she sings the rest from where she lies | A: if sung, she sings the second verse she never sang anyone (a new lyric, the only time it appears) |
+| `ans.yugure_second.blade` | Ch 50, during the anchor hunt | "He'll come at you. If you beat him, will you leave him alive?" | yes, if I can, no promises | Honours loyalty (she cares for him); "no promises" honours honesty | Ch 51b (the blade's duel): the player's line to the blade can quote her ("She asked me to") as a fourth option; Ch 52: if "yes", she calls his name as he fights beside the player | If "yes" and the player keeps it, the blade's custody scene (Ch 54) includes a last exchange with her, if she lives |
+| `ans.yugure_second.song` | A: Ch 48 after the halves fit. B: Ch 50, at the shrine | A: "Do you still know the song? All of it?" B: "Who sang it to you?" | A: sing it, hum it, only the first line. B: I don't remember, someone in the persimmon house, you'd know better than me | A: singing honours family; B: honesty | Ch 53.5: if she lives, she hums under the player's breath as they hold her thread (sung: she hums the second verse; hummed or first line: the first). Unset: silence | A: if sung, she sings the second verse she never sang anyone (a new lyric, the only time it appears) |
 | `ans.yugure_second.after` | Ch 50, the last night before Dusk | "When this is over, where does someone like me go?" | your house (with me), the shrine, wherever you want, away from here | Freedom vs family | Epilogue (if she lives): where she is | Sets her epilogue home |
 | `ans.yugure_second.call` | A only, Ch 49 or 50, a hangout | "What do I call you? Not the number. Not the name they gave you. What do *you* want?" | my name ({player}), whatever you called me before, you choose | Family | Her form of address for the rest of the game | If "whatever you called me before": she uses a soft baby-name she gave the child (an authored nickname, the only one in the game; dialogue session writes one Japanese diminutive, not a real name) |
 | `ans.yugure_second.son` | B only, Ch 49 or 50 | "Would you have liked him? My son?" | yes, I'd have looked out for him, tell me about him | Kindness / family | Epilogue: if she lives and "tell me", she tells one story about him at the shrine; if she dies, the player finds his name carved small on the stone basket | Her one moment of warmth in B |
 | `ans.yugure_second.cloaks` | Ch 49, after the truth scene (the `shared_moment bond.second.truth`) | "When you were in the cells, were you afraid of us? Of the scarves?" | yes, not of you (you spared me), I was afraid of everyone | Honesty | Ch 52.4: if "not of you", her last look before the mirror is relief | "Afraid of everyone" makes her ask the next questions more gently |
 | `ans.yugure_second.b_sorry` | Ch 49 or 50, after she sees teammate_b | "Your friend. The one I lured on the bridge. If I say I'm sorry, is that for them or for me?" | for them, for you (and that's allowed), say it anyway | Honesty / kindness | Ch 51a (the parent): if she apologised (any answer leads her to; "say it anyway" makes her do it before Dusk), b mentions it to their parent | She says "I'm sorry" for the first time in the game, to b |
-| `ans.yugure_second.thread` | Ch 50, when the player looks at her with Thread Sight | "You're looking at me the way he never did. What do you see?" | a thread to me, a thread to the swordsman, a thread that's still tying | Honesty | Ch 52.4 (the thread the mirror tears); Ch 53.6 (if she lives: "Is it still there?") | "A thread to me" in B makes her tell the player about her son if not already asked |
+| `ans.yugure_second.thread` | Ch 50, when the player looks at her with Thread Sight | "You're looking at me the way he never did. What do you see?" | to_me ("A thread to me"), fraying ("A thread that's fraying"), tying ("A thread that's still tying") | Honesty | Ch 52.4 (the thread the mirror tears); Ch 53.5 (if she lives: "Is it still there?"). Unset: no callback | "A thread to me" in B makes her tell the player about her son if not already asked; "fraying" makes her admit she is afraid of him |
 | `ans.yugure_second.recruits` | Ch 50, during the anchor hunt | "I recruited children for him. Some are in the cells you emptied. Should their families hear it from me?" | yes, from you; let the archive tell them; after the war | Duty / honesty | Epilogue (if she lives): she visits the Valley children's families, or not | "From you" adds a `side.r.second_amends` quest to the post-game |
 | `ans.yugure_second.table` | Ch 50, the last meal before Dusk (level 3+) | "What does a family eat together here? I've forgotten how it goes." | ramen (your order), whatever I cook, anything, as long as we sit | Family | Epilogue: what she eats at the house's table; if she died, the player sets that bowl at her grave on the Ash Road anniversary | — |
 
@@ -206,7 +221,7 @@ kindled healing (`friendship [squad4_c, 6]`). Otherwise she dies at dawn.
 | **Plot** | Ch 13 (b's lure), 19 (the name), 27 (the warning), 49 (the plan) |
 | **Clue (lineage)** | The forest, the stadium, the persimmon, the song: every line must be true in both lineages |
 | **Bond** | Ch 41, and all post-defection talk |
-| **Mood states** | `guarded` (enemy, to Ch 41), `doubting` (Ch 41 to 48), `penitent` (after defection), `hollow` (Ch 52 to 53), `healing` (epilogue, if alive) |
+| **Mood states** | `guarded` (enemy, to Ch 41), `doubting` (Ch 41 to 48), `penitent` (after defection), `hollow` (Ch 52.4 to 53.5), `healing` (epilogue, if alive) |
 | **Pools** | `story.second.<chapter>.<beat>`; after defection she uses the bond pools with her own voice (`bond.greet.level.<n>.yugure_second`, about 15 lines per pool she can reach) and `talk.q.yugure_second.<topic>` |
 
 ### Variants
@@ -230,6 +245,6 @@ kindled healing (`friendship [squad4_c, 6]`). Otherwise she dies at dawn.
 - `ans.yugure_second.son` (B only: yes, looked_out, tell_me)
 - `ans.yugure_second.cloaks` (yes, not_you, everyone)
 - `ans.yugure_second.b_sorry` (for_them, for_you, say_it)
-- `ans.yugure_second.thread` (to_me, to_blade, tying)
+- `ans.yugure_second.thread` (to_me, fraying, tying)
 - `ans.yugure_second.recruits` (from_you, archive, after)
 - `ans.yugure_second.table` (ramen, i_cook, sit)
