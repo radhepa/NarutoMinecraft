@@ -65,5 +65,5 @@ public record ClanProfile(String id, boolean noble, double strictness, Set<Value
             Map.entry("kinoshita", c("kinoshita", false, .1, Set.of(Value.CREATIVITY, Value.FAMILY), .2, 0, 0, .1, .1, List.of("builders_yard"), false, 1)),
             Map.entry("tsuchigumo", c("tsuchigumo", false, .4, Set.of(Value.FAMILY, Value.DUTY), -.1, 0, .1, .2, -.2, List.of("quarry_rites"), false, 1)),
             Map.entry("suzuran", c("suzuran", false, .2, Set.of(Value.KINDNESS, Value.KNOWLEDGE), .3, -.2, 0, .1, .1, List.of("herb_racks"), false, 1)),
-            Map.entry("tobari", c("tobari", false, .5, Set.of(Value.DUTY, Value.LOYALTY), -.1, 0, 0, .2, -.4, List.of("lanterns_at_dusk", "never_speak_of_the_watch"), false, 1)));
+            Map.entry("tobari", c("tobari", false, .5, Set.of(Value.DUTY, Value.LOYALTY), -.1, 0, 0, .2, -.4, List.of("lanterns_at_nightfall", "never_speak_of_the_watch"), false, 1)));
 }
