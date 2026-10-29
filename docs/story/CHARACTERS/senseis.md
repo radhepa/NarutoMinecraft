@@ -8,6 +8,10 @@ player's sensei, a squad of their own, and at least one beat that moves the main
 have **rolled looks in Varied** (so *they* here and pronoun tokens in dialogue); the Classic
 curation gives each a fixed look and gender, stated below.
 
+**Unset answers.** Every main-path read of an `ans.*` flag in this file has an `unset` branch: the
+unset line given in its row, or else the character's line for that beat without the callback
+("You said ___" is dropped, nothing else changes).
+
 **How the five relate** (the "staff room"):
 
 | | sensei | sensei_2 | sensei_3 | sensei_4 | sensei_5 |

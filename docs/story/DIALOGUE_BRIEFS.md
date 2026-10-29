@@ -46,7 +46,8 @@ callbacks), for any character. Character briefs add their own.
 | The word **Yūgure** | After `story.ch14.done` (the smuggler says it) |
 | The word **Kagari** | After `story.ch19.named`; said aloud by Leaf characters only after Ch 22 (and only by the gated characters) |
 | "Kindling" as a name for the gift | After Ch 25.3 |
-| The nursery number "Nine" | Only the Ch 0 guard, the bound voice's slip (Ch 25), the Undercroft (N3), the leader (Ch 52), and the porter after Ch 28 |
+| The nursery number "Nine" | Only the Ch 0 guard, the bound voice's slip (Ch 25), the Undercroft (N3), the leader (Ch 52), and the second's notes (Ch 48 A). The porter remembers nothing after Ch 28. No other line puts a count of nine near the player ("ten months", not nine) |
+| Thread Sight in dialogue | A flicker means *hiding something*, steadily, never a lie in the moment. No character says "you'll know when I'm lying"; they say "you'll know I'm hiding something" |
 | Anything about the archive's contents | After Ch 36 |
 | The Quiet Ending, the renamed children | After Ch 36 (the purge), Ch 37 (the names); public lines after Ch 40 |
 | Who the voice is | After Ch 39; innocent candidates' clearing lines only after Ch 40 |
@@ -89,6 +90,29 @@ The user's wish: friendship has questions and choices, and answers matter later.
 - **The index by chapter** is generated from the character files' question tables
   (`quests.py --questions`), so the tables stay the single source of truth. The "when" column of
   each table is what the index sorts by.
+
+### The player's own choices (`ans.player.*`)
+
+| Flag | Asked | Options | Read in |
+|---|---|---|---|
+| `ans.player.ch0.freed_boy` | Ch 0.3 | freed / not | Ch 34.1 (genin_1) |
+| `ans.player.ramen` | Ch 1.4 | miso, salt, pork bone, whatever | The cook, friends, Ch 20.4, 45.2, 54.1 |
+| `ans.player.intro` | Ch 1.5 | told, nowhere, joke | Ch 2.3 (the rival) |
+| `ans.player.cord_given` | Ch 8.3 | handed, together | Ch 34.2, Ch 42.2 |
+| `ans.player.paper` | Ch 11.3 | hid, sensei, teammate | Ch 14.4, 25.4 |
+| `ans.player.foreign_team` | Ch 15 | what you noticed | Ch 18.1, Ch 20.3 (judging) |
+| `ans.player.tester_heard` | Ch 23.3 | squad heard, aside | Ch 24.4, 25.2 |
+| `ans.player.testify` | Ch 31.3 | for the Tobari, against the lockdown, the Fifth's right to fear | Ch 33.3, Ch 51a.1 |
+| `ans.player.own_test` | Ch 34.2 | cord, rescue, scroll, night watch | The Genin's first bond quest |
+| `ans.player.genin_flame` | Ch 34.3 | told, watched, reported | Reporting: genin_3 becomes the Undercroft's fallback in N5 |
+| `ans.player.leaf_is` | Ch 35.4 | feeds you, trying, you choose | Ch 41.3 |
+| `ans.player.archive_follow` | Ch 37.0 | followed, stayed | The sensei's and keeper's lines |
+| `ans.player.council_testimony` | Ch 40.2 | the dead, the living, the silence | Ch 41.1 dedication, `side.j.roots` |
+| `ans.player.parent_meet` | Ch 48 | three per lineage | Ch 53.5, Ch 55.2 |
+| `ans.player.vouch` | Ch 49.1 | vouched, let her speak, silent | Ch 51a (the doubting council members watch her on the wall; the Seventh's line) |
+| `ans.player.b_parent` | Ch 51a.4 | stood with b, let b choose | b's epilogue |
+| `ans.player.leader_name` | Ch 54.3 | among, off, apart | The memorial; Ch 55.5 |
+| `ans.player.speech` | Ch 55.2 | three of: the cord, the cord tag, the bowl, the names, the fire | Ch 55.2 |
 
 ### Where questions are asked
 

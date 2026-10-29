@@ -8,6 +8,10 @@ same Chunin Exams (Ch 15 to 20) as the player, and run a step ahead of them all 
 three have **rolled looks in Varied** (so *they* here, pronoun tokens in dialogue); the role traits
 below stay fixed in every save.
 
+**Unset answers.** Every main-path read of an `ans.*` flag in this file has an `unset` branch: the
+unset line given in its row, or else the character's line for that beat without the callback
+("You said ___" is dropped, nothing else changes).
+
 | | squad5_a | squad5_b | squad5_c |
 |---|---|---|---|
 | Specialty | Staff and fire | Silent scouting, smothering | Kenjutsu and ninjutsu, self-taught |

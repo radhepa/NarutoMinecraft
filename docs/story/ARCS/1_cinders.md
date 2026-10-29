@@ -133,7 +133,7 @@ Systemic after Ch 1: shops, a first job at Ichiraku, furnishing, the first side-
 
 ## Beta 1 bond quests (one per classmate)
 
-Classic content below; Varied saves use the same structure with the object and setting swapped by
+Each opens at bond level 2. Classic content below; Varied saves use the same structure with the object and setting swapped by
 the character's archetype and dream (see each character's brief).
 
 | Quest | Who | Beat | Question | Answer pays off |
