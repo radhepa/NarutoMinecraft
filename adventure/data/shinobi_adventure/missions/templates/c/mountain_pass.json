@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "escort",
  "status": "later",
- "title": "mission.c.mountain_pass.title",
- "brief": "mission.c.mountain_pass.brief",
+ "title": "dlg:mission.c.mountain_pass.title",
+ "brief": "dlg:mission.c.mountain_pass.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.mountain_pass.brief",
+  "accept": "dlg:mission.c.mountain_pass.accept",
+  "decline": "dlg:mission.c.mountain_pass.decline",
+  "progress": "dlg:mission.c.mountain_pass.progress",
+  "success": "dlg:mission.c.mountain_pass.success",
+  "fail": "dlg:mission.c.mountain_pass.fail",
+  "report": "dlg:mission.c.mountain_pass.report"
+ },
  "minutes": 35,
  "party": "squad",
  "days": 2,
@@ -32,7 +41,7 @@
   "ronin": {
    "pick": "enemy_group",
    "from": [
-    "ronin.band"
+    "combat:group.ronin_band"
    ]
   }
  },
@@ -114,14 +123,14 @@
    "id": "ronin",
    "weight": 2,
    "harder": true,
-   "premise": "mission.c.mountain_pass.twist.ronin"
+   "premise": "dlg:mission.c.mountain_pass.twist.ronin"
   },
   {
    "id": "blizzard",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.c.mountain_pass.twist.blizzard"
+   "premise": "dlg:mission.c.mountain_pass.twist.blizzard"
   }
  ],
  "outcomes": {
@@ -139,7 +148,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "ronin.band"
+  "combat:group.ronin_band"
  ],
  "places": {
   "anchors": [
@@ -163,7 +172,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.escort",
+ "banter": "dlg:mission.banter.escort",
  "_premise": "Clear a rockslide and see a group of pilgrims through a mountain pass.",
  "_twists": {
   "ronin": "A band of masterless samurai has claimed the pass.",

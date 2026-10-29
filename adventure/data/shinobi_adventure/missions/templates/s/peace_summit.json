@@ -5,8 +5,17 @@
  "rank": "s",
  "category": "protection",
  "status": "later",
- "title": "mission.s.peace_summit.title",
- "brief": "mission.s.peace_summit.brief",
+ "title": "dlg:mission.s.peace_summit.title",
+ "brief": "dlg:mission.s.peace_summit.brief",
+ "dialogue": {
+  "brief": "dlg:mission.s.peace_summit.brief",
+  "accept": "dlg:mission.s.peace_summit.accept",
+  "decline": "dlg:mission.s.peace_summit.decline",
+  "progress": "dlg:mission.s.peace_summit.progress",
+  "success": "dlg:mission.s.peace_summit.success",
+  "fail": "dlg:mission.s.peace_summit.fail",
+  "report": "dlg:mission.s.peace_summit.report"
+ },
  "minutes": 60,
  "party": "squad",
  "days": 3,
@@ -34,8 +43,8 @@
   "spoilers": {
    "pick": "enemy_group",
    "from": [
-    "assassin.team",
-    "enemy.cell"
+    "combat:group.assassins",
+    "combat:group.cell_pair"
    ]
   }
  },
@@ -88,14 +97,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.s.peace_summit.twist.delegate_plot"
+   "premise": "dlg:mission.s.peace_summit.twist.delegate_plot"
   },
   {
    "id": "walkout",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.s.peace_summit.twist.walkout"
+   "premise": "dlg:mission.s.peace_summit.twist.walkout"
   }
  ],
  "outcomes": {
@@ -113,8 +122,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "assassin.team",
-  "enemy.cell"
+  "combat:group.assassins",
+  "combat:group.cell_pair"
  ],
  "places": {
   "anchors": [
@@ -137,7 +146,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.protection",
+ "banter": "dlg:mission.banter.protection",
  "_premise": "Guard the five lands' peace summit; three sides would like it to fail.",
  "_twists": {
   "delegate_plot": "One of the delegates hired the assassins.",

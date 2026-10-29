@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "escort",
  "status": "later",
- "title": "mission.a.daimyo_escort.title",
- "brief": "mission.a.daimyo_escort.brief",
+ "title": "dlg:mission.a.daimyo_escort.title",
+ "brief": "dlg:mission.a.daimyo_escort.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.daimyo_escort.brief",
+  "accept": "dlg:mission.a.daimyo_escort.accept",
+  "decline": "dlg:mission.a.daimyo_escort.decline",
+  "progress": "dlg:mission.a.daimyo_escort.progress",
+  "success": "dlg:mission.a.daimyo_escort.success",
+  "fail": "dlg:mission.a.daimyo_escort.fail",
+  "report": "dlg:mission.a.daimyo_escort.report"
+ },
  "minutes": 50,
  "party": "squad",
  "days": 3,
@@ -32,7 +41,7 @@
   "assassins": {
    "pick": "enemy_group",
    "from": [
-    "assassin.team"
+    "combat:group.assassins"
    ]
   }
  },
@@ -92,14 +101,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.daimyo_escort.twist.inside_guard"
+   "premise": "dlg:mission.a.daimyo_escort.twist.inside_guard"
   },
   {
    "id": "storm",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.daimyo_escort.twist.storm"
+   "premise": "dlg:mission.a.daimyo_escort.twist.storm"
   }
  ],
  "outcomes": {
@@ -117,7 +126,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "assassin.team"
+  "combat:group.assassins"
  ],
  "places": {
   "anchors": [
@@ -143,7 +152,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.escort",
+ "banter": "dlg:mission.banter.escort",
  "_premise": "Escort the Fire Country's daimyo on a pilgrimage through contested land.",
  "_twists": {
   "inside_guard": "One of the daimyo's own guards is paid by the other side.",

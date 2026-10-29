@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "bandits",
  "status": "beta",
- "title": "mission.c.bandit_clearing.title",
- "brief": "mission.c.bandit_clearing.brief",
+ "title": "dlg:mission.c.bandit_clearing.title",
+ "brief": "dlg:mission.c.bandit_clearing.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.bandit_clearing.brief",
+  "accept": "dlg:mission.c.bandit_clearing.accept",
+  "decline": "dlg:mission.c.bandit_clearing.decline",
+  "progress": "dlg:mission.c.bandit_clearing.progress",
+  "success": "dlg:mission.c.bandit_clearing.success",
+  "fail": "dlg:mission.c.bandit_clearing.fail",
+  "report": "dlg:mission.c.bandit_clearing.report"
+ },
  "minutes": 30,
  "party": "squad",
  "unlock": {
@@ -47,13 +56,13 @@
   "leader": {
    "pick": "enemy_group",
    "from": [
-    "bandit.leader"
+    "combat:enemy.bandit_chief"
    ]
   },
   "crew": {
    "pick": "enemy_group",
    "from": [
-    "bandit.camp"
+    "combat:group.bandits_camp"
    ]
   }
  },
@@ -120,7 +129,8 @@
     "options": {
      "mercy": null,
      "arrest": "arrested_all"
-    }
+    },
+    "dialogue": "dlg:mission.c.bandit_clearing.choice.farmers"
    },
    "branch": [
     {
@@ -193,19 +203,19 @@
    "id": "hostages",
    "weight": 2,
    "harder": true,
-   "premise": "mission.c.bandit_clearing.twist.hostages"
+   "premise": "dlg:mission.c.bandit_clearing.twist.hostages"
   },
   {
    "id": "leader_flees",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.bandit_clearing.twist.leader_flees"
+   "premise": "dlg:mission.c.bandit_clearing.twist.leader_flees"
   },
   {
    "id": "desperate_farmers",
    "weight": 1,
    "harder": false,
-   "premise": "mission.c.bandit_clearing.twist.desperate_farmers"
+   "premise": "dlg:mission.c.bandit_clearing.twist.desperate_farmers"
   }
  ],
  "outcomes": {
@@ -240,8 +250,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.camp",
-  "bandit.leader"
+  "combat:group.bandits_camp",
+  "combat:enemy.bandit_chief"
  ],
  "places": {
   "anchors": [
@@ -262,7 +272,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.bandits",
+ "banter": "dlg:mission.banter.bandits",
  "_premise": "Clear a bandit camp that has been robbing farms outside the wall.",
  "_twists": {
   "hostages": "They have taken farmhands; get them out before the fight reaches them.",

@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "elimination",
  "status": "later",
- "title": "mission.b.warlord.title",
- "brief": "mission.b.warlord.brief",
+ "title": "dlg:mission.b.warlord.title",
+ "brief": "dlg:mission.b.warlord.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.warlord.brief",
+  "accept": "dlg:mission.b.warlord.accept",
+  "decline": "dlg:mission.b.warlord.decline",
+  "progress": "dlg:mission.b.warlord.progress",
+  "success": "dlg:mission.b.warlord.success",
+  "fail": "dlg:mission.b.warlord.fail",
+  "report": "dlg:mission.b.warlord.report"
+ },
  "minutes": 40,
  "party": "squad",
  "days": 2,
@@ -32,7 +41,7 @@
   "guard": {
    "pick": "enemy_group",
    "from": [
-    "bandit.fort_guard"
+    "combat:group.fort_guards"
    ]
   }
  },
@@ -85,7 +94,8 @@
     "options": {
      "capture": null,
      "finish": "eliminated"
-    }
+    },
+    "dialogue": "dlg:mission.b.warlord.choice.terms"
    },
    "next": "report"
   },
@@ -103,14 +113,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.warlord.twist.body_double"
+   "premise": "dlg:mission.b.warlord.twist.body_double"
   },
   {
    "id": "hostage_valley",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.b.warlord.twist.hostage_valley"
+   "premise": "dlg:mission.b.warlord.twist.hostage_valley"
   }
  ],
  "outcomes": {
@@ -134,8 +144,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.fort_guard",
-  "bandit.warlord"
+  "combat:group.fort_guards",
+  "combat:enemy.warlord"
  ],
  "places": {
   "anchors": [
@@ -158,7 +168,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.elimination",
+ "banter": "dlg:mission.banter.elimination",
  "_premise": "A bandit warlord holds a valley to ransom; end his hold on it (capture or eliminate, by the client's terms).",
  "_twists": {
   "body_double": "The man in the warlord's armour is a double.",

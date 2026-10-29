@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "guard",
  "status": "later",
- "title": "mission.b.bridge_builders.title",
- "brief": "mission.b.bridge_builders.brief",
+ "title": "dlg:mission.b.bridge_builders.title",
+ "brief": "dlg:mission.b.bridge_builders.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.bridge_builders.brief",
+  "accept": "dlg:mission.b.bridge_builders.accept",
+  "decline": "dlg:mission.b.bridge_builders.decline",
+  "progress": "dlg:mission.b.bridge_builders.progress",
+  "success": "dlg:mission.b.bridge_builders.success",
+  "fail": "dlg:mission.b.bridge_builders.fail",
+  "report": "dlg:mission.b.bridge_builders.report"
+ },
  "minutes": 45,
  "party": "squad",
  "days": 3,
@@ -28,13 +37,13 @@
   "thugs": {
    "pick": "enemy_group",
    "from": [
-    "thug.hired"
+    "combat:group.hired_thugs"
    ]
   },
   "enforcer": {
    "pick": "enemy_group",
    "from": [
-    "missing_nin.chunin"
+    "combat:enemy.rogue_chunin"
    ]
   }
  },
@@ -101,14 +110,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.bridge_builders.twist.town_stands_up"
+   "premise": "dlg:mission.b.bridge_builders.twist.town_stands_up"
   },
   {
    "id": "builder_lied",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.bridge_builders.twist.builder_lied"
+   "premise": "dlg:mission.b.bridge_builders.twist.builder_lied"
   }
  ],
  "outcomes": {
@@ -127,8 +136,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "thug.hired",
-  "missing_nin.chunin"
+  "combat:group.hired_thugs",
+  "combat:enemy.rogue_chunin"
  ],
  "places": {
   "anchors": [
@@ -152,7 +161,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.guard",
+ "banter": "dlg:mission.banter.guard",
  "_premise": "Guard a bridge-builder whose bridge will free a poor town from a shipping boss's grip.",
  "_twists": {
   "town_stands_up": "The town comes out with tools to stand by the builder.",

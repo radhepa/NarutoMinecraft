@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "hunt",
  "status": "later",
- "title": "mission.b.missing_nin_hunt.title",
- "brief": "mission.b.missing_nin_hunt.brief",
+ "title": "dlg:mission.b.missing_nin_hunt.title",
+ "brief": "dlg:mission.b.missing_nin_hunt.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.missing_nin_hunt.brief",
+  "accept": "dlg:mission.b.missing_nin_hunt.accept",
+  "decline": "dlg:mission.b.missing_nin_hunt.decline",
+  "progress": "dlg:mission.b.missing_nin_hunt.progress",
+  "success": "dlg:mission.b.missing_nin_hunt.success",
+  "fail": "dlg:mission.b.missing_nin_hunt.fail",
+  "report": "dlg:mission.b.missing_nin_hunt.report"
+ },
  "minutes": 40,
  "party": "squad",
  "days": 2,
@@ -32,7 +41,7 @@
   "pair": {
    "pick": "enemy_group",
    "from": [
-    "missing_nin.pair"
+    "combat:group.rogue_pair"
    ]
   }
  },
@@ -93,14 +102,14 @@
    "weight": 2,
    "harder": true,
    "modifier": true,
-   "premise": "mission.b.missing_nin_hunt.twist.they_ambush_first"
+   "premise": "dlg:mission.b.missing_nin_hunt.twist.they_ambush_first"
   },
   {
    "id": "one_surrenders",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.missing_nin_hunt.twist.one_surrenders"
+   "premise": "dlg:mission.b.missing_nin_hunt.twist.one_surrenders"
   }
  ],
  "outcomes": {
@@ -120,7 +129,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "missing_nin.pair"
+  "combat:group.rogue_pair"
  ],
  "places": {
   "anchors": [
@@ -144,7 +153,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.hunt",
+ "banter": "dlg:mission.banter.hunt",
  "_premise": "Hunt down a pair of missing-nin seen on the Fire Country's roads.",
  "_twists": {
   "they_ambush_first": "They knew you were coming.",

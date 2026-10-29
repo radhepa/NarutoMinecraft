@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "academy",
  "status": "beta",
- "title": "mission.d.academy_assist.title",
- "brief": "mission.d.academy_assist.brief",
+ "title": "dlg:mission.d.academy_assist.title",
+ "brief": "dlg:mission.d.academy_assist.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.academy_assist.brief",
+  "accept": "dlg:mission.d.academy_assist.accept",
+  "decline": "dlg:mission.d.academy_assist.decline",
+  "progress": "dlg:mission.d.academy_assist.progress",
+  "success": "dlg:mission.d.academy_assist.success",
+  "fail": "dlg:mission.d.academy_assist.fail",
+  "report": "dlg:mission.d.academy_assist.report"
+ },
  "minutes": 10,
  "party": "squad",
  "slots": {
@@ -120,19 +129,19 @@
    "id": "prankster",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.academy_assist.twist.prankster"
+   "premise": "dlg:mission.d.academy_assist.twist.prankster"
   },
   {
    "id": "demonstration",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.academy_assist.twist.demonstration"
+   "premise": "dlg:mission.d.academy_assist.twist.demonstration"
   },
   {
    "id": "lost_kunai",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.academy_assist.twist.lost_kunai"
+   "premise": "dlg:mission.d.academy_assist.twist.lost_kunai"
   }
  ],
  "outcomes": {
@@ -169,7 +178,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.academy",
+ "banter": "dlg:mission.banter.academy",
  "_premise": "Help an Academy teacher run a target-practice class for the youngest year.",
  "_twists": {
   "prankster": "Someone has rigged the targets to fall on the first hit.",

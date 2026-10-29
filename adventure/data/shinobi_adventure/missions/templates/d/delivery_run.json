@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "delivery",
  "status": "beta",
- "title": "mission.d.delivery_run.title",
- "brief": "mission.d.delivery_run.brief",
+ "title": "dlg:mission.d.delivery_run.title",
+ "brief": "dlg:mission.d.delivery_run.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.delivery_run.brief",
+  "accept": "dlg:mission.d.delivery_run.accept",
+  "decline": "dlg:mission.d.delivery_run.decline",
+  "progress": "dlg:mission.d.delivery_run.progress",
+  "success": "dlg:mission.d.delivery_run.success",
+  "fail": "dlg:mission.d.delivery_run.fail",
+  "report": "dlg:mission.d.delivery_run.report"
+ },
  "minutes": 10,
  "party": "squad_or_solo",
  "slots": {
@@ -106,20 +115,20 @@
    "id": "swapped",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.delivery_run.twist.swapped"
+   "premise": "dlg:mission.d.delivery_run.twist.swapped"
   },
   {
    "id": "moved_house",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.delivery_run.twist.moved_house"
+   "premise": "dlg:mission.d.delivery_run.twist.moved_house"
   },
   {
    "id": "fragile",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.d.delivery_run.twist.fragile"
+   "premise": "dlg:mission.d.delivery_run.twist.fragile"
   }
  ],
  "outcomes": {
@@ -153,7 +162,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.delivery",
+ "banter": "dlg:mission.banter.delivery",
  "_premise": "Deliver a sack of parcels across the village before sundown.",
  "_twists": {
   "swapped": "Two parcels have swapped labels.",

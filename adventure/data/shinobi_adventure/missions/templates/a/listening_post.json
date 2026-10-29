@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "investigation",
  "status": "later",
- "title": "mission.a.listening_post.title",
- "brief": "mission.a.listening_post.brief",
+ "title": "dlg:mission.a.listening_post.title",
+ "brief": "dlg:mission.a.listening_post.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.listening_post.brief",
+  "accept": "dlg:mission.a.listening_post.accept",
+  "decline": "dlg:mission.a.listening_post.decline",
+  "progress": "dlg:mission.a.listening_post.progress",
+  "success": "dlg:mission.a.listening_post.success",
+  "fail": "dlg:mission.a.listening_post.fail",
+  "report": "dlg:mission.a.listening_post.report"
+ },
  "minutes": 45,
  "party": "squad",
  "unlock": {
@@ -51,7 +60,7 @@
   "ring": {
    "pick": "enemy_group",
    "from": [
-    "enemy.cell"
+    "combat:group.cell_pair"
    ]
   }
  },
@@ -91,7 +100,8 @@
      "a": null,
      "b": null,
      "c": null
-    }
+    },
+    "dialogue": "dlg:mission.a.listening_post.choice.accuse"
    },
    "next": "close"
   },
@@ -125,21 +135,21 @@
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.listening_post.twist.post_a"
+   "premise": "dlg:mission.a.listening_post.twist.post_a"
   },
   {
    "id": "post_b",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.listening_post.twist.post_b"
+   "premise": "dlg:mission.a.listening_post.twist.post_b"
   },
   {
    "id": "post_c",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.listening_post.twist.post_c"
+   "premise": "dlg:mission.a.listening_post.twist.post_c"
   }
  ],
  "outcomes": {
@@ -158,7 +168,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.cell"
+  "combat:group.cell_pair"
  ],
  "places": {
   "anchors": [
@@ -179,7 +189,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.investigation",
+ "banter": "dlg:mission.banter.investigation",
  "_premise": "A foreign spy ring keeps a listening post somewhere in the Leaf's market district; find it and close it quietly.",
  "_twists": {
   "post_a": "The rolled listening post is the first suspect's.",

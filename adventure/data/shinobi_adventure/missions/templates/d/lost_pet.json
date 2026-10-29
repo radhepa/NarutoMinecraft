@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "pets",
  "status": "beta",
- "title": "mission.d.lost_pet.title",
- "brief": "mission.d.lost_pet.brief",
+ "title": "dlg:mission.d.lost_pet.title",
+ "brief": "dlg:mission.d.lost_pet.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.lost_pet.brief",
+  "accept": "dlg:mission.d.lost_pet.accept",
+  "decline": "dlg:mission.d.lost_pet.decline",
+  "progress": "dlg:mission.d.lost_pet.progress",
+  "success": "dlg:mission.d.lost_pet.success",
+  "fail": "dlg:mission.d.lost_pet.fail",
+  "report": "dlg:mission.d.lost_pet.report"
+ },
  "minutes": 10,
  "party": "squad_or_solo",
  "slots": {
@@ -103,7 +112,8 @@
     "options": {
      "client": null,
      "claimant": "given_to_claimant"
-    }
+    },
+    "dialogue": "dlg:mission.d.lost_pet.choice.decide"
    },
    "branch": [
     {
@@ -145,19 +155,19 @@
    "id": "two_pets",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.lost_pet.twist.two_pets"
+   "premise": "dlg:mission.d.lost_pet.twist.two_pets"
   },
   {
    "id": "new_litter",
    "weight": 1,
    "harder": true,
-   "premise": "mission.d.lost_pet.twist.new_litter"
+   "premise": "dlg:mission.d.lost_pet.twist.new_litter"
   },
   {
    "id": "rival_claims",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.lost_pet.twist.rival_claims"
+   "premise": "dlg:mission.d.lost_pet.twist.rival_claims"
   }
  ],
  "outcomes": {
@@ -200,7 +210,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.pets",
+ "banter": "dlg:mission.banter.pets",
  "_premise": "A resident's cat or dog has run off again; find it and bring it home.",
  "_twists": {
   "two_pets": "It has made a friend: another runaway who needs taking home too.",

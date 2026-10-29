@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "household",
  "status": "beta",
- "title": "mission.d.laundry.title",
- "brief": "mission.d.laundry.brief",
+ "title": "dlg:mission.d.laundry.title",
+ "brief": "dlg:mission.d.laundry.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.laundry.brief",
+  "accept": "dlg:mission.d.laundry.accept",
+  "decline": "dlg:mission.d.laundry.decline",
+  "progress": "dlg:mission.d.laundry.progress",
+  "success": "dlg:mission.d.laundry.success",
+  "fail": "dlg:mission.d.laundry.fail",
+  "report": "dlg:mission.d.laundry.report"
+ },
  "minutes": 8,
  "party": "solo",
  "slots": {
@@ -95,13 +104,13 @@
    "id": "sheet_in_wind",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.laundry.twist.sheet_in_wind"
+   "premise": "dlg:mission.d.laundry.twist.sheet_in_wind"
   },
   {
    "id": "dye_mixup",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.laundry.twist.dye_mixup"
+   "premise": "dlg:mission.d.laundry.twist.dye_mixup"
   }
  ],
  "outcomes": {
@@ -139,7 +148,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.household",
+ "banter": "dlg:mission.banter.household",
  "_premise": "Help the riverside washerwomen with a hotel's laundry.",
  "_twists": {
   "sheet_in_wind": "A sheet takes off across the rooftops like a kite.",

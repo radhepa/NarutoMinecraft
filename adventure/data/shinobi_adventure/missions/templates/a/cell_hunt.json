@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "hunt",
  "status": "later",
- "title": "mission.a.cell_hunt.title",
- "brief": "mission.a.cell_hunt.brief",
+ "title": "dlg:mission.a.cell_hunt.title",
+ "brief": "dlg:mission.a.cell_hunt.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.cell_hunt.brief",
+  "accept": "dlg:mission.a.cell_hunt.accept",
+  "decline": "dlg:mission.a.cell_hunt.decline",
+  "progress": "dlg:mission.a.cell_hunt.progress",
+  "success": "dlg:mission.a.cell_hunt.success",
+  "fail": "dlg:mission.a.cell_hunt.fail",
+  "report": "dlg:mission.a.cell_hunt.report"
+ },
  "minutes": 50,
  "party": "squad",
  "days": 2,
@@ -31,7 +40,7 @@
   "cell": {
    "pick": "enemy_group",
    "from": [
-    "enemy.cell"
+    "combat:group.cell_pair"
    ]
   }
  },
@@ -83,14 +92,14 @@
    "weight": 2,
    "harder": true,
    "modifier": true,
-   "premise": "mission.a.cell_hunt.twist.trap_lair"
+   "premise": "dlg:mission.a.cell_hunt.twist.trap_lair"
   },
   {
    "id": "prisoners",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.cell_hunt.twist.prisoners"
+   "premise": "dlg:mission.a.cell_hunt.twist.prisoners"
   }
  ],
  "outcomes": {
@@ -109,7 +118,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.cell"
+  "combat:group.cell_pair"
  ],
  "places": {
   "anchors": [
@@ -134,7 +143,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.hunt",
+ "banter": "dlg:mission.banter.hunt",
  "_premise": "Track an enemy cell through a far region and bring it down.",
  "_twists": {
   "trap_lair": "The lair is bait.",

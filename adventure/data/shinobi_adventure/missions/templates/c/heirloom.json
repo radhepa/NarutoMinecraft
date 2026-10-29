@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "recovery",
  "status": "beta",
- "title": "mission.c.heirloom.title",
- "brief": "mission.c.heirloom.brief",
+ "title": "dlg:mission.c.heirloom.title",
+ "brief": "dlg:mission.c.heirloom.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.heirloom.brief",
+  "accept": "dlg:mission.c.heirloom.accept",
+  "decline": "dlg:mission.c.heirloom.decline",
+  "progress": "dlg:mission.c.heirloom.progress",
+  "success": "dlg:mission.c.heirloom.success",
+  "fail": "dlg:mission.c.heirloom.fail",
+  "report": "dlg:mission.c.heirloom.report"
+ },
  "minutes": 25,
  "party": "squad",
  "unlock": {
@@ -40,7 +49,7 @@
   "ring": {
    "pick": "enemy_group",
    "from": [
-    "smuggler.crew"
+    "combat:group.smugglers"
    ]
   }
  },
@@ -146,13 +155,13 @@
    "id": "fake",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.heirloom.twist.fake"
+   "premise": "dlg:mission.c.heirloom.twist.fake"
   },
   {
    "id": "caught",
    "weight": 2,
    "harder": true,
-   "premise": "mission.c.heirloom.twist.caught"
+   "premise": "dlg:mission.c.heirloom.twist.caught"
   }
  ],
  "outcomes": {
@@ -171,7 +180,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "smuggler.crew"
+  "combat:group.smugglers"
  ],
  "places": {
   "anchors": [
@@ -195,7 +204,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.recovery",
+ "banter": "dlg:mission.banter.recovery",
  "_premise": "Recover a stolen heirloom from a pawn ring in the border village.",
  "_twists": {
   "fake": "The heirloom in the back room is a copy; the real one is on the counter in plain sight.",

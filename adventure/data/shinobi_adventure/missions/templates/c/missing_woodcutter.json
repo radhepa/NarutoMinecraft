@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "rescue",
  "status": "beta",
- "title": "mission.c.missing_woodcutter.title",
- "brief": "mission.c.missing_woodcutter.brief",
+ "title": "dlg:mission.c.missing_woodcutter.title",
+ "brief": "dlg:mission.c.missing_woodcutter.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.missing_woodcutter.brief",
+  "accept": "dlg:mission.c.missing_woodcutter.accept",
+  "decline": "dlg:mission.c.missing_woodcutter.decline",
+  "progress": "dlg:mission.c.missing_woodcutter.progress",
+  "success": "dlg:mission.c.missing_woodcutter.success",
+  "fail": "dlg:mission.c.missing_woodcutter.fail",
+  "report": "dlg:mission.c.missing_woodcutter.report"
+ },
  "minutes": 25,
  "party": "squad",
  "unlock": {
@@ -40,7 +49,7 @@
   "wolves": {
    "pick": "enemy_group",
    "from": [
-    "beast.wolf_pack"
+    "combat:group.wolves_pack"
    ]
   }
  },
@@ -131,13 +140,13 @@
    "id": "ravine",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.missing_woodcutter.twist.ravine"
+   "premise": "dlg:mission.c.missing_woodcutter.twist.ravine"
   },
   {
    "id": "wolves_close_in",
    "weight": 2,
    "harder": true,
-   "premise": "mission.c.missing_woodcutter.twist.wolves_close_in"
+   "premise": "dlg:mission.c.missing_woodcutter.twist.wolves_close_in"
   }
  ],
  "outcomes": {
@@ -156,7 +165,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "beast.wolf_pack"
+  "combat:group.wolves_pack"
  ],
  "places": {
   "anchors": [
@@ -178,7 +187,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.rescue",
+ "banter": "dlg:mission.banter.rescue",
  "_premise": "A woodcutter did not come home from the hills; find him.",
  "_twists": {
   "ravine": "He fell into a ravine; the only way down is the cliff face.",

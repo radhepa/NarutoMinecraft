@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "anbu",
  "status": "later",
- "title": "mission.anbu.hunter_nin.title",
- "brief": "mission.anbu.hunter_nin.brief",
+ "title": "dlg:mission.anbu.hunter_nin.title",
+ "brief": "dlg:mission.anbu.hunter_nin.brief",
+ "dialogue": {
+  "brief": "dlg:mission.anbu.hunter_nin.brief",
+  "accept": "dlg:mission.anbu.hunter_nin.accept",
+  "decline": "dlg:mission.anbu.hunter_nin.decline",
+  "progress": "dlg:mission.anbu.hunter_nin.progress",
+  "success": "dlg:mission.anbu.hunter_nin.success",
+  "fail": "dlg:mission.anbu.hunter_nin.fail",
+  "report": "dlg:mission.anbu.hunter_nin.report"
+ },
  "minutes": 50,
  "party": "anbu_cell",
  "days": 2,
@@ -69,14 +78,14 @@
    "weight": 2,
    "harder": true,
    "modifier": true,
-   "premise": "mission.anbu.hunter_nin.twist.other_hunters"
+   "premise": "dlg:mission.anbu.hunter_nin.twist.other_hunters"
   },
   {
    "id": "plea",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.anbu.hunter_nin.twist.plea"
+   "premise": "dlg:mission.anbu.hunter_nin.twist.plea"
   }
  ],
  "outcomes": {
@@ -95,7 +104,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "missing_nin.jonin"
+  "combat:enemy.rogue_jonin"
  ],
  "places": {
   "anchors": [
@@ -119,7 +128,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.anbu",
+ "banter": "dlg:mission.banter.anbu",
  "_premise": "Hunt a missing-nin who carries the Leaf's secrets in their head, before another village catches them.",
  "_twists": {
   "other_hunters": "Another village's hunters got there first.",

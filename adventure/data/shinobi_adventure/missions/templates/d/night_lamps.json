@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "festival",
  "status": "beta",
- "title": "mission.d.night_lamps.title",
- "brief": "mission.d.night_lamps.brief",
+ "title": "dlg:mission.d.night_lamps.title",
+ "brief": "dlg:mission.d.night_lamps.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.night_lamps.brief",
+  "accept": "dlg:mission.d.night_lamps.accept",
+  "decline": "dlg:mission.d.night_lamps.decline",
+  "progress": "dlg:mission.d.night_lamps.progress",
+  "success": "dlg:mission.d.night_lamps.success",
+  "fail": "dlg:mission.d.night_lamps.fail",
+  "report": "dlg:mission.d.night_lamps.report"
+ },
  "minutes": 8,
  "party": "solo",
  "unlock": {
@@ -101,13 +110,13 @@
    "id": "oil_shortage",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.night_lamps.twist.oil_shortage"
+   "premise": "dlg:mission.d.night_lamps.twist.oil_shortage"
   },
   {
    "id": "prowler",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.night_lamps.twist.prowler"
+   "premise": "dlg:mission.d.night_lamps.twist.prowler"
   }
  ],
  "outcomes": {
@@ -144,7 +153,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.festival",
+ "banter": "dlg:mission.banter.festival",
  "_premise": "Light a district's street lamps at dusk before full dark.",
  "_twists": {
   "oil_shortage": "The oil runs out with half the street still dark.",

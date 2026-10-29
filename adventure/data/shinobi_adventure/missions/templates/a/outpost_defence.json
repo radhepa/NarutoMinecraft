@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "defence",
  "status": "later",
- "title": "mission.a.outpost_defence.title",
- "brief": "mission.a.outpost_defence.brief",
+ "title": "dlg:mission.a.outpost_defence.title",
+ "brief": "dlg:mission.a.outpost_defence.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.outpost_defence.brief",
+  "accept": "dlg:mission.a.outpost_defence.accept",
+  "decline": "dlg:mission.a.outpost_defence.decline",
+  "progress": "dlg:mission.a.outpost_defence.progress",
+  "success": "dlg:mission.a.outpost_defence.success",
+  "fail": "dlg:mission.a.outpost_defence.fail",
+  "report": "dlg:mission.a.outpost_defence.report"
+ },
  "minutes": 45,
  "party": "squad",
  "unlock": {
@@ -27,13 +36,13 @@
   "squad": {
    "pick": "enemy_group",
    "from": [
-    "enemy.squad"
+    "combat:group.foreign_squad"
    ]
   },
   "jonin": {
    "pick": "enemy_group",
    "from": [
-    "enemy.jonin"
+    "combat:enemy.foreign_jonin"
    ]
   }
  },
@@ -108,14 +117,14 @@
    "id": "their_jonin",
    "weight": 2,
    "harder": true,
-   "premise": "mission.a.outpost_defence.twist.their_jonin"
+   "premise": "dlg:mission.a.outpost_defence.twist.their_jonin"
   },
   {
    "id": "fog",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.outpost_defence.twist.fog"
+   "premise": "dlg:mission.a.outpost_defence.twist.fog"
   }
  ],
  "outcomes": {
@@ -133,8 +142,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.squad",
-  "enemy.jonin"
+  "combat:group.foreign_squad",
+  "combat:enemy.foreign_jonin"
  ],
  "places": {
   "anchors": [
@@ -158,7 +167,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.defence",
+ "banter": "dlg:mission.banter.defence",
  "_premise": "Hold a Leaf outpost against an enemy squad until the night is over.",
  "_twists": {
   "their_jonin": "Their Jonin leads the last assault himself.",

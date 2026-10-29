@@ -684,9 +684,9 @@
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/SquadPlan.java": {
-    "mtime": 1793308695.9657512,
-    "seen": 1793309361.4099123,
-    "ast_hash": "5518cb81ea5f44e88fb904273c9d61f2",
+    "mtime": 1793309511.5596533,
+    "seen": 1793309546.7919884,
+    "ast_hash": "96712c0a8763f4ddbb6d1b6b16993372",
     "semantic_hash": ""
   },
   "progression/missions/src/main/java/dev/shinobi/progression/mission/Template.java": {
@@ -720,9 +720,9 @@
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/ClientsAndSquadTest.java": {
-    "mtime": 1793309000.136313,
-    "seen": 1793309361.409919,
-    "ast_hash": "2033571e4848d85ad784cfb3e1e7cd84",
+    "mtime": 1793309511.559975,
+    "seen": 1793309546.7919972,
+    "ast_hash": "fbae09539d3291409c8e7b4f6e1b045e",
     "semantic_hash": ""
   },
   "progression/missions/src/test/java/dev/shinobi/progression/mission/DeskTest.java": {
@@ -768,51 +768,51 @@
     "semantic_hash": ""
   },
   "tools/missions/catalogue/c_rank.py": {
-    "mtime": 1793308343.2145576,
-    "seen": 1793309361.4099295,
-    "ast_hash": "d9d4a0599605f99eca3f5a07053e5a68",
+    "mtime": 1793309480.407501,
+    "seen": 1793309546.7920094,
+    "ast_hash": "ee36e589106be0f251d27e709ce355ce",
     "semantic_hash": ""
   },
   "tools/missions/catalogue/d_rank.py": {
-    "mtime": 1793309115.1892161,
-    "seen": 1793309361.4099305,
+    "mtime": 1793309480.4085424,
+    "seen": 1793309546.7920108,
     "ast_hash": "db5e0dd440cd487b59fd9fdcd0301bdc",
     "semantic_hash": ""
   },
   "tools/missions/catalogue/later_ranks.py": {
-    "mtime": 1793308343.2155988,
-    "seen": 1793309361.4099314,
-    "ast_hash": "de5ee114a793e0589e222d082ca23854",
+    "mtime": 1793309480.4062858,
+    "seen": 1793309546.792012,
+    "ast_hash": "c9791016c1abfe4cdcdb86bd5f8188fe",
     "semantic_hash": ""
   },
   "tools/missions/catalogue/tables.py": {
-    "mtime": 1793309138.9355457,
-    "seen": 1793309361.4099329,
-    "ast_hash": "1c541619890e5896e57cff6360274ebc",
+    "mtime": 1793309511.5603971,
+    "seen": 1793309546.7920134,
+    "ast_hash": "1d45439e7438ea1495935d42bef4ccba",
     "semantic_hash": ""
   },
   "tools/missions/missions.py": {
-    "mtime": 1793309115.1906333,
-    "seen": 1793309361.4099338,
-    "ast_hash": "f8fa46b2c375637a2722daf509009aec",
+    "mtime": 1793309511.5592318,
+    "seen": 1793309546.7920146,
+    "ast_hash": "a0bb1d4256ad2490edf922a2a515440a",
     "semantic_hash": ""
   },
   "tools/missions/mkit.py": {
-    "mtime": 1793307903.3267384,
-    "seen": 1793309361.4099348,
-    "ast_hash": "c4d73e7ec7a6e558ef0cd9d3debb04a6",
+    "mtime": 1793309480.4090846,
+    "seen": 1793309546.7920156,
+    "ast_hash": "218b23561224e2fd44646ba396636518",
     "semantic_hash": ""
   },
   "MISSIONS.md": {
-    "mtime": 1793309286.4977863,
-    "seen": 1793309361.409994,
-    "ast_hash": "35613d29b947be57f77613b1da432f7b",
+    "mtime": 1793309536.0583007,
+    "seen": 1793309546.7920775,
+    "ast_hash": "51832b31d507544982bede991fc96365",
     "semantic_hash": ""
   },
   "docs/missions/CATALOGUE.md": {
-    "mtime": 1793309139.004319,
-    "seen": 1793309361.4099991,
-    "ast_hash": "a1bc1f8d94c697b1fb4e192daaf2d829",
+    "mtime": 1793309511.6272743,
+    "seen": 1793309546.792083,
+    "ast_hash": "30491d0e3d43e245026bc8ee3ae8e3fe",
     "semantic_hash": ""
   },
   "docs/missions/simulation.txt": {

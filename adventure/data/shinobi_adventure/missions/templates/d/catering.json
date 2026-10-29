@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "delivery",
  "status": "beta",
- "title": "mission.d.catering.title",
- "brief": "mission.d.catering.brief",
+ "title": "dlg:mission.d.catering.title",
+ "brief": "dlg:mission.d.catering.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.catering.brief",
+  "accept": "dlg:mission.d.catering.accept",
+  "decline": "dlg:mission.d.catering.decline",
+  "progress": "dlg:mission.d.catering.progress",
+  "success": "dlg:mission.d.catering.success",
+  "fail": "dlg:mission.d.catering.fail",
+  "report": "dlg:mission.d.catering.report"
+ },
  "minutes": 8,
  "party": "squad",
  "slots": {
@@ -101,13 +110,13 @@
    "id": "hungry_genin",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.catering.twist.hungry_genin"
+   "premise": "dlg:mission.d.catering.twist.hungry_genin"
   },
   {
    "id": "spill",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.catering.twist.spill"
+   "premise": "dlg:mission.d.catering.twist.spill"
   }
  ],
  "outcomes": {
@@ -145,7 +154,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.delivery",
+ "banter": "dlg:mission.banter.delivery",
  "_premise": "Carry a restaurant's catering order to a training ground while it is still hot.",
  "_twists": {
   "hungry_genin": "Another squad offers to 'inspect' the food for you.",

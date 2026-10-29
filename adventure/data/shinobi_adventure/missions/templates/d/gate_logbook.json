@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "gate",
  "status": "beta",
- "title": "mission.d.gate_logbook.title",
- "brief": "mission.d.gate_logbook.brief",
+ "title": "dlg:mission.d.gate_logbook.title",
+ "brief": "dlg:mission.d.gate_logbook.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.gate_logbook.brief",
+  "accept": "dlg:mission.d.gate_logbook.accept",
+  "decline": "dlg:mission.d.gate_logbook.decline",
+  "progress": "dlg:mission.d.gate_logbook.progress",
+  "success": "dlg:mission.d.gate_logbook.success",
+  "fail": "dlg:mission.d.gate_logbook.fail",
+  "report": "dlg:mission.d.gate_logbook.report"
+ },
  "minutes": 8,
  "party": "solo",
  "slots": {
@@ -73,7 +82,8 @@
     "options": {
      "pass": null,
      "hold": "held_cart"
-    }
+    },
+    "dialogue": "dlg:mission.d.gate_logbook.choice.decide"
    },
    "next": "report"
   },
@@ -98,13 +108,13 @@
    "id": "odd_cart",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.gate_logbook.twist.odd_cart"
+   "premise": "dlg:mission.d.gate_logbook.twist.odd_cart"
   },
   {
    "id": "lost_traveller",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.gate_logbook.twist.lost_traveller"
+   "premise": "dlg:mission.d.gate_logbook.twist.lost_traveller"
   }
  ],
  "outcomes": {
@@ -147,7 +157,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.gate",
+ "banter": "dlg:mission.banter.gate",
  "_premise": "Help the gate guards log the day's travellers through the main gate.",
  "_twists": {
   "odd_cart": "A cart's papers are in order, but it sits too low on its wheels.",

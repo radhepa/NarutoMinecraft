@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "academy",
  "status": "beta",
- "title": "mission.d.tutoring.title",
- "brief": "mission.d.tutoring.brief",
+ "title": "dlg:mission.d.tutoring.title",
+ "brief": "dlg:mission.d.tutoring.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.tutoring.brief",
+  "accept": "dlg:mission.d.tutoring.accept",
+  "decline": "dlg:mission.d.tutoring.decline",
+  "progress": "dlg:mission.d.tutoring.progress",
+  "success": "dlg:mission.d.tutoring.success",
+  "fail": "dlg:mission.d.tutoring.fail",
+  "report": "dlg:mission.d.tutoring.report"
+ },
  "minutes": 10,
  "party": "solo",
  "slots": {
@@ -86,7 +95,8 @@
     "options": {
      "confiscate": null,
      "ignore": "looked_away"
-    }
+    },
+    "dialogue": "dlg:mission.d.tutoring.choice.sheet"
    },
    "branch": [
     {
@@ -135,13 +145,13 @@
    "id": "real_problem",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.tutoring.twist.real_problem"
+   "premise": "dlg:mission.d.tutoring.twist.real_problem"
   },
   {
    "id": "cheat_sheet",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.tutoring.twist.cheat_sheet"
+   "premise": "dlg:mission.d.tutoring.twist.cheat_sheet"
   }
  ],
  "outcomes": {
@@ -187,7 +197,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.academy",
+ "banter": "dlg:mission.banter.academy",
  "_premise": "Tutor an Academy pupil who will fail the next test without help.",
  "_twists": {
   "real_problem": "The pupil is not slow; an older child takes their lunch every day.",

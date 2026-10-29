@@ -5,8 +5,17 @@
  "rank": "s",
  "category": "infiltration",
  "status": "later",
- "title": "mission.s.stronghold.title",
- "brief": "mission.s.stronghold.brief",
+ "title": "dlg:mission.s.stronghold.title",
+ "brief": "dlg:mission.s.stronghold.brief",
+ "dialogue": {
+  "brief": "dlg:mission.s.stronghold.brief",
+  "accept": "dlg:mission.s.stronghold.accept",
+  "decline": "dlg:mission.s.stronghold.decline",
+  "progress": "dlg:mission.s.stronghold.progress",
+  "success": "dlg:mission.s.stronghold.success",
+  "fail": "dlg:mission.s.stronghold.fail",
+  "report": "dlg:mission.s.stronghold.report"
+ },
  "minutes": 60,
  "party": "squad",
  "days": 3,
@@ -38,7 +47,7 @@
   "guard": {
    "pick": "enemy_group",
    "from": [
-    "enemy.jonin"
+    "combat:enemy.foreign_jonin"
    ]
   }
  },
@@ -114,14 +123,14 @@
    "id": "sealed_in",
    "weight": 2,
    "harder": true,
-   "premise": "mission.s.stronghold.twist.sealed_in"
+   "premise": "dlg:mission.s.stronghold.twist.sealed_in"
   },
   {
    "id": "inside_help",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.s.stronghold.twist.inside_help"
+   "premise": "dlg:mission.s.stronghold.twist.inside_help"
   }
  ],
  "outcomes": {
@@ -140,7 +149,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.jonin"
+  "combat:enemy.foreign_jonin"
  ],
  "places": {
   "anchors": [
@@ -164,7 +173,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.infiltration",
+ "banter": "dlg:mission.banter.infiltration",
  "_premise": "Retrieve a stolen forbidden technique from a foreign stronghold no one has left alive.",
  "_twists": {
   "sealed_in": "The stronghold seals itself when the vault opens.",

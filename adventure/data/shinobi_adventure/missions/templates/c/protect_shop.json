@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "protection",
  "status": "beta",
- "title": "mission.c.protect_shop.title",
- "brief": "mission.c.protect_shop.brief",
+ "title": "dlg:mission.c.protect_shop.title",
+ "brief": "dlg:mission.c.protect_shop.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.protect_shop.brief",
+  "accept": "dlg:mission.c.protect_shop.accept",
+  "decline": "dlg:mission.c.protect_shop.decline",
+  "progress": "dlg:mission.c.protect_shop.progress",
+  "success": "dlg:mission.c.protect_shop.success",
+  "fail": "dlg:mission.c.protect_shop.fail",
+  "report": "dlg:mission.c.protect_shop.report"
+ },
  "minutes": 25,
  "party": "squad",
  "unlock": {
@@ -42,7 +51,7 @@
   "thugs": {
    "pick": "enemy_group",
    "from": [
-    "thug.hired"
+    "combat:group.hired_thugs"
    ]
   }
  },
@@ -92,7 +101,8 @@
     "options": {
      "refuse": null,
      "take": "took_bribe"
-    }
+    },
+    "dialogue": "dlg:mission.c.protect_shop.choice.bribe"
    },
    "next": "rival"
   },
@@ -110,7 +120,8 @@
     "options": {
      "mediate": "mediated",
      "side_client": null
-    }
+    },
+    "dialogue": "dlg:mission.c.protect_shop.choice.mediate"
    },
    "next": "rival"
   },
@@ -134,13 +145,13 @@
    "id": "bribe",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.protect_shop.twist.bribe"
+   "premise": "dlg:mission.c.protect_shop.twist.bribe"
   },
   {
    "id": "client_started_it",
    "weight": 1,
    "harder": false,
-   "premise": "mission.c.protect_shop.twist.client_started_it"
+   "premise": "dlg:mission.c.protect_shop.twist.client_started_it"
   }
  ],
  "outcomes": {
@@ -170,7 +181,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "thug.hired"
+  "combat:group.hired_thugs"
  ],
  "places": {
   "anchors": [
@@ -192,7 +203,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.protection",
+ "banter": "dlg:mission.banter.protection",
  "_premise": "A shopkeeper is being threatened by a rival's hired thugs; protect them through the week's big sale.",
  "_twists": {
   "bribe": "The rival's man offers you twice the fee to look away.",

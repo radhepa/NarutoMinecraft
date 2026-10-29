@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "festival",
  "status": "beta",
- "title": "mission.d.festival_setup.title",
- "brief": "mission.d.festival_setup.brief",
+ "title": "dlg:mission.d.festival_setup.title",
+ "brief": "dlg:mission.d.festival_setup.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.festival_setup.brief",
+  "accept": "dlg:mission.d.festival_setup.accept",
+  "decline": "dlg:mission.d.festival_setup.decline",
+  "progress": "dlg:mission.d.festival_setup.progress",
+  "success": "dlg:mission.d.festival_setup.success",
+  "fail": "dlg:mission.d.festival_setup.fail",
+  "report": "dlg:mission.d.festival_setup.report"
+ },
  "minutes": 12,
  "party": "squad",
  "event": {
@@ -123,19 +132,19 @@
    "id": "rooftops",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.festival_setup.twist.rooftops"
+   "premise": "dlg:mission.d.festival_setup.twist.rooftops"
   },
   {
    "id": "missing_lanterns",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.festival_setup.twist.missing_lanterns"
+   "premise": "dlg:mission.d.festival_setup.twist.missing_lanterns"
   },
   {
    "id": "fireworks",
    "weight": 1,
    "harder": true,
-   "premise": "mission.d.festival_setup.twist.fireworks"
+   "premise": "dlg:mission.d.festival_setup.twist.fireworks"
   }
  ],
  "outcomes": {
@@ -174,7 +183,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.festival",
+ "banter": "dlg:mission.banter.festival",
  "_premise": "Hang lanterns and raise stalls on the main street for the festival.",
  "_twists": {
   "rooftops": "The lantern strings go from roof to roof, three storeys up.",

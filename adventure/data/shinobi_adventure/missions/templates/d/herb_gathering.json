@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "hospital",
  "status": "beta",
- "title": "mission.d.herb_gathering.title",
- "brief": "mission.d.herb_gathering.brief",
+ "title": "dlg:mission.d.herb_gathering.title",
+ "brief": "dlg:mission.d.herb_gathering.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.herb_gathering.brief",
+  "accept": "dlg:mission.d.herb_gathering.accept",
+  "decline": "dlg:mission.d.herb_gathering.decline",
+  "progress": "dlg:mission.d.herb_gathering.progress",
+  "success": "dlg:mission.d.herb_gathering.success",
+  "fail": "dlg:mission.d.herb_gathering.fail",
+  "report": "dlg:mission.d.herb_gathering.report"
+ },
  "minutes": 10,
  "party": "squad",
  "slots": {
@@ -94,13 +103,13 @@
    "id": "lookalike",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.herb_gathering.twist.lookalike"
+   "premise": "dlg:mission.d.herb_gathering.twist.lookalike"
   },
   {
    "id": "snake",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.herb_gathering.twist.snake"
+   "premise": "dlg:mission.d.herb_gathering.twist.snake"
   }
  ],
  "outcomes": {
@@ -136,7 +145,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.hospital",
+ "banter": "dlg:mission.banter.hospital",
  "_premise": "Gather medicinal herbs on the slopes outside the wall for the hospital.",
  "_twists": {
   "lookalike": "A poisonous lookalike grows among the herbs; check every stem.",

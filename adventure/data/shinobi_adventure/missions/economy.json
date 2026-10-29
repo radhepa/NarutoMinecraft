@@ -244,6 +244,122 @@
    "s": "pool:scroll.s_rank"
   }
  },
+ "collectibles": {
+  "_doc": "Drop sources for the collection book (the home session's): curios, ninja info cards and keepsakes. The items session registers the item ids and loot tables; these are the requests.",
+  "curios": {
+   "_doc": "Useless, charming things with flavor text. Rolled on turn-in at grade B or better; the table is the first tag the template has.",
+   "chance": {
+    "d": 0.12,
+    "c": 0.35,
+    "b": 0.45,
+    "a": 0.5,
+    "s": 0.6
+   },
+   "chance_on_defeat": 0.15,
+   "tables": [
+    [
+     "anbu",
+     "loot:curio.covert"
+    ],
+    [
+     "war",
+     "loot:curio.battlefield"
+    ],
+    [
+     "travel",
+     "loot:curio.far_lands"
+    ],
+    [
+     "road",
+     "loot:curio.road"
+    ],
+    [
+     "river",
+     "loot:curio.river"
+    ],
+    [
+     "shrine",
+     "loot:curio.shrine"
+    ],
+    [
+     "academy",
+     "loot:curio.academy"
+    ],
+    [
+     "market",
+     "loot:curio.market"
+    ],
+    [
+     "farm",
+     "loot:curio.fields"
+    ],
+    [
+     "outside",
+     "loot:curio.wilds"
+    ],
+    [
+     "outdoors",
+     "loot:curio.wilds"
+    ],
+    [
+     "village",
+     "loot:curio.village"
+    ],
+    [
+     "*",
+     "loot:curio.village"
+    ]
+   ],
+   "on_defeat": {
+    "_doc": "Curios carried by defeated enemies, by the enemy's kind.",
+    "combat:group.bandits_small": "loot:curio.bandit",
+    "combat:group.bandits_camp": "loot:curio.bandit",
+    "combat:group.road_ambush": "loot:curio.bandit",
+    "combat:enemy.bandit_chief": "loot:curio.bandit_chief",
+    "combat:group.smugglers": "loot:curio.smuggler",
+    "combat:group.scout_pair": "loot:curio.foreign",
+    "combat:enemy.bandit_ronin": "loot:curio.ronin",
+    "combat:group.cell_pair": "loot:curio.foreign",
+    "beast": "loot:curio.beast",
+    "*": "loot:curio.bandit"
+   }
+  },
+  "cards": {
+   "_doc": "Ninja info cards: one per enemy kind defeated (first time) and per person met on a mission (the client on turn-in, named mission roles on meeting).",
+   "enemy": "card:enemy.<enemy id>",
+   "person": "card:person.<role or resident id>",
+   "rank_backs": {
+    "d": "plain",
+    "c": "bronze",
+    "b": "silver",
+    "a": "gold",
+    "s": "black"
+   }
+  },
+  "keepsakes": {
+   "_doc": "Unique keepsakes from memorable missions: the first finish at grade A or better. Display items for the home.",
+   "mission.d.festival_setup": "item:keepsake.festival_lantern",
+   "mission.d.kiln_firing": "item:keepsake.first_firing_cup",
+   "mission.d.lost_pet": "item:keepsake.pet_collar_charm",
+   "mission.d.river_cleanup": "item:keepsake.bottle_letter",
+   "mission.d.snow_clearing": "item:keepsake.snow_rabbit",
+   "mission.c.escort_merchant": "item:keepsake.trader_map",
+   "mission.c.bandit_clearing": "item:keepsake.bandit_banner",
+   "mission.c.beast_hunt": "item:keepsake.boar_tusk",
+   "mission.c.bear": "item:keepsake.honey_pot",
+   "mission.c.haunted_inn": "item:keepsake.ghost_lantern",
+   "mission.c.dojo_challenge": "item:keepsake.dojo_signboard",
+   "mission.c.contest_thief": "item:keepsake.burglar_mask",
+   "mission.c.noble_child": "item:keepsake.noble_fan",
+   "mission.c.kiln_delivery": "item:keepsake.market_bowl",
+   "mission.b.kiln_glaze": "item:keepsake.glaze_tile",
+   "mission.b.bridge_builders": "item:keepsake.bridge_plank",
+   "mission.a.kiln_court": "item:keepsake.court_vase",
+   "mission.a.siege_relief": "item:keepsake.castle_banner",
+   "mission.s.peace_summit": "item:keepsake.summit_seal",
+   "mission.anbu.village_shadow": "item:keepsake.festival_mask"
+  }
+ },
  "standing": {
   "_doc": "Village reputation (BONDS.md section 8): a finished mission is a deed about the client, witnessed by the squad; the grade's standing goes to the client's district and clan.",
   "success_act": "helped_resident",

@@ -5,8 +5,17 @@
  "rank": "s",
  "category": "anbu",
  "status": "later",
- "title": "mission.anbu.village_shadow.title",
- "brief": "mission.anbu.village_shadow.brief",
+ "title": "dlg:mission.anbu.village_shadow.title",
+ "brief": "dlg:mission.anbu.village_shadow.brief",
+ "dialogue": {
+  "brief": "dlg:mission.anbu.village_shadow.brief",
+  "accept": "dlg:mission.anbu.village_shadow.accept",
+  "decline": "dlg:mission.anbu.village_shadow.decline",
+  "progress": "dlg:mission.anbu.village_shadow.progress",
+  "success": "dlg:mission.anbu.village_shadow.success",
+  "fail": "dlg:mission.anbu.village_shadow.fail",
+  "report": "dlg:mission.anbu.village_shadow.report"
+ },
  "minutes": 60,
  "party": "anbu_cell",
  "unlock": {
@@ -29,7 +38,7 @@
   "intruders": {
    "pick": "enemy_group",
    "from": [
-    "enemy.cell"
+    "combat:group.cell_pair"
    ]
   }
  },
@@ -72,14 +81,14 @@
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.anbu.village_shadow.twist.quiet_night"
+   "premise": "dlg:mission.anbu.village_shadow.twist.quiet_night"
   },
   {
    "id": "two_cells",
    "weight": 2,
    "harder": true,
    "modifier": true,
-   "premise": "mission.anbu.village_shadow.twist.two_cells"
+   "premise": "dlg:mission.anbu.village_shadow.twist.two_cells"
   }
  ],
  "outcomes": {
@@ -97,7 +106,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.cell"
+  "combat:group.cell_pair"
  ],
  "places": {
   "anchors": [
@@ -118,7 +127,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.anbu",
+ "banter": "dlg:mission.banter.anbu",
  "_premise": "On the night of a great festival, guard the Leaf from the rooftops against what the festival hides.",
  "_twists": {
   "quiet_night": "Nothing comes, and you watch the fireworks alone.",

@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "delivery",
  "status": "beta",
- "title": "mission.c.kiln_delivery.title",
- "brief": "mission.c.kiln_delivery.brief",
+ "title": "dlg:mission.c.kiln_delivery.title",
+ "brief": "dlg:mission.c.kiln_delivery.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.kiln_delivery.brief",
+  "accept": "dlg:mission.c.kiln_delivery.accept",
+  "decline": "dlg:mission.c.kiln_delivery.decline",
+  "progress": "dlg:mission.c.kiln_delivery.progress",
+  "success": "dlg:mission.c.kiln_delivery.success",
+  "fail": "dlg:mission.c.kiln_delivery.fail",
+  "report": "dlg:mission.c.kiln_delivery.report"
+ },
  "minutes": 25,
  "party": "squad",
  "days": 2,
@@ -43,7 +52,7 @@
   "thieves": {
    "pick": "enemy_group",
    "from": [
-    "bandit.pack_small"
+    "combat:group.bandits_small"
    ]
   }
  },
@@ -133,13 +142,13 @@
    "id": "ambush",
    "weight": 2,
    "harder": true,
-   "premise": "mission.c.kiln_delivery.twist.ambush"
+   "premise": "dlg:mission.c.kiln_delivery.twist.ambush"
   },
   {
    "id": "rival_potter",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.kiln_delivery.twist.rival_potter"
+   "premise": "dlg:mission.c.kiln_delivery.twist.rival_potter"
   }
  ],
  "outcomes": {
@@ -157,7 +166,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.pack_small"
+  "combat:group.bandits_small"
  ],
  "places": {
   "anchors": [
@@ -184,7 +193,7 @@
  "contested": false,
  "chain": "chain.kiln",
  "classic": true,
- "banter": "mission.banter.delivery",
+ "banter": "dlg:mission.banter.delivery",
  "_premise": "The kiln family's best pottery must reach the border village's market unbroken.",
  "_twists": {
   "ambush": "Thieves know what pottery like this fetches.",

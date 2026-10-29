@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "tracking",
  "status": "beta",
- "title": "mission.c.tracking.title",
- "brief": "mission.c.tracking.brief",
+ "title": "dlg:mission.c.tracking.title",
+ "brief": "dlg:mission.c.tracking.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.tracking.brief",
+  "accept": "dlg:mission.c.tracking.accept",
+  "decline": "dlg:mission.c.tracking.decline",
+  "progress": "dlg:mission.c.tracking.progress",
+  "success": "dlg:mission.c.tracking.success",
+  "fail": "dlg:mission.c.tracking.fail",
+  "report": "dlg:mission.c.tracking.report"
+ },
  "minutes": 25,
  "party": "squad",
  "unlock": {
@@ -44,7 +53,7 @@
   "thief": {
    "pick": "enemy_group",
    "from": [
-    "bandit.thief"
+    "combat:enemy.cat_burglar"
    ]
   }
  },
@@ -121,7 +130,8 @@
     "options": {
      "bring_in": null,
      "plead": "pleaded_for_child"
-    }
+    },
+    "dialogue": "dlg:mission.c.tracking.choice.child"
    },
    "next": "report"
   },
@@ -139,13 +149,13 @@
    "id": "false_trail",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.tracking.twist.false_trail"
+   "premise": "dlg:mission.c.tracking.twist.false_trail"
   },
   {
    "id": "thief_is_child",
    "weight": 1,
    "harder": false,
-   "premise": "mission.c.tracking.twist.thief_is_child"
+   "premise": "dlg:mission.c.tracking.twist.thief_is_child"
   }
  ],
  "outcomes": {
@@ -169,7 +179,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.thief"
+  "combat:enemy.cat_burglar"
  ],
  "places": {
   "anchors": [
@@ -191,7 +201,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.tracking",
+ "banter": "dlg:mission.banter.tracking",
  "_premise": "Track a thief who robbed a shop and fled into the forest.",
  "_twists": {
   "false_trail": "The thief doubled back through a stream to throw off the dogs.",

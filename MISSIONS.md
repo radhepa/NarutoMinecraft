@@ -197,6 +197,17 @@ step for the client) and `clean_record` (nothing kept that was not yours).
 - **Techniques from missions** (ROADMAP §7, "Learning jutsu"): the first S grade on a C-rank or above can
   carry a technique scroll from the rank's pool (`technique_scrolls`; the pools are the combat
   session's).
+- **Collectibles** for the collection book (`economy.json` `collectibles`; the items session registers the
+  ids and loot tables, the home session owns the book):
+  - **Curios**, charming and useless things with flavor text (a cracked mask, a foreign headband, an old
+    coin): on a B grade or better, 12% of D-ranks, 35% of C, 45% of B, 50% of A, 60% of S, from a table
+    by the template's setting (`loot:curio.road`, `.river`, `.shrine`, `.wilds`, `.far_lands`, `.covert`
+    and more); and 15% of defeated enemies drop one by their kind (`loot:curio.bandit`, `.smuggler`,
+    `.ronin`, `.foreign`, `.beast`).
+  - **Ninja info cards**: one per enemy kind on its first defeat (`card:enemy.<id>`) and one per person
+    met on a mission (`card:person.<role>`), with a card back by rank.
+  - **Keepsakes**: 20 memorable missions give a unique display piece on their first A grade or better (the
+    festival lantern, the haunted inn's lantern, a dojo signboard, the kiln family's pieces at every rank).
 
 ### 3.2 Client standing and village reputation
 
@@ -222,7 +233,7 @@ ROADMAP §5's board-mission example, grown into the full shape:
 
 ```json
 {"format": 1, "id": "mission.d.lost_pet", "kind": "mission", "rank": "d", "category": "pets", "status": "beta",
- "title": "mission.d.lost_pet.title", "brief": "mission.d.lost_pet.brief", "minutes": 10, "party": "squad_or_solo",
+ "title": "dlg:mission.d.lost_pet.title", "brief": "dlg:mission.d.lost_pet.brief", "minutes": 10, "party": "squad_or_solo",
  "slots": {"client":      {"pick": "resident", "where": {"has_pet": true}},
            "pet_spot":    {"pick": "anchor", "tag": "pet_hideout"},
            "second_spot": {"pick": "anchor", "tag": "pet_hideout"},
@@ -237,7 +248,7 @@ ROADMAP §5's board-mission example, grown into the full shape:
            "decide": {"objective": {"type": "choose", "options": {"client": null, "claimant": "given_to_claimant"}},
                       "branch": [{"if": {"chose": ["decide", "claimant"]}, "next": "hand_over"}], "next": "return"},
            "...": "..."},
- "twists": [{"id": "two_pets", "weight": 2, "harder": false, "premise": "mission.d.lost_pet.twist.two_pets"}],
+ "twists": [{"id": "two_pets", "weight": 2, "harder": false, "premise": "dlg:mission.d.lost_pet.twist.two_pets"}],
  "outcomes": {"done": {"pay": 1.0, "standing": 0},
               "given_to_claimant": {"pay": 0.6, "standing": -1, "other_standing": 2}},
  "bonus": ["gentle", "fast", "kind_choice"], "fast_hours": 3,
@@ -245,7 +256,7 @@ ROADMAP §5's board-mission example, grown into the full shape:
  "enemies": [], "places": {"anchors": ["pet_hideout"], "regions": []},
  "pay": {"band": "d", "xp_band": "d", "weight": 0.2},
  "tags": ["village", "animal", "search"], "contested": false, "classic": true,
- "banter": "mission.banter.pets"}
+ "banter": "dlg:mission.banter.pets"}
 ```
 
 | Field | Meaning |
@@ -266,8 +277,11 @@ modifier; a choice that leads to an unknown outcome; unknown slots; enemy groups
 medical, investigation and ANBU work); and stale compiled files. The Java `Catalogue` re-checks the graph
 and that every twist changes the path.
 
-**Text.** Titles, briefings, twist premises, choices and banter are dialogue keys derived from the id
-(`mission.d.lost_pet.twist.two_pets`); the English premises in the authoring files (`_premise`, `_twists`)
+**Text.** Titles, twist premises, choices and banter are dialogue keys in the dialogue session's scheme,
+derived from the id: `dlg:<template id>.<part>` for the parts `brief`, `accept`, `decline`, `progress`,
+`success`, `fail` and `report` (every template lists them under `dialogue`), plus `.title`,
+`.twist.<id>` and `.choice.<step>`. Slot tokens are the slot names (`{client}`, `{pet_spot}`,
+`{bandits}`); the English premises in the authoring files (`_premise`, `_twists`)
 feed the catalogue doc only. Names are always tokens.
 
 **Perform objectives** are of two kinds: combat actions (`technique:clone`, `combo:three_hit`, `dodge`,
@@ -373,11 +387,12 @@ Targets are roles (`role:target.warlord`, `role:target.minister`), bound when th
 - **Bond acts** the desk applies on turn-in: `mission_together` and `mission_success` (or
   `mission_failed`), `camp_night` for a night at camp; templates add their own (an elder's
   `heart_to_heart`, a spar's `spar_won`, a meal by the bonfire).
-- **Banter keys** (the dialogue session writes the lines): `mission.banter.<category>.<phase>[.<band>]`,
-  phases `brief`, `depart`, `travel`, `arrive`, `twist`, `fight`, `low_health`, `choice`, `camp`,
-  `success`, `grade_s`, `partial`, `fail`, `report`; speakers `role:teammate_a`, `role:teammate_b` and
-  `role:sensei`; the band suffix (`in_step`, `steady`, `ragged`, `split`) lets a squad that is not getting
-  along sound like it.
+- **Banter keys** (the dialogue session writes the lines), most specific first:
+  `dlg:mission.banter.<category>.<moment>.<speaker_kind>.<band>`, then without the band, then without the
+  category (`dlg:mission.banter.<moment>.<speaker_kind>`). Moments `brief`, `depart`, `travel`, `arrive`,
+  `ambush`, `twist`, `fight`, `low_health`, `choice`, `camp`, `victory`, `grade_s`, `partial`, `fail`,
+  `report`; speaker kinds `sensei`, `teammate`, `client`; the band (`in_step`, `steady`, `ragged`,
+  `split`) lets a squad that is not getting along sound like it.
 
 ## 7. Counts, pacing and variety
 
@@ -482,8 +497,8 @@ cohesion; and Beta 2's mission counts, savings and variety for a steady player.
 |---|---|---|
 | **Konoha build** (anchors in `districts.json`) | 88 anchor tags in the beta: in-village spots (`academy.yard`, `market.stall`, `riverbank`, `street_drain`, `client_home`, `pet_hideout`, `poster_board`, `residence.mission_desk`, `residence.records`, `gate.travel_desk`, `kiln_yard` and more), outside the wall (`farm_field`, `orchard`, `woodlot`, `herb_slope`, `outside.bandit_camp`, `outside.wolf_den`, `outside.ravine`), the east road (`road.east_bend`, `road.campsite`, `road.east_waystation`, `road.ford`, `road.inn_cellar`) and the border village (`border.square`, `border.healer`, `border.post`, `border.market`, `border.pawnshop`). Generic tags (`client_home`, `pet_hideout`, `farm_field`) want several instances each; named places one | 88 of 133 |
 | **Map** | Regions `region:east_road` and `region:border_village` (Beta 2); 21 later regions (hill fort, post town, capital, coast town, mountain pass, far lands and more) | 2 of 23 |
-| **Combat** (enemy groups and loadouts) | 14 groups in the beta: `bandit.pack_small`, `bandit.pack`, `bandit.camp`, `bandit.leader`, `bandit.archers`, `bandit.thief`, `thug.hired`, `thug.pickpockets`, `smuggler.crew`, `ronin.swordsman`, `scout.enemy_pair`, `beast.boar_giant`, `beast.wolf_pack`, `beast.bear`; 17 later; the technique scroll pools; the combat performs | 14 of 31 |
-| **Items** | 51 mission items in the beta (parcels, crates, a sealed letter, medicine, firewood, lantern crates, pottery) and the gifts' items (`economy.json` `gifts`) | 51 of 58 |
+| **Combat** (enemy groups and loadouts) | 14 in the beta, from the combat session's registry: `combat:group.bandits_small`, `.road_ambush`, `.bandits_camp`, `.smugglers`, `.scout_pair`, `.wolves_pack`, `combat:enemy.bandit_chief`, `.bandit_archer`, `.bandit_ronin`, `.boar`, `.bear`; requested and not yet registered: `combat:group.hired_thugs`, `combat:group.pickpockets` (village street fights, non-lethal) and `combat:enemy.cat_burglar`. 17 later (`combat:group.rogue_pair`, `.cell_pair`, `combat:enemy.rogue_chunin`, `.foreign_jonin`, `.giant_snake` and others; requested: `fort_guards`, `mercenary_band`, `foreign_squad`, `hunter_squad`, `foreign_platoon`, `assassins`, `kidnappers`, `ronin_band`, `combat:enemy.warlord`, `.legend_rogue`). Plus the technique scroll pools and the combat performs. Combat emits the hooks the objectives listen to (`combat:defeated`, `combat:surrendered`, `combat:captured`) | 14 of 31 |
+| **Items** | 51 mission items in the beta (parcels, crates, a sealed letter, medicine, firewood, lantern crates, pottery), the gifts' items, and the collectibles: curio loot tables, info cards and 20 keepsakes (`economy.json` `gifts` and `collectibles`) | 51 of 58 |
 | **Dialogue** | Every template's `title`, `brief`, twist premises and choices; the banter keys (§6); the desk clerk's lines; NPC squads' and the rival squad's board lines | all |
 | **Life** | Ryo through the wallet; bedroll camping and On Duty; chores' work clips | all |
 | **Bonds** | The acts and deeds of §3.2 and §6 (`mission_success`, `failed_client`, `abandoned_mission`, `camp_night`, `helped_resident`); cohesion | all |

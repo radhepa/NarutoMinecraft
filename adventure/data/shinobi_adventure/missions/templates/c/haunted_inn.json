@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "investigation",
  "status": "beta",
- "title": "mission.c.haunted_inn.title",
- "brief": "mission.c.haunted_inn.brief",
+ "title": "dlg:mission.c.haunted_inn.title",
+ "brief": "dlg:mission.c.haunted_inn.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.haunted_inn.brief",
+  "accept": "dlg:mission.c.haunted_inn.accept",
+  "decline": "dlg:mission.c.haunted_inn.decline",
+  "progress": "dlg:mission.c.haunted_inn.progress",
+  "success": "dlg:mission.c.haunted_inn.success",
+  "fail": "dlg:mission.c.haunted_inn.fail",
+  "report": "dlg:mission.c.haunted_inn.report"
+ },
  "minutes": 30,
  "party": "squad",
  "days": 2,
@@ -42,7 +51,7 @@
   "gang": {
    "pick": "enemy_group",
    "from": [
-    "bandit.pack"
+    "combat:group.road_ambush"
    ]
   }
  },
@@ -136,13 +145,13 @@
    "weight": 2,
    "harder": true,
    "modifier": true,
-   "premise": "mission.c.haunted_inn.twist.gang_in_cellar"
+   "premise": "dlg:mission.c.haunted_inn.twist.gang_in_cellar"
   },
   {
    "id": "just_a_story",
    "weight": 1,
    "harder": false,
-   "premise": "mission.c.haunted_inn.twist.just_a_story"
+   "premise": "dlg:mission.c.haunted_inn.twist.just_a_story"
   }
  ],
  "outcomes": {
@@ -164,7 +173,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.pack"
+  "combat:group.road_ambush"
  ],
  "places": {
   "anchors": [
@@ -188,7 +197,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.investigation",
+ "banter": "dlg:mission.banter.investigation",
  "_premise": "Travellers say the waystation inn on the east road is haunted; some never checked out.",
  "_twists": {
   "gang_in_cellar": "A gang uses the cellar to rob sleeping guests.",

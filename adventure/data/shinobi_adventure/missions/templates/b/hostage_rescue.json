@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "rescue",
  "status": "later",
- "title": "mission.b.hostage_rescue.title",
- "brief": "mission.b.hostage_rescue.brief",
+ "title": "dlg:mission.b.hostage_rescue.title",
+ "brief": "dlg:mission.b.hostage_rescue.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.hostage_rescue.brief",
+  "accept": "dlg:mission.b.hostage_rescue.accept",
+  "decline": "dlg:mission.b.hostage_rescue.decline",
+  "progress": "dlg:mission.b.hostage_rescue.progress",
+  "success": "dlg:mission.b.hostage_rescue.success",
+  "fail": "dlg:mission.b.hostage_rescue.fail",
+  "report": "dlg:mission.b.hostage_rescue.report"
+ },
  "minutes": 40,
  "party": "squad",
  "unlock": {
@@ -26,7 +35,7 @@
   "kidnappers": {
    "pick": "enemy_group",
    "from": [
-    "thug.kidnappers"
+    "combat:group.kidnappers"
    ]
   }
  },
@@ -102,14 +111,14 @@
    "id": "discovered",
    "weight": 2,
    "harder": true,
-   "premise": "mission.b.hostage_rescue.twist.discovered"
+   "premise": "dlg:mission.b.hostage_rescue.twist.discovered"
   },
   {
    "id": "two_hostages",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.hostage_rescue.twist.two_hostages"
+   "premise": "dlg:mission.b.hostage_rescue.twist.two_hostages"
   }
  ],
  "outcomes": {
@@ -128,7 +137,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "thug.kidnappers"
+  "combat:group.kidnappers"
  ],
  "places": {
   "anchors": [
@@ -152,7 +161,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.rescue",
+ "banter": "dlg:mission.banter.rescue",
  "_premise": "Kidnappers hold a merchant family's child in a river mill; get the child out alive.",
  "_twists": {
   "discovered": "A kidnapper comes down for water at the worst moment.",

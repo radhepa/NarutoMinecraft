@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "clearing",
  "status": "beta",
- "title": "mission.d.drain_clearing.title",
- "brief": "mission.d.drain_clearing.brief",
+ "title": "dlg:mission.d.drain_clearing.title",
+ "brief": "dlg:mission.d.drain_clearing.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.drain_clearing.brief",
+  "accept": "dlg:mission.d.drain_clearing.accept",
+  "decline": "dlg:mission.d.drain_clearing.decline",
+  "progress": "dlg:mission.d.drain_clearing.progress",
+  "success": "dlg:mission.d.drain_clearing.success",
+  "fail": "dlg:mission.d.drain_clearing.fail",
+  "report": "dlg:mission.d.drain_clearing.report"
+ },
  "minutes": 8,
  "party": "squad_or_solo",
  "slots": {
@@ -59,7 +68,8 @@
     "options": {
      "return": null,
      "keep": "kept_ring"
-    }
+    },
+    "dialogue": "dlg:mission.d.drain_clearing.choice.ring"
    },
    "branch": [
     {
@@ -104,13 +114,13 @@
    "id": "lost_ring",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.drain_clearing.twist.lost_ring"
+   "premise": "dlg:mission.d.drain_clearing.twist.lost_ring"
   },
   {
    "id": "frogs",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.drain_clearing.twist.frogs"
+   "premise": "dlg:mission.d.drain_clearing.twist.frogs"
   }
  ],
  "outcomes": {
@@ -152,7 +162,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.clearing",
+ "banter": "dlg:mission.banter.clearing",
  "_premise": "Clear a blocked drain before the street floods.",
  "_twists": {
   "lost_ring": "A ring glints in the muck; the client lost one last spring.",

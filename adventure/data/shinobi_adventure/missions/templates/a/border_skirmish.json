@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "war",
  "status": "later",
- "title": "mission.a.border_skirmish.title",
- "brief": "mission.a.border_skirmish.brief",
+ "title": "dlg:mission.a.border_skirmish.title",
+ "brief": "dlg:mission.a.border_skirmish.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.border_skirmish.brief",
+  "accept": "dlg:mission.a.border_skirmish.accept",
+  "decline": "dlg:mission.a.border_skirmish.decline",
+  "progress": "dlg:mission.a.border_skirmish.progress",
+  "success": "dlg:mission.a.border_skirmish.success",
+  "fail": "dlg:mission.a.border_skirmish.fail",
+  "report": "dlg:mission.a.border_skirmish.report"
+ },
  "minutes": 50,
  "party": "squad",
  "days": 2,
@@ -28,13 +37,13 @@
   "platoon": {
    "pick": "enemy_group",
    "from": [
-    "enemy.platoon"
+    "combat:group.foreign_platoon"
    ]
   },
   "jonin": {
    "pick": "enemy_group",
    "from": [
-    "enemy.jonin"
+    "combat:enemy.foreign_jonin"
    ]
   }
  },
@@ -102,14 +111,14 @@
    "weight": 2,
    "harder": true,
    "modifier": true,
-   "premise": "mission.a.border_skirmish.twist.flanked"
+   "premise": "dlg:mission.a.border_skirmish.twist.flanked"
   },
   {
    "id": "wounded_ally",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.border_skirmish.twist.wounded_ally"
+   "premise": "dlg:mission.a.border_skirmish.twist.wounded_ally"
   }
  ],
  "outcomes": {
@@ -127,8 +136,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.platoon",
-  "enemy.jonin"
+  "combat:group.foreign_platoon",
+  "combat:enemy.foreign_jonin"
  ],
  "places": {
   "anchors": [
@@ -152,7 +161,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.war",
+ "banter": "dlg:mission.banter.war",
  "_premise": "An enemy platoon has crossed the border; hold the line at a river crossing until reinforcements come.",
  "_twists": {
   "flanked": "A second squad comes around through the reeds.",

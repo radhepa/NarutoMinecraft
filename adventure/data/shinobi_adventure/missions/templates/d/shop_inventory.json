@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "inventory",
  "status": "beta",
- "title": "mission.d.shop_inventory.title",
- "brief": "mission.d.shop_inventory.brief",
+ "title": "dlg:mission.d.shop_inventory.title",
+ "brief": "dlg:mission.d.shop_inventory.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.shop_inventory.brief",
+  "accept": "dlg:mission.d.shop_inventory.accept",
+  "decline": "dlg:mission.d.shop_inventory.decline",
+  "progress": "dlg:mission.d.shop_inventory.progress",
+  "success": "dlg:mission.d.shop_inventory.success",
+  "fail": "dlg:mission.d.shop_inventory.fail",
+  "report": "dlg:mission.d.shop_inventory.report"
+ },
  "minutes": 10,
  "party": "squad_or_solo",
  "slots": {
@@ -92,7 +101,8 @@
     "options": {
      "culprit": null,
      "say_nothing": "kept_quiet"
-    }
+    },
+    "dialogue": "dlg:mission.d.shop_inventory.choice.accuse"
    },
    "next": "report"
   },
@@ -118,13 +128,13 @@
    "id": "count_mismatch",
    "weight": 2,
    "harder": true,
-   "premise": "mission.d.shop_inventory.twist.count_mismatch"
+   "premise": "dlg:mission.d.shop_inventory.twist.count_mismatch"
   },
   {
    "id": "mislabelled",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.shop_inventory.twist.mislabelled"
+   "premise": "dlg:mission.d.shop_inventory.twist.mislabelled"
   }
  ],
  "outcomes": {
@@ -165,7 +175,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.inventory",
+ "banter": "dlg:mission.banter.inventory",
  "_premise": "Count every item in a shop's storeroom before the quarterly tax visit.",
  "_twists": {
   "count_mismatch": "The numbers do not add up: someone has been taking a little at a time.",

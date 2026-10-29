@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "clans",
  "status": "beta",
- "title": "mission.d.insect_garden.title",
- "brief": "mission.d.insect_garden.brief",
+ "title": "dlg:mission.d.insect_garden.title",
+ "brief": "dlg:mission.d.insect_garden.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.insect_garden.brief",
+  "accept": "dlg:mission.d.insect_garden.accept",
+  "decline": "dlg:mission.d.insect_garden.decline",
+  "progress": "dlg:mission.d.insect_garden.progress",
+  "success": "dlg:mission.d.insect_garden.success",
+  "fail": "dlg:mission.d.insect_garden.fail",
+  "report": "dlg:mission.d.insect_garden.report"
+ },
  "minutes": 10,
  "party": "solo",
  "slots": {
@@ -91,13 +100,13 @@
    "id": "escaped_beetles",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.insect_garden.twist.escaped_beetles"
+   "premise": "dlg:mission.d.insect_garden.twist.escaped_beetles"
   },
   {
    "id": "night_bloom",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.insect_garden.twist.night_bloom"
+   "premise": "dlg:mission.d.insect_garden.twist.night_bloom"
   }
  ],
  "outcomes": {
@@ -137,7 +146,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.clans",
+ "banter": "dlg:mission.banter.clans",
  "_premise": "Tend the Aburame insect gardens while the keepers are on duty.",
  "_twists": {
   "escaped_beetles": "A rare beetle colony has walked out of its box.",

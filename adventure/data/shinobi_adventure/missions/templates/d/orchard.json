@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "harvest",
  "status": "beta",
- "title": "mission.d.orchard.title",
- "brief": "mission.d.orchard.brief",
+ "title": "dlg:mission.d.orchard.title",
+ "brief": "dlg:mission.d.orchard.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.orchard.brief",
+  "accept": "dlg:mission.d.orchard.accept",
+  "decline": "dlg:mission.d.orchard.decline",
+  "progress": "dlg:mission.d.orchard.progress",
+  "success": "dlg:mission.d.orchard.success",
+  "fail": "dlg:mission.d.orchard.fail",
+  "report": "dlg:mission.d.orchard.report"
+ },
  "minutes": 10,
  "party": "squad",
  "unlock": {
@@ -98,13 +107,13 @@
    "id": "wasps",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.orchard.twist.wasps"
+   "premise": "dlg:mission.d.orchard.twist.wasps"
   },
   {
    "id": "stuck_child",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.orchard.twist.stuck_child"
+   "premise": "dlg:mission.d.orchard.twist.stuck_child"
   }
  ],
  "outcomes": {
@@ -141,7 +150,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.harvest",
+ "banter": "dlg:mission.banter.harvest",
  "_premise": "Pick persimmons from an orchard's tallest trees (tree walking welcome).",
  "_twists": {
   "wasps": "A wasp nest hangs in the best tree.",

@@ -84,8 +84,17 @@ public final class SquadPlan {
         return new Band("split", -10, false, 0.15);
     }
 
-    /** The dialogue key a teammate speaks from at a phase of a mission (the dialogue session writes the lines). */
-    public static String banter(String category, String phase, String band) {
-        return "mission.banter." + category + "." + phase + (band == null ? "" : "." + band);
+    /**
+     * The dialogue keys a squadmate or client speaks from at a moment of a mission, most specific first (the dialogue
+     * session's scheme {@code dlg:mission.banter.<moment>.<speaker_kind>}, narrowed by category and cohesion band).
+     */
+    public static java.util.List<String> banter(String category, String moment, String speakerKind, String band) {
+        var keys = new ArrayList<String>();
+        String base = "dlg:mission.banter.";
+        if (band != null) keys.add(base + category + "." + moment + "." + speakerKind + "." + band);
+        keys.add(base + category + "." + moment + "." + speakerKind);
+        if (band != null) keys.add(base + moment + "." + speakerKind + "." + band);
+        keys.add(base + moment + "." + speakerKind);
+        return keys;
     }
 }

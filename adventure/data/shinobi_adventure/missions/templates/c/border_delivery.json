@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "delivery",
  "status": "beta",
- "title": "mission.c.border_delivery.title",
- "brief": "mission.c.border_delivery.brief",
+ "title": "dlg:mission.c.border_delivery.title",
+ "brief": "dlg:mission.c.border_delivery.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.border_delivery.brief",
+  "accept": "dlg:mission.c.border_delivery.accept",
+  "decline": "dlg:mission.c.border_delivery.decline",
+  "progress": "dlg:mission.c.border_delivery.progress",
+  "success": "dlg:mission.c.border_delivery.success",
+  "fail": "dlg:mission.c.border_delivery.fail",
+  "report": "dlg:mission.c.border_delivery.report"
+ },
  "minutes": 25,
  "party": "squad",
  "days": 2,
@@ -45,13 +54,13 @@
   "toll": {
    "pick": "enemy_group",
    "from": [
-    "thug.hired"
+    "combat:group.hired_thugs"
    ]
   },
   "thieves": {
    "pick": "enemy_group",
    "from": [
-    "bandit.pack_small"
+    "combat:group.bandits_small"
    ]
   }
  },
@@ -131,7 +140,8 @@
     "options": {
      "pay": null,
      "fight": null
-    }
+    },
+    "dialogue": "dlg:mission.c.border_delivery.choice.toll"
    },
    "branch": [
     {
@@ -191,19 +201,19 @@
    "id": "stolen",
    "weight": 2,
    "harder": true,
-   "premise": "mission.c.border_delivery.twist.stolen"
+   "premise": "dlg:mission.c.border_delivery.twist.stolen"
   },
   {
    "id": "toll",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.border_delivery.twist.toll"
+   "premise": "dlg:mission.c.border_delivery.twist.toll"
   },
   {
    "id": "storm",
    "weight": 1,
    "harder": false,
-   "premise": "mission.c.border_delivery.twist.storm"
+   "premise": "dlg:mission.c.border_delivery.twist.storm"
   }
  ],
  "outcomes": {
@@ -223,8 +233,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "thug.hired",
-  "bandit.pack_small"
+  "combat:group.hired_thugs",
+  "combat:group.bandits_small"
  ],
  "places": {
   "anchors": [
@@ -251,7 +261,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.delivery",
+ "banter": "dlg:mission.banter.delivery",
  "_premise": "Carry medicine and supplies to the border village's healer.",
  "_twists": {
   "stolen": "The crates vanish from the cart while you water the horse.",

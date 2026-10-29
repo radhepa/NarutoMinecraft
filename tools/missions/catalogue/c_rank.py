@@ -21,7 +21,7 @@ add(mission(
     premise="Escort a travelling trader and his cart along the east road to the waystation.",
     client=resident(job="trader", resident_of="any"),
     slots={"bend": anchor("road.east_bend"), "camp": anchor("road.campsite"), "waystation": anchor("road.east_waystation"),
-           "bandits": enemy_group("bandit.pack_small", "bandit.pack"), "bridge": anchor("road.bridge"),
+           "bandits": enemy_group("combat:group.bandits_small", "combat:group.road_ambush"), "bridge": anchor("road.bridge"),
            "ford": anchor("road.ford")},
     steps=[
         S("meet", go("place:gate.main"), "road"),
@@ -34,7 +34,7 @@ add(mission(
           branch=[(twist_if("night_raid"), "raid")],
           on_done=[{"bond_event": ["role:squad", "camp_night"]}]),
         S("raid", protect(C, until="06:00", at="slot:camp"), "last_leg",
-          on_enter=[{"spawn_group": ["bandit.pack_small", "slot:camp"]}]),
+          on_enter=[{"spawn_group": ["combat:group.bandits_small", "slot:camp"]}]),
         S("last_leg", escort(C, "slot:waystation"), "captive",
           branch=[(twist_if("extra_passenger"), "passenger")]),
         S("passenger", talk("traveller"), "captive"),
@@ -43,8 +43,8 @@ add(mission(
     ],
     twists=[twist("bridge_out", 2), twist("night_raid", 2, harder=True), twist("extra_passenger")],
     outcomes={"done": outcome(acts=[["role:squad", "mission_success"]]),
-              "bandits_released": outcome(pay=0.9, extra={"rival_risk": "bandit.pack_small"})},
-    bonus=["client_unharmed", "no_knockouts", "spared"], enemies=["bandit.pack_small", "bandit.pack"],
+              "bandits_released": outcome(pay=0.9, extra={"rival_risk": "combat:group.bandits_small"})},
+    bonus=["client_unharmed", "no_knockouts", "spared"], enemies=["combat:group.bandits_small", "combat:group.road_ambush"],
     regions=["region:east_road"], tags=["road", "escort", "fight", "camp"], chain="chain.merchant",
     twist_premises={"bridge_out": "The bridge is down; the ford is slower and easier to ambush.",
                     "night_raid": "They come back at night for the cart.",
@@ -56,7 +56,7 @@ add(mission(
     premise="Escort a scholar to the border village through the hills.",
     client=resident(job="scholar", resident_of="any"),
     slots={"pass": anchor("road.hill_pass"), "camp": anchor("road.campsite"), "village": anchor("border.square"),
-           "thugs": enemy_group("bandit.pack_small", "ronin.swordsman"), "healer": anchor("border.healer")},
+           "thugs": enemy_group("combat:group.bandits_small", "combat:enemy.bandit_ronin"), "healer": anchor("border.healer")},
     steps=[
         S("meet", talk(C), "travel"),
         S("travel", go("place:gate.travel_desk"), "pass"),
@@ -74,7 +74,7 @@ add(mission(
     ],
     twists=[twist("sick_on_road", 2), twist("client_secret", 2)],
     outcomes={"done": outcome(), "reported_client": outcome(pay=1.0, standing=-2, acts=[["slot:client", "went_over_their_head"]])},
-    bonus=["client_unharmed", "kind_choice", "no_knockouts"], enemies=["bandit.pack_small", "ronin.swordsman"],
+    bonus=["client_unharmed", "kind_choice", "no_knockouts"], enemies=["combat:group.bandits_small", "combat:enemy.bandit_ronin"],
     regions=["region:border_village"], tags=["road", "escort", "fight", "camp", "travel"],
     twist_premises={"sick_on_road": "The client is not used to the hills and falls ill at the pass.",
                     "client_secret": "At the fire the client admits why they are really going: a harmless secret they ask you to keep."}))
@@ -84,7 +84,7 @@ add(mission(
     premise="Clear a bandit camp that has been robbing farms outside the wall.",
     client=resident(job="farmer"),
     slots={"camp": anchor("outside.bandit_camp"), "lookout": anchor("outside.bandit_lookout"),
-           "hostages": count(1, 3), "leader": enemy_group("bandit.leader"), "crew": enemy_group("bandit.camp")},
+           "hostages": count(1, 3), "leader": enemy_group("combat:enemy.bandit_chief"), "crew": enemy_group("combat:group.bandits_camp")},
     steps=[
         S("brief", talk(C), "scout"),
         S("scout", sneak("slot:lookout"), "assault", optional=["unseen"]),
@@ -105,7 +105,7 @@ add(mission(
     outcomes={"done": outcome(acts=[["role:squad", "mission_success"]]),
               "talked_down": outcome(pay=0.8, standing=1, extra={"deed": "mediated"}),
               "arrested_all": outcome(pay=1.0)},
-    bonus=["unseen", "no_knockouts", "spared", "clean_record"], enemies=["bandit.camp", "bandit.leader"],
+    bonus=["unseen", "no_knockouts", "spared", "clean_record"], enemies=["combat:group.bandits_camp", "combat:enemy.bandit_chief"],
     tags=["outside", "fight", "stealth"],
     twist_premises={"hostages": "They have taken farmhands; get them out before the fight reaches them.",
                     "leader_flees": "The leader runs for the hills at the first sign of trouble.",
@@ -116,7 +116,7 @@ add(mission(
     premise="Carry medicine and supplies to the border village's healer.",
     client=resident(job="medic"),
     slots={"healer": anchor("border.healer"), "road": anchor("road.hill_pass"), "hideout": anchor("road.thieves_den"),
-           "toll": enemy_group("thug.hired"), "thieves": enemy_group("bandit.pack_small")},
+           "toll": enemy_group("combat:group.hired_thugs"), "thieves": enemy_group("combat:group.bandits_small")},
     steps=[
         S("pick_up", collect("medicine_crate", at="place:hospital.desk", count=2), "travel"),
         S("travel", go("place:gate.travel_desk"), "road"),
@@ -134,7 +134,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("stolen", 2, harder=True), twist("toll", 2), twist("storm")],
-    bonus=["client_unharmed", "fast", "no_knockouts"], fast_hours=24, enemies=["thug.hired", "bandit.pack_small"],
+    bonus=["client_unharmed", "fast", "no_knockouts"], fast_hours=24, enemies=["combat:group.hired_thugs", "combat:group.bandits_small"],
     regions=["region:border_village"], tags=["road", "delivery", "travel", "fight"],
     twist_premises={"stolen": "The crates vanish from the cart while you water the horse.",
                     "toll": "Thugs have put a 'toll' on the only bridge.",
@@ -146,7 +146,7 @@ add(mission(
     client=resident(job="trader", resident_of="any"),
     slots={"camp": anchor("road.campsite"), "waystation": anchor("road.east_waystation"), "hand_a": resident(),
            "hand_b": resident(), "insider": suspect_of("hand_a", "hand_b"),
-           "raiders": enemy_group("bandit.pack", "bandit.archers")},
+           "raiders": enemy_group("combat:group.road_ambush", "combat:enemy.bandit_archer")},
     steps=[
         S("meet", talk(C), "day1"),
         S("day1", protect(C, until="18:00"), "camp",
@@ -160,7 +160,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("inside_job", 2, harder=True), twist("sabotage", 2)],
-    bonus=["client_unharmed", "no_knockouts", "kind_choice"], enemies=["bandit.pack", "bandit.archers"],
+    bonus=["client_unharmed", "no_knockouts", "kind_choice"], enemies=["combat:group.road_ambush", "combat:enemy.bandit_archer"],
     regions=["region:east_road"], tags=["road", "guard", "fight", "camp", "investigation"], chain="chain.merchant",
     twist_premises={"inside_job": "Somebody in the caravan is signalling the raiders.",
                     "sabotage": "A wheel has been cut halfway through in the night."},
@@ -170,7 +170,7 @@ add(mission(
     "mission.c.festival_guard", "c", "guard", minutes=25, pay=0.35, unlock=GENIN_C,
     premise="Keep the festival safe from a gang of pickpockets working the crowd.",
     client=resident(job="organiser"),
-    slots={"street": anchor("main_street"), "den": anchor("alley.back"), "gang": enemy_group("thug.pickpockets"),
+    slots={"street": anchor("main_street"), "den": anchor("alley.back"), "gang": enemy_group("combat:group.pickpockets"),
            "guest": resident(job="noble_guest", resident_of="any")},
     event={"during": "event.leaf_festival"},
     steps=[
@@ -184,7 +184,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("fireworks_theft", 2), twist("lost_guest")],
-    bonus=["no_alarm", "spared", "fast"], fast_hours=4, enemies=["thug.pickpockets"],
+    bonus=["no_alarm", "spared", "fast"], fast_hours=4, enemies=["combat:group.pickpockets"],
     tags=["village", "guard", "event", "fight"],
     twist_premises={"fireworks_theft": "The gang's real target is the fireworks.",
                     "lost_guest": "A visiting noble's child has slipped their guards to see the stalls."}))
@@ -193,7 +193,7 @@ add(mission(
     "mission.c.beast_hunt", "c", "beasts", minutes=25, pay=0.45, unlock=GENIN_C,
     premise="A giant boar is tearing up the farms outside the wall; stop it.",
     client=resident(job="farmer"),
-    slots={"fields": anchor("farm_field"), "lair": anchor("outside.boar_wallow"), "beast": enemy_group("beast.boar_giant")},
+    slots={"fields": anchor("farm_field"), "lair": anchor("outside.boar_wallow"), "beast": enemy_group("combat:enemy.boar")},
     steps=[
         S("brief", talk(C), "track"),
         S("track", inspect("boar_tracks", at="slot:fields", count=4), "lair"),
@@ -205,13 +205,13 @@ add(mission(
         S("fight", defeat("slot:beast", at="slot:lair"), "report",
           on_enter=[{"spawn_group": ["slot:beast", "slot:lair"]}],
           branch=[(twist_if("two_beasts"), "second")]),
-        S("second", defeat("beast.boar_giant", at="slot:fields"), "report",
-          on_enter=[{"spawn_group": ["beast.boar_giant", "slot:fields"]}]),
+        S("second", defeat("combat:enemy.boar", at="slot:fields"), "report",
+          on_enter=[{"spawn_group": ["combat:enemy.boar", "slot:fields"]}]),
         S("report", talk(C), None),
     ],
     twists=[twist("mother_with_young", 2), twist("two_beasts", 1, harder=True)],
     outcomes={"done": outcome(), "relocated": outcome(pay=0.9, standing=1, extra={"clan_deed": ["inuzuka", "helped_resident"]})},
-    bonus=["no_knockouts", "fast", "kind_choice"], fast_hours=6, enemies=["beast.boar_giant"],
+    bonus=["no_knockouts", "fast", "kind_choice"], fast_hours=6, enemies=["combat:enemy.boar"],
     tags=["outside", "beast", "fight", "tracking"],
     twist_premises={"mother_with_young": "It is a sow with piglets; she was driven out of her forest by something.",
                     "two_beasts": "There are two of them."}))
@@ -220,7 +220,7 @@ add(mission(
     "mission.c.wolf_pack", "c", "beasts", minutes=25, pay=0.45, unlock=GENIN_C,
     premise="Wolves are taking livestock from the outer farms at night.",
     client=resident(job="farmer"),
-    slots={"pen": anchor("farm_pen"), "den": anchor("outside.wolf_den"), "pack": enemy_group("beast.wolf_pack"),
+    slots={"pen": anchor("farm_pen"), "den": anchor("outside.wolf_den"), "pack": enemy_group("combat:group.wolves_pack"),
            "camp": anchor("outside.bandit_camp")},
     steps=[
         S("brief", talk(C), "watch"),
@@ -230,13 +230,13 @@ add(mission(
         S("track", inspect("wolf_tracks", count=3), "den",
           branch=[(twist_if("driven_out"), "cause")]),
         S("cause", go("slot:camp"), "cause_fight"),
-        S("cause_fight", defeat("bandit.pack_small", at="slot:camp"), "report",
-          on_enter=[{"spawn_group": ["bandit.pack_small", "slot:camp"]}]),
+        S("cause_fight", defeat("combat:group.bandits_small", at="slot:camp"), "report",
+          on_enter=[{"spawn_group": ["combat:group.bandits_small", "slot:camp"]}]),
         S("den", defeat("slot:pack", at="slot:den"), "report"),
         S("report", talk(C), None),
     ],
     twists=[twist("driven_out", 2), twist("alpha", 1, harder=True, modifier=True)],
-    bonus=["client_unharmed", "no_knockouts"], enemies=["beast.wolf_pack", "bandit.pack_small"],
+    bonus=["client_unharmed", "no_knockouts"], enemies=["combat:group.wolves_pack", "combat:group.bandits_small"],
     tags=["outside", "beast", "night", "fight", "tracking"],
     twist_premises={"driven_out": "The wolves were driven down by a bandit gang's fires in their hills.",
                     "alpha": "The pack has an alpha the size of a pony."}))
@@ -245,7 +245,7 @@ add(mission(
     "mission.c.bear", "c", "beasts", minutes=20, pay=0.4, unlock=GENIN_C, party="squad",
     premise="A bear has wandered into the outer training grounds and will not leave.",
     client=resident(job="groundskeeper"),
-    slots={"ground": anchor("outside.training_ground"), "honey": anchor("outside.beehives"), "beast": enemy_group("beast.bear")},
+    slots={"ground": anchor("outside.training_ground"), "honey": anchor("outside.beehives"), "beast": enemy_group("combat:enemy.bear")},
     steps=[
         S("brief", talk(C), "find"),
         S("find", go("slot:ground"), "fight",
@@ -258,7 +258,7 @@ add(mission(
     ],
     twists=[twist("honey_trail", 2), twist("cubs", 1, modifier=True)],
     outcomes={"done": outcome(), "lured_away": outcome(pay=1.0, standing=1)},
-    bonus=["no_knockouts", "gentle"], enemies=["beast.bear"], tags=["outside", "beast", "fight"],
+    bonus=["no_knockouts", "gentle"], enemies=["combat:enemy.bear"], tags=["outside", "beast", "fight"],
     twist_premises={"honey_trail": "The groundskeeper's beehives give you an idea.",
                     "cubs": "There are cubs in the bushes, and she knows you are near them."}))
 
@@ -267,7 +267,7 @@ add(mission(
     premise="Track a thief who robbed a shop and fled into the forest.",
     client=resident(job="shopkeeper"),
     slots={"shop": anchor("market.stall"), "forest": anchor("outside.forest_trail"), "hideout": anchor("outside.hollow"),
-           "thief": enemy_group("bandit.thief")},
+           "thief": enemy_group("combat:enemy.cat_burglar")},
     steps=[
         S("brief", talk(C), "scene"),
         S("scene", inspect("scent", at="slot:shop"), "trail"),
@@ -282,7 +282,7 @@ add(mission(
     ],
     twists=[twist("false_trail", 2), twist("thief_is_child")],
     outcomes={"done": outcome(), "pleaded_for_child": outcome(pay=0.9, standing=0, extra={"deed": "helped_resident"})},
-    bonus=["fast", "spared"], fast_hours=6, enemies=["bandit.thief"], tags=["outside", "tracking", "ninken"],
+    bonus=["fast", "spared"], fast_hours=6, enemies=["combat:enemy.cat_burglar"], tags=["outside", "tracking", "ninken"],
     twist_premises={"false_trail": "The thief doubled back through a stream to throw off the dogs.",
                     "thief_is_child": "The thief is a runaway child stealing for a sick parent."}))
 
@@ -290,7 +290,7 @@ add(mission(
     "mission.c.missing_woodcutter", "c", "rescue", minutes=25, pay=0.4, unlock=GENIN_C,
     premise="A woodcutter did not come home from the hills; find him.",
     client=resident(household=True),
-    slots={"woods": anchor("outside.woodcutter_path"), "ravine": anchor("outside.ravine"), "wolves": enemy_group("beast.wolf_pack")},
+    slots={"woods": anchor("outside.woodcutter_path"), "ravine": anchor("outside.ravine"), "wolves": enemy_group("combat:group.wolves_pack")},
     steps=[
         S("brief", talk(C), "search"),
         S("search", inspect("woodcutter_signs", at="slot:woods", count=4), "found",
@@ -304,7 +304,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("ravine", 2), twist("wolves_close_in", 2, harder=True)],
-    bonus=["client_unharmed", "fast"], fast_hours=8, enemies=["beast.wolf_pack"], tags=["outside", "rescue", "movement"],
+    bonus=["client_unharmed", "fast"], fast_hours=8, enemies=["combat:group.wolves_pack"], tags=["outside", "rescue", "movement"],
     twist_premises={"ravine": "He fell into a ravine; the only way down is the cliff face.",
                     "wolves_close_in": "Wolves have smelled the blood before you did."}))
 
@@ -314,7 +314,7 @@ add(mission(
     client=resident(job="trader"),
     slots={"warehouse": anchor("warehouse"), "night_guard": resident(job="guard"), "clerk": resident(job="clerk"),
            "porter": resident(job="porter"), "culprit": suspect_of("night_guard", "clerk", "porter"),
-           "fence": enemy_group("smuggler.crew"), "fence_spot": anchor("alley.back")},
+           "fence": enemy_group("combat:group.smugglers"), "fence_spot": anchor("alley.back")},
     steps=[
         S("brief", talk(C), "interview1"),
         S("interview1", talk("slot:night_guard"), "interview2"),
@@ -329,7 +329,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("culprit_guard", 1, modifier=True), twist("culprit_clerk", 1, modifier=True), twist("culprit_porter", 1, modifier=True)],
-    bonus=["unseen", "kind_choice", "spared"], enemies=["smuggler.crew"], tags=["village", "investigation", "night", "fight"],
+    bonus=["unseen", "kind_choice", "spared"], enemies=["combat:group.smugglers"], tags=["village", "investigation", "night", "fight"],
     twist_premises={"culprit_guard": "The rolled culprit is the night guard.",
                     "culprit_clerk": "The rolled culprit is the clerk.",
                     "culprit_porter": "The rolled culprit is the porter."},
@@ -339,7 +339,7 @@ add(mission(
     "mission.c.protect_shop", "c", "protection", minutes=25, pay=0.45, unlock=GENIN_C,
     premise="A shopkeeper is being threatened by a rival's hired thugs; protect them through the week's big sale.",
     client=resident(job="shopkeeper"),
-    slots={"shop": anchor("market.stall"), "rival": resident(job="shopkeeper"), "thugs": enemy_group("thug.hired")},
+    slots={"shop": anchor("market.stall"), "rival": resident(job="shopkeeper"), "thugs": enemy_group("combat:group.hired_thugs")},
     steps=[
         S("brief", talk(C), "guard"),
         S("guard", protect(C, until="18:00", at="slot:shop"), "rival",
@@ -354,7 +354,7 @@ add(mission(
     twists=[twist("bribe", 2), twist("client_started_it")],
     outcomes={"done": outcome(), "took_bribe": outcome(pay=0.0, standing=-3, extra={"item_ryo": 200, "deed": "hurt_resident"}),
               "mediated": outcome(pay=1.0, standing=1, extra={"deed": "mediated"})},
-    bonus=["client_unharmed", "spared", "kind_choice"], enemies=["thug.hired"], tags=["village", "market", "guard", "fight", "talk"],
+    bonus=["client_unharmed", "spared", "kind_choice"], enemies=["combat:group.hired_thugs"], tags=["village", "market", "guard", "fight", "talk"],
     twist_premises={"bribe": "The rival's man offers you twice the fee to look away.",
                     "client_started_it": "The client's books show they started the feud."}))
 
@@ -363,7 +363,7 @@ add(mission(
     premise="Two hamlets near the border are fighting over a stream; keep the peace until the magistrate comes.",
     client=resident(job="headman", resident_of="any"),
     slots={"stream": anchor("border.stream"), "other_headman": resident(job="headman", resident_of="any"),
-           "thugs": enemy_group("thug.hired")},
+           "thugs": enemy_group("combat:group.hired_thugs")},
     steps=[
         S("travel", go("place:gate.travel_desk"), "hear_a"),
         S("hear_a", talk(C), "hear_b"),
@@ -377,7 +377,7 @@ add(mission(
     ],
     twists=[twist("hired_muscle", 2), twist("dry_season", 1, modifier=True)],
     outcomes={"done": outcome(), "shared": outcome(pay=1.0, standing=2, extra={"deed": "mediated"})},
-    bonus=["kind_choice", "spared"], enemies=["thug.hired"], regions=["region:border_village"],
+    bonus=["kind_choice", "spared"], enemies=["combat:group.hired_thugs"], regions=["region:border_village"],
     tags=["travel", "talk", "fight"],
     twist_premises={"hired_muscle": "One headman has hired muscle to settle it his way.",
                     "dry_season": "It is a dry season, and there is barely enough for one."}))
@@ -386,7 +386,7 @@ add(mission(
     "mission.c.smugglers_ford", "c", "interdiction", minutes=30, pay=0.5, unlock=GENIN_C,
     premise="Stop a smuggling crew that crosses the river at a ford by night.",
     client=resident(clan="hagane"),
-    slots={"ford": anchor("road.ford"), "crew": enemy_group("smuggler.crew"), "hide": anchor("road.reeds")},
+    slots={"ford": anchor("road.ford"), "crew": enemy_group("combat:group.smugglers"), "hide": anchor("road.reeds")},
     steps=[
         S("brief", talk(C), "hide"),
         S("hide", sneak("slot:hide"), "wait", optional=["unseen"]),
@@ -399,7 +399,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("animals", 2), twist("decoy", 1, harder=True, modifier=True)],
-    bonus=["unseen", "spared", "no_knockouts"], enemies=["smuggler.crew"], regions=["region:east_road"],
+    bonus=["unseen", "spared", "no_knockouts"], enemies=["combat:group.smugglers"], regions=["region:east_road"],
     tags=["road", "night", "stealth", "fight"],
     twist_premises={"animals": "The cargo is rare animals in cramped cages.",
                     "decoy": "The first boat is a decoy; the real one crosses downstream."}))
@@ -408,7 +408,7 @@ add(mission(
     "mission.c.courier_relay", "c", "courier", minutes=25, pay=0.5, unlock=FAR,
     premise="Rush a sealed message to the border post within a day.",
     client=resident(job="clerk"),
-    slots={"post": anchor("border.post"), "pass": anchor("road.hill_pass"), "scouts": enemy_group("scout.enemy_pair")},
+    slots={"post": anchor("border.post"), "pass": anchor("road.hill_pass"), "scouts": enemy_group("combat:group.scout_pair")},
     fail={"on_death": True, "timeout_days": 1},
     steps=[
         S("collect", talk(C), "travel"),
@@ -423,7 +423,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("interceptors", 2, harder=True), twist("wait_answer")],
-    bonus=["fast", "no_knockouts", "unseen"], fast_hours=12, enemies=["scout.enemy_pair"],
+    bonus=["fast", "no_knockouts", "unseen"], fast_hours=12, enemies=["combat:group.scout_pair"],
     regions=["region:border_village"], tags=["travel", "timed", "fight", "movement"],
     twist_premises={"interceptors": "Two enemy scouts are waiting at the pass for exactly this message.",
                     "wait_answer": "The post commander wants you to carry the answer back."}))
@@ -432,7 +432,7 @@ add(mission(
     "mission.c.haunted_inn", "c", "investigation", minutes=30, days=2, pay=0.45, unlock=GENIN_C,
     premise="Travellers say the waystation inn on the east road is haunted; some never checked out.",
     client=resident(job="innkeeper", resident_of="any"),
-    slots={"inn": anchor("road.east_waystation"), "cellar": anchor("road.inn_cellar"), "gang": enemy_group("bandit.pack")},
+    slots={"inn": anchor("road.east_waystation"), "cellar": anchor("road.inn_cellar"), "gang": enemy_group("combat:group.road_ambush")},
     steps=[
         S("arrive", talk(C), "night"),
         S("night", sleep("slot:inn"), "clues"),
@@ -447,7 +447,7 @@ add(mission(
     ],
     twists=[twist("gang_in_cellar", 2, harder=True, modifier=True), twist("just_a_story", 1)],
     outcomes={"done": outcome(), "no_ghost": outcome(pay=0.7, standing=1)},
-    bonus=["unseen", "spared"], enemies=["bandit.pack"], regions=["region:east_road"],
+    bonus=["unseen", "spared"], enemies=["combat:group.road_ambush"], regions=["region:east_road"],
     tags=["road", "investigation", "night", "spooky"],
     twist_premises={"gang_in_cellar": "A gang uses the cellar to rob sleeping guests.",
                     "just_a_story": "The innkeeper's grandfather made up the ghost to bring in curious guests."}))
@@ -456,7 +456,7 @@ add(mission(
     "mission.c.noble_child", "c", "bodyguard", minutes=25, pay=0.55, unlock=GENIN_C,
     premise="Guard a visiting lord's child for a day in the village.",
     client=resident(job="noble_guest", resident_of="any"),
-    slots={"inn": anchor("inn"), "market": anchor("main_street"), "kidnappers": enemy_group("thug.hired")},
+    slots={"inn": anchor("inn"), "market": anchor("main_street"), "kidnappers": enemy_group("combat:group.hired_thugs")},
     steps=[
         S("meet", talk(C), "tour"),
         S("tour", escort(C, "slot:market"), "back",
@@ -468,7 +468,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("runs_away", 2), twist("kidnap_attempt", 2, harder=True)],
-    bonus=["client_unharmed", "no_alarm", "extra_mile"], enemies=["thug.hired"], tags=["village", "guard", "children", "fight"],
+    bonus=["client_unharmed", "no_alarm", "extra_mile"], enemies=["combat:group.hired_thugs"], tags=["village", "guard", "children", "fight"],
     twist_premises={"runs_away": "The child gives you the slip to see the village alone.",
                     "kidnap_attempt": "Someone has been paid to take the child."}))
 
@@ -476,7 +476,7 @@ add(mission(
     "mission.c.border_patrol", "c", "patrol", minutes=25, pay=0.4, unlock=FAR,
     premise="Walk a stretch of the border with a Chunin, checking markers and watch posts.",
     client=resident(group="shinobi", rank="chunin"),
-    slots={"markers": anchor("border.marker"), "post": anchor("border.post"), "scouts": enemy_group("scout.enemy_pair"),
+    slots={"markers": anchor("border.marker"), "post": anchor("border.post"), "scouts": enemy_group("combat:group.scout_pair"),
            "lost": resident(resident_of="any")},
     steps=[
         S("brief", talk(C), "markers"),
@@ -488,7 +488,7 @@ add(mission(
         S("post", talk(C), None),
     ],
     twists=[twist("scouts", 2, harder=True), twist("lost_genin", 2)],
-    bonus=["no_knockouts", "unseen", "kind_choice"], enemies=["scout.enemy_pair"], regions=["region:border_village"],
+    bonus=["no_knockouts", "unseen", "kind_choice"], enemies=["combat:group.scout_pair"], regions=["region:border_village"],
     tags=["travel", "patrol", "fight"],
     twist_premises={"scouts": "Two foreign scouts are mapping the watch posts.",
                     "lost_genin": "A Genin from another village is lost on the wrong side of the markers."}))
@@ -497,7 +497,7 @@ add(mission(
     "mission.c.heirloom", "c", "recovery", minutes=25, pay=0.45, unlock=FAR,
     premise="Recover a stolen heirloom from a pawn ring in the border village.",
     client=resident(household=True),
-    slots={"pawn": anchor("border.pawnshop"), "back_room": anchor("border.back_room"), "ring": enemy_group("smuggler.crew")},
+    slots={"pawn": anchor("border.pawnshop"), "back_room": anchor("border.back_room"), "ring": enemy_group("combat:group.smugglers")},
     steps=[
         S("brief", talk(C), "travel"),
         S("travel", go("place:gate.travel_desk"), "pawn"),
@@ -512,7 +512,7 @@ add(mission(
         S("report", deliver("heirloom", C), None),
     ],
     twists=[twist("fake", 2), twist("caught", 2, harder=True)],
-    bonus=["unseen", "no_alarm", "clean_record"], enemies=["smuggler.crew"], regions=["region:border_village"],
+    bonus=["unseen", "no_alarm", "clean_record"], enemies=["combat:group.smugglers"], regions=["region:border_village"],
     tags=["travel", "stealth", "recovery"],
     twist_premises={"fake": "The heirloom in the back room is a copy; the real one is on the counter in plain sight.",
                     "caught": "The pawnbroker's men come back early."}))
@@ -521,7 +521,7 @@ add(mission(
     "mission.c.contest_thief", "c", "contest", minutes=20, pay=0.4, unlock=GENIN_C, contested=True,
     premise="The desk sent two squads after the same cat burglar; the squad that brings them in gets the pay.",
     client=resident(job="clerk"),
-    slots={"rooftops": anchor("rooftop_route"), "hideout": anchor("alley.back"), "burglar": enemy_group("bandit.thief"),
+    slots={"rooftops": anchor("rooftop_route"), "hideout": anchor("alley.back"), "burglar": enemy_group("combat:enemy.cat_burglar"),
            "rival_squad": role("role:rival_squad")},
     steps=[
         S("brief", talk(C), "chase"),
@@ -534,7 +534,7 @@ add(mission(
     ],
     twists=[twist("rival_trick", 2), twist("team_up", 1, modifier=True)],
     outcomes={"done": outcome(acts=[["role:rival", "spar_won"]]), "lost_race": outcome(pay=0.3, acts=[["role:rival", "spar_lost"]])},
-    bonus=["fast", "teamwork"], fast_hours=2, enemies=["bandit.thief"], tags=["village", "movement", "contest", "fight"],
+    bonus=["fast", "teamwork"], fast_hours=2, enemies=["combat:enemy.cat_burglar"], tags=["village", "movement", "contest", "fight"],
     twist_premises={"rival_trick": "The rival squad sends you down the wrong street.",
                     "team_up": "The burglar is too fast for either squad alone; the race becomes a partnership."}))
 
@@ -543,7 +543,7 @@ add(mission(
     premise="Bring a cart of supplies up to a watch outpost in the hills.",
     client=resident(group="shinobi", rank="chunin"),
     slots={"outpost": anchor("border.outpost"), "trail": anchor("road.hill_pass"),
-           "raiders": enemy_group("bandit.pack", "beast.wolf_pack")},
+           "raiders": enemy_group("combat:group.road_ambush", "combat:group.wolves_pack")},
     steps=[
         S("load", collect("supply_crate", at="place:gate.stores", count=4), "travel"),
         S("travel", go("place:gate.travel_desk"), "trail"),
@@ -556,7 +556,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("outpost_sick", 2), twist("landslide", 1, harder=True, modifier=True)],
-    bonus=["client_unharmed", "no_knockouts", "extra_mile"], enemies=["bandit.pack", "beast.wolf_pack"],
+    bonus=["client_unharmed", "no_knockouts", "extra_mile"], enemies=["combat:group.road_ambush", "combat:group.wolves_pack"],
     regions=["region:border_village"], tags=["travel", "delivery", "fight"],
     twist_premises={"outpost_sick": "Half the outpost is down with fever.",
                     "landslide": "A landslide has taken the cart road; carry the crates up by hand."}))
@@ -566,7 +566,7 @@ add(mission(
     premise="The kiln family's best pottery must reach the border village's market unbroken.",
     client=role("role:client.kiln_parent"),
     slots={"kiln": anchor("kiln_yard"), "market": anchor("border.market"), "road": anchor("road.hill_pass"),
-           "thieves": enemy_group("bandit.pack_small")},
+           "thieves": enemy_group("combat:group.bandits_small")},
     steps=[
         S("pack", collect("pottery_crate", at="slot:kiln", count=3), "travel"),
         S("travel", go("place:gate.travel_desk"), "road"),
@@ -580,7 +580,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("ambush", 2, harder=True), twist("rival_potter", 2)],
-    bonus=["careful", "client_unharmed"], enemies=["bandit.pack_small"], regions=["region:border_village"],
+    bonus=["careful", "client_unharmed"], enemies=["combat:group.bandits_small"], regions=["region:border_village"],
     tags=["travel", "delivery", "fight", "chain"],
     twist_premises={"ambush": "Thieves know what pottery like this fetches.",
                     "rival_potter": "A rival workshop at the market says the glaze is stolen from them."}))
@@ -589,7 +589,7 @@ add(mission(
     "mission.c.dojo_challenge", "c", "duel", minutes=20, pay=0.4, unlock=GENIN_C, party="squad_or_solo",
     premise="A wandering swordsman is beating every dojo in the village and taking their signboards.",
     client=resident(clan="gekko"),
-    slots={"dojo": anchor("dojo"), "swordsman": enemy_group("ronin.swordsman")},
+    slots={"dojo": anchor("dojo"), "swordsman": enemy_group("combat:enemy.bandit_ronin")},
     steps=[
         S("brief", talk(C), "find"),
         S("find", inspect("challenge_notice", count=2), "duel"),
@@ -602,7 +602,7 @@ add(mission(
     ],
     twists=[twist("honourable", 2), twist("cheater", 1, harder=True, modifier=True)],
     outcomes={"done": outcome(extra={"clan_deed": ["gekko", "helped_resident"]}), "made_friend": outcome(pay=1.0, standing=1)},
-    bonus=["no_knockouts", "spared"], enemies=["ronin.swordsman"], tags=["village", "duel", "fight"],
+    bonus=["no_knockouts", "spared"], enemies=["combat:enemy.bandit_ronin"], tags=["village", "duel", "fight"],
     twist_premises={"honourable": "He only wants a worthy opponent; beaten, he asks to be taught.",
                     "cheater": "He fights with poisoned needles hidden in his sleeves."}))
 
@@ -612,7 +612,7 @@ add(mission(
     "mission.c.mountain_pass", "c", "escort", minutes=35, days=2, pay=0.6, unlock=CHUNIN, status="later",
     premise="Clear a rockslide and see a group of pilgrims through a mountain pass.",
     client=resident(job="priest", resident_of="any"),
-    slots={"slide": anchor("pass.rockslide"), "shrine": anchor("pass.shrine"), "ronin": enemy_group("ronin.band")},
+    slots={"slide": anchor("pass.rockslide"), "shrine": anchor("pass.shrine"), "ronin": enemy_group("combat:group.ronin_band")},
     steps=[
         S("meet", talk(C), "travel"),
         S("travel", go("place:gate.travel_desk"), "clear"),
@@ -625,7 +625,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("ronin", 2, harder=True), twist("blizzard", 1, modifier=True)],
-    bonus=["client_unharmed", "teamwork"], enemies=["ronin.band"], regions=["region:mountain_pass"],
+    bonus=["client_unharmed", "teamwork"], enemies=["combat:group.ronin_band"], regions=["region:mountain_pass"],
     tags=["travel", "escort", "fight"],
     twist_premises={"ronin": "A band of masterless samurai has claimed the pass.",
                     "blizzard": "Snow closes in; keep everyone moving and warm."}))
@@ -635,7 +635,7 @@ add(mission(
     premise="Lead a squad of fresh Genin on their first C-rank: a short escort with a rough edge.",
     client=resident(job="trader", resident_of="any"),
     slots={"genin": role("role:npc_genin_squad"), "road": anchor("road.east_bend"), "waystation": anchor("road.east_waystation"),
-           "bandits": enemy_group("bandit.pack_small")},
+           "bandits": enemy_group("combat:group.bandits_small")},
     steps=[
         S("brief", talk("slot:genin"), "escort"),
         S("escort", escort(C, "slot:road"), "fight"),
@@ -647,7 +647,7 @@ add(mission(
         S("report", talk("slot:genin"), None),
     ],
     twists=[twist("genin_freezes", 2), twist("genin_charges", 1, modifier=True)],
-    bonus=["no_knockouts", "teamwork", "client_unharmed"], enemies=["bandit.pack_small"], regions=["region:east_road"],
+    bonus=["no_knockouts", "teamwork", "client_unharmed"], enemies=["combat:group.bandits_small"], regions=["region:east_road"],
     tags=["road", "leadership", "fight"],
     twist_premises={"genin_freezes": "One of your Genin freezes in their first real fight.",
                     "genin_charges": "One of your Genin charges in alone."}))

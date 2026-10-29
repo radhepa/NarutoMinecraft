@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "elimination",
  "status": "later",
- "title": "mission.a.assassination.title",
- "brief": "mission.a.assassination.brief",
+ "title": "dlg:mission.a.assassination.title",
+ "brief": "dlg:mission.a.assassination.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.assassination.brief",
+  "accept": "dlg:mission.a.assassination.accept",
+  "decline": "dlg:mission.a.assassination.decline",
+  "progress": "dlg:mission.a.assassination.progress",
+  "success": "dlg:mission.a.assassination.success",
+  "fail": "dlg:mission.a.assassination.fail",
+  "report": "dlg:mission.a.assassination.report"
+ },
  "minutes": 50,
  "party": "squad",
  "days": 2,
@@ -31,7 +40,7 @@
   "guard": {
    "pick": "enemy_group",
    "from": [
-    "enemy.jonin"
+    "combat:enemy.foreign_jonin"
    ]
   }
  },
@@ -106,14 +115,14 @@
    "id": "guarded",
    "weight": 2,
    "harder": true,
-   "premise": "mission.a.assassination.twist.guarded"
+   "premise": "dlg:mission.a.assassination.twist.guarded"
   },
   {
    "id": "change_of_heart",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.assassination.twist.change_of_heart"
+   "premise": "dlg:mission.a.assassination.twist.change_of_heart"
   }
  ],
  "outcomes": {
@@ -131,7 +140,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.jonin"
+  "combat:enemy.foreign_jonin"
  ],
  "places": {
   "anchors": [
@@ -154,7 +163,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.elimination",
+ "banter": "dlg:mission.banter.elimination",
  "_premise": "A foreign lord's war minister plans an invasion; remove him from the board before it begins.",
  "_twists": {
   "guarded": "A Jonin bodyguard never leaves his side.",

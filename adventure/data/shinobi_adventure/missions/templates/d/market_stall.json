@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "shop",
  "status": "beta",
- "title": "mission.d.market_stall.title",
- "brief": "mission.d.market_stall.brief",
+ "title": "dlg:mission.d.market_stall.title",
+ "brief": "dlg:mission.d.market_stall.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.market_stall.brief",
+  "accept": "dlg:mission.d.market_stall.accept",
+  "decline": "dlg:mission.d.market_stall.decline",
+  "progress": "dlg:mission.d.market_stall.progress",
+  "success": "dlg:mission.d.market_stall.success",
+  "fail": "dlg:mission.d.market_stall.fail",
+  "report": "dlg:mission.d.market_stall.report"
+ },
  "minutes": 10,
  "party": "solo",
  "unlock": {
@@ -76,7 +85,8 @@
     "options": {
      "hold_price": null,
      "give_in": "sold_cheap"
-    }
+    },
+    "dialogue": "dlg:mission.d.market_stall.choice.haggle"
    },
    "next": "report"
   },
@@ -110,19 +120,19 @@
    "id": "haggler",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.market_stall.twist.haggler"
+   "premise": "dlg:mission.d.market_stall.twist.haggler"
   },
   {
    "id": "shoplifter",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.market_stall.twist.shoplifter"
+   "premise": "dlg:mission.d.market_stall.twist.shoplifter"
   },
   {
    "id": "rush",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.market_stall.twist.rush"
+   "premise": "dlg:mission.d.market_stall.twist.rush"
   }
  ],
  "outcomes": {
@@ -162,7 +172,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.shop",
+ "banter": "dlg:mission.banter.shop",
  "_premise": "Mind a stall on Market Day while the stallholder sees a supplier.",
  "_twists": {
   "haggler": "A famous haggler wants the best piece for half price.",

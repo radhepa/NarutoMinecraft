@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "construction",
  "status": "beta",
- "title": "mission.d.timber_haul.title",
- "brief": "mission.d.timber_haul.brief",
+ "title": "dlg:mission.d.timber_haul.title",
+ "brief": "dlg:mission.d.timber_haul.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.timber_haul.brief",
+  "accept": "dlg:mission.d.timber_haul.accept",
+  "decline": "dlg:mission.d.timber_haul.decline",
+  "progress": "dlg:mission.d.timber_haul.progress",
+  "success": "dlg:mission.d.timber_haul.success",
+  "fail": "dlg:mission.d.timber_haul.fail",
+  "report": "dlg:mission.d.timber_haul.report"
+ },
  "minutes": 10,
  "party": "squad",
  "slots": {
@@ -94,13 +103,13 @@
    "id": "log_roll",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.timber_haul.twist.log_roll"
+   "premise": "dlg:mission.d.timber_haul.twist.log_roll"
   },
   {
    "id": "injured_apprentice",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.timber_haul.twist.injured_apprentice"
+   "premise": "dlg:mission.d.timber_haul.twist.injured_apprentice"
   }
  ],
  "outcomes": {
@@ -138,7 +147,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.construction",
+ "banter": "dlg:mission.banter.construction",
  "_premise": "Haul timber for the Kinoshita yard from the outer woodlot.",
  "_twists": {
   "log_roll": "The stack gives way and three logs roll for the river.",

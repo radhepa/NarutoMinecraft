@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "defence",
  "status": "later",
- "title": "mission.b.village_defence.title",
- "brief": "mission.b.village_defence.brief",
+ "title": "dlg:mission.b.village_defence.title",
+ "brief": "dlg:mission.b.village_defence.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.village_defence.brief",
+  "accept": "dlg:mission.b.village_defence.accept",
+  "decline": "dlg:mission.b.village_defence.decline",
+  "progress": "dlg:mission.b.village_defence.progress",
+  "success": "dlg:mission.b.village_defence.success",
+  "fail": "dlg:mission.b.village_defence.fail",
+  "report": "dlg:mission.b.village_defence.report"
+ },
  "minutes": 45,
  "party": "squad",
  "days": 2,
@@ -32,7 +41,7 @@
   "band": {
    "pick": "enemy_group",
    "from": [
-    "mercenary.band"
+    "combat:group.mercenary_band"
    ]
   }
  },
@@ -90,13 +99,13 @@
   "wave": {
    "objective": {
     "type": "defeat",
-    "group": "mercenary.captain",
+    "group": "combat:enemy.mercenary_captain",
     "at": "slot:square"
    },
    "on_enter": [
     {
      "spawn_group": [
-      "mercenary.captain",
+      "combat:enemy.mercenary_captain",
       "slot:square"
      ]
     }
@@ -116,14 +125,14 @@
    "id": "second_wave",
    "weight": 2,
    "harder": true,
-   "premise": "mission.b.village_defence.twist.second_wave"
+   "premise": "dlg:mission.b.village_defence.twist.second_wave"
   },
   {
    "id": "traitor_villager",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.village_defence.twist.traitor_villager"
+   "premise": "dlg:mission.b.village_defence.twist.traitor_villager"
   }
  ],
  "outcomes": {
@@ -142,8 +151,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "mercenary.band",
-  "mercenary.captain"
+  "combat:group.mercenary_band",
+  "combat:enemy.mercenary_captain"
  ],
  "places": {
   "anchors": [
@@ -167,7 +176,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.defence",
+ "banter": "dlg:mission.banter.defence",
  "_premise": "A border village expects a raid by a mercenary band; prepare its defences and hold.",
  "_twists": {
   "second_wave": "Their captain comes himself at dawn.",

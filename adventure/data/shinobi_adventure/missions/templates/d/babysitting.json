@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "childcare",
  "status": "beta",
- "title": "mission.d.babysitting.title",
- "brief": "mission.d.babysitting.brief",
+ "title": "dlg:mission.d.babysitting.title",
+ "brief": "dlg:mission.d.babysitting.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.babysitting.brief",
+  "accept": "dlg:mission.d.babysitting.accept",
+  "decline": "dlg:mission.d.babysitting.decline",
+  "progress": "dlg:mission.d.babysitting.progress",
+  "success": "dlg:mission.d.babysitting.success",
+  "fail": "dlg:mission.d.babysitting.fail",
+  "report": "dlg:mission.d.babysitting.report"
+ },
  "minutes": 12,
  "party": "squad_or_solo",
  "slots": {
@@ -118,19 +127,19 @@
    "id": "hide_and_seek",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.babysitting.twist.hide_and_seek"
+   "premise": "dlg:mission.d.babysitting.twist.hide_and_seek"
   },
   {
    "id": "ninja_show",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.babysitting.twist.ninja_show"
+   "premise": "dlg:mission.d.babysitting.twist.ninja_show"
   },
   {
    "id": "sick_child",
    "weight": 1,
    "harder": true,
-   "premise": "mission.d.babysitting.twist.sick_child"
+   "premise": "dlg:mission.d.babysitting.twist.sick_child"
   }
  ],
  "outcomes": {
@@ -167,7 +176,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.childcare",
+ "banter": "dlg:mission.banter.childcare",
  "_premise": "Mind a family's children for an afternoon while the parents work.",
  "_twists": {
   "hide_and_seek": "The youngest hides so well the others start to worry.",
