@@ -1,0 +1,48 @@
+{
+  "id": "t2010_wave_hoodie",
+  "kind": "top",
+  "name": "Wave Hoodie",
+  "gender": "unisex",
+  "texture": "tops/t2010_wave_hoodie.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.0,
+        1.6
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Deep teal hoodie, a broad pale wave round the chest, hood down, front pocket, ribbed cuffs."
+}

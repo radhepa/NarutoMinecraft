@@ -1,0 +1,132 @@
+{
+  "id": "w2002_wave_hachimaki",
+  "kind": "headwear",
+  "name": "Wave Hachimaki",
+  "gender": "unisex",
+  "texture": "headwear/w2002_wave_hachimaki.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -7.8,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.7
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        4.7,
+        -6.9,
+        1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        -1,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "end_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.9,
+        -6.6,
+        1.2
+      ],
+      "rotation": [
+        18,
+        0,
+        -12
+      ],
+      "origin": [
+        0,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "end_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.9,
+        -6.6,
+        2.1
+      ],
+      "rotation": [
+        34,
+        0,
+        -12
+      ],
+      "origin": [
+        0,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Pale headband printed with an accent wave, knotted at the left side, two short ends."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "t2006_tide_jacket",
+  "kind": "top",
+  "name": "Tide Jacket",
+  "gender": "unisex",
+  "texture": "tops/t2006_tide_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "jacket",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "yoke_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.4,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -4,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Zip-front teal jacket, pale grey shoulder yoke, steel zip, wave hem and cuffs, crest behind."
+}

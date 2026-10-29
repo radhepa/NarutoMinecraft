@@ -1,0 +1,131 @@
+{
+  "id": "t2005_harness_shirt",
+  "kind": "top",
+  "name": "Harness Shirt",
+  "gender": "unisex",
+  "texture": "tops/t2005_harness_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "blade_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        2.0,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        24
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "blade_guard",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        2.0,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        24
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "blade_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        2.0,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        24
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        10,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless dark high-neck shirt, crossed leather harness, a blade on the back, wave-banded arm guards."
+}
