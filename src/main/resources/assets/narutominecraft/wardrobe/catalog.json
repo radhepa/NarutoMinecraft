@@ -89,7 +89,9 @@
     "w06_anbu_hawk_mask",
     "w07_root_mask",
     "w08_masked_protector",
-    "w09_bandana_protector"
+    "w09_bandana_protector",
+    "w501_herder_kasa",
+    "w502_shadow_protector"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -112,7 +114,17 @@
     "t18_sentinel_vest",
     "t19_field_vest",
     "t20_kunoichi_jonin",
-    "t21_commander_coat"
+    "t21_commander_coat",
+    "t501_open_flak_vest",
+    "t502_mesh_tee",
+    "t503_genin_jacket",
+    "t504_clan_head_haori",
+    "t505_herder_tunic",
+    "t506_forest_mantle",
+    "t507_matron_apron",
+    "t508_shogi_sweater",
+    "t509_sprout_top",
+    "t510_evening_yukata"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -122,7 +134,12 @@
     "b05_green_leggings",
     "b06_anbu_greaves",
     "b07_cargo_shorts",
-    "b08_mesh_leggings"
+    "b08_mesh_leggings",
+    "b501_shadow_trousers",
+    "b502_herder_trousers",
+    "b503_knee_shorts",
+    "b504_wrap_skirt",
+    "b505_yukata_hem"
   ],
   "characters": [
     {
@@ -538,7 +555,360 @@
       ],
       "color": null,
       "mirror": true
+    },
+    "nara_cheek_scar": {
+      "rects": [
+        [
+          2.7,
+          -2.6,
+          0.25,
+          1.5
+        ],
+        [
+          2.95,
+          -1.3,
+          0.25,
+          0.9
+        ]
+      ],
+      "color": null,
+      "mirror": false
+    },
+    "nara_twin_scars": {
+      "rects": [
+        [
+          -3.3,
+          -2.4,
+          0.25,
+          1.3
+        ],
+        [
+          3.0,
+          -2.0,
+          0.25,
+          1.1
+        ]
+      ],
+      "color": null,
+      "mirror": false
     }
   },
-  "clans": []
+  "clans": [
+    {
+      "id": "nara",
+      "name": "Nara",
+      "tagline": "Lazy strategists of the deer forest: pineapple tails, open flak vests over mesh, olive, brown and shadow-black.",
+      "palettes": {
+        "NARA_FOREST": {
+          "name": "Nara Forest",
+          "P": "#5e6b3b",
+          "S": "#d8d0b8",
+          "A": "#8b4a2b",
+          "L": "#6a5034",
+          "M": "#a7aca8",
+          "K": "#18171b",
+          "D": "#3b4046"
+        },
+        "NARA_SHADOW": {
+          "name": "Nara Shadow",
+          "P": "#3a3d42",
+          "S": "#b9b6a8",
+          "A": "#7d8a4a",
+          "L": "#5b4632",
+          "M": "#a2a8ab",
+          "K": "#121215",
+          "D": "#2a2d33"
+        },
+        "NARA_DEER": {
+          "name": "Nara Deer",
+          "P": "#7d5b3b",
+          "S": "#e2d5ba",
+          "A": "#56653a",
+          "L": "#5a3f28",
+          "M": "#b0aa9a",
+          "K": "#1c1714",
+          "D": "#45443f"
+        },
+        "NARA_STRATEGIST": {
+          "name": "Nara Strategist",
+          "P": "#5f6e3c",
+          "S": "#c9c6bb",
+          "A": "#9c3f2c",
+          "L": "#6e5a40",
+          "M": "#aab3b9",
+          "K": "#1a1c21",
+          "D": "#33373f"
+        },
+        "NARA_MOSS": {
+          "name": "Nara Moss",
+          "P": "#7f8761",
+          "S": "#ebe5d2",
+          "A": "#6e3d36",
+          "L": "#6b5238",
+          "M": "#b4b2a6",
+          "K": "#1d1b1a",
+          "D": "#4a4a44"
+        },
+        "NARA_DUSK": {
+          "name": "Nara Dusk",
+          "P": "#4b4f5e",
+          "S": "#e6dfcd",
+          "A": "#a8763a",
+          "L": "#5e4a36",
+          "M": "#aeb1b5",
+          "K": "#15151a",
+          "D": "#2e3038"
+        }
+      },
+      "hair_colors": {
+        "NARA_PITCH": {
+          "name": "Nara Pitch",
+          "ramp": [
+            "#0f0e0f",
+            "#1a1819",
+            "#272425",
+            "#3a3535",
+            "#56504d"
+          ]
+        },
+        "NARA_UMBER": {
+          "name": "Nara Umber",
+          "ramp": [
+            "#160f0b",
+            "#231912",
+            "#33251b",
+            "#4a3627",
+            "#6a5039"
+          ]
+        },
+        "NARA_SMOKE": {
+          "name": "Nara Smoke",
+          "ramp": [
+            "#2a2a2c",
+            "#3e3e41",
+            "#58585b",
+            "#77777a",
+            "#9c9c9e"
+          ]
+        }
+      },
+      "eye_colors": {
+        "NARA_BARK": {
+          "name": "Nara Bark",
+          "ramp": [
+            "#0d0b0c",
+            "#2a211c",
+            "#3f3229",
+            "#62503f",
+            "#efebe1"
+          ]
+        }
+      },
+      "marks": {
+        "nara_cheek_scar": {
+          "rects": [
+            [
+              2.7,
+              -2.6,
+              0.25,
+              1.5
+            ],
+            [
+              2.95,
+              -1.3,
+              0.25,
+              0.9
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        },
+        "nara_twin_scars": {
+          "rects": [
+            [
+              -3.3,
+              -2.4,
+              0.25,
+              1.3
+            ],
+            [
+              3.0,
+              -2.0,
+              0.25,
+              1.1
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h501_pineapple_tail",
+          "h502_shadow_sideburns",
+          "h503_sprout_tail",
+          "h504_low_tail",
+          "h505_twin_sprouts",
+          "h506_loose_wisps",
+          "h507_lazy_bedhead",
+          "h508_antler_tufts",
+          "h509_shogi_knot",
+          "h510_herder_wrap",
+          "h511_drooping_tail",
+          "h512_side_tail",
+          "h513_tail_let_down",
+          "h514_cropped_spikes",
+          "h515_swept_sprout"
+        ],
+        "hair_colors": [
+          "NARA_PITCH",
+          "NARA_PITCH",
+          "NARA_UMBER",
+          "RAVEN",
+          "ESPRESSO",
+          "NARA_SMOKE"
+        ],
+        "eye_colors": [
+          "NARA_BARK",
+          "NARA_BARK",
+          "DARK"
+        ],
+        "palettes": [
+          "NARA_FOREST",
+          "NARA_SHADOW",
+          "NARA_DEER",
+          "NARA_STRATEGIST",
+          "NARA_MOSS",
+          "NARA_DUSK"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w502_shadow_protector",
+          "w502_shadow_protector",
+          null,
+          "w501_herder_kasa"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "nara_cheek_scar",
+            "chance": 0.12
+          },
+          {
+            "id": "nara_twin_scars",
+            "chance": 0.05
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "open_vest",
+          "name": "Open Flak Vest",
+          "top": "t501_open_flak_vest",
+          "bottom": "b501_shadow_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "NARA_STRATEGIST",
+            "NARA_FOREST"
+          ]
+        },
+        {
+          "id": "cloud_watcher",
+          "name": "Cloud Watcher",
+          "top": "t502_mesh_tee",
+          "bottom": "b503_knee_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "young_strategist",
+          "name": "Young Strategist",
+          "top": "t503_genin_jacket",
+          "bottom": "b501_shadow_trousers",
+          "rank": "genin"
+        },
+        {
+          "id": "clan_head",
+          "name": "Clan Head",
+          "top": "t504_clan_head_haori",
+          "bottom": "b501_shadow_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "NARA_SHADOW",
+            "NARA_FOREST",
+            "NARA_DUSK"
+          ]
+        },
+        {
+          "id": "deer_keeper",
+          "name": "Deer Keeper",
+          "top": "t505_herder_tunic",
+          "bottom": "b502_herder_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "NARA_FOREST",
+            "NARA_MOSS",
+            "NARA_DUSK"
+          ]
+        },
+        {
+          "id": "forest_walk",
+          "name": "Forest Mantle",
+          "top": "t506_forest_mantle",
+          "bottom": "b502_herder_trousers",
+          "rank": "chunin"
+        },
+        {
+          "id": "sprout",
+          "name": "Sprout Top",
+          "top": "t509_sprout_top",
+          "bottom": "b503_knee_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "household",
+          "name": "Household",
+          "top": "t507_matron_apron",
+          "bottom": "b504_wrap_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "NARA_MOSS",
+            "NARA_DEER",
+            "NARA_DUSK"
+          ]
+        },
+        {
+          "id": "shogi_afternoon",
+          "name": "Shogi Afternoon",
+          "top": "t508_shogi_sweater",
+          "bottom": "b501_shadow_trousers",
+          "rank": "chunin"
+        },
+        {
+          "id": "evening_yukata",
+          "name": "Evening Yukata",
+          "top": "t510_evening_yukata",
+          "bottom": "b505_yukata_hem",
+          "rank": "jonin",
+          "palettes": [
+            "NARA_DUSK",
+            "NARA_SHADOW",
+            "NARA_MOSS"
+          ]
+        }
+      ]
+    }
+  ]
 }
