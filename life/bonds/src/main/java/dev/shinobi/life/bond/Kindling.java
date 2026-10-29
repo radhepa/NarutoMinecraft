@@ -77,6 +77,16 @@ public final class Kindling {
         var t = tier(w, who);
         return t.compareTo(floor) >= 0 ? t : floor;
     }
+    /**
+     * The tier combat reads: from the level they hold (not the quarrel-capped one), one tier lower while a quarrel is
+     * active (Spark goes out), none after a falling-out. An offered flame still counts as Spark when the bond is calm.
+     */
+    public static Tier combatTier(BondWorld w, String who) {
+        var b = w.bond(who); var c = b.conflict();
+        var t = tier(unlocked(w), w.level(who), who.equals(w.spouse()), c);
+        if (t == Tier.NONE && unlocked(w) && !c.broken() && b.remembers(Act.OFFERED_FLAME)) t = Tier.SPARK;
+        return c.active() && t != Tier.NONE ? Tier.values()[t.ordinal() - 1] : t;
+    }
     /** How brightly someone's flame burns, 0 to 1 (0 when there is no flame). */
     public static double strength(BondWorld w, String who) { return strength(w, who, Tier.NONE); }
     static double strength(BondWorld w, String who, Tier floor) {

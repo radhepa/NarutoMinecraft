@@ -464,7 +464,11 @@ kindle a squadmate on some missions after that):
 **Combat reads** (no dependency on this module's internals needed beyond these records):
 `Kindling.flames(world)` (brightest first: who, tier, strength, dimmed, resonance, trial ready,
 kindles), `Kindling.flame(world, who)`, `Kindling.emberLink(world)`, `Kindling.bonfire(world)` and
-`world.kindle(who)` to spend a kindle.
+`world.kindle(who)` to spend a kindle. Combat's own `Kindle.Bonds` (combat:core) is adapted in the
+Life glue: `tier(who)` = `Kindling.combatTier` (the held level's tier, one lower while a quarrel is
+active, none after a falling-out), `web()` = `Kindling.bonfire(world).strength()` (the tiered,
+dimmed web the Bonfire forms use; about 22 devoted, 19 typical, 3 reckless), and `bonfireOpen()` =
+`Kindling.bonfire(world).lit()`.
 
 ## 12. The bond book
 

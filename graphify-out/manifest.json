@@ -384,9 +384,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Kindling.java": {
-    "mtime": 1793310798.0729477,
-    "seen": 1793310895.6853518,
-    "ast_hash": "9afa54ae767b5eae95a22aef4f1f595b",
+    "mtime": 1793311402.7226675,
+    "seen": 1793311428.363754,
+    "ast_hash": "4fe60d2ff81b48e5a795db4264be45b2",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Levels.java": {
@@ -516,9 +516,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/KindlingAndBookTest.java": {
-    "mtime": 1793310761.9635978,
-    "seen": 1793310895.6853948,
-    "ast_hash": "6a2d88b0f699af29c400fcce6a13daa4",
+    "mtime": 1793311402.7233984,
+    "seen": 1793311428.3638108,
+    "ast_hash": "84f8dd75f0ce5c430199a4cf0d9bcf4a",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/Leaf.java": {
@@ -594,9 +594,9 @@
     "semantic_hash": ""
   },
   "BONDS.md": {
-    "mtime": 1793311113.3524976,
-    "seen": 1793311122.2667546,
-    "ast_hash": "3ea0f957b5e60f2d9b748486c50b92b3",
+    "mtime": 1793311418.950114,
+    "seen": 1793311428.3641052,
+    "ast_hash": "fc26c162a641fbc6a8dd7e5e6563835f",
     "semantic_hash": ""
   },
   "SIDE_QUESTS.md": {
