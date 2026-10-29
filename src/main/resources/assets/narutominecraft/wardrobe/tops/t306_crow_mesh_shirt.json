@@ -1,0 +1,165 @@
+{
+  "id": "t306_crow_mesh_shirt",
+  "kind": "top",
+  "name": "Crow Mesh Shirt",
+  "gender": "unisex",
+  "texture": "tops/t306_crow_mesh_shirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi",
+    "uchiha"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.0,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "collar_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        1.6
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.6,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "collar_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        0,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        44,
+        0
+      ]
+    },
+    {
+      "id": "collar_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.5,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        11,
+        18
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless dark high-collared shirt over chain mesh to the wrists, crest on the back."
+}
