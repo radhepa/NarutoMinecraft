@@ -352,7 +352,8 @@ while a quarrel lasts), plus `bond_meter`, `bond_memory`, `bond_moment`, `bond_s
 `romance_stage`, `kindling`, `knows_fact`, `squad_cohesion`, `in_squad`, `squad_can_return`,
 `standing` (a district or clan and a title, such as `["clan:nara", "good_neighbor"]`), `jealous`,
 `clan_friendship`, `clan_relation` (the relation between two clans, at least a label such as
-`rivals` or a number), `village_mood`, `hook_open`, `kindling_uses`, `bond_web`, `ritual` and `hangouts`. Side quests use
+`rivals` or a number), `village_mood`, `hook_open`, `kindling_uses`, `bond_web`, `ritual`, `hangouts` and `answered` (an answer the player gave to
+a resident's question). Side quests use
 these directly: there is no separate `standing_at_least` or `bond_at_least`. `role:squad` is the
 current teammates and sensei, `role:teammates` the teammates alone; a role group passes only if
 every member does. The hook actions (`resolve_hook`, `clan_event`, `clan_deed`, `mood_event`) are in
@@ -364,7 +365,7 @@ Actions in the beta: `set_flag`, `start_quest`, `advance_quest`, `fail_quest`, `
 `promote`, `unlock` (a place, a shop item, a recipe), `news` (VF village news), `set_time`; and
 the bond actions `bond_event`, `shared_moment`, `start_conflict`, `apologize`, `reconcile`, `mend`,
 `reveal_fact`, `romance`, `return_to_squad`, `favor`, `deed`, `celebrate_birthday`, `bond_flag`,
-`kindle`, `resolve_hook`, `clan_event`, `clan_deed` and `mood_event`.
+`kindle`, `resolve_hook`, `clan_event`, `clan_deed`, `mood_event` and `ask_question`.
 Reserved now for later arcs, so the format does not change: `time_skip`, `carve_face`,
 `set_hokage`, `remove_from_squad`, `found_clan`, `marry`.
 

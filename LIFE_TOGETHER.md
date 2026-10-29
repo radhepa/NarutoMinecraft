@@ -180,7 +180,82 @@ topic counts once a day per person; the reply is a dialogue key (`talk.<topic>.<
 A personal topic before its level is prying (a memory; nosiness is a peeve for some). A topic someone
 dislikes is awkward (teasing the proud is rude). One they love is worth 1.6 times the warmth.
 
-## 7. Data and quest hooks
+## 7. Questions and choices
+
+Residents ask the player things, and the answer matters (`Question`, `AnswerTag`, `Questions`). The
+lines and the question data are the dialogue team's; the engine reads a question as parsed JSON:
+
+```json
+{"format": 1, "id": "q.dilemma.found_wallet", "kind": "dilemma", "level": 3, "depth": 1,
+ "follow_up_of": "", "min_gap_days": 0, "about": "value:honesty", "public": false,
+ "audience": {"archetypes": [], "values": [], "roles": [], "min_stage": "child", "clan": ""},
+ "answers": [{"id": "return_it", "tags": ["honest", "kind"], "stance": "honest",
+              "sets": "", "nudge": {"trait": "", "amount": 0}, "deed": ""},
+             {"id": "keep_it", "tags": ["ambitious", "blunt"], "stance": "self"}]}
+```
+
+- **Kinds:** an opinion, a dilemma (values in conflict), advice they ask for, a preference, the
+  player's past, the player's plans, and their own small confession (how the player takes it).
+  Confessions weigh 1.3, dilemmas and advice 1.15, preferences 0.7; deeper questions (depth 2 and
+  3, at higher levels) weigh a quarter more per step.
+- **Answers** (two to four) carry tags, resolved against the asker's personality and values like an
+  act: an effect, values honored or violated, a pet peeve, leans on traits.
+
+| Tag | Effect (aff / trust / resp / riv) | Honors | Violates | Leans |
+|---|---|---|---|---|
+| kind | 2 / 1 / 0 / 0 | kindness | | the warm like it more |
+| blunt | -1.5 / 2 / 1 / 0 | honesty | | the warm and the proud are stung |
+| honest | 0.5 / 2 / 0.5 / 0 | honesty | | |
+| loyal | 1.5 / 2 / 0 / 0 | loyalty, family | | |
+| ambitious | 0 / 0 / 2 / 1 | strength, courage | | the proud like it, and rise to it |
+| playful | 1.5 / 0 / -0.5 / 0 | freedom | | charms the open, grates on the disciplined |
+| cautious | 0 / 1.5 / -0.5 / 0 | duty | | the bold respect it less |
+| bold | 0.5 / -0.5 / 1.5 / 0.5 | courage | | the bold respect it, the disciplined trust it less |
+| humble | 1 / 0.5 / 0.5 / -0.5 | kindness | | the proud respect it less |
+| proud | -0.5 / 0 / 1 / 1 | strength | | the proud like it, the warm do not; bragging is a peeve |
+| dutiful | 0 / 1.5 / 1 / 0 | duty | freedom | the disciplined trust it |
+| free | 1 / 0 / 0 / 0 | freedom, creativity | duty | |
+| evasive | -1 / -1.5 / 0 / 0 | | honesty | the open dislike it |
+| rude | -3 / -1 / 0 / 0 | | kindness | rudeness is a peeve |
+| curious | 1 / 0.5 / 0 / 0 | knowledge | | the open like it |
+| family | 1 / 1 / 0 / 0 | family | | |
+
+- **What answering does:** the meters move (both ways: a blunt answer raises trust and costs
+  warmth), the asker's **mood** today becomes touched, pleased, amused, impressed, fine,
+  stung_but_respects or hurt, and the answer is a remembered memory and a ledger entry.
+- **Memory:** the bond's ledger keeps every answer. A week later, at most every two weeks, they bring
+  one up (`callback.answer.<question>.<answer>`), once each.
+- **Contradictions:** an answer has a stance on the question's axis (`about`: a value, a clan, a
+  person, a plan). Saying the opposite of what you said before on the same axis, to them or to
+  someone they heard it from, is a contradiction. They notice with chance
+  `0.15 + 0.07 level + 0.25 if they value honesty + 0.1 discipline`; if they do, they remember being
+  lied to (`caught_contradiction`). People change their minds: answers older than a year do not count.
+- **Growth:** an answer can set a flag that quest variants read (`answered`, or the answer's own
+  `sets` flag), and advice can nudge the asker's personality a little (at most 0.1 an answer and 0.3
+  in all), kept in the save.
+- **Gossip:** an answer to a public question (about a clan, a person, the village) becomes something
+  the village knows the player said, carried along ties like a small deed, so what you told one
+  clan member reaches their household; an answer can also be a deed outright (`insulted_clan`).
+  The next member of that clan you tell the opposite may know.
+- **Pacing:** questions start at level 2 and open by their level, deeper ones later. An answered
+  question is never asked again; only its follow-ups (`follow_up_of`, after `min_gap_days`) continue
+  the thread. One question per person per day at most, one every 8 days per person at levels 2 and
+  3, every 6 at 4 to 6, every 4 at 7 and up, and one a day across everyone. An unanswered question
+  waits three days. Scenes can ask a question outside the budget (`ask_question`).
+- **Keys** (`DialogueKeys.forQuestions(bank)`): `question.<id>`, `answer.<id>.<answer>`,
+  `callback.answer.<id>.<answer>`, `answer.contradiction.<about>`, and the reactions
+  `reaction.<label>` (with `reaction.<id>.<answer>` and `reaction.<label>.<archetype>` as optional
+  variants).
+
+**In the simulation** (a 32-question sample bank, `SampleQuestions`): over 60 hours a typical player
+answers about 150 questions, one every 24 minutes of play, about 17 from each close friend (level
+5+); a devoted player, with more close friends, about 10 each; contradictions happen a handful of
+times and are usually noticed by close friends. The sample bank ran dry 51 times for the typical
+player: **the real bank needs about 30 to 40 questions open to each close friend** (general ones,
+their personality's, their role's), so roughly 150 general questions, 10 per personality and 10 to 15
+per major character for the beta.
+
+## 8. Data and quest hooks
 
 Conditions (Core, from Shinobi Life): `{"ritual": ["role:teammate_b", "ramen"]}`,
 `{"hangouts": ["role:teammate_b", 5]}`, plus every bond condition in BONDS.md. A quest can plan a
@@ -195,7 +270,7 @@ the player there) and the hangout plays as a short scene: seats at Ichiraku (VF 
 fishing clip at the river, a spar ending at 30% health, a sky-gazing pose on the Rock. Highlights
 are a line and an animation beat, shown once and remembered.
 
-## 8. Pacing with time together
+## 9. Pacing with time together
 
 The 60-hour simulation now includes time together (`./gradlew :life:bonds:simulate`, seed
 20261029): a devoted player asks someone every other day and accepts nine invitations in ten; a
@@ -204,12 +279,13 @@ accepts and sometimes does not show.
 
 | Over 60 hours | Devoted | Typical | Reckless |
 |---|---|---|---|
-| Hangouts asked for / held | 94 / 196 | 47 / 96 | 20 / 11 |
-| Invitations from friends / accepted | 134 / 117 | 103 / 63 | 11 / 3 |
-| Stood someone up | 0 | 7 | 4 |
-| Highlights / rituals formed | 25 / 11 | 7 / 6 | 0 / 0 |
-| Their news heard and answered | 117 | 93 | 51 (mostly shrugged off) |
-| Deeper conversations | 154 | 85 | 13 |
+| Hangouts asked for / held | 94 / 195 | 47 / 106 | 20 / 9 |
+| Invitations from friends / accepted | 134 / 119 | 101 / 71 | 12 / 3 |
+| Stood someone up | 0 | 4 | 4 |
+| Highlights / rituals formed | 25 / 16 | 8 / 5 | 0 / 0 |
+| Their news heard and answered | 123 | 92 | 50 (mostly shrugged off) |
+| Deeper conversations | 150 | 65 | 11 |
+| Questions answered / per close friend | 172 / 10 | 153 / 17 | 70 / 21 (only 2 close friends) |
 | Bonds at level 10 | 3 | 3 | 0 |
 
 That is, for a typical player, about one hangout and one invitation every other in-game day (every
@@ -219,7 +295,7 @@ typical player in four of five (the one who missed had forgotten teammate_a's bi
 one never (`TimeAndPacingTest`). Time together mostly widens the circle: classmates, the instructor
 and the rival end the 60 hours one to three levels higher than without it.
 
-## 9. Content plan
+## 10. Content plan
 
 This is where the volume is. `DialogueKeys.required()` lists every pool the engine asks for, and
 the dialogue compiler checks the bank covers them all; `DialogueKeys.optional()` lists the
@@ -233,7 +309,8 @@ per-personality variants that override a general pool.
 | Bond quests (one per classmate in Beta 1, two per teammate in Beta 2, one per teammate in Beta 3) and the squad beats | ~20 quests and 7 beats | scenes | ~30 scenes |
 | Hangout scenes (Minecraft): anchors, seats, clips, the highlight beat | 22 activities | 1 scene each, ~10 highlight beats | 22 scenes |
 | Clan customs, elders' requests, feud and match hooks | 25 clans, 9 hook types | | ~800 |
-| **Beta's social layer, about** | | | **~10,000 lines, 50 scenes** |
+| Questions (general, per personality, per major character) with 2 to 4 answers each | ~350 | question, answers, callbacks | ~2,500 |
+| **Beta's social layer, about** | | | **~12,500 lines, 50 scenes** |
 
 VF's 5,898 existing lines stay as the residents' everyday talk; ours sit on top. Work order:
 (1) the required general pools, so nothing is ever silent; (2) the beta cast's voices, since they
@@ -242,8 +319,10 @@ variants where playtesters notice repetition. Authoring rules from ROADMAP.md ap
 only, no literal names, `{name:<role>}` and `{given:<role>}`; dialogue text format as VF's
 (`tools/dialogue/lines/naruto-*.txt`).
 
-## 10. Open questions
+## 11. Open questions
 
+- **How often should friends ask you things?** One question a day at most across everyone (about one
+  every 24 minutes of play for a typical player). Is that the right rhythm next to hangouts and news?
 - **How often should friends invite you?** About one invitation every other in-game day (every 35
   to 40 minutes of play) for a typical player. More makes the village feel alive; too many feels needy.
 - **Ryo for hangouts:** who pays? Today the activity has a cost the glue charges the player. Should
