@@ -1,0 +1,47 @@
+{
+  "id": "t1802_mission_desk_jacket",
+  "kind": "top",
+  "name": "Mission Desk Jacket",
+  "gender": "unisex",
+  "texture": "tops/t1802_mission_desk_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "duty_band",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        1.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short open navy jacket over a sand shirt, a band of waves at the hem, a duty band on the right arm."
+}

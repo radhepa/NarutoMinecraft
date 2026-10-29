@@ -1,0 +1,80 @@
+{
+  "id": "t1804_dolphin_hoodie",
+  "kind": "top",
+  "name": "Dolphin Hoodie",
+  "gender": "unisex",
+  "texture": "tops/t1804_dolphin_hoodie.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.6,
+        2.0
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -2,
+        0
+      ],
+      "size": [
+        8,
+        3,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "back_dolphin",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.2,
+        2.62
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -7,
+        0,
+        0
+      ],
+      "size": [
+        14,
+        10,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Zip hoodie with the hood down, sea-blue cuffs and drawstrings, a sand dolphin on the back."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "t1806_teacher_cardigan",
+  "kind": "top",
+  "name": "Teacher Cardigan",
+  "gender": "unisex",
+  "texture": "tops/t1806_teacher_cardigan.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "chalk",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        6.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        -1,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sand knit cardigan buttoned over a navy shirt, patch pockets with chalk, sea-blue ribbing."
+}

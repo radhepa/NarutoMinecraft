@@ -214,6 +214,16 @@
         "#f1ede3"
       ]
     },
+    "UMINO_TIDEPOOL": {
+      "name": "Umino Tidepool",
+      "ramp": [
+        "#0d0b0b",
+        "#2e2219",
+        "#4a3626",
+        "#6e543c",
+        "#f0ece2"
+      ]
+    },
     "UZUMAKI_VIOLET": {
       "name": "Uzumaki Violet",
       "ramp": [
