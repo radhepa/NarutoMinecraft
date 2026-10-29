@@ -45,7 +45,7 @@ the leader) and fights with honour so that at least the cuts are his own.
 
 He has **one strong thread, to the second**, and nothing else: not to the leader, not to Yūgure.
 It is a scripted exception (a `thread_floor`) shown **only in Ch 52**: on the Rock the player sees
-it run from him to her, and in Ch 52.4, when the mirror tears her, it goes taut. Before Ch 52 the
+it run from him to her, and in Ch 52.4 to 52.5, when the mirror tears her, it burns bright. Before Ch 52 the
 player sees no thread of his (he is not bonded to the player at 6+).
 
 ### How he changes
@@ -57,7 +57,7 @@ player sees no thread of his (he is not bonded to the player at 6+).
 | Ch 27 | He fights the player for the first time, as a teacher would: lets them pick up a dropped kunai. Stopped by the second |
 | Ch 37 | He breaks into the archive for the Hearthstone on orders. Beaten, he warns the player of a trap if they try to capture him (`ans.yugure_blade.archive`) |
 | Ch 51b | His best fight, on the rooftops at dusk. Beaten, he asks why the player never killed him (`ans.yugure_blade.why`). **He turns here**, on the player's answer, before the second falls: he learns (or guesses, from the array lighting) what the Bonfire needs, and goes to the Rock to stop the leader |
-| Ch 52 | He fights the leader beside the player. When the mirror tears the second (52.4) he says "Dusk was supposed to be for them, not for her," and throws himself at the leader; he is wounded and **lives**. After the war he is taken into custody. In the epilogue he asks to guard the shrine (or the second's grave, if she died), Last Light at his side or not by `ans.yugure_blade.sword` |
+| Ch 52 | He reaches the top first and **strikes first**: his attack is what turns the leader from the Hearthstone and opens the moment (52.2); then he fights beside the player. When the mirror tears the second (52.4) he says "Dusk was supposed to be for them, not for her," and fights on; he is badly wounded in the fight (not a sacrifice) and **lives**. After the war he is taken into custody. In the epilogue he asks to guard the shrine (or the second's grave, if she died), Last Light at his side or not by `ans.yugure_blade.sword` |
 
 ## Dialogue brief
 
@@ -109,7 +109,7 @@ Every main-path read below has an unset default: the neutral version of the line
 |---|---|
 | **Combat teaching** | Each duel's dialogue teaches the player something about his style before he uses it (a telegraph in words) |
 | **Theme** | A sincere believer, so Yūgure is not only the leader's lie |
-| **Plot** | Ch 37.3 (the Hearthstone attempt), Ch 51b (the turn), Ch 52 (beside the player) |
+| **Plot** | Ch 37.3 (the Hearthstone attempt), Ch 51b (the turn), Ch 52 (the first strike, then beside the player) |
 | **Mood states** | `duel` (respectful), `turned`, `wounded`, `custody`, `keeper` (epilogue) |
 | **Pools** | `story.blade.<chapter>.<beat>`; duel barks `combat.bark.yugure_blade.<event>` (opening, landed hit, took hit, low health, yield) for the combat session |
 

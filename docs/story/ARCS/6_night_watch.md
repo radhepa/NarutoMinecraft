@@ -10,8 +10,9 @@ S-rank missions, the mask's night operations).
 | Part | Gate |
 |---|---|
 | N1 to N2 (the invitation, covert work) | Level 35 and `story.ch39.done` (the voice's case is closed, so the Undercroft's knowledge of "Nine" can never be mistaken for evidence), no bad deed in the last season (ROADMAP §11) |
-| N3 onward (the cellar) | `story.ch44.done` (the lost child has been seen hunting in Ch 44) |
-| Ch 47 | Waits until the branch is finished or declined. Entering Ch 47 with the branch half played (the player chose to move on at the registry) closes it through the Ch 47 path: the Undercroft's orders reach the shrine instead (squad5_c at the shrine) |
+| N3 onward (the quarry) | `story.ch44.done` (the lost child has been seen hunting in Ch 44), and one of four ways in: the ash-violet strip from Ch 44 (if you followed her), the N2.3 courier letters (if you kept one), `clan.shimura.3` (the mail drop), or the ANBU captain's order to look into the letters, given after Ch 44 (always available) |
+| Ch 47 | Waits until the branch is finished or declined. At the Ch 46 registry a prompt asks whether to finish the night work first or go on. Going on closes the branch through the Ch 47 path: the Undercroft's orders reach the shrine instead (`squad5_c` at the shrine) |
+| After Ch 47 | Once `story.ch47.done` is set, the branch is never offered again |
 
 A player can return to regular duty at any time. A player turned down for the invitation (a bad
 deed) still meets the Undercroft's story through Ch 47.
@@ -53,7 +54,7 @@ watching the player since Ch 31.
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| N3.1 | The mail drop | Shimura clan members | The ash-violet strip from Ch 44 and the courier's letters lead to a Shimura cellar used as a mail drop (if `clan.shimura.3` is done, the Shimura you helped is waiting for you and shows you the drop; else you stake it out). The courier who comes for the letters leads you out of the village to the old quarry | plot | — |
+| N3.1 | The way in | Shimura clan members, `anbu_captain` | By whichever way opened it: the ash-violet strip from Ch 44 points to the old quarry; the kept courier letters and the captain's order lead to a Shimura cellar used as a mail drop (if `clan.shimura.3` is done, the Shimura you helped is waiting and shows you the drop; else you stake it out), and the courier who comes for the letters leads you to the old quarry | plot | — |
 | N3.2 | The Undercroft | `undercroft_head`, old ANBU and sealers | Behind a sealed quarry face, the sealing team's derelict hall: old masks, older seals, the brushes that sealed twenty-seven children. The head greets you by your nursery number: "Nine. We have your reports too." (They intercepted Yūgure's mail for years; they never knew the voice) | plot | — |
 | N3.3 | The offer | `undercroft_head` | "My grandmother sealed twenty-seven children so this village could sleep. The Leaf has decided to feel sorry about it. We are not sorry. We are prepared. Join us, and no child will be taken again." | bond | Listen (pretend) / refuse / walk out (`ans.undercroft_head.offer`). Refusing or walking out: they let you go, and take the lost child the same week (N4 still happens) |
 
@@ -90,8 +91,12 @@ forced into her have nothing to hold on to and leave. It costs you: you collapse
 a day.
 
 She wakes as herself. Her first words are the ones she said through the bars in Ch 0, finished:
-"So someone remembers I was here. You did." (Variants by `ans.lost_child.cell` in her file;
+"Someone remembers I was here. You did." (Variants by `ans.lost_child.cell` in her file;
 `story.lost_child.home = nightwatch`; her bond starts growing from 2.)
+
+Afterwards, in the hospital, `squad4_c` finds that the last stolen embers in her still carry the
+leader's voice (the one that spoke through her in Ch 44.3) and quiets them with a Suzuran herb
+seal, one night at a time.
 
 ## N7: Daylight in the Cellar (30 min)
 

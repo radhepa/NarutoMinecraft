@@ -63,7 +63,7 @@ pale girl was a child they had measured, years ago, at a border clinic. That bro
 access in every save, as for every candidate: the stadium triage posts list (which names the
 guard posts for the finals), the Sixth's clerk's news that the archive would be open (Ch 37), and,
 after the porter falls (Ch 28), the outpost letters as a channel (used only if bound).
-By Ch 25 they are half ready to be caught; the slip ("Better than ninety, for a ninth—" and they
+By Ch 25 they are half ready to be caught; the slip ("Better than eighty-eight, for a ninth—" and they
 stop, and say "for a Chunin") is almost a confession. At Ch 39: "Sixteen years. Just numbers, I said." Their stadium line, keyed to `twist.fourth_fate`:
 they were told the triage posts list was wanted "for a show of strength; no one would be hurt".
 Falls: "I was on the east stair's post. I reached him after. There was nothing to do." Crippled: "I

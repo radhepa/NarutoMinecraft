@@ -2,7 +2,7 @@
 
 > **SPOILERS: for developers only.** Part of the [story bible](../STORY_BIBLE.md).
 
-**~3 h** (2.5 h authored, 0.5 h systemic in the training break). Child stage. Levels 15 to 18.
+**~3 h** (2.5 h authored, 0.5 h systemic: Ch 18's 30 minutes are the beta's systemic training break). Child stage. Levels 15 to 18.
 The beta ends with promotion, not a time skip.
 
 **What the arc is for.** A tournament that becomes an invasion. The player should feel strong (the
@@ -88,7 +88,7 @@ three of them stranded. No one is disguised as a Genin.
 | 19.3 | Hold the stair | squad, `sensei`, `sensei_5`, `squad5_c`, `yugure_blade` | Protect the east stair while the Academy children are evacuated. The sensei fights the blade on the arena floor (ink-dark cuts in the air), and `squad5_c` jumps down to fight beside them and takes a cut (a scar later). `sensei_5` seals the stadium's gates behind the children | teach, plot | — |
 | 19.4 | Covered | the higher-level teammate (or the rival) | A tier of the stands gives way under you; a friend drags you out before it falls (`saved_by_them` with the teammate at the higher level; with both under 4, the rival) | bond | — |
 | 19.5 | "Kagari" | `yugure_second` | Her order was to find the strongest flame in the stadium and tell the leader how it burns (a test of her: he already knows; nobody is ordered to take the player). She steps out of the smoke in front of you, scarf down, ember chakra lighting her face, a hand raised toward you as if to feel the heat, and stops. A held beat: the noise of the stadium drops away, and she says one word aloud, quietly, as if it hurt: **"Kagari."** Then the sensei's kunai is at her throat and the blade pulls her away | plot, seed (`story.ch19.named`) | — |
-| 19.6 | The east stair | `hokage_4`, `squad3_b`, `sensei_2`, `yugure_leader` (unseen) | The Fourth has left the Hokage's seat to carry two Academy children down the east stair himself, past your squad; his grandson `squad3_b` is on that stair. There he is hit, in every fate (`twist.fourth_fate`, [ROTATIONS.md](../ROTATIONS.md) §3): *falls*: he dies there, shown through the cinematic cutaway; *crippled*: the dark mirror tears half his chakra; *taken*: the leader's hearth carries him off from the stair over the wall. `sensei_2` gets the children out | plot (`world.hokage = 4 → 5`) | — |
+| 19.6 | The east stair | `hokage_4`, `squad3_b`, `sensei_2`, `yugure_leader` (unseen) | The Fourth has left the Hokage's seat to carry two Academy children down the east stair himself, past your squad; his grandson `squad3_b` is on that stair. There he is hit, in every fate (`twist.fourth_fate`, [ROTATIONS.md](../ROTATIONS.md) §3): *falls*: he dies there, shown through the cinematic cutaway, his last words to you on the stair: "Win for you."; *crippled*: the dark mirror tears half his chakra; *taken*: the leader's hearth carries him off from the stair over the wall. `sensei_2` gets the children out | plot (`world.hokage = 4 → 5`) | — |
 
 ---
 

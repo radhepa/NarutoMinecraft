@@ -19,7 +19,7 @@
 | Dream | Find where she belongs (she believes she found it in Yūgure; she is wrong, and slowly knows it) |
 | First appears | Ch 13 (the stranger on the bridge, hat low, unrecognised) |
 | Named | Ch 19 ("Kagari") |
-| Last appears | Ch 54 to 55 (alive in the restored house or the shrine, or a grave under the persimmon tree) |
+| Last appears | Ch 54 to 55 (alive in the restored house or the shrine), or Ch 54's opening scene (she dies at morning; grave under the persimmon tree in A, at the shrine in B) |
 
 ## Arc
 
@@ -91,8 +91,9 @@
 6. **Ch 48:** At the persimmon house's ruins she waits, unarmed. The halves fit. Of the stadium she
    says: "I nearly told him how you burn." Before the player answers (`ans.player.parent_meet`), she tells them the Ch 0 map was hers, so "You saved me twice" is a choice the player can make knowingly.
 7. **Ch 52:** She shields the player as a mother.
-8. **Ch 53.5:** Lives (by the gate below), or dies at dawn holding both halves of the charm. Her
-   grave is under the persimmon tree.
+8. **Ch 53.5 to 54:** Lives (by the gate below). Otherwise the player holds her through 53.6 and
+   she dies at morning, the first scene of Ch 54, holding both halves of the charm. Her grave is
+   under the persimmon tree.
 
 ### Lineage B track (the fallen Leaf shinobi was the player's parent)
 
@@ -103,14 +104,15 @@
 3. **Ch 19:** Sent to find and report the flame, she names it aloud instead: "Kagari." She means: *you are what I am, and they will use you as they used him.*
 4. **Ch 27:** No persimmon (that is the sensei's). Her warning is the whole of her gift.
 5. **Ch 48:** Not present. What sent her into the leader's notes: the Valley of Ash rescue (Ch 35)
-   reached Yūgure's ears, and the children she later questioned told her what the nursery was
-   for. In his notes she found Nine named as the wick. That night her letter reaches the Seventh:
-   she has left Yūgure.
+   reached Yūgure's ears, and the Valley children she later questioned told her of the nursery
+   **where her son died**, and what it was really for. In his notes she found Nine named as the
+   wick. That night her letter reaches the Seventh: she has left Yūgure.
 6. **Ch 49:** She tells the council the plan. She tells the player about her son once, flatly,
    and never again.
 7. **Ch 52:** She shields the player as a debt to her son.
-8. **Ch 53.5:** Lives (by the gate below), or dies at dawn with her son's name on her lips. Her
-   grave is at the shrine beside the stone basket, her son's name carved on it.
+8. **Ch 53.5 to 54:** Lives (by the gate below). Otherwise the player holds her through 53.6 and
+   she dies at morning, the first scene of Ch 54, with her son's name on her lips. Her grave is at
+   the shrine beside the stone basket, her son's name carved on it.
 
 (In both lineages `fallen_parent` also had a child "lost" after the Ash Road ambush: in A that
 child truly died, in B it is the player. She does not know of it; it never touches her lines.)
@@ -130,8 +132,8 @@ flame into it.
 
 She has a bond with the player from Ch 13 (level 0, met at the bridge if the player saw her).
 While she is an enemy it grows only through story moments, never talk or gifts: sparing (Ch 16),
-the warning (Ch 27), the memorial conversation (Ch 41). **Her bond levels open properly from
-Ch 41**, and conversation and hangouts only after her defection (Ch 48 in A, Ch 49 in B), when she
+the warning (Ch 27), the memorial conversation (Ch 41). **Her level is capped at 2 until Ch 41**
+(`level_cap [role:yugure_second, 2, story.ch41.done]`), and conversation and hangouts only after her defection (Ch 48 in A, Ch 49 in B), when she
 lives under the Seventh's watch at the shrine. The Ch 49 truth scene gives a `shared_moment bond.second.truth`; with the
 anchor hunt and the last meal (two shared experiences) a player who spends time with her between
 Ch 49 and Ch 52 reaches level 4 (one of the Ch 53.5 survival gates) without grinding. Every
@@ -141,9 +143,10 @@ main-path read of her `ans.*` flags has an unset default (a neutral line, or no 
 the **"strong"** tier or above (the tier the bonds session calibrates; not a raw number),
 `friendship [yugure_second, 4]`, or `friendship [squad4_c, 6]` with `ans.squad4_c.second` not
 "someone else first". Survival is shown as the player holding her frayed thread and pouring flame
-into it. Otherwise she dies at dawn, by lineage: **A** holding both halves of the charm, buried
-under the persimmon tree; **B** with her son's name on her lips, buried at the shrine beside the
-basket with his name carved on it.
+into it. Otherwise she does not survive the night: the player holds her in their arms through the
+leader's end (53.6), and she dies at morning as **the first scene of Ch 54** (her own beat), by
+lineage: **A** holding both halves of the charm, buried under the persimmon tree; **B** with her
+son's name on her lips, buried at the shrine beside the basket with his name carved on it.
 
 ## Dialogue brief
 
@@ -221,7 +224,7 @@ basket with his name carved on it.
 | **Plot** | Ch 13 (b's lure), 19 (the name), 27 (the warning), 49 (the plan) |
 | **Clue (lineage)** | The forest, the stadium, the persimmon, the song: every line must be true in both lineages |
 | **Bond** | Ch 41, and all post-defection talk |
-| **Mood states** | `guarded` (enemy, to Ch 41), `doubting` (Ch 41 to 48), `penitent` (after defection), `hollow` (Ch 52.4 to 53.5), `healing` (epilogue, if alive) |
+| **Mood states** | `guarded` (enemy, to Ch 41), `doubting` (Ch 41 to 48), `penitent` (after defection), `hollow` (Ch 52.4 to 53.5, or to her death at the start of Ch 54), `healing` (epilogue, if alive) |
 | **Pools** | `story.second.<chapter>.<beat>`; after defection she uses the bond pools with her own voice (`bond.greet.level.<n>.yugure_second`, about 15 lines per pool she can reach) and `talk.q.yugure_second.<topic>` |
 
 ### Variants
