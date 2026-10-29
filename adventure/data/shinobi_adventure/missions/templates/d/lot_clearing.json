@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "clearing",
  "status": "beta",
- "title": "mission.d.lot_clearing.title",
- "brief": "mission.d.lot_clearing.brief",
+ "title": "dlg:mission.d.lot_clearing.title",
+ "brief": "dlg:mission.d.lot_clearing.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.lot_clearing.brief",
+  "accept": "dlg:mission.d.lot_clearing.accept",
+  "decline": "dlg:mission.d.lot_clearing.decline",
+  "progress": "dlg:mission.d.lot_clearing.progress",
+  "success": "dlg:mission.d.lot_clearing.success",
+  "fail": "dlg:mission.d.lot_clearing.fail",
+  "report": "dlg:mission.d.lot_clearing.report"
+ },
  "minutes": 10,
  "party": "squad",
  "slots": {
@@ -83,13 +92,13 @@
    "id": "old_trap",
    "weight": 2,
    "harder": true,
-   "premise": "mission.d.lot_clearing.twist.old_trap"
+   "premise": "dlg:mission.d.lot_clearing.twist.old_trap"
   },
   {
    "id": "hornets",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.lot_clearing.twist.hornets"
+   "premise": "dlg:mission.d.lot_clearing.twist.hornets"
   }
  ],
  "outcomes": {
@@ -125,7 +134,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.clearing",
+ "banter": "dlg:mission.banter.clearing",
  "_premise": "Clear an overgrown lot for a new training post.",
  "_twists": {
   "old_trap": "An old training trap is still armed under the weeds.",

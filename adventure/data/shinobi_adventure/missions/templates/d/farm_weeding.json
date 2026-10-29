@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "farm",
  "status": "beta",
- "title": "mission.d.farm_weeding.title",
- "brief": "mission.d.farm_weeding.brief",
+ "title": "dlg:mission.d.farm_weeding.title",
+ "brief": "dlg:mission.d.farm_weeding.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.farm_weeding.brief",
+  "accept": "dlg:mission.d.farm_weeding.accept",
+  "decline": "dlg:mission.d.farm_weeding.decline",
+  "progress": "dlg:mission.d.farm_weeding.progress",
+  "success": "dlg:mission.d.farm_weeding.success",
+  "fail": "dlg:mission.d.farm_weeding.fail",
+  "report": "dlg:mission.d.farm_weeding.report"
+ },
  "minutes": 10,
  "party": "squad_or_solo",
  "slots": {
@@ -92,7 +101,8 @@
     "options": {
      "turn_in": null,
      "keep": "kept_cache"
-    }
+    },
+    "dialogue": "dlg:mission.d.farm_weeding.choice.cache"
    },
    "branch": [
     {
@@ -128,19 +138,19 @@
    "id": "crows",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.farm_weeding.twist.crows"
+   "premise": "dlg:mission.d.farm_weeding.twist.crows"
   },
   {
    "id": "boar_tracks",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.farm_weeding.twist.boar_tracks"
+   "premise": "dlg:mission.d.farm_weeding.twist.boar_tracks"
   },
   {
    "id": "buried_cache",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.farm_weeding.twist.buried_cache"
+   "premise": "dlg:mission.d.farm_weeding.twist.buried_cache"
   }
  ],
  "outcomes": {
@@ -183,7 +193,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.farm",
+ "banter": "dlg:mission.banter.farm",
  "_premise": "Weed a farmer's field outside the wall before the planting.",
  "_twists": {
   "crows": "The crows have no respect for the scarecrow.",

@@ -5,8 +5,17 @@
  "rank": "s",
  "category": "elimination",
  "status": "later",
- "title": "mission.s.rogue_legend.title",
- "brief": "mission.s.rogue_legend.brief",
+ "title": "dlg:mission.s.rogue_legend.title",
+ "brief": "dlg:mission.s.rogue_legend.brief",
+ "dialogue": {
+  "brief": "dlg:mission.s.rogue_legend.brief",
+  "accept": "dlg:mission.s.rogue_legend.accept",
+  "decline": "dlg:mission.s.rogue_legend.decline",
+  "progress": "dlg:mission.s.rogue_legend.progress",
+  "success": "dlg:mission.s.rogue_legend.success",
+  "fail": "dlg:mission.s.rogue_legend.fail",
+  "report": "dlg:mission.s.rogue_legend.report"
+ },
  "minutes": 60,
  "party": "squad",
  "days": 3,
@@ -76,14 +85,14 @@
    "weight": 2,
    "harder": true,
    "modifier": true,
-   "premise": "mission.s.rogue_legend.twist.second_phase"
+   "premise": "dlg:mission.s.rogue_legend.twist.second_phase"
   },
   {
    "id": "parley",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.s.rogue_legend.twist.parley"
+   "premise": "dlg:mission.s.rogue_legend.twist.parley"
   }
  ],
  "outcomes": {
@@ -101,7 +110,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "missing_nin.legend"
+  "combat:enemy.legend_rogue"
  ],
  "places": {
   "anchors": [
@@ -125,7 +134,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.elimination",
+ "banter": "dlg:mission.banter.elimination",
  "_premise": "A missing-nin of legendary strength has surfaced near the border; stop them.",
  "_twists": {
   "second_phase": "They were holding back.",

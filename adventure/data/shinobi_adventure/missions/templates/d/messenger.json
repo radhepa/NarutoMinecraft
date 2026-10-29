@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "delivery",
  "status": "beta",
- "title": "mission.d.messenger.title",
- "brief": "mission.d.messenger.brief",
+ "title": "dlg:mission.d.messenger.title",
+ "brief": "dlg:mission.d.messenger.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.messenger.brief",
+  "accept": "dlg:mission.d.messenger.accept",
+  "decline": "dlg:mission.d.messenger.decline",
+  "progress": "dlg:mission.d.messenger.progress",
+  "success": "dlg:mission.d.messenger.success",
+  "fail": "dlg:mission.d.messenger.fail",
+  "report": "dlg:mission.d.messenger.report"
+ },
  "minutes": 8,
  "party": "solo",
  "slots": {
@@ -107,13 +116,13 @@
    "id": "wait_reply",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.messenger.twist.wait_reply"
+   "premise": "dlg:mission.d.messenger.twist.wait_reply"
   },
   {
    "id": "rival_courier",
    "weight": 1,
    "harder": true,
-   "premise": "mission.d.messenger.twist.rival_courier"
+   "premise": "dlg:mission.d.messenger.twist.rival_courier"
   }
  ],
  "outcomes": {
@@ -150,7 +159,7 @@
  ],
  "contested": true,
  "classic": true,
- "banter": "mission.banter.delivery",
+ "banter": "dlg:mission.banter.delivery",
  "_premise": "Carry sealed letters between the Residence and three offices before the noon bell.",
  "_twists": {
   "wait_reply": "One office insists on sending a reply back with you.",

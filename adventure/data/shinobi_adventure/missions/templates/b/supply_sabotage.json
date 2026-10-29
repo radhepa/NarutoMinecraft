@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "sabotage",
  "status": "later",
- "title": "mission.b.supply_sabotage.title",
- "brief": "mission.b.supply_sabotage.brief",
+ "title": "dlg:mission.b.supply_sabotage.title",
+ "brief": "dlg:mission.b.supply_sabotage.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.supply_sabotage.brief",
+  "accept": "dlg:mission.b.supply_sabotage.accept",
+  "decline": "dlg:mission.b.supply_sabotage.decline",
+  "progress": "dlg:mission.b.supply_sabotage.progress",
+  "success": "dlg:mission.b.supply_sabotage.success",
+  "fail": "dlg:mission.b.supply_sabotage.fail",
+  "report": "dlg:mission.b.supply_sabotage.report"
+ },
  "minutes": 40,
  "party": "squad",
  "unlock": {
@@ -27,7 +36,7 @@
   "guards": {
    "pick": "enemy_group",
    "from": [
-    "enemy.squad"
+    "combat:group.foreign_squad"
    ]
   }
  },
@@ -103,14 +112,14 @@
    "id": "patrol",
    "weight": 2,
    "harder": true,
-   "premise": "mission.b.supply_sabotage.twist.patrol"
+   "premise": "dlg:mission.b.supply_sabotage.twist.patrol"
   },
   {
    "id": "civilian_workers",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.supply_sabotage.twist.civilian_workers"
+   "premise": "dlg:mission.b.supply_sabotage.twist.civilian_workers"
   }
  ],
  "outcomes": {
@@ -129,7 +138,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.squad"
+  "combat:group.foreign_squad"
  ],
  "places": {
   "anchors": [
@@ -152,7 +161,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.sabotage",
+ "banter": "dlg:mission.banter.sabotage",
  "_premise": "A foreign band is stockpiling weapons at a border depot; spoil the stockpile without starting a war.",
  "_twists": {
   "patrol": "A patrol changes its route tonight.",

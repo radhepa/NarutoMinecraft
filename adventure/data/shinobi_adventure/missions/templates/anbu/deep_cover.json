@@ -5,8 +5,17 @@
  "rank": "s",
  "category": "anbu",
  "status": "later",
- "title": "mission.anbu.deep_cover.title",
- "brief": "mission.anbu.deep_cover.brief",
+ "title": "dlg:mission.anbu.deep_cover.title",
+ "brief": "dlg:mission.anbu.deep_cover.brief",
+ "dialogue": {
+  "brief": "dlg:mission.anbu.deep_cover.brief",
+  "accept": "dlg:mission.anbu.deep_cover.accept",
+  "decline": "dlg:mission.anbu.deep_cover.decline",
+  "progress": "dlg:mission.anbu.deep_cover.progress",
+  "success": "dlg:mission.anbu.deep_cover.success",
+  "fail": "dlg:mission.anbu.deep_cover.fail",
+  "report": "dlg:mission.anbu.deep_cover.report"
+ },
  "minutes": 60,
  "party": "solo",
  "days": 5,
@@ -70,14 +79,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.anbu.deep_cover.twist.friend_made"
+   "premise": "dlg:mission.anbu.deep_cover.twist.friend_made"
   },
   {
    "id": "cover_blown",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.anbu.deep_cover.twist.cover_blown"
+   "premise": "dlg:mission.anbu.deep_cover.twist.cover_blown"
   }
  ],
  "outcomes": {
@@ -118,7 +127,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.anbu",
+ "banter": "dlg:mission.banter.anbu",
  "_premise": "Live under a false name in a foreign town for five days and learn what its lord is building.",
  "_twists": {
   "friend_made": "Someone in the town becomes a real friend to your false self.",

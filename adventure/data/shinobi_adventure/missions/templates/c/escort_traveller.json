@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "escort",
  "status": "beta",
- "title": "mission.c.escort_traveller.title",
- "brief": "mission.c.escort_traveller.brief",
+ "title": "dlg:mission.c.escort_traveller.title",
+ "brief": "dlg:mission.c.escort_traveller.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.escort_traveller.brief",
+  "accept": "dlg:mission.c.escort_traveller.accept",
+  "decline": "dlg:mission.c.escort_traveller.decline",
+  "progress": "dlg:mission.c.escort_traveller.progress",
+  "success": "dlg:mission.c.escort_traveller.success",
+  "fail": "dlg:mission.c.escort_traveller.fail",
+  "report": "dlg:mission.c.escort_traveller.report"
+ },
  "minutes": 30,
  "party": "squad",
  "days": 2,
@@ -46,8 +55,8 @@
   "thugs": {
    "pick": "enemy_group",
    "from": [
-    "bandit.pack_small",
-    "ronin.swordsman"
+    "combat:group.bandits_small",
+    "combat:enemy.bandit_ronin"
    ]
   },
   "healer": {
@@ -147,7 +156,8 @@
     "options": {
      "keep_secret": null,
      "report_it": "reported_client"
-    }
+    },
+    "dialogue": "dlg:mission.c.escort_traveller.choice.choice"
    },
    "next": "arrive"
   },
@@ -172,13 +182,13 @@
    "id": "sick_on_road",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.escort_traveller.twist.sick_on_road"
+   "premise": "dlg:mission.c.escort_traveller.twist.sick_on_road"
   },
   {
    "id": "client_secret",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.escort_traveller.twist.client_secret"
+   "premise": "dlg:mission.c.escort_traveller.twist.client_secret"
   }
  ],
  "outcomes": {
@@ -207,8 +217,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.pack_small",
-  "ronin.swordsman"
+  "combat:group.bandits_small",
+  "combat:enemy.bandit_ronin"
  ],
  "places": {
   "anchors": [
@@ -236,7 +246,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.escort",
+ "banter": "dlg:mission.banter.escort",
  "_premise": "Escort a scholar to the border village through the hills.",
  "_twists": {
   "sick_on_road": "The client is not used to the hills and falls ill at the pass.",

@@ -84,6 +84,7 @@ class ClientsAndSquadTest {
         assertEquals("in_step", plan.band(80).name());
         assertEquals("split", plan.band(10).name());
         assertTrue(plan.band(10).disobey() > 0);
-        assertEquals("mission.banter.escort.camp.steady", SquadPlan.banter("escort", "camp", "steady"));
+        assertEquals(List.of("dlg:mission.banter.escort.camp.teammate.steady", "dlg:mission.banter.escort.camp.teammate",
+                "dlg:mission.banter.camp.teammate.steady", "dlg:mission.banter.camp.teammate"), SquadPlan.banter("escort", "camp", "teammate", "steady"));
     }
 }

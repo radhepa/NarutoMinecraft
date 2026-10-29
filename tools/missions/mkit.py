@@ -33,7 +33,12 @@ BONUSES = {
 
 
 def _key(mid, *parts):
-    return ".".join((mid,) + parts)
+    """A dialogue key in the dialogue session's scheme: dlg:<template id>.<part>."""
+    return "dlg:" + ".".join((mid,) + parts)
+
+
+# The dialogue parts every template has (the dialogue session's pools).
+PARTS = ("brief", "accept", "decline", "progress", "success", "fail", "report")
 
 
 # --- objectives ---------------------------------------------------------------------------------------
@@ -250,6 +255,7 @@ def mission(mid, rank, category, *, premise, minutes, steps, client=None, slots=
         "status": status,
         "title": _key(mid, "title"),
         "brief": _key(mid, "brief"),
+        "dialogue": {p: _key(mid, p) for p in PARTS},
         "minutes": minutes,
         "party": party,
     }
@@ -269,6 +275,9 @@ def mission(mid, rank, category, *, premise, minutes, steps, client=None, slots=
     t["start"] = steps[0].name
     t["steps"] = {s.name: s.json() for s in steps}
     t["twists"] = [dict(tw, premise=_key(mid, "twist", tw["id"])) for tw in twists]
+    for s in steps:
+        if s.objective["type"] == "choose":
+            s.objective["dialogue"] = _key(mid, "choice", s.name)
     t["outcomes"] = outcomes or {"done": outcome()}
     t["bonus"] = list(bonus)
     if fast_hours:
@@ -282,7 +291,7 @@ def mission(mid, rank, category, *, premise, minutes, steps, client=None, slots=
     if chain:
         t["chain"] = chain
     t["classic"] = classic
-    t["banter"] = "mission.banter." + category
+    t["banter"] = "dlg:mission.banter." + category
     # English premises for the docs only; the game reads the keys above.
     t["_premise"] = premise
     if twist_premises:

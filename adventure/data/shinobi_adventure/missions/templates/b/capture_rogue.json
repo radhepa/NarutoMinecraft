@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "capture",
  "status": "later",
- "title": "mission.b.capture_rogue.title",
- "brief": "mission.b.capture_rogue.brief",
+ "title": "dlg:mission.b.capture_rogue.title",
+ "brief": "dlg:mission.b.capture_rogue.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.capture_rogue.brief",
+  "accept": "dlg:mission.b.capture_rogue.accept",
+  "decline": "dlg:mission.b.capture_rogue.decline",
+  "progress": "dlg:mission.b.capture_rogue.progress",
+  "success": "dlg:mission.b.capture_rogue.success",
+  "fail": "dlg:mission.b.capture_rogue.fail",
+  "report": "dlg:mission.b.capture_rogue.report"
+ },
  "minutes": 40,
  "party": "squad",
  "unlock": {
@@ -61,7 +70,8 @@
     "options": {
      "bring_home": null,
      "hear_them_out": null
-    }
+    },
+    "dialogue": "dlg:mission.b.capture_rogue.choice.talk"
    },
    "next": "home"
   },
@@ -87,14 +97,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.capture_rogue.twist.reason"
+   "premise": "dlg:mission.b.capture_rogue.twist.reason"
   },
   {
    "id": "rescuers",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.b.capture_rogue.twist.rescuers"
+   "premise": "dlg:mission.b.capture_rogue.twist.rescuers"
   }
  ],
  "outcomes": {
@@ -112,7 +122,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "missing_nin.chunin"
+  "combat:enemy.rogue_chunin"
  ],
  "places": {
   "anchors": [
@@ -137,7 +147,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.capture",
+ "banter": "dlg:mission.banter.capture",
  "_premise": "Bring a deserter of the Leaf home alive to face judgement.",
  "_twists": {
   "reason": "The deserter left for a reason the council should hear.",

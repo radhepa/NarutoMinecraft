@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "bodyguard",
  "status": "later",
- "title": "mission.a.kiln_court.title",
- "brief": "mission.a.kiln_court.brief",
+ "title": "dlg:mission.a.kiln_court.title",
+ "brief": "dlg:mission.a.kiln_court.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.kiln_court.brief",
+  "accept": "dlg:mission.a.kiln_court.accept",
+  "decline": "dlg:mission.a.kiln_court.decline",
+  "progress": "dlg:mission.a.kiln_court.progress",
+  "success": "dlg:mission.a.kiln_court.success",
+  "fail": "dlg:mission.a.kiln_court.fail",
+  "report": "dlg:mission.a.kiln_court.report"
+ },
  "minutes": 45,
  "party": "squad",
  "days": 2,
@@ -25,7 +34,7 @@
   "assassins": {
    "pick": "enemy_group",
    "from": [
-    "assassin.team"
+    "combat:group.assassins"
    ]
   }
  },
@@ -69,14 +78,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.kiln_court.twist.sabotaged_kiln"
+   "premise": "dlg:mission.a.kiln_court.twist.sabotaged_kiln"
   },
   {
    "id": "noble_ally",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.kiln_court.twist.noble_ally"
+   "premise": "dlg:mission.a.kiln_court.twist.noble_ally"
   }
  ],
  "outcomes": {
@@ -94,7 +103,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "assassin.team"
+  "combat:group.assassins"
  ],
  "places": {
   "anchors": [
@@ -119,7 +128,7 @@
  "contested": false,
  "chain": "chain.kiln",
  "classic": true,
- "banter": "mission.banter.bodyguard",
+ "banter": "dlg:mission.banter.bodyguard",
  "_premise": "The kiln family's eldest is named court potter; guard them through a court that does not want a commoner there.",
  "_twists": {
   "sabotaged_kiln": "Someone has cracked the court kiln before the first firing.",

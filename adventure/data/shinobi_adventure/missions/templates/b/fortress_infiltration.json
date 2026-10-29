@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "infiltration",
  "status": "later",
- "title": "mission.b.fortress_infiltration.title",
- "brief": "mission.b.fortress_infiltration.brief",
+ "title": "dlg:mission.b.fortress_infiltration.title",
+ "brief": "dlg:mission.b.fortress_infiltration.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.fortress_infiltration.brief",
+  "accept": "dlg:mission.b.fortress_infiltration.accept",
+  "decline": "dlg:mission.b.fortress_infiltration.decline",
+  "progress": "dlg:mission.b.fortress_infiltration.progress",
+  "success": "dlg:mission.b.fortress_infiltration.success",
+  "fail": "dlg:mission.b.fortress_infiltration.fail",
+  "report": "dlg:mission.b.fortress_infiltration.report"
+ },
  "minutes": 40,
  "party": "squad",
  "days": 2,
@@ -38,7 +47,7 @@
   "guards": {
    "pick": "enemy_group",
    "from": [
-    "bandit.fort_guard"
+    "combat:group.fort_guards"
    ]
   },
   "gate": {
@@ -86,7 +95,8 @@
     "options": {
      "free": null,
      "leave": null
-    }
+    },
+    "dialogue": "dlg:mission.b.fortress_infiltration.choice.prisoner"
    },
    "branch": [
     {
@@ -161,13 +171,13 @@
    "id": "prisoner",
    "weight": 2,
    "harder": false,
-   "premise": "mission.b.fortress_infiltration.twist.prisoner"
+   "premise": "dlg:mission.b.fortress_infiltration.twist.prisoner"
   },
   {
    "id": "alarm",
    "weight": 2,
    "harder": true,
-   "premise": "mission.b.fortress_infiltration.twist.alarm"
+   "premise": "dlg:mission.b.fortress_infiltration.twist.alarm"
   }
  ],
  "outcomes": {
@@ -186,7 +196,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.fort_guard"
+  "combat:group.fort_guards"
  ],
  "places": {
   "anchors": [
@@ -211,7 +221,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.infiltration",
+ "banter": "dlg:mission.banter.infiltration",
  "_premise": "Slip into a bandit warlord's hill fort and bring out the ledger of who pays him.",
  "_twists": {
   "prisoner": "A prisoner in the cellar begs to be taken along.",

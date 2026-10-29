@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "seasonal",
  "status": "beta",
- "title": "mission.d.snow_clearing.title",
- "brief": "mission.d.snow_clearing.brief",
+ "title": "dlg:mission.d.snow_clearing.title",
+ "brief": "dlg:mission.d.snow_clearing.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.snow_clearing.brief",
+  "accept": "dlg:mission.d.snow_clearing.accept",
+  "decline": "dlg:mission.d.snow_clearing.decline",
+  "progress": "dlg:mission.d.snow_clearing.progress",
+  "success": "dlg:mission.d.snow_clearing.success",
+  "fail": "dlg:mission.d.snow_clearing.fail",
+  "report": "dlg:mission.d.snow_clearing.report"
+ },
  "minutes": 10,
  "party": "squad",
  "season": [
@@ -112,13 +121,13 @@
    "id": "slide",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.snow_clearing.twist.slide"
+   "premise": "dlg:mission.d.snow_clearing.twist.slide"
   },
   {
    "id": "snowball_ambush",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.snow_clearing.twist.snowball_ambush"
+   "premise": "dlg:mission.d.snow_clearing.twist.snowball_ambush"
   }
  ],
  "outcomes": {
@@ -155,7 +164,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.seasonal",
+ "banter": "dlg:mission.banter.seasonal",
  "_premise": "Clear snow from roofs and lanes before it brings a roof down.",
  "_twists": {
   "slide": "A whole roof of snow lets go at once.",

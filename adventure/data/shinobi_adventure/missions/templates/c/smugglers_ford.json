@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "interdiction",
  "status": "beta",
- "title": "mission.c.smugglers_ford.title",
- "brief": "mission.c.smugglers_ford.brief",
+ "title": "dlg:mission.c.smugglers_ford.title",
+ "brief": "dlg:mission.c.smugglers_ford.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.smugglers_ford.brief",
+  "accept": "dlg:mission.c.smugglers_ford.accept",
+  "decline": "dlg:mission.c.smugglers_ford.decline",
+  "progress": "dlg:mission.c.smugglers_ford.progress",
+  "success": "dlg:mission.c.smugglers_ford.success",
+  "fail": "dlg:mission.c.smugglers_ford.fail",
+  "report": "dlg:mission.c.smugglers_ford.report"
+ },
  "minutes": 30,
  "party": "squad",
  "unlock": {
@@ -36,7 +45,7 @@
   "crew": {
    "pick": "enemy_group",
    "from": [
-    "smuggler.crew"
+    "combat:group.smugglers"
    ]
   },
   "hide": {
@@ -110,7 +119,8 @@
     "options": {
      "free": null,
      "hand_over": null
-    }
+    },
+    "dialogue": "dlg:mission.c.smugglers_ford.choice.animals"
    },
    "next": "report"
   },
@@ -127,14 +137,14 @@
    "id": "animals",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.smugglers_ford.twist.animals"
+   "premise": "dlg:mission.c.smugglers_ford.twist.animals"
   },
   {
    "id": "decoy",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.c.smugglers_ford.twist.decoy"
+   "premise": "dlg:mission.c.smugglers_ford.twist.decoy"
   }
  ],
  "outcomes": {
@@ -153,7 +163,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "smuggler.crew"
+  "combat:group.smugglers"
  ],
  "places": {
   "anchors": [
@@ -177,7 +187,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.interdiction",
+ "banter": "dlg:mission.banter.interdiction",
  "_premise": "Stop a smuggling crew that crosses the river at a ford by night.",
  "_twists": {
   "animals": "The cargo is rare animals in cramped cages.",

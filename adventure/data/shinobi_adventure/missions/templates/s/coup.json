@@ -5,8 +5,17 @@
  "rank": "s",
  "category": "protection",
  "status": "later",
- "title": "mission.s.coup.title",
- "brief": "mission.s.coup.brief",
+ "title": "dlg:mission.s.coup.title",
+ "brief": "dlg:mission.s.coup.brief",
+ "dialogue": {
+  "brief": "dlg:mission.s.coup.brief",
+  "accept": "dlg:mission.s.coup.accept",
+  "decline": "dlg:mission.s.coup.decline",
+  "progress": "dlg:mission.s.coup.progress",
+  "success": "dlg:mission.s.coup.success",
+  "fail": "dlg:mission.s.coup.fail",
+  "report": "dlg:mission.s.coup.report"
+ },
  "minutes": 60,
  "party": "squad",
  "days": 2,
@@ -35,8 +44,8 @@
   "plotters": {
    "pick": "enemy_group",
    "from": [
-    "assassin.team",
-    "enemy.jonin"
+    "combat:group.assassins",
+    "combat:enemy.foreign_jonin"
    ]
   }
  },
@@ -89,14 +98,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.s.coup.twist.council_involved"
+   "premise": "dlg:mission.s.coup.twist.council_involved"
   },
   {
    "id": "fire",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.s.coup.twist.fire"
+   "premise": "dlg:mission.s.coup.twist.fire"
   }
  ],
  "outcomes": {
@@ -115,8 +124,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "assassin.team",
-  "enemy.jonin"
+  "combat:group.assassins",
+  "combat:enemy.foreign_jonin"
  ],
  "places": {
   "anchors": [
@@ -140,7 +149,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.protection",
+ "banter": "dlg:mission.banter.protection",
  "_premise": "A coup is planned against the Fire Country's daimyo during a festival at the capital.",
  "_twists": {
   "council_involved": "A minister of the court is behind it.",

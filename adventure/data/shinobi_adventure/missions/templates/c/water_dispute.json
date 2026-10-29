@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "mediation",
  "status": "beta",
- "title": "mission.c.water_dispute.title",
- "brief": "mission.c.water_dispute.brief",
+ "title": "dlg:mission.c.water_dispute.title",
+ "brief": "dlg:mission.c.water_dispute.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.water_dispute.brief",
+  "accept": "dlg:mission.c.water_dispute.accept",
+  "decline": "dlg:mission.c.water_dispute.decline",
+  "progress": "dlg:mission.c.water_dispute.progress",
+  "success": "dlg:mission.c.water_dispute.success",
+  "fail": "dlg:mission.c.water_dispute.fail",
+  "report": "dlg:mission.c.water_dispute.report"
+ },
  "minutes": 25,
  "party": "squad",
  "unlock": {
@@ -44,7 +53,7 @@
   "thugs": {
    "pick": "enemy_group",
    "from": [
-    "thug.hired"
+    "combat:group.hired_thugs"
    ]
   }
  },
@@ -111,7 +120,8 @@
      "share": "shared",
      "upstream": null,
      "downstream": null
-    }
+    },
+    "dialogue": "dlg:mission.c.water_dispute.choice.settle"
    },
    "next": "report"
   },
@@ -128,14 +138,14 @@
    "id": "hired_muscle",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.water_dispute.twist.hired_muscle"
+   "premise": "dlg:mission.c.water_dispute.twist.hired_muscle"
   },
   {
    "id": "dry_season",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.c.water_dispute.twist.dry_season"
+   "premise": "dlg:mission.c.water_dispute.twist.dry_season"
   }
  ],
  "outcomes": {
@@ -158,7 +168,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "thug.hired"
+  "combat:group.hired_thugs"
  ],
  "places": {
   "anchors": [
@@ -181,7 +191,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.mediation",
+ "banter": "dlg:mission.banter.mediation",
  "_premise": "Two hamlets near the border are fighting over a stream; keep the peace until the magistrate comes.",
  "_twists": {
   "hired_muscle": "One headman has hired muscle to settle it his way.",

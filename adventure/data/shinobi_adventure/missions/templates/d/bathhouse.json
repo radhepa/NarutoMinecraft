@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "bathhouse",
  "status": "beta",
- "title": "mission.d.bathhouse.title",
- "brief": "mission.d.bathhouse.brief",
+ "title": "dlg:mission.d.bathhouse.title",
+ "brief": "dlg:mission.d.bathhouse.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.bathhouse.brief",
+  "accept": "dlg:mission.d.bathhouse.accept",
+  "decline": "dlg:mission.d.bathhouse.decline",
+  "progress": "dlg:mission.d.bathhouse.progress",
+  "success": "dlg:mission.d.bathhouse.success",
+  "fail": "dlg:mission.d.bathhouse.fail",
+  "report": "dlg:mission.d.bathhouse.report"
+ },
  "minutes": 10,
  "party": "solo",
  "slots": {
@@ -95,13 +104,13 @@
    "id": "boiler_trouble",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.bathhouse.twist.boiler_trouble"
+   "premise": "dlg:mission.d.bathhouse.twist.boiler_trouble"
   },
   {
    "id": "locker_key",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.bathhouse.twist.locker_key"
+   "premise": "dlg:mission.d.bathhouse.twist.locker_key"
   }
  ],
  "outcomes": {
@@ -137,7 +146,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.bathhouse",
+ "banter": "dlg:mission.banter.bathhouse",
  "_premise": "Scrub the bath house and stoke its fires before the evening rush.",
  "_twists": {
   "boiler_trouble": "The boiler will not catch; a fire or wind technique would help.",

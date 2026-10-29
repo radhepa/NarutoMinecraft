@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "river",
  "status": "beta",
- "title": "mission.d.fishing_haul.title",
- "brief": "mission.d.fishing_haul.brief",
+ "title": "dlg:mission.d.fishing_haul.title",
+ "brief": "dlg:mission.d.fishing_haul.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.fishing_haul.brief",
+  "accept": "dlg:mission.d.fishing_haul.accept",
+  "decline": "dlg:mission.d.fishing_haul.decline",
+  "progress": "dlg:mission.d.fishing_haul.progress",
+  "success": "dlg:mission.d.fishing_haul.success",
+  "fail": "dlg:mission.d.fishing_haul.fail",
+  "report": "dlg:mission.d.fishing_haul.report"
+ },
  "minutes": 10,
  "party": "squad",
  "unlock": {
@@ -100,13 +109,13 @@
    "id": "big_one",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.fishing_haul.twist.big_one"
+   "premise": "dlg:mission.d.fishing_haul.twist.big_one"
   },
   {
    "id": "net_tear",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.fishing_haul.twist.net_tear"
+   "premise": "dlg:mission.d.fishing_haul.twist.net_tear"
   }
  ],
  "outcomes": {
@@ -144,7 +153,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.river",
+ "banter": "dlg:mission.banter.river",
  "_premise": "Help the fish stall's supplier land the morning catch.",
  "_twists": {
   "big_one": "Something enormous takes the line.",

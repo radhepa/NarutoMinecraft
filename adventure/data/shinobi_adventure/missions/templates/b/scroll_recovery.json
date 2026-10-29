@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "recovery",
  "status": "later",
- "title": "mission.b.scroll_recovery.title",
- "brief": "mission.b.scroll_recovery.brief",
+ "title": "dlg:mission.b.scroll_recovery.title",
+ "brief": "dlg:mission.b.scroll_recovery.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.scroll_recovery.brief",
+  "accept": "dlg:mission.b.scroll_recovery.accept",
+  "decline": "dlg:mission.b.scroll_recovery.decline",
+  "progress": "dlg:mission.b.scroll_recovery.progress",
+  "success": "dlg:mission.b.scroll_recovery.success",
+  "fail": "dlg:mission.b.scroll_recovery.fail",
+  "report": "dlg:mission.b.scroll_recovery.report"
+ },
  "minutes": 40,
  "party": "squad",
  "unlock": {
@@ -31,7 +40,7 @@
   "pair": {
    "pick": "enemy_group",
    "from": [
-    "missing_nin.pair"
+    "combat:group.rogue_pair"
    ]
   }
  },
@@ -88,13 +97,13 @@
   "buyer": {
    "objective": {
     "type": "defeat",
-    "group": "missing_nin.chunin",
+    "group": "combat:enemy.rogue_chunin",
     "at": "slot:camp"
    },
    "on_enter": [
     {
      "spawn_group": [
-      "missing_nin.chunin",
+      "combat:enemy.rogue_chunin",
       "slot:camp"
      ]
     }
@@ -115,14 +124,14 @@
    "id": "buyer",
    "weight": 2,
    "harder": true,
-   "premise": "mission.b.scroll_recovery.twist.buyer"
+   "premise": "dlg:mission.b.scroll_recovery.twist.buyer"
   },
   {
    "id": "decoy_scroll",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.scroll_recovery.twist.decoy_scroll"
+   "premise": "dlg:mission.b.scroll_recovery.twist.decoy_scroll"
   }
  ],
  "outcomes": {
@@ -142,8 +151,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "missing_nin.pair",
-  "missing_nin.chunin"
+  "combat:group.rogue_pair",
+  "combat:enemy.rogue_chunin"
  ],
  "places": {
   "anchors": [
@@ -168,7 +177,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.recovery",
+ "banter": "dlg:mission.banter.recovery",
  "_premise": "Two missing-nin stole a sealed technique scroll from a temple; get it back before they sell it.",
  "_twists": {
   "buyer": "The buyer arrives as you take the scroll back.",

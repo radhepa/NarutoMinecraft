@@ -273,33 +273,35 @@
   "_doc": "Bond acts the desk applies on turn-in (BONDS.md section 4); templates add their own."
  },
  "banter": {
-  "key": "mission.banter.<category>.<phase>[.<cohesion>]",
-  "phases": [
+  "_doc": "The dialogue session's scheme, most specific first: dlg:mission.banter.<category>.<moment>.<speaker_kind>.<band>, then without the band, then without the category.",
+  "key": "dlg:mission.banter.[<category>.]<moment>.<speaker_kind>[.<band>]",
+  "moments": [
    "brief",
    "depart",
    "travel",
    "arrive",
+   "ambush",
    "twist",
    "fight",
    "low_health",
    "choice",
    "camp",
-   "success",
+   "victory",
    "grade_s",
    "partial",
    "fail",
    "report"
+  ],
+  "speaker_kinds": [
+   "sensei",
+   "teammate",
+   "client"
   ],
   "cohesion": [
    "in_step",
    "steady",
    "ragged",
    "split"
-  ],
-  "speakers": [
-   "role:teammate_a",
-   "role:teammate_b",
-   "role:sensei"
   ]
  }
 }

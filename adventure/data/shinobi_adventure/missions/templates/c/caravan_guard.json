@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "guard",
  "status": "beta",
- "title": "mission.c.caravan_guard.title",
- "brief": "mission.c.caravan_guard.brief",
+ "title": "dlg:mission.c.caravan_guard.title",
+ "brief": "dlg:mission.c.caravan_guard.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.caravan_guard.brief",
+  "accept": "dlg:mission.c.caravan_guard.accept",
+  "decline": "dlg:mission.c.caravan_guard.decline",
+  "progress": "dlg:mission.c.caravan_guard.progress",
+  "success": "dlg:mission.c.caravan_guard.success",
+  "fail": "dlg:mission.c.caravan_guard.fail",
+  "report": "dlg:mission.c.caravan_guard.report"
+ },
  "minutes": 35,
  "party": "squad",
  "days": 2,
@@ -55,8 +64,8 @@
   "raiders": {
    "pick": "enemy_group",
    "from": [
-    "bandit.pack",
-    "bandit.archers"
+    "combat:group.road_ambush",
+    "combat:enemy.bandit_archer"
    ]
   }
  },
@@ -130,7 +139,8 @@
      "hand_a": null,
      "hand_b": null,
      "nobody": null
-    }
+    },
+    "dialogue": "dlg:mission.c.caravan_guard.choice.accuse"
    },
    "next": "day2"
   },
@@ -163,13 +173,13 @@
    "id": "inside_job",
    "weight": 2,
    "harder": true,
-   "premise": "mission.c.caravan_guard.twist.inside_job"
+   "premise": "dlg:mission.c.caravan_guard.twist.inside_job"
   },
   {
    "id": "sabotage",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.caravan_guard.twist.sabotage"
+   "premise": "dlg:mission.c.caravan_guard.twist.sabotage"
   }
  ],
  "outcomes": {
@@ -188,8 +198,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.pack",
-  "bandit.archers"
+  "combat:group.road_ambush",
+  "combat:enemy.bandit_archer"
  ],
  "places": {
   "anchors": [
@@ -215,7 +225,7 @@
  "contested": false,
  "chain": "chain.merchant",
  "classic": true,
- "banter": "mission.banter.guard",
+ "banter": "dlg:mission.banter.guard",
  "_premise": "Guard a three-cart caravan for two days on the east road.",
  "_twists": {
   "inside_job": "Somebody in the caravan is signalling the raiders.",

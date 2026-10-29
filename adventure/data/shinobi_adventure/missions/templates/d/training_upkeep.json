@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "training",
  "status": "beta",
- "title": "mission.d.training_upkeep.title",
- "brief": "mission.d.training_upkeep.brief",
+ "title": "dlg:mission.d.training_upkeep.title",
+ "brief": "dlg:mission.d.training_upkeep.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.training_upkeep.brief",
+  "accept": "dlg:mission.d.training_upkeep.accept",
+  "decline": "dlg:mission.d.training_upkeep.decline",
+  "progress": "dlg:mission.d.training_upkeep.progress",
+  "success": "dlg:mission.d.training_upkeep.success",
+  "fail": "dlg:mission.d.training_upkeep.fail",
+  "report": "dlg:mission.d.training_upkeep.report"
+ },
  "minutes": 8,
  "party": "squad",
  "slots": {
@@ -107,13 +116,13 @@
    "id": "stray_shuriken",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.training_upkeep.twist.stray_shuriken"
+   "premise": "dlg:mission.d.training_upkeep.twist.stray_shuriken"
   },
   {
    "id": "challenge",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.training_upkeep.twist.challenge"
+   "premise": "dlg:mission.d.training_upkeep.twist.challenge"
   }
  ],
  "outcomes": {
@@ -149,7 +158,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.training",
+ "banter": "dlg:mission.banter.training",
  "_premise": "Repair the dummies and posts at a training ground and rake the field.",
  "_twists": {
   "stray_shuriken": "Last week's class left the grass full of shuriken.",

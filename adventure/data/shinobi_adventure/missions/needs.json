@@ -585,72 +585,27 @@
   ]
  },
  "enemy_groups": {
-  "assassin.team": [
-   "mission.a.daimyo_escort",
-   "mission.a.kiln_court",
-   "mission.b.envoy_escort",
-   "mission.s.coup",
-   "mission.s.peace_summit"
-  ],
-  "bandit.archers": [
+  "combat:enemy.bandit_archer": [
    "mission.c.caravan_guard"
   ],
-  "bandit.camp": [
+  "combat:enemy.bandit_chief": [
    "mission.c.bandit_clearing"
   ],
-  "bandit.fort_guard": [
-   "mission.b.fortress_infiltration",
-   "mission.b.warlord"
+  "combat:enemy.bandit_ronin": [
+   "mission.c.dojo_challenge",
+   "mission.c.escort_traveller"
   ],
-  "bandit.leader": [
-   "mission.c.bandit_clearing"
+  "combat:enemy.bear": [
+   "mission.c.bear"
   ],
-  "bandit.pack": [
-   "mission.c.caravan_guard",
-   "mission.c.escort_merchant",
-   "mission.c.haunted_inn",
-   "mission.c.outpost_supply"
+  "combat:enemy.boar": [
+   "mission.c.beast_hunt"
   ],
-  "bandit.pack_small": [
-   "mission.c.border_delivery",
-   "mission.c.escort_merchant",
-   "mission.c.escort_traveller",
-   "mission.c.kiln_delivery",
-   "mission.c.lead_genin",
-   "mission.c.wolf_pack"
-  ],
-  "bandit.thief": [
+  "combat:enemy.cat_burglar": [
    "mission.c.contest_thief",
    "mission.c.tracking"
   ],
-  "bandit.warlord": [
-   "mission.b.warlord"
-  ],
-  "beast.bear": [
-   "mission.c.bear"
-  ],
-  "beast.boar_giant": [
-   "mission.c.beast_hunt"
-  ],
-  "beast.great_serpent": [
-   "mission.a.forbidden_scroll"
-  ],
-  "beast.wolf_pack": [
-   "mission.c.missing_woodcutter",
-   "mission.c.outpost_supply",
-   "mission.c.wolf_pack"
-  ],
-  "enemy.cell": [
-   "mission.a.cell_hunt",
-   "mission.a.listening_post",
-   "mission.anbu.village_shadow",
-   "mission.s.peace_summit"
-  ],
-  "enemy.hunter_squad": [
-   "mission.a.agent_extraction",
-   "mission.b.allied_courier"
-  ],
-  "enemy.jonin": [
+  "combat:enemy.foreign_jonin": [
    "mission.a.assassination",
    "mission.a.border_skirmish",
    "mission.a.outpost_defence",
@@ -658,54 +613,65 @@
    "mission.s.coup",
    "mission.s.stronghold"
   ],
-  "enemy.platoon": [
+  "combat:enemy.giant_snake": [
+   "mission.a.forbidden_scroll"
+  ],
+  "combat:enemy.legend_rogue": [
+   "mission.s.rogue_legend"
+  ],
+  "combat:enemy.mercenary_captain": [
+   "mission.b.village_defence"
+  ],
+  "combat:enemy.rogue_chunin": [
+   "mission.b.bridge_builders",
+   "mission.b.capture_rogue",
+   "mission.b.scroll_recovery"
+  ],
+  "combat:enemy.rogue_jonin": [
+   "mission.anbu.hunter_nin"
+  ],
+  "combat:enemy.warlord": [
+   "mission.b.warlord"
+  ],
+  "combat:group.assassins": [
+   "mission.a.daimyo_escort",
+   "mission.a.kiln_court",
+   "mission.b.envoy_escort",
+   "mission.s.coup",
+   "mission.s.peace_summit"
+  ],
+  "combat:group.bandits_camp": [
+   "mission.c.bandit_clearing"
+  ],
+  "combat:group.bandits_small": [
+   "mission.c.border_delivery",
+   "mission.c.escort_merchant",
+   "mission.c.escort_traveller",
+   "mission.c.kiln_delivery",
+   "mission.c.lead_genin",
+   "mission.c.wolf_pack"
+  ],
+  "combat:group.cell_pair": [
+   "mission.a.cell_hunt",
+   "mission.a.listening_post",
+   "mission.anbu.village_shadow",
+   "mission.s.peace_summit"
+  ],
+  "combat:group.foreign_platoon": [
    "mission.a.border_skirmish",
    "mission.a.siege_relief"
   ],
-  "enemy.squad": [
+  "combat:group.foreign_squad": [
    "mission.a.forbidden_scroll",
    "mission.a.outpost_defence",
    "mission.anbu.silent_extraction",
    "mission.b.supply_sabotage"
   ],
-  "mercenary.band": [
-   "mission.b.village_defence"
+  "combat:group.fort_guards": [
+   "mission.b.fortress_infiltration",
+   "mission.b.warlord"
   ],
-  "mercenary.captain": [
-   "mission.b.village_defence"
-  ],
-  "missing_nin.chunin": [
-   "mission.b.bridge_builders",
-   "mission.b.capture_rogue",
-   "mission.b.scroll_recovery"
-  ],
-  "missing_nin.jonin": [
-   "mission.anbu.hunter_nin"
-  ],
-  "missing_nin.legend": [
-   "mission.s.rogue_legend"
-  ],
-  "missing_nin.pair": [
-   "mission.b.missing_nin_hunt",
-   "mission.b.scroll_recovery"
-  ],
-  "ronin.band": [
-   "mission.c.mountain_pass"
-  ],
-  "ronin.swordsman": [
-   "mission.c.dojo_challenge",
-   "mission.c.escort_traveller"
-  ],
-  "scout.enemy_pair": [
-   "mission.c.border_patrol",
-   "mission.c.courier_relay"
-  ],
-  "smuggler.crew": [
-   "mission.c.heirloom",
-   "mission.c.smugglers_ford",
-   "mission.c.warehouse_thefts"
-  ],
-  "thug.hired": [
+  "combat:group.hired_thugs": [
    "mission.b.bridge_builders",
    "mission.b.kiln_glaze",
    "mission.c.border_delivery",
@@ -713,11 +679,45 @@
    "mission.c.protect_shop",
    "mission.c.water_dispute"
   ],
-  "thug.kidnappers": [
+  "combat:group.hunter_squad": [
+   "mission.a.agent_extraction",
+   "mission.b.allied_courier"
+  ],
+  "combat:group.kidnappers": [
    "mission.b.hostage_rescue"
   ],
-  "thug.pickpockets": [
+  "combat:group.mercenary_band": [
+   "mission.b.village_defence"
+  ],
+  "combat:group.pickpockets": [
    "mission.c.festival_guard"
+  ],
+  "combat:group.road_ambush": [
+   "mission.c.caravan_guard",
+   "mission.c.escort_merchant",
+   "mission.c.haunted_inn",
+   "mission.c.outpost_supply"
+  ],
+  "combat:group.rogue_pair": [
+   "mission.b.missing_nin_hunt",
+   "mission.b.scroll_recovery"
+  ],
+  "combat:group.ronin_band": [
+   "mission.c.mountain_pass"
+  ],
+  "combat:group.scout_pair": [
+   "mission.c.border_patrol",
+   "mission.c.courier_relay"
+  ],
+  "combat:group.smugglers": [
+   "mission.c.heirloom",
+   "mission.c.smugglers_ford",
+   "mission.c.warehouse_thefts"
+  ],
+  "combat:group.wolves_pack": [
+   "mission.c.missing_woodcutter",
+   "mission.c.outpost_supply",
+   "mission.c.wolf_pack"
   ]
  },
  "items": {
@@ -1121,6 +1121,28 @@
    "mission.d.river_cleanup"
   ]
  },
+ "collectibles": {
+  "mission.d.festival_setup": "item:keepsake.festival_lantern",
+  "mission.d.kiln_firing": "item:keepsake.first_firing_cup",
+  "mission.d.lost_pet": "item:keepsake.pet_collar_charm",
+  "mission.d.river_cleanup": "item:keepsake.bottle_letter",
+  "mission.d.snow_clearing": "item:keepsake.snow_rabbit",
+  "mission.c.escort_merchant": "item:keepsake.trader_map",
+  "mission.c.bandit_clearing": "item:keepsake.bandit_banner",
+  "mission.c.beast_hunt": "item:keepsake.boar_tusk",
+  "mission.c.bear": "item:keepsake.honey_pot",
+  "mission.c.haunted_inn": "item:keepsake.ghost_lantern",
+  "mission.c.dojo_challenge": "item:keepsake.dojo_signboard",
+  "mission.c.contest_thief": "item:keepsake.burglar_mask",
+  "mission.c.noble_child": "item:keepsake.noble_fan",
+  "mission.c.kiln_delivery": "item:keepsake.market_bowl",
+  "mission.b.kiln_glaze": "item:keepsake.glaze_tile",
+  "mission.b.bridge_builders": "item:keepsake.bridge_plank",
+  "mission.a.kiln_court": "item:keepsake.court_vase",
+  "mission.a.siege_relief": "item:keepsake.castle_banner",
+  "mission.s.peace_summit": "item:keepsake.summit_seal",
+  "mission.anbu.village_shadow": "item:keepsake.festival_mask"
+ },
  "beta": {
   "anchors": [
    "academy.grounds",
@@ -1217,20 +1239,20 @@
    "region:east_road"
   ],
   "enemy_groups": [
-   "bandit.archers",
-   "bandit.camp",
-   "bandit.leader",
-   "bandit.pack",
-   "bandit.pack_small",
-   "bandit.thief",
-   "beast.bear",
-   "beast.boar_giant",
-   "beast.wolf_pack",
-   "ronin.swordsman",
-   "scout.enemy_pair",
-   "smuggler.crew",
-   "thug.hired",
-   "thug.pickpockets"
+   "combat:enemy.bandit_archer",
+   "combat:enemy.bandit_chief",
+   "combat:enemy.bandit_ronin",
+   "combat:enemy.bear",
+   "combat:enemy.boar",
+   "combat:enemy.cat_burglar",
+   "combat:group.bandits_camp",
+   "combat:group.bandits_small",
+   "combat:group.hired_thugs",
+   "combat:group.pickpockets",
+   "combat:group.road_ambush",
+   "combat:group.scout_pair",
+   "combat:group.smugglers",
+   "combat:group.wolves_pack"
   ],
   "items": [
    "beetle",

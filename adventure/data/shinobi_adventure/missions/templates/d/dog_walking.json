@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "pets",
  "status": "beta",
- "title": "mission.d.dog_walking.title",
- "brief": "mission.d.dog_walking.brief",
+ "title": "dlg:mission.d.dog_walking.title",
+ "brief": "dlg:mission.d.dog_walking.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.dog_walking.brief",
+  "accept": "dlg:mission.d.dog_walking.accept",
+  "decline": "dlg:mission.d.dog_walking.decline",
+  "progress": "dlg:mission.d.dog_walking.progress",
+  "success": "dlg:mission.d.dog_walking.success",
+  "fail": "dlg:mission.d.dog_walking.fail",
+  "report": "dlg:mission.d.dog_walking.report"
+ },
  "minutes": 8,
  "party": "squad_or_solo",
  "unlock": {
@@ -110,19 +119,19 @@
    "id": "scent_chase",
    "weight": 2,
    "harder": true,
-   "premise": "mission.d.dog_walking.twist.scent_chase"
+   "premise": "dlg:mission.d.dog_walking.twist.scent_chase"
   },
   {
    "id": "shy_pup",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.dog_walking.twist.shy_pup"
+   "premise": "dlg:mission.d.dog_walking.twist.shy_pup"
   },
   {
    "id": "lost_collar",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.dog_walking.twist.lost_collar"
+   "premise": "dlg:mission.d.dog_walking.twist.lost_collar"
   }
  ],
  "outcomes": {
@@ -160,7 +169,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.pets",
+ "banter": "dlg:mission.banter.pets",
  "_premise": "Walk the Inuzuka clinic's boarding ninken around the outer fields and bring every one back.",
  "_twists": {
   "scent_chase": "The pack catches a scent and bolts for the treeline.",

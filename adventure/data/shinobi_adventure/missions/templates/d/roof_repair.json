@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "repairs",
  "status": "beta",
- "title": "mission.d.roof_repair.title",
- "brief": "mission.d.roof_repair.brief",
+ "title": "dlg:mission.d.roof_repair.title",
+ "brief": "dlg:mission.d.roof_repair.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.roof_repair.brief",
+  "accept": "dlg:mission.d.roof_repair.accept",
+  "decline": "dlg:mission.d.roof_repair.decline",
+  "progress": "dlg:mission.d.roof_repair.progress",
+  "success": "dlg:mission.d.roof_repair.success",
+  "fail": "dlg:mission.d.roof_repair.fail",
+  "report": "dlg:mission.d.roof_repair.report"
+ },
  "minutes": 10,
  "party": "squad_or_solo",
  "slots": {
@@ -110,19 +119,19 @@
    "id": "bird_nest",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.roof_repair.twist.bird_nest"
+   "premise": "dlg:mission.d.roof_repair.twist.bird_nest"
   },
   {
    "id": "stuck_cat",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.roof_repair.twist.stuck_cat"
+   "premise": "dlg:mission.d.roof_repair.twist.stuck_cat"
   },
   {
    "id": "rain",
    "weight": 1,
    "harder": true,
-   "premise": "mission.d.roof_repair.twist.rain"
+   "premise": "dlg:mission.d.roof_repair.twist.rain"
   }
  ],
  "outcomes": {
@@ -161,7 +170,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.repairs",
+ "banter": "dlg:mission.banter.repairs",
  "_premise": "Patch a leaking roof before the evening rain.",
  "_twists": {
   "bird_nest": "A swallow has nested right over the leak.",

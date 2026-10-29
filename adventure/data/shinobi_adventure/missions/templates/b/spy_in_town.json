@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "investigation",
  "status": "later",
- "title": "mission.b.spy_in_town.title",
- "brief": "mission.b.spy_in_town.brief",
+ "title": "dlg:mission.b.spy_in_town.title",
+ "brief": "dlg:mission.b.spy_in_town.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.spy_in_town.brief",
+  "accept": "dlg:mission.b.spy_in_town.accept",
+  "decline": "dlg:mission.b.spy_in_town.decline",
+  "progress": "dlg:mission.b.spy_in_town.progress",
+  "success": "dlg:mission.b.spy_in_town.success",
+  "fail": "dlg:mission.b.spy_in_town.fail",
+  "report": "dlg:mission.b.spy_in_town.report"
+ },
  "minutes": 40,
  "party": "squad",
  "days": 2,
@@ -93,7 +102,8 @@
      "a": null,
      "b": null,
      "c": null
-    }
+    },
+    "dialogue": "dlg:mission.b.spy_in_town.choice.accuse"
    },
    "next": "report"
   },
@@ -111,21 +121,21 @@
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.spy_in_town.twist.spy_a"
+   "premise": "dlg:mission.b.spy_in_town.twist.spy_a"
   },
   {
    "id": "spy_b",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.spy_in_town.twist.spy_b"
+   "premise": "dlg:mission.b.spy_in_town.twist.spy_b"
   },
   {
    "id": "spy_c",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.spy_in_town.twist.spy_c"
+   "premise": "dlg:mission.b.spy_in_town.twist.spy_c"
   }
  ],
  "outcomes": {
@@ -165,7 +175,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.investigation",
+ "banter": "dlg:mission.banter.investigation",
  "_premise": "Find the spy who sells the post town's caravan schedules to raiders.",
  "_twists": {
   "spy_a": "The rolled spy is the first suspect.",

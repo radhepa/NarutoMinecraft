@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "shrine",
  "status": "beta",
- "title": "mission.d.shrine_cleaning.title",
- "brief": "mission.d.shrine_cleaning.brief",
+ "title": "dlg:mission.d.shrine_cleaning.title",
+ "brief": "dlg:mission.d.shrine_cleaning.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.shrine_cleaning.brief",
+  "accept": "dlg:mission.d.shrine_cleaning.accept",
+  "decline": "dlg:mission.d.shrine_cleaning.decline",
+  "progress": "dlg:mission.d.shrine_cleaning.progress",
+  "success": "dlg:mission.d.shrine_cleaning.success",
+  "fail": "dlg:mission.d.shrine_cleaning.fail",
+  "report": "dlg:mission.d.shrine_cleaning.report"
+ },
  "minutes": 8,
  "party": "squad_or_solo",
  "slots": {
@@ -96,13 +105,13 @@
    "id": "crows",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.shrine_cleaning.twist.crows"
+   "premise": "dlg:mission.d.shrine_cleaning.twist.crows"
   },
   {
    "id": "fox_offering",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.shrine_cleaning.twist.fox_offering"
+   "premise": "dlg:mission.d.shrine_cleaning.twist.fox_offering"
   }
  ],
  "outcomes": {
@@ -139,7 +148,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.shrine",
+ "banter": "dlg:mission.banter.shrine",
  "_premise": "Sweep the shrine steps and re-tie the weathered charms.",
  "_twists": {
   "crows": "The crows have been stealing offerings and hoarding them on the roof.",

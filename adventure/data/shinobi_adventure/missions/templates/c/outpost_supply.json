@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "delivery",
  "status": "beta",
- "title": "mission.c.outpost_supply.title",
- "brief": "mission.c.outpost_supply.brief",
+ "title": "dlg:mission.c.outpost_supply.title",
+ "brief": "dlg:mission.c.outpost_supply.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.outpost_supply.brief",
+  "accept": "dlg:mission.c.outpost_supply.accept",
+  "decline": "dlg:mission.c.outpost_supply.decline",
+  "progress": "dlg:mission.c.outpost_supply.progress",
+  "success": "dlg:mission.c.outpost_supply.success",
+  "fail": "dlg:mission.c.outpost_supply.fail",
+  "report": "dlg:mission.c.outpost_supply.report"
+ },
  "minutes": 30,
  "party": "squad",
  "days": 2,
@@ -42,8 +51,8 @@
   "raiders": {
    "pick": "enemy_group",
    "from": [
-    "bandit.pack",
-    "beast.wolf_pack"
+    "combat:group.road_ambush",
+    "combat:group.wolves_pack"
    ]
   }
  },
@@ -127,14 +136,14 @@
    "id": "outpost_sick",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.outpost_supply.twist.outpost_sick"
+   "premise": "dlg:mission.c.outpost_supply.twist.outpost_sick"
   },
   {
    "id": "landslide",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.c.outpost_supply.twist.landslide"
+   "premise": "dlg:mission.c.outpost_supply.twist.landslide"
   }
  ],
  "outcomes": {
@@ -153,8 +162,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.pack",
-  "beast.wolf_pack"
+  "combat:group.road_ambush",
+  "combat:group.wolves_pack"
  ],
  "places": {
   "anchors": [
@@ -179,7 +188,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.delivery",
+ "banter": "dlg:mission.banter.delivery",
  "_premise": "Bring a cart of supplies up to a watch outpost in the hills.",
  "_twists": {
   "outpost_sick": "Half the outpost is down with fever.",

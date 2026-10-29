@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "anbu",
  "status": "later",
- "title": "mission.anbu.corrupt_official.title",
- "brief": "mission.anbu.corrupt_official.brief",
+ "title": "dlg:mission.anbu.corrupt_official.title",
+ "brief": "dlg:mission.anbu.corrupt_official.brief",
+ "dialogue": {
+  "brief": "dlg:mission.anbu.corrupt_official.brief",
+  "accept": "dlg:mission.anbu.corrupt_official.accept",
+  "decline": "dlg:mission.anbu.corrupt_official.decline",
+  "progress": "dlg:mission.anbu.corrupt_official.progress",
+  "success": "dlg:mission.anbu.corrupt_official.success",
+  "fail": "dlg:mission.anbu.corrupt_official.fail",
+  "report": "dlg:mission.anbu.corrupt_official.report"
+ },
  "minutes": 45,
  "party": "anbu_cell",
  "unlock": {
@@ -58,7 +67,8 @@
     "options": {
      "expose": null,
      "leverage": "kept_leverage"
-    }
+    },
+    "dialogue": "dlg:mission.anbu.corrupt_official.choice.decide"
    },
    "next": "report"
   },
@@ -76,14 +86,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.anbu.corrupt_official.twist.blackmailed"
+   "premise": "dlg:mission.anbu.corrupt_official.twist.blackmailed"
   },
   {
    "id": "rival_agent",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.anbu.corrupt_official.twist.rival_agent"
+   "premise": "dlg:mission.anbu.corrupt_official.twist.rival_agent"
   }
  ],
  "outcomes": {
@@ -128,7 +138,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.anbu",
+ "banter": "dlg:mission.banter.anbu",
  "_premise": "Gather proof against an official of the daimyo's court who sells border passes.",
  "_twists": {
   "blackmailed": "The official is being blackmailed into it.",

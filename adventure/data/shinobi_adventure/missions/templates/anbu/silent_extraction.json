@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "anbu",
  "status": "later",
- "title": "mission.anbu.silent_extraction.title",
- "brief": "mission.anbu.silent_extraction.brief",
+ "title": "dlg:mission.anbu.silent_extraction.title",
+ "brief": "dlg:mission.anbu.silent_extraction.brief",
+ "dialogue": {
+  "brief": "dlg:mission.anbu.silent_extraction.brief",
+  "accept": "dlg:mission.anbu.silent_extraction.accept",
+  "decline": "dlg:mission.anbu.silent_extraction.decline",
+  "progress": "dlg:mission.anbu.silent_extraction.progress",
+  "success": "dlg:mission.anbu.silent_extraction.success",
+  "fail": "dlg:mission.anbu.silent_extraction.fail",
+  "report": "dlg:mission.anbu.silent_extraction.report"
+ },
  "minutes": 50,
  "party": "anbu_cell",
  "unlock": {
@@ -26,7 +35,7 @@
   "guards": {
    "pick": "enemy_group",
    "from": [
-    "enemy.squad"
+    "combat:group.foreign_squad"
    ]
   }
  },
@@ -68,14 +77,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.anbu.silent_extraction.twist.drugged"
+   "premise": "dlg:mission.anbu.silent_extraction.twist.drugged"
   },
   {
    "id": "trap",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.anbu.silent_extraction.twist.trap"
+   "premise": "dlg:mission.anbu.silent_extraction.twist.trap"
   }
  ],
  "outcomes": {
@@ -93,7 +102,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.squad"
+  "combat:group.foreign_squad"
  ],
  "places": {
   "anchors": [
@@ -116,7 +125,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.anbu",
+ "banter": "dlg:mission.banter.anbu",
  "_premise": "Take a prisoner out of an enemy camp without anyone knowing the Leaf was there.",
  "_twists": {
   "drugged": "The prisoner is drugged and must be carried.",

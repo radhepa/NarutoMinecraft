@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "harvest",
  "status": "beta",
- "title": "mission.d.harvest.title",
- "brief": "mission.d.harvest.brief",
+ "title": "dlg:mission.d.harvest.title",
+ "brief": "dlg:mission.d.harvest.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.harvest.brief",
+  "accept": "dlg:mission.d.harvest.accept",
+  "decline": "dlg:mission.d.harvest.decline",
+  "progress": "dlg:mission.d.harvest.progress",
+  "success": "dlg:mission.d.harvest.success",
+  "fail": "dlg:mission.d.harvest.fail",
+  "report": "dlg:mission.d.harvest.report"
+ },
  "minutes": 12,
  "party": "squad",
  "season": [
@@ -120,19 +129,19 @@
    "id": "hungry_deer",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.harvest.twist.hungry_deer"
+   "premise": "dlg:mission.d.harvest.twist.hungry_deer"
   },
   {
    "id": "storm",
    "weight": 1,
    "harder": true,
-   "premise": "mission.d.harvest.twist.storm"
+   "premise": "dlg:mission.d.harvest.twist.storm"
   },
   {
    "id": "broken_axle",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.harvest.twist.broken_axle"
+   "premise": "dlg:mission.d.harvest.twist.broken_axle"
   }
  ],
  "outcomes": {
@@ -172,7 +181,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.harvest",
+ "banter": "dlg:mission.banter.harvest",
  "_premise": "Bring a farm's harvest in before the rain.",
  "_twists": {
   "hungry_deer": "Deer from the clan forest have found the field first; shoo them gently.",

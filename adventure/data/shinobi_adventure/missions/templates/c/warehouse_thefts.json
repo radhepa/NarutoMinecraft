@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "investigation",
  "status": "beta",
- "title": "mission.c.warehouse_thefts.title",
- "brief": "mission.c.warehouse_thefts.brief",
+ "title": "dlg:mission.c.warehouse_thefts.title",
+ "brief": "dlg:mission.c.warehouse_thefts.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.warehouse_thefts.brief",
+  "accept": "dlg:mission.c.warehouse_thefts.accept",
+  "decline": "dlg:mission.c.warehouse_thefts.decline",
+  "progress": "dlg:mission.c.warehouse_thefts.progress",
+  "success": "dlg:mission.c.warehouse_thefts.success",
+  "fail": "dlg:mission.c.warehouse_thefts.fail",
+  "report": "dlg:mission.c.warehouse_thefts.report"
+ },
  "minutes": 30,
  "party": "squad",
  "unlock": {
@@ -62,7 +71,7 @@
   "fence": {
    "pick": "enemy_group",
    "from": [
-    "smuggler.crew"
+    "combat:group.smugglers"
    ]
   },
   "fence_spot": {
@@ -150,7 +159,8 @@
      "night_guard": null,
      "clerk": null,
      "porter": null
-    }
+    },
+    "dialogue": "dlg:mission.c.warehouse_thefts.choice.accuse"
    },
    "next": "report"
   },
@@ -168,21 +178,21 @@
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.c.warehouse_thefts.twist.culprit_guard"
+   "premise": "dlg:mission.c.warehouse_thefts.twist.culprit_guard"
   },
   {
    "id": "culprit_clerk",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.c.warehouse_thefts.twist.culprit_clerk"
+   "premise": "dlg:mission.c.warehouse_thefts.twist.culprit_clerk"
   },
   {
    "id": "culprit_porter",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.c.warehouse_thefts.twist.culprit_porter"
+   "premise": "dlg:mission.c.warehouse_thefts.twist.culprit_porter"
   }
  ],
  "outcomes": {
@@ -201,7 +211,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "smuggler.crew"
+  "combat:group.smugglers"
  ],
  "places": {
   "anchors": [
@@ -223,7 +233,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.investigation",
+ "banter": "dlg:mission.banter.investigation",
  "_premise": "Goods keep vanishing from a warehouse; stake it out and find out who.",
  "_twists": {
   "culprit_guard": "The rolled culprit is the night guard.",

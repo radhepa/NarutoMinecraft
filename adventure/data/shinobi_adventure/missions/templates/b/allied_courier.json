@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "courier",
  "status": "later",
- "title": "mission.b.allied_courier.title",
- "brief": "mission.b.allied_courier.brief",
+ "title": "dlg:mission.b.allied_courier.title",
+ "brief": "dlg:mission.b.allied_courier.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.allied_courier.brief",
+  "accept": "dlg:mission.b.allied_courier.accept",
+  "decline": "dlg:mission.b.allied_courier.decline",
+  "progress": "dlg:mission.b.allied_courier.progress",
+  "success": "dlg:mission.b.allied_courier.success",
+  "fail": "dlg:mission.b.allied_courier.fail",
+  "report": "dlg:mission.b.allied_courier.report"
+ },
  "minutes": 35,
  "party": "squad",
  "unlock": {
@@ -27,7 +36,7 @@
   "hunters": {
    "pick": "enemy_group",
    "from": [
-    "enemy.hunter_squad"
+    "combat:group.hunter_squad"
    ]
   }
  },
@@ -95,14 +104,14 @@
    "id": "hunters",
    "weight": 2,
    "harder": true,
-   "premise": "mission.b.allied_courier.twist.hunters"
+   "premise": "dlg:mission.b.allied_courier.twist.hunters"
   },
   {
    "id": "cipher",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.allied_courier.twist.cipher"
+   "premise": "dlg:mission.b.allied_courier.twist.cipher"
   }
  ],
  "outcomes": {
@@ -121,7 +130,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.hunter_squad"
+  "combat:group.hunter_squad"
  ],
  "places": {
   "anchors": [
@@ -144,7 +153,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.courier",
+ "banter": "dlg:mission.banter.courier",
  "_premise": "Carry a treaty draft to an allied village, through land where others would like to read it.",
  "_twists": {
   "hunters": "A hunter squad has been sent to take it from you.",

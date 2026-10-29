@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "hospital",
  "status": "beta",
- "title": "mission.d.hospital_orderly.title",
- "brief": "mission.d.hospital_orderly.brief",
+ "title": "dlg:mission.d.hospital_orderly.title",
+ "brief": "dlg:mission.d.hospital_orderly.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.hospital_orderly.brief",
+  "accept": "dlg:mission.d.hospital_orderly.accept",
+  "decline": "dlg:mission.d.hospital_orderly.decline",
+  "progress": "dlg:mission.d.hospital_orderly.progress",
+  "success": "dlg:mission.d.hospital_orderly.success",
+  "fail": "dlg:mission.d.hospital_orderly.fail",
+  "report": "dlg:mission.d.hospital_orderly.report"
+ },
  "minutes": 10,
  "party": "squad",
  "slots": {
@@ -101,13 +110,13 @@
    "id": "wanderer",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.hospital_orderly.twist.wanderer"
+   "premise": "dlg:mission.d.hospital_orderly.twist.wanderer"
   },
   {
    "id": "herb_shortage",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.hospital_orderly.twist.herb_shortage"
+   "premise": "dlg:mission.d.hospital_orderly.twist.herb_shortage"
   }
  ],
  "outcomes": {
@@ -144,7 +153,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.hospital",
+ "banter": "dlg:mission.banter.hospital",
  "_premise": "Help on the wards for a day: linens, meals and errands for the medics.",
  "_twists": {
   "wanderer": "A confused old patient has walked out in his slippers.",

@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "shop",
  "status": "beta",
- "title": "mission.d.flower_order.title",
- "brief": "mission.d.flower_order.brief",
+ "title": "dlg:mission.d.flower_order.title",
+ "brief": "dlg:mission.d.flower_order.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.flower_order.brief",
+  "accept": "dlg:mission.d.flower_order.accept",
+  "decline": "dlg:mission.d.flower_order.decline",
+  "progress": "dlg:mission.d.flower_order.progress",
+  "success": "dlg:mission.d.flower_order.success",
+  "fail": "dlg:mission.d.flower_order.fail",
+  "report": "dlg:mission.d.flower_order.report"
+ },
  "minutes": 8,
  "party": "solo",
  "slots": {
@@ -95,13 +104,13 @@
    "id": "wrong_meaning",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.flower_order.twist.wrong_meaning"
+   "premise": "dlg:mission.d.flower_order.twist.wrong_meaning"
   },
   {
    "id": "wilting",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.flower_order.twist.wilting"
+   "premise": "dlg:mission.d.flower_order.twist.wilting"
   }
  ],
  "outcomes": {
@@ -138,7 +147,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.shop",
+ "banter": "dlg:mission.banter.shop",
  "_premise": "Help the Yamanaka flower shop fill a wedding order, every flower saying the right thing.",
  "_twists": {
   "wrong_meaning": "Half the order says 'farewell' in the language of flowers.",

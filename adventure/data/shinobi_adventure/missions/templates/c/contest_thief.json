@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "contest",
  "status": "beta",
- "title": "mission.c.contest_thief.title",
- "brief": "mission.c.contest_thief.brief",
+ "title": "dlg:mission.c.contest_thief.title",
+ "brief": "dlg:mission.c.contest_thief.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.contest_thief.brief",
+  "accept": "dlg:mission.c.contest_thief.accept",
+  "decline": "dlg:mission.c.contest_thief.decline",
+  "progress": "dlg:mission.c.contest_thief.progress",
+  "success": "dlg:mission.c.contest_thief.success",
+  "fail": "dlg:mission.c.contest_thief.fail",
+  "report": "dlg:mission.c.contest_thief.report"
+ },
  "minutes": 20,
  "party": "squad",
  "unlock": {
@@ -40,7 +49,7 @@
   "burglar": {
    "pick": "enemy_group",
    "from": [
-    "bandit.thief"
+    "combat:enemy.cat_burglar"
    ]
   },
   "rival_squad": {
@@ -110,14 +119,14 @@
    "id": "rival_trick",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.contest_thief.twist.rival_trick"
+   "premise": "dlg:mission.c.contest_thief.twist.rival_trick"
   },
   {
    "id": "team_up",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.c.contest_thief.twist.team_up"
+   "premise": "dlg:mission.c.contest_thief.twist.team_up"
   }
  ],
  "outcomes": {
@@ -152,7 +161,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.thief"
+  "combat:enemy.cat_burglar"
  ],
  "places": {
   "anchors": [
@@ -174,7 +183,7 @@
  ],
  "contested": true,
  "classic": true,
- "banter": "mission.banter.contest",
+ "banter": "dlg:mission.banter.contest",
  "_premise": "The desk sent two squads after the same cat burglar; the squad that brings them in gets the pay.",
  "_twists": {
   "rival_trick": "The rival squad sends you down the wrong street.",

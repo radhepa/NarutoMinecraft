@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "river",
  "status": "beta",
- "title": "mission.d.river_cleanup.title",
- "brief": "mission.d.river_cleanup.brief",
+ "title": "dlg:mission.d.river_cleanup.title",
+ "brief": "dlg:mission.d.river_cleanup.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.river_cleanup.brief",
+  "accept": "dlg:mission.d.river_cleanup.accept",
+  "decline": "dlg:mission.d.river_cleanup.decline",
+  "progress": "dlg:mission.d.river_cleanup.progress",
+  "success": "dlg:mission.d.river_cleanup.success",
+  "fail": "dlg:mission.d.river_cleanup.fail",
+  "report": "dlg:mission.d.river_cleanup.report"
+ },
  "minutes": 10,
  "party": "squad_or_solo",
  "slots": {
@@ -100,19 +109,19 @@
    "id": "bottle",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.river_cleanup.twist.bottle"
+   "premise": "dlg:mission.d.river_cleanup.twist.bottle"
   },
   {
    "id": "snagged_net",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.river_cleanup.twist.snagged_net"
+   "premise": "dlg:mission.d.river_cleanup.twist.snagged_net"
   },
   {
    "id": "midstream",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.river_cleanup.twist.midstream"
+   "premise": "dlg:mission.d.river_cleanup.twist.midstream"
   }
  ],
  "outcomes": {
@@ -148,7 +157,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.river",
+ "banter": "dlg:mission.banter.river",
  "_premise": "Fish the rubbish out of the river below the market bridge.",
  "_twists": {
   "bottle": "A bottle with a letter inside, addressed to someone in the village.",

@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "cooking",
  "status": "beta",
- "title": "mission.d.kitchen_help.title",
- "brief": "mission.d.kitchen_help.brief",
+ "title": "dlg:mission.d.kitchen_help.title",
+ "brief": "dlg:mission.d.kitchen_help.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.kitchen_help.brief",
+  "accept": "dlg:mission.d.kitchen_help.accept",
+  "decline": "dlg:mission.d.kitchen_help.decline",
+  "progress": "dlg:mission.d.kitchen_help.progress",
+  "success": "dlg:mission.d.kitchen_help.success",
+  "fail": "dlg:mission.d.kitchen_help.fail",
+  "report": "dlg:mission.d.kitchen_help.report"
+ },
  "minutes": 10,
  "party": "squad",
  "slots": {
@@ -72,7 +81,8 @@
     "options": {
      "honest": null,
      "polite": null
-    }
+    },
+    "dialogue": "dlg:mission.d.kitchen_help.choice.taste"
    },
    "next": "serve"
   },
@@ -98,13 +108,13 @@
    "id": "missing_spice",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.kitchen_help.twist.missing_spice"
+   "premise": "dlg:mission.d.kitchen_help.twist.missing_spice"
   },
   {
    "id": "taste_test",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.kitchen_help.twist.taste_test"
+   "premise": "dlg:mission.d.kitchen_help.twist.taste_test"
   }
  ],
  "outcomes": {
@@ -145,7 +155,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.cooking",
+ "banter": "dlg:mission.banter.cooking",
  "_premise": "Help the barbecue house's kitchen through a big party's order.",
  "_twists": {
   "missing_spice": "The house spice ran out mid-service.",

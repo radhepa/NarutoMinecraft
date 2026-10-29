@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "recovery",
  "status": "later",
- "title": "mission.b.kiln_glaze.title",
- "brief": "mission.b.kiln_glaze.brief",
+ "title": "dlg:mission.b.kiln_glaze.title",
+ "brief": "dlg:mission.b.kiln_glaze.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.kiln_glaze.brief",
+  "accept": "dlg:mission.b.kiln_glaze.accept",
+  "decline": "dlg:mission.b.kiln_glaze.decline",
+  "progress": "dlg:mission.b.kiln_glaze.progress",
+  "success": "dlg:mission.b.kiln_glaze.success",
+  "fail": "dlg:mission.b.kiln_glaze.fail",
+  "report": "dlg:mission.b.kiln_glaze.report"
+ },
  "minutes": 40,
  "party": "squad",
  "unlock": {
@@ -24,7 +33,7 @@
   "guards": {
    "pick": "enemy_group",
    "from": [
-    "thug.hired"
+    "combat:group.hired_thugs"
    ]
   }
  },
@@ -86,14 +95,14 @@
    "id": "copied",
    "weight": 2,
    "harder": false,
-   "premise": "mission.b.kiln_glaze.twist.copied"
+   "premise": "dlg:mission.b.kiln_glaze.twist.copied"
   },
   {
    "id": "rival_is_family",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.b.kiln_glaze.twist.rival_is_family"
+   "premise": "dlg:mission.b.kiln_glaze.twist.rival_is_family"
   }
  ],
  "outcomes": {
@@ -112,7 +121,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "thug.hired"
+  "combat:group.hired_thugs"
  ],
  "places": {
   "anchors": [
@@ -137,7 +146,7 @@
  "contested": false,
  "chain": "chain.kiln",
  "classic": true,
- "banter": "mission.banter.recovery",
+ "banter": "dlg:mission.banter.recovery",
  "_premise": "The kiln family's secret glaze recipe was stolen by a workshop across the border; get it back quietly.",
  "_twists": {
   "copied": "They have already made copies.",

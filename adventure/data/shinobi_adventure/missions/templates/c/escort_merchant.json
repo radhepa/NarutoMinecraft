@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "escort",
  "status": "beta",
- "title": "mission.c.escort_merchant.title",
- "brief": "mission.c.escort_merchant.brief",
+ "title": "dlg:mission.c.escort_merchant.title",
+ "brief": "dlg:mission.c.escort_merchant.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.escort_merchant.brief",
+  "accept": "dlg:mission.c.escort_merchant.accept",
+  "decline": "dlg:mission.c.escort_merchant.decline",
+  "progress": "dlg:mission.c.escort_merchant.progress",
+  "success": "dlg:mission.c.escort_merchant.success",
+  "fail": "dlg:mission.c.escort_merchant.fail",
+  "report": "dlg:mission.c.escort_merchant.report"
+ },
  "minutes": 30,
  "party": "squad",
  "days": 2,
@@ -46,8 +55,8 @@
   "bandits": {
    "pick": "enemy_group",
    "from": [
-    "bandit.pack_small",
-    "bandit.pack"
+    "combat:group.bandits_small",
+    "combat:group.road_ambush"
    ]
   },
   "bridge": {
@@ -141,7 +150,7 @@
    "on_enter": [
     {
      "spawn_group": [
-      "bandit.pack_small",
+      "combat:group.bandits_small",
       "slot:camp"
      ]
     }
@@ -177,7 +186,8 @@
     "options": {
      "hand_over": null,
      "let_go": "bandits_released"
-    }
+    },
+    "dialogue": "dlg:mission.c.escort_merchant.choice.captive"
    },
    "next": "report"
   },
@@ -194,19 +204,19 @@
    "id": "bridge_out",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.escort_merchant.twist.bridge_out"
+   "premise": "dlg:mission.c.escort_merchant.twist.bridge_out"
   },
   {
    "id": "night_raid",
    "weight": 2,
    "harder": true,
-   "premise": "mission.c.escort_merchant.twist.night_raid"
+   "premise": "dlg:mission.c.escort_merchant.twist.night_raid"
   },
   {
    "id": "extra_passenger",
    "weight": 1,
    "harder": false,
-   "premise": "mission.c.escort_merchant.twist.extra_passenger"
+   "premise": "dlg:mission.c.escort_merchant.twist.extra_passenger"
   }
  ],
  "outcomes": {
@@ -223,7 +233,7 @@
   "bandits_released": {
    "pay": 0.9,
    "standing": 0,
-   "rival_risk": "bandit.pack_small"
+   "rival_risk": "combat:group.bandits_small"
   }
  },
  "bonus": [
@@ -236,8 +246,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "bandit.pack_small",
-  "bandit.pack"
+  "combat:group.bandits_small",
+  "combat:group.road_ambush"
  ],
  "places": {
   "anchors": [
@@ -266,7 +276,7 @@
  "contested": false,
  "chain": "chain.merchant",
  "classic": true,
- "banter": "mission.banter.escort",
+ "banter": "dlg:mission.banter.escort",
  "_premise": "Escort a travelling trader and his cart along the east road to the waystation.",
  "_twists": {
   "bridge_out": "The bridge is down; the ford is slower and easier to ambush.",

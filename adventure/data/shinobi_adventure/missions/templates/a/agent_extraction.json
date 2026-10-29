@@ -5,8 +5,17 @@
  "rank": "a",
  "category": "extraction",
  "status": "later",
- "title": "mission.a.agent_extraction.title",
- "brief": "mission.a.agent_extraction.brief",
+ "title": "dlg:mission.a.agent_extraction.title",
+ "brief": "dlg:mission.a.agent_extraction.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.agent_extraction.brief",
+  "accept": "dlg:mission.a.agent_extraction.accept",
+  "decline": "dlg:mission.a.agent_extraction.decline",
+  "progress": "dlg:mission.a.agent_extraction.progress",
+  "success": "dlg:mission.a.agent_extraction.success",
+  "fail": "dlg:mission.a.agent_extraction.fail",
+  "report": "dlg:mission.a.agent_extraction.report"
+ },
  "minutes": 50,
  "party": "squad",
  "unlock": {
@@ -27,7 +36,7 @@
   "hunters": {
    "pick": "enemy_group",
    "from": [
-    "enemy.hunter_squad"
+    "combat:group.hunter_squad"
    ]
   }
  },
@@ -77,14 +86,14 @@
    "weight": 2,
    "harder": false,
    "modifier": true,
-   "premise": "mission.a.agent_extraction.twist.agent_wounded"
+   "premise": "dlg:mission.a.agent_extraction.twist.agent_wounded"
   },
   {
    "id": "agent_turned",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.a.agent_extraction.twist.agent_turned"
+   "premise": "dlg:mission.a.agent_extraction.twist.agent_turned"
   }
  ],
  "outcomes": {
@@ -102,7 +111,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "enemy.hunter_squad"
+  "combat:group.hunter_squad"
  ],
  "places": {
   "anchors": [
@@ -125,7 +134,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.extraction",
+ "banter": "dlg:mission.banter.extraction",
  "_premise": "Bring home a Leaf agent whose cover in a foreign village has been blown.",
  "_twists": {
   "agent_wounded": "The agent cannot walk.",

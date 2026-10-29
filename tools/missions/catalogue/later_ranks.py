@@ -29,7 +29,7 @@ add(mission(
     premise="Slip into a bandit warlord's hill fort and bring out the ledger of who pays him.",
     client=resident(job="magistrate", resident_of="any"),
     slots={"fort": region("region:hill_fort"), "wall": anchor("fort.wall"), "keep": anchor("fort.keep"),
-           "guards": enemy_group("bandit.fort_guard"), "gate": anchor("fort.gate")},
+           "guards": enemy_group("combat:group.fort_guards"), "gate": anchor("fort.gate")},
     steps=[
         travel("approach"),
         S("approach", sneak("slot:wall"), "keep", optional=["unseen"]),
@@ -45,7 +45,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("prisoner", 2), twist("alarm", 2, harder=True)],
-    bonus=["unseen", "no_alarm", "no_knockouts"], enemies=["bandit.fort_guard"], regions=["region:hill_fort"],
+    bonus=["unseen", "no_alarm", "no_knockouts"], enemies=["combat:group.fort_guards"], regions=["region:hill_fort"],
     tags=["stealth", "infiltration", "travel"],
     twist_premises={"prisoner": "A prisoner in the cellar begs to be taken along.",
                     "alarm": "A dog catches your scent on the way out."}))
@@ -54,19 +54,19 @@ add(mission(
     "mission.b.scroll_recovery", "b", "recovery", minutes=40, pay=0.55, unlock=CHUNIN,
     premise="Two missing-nin stole a sealed technique scroll from a temple; get it back before they sell it.",
     client=resident(job="priest", resident_of="any"),
-    slots={"trail": anchor("forest.trail"), "camp": anchor("forest.camp"), "pair": enemy_group("missing_nin.pair")},
+    slots={"trail": anchor("forest.trail"), "camp": anchor("forest.camp"), "pair": enemy_group("combat:group.rogue_pair")},
     steps=[
         travel("trail"),
         S("trail", inspect("tracks", at="slot:trail", count=4), "camp"),
         S("camp", defeat("slot:pair", at="slot:camp"), "scroll", on_enter=[{"spawn_group": ["slot:pair", "slot:camp"]}]),
         S("scroll", collect("sealed_scroll", at="slot:camp"), "report",
           branch=[(twist_if("buyer"), "buyer")]),
-        S("buyer", defeat("missing_nin.chunin", at="slot:camp"), "report",
-          on_enter=[{"spawn_group": ["missing_nin.chunin", "slot:camp"]}]),
+        S("buyer", defeat("combat:enemy.rogue_chunin", at="slot:camp"), "report",
+          on_enter=[{"spawn_group": ["combat:enemy.rogue_chunin", "slot:camp"]}]),
         S("report", deliver("sealed_scroll", C), None),
     ],
     twists=[twist("buyer", 2, harder=True), twist("decoy_scroll", 1, modifier=True)],
-    fast_hours=24, bonus=["fast", "no_knockouts", "clean_record"], enemies=["missing_nin.pair", "missing_nin.chunin"],
+    fast_hours=24, bonus=["fast", "no_knockouts", "clean_record"], enemies=["combat:group.rogue_pair", "combat:enemy.rogue_chunin"],
     regions=["region:northern_forest"], tags=["travel", "fight", "recovery", "tracking"],
     twist_premises={"buyer": "The buyer arrives as you take the scroll back.",
                     "decoy_scroll": "The scroll they carry is a decoy; the real one is buried at their camp."}))
@@ -75,19 +75,19 @@ add(mission(
     "mission.b.village_defence", "b", "defence", minutes=45, days=2, pay=0.6, unlock=CHUNIN,
     premise="A border village expects a raid by a mercenary band; prepare its defences and hold.",
     client=resident(job="headman", resident_of="any"),
-    slots={"square": anchor("border.square"), "walls": anchor("border.palisade"), "band": enemy_group("mercenary.band")},
+    slots={"square": anchor("border.square"), "walls": anchor("border.palisade"), "band": enemy_group("combat:group.mercenary_band")},
     steps=[
         travel("prepare"),
         S("prepare", perform("set_trap", at="slot:walls", count=6), "train"),
         S("train", perform("drill_villagers", at="slot:square", count=3), "hold"),
         S("hold", survive("06:00", at="slot:walls"), "report", on_enter=[{"spawn_group": ["slot:band", "slot:walls"]}],
           branch=[(twist_if("second_wave"), "wave")]),
-        S("wave", defeat("mercenary.captain", at="slot:square"), "report",
-          on_enter=[{"spawn_group": ["mercenary.captain", "slot:square"]}]),
+        S("wave", defeat("combat:enemy.mercenary_captain", at="slot:square"), "report",
+          on_enter=[{"spawn_group": ["combat:enemy.mercenary_captain", "slot:square"]}]),
         S("report", talk(C), None),
     ],
     twists=[twist("second_wave", 2, harder=True), twist("traitor_villager", 1, modifier=True)],
-    bonus=["client_unharmed", "no_knockouts", "teamwork"], enemies=["mercenary.band", "mercenary.captain"],
+    bonus=["client_unharmed", "no_knockouts", "teamwork"], enemies=["combat:group.mercenary_band", "combat:enemy.mercenary_captain"],
     regions=["region:border_village"], tags=["travel", "defence", "fight"],
     twist_premises={"second_wave": "Their captain comes himself at dawn.",
                     "traitor_villager": "Someone in the village opened a gate last time."}))
@@ -96,7 +96,7 @@ add(mission(
     "mission.b.warlord", "b", "elimination", minutes=40, days=2, pay=0.6, unlock=CHUNIN,
     premise="A bandit warlord holds a valley to ransom; end his hold on it (capture or eliminate, by the client's terms).",
     client=resident(job="magistrate", resident_of="any"),
-    slots={"target": role("role:target.warlord"), "camp": anchor("valley.camp"), "guard": enemy_group("bandit.fort_guard")},
+    slots={"target": role("role:target.warlord"), "camp": anchor("valley.camp"), "guard": enemy_group("combat:group.fort_guards")},
     steps=[
         travel("scout"),
         S("scout", sneak("slot:camp"), "strike", optional=["unseen"]),
@@ -107,7 +107,7 @@ add(mission(
     ],
     twists=[twist("body_double", 2, modifier=True), twist("hostage_valley", 1, harder=True, modifier=True)],
     outcomes={"done": outcome(extra={"deed": "defended_village"}), "eliminated": outcome(pay=1.0)},
-    bonus=["unseen", "spared", "no_knockouts"], enemies=["bandit.fort_guard", "bandit.warlord"],
+    bonus=["unseen", "spared", "no_knockouts"], enemies=["combat:group.fort_guards", "combat:enemy.warlord"],
     regions=["region:valley"], tags=["travel", "fight", "target"],
     twist_premises={"body_double": "The man in the warlord's armour is a double.",
                     "hostage_valley": "He holds the valley's headmen as hostages in his camp."}))
@@ -116,7 +116,7 @@ add(mission(
     "mission.b.envoy_escort", "b", "escort", minutes=40, days=3, pay=0.55, unlock=CHUNIN,
     premise="Escort a daimyo's envoy to a neighbouring land's court and back.",
     client=resident(job="envoy", resident_of="any"),
-    slots={"court": anchor("capital.court"), "road": anchor("capital.road"), "attackers": enemy_group("assassin.team")},
+    slots={"court": anchor("capital.court"), "road": anchor("capital.road"), "attackers": enemy_group("combat:group.assassins")},
     steps=[
         travel("road"),
         S("road", escort(C, "slot:road"), "court", on_enter=[{"spawn_group": ["slot:attackers", "slot:road"]}]),
@@ -127,7 +127,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("poison", 2), twist("envoy_defects", 1, harder=True, modifier=True)],
-    bonus=["client_unharmed", "no_alarm"], enemies=["assassin.team"], regions=["region:capital"],
+    bonus=["client_unharmed", "no_alarm"], enemies=["combat:group.assassins"], regions=["region:capital"],
     tags=["travel", "escort", "politics", "fight"],
     twist_premises={"poison": "The welcome tea is not what it seems.",
                     "envoy_defects": "The envoy wants to stay, and asks you not to stop them."}))
@@ -136,7 +136,7 @@ add(mission(
     "mission.b.hostage_rescue", "b", "rescue", minutes=40, pay=0.6, unlock=CHUNIN,
     premise="Kidnappers hold a merchant family's child in a river mill; get the child out alive.",
     client=resident(job="trader"),
-    slots={"mill": anchor("river.mill"), "kidnappers": enemy_group("thug.kidnappers")},
+    slots={"mill": anchor("river.mill"), "kidnappers": enemy_group("combat:group.kidnappers")},
     steps=[
         travel("approach"),
         S("approach", sneak("slot:mill"), "rescue", optional=["unseen"]),
@@ -147,7 +147,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("discovered", 2, harder=True), twist("two_hostages", 1, modifier=True)],
-    bonus=["unseen", "client_unharmed", "no_alarm"], enemies=["thug.kidnappers"], regions=["region:river_crossing"],
+    bonus=["unseen", "client_unharmed", "no_alarm"], enemies=["combat:group.kidnappers"], regions=["region:river_crossing"],
     tags=["travel", "rescue", "stealth"],
     twist_premises={"discovered": "A kidnapper comes down for water at the worst moment.",
                     "two_hostages": "There are two children, not one."}))
@@ -156,7 +156,7 @@ add(mission(
     "mission.b.missing_nin_hunt", "b", "hunt", minutes=40, days=2, pay=0.6, unlock=CHUNIN,
     premise="Hunt down a pair of missing-nin seen on the Fire Country's roads.",
     client=resident(group="shinobi", rank="jonin"),
-    slots={"town": anchor("town.inn"), "ambush": anchor("forest.trail"), "pair": enemy_group("missing_nin.pair")},
+    slots={"town": anchor("town.inn"), "ambush": anchor("forest.trail"), "pair": enemy_group("combat:group.rogue_pair")},
     steps=[
         travel("ask"),
         S("ask", inspect("rumour", at="slot:town", count=3), "trail"),
@@ -165,7 +165,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("they_ambush_first", 2, harder=True, modifier=True), twist("one_surrenders", 1, modifier=True)],
-    fast_hours=36, bonus=["fast", "no_knockouts", "spared"], enemies=["missing_nin.pair"], regions=["region:post_town"],
+    fast_hours=36, bonus=["fast", "no_knockouts", "spared"], enemies=["combat:group.rogue_pair"], regions=["region:post_town"],
     tags=["travel", "hunt", "fight"],
     twist_premises={"they_ambush_first": "They knew you were coming.",
                     "one_surrenders": "One of them throws down their kunai and asks for a trial at home."}))
@@ -174,7 +174,7 @@ add(mission(
     "mission.b.supply_sabotage", "b", "sabotage", minutes=40, pay=0.55, unlock=CHUNIN,
     premise="A foreign band is stockpiling weapons at a border depot; spoil the stockpile without starting a war.",
     client=resident(group="shinobi", rank="jonin"),
-    slots={"depot": anchor("border.depot"), "guards": enemy_group("enemy.squad")},
+    slots={"depot": anchor("border.depot"), "guards": enemy_group("combat:group.foreign_squad")},
     steps=[
         travel("approach"),
         S("approach", sneak("slot:depot"), "spoil", optional=["unseen"]),
@@ -185,7 +185,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("patrol", 2, harder=True), twist("civilian_workers", 1, modifier=True)],
-    bonus=["unseen", "no_alarm", "spared"], enemies=["enemy.squad"], regions=["region:border_depot"],
+    bonus=["unseen", "no_alarm", "spared"], enemies=["combat:group.foreign_squad"], regions=["region:border_depot"],
     tags=["travel", "stealth", "sabotage"],
     twist_premises={"patrol": "A patrol changes its route tonight.",
                     "civilian_workers": "Hired civilians sleep in the depot; get them out first."}))
@@ -214,7 +214,7 @@ add(mission(
     "mission.b.bridge_builders", "b", "guard", minutes=45, days=3, pay=0.6, unlock=CHUNIN,
     premise="Guard a bridge-builder whose bridge will free a poor town from a shipping boss's grip.",
     client=resident(job="builder", resident_of="any"),
-    slots={"bridge": anchor("coast.bridge"), "thugs": enemy_group("thug.hired"), "enforcer": enemy_group("missing_nin.chunin")},
+    slots={"bridge": anchor("coast.bridge"), "thugs": enemy_group("combat:group.hired_thugs"), "enforcer": enemy_group("combat:enemy.rogue_chunin")},
     steps=[
         travel("work"),
         S("work", protect(C, until="18:00", at="slot:bridge"), "night",
@@ -225,7 +225,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("town_stands_up", 2, modifier=True), twist("builder_lied", 1, modifier=True)],
-    bonus=["client_unharmed", "no_knockouts", "teamwork"], enemies=["thug.hired", "missing_nin.chunin"],
+    bonus=["client_unharmed", "no_knockouts", "teamwork"], enemies=["combat:group.hired_thugs", "combat:enemy.rogue_chunin"],
     regions=["region:coast_town"], tags=["travel", "guard", "fight"],
     twist_premises={"town_stands_up": "The town comes out with tools to stand by the builder.",
                     "builder_lied": "The builder said C-rank; the danger is far beyond it."}))
@@ -251,7 +251,7 @@ add(mission(
     "mission.b.allied_courier", "b", "courier", minutes=35, pay=0.5, unlock=CHUNIN,
     premise="Carry a treaty draft to an allied village, through land where others would like to read it.",
     client=resident(group="shinobi", rank="jonin"),
-    slots={"gate": anchor("allied.gate"), "hunters": enemy_group("enemy.hunter_squad")},
+    slots={"gate": anchor("allied.gate"), "hunters": enemy_group("combat:group.hunter_squad")},
     steps=[
         travel("road"),
         S("road", sneak("slot:gate"), "deliver", optional=["unseen"],
@@ -261,7 +261,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("hunters", 2, harder=True), twist("cipher", 1, modifier=True)],
-    bonus=["unseen", "fast"], fast_hours=24, enemies=["enemy.hunter_squad"], regions=["region:allied_village"],
+    bonus=["unseen", "fast"], fast_hours=24, enemies=["combat:group.hunter_squad"], regions=["region:allied_village"],
     tags=["travel", "courier", "stealth"],
     twist_premises={"hunters": "A hunter squad has been sent to take it from you.",
                     "cipher": "The allies want the draft read aloud in cipher at the gate."}))
@@ -280,7 +280,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("reason", 2, modifier=True), twist("rescuers", 1, harder=True, modifier=True)],
-    bonus=["spared", "no_knockouts"], enemies=["missing_nin.chunin"], regions=["region:northern_forest"],
+    bonus=["spared", "no_knockouts"], enemies=["combat:enemy.rogue_chunin"], regions=["region:northern_forest"],
     tags=["travel", "capture", "fight", "target"],
     twist_premises={"reason": "The deserter left for a reason the council should hear.",
                     "rescuers": "Someone wants the deserter free and is willing to fight for it."}))
@@ -289,7 +289,7 @@ add(mission(
     "mission.b.kiln_glaze", "b", "recovery", minutes=40, pay=0.55, unlock=CHUNIN, chain="chain.kiln",
     premise="The kiln family's secret glaze recipe was stolen by a workshop across the border; get it back quietly.",
     client=role("role:client.kiln_parent"),
-    slots={"workshop": anchor("border.workshop"), "guards": enemy_group("thug.hired")},
+    slots={"workshop": anchor("border.workshop"), "guards": enemy_group("combat:group.hired_thugs")},
     steps=[
         travel("workshop"),
         S("workshop", sneak("slot:workshop"), "recipe", optional=["unseen"]),
@@ -299,7 +299,7 @@ add(mission(
         S("report", deliver("glaze_recipe", C), None),
     ],
     twists=[twist("copied", 2), twist("rival_is_family", 1, modifier=True)],
-    bonus=["unseen", "no_alarm", "clean_record"], enemies=["thug.hired"], regions=["region:border_village"],
+    bonus=["unseen", "no_alarm", "clean_record"], enemies=["combat:group.hired_thugs"], regions=["region:border_village"],
     tags=["travel", "stealth", "recovery", "chain"],
     twist_premises={"copied": "They have already made copies.",
                     "rival_is_family": "The rival workshop belongs to an estranged branch of the same family."}))
@@ -310,7 +310,7 @@ add(mission(
     "mission.a.border_skirmish", "a", "war", minutes=50, days=2, pay=0.5, unlock=JONIN,
     premise="An enemy platoon has crossed the border; hold the line at a river crossing until reinforcements come.",
     client=resident(group="shinobi", rank="jonin"),
-    slots={"crossing": anchor("front.crossing"), "platoon": enemy_group("enemy.platoon"), "jonin": enemy_group("enemy.jonin")},
+    slots={"crossing": anchor("front.crossing"), "platoon": enemy_group("combat:group.foreign_platoon"), "jonin": enemy_group("combat:enemy.foreign_jonin")},
     steps=[
         travel("dig_in"),
         S("dig_in", perform("set_trap", at="slot:crossing", count=6), "hold"),
@@ -319,7 +319,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("flanked", 2, harder=True, modifier=True), twist("wounded_ally", 1, modifier=True)],
-    bonus=["no_knockouts", "teamwork"], enemies=["enemy.platoon", "enemy.jonin"], regions=["region:front"],
+    bonus=["no_knockouts", "teamwork"], enemies=["combat:group.foreign_platoon", "combat:enemy.foreign_jonin"], regions=["region:front"],
     tags=["travel", "war", "defence", "fight"],
     twist_premises={"flanked": "A second squad comes around through the reeds.",
                     "wounded_ally": "An allied squad is pinned on the far bank."}))
@@ -328,7 +328,7 @@ add(mission(
     "mission.a.assassination", "a", "elimination", minutes=50, days=2, pay=0.6, unlock=JONIN,
     premise="A foreign lord's war minister plans an invasion; remove him from the board before it begins.",
     client=resident(group="council"),
-    slots={"target": role("role:target.minister"), "palace": anchor("foreign.palace"), "guard": enemy_group("enemy.jonin")},
+    slots={"target": role("role:target.minister"), "palace": anchor("foreign.palace"), "guard": enemy_group("combat:enemy.foreign_jonin")},
     steps=[
         travel("infiltrate"),
         S("infiltrate", sneak("slot:palace"), "strike", optional=["unseen"]),
@@ -339,7 +339,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("guarded", 2, harder=True), twist("change_of_heart", 1, modifier=True)],
-    bonus=["unseen", "no_alarm"], enemies=["enemy.jonin"], regions=["region:foreign_capital"],
+    bonus=["unseen", "no_alarm"], enemies=["combat:enemy.foreign_jonin"], regions=["region:foreign_capital"],
     tags=["travel", "stealth", "target"],
     twist_premises={"guarded": "A Jonin bodyguard never leaves his side.",
                     "change_of_heart": "The minister offers proof he was forced into the plan."}))
@@ -348,7 +348,7 @@ add(mission(
     "mission.a.agent_extraction", "a", "extraction", minutes=50, pay=0.6, unlock=JONIN,
     premise="Bring home a Leaf agent whose cover in a foreign village has been blown.",
     client=resident(group="shinobi", rank="jonin"),
-    slots={"safehouse": anchor("foreign.safehouse"), "hunters": enemy_group("enemy.hunter_squad")},
+    slots={"safehouse": anchor("foreign.safehouse"), "hunters": enemy_group("combat:group.hunter_squad")},
     steps=[
         travel("contact"),
         S("contact", sneak("slot:safehouse"), "extract"),
@@ -356,7 +356,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("agent_wounded", 2, modifier=True), twist("agent_turned", 1, harder=True, modifier=True)],
-    bonus=["unseen", "client_unharmed"], enemies=["enemy.hunter_squad"], regions=["region:foreign_village"],
+    bonus=["unseen", "client_unharmed"], enemies=["combat:group.hunter_squad"], regions=["region:foreign_village"],
     tags=["travel", "stealth", "extraction"],
     twist_premises={"agent_wounded": "The agent cannot walk.",
                     "agent_turned": "The agent is not sure they want to come home."}))
@@ -365,7 +365,7 @@ add(mission(
     "mission.a.outpost_defence", "a", "defence", minutes=45, pay=0.55, unlock=JONIN,
     premise="Hold a Leaf outpost against an enemy squad until the night is over.",
     client=resident(group="shinobi", rank="jonin"),
-    slots={"outpost": anchor("border.outpost"), "squad": enemy_group("enemy.squad"), "jonin": enemy_group("enemy.jonin")},
+    slots={"outpost": anchor("border.outpost"), "squad": enemy_group("combat:group.foreign_squad"), "jonin": enemy_group("combat:enemy.foreign_jonin")},
     steps=[
         travel("ready"),
         S("ready", perform("set_trap", at="slot:outpost", count=4), "hold"),
@@ -375,7 +375,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("their_jonin", 2, harder=True), twist("fog", 1, modifier=True)],
-    bonus=["no_knockouts", "teamwork"], enemies=["enemy.squad", "enemy.jonin"], regions=["region:border_village"],
+    bonus=["no_knockouts", "teamwork"], enemies=["combat:group.foreign_squad", "combat:enemy.foreign_jonin"], regions=["region:border_village"],
     tags=["travel", "defence", "night", "fight"],
     twist_premises={"their_jonin": "Their Jonin leads the last assault himself.",
                     "fog": "A thick fog rolls in; the sensors are blind."}))
@@ -384,7 +384,7 @@ add(mission(
     "mission.a.forbidden_scroll", "a", "recovery", minutes=50, days=2, pay=0.6, unlock=JONIN,
     premise="A forbidden scroll stolen generations ago has surfaced in a ruined fortress; recover it before anyone else.",
     client=resident(group="council"),
-    slots={"ruin": anchor("ruin.vault"), "rivals": enemy_group("enemy.squad"), "guardian": enemy_group("beast.great_serpent")},
+    slots={"ruin": anchor("ruin.vault"), "rivals": enemy_group("combat:group.foreign_squad"), "guardian": enemy_group("combat:enemy.giant_snake")},
     steps=[
         travel("ruin"),
         S("ruin", inspect("seal", at="slot:ruin", count=3), "vault"),
@@ -395,7 +395,7 @@ add(mission(
         S("report", deliver("forbidden_scroll", C), None),
     ],
     twists=[twist("rivals", 2, harder=True), twist("seal_trap", 1, modifier=True)],
-    bonus=["no_knockouts", "clean_record"], enemies=["enemy.squad", "beast.great_serpent"], regions=["region:ruins"],
+    bonus=["no_knockouts", "clean_record"], enemies=["combat:group.foreign_squad", "combat:enemy.giant_snake"], regions=["region:ruins"],
     tags=["travel", "recovery", "fight"],
     twist_premises={"rivals": "Another village's team arrives on the same night.",
                     "seal_trap": "The scroll's seal is a trap for anyone who breaks it."}))
@@ -404,7 +404,7 @@ add(mission(
     "mission.a.daimyo_escort", "a", "escort", minutes=50, days=3, pay=0.6, unlock=JONIN,
     premise="Escort the Fire Country's daimyo on a pilgrimage through contested land.",
     client=resident(job="daimyo", resident_of="any"),
-    slots={"temple": anchor("pilgrim.temple"), "road": anchor("pilgrim.road"), "assassins": enemy_group("assassin.team")},
+    slots={"temple": anchor("pilgrim.temple"), "road": anchor("pilgrim.road"), "assassins": enemy_group("combat:group.assassins")},
     steps=[
         travel("road"),
         S("road", escort(C, "slot:road"), "temple", on_enter=[{"spawn_group": ["slot:assassins", "slot:road"]}]),
@@ -413,7 +413,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("inside_guard", 2, modifier=True), twist("storm", 1, modifier=True)],
-    bonus=["client_unharmed", "no_alarm"], enemies=["assassin.team"], regions=["region:pilgrim_road"],
+    bonus=["client_unharmed", "no_alarm"], enemies=["combat:group.assassins"], regions=["region:pilgrim_road"],
     tags=["travel", "escort", "politics", "fight"],
     twist_premises={"inside_guard": "One of the daimyo's own guards is paid by the other side.",
                     "storm": "A typhoon strands the procession at the temple."}))
@@ -422,7 +422,7 @@ add(mission(
     "mission.a.cell_hunt", "a", "hunt", minutes=50, days=2, pay=0.6, unlock=JONIN,
     premise="Track an enemy cell through a far region and bring it down.",
     client=resident(group="council"),
-    slots={"trail": anchor("far.trail"), "lair": anchor("far.lair"), "cell": enemy_group("enemy.cell")},
+    slots={"trail": anchor("far.trail"), "lair": anchor("far.lair"), "cell": enemy_group("combat:group.cell_pair")},
     steps=[
         travel("trail"),
         S("trail", inspect("tracks", at="slot:trail", count=5), "lair"),
@@ -430,7 +430,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("trap_lair", 2, harder=True, modifier=True), twist("prisoners", 1, modifier=True)],
-    fast_hours=36, bonus=["no_knockouts", "fast"], enemies=["enemy.cell"], regions=["region:far_lands"],
+    fast_hours=36, bonus=["no_knockouts", "fast"], enemies=["combat:group.cell_pair"], regions=["region:far_lands"],
     tags=["travel", "hunt", "fight", "tracking"],
     twist_premises={"trap_lair": "The lair is bait.", "prisoners": "They are holding travellers."}))
 
@@ -438,8 +438,8 @@ add(mission(
     "mission.a.siege_relief", "a", "war", minutes=55, days=3, pay=0.6, unlock=JONIN,
     premise="Break the siege of an allied castle town before its stores run out.",
     client=resident(job="envoy", resident_of="any"),
-    slots={"lines": anchor("siege.lines"), "gate": anchor("siege.gate"), "army": enemy_group("enemy.platoon"),
-           "general": enemy_group("enemy.jonin")},
+    slots={"lines": anchor("siege.lines"), "gate": anchor("siege.gate"), "army": enemy_group("combat:group.foreign_platoon"),
+           "general": enemy_group("combat:enemy.foreign_jonin")},
     steps=[
         travel("scout"),
         S("scout", sneak("slot:lines"), "stores", optional=["unseen"]),
@@ -449,7 +449,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("sortie", 2, modifier=True), twist("tunnel", 1, modifier=True)],
-    bonus=["no_knockouts", "teamwork", "unseen"], enemies=["enemy.platoon", "enemy.jonin"], regions=["region:castle_town"],
+    bonus=["no_knockouts", "teamwork", "unseen"], enemies=["combat:group.foreign_platoon", "combat:enemy.foreign_jonin"], regions=["region:castle_town"],
     tags=["travel", "war", "fight"],
     twist_premises={"sortie": "The town's own soldiers want to ride out with you.",
                     "tunnel": "An old smugglers' tunnel runs under the lines."}))
@@ -460,7 +460,7 @@ add(mission(
     client=resident(group="council"),
     slots={"market": anchor("market.rooftops"), "drop": anchor("village.dead_drop"), "suspect_a": resident(job="trader", resident_of="any"),
            "suspect_b": resident(job="innkeeper", resident_of="any"), "suspect_c": resident(job="porter", resident_of="any"),
-           "ring": enemy_group("enemy.cell")},
+           "ring": enemy_group("combat:group.cell_pair")},
     steps=[
         S("watch", inspect("signal", at="slot:market", count=4), "drop"),
         S("drop", wait_until("01:00", at="slot:drop"), "follow"),
@@ -470,21 +470,21 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("post_a", 1, modifier=True), twist("post_b", 1, modifier=True), twist("post_c", 1, modifier=True)],
-    bonus=["unseen", "no_alarm", "spared"], enemies=["enemy.cell"], tags=["village", "investigation", "stealth"],
+    bonus=["unseen", "no_alarm", "spared"], enemies=["combat:group.cell_pair"], tags=["village", "investigation", "stealth"],
     twist_premises={"post_a": "The rolled listening post is the first suspect's.", "post_b": "The second's.", "post_c": "The third's."}))
 
 add(mission(
     "mission.a.kiln_court", "a", "bodyguard", minutes=45, days=2, pay=0.55, unlock=JONIN, chain="chain.kiln",
     premise="The kiln family's eldest is named court potter; guard them through a court that does not want a commoner there.",
     client=role("role:client.kiln_heir"),
-    slots={"court": anchor("capital.court"), "assassins": enemy_group("assassin.team")},
+    slots={"court": anchor("capital.court"), "assassins": enemy_group("combat:group.assassins")},
     steps=[
         travel("court"),
         S("court", protect(C, until="+12h", at="slot:court"), "report", on_enter=[{"spawn_group": ["slot:assassins", "slot:court"]}]),
         S("report", talk(C), None),
     ],
     twists=[twist("sabotaged_kiln", 2, modifier=True), twist("noble_ally", 1, modifier=True)],
-    bonus=["client_unharmed", "no_alarm"], enemies=["assassin.team"], regions=["region:capital"],
+    bonus=["client_unharmed", "no_alarm"], enemies=["combat:group.assassins"], regions=["region:capital"],
     tags=["travel", "guard", "politics", "chain"],
     twist_premises={"sabotaged_kiln": "Someone has cracked the court kiln before the first firing.",
                     "noble_ally": "One noble quietly offers help."}))
@@ -503,7 +503,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("second_phase", 2, harder=True, modifier=True), twist("parley", 1, modifier=True)],
-    bonus=["no_knockouts", "teamwork"], enemies=["missing_nin.legend"], regions=["region:far_lands"],
+    bonus=["no_knockouts", "teamwork"], enemies=["combat:enemy.legend_rogue"], regions=["region:far_lands"],
     tags=["travel", "fight", "target", "boss"],
     twist_premises={"second_phase": "They were holding back.", "parley": "They ask to talk first."}))
 
@@ -511,7 +511,7 @@ add(mission(
     "mission.s.coup", "s", "protection", minutes=60, days=2, pay=0.6, unlock=S_RANK,
     premise="A coup is planned against the Fire Country's daimyo during a festival at the capital.",
     client=resident(job="daimyo", resident_of="any"),
-    slots={"palace": anchor("capital.palace"), "plotters": enemy_group("assassin.team", "enemy.jonin")},
+    slots={"palace": anchor("capital.palace"), "plotters": enemy_group("combat:group.assassins", "combat:enemy.foreign_jonin")},
     steps=[
         travel("intel"),
         S("intel", inspect("plotter_sign", at="slot:palace", count=4), "night"),
@@ -519,7 +519,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("council_involved", 2, modifier=True), twist("fire", 1, harder=True, modifier=True)],
-    bonus=["client_unharmed", "no_alarm", "unseen"], enemies=["assassin.team", "enemy.jonin"], regions=["region:capital"],
+    bonus=["client_unharmed", "no_alarm", "unseen"], enemies=["combat:group.assassins", "combat:enemy.foreign_jonin"], regions=["region:capital"],
     tags=["travel", "politics", "defence", "fight"],
     twist_premises={"council_involved": "A minister of the court is behind it.",
                     "fire": "They set the palace alight as a distraction."}))
@@ -528,7 +528,7 @@ add(mission(
     "mission.s.stronghold", "s", "infiltration", minutes=60, days=3, pay=0.6, unlock=S_RANK,
     premise="Retrieve a stolen forbidden technique from a foreign stronghold no one has left alive.",
     client=resident(group="council"),
-    slots={"stronghold": anchor("foreign.stronghold"), "vault": anchor("foreign.vault"), "guard": enemy_group("enemy.jonin")},
+    slots={"stronghold": anchor("foreign.stronghold"), "vault": anchor("foreign.vault"), "guard": enemy_group("combat:enemy.foreign_jonin")},
     steps=[
         travel("in"),
         S("in", sneak("slot:stronghold"), "vault", optional=["unseen"]),
@@ -539,7 +539,7 @@ add(mission(
         S("report", deliver("forbidden_scroll", C), None),
     ],
     twists=[twist("sealed_in", 2, harder=True), twist("inside_help", 1, modifier=True)],
-    bonus=["unseen", "no_alarm", "no_knockouts"], enemies=["enemy.jonin"], regions=["region:foreign_stronghold"],
+    bonus=["unseen", "no_alarm", "no_knockouts"], enemies=["combat:enemy.foreign_jonin"], regions=["region:foreign_stronghold"],
     tags=["travel", "stealth", "infiltration"],
     twist_premises={"sealed_in": "The stronghold seals itself when the vault opens.",
                     "inside_help": "A prisoner inside has been waiting years for someone like you."}))
@@ -548,7 +548,7 @@ add(mission(
     "mission.s.peace_summit", "s", "protection", minutes=60, days=3, pay=0.6, unlock=S_RANK,
     premise="Guard the five lands' peace summit; three sides would like it to fail.",
     client=resident(group="council"),
-    slots={"hall": anchor("summit.hall"), "spoilers": enemy_group("assassin.team", "enemy.cell")},
+    slots={"hall": anchor("summit.hall"), "spoilers": enemy_group("combat:group.assassins", "combat:group.cell_pair")},
     steps=[
         travel("sweep"),
         S("sweep", inspect("trap", at="slot:hall", count=5), "summit"),
@@ -556,7 +556,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("delegate_plot", 2, modifier=True), twist("walkout", 1, modifier=True)],
-    bonus=["client_unharmed", "no_alarm"], enemies=["assassin.team", "enemy.cell"], regions=["region:summit"],
+    bonus=["client_unharmed", "no_alarm"], enemies=["combat:group.assassins", "combat:group.cell_pair"], regions=["region:summit"],
     tags=["travel", "politics", "guard"],
     twist_premises={"delegate_plot": "One of the delegates hired the assassins.",
                     "walkout": "A delegation storms out; talk them back in."}))
@@ -583,7 +583,7 @@ add(mission(
     "mission.anbu.silent_extraction", "a", "anbu", minutes=50, pay=0.6, unlock=ANBU, party="anbu_cell",
     premise="Take a prisoner out of an enemy camp without anyone knowing the Leaf was there.",
     client=resident(group="anbu"),
-    slots={"camp": anchor("far.camp"), "guards": enemy_group("enemy.squad")},
+    slots={"camp": anchor("far.camp"), "guards": enemy_group("combat:group.foreign_squad")},
     steps=[
         travel("in"),
         S("in", sneak("slot:camp"), "take"),
@@ -591,7 +591,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("drugged", 2, modifier=True), twist("trap", 1, harder=True, modifier=True)],
-    bonus=["unseen", "no_alarm"], enemies=["enemy.squad"], regions=["region:far_lands"], tags=["travel", "anbu", "stealth"],
+    bonus=["unseen", "no_alarm"], enemies=["combat:group.foreign_squad"], regions=["region:far_lands"], tags=["travel", "anbu", "stealth"],
     twist_premises={"drugged": "The prisoner is drugged and must be carried.",
                     "trap": "The prisoner is bait."}))
 
@@ -625,7 +625,7 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("other_hunters", 2, harder=True, modifier=True), twist("plea", 1, modifier=True)],
-    fast_hours=36, bonus=["fast", "unseen"], enemies=["missing_nin.jonin"], regions=["region:far_lands"],
+    fast_hours=36, bonus=["fast", "unseen"], enemies=["combat:enemy.rogue_jonin"], regions=["region:far_lands"],
     tags=["travel", "anbu", "hunt", "target"],
     twist_premises={"other_hunters": "Another village's hunters got there first.",
                     "plea": "The target begs to be taken home instead."}))
@@ -650,7 +650,7 @@ add(mission(
     "mission.anbu.village_shadow", "s", "anbu", minutes=60, pay=0.6, unlock=ANBU, party="anbu_cell",
     premise="On the night of a great festival, guard the Leaf from the rooftops against what the festival hides.",
     client=resident(group="anbu"),
-    slots={"roofs": anchor("village.rooftop_watch"), "intruders": enemy_group("enemy.cell")},
+    slots={"roofs": anchor("village.rooftop_watch"), "intruders": enemy_group("combat:group.cell_pair")},
     event={"during": "event.leaf_festival"},
     steps=[
         S("post", go("slot:roofs"), "watch"),
@@ -658,6 +658,6 @@ add(mission(
         S("report", talk(C), None),
     ],
     twists=[twist("quiet_night", 1, modifier=True), twist("two_cells", 2, harder=True, modifier=True)],
-    bonus=["no_alarm", "unseen"], enemies=["enemy.cell"], tags=["village", "anbu", "night", "defence"],
+    bonus=["no_alarm", "unseen"], enemies=["combat:group.cell_pair"], tags=["village", "anbu", "night", "defence"],
     twist_premises={"quiet_night": "Nothing comes, and you watch the fireworks alone.",
                     "two_cells": "Two cells come from opposite sides of the village."}))

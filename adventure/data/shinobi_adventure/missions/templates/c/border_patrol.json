@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "patrol",
  "status": "beta",
- "title": "mission.c.border_patrol.title",
- "brief": "mission.c.border_patrol.brief",
+ "title": "dlg:mission.c.border_patrol.title",
+ "brief": "dlg:mission.c.border_patrol.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.border_patrol.brief",
+  "accept": "dlg:mission.c.border_patrol.accept",
+  "decline": "dlg:mission.c.border_patrol.decline",
+  "progress": "dlg:mission.c.border_patrol.progress",
+  "success": "dlg:mission.c.border_patrol.success",
+  "fail": "dlg:mission.c.border_patrol.fail",
+  "report": "dlg:mission.c.border_patrol.report"
+ },
  "minutes": 25,
  "party": "squad",
  "unlock": {
@@ -41,7 +50,7 @@
   "scouts": {
    "pick": "enemy_group",
    "from": [
-    "scout.enemy_pair"
+    "combat:group.scout_pair"
    ]
   },
   "lost": {
@@ -120,13 +129,13 @@
    "id": "scouts",
    "weight": 2,
    "harder": true,
-   "premise": "mission.c.border_patrol.twist.scouts"
+   "premise": "dlg:mission.c.border_patrol.twist.scouts"
   },
   {
    "id": "lost_genin",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.border_patrol.twist.lost_genin"
+   "premise": "dlg:mission.c.border_patrol.twist.lost_genin"
   }
  ],
  "outcomes": {
@@ -145,7 +154,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "scout.enemy_pair"
+  "combat:group.scout_pair"
  ],
  "places": {
   "anchors": [
@@ -168,7 +177,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.patrol",
+ "banter": "dlg:mission.banter.patrol",
  "_premise": "Walk a stretch of the border with a Chunin, checking markers and watch posts.",
  "_twists": {
   "scouts": "Two foreign scouts are mapping the watch posts.",

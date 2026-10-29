@@ -5,8 +5,17 @@
  "rank": "b",
  "category": "escort",
  "status": "later",
- "title": "mission.b.envoy_escort.title",
- "brief": "mission.b.envoy_escort.brief",
+ "title": "dlg:mission.b.envoy_escort.title",
+ "brief": "dlg:mission.b.envoy_escort.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.envoy_escort.brief",
+  "accept": "dlg:mission.b.envoy_escort.accept",
+  "decline": "dlg:mission.b.envoy_escort.decline",
+  "progress": "dlg:mission.b.envoy_escort.progress",
+  "success": "dlg:mission.b.envoy_escort.success",
+  "fail": "dlg:mission.b.envoy_escort.fail",
+  "report": "dlg:mission.b.envoy_escort.report"
+ },
  "minutes": 40,
  "party": "squad",
  "days": 3,
@@ -32,7 +41,7 @@
   "attackers": {
    "pick": "enemy_group",
    "from": [
-    "assassin.team"
+    "combat:group.assassins"
    ]
   }
  },
@@ -108,14 +117,14 @@
    "id": "poison",
    "weight": 2,
    "harder": false,
-   "premise": "mission.b.envoy_escort.twist.poison"
+   "premise": "dlg:mission.b.envoy_escort.twist.poison"
   },
   {
    "id": "envoy_defects",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.b.envoy_escort.twist.envoy_defects"
+   "premise": "dlg:mission.b.envoy_escort.twist.envoy_defects"
   }
  ],
  "outcomes": {
@@ -133,7 +142,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "assassin.team"
+  "combat:group.assassins"
  ],
  "places": {
   "anchors": [
@@ -159,7 +168,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.escort",
+ "banter": "dlg:mission.banter.escort",
  "_premise": "Escort a daimyo's envoy to a neighbouring land's court and back.",
  "_twists": {
   "poison": "The welcome tea is not what it seems.",

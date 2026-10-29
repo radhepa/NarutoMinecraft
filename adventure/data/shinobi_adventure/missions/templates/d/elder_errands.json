@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "elders",
  "status": "beta",
- "title": "mission.d.elder_errands.title",
- "brief": "mission.d.elder_errands.brief",
+ "title": "dlg:mission.d.elder_errands.title",
+ "brief": "dlg:mission.d.elder_errands.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.elder_errands.brief",
+  "accept": "dlg:mission.d.elder_errands.accept",
+  "decline": "dlg:mission.d.elder_errands.decline",
+  "progress": "dlg:mission.d.elder_errands.progress",
+  "success": "dlg:mission.d.elder_errands.success",
+  "fail": "dlg:mission.d.elder_errands.fail",
+  "report": "dlg:mission.d.elder_errands.report"
+ },
  "minutes": 8,
  "party": "solo",
  "slots": {
@@ -107,13 +116,13 @@
    "id": "forgot_one",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.elder_errands.twist.forgot_one"
+   "premise": "dlg:mission.d.elder_errands.twist.forgot_one"
   },
   {
    "id": "story_time",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.elder_errands.twist.story_time"
+   "premise": "dlg:mission.d.elder_errands.twist.story_time"
   }
  ],
  "outcomes": {
@@ -152,7 +161,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.elders",
+ "banter": "dlg:mission.banter.elders",
  "_premise": "Run a shopping list of errands for an elderly resident.",
  "_twists": {
   "forgot_one": "They remember one more thing, and then another.",

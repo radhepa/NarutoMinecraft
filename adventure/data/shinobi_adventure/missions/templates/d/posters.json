@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "posters",
  "status": "beta",
- "title": "mission.d.posters.title",
- "brief": "mission.d.posters.brief",
+ "title": "dlg:mission.d.posters.title",
+ "brief": "dlg:mission.d.posters.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.posters.brief",
+  "accept": "dlg:mission.d.posters.accept",
+  "decline": "dlg:mission.d.posters.decline",
+  "progress": "dlg:mission.d.posters.progress",
+  "success": "dlg:mission.d.posters.success",
+  "fail": "dlg:mission.d.posters.fail",
+  "report": "dlg:mission.d.posters.report"
+ },
  "minutes": 8,
  "party": "squad_or_solo",
  "slots": {
@@ -117,19 +126,19 @@
    "id": "torn_down",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.posters.twist.torn_down"
+   "premise": "dlg:mission.d.posters.twist.torn_down"
   },
   {
    "id": "typo",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.posters.twist.typo"
+   "premise": "dlg:mission.d.posters.twist.typo"
   },
   {
    "id": "windy",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.posters.twist.windy"
+   "premise": "dlg:mission.d.posters.twist.windy"
   }
  ],
  "outcomes": {
@@ -165,7 +174,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.posters",
+ "banter": "dlg:mission.banter.posters",
  "_premise": "Put up posters for an upcoming event in every district.",
  "_twists": {
   "torn_down": "Someone tears the posters down as fast as you put them up.",

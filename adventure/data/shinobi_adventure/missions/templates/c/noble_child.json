@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "bodyguard",
  "status": "beta",
- "title": "mission.c.noble_child.title",
- "brief": "mission.c.noble_child.brief",
+ "title": "dlg:mission.c.noble_child.title",
+ "brief": "dlg:mission.c.noble_child.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.noble_child.brief",
+  "accept": "dlg:mission.c.noble_child.accept",
+  "decline": "dlg:mission.c.noble_child.decline",
+  "progress": "dlg:mission.c.noble_child.progress",
+  "success": "dlg:mission.c.noble_child.success",
+  "fail": "dlg:mission.c.noble_child.fail",
+  "report": "dlg:mission.c.noble_child.report"
+ },
  "minutes": 25,
  "party": "squad",
  "unlock": {
@@ -41,7 +50,7 @@
   "kidnappers": {
    "pick": "enemy_group",
    "from": [
-    "thug.hired"
+    "combat:group.hired_thugs"
    ]
   }
  },
@@ -121,13 +130,13 @@
    "id": "runs_away",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.noble_child.twist.runs_away"
+   "premise": "dlg:mission.c.noble_child.twist.runs_away"
   },
   {
    "id": "kidnap_attempt",
    "weight": 2,
    "harder": true,
-   "premise": "mission.c.noble_child.twist.kidnap_attempt"
+   "premise": "dlg:mission.c.noble_child.twist.kidnap_attempt"
   }
  ],
  "outcomes": {
@@ -146,7 +155,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "thug.hired"
+  "combat:group.hired_thugs"
  ],
  "places": {
   "anchors": [
@@ -168,7 +177,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.bodyguard",
+ "banter": "dlg:mission.banter.bodyguard",
  "_premise": "Guard a visiting lord's child for a day in the village.",
  "_twists": {
   "runs_away": "The child gives you the slip to see the village alone.",

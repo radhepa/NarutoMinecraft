@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "duel",
  "status": "beta",
- "title": "mission.c.dojo_challenge.title",
- "brief": "mission.c.dojo_challenge.brief",
+ "title": "dlg:mission.c.dojo_challenge.title",
+ "brief": "dlg:mission.c.dojo_challenge.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.dojo_challenge.brief",
+  "accept": "dlg:mission.c.dojo_challenge.accept",
+  "decline": "dlg:mission.c.dojo_challenge.decline",
+  "progress": "dlg:mission.c.dojo_challenge.progress",
+  "success": "dlg:mission.c.dojo_challenge.success",
+  "fail": "dlg:mission.c.dojo_challenge.fail",
+  "report": "dlg:mission.c.dojo_challenge.report"
+ },
  "minutes": 20,
  "party": "squad_or_solo",
  "unlock": {
@@ -36,7 +45,7 @@
   "swordsman": {
    "pick": "enemy_group",
    "from": [
-    "ronin.swordsman"
+    "combat:enemy.bandit_ronin"
    ]
   }
  },
@@ -87,7 +96,8 @@
     "options": {
      "return_boards": null,
      "teach_him": "made_friend"
-    }
+    },
+    "dialogue": "dlg:mission.c.dojo_challenge.choice.talk"
    },
    "next": "signboards"
   },
@@ -112,14 +122,14 @@
    "id": "honourable",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.dojo_challenge.twist.honourable"
+   "premise": "dlg:mission.c.dojo_challenge.twist.honourable"
   },
   {
    "id": "cheater",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.c.dojo_challenge.twist.cheater"
+   "premise": "dlg:mission.c.dojo_challenge.twist.cheater"
   }
  ],
  "outcomes": {
@@ -145,7 +155,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "ronin.swordsman"
+  "combat:enemy.bandit_ronin"
  ],
  "places": {
   "anchors": [
@@ -165,7 +175,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.duel",
+ "banter": "dlg:mission.banter.duel",
  "_premise": "A wandering swordsman is beating every dojo in the village and taking their signboards.",
  "_twists": {
   "honourable": "He only wants a worthy opponent; beaten, he asks to be taught.",

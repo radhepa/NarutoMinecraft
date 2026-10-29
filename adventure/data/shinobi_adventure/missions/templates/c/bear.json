@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "beasts",
  "status": "beta",
- "title": "mission.c.bear.title",
- "brief": "mission.c.bear.brief",
+ "title": "dlg:mission.c.bear.title",
+ "brief": "dlg:mission.c.bear.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.bear.brief",
+  "accept": "dlg:mission.c.bear.accept",
+  "decline": "dlg:mission.c.bear.decline",
+  "progress": "dlg:mission.c.bear.progress",
+  "success": "dlg:mission.c.bear.success",
+  "fail": "dlg:mission.c.bear.fail",
+  "report": "dlg:mission.c.bear.report"
+ },
  "minutes": 20,
  "party": "squad",
  "unlock": {
@@ -40,7 +49,7 @@
   "beast": {
    "pick": "enemy_group",
    "from": [
-    "beast.bear"
+    "combat:enemy.bear"
    ]
   }
  },
@@ -118,14 +127,14 @@
    "id": "honey_trail",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.bear.twist.honey_trail"
+   "premise": "dlg:mission.c.bear.twist.honey_trail"
   },
   {
    "id": "cubs",
    "weight": 1,
    "harder": false,
    "modifier": true,
-   "premise": "mission.c.bear.twist.cubs"
+   "premise": "dlg:mission.c.bear.twist.cubs"
   }
  ],
  "outcomes": {
@@ -147,7 +156,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "beast.bear"
+  "combat:enemy.bear"
  ],
  "places": {
   "anchors": [
@@ -168,7 +177,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.beasts",
+ "banter": "dlg:mission.banter.beasts",
  "_premise": "A bear has wandered into the outer training grounds and will not leave.",
  "_twists": {
   "honey_trail": "The groundskeeper's beehives give you an idea.",

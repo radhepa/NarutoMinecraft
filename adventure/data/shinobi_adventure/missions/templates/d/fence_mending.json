@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "repairs",
  "status": "beta",
- "title": "mission.d.fence_mending.title",
- "brief": "mission.d.fence_mending.brief",
+ "title": "dlg:mission.d.fence_mending.title",
+ "brief": "dlg:mission.d.fence_mending.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.fence_mending.brief",
+  "accept": "dlg:mission.d.fence_mending.accept",
+  "decline": "dlg:mission.d.fence_mending.decline",
+  "progress": "dlg:mission.d.fence_mending.progress",
+  "success": "dlg:mission.d.fence_mending.success",
+  "fail": "dlg:mission.d.fence_mending.fail",
+  "report": "dlg:mission.d.fence_mending.report"
+ },
  "minutes": 10,
  "party": "squad_or_solo",
  "slots": {
@@ -86,7 +95,8 @@
      "fair": null,
      "client": "sided_client",
      "neighbour": "sided_neighbour"
-    }
+    },
+    "dialogue": "dlg:mission.d.fence_mending.choice.settle"
    },
    "next": "report"
   },
@@ -112,13 +122,13 @@
    "id": "fence_line",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.fence_mending.twist.fence_line"
+   "premise": "dlg:mission.d.fence_mending.twist.fence_line"
   },
   {
    "id": "termites",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.fence_mending.twist.termites"
+   "premise": "dlg:mission.d.fence_mending.twist.termites"
   }
  ],
  "outcomes": {
@@ -165,7 +175,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.repairs",
+ "banter": "dlg:mission.banter.repairs",
  "_premise": "Mend a garden fence between two houses.",
  "_twists": {
   "fence_line": "The neighbour says the fence was always a hand's width too far onto their land.",

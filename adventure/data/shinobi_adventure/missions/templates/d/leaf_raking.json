@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "seasonal",
  "status": "beta",
- "title": "mission.d.leaf_raking.title",
- "brief": "mission.d.leaf_raking.brief",
+ "title": "dlg:mission.d.leaf_raking.title",
+ "brief": "dlg:mission.d.leaf_raking.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.leaf_raking.brief",
+  "accept": "dlg:mission.d.leaf_raking.accept",
+  "decline": "dlg:mission.d.leaf_raking.decline",
+  "progress": "dlg:mission.d.leaf_raking.progress",
+  "success": "dlg:mission.d.leaf_raking.success",
+  "fail": "dlg:mission.d.leaf_raking.fail",
+  "report": "dlg:mission.d.leaf_raking.report"
+ },
  "minutes": 8,
  "party": "squad_or_solo",
  "season": [
@@ -62,7 +71,8 @@
     "options": {
      "return": null,
      "keep": "kept_find"
-    }
+    },
+    "dialogue": "dlg:mission.d.leaf_raking.choice.treasure"
    },
    "next": "report"
   },
@@ -95,13 +105,13 @@
    "id": "hidden_treasure",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.leaf_raking.twist.hidden_treasure"
+   "premise": "dlg:mission.d.leaf_raking.twist.hidden_treasure"
   },
   {
    "id": "bonfire",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.leaf_raking.twist.bonfire"
+   "premise": "dlg:mission.d.leaf_raking.twist.bonfire"
   }
  ],
  "outcomes": {
@@ -142,7 +152,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.seasonal",
+ "banter": "dlg:mission.banter.seasonal",
  "_premise": "Rake the leaves in the park by the Academy.",
  "_twists": {
   "hidden_treasure": "Under the leaves, a purse someone lost weeks ago.",

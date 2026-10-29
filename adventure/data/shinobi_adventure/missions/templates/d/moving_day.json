@@ -5,8 +5,17 @@
  "rank": "d",
  "category": "household",
  "status": "beta",
- "title": "mission.d.moving_day.title",
- "brief": "mission.d.moving_day.brief",
+ "title": "dlg:mission.d.moving_day.title",
+ "brief": "dlg:mission.d.moving_day.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.moving_day.brief",
+  "accept": "dlg:mission.d.moving_day.accept",
+  "decline": "dlg:mission.d.moving_day.decline",
+  "progress": "dlg:mission.d.moving_day.progress",
+  "success": "dlg:mission.d.moving_day.success",
+  "fail": "dlg:mission.d.moving_day.fail",
+  "report": "dlg:mission.d.moving_day.report"
+ },
  "minutes": 12,
  "party": "squad",
  "slots": {
@@ -116,19 +125,19 @@
    "id": "heirloom",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.moving_day.twist.heirloom"
+   "premise": "dlg:mission.d.moving_day.twist.heirloom"
   },
   {
    "id": "cat_hides",
    "weight": 2,
    "harder": false,
-   "premise": "mission.d.moving_day.twist.cat_hides"
+   "premise": "dlg:mission.d.moving_day.twist.cat_hides"
   },
   {
    "id": "heavy_chest",
    "weight": 1,
    "harder": false,
-   "premise": "mission.d.moving_day.twist.heavy_chest"
+   "premise": "dlg:mission.d.moving_day.twist.heavy_chest"
   }
  ],
  "outcomes": {
@@ -166,7 +175,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.household",
+ "banter": "dlg:mission.banter.household",
  "_premise": "Help a family move house across the village.",
  "_twists": {
   "heirloom": "Grandmother's tea set travels by hand, and only by hand.",

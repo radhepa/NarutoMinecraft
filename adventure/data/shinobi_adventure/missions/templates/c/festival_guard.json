@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "guard",
  "status": "beta",
- "title": "mission.c.festival_guard.title",
- "brief": "mission.c.festival_guard.brief",
+ "title": "dlg:mission.c.festival_guard.title",
+ "brief": "dlg:mission.c.festival_guard.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.festival_guard.brief",
+  "accept": "dlg:mission.c.festival_guard.accept",
+  "decline": "dlg:mission.c.festival_guard.decline",
+  "progress": "dlg:mission.c.festival_guard.progress",
+  "success": "dlg:mission.c.festival_guard.success",
+  "fail": "dlg:mission.c.festival_guard.fail",
+  "report": "dlg:mission.c.festival_guard.report"
+ },
  "minutes": 25,
  "party": "squad",
  "unlock": {
@@ -43,7 +52,7 @@
   "gang": {
    "pick": "enemy_group",
    "from": [
-    "thug.pickpockets"
+    "combat:group.pickpockets"
    ]
   },
   "guest": {
@@ -131,13 +140,13 @@
    "id": "fireworks_theft",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.festival_guard.twist.fireworks_theft"
+   "premise": "dlg:mission.c.festival_guard.twist.fireworks_theft"
   },
   {
    "id": "lost_guest",
    "weight": 1,
    "harder": false,
-   "premise": "mission.c.festival_guard.twist.lost_guest"
+   "premise": "dlg:mission.c.festival_guard.twist.lost_guest"
   }
  ],
  "outcomes": {
@@ -157,7 +166,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "thug.pickpockets"
+  "combat:group.pickpockets"
  ],
  "places": {
   "anchors": [
@@ -179,7 +188,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.guard",
+ "banter": "dlg:mission.banter.guard",
  "_premise": "Keep the festival safe from a gang of pickpockets working the crowd.",
  "_twists": {
   "fireworks_theft": "The gang's real target is the fireworks.",

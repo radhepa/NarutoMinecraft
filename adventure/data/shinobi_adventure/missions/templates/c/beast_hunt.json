@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "beasts",
  "status": "beta",
- "title": "mission.c.beast_hunt.title",
- "brief": "mission.c.beast_hunt.brief",
+ "title": "dlg:mission.c.beast_hunt.title",
+ "brief": "dlg:mission.c.beast_hunt.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.beast_hunt.brief",
+  "accept": "dlg:mission.c.beast_hunt.accept",
+  "decline": "dlg:mission.c.beast_hunt.decline",
+  "progress": "dlg:mission.c.beast_hunt.progress",
+  "success": "dlg:mission.c.beast_hunt.success",
+  "fail": "dlg:mission.c.beast_hunt.fail",
+  "report": "dlg:mission.c.beast_hunt.report"
+ },
  "minutes": 25,
  "party": "squad",
  "unlock": {
@@ -40,7 +49,7 @@
   "beast": {
    "pick": "enemy_group",
    "from": [
-    "beast.boar_giant"
+    "combat:enemy.boar"
    ]
   }
  },
@@ -83,7 +92,8 @@
     "options": {
      "drive_off": "relocated",
      "fight": null
-    }
+    },
+    "dialogue": "dlg:mission.c.beast_hunt.choice.young"
    },
    "branch": [
     {
@@ -139,13 +149,13 @@
   "second": {
    "objective": {
     "type": "defeat",
-    "group": "beast.boar_giant",
+    "group": "combat:enemy.boar",
     "at": "slot:fields"
    },
    "on_enter": [
     {
      "spawn_group": [
-      "beast.boar_giant",
+      "combat:enemy.boar",
       "slot:fields"
      ]
     }
@@ -165,13 +175,13 @@
    "id": "mother_with_young",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.beast_hunt.twist.mother_with_young"
+   "premise": "dlg:mission.c.beast_hunt.twist.mother_with_young"
   },
   {
    "id": "two_beasts",
    "weight": 1,
    "harder": true,
-   "premise": "mission.c.beast_hunt.twist.two_beasts"
+   "premise": "dlg:mission.c.beast_hunt.twist.two_beasts"
   }
  ],
  "outcomes": {
@@ -199,7 +209,7 @@
   "timeout_days": 3
  },
  "enemies": [
-  "beast.boar_giant"
+  "combat:enemy.boar"
  ],
  "places": {
   "anchors": [
@@ -221,7 +231,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.beasts",
+ "banter": "dlg:mission.banter.beasts",
  "_premise": "A giant boar is tearing up the farms outside the wall; stop it.",
  "_twists": {
   "mother_with_young": "It is a sow with piglets; she was driven out of her forest by something.",

@@ -5,8 +5,17 @@
  "rank": "c",
  "category": "beasts",
  "status": "beta",
- "title": "mission.c.wolf_pack.title",
- "brief": "mission.c.wolf_pack.brief",
+ "title": "dlg:mission.c.wolf_pack.title",
+ "brief": "dlg:mission.c.wolf_pack.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.wolf_pack.brief",
+  "accept": "dlg:mission.c.wolf_pack.accept",
+  "decline": "dlg:mission.c.wolf_pack.decline",
+  "progress": "dlg:mission.c.wolf_pack.progress",
+  "success": "dlg:mission.c.wolf_pack.success",
+  "fail": "dlg:mission.c.wolf_pack.fail",
+  "report": "dlg:mission.c.wolf_pack.report"
+ },
  "minutes": 25,
  "party": "squad",
  "unlock": {
@@ -40,7 +49,7 @@
   "pack": {
    "pick": "enemy_group",
    "from": [
-    "beast.wolf_pack"
+    "combat:group.wolves_pack"
    ]
   },
   "camp": {
@@ -108,13 +117,13 @@
   "cause_fight": {
    "objective": {
     "type": "defeat",
-    "group": "bandit.pack_small",
+    "group": "combat:group.bandits_small",
     "at": "slot:camp"
    },
    "on_enter": [
     {
      "spawn_group": [
-      "bandit.pack_small",
+      "combat:group.bandits_small",
       "slot:camp"
      ]
     }
@@ -142,14 +151,14 @@
    "id": "driven_out",
    "weight": 2,
    "harder": false,
-   "premise": "mission.c.wolf_pack.twist.driven_out"
+   "premise": "dlg:mission.c.wolf_pack.twist.driven_out"
   },
   {
    "id": "alpha",
    "weight": 1,
    "harder": true,
    "modifier": true,
-   "premise": "mission.c.wolf_pack.twist.alpha"
+   "premise": "dlg:mission.c.wolf_pack.twist.alpha"
   }
  ],
  "outcomes": {
@@ -167,8 +176,8 @@
   "timeout_days": 3
  },
  "enemies": [
-  "beast.wolf_pack",
-  "bandit.pack_small"
+  "combat:group.wolves_pack",
+  "combat:group.bandits_small"
  ],
  "places": {
   "anchors": [
@@ -192,7 +201,7 @@
  ],
  "contested": false,
  "classic": true,
- "banter": "mission.banter.beasts",
+ "banter": "dlg:mission.banter.beasts",
  "_premise": "Wolves are taking livestock from the outer farms at night.",
  "_twists": {
   "driven_out": "The wolves were driven down by a bandit gang's fires in their hills.",
