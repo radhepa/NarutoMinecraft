@@ -25,7 +25,7 @@ public final class Practice {
             case "dummy" -> home.has("training_dummy");
             case "signs" -> true;
             case "meditate" -> home.has("meditation_mat");
-            case "study" -> home.has("scroll_shelf") || home.has("desk");
+            case "study" -> home.has("scroll_shelf") || home.has("low_desk");
             default -> false;
         };
         if (!can || hours <= 0) return new Session(0, hours, false);
