@@ -1,0 +1,251 @@
+{
+  "id": "w1101_scarecrow_mask",
+  "kind": "headwear",
+  "name": "Scarecrow Mask",
+  "gender": "unisex",
+  "texture": "headwear/w1101_scarecrow_mask.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.1,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -4,
+        -0.5,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.6
+    },
+    {
+      "id": "plate",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.1,
+        -4.62
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -9,
+        -4,
+        -2
+      ],
+      "size": [
+        18,
+        8,
+        2
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "band_fold",
+      "bone": "HEAD",
+      "pivot": [
+        3.4,
+        -5.6,
+        -4.75
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        10
+      ]
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.1,
+        4.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        48,
+        10
+      ]
+    },
+    {
+      "id": "tail_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.6,
+        -6.4,
+        4.9
+      ],
+      "rotation": [
+        22,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        55,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -6.4,
+        4.9
+      ],
+      "rotation": [
+        22,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        60,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "face_mask",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -1.75,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        21
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "face_mask_neck",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        -3.5
+      ],
+      "size": [
+        7,
+        1,
+        7
+      ],
+      "uv": [
+        33,
+        21
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": true,
+  "description": "Forehead protector slanted over the left brow, a navy cloth mask over nose and mouth."
+}
