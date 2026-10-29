@@ -1,0 +1,160 @@
+{
+  "id": "t802_fang_parka",
+  "kind": "top",
+  "name": "Fang Parka",
+  "gender": "unisex",
+  "texture": "tops/t802_fang_parka.png",
+  "extrasHeight": 32,
+  "tags": [
+    "chunin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_fur_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_fur_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "ruff",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -1.6,
+        -3
+      ],
+      "size": [
+        10,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "ruff_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.0,
+        2.2
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        2
+      ],
+      "uv": [
+        33,
+        8
+      ]
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.6,
+        2.3
+      ],
+      "rotation": [
+        8,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Heavy dark parka with a deep fur ruff at the shoulders, red trim by the zip, fur cuffs."
+}

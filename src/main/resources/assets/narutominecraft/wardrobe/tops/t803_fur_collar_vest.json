@@ -1,0 +1,104 @@
+{
+  "id": "t803_fur_collar_vest",
+  "kind": "top",
+  "name": "Fur Collar Vest",
+  "gender": "unisex",
+  "texture": "tops/t803_fur_collar_vest.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fur_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -1.2,
+        -3
+      ],
+      "size": [
+        10,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "fur_lapel_right",
+      "bone": "TORSO",
+      "pivot": [
+        -1.7600000000000002,
+        1.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "fur_lapel_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.7600000000000002,
+        1.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Open sleeveless vest with a big fur collar over mesh, bandaged forearms, claw slashes on the back."
+}

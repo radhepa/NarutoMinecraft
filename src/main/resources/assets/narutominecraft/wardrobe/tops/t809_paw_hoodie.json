@@ -1,0 +1,103 @@
+{
+  "id": "t809_paw_hoodie",
+  "kind": "top",
+  "name": "Paw Hoodie",
+  "gender": "unisex",
+  "texture": "tops/t809_paw_hoodie.png",
+  "extrasHeight": 16,
+  "tags": [
+    "academy",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.0,
+        3.0
+      ],
+      "rotation": [
+        24,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        9,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "hood_ear_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        -1.0,
+        3.8
+      ],
+      "rotation": [
+        24,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -2,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "hood_ear_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        -1.0,
+        3.8
+      ],
+      "rotation": [
+        24,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -2,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Soft pullover hoodie, hood down with sewn pup ears, kangaroo pocket, a paw print on the back."
+}

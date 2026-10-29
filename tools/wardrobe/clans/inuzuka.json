@@ -1,0 +1,272 @@
+{
+  "id": "inuzuka",
+  "name": "Inuzuka",
+  "tagline": "Wild-haired ninken handlers of the Hidden Leaf: fur-lined hoods, rugged tracker wear and red fang marks on both cheeks.",
+  "palettes": {
+    "INUZUKA_GREY": {
+      "name": "Inuzuka Grey",
+      "P": "#7b7d82",
+      "S": "#ebe4d4",
+      "A": "#b8302a",
+      "L": "#6b4a33",
+      "M": "#aab3b9",
+      "K": "#211f22",
+      "D": "#3b3e46"
+    },
+    "INUZUKA_SHADOW": {
+      "name": "Inuzuka Shadow",
+      "P": "#2e2c30",
+      "S": "#e2dacb",
+      "A": "#b52a28",
+      "L": "#5c4130",
+      "M": "#aab3b9",
+      "K": "#161518",
+      "D": "#45454d"
+    },
+    "INUZUKA_TAN": {
+      "name": "Inuzuka Tan",
+      "P": "#a3835a",
+      "S": "#efe6d2",
+      "A": "#ad2f29",
+      "L": "#5e4130",
+      "M": "#aab3b9",
+      "K": "#2a2522",
+      "D": "#4a4642"
+    },
+    "INUZUKA_EARTH": {
+      "name": "Inuzuka Earth",
+      "P": "#5f5447",
+      "S": "#ddd2bc",
+      "A": "#b8402c",
+      "L": "#6e4c34",
+      "M": "#aab3b9",
+      "K": "#221f1d",
+      "D": "#3e4048"
+    },
+    "INUZUKA_JONIN": {
+      "name": "Inuzuka Jonin",
+      "P": "#5f6e3c",
+      "S": "#e6dfcf",
+      "A": "#b8302a",
+      "L": "#6b4a33",
+      "M": "#aab3b9",
+      "K": "#1d1f24",
+      "D": "#2f3138"
+    }
+  },
+  "hair_colors": {
+    "INUZUKA_BROWN": {
+      "name": "Inuzuka Brown",
+      "ramp": [
+        "#24150e",
+        "#3a2316",
+        "#55331f",
+        "#74482b",
+        "#98643c"
+      ]
+    },
+    "INUZUKA_MANE": {
+      "name": "Inuzuka Mane",
+      "ramp": [
+        "#160e0b",
+        "#231612",
+        "#33211a",
+        "#4a3125",
+        "#664535"
+      ]
+    },
+    "INUZUKA_UMBER": {
+      "name": "Inuzuka Umber",
+      "ramp": [
+        "#2e1a10",
+        "#4a2c1a",
+        "#6a4126",
+        "#8c5a35",
+        "#b07a4b"
+      ]
+    }
+  },
+  "eye_colors": {},
+  "marks": {
+    "inuzuka_fangs": {
+      "rects": [
+        [
+          2.7,
+          -1.3,
+          1.2,
+          0.35
+        ],
+        [
+          2.7,
+          -0.95,
+          0.9,
+          0.35
+        ],
+        [
+          2.7,
+          -0.6,
+          0.55,
+          0.35
+        ],
+        [
+          2.7,
+          -0.3,
+          0.25,
+          0.25
+        ]
+      ],
+      "color": "#c0242a",
+      "mirror": true
+    }
+  },
+  "pool": {
+    "hair": [
+      "h801_fang_crop",
+      "h802_wild_mane",
+      "h803_long_low_tail",
+      "h804_ruff_spikes",
+      "h805_hound_shag",
+      "h806_pup_tufts",
+      "h807_feral_sweep",
+      "h808_wild_topknot",
+      "h809_hackle_crest",
+      "h810_mane_tail",
+      "h811_hound_buns",
+      "h812_windblown",
+      "h813_long_shag",
+      "h814_wolf_tail",
+      "h815_scruff_tails"
+    ],
+    "hair_colors": [
+      "INUZUKA_BROWN",
+      "INUZUKA_BROWN",
+      "INUZUKA_MANE",
+      "INUZUKA_UMBER",
+      "ESPRESSO"
+    ],
+    "eye_colors": [
+      "DARK"
+    ],
+    "palettes": [
+      "INUZUKA_GREY",
+      "INUZUKA_SHADOW",
+      "INUZUKA_TAN",
+      "INUZUKA_EARTH"
+    ],
+    "headwear": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      "w02_forehead_protector",
+      "w02_forehead_protector",
+      "w801_fur_hood",
+      "w802_pup_rider"
+    ],
+    "bottoms": [
+      "b01_shinobi_trousers"
+    ],
+    "complexions": [
+      0,
+      1,
+      1,
+      2,
+      3
+    ],
+    "marks": [
+      {
+        "id": "inuzuka_fangs",
+        "chance": 0.95
+      }
+    ]
+  },
+  "outfits": [
+    {
+      "id": "fur_hood_jacket",
+      "name": "Fur Hood Jacket",
+      "top": "t801_fur_hood_jacket",
+      "bottom": "b802_capri_pants",
+      "rank": "genin",
+      "palettes": [
+        "INUZUKA_GREY",
+        "INUZUKA_TAN"
+      ]
+    },
+    {
+      "id": "fang_parka",
+      "name": "Fang Parka",
+      "top": "t802_fang_parka",
+      "bottom": "b801_tracker_trousers",
+      "rank": "chunin",
+      "palettes": [
+        "INUZUKA_SHADOW",
+        "INUZUKA_EARTH"
+      ]
+    },
+    {
+      "id": "fur_collar_vest",
+      "name": "Fur Collar Vest",
+      "top": "t803_fur_collar_vest",
+      "bottom": "b804_fur_wrap_shorts",
+      "rank": "genin"
+    },
+    {
+      "id": "kennel_keeper",
+      "name": "Kennel Keeper",
+      "top": "t804_kennel_keeper_wrap",
+      "bottom": "b803_kennel_boots",
+      "rank": "chunin"
+    },
+    {
+      "id": "clan_head",
+      "name": "Clan Head",
+      "top": "t805_clan_flak_vest",
+      "bottom": "b801_tracker_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "INUZUKA_JONIN"
+      ]
+    },
+    {
+      "id": "tracker_mantle",
+      "name": "Tracker Mantle",
+      "top": "t806_tracker_mantle",
+      "bottom": "b803_kennel_boots",
+      "rank": "genin"
+    },
+    {
+      "id": "claw_wrap",
+      "name": "Claw Wrap",
+      "top": "t807_claw_wrap",
+      "bottom": "b804_fur_wrap_shorts",
+      "rank": "genin"
+    },
+    {
+      "id": "pack_leader",
+      "name": "Pack Leader",
+      "top": "t808_pack_leader_coat",
+      "bottom": "b803_kennel_boots",
+      "rank": "jonin",
+      "palettes": [
+        "INUZUKA_SHADOW",
+        "INUZUKA_EARTH",
+        "INUZUKA_GREY"
+      ]
+    },
+    {
+      "id": "paw_hoodie",
+      "name": "Paw Hoodie",
+      "top": "t809_paw_hoodie",
+      "bottom": "b802_capri_pants",
+      "rank": "academy"
+    },
+    {
+      "id": "ninken_handler",
+      "name": "Ninken Handler",
+      "top": "t810_handler_jerkin",
+      "bottom": "b801_tracker_trousers",
+      "rank": "chunin"
+    }
+  ]
+}
