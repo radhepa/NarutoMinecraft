@@ -1,0 +1,39 @@
+{
+ "format": 1,
+ "id": "combat:enemy.cell_vanguard",
+ "name": "Cell vanguard",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "genin",
+ "levels": [
+  12,
+  22
+ ],
+ "band": "close",
+ "slice": "beta2",
+ "style": "combat:style.academy_basics",
+ "weapons": [
+  "item:tanto",
+  "item:kunai"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.body_flicker",
+  "combat:lightning.stunning_palm"
+ ],
+ "tools": {
+  "item:smoke_bomb": 1,
+  "item:paper_bomb": 2
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {
+  "pairs_with": "combat:enemy.cell_support"
+ },
+ "barks": "cell",
+ "note": "Enemy cells fight in pairs: the vanguard presses close"
+}

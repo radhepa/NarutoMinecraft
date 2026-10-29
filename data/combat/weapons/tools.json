@@ -1,0 +1,227 @@
+{
+ "format": 1,
+ "tools": [
+  {
+   "item": "item:paper_bomb",
+   "name": "Paper bomb",
+   "slice": "beta2",
+   "use": "throw (sticks to surfaces and entities) or tag a kunai",
+   "fuse_ticks": 30,
+   "damage": 6.0,
+   "type": "physical.blunt",
+   "radius": 3.0,
+   "poise": 30,
+   "blocks": "never breaks blocks",
+   "cooldown_ticks": 60,
+   "avoid": "a lit tag is seen: anyone not stunned walks out of it about half the time, more with a dodge",
+   "remote": "Weave Ram detonates every bomb you placed (weapons rank 3)",
+   "trap": "placed on the ground it is a mine for 60 s"
+  },
+  {
+   "item": "item:smoke_bomb",
+   "name": "Smoke bomb",
+   "slice": "beta1",
+   "radius": 4.0,
+   "ticks": 120,
+   "effect": "smoked: enemies inside lose their target unless sensing; you leave their tracking",
+   "escape": "dropping one at your feet breaks lock-on"
+  },
+  {
+   "item": "item:flash_bomb",
+   "name": "Flash bomb",
+   "slice": "beta2",
+   "radius": 6.0,
+   "effect": "blinded 40 ticks for anyone facing it (yourself too)",
+   "counters": "genjutsu: a flash breaks genjutsu on allies"
+  },
+  {
+   "item": "item:ninja_wire",
+   "name": "Ninja wire",
+   "slice": "beta1",
+   "uses": 8,
+   "modes": {
+    "tripwire": "between two points (a trap that trips, knocks down and triggers tagged bombs)",
+    "tether": "on a thrown kunai: yank it back with the throw key (and the target, if light)",
+    "binding": "throw two kunai past a target and pull: bound for 40 ticks (weapons rank 4)",
+    "fire_line": "a fire user can run a flame down a wire (Dragon Flame)"
+   }
+  },
+  {
+   "item": "item:makibishi",
+   "name": "Caltrops",
+   "slice": "beta2",
+   "radius": 2.0,
+   "ticks": 400,
+   "effect": "slow 0.4 and 1.0 damage a second to anyone walking (not running on chakra)"
+  },
+  {
+   "item": "item:sealing_tag",
+   "name": "Sealing tag",
+   "slice": "beta2",
+   "effect": "stick on a downed or stunned enemy: captured (a quest objective; bosses resist); or on a technique scroll: stores one cast",
+   "fuinjutsu": "the base of the sealing techniques (four tags make a barrier)"
+  },
+  {
+   "item": "item:tool_pouch",
+   "name": "Tool pouch",
+   "slice": "beta2",
+   "quick_slots": 4,
+   "use": "quick-throw key (G) throws the selected pouch slot without changing the hotbar; scroll with G held",
+   "upgrades": {
+    "item:tool_pouch_large": 6,
+    "weapons_rank_4": 1,
+    "weapons_rank_8": 1,
+    "item:flak_vest": 2
+   }
+  },
+  {
+   "item": "item:stink_bomb",
+   "name": "Stink bomb",
+   "slice": "beta1",
+   "radius": 4.0,
+   "ticks": 100,
+   "effect": "animals and civilians flee it (feared 60 ticks); shinobi only cough (slow 0.1); a prank before it is a tool"
+  },
+  {
+   "item": "item:paper_bomb_chain",
+   "name": "Paper-bomb chain",
+   "slice": "chunin",
+   "use": "a string of five tags thrown as a line (8 blocks) that bursts end to end",
+   "damage": 6.0,
+   "per": "tag",
+   "radius": 2.0,
+   "fuse_ticks": 30
+  },
+  {
+   "item": "item:barrier_tag",
+   "name": "Barrier tag",
+   "slice": "beta3",
+   "use": "four of them cast the Four-Tag Barrier without knowing it (half the duration)"
+  },
+  {
+   "item": "item:chakra_suppression_tag",
+   "name": "Chakra suppression tag",
+   "slice": "chunin",
+   "use": "on a downed or bound enemy: chakra sealed for 400 ticks (prisoners)"
+  },
+  {
+   "item": "item:tabi_boots",
+   "name": "Tabi boots",
+   "slice": "beta2",
+   "effect": "wall-runs last 0.5 s longer; tree walking costs 20% less"
+  },
+  {
+   "item": "item:food_pill",
+   "name": "Food pill",
+   "slice": "beta2",
+   "restores": {
+    "stamina": 100,
+    "hp": 2
+   },
+   "cooldown_ticks": 600
+  },
+  {
+   "item": "item:chakra_candy",
+   "name": "Chakra candy",
+   "slice": "beta1",
+   "restores": {
+    "chakra_fraction": 0.1
+   },
+   "cooldown_ticks": 600
+  },
+  {
+   "item": "item:burn_salve",
+   "name": "Burn salve",
+   "slice": "beta2",
+   "cleanses": [
+    "burning"
+   ],
+   "immunity_ticks": 100
+  },
+  {
+   "item": "item:eye_drops",
+   "name": "Eye drops",
+   "slice": "beta2",
+   "cleanses": [
+    "blinded",
+    "smoked"
+   ]
+  },
+  {
+   "item": "item:strong_antidote",
+   "name": "Strong antidote",
+   "slice": "chunin",
+   "cleanses": [
+    "poisoned",
+    "numbed",
+    "drowsy",
+    "paralysed"
+   ],
+   "immunity_ticks": 600
+  },
+  {
+   "item": "item:insect_repellent",
+   "name": "Insect repellent",
+   "slice": "beta3",
+   "effect": "giant leeches and insect swarms ignore you for 1200 ticks (Aburame swarms at half time)"
+  },
+  {
+   "item": "item:scent_powder",
+   "name": "Scent powder",
+   "slice": "beta3",
+   "effect": "animals and ninken lose your scent for 1200 ticks"
+  },
+  {
+   "item": "item:hand_sign_primer",
+   "name": "Hand-sign primer",
+   "slice": "beta1",
+   "effect": "the ninjutsu knack's starter: E-rank uses count double toward mastery until level 5"
+  },
+  {
+   "item": "item:soldier_pill",
+   "name": "Soldier pill",
+   "slice": "beta2",
+   "restores": {
+    "chakra_fraction": 0.4,
+    "stamina": 100
+   },
+   "cooldown_ticks": 1200,
+   "side_effect": "hunger -3"
+  },
+  {
+   "item": "item:blood_pill",
+   "name": "Blood pill",
+   "slice": "beta3",
+   "restores": {
+    "hp_per_second": 0.5,
+    "ticks": 200
+   },
+   "cooldown_ticks": 1200
+  },
+  {
+   "item": "item:herbal_poultice",
+   "name": "Herbal poultice",
+   "slice": "beta2",
+   "restores": {
+    "hp": 6
+   },
+   "cleanses": [
+    "poisoned",
+    "bleeding"
+   ],
+   "use_ticks": 30,
+   "clan_craft": "suzuran"
+  },
+  {
+   "item": "item:antidote",
+   "name": "Antidote",
+   "slice": "beta2",
+   "cleanses": [
+    "poisoned",
+    "numbed",
+    "drowsy"
+   ],
+   "immunity_ticks": 200
+  }
+ ]
+}

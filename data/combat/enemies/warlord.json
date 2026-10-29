@@ -1,0 +1,37 @@
+{
+ "format": 1,
+ "id": "combat:enemy.warlord",
+ "name": "Bandit warlord",
+ "kind": "human",
+ "tier": "miniboss",
+ "rank": "chunin",
+ "levels": [
+  20,
+  32
+ ],
+ "band": "close",
+ "slice": "chunin",
+ "style": "combat:style.mace_arts",
+ "weapons": [
+  "item:iron_mace",
+  "item:kunai"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:earth.hardening",
+  "combat:earth.mud_wall"
+ ],
+ "tools": {
+  "item:paper_bomb": 4,
+  "item:smoke_bomb": 2
+ },
+ "armour": {
+  "physical": 6,
+  "chakra": 2,
+  "will": 15
+ },
+ "traits": [],
+ "ai": {},
+ "barks": "bandit",
+ "note": "A B-rank mission target holding a fort; the target is bound as a role by the mission"
+}

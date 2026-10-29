@@ -1,0 +1,2153 @@
+{
+ "format": 1,
+ "clips": {
+  "combat.stance.idle": {
+   "ticks": 40,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Combat-ready idle: knees bent, kunai or fists up"
+  },
+  "combat.stance.walk_guard": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.move.crouch_hide": {
+   "ticks": 30,
+   "loop": true,
+   "who": "player",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Prologue"
+  },
+  "combat.move.slip_out": {
+   "ticks": 40,
+   "loop": false,
+   "who": "player",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Prologue: squeezing out of the cell"
+  },
+  "combat.move.carried": {
+   "ticks": 40,
+   "loop": true,
+   "who": "player",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Prologue: carried over the ravine"
+  },
+  "combat.move.carry": {
+   "ticks": 40,
+   "loop": true,
+   "who": "resident",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Prologue: the captain carries you"
+  },
+  "combat.move.roof_hop": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.move.ninja_run": {
+   "ticks": 12,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Arms back"
+  },
+  "combat.move.chakra_jump_charge": {
+   "ticks": 20,
+   "loop": true,
+   "who": "player",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.move.chakra_jump_air": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.move.land_roll": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.move.wall_run": {
+   "ticks": 12,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.move.tree_walk": {
+   "ticks": 16,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "The model is rotated to the trunk; the clip is a careful walk"
+  },
+  "combat.move.water_stance": {
+   "ticks": 40,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.move.water_sink": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.move.air_step": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.move.wind_glide": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.move.four_legs_run": {
+   "ticks": 10,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Inuzuka beast fang"
+  },
+  "combat.move.boulder_roll": {
+   "ticks": 10,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Akimichi Human Boulder"
+  },
+  "combat.def.dodge_left": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.def.dodge_right": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.def.dodge_back": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.def.dodge_forward": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.def.perfect_dodge": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Adds an afterimage particle"
+  },
+  "combat.def.substitution_vanish": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "A puff; the log entity takes the hit"
+  },
+  "combat.def.block": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.def.block_hit": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.def.guard_break": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.def.parry": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.def.parry_weapon": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.hit_light_front": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.react.hit_light_back": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.react.hit_heavy": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.react.stagger": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.react.knocked_down": {
+   "ticks": 24,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.get_up": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.launched": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.air_juggle": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.knocked_out": {
+   "ticks": 40,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "VF Knockouts: lying down"
+  },
+  "combat.react.yield": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Hand raised, kneeling"
+  },
+  "combat.react.surrender": {
+   "ticks": 30,
+   "loop": true,
+   "who": "resident",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Bandits: kneel, hands up"
+  },
+  "combat.react.flee": {
+   "ticks": 12,
+   "loop": true,
+   "who": "resident",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.bound_struggle": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.possessed_mirror": {
+   "ticks": 0,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "No clip: copies the caster's pose live"
+  },
+  "combat.react.genjutsu_dazed": {
+   "ticks": 30,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.shocked_twitch": {
+   "ticks": 10,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.burning_flail": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.poisoned_stagger": {
+   "ticks": 30,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.asleep": {
+   "ticks": 40,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.react.feared_cower": {
+   "ticks": 30,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.react.swallowed": {
+   "ticks": 0,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null,
+   "note": "No clip: hidden while swallowed"
+  },
+  "combat.pose.victory": {
+   "ticks": 30,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.pose.taunt": {
+   "ticks": 30,
+   "loop": false,
+   "who": "resident",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.pose.tired_slouch": {
+   "ticks": 40,
+   "loop": true,
+   "who": "player",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Fatigue"
+  },
+  "combat.pose.meditate": {
+   "ticks": 40,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.rat": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.ox": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.tiger": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.hare": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.dragon": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.snake": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.horse": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.ram": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.monkey": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.bird": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.dog": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.boar": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.sign.transition": {
+   "ticks": 2,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Blend between any two signs"
+  },
+  "combat.sign.fizzle": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Hands shake apart"
+  },
+  "combat.sign.release_ram": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Genjutsu Release"
+  },
+  "combat.cast.push_palms": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Generic forward release (Clone, Transformation poof)"
+  },
+  "combat.cast.breath": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Hand to mouth: fire and wind breath jutsu"
+  },
+  "combat.cast.clap_gust": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Wind: Gale Palm, Great Breakthrough"
+  },
+  "combat.cast.ground_slam": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Earth: walls, mud river"
+  },
+  "combat.cast.palm_strike": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Lightning: Stunning Palm"
+  },
+  "combat.cast.spit_wave": {
+   "ticks": 12,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Water: Wild Water Wave"
+  },
+  "combat.cast.kneel_sign_hold": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Nara Shadow Possession"
+  },
+  "combat.cast.slump": {
+   "ticks": 40,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null,
+   "note": "Yamanaka Mind Transfer body"
+  },
+  "combat.cast.grow": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Akimichi Expansion"
+  },
+  "combat.cast.arms_open_swarm": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Aburame Insect Swarm"
+  },
+  "combat.cast.chains_back": {
+   "ticks": 12,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Uzumaki Sealing Chains"
+  },
+  "combat.cast.wood_sign": {
+   "ticks": 14,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Senju Wood Release"
+  },
+  "combat.cast.brush_strokes": {
+   "ticks": 24,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Kurama Painted Illusion"
+  },
+  "combat.cast.step_behind": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Yuhi Tree Binding"
+  },
+  "combat.cast.three_way_slash": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Gekko Dance of the Crescent Moon"
+  },
+  "combat.cast.eye_glance": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null,
+   "note": "Sharingan and Byakugan toggles (the eye change is a face decal)"
+  },
+  "combat.cast.headhunter_sink": {
+   "ticks": 12,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.cast.headhunter_grab": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.cast.web_slam": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Tsuchigumo Earth Binding"
+  },
+  "combat.cast.night_curtain": {
+   "ticks": 14,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "Tobari"
+  },
+  "combat.cast.mystical_palm": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.cast.sensing": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null,
+   "note": "Eyes closed, a sign held"
+  },
+  "combat.cast.seal_slap": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.cast.barrier_tags": {
+   "ticks": 12,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.cast.water_prison_hold": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.cast.lightning_blade_charge": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": true,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.cast.lightning_blade_run": {
+   "ticks": 12,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.cast.spiral_sphere_form": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.cast.spiral_sphere_strike": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.cast.first_aid": {
+   "ticks": 30,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.cast.revive_kneel": {
+   "ticks": 30,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.tai.academy.jab": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.tai.academy.cross": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.tai.academy.roundhouse": {
+   "ticks": 15,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.tai.academy.heavy_windup": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.tai.academy.heavy_release": {
+   "ticks": 13,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.tai.academy.flying_kick": {
+   "ticks": 19,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.tai.academy.lunge": {
+   "ticks": 11,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.tai.academy.counter": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.academy.sweep": {
+   "ticks": 18,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.academy.launcher": {
+   "ticks": 14,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.academy.air_1": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.academy.air_2": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.academy.air_3": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.academy.air_spike": {
+   "ticks": 17,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.academy.palm_rush": {
+   "ticks": 30,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.strong_fist.leaf_hurricane": {
+   "ticks": 17,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.strong_fist.leaf_rising_wind": {
+   "ticks": 13,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.strong_fist.leaf_whirlwind": {
+   "ticks": 18,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.strong_fist.leaf_great_whirlwind": {
+   "ticks": 29,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.tai.strong_fist.weights_release": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.strong_fist.primary_lotus": {
+   "ticks": 40,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.strong_fist.reverse_lotus": {
+   "ticks": 50,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.strong_fist.morning_peacock": {
+   "ticks": 62,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.strong_fist.gate_open": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.stance": {
+   "ticks": 40,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.palm_1": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.palm_2": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.palm_3": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.palm_4": {
+   "ticks": 15,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.palm_thrust": {
+   "ticks": 21,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.vacuum_palm": {
+   "ticks": 21,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.palm_rotation": {
+   "ticks": 24,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.sixty_four_palms": {
+   "ticks": 52,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.hundred_twenty_eight_palms": {
+   "ticks": 66,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.gentle_fist.twin_lion_fists": {
+   "ticks": 54,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.iron_body.body_slam": {
+   "ticks": 19,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.iron_body.crushing_palm": {
+   "ticks": 25,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.iron_body.human_boulder": {
+   "ticks": 50,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.iron_body.partial_expansion_slap": {
+   "ticks": 24,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.iron_body.meat_tank": {
+   "ticks": 64,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.beast_fang.claw_1": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.beast_fang.claw_2": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.beast_fang.claw_3": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.beast_fang.claw_4": {
+   "ticks": 14,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.beast_fang.pounce": {
+   "ticks": 12,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.beast_fang.passing_fang": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.iron_guard.guard_shove": {
+   "ticks": 12,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.iron_guard.guard_crush": {
+   "ticks": 21,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.tai.iron_guard.iron_wall": {
+   "ticks": 48,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.willow.sway_idle": {
+   "ticks": 40,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.willow.sway_strike": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.willow.falling_willow": {
+   "ticks": 19,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.willow.lean_back_kick": {
+   "ticks": 17,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.willow.willow_storm": {
+   "ticks": 38,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.blossom.blossom_punch": {
+   "ticks": 25,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.blossom.blossom_heel": {
+   "ticks": 27,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.blossom.cherry_blossom_impact": {
+   "ticks": 34,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.lightning_body.lariat": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.lightning_body.guillotine_drop": {
+   "ticks": 24,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.tai.lightning_body.liger_bomb": {
+   "ticks": 42,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.wpn.blade.slash_1": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.wpn.blade.slash_2": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.wpn.blade.slash_3": {
+   "ticks": 15,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.wpn.blade.stab": {
+   "ticks": 21,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.wpn.blade.reverse_parry": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.blade.throw_out": {
+   "ticks": 14,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.throw.aim_hold": {
+   "ticks": 20,
+   "loop": true,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.wpn.throw.overhand": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.wpn.throw.sidearm": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.wpn.throw.fan_of_three": {
+   "ticks": 12,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.throw.air_down": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.throw.rain": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.wpn.throw.needle_flick": {
+   "ticks": 5,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.throw.needle_fan": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.throw.catch": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null,
+   "note": "Windmill return, kunai catch on parry"
+  },
+  "combat.wpn.kenjutsu.arc_1": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.kenjutsu.arc_2": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.kenjutsu.arc_3": {
+   "ticks": 17,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.kenjutsu.draw_cut": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.kenjutsu.moon_rising": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.kenjutsu.unsheathe": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.kenjutsu.sheathe": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.kenjutsu.crescent_finish": {
+   "ticks": 26,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.wpn.kenjutsu.iaido_stance": {
+   "ticks": 40,
+   "loop": true,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.wpn.wave_foot.ripple": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.wave_foot.undertow": {
+   "ticks": 15,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.wave_foot.side_step_cut": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.wave_foot.guard_of_waves": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.staff.idle": {
+   "ticks": 40,
+   "loop": true,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.staff.sweep_1": {
+   "ticks": 11,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.staff.sweep_2": {
+   "ticks": 11,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.staff.thrust": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.staff.pole_vault": {
+   "ticks": 19,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.staff.whirling_staff": {
+   "ticks": 33,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
+  "combat.wpn.chain.lash": {
+   "ticks": 11,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.chain.hook_pull": {
+   "ticks": 20,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.chain.wrap_bind": {
+   "ticks": 18,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.fan.cut": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.fan.snap": {
+   "ticks": 15,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.fan.gust_parry": {
+   "ticks": 13,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.mace.swing_1": {
+   "ticks": 14,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.mace.swing_2": {
+   "ticks": 14,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.mace.overhead": {
+   "ticks": 27,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.wire.tether_yank": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.wire.set_trip_line": {
+   "ticks": 14,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.wire.binding_cross": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.tool.place_paper_bomb": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.tool.tag_kunai": {
+   "ticks": 6,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.tool.throw_smoke": {
+   "ticks": 8,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.wpn.tool.eat_pill": {
+   "ticks": 12,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.tool.apply_coating": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.wpn.tool.pouch_draw": {
+   "ticks": 4,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.squad.command_point": {
+   "ticks": 10,
+   "loop": false,
+   "who": "player",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.squad.command_wave": {
+   "ticks": 10,
+   "loop": false,
+   "who": "player",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.squad.acknowledge": {
+   "ticks": 10,
+   "loop": false,
+   "who": "resident",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.squad.high_five": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "After a squad combo"
+  },
+  "combat.squad.cover_dive": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.squad.call_combo": {
+   "ticks": 12,
+   "loop": false,
+   "who": "resident",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.res.salute": {
+   "ticks": 16,
+   "loop": false,
+   "who": "resident",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.res.nod": {
+   "ticks": 10,
+   "loop": false,
+   "who": "resident",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.res.excited_wave": {
+   "ticks": 20,
+   "loop": false,
+   "who": "resident",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null,
+   "note": "Kids"
+  },
+  "combat.res.spar_bow": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.res.spectator_cheer": {
+   "ticks": 30,
+   "loop": true,
+   "who": "resident",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.res.spectator_gasp": {
+   "ticks": 12,
+   "loop": false,
+   "who": "resident",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.res.spectator_seated_clap": {
+   "ticks": 20,
+   "loop": true,
+   "who": "resident",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.res.proctor_stop": {
+   "ticks": 16,
+   "loop": false,
+   "who": "resident",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.res.sensei_reading": {
+   "ticks": 40,
+   "loop": true,
+   "who": "resident",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "The bell test"
+  },
+  "combat.res.sensei_book_dodge": {
+   "ticks": 8,
+   "loop": false,
+   "who": "resident",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null,
+   "note": "The bell test: dodges without looking up"
+  },
+  "combat.res.cower_civilian": {
+   "ticks": 30,
+   "loop": true,
+   "who": "resident",
+   "fp": false,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null,
+   "note": "The attack: civilians in the stands"
+  },
+  "combat.life.petting": {
+   "ticks": 30,
+   "loop": false,
+   "who": "player",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  },
+  "combat.life.forging": {
+   "ticks": 30,
+   "loop": true,
+   "who": "player",
+   "fp": false,
+   "priority": "P1",
+   "slice": "beta2",
+   "keys": null
+  },
+  "combat.life.workbench": {
+   "ticks": 30,
+   "loop": true,
+   "who": "player",
+   "fp": false,
+   "priority": "P0",
+   "slice": "beta1",
+   "keys": null
+  }
+ },
+ "counts": {
+  "P0": 62,
+  "P1": 107,
+  "P3": 36,
+  "P2": 28
+ }
+}

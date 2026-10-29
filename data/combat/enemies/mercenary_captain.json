@@ -1,0 +1,31 @@
+{
+ "format": 1,
+ "id": "combat:enemy.mercenary_captain",
+ "name": "Mercenary captain",
+ "kind": "human",
+ "tier": "miniboss",
+ "rank": "chunin",
+ "levels": [
+  20,
+  35
+ ],
+ "band": "close",
+ "slice": "chunin",
+ "style": "combat:style.chain_arts",
+ "weapons": [
+  "item:kusarigama"
+ ],
+ "techniques": [],
+ "tools": {
+  "item:smoke_bomb": 2,
+  "item:flash_bomb": 2
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {},
+ "barks": "bandit"
+}

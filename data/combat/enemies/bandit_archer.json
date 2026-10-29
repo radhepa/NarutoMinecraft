@@ -1,0 +1,31 @@
+{
+ "format": 1,
+ "id": "combat:enemy.bandit_archer",
+ "name": "Bandit archer",
+ "kind": "human",
+ "tier": "mook",
+ "rank": "civilian",
+ "levels": [
+  6,
+  16
+ ],
+ "band": "far",
+ "slice": "beta2",
+ "weapons": [
+  "vanilla:bow"
+ ],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {
+  "flee_chance": 0.5,
+  "keeps_distance": 12
+ },
+ "barks": "bandit",
+ "note": "A vanilla bow: arrows count as physical.pierce"
+}

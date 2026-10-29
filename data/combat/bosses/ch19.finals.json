@@ -1,0 +1,46 @@
+{
+ "format": 1,
+ "id": "combat:boss.ch19.finals",
+ "name": "Finals bout",
+ "chapter": 19,
+ "slice": "beta3",
+ "base": "combat:enemy.spar.chunin",
+ "level": 18,
+ "nonlethal": true,
+ "arena": "place:stadium.floor",
+ "win": "the opponent is knocked out or yields",
+ "lose": "you are knocked out or yield (judging still counts how you fought)",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Pride",
+   "behaviour": "aggressive fire jutsu at mid range and a fast chain close; dodges 30%",
+   "openings": "interrupt the signs: it weaves at 4 blocks"
+  },
+  {
+   "at_hp": 0.6,
+   "name": "Pressure",
+   "behaviour": "shuriken with fire (phoenix flowers with hidden steel) and a clone feint",
+   "openings": "sensing or parry the real one"
+  },
+  {
+   "at_hp": 0.3,
+   "name": "No holding back",
+   "behaviour": "its signature on a 20-tick tell; if it has the Sharingan, telegraphs are shorter against it",
+   "openings": "water or a wall; then a finisher"
+  }
+ ],
+ "hp_mult": 3.0,
+ "poise": 60,
+ "damage_mult": 0.7,
+ "role": "role:rival",
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.body_flicker",
+  "combat:fire.great_fireball",
+  "combat:fire.phoenix_flower"
+ ],
+ "style": "combat:style.academy_basics",
+ "notes": "Role-based: the rival in Classic; in Varied the finals opponent is whoever the bracket gives (role:rival by default)",
+ "dialogue": "dlg:combat.boss.ch19.finals"
+}

@@ -1,0 +1,193 @@
+{
+ "format": 1,
+ "id": "tobari",
+ "clan": "clan:tobari",
+ "name": "Tobari",
+ "standing": "minor",
+ "suggested_nature": [],
+ "passives": {
+  "noise_mult": 0.7,
+  "night_vision": true
+ },
+ "techniques": [
+  {
+   "id": "combat:tobari.night_curtain",
+   "name": "Night Curtain",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "snake",
+    "rat"
+   ],
+   "chakra": 16,
+   "cast_ticks": 8,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "silent_steps",
+     "ticks": 400
+    },
+    {
+     "area_silence": 5
+    }
+   ],
+   "mechanic": "At night, a curtain (radius 5) for 400 ticks smothers your footsteps and techniques: enemies do not hear you or your jutsu",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.tobari"
+   ],
+   "slice": "beta2",
+   "requires": [
+    "time:night"
+   ],
+   "beta": true,
+   "clan": "tobari",
+   "tier": 1
+  },
+  {
+   "id": "combat:tobari.lantern_dim",
+   "name": "Lantern Dim",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "snake",
+    "ram",
+    "dog"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "unsensed",
+     "ticks": 300
+    }
+   ],
+   "mechanic": "Dim your chakra: enemy sensing (and Byakugan stage 1) cannot find you for 300 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.tobari"
+   ],
+   "slice": "chunin",
+   "clan": "tobari",
+   "tier": 2
+  },
+  {
+   "id": "combat:tobari.curtain_veil",
+   "name": "Curtain Veil",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "snake",
+    "ram",
+    "dog",
+    "boar"
+   ],
+   "chakra": 50,
+   "cast_ticks": 16,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "hidden",
+     "ticks": 300,
+     "walking": true
+    }
+   ],
+   "mechanic": "Hidden while you move at a walk, day or night, for 300 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.tobari"
+   ],
+   "slice": "jonin",
+   "clan": "tobari",
+   "tier": 3
+  },
+  {
+   "id": "combat:tobari.great_curtain",
+   "name": "Great Curtain",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "snake",
+    "ram",
+    "dog",
+    "boar",
+    "ox"
+   ],
+   "chakra": 80,
+   "cast_ticks": 20,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 10
+   },
+   "effects": [
+    {
+     "status": "silent_steps",
+     "ticks": 600
+    },
+    {
+     "status": "unsensed",
+     "ticks": 600
+    }
+   ],
+   "mechanic": "The whole squad within 10 blocks is silent and unsensed for 600 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.tobari"
+   ],
+   "slice": "road",
+   "clan": "tobari",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:tobari.soft_steps",
+  "name": "Soft Steps",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 16,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "Silent step costs no chakra at night",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:tobari:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "tobari",
+  "lesser": true
+ }
+}

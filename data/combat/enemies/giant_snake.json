@@ -1,0 +1,31 @@
+{
+ "format": 1,
+ "id": "combat:enemy.giant_snake",
+ "name": "Giant snake",
+ "kind": "animal",
+ "tier": "miniboss",
+ "rank": "beast",
+ "levels": [
+  14,
+  20
+ ],
+ "band": "close",
+ "slice": "beta3",
+ "weapons": [],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "constrict",
+  "swallow"
+ ],
+ "ai": {},
+ "found": "Forest of Death",
+ "barks": "beast_none",
+ "note": "A wild animal, not a summon. Its swallow is escaped by damage from inside",
+ "poise": 80
+}

@@ -1,0 +1,344 @@
+{
+ "format": 1,
+ "techniques": [
+  {
+   "id": "combat:earth.headhunter",
+   "name": "Earth: Headhunter",
+   "kind": "ninjutsu",
+   "nature": "earth",
+   "rank": "d",
+   "level": 8,
+   "signs": [
+    "boar",
+    "dog"
+   ],
+   "chakra": 10,
+   "cast_ticks": 8,
+   "cooldown_ticks": 60,
+   "power": 5.0,
+   "shape": {
+    "type": "melee",
+    "range": 2.0,
+    "from_below": true
+   },
+   "effects": [
+    {
+     "damage": "physical.blunt"
+    },
+    {
+     "status": "bound",
+     "ticks": 30
+    }
+   ],
+   "mechanic": "Sink into the ground (hidden 40 ticks), then grab a target's ankles from below: bound 30 ticks, buried to the neck",
+   "counters": "jump; earth jutsu of your own; sensing shows where they are",
+   "teach": [
+    "scroll:scroll_shop"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:earth.mud_wall",
+   "name": "Earth: Mud Wall",
+   "kind": "ninjutsu",
+   "nature": "earth",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "tiger",
+    "hare",
+    "boar",
+    "dog"
+   ],
+   "chakra": 16,
+   "cast_ticks": 16,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "earth_wall",
+    "ticks": 160,
+    "width": 5,
+    "height": 3,
+    "hp": 30
+   },
+   "effects": [
+    {
+     "blocks": "projectiles"
+    }
+   ],
+   "mechanic": "A short-lived wall entity 5 wide and 3 high for 160 ticks: blocks projectiles and jutsu that are not lightning",
+   "counters": "lightning goes through; go around; Lightning Blade breaks it",
+   "teach": [
+    "ceremony:nature",
+    "mentor:role:nature_master.earth"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:earth.mud_river",
+   "name": "Earth: Mud River",
+   "kind": "ninjutsu",
+   "nature": "earth",
+   "rank": "c",
+   "level": 12,
+   "signs": [
+    "boar",
+    "dog",
+    "ram"
+   ],
+   "chakra": 16,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 6.0,
+   "shape": {
+    "type": "cone",
+    "range": 10,
+    "degrees": 45,
+    "ground": true
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.earth"
+    },
+    {
+     "status": "knocked_down",
+     "ticks": 24
+    }
+   ],
+   "mechanic": "The ground turns to a sliding river of mud (10-block cone): knocked down and carried 4 blocks",
+   "counters": "lightning jutsu (lightning beats earth), jump the ground wave, flank the wall",
+   "teach": [
+    "scroll:scroll_shop",
+    "exam_reward"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:earth.hardening",
+   "name": "Earth: Rock Skin",
+   "kind": "ninjutsu",
+   "nature": "earth",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "boar",
+    "ox"
+   ],
+   "chakra": 30,
+   "cast_ticks": 8,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "hardened",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "Harden the skin into stone for 200 ticks (hardened: physical damage taken x0.5, -20% speed); a close fighter's best friend",
+   "counters": "lightning; chakra damage (Gentle Fist)",
+   "teach": [
+    "mentor:role:nature_master.earth"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:earth.stone_spears",
+   "name": "Earth: Stone Spears",
+   "kind": "ninjutsu",
+   "nature": "earth",
+   "rank": "b",
+   "level": 22,
+   "signs": [
+    "dog",
+    "rat",
+    "ox"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 14.0,
+   "shape": {
+    "type": "target",
+    "range": 20,
+    "radius": 2,
+    "telegraph_ticks": 10
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.earth"
+    },
+    {
+     "status": "airborne",
+     "ticks": 20
+    }
+   ],
+   "mechanic": "Spikes of stone burst under the target (a 2-block circle, 20 range): launches",
+   "counters": "lightning jutsu (lightning beats earth), jump the ground wave, flank the wall",
+   "teach": [
+    "mentor:role:nature_master.earth"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:earth.earth_dragon_bullet",
+   "name": "Earth: Earth Dragon Bullet",
+   "kind": "ninjutsu",
+   "nature": "earth",
+   "rank": "b",
+   "level": 24,
+   "signs": [
+    "tiger",
+    "ram",
+    "boar",
+    "horse",
+    "snake"
+   ],
+   "chakra": 30,
+   "cast_ticks": 20,
+   "cooldown_ticks": 200,
+   "power": 15,
+   "shape": {
+    "type": "projectile",
+    "range": 22,
+    "speed": 1.0,
+    "radius": 0.8,
+    "count": 5,
+    "interval": 5
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.earth"
+    }
+   ],
+   "mechanic": "A dragon of mud rises and spits mud balls (5 x 3 power); a fire ally turns them to lava bullets",
+   "counters": "lightning jutsu (lightning beats earth), jump the ground wave, flank the wall",
+   "teach": [
+    "mentor:role:nature_master.earth"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:earth.flow_rampart",
+   "name": "Earth: Flowing Rampart",
+   "kind": "ninjutsu",
+   "nature": "earth",
+   "rank": "a",
+   "level": 30,
+   "signs": [
+    "tiger",
+    "snake",
+    "dog",
+    "boar",
+    "ram"
+   ],
+   "chakra": 50,
+   "cast_ticks": 20,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "earth_wall",
+    "ticks": 300,
+    "width": 15,
+    "height": 6,
+    "hp": 200
+   },
+   "effects": [],
+   "mechanic": "A great wall 15 wide and 6 high for 300 ticks (hp 200): holds a gate, covers a squad",
+   "counters": "lightning jutsu (lightning beats earth), jump the ground wave, flank the wall",
+   "teach": [
+    "mentor:role:nature_master.earth"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:earth.light_weight_rock",
+   "name": "Earth: Light-Weight Rock",
+   "kind": "ninjutsu",
+   "nature": "earth",
+   "rank": "a",
+   "level": 36,
+   "signs": [
+    "boar",
+    "ram"
+   ],
+   "chakra": 50,
+   "cast_ticks": 8,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 3.0
+   },
+   "effects": [
+    {
+     "either": [
+      {
+       "status": "light",
+       "ticks": 200
+      },
+      {
+       "status": "heavy",
+       "ticks": 200
+      }
+     ]
+    }
+   ],
+   "mechanic": "Touch: make yourself light (+30% speed, double jump) or an enemy heavy (slow 0.5, cannot jump) for 200 ticks",
+   "counters": "lightning jutsu (lightning beats earth), jump the ground wave, flank the wall",
+   "teach": [
+    "mission:a"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:earth.earth_splitting",
+   "name": "Earth: Earth Splitting",
+   "kind": "ninjutsu",
+   "nature": "earth",
+   "rank": "s",
+   "level": 46,
+   "signs": [
+    "boar",
+    "dog",
+    "ram",
+    "tiger",
+    "snake",
+    "horse",
+    "ox"
+   ],
+   "chakra": 80,
+   "cast_ticks": 28,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "line",
+    "range": 24,
+    "width": 3.0,
+    "ground": true
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.earth"
+    },
+    {
+     "status": "knocked_down",
+     "ticks": 40
+    }
+   ],
+   "mechanic": "Slam the ground: a fissure runs 24 blocks (an entity effect; blocks never change), knocking down everything in its path",
+   "counters": "lightning jutsu (lightning beats earth), jump the ground wave, flank the wall",
+   "teach": [
+    "scroll:forbidden_archive"
+   ],
+   "slice": "road"
+  }
+ ]
+}

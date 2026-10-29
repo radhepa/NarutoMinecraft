@@ -1,0 +1,36 @@
+{
+ "format": 1,
+ "id": "combat:enemy.bandit_chief",
+ "name": "Bandit chief",
+ "kind": "human",
+ "tier": "miniboss",
+ "rank": "genin",
+ "levels": [
+  10,
+  16
+ ],
+ "band": "close",
+ "slice": "beta2",
+ "weapons": [
+  "item:iron_mace",
+  "item:kunai"
+ ],
+ "techniques": [],
+ "tools": {
+  "item:paper_bomb": 3,
+  "item:smoke_bomb": 2
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {
+  "flee_chance": 0.0,
+  "calls_reinforcements": true
+ },
+ "found": "bandit camps (weekly refill)",
+ "barks": "bandit",
+ "note": "Leads a camp; see boss.ch11.bandit_chief"
+}

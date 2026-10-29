@@ -1,0 +1,35 @@
+{
+ "format": 1,
+ "id": "combat:enemy.bandit_ronin",
+ "name": "Ronin sellsword",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "genin",
+ "levels": [
+  10,
+  20
+ ],
+ "band": "close",
+ "slice": "beta2",
+ "style": "combat:style.crescent_moon",
+ "weapons": [
+  "item:katana"
+ ],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "parries",
+  "draw_cut"
+ ],
+ "ai": {
+  "parry": 0.2,
+  "flee_chance": 0.1
+ },
+ "barks": "bandit",
+ "note": "Parries your lights: use heavies, throws or jutsu"
+}

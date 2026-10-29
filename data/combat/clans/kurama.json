@@ -1,0 +1,195 @@
+{
+ "format": 1,
+ "id": "kurama",
+ "clan": "clan:kurama",
+ "name": "Kurama",
+ "standing": "noble",
+ "suggested_nature": [],
+ "passives": {
+  "genjutsu_power": 0.1,
+  "will_bonus": 8
+ },
+ "techniques": [
+  {
+   "id": "combat:kurama.painted_illusion",
+   "name": "Painted Illusion",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "ram",
+    "ox",
+    "ram"
+   ],
+   "chakra": 16,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "target",
+    "range": 12,
+    "needs_sight": true
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 120,
+     "variant": "painted"
+    }
+   ],
+   "mechanic": "Brush strokes in the air: a painted world closes over one target within 12 blocks for 120 ticks (genjutsu, painted)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.kurama"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "clan": "kurama",
+   "tier": 1
+  },
+  {
+   "id": "combat:kurama.painted_beasts",
+   "name": "Painted Beasts",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 15,
+   "signs": [
+    "ram",
+    "ox",
+    "bird"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 8.4,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 160,
+     "variant": "painted"
+    },
+    {
+     "damage": "genjutsu",
+     "per_second": true,
+     "hp": true
+    }
+   ],
+   "mechanic": "Inside the illusion, painted beasts maul the target: genjutsu damage 1 power a second (stops if it breaks free)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.kurama"
+   ],
+   "slice": "beta3",
+   "clan": "kurama",
+   "tier": 2
+  },
+  {
+   "id": "combat:kurama.living_canvas",
+   "name": "Living Canvas",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "snake",
+    "boar",
+    "dog"
+   ],
+   "chakra": 50,
+   "cast_ticks": 16,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 10
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 120,
+     "variant": "painted"
+    }
+   ],
+   "mechanic": "A painted world over every enemy within 10 blocks for 120 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.kurama"
+   ],
+   "slice": "jonin",
+   "clan": "kurama",
+   "tier": 3
+  },
+  {
+   "id": "combat:kurama.final_brushstroke",
+   "name": "Final Brushstroke",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "snake",
+    "boar",
+    "dog",
+    "bird"
+   ],
+   "chakra": 80,
+   "cast_ticks": 20,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.none"
+    }
+   ],
+   "mechanic": "The painting becomes real for one stroke: a target caught in your genjutsu takes S-rank damage and the illusion ends",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.kurama"
+   ],
+   "slice": "road",
+   "requires": [
+    "status:target_in_genjutsu"
+   ],
+   "clan": "kurama",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:kurama.ink_mind",
+  "name": "Ink Mind",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 16,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "Genjutsu on you lasts 30% shorter",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:kurama:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "kurama",
+  "lesser": true
+ }
+}

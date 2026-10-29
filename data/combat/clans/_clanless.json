@@ -1,0 +1,35 @@
+{
+ "format": 1,
+ "clanless": {
+  "passives": {
+   "stamina_bonus": 10,
+   "control_bonus": 5
+  },
+  "note": "Self-made: clanless players start with +10 stamina and +5 control, learn one lesser technique per friendly clan (clan friendship 7) and every open style, so clanless is never the weaker pick."
+ },
+ "player_clan_arts": {
+  "how": "A player clan's clan art is a technique its founder has mastered (ROADMAP Player clans); members learn it from the founder",
+  "allowed": "any technique of rank C to A the founder has at mastered or better, not a kekkei genkai and not a clan's tier technique",
+  "bonus": "the clan art costs its members 15% less"
+ },
+ "tiers": {
+  "rank": {
+   "1": "c",
+   "2": "b",
+   "3": "a",
+   "4": "s"
+  },
+  "level": {
+   "1": 10,
+   "2": 20,
+   "3": 32,
+   "4": 44
+  },
+  "slice": {
+   "1": "beta2",
+   "2": "chunin",
+   "3": "jonin",
+   "4": "road"
+  }
+ }
+}

@@ -1,0 +1,111 @@
+{
+ "format": 1,
+ "effect_type": "kindle",
+ "status": "designed (the owner approved the redesign); unlock timing is the story's, bond tiers are the bond engine's",
+ "concept": "Power flows outward, through people: it grows with how many people you have truly bonded with and how deep those bonds go",
+ "contract": {
+  "reads": "dev.shinobi.combat.Kindle.Bonds, adapted by Shinobi Life's glue: tier(who) = Kindling.combatTier(w, who); web() = Kindling.bonfire(w).strength(); bonfireOpen() = Kindling.bonfire(w).lit()",
+  "tiers": {
+   "spark": "friendship 6",
+   "flame": "friendship 8",
+   "blaze": "friendship 10 or a spouse",
+   "bonfire": "a large bond web (the bond engine's gate)"
+  },
+  "quarrels": "an active quarrel drops exactly one tier (a Spark goes out); a falling-out puts it out; nothing before the story's awakening (the bond engine decides; combat reads the tier)"
+ },
+ "thread_sight": {
+  "tier": "spark",
+  "always_on": true,
+  "combat": "bonded allies' health, chakra and cooldowns show along their threads; a telegraphed attack on a bonded ally flares on its thread 4 ticks earlier (6 at Flame, 8 at Blaze) so you can Cover or parry for them; any bonded ally is a beacon anywhere on the map",
+  "blind_spot": "strangers and enemies have no thread to you: no reads on them",
+  "outside_combat": "the bond engine's (who is tied to whom, fraying and one-sided ties, lies as a flicker)"
+ },
+ "kindle": {
+  "tier": "spark",
+  "key": "Kindle (K) while a bonded ally weaves: your chakra goes into their technique",
+  "boost": {
+   "spark": {
+    "power": 1.4,
+    "area": 1.2,
+    "range": 1.5,
+    "heal": 1.5,
+    "revives": false
+   },
+   "flame": {
+    "power": 1.9,
+    "area": 1.4,
+    "range": 2.5,
+    "heal": 2.0,
+    "revives": true
+   },
+   "blaze": {
+    "power": 2.4,
+    "area": 1.6,
+    "range": 4.0,
+    "heal": 2.5,
+    "revives": true
+   }
+  },
+  "cost": "your chakra: 0.6 / 0.8 / 1.0 of the ally's technique cost (Spark / Flame / Blaze)",
+  "cooldown_ticks": {
+   "spark": 400,
+   "flame": 300,
+   "blaze": 200
+  },
+  "examples": "a fireball becomes a firestorm, a heal becomes a revival, a sensor's range covers the village",
+  "rule": "you never learn the technique: they do it, bigger"
+ },
+ "ember_link": {
+  "tier": "flame",
+  "members": "you and up to 3 bonded allies within 24 blocks",
+  "ticks": 600,
+  "cooldown_ticks": 2400,
+  "shared_pool": "one chakra pool: a caster pays from their own share first, then evenly from the others",
+  "damage": "a hit on a linked member: the one struck keeps half, the rest is split across the others (you feel your allies' pain)",
+  "sight": "look through a linked ally's eyes (hold the Link key)"
+ },
+ "unison": {
+  "tier": "blaze",
+  "rule": "a combination unique to each pairing that neither can do alone: your nature crossed with the ally's niche (and their nature)",
+  "cost": "25 chakra each, once per fight per pairing",
+  "power": "two A-rank casts in one blow (42 base), 4-block burst",
+  "by_niche": {
+   "genjutsu": "Painted <your nature>: enemies caught in the ally's illusion take your nature's damage every second and cannot release it while it burns",
+   "taijutsu": "Twin Comet: both dash through the target; your nature coats the strike (with a ninken: three fangs)",
+   "ninjutsu": "a nature unison: the two natures' combo (combos/nature.json) at twice the power and range, or a pure-chakra lance when the natures match",
+   "medical": "Hearth: the squad heals as one and a downed member rises",
+   "sensing": "Beacon Sight: every enemy within 48 blocks marked, hidden ones revealed, for 30 s",
+   "weapons": "Ember Rain: the ally's weapon storm carries your nature",
+   "sealing": "Burning Seal: a barrier that burns what it holds"
+  }
+ },
+ "ember_mark": {
+  "tier": "blaze",
+  "what": "leave an ember in a deeply bonded ally: travel to their side, or summon them to yours, across any distance",
+  "combat": "once per fight: swap places with a marked ally (an escape or a rescue); outside a fight, travel to them (5-minute cooldown)"
+ },
+ "bonfire": {
+  "tier": "bonfire",
+  "ticks": 400,
+  "burnout_ticks": 1200,
+  "strength": "the bond engine's Bonfire strength (Kindling.bonfire(w).strength(): each flame by tier 1/2/4 times its strength, dimmed by quarrels, plus 0.5 per community reached)",
+  "formula": "m = 1 + 1.5 x (1 - e^(-strength / 35)): your damage x m, damage taken x 1/sqrt(m), chakra regen x (1 + strength / 25), allies' power x (1 + (m - 1) / 2)",
+  "scale": {
+   "a loner (2 to 4)": "x1.1, a candle",
+   "12": "x1.44, a campfire",
+   "typical at 60 h (19)": "x1.63, a bonfire",
+   "devoted (22)": "x1.70, an inferno"
+  },
+  "forms": "candle under 5, campfire under 12, bonfire under 21, inferno above (the bond engine's names; the visuals match)",
+  "burnout": "afterwards no kindling of any kind for 60 s, and the chakra bar empties"
+ },
+ "costs": [
+  "while linked you feel your allies' pain (the damage split)",
+  "past three kindles in a minute each burns 10% of your chakra bar and 30 stamina",
+  "a quarrel dims that person's flame, a falling-out snuffs it",
+  "useless with strangers until you bond with them"
+ ],
+ "natures": "you still gain natures through bonds by resonance: fight beside someone often enough and their trial can teach you their nature (the bond engine counts, a nature master's trial teaches); you never copy it",
+ "look": "an ember mark on the palm or chest (never an eye), threads of light, ember-gold chakra",
+ "beta": "none of it ships in the beta; the story decides when Spark opens"
+}

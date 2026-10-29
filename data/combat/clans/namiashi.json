@@ -1,0 +1,173 @@
+{
+ "format": 1,
+ "id": "namiashi",
+ "clan": "clan:namiashi",
+ "name": "Namiashi",
+ "standing": "minor",
+ "suggested_nature": [],
+ "passives": {
+  "kenjutsu_power": 0.05,
+  "stamina_bonus": 10
+ },
+ "techniques": [
+  {
+   "id": "combat:namiashi.wave_step",
+   "name": "Wave Step",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [],
+   "mechanic": "Footwork that leaves no sound and no ripple: silent steps and water-walking cost nothing",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.namiashi"
+   ],
+   "slice": "beta2",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "namiashi",
+   "tier": 1
+  },
+  {
+   "id": "combat:namiashi.wave_foot_arts",
+   "name": "Wave-foot Arts",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "style": "combat:style.wave_foot"
+    }
+   ],
+   "mechanic": "Wave-foot kenjutsu tier 3 moves (the guard of waves)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.namiashi"
+   ],
+   "slice": "chunin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "namiashi",
+   "tier": 2
+  },
+  {
+   "id": "combat:namiashi.black_tide",
+   "name": "Black Tide",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [],
+   "chakra": 50,
+   "cast_ticks": 4,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "no_telegraph",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "The kokuto drinks light for 200 ticks: your blade attacks give no telegraph",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.namiashi"
+   ],
+   "slice": "jonin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "namiashi",
+   "tier": 3
+  },
+  {
+   "id": "combat:namiashi.hokage_guard",
+   "name": "Hokage's Blade",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [],
+   "chakra": 80,
+   "cast_ticks": 0,
+   "cooldown_ticks": 800,
+   "power": 25.6,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "intercept": true,
+     "counter": true
+    }
+   ],
+   "mechanic": "Counter any melee attack aimed at an ally within 4 blocks with a guaranteed draw-cut (once per 10 s)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.namiashi"
+   ],
+   "slice": "road",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "namiashi",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:namiashi.wave_foot",
+  "name": "Wave-foot basics",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 16,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [
+   {
+    "style": "combat:style.wave_foot"
+   }
+  ],
+  "mechanic": "Opens wave-foot kenjutsu tiers 1 and 2",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:namiashi:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "namiashi",
+  "lesser": true
+ },
+ "style": "combat:style.wave_foot"
+}

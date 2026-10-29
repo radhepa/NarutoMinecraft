@@ -1,0 +1,188 @@
+{
+ "format": 1,
+ "id": "suzuran",
+ "clan": "clan:suzuran",
+ "name": "Suzuran",
+ "standing": "minor",
+ "suggested_nature": [],
+ "passives": {
+  "poison_immune": true,
+  "coating_hits_mult": 1.5
+ },
+ "techniques": [
+  {
+   "id": "combat:suzuran.coating_craft",
+   "name": "Lily Blood: Coatings",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [],
+   "mechanic": "Craft poison coatings, antidotes and poultices at the workbench; your coatings last 50% longer",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.suzuran"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "suzuran",
+   "tier": 1
+  },
+  {
+   "id": "combat:suzuran.lily_poultice",
+   "name": "Lily Poultice",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "ram",
+    "tiger",
+    "boar"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 2.0
+   },
+   "effects": [
+    {
+     "heal_fraction": 0.3,
+     "ticks": 100
+    },
+    {
+     "cleanse": [
+      "poisoned",
+      "numbed",
+      "drowsy"
+     ]
+    }
+   ],
+   "mechanic": "Heal an ally 30% over 100 ticks and cleanse every poison",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.suzuran"
+   ],
+   "slice": "chunin",
+   "clan": "suzuran",
+   "tier": 2
+  },
+  {
+   "id": "combat:suzuran.poison_mist",
+   "name": "Poison Mist",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "hare",
+    "rat"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 6
+   },
+   "effects": [
+    {
+     "status": "poisoned",
+     "ticks": 200,
+     "stacks": 2
+    }
+   ],
+   "mechanic": "A violet mist (radius 6) for 200 ticks: poisoned, 2 stacks a second; you and your squad are immune if you share antidotes",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.suzuran"
+   ],
+   "slice": "jonin",
+   "clan": "suzuran",
+   "tier": 3
+  },
+  {
+   "id": "combat:suzuran.bloom_of_bells",
+   "name": "Bloom of Bells",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "snake",
+    "tiger",
+    "dog"
+   ],
+   "chakra": 80,
+   "cast_ticks": 16,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 10
+   },
+   "effects": [
+    {
+     "status": "poison_immune",
+     "ticks": 400
+    },
+    {
+     "heal_per_second": 0.5
+    }
+   ],
+   "mechanic": "White bells ring around you for 400 ticks: allies within 10 blocks are immune to poison and regenerate 0.5 HP a second",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.suzuran"
+   ],
+   "slice": "road",
+   "clan": "suzuran",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:suzuran.herb_lore",
+  "name": "Herb Lore",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 16,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "You can craft poultices and antidotes at the workbench",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:suzuran:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "suzuran",
+  "lesser": true
+ }
+}

@@ -1,0 +1,1739 @@
+{
+ "format": 1,
+ "tiers": {
+  "names": [
+   "initiate",
+   "adept",
+   "expert",
+   "master",
+   "grandmaster"
+  ],
+  "style_mult": [
+   1.0,
+   1.1,
+   1.2,
+   1.3,
+   1.4
+  ],
+  "how": "A style's tier rises with uses of its moves in real fights and a mentor's trial at tiers 2 to 5; tiers need taijutsu (or weapons) rank 1, 3, 5, 7 and 9"
+ },
+ "styles": [
+  {
+   "id": "combat:style.academy_basics",
+   "name": "Academy taijutsu",
+   "pillar": "taijutsu",
+   "who": "everyone",
+   "mentor": "role:instructor",
+   "slice": "beta1",
+   "feel": "Clean, balanced forms: the three-hit chain, a heavy, dodge and block. The base every style builds on.",
+   "passives": {},
+   "moves": [
+    {
+     "id": "jab",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.0,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta1"
+    },
+    {
+     "id": "cross",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.0,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta1"
+    },
+    {
+     "id": "roundhouse",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.6,
+     "poise": 8,
+     "frames": [
+      3,
+      2,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta1",
+     "effects": {
+      "knockback": 1.5
+     }
+    },
+    {
+     "id": "heavy",
+     "input": [
+      "H"
+     ],
+     "state": "ground",
+     "damage": 5.0,
+     "poise": 14,
+     "frames": [
+      8,
+      3,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta1",
+     "effects": {
+      "guard_damage_mult": 2.0
+     }
+    },
+    {
+     "id": "flying_kick",
+     "input": [
+      "X",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 4.0,
+     "poise": 12,
+     "frames": [
+      4,
+      3,
+      12
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta1",
+     "effects": {
+      "dash_blocks": 4,
+      "knockback": 2.0
+     }
+    },
+    {
+     "id": "lunge",
+     "input": [
+      "X",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.4,
+     "poise": 4,
+     "frames": [
+      3,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 5,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta1",
+     "effects": {
+      "dash_blocks": 4
+     }
+    },
+    {
+     "id": "counter",
+     "input": [
+      "P",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 3.0,
+     "poise": 10,
+     "frames": [
+      1,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "counter": true
+     }
+    },
+    {
+     "id": "sweep",
+     "input": [
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 3.0,
+     "poise": 10,
+     "frames": [
+      5,
+      3,
+      10
+     ],
+     "window": [
+      0,
+      4
+     ],
+     "stamina": 12,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "knocks_down": true
+     }
+    },
+    {
+     "id": "launcher",
+     "input": [
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 3.0,
+     "poise": 12,
+     "frames": [
+      5,
+      3,
+      6
+     ],
+     "window": [
+      0,
+      10
+     ],
+     "stamina": 15,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "launches": true
+     }
+    },
+    {
+     "id": "air_1",
+     "input": [
+      "J",
+      "L"
+     ],
+     "state": "air",
+     "damage": 1.6,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 4,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2"
+    },
+    {
+     "id": "air_2",
+     "input": [
+      "J",
+      "L",
+      "L"
+     ],
+     "state": "air",
+     "damage": 1.6,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 4,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2"
+    },
+    {
+     "id": "air_3",
+     "input": [
+      "J",
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "air",
+     "damage": 2.0,
+     "poise": 4,
+     "frames": [
+      2,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 4,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2"
+    },
+    {
+     "id": "air_spike",
+     "input": [
+      "J",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "air",
+     "damage": 3.5,
+     "poise": 14,
+     "frames": [
+      4,
+      3,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 10,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "knocks_down": true
+     }
+    },
+    {
+     "id": "palm_rush",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 8.0,
+     "poise": 30,
+     "frames": [
+      6,
+      12,
+      12
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 10,
+     "type": "physical.blunt",
+     "tier": 2,
+     "momentum_cost": 60,
+     "slice": "beta2",
+     "effects": {
+      "finisher": true,
+      "hits": 5,
+      "cinematic": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "combat:style.strong_fist",
+   "name": "Strong Fist",
+   "pillar": "taijutsu",
+   "who": "anyone; the master's trial asks for taijutsu rank 3 and a week of weighted training",
+   "mentor": "role:strong_fist_master",
+   "slice": "beta2",
+   "feel": "Hard, fast, relentless. Heavies keep poise while winding up, kicks dominate, and the gates open its last forms.",
+   "passives": {
+    "heavy_hyper_armour": true,
+    "poise_damage_mult": 1.3,
+    "training_weights": "weights raise taijutsu XP x1.5; releasing them gives +30% speed for 10 s"
+   },
+   "moves": [
+    {
+     "id": "leaf_hurricane",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 3.4,
+     "poise": 12,
+     "frames": [
+      3,
+      4,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "area_blocks": 2.5,
+      "knockback": 2.0
+     }
+    },
+    {
+     "id": "leaf_rising_wind",
+     "input": [
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 3.6,
+     "poise": 16,
+     "frames": [
+      4,
+      3,
+      6
+     ],
+     "window": [
+      0,
+      12
+     ],
+     "stamina": 15,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "launches": true
+     }
+    },
+    {
+     "id": "leaf_whirlwind",
+     "input": [
+      "X",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 5.0,
+     "poise": 16,
+     "frames": [
+      4,
+      4,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.blunt",
+     "tier": 2,
+     "slice": "beta2",
+     "effects": {
+      "knockback": 2.5
+     }
+    },
+    {
+     "id": "leaf_great_whirlwind",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 10.0,
+     "poise": 40,
+     "frames": [
+      5,
+      10,
+      14
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 10,
+     "type": "physical.blunt",
+     "tier": 2,
+     "momentum_cost": 60,
+     "slice": "beta3",
+     "effects": {
+      "finisher": true,
+      "area_blocks": 3.0
+     }
+    },
+    {
+     "id": "primary_lotus",
+     "input": [
+      "J",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "air",
+     "damage": 14.0,
+     "poise": 60,
+     "frames": [
+      6,
+      14,
+      20
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 20,
+     "type": "physical.blunt",
+     "tier": 3,
+     "momentum_cost": 100,
+     "slice": "chunin",
+     "effects": {
+      "finisher": true,
+      "requires_gate": 1,
+      "cinematic": true,
+      "knocks_down": true
+     }
+    },
+    {
+     "id": "reverse_lotus",
+     "input": [
+      "J",
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "air",
+     "damage": 22.0,
+     "poise": 80,
+     "frames": [
+      6,
+      20,
+      24
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 25,
+     "type": "physical.blunt",
+     "tier": 4,
+     "momentum_cost": 100,
+     "slice": "jonin",
+     "effects": {
+      "finisher": true,
+      "requires_gate": 3,
+      "cinematic": true
+     }
+    },
+    {
+     "id": "morning_peacock",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 34.0,
+     "poise": 100,
+     "frames": [
+      8,
+      24,
+      30
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 30,
+     "type": "ninjutsu.fire",
+     "tier": 5,
+     "momentum_cost": 100,
+     "slice": "road",
+     "effects": {
+      "finisher": true,
+      "requires_gate": 6,
+      "cinematic": true,
+      "note": "Punches so fast the air ignites"
+     }
+    }
+   ]
+  },
+  {
+   "id": "combat:style.gentle_fist",
+   "name": "Gentle Fist",
+   "pillar": "taijutsu",
+   "who": "Hyuga only (needs the Byakugan)",
+   "clan": "hyuga",
+   "mentor": "role:clan_elder.hyuga",
+   "slice": "beta2",
+   "feel": "Palms that ignore armour and close chakra points. Weaker on health, deadly to casters; the Rotation is the best defence in the game.",
+   "passives": {
+    "palm_type": "chakra",
+    "palm_hp_share": 0.5,
+    "closes_points_per_hit": 1,
+    "ignores_physical_armour": true,
+    "byakugan_crit": "with Byakugan stage 2, palms crit (x1.5) a target's back"
+   },
+   "moves": [
+    {
+     "id": "palm_1",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.6,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "chakra",
+     "tier": 1,
+     "slice": "beta2"
+    },
+    {
+     "id": "palm_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.6,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "chakra",
+     "tier": 1,
+     "slice": "beta2"
+    },
+    {
+     "id": "palm_3",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.6,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "chakra",
+     "tier": 1,
+     "slice": "beta2"
+    },
+    {
+     "id": "palm_4",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.4,
+     "poise": 8,
+     "frames": [
+      3,
+      2,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "chakra",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "knockback": 1.5,
+      "closes_points": 3
+     }
+    },
+    {
+     "id": "palm_thrust",
+     "input": [
+      "H"
+     ],
+     "state": "ground",
+     "damage": 4.0,
+     "poise": 10,
+     "frames": [
+      8,
+      3,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "chakra",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "closes_points": 4
+     }
+    },
+    {
+     "id": "vacuum_palm",
+     "input": [
+      "X",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 4.5,
+     "poise": 14,
+     "frames": [
+      6,
+      3,
+      12
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "ninjutsu.none",
+     "tier": 2,
+     "slice": "chunin",
+     "effects": {
+      "range_blocks": 6,
+      "chakra": 6
+     }
+    },
+    {
+     "id": "palm_rotation",
+     "input": [
+      "G",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 4.0,
+     "poise": 20,
+     "frames": [
+      2,
+      12,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 0,
+     "type": "chakra",
+     "tier": 2,
+     "slice": "chunin",
+     "effects": {
+      "chakra": 15,
+      "iframes": 10,
+      "deflects_projectiles": true,
+      "area_blocks": 3.0,
+      "knockback": 3.0,
+      "cooldown": 120
+     }
+    },
+    {
+     "id": "sixty_four_palms",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 12.0,
+     "poise": 50,
+     "frames": [
+      6,
+      30,
+      16
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 10,
+     "type": "chakra",
+     "tier": 3,
+     "momentum_cost": 100,
+     "slice": "chunin",
+     "effects": {
+      "finisher": true,
+      "closes_points": 64,
+      "cinematic": true
+     }
+    },
+    {
+     "id": "hundred_twenty_eight_palms",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 20.0,
+     "poise": 80,
+     "frames": [
+      6,
+      40,
+      20
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 10,
+     "type": "chakra",
+     "tier": 4,
+     "momentum_cost": 100,
+     "slice": "jonin",
+     "effects": {
+      "finisher": true,
+      "closes_points": 128,
+      "cinematic": true
+     }
+    },
+    {
+     "id": "twin_lion_fists",
+     "input": [
+      "G",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 30.0,
+     "poise": 100,
+     "frames": [
+      10,
+      20,
+      24
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 20,
+     "type": "chakra",
+     "tier": 5,
+     "momentum_cost": 100,
+     "slice": "road",
+     "effects": {
+      "finisher": true,
+      "chakra": 40,
+      "drains_chakra": 40,
+      "cinematic": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "combat:style.swaying_willow",
+   "name": "Swaying Willow",
+   "pillar": "taijutsu",
+   "who": "anyone; a wandering master's side line (Chunin)",
+   "mentor": "role:willow_master",
+   "slice": "chunin",
+   "feel": "The flowing, drunken-looking style: every dodge is an attack, every miss a lean, and nobody can read the rhythm.",
+   "passives": {
+    "dodge_iframes_bonus": 3,
+    "dodge_cost_mult": 0.7,
+    "perfect_dodge_counters": true,
+    "telegraph_mult_against_you": 0.8,
+    "random_extra_hit_chance": 0.15
+   },
+   "moves": [
+    {
+     "id": "sway_strike",
+     "input": [
+      "D",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.6,
+     "poise": 4,
+     "frames": [
+      2,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 4,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "chunin"
+    },
+    {
+     "id": "sway_strike_2",
+     "input": [
+      "D",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.6,
+     "poise": 4,
+     "frames": [
+      2,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 4,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "chunin"
+    },
+    {
+     "id": "falling_willow",
+     "input": [
+      "D",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 6.0,
+     "poise": 18,
+     "frames": [
+      5,
+      4,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "chunin",
+     "effects": {
+      "knocks_down": true
+     }
+    },
+    {
+     "id": "lean_back_kick",
+     "input": [
+      "D",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 4.5,
+     "poise": 12,
+     "frames": [
+      4,
+      3,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.blunt",
+     "tier": 2,
+     "slice": "chunin",
+     "effects": {
+      "counter": true
+     }
+    },
+    {
+     "id": "willow_storm",
+     "input": [
+      "D",
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 15.0,
+     "poise": 50,
+     "frames": [
+      4,
+      20,
+      14
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 10,
+     "type": "physical.blunt",
+     "tier": 3,
+     "momentum_cost": 80,
+     "slice": "jonin",
+     "effects": {
+      "finisher": true,
+      "hits": 8,
+      "cinematic": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "combat:style.iron_body",
+   "name": "Iron Body",
+   "pillar": "taijutsu",
+   "who": "Akimichi only",
+   "clan": "akimichi",
+   "mentor": "role:clan_elder.akimichi",
+   "slice": "beta2",
+   "feel": "Weight as a weapon. Slow, unstoppable, huge poise damage; expansion turns every move into a landslide.",
+   "passives": {
+    "poise_bonus": 20,
+    "knockback_resist": 0.7,
+    "expansion_synergy": "moves gain reach x1.6 while expanded"
+   },
+   "moves": [
+    {
+     "id": "body_slam",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 3.6,
+     "poise": 16,
+     "frames": [
+      4,
+      3,
+      12
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "knockback": 2.5
+     }
+    },
+    {
+     "id": "crushing_palm",
+     "input": [
+      "H"
+     ],
+     "state": "ground",
+     "damage": 7.0,
+     "poise": 24,
+     "frames": [
+      10,
+      3,
+      12
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 14,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "guard_damage_mult": 3.0
+     }
+    },
+    {
+     "id": "human_boulder",
+     "input": [
+      "X",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 6.0,
+     "poise": 30,
+     "frames": [
+      6,
+      30,
+      14
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 20,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "chakra": 10,
+      "charge_blocks": 12,
+      "note": "A rolling charge; needs Expansion"
+     }
+    },
+    {
+     "id": "partial_expansion_slap",
+     "input": [
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 8.0,
+     "poise": 30,
+     "frames": [
+      8,
+      4,
+      12
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 15,
+     "type": "physical.blunt",
+     "tier": 2,
+     "slice": "chunin",
+     "effects": {
+      "chakra": 10,
+      "area_blocks": 4.0
+     }
+    },
+    {
+     "id": "meat_tank",
+     "input": [
+      "X",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 18.0,
+     "poise": 70,
+     "frames": [
+      6,
+      40,
+      18
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 20,
+     "type": "physical.blunt",
+     "tier": 3,
+     "momentum_cost": 80,
+     "slice": "jonin",
+     "effects": {
+      "finisher": true,
+      "chakra": 20,
+      "cinematic": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "combat:style.beast_fang",
+   "name": "Beast Fang (Four Legs)",
+   "pillar": "taijutsu",
+   "who": "Inuzuka only",
+   "clan": "inuzuka",
+   "mentor": "role:clan_elder.inuzuka",
+   "slice": "beta2",
+   "feel": "On all fours with your ninken: fast claws, pounces and paired attacks.",
+   "passives": {
+    "move_speed": 0.1,
+    "claw_type": "physical.slash",
+    "ninken_follow_up": "every 3rd hit, your ninken bites (2.0)"
+   },
+   "moves": [
+    {
+     "id": "claw_1",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.8,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2"
+    },
+    {
+     "id": "claw_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.8,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2"
+    },
+    {
+     "id": "claw_3",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.8,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2"
+    },
+    {
+     "id": "claw_4",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.6,
+     "poise": 8,
+     "frames": [
+      2,
+      2,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2"
+    },
+    {
+     "id": "pounce",
+     "input": [
+      "X",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 3.0,
+     "poise": 8,
+     "frames": [
+      3,
+      3,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 6,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "dash_blocks": 6,
+      "knocks_down": true
+     }
+    },
+    {
+     "id": "passing_fang",
+     "input": [
+      "X",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 5.0,
+     "poise": 14,
+     "frames": [
+      4,
+      6,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.slash",
+     "tier": 2,
+     "slice": "chunin",
+     "effects": {
+      "dash_blocks": 8,
+      "chakra": 6
+     }
+    }
+   ]
+  },
+  {
+   "id": "combat:style.iron_guard",
+   "name": "Iron Guard",
+   "pillar": "taijutsu",
+   "who": "anyone; the gate guards teach it at clan friendship 5 with the Hagane",
+   "clan_lesser": "hagane",
+   "mentor": "role:clan_elder.hagane",
+   "slice": "beta2",
+   "feel": "A defensive style: hold the line, punish every blow you block, never move back.",
+   "passives": {
+    "guard_reduction": 0.75,
+    "guard_stamina_mult": 0.7,
+    "block_counter": "a hit blocked while holding guard charges a counter (G L)"
+   },
+   "moves": [
+    {
+     "id": "guard_shove",
+     "input": [
+      "G",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.5,
+     "poise": 14,
+     "frames": [
+      2,
+      2,
+      8
+     ],
+     "window": [
+      0,
+      6
+     ],
+     "stamina": 6,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "knockback": 2.0,
+      "counter": true
+     }
+    },
+    {
+     "id": "guard_crush",
+     "input": [
+      "G",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 5.5,
+     "poise": 24,
+     "frames": [
+      6,
+      3,
+      12
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "guard_damage_mult": 2.5
+     }
+    },
+    {
+     "id": "iron_wall",
+     "input": [
+      "G",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 0.0,
+     "poise": 0,
+     "frames": [
+      2,
+      40,
+      6
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 0,
+     "type": "physical.blunt",
+     "tier": 2,
+     "slice": "chunin",
+     "effects": {
+      "chakra": 10,
+      "immovable": true,
+      "reflect_melee": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "id": "combat:style.blossom_strength",
+   "name": "Blossom Strength",
+   "pillar": "taijutsu",
+   "who": "chakra control 70: the Haruno at Chunin, anyone else at Jonin with control 80",
+   "clan": "haruno",
+   "mentor": "role:medic",
+   "slice": "chunin",
+   "feel": "Perfectly timed chakra in a fist: slow heavies that crater the ground (never the map) and break any guard.",
+   "passives": {
+    "heavy_chakra": 5,
+    "heavy_mult": 2.5,
+    "heavy_guard_break": true,
+    "control_required": 70
+   },
+   "moves": [
+    {
+     "id": "blossom_punch",
+     "input": [
+      "H"
+     ],
+     "state": "ground",
+     "damage": 12.5,
+     "poise": 40,
+     "frames": [
+      10,
+      3,
+      12
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "chunin",
+     "effects": {
+      "chakra": 5,
+      "area_blocks": 2.0,
+      "guard_break": true
+     }
+    },
+    {
+     "id": "blossom_heel",
+     "input": [
+      "J",
+      "H"
+     ],
+     "state": "air",
+     "damage": 14.0,
+     "poise": 50,
+     "frames": [
+      8,
+      3,
+      16
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 15,
+     "type": "physical.blunt",
+     "tier": 2,
+     "slice": "chunin",
+     "effects": {
+      "chakra": 8,
+      "area_blocks": 4.0,
+      "knocks_down": true
+     }
+    },
+    {
+     "id": "cherry_blossom_impact",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 24.0,
+     "poise": 90,
+     "frames": [
+      10,
+      4,
+      20
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 15,
+     "type": "physical.blunt",
+     "tier": 3,
+     "momentum_cost": 80,
+     "slice": "jonin",
+     "effects": {
+      "finisher": true,
+      "chakra": 15,
+      "area_blocks": 5.0,
+      "cinematic": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "combat:style.lightning_body",
+   "name": "Lightning Body",
+   "pillar": "taijutsu",
+   "who": "lightning nature, taijutsu rank 7 (Jonin)",
+   "nature": "lightning",
+   "mentor": "role:nature_master.lightning",
+   "slice": "jonin",
+   "feel": "Wrap the body in lightning armour and hit like a storm. Drains chakra every second it burns.",
+   "passives": {
+    "needs_status": "shrouded",
+    "shroud_technique": "combat:lightning.armour"
+   },
+   "moves": [
+    {
+     "id": "lariat",
+     "input": [
+      "X",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 14.0,
+     "poise": 50,
+     "frames": [
+      4,
+      4,
+      12
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "ninjutsu.lightning",
+     "tier": 1,
+     "slice": "jonin",
+     "effects": {
+      "dash_blocks": 10
+     }
+    },
+    {
+     "id": "guillotine_drop",
+     "input": [
+      "J",
+      "H"
+     ],
+     "state": "air",
+     "damage": 16.0,
+     "poise": 60,
+     "frames": [
+      6,
+      4,
+      14
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 15,
+     "type": "ninjutsu.lightning",
+     "tier": 2,
+     "slice": "jonin",
+     "effects": {
+      "knocks_down": true
+     }
+    },
+    {
+     "id": "liger_bomb",
+     "input": [
+      "J",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "air",
+     "damage": 26.0,
+     "poise": 100,
+     "frames": [
+      6,
+      16,
+      20
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 20,
+     "type": "ninjutsu.lightning",
+     "tier": 3,
+     "momentum_cost": 100,
+     "slice": "road",
+     "effects": {
+      "finisher": true,
+      "cinematic": true
+     }
+    }
+   ]
+  }
+ ],
+ "guard": {
+  "block": {
+   "input": "right click (hold) with an empty hand or a melee weapon",
+   "melee_reduction": 0.6,
+   "thrown_reduction": 0.8,
+   "ninjutsu_reduction": 0.3,
+   "genjutsu_reduction": 0.0,
+   "move_speed": 0.5,
+   "slice": "beta1",
+   "breaks": "stamina at 0: staggered for 20 ticks; heavies and guard-break moves drain extra stamina"
+  },
+  "parry": {
+   "input": "start a block inside the parry window before a melee hit lands (Story 6 ticks, Shinobi 4, Hard 3)",
+   "effect": "no damage, attacker staggered 20 ticks, +25 momentum, a 12-tick counter window (x1.5)",
+   "slice": "beta2",
+   "thrown": "parrying a thrown kunai or shuriken knocks it down (weapons rank 3: catches a kunai)",
+   "not_parryable": [
+    "ninjutsu (except palm rotation and some counters)",
+    "grabs",
+    "unblockable red-flash moves"
+   ]
+  },
+  "dodge": {
+   "input": "double-tap a direction or Left Alt",
+   "blocks": 4,
+   "iframes": 6,
+   "cooldown_ticks": 30,
+   "stamina": 22,
+   "chakra": 0,
+   "perfect": "dodging inside the perfect window grants focus (+25% next attack) and +15 momentum",
+   "slice": "beta1"
+  },
+  "substitution": {
+   "input": "dodge as a hit lands with 10 chakra",
+   "blink_blocks": 5,
+   "iframes": 12,
+   "cooldown_ticks": 400,
+   "leaves": "a log entity",
+   "slice": "beta1",
+   "enemies": "Genin and up substitute once per fight"
+  },
+  "counters": "Counters come from parries (P L), Iron Guard's block counter, Swaying Willow's dodge strikes and counter jutsu (Palm Rotation, substitution feints)",
+  "stagger_and_poise": "Every move carries poise damage; at 0 poise the target staggers (16 ticks), which interrupts casts. Bosses show a poise ring when low"
+ },
+ "competitive": [
+  "Taijutsu costs stamina, which refills in about three seconds; ninjutsu costs chakra, which takes a minute to refill. Close fighters are limited by timing, casters by their bar.",
+  "Taijutsu scales +4% a level (ninjutsu and weapons +3%), plus the taijutsu pillar's rank, the style's tier and the inner gates.",
+  "Any hit interrupts an enemy weaving signs, and hand signs take 4 ticks each: a fighter who closes the gap shuts a caster down.",
+  "Momentum finishers are the close-range answer to an S-rank jutsu: no chakra, cinematic, and they grow with each style tier.",
+  "Parries, counters and poise breaks matter against every enemy; bosses have taijutsu openings (a stagger phase after each poise break).",
+  "Enemies that resist ninjutsu (barrier users, armoured samurai, chakra absorbers, Gentle Fist users) appear from the Genin arc on; the duel simulator checks every build stays within 20% of the others' time-to-kill.",
+  "Chakra-infused styles (Gentle Fist, Blossom Strength, Lightning Body, chakra flow) let close fighters spend chakra for bursts without giving up their pillar."
+ ]
+}

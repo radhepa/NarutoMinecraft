@@ -1,0 +1,103 @@
+{
+ "format": 1,
+ "techniques": [
+  {
+   "id": "combat:sense.chakra_sense",
+   "name": "Chakra Sensing",
+   "kind": "sensing",
+   "nature": "none",
+   "rank": "c",
+   "level": 12,
+   "signs": [
+    "ram",
+    "hare"
+   ],
+   "chakra": 8,
+   "cast_ticks": 8,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "sensing",
+     "ticks": 200,
+     "radius": 16
+    }
+   ],
+   "mechanic": "Close your eyes (still for 20 ticks): living things within 16 blocks glow through walls for 200 ticks, hidden and disguised ones too",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:sensor_master",
+    "clan:yamanaka"
+   ],
+   "slice": "beta3",
+   "beta": true
+  },
+  {
+   "id": "combat:sense.wide_sense",
+   "name": "Wide Sensing",
+   "kind": "sensing",
+   "nature": "none",
+   "rank": "b",
+   "level": 24,
+   "signs": [
+    "ram",
+    "dog"
+   ],
+   "chakra": 30,
+   "cast_ticks": 8,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "sensing",
+     "ticks": 300,
+     "radius": 48
+    }
+   ],
+   "mechanic": "48 blocks, and it reads each target's rank by its chakra's colour",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:sensor_master"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:sense.chakra_reading",
+   "name": "Chakra Reading",
+   "kind": "sensing",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "dog",
+    "snake"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "read",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "Your target's chakra bar and the nature of its next technique show above its head for 200 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:sensor_master"
+   ],
+   "slice": "jonin"
+  }
+ ]
+}

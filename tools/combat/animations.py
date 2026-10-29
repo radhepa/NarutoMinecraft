@@ -1,0 +1,216 @@
+"""Every combat pose and clip the player and residents need, keyed the way VF keys its clips
+(tools/animations/: a Python dict of clip id -> clip), so the keyframes can be authored into this
+same table later and compiled to assets/narutominecraft/resident_animations/*.json (residents) and
+the player poser's clip folder (player).
+
+Fields: ticks (length), loop, who (player, resident or both), fp (needs a first-person arm path),
+priority (P0: the Phase 0 spike and Beta 1; P1: Beta 2; P2: Beta 3; P3: later), slice, and keys
+(None until authored: VF's keyframe list of {tick, part, rot, pos, ease}).
+"""
+
+P0, P1, P2, P3 = "P0", "P1", "P2", "P3"
+SLICE_OF = {P0: "beta1", P1: "beta2", P2: "beta3", P3: "later"}
+
+CLIPS = {}
+
+
+def clip(cid, ticks, pr, who="both", loop=False, fp=False, note=None, slice_=None):
+    c = {"ticks": ticks, "loop": loop, "who": who, "fp": fp, "priority": pr, "slice": slice_ or SLICE_OF[pr], "keys": None}
+    if note:
+        c["note"] = note
+    CLIPS["combat." + cid] = c
+
+
+def many(prefix, names, ticks, pr, **kw):
+    for n in names:
+        clip(prefix + n, ticks, pr, **kw)
+
+
+# Stance, movement and chakra movement
+clip("stance.idle", 40, P0, loop=True, note="Combat-ready idle: knees bent, kunai or fists up")
+clip("stance.walk_guard", 20, P0, loop=True)
+clip("move.crouch_hide", 30, P0, loop=True, who="player", note="Prologue")
+clip("move.slip_out", 40, P0, who="player", note="Prologue: squeezing out of the cell")
+clip("move.carried", 40, P0, loop=True, who="player", note="Prologue: carried over the ravine")
+clip("move.carry", 40, P0, loop=True, who="resident", note="Prologue: the captain carries you")
+clip("move.roof_hop", 10, P0)
+clip("move.ninja_run", 12, P1, loop=True, note="Arms back")
+clip("move.chakra_jump_charge", 20, P1, loop=True, who="player")
+clip("move.chakra_jump_air", 16, P1)
+clip("move.land_roll", 10, P1)
+clip("move.wall_run", 12, P1, loop=True)
+clip("move.tree_walk", 16, P1, loop=True, note="The model is rotated to the trunk; the clip is a careful walk")
+clip("move.water_stance", 40, P1, loop=True)
+clip("move.water_sink", 20, P1)
+clip("move.air_step", 8, P3)
+clip("move.wind_glide", 20, P3, loop=True)
+clip("move.four_legs_run", 10, P1, loop=True, note="Inuzuka beast fang")
+clip("move.boulder_roll", 10, P1, loop=True, note="Akimichi Human Boulder")
+
+# Defence and reactions
+many("def.dodge_", ["left", "right", "back", "forward"], 8, P0)
+clip("def.perfect_dodge", 8, P1, note="Adds an afterimage particle")
+clip("def.substitution_vanish", 4, P0, note="A puff; the log entity takes the hit")
+clip("def.block", 20, P0, loop=True, fp=True)
+clip("def.block_hit", 6, P0, fp=True)
+clip("def.guard_break", 20, P0)
+clip("def.parry", 6, P1, fp=True)
+clip("def.parry_weapon", 6, P1, fp=True)
+clip("react.hit_light_front", 6, P0)
+clip("react.hit_light_back", 6, P0)
+clip("react.hit_heavy", 10, P0)
+clip("react.stagger", 16, P0)
+clip("react.knocked_down", 24, P1)
+clip("react.get_up", 10, P1)
+clip("react.launched", 20, P1)
+clip("react.air_juggle", 6, P1)
+clip("react.knocked_out", 40, P0, note="VF Knockouts: lying down")
+clip("react.yield", 20, P0, note="Hand raised, kneeling")
+clip("react.surrender", 30, P1, who="resident", loop=True, note="Bandits: kneel, hands up")
+clip("react.flee", 12, P1, who="resident", loop=True)
+clip("react.bound_struggle", 20, P1, loop=True)
+clip("react.possessed_mirror", 0, P1, note="No clip: copies the caster's pose live")
+clip("react.genjutsu_dazed", 30, P1, loop=True)
+clip("react.shocked_twitch", 10, P1, loop=True)
+clip("react.burning_flail", 20, P1, loop=True)
+clip("react.poisoned_stagger", 30, P1, loop=True)
+clip("react.asleep", 40, P2, loop=True)
+clip("react.feared_cower", 30, P1, loop=True)
+clip("react.swallowed", 0, P2, note="No clip: hidden while swallowed")
+clip("pose.victory", 30, P0)
+clip("pose.taunt", 30, P1, who="resident")
+clip("pose.tired_slouch", 40, P0, loop=True, who="player", note="Fatigue")
+clip("pose.meditate", 40, P0, loop=True)
+
+# Hand signs: one hold pose per sign, both hands, first person too
+many("sign.", ["rat", "ox", "tiger", "hare", "dragon", "snake", "horse", "ram", "monkey", "bird", "dog", "boar"], 4, P0, fp=True)
+clip("sign.transition", 2, P0, fp=True, note="Blend between any two signs")
+clip("sign.fizzle", 8, P0, fp=True, note="Hands shake apart")
+clip("sign.release_ram", 6, P0, fp=True, note="Genjutsu Release")
+
+# Cast poses (shared by many techniques)
+clip("cast.push_palms", 8, P0, fp=True, note="Generic forward release (Clone, Transformation poof)")
+clip("cast.breath", 16, P1, fp=True, note="Hand to mouth: fire and wind breath jutsu")
+clip("cast.clap_gust", 8, P1, fp=True, note="Wind: Gale Palm, Great Breakthrough")
+clip("cast.ground_slam", 10, P1, fp=True, note="Earth: walls, mud river")
+clip("cast.palm_strike", 8, P1, fp=True, note="Lightning: Stunning Palm")
+clip("cast.spit_wave", 12, P1, fp=True, note="Water: Wild Water Wave")
+clip("cast.kneel_sign_hold", 20, P1, loop=True, note="Nara Shadow Possession")
+clip("cast.slump", 40, P3, loop=True, note="Yamanaka Mind Transfer body")
+clip("cast.grow", 20, P1, note="Akimichi Expansion")
+clip("cast.arms_open_swarm", 16, P1, note="Aburame Insect Swarm")
+clip("cast.chains_back", 12, P1, note="Uzumaki Sealing Chains")
+clip("cast.wood_sign", 14, P1, note="Senju Wood Release")
+clip("cast.brush_strokes", 24, P1, fp=True, note="Kurama Painted Illusion")
+clip("cast.step_behind", 8, P1, note="Yuhi Tree Binding")
+clip("cast.three_way_slash", 20, P1, note="Gekko Dance of the Crescent Moon")
+clip("cast.eye_glance", 6, P2, note="Sharingan and Byakugan toggles (the eye change is a face decal)")
+clip("cast.headhunter_sink", 12, P1)
+clip("cast.headhunter_grab", 10, P1)
+clip("cast.web_slam", 10, P1, note="Tsuchigumo Earth Binding")
+clip("cast.night_curtain", 14, P1, note="Tobari")
+clip("cast.mystical_palm", 20, P2, loop=True, fp=True)
+clip("cast.sensing", 20, P2, loop=True, note="Eyes closed, a sign held")
+clip("cast.seal_slap", 6, P1, fp=True)
+clip("cast.barrier_tags", 12, P2)
+clip("cast.water_prison_hold", 20, P3, loop=True)
+clip("cast.lightning_blade_charge", 20, P3, loop=True, fp=True)
+clip("cast.lightning_blade_run", 12, P3, loop=True)
+clip("cast.spiral_sphere_form", 20, P3, fp=True)
+clip("cast.spiral_sphere_strike", 8, P3, fp=True)
+clip("cast.first_aid", 30, P0, loop=True)
+clip("cast.revive_kneel", 30, P2, loop=True)
+
+# Taijutsu: Academy
+for n, t in [("jab", 9), ("cross", 9), ("roundhouse", 15), ("heavy_windup", 8), ("heavy_release", 13), ("flying_kick", 19), ("lunge", 11)]:
+    clip("tai.academy." + n, t, P0, fp=True)
+for n, t in [("counter", 9), ("sweep", 18), ("launcher", 14), ("air_1", 8), ("air_2", 8), ("air_3", 10), ("air_spike", 17), ("palm_rush", 30)]:
+    clip("tai.academy." + n, t, P1, fp=n not in ("air_spike",))
+# Taijutsu: styles
+for n, t, pr in [("leaf_hurricane", 17, P1), ("leaf_rising_wind", 13, P1), ("leaf_whirlwind", 18, P1), ("leaf_great_whirlwind", 29, P2),
+                 ("weights_release", 20, P1), ("primary_lotus", 40, P3), ("reverse_lotus", 50, P3), ("morning_peacock", 62, P3), ("gate_open", 20, P3)]:
+    clip("tai.strong_fist." + n, t, pr)
+clip("tai.gentle_fist.stance", 40, P1, loop=True)
+for n, t, pr in [("palm_1", 8, P1), ("palm_2", 8, P1), ("palm_3", 8, P1), ("palm_4", 15, P1), ("palm_thrust", 21, P1), ("vacuum_palm", 21, P3),
+                 ("palm_rotation", 24, P3), ("sixty_four_palms", 52, P3), ("hundred_twenty_eight_palms", 66, P3), ("twin_lion_fists", 54, P3)]:
+    clip("tai.gentle_fist." + n, t, pr, fp=pr == P1)
+for n, t in [("body_slam", 19), ("crushing_palm", 25), ("human_boulder", 50), ("partial_expansion_slap", 24), ("meat_tank", 64)]:
+    clip("tai.iron_body." + n, t, P1 if n in ("body_slam", "crushing_palm", "human_boulder") else P3)
+for n, t in [("claw_1", 8), ("claw_2", 8), ("claw_3", 8), ("claw_4", 14), ("pounce", 12), ("passing_fang", 20)]:
+    clip("tai.beast_fang." + n, t, P1 if n != "passing_fang" else P3)
+for n, t in [("guard_shove", 12), ("guard_crush", 21), ("iron_wall", 48)]:
+    clip("tai.iron_guard." + n, t, P1 if n != "iron_wall" else P3, fp=True)
+clip("tai.willow.sway_idle", 40, P3, loop=True)
+for n, t in [("sway_strike", 9), ("falling_willow", 19), ("lean_back_kick", 17), ("willow_storm", 38)]:
+    clip("tai.willow." + n, t, P3)
+for n, t in [("blossom_punch", 25), ("blossom_heel", 27), ("cherry_blossom_impact", 34)]:
+    clip("tai.blossom." + n, t, P3)
+for n, t in [("lariat", 20), ("guillotine_drop", 24), ("liger_bomb", 42)]:
+    clip("tai.lightning_body." + n, t, P3)
+
+# Weapons
+for n, t in [("slash_1", 9), ("slash_2", 9), ("slash_3", 15), ("stab", 21)]:
+    clip("wpn.blade." + n, t, P0, fp=True)
+for n, t in [("reverse_parry", 9), ("throw_out", 14)]:
+    clip("wpn.blade." + n, t, P1, fp=True)
+clip("wpn.throw.aim_hold", 20, P0, loop=True, fp=True)
+clip("wpn.throw.overhand", 8, P0, fp=True)
+clip("wpn.throw.sidearm", 8, P0, fp=True)
+clip("wpn.throw.fan_of_three", 12, P1, fp=True)
+clip("wpn.throw.air_down", 9, P1)
+clip("wpn.throw.rain", 20, P3)
+clip("wpn.throw.needle_flick", 5, P1, fp=True)
+clip("wpn.throw.needle_fan", 9, P1, fp=True)
+clip("wpn.throw.catch", 6, P2, fp=True, note="Windmill return, kunai catch on parry")
+for n, t in [("arc_1", 10), ("arc_2", 10), ("arc_3", 17), ("draw_cut", 9), ("moon_rising", 16), ("unsheathe", 8), ("sheathe", 10)]:
+    clip("wpn.kenjutsu." + n, t, P2, fp=True)
+clip("wpn.kenjutsu.crescent_finish", 26, P3)
+clip("wpn.kenjutsu.iaido_stance", 40, P3, loop=True)
+for n, t in [("ripple", 8), ("undertow", 15), ("side_step_cut", 10), ("guard_of_waves", 10)]:
+    clip("wpn.wave_foot." + n, t, P1, fp=True)
+for n, t in [("idle", 40), ("sweep_1", 11), ("sweep_2", 11), ("thrust", 16), ("pole_vault", 19)]:
+    clip("wpn.staff." + n, t, P1, loop=n == "idle", fp=n != "pole_vault")
+clip("wpn.staff.whirling_staff", 33, P3)
+for n, t in [("lash", 11), ("hook_pull", 20), ("wrap_bind", 18)]:
+    clip("wpn.chain." + n, t, P2, fp=True)
+for n, t in [("cut", 9), ("snap", 15), ("gust_parry", 13)]:
+    clip("wpn.fan." + n, t, P2, fp=True)
+for n, t in [("swing_1", 14), ("swing_2", 14), ("overhead", 27)]:
+    clip("wpn.mace." + n, t, P1, fp=True)
+for n, t in [("tether_yank", 10), ("set_trip_line", 14), ("binding_cross", 16)]:
+    clip("wpn.wire." + n, t, P1, fp=True)
+for n, t in [("place_paper_bomb", 10), ("tag_kunai", 6), ("throw_smoke", 8), ("eat_pill", 12), ("apply_coating", 16), ("pouch_draw", 4)]:
+    clip("wpn.tool." + n, t, P1 if n != "throw_smoke" else P0, fp=True)
+
+# Squad play
+clip("squad.command_point", 10, P1, who="player")
+clip("squad.command_wave", 10, P1, who="player")
+clip("squad.acknowledge", 10, P1, who="resident")
+clip("squad.high_five", 16, P1, note="After a squad combo")
+clip("squad.cover_dive", 10, P2)
+clip("squad.call_combo", 12, P1, who="resident")
+
+# Residents around fights
+clip("res.salute", 16, P0, who="resident")
+clip("res.nod", 10, P0, who="resident")
+clip("res.excited_wave", 20, P0, who="resident", note="Kids")
+clip("res.spar_bow", 16, P0, who="both")
+clip("res.spectator_cheer", 30, P2, who="resident", loop=True)
+clip("res.spectator_gasp", 12, P2, who="resident")
+clip("res.spectator_seated_clap", 20, P2, who="resident", loop=True)
+clip("res.proctor_stop", 16, P2, who="resident")
+clip("res.sensei_reading", 40, P1, who="resident", loop=True, note="The bell test")
+clip("res.sensei_book_dodge", 8, P1, who="resident", note="The bell test: dodges without looking up")
+clip("res.cower_civilian", 30, P2, who="resident", loop=True, note="The attack: civilians in the stands")
+
+# Non-combat clips the roadmap lists with the combat clips (owned by Shinobi Life's stations)
+clip("life.petting", 30, P0, who="player")
+clip("life.forging", 30, P1, loop=True, who="player")
+clip("life.workbench", 30, P0, loop=True, who="player")
+
+
+def summary():
+    counts = {}
+    for c in CLIPS.values():
+        counts[c["priority"]] = counts.get(c["priority"], 0) + 1
+    return counts

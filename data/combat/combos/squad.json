@@ -1,0 +1,82 @@
+{
+ "format": 1,
+ "combos": [
+  {
+   "id": "combat:squad.launcher_relay",
+   "name": "Launcher relay",
+   "slice": "beta2",
+   "needs": "any two squadmates",
+   "how": "A teammate's launcher sends the target up; your jump within 20 ticks starts an air combo with +1 hit and x1.2 damage"
+  },
+  {
+   "id": "combat:squad.clone_feint",
+   "name": "Clone feint",
+   "slice": "beta2",
+   "needs": "Clone Technique",
+   "how": "Your clones run in; the enemy turns to them; your teammate's next hit from behind is a crit"
+  },
+  {
+   "id": "combat:squad.bomb_line",
+   "name": "Bomb line",
+   "slice": "beta2",
+   "needs": "wire and paper bombs",
+   "how": "A teammate strings wire, you tag it: the tripwire bursts along its length"
+  },
+  {
+   "id": "combat:squad.pincer",
+   "name": "Pincer",
+   "slice": "beta2",
+   "needs": "the Pincer formation",
+   "how": "Two squadmates on opposite sides of a target: both get +20% damage and the target cannot guard both"
+  },
+  {
+   "id": "combat:squad.bell_grab",
+   "name": "Distract and take",
+   "slice": "beta2",
+   "needs": "the bell test's lesson",
+   "how": "One distracts (any hit), the other takes: a stagger window of 30 ticks on the target. Taught by the bell test"
+  },
+  {
+   "id": "combat:squad.shadow_and_strike",
+   "name": "Shadow and strike",
+   "slice": "beta2",
+   "needs": "a Nara in the squad",
+   "how": "While a target is possessed, every squadmate's hit is a crit"
+  },
+  {
+   "id": "combat:squad.fang_and_swarm",
+   "name": "Fang and swarm",
+   "slice": "beta2",
+   "needs": "an Inuzuka and an Aburame",
+   "how": "Fang over Fang homes on a target marked by insects; insects slow anyone the fang knocks down"
+  },
+  {
+   "id": "combat:squad.triad",
+   "name": "The triad formation",
+   "slice": "chunin",
+   "needs": "a Nara, an Akimichi and a Yamanaka",
+   "how": "Possession, then Mind Body Disturbance, then a Human Boulder: a three-step squad finisher (cinematic)"
+  },
+  {
+   "id": "combat:squad.barrier_and_fire",
+   "name": "Barrier and fire",
+   "slice": "chunin",
+   "needs": "a four-tag barrier",
+   "how": "Fire jutsu cast inside your own barrier fill it: x2 burning for everyone trapped"
+  },
+  {
+   "id": "combat:squad.cover_fire",
+   "name": "Cover fire",
+   "slice": "beta2",
+   "needs": "a thrower and a close fighter",
+   "how": "Thrown weapons at a target your teammate is fighting interrupt its guard (poise x1.5)"
+  },
+  {
+   "id": "combat:squad.final_watch",
+   "name": "Squad finisher",
+   "slice": "chunin",
+   "needs": "cohesion 80",
+   "how": "With full momentum on two squadmates: each does their style's finisher on the same target in turn (cinematic)"
+  }
+ ]
+}

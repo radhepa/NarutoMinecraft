@@ -1,0 +1,144 @@
+{
+ "format": 1,
+ "tiers": {
+  "mook": {
+   "hp": 1.0,
+   "damage": 0.75,
+   "poise": 15,
+   "xp": 1.0,
+   "think_ticks": 10
+  },
+  "elite": {
+   "hp": 2.2,
+   "damage": 1.0,
+   "poise": 30,
+   "xp": 2.0,
+   "think_ticks": 6
+  },
+  "miniboss": {
+   "hp": 3.5,
+   "damage": 1.15,
+   "poise": 60,
+   "xp": 5.0,
+   "think_ticks": 5
+  },
+  "boss": {
+   "hp": 7.0,
+   "damage": 1.15,
+   "poise": 100,
+   "xp": 12.0,
+   "think_ticks": 4
+  }
+ },
+ "ai": {
+  "brain": "One shinobi entity for every human enemy, drawn with VF's resident model and our wardrobe; animals are vanilla-based entities with our brain",
+  "range_bands": {
+   "close": [
+    0,
+    3
+   ],
+   "mid": [
+    3,
+    10
+   ],
+   "far": [
+    10,
+    24
+   ]
+  },
+  "band_rules": [
+   "Each loadout prefers a band; the brain moves to it, strafes at 1.5 to 3 blocks a second and keeps a 30% chance to switch band every 4 s",
+   "Close: taijutsu chains, grabs and guard; mid: throws, D and C jutsu, dashes in; far: jutsu, bows, traps, sensing, retreat to heal",
+   "Two or more enemies coordinate bands: one presses close while the others hold mid or far (a cell is always one close, one far)"
+  ],
+  "reactions": {
+   "dodge_by_rank": {
+    "civilian": 0.05,
+    "academy": 0.1,
+    "genin": 0.2,
+    "chunin": 0.35,
+    "jonin": 0.5,
+    "kage": 0.65
+   },
+   "parry_by_rank": {
+    "civilian": 0.0,
+    "academy": 0.05,
+    "genin": 0.1,
+    "chunin": 0.2,
+    "jonin": 0.3,
+    "kage": 0.4
+   },
+   "telegraph_factor": "dodge chance x (telegraph ticks / 10), at most 1.5x: slow, readable attacks are dodged more",
+   "substitution": "Genin and up substitute once per fight when a hit would take 20% of their health",
+   "kiting": "a fighter that prefers a farther band backs off at 60% of its speed, and only on half its decisions: a closer catches it",
+   "retreat": "retreat to heal at 30% health if they carry pills or a medic is near; rogue ninja use smoke to break off",
+   "flee": "bandits flee at 25% health (chance in the loadout); a fleeing enemy that is hit again surrenders",
+   "flinch": "a landed hit makes a mook or elite flinch: its wind-up is cancelled (bosses flinch only when their poise breaks); the player flinches too, except from light hits on Story",
+   "interrupt": "melee hits, staggers and knockdowns interrupt a weave; a thrown or jutsu hit interrupts only if it deals 15% of the weaver's health or more (a single shuriken does not; a tagged kunai or a big jutsu does). Enemies weave only when no one is within 3 blocks, unless they are jonin"
+  },
+  "tells": {
+   "rule": "Every enemy attack has a wind-up pose and a sound, scaled by difficulty (telegraph_mult). Unblockables flash red (Story, Shinobi). Signs are visible as the enemy weaves",
+   "classes": {
+    "light": 4,
+    "heavy": 10,
+    "grab": 12,
+    "throw": 6,
+    "jutsu": "its signs",
+    "signature": 20
+   }
+  },
+  "habits": {
+   "how": "The brain keeps a short memory of the player's habits in this fight (last 60 s) and adapts, scaled by difficulty's habit_adaptation; the sensei comments in barks",
+   "rules": [
+    {
+     "habit": "spam_same_jutsu",
+     "when": "the same technique 3 times in 30 s",
+     "react": "+15% dodge against it for each repeat; casters raise a counter-nature wall"
+    },
+    {
+     "habit": "never_guards",
+     "when": "no block in 20 s while fighting",
+     "react": "more feints and fast light chains"
+    },
+    {
+     "habit": "always_guards",
+     "when": "blocking more than 50% of the time",
+     "react": "guard breaks, grabs, paper bombs, wind (guard pierce)"
+    },
+    {
+     "habit": "dodge_same_side",
+     "when": "4 dodges in a row the same way",
+     "react": "attacks lead to that side"
+    },
+    {
+     "habit": "stays_far",
+     "when": "over 10 blocks for 15 s",
+     "react": "body flicker in, smoke, rushers lead"
+    },
+    {
+     "habit": "stays_close",
+     "when": "inside 3 blocks for 15 s",
+     "react": "substitution, knockback jutsu, shove to mid"
+    },
+    {
+     "habit": "turtles_in_cover",
+     "when": "behind a wall or barrier",
+     "react": "paper bombs over it, flanking, area jutsu"
+    },
+    {
+     "habit": "out_of_chakra",
+     "when": "under 15% chakra",
+     "react": "enemies press; casters stop holding back"
+    },
+    {
+     "habit": "parries_well",
+     "when": "3 parries in 20 s",
+     "react": "unblockables and throws instead of melee"
+    }
+   ]
+  },
+  "attack_tokens": "At most N enemies may attack the player in melee or with jutsu at once (Story 1, Shinobi 2, Hard 3; difficulty attack_tokens); the rest circle, throw, reposition or fight your teammates. Bosses always hold a token",
+  "squad_ai": "Enemy groups pick a leader; the leader calls a focus target (the weakest or the caster). Animals pack-hunt: they circle and bite from behind",
+  "knockout": "Residents and spar partners are knocked out, never killed (VF Knockouts). Bandits and rogue ninja can be knocked out or defeated; story enemies follow their boss file"
+ }
+}

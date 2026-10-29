@@ -1,0 +1,32 @@
+{
+ "format": 1,
+ "id": "combat:enemy.rogue_kunoichi",
+ "name": "Rogue illusionist",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "genin",
+ "levels": [
+  10,
+  20
+ ],
+ "band": "mid",
+ "slice": "beta2",
+ "weapons": [
+  "item:senbon"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:gen.false_surroundings",
+  "combat:gen.hell_viewing"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 25
+ },
+ "traits": [],
+ "ai": {},
+ "barks": "rogue",
+ "note": "Opens with genjutsu: weave Release (Ram) or get a teammate to touch you"
+}

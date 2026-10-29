@@ -1,0 +1,195 @@
+{
+ "format": 1,
+ "id": "hatake",
+ "clan": "clan:hatake",
+ "name": "Hatake",
+ "standing": "noble",
+ "suggested_nature": [
+  "lightning"
+ ],
+ "passives": {
+  "control_bonus": 5,
+  "ninken": "a tracking ninken companion (VF pet code, not a summon)"
+ },
+ "techniques": [
+  {
+   "id": "combat:hatake.ninken_tracker",
+   "name": "Ninken Tracker",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 4,
+   "cast_ticks": 0,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "marked",
+     "ticks": 400
+    },
+    {
+     "status": "bound",
+     "ticks": 20
+    }
+   ],
+   "mechanic": "Your ninken tracks a mission target or hidden enemy and leads you there; in a fight it pins a target 20 ticks every 15 s",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hatake"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "hatake",
+   "tier": 1
+  },
+  {
+   "id": "combat:hatake.white_fang_arts",
+   "name": "White Fang Arts",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "style": "combat:style.white_fang"
+    }
+   ],
+   "mechanic": "Opens the White Fang style with a tanto (the white sabre at Jonin)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hatake"
+   ],
+   "slice": "chunin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "hatake",
+   "tier": 2
+  },
+  {
+   "id": "combat:hatake.earth_hounds",
+   "name": "Earth: Tracking Fang",
+   "kind": "clan",
+   "nature": "earth",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "boar",
+    "rat",
+    "ox"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 21.0,
+   "shape": {
+    "type": "target",
+    "range": 16
+   },
+   "effects": [
+    {
+     "status": "bound",
+     "ticks": 80
+    },
+    {
+     "damage": "physical.slash"
+    }
+   ],
+   "mechanic": "Ninken burst from the ground under the target and hold it (bound 80 ticks)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hatake"
+   ],
+   "slice": "jonin",
+   "clan": "hatake",
+   "tier": 3
+  },
+  {
+   "id": "combat:hatake.lightning_cutter",
+   "name": "Lightning Cutter",
+   "kind": "clan",
+   "nature": "lightning",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ox",
+    "hare",
+    "monkey"
+   ],
+   "chakra": 80,
+   "cast_ticks": 24,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "line",
+    "range": 16,
+    "width": 1.0,
+    "dash": true,
+    "breaks_guard": true,
+    "chain": 1
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.lightning"
+    },
+    {
+     "status": "shocked",
+     "ticks": 14
+    }
+   ],
+   "mechanic": "The clan's perfected Lightning Blade: 16-block dash, half the charge, chains to a second target",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hatake"
+   ],
+   "slice": "road",
+   "replaces": "combat:lightning.lightning_blade",
+   "clan": "hatake",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:hatake.silent_tracking",
+  "name": "Silent Tracking",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 16,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "Footprints of enemies who passed in the last minute glow for you",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:hatake:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "hatake",
+  "lesser": true
+ }
+}

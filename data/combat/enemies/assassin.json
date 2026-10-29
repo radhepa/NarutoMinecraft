@@ -1,0 +1,37 @@
+{
+ "format": 1,
+ "id": "combat:enemy.assassin",
+ "name": "Assassin",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "jonin",
+ "levels": [
+  30,
+  50
+ ],
+ "band": "close",
+ "slice": "anbu",
+ "weapons": [
+  "item:tanto",
+  "item:senbon"
+ ],
+ "techniques": [
+  "combat:nin.hiding_camouflage",
+  "combat:nin.body_flicker",
+  "combat:gen.bringer_of_darkness"
+ ],
+ "tools": {
+  "item:coating_venom": 2
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "ambush",
+  "backstabber"
+ ],
+ "ai": {},
+ "barks": "cell"
+}

@@ -1,0 +1,29 @@
+{
+ "format": 1,
+ "id": "combat:enemy.bear",
+ "name": "Bear",
+ "kind": "animal",
+ "tier": "elite",
+ "rank": "beast",
+ "levels": [
+  8,
+  20
+ ],
+ "band": "close",
+ "slice": "beta2",
+ "weapons": [],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "grab",
+  "heavy_hitter"
+ ],
+ "ai": {},
+ "barks": "beast_none",
+ "poise": 50
+}

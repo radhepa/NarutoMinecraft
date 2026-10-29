@@ -1,0 +1,177 @@
+{
+ "format": 1,
+ "id": "kinoshita",
+ "clan": "clan:kinoshita",
+ "name": "Kinoshita",
+ "standing": "minor",
+ "suggested_nature": [
+  "earth"
+ ],
+ "passives": {
+  "trap_power": 0.15,
+  "wire_uses": 4
+ },
+ "techniques": [
+  {
+   "id": "combat:kinoshita.trap_craft",
+   "name": "Trap Craft",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [],
+   "mechanic": "Tripwires and caltrops are invisible to enemies below jonin; set a trap in half the time",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.kinoshita"
+   ],
+   "slice": "beta2",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "kinoshita",
+   "tier": 1
+  },
+  {
+   "id": "combat:kinoshita.timber_barricade",
+   "name": "Timber Barricade",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "boar",
+    "tiger"
+   ],
+   "chakra": 30,
+   "cast_ticks": 8,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "barricade",
+    "ticks": 300,
+    "width": 5,
+    "hp": 60
+   },
+   "effects": [],
+   "mechanic": "A barricade entity of planks (5 wide, hp 60) for 300 ticks: cover for throwers",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.kinoshita"
+   ],
+   "slice": "chunin",
+   "clan": "kinoshita",
+   "tier": 2
+  },
+  {
+   "id": "combat:kinoshita.wire_web",
+   "name": "Wire Web",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [],
+   "chakra": 50,
+   "cast_ticks": 10,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "wire_web",
+    "ticks": 400,
+    "width": 6
+   },
+   "effects": [
+    {
+     "status": "bound",
+     "ticks": 40
+    }
+   ],
+   "mechanic": "Throw a web of wire across a 6-block gap: anyone touching it is bound 40 ticks and tagged bombs on it go off",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.kinoshita"
+   ],
+   "slice": "jonin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "kinoshita",
+   "tier": 3
+  },
+  {
+   "id": "combat:kinoshita.carpenters_fortress",
+   "name": "Carpenter's Fortress",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "boar",
+    "ram",
+    "ox"
+   ],
+   "chakra": 80,
+   "cast_ticks": 12,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "fortress",
+    "ticks": 600,
+    "width": 8,
+    "hp": 300
+   },
+   "effects": [],
+   "mechanic": "A walled square of timber (8 x 8, hp 300) with firing slits for 600 ticks: a defence objective's best friend",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.kinoshita"
+   ],
+   "slice": "road",
+   "clan": "kinoshita",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:kinoshita.wire_traps",
+  "name": "Wire arts",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 16,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [
+   {
+    "style": "combat:style.wire_arts"
+   }
+  ],
+  "mechanic": "Opens wire arts",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:kinoshita:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "kinoshita",
+  "lesser": true
+ }
+}

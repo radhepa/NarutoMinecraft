@@ -1,0 +1,251 @@
+{
+ "format": 1,
+ "id": "uchiha",
+ "clan": "clan:uchiha",
+ "name": "Uchiha",
+ "standing": "noble",
+ "suggested_nature": [
+  "fire"
+ ],
+ "passives": {
+  "control_bonus": 5,
+  "fire_power": 0.05
+ },
+ "techniques": [
+  {
+   "id": "combat:uchiha.phoenix_shuriken",
+   "name": "Fire: Phoenix Flower with hidden shuriken",
+   "kind": "clan",
+   "nature": "fire",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "rat",
+    "tiger",
+    "dog",
+    "ox",
+    "hare",
+    "tiger"
+   ],
+   "chakra": 16,
+   "cast_ticks": 24,
+   "cooldown_ticks": 120,
+   "power": 14,
+   "shape": {
+    "type": "projectile",
+    "range": 18,
+    "speed": 1.4,
+    "radius": 0.4,
+    "count": 5,
+    "homing": 0.15
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "damage": "physical.pierce",
+     "per": 1.5
+    }
+   ],
+   "mechanic": "Phoenix Sage Fire with a shuriken hidden in each flame: blocking the fire still lets the steel through",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.uchiha"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "replaces": "combat:fire.phoenix_flower",
+   "clan": "uchiha",
+   "tier": 1
+  },
+  {
+   "id": "combat:uchiha.dragon_flame_triple",
+   "name": "Dragon Flame Triple",
+   "kind": "clan",
+   "nature": "fire",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "snake",
+    "dragon",
+    "hare",
+    "tiger"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 14.0,
+   "shape": {
+    "type": "line",
+    "range": 16,
+    "width": 1.0,
+    "needs": "wire"
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "status": "burning",
+     "ticks": 120
+    }
+   ],
+   "mechanic": "Windmill Triple's wires, then Dragon Flame down all three",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.uchiha"
+   ],
+   "slice": "chunin",
+   "requires": [
+    "combat:weapon.windmill_triple"
+   ],
+   "replaces": "combat:fire.dragon_flame",
+   "clan": "uchiha",
+   "tier": 2
+  },
+  {
+   "id": "combat:uchiha.eye_genjutsu",
+   "name": "Sharingan Genjutsu",
+   "kind": "kekkei_genkai",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [],
+   "chakra": 50,
+   "cast_ticks": 4,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "target",
+    "range": 8,
+    "needs_eye_contact": true
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 80,
+     "variant": "eyes"
+    },
+    {
+     "status": "bound",
+     "ticks": 80
+    }
+   ],
+   "mechanic": "Meet a target's eyes within 8 blocks: genjutsu (binding) for 80 ticks; needs Sharingan stage 3",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.uchiha"
+   ],
+   "slice": "jonin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "uchiha",
+   "tier": 3
+  },
+  {
+   "id": "combat:uchiha.flame_storm",
+   "name": "Fire: Flame Storm",
+   "kind": "clan",
+   "nature": "fire",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "snake",
+    "ram",
+    "monkey",
+    "boar",
+    "horse",
+    "tiger",
+    "dragon"
+   ],
+   "chakra": 80,
+   "cast_ticks": 28,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "area",
+    "radius": 8
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "status": "burning",
+     "ticks": 160
+    },
+    {
+     "pull": 2
+    }
+   ],
+   "mechanic": "A spinning column of fire around you (radius 8) for 60 ticks that drags enemies in",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.uchiha"
+   ],
+   "slice": "road",
+   "clan": "uchiha",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:uchiha.fire_breath",
+  "name": "Uchiha Fire Breath",
+  "kind": "clan_lesser",
+  "nature": "fire",
+  "rank": "c",
+  "level": 12,
+  "signs": [
+   "snake",
+   "tiger"
+  ],
+  "chakra": 16,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "Your fire jutsu cost 10% less and Great Fireball bursts 0.5 blocks wider (needs fire nature)",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:uchiha:7"
+  ],
+  "slice": "beta2",
+  "clan": "uchiha",
+  "lesser": true
+ },
+ "kekkei_genkai": {
+  "name": "Sharingan",
+  "awakening": "Beta 3, Ch 16 for a clan-born player (a story moment); stages by rank",
+  "stages": [
+   {
+    "stage": 1,
+    "slice": "beta3",
+    "tomoe": 1,
+    "gives": "enemy telegraphs flash 6 ticks earlier; chakra 1 a second while active"
+   },
+   {
+    "stage": 2,
+    "slice": "chunin",
+    "tomoe": 2,
+    "gives": "parry window doubled; genjutsu it sees cast is broken at once"
+   },
+   {
+    "stage": 3,
+    "slice": "jonin",
+    "tomoe": 3,
+    "gives": "copy: a jutsu you watch an enemy cast (and survive) is learnable; Sharingan Genjutsu"
+   },
+   {
+    "stage": 4,
+    "slice": "never",
+    "note": "No further stages in the game unless the story bible adds one"
+   }
+  ],
+  "key": "toggle with the Eye key (B), 1 chakra a second"
+ }
+}

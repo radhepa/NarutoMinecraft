@@ -1,0 +1,181 @@
+{
+ "format": 1,
+ "id": "umino",
+ "clan": "clan:umino",
+ "name": "Umino",
+ "standing": "minor",
+ "suggested_nature": [
+  "water"
+ ],
+ "passives": {
+  "stamina_bonus": 10,
+  "teacher": "teammates you command get +5% damage"
+ },
+ "techniques": [
+  {
+   "id": "combat:umino.cover",
+   "name": "Cover",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 6,
+   "cast_ticks": 0,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "intercept": true
+    }
+   ],
+   "mechanic": "Dash up to 6 blocks to an ally and take the next hit meant for them (guarding)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.umino"
+   ],
+   "slice": "beta2",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "umino",
+   "tier": 1
+  },
+  {
+   "id": "combat:umino.rally",
+   "name": "Rally",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [],
+   "chakra": 30,
+   "cast_ticks": 4,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 12
+   },
+   "effects": [
+    {
+     "stamina": 30
+    },
+    {
+     "cleanse": [
+      "fear"
+     ]
+    }
+   ],
+   "mechanic": "A shout: allies within 12 blocks regain 30 stamina and break fear",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.umino"
+   ],
+   "slice": "chunin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "umino",
+   "tier": 2
+  },
+  {
+   "id": "combat:umino.tidewall",
+   "name": "Water: Tidewall",
+   "kind": "family_art",
+   "nature": "water",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "tiger",
+    "snake",
+    "rat",
+    "ox"
+   ],
+   "chakra": 50,
+   "cast_ticks": 16,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "water_wall",
+    "ticks": 100,
+    "radius": 5
+   },
+   "effects": [],
+   "mechanic": "A Water Wall that also shelters allies within 5 blocks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.umino"
+   ],
+   "slice": "jonin",
+   "clan": "umino",
+   "tier": 3
+  },
+  {
+   "id": "combat:umino.teachers_resolve",
+   "name": "A Teacher's Resolve",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "tiger",
+    "ram"
+   ],
+   "chakra": 80,
+   "cast_ticks": 12,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 12
+   },
+   "effects": [
+    {
+     "revive": 0.3
+    }
+   ],
+   "mechanic": "Once per fight: every downed ally within 12 blocks stands up with 30% health",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.umino"
+   ],
+   "slice": "road",
+   "clan": "umino",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:umino.steady_voice",
+  "name": "Steady Voice",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 16,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "Your squad commands are obeyed even at low cohesion",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:umino:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "umino",
+  "lesser": true
+ }
+}

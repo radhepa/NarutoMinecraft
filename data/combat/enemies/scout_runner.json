@@ -1,0 +1,37 @@
+{
+ "format": 1,
+ "id": "combat:enemy.scout_runner",
+ "name": "Enemy scout",
+ "kind": "human",
+ "tier": "mook",
+ "rank": "genin",
+ "levels": [
+  8,
+  18
+ ],
+ "band": "far",
+ "slice": "beta2",
+ "weapons": [
+  "item:kunai",
+  "item:shuriken"
+ ],
+ "techniques": [
+  "combat:nin.hiding_camouflage",
+  "combat:nin.body_flicker"
+ ],
+ "tools": {
+  "item:smoke_bomb": 2
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {
+  "flee_first": true,
+  "reports": true
+ },
+ "barks": "cell",
+ "note": "If it escapes, the next fight in that mission has +1 enemy"
+}

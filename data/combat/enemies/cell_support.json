@@ -1,0 +1,38 @@
+{
+ "format": 1,
+ "id": "combat:enemy.cell_support",
+ "name": "Cell support",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "genin",
+ "levels": [
+  12,
+  22
+ ],
+ "band": "far",
+ "slice": "beta2",
+ "weapons": [
+  "item:shuriken",
+  "item:ninja_wire"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:fire.great_fireball",
+  "combat:earth.mud_wall",
+  "combat:gen.false_surroundings"
+ ],
+ "tools": {
+  "item:paper_bomb": 3
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {
+  "pairs_with": "combat:enemy.cell_vanguard"
+ },
+ "barks": "cell",
+ "note": "The partner holds far and combines natures with the vanguard"
+}

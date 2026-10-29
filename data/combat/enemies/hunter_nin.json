@@ -1,0 +1,32 @@
+{
+ "format": 1,
+ "id": "combat:enemy.hunter_nin",
+ "name": "Hunter-nin",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "chunin",
+ "levels": [
+  20,
+  40
+ ],
+ "band": "mid",
+ "slice": "chunin",
+ "weapons": [
+  "item:senbon"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.body_flicker",
+  "combat:water.hiding_mist",
+  "combat:sense.chakra_sense"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {},
+ "barks": "rogue"
+}

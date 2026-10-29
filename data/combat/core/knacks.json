@@ -1,0 +1,45 @@
+{
+ "format": 1,
+ "owner": "the character creator picks one (Roots step); combat owns the effects",
+ "list": [
+  {
+   "id": "combat:knack.balanced",
+   "effect": {
+    "taijutsu": 0.02,
+    "weapons": 0.02,
+    "ninjutsu": 0.02
+   },
+   "starter": null,
+   "default": true
+  },
+  {
+   "id": "combat:knack.taijutsu",
+   "effect": {
+    "taijutsu": 0.05
+   },
+   "starter": "item:knuckle_wraps"
+  },
+  {
+   "id": "combat:knack.weapons",
+   "effect": {
+    "weapons": 0.05
+   },
+   "starter": "item:practice_kunai x5 (fine)"
+  },
+  {
+   "id": "combat:knack.ninjutsu",
+   "effect": {
+    "ninjutsu": 0.05
+   },
+   "starter": "item:hand_sign_primer"
+  }
+ ],
+ "affinity": "the creator's affinity (or undecided) is shown at the Genin ceremony as your leaning; choosing it there gives +10% power with that nature",
+ "clanless_start": {
+  "hearts": 10,
+  "chakra": 53,
+  "control": 35,
+  "stamina": 110,
+  "poise": 20
+ }
+}

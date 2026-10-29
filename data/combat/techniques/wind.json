@@ -1,0 +1,375 @@
+{
+ "format": 1,
+ "techniques": [
+  {
+   "id": "combat:wind.gale_palm",
+   "name": "Wind: Gale Palm",
+   "kind": "ninjutsu",
+   "nature": "wind",
+   "rank": "d",
+   "level": 8,
+   "signs": [
+    "ram",
+    "tiger"
+   ],
+   "chakra": 10,
+   "cast_ticks": 8,
+   "cooldown_ticks": 60,
+   "power": 4.0,
+   "shape": {
+    "type": "cone",
+    "range": 6,
+    "degrees": 40
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    },
+    {
+     "knockback": 3
+    },
+    {
+     "deflects": "projectiles"
+    }
+   ],
+   "mechanic": "Clap a blast of air: a 6-block gust that knocks back 3 and knocks thrown weapons out of the air",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "scroll:scroll_shop"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:wind.great_breakthrough",
+   "name": "Wind: Great Breakthrough",
+   "kind": "ninjutsu",
+   "nature": "wind",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "tiger",
+    "ox",
+    "dog",
+    "hare",
+    "snake"
+   ],
+   "chakra": 16,
+   "cast_ticks": 20,
+   "cooldown_ticks": 120,
+   "power": 8.0,
+   "shape": {
+    "type": "cone",
+    "range": 12,
+    "degrees": 50
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    },
+    {
+     "knockback": 5
+    },
+    {
+     "deflects": "projectiles"
+    },
+    {
+     "clears": [
+      "smoked",
+      "mist"
+     ]
+    }
+   ],
+   "mechanic": "A wind-charge gust: a 12-block, 50-degree blast that knocks back 5, deflects projectiles and blows smoke and mist away",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "ceremony:nature",
+    "mentor:role:nature_master.wind"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:wind.vacuum_wave",
+   "name": "Wind: Vacuum Wave",
+   "kind": "ninjutsu",
+   "nature": "wind",
+   "rank": "c",
+   "level": 14,
+   "signs": [
+    "tiger",
+    "ox",
+    "dog"
+   ],
+   "chakra": 16,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 10.0,
+   "shape": {
+    "type": "area",
+    "radius": 5
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    },
+    {
+     "status": "bleeding",
+     "ticks": 60
+    }
+   ],
+   "mechanic": "Spin and exhale: a 360-degree ring of slicing wind around you (radius 5)",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "scroll:scroll_shop",
+    "exam_reward"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:wind.blade_of_wind",
+   "name": "Wind: Blade of Wind",
+   "kind": "ninjutsu",
+   "nature": "wind",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "ox",
+    "dog",
+    "tiger",
+    "ram"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 14.0,
+   "shape": {
+    "type": "line",
+    "range": 12,
+    "width": 1.0,
+    "guard_pierce": 0.5
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    },
+    {
+     "status": "bleeding",
+     "ticks": 80
+    }
+   ],
+   "mechanic": "An invisible blade along a line (12 blocks): cuts through guards (half the guard's reduction)",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "mentor:role:nature_master.wind"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:wind.vacuum_bullet",
+   "name": "Wind: Vacuum Bullets",
+   "kind": "ninjutsu",
+   "nature": "wind",
+   "rank": "b",
+   "level": 22,
+   "signs": [
+    "dog",
+    "ox",
+    "hare",
+    "tiger"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 15,
+   "shape": {
+    "type": "projectile",
+    "range": 24,
+    "speed": 2.2,
+    "radius": 0.6,
+    "count": 3,
+    "interval": 4
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    }
+   ],
+   "mechanic": "Three compressed air bullets in quick succession (fast, 24 range)",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "mentor:role:nature_master.wind",
+    "clan:shimura"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:wind.pressure_damage",
+   "name": "Wind: Pressure Damage",
+   "kind": "ninjutsu",
+   "nature": "wind",
+   "rank": "b",
+   "level": 26,
+   "signs": [
+    "tiger",
+    "ox",
+    "dog",
+    "hare",
+    "snake",
+    "ram"
+   ],
+   "chakra": 30,
+   "cast_ticks": 24,
+   "cooldown_ticks": 200,
+   "power": 16.1,
+   "shape": {
+    "type": "cone",
+    "range": 14,
+    "degrees": 60
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    },
+    {
+     "knockback": 8
+    }
+   ],
+   "mechanic": "A huge compressed gust that hits like a wall: 14-block cone, knockback 8",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "mission:b"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:wind.sickle_weasel",
+   "name": "Wind: Sickle Weasel",
+   "kind": "ninjutsu",
+   "nature": "wind",
+   "rank": "a",
+   "level": 32,
+   "signs": [],
+   "chakra": 50,
+   "cast_ticks": 10,
+   "cooldown_ticks": 360,
+   "power": 21.0,
+   "shape": {
+    "type": "line",
+    "range": 16,
+    "width": 3.0,
+    "travelling": true
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    },
+    {
+     "status": "bleeding",
+     "ticks": 100
+    },
+    {
+     "status": "airborne",
+     "ticks": 20
+    }
+   ],
+   "mechanic": "Swing a great fan: a tornado of blades that walks 16 blocks forward (needs item:battle_fan)",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "mentor:role:nature_master.wind"
+   ],
+   "slice": "jonin",
+   "requires": [
+    "item:battle_fan"
+   ],
+   "tags": [
+    "no_signs"
+   ]
+  },
+  {
+   "id": "combat:wind.vacuum_great_sphere",
+   "name": "Wind: Vacuum Great Sphere",
+   "kind": "ninjutsu",
+   "nature": "wind",
+   "rank": "a",
+   "level": 36,
+   "signs": [
+    "tiger",
+    "ox",
+    "dog",
+    "hare",
+    "snake",
+    "ram",
+    "horse"
+   ],
+   "chakra": 50,
+   "cast_ticks": 28,
+   "cooldown_ticks": 360,
+   "power": 24.1,
+   "shape": {
+    "type": "projectile",
+    "range": 28,
+    "speed": 1.8,
+    "radius": 1.5,
+    "pierces_barriers": true
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    }
+   ],
+   "mechanic": "One giant air bullet that tears through walls of earth and water",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "mentor:role:nature_master.wind",
+    "clan:shimura"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:wind.spiral_shuriken",
+   "name": "Wind: Spiralling Shuriken",
+   "kind": "ninjutsu",
+   "nature": "wind",
+   "rank": "s",
+   "level": 48,
+   "signs": [],
+   "chakra": 80,
+   "cast_ticks": 40,
+   "cooldown_ticks": 800,
+   "power": 35.2,
+   "shape": {
+    "type": "projectile",
+    "range": 30,
+    "speed": 1.2,
+    "radius": 1.0,
+    "burst": 6
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    },
+    {
+     "status": "bleeding",
+     "ticks": 200
+    },
+    {
+     "self_damage": 0.05
+    }
+   ],
+   "mechanic": "Add wind to the Spiralling Sphere and throw it: a shuriken of wind that bursts into a 6-block sphere of a million tiny blades",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "slice": "road",
+   "requires": [
+    "combat:nin.spiral_sphere:mastered"
+   ],
+   "tags": [
+    "no_signs"
+   ]
+  }
+ ]
+}

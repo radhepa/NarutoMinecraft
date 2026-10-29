@@ -1,0 +1,34 @@
+{
+ "format": 1,
+ "id": "combat:enemy.pickpocket",
+ "name": "Pickpocket",
+ "kind": "human",
+ "tier": "mook",
+ "rank": "civilian",
+ "levels": [
+  3,
+  12
+ ],
+ "band": "mid",
+ "slice": "beta2",
+ "weapons": [],
+ "techniques": [],
+ "tools": {
+  "item:smoke_bomb": 1
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "nonlethal",
+  "steals_item",
+  "runner"
+ ],
+ "ai": {
+  "flee_first": true
+ },
+ "barks": "bandit",
+ "note": "Quick and weak: catch them before they reach the crowd"
+}

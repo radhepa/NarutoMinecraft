@@ -1,0 +1,35 @@
+{
+ "format": 1,
+ "id": "combat:boss.ch19.stadium_cell",
+ "name": "Attackers in the stands",
+ "chapter": 19,
+ "slice": "beta3",
+ "base": "combat:group.cell_pair",
+ "level": 18,
+ "nonlethal": false,
+ "arena": "place:stadium.stands",
+ "win": "the stands are cleared and the protect target survives",
+ "lose": "the protect target falls or you are downed",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Smoke",
+   "behaviour": "the attack's opening: smoke and fire in the stands; cells target civilians",
+   "openings": "protect objective: Cover, walls, barriers"
+  },
+  {
+   "at_hp": 0.5,
+   "name": "Second wave",
+   "behaviour": "a rogue bomber joins from the upper stands",
+   "adds": [
+    "combat:enemy.rogue_bomber"
+   ]
+  }
+ ],
+ "hp_mult": 1.5,
+ "poise": 40,
+ "damage_mult": 0.9,
+ "notes": "The defence and protect objectives of the finals' attack",
+ "story": "bible:combat:boss.ch19.stadium_cell",
+ "dialogue": "dlg:combat.boss.ch19.stadium_cell"
+}

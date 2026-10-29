@@ -1,0 +1,185 @@
+{
+ "format": 1,
+ "id": "gekko",
+ "clan": "clan:gekko",
+ "name": "Gekko",
+ "standing": "noble",
+ "suggested_nature": [],
+ "passives": {
+  "kenjutsu_power": 0.1
+ },
+ "techniques": [
+  {
+   "id": "combat:gekko.crescent_moon_dance",
+   "name": "Dance of the Crescent Moon",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 16,
+   "cast_ticks": 6,
+   "cooldown_ticks": 120,
+   "power": 11.0,
+   "shape": {
+    "type": "melee",
+    "range": 4.0
+   },
+   "effects": [
+    {
+     "damage": "physical.slash",
+     "hits": 3
+    }
+   ],
+   "mechanic": "Two short-lived clones appear and all three strike a target at once from three sides (needs a blade)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.gekko"
+   ],
+   "slice": "beta2",
+   "requires": [
+    "weapon:blade"
+   ],
+   "beta": true,
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "gekko",
+   "tier": 1
+  },
+  {
+   "id": "combat:gekko.moon_shadow_step",
+   "name": "Moon Shadow Step",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [],
+   "chakra": 30,
+   "cast_ticks": 2,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "blink_behind": true
+    },
+    {
+     "status": "iframes",
+     "ticks": 8
+    }
+   ],
+   "mechanic": "Vanish into a blade's gleam and reappear behind a target within 10 blocks (counts as a dodge with 8 i-frames)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.gekko"
+   ],
+   "slice": "chunin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "gekko",
+   "tier": 2
+  },
+  {
+   "id": "combat:gekko.full_moon_slash",
+   "name": "Full Moon Slash",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [],
+   "chakra": 50,
+   "cast_ticks": 4,
+   "cooldown_ticks": 360,
+   "power": 21.0,
+   "shape": {
+    "type": "area",
+    "radius": 4
+   },
+   "effects": [
+    {
+     "damage": "physical.slash"
+    }
+   ],
+   "mechanic": "A 360-degree draw-cut (radius 4) at the end of a parry",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.gekko"
+   ],
+   "slice": "jonin",
+   "requires": [
+    "status:counter_window"
+   ],
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "gekko",
+   "tier": 3
+  },
+  {
+   "id": "combat:gekko.new_moon_blade",
+   "name": "New Moon Blade",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [],
+   "chakra": 80,
+   "cast_ticks": 2,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "new_moon",
+     "ticks": 100
+    }
+   ],
+   "mechanic": "An invisible strike: the next sword hit within 100 ticks gives no telegraph and deals S-rank damage",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.gekko"
+   ],
+   "slice": "road",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "gekko",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:gekko.moon_breathing",
+  "name": "Moonlit Breathing",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 16,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "At night your kenjutsu stamina costs 30% less",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:gekko:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "gekko",
+  "lesser": true
+ },
+ "style": "combat:style.crescent_moon"
+}

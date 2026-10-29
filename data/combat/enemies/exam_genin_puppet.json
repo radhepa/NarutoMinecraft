@@ -1,0 +1,32 @@
+{
+ "format": 1,
+ "id": "combat:enemy.exam_genin_puppet",
+ "name": "Foreign genin (puppeteer)",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "genin",
+ "levels": [
+  13,
+  18
+ ],
+ "band": "far",
+ "slice": "beta3",
+ "weapons": [
+  "item:kunai"
+ ],
+ "techniques": [
+  "combat:nin.chakra_threads"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "puppet"
+ ],
+ "ai": {},
+ "barks": "exam_genin",
+ "note": "A puppet entity fights for it on chakra threads; hit the puppeteer, not the puppet"
+}

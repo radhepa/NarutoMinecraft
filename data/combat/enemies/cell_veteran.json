@@ -1,0 +1,35 @@
+{
+ "format": 1,
+ "id": "combat:enemy.cell_veteran",
+ "name": "Cell veteran",
+ "kind": "human",
+ "tier": "miniboss",
+ "rank": "jonin",
+ "levels": [
+  30,
+  50
+ ],
+ "band": "mid",
+ "slice": "jonin",
+ "style": "combat:style.academy_basics",
+ "weapons": [
+  "item:katana",
+  "item:kunai"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.shadow_clone",
+  "combat:fire.great_dragon_fire",
+  "combat:earth.flow_rampart",
+  "combat:gen.bringer_of_darkness"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {},
+ "barks": "cell"
+}

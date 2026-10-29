@@ -1,0 +1,31 @@
+{
+ "format": 1,
+ "how": "Right click a coating with a blade, kunai, shuriken or senbon in the off hand: the next N hits carry it. Crafted at the apothecary table (unlocked by the Suzuran welcome, items session); otherwise bought",
+ "list": [
+  {
+   "item": "item:coating_numbing",
+   "status": "numbed",
+   "hits": 6,
+   "slice": "beta3"
+  },
+  {
+   "item": "item:coating_sleep",
+   "status": "drowsy",
+   "hits": 4,
+   "slice": "beta3",
+   "bosses": "drowsy only, never asleep"
+  },
+  {
+   "item": "item:coating_venom",
+   "status": "poisoned",
+   "hits": 6,
+   "slice": "beta2"
+  }
+ ],
+ "senbon_mult": 2,
+ "resisted_by": {
+  "clan:suzuran": "immune",
+  "clan:aburame": "poison half",
+  "enemy.trait:poison_immune": "immune"
+ }
+}

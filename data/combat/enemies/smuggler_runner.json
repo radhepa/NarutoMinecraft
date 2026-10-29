@@ -1,0 +1,35 @@
+{
+ "format": 1,
+ "id": "combat:enemy.smuggler_runner",
+ "name": "Smuggler",
+ "kind": "human",
+ "tier": "mook",
+ "rank": "civilian",
+ "levels": [
+  8,
+  16
+ ],
+ "band": "mid",
+ "slice": "beta2",
+ "weapons": [
+  "item:kunai"
+ ],
+ "techniques": [],
+ "tools": {
+  "item:smoke_bomb": 2,
+  "item:makibishi": 1
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "runner"
+ ],
+ "ai": {
+  "flee_first": true
+ },
+ "barks": "bandit",
+ "note": "Runs for it: catch, bind or tag them (combat:captured)"
+}

@@ -1,0 +1,100 @@
+{
+ "format": 1,
+ "resources": {
+  "health": {
+   "base_hp": 20,
+   "hearts_every_levels": 6,
+   "hp_per_heart": 2,
+   "regen_per_second_out_of_combat": 0.25,
+   "regen_delay_ticks": 100,
+   "note": "Vanilla health: 10 hearts at level 1, +1 heart every 6 levels (level 60: 19 hearts). Clan and gear hearts stack on top."
+  },
+  "toughness": {
+   "per_level": 0.025,
+   "note": "Incoming damage to the player is divided by 1 + 0.025 x (level - 1): a level-50 body takes 45% of what a level-1 body takes from the same blow, so hearts stay readable while enemies scale."
+  },
+  "chakra": {
+   "base": 50,
+   "per_level": 3,
+   "regen_flat_per_second": 0.6,
+   "regen_fraction_per_second": 0.01,
+   "combat_regen_mult": 0.75,
+   "combat_window_ticks": 80,
+   "meditate_mult": 4.0,
+   "meditate_still_ticks": 20,
+   "overdraw_limit": 0.25,
+   "overdraw_hp_per_chakra": 0.5,
+   "note": "A bar beside hunger. Regenerates slowly, faster meditating (sneak and stand still), from soldier pills and some food. Casting short of chakra (by at most 25% of the cost) is a desperate cast: the shortfall is paid in health at 0.5 HP per point and leaves you exhausted."
+  },
+  "control": {
+   "base": 30,
+   "max": 100,
+   "cost_mult_at_0": 1.15,
+   "cost_mult_at_100": 0.85,
+   "sign_ticks_at_0": 4,
+   "sign_ticks_at_80": 3,
+   "movement_bonus_at_100": 0.25,
+   "gains": {
+    "leaf_concentration": 5,
+    "tree_walking": 10,
+    "water_walking": 10,
+    "chakra_meditation_week": 2,
+    "medical_training": 10
+   },
+   "note": "Chakra control, 0 to 100. Lowers chakra cost (x1.15 at 0, x0.85 at 100), speeds hand signs (4 ticks a sign, 3 from 80), stretches chakra movement and gates medical and precision techniques. Grows through training, not levels."
+  },
+  "stamina": {
+   "base": 100,
+   "regen_per_second": 30,
+   "regen_delay_ticks": 15,
+   "guarding_regen_mult": 0.3,
+   "costs": {
+    "light": 3,
+    "heavy": 12,
+    "launcher": 15,
+    "air_hit": 4,
+    "finisher": 10,
+    "dodge": 22,
+    "dash": 10,
+    "throw": 2,
+    "sprint_per_second": 0,
+    "guard_per_damage": 4,
+    "parry": 0
+   },
+   "empty_effect": "winded",
+   "note": "Taijutsu and weapons run on stamina, ninjutsu on chakra. Stamina refills in about three seconds, so a close-range fighter is limited by footwork and timing, never by a slow bar. A guard that runs out of stamina breaks (staggered for 20 ticks)."
+  },
+  "poise": {
+   "player_base": 20,
+   "regen_fraction_per_second": 0.15,
+   "regen_delay_ticks": 40,
+   "stagger_ticks": 16,
+   "reset_to_full": true,
+   "note": "Hidden toughness bar on every fighter. Every hit carries poise damage; at 0 the target staggers (16 ticks, interrupts any cast) and poise refills. Heavies, launchers, blunt weapons and earth hit poise hard; Strong Fist and Akimichi build it up."
+  },
+  "momentum": {
+   "max": 100,
+   "per_hit": 6,
+   "per_parry": 25,
+   "per_perfect_dodge": 15,
+   "lost_when_hit": 30,
+   "decay_per_second_after_ticks": [
+    5,
+    40
+   ],
+   "note": "Builds as you land hits and parries without being hit; taijutsu and weapon finishers spend it. Momentum is the close-range pillar's answer to a full chakra bar: big finishers that cost no chakra."
+  },
+  "exhaustion": {
+   "chakra_exhaustion": {
+    "trigger": "chakra reaches 0 or a desperate cast",
+    "status": "chakra_exhausted",
+    "until_fraction": 0.2
+   },
+   "gate_exhaustion": {
+    "trigger": "an inner gate closes",
+    "status": "gate_strain"
+   },
+   "fatigue_link": "Shinobi Life's fatigue writes stat modifiers (movement, damage, chakra regen); Combat reads chakra regen and the movement and damage attributes."
+  }
+ }
+}

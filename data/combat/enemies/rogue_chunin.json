@@ -1,0 +1,41 @@
+{
+ "format": 1,
+ "id": "combat:enemy.rogue_chunin",
+ "name": "Rogue chunin",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "chunin",
+ "levels": [
+  15,
+  28
+ ],
+ "band": "mid",
+ "slice": "beta3",
+ "style": "combat:style.academy_basics",
+ "weapons": [
+  "item:kunai",
+  "item:shuriken",
+  "item:tanto"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.body_flicker",
+  "combat:nin.shadow_clone",
+  "combat:wind.great_breakthrough",
+  "combat:earth.mud_wall"
+ ],
+ "tools": {
+  "item:paper_bomb": 2,
+  "item:smoke_bomb": 2
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {
+  "retreat_at": 0.3
+ },
+ "barks": "rogue"
+}

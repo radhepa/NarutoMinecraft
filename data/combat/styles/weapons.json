@@ -1,0 +1,1553 @@
+{
+ "format": 1,
+ "tiers": {
+  "names": [
+   "initiate",
+   "adept",
+   "expert",
+   "master",
+   "grandmaster"
+  ],
+  "style_mult": [
+   1.0,
+   1.1,
+   1.2,
+   1.3,
+   1.4
+  ],
+  "how": "A style's tier rises with uses of its moves in real fights and a mentor's trial at tiers 2 to 5; tiers need taijutsu (or weapons) rank 1, 3, 5, 7 and 9"
+ },
+ "styles": [
+  {
+   "id": "combat:style.academy_blade",
+   "name": "Academy blade",
+   "pillar": "weapons",
+   "weapons": [
+    "item:practice_kunai",
+    "item:kunai",
+    "item:tanto",
+    "item:chakra_blades"
+   ],
+   "who": "everyone",
+   "mentor": "role:instructor",
+   "slice": "beta1",
+   "feel": "The taijutsu chain with a blade in hand: slashes, a reverse-grip parry and a throw-out finisher.",
+   "moves": [
+    {
+     "id": "slash_1",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta1",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "slash_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta1",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "slash_3",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.3,
+     "poise": 6,
+     "frames": [
+      3,
+      2,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta1",
+     "effects": {
+      "weapon_mult": true,
+      "knockback": 1.0
+     }
+    },
+    {
+     "id": "stab",
+     "input": [
+      "H"
+     ],
+     "state": "ground",
+     "damage": 2.4,
+     "poise": 10,
+     "frames": [
+      8,
+      3,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "beta1",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "reverse_parry",
+     "input": [
+      "P",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.6,
+     "poise": 8,
+     "frames": [
+      1,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "counter": true
+     }
+    },
+    {
+     "id": "throw_out",
+     "input": [
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 2.0,
+     "poise": 8,
+     "frames": [
+      4,
+      2,
+      8
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 8,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "throws_held": true,
+      "note": "Ends the chain by throwing the kunai into the target"
+     }
+    }
+   ],
+   "note": "Weapon moves with weapon_mult multiply the held weapon's melee damage"
+  },
+  {
+   "id": "combat:style.throwing_arts",
+   "name": "Throwing arts",
+   "pillar": "weapons",
+   "weapons": [
+    "item:practice_shuriken",
+    "item:shuriken",
+    "item:manji_shuriken",
+    "item:kunai",
+    "item:fuma_shuriken"
+   ],
+   "who": "everyone",
+   "mentor": "role:instructor",
+   "slice": "beta1",
+   "feel": "Accurate, fast and tricky throws: fans, curves and hidden second stars.",
+   "moves": [
+    {
+     "id": "quick_throw",
+     "input": [
+      "T"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 1,
+     "frames": [
+      2,
+      1,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "beta1",
+     "effects": {
+      "weapon_mult": true,
+      "thrown": true
+     }
+    },
+    {
+     "id": "fan_of_three",
+     "input": [
+      "T",
+      "T"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 1,
+     "frames": [
+      3,
+      1,
+      8
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "thrown": true,
+      "projectiles": 3
+     }
+    },
+    {
+     "id": "rising_throw",
+     "input": [
+      "J",
+      "T"
+     ],
+     "state": "air",
+     "damage": 1.2,
+     "poise": 2,
+     "frames": [
+      2,
+      1,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "thrown": true,
+      "projectiles": 3,
+      "note": "Thrown from the air, downward"
+     }
+    },
+    {
+     "id": "rain",
+     "input": [
+      "J",
+      "T",
+      "T"
+     ],
+     "state": "air",
+     "damage": 1.0,
+     "poise": 1,
+     "frames": [
+      4,
+      6,
+      10
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.pierce",
+     "tier": 1,
+     "momentum_cost": 50,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true,
+      "thrown": true,
+      "projectiles": 8,
+      "finisher": true
+     }
+    }
+   ],
+   "input_note": "T is the throw key (use while aiming, or G for the pouch)"
+  },
+  {
+   "id": "combat:style.needle_arts",
+   "name": "Needle arts",
+   "pillar": "weapons",
+   "weapons": [
+    "item:senbon"
+   ],
+   "who": "anyone; the Shiranui teach it (clan friendship 5)",
+   "mentor": "role:clan_elder.shiranui",
+   "slice": "beta2",
+   "feel": "Silent senbon at pressure points: numb, slow and paralyse rather than kill.",
+   "moves": [
+    {
+     "id": "needle_flick",
+     "input": [
+      "T"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 0,
+     "frames": [
+      1,
+      1,
+      3
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "thrown": true
+     }
+    },
+    {
+     "id": "needle_fan",
+     "input": [
+      "T",
+      "T"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 0,
+     "frames": [
+      2,
+      1,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "thrown": true,
+      "projectiles": 5
+     }
+    },
+    {
+     "id": "pressure_point",
+     "input": [
+      "H",
+      "T"
+     ],
+     "state": "ground",
+     "damage": 2.0,
+     "poise": 0,
+     "frames": [
+      6,
+      1,
+      8
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true,
+      "thrown": true,
+      "applies": "numbed",
+      "stacks": 2
+     }
+    }
+   ],
+   "clan_lesser": "shiranui"
+  },
+  {
+   "id": "combat:style.crescent_moon",
+   "name": "Crescent Moon kenjutsu",
+   "pillar": "weapons",
+   "weapons": [
+    "item:ninjato",
+    "item:katana",
+    "item:tanto"
+   ],
+   "who": "anyone at weapons rank 4; the Gekko (clan-born) from Genin",
+   "mentor": "role:clan_elder.gekko",
+   "slice": "beta3",
+   "feel": "The Gekko's kenjutsu: wide arcs, a draw-cut counter and the Dance of the Crescent Moon.",
+   "moves": [
+    {
+     "id": "arc_1",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 4,
+     "frames": [
+      3,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "arc_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 4,
+     "frames": [
+      3,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "arc_3",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.4,
+     "poise": 10,
+     "frames": [
+      4,
+      3,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true,
+      "area_blocks": 2.5
+     }
+    },
+    {
+     "id": "draw_cut",
+     "input": [
+      "P",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 2.0,
+     "poise": 12,
+     "frames": [
+      1,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true,
+      "counter": true
+     }
+    },
+    {
+     "id": "moon_rising",
+     "input": [
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 1.6,
+     "poise": 14,
+     "frames": [
+      5,
+      3,
+      8
+     ],
+     "window": [
+      0,
+      10
+     ],
+     "stamina": 15,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true,
+      "launches": true
+     }
+    },
+    {
+     "id": "crescent_finish",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 3.5,
+     "poise": 40,
+     "frames": [
+      6,
+      6,
+      14
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 10,
+     "type": "physical.slash",
+     "tier": 1,
+     "momentum_cost": 70,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true,
+      "finisher": true,
+      "cinematic": true
+     }
+    }
+   ],
+   "clan": "gekko"
+  },
+  {
+   "id": "combat:style.wave_foot",
+   "name": "Wave-foot kenjutsu",
+   "pillar": "weapons",
+   "weapons": [
+    "item:kokuto",
+    "item:tanto",
+    "item:ninjato"
+   ],
+   "who": "Namiashi from Genin; others at weapons rank 5 with clan friendship 7",
+   "mentor": "role:clan_elder.namiashi",
+   "slice": "beta2",
+   "feel": "The bodyguard's sword: short, silent strokes, a guard that steps aside and returns the blow.",
+   "moves": [
+    {
+     "id": "ripple_1",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 0.9,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "ripple_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 0.9,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "ripple_3",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 0.9,
+     "poise": 3,
+     "frames": [
+      2,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "undertow",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.5,
+     "poise": 10,
+     "frames": [
+      3,
+      2,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "knocks_down": true
+     }
+    },
+    {
+     "id": "side_step_cut",
+     "input": [
+      "D",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.6,
+     "poise": 6,
+     "frames": [
+      2,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "counter": true
+     }
+    },
+    {
+     "id": "guard_of_waves",
+     "input": [
+      "G",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.8,
+     "poise": 10,
+     "frames": [
+      2,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true,
+      "counter": true,
+      "note": "A block that deflects the blow to the side and cuts back"
+     }
+    }
+   ],
+   "clan": "namiashi"
+  },
+  {
+   "id": "combat:style.white_fang",
+   "name": "White Fang",
+   "pillar": "weapons",
+   "weapons": [
+    "item:white_sabre",
+    "item:tanto"
+   ],
+   "who": "Hatake; others at weapons rank 8",
+   "mentor": "role:clan_elder.hatake",
+   "slice": "jonin",
+   "feel": "Blinding tanto speed and a lightning dash finisher.",
+   "moves": [
+    {
+     "id": "fang_1",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 3,
+     "frames": [
+      1,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "jonin",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "fang_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 3,
+     "frames": [
+      1,
+      2,
+      4
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "jonin",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "fang_3",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.4,
+     "poise": 8,
+     "frames": [
+      2,
+      2,
+      8
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "jonin",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "white_light_dash",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 4.0,
+     "poise": 50,
+     "frames": [
+      4,
+      6,
+      14
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 10,
+     "type": "ninjutsu.lightning",
+     "tier": 1,
+     "momentum_cost": 70,
+     "slice": "jonin",
+     "effects": {
+      "weapon_mult": true,
+      "finisher": true,
+      "dash_blocks": 10,
+      "chakra": 10,
+      "cinematic": true
+     }
+    }
+   ],
+   "clan": "hatake"
+  },
+  {
+   "id": "combat:style.monkey_staff",
+   "name": "Monkey King staff",
+   "pillar": "weapons",
+   "weapons": [
+    "item:sarutobi_staff",
+    "item:bo_staff"
+   ],
+   "who": "Sarutobi with the clan staff; anyone with a bo staff (tiers 1 and 2)",
+   "mentor": "role:clan_elder.sarutobi",
+   "slice": "beta2",
+   "feel": "Long sweeping arcs that keep a crowd at bay, pole vaults and a spinning finisher.",
+   "moves": [
+    {
+     "id": "sweep_1",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 5,
+     "frames": [
+      3,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "area_blocks": 1.5
+     }
+    },
+    {
+     "id": "sweep_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 5,
+     "frames": [
+      3,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "area_blocks": 1.5
+     }
+    },
+    {
+     "id": "thrust",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.4,
+     "poise": 12,
+     "frames": [
+      4,
+      2,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "knockback": 2.5
+     }
+    },
+    {
+     "id": "pole_vault",
+     "input": [
+      "X",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 1.6,
+     "poise": 12,
+     "frames": [
+      6,
+      3,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "dash_blocks": 6,
+      "launches": true
+     }
+    },
+    {
+     "id": "whirling_staff",
+     "input": [
+      "L",
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 3.6,
+     "poise": 40,
+     "frames": [
+      5,
+      14,
+      14
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 10,
+     "type": "physical.blunt",
+     "tier": 1,
+     "momentum_cost": 60,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true,
+      "finisher": true,
+      "area_blocks": 4.5,
+      "deflects_projectiles": true
+     }
+    }
+   ],
+   "clan": "sarutobi"
+  },
+  {
+   "id": "combat:style.chain_arts",
+   "name": "Chain arts",
+   "pillar": "weapons",
+   "weapons": [
+    "item:kusarigama",
+    "item:weighted_chain"
+   ],
+   "who": "anyone at weapons rank 3",
+   "mentor": "role:weapon_master",
+   "slice": "beta3",
+   "feel": "Reach and control: hook, pull, wrap and bind.",
+   "moves": [
+    {
+     "id": "chain_lash",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 3,
+     "frames": [
+      3,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "chain_lash_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 3,
+     "frames": [
+      3,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "hook_pull",
+     "input": [
+      "H"
+     ],
+     "state": "ground",
+     "damage": 1.2,
+     "poise": 6,
+     "frames": [
+      8,
+      2,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 12,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "beta3",
+     "effects": {
+      "weapon_mult": true,
+      "pulls_blocks": 5
+     }
+    },
+    {
+     "id": "wrap_bind",
+     "input": [
+      "L",
+      "L",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 0.8,
+     "poise": 10,
+     "frames": [
+      6,
+      2,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 15,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true,
+      "applies": "bound",
+      "ticks": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "combat:style.fan_arts",
+   "name": "Fan arts",
+   "pillar": "weapons",
+   "weapons": [
+    "item:war_fan",
+    "item:battle_fan"
+   ],
+   "who": "anyone at weapons rank 3 (wind users gain most)",
+   "mentor": "role:nature_master.wind",
+   "slice": "chunin",
+   "feel": "Guard behind steel, slice with the edge, and push gusts through the fan.",
+   "moves": [
+    {
+     "id": "fan_cut",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 4,
+     "frames": [
+      2,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "fan_cut_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 4,
+     "frames": [
+      2,
+      2,
+      5
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "fan_snap",
+     "input": [
+      "L",
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.3,
+     "poise": 10,
+     "frames": [
+      3,
+      2,
+      10
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true,
+      "knockback": 2.0
+     }
+    },
+    {
+     "id": "gust_parry",
+     "input": [
+      "P",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 12,
+     "frames": [
+      2,
+      3,
+      8
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "ninjutsu.wind",
+     "tier": 1,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true,
+      "counter": true,
+      "chakra": 4,
+      "deflects_projectiles": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "combat:style.mace_arts",
+   "name": "Mace arts",
+   "pillar": "weapons",
+   "weapons": [
+    "item:iron_mace",
+    "item:bo_staff"
+   ],
+   "who": "Hagane; others at clan friendship 5",
+   "mentor": "role:clan_elder.hagane",
+   "slice": "beta2",
+   "feel": "Slow, crushing swings that break guards and poise.",
+   "moves": [
+    {
+     "id": "mace_1",
+     "input": [
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 6,
+     "frames": [
+      4,
+      2,
+      8
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "mace_2",
+     "input": [
+      "L",
+      "L"
+     ],
+     "state": "ground",
+     "damage": 1.1,
+     "poise": 8,
+     "frames": [
+      4,
+      2,
+      8
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true
+     }
+    },
+    {
+     "id": "mace_overhead",
+     "input": [
+      "H"
+     ],
+     "state": "ground",
+     "damage": 1.8,
+     "poise": 24,
+     "frames": [
+      10,
+      3,
+      14
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 14,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "guard_break": true
+     }
+    }
+   ],
+   "clan_lesser": "hagane"
+  },
+  {
+   "id": "combat:style.wire_arts",
+   "name": "Wire arts",
+   "pillar": "weapons",
+   "weapons": [
+    "item:ninja_wire",
+    "item:kunai"
+   ],
+   "who": "anyone; the Kinoshita teach traps (clan friendship 5)",
+   "mentor": "role:clan_elder.kinoshita",
+   "slice": "beta2",
+   "feel": "Traps, tethers and binds: fight on ground you prepared.",
+   "moves": [
+    {
+     "id": "tether_yank",
+     "input": [
+      "T",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 1.0,
+     "poise": 6,
+     "frames": [
+      2,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "weapon_mult": true,
+      "pulls_blocks": 3
+     }
+    },
+    {
+     "id": "trip_line",
+     "input": [
+      "G",
+      "T"
+     ],
+     "state": "ground",
+     "damage": 0.0,
+     "poise": 20,
+     "frames": [
+      6,
+      2,
+      6
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.blunt",
+     "tier": 1,
+     "slice": "beta2",
+     "effects": {
+      "trap": true,
+      "knocks_down": true
+     }
+    },
+    {
+     "id": "binding_cross",
+     "input": [
+      "T",
+      "T",
+      "H"
+     ],
+     "state": "ground",
+     "damage": 0.5,
+     "poise": 10,
+     "frames": [
+      4,
+      2,
+      10
+     ],
+     "window": [
+      0,
+      8
+     ],
+     "stamina": 3,
+     "type": "physical.pierce",
+     "tier": 1,
+     "slice": "chunin",
+     "effects": {
+      "weapon_mult": true,
+      "applies": "bound",
+      "ticks": 40
+     }
+    }
+   ],
+   "clan_lesser": "kinoshita"
+  },
+  {
+   "id": "combat:style.iaido",
+   "name": "Iaido",
+   "pillar": "weapons",
+   "weapons": [
+    "item:katana"
+   ],
+   "who": "post-game, from a samurai master",
+   "mentor": "role:samurai_master",
+   "slice": "post",
+   "feel": "Sheathe, wait, and cut once.",
+   "moves": [
+    {
+     "id": "quick_draw",
+     "input": [
+      "H"
+     ],
+     "state": "ground",
+     "damage": 4.0,
+     "poise": 30,
+     "frames": [
+      12,
+      2,
+      16
+     ],
+     "window": [
+      0,
+      0
+     ],
+     "stamina": 15,
+     "type": "physical.slash",
+     "tier": 1,
+     "slice": "post",
+     "effects": {
+      "weapon_mult": true,
+      "counter": true,
+      "note": "A held stance: any melee attack inside 3 blocks is answered by the draw"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,221 @@
+{
+ "format": 1,
+ "id": "senju",
+ "clan": "clan:senju",
+ "name": "Senju",
+ "standing": "noble",
+ "suggested_nature": [
+  "earth",
+  "water"
+ ],
+ "passives": {
+  "health_regen_mult": 1.2,
+  "chakra_mult": 1.1
+ },
+ "techniques": [
+  {
+   "id": "combat:senju.binding_roots",
+   "name": "Wood: Binding Roots",
+   "kind": "kekkei_genkai",
+   "nature": "earth",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "snake",
+    "ram",
+    "boar"
+   ],
+   "chakra": 16,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 5.0,
+   "shape": {
+    "type": "target",
+    "range": 14,
+    "radius": 1.5
+   },
+   "effects": [
+    {
+     "status": "bound",
+     "ticks": 60
+    }
+   ],
+   "mechanic": "Roots burst from the ground under a target within 14 blocks (entities, gone after 80 ticks): bound 60 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.senju"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "clan": "senju",
+   "tier": 1
+  },
+  {
+   "id": "combat:senju.wooden_barrier",
+   "name": "Wood: Wooden Barrier",
+   "kind": "kekkei_genkai",
+   "nature": "earth",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "snake",
+    "ram",
+    "tiger",
+    "dog"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "wood_dome",
+    "ticks": 160,
+    "radius": 3,
+    "hp": 120
+   },
+   "effects": [],
+   "mechanic": "A dome of interlocking timber around you and allies within 3 blocks for 160 ticks (hp 120)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.senju"
+   ],
+   "slice": "chunin",
+   "clan": "senju",
+   "tier": 2
+  },
+  {
+   "id": "combat:senju.wood_clone",
+   "name": "Wood: Wood Clone",
+   "kind": "kekkei_genkai",
+   "nature": "earth",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "snake",
+    "ram",
+    "tiger",
+    "ram"
+   ],
+   "chakra": 50,
+   "cast_ticks": 16,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "wood_clone",
+    "ticks": 1200,
+    "count": 1
+   },
+   "effects": [],
+   "mechanic": "A clone of wood that keeps fighting until destroyed (50% of your health) and can bind on death",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.senju"
+   ],
+   "slice": "jonin",
+   "clan": "senju",
+   "tier": 3
+  },
+  {
+   "id": "combat:senju.deep_forest_bloom",
+   "name": "Wood: Deep Forest Bloom",
+   "kind": "kekkei_genkai",
+   "nature": "earth",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "snake",
+    "ram",
+    "tiger",
+    "dog",
+    "boar",
+    "horse"
+   ],
+   "chakra": 80,
+   "cast_ticks": 24,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "area",
+    "radius": 14
+   },
+   "effects": [
+    {
+     "status": "bound",
+     "ticks": 60
+    },
+    {
+     "drain_chakra_per_second": 1
+    }
+   ],
+   "mechanic": "A forest rises in a 14-block circle for 300 ticks (entities): every enemy inside is bound for 60 ticks and drained of 1 chakra a second",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.senju"
+   ],
+   "slice": "road",
+   "clan": "senju",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:senju.vitality_breath",
+  "name": "Senju Vitality Breathing",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [
+   "ram",
+   "rat",
+   "hare"
+  ],
+  "chakra": 16,
+  "cast_ticks": 12,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [
+   {
+    "heal_per_second": 0.5,
+    "ticks": 200
+   }
+  ],
+  "mechanic": "A breathing form: regenerate 0.5 HP a second for 200 ticks while not attacking",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:senju:7"
+  ],
+  "slice": "beta2",
+  "clan": "senju",
+  "lesser": true
+ },
+ "kekkei_genkai": {
+  "name": "Wood Release",
+  "stages": [
+   {
+    "stage": 1,
+    "slice": "beta2",
+    "gives": "combat:senju.binding_roots"
+   },
+   {
+    "stage": 2,
+    "slice": "chunin",
+    "gives": "combat:senju.wooden_barrier"
+   },
+   {
+    "stage": 3,
+    "slice": "jonin",
+    "gives": "combat:senju.wood_clone"
+   },
+   {
+    "stage": 4,
+    "slice": "road",
+    "gives": "combat:senju.deep_forest_bloom"
+   }
+  ]
+ }
+}

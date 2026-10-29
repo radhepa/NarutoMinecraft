@@ -1,0 +1,29 @@
+{
+ "format": 1,
+ "id": "combat:enemy.deer",
+ "name": "Deer",
+ "kind": "animal",
+ "tier": "mook",
+ "rank": "beast",
+ "levels": [
+  1,
+  1
+ ],
+ "band": "far",
+ "slice": "beta2",
+ "weapons": [],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "passive",
+  "nara_forest"
+ ],
+ "ai": {},
+ "barks": "beast_none",
+ "note": "Never hostile; hurting a Nara deer is a bad deed"
+}

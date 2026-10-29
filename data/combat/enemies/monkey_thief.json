@@ -1,0 +1,29 @@
+{
+ "format": 1,
+ "id": "combat:enemy.monkey_thief",
+ "name": "Thieving monkey",
+ "kind": "animal",
+ "tier": "mook",
+ "rank": "beast",
+ "levels": [
+  1,
+  10
+ ],
+ "band": "mid",
+ "slice": "beta2",
+ "weapons": [],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "steals_item",
+  "flees"
+ ],
+ "ai": {},
+ "barks": "beast_none",
+ "note": "Steals a hotbar item and runs for the trees: a chase objective"
+}

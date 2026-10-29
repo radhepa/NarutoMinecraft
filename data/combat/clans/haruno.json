@@ -1,0 +1,165 @@
+{
+ "format": 1,
+ "id": "haruno",
+ "clan": "clan:haruno",
+ "name": "Haruno",
+ "standing": "minor",
+ "suggested_nature": [],
+ "passives": {
+  "control_bonus": 15,
+  "medical_aptitude": "medical techniques need 10 less control"
+ },
+ "techniques": [
+  {
+   "id": "combat:haruno.chakra_precision",
+   "name": "Chakra Precision",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [],
+   "mechanic": "Every technique costs 5% less and fizzles refund half",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.haruno"
+   ],
+   "slice": "beta2",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "haruno",
+   "tier": 1
+  },
+  {
+   "id": "combat:haruno.blossom_strength",
+   "name": "Blossom Strength",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "style": "combat:style.blossom_strength"
+    }
+   ],
+   "mechanic": "Opens Blossom Strength at Chunin (others need Jonin and control 80)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.haruno"
+   ],
+   "slice": "chunin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "haruno",
+   "tier": 2
+  },
+  {
+   "id": "combat:haruno.petal_shield",
+   "name": "Petal Shield",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "tiger",
+    "monkey"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "heal_fraction": 0.2,
+     "ticks": 60,
+     "while": "guarding"
+    }
+   ],
+   "mechanic": "Heal yourself 20% over 60 ticks while guarding",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.haruno"
+   ],
+   "slice": "jonin",
+   "clan": "haruno",
+   "tier": 3
+  },
+  {
+   "id": "combat:haruno.hundred_strength",
+   "name": "Seal of a Hundred Blossoms",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [],
+   "mechanic": "Strength of a Hundred at control 80 instead of 90, and it stores twice as fast",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.haruno"
+   ],
+   "slice": "road",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "haruno",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:haruno.focused_mind",
+  "name": "Focused Mind",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 16,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "+5 chakra control",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:haruno:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "haruno",
+  "lesser": true
+ }
+}

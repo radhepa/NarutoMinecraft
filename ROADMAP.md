@@ -1083,86 +1083,26 @@ squad's cohesion sets how well they work together, from assisting your combos to
 
 ### Combat in the beta
 
-The beta's combat is the core of the full system; later ranks add techniques, not new rules.
+The full design is **[docs/COMBAT.md](docs/COMBAT.md)**: three equal pillars (taijutsu, weapons, ninjutsu),
+the catalogue of 220 techniques from E to S rank, the 25 clans in four tiers, squad and nature combos, the
+bestiary and bosses, difficulty and feel, progression over the 60 hours, the animation clips, and a pure-Java
+combat core with a duel simulator that checks the balance (`combat/core`, data in `data/combat/`). The beta's
+combat is the core of the full system; later ranks add techniques, not new rules.
 
-**Taijutsu.**
+| Area | In the beta |
+|---|---|
+| Resources | Health and level toughness, chakra (with chakra control), stamina for taijutsu and weapons, hidden poise (breaks into a stagger), momentum for finishers |
+| Taijutsu | Academy taijutsu (the three-hit chain, heavy, dash attacks, sweep, launcher and air combo, counter, palm rush; Beta 1 and 2), Strong Fist and Iron Guard; block (Beta 1), parry (Beta 2), dodge and perfect dodge, substitution; hit detection by a server-side 60° sweep, 3 blocks deep |
+| Weapons | Practice tools (Beta 1); kunai, shuriken, senbon, tanto, bombs, wire, tags, the tool pouch and coatings (Beta 2); bokken, ninjato, katana and Crescent Moon kenjutsu, the weighted chain (Beta 3); throws with retrieval; ten weapon styles; weapon-plus-jutsu (the exploding-tag kunai, the wind-channelled shuriken, the lightning-charged blade) |
+| Ninjutsu | Twelve signs, typed or radial, with prefix hints, buffering and auto-sign; mastery shortens the signs; Clone, Transformation, Substitution (Beta 1); the nature ceremony's C-rank and the scroll shop's D-ranks, genjutsu basics, sealing tags (Beta 2); the exam reward, Mystical Palm, sensing, barriers (Beta 3); the nature triangle decides clashes |
+| Clans | The player is clanless: clan techniques and kekkei genkai are NPC kits; the player learns each friendly clan's lesser technique and gets clan weapons and styles |
+| Chakra movement | Beta 2: the ninja run, chakra jump, tree and roof hopping, wall-running, water-walking (a mixin on `canStandOnFluid`) |
+| Enemies | One shinobi entity and brain (range bands, tells, reactions to your habits, attack tokens), loadout files; sparring classmates, bandits, rogue ninja, scouts, cells, exam rivals, Forest of Death beasts; nine beta bosses with phases |
+| Difficulty | Story (default: generous windows, long telegraphs with a flash, 60% enemy damage, one attacker at a time), Shinobi, Hard; every number in data |
+| Animation | VF's clip format for residents and a player poser for the player (Phase 0's spike, Beta 1's main risk); 233 clips listed by priority |
 
-| Mechanic | How in Minecraft | Slice |
-|---|---|---|
-| Combo chain | Empty hand or kunai in hand: left click is caught (client mixin on the attack key) and sent as a combo input; the server runs the chain. 3 light strikes, about 6 ticks apart, the third knocks back. Vanilla's attack cooldown does not apply inside a chain; a 10-tick recovery follows | Beta 1 |
-| Heavy | Hold left click for 8 ticks | Beta 1 |
-| Launcher | A heavy during a chain launches the target upward for an air follow-up | Beta 2 |
-| Hit detection | Server-side sweep: a 60° arc, 3 blocks deep. Each combo hit lowers the target's hurt invulnerability so chains land | Beta 1 |
-| Dodge | Double-tap a direction or press `Left Alt`: a 4-block dash with invulnerable ticks, 1.5 s cooldown, a little chakra | Beta 1 |
-| Block and parry | Right click with an empty hand: block (−60% melee damage); block just as a hit lands: parry, staggers the attacker | Block Beta 1, parry Beta 2 |
-| Substitution | Dodge as a hit lands, with enough chakra: blink back 5 blocks, a log entity drops. Once per 20 s | Beta 1 |
-
-**Chakra movement** (Beta 2; client-side movement, with the server checking and charging chakra):
-the ninja run (+15% sprint, arms back), the chakra jump (hold to charge, up to 3× height, no fall
-damage while chakra lasts), tree and roof hopping (a forward boost off leaves, logs and roofs),
-wall-running (along or up a wall for up to 3 s), water-walking (a mixin on `canStandOnFluid`, the
-method vanilla uses for striders on lava; sneak to sink).
-
-**Hand signs and chakra.** Twelve signs (Rat, Ox, Tiger, Hare, Dragon, Snake, Horse, Ram, Monkey,
-Bird, Dog, Boar). Hold the **Weave** key (`R`) and enter signs one of two ways, chosen in the
-settings: **typed** (a key per sign, by default `1` to `0`, `-` and `=`) or a **radial** wheel
-(mouse or controller stick). Release to cast. Each sign takes 4 ticks and plays its pose; a wrong
-sequence fizzles. A jutsu used often becomes **mastered**: bindable to a quick slot (`Z`, `X`,
-`C`, `V`) and cast with fewer signs. Chakra is a bar beside hunger; it refills slowly, fast while
-meditating (sneak and stand still), and from soldier pills; maximum chakra grows with level.
-
-**Learning jutsu:** from **mentors** (the instructor, your sensei, clan elders, nature masters, at
-friendship and level thresholds, with a short trial), **scrolls** bought at the scroll shop (Beta 2),
-and **mission rewards**.
-
-**The beta's techniques.**
-
-| Technique | Signs | Mechanic | Slice, learned from |
-|---|---|---|---|
-| Clone | Ram-Snake-Tiger | Illusory copies of you that run off; mobs may target them | Beta 1, the instructor |
-| Transformation | Dog-Boar-Ram | Your render becomes a chosen resident's look; mobs lose their target; residents do not recognize you | Beta 1, lessons |
-| Substitution | (dodge timing) | See taijutsu | Beta 1, lessons |
-| Nature jutsu (one per nature) | e.g. Snake-Ram-Monkey-Boar-Horse-Tiger (Fireball) | Fire: a projectile that sets mobs alight; Wind: a wind-charge gust; Water: a pushing wave that puts out fire; Earth: a short-lived wall entity; Lightning: a stunning palm strike | Beta 2, the nature ceremony (you choose your first nature) |
-| A friendly clan's lesser technique | per clan | A clanless player learns one lesser technique from each friendly clan (bond and standing gates). The clans' full techniques belong to their members: teammates, sparring partners, residents and enemies use them, for example Shadow Possession (Nara), Expansion (Akimichi), Gentle Fist (Hyuga), Fang over Fang (Inuzuka), Insect swarm (Aburame); the full table is in [Later systems](#clan-techniques-and-kekkei-genkai) | Beta 2, from a friendly clan |
-| Kekkei genkai (residents only) | — | Byakugan, Sharingan and Wood Release are used by teammates, sparring partners and enemies of their clans; the player has none for now | Beta 2 and Beta 3, on residents |
-| Exam reward | — | One C-rank technique chosen by your sensei after the preliminaries | Beta 3 |
-
-**Ninja tools.** Kunai (combo weapon; right click throws it like a trident, retrievable),
-shuriken (stackable, fast, three at once from Genin), paper bombs (stick to a surface or a kunai;
-damage entities, never blocks), smoke bombs (blind, mobs lose their target), wire (a trip trap),
-the tool pouch (quick-throw from the hotbar). Shop or crafted.
-
-**Enemies and sparring.** One **shinobi entity** for every human enemy, drawn with VF's resident
-model and our wardrobe. Its brain keeps a range band (close for taijutsu, mid for throws, far for
-jutsu), strafes, dodges telegraphed attacks with a chance set by rank, uses substitution once per
-fight and retreats to heal. Each enemy has a loadout file (techniques, rank, level, tools). Beta
-enemies: the prologue's guards (scripted), sparring classmates, bandits, rogue ninja, enemy
-scouts, exam rivals, enemy cells. Sparring with ranked residents at training grounds
-raises friendship.
-
-**Difficulty.**
-
-| Setting | Story (default) | Shinobi | Hard |
-|---|---|---|---|
-| Parry and dodge windows | 6 and 8 ticks | 4 and 6 | 3 and 5 |
-| Enemy telegraphs | long, with a flash | normal | short |
-| Enemy damage | 60% | 100% | 130% |
-| Death | one level, never below the floor | the same | two levels |
-| Fatigue starts | 01:00 | 00:00 | 23:00 |
-| Cinematic camera on finishers and jutsu | on | on | off |
-
-Every number lives in data (`difficulty.json`, overridable per world), and the setting can change
-at any time.
-
-**Animation.** VF's clip system poses residents only (`ResidentLife`, `ResidentPoser`). Resident
-clips are a pack in our namespace (`assets/narutominecraft/resident_animations/`, authored in
-Python like VF's `tools/animations/`), which VF loads without Java. For the player, Shinobi Combat
-adds a **player poser** that samples the same clip format onto the player model, with a
-first-person arm path for hand signs and throws: Phase 0's spike and Beta 1's main risk. Clips by
-slice: the prologue's crouch, slipping out and being carried, hand signs, combo strikes, heavy,
-dodge, block, throw, meditation, a tired slouch, petting (Beta 1); parry, launcher, ninja run,
-chakra jump, wall-run, water stance, forging and workbench, the first clan techniques (Beta 2);
-the finals' fighters and the stadium crowd (Beta 3).
+The duel simulator's balance tables are in [docs/COMBAT.md §15](docs/COMBAT.md#15-balance): on Story every
+build beats every beta boss; on Shinobi every build stays viable against level-matched elites.
 
 ### Dialogue
 
@@ -1538,56 +1478,33 @@ another's techniques. When and how the player gets it belongs to the story.
 
 | Nature | How you get it |
 |---|---|
-| First | Chosen at the Genin ceremony (Beta 2) |
+| First | Chosen at the Genin ceremony (Beta 2); the creator's affinity is shown there as your leaning |
 | Second | Chunin: a nature master's three trials |
 | Third | Jonin: a clan master or a mission line |
 | More | Resonance through [Kindling Bond](#kindling-bond) (fight beside someone with the nature, then pass their trial) and rare milestones in the later arcs |
 
-Your natures' jutsu cost 25% less; other natures' jutsu cannot be learned.
+Your natures' jutsu cost 25% less; other natures' jutsu cannot be learned. The triangle, clashes and every
+nature's techniques from D to S are in [docs/COMBAT.md](docs/COMBAT.md#2-damage-armour-and-the-nature-triangle).
 
 ### Clan techniques and kekkei genkai
 
-Clan members (teammates, residents, enemies) use their clan's techniques and kekkei genkai, which
-grow with rank. The player starts as a clanless orphan and learns one lesser technique per friendly
-clan; joining a clan later (by marriage or invitation) teaches its signature technique, but never a
-bloodline. A clan-born start may return later as an option.
-Summoning, and with it tailed beasts, are out of scope.
-
-| Clan | Technique | Minecraft mechanic | Animation |
-|---|---|---|---|
-| Hyuga | Byakugan, Gentle Fist | Living things within 32 blocks glow through walls (like Spectral); Gentle Fist hits drain the target's chakra instead of only health | eye veins (face decal), palm strikes |
-| Uchiha | Sharingan | Enemy attacks telegraph earlier (a client flash), parry window doubles, and a jutsu you watch an enemy cast is learnable | glowing eyes (already in the wardrobe) |
-| Nara | Shadow Possession | A shadow line crawls along the ground to a target within 12 blocks; if it reaches, the target copies your movement for 5 s. Needs light: weaker at night and indoors | kneeling sign hold |
-| Akimichi | Expansion, Human Boulder | Vanilla's `scale` attribute: grow to 2× for 10 s with more reach and knockback; the boulder is a rolling charge | expand, roll |
-| Yamanaka | Mind Transfer | Your camera moves into a mob or resident for 8 s and you steer it; your body slumps and can be hit. Late in the plan: it is the hardest technique | slump, sign |
-| Inuzuka | Fang over Fang | A spinning dash attack together with your ninken (a tamed wolf, through VF's pet code) | spin |
-| Senju | Wood Release | A short-lived wooden barrier or binding roots (entities, gone after a few seconds) | sign, wood growth |
-| Uzumaki | Sealing chains, large chakra | 30% more chakra; chains that hold one target for 4 s | chains |
-| Sarutobi | Fire mastery, clan staff | Fire jutsu cost 20% less; the clan's long staff (an item, not a summon) with 4.5 reach that uses the combo system | staff combo |
-| Aburame | Insect swarm | A swarm entity that follows a target for 10 s, drains chakra and marks it (it glows for the caster) | arms open, swarm particles |
-| Hatake | Ninken tracker, chakra sabre | Your ninken (a companion dog through VF's pet code, not a summon) tracks a mission target or hidden enemy and leads you there; the white sabre is a tanto whose combo finisher is a lightning dash | summon, sabre strikes |
-| Kurama | Painted illusion | Genjutsu: a painted world closes over one target for 6 s | brush strokes in the air |
-| Shimura | Vacuum blades, sealing | Wind blades in a fan that break through a guard; a sealing curse used on ANBU-branch missions | breath blades |
-| Yuhi | Tree binding | Genjutsu: the target sees itself bound by a tree and cannot move for 4 s; the caster appears behind it | sign, step-behind |
-| Tsuchigumo (minor) | Earth binding | Earth-style ninjutsu and a web-like binding trap that holds one target | sign, ground slam |
-| Suzuran (minor) | Herbalist | Immunity to poison, and herbal poultices and poison coatings crafted at the workbench | — |
-| Tobari (minor) | Smothering | Silences your footsteps and techniques within a few blocks at night: enemies do not hear you | sign |
-| Gekko | Dance of the Crescent Moon | Kenjutsu: two short-lived clones appear and all three strike a target at once from three sides | three-way slash |
-
-**Genjutsu.** Three clans (Kurama, Yuhi, Uchiha) use illusions, so genjutsu is one shared effect
-type: a caught target sees a client-side illusion (fake entities, a distorted screen, a wrong HUD)
-and moves slowly. It breaks when the target weaves the release sign, takes damage, or a teammate
-touches them.
+All 25 clans have four tiers of techniques (Genin, Chunin, Jonin, the road to Hokage), kekkei genkai stages
+where they have one (Byakugan, Sharingan, Wood Release), passives, and a lesser technique a friend can learn
+at clan friendship 7: the tables are in [docs/COMBAT.md §7](docs/COMBAT.md#7-clans) and
+[docs/combat/clans.md](docs/combat/clans.md). The player is clanless, so clan tiers are the kits of clan
+residents, teammates, rivals and enemies; the player's clan route is the lesser techniques, clan weapons and
+clan-taught styles. Joining a clan later (by marriage or invitation) teaches its signature technique (tier 1),
+but never a bloodline; a clan-born start may return later as an option. Summoning, and with it tailed beasts,
+are out of scope.
 
 ### Later techniques and combat
 
-- **Shadow Clone** (Chunin): 2 to 4 real clone entities with basic combat AI, each costing a share
-  of chakra.
-- **Lightning Blade** (Jonin): charge, then a straight dash that breaks through a block or parry.
-- **Mind Transfer** (Yamanaka, Chunin or later): the camera moves into a mob or resident for 8 s;
-  your body slumps and can be hit.
-- **Stealth** (Jonin and ANBU): detection by sight and sound, night operations.
-- **Kindling Bond:** see [Kindling Bond](#kindling-bond).
+Everything after the beta is laid out in [docs/COMBAT.md](docs/COMBAT.md#12-progression): B to S rank of
+every nature, Shadow Clone (Chunin), Lightning Blade and the Spiralling Sphere (Jonin), the inner gates and
+the later styles (Swaying Willow, Blossom Strength, Lightning Body, White Fang), the windmill shuriken,
+kusarigama and fans, medical, sensing and sealing above C, Mind Transfer (a Yamanaka kit), stealth by sight
+and sound (Jonin and ANBU), Kindling Bond in combat ([docs/COMBAT.md §9](docs/COMBAT.md#9-kindling-bond)),
+and PvP rules for later multiplayer.
 
 ### The full event calendar
 

@@ -1,0 +1,466 @@
+{
+ "format": 1,
+ "techniques": [
+  {
+   "id": "combat:nin.clone",
+   "name": "Clone Technique",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "e",
+   "level": 1,
+   "signs": [
+    "ram",
+    "snake",
+    "tiger"
+   ],
+   "chakra": 5,
+   "cast_ticks": 12,
+   "cooldown_ticks": 300,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "illusory_clone",
+    "ticks": 100,
+    "count": 3
+   },
+   "effects": [
+    {
+     "status": "decoy",
+     "ticks": 100,
+     "retarget_chance": 0.6
+    }
+   ],
+   "mechanic": "Spawns 3 illusory copies of you (no hitbox) that run off in different directions for 100 ticks; each mob has a 60% chance to switch target to a copy",
+   "counters": "sensing, Byakugan and Sharingan see through them; a hit pops a copy",
+   "teach": [
+    "mentor:role:instructor"
+   ],
+   "slice": "beta1",
+   "beta": true
+  },
+  {
+   "id": "combat:nin.transformation",
+   "name": "Transformation",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "e",
+   "level": 1,
+   "signs": [
+    "dog",
+    "boar",
+    "ram"
+   ],
+   "chakra": 5,
+   "cast_ticks": 12,
+   "cooldown_ticks": 100,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "disguised"
+    }
+   ],
+   "mechanic": "Your render becomes a chosen resident's look (or an object's: a log, a crate) until you attack or take damage; mobs lose their target; residents do not recognize you",
+   "counters": "sensing; a touch; dogs smell you",
+   "teach": [
+    "mentor:lessons"
+   ],
+   "slice": "beta1",
+   "beta": true
+  },
+  {
+   "id": "combat:nin.substitution",
+   "name": "Substitution",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "e",
+   "level": 1,
+   "signs": [],
+   "chakra": 10,
+   "cast_ticks": 0,
+   "cooldown_ticks": 400,
+   "power": 0,
+   "shape": {
+    "type": "self",
+    "blink": 5
+   },
+   "effects": [
+    {
+     "status": "iframes",
+     "ticks": 12
+    }
+   ],
+   "mechanic": "Dodge as a hit lands, with 10 chakra: blink back 5 blocks with 12 i-frames, a log entity takes the blow. Once per 20 s",
+   "counters": "a second attack right after; sensing follows the blink",
+   "teach": [
+    "mentor:lessons"
+   ],
+   "slice": "beta1",
+   "beta": true,
+   "note": "Timing-based, no signs (ROADMAP: dodge timing)"
+  },
+  {
+   "id": "combat:nin.release",
+   "name": "Release",
+   "kind": "genjutsu",
+   "nature": "none",
+   "rank": "e",
+   "level": 1,
+   "signs": [
+    "ram"
+   ],
+   "chakra": 5,
+   "cast_ticks": 4,
+   "cooldown_ticks": 20,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "breaks": "genjutsu"
+    }
+   ],
+   "mechanic": "Breaks a genjutsu on yourself (weave Ram while caught); costs the illusion's strength in chakra",
+   "counters": "—",
+   "teach": [
+    "mentor:role:instructor"
+   ],
+   "slice": "beta1",
+   "beta": true
+  },
+  {
+   "id": "combat:nin.rope_escape",
+   "name": "Rope Escape",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "e",
+   "level": 1,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 0,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [],
+   "mechanic": "Passive: mashing movement escapes wire, rope and webs 40% faster",
+   "counters": "—",
+   "teach": [
+    "mentor:role:instructor"
+   ],
+   "slice": "beta1"
+  },
+  {
+   "id": "combat:nin.first_aid",
+   "name": "Field First Aid",
+   "kind": "medical",
+   "nature": "none",
+   "rank": "e",
+   "level": 1,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 60,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 2.0
+   },
+   "effects": [
+    {
+     "heal": 4
+    },
+    {
+     "cleanse": [
+      "bleeding"
+     ]
+    }
+   ],
+   "mechanic": "Hold use on a downed or hurt ally for 60 ticks: heals 4 HP and stops bleeding (no chakra)",
+   "counters": "interrupted by any hit",
+   "teach": [
+    "mentor:role:medic"
+   ],
+   "slice": "beta1",
+   "beta": true
+  },
+  {
+   "id": "combat:nin.hiding_camouflage",
+   "name": "Hiding in Camouflage",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "d",
+   "level": 6,
+   "signs": [
+    "snake",
+    "rat",
+    "dog"
+   ],
+   "chakra": 10,
+   "cast_ticks": 12,
+   "cooldown_ticks": 100,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "hidden"
+    }
+   ],
+   "mechanic": "Standing still you take on the colour of the block behind you: hidden until you move faster than a walk or attack",
+   "counters": "sensing; Byakugan; dogs; stepping within 3 blocks",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:nin.body_flicker",
+   "name": "Body Flicker",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "d",
+   "level": 8,
+   "signs": [
+    "tiger"
+   ],
+   "chakra": 8,
+   "cast_ticks": 4,
+   "cooldown_ticks": 80,
+   "power": 0,
+   "shape": {
+    "type": "self",
+    "dash": 8
+   },
+   "effects": [],
+   "mechanic": "A burst of speed: 8 blocks in 4 ticks in the facing direction, with a leaf swirl; can open a dash attack",
+   "counters": "area attacks where you land",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:nin.shadow_clone",
+   "name": "Shadow Clone",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "b",
+   "level": 18,
+   "signs": [
+    "ram",
+    "snake",
+    "tiger",
+    "ram"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "shadow_clone",
+    "ticks": 600,
+    "count": 2,
+    "max_count": 4
+   },
+   "effects": [],
+   "mechanic": "Two to four real clone entities with basic combat AI and your taijutsu chain; each takes an equal share of your current chakra and pops after one hit",
+   "counters": "area attacks pop them all",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:nin.multi_shadow_clone",
+   "name": "Multi Shadow Clone",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "snake",
+    "tiger",
+    "ram",
+    "tiger"
+   ],
+   "chakra": 50,
+   "cast_ticks": 20,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "shadow_clone",
+    "ticks": 600,
+    "count": 8,
+    "max_count": 12
+   },
+   "effects": [],
+   "mechanic": "Up to twelve shadow clones (cap by chakra); they swarm a target or carry your signs for a squad combo",
+   "counters": "area jutsu",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:nin.clone_explosion",
+   "name": "Clone Great Explosion",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "a",
+   "level": 34,
+   "signs": [
+    "ram",
+    "snake",
+    "tiger",
+    "ram",
+    "boar"
+   ],
+   "chakra": 50,
+   "cast_ticks": 20,
+   "cooldown_ticks": 360,
+   "power": 21.0,
+   "shape": {
+    "type": "entity",
+    "entity": "shadow_clone",
+    "ticks": 400,
+    "explodes": true,
+    "radius": 3
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.none"
+    }
+   ],
+   "mechanic": "A shadow clone that explodes when it grabs or is hit: 3-block blast",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "slice": "jonin",
+   "requires": [
+    "combat:nin.shadow_clone"
+   ]
+  },
+  {
+   "id": "combat:nin.spiral_sphere",
+   "name": "Spiralling Sphere",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [],
+   "chakra": 50,
+   "cast_ticks": 20,
+   "cooldown_ticks": 360,
+   "power": 23.1,
+   "shape": {
+    "type": "melee",
+    "range": 3.0,
+    "charge": 20
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.none"
+    },
+    {
+     "status": "knocked_down",
+     "ticks": 24,
+     "launch": 10
+    }
+   ],
+   "mechanic": "No signs: hold use for 20 ticks to form a sphere of spinning chakra in your hand, then strike: a drilling hit that launches the target 10 blocks",
+   "counters": "it is melee: parry the arm, keep range, substitute",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "slice": "jonin",
+   "tags": [
+    "no_signs"
+   ]
+  },
+  {
+   "id": "combat:nin.great_spiral_sphere",
+   "name": "Great Spiralling Sphere",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [],
+   "chakra": 80,
+   "cast_ticks": 30,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "melee",
+    "range": 3.5,
+    "charge": 30,
+    "radius": 4
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.none"
+    },
+    {
+     "status": "knocked_down",
+     "ticks": 30
+    }
+   ],
+   "mechanic": "A sphere as big as a barrel (needs a shadow clone to help shape it, 30 ticks): 4-block blast on contact",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "slice": "road",
+   "requires": [
+    "combat:nin.spiral_sphere",
+    "combat:nin.shadow_clone"
+   ],
+   "tags": [
+    "no_signs"
+   ]
+  },
+  {
+   "id": "combat:nin.chakra_threads",
+   "name": "Chakra Threads",
+   "kind": "ninjutsu",
+   "nature": "none",
+   "rank": "b",
+   "level": 24,
+   "signs": [],
+   "chakra": 30,
+   "cast_ticks": 0,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "line",
+    "range": 12,
+    "width": 0.3
+   },
+   "effects": [
+    {
+     "pull": 4
+    }
+   ],
+   "mechanic": "Invisible threads from the fingertips (12 blocks): pull a light enemy or an item, or steer a thrown weapon after release",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:weapon_master"
+   ],
+   "slice": "chunin",
+   "tags": [
+    "no_signs"
+   ]
+  }
+ ]
+}

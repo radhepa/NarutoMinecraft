@@ -1,0 +1,19 @@
+{
+ "format": 1,
+ "id": "combat:boss.chunin.story_2",
+ "name": "Story boss",
+ "chapter": "chunin",
+ "slice": "chunin",
+ "base": "combat:enemy.cell_veteran",
+ "level": 28,
+ "nonlethal": false,
+ "arena": null,
+ "win": "defeat",
+ "lose": "the player is downed",
+ "phases": [],
+ "hp_mult": 7.0,
+ "poise": 100,
+ "damage_mult": 1.15,
+ "story": "bible:combat:boss.chunin.story_2",
+ "dialogue": "dlg:combat.boss.chunin.story_2"
+}

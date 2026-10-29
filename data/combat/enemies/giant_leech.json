@@ -1,0 +1,30 @@
+{
+ "format": 1,
+ "id": "combat:enemy.giant_leech",
+ "name": "Giant leech",
+ "kind": "animal",
+ "tier": "mook",
+ "rank": "beast",
+ "levels": [
+  13,
+  18
+ ],
+ "band": "close",
+ "slice": "beta3",
+ "weapons": [],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "drains_hp",
+  "latches"
+ ],
+ "ai": {},
+ "found": "Forest of Death streams",
+ "barks": "beast_none",
+ "note": "Latches on; fire or salt (a sealing tag) pops it"
+}

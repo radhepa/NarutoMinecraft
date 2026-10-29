@@ -1,0 +1,76 @@
+{
+ "format": 1,
+ "combos": [
+  {
+   "id": "combat:combo.firestorm",
+   "natures": [
+    "wind",
+    "fire"
+   ],
+   "name": "Firestorm",
+   "slice": "beta2",
+   "how": "A fire jutsu passing through an ally's wind gust (within 20 ticks) grows: x1.5 power, x1.5 radius, burning doubled",
+   "player_role": "either side"
+  },
+  {
+   "id": "combat:combo.storm_surge",
+   "natures": [
+    "water",
+    "lightning"
+   ],
+   "name": "Storm Surge",
+   "slice": "beta2",
+   "how": "Lightning into soaked targets or a water jutsu's area: shocks everyone in it (stun 10 ticks, chains 4)"
+  },
+  {
+   "id": "combat:combo.lava_bullets",
+   "natures": [
+    "earth",
+    "fire"
+   ],
+   "name": "Lava Bullets",
+   "slice": "chunin",
+   "how": "Fire through Earth Dragon Bullet's mud: lava bullets (x1.4, burning)"
+  },
+  {
+   "id": "combat:combo.mudslide",
+   "natures": [
+    "earth",
+    "water"
+   ],
+   "name": "Mudslide",
+   "slice": "chunin",
+   "how": "Water over Mud River: twice as long, enemies stuck (bound 30)"
+  },
+  {
+   "id": "combat:combo.gale_rain",
+   "natures": [
+    "wind",
+    "water"
+   ],
+   "name": "Gale Rain",
+   "slice": "chunin",
+   "how": "Wind through a water wave: needles of rain at long range (x1.3, soaked, chilled)"
+  },
+  {
+   "id": "combat:combo.thunder_gust",
+   "natures": [
+    "wind",
+    "lightning"
+   ],
+   "name": "Thunder Gust",
+   "slice": "jonin",
+   "how": "Even natures that oppose each other combine with timing: a perfect-timed (5 ticks) lightning through wind spreads into a 6-block arc"
+  },
+  {
+   "id": "combat:combo.magma_wall",
+   "natures": [
+    "earth",
+    "fire"
+   ],
+   "name": "Magma Wall",
+   "slice": "jonin",
+   "how": "Fire into an earth wall: the wall glows and burns anyone touching it"
+  }
+ ]
+}

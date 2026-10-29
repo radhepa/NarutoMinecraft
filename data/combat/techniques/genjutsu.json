@@ -1,0 +1,310 @@
+{
+ "format": 1,
+ "techniques": [
+  {
+   "id": "combat:gen.false_surroundings",
+   "name": "Genjutsu: False Surroundings",
+   "kind": "genjutsu",
+   "nature": "none",
+   "rank": "d",
+   "level": 6,
+   "signs": [
+    "snake",
+    "ram"
+   ],
+   "chakra": 10,
+   "cast_ticks": 8,
+   "cooldown_ticks": 60,
+   "power": 0,
+   "shape": {
+    "type": "target",
+    "range": 12,
+    "needs_sight": true
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 100,
+     "variant": "shifted"
+    }
+   ],
+   "mechanic": "The target sees the world shifted: its aim is off by 3 blocks for 100 ticks (a distorted screen for a player)",
+   "counters": "Release (Ram), a hit, an ally's touch; high will",
+   "teach": [
+    "mentor:role:genjutsu_master"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:gen.hell_viewing",
+   "name": "Genjutsu: Hell Viewing",
+   "kind": "genjutsu",
+   "nature": "none",
+   "rank": "d",
+   "level": 8,
+   "signs": [
+    "ram",
+    "snake",
+    "boar"
+   ],
+   "chakra": 10,
+   "cast_ticks": 12,
+   "cooldown_ticks": 60,
+   "power": 0,
+   "shape": {
+    "type": "target",
+    "range": 10,
+    "needs_sight": true
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 60,
+     "variant": "fear"
+    },
+    {
+     "status": "fear",
+     "ticks": 60
+    }
+   ],
+   "mechanic": "The target sees its worst fear: feared 60 ticks (flees or freezes); bosses only hesitate",
+   "counters": "Release, high will",
+   "teach": [
+    "mentor:role:genjutsu_master",
+    "clan:kurama",
+    "clan:yuhi"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:gen.sly_mind",
+   "name": "Genjutsu: Sly Mind Affect",
+   "kind": "genjutsu",
+   "nature": "none",
+   "rank": "c",
+   "level": 12,
+   "signs": [
+    "snake",
+    "ram",
+    "tiger"
+   ],
+   "chakra": 16,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "cone",
+    "range": 8,
+    "degrees": 45
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 60,
+     "variant": "confusion"
+    },
+    {
+     "status": "confused",
+     "ticks": 60
+    }
+   ],
+   "mechanic": "A cone of illusion (8 blocks): those caught attack whoever is nearest for 60 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:genjutsu_master",
+    "exam_reward"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:gen.mist_servant",
+   "name": "Genjutsu: Mist Servant",
+   "kind": "genjutsu",
+   "nature": "none",
+   "rank": "c",
+   "level": 14,
+   "signs": [
+    "ram",
+    "monkey",
+    "snake"
+   ],
+   "chakra": 16,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "target",
+    "range": 14,
+    "needs_sight": true
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 120,
+     "variant": "phantoms"
+    }
+   ],
+   "mechanic": "Phantom fighters rise around the target (fake entities only it sees) for 120 ticks: it swings at them and wastes its jutsu",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:genjutsu_master"
+   ],
+   "slice": "beta3"
+  },
+  {
+   "id": "combat:gen.bringer_of_darkness",
+   "name": "Genjutsu: Bringer of Darkness",
+   "kind": "genjutsu",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "ram",
+    "tiger",
+    "snake"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 6
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 100,
+     "variant": "darkness"
+    },
+    {
+     "status": "blinded",
+     "ticks": 100
+    }
+   ],
+   "mechanic": "Total darkness in a 6-block radius for 100 ticks for everyone but you and your squad",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:genjutsu_master"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:gen.mirror_reversal",
+   "name": "Genjutsu: Mirror Reversal",
+   "kind": "genjutsu",
+   "nature": "none",
+   "rank": "b",
+   "level": 24,
+   "signs": [
+    "ram",
+    "monkey"
+   ],
+   "chakra": 30,
+   "cast_ticks": 8,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "genjutsu_reflect",
+     "ticks": 40
+    }
+   ],
+   "mechanic": "Held for 40 ticks: the next genjutsu cast on you turns back on its caster",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:genjutsu_master",
+    "clan:yuhi"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:gen.temple_of_nirvana",
+   "name": "Genjutsu: Temple of Nirvana",
+   "kind": "genjutsu",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "dog",
+    "boar",
+    "snake",
+    "bird"
+   ],
+   "chakra": 50,
+   "cast_ticks": 20,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 10
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 120,
+     "variant": "feathers"
+    },
+    {
+     "status": "drowsy",
+     "ticks": 120,
+     "stacks": 3
+    }
+   ],
+   "mechanic": "Feathers fall in a 10-block radius: drowsy, then asleep after 3 stacks (60 ticks each)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:genjutsu_master"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:gen.false_world",
+   "name": "Genjutsu: Sea of Ink",
+   "kind": "genjutsu",
+   "nature": "none",
+   "rank": "s",
+   "level": 46,
+   "signs": [
+    "ram",
+    "snake",
+    "tiger",
+    "ram",
+    "bird",
+    "dragon"
+   ],
+   "chakra": 80,
+   "cast_ticks": 24,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 16
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 200,
+     "variant": "world"
+    },
+    {
+     "status": "confused",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "A whole-area illusion (radius 16, 200 ticks): enemies see the field rearranged and their own allies as you",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "scroll:forbidden_archive"
+   ],
+   "slice": "road"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "format": 1,
+ "id": "combat:boss.chunin.missing_nin_bounty",
+ "name": "A missing-nin with a bounty",
+ "chapter": "chunin",
+ "slice": "chunin",
+ "base": "combat:enemy.rogue_jonin",
+ "level": 26,
+ "nonlethal": false,
+ "arena": null,
+ "win": "defeat",
+ "lose": "the player is downed",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Mist",
+   "behaviour": "water.hiding_mist then senbon"
+  },
+  {
+   "at_hp": 0.5,
+   "name": "Dragon",
+   "behaviour": "water.water_dragon on a 20-tick tell"
+  }
+ ],
+ "hp_mult": 6.0,
+ "poise": 100,
+ "damage_mult": 1.15,
+ "dialogue": "dlg:combat.boss.chunin.missing_nin_bounty"
+}

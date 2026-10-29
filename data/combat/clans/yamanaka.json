@@ -1,0 +1,196 @@
+{
+ "format": 1,
+ "id": "yamanaka",
+ "clan": "clan:yamanaka",
+ "name": "Yamanaka",
+ "standing": "noble",
+ "suggested_nature": [],
+ "passives": {
+  "control_bonus": 10,
+  "sensing_radius_bonus": 4
+ },
+ "techniques": [
+  {
+   "id": "combat:yamanaka.mind_disturbance",
+   "name": "Mind Body Disturbance",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "ram",
+    "rat",
+    "dog"
+   ],
+   "chakra": 16,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "target",
+    "range": 10
+   },
+   "effects": [
+    {
+     "status": "confused",
+     "ticks": 60
+    }
+   ],
+   "mechanic": "A pulse into one target within 10 blocks: for 60 ticks it attacks its own allies (confused)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.yamanaka"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "clan": "yamanaka",
+   "tier": 1
+  },
+  {
+   "id": "combat:yamanaka.mind_transfer",
+   "name": "Mind Transfer",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "ram",
+    "rat",
+    "boar"
+   ],
+   "chakra": 30,
+   "cast_ticks": 20,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "target",
+    "range": 12,
+    "projectile_speed": 0.6
+   },
+   "effects": [
+    {
+     "status": "mind_transferred",
+     "ticks": 160
+    }
+   ],
+   "mechanic": "Your camera moves into a mob or resident for 160 ticks and you steer it; your body slumps and can be hit (damage to it ends the jutsu)",
+   "counters": "sidestep the slow mind projectile; hit the slumped body",
+   "teach": [
+    "mentor:role:clan_elder.yamanaka"
+   ],
+   "slice": "chunin",
+   "note": "The hardest technique to build (ROADMAP)",
+   "clan": "yamanaka",
+   "tier": 2
+  },
+  {
+   "id": "combat:yamanaka.mind_link",
+   "name": "Mind Link",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "snake",
+    "dog"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "mind_link",
+     "ticks": 600
+    }
+   ],
+   "mechanic": "Links your squad's minds for 600 ticks: sensing is shared, commands are instant, cohesion counts 10 higher",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.yamanaka"
+   ],
+   "slice": "jonin",
+   "clan": "yamanaka",
+   "tier": 3
+  },
+  {
+   "id": "combat:yamanaka.mind_destruction",
+   "name": "Mind Destruction",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "snake",
+    "tiger",
+    "dog"
+   ],
+   "chakra": 80,
+   "cast_ticks": 16,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 12,
+    "max_targets": 4
+   },
+   "effects": [
+    {
+     "status": "confused",
+     "ticks": 120
+    },
+    {
+     "fizzle_next": true
+    }
+   ],
+   "mechanic": "Up to four targets in 12 blocks: confused for 120 ticks and their next technique fizzles",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.yamanaka"
+   ],
+   "slice": "road",
+   "clan": "yamanaka",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:yamanaka.flower_sense",
+  "name": "Flower Sense",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [
+   "ram",
+   "rat",
+   "snake"
+  ],
+  "chakra": 6,
+  "cast_ticks": 12,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [
+   {
+    "status": "sensing",
+    "ticks": 100,
+    "radius": 10
+   }
+  ],
+  "mechanic": "Sensing within 10 blocks for 100 ticks (a lesser Chakra Sensing)",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:yamanaka:7"
+  ],
+  "slice": "beta2",
+  "clan": "yamanaka",
+  "lesser": true
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "format": 1,
+ "id": "combat:enemy.samurai",
+ "name": "Samurai",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "chunin",
+ "levels": [
+  25,
+  45
+ ],
+ "band": "close",
+ "slice": "jonin",
+ "style": "combat:style.iaido",
+ "weapons": [
+  "item:katana"
+ ],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 8,
+  "chakra": 10,
+  "will": 20
+ },
+ "traits": [
+  "chakra_blade",
+  "ninjutsu_resist"
+ ],
+ "ai": {},
+ "barks": "cell",
+ "note": "Heavy armour that turns ninjutsu (chakra armour 10): fight it with taijutsu, poise and weapons"
+}

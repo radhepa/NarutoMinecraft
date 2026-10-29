@@ -1,0 +1,31 @@
+{
+ "format": 1,
+ "id": "combat:enemy.puppet_master",
+ "name": "Puppet master",
+ "kind": "human",
+ "tier": "miniboss",
+ "rank": "jonin",
+ "levels": [
+  30,
+  45
+ ],
+ "band": "far",
+ "slice": "jonin",
+ "weapons": [],
+ "techniques": [
+  "combat:nin.chakra_threads"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "puppet",
+  "puppet_x3",
+  "poison_blades"
+ ],
+ "ai": {},
+ "barks": "rogue"
+}

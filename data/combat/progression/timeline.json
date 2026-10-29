@@ -1,0 +1,293 @@
+{
+ "format": 1,
+ "timeline": [
+  {
+   "stretch": "academy",
+   "slice": "beta1",
+   "levels": [
+    1,
+    5
+   ],
+   "hours": [
+    0,
+    4
+   ],
+   "pillar_cap": 5,
+   "taijutsu": [
+    "Academy taijutsu: jab, cross, roundhouse, heavy, flying kick, lunge (Ch 2)",
+    "block, dodge (Ch 2)"
+   ],
+   "weapons": [
+    "practice kunai and shuriken (Ch 2)",
+    "smoke bomb, ninja wire (workbench, Beta 1)",
+    "throwing arts: quick throw"
+   ],
+   "ninjutsu": [
+    "chakra bar and hand signs (Ch 3)",
+    "Clone (the instructor), Transformation, Substitution (Ch 6)",
+    "Release, Rope Escape, Field First Aid",
+    "roof hopping (Ch 4)"
+   ],
+   "sources": [
+    "Academy lessons",
+    "the instructor",
+    "the medic (first aid)"
+   ]
+  },
+  {
+   "stretch": "genin",
+   "slice": "beta2",
+   "levels": [
+    5,
+    15
+   ],
+   "hours": [
+    4,
+    12
+   ],
+   "pillar_cap": 10,
+   "taijutsu": [
+    "parry, counter, squad commands (Ch 8)",
+    "sweep, launcher, air combo and air spike (Ch 8 to 10)",
+    "palm rush finisher (taijutsu rank 3)",
+    "styles: Strong Fist (the master's side line), Iron Guard (Hagane friendship 5), Gentle Fist (Hyuga), Iron Body (Akimichi), Beast Fang (Inuzuka)"
+   ],
+   "weapons": [
+    "kunai, shuriken, senbon, tanto (shops, Ch 9)",
+    "paper, smoke and flash bombs, caltrops, sealing tags, tool pouch (Ch 11 to 14)",
+    "coatings (Suzuran, or bought)",
+    "fan of three; exploding-tag kunai and Shadow Shuriken (sensei, Ch 14); clan staff (Sarutobi), kokuto (Namiashi), mace (Hagane)",
+    "styles: academy blade, throwing arts, needle arts (Shiranui friendship), wire arts (Kinoshita friendship), wave-foot (Namiashi), monkey staff, mace arts"
+   ],
+   "ninjutsu": [
+    "chakra movement: tree walking, wall-running, chakra jump, ninja run (Ch 10), water-walking (Ch 12)",
+    "Body Flicker, Hiding in Camouflage (sensei)",
+    "the nature ceremony: your nature's C-rank signature (Ch 12)",
+    "the scroll shop: D-rank of your nature and second C-rank options",
+    "a lesser clan technique for each friendly clan (clan friendship 7); clan weapons from clans after their welcome quest (Good Neighbor)",
+    "genjutsu basics (False Surroundings, Hell Viewing) from the genjutsu master; Binding Tag"
+   ],
+   "sources": [
+    "the sensei",
+    "clan elders",
+    "nature masters",
+    "the scroll shop",
+    "board missions (D, C)",
+    "friendly clans"
+   ]
+  },
+  {
+   "stretch": "chunin_exams",
+   "slice": "beta3",
+   "levels": [
+    15,
+    18
+   ],
+   "hours": [
+    12,
+    15
+   ],
+   "pillar_cap": 12,
+   "taijutsu": [
+    "Strong Fist tier 2: Leaf Great Whirlwind",
+    "style tier 2 finishers (taijutsu rank 3)"
+   ],
+   "weapons": [
+    "ninjato and katana, Crescent Moon kenjutsu (weapons rank 4; the bokken at the Gekko dojo first)",
+    "weighted chain: chain arts",
+    "blood pills, barrier tags"
+   ],
+   "ninjutsu": [
+    "the exam reward: one C-rank chosen by your sensei after the preliminaries (Ch 18)",
+    "Mystical Palm (the medic, control 50), Chakra Sensing (Yamanaka or the sensor master)",
+    "Four-Tag Barrier, Hiding Mist, Mist Servant",
+    "nature chakra flow on blades"
+   ],
+   "sources": [
+    "the sensei (exam reward)",
+    "the medic",
+    "the sensor master",
+    "the weapon master",
+    "exam-week stalls"
+   ]
+  },
+  {
+   "stretch": "chunin",
+   "slice": "chunin",
+   "levels": [
+    18,
+    30
+   ],
+   "hours": [
+    15,
+    28
+   ],
+   "pillar_cap": 18,
+   "taijutsu": [
+    "Strong Fist tier 3 (Primary Lotus) and gates 1 and 2",
+    "Swaying Willow (a wandering master)",
+    "Blossom Strength (Haruno)",
+    "Gentle Fist Palm Rotation and Sixty-Four Palms"
+   ],
+   "weapons": [
+    "windmill shuriken, Windmill Triple",
+    "kusarigama, war fan, battle fan: chain and fan arts",
+    "storage scroll barrage, Explosive Kunai Barrage, Rising Twin Dragons"
+   ],
+   "ninjutsu": [
+    "B-rank of every nature you hold",
+    "the second nature (a nature master's three trials)",
+    "Shadow Clone (sensei)",
+    "Kindling Bond: Spark (when the story unlocks it)",
+    "medical B-rank, Wide Sensing, Chakra Suppression, Bringer of Darkness, Mirror Reversal",
+    "air step"
+   ],
+   "sources": [
+    "B-rank missions",
+    "nature masters",
+    "the sensei",
+    "friendly clans",
+    "Kindling Bond"
+   ]
+  },
+  {
+   "stretch": "jonin",
+   "slice": "jonin",
+   "levels": [
+    30,
+    42
+   ],
+   "hours": [
+    28,
+    45
+   ],
+   "pillar_cap": 24,
+   "taijutsu": [
+    "gates 3 and 4, Reverse Lotus",
+    "Lightning Body (lightning nature)",
+    "128 Palms",
+    "Blossom Strength for everyone at control 80"
+   ],
+   "weapons": [
+    "White Fang (Hatake), the white sabre",
+    "trench knives",
+    "Shuriken Shadow Clone"
+   ],
+   "ninjutsu": [
+    "A-rank: Lightning Blade, Spiralling Sphere, Multi Shadow Clone, great dragons",
+    "the third nature",
+    "Kindling Bond: Flame, then Blaze",
+    "Resuscitation, Five Elements Seal, Temple of Nirvana, Chakra Reading",
+    "wind glide"
+   ],
+   "sources": [
+    "A-rank missions",
+    "clan masters",
+    "the sensei",
+    "nature masters"
+   ]
+  },
+  {
+   "stretch": "anbu",
+   "slice": "anbu",
+   "levels": [
+    35,
+    50
+   ],
+   "hours": [
+    "+8"
+   ],
+   "pillar_cap": "as level",
+   "taijutsu": [],
+   "weapons": [
+    "ANBU armour, coatings, assassin tools"
+   ],
+   "ninjutsu": [
+    "stealth: detection by sight and sound; Shimura sealing curse"
+   ],
+   "sources": [
+    "ANBU HQ"
+   ]
+  },
+  {
+   "stretch": "road",
+   "slice": "road",
+   "levels": [
+    42,
+    50
+   ],
+   "hours": [
+    45,
+    60
+   ],
+   "pillar_cap": 28,
+   "taijutsu": [
+    "gates 5 and 6, Morning Peacock",
+    "Twin Lion Fists",
+    "Liger Bomb"
+   ],
+   "weapons": [
+    "Iaido teaser",
+    "grandmaster kenjutsu"
+   ],
+   "ninjutsu": [
+    "S-rank: the forbidden archive's scrolls (Great Fire Annihilation, Kirin, Earth Splitting, Thousand Sharks, Sea of Ink, Marked Teleport)",
+    "Great Spiralling Sphere, Spiralling Shuriken",
+    "Kindling Bond: Bonfire",
+    "Strength of a Hundred"
+   ],
+   "sources": [
+    "the Hokage's archive",
+    "the sensei",
+    "clan heads"
+   ]
+  },
+  {
+   "stretch": "post",
+   "slice": "post",
+   "levels": [
+    50,
+    60
+   ],
+   "hours": [
+    "post-game"
+   ],
+   "pillar_cap": 30,
+   "taijutsu": [
+    "gate 7"
+   ],
+   "weapons": [
+    "Iaido (a samurai master)"
+   ],
+   "ninjutsu": [
+    "every pillar to rank 10"
+   ],
+   "sources": [
+    "post-game masters"
+   ]
+  }
+ ],
+ "exam_reward": {
+  "when": "Ch 18, after the preliminaries: your sensei picks one technique from your build (the pillar you used most in the exams)",
+  "pool": {
+   "ninjutsu": [
+    "combat:fire.phoenix_flower",
+    "combat:wind.vacuum_wave",
+    "combat:earth.mud_river",
+    "combat:water.water_wall",
+    "combat:lightning.spark_needle",
+    "combat:gen.sly_mind"
+   ],
+   "weapons": [
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.wind_shuriken",
+    "combat:weapon.lightning_flow"
+   ],
+   "taijutsu": [
+    "combat:style.strong_fist:leaf_great_whirlwind",
+    "combat:style.academy_basics:palm_rush"
+   ]
+  },
+  "rule": "your own nature's option first; the taijutsu option unlocks the finisher one tier early"
+ }
+}

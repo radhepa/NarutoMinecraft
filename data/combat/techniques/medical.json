@@ -1,0 +1,184 @@
+{
+ "format": 1,
+ "techniques": [
+  {
+   "id": "combat:med.mystical_palm",
+   "name": "Mystical Palm",
+   "kind": "medical",
+   "nature": "none",
+   "rank": "c",
+   "level": 12,
+   "signs": [
+    "ram",
+    "rat"
+   ],
+   "chakra": 6,
+   "cast_ticks": 8,
+   "cooldown_ticks": 0,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 2.0,
+    "channel": true
+   },
+   "effects": [
+    {
+     "heal_per_second": "control"
+    }
+   ],
+   "mechanic": "Hold use on an ally (or yourself at half rate): heals 1 HP a second per 10 control above 40, 2 chakra a second",
+   "counters": "interrupted by any hit",
+   "teach": [
+    "mentor:role:medic"
+   ],
+   "slice": "beta3",
+   "requires": [
+    "control:50"
+   ],
+   "beta": true
+  },
+  {
+   "id": "combat:med.chakra_scalpel",
+   "name": "Chakra Scalpel",
+   "kind": "medical",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [],
+   "chakra": 30,
+   "cast_ticks": 6,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "scalpel_hands",
+     "ticks": 200
+    },
+    {
+     "on_hit": {
+      "status": "numbed",
+      "ticks": 100
+     }
+    }
+   ],
+   "mechanic": "Blades of chakra on the fingers (200 ticks): melee hits ignore armour and leave the target numbed (cut muscles)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:medic"
+   ],
+   "slice": "chunin",
+   "requires": [
+    "control:60"
+   ],
+   "tags": [
+    "no_signs"
+   ]
+  },
+  {
+   "id": "combat:med.poison_extraction",
+   "name": "Poison Extraction",
+   "kind": "medical",
+   "nature": "none",
+   "rank": "b",
+   "level": 22,
+   "signs": [
+    "ram",
+    "ox"
+   ],
+   "chakra": 30,
+   "cast_ticks": 60,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 2.0
+   },
+   "effects": [
+    {
+     "cleanse": [
+      "poisoned",
+      "numbed",
+      "drowsy",
+      "paralysed"
+     ]
+    }
+   ],
+   "mechanic": "Draws every poison out of an ally (60 ticks) and gives 400 ticks of immunity",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:medic",
+    "clan:suzuran"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:med.resuscitation",
+   "name": "Resuscitation",
+   "kind": "medical",
+   "nature": "none",
+   "rank": "a",
+   "level": 34,
+   "signs": [
+    "ram",
+    "snake",
+    "ox"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 2.0
+   },
+   "effects": [
+    {
+     "revive": 0.4
+    }
+   ],
+   "mechanic": "Revive a downed squadmate at once with 40% health (once per fight per ally)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:medic"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:med.hundred_healing",
+   "name": "Strength of a Hundred",
+   "kind": "medical",
+   "nature": "none",
+   "rank": "s",
+   "level": 46,
+   "signs": [],
+   "chakra": 80,
+   "cast_ticks": 10,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "hundred_seal",
+     "ticks": 400
+    }
+   ],
+   "mechanic": "A seal stores chakra over days (1% a day, at most 100% of your max). Release it: heal 2 HP every tick-second for 20 s and no technique costs chakra",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:medic"
+   ],
+   "slice": "road",
+   "requires": [
+    "control:90"
+   ],
+   "tags": [
+    "no_signs"
+   ]
+  }
+ ]
+}
