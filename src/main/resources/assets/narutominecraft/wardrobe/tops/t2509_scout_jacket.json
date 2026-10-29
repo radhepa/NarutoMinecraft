@@ -1,0 +1,303 @@
+{
+  "id": "t2509_scout_jacket",
+  "kind": "top",
+  "name": "Scout Jacket",
+  "gender": "unisex",
+  "texture": "tops/t2509_scout_jacket.png",
+  "extrasHeight": 32,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.2,
+        3.1
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        -1
+      ],
+      "size": [
+        8,
+        4,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "hood_point",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.2,
+        3.1
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "lantern_cord",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        9
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_body",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2,
+        -1.5
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "uv": [
+        34,
+        9
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_rim_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.5,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        47,
+        9
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_rim_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        6,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        56,
+        9
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_tassel",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        7,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        17
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short zip jacket, a high zipped collar, the hood down, a chest pocket, grey cuffs, a lantern charm."
+}

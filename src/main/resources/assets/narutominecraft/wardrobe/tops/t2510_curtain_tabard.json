@@ -1,0 +1,285 @@
+{
+  "id": "t2510_curtain_tabard",
+  "kind": "top",
+  "name": "Curtain Tabard",
+  "gender": "unisex",
+  "texture": "tops/t2510_curtain_tabard.png",
+  "extrasHeight": 48,
+  "tags": [
+    "jonin",
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tabard_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "tabard_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        2.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        11,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "tabard_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tabard_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "mantle_lower",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "mantle_right_capelet",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        4,
+        5,
+        5
+      ],
+      "uv": [
+        29,
+        13
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "mantle_left_capelet",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.4,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        4,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        24
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "chest_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.0,
+        0,
+        -1
+      ],
+      "size": [
+        16,
+        14,
+        1
+      ],
+      "uv": [
+        19,
+        24
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        40
+      ],
+      "inflate": 0.2
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Knee-length pleated tabard front and back with the crest, a short shoulder mantle, a dark robe beneath."
+}

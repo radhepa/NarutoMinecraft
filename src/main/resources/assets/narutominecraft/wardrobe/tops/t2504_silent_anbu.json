@@ -1,0 +1,164 @@
+{
+  "id": "t2504_silent_anbu",
+  "kind": "top",
+  "name": "Silent ANBU",
+  "gender": "unisex",
+  "texture": "tops/t2504_silent_anbu.png",
+  "extrasHeight": 32,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "half_cape",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "half_cape_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        9,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "muffler",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.8,
+        -2.7
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "muffler_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        1.0,
+        3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "muffler_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.0,
+        1.0,
+        3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        7,
+        11
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Slate ANBU plates, a short pleated half-cape on the right shoulder, black gloves, a muffler worn down."
+}

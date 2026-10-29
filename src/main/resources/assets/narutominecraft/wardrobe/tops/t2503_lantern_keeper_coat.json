@@ -1,0 +1,367 @@
+{
+  "id": "t2503_lantern_keeper_coat",
+  "kind": "top",
+  "name": "Lantern Keeper Coat",
+  "gender": "unisex",
+  "texture": "tops/t2503_lantern_keeper_coat.png",
+  "extrasHeight": 48,
+  "tags": [
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.0,
+        0,
+        0
+      ],
+      "size": [
+        16,
+        14,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        21,
+        16
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        8.6,
+        -2.5
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        27
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "sash_end",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        9.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        27
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "lantern_cord",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        10.8,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        27
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_body",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        10.8,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2,
+        -1.5
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "uv": [
+        41,
+        27
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_rim_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        10.8,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.5,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        54,
+        27
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_rim_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        10.8,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        6,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        36
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lantern_tassel",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        10.8,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        7,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        9,
+        36
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Knee-length closed coat, standing collar, moon-grey cuffs, a wide sash with a paper lantern, the crest."
+}

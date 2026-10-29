@@ -1,0 +1,49 @@
+{
+  "id": "tobari", "name": "Tobari",
+  "tagline": "The night curtain: silent scouts, night watchmen and lantern-keepers in layered indigo drapes and hooded mantles, mufflers pulled over the mouth, soft split-toe boots and one small amber paper lantern",
+  "standing": "minor",
+  "ability": "Tobari, the night curtain: a technique that smothers sound and dims chakra in a small radius, the Leaf's best scouts and night watch",
+  "palettes": {
+    "TOBARI_NIGHT":    {"name": "Tobari Night",    "P": "#282b42", "S": "#b7bbc6", "A": "#e09a3a", "L": "#4a3d35", "M": "#a9afb9", "K": "#14151c", "D": "#35373f"},
+    "TOBARI_CHARCOAL": {"name": "Tobari Charcoal", "P": "#3b3c43", "S": "#c3c6cd", "A": "#dc9536", "L": "#463a33", "M": "#a6acb5", "K": "#141519", "D": "#262b47"},
+    "TOBARI_MOON":     {"name": "Tobari Moon",     "P": "#8b909c", "S": "#e1e2e3", "A": "#d8963a", "L": "#4b4038", "M": "#b2b8c0", "K": "#17181e", "D": "#2a2f4b"},
+    "TOBARI_DEEP":     {"name": "Tobari Deep",     "P": "#1e2133", "S": "#9da2b0", "A": "#e5a443", "L": "#3e342e", "M": "#9aa1ab", "K": "#111218", "D": "#3a3c45"},
+    "TOBARI_ANBU":     {"name": "Tobari ANBU",     "P": "#5a5e68", "S": "#d9dadc", "A": "#e09a3a", "L": "#3c3532", "M": "#a9afb9", "K": "#121318", "D": "#22253b"}
+  },
+  "hair_colors": {
+    "TOBARI_INK":      {"name": "Tobari Ink",      "ramp": ["#0d0e16", "#161827", "#20243a", "#2f3552", "#475073"]},
+    "TOBARI_DUSK":     {"name": "Tobari Dusk",     "ramp": ["#151621", "#232535", "#33364b", "#4a4e66", "#6a6f88"]},
+    "TOBARI_MOONGREY": {"name": "Tobari Moongrey", "ramp": ["#3a3d48", "#565a67", "#767a87", "#9a9eaa", "#c0c3cc"]}
+  },
+  "eye_colors": {
+    "TOBARI_GREY": {"name": "Tobari Grey", "ramp": ["#0c0d12", "#2b2f3d", "#4a5064", "#7d8599", "#efeee9"]}
+  },
+  "marks": {
+    "tobari_night_lids": {"rects": [[3.55, -3.55, 0.75, 0.24]], "color": "#2d3152", "mirror": true}
+  },
+  "pool": {
+    "hair": ["h2501_parted_curtain", "h2502_watch_crop", "h2503_lantern_bun", "h2504_veiled_bob", "h2505_scout_tail",
+             "h2506_hood_shag", "h2507_swept_dusk", "h2508_long_veil", "h2509_twin_drapes", "h2510_night_braid",
+             "h2511_side_sweep", "h2512_quiet_tufts", "h2513_half_moon_knot", "h2514_watchman_queue", "h2515_layered_nape"],
+    "hair_colors": ["TOBARI_INK", "TOBARI_INK", "TOBARI_INK", "TOBARI_DUSK", "TOBARI_DUSK", "TOBARI_MOONGREY", "RAVEN"],
+    "eye_colors": ["DARK", "DARK", "TOBARI_GREY", "TOBARI_GREY"],
+    "palettes": ["TOBARI_NIGHT", "TOBARI_CHARCOAL", "TOBARI_MOON", "TOBARI_DEEP"],
+    "headwear": [null, null, null, null, null, "w2501_night_muffler", "w2501_night_muffler", "w2502_scout_hood",
+                 "w2503_curtain_protector", "w2503_curtain_protector", "w02_forehead_protector", "w2504_owl_mask"],
+    "bottoms": ["b01_shinobi_trousers"],
+    "complexions": [0, 0, 1, 1, 2, 3],
+    "marks": [{"id": "tobari_night_lids", "chance": 0.3}]
+  },
+  "outfits": [
+    {"id": "night_curtain", "name": "Night Curtain", "top": "t2501_night_curtain_mantle", "bottom": "b2504_gathered_hakama", "rank": "jonin", "palettes": ["TOBARI_NIGHT", "TOBARI_DEEP"]},
+    {"id": "hooded_scout", "name": "Hooded Scout", "top": "t2502_scout_hood_vest", "bottom": "b2501_tabi_trousers", "rank": "chunin"},
+    {"id": "lantern_keeper", "name": "Lantern Keeper", "top": "t2503_lantern_keeper_coat", "bottom": "b2504_gathered_hakama", "rank": "chunin"},
+    {"id": "silent_anbu", "name": "Silent ANBU", "top": "t2504_silent_anbu", "bottom": "b2501_tabi_trousers", "rank": "anbu", "palettes": ["TOBARI_ANBU"]},
+    {"id": "academy_tunic", "name": "Lantern Pupil", "top": "t2505_lantern_tunic", "bottom": "b2503_scout_shorts", "rank": "academy", "palettes": ["TOBARI_MOON", "TOBARI_CHARCOAL"]},
+    {"id": "layered_wrap", "name": "Layered Wrap", "top": "t2506_layered_wrap", "bottom": "b2503_scout_shorts", "rank": "genin"},
+    {"id": "night_watch", "name": "Night Watch Haori", "top": "t2507_watch_haori", "bottom": "b2501_tabi_trousers", "rank": "jonin"},
+    {"id": "drape_kunoichi", "name": "Drape Kunoichi", "top": "t2508_drape_kunoichi", "bottom": "b2502_drape_skirt", "rank": "chunin"},
+    {"id": "scout_jacket", "name": "Scout Jacket", "top": "t2509_scout_jacket", "bottom": "b2501_tabi_trousers", "rank": "genin"},
+    {"id": "curtain_keeper", "name": "Curtain Keeper", "top": "t2510_curtain_tabard", "bottom": "b2502_drape_skirt", "rank": "jonin", "palettes": ["TOBARI_DEEP", "TOBARI_CHARCOAL"]}
+  ]
+}

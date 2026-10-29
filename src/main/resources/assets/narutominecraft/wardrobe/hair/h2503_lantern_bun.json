@@ -1,0 +1,406 @@
+{
+  "id": "h2503_lantern_bun",
+  "kind": "hair",
+  "name": "Lantern Bun",
+  "gender": "unisex",
+  "texture": "hair/h2503_lantern_bun.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bun",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.6,
+        1.6
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        -4,
+        -2
+      ],
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bun_cord",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.6,
+        1.6
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        17,
+        0
+      ]
+    },
+    {
+      "id": "bun_knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -11.4,
+        2.4
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1.5,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        26
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        26
+      ],
+      "origin": [
+        -1.0,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ]
+    },
+    {
+      "id": "fringe_0_2",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        26
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "fringe_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        40
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        9
+      ]
+    },
+    {
+      "id": "fringe_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        40
+      ],
+      "origin": [
+        -1.0,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        14,
+        9
+      ]
+    },
+    {
+      "id": "fringe_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -16
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        9
+      ]
+    },
+    {
+      "id": "fringe_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -16
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        28,
+        9
+      ]
+    },
+    {
+      "id": "wisp_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.35,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        33,
+        9
+      ]
+    },
+    {
+      "id": "wisp_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.35,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        38,
+        9
+      ]
+    },
+    {
+      "id": "wisp_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.35,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        43,
+        9
+      ]
+    },
+    {
+      "id": "wisp_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.35,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        48,
+        9
+      ]
+    }
+  ],
+  "description": "Round bun high on the crown bound with an amber cord, side fringe, loose wisps."
+}

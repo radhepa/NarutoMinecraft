@@ -1,0 +1,133 @@
+{
+  "id": "b2502_drape_skirt",
+  "kind": "bottom",
+  "name": "Drape Skirt",
+  "gender": "unisex",
+  "texture": "bottoms/b2502_drape_skirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "lower_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "lower_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "upper_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "upper_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Two tiers of pleated panels over dark leggings, grey shin wraps, split-toe boots."
+}

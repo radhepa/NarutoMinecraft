@@ -204,6 +204,16 @@
         "#f1ede3"
       ]
     },
+    "TOBARI_GREY": {
+      "name": "Tobari Grey",
+      "ramp": [
+        "#0c0d12",
+        "#2b2f3d",
+        "#4a5064",
+        "#7d8599",
+        "#efeee9"
+      ]
+    },
     "UCHIHA_ONYX": {
       "name": "Uchiha Onyx",
       "ramp": [

@@ -531,6 +531,36 @@
         "#bdbdbe"
       ]
     },
+    "TOBARI_INK": {
+      "name": "Tobari Ink",
+      "ramp": [
+        "#0d0e16",
+        "#161827",
+        "#20243a",
+        "#2f3552",
+        "#475073"
+      ]
+    },
+    "TOBARI_DUSK": {
+      "name": "Tobari Dusk",
+      "ramp": [
+        "#151621",
+        "#232535",
+        "#33364b",
+        "#4a4e66",
+        "#6a6f88"
+      ]
+    },
+    "TOBARI_MOONGREY": {
+      "name": "Tobari Moongrey",
+      "ramp": [
+        "#3a3d48",
+        "#565a67",
+        "#767a87",
+        "#9a9eaa",
+        "#c0c3cc"
+      ]
+    },
     "UCHIHA_INK": {
       "name": "Uchiha Ink",
       "ramp": [
