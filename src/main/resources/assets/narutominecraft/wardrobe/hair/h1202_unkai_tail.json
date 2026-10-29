@@ -1,0 +1,465 @@
+{
+  "id": "h1202_unkai_tail",
+  "kind": "hair",
+  "name": "Teacher's Tail",
+  "gender": "unisex",
+  "texture": "hair/h1202_unkai_tail.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "swept_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.9,
+        -8.6,
+        -3.9
+      ],
+      "rotation": [
+        84,
+        0,
+        4
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        5,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "swept_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.9,
+        -8.6,
+        -3.9
+      ],
+      "rotation": [
+        84,
+        0,
+        4
+      ],
+      "origin": [
+        -1.0,
+        5.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "swept_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.6,
+        -3.9
+      ],
+      "rotation": [
+        84,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        6,
+        2
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "swept_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.6,
+        -3.9
+      ],
+      "rotation": [
+        84,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        6.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        27,
+        0
+      ]
+    },
+    {
+      "id": "swept_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.6,
+        -3.9
+      ],
+      "rotation": [
+        84,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        6,
+        2
+      ],
+      "uv": [
+        36,
+        0
+      ]
+    },
+    {
+      "id": "swept_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.6,
+        -3.9
+      ],
+      "rotation": [
+        84,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        6.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        45,
+        0
+      ]
+    },
+    {
+      "id": "swept_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.9,
+        -8.6,
+        -3.9
+      ],
+      "rotation": [
+        84,
+        0,
+        -4
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        5,
+        2
+      ],
+      "uv": [
+        54,
+        0
+      ]
+    },
+    {
+      "id": "swept_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.9,
+        -8.6,
+        -3.9
+      ],
+      "rotation": [
+        84,
+        0,
+        -4
+      ],
+      "origin": [
+        -1.0,
+        5.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "temple_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.35,
+        -7.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        9,
+        9
+      ]
+    },
+    {
+      "id": "temple_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.35,
+        -7.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        16,
+        9
+      ]
+    },
+    {
+      "id": "temple_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.35,
+        -7.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        21,
+        9
+      ]
+    },
+    {
+      "id": "temple_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.35,
+        -7.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        28,
+        9
+      ]
+    },
+    {
+      "id": "tie",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.2,
+        4.5
+      ],
+      "rotation": [
+        8,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        33,
+        9
+      ]
+    },
+    {
+      "id": "tail_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        44,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        2.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        55,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Combed straight back off the brow, broad swept crown, a short neat tail at the nape."
+}

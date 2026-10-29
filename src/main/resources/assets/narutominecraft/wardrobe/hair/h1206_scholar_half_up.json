@@ -1,0 +1,638 @@
+{
+  "id": "h1206_scholar_half_up",
+  "kind": "hair",
+  "name": "Scholar's Half-Up",
+  "gender": "unisex",
+  "texture": "hair/h1206_scholar_half_up.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.0,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.0,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.0,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        28,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.0,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.0,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.0,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        2.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.0,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        3.0,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "cord",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.9,
+        4.7
+      ],
+      "rotation": [
+        80,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.0,
+        5.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        9,
+        10
+      ]
+    },
+    {
+      "id": "knot_cap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.0,
+        5.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        22,
+        10
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        14
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        27,
+        10
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        34,
+        10
+      ]
+    },
+    {
+      "id": "fringe_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        26
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        39,
+        10
+      ]
+    },
+    {
+      "id": "fringe_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        26
+      ],
+      "origin": [
+        -0.5,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        46,
+        10
+      ]
+    },
+    {
+      "id": "fringe_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -26
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        51,
+        10
+      ]
+    },
+    {
+      "id": "fringe_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.2,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -26
+      ],
+      "origin": [
+        -0.5,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        58,
+        10
+      ]
+    },
+    {
+      "id": "fringe_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -14
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    },
+    {
+      "id": "fringe_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        16
+      ]
+    },
+    {
+      "id": "frame_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        12,
+        16
+      ]
+    },
+    {
+      "id": "frame_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -0.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "frame_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "frame_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -0.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        27,
+        16
+      ]
+    }
+  ],
+  "description": "Upper half tied in a small knot behind the crown, the rest straight to the shoulders."
+}
