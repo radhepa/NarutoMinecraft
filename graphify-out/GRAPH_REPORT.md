@@ -1,17 +1,17 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 278 files · ~657,663 words
+- 277 files · ~657,519 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 31 file(s) not represented in the graph (top: .tsv 23, (none) 3, .properties 2)
 
 ## Summary
-- 4665 nodes · 11102 edges · 194 communities (153 shown, 41 thin omitted)
+- 4665 nodes · 11098 edges · 197 communities (154 shown, 43 thin omitted)
 - Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 1300 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b81c7cb5`
+- Built from commit: `d99a603f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,7 +26,7 @@
 - Story bible
 - kit_kurama.py
 - creator.py
-- .classic
+- Recipes
 - kit_kunoichi.py
 - Wallet
 - org.junit.jupiter.api.Test
@@ -56,11 +56,11 @@
 - 6. The map
 - .daily
 - 8. The beta, chapter by chapter
-- 9. Delivery plan
+- .add
 - mockups.py
 - rnd
 - Tier
-- Playthrough
+- Run
 - dialogue.py
 - blocks.py
 - Niche
@@ -76,27 +76,29 @@
 - CreatorRules
 - .tier
 - items.py
+- map
 - .greeting
 - Kind
 - Meters
+- TimeAndPacingTest
 - .obj
 - Village
 - Person
 - Bond
-- Leaf
-- .talk
+- .of
+- ReactionTest.java
 - .read
 - Def
 - Levels
 - Deed
 - Context
-- Title
+- Label
 - Playthrough.java
 - kit_morino.py
 - paint.py
 - Tier
 - 1. The registry
-- 15. Furniture
+- tatami
 - 4.3 The noble clans
 - kit_haruno.py
 - konoha/preview.py
@@ -111,11 +113,10 @@
 - Ryo
 - Side quests
 - 4.4 The minor clans
-- GossipTest
+- State
 - 2. Quest framework
 - json
 - Label
-- compose.py
 - VillageSim.java
 - Question
 - Catalogue
@@ -128,14 +129,14 @@
 - Prices
 - VisitsTest
 - render_kit.py
-- .name
+- Power
 - 3. Crafting
 - The village
 - BetaTalk
 - Seeds
 - Plant
 - Question
-- Side quest secrets
+- leaf_block.py
 - 2. Shops
 - Bank
 - Dialogue
@@ -151,7 +152,7 @@
 - Tex
 - .open
 - creator/preview.py
-- .receive
+- .person
 - QuestionsCompiledTest
 - Ranks
 - AnswerTag
@@ -190,11 +191,13 @@
 - shade
 - .set
 - SquadPlan
-- BondInput
+- kunai
 - RuleOfThumbTest
 - S
+- shuriken
 - Mission catalogue
 - SquadTest
+- Tidiness
 - Result
 - mission
 - Data
@@ -203,10 +206,10 @@
 1. `k()` - 227 edges
 2. `BondWorld` - 201 edges
 3. `solid()` - 151 edges
-4. `Act` - 130 edges
+4. `Act` - 128 edges
 5. `fabric()` - 109 edges
 6. `Bond` - 67 edges
-7. `Home` - 66 edges
+7. `Home` - 67 edges
 8. `Village` - 63 edges
 9. `strip_fabric()` - 59 edges
 10. `Person` - 50 edges
@@ -220,13 +223,13 @@
   MISSIONS.md → progression/missions/src/test/java/dev/shinobi/progression/mission/DeskTest.java
 - `6. Coordination` --references--> `tatami()`  [INFERRED]
   ITEMS.md → tools/konoha/blocks.py
-- `Interior fittings` --references--> `tatami()`  [INFERRED]
-  KONOHA_BUILD.md → tools/konoha/blocks.py
+- `Leaf Festival Stalls (`festival_stalls`)` --references--> `paper_lantern()`  [INFERRED]
+  docs/items/CATALOGUE.md → tools/konoha/blocks.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (194 total, 41 thin omitted)
+## Communities (197 total, 43 thin omitted)
 
 ### Community 0 - "senbon"
 Cohesion: 0.25
@@ -257,8 +260,8 @@ Cohesion: 0.03
 Nodes (46): How the pieces work, back_crest(), drawstrings(), forearm_wraps(), holster(), hood_down(), ribbed(), sash() (+38 more)
 
 ### Community 7 - "Story bible"
-Cohesion: 0.11
-Nodes (18): Beta 1: the opening and the Academy (~4 h), Beta 2: Genin life (~8 h), Beta 3: the Chunin Exams (~3 h), Bonds in the story (spoilers), Kindling Bond, Recurring characters, Reveal pacing, Spoilers behind the roadmap's neutral wording (+10 more)
+Cohesion: 0.09
+Nodes (22): Beta 1: the opening and the Academy (~4 h), Beta 2: Genin life (~8 h), Beta 3: the Chunin Exams (~3 h), Bonds in the story (spoilers), Clan lines, District quests and one-offs, Filler arcs, Kindling Bond (+14 more)
 
 ### Community 8 - "kit_kurama.py"
 Cohesion: 0.07
@@ -268,9 +271,9 @@ Nodes (14): back_crest(), bead_clip(), brush_pin(), brush_stroke(), bun(), ink_c
 Cohesion: 0.07
 Nodes (21): check(), _hash(), hash64(), load_rules(), main(), _mix(), outputs(), Rng (+13 more)
 
-### Community 10 - ".classic"
-Cohesion: 0.12
-Nodes (7): BondBook, Fact, MemoryLine, Page, ConditionsAndEffectsTest, KindlingAndBookTest, VillageTest
+### Community 10 - "Recipes"
+Cohesion: 0.14
+Nodes (17): apothecary, cooking.oven, cooking.pot, cooking.prep, Dango Stand (`dango_stand`), Fish Stall (`fishmonger`), food, ingredient (+9 more)
 
 ### Community 11 - "kit_kunoichi.py"
 Cohesion: 0.09
@@ -278,7 +281,7 @@ Nodes (10): arm_warmers(), frog_buttons(), kimono_sleeves(), mandarin_collar(), 
 
 ### Community 13 - "org.junit.jupiter.api.Test"
 Cohesion: 0.04
-Nodes (9): CatalogueTest, JsonTest, RyoTest, LivingTest, MoveTest, CatalogueTest, SeedsTest, SlotFillerTest (+1 more)
+Nodes (10): CatalogueTest, JsonTest, RyoTest, LivingTest, MoveTest, CurveAndTierTest, CatalogueTest, SeedsTest (+2 more)
 
 ### Community 14 - "kit_suzuran.py"
 Cohesion: 0.09
@@ -289,15 +292,15 @@ Cohesion: 0.11
 Nodes (19): 7. Systems in the beta, Adventure rules, Character creation, Combat in the beta, Death, Dialogue, Food, Friendship and bonds (+11 more)
 
 ### Community 16 - ".person"
-Cohesion: 0.06
-Nodes (19): 18. The engine, Activity, BondEvent, Answer, FollowUp, Invitation, Plan, Together (+11 more)
+Cohesion: 0.05
+Nodes (28): 6. Conversations, 9. Mass production, The bank today, 18. The engine, Activity, BondEvent, Conversation, Reply (+20 more)
 
 ### Community 17 - "Economy"
 Cohesion: 0.08
 Nodes (16): Band, Economy, End, ABANDONED, DONE, FAILED, PARTIAL, GradeRow (+8 more)
 
 ### Community 18 - "Home"
-Cohesion: 0.08
+Cohesion: 0.07
 Nodes (5): 17. What the map needs, Flat, Room, Home, Photo
 
 ### Community 19 - "kit_rugged.py"
@@ -313,7 +316,7 @@ Cohesion: 0.09
 Nodes (9): Catalogue, Branch, Step, Template, Twist, DeskDays, Profile, Run (+1 more)
 
 ### Community 22 - "Roster"
-Cohesion: 0.09
+Cohesion: 0.08
 Nodes (5): Hooks for the other mods, Contribution, GrowthEvent, Grower, Roster
 
 ### Community 23 - "kit_hagane.py"
@@ -361,12 +364,12 @@ Cohesion: 0.18
 Nodes (11): 11. Later systems, Clan techniques and kekkei genkai, Elemental natures, Homes after the beta, Kindling Bond, Later techniques and combat, Player clans, Ranks after Chunin (+3 more)
 
 ### Community 34 - "Shinobi Modpack: roadmap"
-Cohesion: 0.22
-Nodes (9): 10. Story bible, 12. Risks and open questions, 1. Vision, 3. Where we start, Contents, Risks, Shinobi Modpack: roadmap, Still open (+1 more)
+Cohesion: 0.12
+Nodes (16): 10. Story bible, 12. Risks and open questions, 1. Vision, 3. Where we start, 9. Delivery plan, Beta 1: the opening and the Academy (~4 h main path), Beta 2.5: clan welcomes, wave 2 (content drop), Beta 2: Genin life (+~8 h) (+8 more)
 
 ### Community 35 - "sprites.py"
-Cohesion: 0.07
-Nodes (35): cooking.oven, cooking.prep, Dango Stand (`dango_stand`), Fish Stall (`fishmonger`), food, ingredient, Market Grocer (`grocer`), material (+27 more)
+Cohesion: 0.14
+Nodes (21): build(), Canvas, charm(), flak_vest(), forehead_protector(), framed_ladle(), headband(), hexrgb() (+13 more)
 
 ### Community 36 - "4. Technical architecture"
 Cohesion: 0.25
@@ -384,10 +387,6 @@ Nodes (4): Friends, Day, Visit, Visits
 Cohesion: 0.29
 Nodes (7): 8. The beta, chapter by chapter, Beta 1: the opening and the Academy (~4 h), Beta 2: Genin life (~8 h), Beta 3: the Chunin Exams (~3 h), Side quests in the beta, The Classic cast, The squad bonding arc
 
-### Community 40 - "9. Delivery plan"
-Cohesion: 0.29
-Nodes (7): 9. Delivery plan, Beta 1: the opening and the Academy (~4 h main path), Beta 2.5: clan welcomes, wave 2 (content drop), Beta 2: Genin life (+~8 h), Beta 3: the Chunin Exams (+~3 h), Phase 0: Foundations, Playtesting
-
 ### Community 41 - "mockups.py"
 Cohesion: 0.25
 Nodes (22): all_screens(), body_screen(), character_image(), die(), eye_rgb(), face_screen(), font(), hair_rgb() (+14 more)
@@ -397,24 +396,24 @@ Cohesion: 0.03
 Nodes (33): quilt(), sprigs(), burst(), claw_marks(), fang(), fang_small(), fur_box(), fur_edge() (+25 more)
 
 ### Community 43 - "Tier"
-Cohesion: 0.12
-Nodes (9): Score, Tier, BARE, BELOVED, COMFORTABLE, COSY, HOMELY, Practice (+1 more)
+Cohesion: 0.22
+Nodes (6): Tier, BARE, BELOVED, COMFORTABLE, COSY, HOMELY
 
-### Community 44 - "Playthrough"
-Cohesion: 0.08
-Nodes (17): 15. Pacing, Chapter, Phase, ACADEMY, EXAMS, GENIN, LATER, Playthrough (+9 more)
+### Community 44 - "Run"
+Cohesion: 0.05
+Nodes (23): Standing, Title, GOOD_NEIGHBOR, HELPING_HAND, HERO, NEWCOMER, PILLAR, UNWELCOME (+15 more)
 
 ### Community 45 - "dialogue.py"
 Cohesion: 0.13
 Nodes (35): assign_ids(), build(), check_condition(), check_text(), compiled(), compiled_question(), content_key(), coverage() (+27 more)
 
 ### Community 46 - "blocks.py"
-Cohesion: 0.10
-Nodes (33): furniture, Furniture Shop (`furniture_shop`), Leaf Festival Stalls (`festival_stalls`), 8. Registration notes for Phase 0, By building type, Facades and shop fronts, Lanterns, Roofs (+25 more)
+Cohesion: 0.14
+Nodes (17): Roofs, auto_uv(), awning(), block(), Block, box(), check(), compile_all() (+9 more)
 
 ### Community 47 - "Niche"
-Cohesion: 0.10
-Nodes (14): The model, Niche, GENJUTSU, KENJUTSU, MEDICAL, NINJUTSU, SEALING, SENSING (+6 more)
+Cohesion: 0.12
+Nodes (13): The model, Niche, GENJUTSU, KENJUTSU, MEDICAL, NINJUTSU, SEALING, SENSING (+5 more)
 
 ### Community 48 - "VarietyGuard"
 Cohesion: 0.10
@@ -428,21 +427,17 @@ Nodes (10): strip_line(), Box, compatible(), Garment, key_rgba(), Layer, Piece, 
 Cohesion: 0.12
 Nodes (5): 9. Open questions, base_name(), mc(), Plan, solid()
 
-### Community 51 - ".xpAt"
-Cohesion: 0.14
-Nodes (4): Day, CurveAndTierTest, RosterTest, TechniqueTest
-
 ### Community 52 - "Look"
 Cohesion: 0.11
 Nodes (4): 7. Locked and changeable, Look, Result, RestyleAndGrowUpTest
 
 ### Community 53 - "Personality"
-Cohesion: 0.05
-Nodes (27): ClanProfile, Base, Peeve, BRAGGING, COWARDICE, CRUELTY, DISHONESTY, LATENESS (+19 more)
+Cohesion: 0.06
+Nodes (26): ClanProfile, Base, Peeve, BRAGGING, COWARDICE, CRUELTY, DISHONESTY, LATENESS (+18 more)
 
 ### Community 54 - "Act"
-Cohesion: 0.02
-Nodes (79): Act, ABANDONED_MISSION, ANSWERED, APOLOGIZED, ASKED_ADVICE, ASKED_AFTER_THEM, AWKWARD_HANGOUT, BIRTHDAY_REMEMBERED (+71 more)
+Cohesion: 0.03
+Nodes (78): Act, ABANDONED_MISSION, ANSWERED, APOLOGIZED, ASKED_ADVICE, ASKED_AFTER_THEM, AWKWARD_HANGOUT, BIRTHDAY_REMEMBERED (+70 more)
 
 ### Community 55 - "Stage"
 Cohesion: 0.11
@@ -453,47 +448,43 @@ Cohesion: 0.18
 Nodes (3): 13. Code, and what waits for Phase 0, CreatorRules, Roots
 
 ### Community 58 - ".tier"
-Cohesion: 0.11
-Nodes (14): 11. Kindling Bond, 12. The bond book, Household, Bonfire, Flame, Kindling, Read, Sight (+6 more)
+Cohesion: 0.06
+Nodes (20): 11. Kindling Bond, BondBook, Fact, MemoryLine, Page, Household, Bonfire, Flame (+12 more)
 
 ### Community 59 - "items.py"
 Cohesion: 0.17
 Nodes (20): art_class(), catalogue_md(), check_all(), check_loot(), compile_all(), recipe_entry(), dumps(), err() (+12 more)
 
 ### Community 61 - ".greeting"
-Cohesion: 0.13
-Nodes (8): 13. Data formats, 9. Mass production, The bank today, BondDialogue, DialogueKeys, BondDialogueTest, DialogueKeysTest, 10. Content plan
+Cohesion: 0.20
+Nodes (3): 13. Data formats, BondDialogue, BondDialogueTest
 
 ### Community 62 - "Kind"
 Cohesion: 0.11
 Nodes (17): Kind, DREAM_SETBACK, DREAM_STEP, FAMILY_LOSS, FRIEND_QUARREL, HEARTBREAK, INJURED, MOVING (+9 more)
 
-### Community 63 - "Meters"
-Cohesion: 0.09
-Nodes (8): Know, Memory, Meters, Source, HEARD, SEEN, SELF, TOLD
+### Community 64 - "TimeAndPacingTest"
+Cohesion: 0.27
+Nodes (3): 15. Pacing, TimeAndPacingTest, 9. Pacing with time together
 
 ### Community 66 - "Village"
 Cohesion: 0.04
-Nodes (24): 16. What stays in Village Friends, and what moves, 17. Proposed ROADMAP edits, 18. Village scale, 19. Society hooks, 1. The data model, 21. Open questions, 2. The meters, 4. Memories (+16 more)
+Nodes (24): 16. What stays in Village Friends, and what moves, 17. Proposed ROADMAP edits, 18. Village scale, 19. Society hooks, 1. The data model, 20. What the roadmap asks of bonds, 21. Open questions, 2. The meters (+16 more)
 
 ### Community 67 - "Person"
-Cohesion: 0.06
-Nodes (6): 20. What the roadmap asks of bonds, 5. Personality, Person, Report, VillageSim, VillageScaleTest
+Cohesion: 0.10
+Nodes (4): Mood, Report, VillageSim, VillageScaleTest
 
 ### Community 68 - "Bond"
-Cohesion: 0.05
-Nodes (5): Bond, BondConditions, BondWeb, Highlight, Outcome
+Cohesion: 0.04
+Nodes (6): Bond, BondConditions, BondWeb, LifeEvents, News, FollowUp
 
-### Community 69 - "Leaf"
-Cohesion: 0.20
-Nodes (3): ConflictTest, Leaf, MemoryTest
-
-### Community 70 - ".talk"
-Cohesion: 0.15
-Nodes (7): 6. Conversations, Conversation, Reply, Topic, LifeEvents, News, 6. Conversation
+### Community 69 - ".of"
+Cohesion: 0.07
+Nodes (8): 8. The village talks, Stage, ADULT, CHILD, TEEN, ConflictTest, GossipTest, MemoryTest
 
 ### Community 71 - ".read"
-Cohesion: 0.12
+Cohesion: 0.11
 Nodes (11): Answer, Kind, ADVICE, CONFESSION, DILEMMA, OPINION, PLAYER_PAST, PLAYER_PLANS (+3 more)
 
 ### Community 72 - "Def"
@@ -501,20 +492,24 @@ Cohesion: 0.07
 Nodes (15): Def, Experience, CAMP, DATE, FESTIVAL, HANGOUT, MEAL, MISSION (+7 more)
 
 ### Community 73 - "Levels"
-Cohesion: 0.18
+Cohesion: 0.14
 Nodes (3): 3. Levels and story gates, Levels, LevelsTest
+
+### Community 74 - "Deed"
+Cohesion: 0.10
+Nodes (8): Deed, Know, Gossip, Source, HEARD, SEEN, SELF, TOLD
 
 ### Community 75 - "Context"
 Cohesion: 0.15
 Nodes (9): Context, Line, Overheard, Said, Talk, Why, BUDGET, EXHAUSTED (+1 more)
 
-### Community 76 - "Title"
-Cohesion: 0.16
-Nodes (8): Standing, Title, GOOD_NEIGHBOR, HELPING_HAND, HERO, NEWCOMER, PILLAR, UNWELCOME
+### Community 76 - "Label"
+Cohesion: 0.22
+Nodes (7): Label, CALM, FESTIVE, GRIEVING, PROUD, TENSE, UNEASY
 
 ### Community 77 - "Playthrough.java"
-Cohesion: 0.06
-Nodes (6): Stage, ADULT, CHILD, TEEN, Schedule, SampleQuestions
+Cohesion: 0.07
+Nodes (3): Schedule, Leaf, SampleQuestions
 
 ### Community 78 - "kit_morino.py"
 Cohesion: 0.14
@@ -532,9 +527,9 @@ Nodes (7): Tier, A, B, C, D, E, S
 Cohesion: 0.22
 Nodes (9): 1.1 Ids and owners, 1.2 Fields, 1.3 Highlights by family, 1.4 Grades, 1.5 Outfits, 1.6 Key items and spoilers, 1.7 Gift tags, 1.8 Kits (+1 more)
 
-### Community 82 - "15. Furniture"
-Cohesion: 0.40
-Nodes (5): 15. Furniture, Beta 1, Beta 2, Fixtures and starter pieces (Beta 1), Later (designed now)
+### Community 82 - "tatami"
+Cohesion: 0.14
+Nodes (16): 15. Furniture, Beta 1, Beta 2, Fixtures and starter pieces (Beta 1), Later (designed now), furniture, Furniture Shop (`furniture_shop`), workbench (+8 more)
 
 ### Community 83 - "4.3 The noble clans"
 Cohesion: 0.12
@@ -569,7 +564,7 @@ Cohesion: 0.11
 Nodes (4): 4. Storage, Heard, Speaker, QuestionsAndLedgerTest
 
 ### Community 91 - "Meter"
-Cohesion: 0.10
+Cohesion: 0.12
 Nodes (13): Lean, Meter, AFFECTION, RESPECT, RIVALRY, ROMANCE, TRUST, Trait (+5 more)
 
 ### Community 92 - "Missions"
@@ -584,6 +579,10 @@ Nodes (8): 1. Scope and budget, 3.1 The hook schema, 3.2 Templates, 3. Society h
 Cohesion: 0.18
 Nodes (11): 4.4 The minor clans, Hagane, Haruno, Kinoshita, Morino, Namiashi, Shiranui, Suzuran (+3 more)
 
+### Community 98 - "State"
+Cohesion: 0.25
+Nodes (6): State, ARGUMENT, COLD_SHOULDER, FALLING_OUT, MAKING_UP, NONE
+
 ### Community 99 - "2. Quest framework"
 Cohesion: 0.20
 Nodes (10): 2.1 Kinds, 2.2 Unlock rules, 2.3 How quests are found, 2.4 Repeatability, 2.5 Failure and expiry, 2.6 Rewards, 2.7 Pacing, 2.8 Classic and Varied (+2 more)
@@ -595,10 +594,6 @@ Nodes (13): bucket(), check(), check_name(), counts(), first_level(), group_of()
 ### Community 101 - "Label"
 Cohesion: 0.20
 Nodes (7): Label, ALLIES, COOL, FEUD, FRIENDLY, NEUTRAL, RIVALS
-
-### Community 102 - "compose.py"
-Cohesion: 0.48
-Nodes (5): compose(), flush_kernel(), flush_template(), fail(), main()
 
 ### Community 104 - "Question"
 Cohesion: 0.15
@@ -617,12 +612,12 @@ Cohesion: 0.33
 Nodes (6): 8. Beta catalogue, Beta 1: the opening and the Academy, Beta 2.5: clan welcomes, wave 2, Beta 2: Genin life, Beta 3: the Chunin Exams, Totals and Varied pools
 
 ### Community 108 - ".score"
-Cohesion: 0.20
-Nodes (4): Rest, Rested, ComfortTest, RestTest
+Cohesion: 0.14
+Nodes (5): Score, Rest, Rested, ComfortTest, RestTest
 
 ### Community 109 - "Run"
-Cohesion: 0.06
-Nodes (5): 14. Save format and versioning, Departure, Squad, SaveFormatTest, Run
+Cohesion: 0.09
+Nodes (4): 14. Save format and versioning, Departure, Squad, SaveFormatTest
 
 ### Community 110 - "Character creation"
 Cohesion: 0.10
@@ -644,25 +639,21 @@ Nodes (3): Cast, Setup, VisitsTest
 Cohesion: 0.15
 Nodes (8): light_for(), Scene, blocks_sheet(), building_sheet(), full_state(), load_blueprint(), main(), street()
 
-### Community 116 - ".name"
-Cohesion: 0.06
-Nodes (20): State, ARGUMENT, COLD_SHOULDER, FALLING_OUT, MAKING_UP, NONE, Power, EMBER_LINK (+12 more)
+### Community 116 - "Power"
+Cohesion: 0.20
+Nodes (7): Power, EMBER_LINK, EMBER_MARK, KINDLE, SMALL_KINDLE, THREAD_SIGHT, UNISON
 
 ### Community 117 - "3. Crafting"
 Cohesion: 0.29
 Nodes (7): 3.1 Stations, 3.2 Recipes, 3.3 Unlocks, 3.4 Quality grades, 3.5 Repair and upgrade, 3.6 Where materials come from, 3. Crafting
 
 ### Community 118 - "The village"
-Cohesion: 0.29
+Cohesion: 0.33
 Nodes (6): ANBU Black Ops: the Hokage's masked guard, Genin: the village's young ninja, Jonin: the elite of the Hidden Leaf, Kage and signature looks, Naruto Minecraft, The village
 
 ### Community 119 - "BetaTalk"
 Cohesion: 0.19
 Nodes (4): BetaTalk, Person, Player, World
-
-### Community 120 - "Seeds"
-Cohesion: 0.13
-Nodes (3): Rng, Seeds, Comfort
 
 ### Community 121 - "Plant"
 Cohesion: 0.12
@@ -671,10 +662,6 @@ Nodes (11): Look, DROOPING, HEALTHY, WILTED, Plant, Stage, FLOWERING, GRAND (+3 
 ### Community 122 - "Question"
 Cohesion: 0.21
 Nodes (4): 8. Questions and choices, Answer, Question, Answered
-
-### Community 123 - "Side quest secrets"
-Cohesion: 0.50
-Nodes (4): Clan lines, District quests and one-offs, Filler arcs, Side quest secrets
 
 ### Community 124 - "2. Shops"
 Cohesion: 0.40
@@ -692,6 +679,10 @@ Nodes (14): 10. Pool sizing, 11. Simulation, 12. Story-gated pools, 13. What wai
 Cohesion: 0.50
 Nodes (4): 4.1 A closed loop, 4.2 Sinks and inflation guards, 4.3 The simulation, 4. The ryo economy
 
+### Community 130 - "Conflict"
+Cohesion: 0.08
+Nodes (4): Conflict, Person, Recruitment, 2. Schedules
+
 ### Community 131 - "missions.py"
 Cohesion: 0.18
 Nodes (14): catalogue_doc(), check(), check_tables(), compiled(), derive_places(), dump(), file_for(), main() (+6 more)
@@ -705,20 +696,24 @@ Cohesion: 0.17
 Nodes (4): Answered, Outcome, Questions, QuestionsTest
 
 ### Community 135 - "Home"
-Cohesion: 0.08
+Cohesion: 0.09
 Nodes (22): 10. The training corner, 11. Money, 12. Growing up: homes by era, 13. Multiplayer, 14. The story at home, 16. Keepsakes, 1. Design rules, 20. By beta slice (+14 more)
+
+### Community 136 - "Tex"
+Cohesion: 0.14
+Nodes (3): paper_lantern(), hexrgb(), Tex
 
 ### Community 138 - "creator/preview.py"
 Cohesion: 0.16
 Nodes (8): draw_player(), grown(), _label(), lineup(), render_player(), samples(), stage_scale(), stages_sheet()
 
-### Community 139 - ".receive"
-Cohesion: 0.23
-Nodes (5): 7. Keepsakes, curios, photos and chests, Chests and storage, Gifts, Received, GiftsTest
+### Community 139 - ".person"
+Cohesion: 0.12
+Nodes (7): 12. The bond book, 7. Keepsakes, curios, photos and chests, Chests and storage, Gifts, Received, GiftsTest, BondFriends
 
 ### Community 141 - "Ranks"
-Cohesion: 0.11
-Nodes (17): 10. Open questions, 1. The hierarchy, 2. Rank and power, 3. Clan power, 4. Feeling the strong, 5. Head counts, 6. Who matters most, 7. The roster (+9 more)
+Cohesion: 0.09
+Nodes (19): 10. Open questions, 1. The hierarchy, 2. Rank and power, 3. Clan power, 4. Feeling the strong, 5. Head counts, 6. Who matters most, 7. The roster (+11 more)
 
 ### Community 142 - "AnswerTag"
 Cohesion: 0.12
@@ -733,11 +728,11 @@ Cohesion: 0.33
 Nodes (6): Outcome, AGAIN, CLOSE, FRESH, NONE, REPEAT
 
 ### Community 150 - "pathlib"
-Cohesion: 0.12
-Nodes (4): build(), build(), flat(), build()
+Cohesion: 0.14
+Nodes (7): compose(), flush_kernel(), flush_template(), fail(), main(), build(), build()
 
 ### Community 151 - "ClanPower"
-Cohesion: 0.19
+Cohesion: 0.17
 Nodes (6): ClanPower, CLANLESS, GREAT, MINOR, STRONG, ClanPowerTest
 
 ### Community 152 - "Kind"
@@ -765,12 +760,12 @@ Cohesion: 0.13
 Nodes (5): AgeStage, ADULT, CHILD, TEEN, GrowUp
 
 ### Community 159 - "Item catalogue"
-Cohesion: 0.09
-Nodes (22): apothecary, collectible, consumable, container, cooking.pot, curio, currency, Item catalogue (+14 more)
+Cohesion: 0.13
+Nodes (15): collectible, consumable, container, curio, currency, Item catalogue, keepsake, key (+7 more)
 
 ### Community 160 - "Konoha: the build plan"
 Cohesion: 0.12
-Nodes (17): 1. The answer: how much it will be, 2. Style guide: the Konoha kit, 4. Block catalogue, 5. Process, 6. Prototypes, 7. Effort estimate, Calibration, Contents (+9 more)
+Nodes (18): 1. The answer: how much it will be, 2. Style guide: the Konoha kit, 5. Process, 6. Prototypes, 7. Effort estimate, 8. Registration notes for Phase 0, By building type, Calibration (+10 more)
 
 ### Community 162 - "catalogue.py"
 Cohesion: 0.23
@@ -793,8 +788,8 @@ Cohesion: 0.23
 Nodes (4): Mode, CLASSIC, VARIED, Unlocks
 
 ### Community 168 - "Shops"
-Cohesion: 0.07
-Nodes (30): Academy Supply Counter (`academy_supply`), Barbecue House (`barbecue_house`), Barber (`barber`), Bath House (`bath_house`), Bookshop (`bookshop`), Cat Shelter (`cat_shelter`), Exam-Week Stalls (`exam_stalls`), gift (+22 more)
+Cohesion: 0.08
+Nodes (25): Academy Supply Counter (`academy_supply`), Barbecue House (`barbecue_house`), Barber (`barber`), Bath House (`bath_house`), Bookshop (`bookshop`), Cat Shelter (`cat_shelter`), gift, Hagane Metalworks (`hagane_metalworks`) (+17 more)
 
 ### Community 169 - ".look"
 Cohesion: 0.24
@@ -805,8 +800,8 @@ Cohesion: 0.21
 Nodes (7): Restyle, Venue, BARBER, HOME, LOCKED, SETTINGS, TIME_SKIP
 
 ### Community 171 - "Custom blocks"
-Cohesion: 0.12
-Nodes (15): Academy, Residence, hospital, stadium, Clan signatures, Crafting stations, Crests and banners, Custom blocks, Displays (item-rendering), Festival, Furniture (the Leaf set) (+7 more)
+Cohesion: 0.11
+Nodes (17): 4. Block catalogue, Academy, Residence, hospital, stadium, Clan signatures, Crafting stations, Crests and banners, Custom blocks, Displays (item-rendering), Festival (+9 more)
 
 ### Community 172 - "Pantry"
 Cohesion: 0.35
@@ -821,20 +816,32 @@ Cohesion: 0.50
 Nodes (4): 6. Filler arcs, In the beta, Later (foundation), Later one-offs (foundation)
 
 ### Community 178 - ".set"
-Cohesion: 0.12
-Nodes (6): FurnitureSet, Tidiness, LIVED_IN, MESSY, TIDY, CatalogTest
+Cohesion: 0.15
+Nodes (4): FurnitureSet, Practice, Session, CatalogTest
 
 ### Community 179 - "SquadPlan"
 Cohesion: 0.35
 Nodes (3): Band, Mate, SquadPlan
 
+### Community 180 - "kunai"
+Cohesion: 0.38
+Nodes (6): Exam-Week Stalls (`exam_stalls`), Pawn Shop (`pawn_shop`), along(), f(), kunai(), blade()
+
 ### Community 184 - "S"
 Cohesion: 0.18
 Nodes (7): 6. Squad missions, travel(), go(), merchant_camp_talk(), S, talk(), twist()
 
+### Community 185 - "shuriken"
+Cohesion: 0.40
+Nodes (4): Ninja Tool Shop (`tool_shop`), tool, shuriken(), smoke_bomb()
+
 ### Community 186 - "Mission catalogue"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (7): A rank, ANBU operations, B rank, C rank, D rank, Mission catalogue, S rank
+
+### Community 188 - "Tidiness"
+Cohesion: 0.50
+Nodes (4): Tidiness, LIVED_IN, MESSY, TIDY
 
 ### Community 193 - "mission"
 Cohesion: 0.33
@@ -842,14 +849,14 @@ Nodes (4): Code by mod, _key(), mission(), outcome()
 
 ## Knowledge Gaps
 - **342 isolated node(s):** `TALK`, `GIFT_LOVED`, `GIFT_LIKED`, `GIFT_PLAIN`, `GIFT_DISLIKED` (+337 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1596 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **41 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1595 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `BondWorld` connect `BondWorld` to `Conflict`, `.answer`, `.classic`, `.receive`, `org.junit.jupiter.api.Test`, `.person`, `Playthrough`, `Stage`, `.tier`, `SquadTest`, `map`, `.greeting`, `Village`, `Person`, `Bond`, `Leaf`, `.talk`, `.read`, `Deed`, `Title`, `Playthrough.java`, `GossipTest`, `VillageSim.java`, `Run`, `VisitsTest`, `Seeds`?**
-  _High betweenness centrality (0.071) - this node is a cross-community bridge._
+- **Why does `BondWorld` connect `BondWorld` to `Conflict`, `.answer`, `.person`, `org.junit.jupiter.api.Test`, `.person`, `Run`, `Stage`, `.tier`, `SquadTest`, `map`, `.greeting`, `Village`, `Person`, `Bond`, `.of`, `.read`, `Levels`, `Deed`, `Playthrough.java`, `Run`, `VisitsTest`?**
+  _High betweenness centrality (0.073) - this node is a cross-community bridge._
 - **What connects `TALK`, `GIFT_LOVED`, `GIFT_LIKED` to the rest of the system?**
   _342 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `kit_uchiha.py` be split into smaller, more focused modules?**
