@@ -1,0 +1,650 @@
+{
+  "id": "h713_bloom_ponytail",
+  "kind": "hair",
+  "name": "Bloom Ponytail",
+  "gender": "unisex",
+  "texture": "hair/h713_bloom_ponytail.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        20
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        20
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        12
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "fringe_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -12
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "fringe_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -20
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -20
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "frame_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "frame_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        59,
+        0
+      ]
+    },
+    {
+      "id": "frame_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "frame_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "tie",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.2,
+        4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        12,
+        10
+      ]
+    },
+    {
+      "id": "bloom_across",
+      "bone": "HEAD",
+      "pivot": [
+        1.7,
+        -7.6,
+        5.1
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        5,
+        1,
+        1
+      ],
+      "uv": [
+        25,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "bloom_down",
+      "bone": "HEAD",
+      "pivot": [
+        1.7,
+        -7.6,
+        5.1
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2.5,
+        -0.4
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        38,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "bloom_heart",
+      "bone": "HEAD",
+      "pivot": [
+        1.7,
+        -7.6,
+        5.1
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.9
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        43,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "tail_root",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        5.0
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        -2,
+        0
+      ],
+      "size": [
+        4,
+        3,
+        3
+      ],
+      "uv": [
+        48,
+        10
+      ]
+    },
+    {
+      "id": "ponytail_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        6.2
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0.0,
+        -1.5
+      ],
+      "size": [
+        4,
+        3,
+        3
+      ],
+      "uv": [
+        0,
+        20
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "ponytail_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        6.2
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "uv": [
+        15,
+        20
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "ponytail_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        6.2
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "uv": [
+        28,
+        20
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "ponytail_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        6.2
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        11.0,
+        -1.5
+      ],
+      "size": [
+        2,
+        3,
+        3
+      ],
+      "uv": [
+        41,
+        20
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "ponytail_4",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        6.2
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        14.0,
+        -1.5
+      ],
+      "size": [
+        1,
+        2,
+        3
+      ],
+      "uv": [
+        52,
+        20
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "High ponytail to mid-back with a blossom tie, split fringe, long framing locks."
+}

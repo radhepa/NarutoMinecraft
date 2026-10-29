@@ -1,0 +1,231 @@
+{
+  "id": "t710_lily_blouse",
+  "kind": "top",
+  "name": "Lily Blouse",
+  "gender": "unisex",
+  "texture": "tops/t710_lily_blouse.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "yamanaka"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "shawl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "shawl_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.4,
+        0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        4,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "shawl_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.4,
+        0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        4,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "high_neck",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        -1.6,
+        -1.5
+      ],
+      "size": [
+        4,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "brooch_across",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        1.0,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        5,
+        1,
+        1
+      ],
+      "uv": [
+        15,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "brooch_down",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        1.0,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2.5,
+        -0.4
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        28,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "brooch_heart",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        1.0,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.9
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        33,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless high-neck purple blouse, lavender shoulder shawl with a blossom brooch, long arm sleeves."
+}

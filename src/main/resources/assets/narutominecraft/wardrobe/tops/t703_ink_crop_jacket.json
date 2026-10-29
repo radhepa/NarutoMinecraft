@@ -1,0 +1,76 @@
+{
+  "id": "t703_ink_crop_jacket",
+  "kind": "top",
+  "name": "Ink Crop Jacket",
+  "gender": "unisex",
+  "texture": "tops/t703_ink_crop_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi",
+    "yamanaka"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "scroll",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        60
+      ],
+      "origin": [
+        -1,
+        -5,
+        -1
+      ],
+      "size": [
+        2,
+        10,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "strap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -50
+      ],
+      "origin": [
+        -0.5,
+        -7,
+        -0.5
+      ],
+      "size": [
+        1,
+        14,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Black collarless crop jacket with accent straps over a purple shirt and mesh, bandaged forearms, ink scroll."
+}

@@ -1,0 +1,137 @@
+{
+  "id": "b701_slit_apron_skirt",
+  "kind": "bottom",
+  "name": "Slit Apron Skirt",
+  "gender": "unisex",
+  "texture": "bottoms/b701_slit_apron_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "waist_plate",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.7,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -9,
+        -4,
+        -2
+      ],
+      "size": [
+        18,
+        8,
+        2
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "waist_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        41,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        18
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Purple side-slit skirt over shorts, bandaged thighs, protector worn as a belt, sandals."
+}
