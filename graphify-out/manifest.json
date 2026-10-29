@@ -1386,9 +1386,9 @@
     "semantic_hash": ""
   },
   "docs/RANKS.md": {
-    "mtime": 1793311655.2713041,
-    "seen": 1793312085.8215833,
-    "ast_hash": "feddc8bfdbba9ea3679f11d6405d7792",
+    "mtime": 1793312118.7552834,
+    "seen": 1793312125.1708043,
+    "ast_hash": "624e7d2b2f206350f634111ded3d183a",
     "semantic_hash": ""
   },
   "life/economy/build.gradle": {
