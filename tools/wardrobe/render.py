@@ -298,7 +298,7 @@ def lineup(chars: list[Character], out: Path):
     img = Image.fromarray(canvas.img.clip(0, 255).astype(np.uint8)).resize((W_, H_), Image.LANCZOS)
     d = ImageDraw.Draw(img)
     d.text((44, 30), "Naruto Minecraft", font=font(46, True), fill=(62, 38, 28))
-    d.text((46, 88), "First look at the shinobi built on the Village Friends resident", font=font(20), fill=(120, 92, 70))
+    d.text((46, 88), "Shinobi of the Hidden Leaf, built on the Village Friends resident", font=font(20), fill=(120, 92, 70))
     for x, ch in zip(xs, chars):
         tw = d.textlength(ch.spec["name"], font=font(22, True))
         d.text((x - tw / 2, 820), ch.spec["name"], font=font(22, True), fill=(62, 38, 28))

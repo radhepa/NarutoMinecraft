@@ -106,7 +106,7 @@ def planes(style, feminine, hair, skin, iris, white, pattern=None, glow=False, b
             out.append(Plane("HEAD", side * 2.75, bt + .375, -4.03, .5, .35, brow(hair)))
             out.append(Plane("HEAD", side * 2.875, -1.725, -4.02, 1.25, .55, blush(skin)))
         elif brows == "bold":
-            out.append(Plane("HEAD", side * 2.1, bt - .1, -4.03, 2.6, 1.1, lash(hair)))
+            out.append(Plane("HEAD", side * 2.1, bt + .3, -4.03, 2.6, 1.0, lash(hair)))
         else:
             out.append(Plane("HEAD", side * 2, bt + .275, -4.03, 2, .55, brow(hair)))
     for name in marks:

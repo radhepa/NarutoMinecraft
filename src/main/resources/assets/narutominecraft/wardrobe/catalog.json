@@ -60,7 +60,8 @@
     "h03_uchiha_spikes",
     "h04_long_straight",
     "h05_swept_spikes",
-    "h06_low_ponytail"
+    "h06_low_ponytail",
+    "h07_bowl_cut"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -74,13 +75,15 @@
     "t04_genin_track_jacket",
     "t05_kunoichi_qipao",
     "t06_anbu_armor",
-    "t07_hyuga_robe"
+    "t07_hyuga_robe",
+    "t08_green_jumpsuit"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
     "b02_uchiha_shorts",
     "b03_genin_track_pants",
-    "b04_kunoichi_shorts"
+    "b04_kunoichi_shorts",
+    "b05_green_leggings"
   ],
   "characters": [
     {
@@ -203,6 +206,24 @@
       "eye_style": "starlit",
       "feminine": false,
       "complexion": 0,
+      "scale": 14
+    },
+    {
+      "id": "green_beast",
+      "name": "Green Beast",
+      "tagline": "Green bodysuit, orange leg warmers, the protector as a belt, a glossy bowl cut and bold brows",
+      "face": "f01_shinobi",
+      "hair": "h07_bowl_cut",
+      "headwear": null,
+      "top": "t08_green_jumpsuit",
+      "bottom": "b05_green_leggings",
+      "palette": "GREEN_BEAST",
+      "hair_color": "RAVEN",
+      "eye_color": "DARK",
+      "eye_style": "soft_glint",
+      "feminine": false,
+      "brows": "bold",
+      "complexion": 1,
       "scale": 14
     }
   ]

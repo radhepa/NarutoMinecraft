@@ -1,0 +1,154 @@
+{
+  "id": "h07_bowl_cut",
+  "kind": "hair",
+  "name": "Bowl Cut",
+  "gender": "unisex",
+  "texture": "hair/h07_bowl_cut.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bowl_crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -8.6,
+        -4.5
+      ],
+      "size": [
+        9,
+        1,
+        9
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bowl_fringe",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -8.0,
+        -4.6
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        37,
+        0
+      ]
+    },
+    {
+      "id": "bowl_right",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -7.6,
+        -4.6
+      ],
+      "size": [
+        1,
+        4,
+        9
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "bowl_left",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        3.6,
+        -7.6,
+        -4.6
+      ],
+      "size": [
+        1,
+        4,
+        9
+      ],
+      "uv": [
+        21,
+        11
+      ]
+    },
+    {
+      "id": "bowl_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -7.6,
+        3.6
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        42,
+        11
+      ]
+    }
+  ],
+  "description": "Glossy bowl cut with a blunt fringe and squared sides."
+}
