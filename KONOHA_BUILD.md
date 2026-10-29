@@ -146,7 +146,7 @@ whole village and about 220 by the end of Beta 3 (ROADMAP §6: about 300 and abo
 
 | Building | Built from | Footprint | P0 | B1 | B2 | B3 | Later | Total | Notes |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|
-| Apartment block | program `apartment_block` | 14 x 11 | 1 | 3 | 1 |  | 1 | 6 | 9 flats; the player's block and two more candidate blocks in Beta 1 |
+| Leaf apartment block | program `leaf_block` | 35 x 15 | 1 | 3 | 1 |  | 1 | 6 | 12 flats (10 x 8 inside: main room, kitchenette, bathroom, genkan, closet, balcony); the player's block (flat 3a) and two more candidate blocks in Beta 1 |
 | Round apartment tower | program `apartment_tower` | 13 x 13 |  | 1 |  |  | 2 | 3 | 12 flats; the skyline's round towers (check against the art) |
 | Shops with flats above | program `shop_apartment` | 13 x 11 |  | 2 | 2 |  | 2 | 6 | 4 flats over 2 shops; the Beta 2 ones include the village inn, which lodges the foreign teams in Beta 3 |
 
@@ -183,11 +183,11 @@ whole village and about 220 by the end of Beta 3 (ROADMAP §6: about 300 and abo
 | Main gate and guard booth | one-off + hand finish | ~30 x 12, 20 tall |  | 1 |  |  |  | 1 | あん on the doors |
 | Ramen stand | one-off + hand finish | 7 x 6 |  | 1 |  |  |  | 1 | A VF tavern by bounds |
 | Prologue hills: the hideout and a ruined shrine | hand | ~120 x 120 |  | 1 |  |  |  | 1 | South of the wall, inside the border |
-| Jonin standby station | program `standby_station` `shop_house` variant + hand dressing | 11 x 11 |  |  | 1 |  |  | 1 | Beside the Residence; 6 workplace seats (jonin, day); opens to the player at Jonin |
-| Gate barracks | program `gate_barracks` `apartment_block` variant | 14 x 11 |  | 1 |  |  |  | 1 | By the main gate: 6 bunks for the gate guards, the Shiranui neighbourhood next to it |
+| Jonin standby station | program `shop_house` variant + hand dressing | 11 x 11 |  |  | 1 |  |  | 1 | Beside the Residence; 6 workplace seats (jonin, day); opens to the player at Jonin |
+| Gate barracks | program `leaf_block` variant | 14 x 11 |  | 1 |  |  |  | 1 | By the main gate: 6 bunks for the gate guards, the Shiranui neighbourhood next to it |
 | Village park | hand | ~40 x 40 |  | 1 |  |  |  | 1 | Trees, a pond, benches; missions' park and pet hideouts |
 | Potter's kiln yard | one-off + hand finish | 15 x 15 |  |  | 1 |  |  | 1 | A potter family's climbing kiln and drying racks; a potter's stall on the market street |
-| Farmstead outside the gate | program `farmstead` `farm` + hand terrain | ~40 x 30 |  |  | 2 |  |  | 2 | Farmhouse, barn, pen and fields; an orchard and a woodlot nearby |
+| Farmstead outside the gate | program `farm` + hand terrain | ~40 x 30 |  |  | 2 |  |  | 2 | Farmhouse, barn, pen and fields; an orchard and a woodlot nearby |
 | Smithy and forge | one-off + hand finish | 11 x 11 |  |  | 1 |  |  | 1 | Behind the weapon shop |
 | Bath house | one-off + hand finish | 17 x 15 |  |  | 1 |  |  | 1 |  |
 | Ino-Shika-Cho memorial | hand | 9 x 9 |  |  | 1 |  |  | 1 | By the Nara forest |
@@ -348,7 +348,7 @@ Where the story needs a place, it is part of a building above:
 | `home_corner` | L-shaped corner house | Beta 1 | planned |
 | `home_garden` | Larger house in a walled garden | Beta 1 | planned |
 | `home_riverside` | Riverside house with a veranda over the bank | Beta 2 | planned |
-| `apartment_block` | Walk-up apartment block, 2 to 4 storeys | Phase 0 | prototype |
+| `leaf_block` | Leaf apartment block: walk-up, 2 to 4 storeys, three flats a landing (HOME.md flat plan) | Phase 0 | prototype |
 | `apartment_tower` | Round apartment tower, 4 to 6 storeys, large tank on top | Beta 1 | planned |
 | `shop_apartment` | Shops on the ground floor, flats above (also the inns) | Beta 1 | planned |
 | `shop_tea_house` | Small shop-house with an open front, awning and noren | Phase 0 | prototype |
@@ -830,7 +830,8 @@ look.
   `src/main/resources/assets/narutominecraft/{blockstates,models/block/konoha,textures/block/konoha,items}`.
   `python3 tools/konoha/blocks.py --check` validates them against `blocks.json`.
 - **Design programs** (`tools/konoha/kit.py`, `buildings/`): a two-storey home, a tea house with an
-  awning, noren and lanterns, and a nine-flat apartment block with a gallery, external stairs and
+  awning, noren and lanterns, and the twelve-flat Leaf apartment block (the home session's flat plan,
+  `blueprints/leaf_block.homes.json` with its homes.json rows) with a gallery, external stairs and
   rooftop tanks. Each writes `tools/konoha/blueprints/<id>.json` with its markers.
 - **Renders** (`tools/konoha/render_kit.py` with `preview.py`, drawing through the wardrobe's
   rasterizer, the VF preview renderer): custom blocks are drawn from the compiled assets; vanilla
@@ -842,7 +843,7 @@ look.
 | [blocks.png](docs/renders/konoha/blocks.png), [blocks/](docs/renders/konoha/blocks/) | Every prototype block, assembled, and a close-up of each |
 | [home_plaster_2f.png](docs/renders/konoha/home_plaster_2f.png), [cutaway](docs/renders/konoha/home_plaster_2f_cutaway.png) | The home, front and back; both floors |
 | [shop_tea_house.png](docs/renders/konoha/shop_tea_house.png), [cutaway](docs/renders/konoha/shop_tea_house_cutaway.png) | The tea house; the shop floor and the owner's rooms |
-| [apartment_block.png](docs/renders/konoha/apartment_block.png), [cutaway](docs/renders/konoha/apartment_block_cutaway.png) | The apartment block; the ground and first-floor flats |
+| [leaf_block.png](docs/renders/konoha/leaf_block.png), [cutaway](docs/renders/konoha/leaf_block_cutaway.png) | The Leaf apartment block; the ground and third-floor flats |
 | [street.png](docs/renders/konoha/street.png) | All three on one street with poles, wires, lanterns and a tree |
 
 ```

@@ -44,8 +44,8 @@
    "status": "planned"
   },
   {
-   "id": "apartment_block",
-   "name": "Walk-up apartment block, 2 to 4 storeys",
+   "id": "leaf_block",
+   "name": "Leaf apartment block: walk-up, 2 to 4 storeys, three flats a landing (HOME.md flat plan)",
    "makes": "apartments",
    "first": "P0",
    "status": "prototype"
@@ -303,17 +303,17 @@
   },
   {
    "group": "apartments",
-   "id": "apartment_block",
-   "name": "Apartment block",
+   "id": "leaf_block",
+   "name": "Leaf apartment block",
    "how": "program",
-   "footprint": "14 x 11",
+   "footprint": "35 x 15",
    "counts": {
     "P0": 1,
     "B1": 3,
     "B2": 1,
     "later": 1
    },
-   "notes": "9 flats; the player's block and two more candidate blocks in Beta 1"
+   "notes": "12 flats (10 x 8 inside: main room, kitchenette, bathroom, genkan, closet, balcony); the player's block (flat 3a) and two more candidate blocks in Beta 1"
   },
   {
    "group": "apartments",
@@ -576,7 +576,7 @@
    "group": "landmarks",
    "id": "gate_barracks",
    "name": "Gate barracks",
-   "how": "program `apartment_block` variant",
+   "how": "program `leaf_block` variant",
    "footprint": "14 x 11",
    "counts": {
     "B1": 1

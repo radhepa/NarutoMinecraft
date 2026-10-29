@@ -132,7 +132,7 @@ def md_buildings(bld):
                 "|---|---|---|---:|---:|---:|---:|---:|---:|---|"]
         for b in bs:
             cnt = [b["counts"].get(s, 0) for s in SLICES]
-            how = b["how"].replace("program", f"program `{b['id']}`", 1) if b["how"].startswith("program") else b["how"]
+            how = b["how"].replace("program", f"program `{b['id']}`", 1) if b["how"].startswith("program") and "`" not in b["how"] else b["how"]
             out.append(f"| {b['name']} | {how} | {b['footprint']} | " + " | ".join(str(n) if n else "" for n in cnt) +
                        f" | {sum(cnt)} | {b['notes']} |")
         out.append("")

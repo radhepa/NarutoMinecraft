@@ -611,12 +611,6 @@
     "ast_hash": "3720f0f45da74b624d5bc28499fd0571",
     "semantic_hash": ""
   },
-  "tools/konoha/buildings/apartment_block.py": {
-    "mtime": 1793308488.8484018,
-    "seen": 1793308677.8801792,
-    "ast_hash": "775aa5364e57f8835bf3a7a220b5d8a4",
-    "semantic_hash": ""
-  },
   "tools/konoha/buildings/home_plaster_2f.py": {
     "mtime": 1793307750.3720312,
     "seen": 1793308677.880181,
@@ -630,9 +624,9 @@
     "semantic_hash": ""
   },
   "tools/konoha/catalogue.py": {
-    "mtime": 1793310190.6199653,
-    "seen": 1793310204.6986952,
-    "ast_hash": "dc4e9fe2d57f22cf98ae52c217630c05",
+    "mtime": 1793310391.2184005,
+    "seen": 1793310403.6340017,
+    "ast_hash": "58bc1ff318970634d02f29d913df4b01",
     "semantic_hash": ""
   },
   "tools/konoha/kit.py": {
@@ -660,15 +654,21 @@
     "semantic_hash": ""
   },
   "tools/konoha/street.py": {
-    "mtime": 1793307940.623252,
-    "seen": 1793308677.8801954,
-    "ast_hash": "15664649985c984e164cf359e8a683b9",
+    "mtime": 1793310345.557445,
+    "seen": 1793310403.6340158,
+    "ast_hash": "a9fc61382d4806aa90831c7a6755d90f",
     "semantic_hash": ""
   },
   "KONOHA_BUILD.md": {
-    "mtime": 1793310198.391881,
-    "seen": 1793310204.6988122,
-    "ast_hash": "d0a8a0863382e4718809637b716d6b27",
+    "mtime": 1793310391.2708263,
+    "seen": 1793310403.634186,
+    "ast_hash": "f3db9abf0c7162c3a2e2100b425d7370",
+    "semantic_hash": ""
+  },
+  "tools/konoha/buildings/leaf_block.py": {
+    "mtime": 1793310345.4959676,
+    "seen": 1793310403.6339953,
+    "ast_hash": "e4c13ff7fa85e24f77dd88827513c59d",
     "semantic_hash": ""
   }
 }
