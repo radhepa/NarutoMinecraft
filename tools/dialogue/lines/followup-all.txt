@@ -72,3 +72,5 @@ There's fresh snow and no one to throw it at. You know what that means.
 I walked by the river alone last evening. It was too quiet. I'd like our walks back.
 ## followup.ritual_missed.lantern_night  stage=teen|adult  player_stage=teen|adult
 I haven't sent a lantern out on the lake since we stopped going. I've been saving one for us.
+## followup.ritual_missed.home_dinner  stage=child
+My mum keeps asking when you're coming back for dinner. You should come back!

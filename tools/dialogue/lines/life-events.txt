@@ -4,302 +4,302 @@
 #! fn: reveal_character
 
 # -- promoted (good; shinobi below Jonin) -------------------------------------------------------------
-## life.promoted
+## life.promoted  stage=teen|adult
 I made Chunin, {player}! I've been carrying the vest around all day like an idiot.
 They promoted me this morning. I keep touching the new flak vest to check it's real.
 I've been put up a rank. More missions, more paperwork, more chances to get it right.
-## life.promoted.response.congratulate  fn=deepen_bond
+## life.promoted.response.congratulate  fn=deepen_bond  stage=teen|adult
 Thank you! You're the first one I wanted to tell, honestly.
 Hearing you say it makes it feel real. Thank you, {player}.
-## life.promoted.response.comfort  fn=react
+## life.promoted.response.comfort  fn=react  stage=teen|adult
 Comfort? It's good news! ...Though I suppose I am a bit nervous. Thank you.
-## life.promoted.response.help  fn=deepen_bond
+## life.promoted.response.help  fn=deepen_bond  stage=teen|adult
 You'd help me get ready for the new missions? I'd like that a lot.
-## life.promoted.response.shrug  fn=react
+## life.promoted.response.shrug  fn=react  stage=teen|adult
 Oh. Right. I suppose it's not that big a deal to anyone else.
-## life.promoted.update
+## life.promoted.update  stage=teen|adult
 The new rank's harder than I thought. Good harder. I've stopped tripping over the vest.
 A month in the new rank and I've led my first squad. Nobody got lost. Mostly.
 
 # -- passed an exam (good; Academy students and Genin) -------------------------------------------------
-## life.passed_exam
+## life.passed_exam  stage=teen|adult
 I passed! The written part had a question about supply lines I'd literally dreamt about.
 I passed the exam, {player}! I was sure I'd failed the last section.
 The results went up on the board this morning. My name's on it. On the good side!
-## life.passed_exam.response.congratulate  fn=deepen_bond
+## life.passed_exam.response.congratulate  fn=deepen_bond  stage=teen|adult
 Thank you! I studied until my eyes crossed. Worth it.
-## life.passed_exam.response.comfort  fn=react
+## life.passed_exam.response.comfort  fn=react  stage=teen|adult
 Ha, no need to comfort me, I passed! But it's sweet of you.
-## life.passed_exam.response.help  fn=deepen_bond
+## life.passed_exam.response.help  fn=deepen_bond  stage=teen|adult
 Help me study for the next one? Deal. You bring the snacks.
-## life.passed_exam.response.shrug  fn=react
+## life.passed_exam.response.shrug  fn=react  stage=teen|adult
 ...You could at least pretend to be impressed.
-## life.passed_exam.update
+## life.passed_exam.update  stage=teen|adult
 I've started on the next level of study already. The scrolls are thicker. So am I, around the eyes.
 My teacher says the exam result opened a few doors. I'm trying not to let it go to my head.
 
 # -- a proud moment (good) -------------------------------------------------------------------------
-## life.proud_moment
+## life.proud_moment  stage=teen|adult
 I did something today I'm actually proud of. I fixed the neighbour's well pump all by myself.
 Guess who won the dumpling-folding contest at the market? Me. Twenty-six in five minutes.
 My work got hung in the tea house window. People stop and look. I've been walking past it on purpose.
-## life.proud_moment.response.congratulate  fn=deepen_bond
+## life.proud_moment.response.congratulate  fn=deepen_bond  stage=teen|adult
 Thank you! I wanted someone to say it, and I'm glad it was you.
-## life.proud_moment.response.comfort  fn=react
+## life.proud_moment.response.comfort  fn=react  stage=teen|adult
 I'm not upset, {player}! I'm proud! ...Come and be proud with me.
-## life.proud_moment.response.help  fn=deepen_bond
+## life.proud_moment.response.help  fn=deepen_bond  stage=teen|adult
 You want to help with the next one? Oh, I'd love that.
-## life.proud_moment.response.shrug  fn=react
+## life.proud_moment.response.shrug  fn=react  stage=teen|adult
 Right. Never mind. It's small, I know.
-## life.proud_moment.update
+## life.proud_moment.update  stage=teen|adult
 People still mention it, you know. I pretend I'm tired of it. I'm not.
 That proud moment? It turned into a habit. I've been doing more of it ever since.
 
 # -- a new pet (good) ------------------------------------------------------------------------------
-## life.new_pet
+## life.new_pet  stage=teen|adult
 I've a cat now! Well, the cat has me. It turned up and won't leave.
 I took in one of the kennel pups. It's chewed two sandals and my heart.
 A sparrow with a bad wing landed on my sill. I'm nursing it. It has a name already.
-## life.new_pet.response.congratulate  fn=deepen_bond
+## life.new_pet.response.congratulate  fn=deepen_bond  stage=teen|adult
 Thank you! Come and meet the little terror. It loves visitors. Or their ankles.
-## life.new_pet.response.comfort  fn=react
+## life.new_pet.response.comfort  fn=react  stage=teen|adult
 Comfort me? It's a pet, not a curse! Though my sandals might disagree.
-## life.new_pet.response.help  fn=deepen_bond
+## life.new_pet.response.help  fn=deepen_bond  stage=teen|adult
 You'll help me walk it? Thank you. It pulls like a cart horse.
-## life.new_pet.response.shrug  fn=react
+## life.new_pet.response.shrug  fn=react  stage=teen|adult
 It's just an animal to you, I suppose. It's a lot more than that to me.
-## life.new_pet.update
+## life.new_pet.update  stage=teen|adult
 The pet's settled in. It sleeps on my chest now, which is lovely and very heavy.
 My little companion learned a trick. It sits for fish. Only for fish.
 
 # -- a new baby in the family (good) ----------------------------------------------------------------
-## life.new_baby_in_family
+## life.new_baby_in_family  stage=teen|adult
 There's a new baby in the family! Tiny, red-faced and very loud. We're all smitten.
 My cousin had the baby last night. I'm an aunt! Or an uncle, or a something. A proud something!
 We've a new little one at home. Nobody's slept, and nobody minds.
-## life.new_baby_in_family.response.congratulate  fn=deepen_bond
+## life.new_baby_in_family.response.congratulate  fn=deepen_bond  stage=teen|adult
 Thank you! I'll pass it on. They'll want to meet you, when the little one's bigger.
-## life.new_baby_in_family.response.comfort  fn=react
+## life.new_baby_in_family.response.comfort  fn=react  stage=teen|adult
 Ha! I suppose I could use comfort. Nobody's slept in four days.
-## life.new_baby_in_family.response.help  fn=deepen_bond
+## life.new_baby_in_family.response.help  fn=deepen_bond  stage=teen|adult
 You'd help? Bring rice, bring soup, bring anything. We're living on tea.
-## life.new_baby_in_family.response.shrug  fn=react
+## life.new_baby_in_family.response.shrug  fn=react  stage=teen|adult
 Oh. Well. Babies are everywhere, I suppose. This one's ours, though.
-## life.new_baby_in_family.update
+## life.new_baby_in_family.update  stage=teen|adult
 The baby smiled at me! Properly. Everyone says it's wind. It wasn't wind.
 The little one's growing so fast. Already grabbing everyone's hair.
 
 # -- a new hobby (good) ----------------------------------------------------------------------------
-## life.new_hobby
+## life.new_hobby  stage=teen|adult
 I've taken up the shamisen. The neighbours have taken up earplugs.
 I'm learning to throw pots at the potter's on the hill. Mine come out like ducks.
 I've started growing herbs on the roof. Six pots. Four of them alive.
-## life.new_hobby.response.congratulate  fn=deepen_bond
+## life.new_hobby.response.congratulate  fn=deepen_bond  stage=teen|adult
 Thank you! I'm terrible at it, which is half the fun.
-## life.new_hobby.response.comfort  fn=react
+## life.new_hobby.response.comfort  fn=react  stage=teen|adult
 I don't need comforting, {player}! Unless you've heard me play. Then maybe.
-## life.new_hobby.response.help  fn=deepen_bond
+## life.new_hobby.response.help  fn=deepen_bond  stage=teen|adult
 You want to try it with me? Oh, yes. Two beginners are better than one.
-## life.new_hobby.response.shrug  fn=react
+## life.new_hobby.response.shrug  fn=react  stage=teen|adult
 Not your thing? Fine. More fun for me.
-## life.new_hobby.update
+## life.new_hobby.update  stage=teen|adult
 I've improved! The neighbours only wince now. They used to flee.
 The new hobby stuck. I've been at it every evening. I'm almost not bad.
 
 # -- a step toward their dream (good) ---------------------------------------------------------------
-## life.dream_step
+## life.dream_step  stage=teen|adult
 I took a real step toward my dream today, {player}. Not a big one. A real one.
 Someone who knows the trade said I've got a gift for it. Me! For my dream!
 I saved enough to start, at last. The thing I've always wanted. It's beginning.
-## life.dream_step.response.congratulate  fn=deepen_bond
+## life.dream_step.response.congratulate  fn=deepen_bond  stage=teen|adult
 Thank you. You believing in me makes it feel possible.
-## life.dream_step.response.comfort  fn=react
+## life.dream_step.response.comfort  fn=react  stage=teen|adult
 It's not bad news, I promise. Though it's scary. Thank you for seeing that.
-## life.dream_step.response.help  fn=deepen_bond
+## life.dream_step.response.help  fn=deepen_bond  stage=teen|adult
 You'd help me toward it? I won't forget that, {player}.
-## life.dream_step.response.shrug  fn=react
+## life.dream_step.response.shrug  fn=react  stage=teen|adult
 I thought you'd care more. It's my dream. Never mind.
-## life.dream_step.update
+## life.dream_step.update  stage=teen|adult
 The step I took led to another one. I can see the road now. It's long, but it's there.
 I've been working at the dream every day since. It's slow. But it's moving.
 
 # -- moving house (neither) ------------------------------------------------------------------------
-## life.moving
+## life.moving  stage=teen|adult
 I'm moving house! Two streets over, closer to the river. My back already hurts thinking of it.
 We're leaving the old place. Too many stairs, too few windows. I'll miss it anyway.
 I've found a new home. Smaller, but the light in the mornings is wonderful.
-## life.moving.response.congratulate  fn=deepen_bond
+## life.moving.response.congratulate  fn=deepen_bond  stage=teen|adult
 Thank you! New start, new neighbours. Come round once I've found the teacups.
-## life.moving.response.comfort  fn=deepen_bond
+## life.moving.response.comfort  fn=deepen_bond  stage=teen|adult
 Thank you. It is a bit sad, leaving. You understood that without me saying.
-## life.moving.response.help  fn=deepen_bond
+## life.moving.response.help  fn=deepen_bond  stage=teen|adult
 You'll carry boxes? You wonderful person. There are a lot of boxes.
-## life.moving.response.shrug  fn=react
+## life.moving.response.shrug  fn=react  stage=teen|adult
 Right. Just another house to you. It's been home to me for years.
-## life.moving.update
+## life.moving.update  stage=teen|adult
 The new place feels like mine now. I put the old door charm up on the new door.
 I've settled in. The neighbours are good. One of them bakes, which helps.
 
 # -- lost to a rival (hard; shinobi) ----------------------------------------------------------------
-## life.rival_loss
+## life.rival_loss  stage=teen|adult
 I lost to my rival. In front of everyone. I can still hear them laughing.
 They beat me, {player}. Clean. I didn't even land a hit.
 I trained for months for that match, and lost in a minute.
-## life.rival_loss.response.congratulate  fn=react
+## life.rival_loss.response.congratulate  fn=react  stage=teen|adult
 Congratulations? I LOST. Were you even listening?
-## life.rival_loss.response.comfort  fn=deepen_bond
+## life.rival_loss.response.comfort  fn=deepen_bond  stage=teen|adult
 Thank you. I needed someone to say it wasn't the end of the world.
-## life.rival_loss.response.help  fn=deepen_bond
+## life.rival_loss.response.help  fn=deepen_bond  stage=teen|adult
 Train with me? So next time I don't lose? Yes. Please.
-## life.rival_loss.response.shrug  fn=react
+## life.rival_loss.response.shrug  fn=react  stage=teen|adult
 I know losing's nothing to you. It's everything to me right now.
-## life.rival_loss.update
+## life.rival_loss.update  stage=teen|adult
 I fought them again. I didn't win, but I lasted five times longer. Thank you for not letting me quit.
 I've stopped thinking about that loss every night. Only some nights now. Progress.
 
 # -- injured (hard; shinobi) -----------------------------------------------------------------------
-## life.injured
+## life.injured  stage=teen|adult
 I'm off missions for a while. My ankle's bandaged up like a festival lantern.
 I got hurt on a mission. Nothing permanent, the medics say. It doesn't feel that way.
 Three cracked ribs. Laughing hurts. Please don't make me laugh.
-## life.injured.response.congratulate  fn=react
+## life.injured.response.congratulate  fn=react  stage=teen|adult
 Congratulations on... my injury? I think you misheard me.
-## life.injured.response.comfort  fn=deepen_bond
+## life.injured.response.comfort  fn=deepen_bond  stage=teen|adult
 Thank you. Lying still is the hardest part. It helps that you came.
-## life.injured.response.help  fn=deepen_bond
+## life.injured.response.help  fn=deepen_bond  stage=teen|adult
 You'll run errands for me? Bless you. The market's a long way on one leg.
-## life.injured.response.shrug  fn=react
+## life.injured.response.shrug  fn=react  stage=teen|adult
 Fine. I'll just lie here, then. On my own.
-## life.injured.update
+## life.injured.update  stage=teen|adult
 I'm back on my feet! A little stiff. The medics say I'm healing faster than they expected.
 The bandages are off. I've a scar now. It's quite a good one, actually.
 
 # -- sick (hard) -----------------------------------------------------------------------------------
-## life.sick
+## life.sick  stage=teen|adult
 I've caught something awful. Everything aches and nothing tastes right.
 Fever's come on. I'm not contagious, they say. I'd still keep your distance.
 I've been in bed three days. I've counted every knot in the ceiling.
-## life.sick.response.congratulate  fn=react
+## life.sick.response.congratulate  fn=react  stage=teen|adult
 ...Congratulations? On my fever? I'm too tired to be cross. Almost.
-## life.sick.response.comfort  fn=deepen_bond
+## life.sick.response.comfort  fn=deepen_bond  stage=teen|adult
 Thank you, {player}. Just hearing a friendly voice makes the fever feel smaller.
-## life.sick.response.help  fn=deepen_bond
+## life.sick.response.help  fn=deepen_bond  stage=teen|adult
 You'll fetch me ginger from the herbalist? Thank you. I'll pay you back in soup, later.
-## life.sick.response.shrug  fn=react
+## life.sick.response.shrug  fn=react  stage=teen|adult
 Right. I'll just be ill quietly, then.
-## life.sick.update
+## life.sick.update  stage=teen|adult
 I'm better! I ate a whole bowl of rice this morning and nearly cried with joy.
 The fever broke. I'm still weak as a kitten, but I'm up.
 
 # -- trouble at the shop (hard; working civilians) --------------------------------------------------
-## life.shop_trouble
+## life.shop_trouble  stage=teen|adult
 The shop roof's leaking right over the stock. I've lost half a week's goods.
 A supplier let me down. No delivery, and the festival orders are due.
 Business has been slow for weeks. I keep counting the till and it keeps coming up short.
-## life.shop_trouble.response.congratulate  fn=react
+## life.shop_trouble.response.congratulate  fn=react  stage=teen|adult
 Congratulations? On losing stock? That's a strange thing to say, {player}.
-## life.shop_trouble.response.comfort  fn=deepen_bond
+## life.shop_trouble.response.comfort  fn=deepen_bond  stage=teen|adult
 Thank you. It's good to say it to someone who isn't a customer.
-## life.shop_trouble.response.help  fn=deepen_bond
+## life.shop_trouble.response.help  fn=deepen_bond  stage=teen|adult
 You'd lend a hand? Even carrying crates would help. Thank you.
-## life.shop_trouble.response.shrug  fn=react
+## life.shop_trouble.response.shrug  fn=react  stage=teen|adult
 It's my living, {player}. Not just a shop.
-## life.shop_trouble.update
+## life.shop_trouble.update  stage=teen|adult
 The shop's back on its feet. New roof, new supplier, and a queue at the door this morning.
 Business picked up. I'm not out of the woods, but I can see the edge of them.
 
 # -- a quarrel with a friend (hard) -----------------------------------------------------------------
-## life.friend_quarrel
+## life.friend_quarrel  stage=teen|adult
 I've fallen out with an old friend. Over nothing, really. That's the worst part.
 We had words. Me and a friend of twenty years. Neither of us will say sorry first.
 My closest friend won't speak to me. I said something I shouldn't have.
-## life.friend_quarrel.response.congratulate  fn=react
+## life.friend_quarrel.response.congratulate  fn=react  stage=teen|adult
 Congratulations? I just told you I lost a friend.
-## life.friend_quarrel.response.comfort  fn=deepen_bond
+## life.friend_quarrel.response.comfort  fn=deepen_bond  stage=teen|adult
 Thank you. You're a good friend. I hope I can be one again, to them.
-## life.friend_quarrel.response.help  fn=deepen_bond
+## life.friend_quarrel.response.help  fn=deepen_bond  stage=teen|adult
 You'd talk to them for me? Or with me? I'd like that. I don't know where to start.
-## life.friend_quarrel.response.shrug  fn=react
+## life.friend_quarrel.response.shrug  fn=react  stage=teen|adult
 I suppose friends come and go for you. They don't for me.
-## life.friend_quarrel.update
+## life.friend_quarrel.update  stage=teen|adult
 We made up. I said sorry, they said sorry, and then we both laughed for no reason.
 We're talking again. Carefully. It's better than silence.
 
 # -- a setback on their dream (hard) ----------------------------------------------------------------
-## life.dream_setback
+## life.dream_setback  stage=teen|adult
 It's not going to happen. Not this year. Maybe not ever. My dream, I mean.
 I tried for it, {player}, and they said no. Just no.
 Everything I'd saved for my dream went on something else. Something I couldn't say no to.
-## life.dream_setback.response.congratulate  fn=react
+## life.dream_setback.response.congratulate  fn=react  stage=teen|adult
 ...Congratulations. Right. I'll just go, then.
-## life.dream_setback.response.comfort  fn=deepen_bond
+## life.dream_setback.response.comfort  fn=deepen_bond  stage=teen|adult
 Thank you. I needed someone to tell me it's not over. Even if I don't believe them yet.
-## life.dream_setback.response.help  fn=deepen_bond
+## life.dream_setback.response.help  fn=deepen_bond  stage=teen|adult
 You'd help me try again? I... yes. Let's try again.
-## life.dream_setback.response.shrug  fn=react
+## life.dream_setback.response.shrug  fn=react  stage=teen|adult
 It's just a dream to you. It was my whole life.
-## life.dream_setback.update
+## life.dream_setback.update  stage=teen|adult
 I picked it back up. The dream. I've a new way in. Thank you for not letting me drop it.
 The setback was a detour. I'm on another road to the same place now.
 
 # -- a loss in the family (hard) --------------------------------------------------------------------
-## life.family_loss
+## life.family_loss  stage=teen|adult
 We lost my grandfather last week. Quietly, in his sleep. The house is so still.
 Someone in my family passed. I don't really know what to do with my hands.
 We buried an old relative at the shrine this morning. I keep thinking I hear them in the next room.
-## life.family_loss.response.congratulate  fn=react
+## life.family_loss.response.congratulate  fn=react  stage=teen|adult
 ...I said we lost someone, {player}.
-## life.family_loss.response.comfort  fn=deepen_bond
+## life.family_loss.response.comfort  fn=deepen_bond  stage=teen|adult
 Thank you. Just sit with me a while. You don't have to say anything.
-## life.family_loss.response.help  fn=deepen_bond
+## life.family_loss.response.help  fn=deepen_bond  stage=teen|adult
 You'd help with the shrine offerings? Thank you. There's so much to do and I can't think.
-## life.family_loss.response.shrug  fn=react
+## life.family_loss.response.shrug  fn=react  stage=teen|adult
 I see. I'll grieve on my own, then.
-## life.family_loss.update
+## life.family_loss.update  stage=teen|adult
 It's easier now. I still set out their cup sometimes. I think I'll keep doing that.
 We had the memorial. Everyone told stories. We laughed more than I expected.
 
 # -- heartbreak (hard; teens and adults, never told as romance to a child) -------------------------------
-## life.heartbreak
+## life.heartbreak  stage=teen|adult
 Someone I cared about decided they didn't care back. That's all. That's everything.
 I let someone close, and they left. I'm all right. I'm not all right.
 Something I hoped would last didn't. I'm trying not to make a fuss.
-## life.heartbreak.response.congratulate  fn=react
+## life.heartbreak.response.congratulate  fn=react  stage=teen|adult
 That's... not the response I hoped for.
-## life.heartbreak.response.comfort  fn=deepen_bond
+## life.heartbreak.response.comfort  fn=deepen_bond  stage=teen|adult
 Thank you. I needed someone kind today. I'm glad it was you.
-## life.heartbreak.response.help  fn=deepen_bond
+## life.heartbreak.response.help  fn=deepen_bond  stage=teen|adult
 Take me out of the house? Yes. Anywhere that isn't here.
-## life.heartbreak.response.shrug  fn=react
+## life.heartbreak.response.shrug  fn=react  stage=teen|adult
 Right. It's nothing to you. I knew that.
-## life.heartbreak.update
+## life.heartbreak.update  stage=teen|adult
 I'm better. I sleep through the night now. You helped more than you know.
 I saw them in the market and it didn't hurt. Much. That's something.
 
 # -- a few personality voices for the news itself ---------------------------------------------------
-## life.promoted.fiery
+## life.promoted.fiery  stage=teen|adult
 I'M A CHUNIN! Okay, okay. I'm calm. I'M A CHUNIN!
-## life.promoted.proud
+## life.promoted.proud  stage=teen|adult
 I was promoted. As expected. ...I celebrated anyway. Quietly.
-## life.promoted.shy
+## life.promoted.shy  stage=teen|adult
 They... promoted me. I don't know why. I mean, thank you, but... me?
-## life.new_pet.gentle
+## life.new_pet.gentle  stage=teen|adult
 A little three-legged dog followed me home. I couldn't say no. It's sleeping in my lap right now.
-## life.new_pet.pragmatic
+## life.new_pet.pragmatic  stage=teen|adult
 I took a cat for the shop. Mouse control. ...It sleeps on the till and I buy it fish. Don't laugh.
-## life.sick.stern
+## life.sick.stern  stage=teen|adult
 Ill. Confined to bed. It's intolerable. I've done all my stretches twice.
-## life.sick.warmhearted
+## life.sick.warmhearted  stage=teen|adult
 I'm sick, and nobody's eating properly at home because I'm not cooking. It's a disaster.
-## life.proud_moment.meticulous
+## life.proud_moment.meticulous  stage=teen|adult
 I balanced the ledger to the last ryo for the first time this year. Not a single error.
-## life.proud_moment.imaginative
+## life.proud_moment.imaginative  stage=teen|adult
 Someone bought one of my paintings! A stranger! They said it made them think of the sea.
-## life.new_hobby.curious
+## life.new_hobby.curious  stage=teen|adult
 I've started taking apart old locks. Did you know some have seven pins? I didn't! Now I do!
-## life.dream_setback.fiery
+## life.dream_setback.fiery  stage=teen|adult
 They told me I can't! So I'm going to do it twice as hard! ...After I sulk a bit.
-## life.rival_loss.proud
+## life.rival_loss.proud  stage=teen|adult
 I lost. It will not happen again. I don't wish to discuss it further.
 
 # -- children: the news a kid has ---------------------------------------------------------------------
@@ -375,3 +375,87 @@ Thanks. Maybe tomorrow I'll say sorry. Maybe.
 You'll come with me to say sorry? Okay. You do the talking first.
 ## life.friend_quarrel.response.shrug  stage=child  fn=react
 You don't get it. It was MY turn.
+## life.promoted  stage=child
+I made Genin! I've got my own headband now. I'm sleeping in it.
+## life.promoted.update  stage=child
+Being a Genin is mostly chasing cats and weeding gardens. I still love it.
+## life.promoted.response.congratulate  stage=child  fn=deepen_bond
+Thanks! You can touch the headband. Just once. Careful of the metal bit.
+## life.promoted.response.comfort  stage=child  fn=react
+Why would I need cheering up? I'm a ninja now!
+## life.promoted.response.help  stage=child  fn=deepen_bond
+You'll help me practise for my first mission? Yes! Let's go right now!
+## life.promoted.response.shrug  stage=child  fn=react
+You're not even impressed. Everybody else was impressed.
+## life.new_baby_in_family  stage=child
+I've got a baby brother! Or sister. It's very small and it cries a lot. I like it anyway.
+## life.new_baby_in_family.update  stage=child
+The baby grabbed my finger and wouldn't let go. It's really strong for a baby.
+## life.new_baby_in_family.response.congratulate  stage=child  fn=deepen_bond
+Thanks! When it's bigger I'm going to teach it everything I know.
+## life.new_baby_in_family.response.comfort  stage=child  fn=react
+Well, it IS really loud at night. So, thanks, I guess.
+## life.new_baby_in_family.response.help  stage=child  fn=deepen_bond
+You'll help me make it laugh? It likes funny faces. Do your funniest one.
+## life.new_baby_in_family.response.shrug  stage=child  fn=react
+It's not boring. It's a whole new person!
+## life.dream_step  stage=child
+My teacher said I've got real talent for the thing I want to be when I grow up! Real talent!
+## life.dream_step.update  stage=child
+I've been practising every day since my teacher said that. I'm getting even better.
+## life.dream_step.response.congratulate  stage=child  fn=deepen_bond
+Thanks! When I'm famous I'll say you were the first one I told.
+## life.dream_step.response.comfort  stage=child  fn=react
+It's not a sad thing. It's the best thing!
+## life.dream_step.response.help  stage=child  fn=deepen_bond
+You'll practise with me? Okay! You can be my helper. My first helper ever.
+## life.dream_step.response.shrug  stage=child  fn=react
+You don't think I can do it. I can, you know.
+## life.rival_loss  stage=child
+I lost the race at the Academy. To THEM. They did a little dance after.
+## life.rival_loss.update  stage=child
+I raced them again! I didn't win, but I was only one step behind. One step!
+## life.rival_loss.response.congratulate  stage=child  fn=react
+I said I LOST. Weren't you listening?
+## life.rival_loss.response.comfort  stage=child  fn=deepen_bond
+Thanks. I'm still a bit cross, though. A lot cross.
+## life.rival_loss.response.help  stage=child  fn=deepen_bond
+You'll train with me so I win next time? Deal! Let's start tomorrow. No, today!
+## life.rival_loss.response.shrug  stage=child  fn=react
+You don't care. Fine. I'll beat them without you.
+## life.injured  stage=child
+I sprained my wrist falling off the climbing wall. It's all wrapped up. Look.
+## life.injured.update  stage=child
+My wrist's better! I can throw again. I'm not climbing that wall for a while, though.
+## life.injured.response.congratulate  stage=child  fn=react
+It's not good, it HURTS.
+## life.injured.response.comfort  stage=child  fn=deepen_bond
+Thanks. It only hurts when I move it. Or when I think about it.
+## life.injured.response.help  stage=child  fn=deepen_bond
+You'll carry my bag? Thanks! It's really heavy with only one hand.
+## life.injured.response.shrug  stage=child  fn=react
+You didn't even ask if it hurt.
+## life.family_loss  stage=child
+My grandpa died. Everyone's being really quiet at home. I don't know what to do.
+## life.family_loss.update  stage=child
+We put flowers at the shrine for my grandpa. I picked the yellow ones. They were his favourite.
+## life.family_loss.response.congratulate  stage=child  fn=react
+Why would you say that? That's mean.
+## life.family_loss.response.comfort  stage=child  fn=deepen_bond
+Thanks. Can you just sit with me a bit? You don't have to talk.
+## life.family_loss.response.help  stage=child  fn=deepen_bond
+You'll come to the shrine with me? Okay. I didn't want to go by myself.
+## life.family_loss.response.shrug  stage=child  fn=react
+You don't even care. Go away.
+## life.dream_setback  stage=child
+The teacher said I'm not ready for the thing I wanted to do. I have to wait a whole year.
+## life.dream_setback.update  stage=child
+I'm still practising. A year isn't that long. I'll be so good by then.
+## life.dream_setback.response.congratulate  stage=child  fn=react
+That's not a good thing! Did you even hear me?
+## life.dream_setback.response.comfort  stage=child  fn=deepen_bond
+Thanks. I still really want it. I'm not giving up.
+## life.dream_setback.response.help  stage=child  fn=deepen_bond
+You'll help me get ready for next year? Okay. That makes it feel better.
+## life.dream_setback.response.shrug  stage=child  fn=react
+You think it's silly. It's not silly to me.

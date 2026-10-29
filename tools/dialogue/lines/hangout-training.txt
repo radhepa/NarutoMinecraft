@@ -16,6 +16,7 @@ A spar? You're on. Don't go easy on me.
 Yes! I've been itching for a proper match.
 ## hangout.spar.no.busy
 I'm tied up right now. {when}? I'll be fresh and dangerous by then.
+## hangout.spar.no.busy  stage=teen|adult
 Can't, I'm on duty. Ask me {when}.
 ## hangout.spar.no.not_today
 My arms are still sore from yesterday. Another day.
@@ -133,6 +134,7 @@ We finished just as the sun came up over the posts. Look at the light on the gra
 ## hangout.roof_race.ask
 Race me over the rooftops? Gate to the Hokage Rock, no ground allowed!
 I bet you can't catch me from the market to the Academy roof. Want to try?
+## hangout.roof_race.ask  stage=teen|adult
 Rooftop race, {player}. Loser buys the drinks.
 ## hangout.roof_race.invite
 Rooftops at dusk. Start at the bell tower. Don't be slow.
@@ -144,8 +146,9 @@ Yes! Last one to the Academy roof is a mouldy rice cake!
 I've something on. {when}? My legs'll be fresher.
 I can't right now. Race me {when} instead.
 ## hangout.roof_race.no.not_today
-My knee's playing up. Another day.
 Not today, the tiles are slippery after the rain.
+## hangout.roof_race.no.not_today  stage=teen|adult
+My knee's playing up. Another day.
 ## hangout.roof_race.no.not_their_thing
 Jumping across rooftops for fun? I'll stay on the ground, thank you.
 ## hangout.roof_race.no.not_close_enough

@@ -17,7 +17,7 @@ A note, folded small: "Ichiraku, after sundown? Bring an appetite."
 ## hangout.ramen.yes
 Ramen? Always. Let's go before the queue gets long.
 Yes! I've been thinking about pork broth since breakfast.
-## hangout.ramen.no.busy
+## hangout.ramen.no.busy  stage=teen|adult
 I can't right now, I'm stuck with work. {when}, though? I'd love a bowl then.
 Not today, I've got a shift. Ask me again {when}.
 ## hangout.ramen.no.not_today
@@ -138,8 +138,9 @@ Barbecue tonight? I've been craving grilled beef all week.
 Let's get a grill and a pile of meat, {player}. My stomach's demanding it.
 The barbecue house has a free table at seven. Come with me?
 ## hangout.barbecue.invite
-A table at the barbecue house, after dark. I've booked for us.
 Barbecue tonight? I'll start the grill. You bring the hunger.
+## hangout.barbecue.invite  stage=teen|adult
+A table at the barbecue house, after dark. I've booked for us.
 ## hangout.barbecue.yes
 Barbecue! You're speaking my language.
 Yes. I'll man the tongs. You stay back from the fire.
@@ -197,47 +198,51 @@ The grill master taught us the secret sauce! Well, half of it. The other half's 
 ## hangout.home_dinner.ask
 Come to dinner at mine tonight? Nothing fancy. Just rice, fish and us.
 I'd like you to eat at my table, {player}. Tonight, if you can.
+## hangout.home_dinner.ask  stage=teen|adult
 I'm cooking tonight and I always make too much. Come and help me eat it.
-## hangout.home_dinner.invite
+## hangout.home_dinner.invite  stage=teen|adult
 Dinner at my house tonight. Come hungry, and don't bring anything. I mean it.
 A note: "Supper at mine. Six bells. Your place is already set."
 ## hangout.home_dinner.yes
 Dinner at yours? I'd love that. I'll be there on time.
 Thank you. I'll bring a good appetite.
 ## hangout.home_dinner.no.busy
-Tonight's no good, sadly. {when}? I'll cook something special.
 I'm busy this evening. Could you come {when} instead?
-## hangout.home_dinner.no.not_today
+## hangout.home_dinner.no.busy  stage=teen|adult
+Tonight's no good, sadly. {when}? I'll cook something special.
+## hangout.home_dinner.no.not_today  stage=teen|adult
 The house is a mess tonight. Another evening, {player}.
 Not tonight. I'm too tired to cook, and I won't feed you leftovers.
-## hangout.home_dinner.no.not_their_thing
+## hangout.home_dinner.no.not_their_thing  stage=teen|adult
 I don't really have people over. I'm sorry. Let's eat out instead some time.
-## hangout.home_dinner.no.not_close_enough
+## hangout.home_dinner.no.not_close_enough  stage=teen|adult
 At my home? I don't have many people over. Maybe when we're closer.
 ## hangout.home_dinner.arrive
-Come in, shoes there. Sit, sit. The soup's nearly ready.
 Welcome! Mind the low beam. Everyone hits it once.
+## hangout.home_dinner.arrive  stage=teen|adult
+Come in, shoes there. Sit, sit. The soup's nearly ready.
 ## hangout.home_dinner.rough
 Well. That was a little stiff, wasn't it. Thank you for coming all the same.
-## hangout.home_dinner.fine
+## hangout.home_dinner.fine  stage=teen|adult
 Thank you for coming. It was nice to cook for someone.
 ## hangout.home_dinner.good
-You ate everything! That's the best compliment a cook can get.
 That was a warm evening. You're welcome back any night.
+## hangout.home_dinner.good  stage=teen|adult
+You ate everything! That's the best compliment a cook can get.
 ## hangout.home_dinner.great
 That felt like family. Like you'd always been at that table.
 I'll remember tonight. All of us round the table, and you right in the middle of it.
-## hangout.home_dinner.stood_up
+## hangout.home_dinner.stood_up  stage=teen|adult
 I set the table for you. The rice went cold. Everyone kept looking at the door.
 ## hangout.home_dinner.ritual
 You've got your own bowl at my house now. It lives on the shelf, waiting for you.
 ## hangout.home_dinner.ritual_missed
 Your bowl's still on my shelf. It hasn't been used in weeks.
-## hangout.home_dinner.highlight.1
+## hangout.home_dinner.highlight.1  stage=teen|adult
 You've got your own bowl now. I bought it this week. It's got a little leaf on it.
 ## hangout.home_dinner.highlight.2
 The little ones made you a seat cushion. It's lumpy. They're so proud.
-## hangout.home_dinner.highlight.3
+## hangout.home_dinner.highlight.3  stage=teen|adult
 The rice came out perfect, every grain shining. I never manage that! You're lucky.
 ## hangout.home_dinner.highlight.4
 My grandmother told her ghost story, the one about the fox, and you jumped! Ha!
@@ -257,3 +262,27 @@ We stayed up talking by the brazier after everyone else went to bed.
 The neighbours heard us laughing and came over with sweets. The whole lane's here now!
 ## hangout.home_dinner.highlight.12
 My father toasted you at the table. He never toasts anyone. He meant it.
+
+# == children: kids' versions where the lines above suit grown-ups only =============================
+## hangout.ramen.no.busy  stage=child
+I've got Academy homework. Loads of it. {when}? Ask me then!
+## hangout.home_dinner.invite  stage=child
+My mum says you can come for dinner tonight. She's making the good fish. Come!
+## hangout.home_dinner.no.not_today  stage=child
+I can't tonight. My big cousins are visiting and there's no room at the table.
+## hangout.home_dinner.no.not_their_thing  stage=child
+I don't really like having friends over. My house is boring. Can we go somewhere else?
+## hangout.home_dinner.no.not_close_enough  stage=child
+My mum only lets real friends come for dinner. Maybe later, okay?
+## hangout.home_dinner.fine  stage=child
+That was nice. My mum says you've got good manners.
+## hangout.home_dinner.stood_up  stage=child
+You didn't come to dinner! My mum made extra and everything.
+## hangout.home_dinner.highlight.1  stage=child
+Look, my mum got you your own bowl! It's got a leaf on it! It's yours now!
+## hangout.home_dinner.highlight.3  stage=child
+My dad let us roll the rice balls ourselves. Yours is shaped like a cat!
+## hangout.bathhouse.fine  stage=child
+That was okay. I got all wrinkly.
+## hangout.bathhouse.ritual_missed  stage=child
+We haven't been to the bathhouse in ages. I miss the cold milk after.

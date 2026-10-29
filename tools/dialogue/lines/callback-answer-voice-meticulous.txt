@@ -1,0 +1,93 @@
+# Callbacks for questions/voice-meticulous.txt, in the meticulous asker's voice.
+#! fn: callback
+#! tags: personality=meticulous
+
+## callback.answer.q.pref.meti_fold_or_toss.a1
+You fold your clothes every night. I think of that when the whole street is untidy. Comforting.
+
+## callback.answer.q.pref.meti_fold_or_toss.a2
+Still using the chair? I've written you a folding guide. Six steps. Illustrated.
+
+## callback.answer.q.pref.meti_fold_or_toss.a3
+Folded on good days, you said. Was yesterday a good day? I'm asking for my records.
+
+## callback.answer.q.pref.meti_pouch_order.a1
+Kunai left, shuriken right. Your pouch system. I've recommended it to two Genin since.
+
+## callback.answer.q.pref.meti_pouch_order.a2
+"Whatever fits." I still think about your tool pouch at night. It troubles me.
+
+## callback.answer.q.pref.meti_pouch_order.a3
+Snacks first in the pouch. I've been reconsidering my priorities since you said that.
+
+## callback.answer.q.values.meti_five_minutes.a1
+Late is late, you agreed. I arrived at the bathhouse at six exactly today. Nobody else did.
+
+## callback.answer.q.values.meti_five_minutes.a2
+Five minutes late is fine, you said. I counted the three hundred seconds again today. Still long.
+
+## callback.answer.q.values.meti_five_minutes.a3
+Never late for a mission, perhaps for tea. Your rule. I've adopted it. Grudgingly.
+
+## callback.answer.q.values.meti_late_assume.a1
+I tried your way. When my apprentice was late, I assumed something happened. Something had. A loose goat.
+
+## callback.answer.q.values.meti_late_assume.a2
+When someone's late, they don't care, you said. Harsh. I've caught myself agreeing twice this week.
+
+## callback.answer.q.values.meti_late_assume.a3
+They lost track of time, your guess for lateness. I gave my nephew a sundial. Your idea, more or less.
+
+## callback.answer.q.pref.meti_plan_day.a1
+Do you number your morning list? You never told me. I've been wondering.
+
+## callback.answer.q.pref.meti_plan_day.a2
+No plan, just see where the day goes. I tried it yesterday. I needed a lie down by noon.
+
+## callback.answer.q.pref.meti_plan_day.a3
+A rough plan, your way. I've started writing rough plans. They're still very neat.
+
+## callback.answer.q.dilemma.meti_crooked_picture.a1
+You'd straighten a crooked picture right away. I did it at the tea house today. Nobody noticed. I did.
+
+## callback.answer.q.dilemma.meti_crooked_picture.a2
+Mention a crooked picture politely, your way. I mentioned one to my neighbour. They thanked me. Shocking.
+
+## callback.answer.q.dilemma.meti_crooked_picture.a3
+You'd leave a crooked picture be. I still couldn't. But I admire you for it.
+
+## callback.answer.q.values.meti_good_enough.a1
+Good enough, sometimes. I left a fence unpainted on one side today, like you'd do. It nearly killed me. Not really.
+
+## callback.answer.q.values.meti_good_enough.a2
+Good enough is never good enough, we agreed. I resanded the shelf twice. It's perfect now.
+
+## callback.answer.q.values.meti_good_enough.a3
+Chores yes, kunai no. Your line on good enough. I've pinned it above my workbench.
+
+## callback.answer.q.values.meti_missed_moment.a1
+You've missed a moment perfecting something too. Then you understand. I set a deadline for myself this week. Kept it.
+
+## callback.answer.q.values.meti_missed_moment.a2
+Set a deadline, write it down, we said. I've a calendar now. Colour-coded.
+
+## callback.answer.q.values.meti_missed_moment.a3
+You rush, I polish. We balance out. I've thought about that a lot. It's a nice thought.
+
+## callback.answer.q.pref.meti_desk.a1
+Your desk is tidy. Brushes in a row. I think about it whenever I see a messy counter.
+
+## callback.answer.q.pref.meti_desk.a2
+Creative chaos on your desk. I'm still pretending I didn't hear. For our friendship.
+
+## callback.answer.q.pref.meti_desk.a3
+Tidy on top, messy in the drawers. I opened my own drawer today. Ha. You were right about drawers.
+
+## callback.answer.q.advice.meti_ledger.a1
+I fixed my ledger that very night, like you said. Every line balances. I slept like a stone.
+
+## callback.answer.q.advice.meti_ledger.a2
+I rested, then did the sums on my day off, as you advised. Painful. Sensible. Done.
+
+## callback.answer.q.advice.meti_ledger.a3
+Ten lines a night, your schedule. My ledger's nearly caught up. You understand me.

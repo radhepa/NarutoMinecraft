@@ -220,3 +220,429 @@ Hi {player}. I've lined up my shuriken by size. Don't touch them. You can look.
 
 ## greet.child  stage=child  personality=steadfast  fn=reveal_character
 Hi {player}. I promised to feed my neighbour's fish every day. I haven't missed once. Not once.
+
+# --- Second pass: more children's greetings ---
+
+## greet.child  stage=child  personality=warmhearted  fn=deepen_bond
+{player}! You look sad. Do you want a hug? I give good ones. My grandma says so.
+Hi {player}! I brought two sweet buns today in case I saw you. I saw you! Here!
+{player}! Your sleeve's torn. My mum can fix it. She fixes everything. Come on!
+{player}, are you cold? Have my mittens. I've got pockets, my hands can live in there.
+Hi {player}! I told the dango lady you're my friend so she'd give you an extra one. Did it work?
+{player}! Did anybody say good morning to you today? Good morning! Now somebody has!
+{player}, I made you a rice ball! It's a bit square. I'm still learning round.
+Hi! You can share my umbrella, {player}. It's small, but we can both fit if we squish.
+{player}! I patted the old dog by the gate for you, because you weren't there to do it.
+
+## greet.child  stage=child  personality=thoughtful  fn=reveal_character
+{player}, if you dig a hole all the way down, where do you come out? I've been wondering all week.
+Hi {player}. I read a whole book about clouds. There are ten kinds. I'm going to see all of them.
+{player}, why do grown-ups always say "when you're older"? How much older?
+Hi. I was thinking about whether the fish in the river know they're in the Leaf. Probably not.
+{player}, my teacher says patience is a jutsu. I don't think it is. But I'm being patient about it.
+Hi {player}. I counted the steps up to the shrine. One hundred and eight. Then I counted down. Same.
+{player}, do you think the Hokage ever gets told off? By who?
+Hi {player}. I like asking questions more than knowing answers. Answers are the end of the fun.
+{player}, I tried to remember my earliest memory. It's a duck. I don't know why it's a duck.
+
+## greet.child  stage=child  personality=playful  fn=react
+{player}! Pull my finger! ...No, wait, I'm not allowed to do that one anymore.
+Hi {player}! I'm invisible right now! You can't see me! ...Why are you looking at me?
+{player}! I hid your name in a riddle and told the whole class. Nobody guessed it!
+Ha! {player}! I put a sticker on your back ages ago and you've been walking around with it!
+{player}! Let's play the floor is lava! Starting... now! Get on the bench!
+Hi {player}! Knock knock! ...You have to say who's there! That's how it works!
+{player}! I swapped my friend's lunch with my lunch. Now I have eel! I don't like eel!
+{player}! Wanna see a magic trick? Pick a card. Any card. I only have one card. That one.
+
+## greet.child  stage=child  personality=adventurous  fn=reveal_character
+{player}! I found a tunnel under the old bridge! It goes in really far! Bring a lantern!
+Hi {player}! When I grow up I'm going to walk to the sea. All the way. With a dog.
+{player}! I climbed the big persimmon tree on our street! I could see the Academy roof!
+Hey {player}! The merchants at the gate are from somewhere with camels! What's a camel? I need to see one!
+{player}! I made a map of all the secret places! It's got eleven places! Want to go to number four?
+Hi! I tried to follow the river to the end, but it went past the wall and the guard sent me back.
+{player}! I'm going to explore the Forest of Death one day! When I'm a Chunin! Maybe a Jonin, actually.
+{player}! I packed an adventure bag! It's got a rice ball, a rope, and a frog. The frog's optional.
+Hey {player}! I went all the way to the far training ground by myself! It took ages! It was great!
+
+## greet.child  stage=child  personality=meticulous  fn=reveal_character
+{player}. Your headband's crooked. No, the other way. ...There. That was bothering me.
+Hi {player}. I've written my homework in my neatest writing. Even the dots on the i's are round.
+{player}, I sorted all my marbles by colour, then by size, then by how much I like them.
+Hi. Our class lines up by height and I'm always in the right place. Some people aren't.
+{player}, you dropped a leaf from your hair. I picked it up. Do you want it back?
+Hi {player}. I know the Academy timetable by heart. Ask me anything. Third lesson Thursday? Hand signs.
+{player}. I fold my clothes into squares every night. My brother just throws his on the floor.
+Hi {player}. I've got three pencils. One for writing, one for drawing, one for emergencies.
+{player}, your sandal's untied. Left foot. A ninja should never have an untied sandal.
+
+## greet.child  stage=child  personality=steadfast  fn=reveal_character
+{player}. I said I'd wait for you by the bridge, so I waited. I always do what I said.
+Hi {player}. I do fifty throws every day after lessons. Even on rainy days. Even when I'm sad.
+{player}, I'm carrying water for the old lady next door. I do it every morning. She gives me plums.
+Hi. My dad says a promise is a promise, even a little one. So I keep the little ones too.
+{player}. I'm not the best in class. But I'm never late and I never give up. That's my thing.
+Hi {player}. I've practised the same hand sign every day for a month. It's nearly smooth now.
+{player}, if you ever need someone to help, I'll help. I don't say it to everyone.
+Hi. I always sit in the same seat at the Academy. Third row, by the window. It's my seat.
+{player}! I fixed my little sister's kite. Took all day. It flies now.
+
+## greet.child  stage=child  personality=reserved  fn=reveal_character
+...Hi. You can sit here. I don't mind.
+{player}. ...I like your sandals.
+Hm. Hi. I was watching the ants. They're busy.
+...{player}. I saw you at the Academy. You're okay.
+Hi. I don't talk much in class. I talk to you, though. Sometimes.
+...Want half my rice cracker? Here.
+{player}. ...The others are noisy today. You're not.
+Hi. I'm drawing. ...You can look. If you want.
+...{player}. Hi. That's all.
+
+## greet.child  stage=child  personality=imaginative  fn=reveal_character
+{player}! The puddle by the tea house is a portal. If you jump in, you go to a land of dango.
+Hi {player}! I'm pretending the Hokage Rock faces are giants sleeping. Shh. Don't wake them.
+{player}! I made up a jutsu! It's called Hundred Butterfly Sneeze. I can't do it yet.
+Hi {player}! My cat is secretly a Jonin. It goes on missions at night. That's why it's so tired.
+{player}! If clouds were food, that one would be a rice ball and that one would be ramen.
+Hi! The swing tree talks if you listen really hard. Today it said "ow" because someone climbed it.
+{player}! I'm writing a story where you're a hero and you fight a giant radish! You win!
+Hi {player}! When I close my eyes the lanterns turn into fireflies. Try it!
+{player}! I painted my hand blue. Now I'm part river. I can't wash it off. I don't want to.
+
+## greet.child  stage=child  personality=pragmatic  fn=reveal_character
+{player}, if you trade me your pickles, I'll trade you two marbles. That's a good deal. Trust me.
+Hi {player}. I found three ryo on the bridge. I'm saving them. Three ryo is a whole dango.
+{player}, I do errands for the grocer. Five errands is one sweet bun. I'm on errand four.
+Hi. Why buy a kunai when you can borrow one? That's what I tell my friends. They don't lend me theirs.
+{player}, I've worked out that if I eat slowly, my lunch lasts longer. It's science.
+Hi {player}. My big brother pays me to do his chores. I pay my friend half to do them. I keep the rest.
+{player}, don't waste your snacks before lunch. Then you're hungry at lunch AND you've got no snacks.
+Hi! I'm selling paper cranes. One ryo each. They're really good. Well, they're cranes.
+{player}, the dango lady gives a discount if you buy at closing. I always go at closing.
+
+## greet.child  stage=child  personality=curious  fn=react
+{player}! How does chakra work? Is it in your blood? Is it in your toes? Can it come out your ears?
+Hi {player}! What's in your flat? Do you have a window? Can you see the Rock from it?
+{player}! I saw a man with a big scroll on his back! Who was that? Was he important? Was it a secret scroll?
+Hey {player}! How do the gate guards know who's allowed in? Do they remember everyone's face?
+{player}! Do you dream? What about? I dreamt about a fish that could talk. It was very rude.
+Hi {player}! Why is the bathhouse water hot? Is there a fire under it? Can I see the fire?
+{player}! The Aburame kid in my class has bugs! Real bugs! Where do they live? In their sleeves?
+Hey {player}! Do you know what's on the top floor of the Hokage Residence? Nobody will tell me!
+
+## greet.child  stage=child  personality=protective  fn=react
+{player}, the big kids were throwing stones by the river. Don't go that way. Come with me.
+Hi {player}. I'm walking my little brother home. You can walk with us. It's safer in a group.
+{player}! You've got a scratch! Here, I've got a plaster. I always carry plasters.
+Hi {player}. If anyone's mean to you at the Academy, tell me. I'm small but I'm loud.
+{player}, it's getting dark. Do you know your way home? I'll show you if you don't.
+Hi. I keep an eye on the little kids at lunch. Somebody has to. The teachers eat too slow.
+{player}, don't climb that wall. My friend fell off it last week. They're fine, but don't.
+Hi {player}! I scared off a goose for you. It was going to chase you. You're welcome.
+{player}, stay out of the deep part of the river. I mean it. Promise me.
+
+## greet.child  stage=child  personality=gentle  fn=reveal_character
+Hi {player}. Shh, there's a sleeping cat on the step. Let's be quiet so we don't wake it.
+{player}, I found a ladybird. It's resting on my finger. Do you want to hold it? Gently.
+Hi {player}. I give the ducks my crusts every morning. The small one gets the biggest bit.
+{player}, my friend was crying at lunch, so I gave them my egg. They stopped crying. Eggs help.
+Hi. I'm picking flowers for my grandma. Only the ones that have fallen. The others are still growing.
+{player}, there's a worm on the path. Let's put it back on the grass. There we go.
+Hi {player}. I like being quiet with people. You're good at being quiet with.
+{player}, the puppy at the clinic has a sore paw. I visit it after lessons. It wags at me now.
+Hi {player}. You look tired. You can lean on the wall with me. Walls are good for resting.
+
+## greet.child  stage=child  personality=proud  fn=reveal_character
+{player}, I can write my whole name in perfect calligraphy. Even the hard bits.
+Hi {player}. My family's been in the Leaf for ages. Like, ages and ages. Ask anyone.
+{player}, I was picked first for the relay team. First. Before everyone.
+Hi. I don't need help with my homework. ...Okay, maybe the third question. Just that one.
+{player}, I beat my brother at arm wrestling. He says he let me win. He didn't.
+Hi {player}. My shuriken hit the middle of the post. Dead middle. The teacher said "hm." That means good.
+{player}, I didn't cry when I fell off the swing. Not even a bit. My eyes were just watery.
+Hi {player}. One day I'll be on the Rock. My face. Bigger than all the others.
+{player}, I'm the best at hiding in the whole Academy. You'll never find me. Don't try. I mean, try.
+
+## greet.child  stage=child  personality=fiery  fn=react
+{player}! I did a hundred push-ups! Well, a hundred tries! Some of them were push-downs!
+{player}! Race me to the gate! Ready, set, I've already started! Come on!
+Hi {player}! I yelled at the training post so loud a bird fell out of the tree! It was fine!
+{player}! I'm SO hungry I could eat Ichiraku's whole pot! The pot too!
+{player}! Somebody said I couldn't climb the swing tree, so I climbed it twice! Then got told off!
+Hey {player}! I've decided you're my rival! You don't get a say! Rivals forever!
+{player}! I lost at tag and I'm not even mad! I'm a bit mad! Let's go again!
+{player}! I'm going to master every jutsu in the Academy library! Starting with the first page!
+
+## greet.child  stage=child  personality=shy  fn=reveal_character
+Oh! {player}. Um. I was going to say hi, but you said it first. Hi.
+{player}... um, I sat next to you in my head at lunch. I mean. Never mind.
+H-hi. I brought you a drawing but it's in my bag and it's not very good. Maybe tomorrow.
+{player}? You're the only one who asks me things. Um. Thank you.
+Hi... I practised talking to you on the way here. I forgot all of it.
+Um, {player}... can I play too? Only if there's room. There's not room. That's okay.
+H-hello. My face goes red when people look at me. Don't look. Okay, you can look.
+{player}. Um. I like it when you're at the Academy. That's all. Bye. Wait, no. Hi.
+
+## greet.child  stage=child  personality=stern  fn=reveal_character
+{player}. You were slouching in class. A ninja stands straight.
+Hi {player}. You missed a step in your hand signs yesterday. Tiger comes before Dog.
+{player}. I've already done my homework. You should do yours now, not later.
+Hm. {player}. Your kunai pouch is open. That's how you lose things.
+{player}, no running in the corridor. I'm not a teacher. I just think it's a good rule.
+Hi. I practise until I get it right. Then I practise until I can't get it wrong.
+{player}. You laughed at the wrong time in class. The teacher noticed. So did I.
+Hm. {player}. You're improving. Keep it up. That's all I'm saying.
+
+## greet.child  stage=child  time=dawn  fn=react
+{player}! I'm up before my mum! First time ever! The sky's all pink!
+Hi {player}! I'm helping my dad open the shop. I have to sweep. I'm the sweeping manager.
+{player}! It's so early the birds are still yawning! Did you know birds yawn?
+Hi! The bread man gave me a warm roll because I was up so early. Want a bite?
+
+## greet.child  stage=child  time=morning  fn=react
+{player}! The Academy bell's going to ring! Have you got your pencil? I forgot mine!
+Hi {player}! I've got my lunch, my scroll, my pencil... and my other sandal! Phew!
+{player}! Walk to the Academy with me! If we're quick we can swing before the bell!
+Hi! My mum did my hair too tight today. My eyebrows are surprised all the time now.
+{player}! I didn't do my homework! Can you help me before the bell? Only the first bit?
+
+## greet.child  stage=child  time=noon  fn=react
+{player}! Lunch! Lunch lunch lunch! What did you bring? I got fried egg!
+Hi {player}! It's lunch and the swing tree's free! Quick, before the big kids get there!
+{player}! The teacher let us out early for lunch! We were too noisy to teach!
+Hi {player}! I've eaten my whole lunch already. Now it's just lunchtime with no lunch.
+
+## greet.child  stage=child  time=afternoon  fn=react
+{player}! No more lessons today! Do you want to play hide and seek by the river?
+Hi {player}! I'm supposed to be doing homework but the sun's out. The sun's more important.
+{player}! I'm going to the training ground to watch the Genin practise! Come watch with me!
+Hi {player}! My friends are all at home. Can I hang around with you instead?
+
+## greet.child  stage=child  time=evening  fn=react
+{player}! I can smell everyone's dinner! Ours is fish. I can smell yours too. Is yours better?
+Hi {player}! I've got to be home when the shrine bell rings. That's ages away. Probably.
+{player}! I'm going to Ichiraku with my dad! He's letting me have the big bowl!
+Hi! It's bath time soon. I'm hiding. Don't tell anyone where I am.
+
+## greet.child  stage=child  time=night  fn=react
+{player}! I snuck out to see the stars! Look how many! Don't tell!
+Hi... I'm not sleepy. I'm only a bit sleepy. My eyes keep closing on their own.
+{player}! Do you go to bed late? I have to go to bed at eight. It's so unfair.
+
+## greet.child  stage=child  time=late  fn=react
+{player}? It's really late. I'm only up because my baby sister won't stop crying. You should go to sleep.
+Shh! I'm not meant to be awake. I came to get water. Go to bed, {player}, or you'll be sleepy at the Academy.
+
+## greet.child  stage=child  weather=rain  fn=react
+{player}! I'm catching raindrops on my tongue! I've caught about a hundred!
+Hi {player}! My umbrella's got a hole in it, so I'm only half dry. The left half.
+{player}! The river's all fat and brown from the rain! Don't go near it, my mum said.
+Hi! We had to stay inside at lunch because of the rain. We played Hokage says. I was the Hokage.
+{player}! I saw a snail race on the wall! The left one won! I bet my lunch on the right one!
+
+## greet.child  stage=child  weather=thunder  fn=react
+{player}! Count with me! One, two... BOOM! It's two away! What's two away? Is that close?
+Hi {player}... can I stand by you until the thunder stops? I'm not scared. My knees are.
+{player}! My grandma says thunder is the sky's tummy rumbling! It must be SO hungry!
+{player}! The lightning lit up the whole Rock! The faces looked like ghosts! It was so cool!
+
+## greet.child  stage=child  weather=snow  fn=react
+{player}! I made a snow angel! Then I made a snow Hokage! It's just a lump with a hat!
+Hi {player}! My nose is frozen! Is it still there? Check for me!
+{player}! The Academy yard's covered! We're having the biggest snowball war ever! Pick a side!
+Hi! I licked the bridge rail and my tongue stuck! I'm fine now. Don't do it.
+{player}! I'm going sledding down the Rock path on a tea tray! Come watch me crash!
+
+## greet.child  stage=child  season=spring  fn=react
+{player}! The tadpoles are back in the ditch! I've got one in a jar! I named it Pebble!
+Hi {player}! My kite's stuck in the swing tree again. Can you get it? You're taller!
+{player}! I planted a seed and it's come up! It's tiny! It's my baby!
+Hi! Spring means the dango lady does the pink ones! I've had four! My tummy's pink now!
+{player}! I found a bird's nest! There are eggs! Blue ones! I'm not touching them!
+
+## greet.child  stage=child  season=summer  fn=react
+{player}! Shaved ice! I had strawberry! My tongue's red! Look! Bleh!
+Hi {player}! I caught a cicada! It's so loud! Listen! ...It stopped. Wait.
+{player}! We're going swimming in the pool under the old bridge! Come! It's freezing! It's great!
+Hi {player}! I got a mosquito bite on my nose. It's really itchy. Don't laugh.
+{player}! It's too hot for the Academy! The teacher let us do lessons under the swing tree!
+
+## greet.child  stage=child  season=autumn  fn=react
+{player}! I found the biggest maple leaf in the world! It's bigger than my hand! Look!
+Hi {player}! The chestnut man gave me a free one! It was so hot I juggled it!
+{player}! Sports day's coming! I'm in the three-legged race! My partner keeps falling over!
+Hi! I collected a hundred acorns. I don't know what to do with them. Want some?
+{player}! The persimmons on my granny's roof are ripe! She lets me have the low ones!
+
+## greet.child  stage=child  season=winter  fn=react
+{player}! I can see my breath! I'm a dragon! Hhhhaaaa!
+Hi {player}! I've got three scarves on. I can't turn my head. Which way are you?
+{player}! My mum let me have the kotatsu all morning! I didn't want to come out!
+Hi {player}! The pond at the shrine froze! There's a fish under the ice looking at me!
+{player}! New Year's coming! We get money in envelopes! I'm going to buy a kunai! A real one!
+
+## greet.child  stage=child  district=academy  fn=react
+{player}! The swing tree's free! Push me! Higher! HIGHER!
+Hi {player}! I'm waiting outside the staff room. I'm in trouble. It wasn't my fault. Mostly.
+{player}! There's a new target post in the yard! I'm going to hit it first! Before anyone!
+
+## greet.child  stage=child  district=market  fn=react
+{player}! The squid man is grilling! Smell that! I've got one ryo. Is that enough for a leg?
+Hi {player}! I'm helping my mum carry the shopping. She gave me the eggs. I'm walking very carefully.
+{player}! There's a man selling wooden toys by the flower stall! He's got a frog that hops!
+
+## greet.child  stage=child  district=main_street  fn=react
+{player}! I'm counting the lanterns on the main street! I'm on thirty! Don't make me lose count!
+Hi {player}! Is that Ichiraku? It smells like heaven! I'm going to eat there every day when I'm a Genin!
+{player}! The furniture shop has a bed shaped like a boat! I want it so much!
+
+## greet.child  stage=child  district=residential  fn=react
+{player}! We're playing kick the can in the lane! You can play! Don't kick it into Granny's garden!
+Hi {player}! That's my house, the one with the blue door! And that's my window! I'm not in it, I'm here!
+{player}! Our neighbour's rooster chased me! I won! I think! I ran very fast!
+
+## greet.child  stage=child  district=gate  fn=react
+{player}! I'm watching the gate for when my dad comes back from his mission! Wait with me?
+Hi {player}! A cart just came in full of melons! The guard let me count them! Forty-one!
+{player}! When I'm a Genin, I'm going to go out this gate and see EVERYTHING!
+
+## greet.child  stage=child  district=hokage_rock  fn=react
+{player}! Which face is your favourite? Mine's the second one. It looks like it's about to sneeze.
+Hi {player}! I climbed nearly to the top of the stairs! My legs are wobbly! Wobbly but proud!
+{player}! If I stand right here the faces look like they're looking at me! Try it!
+
+## greet.child  stage=child  district=training  fn=react
+{player}! The Genin are practising tree climbing with no hands! One fell off! They're okay!
+Hi {player}! I found a kunai in the grass! It's blunt. Can I keep it? I'm going to keep it.
+{player}! Watch me run across the logs! Don't watch the end part, that's where I fall.
+
+## greet.child  stage=child  district=hospital  fn=react
+Hi {player}. I'm visiting my grandpa. He's got a bad leg. The nurses gave me a sweet.
+{player}! I had my check-up! The medic said I'm healthy as a horse! I neighed! The medic laughed!
+Hi {player}. Are you hurt? Hospitals are scary. Not the nurses. The smell.
+
+## greet.child  stage=child  district=shrine  fn=react
+{player}! I rang the bell so hard! The priest said gently next time. I'll ring it gently next time.
+Hi {player}! I got a fortune! It says great luck! What does yours say? Get one!
+{player}! There are two stone foxes by the gate. I gave them names. Rice and Cake.
+
+## greet.child  stage=child  district=apartments  fn=react
+{player}! You live in this block too? Which floor? I'm on the second! We're nearly neighbours!
+Hi {player}! The stairs are a race track if nobody's on them! Race you to the top!
+{player}! Somebody upstairs is cooking curry! I've been smelling it for an hour! I'm so hungry!
+
+## greet.child  stage=child  band=stranger  fn=reveal_character
+Hi! Are you new? I'm from the Academy. I'm good at throwing and bad at maths.
+Who are you? I haven't seen you before. I know everyone on this street. Almost everyone.
+Hello! My teacher says always say hello to new people. Hello! Now we know each other a bit.
+Hi! You can call me the fastest kid in the Academy. That's not my name. But you can call me it.
+
+## greet.child  stage=child  band=acquaintance  fn=deepen_bond
+{player}! I remembered your name! I said it to myself all the way home last time!
+Hi {player}! You're the one who helped me find my sandal! Thanks again!
+{player}! I've seen you three times this week! That makes us nearly friends!
+Hi {player}! My friend asked who you were. I said you're {player}. Because you are.
+{player}! You waved at me yesterday and I didn't wave back because I had a rice ball in my hand! Hi!
+
+## greet.child  stage=child  band=friend  fn=deepen_bond
+{player}! You're here! Now the day's good! It was okay before, but now it's good!
+Hi {player}! I kept a spot for you on the bench! I sat on it so nobody else could!
+{player}! Want to be in my squad when we play ninja? You can choose your ninja name!
+Hi {player}! I told my mum about you! She says you can come for tea! With biscuits!
+{player}! I learned a new game and you're the first one I'm teaching it to!
+
+## greet.child  stage=child  band=close  fn=deepen_bond
+{player}! You're my best friend. Well, top three. Number one, actually. Don't tell the others.
+Hi {player}! I made us matching bracelets out of grass! They're a bit droopy! Put it on!
+{player}! I missed you yesterday! I played on my own and it was rubbish!
+Hi {player}! I'll tell you my most secret secret. I still sleep with my old cloth rabbit. There. Now you know.
+{player}! When I'm scared I think, what would {player} do? Then I do it. Mostly.
+
+## greet.child  stage=child  band=best  fn=deepen_bond
+{player}! Best friends forever! I wrote it on my desk! Well, I scratched it! Don't tell!
+Hi {player}! I saved you the last sweet in the whole bag. That's how much I like you.
+{player}! When we're both Hokage, we can share the hat! One day each!
+Hi {player}! Even when I'm grumpy, I'm not grumpy at you. Just so you know.
+{player}! You're the first person I want to tell everything to. Like, everything. Ready? A lot happened.
+
+## greet.child  stage=child  player_rank=academy  fn=react
+{player}! The teacher's going to pick partners for sparring tomorrow! I hope I get you! Or not! You're strong!
+Hi {player}! Did you get the hand sign for Boar yet? My fingers won't bend that way!
+{player}! I fell asleep in history class and dreamt about history! So it still counts!
+Hi {player}! Graduation's going to be SO big! Do you think we'll pass? We'll pass! We have to!
+{player}! Let's sneak into the library and read the Jonin scrolls! The ones on the top shelf!
+
+## greet.child  stage=child  player_rank=genin  fn=react
+{player}! I saw your squad going out the gate this morning! You looked so cool!
+Hi Genin {player}! Did your sensei teach you any secret jutsu? You can whisper it!
+{player}! I want a headband like yours! I made one out of paper but it tore!
+Hi {player}! Do you still remember the Academy? Do you miss the swing tree? I'd miss the swing tree.
+{player}! A real Genin said hi to me! That's you! You said hi!
+
+## greet.child  stage=child  player_rank=chunin  fn=react
+{player}! Chunin {player}! Can you teach me to jump onto roofs? Just a low roof?
+Hi {player}! Everyone in my class wants to be a Chunin like you now! Even the one who wanted to be a baker!
+{player}! You're the coolest person in the whole Leaf! After the Hokage! Maybe before!
+
+## greet.child  stage=child  district=river  fn=react
+{player}! I'm making a paper boat race! Yours is the green one! Mine's winning! Mine sank!
+Hi {player}! The heron's back! It's standing on one leg! I've been standing on one leg too! For ages!
+
+## greet.child  stage=child  district=academy  fn=worldbuild
+The Academy janitor keeps the lost balls in a big box under the stairs. There are about fifty.
+If you sit at the back of the classroom, the sun makes you sleepy by the second lesson. Trust me.
+The best bit of the Academy yard is the corner by the fence. The grass is soft for falling on.
+
+## greet.child  stage=child  fn=worldbuild
+The tea house owner gives you a sugar cube if you say the tea smells nice. It always smells nice.
+You can see the whole market from the top of the second bridge if you stand on the rail. Don't stand on the rail.
+The old man at the tool shop lets you hold the shuriken if you promise not to throw them indoors.
+The Inuzuka puppies come out to play at noon. If you sit very still, they climb on you.
+There's a cat that sleeps on the Mission Desk roof every afternoon. The clerks call it the boss.
+
+## greet.child  stage=child  fn=react
+{player}! I've got a wobbly tooth! Wanna see it wobble? Look! Wobble wobble!
+Hi {player}! I learned to tie my headband on by myself! Well, a ribbon. Practising for later!
+{player}! I found a ryo in the gutter! I'm rich! Well, I'm one ryo rich!
+Hi {player}! My little sister copies everything I do. Watch. ...She's not here. But she would.
+{player}! I'm making a list of everyone I like. You're on it. Near the top. Under dango.
+Hi {player}! I saw a Jonin walk up a wall like it was nothing! I tried. I have a bump now.
+{player}! I bet I can name every Hokage face! First, second, third, fourth! I win!
+
+## greet.child  stage=child  player_rank=academy  fn=deepen_bond
+{player}! You sat with me when I didn't have anyone to sit with. I remember that. Hi!
+Hi {player}! Study group by the swing tree after class? It's just us and a lot of snacks.
+
+## greet.child  stage=child  player_rank=academy  fn=react
+{player}! The teacher's in a good mood today! It's because nobody threw a smoke bomb yet!
+Hi {player}! I got my test back! I passed! Only just! But passing's passing!
+{player}! Taijutsu class next! I'm going to win every bout! Or one bout! One's good!
+
+## greet.child  stage=child  player_rank=genin  fn=deepen_bond
+{player}! You still say hi to me even though you're a Genin now! The other Genin don't!
+Hi {player}! I'm going to graduate and be on a squad like yours! Will you show me around the Mission Desk?
+
+## greet.child  stage=child  weather=rain  fn=worldbuild
+When it rains, the Academy lets us play in the big hall. There's a wobbly floorboard that goes squeak.
+
+## greet.child  stage=child  weather=snow  fn=worldbuild
+When it snows, the big kids build a fort by the Academy fence. They let you in if you bring snowballs.
+
+## greet.child  stage=child  time=afternoon  fn=worldbuild
+After lessons the Genin practise on the near training ground. If you're quiet you can watch from the fence.
+
+## greet.child  stage=child  time=evening  fn=worldbuild
+At sunset the dango lady sells the last sticks half price. All the Academy kids know. We run.
+
+## greet.child  stage=child  season=summer  fn=worldbuild
+In summer the bathhouse has cold milk in the ice box. It's the best thing in the whole Leaf.
+
+## greet.child  stage=child  season=autumn  fn=worldbuild
+In autumn the shrine gives out chestnuts after the bell ringing. Only if you ring it gently.
+
+## greet.child  stage=child  season=winter  fn=worldbuild
+In winter the sweet potato cart parks by the Academy at home time. Everyone's hands smell of potato.
+
+## greet.child  stage=child  season=spring  fn=worldbuild
+In spring the Academy plants a new tree in the yard. The youngest class gets to pat the dirt down.

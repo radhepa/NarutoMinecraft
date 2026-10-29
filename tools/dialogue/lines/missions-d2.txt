@@ -1,0 +1,922 @@
+# Board missions, D-rank (part 2): the missions team's templates, one block per template.
+# Same conventions as missions-d1.txt: job=mission_desk is the clerk, untagged lines the client.
+#! kind: cycle
+#! fn: quest
+
+# -- orchard: persimmons from the tallest trees. Slots: client (farmer), orchard ---------------------
+
+## mission.d.orchard.title
+Persimmon Picking, Tall Trees
+
+## mission.d.orchard.brief  job=mission_desk  fn=quest,guide
+{client}'s persimmons at {orchard} are ripe at the very tops. Tree walking welcome, ladders provided. {pay}.
+
+## mission.d.orchard.brief  fn=quest,guide
+The low fruit's picked. The best ones are up top in {orchard}, where my ladder won't reach.
+Twist, don't pull, and lay them in the basket stem up. A bruised persimmon is a sad persimmon.
+
+## mission.d.orchard.accept
+Wonderful. Mind the thin branches. Persimmon wood snaps without warning.
+Good. You'll take a basket home after. Hang them to dry and they'll be sweet by winter.
+
+## mission.d.orchard.decline
+Then the birds get the top ones again. They always do.
+No? I'll ask my nephew. He climbs like a monkey and complains like one too.
+
+## mission.d.orchard.progress
+Look at the colour on that one! Careful, careful. Into the basket.
+Your feet are stuck to the trunk like it's the ground. Show-off.
+
+## mission.d.orchard.success
+Baskets full to the brim and not one bruise. You've a light touch.
+The best crop in years, and it all came down in one piece. Take some home.
+
+## mission.d.orchard.fail
+Half the fruit on the grass. Well, the crows will be happy.
+Not many baskets today. Never mind. The tree will try again next autumn.
+
+## mission.d.orchard.report  job=mission_desk
+Orchard job, done. There's a persimmon on my desk now. I'm choosing to believe it's for me.
+{client} says the top branches are bare for the first time in years. Logged.
+
+## mission.d.orchard.twist.wasps  fn=quest,react
+A wasp nest hangs in the best tree, right where the ripest fruit is. Of course it does.
+
+## mission.d.orchard.twist.stuck_child  fn=quest,react
+A child climbed up after you and now won't move. Clinging to a branch, very high, very quiet.
+
+# -- herb_gathering: herbs for the hospital. Slots: client (a Suzuran), slope, hospital --------------
+
+## mission.d.herb_gathering.title
+Medicinal Herbs, Outer Slopes
+
+## mission.d.herb_gathering.brief  job=mission_desk  fn=quest,guide
+The hospital needs medicinal herbs from {slope}. {client} of the Suzuran will show you which. Deliver to {hospital}. {pay}.
+
+## mission.d.herb_gathering.brief  fn=quest,guide
+Feverfew, mugwort, the little blue-flowered one. Here's a drawing. Cut above the root so it grows back.
+Bring them to {hospital} before evening. Wilted herbs lose half their good.
+
+## mission.d.herb_gathering.accept
+Good. Here's a knife and a cloth bag. Not a sack. They bruise in a sack.
+Thank you. My family has gathered on that slope for six generations. Treat it kindly.
+
+## mission.d.herb_gathering.decline
+Understood. I'll go myself at dawn. The herbs are best then anyway.
+No? The medics will make do with dried stock for another week.
+
+## mission.d.herb_gathering.progress
+That's the right leaf. See the fine hairs underneath? Good eye.
+Leave a few plants in every patch. Always leave some for next year.
+
+## mission.d.herb_gathering.success
+A full bag, every one the right plant. The hospital will be very glad.
+Clean cuts, fresh leaves. You'd make a fine herbalist, if you ever tire of kunai.
+
+## mission.d.herb_gathering.fail
+Too few, and some of these are wilted. We'll go again tomorrow.
+Not enough for the hospital's order. It happens. The slope will keep.
+
+## mission.d.herb_gathering.report  job=mission_desk
+Herbs delivered to the hospital. You smell of mint and mud. Logged.
+{client} checked every stem and found nothing wrong. That's the Suzuran stamp of approval.
+
+## mission.d.herb_gathering.twist.lookalike  fn=quest,react
+Wait. These two leaves look the same, but one smells bitter. A poisonous lookalike. Check every stem.
+
+## mission.d.herb_gathering.twist.snake  fn=quest,react
+The best patch on the slope has a snake coiled right in the middle of it, sunning itself.
+
+# -- hospital_orderly: a day on the wards. Slots: client (medic), ward, garden, wanderer ------------
+
+## mission.d.hospital_orderly.title
+Orderly, One Day on the Wards
+
+## mission.d.hospital_orderly.brief  job=mission_desk  fn=quest,guide
+The hospital wants orderlies for a day on {ward}. Linens, meals, errands for the medics. {client} will meet you. {pay}.
+
+## mission.d.hospital_orderly.brief  fn=quest,guide
+Fresh sheets on every bed in {ward}, meals at noon and six, and run where the medics send you.
+Speak softly, walk softly. Some of these patients haven't slept in days.
+
+## mission.d.hospital_orderly.accept
+Thank you. Wash your hands at the basin. Every time you enter a room.
+Good. If anyone asks you a medical question, fetch a medic. Don't guess.
+
+## mission.d.hospital_orderly.decline
+We'll stretch the shift, then. We always do.
+Understood. The wards will manage, somehow.
+
+## mission.d.hospital_orderly.progress
+The sheets in room four are done? Good. Room five needs water.
+The patient by the window says you're very polite. Keep it up.
+
+## mission.d.hospital_orderly.success
+Every bed clean, every meal served. The medics got their breaks for once.
+You were a real help today. The patients noticed. So did I.
+
+## mission.d.hospital_orderly.fail
+A hard shift, and some things fell through. Go home. Rest. Hospitals are like that.
+Not the smoothest day. Nobody was hurt by it, though. That's what matters here.
+
+## mission.d.hospital_orderly.report  job=mission_desk
+Orderly shift, done. The medics asked if you could come back. Twice.
+Hospital job, logged. Don't worry, that smell of disinfectant fades in a day.
+
+## mission.d.hospital_orderly.twist.wanderer  fn=quest,react
+Bed twelve is empty. {wanderer} has wandered out in slippers and a gown, and could be anywhere.
+
+## mission.d.hospital_orderly.twist.herb_shortage  fn=quest,react
+The medics are out of a herb only the Suzuran gardens grow. Run to {garden} for more.
+
+# -- laundry: a hotel's washing by the river. Slots: client (washer), bank, inn --------------------
+
+## mission.d.laundry.title
+Riverside Laundry for the Inn
+
+## mission.d.laundry.brief  job=mission_desk  fn=quest,guide
+The washers at {bank} have the inn's laundry and too few hands. Wash, wring, dry, deliver to {inn}. {pay}.
+
+## mission.d.laundry.brief  fn=quest,guide
+Sheets from {inn}, a mountain of them. Scrub on the stones, rinse downstream, wring till your arms ache.
+Whites first, coloured last, never together. The inn counts every sheet back.
+
+## mission.d.laundry.accept
+Good! Roll your trousers up, the water's cold this time of year.
+Here's a washboard. You'll be singing the washing songs by noon. Everyone does.
+
+## mission.d.laundry.decline
+More scrubbing for us, then. Our hands are tough. They'd have to be.
+No? The inn's guests will sleep on yesterday's sheets. Not our problem.
+
+## mission.d.laundry.progress
+Wring it harder! Like it owes you money.
+That's the third basket. Hang them high, where the wind is.
+
+## mission.d.laundry.success
+Every sheet white and dry and folded. The inn will think we've hired magic.
+Lovely work. Come back any washing day. We'll teach you the second verse.
+
+## mission.d.laundry.fail
+Damp sheets going back to the inn. They'll complain. They always complain.
+Not our best load. The river's had worse from us.
+
+## mission.d.laundry.report  job=mission_desk
+Laundry, delivered. Your hands are wrinkled like a dried plum. Logged.
+{client} says you can wring a sheet properly. That's not nothing.
+
+## mission.d.laundry.twist.sheet_in_wind  fn=quest,react
+A gust just took a whole sheet off the line. It's sailing over the rooftops like a kite!
+
+## mission.d.laundry.twist.dye_mixup  fn=quest,react
+Someone washed a red sash with the whites. Pink, everywhere. Find which loads can still be saved.
+
+# -- moving_day: a family moves house. Slots: client, old, new --------------------------------------
+
+## mission.d.moving_day.title
+Moving Day Across the Village
+
+## mission.d.moving_day.brief  job=mission_desk  fn=quest,guide
+{client}'s family is moving from {old} to {new}. Boxes, furniture, and a great deal of advice. {pay}.
+
+## mission.d.moving_day.brief  fn=quest,guide
+Everything from {old} to {new} by dark. Boxes are labelled. Mostly labelled.
+Kitchen first. If we can cook tonight, we can survive anything.
+
+## mission.d.moving_day.accept
+Thank you! Mind the doorframe. It's lower than it looks.
+Good. The boxes marked with a circle are fragile. Or is it the cross? Ask me again.
+
+## mission.d.moving_day.decline
+Then it'll take us three days instead of one. Wonderful.
+No? We'll call the cousins. They always break something.
+
+## mission.d.moving_day.progress
+The kitchen's in! Now the futons. Then the rest.
+Careful round that corner! No, the other corner.
+
+## mission.d.moving_day.success
+Everything moved, nothing broken. We're home. A new home. Thank you.
+The tea's already brewing in the new kitchen. Sit, please. You've earned it.
+
+## mission.d.moving_day.fail
+Half here, half there. We'll sleep in the old house one more night.
+Something's broken, and we're not finished. It's still a new start. We'll get there.
+
+## mission.d.moving_day.report  job=mission_desk
+Moving day, logged. You can stop carrying things now. That's a chair, not a box. Put it down.
+{client} says the move went smoother than their wedding. That's a compliment, I think.
+
+## mission.d.moving_day.twist.heirloom  fn=quest,react
+Grandmother's tea set goes by hand. Only by hand. Not in a box, not on the cart. Walk slow.
+
+## mission.d.moving_day.twist.cat_hides  fn=quest,react
+The cat does not want to move. It's found the one spot in the house nobody ever looks.
+
+## mission.d.moving_day.twist.heavy_chest  fn=quest,react
+This old chest won't budge for anyone. It'll take chakra in the arms to get it off the floor.
+
+# -- scroll_sorting: the records room. Slots: client (clerk), room ----------------------------------
+
+## mission.d.scroll_sorting.title
+Sort the Season's Reports
+
+## mission.d.scroll_sorting.brief  job=mission_desk  fn=quest,guide
+The records room at {room} has a season of mission reports to sort. By rank, then by date. {pay}.
+
+## mission.d.scroll_sorting.brief  fn=quest,guide
+D-ranks on the low shelves, C-ranks above. Date order. Use the tags, not the handwriting.
+No reading for fun. Well. A little. Everyone does. Just keep sorting while you do it.
+
+## mission.d.scroll_sorting.accept
+Good. Dust masks are in the drawer. You'll want one by the third shelf.
+Excellent. I've been dreading this for a month. Here's the ledger.
+
+## mission.d.scroll_sorting.decline
+Then the pile grows. It always grows.
+No? I'll sort them myself in my sleep. I already dream about them.
+
+## mission.d.scroll_sorting.progress
+That's spring done. Summer's the big one. Everyone takes missions in summer.
+Some of these reports are written in pencil. Pencil! Put those in the box for recopying.
+
+## mission.d.scroll_sorting.success
+Every shelf in order. I could find a report from last month blindfolded. Thank you.
+Perfect. I'll write your names in the log of the room. Very small. Next to the date.
+
+## mission.d.scroll_sorting.fail
+Half sorted, half muddled. We'll finish another week. The shelves won't run away.
+It's a muddle still. Records rooms are always a muddle. Don't take it to heart.
+
+## mission.d.scroll_sorting.report  job=mission_desk
+Records sorted. Finally. Do you know how long I've waited for that? Logged with joy.
+{client} says the shelves are in order. I'll believe it when I find a file in under a minute.
+
+## mission.d.scroll_sorting.twist.ink_spill  fn=quest,react
+The ink jar tipped. Two reports are black from corner to corner. Copy them fresh before the clerk sees.
+
+## mission.d.scroll_sorting.twist.paper_moths  fn=quest,react
+Little grey moths, all along the bottom shelf. Paper moths. They've been eating the old reports.
+
+# -- shop_inventory: the quarterly count. Slots: client (shopkeeper), store, porter, apprentice ----
+
+## mission.d.shop_inventory.title
+Storeroom Count Before Tax Day
+
+## mission.d.shop_inventory.brief  job=mission_desk  fn=quest,guide
+{client} needs every item in {store} counted before the quarterly tax visit. Bring an abacus. {pay}.
+
+## mission.d.shop_inventory.brief  fn=quest,guide
+Every crate in {store} counted and written in the ledger. The tax collector checks my numbers twice.
+Count twice, write once. And don't move anything, I know where it all is.
+
+## mission.d.shop_inventory.accept
+Good. Here's the ledger. Neat numbers, please. Sevens with a line through them.
+Thank you. Light's poor in there. Take the lamp.
+
+## mission.d.shop_inventory.decline
+I'll count it myself, then, all night. As usual.
+No? Then I'll pray the collector is in a good mood.
+
+## mission.d.shop_inventory.progress
+Back shelf done? Good. The barrels are next.
+That's the third time you've counted those. Something wrong?
+
+## mission.d.shop_inventory.success
+Every number matches. The collector will have nothing to say. Lovely.
+A perfect ledger. I'll sleep tonight for the first time this week.
+
+## mission.d.shop_inventory.fail
+The numbers won't come right. I'll have to explain to the collector myself.
+Not finished. I'll stay up with it. Thank you anyway.
+
+## mission.d.shop_inventory.report  job=mission_desk
+Inventory, done. You count better than half the clerks here. Don't tell them.
+{client} says the ledger's spotless. Logged before tax day, even.
+
+## mission.d.shop_inventory.twist.count_mismatch  fn=quest,react
+The numbers are short. Not by much, a little each week. Someone has been taking a few at a time.
+
+## mission.d.shop_inventory.twist.mislabelled  fn=quest,react
+These crates say "rice" and hold lamp oil. Half the storeroom is labelled as something else.
+
+## mission.d.shop_inventory.choice.accuse
+You know who's been taking stock from the shelves. Tell {client} who it was, or keep it to yourself?
+
+# -- dog_walking: the clinic's boarding ninken. Slots: client (vet), route, scent_spot --------------
+
+## mission.d.dog_walking.title
+Walk the Clinic's Ninken
+
+## mission.d.dog_walking.brief  job=mission_desk  fn=quest,guide
+The Inuzuka clinic wants its boarding ninken walked along {route} and every one brought back. Every one. {pay}.
+
+## mission.d.dog_walking.brief  fn=quest,guide
+Six dogs, six leads, one route: out along {route} and home. They know the way better than you.
+Hold the leads short past the farms. They've opinions about chickens.
+
+## mission.d.dog_walking.accept
+Good. Let them sniff your hands first. That's how you say hello.
+Here are the leads. The spotted one pulls left. Always left.
+
+## mission.d.dog_walking.decline
+More walks for me today. The dogs won't mind. My legs will.
+No? Fine. They'll run the yard in circles instead.
+
+## mission.d.dog_walking.progress
+Still six? Count them. Count them again.
+They like you! The big one never leans on strangers.
+
+## mission.d.dog_walking.success
+Six out, six back, tired and happy. That's a good walk.
+Look at them, flat out on the floor. You've worn them out. Thank you.
+
+## mission.d.dog_walking.fail
+Not every dog came back with you. We'll find the rest. Dogs come home.
+A rough walk. Leads tangled, dogs scattered. They'll forgive you.
+
+## mission.d.dog_walking.report  job=mission_desk
+Dog walk, done. You're covered in hair. A lot of hair. Logged.
+{client} says every ninken came home. That's the whole job, and you did it.
+
+## mission.d.dog_walking.twist.scent_chase  fn=quest,react
+Every nose goes up at once. The pack's caught a scent and they're bolting for the treeline!
+
+## mission.d.dog_walking.twist.shy_pup  fn=quest,react
+The smallest pup won't take a step. Sits down, ears flat. It needs winning over first.
+
+## mission.d.dog_walking.twist.lost_collar  fn=quest,react
+One dog's collar is gone. The one with the clan tag on it. It must have slipped off on the route.
+
+# -- lost_pet: a runaway pet. Slots: client, pet_spot, second_spot, claimant -----------------------
+
+## mission.d.lost_pet.title
+Runaway Pet, Again
+
+## mission.d.lost_pet.brief  job=mission_desk  fn=quest,guide
+{client}'s pet has run off again. Last seen around {pet_spot}. Bring it home, preferably unscratched. {pay}.
+
+## mission.d.lost_pet.brief  fn=quest,guide
+Gone since breakfast. Not the first time. It likes {pet_spot}, I think, but it never comes when called.
+Bring a dried sardine. And patience. And maybe gloves.
+
+## mission.d.lost_pet.accept
+You'll look? Thank you. Call softly. It hides from loud voices.
+Bless you. Here's the sardine. Don't eat it.
+
+## mission.d.lost_pet.decline
+Oh. Of course. I'll go round the alleys myself at dusk.
+I understand. It always turns up hungry eventually. Usually.
+
+## mission.d.lost_pet.progress
+Anything? Paw prints? Fur on a fence?
+The fishmonger says something was nosing round the bins this morning.
+
+## mission.d.lost_pet.success
+There you are! You bad, wonderful thing. Thank you so much.
+Home, and only a little muddy. You found it. You actually found it.
+
+## mission.d.lost_pet.fail
+No sign. I'll leave the window open tonight. Just in case.
+Maybe tomorrow. Pets come home when they're ready. I'm told.
+
+## mission.d.lost_pet.report  job=mission_desk
+Pet returned. Don't tell me about the scratches, I can see them. Logged.
+{client}'s pet is home again. Give it a month and we'll be posting this one again.
+
+## mission.d.lost_pet.twist.two_pets  fn=quest,react
+It's made a friend. Another runaway, curled up right beside it, who also needs taking home.
+
+## mission.d.lost_pet.twist.new_litter  fn=quest,react
+It didn't run off. It hid to give birth. Tiny ones, eyes shut. They'll need carrying home very gently.
+
+## mission.d.lost_pet.twist.rival_claims  fn=quest,react
+{claimant} swears this pet is theirs and has been all along. Somebody's mistaken. Find out who.
+
+## mission.d.lost_pet.choice.decide
+Two people, one pet, and the marks don't lie. Back to {client}, or hand it to {claimant}?
+
+# -- pet_sitting: animals for a day. Slots: client, home, neighbour --------------------------------
+
+## mission.d.pet_sitting.title
+Pet Sitting, One Day
+
+## mission.d.pet_sitting.brief  job=mission_desk  fn=quest,guide
+{client}'s family is away for the day. Feed, brush and mind the animals at {home} at the set hours. {pay}.
+
+## mission.d.pet_sitting.brief  fn=quest,guide
+Breakfast at eight, a brush at noon, supper at six. The times are pinned by the door at {home}.
+Fresh water every time. And don't let it sweet-talk you into a second supper.
+
+## mission.d.pet_sitting.accept
+Thank you. Here's the key. It sticks. Lift and turn.
+Good. It'll ignore you all morning, then sit on your feet by noon. Every time.
+
+## mission.d.pet_sitting.decline
+Then we'll stay home. Again.
+No? I'll ask the neighbour, though they don't get on.
+
+## mission.d.pet_sitting.progress
+Has it eaten? Good. Did it sulk first? It always sulks first.
+The neighbour says it's been quiet. Too quiet? No, quiet's fine.
+
+## mission.d.pet_sitting.success
+Fed, brushed and happy. It barely noticed we were gone. Thank you.
+Look how glossy! I'll ask for you every time we go away.
+
+## mission.d.pet_sitting.fail
+Missed meals and a very cross animal. Well. Nobody's hurt.
+Not quite to the timetable. It'll forgive us both by morning.
+
+## mission.d.pet_sitting.report  job=mission_desk
+Pet sitting, signed off. Fur on your sleeves and a scratch on your hand. Standard.
+{client} says the animals were in better shape than when they left. Logged.
+
+## mission.d.pet_sitting.twist.escape_artist  fn=quest,react
+The gate's open and the bowl's untouched. It's learned to work the latch with its nose.
+
+## mission.d.pet_sitting.twist.neighbour_feud  fn=quest,react
+{neighbour} is at the fence, furious. Says this pet has been raiding their garden for weeks.
+
+# -- posters: every district. Slots: client (clerk), boards, rival_shop ----------------------------
+
+## mission.d.posters.title
+Posters in Every District
+
+## mission.d.posters.brief  job=mission_desk  fn=quest,guide
+Posters for an upcoming event, one at {boards} in every district. {client} has the stack. {pay}.
+
+## mission.d.posters.brief  fn=quest,guide
+One poster on every board. Straight, at eye height, four pins. Not over anyone else's.
+Start at the market, finish at the gate. That way the last one's fresh for the travellers.
+
+## mission.d.posters.accept
+Good. Here are the pins. Don't lose them. They're the good pins.
+Thank you. Paste pot's sticky, so mind your sleeves.
+
+## mission.d.posters.decline
+Then I'll do it myself and miss my lunch. Again.
+No? The event will just have to be a surprise, then.
+
+## mission.d.posters.progress
+That's the market done? Good. Main street next.
+Is that one crooked? It's crooked. Go back and fix it.
+
+## mission.d.posters.success
+Every board, every district. Nobody can say they didn't hear about it now.
+Straight as a ruler, all of them. Thank you.
+
+## mission.d.posters.fail
+Half the boards are bare. Well. Word of mouth works too.
+Not every district. I'll finish the rest tomorrow.
+
+## mission.d.posters.report  job=mission_desk
+Posters up. I passed three on my way in. Very straight. Logged.
+{client} says the whole village knows now. That's what posters are for.
+
+## mission.d.posters.twist.torn_down  fn=quest,react
+The poster you just pinned is gone. Torn down, and so's the last one. Someone's following you.
+
+## mission.d.posters.twist.typo  fn=quest,react
+Look at the date. It's wrong. On every single poster in the stack.
+
+## mission.d.posters.twist.windy  fn=quest,react
+One gust and half the stack's gone over the rooftops, fluttering in every direction.
+
+# -- fence_mending: a garden fence. Slots: client, fence, neighbour, yard --------------------------
+
+## mission.d.fence_mending.title
+Mend the Garden Fence
+
+## mission.d.fence_mending.brief  job=mission_desk  fn=quest,guide
+{client} needs the fence at {fence} mended. Posts from {yard}, the rest is hammer and patience. {pay}.
+
+## mission.d.fence_mending.brief  fn=quest,guide
+The fence between us and next door has been leaning for a year. Posts from {yard}, new rails, the lot.
+Same line as before. Exactly the same. I don't want any trouble with the neighbours.
+
+## mission.d.fence_mending.accept
+Good. Hammer's in the shed. Mind the roses.
+Thank you. I'll bring tea when you get to the corner post. That's the hard one.
+
+## mission.d.fence_mending.decline
+It'll lean another year, then. Until it falls on someone.
+No? Fine. I'll prop it up with a broom like before.
+
+## mission.d.fence_mending.progress
+That post's straight? Let me look. Yes. Good.
+The neighbour keeps peeking over. Just smile and keep hammering.
+
+## mission.d.fence_mending.success
+Straight and strong. That fence will outlast me. Thank you.
+A fine fence. Even the neighbour said so. Grudgingly.
+
+## mission.d.fence_mending.fail
+Still leaning, but less. I'll take less.
+Not finished. We'll prop it for now. Thank you for trying.
+
+## mission.d.fence_mending.report  job=mission_desk
+Fence mended. No neighbour complaints filed. A miracle. Logged.
+{client} says the fence is straight and the neighbours are still talking to each other. Nice work.
+
+## mission.d.fence_mending.twist.fence_line  fn=quest,react
+{neighbour} says the fence has always stood a hand's width too far onto their side. Always.
+
+## mission.d.fence_mending.twist.termites  fn=quest,react
+This post crumbles like a biscuit when you touch it. Termites. The old posts are hollow.
+
+## mission.d.fence_mending.choice.settle
+{client} and {neighbour} both want the line their way. Split it fair, or side with one of them?
+
+# -- roof_repair: a leaking roof. Slots: client, roof, yard ----------------------------------------
+
+## mission.d.roof_repair.title
+Patch the Roof Before the Rain
+
+## mission.d.roof_repair.brief  job=mission_desk  fn=quest,guide
+{client}'s roof at {roof} is leaking and the rain's due tonight. Tiles from {yard}. {pay}.
+
+## mission.d.roof_repair.brief  fn=quest,guide
+The leak is right over the futon. Of course it is. Fresh tiles from {yard}, and seal the joins.
+Every tile overlaps the one below. Like fish scales. Get it backwards and it's a waterfall.
+
+## mission.d.roof_repair.accept
+Good. Ladder's round the side. Or do you just walk up walls?
+Thank you. Watch the ridge, it's slippery with moss.
+
+## mission.d.roof_repair.decline
+Then it's buckets on the floor again tonight.
+No? I'll move the futon. Again. It's practically on wheels.
+
+## mission.d.roof_repair.progress
+How many tiles left? The clouds are coming in.
+I can hear you up there. Is that hammering, or falling?
+
+## mission.d.roof_repair.success
+Not a drip. Not one. I'll sleep dry for the first time in a month.
+The whole roof's sound. Listen to the rain. Isn't it lovely when it's outside?
+
+## mission.d.roof_repair.fail
+The rain beat us to it. Buckets out, everyone.
+Still leaking, but slower. I'll take slower.
+
+## mission.d.roof_repair.report  job=mission_desk
+Roof repaired. You're damp at the edges. Close call, was it? Logged.
+{client} says the house stayed dry all night. Paid in full.
+
+## mission.d.roof_repair.twist.bird_nest  fn=quest,react
+A swallow has built its nest right over the leak. With eggs in it. Move it, very carefully.
+
+## mission.d.roof_repair.twist.stuck_cat  fn=quest,react
+The neighbour's cat followed you up the ladder and won't come down. It's yowling at the gutter.
+
+## mission.d.roof_repair.twist.rain  fn=quest,react
+First drops, right on time, and four tiles still to go. Faster!
+
+# -- fishing_haul: the morning catch. Slots: client (fisher), boat, stall -------------------------
+
+## mission.d.fishing_haul.title
+Haul the Morning Catch
+
+## mission.d.fishing_haul.brief  job=mission_desk  fn=quest,guide
+The fish stall's supplier needs a squad at {boat} at dawn to land the catch and carry it to {stall}. {pay}.
+
+## mission.d.fishing_haul.brief  fn=quest,guide
+Nets out at first light from {boat}. Pull together, all of you, on my count. Then the baskets to {stall}.
+The river's cold at dawn. Wear something you don't mind smelling of fish forever.
+
+## mission.d.fishing_haul.accept
+Good. Dawn means dawn, not after breakfast.
+Here's a pair of gloves. Your hands will thank me by the third net.
+
+## mission.d.fishing_haul.decline
+Then it's a small catch and a short day. The stall won't be pleased.
+No? I'll ask the ferryman's kids. They pull hard for a rice ball.
+
+## mission.d.fishing_haul.progress
+Heave! Heave! Keep the line even.
+That's a good basket. Silver all the way down.
+
+## mission.d.fishing_haul.success
+Best catch this month. The stall will be sold out by noon.
+Full baskets and nobody fell in. That's a good morning on the river.
+
+## mission.d.fishing_haul.fail
+A thin catch. The fish weren't biting, or we weren't pulling. Either way.
+Not much in the nets today. The river gives what it gives.
+
+## mission.d.fishing_haul.report  job=mission_desk
+Fishing haul, done. Please don't stand so close to the desk. Logged.
+{client} says the stall sold out before noon. That's your work.
+
+## mission.d.fishing_haul.twist.big_one  fn=quest,react
+The line just went tight enough to sing. Something enormous has taken it. Hold on!
+
+## mission.d.fishing_haul.twist.net_tear  fn=quest,react
+A rip in the net, right down the middle, and half the catch is slipping out!
+
+# -- river_cleanup: rubbish below the bridge. Slots: client (fisher), bank, addressee -------------
+
+## mission.d.river_cleanup.title
+River Cleanup Below the Bridge
+
+## mission.d.river_cleanup.brief  job=mission_desk  fn=quest,guide
+The river below the market bridge is a mess. {client} wants it cleared from {bank}. Nets and sacks provided. {pay}.
+
+## mission.d.river_cleanup.brief  fn=quest,guide
+Broken baskets, old sandals, a whole cartwheel. It's all caught below the bridge at {bank}. Fish it out.
+The fish won't come back till the water's clean. Neither will my customers.
+
+## mission.d.river_cleanup.accept
+Good. Here's a net on a pole. Long reach. You'll need it.
+Thank you. Sacks by the steps. Rubbish in, fish out.
+
+## mission.d.river_cleanup.decline
+Fine. The river will carry it off eventually. To the next village.
+No? I'll keep picking at it on my days off.
+
+## mission.d.river_cleanup.progress
+Is that a teapot? Who throws a teapot in a river?
+The water's clearing already. I can see the stones.
+
+## mission.d.river_cleanup.success
+The river's clean and running clear. The fish will be back by spring.
+Look at that. I can see the bottom. I haven't seen the bottom in years.
+
+## mission.d.river_cleanup.fail
+Still a mess. Never mind. The river forgives slowly.
+Some of it's out. Not enough, but some.
+
+## mission.d.river_cleanup.report  job=mission_desk
+River cleanup, done. You've brought half of it back with you on your sandals. Logged.
+{client} says the water's running clear under the bridge. Good work.
+
+## mission.d.river_cleanup.twist.bottle  fn=quest,react
+A corked bottle with a letter inside, addressed to {addressee}. Here, in the village.
+
+## mission.d.river_cleanup.twist.snagged_net  fn=quest,react
+A fisher's net is caught on the weir, torn and tangled. Someone's lost a week's work.
+
+## mission.d.river_cleanup.twist.midstream  fn=quest,react
+The worst of it is caught out in the middle. No net reaches that far. Only water-walking will.
+
+# -- leaf_raking: the park by the Academy. Slots: client (groundskeeper), park -------------------
+
+## mission.d.leaf_raking.title
+Rake the Park by the Academy
+
+## mission.d.leaf_raking.brief  job=mission_desk  fn=quest,guide
+{client} wants the leaves raked in {park} by the Academy. Big piles, no jumping in them. Well. Minimal jumping. {pay}.
+
+## mission.d.leaf_raking.brief  fn=quest,guide
+Every leaf in {park} in a pile by the shed. The paths first, then the grass. Then the paths again.
+Rake with the wind, not against it. The wind does half the work if you let it.
+
+## mission.d.leaf_raking.accept
+Good. Rakes by the shed. Pick one with all its teeth.
+Thank you. If the Academy children help, accept it. Don't expect much.
+
+## mission.d.leaf_raking.decline
+They'll fall again tomorrow anyway. Leaves are patient.
+No? Then the paths stay slippery for another week.
+
+## mission.d.leaf_raking.progress
+That's a fine pile. Don't. Don't you dare jump in it.
+The wind's turning. Rake faster before it undoes you.
+
+## mission.d.leaf_raking.success
+Paths clear, grass clear, one great pile. The park looks ready for winter.
+Lovely work. The Academy teachers will think it's a different park.
+
+## mission.d.leaf_raking.fail
+Leaves everywhere still. The wind won. It usually does in autumn.
+Not done, but the paths are passable. That's the important part.
+
+## mission.d.leaf_raking.report  job=mission_desk
+Leaf raking, done. There's a leaf in your hair. Two. Logged anyway.
+{client} says the park's spotless. For about a day. Autumn, you know.
+
+## mission.d.leaf_raking.twist.hidden_treasure  fn=quest,react
+Under the leaves, a purse. Damp, heavy, and lost weeks ago by the look of it.
+
+## mission.d.leaf_raking.twist.bonfire  fn=quest,react
+{client} is eyeing the pile. Says it's perfect for roasting sweet potatoes, and has brought some.
+
+## mission.d.leaf_raking.choice.treasure
+A lost purse, full of coins. Hand it in so its owner can claim it, or keep what you found?
+
+# -- snow_clearing: roofs and lanes. Slots: client (clerk), roofs, lane, kids ---------------------
+
+## mission.d.snow_clearing.title
+Snow Off the Roofs and Lanes
+
+## mission.d.snow_clearing.brief  job=mission_desk  fn=quest,guide
+Heavy snow on the roofs at {roofs} and the lane at {lane}. Clear it before something gives way. {pay}.
+
+## mission.d.snow_clearing.brief  fn=quest,guide
+Roofs first. The snow's heavy and wet, and these old beams weren't built for it. Then shovel {lane}.
+Push it off the eaves, not onto the path. People have to walk under there.
+
+## mission.d.snow_clearing.accept
+Good. Shovels by the door. Wrap up warm, it bites up there.
+Thank you. There's hot ginger tea when you come down. Lots of it.
+
+## mission.d.snow_clearing.decline
+Then I'll listen to the beams creak all night. Lovely.
+No? We'll shovel ourselves, slowly. And complain loudly.
+
+## mission.d.snow_clearing.progress
+One roof clear. Hear the beams sigh? That's relief.
+The lane's half dug. Watch the ice under the snow.
+
+## mission.d.snow_clearing.success
+Every roof clear and the lane open. The whole street can breathe.
+Not a single beam cracked. You've saved a lot of winter worry.
+
+## mission.d.snow_clearing.fail
+Snow still on half the roofs. We'll keep an ear on the beams tonight.
+Not clear yet. More snow's coming anyway. We'll go again.
+
+## mission.d.snow_clearing.report  job=mission_desk
+Snow clearing, done. Your nose is the colour of a festival lantern. Logged. Go and get warm.
+{client} says the lane's open. The children are already making it slippery again.
+
+## mission.d.snow_clearing.twist.slide  fn=quest,react
+A low groan from the roof and the whole sheet of snow is letting go at once. Move!
+
+## mission.d.snow_clearing.twist.snowball_ambush  fn=quest,react
+A snowball, right in the back of the neck. Then three more. {kids} have declared war.
+
+# -- flower_order: a wedding order. Slots: client (a Yamanaka florist), shop, venue ---------------
+
+## mission.d.flower_order.title
+Wedding Flowers, Yamanaka Shop
+
+## mission.d.flower_order.brief  job=mission_desk  fn=quest,guide
+The Yamanaka flower shop at {shop} has a wedding order to fill and carry to {venue}. {client} will explain. {pay}.
+
+## mission.d.flower_order.brief  fn=quest,guide
+Every flower says something. This order should say "joy", "long life" and "together". Not "farewell".
+Pick from the list, wrap them in the white paper, and carry them to {venue}. Not in the sun.
+
+## mission.d.flower_order.accept
+Lovely. Here's the list, and a chart of what each flower means. Study it.
+Thank you. Cut the stems on a slant. They drink better.
+
+## mission.d.flower_order.decline
+That's all right. I'll stay late. Flowers don't keep office hours.
+No? My aunt will come in. She'll lecture me about it, but she'll come.
+
+## mission.d.flower_order.progress
+Is that a chrysanthemum? Not for a wedding. Back on the shelf.
+The bouquets look lovely. Keep them out of the window.
+
+## mission.d.flower_order.success
+Every flower right and every bouquet fresh. The couple will never know how close it was.
+Perfect. You've an eye for this. If you ever leave the shinobi life, there's a job here.
+
+## mission.d.flower_order.fail
+Wilted and wrong. Well. The couple will be too happy to notice. I hope.
+Not what they ordered. I'll go and apologise myself.
+
+## mission.d.flower_order.report  job=mission_desk
+Wedding flowers delivered. You smell lovely, for once. Logged.
+{client} says every bouquet said the right thing. I have no idea what that means, but well done.
+
+## mission.d.flower_order.twist.wrong_meaning  fn=quest,react
+Look at the chart. Half of this order says "farewell" in the language of flowers. At a wedding.
+
+## mission.d.flower_order.twist.wilting  fn=quest,react
+The heat's getting to them. Petals drooping already. They need to be at {venue} now, not later.
+
+# -- market_stall: minding a stall. Slots: client (stallholder), stall, thief ---------------------
+
+## mission.d.market_stall.title
+Mind a Stall on Market Day
+
+## mission.d.market_stall.brief  job=mission_desk  fn=quest,guide
+{client} has to see a supplier and needs someone to mind {stall} on Market Day. Prices are on the tags. {pay}.
+
+## mission.d.market_stall.brief  fn=quest,guide
+Prices on the tags, no discounts, money in the tin. Smile. It's half the sale.
+Back by the afternoon bell. If anyone asks for credit, the answer is a polite no.
+
+## mission.d.market_stall.accept
+Good. The tin's under the cloth. Count it now, count it later.
+Thank you! Don't let the old woman with the green shawl talk you down. She tries every week.
+
+## mission.d.market_stall.decline
+Then I'll shut the stall and lose a morning's sales. Terrific.
+No? I'll ask the stall next door. They'll pocket every third coin.
+
+## mission.d.market_stall.progress
+Selling well? Good. Keep the fresh ones at the front.
+That's a lot of coins in the tin. You're a natural.
+
+## mission.d.market_stall.success
+Look at the tin! You sold more than I do. Should I be worried?
+Every coin accounted for and the shelves half empty. Wonderful.
+
+## mission.d.market_stall.fail
+The tin's light and the shelf's still full. A slow day. It happens.
+Not a good day for the stall. Never mind. Market Day comes again.
+
+## mission.d.market_stall.report  job=mission_desk
+Stall minded, takings counted. {client} says you've got a merchant's tongue. Logged.
+Market stall job, done. Did you buy anything? Everyone buys something.
+
+## mission.d.market_stall.twist.haggler  fn=quest,react
+Here comes the most famous haggler in the market, pointing at the best piece, offering half.
+
+## mission.d.market_stall.twist.shoplifter  fn=quest,react
+Small hands, quick feet, and the purse that was on the counter is gone. {thief} is running!
+
+## mission.d.market_stall.twist.rush  fn=quest,react
+A festival crowd, all at once, every hand waving coins. Serve fast and count faster.
+
+## mission.d.market_stall.choice.haggle
+The haggler won't budge and won't leave. Hold the price on the tag, or give in and sell it cheap?
+
+# -- shrine_cleaning: steps and charms. Slots: client (priest), steps, crow_roost ----------------
+
+## mission.d.shrine_cleaning.title
+Sweep the Shrine, Retie the Charms
+
+## mission.d.shrine_cleaning.brief  job=mission_desk  fn=quest,guide
+The shrine needs its steps swept at {steps} and the weathered charms retied. {client} will show you how. {pay}.
+
+## mission.d.shrine_cleaning.brief  fn=quest,guide
+Sweep from the top down, always. Then the charms on the rack, fresh cord, the old knots undone with care.
+Every charm is someone's wish. Treat each one like it matters. It does, to them.
+
+## mission.d.shrine_cleaning.accept
+Thank you. The broom's by the gate. Bow before you start. It's polite.
+Good. The cord is in the basket. Double knot, then tuck the end.
+
+## mission.d.shrine_cleaning.decline
+The steps will wait. They've been waiting for centuries.
+No? The wishes will just have to hang on a little longer.
+
+## mission.d.shrine_cleaning.progress
+Top half swept. Don't hurry the bottom steps. They're the oldest.
+Neat knots. The charms will hold through winter now.
+
+## mission.d.shrine_cleaning.success
+The steps are clean and the charms are fresh. The shrine looks cared for again.
+Lovely, careful work. The gods notice that sort of thing. So do I.
+
+## mission.d.shrine_cleaning.fail
+Half done. The shrine is patient. We'll finish another day.
+Not finished, but no harm. Come back when you can.
+
+## mission.d.shrine_cleaning.report  job=mission_desk
+Shrine cleaning, logged. Did you make a wish while you were up there? Everyone does.
+{client} sends thanks and a small charm for the squad. It's for safe roads, apparently.
+
+## mission.d.shrine_cleaning.twist.crows  fn=quest,react
+The offerings keep vanishing. The crows are taking them, and the roof at {crow_roost} is their hoard.
+
+## mission.d.shrine_cleaning.twist.fox_offering  fn=quest,react
+Fried tofu at the fox statue again, fresh this morning. The priest wants to know who leaves it.
+
+# -- training_upkeep: dummies and posts. Slots: client (groundskeeper), ground, challenger --------
+
+## mission.d.training_upkeep.title
+Training Ground Upkeep
+
+## mission.d.training_upkeep.brief  job=mission_desk  fn=quest,guide
+{ground} needs its dummies and posts repaired and the field raked. {client} has the tools. {pay}.
+
+## mission.d.training_upkeep.brief  fn=quest,guide
+New straw in the dummies, rope on the posts, then rake the field smooth. Every squad in the Leaf uses this ground.
+Leave it better than you found it. That's the only rule on a training ground.
+
+## mission.d.training_upkeep.accept
+Good. Straw's in the shed, rope's on the hook.
+Right. Start with the post that's leaning. It's been bothering me for a month.
+
+## mission.d.training_upkeep.decline
+Then the next squad trains on broken posts. They'll survive.
+No? I'll patch what I can before the morning classes.
+
+## mission.d.training_upkeep.progress
+That dummy's fatter than it was. Too much straw? No, it's fine. Firm.
+Half the field raked. Keep your lines straight.
+
+## mission.d.training_upkeep.success
+Posts straight, dummies stuffed, field smooth. Best it's looked all season.
+Good work. Every squad that trains here tomorrow owes you one.
+
+## mission.d.training_upkeep.fail
+Still a few broken posts. Squads will just have to aim around them.
+Not finished. I'll do the rest at dawn. Thank you anyway.
+
+## mission.d.training_upkeep.report  job=mission_desk
+Training ground upkeep, done. Somebody will break it all again by Friday. Logged.
+{client} says the field's never been flatter. Paid.
+
+## mission.d.training_upkeep.twist.stray_shuriken  fn=quest,react
+Ow. The grass is full of shuriken. Last week's class never picked them up.
+
+## mission.d.training_upkeep.twist.challenge  fn=quest,react
+{challenger} from another squad is waiting by the post with a grin. Wants a spar before you go.

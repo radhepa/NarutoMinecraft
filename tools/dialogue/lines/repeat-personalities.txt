@@ -3,14 +3,14 @@
 #! kind: repeat
 #! fn: react
 
-## again personality=warmhearted
+## again personality=warmhearted  stage=teen|adult
 I've told you all my news, dear. Come for supper tomorrow and I'll have more.
 You've heard everything twice! Here, at least take a rice ball for the road.
 Back again? I love it, but I've nothing new. Except leftovers. Always leftovers.
 I've talked your ear off already today. Go and rest, {player}.
 Nothing new since this morning, dear. Just the same old pot on the stove.
 Tomorrow I'll have gossip and soup. Today, only soup.
-## close personality=warmhearted
+## close personality=warmhearted  stage=teen|adult
 Off you go, then. Eat something proper, promise me.
 I'll let you get on. Wrap up warm, {player}.
 Run along now. My door's always open.
@@ -63,10 +63,11 @@ There's nothing new on today's schedule, {player}.
 I've said what I planned to say. Repeating it would be inefficient.
 Tomorrow I'll have new items for you. Today's are checked off.
 ## close personality=meticulous
-I must get back to work. I'm two minutes behind already.
 That concludes things for today. Thank you, {player}.
 I'll see you at the usual time. Don't be late.
 Back to my desk. Good day.
+## close personality=meticulous  stage=teen|adult
+I must get back to work. I'm two minutes behind already.
 
 ## again personality=steadfast
 I've told you what I know. It'll still be true tomorrow.
@@ -78,8 +79,9 @@ I don't say things twice. Not because I won't. Because once is enough.
 ## close personality=steadfast
 I'll get back to it. You know where to find me.
 Take care, {player}. See you tomorrow.
-Back to work. Stay out of trouble.
 I'll be here. Off you go.
+## close personality=steadfast  stage=teen|adult
+Back to work. Stay out of trouble.
 
 ## again personality=reserved
 ...We talked already.
@@ -108,13 +110,14 @@ Off you float, {player}. See you soon.
 Back to my sketches. Goodbye for now!
 
 ## again personality=pragmatic
-We've been over this. Time's money, {player}. Come back tomorrow.
 Nothing new to report. I'll let you know if there is.
 I've given you everything I've got today. No sense repeating it.
-Same news as before. Prices haven't changed either.
 I'm all out. Try me tomorrow.
 Talking in circles won't get either of us anywhere.
-## close personality=pragmatic
+## again personality=pragmatic  stage=teen|adult
+We've been over this. Time's money, {player}. Come back tomorrow.
+Same news as before. Prices haven't changed either.
+## close personality=pragmatic  stage=teen|adult
 I've customers waiting. Off you go.
 Right, back to work. Good seeing you.
 That's all for today. Don't waste the daylight.
@@ -134,17 +137,19 @@ See you, {player}. Come back with answers!
 Off to poke around. Bye for now!
 
 ## again personality=protective
-We've talked enough today. Go home and rest, {player}.
 I've nothing more to tell you. Just stay safe.
-You've heard it all. Now go get something to eat.
 Nothing new. Which is good. Nothing new means nothing wrong.
 I've said what I needed to. Keep it in mind.
 Same as before. Watch yourself out there.
+## again personality=protective  stage=teen|adult
+We've talked enough today. Go home and rest, {player}.
+You've heard it all. Now go get something to eat.
 ## close personality=protective
+I'll see you tomorrow. Get there safely.
+## close personality=protective  stage=teen|adult
 Go straight home, all right? It's getting late.
 Off you go. Stick to the main streets.
 Take care of yourself. I mean that.
-I'll see you tomorrow. Get there safely.
 
 ## again personality=gentle
 I think we've talked enough for today. That's all right.
@@ -199,14 +204,26 @@ Bye, {player}. Thanks for talking to me.
 I'll go now. Sorry. Bye!
 
 ## again personality=stern
-We've spoken. Use what I told you.
 I don't waste words. Neither should you.
-You've had my instruction for the day. Go and practise it.
 Nothing has changed. Come back when something has.
 Repetition is for drills, not conversation.
 Tomorrow. Not before.
-## close personality=stern
+## again personality=stern  stage=teen|adult
+We've spoken. Use what I told you.
+You've had my instruction for the day. Go and practise it.
+## close personality=stern  stage=teen|adult
 Dismissed. Go and do something useful.
 That's all. Back to your duties.
 Off with you. Don't dawdle.
 Enough. Train well, {player}.
+
+# -- all-ages lines for the voices whose sets above suit grown-ups only ---------------------------------
+## again personality=warmhearted
+We already talked! I'd love to keep going, but I've run out of news. Tomorrow?
+That's all my news for today. Come back and I'll have more, I promise.
+## close personality=warmhearted
+Bye! Come back soon, all right?
+## close personality=pragmatic
+Right, I've things to do. See you.
+## close personality=stern
+That's enough for today. Go on.

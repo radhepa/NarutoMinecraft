@@ -16,9 +16,11 @@ The market? Yes! I need new sandals anyway.
 Let's go. I know a stall with the best roasted chestnuts.
 ## hangout.market_stroll.no.busy
 I'm busy right now. {when}? The stalls will still be there.
+## hangout.market_stroll.no.busy  stage=teen|adult
 Can't today, I'm working. Ask me {when}.
 ## hangout.market_stroll.no.not_today
 Too crowded for me today. Another time.
+## hangout.market_stroll.no.not_today  stage=teen|adult
 I'm broke until payday. Let's go when I've ryo to waste.
 ## hangout.market_stroll.no.not_their_thing
 I can't stand the market crowds. All that shoving. Sorry.
@@ -70,9 +72,10 @@ A little child asked if we were famous shinobi, and you said "not yet." I loved 
 
 # == the bathhouse =================================================================================
 ## hangout.bathhouse.ask
-Bathhouse tonight? My shoulders are in knots and the hot water's calling.
 Let's soak at the bathhouse, {player}. I've been dreaming of steam all day.
 Come to the bathhouse with me? Then milk in glass bottles after. That's the best part.
+## hangout.bathhouse.ask  stage=teen|adult
+Bathhouse tonight? My shoulders are in knots and the hot water's calling.
 ## hangout.bathhouse.invite
 Bathhouse at sundown. I'll get two bottles of cold milk for after.
 A note: "Long day. Bathhouse tonight? I'll pay the ryo."
@@ -94,19 +97,20 @@ Wash first, then soak. That's the rule. The bath keeper will glare at you otherw
 Ahh, smell the cedar. Here we are. Mind the step, it's slippery.
 ## hangout.bathhouse.rough
 Hot water, cold conversation. Not our best evening.
-## hangout.bathhouse.fine
+## hangout.bathhouse.fine  stage=teen|adult
 My shoulders thank you. A decent soak.
 ## hangout.bathhouse.good
 I feel like a new person. A soft, pink new person. Thanks for coming.
 Good soak, good talk. Let's make this a habit.
 ## hangout.bathhouse.great
-That was heaven. I didn't know I was carrying so much until I put it down.
 Perfect evening. Warm water, cold milk and a good friend.
+## hangout.bathhouse.great  stage=teen|adult
+That was heaven. I didn't know I was carrying so much until I put it down.
 ## hangout.bathhouse.stood_up
 I soaked until my fingers wrinkled, waiting. You owe me a bottle of milk.
 ## hangout.bathhouse.ritual
 Our bathhouse nights. The keeper has our towels folded by the door before we arrive.
-## hangout.bathhouse.ritual_missed
+## hangout.bathhouse.ritual_missed  stage=teen|adult
 I haven't been to the bathhouse in weeks. My shoulders have noticed. So have I.
 ## hangout.bathhouse.highlight.1
 We drank our cold milk in one go at exactly the same time. The whole bathhouse cheered!
@@ -138,6 +142,7 @@ The shrine? Yes. I could use some quiet.
 I'd like that. I'll bring a coin for the box.
 ## hangout.shrine_visit.no.busy
 I'm busy this morning. {when}?
+## hangout.shrine_visit.no.busy  stage=teen|adult
 Not just now, I'm on duty. {when}, perhaps.
 ## hangout.shrine_visit.no.not_today
 I'm not in the right frame of mind for the shrine today.
