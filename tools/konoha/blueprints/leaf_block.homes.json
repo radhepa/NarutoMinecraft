@@ -1,5 +1,5 @@
 {
- "note": "homes.json rows for the home session (branch home), in blueprint coordinates; cells and keys are the home session's",
+ "note": "homes.json rows for the home session (branch home), in blueprint coordinates; cells and keys (player flats only) from the home session",
  "homes": [
   {
    "id": "flat.leaf_block.1a",
@@ -563,7 +563,9 @@
     6,
     10
    ],
-   "role": "player_candidate"
+   "role": "player_candidate",
+   "cells": 22,
+   "keys": 3
   },
   {
    "id": "flat.leaf_block.3a",
@@ -657,7 +659,9 @@
     10,
     10
    ],
-   "role": "player_classic"
+   "role": "player_classic",
+   "cells": 22,
+   "keys": 3
   },
   {
    "id": "flat.leaf_block.3b",

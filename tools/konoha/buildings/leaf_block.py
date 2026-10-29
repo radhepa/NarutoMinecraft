@@ -102,6 +102,7 @@ def flat(p: Plan, x0: int, fy: int, fid: str, wall: str):
         "yard": {"w": 6, "d": 2, "at": [X(0), y1, 0], "outside_bounds": True} if fy == 1 else None,
         "spawn": [X(1), y1, Z(7)],
         "role": role,
+        **({"cells": 22, "keys": 3} if role and role.startswith("player") else {}),
     }
 
 
@@ -153,7 +154,7 @@ def build(wall="cream") -> Plan:
     OUT.mkdir(exist_ok=True)
     (OUT / "leaf_block.homes.json").write_text(json.dumps(
         {"note": "homes.json rows for the home session (branch home), in blueprint coordinates; "
-                 "cells and keys are the home session's", "homes": homes}, indent=1) + "\n")
+                 "cells and keys (player flats only) from the home session", "homes": homes}, indent=1) + "\n")
     return p
 
 
