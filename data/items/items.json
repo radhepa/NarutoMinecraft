@@ -131,6 +131,7 @@
    "price": 30,
    "sell": 0,
    "sources": [
+    "loot:drop.rogue_bomber",
     "shop:tool_shop",
     "shop:exam_stalls",
     "craft:workbench"
@@ -179,6 +180,7 @@
    "price": 6,
    "sell": 0,
    "sources": [
+    "loot:drop.rogue_genin",
     "shop:tool_shop",
     "craft:workbench"
    ],
@@ -253,6 +255,7 @@
    "sources": [
     "kit:genin",
     "salvage:bandit_camp",
+    "loot:drop.rogue_genin",
     "shop:weapon_shop",
     "shop:pawn_shop",
     "shop:exam_stalls",
@@ -354,9 +357,15 @@
    "sell": 2,
    "sources": [
     "salvage:bandit_camp",
-    "drop:bandit",
+    "drop:bandit_thug",
     "loot:salvage.bandit_camp",
-    "loot:drop.bandit"
+    "loot:drop.bandit_thug",
+    "loot:drop.bandit_knife",
+    "loot:drop.bandit_archer",
+    "loot:drop.bandit_brute",
+    "loot:drop.bandit_ronin",
+    "loot:drop.smuggler_runner",
+    "loot:drop.bandit_chief"
    ],
    "use": "A bandit's pitted blade. Throws badly; the forge melts it down to scrap steel",
    "art": "tint:kunai",
@@ -406,6 +415,7 @@
    "sell": 0,
    "sources": [
     "kit:genin",
+    "loot:drop.rogue_genin",
     "shop:weapon_shop",
     "craft:smithy"
    ],
@@ -4955,6 +4965,7 @@
    "sources": [
     "drop:boar",
     "loot:drop.boar",
+    "loot:drop.bear",
     "shop:hagane_metalworks"
    ],
    "use": "Tanned leather for grips and pouches",
@@ -5146,6 +5157,7 @@
     "loot:gather.herb_garden",
     "loot:gather.forest_floor",
     "loot:gather.forest_of_death",
+    "loot:drop.giant_leech",
     "shop:flower_shop",
     "shop:pharmacy"
    ],
@@ -5208,10 +5220,16 @@
    "price": 0,
    "sell": 0,
    "sources": [
-    "drop:bandit",
+    "drop:bandit_thug",
     "salvage:bandit_camp",
     "loot:salvage.bandit_camp",
-    "loot:drop.bandit"
+    "loot:drop.bandit_thug",
+    "loot:drop.bandit_knife",
+    "loot:drop.bandit_archer",
+    "loot:drop.bandit_brute",
+    "loot:drop.bandit_ronin",
+    "loot:drop.smuggler_runner",
+    "loot:drop.bandit_chief"
    ],
    "use": "A purse of stolen coin: open it for 5 to 40 ryo",
    "art": "icon",
@@ -5234,9 +5252,10 @@
    "sell": 12,
    "sources": [
     "salvage:bandit_camp",
-    "drop:bandit",
+    "drop:bandit_thug",
     "loot:curio.bandit",
     "loot:salvage.bandit_camp",
+    "loot:drop.monkey_thief",
     "shop:pawn_shop"
    ],
    "use": "A ring, a comb, a lucky coin: worth something to the pawnbroker",
@@ -5261,9 +5280,15 @@
    "sell": 4,
    "sources": [
     "salvage:bandit_camp",
-    "drop:bandit",
+    "drop:bandit_thug",
     "loot:salvage.bandit_camp",
-    "loot:drop.bandit"
+    "loot:drop.bandit_thug",
+    "loot:drop.bandit_knife",
+    "loot:drop.bandit_archer",
+    "loot:drop.bandit_brute",
+    "loot:drop.bandit_ronin",
+    "loot:drop.smuggler_runner",
+    "loot:drop.bandit_chief"
    ],
    "use": "A snapped sword: the forge melts it into scrap steel",
    "art": "icon",
@@ -5368,9 +5393,16 @@
    "sell": 1,
    "sources": [
     "salvage:bandit_camp",
-    "drop:bandit",
+    "drop:bandit_thug",
     "loot:salvage.bandit_camp",
-    "loot:drop.bandit",
+    "loot:drop.bandit_thug",
+    "loot:drop.bandit_knife",
+    "loot:drop.bandit_archer",
+    "loot:drop.bandit_brute",
+    "loot:drop.bandit_ronin",
+    "loot:drop.smuggler_runner",
+    "loot:drop.bandit_chief",
+    "loot:drop.rogue_genin",
     "craft:smithy"
    ],
    "use": "Broken blades and buckles; four make an ingot at the forge",
@@ -5395,6 +5427,7 @@
    "sources": [
     "salvage:bandit_camp",
     "loot:salvage.bandit_camp",
+    "loot:drop.bandit_chief",
     "shop:hagane_metalworks",
     "craft:smithy"
    ],
@@ -5510,8 +5543,8 @@
    "sources": [
     "drop:giant_snake",
     "gather:forest_of_death",
-    "loot:drop.giant_snake",
-    "loot:gather.forest_of_death"
+    "loot:gather.forest_of_death",
+    "loot:drop.giant_snake"
    ],
    "use": "A shed skin longer than you are tall",
    "art": "icon",
@@ -5556,8 +5589,8 @@
    "price": 60,
    "sell": 30,
    "sources": [
-    "drop:forest_tiger",
-    "loot:drop.forest_tiger"
+    "drop:giant_tiger",
+    "loot:drop.giant_tiger"
    ],
    "use": "A striped pelt, a trophy of the forest",
    "art": "icon",
@@ -5579,8 +5612,8 @@
    "price": 15,
    "sell": 7,
    "sources": [
-    "drop:wild_wolf",
-    "loot:drop.wild_wolf"
+    "drop:wolf",
+    "loot:drop.wolf"
    ],
    "use": "A grey pelt",
    "art": "icon",
@@ -5690,6 +5723,7 @@
    "price": 2,
    "sell": 0,
    "sources": [
+    "loot:drop.rogue_bomber",
     "shop:scroll_shop",
     "shop:haruno_store",
     "shop:academy_supply"
@@ -5713,6 +5747,7 @@
    "sources": [
     "salvage:bandit_camp",
     "loot:salvage.bandit_camp",
+    "loot:drop.rogue_bomber",
     "shop:hagane_metalworks"
    ],
    "use": "Black powder for paper bombs",
@@ -5751,6 +5786,7 @@
    "price": 4,
    "sell": 0,
    "sources": [
+    "loot:drop.rogue_bomber",
     "shop:academy_supply",
     "shop:hagane_metalworks"
    ],
@@ -9693,7 +9729,8 @@
    "sell": 14,
    "sources": [
     "loot:curio.beast",
-    "loot:gather.forest_of_death"
+    "loot:gather.forest_of_death",
+    "loot:drop.bear"
    ],
    "use": "A claw from something you are glad not to have met",
    "art": "icon",
@@ -9715,7 +9752,8 @@
    "price": 0,
    "sell": 4,
    "sources": [
-    "loot:curio.beast"
+    "loot:curio.beast",
+    "loot:drop.giant_leech"
    ],
    "use": "Blue-grey, and warm long after it should be",
    "art": "icon",
@@ -10412,6 +10450,7 @@
    "sources": [
     "loot:curio.village",
     "loot:curio.market",
+    "loot:drop.monkey_thief",
     "shop:pawn_shop"
    ],
    "use": "A square-holed coin from before the Leaf printed notes",
@@ -10910,7 +10949,8 @@
    "sell": 20,
    "sources": [
     "salvage:bandit_camp",
-    "loot:salvage.bandit_camp"
+    "loot:salvage.bandit_camp",
+    "loot:drop.monkey_thief"
    ],
    "use": "A crate of someone's things: return them for a reward and a deed, or sell them and live with it",
    "art": "icon",
@@ -10934,7 +10974,8 @@
    "sell": 0,
    "sources": [
     "mission:c",
-    "drop:bandit_leader"
+    "drop:bandit_chief",
+    "loot:drop.bandit_chief"
    ],
    "use": "Proof a camp was cleared: hand it in for the bounty",
    "art": "icon",

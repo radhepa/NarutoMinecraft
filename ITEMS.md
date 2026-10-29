@@ -384,7 +384,7 @@ You cannot break blocks (ROADMAP §7), so nothing is mined or chopped. Materials
 **Curio tables** (18): `curio.village`, `.academy`, `.market`, `.fields`, `.wilds`, `.river`, `.road`, `.shrine`,
 `.far_lands`, `.bandit`, `.bandit_chief`, `.smuggler`, `.ronin`, `.foreign`, `.beast`, `.festival`, and later
 `.covert` and `.battlefield`. Missions roll one on turn-in at grade B or better and on defeated enemies (the
-missions session's chances); 34 loot tables in all.
+missions session's chances); 45 loot tables in all, with a `drop.<enemy>` table for each of the combat session's 18 beta enemies that drop something.
 
 ## 4. The ryo economy
 
@@ -477,7 +477,7 @@ swap is one line. Previews: [sprites](docs/renders/items/sprites.png), [palette 
 | Session | What passed between us |
 |---|---|
 | Konoha build | 119 block requests (furniture, interiors, displays, stations) adopted into `tools/konoha/blocks.json`; renames `tatami` and vanilla `potted_fern`; colour and noren variants written into the rows; new: `wall_mount`, `barber_chair`, the barber's site, eleven more shop noren; slot counts for displays; gathering-spot anchors |
-| Combat | Weapon, tool, coating and gear ids reconciled (combat keys stats by these ids; grade multipliers agreed); clan weapons are clan-line rewards now that the player is clanless; enemy ids for `drop.*` tables to confirm |
+| Combat | Weapon, tool, coating and gear ids reconciled (combat keys stats by these ids; grade multipliers agreed); clan weapons are clan-line rewards now that the player is clanless; `drop.*` tables keyed by its enemy ids |
 | Missions | 18 curio tables under its names, 45 `mission_*` items (9 more reuse existing ids), 20 mission keepsakes, client gifts mapped to items, info cards, technique scrolls by pool; pay bands used in the simulation, means to confirm |
 | Home | No collection book: curios, keepsakes, cards and crests are ordinary items kept in chests and on display furniture (display case, wall mount, curio cabinet, shelves); its furniture catalogue merged into the registry (new pieces keep its ids and prices; duplicates map to the ids the Konoha blocks use); the starter set is its Leaf set; the stipend; the house price and the spare key are its numbers (moving is free) |
 | Character creation | The starting, knack and rank kits; the story's starting key item; restyle prices at the barber |

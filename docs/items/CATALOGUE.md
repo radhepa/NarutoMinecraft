@@ -35,18 +35,18 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `stink_bomb` | Stink Bomb | bomb | academy | beta1 | 16 | 3 | quest:district.b1.neighbours.1, craft:workbench | An Academy prank: a cloud nobody wants to stand in; residents complain |
 | `barrier_tag` | Barrier Tag | tag | chunin | later | 16 | 140 | shop:tool_shop, craft:sealing | Four tags raise a short-lived barrier entity |
 | `chakra_suppression_tag` | Suppression Tag | tag | jonin | later | 16 | 260 | craft:sealing | Pressed onto a foe it seals their chakra for a few seconds |
-| `paper_bomb` | Paper Bomb | tag | genin | beta2 | 16 | 30 | shop:tool_shop, shop:exam_stalls, craft:workbench | An explosive tag: stick it to a surface or a kunai; hurts entities, never blocks |
+| `paper_bomb` | Paper Bomb | tag | genin | beta2 | 16 | 30 | loot:drop.rogue_bomber, shop:tool_shop, shop:exam_stalls, craft:workbench | An explosive tag: stick it to a surface or a kunai; hurts entities, never blocks |
 | `paper_bomb_chain` | Chained Paper Bombs | tag | chunin | later | 16 | 110 | shop:tool_shop, craft:sealing | Five tags on one string that go off in a row |
-| `sealing_tag` | Sealing Tag | tag | academy | beta1 | 16 | 6 | shop:tool_shop, craft:workbench | A simple seal: closes a box or door for a quest; on an enemy it stops chakra recovery for a few seconds |
+| `sealing_tag` | Sealing Tag | tag | academy | beta1 | 16 | 6 | loot:drop.rogue_genin, shop:tool_shop, craft:workbench | A simple seal: closes a box or door for a quest; on an enemy it stops chakra recovery for a few seconds |
 | `chakra_metal_kunai` | Chakra Metal Kunai | thrown | jonin | later | 16 | 90 | craft:smithy | A kunai forged from chakra metal: it carries your nature's chakra |
 | `fuma_shuriken` | Windmill Shuriken | thrown | chunin | later | 1 | 180 | shop:weapon_shop, craft:smithy | A folding giant shuriken that arcs back toward you |
-| `kunai` | Kunai | thrown | genin | beta2 | 16 | 12 | kit:genin, salvage:bandit_camp, shop:weapon_shop, shop:pawn_shop, shop:exam_stalls, craft:smithy | The shinobi's knife: combo weapon in hand, right click throws it like a trident and it can be picked up again |
+| `kunai` | Kunai | thrown | genin | beta2 | 16 | 12 | kit:genin, salvage:bandit_camp, loot:drop.rogue_genin, shop:weapon_shop, shop:pawn_shop, shop:exam_stalls, craft:smithy | The shinobi's knife: combo weapon in hand, right click throws it like a trident and it can be picked up again |
 | `manji_shuriken` | Manji Shuriken | thrown | genin | beta2 | 16 | 9 | shop:weapon_shop, craft:smithy | A heavier four-armed star with hooked blades: slower, but it cuts deeper |
 | `practice_kunai` | Practice Kunai | thrown | academy | beta1 | 16 | 2 | kit:academy, shop:weapon_shop, shop:academy_supply, kit:knack.weapons | Blunt training kunai: combo strikes and throws at the Academy posts; never draws blood on a spar |
 | `practice_shuriken` | Practice Shuriken | thrown | academy | beta1 | 64 | 1 | kit:academy, shop:weapon_shop, shop:academy_supply | Blunt wooden-edged stars for target practice |
-| `rusty_kunai` | Rusty Kunai | thrown | any | beta2 | 16 | — | salvage:bandit_camp, drop:bandit, loot:salvage.bandit_camp, loot:drop.bandit | A bandit's pitted blade. Throws badly; the forge melts it down to scrap steel |
+| `rusty_kunai` | Rusty Kunai | thrown | any | beta2 | 16 | — | salvage:bandit_camp, drop:bandit_thug, loot:salvage.bandit_camp, loot:drop.bandit_thug, loot:drop.bandit_knife, loot:drop.bandit_archer, loot:drop.bandit_brute, loot:drop.bandit_ronin, loot:drop.smuggler_runner, loot:drop.bandit_chief | A bandit's pitted blade. Throws badly; the forge melts it down to scrap steel |
 | `senbon` | Senbon | thrown | genin | beta2 | 64 | 2 | shop:weapon_shop, craft:smithy | Steel needles: little damage, but they carry a coating and pin a nerve point |
-| `shuriken` | Shuriken | thrown | genin | beta2 | 64 | 4 | kit:genin, shop:weapon_shop, craft:smithy | Four-point throwing star; fast, stackable, three at once from Genin |
+| `shuriken` | Shuriken | thrown | genin | beta2 | 64 | 4 | kit:genin, loot:drop.rogue_genin, shop:weapon_shop, craft:smithy | Four-point throwing star; fast, stackable, three at once from Genin |
 | `makibishi` | Caltrops | trap | genin | beta2 | 16 | 6 | shop:tool_shop, craft:smithy | A pouch of iron spikes scattered behind you; slows and hurts pursuers |
 | `ninja_wire` | Ninja Wire | trap | academy | beta1 | 16 | 8 | shop:tool_shop, craft:workbench | A coil of thin steel wire: a trip trap between two posts, or binding |
 
@@ -268,7 +268,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 |---|---|---|---|---|---|---|---|---|
 | `cotton_cloth` | Cotton Cloth | cloth | any | beta1 | 64 | 4 | shop:tailor, shop:academy_supply | Plain woven cotton |
 | `dye` | Dye | cloth | any | beta1 | 64 | 3 | shop:tailor | A pot of dye in any wardrobe colour |
-| `leather_strip` | Leather Strip | cloth | any | beta1 | 64 | 4 | drop:boar, loot:drop.boar, shop:hagane_metalworks | Tanned leather for grips and pouches |
+| `leather_strip` | Leather Strip | cloth | any | beta1 | 64 | 4 | drop:boar, loot:drop.boar, loot:drop.bear, shop:hagane_metalworks | Tanned leather for grips and pouches |
 | `silk` | Silk | cloth | any | beta2 | 64 | 15 | shop:tailor, shop:market_day_stalls | Fine silk for festival clothes |
 | `thread` | Thread | cloth | any | beta1 | 64 | 1 | shop:tailor, shop:haruno_store, shop:academy_supply | Spooled thread |
 | `charcoal` | Charcoal | fuel | any | beta1 | 64 | 1 | vanilla, shop:hagane_metalworks | Forge fuel |
@@ -277,34 +277,34 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `bellflower_root` | Bellflower Root | herb | any | beta2 | 64 | 5 | gather:herb_garden, loot:gather.herb_garden, shop:pharmacy | A root for antidotes |
 | `ginger_root` | Ginger | herb | any | beta1 | 64 | 2 | gather:herb_garden, loot:gather.herb_garden, shop:grocer | Warming root for teas and tonics |
 | `ginseng_root` | Mountain Ginseng | herb | genin | beta3 | 64 | 25 | gather:forest_of_death, loot:gather.forest_of_death, shop:market_day_stalls | A rare root from the Forest of Death, for blood pills |
-| `healing_herb` | Mugwort | herb | any | beta1 | 64 | 3 | gather:herb_garden, gather:forest_floor, loot:gather.herb_garden, loot:gather.forest_floor, loot:gather.forest_of_death, shop:flower_shop, shop:pharmacy | The commonest healing herb |
+| `healing_herb` | Mugwort | herb | any | beta1 | 64 | 3 | gather:herb_garden, gather:forest_floor, loot:gather.herb_garden, loot:gather.forest_floor, loot:gather.forest_of_death, loot:drop.giant_leech, shop:flower_shop, shop:pharmacy | The commonest healing herb |
 | `lily_of_the_valley` | Lily of the Valley | herb | genin | beta2 | 64 | 6 | gather:herb_garden, loot:gather.herb_garden, shop:pharmacy | Pretty and poisonous; the Suzuran's flower |
 | `nightshade` | Nightshade | herb | genin | beta2 | 64 | 8 | gather:forest_floor, loot:gather.forest_floor, shop:pharmacy | A poison berry for coatings |
-| `bandit_purse` | Bandit Purse | loot | any | beta2 | 16 | — | drop:bandit, salvage:bandit_camp, loot:salvage.bandit_camp, loot:drop.bandit | A purse of stolen coin: open it for 5 to 40 ryo |
-| `bandit_trinket` | Bandit Trinket | loot | any | beta2 | 64 | — | salvage:bandit_camp, drop:bandit, loot:curio.bandit, loot:salvage.bandit_camp, shop:pawn_shop | A ring, a comb, a lucky coin: worth something to the pawnbroker |
-| `broken_blade` | Broken Blade | loot | any | beta2 | 64 | — | salvage:bandit_camp, drop:bandit, loot:salvage.bandit_camp, loot:drop.bandit | A snapped sword: the forge melts it into scrap steel |
+| `bandit_purse` | Bandit Purse | loot | any | beta2 | 16 | — | drop:bandit_thug, salvage:bandit_camp, loot:salvage.bandit_camp, loot:drop.bandit_thug, loot:drop.bandit_knife, loot:drop.bandit_archer, loot:drop.bandit_brute, loot:drop.bandit_ronin, loot:drop.smuggler_runner, loot:drop.bandit_chief | A purse of stolen coin: open it for 5 to 40 ryo |
+| `bandit_trinket` | Bandit Trinket | loot | any | beta2 | 64 | — | salvage:bandit_camp, drop:bandit_thug, loot:curio.bandit, loot:salvage.bandit_camp, loot:drop.monkey_thief, shop:pawn_shop | A ring, a comb, a lucky coin: worth something to the pawnbroker |
+| `broken_blade` | Broken Blade | loot | any | beta2 | 64 | — | salvage:bandit_camp, drop:bandit_thug, loot:salvage.bandit_camp, loot:drop.bandit_thug, loot:drop.bandit_knife, loot:drop.bandit_archer, loot:drop.bandit_brute, loot:drop.bandit_ronin, loot:drop.smuggler_runner, loot:drop.bandit_chief | A snapped sword: the forge melts it into scrap steel |
 | `chain_links` | Chain Links | metal | any | beta2 | 64 | 8 | shop:hagane_metalworks, craft:smithy | Forged links for chains and the mesh shirt |
 | `chakra_metal` | Chakra Metal | metal | jonin | later | 16 | 300 | shop:hagane_metalworks | A rare ore that carries chakra, for the finest blades |
 | `iron_sand` | Iron Sand | metal | any | beta2 | 64 | 4 | gather:river_bend, loot:gather.river_bend, shop:hagane_metalworks | Black sand from the river bend, smelted into steel |
 | `refined_steel` | Refined Steel | metal | genin | beta2 | 64 | 45 | shop:hagane_metalworks, shop:market_day_stalls, craft:smithy | Steel folded again: the forge's material for a fine grade |
-| `scrap_steel` | Scrap Steel | metal | any | beta2 | 64 | 3 | salvage:bandit_camp, drop:bandit, loot:salvage.bandit_camp, loot:drop.bandit, craft:smithy | Broken blades and buckles; four make an ingot at the forge |
-| `steel_ingot` | Steel Ingot | metal | any | beta2 | 64 | 20 | salvage:bandit_camp, loot:salvage.bandit_camp, shop:hagane_metalworks, craft:smithy | Folded tamahagane steel for blades |
+| `scrap_steel` | Scrap Steel | metal | any | beta2 | 64 | 3 | salvage:bandit_camp, drop:bandit_thug, loot:salvage.bandit_camp, loot:drop.bandit_thug, loot:drop.bandit_knife, loot:drop.bandit_archer, loot:drop.bandit_brute, loot:drop.bandit_ronin, loot:drop.smuggler_runner, loot:drop.bandit_chief, loot:drop.rogue_genin, craft:smithy | Broken blades and buckles; four make an ingot at the forge |
+| `steel_ingot` | Steel Ingot | metal | any | beta2 | 64 | 20 | salvage:bandit_camp, loot:salvage.bandit_camp, loot:drop.bandit_chief, shop:hagane_metalworks, craft:smithy | Folded tamahagane steel for blades |
 | `steel_wire` | Steel Wire | metal | any | beta1 | 64 | 3 | shop:academy_supply, shop:hagane_metalworks, craft:smithy | Drawn wire for ninja wire and chains |
 | `boar_tusk` | Boar Tusk | monster | any | beta2 | 64 | 10 | drop:boar, loot:drop.boar | A curved tusk |
 | `centipede_plate` | Centipede Plate | monster | genin | beta3 | 64 | 30 | drop:giant_centipede, loot:drop.giant_centipede | A plate of chitin from the Forest of Death |
 | `hawk_feather` | Hawk Feather | monster | any | beta2 | 64 | 6 | gather:cliff_nest, loot:gather.cliff_nest | A long barred feather for fletching and charms |
-| `snake_skin` | Snake Skin | monster | genin | beta3 | 64 | 18 | drop:giant_snake, gather:forest_of_death, loot:drop.giant_snake, loot:gather.forest_of_death | A shed skin longer than you are tall |
+| `snake_skin` | Snake Skin | monster | genin | beta3 | 64 | 18 | drop:giant_snake, gather:forest_of_death, loot:gather.forest_of_death, loot:drop.giant_snake | A shed skin longer than you are tall |
 | `spider_silk` | Spider Silk | monster | genin | beta3 | 64 | 25 | drop:giant_spider, loot:drop.giant_spider | Tough silk for wire and cloth |
-| `tiger_pelt` | Tiger Pelt | monster | genin | beta3 | 64 | 60 | drop:forest_tiger, loot:drop.forest_tiger | A striped pelt, a trophy of the forest |
-| `wolf_pelt` | Wolf Pelt | monster | any | beta2 | 64 | 15 | drop:wild_wolf, loot:drop.wild_wolf | A grey pelt |
+| `tiger_pelt` | Tiger Pelt | monster | genin | beta3 | 64 | 60 | drop:giant_tiger, loot:drop.giant_tiger | A striped pelt, a trophy of the forest |
+| `wolf_pelt` | Wolf Pelt | monster | any | beta2 | 64 | 15 | drop:wolf, loot:drop.wolf | A grey pelt |
 | `blank_scroll` | Blank Scroll | paper | any | beta1 | 64 | 6 | shop:scroll_shop, craft:sealing | A rolled sheet for a seal or a copy |
 | `chakra_paper` | Chakra Paper | paper | genin | beta2 | 64 | 15 | shop:scroll_shop | Paper from a chakra-sensitive tree: burns, wets, crumbles, cuts or wrinkles by your nature |
 | `ink` | Ink | paper | any | beta1 | 64 | 5 | shop:scroll_shop, shop:haruno_store, shop:academy_supply | A stick of sumi ink |
 | `paper` | Paper | paper | any | beta1 | 64 | 1 | vanilla |  |
-| `washi_paper` | Washi Paper | paper | any | beta1 | 64 | 2 | shop:scroll_shop, shop:haruno_store, shop:academy_supply | Strong mulberry paper for tags |
-| `blasting_powder` | Blasting Powder | powder | genin | beta2 | 64 | 6 | salvage:bandit_camp, loot:salvage.bandit_camp, shop:hagane_metalworks | Black powder for paper bombs |
+| `washi_paper` | Washi Paper | paper | any | beta1 | 64 | 2 | loot:drop.rogue_bomber, shop:scroll_shop, shop:haruno_store, shop:academy_supply | Strong mulberry paper for tags |
+| `blasting_powder` | Blasting Powder | powder | genin | beta2 | 64 | 6 | salvage:bandit_camp, loot:salvage.bandit_camp, loot:drop.rogue_bomber, shop:hagane_metalworks | Black powder for paper bombs |
 | `flash_powder` | Flash Powder | powder | genin | beta2 | 64 | 8 | shop:hagane_metalworks | Magnesium and salts for flash bombs |
-| `smoke_powder` | Smoke Powder | powder | academy | beta1 | 64 | 4 | shop:academy_supply, shop:hagane_metalworks | Dense smoke for smoke bombs |
+| `smoke_powder` | Smoke Powder | powder | academy | beta1 | 64 | 4 | loot:drop.rogue_bomber, shop:academy_supply, shop:hagane_metalworks | Dense smoke for smoke bombs |
 | `brush` | Brush | tool | any | beta1 | 1 | 15 | shop:scroll_shop, shop:haruno_store, shop:painters_studio | A calligraphy brush: needed at the sealing desk |
 | `whetstone` | Whetstone | tool | any | beta1 | 16 | 15 | shop:weapon_shop, shop:hagane_metalworks | Sharpens a blade in the field: restores a quarter of its durability |
 | `beeswax` | Beeswax | wax | any | beta1 | 64 | 3 | shop:pharmacy | For salves and candles |
@@ -497,8 +497,8 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `curio_arrowhead` | Old Arrowhead | battlefield | chunin | later | 16 | — | loot:curio.battlefield | From a war the Academy still teaches |
 | `curio_dented_plate` | Dented Armour Plate | battlefield | chunin | later | 16 | — | loot:curio.battlefield | It stopped something once |
 | `curio_giant_scale` | Giant Scale | beast | any | beta2 | 16 | — | loot:curio.beast | A scale the size of your palm |
-| `curio_huge_claw` | Huge Claw | beast | any | beta2 | 16 | — | loot:curio.beast, loot:gather.forest_of_death | A claw from something you are glad not to have met |
-| `curio_tuft_of_fur` | Tuft of Strange Fur | beast | any | beta2 | 16 | — | loot:curio.beast | Blue-grey, and warm long after it should be |
+| `curio_huge_claw` | Huge Claw | beast | any | beta2 | 16 | — | loot:curio.beast, loot:gather.forest_of_death, loot:drop.bear | A claw from something you are glad not to have met |
+| `curio_tuft_of_fur` | Tuft of Strange Fur | beast | any | beta2 | 16 | — | loot:curio.beast, loot:drop.giant_leech | Blue-grey, and warm long after it should be |
 | `curio_blank_mask` | Blank Mask | covert | anbu | later | 16 | — | loot:curio.covert | A mask with no face painted on it yet |
 | `curio_burnt_order` | Burnt Order | covert | anbu | later | 16 | — | loot:curio.covert | A sealed order, burned past reading |
 | `curio_foreign_coin` | Foreign Coin | far_lands | any | beta2 | 16 | — | loot:curio.far_lands, loot:curio.smuggler | Stamped with a sign from another land |
@@ -529,7 +529,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `curio_cipher_page` | Cipher Page | smuggler | any | beta2 | 16 | — | loot:curio.smuggler | Numbers in columns that add up to nothing |
 | `curio_false_bottom_box` | False-Bottomed Box | smuggler | any | beta2 | 16 | — | loot:curio.smuggler | Empty, both above and below |
 | `curio_crest_button` | Crested Button | village | any | beta1 | 16 | — | loot:curio.village | A lacquered button with a family crest you do not recognise |
-| `curio_old_coin` | Old Holed Coin | village | any | beta1 | 16 | — | loot:curio.village, loot:curio.market, shop:pawn_shop | A square-holed coin from before the Leaf printed notes |
+| `curio_old_coin` | Old Holed Coin | village | any | beta1 | 16 | — | loot:curio.village, loot:curio.market, loot:drop.monkey_thief, shop:pawn_shop | A square-holed coin from before the Leaf printed notes |
 | `curio_paper_crane` | Crushed Paper Crane | village | any | beta1 | 16 | — | loot:curio.village | Someone folded it with great care. Someone else sat on it |
 | `curio_tin_shinobi` | Tin Shinobi | village | any | beta1 | 16 | — | loot:curio.village | A toy ninja in flaking paint, one arm raised in a sign nobody uses |
 | `curio_carved_stone` | Stone with a Face | wilds | any | beta2 | 16 | — | loot:curio.wilds | Someone carved a face in it. It looks surprised |
@@ -556,8 +556,8 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `quest_parcel` | Parcel | generic | any | beta1 | 16 | — | quest, mission:d | A wrapped package to deliver |
 | `apartment_key` | Apartment Key | home | any | beta1 | 1 | — | quest:main.ch1, kit:start | The key to your flat; right-click your door plaque with it to furnish |
 | `spare_key` | Spare Key | home | any | beta1 | 1 | — | service:locksmith | A spare key to your home, to give to someone you trust |
-| `stolen_goods` | Stolen Goods | loot | any | beta2 | 64 | — | salvage:bandit_camp, loot:salvage.bandit_camp | A crate of someone's things: return them for a reward and a deed, or sell them and live with it |
-| `bounty_token` | Bandit Bounty Token | mission | genin | beta2 | 64 | — | mission:c, drop:bandit_leader | Proof a camp was cleared: hand it in for the bounty |
+| `stolen_goods` | Stolen Goods | loot | any | beta2 | 64 | — | salvage:bandit_camp, loot:salvage.bandit_camp, loot:drop.monkey_thief | A crate of someone's things: return them for a reward and a deed, or sell them and live with it |
+| `bounty_token` | Bandit Bounty Token | mission | genin | beta2 | 64 | — | mission:c, drop:bandit_chief, loot:drop.bandit_chief | Proof a camp was cleared: hand it in for the bounty |
 | `escort_pass` | Escort Pass | mission | genin | beta2 | 1 | — | mission:c | The Leaf's pass for an escort on the road |
 | `grocery_order` | Grocery Order | mission | genin | beta2 | 16 | — | mission:d | A neighbour's list and the bag to go with it |
 | `mission_beetle` | Beetle in a Jar | mission | genin | beta2 | 1 | — | mission:mission.d.insect_garden | A garden beetle in a jar with air holes |
