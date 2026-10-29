@@ -217,7 +217,7 @@ Story ties of board missions ([SYSTEMS.md](SYSTEMS.md) §1). The board's premise
 | Mission | The truth |
 |---|---|
 | `main.ch9.small_jobs`, `main.ch11.paper_trail`, `main.ch13.far_village`, `main.ch14.second_escort` | The story chapters (see the arc files) |
-| `mission.c.escort_merchant`, `mission.c.caravan_guard` (`chain.merchant`, after Ch 14) | More time with a traitor candidate. One neutral camp step, identical in every save (`story.merchant.camp_talk`). No candidate-specific clues before Ch 39. After Ch 40 an innocent merchant's chain becomes the informant chain |
+| `mission.c.escort_merchant`, `mission.c.caravan_guard` (`chain.merchant`, after Ch 14) | More time with a traitor candidate. One neutral camp step, identical in every save (`story.merchant.camp_talks`). No candidate-specific clues before Ch 39. After Ch 40 an innocent merchant's chain becomes the informant chain |
 | `mission.b.*` with a `trail_drop` (Chunin) | Yūgure traces for the journal's *Yūgure* page |
 | `mission.b.false_floors` | The merchant's alibi (the carpenter's abandoned shop) or failed alibi (the tool marks) |
 | `mission.a.cell_hunt` (Jonin) | Cell members repeat orders whose meaning only Ch 49 reveals ("Mark the doors. Bring the paper.") |

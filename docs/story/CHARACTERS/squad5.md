@@ -55,10 +55,10 @@ that the Third, a Sarutobi, kept the silence). The Hollow Crown at Ch 49.
 | 1 Cinders | Ch 7: heckles the graduation cheerfully: "Welcome to the bottom! It's great down here!" |
 | 3 Dusk | Exams: fights in the preliminaries with a showy staff bout and loses gracefully; in the attack he carries Academy children out of the stands |
 | 4 Embers | Chunin after the skip; declares himself the player's rival "for the hat" (friendly; the bond engine's rivalry meter is the joke) |
-| 5 Ashes | Ch 40: the council. His clan's Hokage kept the silence for thirty years. He walks out of the hall and sits on the Rock's steps; the player can find him. Ch 42: when the Sixth names the sensei Seventh, he stands up in the crowd and says "I'm with them," and the crowd follows |
-| 7 Last Bonfire | Ch 51: on the wall with the former Fifth and the Tobari. Ch 55: becomes the Eighth's Jonin Commander after `sensei_2`'s death, taking the post "until I take your hat" |
+| 5 Ashes | Ch 40.2: the council. His clan's Hokage kept the silence for thirty years; he stands through the whole session without a word. Ch 40.2b: that night, on the Rock under the Third's face, he asks the player the question he can't ask his family (`ans.squad5_a.will`). Ch 42: when the sensei is named Seventh, he stands up in the crowd and says "I'm with them," and the crowd follows |
+| 7 Last Bonfire | Ch 51: on the wall with the former Fifth and the Tobari. Ch 55: becomes the Eighth's Jonin Commander in `sensei_2`'s place, his oath quoting `ans.squad5_a.will`, and taking the post "until I take your hat" |
 
-**Endings.** He lives; the epilogue line reads `ans.squad5_a.serve`.
+**Endings.** He lives; the epilogue line reads `ans.squad5_a.serve` and `ans.squad5_a.will`.
 
 ### Dialogue brief
 
@@ -90,6 +90,12 @@ before Ch 49.
 | `ans.squad5_a.serve` | Ch 45 or 54 | "If you get the hat instead of me, would you want me to serve you or fight you for it?" | Serve with me / Fight me, it'll keep me honest / Take it yourself | Pride, loyalty | Ch 55: he takes the commander post (serve) or a standing challenge (fight) or offers you the hat and you refuse (take) | — |
 | `ans.squad5_a.lantern` | Level 3, New Year | "Whose name do you write on your lantern?" | The girl from the next cell / The Fourth / My own / Someone I haven't met | Family | Every New Year after, he writes the same on his | — |
 | `ans.squad5_a.carry` | Ch 20 (after the attack) | "I carried a kid out of the stands. Didn't even ask her name. Is that weird?" | No / Go find her / That's what the Fourth did for me | Kindness | Chunin arc: the girl is a recurring Academy kid who calls him "staff man" | — |
+| `ans.squad5_a.bottom` | Ch 7 (after his heckle, if you go up to the wall) | "Welcome to the bottom! Scared?" | No / A little / Of you? No | Courage | Ch 18: "You said ___ at the bottom. How about now?" before the finals | — |
+| `ans.squad5_a.spar` | Level 2, a staff spar | "Staff or fists? Pick how I lose." | Staff / Fists / Neither, race me | Courage | His sparring hangout favourite becomes yours | Opens a ritual (sparring or rooftop races) |
+| `ans.squad5_a.faces` | Level 4, on the Rock | "Which face up there do you like best? You can't say the Fourth, everyone says the Fourth." | The First / The Third / The empty spaces / The Fourth anyway | His faith | Ch 40.2b: under the Third's face he remembers it ("You liked her best") or not | "The Third": the Ch 40 hurt is sharper and his recovery stronger |
+| `ans.squad5_a.campaign` | Ch 33 (his cheerful campaign) | "Vote for me? I'm accepting endorsements. And dumplings." | Yes / Only if you buy dumplings / I'm running too | Pride, fun | Ch 45: his speech to the squad; Ch 55: "You endorsed me once. Look where it got you" | "Running too": the rivalry meter (friendly) rises; `ans.squad5_a.serve` reads warmer |
+| `ans.squad5_a.wall` | Ch 49 (war council) | "If the wall falls, do I stay on it or come to you?" | Stay on the wall / Come to me / Go where you're needed most | Duty | Ch 51.1: where he fights at the end of the wall scene | "Come to me": he is the first flame from a non-squad friend in Ch 53 |
+| `ans.squad5_a.sensei_2` | Ch 54 (after the funerals) | "He'd have made a joke about this. Should I?" | Yes, make the worst one / No / Write it in his notebook | Grief | Ch 55: his first act as Commander (a joke at the gate, silence, or a tally line) | — |
 
 **Unison technique (Blaze).** *Hearth Wheel*: his burning staff spin, kindled, becomes a turning
 wall of fire that lets no enemy through and burns nothing it shields.
@@ -99,9 +105,12 @@ where he is not a Sarutobi, it becomes his belief in the Hokage line itself ("Ev
 knew? Then what is the hat?").
 
 **New flags.** `ans.squad5_a.why_hokage` (nobody_taken, see_everyone, not_yet, beat_you),
-`ans.squad5_a.will` (warm, word, story, later), `ans.squad5_a.believe` (truth_now, people,
-dont_know), `ans.squad5_a.serve` (serve, fight, take), `ans.squad5_a.lantern` (girl, fourth, own,
-stranger), `ans.squad5_a.carry` (no, find_her, fourth).
+`ans.squad5_a.fire_means` (warm, word, story, later), `ans.squad5_a.will` (counts_more,
+never_counted, out_loud), `ans.squad5_a.serve` (serve, fight, take), `ans.squad5_a.lantern` (girl, fourth, own,
+stranger), `ans.squad5_a.carry` (no, find_her, fourth), `ans.squad5_a.bottom` (no, little, of_you),
+`ans.squad5_a.spar` (staff, fists, race), `ans.squad5_a.faces` (first, third, empty, fourth),
+`ans.squad5_a.campaign` (yes, dumplings, running), `ans.squad5_a.wall` (stay, come, needed),
+`ans.squad5_a.sensei_2` (joke, no, notebook).
 
 ---
 
@@ -178,7 +187,10 @@ asked). Nothing of Yūgure before Ch 30 beyond public news.
 | `ans.squad5_b.deserter` | Ch 30 (in the lanes) | (She shows you a Tobari family crest scratched out) "If someone in your family helped them... would you say?" | Yes, even if it hurts / Only to someone I trust / No | Honesty | Ch 30 to 31: she names the deserter (yes or trust); without it, the drain takes an extra investigation step | The `clan.tobari.3` shortcut opens either way |
 | `ans.squad5_b.seen` | Ch 31 (after the council) | "You saw us. Why?" | Because nobody else would / Because you asked / Because I know what it's like to be watched | Belonging | Ch 51 and the epilogue's wave at night | — |
 | `ans.squad5_b.teacher` | Level 5, Jonin arc | "The old man talks to me like I'm a wall he likes. Should I talk back?" | Yes / Only when you have something to say / Try once and see | Her growth | Epilogue: her paragraph to sensei_5 | — |
-
+| `ans.squad5_b.hand` | Ch 19 (she passes routes by hand signs) | (Signs, subtitled) "Can you read this?" | Yes / Teach me / No, say it | Freedom | Chunin arc: she signs to you instead of speaking; Ch 31.1 the drain fight uses signs if you learned | "Teach me": a hand-sign hangout opens; in Ch 31 she can sign the cell's position before the Ember Link |
+| `ans.squad5_b.grandmother` | Ch 31.2 (after the kindling) | "She's never given anything to anyone outside the quarter. Why you?" | Because you asked me to come / Because I listened / I don't know | Belonging | Epilogue: the grandmother's line at your inauguration | — |
+| `ans.squad5_b.lanterns` | Level 3, at the lake (after `filler.lake_lanterns`, or Beta 2 lanterns) | "My great-uncle kept a lantern for a son for twenty years. Is that love or stubbornness?" | Love / Both / Stubbornness, and that's fine | Family | Ch 54: she lights a lantern on the lake for `sensei_2` and asks if it's the same | — |
+| `ans.squad5_b.watch` | Level 6, Jonin arc | "Will you walk a night watch with me? Not for work." | Yes / Only if you talk / Bring ramen | Belonging | A ritual (`ritual [squad5_b, night_watch]`); Ch 53 her flame line: "Not for work" | — |
 **Unison technique (Blaze).** *Lantern Hush*: her smothering, kindled, becomes a hush across a
 district in which only bonded allies can hear each other.
 
@@ -189,7 +201,9 @@ the Tobari elder's apprentice instead of her granddaughter.
 **New flags.** `ans.squad5_b.quiet` (yes, learning, yours), `ans.squad5_b.notice` (yes, quiet,
 look), `ans.squad5_b.sound` (ramen, bells, safe, nobody), `ans.squad5_b.deserter` (say, trust, no),
 `ans.squad5_b.seen` (nobody_else, you_asked, watched), `ans.squad5_b.teacher` (yes, when_needed,
-try_once).
+try_once), `ans.squad5_b.hand` (yes, teach_me, say_it), `ans.squad5_b.grandmother` (asked,
+listened, dont_know), `ans.squad5_b.lanterns` (love, both, stubborn), `ans.squad5_b.watch` (yes,
+talk, ramen).
 
 ---
 
