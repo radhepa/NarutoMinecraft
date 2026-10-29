@@ -136,6 +136,9 @@ footwork dojo, the Haruno market family). A clan line shows life inside the clan
   `{other}` (the other speaker in an exchange) and `{squad}`. No literal names: no names from the
   name pools, and no canon Naruto characters or catchphrases. Place names like Ichiraku, the
   Hokage Rock and the Academy are fine.
+- **The player is always publicly a clanless orphan.** Never assume a clan; clan folk may wonder or
+  tease, kind ones make a point of not caring (`clan_status=clanless`). The compiler rejects
+  `same_clan=yes` and `clan_status=born|member`.
 - **How people are named.** `{name:<ref>}` is the full name, given name first and family name last
   ("Shigure Nara"). Friends use given names (`{given:<ref>}`, `{player}`). Formal speech uses the
   family name and an honorific (`{family:role:sensei}-sensei`, `{player_family}-san`). The Hokage

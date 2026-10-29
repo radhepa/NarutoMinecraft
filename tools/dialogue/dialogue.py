@@ -317,6 +317,10 @@ def parse_heading(where, line, defaults):
         except json.JSONDecodeError as e:
             fail(where, f'bad condition JSON: {e}')
         check_condition(where, when)
+    # The player is always publicly a clanless orphan (the owner's decision): no line may treat them as clan kin.
+    for key, bad in (('same_clan', 'yes'), ('clan_status', 'born'), ('clan_status', 'member')):
+        if bad in tags.get(key, {}).get('any', []):
+            fail(where, f'{key}={bad}: the player is always clanless; write clan_status=clanless reactions instead')
     if 'foreshadow' in fns and 'story' not in tags:
         fail(where, 'foreshadow lines are keyed by story id: add story=<id>')
     return {'pool': pool, 'tags': tags, 'fn': fns, 'kind': kind, 'when': when}
