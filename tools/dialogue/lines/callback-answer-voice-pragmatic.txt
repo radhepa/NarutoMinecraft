@@ -1,0 +1,102 @@
+# Callbacks for questions/voice-pragmatic.txt, in the pragmatic asker's voice.
+#! fn: callback
+#! tags: personality=pragmatic
+
+## callback.answer.q.pref.prag_thousand_ryo.a1
+You'd save a windfall, you said. Good. I put a little extra aside this week, thinking of you.
+
+## callback.answer.q.pref.prag_thousand_ryo.a2
+Better gear with a thousand ryo. The Hagane forge has new kunai. Good steel. Good price, for once.
+
+## callback.answer.q.pref.prag_thousand_ryo.a3
+Treat your friends with a windfall. Not the best return. I've changed my mind. It's a fine return.
+
+## callback.answer.q.pref.prag_thousand_ryo.a4
+Three hundred bowls of ramen. I worked out the sums again. Two hundred and eighty, with tax.
+
+## callback.answer.q.pref.prag_regret_spend.a1
+Sweets, your regret. I saw you at the sweet stall yesterday. Just noting it.
+
+## callback.answer.q.pref.prag_regret_spend.a2
+Nothing you regret buying. Careful. I've told my apprentice about you as an example.
+
+## callback.answer.q.pref.prag_regret_spend.a3
+A gift nobody liked. The thought had value, I said. I still mean it.
+
+## callback.answer.q.values.prag_worth_double.a1
+Good tools are worth double, we agreed. I paid full price for a whetstone today. Worth it.
+
+## callback.answer.q.values.prag_worth_double.a2
+Good food, worth paying double. I bought the dear rice this week. You were right. Tastes better.
+
+## callback.answer.q.values.prag_worth_double.a3
+Nothing worth double, you said. The market fears you. I've told them.
+
+## callback.answer.q.values.prag_worth_double.a4
+Time with friends, worth any price. I closed early yesterday to see mine. Your fault.
+
+## callback.answer.q.dilemma.prag_cheap_kunai.a1
+The good kunai, you'd buy. The Hagane are having a sale. Small one. Still worth a look.
+
+## callback.answer.q.dilemma.prag_cheap_kunai.a2
+Cheap kunai and lots of spares, your way. How many have snapped so far? Honestly.
+
+## callback.answer.q.dilemma.prag_cheap_kunai.a3
+Borrow and make do. Did you give them back? Ha. I'm only asking.
+
+## callback.answer.q.values.prag_hard_or_clever.a1
+Hard work gets you further, you said. Steady work. I did a double shift today on that advice.
+
+## callback.answer.q.values.prag_hard_or_clever.a2
+Clever work beats hard work, you said. I reorganised my stall. Saved an hour a day.
+
+## callback.answer.q.values.prag_hard_or_clever.a3
+Both, together. The full ledger. Still the right answer. You'll go far.
+
+## callback.answer.q.past.prag_shortcut_backfired.a1
+Once is tuition, I said, about your shortcut. You've paid it. Don't pay twice.
+
+## callback.answer.q.past.prag_shortcut_backfired.a2
+Never had a shortcut go wrong. Still? I'm waiting.
+
+## callback.answer.q.past.prag_shortcut_backfired.a3
+Your shortcuts go wrong all the time. At least you're consistent. Ha.
+
+## callback.answer.q.plans.prag_save_pay.a1
+Half your mission pay saved. Still half? You'll own a house before me.
+
+## callback.answer.q.plans.prag_save_pay.a2
+A little of your pay saved. Still putting a little away? Good. Keep at it.
+
+## callback.answer.q.plans.prag_save_pay.a3
+You spend all your pay. We said we'd talk. Let's talk. Over tea. I'll pay. Once.
+
+## callback.answer.q.plans.prag_saving_for.a1
+Saving for gear. An investment in staying alive. How close are you?
+
+## callback.answer.q.plans.prag_saving_for.a2
+Saving for a home of your own. I keep an eye on houses for sale. Just in case.
+
+## callback.answer.q.plans.prag_saving_for.a3
+A rainy-day fund. It rained all week. Did you need it? I hope not.
+
+## callback.answer.q.plans.prag_saving_for.a4
+Saving for a gift for someone. A different kind of rich, I said. Still think so.
+
+## callback.answer.q.advice.prag_raise_prices.a1
+I raised my prices, like you said. A few grumbled. Most understood. Business is business.
+
+## callback.answer.q.advice.prag_raise_prices.a2
+I swallowed the cost this season, as you advised. My regulars noticed. They bring me pickles now.
+
+## callback.answer.q.advice.prag_raise_prices.a3
+The sign's up by the till: "Rice is dear this year." Your idea. Nobody's complained once.
+
+## callback.answer.q.values.prag_braggers.a1
+Braggers are annoying, we agreed. A Genin told me about the same C-rank again today. Fifth time.
+
+## callback.answer.q.values.prag_braggers.a2
+True bragging is just loud reporting. Your view. I've started letting the true ones finish.
+
+## callback.answer.q.values.prag_braggers.a3
+You find braggers fun to listen to. Kinder than me. I tried it. Lasted a minute.

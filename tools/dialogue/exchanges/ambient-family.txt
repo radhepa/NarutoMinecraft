@@ -1,0 +1,54 @@
+# Overheard talk between relatives (siblings, cousins, grandparents and grown children).
+#! tags: relation=family
+
+## ambient.family  fn=worldbuild
+A: Grandmother wants us all for supper on the last day of the month.
+B: All of us? Where will we sit?
+A: On each other, probably. Same as every year.
+
+A: Did you fix the gate?
+B: I tied it with wire.
+A: That's not fixing, that's hoping.
+
+A: Our cousin's coming from the farms for Market Day.
+B: Then hide the pickles. Last time the barrel came back empty.
+
+A: Who's cooking for New Year?
+B: Not you. Never again you. The rice cakes were grey.
+
+A: Mother's planted chrysanthemums again.
+B: Says it's for the shrine. It's really to beat the neighbour's.
+
+A: Is the old ladder still in the shed?
+B: The one with the cracked rung? Nobody's been brave enough to throw it out.
+
+## ambient.family  fn=reveal_character
+A: You've got your father's laugh. You know that?
+B: Everybody tells me. I wish I'd heard more of it.
+
+A: I found our old Academy notebooks in the trunk.
+B: Burn them. Please. Mine has a poem in it.
+A: I've already read it to the whole family.
+
+A: Grandfather still keeps his old headband in the drawer.
+B: Polished every week. Don't ever touch it.
+
+A: You never call.
+B: I'm right here, every week, at your table.
+A: You never call before you come. That's what I mean.
+
+## ambient.family  fn=react
+A: The baby's teething. Nobody in the house has slept.
+B: I'll take a night. Bring the little one round.
+
+A: You've grown again!
+B: I'm twenty-four. I stopped growing years ago.
+A: Not to me you didn't.
+
+A: Your brother passed his exam!
+B: I know. The whole street has heard about it since breakfast.
+
+## ambient.family  fn=filler
+A: Supper's at six.
+B: It's always at six.
+A: And you're always late.

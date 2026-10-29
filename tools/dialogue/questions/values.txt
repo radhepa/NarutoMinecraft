@@ -1,0 +1,128 @@
+# Friendship questions about values: honesty, rules, strength, fear, forgiveness. Asked by any resident.
+# Axis poles: honesty_vs_kindness (1 honesty, -1 kindness), rules_or_results (1 rules, -1 results),
+# alone_or_together (1 alone, -1 together), tradition_or_change (1 tradition, -1 change).
+
+? q.values.awful_painting | fn: reveal_character deepen_bond | kind: dilemma | level: 3 | axis: honesty_vs_kindness
+Q: Say a friend proudly shows you a painting, and it's dreadful. What do you tell them?
+Q: A friend made you a scarf. It's lumpy and the colours fight. Do you say so?
+- The truth, gently :: Gently is the hard part. Good for you. {values:+honesty} {tone:warm} {pole:1}
+- That I love it :: Sweet of you. I hope they never find out. {values:+kindness -honesty} {tone:warm} {pole:-1}
+- Ask what they like about it :: Clever. Let them find the flaws themselves. {values:+knowledge} {tone:curious}
+- Ask for lessons :: Ha! Then you'd both be painting dreadfully. Together, at least. {values:+kindness} {tone:joking}
+
+? q.values.hard_truth | fn: reveal_character deepen_bond | kind: player_past | level: 6 | follows: q.values.awful_painting | depth: 2 | axis: honesty_vs_kindness
+Q: Has anyone ever told you something true that you didn't want to hear?
+Q: Was there ever a hard truth you were glad someone said to you?
+- Yes, and I'm grateful :: That takes a good friend on both sides. {values:+honesty} {tone:humble} {pole:1}
+- Yes, and it still stings :: Some truths take a long time to settle. That's all right. {values:+honesty} {tone:gentle}
+- I'd rather not have known :: Maybe. Some things are kinder left unsaid. {values:+kindness} {tone:evasive} {pole:-1}
+
+? q.values.break_rule | fn: reveal_character deepen_bond | kind: dilemma | level: 3 | axis: rules_or_results
+Q: If breaking a rule would get the mission done, would you break it?
+Q: Rules or results? If you can only have one, which do you pick?
+- Rules come first :: The rules are there because someone learned the hard way. {values:+duty} {tone:stern} {pole:1}
+- The mission comes first :: Results. Bold. Just make sure you can explain it afterwards. {values:+courage -duty} {tone:bold} {pole:-1}
+- Depends on the rule :: Fair. Some rules are walls, and some are fences. {values:+knowledge} {tone:curious}
+
+? q.values.leave_behind | fn: reveal_character deepen_bond | kind: dilemma | level: 6 | follows: q.values.break_rule | depth: 2 | axis: rules_or_results
+Q: Your sensei orders you to leave a hurt teammate and finish the mission. What do you do?
+Q: Orders say go on. Your teammate is down behind you. Which way do you run?
+- Follow the order :: That's a heavy thing to carry. I hope you never have to. {values:+duty -loyalty} {tone:stern} {pole:1}
+- Go back for them :: I'd want you on my squad. Even if the sensei shouted. {values:+loyalty -duty} {tone:bold} {pole:-1}
+- Find a third way :: There usually is one, if you're quick enough to see it. {values:+creativity +loyalty} {tone:curious}
+
+? q.values.strong | fn: reveal_character deepen_bond | kind: opinion | level: 2
+Q: What does being strong mean to you?
+Q: When you say someone's strong, what do you mean?
+- Winning fights :: Simple and honest. There's something to be said for that. {values:+strength} {tone:blunt}
+- Protecting people :: That's the kind of strong that lasts. {values:+loyalty +kindness} {tone:warm}
+- Never giving up :: Getting up one more time than you fall. I like that. {values:+courage} {tone:bold}
+- Knowing yourself :: That's a quiet answer. Quiet answers are usually the deep ones. {values:+knowledge} {tone:humble}
+
+? q.values.work_alone | fn: reveal_character deepen_bond | kind: preference | level: 2 | axis: alone_or_together
+Q: Do you work better on your own, or with others around?
+Q: Alone or in a team: where do you do your best work?
+- On my own :: No one to slow you down. No one to catch you, either. {values:+freedom} {tone:proud} {pole:1}
+- With a team :: More hands, more ideas, more lunch. {values:+loyalty} {tone:warm} {pole:-1}
+- Depends on the team :: Ha! Yes. The right team, or no team at all. {values:+honesty} {tone:joking}
+
+? q.values.ask_for_help | fn: reveal_character deepen_bond | kind: opinion | level: 5 | follows: q.values.work_alone | depth: 2 | axis: alone_or_together
+Q: When something's really wrong, do you tell someone, or handle it yourself?
+Q: Is it hard for you to ask for help?
+- I handle it myself :: I understand. Just remember the door's open. {values:+freedom} {tone:proud} {pole:1}
+- I tell a friend :: Good. That's not weakness. It's sense. {values:+loyalty} {tone:warm} {pole:-1}
+- I'm learning to ask :: That's honest. It's harder than any jutsu, I think. {values:+honesty} {tone:humble} {pole:-1}
+
+? q.values.afraid | fn: reveal_character deepen_bond | kind: opinion | level: 5
+Q: Can I ask you something? What frightens you most?
+Q: Everyone's afraid of something. What's yours?
+- Being alone :: That one I understand. You're not, you know. Not here. {values:+family} {tone:gentle}
+- Letting people down :: Then you care a great deal. That's not a bad fear to have. {values:+duty +loyalty} {tone:humble}
+- Spiders. Big ones :: Ha! A sensible fear. Some of them are the size of my hand. {values:+honesty} {tone:joking}
+- Nothing at all :: Nothing? Hm. Ask me again in a few years. {values:+courage} {tone:proud}
+
+? q.values.broken_promise | fn: reveal_character deepen_bond | kind: opinion | level: 4 | axis: honesty_vs_kindness
+Q: Is it ever all right to break a promise?
+Q: Could you break your word, if keeping it would hurt someone?
+- Never :: Your word is all you really own. I respect that. {values:+honesty} {tone:stern} {pole:1}
+- To spare someone pain :: Kindness over your word. I can see that. {values:+kindness -honesty} {tone:warm} {pole:-1}
+- Only if I explain why :: That's the honest way to break one, I suppose. {values:+honesty +kindness} {tone:humble}
+
+? q.values.forgive | fn: reveal_character deepen_bond | kind: opinion | level: 4
+Q: Someone wrongs you and then says sorry. Do you forgive them?
+Q: How long does it take you to forgive someone?
+- Right away :: You've a generous heart. Don't let anyone use it. {values:+kindness} {tone:warm}
+- Once they prove it :: Sorry is a word. What comes after is the real apology. {values:+honesty} {tone:blunt}
+- Depends what they did :: Some things take a day. Some take years. True enough. {values:+knowledge} {tone:evasive}
+
+? q.values.old_customs | fn: reveal_character worldbuild | kind: opinion | level: 3 | axis: tradition_or_change
+Q: Should we keep old customs, even when nobody remembers why?
+Q: The village has customs older than anyone alive. Keep them all, or let some go?
+- Keep them :: There's a reason somewhere, even if it's just to remember. {values:+family} {tone:warm} {pole:1}
+- Let the old ones go :: A village has to breathe. I can't say I disagree. {values:+freedom +creativity} {tone:bold} {pole:-1}
+- Find out why first :: Ask an elder over tea. Usually there's a good story in it. {values:+knowledge} {tone:curious}
+
+? q.values.speak_up | fn: reveal_character deepen_bond | kind: dilemma | level: 6 | follows: q.values.old_customs | depth: 2 | axis: tradition_or_change
+Q: If the elders decided something you thought was wrong, would you say so?
+Q: Would you stand up to the village council, if you were sure they were mistaken?
+- I'd speak up :: Brave. Do it politely, and they might even listen. {values:+courage +honesty} {tone:bold} {pole:-1}
+- I'd trust them :: They've seen a lot. Still, keep your eyes open. {values:+duty} {tone:humble} {pole:1}
+- I'd talk to them alone :: Wise. No one likes being corrected in public. {values:+kindness +honesty} {tone:warm}
+
+? q.values.how_you_win | fn: reveal_character deepen_bond | kind: opinion | level: 2 | axis: rules_or_results
+Q: Does it matter how you win, or only that you win?
+Q: A win's a win, or is there such a thing as winning wrong?
+- How you win matters :: Then you'll never have to look away from anyone. Good. {values:+honesty} {tone:stern} {pole:1}
+- A win is a win :: Ha! The scoreboard agrees with you. {values:+strength} {tone:bold} {pole:-1}
+- Depends who I'm fighting :: Against a bandit, anything goes. Against a friend, play fair. Sensible. {values:+loyalty} {tone:curious}
+
+? q.values.family | fn: deepen_bond reveal_character | kind: opinion | level: 7
+Q: Who do you count as family?
+Q: Family isn't only blood, I think. Who's yours?
+- My friends here :: Then you've a big family. And I hope I'm in it. {values:+family +loyalty} {tone:warm}
+- My squad :: Squads become family. It's the oldest story in the Leaf. {values:+loyalty} {tone:humble}
+- The whole village :: The whole Leaf? That's a lot of birthdays to remember. {values:+duty +family} {tone:bold}
+- I'm still finding out :: That's all right. Families take time to find. {values:+honesty} {tone:gentle}
+
+? q.values.big_mistake | fn: reveal_character deepen_bond | kind: opinion | level: 3
+Q: What do you do after you make a big mistake?
+Q: When you've really messed something up, what happens next?
+- Own up at once :: Straight to it. That's harder than it sounds. {values:+honesty} {tone:blunt}
+- Fix it quietly :: Mend it and move on. Sensible, if no one's hurt. {values:+duty} {tone:evasive}
+- Learn from it :: Then it wasn't wasted. That's how I see it too. {values:+knowledge} {tone:humble}
+- Sulk for a day :: Ha! Honest. A day of sulking, then back to work. {values:+honesty} {tone:joking}
+
+? q.values.small_lies | fn: reveal_character deepen_bond | kind: opinion | level: 3 | axis: honesty_vs_kindness
+Q: Are little lies all right, if they keep the peace?
+Q: "That hat looks lovely on you." Little lies like that: harmless, or not?
+- They're harmless :: A bit of grease for the wheels. Most people agree. {values:+kindness} {tone:joking} {pole:-1}
+- I'd rather not lie :: Even about the hat? You're a stern one. {values:+honesty} {tone:stern} {pole:1}
+- Just don't comment :: Ha! The silent compliment. Very diplomatic. {values:+kindness +honesty} {tone:evasive}
+
+? q.values.look_up_to | fn: reveal_character deepen_bond | kind: opinion | level: 3
+Q: Who do you look up to?
+Q: Is there someone you want to be like, one day?
+- My teachers :: Good teachers are worth looking up to. Tell them, sometime. {values:+knowledge +duty} {tone:humble}
+- My friends :: You look up to your friends? That's a lovely thing to say. {values:+loyalty} {tone:warm}
+- The Hokage :: Aim high. That's the spirit of the Leaf. {values:+duty +courage} {tone:bold}
+- Nobody yet :: Then you'll have to become someone worth looking up to. {values:+freedom} {tone:proud}

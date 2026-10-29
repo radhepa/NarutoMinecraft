@@ -1,0 +1,178 @@
+# Greetings shaped by the player's rank, crossed with the speaker's: civilians, peers, superiors and juniors.
+#! fn: react
+
+## greet.rank  player_rank=academy
+Off to the Academy, {player}? Mind you listen to your teachers. They were all students once.
+An Academy student! Every Jonin in the village started on those same wooden benches.
+How are the lessons, {player}? Still throwing shuriken at the posts, or the posts' neighbours?
+Academy life! Enjoy it. You'll miss having somebody tell you exactly what to do.
+Back from class? You've chalk on your sleeve, {player}.
+The Academy keeps you busy, eh? Lessons till noon and homework till bedtime.
+Study hard, {player}. Graduation comes round quicker than you'd think.
+
+## greet.rank  player_rank=academy  rank=civilian
+Still at the Academy? I'd never last a day. I can't even throw a stone straight.
+Look at you with your training pouch. I remember when the Academy kids all wanted to be just like the Hokage.
+Hello, {player}! My nephew is in the year above you. Says the hand signs are the worst part.
+Learning to be a shinobi, are you? Rather you than me. I'll stick to my vegetables.
+Academy student! Come by after class; I always have a sweet for the ones who did their homework.
+Every morning I watch you lot run to the Academy bell. Some of you even make it.
+Practising your jutsu? Not on my shop window, I hope. The last student used a smoke bomb in here.
+You'll be a fine shinobi one day, {player}. I can tell by how often you're late. Busy people are always late.
+Ah, an Academy hopeful. When you're a famous Genin, remember who sold you your first onigiri.
+
+## greet.rank  player_rank=academy  rank=genin
+Still at the Academy? Enjoy it. Out here it's all lost cats and weeding gardens.
+Hey, Academy! Is the swing tree still off limits? We used to sneak up it every lunch.
+An Academy student. I remember my graduation test. My clone looked like a sick potato.
+Academy, huh? Tip: sit at the front. The teacher can't see what you're doing if you're right under the nose.
+Don't rush to graduate, {player}. The headband's heavier than it looks.
+Hi! Academy student, right? Stay out of the training ground puddles, we use those.
+Academy days. You've got it easy. Wait till you meet your first D-rank. It involves a goat.
+
+## greet.rank  player_rank=academy  rank=chunin|jonin
+An Academy student. Work on your fundamentals, {player}. Flashy jutsu come later.
+Hello there. Keep at the Academy lessons. Every good shinobi I know was a stubborn student first.
+Academy, {player}? Run, throw, hide, repeat. It's dull now, but it'll save your life one day.
+Hello, student. Tell your teachers I said they're doing a fine job. They'll be suspicious.
+An Academy student out training? Good. Wrap your wrists and keep your elbows in.
+Still at the Academy. Don't let anyone tell you that's nothing. It's where the Leaf begins.
+
+## greet.rank  player_rank=academy  rank=academy  stage=child
+Hey, classmate! Did you finish the hand sign homework? Can I copy? Just the hard ones?
+Are you ready for the test? I'm not ready. I've been not ready for a whole week.
+You hit the target post yesterday! Well, the post next to it. Still counts!
+Sit with me at lunch, {player}! I'll trade you my pickles for your egg.
+Hey, {player}! Last one to the swing tree has to clap the erasers!
+Did you hear? We get to practise with real kunai next week! Real ones!
+
+## greet.rank  player_rank=genin
+A Genin now! Mind the headband doesn't slip over your eyes.
+Look at that headband, {player}! You've earned it.
+{player_rank} {player}! It suits you. I can't stop saying it.
+Congratulations on graduating! The whole street's been talking about it.
+A real shinobi of the Leaf, {player}. Your first D-rank yet?
+There goes our newest Genin. Stand up straight, the headband's watching.
+How's the squad, {player}? Getting along with your sensei?
+
+## greet.rank  player_rank=genin  rank=civilian
+A Genin! Congratulations, {player}. If you ever need a D-rank, my roof could use you.
+The headband! You did it! I knew you would. Well, I hoped very loudly.
+Our own Genin on the street. Now I'll feel safe, even if you're just out buying rice.
+Congratulations! The grocer told me before I'd even had breakfast. Everyone's so proud.
+A Genin now. I suppose you'll be off chasing bandits and forgetting us shopkeepers.
+Look at you! When I was your age I was sweeping this shop. Now you protect it.
+Are you the one who caught the tailor's cat last week? That was a mission? Well, thank you anyway.
+A shinobi in my shop! Sit up front where people can see you. Good for business.
+I've put your name on my wall of Genin who've eaten here. It's a very short wall. You're on it.
+
+## greet.rank  player_rank=genin  rank=genin
+Hey, fellow Genin. Survived another week of D-ranks?
+{player}! Heard you got the goat mission. My condolences.
+New Genin, eh? Welcome to the bottom. The view gets better, I promise.
+Hey! Want to swap missions? I've got painting a fence. You've got... let me guess, weeding?
+Genin to Genin: the clerk at the Mission Desk gives better jobs if you say good morning.
+We should spar some time, {player}. One Genin to another. I won't go easy.
+Another week, another lost cat. How's your squad? Mine argues about lunch.
+Hey, {player}. You look like you've been weeding all day. Fellow sufferer.
+Did your sensei make you climb a tree without hands yet? Mine did. I'm still angry.
+I saw your squad at the Mission Desk. Good luck with whatever you got. You'll need it.
+
+## greet.rank  player_rank=genin  rank=chunin
+Genin {player}. Keep your squad close; that's the whole job at your rank.
+Hello, Genin. I remember my first year. Do the dull missions well, and the good ones come.
+A new Genin. Don't take a C-rank before you're ready, no matter what your squad says.
+Good to see you, {player}. Learn from every D-rank. Even the goat.
+Hello. When the Chunin Exams come, you'll want your basics solid. Start now.
+Genin. Make sure your kunai are oiled and your sandals are tied. You'd be amazed what gets people killed.
+Hello, {player}. I proctor at the Mission Desk some mornings. Smile, it helps.
+You've got the look of a Genin who just finished a fence. Good work. Fences matter too.
+
+## greet.rank  player_rank=genin  rank=jonin
+Genin {player}. Listen to your sensei, even when you think they're wrong. Especially then.
+A new Genin. Good. The Leaf needs more of you. Don't get yourself hurt.
+Hello, Genin. The headband suits you. Wear it like you mean it.
+{player}. Teamwork, first and always. Anything you learn alone is half as useful.
+Hello. I remember when I first tied on that headband. It feels heavier every year. That's a good thing.
+Genin. Train your stamina. Every fight you lose, you'll lose because you got tired first.
+
+## greet.rank  player_rank=genin  rank=academy  stage=child
+Whoa, a real Genin! Can I touch your headband? Just a little? With one finger?
+Hey! You're a Genin! Did you fight any bandits yet? Did you win? How many?
+I'm going to graduate too, next year! Then I'll be a Genin like you!
+You're a Genin, {player}! Can you show me a real jutsu? A small one? Please?
+Is the Mission Desk scary? Is it true they make you catch cats? Is it true the cats fight back?
+My friends won't believe I talked to a real Genin! Can I say you're my friend? Please?
+
+## greet.rank  player_rank=chunin
+A Chunin! The Exams are no small thing. Congratulations, {player}.
+{player_rank} {player}. Has a nice ring to it.
+Look at the vest! A Chunin of the Leaf. Well done, {player}.
+Good day, Chunin. The whole street watched the finals. You were something.
+A Chunin now. You'll be leading squads before long. Mind you lead them home.
+
+## greet.rank  player_rank=chunin  rank=civilian
+Good day, Chunin! It's an honour. I mean it.
+A Chunin on my doorstep! I'll tell my grandchildren. Well, my neighbour's grandchildren.
+I heard you passed the Exams! The whole market was cheering. Even the fishmonger, who hates noise.
+Chunin {player}! Sit down, have a cup. You must be so busy these days.
+I always said you'd go far. Well, I thought it. Quietly. But I meant it.
+A Chunin! I remember when you were buying rice with Academy chalk on your sleeves.
+If the village is in Chunin hands like yours, I'll sleep sound tonight.
+
+## greet.rank  player_rank=chunin  rank=genin
+Chunin {player}! Congratulations. Any tips for when my turn comes?
+Hello, Chunin. You were brilliant in the Exams. I'm trying not to be jealous. Failing a bit.
+Chunin! Will you be leading squads now? Pick mine. Please. We're desperate.
+Hey, {player}. Well, Chunin {player} now. I'll get used to it.
+Hello, Chunin. The new Genin are all talking about you. Try not to let it go to your head.
+Chunin. Could you put in a word with the Mission Desk? We've had nine cats in a row.
+
+## greet.rank  player_rank=chunin  rank=chunin
+Welcome to the ranks, {player}. More paperwork than you'd think. Much more.
+A fellow Chunin. Good. We could use another steady hand.
+Chunin {player}. Congratulations, colleague. Your first squad lead will be the hardest. Then they all are.
+Hello, Chunin. Welcome to the vest. It's warm in summer and pockets for everything.
+Good to have you with us, {player}. The Mission Desk shifts are long; bring a cushion.
+Chunin to Chunin: never promise a Genin squad an easy mission. There's no such thing.
+
+## greet.rank  player_rank=chunin  rank=jonin
+Chunin {player}. Well done. Now the real learning starts.
+Hello, Chunin. You'll have Genin looking to you now. Give them something worth looking at.
+A Chunin. Good. Keep your head clear and your squad closer.
+Chunin. I watched your Exam. Some mistakes. Fewer than most. You'll fix them.
+
+## greet.rank  player_rank=chunin  rank=academy  stage=child
+A real Chunin! Are you going to be Hokage? You could be Hokage! I'd vote for you!
+Chunin {player}! Is it true you fought in the stadium with everyone watching? Weren't you scared?
+Can I carry your scrolls, Chunin? I'm very careful. I've only dropped my lunch twice this week.
+
+## greet.rank  player_rank=academy  rank=civilian  job=teacher
+Don't think I didn't see you yawning in the third lesson, {player}. Early to bed tonight.
+
+## greet.rank  player_rank=genin  rank=civilian  job=gate_guard
+A Genin! I'll be signing you out through the gate soon. Write your name neatly in my book.
+
+## greet.rank  player_rank=genin  job=mission_desk
+New Genin! Welcome to my counter. Missions are posted at eight; say please and I'll find you a good one.
+
+## greet.rank  player_rank=genin  rank=civilian  job=smith
+A Genin, eh? Bring your first kunai to me when it chips. They always chip. Everyone's first one chips.
+
+## greet.rank  player_rank=genin  rank=genin  personality=fiery
+New Genin! I've decided you're my rival now! Train hard, because I won't lose to you!
+
+## greet.rank  player_rank=genin  rank=genin  personality=reserved
+Genin. ...Welcome. It gets easier.
+
+## greet.rank  player_rank=chunin  rank=civilian  job=ramen_cook
+A Chunin at my counter! First bowl of the new rank's on the house. Tradition. I just made it up.
+
+## greet.rank  player_rank=chunin  rank=genin  personality=shy
+Ch-Chunin {player}. I watched your fight in the finals. I, um, I want to be like that.
+
+## greet.rank  player_rank=academy  rank=jonin  personality=stern
+Academy student. Your stance is wrong. Feet wider. ...Better. Now do it every day.
+
+## greet.rank  player_rank=academy  rank=genin  personality=playful  player_stage=child
+Academy kid! I mean, Academy student. Here's a secret: the teacher's desk drawer sticks. Use that information wisely.

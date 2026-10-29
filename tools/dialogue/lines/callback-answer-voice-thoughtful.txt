@@ -1,0 +1,102 @@
+# Callbacks for questions/voice-thoughtful.txt, in the thoughtful asker's voice.
+#! fn: callback
+#! tags: personality=thoughtful
+
+## callback.answer.q.values.thought_why_ninja.a1
+People become shinobi to protect others, you said. I found a scroll from the founding that agrees with you.
+
+## callback.answer.q.values.thought_why_ninja.a2
+Glory, you said, is why people choose the life. I counted the statues in the village. You may have a point.
+
+## callback.answer.q.values.thought_why_ninja.a3
+Family expectation, your reason. I've been noticing how many shinobi share a parent's trade.
+
+## callback.answer.q.values.thought_why_ninja.a4
+"Because they can." I keep returning to that answer of yours. It's simpler than mine, and maybe truer.
+
+## callback.answer.q.values.thought_why_you.a1
+You chose this path to protect people. I've watched you since. It holds.
+
+## callback.answer.q.values.thought_why_you.a2
+You wanted to matter to someone. I wrote that in my notebook. You do, you know.
+
+## callback.answer.q.values.thought_why_you.a3
+Not sure yet why you chose the path. I respect that more than any certainty.
+
+## callback.answer.q.values.thought_always_know.a1
+Always better to know, you said. A painful truth at least stands still. I've quoted us both since.
+
+## callback.answer.q.values.thought_always_know.a2
+Not always better to know. I've been testing your answer on the world. It keeps passing.
+
+## callback.answer.q.values.thought_always_know.a3
+Truth needs someone ready to hold it. That came from our talk. I think of it often.
+
+## callback.answer.q.pref.thought_one_scroll.a1
+A history, your one scroll. The library has a new one on the founding clans. I set it aside for you.
+
+## callback.answer.q.pref.thought_one_scroll.a2
+One scroll of jutsu, forever. I imagined you as that hermit. A cheerful one.
+
+## callback.answer.q.pref.thought_one_scroll.a3
+A book of stories, your one scroll. Have you found the one you'd read a hundred times?
+
+## callback.answer.q.pref.thought_one_scroll.a4
+A blank scroll, to fill yourself. Have you started writing in it? I'd read it.
+
+## callback.answer.q.values.thought_past_future.a1
+The past is the teacher, we said. I've been reading old village records because of that.
+
+## callback.answer.q.values.thought_past_future.a2
+The future matters most to you. Where we'll live. I've been trying to look forward more.
+
+## callback.answer.q.values.thought_past_future.a3
+"Only today." I wrote it on a slip of paper and pinned it over my desk.
+
+## callback.answer.q.values.thought_change_choice.a1
+You'd change that one choice, even at the cost of its lesson. I've wondered which choice it was. I won't ask.
+
+## callback.answer.q.values.thought_change_choice.a2
+Your mistakes made you, you said, and you'd keep them. I admire that peace.
+
+## callback.answer.q.values.thought_change_choice.a3
+You needed to think about whether you'd change it. Have you? There's no hurry.
+
+## callback.answer.q.dilemma.thought_wrong_scroll.a1
+I told the librarian about a wrong date myself, the way you said you would. They thanked me warmly.
+
+## callback.answer.q.dilemma.thought_wrong_scroll.a2
+You'd correct a library scroll yourself. Bold. I found one of your sort of corrections in the margins today. Not yours, I hope?
+
+## callback.answer.q.dilemma.thought_wrong_scroll.a3
+A note left inside the scroll for the next reader. I did it. Your idea was too good not to.
+
+## callback.answer.q.values.thought_quiet_people.a1
+Quiet people are underestimated, you agreed. Still water. I've been listening to the quiet ones more since.
+
+## callback.answer.q.values.thought_quiet_people.a2
+Quiet as a choice, not a lack. You said that. It changed how I see a few people I know.
+
+## callback.answer.q.values.thought_quiet_people.a3
+"We all see each other through a keyhole." I keep using your thought in arguments. I win them.
+
+## callback.answer.q.plans.thought_understand.a1
+You want to understand people, by the end. I found a scroll on it. It's no help at all. Ha.
+
+## callback.answer.q.plans.thought_understand.a2
+Chakra, the thing you'd most like to understand. The scroll keepers have a new treatise. I'll show you.
+
+## callback.answer.q.plans.thought_understand.a3
+To understand yourself, that's your hope. The oldest question. How's it going?
+
+## callback.answer.q.plans.thought_understand.a4
+Understanding everything, you said. Have you started? Tonight, I told you.
+
+## callback.answer.q.plans.thought_how_learn.a1
+Ask, listen, ask again. Your method. I've been asking more questions because of it.
+
+## callback.answer.q.plans.thought_how_learn.a2
+You'll read everything to learn it. The good shelves are at the back of the library, by the window. I'm there most mornings.
+
+## callback.answer.q.plans.thought_how_learn.a3
+Live and watch, your slow way of learning. I watched the river for an hour today. Learned a lot, actually.

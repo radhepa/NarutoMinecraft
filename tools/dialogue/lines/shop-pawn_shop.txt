@@ -1,0 +1,85 @@
+# The pawn shop: buys loot from the bandit camps outside the wall; sells odds and ends. The only other way, with
+# furniture sold back at half, to turn things into ryo (ROADMAP §7, Ryo).
+#! fn: commerce
+
+## shop.pawn_shop.greet  shop=pawn_shop  fn=commerce
+Come in. Buying or selling? I like both, but I like selling better.
+Welcome. Don't mind the clutter, every piece has a story and a price.
+Hello, {player}. Got something in that bag that rattles?
+In you come. Close the door, the bell's broken and I like to know who's here.
+Welcome to the pawn shop. Ask anything, touch carefully.
+
+## shop.pawn_shop.greet  shop=pawn_shop  player_rank=genin|chunin|jonin|anbu|hokage  fn=commerce,react
+Back from outside the wall? Let's see what the bandits left behind.
+
+## shop.pawn_shop.browse  shop=pawn_shop  fn=commerce
+Old blades in the barrel, chipped but honest. Lanterns on the shelf. Teapots of every size.
+That's a travelling merchant's scale. Weighs things true, which is more than its last owner did.
+Odds and ends from all over. Some I know the story of, some I don't ask.
+Bandit-camp lockboxes, empty. People buy them for their own savings.
+A cracked tea set, a drum, a lacquer box. Nothing's useful, everything's interesting.
+
+## shop.pawn_shop.buy  shop=pawn_shop  kind=cycle  fn=commerce
+{item}. {pay}. You've a collector's eye.
+There. I'd say it'll bring you luck, but I said that about the last one.
+That's {pay}. No returns, but I'll buy it back cheap.
+Sold. Take it before I change my mind.
+{pay}, done. Lovely piece, that.
+Yours. Dust it off at home, it's been on my shelf a while.
+
+## shop.pawn_shop.cant_afford  shop=pawn_shop  kind=cycle  fn=commerce
+You can't afford that, but you can afford to sell me something. Think about it.
+Short. Bring me some bandit loot and we'll trade straight across.
+Not enough, friend. I don't hold things here, they walk off.
+Too dear for you today. Next time you're outside the wall, keep your eyes open.
+
+## shop.pawn_shop.sold_out  shop=pawn_shop  kind=cycle  fn=commerce
+That's gone. Someone wanted it more than you, and paid me first.
+Sold yesterday. I never know what I'll have tomorrow, that's the fun.
+None left. Bring me more and I'll have more.
+
+## shop.pawn_shop.sell_back  shop=pawn_shop  kind=cycle  fn=commerce,teach
+Bandit loot, is it? Lay it on the counter. I pay fair, not generous.
+Salvage from the camps: buckles, blades, a lockbox. I'll buy the lot.
+That's worth {pay} to me. Take it or leave it, and most people take it.
+Furniture goes back to the furniture shop at half. I only buy what came from outside the wall.
+Rusted blades I'll take for scrap. The smith next door buys my scrap, so we all eat.
+Hm, this {item} is decent. More than I expected from a bandit's bag.
+If it's stolen from someone in the village, I don't want it. Loot from outside, yes.
+
+## shop.pawn_shop.haggle  shop=pawn_shop  fn=commerce,reveal_character
+Haggle with me? Finally, someone who knows how a pawn shop works.
+You want more for it? Fine, a little more. Don't tell the next customer.
+I'll go up a few ryo, because you came in smiling.
+That's my last offer. My last last offer. Mostly.
+You drive a hard bargain. I respect that. I still won't go higher.
+
+## shop.pawn_shop.closing  shop=pawn_shop  time=evening|night  fn=commerce
+Closing up. Bring the rest tomorrow, I'll still be greedy then.
+I'm locking the cases. Sell quick if you're selling.
+Last deal of the day. Make it a good one.
+
+## shop.pawn_shop.recommend  shop=pawn_shop  fn=commerce,teach
+Clear a bandit camp, and bring the pickings here. It's the best pay outside of missions.
+The {item}. You won't find another in the village.
+Keep the lockboxes, they hold more ryo than a pocket and they don't tear.
+That old lantern works fine. A bit of oil and it'll light your room for years.
+Sell me the junk, keep the steel. The smith will make you a kunai from good scrap.
+
+## shop.pawn_shop.regular  shop=pawn_shop  level=3..10  fn=commerce,deepen_bond
+My best supplier! What've you brought me this time?
+You know my prices better than I do now. I'm a little afraid of you.
+I put aside an old compass. Thought you might like it.
+Here comes trouble, and trouble always brings something to sell.
+
+## shop.pawn_shop.haggle_win  shop=pawn_shop  kind=cycle  fn=commerce
+Fine! {pay}, and not a ryo more. You've robbed me in my own shop.
+All right, all right. You win. Take your {pay} before I come to my senses.
+You've worn me down. {pay} it is. I'll tell my family I was ill today.
+Agreed, {pay}. Shake on it quickly, before the pawnbroker in me wakes up.
+
+## shop.pawn_shop.haggle_fail  shop=pawn_shop  kind=cycle  fn=commerce
+No. My offer stands, and it's already kind.
+Push me any harder and the price goes down, not up.
+Try that on the next shop. Here, it's my number or the door.
+Ha! Nice try. Same offer, and I'm still smiling, so take it.

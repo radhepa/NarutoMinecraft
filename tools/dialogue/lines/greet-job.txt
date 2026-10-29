@@ -1,0 +1,337 @@
+# Greetings from inside the speaker's work.
+
+## greet.job  job=ramen_cook  fn=worldbuild
+Welcome! Sit, sit! The broth's been going since four this morning. It's just reaching its best.
+Hey there! Mind the steam, it gets in your eyes. Miso or pork bone today?
+Welcome back! Your stool's free. The end one's warmest, right by the pot.
+Hello! I've just pulled a fresh batch of noodles. Listen to them slap the board. Music.
+Hey! Careful, the counter's wet, I've just wiped it. Sit anywhere that's dry.
+
+## greet.job  job=ramen_cook  fn=reveal_character
+Welcome! You know, I've made the same broth for twenty years and I still taste it every hour.
+Hey! My dream is a bowl so good the customer forgets to talk. Nobody's managed it yet. Sit, try.
+
+## greet.job  job=ramen_cook  fn=teach
+Welcome! A hot bowl gives back a bit of chakra after a hard day. Doctor's orders. Well, cook's orders.
+
+## greet.job  job=ramen_cook  fn=commerce
+Hey! Extra pork today, no charge, I sliced too much. Don't tell the other customers.
+Hello! Bowl's eight ryo, same as always. The price of a smile is free.
+
+## greet.job  job=cook  fn=worldbuild
+Hello! Don't mind the smoke, the grill's a bit enthusiastic today.
+Welcome! I've three pots going and two hands. Talk to me while I stir.
+Hello! Taste this. No, go on. Too much salt? Be honest. Cooks need honest tongues.
+Hey! Lunch rush is over, so I can finally breathe. And eat. Mostly breathe.
+Hello! Fresh fish this morning, so it's grilled mackerel or nothing. Lucky you.
+
+## greet.job  job=cook  fn=reveal_character
+Hello! I burned my first rice so badly the pot had to be thrown out. Look at me now.
+Welcome! I can tell how people feel from what they order. You look like you need soup.
+
+## greet.job  job=cook  fn=teach
+Hello! Eat a proper meal before training. A full belly takes the weight out of tired legs for a while.
+
+## greet.job  job=cook  fn=commerce
+Hello! Today's special is a stew that's been simmering since breakfast. Small bowl or big bowl? Big bowl.
+Welcome! Set lunch is rice, pickles, soup and fish. Can't go wrong.
+
+## greet.job  job=grocer  fn=worldbuild
+Hello! The cart from the farms came in at dawn. Everything you see was in the ground yesterday.
+Welcome! Mind the radishes on the step, I haven't found a home for them yet.
+Hello! The sweet potatoes are the size of my head this year. I've been weighing them for fun.
+Morning! Squeeze the peaches if you like. Gently. They bruise like people.
+Hello! I sort the greens three times a day. Wilted ones go to the pig farmer outside the wall.
+
+## greet.job  job=grocer  fn=reveal_character
+Hello! I've had this shop since my mother had it. Same shelves. Same squeaky door.
+Welcome! I love the first melons of summer more than any festival.
+
+## greet.job  job=grocer  fn=commerce
+Hello! Rice is fresh today, ground this morning. The good stuff, not the dusty sacks.
+Welcome! Buy two daikon and I'll throw in a bunch of spring onions. Today only. Possibly tomorrow.
+Hello! Pickled plums in from my aunt's tree. Sour enough to wake the dead.
+
+## greet.job  job=fishmonger  fn=worldbuild
+Hello! The boats came in under the second bridge before light. This lot was swimming at dawn.
+Welcome! Mind the ice water. It goes everywhere, including in your sandals.
+Hello! The river's giving us sweetfish this week. Grill them with salt, nothing else.
+Hey! Don't mind the cats, they're my staff. Paid in heads and tails.
+Morning! I've been gutting since five. Don't shake my hand. Trust me.
+
+## greet.job  job=fishmonger  fn=reveal_character
+Hello! I can tell the hour by how the fish smell. It's late morning. Very late morning.
+Hey! People say I smell of fish. I say they smell of not-fish. We're even.
+
+## greet.job  job=fishmonger  fn=commerce
+Hello! Eel's in. Not cheap, but the festival's coming, so you'll want it before it's gone.
+Welcome! Buy now, prices drop at closing but so does the choice.
+Hey! Mackerel, two for five ryo. A Genin's feast.
+
+## greet.job  job=farmer  fn=worldbuild
+Hello! Just in from the fields outside the wall. My boots are still half the paddy.
+Morning! The rice is coming up a lovely green. Two more months and it'll be gold.
+Hello! The crows have been at my seedlings again. I've made a scarecrow wearing a headband. It's working.
+Hello! The irrigation ditches need clearing every week. Frogs love them. So do I, mostly.
+Morning! Brought a cartload of cabbages for the grocer. Took me since dawn to load.
+
+## greet.job  job=farmer  fn=reveal_character
+Hello! I've worked the same plot as my grandfather. The soil knows our family better than we do.
+Morning! Some people dream of jutsu. I dream of rain on the right day.
+
+## greet.job  job=farmer  fn=teach
+Hello! If you're walking past the paddies, keep to the raised paths. The mud takes sandals and doesn't give them back.
+
+## greet.job  job=farmer  fn=hook
+Morning! Something's been nibbling my melons at night. Not crows. Bigger. I'd pay to know what.
+Hello! My scarecrow vanished overnight. If you see a straw shinobi wandering the village, it's mine.
+
+## greet.job  job=carpenter  fn=worldbuild
+Hello! Mind the shavings, they're slippery as ice. Cedar today.
+Morning! Raising a roof on the residential street. Listen for the hammering.
+Hello! I've been planing this beam since breakfast. Feel that. Smooth as a river stone.
+Hey! Every house in the Leaf creaks in its own voice. I can tell you who built which by the creak.
+Hello! The joints in this chest are dovetailed. No nails, no glue. It'll outlive both of us.
+
+## greet.job  job=carpenter  fn=reveal_character
+Hello! I hit my thumb twice before lunch. That's a good day. Some days it's five.
+Morning! I love the smell of new wood more than the smell of new bread. Don't tell the baker.
+
+## greet.job  job=carpenter  fn=guide
+Hello! If you're furnishing a flat, the furniture shop sells what we make. Tell them which piece you like and I'll know it's going to a good home.
+
+## greet.job  job=carpenter  fn=commerce
+Hey! Need a shelf? A stool? A whole table? Measure your wall first. Everybody forgets to measure.
+Hello! Repairs are half the price of new. Bring your wobbly chair in, I'll set it right.
+
+## greet.job  job=tailor  fn=worldbuild
+Hello! Watch the pins on the floor. I've lost three today and found two in my sleeve.
+Welcome! Festival season's coming, so I'm up to my elbows in yukata. Pick a pattern while you wait.
+Hello! The Academy kids tear their trousers on the training posts every week. I'm practically on the Academy payroll.
+Hello! Sit, if you can find a stool under the fabric. That one. No, under the blue silk.
+Welcome! I've been stitching hems since dawn. My fingers have forgotten what straight looks like.
+
+## greet.job  job=tailor  fn=reveal_character
+Hello! I can tell a person's whole life from their sleeves. Yours say busy.
+Welcome! My mother taught me the running stitch before she taught me to read.
+
+## greet.job  job=tailor  fn=commerce
+Hello! Patches are five ryo, new hems ten. Rank outfits are given, but I'll tailor them to fit you properly.
+Welcome! New colours in this week. Deep green, rust red, and a blue the colour of the river in autumn.
+Hello! Bring me that torn sleeve. I'll have it whole by sundown.
+
+## greet.job  job=smith  fn=worldbuild
+Hey! Stand back from the forge. Sparks find bare arms. Ask me how I know.
+Hello! Listen to that ring. Good steel sings. Bad steel thuds.
+Hey! I've been folding this blade since sunrise. Another forty folds and it'll be ready.
+Hello! Hot today. The forge doesn't care what season it is.
+Hey! Mind the quench barrel. It hisses like a cat if you get too close.
+
+## greet.job  job=smith  fn=reveal_character
+Hey! I can't hear a thing in my left ear. Thirty years of hammer. Talk to my right side.
+Hello! First blade I ever made bent in half on the first throw. I keep it on the wall to stay humble.
+
+## greet.job  job=smith  fn=teach
+Hey! Oil your kunai after the rain. Rust bites deeper than any enemy.
+
+## greet.job  job=smith  fn=commerce
+Hello! Kunai and shuriken on the rack, sharpening's a ryo a piece. Bring me your chipped ones.
+Hey! Want something made? Bring steel, bring an idea, bring patience. I'll supply the hammering.
+
+## greet.job  job=florist  fn=worldbuild
+Hello! Mind the buckets, the water's fresh. The irises came in this morning.
+Welcome! Smell the gardenias. Go on. Your whole day just got better.
+Hello! I've been cutting stems since six. My hands are green to the wrist.
+Welcome! The greenhouse is too warm today, so half the shop has moved onto the pavement.
+Hello! The bees from the Aburame gardens visit my window boxes. I don't charge them.
+
+## greet.job  job=florist  fn=reveal_character
+Hello! Every flower means something. I like that. Nobody has to say the hard thing out loud.
+Welcome! I talk to the plants. They grow better. I'm sure of it. Mostly sure.
+
+## greet.job  job=florist  fn=commerce
+Hello! A single stem is two ryo, a small bunch ten. Tell me who it's for and I'll choose.
+Welcome! Potted plants for your flat? The fern by the door is very hard to kill.
+Hello! White lilies for respect, sunflowers for cheer. What's the occasion?
+
+## greet.job  job=teacher  fn=worldbuild
+Hello. Forgive the chalk on my sleeves. It's a professional hazard.
+Hello. I've thirty essays to mark tonight. Twenty-nine of them say the Hokage Rock is big. It is.
+Hello. Lunch break, finally. Fifteen minutes of quiet before the yard turns into a battlefield.
+Hello. The swing tree's off limits again. Somebody tried to swing over the fence.
+Hello. Hand sign practice this afternoon. I'll be watching thirty pairs of hands tie themselves in knots.
+
+## greet.job  job=teacher  fn=reveal_character
+Hello. I was a terrible student myself. That's why I'm patient with the terrible ones.
+Hello. Every class has one student who's going to be extraordinary. I never know which until much later.
+
+## greet.job  job=teacher  fn=teach
+Hello. Practise your hand signs slowly first. Speed comes from getting them right a thousand times.
+Hello. The Academy library is open to anyone after lessons. More students should use it.
+Hello. Review the day's lesson before bed. It sticks better. That's not a teacher's trick, it's just true.
+
+## greet.job  job=medic  fn=worldbuild
+Hello. Long shift. Three sprained ankles, a burnt hand, and someone who swallowed a marble.
+Hello. If you're here to visit someone, the ward's on the second floor. If you're here as a patient, sit down.
+Hello. The herbs from the Suzuran gardens came in fresh. The whole hospital smells of mint.
+Hello. Sorry, I'm between rounds. Walk with me while I wash my hands.
+Hello. Quiet day. That's the best kind, in my line of work.
+
+## greet.job  job=medic  fn=reveal_character
+Hello. I chose medicine because I couldn't stand watching people hurt and doing nothing.
+Hello. I've healed a lot of broken bones. Mostly Genin who thought they could fly.
+
+## greet.job  job=medic  fn=teach
+Hello. If you collapse, you'll wake up in here. We'd rather you didn't. Rest when you're tired.
+Hello. Bandage a cut before you keep training on it. It'll heal twice as fast.
+Hello. Drink water. That's half of all the medicine I hand out.
+
+## greet.job  job=nurse  fn=worldbuild
+Hello, dear. Mind the trolley, I'm doing the afternoon round of teas.
+Hello! I've just changed every bed on the ward. Don't you dare get injured today.
+Hello. The waiting room's full of Genin with splinters from the training posts. Same as every week.
+Hello! The children's ward made paper cranes for the window. Forty-seven so far.
+Hello. I've been on since dawn. The tea in the staff room is terrible and I've had six cups.
+
+## greet.job  job=nurse  fn=reveal_character
+Hello! I hum while I work. The patients say it helps. I can't stop, anyway.
+Hello. You look well. Good. I like it best when I only see people outside.
+
+## greet.job  job=nurse  fn=teach
+Hello. If you wake up here, don't get up too fast. Sit on the edge of the bed first. Every time.
+Hello! Sleep is the best medicine we've got, and it's free. Use it.
+Hello. Wash your hands before you eat, especially after training. You'd be shocked what's on those posts.
+
+## greet.job  job=guard  fn=worldbuild
+Hello. Quiet shift. That's how I like them.
+Good day. I walk this street four times before noon. I could do it blind.
+Hello. Every shop on this street knows my face. Better that than a stranger's.
+Good day. If you see anything strange, come and find me. Usually it's a cat. Sometimes it's two cats.
+Hello. I've broken up three arguments over the last dango stick today. Peace is hard work.
+
+## greet.job  job=guard  fn=reveal_character
+Hello. I like this job. Most days nothing happens, and I helped make it that way.
+Good day. My feet ache, but the street's safe. Fair trade.
+
+## greet.job  job=guard  fn=teach
+Hello. If you're out after dark, stay on the lit streets. The guard patrols those first.
+Good day. Lost something? The guard post keeps a box of found things. You'd be amazed what turns up.
+Hello. If there's trouble and I'm not around, find the nearest shopkeeper. They all know how to call us.
+
+## greet.job  job=gate_guard  fn=worldbuild
+Hello! Another day at the gate. Six carts so far, one goat, and a very lost poet.
+Hey! If you're heading out on a mission, sign the book. Neatly, please. The last Genin wrote in crayon.
+Hello! The gate opens at dawn and closes at dusk, unless someone important's late. Someone important's always late.
+Hey there. Sit a minute. Nobody's due through for an hour.
+Hello! I've counted every merchant through this gate for six years. I can name their horses.
+
+## greet.job  job=gate_guard  fn=reveal_character
+Hey! People think gate duty is dull. They're right. But when it isn't, you'd better be awake.
+Hello! I've seen every face come home through this gate. I like that part best.
+
+## greet.job  job=gate_guard  fn=teach
+Hello! Can't let you out past the wall without a mission scroll, I'm afraid. Rules.
+Hey! The Forest of Death is off limits outside the Exams. Don't even ask me nicely.
+Hello! If you're going out, tell the Mission Desk and tell us. Two people should always know where you are.
+
+## greet.job  job=merchant  fn=worldbuild
+Hello! Just in from the east road! Spices, cloth and a crate of things I'm not sure what they are.
+Welcome! I travel the road between the villages three seasons a year. The Leaf's my favourite stop.
+Hello! Don't mind the mule. It bites, but only people it likes. ...That's not much better, is it.
+Welcome! I've set up by the market for a week. After that, the road calls again.
+Hello! The roads have been quiet lately. Good for business, bad for stories.
+
+## greet.job  job=merchant  fn=reveal_character
+Hello! I've slept in forty different inns this year. My own bed feels strange now.
+Welcome! I can haggle in five dialects. I can't cook in any of them.
+
+## greet.job  job=merchant  fn=commerce
+Hello! Lacquer bowls from the river villages, very fine. For you, a friendly price. Friendlier if you buy two.
+Welcome! Everything on this table came a long way. The price came a long way too.
+Hello! Cloth from the south, beads from the north. Take your time and look.
+
+## greet.job  job=librarian  fn=worldbuild
+Hello. Softly, please. Somebody fell asleep over the history scrolls and I haven't the heart to wake them.
+Good day. I've just reshelved the jutsu theory section. Again. Students never put things back.
+Hello. The oldest scroll in this library is older than the Hokage Rock's first face. Gently, if you handle it.
+Good day. It's quiet in here today. My favourite kind of day.
+Hello. Mind the ladder, it rolls. I've been up and down it all morning.
+
+## greet.job  job=librarian  fn=reveal_character
+Hello. I've read every book on these shelves. Some twice. One eleven times.
+Good day. I'm told I shush in my sleep. I can't confirm it.
+
+## greet.job  job=librarian  fn=guide
+Hello. Maps of the village are on the second shelf; old clan histories are by the window.
+Good day. If you're studying for the Academy, the beginner scrolls are on the low shelves. Start there.
+Hello. You can read anything in here, but nothing leaves without a stamp. I'm very fond of my stamp.
+
+## greet.job  job=tea_master  fn=worldbuild
+Welcome. Sit. The water is nearly ready. It should never boil, only whisper.
+Good day. The cups are warmed. That's the first courtesy.
+Welcome. The old shinobi are at the corner table again, telling the same stories. They tip well.
+Good day. Today's tea is from the hills north of the wall. It tastes like mist.
+Welcome. Shogi board's free by the window, if you'd like to play while you wait.
+
+## greet.job  job=tea_master  fn=reveal_character
+Good day. I have brewed tea every day for forty years. I am still learning the third cup.
+Welcome. I listen more than I speak. People tell a tea master everything.
+
+## greet.job  job=tea_master  fn=teach
+Welcome. Green tea keeps tiredness at bay a little longer. Only a little. Don't treat it as a bed.
+
+## greet.job  job=tea_master  fn=commerce
+Good day. A pot of green is four ryo, with dango six. The chestnut dango is only for autumn.
+Welcome. If you're short of ryo, have the cheap tea. It's not the worst. It's simply honest.
+
+## greet.job  job=bath_keeper  fn=worldbuild
+Welcome! The water's just hit perfect. Not too hot, not too cold. Get in before somebody ruins it.
+Hello! Leave your sandals by the door. In the rack. Please, in the rack.
+Welcome! I've been scrubbing tiles since dawn. You can eat off them. Please don't.
+Hello! The boiler's been grumbling all morning. I've been grumbling back. We've reached an understanding.
+Welcome! Towels on the left, buckets on the right, no splashing in the deep tub.
+
+## greet.job  job=bath_keeper  fn=reveal_character
+Hello! I can tell who trained hardest by who sighs loudest when they get in.
+Welcome! Best job in the village. Warm all winter, and everyone leaves happier than they came.
+
+## greet.job  job=bath_keeper  fn=teach
+Welcome! A good soak after a hard spar loosens everything up. Your legs will thank you tomorrow.
+Hello! Rinse before you get in the tub. Always. It's the first rule of every bathhouse.
+
+## greet.job  job=bath_keeper  fn=commerce
+Hello! Three ryo for the bath, one more for a towel. The view of the steam is free.
+
+## greet.job  job=vet  fn=worldbuild
+Hello! Mind the puppy. Stitches out this morning, and very pleased about it.
+Hello! Busy morning. Two ninken with thorns, a cat with an opinion, and a tortoise that wouldn't come out.
+Hello! Wash your hands before you touch anything. The kittens in the back are very little.
+Hi! The Inuzuka brought in a whole litter for checks. I've been licked about four hundred times.
+Hello! Somebody brought me an injured crow from the training ground. It's healing. It's also very rude.
+
+## greet.job  job=vet  fn=reveal_character
+Hello! Animals are easier than people. They tell you exactly where it hurts.
+Hi! I've been bitten by every kind of animal in the Leaf. I've forgiven them all.
+
+## greet.job  job=vet  fn=teach
+Hello! If you get a pet, bring it in for a check once a season. Small problems stay small that way.
+Hi! A happy pet needs a bed of its own. You'd be surprised how much they care.
+
+## greet.job  job=vet  fn=guide
+Hello! The shelter's next door if you're thinking of taking a pet home. They've a very patient old dog.
+
+## greet.job  job=priest  fn=worldbuild
+Welcome. Ring the bell gently. It's very old and very loud.
+Good day. I've swept the shrine steps since sunrise. There are a hundred and eight of them. I counted, once.
+Welcome. The shrine's quiet this morning. Even the crows seem to be praying.
+Good day. The offering box is for coins, not wishes written on dango sticks. I've had to make that a rule.
+Welcome. The camphor tree by the gate is older than the village. Touch its bark, if you like. It's allowed.
+
+## greet.job  job=priest  fn=reveal_character
+Good day. I wasn't always so peaceful. The shrine taught me slowly.
+Welcome. I like sweeping. A swept step is a small prayer anybody can make.
+
+## greet.job  job=priest  fn=guide
+Welcome. Fortunes are drawn from the box by the bell. Tie a bad one to the rope; it stays here and you go free.
+Good day. New Year visits come through this gate. Weddings too. You'll see the whole village pass these steps in a year.
+Welcome. If you need a quiet place, the bench behind the main hall faces the Rock. Nobody will bother you.

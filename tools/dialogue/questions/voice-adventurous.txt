@@ -1,0 +1,76 @@
+# Questions only an adventurous resident asks: roads, the far coast, the blank spaces on maps.
+# Axis poles: stay_or_see_world (1 stay, -1 see the world), caution_or_daring (1 caution, -1 daring).
+#! tags: personality=adventurous
+
+? q.plans.adv_come_to_coast | fn: deepen_bond reveal_character | level: 4 | axis: stay_or_see_world
+Q: If I left tomorrow to walk to the sea, would you come?
+Q: I've got a map, two weeks of rice and a road to the coast. Coming?
+- Yes, let's go :: Ha! I knew it. Pack light and bring good sandals. {values:+freedom +courage} {tone:bold} {pole:-1}
+- I've got duties here :: Right. Someone has to keep the village standing while I'm away. {values:+duty} {tone:dutiful} {pole:1}
+- Bring me back a shell :: Deal. The prettiest one on the beach. {values:+kindness} {tone:joking}
+
+? q.plans.adv_most_want_see | fn: deepen_bond reveal_character | level: 5 | follows: q.plans.adv_come_to_coast | depth: 2
+Q: On a long road out of the Leaf, what would you most want to see?
+Q: Of everything out past the hills, what's calling you?
+- The sea :: Water to the edge of the sky. You never forget the first sight of it. {values:+freedom} {tone:free}
+- The mountains :: Snow on the peaks in summer. I've seen it once. I'll see it again. {values:+courage} {tone:bold}
+- Other villages :: Their food, their festivals, their way of doing things. You'd learn so much. {values:+knowledge} {tone:curious}
+- The road itself :: Ha! A true traveller. The going is the point. {values:+freedom} {tone:playful}
+
+? q.pref.adv_sleep_outside | fn: deepen_bond reveal_character | level: 2
+Q: Have you ever slept under the stars, no roof at all?
+Q: Ever spent a night out in the open? Just you, a blanket and the sky?
+- Yes, I loved it :: Isn't it the best? You wake up with the birds. {values:+freedom} {tone:free}
+- Not yet :: Not yet! We'll fix that. Next clear night. {values:+courage} {tone:curious}
+- Too many bugs :: Ha! A small price for the stars. Bring a net. {values:+honesty} {tone:joking}
+
+? q.values.adv_safe_or_exciting | fn: deepen_bond reveal_character | kind: opinion | level: 3 | axis: caution_or_daring
+Q: Better a safe life, or an exciting one?
+Q: If you had to pick: a quiet, safe life, or a wild one?
+- Safe :: Safe. Hm. I respect it, even if my feet itch just hearing it. {values:+family} {tone:cautious} {pole:1}
+- Exciting :: Ha! Now we're talking. Life's too short for safe. {values:+courage +freedom} {tone:bold} {pole:-1}
+- Exciting, then safe :: Wild while you're young, a porch chair later. Good plan. {values:+freedom +family} {tone:playful}
+
+? q.values.adv_too_much_danger | fn: deepen_bond reveal_character | kind: opinion | level: 5 | follows: q.values.adv_safe_or_exciting | depth: 2 | axis: caution_or_daring
+Q: Where's the line, though? How much danger is too much?
+Q: Even I turn back sometimes. When would you?
+- When others could get hurt :: Yes. Your own neck is yours to risk. Not theirs. {values:+loyalty +kindness} {tone:loyal} {pole:1}
+- There's no line :: Ha! Careful. Even I have a line. It's just very far out. {values:+courage} {tone:bold} {pole:-1}
+- When I'm truly scared :: Fear's a good guide, if you listen to it. Wise. {values:+knowledge} {tone:cautious} {pole:1}
+
+? q.pref.adv_blank_map | fn: deepen_bond reveal_character | level: 2
+Q: If I gave you a map with a big blank space in the middle, what would you do?
+Q: A map with nothing drawn in one corner. What's your first thought?
+- Go and fill it in :: Ha! That's what I'd do. Bring a brush and ink. {values:+freedom +courage} {tone:bold}
+- Ask why it's blank :: Clever. Sometimes blank means "don't go". Sometimes it means "nobody dared". {values:+knowledge} {tone:cautious}
+- Draw a dragon there :: Ha! The old mapmakers did exactly that. You'd fit right in. {values:+creativity} {tone:playful}
+
+? q.plans.adv_first_place | fn: deepen_bond reveal_character | level: 3
+Q: Past the border, where's the first place you'd go?
+Q: First trip far from home, where do you head?
+- The sea :: Salt air and fish fresh off the boat. You'll love it. {values:+freedom} {tone:free}
+- A big city :: Lanterns on every street and markets that never close. Exciting. {values:+knowledge +freedom} {tone:curious}
+- The mountains :: The cold up there clears your head like nothing else. {values:+strength} {tone:bold}
+- Wherever the road goes :: Ha! The best plan is no plan. {values:+freedom +courage} {tone:playful}
+
+? q.values.adv_brave_or_foolish | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Is it brave to go somewhere you know nothing about, or just foolish?
+Q: Walking into the unknown: courage or foolishness?
+- Brave :: That's my answer too. Someone has to go first. {values:+courage} {tone:bold}
+- Foolish without a plan :: Fair. A little planning makes a brave trip a living one. {values:+knowledge} {tone:cautious}
+- A bit of both :: Ha! Honest. Most of my best trips were both. {values:+honesty} {tone:honest}
+
+? q.past.adv_furthest | fn: deepen_bond reveal_character | level: 3
+Q: What's the furthest you've ever been from the Leaf?
+Q: How far past the gate have you been, so far?
+- Just past the gate :: A start! Every road starts a step past the gate. {values:+courage} {tone:humble}
+- On a mission :: A mission! Then you've tasted it. The road gets into you. {values:+duty +freedom} {tone:proud}
+- Nowhere yet :: Nowhere yet. Ooh, I'm jealous. The first time is the best. {values:+honesty} {tone:honest}
+
+? q.past.adv_how_it_felt | fn: deepen_bond reveal_character | level: 5 | follows: q.past.adv_furthest | depth: 2
+Q: Out there, beyond the village, how did it feel?
+Q: When you looked back and couldn't see the Hokage Rock any more, what did you feel?
+- Free :: Free. Yes. That's exactly the word. {values:+freedom} {tone:free}
+- A little scared :: Everyone is, the first time. Means you're paying attention. {values:+honesty} {tone:honest}
+- I missed home :: Missing home is how you know where home is. {values:+family} {tone:gentle}
+- I haven't been out yet :: Then it's still waiting for you. Lucky. {values:+honesty} {tone:humble}

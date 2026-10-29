@@ -1,0 +1,354 @@
+# Greetings in each personality's own voice: the line only that personality would say.
+#! fn: reveal_character
+
+## greet.personality  personality=warmhearted
+{player}! Come in out of the street, you look half starved. I've got miso on.
+There you are! Have you been sleeping? You've got shadows under your eyes. I'll make you tea.
+Hello, hello! No, sit, sit. I just put a fresh pot of rice on and it's far too much for me.
+Hold out your hands. Here, two mandarins. One for now, one for later. No arguing.
+{player}! I knitted a scarf and it came out too long. I think it was meant to be yours.
+Hello, {player}! Did the neighbour's boy give you back the bowl I sent? I'll send another anyway.
+You've got a scrape on your knee! Sit down, I keep bandages in the drawer for exactly this.
+{player}! I was just thinking you'd come by, so I made extra dumplings. I'm never wrong about these things.
+Oh, look at you, all windblown. Come here, let me fix your collar.
+I've saved you the end piece of the omelette. The crispy one. Everyone wants the crispy one.
+Hello, {player}. You walked right past the grocer without stopping. Have you got food at home? Tell me honestly.
+{player}! You must be cold. Here, put your hands round this cup. There. Better?
+Come by tonight, I'm making hot pot. Bring a friend, bring two. The pot doesn't care.
+I've been worrying about you since the rain started. Did you get wet? You got wet. Sit by the stove.
+{player}! The baker gave me a whole bag of yesterday's buns. Take half, you're growing.
+Have you eaten today? Don't answer, I can see that you haven't. Wait right there.
+You look like you've had a hard morning. A sweet bun won't fix it, but it won't hurt either.
+{player}, I washed your cup and put it on the shelf with the others. You've got your own cup here now.
+There's my favourite visitor! The cushion by the window's warmest. Take it.
+Hello, {player}. Now, tell me who's been feeding you, and whether they've been doing it properly.
+
+## greet.personality  personality=thoughtful
+Hello, {player}. I was just turning a question over. Do you think a river knows it's moving?
+Ah, {player}. I'm reading about the old village founders. The past is a strange country.
+Hello. Forgive me, I was miles away. Thinking about why people always walk on the left of the bridge.
+{player}. Someone once wrote that a good question is worth ten answers. I've been collecting questions.
+Hello, {player}. Do you ever wonder what the faces on the Rock would say to each other, if they could?
+Good to see you. I was trying to decide whether kindness is a habit or a choice. What do you think?
+{player}. I've been watching the ants on my step. They have a better system than the Mission Desk.
+Hello. I've just finished a book and I'm in that quiet mood afterwards. You don't mind, do you?
+Hello, {player}. Have you noticed that people speak more softly near the river? I wonder why.
+{player}. I've been sitting with a sentence all morning. It isn't finished yet, and neither am I.
+I was hoping to see you. I've a question I can't answer alone, and you think in a way I don't.
+Hello, {player}. They say a shinobi sees underneath the underneath. I'm still working on the first underneath.
+Good afternoon. I was considering how many people a single bowl of ramen depends on. Farmers, fishers, the cook. It's a lot.
+{player}. Pardon my silence. I was listening to the wind chimes and lost the thread of the day.
+Hello. I've been reading the old Academy journals. The students' complaints haven't changed in a century.
+Hello, {player}. Patience, my teacher used to say, is just thinking slowly enough to be right. I liked that.
+{player}. I've decided that the best conversations start with someone admitting they don't know. So: I don't know.
+Hello. You've the face of someone with something on their mind. I won't pry, but I'll listen.
+{player}. Funny thing: I remember every word of a book I read at ten, and nothing from last week.
+Ah, {player}. I've just realised I've been holding this cup of tea for an hour. It's quite cold. I'm quite content.
+
+## greet.personality  personality=playful
+{player}! Quick, pick a hand. Wrong! It was in my sleeve the whole time.
+Psst, {player}. I've hidden a paper frog somewhere on your back. Don't look. You looked.
+Hey, {player}! Bet you can't stand on one leg longer than me. Go! Ha, you wobbled!
+{player}! Rock, paper, scissors, loser buys dango. Ready? You're already losing.
+Tag! You're it! No take-backs, I've already decided!
+Hello, {player}! Guess what I'm thinking. Wrong. It was dango. It's always dango.
+{player}! I taught the tea house parrot to say your name. Well, a word like your name.
+Hey! Want to see me balance a spoon on my nose? Wait. Wait. Hold on. Nearly. Ta-da! It fell.
+{player}! Let's race to the corner, but backwards. First one to fall over loses. I'll fall over. You'll still lose.
+Boo! Ha, you jumped. I've been hiding behind this barrel for ten minutes.
+{player}! I've made up a new rule: today you have to say everything as a question. Begin?
+I bet I can make the gate guard laugh before noon. Want in on the bet? The guard's wearing a very serious face today.
+Hey, {player}! I swapped all the sandals at the bathhouse door. I'm going to watch. Want to watch?
+{player}! Riddle: what has a face on a mountain and never washes it? The Hokage Rock! Ha!
+Hello, hello, hello! Three hellos. Now you owe me three back.
+{player}! I've decided we're secret agents today. You're the agent. I'm the cooler agent.
+Ha, there you are! I've been practising my scariest face. Is it working? Be honest. Be scared.
+Hey! Hold still, there's a leaf on your head. Ha, no there isn't. Made you look.
+{player}! You're just in time. I've challenged the cat on the wall to a staring contest. It's winning.
+I've got a pocket full of marbles and nothing to do. That's the best kind of afternoon. Play?
+
+## greet.personality  personality=adventurous
+{player}! I found a path behind the training grounds I've never seen before. We have to explore it.
+Have you ever climbed to the top of the Rock? I mean the very top, above the faces? The view goes forever.
+{player}! A caravan came in from the far villages this morning. I talked to the drivers for an hour.
+Hello, {player}! Someday I'm going to see the sea. A real one, not the lake on the training ground.
+{player}! I've been mapping every alley in the village. There are three I'm sure aren't on any map.
+I followed the river past the wall once, as far as the guards would let me. It just kept going.
+{player}! The merchants say there's a desert village where it never rains. Can you imagine it?
+Hello, {player}! I packed a bag last night, just to see if it would fit everything. It nearly did.
+{player}! Have you been to the waterfall on the east road? Nobody believes me how loud it is.
+I asked the gate guard what's over the next hill. The answer was another hill. I want to see it anyway.
+{player}! I swear the Forest of Death is calling my name. Don't tell the gate guards I said that.
+Hey! I just met a traveller who's walked from one end of the land to the other. I'm so jealous I could pop.
+{player}! I want to sleep under the stars one night. Proper stars, past the wall, no lanterns.
+Hello! Every road out of the main gate goes somewhere I haven't been. That's every road.
+{player}! I climbed the highest tree in the residential streets this morning. I could see the border mountains!
+I'm saving up for a good pair of travelling sandals. Proper ones. The road won't wait forever.
+{player}! The caravans bring spices nobody here has heard of. I bought one. I don't know what it is. I love it.
+Hello, {player}! Want to go and see the old stone bridge outside the east gate? It's older than the village.
+{player}! If you ever go on a mission far away, bring me back a story. A long one.
+Morning, {player}! The wind's blowing from the mountains today. You can smell snow on it even in summer.
+
+## greet.personality  personality=meticulous
+Hello, {player}. You're three minutes early. I appreciate that.
+{player}. Your sandal strap is twisted. Left foot. There. Much better.
+Good day. I've reorganised my shelves by colour. Then by height. Then by colour again. I'm happy now.
+Hello, {player}. I've written a list of things to do today. You're on it. Item four. Greet {player}. Done.
+{player}. I noticed the second bridge has a loose plank, fourth from the east end. I've reported it.
+Hello. I've counted the lanterns on the main street. Forty-two. Last week, forty-one. Someone added one.
+{player}. Your headband's crooked. A fraction. No, the other way. Perfect.
+Good afternoon. I've just labelled every jar in my kitchen. Even the empty ones. Especially the empty ones.
+Hello, {player}. I sharpen my knives on the first day of each week. It's the first day. They're very sharp.
+{player}. You'll want to know the bathhouse schedule changed by half an hour. I've written it down for you.
+Good day. Please mind the step, I've just swept it. In straight lines. You can see the lines.
+Hello, {player}. I always fold my laundry into thirds. Not halves. Thirds hold their crease better.
+{player}. The Mission Desk misspelled my name on the board again. I have corrected it. In ink.
+Hello. Forgive me, I'm halfway through counting my ryo. Two hundred and six. Three hundred and seven. Hm.
+{player}. I keep a diary of the weather. Today is the eleventh clear day in a row. A record for the season.
+Good morning. I've timed my walk to the market at seven and a half minutes. On a good day, seven.
+Hello, {player}. A small note: you say thank you to the shopkeepers. I've noticed. Few people do.
+{player}. I ironed my good jacket this morning. Then I ironed it again, to be sure.
+Hello. My tea is brewed for exactly three minutes. You're welcome to a cup; it's two minutes forty.
+{player}. You've got a smudge on your cheek. There. You may now continue your day.
+
+## greet.personality  personality=steadfast
+Hello, {player}. Good to see you. Same time tomorrow, I expect.
+{player}. I said I'd fix my neighbour's fence today, so that's what I'm doing.
+Morning. Nothing much to report. That's how I like it.
+Hello, {player}. If you ever need a hand, ask. I mean that, I don't say it for show.
+{player}. Steady work today. Steady work every day. That's the trick of it.
+Hello. I've walked this street every morning for twenty years. It's never let me down.
+{player}. I promised to watch the grocer's stall while they eat. I'll be here till they're back.
+Good to see you. I keep my word, {player}. If I said I'd be somewhere, I'll be there.
+Hello. Same as yesterday, and glad of it.
+{player}. I don't talk much about duty. I just do it. Saves breath.
+Hello, {player}. I carried water to the shrine this morning. Someone has to, and I don't mind.
+{player}. Whatever you're working on, keep at it. Slow and stubborn gets there.
+Morning. Roof's mended. Next job.
+Hello, {player}. People come and go on this street. I stay. Somebody ought to.
+{player}. I don't make promises often. When I do, I keep them. That's all a person needs to know about me.
+Good day. I've been doing the same job for twelve years. I'm still learning it.
+Hello, {player}. There's no shortcut that's worth taking. I've checked most of them.
+{player}. You can count on me. Not a speech, just a fact.
+Hello. My father kept this shop the same way every day. I do too. Some things are worth keeping.
+{player}. Good to see you're still at it. Keep going. That's all there is to it.
+
+## greet.personality  personality=reserved
+{player}. ...Hello.
+Hm. You.
+Hello. ...Fine day.
+...You're here. All right.
+{player}. Don't mind me. I'm just standing.
+Hello. I don't talk much. You don't seem to mind. Good.
+...Tea's in the pot, if you want it.
+{player}. Nod's as good as a word. Most days.
+Hm. Quiet out. I like it.
+Hello. I'm not unfriendly. Just slow to start.
+...{player}. You can stay. If you want.
+I was reading. ...It can wait.
+Hello. Busy day? Mine wasn't. Good.
+{player}. Brought you nothing. ...Except, here. Rice cracker.
+Mm. Hello.
+Hello. ...I had something to say. It's gone.
+{player}. People talk too much. Not you, though.
+...Sit, if you like. Bench is big enough.
+I don't wave. This is me waving.
+Hello. Glad it's you, and not someone chatty.
+
+## greet.personality  personality=imaginative
+{player}! The clouds today look like a dragon eating a bowl of noodles. Look!
+Hello, {player}. I dreamt the Hokage Rock got up and went for a walk. It was very polite about it.
+{player}! I've been painting the river all morning, but it keeps being a different colour.
+Hello! If the lanterns on the main street were stars, which one would be yours? I'd pick the crooked one.
+{player}! I'm writing a story about a cat who becomes Hokage. You'd love it. The cat's very wise.
+Hello! The tea house smells like cinnamon today. Cinnamon smells like a warm sweater would taste.
+{player}! I've decided that every bridge in the village has a personality. The second one is grumpy.
+Do you ever think the moon is the Rock's lantern, hung up for the night? I do. All the time.
+{player}! I saw a heron by the river standing on one leg like a question mark. It made me so happy.
+Hello, {player}. I'm collecting the colours of the village. Today: persimmon, wet stone, and Ichiraku red.
+{player}! If you were a season, you'd be early autumn. Bright and a little windy.
+Hello! I've been staring at the ceiling cracks. One of them is definitely a map to somewhere.
+{player}! The wind in the bamboo sounds like someone whispering a secret, but never the whole thing.
+Hello, {player}. I folded a paper crane so well it looked ready to fly. I didn't let it, just in case.
+{player}! Did you know the shadows under the Academy swing tree turn into fish when the wind blows?
+Hello! I've been making up names for the stray cats. That one's Lord Whiskers of the Rubbish Heap.
+{player}! The bathhouse steam made a castle in the air this morning. Then a whale. Then nothing.
+Hello, {player}. Sometimes I think the village is a pop-up book, and I'm waiting for the page to turn.
+{player}! I've got paint on my hands. Purple. I wasn't even painting anything purple.
+Hello! The rain left puddles shaped like all the other villages. I've been visiting them.
+
+## greet.personality  personality=pragmatic
+{player}. Good. I was going to need a second pair of hands, and here you are.
+Hello. Rice is up two ryo since last week. Buy now, it'll be up three by the festival.
+{player}. Don't waste money on the fancy kunai. The plain ones fly just as straight and cost half.
+Hello, {player}. Talk while we walk? Standing still costs daylight.
+{player}. If you're going to the market, buy your greens late. The prices drop at closing.
+Hello. I've worked out that Ichiraku is the cheapest hot meal in the village per bowl of broth. You're welcome.
+{player}. The pawn shop pays better for bandit gear on the first day of the week. Fewer sellers.
+Hello, {player}. A tidy room saves you ten minutes looking for your sandals. That's an hour a week.
+{player}. You can't eat pride, and you can't sell it either. Remember that.
+Hello. D-ranks pay steady. Take three a day and you'll eat well and save half. Simple sums.
+{player}. Buy the second-hand furniture. A chair doesn't care who sat in it before.
+Hello, {player}. I don't do favours. I do trades. But I'll trade you a favour, if you like.
+{player}. Mend it before you replace it. Most things have another year in them.
+Hello. You've got a hole in your sleeve. The tailor charges five ryo to patch it. Or I'll show you for free.
+{player}. If a job sounds too good, ask what the catch is. There's always a catch.
+Hello, {player}. Furniture sells back at half price, so buy what you'll keep.
+{player}. Never buy at the first stall. Walk the whole market, then come back.
+Hello. I've done my sums. If I skip the tea house twice a week, I'll have a new futon by winter.
+{player}. Sentiment's lovely. Ledgers are lovelier.
+Hello, {player}. Busy? Good. Busy is what pays.
+
+## greet.personality  personality=curious
+{player}! Do you know why the gate has those two big characters on it? I asked three people and got three answers.
+Hello, {player}! Have you heard the rumour about the tea house? No? Me neither, I was hoping you had.
+{player}! How does a water tank on a roof stay up? I've been staring at them all morning.
+Hi! Where are you off to? What's in the bag? Is it food? What kind of food?
+{player}! I just found out the fishmonger used to be a shinobi! Did you know? Why did nobody tell me?
+Hello! Do you think chakra has a colour? I think it might. I've been asking everyone.
+{player}! What's the Academy library like on the top shelves? I'm too short to see.
+Hi, {player}! I've been counting how many people go into the Mission Desk. Forty-one so far. Why so many?
+{player}! The Inuzuka dogs can smell what you had for breakfast. Is that true? What did you have?
+Hello! How long does it take to carve a face on the Rock? Years? Do the carvers have to hang off ropes?
+{player}! Somebody left a bucket of red paint on the bridge. I want to know who. And why. And why red.
+Hi! What's it like where you live? Is your flat high up? Can you see the gate from it?
+{player}! I tried to work out how the bathhouse heats so much water. I got lost in the boiler room. It was great.
+Hello, {player}! Do you know what makes the river louder at night? I sat up listening and couldn't tell.
+{player}! I heard the Hyuga can see through walls. Do you think they look into kitchens? I'd look into kitchens.
+Hi! Have you ever wondered who lit the first lantern in the Leaf? I have. Constantly.
+{player}! I just learned there's a kind of beetle that only lives in the Aburame gardens. I need to see it.
+Hello! What's your favourite thing in the village? Mine changes every day. Today it's the ferry's rope.
+{player}! Where do the pigeons go at night? Not one of them would tell me.
+Hi, {player}! I've been asking the tea house owner the secret recipe. Eleven days so far. Getting closer.
+
+## greet.personality  personality=protective
+{player}. There you are. Has anyone been bothering you?
+Hello. Stay out of the alley behind the barbecue house after dark. Nothing bad, but stay out of it.
+{player}. You've a bruise on your arm. Who did that? Training? Good. Just checking.
+Hello, {player}. I walked past your block earlier, just to be sure the stair lamp was working.
+{player}. If you're going outside the wall, tell someone first. Tell me, if you like.
+Hello. The river's high today. Don't go swimming. I'm serious.
+{player}. That stray dog by the market snaps at people. Give it room.
+Hello, {player}. Are you eating enough? You look a little pale. Never mind, I'm just looking.
+{player}. Don't let anyone talk you into climbing the Rock alone. The faces are slippery.
+Hello. You came home late last night. I saw your lamp. All right, then?
+{player}. I keep a whistle by my door. If you ever need help on this street, shout and I'll come.
+Hello, {player}. Remember: if a mission feels wrong, it is wrong. Come back.
+{player}. Those older Genin by the training ground giving you any trouble? Just say the word.
+Hello. Wrap up warmer than that. Colds go round the Academy like wildfire.
+{player}. I've told the shopkeepers to look out for you. Don't be cross.
+Hello, {player}. Did you lock your door? Everyone says the Leaf is safe. I still lock mine.
+{player}. You ran past my window too fast this morning. Slow down at the corners. Carts.
+Hello. If you're ever in trouble and can't find me, go to the gate guards. They're good people.
+{player}. My job is the street. Everyone on it. That includes you now.
+Hello, {player}. Just checking in. I'll keep checking in, so you might as well get used to it.
+
+## greet.personality  personality=gentle
+Hello, {player}. Shh, there's a bird on the fence. Isn't it lovely?
+Oh, {player}. Come and see, the stray cat had kittens under the porch. Four of them.
+Hello. I've been watering my neighbour's flowers while they're away. The flowers seem to like me.
+{player}. You look a little tired. Sit with me a while, if you like. There's no hurry.
+Hello, {player}. I found a beetle on its back and turned it over. It walked off without saying thank you. That's all right.
+Hello. The little ones on our street made me a crown out of clover. I'm still wearing it, see?
+{player}. I'm so glad to see you. I hope the day's been gentle with you.
+Hello, {player}. I've been feeding the koi in the shrine pond. They know my footsteps now.
+Hello. If you're hungry, I have rice balls. Plain ones, but made with care.
+{player}. The ducks by the river have ducklings. Walk softly when you pass, they're shy.
+Hello, {player}. Someone left a lost mitten on the bridge rail. I've hung it up high so its owner can see it.
+Hello. Don't mind the dog at my feet; the old thing likes company. Like me.
+{player}. It's a good day for kindness. Most days are, really.
+Hello, {player}. I'm drying lavender for my pillows. Would you like a little bunch for yours?
+Hello. I was reading stories to the Academy little ones at lunch. They laughed in all the right places.
+{player}. You can tell me anything, you know. I'm very good at keeping quiet.
+Hello, {player}. The sparrows are bathing in my water dish. I put it out every morning, just for them.
+Hello. I hope nobody's been unkind to you today. If they have, I'm sorry. You didn't deserve it.
+{player}. I knitted a little blanket for the clinic's puppies. They chewed it. That's all right too.
+Hello, {player}. There's a snail crossing the path. Let's wait for it.
+
+## greet.personality  personality=proud
+{player}. You may greet me. I'm in a good mood.
+Hello. My family has run this shop for four generations. You're standing in history.
+{player}. I trained before dawn today. Twice. You may be impressed.
+Good day. I suppose you've heard I won the archery prize at the festival. Most people have.
+{player}. Stand up straight when you talk to people. You're a member of the Leaf.
+Hello. I don't lose arguments. I occasionally allow people to be wrong for longer.
+{player}. My grandmother carved half the signs on this street. She'd have liked you. Probably.
+Good afternoon. You'll notice my step is the cleanest on the street. That's not an accident.
+{player}. Compliments are always welcome. I'm just letting you know, in case you had one.
+Hello. If you want something done well, do it yourself. If you want it done perfectly, ask me.
+{player}. I don't need help. ...But if you're offering, the box on the left is heavy.
+Good day. Our family name means something in this village. I intend to keep it meaning something.
+{player}. You've improved since I last saw you. Not enough to beat me. But improved.
+Hello. I've been told my calligraphy is the best on the main street. I've been told by me, but still.
+{player}. Second place is a perfectly respectable position. For other people.
+Good morning. A person's word and a person's name: those are the two things worth guarding.
+{player}. I never cry at weddings. That was dust. A great deal of dust.
+Hello. Admire the garden, by all means. It took me three years to make it look effortless.
+{player}. My father said I'd never amount to much. I took that personally. Then I took the shop.
+Good day, {player}. You're keeping better company than usual. I mean me.
+
+## greet.personality  personality=fiery
+{player}! You're here! Good! I've got so much energy I could punch a mountain!
+Hey! I just did two hundred squats and I'm not even tired! Well, my legs are. But not me!
+{player}! I've decided today's the day I master the water-walk! Watch me! Don't watch me fall!
+Hey, {player}! Spar with me! Right now! Or after lunch! But right now would be better!
+{player}! Somebody at the Mission Desk called me loud. LOUD? ME?
+I'm going to be the strongest shinobi this village has ever seen! I'm telling everyone! You're everyone today!
+{player}! The tea house ran out of dango! The injustice! I'm going to bang on the door until they make more!
+Hey! You! Yes, you, {player}! Race me to the Rock! Loser does fifty push-ups! Go!
+{player}! I tried the hottest curry at the barbecue house! My tongue's on fire! I'd do it again!
+Hey, {player}! I've got a rival now! Well, I've got six rivals now! The more the better!
+{player}! I've been yelling at the training posts all morning! It helps! Try it!
+I'm not angry! I'm passionate! There's a difference! I'm also a little angry!
+{player}! Today I promised myself a hundred kunai, a hundred laps, and a hundred bowls of ramen! Halfway through the laps!
+Hey! I lost a spar this morning and I'm so fired up about it I can't sit still!
+{player}! I love this village! I love it so much I want to shout it from the Rock! Can I? Should I?
+Hey, {player}! The sun's out, the training ground's free, and my blood's boiling! Perfect day!
+{player}! My sensei told me to calm down. I calmed down so hard I fell asleep standing up!
+Hey! I don't give up! Not ever! I'll do it a thousand times if I have to!
+{player}! You've got that look in your eye! The fighting look! Or is it the hungry look? Both!
+Whoa, {player}! I didn't see you there! I was too busy being amazing!
+
+## greet.personality  personality=shy
+Oh! Um. Hello, {player}. Sorry, I didn't see you coming.
+H-hi. I was just... standing here. Hello.
+{player}... um, hi. I like your... I mean, hi.
+Hello. Sorry. I'll move. Oh, you wanted to talk to me? Oh.
+Um, I made something, but it's not very good. Never mind. Hello.
+{player}. Hi. I was hoping... no, it's nothing. Hello again.
+Oh, it's you. That's good. You're one of the easy ones to talk to.
+H-hello! Sorry, I've been practising saying hello more. That was practice. Was it all right?
+Um, {player}? Is it all right if I walk with you? You don't have to talk.
+Hi. I hid behind the barrel when I saw you, then I thought, no, be brave. So. Hello.
+Oh, hello. My face is red because it's hot. It's not that hot. Never mind.
+{player}... I saved you a seat at the tea house. If you want it. You don't have to.
+Hi. I'm better with animals than people. You're a bit like an animal. A nice one. Oh, that came out wrong.
+Um. Hello. I was going to say something clever but I forgot it.
+{player}! Oh. Sorry, that was loud. Hello. Quieter.
+Hi. I wrote down what I wanted to say, but I left the paper at home.
+Hello. Is it all right that I'm here? I can go.
+Oh, um. Good, it's you. I get nervous with new people. Not you anymore.
+H-hi, {player}. I said your name right, didn't I? Good.
+Um, hello. I like that you don't rush me. Most people rush me.
+
+## greet.personality  personality=stern
+{player}. You're slouching. Fix it.
+Hm. You've been training? Your hands say no.
+{player}. Punctuality is respect. Remember that.
+Good. You're here. Don't waste my time and I won't waste yours.
+{player}. Tie your sandals properly. A loose strap has ended better shinobi than you.
+Hello. Ten laps of the market is a warm-up, not a workout.
+{player}. If you're going to do something, do it right, or don't bother me with it.
+Hm. You look rested. Good. Rest is not idleness, so long as you earn it.
+{player}. I'll tell you once: a sharp kunai and a dull mind are equally useless.
+Hello. My standards are high. Yours should be higher.
+{player}. Don't thank me. Improve. That's thanks enough.
+Hm. Another day, another chance to stop making the same mistakes.
+{player}. The village depends on people who show up. Keep showing up.
+Hello. Talk less, listen more. You'll learn twice as fast.
+{player}. I'm hard on you because the world will be harder. Better to hear it from me.
+Hm. Your stance has improved. Don't let me catch you slipping back.
+{player}. Discipline is choosing what you want most over what you want now.
+Hello. I don't hand out praise. If I ever do, you'll know you've earned it.
+{player}. Excuses don't fill an empty stomach or win a fight.
+Hm. You again. ...Good. Persistence is the one thing I can't teach.

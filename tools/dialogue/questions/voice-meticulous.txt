@@ -1,0 +1,72 @@
+# Questions only a meticulous resident asks: order, schedules, punctuality, doing it right.
+#! tags: personality=meticulous
+
+? q.pref.meti_fold_or_toss | fn: deepen_bond reveal_character | level: 2
+Q: Do you fold your clothes at night, or drop them on a chair?
+Q: Be honest: at night, do your clothes get folded, or flung?
+- Folded, always :: Good. Order at home, order on a mission. {values:+duty} {tone:proud}
+- On a chair :: The chair. Of course it's the chair. We'll work on it. {values:+honesty} {tone:joking}
+- Somewhere in between :: Folded on good days. A fair answer, I suppose. {values:+honesty} {tone:evasive}
+
+? q.pref.meti_pouch_order | fn: deepen_bond | level: 4 | follows: q.pref.meti_fold_or_toss | depth: 2
+Q: And your tool pouch? What's in it, and in what order?
+Q: Talk me through your tool pouch, front to back. I'm curious. Professionally.
+- Kunai left, shuriken right :: A system! Wire at the back, I hope. Excellent. {values:+duty +knowledge} {tone:dutiful}
+- Whatever fits :: Whatever fits. I felt that in my teeth. {values:+freedom} {tone:free}
+- Snacks first :: Snacks first. Priorities are a kind of order, I suppose. {values:+family} {tone:joking}
+
+? q.values.meti_five_minutes | fn: deepen_bond reveal_character | kind: opinion | level: 2
+Q: Is five minutes late really late?
+Q: Somebody turns up five minutes after the agreed time. Late, or fine?
+- Yes, late is late :: Thank you. Finally. Someone understands. {values:+duty +honesty} {tone:stern}
+- Five minutes is fine :: Five minutes is three hundred seconds. I counted. Every one. {values:+freedom} {tone:free}
+- Depends on the occasion :: A fair distinction. A mission, never. Tea, perhaps. {values:+knowledge} {tone:cautious}
+
+? q.values.meti_late_assume | fn: deepen_bond reveal_character | kind: opinion | level: 4 | follows: q.values.meti_five_minutes | depth: 2
+Q: When someone's late, what do you assume first?
+Q: A friend doesn't arrive on time. Where does your mind go?
+- Something happened :: Kind of you. I usually assume carelessness. I'll try your way. {values:+kindness} {tone:kind}
+- They don't care :: Harsh, but sometimes accurate. I've thought it too. {values:+honesty} {tone:blunt}
+- They lost track of time :: Most likely. A sundial would fix it. I've suggested this to several people. {values:+knowledge} {tone:humble}
+
+? q.pref.meti_plan_day | fn: deepen_bond reveal_character | level: 2
+Q: Do you plan your day, or see where it goes?
+Q: A list every morning, or wherever the wind takes you?
+- A list every morning :: A list! Do you number it? I number mine. {values:+duty} {tone:dutiful}
+- See where it goes :: Where it goes. Remarkable. I'd need a lie down. {values:+freedom} {tone:free}
+- A rough plan :: A rough plan is still a plan. Acceptable. {values:+knowledge} {tone:cautious}
+
+? q.dilemma.meti_crooked_picture | fn: deepen_bond reveal_character | level: 3
+Q: You notice a picture hanging crooked in someone else's house. Do you straighten it?
+Q: A friend's scroll is hanging crooked on their wall. What do you do?
+- Straighten it :: Yes. Immediately. It's a kindness, really. {values:+duty} {tone:proud}
+- Mention it :: Politely. Good. They can straighten it themselves. {values:+honesty} {tone:honest}
+- Leave it :: Leave it. I couldn't. I'd think about it for days. {values:+kindness +freedom} {tone:gentle}
+
+? q.values.meti_good_enough | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Is "good enough" ever good enough?
+Q: Do you finish a job when it works, or when it's right?
+- Sometimes :: Sometimes. I'm trying to learn that. It's hard. {values:+knowledge} {tone:humble}
+- Never :: Never. A kindred spirit. Our work will outlast us both. {values:+duty} {tone:stern}
+- For chores, yes :: Chores, yes. Kunai, no. A reasonable line. {values:+duty +freedom} {tone:cautious}
+
+? q.values.meti_missed_moment | fn: deepen_bond reveal_character | kind: confession | level: 5 | follows: q.values.meti_good_enough | depth: 2
+Q: Have you ever spent so long perfecting something that you missed the moment for it?
+Q: I once polished a gift so long I missed the birthday. Has anything like that happened to you?
+- Yes, once :: Then you understand. It stings, doesn't it? {values:+honesty} {tone:honest}
+- No, never :: Good. Keep it that way. Set a deadline. Write it down. {values:+duty} {tone:dutiful}
+- I rush instead :: The opposite problem! Perhaps we balance each other out. {values:+honesty} {tone:joking}
+
+? q.pref.meti_desk | fn: deepen_bond | level: 2
+Q: Your desk at home: tidy, or creative chaos?
+Q: If I looked at your table right now, what would I find?
+- Tidy :: Brushes in a row? Ink capped? I'm very pleased. {values:+duty} {tone:proud}
+- Creative chaos :: Chaos. I'll pretend I didn't hear. For our friendship. {values:+creativity +freedom} {tone:playful}
+- Tidy on top, messy drawers :: Ha. The drawer is where order goes to die. I know it well. {values:+honesty} {tone:honest}
+
+? q.advice.meti_ledger | fn: deepen_bond reveal_character | level: 3
+Q: My shop ledger's in a muddle. Fix it tonight, or wait for my day off?
+Q: My accounts are three days behind. All of them. Advise me.
+- Tonight :: Tonight. Yes. I won't sleep otherwise anyway. {values:+duty} {tone:dutiful}
+- On your day off :: Rest first, then sums. Sensible. Painful, but sensible. {values:+freedom} {tone:gentle}
+- A little each evening :: Ten lines a night. A schedule! You understand me. {values:+knowledge +duty} {tone:cautious}

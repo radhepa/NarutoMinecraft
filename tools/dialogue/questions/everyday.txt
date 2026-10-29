@@ -1,0 +1,187 @@
+# Friendship questions about everyday life: small tastes, small choices, the village's habits.
+# Axis poles: honesty_vs_kindness (1 honesty, -1 kindness), rules_or_results (1 rules, -1 results).
+
+? q.pref.weather | fn: deepen_bond reveal_character | level: 2
+Q: What's your favourite kind of weather?
+Q: If you could pick tomorrow's weather, what would it be?
+- Bright sunshine :: Warm stones and dry training grounds. Good choice. {values:+freedom} {tone:warm}
+- Soft rain :: The village smells lovely after rain, doesn't it? {values:+creativity} {tone:gentle}
+- Fresh snow :: Snowball fights on the Academy field! Count me in. {values:+freedom} {tone:playful}
+- A big thunderstorm :: Ha! Bold. I'll be indoors with my head under a blanket. {values:+courage} {tone:bold}
+
+? q.pref.reading | fn: deepen_bond reveal_character | level: 2
+Q: Do you read for fun, or only scrolls for training?
+Q: What sort of stories do you like?
+- Adventure tales :: Roads, monsters and treasure. The scroll shop keeps a whole shelf. {values:+freedom +courage} {tone:bold}
+- Training scrolls only :: All work! I'll lend you a story. You'll thank me. {values:+duty +knowledge} {tone:dutiful}
+- Not much of a reader :: That's all right. Some people read people instead. {values:+honesty} {tone:honest}
+- Poems, sometimes :: Poems! I didn't expect that. I like you more for it. {values:+creativity} {tone:gentle}
+
+? q.pref.music | fn: deepen_bond reveal_character | level: 3
+Q: Do you sing, or play anything?
+Q: Music: are you a singer, a player, or a listener?
+- I sing, badly :: Badly is the best way to sing. Loudly, too, I hope. {values:+freedom} {tone:joking}
+- I'd like to learn flute :: The old flute-maker by the shrine gives lessons. Just saying. {values:+creativity} {tone:curious}
+- I just listen :: Listeners are what musicians need most. {values:+kindness} {tone:humble}
+- Festival drums :: Ha! Of course. Loud and proud. {values:+courage} {tone:bold}
+
+? q.pref.bath_or_river | fn: deepen_bond | level: 2
+Q: After a long day, hot bath or a cold swim in the river?
+Q: Bathhouse or river? Which is the real cure for sore legs?
+- Hot bath, always :: The bathhouse at dusk. Nothing better. {values:+family} {tone:warm}
+- Cold river swim :: Brr! You're tougher than me. {values:+strength} {tone:bold}
+- One, then the other :: Hot then cold. The old shinobi way. You know your stuff. {values:+knowledge} {tone:curious}
+
+? q.pref.collect | fn: deepen_bond reveal_character | level: 3
+Q: Do you collect anything?
+Q: Everyone has a little collection somewhere. What's yours?
+- Smooth stones :: From the river? I'll keep an eye out for good ones. {values:+creativity} {tone:gentle}
+- Shuriken :: Ha! A practical collection. And sharp. {values:+strength} {tone:proud}
+- Recipes :: A recipe collector! You must share some. {values:+family} {tone:warm}
+- Nothing, yet :: Then let me start you off. Here. A button from my coat. {values:+freedom} {tone:teasing}
+
+? q.pref.ramen_order | fn: deepen_bond | level: 2
+Q: How do you take your ramen? This matters.
+Q: At Ichiraku, what's your order? Be precise.
+- Miso :: Rich and warming. The sensible choice. {values:+family} {tone:warm}
+- Pork, extra pork :: Ha! A serious order. I respect it. {values:+strength} {tone:bold}
+- Salt broth :: Clean and simple. A purist. {values:+honesty} {tone:honest}
+- Whatever's special :: Adventurous! The cook will like you. {values:+freedom} {tone:curious}
+
+? q.pref.ramen_record | fn: deepen_bond | level: 3 | follows: q.pref.ramen_order | depth: 2
+Q: How many bowls of ramen can you manage in one sitting?
+Q: What's your record at Ichiraku? Bowls, I mean.
+- Just one, properly :: One bowl, savoured. Very civilised. {values:+duty} {tone:humble}
+- Three, easily :: Three! I'd need a nap after. {values:+strength} {tone:proud}
+- I've never counted :: Not counting is how you end up at seven. Ha! {values:+freedom} {tone:joking}
+
+? q.values.luck | fn: deepen_bond reveal_character | kind: opinion | level: 2
+Q: Do you believe in luck?
+Q: Lucky charms, lucky days: is there anything to it?
+- Yes, I do :: So do I. I've got a lucky coin. Don't laugh. {values:+freedom} {tone:gentle}
+- You make your own luck :: Hard work wearing a lucky hat. I like that. {values:+duty +strength} {tone:ambitious}
+- Only bad luck :: Ha! A pessimist. At least you're never disappointed. {values:+honesty} {tone:joking}
+
+? q.values.rich_or_loved | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Would you rather be rich, or well-loved?
+Q: A fortune in ryo, or a village full of friends. Pick one.
+- Well-loved :: Friends over gold. Good. Friends don't get stolen. {values:+loyalty +family} {tone:warm}
+- Rich :: Ha! Honest. With money you can buy everyone dinner. {values:+freedom} {tone:blunt}
+- Earn both :: Greedy! And ambitious. I like it. {values:+duty +strength} {tone:ambitious}
+
+? q.values.prank | fn: deepen_bond reveal_character | kind: dilemma | level: 2
+Q: Someone pulls a mean prank on you. Do you get even?
+Q: A classmate fills your sandals with mud. Revenge, or let it go?
+- Get even :: Ha! Careful. Pranks have a way of growing. {values:+courage} {tone:playful}
+- Let it go :: The bigger person. Hard, though, with muddy sandals. {values:+kindness} {tone:humble}
+- A kind prank back :: Fill theirs with flowers! You're a menace. A sweet one. {values:+creativity +kindness} {tone:teasing}
+
+? q.values.prank_war | fn: deepen_bond reveal_character | kind: dilemma | level: 4 | follows: q.values.prank | depth: 2
+Q: And if they pranked you back again? Where does it end?
+Q: Prank, counter-prank, counter-counter-prank. How do you stop it?
+- I end it with a truce :: A truce! With dango, I hope. {values:+kindness} {tone:kind}
+- I win, that's how :: Ha! The prank war of the century. Leave my shop out of it. {values:+strength} {tone:bold}
+- It never ends :: A lifelong prank war. Some of the best friendships start that way. {values:+freedom +loyalty} {tone:playful}
+
+? q.values.lead_or_follow | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Would you rather lead, or follow someone you trust?
+Q: Captain or squadmate: which suits you better?
+- Lead :: A leader! Mind you listen as much as you talk. {values:+duty +courage} {tone:ambitious}
+- Follow a good leader :: Following well is a skill too. Nobody says so often enough. {values:+loyalty} {tone:loyal}
+- Walk side by side :: No front, no back. A good squad's like that. {values:+loyalty +freedom} {tone:warm}
+
+? q.plans.other_trade | fn: deepen_bond reveal_character | level: 2
+Q: If you weren't training to be a shinobi, what trade would you pick?
+Q: Imagine a life without kunai. What would you do instead?
+- A cook :: A good cook is loved by the whole street. Fine choice. {values:+family +creativity} {tone:warm}
+- A carpenter :: Building things that last. The Kinoshita would take you on. {values:+creativity +duty} {tone:dutiful}
+- A medic :: Healing people. A noble thing, ninja or not. {values:+kindness} {tone:kind}
+- A merchant :: Ha! A sharp eye and a quick tongue. You'd do well. {values:+freedom} {tone:teasing}
+
+? q.plans.trade_try | fn: deepen_bond reveal_character | level: 4 | follows: q.plans.other_trade | depth: 2
+Q: That other trade you'd pick. Would you ever try it, on your days off?
+Q: Would you learn a bit of that trade, just for yourself?
+- Yes, I'd love to :: Then ask around. Most of the Leaf's crafters love a curious student. {values:+creativity +knowledge} {tone:curious}
+- No time, sadly :: Training eats every hour. One day, maybe. {values:+duty} {tone:dutiful}
+- I already do, a little :: Really? You'll have to show me. {values:+creativity} {tone:proud}
+
+? q.plans.squad_role | fn: deepen_bond reveal_character | level: 3
+Q: In a squad, what role suits you best?
+Q: On a mission, where do you want to be: front, back or in the middle?
+- The front line :: First in. Brave. Look after yourself out there. {values:+courage +strength} {tone:bold}
+- Support and healing :: Every squad needs someone watching everyone else. {values:+kindness +loyalty} {tone:kind}
+- The planner :: The quiet one with the map. Squads live or die by that one. {values:+knowledge} {tone:cautious}
+- The scout :: Quick and quiet, out ahead. Sounds like you. {values:+freedom} {tone:free}
+
+? q.plans.squad_shape | fn: deepen_bond reveal_character | kind: player_past | level: 5 | follows: q.plans.squad_role | depth: 2
+Q: Has your squad found its shape yet? Who does what?
+Q: Do you and your squad work well together now?
+- Like clockwork :: Lucky. Some squads take years. {values:+loyalty} {tone:proud}
+- Still working it out :: That's normal. Give it a few missions. {values:+honesty} {tone:honest}
+- We argue a lot :: Arguing squads often turn out the closest. Strange but true. {values:+honesty} {tone:joking}
+
+? q.plans.pet_someday | fn: deepen_bond reveal_character | level: 2
+Q: Would you ever keep an animal companion of your own?
+Q: A ninja dog, a messenger hawk, a fat cat: would you want one?
+- A ninja dog :: Talk to the Inuzuka. They match people and puppies very carefully. {values:+loyalty} {tone:loyal}
+- A messenger hawk :: Letters across the whole land. Very useful. {values:+freedom +duty} {tone:curious}
+- A lazy old cat :: Ha! Someone to nap with. Perfect. {values:+kindness} {tone:joking}
+- No room, sadly :: An apartment's no place for a big dog. Maybe a fish? {values:+honesty} {tone:honest}
+
+? q.dilemma.friends_fighting | fn: deepen_bond reveal_character | level: 3
+Q: Two of your friends are fighting, and both want you on their side. What do you do?
+Q: Caught between two quarrelling friends. Whose side are you on?
+- Stay out of it :: Neutral ground. Safe, if lonely. {values:+freedom} {tone:cautious}
+- Side with who's right :: Fair, if you can tell. It's usually murkier than that. {values:+honesty} {tone:blunt}
+- Bring them together :: The peacemaker. Hardest job in any friendship. {values:+kindness +loyalty} {tone:kind}
+
+? q.dilemma.neutral_cost | fn: deepen_bond reveal_character | level: 5 | follows: q.dilemma.friends_fighting | depth: 2
+Q: What if, whatever you did, both friends ended up cross with you?
+Q: Say both of your quarrelling friends blamed you. Then what?
+- Wait it out :: They'll miss you before they miss being angry. {values:+freedom} {tone:cautious}
+- Apologise to both :: Even if you did nothing wrong? Generous. {values:+kindness} {tone:humble}
+- Tell them the truth :: "You're both being silly." Ha! Brave. {values:+honesty +courage} {tone:honest}
+
+? q.dilemma.lost_child | fn: deepen_bond reveal_character | level: 2 | axis: rules_or_results
+Q: A little child is lost at the market, crying, and you're due at training. What do you do?
+Q: Late for training, and there's a lost little one by the fish stalls. Stop, or keep going?
+- Find their family :: Of course you would. Training can wait for that. {values:+kindness} {tone:kind} {pole:-1}
+- Fetch the police, then go :: Hand them to someone who can help, then go. Sensible. {values:+duty} {tone:dutiful} {pole:1}
+- Bring them to training :: Ha! The youngest trainee in the Leaf. Your sensei's face! {values:+kindness +creativity} {tone:joking}
+
+? q.dilemma.lost_kunai | fn: deepen_bond reveal_character | level: 3 | axis: honesty_vs_kindness
+Q: You borrowed a friend's kunai and lost it. Tell them, or quietly buy a new one?
+Q: Your friend's lucky kunai is at the bottom of the river, thanks to you. What now?
+- Tell them :: Honest. Hard. They'll trust you more for it. {values:+honesty} {tone:honest} {pole:1}
+- Replace it quietly :: Spare them the worry. Kind, if they never notice. {values:+kindness} {tone:evasive} {pole:-1}
+- Tell them and replace it :: Both. That's the full apology. {values:+honesty +duty} {tone:dutiful}
+
+? q.village.best_food | fn: deepen_bond reveal_character worldbuild | level: 2 | public: yes
+Q: Who makes the best food in the village?
+Q: Settle an argument for me: best cooking in the Leaf?
+- Ichiraku :: The classic answer, and probably the right one. {values:+family} {tone:loyal}
+- The dango stand :: Sweet and quick. The dango seller will be thrilled. {values:+kindness} {tone:warm}
+- Akimichi barbecue :: Nobody grills like the Akimichi. Nobody. {values:+family} {tone:bold}
+- Whoever's feeding me :: Ha! The most diplomatic answer in the village. {values:+freedom} {tone:joking}
+
+? q.village.new_face | fn: deepen_bond reveal_character worldbuild | level: 4 | public: yes
+Q: If they carved one more face on the Hokage Rock, whose should it be?
+Q: The Rock has room for more faces. Who deserves the next one?
+- The next Hokage :: Fair. That's what the Rock is for. {values:+duty} {tone:dutiful}
+- An ordinary villager :: A baker, a teacher, a farmer. Now there's an idea. {values:+kindness +family} {tone:warm}
+- Mine, obviously :: Ha! I'll bring a chisel and a ladder. {values:+courage} {tone:ambitious}
+- A good dog :: A dog on the Hokage Rock! The Inuzuka would never stop cheering. {values:+loyalty} {tone:playful}
+
+? q.village.rules_young | fn: deepen_bond reveal_character worldbuild | level: 3 | public: yes | axis: rules_or_results
+Q: Do you think the village's rules for young ninja are too strict?
+Q: Curfews, training-ground hours, the forest out of bounds. Too much, or fair?
+- They keep us safe :: Sensible. Most rules have a scar behind them. {values:+duty} {tone:dutiful} {pole:1}
+- Too strict :: Ha! Every young ninja says that. Every old one said it too. {values:+freedom} {tone:free} {pole:-1}
+- Some are, some aren't :: Fair and honest. Which ones, I wonder? {values:+honesty} {tone:honest}
+
+? q.village.rule_to_change | fn: deepen_bond reveal_character worldbuild | level: 5 | follows: q.village.rules_young | depth: 2 | public: yes | axis: rules_or_results
+Q: If you could change one village rule, which would it be?
+Q: One rule, gone tomorrow. Which do you pick?
+- Later curfew :: An hour more of evening. The noodle shops would thank you. {values:+freedom} {tone:free} {pole:-1}
+- None, honestly :: None? You're more patient than I ever was. {values:+duty} {tone:dutiful} {pole:1}
+- Open the forest trails :: The forest is lovely in spring. Mind the boars, though. {values:+freedom +courage} {tone:bold} {pole:-1}

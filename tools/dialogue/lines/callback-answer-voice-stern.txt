@@ -1,0 +1,96 @@
+# Callbacks for questions/voice-stern.txt, in the stern asker's voice.
+#! fn: callback
+#! tags: personality=stern
+
+## callback.answer.q.values.stern_unwatched.a1
+You train when no one's watching, you said. I've been watching. You weren't lying. Good.
+
+## callback.answer.q.values.stern_unwatched.a2
+You train when you feel like it. Have you felt like it this week? Think on what I said.
+
+## callback.answer.q.values.stern_unwatched.a3
+Your own drills, unwatched. Acceptable, if you do them. Are you doing them?
+
+## callback.answer.q.values.stern_last_skipped.a1
+You skipped training that week. Don't make it two, I said. Did you?
+
+## callback.answer.q.values.stern_last_skipped.a2
+Never skipped training, you said. Keep it that way. I'll know.
+
+## callback.answer.q.values.stern_last_skipped.a3
+You couldn't remember your last skipped session. Too long ago, or too often? I'm still waiting.
+
+## callback.answer.q.values.stern_discipline_talent.a1
+Discipline over talent. Correct. Talent is a loan. Pay it back daily.
+
+## callback.answer.q.values.stern_discipline_talent.a2
+You chose talent over discipline. Wrong, mostly. Prove me wrong by working.
+
+## callback.answer.q.values.stern_discipline_talent.a3
+Talent wins early, discipline late. Your answer. I've repeated it to three Genin.
+
+## callback.answer.q.plans.stern_weakness.a1
+Patience, your weakness. Ten minutes still, every day. Have you sat?
+
+## callback.answer.q.plans.stern_weakness.a2
+Chakra control, your weak point. Leaf-balancing every night. No shortcuts. I said it. I meant it.
+
+## callback.answer.q.plans.stern_weakness.a3
+Your guard drops. You admitted it. I watched you spar. It still drops. Fix it.
+
+## callback.answer.q.plans.stern_weakness.a4
+You didn't know your weakness. Found it yet? Before an enemy does?
+
+## callback.answer.q.plans.stern_weakness_fix.a1
+Drilling your weakness daily, you said. A month's nearly up. Report.
+
+## callback.answer.q.plans.stern_weakness_fix.a2
+You asked for help with your weakness. Pride beaten. Good. The second victory is the harder one.
+
+## callback.answer.q.plans.stern_weakness_fix.a3
+Nothing done about your weakness, you said. I said tomorrow, at dawn. It is past tomorrow.
+
+## callback.answer.q.dilemma.stern_wrong_order.a1
+Obey, then ask. Your answer on a wrong order. Correct. Remember it when it's hard.
+
+## callback.answer.q.dilemma.stern_wrong_order.a2
+Speak up once, clearly. Then obey. That's how you'd handle a wrong order. Good.
+
+## callback.answer.q.dilemma.stern_wrong_order.a3
+Obey, then report. Use the chain, I said. Have you had to yet?
+
+## callback.answer.q.values.stern_lateness.a1
+Lateness is a small fault, you said. Small faults grow. I'm watching yours.
+
+## callback.answer.q.values.stern_lateness.a2
+Lateness is disrespect. You agreed. You were on time today. Noted.
+
+## callback.answer.q.values.stern_lateness.a3
+Depends on the cause, you said. A sick child, fine. Breakfast, no. I hold to that.
+
+## callback.answer.q.pref.stern_rise.a1
+You rise before dawn. I saw a lamp in your window early. Good.
+
+## callback.answer.q.pref.stern_rise.a2
+Dawn, you rise. An hour earlier, I said. Have you tried?
+
+## callback.answer.q.pref.stern_rise.a3
+You rise late. We said we'd fix it. We haven't. Tomorrow.
+
+## callback.answer.q.pref.stern_rise_why.a1
+You rise to train. The right answer. Still the right answer.
+
+## callback.answer.q.pref.stern_rise_why.a2
+Habit, why you rise. Discipline that stopped complaining. I'm pleased with that phrase. It was mine.
+
+## callback.answer.q.pref.stern_rise_why.a3
+You like sleep. Honest. Sleep is training, up to a point. Have you passed the point?
+
+## callback.answer.q.values.stern_comfort.a1
+Comfort is where strength naps. You agreed. I slept on the floor last night. Out of principle.
+
+## callback.answer.q.values.stern_comfort.a2
+Rest matters, you said. I conceded it. I took a full day's rest this week. Do not tell anyone.
+
+## callback.answer.q.values.stern_comfort.a3
+A little comfort, earned. Your rule. You've earned a little this week. Take it.

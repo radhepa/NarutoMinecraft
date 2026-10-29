@@ -1,0 +1,114 @@
+# Overheard leads for favor_needed hooks (SIDE_QUESTS.md §3.2, gen.favour and its variants): two residents mention a
+# need the player could help with. Each exchange is a lead in the journal.
+#! fn: hook
+
+## ambient.hook.favor_needed  fn=hook
+A: {client} needs those rice sacks carried up to the third floor, and nobody's got the back for it.
+B: I'd help, but my knee. Somebody young ought to give a hand.
+lead: hook.favor_needed
+
+A: Did {neighbor} ever get that roof patched?
+B: Not yet. Another rain like last night and the whole kitchen floods.
+lead: hook.favor_needed
+
+A: {client} has to mind the stall and see to a delivery at the same time.
+B: Can't be done. Someone should offer to watch the counter for an hour.
+lead: hook.favor_needed
+
+A: The firewood's still piled outside {neighbor}'s door. Hasn't been split in a week.
+B: With those hands? It won't be split till spring unless someone helps.
+lead: hook.favor_needed
+
+A: {client} asked me to water the garden while they're away, and I'm off to my sister's tomorrow.
+B: Ask around. Somebody's bound to have an afternoon free.
+lead: hook.favor_needed
+
+A: The shutters on {neighbor}'s house are hanging by one hinge.
+B: I keep meaning to fix them. I don't own a single tool.
+lead: hook.favor_needed
+
+## ambient.hook.favor_needed  fn=hook,react
+A: {client} has a letter from family far away, but the writing's too small to read anymore.
+B: Someone with young eyes should read it aloud. It's been sitting on the table for days.
+lead: hook.favor_needed
+
+A: Our elder wants the offering taken to the shrine before the next full moon.
+B: The steps are too much for those old legs. We need someone to go in their place.
+lead: hook.favor_needed
+
+A: {client} has a parcel that has to reach {place} today, and can't leave the house.
+B: The Mission Desk would charge a fortune. Maybe someone would just do it as a kindness.
+lead: hook.favor_needed
+
+A: Have you heard? The old scroll-keeper wants a book brought back from {place}.
+B: Back and forth across the village with that hip? Somebody should save the walk.
+lead: hook.favor_needed
+
+## ambient.hook.favor_needed  fn=hook
+A: {client}'s cat hasn't come home in two nights.
+B: It was last seen near {place}, prowling the drying racks. Somebody should look.
+lead: hook.favor_needed
+
+A: The little dog from the corner house is gone again. Slipped its rope.
+B: It always ends up somewhere it can't get back from. Poor thing.
+lead: hook.favor_needed
+
+A: {neighbor}'s ninken pup got out of the yard this morning.
+B: A pup that young won't find its way home. Someone with a good nose, or a dog with one, should search.
+lead: hook.favor_needed
+
+A: {client} works late at the bath house and walks home past {place} in the dark.
+B: Not a nice road at night. I'd feel better if somebody walked along.
+lead: hook.favor_needed
+
+A: {client} has to take the cart to the gate before dawn tomorrow.
+B: Alone, with all those crates? I'd want someone walking beside me.
+lead: hook.favor_needed
+
+A: {client}'s mother has a fever, and the medicine is all the way at the hospital.
+B: And {client} can't leave the bedside. Someone should fetch it.
+lead: hook.favor_needed
+
+A: {neighbor}'s grandfather has had that cough a week now.
+B: The herbalists by the hospital have a tea for it. Somebody needs to go and ask.
+lead: hook.favor_needed
+
+## ambient.hook.favor_needed  fn=hook,react
+A: Stock keeps going missing from {client}'s shop. A little every night.
+B: Rats, or something cleverer than rats. Someone ought to keep watch.
+lead: hook.favor_needed
+
+A: The delivery for {client}'s stall never turned up. It was due at noon.
+B: It's probably stuck at the gate. Somebody should go and find out.
+lead: hook.favor_needed
+
+A: {client} wants to learn the trade at the forge, but the smith won't take on anyone new.
+B: The smith listens to people who've worked there. A good word from the right person might do it.
+lead: hook.favor_needed
+
+A: {client} has been asking the tailor for an apprenticeship for a month.
+B: The tailor says no to everyone. It'd take someone persuasive to change that mind.
+lead: hook.favor_needed
+
+## ambient.hook.favor_needed  event=leaf_festival  fn=hook,react
+A: The squid stall's short-handed tonight. Two helpers came down with colds.
+B: On festival night? They'll never keep up with the queue alone.
+lead: hook.favor_needed
+
+A: There's a little one crying by the goldfish stall. Can't find their family.
+B: Someone should help look. The crowd's too thick for a child to see over.
+lead: hook.favor_needed
+
+## ambient.hook.favor_needed  event=market_day  fn=hook,react
+A: The farmer from the east fields broke a cart wheel by the gate. The whole load's stuck.
+B: It's Market Day, of all days. Someone strong could help carry it in.
+lead: hook.favor_needed
+
+## ambient.hook.favor_needed  stage=child  fn=hook
+A: My grandma's basket's too heavy to carry back from the market. I tried. I really tried.
+B: We should find someone bigger. Or two of us could hold a handle each!
+lead: hook.favor_needed
+
+A: Our kite's stuck on the roof of {place}. We can't reach it.
+B: A shinobi could jump up there easy. Let's ask one.
+lead: hook.favor_needed

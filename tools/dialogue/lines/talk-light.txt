@@ -1,0 +1,296 @@
+# Conversation topics, the lighter ones (LIFE_TOGETHER.md §6): small talk, food, training, a compliment,
+# village news, their hobby, and their opinion of someone. A personality's line wins over the general one.
+# Where a personality dislikes a topic (training: gentle; a compliment: reserved, pragmatic; village news:
+# reserved; about someone: stern), its line is the awkward reaction.
+
+## talk.small_talk  fn=filler
+Not much to report. The well bucket squeaks again, and nobody's oiled it.
+Busy morning, slow afternoon. The usual.
+Did you see the sky at dawn? Pink all the way to the Hokage Rock.
+
+## talk.not_yet  fn=react  kind=cycle
+Let's leave that for when we know each other better.
+That's a conversation for another day, I think.
+Ask me again in a while, {player}. Not yet.
+
+## talk.opinion.dear  fn=reveal_character
+Them? One of the best people I know. I'd do anything for them.
+I'd walk through the rain to bring them soup. That's how I feel about them.
+Don't you say a word against them. They're dear to me.
+
+## talk.opinion.likes  fn=reveal_character
+I like them. Good company, always on time.
+They're all right. More than all right, honestly.
+We get on well. They make me laugh.
+
+## talk.opinion.neutral  fn=reveal_character
+I don't really know them. We nod in the street.
+Them? Can't say I've an opinion. Seem decent enough.
+We've spoken once or twice. Nothing to tell.
+
+## talk.opinion.cool  fn=reveal_character
+We're not close. Let's leave it at that.
+They and I don't see eye to eye. It's nothing dramatic.
+I keep my distance. It's better for both of us.
+
+## talk.opinion.dislikes  fn=reveal_character
+I'd rather not talk about them. Or to them.
+Honestly? I can't stand them. Don't tell anyone I said it.
+If they're coming, I'm leaving. That's all I'll say.
+
+## talk.small_talk.again  fn=filler  kind=cycle
+We've done the weather already, {player}. The sky hasn't changed its mind.
+Still the same day, still the same squeaky bucket.
+## talk.small_talk.too_soon  fn=react  kind=cycle
+Let's start simpler, shall we?
+We hardly know each other. Hello is plenty for now.
+
+# -- food -------------------------------------------------------------------------------------------
+## talk.food  fn=reveal_character
+Grilled mackerel with a squeeze of citrus. Nothing fancier needed.
+Have you tried the eel by the second bridge? They brush it with sauce three times.
+## talk.food  fn=reveal_character  stage=teen|adult
+I'd eat dango every day if my teeth would let me.
+## talk.food.again  fn=filler  kind=cycle
+We've talked food already today. Now I'm just hungry.
+If we keep talking about food, I'll have to go and buy some.
+## talk.food.too_soon  fn=react  kind=cycle
+Food? We've only just met. Ask me when we've shared a meal.
+Let's get to know each other a little first.
+
+## talk.food.warmhearted  fn=reveal_character  stage=teen|adult
+Miso soup, the way my grandmother made it. I'll make you a bowl. No, I insist.
+## talk.food.thoughtful  fn=reveal_character
+I like plain rice and pickles. You can taste every grain when nothing's shouting over it.
+## talk.food.playful  fn=reveal_character
+I can fit six dango in my mouth at once. I'll show you. Okay, five. Okay, maybe don't watch.
+## talk.food.adventurous  fn=reveal_character
+A merchant once gave me a pepper from the far south. I cried for an hour. I'd do it again.
+## talk.food.meticulous  fn=reveal_character
+Rolled omelette, cut into exactly eight. Uneven pieces taste wrong. I can't explain it.
+## talk.food.steadfast  fn=reveal_character  stage=teen|adult
+Rice, fish, soup. Same breakfast for twelve years. It's never let me down.
+## talk.food.reserved  fn=reveal_character
+Cold soba. Quiet place. That's it.
+## talk.food.imaginative  fn=reveal_character
+Sweet bean buns taste like a lazy afternoon. Do you know what I mean? Purple and slow.
+## talk.food.pragmatic  fn=reveal_character  stage=teen|adult
+Whatever's freshest and cheapest at the stalls. The fishmonger marks down at four, by the way.
+## talk.food.curious  fn=reveal_character
+How do they get the broth at Ichiraku so clear? I've asked. They just wink.
+## talk.food.protective  fn=reveal_character  stage=teen|adult
+You're eating properly, aren't you? Not just ramen? ...Mostly ramen. I knew it.
+## talk.food.gentle  fn=reveal_character
+I like warm sweet potato in winter. I share the skins with the neighbour's dog.
+## talk.food.proud  fn=reveal_character
+My family's pickling recipe goes back five generations. Nothing in the market compares.
+## talk.food.fiery  fn=reveal_character
+RAMEN! Extra pork! Extra egg! Extra everything! Is there any other answer?
+## talk.food.shy  fn=reveal_character
+I like... strawberry mochi. Is that silly? It's soft. It doesn't make a fuss.
+## talk.food.stern  fn=reveal_character  stage=teen|adult
+Food is fuel. Brown rice, grilled fish, and no sweets before a mission.
+
+# -- training ---------------------------------------------------------------------------------------
+## talk.training  fn=reveal_character
+I'm working on my footwork. Slow, but it's coming.
+Training Ground 3 has the best posts. The bark's worn to the shape of a fist.
+Every morning, a lap of the outer wall. Some mornings I even enjoy it.
+## talk.training.again  fn=filler  kind=cycle
+We've already compared bruises today, {player}.
+More training talk? Go and actually train, then come back.
+## talk.training.too_soon  fn=react  kind=cycle
+I don't talk technique with people I've just met.
+Let's leave training for when we've sparred once or twice.
+
+## talk.training.warmhearted  fn=reveal_character  stage=teen|adult
+I mostly train so I can carry the shopping up the hill without stopping. It counts!
+## talk.training.thoughtful  fn=reveal_character
+Most mistakes in a spar happen in the head first. I train my thinking as much as my arms.
+## talk.training.playful  fn=reveal_character
+I train by racing the pigeons off the roofs. They win. For now.
+## talk.training.adventurous  fn=reveal_character
+I climb the cliff behind the falls. No ropes. Don't tell anyone. Want to come?
+## talk.training.meticulous  fn=reveal_character
+Three hundred strikes, logged. Then I check where the misses went and adjust.
+## talk.training.steadfast  fn=reveal_character
+Same drills every day. They're dull. That's why they work.
+## talk.training.reserved  fn=reveal_character
+I train alone. Early. Before anyone's watching.
+## talk.training.imaginative  fn=reveal_character
+I pretend the training post is a mountain troll. It helps more than you'd think.
+## talk.training.pragmatic  fn=reveal_character
+Train what you'll use. Fancy jutsu won't help if you can't run for an hour.
+## talk.training.curious  fn=reveal_character
+Why does a spinning kunai fly straighter? I threw two hundred to find out. Still not sure.
+## talk.training.protective  fn=reveal_character
+I practise guarding more than striking. Someone has to stand in front.
+## talk.training.gentle  fn=react
+Oh... I don't really like fighting talk. Could we talk about something else?
+## talk.training.proud  fn=reveal_character
+I train harder than anyone my age. That's not a boast. Ask the posts.
+## talk.training.fiery  fn=reveal_character
+A thousand kicks before breakfast! Then a thousand more! Want to join? You want to!
+## talk.training.shy  fn=reveal_character
+I practise throwing at night, when nobody can see me miss. I'm getting better. A little.
+## talk.training.stern  fn=reveal_character  stage=teen|adult
+Train until the movement is boring. Then train it until it's yours.
+
+# -- a compliment -----------------------------------------------------------------------------------
+## talk.compliment  fn=deepen_bond
+Oh, go on. ...No, really, go on, say it again.
+That's kind of you, {player}. You made my morning.
+You noticed? Nobody notices. Thank you.
+## talk.compliment.again  fn=react  kind=cycle
+Twice in one day? You'll turn my head, {player}.
+Careful, you'll use up all your nice words on me.
+## talk.compliment.too_soon  fn=react  kind=cycle
+That's... a bit much from someone I barely know. But thank you.
+Flattery already? We've only just met.
+
+## talk.compliment.warmhearted  fn=deepen_bond  stage=teen|adult
+Aren't you sweet! Here, have a rice cake for that.
+## talk.compliment.thoughtful  fn=deepen_bond
+Thank you. I'll think about that, actually. It's nice to be seen.
+## talk.compliment.playful  fn=deepen_bond
+I KNOW. But it's nice to hear. Say it in a funny voice this time.
+## talk.compliment.adventurous  fn=deepen_bond
+Ha! Thanks. Tell that to the mountain that nearly threw me off last week.
+## talk.compliment.meticulous  fn=deepen_bond
+You noticed the stitching? Six hours. Thank you. Truly.
+## talk.compliment.steadfast  fn=deepen_bond
+Thank you, {player}. That means more from you than most.
+## talk.compliment.reserved  fn=react
+...Don't. I don't know what to do with that.
+## talk.compliment.imaginative  fn=deepen_bond
+That's the nicest thing I've heard all week. I'm going to paint it. Somehow.
+## talk.compliment.pragmatic  fn=react  stage=teen|adult
+Kind words don't pay the rent. But fine. Thank you. Now, was there something you needed?
+## talk.compliment.curious  fn=deepen_bond
+Really? What makes you say that? No, I want to know, tell me exactly.
+## talk.compliment.protective  fn=deepen_bond  stage=teen|adult
+Thank you. Now you look after yourself as well as you say I do.
+## talk.compliment.gentle  fn=deepen_bond
+Oh. That's lovely of you. I'll keep that one somewhere safe.
+## talk.compliment.proud  fn=deepen_bond
+Naturally. ...But I'm glad it was you who said it.
+## talk.compliment.fiery  fn=deepen_bond
+YES! Thank you! Now I'm fired up for the whole day!
+## talk.compliment.shy  fn=deepen_bond
+M-me? Oh. Thank you. I don't... thank you. [BLUSH]
+## talk.compliment.stern  fn=deepen_bond  stage=teen|adult
+Hm. Praise is easy. But I'll accept it. Once.
+
+# -- village news -----------------------------------------------------------------------------------
+## talk.village_news  fn=worldbuild
+The tea house is putting in a second bench by the river. Big news, for our street.
+They're repainting the gate posts. Somebody chose a very loud red.
+## talk.village_news  fn=worldbuild  stage=teen|adult
+The bathhouse raised its prices by a ryo. People are furious. Quietly.
+## talk.village_news.again  fn=filler  kind=cycle
+That's all the news I've got. I'm not making any up.
+You've heard the lot, {player}. Come back tomorrow for fresh gossip.
+## talk.village_news.too_soon  fn=react  kind=cycle
+I don't pass gossip to people I've only just met.
+News? Maybe once I know where it'll end up.
+
+## talk.village_news.warmhearted  fn=worldbuild
+The baker's daughter is walking now! Wobbly as a new foal. The whole lane cheered.
+## talk.village_news.thoughtful  fn=worldbuild
+The Academy library had a flood in the cellar. They're drying the scrolls on the roof, page by page.
+## talk.village_news.playful  fn=worldbuild
+Somebody painted a moustache on the scarecrow by the farms. It wasn't me. It was definitely not me.
+## talk.village_news.adventurous  fn=worldbuild
+A caravan came in from the far east this morning. Silk, spices and a goat with a hat.
+## talk.village_news.meticulous  fn=worldbuild  stage=teen|adult
+The Mission Desk changed its filing order. Nobody can find anything. I've offered to help.
+## talk.village_news.steadfast  fn=worldbuild
+The night watch doubled on the east wall for the season. Nothing wrong, just careful.
+## talk.village_news.reserved  fn=react
+I don't keep up with gossip. Ask someone else.
+## talk.village_news.imaginative  fn=worldbuild
+The wisteria by the shrine bloomed overnight. People say it does that when a baby's born on the street.
+## talk.village_news.pragmatic  fn=worldbuild  stage=teen|adult
+Rice is up two ryo a sack. Buy now if you can, it'll be worse after the rains.
+## talk.village_news.curious  fn=worldbuild
+Did you hear? Someone found a tunnel under the old storehouse. Just a root cellar, probably. Probably!
+## talk.village_news.protective  fn=worldbuild  stage=teen|adult
+There's a loose dog near the market biting at ankles. Mind the little ones if you see it.
+## talk.village_news.gentle  fn=worldbuild
+The kennel had a litter of pups. Seven! They're looking for homes.
+## talk.village_news.proud  fn=worldbuild
+Our clan's youngest passed the Academy entrance with the top mark. As expected.
+## talk.village_news.fiery  fn=worldbuild
+There's going to be a sumo match at the stadium! I'm entering! Probably! Maybe!
+## talk.village_news.shy  fn=worldbuild
+The flower shop has a new colour of iris. Sort of a grey-blue. I went to look three times.
+## talk.village_news.stern  fn=worldbuild  stage=teen|adult
+Two Genin were caught on the Hokage Rock after curfew. Laps till dawn. Rightly so.
+
+# -- their hobby ------------------------------------------------------------------------------------
+## talk.their_hobby  fn=reveal_character
+I whittle little animals in the evenings. I've a shelf of crooked foxes.
+I keep a garden box on the sill. Two radishes this year. Champion radishes.
+I collect river stones. Smooth ones. My shelves are getting heavy.
+## talk.their_hobby.again  fn=filler  kind=cycle
+I've bored you with my hobby enough for one day.
+That's my hobby, the whole of it. There's no more to tell today.
+## talk.their_hobby.too_soon  fn=react  kind=cycle
+What I do with my evenings is my own business. For now.
+That's a bit personal for someone I've just met.
+
+## talk.their_hobby.warmhearted  fn=reveal_character
+I knit. Scarves, hats, little covers for teapots. Everyone on the lane has one whether they want it or not.
+## talk.their_hobby.thoughtful  fn=reveal_character
+I read. Histories mostly. I keep notes in the margins, which the librarian forgives me for.
+## talk.their_hobby.playful  fn=reveal_character
+I make up games. My latest is roof tag, where the ground is lava. Rules are still evolving.
+## talk.their_hobby.adventurous  fn=reveal_character
+I draw maps. Every path in the woods I've walked. There's a lot of blank paper left.
+## talk.their_hobby.meticulous  fn=reveal_character  stage=teen|adult
+I keep a bonsai. Eleven years. I trim it with tweezers on the first of every month.
+## talk.their_hobby.steadfast  fn=reveal_character  stage=teen|adult
+I carve handles for tools. A good handle lasts longer than the blade. I like that.
+## talk.their_hobby.reserved  fn=reveal_character
+Calligraphy. Alone. One word, a hundred times, until it's right.
+## talk.their_hobby.imaginative  fn=reveal_character
+I paint. Mostly the sky, but sometimes the sky as it ought to be. More purple.
+## talk.their_hobby.pragmatic  fn=reveal_character  stage=teen|adult
+I fix broken things and sell them on. Profitable, and it keeps the hands busy.
+## talk.their_hobby.curious  fn=reveal_character
+I take clocks apart. Putting them back together is the part I'm still learning.
+## talk.their_hobby.protective  fn=reveal_character  stage=teen|adult
+I teach the little ones on my street to fall without hurting themselves. Somebody should.
+## talk.their_hobby.gentle  fn=reveal_character
+I look after the stray cats by the shrine. They have names. They don't answer to them.
+## talk.their_hobby.proud  fn=reveal_character
+I study my family's records. Every name, every deed. I'll add my own one day.
+## talk.their_hobby.fiery  fn=reveal_character
+Training IS my hobby! And eating after training! And then more training!
+## talk.their_hobby.shy  fn=reveal_character
+I fold paper cranes. I'm at four hundred and twelve. I'm not counting for any reason. Well...
+## talk.their_hobby.stern  fn=reveal_character  stage=teen|adult
+I keep my blades. Sharpen, oil, wrap. Every night. A habit of discipline.
+
+# -- about someone (no one in particular: the opinion pools above take the named ones) -------------------
+## talk.about_someone  fn=reveal_character
+Who, the new family by the well? Pleasant enough. They keep chickens.
+I try not to say much about people who aren't here to answer.
+Everyone's got a story, {player}. I only know the cover of most of them.
+## talk.about_someone.again  fn=filler  kind=cycle
+We've done enough talking about other people today. Let's give them a rest.
+I've said all I'll say about them for now.
+## talk.about_someone.too_soon  fn=react  kind=cycle
+Gossip about the neighbours? Not with a near stranger, {player}.
+Let's not start on other folk just yet.
+
+## talk.about_someone.curious  fn=reveal_character
+Oh, I know everyone! Well, I know something about everyone. Who are we talking about?
+## talk.about_someone.stern  fn=react
+I don't discuss people behind their backs. Neither should you.
+## talk.about_someone.warmhearted  fn=reveal_character  stage=teen|adult
+I only know good things about my neighbours. I make sure of it, I feed them all.
+## talk.about_someone.reserved  fn=reveal_character
+I mind my own. They mind theirs.
+## talk.about_someone.playful  fn=reveal_character
+I could tell you who snores loudest on this street. But then I'd have to admit how I know.

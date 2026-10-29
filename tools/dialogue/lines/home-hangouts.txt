@@ -1,0 +1,427 @@
+# Hangouts at the player's flat (HOME.md §9.1), hosted by the player. ask: they ask to come over. invite: the note
+# they leave. yes / no.*: their answer when you invite them. arrive: at your door. rough..great: how it went.
+# stood_up: they knocked and you were out. ritual / ritual_missed, highlights and their callbacks, and the
+# follow-up for a lapsed ritual. Said by children, teens and adults: the squad and classmates are children.
+#! kind: cycle
+#! fn: deepen_bond
+
+# == study night ===================================================================================
+## hangout.study_night.ask
+Study night at yours? I'll bring the notes if you bring the tea.
+I can't make sense of these seal diagrams alone. Can we work at your place tonight?
+## hangout.study_night.invite
+A note, folded into a neat square: "Study night at yours? I'll bring the scrolls. Evening, after supper."
+"Revision at your flat tonight? I have questions. Lots. Bring a lamp."
+## hangout.study_night.yes
+Yes! I've been dreading these chapters alone.
+Study night it is. I'll copy my notes out properly first.
+## hangout.study_night.no.busy
+I've got chores at home tonight. {when}, though? I'll bring double the notes.
+Can't tonight, I'm already promised elsewhere. Ask me again {when}.
+## hangout.study_night.no.not_today
+My head's full already. One more page and it'll spill. Another night?
+Not tonight. I'd only fall asleep on your scrolls.
+## hangout.study_night.no.not_their_thing
+Sitting still with books all evening? I'd go mad. Ask me for something with running in it.
+Studying isn't really how I like to spend an evening. Sorry, {player}.
+## hangout.study_night.no.not_close_enough
+A whole evening of studying together? Maybe once we know each other better.
+That's kind, but I'm not sure we're study-night friends yet.
+## hangout.study_night.arrive
+I brought brush, ink, and three kinds of rice cracker. Where do we start?
+Clear the low table, I've got a whole stack of scrolls in this bag.
+## hangout.study_night.rough
+We didn't get much done, did we. Next time, maybe fewer distractions.
+I think I understand less than when I came. Not your fault. It's late.
+## hangout.study_night.fine
+That helped. A little. Thanks for the table and the tea.
+Two chapters done. Not bad for one evening.
+## hangout.study_night.good
+I actually get it now! You explain things better than the textbook.
+That was a good evening's work. My notes have never looked so tidy.
+## hangout.study_night.great
+I'm not even worried about the test any more. We know this. We really know it.
+Best study night ever. Who knew learning could be this fun with the right company?
+## hangout.study_night.stood_up
+I knocked with all my scrolls and nobody answered. I studied on your step for a bit, then went home.
+Your door stayed shut all evening. I left the notes I copied for you under it anyway.
+## hangout.study_night.ritual
+Our study nights. My marks have gone up since we started, you know. So has my rice cracker budget.
+I've started thinking of your low table as my desk. Is that all right?
+## hangout.study_night.ritual_missed
+I tried to study alone last night. I read the same page four times.
+We stopped our study nights and my notes went back to being a mess.
+## hangout.study_night.highlight.1
+You worked out the seal diagram by turning it upside down. Upside down! It's so obvious now! [EXCLAIM]
+## hangout.study_night.highlight.2
+The lamp ran out of oil and we finished the chapter by moonlight. That's dedication.
+## hangout.study_night.highlight.3
+We made up a song to remember the hand signs. It's terrible. I'll never forget it.
+## hangout.study_night.highlight.4
+You fell asleep on the scroll and the ink printed backwards on your cheek. I can read it! [SPARKLE]
+## hangout.study_night.highlight.5
+We quizzed each other until neither of us got one wrong. Ten in a row!
+## hangout.study_night.highlight.6
+Someone upstairs knocked on the floor for us to be quiet. We were laughing too hard to stop.
+## hangout.study_night.highlight.7
+You drew the whole history of the Leaf as a picture story. The Hokage look like potatoes. It's brilliant.
+## hangout.study_night.highlight.8
+We ate every rice cracker in the bag before the second chapter. Study fuel, apparently.
+
+# == cooking together ==============================================================================
+## hangout.cook_together.ask
+Let's cook at yours tonight! I'll bring the vegetables, you find the pot.
+I want to try a new recipe and I need someone brave to taste it. Your kitchen?
+## hangout.cook_together.invite
+"Cooking at yours tonight? I've got a bag of vegetables and big ideas."
+A note with a grease spot on the corner: "Let's make something proper for supper. Your place?"
+## hangout.cook_together.yes
+Cooking? Yes! I'll bring the good soy sauce.
+I'd love that. I'll pick something up from the market on the way.
+## hangout.cook_together.no.busy
+I'm helping out at home tonight. {when}? I'll bring the ingredients.
+I can't just now. How about {when}? I'll think of a recipe.
+## hangout.cook_together.no.not_today
+I'm too tired to stand at a stove tonight. Another day?
+My stomach's already full. Let's cook another time, when I'm hungry.
+## hangout.cook_together.no.not_their_thing
+I'm hopeless in a kitchen, honestly. I'd only burn the rice.
+Cooking's not really for me. I'm a much better eater.
+## hangout.cook_together.no.not_close_enough
+Cooking in your kitchen? That's a bit much for me just yet.
+Maybe when we're better friends. Kitchens are personal.
+## hangout.cook_together.arrive
+Carrots, an onion, tofu, and a very good mood. Where's your cutting board?
+Here, hold this bag. Careful, the eggs are on top.
+## hangout.cook_together.rough
+Well. It was edible. Mostly. We'll do better next time.
+The rice was crunchy and the soup was salty. At least we tried.
+## hangout.cook_together.fine
+That was good. Simple, but good. Thanks for having me.
+Not a bad supper. My onion chopping is improving.
+## hangout.cook_together.good
+That was delicious! We should write down what we did before we forget.
+Full and happy. Cooking's more fun with two.
+## hangout.cook_together.great
+That was the best meal I've had all season, and we made it ourselves!
+I didn't know your little kitchen could turn out a feast like that. We're brilliant.
+## hangout.cook_together.stood_up
+I stood at your door with a bag of vegetables until my arms ached. Where were you?
+Nobody home. I left the vegetables in a bag on your handle. Don't let them go soft.
+## hangout.cook_together.ritual
+Our cooking nights. I bought a second apron to keep at your place. Is that all right?
+Your kitchen's starting to feel like half mine. I like that.
+## hangout.cook_together.ritual_missed
+I cooked alone last night and it tasted fine, but something was missing. You, mostly.
+The second apron is still on your hook. We haven't used it in weeks.
+## hangout.cook_together.highlight.1
+The rice pot boiled over and we both shouted at it like that would help. It didn't!
+## hangout.cook_together.highlight.2
+You flipped the omelette in the air and caught it! First try! [EXCLAIM]
+## hangout.cook_together.highlight.3
+We cut the carrots into little stars. Silly. They looked wonderful.
+## hangout.cook_together.highlight.4
+The onions made us both cry and we couldn't stop laughing about it.
+## hangout.cook_together.highlight.5
+We invented a new sauce by accident. Miso, honey and a bit of panic. It's amazing.
+## hangout.cook_together.highlight.6
+Flour everywhere. On the table, on the floor, on your nose. Somehow on the ceiling?
+## hangout.cook_together.highlight.7
+A neighbour smelled the soup and knocked to ask what it was. We're famous on the stairs!
+## hangout.cook_together.highlight.8
+We made one huge onigiri together, bigger than both our fists. It fell apart. We ate it anyway.
+
+# == stargazing on the balcony =====================================================================
+## hangout.balcony_stargazing.ask
+It's so clear tonight. Can we watch the stars from your balcony?
+Your balcony faces the right way for the stars, doesn't it? Tonight?
+## hangout.balcony_stargazing.invite
+"The sky should be clear tonight. Your balcony, after dark? I'll bring a blanket."
+A note with a little star drawn on it: "Stargazing at yours tonight? Don't fall asleep first."
+## hangout.balcony_stargazing.yes
+Yes. I've been hoping for a clear night.
+I'll bring something warm to drink. And a blanket.
+## hangout.balcony_stargazing.no.busy
+I'm expected at home tonight. {when}, if the sky's clear?
+I can't get away tonight. {when}? The stars will still be there.
+## hangout.balcony_stargazing.no.not_today
+I'm too tired to stay up tonight. My eyes would close on the first star.
+Not tonight. It's colder than it looks.
+## hangout.balcony_stargazing.no.not_their_thing
+Staring at the sky for hours? I'd fidget off the balcony. Sorry.
+Stars are nice, but I'm not one for sitting still in the dark.
+## hangout.balcony_stargazing.no.not_close_enough
+Stars on your balcony? That's a quiet sort of thing. Maybe when we know each other better.
+I'd feel a bit shy, just yet. Ask me again another time.
+## hangout.balcony_stargazing.arrive
+I brought two blankets. One to sit on, one to wrap up in. Look up, they're already out.
+Turn the lamp off inside, it's brighter out here without it.
+## hangout.balcony_stargazing.rough
+The clouds came in. Typical. We saw about three stars.
+It got cold fast, didn't it. We'll try again another night.
+## hangout.balcony_stargazing.fine
+That was peaceful. Thank you for sharing your balcony.
+A nice, quiet evening. I needed that.
+## hangout.balcony_stargazing.good
+I never knew the sky over the Leaf had so many stars. Your balcony's perfect for it.
+That was lovely. I feel calmer than I have all week.
+## hangout.balcony_stargazing.great
+I'm going to remember tonight for a very long time. Every single star of it.
+That was magic. Real magic, no jutsu needed.
+## hangout.balcony_stargazing.stood_up
+Your balcony light never came on. I watched the stars from the street alone.
+I knocked, and waited, and the moon came up. Nobody home.
+## hangout.balcony_stargazing.ritual
+Our star nights. I've started learning the names of things up there, just to tell you.
+I look at the sky differently now. It's partly yours, I think.
+## hangout.balcony_stargazing.ritual_missed
+The sky's been clear all week and we haven't once sat out on your balcony.
+I saw a shooting star from my window and had nobody to tell.
+## hangout.balcony_stargazing.highlight.1
+There, over the rooftops, a falling star! Wish on it before it's gone! [SPARKLE]
+## hangout.balcony_stargazing.highlight.2
+We named a whole constellation after the ramen bowl. You can see the chopsticks!
+## hangout.balcony_stargazing.highlight.3
+The wind chime started up right as the moon came over the roofs. Like it was announcing it.
+## hangout.balcony_stargazing.highlight.4
+We counted the lit windows across the village instead of the stars. Two hundred and eleven!
+## hangout.balcony_stargazing.highlight.5
+An owl landed on the railing and stared at us. We stared back. It won.
+## hangout.balcony_stargazing.highlight.6
+We both fell asleep under the blanket and woke up with dew on our noses.
+## hangout.balcony_stargazing.highlight.7
+You could see the faces on the Hokage Rock by moonlight. They looked like they were watching too.
+## hangout.balcony_stargazing.highlight.8
+We told each other what we'd wish for, and they were almost the same wish.
+
+# == the squad crashes =============================================================================
+## hangout.squad_crash.ask
+Squad night at yours? Nobody's got a flat but you, and my feet are killing me.
+After a day like that, the squad should collapse somewhere together. Your place?
+## hangout.squad_crash.invite
+"Squad night at yours! We're bringing snacks. Don't tidy, we'll only wreck it."
+A note in two different hands: "Your flat, tonight, whole squad. No arguments. Bring cushions."
+## hangout.squad_crash.yes
+Yes! I'll grab the others on the way.
+Squad night! I'm bringing the card game. Prepare to lose.
+## hangout.squad_crash.no.busy
+I'm stuck with chores tonight. {when}? I'll bring double snacks to make up for it.
+Can't tonight. Save me a cushion for {when}?
+## hangout.squad_crash.no.not_today
+I'm too worn out to be any fun tonight. Next time, I promise.
+I need a night in my own bed. Go on without me.
+## hangout.squad_crash.no.not_their_thing
+A whole squad squashed into one flat all evening? It's a bit loud for me.
+I'm more of a quiet-evening sort. You lot have fun, though.
+## hangout.squad_crash.no.not_close_enough
+The whole squad at yours? I don't think I'm part of that yet.
+That's for the squad, really. I'd feel like I was intruding.
+## hangout.squad_crash.arrive
+We're here! Move over, I'm taking the cushion by the window.
+Sandals off, bags down, snacks out. Squad night has begun!
+## hangout.squad_crash.rough
+Everyone was too tired to talk. We mostly just yawned at each other.
+Somebody sulked all night. Let's try again when we're all in better moods.
+## hangout.squad_crash.fine
+That was fun. Thanks for letting us take over your floor.
+Good night. Nobody fell asleep first, which is a record.
+## hangout.squad_crash.good
+I love squad nights. We're a proper team when there's snacks involved.
+That was brilliant. Same time after the next mission?
+## hangout.squad_crash.great
+Best squad night ever! I can't stop laughing. My stomach hurts!
+That's the night we really became a squad. I just know it.
+## hangout.squad_crash.stood_up
+The whole squad turned up at your door and nobody answered. We sat on your stairs instead.
+We waited on your landing with all the snacks. They're gone now. Sorry. Where were you?
+## hangout.squad_crash.ritual
+Squad nights after every mission. That's a squad tradition now, isn't it?
+I know which cushion is mine at yours. I'll fight anyone for it.
+## hangout.squad_crash.ritual_missed
+We came home from the last mission and everyone just went their separate ways. It felt wrong.
+No squad night after the last mission. My cushion at yours must be lonely.
+## hangout.squad_crash.highlight.1
+We built a fort out of every cushion and futon in the flat. Three people inside. Barely.
+## hangout.squad_crash.highlight.2
+You won the card game with the worst hand I've ever seen. How? HOW? [EXCLAIM]
+## hangout.squad_crash.highlight.3
+We acted out the whole mission, with the snack bowl as the client. Award-winning.
+## hangout.squad_crash.highlight.4
+Someone laughed so hard tea came out of their nose. Everyone saw.
+## hangout.squad_crash.highlight.5
+We tried to make up a squad salute and ended up with something like a dance. It's ours now.
+## hangout.squad_crash.highlight.6
+All three of us fell asleep in a heap on your floor. Nobody remembers who went first.
+## hangout.squad_crash.highlight.7
+We drew a squad crest on a scrap of paper and pinned it to your wall. It's crooked. It's perfect.
+## hangout.squad_crash.highlight.8
+Midnight snack run to the corner stall, all of us still in our socks.
+
+# == tea at home ===================================================================================
+## hangout.tea_at_home.ask
+I'd like a quiet cup of tea and a sit-down. At yours, perhaps?
+Tea at your place this afternoon? I've a new leaf I'd like you to try.
+## hangout.tea_at_home.invite
+"Tea at yours this afternoon? I'll bring the leaves. You bring the cups."
+A neat note: "A pot of tea, a quiet hour. Your flat, if you'll have me."
+## hangout.tea_at_home.yes
+That sounds lovely. I'll bring something to have with it.
+Yes, please. A quiet cup is just what I need.
+## hangout.tea_at_home.no.busy
+I've too much to do this afternoon. {when}? I'll bring the good leaves.
+Not just now, I'm afraid. Could we have tea {when}?
+## hangout.tea_at_home.no.not_today
+I've already had four cups today. One more and I'd float. Another day.
+I'm not quite in a tea mood. Ask me again soon.
+## hangout.tea_at_home.no.not_their_thing
+Tea? I can't sit still that long. Sorry, {player}.
+I've never really liked green tea. Too bitter for me.
+## hangout.tea_at_home.no.not_close_enough
+Tea in your home is a kind offer. Perhaps when we know each other a little better.
+That's very polite of you. Maybe another time, when we're better friends.
+## hangout.tea_at_home.arrive
+I brought roasted tea and a few senbei. Shall I boil the water?
+Your kettle's already singing. Good timing.
+## hangout.tea_at_home.rough
+The tea stewed while we talked. A little bitter, all round.
+We didn't have much to say today. That's all right. It happens.
+## hangout.tea_at_home.fine
+A good cup. Thank you for the quiet.
+That was pleasant. Your flat has nice afternoon light.
+## hangout.tea_at_home.good
+I'd forgotten how good it is to just sit. Thank you, {player}.
+That was a fine pot of tea. You're getting better at the water temperature.
+## hangout.tea_at_home.great
+That was the most peaceful afternoon I've had all season. I'm keeping it.
+Perfect tea, perfect company. I didn't want to leave.
+## hangout.tea_at_home.stood_up
+I knocked with a tin of tea leaves and waited a while. Your flat stayed quiet.
+Nobody answered. I left the tea leaves by your door. They'll keep. I'm less sure about me.
+## hangout.tea_at_home.ritual
+Our tea afternoons. I keep a tin of leaves just for these now.
+Your flat at teatime is one of my favourite places. It's become a habit, and a good one.
+## hangout.tea_at_home.ritual_missed
+The tin I keep for our tea is still full. We haven't had an afternoon in weeks.
+I made a pot for two the other day out of habit. Drank both cups myself.
+## hangout.tea_at_home.highlight.1
+A tea stalk floated upright in your cup! That's good luck, everyone knows that. [SPARKLE]
+## hangout.tea_at_home.highlight.2
+We sat so still a sparrow came in through the window and sat on the table.
+## hangout.tea_at_home.highlight.3
+You poured the tea so slowly and carefully, not a drop on the tray. Lovely.
+## hangout.tea_at_home.highlight.4
+It rained the whole afternoon and we listened to it on the balcony rail. Didn't say a word.
+## hangout.tea_at_home.highlight.5
+We tried three kinds of tea side by side and couldn't agree which was best. Every one of us chose differently.
+## hangout.tea_at_home.highlight.6
+The senbei was so hard you nearly lost a tooth. We laughed until the tea went cold.
+## hangout.tea_at_home.highlight.7
+You told me the story behind every cup in your cupboard. Each one's a little memory.
+## hangout.tea_at_home.highlight.8
+The light came through the screen and made gold squares on the floor. We just watched them move.
+
+# == callbacks to the highlights ===================================================================
+## callback.hangout.study_night.highlight.1  fn=callback
+Upside down! I still turn every seal diagram upside down first because of you.
+## callback.hangout.study_night.highlight.2  fn=callback
+Remember finishing that chapter by moonlight when your lamp ran dry? I bought you oil, just in case.
+## callback.hangout.study_night.highlight.3  fn=callback
+That awful hand-sign song is still stuck in my head. I hummed it in class. Someone joined in.
+## callback.hangout.study_night.highlight.4  fn=callback
+The backwards ink on your cheek! I still laugh about it whenever I open a scroll.
+## callback.hangout.study_night.highlight.5  fn=callback
+Ten in a row, that night at yours. I've been trying for eleven ever since.
+## callback.hangout.study_night.highlight.6  fn=callback
+Has your upstairs neighbour forgiven us yet for the study night we couldn't stop laughing?
+## callback.hangout.study_night.highlight.7  fn=callback
+I still think of the Hokage as potatoes, thanks to your picture story. I can't stop.
+## callback.hangout.study_night.highlight.8  fn=callback
+The night we ate all the crackers before chapter two. Study fuel. I've been fuelling ever since.
+
+## callback.hangout.cook_together.highlight.1  fn=callback
+The rice pot that boiled over while we shouted at it. I still shout at mine. It still doesn't listen.
+## callback.hangout.cook_together.highlight.2  fn=callback
+Your omelette flip! I've tried it three times at home. The floor has eaten well.
+## callback.hangout.cook_together.highlight.3  fn=callback
+I cut my carrots into stars now. Every time. I blame you entirely.
+## callback.hangout.cook_together.highlight.4  fn=callback
+I chopped an onion this morning and thought of us both crying with laughter in your kitchen.
+## callback.hangout.cook_together.highlight.5  fn=callback
+Miso, honey and a bit of panic. I've made our sauce again. The panic is the hard part.
+## callback.hangout.cook_together.highlight.6  fn=callback
+Did you ever get the flour off your ceiling? I still wonder how it got up there.
+## callback.hangout.cook_together.highlight.7  fn=callback
+Your neighbour stopped me on the stairs and asked about that soup again. We're legends.
+## callback.hangout.cook_together.highlight.8  fn=callback
+That giant onigiri that fell to pieces! Best thing I ever ate off a plate in bits.
+
+## callback.hangout.balcony_stargazing.highlight.1  fn=callback
+I never told you what I wished for on that shooting star from your balcony. It came a little bit true.
+## callback.hangout.balcony_stargazing.highlight.2  fn=callback
+I found our ramen bowl constellation again last night. Chopsticks and all.
+## callback.hangout.balcony_stargazing.highlight.3  fn=callback
+Every time I hear a wind chime now I think of the moon coming over your roofs.
+## callback.hangout.balcony_stargazing.highlight.4  fn=callback
+Two hundred and eleven lit windows. I counted again from my place. I only got ninety.
+## callback.hangout.balcony_stargazing.highlight.5  fn=callback
+That owl on your railing! I think it won the staring contest because we were laughing.
+## callback.hangout.balcony_stargazing.highlight.6  fn=callback
+Dew on our noses, under your blanket. Best accidental night's sleep I've ever had.
+## callback.hangout.balcony_stargazing.highlight.7  fn=callback
+I keep thinking of the Hokage Rock by moonlight, from your balcony. Like they were keeping watch.
+## callback.hangout.balcony_stargazing.highlight.8  fn=callback
+We wished for almost the same thing that night. I still think about that.
+
+## callback.hangout.squad_crash.highlight.1  fn=callback
+Our cushion fort! We should build it bigger next time. Two rooms. A tower.
+## callback.hangout.squad_crash.highlight.2  fn=callback
+I still don't know how you won that card game with that hand. I've lost sleep over it.
+## callback.hangout.squad_crash.highlight.3  fn=callback
+The snack bowl as the client! I think of it every time we get a real one.
+## callback.hangout.squad_crash.highlight.4  fn=callback
+Tea out of a nose, on your floor, in front of everyone. Squad history.
+## callback.hangout.squad_crash.highlight.5  fn=callback
+Shall we do the squad salute before the next mission? The dance one. I've been practising.
+## callback.hangout.squad_crash.highlight.6  fn=callback
+The night we all fell asleep in a heap at yours. My neck still remembers it.
+## callback.hangout.squad_crash.highlight.7  fn=callback
+Is our crooked squad crest still pinned to your wall? Don't you dare straighten it.
+## callback.hangout.squad_crash.highlight.8  fn=callback
+Our midnight snack run in socks. The stall keeper still waves at me.
+
+## callback.hangout.tea_at_home.highlight.1  fn=callback
+That upright tea stalk in your cup. Has the luck come yet? I've been watching for it.
+## callback.hangout.tea_at_home.highlight.2  fn=callback
+I still think of that sparrow sitting on your tea table, bold as anything.
+## callback.hangout.tea_at_home.highlight.3  fn=callback
+You poured so carefully that afternoon. I've tried to pour like that since. I spill.
+## callback.hangout.tea_at_home.highlight.4  fn=callback
+The rainy afternoon we didn't say a word. One of the best conversations I've had.
+## callback.hangout.tea_at_home.highlight.5  fn=callback
+Three teas and nobody agreed. I've tasted them all again since. I still pick mine.
+## callback.hangout.tea_at_home.highlight.6  fn=callback
+That senbei nearly took your tooth! I bring softer ones now. You're welcome.
+## callback.hangout.tea_at_home.highlight.7  fn=callback
+Every cup in your cupboard has a story. I've started keeping mine that way too.
+## callback.hangout.tea_at_home.highlight.8  fn=callback
+Gold squares of light on your floor. I think of that afternoon when the sun comes through a screen.
+
+# == a lapsed ritual ===============================================================================
+## followup.ritual_missed.study_night  fn=callback
+Our study nights stopped and my notes have gone feral. Your low table, this week?
+## followup.ritual_missed.cook_together  fn=callback
+The second apron is gathering dust on your hook. Shall we cook together again?
+## followup.ritual_missed.balcony_stargazing  fn=callback
+The sky has been clear for days and your balcony bench sits empty. A star night soon?
+## followup.ritual_missed.squad_crash  fn=callback
+We haven't crashed at yours after a mission in ages. The squad's going soft. Next time we're back?
+## followup.ritual_missed.tea_at_home  fn=callback
+My tin of tea for our afternoons is still full. Shall I bring it round to yours?
+
+# == the bond book =================================================================================
+## bond.memory.visited_home  fn=callback  stage=child|teen|adult
+They came to your flat, and stayed a while.
+You opened your door to them, and they came in.
+## bond.memory.saw_photo_together  fn=callback  stage=child|teen|adult
+They saw a photo of you both, hung on your wall.
+You both stood in front of the same photo, remembering.

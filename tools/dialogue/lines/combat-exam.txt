@@ -1,0 +1,197 @@
+# Combat barks: Genin from other teams in an exam, the Chunin Exams' forest and preliminaries.
+# Competitive, nervous, proud of their team, desperate to pass. Nobody is hurt badly; proctors stop
+# the fights. Pools are combat.<event>.exam_genin. Under 80 characters.
+#! kind: cycle
+#! fn: react
+#! tags: stage=child|teen
+
+## combat.fight_start.exam_genin
+Sorry, but only one of us gets through this round.
+Hand over your scroll and nobody has to lose.
+Our team trained a whole year for this. Move!
+I've watched your matches. I know your moves.
+Nothing personal. My sensei is watching.
+Ready? I won't go easy just because we're the same rank.
+Your team's down a member? Then this is our chance!
+
+## combat.taunt.exam_genin
+You're not making it to the finals like that.
+Is that your best? The proctors look bored.
+Our sensei said your team would be easy.
+Keep swinging. You'll hit something eventually.
+Even the crowd's yawning!
+You're shaking. Nervous? Me neither.
+
+## combat.low_health.exam_genin
+I can't lose here. Not in front of everyone.
+Just a little longer. Come on, legs!
+Ugh. This isn't how I practised it.
+I can still go! Proctor, I can still go!
+Hold it together... hold it together...
+
+## combat.ally_down.exam_genin
+No! Get up! We need three to pass!
+Hang on, I'm coming!
+You'll pay for that! That's my teammate!
+Stay down, I'll cover you!
+Two of us left. We can still do this.
+
+## combat.knocked_out.exam_genin
+Sorry... everyone...
+Not... yet... I wasn't done...
+Tell my team... I'll make it up to them...
+Next year... next year for sure...
+
+## combat.yield.exam_genin
+Proctor! I forfeit! I can't go on.
+I give up! You're too strong for me.
+Fine, take the scroll! Just let us go!
+Enough. You win this one. Fair and square.
+
+## combat.flee.exam_genin
+Fall back! Regroup at the river!
+Not worth it! We'll find an easier team!
+Run! We still have time to find another scroll!
+Retreat! We live to take the exam another day!
+
+## combat.victory.exam_genin
+Yes! We're through!
+Did you see that, sensei? Did you see?
+That's our scroll now. Sorry.
+Ha! The finals, here we come!
+We did it! All those mornings at the training ground paid off!
+
+## combat.defeat.exam_genin
+We lost. After all that training.
+You earned it. Go win the whole thing.
+I'll be back next exam. Stronger.
+Our sensei is going to be so disappointed.
+Good fight. Really. I mean that.
+
+## combat.parry_landed.exam_genin
+Blocked! I knew it!
+Too obvious!
+Our sensei drilled us on that!
+Ha! Not this time!
+
+## combat.got_parried.exam_genin
+How did you read that?
+No way! That always works!
+Argh, my timing!
+Your team trains on parries too?
+
+## combat.combo_finisher_landed.exam_genin
+Got you! Right in front of the proctor!
+That's for my team!
+The full chain! Just like we practised!
+Down you go! Next round's mine!
+
+## combat.jutsu_cast.exam_genin
+Watch this! {technique}!
+My secret weapon: {technique}!
+I've been saving {technique} for the finals, but fine!
+{technique}! Our team's best move!
+Hand signs, fast! {technique}!
+
+## combat.jutsu_countered.exam_genin
+Countered?! That took me months!
+How do you know how to stop that?
+My best jutsu... gone, just like that.
+I'll need something new for the finals.
+
+## combat.genjutsu_caught.exam_genin
+Wait, is that real? Is the forest moving?
+The proctor just turned into a frog!
+Where did my team go? Everyone?
+
+## combat.genjutsu_broken.exam_genin
+Release! I won't fall for that twice!
+Broke it! Our sensei taught us that!
+Ha! Not even close!
+
+## combat.smoke_bomb.exam_genin
+Smoke! Find them! Spread out!
+Watch the trees, they went up!
+Don't lose them! They've got the scroll!
+Cough! Not fair!
+
+## combat.substitution.exam_genin
+A log? Again?!
+Substitution! I should have seen that!
+They're behind us! Turn around!
+Great. I just beat up a tree in front of everyone.
+
+# -- more ---------------------------------------------------------------------------------------------
+
+## combat.fight_start.exam_genin
+We've been tracking your team for an hour. Hand it over.
+The finals are only three days away. Out of my way!
+
+## combat.taunt.exam_genin
+Your team's scattered. Ours isn't.
+The proctor's watching. Try not to embarrass yourself.
+
+## combat.low_health.exam_genin
+I won't go home with nothing! I won't!
+
+## combat.ally_down.exam_genin
+Leave them alone! They've done nothing to you!
+
+## combat.knocked_out.exam_genin
+My village... was watching...
+
+## combat.yield.exam_genin
+Stop! I give up! You've won the round!
+
+## combat.flee.exam_genin
+Scatter! Meet at the big tree with the red rope!
+
+## combat.victory.exam_genin
+Two scrolls! We're going to the tower!
+Did you see that? We beat a Leaf team!
+
+## combat.defeat.exam_genin
+Next time, I'll be ready for you.
+Our team will come back stronger. Remember us.
+
+## combat.parry_landed.exam_genin
+I knew you'd try that! Saw it in the prelims!
+
+## combat.got_parried.exam_genin
+You're quicker than you looked in the first round.
+
+## combat.combo_finisher_landed.exam_genin
+That's what three mornings a week of drills looks like!
+
+## combat.jutsu_cast.exam_genin
+{technique}! Win or lose, I'm giving it everything!
+
+## combat.jutsu_countered.exam_genin
+Did the proctor see that? Tell me they didn't see that.
+
+## combat.genjutsu_caught.exam_genin
+The scroll's talking to me. Scrolls don't talk.
+
+## combat.genjutsu_broken.exam_genin
+Not real! Nice try, but not real!
+
+## combat.smoke_bomb.exam_genin
+Form a circle! Back to back!
+
+## combat.substitution.exam_genin
+I threw everything at a log. My sensei is going to laugh at me.
+
+## combat.taunt.exam_genin
+We've got your scroll's twin. We just need yours.
+
+## combat.victory.exam_genin
+Sorry. You fought well. But we need this more.
+
+## combat.low_health.exam_genin
+My sensei said never quit. My legs disagree.
+
+## combat.got_parried.exam_genin
+Ow! Did the proctor see me get parried? Tell me no.
+
+## combat.defeat.exam_genin
+Go on, then. Win it for both of us.

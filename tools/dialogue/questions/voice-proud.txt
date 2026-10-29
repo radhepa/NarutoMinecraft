@@ -1,0 +1,74 @@
+# Questions only a proud resident asks: standards, winning, names, the hard word "sorry".
+#! tags: personality=proud
+
+? q.values.proud_second_place | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Is second place worth anything?
+Q: You come second in a contest. Is that something to be pleased about?
+- Nothing at all :: Exactly. Second is the first loser. ...I'm only half joking. {values:+strength} {tone:proud}
+- It's a step :: A step. Hm. Fine. As long as you keep climbing. {values:+duty +strength} {tone:ambitious}
+- Depends who won :: Ha. Losing to a master is no shame. Losing to a fool is. {values:+knowledge} {tone:blunt}
+
+? q.values.proud_lose_to | fn: deepen_bond reveal_character | kind: confession | level: 5 | follows: q.values.proud_second_place | depth: 2
+Q: Who would you hate most to lose to?
+Q: There's always one person you can't bear to lose to. Who's yours?
+- My rival :: Of course. That's what rivals are for. Don't let them. {values:+strength} {tone:proud}
+- A friend :: A friend. That's the one that stings. I know. {values:+loyalty +honesty} {tone:honest}
+- Nobody. Losing is losing :: Hm. Fair. It's all the same to the scoreboard. {values:+honesty} {tone:cold}
+
+? q.values.proud_name | fn: deepen_bond reveal_character | kind: opinion | level: 4
+Q: Should a name be carried with pride, even when the family behind it has made mistakes?
+Q: Do you think a name is something you inherit, or something you earn?
+- Carry it with pride :: Yes. A name is a promise to the ones before you. {values:+family +loyalty} {tone:proud}
+- It's what you make it :: Your own name, your own deeds. I can't argue. {values:+freedom +strength} {tone:ambitious}
+- Pride must be earned :: Earned. Yes. Even mine. Especially mine. {values:+honesty +duty} {tone:stern}
+
+? q.plans.proud_best_at | fn: deepen_bond reveal_character | level: 3
+Q: What will you be the best in the village at, one day?
+Q: Every shinobi should aim to be the best at something. What's yours?
+- Taijutsu :: Hand to hand. The purest test. A worthy aim. {values:+strength} {tone:ambitious}
+- Ninjutsu :: Techniques. Hm. You'll need control as well as power. {values:+knowledge +strength} {tone:curious}
+- Strategy :: The mind. The rarest kind of strength. {values:+knowledge} {tone:proud}
+- I don't need to be best :: ...Hm. A strange answer. Perhaps a wise one. I'll think on it. {values:+freedom} {tone:humble}
+
+? q.plans.proud_best_how | fn: deepen_bond reveal_character | level: 5 | follows: q.plans.proud_best_at | depth: 2
+Q: And how will you get there? Specifics. I want a plan.
+Q: Being best takes more than wanting. What's your plan?
+- Train twice as hard :: Twice as hard as whom? Everyone. Good. {values:+duty +strength} {tone:dutiful}
+- Find a master :: A master. Yes. Pride shouldn't stop you learning. {values:+knowledge +loyalty} {tone:humble}
+- Learn from losing :: From losing. Hm. You're wiser than I was. {values:+strength +knowledge} {tone:honest}
+
+? q.values.proud_praise | fn: deepen_bond reveal_character | kind: opinion | level: 2
+Q: Do you like being praised?
+Q: When someone tells you you've done well, how does it feel?
+- Yes, I do :: Honest. Most pretend otherwise. I do. {values:+honesty} {tone:honest}
+- It embarrasses me :: Hm. Learn to take it. You've earned it more than you think. {values:+kindness} {tone:gentle}
+- Only when it's earned :: Exactly. Cheap praise is worse than none. {values:+honesty +duty} {tone:stern}
+
+? q.dilemma.proud_help_rival | fn: deepen_bond reveal_character | level: 3
+Q: Your rival asks you for help with a technique. Do you help?
+Q: The one person you most want to beat asks for your advice. What do you say?
+- Yes, I'd help :: Generous. A strong rival makes you stronger. ...Annoyingly true. {values:+kindness +strength} {tone:kind}
+- No, never :: Ha! At least you're honest about it. {values:+strength} {tone:cold}
+- Help, then beat them :: Ha! Yes. That's the proper way. {values:+strength +honesty} {tone:proud}
+
+? q.values.proud_sorry | fn: deepen_bond reveal_character | kind: opinion | level: 4
+Q: Is it hard for you to say sorry?
+Q: Some people choke on the word "sorry". Do you?
+- Yes, very :: ...Same. Don't tell anyone. {values:+honesty} {tone:honest}
+- No, it's easy :: Easy? Hm. Teach me sometime. Quietly. {values:+kindness} {tone:humble}
+- Only when I'm right :: Ha! When you're right it's hardest of all. {values:+honesty} {tone:joking}
+
+? q.past.proud_last_sorry | fn: deepen_bond reveal_character | level: 6 | follows: q.values.proud_sorry | depth: 2
+Q: When did you last say sorry and truly mean it?
+Q: Your last real apology. Do you remember it?
+- Not long ago :: Good. Keep the habit. I'm... trying to, too. {values:+honesty} {tone:honest}
+- I can't remember :: Then it's been too long. For both of us, perhaps. {values:+honesty} {tone:blunt}
+- I'd rather not say :: Fine. Pride keeps its own counsel. I know. {values:+freedom} {tone:evasive}
+
+? q.pref.proud_standards | fn: deepen_bond reveal_character | level: 2
+Q: What do you hold to the highest standard: your training, your word, or how you look?
+Q: Where will you never cut corners?
+- My training :: Good. Sloppy training makes sloppy shinobi. {values:+duty +strength} {tone:dutiful}
+- My word :: Your word. The one thing nobody can take. Correct. {values:+honesty} {tone:stern}
+- How I look :: Ha. A clean vest is a kind of discipline. I won't mock it. {values:+duty} {tone:proud}
+- I'm relaxed about it :: Relaxed. Hm. I'll have to work on you. {values:+freedom} {tone:free}

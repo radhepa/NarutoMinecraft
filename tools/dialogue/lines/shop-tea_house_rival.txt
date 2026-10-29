@@ -1,0 +1,53 @@
+# The rival tea house across the market: newer, cheaper, louder, and in a price war with the old tea house.
+#! fn: commerce
+
+## shop.tea_house_rival.greet  shop=tea_house_rival  fn=commerce
+Welcome, welcome! Cheapest cup on the market street, and the friendliest!
+Come in, {player}! Don't bother with the place across the way, we're half the price.
+Hello! New cushions, new cups, new everything. Sit anywhere.
+In you come! Today's tea is a ryo cheaper than theirs. Again.
+
+## shop.tea_house_rival.greet  shop=tea_house_rival  market=yes  fn=commerce,react
+Market Day special! Two cups for the price of one, just to see their faces across the street.
+
+## shop.tea_house_rival.browse  shop=tea_house_rival  fn=commerce
+Green tea, barley tea, and a cold sweet tea nobody else in the Leaf makes.
+Sweets on the board. Big portions. Bigger than over there, I measured.
+We do a cup and a bean cake together, cheaper than either alone.
+The prices are chalked up, because we change them every time they change theirs.
+
+## shop.tea_house_rival.buy  shop=tea_house_rival  kind=cycle  fn=commerce
+{item}! {pay}. Bet you'd have paid more across the street.
+Here you go! Tell your friends where you got it.
+That's {pay}. Bargain of the day, every day.
+One {item}, fast as you like. We don't make people wait here.
+{pay}, thank you! Come back tomorrow, it might be cheaper still.
+
+## shop.tea_house_rival.cant_afford  shop=tea_house_rival  kind=cycle  fn=commerce
+Short? Even here? Try the small cup, it's practically free.
+A little under. Come back tomorrow, I'm cutting prices again.
+Not quite enough. Sit a while anyway, an empty cushion looks bad.
+
+## shop.tea_house_rival.sold_out  shop=tea_house_rival  kind=cycle  fn=commerce
+Out of {item}! Cheap prices empty shelves, that's the trouble.
+Sold out of the cold tea. Ice runs out by afternoon.
+
+## shop.tea_house_rival.haggle  shop=tea_house_rival  fn=commerce,reveal_character
+Haggle? Our prices are already lower than theirs. What more do you want, my roof?
+Tell me what they're charging today, and I'll go a ryo under. Every time.
+Bring a friend from the old tea house, and your next cup's on me.
+
+## shop.tea_house_rival.closing  shop=tea_house_rival  time=evening|night  fn=commerce
+We stay open later than they do. Still, not much longer tonight.
+Closing up soon! Check their lights. Ha, out already.
+
+## shop.tea_house_rival.recommend  shop=tea_house_rival  fn=commerce,teach
+The cold sweet tea on a hot day. Nobody else in the village has it.
+Green tea before a long night. Same as anywhere, it holds the tiredness off. Just cheaper here.
+The {special}! New this week. They'll copy it within the month, you watch.
+A cup and a bean cake together. Best value on the whole street.
+
+## shop.tea_house_rival.regular  shop=tea_house_rival  level=3..10  fn=commerce,deepen_bond
+My most loyal customer! You've not set foot over there in weeks, have you? Good.
+Your cushion's waiting. I won't even charge for the second pour.
+You were here when we opened, when nobody else came. I don't forget that.

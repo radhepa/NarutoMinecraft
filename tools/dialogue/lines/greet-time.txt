@@ -1,0 +1,454 @@
+# Greetings by time of day: the first thing a resident says, shaped by the hour.
+# Voiced variants of one idea live in seeds/greet-time.txt.
+
+## greet.time  time=dawn  fn=teach
+The Mission Desk won't lift its shutters until eight. Time enough for a proper breakfast.
+You look well rested, {player}. That's what turning in before midnight buys you: chakra comes back quick until noon.
+If you're heading out, take an onigiri with you. Nothing sells breakfast for an hour yet.
+
+## greet.time  time=dawn  fn=guide
+The fishing boats come in under the second bridge about now, if you want first pick of the catch.
+Looking for somewhere warm this early? The tea house by the main street lights its stove first.
+The shrine bell rings at dawn on rest days. Follow it up the steps if you want a quiet start.
+
+## greet.time  time=dawn  fn=worldbuild
+Watch the Rock. The sun finds the first face before it finds anyone else.
+The gate changes its watch at dawn. You can hear the night shift yawning from here.
+Mist on the river this early. The bridges look like they're floating on nothing.
+Dawn's the only hour the training grounds are empty, and even that lasts till half past six.
+The tea house always pours its first cup of the day for the shrine. Second one's for the owner.
+The lamplighters are snuffing the street lanterns one by one. That's how you know the day has started.
+Dawn patrol's coming in off the wall. Don't get between them and the noodle cart.
+Hear that clatter? The milk cart does the residential streets before anyone's awake to complain.
+The Hokage Residence always has a lamp burning at this hour. I wonder if anyone up there sleeps.
+Sunrise turns the Academy swing tree's shadow into a long finger pointing at the gate.
+
+## greet.time  time=dawn  fn=react
+Early, {player}! You're up with the bakers. That earns a little respect.
+The dew's so thick on the training logs this morning, you'd slide right off them.
+Someone else awake! The crows have been arguing with me for an hour.
+
+## greet.time  time=dawn  fn=filler
+Morning, {player}. Quiet out, isn't it?
+
+## greet.time  time=dawn  personality=stern  fn=reveal_character
+Up at dawn. Good. Discipline starts before the sun does.
+
+## greet.time  time=dawn  personality=shy  fn=reveal_character
+Oh... you're up early too. I thought I was the only one out here. [BLUSH]
+
+## greet.time  time=dawn  personality=fiery  fn=react
+Dawn! Best hour there is for laps! Race you to the gate and back! [EXCLAIM]
+
+## greet.time  time=dawn  personality=reserved  fn=reveal_character
+Early. ...Quiet like this is the only time I hear myself think.
+
+## greet.time  time=dawn  personality=imaginative  fn=reveal_character
+The sky's the colour of a peach someone just bit into. Look before it's gone!
+
+## greet.time  time=dawn  personality=adventurous  fn=reveal_character
+Dawn's when the caravans leave by the main gate. One morning I'll be walking out behind them.
+
+## greet.time  time=dawn  personality=gentle  fn=react
+Shh, the sparrows are bathing in the gutter. Good morning, {player}. [HEART]
+
+## greet.time  time=dawn  personality=proud  fn=reveal_character
+My family has risen at dawn for three generations. Good to see someone else keep the habit.
+
+## greet.time  time=dawn  personality=playful  fn=react
+Did you fall out of bed too? I fell out twice. The floor won both times.
+
+## greet.time  time=dawn  personality=thoughtful  fn=reveal_character
+There's an old saying that the first hour belongs to nobody. I like to borrow it anyway.
+
+## greet.time  time=dawn  personality=steadfast  fn=reveal_character
+Morning. I sweep my step first, every day. Then the day can start.
+
+## greet.time  time=dawn  personality=curious  fn=react
+You're up early! Did the dogs by the gate wake you too? They were howling at four.
+
+## greet.time  time=morning  fn=teach
+Academy lessons run from nine till noon on weekdays. The bell's loud enough to hear from the market.
+Hungry this early? Dango keeps your chakra flowing well through the morning, they say.
+Morning's the time to buy at the grocer. By afternoon the best greens are gone.
+
+## greet.time  time=morning  fn=guide
+The furniture shop just opened. Their showroom has every piece laid out, if you're fixing up a flat.
+If you need tools, the weapon shop's forge gets lit around now. Follow the hammering.
+Out for a walk? The path along the river is shaded until about ten.
+
+## greet.time  time=morning  fn=worldbuild
+Shutters going up all down the main street. My favourite noise in the village.
+The Academy kids are being herded through the gate. One is always running late with toast in hand.
+The Mission Desk line's already out the door. A cat escaped again, I'd bet.
+Every morning the grocer argues with the vegetable cart about the price of radishes. Every morning the cart wins.
+Morning drills on the training grounds. You can hear the kunai thunking into posts from three streets away.
+The flower stalls are setting out buckets. Smells like spring in there whatever the season.
+The tea house puts its benches out at nine sharp, rain or shine.
+There goes the courier with the morning letters. Never walks, always runs.
+Laundry day for half the apartments, by the look of all those balconies.
+The Hokage Rock looks freshly washed in this light, doesn't it?
+
+## greet.time  time=morning  fn=react
+Good morning, {player}! Off somewhere important, or just out?
+Morning! You've got that look of someone with a full day planned.
+Late start, {player}? The rest of the street has been at it for hours.
+
+## greet.time  time=morning  fn=filler
+Morning! Lovely light today.
+
+## greet.time  time=morning  personality=meticulous  fn=reveal_character
+Morning. I've already done three things on my list. Seven to go before noon.
+
+## greet.time  time=morning  personality=pragmatic  fn=teach
+Morning. Buy your rice before ten; the grocer raises the price once the lunch crowd starts.
+
+## greet.time  time=morning  personality=warmhearted  fn=react
+Good morning! Did you eat? You can't run a whole day on nothing. [HEART]
+
+## greet.time  time=morning  personality=protective  fn=react
+Morning. Watch the main street; the delivery carts don't slow down for anyone this early.
+
+## greet.time  time=morning  personality=fiery  fn=react
+Morning! I've already done a hundred push-ups. What have you done? [EXCLAIM]
+
+## greet.time  time=morning  personality=thoughtful  fn=reveal_character
+Morning. I've been reading on the bench since seven. The light's best for it now.
+
+## greet.time  time=morning  personality=reserved  fn=filler
+Morning.
+
+## greet.time  time=morning  personality=curious  fn=react
+Morning! Did you see the Mission Desk queue? I counted twenty people. Something must be going on.
+
+## greet.time  time=morning  personality=imaginative  fn=reveal_character
+Morning. The clouds over the Rock look like a fleet of paper boats today.
+
+## greet.time  time=morning  personality=stern  fn=react
+You're out late in the morning for someone with things to do.
+
+## greet.time  time=morning  personality=shy  fn=reveal_character
+G-good morning. I practised saying that on the way here.
+
+## greet.time  time=morning  personality=playful  fn=react
+Morning! I bet you a stick of dango you can't guess what I had for breakfast. Wrong, it was dango.
+
+## greet.time  time=morning  personality=gentle  fn=reveal_character
+Good morning. I've just fed the stray cats behind the tea house. They're getting fat.
+
+## greet.time  time=morning  personality=steadfast  fn=react
+Morning, {player}. Good day for honest work.
+
+## greet.time  time=noon  fn=teach
+Noon already? The Academy lets out at twelve, so the streets fill with kids any minute.
+Lunchtime. A bowl of ramen gives back a little chakra, if you've been working hard.
+Eat something before the afternoon, {player}. Training on an empty stomach does nobody any good.
+
+## greet.time  time=noon  fn=guide
+If you want shade at lunch, the benches under the Academy swing tree are the coolest in the village.
+The barbecue house does a lunch set at noon. It sells out by one, so hurry.
+Rice balls are cheapest at the grocer's back counter around now. They clear the morning batch.
+
+## greet.time  time=noon  fn=worldbuild
+Hear that? Every kitchen in the street just started frying at once.
+The Rock has no shadow at noon. The faces look like they're squinting.
+The Mission Desk staff eat at their counter. Nobody ever sees them leave it.
+Half the market closes for an hour at noon and naps behind the stalls. The other half sells to them.
+The Academy kids are pouring out of the gate like someone tipped a bucket.
+Midday bell from the shrine. Everyone pretends they don't stop to listen, and everyone stops.
+Lunch is serious business in the Leaf. Nobody talks shop at the noodle counter.
+Smell that? The dango stall by the bridge just started its noon batch.
+Hot, isn't it? Even the training ground crows are hiding in the shade.
+
+## greet.time  time=noon  fn=react
+Noon, {player}! Have you eaten, or are you just wandering hungry?
+Midday already. Where did the morning go?
+You've the look of someone looking for lunch. I'd follow the smell of broth.
+
+## greet.time  time=noon  fn=filler
+Afternoon soon. Hot one.
+
+## greet.time  time=noon  personality=warmhearted  fn=react
+Lunchtime! I packed too much again. Here, take an onigiri, I insist.
+
+## greet.time  time=noon  personality=pragmatic  fn=reveal_character
+Noon. I eat standing up. Sitting costs an hour, and an hour costs ryo.
+
+## greet.time  time=noon  personality=fiery  fn=react
+Noon! Half the day gone and I haven't won a single spar yet! [ANGER]
+
+## greet.time  time=noon  personality=reserved  fn=reveal_character
+Lunch. ...I always eat on the same step. Nobody bothers you there.
+
+## greet.time  time=noon  personality=meticulous  fn=reveal_character
+Twelve exactly. I eat at twelve, rest at half past, and back to work at one.
+
+## greet.time  time=noon  personality=playful  fn=react
+Noon! The best hour, because it's the hour for food. All hours are the hour for food.
+
+## greet.time  time=noon  personality=curious  fn=react
+Noon already? Do you know why the Mission Desk never closes for lunch? I've been trying to find out.
+
+## greet.time  time=noon  personality=gentle  fn=reveal_character
+I've been sitting by the river at lunch. The ducks share, if you're patient.
+
+## greet.time  time=noon  personality=stern  fn=react
+Midday. Eat, then work. Not the other way round, and not neither.
+
+## greet.time  time=noon  personality=imaginative  fn=reveal_character
+At noon the whole village goes still, like a painting waiting for the next brushstroke.
+
+## greet.time  time=noon  personality=adventurous  fn=reveal_character
+Noon. Somewhere a caravan's stopping for lunch at a crossroads I've never seen.
+
+## greet.time  time=noon  personality=protective  fn=react
+Too hot to run around at noon. Get some shade and some water in you.
+
+## greet.time  time=afternoon  fn=teach
+Afternoons are for training, jobs and missions. Most of the village works best between one and five.
+The Mission Desk stays open till six. Plenty of time to catch a D-rank if you're quick.
+Tired already? A cup of green tea holds off the fatigue a while. Don't lean on it too often.
+
+## greet.time  time=afternoon  fn=guide
+The lake on the training grounds is good for water-walking practice in the afternoon. The wind drops then.
+Looking for something to do? The tea house has a shogi board out every afternoon.
+Afternoons, the old folk gather on the benches below the Rock. They'll tell you the whole village's business.
+
+## greet.time  time=afternoon  fn=worldbuild
+Afternoon's the sleepy hour. Even the gate guards are leaning on their spears.
+The training grounds are full by now. You can hear the shouting from the market.
+The shops get their second deliveries in the afternoon. Watch your toes on the main street.
+The Academy kids are back out after lunch, climbing the swing tree they've been told not to climb.
+Every afternoon the tea house sells out of dango by three. Every afternoon someone is surprised.
+That's the bathhouse firing its boiler. Means it'll be hot by evening.
+Long shadows coming off the Rock already. The faces always look tired by the end of the day.
+Somebody on our street plays the shamisen every afternoon. Badly, but every afternoon.
+
+## greet.time  time=afternoon  fn=react
+Afternoon, {player}. How's the day treating you so far?
+Good afternoon. You look like you've been busy.
+There you are! I've seen you rush past three times since lunch.
+
+## greet.time  time=afternoon  fn=filler
+Good afternoon. Warm, isn't it?
+
+## greet.time  time=afternoon  personality=fiery  fn=react
+Afternoon! Prime sparring hours! Find me a partner or be my partner!
+
+## greet.time  time=afternoon  personality=playful  fn=react
+Afternoon! I was going to nap, but then I saw you, so now I'm going to annoy you instead.
+
+## greet.time  time=afternoon  personality=reserved  fn=reveal_character
+Afternoon. I don't nap. I just sit very still with my eyes closed.
+
+## greet.time  time=afternoon  personality=meticulous  fn=reveal_character
+Afternoon. I'm on the second half of my list. The second half is always longer.
+
+## greet.time  time=afternoon  personality=warmhearted  fn=react
+Afternoon! You look parched. There's cold barley tea in the jug by my door.
+
+## greet.time  time=afternoon  personality=thoughtful  fn=reveal_character
+Afternoon. I always think more clearly after lunch. Or I'm just slower and mistake it for thinking.
+
+## greet.time  time=afternoon  personality=adventurous  fn=react
+Afternoon! Perfect time to climb the cliff on the training grounds. The rock's warm and dry.
+
+## greet.time  time=afternoon  personality=shy  fn=reveal_character
+Um, good afternoon. I was hiding in the shade. You can share it, if you like.
+
+## greet.time  time=afternoon  personality=stern  fn=react
+Afternoon. If you're idle at this hour, you're losing light.
+
+## greet.time  time=afternoon  personality=gentle  fn=reveal_character
+Good afternoon. I've been reading to my neighbour's little one. Asleep before the second page.
+
+## greet.time  time=afternoon  personality=imaginative  fn=reveal_character
+Afternoon light makes the plaster walls look like they're made of honey.
+
+## greet.time  time=afternoon  personality=protective  fn=react
+Afternoon. Training today? Wrap your wrists before you hit the posts.
+
+## greet.time  time=evening  fn=teach
+Evening's for ramen and rest. Tomorrow's work goes better on a full stomach.
+The Mission Desk closed at six. Whatever you didn't take, it'll be back on the board in the morning.
+Festivals and evening events wrap up by midnight. Don't let them keep you out much later.
+
+## greet.time  time=evening  fn=guide
+The bathhouse is hot by now. Best soak in the village after a day on the training grounds.
+If you want somewhere quiet, the river path's lanterns get lit around seven.
+
+## greet.time  time=evening  fn=worldbuild
+The lanterns are going up along the main street. Each shop lights its own.
+That smell? Every family on the street is grilling fish at once.
+Evening's when the whole village comes out. Busier than the market some nights.
+The Academy teachers stay late marking. Their windows are always the last lit on that street.
+Missions coming home through the gate. You can tell who had a bad one by the walk.
+Hear that? The barbecue house's fans start roaring around six.
+The Rock goes orange this time of day, and the faces look almost kind.
+Sunset over the training grounds. Somebody's always still out there, throwing one more kunai.
+The evening crowd at the tea house is all old shinobi telling the same three stories.
+
+## greet.time  time=evening  fn=react
+Evening, {player}. A long day, or a good one?
+Good evening! Done for the day, or just taking a breath?
+There you are. Get something warm in you before it's dark.
+
+## greet.time  time=evening  fn=filler
+Evening. Pretty sky tonight.
+
+## greet.time  time=evening  personality=warmhearted  fn=react
+Evening! You've eaten, I hope? I can always put another bowl on the table. [HEART]
+
+## greet.time  time=evening  personality=fiery  fn=react
+Evening already?! I could go another three rounds at least! [EXCLAIM]
+
+## greet.time  time=evening  personality=playful  fn=react
+Evening! Ramen race? Slowest eater pays. I'm fast. Very fast.
+
+## greet.time  time=evening  personality=reserved  fn=reveal_character
+Evening. ...This is my hour. The noise drops and I can hear the river.
+
+## greet.time  time=evening  personality=stern  fn=react
+Evening. Rest tonight. Tomorrow I expect you sharp.
+
+## greet.time  time=evening  personality=imaginative  fn=reveal_character
+Look at the lanterns coming on, one by one, like someone's counting them in.
+
+## greet.time  time=evening  personality=pragmatic  fn=teach
+Evening. Fish stalls sell off the day's catch cheap right before they close. Go now.
+
+## greet.time  time=evening  personality=meticulous  fn=reveal_character
+Evening. I tidy the shop for half an hour before I lock it. Every night, no exceptions.
+
+## greet.time  time=evening  personality=thoughtful  fn=reveal_character
+Evening. I like to walk once around the block and decide what today meant.
+
+## greet.time  time=evening  personality=curious  fn=react
+Evening! Did you hear what the patrol at the gate was laughing about? I've been dying to know.
+
+## greet.time  time=evening  personality=gentle  fn=react
+Good evening. The fireflies are out by the river. Go softly and they'll come close.
+
+## greet.time  time=evening  personality=proud  fn=reveal_character
+Evening. A day's work well done is its own reward. Mine, for instance.
+
+## greet.time  time=night  fn=teach
+Night already. Your own bed's the best place to end the day; a good night clears all the tiredness.
+Out at this hour? The Mission Desk won't open again till eight. Nothing to wait up for.
+
+## greet.time  time=night  fn=guide
+If you're heading home, take the main street. The lanterns stay lit there all night.
+Lost in the dark? Keep the Hokage Rock at your back and you'll reach the market.
+
+## greet.time  time=night  fn=worldbuild
+Most of the shops have closed their shutters. Only Ichiraku and the tea house are still lit.
+The night watch is up on the wall. You can see their lanterns walking.
+Listen. That's the bathhouse letting its water out. The whole street gurgles at ten.
+At night the Rock's faces disappear, but the Residence window stays lit right under them.
+The Academy looks haunted after dark. It isn't. Probably.
+The river's loud at night. You don't notice it till everything else stops.
+That's the last of the evening bells. Families close their doors after it.
+The owls in the training ground trees have been hooting since sunset.
+
+## greet.time  time=night  fn=react
+Evening, {player}. Late to be out, but not too late.
+Still about? Head home soon; the streets get dark past the market.
+A night walk? I won't keep you long.
+
+## greet.time  time=night  fn=filler
+Night, {player}. Stars are out.
+
+## greet.time  time=night  personality=protective  fn=react
+It's dark. Do you have far to go? I'll watch from the door till you turn the corner.
+
+## greet.time  time=night  personality=warmhearted  fn=teach
+It's late, {player}! Off to bed, or you'll be dragging your feet all morning. I worry, you know.
+
+## greet.time  time=night  personality=shy  fn=reveal_character
+I don't like the dark much. Is it silly that I'm glad you're here?
+
+## greet.time  time=night  personality=adventurous  fn=reveal_character
+Night's when you can see how far the stars go. Farther than any road. I've checked.
+
+## greet.time  time=night  personality=stern  fn=teach
+It's night. Go to bed. A shinobi who doesn't sleep makes mistakes, and mistakes cost lives.
+
+## greet.time  time=night  personality=playful  fn=react
+Boo! Ha, you didn't jump. Next time.
+
+## greet.time  time=night  personality=thoughtful  fn=reveal_character
+I find the night honest. Nobody pretends to be busy.
+
+## greet.time  time=night  personality=curious  fn=react
+You're out late! Did you see the light up on the Rock just now? Maybe it was just a lantern.
+
+## greet.time  time=night  personality=imaginative  fn=reveal_character
+At night the river turns to ink. I keep wanting to dip a brush in it.
+
+## greet.time  time=night  personality=gentle  fn=react
+It's late. Walk quietly by the apartments; the babies have only just gone down.
+
+## greet.time  time=night  personality=fiery  fn=react
+Night training! Nobody can see me fall over in the dark! Join me!
+
+## greet.time  time=late  fn=teach
+It's past midnight, {player}. Stay up much longer and you'll be dragging your feet with your chakra in a trickle.
+After three, tiredness gets mean. You hit softer, jump shorter. Go home.
+Still up? A bowl of something hot takes the weight out of your legs for an hour. A bed takes it out for good.
+Green tea buys you an hour. It doesn't buy you a night. Go to bed.
+You're well past the hour for a good night's sleep. Your bed's the only thing that clears it properly.
+
+## greet.time  time=late  fn=guide
+The tea house is shut. If you need a hot drink at this hour, the night watch keep a kettle at the gate.
+Go home, {player}. Your bed is the warmest place in the village right now.
+
+## greet.time  time=late  fn=worldbuild
+This hour belongs to the night watch and the cats. And apparently you.
+The whole village is dark except the gate and the hospital. Even the Residence lamp is out.
+Everyone's asleep. I can hear the river from three streets away.
+The bakers start at four. You'll beat them home if you go now.
+
+## greet.time  time=late  fn=react
+What are you doing out so late? Is everything all right?
+You look exhausted, {player}. Sleep. Whatever it is will still be there in the morning.
+Up at this hour? You're swaying a little.
+Can't sleep? Me neither. But you should try. [DOTS]
+
+## greet.time  time=late  fn=filler
+Still awake? Same.
+
+## greet.time  time=late  personality=warmhearted  fn=teach
+It's the middle of the night! Have you eaten? Eat something, then bed. A full belly at least takes the drag out of your feet.
+
+## greet.time  time=late  personality=protective  fn=react
+At this hour? Come on, I'll walk you as far as your street. No arguments.
+
+## greet.time  time=late  personality=stern  fn=teach
+Past midnight. Tired muscles miss their mark. Bed. Now.
+
+## greet.time  time=late  personality=playful  fn=react
+Ooh, a fellow night owl. We'll be zombies tomorrow. Matching zombies. [SLEEP]
+
+## greet.time  time=late  personality=reserved  fn=react
+...Late. Go home.
+
+## greet.time  time=late  personality=meticulous  fn=teach
+It's after one. From here you lose a tenth of your speed and a quarter of your chakra recovery. I've measured.
+
+## greet.time  time=late  personality=gentle  fn=react
+You poor thing, you look so tired. Go and sleep. I'll still be here tomorrow. [HEART]
+
+## greet.time  time=late  personality=curious  fn=react
+You're up too? What's keeping you awake? Me, it's the owls. And thinking about the owls.
+
+## greet.time  time=late  personality=pragmatic  fn=teach
+It's late. Every hour awake now costs you two tomorrow. Bad trade.
+
+## greet.time  time=late  personality=shy  fn=react
+Oh! You scared me. I just... couldn't sleep. You should, though.
+
+## greet.time  time=late  personality=fiery  fn=react
+Still up? Me too! I'm not tired! I'm... only a little tired. [SLEEP]
+
+## greet.time  time=late  personality=thoughtful  fn=reveal_character
+The small hours. When I can't sleep, I count the bridges. There are more than you'd think.
