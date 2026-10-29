@@ -85,7 +85,7 @@ standard fields so tools and the journal can explain why a quest is or is not av
 {"id": "side.b1.shogi", "kind": "side", "slice": "beta1",
  "unlock": {"all": [
    {"rank_at_least": "academy"}, {"rank_at_most": "chunin"},
-   {"at_place": "place:market.tea_house"},
+   {"at_place": "place:tea_house"},
    {"time_between": ["14:00", "19:00"]}, {"calendar": {"season": ["spring", "summer"]}},
    {"standing": ["district:market", "newcomer"]}
  ]},
@@ -269,28 +269,26 @@ plus any extra action the template adds.
 |---|---|---|---|---|---|
 | `gen.mediate_feud` | `clan_feud` (14 days; Genin) | `clan_a`, `clan_b`, `a`, `b` (a spokesperson of each clan) | Hear both sides, find the facts at the hook's place, bring the spokespeople together, choose a settlement | `mediated` → relation +10; `sided_a` / `sided_b` → relation −6, one clan stood by, the other sided against. The template adds a `mood_event` in the clans' district (cheer if mediated, tension otherwise) | Beta 2 |
 | `gen.mediate_quarrel` | `quarrel_to_mediate` (until it heals, 21 days; friendship 3 with either) | `a`, `b` | Hear each, carry a message or an apology, set up a meeting | `mediated` → they are on speaking terms again; `failed` → the quarrel stays | Beta 1 |
-| `gen.favour` | `favor_needed` (7 days; none) | `client` | One of eight **variants**, picked from the client's profile (age, job, household, pet, the current event): **neighbour** (carry, fix, mind the shop), **elder errand** (fetch, deliver, read a letter aloud), **lost pet** (track and return; your ninken helps), **escort** (see them across the village at night or to the gate), **sick relative** (fetch medicine or a Suzuran herbalist), **shop trouble** (find why stock vanishes, fetch a delivery), **apprentice** (persuade a master to take the client on), **festival help** (a stall short-handed, a lost child) | `done` → a helped deed with the client; `refused` → nothing | Beta 1 (neighbour, elder errand, lost pet); Beta 2 (the rest) |
+| `gen.favour` | `favor_needed` (7 days; none) | `client` | One of eight **variants**, read from the hook's `stakes.variant` (the simulation picks it from the client's life; `SocietyHook.FAVOR_VARIANTS`): `neighbor` (carry, fix, mind the shop), `elder_errand` (fetch, deliver, read a letter aloud; a clan head, elder or senior adult), `lost_pet` (track and return; your ninken helps), `escort` (see a working civilian across the village at night or to the gate), `sick_relative` (fetch medicine or a Suzuran herbalist; only for someone with family), `shop_trouble` (find why stock vanishes, fetch a delivery), `apprentice` (persuade a master to take the client on), `festival_help` (a stall short-handed, a lost child; only while the village mood is cheerful) | `done` → a helped deed with the client; `refused` → nothing | Beta 1 (`neighbor`, `elder_errand`, `lost_pet`); Beta 2 (the rest) |
 | `gen.lost_item_gossip` | `lost_item` (5 days; none) | `owner` (gossips and a finder are cast from the owner's ties) | Follow the gossip trail (talk ×2 to 3), find the item, then return it or keep it | `returned` → a helped deed; `kept` → a hurt deed (you keep the item; the owner may hear) | Beta 1 |
 | `gen.newcomer_settle` | `newcomer` (21 days; none) | `newcomer` (two neighbours to introduce are cast from the district) | Show them around (go ×3), introduce them, share a meal | `befriended` → a meal together, new ties for the newcomer; `ignored` → they stay alone | Beta 1 |
 | `gen.clan_courtesy` | `elder_request` (14 days; the player's clan, or Helping Hand standing with it) | `elder`, `clan` | Learn the custom (talk), bring what it asks (collect or craft the clan's gift, attend a clan rite), present it properly (choose the right words) | `done` → the clan hears you honoured its custom (`clan_deed`); `refused` → nothing | Beta 2 |
 | `gen.rivalry_cool` | `rivalry_heating` (14 days; friendship 3 with either) | `a`, `b` (two residents, often young shinobi) | Referee their spar at a training ground, talk each down, or spar the hothead yourself, then bring them to shake hands | `cooled` → friends again; `fanned` → a quarrel (which may raise a `quarrel_to_mediate` hook) | Beta 1 |
 | `gen.matchmaking` | `secret_crush` (28 days; friendship 6 with the admirer and the player at least teen; adult residents only, never offered while the player is a child) | `admirer`, `beloved` | Learn what the beloved likes, help the admirer prepare, arrange a meeting | `helped` → they become sweethearts; `kept_quiet` → nothing changes; `told` → a broken promise: the beloved knows, the admirer is hurt | **Later** (post-beta) |
 | `gen.forbidden_match` | `forbidden_match` (28 days; the player a teen or older; adults) | `a`, `b`, `clan_a`, `clan_b` | Hear the couple, face each clan's objection, decide whether to stand with them | `supported` → they marry and their clans grumble; `discouraged` → they part | **Later** (post-beta) |
+| `gen.family_reconcile` | `estrangement` (raised when two relatives' quarrel has lasted 28 days; lasts 42 days or until mended; the player a teen or older and friendship 3 with either) | `a`, `b` (relatives) | Hear each, find what started it (a family story from a third relative), carry a letter, keep the peace at a family dinner (choose) | `reconciled` → the grudge is lifted and the household tie mends; `failed` → the grudge stays | **Later** (post-beta) |
 
-**In the beta:** 7 templates (`gen.mediate_feud`, `gen.mediate_quarrel`, `gen.favour` with its
+**In the beta:** 7 of the 10 templates (`gen.mediate_feud`, `gen.mediate_quarrel`, `gen.favour` with its
 eight variants, `gen.lost_item_gossip`, `gen.newcomer_settle`, `gen.clan_courtesy`,
 `gen.rivalry_cool`). Beta 1 runs five of them (the quarrel, three favour variants, lost items, newcomers and
 rivalries); the clan feud and clan courtesy wait for Genin rank and clan standing.
 Each template has two to four dialogue variants per role personality, so the same template sounds
 different from different residents.
 
-**Asked of the bond system (optional):**
-
-- A `variant` hint on `favor_needed` (for example `escort`, `sick`, `shop`, `pet`, `apprentice`,
-  `festival`) so the simulation can say what kind of favour it raised; until then the template
-  picks the variant from the client's profile.
-- Later, an `estrangement` hook type (relatives who stopped speaking; roles `a`, `b`; outcomes
-  `reconciled`, `failed`) for a `gen.family_reconcile` template after the beta.
+**From the bond system:** `favor_needed` hooks carry `stakes.variant`, and the `estrangement` hook
+type backs `gen.family_reconcile` after the beta (both on the bond system's branch `bonds-2`).
+Family quarrels are rarer than friends' but hold a grudge until reconciled, so the template sees
+regular use once the player is a teen.
 
 **Escalation to council.** When a `clan_feud` lapses unresolved and the two clans' relation has
 reached the *feud* label, Progression may turn it into a **council case** at the next council day
@@ -828,5 +826,5 @@ A content-only drop between Beta 2 and Beta 3 (data, dialogue and small builds; 
 
 Nothing is open. Decided: clan welcomes ship in two waves (Beta 2 and Beta 2.5); council day is
 watch-only in the beta, with testifying from Chunin; the generated templates follow the bond
-system's hook schema (§3.1). Two optional additions are asked of the bond system (a `variant` hint
-on `favor_needed`, and an `estrangement` hook type after the beta).
+system's hook schema (§3.1), including `stakes.variant` on favours and the post-beta
+`estrangement` hook.

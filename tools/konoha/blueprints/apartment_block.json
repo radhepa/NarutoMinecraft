@@ -1,0 +1,548 @@
+{
+ "format": "konoha-blueprint/1",
+ "id": "apartment_block",
+ "title": "Apartment block (three storeys, nine flats)",
+ "kind": "apartment",
+ "size": [
+  14,
+  18,
+  11
+ ],
+ "street": "south",
+ "notes": "Nine House Plaque flats with one bed each; 9 to 12 residents; one candidate flat for the player",
+ "cutaway": [
+  3,
+  7
+ ],
+ "palette": {
+  "#": "minecraft:blue_bed[facing=north,part=foot]",
+  "@": "minecraft:blue_bed[facing=north,part=head]",
+  "%": "minecraft:chest[facing=south]",
+  "&": "minecraft:cut_sandstone",
+  "*": "minecraft:dirt_path",
+  "+": "minecraft:potted_azalea_bush",
+  "=": "minecraft:red_bed[facing=north,part=foot]",
+  "-": "minecraft:red_bed[facing=north,part=head]",
+  "~": "minecraft:smooth_sandstone",
+  "^": "minecraft:smooth_stone",
+  ":": "minecraft:smooth_stone_slab[type=bottom]",
+  ";": "minecraft:spruce_door[facing=north,half=lower,hinge=left,open=false]",
+  "!": "minecraft:spruce_door[facing=north,half=upper,hinge=left,open=false]",
+  "?": "minecraft:spruce_fence[north=false,south=false,east=true,west=true]",
+  "$": "minecraft:spruce_planks",
+  "A": "minecraft:spruce_slab[type=top]",
+  "B": "minecraft:spruce_stairs[facing=west,half=bottom]",
+  "C": "minecraft:spruce_trapdoor[facing=south,half=top,open=false]",
+  "D": "minecraft:stone_brick_wall",
+  "E": "minecraft:stone_bricks",
+  "F": "minecraft:stripped_spruce_log[axis=y]",
+  "G": "minecraft:terracotta",
+  "H": "minecraft:white_stained_glass_pane[north=false,south=false,east=true,west=false]",
+  "I": "minecraft:white_stained_glass_pane[north=false,south=false,east=true,west=true]",
+  "J": "narutominecraft:tatami[axis=x]",
+  "K": "narutominecraft:tatami[axis=z]",
+  "L": "narutominecraft:water_tank[part=bottom]",
+  "M": "narutominecraft:water_tank[part=middle]",
+  "N": "narutominecraft:water_tank[part=single]",
+  "O": "narutominecraft:water_tank[part=top]",
+  "P": "narutominecraft:white_paper_lantern"
+ },
+ "layers": [
+  [
+   "**************",
+   "**************",
+   "**************",
+   "**************",
+   "**************",
+   "**************",
+   "**************",
+   "**************",
+   "**************",
+   "**************",
+   "**************"
+  ],
+  [
+   "EEEEEEEEEEEEE.",
+   "E$$$E$$$E$$$E.",
+   "E$$$E$$$E$$$E.",
+   "E$$$E$$$E$$$E.",
+   "E$$$E$$$E$$$E.",
+   "E$$$E$$$E$$$E.",
+   "EEEEEEEEEEEEE.",
+   "EEEEEEEEEEEEE.",
+   "EEEEEEEEEEEEEB",
+   "F..::.F.::..F.",
+   ".............."
+  ],
+  [
+   "F~~~~~~~~~~~F.",
+   "~@.%~-.%~@.%~.",
+   "~#..~=..~#..~.",
+   "~.JP~.JP~.JP~.",
+   "~.JK~.JK~.JK~.",
+   "~.JK~.JK~.JK~.",
+   "F~;~~~;~~~;~F.",
+   ".+............",
+   "............B.",
+   "F.....F.....F.",
+   ".............."
+  ],
+  [
+   "F~I~~~I~~~I~F.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "F~!H~~!H~~!HF.",
+   "..............",
+   "...........B..",
+   "F.....F.....F.",
+   ".............."
+  ],
+  [
+   "F~~~~~~~~~~~F.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "F~~~~~~~~~~~F.",
+   "..............",
+   "..........B...",
+   "F.....F.....F.",
+   ".............."
+  ],
+  [
+   "FGGGGGGGGGGGF.",
+   "G$$$~$$$~$$$G.",
+   "G$$$~$$$~$$$G.",
+   "G$$$~$$$~$$$G.",
+   "G$$$~$$$~$$$G.",
+   "G$$$~$$$~$$$G.",
+   "FGGGGGGGGGGGF.",
+   "AAAAAAAAAAAAA.",
+   "AAAAAAAAAB....",
+   "FAAAAAFAAAAAF.",
+   ".............."
+  ],
+  [
+   "F~~~~~~~~~~~F.",
+   "~@.%~-.%~@.%~.",
+   "~#..~=..~#..~.",
+   "~.JP~.JP~.JP~.",
+   "~.JK~.JK~.JK~.",
+   "~.JK~.JK~.JK~.",
+   "F~;~~~;~~~;~F.",
+   ".....+........",
+   "...B..........",
+   "F?????F?????F.",
+   ".............."
+  ],
+  [
+   "F~I~~~I~~~I~F.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "F~!H~~!H~~!HF.",
+   "..............",
+   "..B...........",
+   "F.....F.....F.",
+   ".............."
+  ],
+  [
+   "F~~~~~~~~~~~F.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "F~~~~~~~~~~~F.",
+   "..............",
+   ".B............",
+   "F.....F.....F.",
+   ".............."
+  ],
+  [
+   "FGGGGGGGGGGGF.",
+   "G$$$~$$$~$$$G.",
+   "G$$$~$$$~$$$G.",
+   "G$$$~$$$~$$$G.",
+   "G$$$~$$$~$$$G.",
+   "G$$$~$$$~$$$G.",
+   "FGGGGGGGGGGGF.",
+   "AAAAAAAAAAAAA.",
+   "B...AAAAAAAAA.",
+   "FAAAAAFAAAAAF.",
+   ".............."
+  ],
+  [
+   "F~~~~~~~~~~~F.",
+   "~@.%~-.%~@.%~.",
+   "~#..~=..~#..~.",
+   "~.JP~.JP~.JP~.",
+   "~.JK~.JK~.JK~.",
+   "~.JK~.JK~.JK~.",
+   "F~;~~~;~~~;~F.",
+   ".........+....",
+   "..............",
+   "F?????F?????F.",
+   ".............."
+  ],
+  [
+   "F~I~~~I~~~I~F.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "F~!H~~!H~~!HF.",
+   "..............",
+   "..............",
+   "F.....F.....F.",
+   ".............."
+  ],
+  [
+   "F~~~~~~~~~~~F.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "~...~...~...~.",
+   "F~~~~~~~~~~~F.",
+   "..............",
+   "..............",
+   "F.....F.....F.",
+   ".............."
+  ],
+  [
+   "GGGGGGGGGGGGG.",
+   "G^^^^^^^^^^^G.",
+   "G^^^^^^^^^^^G.",
+   "G^^^^^^^^^^^G.",
+   "G^^^^^^^^^^^G.",
+   "G^^^^^^^^^^CG.",
+   "GGGGGGGGGGGGG.",
+   ":::::::::::::.",
+   ":::::::::::::.",
+   ":::::::::::::.",
+   ".............."
+  ],
+  [
+   "&&&&&&&&&&&&&.",
+   "&...........&.",
+   "&.L.N.......&.",
+   "&........L..&.",
+   "&......D....&.",
+   "&...........&.",
+   "&&&&&&&&&&&&&.",
+   "..............",
+   "..............",
+   "..............",
+   ".............."
+  ],
+  [
+   "..............",
+   "..............",
+   "..M...........",
+   ".........O....",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   ".............."
+  ],
+  [
+   "..............",
+   "..............",
+   "..O...........",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   ".............."
+  ],
+  [
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   "..............",
+   ".............."
+  ]
+ ],
+ "markers": [
+  {
+   "type": "house_plaque",
+   "pos": [
+    2,
+    3,
+    5
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "type": "resident",
+   "pos": [
+    2,
+    2,
+    4
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    6,
+    3,
+    5
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    5,
+    2,
+    1
+   ]
+  },
+  {
+   "type": "resident",
+   "pos": [
+    6,
+    2,
+    4
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    10,
+    3,
+    5
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    9,
+    2,
+    1
+   ]
+  },
+  {
+   "type": "resident",
+   "pos": [
+    10,
+    2,
+    4
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    2,
+    7,
+    5
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    1,
+    6,
+    1
+   ]
+  },
+  {
+   "type": "resident",
+   "pos": [
+    2,
+    6,
+    4
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    6,
+    7,
+    5
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    5,
+    6,
+    1
+   ]
+  },
+  {
+   "type": "resident",
+   "pos": [
+    6,
+    6,
+    4
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    10,
+    7,
+    5
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    9,
+    6,
+    1
+   ]
+  },
+  {
+   "type": "resident",
+   "pos": [
+    10,
+    6,
+    4
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    2,
+    11,
+    5
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    1,
+    10,
+    1
+   ]
+  },
+  {
+   "type": "resident",
+   "pos": [
+    2,
+    10,
+    4
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    6,
+    11,
+    5
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    5,
+    10,
+    1
+   ]
+  },
+  {
+   "type": "resident",
+   "pos": [
+    6,
+    10,
+    4
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    10,
+    11,
+    5
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    9,
+    10,
+    1
+   ]
+  },
+  {
+   "type": "resident",
+   "pos": [
+    10,
+    10,
+    4
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "door_anchor",
+   "pos": [
+    13,
+    1,
+    8
+   ]
+  },
+  {
+   "type": "candidate_flat",
+   "pos": [
+    6,
+    10,
+    4
+   ],
+   "note": "top floor, middle flat: the Classic save's flat"
+  }
+ ]
+}

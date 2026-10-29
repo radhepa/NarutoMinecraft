@@ -36,7 +36,9 @@ public final class Village {
     public static final int CHOSEN_TIES = 8, CLANMATES = 2, NEIGHBORS = 3, WEEK = 7, OPEN_HOOKS = 16, HOOKS_PER_TYPE = 4;
     public static final double FRIEND_CHANCE = .15, QUARREL_CHANCE = .006, INCIDENT_CHANCE = .3, CRUSH_AFFINITY = 40, SWEETHEART_AFFINITY = 55,
             MARRY_AFFINITY = 65;
-    public static final int COURTSHIP_DAYS = 56;
+    public static final int COURTSHIP_DAYS = 56, ESTRANGED_DAYS = 28;
+    /** Relatives quarrel this much less often than friends; until mended, a family quarrel keeps at least {@link #KIN_GRUDGE}. */
+    public static final double KIN_QUARREL = .15, KIN_GRUDGE = 15;
 
     final BondWorld w;
     final Map<String, SocialTie> ties = new TreeMap<>();
@@ -97,7 +99,7 @@ public final class Village {
         };
         boolean close = t.kind().equals("family") || t.kind().equals("household") || t.kind().equals("spouse");
         double start = close ? target : 3, growth = 1 - Math.exp(-Math.max(0, w.day - t.since()) / 40.0);
-        double penalty = t.quarrel() >= 0 && w.day >= t.quarrel() ? Math.max(0, 30 - (w.day - t.quarrel())) : 0;
+        double penalty = t.quarrel() >= 0 && w.day >= t.quarrel() ? Math.max(close ? KIN_GRUDGE : 0, 30 - (w.day - t.quarrel())) : 0;
         return Math.clamp(start + (target - start) * growth + t.together() * .5 - penalty, -100, 100);
     }
     /** Who someone passes news to, and how readily: their ties, slower across clans that dislike each other. */
@@ -233,7 +235,7 @@ public final class Village {
             ties.put(e.getKey(), t.together(day)); updates++;
         }
         for (var e : List.copyOf(moods.entrySet())) { var m = e.getValue().eased(); if (m.settled()) moods.remove(e.getKey()); else moods.put(e.getKey(), m); }
-        hooks.removeIf(h -> !h.open(day) || h.type().equals("quarrel_to_mediate") && healed(h));
+        hooks.removeIf(h -> !h.open(day) || (h.type().equals("quarrel_to_mediate") || h.type().equals("estrangement")) && healed(h));
         week(Math.floorMod(day, WEEK));
         if (Math.floorMod(day, WEEK) == WEEK - 1) { clanIncidents(day); needs(day); relations.week(); }
     }
@@ -241,7 +243,8 @@ public final class Village {
     static int slot(String key) { return (int) Math.floorMod(Seeds.hash(key), (long) WEEK); }
     private boolean healed(SocietyHook h) {
         var t = tie(h.roles().get("a"), h.roles().get("b"));
-        return t == null || t.quarrel() < 0 || w.day - t.quarrel() > 30;
+        if (t == null || t.quarrel() < 0) return true;
+        return h.type().equals("quarrel_to_mediate") && w.day - t.quarrel() > 30;
     }
 
     /**
@@ -259,6 +262,11 @@ public final class Village {
             boolean kin = t.kind().equals("family") || t.kind().equals("household") || t.kind().equals("spouse");
             double tension = Math.max(mood("district:" + w.person(a).district()).tension(), mood("village").tension());
             double pride = (Math.max(0, w.person(a).personality().pride()) + Math.max(0, w.person(b).personality().pride())) / 2;
+            // Relatives fall out more rarely, and stop speaking until someone mends it: after four weeks, an estrangement.
+            if (kin && t.quarrel() < 0 && roll("kin_quarrel", e.getKey(), day) < QUARREL_CHANCE * KIN_QUARREL * (1 + 2 * tension) * (1 + pride)) t = t.quarrel(day);
+            if (kin && t.quarrel() >= 0 && day - t.quarrel() >= ESTRANGED_DAYS && w.playerStage() != Person.Stage.CHILD && (tier(a) != Tier.BACKGROUND || tier(b) != Tier.BACKGROUND))
+                raise("estrangement", Map.of("a", a, "b", b), "district:" + w.person(a).district(), 42, .4,
+                        List.of(Map.of("age_stage", "teen"), friendWithEither(a, b)), Map.of("tie", e.getKey()));
             if (!kin && t.quarrel() < 0 && roll("quarrel", e.getKey(), day) < QUARREL_CHANCE * (1 + 2 * tension) * (1 + pride)) {
                 t = t.quarrel(day);
                 if (affinity(a, b) > 15 && (tier(a) != Tier.BACKGROUND || tier(b) != Tier.BACKGROUND))
@@ -359,7 +367,8 @@ public final class Village {
         for (var p : w.people.values()) {
             if (p.id().startsWith("role:") || tier(p.id()) == Tier.BACKGROUND && !p.district().equals(playerDistrict())) continue;
             double r = roll("need", p.id(), day);
-            if (r < .025) raise("favor_needed", Map.of("client", p.id()), "district:" + p.district(), 7, .3, List.of(), Map.of("standing", "district:" + p.district()));
+            if (r < .025) raise("favor_needed", Map.of("client", p.id()), "district:" + p.district(), 7, .3, List.of(),
+                    Map.of("standing", "district:" + p.district(), "variant", favorVariant(p, day)));
             else if (r < .035) raise("lost_item", Map.of("owner", p.id()), "district:" + p.district(), 5, .2, List.of(), Map.of("standing", "district:" + p.district()));
         }
         for (var house : clans.values()) {
@@ -370,6 +379,16 @@ public final class Village {
             raise("elder_request", Map.of("elder", elder, "clan", community), community, 14, .5,
                     List.of(Map.of("any", List.of(Map.of("clan", house.clan()), Map.of("standing", List.of(community, "helping_hand"))))), Map.of("standing", community));
         }
+    }
+    /** What kind of favor someone would ask for, from their life: their family, their work, their clan, their age, the season's mood. */
+    String favorVariant(Person p, long day) {
+        var fits = new ArrayList<String>(List.of("neighbor", "lost_pet"));
+        if (!p.family().isEmpty()) fits.add("sick_relative");
+        if (!p.shinobi() && p.circles().stream().anyMatch(c -> c.startsWith("work:"))) { fits.add("shop_trouble"); fits.add("escort"); fits.add("apprentice"); }
+        if (p.shinobi() && Person.seniority(p.rank()) >= 2) fits.add("apprentice");
+        if (clans.values().stream().anyMatch(h -> h.elders().contains(p.id()) || h.head().equals(p.id())) || p.stage() == Person.Stage.ADULT && p.rank() >= 3) fits.add("elder_errand");
+        if (mood("village").cheer() >= .2) fits.add("festival_help");
+        return fits.get((int) (roll("favor_variant", p.id(), day) * fits.size()));
     }
     String playerDistrict() { return w.flags.stream().filter(f -> f.startsWith("player.district:")).map(f -> f.substring(16)).findFirst().orElse("residential"); }
 
@@ -445,6 +464,11 @@ public final class Village {
             case "rivalry_heating:fanned" -> {
                 String key = ClanRelations.pair(r.get("a"), r.get("b"));
                 var t = ties.get(key); if (t != null) ties.put(key, t.quarrel(w.day));
+            }
+            case "estrangement:reconciled" -> {
+                String key = ClanRelations.pair(r.get("a"), r.get("b"));
+                var t = ties.get(key); if (t != null) ties.put(key, t.reconciled());
+                w.act(r.get("a"), Act.MEDIATED); w.act(r.get("b"), Act.MEDIATED);
             }
             case "forbidden_match:supported" -> {
                 String key = ClanRelations.pair(r.get("a"), r.get("b"));

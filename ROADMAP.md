@@ -93,9 +93,10 @@ Jonin.
 | Minecraft version | Stay on VF's version, **Minecraft 26.3, Fabric Loader 0.19.5**, pinned for the whole beta. No version chasing mid-beta; port only between beta slices, if VF moves. |
 | Story and villain | An original antagonist and plot, kept in the developers-only [story bible](docs/story/STORY_BIBLE.md). The story specifics are the developers' creative call, so the owner can play it unspoiled. |
 | No spoilers | ROADMAP.md and the README stay spoiler-free: systems, formats, the map, the delivery plan and neutral chapter descriptions only. Every twist lives in the story bible. |
-| Bond ability | **Kindling Bond**: you can kindle a bonded ally's chakra nature or technique and borrow it briefly; deeper bonds (teammates, sensei, friends, spouse) unlock more, and it is one of the ways to gain more natures. A bond-flame flickers between you and the ally. Unlocked by a story moment after the beta ([Kindling Bond](#kindling-bond)). |
+| Bond ability | **Kindling Bond**: a top-tier bond ability whose power flows outward through people and grows with your web of bonds. It sees bonds, strengthens allies' own techniques, links a squad's chakra, and at its peak reaches deeply bonded allies across distance; it never copies techniques. Gated by bond depth; unlocked through the story ([Kindling Bond](#kindling-bond)). |
 | Hokage | All Hokage are original characters with custom faces. Four faces are on the Rock at the start; the player is meant to become the **Eighth**. Their **names are rolled per save**; their looks, clans and eras are fixed, because faces, portraits and statues are baked into the map. |
 | Names | **Most character names are rolled per save, in Classic and Varied alike**: squadmates, sensei, rivals, elders, recurring characters and the antagonists. Roles, personalities and looks stay as designed (Classic stays curated in everything but names). Given names come from seeded pools by gender; family names from the character's clan, or from the ordinary `family_names` pool in `tools/wardrobe/population.json`. All text uses name tokens ([Names](#names-rolled-per-save)). |
+| Name order | Full names read given name first, family name last ("Shigure Nara"), everywhere: dialogue, the journal, the Ledger and speech bubbles. Honorifics such as "Lord Fourth" and "Nara-sensei" are unchanged. |
 | Rotating story roles | Some story roles are assigned per save from a few candidates, each with its own seeded clue trail, so a twist still surprises a player who knows the answer from another save ([Rotating story roles](#rotating-story-roles)). Which roles rotate, and the candidates, are in the story bible only. |
 | Canon | Original characters only, maybe cameos of named characters. |
 | Players | **Single player first.** Multiplayer is later. The code stays server-authoritative (single player runs an integrated server). |
@@ -116,6 +117,8 @@ Jonin.
 | Pets | Adopt a pet that follows you: a ninken pup or a cat. No summons. |
 | Hunger | Vanilla hunger stays; food from shops and Ichiraku adds small buffs. |
 | Gear | Shops, plus crafting at a **smithy** (kunai, shuriken, blades) and a **workbench** (paper bombs, smoke bombs, tags, furniture), station blocks in the world and in your apartment. |
+| No rent | Homes never cost rent, and the orphan's stipend continues all game. |
+| Collecting | A collection book (curios, gifts, keepsakes, photos, ninja info cards, clan crests and more), home storage with sort, search and deposit-all, and display cases. Owned by the home design; item ids by the items design. |
 | ANBU | An optional branch from Jonin, not a required rung. |
 | Hand signs | Both typed key sequences and a radial menu, chosen in the settings. |
 | Learning jutsu | A mix of mentors, scrolls bought with ryo, and mission rewards. |
@@ -353,7 +356,8 @@ while a quarrel lasts), plus `bond_meter`, `bond_memory`, `bond_moment`, `bond_s
 `romance_stage`, `kindling`, `knows_fact`, `squad_cohesion`, `in_squad`, `squad_can_return`,
 `standing` (a district or clan and a title, such as `["clan:nara", "good_neighbor"]`), `jealous`,
 `clan_friendship`, `clan_relation` (the relation between two clans, at least a label such as
-`rivals` or a number), `village_mood`, `hook_open`, `kindling_uses` and `bond_web`. Side quests use
+`rivals` or a number), `village_mood`, `hook_open`, `kindling_uses`, `bond_web`, `ritual`, `hangouts` and `answered` (an answer the player gave to
+a resident's question). Side quests use
 these directly: there is no separate `standing_at_least` or `bond_at_least`. `role:squad` is the
 current teammates and sensei, `role:teammates` the teammates alone; a role group passes only if
 every member does. The hook actions (`resolve_hook`, `clan_event`, `clan_deed`, `mood_event`) are in
@@ -365,7 +369,7 @@ Actions in the beta: `set_flag`, `start_quest`, `advance_quest`, `fail_quest`, `
 `promote`, `unlock` (a place, a shop item, a recipe), `news` (VF village news), `set_time`; and
 the bond actions `bond_event`, `shared_moment`, `start_conflict`, `apologize`, `reconcile`, `mend`,
 `reveal_fact`, `romance`, `return_to_squad`, `favor`, `deed`, `celebrate_birthday`, `bond_flag`,
-`kindle`, `resolve_hook`, `clan_event`, `clan_deed` and `mood_event`.
+`kindle`, `resolve_hook`, `clan_event`, `clan_deed`, `mood_event` and `ask_question`.
 Reserved now for later arcs, so the format does not change: `time_skip`, `carve_face`,
 `set_hokage`, `remove_from_squad`, `found_clan`, `marry`.
 
@@ -468,7 +472,8 @@ know their shape.
 - **Templates:** `tools/quests/new.py <template> <id>` scaffolds the common shapes (fetch, deliver,
   escort, defeat, investigate, talk chain, filler arc of N parts) so a side quest starts as a
   filled-in file.
-- **Dialogue** uses VF's dialogue text format and compiler (`tools/dialogue/`), with our pools.
+- **Dialogue** uses VF's dialogue text format, extended with context tags, functions and kinds,
+  compiled by `tools/dialogue/dialogue.py` ([DIALOGUE.md](DIALOGUE.md)).
 - **In game (builder mode):** `/shinobi quest start|step|reset <id>`, a flag inspector
   (`/shinobi flags`), role and anchor inspectors, `/reload` for hot reload, and a debug overlay
   that draws anchors and the active objective.
@@ -528,9 +533,13 @@ profile (Classic) or its rolled profile (Varied), so the same world file serves 
 - **Who:** every role-bound and fixed story character, in both modes; the Hokage's given names.
   Residents spawned from markers already get rolled names in Varied (VF's name pools are not used
   for Leaf residents).
-- **Tokens:** dialogue and quest text use `{name:<role>}` (full name), `{given:<role>}`,
+- **Name order:** full names display given name first and family name last, American style:
+  "Shigure Nara", not "Nara Shigure". Honorific forms ("Lord Fourth", "Nara-sensei") keep their
+  usual shape; the order rule is only about full names.
+- **Tokens:** dialogue and quest text use `{name:<role>}` (the full name, rendered "Given Family"), `{given:<role>}`,
   `{family:<role>}`, `{hokage:<n>}` and `{player}`; the journal, speech bubbles and VF's dialogue
-  bank resolve them. A name is never written into text.
+  bank resolve them. A name is never written into text. `{hokage:<n>}` renders the Hokage's given
+  name only.
 - **Checks:** `quests.py --check` and the dialogue compiler reject any literal from the name pools
   in authored text, and every token must name a role that exists.
 - **Stable within a save:** names are rolled once, at world creation, from the `names` stream and
@@ -702,6 +711,10 @@ off (closed gates, streets under repair) or is not built yet.
 
 ### How the map is made
 
+The concrete build plan (the Konoha kit's palettes, every building with its count and slice, the
+block catalogue, the tooling, the order of work, the steps that need you in Minecraft, and the
+effort estimate) is in **[KONOHA_BUILD.md](KONOHA_BUILD.md)**.
+
 1. A **map layout file** (`tools/konoha/layout.json`) places every district: polygon, streets,
    plots, which designs go on which plots, the landmarks' positions and rotations, the **anchors**
    quests refer to, the resident **markers**, the candidate flats and the vacant estates.
@@ -796,6 +809,9 @@ candidate flats; in Classic it is always the same one.
 - **Your bed** is furniture too, but every home always keeps one bed; it is the bed that clears
   fatigue.
 - **Upgrades** (a flat, a house, a clan room, an estate) come after the beta ([Later systems](#11-later-systems)).
+- **Collecting and storage:** a collection book (curios, gifts, keepsakes, photos, ninja info
+  cards, clan crests and more), chests with sort, search and deposit-all, and display cases for the
+  apartment. Designed by the home session; this section will link its document when it lands.
 
 ### Ryo
 
@@ -807,7 +823,7 @@ in-game week (a little over two hours) of play.
 
 | Earn (beta) | Ryo | Spend (beta) | Ryo |
 |---|---|---|---|
-| Orphan's stipend (Academy only) | 30 a day | Ramen, onigiri, tea | 3 to 10 |
+| Orphan's stipend (all game; the final amount, and whether it changes by rank, come from the items design) | 30 a day | Ramen, onigiri, tea | 3 to 10 |
 | Part-time jobs (Ichiraku, grocer, flower shop, forge) | 40 to 80 a shift | Kunai, shuriken, smoke and paper bombs | 5 to 40 each |
 | D-rank mission | 60 to 150 | Soldier pill | 60 |
 | C-rank mission | 300 to 600 | Furniture | 20 to 800 a piece |
@@ -886,8 +902,10 @@ knocked out, never killed. No summons.
 The squad, classmates and neighbours are VF residents, so friendship keeps VF's ten levels, gifts,
 speech bubbles and dialogue; the levels come from Shinobi Life's bond engine
 ([BONDS.md](BONDS.md)): five meters (affection, trust, respect, rivalry, romance), memories that
-fade or stay, personalities, story gates, squad dynamics, community standing and quarrel arcs. The beta adds **bond quests** (`kind:
-bond`) gated by friendship (bond levels also feed [Kindling Bond](#kindling-bond) after the beta): one per classmate in Beta 1, two per teammate in Beta 2, and one
+fade or stay, personalities, story gates, squad dynamics, community standing and quarrel arcs; and
+time together ([LIFE_TOGETHER.md](LIFE_TOGETHER.md)): hangouts at 22 places, invitations both
+ways, rituals, residents' own lives, follow-ups and conversations that deepen with the bond. The beta adds **bond quests** (`kind:
+bond`) gated by friendship (bond levels also gate [Kindling Bond](#kindling-bond)): one per classmate in Beta 1, two per teammate in Beta 2, and one
 per teammate in Beta 3. Romance waits for the teen stage, after the beta; children have friendships and
 VF's harmless crushes in dialogue only, enforced in code.
 
@@ -1035,6 +1053,26 @@ slice: the prologue's crouch, slipping out and being carried, hand signs, combo 
 dodge, block, throw, meditation, a tired slouch, petting (Beta 1); parry, launcher, ninja run,
 chakra jump, wall-run, water stance, forging and workbench, the first clan techniques (Beta 2);
 the finals' fighters and the stadium crowd (Beta 3).
+
+### Dialogue
+
+Residents' talk comes from Shinobi Village's dialogue engine ([DIALOGUE.md](DIALOGUE.md), on the
+`dialogue` branch until it merges; pure Java in `village/dialogue`, authored in `tools/dialogue/`).
+The owner's rule is that once a line is used it is never used again.
+
+- Every line has a stable id, and a per-save heard ledger (a bitset, a few KB) spends each line the
+  player hears, from anyone.
+- Each resident has a talk budget: a few fresh exchanges a day (3 for residents, 6 for the cast)
+  and a lifetime allowance that grows with the bond.
+- Past the budget, or when nothing fresh fits, they repeat in three steps: a "we already talked"
+  line in their voice, a line they said before, then a polite close.
+- Selection: the most specific line wins (personality, clan, rank, job, relationship, the time, the
+  weather, the place, events, story flags). Every line carries a function tag (teach, guide, quest,
+  worldbuild, react, deepen_bond...), and filler is capped at a fifth.
+- Residents ask the player questions with 2 to 4 answers. The answers feed the bond engine and are
+  called back later, and a contradiction is noticed.
+- Combat barks, shop transactions and overheard chatter cycle instead: every line once before any
+  comes back.
 
 ### Residents react to your rank
 
@@ -1315,7 +1353,7 @@ What the roadmap needs from it, spoiler-free:
 
 | Rank | Home |
 |---|---|
-| Chunin | Rent a two-room flat with a balcony (300 ryo a week), or move into your clan's quarter if clan-born |
+| Chunin | Move to a two-room flat with a balcony (no rent), or into your clan's quarter if clan-born |
 | Jonin | Buy a small house (about 30,000 ryo), or a larger clan room |
 | Clan founder | Your clan's estate |
 | Hokage | Quarters in the Residence |
@@ -1354,7 +1392,7 @@ marriage after 30 to 150 days at 65 or more). Shinobi Life extends it to the pla
 - **Dating:** at friendship level 7 ("spend time together": walks, ramen, festival nights);
   confessing at level 8 makes you sweethearts (village news).
 - **Marriage:** adults only, at level 10, a proposal and a wedding at the shrine; a spouse is the
-  strongest [Kindling Bond](#kindling-bond). Your spouse moves
+  strongest [Kindling Bond](#kindling-bond) (a spouse opens its Blaze tier). Your spouse moves
   in; a clanless player may join the spouse's clan, or the spouse may join yours.
 - **Children (post-game):** a married player can have children. They are VF residents born into
   your household (VF already records parents, households and surnames for residents' babies),
@@ -1362,22 +1400,26 @@ marriage after 30 to 150 days at 65 or more). Shinobi Life extends it to the pla
 
 ### Kindling Bond
 
-*Decided.* A bond ability the player unlocks at a story moment after the beta (the beta at most
-foreshadows it).
+*Decided.* A top-tier bond ability: its power flows outward through the people you are bonded to,
+and grows with your whole web of bonds. It is not a copying eye: it never takes or borrows
+another's techniques. When and how the player gets it belongs to the story.
 
-- **What it does:** kindle a bonded ally's chakra nature or one of their techniques and borrow it
-  briefly: a few casts of their nature's jutsu, or one use of their signature technique, then the
-  flame needs time to rekindle.
-- **Bonds decide what you can borrow:** friendship level 6 lets you borrow an ally's nature, level 8
-  one of their techniques, level 10 (or a teammate, your sensei, your spouse) both and for longer.
-  It ties combat to the friendship and romance systems: the village you befriend is your arsenal.
-- **Natures:** one of the ways to gain more elements. A nature borrowed often enough can be learned
-  for good with a master's trial.
-- **How it looks:** a bond-flame, a small watch-fire, flickers between you and the ally, and your
-  chakra takes their nature's colour while it burns.
-- **In the systems:** Shinobi Combat adds a `kindle` effect type; Shinobi Life's friendship and
-  romance levels are its bond levels; Core's natures list gains a "borrowed" source; Progression
-  unlocks it with a story flag.
+| Tier | Bond gate | What opens |
+|---|---|---|
+| **Spark** | Friendship 6 with an ally | **Thread Sight**: bonds appear as threads of light; you sense bonded allies anywhere, and a bonded speaker's lie shows as a flicker (strangers and enemies read poorly). Small kindles that steady an ally |
+| **Flame** | Friendship 8 | **Kindle**: empower an ally's own technique past its usual limits. **Ember Link**: a shared chakra pool, damage spread across the linked squad, and seeing through an ally's eyes |
+| **Blaze** | Friendship 10, or your spouse | **Ember Mark**: travel to a deeply bonded ally, or call them to you. **Unison techniques**, one per bonded pairing |
+| **Bonfire** | The whole bond web | The ultimate, scaling with every bond you hold |
+
+- **Costs:** you feel the pain of linked allies; overuse burns chakra and stamina; a quarrel dims a
+  bond's flame and a falling-out snuffs it out until the bond is mended.
+- **Natures:** learned by resonance: fight beside someone who has a nature, then pass their trial.
+- **How it looks:** an ember mark on the palm or chest, threads of light between bonded people, and
+  ember-gold chakra.
+- **Ownership:** Shinobi Combat models the techniques (the `kindle` action and its effects), the
+  bond system owns the gates, flame strength, resonance and the Bonfire's size (`kindling`,
+  `kindling_uses`, `resonance`, `bonfire`, `bond_web`; [BONDS.md](BONDS.md#11-kindling-bond)), and the story owns the lore
+  and the timing.
 
 ### Elemental natures
 
@@ -1386,7 +1428,7 @@ foreshadows it).
 | First | Chosen at the Genin ceremony (Beta 2) |
 | Second | Chunin: a nature master's three trials |
 | Third | Jonin: a clan master or a mission line |
-| More | [Kindling Bond](#kindling-bond) (a nature borrowed often enough through a bond can be learned with a master's trial) and rare milestones in the later arcs |
+| More | Resonance through [Kindling Bond](#kindling-bond) (fight beside someone with the nature, then pass their trial) and rare milestones in the later arcs |
 
 Your natures' jutsu cost 25% less; other natures' jutsu cannot be learned.
 
@@ -1430,7 +1472,7 @@ touches them.
 - **Mind Transfer** (Yamanaka, Chunin or later): the camera moves into a mob or resident for 8 s;
   your body slumps and can be hit.
 - **Stealth** (Jonin and ANBU): detection by sight and sound, night operations.
-- **Kindling Bond** (after the beta): see [Kindling Bond](#kindling-bond).
+- **Kindling Bond:** see [Kindling Bond](#kindling-bond).
 
 ### The full event calendar
 
