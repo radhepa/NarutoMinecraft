@@ -689,8 +689,13 @@ Good Neighbor in every district and clan quarter):
 | | Devoted | Typical | Reckless |
 |---|---|---|---|
 | 45 h: village | Pillar (34 to 36), Hero in 1 of 5 | Pillar (32 to 34), never Hero | Good Neighbor (17 to 18) |
-| 60 h: village | Hero in 5 of 5 (38 to 40) | Hero in 5 of 5 (37 to 39) | Pillar (20 to 23), never Hero |
+| 60 h: village (after the finale) | Hero in 5 of 5 | Hero in 5 of 5 | Hero in 5 of 5 |
 | Good Neighbor everywhere | 5 of 5 at 45 h and 60 h | 5 of 5 at 45 h and 60 h | 3 of 5 at 45 h, 5 of 5 at 60 h |
+
+The story ends the last arc with `saved_the_village` (a deed worth 40 that the whole village lives
+through: everyone knows it firsthand at once), so every player who finishes reaches Hero with the
+village; the simulation fires it at the end. Before it, at 60 h: devoted 38 to 40, typical 37 to
+39, reckless 20 to 23. After it: devoted 45 to 46, typical 44 to 45, reckless 36 to 37 (Hero is 35).
 
 Run `./gradlew :life:bonds:simulate` for the full tables, or `-Pexplain=role:teammate_a` to see
 where one bond's meters come from. `TimeAndPacingTest` holds these targets on five seeds.

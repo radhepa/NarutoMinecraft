@@ -288,9 +288,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Act.java": {
-    "mtime": 1793310657.6142797,
-    "seen": 1793310895.685312,
-    "ast_hash": "412f376b9307d0d9e18a8aec86f5f73c",
+    "mtime": 1793310981.6534512,
+    "seen": 1793311022.9152713,
+    "ast_hash": "abd0dc911e96ade68e0d3b363cf6bb9a",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Bond.java": {
@@ -336,9 +336,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/BondWorld.java": {
-    "mtime": 1793310670.4416146,
-    "seen": 1793310895.6853347,
-    "ast_hash": "bcf0d4eab81d4f8eefcaac528805b725",
+    "mtime": 1793310981.6545029,
+    "seen": 1793311022.9152968,
+    "ast_hash": "49cc22ebaa90677cb9087e3acec4c9d9",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/ClanProfile.java": {
@@ -510,9 +510,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/GossipTest.java": {
-    "mtime": 1793304943.8916624,
-    "seen": 1793310895.685393,
-    "ast_hash": "5f1a18a659e5fab98e46264ae737d016",
+    "mtime": 1793311001.0149314,
+    "seen": 1793311022.9153607,
+    "ast_hash": "8be33d4f2023164449385b11c384dcdd",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/KindlingAndBookTest.java": {
@@ -576,9 +576,9 @@
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/sim/Playthrough.java": {
-    "mtime": 1793310719.6071742,
-    "seen": 1793310895.6854155,
-    "ast_hash": "a9b6c73c08bae5ee3b6a96ee201a5baf",
+    "mtime": 1793310934.8004136,
+    "seen": 1793311022.9153845,
+    "ast_hash": "3d6ecd88848b89ba9dd6c7c79b7355de",
     "semantic_hash": ""
   },
   "life/bonds/src/test/java/dev/shinobi/life/bond/sim/VillageSim.java": {
@@ -594,9 +594,9 @@
     "semantic_hash": ""
   },
   "BONDS.md": {
-    "mtime": 1793310810.0906398,
-    "seen": 1793310895.6857803,
-    "ast_hash": "315cc581abf69acee6893bb89f634122",
+    "mtime": 1793311001.0217395,
+    "seen": 1793311022.9156587,
+    "ast_hash": "b984a9a583a1a0e6bf69a3cdc243b7db",
     "semantic_hash": ""
   },
   "SIDE_QUESTS.md": {

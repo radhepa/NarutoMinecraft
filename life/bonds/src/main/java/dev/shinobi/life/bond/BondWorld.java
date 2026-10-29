@@ -342,6 +342,7 @@ public final class BondWorld {
         if (village != null) village.onDeed(d);
         if (about != null && !about.isEmpty() && people.containsKey(about)) d.knowers.put(about, new Deed.Know(Source.SELF, day, ""));
         for (String w : witnesses) if (!d.knows(w) && people.containsKey(w)) { d.knowers.put(w, new Deed.Know(Source.SEEN, day, "")); absorb(w, d); }
+        if (act.lived) for (String w : List.copyOf(people.keySet())) if (!d.knows(w)) { d.knowers.put(w, new Deed.Know(Source.SELF, day, "")); absorb(w, d); }
         return d;
     }
     /** The player tells someone about a deed. False when they had already heard (word got there first). */

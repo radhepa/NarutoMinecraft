@@ -81,4 +81,12 @@ class GossipTest {
         w.deed(Act.PROTECTED_THEM, "kid", List.of(COOK, "stranger"));
         assertTrue(w.meters(COOK).trust() > w.meters("stranger").trust(), "a parent hears it differently");
     }
+    @Test void savingTheVillageIsKnownFirsthandByEveryoneAtOnce() {
+        var w = Leaf.classic(3, 40);
+        double before = w.standing("village");
+        assertEquals("", BondEffects.apply(w, java.util.Map.of("deed", java.util.Map.of("act", "saved_the_village"))));
+        var d = w.deeds.getLast();
+        assertTrue(w.people().stream().allMatch(x -> d.know(x.id()) != null && d.know(x.id()).how() == Reaction.Source.SELF), "the whole village lived it");
+        assertTrue(w.standing("village") > before + 20);
+    }
 }
