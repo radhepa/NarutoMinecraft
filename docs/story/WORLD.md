@@ -71,11 +71,11 @@ story counts in ordinary years.
 | ~Y-15 | The keeper notices descendants of the renamed children showing chakra the sealing should have smothered. The seal is weakening over the generations | The keeper |
 | ~Y-13 | `fallen_parent`, a Leaf Jonin and grandchild of a renamed child, serves on a team with the future sensei and `sensei_3`. Their gift is sealed but flickers in danger: a campfire that leans toward the team | The sensei (without knowing what it was) |
 | ~Y-12 | **The player is born.** Who the parent is, is `twist.lineage` ([ROTATIONS.md](ROTATIONS.md)). In every save the baby ends up in a border village, in a house with a persimmon tree, with a family who sing it the Kagari watch-fire song | — |
-| ~Y-10 | **The voice** begins: someone inside the Leaf starts sending Yūgure the names and readings of gifted children (`twist.traitor`, [ROTATIONS.md](ROTATIONS.md)) | The voice |
+| ~Y-10 | **The voice** begins: someone inside the Leaf starts sending Yūgure the names and readings of gifted children (`twist.traitor`, [ROTATIONS.md](ROTATIONS.md)), the same in every save. Messages go out by **the first hand**, an old east-road carter (no clan, an ordinary name) | The voice |
 | ~Y-8 | **The Ash Road ambush.** A Yūgure cell carrying chakra paper (which chars ash-violet near Kagari chakra) ambushes the three-person team of `fallen_parent`, the future sensei and `sensei_3`, to test `fallen_parent`. The sensei sends `sensei_3` back for help, then goes back in; `fallen_parent` dies; the sensei is burned trying to pull them out (the scar). `fallen_parent` had a young child with a civilian spouse in a border village; after the ambush the report lists the spouse and child as "lost" (in lineage A they truly died; in lineage B the child is the player, see [ROTATIONS.md](ROTATIONS.md) §2). Persimmons were `fallen_parent`'s favourite fruit; the sensei leaves one at the memorial stone every year. The elders, the keeper among them, record it as a bandit ambush and seal the report: an open inquiry would have asked why Yūgure wanted that Jonin | The keeper, the councillor (who signed the sealing) |
-| ~Y-6 | Yūgure finds the persimmon house. The family is killed or scattered; the child (six) is taken to Yūgure's **nurseries**, camps where gifted children are tested, numbered and trained. The player becomes **"Nine"** | — |
+| ~Y-6 | The old carter dies in a road accident; **the porter** (a nursery child, sixteen) is sent into the Leaf and takes over as the hand. Yūgure finds the persimmon house. The family is killed or scattered; the child (six) is taken to Yūgure's **nurseries**, camps where gifted children are tested, named by number and trained. The player becomes **"Nine"** (the cells themselves are unnumbered; only the player and Yūgure ever know the name) | — |
 | Y-6 to Y0 | Six years in the nurseries. The player's flame is the strongest any test has shown, and it does not grow: a wick raised in a cage stays small, because the gift grows with bonds. The leader keeps the child's existence from his own second | The leader, the voice (the reports), the porter |
-| Y0 | The prologue. The hideout in the southern hills, by the ruined Kagari shrine. That night the leader takes a strong girl's chakra (`lost_child`) to test the dark mirror on a Kagari-sensitive child. The Leaf raids the camp the same night: the keeper had received an anonymous map. **The map came from the second**, who learned the hideout was emptying children and could not bear it. The voice warned the leader the raid was coming, and he **let it happen**: "Let the Leaf raise my fire." | The second; the leader |
+| Y0 | The prologue. The hideout in the southern hills, by the ruined Kagari shrine. That night the leader takes a strong girl's chakra (`lost_child`) to test the dark mirror on a Kagari-sensitive child. The Leaf raids the camp the same night: the keeper had received an anonymous map. **The map came from the second**, who learned the hideout was emptying children and could not bear it. The porter loaded the raid squad's supply crates, so **the hand** warned the leader the raid was coming, and he **let it happen**: "Let the Leaf raise my fire." | The second; the leader |
 
 ### Elapsed time and ages
 
@@ -94,7 +94,10 @@ player is 12 at Y0. Lines spoken in later arcs count years from this table.
 | Ch 55 (the Eighth) | Y+8 | 20 | Adult |
 
 Useful spans: the Ash Road ambush is 9 years past at Ch 21 and 14 at Ch 37; the player was taken
-from the persimmon house 13 years before Ch 48; the voice has been active about 16 years by Ch 35.
+from the persimmon house 13 years before Ch 48; the voice has been active about **sixteen years** by
+Ch 35 to 39 ("sixteen years" wherever a candidate speaks the span). Every candidate was an adult
+at ~Y-10 (the medic, born ~Y-31, was a new hospital orderly of 21). No count of "nine" is ever
+spoken near the player except the name itself ("ten months", never "nine").
 
 ## The Kagari
 
@@ -103,7 +106,9 @@ would sit at the fire with soldiers who trusted them, and the fire would "lean" 
 the Kagari could push their chakra into a comrade's and make the comrade's own technique burn past its limits, by consent. Their crest is
 a watch-fire basket (篝籠) of four crossed staves holding a flame. Their songs survive as one
 lullaby, **the watch-fire song**, sung in the families of the renamed children without anyone
-knowing why.
+knowing why. The Kagari gift is a **bloodline gift**, sealed for three generations; it surfaces in the
+player and is gated by bonds, not by clan membership. ROADMAP's rule that kekkei genkai come only
+through clans holds for the clans; the Kagari are the one exception the story reveals.
 
 **The renamed children.** Twenty-seven, adopted into Leaf families of every kind: a few into clans
 (a Senju household, a Sarutobi household, a Kurama household of painters, two Tobari households),
@@ -143,7 +148,11 @@ turns. The second and the blade are the exception: a pair, "the only pair he eve
   erased. He has told no one. His second learns it in the Road to Hokage and turns.
 - **What they do**: smuggle chakra paper to find children whose chakra chars it; buy and steal those
   children for the nurseries; recruit the bitter; plant agents in villages. In the Leaf they have
-  **the hand** (`porter`) and **the voice** (`twist.traitor`).
+  **the hand** (`porter`, since Y-6; an old carter before him) and **the voice** (`twist.traitor`).
+  The voice's sources reach border children too: the library files the border outposts' entrance
+  tests with the aptitude scrolls; the stipend registry lists the border-village orphans the Leaf
+  sponsors; the hospital ledger logs every rescued child; the merchant's book logs every stop. The
+  candidates' daily schedules and night movements are identical in every save until Ch 39.
 - **The marks**: the sinking sun scratched on walls is a hearth's sign, and in the Leaf it is also an
   **anchor of the array**: a cinder seal laid under the scratch. Over six years in the Leaf the porter laid
   eighty-one of them across the village under crates, sills and doorsteps. The one on the player's
@@ -153,10 +162,14 @@ turns. The second and the blade are the exception: a pair, "the only pair he eve
 
 | When | What he does | Why |
 |---|---|---|
-| Ch 0 | Warned by the voice of the raid, he lets the Leaf take Nine, and watches from the ridge | The flame would not grow in a cage; the gift grows with bonds. "Let the Leaf raise my fire." That same night he tests the dark mirror on the lost child |
+| Ch 0 | Warned by the hand of the raid (the porter loaded its supply crates), he lets the Leaf take Nine, and watches from the ridge | The flame would not grow in a cage; the gift grows with bonds. "Let the Leaf raise my fire." That same night he tests the dark mirror on the lost child |
 | Ch 4 | The porter lays an anchor under the wick's door | The array must know where the wick lives |
+| Ch 13 | A stranger approaches `teammate_b` | To put eyes inside Nine's squad; b's parent is one of his |
 | Ch 19 | The stadium attack: test the Leaf's defences, strike the Hokage (the Fourth's fate), and order the second to "find the strongest flame and tell me how it burns" | A test of the second's loyalty: he already knows. Nobody is ordered to take the player. She names it aloud instead |
+| Ch 23 | The testers' free schools go on | The paper still hunts for other wicks, in case this one fails |
 | Ch 24 | The lost child raids the border post, ordered to wound and never kill the wick; he watches from a ridge (24.7) | To wake the gift by making a friend fall |
+| Ch 30 | The Tobari cinder bombs | A test: does the Leaf turn on its own when frightened? Its answer feeds his plan to strike when it is divided |
+| Ch 37.3 | The blade's raid on the archive for the Hearthstone | The array's heart; it fails |
 | Ch 44 | A sentence sent through the lost child's stolen voices: "Grow, little flame. I like your friends." | He wants the web to grow: the wider it is, the more there is to take |
 | Ch 51b | His voice comes through the array as the player climbs the Rock | He needs the wick at the heart |
 | Ch 52 | The array lit; the dark mirror offered | The Hollow Crown |
@@ -222,44 +235,54 @@ The gift must play in every save, including a lonely one:
   the burning village on the rooftops, guided by `squad4_a`'s Byakugan. Fewer Blaze friends, a
   longer run.
 - **The lonely finale.** The red cord is always the first flame: the lost child always comes home by
-  Ch 47, and `bond_flag red_cord` kindles at any level ("So someone remembers. It's mine to give.").
-  The sensei always gives theirs (`saved_by_them`, Ch 0). Under a bond web of 15 the Bonfire is an
-  honest small fire (two or three flames on a quiet Rock), and it still wins: a fire freely given
-  cannot be taken, however small. The epilogue has a matching lonely tier.
+  Ch 47, and `bond_flag red_cord` kindles at any level ("Take it. It's mine to give."). The sensei
+  always gives theirs second (`saved_by_them`, Ch 0; it overrides even a falling-out). Ch 53's order
+  is fixed: the cord, the sensei, the spouse, the friend who fell in Ch 24, the other teammate, the
+  rival, then faces without spoken lines (others by level, clans, districts). Below the web's lowest
+  threshold the Bonfire is an honest small fire (two or three flames on a quiet Rock), and it still
+  wins: a fire freely given cannot be taken, however small. The thresholds are data, calibrated by
+  the bonds session's simulation of `BondWeb.score` ([BONDS.md](../../BONDS.md) §11). The epilogue
+  has a matching lonely tier: "You carried this with very few hands. Let more in now."
+- **The second and the blade at the end.** The blade turns in Ch 51b and lives (taken into custody;
+  in the epilogue he asks to guard the shrine or the second's grave). The second's fate resolves in
+  Ch 53.5, before the leader's end in 53.6.
 
-### Thread Sight and the mystery (a principled limit)
+### Thread Sight and the mystery (one engine rule)
 
-Thread Sight could solve the voice's case in a glance; it does not, for three reasons that hold in
-every save and every rotation:
+Thread Sight could solve the voice's case in a glance; it does not, because one rule holds in every
+save and every rotation:
 
-1. **It reads only your own web.** A person shows a thread (and can flicker) only if they are bonded
-   to you at level 6 or more. A thread between two *other* people shows only when both are bonded to
-   you at 6+. Strangers, enemies and acquaintances are dark.
-2. **It shows *that*, never *what*.** A flicker means "hiding something from you". Every one of the
-   four traitor candidates hides a true secret in every save (the librarian her Kagari family
-   history; the medic their years of letters to the strangers who once saved them; the councillor
-   his signature on the Ash Road sealing; the merchant old debts and smuggling for bandits), so all
-   four flicker whenever the player probes them. The flicker narrows nothing. Each also keeps **one
-   held-back piece** of that secret until Ch 39 or 40 in every save (the merchant the night at the
-   waystation; the medic the last reply in their crane jar of letters; the librarian what the cut
-   page listed; the councillor his grandfather's vote), so no candidate's flicker goes out early in
-   any rotation. The bound candidate's thread to the player reads as an ordinary two-way thread.
+1. **It reads only your own web.** A person shows a thread only if they are bonded to you at level 6
+   or more. A thread between two *other* people shows only when both are bonded to you at 6+.
+   Strangers, enemies and acquaintances are dark.
+2. **A flicker is a steady state, never a lie detector.** It comes from one `hides:` bond flag: the
+   thread flickers for as long as the person keeps something from you, the same in every scene,
+   whatever they say line by line. It shows *that*, never *what*. Each of the four traitor
+   candidates carries exactly one `hides:` flag of the same kind until Ch 39 or 40 in every save
+   (the librarian her family history, keeping back what the cut page listed; the medic their
+   letters to the strangers who once saved them, keeping back the last reply in their crane jar; the
+   councillor his signature on the Ash Road sealing, keeping back his grandfather's vote; the
+   merchant old debts and bandit smuggling, keeping back the night at the waystation). All four
+   flicker the same; the bound candidate's thread to the player is an ordinary two-way thread. The
+   flicker narrows nothing.
 3. **The hand is never in your web.** The porter is never at 6+ before Ch 28, and after it his
    memory is burned, so the voice's tie to the hand is never visible.
+4. **Scripted exceptions** (`thread_floor`, the only ones): the red cord's grey thread (Ch 24.6, N6,
+   Ch 47); a one-sided thread *toward* the player from the second (from Ch 27; fraying from Ch 49 to
+   Ch 52); teammate_b's fraying thread before the bridge (Ch 26, every branch); the blade's thread to
+   the second, **only in Ch 52**. The porter and every traitor candidate are never exceptions before
+   Ch 39. The leader has **no threads at all**: eighty years without one bond.
+5. **Only two things may differ between rotations before Ch 39**: the Ch 25.1 slip line, and the
+   results of the four alibi checks (Chunin side content and Ch 38). Every other scene, vote,
+   schedule and question plays identically in every save ([ROTATIONS.md](ROTATIONS.md) §1).
 
-4. **Only two things may differ between rotations before Ch 39**: the Ch 25.1 slip line, and the
-   results of the four alibi checks (Chunin side content and Ch 38). Every other scene, vote and
-   question plays identically in every save ([ROTATIONS.md](ROTATIONS.md) §1).
-
-The keeper flickers too, honestly (he hides the archive) until Ch 36. The leader has **no threads
-at all**: eighty years without one bond. The second shows a faint **one-sided** thread toward the
-player from Ch 27, in both lineages. The blade has one strong thread, to the second.
+The keeper flickers too, honestly (he hides the archive) until Ch 36.
 
 ### Story milestones of the gift
 
 | Milestone | Where | Tier |
 |---|---|---|
-| Foreshadowing: the flare, the flicker at the bells, the leaning campfire | Ch 3, Ch 8, Ch 16 | — |
+| Foreshadowing: the flare, the flicker on the cord, the leaning campfire | Ch 3, Ch 8, Ch 16 | — |
 | **Awakening.** At the border post a friend falls for you; the threads appear; you kindle them and they rise once and cast their own technique past its limits | Ch 24 | Spark (story floor) |
 | The gift named, its old forms learned, trained in secret: Thread Sight drills, small kindles | Ch 25 to Ch 29 | Spark |
 | The gift in the open: the squad linked as one flame in the drain; a near-stranger offers their flame (`offered_flame`) | Ch 31 | Flame (story floor) |
@@ -275,7 +298,7 @@ player from Ch 27, in both lineages. The blade has one strong thread, to the sec
 | The Hokage | Four at the start; three more change hands in the story | — |
 | The elder council | Three elders: the `elder_keeper` (archive), the `elder_councillor` (registry and stipends), and a Hyuga elder (`elder_hyuga`, the Fifth's uncle, a minor role) | Sealed the Ash Road report; the keeper and councillor know parts of the truth |
 | The sensor corps | Hyuga and Yamanaka sensors | Under the Fifth: watches "anomalous chakra" |
-| The Undercroft | The heirs of the sealing team that sealed the twenty-seven in the Quiet Ending: a mixed-clan oath society of old ANBU and sealers, led by the sealing team leader's granddaughter (`undercroft_head`, no clan), sheltered under the Shimura house by a Shimura elder (the Shimura are complicit, not the faction) | Believes the gift must stay sealed, and be used (Night Watch) |
+| The Undercroft | The heirs of the sealing team that sealed the twenty-seven in the Quiet Ending: a mixed-clan oath society of old ANBU and sealers, led by the sealing team leader's granddaughter (`undercroft_head`, no clan), meeting in the sealing team's derelict hall under the old quarry. The Shimura have no part in it (a Shimura helps expose it) | Believes the gift must stay sealed, and be used: their sealed **jar**, and a plan to make the lost child its mouth (Night Watch) |
 
 ## Places the story adds
 
@@ -288,15 +311,20 @@ player from Ch 27, in both lineages. The blade has one strong thread, to the sec
 | The border village with the persimmon tree | A far region | Ch 21 (the player's memory), Ch 48 (visit) | The house of the player's early childhood, burned |
 | The border post at the Ash Road | A far region | Ch 24 | The lost child's raid |
 | The Valley of Ash | A far region | Ch 35 | The old battlefield; a Yūgure nursery in its caves |
-| The Undercroft | Under the Shimura house | Night Watch | Its cellar door is the Shimura line's secret: a Shimura elder shelters them |
+| The Undercroft | The sealing team's derelict hall under the old quarry | Night Watch | Found through `clan.shimura.3`: a Shimura discovers a stranger using their cellar as a mail drop for sealed letters, and the courier leads to the quarry |
 
 ## Tone
 
 - **Like the anime, not copied from it.** Earnest friendship and rivalry, a sensei who teaches more
   by example than by speeches, goofy filler and food, villains with real grief, sacrifice that
-  is earned, and a village worth protecting. No catchphrases, jutsu names or scenes lifted from
-  canon; canon clans and places appear as the setting the mod already uses.
-- **Child stage is safe.** No romance, no gore. Deaths happen off-screen or in the cinematic camera's
+  is earned, and a village worth protecting.
+- **Allowed from canon:** clan kekkei genkai and clan art names (ROADMAP §11); Academy basics
+  (Clone, Transformation, Substitution, tree and water walking); canon places the map uses
+  (Ichiraku, the Hokage Rock, the Forest of Death, Training Ground 3); "the Will of Fire" only as the
+  Sarutobi lantern-walk custom and in characters' questions about it, never as a slogan.
+- **Forbidden:** canon characters' signature techniques by name in story scenes, canon catchphrases
+  and verbal tics, canon exam gimmicks, canon scenes restaged.
+- **Child stage is safe.** No romance, no gore, no blood (a cut is "a cut, a scar later"). Deaths happen off-screen or in the cinematic camera's
   cutaway; the hollow are pale and quiet, not mutilated.
 - **Earned speeches.** A speech about bonds lands only after the player has lived the bonds it
   names. Dialogue in big moments reads flags and memories so the speech is about *this* save.

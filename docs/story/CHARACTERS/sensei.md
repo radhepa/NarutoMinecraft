@@ -25,12 +25,14 @@
 Ash Road: to have pulled `fallen_parent` out of that fire.
 
 **Fears.** That the fire which killed their teammate lives in the child; that they will be too slow
-again; that the village they serve buried their teammate's death on purpose (it did, and they
-signed the report).
+again; that the village they serve buried their teammate's death on purpose (it did, and their
+name is on the report).
 
 **Secrets.**
-- They signed the sealed Ash Road report that called the ambush bandits (Ch 37.0 reveals it was
-  Yūgure; they did not know then, but they chose not to ask).
+- They signed the Ash Road **field report**, which told the truth as they saw it: a trained cell,
+  chakra paper, after `fallen_parent`. The elders rewrote it above their name as a bandit ambush and
+  sealed it. Years later they saw the rewrite and said nothing, to keep their post. That silence is
+  their guilt (Ch 37.0) and the Ch 42 council's objection.
 - They know the watch-fire song from `fallen_parent`, who hummed it on missions (Ch 18).
 - They saw a campfire lean toward their old team. They recognise your flame (Ch 14).
 - They keep a box with `fallen_parent`'s forehead protector (every save). *Lineage B only:* it also
@@ -44,13 +46,15 @@ signed the report).
   two have never talked about that night (until Ch 37: "fourteen years"). Among the other senseis:
   `sensei_2` (Classic: Shiranui) has challenged the sensei to senbon footwork contests on guard
   rotations since the Academy (threading senbon through the lantern rings on the wall walk, the
-  timed relay of the gate's bell). The tally is lopsided: **sensei_2 has lost 211 to 38**, and keeps
-  the notebook. In Ch 51b sensei_2 dies holding the main gate; his last notebook line is "Held the
-  gate longer than you would have. 39 to 211. Mine." and his last words are always "Did I win?"
-  The Seventh answers: "You won." `sensei_5` (Uzumaki) taught the sensei sealing once: old teacher,
+  timed relay of the gate's bell). The tally is lopsided: at Ch 8 **sensei_2 trails 38 to 211** and
+  keeps the notebook; by Ch 42 it is 51 to 289, and the new Seventh says "You win this one too" and
+  loses on purpose (51 to 290). In Ch 51b sensei_2 dies holding the main gate, the player and the
+  Seventh beside him; his last words are always "Did I win?" and the Seventh answers "You won." In
+  Ch 54 his notebook's last line is read: "Held the gate longer than you would have. 52 to 290.
+  Mine." `sensei_5` (Uzumaki) taught the sensei sealing once: old teacher,
   quiet student. `sensei_4` (Morino) is a colleague. Their own lines are in the ensemble's files.
 - They never see the player's half charm before Ch 48: it stays sewn in the sleeve. From Ch 25 their
-  thread flickers when you are near the box's subject, in **both** lineages (they hide the box in
+  thread carries a steady flicker (`hides:the_box`) from Ch 25 to Ch 48 in **both** lineages (they hide the box in
   both); only in lineage B is the reason explained, at Ch 48.
 
 **What they know and when.**
@@ -59,13 +63,13 @@ signed the report).
 |---|---|
 | The player is a nursery child, "Nine" to the guards | Never told; they read only the raid's list of children (numbers were not on it). They never say "Nine" |
 | The child points toward the lost girl (if `ans.sensei.ch0 = point`) | Ch 0: their first failure with you; they never stop looking for her |
-| The bell flicker | Ch 8 (they see it, say nothing) |
+| The cord flicker | Ch 8 (they see it at the cord test, say nothing) |
 | Chakra paper chars near the player | Ch 11 (if shown) or Ch 14 |
 | The persimmon tree (if `story.lineage.persimmon_told`) | Ch 14 |
 | The watch-fire song in the player's mouth | Ch 16 (heard from the tower report) / Ch 18 (if sung) |
 | The word "Kagari" was said to the player | Ch 19 (they were there with a kunai at her throat) |
 | The flame is the same as `fallen_parent`'s | Ch 24 to 25 (certain: they see the ember-gold chakra and the mark on your palm) |
-| You can see bonds (Thread Sight): the sensei shows as a thread to you, and when they hide something from you, a flicker | Ch 25 (you tell them, or they guess). From then on they stop lying to you and say "I can't tell you yet" instead, because they know you would see the flicker |
+| You can see bonds (Thread Sight): the sensei shows as a thread to you, with a steady flicker while they hide something | Ch 25 (you tell them, or they guess). From then on, when you ask about what they hide, they say "I can't tell you yet" instead of deflecting: they know you can see that they are hiding |
 | The Ash Road was Yūgure, and why | Ch 37.0 (the report opens Ch 37 on its own night) |
 | The Quiet Ending, the twenty-seven | Ch 36 to 37 |
 | The Hollow Crown | Ch 49 |
@@ -91,7 +95,7 @@ signed the report).
 | `twist.lineage = fallen` | The Ch 48 walk and box; their succession speech names `fallen_parent` as your parent |
 | `twist.lineage = second` | Ch 48 is the second's scene; they learn after. Their guilt stays about the teammate and about not seeing the flame. Their speech names the second (alive or remembered) |
 | `twist.fourth_fate` | Falls: at the Akimichi farewell feast (Ch 20) they sit by the empty place with his bowl and eat in silence. Crippled or taken: they consult him as Hokage |
-| `twist.traitor = councillor` | The councillor co-signed the Ash Road sealing; their scene in Ch 39 adds one line of cold anger |
+| `twist.traitor = councillor` | The councillor co-signed the Ash Road rewrite; their Ch 39 scene adds one line of cold anger after his "I signed the Ash Road away too. A Jonin's death." |
 | `ans.sensei.orders` | Their inaugural speech (Ch 42) and the order to fall back (Ch 24) |
 | Sensei trust under 50 at Ch 25 | Training comes from the keeper or librarian; the sensei stays distant until Ch 37 and says "I should have been the one" |
 | `ans.player.archive_follow = sensei` | The Rock scene: they cry, then ask you to call them by their given name when no one is listening |
@@ -107,7 +111,7 @@ Never says "I'm sorry" until Ch 48; never explains the scar until Ch 37; never s
 you do.
 
 Voice samples, not shipped lines:
-- "One cord. Three bells. Sundown."
+- "One cord. Three tags. Sundown."
 - "That's twice now the paper's done that near you. Where were you born, {given:player}?"
 - "Keep your fire low until you need it."
 - "...Good."
@@ -154,7 +158,7 @@ Voice samples, not shipped lines:
 
 | Id | When | Question | Options | Honours / tests | Remembered | Changes them |
 |---|---|---|---|---|---|---|
-| `ans.sensei.ch0` | Ch 0.4 (the raid) | (not a question: the look) | run / hide / point | — | Ch 24 ("You pointed, that night. I sent two people. I should have gone myself") if point | Point: they carry the lost girl as their own failure and ask after her in Ch 44 |
+| `ans.sensei.ch0` | Ch 0.4 (the raid) | (not a question: the look) | run / hide / point | — | Ch 24 ("You pointed, that night. I sent two people. I should have gone myself") if point; the lost child's return (N6 or Ch 47): if point, the sensei comes to see her and says "You pointed. I was too slow. You weren't." (unset/run/hide: "She's home. That's all that matters.") | Point: they carry the lost girl as their own failure and ask after her in Ch 44 |
 | `ans.sensei.orders` | Ch 8.4 | "When I give an order you think is wrong, what will you do?" | obey / ask / right | Obey: their discipline; Ask: their honesty; Right: their freedom (and their fear) | Ch 24.3; Ch 42 inaugural speech | Shapes how the Seventh commands: obey → strict; ask → explains orders; right → "Do it right" |
 | `ans.sensei.stone` | Ch 10.2 | (at the memorial stone) | gap / name / silence | Silence honours them (`stood_by_them`) | Ch 21.3, Ch 41 ("You stood there with me once") | Silence: they open up one beat earlier at Ch 25 |
 | `ans.sensei.ash_road` | Ch 13.2 | (at the waystation) | ask / dont | Asking gently is fine; never prying here | Ch 37.0 | Asked: at Ch 37 they say "You asked me once. Here's the answer" |
@@ -163,12 +167,15 @@ Voice samples, not shipped lines:
 | `ans.sensei.kagari_word` | Ch 20.5 | "Don't say it to anyone. Not yet." | promise / ask / silent | Promise kept through Ch 22: `kept_promise` | Ch 22.2 | Promise kept: their trust passes 50 earlier (secret training) |
 | `ans.sensei.know` | Ch 25.4 | "Do you want to know what you are? Even if it changes how you see yourself?" | everything / need / no | Everything: their honesty; No: their freedom ("Good answer too") | Ch 36 to 37 (how much they bring you), Ch 53 line | Everything: they bring you to the archive in Ch 36 and to the report in Ch 37 |
 | `ans.sensei.apple` | Level 4, a training hangout | "Why do you think I'm always eating something when I'm worried?" | to look calm / to have something to do with my hands / you're just hungry | — (filler with a function: shows they know you see them) | Ch 49 war council: they hold an apple and don't eat it | — |
-| `ans.sensei.hat` | Ch 42, before the succession (level 6) | "Should someone who signed a lie be Hokage?" | yes, because you know the cost / no, but you're the best we have / only if you say it out loud | Honesty | Ch 42 speech: they confess the signature in public if "say it out loud" | Changes the Seventh's first act: a public confession, or a quiet one to the council |
+| `ans.sensei.hat` | Ch 42, before the succession (level 6) | "Should someone who kept quiet about a rewritten report be Hokage?" | yes, because you know the cost / no, but you're the best we have / only if you say it out loud | Honesty | Ch 42 speech: they confess the signature in public if "say it out loud" | Changes the Seventh's first act: a public confession, or a quiet one to the council |
 | `ans.sensei.successor` | Ch 54.4 | "Do you want it? Honestly." | yes / not yet / only if you stay near | — | Ch 55.2 | "Only if you stay near": they become your advisor in the post-game |
 | `ans.sensei.burned` | Ch 18.1, level 4 (fire training) | "I'm a fire user who got burned by fire. Should I still be teaching you to make it?" | yes, you know what it costs / no, teach something safer / only if you show me the scar | Honesty, their fear | Ch 24.5 (if they fall, the sensei's fire becomes a wall of flame and they say "You said I should still teach it") and Ch 37 (the scar's story) | "Show me the scar": they explain it one arc early at level 7 (the fact of the burn, not the Ash Road truth) |
 | `ans.sensei.fear_squad` | Ch 16 tower or Ch 18 training, level 4 | "Which of you three do I worry about most?" | me / teammate_a / teammate_b / all of us the same | Honesty (they answer truthfully whatever you say) | Ch 24.4 (the one they named is the one they look for first when the fire leans) | Changes the order they check on you all in Ch 19 and Ch 51 |
-| `ans.sensei.revenge` | Ch 37.0 (if you follow them to the Rock), else Ch 38 | "Should I find the ones who did the Ash Road, before anything else?" | yes, they owe it / no, the living first / only if they're still killing | Loyalty to the dead against duty | Ch 51.4 (whether the Seventh personally hunts cells during the war council) | "The living first": the Seventh's war plan protects the Academy before striking cells |
+| `ans.sensei.revenge` | Ch 37.0 (if you follow them to the Rock), else Ch 38 | "Should I find the ones who did the Ash Road, before anything else?" | yes, they owe it / no, the living first / only if they're still killing | Loyalty to the dead against duty | Ch 49 war council and Ch 51a (whether the Seventh personally hunts hearths before the assault) | "The living first": the Seventh's war plan protects the Academy before striking cells |
 | `ans.sensei.sensei_3` | Ch 25 to 31, level 6, a training hangout | "There was a third of us that night. I sent them back. Should I have?" | yes, one of you lived / no, you needed them / ask them, not me | Honesty | Ch 41 (the memorial: they stand next to `sensei_3`, or apart) | "Ask them": they finally talk to `sensei_3` (ensemble scene) |
+
+**Ch 53.** The sensei's flame is always the second, after the cord; it overrides a falling-out
+(and a falling-out with the sensei earlier is mended by story at Ch 25.4).
 
 **Unset answers.** Every main-path read of an `ans.sensei.*` flag has an `unset` branch with a
 neutral line (for example Ch 42 with `orders` unset: "My students taught me to explain my orders.
@@ -176,7 +183,7 @@ I'll try"; Ch 22 with `kagari_word` unset: the sensei simply stands behind you).
 
 ### What their lines are for
 
-- **Plot:** the rescue, the bell test, the suspicion, the recommendation, the warning, the secret
+- **Plot:** the rescue, the cord test, the suspicion, the recommendation, the warning, the secret
   training, the archive, the war council, the succession.
 - **Clue (lineage):** the song reaction, the persimmon, the stone. Must read identically in both
   lineages until Ch 48.

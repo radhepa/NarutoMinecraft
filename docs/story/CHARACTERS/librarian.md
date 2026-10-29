@@ -28,7 +28,9 @@
   swear never to repeat either. The librarian's family kept a hidden notebook: a true history
   of the Quiet Ending as the grandmother remembered it, and the song with its old words.
 - She files the Academy aptitude scrolls by shelf mark (`Leaf 7-iii`) and puts a small brushed circle
-  beside a child who "might need a little more". She means it kindly in every save. The library also
+  beside a child who "might need a little more". She means it kindly in every save. The library
+  also files the border outposts' entrance tests with the aptitude scrolls, so border children are
+  on her shelves too. The library also
   files the Academy's exam-hall duty rosters, which list the finals' guard posts (one of the routes
   by which a rotation could leak, true in every save).
 - She is nervous by nature around authority and around the founding history.
@@ -44,7 +46,11 @@
 her thread flickers: she is hiding something. In every save she is (her heritage, and after Ch 25.3
 the page's contents), so the flicker shows in every rotation, never says what, and **never goes out
 before Ch 39 or 40**. Bound, her thread to the player reads as a normal two-way thread. Her tie to the
-porter is never visible (the porter is never at 6+ with the player).
+porter is never visible (the porter is never at 6+ with the player). Her flag is `hides:family_history`.
+The flicker is one steady state from a single `hides:` bond flag, never line by line, and it
+is not a lie detector: it means *hiding*, nothing more. Each of the four candidates carries exactly
+one `hides:` flag of the same kind, from the start of the game until Ch 39/40, in every save. Their
+daily schedules and night movements are identical in every save until Ch 39.
 
 ### Everything before Ch 39 is identical in both tracks
 
@@ -86,12 +92,13 @@ porter is never visible (the porter is never at 6+ with the player).
 
 ### If bound (the voice)
 
-- **Wants:** the truth told and the Kagari restored, "even by fire". For years the leader wrote to
+- **Wants:** the truth told and the Kagari restored, "even by fire". For sixteen years the leader wrote to
   her like a cousin, signing as "a fellow keeper of memory", and told her he was finding the lost
   ones before the Leaf could seal them too.
 - **Fears:** that he lied; that the children she circled went to nurseries; that the player was one
   of them (she knew, from his letters, before the player came to the Leaf).
-- **Secret:** since about Y-10 she sent him the shelf marks and circled names of gifted children; the
+- **Secret:** since about Y-10 (by an old east-road carter until Y-6, through the porter since) she
+  sent him the shelf marks and circled names of gifted children; the
   exam-hall duty roster for the finals (Ch 19's gap); the news, from the Sixth's clerk, that the
   archive would be open (Ch 37); and, after the porter fell (Ch 28), her own "cousin" letters by the
   ordinary post.
@@ -107,13 +114,13 @@ porter is never visible (the porter is never at 6+ with the player).
 - **Ch 38:** the list's notation is shelf marks with brushed circles.
 - **Ch 39 reveal:** the library at night, among the aptitude scrolls; the cut page's copy in her
   sleeve. "My grandmother was one of the twenty-seven. She whispered our real name to me once and
-  never again. He wrote to me for years like a cousin. He said he was finding the lost ones. I gave
+  never again. He wrote to me for sixteen years like a cousin. He said he was finding the lost ones. I gave
   him children, and I told myself I was giving them home." The page, at last: "It listed the
   families. I gave him the families."
 - **Fate:** *arrested*: the notebook goes to the archive; she asks to teach the old songs to the
   restored house from her cell (allowed if the player asks the Seventh). *Turned* (she wishes to make
   amends, so turning does not need friendship 4): she keeps writing to the leader, now false news,
-  and Ch 51 opens with one district's anchors already broken. Either way, Ch 55's ruling: pardon (she
+  and Ch 51a opens with one district's anchors already broken. Either way, Ch 55's ruling: pardon (she
   keeps the archive under watch), exile (she leaves her notebook to the house), or service (she
   teaches the song to every new member, for life).
 
@@ -166,7 +173,7 @@ porter is never visible (the porter is never at 6+ with the player).
 | The duty roster as a leak route | `twist.traitor = librarian` and Ch 39 |
 | The letters from "a fellow keeper of memory" | `twist.traitor = librarian` and Ch 39 |
 | That she knew the player was a nursery child before Ch 5 | `twist.traitor = librarian` and Ch 39 |
-| The number nine | Only the bound Ch 25 slip line |
+| The number nine | Only the bound Ch 25.1 slip line |
 | The alibi details | Only through `side.c.returned_book` or the case board |
 
 ### Questions for the player
@@ -178,11 +185,11 @@ porter is never visible (the porter is never at 6+ with the player).
 | `ans.librarian.history` | Level 4 | "Who should write history: the people who won, or the people who remember?" | The ones who remember / both, side by side / whoever's honest | Knowledge, honesty | Ch 40's speech; her history of the Leaf's preface (epilogue) | Innocent: her history's shape. Bound: the reason she gives in 39c | "I thought he was the one who remembered." |
 | `ans.librarian.lie` | Level 5 | "Have you ever lied to protect someone?" | Yes, and I'd do it again / Yes, and I regret it / No | Tests honesty; she is asking about herself | Ch 39 or 40 | "Again": she trusts the player with the notebook sooner. "Regret": she confesses (bound) without the chase if accused with only one proof | "You said you'd do it again. So would I. That's the worst thing I know about myself." |
 | `ans.librarian.name` | Level 6 | "If you found out your family had another name once, would you take it back?" | Yes / No, I'm who I've become / I'd carry both | The heart of her and of the player's future | Ch 46 (the house's founding) | "Both": she proposes the restored house keep the renamed families' Leaf names beside the old one | "He said I could have it back. I wanted it so much I didn't ask the price." |
-| `ans.librarian.fire` | Level 7 (Chunin) | "Is it ever right to burn something to make people see it?" | Never / Only your own things / Sometimes nothing else works | Tests her secret creed ("even by fire") | Bound: Ch 39 opens with it. Innocent: Ch 51 (she saves the library's histories from the fire) | If "sometimes", she worries for the player and warns the keeper to check the archive door (both tracks) | "You said never. You were right and I wasn't listening." |
+| `ans.librarian.fire` | Level 7 (Chunin) | "Is it ever right to burn something to make people see it?" | Never / Only your own things / Sometimes nothing else works | Tests her secret creed ("even by fire") | Bound: Ch 39 opens with it. Innocent: Ch 51a (she saves the library's histories from the fire) | If "sometimes", she worries for the player and warns the keeper to check the archive door (both tracks) | "You said never. You were right and I wasn't listening." |
 | `ans.librarian.song` | Ch 25.3 if she comes; else level 6 (Ch 26 to 32). Same in both tracks | "Will you sing it for me? Just once, so I know it's real." | Sing / Not yet / Teach me the words first | Kindness | Innocent: she sings with the player at the memorial (Ch 41). Bound: she sings it alone in her cell (heard in Ch 54) | — | "I asked you to sing it so I could tell him how it sounded. I didn't. I kept that one." |
 | `ans.librarian.read` | Ch 5 (level 0) | "Can you read well? Some children from... far away never had the chance." | Yes / a little / they taught us numbers, not words | Kindness; "numbers" is the nurseries (identical line in both tracks) | Her book gifts are pitched to the answer; Ch 39 (bound): "You told me they taught you numbers. I knew which number" | "A little": she starts a reading hour the player can attend (life, studied_together) | — |
 | `ans.librarian.shelf` | Level 2 | "If someone wrote a book about you, which shelf would it go on?" | Adventures / history / the lost-and-found box / it isn't written yet | Imagination | Epilogue: her history of the Leaf (innocent) or a bound copy she sends from her cell (bound) shelves the player's chapter there | — | — |
-| `ans.librarian.circle` | Level 3 (after Ch 7) | "If someone had put a little circle by your name, meaning 'needs more', would you want to know?" | Yes / no / only if they'd help | Honesty; identical in both tracks before Ch 39 | Innocent: she shows the player their own aptitude scroll, with a circle (Ch 40). Bound: Ch 39, the circle beside S-114's shelf mark on the list | — | — |
+| `ans.librarian.circle` | Level 3 (after Ch 7) | "If someone had put a little circle by your name, meaning 'needs more', would you want to know?" | Yes / no / only if they'd help | Honesty; identical in both tracks before Ch 39 | Innocent: she shows the player their own aptitude scroll, with a circle (Ch 40). Bound: Ch 39, the circle beside your own shelf mark on the list | — | — |
 | `ans.librarian.who_sang` | Level 4 (Paper Trail) | "Who sang to you when you were small? Everyone has someone." | I don't remember / someone in a house with a tree / no one | Her own grandmother; a small confession back ("Mine did. Once") | Ch 25.3 (both tracks): she starts with it. Bound: Ch 39c adds the answer column | "A tree": she goes very still (both tracks; a fair tell of her heritage, not of the voice) | — |
 
 ### What their lines are for

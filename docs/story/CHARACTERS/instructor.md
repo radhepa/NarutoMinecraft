@@ -61,7 +61,8 @@ room of children calm (Ch 51 is that day, and it is).
 | | |
 |---|---|
 | `twist.fourth_fate = crippled/taken` | They share the Academy with the Fourth (who teaches history); comic and tender scenes together |
-| `twist.fourth_fate = falls` | In Ch 19 they lead the Academy children out while he covers them on the arena floor; at the Akimichi farewell feast (Ch 20) they keep the children fed and busy; they speak at the statue's unveiling (Ch 21) |
+| `twist.fourth_fate` (all fates) | In Ch 19 the attack begins at the opening lantern-lighting; they lead the Academy children down the east stair while the Fourth carries the smallest ones down beside them, and he is hit there (falls: he dies on that stair, shown in the cutaway). |
+| `twist.fourth_fate = falls` | At the Akimichi farewell feast (Ch 20) they keep the children fed and busy; they speak at the statue's unveiling (Ch 21) |
 | `ans.instructor.face` | Ch 42 and Ch 55 callbacks |
 | `ans.player.ramen` | They order it for you whenever they pay |
 

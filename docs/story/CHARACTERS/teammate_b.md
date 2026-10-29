@@ -70,6 +70,13 @@ else* is the last push of their arc: they were never the point, and they choose 
 | Last Bonfire | Faces the parent (Ch 51) with your question and decides what they owe them |
 
 **Endings and variants.**
+- **Any departure from Ch 8 on** (a falling-out or a low bond): b is replaced by a stand-in lent by
+  `sensei_2` (classmate_c, else classmate_d). If b has already left by Ch 13, the stranger approaches
+  them anyway (outside the squad, b is easier to reach), and Ch 26 plays as *left*.
+- **The well rule (Ch 26 *nearly*):** b turns back on the spot only if you made the `drag_back`
+  promise and their trust is 45 or more; `ans.teammate_b.grandma` (any answer; **unset** adds
+  nothing) adds 10 trust before the bridge. Otherwise the chase, the fight and the talk-down.
+- **Ch 51a:** b holds the market street with `squad4_b` and the dogs; the parent comes there.
 - **Ch 13 → Ch 26 path** (`story.teammate_b.path`):
   - *stayed* (trust 60+): b brings you the second note; together you trap the bridge. Ever after b
     says "we" about every danger. Ch 51: steady, asks the question calmly.
@@ -77,7 +84,7 @@ else* is the last push of their arc: they were never the point, and they choose 
     `reconciled`-weight moment when they come back. Ch 51: shaky; they look at you before they speak.
   - *left* (under 30): b quits the squad (`remove_from_squad story`), trains alone, sleeps badly.
     Their return quest (Ch 32) needs `friendship 4`; if never done, b returns in Ch 49 when the
-    second's truth makes Yūgure impossible, and fights in Ch 51 apart from you (no shared line in 51.3).
+    second's truth makes Yūgure impossible, and fights in Ch 51 apart from you (no shared line in 51a).
 - **Ch 51a parent scene** (the parent in road clothes, a sinking sun in soot on the inside of the
   wrist, an ash-violet scarf pulled down) reads `ans.teammate_b.ask` (the question b asks; **unset**:
   b asks "why") and
@@ -95,7 +102,9 @@ else* is the last push of their arc: they were never the point, and they choose 
   Ch 23): at 24.4 "Do the thing! The fire thing!", and at 25.2 "Knew it. Knew it since the school."
   The fall line itself reads `ans.teammate_b.drag_back` (**unset**: "Don't you dare walk off—").
 - **Thread Sight on them** (from Ch 24, level 6+): the thread frays toward the bridge on the nights
-  they go there; it flickers when they hide the stranger's notes (Ch 26 *nearly*, until the well).
+  they go there: a scripted `thread_floor` before the bridge in Ch 26, in every branch (squad4_b also
+  tells you b has been at the bridge). A steady flicker while they carry `hides:notes` (the
+  stranger's notes, Ch 26 *nearly*, until the well).
   On the *left* path it thins to one strand that never quite breaks.
 - **Unison technique (Blaze tier, Ember Link): "Pack Fire".** You, b and the pup move as one flame:
   three ember-gold rushes from three sides, the pup leading, landing at once; the pup's bark sets
@@ -155,9 +164,9 @@ Voice samples, not shipped lines:
 | Id | When | Question | Options | Honours / tests | Remembered | Changes them |
 |---|---|---|---|---|---|---|
 | `ans.teammate_b.parent_first` | Ch 6.2 | (after the confidence) — the player's reply | promise / it isn't your fault / what were they like? | loyalty (promise), kindness (not your fault), *what were they like* tests (pried-adjacent, but they answer: "They laughed loud. Like me.") | Ch 26 (they repeat your words to the stranger); Ch 51 | Sets what they cling to: your promise, their innocence, or a memory of laughter |
-| `ans.teammate_b.come_back` | B1 bond (L3) | "Do you think people who leave can ever come back?" | yes / only if they're sorry / no | courage, loyalty | Ch 26 (their own return), Ch 51 | Their verdict on the parent |
+| `ans.teammate_b.come_back` | B1 bond (L2) | "Do you think people who leave can ever come back?" | yes / only if they're sorry / no | courage, loyalty | Ch 26 (their own return), Ch 51 | Their verdict on the parent |
 | `ans.teammate_b.parent_good` | B2 bond 1 (L4) | "Do you think I'd be a good parent? Someday. Better than mine?" | yes / you already care like one (the pup) / you don't have to be anything like them | family | Ch 51 last line to the parent; epilogue (b with a child, post-game) | Their sense of what they're not |
-| `ans.teammate_b.ask` | B2 bond 2 (L5) | "If you could ask them one thing, what would it be?" | why / are you sorry / do you remember me | courage | Ch 51.3: b asks it | The parent's answer (why: Yūgure's creed, the village failed them; sorry: yes or silence; remember: they name the pup's predecessor, a dog b had at three) |
+| `ans.teammate_b.ask` | B2 bond 2 (L5) | "If you could ask them one thing, what would it be?" | why / are you sorry / do you remember me | courage | Ch 51a: b asks it (**unset**: why) | The parent's answer (why: Yūgure's creed, the village failed them; sorry: yes or silence; remember: they name the pup's predecessor, a dog b had at three) |
 | `ans.teammate_b.drag_back` | Ch 16 night watch (L5) | "If I ever start walking away, drag me back." | I promise / no — you won't leave / I'll walk with you instead | loyalty (promise and walk-with both honour it) | Ch 24 fall line; Ch 26 *nearly* line ("You promised"); Ch 32 return ("You took your time") | *promise*: they test it; *you won't leave*: they believe it, and it holds them on the *nearly* path; *walk with you*: they laugh and never forget it |
 | `ans.teammate_b.forest_voice` | Ch 16.8 | "That's the voice from the bridge. Do we tell sensei?" | tell sensei / keep it between us | duty vs loyalty | Ch 26 (the sensei is ready, if told: `stayed` gets a sensei ambush) | Whether they trust adults with it |
 | `ans.teammate_b.pup_name` (new) | Ch 2 or first talk (L1) | "The pup needs a real name. You pick." | a food / a jutsu sound / your name for them / "Pup" | playful | Every scene the pup is in; Ch 51 (the parent asks its name) | Filler with payoff: the pup's name token `{pet:role:teammate_b}` |
@@ -165,7 +174,7 @@ Voice samples, not shipped lines:
 | `ans.teammate_b.cloak` (new) | Ch 26 *nearly* or *left* return | "What would you have done if I'd tied it on?" (the scarf) | come after you / let you go / tie one on too, to drag you out | loyalty | Ch 51 (if the parent offers b a scarf again, b answers with yours) | |
 | `ans.teammate_b.parent_hate` (new) | Jonin, level 7 talk (worries), after Ch 40 | "The village erased a whole clan and called it peace. Maybe my parent wasn't wrong to leave." | they weren't wrong to be angry / they were wrong to leave you / both | honesty | Ch 51 parent scene (b quotes you) | Lets b grant the parent's grievance without excusing them |
 | `ans.teammate_b.squad4` (new) | Genin, after a squad4_b brawl (L3) | "squad4_b says their dog's braver than mine. Settle it." | yours / theirs / have a race and find out | playful, filler with payoff | Ch 33 (a race at the Jonin promotion), Ch 51 (the two dogs side by side) | A rivalry that keeps b anchored to the village |
-| `ans.teammate_b.grandma` (new) | Life event: the grandmother sick (L4) | "If she goes, I've got nobody. Don't say I've got you, that's cheesy." | you've got me anyway / you've got the squad / you've got the pup, at least | family | Ch 26 (on the *nearly* path, your answer is what stops them at the well) | Who b counts as family |
+| `ans.teammate_b.grandma` (new) | Life event: the grandmother sick (L4, before Ch 26) | "If she goes, I've got nobody. Don't say I've got you, that's cheesy." | you've got me anyway / you've got the squad / you've got the pup, at least | family | Ch 26: any answer adds 10 trust before the bridge (the well rule); **unset**: nothing | Who b counts as family |
 | `ans.teammate_b.stranger_face` (new) | Ch 49, after the second's truth (L6) | "She knew my parent. Should I ask her about them, or is that like forgiving her?" | ask her, knowing isn't forgiving / don't, it's hers to offer / I'll come with you | honesty | Ch 51 (b knows the parent's side, or not, before the meeting) | Prepares b for Ch 51 |
 | `ans.teammate_b.after` (new) | Ch 54 Morning | "So. Now what?" | ramen / sleep for a week / go see your grandmother | warm, filler | Epilogue | Last shared ritual |
 
@@ -202,7 +211,8 @@ reconciliation; on *left*, until the return quest.
 
 - `ans.teammate_b.pup_name` (food / jutsu / player_choice / pup) and the token `{pet:role:teammate_b}` (request to dialogue session)
 - `ans.teammate_b.squad4` (yours / theirs / race)
-- `ans.teammate_b.grandma` (me / squad / pup)
+- `ans.teammate_b.grandma` (me / squad / pup; unset: no trust bonus)
+- `hides:notes` (bond flag on teammate_b, Ch 26 *nearly* until the well)
 - `ans.teammate_b.stranger_face` (ask / wait / come_with)
 - `ans.teammate_b.loud` (dont_stop / sometimes / as_needed)
 - `ans.teammate_b.cloak` (come_after / let_go / drag_out)

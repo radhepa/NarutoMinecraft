@@ -20,7 +20,9 @@
 | First / last | Ch 1 ("Another one from nowhere") / Ch 55 (epilogue) |
 
 **Role-fixed in every save:** proud; wants to surpass you; on another squad; the Ch 2 spar, the
-Ch 19 finals bout interrupted by the attack (and they cover you if both teammates are under 4);
+Ch 19 finals bout, scheduled last and never fought (the attack starts at the opening lantern-lighting;
+"You owe me a match" pays it in the epilogue); they drag you clear in Ch 19 if both teammates are
+under 4; their awakening in the Ch 29 spar with you;
 the Ch 29 spar; the Jonin trial pair (Ch 33); the family ceremony (Ch 43); the flame in Ch 53.
 
 ## Arc
@@ -43,7 +45,7 @@ worth more than strength earned, which would make their whole life a mistake.
 | Knowledge | When |
 |---|---|
 | You came from "the camps" | Ch 2, if `ans.rival.fall` = truth |
-| You lost the finals bout to the smoke, not to them | Ch 19 (they never let it go) |
+| Your finals bout was never fought | Ch 19 (they never let it go: "You owe me a match.") |
 | The rumour of your fire | Ch 29 |
 | What the gift is (that it needs consent) | Ch 29 (if you tell them) or Ch 40 |
 | Kagari | Ch 40 |
@@ -55,14 +57,14 @@ worth more than strength earned, which would make their whole life a mistake.
 |---|---|
 | Cinders | Contempt for "nobodies", then a crack: you fell like someone who'd been fighting longer |
 | Paper Trail | Rivalry as their only way to talk to you |
-| Dusk | The finals bout: their best, stolen by the attack; they may cover you |
+| Dusk | The finals bout they trained for, never fought; they may drag you clear |
 | Embers | Hurt pride at the gift; asks what's left when the people are gone (Ch 29) |
 | Ashes | Fights better beside you (Ch 33); lets you see their family (Ch 43) |
 | Last Bonfire | Offers their flame (Ch 53): the proudest person in the village choosing to give |
 
 **Endings and variants.**
-- **Ch 19 cover:** with both teammates under level 4, the rival takes the blade meant for you
-  (`saved_by_them`). Their Ch 20 line: "Don't thank me. I want our match back."
+- **Ch 19 cover:** with both teammates under level 4, the rival drags you out of a collapsing tier
+  of the stands (`saved_by_them`; no wound). Their Ch 20 line: "Don't thank me. You owe me a match."
 - **Ch 51b, fixed in every save:** on the Rock's stair the rival holds the way against the strongest
   hearth so you can climb: "Go. You owe me a match." They are badly hurt and live; the match is
   paid in the epilogue (`ans.rival.spar_last`).
@@ -78,8 +80,9 @@ worth more than strength earned, which would make their whole life a mistake.
 - **Romance** (teen and up): a rival romance is slow (pride); the confession is a challenge ("Spar
   me. If I win, you hear something."). Never in the child stage.
 - **Thread Sight on them** (from Ch 24, level 6+): their thread is thin, taut and bright, like
-  wire; it flickers when they hide being hurt (the Ch 43 family, a loss to you). Ch 29's spar is
-  their first look at the gift: they ask if you can see what they think; you can't, and say so.
+  wire; it holds a steady flicker while they carry `hides:family` (the empty seats at graduation,
+  until Ch 43). Ch 29's spar is their awakening and their first look at the gift: they ask if you
+  can see what they think; you can't, and say so.
 - **Unison technique (Blaze tier, Ember Link): "Twin Strike".** The only unison built from two
   people refusing to be outdone: each of you attacks a beat after the other, and each blow is
   Kindled by the other's flame, so the chain only ends when one of you yields (neither does).
@@ -98,18 +101,19 @@ worth more than strength earned, which would make their whole life a mistake.
 - **Child:** clipped, cutting, few words; "Hmph" is allowed once a chapter, no more; questions
   disguised as insults.
 - **Teen:** the same clipped voice with more vocabulary; compliments that sound like complaints
-  ("That was barely adequate. Again.").
+  ("That was barely adequate. Is that all?").
 - **Adult:** dry, loyal, still competitive about trivial things (who orders faster at Ichiraku);
   says "we" exactly once (Ch 53).
 - **Never:** says thank you plainly before Ch 43; cries in front of you; brags about their clan
   (peeve); asks personal questions directly (peeve: nosiness) — they ask sideways.
-- **Tics:** crossed arms; "Again." after any spar; keeps score of everything aloud.
+- **Tics:** crossed arms; challenges and questions dressed as insults ("Is that all?", "You call
+  that a fall?"); never keeps score (that is `sensei_2`'s habit, and the rival hates it).
 
 Voice samples, not shipped lines:
 - (child, Ch 1) "Another one from nowhere."
 - (child, Ch 2) "Who taught you to fall like that? Nobody falls like that here."
 - (teen, Ch 29) "Is it yours, or theirs?"
-- (teen, Ch 20) "Don't thank me. I want our match back."
+- (teen, Ch 20) "Don't thank me. You owe me a match."
 - (adult, Ch 43) "Why did you come?"
 - (adult, Ch 53) "You said I'd be what's left. Then take it."
 
@@ -117,12 +121,12 @@ Voice samples, not shipped lines:
 
 | Depth | Topics |
 |---|---|
-| 0 to 2 | Training, technique, the score, who's strongest in the year |
+| 0 to 2 | Training, technique, who's strongest in the year, challenges |
 | 3 to 4 | Their clan's expectations; the sibling; the police quarter |
 | 5 | Values: strength earned; family as duty |
 | 6 | The dream as it changes |
 | 7 | Worries: being ordinary; that giving makes you weak |
-| Shared memory | The Ch 2 spar, the stolen finals, the Rock spar (Ch 29), the trial (Ch 33) |
+| Shared memory | The Ch 2 spar, the finals that never happened, the Rock spar (Ch 29), the trial (Ch 33) |
 
 ### Never reveal before
 
@@ -140,13 +144,13 @@ Voice samples, not shipped lines:
 | `ans.rival.fall` | Ch 2.3 | "Who taught you to fall like that?" | the truth, the camps / nobody / you'll have to beat it out of me | truth earns respect; *nobody* reads as bragging-adjacent (they don't believe you); the dare raises rivalry | Ch 20, Ch 43 ("You told me about the camps when we were eleven. I never told anyone.") | Truth: the first crack; dare: a pure rivalry track |
 | `ans.rival.theirs` | Ch 29.3 | "If your strength comes from other people, what's left when they're gone?" | my memory of them / nothing, so I won't let them go / me, the person they chose to trust | strength (all three answer it); *the person they chose* honours it most for the proud | Ch 53 flame line | How they come to see strength |
 | `ans.rival.why_came` | Ch 43.2 | "Why did you come?" | because you'd have come for me / because I wanted to / because you asked | family | Ch 53 second half | They admit the bond (or not) |
-| `ans.rival.score` (new) | Genin, after a spar (L2) | "Keep score with me. Every spar until we're Jonin. Deal?" | deal / only if I keep the book / no, I'd rather just train with you | rivalry vs warmth | Ch 33 (they read the final tally after the trial) | *no*: the rival is stung, then trains with you weekly (a ritual) |
+| `ans.rival.score` (new) | Genin, after a spar (L2) | "My sensei keeps a tally against yours. Pathetic. Do you think counting makes anyone better?" | no, only trying does / it helps some people / your sensei's just lonely | rivalry vs warmth | Ch 33 (their trial line: "I didn't count. I just didn't lose."); Ch 54 (sensei_2's notebook: the rival keeps it) | *lonely*: they soften toward sensei_2 and keep the notebook after Ch 54 |
 | `ans.rival.sibling` (new) | Ch 18, after `side.b3.rivals_sibling` | "You trained my sibling. Behind my back." | they asked me / they'll be better than both of us / you should've trained them | family | Ch 43 (the sibling attends the ceremony, or not) | *you should've*: the rival trains the sibling; the sibling comes to Ch 43 |
-| `ans.rival.finals` (new) | Ch 20.4 or Chunin talk (L3) | "Who would have won the finals?" | you / me / we'll never know, so let's find out | pride | Ch 33 trial line; epilogue spar | *let's find out*: a ritual spar on the Rock each year |
+| `ans.rival.finals` (new) | Ch 20.4 or Chunin talk (L3) | "We never fought. Who would have won?" | you / me / we'll never know, so let's find out | pride | Ch 33 trial line; epilogue spar | *let's find out*: a ritual spar on the Rock each year |
 | `ans.rival.clan` (new) | Ch 40 aftermath (L6) | "My clan's elder forged it. Do I carry that?" | no, you weren't born / yes, we all carry the village's / carry it by making it right | family, honesty | Ch 40 council break; Ch 51 (they fight beside the Kagari house's members) | Whether they stand up in the council |
 | `ans.rival.ordinary` (new) | Jonin, level 7 (worries) | "What if I'm just... ordinary? Good, but ordinary." | then be the best ordinary there is / you're not / ordinary people held the wall in the war | honesty | Ch 51 wall scene (if "ordinary people" — they say it to the defenders) | Settles their fear |
 | `ans.rival.graduation` | Ch 7.3b | (the rival alone after the speech; nobody came for them) | go to them / let them be | *go*: they snap "What?", then don't leave; respect for leaving them their pride if *let go* | Ch 43.1 ("You came over at graduation. I hated it. I've thought about it every year." / "You left me alone at graduation. That was the kindest thing anyone did that day.") | Whether the Ch 43 invitation is a return of a favour or a first reach |
-| `ans.rival.forest` (new) | Ch 16, after the ravine glimpse (L3) | "You saw my eyes. Don't tell anyone until I show them." | I won't / you should be proud of them / they suit you | honesty, pride | Ch 19 finals (they reveal them with a glance at you) | *won't*: trust +; *proud*: they're annoyed and pleased |
+| `ans.rival.forest` (new) | Ch 29, after their awakening in the spar (L4) | "You saw it. Don't tell anyone until I show them." | I won't / you should be proud of it / it suits you | honesty, pride | Ch 33 trial (they show it to the examiners with a glance at you) | *won't*: trust +; *proud*: they're annoyed and pleased |
 | `ans.rival.team` (new) | Genin, after `sensei_2`'s teasing (L3) | "Is your sensei as embarrassing as mine?" | worse / mine eats apples to look mysterious / yours is great, actually | playful (filler) | A running joke; Ch 42 (sensei_2 at the Seventh's naming, and the rival's line) | Small: their softening toward their own sensei |
 | `ans.rival.give_up` (new) | Ch 31 aftermath (L5) | "You stood up in front of the whole council for a clan that isn't yours. Why?" | because they were right / because no one stood up for mine / because I could | loyalty, family | Ch 40 (the rival stands in the council for the truth) | Teaches them public courage |
 | `ans.rival.spar_last` (new) | Ch 50, before Dusk (L6) | "If we live through tomorrow, you owe me a real finals." | deal / we'll call it a draw forever / you'll win | rivalry | Ch 55 epilogue: the finals rematch on the Rock, and its result (or none) | The last image of the rivalry |
@@ -154,7 +158,7 @@ Voice samples, not shipped lines:
 
 ### What their lines are for
 
-- **Functions:** bond, rivalry (the spar pools and the score), mirror (strength earned vs given:
+- **Functions:** bond, rivalry (the spar pools and the challenges), mirror (strength earned vs given:
   the thematic opponent of the gift who becomes its proudest giver), comedy (pettiness at
   Ichiraku), a plot body in battles (Ch 19, 33, 51).
 - **States:** rivalry is not dislike (BONDS §2): greeting pools by *rivalry* height as well as level.
@@ -165,30 +169,31 @@ Voice samples, not shipped lines:
 
 ### Variants
 
-**Archetype skins (Varied).** Role-fixed: pride, the score, another squad, the family that looked
+**Archetype skins (Varied).** Role-fixed: pride, the challenges, another squad, the family that looked
 past them, the Ch 53 flame. A Varied rival rolled as gentle or warm keeps a proud *stance* in the
 rival role (pride is lifted to at least .5 for the role) but the cover changes:
 
 | Archetype group | Their pride shows as | Ch 43 family beat |
 |---|---|---|
-| Proud, stern, meticulous (Classic) | Contempt, scorekeeping | A clan ceremony nobody in the family invited friends to |
+| Proud, stern, meticulous (Classic) | Contempt, cutting challenges | A clan ceremony nobody in the family invited friends to |
 | Fiery, bold, adventurous | Loud challenges, showing off | A family dinner where they're compared to a sibling |
 | Reserved, thoughtful, curious | Quiet superiority, books | A family that sends a letter instead of coming |
 | Warm, playful, gentle | Joking competition that hides hurt | A household too busy (a shop, a clinic) to notice |
 
-Clan: an Uchiha rival awakens the Sharingan in the Forest of Death (Ch 16.5), glimpsed by the player
-across the ravine as two red points in the dark; they never mention it until the finals; a
+Clan: an Uchiha rival awakens the Sharingan's first tomoe in the Ch 29 spar with you (a Varied rival:
+their clan art's first real strength); a
 rival of another clan shows that clan's first-tier art; a clanless rival's pride is in being
 self-taught.
 
 ## New flags
 
 - `ans.rival.graduation` (went / let_go)
-- `ans.rival.forest` (wont_tell / proud / suit)
+- `ans.rival.forest` (wont_tell / proud / suit; asked in Ch 29)
 - `ans.rival.team` (worse / apples / great)
 - `ans.rival.give_up` (right / no_one / could)
 - `ans.rival.spar_last` (deal / draw / you_win)
-- `ans.rival.score` (deal / keep_book / just_train)
+- `ans.rival.score` (trying / helps_some / lonely)
+- `hides:family` (bond flag on the rival until Ch 43)
 - `ans.rival.sibling` (they_asked / better / should_have)
 - `ans.rival.finals` (you / me / find_out)
 - `ans.rival.clan` (not_born / carry / make_right)

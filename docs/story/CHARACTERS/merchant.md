@@ -25,13 +25,15 @@
 
 - They owe money to a lender in the east (it was a bad harvest year and a dead mule). They talk
   about it as a joke.
-- They keep a **delivery book** of every stop, orphanages and waystations included, in their own
+- They keep a **delivery book** of every stop, border-village orphanages and waystations included, in their own
   road-stop shorthand (`E3 · two · bright`, a tick with a tail). They show it off in Ch 11 because
   they are proud of it: "Never lost a delivery in eleven years."
 - They hire the player's squad again and again (Ch 11, Ch 14, and board missions that roll them as
   the client). They like the player especially, and say it's because the player eats like a
   teamster.
 - Their cart had a false floor; chakra paper went east in it.
+- **Ch 11.3, every save:** the axle breaks and the merchant repairs it on the spot with their own
+  tools, leaving their tool marks (the same marks the Chunin alibi check compares).
 - **Their every-save secret**: old debts, and years ago (before they met the player) they smuggled
   for bandits on the eastern roads to pay them: salt, stolen bolts of silk, once a crate of swords.
   It is true whether or not they are the voice.
@@ -48,7 +50,11 @@ smuggling, and the waystation night), so the flicker cannot single out the voice
 and **never goes out before Ch 39 or 40**. A player who asks gently at level 7 hears the bandit story
 in every save; the flicker stays in every save, because the waystation night is still held back.
 Bound, their thread to the player reads as a normal two-way thread. Their tie to the porter (who
-loaded crates onto their cart) is never visible.
+loaded crates onto their cart) is never visible. Their flag is `hides:old_roads`.
+The flicker is one steady state from a single `hides:` bond flag, never line by line, and it
+is not a lie detector: it means *hiding*, nothing more. Each of the four candidates carries exactly
+one `hides:` flag of the same kind, from the start of the game until Ch 39/40, in every save. Their
+daily schedules and night movements are identical in every save until Ch 39.
 
 ### If innocent
 
@@ -73,7 +79,8 @@ loaded crates onto their cart) is never visible.
 
 - **Wants:** to be out of debt and safe; the money was the only way.
 - **Fears:** being found out; the children under the floor that one time.
-- **Secret:** since about Y-10 they carried paper, then paper and names (orphanage stops from the
+- **Secret:** since about Y-10 (sixteen years by Ch 39; messages by an old east-road carter until
+  Y-6, through the porter since) they carried paper, then paper and names (orphanage stops from the
   delivery book), and once children, for three times the pay, and told themselves each time was the
   last; the finals' guard posts from the vendor stall permits (Ch 19); the news, heard at the gate
   from the Sixth's clerk, that the archive would be open (Ch 37); and after the porter fell (Ch 28),
@@ -85,7 +92,7 @@ loaded crates onto their cart) is never visible.
 - **The slip scene (Ch 25.1):** the note: "For the ninth of my favourite customers. Eat the persimmons
   first; they don't keep."
 - **The failed alibi:** the carpenter is real, but the floor in their cart carries the merchant's own
-  tool marks (the same marks as their repaired cart wheel in Ch 11).
+  tool marks (the same marks as their axle repair in Ch 11.3).
 - **Ch 38:** the list is in road-stop shorthand with tailed ticks.
 - **Ch 39 reveal:** their cart in the rain at the east gate, half packed to run. "It was paper. Then
   it was paper and names. Then once there were children under the floor, and they paid me three times
@@ -93,7 +100,7 @@ loaded crates onto their cart) is never visible.
   waystation, I didn't get threatened. I got paid." They kept hiring the squad because they liked
   it, and because being close to it kept them close to the news; they cannot say which mattered more.
 - **Fate:** *arrested*: the delivery book helps the A-rank hunts. *Turned* (needs
-  `friendship [merchant, 4]`): they run false cargo to Yūgure, and in Ch 51 a wave of the assault
+  `friendship [merchant, 4]`): they run false cargo to Yūgure, and in Ch 51a a wave of the assault
   arrives without its cinder bombs. Ch 55's ruling: pardon (they open the shop under watch), exile,
   or service (they drive supplies to the rebuilt border posts for life).
 
@@ -161,7 +168,7 @@ loaded crates onto their cart) is never visible.
 | `ans.merchant.mule` | Level 2 (after Ch 14) | "I've got a new mule. Name her." | A food name / a Hokage's name / Partner | Life (filler) | They use the name forever; Ch 39 or 40 (the mule in the rain or at the new shop) | — | — |
 | `ans.merchant.rich` | Level 3 | "If you were rich, what's the first thing you'd buy?" | A real bed / ramen for everyone / a door with a lock / nothing, I'd save it | Their dream (the shop) | Innocent: the shop's first sale. Bound: Ch 39 | — | "I'd have bought a roof. I bought a cart with a floor under the floor." |
 | `ans.merchant.bandit` | Level 5 (Chunin) | "Do you think a bandit can become an honest man? Asking for a friend." | Yes / only if he pays it back / he already is, if he's asking | Their every-save secret (the old bandit smuggling); identical in both tracks | Level 7 confession of the smuggling; Ch 39c or Ch 40 | "Already is": they confess the bandit years at level 6 instead of 7 | "You said I already was, if I was asking. I stopped asking." |
-| `ans.merchant.scared` | Level 4 (on a road mission) | "What do you do when you're scared on a road?" | Sing / count steps / keep talking, like you / walk closer to my friends | Kindness | Ch 51 (both tracks reach a scene in the war: innocent, they drive supplies; bound and turned, the false cargo) they do what you said | — | — |
+| `ans.merchant.scared` | Level 4 (on a road mission) | "What do you do when you're scared on a road?" | Sing / count steps / keep talking, like you / walk closer to my friends | Kindness | Ch 51a (both tracks reach a scene in the war: innocent, they drive supplies; bound and turned, the false cargo) they do what you said | — | — |
 
 ### What their lines are for
 

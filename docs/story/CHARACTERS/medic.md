@@ -22,7 +22,8 @@
 
 ### In every save
 
-The medic was a nursery-age orphan once: an orphanage on the border burned when they were seven;
+Born ~Y-31; 31 at Y0 ("the hospital's young medic" in Classic, young for the post). The medic was
+an orphan once: an orphanage on the border burned when they were seven (~Y-24);
 strangers in road clothes, soot marks on their wrists, pulled them out three days before the Leaf arrived and kept them a month in a
 camp, kindly, before leaving them at a Leaf outpost. They never knew who the strangers were.
 They became a medic to be the person who arrives in time. They test every rescued child (the Ch 0
@@ -32,10 +33,17 @@ sample) because the hospital found that camp children carry chakra injuries no o
 asking after the strangers who saved them, and keep the replies in the crane jar. It is private,
 not sinister. **The held-back piece, in every save:** the last reply in the jar (an outpost captain
 who saw soot-marked wrists and ash-violet scarves) stays hidden until Ch 39 (bound) or Ch 40
-(innocent), so the flicker never goes out early in any rotation. It matters because, once the player has **Thread Sight** (Ch 24 on), a
-bonded person at level 6 or more who is hiding something shows a flicker in their thread: the
-innocent medic flickers too (the letters), so the flicker alone never convicts them. The bound medic
-flickers for both reasons; Thread Sight shows *that*, never *what*.
+(innocent), so the flicker never goes out early in any rotation. Once the player has **Thread
+Sight** (Ch 24 on), a person bonded at 6 or more who carries a `hides:` bond flag shows a steady
+flicker in their thread. The medic carries exactly one (`hides:outpost_letters`) in every save,
+like every candidate; the flicker is the same in every rotation and is never a lie detector.
+Thread Sight shows *that* they hide, never *what*.
+
+**From Ch 19, in every save,** the medic has begun to suspect that the strangers who saved them were
+Yūgure (the soot marks on the wrists of the attackers they treat at the stadium) and is afraid to ask.
+The suspicion shows only as the same quiet line in every save ("I treated one of them today. The
+mark on his wrist. I've seen it before, I think."); the innocent medic never acts on it before
+Ch 40.
 
 **Wants.** To be the one who arrives in time. **Fears.** Being too late again; being owed to
 anyone. **Habit.** Writes everything down. Folds paper cranes when anxious; the crane stroke on
@@ -43,8 +51,9 @@ each record is a tiny promise ("this one gets better").
 
 ### If bound (`twist.traitor = medic`)
 
-They learned who the strangers were at nineteen, when a letter came: "You were ours once. We need
-only numbers." For six years they sent readings, telling themselves numbers hurt no one and that
+They learned who the strangers were at twenty-one (~Y-10), a new hospital orderly, when a letter
+came: "You were ours once. We need only numbers." For sixteen years by Ch 39 they have sent
+readings (by an old east-road carter until he died in a road accident at Y-6, by the porter since), telling themselves numbers hurt no one and that
 the people who saved them were saving others. They sent your Ch 0 reading. They visited after the
 flare (Ch 3) to report it (and were glad the instructor gave them a reason). They tore the intake
 pages on the night shift (a twenty-minute gap in the surgery roster, which only `squad4_c`'s copy
@@ -54,12 +63,13 @@ pale girl was a child they had measured, years ago, at a border clinic. That bro
 access in every save, as for every candidate: the stadium triage posts list (which names the
 guard posts for the finals), the Sixth's clerk's news that the archive would be open (Ch 37), and,
 after the porter falls (Ch 28), the outpost letters as a channel (used only if bound).
-By Ch 25 they are half ready to be caught; the slip ("better than ninety, for a ninth—") is almost
-a confession.
+By Ch 25 they are half ready to be caught; the slip ("Better than ninety, for a ninth—" and they
+stop, and say "for a Chunin") is almost a confession. At Ch 39: "Sixteen years. Just numbers, I said."
 
 ### If innocent
 
-Everything in "every save" is true and nothing else. The visit was the instructor's request. The
+Everything in "every save" is true and nothing else. The visit was the instructor's request.
+Their Ch 25.1 line: "Your pulse is good. Better than ninety, for a Chunin." The
 pages were torn by the night patient (the Ch 11 smuggler) while they were in surgery all night.
 **The night shift is identical in every save**: the player is sent on an errand across the hospital
 during the window and never sees the medic's station; only `squad4_c`'s surgery roster (Ch 38)
@@ -73,7 +83,8 @@ The diverted supplies' requisition was forged (`side.b3.hospital_supplies` clear
 | Your chakra reading | Ch 0 | Both |
 | The flare (if `ans.medic.flare = told`) | Ch 3 | Both |
 | Your nursery number "Nine" | Before Ch 0 (Yūgure's lists) | **Bound only** |
-| That you can see their thread flicker | Ch 25 onward, if you tell them; both saves react the same ("Then you'll know when I'm lying. Good. Keep me honest.") | Both |
+| That you can see their thread flicker | Ch 25 onward, if you tell them; every save reacts the same ("Then you'll know I'm hiding something. Good. Keep me honest.") | Both |
+| That the strangers may have been Yūgure (a suspicion) | Ch 19 onward | Both |
 | The strangers who saved them were Yūgure | Age 19 | **Bound only**; innocent: Ch 40, when the council makes the nurseries public, they realise it and come to you shaken |
 | The lost child was "theirs" (measured) | Ch 24 | Bound only |
 
@@ -129,7 +140,7 @@ Voice samples, not shipped lines:
 
 | Fact | Not before |
 |---|---|
-| "Nine", the ninth, any count of nine near you | **Only the bound save's Ch 25 slip line**; never in any other save or scene before Ch 39 |
+| "Nine", the ninth | **Only the bound save's Ch 25 slip line**; never in any other save or scene before Ch 39. The innocent Ch 25 line says "ninety" (a pulse, and the parallel line) and nothing else counted near you |
 | Their own orphanage rescue by strangers | Level 5 (both saves; the story is the same) |
 | That the strangers were Yūgure | Bound: Ch 39. Innocent: Ch 40 |
 | That they measured the lost child | Bound only, Ch 39 |
@@ -147,9 +158,9 @@ Voice samples, not shipped lines:
 | `ans.medic.camp_pain` | Level 4, Ch 9 to 14 | "Some camp children say nothing hurts. Do you?" | yes / sometimes / I'm learning not to | — | The war hospital (Ch 51): they ask you to talk to the Valley children with your answer | Their ward design changes (a quiet room) |
 | `ans.medic.owed` | Level 5, Chunin | "If someone saved your life, would you owe them anything they asked?" | yes / only what's right / nothing; it was a gift | Tests their deepest fear | Bound Ch 39c ("You said only what's right. I didn't ask myself that"); innocent Ch 40 | Innocent: they decide they owe the strangers nothing and help hunt the nurseries |
 | `ans.medic.crane` | Level 6, a dango hangout | "I fold one for every patient. Want to fold one for someone?" | for the lost girl / for my teammate / for me | — | Ch 47 or N6: the crane is on her pillow | — |
-| `ans.medic.lost_child` | Ch 25 (after Ch 24) | "She was hollow. Do you think she can come back?" | yes, I'll bring her / I don't know / not without help | Kindness | N6 / Ch 47 | Bound: the question is their confession in disguise |
+| `ans.medic.lost_child` | Ch 25 (after Ch 24) | "She was hollow. Do you think she can come back?" | yes, I'll bring her / I don't know / not without help | Kindness | N6 / Ch 47 | Same line in every save; in the bound save it reads, in hindsight, as a confession |
 | `ans.medic.ruling` | Ch 55 (bound and arrested) or Ch 40 (innocent) | Bound: "What should happen to me?" Innocent: "Would you have believed it, if it was me?" | Bound: pardon / service / exile. Innocent: yes / no / I'd have checked first | Honesty | Bound: weighs on the Ch 55 ruling | — |
-| `ans.medic.sleep` | Ch 4 aftermath (fatigue), level 1 | "How many hours did you sleep? Lie and I'll know." | the truth / round up / I don't sleep well since the camps | Honesty | Ch 21 (they ask again, a year later, and compare) | "The camps": they give you a tea that helps (a small Well Rested item) |
+| `ans.medic.sleep` | Ch 4 aftermath (fatigue), level 1 | "How many hours did you sleep? Round up and I'll know." | the truth / round up / I don't sleep well since the camps | Honesty | Ch 21 (they ask again, a year later, and compare) | "The camps": they give you a tea that helps (a small Well Rested item) |
 | `ans.medic.records` | Ch 12 to 14, level 3 | "Should records ever be private from the people they're about?" | never / sometimes, to protect them / only if they ask | Knowledge, duty | Ch 38 (they open your file to you at the case board, every save) | — |
 | `ans.medic.too_late` | Ch 20 (after the stadium), level 4 | "I was too late for someone today. What do you do with that?" | you carry it / you put it down / you tell someone, like now | Comfort (a hard-news response) | Ch 51 (they say your words back to you over a wounded friend) | Counts as `comfort` for the bond gate |
 | `ans.medic.strangers` | Level 7, identical in every save | "If you found the people who saved you were bad people, would you still be grateful?" | yes / no / for that one day, yes | Tests their secret | Bound: Ch 39c; innocent: Ch 40 (the last reply in the jar) | Innocent: they burn the letters, or keep them, by your answer. The answer never ends the flicker early |

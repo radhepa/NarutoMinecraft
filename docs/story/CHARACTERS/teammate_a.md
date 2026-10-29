@@ -42,7 +42,7 @@ hurt because of it (Ch 16). Later: being made into a tool (the sensor corps, the
 |---|---|
 | Your chakra did something strange in the exercise | Ch 3 (`story.seed.flare`) |
 | It is a secret between you | Ch 3, if `ans.teammate_a.flare` = yes or dont_tell (`bond_flag flare_secret`) |
-| The bell flicker was the same thing | Ch 8 (they saw it; they say so only if the flare is shared) |
+| The cord flicker was the same thing | Ch 8, the cord test (`story.seed.cord_flicker`; they saw it; they say so only if the flare is shared) |
 | The paper chars around you | Ch 11 if you showed a teammate; Ch 23 if you let the squad hear the tester (`bond_flag knows_flame`) |
 | Your gift is real and has a name | Ch 25 (if they fell, they saw it; otherwise the squad learns at Ch 25) |
 | Kagari, the archive, the purge | Ch 40 (with the village) |
@@ -64,20 +64,28 @@ hurt because of it (Ch 16). Later: being made into a tool (the sensor corps, the
   opens and the first thread you ever see is theirs, bright and steady. You push your chakra into
   them; they rise for one moment and cast their *own* painted genjutsu past its limits: it swallows
   the whole post, and the hollow girl stands inside a painting of the border post as it was before
-  it burned, long enough for the two of you to finish the fight together. Their Ch 24.4 line as they
-  fall answers `ans.teammate_a.your_fear`: *taken* "Nobody's taking you—"; *alone* "You won't be
-  alone—"; *nobody* "You're not nobody, you're—"; *fire* "It's not that kind of fire—"; **unset**
-  "I'm right here—". If they already knew (`bond_flag knows_flame`, Ch 23), they add: "I knew. Since
-  the school. Do it." Their Ch 25 line is "That was the warm room again" (if the flare was shared),
-  "I knew it would be you. I didn't know it would feel like that" (if `knows_flame` and not shared),
-  or "So that's what it was" (neither); they gain
+  it burned, long enough for the two of you to finish the fight together. Their Ch 24.4 fall line is
+  taken from the **Ch 24 line table** below (the arc cites it). They gain
   a permanent `saved_by_them` memory toward you and a `trained_together` streak in the secret
   training. If someone else fell: they arrive at the hospital last and say they should have been
   faster.
-- **Thread Sight on them** (from Ch 24, level 6+): their thread flickers whenever they are hiding
-  something from you: the warm-room drawings (until shown), the corps decision (Ch 30, until they
-  ask you), the sketch of you for the confession (romance). You see *that*, never *what*; asking
-  before they offer is prying.
+- **Ch 24 line table** (teammate_a falls; first matching row wins):
+
+  | Priority | Reads | Fall line (24.4) | If `bond_flag knows_flame` (Ch 23), add |
+  |---|---|---|---|
+  | 1 | `ans.teammate_a.your_fear` = taken | "Nobody's taking you—" | "I knew. Since the school. Do it." |
+  | 1 | `your_fear` = alone | "You won't be alone—" | same |
+  | 1 | `your_fear` = nobody | "You're not nobody, you're—" | same |
+  | 1 | `your_fear` = fire | "It's not that kind of fire—" | same |
+  | 2 | `ans.teammate_a.freeze` set (any) | "I didn't freeze. See? I didn't—" | same |
+  | 3 | unset (neither) | "I'm right here—" | same |
+
+  Ch 25.2: "That was the warm room again" (flare shared) / "I knew it would be you. I didn't know it
+  would feel like that" (`knows_flame`, not shared) / "So that's what it was" (neither).
+- **Thread Sight on them** (from Ch 24, level 6+): a steady flicker while they carry a `hides:`
+  bond flag (never line by line, never a lie detector): `hides:warm_room` (the drawings, until shown), `hides:corps` (Ch 30, until they ask you),
+  `hides:portrait` (romance, until the confession). You see *that*, never *what*; asking before they
+  offer is prying.
 - **Unison technique (Blaze tier, Ember Link): "Ink Dawn".** You hold the squad's shared flame
   while they paint; your ember-gold chakra becomes their paint, and the genjutsu they cast is a
   sunrise over the whole field that every enemy inside sees as their own home burning down to dusk,
@@ -152,7 +160,7 @@ Voice samples, not shipped lines:
 | Id | When | Question | Options | Honours / tests | Remembered | Changes them |
 |---|---|---|---|---|---|---|
 | `ans.teammate_a.flare` | Ch 3.4 | "Did you feel that too?" | yes / no (you imagined it) / don't tell anyone | yes, dont_tell honour honesty and trust; *no* tests it (a small `rude`-sized sting for the shy) | Ch 8 bell flicker line; Ch 24 "warm room"; Ch 25.2 | Sharing makes them your keeper of secrets; denial makes them doubt their own senses until Ch 24 |
-| `ans.teammate_a.paint` | B1 bond quest (L3) | "Should a painting show things as they are, or as they should be?" | are / should / both | creativity either way | Ch 41 mural | Their style for life: realist, hopeful, or both |
+| `ans.teammate_a.paint` | B1 bond quest (L2) | "Should a painting show things as they are, or as they should be?" | are / should / both | creativity either way | Ch 41 mural | Their style for life: realist, hopeful, or both |
 | `ans.teammate_a.your_fear` | Ch 11 campfire (L5) | "What are *you* afraid of?" | being taken again / being alone / being nobody / fire | Your honesty (any answer is a `heart_to_heart`) | Ch 24 fall line; Ch 53 flame line | They become the friend who guards against *your* fear: watches doors (taken), always comes (alone), names you to others (nobody), learns water/earth safety (fire) |
 | `ans.teammate_a.show` | B2 bond 1 (L4) | "Is it brave to let people see what you made, or just foolish?" | brave / foolish / both | creativity, kindness | Ch 41 unveiling | Whether they stand in front of their own work |
 | `ans.teammate_a.family` | B2 bond 2 (L5) | "If your family wanted you to be someone else, would you?" | yes, for them / no / I'd try to be both | family vs freedom (the shy value kindness: no answer offends) | Ch 30 corps choice | Frames how they hear the corps offer |
@@ -161,7 +169,7 @@ Voice samples, not shipped lines:
 | `ans.teammate_a.colour` (new) | Hangout: painting at the overlook (L3, any arc) | "If you were a colour, which one?" | the red of the cord / ash-grey / the green of the Leaf / whatever you'd paint me | creativity (filler with a payoff) | Their portrait of you (Ch 55 epilogue, or the confession painting) uses it | Small: sets your colour in their art |
 | `ans.teammate_a.seen` (new) | Chunin, level 6 talk (dream) | "Do you think I'd still be me if nobody ever saw my paintings?" | yes, you paint for you / no, art needs eyes / I'd see them | creativity / kindness | Ch 41: whether they sign the mural | *yes*: unsigned mural; *no*: signed large; *I'd see them*: signed small, with a mark only you know |
 | `ans.teammate_a.used` (new) | Jonin, level 7 (worries), after Ch 36 | "The founders used a whole clan's gift and then erased it. Are we using you, when we fight beside you?" | no, I'm choosing / sometimes, and that's all right / yes, so watch me | honesty, kindness | Ch 53 (their flame line: "You said you were choosing. So am I.") / an epilogue line | Settles their fear of being a tool by seeing you choose |
-| `ans.teammate_a.squad` (new) | Ch 8, after the bells, three bells on one red cord (L3) | "Why did you hand me the cord's end at the bells? You could have tried alone." | because we pass together / because you were there / because you'd have done it for me | kindness, loyalty | Ch 16 night watch (they say they've thought about it since) | Their first belief that they're chosen, not just near |
+| `ans.teammate_a.squad` (new) | Ch 8, after the cord test (three watch-fire tags on one red cord) (L3) | "Why did you hand me the cord's end? You could have tried alone." | because we pass together / because you were there / because you'd have done it for me | kindness, loyalty | Ch 16 night watch (they say they've thought about it since) | Their first belief that they're chosen, not just near |
 | `ans.teammate_a.hurt` (new) | Life event after Ch 24 (injured; comfort at L5) | "My hand shakes when I hold the brush now. Should I stop for a while?" | rest, the brush will wait / paint the shaking / paint with your other hand, I'll hold the paper | creativity | Ch 41 (the mural has a shaky line they kept, or doesn't) | How they carry the injury |
 | `ans.teammate_a.secret_kept` (new) | Chunin, level 7 (after Thread Sight sees their flicker) | "You can see I'm hiding something, can't you. Do you want to know?" | only when you want to tell me / yes / I already know it's about me | honesty, privacy (asking "yes" is pried if under 7) | Romance confession, or the warm-room sketchbook shown | Teaches them that hiding from you is allowed |
 | `ans.teammate_a.after` (new) | Road to Hokage, Ch 46 hangout at the shrine | "When this is over, will you still have time to sit for a portrait?" | always / only if you paint me tired / I'll make time | kindness | Ch 55 epilogue: the portrait | The epilogue portrait's pose |
@@ -169,7 +177,7 @@ Voice samples, not shipped lines:
 ### What their lines are for
 
 - **Functions:** bond (questions above), callback (warm room, campfire, mural), clue-adjacent (they
-  are the one who notices the bell flicker and the warm feeling: the player's mirror for the gift),
+  are the one who notices the cord flicker and the warm feeling: the player's mirror for the gift),
   tutorial (genjutsu basics for a Classic Kurama: the Ch 12 clan lesson for a clanless player whose
   closest classmate they are), comfort (they are the gentlest voice after Ch 24 and Ch 51).
 - **States:** quarrel (`bond.greet.cold_shoulder.shy`: they avoid eye contact and talk to their
@@ -214,7 +222,8 @@ family pressure is that clan's (a Hyuga main-house duty, an Akimichi kitchen, a 
 - `ans.teammate_a.seen` (for_self / needs_eyes / i_see)
 - `ans.teammate_a.used` (choosing / sometimes / watch_me)
 - `ans.teammate_a.after` (always / tired / make_time)
-- `ans.teammate_a.family` option ids: `for_them`, `no`, `both`
+- `ans.teammate_a.family` option ids: `for_them`, `no`, `both`; **unset** (B2 quest skipped): at Ch 30 they ask without a reference to it and lean toward joining
+- `hides:warm_room`, `hides:corps`, `hides:portrait` (bond flags on teammate_a)
 - `ans.teammate_a.flare` option ids: `yes`, `no`, `dont_tell`
 - `ans.teammate_a.paint`: `are`, `should`, `both`; `.show`: `brave`, `foolish`, `both`;
   `.your_fear`: `taken`, `alone`, `nobody`, `fire`; `.freeze`: `always`, `nothing`, `angry_yes`;

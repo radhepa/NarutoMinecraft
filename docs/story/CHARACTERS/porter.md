@@ -21,8 +21,9 @@
 
 ## Arc
 
-**Who he is.** A nursery child "rescued" by Yūgure at nine from a burning orphanage (the kind of
-rescue the medic remembers too), raised in a hearth's care, sent into the Leaf at sixteen under a
+**Who he is.** A nursery child "rescued" by Yūgure at eight from a burning orphanage (the kind of
+rescue the medic remembers too), raised in a hearth's care, sent into the Leaf at sixteen (Y-6) to take over from the first hand, an old east-road
+carter who died in a road accident that year, under a
 cover name to carry. He carries for everyone: the furniture shop, the post, the library's returns
 cart, the hospital's linen, the council's letter bags, crates for merchants' carts at the east gate.
 He is genuinely kind. He also laid eighty-one cinder seals under what he carried and scratched the
@@ -39,8 +40,9 @@ the hearths ask (the cut page, the ledger pages, the borrowed seal), and lays th
 know the Hollow Crown; he was told the marks are "so we can find our friends' homes".
 
 **What he knows.** The voice's identity (he cannot say it: a cinder seal in his palm, under the burn scar, burns his memory out if he tries); the array's
-anchors (in his ledger, as deliveries); that the player is "the ninth" (the voice's reports passed
-through his hands).
+anchors (in his ledger, as deliveries); the Ch 0 raid's muster (he loaded the raid squad's supply
+crates and reported it himself: the hand, not the voice, warned the leader). He carries the voice's reports sealed
+and has never read them.
 
 **How he changes.**
 

@@ -72,7 +72,8 @@ them, small wrong things: a medic who records a chakra sample, a flare that take
 nature, a sinking sun scratched on a door, a cut page in the library, chakra paper that chars
 violet in the player's hand, a stranger who tells a teammate their lost parent is alive, two
 shadows with soot-marked wrists and one word, **Yūgure**. At the Chunin Exams Yūgure attacks the
-stadium; a burning woman stops in front of the player and says **"Kagari"**; the Fourth falls, is
+stadium at the opening lantern-lighting, before a single bout is fought; a burning woman, one of a
+foreign team's adult escorts, stops in front of the player and says **"Kagari"**; the Fourth falls, is
 crippled or is taken; the Fifth, a hard Hyuga, distrusts the player's blood.
 
 As a Chunin the player's gift wakes: at a burning border post, the hollowed girl from the next cell
@@ -173,7 +174,7 @@ four are on the Rock at the start; the Fifth and Sixth are fixed carvings placed
 | Rotating story roles bound by the `twists` stream | `twist.traitor`, `twist.lineage`, `twist.fourth_fate` |
 | The Chunin Exams finals | Yūgure attacks the stadium; the second names you Kagari; the Fourth's fate; the Fifth named |
 | The antagonist organization, its scouts and cells | Yūgure and its hearths (cells of three or more, each tied to a nursery) |
-| The Shimura clan home | Its cellar shelters the Undercroft, the heirs of the sealing team of the Quiet Ending (the ANBU branch) |
+| The Shimura clan home | A stranger has been using its cellar as a mail drop; the trail leads to the Undercroft, the heirs of the sealing team of the Quiet Ending, in a derelict sealing hall under the old quarry (the ANBU branch) |
 
 ## Side quest secrets
 
@@ -191,7 +192,7 @@ Side quests stay optional; several plant or echo the main path's seeds ([SYSTEMS
 | A Hundred Masks (later) | A Kurama apprentice's runaway illusion copies the faces of people the apprentice admires; yours among them |
 | Snowbound (later) | Every traveller's secret is harmless except one: a courier carrying Yūgure's chakra paper, unaware of what it is |
 | The Puppet Theatre (later) | The puppeteer's mute assistant is a gifted orphan with chakra strings; the theatre is hiding them from a Yūgure recruiter |
-| The Forger's Ink (later) | The forgeries use the ink of the bound voice's household (consistent with `twist.traitor`). Played before Ch 39, the quest ends at the ink-seller without naming the household; played after, it closes the voice's last channel |
+| The Forger's Ink (later) | Opens only after `story.ch39.done`. The forgeries use the ink of the voice's household (consistent with `twist.traitor`); the quest closes the voice's last channel |
 
 ### District quests and one-offs
 
@@ -205,9 +206,9 @@ Side quests stay optional; several plant or echo the main path's seeds ([SYSTEMS
 | `district.b2.contraband` | The gate log shows the merchant's cart passed twice uninspected: `story.clue.merchant.3` (the bored guards waved every regular through) |
 | `side.b2.pawned_scroll` | The scroll is real: a page of an old Academy textbook with the same cut as the missing page (Ch 5); the pawnbroker does not know who sold it (the porter). Sets `story.seed.second_page` |
 | `side.b2.lost_letters` | One letter is addressed to a family that no longer exists in the census: one of the twenty-seven's old names. Returning it to the shrine sets `story.seed.unknown_family` |
-| `side.b3.lost_genin` | The foreign Genin is the dupe on the disguised Yūgure team (Ch 15 to 16) |
-| `side.b3.stall_thief` | A member of the disguised foreign team's support, testing the village's guards; you can catch them but not hold them |
-| `side.b3.hospital_supplies` | Diverted by a forged requisition in green ink for the foreign team: `story.clue.medic.4`; the trail ends at an exam official, not the medic, in every save |
+| `side.b3.lost_genin` | The foreign Genin is one of a real, innocent foreign team whose two adult escorts (the second and the blade, under false papers) keep slipping away at night; the Genin knows only that the escorts are new (Ch 15 to 16) |
+| `side.b3.stall_thief` | A Yūgure scout testing the village's guards before the finals; you can catch them but not hold them |
+| `side.b3.hospital_supplies` | Diverted by a forged requisition in green ink, by an exam official selling supplies: `story.clue.medic.4`. A pure red herring in every save; the voice never touched it |
 | `event.b2.council_day` | From the gallery you see the councillor hand a sealed letter to the porter: `story.clue.councillor.3` |
 | `event.b3.betting_ring` | Run by the Hagane gate guards out of boredom; your odds improve if you finished `district.b2.contraband` |
 
@@ -229,7 +230,7 @@ Story ties of board missions ([SYSTEMS.md](SYSTEMS.md) §1). The board's premise
 |---|---|
 | `clan.kurama.3` | The missing painting shows the Kagari shrine before it burned; a Kurama painter (one of the twenty-seven's adoptive family) made it and was punished |
 | `clan.tsuchigumo.3` | The intruder at the sealed shrine room is a Yūgure scout looking for the clan's natural-energy seal |
-| `clan.shimura.3` | The unexplained matter is the Undercroft that a Shimura elder shelters; helping opens the Night Watch's cellar door (N3) |
+| `clan.shimura.3` | A Shimura found a stranger using their cellar as a mail drop for sealed letters and wants it gone quietly; helping catches the Undercroft's courier, which opens the Night Watch's N3. The Shimura have no part in the Undercroft |
 | `clan.tobari.3` | What moves on the wall unheard is a Yūgure cell using a sound-smothering technique learned from a Tobari deserter (Ch 30 to 31) |
 | `clan.hatake.4` | The keepsake's heir is the sensei if no Hatake lives in the save; otherwise the last Hatake |
 | `clan.uzumaki.3` | The scattered Uzumaki is genuine, and a sealing expert who helps with the archive's seals (Ch 36) |
@@ -246,12 +247,12 @@ quest actions and conditions on roles, never code. Questions and answers: [DIALO
 | Ch 0, the red cord | `lost_child` | Bond created at level 2 with `bond_flag red_cord`; it does not grow while she is gone; it starts growing when she comes home (N6 or Ch 47) |
 | Ch 3, the flare | `teammate_a` | `bond_event trained_together`; flavor only, never a Kindling grant |
 | Ch 6, a classmate confides | `teammate_b` | Keep it (`kept_secret`) or tell the instructor (`broke_secret`) |
-| Ch 8, the bells (three bells on one red cord, taken together) | the squad | `shared_moment bond.bells` |
+| Ch 8, the cord test (three watch-fire tags on one red cord, taken together) | the squad | `shared_moment bond.cord_test` |
 | Ch 11, the campfire | `teammate_a` | Needs `friendship [teammate_a, 5]`; `shared_moment`, `heart_to_heart` |
 | Ch 13, the stranger | `teammate_b`, `sensei` | Tell the sensei: `went_over_their_head` with b, `kept_promise` with the sensei. Keep: `kept_secret` with b. Go: `stood_by_them` and a `reckless_charge` the sensei hears of |
 | Ch 14, the suspicion | `sensei` | `bond_meter [sensei, trust, 50]` gates the secret training (Ch 25) |
 | Ch 16, the night watch | teammates | `shared_moment bond.night_watch`; the campfire leans only with `squad_cohesion 50` |
-| Ch 19, the attack | teammates or the rival | The higher level covers you (`saved_by_them`); both under 4: the rival |
+| Ch 19, the attack | teammates or the rival | The teammate at the higher level drags you out of a collapsing tier of the stands (`saved_by_them`; no wound); both under 4: the rival |
 | Ch 24, the first kindling | the teammate at the highest level, 6 or more; else the sensei | `saved_by_them`; their own technique kindled past its limits; `story.kindling.awakened`. Story floor: the scripted target counts as Spark in this scene |
 | Ch 26, b's road | `teammate_b` | `bond_meter [teammate_b, trust]`: 60+ stays, 30 to 59 nearly joins (`return_to_squad`), under 30 leaves (`remove_from_squad story`) |
 | Ch 36, the keeper's door | `elder_keeper` | `bond_meter [elder_keeper, trust, 60]` and `friendship [elder_keeper, 6]`: he opens it himself |
@@ -260,8 +261,8 @@ quest actions and conditions on roles, never code. Questions and answers: [DIALO
 | Ch 46, your house | descendants, friends | Recruitment (BONDS §10) |
 | N6 / Ch 47, giving flame | `lost_child` | `gave_flame` (requested act); her bond grows from 2 |
 | Ch 50, the doors | clans and districts | `standing` gates per quarter |
-| Ch 53, every fire | everyone at 6+ | The watch-fire's size is `BondWeb.score` (15 small, 40 strong, 70 the whole village) |
-| Ch 53, the first flames | `lost_child`, `sensei` | The red cord and the sensei kindle first in every save, at any level (the lonely floor) |
-| Ch 53, the second | `yugure_second` | Lives with `bond_web 40`, or `friendship 4`, or `friendship [squad4_c, 6]` with `ans.squad4_c.second` not "someone else first" |
+| Ch 53, every fire | everyone at 6+ | The watch-fire's size is `BondWeb.score` ([BONDS.md](../../BONDS.md) §11), in four tiers (a small fire, strong, great, the whole village). The thresholds are data, calibrated by the bonds session's simulation so a typical player reaches "strong" and a devoted one "the whole village" |
+| Ch 53, the spoken flames | `lost_child`, `sensei`, spouse, the friend who fell in Ch 24, the other teammate, `rival` | Fixed order; the red cord and the sensei kindle first in every save at any level (the lonely floor; the sensei's flame overrides a falling-out); then faces without spoken lines |
+| Ch 53, the second | `yugure_second` | Lives in any of three ways: the web at "strong" or above; `friendship [yugure_second, 4]`; or `friendship [squad4_c, 6]` with `ans.squad4_c.second` not "someone else first". Resolved before the leader's end (53.5) |
 | The librarian teaches the gift's old forms | `librarian` | Before Ch 39, identical in every save: `friendship [librarian, 7]` and `story.kindling.awakened` (lore and practice: the songs, keeping the flame, the ember mark). After Ch 40 only if innocent |
 | The merchant turns informant (innocent) | `merchant` | `friendship [merchant, 6]` after Ch 40 |

@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | Role | The founder and leader of Yūgure; the last child of the Kagari clan; the story's antagonist |
-| Look (fixed) | Looks about forty and is nearly ninety. Slight, straight-backed, long black hair going ash-grey at the ends as if burned. Eyes the dull orange of embers under ash. A long ash-violet robe with the sinking sun stitched small at the hem (the only Yūgure who wears the colour every day; his people wear road clothes and a soot sun on the wrist). Bare feet in the Ch 52 scene. On the Rock at dawn (Ch 53.5) he is shown at his true age: white-haired, very small |
+| Look (fixed) | Looks about forty and is nearly ninety. Slight, straight-backed, long black hair going ash-grey at the ends as if burned. Eyes the dull orange of embers under ash. A long ash-violet robe with the sinking sun stitched small at the hem (the only Yūgure who wears the colour every day; his people wear road clothes and a soot sun on the wrist). Bare feet in the Ch 52 scene. On the Rock at dawn (Ch 53.6) he is shown at his true age: white-haired, very small |
 | Pronouns | He / him |
 | Clan | Kagari (the clan proper; family name Kagari, given name rolled per save, never spoken by anyone in the story) |
 | Rank | Missing-nin; beyond Kage-level on taken chakra |
@@ -19,7 +19,7 @@
 | First appears | Ch 0.8 (the watcher on the ridge, a silhouette) |
 | Heard | Ch 44.3 (one sentence, through the lost child); Ch 51b (his voice through the array, to the wick only, as the player climbs) |
 | Met | Ch 52 |
-| Last appears | Ch 53.5 (he dies at dawn on the Rock) |
+| Last appears | Ch 53.6 (he dies at dawn on the Rock, after the second's fate is settled in 53.5) |
 
 ## Arc
 
@@ -55,20 +55,25 @@ was about forty. Every year of his life since then was taken from someone.
 |---|---|
 | The Hollow Crown (the truth behind the Last Bonfire) | His second, from his notes (Ch 48 to 49); the Leaf from her (Ch 49) |
 | That he told his second her child died (A) / that he named a nursery child as his wick and hid it (B) | The second (Ch 48), the player (Ch 48 or 49) |
-| That he has never been the Kagari's heir by right: his mother was the clan head's sister; the head who burned the Valley was his uncle | Only the player, on the Rock (Ch 52.2, a line in his story) |
+| That he has never been the Kagari's heir by right: his mother was the clan head's sister; the head who burned the Valley was his uncle | Only the player, on the Rock (Ch 52.2, if they ask "Why did they fear us?") |
 | That he practised the mirror on the Fourth (taken) and on the lost child | The Fourth (taken) knows the feel of it; the player, Ch 21c and Ch 24 |
-| That he remembers only the first two lines of the watch-fire song | The player, Ch 53.5 |
+| That he remembers only the first two lines of the watch-fire song | The player, Ch 53.6 |
 
 ### His plan, beat by beat
 
 | Beat | What he does | Why | On screen |
 |---|---|---|---|
-| Ch 0 | He has held Nine six years and the flame will not grow: a wick raised in a cage stays small, because the gift grows with bonds. When the voice warns him a raid is coming (the second's map), he lets it happen: "Let the Leaf raise my fire." The same night he takes the lost child's chakra, his test of the dark mirror on a strong Kagari-sensitive child | The wick must be raised by people who love it | 0.8: he watches from the ridge, warming his hands at nothing. No dialogue |
+| Ch 0 | He has held Nine six years and the flame will not grow: a wick raised in a cage stays small, because the gift grows with bonds. **The hand warned him** a raid was coming (the porter loaded the raid squad's supply crates and reported the muster; the raid itself came from the second's map). He lets it happen: "Let the Leaf raise my fire." The same night he takes the lost child's chakra, his test of the dark mirror on a strong Kagari-sensitive child | The wick must be raised by people who love it | 0.8: he watches from the ridge, warming his hands at nothing. No dialogue |
 | Ch 4 | The porter lays the anchor under the wick's door | The array's first doorstep is the wick's | — |
-| Ch 19 | The attack: test the Leaf's defences; strike the Hokage (practise the mirror on a Hokage's chakra: the Fourth's fate); order the second to "find the strongest flame and tell me how it burns". A test of her: he already knows. Nobody is ordered to take the player. She names it aloud instead | Measure the village, the mirror and his second | Unseen |
+| Ch 13 | The stranger on the bridge (his second) approaches teammate_b through b's parent | To put eyes inside Nine's squad | — |
+| Ch 15 to 19 | His second and the blade enter the Leaf openly as the adult escorts of a real, innocent foreign team, under false papers | Inside the walls for the finals | — |
+| Ch 19 | The attack, at the opening lantern-lighting: test the Leaf's defences; strike the Hokage (the Fourth is hit carrying children down the east stair: practice for the mirror on a Hokage's chakra); order the second to "find the strongest flame and tell me how it burns". A test of her: he already knows. Nobody is ordered to take the player. She names it aloud instead | Measure the village, the mirror and his second | Unseen |
+| Ch 23 | The free-school testers keep sweeping border children with paper | The voice's lists find most; the testers find the rest | — |
 | Ch 24 | The border post raid is built to wake the gift by making a friend fall. The lost child is ordered to wound, never to kill the wick | The gift wakes through a bond | 24.7: he watches from a ridge as the flame lights. No dialogue |
+| Ch 30 | The Tobari cinder bombs: a test of whether the Leaf turns on its own people when frightened | The answer (it does, then it does not) tells him to strike when the village is divided, and that it will not stay divided long | — |
+| Ch 37.3 | The blade's raid on the archive for the Hearthstone, on news that it would be open | The array needs its heart | — |
 | Ch 44 | Through the lost child, who still hears him among the stolen voices, he sends one sentence | He wants the web wider | 44.3: "Grow, little flame. I like your friends." (her mouth, his words) |
-| Ch 51b | His voice comes through the array as the player climbs the Rock | The wick must come to the heart | Array voice; his first questions |
+| Ch 51b | His voice comes through the array as the player climbs the Rock | The wick must come to the heart | Array voice; his first question |
 | Ch 52 to 53 | The Rock | — | Met |
 
 ### What he knows, and when
@@ -79,73 +84,77 @@ people: in the reports they are names and levels. That is his blind spot, and th
 
 ### No threads
 
-Through Thread Sight (from Ch 24) everyone the player meets who is bonded to anyone shows threads.
-**The leader shows none. Not one, in any direction.** Eighty years of taking and not one bond: not
-to his second, not to his people, not to the clan he says he lives for. The first time the player
-sees him with the gift open (Ch 52.1) the absence should be the most frightening thing on the Rock,
-and by Ch 53.5 the saddest. When the player offers him a bond, a thread starts from the player
-toward him and finds nothing on his side to tie to. That is why "There's nothing to take."
+The leader has no threads. On the Rock in Ch 52 the only threads the player sees besides their own
+are the scripted ones (the second's frayed thread toward the player; the blade's to her). **Nothing
+touches him.** Eighty years of taking and not one bond: not to his second, not to his people, not
+to the clan he says he lives for. The absence should be the most frightening thing on the Rock in
+Ch 52.1 and the saddest by Ch 53.6. When the player offers him a bond, a thread starts from the
+player toward him and finds nothing on his side to tie to. That is why "There's nothing to take."
 
 ### How he changes
 
-He does not, until the last five minutes of the game. Every appearance until Ch 53 is the same
-calm man with the same plan. What changes is how much the player knows about him, layer by layer:
+He does not, until the last minutes of the game. Every appearance until Ch 53 is the same calm man
+with the same plan. What changes is how much the player knows about him, layer by layer:
 
 | By | The player knows |
 |---|---|
 | Ch 0 | A figure who warms his hands at nothing |
 | Ch 21c / 24 | Someone who empties people and practises doing it |
 | Ch 36 to 37 | That the Kagari were erased; that one child escaped |
+| Ch 44 | That he is watching, and pleased |
 | Ch 49 | What he wants |
 | Ch 52 | Who he was, in his own words |
-| Ch 53.5 | That he was a boy in an ash pit who forgot how the song ends |
+| Ch 53.6 | That he was a boy in an ash pit who forgot how the song ends |
 
-**His end (Ch 53).** When the gathered fire will not burn for him, his mirror turns inward and
-eighty years of taken chakra leave him, back through the array to the village. He shrinks to his
-true age. If the player offers him a bond (`story.finale.offered_leader`), he cannot accept it
-("There's nothing to take," he says, confused, as if it were a puzzle) but he hears the song from
-the player. He asks for the last line, sings it, and dies at dawn. If the player does not offer,
-he dies looking east, humming the two lines he remembers, and stops.
+**His end (Ch 53.6).** When the gathered fire will not burn for him (53.4), his mirror turns inward
+and eighty years of taken chakra leave him, back through the array to the village (in crippled or
+taken saves, some of it reaches the Fourth). He shrinks to his true age. The second's fate has
+already been settled (53.5). If the player offers him a bond (`story.finale.offered_leader`), he
+cannot take it ("There's nothing to take," confused, as if it were a puzzle). Either way he hums
+the two lines of the watch-fire song he remembers and stops. **The player sings the last line**
+(from the song book of Ch 25.3). He dies listening, at dawn, facing east.
 
 ## Dialogue brief
 
 ### Voice
 
 - **A storyteller.** Long, patient sentences; he starts stories in the middle and tells you where
-  he is going. He likes the words "ember", "keep" and "remember". He calls the player
-  "little flame" (Ch 44.3, 51b, 52, 53), never "kin" and never by a family word: he is not their
-  relative and never pretends to be.
+  he is going. He likes the words "ember", "keep" and "remember". He calls the player "little
+  flame" (Ch 44.3, 51b, 52, 53), never "kin" and never by a family word: he is not their relative
+  and never pretends to be.
 - **Gentle, never shouts.** The cruellest things he says sound like apologies.
 - **Never says:** his own given name; "Yūgure" (he calls it "my people" or "the dusk"); a threat in
-  plain words; "please" (until 53.5, once, for the song).
+  plain words; "please".
 - **He does not lie on the Rock.** Everything he tells the player in Ch 52 is true as he remembers
   it. His lies were to his people.
 
 *Voice samples, not shipped lines:*
 
-- (Ch 51b, through the array) "Can you feel them, little flame? All of them, leaning toward you. That was how it felt at our fires."
+- (Ch 44.3, through the lost child) "Grow, little flame. I like your friends."
+- (Ch 51b, through the array) "Do you know what your name was, before they gave you a number?"
 - (Ch 52.2) "I was nine. You were six, when they took you, weren't you? We are early starters, our clan."
 - (Ch 52.2) "They didn't kill us all. They did something cleverer. They made us forget we were anyone."
 - (Ch 52.3) "Take it from me instead. You'd do better with it than I have. I can see that. I'm not a fool, only old."
-- (Ch 53.5) "There's nothing to take. Why is there nothing to take?"
+- (Ch 53.6) "There's nothing to take. Why is there nothing to take?"
 
 ### Topics (he has no bond book page; he talks only on the Rock)
 
 What he will tell the player, in order, if they ask or wait (Ch 52.2 is a short branching talk,
-not a single speech):
+not a single speech). These are topics the player chooses, not his questions:
 
 1. The shrine, the ash pit, the chisel.
 2. The wars he grew up in; the first time he used the mirror (on a soldier who was robbing him).
 3. Why he gathered the abandoned ("They were all Kagari, in the way that mattered").
 4. The Hollow Crown, plainly, as a kindness he will do the world.
-5. His uncle and the Valley, if the player asks "Why did they fear us?"
+5. His uncle and the Valley, if the player asks "Why did they fear us?" (in Ch 54 the player can
+   then tell the Seventh "It was one man, his uncle"; a council line).
 
 ### Never reveal before
 
 | Line or fact | Not before |
 |---|---|
-| His face clearly | Ch 52 (Ch 0 is a silhouette; the taken Fourth describes him only as "a voice") |
-| His voice | Ch 44.3 (one sentence through the lost child); Ch 51b in full |
+| His face clearly | Ch 52 (Ch 0.8 and 24.7 are silhouettes on ridges; the taken Fourth describes him only as "a voice") |
+| His voice | Ch 44.3 (one sentence, in the lost child's mouth); Ch 51b in full |
 | The Hollow Crown in his own words | Ch 52 (the player already knows it from Ch 49) |
 | That he is the last of the clan proper | The player can infer it from Ch 37; he says it Ch 52 |
 | His uncle and the Valley | Ch 52, only if asked |
@@ -153,35 +162,29 @@ not a single speech):
 
 ### Questions for the player
 
-All are asked where he actually appears: through the array as the player climbs (Ch 51b), on the
-Rock (Ch 52), and at the end (Ch 53). Ch 0.8 and Ch 24.7 have no dialogue; Ch 44.3 is one sentence
-and asks nothing. His questions colour only his own lines; they never change the Ch 53 kindling
-order (spouse, teammates, sensei, rival, lost child, then others by level). The player is
-the wick; every question is also him reading them.
+Four questions, asked only where he appears: through the array as the player climbs (Ch 51b), on
+the Rock (Ch 52) and at the end (Ch 53.6). Ch 0.8 and 24.7 have no dialogue; Ch 44.3 is one
+sentence and asks nothing. His questions colour only his own lines; they never change the Ch 53.2
+flame order. Every read has an unset default.
 
 | Id | When | Question | Options | Honours / tests | Remembered | How it changes him |
 |---|---|---|---|---|---|---|
-| `ans.yugure_leader.name` | Ch 51b, through the array | "Do you know what your name was, before they gave you a number?" | my name ({player}); I don't know; Nine | Tests identity (the third story question) | Ch 52.2 opens with it: "{player}, then" / "Then I'll call you little flame" / "Nine. I gave you that. I'm sorry for it" (the only apology he makes) | "Nine" makes him almost human for one line |
-| `ans.yugure_leader.last` | Ch 52.2 | "Have you ever been the last of anything?" | yes (the last out of the cells), no, not any more (I have people now) | Tests family | 53.5: if "not any more", his last line: "Not any more," repeated back as a question | "Not any more" is the line that makes the offered bond confuse rather than anger him |
-| `ans.yugure_leader.forgive` | Ch 52.2 | "If they had chiselled your mother's name off that stone, would you have forgiven them?" | yes, never, I'd make them remember | Reads the first story question. It echoes `ans.teammate_b.come_back` (the dialogue can quote the player's own earlier answer back: "You told your friend people can come back. Do you believe it now?") | Ch 54.3: the Seventh asks what to do with his name and quotes this answer | "I'd make them remember" earns his respect: "Then you understand me better than my own people did" (and makes the dark mirror offer more tempting in its wording) |
-| `story.finale.reached` | Ch 52.3 | (The offer: "Take it from me instead.") | refuse, reach for it | The dark mirror | Epilogue line: "You reached, and came back" | If reached, he smiles: "There. You see?" The vision plays; the player lets go either way |
-| `ans.yugure_leader.why_fear` | Ch 52.2 (player asks him; optional) | (Player: "Why did they fear us?") | ask, don't | — | If asked, the Valley story; in Ch 54 the player can tell the Seventh "It was one man, his uncle" (a council line) | Asking makes him tell the truth about his uncle, the one thing he is ashamed of |
-| `ans.yugure_leader.song` | Ch 53.5 (only if `story.finale.offered_leader`) | "Do you know how it ends? The song. I lost the last line somewhere in the hills" | sing it, hum it, stay silent | Family / memory | Epilogue: if sung, the last image's caption is the line; if silent, the leader's grave (if any) has no words | Sung: he sings it with you and dies at peace. Hummed: he finds the words himself and says "Ah. That's it." Silent: he hums two lines and stops |
-| `ans.yugure_leader.feel` | Ch 51b, through the array (the player climbing) | "Can you feel them? Which one is loudest?" | my squad, my sensei, all of them, none (I'm blocking you out) | Family | Ch 53.2: he says the name the player gave as that flame arrives in its fixed place ("There. Your loudest."); the order does not change | "None" annoys him: the only time his voice sharpens |
-| `ans.yugure_leader.climb` | Ch 51b | "Why climb, little flame? You could run. I'd let you, for an hour." | to stop you, to see you, because they're down there | Courage | Ch 52.1: his greeting | "To see you" makes him tell his story at more length (52.2 opens all five topics) |
-| `ans.yugure_leader.cells` | Ch 52.2 | "Do you remember the cells at all kindly? I tried to make them kind. Warm food. No beatings." | no; the girl next door; the food was warm | Honesty | Ch 53.5: if "the girl", he asks after her ("Did she come home?") and the answer reads `story.lost_child.home` | — |
-| `ans.yugure_leader.threads` | Ch 52.2, if the player opens Thread Sight on him | "You're looking at me strangely. What do you see?" | nothing; you're alone; an old man | Honesty | 53.5: "You said I was alone. You were the first to say it" (if "alone") | It is the line that makes him falter for the first time |
-| `ans.yugure_leader.why_given` | Ch 53.4, as the fire refuses him | "Why would they give it to you? What did you promise them?" | nothing; I asked; I didn't even ask | Theme | Epilogue caption: "They gave it because they wanted to" / "because you asked" / "before you asked" | — |
-| `ans.yugure_leader.remember` | Ch 53.5 | "Will anyone remember us? The Kagari?" | I will; the stone will; my house will | Memory | Ch 54.3 (the name choice is framed by it); epilogue | Whatever the answer, he believes it, and that is how he dies |
+| `ans.yugure_leader.name` | Ch 51b, through the array | "Do you know what your name was, before they gave you a number?" | name ({player}); unknown ("I don't know"); nine ("Nine") | Identity (the third story question) | Ch 52.1 opens with it: "{given:player}, then" / "Then I'll call you little flame" / "Nine. I gave you that. I'm sorry for it" (the only apology he makes). Unset: "Little flame." | "Nine" makes him almost human for one line |
+| `ans.yugure_leader.forgive` | Ch 52.2 | "If they had chiselled your mother's name off that stone, would you have forgiven them?" | yes; never; remember ("I'd make them remember") | The first story question; may quote `ans.teammate_b.come_back` ("You told your friend people can come back. Do you believe it now?"; unset: no quote) | Ch 54.3: the Seventh quotes it when asking what to do with his name. Unset: the Seventh asks plainly | "I'd make them remember" earns his respect ("Then you understand me better than my own people did") and sharpens the wording of the 52.3 offer |
+| `ans.yugure_leader.cells` | Ch 52.2 | "Do you remember the cells at all kindly? I tried to make them kind. Warm food. No beatings." | no; girl ("The girl next door"); food ("The food was warm") | Honesty | Ch 53.6: if "girl", he asks after her ("Did she come home?"; the player's answer is true to `story.lost_child.home`, which in this story is always home by Ch 47: "She came home." He: "Good."). Unset: nothing | — |
+| `ans.yugure_leader.remember` | Ch 53.6, at the end | "Will anyone remember us? The Kagari?" | i_will; stone ("The stone will"); house ("My house will") | Memory | Ch 54.3 (the name choice is framed by it); the epilogue. Unset: the Seventh frames 54.3 alone | Whatever the answer, he believes it, and that is how he dies, listening to the last line of the song |
+
+The dark mirror offer at Ch 52.3 (`story.finale.reached`: refuse / reach) is a story choice, not
+his question; reaching plays the vision and the cord pulls the player back in every save.
 
 ### What his lines are for
 
 | Function | Where |
 |---|---|
-| **Seed / dread** | Ch 0.8 (a gesture only: warming his hands at nothing) |
+| **Seed / dread** | Ch 0.8 and 24.7 (gestures only) |
 | **Plot** | Ch 44.3, Ch 51b to 53 |
 | **Theme** | Every line on the Rock argues the other side of the story's three questions, as well as he can |
-| **Mood states** | `distant` (Ch 0), `patient` (44.3, 51b to 52.2), `tempting` (52.3), `cold` (52.4, the mirror), `confused` (53.4), `old` (53.5) |
+| **Mood states** | `distant` (Ch 0, 24), `pleased` (44.3), `patient` (51b to 52.2), `tempting` (52.3), `cold` (52.4, the mirror), `confused` (53.4), `old` (53.6) |
 | **Pools** | `story.leader.<beat>`; no bond pools (he has no bond book page, only a memorial entry if the player carves his name) |
 
 ### Variants
@@ -190,21 +193,17 @@ the wick; every question is also him reading them.
 |---|---|
 | `twist.lineage` | 52.2: A: "I kept you from her"; B: "I chose you from a list. Your parent's flame was on it, once, and they died before I could use it" |
 | `twist.fourth_fate = taken` | 52.2: "Your Fourth was very strong. I learned a great deal from him" |
-| `story.lost_child.home` | 52.2: if she is home: "You took my best work back. How?" (he genuinely wants to know) |
+| `story.lost_child.home` | 52.2: "You took my best work back. How?" (he genuinely wants to know; she is always home by Ch 47, so this line always plays; its wording differs for `nightwatch` and `shrine`) |
 | `story.array.unbroken` | His confidence: with many anchors left he is serene; with few, he hurries, the only time he does |
-| `bond_web` | 53.4: the size of the fire he reaches into, and how long he stares at it |
+| The web's size | 53.4: the size of the fire he reaches into, and how long he stares at it |
 | `ans.player.leader_name` (Ch 54) | Whether his name appears on the memorial in the epilogue |
 
 ## New flags
 
 - `ans.yugure_leader.name` (name, unknown, nine)
-- `ans.yugure_leader.last` (yes, no, not_any_more)
 - `ans.yugure_leader.forgive` (yes, never, remember)
-- `ans.yugure_leader.why_fear` (asked, not_asked)
-- `ans.yugure_leader.song` (sing, hum, silent)
-- `ans.yugure_leader.feel` (squad, sensei, all, none)
-- `ans.yugure_leader.climb` (stop, see, them)
 - `ans.yugure_leader.cells` (no, girl, food)
-- `ans.yugure_leader.threads` (nothing, alone, old_man)
-- `ans.yugure_leader.why_given` (nothing, asked, didnt_ask)
 - `ans.yugure_leader.remember` (i_will, stone, house)
+
+Retired (round 2): `ans.yugure_leader.last`, `.why_fear` (now a topic), `.song` (the song is
+scripted), `.feel`, `.climb`, `.threads`, `.why_given`.

@@ -46,7 +46,7 @@ Yūgure hearths in Ch 44).
 | The leader's song, and that he is Kagari | Ch 0 (she tells you after her return, if asked about him) |
 | That you kept the cord | Ch 24 (`bond_flag saw_cord`) |
 | Yūgure's hideouts in the hills | Ch 24 on (said after return) |
-| What the Undercroft wanted from her | N4 (if Night Watch) |
+| What the Undercroft wanted from her: to be the mouth of their sealed jar | N4 (if Night Watch) |
 | The Hollow Crown | Ch 49 (as a listener; she understands it better than anyone: "That's what he did to me, but for everyone") |
 
 **How she changes.**
@@ -74,11 +74,13 @@ Yūgure hearths in Ch 44).
   you"; *silent* or unset "...someone remembers."
 - **Ch 44.3**: through her, the leader speaks one sentence to you in her flat voice: "Grow, little
   flame. I like your friends." She does not know she said it.
-- **Ch 44** (`ans.lost_child.echo`): *follow* opens the Night Watch lead (the cloth strip to the
-  Shimura house); *protect* keeps your Genin safe and she says nothing more.
+- **Ch 44** (`ans.lost_child.echo`): *follow* opens the Night Watch lead (the cloth strip pointing to
+  the old quarry); *protect* keeps your Genin safe and she says nothing more.
 - **Ch 53: the red cord is always the first flame,** at any level (`bond_flag red_cord`, an
-  `offered_flame`): "So someone remembers. It's mine to give." It is the finale's lonely floor. At
-  `friendship 6` she speaks again in her own place in the order (after the rival): "I'm still here."
+  `offered_flame`): "So someone remembers. Take it. It's mine to give." It is the finale's lonely
+  floor. Fixed order after it: the sensei, the spouse, the friend who fell in Ch 24, the other
+  teammate, the rival, then faces. If the player is very close to her (`friendship 8`), she
+  appears again among the faces with one short line: "I'm still here."
 - She **cannot die** in the story after her return; before it, she always escapes.
 
 ## Dialogue brief
@@ -105,7 +107,7 @@ Voice samples, not shipped lines:
 - (Ch 44, the leader through her) "Grow, little flame. I like your friends."
 - (home) "What's this called? Ramen. Do I like ramen? ...I think I like ramen."
 - (home, later) "{player}. Say my name again. I want to hear it in your voice."
-- (Ch 53) "So someone remembers. Take it. It's mine to give."
+- (Ch 53, the cord, always first) "So someone remembers. Take it. It's mine to give."
 
 ### Topics she cares about (after return)
 
@@ -174,24 +176,29 @@ or compressed into Ch 47 to 54). Her answers to *you* (the player's choices) sha
 ### Who hunts her
 
 `squad5_c` (the clanless prodigy of the senior squad) is ordered to hunt her after Ch 44 (in the
-N-branch, the Undercroft takes over that order; outside it, the Seventh's ANBU do). squad5_c is the one
-who nearly catches her in Ch 47 before she reaches the shrine, and afterwards apologises every time
+N-branch, the Undercroft, the sealing team's heirs, takes over that order; outside it, the Seventh's ANBU do). squad5_c is the one
+who, on the Ch 47 path (no Night Watch), comes to the shrine **the next morning**, too late to
+take her and in time to see her home; afterwards they apologise every time
 they see her. Her question (`ans.lost_child.squad5_c`) settles it.
 
 ### Thread Sight and her
 
 - **Hollow (Ch 24, Ch 44):** when your Thread Sight opens in Ch 24, she has no threads at all, to
-  anyone: except one, grey and thin, from your wrist to hers, along the red cord. It is the only
+  anyone: except one, grey and thin, from your wrist to hers, along the red cord. It is a scripted
+  `thread_floor` (Ch 24.6, N6, Ch 47): it shows at any level, the only such thread in the story
+  besides the second's and b's. You have worn the cord on your wrist since the day you made Chunin
+  (Ch 21.1), which is why she sees it at the post. It is the only
   reason the kindling of her flame is possible later.
 - **The return (N6 / Ch 47):** you do not give her chakra to keep; you push your flame along that
   one thread until her own extinguished flame catches again, and the stolen embers forced into her
   have nowhere to stay. Her thread turns from grey to her own colour (a pale copper).
 - **After:** her threads to other people appear one by one, a visible measure of her recovery
-  (the medic, the teammate who fell, your house). A flicker on her thread means she is hiding a
-  bad night (the voices); she tells you if you wait.
+  (the medic, the teammate who fell, your house). A steady flicker on her thread while she carries
+  `hides:voices` (a bad night she hasn't told you about); she tells you if you wait.
 
 ## New flags
 
+- `hides:voices` (bond flag on the lost child after her return)
 - `story.lost_child.family_known` (Ch 38, from the decoded list)
 - `ans.lost_child.number` (in_me / bad_nights / forget)
 - `ans.lost_child.squad5_c` (no / not_yet / yours)

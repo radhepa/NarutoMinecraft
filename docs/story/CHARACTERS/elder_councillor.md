@@ -27,7 +27,8 @@
   founding, and ten years later voted with the council for the Quiet Ending. The family has known for three
   generations; it is the household's private shame and why the councillor took the registry: he
   wanted to look after orphans.
-- He keeps the orphan stipend registry. Every orphan has a number: the player is **S-114**. His
+- He keeps the orphan stipend registry, which also lists the border-village orphans the Leaf
+  sponsors. Every orphan has a number: the player is **S-114**. His
   personal pine-sprig seal goes on papers he handles himself.
 - He arranged the player's stipend personally **because the keeper asked him to** (Ch 1). That is
   true in every save.
@@ -47,7 +48,11 @@ his thread flickers: he is hiding something. He is, in every save (the Ash Road 
 grandfather's vote), so the flicker cannot single out the voice and never says what. It **never goes out
 before Ch 39 or 40** (after Ch 37.0 the signature is known, but the grandfather's vote is still held
 back). Bound, his thread to the player reads as a normal two-way thread. His tie to the porter is
-never visible.
+never visible. His flag is `hides:ash_road` (the signature, and behind it his grandfather's vote).
+The flicker is one steady state from a single `hides:` bond flag, never line by line, and it
+is not a lie detector: it means *hiding*, nothing more. Each of the four candidates carries exactly
+one `hides:` flag of the same kind, from the start of the game until Ch 39/40, in every save. Their
+daily schedules and night movements are identical in every save until Ch 39.
 
 ### If innocent
 
@@ -80,7 +85,8 @@ never visible.
   restore the clan "without blood".
 - **Fears:** that he believed the part he wanted; that he kept the player close for the leader as much
   as for the keeper, and cannot tell which he meant more.
-- **Secret:** since about Y-10, registry numbers sent through the porter; the finals' guard rotation
+- **Secret:** since about Y-10 (sixteen years by Ch 39), registry numbers sent by an old east-road
+  carter until Y-6 and through the porter since; the finals' guard rotation
   from the council briefing (Ch 19); the news, spread by the Sixth's clerk to the council, that the
   archive would be open (Ch 37); and after the porter fell (Ch 28), reports in his own council post.
 - **The pass:** he sealed it.
@@ -93,11 +99,11 @@ never visible.
 - **Ch 38:** the list is indexed by S-numbers with pine marks.
 - **Ch 39 reveal:** his study, the seal box open. "My grandfather drafted the fourth clause and then
   voted to end them. The Senju owe a clan its name. The village would never pay; he said he would
-  make it pay without blood. I believed the part I wanted." In lineage B he adds only: "I signed the Ash
-  Road away too. A Jonin's death, and a child's." (Nothing more until after Ch 48.)
+  make it pay without blood. I believed the part I wanted. Sixteen years of numbers." In lineage B he adds only: "I signed the
+  Ash Road away too. A Jonin's death." (Nothing more until after Ch 48.)
 - **Fate:** *arrested*: stripped of his seat; the Senju line's Heart step (`clan.senju.4`) becomes his
   house's reckoning. *Turned* (needs `friendship [elder_councillor, 4]`): he keeps his seat as a mole
-  and feeds the leader a false finals-style rotation for the assault; Ch 51's west wall is ready.
+  and feeds the leader a false finals-style rotation for the assault; Ch 51a's west wall is ready.
   Ch 55's ruling: pardon (he serves the registry he betrayed), exile, or service (he records every
   descendant's restored name).
 
@@ -180,8 +186,7 @@ Nothing else differs before Ch 39.
 
 - Identical in Classic and Varied; name rolled, family name Senju.
 - `twist.traitor = elder_councillor`: the bound track. Note the rotation matrix's watch item: with
-  `twist.lineage = fallen`, the reveal adds only "I signed the Ash Road away too. A Jonin's death, and a
-  child's."
+  `twist.lineage = fallen`, the reveal adds only "I signed the Ash Road away too. A Jonin's death."
 - The player is always a clanless orphan: his Ch 1 kindness is to a stranger in every save.
 
 ## New flags
