@@ -1,0 +1,192 @@
+{
+  "id": "t1706_caped_greatcoat",
+  "kind": "top",
+  "name": "Caped Greatcoat",
+  "gender": "unisex",
+  "texture": "tops/t1706_caped_greatcoat.png",
+  "extrasHeight": 48,
+  "tags": [
+    "coat",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8,
+        -0.2,
+        -3
+      ],
+      "size": [
+        16,
+        7,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "inflate": 0.35
+    },
+    {
+      "id": "skirt_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        29,
+        14
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.0,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        25
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        11.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        9,
+        4
+      ],
+      "uv": [
+        21,
+        25
+      ]
+    },
+    {
+      "id": "skirt_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        11.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        9,
+        4
+      ],
+      "uv": [
+        32,
+        25
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Black greatcoat closed to the throat under an elbow-length shoulder cape edged in oxblood."
+}

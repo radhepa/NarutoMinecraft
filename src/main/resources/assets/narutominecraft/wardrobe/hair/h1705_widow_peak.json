@@ -1,0 +1,42 @@
+{
+  "id": "h1705_widow_peak",
+  "kind": "hair",
+  "name": "Widow's Peak",
+  "gender": "unisex",
+  "texture": "hair/h1705_widow_peak.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "nape_hem",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.0,
+        4.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "Combed straight back from a sharp point on the brow, bare temples, close sides."
+}

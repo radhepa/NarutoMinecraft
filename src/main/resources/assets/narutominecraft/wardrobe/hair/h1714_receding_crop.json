@@ -1,0 +1,42 @@
+{
+  "id": "h1714_receding_crop",
+  "kind": "hair",
+  "name": "Receding Crop",
+  "gender": "unisex",
+  "texture": "hair/h1714_receding_crop.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "nape_hem",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.6,
+        4.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "Hairline gone back high at both temples, the rest clipped short."
+}

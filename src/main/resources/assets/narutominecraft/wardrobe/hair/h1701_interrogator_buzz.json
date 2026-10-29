@@ -1,0 +1,47 @@
+{
+  "id": "h1701_interrogator_buzz",
+  "kind": "hair",
+  "name": "Interrogator Buzz",
+  "gender": "unisex",
+  "texture": "hair/h1701_interrogator_buzz.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "stubble_crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -1,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        1.06,
+        0.3,
+        1.06
+      ]
+    }
+  ],
+  "description": "Clipped to dark stubble all over, close to the scalp."
+}

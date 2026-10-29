@@ -1,0 +1,159 @@
+{
+  "id": "h1712_nape_braid",
+  "kind": "hair",
+  "name": "Nape Braid",
+  "gender": "unisex",
+  "texture": "hair/h1712_nape_braid.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "braid_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.25,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -0.75,
+        2.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        9,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.25,
+        4.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        18,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -0.75,
+        6.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        27,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_tuft",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.4,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        8.0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Close short crop with one thin braid left long at the nape."
+}

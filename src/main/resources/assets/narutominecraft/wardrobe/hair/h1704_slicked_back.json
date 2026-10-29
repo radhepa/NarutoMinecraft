@@ -1,0 +1,238 @@
+{
+  "id": "h1704_slicked_back",
+  "kind": "hair",
+  "name": "Slicked Back",
+  "gender": "unisex",
+  "texture": "hair/h1704_slicked_back.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "nape_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -1.6,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "nape_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -1.6,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "nape_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -1.6,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "nape_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -1.6,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "nape_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -1.6,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        24,
+        0
+      ]
+    },
+    {
+      "id": "nape_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -1.6,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        31,
+        0
+      ]
+    },
+    {
+      "id": "nape_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -1.6,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ]
+    },
+    {
+      "id": "nape_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -1.6,
+        4.4
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    }
+  ],
+  "description": "Oiled flat and combed hard back off the brow, a short ridge of ends at the nape."
+}

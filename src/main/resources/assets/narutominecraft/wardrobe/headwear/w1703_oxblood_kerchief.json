@@ -1,0 +1,163 @@
+{
+  "id": "w1703_oxblood_kerchief",
+  "kind": "headwear",
+  "name": "Oxblood Kerchief",
+  "gender": "unisex",
+  "texture": "headwear/w1703_oxblood_kerchief.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "head_cloth",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "head_cloth_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -6,
+        3
+      ],
+      "size": [
+        8,
+        4,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "head_cloth_knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.4,
+        4.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "head_cloth_tail_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.6,
+        -3.8,
+        4.8
+      ],
+      "rotation": [
+        12,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        59,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "head_cloth_tail_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -3.8,
+        4.8
+      ],
+      "rotation": [
+        12,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [
+    "*"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Plain oxblood cloth tied close over the head, black-edged, knotted at the nape."
+}
