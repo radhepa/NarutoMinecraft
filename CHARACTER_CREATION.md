@@ -28,7 +28,7 @@ python3 tools/creator/creator.py --check      # validate, and fail if the compil
 python3 tools/creator/creator.py --samples    # sample players and the age-stage sheet
 python3 tools/creator/creator.py --mockups    # the screens below
 python3 tools/creator/creator.py --roll 42    # what Roll a life suggests for save seed 42
-./gradlew :village:look:test                  # 30 tests (JDK 25)
+./gradlew :village:look:test                  # 31 tests (JDK 25)
 ```
 
 ## Contents
@@ -83,7 +83,8 @@ quiet title card that asks *Who are you?*, and the creator opens over it; when y
 prologue's first scene plays. The creator itself says nothing about the story: it never explains
 why you are where you are, and it shows no place, person or symbol from the prologue.
 
-- **What you wear in the prologue:** your own hair, eyes and marks in plain, worn clothes
+- **What you carry and wear in the prologue:** the one key item the creator gives you
+  ([§6](#6-starting-stats-and-kit)), and your own hair, eyes and marks in plain, worn clothes
   (`prologue_look`: a striped sweater and patched trousers in a dusty palette, unisex). The outfit
   you chose is waiting at your apartment in Ch 1, with the rest of your start
   ([§6](#6-starting-stats-and-kit)). The review screen says so.
@@ -108,8 +109,8 @@ you later.
   apostrophes and hyphens; it must start with a letter. Braces, digits and symbols are refused, so
   token syntax can never enter a name (`Names.validateGiven`). It is yours alone: never rolled, and
   not checked against the name pools (a player may share a first name with a resident).
-- **Last name:** one of the 50 ordinary family names of `population.json` (*an ordinary family
-  name, on your papers*), picked from the list or rolled; leaving it unpicked takes the one the
+- **Last name:** one of the 50 ordinary family names of `population.json` (*the family name you
+  remember*), picked from the list or rolled; leaving it unpicked takes the one the
   save's `names` stream rolls. Only that pool is offered, so a last name never matches a clan, and a
   *no clan* tag sits beside the field.
 - **Name order:** first name, then last name, everywhere: *Kaede Tanaka*.
@@ -180,7 +181,9 @@ the pair's seeded spark plus their warmth and openness, [BONDS.md §2](BONDS.md#
 ![Review](docs/renders/creator/screen_7_review.png)
 
 Your character large, a small *one day* adult preview, and every choice in a list with a lock or a
-*changeable later* mark and an *edit* link back to its step. Confirming sends the choice to the
+*changeable later* mark and an *edit* link back to its step. Below the preview, your starting key
+item rests in an open hand: a small charred wooden charm, half of a matched pair, with the line
+*The only thing that is yours.* (`starting_key_item`; the story session's item `half_charm`). Confirming sends the choice to the
 server, which checks it against the same rules (`CreatorRules.validateCreation`); the client only
 ever offers allowed choices, so a refusal means a mismatched pack. Then the prologue begins.
 
@@ -218,7 +221,8 @@ Every player starts with the same numbers; Roots add only small leanings. From t
 | Taijutsu | Academy basics | Combat |
 | Knack | +5% to the chosen kind, and its practice item | Combat, Items |
 | Techniques, nature | None; Clone, Transformation and Substitution are learned in Beta 1; the first nature at the Genin ceremony | Combat |
-| In the prologue | Nothing but the prologue clothes | Items |
+| Key item, from the creator | `half_charm`: a small charred wooden charm, half of a matched pair; cannot be dropped, sold or stored away | Story, Items |
+| In the prologue | The charm and the prologue clothes | Items |
 | At the apartment, Ch 1 | Your chosen outfit (in the wardrobe chest), a futon or bed, a chest, the apartment key; the stipend's first 30 ryo | Items, Life |
 | From the instructor, Ch 2 | Practice kunai and practice shuriken | Items |
 
@@ -227,7 +231,7 @@ Every player starts with the same numbers; Roots add only small leanings. From t
 | Choice | After creation | Where | Cost |
 |---|---|---|---|
 | First name | Locked | — | — |
-| Last name | Locked; a life event the story or Shinobi Life allows may change it (marriage, joining or founding a clan) | Life and Core glue | — |
+| Last name | Locked, until the **clan registry** in the Hokage Residence: founding a clan (from Chunin), or joining one by invitation or marriage, offers *take the clan's name, or keep yours* (`Names.atRegistry`). Nothing earlier changes it | The registry action (`found_clan`, joining) | — |
 | Pronouns | Changeable | The settings screen | free |
 | Body, complexion, eye shape, eye color | Locked | — | — |
 | Brows | Changeable | Barber | free with a haircut |
@@ -303,6 +307,9 @@ Text never contains your name. The creator fills these tokens (`Names.tokens`), 
 | `{player_clan}` | Your clan's name; empty while you have none, so lines that need it are skipped | (empty) |
 | `{player_rank}` | Your title (dialogue's resolver, from your rank) | Academy student |
 | `{they:player}`, `{them:player}`, `{their:player}` | Your pronouns, for lines about you | they, them, their |
+| `{name:player}`, `{given:player}`, `{family:player}` | The role-token forms the story uses for every character, for you | Kaede Tanaka, Kaede, Tanaka |
+
+A change of last name at the clan registry flows into every token at once.
 
 Proposed for the dialogue session, which owns the pools: friends, classmates and the squad use
 `{player}`; adults and shopkeepers `{player_family}` with a polite suffix, or *the Academy kid*;
@@ -326,7 +333,7 @@ wardrobe, so a new Academy outfit or collection hairstyle appears in the creator
 | `open` | What everyone may pick: every collection's hair, the open hair and eye colors and marks, the Academy collection's Academy outfits, the open headwear |
 | `never_at_creation`, `reserved` | Ids no one picks (with the reason), and shared ids that belong to one clan |
 | `stage_marks`, `stage_hair` | Marks and styles that wait for a later stage |
-| `prologue_look` | The prologue's clothes |
+| `prologue_look`, `starting_key_item` | The prologue's clothes; the one key item shown on the review screen |
 | `changes`, `time_skip_restyle` | Where each choice can change, and its cost |
 | `grows_into` | The mirror's suggested grown styles |
 | `default_overrides` | Opening looks that differ from the computed ones |
@@ -408,17 +415,18 @@ JUnit 5, release 25), the way `life/bonds` is built. The Village mod depends on 
 | `AgeStage` | The three stages: scale, head scale, eye height, the stage after N time skips |
 | `Look` | The player's look, with the save's map form |
 | `CreatorRules` | Reads the compiled file; the creatable origins; each origin's choices per stage; opening looks; Roots and pronouns; the server's `validateCreation` |
-| `Names` | First-name rules, the last name (the pool or the `names` stream), the `{player}` tokens |
+| `Names` | First-name rules, the last name (the pool or the `names` stream), the clan registry's rename, the tokens |
 | `LifeRoll` | Roll a life (look and roots) on the `creator` stream, the same numbers as `creator.py` |
 | `Restyle` | Venues (barber, home, settings, the mirror), costs, checked changes |
 | `GrowUp` | Carrying a look into the next stage |
 | `Seeds`, `Json` | The save seed's streams (the same as `life/bonds`; Core's `SaveSeed` later); a small JSON reader |
 
-Tests (30): the stages agree with the compiled file; only the clanless can be created and no clan
+Tests (31): the stages agree with the compiled file; only the clanless can be created and no clan
 hairstyle reaches the player; Roots and pronoun options and refusals; every opening look and every
 Roll a life of 400 seeds passes the server's check; Java and Python rolls agree (look and roots);
 clan pieces stay with their clan; the Byakugan is locked for the Hyuga and the Sharingan never
-offered; conferred marks and elders' styles wait; no protector before Genin; names and tokens; the
+offered; conferred marks and elders' styles wait; no protector before Genin; names, tokens and the
+registry's rename; the
 barber, the home, the settings and the mirror; every opening look grows into an allowed teen and
 adult look.
 
@@ -440,7 +448,9 @@ adult look.
 
 ## 14. Open questions
 
-For the owner:
+For the owner. Until answered, the current defaults stand, and each is one setting to change:
+family names from the pool only; body labels *Body A* and *Body B*; whisker marks open to everyone;
+Roll a life in Varied only.
 
 1. **Roll a life in Classic.** Today Classic has row dice but no Roll a life. Should Classic have
    it too (still seeded)?
@@ -455,8 +465,7 @@ Asked of the sibling sessions (owners decide):
 
 - **Combat:** the knack's +5% and practice item, and the affinity bonus at the ceremony, as ids in
   its data.
-- **Items:** the Ch 1 apartment kit, the practice tools and the knack's practice items as ids in the
-  items registry; the wardrobe chest as an item or a furniture block.
+- **Items:** `half_charm` (an undroppable key item), the Ch 1 apartment kit, the practice tools and
+  the knack's practice items as ids in the items registry; the wardrobe chest as an item or a furniture block.
 - **Dialogue:** the tokens and the address rules (§10), `player.temperament` as a context tag.
-- **Story:** whether the story allows a later change of last name, and when.
 - **Map:** a barber's chair (the bath house or beside the tailor).
