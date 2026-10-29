@@ -3,23 +3,31 @@
  "tiers": {
   "mook": {
    "hp": 1.0,
+   "damage": 0.75,
    "poise": 15,
-   "xp": 1.0
+   "xp": 1.0,
+   "think_ticks": 10
   },
   "elite": {
-   "hp": 1.8,
+   "hp": 2.2,
+   "damage": 1.0,
    "poise": 30,
-   "xp": 2.0
+   "xp": 2.0,
+   "think_ticks": 6
   },
   "miniboss": {
    "hp": 3.5,
+   "damage": 1.15,
    "poise": 60,
-   "xp": 5.0
+   "xp": 5.0,
+   "think_ticks": 5
   },
   "boss": {
    "hp": 7.0,
+   "damage": 1.15,
    "poise": 100,
-   "xp": 12.0
+   "xp": 12.0,
+   "think_ticks": 4
   }
  },
  "ai": {
@@ -62,9 +70,11 @@
    },
    "telegraph_factor": "dodge chance x (telegraph ticks / 10), at most 1.5x: slow, readable attacks are dodged more",
    "substitution": "Genin and up substitute once per fight when a hit would take 20% of their health",
+   "kiting": "a fighter that prefers a farther band backs off at 60% of its speed, and only on half its decisions: a closer catches it",
    "retreat": "retreat to heal at 30% health if they carry pills or a medic is near; rogue ninja use smoke to break off",
    "flee": "bandits flee at 25% health (chance in the loadout); a fleeing enemy that is hit again surrenders",
-   "interrupt": "any hit interrupts an enemy weaving signs; enemies weave only when no one is within 3 blocks, unless they are jonin"
+   "flinch": "a landed hit makes a mook or elite flinch: its wind-up is cancelled (bosses flinch only when their poise breaks); the player flinches too, except from light hits on Story",
+   "interrupt": "melee hits, staggers and knockdowns interrupt a weave; a thrown or jutsu hit interrupts only if it deals 15% of the weaver's health or more (a single shuriken does not; a tagged kunai or a big jutsu does). Enemies weave only when no one is within 3 blocks, unless they are jonin"
   },
   "tells": {
    "rule": "Every enemy attack has a wind-up pose and a sound, scaled by difficulty (telegraph_mult). Unblockables flash red (Story, Shinobi). Signs are visible as the enemy weaves",
@@ -127,6 +137,7 @@
     }
    ]
   },
+  "attack_tokens": "At most N enemies may attack the player in melee or with jutsu at once (Story 1, Shinobi 2, Hard 3; difficulty attack_tokens); the rest circle, throw, reposition or fight your teammates. Bosses always hold a token",
   "squad_ai": "Enemy groups pick a leader; the leader calls a focus target (the weakest or the caster). Animals pack-hunt: they circle and bite from behind",
   "knockout": "Residents and spar partners are knocked out, never killed (VF Knockouts). Bandits and rogue ninja can be knocked out or defeated; story enemies follow their boss file"
  }

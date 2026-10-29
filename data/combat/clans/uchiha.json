@@ -27,7 +27,7 @@
     "hare",
     "tiger"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 24,
    "cooldown_ticks": 120,
    "power": 14,
@@ -201,7 +201,7 @@
    "snake",
    "tiger"
   ],
-  "chakra": 18,
+  "chakra": 16,
   "cast_ticks": 0,
   "cooldown_ticks": 120,
   "power": 0,

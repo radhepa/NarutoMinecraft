@@ -5,8 +5,12 @@ Story enemies are written by role and neutral ids; what a story boss is, and any
 lives only in the story bible, keyed by the boss id.
 """
 
-TIERS = {"mook": {"hp": 1.0, "poise": 15, "xp": 1.0}, "elite": {"hp": 1.8, "poise": 30, "xp": 2.0},
-         "miniboss": {"hp": 3.5, "poise": 60, "xp": 5.0}, "boss": {"hp": 7.0, "poise": 100, "xp": 12.0}}
+# Enemy tiers: health and damage multipliers, poise, XP, and think_ticks: how long the brain waits between
+# actions (mooks hesitate; bosses press). The player out-classes a mook one on one; groups are the danger.
+TIERS = {"mook": {"hp": 1.0, "damage": 0.75, "poise": 15, "xp": 1.0, "think_ticks": 10},
+         "elite": {"hp": 2.2, "damage": 1.0, "poise": 30, "xp": 2.0, "think_ticks": 6},
+         "miniboss": {"hp": 3.5, "damage": 1.15, "poise": 60, "xp": 5.0, "think_ticks": 5},
+         "boss": {"hp": 7.0, "damage": 1.15, "poise": 100, "xp": 12.0, "think_ticks": 4}}
 
 AI = {
     "brain": "One shinobi entity for every human enemy, drawn with VF's resident model and our wardrobe; animals are vanilla-based entities with our brain",
@@ -21,9 +25,11 @@ AI = {
         "parry_by_rank": {"civilian": 0.0, "academy": 0.05, "genin": 0.1, "chunin": 0.2, "jonin": 0.3, "kage": 0.4},
         "telegraph_factor": "dodge chance x (telegraph ticks / 10), at most 1.5x: slow, readable attacks are dodged more",
         "substitution": "Genin and up substitute once per fight when a hit would take 20% of their health",
+        "kiting": "a fighter that prefers a farther band backs off at 60% of its speed, and only on half its decisions: a closer catches it",
         "retreat": "retreat to heal at 30% health if they carry pills or a medic is near; rogue ninja use smoke to break off",
         "flee": "bandits flee at 25% health (chance in the loadout); a fleeing enemy that is hit again surrenders",
-        "interrupt": "any hit interrupts an enemy weaving signs; enemies weave only when no one is within 3 blocks, unless they are jonin",
+        "flinch": "a landed hit makes a mook or elite flinch: its wind-up is cancelled (bosses flinch only when their poise breaks); the player flinches too, except from light hits on Story",
+        "interrupt": "melee hits, staggers and knockdowns interrupt a weave; a thrown or jutsu hit interrupts only if it deals 15% of the weaver's health or more (a single shuriken does not; a tagged kunai or a big jutsu does). Enemies weave only when no one is within 3 blocks, unless they are jonin",
     },
     "tells": {
         "rule": "Every enemy attack has a wind-up pose and a sound, scaled by difficulty (telegraph_mult). Unblockables flash red (Story, Shinobi). Signs are visible as the enemy weaves",
@@ -43,6 +49,7 @@ AI = {
             {"habit": "parries_well", "when": "3 parries in 20 s", "react": "unblockables and throws instead of melee"},
         ],
     },
+    "attack_tokens": "At most N enemies may attack the player in melee or with jutsu at once (Story 1, Shinobi 2, Hard 3; difficulty attack_tokens); the rest circle, throw, reposition or fight your teammates. Bosses always hold a token",
     "squad_ai": "Enemy groups pick a leader; the leader calls a focus target (the weakest or the caster). Animals pack-hunt: they circle and bite from behind",
     "knockout": "Residents and spar partners are knocked out, never killed (VF Knockouts). Bandits and rogue ninja can be knocked out or defeated; story enemies follow their boss file",
 }
@@ -209,6 +216,7 @@ GROUPS = [
     {"id": "combat:group.wolves_pack", "members": [{"enemy": "combat:enemy.wolf", "count": 3}], "slice": "beta2"},
     {"id": "combat:group.forest_beasts", "members": [{"enemy": "combat:enemy.giant_centipede"}, {"enemy": "combat:enemy.giant_leech", "count": 2}], "slice": "beta3"},
     {"id": "combat:group.exam_team", "members": [{"pick": ["combat:enemy.exam_genin_wind", "combat:enemy.exam_genin_sound", "combat:enemy.exam_genin_puppet", "combat:enemy.exam_genin_needle", "combat:enemy.exam_genin_brawler"], "count": 3, "distinct": True}], "slice": "beta3"},
+    {"id": "combat:group.exam_rival", "members": [{"pick": ["combat:enemy.exam_genin_wind", "combat:enemy.exam_genin_sound", "combat:enemy.exam_genin_puppet", "combat:enemy.exam_genin_needle", "combat:enemy.exam_genin_brawler"], "count": 1}], "slice": "beta3"},
     {"id": "combat:group.rogue_cell_b", "members": [{"enemy": "combat:enemy.rogue_chunin"}, {"enemy": "combat:enemy.hunter_nin"}], "slice": "chunin"},
 ]
 
@@ -235,10 +243,11 @@ def phase(at, name, behaviour, adds=None, opening=None, tell=None):
 
 
 def boss(bid, name, chapter, slice_, base, level, *, role=None, nonlethal=False, arena=None, win=None, lose=None, phases=None,
-         techniques=None, weapons=None, style=None, hp=None, poise=None, armour=None, notes=None, story=False):
+         techniques=None, weapons=None, style=None, hp=None, poise=None, armour=None, notes=None, story=False, damage=None):
     b = {"id": "combat:boss." + bid, "name": name, "chapter": chapter, "slice": slice_, "base": base, "level": level,
          "nonlethal": nonlethal, "arena": arena, "win": win or "defeat", "lose": lose or "the player is downed",
-         "phases": phases or [], "hp_mult": hp or 7.0, "poise": poise or 100}
+         "phases": phases or [], "hp_mult": hp or 7.0, "poise": poise or 100,
+         "damage_mult": damage if damage is not None else (1.0 if slice_ in ("beta1", "beta2", "beta3") else 1.15)}
     if role:
         b["role"] = role
     if techniques:
@@ -259,7 +268,7 @@ def boss(bid, name, chapter, slice_, base, level, *, role=None, nonlethal=False,
 
 BOSSES = [
     boss("ch2.rival_spar", "Spar with your rival", 2, "beta1", "combat:enemy.spar.classmate", 3, role="role:rival", nonlethal=True,
-         arena="place:academy.yard", hp=2.5, poise=30, style=AB, weapons=["item:kunai_practice"], techniques=["nin.substitution"],
+         arena="place:academy.yard", hp=1.8, poise=25, damage=0.8, style=AB, weapons=["item:kunai_practice"], techniques=["nin.substitution"],
          win="the rival drops to 30% health or yields", lose="you drop to 30%: the story continues either way (a flag)",
          phases=[phase(1.0, "Show-off", "fast three-hit chains, a dash kick; dodges 15%", opening="the chain's 10-tick recovery: punish it", tell="the dash kick's crouch (8 ticks)"),
                  phase(0.6, "Serious", "starts blocking; a heavy after every blocked chain", opening="block breaks with your own heavy"),
@@ -273,21 +282,21 @@ BOSSES = [
                        opening="a squad combo or a teammate's distraction makes it drop to 30% dodge for 60 ticks"),
                  phase(0.0, "Lesson", "when a bell is touched: Headhunter on the one who did not help")],
          notes="Unwinnable alone by design; teaches squad commands and parry. Health never matters (hp 99x)"),
-    boss("ch11.bandit_chief", "Bandit chief", 11, "beta2", "combat:enemy.bandit_chief", 11, arena="place:road.east_camp", hp=6.0, poise=70,
+    boss("ch11.bandit_chief", "Bandit chief", 11, "beta2", "combat:enemy.bandit_chief", 11, arena="place:road.east_camp", hp=5.0, poise=70, damage=0.8,
          weapons=["item:mace", "item:kunai"],
-         phases=[phase(1.0, "Bluster", "mace overheads (12-tick tell), a ground slam (radius 3)", adds=["combat:enemy.bandit_thug", "combat:enemy.bandit_archer"],
+         phases=[phase(1.0, "Bluster", "mace overheads (12-tick tell), a ground slam (radius 3); an archer on the wagon", adds=["combat:enemy.bandit_archer"],
                        opening="every overhead is parryable: a parry staggers him for 20"),
-                 phase(0.6, "Dirty fighting", "throws smoke, then a paper bomb into it; calls two more bandits", adds=["combat:enemy.bandit_knife", "combat:enemy.bandit_thug"],
+                 phase(0.6, "Dirty fighting", "throws smoke, then a paper bomb into it; calls a knife-fighter from the tents", adds=["combat:enemy.bandit_knife"],
                        opening="wind blows the smoke away; sensing sees through it"),
                  phase(0.25, "Cornered", "faster, no flee; grabs (red flash)", opening="poise 70: a heavy chain breaks it")]),
-    boss("ch14.road_ambush", "Ambush on the road", 14, "beta2", "combat:group.cell_pair", 14, hp=3.0, poise=40,
+    boss("ch14.road_ambush", "Ambush on the road", 14, "beta2", "combat:group.cell_pair", 14, hp=1.8, poise=35,
          arena="place:road.east_bend", win="the ambush is driven off and the client is safe; the quest may also ask for a capture (combat:captured)",
          lose="the client falls, or you are downed",
          phases=[phase(1.0, "Pin down", "an enemy cell pair holds the road with smoke, caltrops and a fire-and-wind combo while a runner flees",
                        adds=["combat:enemy.smuggler_runner"], opening="bind, possess, wire or a shuriken to the legs stops the runner"),
                  phase(0.5, "Mines", "paper-bomb mines across the road and tagged kunai", opening="wind or a flash shows the mines; a sealing tag captures a downed foe")],
          notes="Teaches enemy cells, smoke and paper bombs, capture with a sealing tag", story=True),
-    boss("ch16.forest_team", "A hunting team in the forest", 16, "beta3", "combat:group.exam_team", 16, hp=2.5, poise=40,
+    boss("ch16.forest_team", "A hunting team in the forest", 16, "beta3", "combat:group.exam_team", 16, hp=1.5, poise=35, damage=0.85,
          arena="place:forest_of_death", win="take their scroll, or drive them off (two of three downed)", lose="your scroll is taken or the squad is downed",
          phases=[phase(1.0, "Ambush", "traps and a genjutsu opener from the trees; one fighter stays hidden", opening="sensing and Byakugan find the hidden one"),
                  phase(0.5, "Hunt", "they split your squad: one each", opening="regroup command and a squad combo")],
@@ -296,22 +305,22 @@ BOSSES = [
          phases=[phase(1.0, "Coils", "tail sweeps (radius 4, jump them), lunges (10-tick tell)", opening="its head after a missed lunge"),
                  phase(0.5, "Swallow", "a red-flash grab: swallowed; deal 15% of its health from inside or a teammate frees you",
                        opening="fire and lightning from inside count double")]),
-    boss("ch17.prelim", "Preliminary bout", 17, "beta3", "combat:group.exam_team", 16, nonlethal=True, arena="place:tower.arena", hp=3.0, poise=50,
+    boss("ch17.prelim", "Preliminary bout", 17, "beta3", "combat:group.exam_rival", 16, nonlethal=True, arena="place:tower.arena", hp=3.0, poise=50,
          win="the opponent is knocked out or yields (or the proctor stops it at 10%)", lose="you are knocked out or yield",
          phases=[phase(1.0, "Feeling out", "the rolled exam rival's loadout; tests your guard"),
                  phase(0.5, "All in", "uses its signature (its loadout's best technique) on a 20-tick tell")],
          notes="The opponent is rolled from the combat stream among the exam rivals and your classmates' squad (role:classmate_c, role:classmate_d). Judged (see judging)"),
     boss("ch19.finals", "Finals bout", 19, "beta3", "combat:enemy.spar.chunin", 18, role="role:rival", nonlethal=True, arena="place:stadium.floor",
-         hp=5.0, poise=80, style=AB, techniques=["nin.substitution", "nin.body_flicker", "fire.great_fireball", "fire.phoenix_flower"],
+         hp=3.0, poise=60, damage=0.7, style=AB, techniques=["nin.substitution", "nin.body_flicker", "fire.great_fireball", "fire.phoenix_flower"],
          win="the opponent is knocked out or yields", lose="you are knocked out or yield (judging still counts how you fought)",
          phases=[phase(1.0, "Pride", "aggressive fire jutsu at mid range and a fast chain close; dodges 30%", opening="interrupt the signs: it weaves at 4 blocks"),
                  phase(0.6, "Pressure", "shuriken with fire (phoenix flowers with hidden steel) and a clone feint", opening="sensing or parry the real one"),
                  phase(0.3, "No holding back", "its signature on a 20-tick tell; if it has the Sharingan, telegraphs are shorter against it", opening="water or a wall; then a finisher")],
          notes="Role-based: the rival in Classic; in Varied the finals opponent is whoever the bracket gives (role:rival by default)"),
-    boss("ch19.stadium_cell", "Attackers in the stands", 19, "beta3", "combat:group.cell_pair", 18, hp=2.5, poise=50, arena="place:stadium.stands",
+    boss("ch19.stadium_cell", "Attackers in the stands", 19, "beta3", "combat:group.cell_pair", 18, hp=1.5, poise=40, damage=0.9, arena="place:stadium.stands",
          win="the stands are cleared and the protect target survives", lose="the protect target falls or you are downed",
          phases=[phase(1.0, "Smoke", "the attack's opening: smoke and fire in the stands; cells target civilians", opening="protect objective: Cover, walls, barriers"),
-                 phase(0.5, "Second wave", "another cell pair and a rogue bomber", adds=["combat:group.cell_pair", "combat:enemy.rogue_bomber"])],
+                 phase(0.5, "Second wave", "a rogue bomber joins from the upper stands", adds=["combat:enemy.rogue_bomber"])],
          notes="The defence and protect objectives of the finals' attack", story=True),
     # Later arcs: non-story bosses
     boss("chunin.missing_nin_bounty", "A missing-nin with a bounty", "chunin", "chunin", "combat:enemy.rogue_jonin", 26, hp=6.0,

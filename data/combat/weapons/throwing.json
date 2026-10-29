@@ -5,7 +5,7 @@
  "retrieval": "thrown kunai, shuriken and senbon embed as entities for 60 s; walk over them to pick them up; a wired kunai comes back on the throw key; the windmill returns by itself",
  "death": "the thrown tools you carry are lost on death (ROADMAP Death); practice tools are never lost",
  "deflect": "a thrown tool can be knocked down by a parry, a kunai swing timed on it, a wind gust or an earth wall",
- "multi": "three shuriken at once from weapons rank 2; five from rank 6 (Manipulated Shuriken bends them)",
+ "multi": "three shuriken at once from weapons rank 2 (x1.3 damage, 30% harder to dodge, 4 more ticks of recovery); five from rank 6 (Manipulated Shuriken bends them)",
  "pouch": "tool pouch quick-throw (G) reaches the pouch's slots",
  "budget": "a throw costs 2 stamina and its recovery ticks; ryo is the real limit: a kunai costs about 10 ryo, a paper bomb 40"
 }

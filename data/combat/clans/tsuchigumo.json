@@ -23,7 +23,7 @@
     "rat",
     "tiger"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 12,
    "cooldown_ticks": 120,
    "power": 0,
@@ -167,7 +167,7 @@
    "boar",
    "rat"
   ],
-  "chakra": 18,
+  "chakra": 16,
   "cast_ticks": 8,
   "cooldown_ticks": 120,
   "power": 0,

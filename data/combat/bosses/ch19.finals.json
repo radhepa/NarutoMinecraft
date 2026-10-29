@@ -30,8 +30,9 @@
    "openings": "water or a wall; then a finisher"
   }
  ],
- "hp_mult": 5.0,
- "poise": 80,
+ "hp_mult": 3.0,
+ "poise": 60,
+ "damage_mult": 0.7,
  "role": "role:rival",
  "techniques": [
   "combat:nin.substitution",

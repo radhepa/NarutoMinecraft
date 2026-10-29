@@ -26,5 +26,6 @@
  ],
  "hp_mult": 6.0,
  "poise": 90,
+ "damage_mult": 1.0,
  "dialogue": "dlg:combat.boss.ch16.forest_beast"
 }

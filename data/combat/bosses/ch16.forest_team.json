@@ -24,8 +24,9 @@
    "openings": "regroup command and a squad combo"
   }
  ],
- "hp_mult": 2.5,
- "poise": 40,
+ "hp_mult": 1.5,
+ "poise": 35,
+ "damage_mult": 0.85,
  "notes": "A three-on-three",
  "story": "bible:combat:boss.ch16.forest_team",
  "dialogue": "dlg:combat.boss.ch16.forest_team"

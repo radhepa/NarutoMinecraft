@@ -15,7 +15,8 @@
    "cinematic": true,
    "habit_adaptation": 0.5,
    "light_hits_interrupt_player": false,
-   "boss_enrage": false
+   "boss_enrage": false,
+   "attack_tokens": 1
   },
   "shinobi": {
    "parry_window": 4,
@@ -31,7 +32,8 @@
    "cinematic": true,
    "habit_adaptation": 1.0,
    "light_hits_interrupt_player": true,
-   "boss_enrage": true
+   "boss_enrage": true,
+   "attack_tokens": 2
   },
   "hard": {
    "parry_window": 3,
@@ -47,7 +49,8 @@
    "cinematic": false,
    "habit_adaptation": 1.5,
    "light_hits_interrupt_player": true,
-   "boss_enrage": true
+   "boss_enrage": true,
+   "attack_tokens": 3
   }
  },
  "default": "story",

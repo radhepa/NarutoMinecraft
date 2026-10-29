@@ -19,8 +19,8 @@ SIGNS = ["rat", "ox", "tiger", "hare", "dragon", "snake", "horse", "ram", "monke
 # Rank defaults: the level a technique of that rank asks for, its chakra cost, its single-target
 # power (base damage before level, pillar and nature scaling) and its cooldown in ticks.
 RANK_LEVEL = {"e": 1, "d": 5, "c": 10, "b": 18, "a": 30, "s": 42}
-RANK_COST = {"e": 5, "d": 10, "c": 18, "b": 30, "a": 50, "s": 80}
-RANK_POWER = {"e": 0, "d": 5, "c": 9, "b": 14, "a": 21, "s": 32}
+RANK_COST = {"e": 5, "d": 10, "c": 16, "b": 30, "a": 50, "s": 80}
+RANK_POWER = {"e": 0, "d": 5, "c": 10, "b": 14, "a": 21, "s": 32}
 RANK_COOLDOWN = {"e": 40, "d": 60, "c": 120, "b": 200, "a": 360, "s": 800}
 TICKS_PER_SIGN = 4
 

@@ -135,8 +135,9 @@ def slice_open(slice_, level):
     return order.get(slice_, 999) <= level
 
 
-def techniques_for(nature, level, kinds, limit):
+def techniques_for(nature, level, kinds, limit, max_rank="s"):
     pool = [t for t in CATALOGUE if t["level"] <= level and slice_open(t["slice"], level) and t["power"] > 0
+            and RANK_LEVEL[t["rank"]] <= RANK_LEVEL[max_rank]
             and t["kind"] in kinds and t["nature"] in (nature, "none")
             and all(r.startswith("item:") for r in t.get("requires", []))]
     pool.sort(key=lambda t: (-RANK_LEVEL[t["rank"]], -t["power"]))
@@ -163,13 +164,17 @@ def build(focus, level, nature):
     ranks = ranks_for(focus, level)
     tier = lambda r: min(5, 1 + (r - 1) // 2)
     b = {"id": "sim.%s.%d" % (focus, level), "focus": focus, "level": level, "nature": nature, "ranks": ranks,
-         "control": min(100, 30 + level), "armour": gear_for(level), "techniques": ["combat:nin.substitution"]}
+         "control": min(100, 30 + level), "armour": gear_for(level), "techniques": ["combat:nin.substitution", "combat:nin.clone"]}
+    if level >= 8:
+        b["techniques"].append("combat:nin.body_flicker")
     if focus == "taijutsu":
         b["style"] = "combat:style.strong_fist" if level >= 8 else "combat:style.academy_basics"
         b["style_tier"] = tier(ranks["taijutsu"])
         b["melee"] = None
         b["gates"] = max(0, min(ranks["taijutsu"] - 4, 6 if level >= 42 else 4 if level >= 30 else 2 if level >= 18 else 0))
-        b["techniques"] += techniques_for(nature, level, ("ninjutsu",), 2)
+        b["techniques"] += techniques_for(nature, level, ("ninjutsu",), 1, max_rank="c")
+        if level >= 20:
+            b["techniques"].append("combat:earth.hardening")
         b["thrown"] = "item:kunai" if level >= 5 else "item:kunai_practice"
         b["tools"] = {"item:kunai": 6}
     elif focus == "weapons":
@@ -177,14 +182,16 @@ def build(focus, level, nature):
         b["style_tier"] = tier(ranks["weapons"])
         b["melee"] = melee_for(focus, level)
         b["thrown"] = "item:shuriken" if level >= 5 else "item:shuriken_practice"
-        b["techniques"] += techniques_for(nature, level, ("weapon",), 3) + techniques_for(nature, level, ("ninjutsu",), 1)
+        b["techniques"] += techniques_for(nature, level, ("weapon",), 3) + techniques_for(nature, level, ("ninjutsu",), 1, max_rank="c")
         b["tools"] = {"item:shuriken": 30, "item:kunai": 10, "item:paper_bomb": 4 if level >= 10 else 0}
     elif focus == "ninjutsu":
         b["style"] = "combat:style.academy_basics"
         b["style_tier"] = tier(ranks["taijutsu"])
         b["melee"] = melee_for(focus, level)
         b["thrown"] = "item:shuriken" if level >= 5 else "item:shuriken_practice"
-        b["techniques"] += techniques_for(nature, level, ("ninjutsu", "genjutsu"), 5)
+        b["techniques"] += techniques_for(nature, level, ("ninjutsu",), 4)
+        if level >= 8:
+            b["techniques"].append("combat:gen.hell_viewing" if level < 20 else "combat:gen.bringer_of_darkness")
         b["tools"] = {"item:shuriken": 10}
     else:
         b["style"] = "combat:style.strong_fist" if level >= 8 else "combat:style.academy_basics"

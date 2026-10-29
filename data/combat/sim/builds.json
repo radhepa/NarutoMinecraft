@@ -17,7 +17,8 @@
     "chakra": 0
    },
    "techniques": [
-    "combat:nin.substitution"
+    "combat:nin.substitution",
+    "combat:nin.clone"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 2,
@@ -44,7 +45,8 @@
     "chakra": 0
    },
    "techniques": [
-    "combat:nin.substitution"
+    "combat:nin.substitution",
+    "combat:nin.clone"
    ],
    "style": "combat:style.academy_blade",
    "style_tier": 2,
@@ -72,7 +74,8 @@
     "chakra": 0
    },
    "techniques": [
-    "combat:nin.substitution"
+    "combat:nin.substitution",
+    "combat:nin.clone"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
@@ -98,7 +101,8 @@
     "chakra": 0
    },
    "techniques": [
-    "combat:nin.substitution"
+    "combat:nin.substitution",
+    "combat:nin.clone"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
@@ -128,6 +132,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:earth.headhunter"
    ],
    "style": "combat:style.strong_fist",
@@ -156,6 +162,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.tag_kunai",
     "combat:weapon.shadow_shuriken",
     "combat:wind.great_breakthrough"
@@ -187,8 +195,11 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.great_fireball",
-    "combat:fire.ember_shot"
+    "combat:fire.ember_shot",
+    "combat:gen.hell_viewing"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
@@ -215,6 +226,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.stunning_palm",
     "combat:lightning.spark_needle",
     "combat:weapon.tag_kunai"
@@ -247,8 +260,9 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:earth.mud_river",
-    "combat:earth.headhunter"
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
    ],
    "style": "combat:style.strong_fist",
    "style_tier": 3,
@@ -276,6 +290,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.manipulated_shuriken",
     "combat:weapon.wind_shuriken",
     "combat:weapon.tag_kunai",
@@ -308,9 +324,12 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:fire.phoenix_flower",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.great_fireball",
-    "combat:fire.ember_shot"
+    "combat:fire.phoenix_flower",
+    "combat:fire.ember_shot",
+    "combat:gen.hell_viewing"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
@@ -337,6 +356,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.stunning_palm",
     "combat:lightning.spark_needle",
     "combat:weapon.manipulated_shuriken"
@@ -369,8 +390,9 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:earth.mud_river",
-    "combat:earth.headhunter"
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
    ],
    "style": "combat:style.strong_fist",
    "style_tier": 4,
@@ -398,6 +420,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.manipulated_shuriken",
     "combat:weapon.windmill_triple",
     "combat:weapon.wind_shuriken",
@@ -430,9 +454,12 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:fire.phoenix_flower",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.great_fireball",
-    "combat:fire.ember_shot"
+    "combat:fire.phoenix_flower",
+    "combat:fire.ember_shot",
+    "combat:gen.hell_viewing"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 2,
@@ -459,6 +486,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.stunning_palm",
     "combat:lightning.spark_needle",
     "combat:weapon.manipulated_shuriken"
@@ -491,8 +520,10 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:earth.earth_dragon_bullet",
-    "combat:earth.stone_spears"
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
    ],
    "style": "combat:style.strong_fist",
    "style_tier": 4,
@@ -520,10 +551,12 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.kunai_barrage",
     "combat:weapon.manipulated_shuriken",
     "combat:weapon.windmill_triple",
-    "combat:wind.vacuum_bullet"
+    "combat:wind.vacuum_wave"
    ],
    "style": "combat:style.crescent_moon",
    "style_tier": 4,
@@ -552,11 +585,13 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.fire_dragon_bullet",
     "combat:fire.ash_pile_burning",
     "combat:fire.flame_wall",
-    "combat:fire.phoenix_flower",
-    "combat:fire.great_fireball"
+    "combat:fire.great_fireball",
+    "combat:gen.bringer_of_darkness"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 2,
@@ -583,6 +618,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.false_darkness",
     "combat:lightning.lightning_hound",
     "combat:lightning.stunning_palm",
@@ -616,8 +653,10 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:earth.earth_dragon_bullet",
-    "combat:earth.stone_spears"
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
    ],
    "style": "combat:style.strong_fist",
    "style_tier": 5,
@@ -645,10 +684,12 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.kunai_barrage",
     "combat:weapon.manipulated_shuriken",
     "combat:weapon.windmill_triple",
-    "combat:wind.pressure_damage"
+    "combat:wind.vacuum_wave"
    ],
    "style": "combat:style.crescent_moon",
    "style_tier": 5,
@@ -677,11 +718,13 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.great_dragon_fire",
     "combat:fire.fire_dragon_bullet",
     "combat:fire.ash_pile_burning",
     "combat:fire.flame_wall",
-    "combat:fire.phoenix_flower"
+    "combat:gen.bringer_of_darkness"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 2,
@@ -708,6 +751,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.lightning_blade",
     "combat:lightning.false_darkness",
     "combat:lightning.lightning_hound",
@@ -741,8 +786,10 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:nin.spiral_sphere",
-    "combat:earth.earth_dragon_bullet"
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
    ],
    "style": "combat:style.strong_fist",
    "style_tier": 5,
@@ -770,10 +817,12 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.kunai_barrage",
     "combat:weapon.manipulated_shuriken",
     "combat:weapon.windmill_triple",
-    "combat:wind.vacuum_great_sphere"
+    "combat:wind.vacuum_wave"
    ],
    "style": "combat:style.crescent_moon",
    "style_tier": 5,
@@ -802,11 +851,13 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:nin.spiral_sphere",
     "combat:fire.majestic_destroyer_flame",
     "combat:fire.great_dragon_fire",
     "combat:fire.fire_dragon_bullet",
-    "combat:fire.ash_pile_burning"
+    "combat:gen.bringer_of_darkness"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 4,
@@ -833,6 +884,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.lightning_blade",
     "combat:nin.spiral_sphere",
     "combat:lightning.false_darkness",
@@ -866,8 +919,10 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:earth.earth_splitting",
-    "combat:nin.spiral_sphere"
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
    ],
    "style": "combat:style.strong_fist",
    "style_tier": 5,
@@ -895,10 +950,12 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.kunai_barrage",
     "combat:weapon.manipulated_shuriken",
     "combat:weapon.windmill_triple",
-    "combat:wind.vacuum_great_sphere"
+    "combat:wind.vacuum_wave"
    ],
    "style": "combat:style.crescent_moon",
    "style_tier": 5,
@@ -927,11 +984,13 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.great_fire_annihilation",
     "combat:nin.spiral_sphere",
     "combat:fire.majestic_destroyer_flame",
     "combat:fire.great_dragon_fire",
-    "combat:fire.fire_dragon_bullet"
+    "combat:gen.bringer_of_darkness"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 5,
@@ -958,6 +1017,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.lightning_blade",
     "combat:nin.spiral_sphere",
     "combat:lightning.false_darkness",
@@ -991,8 +1052,10 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:earth.earth_splitting",
-    "combat:nin.spiral_sphere"
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
    ],
    "style": "combat:style.strong_fist",
    "style_tier": 5,
@@ -1020,10 +1083,12 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.kunai_barrage",
     "combat:weapon.manipulated_shuriken",
     "combat:weapon.windmill_triple",
-    "combat:wind.vacuum_great_sphere"
+    "combat:wind.vacuum_wave"
    ],
    "style": "combat:style.crescent_moon",
    "style_tier": 5,
@@ -1052,11 +1117,13 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.great_fire_annihilation",
     "combat:nin.spiral_sphere",
     "combat:fire.majestic_destroyer_flame",
     "combat:fire.great_dragon_fire",
-    "combat:fire.fire_dragon_bullet"
+    "combat:gen.bringer_of_darkness"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 5,
@@ -1083,6 +1150,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.lightning_blade",
     "combat:nin.spiral_sphere",
     "combat:lightning.false_darkness",
@@ -1115,7 +1184,8 @@
     "chakra": 0
    },
    "techniques": [
-    "combat:nin.substitution"
+    "combat:nin.substitution",
+    "combat:nin.clone"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
@@ -1142,7 +1212,8 @@
     "chakra": 0
    },
    "techniques": [
-    "combat:nin.substitution"
+    "combat:nin.substitution",
+    "combat:nin.clone"
    ],
    "style": "combat:style.academy_blade",
    "style_tier": 1,
@@ -1170,7 +1241,8 @@
     "chakra": 0
    },
    "techniques": [
-    "combat:nin.substitution"
+    "combat:nin.substitution",
+    "combat:nin.clone"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
@@ -1196,7 +1268,8 @@
     "chakra": 0
    },
    "techniques": [
-    "combat:nin.substitution"
+    "combat:nin.substitution",
+    "combat:nin.clone"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
@@ -1226,6 +1299,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:earth.headhunter"
    ],
    "style": "combat:style.strong_fist",
@@ -1254,6 +1329,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.tag_kunai",
     "combat:weapon.shadow_shuriken",
     "combat:wind.great_breakthrough"
@@ -1285,8 +1362,11 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.great_fireball",
-    "combat:fire.ember_shot"
+    "combat:fire.ember_shot",
+    "combat:gen.hell_viewing"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
@@ -1313,6 +1393,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.stunning_palm",
     "combat:lightning.spark_needle",
     "combat:weapon.tag_kunai"
@@ -1345,8 +1427,9 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:earth.mud_river",
-    "combat:earth.headhunter"
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
    ],
    "style": "combat:style.strong_fist",
    "style_tier": 3,
@@ -1374,6 +1457,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.manipulated_shuriken",
     "combat:weapon.wind_shuriken",
     "combat:weapon.tag_kunai",
@@ -1406,9 +1491,12 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:fire.phoenix_flower",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.great_fireball",
-    "combat:fire.ember_shot"
+    "combat:fire.phoenix_flower",
+    "combat:fire.ember_shot",
+    "combat:gen.hell_viewing"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
@@ -1435,6 +1523,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.stunning_palm",
     "combat:lightning.spark_needle",
     "combat:weapon.manipulated_shuriken"
@@ -1467,8 +1557,9 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:earth.mud_river",
-    "combat:earth.headhunter"
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
    ],
    "style": "combat:style.strong_fist",
    "style_tier": 3,
@@ -1496,6 +1587,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.manipulated_shuriken",
     "combat:weapon.wind_shuriken",
     "combat:weapon.tag_kunai",
@@ -1528,9 +1621,12 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:fire.phoenix_flower",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.great_fireball",
-    "combat:fire.ember_shot"
+    "combat:fire.phoenix_flower",
+    "combat:fire.ember_shot",
+    "combat:gen.hell_viewing"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 2,
@@ -1557,6 +1653,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.stunning_palm",
     "combat:lightning.spark_needle",
     "combat:weapon.manipulated_shuriken"
@@ -1589,8 +1687,9 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:earth.mud_river",
-    "combat:earth.headhunter"
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
    ],
    "style": "combat:style.strong_fist",
    "style_tier": 4,
@@ -1618,6 +1717,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:weapon.manipulated_shuriken",
     "combat:weapon.wind_shuriken",
     "combat:wind.vacuum_wave"
@@ -1649,9 +1750,12 @@
    },
    "techniques": [
     "combat:nin.substitution",
-    "combat:fire.phoenix_flower",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:fire.great_fireball",
-    "combat:fire.ember_shot"
+    "combat:fire.phoenix_flower",
+    "combat:fire.ember_shot",
+    "combat:gen.hell_viewing"
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 2,
@@ -1678,6 +1782,8 @@
    },
    "techniques": [
     "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
     "combat:lightning.stunning_palm",
     "combat:lightning.spark_needle",
     "combat:weapon.manipulated_shuriken"

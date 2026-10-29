@@ -51,7 +51,7 @@
     "boar",
     "dog"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 16,
    "cooldown_ticks": 120,
    "power": 0,
@@ -89,10 +89,10 @@
     "dog",
     "ram"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 12,
    "cooldown_ticks": 120,
-   "power": 5.4,
+   "power": 6.0,
    "shape": {
     "type": "cone",
     "range": 10,

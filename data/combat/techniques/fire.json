@@ -55,10 +55,10 @@
     "horse",
     "tiger"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 24,
    "cooldown_ticks": 120,
-   "power": 9.0,
+   "power": 10.0,
    "shape": {
     "type": "projectile",
     "range": 20,
@@ -100,7 +100,7 @@
     "hare",
     "tiger"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 24,
    "cooldown_ticks": 120,
    "power": 10,
@@ -143,10 +143,10 @@
     "hare",
     "tiger"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 16,
    "cooldown_ticks": 120,
-   "power": 10.8,
+   "power": 12.0,
    "shape": {
     "type": "line",
     "range": 16,

@@ -31,8 +31,9 @@
    "openings": "the log: wait for them to land"
   }
  ],
- "hp_mult": 2.5,
- "poise": 30,
+ "hp_mult": 1.8,
+ "poise": 25,
+ "damage_mult": 0.8,
  "role": "role:rival",
  "techniques": [
   "combat:nin.substitution"

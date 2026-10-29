@@ -25,6 +25,7 @@
  ],
  "hp_mult": 99.0,
  "poise": 200,
+ "damage_mult": 1.0,
  "role": "role:sensei",
  "techniques": [
   "combat:nin.substitution",

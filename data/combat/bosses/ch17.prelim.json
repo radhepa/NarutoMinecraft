@@ -4,7 +4,7 @@
  "name": "Preliminary bout",
  "chapter": 17,
  "slice": "beta3",
- "base": "combat:group.exam_team",
+ "base": "combat:group.exam_rival",
  "level": 16,
  "nonlethal": true,
  "arena": "place:tower.arena",
@@ -24,6 +24,7 @@
  ],
  "hp_mult": 3.0,
  "poise": 50,
+ "damage_mult": 1.0,
  "notes": "The opponent is rolled from the combat stream among the exam rivals and your classmates' squad (role:classmate_c, role:classmate_d). Judged (see judging)",
  "dialogue": "dlg:combat.boss.ch17.prelim"
 }

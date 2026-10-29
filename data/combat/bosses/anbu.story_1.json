@@ -13,6 +13,7 @@
  "phases": [],
  "hp_mult": 7.0,
  "poise": 100,
+ "damage_mult": 1.15,
  "story": "bible:combat:boss.anbu.story_1",
  "dialogue": "dlg:combat.boss.anbu.story_1"
 }

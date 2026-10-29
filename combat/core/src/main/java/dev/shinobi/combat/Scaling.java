@@ -39,7 +39,7 @@ public final class Scaling {
     public static int pillarCap(int level) { return Math.min(3 * MAX_PILLAR_RANK, 3 + level / 2); }
     /** A style's tier from its pillar's rank: tiers open at ranks 1, 3, 5, 7 and 9. */
     public static int styleTier(int pillarRank) { return Math.min(5, 1 + (pillarRank - 1) / 2); }
-    public static double styleMult(int tier) { return 1 + 0.05 * (Math.clamp(tier, 1, 5) - 1); }
+    public static double styleMult(int tier) { return 1 + 0.1 * (Math.clamp(tier, 1, 5) - 1); }
 
     private Scaling() {}
 }

@@ -51,10 +51,10 @@
     "ox",
     "monkey"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 12,
    "cooldown_ticks": 120,
-   "power": 8.1,
+   "power": 9.0,
    "shape": {
     "type": "melee",
     "range": 3.0,

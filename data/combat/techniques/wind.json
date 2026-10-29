@@ -54,10 +54,10 @@
     "hare",
     "snake"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 20,
    "cooldown_ticks": 120,
-   "power": 7.2,
+   "power": 8.0,
    "shape": {
     "type": "cone",
     "range": 12,
@@ -101,10 +101,10 @@
     "ox",
     "dog"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 12,
    "cooldown_ticks": 120,
-   "power": 9.0,
+   "power": 10.0,
    "shape": {
     "type": "area",
     "radius": 5

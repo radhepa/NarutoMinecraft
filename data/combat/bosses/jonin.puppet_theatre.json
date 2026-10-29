@@ -26,5 +26,6 @@
  ],
  "hp_mult": 7.0,
  "poise": 100,
+ "damage_mult": 1.15,
  "dialogue": "dlg:combat.boss.jonin.puppet_theatre"
 }

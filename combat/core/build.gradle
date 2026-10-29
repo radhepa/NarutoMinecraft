@@ -37,3 +37,13 @@ tasks.register('simulate', JavaExec) {
     systemProperty 'combat.data', combatData.absolutePath
     args project.findProperty('seed') ?: '20261029', project.findProperty('runs') ?: '200'
 }
+
+// One traced fight for tuning: -Pargs="sim.beta.taijutsu.11 combat:boss.ch11.bandit_chief 11 shinobi 1"
+tasks.register('trace', JavaExec) {
+    group = 'verification'
+    description = 'Prints one simulated fight hit by hit.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.shinobi.combat.sim.Trace'
+    systemProperty 'combat.data', combatData.absolutePath
+    args((project.findProperty('args') ?: 'sim.beta.taijutsu.11 combat:boss.ch11.bandit_chief 11 shinobi 1').toString().split(' '))
+}

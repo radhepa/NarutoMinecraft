@@ -49,7 +49,7 @@
   "wrong_sequence_cost_fraction": 0.25,
   "interrupted_cost_fraction": 0.5
  },
- "interrupt": "A stagger, knockdown or hit worth more than 10% of max health interrupts weaving (enemy casters: any hit). Story difficulty: light hits never interrupt the player",
+ "interrupt": "A melee hit, a stagger or a knockdown interrupts weaving; a thrown or jutsu hit only if it deals 15% of max health or more. Story difficulty: only staggers, knockdowns and hits over 10% of max health interrupt the player",
  "quick_slots": {
   "keys": [
    "Z",

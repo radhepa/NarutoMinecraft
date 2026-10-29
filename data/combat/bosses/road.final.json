@@ -13,6 +13,7 @@
  "phases": [],
  "hp_mult": 12.0,
  "poise": 200,
+ "damage_mult": 1.15,
  "story": "bible:combat:boss.road.final",
  "dialogue": "dlg:combat.boss.road.final"
 }

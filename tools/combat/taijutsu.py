@@ -23,7 +23,7 @@ def mv(mid, inp, dmg, poise, frames, window=(0, 8), stamina=3, state="ground", t
 
 TIERS = {
     "names": ["initiate", "adept", "expert", "master", "grandmaster"],
-    "style_mult": [1.0, 1.05, 1.1, 1.15, 1.2],
+    "style_mult": [1.0, 1.1, 1.2, 1.3, 1.4],
     "how": "A style's tier rises with uses of its moves in real fights and a mentor's trial at tiers 2 to 5; tiers need taijutsu (or weapons) rank 1, 3, 5, 7 and 9",
 }
 

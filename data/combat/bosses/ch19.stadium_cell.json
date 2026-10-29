@@ -20,15 +20,15 @@
   {
    "at_hp": 0.5,
    "name": "Second wave",
-   "behaviour": "another cell pair and a rogue bomber",
+   "behaviour": "a rogue bomber joins from the upper stands",
    "adds": [
-    "combat:group.cell_pair",
     "combat:enemy.rogue_bomber"
    ]
   }
  ],
- "hp_mult": 2.5,
- "poise": 50,
+ "hp_mult": 1.5,
+ "poise": 40,
+ "damage_mult": 0.9,
  "notes": "The defence and protect objectives of the finals' attack",
  "story": "bible:combat:boss.ch19.stadium_cell",
  "dialogue": "dlg:combat.boss.ch19.stadium_cell"

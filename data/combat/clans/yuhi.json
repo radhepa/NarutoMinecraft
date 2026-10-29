@@ -22,7 +22,7 @@
     "ox",
     "dog"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 12,
    "cooldown_ticks": 120,
    "power": 0,
@@ -181,7 +181,7 @@
   "rank": "c",
   "level": 12,
   "signs": [],
-  "chakra": 18,
+  "chakra": 16,
   "cast_ticks": 0,
   "cooldown_ticks": 120,
   "power": 0,

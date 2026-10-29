@@ -154,6 +154,22 @@
    "slice": "beta3"
   },
   {
+   "id": "combat:group.exam_rival",
+   "members": [
+    {
+     "pick": [
+      "combat:enemy.exam_genin_wind",
+      "combat:enemy.exam_genin_sound",
+      "combat:enemy.exam_genin_puppet",
+      "combat:enemy.exam_genin_needle",
+      "combat:enemy.exam_genin_brawler"
+     ],
+     "count": 1
+    }
+   ],
+   "slice": "beta3"
+  },
+  {
    "id": "combat:group.rogue_cell_b",
    "members": [
     {

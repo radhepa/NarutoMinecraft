@@ -65,7 +65,7 @@ public final class CombatData {
     }
     public record Enemy(String id, String kind, String tier, String rank, int minLevel, int maxLevel, String band, String style, List<String> weapons,
                         List<String> techniques, Map<String, Object> tools, Nature nature, Map<String, Object> armour, List<String> traits,
-                        Map<String, Object> ai, double hpMult, double poise) {
+                        Map<String, Object> ai, double hpMult, double poise, double damageMult, int thinkTicks) {
         static Enemy of(Map<String, Object> m, Map<String, Object> tiers) {
             var lv = Json.list(m, "levels");
             String tier = Json.str(m, "tier", "mook");
@@ -74,14 +74,14 @@ public final class CombatData {
                     ((Number) lv.get(0)).intValue(), ((Number) lv.get(1)).intValue(), Json.str(m, "band", "close"), Json.str(m, "style", null),
                     Json.strings(m, "weapons"), Json.strings(m, "techniques"), Json.obj(m, "tools"), Nature.of(Json.str(m, "nature", "none")),
                     Json.obj(m, "armour"), Json.strings(m, "traits"), Json.obj(m, "ai"), Json.num(m, "hp_mult", Json.num(t, "hp", 1)),
-                    Json.num(m, "poise", Json.num(t, "poise", 15)));
+                    Json.num(m, "poise", Json.num(t, "poise", 15)), Json.num(t, "damage", 1), Json.integer(t, "think_ticks", 6));
         }
         public boolean animal() { return "animal".equals(kind); }
         public boolean has(String trait) { return traits.contains(trait); }
     }
     public record Phase(double atHp, String name, List<String> adds) {}
     public record Boss(String id, String slice, String base, int level, boolean nonlethal, double hpMult, double poise, List<Phase> phases,
-                       List<String> techniques, List<String> weapons, String style, String role, Map<String, Object> armour) {
+                       List<String> techniques, List<String> weapons, String style, String role, Map<String, Object> armour, double damageMult) {
         static Boss of(Map<String, Object> m) {
             var ph = new ArrayList<Phase>();
             for (Object o : Json.list(m, "phases")) {
@@ -90,7 +90,8 @@ public final class CombatData {
             }
             return new Boss(Json.str(m, "id", "?"), Json.str(m, "slice", "beta1"), Json.str(m, "base", "?"), Json.integer(m, "level", 1),
                     Json.bool(m, "nonlethal"), Json.num(m, "hp_mult", 7), Json.num(m, "poise", 100), ph, Json.strings(m, "techniques"),
-                    Json.strings(m, "weapons"), Json.str(m, "style", null), Json.str(m, "role", null), Json.obj(m, "armour"));
+                    Json.strings(m, "weapons"), Json.str(m, "style", null), Json.str(m, "role", null), Json.obj(m, "armour"),
+                    Json.num(m, "damage_mult", 1));
         }
     }
     public record Build(String id, String focus, int level, Nature nature, Map<Scaling.Pillar, Integer> ranks, int control, double physical,
@@ -120,7 +121,7 @@ public final class CombatData {
     public final Map<String, Build> builds = new LinkedHashMap<>();
     public final Map<String, Difficulty> difficulties = new LinkedHashMap<>();
     public final Map<String, StatusEffects.Def> statuses;
-    public final Map<String, Object> gates, ai, damageTypes, index;
+    public final Map<String, Object> gates, ai, tiers, damageTypes, index;
     public final List<String> clans = new ArrayList<>();
 
     private final Path root;
@@ -144,7 +145,7 @@ public final class CombatData {
         for (Object o : Json.list(read(root.resolve("weapons/weapons.json")), "weapons")) { var w = Weapon.of(Json.obj(o)); weapons.put(w.item(), w); }
         var aiFile = read(root.resolve("enemies/_ai.json"));
         ai = Json.obj(aiFile, "ai");
-        var tiers = Json.obj(aiFile, "tiers");
+        tiers = Json.obj(aiFile, "tiers");
         for (Path f : files("enemies")) {
             if (f.getFileName().toString().startsWith("_")) continue;
             var e = Enemy.of(read(f), tiers);

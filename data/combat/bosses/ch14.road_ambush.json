@@ -27,8 +27,9 @@
    "openings": "wind or a flash shows the mines; a sealing tag captures a downed foe"
   }
  ],
- "hp_mult": 3.0,
- "poise": 40,
+ "hp_mult": 1.8,
+ "poise": 35,
+ "damage_mult": 1.0,
  "notes": "Teaches enemy cells, smoke and paper bombs, capture with a sealing tag",
  "story": "bible:combat:boss.ch14.road_ambush",
  "dialogue": "dlg:combat.boss.ch14.road_ambush"

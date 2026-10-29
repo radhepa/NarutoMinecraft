@@ -15,7 +15,7 @@
    ],
    "chakra": 5,
    "cast_ticks": 12,
-   "cooldown_ticks": 40,
+   "cooldown_ticks": 300,
    "power": 0,
    "shape": {
     "type": "entity",

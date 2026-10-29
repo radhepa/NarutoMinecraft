@@ -14,9 +14,8 @@
   {
    "at_hp": 1.0,
    "name": "Bluster",
-   "behaviour": "mace overheads (12-tick tell), a ground slam (radius 3)",
+   "behaviour": "mace overheads (12-tick tell), a ground slam (radius 3); an archer on the wagon",
    "adds": [
-    "combat:enemy.bandit_thug",
     "combat:enemy.bandit_archer"
    ],
    "openings": "every overhead is parryable: a parry staggers him for 20"
@@ -24,10 +23,9 @@
   {
    "at_hp": 0.6,
    "name": "Dirty fighting",
-   "behaviour": "throws smoke, then a paper bomb into it; calls two more bandits",
+   "behaviour": "throws smoke, then a paper bomb into it; calls a knife-fighter from the tents",
    "adds": [
-    "combat:enemy.bandit_knife",
-    "combat:enemy.bandit_thug"
+    "combat:enemy.bandit_knife"
    ],
    "openings": "wind blows the smoke away; sensing sees through it"
   },
@@ -38,8 +36,9 @@
    "openings": "poise 70: a heavy chain breaks it"
   }
  ],
- "hp_mult": 6.0,
+ "hp_mult": 5.0,
  "poise": 70,
+ "damage_mult": 0.8,
  "weapons": [
   "item:mace",
   "item:kunai"

@@ -26,10 +26,10 @@
     "rat",
     "horse"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 12,
    "cooldown_ticks": 120,
-   "power": 2.7,
+   "power": 3.0,
    "shape": {
     "type": "line",
     "range": 10,
@@ -174,7 +174,7 @@
    "rat",
    "dragon"
   ],
-  "chakra": 18,
+  "chakra": 16,
   "cast_ticks": 0,
   "cooldown_ticks": 120,
   "power": 0,

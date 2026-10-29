@@ -25,10 +25,10 @@
     "ram",
     "boar"
    ],
-   "chakra": 18,
+   "chakra": 16,
    "cast_ticks": 12,
    "cooldown_ticks": 120,
-   "power": 4.5,
+   "power": 5.0,
    "shape": {
     "type": "target",
     "range": 14,
@@ -171,7 +171,7 @@
    "rat",
    "hare"
   ],
-  "chakra": 18,
+  "chakra": 16,
   "cast_ticks": 12,
   "cooldown_ticks": 120,
   "power": 0,

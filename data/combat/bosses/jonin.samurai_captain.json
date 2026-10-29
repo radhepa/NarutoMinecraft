@@ -26,6 +26,7 @@
  ],
  "hp_mult": 7.0,
  "poise": 140,
+ "damage_mult": 1.15,
  "armour": {
   "physical": 10,
   "chakra": 14,
