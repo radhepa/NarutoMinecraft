@@ -789,12 +789,14 @@ The full design is in **[CHARACTER_CREATION.md](CHARACTER_CREATION.md)**. In sho
   or B, the six complexions, eye shape, brows, eye color), **hair**, **face** (marks, headwear
   without a forehead protector), **outfit** (the Academy collection), **roots** (a temperament for
   dialogue flavor, a combat knack, a nature affinity that the Genin ceremony shows as your leaning)
-  and a **review**.
+  and a **review**, with the starting key item in hand.
 - **Starting stats** are the same for every player (combat's numbers: 10 hearts, chakra 53,
   control 35, stamina 110, poise 20).
 - **Locked:** names, body, complexion, eyes, roots. **Changeable:** hair, hair color, brows and
   marks at a barber; outfits and headwear at home; pronouns in the settings; a free restyle on the
   Years Later mirror at each time skip, where hair grows and outfits follow the rank.
+  The last name changes only at the clan registry (founding or joining a clan: take the clan's
+  name or keep yours).
 - **Varied's Roll a life** rolls a whole character from the save seed (the same seed, the same
   suggestion); every row also has its own dice.
 - **Data and code:** `tools/creator/creator.json` compiled by `tools/creator/creator.py` (with
