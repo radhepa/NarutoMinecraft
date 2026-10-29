@@ -44,6 +44,19 @@ public final class Bond {
     final EnumMap<Act.Experience, Integer> experiences = new EnumMap<>(Act.Experience.class);
     final Set<String> moments = new TreeSet<>(), facts = new TreeSet<>(), flags = new TreeSet<>();
     Conflict conflict = Conflict.NONE;
+    /** Time together: the days of past hangouts by activity (the last few), the rituals they became, the highlights. */
+    final java.util.Map<String, List<Long>> hangouts = new TreeMap<>();
+    final Set<String> rituals = new TreeSet<>();
+    final List<Together.Highlight> highlights = new ArrayList<>();
+    /** Asking and being asked: when the player last asked, how many asks in a row they turned down, and the same the other way. */
+    long lastAsked = -1, quietUntil = -1;
+    int declinedByThem, declinedByYou;
+    /** What is going on in their life, and what either of you means to ask about later. */
+    final List<LifeEvents.News> news = new ArrayList<>();
+    final List<Together.FollowUp> followUps = new ArrayList<>();
+    /** Conversation topics already raised today. */
+    final Set<String> topicsToday = new TreeSet<>();
+    long topicsDay = -1;
     Courtship.Stage romance = Courtship.Stage.NONE;
 
     Bond(String from, String to) { this.from = from; this.to = to; }
@@ -72,6 +85,15 @@ public final class Bond {
     public boolean has(String flag) { return flags.contains(flag); }
     public Set<String> flags() { return Set.copyOf(flags); }
     public boolean remembers(Act act) { return memories.stream().anyMatch(m -> m.act() == act); }
+    public Set<String> rituals() { return Set.copyOf(rituals); }
+    public List<Together.Highlight> highlights() { return List.copyOf(highlights); }
+    public int hangoutCount(String activity) { return hangouts.getOrDefault(activity, List.of()).size(); }
+    public List<LifeEvents.News> news() { return List.copyOf(news); }
+    public List<Together.FollowUp> followUps() { return List.copyOf(followUps); }
+    public int declinedByThem() { return declinedByThem; }
+    public int declinedByYou() { return declinedByYou; }
+    /** Whether the player talked with them today. */
+    public boolean talkDayIsToday(long day) { return talkDay == day; }
 
     void meet(long day) { if (met < 0) met = day; }
     /** A day with any contact at all (a talk, a lesson, a mission). */

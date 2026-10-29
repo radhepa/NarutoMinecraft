@@ -37,6 +37,10 @@ public final class SaveFormat {
             deeds.add(map("serial", d.serial, "act", d.act.id(), "day", d.day, "about", d.about, "knowers", knowers));
         }
         out.put("deeds", deeds);
+        out.put("plans", w.plans.stream().map(p -> (Object) map("id", p.id(), "with", p.with(), "activity", p.activity(), "day", p.day(), "hour", p.hour(), "host", p.host())).toList());
+        out.put("invitations", w.invitations.stream().map(i -> (Object) map("id", i.id(), "from", i.from(), "activity", i.activity(), "day", i.day(), "hour", i.hour(), "expires", i.expires())).toList());
+        out.put("invited_on", new TreeMap<>(w.invitedOn));
+        out.put("plan_serial", w.planSerial);
         return out;
     }
 
@@ -57,6 +61,13 @@ public final class SaveFormat {
         var exp = new LinkedHashMap<String, Object>();
         b.experiences.forEach((k, v) -> exp.put(k.name().toLowerCase(), v));
         m.put("experiences", exp);
+        var hang = new LinkedHashMap<String, Object>();
+        b.hangouts.forEach((k, v) -> hang.put(k, List.copyOf(v)));
+        m.put("hangouts", hang); m.put("rituals", List.copyOf(b.rituals));
+        m.put("highlights", b.highlights.stream().map(h -> (Object) map("activity", h.activity(), "day", h.day(), "key", h.key(), "with", h.with())).toList());
+        m.put("last_asked", b.lastAsked); m.put("quiet_until", b.quietUntil); m.put("declined_by_them", b.declinedByThem); m.put("declined_by_you", b.declinedByYou);
+        m.put("news", b.news.stream().map(n -> (Object) map("kind", n.kind().id(), "day", n.day(), "shared", n.shared(), "shared_day", n.sharedDay(), "response", n.response())).toList());
+        m.put("follow_ups", b.followUps.stream().map(f -> (Object) map("topic", f.topic(), "due", f.due(), "they_ask", f.theyAsk())).toList());
         m.put("moments", List.copyOf(b.moments)); m.put("facts", List.copyOf(b.facts)); m.put("flags", List.copyOf(b.flags));
         var c = b.conflict;
         m.put("conflict", map("state", c.state().id(), "since", c.since(), "until", c.until(), "severity", c.severity(),
@@ -99,6 +110,16 @@ public final class SaveFormat {
             }
             w.deeds.add(deed);
         }
+        for (Object o : (List<Object>) in.getOrDefault("plans", List.of())) {
+            var p = (Map<String, Object>) o;
+            w.plans.add(new Together.Plan((String) p.get("id"), (List<String>) p.get("with"), (String) p.get("activity"), lng(p.get("day")), (int) lng(p.get("hour")), (String) p.get("host")));
+        }
+        for (Object o : (List<Object>) in.getOrDefault("invitations", List.of())) {
+            var i = (Map<String, Object>) o;
+            w.invitations.add(new Together.Invitation((String) i.get("id"), (String) i.get("from"), (String) i.get("activity"), lng(i.get("day")), (int) lng(i.get("hour")), lng(i.get("expires"))));
+        }
+        ((Map<String, Object>) in.getOrDefault("invited_on", Map.of())).forEach((k, v) -> w.invitedOn.put(k, lng(v)));
+        w.planSerial = (int) lng(in.getOrDefault("plan_serial", 0));
         return w;
     }
     @SuppressWarnings("unchecked")
@@ -119,6 +140,20 @@ public final class SaveFormat {
         for (var e : ((Map<String, Object>) m.getOrDefault("experiences", Map.of())).entrySet())
             b.experiences.put(Act.Experience.valueOf(e.getKey().toUpperCase()), (int) lng(e.getValue()));
         b.moments.addAll((List<String>) m.getOrDefault("moments", List.of()));
+        ((Map<String, Object>) m.getOrDefault("hangouts", Map.of())).forEach((k, v) -> b.hangouts.put(k, new ArrayList<>(((List<Object>) v).stream().map(SaveFormat::lng).toList())));
+        b.rituals.addAll((List<String>) m.getOrDefault("rituals", List.of()));
+        for (Object o : (List<Object>) m.getOrDefault("highlights", List.of())) {
+            var h = (Map<String, Object>) o;
+            b.highlights.add(new Together.Highlight((String) h.get("activity"), lng(h.get("day")), (String) h.get("key"), (List<String>) h.get("with")));
+        }
+        b.lastAsked = lng(m.getOrDefault("last_asked", -1)); b.quietUntil = lng(m.getOrDefault("quiet_until", -1));
+        b.declinedByThem = (int) lng(m.getOrDefault("declined_by_them", 0)); b.declinedByYou = (int) lng(m.getOrDefault("declined_by_you", 0));
+        for (Object o : (List<Object>) m.getOrDefault("news", List.of())) {
+            var n = (Map<String, Object>) o;
+            b.news.add(new LifeEvents.News(LifeEvents.Kind.of((String) n.get("kind")), lng(n.get("day")), (Boolean) n.get("shared"), lng(n.get("shared_day")), (String) n.get("response")));
+        }
+        for (Object o : (List<Object>) m.getOrDefault("follow_ups", List.of()))
+            { var f = (Map<String, Object>) o; b.followUps.add(new Together.FollowUp((String) f.get("topic"), lng(f.get("due")), (Boolean) f.get("they_ask"))); }
         b.facts.addAll((List<String>) m.getOrDefault("facts", List.of()));
         b.flags.addAll((List<String>) m.getOrDefault("flags", List.of()));
         var c = (Map<String, Object>) m.getOrDefault("conflict", Map.of());
