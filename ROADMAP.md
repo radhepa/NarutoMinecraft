@@ -471,7 +471,8 @@ know their shape.
 - **Templates:** `tools/quests/new.py <template> <id>` scaffolds the common shapes (fetch, deliver,
   escort, defeat, investigate, talk chain, filler arc of N parts) so a side quest starts as a
   filled-in file.
-- **Dialogue** uses VF's dialogue text format and compiler (`tools/dialogue/`), with our pools.
+- **Dialogue** uses VF's dialogue text format, extended with context tags, functions and kinds,
+  compiled by `tools/dialogue/dialogue.py` ([DIALOGUE.md](DIALOGUE.md)).
 - **In game (builder mode):** `/shinobi quest start|step|reset <id>`, a flag inspector
   (`/shinobi flags`), role and anchor inspectors, `/reload` for hot reload, and a debug overlay
   that draws anchors and the active objective.
@@ -1027,6 +1028,26 @@ slice: the prologue's crouch, slipping out and being carried, hand signs, combo 
 dodge, block, throw, meditation, a tired slouch, petting (Beta 1); parry, launcher, ninja run,
 chakra jump, wall-run, water stance, forging and workbench, the first clan techniques (Beta 2);
 the finals' fighters and the stadium crowd (Beta 3).
+
+### Dialogue
+
+Residents' talk comes from Shinobi Village's dialogue engine ([DIALOGUE.md](DIALOGUE.md), on the
+`dialogue` branch until it merges; pure Java in `village/dialogue`, authored in `tools/dialogue/`).
+The owner's rule is that once a line is used it is never used again.
+
+- Every line has a stable id, and a per-save heard ledger (a bitset, a few KB) spends each line the
+  player hears, from anyone.
+- Each resident has a talk budget: a few fresh exchanges a day (3 for residents, 6 for the cast)
+  and a lifetime allowance that grows with the bond.
+- Past the budget, or when nothing fresh fits, they repeat in three steps: a "we already talked"
+  line in their voice, a line they said before, then a polite close.
+- Selection: the most specific line wins (personality, clan, rank, job, relationship, the time, the
+  weather, the place, events, story flags). Every line carries a function tag (teach, guide, quest,
+  worldbuild, react, deepen_bond...), and filler is capped at a fifth.
+- Residents ask the player questions with 2 to 4 answers. The answers feed the bond engine and are
+  called back later, and a contradiction is noticed.
+- Combat barks, shop transactions and overheard chatter cycle instead: every line once before any
+  comes back.
 
 ### Residents react to your rank
 
