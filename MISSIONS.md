@@ -204,8 +204,9 @@ step for the client) and `clean_record` (nothing kept that was not yours).
     by the template's setting (`loot:curio.road`, `.river`, `.shrine`, `.wilds`, `.far_lands`, `.covert`
     and more); and 15% of defeated enemies drop one by their kind (`loot:curio.bandit`, `.smuggler`,
     `.ronin`, `.foreign`, `.beast`).
-  - **Ninja info cards**: card items, one per enemy kind on its first defeat (`card:enemy.<id>`) and one
-    per person met on a mission (`card:person.<role>`), with a card back by rank.
+  - **Ninja info cards**: the item `item:info_card` with a variant, one per enemy kind on its first defeat
+    (`enemy.<combat enemy id>`) and one per person met on a mission (`person.<role>`), with a card back by
+    rank.
   - **Keepsakes**: 20 memorable missions give a unique display piece on their first A grade or better (the
     festival lantern, the haunted inn's lantern, a dojo signboard, the kiln family's pieces at every rank).
 
@@ -501,7 +502,7 @@ cohesion; and Beta 2's mission counts, savings and variety for a steady player.
 | **Konoha build** (anchors in `districts.json`) | 88 anchor tags in the beta: in-village spots (`academy.yard`, `market.stall`, `riverbank`, `street_drain`, `client_home`, `pet_hideout`, `poster_board`, `residence.mission_desk`, `residence.records`, `gate.travel_desk`, `kiln_yard` and more), outside the wall (`farm_field`, `orchard`, `woodlot`, `herb_slope`, `outside.bandit_camp`, `outside.wolf_den`, `outside.ravine`), the east road (`road.east_bend`, `road.campsite`, `road.east_waystation`, `road.ford`, `road.inn_cellar`) and the border village (`border.square`, `border.healer`, `border.post`, `border.market`, `border.pawnshop`). Generic tags (`client_home`, `pet_hideout`, `farm_field`) want several instances each; named places one | 88 of 133 |
 | **Map** | Regions `region:east_road` and `region:border_village` (Beta 2); 21 later regions (hill fort, post town, capital, coast town, mountain pass, far lands and more) | 2 of 23 |
 | **Combat** (enemy groups and loadouts) | 14 in the beta, from the combat session's registry: `combat:group.bandits_small`, `.road_ambush`, `.bandits_camp`, `.smugglers`, `.scout_pair`, `.wolves_pack`, `combat:enemy.bandit_chief`, `.bandit_archer`, `.bandit_ronin`, `.boar`, `.bear`; requested and not yet registered: `combat:group.hired_thugs`, `combat:group.pickpockets` (village street fights, non-lethal) and `combat:enemy.cat_burglar`. 17 later (`combat:group.rogue_pair`, `.cell_pair`, `combat:enemy.rogue_chunin`, `.foreign_jonin`, `.giant_snake` and others; requested: `fort_guards`, `mercenary_band`, `foreign_squad`, `hunter_squad`, `foreign_platoon`, `assassins`, `kidnappers`, `ronin_band`, `combat:enemy.warlord`, `.legend_rogue`). Plus the technique scroll pools and the combat performs. Combat emits the hooks the objectives listen to (`combat:defeated`, `combat:surrendered`, `combat:captured`) | 14 of 31 |
-| **Items** | 51 mission items in the beta (parcels, crates, a sealed letter, medicine, firewood, lantern crates, pottery), the gifts' items, and the collectibles: curio loot tables, info cards and 20 keepsakes (`economy.json` `gifts` and `collectibles`) | 51 of 58 |
+| **Items** | Registered by the items session: mission items as `item:mission_<name>` (nine reuse existing items, such as `item:quest_parcel`; the cat, the ninken, the frog and a stray pet are followers, not items), the gifts' items, the 17 curio loot tables, `item:info_card`, `item:technique_scroll` and 20 `item:keepsake_<name>` (`economy.json` `gifts` and `collectibles`; the compiler maps the authoring names) | 51 of 58 |
 | **Dialogue** | Every template's `title`, `brief`, twist premises and choices; the banter keys (§6); the desk clerk's lines; NPC squads' and the rival squad's board lines | all |
 | **Life** | Ryo through the wallet; bedroll camping and On Duty; chores' work clips | all |
 | **Bonds** | The acts and deeds of §3.2 and §6 (`mission_success`, `failed_client`, `abandoned_mission`, `camp_night`, `helped_resident`); cohesion | all |

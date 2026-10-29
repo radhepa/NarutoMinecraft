@@ -69,7 +69,7 @@
   "pick_up": {
    "objective": {
     "type": "collect",
-    "target": "medicine_crate",
+    "target": "item:mission_medicine_crate",
     "at": "place:hospital.desk",
     "count": 2
    },
@@ -183,7 +183,7 @@
   "deliver": {
    "objective": {
     "type": "deliver",
-    "item": "medicine_crate",
+    "item": "item:mission_medicine_crate",
     "to": "slot:healer"
    },
    "next": "report"

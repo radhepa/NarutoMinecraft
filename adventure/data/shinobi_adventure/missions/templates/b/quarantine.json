@@ -50,7 +50,7 @@
   "deliver": {
    "objective": {
     "type": "deliver",
-    "item": "medicine_crate",
+    "item": "item:mission_medicine_crate",
     "to": "slot:village"
    },
    "next": "order"

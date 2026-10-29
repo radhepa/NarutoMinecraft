@@ -83,7 +83,7 @@
   "mend": {
    "objective": {
     "type": "craft",
-    "item": "net_patch",
+    "item": "item:mission_net_patch",
     "count": 1
    },
    "next": "carry"
@@ -91,7 +91,7 @@
   "carry": {
    "objective": {
     "type": "deliver",
-    "item": "fish_crate",
+    "item": "item:mission_fish_crate",
     "to": "slot:stall"
    },
    "next": "report"

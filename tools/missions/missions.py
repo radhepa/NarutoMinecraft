@@ -211,8 +211,20 @@ def check(t, ids):
     return p
 
 
+def item_id(name):
+    if ":" in name or name in tables.CREATURES:
+        return name
+    return tables.REUSED_ITEMS.get(name, "item:mission_" + name)
+
+
 def compiled(t):
     t = dict(t)
+    for step in t["steps"].values():
+        o = step["objective"]
+        if o["type"] in ("collect", "deliver", "craft", "buy"):
+            for k in ("item", "target"):
+                if isinstance(o.get(k), str) and not o[k].startswith(("slot:", "place:", "role:")):
+                    o[k] = item_id(o[k])
     anchors, regions = derive_places(t)
     t["places"] = {"anchors": anchors, "regions": regions}
     return t

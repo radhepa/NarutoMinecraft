@@ -52,7 +52,7 @@
   "rounds": {
    "objective": {
     "type": "deliver",
-    "item": "linen",
+    "item": "item:mission_linen",
     "to": "slot:ward"
    },
    "branch": [
@@ -82,7 +82,7 @@
   "herbs": {
    "objective": {
     "type": "collect",
-    "target": "herb",
+    "target": "item:healing_herb",
     "at": "slot:garden",
     "count": 6
    },

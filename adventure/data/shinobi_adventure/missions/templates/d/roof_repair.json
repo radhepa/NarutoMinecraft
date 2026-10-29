@@ -46,7 +46,7 @@
   "tiles": {
    "objective": {
     "type": "collect",
-    "target": "roof_tile",
+    "target": "item:mission_roof_tile",
     "at": "slot:yard",
     "count": 8
    },

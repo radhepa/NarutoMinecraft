@@ -178,7 +178,7 @@
   "wheel": {
    "objective": {
     "type": "craft",
-    "item": "cart_wheel",
+    "item": "item:mission_cart_wheel",
     "count": 1
    },
    "next": "day2"

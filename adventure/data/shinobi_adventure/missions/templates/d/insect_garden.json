@@ -65,7 +65,7 @@
   "beetles": {
    "objective": {
     "type": "collect",
-    "target": "beetle",
+    "target": "item:mission_beetle",
     "at": "slot:garden",
     "count": 6
    },

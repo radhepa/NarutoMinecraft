@@ -56,7 +56,7 @@
   "proof": {
    "objective": {
     "type": "collect",
-    "target": "pass_ledger",
+    "target": "item:mission_pass_ledger",
     "at": "slot:office"
    },
    "next": "decide"

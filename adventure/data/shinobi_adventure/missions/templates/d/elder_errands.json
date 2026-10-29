@@ -46,7 +46,7 @@
   "grocer": {
    "objective": {
     "type": "buy",
-    "item": "groceries",
+    "item": "item:grocery_order",
     "at": "slot:shop1",
     "count": 1
    },
@@ -55,7 +55,7 @@
   "tea": {
    "objective": {
     "type": "buy",
-    "item": "tea_leaves",
+    "item": "item:tea_leaves",
     "at": "slot:shop2",
     "count": 1
    },
@@ -72,7 +72,7 @@
   "again": {
    "objective": {
     "type": "buy",
-    "item": "lamp_oil",
+    "item": "item:lamp_oil",
     "at": "place:market.oil",
     "count": 1
    },
@@ -81,7 +81,7 @@
   "home": {
    "objective": {
     "type": "deliver",
-    "item": "groceries",
+    "item": "item:grocery_order",
     "to": "slot:client"
    },
    "branch": [

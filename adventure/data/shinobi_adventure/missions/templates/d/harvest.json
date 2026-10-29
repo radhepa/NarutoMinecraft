@@ -54,7 +54,7 @@
   "pick": {
    "objective": {
     "type": "collect",
-    "target": "crop",
+    "target": "item:mission_crop",
     "at": "slot:field",
     "count": 24
    },
@@ -86,7 +86,7 @@
   "rush": {
    "objective": {
     "type": "collect",
-    "target": "crop",
+    "target": "item:mission_crop",
     "at": "slot:field",
     "count": 12
    },
@@ -95,7 +95,7 @@
   "cart": {
    "objective": {
     "type": "deliver",
-    "item": "crop",
+    "item": "item:mission_crop",
     "to": "slot:barn"
    },
    "branch": [
@@ -111,7 +111,7 @@
   "axle": {
    "objective": {
     "type": "craft",
-    "item": "cart_axle",
+    "item": "item:mission_cart_axle",
     "count": 1
    },
    "next": "report"

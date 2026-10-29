@@ -52,7 +52,7 @@
   "posts": {
    "objective": {
     "type": "collect",
-    "target": "fence_post",
+    "target": "item:mission_fence_post",
     "at": "slot:yard",
     "count": 6
    },

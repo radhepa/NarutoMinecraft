@@ -59,7 +59,7 @@
   "recipe": {
    "objective": {
     "type": "collect",
-    "target": "glaze_recipe",
+    "target": "item:mission_glaze_recipe",
     "at": "slot:workshop"
    },
    "branch": [
@@ -75,7 +75,7 @@
   "copies": {
    "objective": {
     "type": "collect",
-    "target": "recipe_copy",
+    "target": "item:mission_recipe_copy",
     "at": "slot:workshop",
     "count": 3
    },
@@ -84,7 +84,7 @@
   "report": {
    "objective": {
     "type": "deliver",
-    "item": "glaze_recipe",
+    "item": "item:mission_glaze_recipe",
     "to": "slot:client"
    },
    "next": null
