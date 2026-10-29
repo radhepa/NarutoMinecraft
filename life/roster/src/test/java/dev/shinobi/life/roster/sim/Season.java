@@ -96,13 +96,16 @@ public final class Season {
     }
     static String kindling(Profile p, boolean unlocked) {
         if (!unlocked) return "none";
-        return p == Profile.RECKLESS ? "nature" : "full";
+        return p == Profile.RECKLESS ? "spark" : "blaze";
     }
 
     public record Row(String chapter, String title, double hours, long day, double player, Map<String, Double> levels,
                       Map<String, Double> shares, int playerTechniques, Map<String, Integer> techniques, String notes, Map<String, Double> all) {}
-    /** Per person: the lowest and highest level against the player's best, the mean, and the days the band stepped in. */
-    public record Spread(double min, double max, double mean, int caughtUp, int plateaued, int days) {}
+    /**
+     * Per person: the lowest and highest level against the player's best, the mean, the widest distance from where
+     * they belong ({@code player + offset}), and the days the band stepped in.
+     */
+    public record Spread(double min, double max, double mean, double fromTarget, int caughtUp, int plateaued, int days) {}
     public record Result(Profile profile, long seed, List<Row> rows, Map<String, Spread> spread, double rivalAhead,
                          double minShare, double maxShare, int grindDays, int deaths, List<GrowthEvent> events, Roster roster) {}
 
@@ -115,11 +118,12 @@ public final class Season {
         var rows = new ArrayList<Row>();
         var events = new ArrayList<GrowthEvent>();
         var team = new ArrayList<>(List.of(TEAMMATE_A, TEAMMATE_B));
-        r.group(r.ids());
+        var klass = r.ids().stream().filter(id -> !SENIORS.contains(id)).toList();
+        r.group(klass);
         double xp = 0; int floor = 1, playerTechs = 0, grind = 0, deaths = 0;
         double minShare = 9, maxShare = 0; long rivalAhead = 0, days = 0;
-        var gaps = new LinkedHashMap<String, double[]>();   // min, max, sum
-        for (String id : r.ids()) gaps.put(id, new double[]{99, -99, 0});
+        var gaps = new LinkedHashMap<String, double[]>();   // min, max, sum, widest from target
+        for (String id : r.ids()) gaps.put(id, new double[]{99, -99, 0, 0});
         boolean kindlingOpen = false;
         for (int ci = 0; ci < CHAPTERS.size(); ci++) {
             var ch = CHAPTERS.get(ci);
@@ -166,13 +170,13 @@ public final class Season {
             // The chapter's beat, seen by the class at the Academy and by the squad after it; the whole class sits the exams,
             // and the later arcs bring the rival and the two classmates back into the story.
             if (!ch.beat.isEmpty()) {
-                var present = new ArrayList<>(ch.phase == Phase.ACADEMY || ch.phase == Phase.EXAMS ? r.ids() : r.groupMembers());
-                if (ch.beat.startsWith("arc.")) present.addAll(List.of(TEAMMATE_B, RIVAL, CLASSMATE_C, CLASSMATE_D));
+                var present = new ArrayList<>(ch.phase == Phase.ACADEMY ? klass : ch.phase == Phase.EXAMS ? r.ids() : r.groupMembers());
+                if (ch.beat.startsWith("arc.")) present.addAll(r.ids());
                 r.beat(ch.beat, present);
                 playerTechs += PLAYER_TECHNIQUES.getOrDefault(ch.beat, 0);
             }
             playerTechs += PLAYER_TECHNIQUES.getOrDefault(ch.id, 0);
-            if (ch.id.equals("Ch 7")) { floor = 5; for (String id : r.ids()) r.promote(id, 5); }
+            if (ch.id.equals("Ch 7")) { floor = 5; for (String id : klass) r.promote(id, 5); }
             if (ch.id.equals("Ch 12") && p == Profile.RECKLESS) {
                 team.remove(TEAMMATE_B); team.add(CLASSMATE_C); r.group(team); notes.add("teammate_b left; classmate_c steps in");
             }
@@ -197,7 +201,7 @@ public final class Season {
             rows.add(new Row(ch.id, ch.title, hours(ci), r.today(), Curve.level(xp), levels, shares, playerTechs, techs, String.join("; ", notes), all));
         }
         var spread = new LinkedHashMap<String, Spread>();
-        for (var e : gaps.entrySet()) spread.put(e.getKey(), new Spread(e.getValue()[0], e.getValue()[1], e.getValue()[2] / days,
+        for (var e : gaps.entrySet()) spread.put(e.getKey(), new Spread(e.getValue()[0], e.getValue()[1], e.getValue()[2] / days, e.getValue()[3],
                 r.caughtUp(e.getKey()), r.plateaued(e.getKey()), (int) days));
         return new Result(p, seed, rows, spread, (double) rivalAhead / days, minShare, maxShare, grind, deaths, events, r);
     }
@@ -210,25 +214,28 @@ public final class Season {
         for (var e : gaps.entrySet()) {
             double g = r.level(e.getKey()) - player; var v = e.getValue();
             v[0] = Math.min(v[0], g); v[1] = Math.max(v[1], g); v[2] += g;
+            v[3] = Math.max(v[3], Math.abs(g - r.peer(e.getKey()).offset(player)));
         }
     }
 
     public static String table(Result res) {
         var sb = new StringBuilder();
         sb.append("\n== ").append(res.profile().id()).append(" player, seed ").append(res.seed()).append(" ==\n");
-        sb.append(String.format("%-9s %-26s %5s %4s | %5s | %5s %5s %5s %5s %5s | %-17s | %s%n", "chapter", "", "hours", "day", "you",
-                "tmA", "tmB", "clC", "clD", "riv", "share (squad)", "notes"));
+        sb.append(String.format("%-9s %-26s %5s %4s | %5s | %5s %5s %5s %5s %5s %5s %5s %5s | %-17s | %s%n", "chapter", "", "hours", "day", "you",
+                "tmA", "tmB", "clC", "clD", "riv", "4a", "4b", "5c", "share (squad)", "notes"));
         for (var row : res.rows()) {
             var l = row.levels();
             var shares = row.shares().entrySet().stream().map(e -> label(e.getKey()) + String.format(" %.2f", e.getValue())).toList();
-            sb.append(String.format("%-9s %-26s %5.1f %4d | %5.1f | %5.1f %5.1f %5.1f %5.1f %5.1f | %-17s | %s%n", row.chapter(), row.title(), row.hours(), row.day(),
-                    row.player(), l.get(TEAMMATE_A), l.get(TEAMMATE_B), l.get(CLASSMATE_C), l.get(CLASSMATE_D), l.get(RIVAL), String.join(" ", shares), row.notes()));
+            var a = row.all();
+            sb.append(String.format("%-9s %-26s %5.1f %4d | %5.1f | %5.1f %5.1f %5.1f %5.1f %5.1f %5.1f %5.1f %5.1f | %-17s | %s%n", row.chapter(), row.title(), row.hours(), row.day(),
+                    row.player(), l.get(TEAMMATE_A), l.get(TEAMMATE_B), l.get(CLASSMATE_C), l.get(CLASSMATE_D), l.get(RIVAL),
+                    a.get("role:squad4_a"), a.get("role:squad4_b"), a.get("role:squad5_c"), String.join(" ", shares), row.notes()));
         }
         sb.append(String.format("deaths %d, grind days before gates %d, rival ahead of you %.0f%% of days, squad share %.2f to %.2f (Genin on)%n",
                 res.deaths(), res.grindDays(), 100 * res.rivalAhead(), res.minShare(), res.maxShare()));
-        sb.append("against your best level (min / mean / max), and days the band stepped in (lifted / held):\n");
-        res.spread().forEach((who, s) -> sb.append(String.format("  %-18s %+5.1f %+5.1f %+5.1f   %3d / %3d of %d%n", who.substring(5), s.min(), s.mean(), s.max(),
-                s.caughtUp(), s.plateaued(), s.days())));
+        sb.append("against your best level (min / mean / max), widest from where they belong, and days the band stepped in (lifted / held):\n");
+        res.spread().forEach((who, s) -> sb.append(String.format("  %-18s %+5.1f %+5.1f %+5.1f   %4.1f   %3d / %3d of %d%n", who.substring(5), s.min(), s.mean(), s.max(),
+                s.fromTarget(), s.caughtUp(), s.plateaued(), s.days())));
         var beta = res.rows().get(20);
         sb.append("techniques at the beta's end: you ").append(beta.playerTechniques()).append(", ").append(beta.techniques()).append('\n');
         return sb.toString();

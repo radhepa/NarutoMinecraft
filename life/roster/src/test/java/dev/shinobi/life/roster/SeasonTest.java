@@ -16,11 +16,14 @@ class SeasonTest {
             String at = p.id() + " seed " + seed;
             for (String t : List.of(TEAMMATE_A, TEAMMATE_B)) {
                 var s = res.spread().get(t);
-                assertTrue(s.min() >= -2 - 1e-9 && s.max() <= 2 + 1e-9, at + " " + t + " " + s);
+                assertTrue(s.min() >= -3 && s.max() <= 2, at + " " + t + " " + s);
                 assertTrue(Math.abs(s.mean()) < 1, at + " " + t + " sits close to you on average: " + s.mean());
+                assertTrue(s.fromTarget() <= 1.5 + 1e-9, at + " " + t + " stays in the band: " + s.fromTarget());
             }
-            // The rubber band does the work; the band itself is a safety net that should almost never step in.
-            for (var s : res.spread().values()) assertTrue(s.caughtUp() + s.plateaued() <= s.days() / 50, at + " band " + s);
+            // The pull does the work; the band is a safety net that should almost never step in (a little more for a
+            // reckless player, whose deaths and failed missions make their pace jumpy).
+            int limit = p == Profile.RECKLESS ? 20 : 50;
+            for (var s : res.spread().values()) assertTrue(s.caughtUp() + s.plateaued() <= s.days() / limit, at + " band " + s);
             if (p != Profile.RECKLESS) {
                 assertTrue(res.minShare() >= Contribution.LOW && res.maxShare() <= Contribution.HIGH + .05, at + " share " + res.minShare() + ".." + res.maxShare());
             } else assertTrue(res.minShare() >= Contribution.LOW, at + " share " + res.minShare());

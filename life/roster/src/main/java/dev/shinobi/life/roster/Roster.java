@@ -20,18 +20,18 @@ import java.util.Set;
  *     average of the player's daily XP, {@link #PACE_MEMORY}) times their
  *     {@link Peer#drive}. After team assignment the rest of the class are on squads of their own, so every day is a
  *     day apart for them.</li>
- * <li><b>Pace:</b> the gain is scaled by how far they are from where they belong ({@code player + offset}):
+ * <li><b>Pace:</b> the gain is scaled by how far they are from where they belong ({@code player + offset}, see {@link Peer#offset}):
  *     {@code 1 - PULL x gap}, between {@link #MIN_PACE} and {@link #MAX_PACE}. Behind, they catch up; ahead, they
- *     slow down. The band is the safety net: below it they jump back in ({@code caught_up}, "I trained the whole
- *     week"), above it they wait ({@code plateau}). The band is measured from the player's best level, so dying
+ *     slow down. The band ({@link Peer#band} levels either side of where they belong) is the safety net: below it they
+ *     jump back in ({@code caught_up}, "I trained the whole week"), above it they wait ({@code plateau}). The band is measured from the player's best level, so dying
  *     does not drag the squad down with you.</li>
  * <li><b>Bonds:</b> training or sparring with the player is worth {@link #BOND_TRAINING} more per bond level (the
  *     same multiplier the player gets, {@link #trainingBonus}); a quarrel takes the bonus away.</li>
  * <li><b>Their niche:</b> in their own field they fight {@link #nicheEdge} levels above their level, so a teammate a
  *     little behind you overall is still better than you at what they do.</li>
  * <li><b>Kindling</b> (after the beta): a kindled ally fights {@link #KINDLE_BOOST} levels higher in their niche
- *     while the flame burns, and each kindling leaves a little XP behind; a full-tier bond adds a level to their
- *     niche for good.</li>
+ *     while the flame burns, and each kindling leaves a little XP behind; a blaze bond adds a level to their niche
+ *     for good, a flame half of one.</li>
  * <li><b>Techniques</b> come at story beats and in training the player sees ({@link Technique}).</li>
  * </ul>
  *
@@ -40,7 +40,7 @@ import java.util.Set;
 public final class Roster {
     public static final double PULL = .5, MIN_PACE = .2, MAX_PACE = 2.2, BOND_TRAINING = .02, PACE_MEMORY = .25, DAYS_PER_LEVEL = 3;
     /** In their niche they fight {@code 1 + 0.06 x level} levels higher: about 2 by the Chunin Exams, 4 at level 50. */
-    public static final double NICHE_EDGE = 1, NICHE_EDGE_PER_LEVEL = .06, KINDLE_BOOST = 3, KINDLE_EMBER = .25, FULL_BOND_EDGE = 1;
+    public static final double NICHE_EDGE = 1, NICHE_EDGE_PER_LEVEL = .06, KINDLE_BOOST = 3, KINDLE_EMBER = .25, BLAZE_EDGE = 1, FLAME_EDGE = .5;
 
     /** One person's growth. */
     static final class Grower {
@@ -101,10 +101,11 @@ public final class Roster {
                 if (bond.trainedTogether() > 0) gain *= trainingBonus(bond.level(), bond.quarrel());
             }
             g.kindling = bond.kindling();
-            double gap = before - (morning + g.peer.offset());
+            double gap = before - (morning + g.peer.offset(morning));
             gain *= Math.clamp(1 - PULL * gap, MIN_PACE, MAX_PACE);
             g.xp += gain;
-            double lo = Math.max(player - g.peer.below(), g.floor), hi = player + g.peer.above();
+            double target = player + g.peer.offset(player);
+            double lo = Math.max(target - g.peer.band(), g.floor), hi = target + g.peer.band();
             // The band: counted every day it has to hold someone, said once when it starts.
             boolean top = g.level() > hi, bottom = !top && g.level() < lo;
             if (top) { g.xp = Math.max(Curve.xpAt(before), Curve.xpAt(hi)); g.plateaued++; if (!g.atTop) emit(g, "plateau", ""); }
@@ -150,7 +151,7 @@ public final class Roster {
     public void kindle(String who) {
         var g = people.get(who);
         g.burning = true; g.kindles++;
-        double hi = Curve.xpAt(Curve.level(bestXp) + g.peer.above());
+        double player = Curve.level(bestXp), hi = Curve.xpAt(player + g.peer.offset(player) + g.peer.band());
         g.xp = Math.max(g.xp, Math.min(hi, g.xp + KINDLE_EMBER * pace));
         emit(g, "kindled", Integer.toString(g.kindles));
     }
@@ -159,7 +160,7 @@ public final class Roster {
     public void timeSkip() {
         double player = Curve.level(bestXp);
         for (var g : people.values()) {
-            double target = player + g.peer.offset(), now = g.level();
+            double target = player + g.peer.offset(player), now = g.level();
             g.xp = Curve.xpAt(Math.max(g.floor, now + (target - now) / 2));
         }
     }
@@ -175,8 +176,10 @@ public final class Roster {
     /** How strong they are in their niche: their level and the niche edge, more with a full bond, more while kindled. */
     public double nicheLevel(String who) {
         var g = people.get(who);
-        return g.level() + nicheEdge(g.level()) + ("full".equals(g.kindling) ? FULL_BOND_EDGE : 0) + (g.burning ? KINDLE_BOOST : 0);
+        return g.level() + nicheEdge(g.level()) + kindlingEdge(g.kindling) + (g.burning ? KINDLE_BOOST : 0);
     }
+    /** A Kindling bond's lasting edge in their niche: a blaze a level, a flame half of one (the bond engine's tiers). */
+    public static double kindlingEdge(String tier) { return "blaze".equals(tier) ? BLAZE_EDGE : "flame".equals(tier) ? FLAME_EDGE : 0; }
     public static double nicheEdge(double level) { return NICHE_EDGE + NICHE_EDGE_PER_LEVEL * level; }
     public Niche niche(String who) { return people.get(who).peer.niche(); }
     public List<String> techniques(String who) { return List.copyOf(people.get(who).learned); }
@@ -190,7 +193,8 @@ public final class Roster {
     public long today() { return day; }
     public Peer peer(String who) { return people.get(who).peer; }
     public List<String> ids() { return List.copyOf(people.keySet()); }
-    /** The squad's strength for mission rolls: the mean level of the player and the group. */
+    /** The squad's strength for the Mission Desk: the mean level of the player and the group. */
+    public double squadPower() { return groupLevel(); }
     public double groupLevel() {
         var g = groupMembers();
         return (playerLevel() + g.stream().mapToDouble(this::level).sum()) / (1 + g.size());
@@ -227,26 +231,32 @@ public final class Roster {
     }
 
     /**
-     * The Classic Academy class: the player's eleven classmates, who make four squads of three with the player. The
-     * story roles (ROADMAP.md, "Your squad and roles") and six more classmates; Varied saves roll clans and niches.
+     * The Classic cast that grows beside the player: the eleven classmates of their year (four squads of three with
+     * the player) and the squad a year ahead. Offsets are the story's: the rival, the Hyuga heir and the senior
+     * squad's clanless prodigy run strongest; the loud teammate and the Inuzuka start lowest and catch up. Varied saves
+     * roll the class with {@link Peer#rolled}.
      */
     public static Roster classic(long seed) {
         var r = new Roster(seed);
-        for (var p : CLASS) r.add(p);
+        for (var p : CLASS) r.add(p, Technique.kit(p.niche(), p.clan()), SENIORS.contains(p.id()) ? 10 : 1);
         return r;
     }
     public static final String TEAMMATE_A = "role:teammate_a", TEAMMATE_B = "role:teammate_b", CLASSMATE_C = "role:classmate_c",
             CLASSMATE_D = "role:classmate_d", RIVAL = "role:rival";
+    public static final List<String> SENIORS = List.of("role:squad5_a", "role:squad5_b", "role:squad5_c");
     public static final List<Peer> CLASS = List.of(
             Peer.teammate(TEAMMATE_A, Niche.GENJUTSU, "kurama", -.4, .95),
-            Peer.teammate(TEAMMATE_B, Niche.TAIJUTSU, "", -.1, 1.1),
-            Peer.classmate(CLASSMATE_C, Niche.TOOLS, "kinoshita", -.6, 1),
-            Peer.classmate(CLASSMATE_D, Niche.KENJUTSU, "gekko", .3, 1.05),
+            Peer.teammate(TEAMMATE_B, Niche.TAIJUTSU, "", -1.2, -.1, 15, 1.12),
             Peer.rival(RIVAL, Niche.NINJUTSU, "uchiha"),
-            Peer.classmate("role:classmate_e", Niche.SENSING, "hyuga", 0, 1),
-            Peer.classmate("role:classmate_f", Niche.SUPPORT, "nara", -.6, .85),
-            Peer.classmate("role:classmate_g", Niche.TAIJUTSU, "akimichi", -.2, 1),
-            Peer.classmate("role:classmate_h", Niche.MEDICAL, "", -.5, .95),
-            Peer.classmate("role:classmate_i", Niche.TRACKING, "inuzuka", 0, 1.05),
-            Peer.classmate("role:classmate_j", Niche.SEALING, "", -.8, .9));
+            Peer.classmate(CLASSMATE_C, Niche.TOOLS, "kinoshita", -.5, -.5, 1, 1),
+            Peer.classmate(CLASSMATE_D, Niche.KENJUTSU, "gekko", .3, .3, 1, 1.05),
+            Peer.classmate("role:squad3_a", Niche.SUPPORT, "nara", 0, 0, 1, .95),
+            Peer.classmate("role:squad3_b", Niche.TAIJUTSU, "akimichi", -.3, -.3, 1, 1),
+            Peer.classmate("role:squad3_c", Niche.SENSING, "yamanaka", -.2, -.2, 1, 1),
+            Peer.classmate("role:squad4_a", Niche.TAIJUTSU, "hyuga", .9, .9, 1, 1.08),
+            Peer.classmate("role:squad4_b", Niche.TRACKING, "inuzuka", -1.5, -.4, 20, 1.1),
+            Peer.classmate("role:squad4_c", Niche.MEDICAL, "suzuran", -.4, -.4, 1, .97),
+            Peer.senior("role:squad5_a", Niche.TAIJUTSU, "sarutobi", 8, 1.2, 30, 1.03),
+            Peer.senior("role:squad5_b", Niche.SENSING, "tobari", 7.5, .8, 30, 1),
+            Peer.senior("role:squad5_c", Niche.TAIJUTSU, "", 9, 1.8, 30, 1.12));
 }

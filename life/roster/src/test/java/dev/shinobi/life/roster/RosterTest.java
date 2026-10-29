@@ -36,12 +36,12 @@ class RosterTest {
         double pxp = Curve.xpAt(10.0);
         // The player binges side quests: six levels in a day, alone.
         r.day(Day.apart(pxp = Curve.xpAt(16.0)));
-        assertTrue(r.level("role:a") >= 16 - A.below() - 1e-9, "lifted to the band");
+        assertTrue(r.level("role:a") >= 16 - A.band() - 1e-9, "lifted to the band");
         assertTrue(r.caughtUp("role:a") > 0);
         assertTrue(r.drainEvents().stream().anyMatch(e -> e.kind().equals("caught_up")));
         // The player stops playing missions for weeks; the teammate trains on.
         for (int d = 0; d < 60; d++) r.day(Day.apart(pxp));
-        assertTrue(r.level("role:a") <= 16 + A.above() + 1e-9, "held at the top of the band");
+        assertTrue(r.level("role:a") <= 16 + A.band() + 1e-9, "held at the top of the band");
     }
     @Test void dyingDoesNotDragTheSquadDown() {
         var r = one(A, 10, 10);
@@ -54,7 +54,7 @@ class RosterTest {
     }
     @Test void theRivalRunsAheadAndTeammatesStayClose() {
         var r = Roster.classic(5);
-        r.group(r.ids());
+        r.group(r.ids().stream().filter(id -> !SENIORS.contains(id)).toList());
         double xp = 0;
         for (int d = 0; d < 120; d++) {
             double gain = perDay(Curve.level(xp));
@@ -65,7 +65,7 @@ class RosterTest {
         double player = r.playerLevel();
         assertTrue(r.level(RIVAL) > player && r.level(RIVAL) < player + 3, "the rival is ahead, but not out of reach");
         for (String t : List.of(TEAMMATE_A, TEAMMATE_B)) assertEquals(player, r.level(t), 2, t);
-        for (String c : r.ids()) assertEquals(player + r.peer(c).offset(), r.level(c), 1.5, c + " sits near where they belong");
+        for (String c : r.ids()) assertEquals(player + r.peer(c).offset(player), r.level(c), r.peer(c).band(), c + " sits near where they belong");
     }
     @Test void bondsMakeTrainingTogetherWorthMore() {
         assertEquals(1, trainingBonus(0, false));
@@ -88,16 +88,16 @@ class RosterTest {
     @Test void kindlingMakesThemStrongerStill() {
         var r = one(A, 30, 30);
         double before = r.nicheLevel("role:a"), xp = r.level("role:a");
-        r.day(new Day(Curve.xpAt(30.0), 0, false, Map.of("role:a", BondInput.of(10).kindled("full"))));
+        r.day(new Day(Curve.xpAt(30.0), 0, false, Map.of("role:a", BondInput.of(10).kindled("blaze"))));
         double full = r.nicheLevel("role:a");
-        assertTrue(full > before, "a full bond: a level more in their niche");
+        assertTrue(full > before, "a blaze bond: a level more in their niche");
         r.kindle("role:a");
         double now = r.level("role:a");
-        assertEquals(now + nicheEdge(now) + FULL_BOND_EDGE + KINDLE_BOOST, r.nicheLevel("role:a"), 1e-9, "while the flame burns");
+        assertEquals(now + nicheEdge(now) + BLAZE_EDGE + KINDLE_BOOST, r.nicheLevel("role:a"), 1e-9, "while the flame burns");
         assertTrue(r.level("role:a") > xp);
         assertEquals(1, r.kindles("role:a"));
-        r.day(new Day(Curve.xpAt(30.0), 0, false, Map.of("role:a", BondInput.of(10).kindled("full"))));
-        assertEquals(r.level("role:a") + nicheEdge(r.level("role:a")) + FULL_BOND_EDGE, r.nicheLevel("role:a"), 1e-9, "the flame dies down");
+        r.day(new Day(Curve.xpAt(30.0), 0, false, Map.of("role:a", BondInput.of(10).kindled("blaze"))));
+        assertEquals(r.level("role:a") + nicheEdge(r.level("role:a")) + BLAZE_EDGE, r.nicheLevel("role:a"), 1e-9, "the flame dies down");
     }
     @Test void promotionsSetFloors() {
         var r = one(A, 4, 4.5);
@@ -134,9 +134,13 @@ class RosterTest {
         assertEquals(List.of(TEAMMATE_A, TEAMMATE_B), copy.groupMembers());
         assertThrows(IllegalArgumentException.class, () -> copy.load("bonds 1"));
     }
-    @Test void aBandMustHoldItsOwnOffset() {
-        assertThrows(IllegalArgumentException.class, () -> new Peer("x", Niche.TOOLS, "", 3, 2, 2, 1));
-        assertEquals(1, Peer.rival("r", Niche.NINJUTSU, "uchiha").offset());
+    @Test void offsetsMoveFromEarlyToLate() {
+        assertThrows(IllegalArgumentException.class, () -> new Peer("x", Niche.TOOLS, "", 0, 0, 1, 0, 1));
+        assertEquals(1, Peer.rival("r", Niche.NINJUTSU, "uchiha").offset(10));
+        var late = Peer.teammate("t", Niche.TAIJUTSU, "", -1.2, -.1, 15, 1);
+        assertEquals(-1.2, late.offset(1), 1e-9, "a slow starter");
+        assertEquals(-.1, late.offset(15), 1e-9, "caught up by level 15");
+        assertTrue(late.offset(8) > -1.2 && late.offset(8) < -.1);
     }
     @Test void groupLevelIsTheSquadsMean() {
         var r = one(A, 12, 10);

@@ -660,8 +660,8 @@
     "semantic_hash": ""
   },
   "life/roster/build.gradle": {
-    "mtime": 1793309495.1810973,
-    "seen": 1793309672.7363853,
+    "mtime": 1793310419.7056973,
+    "seen": 1793310436.2974615,
     "ast_hash": "b1b808246f648418d5a0f1c5091d90bf",
     "semantic_hash": ""
   },
@@ -702,15 +702,15 @@
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Peer.java": {
-    "mtime": 1793308368.5219948,
-    "seen": 1793309672.7364,
-    "ast_hash": "e22d8475298cbd5e134a0861bf7af0b3",
+    "mtime": 1793309872.6110036,
+    "seen": 1793310436.2974873,
+    "ast_hash": "e775383b215e394404dad5d71e097601",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Roster.java": {
-    "mtime": 1793308970.831083,
-    "seen": 1793309672.7364016,
-    "ast_hash": "e63ce22427af826f7732d3b849f249d2",
+    "mtime": 1793309872.6324325,
+    "seen": 1793310436.2974901,
+    "ast_hash": "b8c952f6ae41380ea29eb37841c0390d",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Seeds.java": {
@@ -738,15 +738,15 @@
     "semantic_hash": ""
   },
   "life/roster/src/test/java/dev/shinobi/life/roster/RosterTest.java": {
-    "mtime": 1793308876.0580091,
-    "seen": 1793309672.73656,
-    "ast_hash": "580f2fb4da7573af4fcd5ed63b6762fc",
+    "mtime": 1793309913.9986746,
+    "seen": 1793310436.2975068,
+    "ast_hash": "07f9539b79765c2cfc381a2b8412bb9f",
     "semantic_hash": ""
   },
   "life/roster/src/test/java/dev/shinobi/life/roster/SeasonTest.java": {
-    "mtime": 1793308798.4867978,
-    "seen": 1793309672.7365623,
-    "ast_hash": "317b4edd42664b4f6bf2229b08dae0d2",
+    "mtime": 1793309925.8977528,
+    "seen": 1793310436.2975101,
+    "ast_hash": "cc29ced2df2befa459276f175c1335fa",
     "semantic_hash": ""
   },
   "life/roster/src/test/java/dev/shinobi/life/roster/TechniqueTest.java": {
@@ -756,21 +756,33 @@
     "semantic_hash": ""
   },
   "life/roster/src/test/java/dev/shinobi/life/roster/sim/Season.java": {
-    "mtime": 1793308896.8602805,
-    "seen": 1793309672.7365649,
-    "ast_hash": "1b1ad0337aa43a9866d431f343297e66",
+    "mtime": 1793310301.4183877,
+    "seen": 1793310436.2975159,
+    "ast_hash": "ef54076c84a74e3e63be2a1b2c11daef",
     "semantic_hash": ""
   },
   "tools/roster/roster.py": {
-    "mtime": 1793309314.8420358,
-    "seen": 1793309672.73657,
-    "ast_hash": "cf9eb043b65a059473c5c52e041c8d2b",
+    "mtime": 1793310156.9278464,
+    "seen": 1793310436.2975209,
+    "ast_hash": "ab6bc26ec4a2bede4fd03414dfb97212",
     "semantic_hash": ""
   },
   "docs/RANKS.md": {
-    "mtime": 1793309632.0902226,
-    "seen": 1793309672.7366698,
-    "ast_hash": "052bda9e6322ed62cb8c0d5b0cb50c1c",
+    "mtime": 1793310419.684503,
+    "seen": 1793310436.2976713,
+    "ast_hash": "f9779d7b722b90f446106a64ecfcd0cb",
+    "semantic_hash": ""
+  },
+  "life/roster/src/main/java/dev/shinobi/life/roster/ClanPower.java": {
+    "mtime": 1793309872.6135178,
+    "seen": 1793310436.2974691,
+    "ast_hash": "8df9f28c1382ff4f307bc92a497974fc",
+    "semantic_hash": ""
+  },
+  "life/roster/src/test/java/dev/shinobi/life/roster/ClanPowerTest.java": {
+    "mtime": 1793309914.0059538,
+    "seen": 1793310436.297501,
+    "ast_hash": "8506779e15d6ef0341af66c99a437177",
     "semantic_hash": ""
   }
 }
