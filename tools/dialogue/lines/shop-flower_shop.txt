@@ -1,0 +1,73 @@
+# The flower shop (the Yamanaka shop on the main street, and the market flower stalls). Part-time shifts.
+#! fn: commerce
+
+## shop.flower_shop.greet  shop=flower_shop  fn=commerce
+Welcome! Mind the buckets, they're full to the brim.
+Come in, {player}. The lilies opened this morning, everything smells of them.
+Hello! Looking for something in particular, or just enjoying the colours?
+Step in out of the sun. The flowers like the shade, and so will you.
+Welcome. Every bloom in here was cut today, I promise.
+
+## shop.flower_shop.greet  shop=flower_shop  clan=yamanaka  fn=commerce,worldbuild
+Welcome to the Yamanaka shop. We've sold flowers on this street longer than the street's had a name.
+
+## shop.flower_shop.greet  shop=flower_shop  season=winter  fn=commerce,react
+Winter flowers are few, but camellias and plum branches are in. Come and see.
+
+## shop.flower_shop.browse  shop=flower_shop  fn=commerce
+Roses by the door, chrysanthemums along the wall, potted plants on the steps.
+Bouquets are made to order. Tell me who they're for and I'll pick the colours.
+Those pots are for apartments. Small, hardy, forgiving if you forget to water them.
+Seeds in the paper packets. Plant them in spring, and be patient.
+Every flower means something. Ask, and I'll tell you what you're about to say with it.
+
+## shop.flower_shop.buy  shop=flower_shop  kind=cycle  fn=commerce
+One {item}. I'll wrap the stems in damp paper.
+{pay}, thank you. Change the water every two days.
+Here you are. Cut the stem on a slant at home, they'll last longer.
+That's {pay}. Whoever gets these will smile.
+Lovely choice. {pay}, and I'll tie a ribbon on.
+There. Keep it out of direct sun on the walk home.
+A {item}, freshly cut. Someone's lucky today.
+
+## shop.flower_shop.cant_afford  shop=flower_shop  kind=cycle  fn=commerce
+That bouquet's a little beyond you. A single stem says just as much.
+Short, I'm afraid. How about a small pot instead?
+Not quite. Come back after a shift, I always need help watering.
+A few ryo shy. A sprig of something cheerful, then?
+
+## shop.flower_shop.sold_out  shop=flower_shop  kind=cycle  fn=commerce
+The {item} are all gone. A wedding party cleared them out this morning.
+Sold out. The greenhouse has more, but they won't open for a few days.
+None left, sorry. Can I suggest something in a similar colour?
+
+## shop.flower_shop.haggle  shop=flower_shop  fn=commerce,reveal_character
+Haggling over flowers? They'll wilt while we argue!
+A ryo off if you take the ones that opened a day early.
+Buy a pot, and I'll throw in a packet of seeds.
+I don't lower prices on gifts. A gift should cost a little.
+
+## shop.flower_shop.closing  shop=flower_shop  time=evening|night  fn=commerce
+Bringing the buckets in now. Quick, before the blooms close for the night.
+Closing up. Anything left I'll press between pages.
+Last flowers of the day, a little cheaper. They'll still be pretty tomorrow.
+
+## shop.flower_shop.recommend  shop=flower_shop  fn=commerce,teach
+Visiting the hospital? Not potted plants: a pot means staying put. Cut flowers, always.
+A {item} for a friend's birthday. Bright and happy.
+A small potted plant for your room. It's amazing what one green thing does.
+White chrysanthemums are for remembering. Don't bring them to a party.
+The {special}. Only in season for a week or two, so this is your chance.
+For an apology, purple hyacinth. It's an old meaning, but people know it.
+
+## shop.flower_shop.regular  shop=flower_shop  level=3..10  fn=commerce,deepen_bond
+You've a good eye for flowers now. I'll have you making bouquets soon.
+There's a sprig of lavender behind the counter with your name on it.
+Back again! Whoever you keep buying for is very lucky.
+I saved a few stems from the greenhouse for you. Don't tell anyone.
+
+## shop.flower_shop.order_ready  shop=flower_shop  kind=cycle  fn=commerce
+Your bouquet's ready! I added a little green to make the colours sing.
+Here's your {item}, wrapped and tied. Whoever it's for will love it.
+The arrangement's done. Carry it upright, like a lantern.
+All ready. I picked the freshest stems in the greenhouse for this one.

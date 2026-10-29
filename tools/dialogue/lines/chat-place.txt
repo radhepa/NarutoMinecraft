@@ -1,0 +1,284 @@
+# Small talk about where you're standing: what the place is, its regulars, and where to go from here.
+
+# -- the Academy ---------------------------------------------------------------------------------------
+
+## chat.place  district=academy  fn=worldbuild
+The swing on the big tree out front has been there longer than any of the instructors. Every child in the Leaf has fought over it.
+The Academy yard is all target posts and dust. On a still afternoon you can hear shuriken thunking into wood from the main street.
+The big fire sign over the entrance is repainted every spring by the senior class. It's a privilege, and they still spill the paint.
+Classes run nine to noon on weekdays. By half past twelve the yard's empty and the dango stall down the road is full.
+The janitor's been here forty years and knows every loose floorboard. That's how the late pupils get caught.
+Graduation photos line the corridor by the staff room. Look closely and you'll find Jonin who used to have terrible haircuts.
+
+## chat.place  district=academy  fn=guide
+The library is through the main hall on the left. The workshop's behind it, with the Academy workbench, if you need to make something.
+The training posts behind the building are free after lessons. Mind the third one; it leans.
+The Hokage Residence is just over there, the round building with the fire sign on its roof. Don't mix them up; plenty do.
+If you're looking for an instructor after hours, try the staff room window. There's always a lantern lit over the marking.
+The Umino houses on the streets around here belong to the teachers' family. Knock if you're lost; somebody will be marking.
+
+## chat.place  district=academy  fn=worldbuild,guide
+The Academy kitchen sells rice balls to pupils at two ryo. They're small, but they're the cheapest lunch in the village.
+Exam week, the whole street goes quiet. Even the dango stall turns its brazier down so the pupils can think.
+The yard's back fence has a gap the size of an eleven-year-old. Officially, nobody knows about it.
+
+# -- the market ----------------------------------------------------------------------------------------
+
+## chat.place  district=market  fn=worldbuild
+The market street wakes at seven when the shutters go up, and by eight you can't hear yourself think for the haggling.
+Market Day is once a week. The farmers come in from outside the wall, and the whole street smells of fresh radish and grilled squid.
+The two tea houses on the corner have been undercutting each other for a month. The regulars are thrilled; the owners aren't.
+Every stall has a cat. Nobody knows whose cats they are, and they all seem to know exactly when the fish stall restocks.
+The Akimichi compound is right off the market street. You can smell their kitchen from the fishmonger's.
+Lanterns go up over the street every evening. By dusk the market looks like a festival even on a Second Day.
+
+## chat.place  district=market  fn=guide
+The grocer is halfway down on the left, under the green awning. Onigiri are three ryo, and the shop takes part-time help in the mornings.
+The weapon shop and forge are at the far end, past the scroll shop. Follow the sound of hammering.
+The barbecue house is round the corner by the Akimichi gate. Look for the smoke and the queue.
+The pawn shop is in the alley behind the tea houses. It buys what bandits drop, and it never asks where you found it.
+The furniture shop's showroom is at the top of the street, with everything it sells laid out as display pieces.
+
+## chat.place  district=market  fn=worldbuild,commerce
+Prices on the market street climb three days before a festival. Buy your lanterns early, or pay double.
+The fish stall sells sardines for a ryo each. Cheapest protein in the Leaf, if you can stand the smell on your hands.
+The haggling rule here is: first price is a joke, second price is an insult, third price is the price.
+
+# -- the main street -----------------------------------------------------------------------------------
+
+## chat.place  district=main_street  fn=worldbuild
+The main street runs from the gate straight to the Hokage Residence. Stand in the middle and the faces on the Rock look right at you.
+Ichiraku's lanterns are the first thing you see coming in from the gate. Half of the Leaf's homecomings end on those stools.
+The Yamanaka flower shop is on the main street, so the whole street smells of lilies by noon in summer.
+Processions use this street: the police parade, the Leaf Festival, the lantern walk. The cobbles have heard a lot of drums.
+The utility poles along the main street are the only ones in the village with paper lanterns. Genin use them for jumping practice. They're not supposed to.
+Shop signs up and down the street are painted by the same family on the artists' lane. You can tell by the curl on every last stroke.
+
+## chat.place  district=main_street  fn=guide
+Ichiraku's on the left before the crossroads. A bowl's six ryo, and they take on help at the counter.
+The Hokage Residence is at the end of the street, under the Rock. The Mission Desk is on its ground floor.
+The main gate is the other way, back down the street. Big doors, painted characters, guards who'll ask your business.
+The tailor is by the crossroads, three doors along. Outfit variants start at a hundred ryo; mending is cheaper.
+The bath house is off the main street down the lane with the blue curtain. Look for the steam.
+
+## chat.place  district=main_street  fn=worldbuild,guide
+Every new arrival in the Leaf walks this street first. Every squad home from a mission walks it last.
+Market Day overflows from the market street onto this one, and the cart traffic stops dead at the crossroads for an hour.
+The noticeboard outside the Residence lists the week's events and lost pets. The lost pets column is always longer.
+
+# -- residential streets -------------------------------------------------------------------------------
+
+## chat.place  district=residential  fn=worldbuild
+The residential streets are mostly civilian families. Laundry on every balcony, shoes on every step and a cat on every wall.
+Every house on this street has a round water tank on the roof. On a hot day, the children climb up and dangle their feet in them.
+The old grandmother at the end of the lane sits out on her step at four every afternoon. Nothing happens on this street she doesn't see.
+These streets are quiet at night apart from the occasional shinobi landing on a roof. The residents just turn over in bed.
+Somebody on this street is always cooking. Grilled fish at six, miso at noon, and at midnight, someone's mother frying tempura.
+The street shrine on the corner has a fresh rice ball every morning. Nobody admits to leaving it.
+
+## chat.place  district=residential  fn=guide
+The Haruno family lives on the street with the cherry tree in the front garden. Their shop's on the market street, though.
+The garden district past the bend is where the Yuhi grove is. The old trees are lovely, but don't wander in uninvited.
+Cut through the alley by the bathhouse and you'll come out on the main street. It saves a good five minutes.
+The Aburame house is at the wooded edge of the district. Walk slowly past their garden and don't swat anything.
+
+## chat.place  district=residential  fn=worldbuild,guide
+Children play kick-the-can in these lanes until the dinner bells. If one comes flying your way, kick it back.
+The house plaques by every door show who lives there. Newcomers' plaques are always the shiniest.
+The neighbourhood bath on Third Lane is cheaper than the big one off the main street. Smaller tubs, louder gossip.
+Moving day on this street is a festival of its own. The whole lane turns out to carry boxes and judge the furniture.
+
+# -- the gate ------------------------------------------------------------------------------------------
+
+## chat.place  district=gate  fn=worldbuild
+The main gate's doors are each painted with a single character. Together they spell out what the Leaf is for, if you think about it.
+The guard booth by the gate has two chairs, one kettle and a logbook that's filled every month.
+Carts come through at dawn, squads go out after eight, and travellers trickle in all afternoon. You could tell the time by the gate.
+The Inuzuka compound is just inside the wall here. You'll hear the kennels long before you see them.
+The gate barracks house the guard and the Shiranui family, whose wall of senbon targets is something to see.
+Squads coming home stop under the gate and look up at the Rock. Every one of them, every time. I don't think they know they do it.
+
+## chat.place  district=gate  fn=guide
+Outside the gate is the outer road and the training fields. Beyond the hills, you need a mission scroll and a stamp.
+The Inuzuka clinic is just inside the wall to the right. That's where to go if you want to adopt a ninken pup.
+Get your mission paperwork stamped at the Mission Desk before you come here. The guards won't let a squad out without it.
+The Tobari lanes are just behind the wall here, dark and quiet. Mind your voice if you cut through after sundown.
+
+## chat.place  district=gate  fn=worldbuild,guide
+The gate's busiest day is Market Day. Carts back up halfway to the far fields, and the guards get very little tea.
+The wall walk is open to anyone with a reason to be up there. Ask the guards; on a clear day you can see three valleys.
+The waystation on the east road is a morning's walk past the gate. Merchants rest there before the last stretch.
+Travellers sign the book in the booth. The book from fifty years ago is still in the archive, if you ask nicely.
+
+# -- the Hokage Rock -----------------------------------------------------------------------------------
+
+## chat.place  district=hokage_rock  fn=worldbuild
+Four faces, each one taller than a house. On a clear evening the sunset catches the left side of every nose.
+The stone at the top of the Rock is forest. Nobody built up there, and the deer from somewhere seem to like it.
+Children climb the stairs beside the Rock on dares. The real dare is touching the eyebrow of the second face, and nobody ever has.
+Every Hokage's face was carved by hand over a whole season. The stoneworkers' scaffolds stayed up for months.
+There's room on the cliff for more faces. Everyone in the village has opinions about who should go up next.
+The view from the top takes in the whole village and the wall all round. It's the only place where the Leaf looks small.
+
+## chat.place  district=hokage_rock  fn=guide
+The stairs up the Rock start behind the Residence. It's a long climb, so take water, and maybe a dango.
+The Shimura house is just under the Rock. It's very quiet, and they prefer it that way. Walk past it softly.
+At the top, follow the path to the left for the best view of the main street. The right path goes nowhere but trees.
+
+## chat.place  district=hokage_rock  fn=worldbuild,guide
+In the mornings the Rock's shadow covers half the village. By noon it's pulled back to the Residence's doorstep.
+Pigeons nest in the ears of the third face. The cleaners go up once a year, and the pigeons come back the next week.
+Sit on the bench at the base and watch who walks past. Everyone in the Leaf crosses this square eventually.
+New Genin climb to the top on their first free day. It's not a tradition anyone made; it just keeps happening.
+The Senju compound sits at the foot of the Rock, beside the Residence. You can see their great tree from the stairs.
+
+# -- the Hokage Residence ------------------------------------------------------------------------------
+
+## chat.place  district=residence  fn=worldbuild
+The Residence is round, with a fire sign painted on the roof. From the Rock you can see it like a target.
+The ground floor is all corridors and queues: the Mission Desk, the clan registry and a bench nobody ever gets to sit on.
+The Hokage's office is upstairs. The window faces the village, and the lamp in it is usually lit long after dark.
+Squads waiting for a mission brief trade gossip in the hall. Half the village's rumours start on that bench.
+The hawk loft is on the roof. The courier birds go out at dawn and sit on the railing in a row at dusk.
+The clan registry keeps every family's records. Its clerk can tell you which clan built which house, if you've got an afternoon.
+
+## chat.place  district=residence  fn=guide
+The Mission Desk is on the ground floor, open eight till six. It takes Genin and up; Academy pupils get turned away politely.
+The clan registry is the door past the Mission Desk. That's where clan matters are filed and family names recorded.
+The Academy is just next door. People mix the two buildings up all the time; this one is round.
+Don't go upstairs unless you're called. The guards on the landing are very polite about it, twice.
+
+## chat.place  district=residence  fn=worldbuild,guide
+At eight in the morning the Mission Desk queue reaches the front steps. By ten it's mostly Chunin grumbling about D-ranks.
+Notices for the week are pinned by the front door: festivals, curfews and requests for help.
+The Residence garden has one plum tree, planted by the first Hokage. Nobody's allowed to pick from it, so the birds do.
+The hall bench has a carved fire sign on the armrest. Rubbing it before a mission brief is supposed to bring luck.
+
+# -- the training grounds ------------------------------------------------------------------------------
+
+## chat.place  district=training  fn=worldbuild
+Training Ground Three has three stumps in a row and a memorial stone shaped like a kunai. Every squad in the Leaf has stood there.
+The lake on the far grounds is for water-walking. On a calm morning you'll see Genin falling in one after another like frogs.
+The climbing cliff has scuff marks halfway up and very few above. That's where most people's chakra runs out.
+The groundskeeper rakes the clearings every evening. By morning there are footprints all over them, and the raking starts again.
+Logs, target posts and dummies line the edges of every ground. Most of them have more kunai holes than wood.
+The Gekko dojo is by the grounds, with the moon platform on its roof. On full moons you'll hear swords from there till late.
+
+## chat.place  district=training  fn=guide
+Ground Three is past the stream, through the trees. Follow the sound of shuriken.
+The lake for water-walking is on the eastern grounds. Sneak to sink if you need a rest; just don't do it in the deep middle.
+Sparring partners hang about the posts after noon. Ask a ranked resident for a round; it ends at thirty percent, nobody dies.
+The Namiashi dojo is just past the training grounds. You'll know it by the polished floor and the very quiet people.
+
+## chat.place  district=training  fn=worldbuild,guide
+There's an unbeatable post on the far ground. Nobody's ever knocked it over, and everyone has tried.
+Mornings are for squads with a sensei; afternoons are for anyone. Night is for people who can't sleep.
+The water barrel by the stumps is refilled every morning. Drink from it; the groundskeeper won't mind as long as you put the ladle back.
+The trees around the grounds have scuff marks on every trunk at the height of a jumping Genin. That's how you find the tree-walking route.
+
+# -- the hospital --------------------------------------------------------------------------------------
+
+## chat.place  district=hospital  fn=worldbuild
+The hospital is the tallest building after the Residence. The top floor windows face the Rock, so patients wake up to the Hokage.
+Anyone who falls in a fight wakes up here the next morning, patched up and rested. Nobody sends a bill.
+The Suzuran herb gardens are just behind, with the drying racks along the fence. The whole ward smells faintly of mint.
+Visiting hours are ten to six, but the window ledges on the second floor have sandal prints from midnight visitors.
+The children's ward has painted walls: frogs, Hokage and a very wobbly deer. The painters' lane did it as a gift.
+The medics take tea on the roof at three. If you hear laughing from up there, the morning went well.
+
+## chat.place  district=hospital  fn=guide
+The front desk is through the main doors. Tell them who you're visiting and they'll point you to a floor.
+The hospital stall by the entrance sells soldier pills, sixty ryo each. They taste dreadful and they work.
+The herb gardens are round the back. Don't pick anything; half of it's medicine and the other half is the opposite.
+
+## chat.place  district=hospital  fn=worldbuild,guide
+The night shift is always short of hands. If you ever want to help, ask at the front desk after dark.
+The bench outside the front door is where families wait. Sit with them sometimes. It helps more than you'd think.
+The hospital kitchen makes rice porridge for every patient whatever's wrong with them. Even a broken ankle.
+The bell on the roof only rings when a big group comes in from the gate. When it rings, the whole street makes room.
+Your bed here clears your fatigue like your own does, but you won't wake well rested. Hospital pillows are a mission of their own.
+
+# -- the shrine ----------------------------------------------------------------------------------------
+
+## chat.place  district=shrine  fn=worldbuild
+Two hundred steps up to the shrine, and the priest sweeps every one of them each morning.
+The wish plaques hang by the gate in rows. Some are about exams, some are about pets, and a lot are about ramen.
+The rope over the main hall is renewed every autumn. Eight people, a ladder and a lot of opinions about knots.
+New Year's Eve, the queue for the bell reaches the bottom step. Everyone gets one ring, and the shinobi get told to stop showing off.
+The stone fox statues by the gate wear knitted caps in winter. Somebody steals one every year.
+The big cedar behind the hall is older than the village. Nobody ties fortunes to it; those go on the little pine.
+
+## chat.place  district=shrine  fn=guide
+The wish plaques are five ryo at the little hut. Write yours and hang it on the left wall; the right one's full.
+Fortunes are two ryo. Bad ones get tied to the pine by the gate and left behind.
+The path behind the hall leads down to the spring, where the tea houses get their water. Don't drink from the top basin; that's for washing hands.
+
+## chat.place  district=shrine  fn=worldbuild,guide
+Weddings are held here in spring. The whole stair turns into a procession and the dango sellers set up at the bottom.
+The shrine bell rings at dawn and dusk. If you hear it at another hour, somebody's been dared.
+Shinobi come here the night before long missions. They don't say much, just stand under the cedar for a while.
+The view from the top step takes in the whole east side of the village. It's the best place to watch a festival's fireworks.
+
+# -- the river -----------------------------------------------------------------------------------------
+
+## chat.place  district=river  fn=worldbuild
+The river runs right through the south of the village. Anglers on the banks, laundry on the stones, children in the shallows.
+The ferry crosses where the river's too wide for stepping stones. They're building a new bridge downstream, and the ferryman is not pleased.
+The washing stones by the second bridge have been used so long they're worn smooth as soap.
+Herons stand in the reeds at dawn like little guards. The fishermen say a heron on the left bank means a good day.
+The river families mend nets on the far bank every morning. They know more about the village than the gate does.
+The Namiashi children practise on the stepping stones before breakfast. You'll hear them falling in.
+
+## chat.place  district=river  fn=guide
+The ferry landing is downstream from the second bridge. A crossing is one ryo; dogs ride free if they sit.
+The best fishing spot is upstream of the mill, where the water slows down. Bring a lunch; the fish take their time.
+The fish stall's supplier lands the catch at the jetty below the bridge at sunrise. That's where to buy if you want it fresh.
+
+## chat.place  district=river  fn=worldbuild,guide
+Summer evenings, the riverside families have a rowing race. No jutsu allowed, and the shinobi bet on it anyway.
+The lanterns floated on the river at the end of summer drift all the way to the wall grate. The Tobari fish them out by dawn.
+The water's warm enough for paddling by midsummer. The deep pool under the mill is cold enough to make you yell in any season.
+Eel man by the second bridge sells grilled skewers at dusk. When the sauce runs out, he closes, so go early.
+
+# -- the apartment blocks ------------------------------------------------------------------------------
+
+## chat.place  district=apartments  fn=worldbuild
+The apartment blocks near the Residence are mostly shinobi: Genin, clanless Chunin, a few old Jonin who never wanted a house.
+Every landing has a shoe rack and a notice board. The board is mostly rules about noise and complaints about the noise rules.
+The roof is where everyone hangs laundry, watches fireworks and practises jutsu they've been told not to practise indoors.
+The landlady lives on the ground floor and hears every door. Whatever time you came in, the ground floor knows, and has opinions.
+Water tanks on the roof feed every flat. In summer the morning shower is warm and the evening one is warmer.
+The stairwell smells of whatever the third floor is cooking. Firedays it's curry, and nobody knows who's making it.
+
+## chat.place  district=apartments  fn=guide
+The furniture shop is a short walk up the main street. Your flat looks better with more than a futon in it.
+The bath house is two streets over if your flat's tub is too small, which it is.
+Ichiraku's the closest dinner to the blocks. Most of the building eats there twice a week, some of us more.
+
+## chat.place  district=apartments  fn=worldbuild,guide
+The child upstairs practises jutsu at midnight. Thumps, shouts, the occasional smell of smoke. You get used to it.
+Furnish your flat however you like; the walls are yours. Just don't put a forge where the landlady can see it.
+Moving into the blocks, you get a futon, a key and a stern look from the landlady. Everything else you earn.
+The block's notice board lists part-time shifts around the neighbourhood. That's where most Genin find their rent.
+
+# -- the clan quarters ---------------------------------------------------------------------------------
+
+## chat.place  district=clan_quarter  fn=worldbuild
+Every great clan has a gate, a main hall and a few houses behind its wall. The crest on the gate tells you whose ground you're on.
+The clan quarters are quieter than the rest of the village. Fewer shops, more gardens and a lot of watching from windows.
+Clan days change the whole quarter. Lanterns on the gate, food in the hall and cousins visiting from every corner of the Leaf.
+Some quarters stand side by side: the Senju and the Uzumaki memorial, the three-clan alliance by the market. Others keep their distance.
+Every clan's gate is guarded by somebody, but most of them are grandparents on a bench with a pot of tea.
+The walls of the quarters are low enough to see over. They're for saying whose house it is, not for keeping anyone out.
+
+## chat.place  district=clan_quarter  fn=guide
+The Uchiha quarter is out at the edge of the village, walled, with the police station in the far corner.
+The Hyuga estate is a short walk from the Residence. The koi pond is just inside the gate; bow before you look at it.
+The Nara house backs onto their deer forest at the village edge. The deer are protected; don't chase them.
+The Inuzuka compound is by the main gate. Follow the barking.
+
+## chat.place  district=clan_quarter  fn=worldbuild,guide
+Visitors bow at a clan gate before stepping through. Not deeply; just enough to say you know whose ground it is.
+Clan members who make Chunin often move back behind their family's gate. Plenty stay in the apartment blocks for the noodles.
+The clan registry at the Residence keeps the records of every quarter. If you want to know who lives behind a gate, start there.
+Clan quarters host clan days on different weeks, so somewhere in the Leaf there's nearly always a lantern on a gate.

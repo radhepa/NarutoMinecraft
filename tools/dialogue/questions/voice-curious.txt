@@ -1,0 +1,77 @@
+# Questions only a curious resident asks: how things work, rumours, what you found out.
+# Axis poles: honesty_vs_kindness (1 honesty, -1 kindness).
+#! tags: personality=curious
+
+? q.pref.cur_how_it_works | fn: deepen_bond reveal_character | level: 2
+Q: If you could find out how one thing works, what would it be?
+Q: What's something you've always wanted to take apart and understand?
+- How jutsu work :: Chakra and hand signs! I've wondered that for years. {values:+knowledge} {tone:curious}
+- How the stars move :: Big question! The scroll keepers have charts, you know. {values:+knowledge +creativity} {tone:gentle}
+- How people think :: The hardest puzzle of all. Let me know what you find. {values:+knowledge +kindness} {tone:humble}
+- How ramen broth is made :: Ha! That secret is better guarded than the Hokage's office. {values:+family} {tone:joking}
+
+? q.pref.cur_found_out | fn: deepen_bond reveal_character | level: 4 | follows: q.pref.cur_how_it_works | depth: 2 | gap: 4
+Q: That thing you wanted to understand. Found anything out yet?
+Q: Any progress? On the puzzle you told me about?
+- A little :: A little! Tell me everything. Slowly. With diagrams. {values:+knowledge} {tone:curious}
+- No, still wondering :: Still wondering is the best part. Enjoy it. {values:+honesty} {tone:honest}
+- It's more complicated :: Isn't it always? That's how you know you're getting close. {values:+knowledge} {tone:humble}
+
+? q.values.cur_rumours | fn: deepen_bond reveal_character | kind: opinion | level: 2
+Q: Do you believe rumours?
+Q: When you hear gossip at the well, do you trust it?
+- Never :: Never? Not even the one about the dango seller's twin? Hm. Wise. {values:+honesty} {tone:cautious}
+- Some of them :: The trick is knowing which. I'm still working on it. {values:+knowledge} {tone:honest}
+- Only the fun ones :: Ha! Me too. Truth's overrated at the well. {values:+freedom} {tone:playful}
+
+? q.pref.cur_ask_hokage | fn: deepen_bond reveal_character | level: 3
+Q: If you could ask Lord Hokage one question, what would it be?
+Q: One question, straight to Lord Hokage. What do you ask?
+- How do you do it all :: The paperwork alone! I'd love to know too. {values:+duty +knowledge} {tone:curious}
+- What's your favourite food :: Ha! The important questions. I've always wondered. {values:+family} {tone:joking}
+- Can I see the office :: The view from up there must be something. Bold! {values:+courage} {tone:bold}
+- Who taught you :: Oh, that's a good one. Every Hokage had a teacher. {values:+knowledge +loyalty} {tone:humble}
+
+? q.past.cur_learned_today | fn: deepen_bond reveal_character | level: 2
+Q: What did you learn today? Anything at all counts.
+Q: Tell me one thing you didn't know this morning.
+- A new move :: A new move! Show me. No, don't, not near the pots. {values:+strength +knowledge} {tone:proud}
+- Something about a friend :: Ooh. Those are the best things to learn. {values:+loyalty} {tone:warm}
+- Nothing yet :: The day's not over! Let's find you something. {values:+honesty} {tone:honest}
+- A new word :: Which word? Tell me. I collect them. {values:+knowledge} {tone:curious}
+
+? q.past.cur_week_surprise | fn: deepen_bond reveal_character | level: 4 | follows: q.past.cur_learned_today | depth: 2
+Q: What's the most surprising thing you've found out this week?
+Q: This week, what made you go "huh, really?"
+- Something about the village :: The village never runs out of surprises. Tell me! {values:+knowledge +family} {tone:curious}
+- Something about myself :: Ooh. The best kind of surprise. Or the worst. Which? {values:+honesty} {tone:honest}
+- Something about someone :: Careful with that one. Some surprises aren't ours to share. {values:+loyalty} {tone:cautious}
+- Nothing surprised me :: Nothing! You must be very hard to surprise. I'll try harder. {values:+freedom} {tone:teasing}
+
+? q.dilemma.cur_sealed_letter | fn: deepen_bond reveal_character | level: 3 | axis: honesty_vs_kindness
+Q: Someone leaves a sealed letter on a bench. Nobody's about. Do you peek?
+Q: A letter, left behind by the well. It isn't yours. Do you read it?
+- Never :: Never. You're right. Even I wouldn't. Probably. {values:+honesty} {tone:stern} {pole:1}
+- Just to find the owner :: A peek for a good reason. That's what I'd tell myself, too. {values:+kindness} {tone:evasive} {pole:-1}
+- Take it to the post :: The courier's office. Sensible and nosy-proof. {values:+duty} {tone:dutiful}
+
+? q.values.cur_curious_or_nosy | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Where's the line between curious and nosy?
+Q: When does asking questions turn into prying?
+- When it hurts someone :: Yes. I try to remember that. Not always well. {values:+kindness} {tone:kind}
+- When they ask you to stop :: Clear and simple. A good rule. {values:+honesty} {tone:honest}
+- There isn't one :: Ha! Dangerous answer. I like it, though. {values:+knowledge +freedom} {tone:bold}
+
+? q.values.cur_too_nosy_me | fn: deepen_bond | kind: confession | level: 5 | follows: q.values.cur_curious_or_nosy | depth: 2
+Q: Have I ever been too nosy with you? Be honest. I can take it.
+Q: Do my questions ever bother you? Truly?
+- Never :: Never? Oh, good. I'll keep asking, then. {values:+kindness} {tone:warm}
+- Once or twice :: Thank you for saying. I'll mind the line. {values:+honesty} {tone:honest}
+- A little, but I don't mind :: A little. Ha. You're kind. I'll try to keep it to a little. {values:+kindness +honesty} {tone:gentle}
+
+? q.pref.cur_taken_apart | fn: deepen_bond reveal_character | level: 2
+Q: Have you ever taken something apart just to see how it works?
+Q: Ever opened up a clock or a lock to look at the insides?
+- Yes, and fixed it :: Put back together and working? That's the dream. {values:+knowledge +creativity} {tone:proud}
+- Yes, and broke it :: Ha! The usual ending. Mine too. A drawer full of pieces. {values:+honesty} {tone:joking}
+- Never :: Never! You've no idea what you're missing. Bring me something broken. {values:+duty} {tone:cautious}

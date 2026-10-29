@@ -1,0 +1,65 @@
+# The bath house: a public bath with hot and cold pools, towels, soap and a fruit-milk cooler.
+#! fn: commerce
+
+## shop.bath_house.greet  shop=bath_house  fn=commerce
+Welcome! Shoes in the cubbies, please, then through the curtain.
+Come in. The water's hot, the steam's thick and the floor is slippery.
+Good evening, {player}. A soak after a long day?
+Hello there. Towels on the left, soap on the right, worries outside.
+Welcome to the bath. Wash first, soak second. The rule's on the wall.
+
+## shop.bath_house.greet  shop=bath_house  season=winter  fn=commerce,react
+Cold out there! Come in, the big pool's been steaming since noon.
+
+## shop.bath_house.greet  shop=bath_house  weather=rain  fn=commerce,react
+Soaked already? Then you're halfway to a bath. Come in and finish the job.
+
+## shop.bath_house.browse  shop=bath_house  fn=commerce
+Entry covers the hot pool, the cold pool and the steam room.
+Towels are extra. Bring your own and save a ryo.
+Fruit milk in the cooler. It's a crime to leave the bath without one.
+Soap, scrub cloths and a little bottle of camellia oil for sore shoulders.
+The outdoor pool looks up at the Hokage Rock. Best view in the Leaf, if you ask me.
+
+## shop.bath_house.buy  shop=bath_house  kind=cycle  fn=commerce
+In you go. {pay}. Leave the door ajar if the steam gets too much.
+That's {pay}. Your towel, folded.
+Here's your {item}. Drink it standing up, hand on your hip. That's tradition.
+{pay}, thank you. Soak until your fingers wrinkle.
+A fresh towel and a locker key. Enjoy the water.
+That's {pay}. The hot pool's quiet right now, perfect timing.
+
+## shop.bath_house.cant_afford  shop=bath_house  kind=cycle  fn=commerce
+Short a ryo or two? Come back when you're flush, the water won't cool.
+That's not enough for entry, I'm sorry. The river's free, if a bit cold.
+Hmm, a little under. Skip the towel and it might just fit.
+Not today. But the cooler's cheaper, if you want a fruit milk.
+
+## shop.bath_house.sold_out  shop=bath_house  kind=cycle  fn=commerce
+No more fruit milk, I'm afraid. A squad of Chunin drank the lot.
+We're out of clean towels till the laundry's back. Bring your own today.
+The {item}'s run out. Tomorrow, I promise.
+
+## shop.bath_house.haggle  shop=bath_house  fn=commerce,reveal_character
+Haggle for hot water? The fire under the boiler doesn't haggle with me.
+Come at opening and it's a little cheaper. The water's the cleanest too.
+Bring a friend and the second entry is half. Bathing's better with company.
+No discounts, but nobody's ever thrown out for staying too long.
+
+## shop.bath_house.closing  shop=bath_house  time=night|late  fn=commerce
+We drain the pools soon. Last soak of the night.
+Closing in a little while. Don't fall asleep in the water.
+I'm banking the boiler. You can have the pool to yourself till then.
+
+## shop.bath_house.recommend  shop=bath_house  fn=commerce,teach
+After training all day, a long soak in the hot pool. Your muscles will forgive you by morning.
+Hot pool, then cold, then hot again. My grandfather swore by it.
+The {item}. It's the best thing in the cooler.
+A bath before bed, then straight home to sleep. You'll wake feeling brand new.
+The steam room, if you've got a cold coming. Breathe deep.
+
+## shop.bath_house.regular  shop=bath_house  level=3..10  fn=commerce,deepen_bond
+Your locker's free, number seven. I keep it for you.
+A regular! I put a fruit milk in the cooler with your name on it.
+You always come at the same hour. I've started setting the kettle by you.
+Here again? You'll be the cleanest shinobi in the Leaf.

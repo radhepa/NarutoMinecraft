@@ -1,0 +1,257 @@
+# Callbacks for questions/everyday.txt: what a resident says later, remembering the player's answer.
+#! fn: callback
+
+## callback.answer.q.pref.weather.a1
+Sunshine all day! Your kind of weather, I remember. The training grounds will be dry for once.
+
+## callback.answer.q.pref.weather.a2
+Soft rain this morning. You said that's your favourite. Smell that? Wet cedar.
+
+## callback.answer.q.pref.weather.a3
+Snow's coming, the old farmers say. Your favourite. Snowball fight on the Academy field?
+
+## callback.answer.q.pref.weather.a4
+Big storm last night. You'd have loved it, thunder fan. I was under the blanket.
+
+## callback.answer.q.pref.reading.a1
+The scroll shop got a new adventure tale. Sea serpents. I thought of you straight away.
+
+## callback.answer.q.pref.reading.a2
+Training scrolls only, you said. I've got a story scroll I'm lending you. No arguing.
+
+## callback.answer.q.pref.reading.a3
+You read people instead of books, I said. I think you're reading me right now. Stop it.
+
+## callback.answer.q.pref.reading.a4
+I copied out a little poem for you. You said you like them sometimes. Don't laugh at my brushwork.
+
+## callback.answer.q.pref.music.a1
+You sing badly, you said. The festival needs loud bad singers. Practise.
+
+## callback.answer.q.pref.music.a2
+Did you ever ask the flute-maker by the shrine about lessons? I heard someone practising there today.
+
+## callback.answer.q.pref.music.a3
+There's a musician at the bridge tonight. You're a listener, you said. Come listen.
+
+## callback.answer.q.pref.music.a4
+Festival drums, your instrument. They're tuning them already behind the shrine.
+
+## callback.answer.q.pref.bath_or_river.a1
+The bathhouse is quiet this hour. Hot bath, your cure, you said. Go on.
+
+## callback.answer.q.pref.bath_or_river.a2
+Cold river after training, your cure. I dipped a toe in today. Never again.
+
+## callback.answer.q.pref.bath_or_river.a3
+Hot then cold, the old shinobi way, you told me. I tried it. My heart nearly stopped. In a good way.
+
+## callback.answer.q.pref.collect.a1
+Here. A smooth stone from the river, for your collection. It's almost perfectly round.
+
+## callback.answer.q.pref.collect.a2
+Found a rusty old shuriken in my garden. For your collection, if you want it.
+
+## callback.answer.q.pref.collect.a3
+I've written down my grandmother's pickle recipe for your collection. Guard it with your life.
+
+## callback.answer.q.pref.collect.a4
+Still got that button I gave you? The start of your collection. Ha.
+
+## callback.answer.q.pref.ramen_order.a1
+Miso ramen, your order, I remember. Ichiraku's miso is extra rich today, they say.
+
+## callback.answer.q.pref.ramen_order.a2
+Pork, extra pork. I told the cook your order and they nodded like you were royalty.
+
+## callback.answer.q.pref.ramen_order.a3
+Salt broth, the purist's order. I tried it because of you. You were right.
+
+## callback.answer.q.pref.ramen_order.a4
+Whatever's special, your order. Today's special is something with crab. Brave enough?
+
+## callback.answer.q.pref.ramen_record.a1
+One bowl, savoured properly. I tried eating slowly like you. Lasted half a bowl.
+
+## callback.answer.q.pref.ramen_record.a2
+Three bowls, easily, you claimed. I'd like to see it. My treat, if you manage four.
+
+## callback.answer.q.pref.ramen_record.a3
+You've never counted your bowls. I have. I'm not telling you the number.
+
+## callback.answer.q.values.luck.a1
+Here's my lucky coin. Borrow it for your next mission. You believe in luck, after all.
+
+## callback.answer.q.values.luck.a2
+You make your own luck, you said. I've been working harder since. Luckier, too.
+
+## callback.answer.q.values.luck.a3
+Only bad luck exists, you said. My cart wheel came off today. You may be right.
+
+## callback.answer.q.values.rich_or_loved.a1
+Well-loved over rich, your choice. Well, you're well-loved here. I'll vouch.
+
+## callback.answer.q.values.rich_or_loved.a2
+You'd pick rich, you said. Buy me dinner when it happens. Ha.
+
+## callback.answer.q.values.rich_or_loved.a3
+Earn both riches and friends. Your plan. How's it going? I can help with the friends part.
+
+## callback.answer.q.values.prank.a1
+Get even, you said, after a prank. I'm checking my sandals around you from now on.
+
+## callback.answer.q.values.prank.a2
+You let pranks go. The bigger person. My nephew could learn from you.
+
+## callback.answer.q.values.prank.a3
+Flowers in the prankster's sandals. Your idea. I did it to my cousin. They loved it.
+
+## callback.answer.q.values.prank_war.a1
+A truce with dango, your way to end a prank war. Worked on my brother. Mostly.
+
+## callback.answer.q.values.prank_war.a2
+You'd win a prank war, you said. Leave my shop out of it. I mean it.
+
+## callback.answer.q.values.prank_war.a3
+A prank war that never ends. I'm in one with my neighbour now. Twenty years and counting.
+
+## callback.answer.q.values.lead_or_follow.a1
+You'd rather lead. Mind you listen as much as you talk, I said. I still mean it.
+
+## callback.answer.q.values.lead_or_follow.a2
+Following a good leader well. You said it's a skill. Your squad's lucky to have you.
+
+## callback.answer.q.values.lead_or_follow.a3
+Side by side, no front, no back. Your kind of squad. Mine too.
+
+## callback.answer.q.plans.other_trade.a1
+A cook, if you weren't a ninja. I'll taste anything you make. Within reason.
+
+## callback.answer.q.plans.other_trade.a2
+A carpenter, you'd be. The Kinoshita are taking on helpers this month, I hear.
+
+## callback.answer.q.plans.other_trade.a3
+A medic, your other life. The hospital's always short of hands. Even for an afternoon.
+
+## callback.answer.q.plans.other_trade.a4
+A merchant, you'd be, without the kunai. Want to haggle for my old teapot? Practice.
+
+## callback.answer.q.plans.trade_try.a1
+Did you ask around about learning that trade? I know someone who'd love a curious student.
+
+## callback.answer.q.plans.trade_try.a2
+No time for another trade, you said. One day. I'll hold you to "one day".
+
+## callback.answer.q.plans.trade_try.a3
+You already practise that trade, a little. When do I get to see your work?
+
+## callback.answer.q.plans.squad_role.a1
+Front line, that's your place. Mind yourself out there. I worry, you know.
+
+## callback.answer.q.plans.squad_role.a2
+Support and healing, the role that suits you. I can see it. You watch everyone.
+
+## callback.answer.q.plans.squad_role.a3
+The planner with the map. Your squad role. Plan me a route to the market that avoids the crowds?
+
+## callback.answer.q.plans.squad_role.a4
+Scout, out ahead, quick and quiet. Is that why I never hear you arrive?
+
+## callback.answer.q.plans.squad_shape.a1
+Your squad works like clockwork, you said. Still ticking?
+
+## callback.answer.q.plans.squad_shape.a2
+Still working your squad out, you said. Any better after the last mission?
+
+## callback.answer.q.plans.squad_shape.a3
+Your squad argues a lot. The closest ones do, I said. Still arguing?
+
+## callback.answer.q.plans.pet_someday.a1
+A ninja dog someday. The Inuzuka had a litter born last week. Just saying.
+
+## callback.answer.q.plans.pet_someday.a2
+A messenger hawk, you'd want. I saw one land on the Residence roof. Beautiful bird.
+
+## callback.answer.q.plans.pet_someday.a3
+A lazy old cat. There's one asleep on the bathhouse roof that nobody owns. Hint.
+
+## callback.answer.q.plans.pet_someday.a4
+No room for a pet, you said. Did you get a fish yet?
+
+## callback.answer.q.dilemma.friends_fighting.a1
+You'd stay out of a fight between friends. Safe. I tried it last week. It was lonely, like I said.
+
+## callback.answer.q.dilemma.friends_fighting.a2
+Side with whoever's right, you'd do. I had to pick between two friends today. I thought of you.
+
+## callback.answer.q.dilemma.friends_fighting.a3
+The peacemaker, that's you between friends. I've got two neighbours who could use you.
+
+## callback.answer.q.dilemma.neutral_cost.a1
+Wait it out, if both friends are cross with you. They'll miss you first. Still true?
+
+## callback.answer.q.dilemma.neutral_cost.a2
+Apologise to both, even if blameless. You're generous. I'm not sure I could.
+
+## callback.answer.q.dilemma.neutral_cost.a3
+"You're both being silly." I said your line to two squabbling neighbours. They stopped. Then laughed.
+
+## callback.answer.q.dilemma.lost_child.a1
+You'd stop for a lost child, training or not. The market mothers would adore you.
+
+## callback.answer.q.dilemma.lost_child.a2
+Fetch the police for a lost child, then off to training. Sensible. The police are very good with them.
+
+## callback.answer.q.dilemma.lost_child.a3
+A lost child at training with you. I'm still laughing at the picture.
+
+## callback.answer.q.dilemma.lost_kunai.a1
+You'd own up about a lost kunai. I lost my neighbour's ladle and told them, because of you.
+
+## callback.answer.q.dilemma.lost_kunai.a2
+Replace a lost kunai quietly, you'd do. I'll never know if my things are originals, will I?
+
+## callback.answer.q.dilemma.lost_kunai.a3
+Tell them and replace it. Your full apology. I did just that over a broken umbrella.
+
+## callback.answer.q.village.best_food.a1
+Ichiraku, best food in the Leaf, you said. Half the village agrees with you.
+
+## callback.answer.q.village.best_food.a2
+The dango stand, best food in the village. I told the dango seller. Free skewer waiting for you.
+
+## callback.answer.q.village.best_food.a3
+Akimichi barbecue, you voted. The Akimichi heard. They looked very pleased.
+
+## callback.answer.q.village.best_food.a4
+"Whoever's feeding me." Then I'm the best cook in the Leaf today. Here.
+
+## callback.answer.q.village.new_face.a1
+The next Hokage on the Rock, you said. Fair. I wonder whose face it'll be.
+
+## callback.answer.q.village.new_face.a2
+An ordinary villager on the Hokage Rock. I keep telling people your idea. The baker wants it to be them.
+
+## callback.answer.q.village.new_face.a3
+Your own face, next on the Rock. I looked up at the empty stone today. There's room.
+
+## callback.answer.q.village.new_face.a4
+A good dog on the Hokage Rock. The Inuzuka loved that, when I told them. Loved it.
+
+## callback.answer.q.village.rules_young.a1
+The rules keep young ninja safe, you said. My aunt agreed. She wants to meet you now.
+
+## callback.answer.q.village.rules_young.a2
+Too strict, you said, the rules for young ninja. Every generation says it. Mine did.
+
+## callback.answer.q.village.rules_young.a3
+Some rules fair, some not. I've been sorting them since you said that.
+
+## callback.answer.q.village.rule_to_change.a1
+A later curfew, your one change. The noodle stands would build you a statue.
+
+## callback.answer.q.village.rule_to_change.a2
+You wouldn't change a single rule. Patient. I'm still impressed.
+
+## callback.answer.q.village.rule_to_change.a3
+Open the forest trails, you'd change. Mind the boars if they ever do.

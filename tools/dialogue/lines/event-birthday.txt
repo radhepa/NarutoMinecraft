@@ -1,0 +1,48 @@
+# A resident's own birthday: the speaker is the one celebrating.
+#! tags: event=birthday
+
+## greet.event  fn=react
+It's my birthday today, {player}! You're the first to wish me well. Well, you will be, won't you?
+Guess what day it is? My birthday! I'm treating myself to Ichiraku tonight.
+Morning! Another year older. I don't feel a day wiser, but there's cake.
+My birthday today! My family's coming round for supper. The kitchen's been a battlefield since dawn.
+Birthday today, and the weather's lovely. I'll take that as a present.
+
+## greet.event  personality=shy|reserved  fn=react
+...It's my birthday. I wasn't going to say anything. But it is.
+It's, um. My birthday. You don't have to do anything. I just wanted someone to know.
+
+## greet.event  personality=fiery|playful  fn=react
+Birthday! My birthday! The best day of the whole year, and it's all mine!
+Guess who's a whole year more amazing today? Me! It's my birthday!
+
+## greet.event  personality=stern|proud  fn=react
+It's my birthday. No fuss, please. A nod will do.
+
+## greet.event  stage=child  fn=react
+It's my birthday! I'm another year old! I'm nearly grown up now!
+My birthday! I got a new kunai pouch! A practice one, but still!
+Today's my birthday, so I get to pick supper. I picked dango. For supper.
+
+## chat.event  fn=reveal_character
+My family always makes red bean rice on birthdays. It's not a birthday without it.
+I went up to the Hokage Rock at dawn to start my birthday with the view. A little tradition of mine.
+I don't need presents. Well. A small one wouldn't hurt.
+Every birthday I visit the shrine and thank the year for being kind to me.
+My friends are taking me for barbecue tonight. I've been hungry since breakfast thinking about it.
+On my birthday I always buy myself one thing I don't need. This year it's a little paper lantern.
+Birthdays make me think back. A year ago today I'd never have guessed where I'd be now.
+My neighbour left a bundle of dango on my doorstep this morning. The whole street knows, apparently.
+
+## chat.event  personality=warmhearted|gentle  fn=reveal_character
+I baked buns for everyone I'll see today. It's my birthday, so I get to give the presents.
+
+## chat.event  personality=meticulous|pragmatic  fn=reveal_character
+I've planned the whole day: tea at ten, a walk at noon, supper at six. Don't let me be late.
+
+## chat.event  personality=adventurous|curious  fn=reveal_character
+For my birthday, I'm going to walk somewhere in the village I've never been. There must be a lane left.
+
+## chat.event  stage=child  fn=reveal_character
+I'm having a party! There'll be games and sweets and my cousin's going to juggle.
+I made a wish on my candle. I can't tell you, or it won't happen. It's about a dog.

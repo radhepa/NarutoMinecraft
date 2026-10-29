@@ -18,7 +18,7 @@ class RestTest {
     @Test void lateNightsAreForgivenOnlyByAHomelyHome() {
         assertFalse(Rest.sleep(ComfortTest.score(ComfortTest.leafFlat()), 1, true).any());
         var h = ComfortTest.leafFlat();
-        for (String id : new String[]{"thick_futon", "kotatsu", "rug", "zabuton_pair", "tea_table", "andon_lamp", "houseplant", "curtains"}) h.place(id);
+        for (String id : new String[]{"futon_deluxe", "kotatsu", "rug", "zabuton", "tea_table", "andon_lamp", "potted_fern", "curtains"}) h.place(id);
         h.plant.water(0);
         var s = Comfort.of(h, 0, 3, "");
         assertTrue(s.tier().compareTo(Comfort.Tier.HOMELY) >= 0, "comfort " + s.comfort());

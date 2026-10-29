@@ -1,0 +1,190 @@
+# Hangouts that are training (LIFE_TOGETHER.md §3): a spar, a training session at Training Ground 3, and a race
+# over the rooftops. Parts as in hangout-meals.txt; callbacks in callback-hangout-training.txt.
+#! kind: cycle
+#! fn: deepen_bond
+
+# == sparring ======================================================================================
+## hangout.spar.ask
+Spar with me? I've a new feint I want to try on someone who'll notice.
+I'm restless. Training ground, you and me, a few rounds?
+Let's spar, {player}. First to three clean hits buys dango.
+## hangout.spar.invite
+Training ground at dawn? Bring your best. I'm bringing mine.
+A note, a little smudged: "Spar tomorrow? I've been practising. Be ready."
+## hangout.spar.yes
+A spar? You're on. Don't go easy on me.
+Yes! I've been itching for a proper match.
+## hangout.spar.no.busy
+I'm tied up right now. {when}? I'll be fresh and dangerous by then.
+## hangout.spar.no.busy  stage=teen|adult
+Can't, I'm on duty. Ask me {when}.
+## hangout.spar.no.not_today
+My arms are still sore from yesterday. Another day.
+Not today, {player}. I'd only lose and sulk.
+## hangout.spar.no.not_their_thing
+I don't really like sparring. Trading blows with friends feels wrong to me.
+## hangout.spar.no.not_close_enough
+Spar with you? I'd want to know you a little better first. Fists are personal.
+## hangout.spar.arrive
+Bow first. Proper form. ...Now, begin!
+Here's good. Flat ground, nobody watching. Ready when you are.
+## hangout.spar.rough
+That got heated. Maybe too heated. Let's cool off a while.
+## hangout.spar.fine
+Good bout. I've got a bruise or two to remember it by.
+## hangout.spar.good
+That was a real match. You're getting sharper, {player}.
+I learned something from that. Let's go again sometime.
+## hangout.spar.great
+That was the best fight I've had in months! I can't stop grinning.
+Every move you made, I had to answer. That's what sparring's for. Brilliant.
+## hangout.spar.stood_up
+I warmed up for an hour and you never came. My stretches were very thorough, {player}.
+## hangout.spar.ritual
+Our spars are a standing appointment now. Same ground, same bow, different bruises.
+## hangout.spar.ritual_missed
+My guard's getting lazy without our spars. I've noticed. So will you.
+## hangout.spar.highlight.1
+We hit at the same time and both fell over! A draw! Ha!
+## hangout.spar.highlight.2
+That was your first clean throw on me. I felt the ground before I saw it coming.
+## hangout.spar.highlight.3
+You blocked my best kick with one hand! When did you learn that?
+## hangout.spar.highlight.4
+A crowd's gathered! They're cheering for both of us. Bow to them!
+## hangout.spar.highlight.5
+Your kunai pinned my sleeve to the post. A perfect throw. I'm keeping the tear.
+## hangout.spar.highlight.6
+We both stopped mid-swing because a butterfly landed between us. Ha!
+## hangout.spar.highlight.7
+I tried my new feint and you fell for it completely. Your face!
+## hangout.spar.highlight.8
+Rain started halfway through and neither of us would stop. We're soaked and I'm not sorry.
+## hangout.spar.highlight.9
+You helped me up after I fell, mid-match. Then you went straight back to attacking.
+## hangout.spar.highlight.10
+We went twenty rounds. Twenty! My legs are jelly.
+## hangout.spar.highlight.11
+A Jonin passing by stopped to watch and nodded at us. Nodded! At us!
+## hangout.spar.highlight.12
+We sat back to back afterwards, too tired to speak, watching the sun go down.
+
+# == training ======================================================================================
+## hangout.train.ask
+Training Ground 3 this morning? I could use a partner for drills.
+Let's train together, {player}. It's easier to keep going with company.
+I'm doing laps and target practice. Want to join? Misery loves company.
+## hangout.train.invite
+Training Ground 3, early. I'll set up the targets.
+Drills at the posts this afternoon, if you'd like a partner.
+## hangout.train.yes
+Training? Good. I needed someone to keep me honest.
+Yes. Let's work until we can't lift our arms.
+## hangout.train.no.busy
+I've got a mission briefing. {when}? I'll bring water.
+Not right now. Try me {when}.
+## hangout.train.no.not_today
+I'm resting today. Even shinobi need rest days.
+Not today. I pulled something yesterday.
+## hangout.train.no.not_their_thing
+Training's not really how I like to spend my free time. Sorry.
+## hangout.train.no.not_close_enough
+I usually train alone, or with people I know well. Maybe later on.
+## hangout.train.arrive
+Targets are up. Stretch first. Properly, not like last time.
+Here we are. I'll count, you throw. Then we switch.
+## hangout.train.rough
+We didn't really find a rhythm today. It happens.
+## hangout.train.fine
+Solid session. Nothing fancy, but we did the work.
+## hangout.train.good
+I hit more targets with you here than I do alone. Good session.
+That was useful, {player}. My aim's better already.
+## hangout.train.great
+That was the best training I've had in weeks. We push each other, you know.
+I can feel myself getting stronger. Thank you for today. Really.
+## hangout.train.stood_up
+I set up two sets of targets. One of them is still untouched.
+## hangout.train.ritual
+Our training sessions. I've started planning my week around them.
+## hangout.train.ritual_missed
+I've been training alone again. I keep turning round to say something to you.
+## hangout.train.highlight.1
+Every kunai in the centre ring! All of them! Do that again!
+## hangout.train.highlight.2
+We ran the outer wall and didn't stop once. I didn't think I could!
+## hangout.train.highlight.3
+You spotted the flaw in my stance in one look. I've been doing it wrong for years!
+## hangout.train.highlight.4
+We split the target post clean in two! The groundskeeper's going to be furious.
+## hangout.train.highlight.5
+I held the tree-walk for a whole minute while you counted. A whole minute!
+## hangout.train.highlight.6
+A flock of geese walked straight through our drills and we had to stop and let them.
+## hangout.train.highlight.7
+We timed our throws so both kunai hit the same post at once. Did you hear that clang?
+## hangout.train.highlight.8
+You stayed to help me finish after you were done. I won't forget that.
+## hangout.train.highlight.9
+Five hundred strikes, side by side. I've never counted that high and meant it.
+## hangout.train.highlight.10
+We finished just as the sun came up over the posts. Look at the light on the grass.
+
+# == the rooftop race ==============================================================================
+## hangout.roof_race.ask
+Race me over the rooftops? Gate to the Hokage Rock, no ground allowed!
+I bet you can't catch me from the market to the Academy roof. Want to try?
+## hangout.roof_race.ask  stage=teen|adult
+Rooftop race, {player}. Loser buys the drinks.
+## hangout.roof_race.invite
+Rooftops at dusk. Start at the bell tower. Don't be slow.
+A paper dart, landed on your sill: "Race you over the roofs. Today. Bring your fastest feet."
+## hangout.roof_race.yes
+A race? Oh, you're going to regret asking.
+Yes! Last one to the Academy roof is a mouldy rice cake!
+## hangout.roof_race.no.busy
+I've something on. {when}? My legs'll be fresher.
+I can't right now. Race me {when} instead.
+## hangout.roof_race.no.not_today
+Not today, the tiles are slippery after the rain.
+## hangout.roof_race.no.not_today  stage=teen|adult
+My knee's playing up. Another day.
+## hangout.roof_race.no.not_their_thing
+Jumping across rooftops for fun? I'll stay on the ground, thank you.
+## hangout.roof_race.no.not_close_enough
+I don't race people I hardly know. It gets competitive.
+## hangout.roof_race.arrive
+On my mark. Ready... set... GO!
+Bell tower's ahead. No pushing. Fine, a little pushing.
+## hangout.roof_race.rough
+That was more arguing about who cheated than racing.
+## hangout.roof_race.fine
+Good run. My lungs are on fire, but good.
+## hangout.roof_race.good
+You nearly had me on that last jump! Good race, {player}.
+I haven't run like that in ages. Again tomorrow?
+## hangout.roof_race.great
+That was amazing! The whole village was flying past under us!
+I don't even care who won. That was the best run of my life.
+## hangout.roof_race.stood_up
+I waited on the bell tower until it got dark. You never came. I won by default. It wasn't fun.
+## hangout.roof_race.ritual
+Our rooftop races. The pigeons know to clear out when they see us coming now.
+## hangout.roof_race.ritual_missed
+I ran the rooftops alone yesterday. It felt like running away from something instead of towards it.
+## hangout.roof_race.highlight.1
+We cleared the gap over the main street at the same moment! A tie! A perfect tie!
+## hangout.roof_race.highlight.2
+A shop owner shook a broom at us and we just laughed and kept running!
+## hangout.roof_race.highlight.3
+You took the shortcut over the bathhouse! I didn't know you could jump that far!
+## hangout.roof_race.highlight.4
+We stopped on the tallest roof and the whole village was gold in the sunset.
+## hangout.roof_race.highlight.5
+You slipped on a tile and I caught your wrist. Then you still beat me! Unbelievable!
+## hangout.roof_race.highlight.6
+We startled a whole flock of pigeons and ran through them. It was like flying.
+## hangout.roof_race.highlight.7
+Children on the street below were cheering for us! For both of us!
+## hangout.roof_race.highlight.8
+We finished on the Academy roof and lay on our backs, laughing at the sky.

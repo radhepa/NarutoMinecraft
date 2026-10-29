@@ -23,14 +23,16 @@ public interface Friends {
     /** A visit happened and went this well (0 to 1): a shared experience for a good one, warmth for any. Never a loss. */
     void visited(String who, String kind, double quality);
     /**
-     * They noticed something at your home that is about them: their gift on show ({@code gift:<id>}) or a photo they
-     * are in. Returns true the first time, when there is a line to play.
+     * They noticed something at your home that is about them: their gift on show ({@code gift:<id>}, or a keepsake
+     * they gave you) or a photo they are in ({@code <photo>#<version>}, {@code photo} true). True the first time only.
      */
-    boolean noticed(String who, String what);
-    /** You gave them a spare key: a moment between you. */
+    boolean noticed(String who, String what, boolean photo);
+    /** You gave them a spare key (a bond flag, never a gate moment). */
     void keyGiven(String who);
+    /** You took the key back, quietly. */
+    void keyTaken(String who);
     /**
-     * You invite them over for a home hangout. Returns how it went ("great", "good", "fine", "rough") for those who
+     * You invite them over for a home hangout (an activity the bond engine hosts at {@code home}). Returns how it went ("great", "good", "fine", "rough") for those who
      * came, or the reason nobody could ("busy", "not_close_enough"...).
      */
     String host(List<String> who, String activity, long day, int hour);

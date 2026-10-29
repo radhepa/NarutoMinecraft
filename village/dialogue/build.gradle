@@ -1,0 +1,48 @@
+plugins {
+    id 'java-library'
+}
+
+// The dialogue engine of Shinobi Village (DIALOGUE.md): pure Java, no Minecraft. Chooses lines from the compiled bank
+// (data/narutominecraft/dialogue/, written by tools/dialogue/dialogue.py), keeps the heard ledger and talk budgets.
+// Phase 0's Village mod depends on it (`implementation project(':village:dialogue')`) and adds the world glue.
+version = '0.1.0'
+group = 'dev.shinobi'
+base { archivesName = 'shinobi-village-dialogue' }
+
+repositories { mavenCentral() }
+configurations { bondKeys }
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Only for the bondKeys task: the bond engine lists every pool it asks for (DialogueKeys).
+    bondKeys project(':life:bonds')
+}
+
+// Java 25 like the rest of the pack; -PjavaRelease=21 builds on an older JDK (the code uses nothing newer).
+def javaRelease = (project.findProperty('javaRelease') ?: '25') as int
+tasks.withType(JavaCompile).configureEach { options.release = javaRelease; options.encoding = 'UTF-8' }
+test {
+    useJUnitPlatform()
+    testLogging { events 'failed'; exceptionFormat 'full' }
+    systemProperty 'dialogue.bank', rootProject.file('src/main/resources/data/narutominecraft/dialogue').absolutePath
+}
+
+// A thorough player's beta against the real compiled bank: how often lines repeat and NPCs hit their budget.
+tasks.register('simulate', JavaExec) {
+    group = 'verification'
+    description = 'Plays a thorough player\'s beta (and a talk-to-everyone player) against the compiled dialogue bank.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.shinobi.village.dialogue.sim.BetaTalk'
+    args project.findProperty('seed') ?: '20261029'
+    systemProperty 'dialogue.bank', rootProject.file('src/main/resources/data/narutominecraft/dialogue').absolutePath
+}
+
+// Writes tools/dialogue/bond_keys.txt from the bond engine's DialogueKeys, for dialogue.py --report.
+tasks.register('bondKeys', JavaExec) {
+    group = 'build'
+    description = 'Lists every dialogue pool the bond engine asks for into tools/dialogue/bond_keys.txt.'
+    classpath = sourceSets.test.runtimeClasspath + configurations.bondKeys
+    mainClass = 'dev.shinobi.village.dialogue.sim.BondKeys'
+    args rootProject.file('tools/dialogue/bond_keys.txt').absolutePath
+}

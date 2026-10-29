@@ -1,0 +1,59 @@
+# Small talk, part A: the answer to "How's your day?" for warmhearted residents. Their own life, in their voice.
+#! tags: personality=warmhearted
+
+## chat.personal  fn=reveal_character
+I made too much miso soup again. I always cook for six, and there are three of us.
+Busy! I've been knitting scarves for the gate guards. They stand out there in all weathers, poor things.
+The neighbour's cat has decided my porch is home. I've started buying it fish, so that's my fault now.
+I spent the morning pressing rice balls for my sister's shop. My thumbs smell of salt and seaweed.
+My husband caught a cold, so I've been making ginger tea by the potful. He pretends to hate the fussing.
+Good, thank you. I taught the little one next door to fold paper cranes. We have forty now and nowhere to put them.
+Someone left a basket of plums on my step with no note. I've been guessing all day who to thank.
+I always keep a spare umbrella by the door. Somebody always needs one, and they never bring it back. I don't mind.
+I tried a new pickle recipe. The jar is either delicious or dangerous. Too early to say.
+A tired day, but a nice one. I sat with the old man across the lane while he told me about his fishing years.
+My mother used to say a full pot is a full house. I still cook as if the whole street might drop in.
+I've been airing out the futons. Nothing beats a bed that smells of sunshine.
+Lovely, actually. My daughter wrote home from her mission, three whole pages. Mostly about the food, but still!
+I mended a hole in my son's flak vest and stitched a little leaf inside where nobody will see it.
+The bakery gave me yesterday's sweet buns for nearly nothing. I've been handing them out down the lane.
+I burnt the rice. First time in years. I'm blaming the gossip at my door, not my cooking.
+I keep a list of everyone's birthdays on my kitchen wall. It's getting long. I need a bigger wall.
+Today I finally learned to make a proper omelette roll. Twelve tries. The neighbours ate the eleven failures.
+My grandmother's teapot cracked this morning. I glued it. It leaks a little, but I can't throw it out.
+I've been sewing festival yukata for the twins down the road. Their mother works nights at the hospital.
+A happy day! The stray dog I've been feeding let me pat it at last. Took three months and a lot of chicken.
+I always walk the long way past the hospital. Sometimes a nurse needs a hot drink more than anyone.
+I'm drying persimmons on the balcony. The crows think I'm doing it for them.
+I've been teaching my husband to cook. He makes very confident, very salty soup.
+The tea house lady was feeling low, so I sat and drank three cups to keep her company. I'll be up all night.
+I planted beans by the fence so the children on the way to the Academy can pick a snack.
+There's nothing I like more than a crowded table. Elbows everywhere, someone always spills the soy sauce.
+I keep a jar of honey sweets in my apron. You never know who's having a hard day.
+I gave my good shawl to someone shivering by the river. I'll knit another. I like knitting anyway.
+My sister says I mother everyone. Someone has to. Half this village forgets to eat.
+Quiet. I spent it cleaning out my brother's old room. He's on a long mission and I wanted it nice for him.
+I think the secret to a good stew is cooking it for someone. Stew for one never tastes right.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I run the noodle cart's night shift on weekends. Tired shinobi coming off duty are the best customers. Always grateful.
+My stall's been slow, so I gave away the bruised peaches. Better in a child's hand than the compost.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+I came back from a mission with sore feet and a bag of mountain mushrooms for the whole floor of my building.
+On long missions I cook for my squad. My sensei called me the team's secret weapon. It was the dumplings.
+
+## chat.personal  fn=worldbuild
+On cold nights the families on my street take turns heating one big bath and sharing it. Saves firewood and gossip flows.
+When a shinobi on my street goes on a long mission, we take turns watering their plants. Nobody has to ask.
+There's an old Leaf habit: you return a borrowed dish with something in it. My cupboards are full of other people's bowls.
+
+## chat.personal  fn=hook
+The widow at the end of my lane hasn't opened her shutters in two days. I'd knock, but I don't want to intrude.
+I baked a cake for the gate guards, but it's too heavy for my back to carry all that way.
+My kite's stuck on the bathhouse roof again. The children made it for me, so I can't just leave it there.
+I lent my good cooking pot to someone at the last festival and can't remember who. It had a dent shaped like a heart.
+
+## chat.personal  fn=filler
+Can't complain. Have you eaten? You look like you haven't eaten.
+Fine, fine. Better now someone's asked.

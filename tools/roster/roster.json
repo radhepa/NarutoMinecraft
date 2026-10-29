@@ -115,6 +115,9 @@
    "clan": "akimichi",
    "clan_power": "strong",
    "specialty": "taijutsu (expansion)",
+   "niche": "taijutsu",
+   "niche_edge": 4.5,
+   "kit": "combat:ally.hokage_4",
    "first": "beta1",
    "levels": {
     "academy": 58,
@@ -122,7 +125,10 @@
     "exams": 58
    },
    "story": true,
-   "group": "circle"
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.hokage_4.gone"
+   }
   },
   {
    "role": "role:elder_keeper",
@@ -137,6 +143,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "records",
+   "niche": "sensing",
+   "niche_edge": 3.3,
+   "kit": "combat:ally.elder_keeper",
    "first": "beta1",
    "levels": {
     "academy": 38,
@@ -144,7 +153,10 @@
     "exams": 38
    },
    "story": true,
-   "group": "circle"
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.elder_keeper.gone"
+   }
   },
   {
    "role": "role:elder_councillor",
@@ -159,6 +171,9 @@
    "clan": "senju",
    "clan_power": "great",
    "specialty": "ninjutsu",
+   "niche": "ninjutsu",
+   "niche_edge": 3.2,
+   "kit": "combat:ally.elder_councillor",
    "first": "beta1",
    "levels": {
     "academy": 36,
@@ -166,7 +181,10 @@
     "exams": 36
    },
    "story": true,
-   "group": "circle"
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.elder_councillor.gone"
+   }
   },
   {
    "role": "role:elder_hyuga",
@@ -181,6 +199,9 @@
    "clan": "hyuga",
    "clan_power": "great",
    "specialty": "taijutsu (gentle fist)",
+   "niche": "taijutsu",
+   "niche_edge": 3.2,
+   "kit": "combat:ally.elder_hyuga",
    "first": "beta1",
    "levels": {
     "academy": 37,
@@ -188,7 +209,10 @@
     "exams": 37
    },
    "story": true,
-   "group": "circle"
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.elder_hyuga.gone"
+   }
   },
   {
    "role": "role:anbu_cat",
@@ -203,6 +227,9 @@
    "clan": "unknown",
    "clan_power": "unknown",
    "specialty": "kenjutsu",
+   "niche": "weapons",
+   "niche_edge": 3.0,
+   "kit": "combat:ally.anbu_cat",
    "first": "beta1",
    "levels": {
     "academy": 34,
@@ -215,7 +242,10 @@
    "job": "anbu",
    "showcase": [
     "ch1.residence_roof"
-   ]
+   ],
+   "leaves_on": {
+    "flag": "world.roster.anbu_cat.gone"
+   }
   },
   {
    "role": "role:anbu_hawk",
@@ -230,6 +260,9 @@
    "clan": "unknown",
    "clan_power": "unknown",
    "specialty": "sensing",
+   "niche": "sensing",
+   "niche_edge": 3.0,
+   "kit": "combat:ally.anbu_hawk",
    "first": "beta2",
    "levels": {
     "academy": 33,
@@ -239,7 +272,10 @@
    "masked": true,
    "group": "anbu",
    "look": "anbu_hawk",
-   "job": "anbu"
+   "job": "anbu",
+   "leaves_on": {
+    "flag": "world.roster.anbu_hawk.gone"
+   }
   },
   {
    "role": "role:sensei",
@@ -254,6 +290,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "ninjutsu",
+   "niche": "ninjutsu",
+   "niche_edge": 3.6,
+   "kit": "combat:ally.sensei",
    "first": "beta1",
    "levels": {
     "academy": 44,
@@ -265,9 +304,11 @@
    "leads": "squad_1",
    "showcase": [
     "ch0.rescue",
-    "ch8.bells",
-    "ch10.spar_with_sensei_2"
-   ]
+    "ch8.bells"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.sensei.gone"
+   }
   },
   {
    "role": "role:sensei_2",
@@ -282,6 +323,9 @@
    "clan": "shiranui",
    "clan_power": "minor",
    "specialty": "tools (senbon)",
+   "niche": "weapons",
+   "niche_edge": 3.6,
+   "kit": "combat:ally.sensei_2",
    "first": "beta2",
    "levels": {
     "academy": 43,
@@ -292,8 +336,11 @@
    "group": "senseis",
    "leads": "squad_2",
    "showcase": [
-    "ch10.spar_with_sensei_2"
-   ]
+    "ch10.senbon_rings"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.sensei_2.gone"
+   }
   },
   {
    "role": "role:sensei_3",
@@ -308,6 +355,9 @@
    "clan": "yuhi",
    "clan_power": "strong",
    "specialty": "genjutsu",
+   "niche": "genjutsu",
+   "niche_edge": 3.3,
+   "kit": "combat:ally.sensei_3",
    "first": "beta2",
    "levels": {
     "academy": 39,
@@ -317,7 +367,10 @@
    "story": true,
    "group": "senseis",
    "leads": "squad_3",
-   "look": "jonin_kunoichi"
+   "look": "jonin_kunoichi",
+   "leaves_on": {
+    "flag": "world.roster.sensei_3.gone"
+   }
   },
   {
    "role": "role:sensei_4",
@@ -332,6 +385,9 @@
    "clan": "morino",
    "clan_power": "minor",
    "specialty": "interrogation",
+   "niche": "genjutsu",
+   "niche_edge": 3.2,
+   "kit": "combat:ally.sensei_4",
    "first": "beta2",
    "levels": {
     "academy": 37,
@@ -340,7 +396,10 @@
    },
    "story": true,
    "group": "senseis",
-   "leads": "squad_4"
+   "leads": "squad_4",
+   "leaves_on": {
+    "flag": "world.roster.sensei_4.gone"
+   }
   },
   {
    "role": "role:sensei_5",
@@ -355,6 +414,9 @@
    "clan": "uzumaki",
    "clan_power": "great",
    "specialty": "sealing",
+   "niche": "ninjutsu",
+   "niche_edge": 3.4,
+   "kit": "combat:ally.sensei_5",
    "first": "beta1",
    "levels": {
     "academy": 40,
@@ -363,7 +425,10 @@
    },
    "story": true,
    "group": "senseis",
-   "leads": "squad_5"
+   "leads": "squad_5",
+   "leaves_on": {
+    "flag": "world.roster.sensei_5.gone"
+   }
   },
   {
    "role": "role:teammate_a",
@@ -378,19 +443,25 @@
    "clan": "kurama",
    "clan_power": "strong",
    "specialty": "genjutsu (a painter)",
+   "niche": "genjutsu",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.teammate_a",
    "first": "beta1",
    "levels": {
     "academy": 5,
-    "genin": 14,
-    "exams": 17,
-    "chunin": 29,
-    "jonin": 40,
-    "road": 48
+    "genin": 15,
+    "exams": 18,
+    "chunin": 30,
+    "jonin": 41,
+    "road": 49
    },
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_1"
+   "squad": "squad_1",
+   "leaves_on": {
+    "flag": "world.roster.teammate_a.gone"
+   }
   },
   {
    "role": "role:teammate_b",
@@ -405,19 +476,25 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "taijutsu, with a stray pup",
+   "niche": "taijutsu",
+   "niche_edge": 2.0,
+   "kit": "combat:ally.teammate_b",
    "first": "beta1",
    "levels": {
     "academy": 5,
     "genin": 14,
-    "exams": 18,
+    "exams": 17,
     "chunin": 29,
-    "jonin": 41,
+    "jonin": 40,
     "road": 48
    },
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_1"
+   "squad": "squad_1",
+   "leaves_on": {
+    "flag": "world.roster.teammate_b.gone"
+   }
   },
   {
    "role": "role:rival",
@@ -432,6 +509,9 @@
    "clan": "uchiha",
    "clan_power": "great",
    "specialty": "ninjutsu (fire)",
+   "niche": "ninjutsu",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.rival",
    "first": "beta1",
    "levels": {
     "academy": 5,
@@ -444,7 +524,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_2"
+   "squad": "squad_2",
+   "leaves_on": {
+    "flag": "world.roster.rival.gone"
+   }
   },
   {
    "role": "role:classmate_c",
@@ -454,11 +537,14 @@
    "family": "Kinoshita",
    "rank": "academy",
    "tier": "E",
-   "importance": "story-driving",
+   "importance": "fan-favourite",
    "spotlight": "named",
    "clan": "kinoshita",
    "clan_power": "minor",
    "specialty": "traps and earth",
+   "niche": "weapons",
+   "niche_edge": 2.0,
+   "kit": "combat:ally.classmate_c",
    "first": "beta1",
    "levels": {
     "academy": 5,
@@ -471,7 +557,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_2"
+   "squad": "squad_2",
+   "leaves_on": {
+    "flag": "world.roster.classmate_c.gone"
+   }
   },
   {
    "role": "role:classmate_d",
@@ -481,11 +570,14 @@
    "family": "Gekko",
    "rank": "academy",
    "tier": "E",
-   "importance": "story-driving",
+   "importance": "fan-favourite",
    "spotlight": "named",
    "clan": "gekko",
    "clan_power": "strong",
    "specialty": "kenjutsu",
+   "niche": "weapons",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.classmate_d",
    "first": "beta1",
    "levels": {
     "academy": 5,
@@ -498,7 +590,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_2"
+   "squad": "squad_2",
+   "leaves_on": {
+    "flag": "world.roster.classmate_d.gone"
+   }
   },
   {
    "role": "role:squad3_a",
@@ -513,6 +608,9 @@
    "clan": "nara",
    "clan_power": "strong",
    "specialty": "strategy (shadows)",
+   "niche": "ninjutsu",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.squad3_a",
    "first": "beta1",
    "levels": {
     "academy": 5,
@@ -525,7 +623,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_3"
+   "squad": "squad_3",
+   "leaves_on": {
+    "flag": "world.roster.squad3_a.gone"
+   }
   },
   {
    "role": "role:squad3_b",
@@ -540,6 +641,9 @@
    "clan": "akimichi",
    "clan_power": "strong",
    "specialty": "taijutsu (expansion); cooks",
+   "niche": "taijutsu",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.squad3_b",
    "first": "beta1",
    "levels": {
     "academy": 5,
@@ -553,7 +657,10 @@
    "story": true,
    "group": "class",
    "squad": "squad_3",
-   "notes": "the Hokage's grandson"
+   "notes": "the Hokage's grandson",
+   "leaves_on": {
+    "flag": "world.roster.squad3_b.gone"
+   }
   },
   {
    "role": "role:squad3_c",
@@ -568,6 +675,9 @@
    "clan": "yamanaka",
    "clan_power": "strong",
    "specialty": "sensing (mind)",
+   "niche": "sensing",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.squad3_c",
    "first": "beta1",
    "levels": {
     "academy": 5,
@@ -580,7 +690,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_3"
+   "squad": "squad_3",
+   "leaves_on": {
+    "flag": "world.roster.squad3_c.gone"
+   }
   },
   {
    "role": "role:squad4_a",
@@ -595,6 +708,9 @@
    "clan": "hyuga",
    "clan_power": "great",
    "specialty": "taijutsu (gentle fist, Byakugan)",
+   "niche": "taijutsu",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.squad4_a",
    "first": "beta1",
    "levels": {
     "academy": 5,
@@ -608,7 +724,10 @@
    "story": true,
    "group": "class",
    "squad": "squad_4",
-   "notes": "the Hyuga main house's heir"
+   "notes": "the Hyuga main house's heir",
+   "leaves_on": {
+    "flag": "world.roster.squad4_a.gone"
+   }
   },
   {
    "role": "role:squad4_b",
@@ -618,11 +737,14 @@
    "family": "Inuzuka",
    "rank": "academy",
    "tier": "E",
-   "importance": "story-driving",
+   "importance": "fan-favourite",
    "spotlight": "named",
    "clan": "inuzuka",
    "clan_power": "strong",
    "specialty": "tracking, with a very large ninken",
+   "niche": "sensing",
+   "niche_edge": 2.0,
+   "kit": "combat:ally.squad4_b",
    "first": "beta1",
    "levels": {
     "academy": 5,
@@ -635,7 +757,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_4"
+   "squad": "squad_4",
+   "leaves_on": {
+    "flag": "world.roster.squad4_b.gone"
+   }
   },
   {
    "role": "role:squad4_c",
@@ -650,6 +775,9 @@
    "clan": "suzuran",
    "clan_power": "minor",
    "specialty": "medical (herbs)",
+   "niche": "medical",
+   "niche_edge": 2.0,
+   "kit": "combat:ally.squad4_c",
    "first": "beta1",
    "levels": {
     "academy": 5,
@@ -662,7 +790,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_4"
+   "squad": "squad_4",
+   "leaves_on": {
+    "flag": "world.roster.squad4_c.gone"
+   }
   },
   {
    "role": "role:squad5_a",
@@ -677,6 +808,9 @@
    "clan": "sarutobi",
    "clan_power": "strong",
    "specialty": "taijutsu (staff)",
+   "niche": "taijutsu",
+   "niche_edge": 2.3,
+   "kit": "combat:ally.squad5_a",
    "first": "beta1",
    "levels": {
     "academy": 12,
@@ -689,7 +823,10 @@
    "grows": true,
    "story": true,
    "group": "seniors",
-   "squad": "squad_5"
+   "squad": "squad_5",
+   "leaves_on": {
+    "flag": "world.roster.squad5_a.gone"
+   }
   },
   {
    "role": "role:squad5_b",
@@ -704,6 +841,9 @@
    "clan": "tobari",
    "clan_power": "minor",
    "specialty": "sensing (night scout)",
+   "niche": "sensing",
+   "niche_edge": 2.3,
+   "kit": "combat:ally.squad5_b",
    "first": "beta1",
    "levels": {
     "academy": 12,
@@ -716,7 +856,10 @@
    "grows": true,
    "story": true,
    "group": "seniors",
-   "squad": "squad_5"
+   "squad": "squad_5",
+   "leaves_on": {
+    "flag": "world.roster.squad5_b.gone"
+   }
   },
   {
    "role": "role:squad5_c",
@@ -731,6 +874,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "taijutsu (outworks everyone)",
+   "niche": "taijutsu",
+   "niche_edge": 2.4,
+   "kit": "combat:ally.squad5_c",
    "first": "beta1",
    "levels": {
     "academy": 13,
@@ -744,11 +890,13 @@
    "story": true,
    "group": "seniors",
    "squad": "squad_5",
-   "look": "green_beast"
+   "leaves_on": {
+    "flag": "world.roster.squad5_c.gone"
+   }
   },
   {
-   "role": "role:taijutsu_master",
-   "name": "{name:role:taijutsu_master}",
+   "role": "role:kenjutsu_instructor",
+   "name": "{name:role:kenjutsu_instructor}",
    "placeholder": "Tora Matsuda (no clan)",
    "given": "Tora",
    "family": "Matsuda",
@@ -758,7 +906,10 @@
    "spotlight": "pillar",
    "clan": "none",
    "clan_power": "clanless",
-   "specialty": "taijutsu",
+   "specialty": "kenjutsu",
+   "niche": "weapons",
+   "niche_edge": 3.7,
+   "kit": "combat:ally.kenjutsu_instructor",
    "first": "beta1",
    "levels": {
     "academy": 45,
@@ -769,10 +920,13 @@
    "provisional": true,
    "look": "jonin_sentinel",
    "showcase": [
-    "ch2.yard_demo",
-    "ch18.training_break"
+    "ch2.sword_drills"
    ],
-   "where": "training_grounds"
+   "where": "academy",
+   "notes": "runs the Academy's sword drills for every class",
+   "leaves_on": {
+    "flag": "world.roster.kenjutsu_instructor.gone"
+   }
   },
   {
    "role": "role:elite_scout",
@@ -787,6 +941,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "kenjutsu",
+   "niche": "weapons",
+   "niche_edge": 3.6,
+   "kit": "combat:ally.elite_scout",
    "first": "beta2",
    "levels": {
     "academy": 43,
@@ -798,7 +955,10 @@
    "look": "jonin_field",
    "showcase": [
     "ch11.east_road"
-   ]
+   ],
+   "leaves_on": {
+    "flag": "world.roster.elite_scout.gone"
+   }
   },
   {
    "role": "role:legend_veteran",
@@ -813,6 +973,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "ninjutsu (fire)",
+   "niche": "ninjutsu",
+   "niche_edge": 3.6,
+   "kit": "combat:ally.legend_veteran",
    "first": "beta2",
    "levels": {
     "academy": 44,
@@ -824,7 +987,10 @@
    "where": "scroll_shop",
    "showcase": [
     "ch12.scroll_shop"
-   ]
+   ],
+   "leaves_on": {
+    "flag": "world.roster.legend_veteran.gone"
+   }
   },
   {
    "role": "role:legend_wanderer",
@@ -839,6 +1005,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "ninjutsu",
+   "niche": "ninjutsu",
+   "niche_edge": 4.3,
+   "kit": "combat:ally.legend_wanderer",
    "first": "spoken",
    "levels": {
     "academy": 55,
@@ -848,7 +1017,10 @@
    "group": "elite",
    "provisional": true,
    "on_map": false,
-   "notes": "away on a long mission for the whole beta; spoken of at the standby station and in letters"
+   "notes": "away on a long mission for the whole beta; spoken of at the standby station and in letters",
+   "leaves_on": {
+    "flag": "world.roster.legend_wanderer.gone"
+   }
   },
   {
    "role": "role:instructor",
@@ -863,6 +1035,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "ninjutsu (teaching)",
+   "niche": "ninjutsu",
+   "niche_edge": 2.4,
+   "kit": "combat:ally.instructor",
    "first": "beta1",
    "levels": {
     "academy": 24,
@@ -871,7 +1046,10 @@
    },
    "story": true,
    "group": "academy",
-   "job": "academy_teacher"
+   "job": "academy_teacher",
+   "leaves_on": {
+    "flag": "world.roster.instructor.gone"
+   }
   },
   {
    "role": "role:instructor_2",
@@ -886,6 +1064,9 @@
    "clan": "umino",
    "clan_power": "minor",
    "specialty": "tools (throwing)",
+   "niche": "weapons",
+   "niche_edge": 2.3,
+   "kit": "combat:ally.instructor_2",
    "first": "beta1",
    "levels": {
     "academy": 22,
@@ -894,7 +1075,10 @@
    },
    "group": "academy",
    "provisional": true,
-   "job": "academy_teacher"
+   "job": "academy_teacher",
+   "leaves_on": {
+    "flag": "world.roster.instructor_2.gone"
+   }
   },
   {
    "role": "role:instructor_3",
@@ -909,6 +1093,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "chakra control",
+   "niche": "ninjutsu",
+   "niche_edge": 2.2,
+   "kit": "combat:ally.instructor_3",
    "first": "beta1",
    "levels": {
     "academy": 20,
@@ -917,7 +1104,10 @@
    },
    "group": "academy",
    "provisional": true,
-   "job": "academy_teacher"
+   "job": "academy_teacher",
+   "leaves_on": {
+    "flag": "world.roster.instructor_3.gone"
+   }
   },
   {
    "role": "role:headmaster",
@@ -932,6 +1122,9 @@
    "clan": "umino",
    "clan_power": "minor",
    "specialty": "teaching",
+   "niche": "ninjutsu",
+   "niche_edge": 3.0,
+   "kit": "combat:ally.headmaster",
    "first": "beta1",
    "levels": {
     "academy": 34,
@@ -939,21 +1132,27 @@
     "exams": 34
    },
    "group": "academy",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.headmaster.gone"
+   }
   },
   {
    "role": "role:proctor_written",
    "name": "{name:role:proctor_written}",
-   "placeholder": "Kiyoshi Morino",
+   "placeholder": "Kiyoshi Goto (no clan)",
    "given": "Kiyoshi",
-   "family": "Morino",
+   "family": "Goto",
    "rank": "special_jonin",
    "tier": "B",
    "importance": "fan-favourite",
    "spotlight": "named",
-   "clan": "morino",
-   "clan_power": "minor",
+   "clan": "none",
+   "clan_power": "clanless",
    "specialty": "interrogation",
+   "niche": "genjutsu",
+   "niche_edge": 3.0,
+   "kit": "combat:ally.proctor_written",
    "first": "beta3",
    "levels": {
     "academy": 33,
@@ -962,7 +1161,10 @@
    },
    "group": "exams",
    "provisional": true,
-   "where": "exam_hall"
+   "where": "exam_hall",
+   "leaves_on": {
+    "flag": "world.roster.proctor_written.gone"
+   }
   },
   {
    "role": "role:proctor_forest",
@@ -977,6 +1179,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "survival",
+   "niche": "sensing",
+   "niche_edge": 3.2,
+   "kit": "combat:ally.proctor_forest",
    "first": "beta3",
    "levels": {
     "academy": 36,
@@ -985,7 +1190,10 @@
    },
    "group": "exams",
    "provisional": true,
-   "where": "forest_of_death"
+   "where": "forest_of_death",
+   "leaves_on": {
+    "flag": "world.roster.proctor_forest.gone"
+   }
   },
   {
    "role": "role:proctor_finals",
@@ -1000,6 +1208,9 @@
    "clan": "gekko",
    "clan_power": "strong",
    "specialty": "kenjutsu",
+   "niche": "weapons",
+   "niche_edge": 3.0,
+   "kit": "combat:ally.proctor_finals",
    "first": "beta3",
    "levels": {
     "academy": 34,
@@ -1008,7 +1219,10 @@
    },
    "group": "exams",
    "provisional": true,
-   "where": "stadium"
+   "where": "stadium",
+   "leaves_on": {
+    "flag": "world.roster.proctor_finals.gone"
+   }
   },
   {
    "role": "role:desk_chunin_1",
@@ -1023,6 +1237,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "administration",
+   "niche": "sensing",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.desk_chunin_1",
    "first": "beta2",
    "levels": {
     "academy": 19,
@@ -1031,7 +1248,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "mission_desk"
+   "job": "mission_desk",
+   "leaves_on": {
+    "flag": "world.roster.desk_chunin_1.gone"
+   }
   },
   {
    "role": "role:desk_chunin_2",
@@ -1046,6 +1266,9 @@
    "clan": "namiashi",
    "clan_power": "minor",
    "specialty": "administration",
+   "niche": "sensing",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.desk_chunin_2",
    "first": "beta2",
    "levels": {
     "academy": 18,
@@ -1054,7 +1277,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "mission_desk"
+   "job": "mission_desk",
+   "leaves_on": {
+    "flag": "world.roster.desk_chunin_2.gone"
+   }
   },
   {
    "role": "role:gate_guard_1",
@@ -1069,6 +1295,9 @@
    "clan": "hagane",
    "clan_power": "minor",
    "specialty": "tools (mace)",
+   "niche": "weapons",
+   "niche_edge": 2.2,
+   "kit": "combat:ally.gate_guard_1",
    "first": "beta1",
    "levels": {
     "academy": 20,
@@ -1077,7 +1306,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "gate_guard"
+   "job": "gate_guard",
+   "leaves_on": {
+    "flag": "world.roster.gate_guard_1.gone"
+   }
   },
   {
    "role": "role:gate_guard_2",
@@ -1092,6 +1324,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "taijutsu",
+   "niche": "taijutsu",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.gate_guard_2",
    "first": "beta1",
    "levels": {
     "academy": 19,
@@ -1100,7 +1335,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "gate_guard"
+   "job": "gate_guard",
+   "leaves_on": {
+    "flag": "world.roster.gate_guard_2.gone"
+   }
   },
   {
    "role": "role:night_watch",
@@ -1115,6 +1353,9 @@
    "clan": "tobari",
    "clan_power": "minor",
    "specialty": "sensing (sound)",
+   "niche": "sensing",
+   "niche_edge": 2.4,
+   "kit": "combat:ally.night_watch",
    "first": "beta1",
    "levels": {
     "academy": 23,
@@ -1123,7 +1364,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "wall_watch"
+   "job": "wall_watch",
+   "leaves_on": {
+    "flag": "world.roster.night_watch.gone"
+   }
   },
   {
    "role": "role:police_chief",
@@ -1138,6 +1382,9 @@
    "clan": "uchiha",
    "clan_power": "great",
    "specialty": "ninjutsu (fire)",
+   "niche": "ninjutsu",
+   "niche_edge": 3.3,
+   "kit": "combat:ally.police_chief",
    "first": "beta2",
    "levels": {
     "academy": 39,
@@ -1148,8 +1395,11 @@
    "provisional": true,
    "job": "police",
    "also": [
-    "role:clan_head.uchiha"
-   ]
+    "role:head_uchiha"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.police_chief.gone"
+   }
   },
   {
    "role": "role:police_officer",
@@ -1164,6 +1414,9 @@
    "clan": "uchiha",
    "clan_power": "great",
    "specialty": "taijutsu",
+   "niche": "taijutsu",
+   "niche_edge": 2.3,
+   "kit": "combat:ally.police_officer",
    "first": "beta2",
    "levels": {
     "academy": 21,
@@ -1172,7 +1425,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "police"
+   "job": "police",
+   "leaves_on": {
+    "flag": "world.roster.police_officer.gone"
+   }
   },
   {
    "role": "role:medic",
@@ -1187,6 +1443,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "medical",
+   "niche": "medical",
+   "niche_edge": 2.3,
+   "kit": "combat:ally.medic",
    "first": "beta1",
    "levels": {
     "academy": 21,
@@ -1195,7 +1454,10 @@
    },
    "story": true,
    "group": "duty",
-   "job": "medic"
+   "job": "medic",
+   "leaves_on": {
+    "flag": "world.roster.medic.gone"
+   }
   },
   {
    "role": "role:hospital_head",
@@ -1210,6 +1472,9 @@
    "clan": "suzuran",
    "clan_power": "minor",
    "specialty": "medical",
+   "niche": "medical",
+   "niche_edge": 3.1,
+   "kit": "combat:ally.hospital_head",
    "first": "beta1",
    "levels": {
     "academy": 35,
@@ -1220,8 +1485,11 @@
    "provisional": true,
    "job": "medic",
    "also": [
-    "role:clan_head.suzuran"
-   ]
+    "role:head_suzuran"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.hospital_head.gone"
+   }
   },
   {
    "role": "role:standby_jonin_1",
@@ -1236,6 +1504,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "ninjutsu (earth)",
+   "niche": "ninjutsu",
+   "niche_edge": 3.0,
+   "kit": "combat:ally.standby_jonin_1",
    "first": "beta2",
    "levels": {
     "academy": 33,
@@ -1244,7 +1515,10 @@
    },
    "group": "standby",
    "provisional": true,
-   "job": "jonin_standby"
+   "job": "jonin_standby",
+   "leaves_on": {
+    "flag": "world.roster.standby_jonin_1.gone"
+   }
   },
   {
    "role": "role:standby_jonin_2",
@@ -1259,6 +1533,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "ninjutsu (water)",
+   "niche": "ninjutsu",
+   "niche_edge": 2.9,
+   "kit": "combat:ally.standby_jonin_2",
    "first": "beta2",
    "levels": {
     "academy": 32,
@@ -1267,7 +1544,10 @@
    },
    "group": "standby",
    "provisional": true,
-   "job": "jonin_standby"
+   "job": "jonin_standby",
+   "leaves_on": {
+    "flag": "world.roster.standby_jonin_2.gone"
+   }
   },
   {
    "role": "role:standby_jonin_3",
@@ -1282,6 +1562,9 @@
    "clan": "none",
    "clan_power": "clanless",
    "specialty": "genjutsu",
+   "niche": "genjutsu",
+   "niche_edge": 2.9,
+   "kit": "combat:ally.standby_jonin_3",
    "first": "beta2",
    "levels": {
     "academy": 31,
@@ -1290,11 +1573,156 @@
    },
    "group": "standby",
    "provisional": true,
-   "job": "jonin_standby"
+   "job": "jonin_standby",
+   "leaves_on": {
+    "flag": "world.roster.standby_jonin_3.gone"
+   }
   },
   {
-   "role": "role:clan_head.nara",
-   "name": "{name:role:clan_head.nara}",
+   "role": "role:head_senju",
+   "name": "{name:role:head_senju}",
+   "placeholder": "Mokuren Senju",
+   "given": "Mokuren",
+   "family": "Senju",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "senju",
+   "clan_power": "great",
+   "specialty": "ninjutsu (wood)",
+   "niche": "ninjutsu",
+   "niche_edge": 3.2,
+   "kit": "combat:ally.head_senju",
+   "first": "beta2",
+   "levels": {
+    "academy": 36,
+    "genin": 36,
+    "exams": 36
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_senju.gone"
+   }
+  },
+  {
+   "role": "role:head_hyuga",
+   "name": "{name:role:head_hyuga}",
+   "placeholder": "Takeshi Hyuga",
+   "given": "Takeshi",
+   "family": "Hyuga",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "hyuga",
+   "clan_power": "great",
+   "specialty": "taijutsu (gentle fist)",
+   "niche": "taijutsu",
+   "niche_edge": 3.5,
+   "kit": "combat:ally.head_hyuga",
+   "first": "beta2",
+   "levels": {
+    "academy": 41,
+    "genin": 41,
+    "exams": 41
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "notes": "the main house; role:squad4_a's parent",
+   "leaves_on": {
+    "flag": "world.roster.head_hyuga.gone"
+   }
+  },
+  {
+   "role": "role:head_akimichi",
+   "name": "{name:role:head_akimichi}",
+   "placeholder": "Dai Akimichi",
+   "given": "Dai",
+   "family": "Akimichi",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "akimichi",
+   "clan_power": "strong",
+   "specialty": "taijutsu (expansion)",
+   "niche": "taijutsu",
+   "niche_edge": 3.3,
+   "kit": "combat:ally.head_akimichi",
+   "first": "beta2",
+   "levels": {
+    "academy": 38,
+    "genin": 38,
+    "exams": 38
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_akimichi.gone"
+   }
+  },
+  {
+   "role": "role:head_yamanaka",
+   "name": "{name:role:head_yamanaka}",
+   "placeholder": "Kaoru Yamanaka",
+   "given": "Kaoru",
+   "family": "Yamanaka",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "yamanaka",
+   "clan_power": "strong",
+   "specialty": "sensing (mind)",
+   "niche": "sensing",
+   "niche_edge": 3.2,
+   "kit": "combat:ally.head_yamanaka",
+   "first": "beta2",
+   "levels": {
+    "academy": 37,
+    "genin": 37,
+    "exams": 37
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "notes": "role:squad3_c's parent",
+   "leaves_on": {
+    "flag": "world.roster.head_yamanaka.gone"
+   }
+  },
+  {
+   "role": "role:head_uzumaki",
+   "name": "{name:role:head_uzumaki}",
+   "placeholder": "Kenshin Uzumaki",
+   "given": "Kenshin",
+   "family": "Uzumaki",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "uzumaki",
+   "clan_power": "great",
+   "specialty": "sealing",
+   "niche": "ninjutsu",
+   "niche_edge": 3.0,
+   "kit": "combat:ally.head_uzumaki",
+   "first": "beta2",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_uzumaki.gone"
+   }
+  },
+  {
+   "role": "role:head_nara",
+   "name": "{name:role:head_nara}",
    "placeholder": "Shikou Nara",
    "given": "Shikou",
    "family": "Nara",
@@ -1305,6 +1733,9 @@
    "clan": "nara",
    "clan_power": "strong",
    "specialty": "strategy (shadows)",
+   "niche": "ninjutsu",
+   "niche_edge": 3.5,
+   "kit": "combat:ally.head_nara",
    "first": "beta2",
    "levels": {
     "academy": 41,
@@ -1312,11 +1743,14 @@
     "exams": 41
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_nara.gone"
+   }
   },
   {
-   "role": "role:clan_head.inuzuka",
-   "name": "{name:role:clan_head.inuzuka}",
+   "role": "role:head_inuzuka",
+   "name": "{name:role:head_inuzuka}",
    "placeholder": "Hayabusa Inuzuka",
    "given": "Hayabusa",
    "family": "Inuzuka",
@@ -1327,6 +1761,9 @@
    "clan": "inuzuka",
    "clan_power": "strong",
    "specialty": "tracking, with ninken",
+   "niche": "sensing",
+   "niche_edge": 3.2,
+   "kit": "combat:ally.head_inuzuka",
    "first": "beta2",
    "levels": {
     "academy": 36,
@@ -1334,11 +1771,14 @@
     "exams": 36
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_inuzuka.gone"
+   }
   },
   {
-   "role": "role:clan_head.sarutobi",
-   "name": "{name:role:clan_head.sarutobi}",
+   "role": "role:head_sarutobi",
+   "name": "{name:role:head_sarutobi}",
    "placeholder": "Enzo Sarutobi",
    "given": "Enzo",
    "family": "Sarutobi",
@@ -1349,6 +1789,9 @@
    "clan": "sarutobi",
    "clan_power": "strong",
    "specialty": "ninjutsu (fire)",
+   "niche": "ninjutsu",
+   "niche_edge": 3.1,
+   "kit": "combat:ally.head_sarutobi",
    "first": "beta2.5",
    "levels": {
     "academy": 35,
@@ -1356,11 +1799,14 @@
     "exams": 35
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_sarutobi.gone"
+   }
   },
   {
-   "role": "role:clan_head.aburame",
-   "name": "{name:role:clan_head.aburame}",
+   "role": "role:head_aburame",
+   "name": "{name:role:head_aburame}",
    "placeholder": "Mushi Aburame",
    "given": "Mushi",
    "family": "Aburame",
@@ -1371,6 +1817,9 @@
    "clan": "aburame",
    "clan_power": "strong",
    "specialty": "tracking (insects)",
+   "niche": "sensing",
+   "niche_edge": 3.1,
+   "kit": "combat:ally.head_aburame",
    "first": "beta2.5",
    "levels": {
     "academy": 35,
@@ -1378,11 +1827,14 @@
     "exams": 35
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_aburame.gone"
+   }
   },
   {
-   "role": "role:clan_head.kurama",
-   "name": "{name:role:clan_head.kurama}",
+   "role": "role:head_kurama",
+   "name": "{name:role:head_kurama}",
    "placeholder": "Utsuro Kurama",
    "given": "Utsuro",
    "family": "Kurama",
@@ -1393,6 +1845,9 @@
    "clan": "kurama",
    "clan_power": "strong",
    "specialty": "genjutsu",
+   "niche": "genjutsu",
+   "niche_edge": 2.8,
+   "kit": "combat:ally.head_kurama",
    "first": "beta2.5",
    "levels": {
     "academy": 30,
@@ -1400,11 +1855,14 @@
     "exams": 30
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_kurama.gone"
+   }
   },
   {
-   "role": "role:clan_head.shimura",
-   "name": "{name:role:clan_head.shimura}",
+   "role": "role:head_shimura",
+   "name": "{name:role:head_shimura}",
    "placeholder": "Gonzo Shimura",
    "given": "Gonzo",
    "family": "Shimura",
@@ -1415,6 +1873,9 @@
    "clan": "shimura",
    "clan_power": "strong",
    "specialty": "ninjutsu (wind)",
+   "niche": "ninjutsu",
+   "niche_edge": 2.9,
+   "kit": "combat:ally.head_shimura",
    "first": "beta2.5",
    "levels": {
     "academy": 32,
@@ -1422,11 +1883,14 @@
     "exams": 32
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_shimura.gone"
+   }
   },
   {
-   "role": "role:clan_head.yuhi",
-   "name": "{name:role:clan_head.yuhi}",
+   "role": "role:head_yuhi",
+   "name": "{name:role:head_yuhi}",
    "placeholder": "Kaede Yuhi",
    "given": "Kaede",
    "family": "Yuhi",
@@ -1437,6 +1901,9 @@
    "clan": "yuhi",
    "clan_power": "strong",
    "specialty": "genjutsu",
+   "niche": "genjutsu",
+   "niche_edge": 3.0,
+   "kit": "combat:ally.head_yuhi",
    "first": "beta2.5",
    "levels": {
     "academy": 34,
@@ -1444,11 +1911,14 @@
     "exams": 34
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_yuhi.gone"
+   }
   },
   {
-   "role": "role:clan_head.gekko",
-   "name": "{name:role:clan_head.gekko}",
+   "role": "role:head_gekko",
+   "name": "{name:role:head_gekko}",
    "placeholder": "Tsukiko Gekko",
    "given": "Tsukiko",
    "family": "Gekko",
@@ -1459,6 +1929,9 @@
    "clan": "gekko",
    "clan_power": "strong",
    "specialty": "kenjutsu",
+   "niche": "weapons",
+   "niche_edge": 3.0,
+   "kit": "combat:ally.head_gekko",
    "first": "beta2.5",
    "levels": {
     "academy": 33,
@@ -1466,11 +1939,14 @@
     "exams": 33
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_gekko.gone"
+   }
   },
   {
-   "role": "role:clan_head.shiranui",
-   "name": "{name:role:clan_head.shiranui}",
+   "role": "role:head_shiranui",
+   "name": "{name:role:head_shiranui}",
    "placeholder": "Senbei Shiranui",
    "given": "Senbei",
    "family": "Shiranui",
@@ -1481,6 +1957,9 @@
    "clan": "shiranui",
    "clan_power": "minor",
    "specialty": "tools (senbon)",
+   "niche": "weapons",
+   "niche_edge": 2.6,
+   "kit": "combat:ally.head_shiranui",
    "first": "beta2.5",
    "levels": {
     "academy": 26,
@@ -1488,11 +1967,14 @@
     "exams": 26
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_shiranui.gone"
+   }
   },
   {
-   "role": "role:clan_head.morino",
-   "name": "{name:role:clan_head.morino}",
+   "role": "role:head_morino",
+   "name": "{name:role:head_morino}",
    "placeholder": "Takumi Morino",
    "given": "Takumi",
    "family": "Morino",
@@ -1503,6 +1985,9 @@
    "clan": "morino",
    "clan_power": "minor",
    "specialty": "interrogation",
+   "niche": "genjutsu",
+   "niche_edge": 2.9,
+   "kit": "combat:ally.head_morino",
    "first": "beta2.5",
    "levels": {
     "academy": 32,
@@ -1510,11 +1995,14 @@
     "exams": 32
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_morino.gone"
+   }
   },
   {
-   "role": "role:clan_head.umino",
-   "name": "{name:role:clan_head.umino}",
+   "role": "role:head_umino",
+   "name": "{name:role:head_umino}",
    "placeholder": "Kazuo Umino",
    "given": "Kazuo",
    "family": "Umino",
@@ -1525,6 +2013,9 @@
    "clan": "umino",
    "clan_power": "minor",
    "specialty": "teaching",
+   "niche": "ninjutsu",
+   "niche_edge": 2.4,
+   "kit": "combat:ally.head_umino",
    "first": "beta2.5",
    "levels": {
     "academy": 24,
@@ -1532,11 +2023,14 @@
     "exams": 24
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_umino.gone"
+   }
   },
   {
-   "role": "role:clan_head.haruno",
-   "name": "{name:role:clan_head.haruno}",
+   "role": "role:head_haruno",
+   "name": "{name:role:head_haruno}",
    "placeholder": "Momoe Haruno",
    "given": "Momoe",
    "family": "Haruno",
@@ -1547,6 +2041,9 @@
    "clan": "haruno",
    "clan_power": "minor",
    "specialty": "chakra control",
+   "niche": "ninjutsu",
+   "niche_edge": 2.3,
+   "kit": "combat:ally.head_haruno",
    "first": "beta2.5",
    "levels": {
     "academy": 22,
@@ -1554,11 +2051,14 @@
     "exams": 22
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_haruno.gone"
+   }
   },
   {
-   "role": "role:clan_head.namiashi",
-   "name": "{name:role:clan_head.namiashi}",
+   "role": "role:head_namiashi",
+   "name": "{name:role:head_namiashi}",
    "placeholder": "Hayato Namiashi",
    "given": "Hayato",
    "family": "Namiashi",
@@ -1569,6 +2069,9 @@
    "clan": "namiashi",
    "clan_power": "minor",
    "specialty": "taijutsu (footwork)",
+   "niche": "taijutsu",
+   "niche_edge": 2.4,
+   "kit": "combat:ally.head_namiashi",
    "first": "beta2.5",
    "levels": {
     "academy": 23,
@@ -1576,11 +2079,14 @@
     "exams": 23
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_namiashi.gone"
+   }
   },
   {
-   "role": "role:clan_head.hagane",
-   "name": "{name:role:clan_head.hagane}",
+   "role": "role:head_hagane",
+   "name": "{name:role:head_hagane}",
    "placeholder": "Kurogane Hagane",
    "given": "Kurogane",
    "family": "Hagane",
@@ -1591,6 +2097,9 @@
    "clan": "hagane",
    "clan_power": "minor",
    "specialty": "tools (metalwork)",
+   "niche": "weapons",
+   "niche_edge": 2.3,
+   "kit": "combat:ally.head_hagane",
    "first": "beta2.5",
    "levels": {
     "academy": 22,
@@ -1598,11 +2107,14 @@
     "exams": 22
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_hagane.gone"
+   }
   },
   {
-   "role": "role:clan_head.kinoshita",
-   "name": "{name:role:clan_head.kinoshita}",
+   "role": "role:head_kinoshita",
+   "name": "{name:role:head_kinoshita}",
    "placeholder": "Mokuzo Kinoshita",
    "given": "Mokuzo",
    "family": "Kinoshita",
@@ -1613,6 +2125,9 @@
    "clan": "kinoshita",
    "clan_power": "minor",
    "specialty": "carpentry",
+   "niche": "weapons",
+   "niche_edge": 2.1,
+   "kit": "combat:ally.head_kinoshita",
    "first": "beta2.5",
    "levels": {
     "academy": 18,
@@ -1620,11 +2135,14 @@
     "exams": 18
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_kinoshita.gone"
+   }
   },
   {
-   "role": "role:clan_head.tsuchigumo",
-   "name": "{name:role:clan_head.tsuchigumo}",
+   "role": "role:head_tsuchigumo",
+   "name": "{name:role:head_tsuchigumo}",
    "placeholder": "Iwao Tsuchigumo",
    "given": "Iwao",
    "family": "Tsuchigumo",
@@ -1635,6 +2153,9 @@
    "clan": "tsuchigumo",
    "clan_power": "minor",
    "specialty": "ninjutsu (earth binding)",
+   "niche": "ninjutsu",
+   "niche_edge": 2.6,
+   "kit": "combat:ally.head_tsuchigumo",
    "first": "beta2.5",
    "levels": {
     "academy": 27,
@@ -1642,11 +2163,14 @@
     "exams": 27
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_tsuchigumo.gone"
+   }
   },
   {
-   "role": "role:clan_head.tobari",
-   "name": "{name:role:clan_head.tobari}",
+   "role": "role:head_tobari",
+   "name": "{name:role:head_tobari}",
    "placeholder": "Yoru Tobari",
    "given": "Yoru",
    "family": "Tobari",
@@ -1657,6 +2181,9 @@
    "clan": "tobari",
    "clan_power": "minor",
    "specialty": "sensing (sound)",
+   "niche": "sensing",
+   "niche_edge": 2.6,
+   "kit": "combat:ally.head_tobari",
    "first": "beta2.5",
    "levels": {
     "academy": 26,
@@ -1664,7 +2191,10 @@
     "exams": 26
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_tobari.gone"
+   }
   }
  ],
  "civilians": [
@@ -1678,7 +2208,10 @@
    "clan": "none",
    "first": "beta1",
    "story": true,
-   "where": "academy_library"
+   "where": "academy_library",
+   "leaves_on": {
+    "flag": "world.roster.librarian.gone"
+   }
   },
   {
    "role": "role:porter",
@@ -1690,7 +2223,10 @@
    "clan": "none",
    "first": "beta1",
    "story": true,
-   "where": "furniture_shop"
+   "where": "furniture_shop",
+   "leaves_on": {
+    "flag": "world.roster.porter.gone"
+   }
   },
   {
    "role": "role:merchant",
@@ -1702,7 +2238,10 @@
    "clan": "none",
    "first": "beta2",
    "story": true,
-   "where": "east_road"
+   "where": "east_road",
+   "leaves_on": {
+    "flag": "world.roster.merchant.gone"
+   }
   },
   {
    "role": "role:residence_clerk",
@@ -1714,7 +2253,10 @@
    "clan": "none",
    "first": "beta1",
    "provisional": true,
-   "where": "residence"
+   "where": "residence",
+   "leaves_on": {
+    "flag": "world.roster.residence_clerk.gone"
+   }
   }
  ]
 }

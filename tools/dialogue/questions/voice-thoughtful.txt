@@ -1,0 +1,76 @@
+# Questions only a thoughtful resident asks: why, what it means, what's worth knowing.
+# Axis poles: honesty_vs_kindness (1 honesty, -1 kindness), tradition_or_change (1 tradition, -1 change).
+#! tags: personality=thoughtful
+
+? q.values.thought_why_ninja | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Why do you think people become shinobi? Not you, just people.
+Q: I've been reading about the first shinobi. What draws people to the life, do you think?
+- To protect others :: The oldest reason, and still the best, I suspect. {values:+duty +loyalty} {tone:dutiful}
+- For glory :: Honest. The scrolls are full of people who wanted their names remembered. {values:+strength} {tone:blunt}
+- Their families expect it :: Yes. Tradition carries as many as ambition does. {values:+family} {tone:honest}
+- Because they can :: Ha. A talent wants using. There's something to that. {values:+freedom} {tone:curious}
+
+? q.values.thought_why_you | fn: deepen_bond reveal_character | kind: confession | level: 6 | follows: q.values.thought_why_ninja | depth: 2 | gap: 4
+Q: And you? Of all the reasons people become shinobi, which is truly yours?
+Q: I've wondered since we talked. Why did you choose this path?
+- To protect people :: Then you chose well. Protecting is a reason that doesn't wear out. {values:+duty +kindness} {tone:dutiful}
+- To matter to someone :: That's honest, and rather brave to say. You matter here already. {values:+honesty} {tone:gentle}
+- I'm not sure yet :: A good answer. The ones who are sure early often change their minds. {values:+honesty +knowledge} {tone:humble}
+
+? q.values.thought_always_know | fn: deepen_bond reveal_character | kind: opinion | level: 4 | axis: honesty_vs_kindness
+Q: Is it always better to know the truth than not to know?
+Q: A scroll I read argued that ignorance can be a mercy. Do you agree?
+- Always better to know :: I lean that way too. A painful truth at least stands still. {values:+honesty +knowledge} {tone:honest} {pole:1}
+- Not always :: Hm. Some truths only wound. I can't say you're wrong. {values:+kindness} {tone:gentle} {pole:-1}
+- Depends who's asking :: A careful answer. Truth needs a person ready to hold it. {values:+knowledge} {tone:cautious}
+
+? q.pref.thought_one_scroll | fn: deepen_bond reveal_character | level: 2
+Q: If you could keep only one scroll for the rest of your life, what kind would it be?
+Q: One scroll, forever. History, jutsu, stories, or something else?
+- A history :: Knowing where we came from. You'd never be bored. {values:+knowledge +family} {tone:curious}
+- A book of jutsu :: Practical. You'd be the most skilled hermit alive. {values:+strength} {tone:ambitious}
+- A book of stories :: A story you could read a hundred times. That's my choice too. {values:+creativity} {tone:gentle}
+- A blank one, to fill :: Oh, I like that. Your own scroll. Very wise. {values:+creativity +freedom} {tone:free}
+
+? q.values.thought_past_future | fn: deepen_bond reveal_character | kind: opinion | level: 3 | axis: tradition_or_change
+Q: Which matters more, do you think: the past or the future?
+Q: Should we look back to learn, or forward to build?
+- The past :: The past is the teacher, the future only the exam. Well put, if I say so myself. {values:+knowledge +family} {tone:humble} {pole:1}
+- The future :: The future is where we'll actually live. Fair. {values:+freedom +courage} {tone:bold} {pole:-1}
+- Only today :: Ha. The one day we're sure of. A philosopher's answer. {values:+freedom} {tone:curious}
+
+? q.values.thought_change_choice | fn: deepen_bond reveal_character | kind: confession | level: 6 | follows: q.values.thought_past_future | depth: 2
+Q: If you could go back and change one choice you've made, would you? Or would that make you someone else?
+Q: Would you undo a mistake, if it meant losing what it taught you?
+- I'd change it :: Even at the cost of the lesson. Some mistakes aren't worth their tuition. {values:+honesty} {tone:honest}
+- No, it made me :: Then you've made peace with it. That's rarer than wisdom. {values:+strength +knowledge} {tone:proud}
+- I'd have to think :: The only truly honest answer, perhaps. Take your time. {values:+knowledge} {tone:cautious}
+
+? q.dilemma.thought_wrong_scroll | fn: deepen_bond reveal_character | level: 2
+Q: You find a mistake in a library scroll. A wrong date. Do you correct it, or tell the librarian?
+Q: A scroll at the library has an error in it. What's the proper thing to do?
+- Tell the librarian :: Correct, and courteous. The librarian will remember you fondly. {values:+duty +honesty} {tone:dutiful}
+- Fix it myself :: Bold! Scholars have duelled over less. Mind your brushwork. {values:+knowledge +courage} {tone:bold}
+- Leave a note inside :: A note for the next reader. Gentle and clever. {values:+kindness +knowledge} {tone:gentle}
+
+? q.values.thought_quiet_people | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Do you think quiet people are underestimated?
+Q: The loudest voice in a room isn't always the wisest. Would you agree?
+- Yes, often :: I've found the same. Still water, as the saying goes. {values:+knowledge} {tone:honest}
+- No, they choose it :: Interesting. Quiet as a choice, not a lack. I'll think on that. {values:+freedom} {tone:curious}
+- Everyone is, somehow :: Ha. True. We all see each other through a keyhole. {values:+kindness} {tone:humble}
+
+? q.plans.thought_understand | fn: deepen_bond reveal_character | level: 4
+Q: What do you hope to understand by the time you're old?
+Q: If you could truly understand one thing in your life, what should it be?
+- People :: The hardest subject. No scroll covers it properly. {values:+kindness +knowledge} {tone:curious}
+- Chakra :: How it flows, why it works. The scroll keepers would hire you. {values:+knowledge} {tone:ambitious}
+- Myself :: The oldest question. Most of us run out of time on it. {values:+honesty} {tone:humble}
+- Everything :: Ha! Then you'd best start reading tonight. {values:+knowledge} {tone:joking}
+
+? q.plans.thought_how_learn | fn: deepen_bond reveal_character | level: 5 | follows: q.plans.thought_understand | depth: 2
+Q: And how will you go about understanding it?
+Q: Where would you even begin, learning something that big?
+- Ask questions :: The patient method. Ask, listen, ask again. {values:+knowledge +honesty} {tone:curious}
+- Read everything :: The library opens at eight. I'll introduce you to the good shelves. {values:+knowledge} {tone:dutiful}
+- Live and watch :: The slow way, and probably the truest. {values:+freedom} {tone:gentle}

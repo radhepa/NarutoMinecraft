@@ -1,0 +1,363 @@
+# More conversation topics, part A (LIFE_TOGETHER.md §6): food, training, a compliment, village news, their hobby,
+# about someone. A second line per personality, more general lines (all ages, then grown-ups only), and kids'
+# own lines. Disliked topics stay awkward: training (gentle), a compliment (reserved, pragmatic), village news
+# (reserved), about someone (stern).
+
+# == food ==========================================================================================
+## talk.food  fn=reveal_character
+Rice balls with salted plum inside. The sour makes my whole face scrunch up, and I love it.
+Hot roasted sweet potato from the cart by the gate. The paper bag's half the fun.
+Anything grilled on a stick. If it's on a stick, I'll try it.
+I could live on the miso ramen at Ichiraku. I might already be.
+Tamagoyaki, sweet, not salty. People fight about this. I'm right.
+Chestnuts in autumn. Burnt fingers every year and I never learn.
+Shaved ice with strawberry syrup. Summer isn't summer without it.
+Cold noodles on a hot day, with a lot of spring onion.
+Fresh tofu from the tofu maker by the canal. It's still warm in the morning.
+Taiyaki, filled right to the tail. The cheap stall skimps on the tail.
+Mochi at New Year. Toasted until it puffs up and cracks.
+Grilled corn with soy sauce at the festival. I always get it on my chin.
+## talk.food  stage=teen|adult  fn=reveal_character
+A good bowl of miso soup after a long shift. Simple as that.
+Pickles. My own. Three years in the cellar and they're finally right.
+Grilled eel with a cup of warm tea, by the river, when the work's done.
+Whatever my neighbour brings over in the evening. I never ask, I just eat.
+Salted salmon on rice. It's what I ate before every mission, and it's never failed me.
+
+## talk.food.warmhearted  stage=teen|adult  fn=reveal_character
+Hot pot. One big pot, everyone's chopsticks in it, nobody leaves hungry. That's food.
+## talk.food.thoughtful  fn=reveal_character
+I like food with a story. The baker's chestnut bread was a wedding gift once, did you know?
+## talk.food.playful  fn=reveal_character
+I invented a dango with a pickle in the middle. Nobody likes it. I like it out of spite.
+## talk.food.adventurous  fn=reveal_character
+I want to taste the sea. Not fish. The actual sea. People say it's salty. I want to check.
+## talk.food.meticulous  fn=reveal_character
+Rice should be washed three times, soaked for half an hour, and never, ever stirred.
+## talk.food.steadfast  fn=reveal_character
+Whatever's on the table, I'm grateful for it. Somebody worked to put it there.
+## talk.food.reserved  fn=reveal_character
+Plain rice. Quietly.
+## talk.food.imaginative  fn=reveal_character
+If I could eat a colour, I'd eat the pink of a sunset. It'd taste like peaches, I think.
+## talk.food.pragmatic  fn=reveal_character
+Rice keeps, beans keep, dried fish keeps. Anything that keeps is good food.
+## talk.food.curious  fn=reveal_character
+Why does bread rise? Why doesn't rice? I asked the baker and got flour on my nose.
+## talk.food.protective  fn=reveal_character
+Never eat the mushrooms in the forest unless someone who knows checks them. Promise me.
+## talk.food.gentle  fn=reveal_character
+I share my lunch with the birds by the canal. They like the crusts best.
+## talk.food.proud  fn=reveal_character
+I only eat at places worth eating at. Ichiraku passes. Barely.
+## talk.food.fiery  fn=reveal_character
+I once ate seven bowls of ramen in a row! The eighth beat me! I'll be back for it!
+## talk.food.shy  fn=reveal_character
+I like eating somewhere quiet. The bench by the willow. You could come, if you... if you want.
+## talk.food.stern  fn=reveal_character
+Eat slowly. Chew properly. Your body is a tool. Look after it.
+
+## talk.food  stage=child  fn=reveal_character
+I like the green dango best. The pink one tastes like the pink one's trying too hard.
+I traded my rice ball for a sweet bun at lunch. Best trade ever.
+My mum puts a little face on my rice with seaweed. Don't tell anyone.
+I ate a whole bag of roasted chestnuts and now my tummy hurts. Worth it.
+Have you tried the candy apples at the festival? You have to eat them fast or they get sticky.
+I don't like fish eyes. They look at you.
+
+# == training ======================================================================================
+## talk.training  fn=reveal_character
+I'm learning to throw with my weaker hand. It's humbling. Very humbling.
+I run the stairs up the Hokage Rock. All of them. Then I lie at the top for a while.
+Tree climbing without hands is harder than they make it look.
+I've been working on my balance on the fence posts by the river. I fall in a lot.
+Chakra control's my weak point. I can't keep a leaf on my forehead for more than a minute.
+My hand signs are getting faster. Still not fast enough to show off.
+I practise my throws at the old stump behind the Academy. It's full of holes now.
+Footwork, footwork, footwork. My teacher won't let me learn anything else till it's right.
+I did a hundred sit-ups this morning. Ninety of them were good ones.
+I've started training at dawn. The training grounds are empty and the air's cold.
+Water walking. I'm wet up to my knees most days.
+## talk.training  stage=teen|adult  fn=reveal_character
+I train before my shift. If I leave it till after, I never do it.
+My knees aren't what they were. I train smarter now, not harder.
+I've been drilling the new Genin on the posts. They remind me how bad I used to be.
+I keep up the old drills from my Academy days. Muscle remembers what the head forgets.
+
+## talk.training.warmhearted  fn=reveal_character
+I train with my little cousin. I let them win sometimes. They know, but they like it anyway.
+## talk.training.thoughtful  fn=reveal_character
+I read about a technique before I try it. Twice. Then I try it and it goes wrong anyway.
+## talk.training.playful  fn=reveal_character
+I turned kunai practice into a game. Hit the target, get a sweet. I'm getting very good. And full.
+## talk.training.adventurous  fn=reveal_character
+I train in the woods, not the grounds. Roots and rocks don't stand still like posts do.
+## talk.training.meticulous  fn=reveal_character
+I keep a training diary. Date, drill, count, weather. You'd be amazed what it shows.
+## talk.training.steadfast  fn=reveal_character
+Every day. Rain or snow. Missing one day makes missing the next one easy.
+## talk.training.reserved  fn=reveal_character
+Practise. Don't talk about practising.
+## talk.training.imaginative  fn=reveal_character
+I train to music in my head. Kicks on the drumbeat. My teacher says it shows, in a good way.
+## talk.training.pragmatic  fn=reveal_character
+Train what keeps you alive first. Running, hiding, climbing. Then the flashy things.
+## talk.training.curious  fn=reveal_character
+Did you know your feet stick better to bark than to stone when you mould chakra? I tested it.
+## talk.training.protective  fn=reveal_character
+I practise catching people when they fall. Someone always falls.
+## talk.training.gentle  fn=react
+I train because I should. I just... don't like to talk about hitting things. Sorry.
+## talk.training.proud  fn=reveal_character
+I set my targets further back than anyone else. If I'm going to miss, I'll miss something hard.
+## talk.training.fiery  fn=reveal_character
+I ran ten laps of the village yesterday! I'm doing eleven today! Then twelve! Forever!
+## talk.training.shy  fn=reveal_character
+I found a corner of Training Ground 3 behind the trees. Nobody goes there. It's my spot.
+## talk.training.stern  fn=reveal_character
+Basics. Every single day. Those who skip them are the ones who get hurt.
+
+## talk.training  stage=child  fn=reveal_character
+I can hit the target from five steps now! Last week it was three.
+I practised the clone sign until my fingers got stuck. Do you think fingers can get stuck forever?
+Our teacher made us run around the Academy ten times. I only stopped twice.
+I'm going to be the fastest thrower in our class. Just watch.
+I tried to climb a tree with chakra and fell on my bottom. Everyone saw.
+We had a sparring lesson today. I didn't win, but I didn't cry either.
+
+# == a compliment ==================================================================================
+## talk.compliment  fn=deepen_bond
+Really? Nobody's said that to me before. I'm going to remember it.
+You're just saying that. ...You're not just saying that? Oh.
+That's the nicest thing I've heard all week, {player}.
+Stop, you'll make me go red. Too late, isn't it?
+Thank you. I needed that more than you know.
+I'll be smiling about that all afternoon. Thank you.
+You noticed? I spent ages on that.
+That's kind. I'll try to deserve it.
+Ha! I'll take it. I'll take it twice.
+Oh, you. Thank you, {player}.
+## talk.compliment  stage=teen|adult  fn=deepen_bond
+At my age, a compliment's worth more than ryo. Thank you, {player}.
+Nobody's told me that since my Academy days. You've made my week.
+That's kind of you to say. I don't hear it much behind the counter.
+Well, now I'll be smiling at customers all day. They'll wonder what's wrong with me.
+I'll tell my family you said so. They'll think I made it up.
+
+## talk.compliment.warmhearted  fn=deepen_bond
+Oh, that's lovely! Come here, let me give you a squeeze for that.
+## talk.compliment.thoughtful  fn=deepen_bond
+That's a generous thing to notice. Most people don't look closely enough.
+## talk.compliment.playful  fn=deepen_bond
+Flattery! I love it! Do more! Do my hair next!
+## talk.compliment.adventurous  fn=deepen_bond
+Thanks! Say it again on top of the Hokage Rock, so the whole village hears.
+## talk.compliment.meticulous  fn=deepen_bond
+Thank you. I did redo it four times. I'm glad it showed.
+## talk.compliment.steadfast  fn=deepen_bond
+Kind of you. I'll keep at it, then.
+## talk.compliment.reserved  fn=react
+Hm. ...Let's talk about something else.
+## talk.compliment.imaginative  fn=deepen_bond
+That made my insides go all golden. Is that strange? It's a good gold.
+## talk.compliment.pragmatic  fn=react
+Nice words. I'd rather hear what you actually need, {player}.
+## talk.compliment.curious  fn=deepen_bond
+Which part? The left or the right? No, I really want to know which part you liked.
+## talk.compliment.protective  fn=deepen_bond
+That's kind. You're the one who deserves the compliments, though.
+## talk.compliment.gentle  fn=deepen_bond
+You're very sweet. I'll keep that one close.
+## talk.compliment.proud  fn=deepen_bond
+Of course. ...Thank you. That came out wrong. Thank you.
+## talk.compliment.fiery  fn=deepen_bond
+You think so?! You really think so?! I'm going to do even better now!
+## talk.compliment.shy  fn=deepen_bond
+Oh. I... um. Thank you. You don't have to say that. But thank you.
+## talk.compliment.stern  fn=deepen_bond
+Noted. Don't let it make you lazy with your own work.
+
+## talk.compliment  stage=child  fn=deepen_bond
+Really? You like my headband? I polished it with my sleeve.
+Thanks! My mum says I've got the best handwriting in my class. Now you said something nice too!
+You think I'm good at throwing? I'm going to tell my whole class you said that!
+Thanks. Nobody ever says nice things about my drawings.
+Hehe. You're nice too. Not as nice as me, but nice.
+Really? Even my hair? It sticks up at the back no matter what.
+
+# == village news ==================================================================================
+## talk.village_news  fn=worldbuild
+The Academy's painting the fence by the yard. Half the children have got paint on their sandals.
+Somebody's cat climbed the bell tower and won't come down. It's been two days.
+The lantern maker's preparing for the festival already. The workshop's full of paper.
+There's a new stall selling candied fruit on market street. The queue goes round the corner.
+The river's high after the rain. The stepping stones by the mill are under water.
+A flock of cranes landed in the rice fields by the wall. Everyone went out to look.
+The bridge by the bathhouse is getting new planks. Mind the loose one in the meantime.
+Someone left a basket of persimmons at the shrine gate. Nobody knows who.
+The kennel's training a new litter. You can hear them barking from the market.
+The Hokage Rock's being cleaned. Somebody's hanging off a rope, scrubbing a nose.
+The fireworks for the festival came in on a cart this morning. Very carefully.
+There's a puppet show coming to the square on the weekend. With real music.
+## talk.village_news  stage=teen|adult  fn=worldbuild
+The Mission Desk's been flooded with D-rank requests. Everybody's lost a cat this month.
+The tax on lamp oil went up. You'll see lamps going out earlier on our street.
+They're building a new house by the canal. Nobody knows whose it is yet. Everyone's guessing.
+
+## talk.village_news.warmhearted  fn=worldbuild
+The old fishmonger's back on the stall after being ill. Everyone brought soup. There was so much soup.
+## talk.village_news.thoughtful  fn=worldbuild
+Someone found an old stone marker in the woods with half a poem carved on it. I'd love to read the rest.
+## talk.village_news.playful  fn=worldbuild
+Someone filled the Academy fountain with soap bubbles! Again! I have an alibi! I think!
+## talk.village_news.adventurous  fn=worldbuild
+A courier came back from the far mountains with snow still on their pack. In summer!
+## talk.village_news.meticulous  fn=worldbuild
+The bell tower's been ringing two minutes early all week. Someone ought to fix it. I've written to them.
+## talk.village_news.steadfast  fn=worldbuild
+The gate guards changed shifts. New faces at the gate this week. Be polite, they're learning.
+## talk.village_news.reserved  fn=react
+News. Hm. I wouldn't know.
+## talk.village_news.imaginative  fn=worldbuild
+The fog came down so thick on the river this morning, the boats looked like they were floating in cloud.
+## talk.village_news.pragmatic  fn=worldbuild
+The miller's raising prices next week. Flour now, cheaper than later. You heard it here.
+## talk.village_news.curious  fn=worldbuild
+Did you know somebody's been leaving little paper boats in the canal every morning? Who? Why? I must know.
+## talk.village_news.protective  fn=worldbuild
+The wall by the old storehouse is crumbling. I've told the children not to climb it. Tell them too.
+## talk.village_news.gentle  fn=worldbuild
+A family of ducks has moved into the shrine pond. There are six ducklings. Six!
+## talk.village_news.proud  fn=worldbuild
+My family's colours are hung at the festival square this year. Front row. As is proper.
+## talk.village_news.fiery  fn=worldbuild
+There's going to be a race round the whole village at the festival! I'm going to WIN it!
+## talk.village_news.shy  fn=worldbuild
+The bookbinder got a new shipment of blank notebooks. With cloth covers. I... looked at them for a long time.
+## talk.village_news.stern  fn=worldbuild
+Curfew's being enforced on the rooftops again. Good. There've been too many twisted ankles.
+
+## talk.village_news  stage=child  fn=worldbuild
+Guess what? There's a new kid in our class who can whistle with two fingers!
+Somebody drew a frog on the blackboard and our teacher didn't notice all morning!
+The big tree by the Academy has a bird nest with three eggs in it. We're not allowed to touch.
+The sweet shop's giving away broken biscuits at closing time. Free!
+I heard there's going to be snow next week. I'm going to build the biggest snowman.
+The kennel puppies got out and ran through the market. One stole a sausage!
+
+# == their hobby ===================================================================================
+## talk.their_hobby  fn=reveal_character
+I collect feathers. I've got one from a hawk. Well, I think it's a hawk.
+I fold paper into animals. My frogs can jump. My cranes can't fly.
+I keep a little notebook of every bird I've seen in the village. Forty-two so far.
+I've been learning the flute. Badly. The dogs on my street howl along.
+I press flowers between the pages of old books. The library doesn't know.
+I build little boats from bark and race them in the canal.
+I've started drawing maps of the village from the rooftops. The streets look different from up there.
+I juggle. Three balls, sometimes four. Never eggs. Not since the last time.
+I spin tops. I've got one that hums when it spins. It's my favourite.
+I watch the clouds and name them. That one's called Lumpy.
+I sketch the people at the tea house when they're not looking. Don't tell them.
+## talk.their_hobby  stage=teen|adult  fn=reveal_character
+I brew my own tea from the herbs on my sill. Some of it's even drinkable.
+I play go with the old men by the river on my days off. They let me lose gracefully.
+I restore old furniture. There's a chest in my room that was a pile of sticks a year ago.
+I keep bees on the roof. My neighbours are nervous. My honey is excellent.
+
+## talk.their_hobby.warmhearted  fn=reveal_character
+I bake little cakes and leave them on doorsteps. Nobody knows it's me. Well, now you do.
+## talk.their_hobby.thoughtful  fn=reveal_character
+I copy old poems out by hand. It's slow. That's the point. You notice every word.
+## talk.their_hobby.playful  fn=reveal_character
+I hide little painted stones around the village for people to find. I've hidden a hundred.
+## talk.their_hobby.adventurous  fn=reveal_character
+I collect a stone from every place I go. My shelf's mostly from the village so far. Mostly.
+## talk.their_hobby.meticulous  fn=reveal_character
+I sort and label seeds. Every packet in my drawer is dated and named. All two hundred.
+## talk.their_hobby.steadfast  fn=reveal_character
+I tend the little shrine at the end of our lane. Fresh water every morning. Nobody asked me to.
+## talk.their_hobby.reserved  fn=reveal_character
+Fishing. Alone. Early.
+## talk.their_hobby.imaginative  fn=reveal_character
+I make up stories about the people in the market. The tofu seller is secretly a dragon, in mine.
+## talk.their_hobby.pragmatic  fn=reveal_character
+I grow vegetables. You can't eat a hobby, unless it's a garden.
+## talk.their_hobby.curious  fn=reveal_character
+I collect questions. I write down every one nobody can answer. The book's getting fat.
+## talk.their_hobby.protective  fn=reveal_character
+I walk the lanes at dusk and check the lamps are lit. Someone has to.
+## talk.their_hobby.gentle  fn=reveal_character
+I feed the koi at the shrine pond. They know me now. They swim over when I come.
+## talk.their_hobby.proud  fn=reveal_character
+Calligraphy, in my family's style. My strokes are almost as good as my grandmother's.
+## talk.their_hobby.fiery  fn=reveal_character
+I collect bruises! Kidding! I collect training scrolls. And also bruises.
+## talk.their_hobby.shy  fn=reveal_character
+I write little poems. Short ones. Nobody's read them. ...Maybe you could. One day.
+## talk.their_hobby.stern  fn=reveal_character
+Gardening. Orderly rows. Weeds removed daily. It is very calming.
+
+## talk.their_hobby  stage=child  fn=reveal_character
+I collect beetles. I have a stag beetle called Mister Pinch.
+I'm building a secret den in the bushes behind my house. You can see it if you swear not to tell.
+I draw ninjas. Mine all have really long scarves because scarves are cool.
+I'm trying to teach my cat to sit. It doesn't want to.
+I collect the paper wrappers from sweets. I've got every colour except purple.
+I play marbles with my cousins. I've won eleven off them. They're mad about it.
+
+# == about someone, in general =====================================================================
+## talk.about_someone  fn=reveal_character
+Everyone in this street has a nickname. Nobody knows their own. It's better that way.
+The tofu maker's the kindest person I know. Never says a word about it.
+There's a family by the canal that sings while they work. You can hear them from the bridge.
+The old priest at the shrine remembers everyone's name. Even babies'.
+People are mostly good, {player}. Mostly. Keep your eyes open for the rest.
+I don't really know anyone well enough to say much. I'm working on it.
+The children down the lane are a menace. A sweet, loud menace.
+The night watch on our street waves at me every evening. I've never seen them in daylight.
+There's a lantern maker who talks to every lantern before it's sold. Like saying goodbye.
+## talk.about_someone  stage=teen|adult  fn=reveal_character
+My neighbours are good people. Noisy, but good. You can't have everything.
+The man who runs the bathhouse has worked there since he was eight. He's seen everyone in the village with their hair wet.
+The Mission Desk clerks don't get enough thanks. They hand out danger with a smile all day.
+
+## talk.about_someone.warmhearted  fn=reveal_character
+Everybody on this lane is family, as far as I'm concerned. Even the grumpy ones. Especially them.
+## talk.about_someone.thoughtful  fn=reveal_character
+I try to judge people by what they do when nobody's watching. It's hard to see, which is the point.
+## talk.about_someone.playful  fn=reveal_character
+I've given everyone on the street a secret name. You're "the one with the good laugh."
+## talk.about_someone.adventurous  fn=reveal_character
+The couriers are the interesting ones. They've seen roads we've only heard of.
+## talk.about_someone.meticulous  fn=reveal_character
+I know everyone's routine on this street to the minute. It's not nosy. It's observant.
+## talk.about_someone.steadfast  fn=reveal_character
+I'll say this about anyone: if they keep their word, I'll keep mine to them.
+## talk.about_someone.reserved  fn=reveal_character
+People talk too much about people.
+## talk.about_someone.imaginative  fn=reveal_character
+Everyone's a story I only know the middle of. I fill in the beginnings myself.
+## talk.about_someone.pragmatic  fn=reveal_character
+Watch how someone pays their debts. It tells you everything.
+## talk.about_someone.curious  fn=reveal_character
+Have you noticed the potter never goes out on rainy days? I've been wondering why for a month.
+## talk.about_someone.protective  fn=reveal_character
+I keep an eye on the little ones in our lane. Their parents work late. Someone should.
+## talk.about_someone.gentle  fn=reveal_character
+Everyone's trying their best, I think. Even when it doesn't look like it.
+## talk.about_someone.proud  fn=reveal_character
+Few people in this village meet my standards. I'll admit the blacksmith does.
+## talk.about_someone.fiery  fn=reveal_character
+Everybody in this village is amazing! Even the annoying ones! Especially them!
+## talk.about_someone.shy  fn=reveal_character
+I don't know many people well. The ones I do know are... nice. You're nice.
+## talk.about_someone.stern  fn=react
+I said I don't gossip. That includes about the people you think are safe to discuss.
+
+## talk.about_someone  stage=child  fn=reveal_character
+The big kids at the Academy think they're so cool. They're not. Well, a bit.
+The sweet shop lady always gives me an extra one when nobody's looking.
+My best friend can burp the alphabet. Almost the whole thing.
+Our teacher has eyes in the back of their head. I'm sure of it.
+The old fishmonger tells the scariest stories. About eels.
+There's a kid on my street who never talks. I think they're just shy. I'm going to say hi.

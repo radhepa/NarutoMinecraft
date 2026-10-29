@@ -1,0 +1,124 @@
+# Deeper follow-ups to questions in the other files: asked once the first one is answered.
+# Axis poles: honesty_vs_kindness (1 honesty, -1 kindness), alone_or_together (1 alone, -1 together),
+# tradition_or_change (1 tradition, -1 change).
+
+? q.values.felt_strong | fn: deepen_bond reveal_character | kind: player_past | level: 5 | follows: q.values.strong | depth: 2
+Q: When did you last feel truly strong?
+Q: You told me what strength means. When did you last feel it yourself?
+- Winning a spar :: That rush when the other side yields. I remember it. {values:+strength} {tone:proud}
+- Helping a friend :: The quiet kind of strong. The best kind. {values:+loyalty +kindness} {tone:warm}
+- Getting up after a fall :: That's when it counts most. Nobody claps, but it counts. {values:+courage} {tone:humble}
+- Not yet :: It's coming. I'd bet on it. {values:+honesty} {tone:gentle}
+
+? q.values.faced_fear | fn: deepen_bond reveal_character | kind: player_past | level: 7 | follows: q.values.afraid | depth: 2 | gap: 7
+Q: That fear you told me about. Have you ever faced it?
+Q: Have you ever looked your fear in the eye?
+- Yes, and it shrank :: Fears do that, once you face them. Most of them. {values:+courage} {tone:bold}
+- Not yet :: When you do, you won't be alone. Promise. {values:+honesty} {tone:gentle}
+- A little, every day :: Every day. That's the bravest answer there is. {values:+courage +duty} {tone:humble}
+
+? q.values.forgive_self | fn: deepen_bond reveal_character | kind: opinion | level: 6 | follows: q.values.forgive | depth: 2
+Q: Is it harder to forgive other people, or yourself?
+Q: Forgiving others is one thing. Can you forgive yourself as easily?
+- Myself, by far :: Same for me. Be kinder to yourself. You'd be kind to anyone else. {values:+honesty} {tone:honest}
+- Other people :: Then you're gentle with yourself. That's healthier than most. {values:+freedom} {tone:blunt}
+- Both the same :: Fair all round. That's rare. {values:+honesty +kindness} {tone:humble}
+
+? q.values.lose_on_purpose | fn: deepen_bond reveal_character | kind: dilemma | level: 4 | follows: q.values.how_you_win | depth: 2 | axis: honesty_vs_kindness
+Q: Would you ever lose on purpose, to make a friend happy?
+Q: A friend's having an awful week. You could let them win a spar. Would you?
+- Never. They'd know :: Fair. A thrown match is an insult to a good fighter. {values:+honesty +strength} {tone:stern} {pole:1}
+- Yes, sometimes :: A gift nobody sees. That's kind. {values:+kindness} {tone:kind} {pole:-1}
+- Only at cards :: Ha! Cards don't count. Everyone knows that. {values:+kindness} {tone:joking}
+
+? q.values.worst_mistake | fn: deepen_bond reveal_character | kind: player_past | level: 6 | follows: q.values.big_mistake | depth: 2
+Q: What's the biggest mistake you've made so far, if you can say?
+Q: Is there a mistake that still bothers you?
+- Showing off :: Showing off catches up with all of us. It's a good teacher. {values:+honesty} {tone:humble}
+- Not listening :: To a teacher? To a friend? Either way, you're listening now. {values:+knowledge} {tone:honest}
+- Being unkind once :: It's good that it bothers you. It means you're not unkind. {values:+kindness} {tone:gentle}
+- I'd rather not say :: All right. It's yours to keep. {values:+freedom} {tone:evasive}
+
+? q.values.told_them | fn: deepen_bond reveal_character | kind: player_past | level: 5 | follows: q.values.look_up_to | depth: 2
+Q: The people you look up to. Have you ever told them?
+Q: Do they know you look up to them?
+- Yes, I told them :: Good. I'm sure it meant the world. {values:+honesty +loyalty} {tone:honest}
+- Too embarrassed :: Ha! It's never easy. Write it on a card. {values:+honesty} {tone:gentle}
+- They know :: Some things don't need words. Still, words are nice. {values:+loyalty} {tone:loyal}
+
+? q.pref.season_memory | fn: deepen_bond reveal_character | kind: player_past | level: 4 | follows: q.pref.season | depth: 2
+Q: What's your best memory of your favourite season?
+Q: Tell me one perfect day from your favourite time of year.
+- A festival night :: The lanterns, the music. Those nights stay with you. {values:+freedom} {tone:warm}
+- Training in it :: Ha! Of course. Sweat or snow, you were out there. {values:+strength +duty} {tone:dutiful}
+- A quiet afternoon :: The quiet ones are often the best. {values:+freedom} {tone:gentle}
+- Haven't had it yet :: Then let's make one. Next time the season comes round. {values:+kindness} {tone:playful}
+
+? q.pref.gift_given | fn: deepen_bond reveal_character | kind: player_past | level: 4 | follows: q.pref.best_gift | depth: 2
+Q: What's the best gift you've ever given someone?
+Q: Not received, given. What gift are you proudest of?
+- Something I made :: Your own hands. That's a gift twice over. {values:+creativity} {tone:proud}
+- A meal I cooked :: Feeding someone is the oldest kindness there is. {values:+family +kindness} {tone:warm}
+- An afternoon together :: Time. You give what you value. That's nice to know. {values:+loyalty} {tone:humble}
+- I haven't yet :: Then that's something to look forward to. {values:+honesty} {tone:gentle}
+
+? q.pref.thinking_about | fn: deepen_bond reveal_character | kind: confession | level: 6 | follows: q.pref.thinking_spot | depth: 2
+Q: What do you think about, alone in that thinking spot of yours?
+Q: When you go off to think, what's usually on your mind?
+- My dreams :: Big ones, I hope. That's the place for them. {values:+courage} {tone:ambitious}
+- My friends :: Worrying about them, or missing them? Both, I'd guess. {values:+loyalty} {tone:loyal}
+- Nothing at all :: Ah, the best kind of thinking. Empty and quiet. {values:+freedom} {tone:free}
+- What comes next :: Planning ahead. A shinobi's mind. {values:+duty +knowledge} {tone:cautious}
+
+? q.plans.hokage_first_act | fn: deepen_bond reveal_character | level: 5 | follows: q.plans.hokage | depth: 2
+Q: If you were Lord Hokage for a day, what's the very first thing you'd do?
+Q: Say the hat's yours tomorrow morning. First order?
+- Free ramen for all :: Ha! You'd be the most popular Hokage in history. {values:+kindness +freedom} {tone:joking}
+- Visit every family :: Every single door? That's a long day. And a lovely one. {values:+family +duty} {tone:warm}
+- Train the Genin myself :: Hands-on! The Genin would never forget it. {values:+strength +duty} {tone:ambitious}
+- Fix the roads :: Practical! The carters would weep with joy. {values:+duty} {tone:dutiful}
+
+? q.plans.nature_why | fn: deepen_bond reveal_character | level: 4 | follows: q.plans.pick_nature | depth: 2
+Q: Why that nature, do you think? What draws you to it?
+Q: The nature you picked. What is it about it that fits you?
+- It suits my temper :: Ha! I can see it, now you say it. {values:+honesty} {tone:honest}
+- It's the most useful :: Practical choice. A good shinobi's reasoning. {values:+duty +knowledge} {tone:cautious}
+- It's beautiful :: That's a lovely reason. Jutsu can be beautiful. {values:+creativity} {tone:gentle}
+- I don't really know :: Some things just call to you. That's enough. {values:+freedom} {tone:evasive}
+
+? q.plans.remembered_by | fn: deepen_bond reveal_character | level: 7 | follows: q.plans.remembered_for | depth: 2 | gap: 5
+Q: And who would you most want to remember you?
+Q: Of everyone, whose memory of you matters most?
+- My friends :: Then be good to them. You already are. {values:+loyalty} {tone:warm}
+- The whole village :: Big dreams. Your face on the Rock, perhaps. {values:+duty} {tone:ambitious}
+- Students, one day :: A teacher at heart. I can see it. {values:+knowledge +kindness} {tone:humble}
+- Just one person :: Just one. I won't ask who. That's a precious thing. {values:+loyalty} {tone:gentle}
+
+? q.dilemma.blamed_twice | fn: deepen_bond reveal_character | level: 4 | follows: q.dilemma.blamed | depth: 2
+Q: What if the same classmate blamed you a second time?
+Q: Twice now someone's blamed you for their mess. What do you do?
+- Tell the instructor :: Twice is a pattern. The instructor should know. Sensible. {values:+duty +honesty} {tone:dutiful}
+- Face them myself :: Brave. Calmly, though. Calm is stronger. {values:+courage} {tone:bold}
+- Forgive them again :: A big heart. Don't let it become a doormat. {values:+kindness} {tone:kind}
+
+? q.village.share_place | fn: deepen_bond reveal_character | level: 4 | follows: q.village.favorite_place | depth: 2 | axis: alone_or_together
+Q: Would you take a friend to your favourite place, or keep it to yourself?
+Q: Your favourite spot. Do you share it, or is it yours alone?
+- Take a friend :: A good place is better shared. I'd go. {values:+loyalty} {tone:warm} {pole:-1}
+- Keep it to myself :: Fair. Everyone needs one place that's only theirs. {values:+freedom} {tone:free} {pole:1}
+- Only my closest friend :: Just one. I hope one day that's me. {values:+loyalty} {tone:gentle}
+
+? q.village.join_clan | fn: deepen_bond reveal_character | level: 6 | follows: q.village.clans | depth: 2 | public: yes | axis: tradition_or_change
+Q: If a clan ever invited you to join them, would you?
+Q: Say one of the old families asked you to take their name. Would you?
+- Yes, gladly :: A family and a tradition at once. I can see why. {values:+family +loyalty} {tone:warm} {pole:1}
+- I'd stay clanless :: Your own name, your own path. I respect that. {values:+freedom} {tone:free} {pole:-1}
+- Depends which clan :: Ha! The Akimichi, for the food? Wise. {values:+knowledge} {tone:joking}
+
+? q.village.how_protect | fn: deepen_bond reveal_character | level: 6 | follows: q.village.worth_protecting | depth: 2 | public: yes
+Q: And how would you protect it, the thing that's most worth protecting?
+Q: You said what's worth protecting in the Leaf. How will you do it?
+- Become strong :: Strong enough to stand in front. The old way. {values:+strength +duty} {tone:ambitious}
+- Know everyone :: Know them, and you'll know when something's wrong. Clever. {values:+knowledge +family} {tone:curious}
+- Keep the peace :: The hardest job. Peace needs keeping every day. {values:+kindness +duty} {tone:dutiful}
+- Stand watch :: A night on the walls, every so often. Quiet and important. {values:+duty +loyalty} {tone:loyal}

@@ -133,12 +133,11 @@ public final class Visits {
         double q = .5 + .04 * score.tier().ordinal();
         for (var k : home.displayed()) if (k.giver().equals(who) && !home.noticed(who, k.id())) {
             home.notice(who, k.id());
-            if (f.noticed(who, k.id())) { out.add("home.visit.kept_gift"); q += .15; }
+            if (f.noticed(who, k.id(), false)) { out.add("home.visit.kept_gift"); q += .15; }
         }
         for (var p : home.wall()) if (p.people().contains(who) && !home.noticed(who, p.id() + "#" + p.version())) {
             home.notice(who, p.id() + "#" + p.version());
-            f.noticed(who, p.id() + "#" + p.version());
-            out.add("home.visit.photo." + p.id()); q += .1;
+            if (f.noticed(who, p.id() + "#" + p.version(), true)) { out.add("home.visit.photo." + p.id()); q += .1; }
         }
         long curios = home.displayed().stream().filter(k -> k.kind() == Keepsake.Kind.CURIO).count();
         if (curios >= 3) out.add("home.visit.curios");
@@ -167,7 +166,7 @@ public final class Visits {
     }
 
     /**
-     * The player invites friends over for a home hangout ({@link HomeHangout}). The bond engine runs the hangout; the
+     * The player invites friends over for a home hangout (the bond engine's home activities). The engine runs it; the
      * home adds the visitors' reactions to the place, and a little mess.
      */
     public static Visit host(Home home, Friends f, Day d, List<String> who, String activity, int hour) {
@@ -182,7 +181,11 @@ public final class Visits {
         return new Visit(who, "hosted." + activity, d.day(), hour, true, List.copyOf(reactions.subList(0, Math.min(MAX_REACTIONS, reactions.size()))), total / who.size());
     }
 
-    /** Gives a spare key (bond level 6): the bond engine records it as a moment. */
+    /** Takes a key back: no one is told. */
+    public static void takeKey(Home home, Friends f, String who) {
+        if (home.keyHolder(who)) { home.takeKeyBack(who); f.keyTaken(who); }
+    }
+    /** Gives a spare key (bond level 6): the bond engine records it as the flag {@code home.key}. */
     public static String giveKey(Home home, Friends f, String who, long day) {
         String r = home.giveKey(who, f.level(who), day);
         if (r.equals("ok")) f.keyGiven(who);

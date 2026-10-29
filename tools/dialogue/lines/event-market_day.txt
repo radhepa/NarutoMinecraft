@@ -1,0 +1,44 @@
+# Market Day: once a week the farm carts and travelling stalls fill the market street.
+#! tags: event=market_day
+
+## greet.event  fn=react
+Market Day! The farm carts have been rolling through the gate since dawn.
+Morning, {player}! Have you seen the market street? You can't move for baskets.
+It's Market Day, so mind your pockets and your toes.
+Market Day again. My favourite day of the week, and my purse's least favourite.
+Good morning! I'm off to get the eggs before the tea house buys them all.
+
+## greet.event  stage=child  fn=react
+Market Day! The candy stall's here! It only comes on Market Day!
+Are you going to the market? There's a stall with spinning tops. Come on!
+
+## chat.event  fn=worldbuild
+The travelling merchants set up at the far end of the street. They bring things you can't get in the Leaf.
+The coast cart only comes on Market Day. Squid, clams, seaweed. Everyone fights over it.
+Farmers from the outer fields sell straight from their carts. Cheapest vegetables of the week.
+There's a knife grinder who comes on Market Day. Half the shinobi in the village queue at that grindstone.
+The grocer shouts louder on Market Day. I think it's a competition with the fishmonger.
+I always find something I didn't need. Last week it was a ceramic frog.
+The guards at the gate check every cart on Market Day. It takes them all morning.
+If you want a bargain, come after noon. The farmers don't like carting things home.
+The noticeboards are covered in requests on Market Day. Everyone needs a hand carrying something.
+A storyteller sets up by the well on Market Day. The children sit there for hours.
+
+## chat.event  fn=teach,hook
+On Market Day half the village needs help: carrying sacks, minding stalls. Easy ryo if you ask around.
+
+## chat.event  personality=pragmatic|meticulous  fn=reveal_character
+I make a list every Market Day. I stick to it. Mostly. The frog was not on the list.
+Prices drop after noon by a fifth. I've timed it. Every week.
+
+## chat.event  personality=adventurous|curious  fn=reveal_character
+I ask every travelling merchant where they came from. One had walked from the sea.
+There's a spice merchant today with a powder that turns rice yellow. I need to know how.
+
+## chat.event  stage=child  fn=worldbuild
+I've got three ryo for Market Day. I'm going to spend them very, very carefully.
+The candy stall made me a sugar dragon. I can't eat it, it's too good.
+My mother lets me carry the basket. It's heavy, but I'm strong.
+
+## chat.event  job=grocer|fishmonger|merchant|farmer  fn=reveal_character
+Market Day is my whole week in one morning. I'll be asleep by sundown.

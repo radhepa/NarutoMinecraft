@@ -1,0 +1,68 @@
+# The Mission Desk clerk: mission.desk.<moment>. Greeting, an empty board, the daily and weekly
+# limits, a client asking for the player by name, contested jobs, handing a job back, turning one
+# in, and a job another squad took first. Tokens: {player} {squad} {pay} {count} {client} {place}.
+#! kind: cycle
+#! tags: job=mission_desk
+
+## mission.desk.greet  fn=quest,guide
+Mission Desk. The board's on the left, the queue's on the right, and the clerk is very tired. How can I help?
+Morning, {player}. D-ranks up top, C-ranks below. Read the whole slip before you take one.
+Back again? Good. The board's been busy. Have a look and bring me the slip.
+Welcome to the Mission Desk. Every job in the Leaf passes through these hands. Mostly inky hands.
+Ah, {player}. Here for work? Take a slip, check the rank, then come back to me.
+
+## mission.desk.board_empty  fn=quest,guide
+Board's bare, I'm afraid. The squads cleared it before breakfast. Try again after noon.
+Nothing up right now. The clients write in by evening. Come back then.
+Empty, I know. Quiet day. Go and train, or buy yourself some dango.
+Not a single slip left. A rare sight. Enjoy it, it won't last.
+All taken. If you're desperate, the hospital always needs orderlies. Unofficially.
+
+## mission.desk.day_full  fn=quest,teach
+That's enough for one day, {player}. Rest is part of the job. Come back tomorrow.
+You've done your share today. The board will still be here in the morning.
+No more slips for you today. Rules, not my opinion. Though I share it.
+Genin who take too much in a day make mistakes the next. Go home.
+Your day's log is full. Eat something, sleep, and come back fresh.
+
+## mission.desk.week_full  fn=quest,teach
+That's your limit for the week. Even Jonin take days off. Some of them.
+You've hit the week's count. Use the time. Train, visit a friend, sleep in.
+No more this week, {player}. The desk has to share the work around.
+Weekly limit, reached. Come back after the start of next week.
+You've been busy this week. Proud of you. Now go and be idle for a bit.
+
+## mission.desk.requested  fn=quest,react
+{client} asked for you by name. That doesn't happen to every Genin. Interested?
+A request with your name on it, {player}. Someone was very pleased last time.
+This one came in addressed to you. The client said "the careful one". I knew who they meant.
+A client is asking for {squad} specifically. Word gets around when the work's good.
+Your name's on this slip. Not mine, not the squad's. Yours. Well done.
+
+## mission.desk.contested  fn=quest,react
+Fair warning: this one's contested. Another squad has the same slip. First one done gets the pay.
+Two squads, one job. It's a race. Still want it?
+This is a contested mission. Be quick, be clean, be fair. Mostly fair.
+Another squad took this slip ten minutes ago. If you want it, you're competing.
+Contested jobs pay the winner, {pay}. The other squad gets a lesson. Choose which you'd rather.
+
+## mission.desk.handed_back  fn=quest,react
+Handing it back? All right. Better than a botched job. I'll put the slip up again.
+No shame in giving it back. Some jobs just don't fit. Noted.
+Returned. The client will be told someone else is coming. Don't make a habit of it.
+Fine. I'd rather you hand it in than leave it half done. It's back on the board.
+Changed your mind? It happens. The slip goes back up. Try another.
+
+## mission.desk.turn_in  fn=quest,react
+Report in? Let me read it. Good. Good. Here's your pay: {pay}.
+Mission complete. Stamped, logged, filed. {pay}, counted twice.
+Back in one piece, {player}? That's the first thing I check. Then the report. Pay's here.
+Signed and stamped. The client already sent word, so you'll have no surprises. {pay}.
+A finished job. My favourite kind of paper. Sign here, and the {pay} is yours.
+
+## mission.desk.taken_by_others  fn=quest,react
+Sorry, that slip's gone. Another squad took it a moment ago.
+Too slow, I'm afraid. Someone grabbed that one first. There are others.
+That one was taken by a different squad. Look for another on the board.
+Already assigned. The board's not as fast as the Genin, sadly.
+Gone. Another squad has it. Next time, come in before the morning bell.

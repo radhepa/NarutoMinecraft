@@ -1,0 +1,105 @@
+# Callbacks for questions/voice-warmhearted.txt, in the warmhearted asker's voice.
+#! fn: callback
+#! tags: personality=warmhearted
+
+## callback.answer.q.pref.warm_comfort_food.a1
+I made a pot of miso soup and kept a bowl back. You said soup cheers you up. Here, still hot.
+
+## callback.answer.q.pref.warm_comfort_food.a2
+Sweet buns, red bean and custard, both. You said they cheer you up. You looked like you needed one.
+
+## callback.answer.q.pref.warm_comfort_food.a3
+Rice and pickles, wrapped up for you. Plain and honest, like you said. Eat it before training.
+
+## callback.answer.q.pref.warm_comfort_food.a4
+I made you something. You said anything someone makes for you helps. So here's my something.
+
+## callback.answer.q.pref.warm_cook_it.a1
+Supper's on, the one I promised. Come hungry, I said, and I meant it. There's enough for six.
+
+## callback.answer.q.pref.warm_cook_it.a2
+Ready for your cooking lesson? You wanted to learn the recipe. Apron's on the hook.
+
+## callback.answer.q.pref.warm_cook_it.a3
+Together, you said, or not at all. So I've set two bowls. Sit.
+
+## callback.answer.q.past.warm_eaten_today.a1
+A proper meal again today? Good. You said so last time too. I'm keeping track.
+
+## callback.answer.q.past.warm_eaten_today.a2
+Just a snack again? I remember last time. Here, a proper lunch. No arguments.
+
+## callback.answer.q.past.warm_eaten_today.a3
+You forgot to eat last time I asked. So I've brought rice balls. Three of them. Eat.
+
+## callback.answer.q.past.warm_who_looks_after.a1
+You manage on your own when you're poorly. I've been worrying about that ever since.
+
+## callback.answer.q.past.warm_who_looks_after.a2
+Your friends look after you when you're unwell. Tell them I've got extra blankets if they need them.
+
+## callback.answer.q.past.warm_who_looks_after.a3
+The hospital looks after you if it's bad. And for colds? Me. I've decided.
+
+## callback.answer.q.past.warm_who_looks_after.a4
+Nobody looks after you when you're ill, you said. Not anymore. I meant that.
+
+## callback.answer.q.past.warm_let_me_visit.a1
+You promised to send word if you fell ill. I'm holding you to it. Soup's always ready.
+
+## callback.answer.q.past.warm_let_me_visit.a2
+"I'll be fine," you said. You always say that. My door's open regardless.
+
+## callback.answer.q.past.warm_let_me_visit.a3
+Soup guaranteed, you made me promise. I've been practising a new one. Ginger. For colds.
+
+## callback.answer.q.pref.warm_cozy_room.a1
+I set up the kotatsu for winter. You said that's what makes a room cozy. Come warm your feet.
+
+## callback.answer.q.pref.warm_cozy_room.a2
+Voices in the next room, the coziest sound. You said that and I've noticed it ever since.
+
+## callback.answer.q.pref.warm_cozy_room.a3
+Smell that? Rice steaming. The coziest smell, you said. Stay a while.
+
+## callback.answer.q.pref.warm_cozy_room.a4
+Found you another blanket for your nest. You can never have too many, I say.
+
+## callback.answer.q.advice.warm_lonely_neighbour.a1
+I've visited my lonely neighbour every day, like you said. Yesterday they laughed. Laughed!
+
+## callback.answer.q.advice.warm_lonely_neighbour.a2
+I took my neighbour to see the Inuzuka puppies, your idea. They held one all afternoon.
+
+## callback.answer.q.advice.warm_lonely_neighbour.a3
+My neighbour came to supper, like you suggested. Ate two bowls. Talked for hours.
+
+## callback.answer.q.advice.warm_lonely_neighbour.a4
+I asked my neighbour what they needed, as you said. Company on market mornings. So now we go together.
+
+## callback.answer.q.advice.warm_neighbour_after.a1
+I'm still visiting my neighbour. Friendship isn't medicine you stop taking. Your words. I love them.
+
+## callback.answer.q.advice.warm_neighbour_after.a2
+I gave my neighbour room, like you said. Now they visit me. Imagine that.
+
+## callback.answer.q.advice.warm_neighbour_after.a3
+I asked again, as you said. My neighbour wants Wooddays. Just Wooddays. Perfect.
+
+## callback.answer.q.plans.warm_full_house.a1
+A house full to the rafters, that's your future, you said. Save me a cushion by the fire.
+
+## callback.answer.q.plans.warm_full_house.a2
+A few close ones at a small table, your future home. I hope there's a seat for me.
+
+## callback.answer.q.plans.warm_full_house.a3
+Peace and quiet in your future house, you said. I'll knock softly, then.
+
+## callback.answer.q.values.warm_kind_to_unkind.a1
+Kindness isn't a trade, we agreed. I greeted the market grump again today. They nodded!
+
+## callback.answer.q.values.warm_kind_to_unkind.a2
+Up to a point, you said, kindness to the unkind. I've drawn my line. It's further out than most.
+
+## callback.answer.q.values.warm_kind_to_unkind.a3
+You said kindness to a grump is wasted. I kept greeting anyway. They waved back this week.

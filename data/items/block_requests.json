@@ -1,0 +1,1344 @@
+{
+ "format": 1,
+ "_doc": "Blocks asked of the Konoha build session (its tools/konoha/blocks.json owns them). Compiled from the catalogue, shops.tsv, stations.tsv and blocks.tsv.",
+ "count": 150,
+ "blocks": [
+  {
+   "block": "block:bolt_shelf",
+   "kind": "display",
+   "item": null,
+   "description": "Shelves of cloth bolts in the tailor's palettes",
+   "used_by": [
+    "shop:tailor"
+   ]
+  },
+  {
+   "block": "block:book_display_table",
+   "kind": "display",
+   "item": null,
+   "description": "A table of new books laid flat",
+   "used_by": [
+    "shop:bookshop"
+   ]
+  },
+  {
+   "block": "block:bookshelf_tall",
+   "kind": "display",
+   "item": null,
+   "description": "A tall bookshelf showing books and novels for sale",
+   "used_by": [
+    "shop:bookshop"
+   ]
+  },
+  {
+   "block": "block:charm_stall",
+   "kind": "display",
+   "item": null,
+   "description": "The shrine's charm counter showing omamori",
+   "used_by": [
+    "shop:shrine_office"
+   ]
+  },
+  {
+   "block": "block:crate_display",
+   "kind": "display",
+   "item": null,
+   "description": "A stack of open crates showing what is for sale",
+   "used_by": [
+    "shop:haruno_store",
+    "shop:market_day_stalls"
+   ]
+  },
+  {
+   "block": "block:curio_shelf",
+   "kind": "display",
+   "item": "item:curio_cabinet",
+   "description": "A crowded shelf of odd things for sale",
+   "used_by": [
+    "shop:pawn_shop"
+   ]
+  },
+  {
+   "block": "block:fish_ice_display",
+   "kind": "display",
+   "item": null,
+   "description": "A tray of crushed ice showing the day's fish",
+   "used_by": [
+    "shop:fishmonger"
+   ]
+  },
+  {
+   "block": "block:flower_bucket_stand",
+   "kind": "display",
+   "item": null,
+   "description": "Tiered buckets of cut flowers by season",
+   "used_by": [
+    "shop:flower_shop"
+   ]
+  },
+  {
+   "block": "block:flower_pot_tiers",
+   "kind": "display",
+   "item": null,
+   "description": "Stepped shelves of potted plants for sale",
+   "used_by": [
+    "shop:flower_shop"
+   ]
+  },
+  {
+   "block": "block:general_store_shelf",
+   "kind": "display",
+   "item": null,
+   "description": "A wall of small cubbies for sundries: shows up to nine items",
+   "used_by": [
+    "shop:haruno_store"
+   ]
+  },
+  {
+   "block": "block:glass_case",
+   "kind": "display",
+   "item": "item:display_case",
+   "description": "A glass-topped display case showing up to four items",
+   "used_by": [
+    "shop:weapon_shop",
+    "shop:tool_shop",
+    "shop:pawn_shop"
+   ]
+  },
+  {
+   "block": "block:goods_shelf",
+   "kind": "display",
+   "item": null,
+   "description": "Free-standing shelves showing up to six stocked items",
+   "used_by": [
+    "shop:grocer",
+    "shop:tool_shop",
+    "shop:haruno_store",
+    "shop:academy_supply",
+    "shop:hagane_metalworks"
+   ]
+  },
+  {
+   "block": "block:jar_shelf",
+   "kind": "display",
+   "item": null,
+   "description": "Shelves of glass jars of crackers",
+   "used_by": [
+    "shop:senbei_shop"
+   ]
+  },
+  {
+   "block": "block:keepsake",
+   "kind": "display",
+   "item": "item:clan_crest",
+   "description": "A small display stand that shows one keepsake on a table, shelf or the floor",
+   "used_by": [
+    "item:keepsake_framed_ladle",
+    "item:keepsake_lake_lantern",
+    "item:keepsake_peace_offering",
+    "item:keepsake_shogi_set",
+    "item:keepsake_cat_figurine",
+    "item:keepsake_tea_set",
+    "item:keepsake_race_ribbon",
+    "item:keepsake_price_war",
+    "item:keepsake_ferry_lantern",
+    "item:keepsake_post_splinter",
+    "item:keepsake_squad_photo",
+    "item:keepsake_bond_teammate_a_1",
+    "item:keepsake_bond_teammate_a_2",
+    "item:keepsake_bond_teammate_b_1",
+    "item:keepsake_bond_teammate_b_2",
+    "item:keepsake_clan_senju",
+    "item:keepsake_clan_uzumaki",
+    "item:keepsake_clan_uchiha",
+    "item:keepsake_clan_hyuga",
+    "item:keepsake_clan_nara",
+    "item:keepsake_clan_akimichi",
+    "item:keepsake_clan_yamanaka",
+    "item:keepsake_clan_inuzuka",
+    "item:keepsake_clan_sarutobi",
+    "item:keepsake_clan_aburame",
+    "item:keepsake_clan_hatake",
+    "item:keepsake_clan_kurama",
+    "item:keepsake_clan_shimura",
+    "item:keepsake_clan_yuhi",
+    "item:keepsake_clan_gekko",
+    "item:keepsake_clan_shiranui",
+    "item:keepsake_clan_morino",
+    "item:keepsake_clan_umino",
+    "item:keepsake_clan_haruno",
+    "item:keepsake_clan_namiashi",
+    "item:keepsake_clan_hagane",
+    "item:keepsake_clan_kinoshita",
+    "item:keepsake_clan_tsuchigumo",
+    "item:keepsake_clan_suzuran",
+    "item:keepsake_clan_tobari",
+    "item:photograph",
+    "item:keepsake_festival_lantern",
+    "item:keepsake_first_firing_cup",
+    "item:keepsake_pet_collar_charm",
+    "item:keepsake_bottle_letter",
+    "item:keepsake_snow_rabbit",
+    "item:keepsake_trader_map",
+    "item:keepsake_bandit_banner",
+    "item:keepsake_boar_tusk",
+    "item:keepsake_honey_pot",
+    "item:keepsake_ghost_lantern",
+    "item:keepsake_dojo_signboard",
+    "item:keepsake_burglar_mask",
+    "item:keepsake_noble_fan",
+    "item:keepsake_market_bowl",
+    "item:keepsake_glaze_tile",
+    "item:keepsake_bridge_plank",
+    "item:keepsake_court_vase",
+    "item:keepsake_castle_banner",
+    "item:keepsake_summit_seal",
+    "item:keepsake_festival_mask"
+   ]
+  },
+  {
+   "block": "block:mannequin",
+   "kind": "display",
+   "item": null,
+   "description": "A tailor's mannequin that wears one wardrobe outfit (shows the outfit for sale on the resident model)",
+   "used_by": [
+    "shop:tailor"
+   ]
+  },
+  {
+   "block": "block:metal_stock_rack",
+   "kind": "display",
+   "item": null,
+   "description": "A rack of steel bars, wire spools and chain",
+   "used_by": [
+    "shop:hagane_metalworks"
+   ]
+  },
+  {
+   "block": "block:paint_display",
+   "kind": "display",
+   "item": null,
+   "description": "A rack of pigment jars and brushes",
+   "used_by": [
+    "shop:painters_studio"
+   ]
+  },
+  {
+   "block": "block:pet_supply_shelf",
+   "kind": "display",
+   "item": null,
+   "description": "Shelves of kibble, collars and toys",
+   "used_by": [
+    "shop:inuzuka_clinic",
+    "shop:cat_shelter"
+   ]
+  },
+  {
+   "block": "block:pouch_hooks",
+   "kind": "display",
+   "item": null,
+   "description": "A rail of hooks showing pouches and holsters",
+   "used_by": [
+    "shop:tool_shop"
+   ]
+  },
+  {
+   "block": "block:prize_shelf",
+   "kind": "display",
+   "item": null,
+   "description": "The prize shelf at a festival game",
+   "used_by": [
+    "shop:festival_stalls",
+    "shop:exam_stalls"
+   ]
+  },
+  {
+   "block": "block:produce_crate_display",
+   "kind": "display",
+   "item": null,
+   "description": "Tilted wooden crates showing their produce (cabbage, daikon, rice sacks)",
+   "used_by": [
+    "shop:grocer"
+   ]
+  },
+  {
+   "block": "block:scroll_display_case",
+   "kind": "display",
+   "item": null,
+   "description": "A low case showing one featured scroll open",
+   "used_by": [
+    "shop:scroll_shop"
+   ]
+  },
+  {
+   "block": "block:scroll_rack",
+   "kind": "display",
+   "item": null,
+   "description": "A wall of scroll cubbies showing technique scrolls for sale",
+   "used_by": [
+    "shop:scroll_shop"
+   ]
+  },
+  {
+   "block": "block:showroom_plinth",
+   "kind": "display",
+   "item": null,
+   "description": "A low platform that shows one furniture piece as it would stand in a home",
+   "used_by": [
+    "shop:furniture_shop"
+   ]
+  },
+  {
+   "block": "block:wall_mount",
+   "kind": "display",
+   "item": "item:wall_mount",
+   "description": "A wooden wall bracket that shows one item (a blade, a mask, a curio): home display furniture",
+   "used_by": []
+  },
+  {
+   "block": "block:weapon_display_wall",
+   "kind": "display",
+   "item": null,
+   "description": "A pegboard wall showing kunai, shuriken and blades for sale",
+   "used_by": [
+    "shop:weapon_shop"
+   ]
+  },
+  {
+   "block": "block:alarm_clock",
+   "kind": "furniture",
+   "item": "item:alarm_clock",
+   "description": "Rings at the hour you set: no oversleeping after a late night",
+   "used_by": []
+  },
+  {
+   "block": "block:andon_lamp",
+   "kind": "furniture",
+   "item": "item:andon_lamp",
+   "description": "A paper floor lamp",
+   "used_by": []
+  },
+  {
+   "block": "block:apothecary_table",
+   "kind": "furniture",
+   "item": "item:apothecary_table",
+   "description": "Mortar, scales and drying rack: medicine, antidotes and coatings",
+   "used_by": [
+    "shop:pharmacy",
+    "station:apothecary"
+   ]
+  },
+  {
+   "block": "block:balcony_bench",
+   "kind": "furniture",
+   "item": "item:balcony_bench",
+   "description": "A bench facing the Rock",
+   "used_by": []
+  },
+  {
+   "block": "block:balcony_planter",
+   "kind": "furniture",
+   "item": "item:balcony_planter",
+   "description": "A long planter of herbs and flowers for the balcony; water it",
+   "used_by": []
+  },
+  {
+   "block": "block:bamboo_blind",
+   "kind": "furniture",
+   "item": "item:bamboo_blind",
+   "description": "A roll-down sudare for a window",
+   "used_by": []
+  },
+  {
+   "block": "block:bamboo_vase",
+   "kind": "furniture",
+   "item": "item:bamboo_vase",
+   "description": "A cut-bamboo vase",
+   "used_by": []
+  },
+  {
+   "block": "block:bath_mat",
+   "kind": "furniture",
+   "item": "item:bath_mat",
+   "description": "A woven mat for the bath",
+   "used_by": []
+  },
+  {
+   "block": "block:bookcase",
+   "kind": "furniture",
+   "item": "item:bookcase",
+   "description": "Shows the books and novels you own; holds 18",
+   "used_by": []
+  },
+  {
+   "block": "block:bowl_shelf",
+   "kind": "furniture",
+   "item": "item:bowl_shelf",
+   "description": "A shelf of ramen bowls, for the ramen corner",
+   "used_by": []
+  },
+  {
+   "block": "block:calendar_scroll",
+   "kind": "furniture",
+   "item": "item:calendar_scroll",
+   "description": "The season and the coming events and birthdays",
+   "used_by": []
+  },
+  {
+   "block": "block:cat_tower",
+   "kind": "furniture",
+   "item": "item:cat_tower",
+   "description": "Scratching posts and shelves; cats love it",
+   "used_by": [
+    "shop:cat_shelter"
+   ]
+  },
+  {
+   "block": "block:child_futon",
+   "kind": "furniture",
+   "item": "item:child_futon",
+   "description": "A small futon",
+   "used_by": []
+  },
+  {
+   "block": "block:clan_banner",
+   "kind": "furniture",
+   "item": "item:clan_banner",
+   "description": "A banner in a clan's colours, sold in its quarter (wave 2 clans from Beta 2.5)",
+   "used_by": []
+  },
+  {
+   "block": "block:clan_lantern",
+   "kind": "furniture",
+   "item": "item:clan_lantern",
+   "description": "A lantern painted with a clan's crest",
+   "used_by": []
+  },
+  {
+   "block": "block:clan_screen",
+   "kind": "furniture",
+   "item": "item:clan_screen",
+   "description": "A folding screen with a clan's crest",
+   "used_by": []
+  },
+  {
+   "block": "block:cupboard",
+   "kind": "furniture",
+   "item": "item:cupboard",
+   "description": "A kitchen cupboard: a pantry for your ingredients and dishes (storage)",
+   "used_by": []
+  },
+  {
+   "block": "block:curtains",
+   "kind": "furniture",
+   "item": "item:curtains",
+   "description": "Cotton curtains for a window, any colour",
+   "used_by": []
+  },
+  {
+   "block": "block:display_shelf",
+   "kind": "furniture",
+   "item": "item:display_shelf",
+   "description": "Shows keepsakes and figurines",
+   "used_by": []
+  },
+  {
+   "block": "block:double_futon",
+   "kind": "furniture",
+   "item": "item:double_futon",
+   "description": "A futon for two",
+   "used_by": []
+  },
+  {
+   "block": "block:dresser_mirror",
+   "kind": "furniture",
+   "item": "item:dresser_mirror",
+   "description": "Change your hair style and colour from those you have unlocked",
+   "used_by": [
+    "shop:barber"
+   ]
+  },
+  {
+   "block": "block:engawa_bench",
+   "kind": "furniture",
+   "item": "item:engawa_bench",
+   "description": "A veranda bench along a house",
+   "used_by": []
+  },
+  {
+   "block": "block:fan_display",
+   "kind": "furniture",
+   "item": "item:fan_display",
+   "description": "A painted festival fan on a wall stand",
+   "used_by": []
+  },
+  {
+   "block": "block:festival_drum",
+   "kind": "furniture",
+   "item": "item:festival_drum",
+   "description": "A taiko on a stand; give it a bang",
+   "used_by": []
+  },
+  {
+   "block": "block:folding_screen",
+   "kind": "furniture",
+   "item": "item:folding_screen",
+   "description": "A six-panel byobu with a painted landscape",
+   "used_by": []
+  },
+  {
+   "block": "block:futon",
+   "kind": "furniture",
+   "item": "item:futon",
+   "description": "A rolled-out bed in six colours. Your home always keeps one",
+   "used_by": []
+  },
+  {
+   "block": "block:futon_deluxe",
+   "kind": "furniture",
+   "item": "item:futon_deluxe",
+   "description": "A plump quilted futon: Well Rested lasts an hour longer",
+   "used_by": []
+  },
+  {
+   "block": "block:go_board",
+   "kind": "furniture",
+   "item": "item:go_board",
+   "description": "Black and white stones in two pots",
+   "used_by": []
+  },
+  {
+   "block": "block:goldfish_bowl",
+   "kind": "furniture",
+   "item": "item:goldfish_bowl",
+   "description": "Put a festival goldfish in it",
+   "used_by": []
+  },
+  {
+   "block": "block:hanging_scroll",
+   "kind": "furniture",
+   "item": "item:hanging_scroll",
+   "description": "A kakejiku: a painting or a word in ink",
+   "used_by": [
+    "shop:painters_studio"
+   ]
+  },
+  {
+   "block": "block:icebox",
+   "kind": "furniture",
+   "item": "item:icebox",
+   "description": "Keeps fresh ingredients from spoiling",
+   "used_by": []
+  },
+  {
+   "block": "block:ikebana",
+   "kind": "furniture",
+   "item": "item:ikebana",
+   "description": "A flower arrangement from the flower shop; it wilts after a season",
+   "used_by": []
+  },
+  {
+   "block": "block:incense_burner",
+   "kind": "furniture",
+   "item": "item:incense_burner",
+   "description": "Smoke curls up from it",
+   "used_by": []
+  },
+  {
+   "block": "block:irori_hearth",
+   "kind": "furniture",
+   "item": "item:irori_hearth",
+   "description": "A sunken hearth in the floor: cook, warm and gather round",
+   "used_by": []
+  },
+  {
+   "block": "block:kamidana",
+   "kind": "furniture",
+   "item": "item:kamidana",
+   "description": "A household shrine shelf: a small offering each morning gives a little luck",
+   "used_by": []
+  },
+  {
+   "block": "block:kotatsu",
+   "kind": "furniture",
+   "item": "item:kotatsu",
+   "description": "A low table with a quilt and a heater; sitting at it in winter clears the cold",
+   "used_by": []
+  },
+  {
+   "block": "block:lantern_string",
+   "kind": "furniture",
+   "item": "item:lantern_string",
+   "description": "Festival lanterns on a string across a room or balcony",
+   "used_by": []
+  },
+  {
+   "block": "block:laundry_line",
+   "kind": "furniture",
+   "item": "item:laundry_line",
+   "description": "A line of washing across the balcony",
+   "used_by": []
+  },
+  {
+   "block": "block:leaf_banner",
+   "kind": "furniture",
+   "item": "item:leaf_banner",
+   "description": "A cloth banner with the Leaf's mark; the heart of the Leaf set",
+   "used_by": []
+  },
+  {
+   "block": "block:low_desk",
+   "kind": "furniture",
+   "item": "item:low_desk",
+   "description": "A low desk for letters and study",
+   "used_by": []
+  },
+  {
+   "block": "block:low_table",
+   "kind": "furniture",
+   "item": "item:low_table",
+   "description": "A chabudai: meals here count as a proper sit-down meal",
+   "used_by": [
+    "shop:tea_house",
+    "shop:tea_house_rival"
+   ]
+  },
+  {
+   "block": "block:mailbox",
+   "kind": "furniture",
+   "item": "item:mailbox",
+   "description": "Letters and clan summons arrive here in the morning",
+   "used_by": []
+  },
+  {
+   "block": "block:meditation_mat",
+   "kind": "furniture",
+   "item": "item:meditation_mat",
+   "description": "Meditate here: chakra comes back a little faster",
+   "used_by": []
+  },
+  {
+   "block": "block:memorial_altar",
+   "kind": "furniture",
+   "item": "item:memorial_altar",
+   "description": "A family altar for those who are gone",
+   "used_by": []
+  },
+  {
+   "block": "block:moving_crate",
+   "kind": "furniture",
+   "item": "item:moving_crate",
+   "description": "Furniture and a chest's contents packed on moving day (friends help; moving is free)",
+   "used_by": []
+  },
+  {
+   "block": "block:noren",
+   "kind": "furniture",
+   "item": "item:noren",
+   "description": "A split cloth curtain for a doorway",
+   "used_by": []
+  },
+  {
+   "block": "block:paper_lantern",
+   "kind": "furniture",
+   "item": "item:paper_lantern",
+   "description": "A hanging lantern; any colour",
+   "used_by": [
+    "shop:festival_stalls"
+   ]
+  },
+  {
+   "block": "block:pet_bed",
+   "kind": "furniture",
+   "item": "item:pet_bed",
+   "description": "Where your pet sleeps when it is not at the foot of your bed",
+   "used_by": [
+    "shop:cat_shelter"
+   ]
+  },
+  {
+   "block": "block:pet_bowl",
+   "kind": "furniture",
+   "item": "item:pet_bowl",
+   "description": "Fill it, and your pet eats at home",
+   "used_by": []
+  },
+  {
+   "block": "block:photo_frame",
+   "kind": "furniture",
+   "item": "item:photo_frame",
+   "description": "Frames one photograph",
+   "used_by": []
+  },
+  {
+   "block": "block:pinboard",
+   "kind": "furniture",
+   "item": "item:pinboard",
+   "description": "A cork board for notes, maps and clues pinned to the wall",
+   "used_by": []
+  },
+  {
+   "block": "block:poster",
+   "kind": "furniture",
+   "item": "item:poster",
+   "description": "A paper poster: the Rock, a ramen ad, the Academy, a festival",
+   "used_by": []
+  },
+  {
+   "block": "block:potted_bonsai",
+   "kind": "furniture",
+   "item": "item:potted_bonsai",
+   "description": "A small pine, very old and very patient",
+   "used_by": []
+  },
+  {
+   "block": "block:ramen_cup_tower",
+   "kind": "furniture",
+   "item": "item:ramen_cup_tower",
+   "description": "A teetering stack of instant ramen cups. A monument",
+   "used_by": []
+  },
+  {
+   "block": "block:rug",
+   "kind": "furniture",
+   "item": "item:rug",
+   "description": "A cotton rug in any colour",
+   "used_by": []
+  },
+  {
+   "block": "block:scroll_shelf",
+   "kind": "furniture",
+   "item": "item:scroll_shelf",
+   "description": "Shelves of scroll cubbies: holds 9 scrolls and books on display",
+   "used_by": []
+  },
+  {
+   "block": "block:sealing_desk",
+   "kind": "furniture",
+   "item": "item:sealing_desk",
+   "description": "A low desk with an ink stone and seal plates: storage scrolls and advanced tags",
+   "used_by": [
+    "station:sealing"
+   ]
+  },
+  {
+   "block": "block:shoe_rack",
+   "kind": "furniture",
+   "item": "item:shoe_rack",
+   "description": "For the entryway",
+   "used_by": []
+  },
+  {
+   "block": "block:shogi_board",
+   "kind": "furniture",
+   "item": "item:shogi_board",
+   "description": "A thick wooden board: play a resident who sits with you",
+   "used_by": []
+  },
+  {
+   "block": "block:shoji_screen",
+   "kind": "furniture",
+   "item": "item:shoji_screen",
+   "description": "A paper sliding screen to divide a room",
+   "used_by": []
+  },
+  {
+   "block": "block:small_forge",
+   "kind": "furniture",
+   "item": "item:small_forge",
+   "description": "A forge and anvil for your apartment: thrown tools and repairs, up to a fine grade",
+   "used_by": []
+  },
+  {
+   "block": "block:step_tansu",
+   "kind": "furniture",
+   "item": "item:step_tansu",
+   "description": "A staircase chest: storage, and it climbs to a loft",
+   "used_by": []
+  },
+  {
+   "block": "block:stone_lantern",
+   "kind": "furniture",
+   "item": "item:stone_lantern",
+   "description": "A tōrō for a garden or a balcony",
+   "used_by": []
+  },
+  {
+   "block": "block:tailor_table",
+   "kind": "furniture",
+   "item": "item:tailor_table",
+   "description": "Sewing frame and dye pots: recolour and alter your outfits at home",
+   "used_by": [
+    "shop:tailor",
+    "station:tailoring"
+   ]
+  },
+  {
+   "block": "block:tansu_chest",
+   "kind": "furniture",
+   "item": "item:tansu_chest",
+   "description": "A stepped wooden chest of drawers: storage like a chest",
+   "used_by": []
+  },
+  {
+   "block": "block:target_board",
+   "kind": "furniture",
+   "item": "item:target_board",
+   "description": "Throw at it at home: a little training XP a day",
+   "used_by": []
+  },
+  {
+   "block": "block:tatami",
+   "kind": "furniture",
+   "item": "item:tatami",
+   "description": "A woven floor mat laid over the boards",
+   "used_by": []
+  },
+  {
+   "block": "block:tea_kettle",
+   "kind": "furniture",
+   "item": "item:tea_kettle",
+   "description": "An iron kettle: brew tea at home",
+   "used_by": []
+  },
+  {
+   "block": "block:tea_set",
+   "kind": "furniture",
+   "item": "item:tea_set",
+   "description": "A pot and cups on a tray; brew tea at home",
+   "used_by": [
+    "shop:tea_house",
+    "shop:tea_house_rival"
+   ]
+  },
+  {
+   "block": "block:tea_table",
+   "kind": "furniture",
+   "item": "item:tea_table",
+   "description": "A low lacquered table for the tea set",
+   "used_by": []
+  },
+  {
+   "block": "block:towel_rack",
+   "kind": "furniture",
+   "item": "item:towel_rack",
+   "description": "A bamboo towel rack",
+   "used_by": []
+  },
+  {
+   "block": "block:training_dummy",
+   "kind": "furniture",
+   "item": "item:training_dummy",
+   "description": "Practise combos at home: a little training XP a day",
+   "used_by": []
+  },
+  {
+   "block": "block:umbrella_stand",
+   "kind": "furniture",
+   "item": "item:umbrella_stand",
+   "description": "A ceramic stand for wet umbrellas",
+   "used_by": []
+  },
+  {
+   "block": "block:wall_clock",
+   "kind": "furniture",
+   "item": "item:wall_clock",
+   "description": "Shows the time and the day; chimes at six",
+   "used_by": []
+  },
+  {
+   "block": "block:wardrobe_cabinet",
+   "kind": "furniture",
+   "item": "item:wardrobe_cabinet",
+   "description": "Hang your outfits here: change clothes at home from everything you own",
+   "used_by": []
+  },
+  {
+   "block": "block:weapon_rack",
+   "kind": "furniture",
+   "item": "item:weapon_rack",
+   "description": "Holds and shows four weapons",
+   "used_by": [
+    "shop:weapon_shop"
+   ]
+  },
+  {
+   "block": "block:weight_rack",
+   "kind": "furniture",
+   "item": "item:weight_rack",
+   "description": "Stone weights for strength training at home",
+   "used_by": []
+  },
+  {
+   "block": "block:wind_chime",
+   "kind": "furniture",
+   "item": "item:wind_chime",
+   "description": "A glass furin that rings in a breeze",
+   "used_by": []
+  },
+  {
+   "block": "block:wooden_bed",
+   "kind": "furniture",
+   "item": "item:wooden_bed",
+   "description": "A raised bed with a carved frame",
+   "used_by": []
+  },
+  {
+   "block": "block:workbench",
+   "kind": "furniture",
+   "item": "item:workbench",
+   "description": "Crafting station: smoke bombs, wire, tags, paper bombs (Genin), pouches and furniture",
+   "used_by": [
+    "shop:kinoshita_yard",
+    "station:workbench"
+   ]
+  },
+  {
+   "block": "block:zabuton",
+   "kind": "furniture",
+   "item": "item:zabuton",
+   "description": "A square cushion; sit on it",
+   "used_by": [
+    "shop:tea_house",
+    "shop:tea_house_rival"
+   ]
+  },
+  {
+   "block": "block:zaisu",
+   "kind": "furniture",
+   "item": "item:zaisu",
+   "description": "A legless chair with a back",
+   "used_by": []
+  },
+  {
+   "block": "block:arranging_table",
+   "kind": "interior",
+   "item": null,
+   "description": "A table with shears and wrapping paper for bouquets",
+   "used_by": [
+    "shop:flower_shop"
+   ]
+  },
+  {
+   "block": "block:barbecue_table",
+   "kind": "interior",
+   "item": null,
+   "description": "A table with a sunken grill; a squad sits round it (Seats on both sides)",
+   "used_by": [
+    "shop:barbecue_house"
+   ]
+  },
+  {
+   "block": "block:barber_chair",
+   "kind": "interior",
+   "item": null,
+   "description": "A barber's chair facing a mirror; a Seat. Right-click with the barber present opens the restyle screen",
+   "used_by": [
+    "shop:barber"
+   ]
+  },
+  {
+   "block": "block:bath_counter",
+   "kind": "interior",
+   "item": null,
+   "description": "The bath house's raised front desk",
+   "used_by": [
+    "shop:bath_house"
+   ]
+  },
+  {
+   "block": "block:bench_red_cloth",
+   "kind": "interior",
+   "item": null,
+   "description": "A bench draped in red cloth under a parasol; a Seat",
+   "used_by": [
+    "shop:dango_stand"
+   ]
+  },
+  {
+   "block": "block:bench_seat",
+   "kind": "interior",
+   "item": null,
+   "description": "A plain bench seat for booths; a Seat",
+   "used_by": [
+    "shop:barbecue_house"
+   ]
+  },
+  {
+   "block": "block:catalogue_lectern",
+   "kind": "interior",
+   "item": null,
+   "description": "A lectern with the furniture shop's catalogue: order pieces not on the floor",
+   "used_by": [
+    "shop:furniture_shop"
+   ]
+  },
+  {
+   "block": "block:cracker_grill",
+   "kind": "interior",
+   "item": null,
+   "description": "A charcoal grill pressing rice crackers",
+   "used_by": [
+    "shop:senbei_shop"
+   ]
+  },
+  {
+   "block": "block:dango_grill",
+   "kind": "interior",
+   "item": null,
+   "description": "A charcoal grill with dango skewers, smoking",
+   "used_by": [
+    "shop:dango_stand"
+   ]
+  },
+  {
+   "block": "block:ema_rack",
+   "kind": "interior",
+   "item": null,
+   "description": "The wish-plaque rack; hangs the plaques players write",
+   "used_by": [
+    "shop:shrine_office"
+   ]
+  },
+  {
+   "block": "block:festival_stall",
+   "kind": "interior",
+   "item": null,
+   "description": "A festival yatai: a wheeled stall with a lantern-hung roof",
+   "used_by": [
+    "shop:festival_stalls",
+    "shop:exam_stalls"
+   ]
+  },
+  {
+   "block": "block:fitting_screen",
+   "kind": "interior",
+   "item": null,
+   "description": "A folding screen to change behind: try an outfit on before buying",
+   "used_by": [
+    "shop:tailor"
+   ]
+  },
+  {
+   "block": "block:goldfish_pool",
+   "kind": "interior",
+   "item": null,
+   "description": "A shallow tub of goldfish for the scooping game",
+   "used_by": [
+    "shop:festival_stalls"
+   ]
+  },
+  {
+   "block": "block:herb_drying_rack",
+   "kind": "interior",
+   "item": null,
+   "description": "Bamboo racks of drying herbs",
+   "used_by": [
+    "shop:pharmacy"
+   ]
+  },
+  {
+   "block": "block:hospital_counter",
+   "kind": "interior",
+   "item": null,
+   "description": "The dispensary's counter window",
+   "used_by": [
+    "shop:hospital_dispensary"
+   ]
+  },
+  {
+   "block": "block:kennel",
+   "kind": "interior",
+   "item": null,
+   "description": "A ninken kennel with a gate; pups for adoption wait here",
+   "used_by": [
+    "shop:inuzuka_clinic"
+   ]
+  },
+  {
+   "block": "block:locker_shelf",
+   "kind": "interior",
+   "item": null,
+   "description": "Wooden shoe and clothes lockers",
+   "used_by": [
+    "shop:bath_house"
+   ]
+  },
+  {
+   "block": "block:lumber_rack",
+   "kind": "interior",
+   "item": null,
+   "description": "A rack of planks and logs at the Kinoshita yard",
+   "used_by": [
+    "shop:kinoshita_yard"
+   ]
+  },
+  {
+   "block": "block:market_stall",
+   "kind": "interior",
+   "item": null,
+   "description": "An open stall: a trestle table under an awning, for Market Day and the fish stall",
+   "used_by": [
+    "shop:fishmonger",
+    "shop:market_day_stalls",
+    "shop:exam_stalls"
+   ]
+  },
+  {
+   "block": "block:medicine_drawer_wall",
+   "kind": "interior",
+   "item": null,
+   "description": "A wall of a hundred small medicine drawers (hyakumi-dansu)",
+   "used_by": [
+    "shop:pharmacy",
+    "shop:hospital_dispensary"
+   ]
+  },
+  {
+   "block": "block:menu_board",
+   "kind": "interior",
+   "item": null,
+   "description": "A wall board of wooden menu slats; shows the shop's price list on right-click",
+   "used_by": [
+    "shop:ichiraku",
+    "shop:grocer",
+    "shop:dango_stand",
+    "shop:tea_house",
+    "shop:tea_house_rival",
+    "shop:barbecue_house"
+   ]
+  },
+  {
+   "block": "block:noodle_kitchen",
+   "kind": "interior",
+   "item": null,
+   "description": "The broth pots, noodle board and steam behind Ichiraku's counter (decor, animated steam)",
+   "used_by": [
+    "shop:ichiraku"
+   ]
+  },
+  {
+   "block": "block:offering_box",
+   "kind": "interior",
+   "item": null,
+   "description": "A slatted offering box with a bell rope above it: the shrine offering service",
+   "used_by": [
+    "shop:shrine_office"
+   ]
+  },
+  {
+   "block": "block:omikuji_rack",
+   "kind": "interior",
+   "item": null,
+   "description": "Strings for tying bad fortunes",
+   "used_by": [
+    "shop:shrine_office"
+   ]
+  },
+  {
+   "block": "block:parasol",
+   "kind": "interior",
+   "item": null,
+   "description": "A tall red paper parasol (wagasa)",
+   "used_by": [
+    "shop:dango_stand",
+    "shop:market_day_stalls"
+   ]
+  },
+  {
+   "block": "block:pawn_counter_grille",
+   "kind": "interior",
+   "item": null,
+   "description": "A counter behind wooden bars with a small window; the pawn shop's screen opens here",
+   "used_by": [
+    "shop:pawn_shop"
+   ]
+  },
+  {
+   "block": "block:quench_trough",
+   "kind": "interior",
+   "item": null,
+   "description": "A water trough beside the forge; hisses when a blade is quenched",
+   "used_by": [
+    "shop:weapon_shop",
+    "station:smithy"
+   ]
+  },
+  {
+   "block": "block:ramen_counter",
+   "kind": "interior",
+   "item": null,
+   "description": "Ichiraku's long bar counter with a raised serving ledge; dishes sit on it (VF tavern table rules)",
+   "used_by": [
+    "shop:ichiraku"
+   ]
+  },
+  {
+   "block": "block:ramen_stool",
+   "kind": "interior",
+   "item": "item:ichiraku_stool",
+   "description": "A round-topped stool that faces the counter; a VF Seat for residents and the player",
+   "used_by": [
+    "shop:ichiraku"
+   ]
+  },
+  {
+   "block": "block:rice_sack_pile",
+   "kind": "interior",
+   "item": null,
+   "description": "Stacked straw rice sacks",
+   "used_by": [
+    "shop:grocer"
+   ]
+  },
+  {
+   "block": "block:sawhorse",
+   "kind": "interior",
+   "item": null,
+   "description": "A pair of sawhorses with a half-cut board",
+   "used_by": [
+    "shop:kinoshita_yard"
+   ]
+  },
+  {
+   "block": "block:shop_counter",
+   "kind": "interior",
+   "item": null,
+   "description": "A waist-high wooden shop counter, straight and corner shapes; the keeper stands behind it and right-clicking it opens the shop screen",
+   "used_by": [
+    "shop:grocer",
+    "shop:dango_stand",
+    "shop:barbecue_house",
+    "shop:weapon_shop",
+    "shop:tool_shop",
+    "shop:scroll_shop",
+    "shop:flower_shop",
+    "shop:furniture_shop",
+    "shop:kinoshita_yard",
+    "shop:tailor",
+    "shop:pharmacy",
+    "shop:bookshop",
+    "shop:haruno_store",
+    "shop:academy_supply",
+    "shop:inuzuka_clinic",
+    "shop:cat_shelter",
+    "shop:hagane_metalworks",
+    "shop:painters_studio",
+    "shop:senbei_shop",
+    "shop:barber"
+   ]
+  },
+  {
+   "block": "block:shop_noren",
+   "kind": "interior",
+   "item": null,
+   "description": "A short split curtain over a shop door, in the shop's colour with its name painted (a variant per shop)",
+   "used_by": [
+    "shop:ichiraku@ramen_noren",
+    "shop:grocer@grocer_noren",
+    "shop:fishmonger@fish_noren",
+    "shop:tea_house@tea_noren",
+    "shop:tea_house_rival@tea_noren",
+    "shop:barbecue_house@barbecue_noren",
+    "shop:weapon_shop@weapon_noren",
+    "shop:tool_shop@tools_noren",
+    "shop:scroll_shop@scroll_noren",
+    "shop:flower_shop@flower_noren",
+    "shop:furniture_shop@furniture_noren",
+    "shop:tailor@tailor_noren",
+    "shop:pawn_shop@pawn_noren",
+    "shop:bath_house@bath_noren",
+    "shop:pharmacy@medicine_noren",
+    "shop:bookshop@books_noren",
+    "shop:haruno_store@general_noren",
+    "shop:senbei_shop@sweets_noren",
+    "shop:barber@barber_noren"
+   ]
+  },
+  {
+   "block": "block:target_game_booth",
+   "kind": "interior",
+   "item": null,
+   "description": "A target-throwing game: three shuriken, painted targets",
+   "used_by": [
+    "shop:festival_stalls"
+   ]
+  },
+  {
+   "block": "block:tea_counter",
+   "kind": "interior",
+   "item": null,
+   "description": "A low tea-house counter with a kettle on a brazier",
+   "used_by": [
+    "shop:tea_house",
+    "shop:tea_house_rival"
+   ]
+  },
+  {
+   "block": "block:vet_table",
+   "kind": "interior",
+   "item": null,
+   "description": "A veterinary table",
+   "used_by": [
+    "shop:inuzuka_clinic"
+   ]
+  },
+  {
+   "block": "block:wash_stool",
+   "kind": "interior",
+   "item": null,
+   "description": "A low wooden stool and bucket at the washing area; a Seat",
+   "used_by": [
+    "shop:bath_house"
+   ]
+  },
+  {
+   "block": "block:anvil",
+   "kind": "station",
+   "item": null,
+   "description": "A Japanese block anvil with hammers: the smithy station's screen opens here",
+   "used_by": [
+    "shop:weapon_shop",
+    "shop:hagane_metalworks",
+    "station:smithy"
+   ]
+  },
+  {
+   "block": "block:calligraphy_desk",
+   "kind": "station",
+   "item": null,
+   "description": "The scroll shop's low desk with ink stone and seal plates: the public sealing desk",
+   "used_by": [
+    "shop:scroll_shop"
+   ]
+  },
+  {
+   "block": "block:forge",
+   "kind": "station",
+   "item": null,
+   "description": "The weapon shop's forge hearth and bellows: the smithy station's heat, glows while working",
+   "used_by": [
+    "shop:weapon_shop",
+    "station:smithy"
+   ]
+  },
+  {
+   "block": "block:whetstone_wheel",
+   "kind": "station",
+   "item": null,
+   "description": "A pedal grindstone: sharpening and repair at the smithy",
+   "used_by": [
+    "shop:weapon_shop"
+   ]
+  },
+  {
+   "block": "block:easel_canvas",
+   "kind": "vf",
+   "item": null,
+   "description": "VF's painter workstation, reused for the painters' studio",
+   "used_by": [
+    "shop:painters_studio"
+   ]
+  }
+ ]
+}

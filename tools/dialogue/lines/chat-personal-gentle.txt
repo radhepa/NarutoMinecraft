@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for gentle residents. Soft-spoken, kind to animals and children.
+#! tags: personality=gentle
+
+## chat.personal  fn=reveal_character
+A soft one. I found a baby sparrow under the eaves and put it back in the nest. The mother came back. I was so relieved.
+I spent the morning brushing the old dog at the clinic. It falls asleep halfway through. Every time.
+The little ones on my street brought me dandelions. I put them in a cup on the windowsill. They'll wilt. I don't mind.
+I've been reading to my grandmother. She falls asleep in the middle of a chapter, and I just keep going softly.
+The shrine's moss garden needed watering. You have to do it gently, or the moss gets upset. That's what I think, anyway.
+A butterfly landed on my sleeve at the market and stayed for a whole street. I walked very slowly.
+My daughter's learning to braid. She practises on my hair every evening. I look very strange. I love it.
+I helped a child who was crying by the river. They'd lost a sandal. We found it together. Small things matter.
+I made rice porridge for my husband. He's not ill, I just thought he looked tired. He ate two bowls.
+There's a little dish of water by my door for the stray cats. Four come by now. They take turns, very politely.
+I spent the afternoon pressing flowers for a friend who's moving away. Each one's from somewhere we went together.
+I've been feeding the koi in the shrine pond. There's a shy one that won't come up unless the others leave.
+There's an old tortoise in the Inuzuka garden that likes strawberries. I bring one every week. It knows my steps now.
+I sang the neighbour's baby to sleep. The baby's mother cried a little. Three nights without sleep, she said.
+Loud days aren't for me. Today was quiet. I spent it repotting violets.
+I found a worm on the path and moved it to the grass. It's silly, I know. But the path is no place for a worm.
+My son brought home a frog. We named it, fed it, and let it go by the pond. He was very brave about saying goodbye.
+I sat with an old woman at the hospital who had no visitors. We talked about plums for an hour.
+A puppy at the clinic has a new blanket. I knitted it. Too small, too pink, and the puppy adores it.
+I made tea for the builders working on our lane. They're so loud, but they're nice. They said thank you three times.
+There's a crow that brings me shiny things in exchange for bread. Today, a button. I'm keeping them all.
+Evenings, I walk under the cherry trees. Even when they're not blooming, they're good company.
+I spent the day helping my aunt make bean paste. My arms are tired. My heart is full.
+A little girl asked me if flowers feel cold. I told her they wear their petals like blankets. She looked so satisfied.
+The children in the hospital get letters from me. Little stories about animals. One wrote back with a drawing of a rabbit.
+I don't cook much. But I make good tea. People come by just for the tea. I think. Or maybe the cat.
+I cried at the fishmonger's today. A crab escaped and I cheered for it. It was caught again. I paid for it and let it go.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I work at the Inuzuka clinic, cleaning the kennels. The puppies are all teeth. I don't mind. I come home very happy.
+I look after the little ones at the day house while their parents work. Today we drew clouds. Eleven clouds. All lovely.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+I'm a medic. Today I set a broken arm and held a scared child's hand. I like the second part better.
+On my last mission I found an injured fox in a trap. My squad waited while I freed it. They're good people.
+I trained with the ninken today. I'm not good at the fighting part, but the dogs like me. That counts for something.
+
+## chat.personal  fn=worldbuild
+The shrine lets anyone leave a small bowl of rice for the birds on the first day of each month. It's lovely to see.
+The Inuzuka clinic treats any animal, not just ninken. I've seen them bandage a duck.
+On graduation day, the parents tie paper cranes to the tree by the Academy swing. For luck. It looks so pretty.
+
+## chat.personal  fn=hook
+There's a kitten stuck under the bridge on the river side. It's too scared to come out to me. Maybe it'd come to you.
+My grandmother's hairpin fell between the floorboards at the tea house. It's very old. I'm afraid to ask them to lift the floor.
+The baby birds under the shrine eaves keep falling out. I've been putting them back, but I'm not tall enough for the last one.
+
+## chat.personal  fn=filler
+Gentle, thank you. I hope yours is too.
+It's been nice. Quiet and nice.
+
+## chat.personal  fn=reveal_character
+I mended the torn page of a child's picture book today. The story's about a bear who's afraid of snow.
+The old horse at the farm gate likes having its ears scratched. I stop every morning. I'm late most days now.
+I left a cup of warm tea for the night guard on my street. The cup came back washed, with a little flower in it.
+My husband's hands are rough from work, so I made a salve with beeswax and chamomile. He pretends not to use it.
+Swallows nesting under the bridge: nine nests. I hope they all come back next spring.

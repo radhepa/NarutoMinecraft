@@ -50,7 +50,7 @@
   "first": {
    "objective": {
     "type": "deliver",
-    "item": "parcel",
+    "item": "item:quest_parcel",
     "to": "slot:a"
    },
    "branch": [
@@ -74,7 +74,7 @@
   "second": {
    "objective": {
     "type": "deliver",
-    "item": "parcel",
+    "item": "item:quest_parcel",
     "to": "slot:b"
    },
    "branch": [
@@ -97,7 +97,7 @@
   "third": {
    "objective": {
     "type": "deliver",
-    "item": "parcel",
+    "item": "item:quest_parcel",
     "to": "slot:c"
    },
    "next": "report"

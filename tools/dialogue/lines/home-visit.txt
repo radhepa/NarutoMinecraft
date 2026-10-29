@@ -1,0 +1,511 @@
+# Visitors react to the player's flat (HOME.md §5, §7, §8, §9): at most three remarks a visit. kept_gift and the
+# photos are once per gift or photo version; the rest come round again, so the file cycles. Personality variants
+# ride on the key's last segment. Spoken by children, teens and adults alike: keep the address neutral.
+#! kind: cycle
+#! fn: react
+
+# == kept gifts ====================================================================================
+## home.visit.kept_gift  fn=callback,react
+You kept the {gift}! And it's on the shelf, where people can see it. [HEART]
+Is that my {gift}? Up there with the good things? I'm a bit proud, actually.
+Don't think I missed the {gift}. I was worried it would end up at the back of a drawer.
+The {gift} looks better here than it ever did in the shop window.
+Every time I visit I'm going to check the {gift} is still there. Just so you know.
+My {gift}, on show! I nearly bought a second one to keep it company.
+## home.visit.kept_gift.warmhearted  fn=callback,react
+You gave the {gift} pride of place. Come here, I'm hugging you, no arguments. [HEART]
+## home.visit.kept_gift.shy  fn=callback,react
+That's... the {gift}. You kept it out. I didn't think... thank you. [BLUSH]
+## home.visit.kept_gift.proud  fn=callback,react
+The {gift}, front and centre. Naturally. I do choose well.
+## home.visit.kept_gift.playful  fn=callback,react
+Hey, the {gift}! Front row! Did you dust it before I came, or is it always that shiny?
+## home.visit.kept_gift.stern  fn=callback,react
+You kept the {gift}, and kept it clean. Good. Things given should be looked after.
+## home.visit.kept_gift.reserved  fn=callback,react
+The {gift}. ...Hm. Good spot for it. [DOTS]
+
+# == photos ========================================================================================
+## home.visit.photo.class  fn=callback,react
+Our class photo! Look at us, squinting into the sun on the Academy steps.
+Someone in the back row is pulling a face. I know who. I'm not telling.
+You hung the class photo! My copy is still rolled up under the bed.
+Everyone's standing so stiff. We were told not to move and took it far too seriously.
+## home.visit.photo.class.playful  fn=callback,react
+That's me blinking. I blinked on purpose. It's art, {player}.
+## home.visit.photo.class.meticulous  fn=callback,react
+The frame's a hair crooked. There. Now the whole class is level.
+## home.visit.photo.class.gentle  fn=callback,react
+Everyone looks so small in this. It wasn't even that long ago. [HEART]
+## home.visit.photo.class.curious  fn=callback,react
+Whose hand is that, poking in at the corner? It's bothered me since the day it was taken. [QUESTION]
+## home.visit.photo.class.fiery  fn=callback,react
+Look at that fist in the air! Best class the Academy ever had, I said so then and I say so now! [EXCLAIM]
+## home.visit.photo.class.thoughtful  fn=callback,react
+Funny. A photo makes a class look settled, as if we already knew each other back then.
+
+## home.visit.photo.graduation  fn=callback,react
+Graduation day. Your headband's on a little crooked in this. It suits you.
+I still remember how heavy the headband felt that morning. Look at those faces.
+You framed it! Good. That day was worth a nail in the wall.
+Terrified and thrilled at once, every one of us. That's graduation, I suppose.
+## home.visit.photo.graduation.proud  fn=callback,react
+Everyone in that photo earned the headband. Don't let anyone forget it.
+## home.visit.photo.graduation.warmhearted  fn=callback,react
+Look at you, all shining forehead and big grin. I could cry all over again. [HEART]
+## home.visit.photo.graduation.stern  fn=callback,react
+Straight backs, all of us. Shame about the scuffed sandals. Polish them next time.
+## home.visit.photo.graduation.shy  fn=callback,react
+I nearly didn't stand in the picture. I'm glad I did. ...I'm on the end, there.
+## home.visit.photo.graduation.imaginative  fn=callback,react
+The light's all gold in this. Like the whole day had been dipped in honey.
+## home.visit.photo.graduation.steadfast  fn=callback,react
+That was the day we promised to look out for each other. I meant it. I still do.
+
+## home.visit.photo.squad  fn=callback,react
+The squad photo, from the very first day. Before any of us knew what we were in for.
+Everyone in this one is trying so hard to look like a proper team. It's sweet.
+You hung the squad photo where you see it from the door. Good place for it.
+The day the squad was made. Doesn't it feel longer ago than it is?
+## home.visit.photo.squad.fiery  fn=callback,react
+Look at that! The team that's going to turn the Leaf upside down! Or help it. Mostly help it.
+## home.visit.photo.squad.stern  fn=callback,react
+First day. Sloppy stances, the lot of us. We've come a long way since.
+## home.visit.photo.squad.playful  fn=callback,react
+Bet you can't guess who stepped on whose foot right before it was taken.
+## home.visit.photo.squad.protective  fn=callback,react
+Every face in that frame has come home from every mission so far. Let's keep it that way.
+## home.visit.photo.squad.reserved  fn=callback,react
+Hm. We look young. [DOTS]
+## home.visit.photo.squad.adventurous  fn=callback,react
+I wish it showed what came after. The roads, the missions. That's the real picture.
+
+## home.visit.photo.first_c_rank  fn=callback,react
+Our first C-rank! Look at the mud on everyone's sandals.
+That's the road out past the gate. I can almost smell the campfire.
+Nobody in this photo had slept properly in two days. You can tell.
+You put the road photo up! Every time I see it I want to pack a bag.
+## home.visit.photo.first_c_rank.adventurous  fn=callback,react
+Furthest past the wall any of us had ever been. I'd go back tomorrow.
+## home.visit.photo.first_c_rank.pragmatic  fn=callback,react
+Look at the size of that pack. Half of what was in it never came out. Lesson learned.
+## home.visit.photo.first_c_rank.imaginative  fn=callback,react
+The sky behind us looks painted on. It really was that blue, wasn't it?
+## home.visit.photo.first_c_rank.protective  fn=callback,react
+I counted heads every morning on that road. All present. Good.
+## home.visit.photo.first_c_rank.playful  fn=callback,react
+Someone's got a leaf stuck in their hair in this. It's you. It was always you.
+## home.visit.photo.first_c_rank.steadfast  fn=callback,react
+A real mission, done properly, start to finish. That's worth a frame.
+
+## home.visit.photo.leaf_festival  fn=callback,react
+The festival photo! Look at all the lanterns behind us.
+That was the night the goldfish game nearly beat us. Look at the little bags in our hands.
+Everyone's got sauce somewhere in this one. Festival rules.
+I love this one. You can see the first fireworks going up over the Hokage Rock.
+## home.visit.photo.leaf_festival.playful  fn=callback,react
+Look, I'm wearing the fox mask on the back of my head. The height of fashion.
+## home.visit.photo.leaf_festival.warmhearted  fn=callback,react
+Everyone's smiling. Even the ones who never smile. What a night that was. [HEART]
+## home.visit.photo.leaf_festival.imaginative  fn=callback,react
+All those lanterns look like a river of tiny suns running behind us.
+## home.visit.photo.leaf_festival.curious  fn=callback,react
+Who actually took this, in the end? I've asked everyone and they all say someone else. [QUESTION]
+## home.visit.photo.leaf_festival.shy  fn=callback,react
+I'm half behind the lantern pole. I didn't mean to be. ...I like it anyway.
+## home.visit.photo.leaf_festival.fiery  fn=callback,react
+Loudest night of the year, and I was the loudest thing in it! [EXCLAIM]
+
+## home.visit.photo.chunin_exams  fn=callback,react
+The Chunin Exams. A week I'll never forget, whatever the board said at the end.
+We all look so tired in this. Tired, and somehow proud.
+You hung this one. Good. Whatever happened in that arena, we came out of it together.
+Bandages, bruises and grins. The whole exam fits in one picture.
+## home.visit.photo.chunin_exams.proud  fn=callback,react
+We stood in front of the whole village that week. Look how straight we're standing still.
+## home.visit.photo.chunin_exams.stern  fn=callback,react
+Every bruise in that picture taught somebody something. Remember what yours taught you.
+## home.visit.photo.chunin_exams.gentle  fn=callback,react
+I remember holding my breath for you in the stands. Look, you can see the bandage on your arm.
+## home.visit.photo.chunin_exams.fiery  fn=callback,react
+I can still hear the crowd! I swear the whole stadium was shaking! [EXCLAIM]
+## home.visit.photo.chunin_exams.thoughtful  fn=callback,react
+Odd, how a week can feel like a year. That photo has the whole year in it.
+## home.visit.photo.chunin_exams.protective  fn=callback,react
+Everyone walked out of that arena on their own feet. That's what I see when I look at this.
+
+# == mess ==========================================================================================
+## home.visit.mess.dont_mind
+Don't apologise for the mess. It looks like somebody actually lives here.
+Shove the scrolls over, I'll sit on the floor. I like it like this.
+Messy? This is nothing. You should see my room.
+A few dishes never hurt anybody. Sit down, I didn't come to inspect.
+## home.visit.mess.dont_mind.playful
+Is the laundry pile a fort? Can I be in the fort?
+## home.visit.mess.dont_mind.adventurous
+Looks like camp after a long day on the road. Feels like home to me.
+## home.visit.mess.dont_mind.imaginative
+All those things lying about, it's like the room is halfway through telling a story.
+## home.visit.mess.dont_mind.gentle
+Leave it, leave it. You've had a long week. The dishes will still be there tomorrow.
+## home.visit.mess.dont_mind.reserved
+Mess. Don't care. Where's the cushion?
+## home.visit.mess.dont_mind.fiery
+Who cares about dishes! Tidying's for people with nothing better to do!
+
+## home.visit.mess.fussy
+How many cups is that on the windowsill? No, don't tell me. I'll count.
+I'm not saying anything. I'm just going to stand here and look at the sink.
+Your floor is under there somewhere. I've seen it. Once.
+I'll make you a deal: I'll sit down when I can see the cushion.
+## home.visit.mess.fussy.meticulous
+Bowls, three. Cups, five. Socks, unpaired. I'm only noting it. For now.
+## home.visit.mess.fussy.stern
+A shinobi's kit is only as tidy as a shinobi's room. Wash those bowls before you sleep.
+## home.visit.mess.fussy.proud
+I'd never let my room look like this. Then again, I'd never let anyone see it if I did.
+## home.visit.mess.fussy.pragmatic
+One quick go at the sink and you'd sleep better. A few seconds. I'll time you.
+## home.visit.mess.fussy.warmhearted
+Right, sleeves up, I'm doing the dishes while we talk. Don't argue, it's no trouble.
+## home.visit.mess.fussy.protective
+You can't see the floor, and you'll trip in the dark. Clear a path to the door, at least.
+
+## home.visit.mess
+Long days lately? The flat looks like it's had them too.
+Mind the bowls by the door. I nearly went over on one.
+There's a sock on the lamp. I'm choosing not to ask.
+It looks like the place has been fighting back this week.
+## home.visit.mess.curious
+How does a chopstick end up on top of the cupboard? Genuinely, how? [QUESTION]
+## home.visit.mess.shy
+I'll just... sit here. On this bit. That's clear. It's fine.
+## home.visit.mess.thoughtful
+A busy room usually means a busy head. Everything all right, {player}?
+## home.visit.mess.steadfast
+Want a hand with this before I go? Two of us, it's done in no time.
+## home.visit.mess.playful
+I'm going to guess what you ate this week from the bowls alone. Ramen. Ramen. Ramen?
+## home.visit.mess.gentle
+It's cosy, in its way. A little crowded with dishes, that's all.
+
+# == ramen cups ====================================================================================
+## home.visit.ramen_cups
+One, two, three... {player}, the ramen cups are forming a tower.
+That's a lot of instant ramen. Have you eaten anything green this week?
+The cups are stacked so neatly, they're almost a piece of furniture.
+I can tell which flavour you like best. It's that one. All of those are that one.
+## home.visit.ramen_cups.warmhearted
+That settles it. I'm cooking for you next time, and there'll be vegetables in it.
+## home.visit.ramen_cups.fiery
+Look at that stack! That's dedication! I respect it! [EXCLAIM]
+## home.visit.ramen_cups.meticulous
+Six empty cups, all the same flavour. You could at least vary the order.
+## home.visit.ramen_cups.playful
+If you get to ten, we light a candle on top and call it a shrine.
+## home.visit.ramen_cups.stern
+You can't train on cup noodles alone. Rice. Fish. Greens. I'll be asking.
+## home.visit.ramen_cups.curious
+Do you rinse them first, or just stack them? Does the tower ever fall over in the night?
+
+# == a tidy flat ===================================================================================
+## home.visit.tidy
+Swept, dusted, dishes away. I'm impressed, {player}. Honestly.
+Look at this. Everything has a place and everything's in it.
+Did you clean before I came, or is it always like this? Either way, well done.
+Even the sandals by the door are lined up. You're showing off now.
+## home.visit.tidy.meticulous
+Scrolls in order, bowls stacked by size. ...By size! Oh, I could live here.
+## home.visit.tidy.stern
+Clean. Orderly. Keep it like this and your kit will follow.
+## home.visit.tidy.proud
+This is how a room should look. I'm glad one of my friends understands.
+## home.visit.tidy.pragmatic
+Tidy rooms waste less. Nothing lost, nothing bought twice. Smart.
+## home.visit.tidy.warmhearted
+It's so fresh in here! Mind you don't wear yourself out keeping it this nice.
+## home.visit.tidy.protective
+Clear floor, clear path to the door. Good. That's a safe room.
+
+# == decor sets ====================================================================================
+## home.visit.decor.leaf
+A Leaf banner and a paper lamp. It feels like the village lives in here with you.
+Tatami, a low table, a proper cushion. This is a real Leaf room.
+That folding screen is lovely. Simple things done well.
+The paper lamp makes the whole room glow. I could sit under it all night.
+## home.visit.decor.leaf.warmhearted
+It's just like the old houses by the river. Warm wood, warm light. I feel at home already.
+## home.visit.decor.leaf.steadfast
+Good, plain Leaf things. They'll last. This is a room you can rely on.
+## home.visit.decor.leaf.gentle
+I love the scroll shelf. All your things resting there, quietly. [HEART]
+## home.visit.decor.leaf.thoughtful
+A Leaf banner in a Leaf flat. Somehow it reads as a promise more than a decoration.
+## home.visit.decor.leaf.proud
+The village crest on your wall. Wear it like that on the outside too.
+## home.visit.decor.leaf.meticulous
+The tatami's laid the proper way, edges never meeting in a cross. Someone's done this right.
+
+## home.visit.decor.ramen
+A noren in your doorway! It's like walking into Ichiraku.
+Is that an Ichiraku stool? Did they let you have it, or... no, don't tell me.
+The ramen poster, the bowl shelf. You've built a little ramen stand in here.
+All you need now is the smell of pork broth and I'd never leave.
+## home.visit.decor.ramen.fiery
+A ramen corner! This is the best flat in the whole village and I won't hear otherwise! [EXCLAIM]
+## home.visit.decor.ramen.playful
+Two bowls, extra egg, please. What? There's a noren. It's a restaurant now.
+## home.visit.decor.ramen.warmhearted
+A home with a ramen shelf is a home where nobody goes hungry. I approve completely.
+## home.visit.decor.ramen.adventurous
+Every stand on the road out of the Leaf had a curtain like that. Takes me right back.
+## home.visit.decor.ramen.pragmatic
+A whole set of furniture in honour of noodles. ...It is a very good set, I'll give you that.
+## home.visit.decor.ramen.curious
+Where did you find a poster like that? Did the stand give it you? Does it come in other flavours? [QUESTION]
+
+## home.visit.decor.balcony
+The wind chime! I heard it from the stairs.
+A bench on the balcony. Can we sit out there? Just for a minute?
+The planter's coming on. Your balcony is turning into a little garden.
+Is that a bonsai? It's so small and so serious. I love it.
+## home.visit.decor.balcony.gentle
+The chime and the plants and the breeze. It's like the balcony is breathing. [HEART]
+## home.visit.decor.balcony.imaginative
+From your bench the rooftops look like waves. We could sail off over them.
+## home.visit.decor.balcony.shy
+Your balcony is... really nice. Quiet. Could I sit out there for a bit?
+## home.visit.decor.balcony.reserved
+Good view. Good bench. I'll be out there.
+## home.visit.decor.balcony.thoughtful
+Washing on the line and a bonsai beside it. The everyday and the patient, side by side.
+## home.visit.decor.balcony.adventurous
+You can see right over to the gate from here! Look, the road's just there!
+
+## home.visit.decor.training
+A target board in your flat! Do the neighbours mind the thunk?
+You've got a proper training corner. No excuses for skipping practice now.
+That dummy's taken some hits. Good.
+A meditation mat beside a weapon rack. Rest and steel in one corner. I like the balance.
+## home.visit.decor.training.proud
+Now this is a shinobi's flat. Show me what you can do on that board.
+## home.visit.decor.training.stern
+A weapon rack is only worth anything if the weapons on it are oiled. Are they?
+## home.visit.decor.training.fiery
+Spar with me! Right now! You've got a dummy, I've got energy, let's go! [EXCLAIM]
+## home.visit.decor.training.protective
+Good. The more you practise at home, the safer you'll be out there.
+## home.visit.decor.training.meticulous
+The target board is a finger too high for your reach. Lower it and your grouping will tighten.
+## home.visit.decor.training.playful
+I bet I can hit the middle of that board from your doorway. Bet me. Go on.
+
+## home.visit.decor.tea
+A proper tea set! Shall I pour, or would you like to?
+The hanging scroll and the flowers in the vase. It's very calm in this corner.
+Two zabuton by the tea table. You were expecting company.
+This corner smells faintly of green tea. It's lovely.
+## home.visit.decor.tea.thoughtful
+A tea corner is a place to think slowly. Everyone should have one, and few people do.
+## home.visit.decor.tea.stern
+The cups are set straight and the scroll hangs true. Good. Tea is a discipline too.
+## home.visit.decor.tea.gentle
+Shall we just sit here a while? We don't even need to talk.
+## home.visit.decor.tea.meticulous
+The ikebana is lovely. One stem is leaning, may I? ...There. Perfect.
+## home.visit.decor.tea.pragmatic
+A good tea set keeps you off the tea house bill. Clever, and pleasant with it.
+## home.visit.decor.tea.shy
+I like your tea corner. It's quiet. ...Can I sit on that cushion?
+
+## home.visit.decor.festival
+Lanterns strung up inside! It's festival night every night in here.
+Is that a goldfish from the festival? Look at it go!
+A festival drum. Please tell me you play it. Badly. Loudly.
+The masks on the wall keep watching me. In a friendly way.
+## home.visit.decor.festival.playful
+Mask on! Fans out! We're having a festival right here, right now!
+## home.visit.decor.festival.curious
+Which stall did that fox mask come from? The one by the shrine steps? I've wanted one for ages.
+## home.visit.decor.festival.imaginative
+With the lanterns lit it's like the whole festival came home with you and never left.
+## home.visit.decor.festival.warmhearted
+A goldfish! Have you named it? Are you feeding it enough? Let me see it eat.
+## home.visit.decor.festival.fiery
+A drum! Give me the sticks! The neighbours love a bit of rhythm, I'm sure of it! [EXCLAIM]
+## home.visit.decor.festival.shy
+The paper fans are pretty. I've got one like the blue one, at home.
+
+## home.visit.decor.clan
+Those are my clan's colours on your wall. You didn't have to. ...I'm really glad you did.
+A banner in our colours, in your flat. You'd be welcome at our table any day, you know.
+That lantern is in our clan's colours. My family would be pleased to see it. I'm pleased to see it.
+You picked our colours. Nobody has to be born into a clan to be a friend of one.
+## home.visit.decor.clan.proud
+Our colours, hung properly and in good light. You've done our clan justice. I won't forget it.
+## home.visit.decor.clan.warmhearted
+Our banner! Oh, you're coming to dinner at ours, I don't care what you say. [HEART]
+## home.visit.decor.clan.reserved
+Our colours. ...Thank you. Means more than I'll say. [DOTS]
+## home.visit.decor.clan.stern
+You hung our banner with care. My elders would approve. So do I.
+## home.visit.decor.clan.playful
+Look at you, more in our colours than half my cousins! I'm telling them. They'll be furious.
+## home.visit.decor.clan.gentle
+Those are my colours. Seeing them here feels like you've saved me a seat.
+
+# == curios =======================================================================================
+## home.visit.curios
+What is all this? A cracked bell, a stone with a face, half a kite... I love it.
+Your shelf of odd things grows every time I come. Where does it all come from?
+Is that a single straw sandal? Where's the other one? Don't tell me, I like the mystery.
+None of this is useful at all, is it? That's what makes it wonderful.
+A bent spoon, a bottle with a bead inside and a painted pebble. Every one has a story, I bet.
+## home.visit.curios.curious
+Wait, wait. Where did you find the bottle with the bead in? How did the bead get in? [QUESTION]
+## home.visit.curios.pragmatic
+You could sell the lot for about four ryo. ...Don't. Somehow it's worth more on the shelf.
+## home.visit.curios.imaginative
+A museum of tiny, useless treasures. I could make up a legend for every one.
+## home.visit.curios.meticulous
+If you sorted them by size, or colour, or age... no? Fine. They're charming as they are.
+## home.visit.curios.playful
+I'm bringing you something for the collection next time. Something truly pointless.
+
+# == the plant and the pet =========================================================================
+## home.visit.plant.flowering
+Your plant is flowering! You've been looking after it.
+Look at those blossoms. The season got into your flat.
+It's in flower! Mine never does that. What's your secret?
+Those flowers make the whole room smell green and sweet.
+## home.visit.plant.flowering.gentle
+Hello, little one. You're doing so well. [HEART]
+## home.visit.plant.flowering.imaginative
+The petals are the colour of the sky just before the lanterns come on.
+## home.visit.plant.flowering.shy
+It flowered... that's lovely. You must water it a lot. ...Could I have a seed, sometime?
+## home.visit.plant.flowering.curious
+How long did it take to bloom? Does it flower every year? Does it smell different at night? [QUESTION]
+## home.visit.plant.flowering.warmhearted
+A flowering plant in a home means someone's being looked after properly. Including you, I hope.
+## home.visit.plant.flowering.pragmatic
+Healthy roots, good light. You've put that pot in exactly the right window.
+
+## home.visit.pet
+{pet:player}! Come here, come here. Who's a good one? [HEART]
+Hello, {pet:player}. Did you keep the flat safe while {player} was out?
+{pet:player} remembers me! Look, straight to my feet.
+A pet makes a place feel lived in. {pet:player} looks very much at home.
+## home.visit.pet.gentle
+Shh, {pet:player} is sleeping. Let's be quiet. Look how peaceful.
+## home.visit.pet.playful
+{pet:player}, catch! ...Or don't. That's also a choice.
+## home.visit.pet.shy
+{pet:player} came straight to me. ...Animals are easier than people, sometimes.
+## home.visit.pet.stern
+Fed, brushed and clear-eyed. {pet:player} is well kept. Good.
+## home.visit.pet.curious
+Does {pet:player} sleep on the bed or at the foot of it? What does {pet:player} do all day while you're out?
+## home.visit.pet.reserved
+{pet:player}. ...Hey. [DOTS]
+
+# == comfort =======================================================================================
+## home.visit.comfort.bare
+It's a bit bare, isn't it? We'll find you a cushion or two.
+A futon, a table and a cupboard. That's how everyone starts out.
+You could use a lamp. And a rug. And maybe a second cup, for guests.
+It echoes a little in here. It just needs some of you in it.
+Plain and clean. There's room here for all the things you haven't found yet.
+I like the window. That's a good start. The rest will come.
+## home.visit.comfort.bare.warmhearted
+You need a cushion. Two. And a blanket for winter. I'm making a list, and you're not stopping me.
+## home.visit.comfort.bare.pragmatic
+The furniture shop has a floor cushion going cheap. Start there, then a lamp. One thing at a time.
+## home.visit.comfort.bare.imaginative
+An empty room is like a fresh scroll. Think of everything you could paint on it.
+## home.visit.comfort.bare.stern
+Bare is fine. Bare is honest. Keep it clean and fill it slowly.
+## home.visit.comfort.bare.playful
+So much floor! We could have a race from the door to the window.
+## home.visit.comfort.bare.shy
+It's... quiet in here. I could bring you something. If you wanted.
+
+## home.visit.comfort.cosy
+A few things of your own now. It's starting to look like you.
+It's cosy in here. Small, but cosy.
+That cushion is new, isn't it? It changes the whole room.
+Your flat gets warmer every time I come by.
+Snug. The kind of place you could nap in without meaning to.
+You've made a corner that feels like yours. That's the hard part done.
+## home.visit.comfort.cosy.gentle
+It feels softer every time. Like it's getting to know you.
+## home.visit.comfort.cosy.meticulous
+Lamp, cushion, mat. Next, a shelf, so the scrolls aren't on the floor.
+## home.visit.comfort.cosy.curious
+Where did the lamp come from? The market? The furniture shop? I'm trying to work out your taste.
+## home.visit.comfort.cosy.fiery
+It's getting good in here! Keep going! Fill it to the ceiling!
+## home.visit.comfort.cosy.reserved
+Better. Comfortable cushion. [DOTS]
+## home.visit.comfort.cosy.warmhearted
+Look how cosy you've made it! Now I only need to worry about whether you're eating.
+
+## home.visit.comfort.comfortable
+This is a proper home now. Lamp, cushions, the lot.
+I could sit here all evening. In fact, I think I will.
+It's really comfortable, {player}. You've done well with it.
+Everything's where you'd want it. You've thought about this.
+I always relax the moment my sandals come off in here.
+It's the kind of room that makes you lower your voice, in a good way.
+## home.visit.comfort.comfortable.steadfast
+A solid, comfortable home. Somewhere to come back to. That matters more than people think.
+## home.visit.comfort.comfortable.playful
+I'm not leaving. I live here now. Where do you keep the snacks?
+## home.visit.comfort.comfortable.proud
+This is a home to be proud of. You can bring anyone here.
+## home.visit.comfort.comfortable.thoughtful
+A room tells you about the person in it. This one says you've settled. I'm glad.
+## home.visit.comfort.comfortable.shy
+I like it here. It's easy to be in. ...Is that strange to say?
+## home.visit.comfort.comfortable.pragmatic
+Good value, all of it. You didn't waste a ryo, and it shows.
+
+## home.visit.comfort.homely
+It feels lived in. Loved, even. Every corner has a story.
+Coming in here is like being handed a warm cup of tea.
+I always end up staying longer than I meant to. It's this place.
+You can tell someone happy lives here.
+It feels like a home that's been a home for years.
+I know where everything is in here now. That's a nice feeling.
+## home.visit.comfort.homely.warmhearted
+It smells like home in here. Rice and tea and clean washing. [HEART]
+## home.visit.comfort.homely.imaginative
+If your flat were a song, it'd be the kind you hum without noticing.
+## home.visit.comfort.homely.protective
+A home like this is worth coming back for. Make sure you always do.
+## home.visit.comfort.homely.gentle
+Everything in here has been chosen kindly. You can feel it.
+## home.visit.comfort.homely.adventurous
+I've slept in a lot of places on the road. None of them felt like this.
+## home.visit.comfort.homely.stern
+You've built a proper home with your own hands and your own ryo. Well done. I mean that.
+
+## home.visit.comfort.beloved
+Honestly, this might be my favourite room in the whole Leaf.
+Every time I come in, I find something new to love.
+It's small, but there isn't a better flat in the village. I mean it.
+How did you fit so much warmth into so few rooms?
+When I think of somewhere safe, lately, I think of here. [HEART]
+This place is so completely you, {player}. Every piece of it.
+## home.visit.comfort.beloved.warmhearted
+I could cry, it's so lovely. You've made a real home, all on your own. [HEART]
+## home.visit.comfort.beloved.proud
+I've seen clan houses that aren't half as well kept. Truly.
+## home.visit.comfort.beloved.playful
+Can I move in? I'll take the corner. I'll be very quiet. I'll be so quiet.
+## home.visit.comfort.beloved.thoughtful
+Some places are just rooms. This one has become somebody. It's yours.
+## home.visit.comfort.beloved.reserved
+...I like it here. A lot. [DOTS]
+## home.visit.comfort.beloved.meticulous
+Not one thing out of place, and not one thing you don't need. It's perfect. I've checked.

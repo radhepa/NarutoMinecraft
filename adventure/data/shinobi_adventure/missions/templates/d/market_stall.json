@@ -93,7 +93,7 @@
   "chase": {
    "objective": {
     "type": "collect",
-    "target": "stolen_goods",
+    "target": "item:stolen_goods",
     "at": "slot:thief"
    },
    "next": "report"

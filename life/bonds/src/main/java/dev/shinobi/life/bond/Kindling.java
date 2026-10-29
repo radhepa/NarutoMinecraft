@@ -12,8 +12,9 @@ import java.util.Set;
  * {@link Flame} and {@link Bonfire}).
  *
  * <ul>
- * <li><b>Spark</b> (level 6): Thread Sight (bonds seen as threads, bonded allies sensed anywhere, a flicker when a
- * bonded speaker lies; strangers stay unreadable) and small kindles.</li>
+ * <li><b>Spark</b> (level 6): Thread Sight ({@link #threadSight}: people bonded at level 6 or more, a flicker when one
+ * hides something, never what; threads between two of them; strangers stay unreadable) and small kindles. Someone
+ * below 6 burns only if they freely offered their flame ({@code offered_flame}).</li>
  * <li><b>Flame</b> (level 8): Kindle (an ally's own technique pushed past its limits) and Ember Link (the squad as
  * one flame).</li>
  * <li><b>Blaze</b> (level 10, or a spouse): Ember Mark (travel to or call a deeply bonded ally) and unison techniques
@@ -65,12 +66,21 @@ public final class Kindling {
         if (effectiveLevel >= Levels.KINDLE_NATURE) return Tier.SPARK;
         return Tier.NONE;
     }
+    /** Their tier: by level, or Spark for someone below it who freely offered their flame ({@code offered_flame}). */
     public static Tier tier(BondWorld w, String who) {
-        return tier(unlocked(w), w.effectiveLevel(who), who.equals(w.spouse()), w.bond(who).conflict());
+        var b = w.bond(who);
+        var t = tier(unlocked(w), w.effectiveLevel(who), who.equals(w.spouse()), b.conflict());
+        return t == Tier.NONE && unlocked(w) && !b.conflict().broken() && b.remembers(Act.OFFERED_FLAME) ? Tier.SPARK : t;
+    }
+    /** Their tier, at least {@code floor}: a scripted gift beat counts its target as that tier for the scene only. */
+    public static Tier tier(BondWorld w, String who, Tier floor) {
+        var t = tier(w, who);
+        return t.compareTo(floor) >= 0 ? t : floor;
     }
     /** How brightly someone's flame burns, 0 to 1 (0 when there is no flame). */
-    public static double strength(BondWorld w, String who) {
-        if (tier(w, who) == Tier.NONE) return 0;
+    public static double strength(BondWorld w, String who) { return strength(w, who, Tier.NONE); }
+    static double strength(BondWorld w, String who, Tier floor) {
+        if (tier(w, who, floor) == Tier.NONE) return 0;
         var b = w.bond(who); var c = b.conflict();
         double s = Math.clamp((Levels.feeling(w.meters(who)) - 45) / 50, .1, 1);
         s *= switch (c.state()) {
@@ -87,9 +97,42 @@ public final class Kindling {
     }
     static final Set<Act> FIGHTING = Set.of(Act.MISSION_TOGETHER, Act.SPAR_WON, Act.SPAR_LOST, Act.TRAINED_TOGETHER, Act.DEFENDED_VILLAGE, Act.PROTECTED_THEM);
 
-    public static Flame flame(BondWorld w, String who) {
+    public static Flame flame(BondWorld w, String who) { return flame(w, who, Tier.NONE); }
+    public static Flame flame(BondWorld w, String who, Tier floor) {
         var b = w.bond(who);
-        return new Flame(who, tier(w, who), strength(w, who), b.conflict().active(), b.resonance, b.resonance >= TRIAL_RESONANCE, b.kindled);
+        return new Flame(who, tier(w, who, floor), strength(w, who, floor), b.conflict().active(), b.resonance, b.resonance >= TRIAL_RESONANCE, b.kindled);
+    }
+
+    /** Someone Thread Sight reads: {@code flicker} when they are hiding something (never what). */
+    public record Read(String who, boolean flicker) {}
+    /** A thread between two people the player can read: how close they are to each other, and whether they are at odds. */
+    public record Thread(String a, String b, int level, boolean strained) {}
+    public record Sight(List<Read> people, List<Thread> threads) {}
+    /** A bond flag the story sets while someone hides something from the player ({@code hides:<what>}); Thread Sight shows only that it is there. */
+    public static final String HIDING = "hides:";
+    /**
+     * Thread Sight (Spark): only people bonded to the player at level 6 or more can be read, each with a flicker when
+     * they hide something; a thread between two others shows only when both are readable. Strangers stay unreadable.
+     */
+    public static Sight threadSight(BondWorld w) {
+        if (!unlocked(w)) return new Sight(List.of(), List.of());
+        var people = new ArrayList<Read>();
+        for (String who : w.bonded()) {
+            var b = w.bond(who);
+            if (w.effectiveLevel(who) < Levels.KINDLE_NATURE || b.conflict().broken()) continue;
+            people.add(new Read(who, b.flags.stream().anyMatch(f -> f.startsWith(HIDING))));
+        }
+        people.sort(Comparator.comparing(Read::who));
+        var threads = new ArrayList<Thread>();
+        for (int i = 0; i < people.size(); i++) for (int j = i + 1; j < people.size(); j++) {
+            String a = people.get(i).who(), c = people.get(j).who();
+            int level = Math.max(w.effectiveLevel(a, c), w.effectiveLevel(c, a));
+            if (level == 0) continue;
+            var ab = w.bonds.get(BondWorld.key(a, c)); var ba = w.bonds.get(BondWorld.key(c, a));
+            boolean strained = ab != null && (ab.conflict.active() || ab.conflict.broken()) || ba != null && (ba.conflict.active() || ba.conflict.broken());
+            threads.add(new Thread(a, c, level, strained));
+        }
+        return new Sight(List.copyOf(people), List.copyOf(threads));
     }
     /** Everyone whose flame burns, brightest first. */
     public static List<Flame> flames(BondWorld w) {
@@ -118,8 +161,9 @@ public final class Kindling {
         return new Bonfire(strength, form, n, reach.size(), w.flag(BONFIRE_FLAG) && unlocked(w));
     }
     /** Fighting beside someone today (once a day) builds resonance toward their nature, at Spark or above. */
-    static void resonate(BondWorld w, Bond b) {
-        if (!b.to.equals(BondWorld.PLAYER) || b.resonanceDay == w.day || tier(w, b.from).compareTo(Tier.SPARK) < 0) return;
+    static void resonate(BondWorld w, Bond b) { resonate(w, b, Tier.NONE); }
+    static void resonate(BondWorld w, Bond b, Tier floor) {
+        if (!b.to.equals(BondWorld.PLAYER) || b.resonanceDay == w.day || tier(w, b.from, floor).compareTo(Tier.SPARK) < 0) return;
         b.resonance++; b.resonanceDay = w.day;
     }
 

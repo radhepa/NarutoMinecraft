@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for steadfast residents. Their own life, in their voice.
+#! tags: personality=steadfast
+
+## chat.personal  fn=reveal_character
+Steady. Fixed my neighbour's gate, like I said I would. Took me a week to get to it, but it's done.
+I promised my mother I'd visit every Sunday. Twelve years now. I haven't missed one.
+Up at dawn, chores done, nothing broken. That's a good day in my book.
+I've had the same pair of boots for nine years. Resoled them four times. Good boots don't quit, so I don't either.
+Carried water for the old couple up the hill again. They try to pay me. I just keep coming back.
+I don't say much at the meetings on my street. But when there's a roof to fix, people know who'll show up.
+My son asked me what I'm good at. I said, "showing up." He looked disappointed. He'll understand later.
+Same as yesterday. Up early, worked hard, ate rice. I don't need more than that.
+I've walked the same route to work for fifteen years. The cobbler on the corner sets the shop clock by me.
+I keep my word. Even when it's small. Especially when it's small. Small promises are where people learn to trust you.
+My father built this house with his hands. I patch the roof every spring the way he showed me.
+I helped dig out the drain on our lane after the rain. Nobody asked. Someone had to.
+I'm not clever, but I'm reliable. My wife says that's rarer.
+Finished my shift, walked the dog, fixed a chair. Tomorrow I'll do the same, and that suits me.
+I lent a friend money years ago. They paid it back today, every ryo. I never doubted they would.
+I've kept the same hours at my job since my first day. Some people think that's dull. I call it dependable.
+I learned a long time ago that you don't wait for the right mood to do the work. You do the work and the mood follows.
+The well at the end of my street gets stuck every winter. Every winter, I free it. It's become a kind of friendship.
+I've been training the young ones on my street to split wood properly. Back straight, let the axe fall. No shortcuts.
+I said I'd paint the fence at the shrine before the festival. Two coats done. One to go.
+My daughter forgot her lunch, so I walked it to the Academy. Then went back to work. That's how the day went.
+I keep a spare key for half the doors on my street. People trust me with them. I don't take that lightly.
+I sat with my brother at the hospital last night. Didn't say much. Didn't need to. He's better today.
+I don't like to complain. Rain is rain. Work is work. You put your coat on and get on with it.
+Every morning I check the old woman next door has lit her stove. If there's no smoke, I knock.
+My grandfather's motto was "one more bucket". I think about that whenever I want to stop early.
+I've stood in the same spot at every Leaf Festival for twenty years, by the third lantern post. People find me there.
+Not much to tell. I did my part. That's enough.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I've delivered the morning rice to the Akimichi kitchen for eleven years. Never missed a day. Not even in the snowstorm.
+I run the night lamps on the main street. Every lamp lit by dusk, every one out by dawn. It matters to people.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+I've never left a squadmate behind on a mission. I never will. That's not a boast, it's just how it is.
+I stood gate duty in the rain for six hours today. Nobody came. That's what a good shift looks like.
+My sensei told me the best shinobi are the ones who come back and do it again tomorrow. I try to be that.
+I've taken every D-rank the Mission Desk offered me this week. Somebody has to weed the farms. Might as well be me.
+
+## chat.personal  fn=worldbuild
+On our street, whoever finds a fallen tree after a storm clears it. You don't wait for the village to send someone.
+When a house burns in the Leaf, the neighbours rebuild it in a week. It's been that way since the founders.
+The gate guards change shift at six and six. Rain or snow. In all my years I've never seen it late.
+
+## chat.personal  fn=hook
+The handrail on the river steps is loose. I told the builders a month ago. I'll fix it myself if no one does.
+My wheelbarrow went missing from outside the shrine. It's got my initials burned in the handle. Someone just borrowed it, I'm sure.
+The old woman on my lane needs her firewood split before the cold comes. I'm on a double shift all week. I can't do it in time.
+I promised to deliver a parcel to the farms by tonight, and my knee's acting up. Never broken a promise yet.
+
+## chat.personal  fn=filler
+Good. No complaints.
+Fine. Busy. The usual.
+
+## chat.personal  fn=reveal_character
+I've rung the shrine's evening bell every day since the old ringer's hands gave out. Nobody asked me to keep doing it.
+I sharpened every hoe at the farm co-op. Took all day. They'll last the season. That's what counts.

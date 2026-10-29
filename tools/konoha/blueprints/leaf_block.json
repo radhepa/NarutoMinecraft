@@ -1,0 +1,1766 @@
+{
+ "format": "konoha-blueprint/1",
+ "id": "leaf_block",
+ "title": "Leaf apartment block (four storeys, twelve flats)",
+ "kind": "apartment",
+ "size": [
+  35,
+  22,
+  15
+ ],
+ "street": "south",
+ "notes": "Twelve House Plaque flats on three landings a floor; the player's flat is 3a",
+ "cutaway": [
+  3,
+  11
+ ],
+ "palette": {
+  "#": "minecraft:bamboo_fence[north=false,south=false,east=false,west=true]",
+  "@": "minecraft:bamboo_fence[north=false,south=false,east=true,west=false]",
+  "%": "minecraft:bamboo_fence[north=false,south=false,east=true,west=true]",
+  "&": "minecraft:barrel[facing=up]",
+  "*": "minecraft:blue_bed[facing=north,part=foot]",
+  "+": "minecraft:blue_bed[facing=north,part=head]",
+  "=": "minecraft:cauldron",
+  "-": "minecraft:cut_sandstone",
+  "~": "minecraft:dirt_path",
+  "^": "minecraft:grass_block",
+  ":": "minecraft:polished_andesite",
+  ";": "minecraft:smoker[facing=west]",
+  "!": "minecraft:smooth_sandstone",
+  "?": "minecraft:smooth_stone",
+  "$": "minecraft:smooth_stone_slab[type=bottom]",
+  "A": "minecraft:spruce_door[facing=north,half=lower,hinge=left,open=false]",
+  "B": "minecraft:spruce_door[facing=north,half=upper,hinge=left,open=false]",
+  "C": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false]",
+  "D": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false]",
+  "E": "minecraft:spruce_fence[north=false,south=false,east=true,west=true]",
+  "F": "minecraft:spruce_fence[north=false,south=true,east=false,west=true]",
+  "G": "minecraft:spruce_fence[north=false,south=true,east=true,west=false]",
+  "H": "minecraft:spruce_fence[north=true,south=true,east=false,west=false]",
+  "I": "minecraft:spruce_planks",
+  "J": "minecraft:spruce_slab[type=top]",
+  "K": "minecraft:spruce_stairs[facing=west,half=bottom]",
+  "L": "minecraft:stone_bricks",
+  "M": "minecraft:stripped_spruce_log[axis=y]",
+  "N": "minecraft:terracotta",
+  "O": "minecraft:white_stained_glass_pane[north=false,south=false,east=true,west=true]",
+  "P": "narutominecraft:dark_shoji_screen[facing=south,half=lower]",
+  "Q": "narutominecraft:dark_shoji_screen[facing=south,half=upper]",
+  "R": "narutominecraft:tatami[axis=x]",
+  "S": "narutominecraft:tatami[axis=z]",
+  "T": "narutominecraft:water_tank[part=bottom]",
+  "U": "narutominecraft:water_tank[part=middle]",
+  "V": "narutominecraft:water_tank[part=single]",
+  "W": "narutominecraft:water_tank[part=top]",
+  "X": "narutominecraft:white_paper_lantern"
+ },
+ "layers": [
+  [
+   "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^~",
+   "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  [
+   "...................................",
+   "...................................",
+   "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.",
+   "LIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIL.",
+   "LIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIL.",
+   "LIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIL.",
+   "LIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIL.",
+   "LIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIL.",
+   "LIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIL.",
+   "LIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIL.",
+   "L::IIIIIIIII::IIIIIIIII::IIIIIIIIL.",
+   "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.",
+   "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.",
+   "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.",
+   "M..........M..........M..........M."
+  ],
+  [
+   ".@%%%%#.....@%%%%#.....@%%%%#......",
+   "...................................",
+   "M!!C!!!!!!!M!!C!!!!!!!M!!C!!!!!!!M.",
+   "!+SRSRS!.==!+SRSRS!.==!+SRSRS!.==!.",
+   "!*SRSRS!...!*SRSRS!...!*SRSRS!...!.",
+   "!RSRSRS!=..!RSRSRS!=..!RSRSRS!=..!.",
+   "!RSRSRS!!.!!RSRSRS!!.!!RSRSRS!!.!!.",
+   "!RSRSRS...;!RSRSRS...;!RSRSRS...;!.",
+   "!RSRSRS!..=!RSRSRS!..=!RSRSRS!..=!.",
+   "!!.PPPP!..&!!.PPPP!..&!!.PPPP!..&!.",
+   "!......!...!......!...!......!...!.",
+   "M!A!!!!!!!!M!A!!!!!!!!M!A!!!!!!!!M.",
+   "...................................",
+   ".................................K.",
+   "M..........M..........M..........M."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "MO!D!OO!!O!MO!D!OO!!O!MO!D!OO!!O!M.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!!.!!......!!.!!......!!.!!.",
+   "!..........!..........!..........!.",
+   "!......!...!......!...!......!...!.",
+   "!!.QQQQ!...!!.QQQQ!...!!.QQQQ!...!.",
+   "!......!...!......!...!......!...!.",
+   "M!B!!!!!!O!M!B!!!!!!O!M!B!!!!!!O!M.",
+   "...................................",
+   "................................K..",
+   "M..........M..........M..........M."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "M!!!!!!!!!!M!!!!!!!!!!M!!!!!!!!!!M.",
+   "!.....X!...!.....X!...!.....X!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!!!!!......!!!!!......!!!!!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!!!!!!!!...!!!!!!!!...!!!!!!!!...!.",
+   "!......!...!......!...!......!...!.",
+   "M!!!!!!!!!!M!!!!!!!!!!M!!!!!!!!!!M.",
+   "...................................",
+   "...............................K...",
+   "M..........M..........M..........M."
+  ],
+  [
+   "..JJJJ.......JJJJ.......JJJJ.......",
+   "..JJJJ.......JJJJ.......JJJJ.......",
+   "MNNNNNNNNNNMNNNNNNNNNNMNNNNNNNNNNM.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "N::IIIIIIIII::IIIIIIIII::IIIIIIIIN.",
+   "MNNNNNNNNNNMNNNNNNNNNNMNNNNNNNNNNM.",
+   "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ.",
+   "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJK....",
+   "MJJJJJJJJJJMJJJJJJJJJJMJJJJJJJJJJM."
+  ],
+  [
+   "..GEEF.......GEEF.......GEEF.......",
+   "..H..H.......H..H.......H..H.......",
+   "M!!C!!!!!!!M!!C!!!!!!!M!!C!!!!!!!M.",
+   "!+SRSRS!.==!+SRSRS!.==!+SRSRS!.==!.",
+   "!*SRSRS!...!*SRSRS!...!*SRSRS!...!.",
+   "!RSRSRS!=..!RSRSRS!=..!RSRSRS!=..!.",
+   "!RSRSRS!!.!!RSRSRS!!.!!RSRSRS!!.!!.",
+   "!RSRSRS...;!RSRSRS...;!RSRSRS...;!.",
+   "!RSRSRS!..=!RSRSRS!..=!RSRSRS!..=!.",
+   "!!.PPPP!..&!!.PPPP!..&!!.PPPP!..&!.",
+   "!......!...!......!...!......!...!.",
+   "M!A!!!!!!!!M!A!!!!!!!!M!A!!!!!!!!M.",
+   "...................................",
+   "...K...............................",
+   "MEEEEEEEEEEMEEEEEEEEEEMEEEEEEEEEEM."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "MO!D!OO!!O!MO!D!OO!!O!MO!D!OO!!O!M.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!!.!!......!!.!!......!!.!!.",
+   "!..........!..........!..........!.",
+   "!......!...!......!...!......!...!.",
+   "!!.QQQQ!...!!.QQQQ!...!!.QQQQ!...!.",
+   "!......!...!......!...!......!...!.",
+   "M!B!!!!!!O!M!B!!!!!!O!M!B!!!!!!O!M.",
+   "...................................",
+   "..K................................",
+   "M..........M..........M..........M."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "M!!!!!!!!!!M!!!!!!!!!!M!!!!!!!!!!M.",
+   "!.....X!...!.....X!...!.....X!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!!!!!......!!!!!......!!!!!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!!!!!!!!...!!!!!!!!...!!!!!!!!...!.",
+   "!......!...!......!...!......!...!.",
+   "M!!!!!!!!!!M!!!!!!!!!!M!!!!!!!!!!M.",
+   "...................................",
+   ".K.................................",
+   "M..........M..........M..........M."
+  ],
+  [
+   "..JJJJ.......JJJJ.......JJJJ.......",
+   "..JJJJ.......JJJJ.......JJJJ.......",
+   "MNNNNNNNNNNMNNNNNNNNNNMNNNNNNNNNNM.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "N::IIIIIIIII::IIIIIIIII::IIIIIIIIN.",
+   "MNNNNNNNNNNMNNNNNNNNNNMNNNNNNNNNNM.",
+   "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ.",
+   "K..JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ.",
+   "MJJJJJJJJJJMJJJJJJJJJJMJJJJJJJJJJM."
+  ],
+  [
+   "..GEEF.......GEEF.......GEEF.......",
+   "..H..H.......H..H.......H..H.......",
+   "M!!C!!!!!!!M!!C!!!!!!!M!!C!!!!!!!M.",
+   "!+SRSRS!.==!+SRSRS!.==!+SRSRS!.==!.",
+   "!*SRSRS!...!*SRSRS!...!*SRSRS!...!.",
+   "!RSRSRS!=..!RSRSRS!=..!RSRSRS!=..!.",
+   "!RSRSRS!!.!!RSRSRS!!.!!RSRSRS!!.!!.",
+   "!RSRSRS...;!RSRSRS...;!RSRSRS...;!.",
+   "!RSRSRS!..=!RSRSRS!..=!RSRSRS!..=!.",
+   "!!.PPPP!..&!!.PPPP!..&!!.PPPP!..&!.",
+   "!......!...!......!...!......!...!.",
+   "M!A!!!!!!!!M!A!!!!!!!!M!A!!!!!!!!M.",
+   "...................................",
+   ".................................K.",
+   "MEEEEEEEEEEMEEEEEEEEEEMEEEEEEEEEEM."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "MO!D!OO!!O!MO!D!OO!!O!MO!D!OO!!O!M.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!!.!!......!!.!!......!!.!!.",
+   "!..........!..........!..........!.",
+   "!......!...!......!...!......!...!.",
+   "!!.QQQQ!...!!.QQQQ!...!!.QQQQ!...!.",
+   "!......!...!......!...!......!...!.",
+   "M!B!!!!!!O!M!B!!!!!!O!M!B!!!!!!O!M.",
+   "...................................",
+   "................................K..",
+   "M..........M..........M..........M."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "M!!!!!!!!!!M!!!!!!!!!!M!!!!!!!!!!M.",
+   "!.....X!...!.....X!...!.....X!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!!!!!......!!!!!......!!!!!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!!!!!!!!...!!!!!!!!...!!!!!!!!...!.",
+   "!......!...!......!...!......!...!.",
+   "M!!!!!!!!!!M!!!!!!!!!!M!!!!!!!!!!M.",
+   "...................................",
+   "...............................K...",
+   "M..........M..........M..........M."
+  ],
+  [
+   "..JJJJ.......JJJJ.......JJJJ.......",
+   "..JJJJ.......JJJJ.......JJJJ.......",
+   "MNNNNNNNNNNMNNNNNNNNNNMNNNNNNNNNNM.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "NIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN.",
+   "N::IIIIIIIII::IIIIIIIII::IIIIIIIIN.",
+   "MNNNNNNNNNNMNNNNNNNNNNMNNNNNNNNNNM.",
+   "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ.",
+   "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJK....",
+   "MJJJJJJJJJJMJJJJJJJJJJMJJJJJJJJJJM."
+  ],
+  [
+   "..GEEF.......GEEF.......GEEF.......",
+   "..H..H.......H..H.......H..H.......",
+   "M!!C!!!!!!!M!!C!!!!!!!M!!C!!!!!!!M.",
+   "!+SRSRS!.==!+SRSRS!.==!+SRSRS!.==!.",
+   "!*SRSRS!...!*SRSRS!...!*SRSRS!...!.",
+   "!RSRSRS!=..!RSRSRS!=..!RSRSRS!=..!.",
+   "!RSRSRS!!.!!RSRSRS!!.!!RSRSRS!!.!!.",
+   "!RSRSRS...;!RSRSRS...;!RSRSRS...;!.",
+   "!RSRSRS!..=!RSRSRS!..=!RSRSRS!..=!.",
+   "!!.PPPP!..&!!.PPPP!..&!!.PPPP!..&!.",
+   "!......!...!......!...!......!...!.",
+   "M!A!!!!!!!!M!A!!!!!!!!M!A!!!!!!!!M.",
+   "...................................",
+   "...................................",
+   "MEEEEEEEEEEMEEEEEEEEEEMEEEEEEEEEEM."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "MO!D!OO!!O!MO!D!OO!!O!MO!D!OO!!O!M.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!!.!!......!!.!!......!!.!!.",
+   "!..........!..........!..........!.",
+   "!......!...!......!...!......!...!.",
+   "!!.QQQQ!...!!.QQQQ!...!!.QQQQ!...!.",
+   "!......!...!......!...!......!...!.",
+   "M!B!!!!!!O!M!B!!!!!!O!M!B!!!!!!O!M.",
+   "...................................",
+   "...................................",
+   "M..........M..........M..........M."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "M!!!!!!!!!!M!!!!!!!!!!M!!!!!!!!!!M.",
+   "!.....X!...!.....X!...!.....X!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!......!!!!!......!!!!!......!!!!!.",
+   "!......!...!......!...!......!...!.",
+   "!......!...!......!...!......!...!.",
+   "!!!!!!!!...!!!!!!!!...!!!!!!!!...!.",
+   "!......!...!......!...!......!...!.",
+   "M!!!!!!!!!!M!!!!!!!!!!M!!!!!!!!!!M.",
+   "...................................",
+   "...................................",
+   "M..........M..........M..........M."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN.",
+   "N????????????????????????????????N.",
+   "N????????????????????????????????N.",
+   "N????????????????????????????????N.",
+   "N????????????????????????????????N.",
+   "N????????????????????????????????N.",
+   "N????????????????????????????????N.",
+   "N????????????????????????????????N.",
+   "N????????????????????????????????N.",
+   "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN.",
+   "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$.",
+   "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$.",
+   "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "----------------------------------.",
+   "-................................-.",
+   "-................................-.",
+   "-...T...........T...........T....-.",
+   "-................................-.",
+   "-................................-.",
+   "-........V.......................-.",
+   "-................................-.",
+   "-................................-.",
+   "----------------------------------.",
+   "...................................",
+   "...................................",
+   "..................................."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "....U...........U...........U......",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "..................................."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "....W...........W...........W......",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "..................................."
+  ],
+  [
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "...................................",
+   "..................................."
+  ]
+ ],
+ "markers": [
+  {
+   "type": "house_plaque",
+   "pos": [
+    1,
+    3,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.1a"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    3,
+    3,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.1a"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    1,
+    2,
+    3
+   ],
+   "home": "flat.leaf_block.1a"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    10,
+    2,
+    7
+   ],
+   "home": "flat.leaf_block.1a"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    10,
+    2,
+    8
+   ],
+   "home": "flat.leaf_block.1a"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    8,
+    3,
+    5
+   ],
+   "home": "flat.leaf_block.1a"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    4,
+    2,
+    8
+   ],
+   "home": "flat.leaf_block.1a"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    5,
+    2,
+    6
+   ],
+   "home": "flat.leaf_block.1a"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    3,
+    2,
+    1
+   ],
+   "home": "flat.leaf_block.1a"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    2,
+    2,
+    12
+   ],
+   "home": "flat.leaf_block.1a"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    4,
+    2,
+    6
+   ],
+   "group": "any",
+   "job": "any",
+   "role": "landlady"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    12,
+    3,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.1b"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    14,
+    3,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.1b"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    12,
+    2,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    12,
+    2,
+    3
+   ],
+   "home": "flat.leaf_block.1b"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    21,
+    2,
+    7
+   ],
+   "home": "flat.leaf_block.1b"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    21,
+    2,
+    8
+   ],
+   "home": "flat.leaf_block.1b"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    19,
+    3,
+    5
+   ],
+   "home": "flat.leaf_block.1b"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    15,
+    2,
+    8
+   ],
+   "home": "flat.leaf_block.1b"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    16,
+    2,
+    6
+   ],
+   "home": "flat.leaf_block.1b"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    14,
+    2,
+    1
+   ],
+   "home": "flat.leaf_block.1b"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    13,
+    2,
+    12
+   ],
+   "home": "flat.leaf_block.1b"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    15,
+    2,
+    6
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    23,
+    3,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.1c"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    25,
+    3,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.1c"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    23,
+    2,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    23,
+    2,
+    3
+   ],
+   "home": "flat.leaf_block.1c"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    32,
+    2,
+    7
+   ],
+   "home": "flat.leaf_block.1c"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    32,
+    2,
+    8
+   ],
+   "home": "flat.leaf_block.1c"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    30,
+    3,
+    5
+   ],
+   "home": "flat.leaf_block.1c"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    26,
+    2,
+    8
+   ],
+   "home": "flat.leaf_block.1c"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    27,
+    2,
+    6
+   ],
+   "home": "flat.leaf_block.1c"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    25,
+    2,
+    1
+   ],
+   "home": "flat.leaf_block.1c"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    24,
+    2,
+    12
+   ],
+   "home": "flat.leaf_block.1c"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    26,
+    2,
+    6
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    1,
+    7,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.2a"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    3,
+    7,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.2a"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    1,
+    6,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    1,
+    6,
+    3
+   ],
+   "home": "flat.leaf_block.2a"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    10,
+    6,
+    7
+   ],
+   "home": "flat.leaf_block.2a"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    10,
+    6,
+    8
+   ],
+   "home": "flat.leaf_block.2a"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    8,
+    7,
+    5
+   ],
+   "home": "flat.leaf_block.2a"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    4,
+    6,
+    8
+   ],
+   "home": "flat.leaf_block.2a"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    5,
+    6,
+    6
+   ],
+   "home": "flat.leaf_block.2a"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    3,
+    6,
+    1
+   ],
+   "home": "flat.leaf_block.2a"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    2,
+    6,
+    12
+   ],
+   "home": "flat.leaf_block.2a"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    4,
+    6,
+    6
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    12,
+    7,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.2b"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    14,
+    7,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.2b"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    12,
+    6,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    12,
+    6,
+    3
+   ],
+   "home": "flat.leaf_block.2b"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    21,
+    6,
+    7
+   ],
+   "home": "flat.leaf_block.2b"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    21,
+    6,
+    8
+   ],
+   "home": "flat.leaf_block.2b"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    19,
+    7,
+    5
+   ],
+   "home": "flat.leaf_block.2b"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    15,
+    6,
+    8
+   ],
+   "home": "flat.leaf_block.2b"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    16,
+    6,
+    6
+   ],
+   "home": "flat.leaf_block.2b"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    14,
+    6,
+    1
+   ],
+   "home": "flat.leaf_block.2b"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    13,
+    6,
+    12
+   ],
+   "home": "flat.leaf_block.2b"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    15,
+    6,
+    6
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    23,
+    7,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.2c"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    25,
+    7,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.2c"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    23,
+    6,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    23,
+    6,
+    3
+   ],
+   "home": "flat.leaf_block.2c"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    32,
+    6,
+    7
+   ],
+   "home": "flat.leaf_block.2c"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    32,
+    6,
+    8
+   ],
+   "home": "flat.leaf_block.2c"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    30,
+    7,
+    5
+   ],
+   "home": "flat.leaf_block.2c"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    26,
+    6,
+    8
+   ],
+   "home": "flat.leaf_block.2c"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    27,
+    6,
+    6
+   ],
+   "home": "flat.leaf_block.2c"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    25,
+    6,
+    1
+   ],
+   "home": "flat.leaf_block.2c"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    24,
+    6,
+    12
+   ],
+   "home": "flat.leaf_block.2c"
+  },
+  {
+   "type": "candidate_flat",
+   "pos": [
+    26,
+    6,
+    6
+   ],
+   "home": "flat.leaf_block.2c",
+   "note": "player_candidate"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    1,
+    11,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.3a"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    3,
+    11,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.3a"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    1,
+    10,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    1,
+    10,
+    3
+   ],
+   "home": "flat.leaf_block.3a"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    10,
+    10,
+    7
+   ],
+   "home": "flat.leaf_block.3a"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    10,
+    10,
+    8
+   ],
+   "home": "flat.leaf_block.3a"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    8,
+    11,
+    5
+   ],
+   "home": "flat.leaf_block.3a"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    4,
+    10,
+    8
+   ],
+   "home": "flat.leaf_block.3a"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    5,
+    10,
+    6
+   ],
+   "home": "flat.leaf_block.3a"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    3,
+    10,
+    1
+   ],
+   "home": "flat.leaf_block.3a"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    2,
+    10,
+    12
+   ],
+   "home": "flat.leaf_block.3a"
+  },
+  {
+   "type": "candidate_flat",
+   "pos": [
+    4,
+    10,
+    6
+   ],
+   "home": "flat.leaf_block.3a",
+   "note": "player_classic"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    12,
+    11,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.3b"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    14,
+    11,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.3b"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    12,
+    10,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    12,
+    10,
+    3
+   ],
+   "home": "flat.leaf_block.3b"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    21,
+    10,
+    7
+   ],
+   "home": "flat.leaf_block.3b"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    21,
+    10,
+    8
+   ],
+   "home": "flat.leaf_block.3b"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    19,
+    11,
+    5
+   ],
+   "home": "flat.leaf_block.3b"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    15,
+    10,
+    8
+   ],
+   "home": "flat.leaf_block.3b"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    16,
+    10,
+    6
+   ],
+   "home": "flat.leaf_block.3b"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    14,
+    10,
+    1
+   ],
+   "home": "flat.leaf_block.3b"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    13,
+    10,
+    12
+   ],
+   "home": "flat.leaf_block.3b"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    15,
+    10,
+    6
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    23,
+    11,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.3c"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    25,
+    11,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.3c"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    23,
+    10,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    23,
+    10,
+    3
+   ],
+   "home": "flat.leaf_block.3c"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    32,
+    10,
+    7
+   ],
+   "home": "flat.leaf_block.3c"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    32,
+    10,
+    8
+   ],
+   "home": "flat.leaf_block.3c"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    30,
+    11,
+    5
+   ],
+   "home": "flat.leaf_block.3c"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    26,
+    10,
+    8
+   ],
+   "home": "flat.leaf_block.3c"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    27,
+    10,
+    6
+   ],
+   "home": "flat.leaf_block.3c"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    25,
+    10,
+    1
+   ],
+   "home": "flat.leaf_block.3c"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    24,
+    10,
+    12
+   ],
+   "home": "flat.leaf_block.3c"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    26,
+    10,
+    6
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    1,
+    15,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.4a"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    3,
+    15,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.4a"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    1,
+    14,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    1,
+    14,
+    3
+   ],
+   "home": "flat.leaf_block.4a"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    10,
+    14,
+    7
+   ],
+   "home": "flat.leaf_block.4a"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    10,
+    14,
+    8
+   ],
+   "home": "flat.leaf_block.4a"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    8,
+    15,
+    5
+   ],
+   "home": "flat.leaf_block.4a"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    4,
+    14,
+    8
+   ],
+   "home": "flat.leaf_block.4a"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    5,
+    14,
+    6
+   ],
+   "home": "flat.leaf_block.4a"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    3,
+    14,
+    1
+   ],
+   "home": "flat.leaf_block.4a"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    2,
+    14,
+    12
+   ],
+   "home": "flat.leaf_block.4a"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    4,
+    14,
+    6
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    12,
+    15,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.4b"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    14,
+    15,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.4b"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    12,
+    14,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    12,
+    14,
+    3
+   ],
+   "home": "flat.leaf_block.4b"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    21,
+    14,
+    7
+   ],
+   "home": "flat.leaf_block.4b"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    21,
+    14,
+    8
+   ],
+   "home": "flat.leaf_block.4b"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    19,
+    15,
+    5
+   ],
+   "home": "flat.leaf_block.4b"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    15,
+    14,
+    8
+   ],
+   "home": "flat.leaf_block.4b"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    16,
+    14,
+    6
+   ],
+   "home": "flat.leaf_block.4b"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    14,
+    14,
+    1
+   ],
+   "home": "flat.leaf_block.4b"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    13,
+    14,
+    12
+   ],
+   "home": "flat.leaf_block.4b"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    15,
+    14,
+    6
+   ],
+   "group": "any",
+   "job": "any",
+   "role": "family_with_child"
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    23,
+    15,
+    10
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.4c"
+  },
+  {
+   "type": "mailbox",
+   "pos": [
+    25,
+    15,
+    12
+   ],
+   "facing": "south",
+   "home": "flat.leaf_block.4c"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    23,
+    14,
+    3
+   ]
+  },
+  {
+   "type": "anchor:bed",
+   "pos": [
+    23,
+    14,
+    3
+   ],
+   "home": "flat.leaf_block.4c"
+  },
+  {
+   "type": "anchor:stove",
+   "pos": [
+    32,
+    14,
+    7
+   ],
+   "home": "flat.leaf_block.4c"
+  },
+  {
+   "type": "anchor:sink",
+   "pos": [
+    32,
+    14,
+    8
+   ],
+   "home": "flat.leaf_block.4c"
+  },
+  {
+   "type": "anchor:mirror",
+   "pos": [
+    30,
+    15,
+    5
+   ],
+   "home": "flat.leaf_block.4c"
+  },
+  {
+   "type": "anchor:closet",
+   "pos": [
+    26,
+    14,
+    8
+   ],
+   "home": "flat.leaf_block.4c"
+  },
+  {
+   "type": "anchor:desk",
+   "pos": [
+    27,
+    14,
+    6
+   ],
+   "home": "flat.leaf_block.4c"
+  },
+  {
+   "type": "anchor:balcony_rail",
+   "pos": [
+    25,
+    14,
+    1
+   ],
+   "home": "flat.leaf_block.4c"
+  },
+  {
+   "type": "anchor:visitor_wait",
+   "pos": [
+    24,
+    14,
+    12
+   ],
+   "home": "flat.leaf_block.4c"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    26,
+    14,
+    6
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "door_anchor",
+   "pos": [
+    34,
+    1,
+    13
+   ]
+  }
+ ]
+}

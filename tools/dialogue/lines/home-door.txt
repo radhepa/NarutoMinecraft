@@ -1,0 +1,152 @@
+# At the player's door (HOME.md §3, §9, §11): who knocks and what they say, a key holder waiting inside, the
+# notes left in the mailbox and the Academy stipend. These come round again, so they cycle.
+#! kind: cycle
+#! fn: deepen_bond
+
+# == arrivals ======================================================================================
+## home.visit.drop_in.arrive
+I was passing and saw your light on. Mind if I come up for a bit?
+Surprise! I had nothing to do and missed your face. Can I come in?
+I brought rice crackers, so you have to let me in. Those are the rules.
+Just thought I'd see how you were. Is now a good time?
+Your stairs are steeper than I remembered. Hi! Is the kettle on?
+
+## home.visit.squad_crash.arrive
+We're back, we're filthy, and we're coming in. Hope that's all right!
+After that mission I can't face my own room. Yours is closer. Shove over.
+Squad delivery! Two tired teammates, slightly dented, one bag of snacks.
+Mission done, report in, and my legs have given up. Can we crash here?
+Don't mind the mud, we'll leave the sandals outside. Most of the mud, anyway.
+
+## home.visit.sensei_check.arrive  stage=teen|adult
+Just checking in. Are you eating properly? Show me the cupboard.
+I was in the area. That's my story, anyway. How are you holding up?
+Evening. I came to make sure my Genin hasn't been living on cup ramen.
+Sleeping enough? You looked tired at training. I thought I'd see for myself.
+Don't get up. I'm only here to see how you're settling. Kettle on?
+
+## home.visit.instructor_check.arrive  stage=teen|adult
+Good evening, {player}. I'm calling on the students who live on their own. How are things?
+Just a visit from your instructor, nothing's wrong. Have you done the reading?
+I brought a little something from the Academy kitchen. Have you eaten today?
+I like to know my students have somewhere warm. May I come in for a minute?
+Is the stipend reaching you all right? And are you spending it on more than sweets?
+
+## home.visit.neighbour.borrow.arrive  fn=react
+Sorry to bother you! Could I borrow a cup of sugar? I'll bring it back with interest.
+Have you any soy sauce? Mine ran dry halfway through supper.
+I hate to ask, but could I borrow your broom? Mine lost a fight with the stairs.
+Could you spare an egg? Just one. My recipe is one egg short of a miracle.
+I need a hammer for a minute. The shelf won't hang itself. Have you got one?
+
+## home.visit.neighbour.parcel.arrive  fn=react
+This came for you while you were out. I took it in so it wouldn't get rained on.
+A courier left this at my door by mistake. Your name's on it, see?
+Parcel for you! I signed for it. Don't worry, I didn't peek. Much.
+The delivery came while you were out training. I kept it safe for you.
+Here, this is yours. The courier knocked on every door on the floor looking for you.
+
+## home.visit.neighbour.noise.arrive  fn=react
+Sorry about the noise from upstairs last night. We moved a wardrobe. It fought back.
+Was that thumping from yours? Training, I expect. Could you keep it to before supper?
+Just wanted to say sorry: the baby's teething, so if you hear crying at night, that's us.
+Is everything all right? There was an almighty crash from your flat earlier.
+Apologies in advance. My cousin is staying, and practises the flute. Every evening.
+
+## home.visit.neighbour.thanks.arrive  fn=react
+I wanted to thank you for helping with my bags the other day. Here, a few mikan.
+Thank you for watering my plants while I was away. They've never looked better.
+You chased down my washing when the wind took it last week. Thank you. These are for you.
+My little one says you shared your umbrella in the rain. That was kind. We made you dango.
+Thanks for being such a quiet neighbour. Truly, it's a gift. Have some tea.
+
+## home.visit.neighbour.gossip.arrive  fn=react,worldbuild
+Have you heard? The eel seller by the second bridge is getting married at last! The whole street's invited.
+The dango stand is changing its sauce. People are very upset. I've signed a petition.
+Somebody on the third floor keeps leaving fish heads out for the cats. Not me. I'm only saying.
+The bathhouse is shutting for a week for new tiles. Brace yourself for the queue at the well.
+Did you see the Inuzuka pups in the market today? Six of them! One ran off with a whole radish.
+
+# == a key holder waited inside ====================================================================
+## home.visit.drop_in.arrive.waited_inside
+There you are! I let myself in with the key. I made tea, I hope you don't mind.
+I've been sitting here with your cushion for an hour. Your flat's very quiet without you.
+Don't jump, it's only me. I used the spare key. Where've you been?
+
+## home.visit.squad_crash.arrive.waited_inside
+Finally! We've been here ages. We ate half your crackers. Sorry. Not sorry.
+We let ourselves in. Hope that's all right. We were too tired to sit on the stairs.
+Welcome home! We've already claimed the good cushions.
+
+## home.visit.sensei_check.arrive.waited_inside  stage=teen|adult
+You're late. I put the kettle on an hour ago. It's stewed now. Sit.
+I let myself in. Your cupboard tells me you need to shop. We'll talk about that.
+There you are. I was about to come looking. Long day?
+
+## home.visit.instructor_check.arrive.waited_inside  stage=teen|adult
+You're home. I hope you don't mind that I waited inside. I've marked twenty scrolls at your table.
+Welcome back. I let myself in to wait; I didn't want to miss you.
+You're back! I was beginning to think I'd have to leave a note. Sit, sit, tell me about your day.
+
+# == notes in the mailbox ==========================================================================
+## home.note.drop_in
+Knocked twice. Nobody home. I'll try again soon, so don't go anywhere.
+Came by to see you and you weren't in. Rude! (Joking.) Come and find me.
+I was in the neighbourhood. You weren't. Next time, then.
+
+## home.note.squad_crash
+Came straight from the gate to crash at yours and you weren't there! We're at the ramen stand. — {given:role:teammate_a} and {given:role:teammate_b}
+Squad night foiled. The snacks were eaten on your stairs. Sorry. — {given:role:teammate_a}, {given:role:teammate_b}
+Knocked, waited, gave up. After the next mission you're hosting, no excuses.
+
+## home.note.sensei_check  stage=teen|adult
+Stopped by to see how you're getting on. Eat something green tonight. — {given:role:sensei}
+You were out, which I'll take as a good sign. Training at dawn. Sleep early. — {given:role:sensei}
+Checked in, found the door shut. Are you eating properly? I'll be asking. — {given:role:sensei}
+
+## home.note.instructor_check  stage=teen|adult
+Called by to see how you are. Remember this week's reading. — {family:role:instructor}
+Sorry to miss you. My door at the Academy is always open if you need anything. — {family:role:instructor}
+I brought some rice from the Academy kitchen and left it with the landlady. Eat it. — {family:role:instructor}
+
+## home.note.neighbour.borrow  fn=react
+Wanted to borrow a cup of sugar, but you were out. I'll knock again tomorrow! — Next door
+Could I borrow your big pot this weekend? Knock when you're in. — The flat below
+I need a ladder for an hour. Do you have one? Knock any time.
+
+## home.note.neighbour.parcel  fn=react
+A parcel came for you. It's at mine, next door. Knock when you're home.
+Took in your delivery. It's safe and dry. — The flat across
+There's a box for you at mine. It rattles. I didn't shake it. Much.
+
+## home.note.neighbour.noise  fn=react
+Sorry for the hammering this evening. New shelves. Done now, I promise. — Upstairs
+Could the training wait until morning? The thumping carries. Thank you! — Below
+We're having guests tonight. Apologies in advance for the singing. — Upstairs
+
+## home.note.neighbour.thanks  fn=react
+Thank you for carrying my bags up the stairs. There's a little something on your step.
+You kept an eye on my flat while I was away. Thank you. — Next door
+Thanks for being a good neighbour. The mikan are for you.
+
+## home.note.neighbour.gossip  fn=react,worldbuild
+Did you hear? The fishmonger has eels in. Rare this time of year. Thought you'd want to know.
+Market Day tomorrow. The noodle cart is back by the well, apparently. Pass it on!
+Bathhouse is closed till the weekend. You didn't hear it from me.
+
+## home.note.left_food
+There's rice and pickles in your cupboard. You've been away too long to have anything fresh.
+Left you a pot of miso soup. Heat it, don't drink it cold. Welcome home.
+Some onigiri in the cupboard for when you get back. Eat them before they go hard!
+
+## home.note.tidied
+Did your dishes while I waited. Don't thank me, just don't let them pile up again.
+I tidied a little. Everything's where it was, only straighter.
+Swept, washed up, folded your laundry. Your socks are paired now. You're welcome.
+
+# == the stipend ===================================================================================
+## home.mail.stipend  fn=teach
+The Academy stipend: thirty ryo in a plain envelope with the Academy seal. It covers the flat, and a little over.
+"Thirty ryo, for the student's keep. Spend it wisely." The Academy office's handwriting, same as every morning.
+The morning envelope from the Academy: thirty ryo for every day you're a student. Rice first, then furniture.
+Thirty ryo again. Put a little by each morning and the furniture shop stops being a dream.

@@ -1,0 +1,52 @@
+# A sensei's advice after a fight, keyed by the habit the fight showed. A neutral mentor voice until
+# the cast is written. Pools are combat.sensei_tip.<habit>.
+#! kind: cycle
+#! fn: teach
+
+## combat.sensei_tip.spam_same_jutsu
+The same jutsu three times running? By the third, anyone worth fighting has a counter ready.
+A technique is a word, not a sentence. Mix it with throws and footwork so it lands as a surprise.
+You leaned on one jutsu the whole fight. Learn a second, even a small one, and they'll never settle.
+Watch their face the next time you cast it twice. They stop flinching. That's your cue to change.
+
+## combat.sensei_tip.never_guards
+You never once raised your hands. Blocking costs you nothing but a moment, and it halves the hurt.
+Attack is half the work. Hold your guard while you wait for an opening, not after you've been hit.
+Your opponent swung freely because you let them. Raise a block and make them think twice.
+If you can't dodge it, block it. If you block it at the last instant, you can turn it right back.
+
+## combat.sensei_tip.never_dodges
+You stood and took every hit. A quick dash to the side would have spared you most of them.
+Dodge when you see the shoulder drop or the hands start weaving. Standing still is a choice too.
+Your feet stayed planted all fight. Light feet, short dashes. Make them chase empty air.
+A dodge at the very instant of the strike is the substitution's doorway. Practise the timing.
+
+## combat.sensei_tip.out_of_chakra
+You ran dry halfway through. Chakra is a meal, not a feast: ration it.
+Before a fight, meditate a moment and let your chakra fill. After, a soldier pill if you must.
+Your jutsu were fine. Your timing wasn't. You spent everything before the fight had really begun.
+When you're low, fight with your hands and feet and let the chakra creep back. Don't force signs.
+
+## combat.sensei_tip.too_far
+You kept your distance the whole time. Safe, yes, but you never threatened them once.
+Throwing from far off is fine for a start. Then close in, or they'll keep picking you apart.
+Stay that far back and they choose when the fight happens. Step in and take the choice from them.
+Your shuriken were good. Follow them in next time, while they're still busy dodging.
+
+## combat.sensei_tip.too_close
+You crowded them so close you couldn't see what their hands were doing. Give yourself a step.
+Up close you can't dodge, only trade blows. Back off a pace after a combo and reset.
+Hugging an opponent only works if you're the stronger one. Today you weren't. Use the space.
+A good fighter breathes in and out of range like a tide. You stayed on the beach.
+
+## combat.sensei_tip.ignores_tells
+They raised their arm before every heavy strike. Did you notice? Watch for it next time.
+Every enemy shows you what's coming. A wind-up, a flash, a step back. Learn to read it.
+You looked at their weapon. Look at their shoulders and their feet instead. They speak first.
+When an attack glows or the hands start weaving, that's your warning. Move then, not after.
+
+## combat.sensei_tip.good_parry_streak
+Three parries in a row. That's not luck, that's reading. Keep doing exactly that.
+You turned their best strikes back on them. When they stagger, strike right away.
+Your timing on the block was sharp today. Plenty of Chunin never manage that.
+Good parrying. Next step: follow each one with a combo before they recover.

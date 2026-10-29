@@ -103,7 +103,7 @@
   "post": {
    "objective": {
     "type": "deliver",
-    "item": "sealed_message",
+    "item": "item:mission_sealed_message",
     "to": "slot:post"
    },
    "branch": [

@@ -1,0 +1,55 @@
+# Overheard talk between the village's old folk, on benches, at the tea house, at the shrine.
+#! tags: relation=elders
+
+## ambient.elders  fn=worldbuild
+A: In our day the market street was a dirt track.
+B: In our day there was no market street. We traded at the well.
+A: That's because you're older than me.
+
+A: The Hokage Rock had only one face when I was a child.
+B: And now four. I hope I live to see another carved.
+
+A: The tea house has changed its cups.
+B: Those cups were older than both of us.
+A: Exactly. Some things should stay.
+
+A: Remember when the river froze solid?
+B: The winter of the long snow. We skated to the farms and back.
+
+A: The young ones run everywhere now.
+B: We ran everywhere too. We just ran slower.
+
+A: The cherry tree by the shrine bloomed early.
+B: It always does when the winter's kind. Mark it in the book.
+
+## ambient.elders  fn=reveal_character
+A: My knees know the rain's coming before the clouds do.
+B: Mine tell me every morning. Whether it rains or not.
+
+A: I taught three generations of this street to read.
+B: And they all still mind their spelling around you.
+
+A: I still set out a cup for my husband every morning.
+B: Of course you do. I still talk to my wife's garden.
+
+A: Do you think we did well by the village?
+B: Look at it. Children laughing, ramen steaming. We did well enough.
+
+## ambient.elders  fn=react
+A: Did you hear? The fishmonger's grandchild just made Genin.
+B: That family. Fish and shinobi, fish and shinobi. Never anything in between.
+
+A: Cold today.
+B: Every day's cold at our age. Sit closer to the brazier.
+
+A: That young one from the apartments carried my basket all the way home yesterday.
+B: Good manners. The Leaf's raising them right.
+
+## ambient.elders  district=shrine  fn=worldbuild
+A: The bell rope's fraying.
+B: I'll tell the priests. They never look up.
+
+## ambient.elders  fn=filler
+A: Another game of go?
+B: You'll only lose again.
+A: That's why I like playing you.

@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for reserved residents. Few words, dry, private.
+#! tags: personality=reserved
+
+## chat.personal  fn=reveal_character
+Quiet. I fixed a shelf. It's level now.
+Read a book. Drank tea. Nobody knocked. Ideal.
+I went to the festival meeting. Said nothing. Volunteered for lanterns. Lanterns don't talk.
+My sister visited. Talked for four hours. I said "mm" eleven times. She thinks it went well.
+Fine. I found a bench by the river nobody else uses. I'm not telling you which.
+I grow bonsai. One tree, nine years. It's nearly the shape I want.
+I don't like crowds. Market Day is a test of character. I passed. Barely.
+I fed the koi at the shrine pond. They don't ask questions. Good company.
+I painted my door. Same colour as before. Nobody noticed. That was the point.
+My neighbour waves every morning. I've started waving back. Took me two years.
+I play the flute at night, quietly. If you've heard it, you haven't. Understood?
+I went to the tea house and sat at the corner table. Someone else was in it. I went home.
+I keep a diary. Three lines a day. Today's: rain, rice, shelf.
+My wife does the talking for both of us. It's a good arrangement. I do the dishes.
+I like the hour before dawn. The village is mine then. Briefly.
+Somebody asked me to a party. I said I had plans. My plans were a book.
+I repaired a clock today. It ticks now. Satisfying, in a small way.
+I carve small animals from offcuts. A fox today. Gave it to a child who was crying. Don't spread that around.
+I walked the long way home to avoid a conversation. It started raining. Worth it.
+I sat on the roof and watched the clouds. The Nara do it too. They have the right idea.
+My brother's always telling me to "open up". I opened a window. It's a start.
+Not much. I like it that way.
+I learned to make one dish properly. Grilled mackerel. I make it every night. I'm not bored.
+I bought a new teacup. Plain grey. I like it more than I should.
+I sweep the shrine steps at dawn. Nobody's ever seen me do it. Keep it that way.
+I've been asked to give a speech at my cousin's wedding. I'm considering moving villages.
+A stray cat sleeps on my windowsill. We have an understanding. Neither of us mentions it.
+I tried the new tea house. Too loud. Good tea, though. I'll go when it rains.
+I keep pressed flowers in my books. Each one's a day I liked. There aren't many. They're good ones.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I bind books for the library. Silent work. Paste, thread, cloth. Best job in the Leaf.
+I run the night stall at the bathhouse. People come in tired and leave quiet. Suits me.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+Back from a mission. It went as planned. That's all you'll get from me.
+My squad talks the whole walk out. I take rear guard. Further from the talking.
+I trained alone at Ground 3 at dawn. Just me and the stumps. They don't chatter either.
+
+## chat.personal  fn=worldbuild
+The library has a reading room on the top floor. No talking allowed. It's the best room in the village.
+The Aburame don't make small talk. I've always respected that.
+There's a stone bench at the back of the shrine where people go to be left alone. Everyone knows. Nobody says.
+
+## chat.personal  fn=hook
+Someone left a crate outside my door. No note. I haven't opened it. I'd like it gone.
+My flute's missing a cap. Small brass thing. Probably fell by the river. I won't ask twice.
+A lantern on my lane keeps going out. I'd fix it, but the lantern-keeper is chatty. You go.
+
+## chat.personal  fn=filler
+Fine.
+Adequate.
+Mm. Good enough.
+
+## chat.personal  fn=reveal_character
+Made soup. Ate soup. Good soup.
+I mended my socks. Somebody saw. Now they want me to mend theirs. I said no. Probably I'll do it.

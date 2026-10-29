@@ -197,15 +197,34 @@ public final class BondWorld {
     }
     public void reveal(String who, String fact) { bond(who).facts.add(fact); }
     /** Kindling Bond was used with someone: their flame as it burns (tier none: nothing to kindle), the use counted, resonance built. */
-    public Kindling.Flame kindle(String who) {
-        var flame = Kindling.flame(this, who);
+    public Kindling.Flame kindle(String who) { return kindle(who, Kindling.Tier.NONE); }
+    /** A kindle in a scripted gift beat: {@code floor} is the least tier they count as, for this kindle only. */
+    public Kindling.Flame kindle(String who, Kindling.Tier floor) {
+        var flame = Kindling.flame(this, who, floor);
         if (flame.tier() == Kindling.Tier.NONE) return flame;
         var b = bond(who);
         b.kindled++;
-        Kindling.resonate(this, b);
-        return Kindling.flame(this, who);
+        Kindling.resonate(this, b, floor);
+        return Kindling.flame(this, who, floor);
     }
     public void setBondFlag(String who, String f) { bond(who).flags.add(f); }
+    /**
+     * Holds someone's level with the player at {@code max} until the story flag {@code until} is set (a role the story
+     * keeps at arm's length for a while). Kept as the bond flag {@code cap:<max>:<until>}, so saves carry it.
+     */
+    public void capLevel(String who, int max, String until) {
+        var b = bond(who); b.flags.removeIf(f -> f.startsWith(CAP)); b.flags.add(CAP + max + ":" + until);
+    }
+    static final String CAP = "cap:";
+    int levelCap(Bond b) {
+        for (String f : b.flags) {
+            if (!f.startsWith(CAP)) continue;
+            int at = f.indexOf(':', CAP.length());
+            if (!flag(f.substring(at + 1))) return Integer.parseInt(f.substring(CAP.length(), at));
+        }
+        return Levels.MAX;
+    }
+    public void clearBondFlag(String who, String f) { bond(who).flags.remove(f); }
 
     /** A change worked out elsewhere (an answer to a question), remembered as {@code act}: contact, memory, a possible quarrel, a level-up. */
     Meters applyDelta(String who, Act act, Meters delta) {
@@ -239,7 +258,7 @@ public final class BondWorld {
     }
     /** A level earned shows at once (a level-up in the middle of a conversation); falling waits for the end of the day. */
     private void rise(Bond b) {
-        int cap = Levels.cap(b.experiences(), b.moments.size(), b.contactDays);
+        int cap = Math.min(Levels.cap(b.experiences(), b.moments.size(), b.contactDays), levelCap(b));
         int next = Math.min(Levels.byPoints(Levels.closeness(meters(b.from, b.to))), cap);
         if (next > b.level) { b.level = next; event(b.to.equals(PLAYER) ? b.from : b.from + ">" + b.to, "level_up", Integer.toString(next)); }
     }
@@ -472,14 +491,14 @@ public final class BondWorld {
     private void updateLevel(Bond b, int maxSteps) {
         for (int step = 0; step < maxSteps; step++) {
             double c = Levels.closeness(meters(b.from, b.to));
-            int cap = Levels.cap(b.experiences(), b.moments.size(), b.contactDays);
-            int next = Math.max(b.floor, Levels.next(b.level, c, cap));
+            int held = levelCap(b), cap = Math.min(Levels.cap(b.experiences(), b.moments.size(), b.contactDays), held);
+            int next = Math.min(Math.max(b.floor, Levels.next(b.level, c, cap)), held);
             String who = b.to.equals(PLAYER) ? b.from : b.from + ">" + b.to;
             if (next > b.level) event(who, "level_up", Integer.toString(next));
             else if (next < b.level) event(who, "level_down", Integer.toString(next));
             else {
                 if (Levels.byPoints(c) > b.level && b.to.equals(PLAYER) && b.flags.add("gated:" + b.level))
-                    event(who, "gated", Levels.gate(b.experiences(), b.moments.size(), b.contactDays, b.level));
+                    event(who, "gated", b.level >= held ? "held" : Levels.gate(b.experiences(), b.moments.size(), b.contactDays, b.level));
                 return;
             }
             b.level = next;

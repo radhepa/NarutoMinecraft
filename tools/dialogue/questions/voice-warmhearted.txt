@@ -1,0 +1,77 @@
+# Questions only a warmhearted resident asks: food, comfort, who looks after you.
+# Axis poles: alone_or_together (1 alone, -1 together).
+#! tags: personality=warmhearted
+
+? q.pref.warm_comfort_food | fn: deepen_bond reveal_character | level: 2
+Q: When you're feeling low, what food makes it better? I want to know for next time.
+Q: What do you eat when you need cheering up? Tell me, and I'll keep some by.
+- Hot soup :: Miso soup with tofu. I'll have a pot ready whenever you need it. {values:+family} {tone:warm}
+- Sweet buns :: Red bean or custard? Both. I'll make both. {values:+kindness} {tone:playful}
+- Rice and pickles :: Plain and honest. My grandmother swore by it. {values:+honesty} {tone:humble}
+- Anything someone made me :: Oh, you. It's the making that counts, isn't it? {values:+family +kindness} {tone:gentle}
+
+? q.pref.warm_cook_it | fn: deepen_bond | level: 4 | follows: q.pref.warm_comfort_food | depth: 2 | gap: 3
+Q: That food you said cheers you up. Shall I make it for you one evening?
+Q: I've been practising your comfort food. May I cook it for you?
+- Yes, please :: Wonderful! Come hungry. I always make too much. {values:+family} {tone:warm}
+- Teach me to make it :: Even better! A recipe lasts longer than a meal. {values:+knowledge +family} {tone:curious}
+- Only if we eat together :: Of course together. What else would I do, watch you eat? {values:+loyalty +family} {tone:kind}
+
+? q.past.warm_eaten_today | fn: deepen_bond | level: 2
+Q: Have you eaten today? Properly, I mean. Not just a rice ball on the run.
+Q: When did you last have a proper meal? Be honest.
+- Yes, a proper meal :: Good. I can stop fussing. For a minute. {values:+duty} {tone:honest}
+- Just a snack :: A snack is not a meal. Sit. I'll find you something. {values:+honesty} {tone:humble}
+- I forgot :: Forgot! Training all day on an empty stomach. Sit down this instant. {values:+honesty} {tone:evasive}
+
+? q.past.warm_who_looks_after | fn: deepen_bond reveal_character | level: 4
+Q: Who looks after you when you're unwell?
+Q: When you catch a cold, who brings you tea?
+- I manage on my own :: On your own. Hm. I don't like the sound of that. {values:+freedom} {tone:proud}
+- My friends do :: Good friends. Thank them for me. {values:+loyalty} {tone:warm}
+- The hospital, if it's bad :: The medics are wonderful. But a cold needs soup, not a ward. {values:+duty} {tone:cautious}
+- Nobody, really :: Well. That changes now. {values:+honesty} {tone:gentle}
+
+? q.past.warm_let_me_visit | fn: deepen_bond | level: 6 | follows: q.past.warm_who_looks_after | depth: 2 | gap: 5
+Q: Next time you're poorly, will you let me look in on you?
+Q: If you fall ill, promise you'll send word? I'll come with soup.
+- Yes. Thank you :: Good. That's settled. I feel better already. {values:+family +loyalty} {tone:warm}
+- I'll be fine :: You always say that. I'm coming anyway. {values:+freedom} {tone:proud}
+- Only if you bring soup :: Ha! Soup is guaranteed. And a blanket. And another blanket. {values:+family} {tone:joking}
+
+? q.pref.warm_cozy_room | fn: deepen_bond reveal_character | level: 2
+Q: What makes a room feel cozy to you?
+Q: Picture the coziest room in the world. What's in it?
+- A warm kotatsu :: Legs under the blanket, an orange in hand. Perfect. {values:+family} {tone:warm}
+- People talking :: Voices in the next room. That's the coziest sound. {values:+loyalty +family} {tone:gentle}
+- Something cooking :: The smell of rice steaming. You're a person after my own heart. {values:+family} {tone:kind}
+- Piles of blankets :: Ha! A blanket nest. I've got a few spare, you know. {values:+freedom} {tone:playful}
+
+? q.advice.warm_lonely_neighbour | fn: deepen_bond reveal_character | level: 3
+Q: My neighbour's been alone since their old dog passed. How can I cheer them up?
+Q: There's someone on my street who's terribly lonely. What would you do?
+- Visit every day :: Every day, a little while. You're right. Showing up is half of it. {values:+loyalty +kindness} {tone:loyal}
+- Introduce a new puppy :: The Inuzuka have a litter... it might be too soon. Or just right. {values:+kindness} {tone:curious}
+- Invite them to supper :: A seat at my table. Of course. Why didn't I think of it? {values:+family} {tone:warm}
+- Ask what they need :: Not guess. Ask. That's wise. {values:+honesty +kindness} {tone:honest}
+
+? q.advice.warm_neighbour_after | fn: deepen_bond reveal_character | level: 5 | follows: q.advice.warm_lonely_neighbour | depth: 2 | gap: 5
+Q: My neighbour's smiling again! Should I keep visiting so often, or give them some room?
+Q: It worked. They're laughing on the porch again. Do I keep fussing?
+- Keep visiting :: Yes. Friendship isn't medicine you stop taking. {values:+loyalty} {tone:loyal}
+- Give them some room :: You're right. Let them find their feet. I'll wave from the gate. {values:+freedom} {tone:gentle}
+- Ask what they'd like :: Ask again. You're always right about asking. {values:+honesty} {tone:honest}
+
+? q.plans.warm_full_house | fn: deepen_bond reveal_character | level: 4 | axis: alone_or_together
+Q: When you're grown, will you have a house full of people, do you think?
+Q: Years from now, is your home a busy one or a quiet one?
+- Full to the rafters :: Noise and boots by the door and a big pot always on. Lovely. {values:+family} {tone:warm} {pole:-1}
+- A few close ones :: A small table with the right people. That's best of all. {values:+loyalty} {tone:gentle}
+- Peace and quiet :: Quiet is good. Just leave the door open for me now and then. {values:+freedom} {tone:free} {pole:1}
+
+? q.values.warm_kind_to_unkind | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Should you keep being kind to someone who's never kind back?
+Q: There's a grump at the market I always greet, and they never greet back. Should I stop?
+- Yes, always :: That's what I think too. Kindness isn't a trade. {values:+kindness} {tone:kind}
+- Up to a point :: Fair. Kindness shouldn't make you a doormat. {values:+honesty} {tone:honest}
+- No, it's wasted :: Hm. Maybe. But I'll keep greeting them. Just in case. {values:+freedom} {tone:blunt}

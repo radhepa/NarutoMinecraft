@@ -8,6 +8,7 @@ import dev.shinobi.life.bond.BondWorld;
 import dev.shinobi.life.bond.Conflict;
 import dev.shinobi.life.bond.Household;
 import dev.shinobi.life.bond.Kindling;
+import dev.shinobi.life.bond.Standing;
 import dev.shinobi.life.bond.Activity;
 import dev.shinobi.life.bond.BondDialogue;
 import dev.shinobi.life.bond.Conversation;
@@ -58,7 +59,30 @@ public final class Playthrough {
         Chapter(String id, String title, double hours, int days, Phase phase, Consumer<Run> start) { this(id, title, hours, days, phase, start, null); }
     }
     public record Row(String chapter, String title, double hours, long day, Map<String, Integer> levels, double cohesion, String village, String notes) {}
-    public record Result(Profile profile, List<Row> rows, Map<String, String> checks, BondWorld world, List<BondEvent> events) {}
+    public record Result(Profile profile, List<Row> rows, Map<String, String> checks, BondWorld world, List<BondEvent> events, Map<Integer, Standings> standing) {}
+    /**
+     * Standing at a checkpoint: with the village overall (the Hokage needs Hero), and in every district and clan quarter
+     * (the Hokage needs Good Neighbor in each); {@code lowest} is the weakest of those.
+     */
+    public record Standings(double village, String villageTitle, int goodNeighbor, int communities, String lowest, String lowestTitle) {
+        public boolean hero() { return villageTitle.equals("hero"); }
+        public boolean everywhere() { return goodNeighbor == communities; }
+        @Override public String toString() {
+            return String.format("village %s (%.1f); good neighbor in %d of %d districts and clans, lowest %s %s", villageTitle, village, goodNeighbor, communities, lowest, lowestTitle);
+        }
+    }
+    public static final int[] STANDING_HOURS = {45, 60};
+    static Standings standings(BondWorld w) {
+        var places = new java.util.TreeSet<String>();
+        for (var p : w.people()) for (String c : p.communities()) if (c.startsWith("district:") || c.startsWith("clan:")) places.add(c);
+        int good = 0; String lowest = ""; double low = Double.POSITIVE_INFINITY;
+        for (String c : places) {
+            double s = w.standing(c);
+            if (s >= Standing.Title.GOOD_NEIGHBOR.from) good++;
+            if (s < low) { low = s; lowest = c; }
+        }
+        return new Standings(w.standing("village"), w.title("village").id(), good, places.size(), lowest, places.isEmpty() ? "" : Standing.Title.of(low).id());
+    }
 
     public static final List<String> SHOWN = List.of(TEAMMATE_A, TEAMMATE_B, SENSEI, INSTRUCTOR, CLASSMATE_C, CLASSMATE_D, RIVAL);
 
@@ -248,6 +272,7 @@ public final class Playthrough {
         Questions.load(w, SampleQuestions.bank());
         var r = new Run(w, profile, seed);
         var rows = new ArrayList<Row>();
+        var standing = new java.util.TreeMap<Integer, Standings>();
         for (var ch : chapters()) {
             r.notes.clear(); r.part++;
             for (int d = 0; d < ch.days; d++) {
@@ -258,6 +283,7 @@ public final class Playthrough {
                 for (var e : w.drainEvents()) { r.events.add(e); notable(r, e); }
             }
             r.hours += ch.hours;
+            for (int h : STANDING_HOURS) if (r.hours >= h && !standing.containsKey(h)) standing.put(h, standings(w));
             for (var f : Kindling.flames(w)) r.tierHours.putIfAbsent(f.tier().id(), Math.round(r.hours * 10) / 10.0);
             for (var f : Kindling.flames(w)) for (var t : Kindling.Tier.values())
                 if (t != Kindling.Tier.NONE && t.compareTo(f.tier()) <= 0) r.tierHours.putIfAbsent(t.id(), Math.round(r.hours * 10) / 10.0);
@@ -282,7 +308,8 @@ public final class Playthrough {
         r.checks.put("questions", String.format("%d asked; %.1f per close friend (level 5+, %d of them), %d at most; contradictions %d, noticed %d; bank ran dry %d times",
                 r.questions, perClose, close.size(), maxClose, r.contradictions, r.noticed, w.questionsDry()));
         r.checks.put("their lives", String.format("news told %d, responded to %d; deeper talks %d", r.newsTold, r.newsAnswered, r.deepTalks));
-        return new Result(profile, rows, r.checks, w, r.events);
+        for (int h : STANDING_HOURS) { standing.putIfAbsent(h, standings(w)); r.checks.put("standing at " + h + " h", standing.get(h).toString()); }
+        return new Result(profile, rows, r.checks, w, r.events, Map.copyOf(standing));
     }
 
     /** One in-game day of systemic play around the chapter's beat. */
@@ -520,11 +547,29 @@ public final class Playthrough {
         return sb.toString();
     }
 
+    /** The Hokage's standing across seeds, per kind of player and checkpoint: Hero with the village, Good Neighbor everywhere. */
+    public static String standingsAcross(long[] seeds) {
+        var sb = new StringBuilder("\n== Standing across seeds (Hero with the village; Good Neighbor in every district and clan) ==\n");
+        for (var profile : Profile.values()) {
+            var runs = java.util.Arrays.stream(seeds).mapToObj(s -> play(s, profile).standing()).toList();
+            for (int h : STANDING_HOURS) {
+                var at = runs.stream().map(m -> m.get(h)).toList();
+                var villages = at.stream().mapToDouble(Standings::village).sorted().toArray();
+                sb.append(String.format("  %-8s %2d h  village %.1f to %.1f, hero in %d of %d; good neighbor everywhere in %d of %d (places: %d to %d)%n",
+                        profile.id(), h, villages[0], villages[villages.length - 1], at.stream().filter(Standings::hero).count(), seeds.length,
+                        at.stream().filter(Standings::everywhere).count(), seeds.length, at.stream().mapToInt(Standings::goodNeighbor).min().orElse(0),
+                        at.stream().mapToInt(Standings::communities).min().orElse(0), at.stream().mapToInt(Standings::communities).max().orElse(0)));
+            }
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         long seed = args.length > 0 ? Long.parseLong(args[0]) : 20261029L;
         System.out.println("Bond pacing, seed " + seed + " (levels are the level each person acts on; coh = squad cohesion)");
         for (var profile : Profile.values()) System.out.print(table(play(seed, profile)));
         System.out.print(bonfires(new long[]{seed, 7, 11, 99, 2024}));
+        System.out.print(standingsAcross(new long[]{seed, 7, 11, 99, 2024}));
     }
 
     private Playthrough() {}

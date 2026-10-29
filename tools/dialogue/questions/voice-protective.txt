@@ -1,0 +1,77 @@
+# Questions only a protective resident asks: getting home safe, who you watch over, how much risk.
+# Axis poles: caution_or_daring (1 caution, -1 daring).
+#! tags: personality=protective
+
+? q.past.prot_got_home | fn: deepen_bond | level: 2
+Q: Did you get home all right last night? The lanes are dark after the lanterns go out.
+Q: You were out late. Home safe? Tell me you took the lit streets.
+- Yes, safe and sound :: Good. That's all I needed to hear. {values:+duty} {tone:honest}
+- I took the long way :: The long way's the lit way. Smart. {values:+duty} {tone:cautious}
+- I stayed out very late :: Very late. Hm. Next time, send word. Humour me. {values:+freedom} {tone:free}
+
+? q.values.prot_stronger_foe | fn: deepen_bond reveal_character | kind: opinion | level: 3 | axis: caution_or_daring
+Q: Is it brave or reckless to fight someone stronger, to protect a friend?
+Q: A friend in trouble, an enemy who outclasses you. Is stepping in brave, or foolish?
+- Brave :: Brave. I'd do it too. I'd hate you doing it. {values:+courage +loyalty} {tone:bold} {pole:-1}
+- Reckless. Get help :: Yes. Run for help, fast. That's not cowardice, that's sense. {values:+duty} {tone:cautious} {pole:1}
+- Both, and worth it :: Both. Ha. That's the honest answer. {values:+loyalty +honesty} {tone:loyal}
+
+? q.values.prot_step_in_front | fn: deepen_bond reveal_character | kind: confession | level: 6 | follows: q.values.prot_stronger_foe | depth: 2
+Q: Would you, though? Really step in front of a friend?
+Q: If it came to it, would you put yourself between a friend and harm?
+- Without thinking :: Without thinking. I believe you. I'll worry about you forever now. {values:+loyalty +courage} {tone:loyal}
+- If I had to :: If you had to. That's the steadiest answer. Good. {values:+duty +loyalty} {tone:dutiful}
+- I'd find a smarter way :: A smarter way. Good. The best protectors think first. {values:+knowledge +loyalty} {tone:cautious}
+
+? q.pref.prot_always_carry | fn: deepen_bond reveal_character | level: 2
+Q: What do you always carry, just in case?
+Q: When you leave the house, what's in your pocket for emergencies?
+- Bandages :: Good. I carry two rolls. You can never have enough. {values:+duty +kindness} {tone:dutiful}
+- A spare kunai :: Sensible. Keep it sharp. {values:+strength} {tone:cautious}
+- A snack :: Ha! An emergency snack. That's survival, too. {values:+family} {tone:joking}
+- Nothing at all :: Nothing! Here. Take a bandage. And a whistle. Don't argue. {values:+freedom} {tone:free}
+
+? q.values.prot_watch_over | fn: deepen_bond reveal_character | kind: opinion | level: 4
+Q: Who do you feel you have to protect?
+Q: Is there anyone you'd always look out for, no matter what?
+- My squad :: As it should be. Watch their backs. They'll watch yours. {values:+loyalty} {tone:loyal}
+- The little ones :: The children. Yes. They're the whole village's to protect. {values:+kindness +duty} {tone:kind}
+- Everyone :: Everyone. That's a heavy load. Share it. {values:+duty} {tone:ambitious}
+- Myself first :: Yourself first. Good. You can't protect anyone flat on your back. {values:+strength} {tone:honest}
+
+? q.values.prot_who_guards_you | fn: deepen_bond reveal_character | kind: opinion | level: 6 | follows: q.values.prot_watch_over | depth: 2
+Q: And who protects you?
+Q: You watch over others. Who watches over you?
+- My friends :: Good friends. Keep them close. {values:+loyalty} {tone:warm}
+- My sensei :: A good sensei is a good shield. {values:+loyalty +duty} {tone:humble}
+- I protect myself :: You do. But you don't have to do it alone. {values:+strength +freedom} {tone:proud}
+- Maybe you do :: ...Yes. I'd like to. I will. {values:+loyalty} {tone:gentle}
+
+? q.dilemma.prot_friend_danger | fn: deepen_bond reveal_character | level: 3
+Q: Your friend wants to do something dangerous. Stop them, or let them choose?
+Q: A friend's set on a risky climb up the cliffs. What do you do?
+- Stop them :: Even if they're cross with you. Yes. Better cross than hurt. {values:+loyalty} {tone:stern}
+- Let them choose :: Their life, their choice. It's hard. You're right, though. {values:+freedom} {tone:free}
+- Go with them :: Go with them. Then at least you're there. That's what I'd do. {values:+loyalty +courage} {tone:loyal}
+
+? q.advice.prot_worry_nephew | fn: deepen_bond reveal_character | level: 3
+Q: My nephew's on missions now. I lie awake every night. How do I stop worrying?
+Q: Someone I love is out on the roads with a squad. How do I sleep?
+- Trust their training :: Trust the Academy. Trust the sensei. Yes. I'll try. {values:+duty} {tone:dutiful}
+- Keep yourself busy :: Busy hands, quiet mind. I'll clean the whole house twice. {values:+duty} {tone:cautious}
+- Write to them :: Letters! Something for them to come home to. Lovely. {values:+family +loyalty} {tone:warm}
+- You can't. That's love :: Ha. You're right. I'll stop trying to stop. {values:+family +honesty} {tone:honest}
+
+? q.advice.prot_worry_after | fn: deepen_bond reveal_character | level: 5 | follows: q.advice.prot_worry_nephew | depth: 2 | gap: 5
+Q: My nephew came home safe! Should I tell them how much I worried?
+Q: They're home. Do I tell them about the sleepless nights?
+- Yes, tell them :: You're right. They should know someone was waiting. {values:+honesty +family} {tone:honest}
+- No. Just feed them :: Ha! Feed them and fuss. That says it all anyway. {values:+family} {tone:warm}
+- Just a little :: A little. Enough that they know. Not so much they feel guilty. Wise. {values:+kindness} {tone:gentle}
+
+? q.plans.prot_join_guard | fn: deepen_bond reveal_character | level: 4
+Q: Have you ever thought about joining the village guard one day?
+Q: The gate, the walls, the night watch. Could you see yourself there?
+- Yes, I'd like that :: Good. The village sleeps easier with people like you on the walls. {values:+duty +loyalty} {tone:dutiful}
+- No, missions for me :: The road calls you. Fair. Come back safe, every time. {values:+freedom +courage} {tone:bold}
+- Maybe, later :: Later. When you've seen enough roads. That's how most guards start. {values:+duty} {tone:cautious}

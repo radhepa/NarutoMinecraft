@@ -1,0 +1,30 @@
+# Bond-book strings for keys the bond engine added late (bonds-2). Kept vague: the beats behind them are the story's.
+#! kind: cycle
+#! tags: stage=child|teen|adult
+
+## bond.memory.offered_flame  fn=deepen_bond,callback
+You offered them something of yourself, and they saw it for what it was.
+A moment you reached out further than words.
+
+## bond.memory.gave_flame  fn=deepen_bond,callback
+Something passed between you that neither of you will forget.
+You gave them a light when they needed one.
+
+## bond.goal.held  fn=teach
+Something keeps them at a distance for now.
+Whatever stands between you, time and the road ahead will have to move it.
+
+## bond.memory.saved_the_village  fn=deepen_bond,callback
+You stood for the whole Leaf when it mattered most.
+## bond.memory.saved_the_village.seen  fn=deepen_bond,callback
+They saw you stand for the whole Leaf.
+## bond.memory.saved_the_village.heard  fn=deepen_bond,callback
+They heard how you stood for the whole Leaf.
+
+#! kind: line
+## bond.seen.saved_the_village  fn=react,deepen_bond
+I saw what you did for the village. I don't have the words. Thank you.
+I was there. I saw you. The whole Leaf owes you, and I owe you more.
+## bond.heard.saved_the_village  fn=react,deepen_bond
+Everyone's saying the village is standing because of you. Is it true? You don't have to answer.
+They're telling the story in every street. I just wanted to say it to your face: thank you.

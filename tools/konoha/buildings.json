@@ -44,8 +44,8 @@
    "status": "planned"
   },
   {
-   "id": "apartment_block",
-   "name": "Walk-up apartment block, 2 to 4 storeys",
+   "id": "leaf_block",
+   "name": "Leaf apartment block: walk-up, 2 to 4 storeys, three flats a landing (HOME.md flat plan)",
    "makes": "apartments",
    "first": "P0",
    "status": "prototype"
@@ -210,6 +210,13 @@
    "makes": "landmarks",
    "first": "B1",
    "status": "planned"
+  },
+  {
+   "id": "farm",
+   "name": "Farmhouse, barn, pen and field plots",
+   "makes": "landmarks",
+   "first": "B2",
+   "status": "planned"
   }
  ],
  "buildings": [
@@ -296,17 +303,17 @@
   },
   {
    "group": "apartments",
-   "id": "apartment_block",
-   "name": "Apartment block",
+   "id": "leaf_block",
+   "name": "Leaf apartment block",
    "how": "program",
-   "footprint": "14 x 11",
+   "footprint": "35 x 15",
    "counts": {
     "P0": 1,
     "B1": 3,
     "B2": 1,
     "later": 1
    },
-   "notes": "9 flats; the player's block and two more candidate blocks in Beta 1"
+   "notes": "12 flats (10 x 8 inside: main room, kitchenette, bathroom, genkan, closet, balcony); the player's block (flat 3a) and two more candidate blocks in Beta 1"
   },
   {
    "group": "apartments",
@@ -328,11 +335,10 @@
    "footprint": "13 x 11",
    "counts": {
     "B1": 2,
-    "B2": 1,
-    "B3": 1,
+    "B2": 2,
     "later": 2
    },
-   "notes": "4 flats over 2 shops; the Beta 3 one is the foreign teams' inn"
+   "notes": "4 flats over 2 shops; the Beta 2 ones include the village inn, which lodges the foreign teams in Beta 3"
   },
   {
    "group": "shops",
@@ -355,11 +361,11 @@
    "how": "program",
    "footprint": "11 x 11",
    "counts": {
-    "B1": 6,
-    "B2": 7,
-    "later": 6
+    "B1": 8,
+    "B2": 8,
+    "later": 4
    },
-   "notes": "Grocer and market fillers (B1); scrolls, pawn, tools, tailor, medicine, metalworker (B2)"
+   "notes": "Grocer, haruno store, the barber, the courier office near the Residence and market fillers (B1); scrolls, pawn, tools, tailor, medicine, metalworker, bookshop (B2)"
   },
   {
    "group": "shops",
@@ -369,10 +375,10 @@
    "footprint": "17 x 13",
    "counts": {
     "B1": 2,
-    "B2": 1,
+    "B2": 2,
     "later": 2
    },
-   "notes": "The furniture shop and its showroom, and the weapon shop with its forge room (B1); the post office (B2)"
+   "notes": "The furniture shop and its showroom, and the weapon shop with its forge room (B1); two warehouses by the market (B2)"
   },
   {
    "group": "shops",
@@ -570,12 +576,45 @@
    "group": "landmarks",
    "id": "gate_barracks",
    "name": "Gate barracks",
-   "how": "program `apartment_block` variant",
+   "how": "program `leaf_block` variant",
    "footprint": "14 x 11",
    "counts": {
     "B1": 1
    },
    "notes": "By the main gate: 6 bunks for the gate guards, the Shiranui neighbourhood next to it"
+  },
+  {
+   "group": "landmarks",
+   "id": "park",
+   "name": "Village park",
+   "how": "hand",
+   "footprint": "~40 x 40",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "Trees, a pond, benches; missions' park and pet hideouts"
+  },
+  {
+   "group": "landmarks",
+   "id": "kiln_yard",
+   "name": "Potter's kiln yard",
+   "how": "one-off + hand finish",
+   "footprint": "15 x 15",
+   "counts": {
+    "B2": 1
+   },
+   "notes": "A potter family's climbing kiln and drying racks; a potter's stall on the market street"
+  },
+  {
+   "group": "landmarks",
+   "id": "farmstead",
+   "name": "Farmstead outside the gate",
+   "how": "program `farm` + hand terrain",
+   "footprint": "~40 x 30",
+   "counts": {
+    "B2": 2
+   },
+   "notes": "Farmhouse, barn, pen and fields; an orchard and a woodlot nearby"
   },
   {
    "group": "landmarks",
@@ -597,7 +636,7 @@
    "counts": {
     "B2": 1
    },
-   "notes": ""
+   "notes": "The boiler room at the back; the mural of the Hokage Rock at sunrise on the big wall"
   },
   {
    "group": "landmarks",
@@ -613,13 +652,24 @@
   {
    "group": "landmarks",
    "id": "ferry",
-   "name": "Ferry landing",
+   "name": "Ferry landing and ferry",
    "how": "hand",
    "footprint": "9 x 7",
    "counts": {
-    "B2": 1
+    "B1": 1
    },
-   "notes": "With the site of the future bridge"
+   "notes": "The ferry runs from the same landing on both banks (a moored flat boat of planks; the crossing is a scripted ride); the site of the future bridge downstream"
+  },
+  {
+   "group": "landmarks",
+   "id": "river_island",
+   "name": "River island",
+   "how": "hand",
+   "footprint": "~12 x 9",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "A little island in the river with one pine and a great many ducks"
   },
   {
    "group": "landmarks",
@@ -630,7 +680,7 @@
    "counts": {
     "B2": 1
    },
-   "notes": ""
+   "notes": "With the roadside inn and its cellar; the east road's bridge, ford, bend, reeds and hill pass are terrain anchors"
   },
   {
    "group": "landmarks",
@@ -770,6 +820,20 @@
     "later": 8
    },
    "notes": ""
+  },
+  {
+   "group": "streets",
+   "id": "village_well",
+   "name": "District well (placed by the layout)",
+   "how": "layout",
+   "footprint": "3 x 3",
+   "counts": {
+    "B1": 6,
+    "B2": 4,
+    "B3": 1,
+    "later": 3
+   },
+   "notes": "One in every district; the market's is the coldest"
   },
   {
    "group": "streets",

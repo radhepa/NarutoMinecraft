@@ -1,0 +1,96 @@
+# Callbacks for questions/voice-reserved.txt, in the reserved asker's voice: short and dry.
+#! fn: callback
+#! tags: personality=reserved
+
+## callback.answer.q.pref.res_quiet_company.a1
+You like quiet company. So. ...Sit a while.
+
+## callback.answer.q.pref.res_quiet_company.a2
+You like chatter. I've saved up three things to say. That's a lot, for me.
+
+## callback.answer.q.pref.res_quiet_company.a3
+Depends who, you said. Hm. I hope I'm one of the good silences.
+
+## callback.answer.q.values.res_some_things_private.a1
+Some things stay private. We agreed. I haven't forgotten.
+
+## callback.answer.q.values.res_some_things_private.a2
+Share more, you said. I'm trying. Slowly. This is me trying.
+
+## callback.answer.q.values.res_some_things_private.a3
+With the right person, you said. ...I've been thinking about who that is, for me.
+
+## callback.answer.q.values.res_never_told.a1
+You've a thing you've never told. So do I. Still not asking.
+
+## callback.answer.q.values.res_never_told.a2
+Nothing you've never told. Lucky. I still think so.
+
+## callback.answer.q.values.res_never_told.a3
+"Maybe." Still my favourite answer anyone's given me.
+
+## callback.answer.q.pref.res_alone_spot.a1
+Your apartment, door shut. Your hiding spot. I won't knock. Unless I bring food.
+
+## callback.answer.q.pref.res_alone_spot.a2
+Forest edge. I walked out there yesterday. Didn't see you. Good. That's the point.
+
+## callback.answer.q.pref.res_alone_spot.a3
+Back shelves of the library. Saw you there. Didn't say anything. You're welcome.
+
+## callback.answer.q.pref.res_alone_spot.a4
+You never need to be alone, you said. Still strange to me. Still envy it.
+
+## callback.answer.q.values.res_small_talk.a1
+Small talk's pointless. We agreed. ...Nice weather. Ha.
+
+## callback.answer.q.values.res_small_talk.a2
+Oil for the hinges, small talk. Your view. I tried some on the baker. Got an extra roll.
+
+## callback.answer.q.values.res_small_talk.a3
+Nice, sometimes, you said. With the right baker. The baker sends their regards.
+
+## callback.answer.q.pref.res_tea.a1
+Plain green. Here. Correct temperature.
+
+## callback.answer.q.pref.res_tea.a2
+Sweet tea. I bought honey. Don't tell anyone.
+
+## callback.answer.q.pref.res_tea.a3
+No tea, I remember. Barley water, then. Here.
+
+## callback.answer.q.pref.res_tea_offer.a1
+The pot's on. You said yes last time. Sit. Don't talk.
+
+## callback.answer.q.pref.res_tea_offer.a2
+Two cups again. If you're having some, you said. I am.
+
+## callback.answer.q.pref.res_tea_offer.a3
+Another time, you said. Is it another time yet?
+
+## callback.answer.q.values.res_pryers.a1
+Change the subject. Your trick with pryers. Used it today. "Lovely clouds." Worked.
+
+## callback.answer.q.values.res_pryers.a2
+"That's mine." Said it to a pryer at the market. Your words. Very satisfying.
+
+## callback.answer.q.values.res_pryers.a3
+You answer pryers politely. More patient than me. Still true.
+
+## callback.answer.q.past.res_trust_speed.a1
+You trust quickly. Brave. I worry for you a bit. Just a bit.
+
+## callback.answer.q.past.res_trust_speed.a2
+Slowly, like me. It lasts longer. I've found that's right.
+
+## callback.answer.q.past.res_trust_speed.a3
+Depends on the person. Obviously. Ha. Still fair.
+
+## callback.answer.q.past.res_trust_me.a1
+You said you trust me. ...I think about that more than I'd say.
+
+## callback.answer.q.past.res_trust_me.a2
+Getting there, you said. So am I. Still getting there. Closer.
+
+## callback.answer.q.past.res_trust_me.a3
+Not yet, you said. Honest. Ask me how I'm doing at earning it, sometime.

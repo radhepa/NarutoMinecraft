@@ -1,0 +1,67 @@
+# The dango stand: skewers of rice dumplings. Dango speeds chakra regeneration for a while (ROADMAP §7, Food).
+#! fn: commerce
+
+## shop.dango_stand.greet  shop=dango_stand  fn=commerce
+Dango, fresh off the coals! Step right up.
+Welcome! Three to a skewer, and every one of them round.
+Hello, {player}! Sweet tooth acting up again?
+Come and have a look, the syrup's still warm.
+Hey there! The bench in the shade is free, if you want to sit.
+
+## shop.dango_stand.greet  shop=dango_stand  season=spring  fn=commerce,react
+Blossom season! The pink-white-green skewers are back, and they're selling like mad.
+
+## shop.dango_stand.greet  shop=dango_stand  time=afternoon  fn=commerce,react
+Afternoon snack time! The busiest hour of my whole day.
+
+## shop.dango_stand.browse  shop=dango_stand  fn=commerce
+Soy glaze, sweet bean, or the three-colour ones. Those are the classics.
+Sesame dango are new. A little nutty, a little salty.
+The grilled ones have a char on them. Some people pick the char off. Those people are wrong.
+Skewers come in ones or in bundles of five. The bundle is cheaper by a ryo.
+Tea's on the side, if you want something to wash it down.
+
+## shop.dango_stand.buy  shop=dango_stand  kind=cycle  fn=commerce
+One skewer of {item}! Careful, the syrup drips.
+{pay}. Eat them top to bottom, that's the proper way.
+Here you go. Hold it by the stick, not the dango.
+That's {pay}. Come back when you've licked the stick clean.
+There! Fresh as the morning.
+{item}, grilled just now. {pay}, please.
+Bundle of five, wrapped in bamboo leaf. Share them, or don't.
+
+## shop.dango_stand.cant_afford  shop=dango_stand  kind=cycle  fn=commerce
+That's a bit more than you've got. One skewer instead of five?
+Not quite there! Count your ryo again, I'll wait.
+Short by a little. Tell you what, come back tomorrow and I'll remember.
+Not enough for the bundle, but plenty for a single.
+
+## shop.dango_stand.sold_out  shop=dango_stand  kind=cycle  fn=commerce
+All out of {item}! The Academy let out early.
+Sold out. The rice dough needs the night to rest, so tomorrow it is.
+No more sweet bean today. Soy glaze?
+
+## shop.dango_stand.haggle  shop=dango_stand  fn=commerce,reveal_character
+Haggle over dango? They're already the cheapest thing on the street!
+Buy the bundle and it's a ryo less. That's my one secret.
+If you can eat five without getting syrup on your sleeve, the next one's free.
+I'll give you the slightly lopsided one for less. Tastes just the same.
+
+## shop.dango_stand.closing  shop=dango_stand  time=evening|night  fn=commerce
+Last skewers on the grill! After these I'm off home.
+The coals are dying down. Grab one while they're warm.
+Closing soon. Anything left goes to my neighbours' children.
+
+## shop.dango_stand.recommend  shop=dango_stand  fn=commerce,teach
+Training this afternoon? Have a skewer first. Dango gets your chakra coming back faster for a while.
+Try the {special}! I've been making them all week and I still can't stop eating them.
+The three-colour skewer. Pink for spring, white for winter, green for summer. No autumn, sadly.
+Soy glaze if you want something salty, sweet bean if you want to be happy.
+The {item}, with a cup of tea. That's a proper break.
+Between drills, a single skewer. It keeps your chakra topped up better than you'd think.
+
+## shop.dango_stand.regular  shop=dango_stand  level=3..10  fn=commerce,deepen_bond
+My favourite customer! Here, I grilled one extra while you were walking up.
+You know, I can tell your step from across the street now.
+Usual skewer? I've got it on the coals already.
+You've eaten so many dango this season, I should name one after you.

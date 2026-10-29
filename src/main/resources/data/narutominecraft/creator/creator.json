@@ -192,7 +192,7 @@
   "headwear": null
  },
  "starting_key_item": {
-  "item": "half_charm",
+  "item": "item:half_charm",
   "line": "creator.review.key_item"
  },
  "creatable": [

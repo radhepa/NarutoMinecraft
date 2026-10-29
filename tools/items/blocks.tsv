@@ -1,0 +1,74 @@
+# Blocks asked of the Konoha build session (tools/konoha/blocks.json is theirs). Furniture blocks come from the
+# catalogue's block= props and are listed in data/items/block_requests.json with them; this table describes the
+# shop-interior and station blocks that are not furniture you can buy. kind: interior (decor that may need a
+# state or a seat), station (opens a crafting screen), display (shows items or a wardrobe outfit; needs a block
+# entity). vf: a Village Friends block reused as it is.
+block	kind	description
+shop_counter	interior	A waist-high wooden shop counter, straight and corner shapes; the keeper stands behind it and right-clicking it opens the shop screen
+shop_noren	interior	A short split curtain over a shop door, in the shop's colour with its name painted (a variant per shop)
+menu_board	interior	A wall board of wooden menu slats; shows the shop's price list on right-click
+ramen_counter	interior	Ichiraku's long bar counter with a raised serving ledge; dishes sit on it (VF tavern table rules)
+ramen_stool	interior	A round-topped stool that faces the counter; a VF Seat for residents and the player
+noodle_kitchen	interior	The broth pots, noodle board and steam behind Ichiraku's counter (decor, animated steam)
+produce_crate_display	display	Tilted wooden crates showing their produce (cabbage, daikon, rice sacks)
+crate_display	display	A stack of open crates showing what is for sale
+rice_sack_pile	interior	Stacked straw rice sacks
+goods_shelf	display	Free-standing shelves showing up to six stocked items
+general_store_shelf	display	A wall of small cubbies for sundries: shows up to nine items
+market_stall	interior	An open stall: a trestle table under an awning, for Market Day and the fish stall
+fish_ice_display	display	A tray of crushed ice showing the day's fish
+dango_grill	interior	A charcoal grill with dango skewers, smoking
+bench_red_cloth	interior	A bench draped in red cloth under a parasol; a Seat
+parasol	interior	A tall red paper parasol (wagasa)
+tea_counter	interior	A low tea-house counter with a kettle on a brazier
+barbecue_table	interior	A table with a sunken grill; a squad sits round it (Seats on both sides)
+bench_seat	interior	A plain bench seat for booths; a Seat
+weapon_display_wall	display	A pegboard wall showing kunai, shuriken and blades for sale
+glass_case	display	A glass-topped display case showing up to four items
+forge	station	The weapon shop's forge hearth and bellows: the smithy station's heat, glows while working
+anvil	station	A Japanese block anvil with hammers: the smithy station's screen opens here
+quench_trough	interior	A water trough beside the forge; hisses when a blade is quenched
+whetstone_wheel	station	A pedal grindstone: sharpening and repair at the smithy
+pouch_hooks	display	A rail of hooks showing pouches and holsters
+scroll_rack	display	A wall of scroll cubbies showing technique scrolls for sale
+scroll_display_case	display	A low case showing one featured scroll open
+calligraphy_desk	station	The scroll shop's low desk with ink stone and seal plates: the public sealing desk
+flower_bucket_stand	display	Tiered buckets of cut flowers by season
+flower_pot_tiers	display	Stepped shelves of potted plants for sale
+arranging_table	interior	A table with shears and wrapping paper for bouquets
+showroom_plinth	display	A low platform that shows one furniture piece as it would stand in a home
+catalogue_lectern	interior	A lectern with the furniture shop's catalogue: order pieces not on the floor
+lumber_rack	interior	A rack of planks and logs at the Kinoshita yard
+sawhorse	interior	A pair of sawhorses with a half-cut board
+bolt_shelf	display	Shelves of cloth bolts in the tailor's palettes
+mannequin	display	A tailor's mannequin that wears one wardrobe outfit (shows the outfit for sale on the resident model)
+fitting_screen	interior	A folding screen to change behind: try an outfit on before buying
+pawn_counter_grille	interior	A counter behind wooden bars with a small window; the pawn shop's screen opens here
+curio_shelf	display	A crowded shelf of odd things for sale
+bath_counter	interior	The bath house's raised front desk
+locker_shelf	interior	Wooden shoe and clothes lockers
+wash_stool	interior	A low wooden stool and bucket at the washing area; a Seat
+medicine_drawer_wall	interior	A wall of a hundred small medicine drawers (hyakumi-dansu)
+herb_drying_rack	interior	Bamboo racks of drying herbs
+hospital_counter	interior	The dispensary's counter window
+bookshelf_tall	display	A tall bookshelf showing books and novels for sale
+book_display_table	display	A table of new books laid flat
+kennel	interior	A ninken kennel with a gate; pups for adoption wait here
+vet_table	interior	A veterinary table
+pet_supply_shelf	display	Shelves of kibble, collars and toys
+metal_stock_rack	display	A rack of steel bars, wire spools and chain
+charm_stall	display	The shrine's charm counter showing omamori
+ema_rack	interior	The wish-plaque rack; hangs the plaques players write
+omikuji_rack	interior	Strings for tying bad fortunes
+offering_box	interior	A slatted offering box with a bell rope above it: the shrine offering service
+paint_display	display	A rack of pigment jars and brushes
+cracker_grill	interior	A charcoal grill pressing rice crackers
+jar_shelf	display	Shelves of glass jars of crackers
+festival_stall	interior	A festival yatai: a wheeled stall with a lantern-hung roof
+goldfish_pool	interior	A shallow tub of goldfish for the scooping game
+target_game_booth	interior	A target-throwing game: three shuriken, painted targets
+prize_shelf	display	The prize shelf at a festival game
+easel_canvas	vf	VF's painter workstation, reused for the painters' studio
+keepsake	display	A small display stand that shows one keepsake on a table, shelf or the floor
+wall_mount	display	A wooden wall bracket that shows one item (a blade, a mask, a curio): home display furniture
+barber_chair	interior	A barber's chair facing a mirror; a Seat. Right-click with the barber present opens the restyle screen

@@ -21,7 +21,7 @@ are roles (`role:sensei`), with developer placeholder names. Anything that ships
 
 | File | What it holds |
 |---|---|
-| [`tools/roster/roster.json`](../tools/roster/roster.json) | Every named shinobi of the beta (65) and the story's civilians (4). Each has a role, name, rank, tier, importance, spotlight, clan and clan power, specialty, first appearance and levels. The file also holds the class's clan weights and the squads |
+| [`tools/roster/roster.json`](../tools/roster/roster.json) | Every named shinobi of the beta (70) and the story's civilians (4). Each has a role, name, rank, tier, importance, spotlight, clan and clan power, specialty, first appearance, levels, and a `leaves_on` story flag (`world.roster.<role>.gone`, on everyone alike). The file also holds the class's clan weights and the squads |
 | [`tools/roster/rank_distribution.json`](../tools/roster/rank_distribution.json) | How every other resident gets a rank and a level: weights per group, fixed posts, rank level spreads, clan power, job ranks, the share away on missions, and the lore numbers |
 | [`tools/roster/roster.py`](../tools/roster/roster.py) | `--check` validates both files against each other, the level curve, the wardrobe's clans, looks and family names, and `population.json`. `--table`, `--counts` and `--power` print the tables below |
 | [`life/roster`](../life/roster) | The growth engine: pure Java, no Minecraft, seeded (`./gradlew :life:roster:test`, `./gradlew :life:roster:simulate`) |
@@ -177,7 +177,7 @@ So about one clanless shinobi in five beats the great clans' median at their ran
 - **Strongest of all:** the squad a year ahead's clanless prodigy.
 - **Lowest at first, then catching up:** the loud clanless teammate and the Inuzuka.
 
-**Your class leans toward the important clans**, so familiar names appear early. The village
+**Your classmates lean toward the important clans** (you are a clanless orphan), so familiar names appear early. The village
 population stays as it is, with noble clans rare.
 
 - **The class.** `class_clan_weights` in `roster.json` rolls the eleven classmates in a Varied save:
@@ -207,19 +207,19 @@ without letting the player fight them. Five tools do it:
 |---|---|---|---|
 | Beta 1 | The rescue (Ch 0) | `role:captain` | A jonin clears a hideout you could not escape, and carries you over a ravine |
 | Beta 1 | First morning (Ch 1) | `role:anbu_cat` | A mask on the Residence roof, gone when you look back |
-| Beta 1 | First lessons (Ch 2) | `role:taijutsu_master`, `role:squad5_c` | In the Academy yard, the prodigy a year ahead trains under the taijutsu master. One kick splits a post you could not dent |
+| Beta 1 | First lessons (Ch 2) | `role:kenjutsu_instructor` | The Academy's sword drills, for every class: the instructor cuts a falling leaf in four before it lands, then hands you a wooden sword |
 | Beta 1 | Night (Ch 4) | `role:night_watch` | The night watch steps out of the dark on the wall and back into it without a sound |
 | Beta 1 | The Rock (Ch 5) | `{hokage:1}` to `{hokage:4}` | The four faces, and the instructor's stories about each |
 | Beta 2 | The bell test (Ch 8) | `role:sensei` | Your sensei holds the bells against all three of you |
 | Beta 2 | The Mission Desk (Ch 9) | Standby jonin | You queue for a D-rank while jonin walk past to the C-ranks and above |
-| Beta 2 | Tree walking (Ch 10) | `role:sensei` and `role:sensei_2` | Your sensei's self-declared rival picks a fight at Training Ground 3: a minute of ninjutsu against senbon, with trees falling. The village bets on them |
+| Beta 2 | Tree walking (Ch 10) | `role:sensei_2` | In the background at Training Ground 3, your sensei's self-declared rival threads senbon through a row of hanging rings without looking. Their running contests (senbon footwork on guard rotations) are village gossip |
 | Beta 2 | The east road (Ch 11) | `role:elite_scout` | A bandit camp your squad was told to avoid is already ash; the returning captain's squad passes you, one of them carried |
 | Beta 2 | The scroll shop (Ch 12) | `role:legend_veteran` | The old seller lights a candle from across the room with a flick of chakra. Residents say who he was |
 | Beta 2 | The far road (Ch 13) | An ANBU team | Masks overtake your squad treetop to treetop, there and gone in a breath |
 | Beta 2 | Clan welcomes (wave 1) | Clan heads | Each head shows the clan's art at full strength: the Nara shadows, the Inuzuka pack |
 | Beta 2 | Standby station talk | `role:legend_wanderer` | Letters, a chair nobody sits in, and stories about the one who has been away for years |
 | Beta 3 | The exams (Ch 15 to 17) | The three proctors | The written-test proctor's entrance, the forest proctor, and the finals proctor stopping a bout mid-strike |
-| Beta 3 | Preliminaries (Ch 17) | `role:squad5_c` | The prodigy's bout: a clanless genin fighting at C against a great clan, and winning |
+| Beta 3 | Preliminaries (Ch 17) | `role:squad5_c` | The prodigy's bout: a clanless genin fighting at tier C |
 | Beta 3 | The stands (Ch 19) | `role:hokage_4`, the elites | The village's strongest people, all in one place |
 
 **Rules for elites in the beta:**
@@ -266,7 +266,7 @@ shinobi, Academy students or retired shinobi. `rank_distribution.json` gives the
 | **Residents** | 84 | 45 | 37 | **300** | | |
 
 "Away" means VF's schedule keeps them off the map that day: out of the gate, on a mission. A jonin
-you meet on Monday may be gone until Friday, which makes the village feel like a working military
+you meet on Moonday may be gone until Metalday, which makes the village feel like a working military
 town. Named story characters stay when the story needs them.
 
 ### Met and known in the beta
@@ -279,15 +279,15 @@ and a quest or a scene. The many you merely pass are not counted.
 | Hokage | 1 | — | — | — | **1** |
 | Council elders | 3 | — | — | — | **3** |
 | ANBU (masked, never named) | 1 seen | 1 seen | — | (in the stands) | **2 seen** |
-| Elite jonin | 2 (your captain, the taijutsu master) | 2 (the second sensei, the returning captain) | — | — | **4** |
-| Jonin | 1 (the senior squad's sensei) | 8 (two senseis, two clan heads, the police chief, three standby regulars) | 3 (clan heads) | — | **12** |
+| Elite jonin | 2 (your captain, the kenjutsu instructor) | 2 (the second sensei, the returning captain) | — | — | **4** |
+| Jonin | 1 (the senior squad's sensei) | 11 (two senseis, five clan heads, the police chief, three standby regulars) | 3 (clan heads) | — | **15** |
 | Special jonin | 1 (the head medic) | — | 2 (clan heads) | 3 (the proctors) | **6** |
 | Chunin | 7 (instructors, the gate, the night watch, the medic) | 3 (the desk, a police officer) | 7 (clan heads) | — | **17** |
 | Genin | 3 (the squad a year ahead) | — | — | — | **3** |
 | Academy | 11 (your class) | — | — | — | **11** |
-| Retired | 1 (the headmaster) | 1 (the old scroll-seller) | 3 (clan heads) | — | **5** |
+| Retired | 1 (the headmaster) | 3 (the old scroll-seller, two clan heads) | 3 (clan heads) | — | **7** |
 | Legends | — | 1 spoken of | — | — | **1** |
-| **Named shinobi** | **31** | **15** | **15** | **3** | **64 met, 1 spoken of** |
+| **Named shinobi** | **31** | **20** | **15** | **3** | **69 met, 1 spoken of** |
 
 The people you **get to know well** in each slice:
 
@@ -330,21 +330,21 @@ Not every jonin is equal. Every named person carries two fields:
 
 | Spotlight | What they get | In the beta |
 |---|---|---|
-| **Pillar** | A unique look and kit, a signature technique, showcase scenes, a bond line across several slices | 12: the Hokage, the five senseis, your two teammates and the rival, the taijutsu master, the returning captain, the old scroll-seller |
-| **Named** | Their own lines and a quest or a scene; a kit from the shared pool with one twist | 31: the rest of your year, the squad a year ahead, the elders, the Academy staff, the proctors, the desk, the gate, the watch, the medics, the police chief, the clan heads of Beta 2 |
+| **Pillar** | A unique look and kit, a signature technique, showcase scenes, a bond line across several slices | 12: the Hokage, the five senseis, your two teammates and the rival, the kenjutsu instructor, the returning captain, the old scroll-seller |
+| **Named** | Their own lines and a quest or a scene; a kit from the shared pool with one twist | 36: the rest of your year, the squad a year ahead, the elders, the Academy staff, the proctors, the desk, the gate, the watch, the medics, the police chief, the clan heads of Beta 2 (the eight clan seats') |
 | **Background** | A rank, a role outfit, generated lines from the rank pools | 21: standby jonin, ANBU, a police officer, and the clan heads of Beta 2.5 (who become named in their own clan line) |
 | **Legend** | Stories, letters, a portrait at the standby station | 1: the wandering legend |
 
 | Importance | Who |
 |---|---|
-| **Story-driving** (25) | The Hokage and the three elders, the five senseis, your year (all eleven) and the squad a year ahead, the instructor and the medic |
-| **Fan-favourite** (13) | The taijutsu master, the returning captain, the old scroll-seller, the wandering legend, the three proctors, the gate guards and the night watch, the police chief, the Nara and Inuzuka heads |
-| **Background** (27) | Everyone else: the desk, the standby regulars, the Academy teachers, the hospital, ANBU, most clan heads |
+| **Story-driving** (22) | The Hokage and the three elders, the five senseis, your year (but for three) and the squad a year ahead, the instructor and the medic |
+| **Fan-favourite** (19) | Three of your year (the Kinoshita, the Gekko, the Inuzuka); the kenjutsu instructor, the returning captain, the old scroll-seller, the wandering legend; the three proctors; the gate guards and the night watch; the police chief; the Hyuga, Akimichi, Yamanaka, Nara and Inuzuka heads |
+| **Background** (29) | Everyone else: the desk, the standby regulars, the Academy teachers, the hospital, ANBU, most clan heads |
 
 **The jonin by importance:**
 
 - **Story-driving pillars:** the five senseis.
-- **Fan-favourite pillars:** the taijutsu master and the returning captain.
+- **Fan-favourite pillars:** the kenjutsu instructor and the returning captain.
 - **Fan-favourite legend:** the wandering legend.
 - **Other fan-favourites:** the police chief and two clan heads.
 - **Background:** the standby regulars and three clan heads.
@@ -372,21 +372,21 @@ names are for developers only.
 | `role:sensei_3` | Akane Yuhi | jonin | B | story-driving | pillar | yuhi (strong) | genjutsu | beta2 | 39 / 39 / 39 |
 | `role:sensei_4` | Masaru Morino | jonin | B | story-driving | pillar | morino (minor) | interrogation | beta2 | 37 / 37 / 37 |
 | `role:sensei_5` | Benkei Uzumaki | jonin | B | story-driving | pillar | uzumaki (great) | sealing | beta1 | 40 / 40 / 40 |
-| `role:teammate_a` | Sora Kurama | academy | E | story-driving | pillar | kurama (strong) | genjutsu (a painter) | beta1 | 5 / 14 / 17 |
-| `role:teammate_b` | Riku Ogawa (no clan) | academy | E | story-driving | pillar | none (clanless) | taijutsu, with a stray pup | beta1 | 5 / 14 / 18 |
+| `role:teammate_a` | Sora Kurama | academy | E | story-driving | pillar | kurama (strong) | genjutsu (a painter) | beta1 | 5 / 15 / 18 |
+| `role:teammate_b` | Riku Ogawa (no clan) | academy | E | story-driving | pillar | none (clanless) | taijutsu, with a stray pup | beta1 | 5 / 14 / 17 |
 | `role:rival` | Ryo Uchiha | academy | E | story-driving | pillar | uchiha (great) | ninjutsu (fire) | beta1 | 5 / 16 / 19 |
-| `role:classmate_c` | Kanta Kinoshita | academy | E | story-driving | named | kinoshita (minor) | traps and earth | beta1 | 5 / 14 / 17 |
-| `role:classmate_d` | Aya Gekko | academy | E | story-driving | named | gekko (strong) | kenjutsu | beta1 | 5 / 15 / 18 |
+| `role:classmate_c` | Kanta Kinoshita | academy | E | fan-favourite | named | kinoshita (minor) | traps and earth | beta1 | 5 / 14 / 17 |
+| `role:classmate_d` | Aya Gekko | academy | E | fan-favourite | named | gekko (strong) | kenjutsu | beta1 | 5 / 15 / 18 |
 | `role:squad3_a` | Natsu Nara | academy | E | story-driving | named | nara (strong) | strategy (shadows) | beta1 | 5 / 14 / 18 |
 | `role:squad3_b` | Goro Akimichi | academy | E | story-driving | named | akimichi (strong) | taijutsu (expansion); cooks | beta1 | 5 / 14 / 18 |
 | `role:squad3_c` | Yusei Yamanaka | academy | E | story-driving | named | yamanaka (strong) | sensing (mind) | beta1 | 5 / 14 / 18 |
 | `role:squad4_a` | Rei Hyuga | academy | E | story-driving | named | hyuga (great) | taijutsu (gentle fist, Byakugan) | beta1 | 5 / 15 / 19 |
-| `role:squad4_b` | Taiga Inuzuka | academy | E | story-driving | named | inuzuka (strong) | tracking, with a very large ninken | beta1 | 5 / 14 / 17 |
+| `role:squad4_b` | Taiga Inuzuka | academy | E | fan-favourite | named | inuzuka (strong) | tracking, with a very large ninken | beta1 | 5 / 14 / 17 |
 | `role:squad4_c` | Sumire Suzuran | academy | E | story-driving | named | suzuran (minor) | medical (herbs) | beta1 | 5 / 14 / 17 |
 | `role:squad5_a` | Haruto Sarutobi | genin | D | story-driving | named | sarutobi (strong) | taijutsu (staff) | beta1 | 12 / 19 / 22 |
 | `role:squad5_b` | Kasumi Tobari | genin | D | story-driving | named | tobari (minor) | sensing (night scout) | beta1 | 12 / 19 / 22 |
 | `role:squad5_c` | Isamu Kondo (no clan) | genin | D | story-driving | named | none (clanless) | taijutsu (outworks everyone) | beta1 | 13 / 20 / 23 |
-| `role:taijutsu_master` | Tora Matsuda (no clan) * | jonin | A | fan-favourite | pillar | none (clanless) | taijutsu | beta1 | 45 / 45 / 45 |
+| `role:kenjutsu_instructor` | Tora Matsuda (no clan) * | jonin | A | fan-favourite | pillar | none (clanless) | kenjutsu | beta1 | 45 / 45 / 45 |
 | `role:elite_scout` | Kyo Fujita (no clan) * | jonin | A | fan-favourite | pillar | none (clanless) | kenjutsu | beta2 | 43 / 43 / 43 |
 | `role:legend_veteran` | Sanjuro Endo (no clan) * | retired | A | fan-favourite | pillar | none (clanless) | ninjutsu (fire) | beta2 | 44 / 44 / 44 |
 | `role:legend_wanderer` | Mugen Aoki (no clan) * | jonin | S | fan-favourite | legend | none (clanless) | ninjutsu | spoken | 55 / 55 / 55 |
@@ -394,7 +394,7 @@ names are for developers only.
 | `role:instructor_2` | Nobu Umino * | chunin | C | background | named | umino (minor) | tools (throwing) | beta1 | 22 / 22 / 22 |
 | `role:instructor_3` | Emi Sakamoto (no clan) * | chunin | C | background | named | none (clanless) | chakra control | beta1 | 20 / 20 / 20 |
 | `role:headmaster` | Tatsuo Umino * | retired | B | background | named | umino (minor) | teaching | beta1 | 34 / 34 / 34 |
-| `role:proctor_written` | Kiyoshi Morino * | special jonin | B | fan-favourite | named | morino (minor) | interrogation | beta3 | 33 / 33 / 33 |
+| `role:proctor_written` | Kiyoshi Goto (no clan) * | special jonin | B | fan-favourite | named | none (clanless) | interrogation | beta3 | 33 / 33 / 33 |
 | `role:proctor_forest` | Anzu Hirano (no clan) * | special jonin | B | fan-favourite | named | none (clanless) | survival | beta3 | 36 / 36 / 36 |
 | `role:proctor_finals` | Seiji Gekko * | special jonin | B | fan-favourite | named | gekko (strong) | kenjutsu | beta3 | 34 / 34 / 34 |
 | `role:desk_chunin_1` | Kotaro Noguchi (no clan) * | chunin | C | background | named | none (clanless) | administration | beta2 | 19 / 19 / 19 |
@@ -409,27 +409,32 @@ names are for developers only.
 | `role:standby_jonin_1` | Daisuke Arai (no clan) * | jonin | B | background | background | none (clanless) | ninjutsu (earth) | beta2 | 33 / 33 / 33 |
 | `role:standby_jonin_2` | Mai Kawaguchi (no clan) * | jonin | B | background | background | none (clanless) | ninjutsu (water) | beta2 | 32 / 32 / 32 |
 | `role:standby_jonin_3` | Satoru Ueda (no clan) * | jonin | B | background | background | none (clanless) | genjutsu | beta2 | 31 / 31 / 31 |
-| `role:clan_head.nara` | Shikou Nara * | jonin | B | fan-favourite | named | nara (strong) | strategy (shadows) | beta2 | 41 / 41 / 41 |
-| `role:clan_head.inuzuka` | Hayabusa Inuzuka * | jonin | B | fan-favourite | named | inuzuka (strong) | tracking, with ninken | beta2 | 36 / 36 / 36 |
-| `role:clan_head.sarutobi` | Enzo Sarutobi * | jonin | B | background | background | sarutobi (strong) | ninjutsu (fire) | beta2.5 | 35 / 35 / 35 |
-| `role:clan_head.aburame` | Mushi Aburame * | jonin | B | background | background | aburame (strong) | tracking (insects) | beta2.5 | 35 / 35 / 35 |
-| `role:clan_head.kurama` | Utsuro Kurama * | retired | B | background | background | kurama (strong) | genjutsu | beta2.5 | 30 / 30 / 30 |
-| `role:clan_head.shimura` | Gonzo Shimura * | retired | B | background | background | shimura (strong) | ninjutsu (wind) | beta2.5 | 32 / 32 / 32 |
-| `role:clan_head.yuhi` | Kaede Yuhi * | jonin | B | background | background | yuhi (strong) | genjutsu | beta2.5 | 34 / 34 / 34 |
-| `role:clan_head.gekko` | Tsukiko Gekko * | special jonin | B | background | background | gekko (strong) | kenjutsu | beta2.5 | 33 / 33 / 33 |
-| `role:clan_head.shiranui` | Senbei Shiranui * | chunin | C | background | background | shiranui (minor) | tools (senbon) | beta2.5 | 26 / 26 / 26 |
-| `role:clan_head.morino` | Takumi Morino * | special jonin | B | background | background | morino (minor) | interrogation | beta2.5 | 32 / 32 / 32 |
-| `role:clan_head.umino` | Kazuo Umino * | chunin | C | background | background | umino (minor) | teaching | beta2.5 | 24 / 24 / 24 |
-| `role:clan_head.haruno` | Momoe Haruno * | chunin | C | background | background | haruno (minor) | chakra control | beta2.5 | 22 / 22 / 22 |
-| `role:clan_head.namiashi` | Hayato Namiashi * | chunin | C | background | background | namiashi (minor) | taijutsu (footwork) | beta2.5 | 23 / 23 / 23 |
-| `role:clan_head.hagane` | Kurogane Hagane * | chunin | C | background | background | hagane (minor) | tools (metalwork) | beta2.5 | 22 / 22 / 22 |
-| `role:clan_head.kinoshita` | Mokuzo Kinoshita * | retired | C | background | background | kinoshita (minor) | carpentry | beta2.5 | 18 / 18 / 18 |
-| `role:clan_head.tsuchigumo` | Iwao Tsuchigumo * | chunin | C | background | background | tsuchigumo (minor) | ninjutsu (earth binding) | beta2.5 | 27 / 27 / 27 |
-| `role:clan_head.tobari` | Yoru Tobari * | chunin | C | background | background | tobari (minor) | sensing (sound) | beta2.5 | 26 / 26 / 26 |
+| `role:head_senju` | Mokuren Senju * | retired | B | background | named | senju (great) | ninjutsu (wood) | beta2 | 36 / 36 / 36 |
+| `role:head_hyuga` | Takeshi Hyuga * | jonin | B | fan-favourite | named | hyuga (great) | taijutsu (gentle fist) | beta2 | 41 / 41 / 41 |
+| `role:head_akimichi` | Dai Akimichi * | jonin | B | fan-favourite | named | akimichi (strong) | taijutsu (expansion) | beta2 | 38 / 38 / 38 |
+| `role:head_yamanaka` | Kaoru Yamanaka * | jonin | B | fan-favourite | named | yamanaka (strong) | sensing (mind) | beta2 | 37 / 37 / 37 |
+| `role:head_uzumaki` | Kenshin Uzumaki * | retired | B | background | named | uzumaki (great) | sealing | beta2 | 33 / 33 / 33 |
+| `role:head_nara` | Shikou Nara * | jonin | B | fan-favourite | named | nara (strong) | strategy (shadows) | beta2 | 41 / 41 / 41 |
+| `role:head_inuzuka` | Hayabusa Inuzuka * | jonin | B | fan-favourite | named | inuzuka (strong) | tracking, with ninken | beta2 | 36 / 36 / 36 |
+| `role:head_sarutobi` | Enzo Sarutobi * | jonin | B | background | background | sarutobi (strong) | ninjutsu (fire) | beta2.5 | 35 / 35 / 35 |
+| `role:head_aburame` | Mushi Aburame * | jonin | B | background | background | aburame (strong) | tracking (insects) | beta2.5 | 35 / 35 / 35 |
+| `role:head_kurama` | Utsuro Kurama * | retired | B | background | background | kurama (strong) | genjutsu | beta2.5 | 30 / 30 / 30 |
+| `role:head_shimura` | Gonzo Shimura * | retired | B | background | background | shimura (strong) | ninjutsu (wind) | beta2.5 | 32 / 32 / 32 |
+| `role:head_yuhi` | Kaede Yuhi * | jonin | B | background | background | yuhi (strong) | genjutsu | beta2.5 | 34 / 34 / 34 |
+| `role:head_gekko` | Tsukiko Gekko * | special jonin | B | background | background | gekko (strong) | kenjutsu | beta2.5 | 33 / 33 / 33 |
+| `role:head_shiranui` | Senbei Shiranui * | chunin | C | background | background | shiranui (minor) | tools (senbon) | beta2.5 | 26 / 26 / 26 |
+| `role:head_morino` | Takumi Morino * | special jonin | B | background | background | morino (minor) | interrogation | beta2.5 | 32 / 32 / 32 |
+| `role:head_umino` | Kazuo Umino * | chunin | C | background | background | umino (minor) | teaching | beta2.5 | 24 / 24 / 24 |
+| `role:head_haruno` | Momoe Haruno * | chunin | C | background | background | haruno (minor) | chakra control | beta2.5 | 22 / 22 / 22 |
+| `role:head_namiashi` | Hayato Namiashi * | chunin | C | background | background | namiashi (minor) | taijutsu (footwork) | beta2.5 | 23 / 23 / 23 |
+| `role:head_hagane` | Kurogane Hagane * | chunin | C | background | background | hagane (minor) | tools (metalwork) | beta2.5 | 22 / 22 / 22 |
+| `role:head_kinoshita` | Mokuzo Kinoshita * | retired | C | background | background | kinoshita (minor) | carpentry | beta2.5 | 18 / 18 / 18 |
+| `role:head_tsuchigumo` | Iwao Tsuchigumo * | chunin | C | background | background | tsuchigumo (minor) | ninjutsu (earth binding) | beta2.5 | 27 / 27 / 27 |
+| `role:head_tobari` | Yoru Tobari * | chunin | C | background | background | tobari (minor) | sensing (sound) | beta2.5 | 26 / 26 / 26 |
 
-**Clan heads.** The heads of the Senju, Uzumaki, Hyuga, Akimichi and Yamanaka wait for the story's
-cast. The Uchiha's head is the police chief and the Suzuran's is the head medic. The Hatake, a
-near-vanished clan, have no head.
+**Clan heads** are provisional, with role ids `role:head_<clan>` for the council days. The Uchiha's
+head is the police chief, the Suzuran's the head medic, the Hyuga's the heir's parent (the main
+house) and the Yamanaka's a classmate's parent. The Hatake, a near-vanished clan, have no head.
 
 **Civilians in the story:**
 
@@ -470,7 +475,8 @@ Each person has their own XP on the player's curve (about 50 minutes a level in 
   |---|---|
   | The rival | +1 |
   | The Hyuga heir | +0.9 |
-  | The loud teammate | −1.2, settling at −0.1 by level 15 (they catch up) |
+  | The painter teammate | +0.4: genjutsu hits less hard than the player's mix, so they sit a little ahead (tuned on Combat's duel simulator) |
+  | The loud teammate | −1.2, settling at −0.8 by level 15: they catch up, and their pup makes up the rest |
   | The Inuzuka | −1.5, settling at −0.4 by level 20 |
   | The squad a year ahead | +7.5 to +9 at the Academy, settling at +0.8 to +1.8 by level 30; their clanless prodigy runs strongest |
 
@@ -479,7 +485,8 @@ Each person has their own XP on the player's curve (about 50 minutes a level in 
 - **Shared work.** On a day the group is together, they earn what the player earned on it: the
   same mission XP as the player on shared missions, and the same lesson XP at the Academy. The group
   is the class in the Academy and the squad from team assignment.
-- **Days apart.** They train and take missions on their own. They earn the player's recent daily
+- **Days apart.** They train and take missions on their own. The player's home practice
+  ([HOME.md](HOME.md)) is their own XP, not shared, so it counts here. They earn the player's recent daily
   pace (a moving average of the player's own XP) times their **drive** (0.95 to 1.15). From team
   assignment the rest of the ensemble is on squads of its own, so every day is a day apart for them.
 - **Catch-up and slowdown.** Their gain is scaled by `1 − 0.5 × gap` from where they belong, between
@@ -494,7 +501,7 @@ Each person has their own XP on the player's curve (about 50 minutes a level in 
   higher: about 2 by the exams, 4 at level 50. A teammate a little behind you overall is still the
   one you want for genjutsu, tracking or a blade.
 - **Techniques you see them learn.** Each person has a kit: the Academy three, two niche techniques,
-  a nature, a clan technique for the clan-born, the exam reward, then the later arcs. Each technique
+  a nature, a clan technique for clan-born classmates, the exam reward, then the later arcs. Each technique
   has a minimum level and a moment.
   - The moment is a story beat (`ch12.natures`) or **training the player shares**.
   - A technique whose moment came before they were ready shows at the next beat or training where
@@ -533,22 +540,22 @@ teammate's contribution over yours (see below).
 | Ch | Hours | You | Teammate A | Teammate B | Rival | Hyuga heir | Inuzuka | Senior prodigy | Share A / B |
 |---|---|---|---|---|---|---|---|---|---|
 | 7 Graduation | 4.0 | 5.0 | 5.0 | 5.0 | 5.0 | 5.0 | 5.0 | 13.7 | — |
-| 8 Team assignment | 4.9 | 5.8 | 5.5 | 5.4 | 6.9 | 6.8 | 5.6 | 14.5 | 1.02 / 1.00 |
-| 11 First C-rank | 8.3 | 10.7 | 10.0 | 9.8 | 11.9 | 11.7 | 10.0 | 17.6 | 0.99 / 0.97 |
-| 14 Second C-rank | 12.0 | 15.2 | 14.4 | 14.8 | 16.1 | 15.8 | 14.4 | 20.9 | 0.99 / 0.99 |
-| 20 Results | 15.0 | 18.3 | 17.9 | 18.3 | 19.5 | 19.2 | 17.9 | 23.6 | 1.02 / 1.01 |
-| Chunin arc end | 28.0 | 29.9 | 29.5 | 29.8 | 30.9 | 30.8 | 29.6 | 32.2 | 1.03 / 0.98 |
-| Jonin arc end | 45.0 | 41.4 | 41.0 | 41.5 | 42.6 | 42.5 | 41.3 | 43.2 | 1.03 / 1.01 |
-| Road to Hokage end | 60.0 | 50.0 | 48.5 | 48.7 | 50.3 | 49.9 | 48.7 | 51.0 | 1.03 / 1.00 |
+| 8 Team assignment | 4.9 | 5.8 | 5.7 | 5.3 | 6.9 | 6.8 | 5.6 | 14.5 | 1.06 / 0.99 |
+| 11 First C-rank | 8.3 | 10.7 | 10.7 | 9.4 | 11.9 | 11.7 | 10.0 | 17.6 | 1.06 / 0.93 |
+| 14 Second C-rank | 12.0 | 15.2 | 15.2 | 14.2 | 16.1 | 15.8 | 14.4 | 20.9 | 1.04 / 0.95 |
+| 20 Results | 15.0 | 18.3 | 18.6 | 17.6 | 19.5 | 19.2 | 17.9 | 23.6 | 1.06 / 0.97 |
+| Chunin arc end | 28.0 | 29.9 | 30.2 | 29.1 | 30.9 | 30.8 | 29.6 | 32.2 | 1.06 / 0.96 |
+| Jonin arc end | 45.0 | 41.4 | 41.8 | 40.8 | 42.6 | 42.5 | 41.3 | 43.2 | 1.05 / 0.99 |
+| Road to Hokage end | 60.0 | 50.0 | 49.2 | 48.0 | 50.3 | 49.9 | 48.7 | 51.0 | 1.04 / 0.99 |
 
 **Across five seeds** (`SEEDS` in `Season`). Gaps are against your best level, over every day of the
 60 hours:
 
 | Player | Teammates vs you | Rival vs you | Rival ahead | Band stepped in | Share (Genin on) | Beta end: you / A / B / rival |
 |---|---|---|---|---|---|---|
-| Devoted | −2.1 to +0.5 | −0.4 to +2.0 | 93% of days | never | 0.86 to 1.08 | 21–22 / 21 / 21–22 / 23 |
-| Typical | −1.7 to +1.1 | +0.0 to +2.4 | 99% | never | 0.92 to 1.12 | 18 / 17–18 / 18 / 19–20 |
-| Reckless | −1.3 to +1.4 | +0.1 to +2.7 | 87% | 0.1% of days | 0.91 to 1.38 | 15–18 / 16–18 / 16–18 / 18–19 |
+| Devoted | −2.3 to +0.8 | −0.4 to +2.0 | 93% of days | never | 0.84 to 1.11 | 21–22 / 21–22 / 20–21 / 23 |
+| Typical | −1.8 to +1.5 | +0.0 to +2.4 | 99% | never | 0.89 to 1.13 | 18 / 18 / 17–18 / 19–20 |
+| Reckless | −1.4 to +1.9 | +0.1 to +2.7 | 87% | 0.1% of days | 0.91 to 1.48 | 15–18 / 17–18 / 16–17 / 18–19 |
 
 What it shows:
 
@@ -557,9 +564,9 @@ What it shows:
 - **A devoted player** pulls about a level ahead. The slow-starting teammate trails by two at worst,
   early on.
 - **A reckless player who keeps dying is carried for a while.**
-  - Their teammates sit up to 1.4 levels above the player's best level, and further above the
+  - Their teammates sit up to 1.9 levels above the player's best level, and further above the
     player's current level after a death.
-  - Early in Genin life their share reaches 1.4.
+  - Early in Genin life their share reaches 1.5.
   - The stronger squad is the game's comment on how they play.
 - **The rival is ahead on 87 to 99% of days**, by about 1.3 levels on average. A devoted player
   passes them now and then.
@@ -579,19 +586,43 @@ What it shows:
 
 The target is teammates' damage and utility at **70 to 110% of the player's**.
 
-- **The roster's own first estimate** is `Contribution.share`: `power = level × (1 + 0.04 ×
-  techniques)`, and in 35% of fights the fight plays to their niche. For a typical player it gives
-  0.92 to 1.12 from team assignment on.
-- **The real numbers** come from Shinobi Combat's duel simulator, which runs the level tables above
-  with each teammate's kit and returns damage and utility shares.
-- **If teammates pull too much**, the lever is their offset (`Roster.CLASS`), not their XP.
+**Combat's duel simulator** (`./gradlew :combat:core:simulate`, final tables in
+[COMBAT.md](COMBAT.md), "Balance") ran the squad of three against two rogue genin and a rogue
+chunin at the player's level, 60 fights a row. Teammates were player-like builds with the niche
+edge and teammate B's pup. It reports teammates' combined share (damage, plus control counted at
+half a second of the player's damage per second) on the typical player's levels, with the earlier
+offsets:
+
+| | Ch 8 | Ch 11 | Ch 14 | Ch 16 | Ch 20 | 28 h | 45 h | 60 h |
+|---|---|---|---|---|---|---|---|---|
+| Teammate A (genjutsu) | 75% | 57% | 60% | 68% | 62% | 52% | 72% | 94% |
+| Teammate B (taijutsu and pup) | 211% | 95% | 109% | 125% | 120% | 106% | 95% | 71% |
+
+What was done about it:
+
+- **Teammate A was under the target** from Ch 11 to 28 h, so their offset went from −0.4 to
+  +0.4. The rest is a kit question: Combat can move their signature genjutsu earlier.
+- **Teammate B ran high** at Ch 16 to 20, so their late offset went from −0.1 to −0.8.
+  - At Ch 8 the high share is the player's, not theirs to fix: a player without a damaging jutsu
+    before level 8 deals little.
+  - At 60 h the pup no longer keeps up, which is a kit question for Combat.
+
+The new offsets are with Combat for a re-run, and the table above is replaced when the shares
+return. `Contribution.share`, the roster's own rough estimate, now gives 0.89 to 1.13 for a typical
+player; Combat's numbers are the ones that count.
+
+**Combat's fields.** Every named person in `roster.json` carries what Combat needs: `kit`
+(`combat:ally.<role>`), `niche` (Combat's six: genjutsu, taijutsu, ninjutsu, weapons, medical,
+sensing) and `niche_edge` (at their beta-end level), beside rank, tier, clan and levels. Stats
+derive from level by Combat's scaling. Clan power shifts only the level: there is no per-clan stat
+multiplier, and clans' flavour lives in their kits.
 
 ### Hooks for the other mods
 
 | Hook | From | Into the roster |
 |---|---|---|
 | `Day(playerXp, sharedXp, together, bonds)` | Progression: the player's XP, and which of it was shared (lessons, missions, squad training) | Once per in-game day |
-| `BondInput(level, trainedTogether, quarrel, kindling)` | Life's glue, from the bond engine: `effectiveLevel(who)`, `bond(who).trainedOn(day)`, `bond(who).conflict().active()`, `Kindling.tier(w, who).id()` (`none`, `spark`, `flame`, `blaze`) | Per person, in `Day.bonds`. The glue depends on both modules; the roster depends on neither |
+| `BondInput(level, trainedTogether, quarrel, kindling)` | Life's glue, from the bond engine: `effectiveLevel(who)`, `bond(who).trainedOn(day)`, `conflict().active() || conflict().broken()` (a falling-out counts as a quarrel), `Kindling.tier(w, who).id()` (`none`, `spark`, `flame`, `blaze`) | Per person, in `Day.bonds`. The glue depends on both modules; the roster depends on neither |
 | `beat(id, present)` | Progression's quests: a story beat, and who was there | Techniques shown at beats |
 | `promote(role, floor)` | Progression's ranks (the story decides who) | Level floors |
 | `kindle(role)` | Combat's `kindle` effect | The flame's power and its ember |
@@ -630,8 +661,9 @@ per mission rank. The roster only needs the same XP the player earns, so in Phas
 ## 10. Open questions
 
 - **The story's cast.** The provisional posts (marked `*`) are replaced as the story's cast
-  arrives: the showcase pillars (the taijutsu master, the returning captain, the old scroll-seller,
+  arrives: the showcase pillars (the kenjutsu instructor, the returning captain, the old scroll-seller,
   the wandering legend), the proctors, the desk, the gate, the watch, the police, the Academy
   teachers and the clan heads.
 - **The tier glyph.** Should it read true two tiers up, or only one?
-- **Contribution shares.** Waiting on Combat's duel simulator.
+- **Contribution shares.** Combat re-runs its duel simulator with the new offsets, and may move teammate A's
+  signature genjutsu earlier and let teammate B's pup scale later.

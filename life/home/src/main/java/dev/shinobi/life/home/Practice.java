@@ -3,11 +3,14 @@ package dev.shinobi.life.home;
 /**
  * Short practice at home: the dummy, hand-sign drills, chakra-control meditation and study at the scroll shelf. It
  * counts at 40% of a training ground's rate, and at most one in-game hour a day counts (an hour and a half with the
- * whole training set), so it fills a quiet evening and never replaces the training grounds. A hand-sign drill counts
- * once a day toward mastering a jutsu.
+ * whole training set), so it fills a quiet evening and never replaces the training grounds. The day's first hand-sign
+ * drill counts one training use toward mastery for each of up to {@link #DRILL_TECHNIQUES} techniques drilled (Shinobi
+ * Combat's {@code signs.json}: a real fight counts two). The glue pays credited hours as player XP at Progression's training-ground rate
+ * ({@code ranks.json}); it is solo, so it is never shared with the squad.
  */
 public final class Practice {
     public static final double RATE = .4, CAP_HOURS = 1, DOJO_CAP_HOURS = 1.5;
+    public static final int DRILL_TECHNIQUES = 3;
 
     /** What a session gave: training-ground-equivalent hours credited, hours over the day's cap, and a drill. */
     public record Session(double credited, double wasted, boolean drill) {}
@@ -24,7 +27,7 @@ public final class Practice {
             case "dummy" -> home.has("training_dummy");
             case "signs" -> true;
             case "meditate" -> home.has("meditation_mat");
-            case "study" -> home.has("scroll_shelf") || home.has("desk");
+            case "study" -> home.has("scroll_shelf") || home.has("low_desk");
             default -> false;
         };
         if (!can || hours <= 0) return new Session(0, hours, false);

@@ -1,0 +1,54 @@
+# The Haruno store on a residential street: sundries, stationery, toys and gifts. The Haruno are a minor clan
+# market family.
+#! fn: commerce
+
+## shop.haruno_store.greet  shop=haruno_store  fn=commerce
+Welcome! A little of everything, and a lot of some things.
+Come in, {player}! Need something for home, or a present for someone?
+Hello there. Ribbons, brushes, string, sweets. If it's small, we have it.
+Welcome. Mind the wind chimes, they're for sale, and they're loud.
+
+## shop.haruno_store.greet  shop=haruno_store  clan=haruno  fn=commerce,worldbuild
+Welcome to the family shop! Three generations of Haruno have stood behind this counter.
+
+## shop.haruno_store.browse  shop=haruno_store  fn=commerce
+Stationery along the wall: paper, envelopes, brushes and the good ink.
+Toys in the basket. Spinning tops, paper balloons, a wooden ninja that falls over.
+Gifts in the glass case. Hairpins, little lacquer boxes, fans.
+Sundries at the back: candles, soap, needles, lamp oil. The boring things everyone needs.
+Wrapping cloth by the counter. Every gift should be wrapped, my mother says.
+
+## shop.haruno_store.buy  shop=haruno_store  kind=cycle  fn=commerce
+{item}! {pay}, please.
+Here you go. Shall I wrap it? It's free.
+That's {pay}. Thank you for shopping with us!
+{pay}. Lovely choice, that one sells fast.
+One {item}, wrapped in the pink cloth. It's our colour.
+
+## shop.haruno_store.cant_afford  shop=haruno_store  kind=cycle  fn=commerce
+A little short. The paper balloons are cheaper, and they make anyone smile.
+Not quite enough. Come back after Market Day, I'll have it set aside.
+That's more than you have. A ribbon makes a fine little gift on its own.
+
+## shop.haruno_store.sold_out  shop=haruno_store  kind=cycle  fn=commerce
+Out of {item}! I'll order more from the coast cart.
+All the spinning tops are gone. The Academy children cleared me out.
+
+## shop.haruno_store.haggle  shop=haruno_store  fn=commerce,reveal_character
+Buy two gifts and I'll wrap them both in silk instead of cotton. That's my bargain.
+We're a family shop, and the family has to eat. But I'll round down.
+
+## shop.haruno_store.closing  shop=haruno_store  time=evening|night  fn=commerce
+Closing up soon. My father counts the till at dusk on the dot.
+Last customers! I'm turning the sign in a minute.
+
+## shop.haruno_store.recommend  shop=haruno_store  fn=commerce,teach
+Visiting someone's home? Bring a small gift. Sweets or a wrapped little box is just right.
+The {item}. Everybody who buys one comes back for another.
+A notebook for your missions. Write down what the clients liked, it'll help next time.
+For a friend's birthday, a hairpin or a fan. Small, pretty, and they'll keep it.
+
+## shop.haruno_store.regular  shop=haruno_store  level=3..10  fn=commerce,deepen_bond
+My best customer! Here, a sweet from the jar. Don't tell my father.
+You always find the nicest gifts. Whoever you buy for is lucky.
+I saw this in the new delivery and thought of you straight away.

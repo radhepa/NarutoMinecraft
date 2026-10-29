@@ -62,8 +62,11 @@ seed (`Flat.starting`, stream `home`). The Konoha build session builds them and 
 
 ### The Classic flat: `flat.leaf_block.3a`
 
-Third floor of the Leaf apartment block. Inside it is 9 blocks wide and 7 deep, ceilings 3 high,
-plus a 4 × 2 balcony. One block per character; north is up, toward the Hokage Rock.
+Third floor of the Leaf apartment block (4 floors, 3 flats a landing, an outdoor gallery and stair
+on the street side, the back toward the Hokage Rock). With its internal walls it is 10 blocks wide
+and 8 deep inside, ceilings 3 high, plus a 4 × 2 balcony outside the back wall (ground-floor flats
+get a 6 × 2 fenced yard). The sketch shows open floor, one block per character; north is up, toward
+the Rock.
 
 ```
                  +--------+
@@ -94,8 +97,8 @@ plus a 4 × 2 balcony. One block per character; north is up, toward the Hokage R
 | Closet nook | 4 × 1 | — | The wardrobe cabinet (outfits), chests and barrels |
 | Balcony | 4 × 2 | railing | Planters, wind chime, bench, laundry line |
 
-You move in with a **futon, a low table, a cupboard, a storage chest, the wardrobe cabinet and a
-cooking pot** (the item registry's `kit:start`, with the apartment key). The flat has **22 floor
+You move in with a **futon, a low table, a cupboard, a storage chest and a cooking pot**, and the
+built-in **wardrobe cabinet** (the item registry's `kit:start`, with the apartment key). The flat has **22 floor
 cells** for furniture (a futon takes 2, a cushion 1, rugs, tatami and wall
 pieces none), room for **one bed**, and **3 spare keys**. It holds at most **60 comfort**.
 
@@ -104,7 +107,7 @@ pieces none), room for **one bed**, and **3 spare keys**. It holds at most **60 
 | Id | Shape | View | Balcony |
 |---|---|---|---|
 | `flat.leaf_block.3a` | The Classic flat | Hokage Rock | 4 × 2 |
-| `flat.leaf_block.2c` | A corner flat: main room 7 × 5, smaller bathroom | Hokage Rock | 3 × 2 |
+| `flat.leaf_block.2c` | The same plan one floor down, on the corner | Hokage Rock | 4 × 2 |
 | `flat.riverside_row.1b` | Ground floor; a 4 × 3 yard instead of a balcony | The river | yard |
 | `flat.market_loft.4` | An attic over a shop: main room 7 × 6, low 2-block ceiling, a skylight | Rooftops | none (balcony pieces cannot be placed) |
 
@@ -139,7 +142,7 @@ style   = each different piece's style once + 1 per keepsake and photo on show +
 
 | Tier | Comfort from | Feels like |
 |---|---|---|
-| Bare | 0 | The day you moved in (a futon, a table and a cupboard: 8) |
+| Bare | 0 | The day you moved in (a futon, a table, a cupboard and the pot: 7.5) |
 | Cosy | 10 | A few things of your own |
 | Comfortable | 20 | The Leaf set complete |
 | Homely | 38 | A lived-in Genin's flat |
@@ -150,15 +153,15 @@ Visitors whose personality loves a set enjoy a home that shows two or more of it
 
 | Set | Pieces | Perk (whole set) | Loved by |
 |---|---|---|---|
-| **Leaf** (`leaf`) | futon, low table, floor cushion, tatami mat, paper lamp, scroll shelf, folding screen, Leaf banner | *Home Sweet Home*: Well Rested lasts an hour longer | warmhearted, steadfast, gentle |
-| **Ramen corner** (`ramen`) | ramen cup tower, noren curtain, ramen poster, bowl shelf, Ichiraku stool | *Ramen at Home*: instant ramen at home counts as a Leaf dish (a little chakra back) | fiery, playful, warmhearted, adventurous |
-| **Balcony** (`balcony`) | balcony planter, wind chime, balcony bench, laundry line, bonsai | *Morning Air*: plants grow a quarter faster; visitors enjoy the view | gentle, imaginative, shy, reserved |
+| **Leaf** (`leaf`, the registry's starter set) | zabuton, tatami, andon lamp, scroll shelf, shoji screen, Leaf banner | *Home Sweet Home*: Well Rested lasts an hour longer | warmhearted, steadfast, gentle |
+| **Ramen corner** (`ramen`) | ramen cup tower, noren, poster (a ramen print), bowl shelf, Ichiraku stool | *Ramen at Home*: instant ramen at home counts as a Leaf dish (a little chakra back) | fiery, playful, warmhearted, adventurous |
+| **Balcony** (`balcony`) | balcony planter, wind chime, balcony bench, laundry line, potted bonsai | *Morning Air*: plants grow a quarter faster; visitors enjoy the view | gentle, imaginative, shy, reserved |
 | **Training corner** (`training`) | training dummy, meditation mat, weight rack, weapon rack, target board | *Dojo*: home practice counts up to an hour and a half a day | proud, stern, fiery, protective, meticulous |
-| **Tea corner** (`tea`) | tea set, tea table, zabuton pair, hanging scroll, ikebana vase | *Tea Time*: green tea at home holds fatigue off half an hour more | thoughtful, stern, gentle, meticulous, pragmatic |
+| **Tea corner** (`tea`) | tea set, tea table, hanging scroll, ikebana | *Tea Time*: green tea at home holds fatigue off half an hour more | thoughtful, stern, gentle, meticulous, pragmatic |
 | **Festival** (`festival`) | lantern string, festival mask, goldfish bowl, fan display, festival drum | *Festive*: hangouts at home go a little better | playful, curious, imaginative, warmhearted |
-| **Clan colours** (`clan.<id>`, 25) | a banner, a folding screen and a lantern in the clan's colours | *Clan Colours*: members of that clan enjoy it; your own clan's set adds comfort | members of the clan |
+| **Clan colours** (`clan.<id>`, 25; items `clan_banner@<clan>` etc.) | a banner, a folding screen and a lantern in the clan's colours | *Clan Colours*: members of that clan enjoy it; your own clan's set adds comfort | members of the clan |
 
-You start with two Leaf pieces, so the first set is already under way.
+The futon and low table come with the flat; the Leaf set's six pieces are the first thing to buy.
 
 ## 5. Tidiness
 
@@ -207,7 +210,8 @@ a curio cabinet 12, a wall mount 1, a weapon rack 4. Each thing on show adds 1 s
 curios on show get remarked on (`home.visit.curios`).
 
 When a friend visits and sees **their gift on show**, they notice it, once (`home.visit.kept_gift`):
-the bond engine's `Gifts.seenDisplayed`, which the giver remembers (`saw_gift_displayed`). Gifts
+the bond engine's `Gifts.noticed`, which the giver remembers (`saw_gift_displayed`); someone in a
+photo on the wall remembers that too (`saw_photo_together`), once per version. Gifts
 come from the bond engine's record of what you were given (`Gifts.received`: who, what, when, the
 occasion).
 
@@ -220,7 +224,8 @@ floor cell each (a step tansu two), so the Academy flat comfortably holds four t
 home many more. A typical player has 54 slots by the end of the beta and could fit several times
 that.
 
-**Photos** are taken at milestones and hang in photo frames (1 each). A photo's people are roles,
+**Photos** (the registry's `photograph`, variant by milestone, e.g. `photograph@squad`) are taken at
+milestones and hang in photo frames (1 each). A photo's people are roles,
 so it shows whoever the save bound to them. After a time skip a milestone can be retaken: the
 newest version hangs, the older ones go in the album. Someone in a photo remarks on it the first
 time they see each version.
@@ -285,21 +290,21 @@ from these pools (each may have per-personality variants, `.<archetype>`):
 | `home.note.<kind>` | Notes left in the mailbox (`drop_in`, `sensei_check`, `left_food`, `tidied`, `neighbour.<why>`...) |
 
 How much they enjoyed it (0 to 1) goes to the bond engine: any visit is contact and warmth; a good
-one (0.4+) is the `hung_out` shared experience; a very good one (0.65+) a little more warmth. A mess
+one (0.4+) is its `visited_home` act (a shared experience); a very good one (0.65+) a little more
+warmth. A mess
 lowers how much they enjoyed it, never the bond.
 
 ### 9.1 Home hangouts
 
-Proposed to the bond engine as activities at `home` (hosted by you), so asking, tastes, highlights
-and rituals work as they do at Ichiraku. `home_dinner` is already in its catalog; the others count
-as a plain shared experience until it carries them.
+Activities in the bond engine's catalog at `home` (hosted by you), so asking, tastes, highlights
+and rituals work as they do at Ichiraku: a friend can say "not today" to a study night too.
 
 | Hangout | Hours | From level | Up to | Act | Loved by | Slice |
 |---|---|---|---|---|---|---|
 | `study_night` | 18–23 | 2 | 4 | studying | thoughtful, meticulous, curious, shy | Beta 1 |
 | `cook_together` | 17–22 | 3 | 4 | a meal | warmhearted, playful, gentle | Beta 1 |
 | `balcony_stargazing` | 20–24 | 4 | 3 | hanging out | curious, imaginative, shy, thoughtful | Beta 1 |
-| `home_dinner` (exists) | 18–21 | 5 | 6 | a meal | warmhearted, protective, steadfast | Beta 1 |
+| `home_dinner` | 18–21 | 5 | 6 | a meal | warmhearted, protective, steadfast | Beta 1 |
 | `squad_crash` | 18–23 | 3 | 3 | hanging out | fiery, adventurous, playful | Beta 2 |
 | `tea_at_home` | 13–20 | 4 | 3 | hanging out | thoughtful, stern, gentle, pragmatic | Beta 2 |
 
@@ -307,8 +312,9 @@ Hosting adds a little mess (one per guest, one more for a meal).
 
 ### 9.2 Spare keys
 
-At **bond level 6** (Close Friend) you can give someone a spare key: a moment between you in the bond
-engine (`home.spare_key`). The Academy flat has three keys. Key holders drop by a little more often,
+At **bond level 6** (Close Friend) you can give someone a spare key: a little warmth and the bond
+flag `home.key` (quests read it with `bond_flag`; the warmth only the first time, so taking a key
+back and giving it again earns nothing). It is not a moment, so it never opens a story gate. The Academy flat has three keys. Key holders drop by a little more often,
 wait inside for you, and may leave food or tidy while you are away. You can take a key back
 quietly; nobody is told.
 
@@ -317,8 +323,10 @@ quietly; nobody is told.
 Short practice at home: the **training dummy** (taijutsu forms), **hand-sign drills** (no piece
 needed), **meditation** on the mat (chakra control), and **study** at the scroll shelf or desk. It
 counts at **40% of a training ground's rate**, and at most **one in-game hour a day** counts (an
-hour and a half with the whole training set). One hand-sign drill a day counts toward mastering a
-jutsu. It fills a quiet evening; real training stays at the training grounds.
+hour and a half with the whole training set). The day's first hand-sign drill counts one training use toward
+mastery for each of up to three techniques drilled (a real fight counts two; Shinobi Combat's
+`signs.json`). It is paid as player XP at Progression's training-ground rate (`ranks.json`), solo, so it is
+never shared with the squad. It fills a quiet evening; real training stays at the training grounds.
 
 ## 11. Money
 
@@ -328,11 +336,11 @@ jutsu. It fills a quiet evening; real training stays at the training grounds.
 - **No rent, ever.** Every home is yours without rent (the user's decision). The Jonin house is
   still bought (about 30,000 ryo); moving is free.
 - **Furniture** is 10 to 1,200 ryo a piece and sells back at half price (starter and fixed pieces
-  are not sold). The Leaf set's six pieces to buy cost 280 ryo, about an in-game week of Academy
+  are not sold). The Leaf set (two zabuton and five other pieces) costs 325 ryo at the registry's prices, about an in-game week of Academy
   savings, as the roadmap asks of the first proper set.
 - **The pawn shop** buys curios and loot as before. Selling the last one of something is your
   choice; nothing warns or keeps a record beyond the item itself.
-- A typical player spends about 1,200 ryo on the home over the beta, almost all of it before the
+- A typical player spends about 1,350 ryo on the home over the beta, almost all of it before the
   festival; after that the flat is full and money goes to gear and scrolls.
 
 ## 12. Growing up: homes by era
@@ -388,10 +396,10 @@ of its own (`photo.story.<hook>`); their ids live in the story's files.
 
 ## 15. Furniture
 
-**156 pieces**: 6 fixtures, 6 starter pieces, 69 more for the beta and later, and 75 clan pieces.
-In the beta: **143** (68 without the clan pieces). Ids follow the item registry where it has the
-piece (`storage_chest`, `barrel`, `tansu_chest`, `step_tansu`, `wardrobe_cabinet`,
-`display_case`, `display_shelf`, `curio_cabinet`, `wall_mount`, `scroll_shelf`, `weapon_rack`). Ids are bare here; the item registry namespaces
+**155 pieces**: 7 fixtures, 5 starter pieces, 68 more for the beta and later, and 75 clan pieces
+(the registry's `clan_banner`, `clan_screen` and `clan_lantern`, each with a `clan:<id>` variant).
+In the beta: **141** (66 without the clan pieces). All ids and **final prices are the item
+registry's** (`data/items/items.json`, branch `items`); the engine reads prices from there. Ids are bare here; the item registry namespaces
 them (`shinobi_life:<id>`) and tags them `shinobi_life:furniture`. Prices are proposals for the
 items session's `economy.json`. Comfort / style / floor cells.
 
@@ -399,114 +407,111 @@ items session's `economy.json`. Comfort / style / floor cells.
 
 | Id | What | C / S / cells | Source |
 |---|---|---|---|
-| `window`, `mailbox`, `mirror`, `sink`, `stove`, `bathtub` | Built into the flat; the mirror changes outfits, the stove heats the Hearth pot, the sink cleans | 0 / 0–1 / 0 | fixed |
+| `window`, `mailbox`, `mirror`, `wardrobe_cabinet`, `sink`, `stove`, `bathtub` | Built into the flat; the mirror and wardrobe cabinet change outfits, the stove heats the Hearth pot, the sink cleans | 0 / 0–1 / 0 | fixed |
 | `futon` | The first bed | 4 / 1 / 2 | starter (Leaf set) |
 | `low_table` | Meals and the journal | 2 / 1 / 1 | starter (Leaf set) |
 | `cupboard` | The pantry | 1 / 0 / 1 | starter |
 | `storage_chest` | A vanilla chest, 27 slots (10 ryo for more) | 0 / 0 / 1 | starter |
-| `wardrobe_cabinet` | Outfits live here | 0 / 1 / 1 | starter |
 | `cooking_pot` | VF Hearth & Harvest pot, on the stove | 1 / 1 / 0 | starter |
 
 ### Beta 1
 
 | Id | C / S / cells | Ryo | Set or note |
 |---|---|---|---|
-| `floor_cushion` | 2 / 1 / 1 | 20 | leaf |
-| `tatami_mat` | 3 / 1 / 0 | 30 | leaf |
-| `paper_lamp` | 2 / 2 / 1 | 40 | leaf |
+| `zabuton` | 2 / 1 / 1 | 15 | leaf (buy two) |
+| `tatami` | 3 / 1 / 0 | 40 | leaf |
+| `andon_lamp` | 2 / 2 / 1 | 35 | leaf |
 | `scroll_shelf` | 1 / 2 / 1 | 60 | leaf; study at home |
-| `folding_screen` | 1 / 2 / 1 | 80 | leaf |
+| `shoji_screen` | 1 / 2 / 1 | 80 | leaf |
 | `leaf_banner` | 0 / 3 / 0 | 50 | leaf |
 | `ramen_cup_tower` | 0 / 2 / 1 | 15 | ramen |
-| `noren_curtain` | 1 / 2 / 0 | 35 | ramen |
-| `ramen_poster` | 0 / 2 / 0 | 20 | ramen |
+| `noren` | 1 / 2 / 0 | 35 | ramen |
+| `poster` | 0 / 2 / 0 | 20 | ramen (a ramen print) |
 | `bowl_shelf` | 0 / 2 / 1 | 40 | ramen |
 | `ichiraku_stool` | 2 / 2 / 1 | — | ramen; reward of `filler.ramen_thief.3` |
 | `balcony_planter` | 1 / 2 / 1 | 40 | balcony; a plant |
 | `wind_chime` | 1 / 2 / 0 | 20 | balcony |
 | `balcony_bench` | 2 / 1 / 1 | 70 | balcony |
 | `laundry_line` | 1 / 1 / 0 | 15 | balcony |
-| `training_dummy` | 0 / 1 / 1 | 60 | training |
+| `training_dummy` | 0 / 1 / 1 | 160 | training |
 | `meditation_mat` | 1 / 1 / 1 | 30 | training |
-| `thick_futon` | 7 / 2 / 2 | 220 | the bed upgrade |
-| `desk` | 1 / 1 / 1 | 70 | the journal; study |
+| `futon_deluxe` | 7 / 2 / 2 | 220 | the bed upgrade |
+| `low_desk` | 1 / 1 / 1 | 70 | the journal; study |
 | `prep_table` | 1 / 1 / 1 | 90 | VF Hearth prep table |
 | `icebox` | 1 / 0 / 1 | 160 | food keeps twice as long |
 | `tea_kettle` | 1 / 1 / 0 | 25 | green tea at home |
-| `rug` | 2 / 1 / 0 | 40 | |
+| `rug` | 2 / 1 / 0 | 25 | |
 | `curtains` | 1 / 1 / 0 | 25 | |
-| `wall_clock` | 0 / 1 / 0 | 30 | |
-| `calendar` | 0 / 1 / 0 | 10 | shows the village's events |
+| `wall_clock` | 0 / 1 / 0 | 60 | |
+| `calendar_scroll` | 0 / 1 / 0 | 10 | shows the village's events |
 | `alarm_clock` | 0 / 1 / 0 | 15 | rings at 6:00 |
 | `shoe_rack` | 0 / 1 / 1 | 20 | genkan |
 | `umbrella_stand` | 0 / 1 / 1 | 15 | genkan |
 | `bath_mat`, `towel_rack` | 1 / 1 / 0 | 10, 15 | bathroom |
-| `houseplant` | 1 / 2 / 1 | 25 | the plant you water |
+| `potted_fern` | 1 / 2 / 1 | 25 | the plant you water |
 | `pet_bed`, `pet_bowl` | 1 / 1 / 1, 0 / 0 / 1 | 40, 10 | your pet lives here |
 | `barrel` | 0 / 1 / 1 | 15 | a vanilla barrel, 27 slots |
-| `workbench` | 0 / 0 / 2 | 150 | the apartment's workbench (ROADMAP.md §7) |
-| `display_shelf` | 0 / 1 / 0 | 45 | shows 6 |
-| `wall_mount` | 0 / 1 / 0 | 15 | shows 1 |
+| `workbench` | 0 / 0 / 2 | 250 | the apartment's workbench (ROADMAP.md §7) |
+| `tansu_chest` | 1 / 3 / 1 | 180 | a chest, 27 slots |
+| `display_shelf` | 0 / 1 / 0 | 75 | shows 6 |
+| `wall_mount` | 0 / 1 / 0 | 45 | shows 1 |
 | `photo_frame` | 0 / 1 / 0 | 15 | hangs 1 photo |
 
 ### Beta 2
 
 | Id | C / S / cells | Ryo | Set or note |
 |---|---|---|---|
-| `bonsai` | 1 / 3 / 1 | 180 | balcony; a plant |
+| `potted_bonsai` | 1 / 3 / 1 | 120 | balcony; a plant |
 | `weight_rack` | 0 / 1 / 1 | 120 | training |
-| `weapon_rack` | 0 / 2 / 0 | 90 | training |
-| `target_board` | 0 / 1 / 0 | 50 | training |
+| `weapon_rack` | 0 / 2 / 0 | 140 | training |
+| `target_board` | 0 / 1 / 0 | 70 | training |
 | `tea_set` | 1 / 2 / 0 | — | tea; reward of `side.b2.tea_master` |
 | `tea_table` | 2 / 2 / 1 | 90 | tea |
-| `zabuton_pair` | 3 / 1 / 1 | 50 | tea |
-| `hanging_scroll` | 0 / 3 / 0 | 60 | tea |
-| `ikebana_vase` | 1 / 2 / 1 | 45 | tea |
+| `hanging_scroll` | 0 / 3 / 0 | 80 | tea |
+| `ikebana` | 1 / 2 / 1 | 45 | tea |
 | `lantern_string`, `festival_mask`, `fan_display`, `festival_drum` | 1/3/0, 0/2/0, 0/2/0, 0/2/1 | 40, 25, 20, 80 | festival; Leaf Festival stalls |
 | `goldfish_bowl` | 1 / 2 / 1 | — | festival; won at goldfish scooping |
 | `clay_oven` | 1 / 1 / 1 | 150 | VF Hearth oven |
-| `small_forge` | 0 / 0 / 2 | 400 | the apartment's forge (ROADMAP.md §7) |
-| `andon_lamp` | 2 / 2 / 1 | 70 | |
-| `kotatsu` | 6 / 2 / 2 | 450 | counts double in winter |
-| `display_case` | 0 / 2 / 1 | 250 | shows 4 |
-| `curio_cabinet` | 0 / 2 / 1 | 200 | shows 12 |
-| `tansu_chest`, `step_tansu` | 1 / 3 / 1, 1 / 3 / 2 | 180, 320 | chests, 27 slots each |
-| `clan_banner.<clan>`, `clan_screen.<clan>`, `clan_lantern.<clan>` | 0/3/0, 1/2/1, 2/2/1 | 60, 120, 70 | for the 8 wave-1 clans, sold in their quarters |
+| `small_forge` | 0 / 0 / 2 | 900 | the apartment's forge (ROADMAP.md §7) |
+| `folding_screen` | 1 / 3 / 1 | 220 | the painted byobu |
+| `kotatsu` | 6 / 2 / 2 | 280 | counts double in winter |
+| `display_case` | 0 / 2 / 1 | 130 | shows 4 |
+| `curio_cabinet` | 0 / 2 / 1 | 220 | shows 12 |
+| `step_tansu` | 1 / 3 / 2 | 320 | a chest, 27 slots |
+| `clan_banner@<clan>`, `clan_screen@<clan>`, `clan_lantern@<clan>` | 0/3/0, 1/2/1, 2/2/1 | 60, 120, 70 | for the 8 wave-1 clans, sold in their quarters |
 
 **Beta 2.5:** the same three clan pieces for the other 17 clans. **Beta 3:** `bedroll` (1 / 0 / 1,
-40 ryo), for camping; it is not your bed and gives no Well Rested.
+80 ryo), for camping; it is not your bed and gives no Well Rested.
 
 ### Later (designed now)
 
 `wooden_bed` (9 / 3 / 3, 600), `double_futon` (8 / 2 / 3, 500; two sleep in it), `child_futon`
 (4 / 1 / 1, 150), `pinboard` (the story's), `irori_hearth` (5 / 3 / 4, 1,200; a sunken
-hearth for the house), `engawa_bench` (3 / 2 / 2, 250), `garden_lantern` (1 / 3 / 1, 200).
+hearth for the house), `engawa_bench` (3 / 2 / 2, 250), `stone_lantern` (1 / 3 / 1, 200).
 
 ## 16. Keepsakes
 
-**39 keepsakes** here (14 from quests and events, 25 from the clan welcomes), plus any gift you
-keep, the story's 8, the item registry's mission keepsakes, and **52 curios** (`curio_*`, from its
-loot tables). The quest that gives each is its id; its name and look are the items and quest
-sessions'. Info cards (`info_card`) and clan crests (`clan_crest`) are items too, kept in chests or
-shown like anything else.
+**38 keepsakes** here (13 from quests, 25 from the clan welcomes), by the item registry's ids,
+plus its **20 mission keepsakes**, the story's 8, any gift you keep, and **52 curios** (`curio_*`,
+from its loot tables; the festival's prizes are curios too). The quest that gives each is its id;
+names and looks are the items and quest sessions'. Info cards (`info_card`) and clan crests
+(`clan_crest`) are items too, kept in chests or shown like anything else.
 
 | Keepsake | From | Slice |
 |---|---|---|
-| `shogi_board` | `side.b1.shogi` | Beta 1 |
-| `cat_figurine` | `district.b1.neighbours.3` | Beta 1 |
-| `framed_ladle` | `filler.ramen_thief.3` | Beta 1 |
-| `village_painting` (a gift from *teammate_a*) | `bond.b1.classmate_a` | Beta 1 |
-| `race_ribbon` | `side.b2.rooftop_race` | Beta 2 |
-| `price_war_token` | `district.b2.price_war.4` | Beta 2 |
-| `ferry_lantern` | `district.b2.ferryman.3` | Beta 2 |
-| `post_splinter` | `district.b2.unbeatable_post` | Beta 2 |
-| `lake_lantern` | `filler.lake_lanterns.4` | Beta 2 |
-| `dogs_and_bugs_token` | `filler.dogs_and_bugs.3` | Beta 2 |
-| `shrine_charm` | `filler.silent_bell.3` (Varied pool) | Beta 2 |
-| `teammate_a_keepsake`, `teammate_b_keepsake` (gifts) | `bond.b2.teammate_a.2`, `bond.b2.teammate_b.2` | Beta 2 |
-| `festival_prize` | the Leaf Festival's games | Beta 2 |
-| `clan_keepsake.<clan>` (8) | `clan.<clan>.1`, wave 1 | Beta 2 |
-| `clan_keepsake.<clan>` (17) | `clan.<clan>.1`, wave 2 | Beta 2.5 |
+| `keepsake_shogi_set` | `side.b1.shogi` | Beta 1 |
+| `keepsake_cat_figurine` | `district.b1.neighbours.3` | Beta 1 |
+| `keepsake_framed_ladle` | `filler.ramen_thief.3` | Beta 1 |
+| `keepsake_bond_teammate_a_1`, `keepsake_bond_teammate_b_1` (gifts) | `bond.b1.classmate_a`, `bond.b1.classmate_b` | Beta 1 |
+| `keepsake_race_ribbon` | `side.b2.rooftop_race` | Beta 2 |
+| `keepsake_price_war` | `district.b2.price_war.4` | Beta 2 |
+| `keepsake_ferry_lantern` | `district.b2.ferryman.3` | Beta 2 |
+| `keepsake_post_splinter` | `district.b2.unbeatable_post` | Beta 2 |
+| `keepsake_lake_lantern` | `filler.lake_lanterns.4` | Beta 2 |
+| `keepsake_peace_offering` | `filler.dogs_and_bugs.3` | Beta 2 |
+| `keepsake_bond_teammate_a_2`, `keepsake_bond_teammate_b_2` (gifts) | `bond.b2.teammate_a.2`, `bond.b2.teammate_b.2` | Beta 2 |
+| `keepsake_clan_<clan>` (8) | `clan.<clan>.1`, wave 1 | Beta 2 |
+| `keepsake_clan_<clan>` (17) | `clan.<clan>.1`, wave 2 | Beta 2.5 |
 | `gift:<id>` | any gift from a friend (the bond engine's gift id), kept to show; its giver notices | any |
 | `curio_*` | loot: missions, bandit camps, exploring, festivals, side quests | any |
 | `story:<hook>` | story moments, by hook id | per the story |
@@ -515,6 +520,9 @@ shown like anything else.
 
 For the Konoha build session (the apartment block, the flats and `homes.json`):
 
+- **Built** on the Konoha branch as `tools/konoha/buildings/leaf_block.py` (flats 1a to 4c; 3a is the
+  Classic flat, 2c a Varied candidate, 1a the landlady, 4b a family with a child), with
+  `leaf_block.homes.json`. Cells and keys per player flat: 22 and 3.
 - **The Leaf apartment block** in the residential district, three or four floors, an outside
   stair, a landing per floor with two or three doors, a mailbox by each door, the landlady's flat
   on the ground floor, and a child's flat upstairs (the neighbour quests use it). Seen from the
@@ -549,15 +557,13 @@ letters as VF Sealed Letters, visitors walking in on VF routines.
 | `Pantry`, `Plant`, `Mailbox` | The cupboard and staleness; the houseplant; the mailbox |
 | `Visits` | Who comes to the door, notes and waiting inside, reactions, hosting, spare keys |
 | `Practice` | Home practice, capped |
-| `Friends`, `BondFriends`, `HomeHangout` | The bridge to the bond engine, and the proposed home activities |
+| `Friends`, `BondFriends` | The bridge to the bond engine |
 
 **Hooks into the bond engine** (no friendship numbers are duplicated): `BondWorld.effectiveLevel`,
 `bonded`, `Schedule.free` and the personality for who visits; `talk`, `together`,
-`act(HUNG_OUT)` and `addFriendship` for how a visit went; `Gifts.seenDisplayed` for a gift on show;
-`setBondFlag("home.noticed:<what>")` for a photo; `moment("home.spare_key")` for a key; `Together.invite` and `Together.go`
-for hosted hangouts in its catalog. Requested from the bonds session: the home hangouts of section
-9.1 in `Activity.CATALOG`, and an act of its own for a visit to your home, in place of the plain
-`hung_out` used today. The squad-after-a-mission and away-all-day rules read Core's
+`act(VISITED_HOME)` and `addFriendship` for how a visit went; `Gifts.noticed` for a gift or a photo
+on show (it sets `home.noticed:<what>` itself); `setBondFlag` and `clearBondFlag("home.key")` for a
+key; `Together.invite` and `Together.go` for every home hangout. The squad-after-a-mission and away-all-day rules read Core's
 `MissionEnded` event (`with_squad`, `slept_away`; MISSIONS.md §11).
 
 **Tests** (`./gradlew :life:home:test`, 44): the catalog's shape and counts, the Classic and Varied
@@ -585,7 +591,7 @@ time.
 
 | Slice | Days | Nights home / away | Real minutes awake at home a day | Visitors a week | Met / notes | Well Rested nights |
 |---|---|---|---|---|---|---|
-| Beta 1 | 12 | 12 / 0 | 4.2 | 0.6 | 1 / 0 | 10 of 12 |
+| Beta 1 | 12 | 12 / 0 | 4.2 | 0 to 1.2 (seeds vary) | 0 / 0 | 10 of 12 |
 | Beta 2 | 24 | 16 / 8 | 3.6 | 2.9 | 7 / 3 | 16 of 16 |
 | Beta 3 | 10 | 5 / 5 | 4.5 | 2.1 | 0 / 2 | 5 of 5 |
 
@@ -599,14 +605,14 @@ time.
 
 | Day | Comfort | Tier | Style | Pieces | Ryo spent | Keepsakes shown | Photos |
 |---|---|---|---|---|---|---|---|
-| 0 | 8.5 | Bare | 6.5 | 6 | 0 | 0 | 0 |
-| 6 | 23.5 | Comfortable | 21.5 | 15 | 285 | 2 | 1 |
-| 9 | 27.5 | Comfortable (Leaf set complete) | 31.5 | 19 | 430 | 3 | 1 |
-| 12 (graduation) | 31 | Comfortable | 40 | 25 | 625 | 3 | 2 |
-| 18 | 40 | Homely | 51.5 | 31 | 1,010 | 4 | 2 |
-| 24 | 41 | Homely | 62 | 36 | 1,120 | 5 | 4 |
-| 30 (festival) | 42.5 | Homely, the flat full | 70.5 | 38 | 1,185 | 8 | 4 |
-| 45 (results) | 42.5 | Homely | 73.5 | 38 | 1,185 | 11 | 4 |
+| 0 | 7.5 | Bare | 5 | 5 | 0 | 0 | 0 |
+| 6 | 23.5 | Comfortable | 20.5 | 14 | 285 | 2 | 1 |
+| 9 | 27.5 | Comfortable (Leaf set complete; day 9 to 12 across seeds) | 30.5 | 18 | 430 | 3 | 1 |
+| 12 (graduation) | 31 | Comfortable | 39 | 24 | 710 | 3 | 2 |
+| 18 | 40 | Homely | 48.5 | 30 | 1,060 | 4 | 2 |
+| 24 | 42 | Homely | 61 | 36 | 1,280 | 5 | 4 |
+| 30 (festival) | 43 | Homely, the flat full | 69.5 | 38 | 1,345 | 8 | 4 |
+| 45 (results) | 43 | Homely | 72.5 | 38 | 1,345 | 11 | 4 |
 
   The flat is full around the festival; mess dips it by up to 5 now and then; Beloved stays out of
   reach of a small flat in the beta, which is what the Chunin flat is for.

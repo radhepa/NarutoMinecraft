@@ -1,0 +1,1223 @@
+# Children's small talk: Academy chatter, recess, snacks, siblings, pets, dares, and wanting to be ninja.
+# Every heading here is stage=child.
+
+# -- lessons and the Academy ---------------------------------------------------------------------------
+
+## chat.child  stage=child  fn=worldbuild,reveal_character
+We did hand signs all morning. My fingers are so tired they keep making the Tiger by themselves.
+I can do the Clone now! Well, half a Clone. It came out lying down, but it's still a Clone.
+Our instructor can tell who's talking even facing the board. I think there's a secret eye on the back of the head.
+History is the worst. Who cares what happened a hundred years ago? It already happened!
+I got a gold star for my shuriken throws. Three out of five on the post! The other two hit the fence.
+Transformation is so hard. I tried to turn into a cat and I came out as me with whiskers.
+We had a test on the twelve signs today. I mixed up the Hare and the Dog again. They look the same, I swear.
+The library lady says if you read one scroll a week you'll be Chunin before anyone else. I've read two. Ever.
+I sit by the window in class so I can watch the Genin squads walk past. That's learning too.
+Practice kunai are blunt, but they still hurt if you drop one on your foot. Ask me how I know.
+The janitor caught me drawing on the desk and made me scrub every desk in the room. I'm never drawing again. Until next week.
+Our instructor makes us run laps if anyone's late. I'm never late. Somebody else always is.
+I wrote my name on the inside of my practice headband so nobody steals it. Everybody's is the same, it's a problem.
+My homework got rained on and now it looks like a frog sat on it. A frog did not sit on it. I'm pretty sure.
+In the workshop today we made smoke bombs. Mine just made a sort of sad cough.
+Substitution is the coolest. You get hit and then poof, it's a log! I can't do it yet, but I've got the poof part.
+
+## chat.child  stage=child  personality=meticulous|thoughtful  fn=reveal_character
+I made flashcards for all twelve signs. Rat, Ox, Tiger, Hare... do you want to borrow them? You have to give them back in order.
+I counted. There are fourteen target posts in the yard, and one of them is shorter than the others. Nobody else noticed.
+
+## chat.child  stage=child  personality=fiery|proud  fn=reveal_character
+I'm going to be the best in the class by the end of the year. Maybe by the end of the week. I'm deciding.
+Somebody said I throw like a duck. I'll show them. I'll throw like an angry duck.
+
+## chat.child  stage=child  personality=shy|gentle  fn=reveal_character
+I don't like it when the instructor calls on me. I know the answer, it just... hides when everyone looks.
+I practise my hand signs under the desk where no one can see. I'm getting good at it. Don't tell.
+
+## chat.child  stage=child  personality=playful|curious  fn=reveal_character
+I asked the instructor if you can do jutsu with your feet. I got sent to stand in the hall. It was a real question!
+Did you know the target posts are made of cedar? I asked the carpenter. I ask the carpenter a lot of things.
+
+# -- recess and games ----------------------------------------------------------------------------------
+
+## chat.child  stage=child  fn=worldbuild,filler
+At recess we play ninja and bandits. Nobody ever wants to be the bandit, so we just have a lot of ninja.
+I'm the champion of the swing. I can go so high you can see over the Academy fence.
+We played hide-and-seek and nobody found me for an hour. Then I realised nobody was looking.
+Kick-the-can is the best game. The can is the Hokage and you have to protect it. Except we kick it.
+I can climb the big tree out front to the third branch. The fourth branch is for Genin. I'll get there.
+Tag is better with shinobi rules. If you do a hand sign before they tag you, it doesn't count.
+We drew a map of the whole village in the dirt at recess. We put the ramen shop in the middle because it's the most important.
+Shadow tag only works when it's sunny. On rainy days we just tag, which is worse.
+The yard has a puddle that never dries. We call it the Lake of Doom. You have to jump over it or you lose.
+We made up a jutsu called Thousand Pebbles. It's just throwing lots of pebbles, but it has a cool name.
+Somebody brought a ball and we played until the bell. My team won. Probably. Nobody was counting right.
+We had a race to the end of the yard and back. I came second, but the first one cheated with a running start.
+
+## chat.child  stage=child  player_stage=child  fn=worldbuild,deepen_bond
+You can play ninja and bandits with us at recess. You can even be a ninja. We have plenty of ninja.
+Do you want to see my secret hiding spot? It's behind the woodshed. Well, it was secret.
+Come and swing with me! I'll push you first, then you push me, and you have to push hard.
+If you're on my team for kick-the-can, we'll win for sure. You look like a fast kicker.
+
+# -- snacks --------------------------------------------------------------------------------------------
+
+## chat.child  stage=child  fn=reveal_character,filler
+The dango stall gives you an extra stick if you say please really nicely. You have to mean it, though.
+My favourite snack is the sweet potato from the roasting cart. It burns your fingers but it's worth it.
+I saved my lunch money all week to buy a whole bowl of ramen by myself. I'm going to eat every noodle.
+Rice crackers are the best because they crunch so loud the instructor knows you're having a snack.
+I traded my egg roll for a pickled plum. It was a bad trade. My whole face went inside out.
+My grandma makes onigiri in the shape of animals. Today mine was a frog. I ate the eyes first.
+The Akimichi kids always have the best lunches. They share sometimes, if you say nice things about the food.
+Melon bread is my favourite. The bakery on the corner sells it warm if you're there before school.
+I had three dango for breakfast. Don't tell my mum.
+I like the pink dango best. The green one tastes like grass. Good grass, but still grass.
+Somebody brought shaved ice with plum syrup to school and everybody crowded round. The ice melted before anybody got any.
+I'm saving up for barbecue. It costs a lot more than ramen, but my cousin says it makes you punch harder.
+
+# -- siblings and family -------------------------------------------------------------------------------
+
+## chat.child  stage=child  fn=reveal_character
+My big sister is a Genin. She doesn't let me touch her kunai, but I touched it once when she was asleep.
+My little brother keeps copying everything I do. I did a hand sign and he did it too, and then he fell over.
+My dad works at the fish stall, so my lunch always smells like fish. I don't mind. The cats follow me everywhere.
+My mum says I can't be a ninja and a baker at the same time. I'm going to be both and prove her wrong.
+I've got four big brothers and every one of them was in the Academy. The instructors look at me like they're tired already.
+My grandpa used to be a Chunin. He says when he was little the Academy was just a field and a stick.
+My baby sister can't even talk yet, but I've been teaching her the Rat sign. She mostly grabs my nose.
+My big brother says he'll teach me the Fireball when I'm older. He says that every time I ask, so I ask a lot.
+My aunt runs the tea house on the corner. If I sweep the garden path, I get a free cup and a sweet bean cake.
+My cousin is in the police. I asked if I could ride along and they said no, but they let me wear the hat once.
+My parents both work at the market, so I walk home on my own. I'm very good at it. I only got lost twice.
+My big sister snores so loud the neighbours knock on the wall. My mum says it's a family talent.
+
+## chat.child  stage=child  group=civilian  fn=reveal_character
+Nobody in my family is a ninja. We make tofu. But I'm going to be the first, and then the tofu will be famous.
+My parents run a shop, so after the Academy I help count the stock. I can count to a thousand. In ryo, even.
+
+## chat.child  stage=child  group=clanless  fn=reveal_character
+I don't have a clan, but my mum says that just means I get to make up my own family technique. I'm calling it the Big Kick.
+The clan kids get special jutsu. That's fine. I'm going to learn every normal jutsu twice as good.
+
+# -- pets and animals ----------------------------------------------------------------------------------
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+I want a ninken so badly. The Inuzuka clinic has pups, and one of them licked my hand, so I think it picked me.
+Our cat sleeps on my feet every night. I can't move my legs until morning, but I don't want to wake it.
+There's a frog in the Academy pond that's bigger than my fist. We named it Hokage. It doesn't do anything, it just sits.
+I fed the deer by the Nara forest. One of them ate my whole sleeve. My mum was not happy.
+The ninken at the gate know my name. Well, they know the sound of my lunch box.
+I found a beetle as big as a coin and showed it to an Aburame kid. They said it was a very good beetle. I was so proud.
+Our neighbour's dog can do a trick where it rolls over and plays dead. I tried to teach it Substitution. It didn't work.
+I want a cat from the shelter, but my dad says we already have enough with my brother.
+There's a crow that sits on the Academy roof every day at lunch. I've been giving it rice. I think we're friends now.
+The koi at the Hyuga estate are huge. I saw one through the gate. It looked at me like I was in trouble.
+If I get a ninken, I'm going to name it Kunai. Or Ramen. Or Kunai Ramen.
+A puppy from the kennels followed me all the way to the Academy. I had to walk it back. It was the best morning ever.
+
+# -- dares ---------------------------------------------------------------------------------------------
+
+## chat.child  stage=child  fn=reveal_character,filler
+I touched the shrine bell at night on a dare. Nothing happened, but my heart is still going.
+They dared me to run past the Uchiha gate shouting. I made it halfway and then a grown-up looked at me.
+The biggest dare is climbing to the second Hokage's eyebrow. Nobody has ever done it. Nobody has even tried really.
+I ate a whole raw onion on a dare. I won, but now my mouth is a battlefield.
+Somebody dared me to put my feet in the river in winter. I did it for a count of ten. I'm still cold.
+The best dare is sneaking into the training grounds after dark. I got as far as the first stump and a frog jumped on me.
+I bet the new kid can't do a cartwheel off the Academy steps. I did one. I kind of landed on my face.
+They dared me to knock on the Shimura door and run. I knocked, but I was too scared to run, so I just stood there.
+I climbed the water tank on our roof on a dare. I could see all the way to the wall! Then I couldn't get down.
+Daring someone to sit alone in the hospital waiting room after dark is the scariest dare. I don't do that one.
+
+## chat.child  stage=child  personality=playful|adventurous  fn=react
+I dare you to jump across the Lake of Doom in the yard! Run-up allowed! [EXCLAIM]
+Bet you can't stand on one leg longer than me. Ready? Go! Hey, that's cheating, you can't use chakra!
+
+# -- admiring Genin and shinobi -----------------------------------------------------------------------
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+I saw a Genin walk across the river today. Across it! On top! I'm going to practise in the bath tonight.
+There's a Chunin on my street who can jump from one roof to the next without even looking. I want to do that.
+When a squad comes back through the gate, I wave at them. Sometimes they wave back. Once a Jonin did.
+Genin get real missions! I would do any mission. Even the cat ones. Especially the cat ones.
+The Genin at the training grounds threw shuriken so fast I couldn't even see them. Then they hit a stump, thunk-thunk-thunk.
+My hero is the Jonin who lives above the tofu shop. They bought me a dango once and didn't even ask for anything.
+The Hokage's guard stands so still I thought they were statues. Then one sneezed.
+I want to get my headband so badly. I practise tying it on with my old scarf every night.
+A Genin squad was eating at Ichiraku and I sat next to them. They talked about a mission with a goat. A goat!
+When I graduate I'm going to the Mission Desk first thing. I'll take the hardest D-rank they have.
+The flak vests the Chunin wear have so many pockets. I bet there's a snack in at least one of them.
+I followed a Genin home to see where they live. They noticed and gave me a lecture. It was so cool.
+
+## chat.child  stage=child  player_rank=genin|chunin  fn=react
+You're a real Genin! Can I touch your headband? Just the edge. I won't smudge it.
+Is it true Genin get to go outside the wall? What's out there? Are there bears? Are there big bears?
+Show me a jutsu, please! Even a little one! I won't tell anyone, I promise. Well, I'll tell a few people.
+
+# -- the Hokage ---------------------------------------------------------------------------------------
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+I want to see the Hokage up close. I stood outside the Residence all morning and only saw a hawk.
+I'm going to be Hokage one day, and my face will be on the Rock, and it's going to be smiling.
+My grandpa says he shook a Hokage's hand once. He hasn't washed it since. That was forty years ago. Gross.
+If you climb to the top of the Rock you can sit on the Hokage's heads. I haven't done it. I'm working up to it.
+The Hokage works in the round building. My friend says there's a slide inside. I don't think there's a slide.
+I drew all the Hokage faces in my notebook. The third one came out looking like my dad.
+Do you think the Hokage ever eats ramen? I hope so. Everybody should.
+When I'm Hokage I'm going to make it a rule that every day ends with dango.
+
+# -- the hospital and being scared --------------------------------------------------------------------
+
+## chat.child  stage=child  fn=reveal_character
+I don't like the hospital. It smells like soap and medicine and everyone talks in whispers.
+I had to get a splinter out at the hospital. The medic was really nice, but the tweezers were the size of a kunai.
+My big brother stayed in the hospital for a week after a mission. I brought him a drawing of a frog. He kept it on his bed.
+The hospital has a room with painted frogs on the walls. That's the room for kids. It's still scary.
+I heard if you get hurt in training they take you to the hospital and give you the worst porridge in the world. I'm never getting hurt.
+I'm scared of the dark lanes by the wall at night. My mum says the Tobari are watching, so it's safe. That doesn't help.
+Thunder used to scare me. Now I just count. If I get to ten before it bangs, it's far away.
+The instructor says even Jonin get scared. I don't believe that. Maybe a little. Maybe Jonin are scared of the hospital too.
+
+## chat.child  stage=child  personality=shy|gentle  fn=reveal_character
+I get scared before tests. My stomach goes all wobbly. Then I eat a rice ball and it's a bit better.
+I don't like loud noises. The forge on the market street makes my ears ring, so I walk past it really fast.
+
+# -- ninja play and dreams -----------------------------------------------------------------------------
+
+## chat.child  stage=child  fn=reveal_character,filler
+I've been training my secret jutsu. It's called Silent Stomp. You stomp, but quietly.
+When I grow up I'm going to have a summon. It'll be a giant cat. My mum says we don't have room.
+I made a headband out of my mum's old belt. It has a leaf drawn on it in ink. It's almost real.
+I've been sneaking up on my brother all week. I'm getting so good he didn't even know until I sneezed.
+I practise tree walking on the tree in our garden. I get two steps up and then I'm on my back again.
+I tied a rope between two chairs and practised walking on it like a ninja. Then the chairs fell over.
+I'm going to invent a jutsu that makes vegetables taste like dango. Everyone will want me on their squad.
+I hid in a cupboard for an hour pretending it was a mission. I learned the cupboard is very boring and very dusty.
+Sometimes I pretend the main street is the Forest of Death and the shoppers are enemy ninja. I've never been caught.
+I want to go outside the wall and see the whole world. And then come back for dinner.
+My friends and I have a squad. We even have a name. We're not telling anyone the name.
+I made my own sealing tag with a brush and some rice paper. It doesn't seal anything, but it looks great on my door.
+
+## chat.child  stage=child  player_stage=child  fn=deepen_bond,filler
+Do you want to be in my squad? We need someone who can throw. Or run. Or just be good at hiding.
+We should practise hand signs together after the Academy. You do one, I copy it, then I do one and you copy it.
+When we both make Genin, let's eat at Ichiraku together. I'm going to order the biggest bowl.
+You're pretty good at the Academy stuff. Can you show me how you do the Ram? Mine looks like a sock puppet.
+
+# -- weather, seasons and the village through a child's eyes -----------------------------------------
+
+## chat.child  stage=child  weather=rain  fn=react
+I jumped in every puddle from my house to the Academy. My sandals are full of water, but I won.
+When it rains the frogs in the Academy pond sing so loud you can't hear the instructor. Best days ever.
+
+## chat.child  stage=child  weather=snow  fn=react
+We're building a snow Hokage outside the Academy! It's got a big hat and stick arms and a scary face.
+I tried to catch snowflakes on my tongue and caught a leaf instead. It tasted like a leaf.
+
+## chat.child  stage=child  weather=thunder  fn=react
+Did you hear that thunder? I wasn't scared. I just jumped because my foot slipped.
+
+## chat.child  stage=child  season=summer  fn=react
+Summer means the river! We go to the shallows after lessons and try to catch fish with our hands. Nobody's caught one yet.
+
+## chat.child  stage=child  season=autumn  fn=react
+I'm collecting the reddest maple leaves in the village. I've got thirty. I'm pressing them in my history scroll.
+
+## chat.child  stage=child  season=spring  fn=react
+The cherry blossoms are out! I caught a petal before it hit the ground, so I get a wish. I wished for a ninken.
+
+## chat.child  stage=child  season=winter  fn=react
+My mum knitted me a scarf so long I can wrap it round three times. I'm going to use it as a rope for ninja training.
+
+# -- odd jobs, neighbours and small mysteries ---------------------------------------------------------
+
+## chat.child  stage=child  fn=hook,reveal_character
+There's a cat on our street that keeps stealing socks. It's got a whole pile of them under the tea house porch.
+Somebody keeps leaving a rice ball at the little shrine on the corner every morning. I've been trying to catch who, but I always fall asleep.
+I lost my lucky marble somewhere by the river. It's blue with a white swirl. If you find it, it's mine.
+My friend says there's a secret tunnel under the Academy. I think it's just a cellar, but I still want to see it.
+The old grandma at the end of our lane gives a sweet to anyone who carries her shopping. I've carried it four times this week.
+
+## chat.child  stage=child  fn=worldbuild,filler
+The bath house has a mural of the Hokage Rock on the wall. Somebody painted a moustache on one face and they never got it all off.
+I know every shortcut from my house to the Academy. There are eleven. Twelve if you can climb a fence.
+There's a dango stall by the shrine steps that only opens on festival days. That's my favourite stall in the whole world.
+The fish stall man gives me the fish heads for our cat. The cat loves them. I don't look at them.
+On Market Day I help my parents carry baskets. The best part is the free sample from the pickle stall. The worst part is the pickle.
+The ramen shop has a stool that wobbles. I always pick that one. It's like a ride.
+The lanterns on the main street go on all at once at dusk. I try to blink at the exact second. I never get it.
+The training grounds are way bigger than they look from the Rock. I walked to the third stump and my legs fell off. Not really.
+At the festival there's a game where you catch goldfish with a paper scoop. I've never caught one. The paper always breaks.
+My street has a cobbler who can fix any sandal. I brought in my practice headband once, and that got fixed too.
+
+# == second pass: personalities ===========================================================================
+
+## chat.child  stage=child  personality=warmhearted  fn=reveal_character
+I brought two rice balls today in case somebody forgot theirs. Somebody always forgets theirs.
+My grandma has a cold, so I'm making her soup after school. I'm only allowed to stir, but stirring is the important part.
+The new kid in our class sat alone at lunch, so I sat there too. Now we both sit there. It's a good spot.
+I gave my umbrella to a little kid in the rain and walked home wet. My mum was cross but she also gave me a hug.
+When the instructor looks tired I clean the board before anyone asks. The chalk dust makes me sneeze, but it's worth it.
+I keep a sweet in my pocket for whoever cries at recess. Today it was me, so I ate it myself.
+The stray cat by the tea house looked hungry, so I shared my fish. Now it waits for me every day.
+I made a get-well card for a Genin in the hospital. I don't know them, but nobody should be in the hospital without a card.
+I always save the last dango on the stick for my little brother. He doesn't know it's the best one.
+If you're tired you can lean on me. I'm small but I'm very sturdy.
+I knitted a scarf for my dad. It has three holes and one sleeve by accident, but he wears it anyway.
+Our neighbour lives on their own, so I bring the newspaper up every morning. They give me a pickled plum. I don't like pickled plums, but I like the visit.
+I'm going to be a medic ninja so I can fix everybody. I've already practised bandaging my teddy fourteen times.
+Did you eat breakfast? You look like you didn't eat breakfast. Here, have half my melon bread.
+
+## chat.child  stage=child  personality=thoughtful  fn=reveal_character
+Why do we need twelve hand signs? Why not ten? I asked, and the instructor said good question, which means nobody knows.
+I read that the Hokage Rock took a whole season to carve each face. That's a lot of chipping. I wonder if anyone sneezed and ruined a nose.
+I think clouds are like jutsu. They change shape when you're not looking, and nobody can tell you the signs.
+If a Clone sees another Clone, does it know which one is real? I've been thinking about it for three days.
+I like the library because nobody shouts there. You can hear your own thoughts. Mine are quite loud.
+The instructor says history repeats itself. So I'm learning it twice, to be safe.
+I counted the steps up to the shrine. Two hundred and one. Everyone says two hundred, but I counted twice.
+Do you think the fish in the river know about the village? They must hear us all day.
+I don't want to be the strongest. I want to be the one who knows what to do. That's different.
+My grandpa says every scroll in the library was written by someone who was once a kid like us. I keep thinking about that.
+I watched the ants carrying crumbs across the yard. They're very organised. They'd make a good squad.
+I asked why the Uchiha live at the edge of the village. My mum said it's a long story. All the good things are long stories.
+Before I go to sleep, I go through all the hand signs in my head. It's better than counting sheep.
+When I'm older I'll write a scroll about everything the instructors forgot to tell us. It will be very long.
+
+## chat.child  stage=child  personality=playful  fn=reveal_character
+I put a frog in the instructor's desk drawer. Well, I opened the drawer and the frog got in. That's different.
+Want to hear a joke? Why did the shuriken go to school? To get sharper! Ha! I made that up just now. Well, this morning.
+I can make a face like the third Hokage on the Rock. Look. No, look properly. That's it, that's the face.
+I hid my friend's sandals on the Academy roof. Then I couldn't get them back down. So it was kind of a joke on me.
+Tag, you're it! No, wait, I'm not playing yet. Okay, now. Tag! [EXCLAIM]
+I've been practising walking backwards everywhere. I've bumped into four people and one stall. My backwards is getting good.
+I drew a moustache on my own face in ink so the instructor would think I was a Jonin in disguise. It didn't work.
+I can whistle with my fingers. Listen! The dogs at the kennels heard that. Every single dog.
+We swapped headbands with the class next door at recess. Nobody noticed until roll call. It was the best roll call ever.
+I'm the best at making everyone laugh during the quiet time. I'm also the best at standing in the hall.
+I taught the crow on the roof to steal rice crackers. It's a very good student. Too good.
+Guess which hand the pebble's in! Wrong! It was in my sandal the whole time.
+If I could do any jutsu, I'd make one that turns the instructor's chalk into dango. Every lesson would be delicious.
+Let's see who can hop on one foot all the way to the ramen shop. Loser pays! I only have two ryo, so please don't win.
+
+## chat.child  stage=child  personality=adventurous  fn=reveal_character
+I want to see what's past the hills outside the wall. I bet there's a mountain made of ice. Or a lake as big as the village.
+I followed the river all the way to the wall grate yesterday. It keeps going on the other side! I wanted to keep going too.
+When I'm a Genin I'm taking every mission that goes far away. The further, the better. Even the boring ones, if they're far.
+I climbed the tallest tree by the training grounds. I could see the gate and the road going out forever.
+There's a cave behind the Nara forest that my cousin found. Well, it's more of a hole. A big hole. It's still exciting.
+My uncle is a merchant and he's been to the coast. He says the sea tastes like salt soup. I need to taste it myself.
+I keep a bag packed under my bed. Rice cracker, rope, a candle and my lucky stone. In case adventure happens at night.
+The travellers at the gate have the best stories. I sit by the booth and listen until the guards tell me to go home.
+I made a map of the village with a big blank bit where outside the wall is. I'm going to fill it in one day.
+Someday I'll go to every village there is, and eat their ramen, and come home and tell Ichiraku who does it best.
+I walked on top of the garden wall from our house to the end of the lane. That's practically a mission.
+The Forest of Death is the scariest place in the world and I want to go in it more than anything. When I'm allowed.
+I asked a Jonin what's the farthest they've been. They said, far enough to miss home. I want to go that far.
+Let's explore the old lane behind the bath house after school! I heard there's a staircase that goes nowhere.
+
+## chat.child  stage=child  personality=meticulous  fn=reveal_character
+My pencil case has a slot for every pencil. If one's missing, I know which one. It's always the red one.
+I fold my practice headband exactly the same way every night. Three folds, then a tuck. It looks perfect in the morning.
+I made a chart of every snack at the dango stall and how much each costs. The green ones went up by a ryo. I noticed.
+The instructor wrote the Tiger sign wrong on the board today. Just a little wrong. I fixed it at lunch when nobody was looking.
+My handwriting is the neatest in the class. I practise one character a hundred times until it stops wobbling.
+I lined up my shuriken by size before practice. Then the wind blew them over. I had to start again.
+My lunch box has three compartments, and the food is not allowed to touch. Rice is rice. Fish is fish.
+I keep a notebook of every time I hit the target post. Forty-one hits this month. Last month was thirty-eight. Progress.
+Our classroom clock is two minutes slow. I told the instructor. The instructor said thank you very slowly.
+I sweep my room every morning before the Academy. My brother says I'm strange. My room says I'm right.
+I learned the hand signs in order, then backwards, then in pairs. Now I'm learning them in alphabetical order.
+If you fold your scroll the wrong way it gets a crease forever. Please don't borrow mine.
+I timed how long it takes to walk to the Academy. Eight minutes on a normal day, eleven on Market Day.
+The rows in the yard are crooked when we line up. I always stand where the line should be. Nobody else does.
+
+## chat.child  stage=child  personality=steadfast  fn=reveal_character
+I promised my mum I'd be home before the lanterns. I've never been late once. Not once.
+I practise my throws every morning, even when it's raining. Especially when it's raining. Real missions don't wait for sun.
+I'm not the best in class, but I'm always there. The instructor says that counts for a lot.
+My friend dropped a practice kunai down the well and I helped fish it out. Took all afternoon. We got it.
+If I say I'll help you, I'll help you. That's just how it is.
+I carry my grandpa's shopping up the stairs every Market Day. Forty-two stairs. My legs are very strong now.
+I didn't get the Clone right today. Or yesterday. I'll get it tomorrow, or the day after. I'm not stopping.
+My big sister says I'm stubborn. I say I'm steady. We say it at the same time, and then we laugh.
+The whole class gave up on running laps, but I finished mine. Slowly. Still finished.
+I've been feeding the cat by the tea house every day for a year. It's my job now. I take it seriously.
+When the instructor needs someone to carry the target posts, I put my hand up first. Somebody has to.
+I keep my word. Even when it's about something small, like returning a pencil.
+I don't cry when I fall. I get up. Sometimes I cry later, at home, but that doesn't count.
+If you need a partner for practice, I'll be one. I'm not fancy, but I don't give up.
+
+## chat.child  stage=child  personality=reserved  fn=reveal_character
+I like the corner of the library. It's quiet. Nobody asks me things there.
+Hm. The dango's good today.
+I don't talk much at recess. I watch. I know who's winning before they do.
+My favourite place is the bench behind the woodshed. Nobody goes there. Except you, now.
+I have one friend. That's enough.
+The noise in the yard is a lot. I sit by the tree until the bell.
+I can do the Clone. I just don't show anyone.
+You don't have to talk. We can just sit. That's fine.
+I like rain. Fewer people outside.
+I drew a picture of the Hokage Rock. It's in my bag. I'm not showing it. Maybe later.
+My mum says I'm like a cat. I come out when I want to.
+Everyone was shouting about the Genin squad. I just looked. They looked tired.
+I said hello to the instructor today. Out loud. That was a lot.
+Thanks for not making me talk. Most people do.
+
+## chat.child  stage=child  personality=imaginative  fn=reveal_character
+If the Hokage Rock could talk, I bet the faces would argue about who has the best nose all night.
+The clouds today look like a giant ninken chasing a bowl of ramen across the sky. Look, there's the noodle!
+I dreamt the Academy was a boat and we sailed it down the river to the sea. The instructor was the captain and had a parrot.
+My shadow is my secret twin. When I go to sleep it goes out and does missions. That's why I'm always tired.
+I named every stone on the path to the Academy. The round one is called Grandpa Pebble. He's very wise.
+What if the lanterns on the main street are tiny suns that come out at night because they're shy in the day?
+I made up a whole village under the floor of our house. Tiny ninja ride beetles there. They're at war with the mice.
+The river sounds like it's whispering secrets. Mostly about fish, I think.
+If I could paint the sky, I'd make it orange with purple stripes, and every cloud would be a different flavour.
+The big tree at the Academy is really an old giant who fell asleep standing up. The swing is its earring.
+I'm writing a story about a frog who becomes Hokage. It's twenty pages. The frog hasn't even left the pond yet.
+When it snows, I pretend the village is a huge rice cake and I'm a sesame seed walking across it.
+My scarf is actually a dragon that's asleep. When I need it, it'll wake up. For now it's just warm.
+The forge on the market street is a cave where a fire monster lives. The smith feeds it every morning.
+
+## chat.child  stage=child  personality=pragmatic  fn=reveal_character
+I sell my extra rice crackers at recess for a ryo each. I'm saving for a real kunai. Forty ryo. I'm at twelve.
+Hand signs are useful, but carrying the lunch basket gets you extra snacks. You have to think about what matters.
+Why run to the Academy when you can walk fast? Same time, less sweat.
+My mum gives me five ryo a week. Three for dango, two saved. By winter I'll have a lot.
+I don't trade my egg roll for anything less than a whole pickle. That's the rule.
+Practice shuriken are cheap, so I practise with those. When I get good, then I'll spend money on the real ones.
+The cheapest lunch in the village is the Academy rice balls. Two ryo. I know all the prices.
+If you sweep the tea house path, you get a free cup and a cake. That's worth more than two ryo. Good deal.
+I don't need to be the best thrower. I just need to hit what I'm aiming at. That's different, and it's cheaper.
+My brother wastes his pocket money on paper fans. I'm saving mine for a pet. Pets are useful. Fans are not.
+Before the test I studied the stuff that's always on the test. Smart, not hard.
+You should always bring an extra pair of socks. Puddles happen. I'm the only one with dry feet today.
+I helped the grocer stack crates and got paid in apples. Apples are just ryo you can eat.
+When I'm a Genin I'll do every D-rank they have. Cat missions pay the same as fence missions and cats are easier.
+
+## chat.child  stage=child  personality=curious  fn=reveal_character
+How does the water get into the round tanks on the roofs? Does somebody climb up with a bucket? Every day?
+Why do the Aburame wear glasses? Can bugs see through them? Can they see the bugs?
+I asked the smith how kunai are made and got to watch the whole thing. It was so loud. I want to watch again.
+Where does the river go after the wall? Does it end? Can a river end?
+I heard the Hokage Residence has a room full of nothing but scrolls. What's in them? I want to read all of them.
+What makes ramen broth so good? I asked the cook and they just laughed. That means it's a secret, right?
+Do you know why the Hyuga bow so many different ways? I tried to count them and lost count.
+How do Genin water-walk? Is it the same as tree walking but wetter? I'm going to find out.
+I asked the gate guard what's in the big book. Names! Every visitor ever! I want to read it, but I'm not allowed.
+How do the hawks at the Residence know where to fly? Do they have tiny maps? I bet they have tiny maps.
+Where do the stray cats go at night? I followed one and it went up a wall. I can't go up walls yet.
+Why are the Hokage faces carved and not painted? Painting would be faster. I asked three grown-ups and got three answers.
+What does chakra feel like when you have a lot of it? Is it tingly? Mine just feels like being hungry.
+I found a little door at the bottom of the Academy wall. What's it for? Nobody will tell me.
+
+## chat.child  stage=child  personality=protective  fn=reveal_character
+If anyone's mean to my little sister at recess, they have to deal with me. I'm small, but I'm very loud.
+I walk my friend home past the dark lane every day. Nobody's ever done anything there, but you never know.
+When we play ninja and bandits, I'm always the one guarding the base. Somebody has to.
+A big kid pushed the new kid in the yard. I stood in the way. The big kid left. I was shaking, but I did it.
+I check the stray kittens under the tea house every morning to make sure they're all still there. Five today. Good.
+Don't climb the water tank, it's slippery. I'm not being bossy, I'm being careful.
+When I'm a ninja I'm going to guard the gate so nothing bad ever gets in. Not even a mosquito.
+My brother's scared of thunder, so I sit with him during storms. I tell him it's just the sky practising.
+If you get hurt during practice, tell me. I've got a bandage in my bag. Two, actually.
+I always count everybody when we go on a school walk. The instructor does too, but I double-check.
+The little kids in the lower class look up to us, so I try to be good in front of them. Mostly.
+I don't like it when people go into the river alone. Come with someone. Come with me.
+My grandpa walks with a stick, so I carry his shopping and watch for wobbly cobbles.
+You can stand behind me if the dogs at the kennels bark too much. They're friendly. Mostly.
+
+## chat.child  stage=child  personality=gentle  fn=reveal_character
+I found a baby bird that fell out of its nest. I put it back very gently. I hope its mum didn't mind.
+I like quiet mornings when the dew is on the grass and the yard is empty. It feels like the world is still sleeping.
+The deer at the Nara forest let me pat them if I'm very slow. You have to be slower than slow.
+I don't like throwing things at the target posts. It feels mean, even though they're just wood.
+I picked some wildflowers for the instructor's desk. They were a bit squashed, but the instructor smiled.
+I sing to the cat by the tea house. Very quietly. It purrs. I think it likes my singing.
+When somebody cries at recess I sit next to them. I don't say anything. Sometimes that's enough.
+I want to be a medic or a gardener. Something where you make things better.
+My little cousin is afraid of the dark, so I made a paper lantern with a smiling face on it.
+I share my lunch with the crow on the roof. It's not a nice crow, but it's hungry.
+I'm not very good at sparring. I always say sorry when I hit someone. The instructor says I don't have to.
+The flowers at the Yamanaka shop smell like spring even in winter. I go in just to smell them.
+I keep the worms off the path after rain so nobody steps on them. It takes a long time.
+You look a bit sad today. Would you like to see the kittens with me? They make everything better.
+
+## chat.child  stage=child  personality=proud  fn=reveal_character
+I got the best mark on the hand sign test. Again. I'm not bragging, I'm just reporting facts.
+My family has been in the village since the beginning. Well, nearly the beginning. Close enough.
+I can throw a shuriken further than anybody in my class. I measured. With a rope.
+My headband is the shiniest in the class because I polish it every night. Presentation matters.
+I don't need help with my homework. I need a harder homework.
+The instructor asked me to show the class the Clone. Of course they did. Who else would they ask?
+I'm not going to be just any Genin. I'm going to be a Genin people talk about.
+My grandma says I walk like a Jonin already. She's right. Look at this walk.
+Somebody beat me in the race today. Fine. Tomorrow they won't. I'm practising my start tonight.
+I wear my sandals the proper way, laced tight. Sloppy sandals are for sloppy ninja.
+My brother is a Chunin. I'm going to be a Chunin faster than he was. He knows. He's worried.
+I don't like losing. I don't mind it, I just don't like it. There's a difference.
+I've been practising my bow. It's very elegant. The Hyuga kids even noticed.
+Everyone wants to sit next to me at lunch. I let them, sometimes. I'm generous like that.
+
+## chat.child  stage=child  personality=fiery  fn=reveal_character
+I'm going to be Hokage! And not one of the boring ones! The best one ever! [EXCLAIM]
+I ran so fast at recess I tripped over my own feet. I'll run faster next time, so fast my feet can't catch up!
+Somebody said I couldn't do the Clone by the end of the week. Watch me! I'm going to do it by Fourth Day!
+I ate three bowls of ramen yesterday! I'm going to eat four today! My stomach is ready!
+The instructor told me to calm down. I'm calm! This is calm! I'm being very calm right now!
+I challenged the biggest kid to a race and lost. I'm going to challenge them again every day until I win!
+When I see a Genin squad I want to shout HELLO as loud as possible. So I do!
+I'm going to train until my hands fall off! Then I'll train with my feet!
+I hate waiting! Why does the Academy take a whole year? I could be a Genin tomorrow!
+I tried to do a Fireball like my cousin and just breathed out really hard. I'm still counting it!
+Thunderstorms are amazing! Every crash makes me want to yell back at the sky!
+I'm not mad, I'm determined! There's a difference! It's louder!
+Someone took the last melon bread! The last one! I'm going to be there earlier tomorrow, at dawn!
+Let's spar right now! Right here! Okay, maybe after lunch. But then right away!
+
+## chat.child  stage=child  personality=shy  fn=reveal_character
+Um. Hi. I just... wanted to say hi. That's all.
+I made you a... no, never mind. It's nothing. It's a paper crane. You can have it.
+I didn't put my hand up even though I knew the answer. I'll try tomorrow. Maybe.
+The instructor said my throw was good. Nobody else heard. That's okay. I heard.
+I like sitting at the back. You can see everybody, and nobody looks at you.
+I wanted to play kick-the-can but I didn't know how to ask. I just watched. It looked fun.
+I talked to a Genin today! Well, I said "excuse me". But they said "sure"! That counts, doesn't it?
+Sorry, I'm in the way. I'll move. No, it's... you can have the swing.
+My voice goes small when I'm nervous. It's small a lot.
+I practise saying hello to the cat by the tea house. It doesn't laugh at me.
+I'm better at hand signs when nobody's watching. Could you... not watch? Thanks.
+I wrote a poem about the Hokage Rock. It's... it's not very good. You can read it if you want. Later.
+I got through a whole lunch talking to the new kid. My cheeks were red, but I did it.
+If you want, we could... walk home the same way. Only if you want.
+
+## chat.child  stage=child  personality=stern  fn=reveal_character
+Stop running in the corridor. It's not allowed. I'm not the instructor, but I know the rules.
+You did the Ram wrong. Fingers straight. Again. Better.
+I practise every morning for an hour. If you want to be good, so should you.
+Recess is for practice, not for messing about. That's what I think. Nobody agrees, but they're wrong.
+My grandpa was a Jonin. He says discipline is the first jutsu. I'm working on it.
+Tie your headband properly. A loose headband is a loose mind.
+I don't laugh at the class clown's jokes. It only encourages them.
+If you're going to throw, throw properly. Feet apart. Eyes on the target. No, the other target.
+I finished my homework before dinner. Every night. It's not hard; you just have to start.
+Don't eat dango before practice. You'll be slow. Eat after. That's the reward.
+The little kids look at us. Behave. They'll copy everything.
+I was late once. Once. I still think about it.
+You want to be a ninja? Then stop yawning in the lesson. I saw that.
+Good throw. That's all I'll say. Don't get comfortable.
+
+# == second pass: clan kids talking about home (never secrets) =========================================
+
+## chat.child  stage=child  clan=senju  fn=worldbuild,reveal_character
+There's a tree growing right through the middle of our hall. When it rains the roof drips into bowls and it sounds like music.
+I planted my sapling on clan day. It's only as tall as my knee, but it already has six leaves. I count them every morning.
+My grandma makes me water the big tree before breakfast. The tree drinks first, then me. That's the rule.
+Guests at our house always get tea under the tree. I'm allowed to carry the cups now. I've only dropped one.
+
+## chat.child  stage=child  clan=uzumaki  fn=worldbuild,reveal_character
+Our hall has masks all over the walls. They're a bit scary at night, but my auntie says they're family.
+Every spring we paint the seals on the memorial. I got to hold the ink pot this year. I didn't spill any. Hardly any.
+There aren't many of us, so clan day is one big table. I sit right next to the oldest one, who tells the best stories.
+I can draw a spiral perfectly now. I practised a hundred times. It's our family's shape.
+
+## chat.child  stage=child  clan=uchiha  fn=worldbuild,reveal_character
+There's a fan painted on everything in our quarter. Even my lunch box. Even my socks, if you look closely.
+My cousin is in the police. They have a real station with lanterns that never go out. I'm going to join when I'm sixteen.
+At the police parade I got to carry a paper fan and march. I was out of step the whole time, but I marched hard.
+We live right at the edge of the village. It takes forever to walk to the Academy, so I'm the fastest walker in class.
+
+## chat.child  stage=child  clan=hyuga  fn=worldbuild,reveal_character
+At home we have to bow differently to everybody. I mixed up two of them yesterday and my uncle went very quiet.
+The koi in our pond are enormous. The white one is the oldest and it sulks if you're late with the food. Like my grandpa.
+Tea at home is very quiet. Nobody's allowed to talk until the grown-up talks first. Sometimes nobody talks at all.
+My cousins and I spar after dinner. That's how we settle arguments. I'm winning more arguments lately.
+
+## chat.child  stage=child  clan=nara  fn=worldbuild,reveal_character
+Everyone at my house plays shogi on the porch. I can beat my little sister. Nobody else yet.
+We have a whole forest of deer behind our house. I helped count them last year. They kept moving, so I counted some twice.
+My dad lies on the grass and watches clouds for hours. He says it's thinking. Mum says it's napping. I'm not sure.
+In spring I collect the antlers the deer drop. I found eleven this year. That's my record.
+
+## chat.child  stage=child  clan=akimichi  fn=worldbuild,reveal_character
+Dinner at our house is forty people. You have to eat fast or it's gone. That's why I'm the fastest eater in class.
+We always lay out one extra bowl at dinner in case somebody turns up. Somebody always turns up.
+I'm learning to turn meat at the barbecue house. My uncle says I'm a natural. I've only burned three pieces.
+At our house you have to eat the third helping. It's a rule. I love this rule.
+
+## chat.child  stage=child  clan=yamanaka  fn=worldbuild,reveal_character
+Our house is the flower shop on the main street. I'm allowed to water the front buckets every morning.
+Every flower means something. Yellow chrysanthemums mean something sad, so I never give those to anyone.
+There's a greenhouse behind our shop that's warm even in winter. I go in there to do my homework when it snows.
+On clan day we make a big garland with a flower from everyone. I picked a daisy this year. It's at the very end.
+
+## chat.child  stage=child  clan=inuzuka  fn=worldbuild,reveal_character
+On clan day I sat in the circle and a puppy climbed right into my lap. That's my partner now. Its name is Pebble.
+Our house is louder than the whole market. Forty dogs and my grandma, and my grandma is the loudest.
+I sleep in a pile with my pup every night. My feet are always warm, and my face is always licked.
+We race the Aburame kids in the outer fields every year. The dogs always win. The bugs say it doesn't count.
+
+## chat.child  stage=child  clan=sarutobi  fn=worldbuild,reveal_character
+At our house every guest gets a seat by the fire, even in summer. I sit on the floor so there's room.
+There's a monkey painted on our gate. My big brother says it used to be scary. Now it looks like it's smiling.
+At New Year we lead the lantern walk. I got my own lantern this year. I held it so carefully it didn't even flicker.
+Our yard is black from fire training. Nothing grows there. I like drawing on the ground with a stick, and it comes out grey.
+
+## chat.child  stage=child  clan=aburame  fn=worldbuild,reveal_character
+Our house hums at night because of the hives. I can't sleep anywhere else. It's too quiet.
+Rule one at home: never swat anything. I've never swatted a fly in my life. Not even a mosquito. It was hard.
+On insect night the fireflies all come up at once from the garden. It's the best night of the year.
+I have a beetle collection. I don't keep them in jars, I just know where they all live. That's better.
+
+## chat.child  stage=child  clan=hatake  fn=worldbuild,reveal_character
+Our house is really big and really quiet. The old dogs sleep on the porch all afternoon.
+The dogs at home decide who they like. They liked my friend straight away. They don't like the postman.
+There are lots of empty rooms at our house. I play ninja in all of them. Each one is a different mission.
+We have a bucket in the study because the roof drips. The bucket has a name. I named it.
+
+## chat.child  stage=child  clan=kurama  fn=worldbuild,reveal_character
+Everyone at my house paints. Even breakfast is messy. I had ink on my rice this morning.
+My aunt painted a screen of a crane and I swear it moved its head. My aunt says I imagined it. My aunt is smiling.
+We're not allowed to finish painting an eye when people are watching. I always cover my picture with my arm.
+There's an exhibition every autumn. This year one of my drawings is going up. It's a pear. It took four tries.
+
+## chat.child  stage=child  clan=shimura  fn=worldbuild,reveal_character
+At home we don't talk at dinner. It's not because anyone's cross. It's just how we do it.
+Our garden is three stones and some gravel. I tried to put a flower in it and got a very long look.
+My grandpa says silence is polite. I'm practising being very polite at the Academy. The instructor likes it.
+Our house is right under the Rock. In the afternoon the shadow of the faces covers our roof and everything goes cool.
+
+## chat.child  stage=child  clan=yuhi  fn=worldbuild,reveal_character
+Our house is in a grove of really old trees. I climb the split one on clan day. Only family gets to sit inside it.
+There are roses all over our gate, with big thorns. I've got scratches on both arms from picking one for my mum.
+At the grove viewing, guests drink tea that might not be tea. I know the trick but I'm not allowed to tell.
+I like the grove in the mist. You can't tell which trees are real. Even I can't sometimes.
+
+## chat.child  stage=child  clan=gekko  fn=worldbuild,reveal_character
+There's a platform on our dojo roof for looking at the moon. I'm allowed to stay up there on full moons.
+My family does sword practice before breakfast. I only have a wooden one, but I do it every morning.
+There's a crescent worn in our dojo floor from everybody standing in it. I stood in it on clan day. It fits my feet perfectly.
+Swords at my house all have names. When I get mine I'm calling it Moonbeam. Or maybe something scarier.
+
+## chat.child  stage=child  clan=shiranui  fn=worldbuild,reveal_character
+Our house has a wall full of targets out front. I'm only allowed to throw at the bottom row. For now.
+My dad keeps a senbon in his mouth all the time. I tried it with a chopstick and got told off.
+Clan day is a throwing contest at the barracks. I came fourth in the little kids. Fourth out of five, but still.
+The guards from the barracks eat dinner at our house sometimes. They let me try on their vests. They're heavy.
+
+## chat.child  stage=child  clan=morino  fn=worldbuild,reveal_character
+Our house has bars on the windows, but my grandma grows violets on them. It's the prettiest house on the street.
+My mum wears a big long coat to work. At home she makes the best pancakes in the village.
+On clan day nobody's allowed to ask questions at dinner. I tried to last the whole night and asked about pudding.
+We have canaries at home. Three of them. I'm allowed to feed them, and they sing when I come in.
+
+## chat.child  stage=child  clan=umino  fn=worldbuild,reveal_character
+Everybody in my family is a teacher. Even dinner is a lesson. Last night was fractions with tofu.
+Our house is right by the Academy. I can hear the roll call from my bed. I'm never late. I can't be late.
+On teachers' day, old pupils leave notes on our step. One said thank you for the hard sums. I thought that was funny.
+There's always marking on our table. I do my homework in the gaps.
+
+## chat.child  stage=child  clan=haruno  fn=worldbuild,reveal_character
+Our shop is the one with the pink awning. After the Academy I help count the stock. I'm very fast.
+At the anniversary sale we give away sweets to the whole street. I'm in charge of the sweet basket. I eat one per hour.
+There's a cherry tree in our garden that's as old as the shop. In spring our whole house is pink.
+I can count change faster than my big brother, and he's a Genin. He says that's not a ninja skill. It is to me.
+
+## chat.child  stage=child  clan=namiashi  fn=worldbuild,reveal_character
+Every morning we cross the river on the stepping stones. I fell in nine times this year. Only nine!
+In our dojo you have to take your sandals off. The floor is so shiny you can see yourself.
+On clan day whoever splashes first serves dinner. I've served dinner every year. One day it won't be me.
+My grandpa can walk across a room full of dry leaves and not make a sound. I sound like a whole cart.
+
+## chat.child  stage=child  clan=hagane  fn=worldbuild,reveal_character
+My family guards the gate. My auntie knows every cart by the sound of its wheels. I'm learning.
+We have a shop next to the forge, so our house smells like metal. I like it. It smells like home.
+On clan day everybody hammers a nail into the beam over our door. I hammered mine in crooked. It's still there.
+Everyone at our house tells stories from the gate at dinner. I tell stories from the Academy. Mine are better.
+
+## chat.child  stage=child  clan=kinoshita  fn=worldbuild,reveal_character
+My family builds houses. Our yard smells like cedar, and there are shavings in my hair every single day.
+I built my first stool! It wobbles a bit, but my dad put it in the yard where everyone can see it.
+On clan day we put a whole roof on a house in one day. I carried the nails. Hundreds of nails.
+I can tell what wood something's made of by knocking on it. Knock on this desk. That's pine. Cheap pine.
+
+## chat.child  stage=child  clan=tsuchigumo  fn=worldbuild,reveal_character
+Our house is made of stone by the quarry. It stays cool in summer, and you can hear the quarry bell at noon.
+There's a spider on our family cloth. Other kids think it's scary. I pat it for luck before every test.
+On clan day we all twist the rope for the shrine. My strand is in there somewhere. I'm part of the rope now.
+I keep a stone from the quarry on my windowsill. My grandma says it reminds you where you stand.
+
+## chat.child  stage=child  clan=suzuran  fn=worldbuild,reveal_character
+Our house is next to the hospital gardens. There are drying racks on every fence and it smells like tea.
+My grandma makes us drink bitter tea on clan day. I held my nose and drank it all in one go. Then I made a face.
+I know the names of twenty plants already. The dangerous ones have red labels, so I stay away from red labels.
+I never get sick. My mum says it's because of the bitter tea. I think it's because I eat a lot of melon bread.
+
+## chat.child  stage=child  clan=tobari  fn=worldbuild,reveal_character
+My family works at night, so breakfast at our house is at sunset. I eat two breakfasts on school days.
+Our house is really quiet because the walls are padded. I can practise shouting in my room and nobody hears.
+On clan day we help light every lantern in the village. I lit three this year. I got to stay up so late.
+My grandpa can walk across our kitchen and you'd never know. He scares me on purpose sometimes. It's a game.
+
+# == second pass: civilian and shinobi families =========================================================
+
+## chat.child  stage=child  group=civilian  fn=reveal_character,worldbuild
+My parents run the bathhouse. I know how to light the boiler. Well, I know how to watch someone light the boiler.
+Everybody in my family is a farmer. I'm the first one at the Academy. My grandpa gave me a turnip for luck.
+My dad's a cobbler. Every kid in my class has a sandal he fixed. I can tell which ones.
+My mum's a tailor, so my clothes always fit perfectly. Except when I grow. Then she sighs.
+My family makes tofu. I get up at four to help, and then I come to the Academy and fall asleep on my scroll.
+My uncle is the ferryman. I've been on the boat more times than anyone in the class. I've never fallen in. Once.
+My parents don't know anything about chakra, so I explain it to them at dinner. They nod a lot.
+We live by the river and I can catch fish with a net. Not with my hands, that's for ninja.
+I help at my family's noodle stall on weekends. I'm allowed to put the scallions on. I put on a lot of scallions.
+
+## chat.child  stage=child  group=clanless|minor|noble  fn=reveal_character,worldbuild
+My mum's a Chunin and she's never home on time. I don't mind. She always brings me something from the mission.
+My dad's a Jonin. When he comes home he sleeps for a whole day. I put a blanket on him and tiptoe.
+Both my parents are ninja. Our house has more kunai than spoons. We eat with chopsticks, mostly.
+My big sister's squad came round for dinner. They ate everything. Even the vegetables. Ninja are very hungry.
+My parents taught me the Rat sign before I could walk. That's what my mum says. I don't remember.
+When my dad goes on a long mission I sleep in his chair. It smells like him and the forest.
+
+# == second pass: weather, seasons, time of day =========================================================
+
+## chat.child  stage=child  weather=rain  fn=react
+The gutters on our street are rivers today! I raced two leaves down them and the green one won.
+Rainy days at the Academy we practise indoors. Everyone throws practice shuriken at the cushions. The cushions lose.
+My umbrella has a frog face on it. The frog is happy in the rain. So am I.
+I've got mud up to my knees. My mum is going to say my name in the long way.
+The rain makes the Hokage faces look like they're crying. Or washing. I think washing.
+
+## chat.child  stage=child  weather=snow  fn=react
+Snowball fight in the yard at recess! The Academy against the whole world!
+I made a snow ninken outside our house. It has pebble eyes and a stick tail. It's guarding the door.
+The ice on the Academy pond is thick enough to slide on! We're not allowed. We slid on it anyway.
+My breath looks like a dragon's smoke today. I'm pretending I can do a fire jutsu.
+I tried to tree-walk up a snowy tree and slid all the way down. It was the best fall I've ever had.
+
+## chat.child  stage=child  weather=thunder  fn=react
+I counted to six between the flash and the boom. That means it's six somethings away. Six far things.
+My pup hid under my bed during the storm, so I hid under the bed too, to keep it company.
+The thunder made the whole classroom jump. Even the instructor jumped. Just a little.
+I like watching lightning from the window. Each one is like the sky doing a jutsu.
+
+## chat.child  stage=child  weather=clear  fn=react
+It's so hot the cicadas are screaming. I put my feet in the water barrel at the training grounds and it was heaven.
+The sky is so blue today you could swim in it. If you could swim upwards. I'm working on that.
+It's windy enough to fly kites! Mine's a fish. It's stuck in the Academy tree again, but it's flying in the tree.
+
+## chat.child  stage=child  season=spring  fn=react
+The cherry blossoms are falling like snow. I've got petals in my hair and my lunch and my sandals.
+Spring means the frogs are back in the pond. I've counted eight. One is enormous.
+My grandma is planting the garden and I'm in charge of the seeds. I've only eaten two.
+
+## chat.child  stage=child  season=summer  fn=react
+It's so hot that I eat shaved ice every day. Plum one day, melon the next. Today was both.
+Summer festival is coming! I'm going to catch a goldfish this year. I've been practising with a sieve.
+The cicadas are so loud I can't hear the instructor. That's my excuse, anyway.
+
+## chat.child  stage=child  season=autumn  fn=react
+I jumped in a pile of leaves the gardener made at the Academy. Then I had to help make it again.
+Roasted chestnuts are back on the corner! They're hot enough to burn your fingers and I don't care.
+The maples on the Rock are all red. It looks like the Hokage faces are wearing hats made of fire.
+
+## chat.child  stage=child  season=winter  fn=react
+At New Year I'm going to ring the shrine bell. I've been practising my ringing arm all week.
+My hands are so cold I can't do the Tiger sign. My fingers just make the Snowman sign.
+Our house has a kotatsu and I'm never coming out from under it. Except for the Academy. And dango.
+
+## chat.child  stage=child  time=dawn|morning  fn=react
+I'm up before the Academy bell so I can see the sun hit the Hokage faces. The first face goes gold first.
+I'm so sleepy. My brother practised hand signs in his sleep and kept poking me all night.
+The bakery smells come out at this time. If you walk slowly past it, you can breakfast on smell.
+
+## chat.child  stage=child  time=noon|afternoon  fn=react
+Lessons are over! Now it's the best part of the day: dango, games, and nobody telling me to sit still.
+I've got all afternoon and nothing to do. That means I've got all afternoon to do everything.
+The dango stall is so busy after lessons. I've been in the queue so long I've grown.
+
+## chat.child  stage=child  time=evening  fn=react
+The lanterns are coming on. That means I've got until the last one is lit to get home.
+I can smell grilled fish from every house on our street. Mine better be fish too.
+I'm meant to be going home, but the sunset is doing the orange thing on the Rock. One more minute.
+
+## chat.child  stage=child  time=night|late  fn=react
+I'm not supposed to be out this late. I'm just going home. Very slowly. Pretending I'm on a night mission.
+My mum will be so cross. I lost track of time watching the Tobari light the lanterns on the wall.
+I can't sleep, so I came out to look at the stars. I found one that looks like a shuriken.
+
+# == second pass: districts ============================================================================
+
+## chat.child  stage=child  district=academy  fn=worldbuild,react
+The third target post leans because somebody hit it so hard last year. Everyone says it was a Jonin. It was a kid.
+The swing's free! Quick, before the older class gets out!
+The janitor keeps a jar of lost things in the office. There's a whole marble collection in it. One of them is mine.
+
+## chat.child  stage=child  district=market  fn=worldbuild,react
+The fish stall cat steals a sardine every day at the same time. I've been watching. It's very professional.
+I love the market on Market Day. Free samples at every stall if you look hungry. I always look hungry.
+The pickle lady gives you a slice if you can say all the pickles' names. I know nine.
+
+## chat.child  stage=child  district=river  fn=worldbuild,react
+I'm trying to skip a stone across the whole river. I got seven skips! Then it sank. Brave stone.
+The herons stand so still. I tried standing like a heron and fell over in the shallows.
+The ferryman lets me sit at the front of the boat sometimes. I pretend I'm captain of the Leaf's navy.
+
+## chat.child  stage=child  district=training  fn=worldbuild,react
+The Genin are training at Ground Three! If you lie in the grass by the stumps they don't see you. Probably.
+I tried to climb the cliff like the Genin do. I got as high as my own head. It's a start.
+There's an unbeatable post here. I kicked it. It's still unbeatable. My foot is beaten.
+
+## chat.child  stage=child  district=hokage_rock  fn=worldbuild,react
+I climbed all the stairs up the Rock! My legs are jelly but I can see my house from here. It's tiny!
+From up here the whole village looks like a toy. I want to pick up the Academy and shake it.
+
+## chat.child  stage=child  district=shrine  fn=worldbuild,react
+I wrote a wish plaque. I'm not telling you what it says. Okay, it says ninken. Don't tell.
+The fox statues are wearing new knitted hats. I think the priest made them. The foxes look pleased.
+
+## chat.child  stage=child  district=hospital  fn=react
+I'm only here to visit my uncle. I'm not scared. I'm just holding the door handle very tightly.
+The nurse gave me a sweet for sitting still. I've sat very still three times now. I have three sweets.
+
+## chat.child  stage=child  district=gate  fn=worldbuild,react
+I like watching the carts come in through the gate. Today one was full of watermelons! A whole cart!
+The gate guards let me sit in the booth for a minute once. There's a kettle and a book and a cushion. It's like a tiny house.
+
+## chat.child  stage=child  district=apartments  fn=worldbuild,react
+The kid upstairs practises jutsu at night. Thump, thump, and then a crash. I think they're getting better.
+We play on the roof of our block where the laundry is. The sheets make the best hiding places.
+
+# == second pass: the player's rank ====================================================================
+
+## chat.child  stage=child  player_rank=academy  fn=react,deepen_bond
+Are you in the Academy too? Which class? Is your instructor the strict one or the really strict one?
+Graduation is so far away. Do you think we'll both make Genin at the same time? We should.
+Want to practise the Clone together after lessons? I'll be the target. Just don't throw anything.
+I saw you at the target posts. You're getting better! You hit the post at least twice. I counted.
+When we graduate, we'll get real headbands. I'm going to wear mine to bed.
+
+## chat.child  stage=child  player_rank=genin  fn=react
+A new Genin! I saw you come out of the Residence with your squad! What was the mission? Was it dangerous? Was it a cat?
+Can you water-walk yet? Show me at the river, please! Even just one step!
+You get to go to the Mission Desk now! What's it like inside? Is there a queue? Is there a dango stall?
+My big brother says the first missions are just fences and gardens. Is that true? Say it's not true.
+Everyone in my class talks about you now. You're like a hero. A short hero, but still.
+I'm going to work really hard and be a Genin just like you. Will you wave at me when I graduate?
+Your headband looks so shiny. Do you polish it? I'd polish mine every hour.
+
+## chat.child  stage=child  player_rank=chunin  fn=react
+A Chunin! A real one! Can I carry something for you? Anything! I'm very strong!
+Did the exams hurt? My cousin says you have to fight in a giant arena with everybody watching. Were you scared? I'd be scared.
+
+# == third pass: any child can say these ==================================================================
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+We had to write an essay called My Village. I wrote about Ichiraku for three pages and the gate for one line.
+My homework tonight is drawing the Ox sign twenty times. My Ox looks more like a cow every time.
+The instructor read my test out loud as an example. A good example! I think. Nobody laughed, so it was good.
+I forgot my homework, so I told the instructor my cat ate it. I don't have a cat. I need to get a cat.
+In geography we learned there are other hidden villages. I didn't know there were other villages. I thought it was just us and the bandits.
+We had a pop quiz on chakra today. I wrote that chakra is like soup inside you. I got half marks.
+I sit next to the kid who sneezes every morning at exactly nine. You could set the Academy bell by it.
+The instructor's chalk squeaks on the last letter of every word. I can't stop hearing it now.
+Writing practice is the worst. My brush keeps dripping right in the middle of my best character.
+I got a red circle on my sums! A red circle means right. I've been showing everybody my circle.
+We learned the names of all the Hokage today. I already knew them from the Rock, so I was the first to finish.
+My scroll for history came unrolled down the stairs and rolled all the way to the front door. Everyone watched.
+I fell asleep in the afternoon reading and dreamed about hand signs. I woke up doing the Boar.
+The instructor says if we finish the term without anybody setting the yard on fire, we get a party. It's going to be close.
+We had to bring something from home for show-and-tell. I brought my grandpa's old practice kunai. It's even more blunt than mine.
+The ink stone in my desk is cracked, so all my writing comes out a bit grey. I tell people it's on purpose.
+I wrote the Tiger sign so many times my wrist is tired. Then I did it with my left hand so my right hand could rest.
+We're learning about the wall today. It goes all the way round! I asked if it has a door at the back. It has gates.
+Our class has a pet goldfish in a bowl. Every day somebody different feeds it. It's very round now.
+The old scrolls in the library have pictures of ninja with really big hair. Everybody had really big hair back then.
+I got moved to the front row for talking. The front row is nice. You can see the chalk better.
+Our instructor has a scar, and everybody has a different story about it. Mine's about a bear. It's the best story.
+The test was so hard I chewed my brush. Now my mouth is black and my answers are still wrong.
+The Academy bell is broken, so the janitor bangs a pot instead. Everyone runs when they hear the pot.
+I got sent to the hall and found out the hall is actually quite peaceful. I might get sent more.
+Every morning the instructor checks our headbands are tied right. Mine always falls over one eye by lunch.
+We had to stand on one leg in the yard for balance practice. The kid next to me lasted the longest. I lasted the loudest.
+I traded homework answers with my friend, and we both got them wrong in the exact same way. The instructor knew.
+The library has a book of jokes for ninja. They're all terrible. I've memorised every one.
+My practice shuriken bounced off the post and landed in the instructor's tea. That's a hit, right?
+
+## chat.child  stage=child  fn=reveal_character,filler
+At recess we play statues. You freeze like a ninja on a mission. I can stay still until my nose itches.
+We made a fort out of the gym mats. Then the instructor found it and made it a lesson about defence.
+I'm the best at jacks in my class. I can pick up five at once. Six if nobody's watching.
+We play Hokage says at recess. It's like the normal game but the Hokage is very bossy.
+We drew a hopscotch in the yard and numbered it to twelve, one for each hand sign. You have to do the sign on every square.
+Spinning tops are back! Mine is red and it wobbles, but it spins longer than anybody's.
+We played catch with a rice ball by accident. It was somebody's lunch. They were not happy.
+There's a game where one person is the bandit and everyone else has to sneak past. I'm always the bandit because I'm good at grumpy faces.
+We had a paper plane contest off the Academy steps. Mine flew all the way to the dango stall. I went to get it, and stayed.
+Rock, paper, kunai. It's like the normal one but kunai beats everything. We argue about it a lot.
+I can do a handstand against the woodshed for a count of twenty. I'm working on doing it without the woodshed.
+We played marbles in the dirt and I won four. Then I lost five. I'm down one marble. It was a good game.
+We have a club at recess. It's called the Secret Ninja Club. Everybody knows about it. That's the only problem.
+Somebody brought a skipping rope and we skipped until the bell. I did forty skips! Then I tripped on the forty-first.
+We have a relay at recess where you pass a stick instead of a scroll. The stick is very important. Don't drop the stick.
+We build stone towers in the yard and knock them down with practice shuriken. Building is better. Knocking down is louder.
+Leapfrog over the training logs is the best game. Unless you don't jump high enough. Then it's the worst game.
+We play a game where you have to cross the yard without touching the ground. Benches, logs and the janitor's cart count.
+The best place to play hide-and-seek is inside the big empty barrel by the workshop. Don't tell anyone. It's my barrel.
+We were playing tug-of-war with a rope and the rope broke. Both teams fell over. Everyone won.
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+I got ten ryo for my birthday! I'm going to spend it carefully. Three on dango. Seven on more dango.
+I found a one-ryo note on the main street. I thought about it a lot and then bought a rice cracker.
+My pocket money is two ryo a week. The dango stall has started saying hello to me by name.
+I'm saving up for a real paper fan from the festival. It costs eight ryo. I have three and a half. I don't know where the half came from.
+The sweets shop has a jar of hard candies, one ryo for three. The orange ones last the longest. I've timed them.
+I helped carry crates at the grocer and got two ryo. That's the first money I ever earned. I'm keeping the note forever. Or until tomorrow.
+Ichiraku's small bowl is the perfect size for a kid. I can almost finish it. Almost.
+There's a bean bun stall that only opens on Market Day. The buns are as big as my face, and the beans are still warm.
+I tried green tea because grown-ups drink it all the time. It tastes like a garden. I don't know why they like it.
+I can eat seven dango in a row. I've never tried eight. I'm scared of what happens at eight.
+The grilled corn stall by the river puts butter and soy on it. I get it all over my sleeves. My mum knows exactly where I've been.
+I swapped my lunch with my friend every day this week. It turned out we both have the same lunch. We still swap.
+My favourite ramen topping is the egg. I save it for the very end. If anyone touches my egg, we're enemies.
+I keep a list of every snack I've tried in the village. I'm on number forty-two. Number forty-two was a weird pickle.
+I spent all my money on candy and now I'm sad. But I also have candy. It's complicated.
+The sweet potato man rings a little bell when he comes down our street. I can hear it from inside the house.
+Ichiraku gave me extra seaweed because I said thank you so loud. Being loud works sometimes.
+I tried to cook rice by myself and it came out like glue. My dad ate it anyway and said it was very sticky. Sticky is a compliment.
+There's a stall that sells little fish-shaped cakes with bean paste inside. I always eat the tail first so it can't swim away.
+I want to try the barbecue house so badly. Everyone who comes out of it smells amazing and looks very full.
+
+## chat.child  stage=child  fn=reveal_character
+My big brother let me wear his flak vest for one minute. It came down to my knees. I felt like a Chunin.
+My mum braids my hair so tight before the Academy that my eyebrows go up. I look very surprised all day.
+My little sister follows me to the Academy gate every morning and cries when I go in. Then she forgets and plays.
+My dad snores like a cart going over cobbles. I can hear it from the other end of the house.
+My big sister is teaching me to throw. She says I throw like I'm angry at the post. I'm not angry. I'm determined.
+My mum works late and my grandma cooks dinner. Grandma's dinners are bigger. Don't tell Mum.
+My twin and I swapped places at the Academy for a whole morning. Nobody noticed. The instructor noticed at lunch.
+My brother and I share a room. There's a line down the middle. His side is messy. My side is slightly less messy.
+My dad tells the same story about the bear every winter. The bear gets bigger every time. It's huge now.
+My mum can tell if I've washed my hands by looking at my face. I don't know how. It's a mum jutsu.
+My grandma has a cat that's older than me. It sleeps all day and only moves for fish.
+My little brother learned to say kunai before he could say my name. I'm still a bit upset about it.
+My big sister got her headband and wore it to dinner, to bed and in the bath. Mum took it off her when she was asleep.
+When my parents argue, they do it in whispers. I can still hear it, but they think I can't.
+My dad makes paper cranes when he's thinking. Our whole house has cranes on every shelf.
+My mum sings when she cooks. She sings very badly. It's my favourite sound.
+My big brother says I'm too small to understand. I'm small, but I understand everything. Mostly.
+My aunt visits from the market every Metalday and brings melon. I love Metaldays.
+I have three older sisters and they all tell me what to do. I'm going to be Hokage just so I can tell them what to do.
+My grandpa falls asleep in his chair after lunch, and I put his slippers on the wrong feet. He never notices.
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+I want a pet so badly I've started pretending my sandal is a dog. Its name is Sandal.
+The kennels let you pet the old dogs if you're gentle. The oldest one has a grey nose and leans on your legs.
+I caught a cricket and kept it in a box by my bed. It chirped all night. I let it go in the morning. I was tired.
+There's a cat on the Academy wall that comes to every lesson. I think it's learning hand signs too.
+I saw a hawk from the Residence fly right over the Academy. Everybody looked up. The instructor looked up too.
+My goldfish is called General. General is very brave. General is a fish.
+There's a tortoise at the shrine pond that's a hundred years old. I asked it questions. It didn't answer.
+I found a snail on the Academy steps and carried it to the grass so nobody would step on it. It took a long time.
+A dog followed me home from the market and my mum made me take it back. I walked very, very slowly.
+The ducks on the river chase you if you have bread. I had bread. I ran.
+There's a frog that lives in the water barrel by the Academy workshop. Every time you open it, the frog looks offended.
+I'm training an ant colony. Well, I'm feeding them crumbs and they're doing what they want. That's training.
+I named all the pigeons on the Hokage Rock. There are too many. Now they all have the same three names.
+A butterfly landed on my hand during practice and I couldn't move until it flew off. The instructor said that was the best stillness exercise all week.
+
+## chat.child  stage=child  fn=reveal_character,filler
+They dared me to eat a spoonful of wasabi. My nose is still on fire. I won though.
+I dared my friend to sit on the third target post during throwing practice. The instructor dared us to stop.
+The dare was to walk all the way down the main street with my eyes shut. I made it to the tailor's before I walked into a pole.
+I dared someone to say the twelve hand signs backwards really fast. They did it! I'm still practising.
+Somebody dared me to climb into the empty water tank on our roof. It echoed when I shouted. Best dare ever.
+The dare was to touch the Inuzuka gate and run before the dogs barked. The dogs barked before I even got there.
+I got dared to ask the bath house keeper for a bath in my clothes. I didn't do it. That's a dare for older kids.
+I dared my little brother to eat a whole lemon. He did it and then cried. I bought him a dango to say sorry.
+The double dare is jumping off the second step of the Academy stairs. The triple dare is the third step. Nobody's done the triple.
+I dared everyone to stay quiet for a whole minute at lunch. We lasted ten seconds. Somebody burped.
+They dared me to knock on the door of the empty house on our lane. I knocked and a cat came out. I screamed. The cat screamed too.
+The scariest dare is running round the shrine three times at night. I've done it once. My legs ran faster than me.
+
+## chat.child  stage=child  fn=worldbuild,hook
+My friend says if you whisper your name to the Hokage Rock, one of the faces winks at you. I've tried six times.
+Everyone says the janitor used to be a famous Jonin. I watched how they sweep. It does look a bit like sword fighting.
+There's a rumour that Ichiraku's broth has a secret ingredient that makes you faster. I had two bowls and ran home. It was true.
+A kid in the year above says if you sleep with a kunai under your pillow you dream of missions. I tried with a spoon. I dreamed of soup.
+Somebody said there's a giant fish in the river as big as a boat. I've been looking every day. I've seen a big log.
+My cousin says the instructor can see through walls. That's why I always sit up straight, even in the toilet.
+People say the oldest tree in the village grew from a single seed the first Hokage planted. I've been planting seeds everywhere just in case.
+My friend says if you can catch a falling cherry petal, you'll make Genin first try. I caught four.
+There's a story that the bathhouse mural changes when nobody's looking. I stared at it for an hour. It didn't change. My eyes did.
+Everyone says the dango maker can make a fourth colour if you ask nicely. I asked. It was purple. It tasted bruised.
+Somebody told me that if you count all the lanterns on the main street you get a wish. I lost count at fifty-three.
+The big kids say the cliff at the training grounds has a ninja's footprint at the very top. Nobody can get up to check.
+
+## chat.child  stage=child  fn=reveal_character
+When I'm a ninja I'm going to have a cool cloak that flaps in the wind. Even when there's no wind.
+I practise my mission face in the mirror. Serious, eyebrows down, mouth straight. Then I laugh and have to start again.
+In my daydreams I'm the one who saves the whole village from a dragon. Then everyone buys me ramen.
+I'm going to have a signature move. I've decided on a spinning kick. I just need to stop falling over after the spin.
+When I graduate I'll jump from roof to roof all the way to the Academy, and wave at everyone below.
+I'm going to be so fast that people only see a blur and then a puff of dust. And then me, waving.
+I'm inventing a jutsu where you turn into a cloud and float wherever you want. The hand signs are very complicated.
+In my head I'm already a Jonin. The real me just has to catch up.
+If I had my own squad, we'd have matching scarves. Red ones. And a motto. I haven't thought of the motto yet.
+When I'm famous my face will go on the Rock, and I'll make sure they carve my best side.
+I want a summoning animal so badly. I'd pick a giant owl, so I could fly home at night.
+I'm going to be the first ninja who can do hand signs with their toes. I practise in the bath.
+Sometimes I pretend my walk to the Academy is an escort mission and my lunch box is the client.
+I've decided my ninja name will be Shadow Wind. My mum says I already have a name. That's my civilian name.
+When I'm a ninja, I'll come back to the Academy and show all the little kids how to throw. And I'll be really nice about it.
+
+## chat.child  stage=child  fn=reveal_character
+I scraped my knee on the Academy steps. It's got a scab shaped like the Leaf symbol. I'm keeping it as long as I can.
+I fell off the swing and landed on my elbow. It's purple and green now. Everyone wants to look at it.
+I got a splinter from the training log. My mum took it out with a needle and I only yelled a little.
+I've got a bandage on my chin from falling over my own shadow. That's what I'm telling people. Really I tripped on a cat.
+My knee bled through my trousers, but I finished the race anyway. The instructor gave me a nod. A real nod!
+I bumped my head on the low beam in the workshop. Now I have a lump. My friend calls it my second brain.
+I bit my tongue eating crackers too fast. Now everything tastes like a coin.
+I've had four plasters this week. My mum says she's going to buy them by the box.
+I sprained my finger doing the Boar sign wrong. Is that even possible? It is. I did it.
+My hands are all blisters from swinging on the bar. The instructor says that means I'm getting stronger. They also hurt.
+When I fall over, I count to three and get up. If I'm still sad at three, I count to ten.
+I cut my thumb on a sheet of paper in the library. The library lady gave me a sweet. I'm going to be more careful. Or less.
+
+## chat.child  stage=child  fn=worldbuild,reveal_character
+The festival is coming! I've been practising goldfish scooping in the bath with a ladle and some pebbles.
+I'm wearing a yukata to the festival this year. It's blue with white rabbits. My mum says I can't run in it. I'm going to try.
+At the festival there's a candy apple stall that does the apples in red sugar. I'm going to get one and not share it.
+Fireworks are my favourite part of the festival. I lie on the grass and watch them, and the sky goes boom inside my chest.
+I want to win a prize at the ring toss this year. There's a stuffed ninken on the top shelf, and I want it.
+At New Year you get money in a little envelope. I'm saving mine for the summer festival. That's planning.
+I'm going to make my own lantern for the festival. It'll be shaped like a fish. Right now it's shaped like a squashed fish.
+The festival masks are the best. I'm getting the fox one this year. Last year I got the frog and nobody knew who I was.
+Before the festival everybody hangs paper lanterns across the street. I helped tie one up. It's the crooked one.
+There's a game at the festival where you shoot corks at prizes. I knocked a box over last year. The box was empty.
+On festival night I get to stay up until the fireworks finish. It's the latest I ever stay up. I'm always so tired and so happy.
+I'm counting down the days until the festival on the kitchen wall. My dad keeps rubbing out the days to tease me.
+The shrine has a festival with drums. When the drums go, the ground shakes and my heart beats the same.
+At New Year I'm going to wish for a ninken and a passing mark and a really big bowl of ramen. In that order.
+
+## chat.child  stage=child  fn=worldbuild,reveal_character
+I can see the Hokage faces from my bedroom window. I say goodnight to each one before I go to sleep.
+The second face on the Rock looks like it's about to sneeze. Once you see it, you can't stop seeing it.
+I want to climb up the Rock and sit on top of a face. Just for a minute. I'd be very respectful.
+When it's sunny the faces look happy. When it's cloudy they look like they're thinking about homework.
+The fourth face is my favourite. It looks like it knows a joke and won't tell anyone.
+I drew the Rock in art class and gave all the faces hats. The instructor said it was creative. That means good, I think.
+There's a space on the Rock for more faces. I measured it with my thumb. Mine would fit.
+At sunset the faces go orange. My grandpa says that's when the Hokage are proudest of the village.
+I wonder if the Hokage get embarrassed about their faces being so big. I'd be embarrassed. And also very happy.
+Birds sit on the noses of the faces. I think that would tickle if they were real.
+From the market street you can see the faces between the roofs. They're always watching. In a nice way.
+
+## chat.child  stage=child  fn=worldbuild,reveal_character
+Ichiraku has a stool that spins a little. If you sit there, you can turn round to see who's coming in.
+I watched the cook at Ichiraku pull noodles. They stretched and stretched and never broke. It's a jutsu, I'm sure.
+The steam from the ramen counter makes my face all warm and my nose run. It's the best feeling.
+I can slurp noodles louder than anyone in my class. At Ichiraku slurping is polite, so I'm the most polite.
+Ichiraku's lantern is the first one on the street to light up. I race it home every evening.
+I want to eat at Ichiraku every day when I'm a Genin. I'll have to do a lot of missions to pay for it.
+There's a picture on the wall at Ichiraku of a ninja eating ramen. I asked who it was and the cook just smiled.
+The best thing at Ichiraku is when they give you a bowl and the egg is perfect. Gold in the middle. Wobbly.
+I saved for two weeks to have a whole bowl at Ichiraku with my friend. We counted our coins on the counter. The cook waited.
+When it rains, everyone squeezes onto the stools at Ichiraku and there's no room for elbows. I love it.
+
+## chat.child  stage=child  fn=reveal_character
+I don't like the dark in my room. The coat on the hook looks like a bandit. I put it in the cupboard every night.
+I sleep with a little lamp on. My brother calls me a baby. He sleeps with a lamp too, I've seen it.
+When I walk home after dark I run past the alley by the tea house. Nothing's ever been there. I still run.
+My mum says the dark is just the day with its eyes closed. That helps a bit.
+I'm not scared of the dark. I'm scared of what's in the dark. Which is nothing. Probably.
+At night the wind makes the shutters creak like footsteps. I pretend it's a Tobari watchman walking by. That makes it better.
+The stairs in our house creak on the fourth step. When I hear it at night, I know it's just my dad getting water.
+I hide under my blanket when I hear owls. Owls sound like ghosts. They're just birds. Big ghost birds.
+I count the lanterns on the wall from my window when I can't sleep. If they're all lit, the village is safe.
+When the lamp goes out at night I say every hand sign in my head. By the Dog I'm usually asleep.
+
+## chat.child  stage=child  fn=reveal_character
+I collect bottle caps. I have thirty-one. The gold one is from the tea house and it's my best one.
+I've got a box of feathers under my bed. Crow, pigeon, duck and one blue one I can't name. I think it's a magic bird.
+I collect smooth stones from the river. I only keep the ones that feel warm in your hand. Those are the lucky ones.
+I'm collecting all the different festival masks. I have three. The frog, the cat and one with a broken nose.
+I keep every wrapper from every sweet I've ever eaten. My mum says it's rubbish. It's a history.
+I collect pressed flowers in my history scroll. When the instructor opens it, petals fall out. It's very pretty.
+I have a jar of marbles. Twenty-seven. One is cracked inside and when you hold it up, it looks like lightning.
+I've collected every kind of leaf in the Academy yard. There are nine. I thought there would be more.
+I collect drawings of the Hokage. Every kid in my class draws them different. One has a moustache.
+I keep the shells from the sunflower seeds I eat. It's a big pile. I don't know why. I just started.
+I collect the little paper fortunes from the shrine. Even the bad ones. Especially the bad ones. They're funnier.
+My collection of practice shuriken that missed is very big. The ones that hit go back in the box.
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+Our instructor can catch a piece of chalk without even looking. Somebody threw one once. Once.
+When the instructor's happy, they tap the desk twice. When they're cross, three times. Count the taps.
+Our instructor makes the best paper cranes. If you get top marks, you get a crane on your desk.
+The instructor yawned in the middle of the lesson today. I didn't know instructors could get tired.
+Our instructor has a tea mug with a chip in it. Nobody's allowed to touch the mug.
+The instructor says "eyes on me" so many times a day. I counted. Thirty-four times on Second Day.
+Our instructor can do all twelve hand signs in one breath. I tried and ran out of breath at the Snake.
+When it's somebody's birthday, the instructor lets them ring the end-of-day bell. My birthday's coming up. I'm going to ring it so hard.
+Our instructor writes on the board with both hands sometimes. It's very strange and very impressive.
+The instructor knows everybody's sandals. If you leave yours in the yard, they're back on your desk in the morning.
+I saw our instructor eating at Ichiraku after school. It was so strange, like seeing a fish walk.
+The instructor gave me extra homework because I finished early. I've learned to finish at the exact right time.
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+I saw a squad come back through the gate all muddy and tired, and the youngest one was still smiling. I want to be that one.
+A Genin let me hold their kunai pouch for a second while they tied their sandal. It was so heavy. Full of real kunai.
+Two Genin were racing over the roofs on our street. Our cat watched them the whole time like it was a contest.
+The new Genin wear their headbands everywhere. On their forehead, on their arm, round their neck. I'd wear mine everywhere too.
+I saw a Genin trip over a bucket at the market. They pretended it was a training exercise. I believed them for a whole minute.
+A Chunin asked me directions to the bathhouse. A real Chunin! I gave very good directions.
+When I see a Jonin on the street, I stand very straight in case they need a new squad member right away.
+A Genin threw a shuriken at a falling leaf and pinned it to a tree. I keep looking at that tree.
+
+## chat.child  stage=child  fn=reveal_character
+My mum's a ninja and I don't know what she does. She just says "work". Work must be very exciting.
+My parents sell vegetables, so I know every vegetable in the village. Ask me about any radish.
+My dad's a ninja who came back from a long mission with a beard. I didn't recognise him for a second.
+My mum is a nurse. She says she's not a ninja, but she's the bravest person I know.
+My dad's a carpenter and he made my desk at home. It's got a secret drawer. It's not secret anymore. I just told you.
+My parents both work at the market, so I know all the stallholders. They give me free stuff on my birthday.
+My mum's a Chunin and she makes me do push-ups before dinner. Ten push-ups, then rice.
+My dad is a cook at a tea house and brings home the cakes that broke. Broken cakes taste exactly the same. Better, even.
+My parents aren't ninja and they worry about me going to the Academy. I tell them I'm fine. I tell them every day.
+My mum works at the gate. She knows every traveller who comes in. She says she knows everyone, which means me too, so I behave.
+
+## chat.child  stage=child  fn=reveal_character,filler
+I learned to whistle today! Well, it's half a whistle. Mostly air. But some whistle.
+I can wiggle my ears. Nobody else in class can. It's my secret skill. It's not a secret now.
+I'm learning to juggle with three rice balls. I've dropped about forty rice balls. The ants are very happy.
+I tied my sandal laces together by accident and fell over in front of everyone. I said it was a new taijutsu.
+I sneezed so hard in class that my practice headband flew off. It landed on the instructor's desk. I went to get it very quietly.
+I learned the word for every colour in the dango stall. Pink, white, green and a new one: brownish.
+I tried to stay awake all night to see the sunrise. I fell asleep at the window. I saw the sunrise from my dreams.
+I can hold my breath for a count of forty. Underwater it's thirty. Under a blanket it's forever.
+I practise my signature in case I'm famous one day. I've got a really good one with a swirl.
+I found a coin in my old sandal. It's been there since last winter. That's a winter coin. It's worth more.
+I got hiccups in the middle of the test and the whole class laughed. The instructor gave me water. I got hiccups again.
+I learned to do a cartwheel! Well, a half-cartwheel. Then I sit down. It counts.
+I lost my front tooth today! It came out in a rice cracker. I'm keeping the tooth. Not the cracker.
+I can tie seven kinds of knot. The instructor only taught us three. The other four I made up.
+I spun round twenty times and then tried to walk straight. I walked into the woodshed. Science.
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+I want to visit every shop in the village before I graduate. I've done eighteen. The pawn shop is scary.
+The bathhouse has a cold milk box. You drink the milk after your bath, hands on your hips. That's the rule.
+I found a shortcut from the Academy to Ichiraku through the alley behind the tailor. It saves a whole minute. A ramen minute.
+There's a bench by the river where you can see the ferry, the herons and the Hokage Rock all at once. It's the best bench.
+The furniture shop has a giant bed on display. I lay on it once until the shopkeeper coughed.
+I watched the smith hit a glowing bar until it turned into a kunai. Sparks went everywhere. One landed on my sleeve. I'm fine.
+The flower shop smells like a garden that's also a cake. I don't know how.
+There's a tiny shrine at the end of our street with a stone frog. I give it a pebble every morning for luck.
+The tea house garden has a pond with a bamboo pipe that clonks when it fills up. I can wait for the clonk forever.
+The scroll shop has a scroll as long as the whole room, rolled up in a glass case. I want to know what's on it.
+
+## chat.child  stage=child  fn=reveal_character,filler
+My best friend and I have a secret handshake. It's eleven moves long. We get it wrong every time and laugh.
+I got into a fight with my best friend over the last rice cracker. Then we split it. Then we were friends again.
+My friend moved to the other side of the village. Now we meet at the Hokage Rock steps every Sunday.
+There's a kid in my class who can do the Clone perfectly and never shows off. I want to be friends with them.
+My friend and I are going to be on the same squad. We've decided. We just have to tell the Hokage.
+I wrote my friend a letter even though they live two doors down. I gave it to the courier. It took a day.
+I don't have a best friend yet. I have a lot of medium friends. That's good too.
+My friend can burp the whole name of the village. I'm learning. I've got to the first part.
+Me and my friend made a pact to graduate on the same day. We spat on our hands. Then we washed them.
+My friend lent me their favourite marble for the whole week. That's how you know someone trusts you.
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+I did my homework at Ichiraku. The broth got on page three. Now page three smells delicious.
+The workshop smells like sawdust and glue. I made a little box today. It doesn't close, but it's a box.
+Today we practised walking without making a sound. The floor in the hall creaks in seven places. I know all seven now.
+The instructor tested our memory with twenty objects on a tray. I remembered the kunai, the cup and the frog. There was no frog.
+We practised escaping from a rope tied round our wrists. I got out! Then I couldn't get the rope off my foot.
+We learned how to read tracks in the yard. Mine were the easiest because I'd been stomping.
+Today was first aid. I bandaged my partner's arm, and then their other arm, and then I got carried away.
+We had to climb the rope in the hall. I got halfway and then just held on and looked at the ceiling.
+In survival class we learned which mushrooms you can eat. The answer is mostly don't.
+We learned how to light a fire with flint. My spark went straight into my own sleeve. The instructor was very calm.
+We practised hiding in the yard. I was a bush for an hour. A very good bush.
+For homework we had to watch the stars and write down what we saw. I wrote stars. Lots of stars.
+
+## chat.child  stage=child  fn=reveal_character
+My cat brings me presents. Leaves, a sock, once a whole fish from the market. I had to give the fish back.
+I've been asking for a ninken for so long my parents bought me a toy one. I'm still asking.
+I taught my neighbour's dog to sit when I do the Rat sign. Now every time I practise, it sits.
+My little brother got a goldfish and named it Hokage. Now we have to say "feed the Hokage" every morning.
+There's a stray dog that waits at the Academy gate every afternoon. Somebody always has a bit of lunch left over.
+My grandma's cat sits on my homework every evening. I think it's helping. It's not helping.
+
+## chat.child  stage=child  fn=worldbuild,hook
+They say if you go to the training grounds at midnight you can hear the old swords clashing. I think it's just the Gekko practising.
+Somebody said the furniture shop's big wardrobe goes to another room inside. I opened it. It's a wardrobe.
+My friend's cousin swears there's a ninja who lives in the tallest tree in the village and never comes down.
+I heard the bath house keeper once boiled an egg in the big tub. Now I check the tub for eggs every time.
+There's a rumour that the dango stall man can juggle twelve sticks without dropping one. I've seen four. That's still good.
+Everyone says the library has a scroll that teaches you a jutsu just by reading it. I've read twelve scrolls. Nothing yet.
+
+## chat.child  stage=child  fn=reveal_character
+Some days I want to be a ninja and some days I want to run Ichiraku. Some days both at once.
+I asked a grown-up what the hardest part of being a ninja is, and they said waking up early. I'm already a ninja, then.
+I want to go on a mission to the sea and bring back a shell for everyone in my class.
+When I'm a Genin, I'll protect the old grandma on our lane first. Then the rest of the village.
+I'm going to be the ninja who can talk to animals. I've started with the crow. It just stares.
+When I'm grown up I'll buy a house with a round water tank on the roof and swim in it every summer.
+In my dreams I can run up the Hokage Rock without stopping. When I wake up my legs are tired, like I really did it.
+If I could have one jutsu, I'd make it stop the rain just over my head. Everyone else gets wet but not me.
+
+## chat.child  stage=child  fn=reveal_character,filler
+I'm hungry. I'm always hungry. My mum says I have a hole in my stomach. I think it's a ninja stomach.
+I'm bored. Being bored is the worst. Do you want to do something? Anything? Something with dango?
+I'm so tired from running laps that I could sleep standing up like the gate guards.
+I'm having the best day. I got a gold star, found a ryo and the dango stall gave me an extra. Nothing can ruin it.
+Today was a bad day. I dropped my lunch and got the Ram wrong. But I'm here now, and you're nice, so it's a bit better.
+I'm in a good mood because tomorrow is a day with no lessons. I'm going to sleep until the sun is right in my eyes.
+I can't sit still today. My legs want to run. My hands want to throw. My mouth wants dango.
+My head's full of hand signs and sums. If I shake it, I can hear them rattle.
+
+## chat.child  stage=child  fn=reveal_character,worldbuild
+Grown-ups always say "when you're older". I'm older than I was yesterday. When is older?
+I asked my grandpa what the village was like when he was a kid. He said smaller and with more mud.
+Why do grown-ups drink tea when they could drink juice? I'll never understand grown-ups.
+My mum says I'll understand when I'm a parent. I'm never going to be a parent. I'm going to be a Hokage.
+Grown-ups talk about the weather all the time. Rain, sun, wind. Don't they have anything exciting to talk about?
+I want to stay up as late as grown-ups do. What do they even do at night? I bet it's sitting.
+
+## chat.child  stage=child  fn=worldbuild,reveal_character
+The best seat on the ferry is right at the front where the water splashes your toes.
+I made a boat out of a leaf and a twig and sailed it in the gutter. It went round the corner and I never saw it again. Brave boat.
+I like walking along the top of the low wall by the market. You have to balance. The shopkeepers shout, but nicely.
+There's a puddle outside the tailor's that's been there for a month. It has tadpoles now. I check on them every day.
+I counted every step from my house to the Hokage Residence. Seven hundred and twelve. Seven hundred and nine if you jump the gutter.
+The best place to watch the main street is from the bench outside the noodle shop. You see everybody, and you can smell ramen.
+I climbed onto the roof of the woodshed and could see three clan gates from there. And a cat. The cat saw me too.
+The cobbles on the main street have a crack shaped like a snake. Every kid in the village steps over it for luck.
+
+## chat.child  stage=child  fn=reveal_character
+I drew a map of my perfect village. It has a dango river and a ramen mountain and the Academy is just one room for napping.
+I tried to stay as still as the training post for an hour. I made it to a count of eighty. The post wins.
+I can do a really good impression of the instructor. "Eyes on me!" See? I'm not doing it in class, though.
+I'm going to teach my little sister all the hand signs before she starts the Academy. She'll be the best in her class because of me.
+I practise bowing to my reflection in the river. The river bows back. It's very polite.
+I keep a diary. Today I wrote "dango good, test bad, frog in pond". That's the whole day, really.
+I wish I could talk to the Hokage just for a minute. I'd ask what they eat for breakfast. That's the most important question.
+I'm going to make the whole class laugh at the graduation party. I've been saving a joke for a year. It's a really good one.
+When I can't decide something, I flip a ryo. Then I do the opposite. It works every time.
+I talk to the moon before bed sometimes. Just to say goodnight. The moon doesn't mind.
+I'm going to remember everything about being a kid so I can tell my own students one day. Even the boring bits.
+
+## chat.child  stage=child  fn=reveal_character,filler
+I tried to sneak a dango into class in my sleeve. The sleeve was sticky all day. Worth it.
+My sandals are too small, but they're my lucky ones, so I'm wearing them until my toes give up.
+The Academy gate squeaks when you open it slowly. If you open it fast, it squeaks shorter. I've tested both.
+I wrapped my practice kunai in a cloth like a real ninja's. It looks very serious now. It's still blunt.
+I traded a shiny button for a hawk feather from the courier loft. Best trade of my whole life.
+I've decided my favourite number is twelve, because of the hand signs. My second favourite is three, because of dango.
+I saw a shooting star over the wall last night. I wished so hard I forgot what I wished for.
+When I grow up, I'm going to give every Academy kid a free dango on their first day. That's my promise.

@@ -50,7 +50,7 @@
   "wood": {
    "objective": {
     "type": "collect",
-    "target": "firewood",
+    "target": "item:mission_firewood",
     "at": "slot:woodlot",
     "count": 12
    },

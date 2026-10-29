@@ -1,0 +1,191 @@
+# The bond book (BONDS.md §12): level-ups, what each level opens, the Kindling tier, the labels of what you
+# know about someone, a word for each meter, and the goal line. Book strings are in the book's own voice:
+# second person, short, no names. They come back each time the book opens, so they cycle, and any age of
+# resident has a page, so they are tagged for every stage.
+#! tags: stage=child|teen|adult
+
+# -- what each level opens ----------------------------------------------------------------------------
+## bond.perk.0  fn=teach  kind=cycle
+A new face. Talk to them and see.
+They don't know you yet.
+
+## bond.perk.1  fn=teach  kind=cycle
+They'll remember you between visits.
+
+## bond.perk.2  fn=teach  kind=cycle
+You'll learn their favourite things, and they may ask a favour of you.
+
+## bond.perk.3  fn=teach  kind=cycle
+They'll share the village news with you, and spar if you ask.
+
+## bond.perk.4  fn=teach  kind=cycle
+They'll expect you on their birthday.
+
+## bond.perk.5  fn=teach  kind=cycle
+Heart-to-heart talks, and what they value most.
+
+## bond.perk.6  fn=teach  kind=cycle
+Their dream, and the first warmth of a bond-flame: their nature.
+
+## bond.perk.7  fn=teach  kind=cycle
+Their secrets, and they may join your clan.
+## bond.perk.7  fn=teach  kind=cycle  stage=teen|adult  player_stage=teen|adult
+Their secrets, a place in your clan, and perhaps dating, if you're both of a mind.
+
+## bond.perk.8  fn=teach  kind=cycle
+A best friend, and a bond-flame strong enough to borrow one of their techniques.
+## bond.perk.8  fn=teach  kind=cycle  stage=teen|adult  player_stage=teen|adult
+A best friend, a borrowed technique, and room for a confession, if the heart is there.
+
+## bond.perk.9  fn=teach  kind=cycle
+A small gift saved for you each day.
+
+## bond.perk.10  fn=teach  kind=cycle
+A bond for life: their bond-flame at full strength.
+## bond.perk.10  fn=teach  kind=cycle  stage=adult  player_stage=adult
+A bond for life: the full bond-flame, and marriage, if you both want it.
+
+# -- Kindling Bond: the bond-flame's tier --------------------------------------------------------------
+## bond.kindling.none  fn=teach  kind=cycle
+No bond-flame burns between you yet.
+The flame hasn't caught. Not yet.
+
+## bond.kindling.spark  fn=teach  kind=cycle
+A spark of a bond-flame: you can borrow their nature, briefly.
+A first spark between you. Their nature, for a little while.
+
+## bond.kindling.flame  fn=teach  kind=cycle
+A steady bond-flame: their nature, and one of their techniques.
+The flame holds. Enough to borrow a technique.
+
+## bond.kindling.blaze  fn=teach  kind=cycle
+A blazing bond-flame: all they can lend, and it lasts longer.
+The flame burns at full strength.
+
+## bond.kindling.dimmed  fn=teach  kind=cycle
+The bond-flame has dimmed. Something between you needs mending.
+A quarrel has turned the flame low.
+
+## bond.kindling.nature_trial  fn=teach  kind=cycle
+You've borrowed their nature often enough: a master's trial could make it yours for good.
+The flame knows the way now. A trial could make their nature your own.
+
+# -- the bond web: how wide your circle of close bonds is --------------------------------------------
+## bond.bonfire.candle  fn=teach  kind=cycle
+A candle: a few close bonds, burning small.
+Your circle is small yet. A handful of people.
+
+## bond.bonfire.campfire  fn=teach  kind=cycle
+A campfire: a warm circle of close friends.
+Enough close bonds to gather round.
+
+## bond.bonfire.bonfire  fn=teach  kind=cycle
+A bonfire: close bonds across many corners of the village.
+Your circle reaches well beyond one street.
+
+## bond.bonfire.inferno  fn=teach  kind=cycle
+An inferno: you are close to people across the whole village.
+Clans, districts and ranks: your circle takes in the whole Leaf.
+
+# -- what you know about them: the labels -------------------------------------------------------------
+## bond.fact.who  fn=teach  kind=cycle
+Who they are
+Clan and rank
+
+## bond.fact.loves  fn=teach  kind=cycle
+What they love
+Favourite things
+
+## bond.fact.hobby  fn=teach  kind=cycle
+How they spend their days
+Their hobby
+
+## bond.fact.favorite_hangout  fn=teach  kind=cycle
+Their favourite way to spend time with you
+Where they'd most like to go
+
+## bond.fact.family  fn=teach  kind=cycle
+Their family
+Who's at home
+
+## bond.fact.values  fn=teach  kind=cycle
+What they live by
+Their values
+
+## bond.fact.dream  fn=teach  kind=cycle
+Their dream
+What they hope to become
+
+## bond.fact.peeves  fn=teach  kind=cycle
+What gets under their skin
+Pet peeves
+
+## bond.fact.worries  fn=teach  kind=cycle
+What keeps them up at night
+What worries them
+
+# -- how they feel: a word for each meter --------------------------------------------------------------
+## bond.feel.affection.dislikes  fn=teach  kind=cycle
+They dislike you.
+## bond.feel.affection.wary  fn=teach  kind=cycle
+They're wary of you.
+## bond.feel.affection.neutral  fn=teach  kind=cycle
+They don't feel much either way.
+## bond.feel.affection.fond  fn=teach  kind=cycle
+They're fond of you.
+## bond.feel.affection.warm  fn=teach  kind=cycle
+They care for you warmly.
+## bond.feel.affection.devoted  fn=teach  kind=cycle
+They're devoted to you.
+
+## bond.feel.trust.distrusts  fn=teach  kind=cycle
+They don't trust you.
+## bond.feel.trust.unsure  fn=teach  kind=cycle
+They're not sure of you yet.
+## bond.feel.trust.trusts  fn=teach  kind=cycle
+They trust you.
+## bond.feel.trust.relies  fn=teach  kind=cycle
+They rely on you.
+## bond.feel.trust.with_their_life  fn=teach  kind=cycle
+They'd trust you with their life.
+
+## bond.feel.respect.unimpressed  fn=teach  kind=cycle
+You haven't impressed them.
+## bond.feel.respect.notices  fn=teach  kind=cycle
+They've noticed you.
+## bond.feel.respect.respects  fn=teach  kind=cycle
+They respect you.
+## bond.feel.respect.admires  fn=teach  kind=cycle
+They admire you.
+## bond.feel.respect.looks_up  fn=teach  kind=cycle
+They look up to you.
+
+## bond.feel.rivalry.none  fn=teach  kind=cycle
+No rivalry between you.
+## bond.feel.rivalry.friendly  fn=teach  kind=cycle
+A friendly rivalry.
+## bond.feel.rivalry.rival  fn=teach  kind=cycle
+They see you as a rival.
+## bond.feel.rivalry.fierce  fn=teach  kind=cycle
+A fierce rivalry: they mean to beat you.
+
+# -- the goal line: what the next level needs ----------------------------------------------------------
+## bond.goal.points  fn=teach  kind=cycle
+{count} more to the next level. Keep spending time together.
+Closer by {count}, and you'll reach the next level.
+
+## bond.goal.experience  fn=teach  kind=cycle
+Share something with them: a meal, a spar, a lesson, a mission.
+Talk alone won't take you further. Do something together.
+
+## bond.goal.moment  fn=teach  kind=cycle
+You need a real moment together, the kind they'll never forget.
+Something has to happen between you that matters. Points won't do it.
+
+## bond.goal.time  fn=teach  kind=cycle
+Only time will take this further. Keep coming back.
+Some bonds just need more days. Keep showing up.
+
+## bond.goal.max  fn=teach  kind=cycle
+There's nowhere higher to go. Just keep it.
+As close as two people get. Look after it.

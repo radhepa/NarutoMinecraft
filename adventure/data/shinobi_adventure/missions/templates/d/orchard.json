@@ -48,7 +48,7 @@
   "climb": {
    "objective": {
     "type": "collect",
-    "target": "persimmon",
+    "target": "item:mission_persimmon",
     "at": "slot:orchard",
     "count": 30
    },
@@ -79,7 +79,7 @@
   "climb2": {
    "objective": {
     "type": "collect",
-    "target": "persimmon",
+    "target": "item:mission_persimmon",
     "at": "slot:orchard",
     "count": 10
    },
@@ -96,7 +96,7 @@
   "report": {
    "objective": {
     "type": "deliver",
-    "item": "persimmon",
+    "item": "item:mission_persimmon",
     "to": "slot:client"
    },
    "next": null

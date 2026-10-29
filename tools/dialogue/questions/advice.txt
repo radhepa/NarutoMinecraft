@@ -1,0 +1,133 @@
+# Friendship questions where the resident asks the player for advice about their own life.
+# The q.advice family makes these kind: advice. Follow-ups come back after the advice was tried.
+# Axis poles: stay_or_see_world (1 stay, -1 see the world), honesty_vs_kindness (1 honesty, -1 kindness),
+# tradition_or_change (1 tradition, -1 change), caution_or_daring (1 caution, -1 daring).
+
+? q.advice.cousin_shop | fn: deepen_bond reveal_character | level: 3 | axis: stay_or_see_world
+Q: My cousin wants me to help run a shop in a town three days from here. Should I go?
+Q: Can I ask your advice? I've been offered work far from the Leaf. Go, or stay?
+- Go, see somewhere new :: You think so? Part of me hoped you'd say that. {values:+freedom +courage} {tone:bold} {pole:-1}
+- Stay, your life is here :: My friends, my street, my bath on Wooddays. You're right. {values:+family} {tone:warm} {pole:1}
+- Try it for one season :: A season. Not forever. Why didn't I think of that? {values:+knowledge} {tone:cautious}
+
+? q.advice.cousin_shop_failing | fn: deepen_bond reveal_character | level: 5 | follows: q.advice.cousin_shop | depth: 2 | gap: 5
+Q: My cousin wrote again. The shop's struggling without me. Does that change your advice?
+Q: Another letter from my cousin. They really need me now. What would you do?
+- Go and help :: Family first. I suppose I knew that already. {values:+family +loyalty} {tone:loyal}
+- It's not your burden :: Hm. Kind of you to say. It doesn't feel that simple, though. {values:+freedom} {tone:blunt}
+- Send help, not yourself :: Money and a good apprentice. Practical. My cousin would like that. {values:+duty} {tone:cautious}
+
+? q.advice.row_with_friend | fn: deepen_bond reveal_character | level: 2
+Q: I had a row with my oldest friend over nothing at all. How do I fix it?
+Q: My best friend and I aren't speaking. It started over a teapot. A teapot! What do I do?
+- Apologise first :: Even if it wasn't my fault? Yes. You're right. It rarely matters whose fault. {values:+kindness} {tone:gentle}
+- Give it a few days :: Let the steam out first. Sensible. {values:+knowledge} {tone:cautious}
+- Turn up with food :: Ha! Nobody stays angry over a warm bun. {values:+family} {tone:playful}
+- Say what really hurt :: The real reason, not the teapot. That's harder. And better. {values:+honesty} {tone:honest}
+
+? q.advice.friend_still_cold | fn: deepen_bond reveal_character | level: 4 | follows: q.advice.row_with_friend | depth: 2 | gap: 3
+Q: I tried what you said, and my friend's still cold with me. Do I keep trying?
+Q: It didn't work. My friend still crosses the street when they see me. What now?
+- Keep trying :: You're right. Years of friendship are worth a few more knocks. {values:+loyalty} {tone:loyal}
+- Give them space :: Wait for them to come to me. It'll be hard. {values:+freedom} {tone:gentle}
+- Ask someone they trust :: A go-between. The old way. Might be just the thing. {values:+knowledge +family} {tone:curious}
+
+? q.advice.worst_shifts | fn: deepen_bond reveal_character | level: 3
+Q: My master at the workshop keeps giving me the worst shifts. Should I say something?
+Q: I always get the late shift and the dirty jobs. Do I complain, or put up with it?
+- Speak up, politely :: Polite but firm. I'll practise in the mirror first. {values:+courage +honesty} {tone:bold}
+- Work harder, they'll notice :: Show them. Quietly. That's the patient way. {values:+duty} {tone:dutiful}
+- Find a better place :: Plenty of workshops in the Leaf. Maybe you're right. {values:+freedom} {tone:free}
+
+? q.advice.shifts_awkward | fn: deepen_bond reveal_character | level: 5 | follows: q.advice.worst_shifts | depth: 2 | gap: 4
+Q: My shifts are better now, but things feel awkward at the workshop. Did I do something wrong?
+Q: Everything's fair at work now, but my master barely speaks to me. Should I worry?
+- No, it was right :: You think so? Then I'll stand by it. {values:+honesty +courage} {tone:honest}
+- Bring them tea one morning :: A peace offering. Small, but kind. Good idea. {values:+kindness} {tone:kind}
+- It'll pass :: Awkwardness fades. Like a bruise. I'll wait it out. {values:+knowledge} {tone:cautious}
+
+? q.advice.pottery | fn: deepen_bond reveal_character | level: 2
+Q: Am I too old to learn something new? I've always wanted to try pottery.
+Q: Everyone says pottery's for the young. Should I take it up anyway?
+- Never too old :: That's what I needed to hear. I'll ask at the potter's tomorrow. {values:+creativity +courage} {tone:warm}
+- Start with something small :: A cup. Then a bowl. Then a vase. A plan! {values:+knowledge} {tone:cautious}
+- Make me something first :: Ha! My first student and my first customer. Deal. {values:+creativity} {tone:teasing}
+
+? q.advice.first_bowl | fn: deepen_bond reveal_character | level: 4 | follows: q.advice.pottery | depth: 2 | gap: 4
+Q: I made my first bowl. It's lopsided and it leaks. Should I keep going?
+Q: My pottery's dreadful. Truly. Do I give up?
+- Keep going :: Bowl number two, then. Thank you. I needed that. {values:+creativity +strength} {tone:warm}
+- Use it for flowers :: A leaky bowl for dry flowers. Ha! You see uses where I see failures. {values:+creativity} {tone:playful}
+- Take a proper lesson :: Ask someone who knows. Swallow my pride. Fine. {values:+knowledge} {tone:humble}
+
+? q.advice.child_academy | fn: deepen_bond reveal_character | level: 4 | axis: caution_or_daring
+Q: My little one wants to join the Academy. I'm scared to say yes. What would you do?
+Q: My child wants to be a ninja. Part of me is proud, part of me is terrified. Advice?
+- Let them go :: You're right. It's their dream, not my fear. {values:+freedom +courage} {tone:bold} {pole:-1}
+- Wait a year :: A little older, a little steadier. Yes. {values:+family} {tone:cautious} {pole:1}
+- Visit the Academy together :: See it with my own eyes. Meet the instructors. Good. {values:+knowledge} {tone:curious}
+
+? q.advice.academy_bruises | fn: deepen_bond reveal_character | level: 6 | follows: q.advice.child_academy | depth: 2 | gap: 7
+Q: My child comes home from the Academy with a new bruise every day. Did I choose wrong?
+Q: Bruises, scrapes, and a sprained finger this week. Is this normal at the Academy?
+- Bruises heal :: Every ninja has a few, I suppose. You'd know. {values:+strength} {tone:blunt}
+- Talk to the instructor :: Ask how they're doing. Properly. I will. {values:+duty +family} {tone:dutiful}
+- Ask if they're happy :: That's the real question, isn't it? Not the bruises. {values:+kindness} {tone:gentle}
+
+? q.advice.birthday_gift | fn: deepen_bond reveal_character | level: 2
+Q: My neighbour's birthday is next week. What should I give?
+Q: I'm hopeless at gifts. What would you give a neighbour for their birthday?
+- Something homemade :: The time in it shows. I'll try my hand at a scarf. {values:+creativity} {tone:warm}
+- Food. Always food :: A box of sweet buns. Nobody's ever been sad about sweet buns. {values:+family} {tone:playful}
+- Ask their friends :: Spy a little. Find out what they really want. Clever. {values:+knowledge} {tone:curious}
+- Flowers from the Yamanaka :: The Yamanaka will know just the right bunch. Easy and lovely. {values:+kindness} {tone:kind}
+
+? q.advice.lend_money | fn: deepen_bond reveal_character | level: 3 | axis: honesty_vs_kindness
+Q: A friend asked to borrow money. Last time they never paid it back. What do I do?
+Q: Lend again to someone who never paid you back before? I don't know what to say.
+- Say no, kindly :: An honest no. Hard but clean. You're right. {values:+honesty} {tone:honest} {pole:1}
+- Lend it again :: Trust them again. You've a soft heart. So do I. {values:+kindness +loyalty} {tone:kind} {pole:-1}
+- Only what you can lose :: If it comes back, a gift returned. If not, a gift. Wise. {values:+knowledge} {tone:cautious}
+
+? q.advice.repaid | fn: deepen_bond reveal_character | level: 5 | follows: q.advice.lend_money | depth: 2 | gap: 5
+Q: They paid me back, every ryo, and a bag of chestnuts on top! Was I wrong to doubt them?
+Q: My friend repaid the loan. With chestnuts! I feel terrible for doubting. Should I say so?
+- Doubt was fair :: After last time? I suppose it was. Still, I'm glad I was wrong. {values:+honesty} {tone:blunt}
+- Tell them you doubted :: Confess and clear the air. Brave. I'll do it over the chestnuts. {values:+honesty +courage} {tone:honest}
+- Just be glad :: You're right. Some things don't need saying. Just enjoying. {values:+kindness} {tone:warm}
+
+? q.advice.change_trade | fn: deepen_bond reveal_character | level: 4 | axis: tradition_or_change
+Q: My family's fished the river for five generations. I'm tired of it. Is that wrong?
+Q: Is it wrong to want a different trade from the one your family's always had?
+- Not wrong. Change it :: Five generations, ending with me. Hm. Or starting something new. {values:+freedom +courage} {tone:bold} {pole:-1}
+- Keep the family trade :: You're right. It's who we are. I'll find the joy in it again. {values:+family +duty} {tone:dutiful} {pole:1}
+- Do both for a while :: Nets in the morning, something new in the afternoon. A gentle start. {values:+creativity} {tone:cautious}
+
+? q.advice.family_quiet | fn: deepen_bond reveal_character | level: 6 | follows: q.advice.change_trade | depth: 2 | gap: 6
+Q: I told my family I want a different trade. They went quiet. What now?
+Q: Supper was silent last night. They know I want to change trades. How do I talk to them?
+- Give them time :: They'll come round. They always do, given a season. {values:+family} {tone:gentle}
+- Show them a plan :: Numbers and steps. Proof I'm serious. Yes. {values:+knowledge +duty} {tone:dutiful}
+- Go ahead anyway :: My life, my trade. It's frightening. But you're right. {values:+freedom +courage} {tone:bold}
+
+? q.advice.wedding_speech | fn: deepen_bond reveal_character | level: 3
+Q: I have to give a speech at my sister's wedding. I'm terrified. Any advice?
+Q: Speeches! Me! At a wedding! How do I get through it?
+- Keep it short :: Short and true. Nobody's ever complained a speech was too short. {values:+honesty} {tone:blunt}
+- Tell a funny story :: The time my sister fell in the river at eight. Perfect. She'll never forgive me. {values:+creativity} {tone:playful}
+- Practise on me :: Really? You'd listen? Thank you. Sit down, this may take a while. {values:+loyalty} {tone:loyal}
+- Speak from the heart :: Forget the notes. Just say how I feel. Terrifying. Right. {values:+kindness +courage} {tone:warm}
+
+? q.advice.speech_after | fn: deepen_bond reveal_character | level: 5 | follows: q.advice.wedding_speech | depth: 2 | gap: 3
+Q: The wedding speech went well! My cousin wants me to speak at theirs, too. Should I?
+Q: Everyone cried at my speech. Happy crying! Now I've been asked again. Do I say yes?
+- Yes, you're good at it :: Me, a speaker! Who'd have thought. All right. {values:+courage} {tone:bold}
+- Only if you want to :: Wise. I'll sleep on it. {values:+freedom} {tone:gentle}
+- Let someone else shine :: Hm, yes. My cousin's best friend would love the chance. {values:+kindness} {tone:humble}
+
+? q.advice.lost_bet | fn: deepen_bond reveal_character | level: 2
+Q: I bet my friend I could out-eat an Akimichi. I lost. Badly. Do I have to pay up?
+Q: Never bet against an Akimichi at a barbecue. I did. Now I owe a week of chores. Pay up?
+- Pay up :: A bet's a bet. Fine. I'll be scrubbing pots till Sunday. {values:+honesty} {tone:honest}
+- Double or nothing :: Ha! Against an Akimichi? You're crueller than you look. {values:+courage} {tone:teasing}
+- Laugh it off together :: Buy them a drink and call it even. They'll probably agree. {values:+freedom +kindness} {tone:joking}

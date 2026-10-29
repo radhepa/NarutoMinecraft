@@ -44,4 +44,25 @@ class GiftsTest {
         var back = SaveFormat.read(SaveFormat.write(w), w.seed(), new ArrayList<>(w.people()));
         assertEquals(Gifts.received(w), Gifts.received(back));
     }
+    @Test void aKeepsakeOrPhotoOnShowIsNoticedOnceAndLeavesAFlag() {
+        var w = TogetherTest.friends(TEAMMATE_B, 30);
+        var g = Gifts.receive(w, TEAMMATE_B, "item:pet_treat", "birthday");
+        assertTrue(Gifts.noticed(w, TEAMMATE_B, "item:pet_treat", false));
+        assertTrue(Gifts.gift(w, g.id()).orElseThrow().seen(), "a gift from the ledger is marked seen");
+        assertFalse(Gifts.noticed(w, TEAMMATE_B, "item:pet_treat", false), "once per keepsake");
+        assertTrue(Gifts.noticed(w, TEAMMATE_B, "photo.academy_graduation", true));
+        assertTrue(w.bond(TEAMMATE_B).remembers(Act.SAW_PHOTO_TOGETHER));
+        assertTrue(BondConditions.test(w, Map.of("bond_flag", List.of(TEAMMATE_B, "home.noticed:photo.academy_graduation"))));
+        w.setBondFlag(TEAMMATE_B, "home.key");
+        assertTrue(BondConditions.test(w, Map.of("bond_flag", List.of(TEAMMATE_B, "home.key"))));
+        w.clearBondFlag(TEAMMATE_B, "home.key");
+        assertFalse(BondConditions.test(w, Map.of("bond_flag", List.of(TEAMMATE_B, "home.key"))), "a key taken back quietly");
+    }
+    @Test void homeHangoutsAreHostedAtThePlayersHome() {
+        for (String id : List.of("study_night", "cook_together", "balcony_stargazing", "squad_crash", "tea_at_home", "home_dinner"))
+            assertEquals("home:player", Activity.of(id).placeFor("player"));
+        assertTrue(Activity.of("balcony_stargazing").open(0, 23));
+        assertFalse(Activity.of("tea_at_home").open(0, 21));
+        assertTrue(Act.VISITED_HOME.experience != null, "a visit counts as time spent together");
+    }
 }

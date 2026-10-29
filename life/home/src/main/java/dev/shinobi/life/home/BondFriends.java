@@ -1,25 +1,24 @@
 package dev.shinobi.life.home;
 
 import dev.shinobi.life.bond.Act;
-import dev.shinobi.life.bond.Activity;
 import dev.shinobi.life.bond.BondWorld;
 import dev.shinobi.life.bond.Gifts;
 import dev.shinobi.life.bond.Schedule;
 import dev.shinobi.life.bond.Together;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * {@link Friends} over the bond engine. Visits use the engine's own verbs: a good visit is the {@code hung_out}
- * shared experience, any visit is contact and warmth; a gift on show is the engine's {@code Gifts.seenDisplayed} (the
- * giver remembers it once); a photo they are in is warmth and a bond flag ({@code home.noticed:<what>}); a spare
- * key is a moment ({@code home.spare_key}).
- * Home hangouts are the engine's activities when it has them ({@code home_dinner} today), so asking, tastes,
- * highlights and rituals all work; the proposed home activities ({@link HomeHangout}) fall back to a plain shared
- * experience until the engine's catalog carries them.
+ * {@link Friends} over the bond engine, by its own verbs: a visit is talk and contact, a good one the
+ * {@code visited_home} act, a very good one a little more warmth; something of theirs on show is
+ * {@code Gifts.noticed} (their gift: {@code saw_gift_displayed}; a photo they are in: {@code saw_photo_together}, once
+ * each); a spare key is the bond flag {@code home.key} (never a moment, so it opens no story gate) and, the first time
+ * only, a little warmth; home hangouts are the engine's activities ({@code home_dinner}, {@code study_night},
+ * {@code cook_together}, {@code balcony_stargazing}, {@code squad_crash}, {@code tea_at_home}), asked and held through
+ * {@code Together}.
  */
 public final class BondFriends implements Friends {
-    public static final String KEY_MOMENT = "home.spare_key", NOTICED = "home.noticed:";
+    /** The bond flag a key holder carries (quests read it with {@code bond_flag}); a key is not a moment, so it opens no gate. */
+    public static final String KEY_FLAG = "home.key", KEY_EVER = "home.key.given", NOTICED = "home.noticed:";
     private final BondWorld w;
 
     public BondFriends(BondWorld w) { this.w = w; }
@@ -37,39 +36,29 @@ public final class BondFriends implements Friends {
     @Override public void visited(String who, String kind, double quality) {
         if (w.person(who) == null) return;
         w.talk(who);
-        if (quality >= .4) { w.together(who); w.act(who, Act.HUNG_OUT); }
+        if (quality >= .4) { w.together(who); w.act(who, Act.VISITED_HOME); }
         if (quality >= .65) w.addFriendship(who, 1);
     }
-    @Override public boolean noticed(String who, String what) {
+    @Override public boolean noticed(String who, String what, boolean photo) {
         if (w.person(who) == null) return false;
         if (what.startsWith("gift:")) {
-            try { return Gifts.seenDisplayed(w, Integer.parseInt(what.substring(5))); } catch (NumberFormatException e) { return false; }
+            int id;
+            try { id = Integer.parseInt(what.substring(5)); } catch (NumberFormatException e) { return false; }
+            var gift = Gifts.gift(w, id).orElse(null);
+            return gift != null && gift.from().equals(who) && !gift.seen() && Gifts.noticed(w, who, gift.item(), false);
         }
-        if (w.bond(who).has(NOTICED + what)) return false;
-        w.addFriendship(who, 1);
-        w.setBondFlag(who, NOTICED + what);
-        return true;
+        return Gifts.noticed(w, who, what, photo);
     }
-    @Override public void keyGiven(String who) { w.moment(who, KEY_MOMENT); }
+    @Override public void keyGiven(String who) {
+        w.setBondFlag(who, KEY_FLAG);
+        if (!w.bond(who).has(KEY_EVER)) { w.setBondFlag(who, KEY_EVER); w.addFriendship(who, 1); }
+    }
+    @Override public void keyTaken(String who) { w.clearBondFlag(who, KEY_FLAG); }
 
     @Override public String host(List<String> who, String activity, long day, int hour) {
-        if (Activity.CATALOG.containsKey(activity)) {
-            var answer = Together.invite(w, who, activity, day, hour);
-            if (answer.plan() == null) return answer.answers().values().stream().findFirst().orElse("not_today");
-            var out = Together.go(w, answer.plan().id(), true);
-            return out == null ? "fine" : out.band();
-        }
-        var h = HomeHangout.of(activity);
-        var came = new ArrayList<String>();
-        String why = "not_today";
-        for (String id : who) {
-            if (level(id) < h.minLevel()) { why = "not_close_enough"; continue; }
-            if (hour < h.from() || hour >= h.to()) { why = "closed"; continue; }
-            if (!free(id, day, hour)) { why = "busy"; continue; }
-            came.add(id);
-        }
-        if (came.isEmpty()) return why;
-        w.experience(h.act(), came);
-        return "good";
+        var answer = Together.invite(w, who, activity, day, hour);
+        if (answer.plan() == null) return answer.answers().values().stream().findFirst().orElse("not_today");
+        var out = Together.go(w, answer.plan().id(), true);
+        return out == null ? "fine" : out.band();
     }
 }

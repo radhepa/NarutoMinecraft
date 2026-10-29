@@ -1,0 +1,314 @@
+# Mission banter by squad cohesion: mission.banter.<moment>.<speaker_kind>.<band>, bands in_step
+# (moving as one), steady (working), ragged (fraying) and split (at odds). For the moments where
+# cohesion shows: travel, camp, fight, victory, fail. Generic voices until the cast is written.
+#! kind: cycle
+
+# -- travel ----------------------------------------------------------------------------------------
+
+## mission.banter.travel.sensei.in_step  fn=react,teach
+You're matching each other's pace without thinking about it. That's a squad.
+Nobody's looked back to check on the others for an hour. You don't need to. Good.
+Keep this rhythm. A squad that walks well together fights well together.
+
+## mission.banter.travel.sensei.steady  fn=react,teach
+Decent pace. Close the gap at the back, though. Three paces, not ten.
+You're doing fine. Talk to each other more. Silence isn't always discipline.
+Steady is good. Steady gets us there. Steady and awake is better.
+
+## mission.banter.travel.sensei.ragged  fn=react,teach
+You're strung out like washing on a line. Close up. Now.
+Whatever's bothering you two, leave it at the milestone. Pick it up later if you must.
+A squad that won't walk together won't stand together. Think about that for the next mile.
+
+## mission.banter.travel.sensei.split  fn=react,teach
+Enough. We stop here until you can walk side by side without sulking.
+I don't need you to like each other. I need you to trust each other's backs. Today you don't.
+If the road were watched right now, we'd be three easy targets. Fix it.
+
+## mission.banter.travel.teammate.in_step  fn=react,deepen_bond  stage=child|teen
+I like this. Just walking. Not even talking. It's nice.
+Your turn to pick the song. No, a good one this time.
+I'd walk anywhere with this squad. Even the long way.
+
+## mission.banter.travel.teammate.steady  fn=react,deepen_bond  stage=child|teen
+Pass the water? Thanks. Your turn next stop.
+Not bad so far. My feet only hate me a little.
+Want to swap who carries the heavy pack? Fair's fair.
+
+## mission.banter.travel.teammate.ragged  fn=react,deepen_bond  stage=child|teen
+Can we not talk for a bit? I'm just tired. It's not you. Mostly.
+You're walking too fast. Or I'm walking too slow. Whatever.
+Fine, I'll carry it. I always carry it.
+
+## mission.banter.travel.teammate.split  fn=react,deepen_bond  stage=child|teen
+I'll walk at the back. You two clearly don't need me up front.
+Don't. I'm not in the mood. Just walk.
+I'm only here because the mission says so. Let's be clear.
+
+## mission.banter.travel.client.in_step  fn=react
+You all move like one creature. It's quite something to watch.
+I feel very safe with you. You look out for each other, I can tell.
+Is this what a good squad is like? I see why the Leaf is proud.
+
+## mission.banter.travel.client.steady  fn=react
+You seem to know what you're doing. That's reassuring.
+Quiet lot, aren't you? I don't mind. Quiet is calm.
+A good pace. Not too fast for my old knees.
+
+## mission.banter.travel.client.ragged  fn=react
+Is everything all right? You keep looking at each other.
+I hope you won't mind me saying, but you seem a little out of sorts today.
+Should I walk in the middle? You're rather spread out.
+
+## mission.banter.travel.client.split  fn=react
+Forgive me, but are you three quarrelling? It's making me nervous.
+I'd feel safer if you were speaking to each other.
+I didn't pay for an argument. I paid for an escort.
+
+# -- camp ------------------------------------------------------------------------------------------
+
+## mission.banter.camp.sensei.in_step  fn=react,teach
+You set the camp up without me saying a word. I could get used to that.
+This is a good squad. I don't say it to flatter. Get some sleep.
+You took the hard watch without being asked. Noted. Appreciated.
+
+## mission.banter.camp.sensei.steady  fn=react,teach
+Camp's sound. Fire's low. Good. Eat and rest.
+Decent day's work. Tomorrow, a bit more talking on the road.
+Watches as I said. Nobody skips. Nobody grumbles. Thank you.
+
+## mission.banter.camp.sensei.ragged  fn=react,teach
+Sit down, all of you. We're going to talk about today. Calmly.
+You're tired, and tired makes people sharp. Sleep it off before you say something.
+Eat together. Not three corners of the fire. Together.
+
+## mission.banter.camp.sensei.split  fn=react,teach
+Nobody sleeps until this is settled. I mean it. Talk.
+I've seen squads break over less. Not mine. Not tonight.
+Whatever's between you, it's riding along on every step. Put it down.
+
+## mission.banter.camp.teammate.in_step  fn=react,deepen_bond  stage=child|teen
+I'm glad it's you two I'm out here with. Really glad.
+Remember this. When we're old and grey and Jonin, remember this fire.
+Let's save the last rice ball and split it three ways. Squad rules.
+
+## mission.banter.camp.teammate.steady  fn=react,deepen_bond  stage=child|teen
+Good day, all things considered. Tomorrow will be better.
+Wake me for second watch. Actually wake me, don't just poke me.
+You can have the warm side of the fire. I'll take it tomorrow.
+
+## mission.banter.camp.teammate.ragged  fn=react,deepen_bond  stage=child|teen
+I'm sorry about earlier. I was tired. Still am.
+Can we just start over tomorrow? Like today didn't happen?
+I don't want to fight. I just want to sleep.
+
+## mission.banter.camp.teammate.split  fn=react,deepen_bond  stage=child|teen
+I'll sleep over there. Don't wait up.
+You could have said sorry. You still could.
+I don't know why we're even a squad. Not tonight, anyway.
+
+## mission.banter.camp.client.in_step  fn=react
+Listening to you three laugh is the best part of the trip.
+You're a happy squad. It makes the dark less frightening.
+Thank you for letting me sit with you. It feels like family.
+
+## mission.banter.camp.client.steady  fn=react
+A quiet night, I hope. You seem to have it all in hand.
+Your fire's very neat. Is that a ninja thing?
+I'll sleep well knowing you're watching. Goodnight.
+
+## mission.banter.camp.client.ragged  fn=react
+Is someone upset? I don't mean to pry. I just noticed.
+Perhaps some tea would help? I brought plenty.
+Long days make everyone short-tempered. I'm the same.
+
+## mission.banter.camp.client.split  fn=react
+I'll sleep closer to the fire, I think. It's a bit frosty tonight. And not only the air.
+I don't like to say, but I'm worried about tomorrow if you're not speaking.
+Should I say something? I'd better not say something.
+
+# -- fight -----------------------------------------------------------------------------------------
+
+## mission.banter.fight.sensei.in_step  fn=react,teach
+That's it! Cover each other, rotate, strike. Beautiful.
+You don't need me in this fight. I'll just watch and take notes.
+Perfect timing. Again!
+
+## mission.banter.fight.sensei.steady  fn=react,teach
+Good. Keep your spacing. Call your targets.
+Watch your partner's side, not just your own.
+Steady. You're doing well. Don't get greedy.
+
+## mission.banter.fight.sensei.ragged  fn=react,teach
+You're stepping on each other! Spread out!
+Call it before you throw. You nearly hit your own squad.
+Stop going alone. Every one of you. Work together or lose.
+
+## mission.banter.fight.sensei.split  fn=react,teach
+Stop fighting each other and fight them!
+Nobody's covering anyone! Fall back to me, all of you!
+This is what happens when a squad stops trusting itself. Close up!
+
+## mission.banter.fight.teammate.in_step  fn=react,deepen_bond  stage=child|teen
+I go high, you go low! Now!
+Got your back! Always got your back!
+Just like we practised! Again, again!
+
+## mission.banter.fight.teammate.steady  fn=react,deepen_bond  stage=child|teen
+I've got this side. You take that one.
+Watch out on your right! Got it? Good.
+We're holding! Keep holding!
+
+## mission.banter.fight.teammate.ragged  fn=react,deepen_bond  stage=child|teen
+That was mine! Why'd you take that one?
+Tell me before you move! I nearly threw at you!
+I can't keep track of where you are!
+
+## mission.banter.fight.teammate.split  fn=react,deepen_bond  stage=child|teen
+I don't need your help! I've got it myself!
+Just stay out of my way!
+Fine! Do it your way and see what happens!
+
+## mission.banter.fight.client.in_step  fn=react
+You move together like you share one mind!
+Look at them! They're wonderful!
+I've never felt so safe in the middle of a fight. Odd, isn't it?
+
+## mission.banter.fight.client.steady  fn=react
+Keep going! You're winning, aren't you? It looks like winning.
+They're backing off! Good! Good!
+I'll stay put. You seem to know what you're doing.
+
+## mission.banter.fight.client.ragged  fn=react
+Why are you shouting at each other? Shout at them!
+Someone's left that side open! I'm on that side!
+Is it going badly? It looks like it's going badly.
+
+## mission.banter.fight.client.split  fn=react
+Stop arguing! There are people trying to hit us!
+Is anyone protecting me? Anyone at all?
+I should have hired someone who gets along!
+
+# -- victory ---------------------------------------------------------------------------------------
+
+## mission.banter.victory.sensei.in_step  fn=react,teach
+That's teamwork. I can teach technique. That, you found yourselves.
+Look at each other. That's the squad that won today. Not luck.
+I'm putting "exemplary" in the report. Earn it again next time.
+
+## mission.banter.victory.sensei.steady  fn=react,teach
+Good work. A solid win, together. Let's keep building on it.
+You held. Next time, talk more mid-fight. But you held.
+Well done. Check each other for cuts. Then we move on.
+
+## mission.banter.victory.sensei.ragged  fn=react,teach
+We won. Barely. And not because we fought as a squad.
+That was luck as much as skill. We'll talk about why later.
+Win's a win. But I want better from you. All of you.
+
+## mission.banter.victory.sensei.split  fn=react,teach
+We won despite ourselves. That won't hold forever.
+If they'd been any better, we'd be carrying someone home. Think about that.
+Nobody celebrates. Not until this squad is a squad again.
+
+## mission.banter.victory.teammate.in_step  fn=react,deepen_bond  stage=child|teen
+Best squad in the Leaf! Say it with me! Best squad in the Leaf!
+I knew we could do it. All three of us. Together.
+That was amazing. You were amazing. We were amazing.
+
+## mission.banter.victory.teammate.steady  fn=react,deepen_bond  stage=child|teen
+Not bad, us. Not bad at all.
+We won! Good job, everyone. Really.
+I think we're getting better at this. Don't you?
+
+## mission.banter.victory.teammate.ragged  fn=react,deepen_bond  stage=child|teen
+We won, I suppose. It didn't feel like it.
+Okay. That was messy. But we're alive.
+Next time, maybe let me finish my move, yeah?
+
+## mission.banter.victory.teammate.split  fn=react,deepen_bond  stage=child|teen
+I did that. Me. Not you.
+Whatever. It's done. Can we go?
+Don't pretend that was teamwork.
+
+## mission.banter.victory.client.in_step  fn=react
+You were magnificent together. I'll never forget it.
+I could watch you three work all day. Well, not that part. But you know.
+Such a fine squad. Your sensei must be so proud.
+
+## mission.banter.victory.client.steady  fn=react
+Well fought, all of you. Thank you.
+I'm safe! You did it. I'm very grateful.
+That was well done. Shall we carry on?
+
+## mission.banter.victory.client.ragged  fn=react
+You won, but goodness, it looked hard.
+Thank you. I think. Is everyone all right with each other?
+I'm safe. Are you lot? You don't look it.
+
+## mission.banter.victory.client.split  fn=react
+Well, it's over. I'm not sure how.
+You won, but I think you should talk to each other. That's all.
+Thank you. Though I'd rather not see that again.
+
+# -- fail ------------------------------------------------------------------------------------------
+
+## mission.banter.fail.sensei.in_step  fn=react,teach
+We lost this one together. We'll come back from it together.
+You did everything right and it still went wrong. That happens. Remember you stayed a squad.
+No blame. Not on anyone. Let's get home.
+
+## mission.banter.fail.sensei.steady  fn=react,teach
+It didn't go our way. We report it and move on.
+Not our day. We'll look at what to change tomorrow.
+Nobody's hurt badly. That counts for more than the pay.
+
+## mission.banter.fail.sensei.ragged  fn=react,teach
+We failed because we didn't work together. Hard to hear. True.
+Before anyone blames anyone: look at yourselves first. Me included.
+Home. Sleep. Then we fix this squad.
+
+## mission.banter.fail.sensei.split  fn=react,teach
+This is what a divided squad costs. A mission, today. Something worse, some day.
+I won't have this squad fall apart over one failure. Or over pride.
+We walk home together. Even if you don't speak, you walk together.
+
+## mission.banter.fail.teammate.in_step  fn=react,deepen_bond  stage=child|teen
+We'll get them next time. Squad promise.
+It's not your fault. It's not anybody's fault. We tried.
+At least I've got you two. That's worth more than any mission.
+
+## mission.banter.fail.teammate.steady  fn=react,deepen_bond  stage=child|teen
+It happens. We'll do better next one.
+We tried. That's something.
+Let's go home and eat something. Everything's better after food.
+
+## mission.banter.fail.teammate.ragged  fn=react,deepen_bond  stage=child|teen
+That went wrong because we weren't listening to each other.
+I'm too tired to argue about it. We just lost.
+Maybe we're not as good as we thought.
+
+## mission.banter.fail.teammate.split  fn=react,deepen_bond  stage=child|teen
+If you'd done what I said, we'd have won.
+I'm asking for a different squad. I mean it this time.
+Don't talk to me. Not now.
+
+## mission.banter.fail.client.in_step  fn=react
+You did your best, and you did it together. I can't ask for more.
+It's all right. You looked after each other. And me.
+Don't be sad. You're a good squad. Just an unlucky day.
+
+## mission.banter.fail.client.steady  fn=react
+Never mind. These things happen. Thank you anyway.
+I'm sorry it didn't work out. I know you tried.
+Perhaps another time. Thank you for coming.
+
+## mission.banter.fail.client.ragged  fn=react
+It might have gone better if you'd worked together. I'm just saying.
+I'm sorry. I don't think it's what any of us wanted.
+Go home and rest. And maybe talk.
+
+## mission.banter.fail.client.split  fn=react
+I'm sorry, but I think it went wrong between you before it went wrong out there.
+I'll be asking for a different squad next time.
+I hope you sort yourselves out. Truly.

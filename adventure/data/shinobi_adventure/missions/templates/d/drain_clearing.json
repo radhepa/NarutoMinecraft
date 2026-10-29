@@ -42,7 +42,7 @@
   "clear": {
    "objective": {
     "type": "collect",
-    "target": "drain_muck",
+    "target": "item:mission_drain_muck",
     "at": "slot:drain",
     "count": 8
    },
@@ -87,7 +87,7 @@
   "owner": {
    "objective": {
     "type": "deliver",
-    "item": "ring",
+    "item": "item:mission_ring",
     "to": "slot:client"
    },
    "next": "report"

@@ -9,19 +9,19 @@ class MoveTest {
     @Test void everyHomeKeepsABed() {
         var h = new Home("player", Flat.CLASSIC);
         assertEquals("last_bed", h.remove("futon"));
-        assertEquals("ok", h.place("thick_futon").equals("too_many_beds") ? "ok" : "unexpected");
+        assertEquals("ok", h.place("futon_deluxe").equals("too_many_beds") ? "ok" : "unexpected");
         assertEquals("fixed", h.remove("window"));
         assertEquals("fixed", h.place("mailbox"));
     }
     @Test void aLoftHasNoBalcony() {
         var loft = new Home("player", Flat.of("flat.market_loft.4"));
         assertEquals("balcony", loft.place("wind_chime"));
-        assertEquals("ok", loft.place("houseplant"));
+        assertEquals("ok", loft.place("potted_fern"));
     }
     @Test void movingTakesEverythingAlong() {
         var h = ComfortTest.leafFlat();
-        h.place("photo_frame"); h.place("houseplant"); h.place("pet_bed"); h.pet("ninken");
-        h.keep(Catalog.KEEPSAKES.get("shogi_board")); h.display("shogi_board");
+        h.place("photo_frame"); h.place("potted_fern"); h.place("pet_bed"); h.pet("ninken");
+        h.keep(Catalog.KEEPSAKES.get("keepsake_shogi_set")); h.display("keepsake_shogi_set");
         h.photo("photo.squad", 30, List.of("role:teammate_a", "role:teammate_b", "role:sensei"), "child"); h.hang("photo.squad");
         h.giveKey("role:teammate_b", 6, 40);
         var before = h.placed();
@@ -55,7 +55,7 @@ class MoveTest {
         for (var k : all) h.keep(k);
         for (int i = 0; i < Home.FREE_STANDING; i++) assertEquals("ok", h.display(all.get(i).id()), "keepsakes stand on their own");
         assertEquals("no_space", h.display(all.getLast().id()));
-        assertEquals("not_owned", h.display("lake_lantern"));
+        assertEquals("not_owned", h.display("keepsake_lake_lantern"));
         h.place("display_shelf");
         assertEquals("ok", h.display(all.getLast().id()));
         assertEquals("already", h.display(all.getLast().id()));

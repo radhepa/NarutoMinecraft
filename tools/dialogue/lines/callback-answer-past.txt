@@ -1,0 +1,164 @@
+# Callbacks for questions/past.txt: what a resident says later, remembering the player's answer.
+#! fn: callback
+
+## callback.answer.q.past.first_impression.a1
+You said the Leaf seemed so big at first. Does it still? It shrinks once you know every lane.
+
+## callback.answer.q.past.first_impression.a2
+"Noisy and warm." Your first look at the Leaf. I was smelling the grill smoke today and thought, yes.
+
+## callback.answer.q.past.first_impression.a3
+Lonely at first, you told me. I hope it's less so now. I've been trying to help with that.
+
+## callback.answer.q.past.first_impression.a4
+Like home already, you said, from the very first day. The Leaf has good instincts.
+
+## callback.answer.q.past.home_now.a1
+You told me the Leaf is home now. I've been smiling about that for days.
+
+## callback.answer.q.past.home_now.a2
+Getting there, you said, about feeling at home. Getting closer? I hope so.
+
+## callback.answer.q.past.home_now.a3
+Not home yet, you said. The lantern's still lit. I haven't forgotten.
+
+## callback.answer.q.past.best_day.a1
+Your best day here was a festival, you said. The next one's coming. Let's make it better.
+
+## callback.answer.q.past.best_day.a2
+Your best day was a day with friends. So let's have another. What are you doing tomorrow?
+
+## callback.answer.q.past.best_day.a3
+That training breakthrough was your best day. Has anything clicked since? Tell me.
+
+## callback.answer.q.past.best_day.a4
+You once told me your best day here was that very day. I still think about it. Made my week.
+
+## callback.answer.q.past.hard_day.a1
+That test you failed, the hardest day. Have you retaken it? I'd bet you passed.
+
+## callback.answer.q.past.hard_day.a2
+You told me about the day you felt alone. I meant it. Come find me, any day.
+
+## callback.answer.q.past.hard_day.a3
+The fight you lost, your hardest day. You've trained so much since. I can see it.
+
+## callback.answer.q.past.hard_day.a4
+You didn't want to say what your hardest day was. That's fine. I'm still here if you do.
+
+## callback.answer.q.past.academy_weeks.a1
+You remember your instructor most from the Academy. Good teachers are like that. They stay with you.
+
+## callback.answer.q.past.academy_weeks.a2
+Making friends, that's what you remember of the Academy. Are they still close?
+
+## callback.answer.q.past.academy_weeks.a3
+Your first Academy memory: a failed test. Ha! Mine too. We're in good company.
+
+## callback.answer.q.past.academy_weeks.a4
+The Academy lunches, your fondest memory. I walked past the window today. Rice balls, still.
+
+## callback.answer.q.past.glad_met.a1
+A friend for life from the Academy, you said. I'm sure of it. Treasure them.
+
+## callback.answer.q.past.glad_met.a2
+Your rival, the one you're glad you met. Still pushing you? Still annoying?
+
+## callback.answer.q.past.glad_met.a3
+Glad to know your whole class, you said. I told my neighbour that. They called you a gem.
+
+## callback.answer.q.past.glad_met.a4
+Nobody from class yet, you said. Any change? Someone new caught your eye at training?
+
+## callback.answer.q.past.first_ryo.a1
+Your first ryo went on ramen. I respect it. My first went on a paper kite that blew away.
+
+## callback.answer.q.past.first_ryo.a2
+First ryo on kunai. Still have them? You always seem to have a full pouch.
+
+## callback.answer.q.past.first_ryo.a3
+You saved your first ryo. Do you still have it? I'd want to frame it.
+
+## callback.answer.q.past.first_ryo.a4
+Your first pay went on a gift for someone. I keep thinking about that. It's a good thing to know about a person.
+
+## callback.answer.q.past.apartment.a1
+Still cozy, your apartment? I've got a spare cushion if it needs one more.
+
+## callback.answer.q.past.apartment.a2
+You said your place is a bit too quiet. So I'm inviting you to supper. Noise included.
+
+## callback.answer.q.past.apartment.a3
+Is your apartment still messy? Don't worry. I tidied mine yesterday and it's already a disaster.
+
+## callback.answer.q.past.apartment.a4
+You decorated your apartment, you said. Found anything new for the walls? The market had paper lanterns.
+
+## callback.answer.q.past.quiet_nights.a1
+You told me you get lonely some nights. I remembered tonight. So: want to walk to the river?
+
+## callback.answer.q.past.quiet_nights.a2
+You like the quiet at night, I remember. I'll keep my visits to the daytime, then.
+
+## callback.answer.q.past.quiet_nights.a3
+You visit friends when it's too quiet at home. I left my lantern on, just in case.
+
+## callback.answer.q.past.quiet_nights.a4
+I asked about your quiet nights once and you'd rather not say. I haven't forgotten. Just checking in.
+
+## callback.answer.q.past.laughed_hard.a1
+Laughing till it hurts, with friends. You said that's your best kind. Got time for some today?
+
+## callback.answer.q.past.laughed_hard.a2
+I saw a Genin fall off a training post today and thought of your mishap story. Sorry. Still funny.
+
+## callback.answer.q.past.laughed_hard.a3
+You couldn't remember your last big laugh. I've been saving a joke for you. Ready?
+
+## callback.answer.q.past.laughed_hard.a4
+You laughed at my face that time, when I asked about your last laugh. I've decided to be flattered.
+
+## callback.answer.q.past.proud_of.a1
+That hard test you passed. I told my sister about it. She was impressed. So am I, still.
+
+## callback.answer.q.past.proud_of.a2
+You're proudest of helping someone. That's stayed with me. It's the right thing to be proud of.
+
+## callback.answer.q.past.proud_of.a3
+Not giving up, that's your proudest thing. I needed that reminder today, actually.
+
+## callback.answer.q.past.proud_of.a4
+Proudest of making a friend, you said. I hope I'm one of them.
+
+## callback.answer.q.past.someone_proud.a1
+Your teachers tell you they're proud. Good. They're not the only ones, you know.
+
+## callback.answer.q.past.someone_proud.a2
+Nobody had said they were proud of you, so I did. I'll say it again: proud of you.
+
+## callback.answer.q.past.someone_proud.a3
+Your friends tell you they're proud. Count me among them.
+
+## callback.answer.q.past.big_lesson.a1
+Friends matter most, your big lesson. I told my nephew that this week. Credited you.
+
+## callback.answer.q.past.big_lesson.a2
+Hard work pays off, you said. Slowly, then all at once. I'm still waiting on the "all at once".
+
+## callback.answer.q.past.big_lesson.a3
+Asking for help, your biggest lesson. So: can you help me carry these sacks? Good practice for both of us.
+
+## callback.answer.q.past.big_lesson.a4
+Never skip breakfast. Your most important lesson in the Leaf. I haven't skipped one since.
+
+## callback.answer.q.past.who_taught.a1
+A teacher taught you that lesson. Did you ever thank them? It would mean the world.
+
+## callback.answer.q.past.who_taught.a2
+A friend taught you, you said. The best teachers don't know they're teaching.
+
+## callback.answer.q.past.who_taught.a3
+You learned it alone, the hard way. I hope next time you don't have to.
+
+## callback.answer.q.past.who_taught.a4
+The village itself taught you. Strict but fair, I said. Still agree?

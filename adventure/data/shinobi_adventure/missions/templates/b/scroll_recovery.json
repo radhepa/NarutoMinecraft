@@ -81,7 +81,7 @@
   "scroll": {
    "objective": {
     "type": "collect",
-    "target": "sealed_scroll",
+    "target": "item:mission_sealed_scroll",
     "at": "slot:camp"
    },
    "branch": [
@@ -113,7 +113,7 @@
   "report": {
    "objective": {
     "type": "deliver",
-    "item": "sealed_scroll",
+    "item": "item:mission_sealed_scroll",
     "to": "slot:client"
    },
    "next": null

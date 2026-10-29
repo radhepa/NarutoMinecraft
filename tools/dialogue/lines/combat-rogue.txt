@@ -1,0 +1,202 @@
+# Combat barks: rogue ninja, shinobi who walked out on their villages and sell their skills on the
+# roads. Cold, skilled, contemptuous of village rules, never cartoonish. No hideouts, no masters, no
+# schemes: just hired blades. Fights never kill. Pools are combat.<event>.rogue. Under 80 characters.
+#! kind: cycle
+#! fn: react
+
+## combat.fight_start.rogue
+A Leaf headband. I used to wear one of those, from somewhere else.
+Turn around and I'll forget I saw you.
+Your village sent you to fetch me? How thrifty.
+I'm paid by the job, not the hour. Let's be quick.
+Rules, ranks, missions. I gave all that up. Show me what it bought you.
+You've been trained well. Not well enough.
+Let's see what the Leaf teaches its young ones now.
+
+## combat.taunt.rogue
+You telegraph everything. Your sensei should be ashamed.
+Breathe through your nose. You're wasting chakra.
+I could do this with my eyes shut. Shall I?
+Every swing, the same shoulder drops first.
+You fight like someone who has never lost. That ends today.
+Hesitating? Out here, hesitation costs.
+Your footwork is pure Academy. Charming.
+
+## combat.low_health.rogue
+Tch. Sharper than you look.
+Fine. No more holding back.
+I've had worse from better.
+You'll pay for every one of these bruises.
+Time to stop playing fair.
+Careless of me. It won't happen twice.
+
+## combat.ally_down.rogue
+Hired help. Never worth the coin.
+Useless. I'll finish this myself.
+One fewer share of the pay. I can live with that.
+Get up. I'm not carrying you.
+You took that one down cleanly. I'm almost impressed.
+
+## combat.knocked_out.rogue
+Beaten by... a village pup...
+Should have taken... the other job...
+The Leaf... still turns them out sharp...
+So this is... what it feels like... to lose...
+
+## combat.yield.rogue
+Enough. You've made your point.
+I know when a fight's gone. Take me in, then.
+Put it away. I won't run.
+You win. Don't expect me to say it twice.
+
+## combat.flee.rogue
+Another day, Leaf.
+Not worth it. Not for this pay.
+I'll remember your face.
+This contract just expired.
+A smart rogue knows when to leave.
+
+## combat.victory.rogue
+Go home. Tell them who taught you a lesson.
+Lie there a while and think about your footwork.
+Stay down. It's the first wise thing you've done.
+Train harder. Then come looking.
+Tell your village to send someone better next time.
+
+## combat.defeat.rogue
+Tie the knots tighter. I've slipped looser ones.
+Your Hokage will want to talk. I've nothing to say.
+Quick hands. Whoever trained you knew the work.
+I left my village to be free. Look how that turned out.
+
+## combat.parry_landed.rogue
+Predictable.
+I saw that before you did.
+Again? You never learn.
+That trick is older than you are.
+Too eager. Wait for the opening.
+
+## combat.got_parried.rogue
+Hm. Good timing.
+So you can read a strike. Interesting.
+Lucky. Do it again and I'll worry.
+Not bad. Your teacher earned their pay.
+
+## combat.combo_finisher_landed.rogue
+Down you go.
+That's how it's done.
+Lesson over.
+Keep your guard up next time. If there is one.
+Feel that? That's experience.
+
+## combat.jutsu_cast.rogue
+{technique}. Dodge if you can.
+Let's see you handle {technique}.
+I learned {technique} long before you could walk.
+{technique}! This ends now.
+Watch my hands. It won't help.
+You know {technique}? No? Here's your first lesson.
+
+## combat.jutsu_countered.rogue
+Countered? Someone taught you properly.
+Clever. I'll use something you haven't read about.
+Tch. I wasted good chakra on that.
+So the Leaf still teaches the old counters.
+
+## combat.genjutsu_caught.rogue
+An illusion? Insulting.
+Clumsy work. I can see the seams.
+What is this... no. Not real.
+Hm. Something's wrong with the light.
+
+## combat.genjutsu_broken.rogue
+Release. You'll need a better illusion than that.
+Broken. Try something real.
+I've slipped out of finer genjutsu than yours.
+A pinch of pain clears any fog.
+
+## combat.smoke_bomb.rogue
+Smoke. How very Academy of you.
+Hiding won't save you. I'll hear your feet.
+Run, then. The road only goes so far.
+Clever. I'll find you before it clears.
+Listen for them. Smoke can't hide breathing.
+
+## combat.substitution.rogue
+A log. I should have known.
+Substitution. Old trick, still works. Annoying.
+Wasted a good strike on firewood.
+Where... behind me? Hm.
+Fine. You get one of those. I get the rest.
+
+# -- more ---------------------------------------------------------------------------------------------
+
+## combat.fight_start.rogue
+This road is mine for the week. You're trespassing.
+I know your village's drills. I've broken every one of them.
+
+## combat.taunt.rogue
+You're breathing hard. I've barely started.
+Is the Leaf still teaching the three-strike chain? Yes. I see it is.
+Your hand signs are pretty. Too slow, though.
+
+## combat.low_health.rogue
+You hit like a Chunin. Annoying.
+I didn't come this far to fall to a Genin.
+
+## combat.ally_down.rogue
+Cheap mercenaries. You get what you pay for.
+
+## combat.knocked_out.rogue
+Not... like this... not to the Leaf...
+
+## combat.yield.rogue
+I'm out of chakra and out of patience. You win.
+
+## combat.flee.rogue
+I don't fight for free. Goodbye.
+Keep your scroll. I'll take my life on the road instead.
+
+## combat.victory.rogue
+Tie that one to a tree. Their village can come fetch them.
+Not bad. In a few years you might be worth hunting.
+
+## combat.defeat.rogue
+I trained as hard as you once. Somewhere it went wrong.
+No more running, then. Take me in.
+
+## combat.parry_landed.rogue
+You strike exactly where you look.
+
+## combat.got_parried.rogue
+I've not been parried since I left home.
+
+## combat.combo_finisher_landed.rogue
+Every opening you leave, I'll take.
+
+## combat.jutsu_cast.rogue
+You'll never see {technique} in a classroom.
+
+## combat.jutsu_countered.rogue
+That counter is new. Who's teaching in the Leaf now?
+
+## combat.genjutsu_caught.rogue
+Someone in your squad has a gift for illusions. Pity.
+
+## combat.genjutsu_broken.rogue
+Out. That cost you more chakra than it cost me.
+
+## combat.smoke_bomb.rogue
+Fine. Hide. I've hunted in worse fog than this.
+
+## combat.substitution.rogue
+I cut a log in half. Well done, Leaf.
+
+## combat.victory.rogue
+Go back to your village. Tell them the road isn't theirs.
+
+## combat.taunt.rogue
+I used to be someone's student too. I learned faster.
+
+## combat.low_health.rogue
+That one landed. Don't get used to it.

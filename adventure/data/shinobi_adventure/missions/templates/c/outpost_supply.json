@@ -61,7 +61,7 @@
   "load": {
    "objective": {
     "type": "collect",
-    "target": "supply_crate",
+    "target": "item:mission_supply_crate",
     "at": "place:gate.stores",
     "count": 4
    },
@@ -101,7 +101,7 @@
   "climb": {
    "objective": {
     "type": "deliver",
-    "item": "supply_crate",
+    "item": "item:mission_supply_crate",
     "to": "slot:outpost"
    },
    "branch": [

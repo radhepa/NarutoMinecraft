@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for playful residents. Their own life, in their voice.
+#! tags: personality=playful
+
+## chat.personal  fn=reveal_character
+Great! I swapped all the sandals at the bathhouse door. Not mine, everyone else's. I'm hiding from about nine people.
+I bet my brother I could eat ten dango in one breath. I lost. I'm still a winner in my heart.
+I've been practising a face that makes cats sit down. It works on two cats. And one very confused gate guard.
+Today I taught a parrot at the market to say "ramen". Now it won't stop. The owner is not pleased.
+I spent the morning racing a duck along the river. The duck cheated. It used wings.
+I've invented a game called "don't touch the street". Roofs, fences, carts only. I've fallen in a flowerbed twice.
+My sister dared me to wear my clothes inside out to the market. Nobody noticed. I'm a little hurt, honestly.
+I found the perfect hiding spot for hide-and-seek. So perfect nobody found me. For three hours. I won, though!
+I drew a moustache on my reflection in the pond. Didn't work. I'll try a smaller pond.
+I balanced a teacup on my head all the way from the tea house. Paid for the cup, kept the glory.
+I hid a toy frog in my husband's lunchbox. He hid it back in my sandal. This war has gone on for a year.
+The old cook at the barbecue house and I have a riddle trade. Every visit, one riddle. I'm losing badly.
+I keep a jar of excuses by my door. "A cat sat on my sandals" got me out of three chores this month.
+I learned to whistle with two fingers! Very loud. My whole street knows I learned to whistle with two fingers.
+I lost a game of stone-paper-scissors to a five-year-old, then lost a rematch. The child is unbeatable.
+Every morning I say good morning to the Hokage faces. One of them winks back. Probably the sun. Probably.
+I tried to juggle eggs. Two went fine. The third has a new home on the ceiling.
+I made a paper crown for the fishmonger. Wore it all day, didn't notice. Wonderful fishmonger.
+Today's plan was to nap. I napped. A complete success. I'm thinking of making it a tradition.
+I hid my own birthday present so well I can't find it. Now I'm excited and annoyed at the same time.
+I've been teaching the neighbour's dog to bow. It bows, then sneezes. We're calling it a style.
+I've got a bet going that I can make the stern shopkeeper on the corner laugh before the festival. Two weeks left.
+I counted how many steps it takes to cross the village while hopping. Seven hundred and forty, and one bruise.
+I wrote a song about my landlord. The landlord heard it and asked for a second verse. I wasn't ready for that.
+I challenged a crow to a staring contest. It won and then took my rice ball. Rude bird. Great bird.
+My kids think I can talk to frogs. I've been practising the croak. I'm very convincing now.
+I keep losing at cards to my grandfather. He says it's skill. I say he's hiding a whole deck in his sleeves.
+I slid down the shrine banister. The priest saw. I'm sweeping the shrine steps for a week. Worth it.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I run the ring-toss stall at festivals. The secret? The rings are fine. People just throw like they're angry.
+Somebody bought a fish from me and I sold it with a song. They came back for another fish just for the song.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+On my last D-rank I had to catch a runaway goat. We became friends. I let it win a few races.
+I put a transformation on my teammate's lunch so it looked like a frog. They ate it anyway. Hungry squad.
+My sensei banned pranks during missions. Didn't say anything about the walk home, though.
+
+## chat.personal  fn=worldbuild
+Every summer the kids hold a secret frog race under the second bridge. The adults all know. We all bet.
+There's a game here called kunai-and-crane: you toss a paper crane, and someone hits it with a stick. Old Leaf fun.
+The fishmongers hold a shouting contest on Market Day. Loudest call wins a free lunch. I'm training my lungs.
+The tea house keeps a slate behind the counter of everyone who's ever beaten the owner at shogi. It's very short.
+
+## chat.personal  fn=hook
+My lucky marble rolled down a drain by the market. It's blue with a little bubble in it. I'll never find another.
+I dared someone to climb the water tower, and now their hat's up there and they're blaming me. Fair, actually.
+Somebody keeps stealing my wind chimes. I think it's a monkey. Or a very tall neighbour.
+
+## chat.personal  fn=filler
+Pretty good! I've got a joke, but I'm saving it for a better day.
+Fantastic, terrible, I can't decide. Ask me again in a minute!
+Day's not over. Still time for something silly.
+
+## chat.personal  fn=reveal_character
+I hid a hundred paper frogs around the tea house. The owner found ninety-nine. The last one's my masterpiece.
+I've been walking backwards to the market all week. It's research. For what, I'll decide later.

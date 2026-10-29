@@ -107,4 +107,69 @@ class KindlingAndBookTest {
         b.level = 8;
         assertEquals("bond.romance.crush", BondBook.page(w, TEAMMATE_A).romance());
     }
+    static BondWorld squadFriends(int days) {
+        var w = Leaf.classic(31, 0);
+        var pair = List.of(TEAMMATE_A, TEAMMATE_B);
+        for (int d = 0; d < days; d++) {
+            for (String t : pair) w.talk(t);
+            w.experience(Act.TRAINED_TOGETHER, pair);
+            if (d % 3 == 0) w.experience(Act.MISSION_TOGETHER, pair);
+            if (d % 10 == 5) for (String t : pair) w.moment(t, "bond.test." + d);
+            w.endDay();
+        }
+        w.setFlag(Kindling.UNLOCK_FLAG, true);
+        return w;
+    }
+    @Test void threadSightReadsOnlyCloseBondsAndShowsThatSomethingIsHiddenNeverWhat() {
+        var w = squadFriends(150);
+        w.bond(RIVAL).meet(0);
+        assertTrue(w.effectiveLevel(TEAMMATE_A) >= 6 && w.effectiveLevel(TEAMMATE_B) >= 6, w.effectiveLevel(TEAMMATE_A) + " " + w.effectiveLevel(TEAMMATE_B) + " " + w.bond(TEAMMATE_A).conflict().state());
+        w.setBondFlag(TEAMMATE_B, Kindling.HIDING + "something");
+        var sight = Kindling.threadSight(w);
+        assertEquals(List.of(new Kindling.Read(TEAMMATE_A, false), new Kindling.Read(TEAMMATE_B, true)), sight.people(), "the rival is below 6: unreadable");
+        assertEquals(1, sight.threads().size());
+        var t = sight.threads().getFirst();
+        assertEquals(List.of(TEAMMATE_A, TEAMMATE_B), List.of(t.a(), t.b()));
+        assertTrue(t.level() > 0 && !t.strained());
+        w.setFlag(Kindling.UNLOCK_FLAG, false);
+        assertTrue(Kindling.threadSight(w).people().isEmpty(), "asleep until the story awakens it");
+    }
+    @Test void anOfferedFlameKindlesSomeoneBelowSpark() {
+        var w = Leaf.classic(3, 0);
+        w.setFlag(Kindling.UNLOCK_FLAG, true);
+        w.bond(CLASSMATE_C).meet(0);
+        assertEquals(Tier.NONE, Kindling.tier(w, CLASSMATE_C));
+        assertEquals(Tier.NONE, w.kindle(CLASSMATE_C).tier());
+        w.act(CLASSMATE_C, Act.OFFERED_FLAME);
+        assertTrue(w.bond(CLASSMATE_C).moments().stream().anyMatch(m -> m.startsWith("offered_flame")), "a moment, kept");
+        assertEquals(Tier.SPARK, Kindling.tier(w, CLASSMATE_C));
+        assertTrue(Kindling.strength(w, CLASSMATE_C) > 0);
+        w.act(CLASSMATE_D, Act.GAVE_FLAME);
+        assertTrue(w.bond(CLASSMATE_D).remembers(Act.GAVE_FLAME));
+    }
+    @Test void aScriptedBeatCountsItsTargetAtAFloorTierForThatKindleOnly() {
+        var w = Leaf.classic(3, 0);
+        w.setFlag(Kindling.UNLOCK_FLAG, true);
+        w.bond(TEAMMATE_A).meet(0);
+        assertEquals("", BondEffects.apply(w, java.util.Map.of("kindle", java.util.Map.of("who", TEAMMATE_A, "floor", "flame"))));
+        assertEquals(1, w.bond(TEAMMATE_A).kindled());
+        assertEquals(1, w.bond(TEAMMATE_A).resonance());
+        assertEquals(Tier.NONE, Kindling.tier(w, TEAMMATE_A), "the floor lasts for that scene only");
+        assertEquals("no_bond", BondEffects.apply(w, java.util.Map.of("kindle", TEAMMATE_A)));
+    }
+    @Test void aRoleCanBeHeldAtALevelUntilAStoryFlag() {
+        var w = Leaf.classic(31, 0);
+        assertEquals("", BondEffects.apply(w, java.util.Map.of("level_cap", List.of(TEAMMATE_B, 4, "story.test.done"))));
+        for (int d = 0; d < 90; d++) {
+            w.talk(TEAMMATE_B); w.experience(Act.TRAINED_TOGETHER, List.of(TEAMMATE_B));
+            if (d % 3 == 0) w.experience(Act.MISSION_TOGETHER, List.of(TEAMMATE_B));
+            if (d % 10 == 5) w.moment(TEAMMATE_B, "bond.test." + d);
+            w.endDay();
+        }
+        assertEquals(4, w.level(TEAMMATE_B));
+        assertEquals("bond.goal.held", BondBook.goal(w, TEAMMATE_B));
+        w.setFlag("story.test.done", true);
+        w.talk(TEAMMATE_B); w.endDay();
+        assertTrue(w.level(TEAMMATE_B) > 4, "free once the story moves on");
+    }
 }

@@ -1,0 +1,68 @@
+# The tea house on the market street (Beta 2): green tea (holds off fatigue an hour), sweets, light meals.
+#! fn: commerce
+
+## shop.tea_house.greet  shop=tea_house  fn=commerce
+Welcome. Please, sit wherever the light suits you.
+Come in and rest a while. The kettle has just come to the boil.
+Good day, {player}. Shoes off on the raised floor, please.
+Welcome, welcome. Would you like the window, or the quiet corner?
+A guest! Sit, and I'll bring a cup before you've even decided.
+
+## shop.tea_house.greet  shop=tea_house  weather=rain  fn=commerce,react
+Rain on the roof and tea in the cup. You picked the right day to come in.
+
+## shop.tea_house.greet  shop=tea_house  season=winter  fn=commerce,react
+Come in from the cold. The brazier's lit and the roasted tea is on.
+
+## shop.tea_house.browse  shop=tea_house  fn=commerce
+Green tea, roasted tea, barley tea when it's hot out.
+Sweet bean cakes on the tray. The chestnut ones are only here in autumn.
+A bowl of rice with pickles, if you're hungry. Simple and quick.
+Matcha whisked to order. It takes a moment, but it's worth it.
+The scroll on the wall is the menu. The painting beside it is just pretty.
+
+## shop.tea_house.buy  shop=tea_house  kind=cycle  fn=commerce
+Your {item}. Hold the cup with both hands, it's warmer that way.
+{pay}, thank you. Take as long as you like with it.
+Here you are. The leaves are from the hills past the east road.
+That's {pay}. I'll refill the pot if it runs dry.
+A cup of green, as asked. Let it cool a breath first.
+One {item}. Please enjoy it slowly.
+
+## shop.tea_house.cant_afford  shop=tea_house  kind=cycle  fn=commerce
+A little short. The barley tea is cheaper, and just as kind on a hot day.
+That's more than you have, I'm afraid. Sit anyway, the shade is free.
+Not quite enough. Perhaps a smaller cup?
+I'm sorry, the price is the price. Do come back.
+
+## shop.tea_house.sold_out  shop=tea_house  kind=cycle  fn=commerce
+We've no more {item} today. The baker comes again in the morning.
+The matcha's run out. The new tin arrives after Market Day.
+All gone, I'm afraid. A busy afternoon.
+
+## shop.tea_house.haggle  shop=tea_house  fn=commerce,reveal_character
+The place across the market cut its prices again? Let them. Cheap tea is cheap for a reason.
+Bargaining in a tea house? How lively. No, but I'll bring you a second sweet.
+The price is written so nobody has to argue. That's half of what makes tea calm.
+A regular cup costs less than the pot, if you're only one.
+I don't lower prices, but I do pour generously.
+
+## shop.tea_house.closing  shop=tea_house  time=evening|night  fn=commerce
+We close at dusk, so the last pot is on now.
+I'm rinsing the cups soon. One more before you go?
+Closing time is near. Please finish slowly, I'll sweep around you.
+
+## shop.tea_house.recommend  shop=tea_house  fn=commerce,teach
+You've tried the new tea house across the way? Then you'll taste the difference. Our leaves are steeped, not stewed.
+Staying up late? A cup of green tea holds the tiredness back an hour or so.
+The {special} today. The leaves came in fresh this morning.
+After training, barley tea. It cools you from the inside.
+If you've a night mission, take green tea before you go, not after.
+The {item} with a bean cake. Sweet and bitter together, the way it should be.
+Matcha, if you've never had it. Bitter at first, then it's all you think about.
+
+## shop.tea_house.regular  shop=tea_house  level=3..10  fn=commerce,deepen_bond
+Your cushion's by the window, as always. I kept it free.
+I started the kettle when I saw you on the bridge.
+You've become part of the tea house, you know. The afternoon feels wrong without you.
+I've tried a new blend. You'll be the first to taste it.

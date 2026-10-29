@@ -1,0 +1,162 @@
+# Shopkeepers' greetings and haggling in their own voices: one piece of content per kernel, said in the
+# shopkeeper's register. Hearing one voice of a kernel spends the others.
+
+## shop.ichiraku.greet  shop=ichiraku  fn=commerce,reveal_character
+* ichiraku_steam
+warm:   You look half frozen. Sit by the pot, the steam will put colour back in your cheeks.
+bold:   Stool's open, broth's boiling, and I'm ready to cook. Let's go!
+proud:  Sit. Nine years and this broth has never once been served lukewarm.
+quiet:  Sit. Noodles?
+any:    Steam's up, stools are free. Sit wherever.
+
+## shop.grocer.greet  shop=grocer  fn=commerce,reveal_character
+* grocer_crates
+warm:   Come in, come in! You look like you could use a proper supper tonight.
+bold:   Fresh crates, just in! Dive in before the tea house buys the lot!
+proud:  Every crate in here was picked by hand. No bruised fruit on my shelves.
+quiet:  Fresh today. Have a look.
+any:    The crates came in this morning. Help yourself to a look.
+
+## shop.furniture_shop.greet  shop=furniture_shop  fn=commerce,reveal_character
+* furniture_shavings
+warm:   Welcome! Sit on that cushion a moment and tell me about your room.
+bold:   Come in! Bare walls are a crime, and we're here to stop it.
+proud:  Every joint in this shop was cut without a single nail. Look closely.
+quiet:  Come in. Look all you like.
+any:    In you come. Mind the shavings on the floor, we've been busy.
+
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character
+* tools_edges
+warm:   Welcome. Careful near the trays, I'd hate for you to nick a finger.
+bold:   Gear up! A full pouch is a happy pouch.
+proud:  The finest edges in the Leaf. Ask any Jonin where they buy.
+quiet:  Kunai on the left. Shout if you need me.
+any:    Come in. Fresh stock in the trays, sharpened this week.
+
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce,reveal_character
+* smithy_heat
+warm:   Come in, but drink some water first. The forge takes it out of you.
+bold:   Feel that heat! Best part of the day, when the iron's glowing.
+proud:  Every blade off this anvil is folded three times. Others fold once.
+quiet:  Mind the sparks.
+any:    Stand back from the anvil and I'll be with you in a moment.
+
+## shop.scroll_shop.greet  shop=scroll_shop  fn=commerce,reveal_character
+* scroll_quiet
+warm:   Welcome. There's a cushion by the window, if you'd like to read a while.
+bold:   Come in! There's a scroll in here that'll change your life. Let's find it.
+proud:  Every scroll here is copied by a master hand. You will not find a blotted line.
+quiet:  Welcome. Quietly, please.
+any:    Come in. The shelves go by rank, lowest to the left.
+
+## shop.tea_house.greet  shop=tea_house  fn=commerce,reveal_character
+* tea_kettle
+warm:   Sit, sit. You look tired. I'll bring you something warm before you even ask.
+bold:   Tea time! Grab a cushion, the matcha's whisking itself into a frenzy.
+proud:  Welcome. Ours is the oldest tea house in the Leaf, and the cups prove it.
+quiet:  Welcome. The kettle's on.
+any:    Welcome in. The kettle has just finished singing.
+
+## shop.barbecue_house.greet  shop=barbecue_house  fn=commerce,reveal_character
+* barbecue_coals
+warm:   Come in and eat! You're looking thin. That won't do.
+bold:   Coals are hot! Who's ready to eat their own body weight?
+proud:  Welcome to the finest grill in the village. Our marinade has never left the family.
+quiet:  Table's free. Grill's hot.
+any:    Welcome! The coals are glowing, take any table.
+
+## shop.dango_stand.greet  shop=dango_stand  fn=commerce,reveal_character
+* dango_skewer
+warm:   Hello, dear customer! Have a skewer, you deserve something sweet today.
+bold:   Dango! Get them while they're blistering hot!
+proud:  Perfectly round, every one. I roll them all by hand.
+quiet:  Dango? They're fresh.
+any:    Skewers on the grill! Step up and pick one.
+
+## shop.flower_shop.greet  shop=flower_shop  fn=commerce,reveal_character
+* flower_buckets
+warm:   Welcome! Someone you care about is going to love whatever you pick today.
+bold:   Come in! Colour everywhere, it's like a festival in a bucket!
+proud:  Welcome. Our arrangements are the finest on the main street.
+quiet:  Hello. Take your time.
+any:    Come in. The flowers were cut at dawn, so everything's at its best.
+
+## shop.tailor.greet  shop=tailor  fn=commerce,reveal_character
+* tailor_measure
+warm:   Come in, come in. Let's find you something that makes you feel like yourself.
+bold:   New look! Let's get you something people will turn their heads for.
+proud:  Welcome. My stitches are straighter than the main street.
+quiet:  Welcome. Racks are on the right.
+any:    Come in. The new cloth arrived, and it's lovely.
+
+## shop.pawn_shop.greet  shop=pawn_shop  fn=commerce,reveal_character
+* pawn_clutter
+warm:   Come in from the street! Have a look around, take your time, nothing bites.
+bold:   Treasures, curiosities and junk! Half the fun is working out which is which!
+proud:  Only the best oddities in the village end up on my shelves.
+quiet:  Buying or selling?
+any:    Welcome in. Something new comes through that door every day.
+
+## shop.bath_house.greet  shop=bath_house  fn=commerce,reveal_character
+* bath_steam
+warm:   Come in and warm up! You'll feel a new person after a soak.
+bold:   Hottest water in the Leaf! See how long you can last!
+proud:  Our bath has been scrubbed every morning for forty years. You'll find no cleaner.
+quiet:  Towels, there. Pools, through the curtain.
+any:    Welcome. The water's at its best right now.
+
+## shop.inuzuka_clinic.greet  shop=inuzuka_clinic  fn=commerce,reveal_character
+* clinic_pups
+warm:   Hello! The pups have been missing visitors. Come and give them a scratch.
+bold:   Welcome to the loudest building in the Leaf! Ha! They like you!
+proud:  The finest ninken in the Land of Fire are bred under this roof.
+quiet:  Hello. Pups are in the run.
+any:    Come in. The dogs are excited, but they're friendly.
+
+## shop.cat_shelter.greet  shop=cat_shelter  fn=commerce,reveal_character
+* shelter_cushion
+warm:   Welcome! Sit with them a while, they love a gentle lap.
+bold:   Brave enough to face twenty cats at once? Come in!
+proud:  Our cats are the best cared for in the village. Look at those coats.
+quiet:  Hello. They're shy. Sit slowly.
+any:    Come in. Several of them are waiting for a home.
+
+## shop.fishmonger.greet  shop=fishmonger  fn=commerce,reveal_character
+* fish_ice
+warm:   Hello! Something nice for supper? You should eat fish twice a week, you know.
+bold:   Fresh catch! The river was generous this morning!
+proud:  The freshest fish in the Leaf, and I'll fight anyone who says otherwise.
+quiet:  Fish. Fresh. Take a look.
+any:    The catch is on the ice. Have a look.
+
+## shop.pawn_shop.haggle  shop=pawn_shop  fn=commerce,reveal_character
+* pawn_counteroffer
+warm:   Oh, all right. A little more, because you look like you need it.
+bold:   Ha! Bold offer! Fine, meet me halfway and we'll shake on it!
+proud:  I've haggled with merchants from three villages. You'll have to try harder than that.
+quiet:  No. ... Maybe a ryo more.
+any:    Let's meet in the middle and both go home a little unhappy.
+
+## shop.grocer.haggle  shop=grocer  fn=commerce,reveal_character
+* grocer_extra
+warm:   I can't lower it, but here, take an apple for the walk home.
+bold:   Fine! Buy the whole crate and I'll knock a ryo off every three!
+proud:  My prices are already the fairest on the market street.
+quiet:  It's fair. Sorry.
+any:    I can't do much, but I'll pick you the best of the batch.
+
+## shop.tailor.haggle  shop=tailor  fn=commerce,reveal_character
+* tailor_alteration
+warm:   I'll leave the price, but I'll sew a little pocket in the lining for you. A gift.
+bold:   No discounts! But I'll make it fit so well you'll never take it off!
+proud:  You'd haggle with a master? My stitches are not up for negotiation.
+quiet:  The price stays. The fitting's free.
+any:    I'll keep the price, but the alterations are on me.
+
+## shop.fishmonger.haggle  shop=fishmonger  fn=commerce,reveal_character
+* fish_late_price
+warm:   Oh, go on, take it a little cheaper. Just eat well tonight.
+bold:   Haggle me down? Ha! I'll throw in a fish head and call it a fight!
+proud:  This fish swam the cleanest stretch of the river. It's worth every ryo.
+quiet:  Come back near noon. Cheaper then.
+any:    It's fresh, so it's full price. Ask me again just before noon.

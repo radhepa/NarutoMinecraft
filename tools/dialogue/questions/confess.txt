@@ -1,0 +1,90 @@
+# Friendship questions inviting a small, harmless confession. The resident often goes first.
+# Never romance, never anything that touches the story. The q.confess family makes these kind: confession.
+
+? q.confess.pretend_understand | fn: deepen_bond reveal_character | level: 3
+Q: Confession: I nod along when people talk about chakra theory. I understand none of it. Do you ever pretend like that?
+Q: Have you ever nodded through a lesson without understanding a word?
+- All the time :: Ha! Thank goodness. I thought it was just me. {values:+honesty} {tone:honest}
+- Never, I ask questions :: Brave. The question nobody asks is always the one everyone wanted to ask. {values:+knowledge +courage} {tone:proud}
+- Only in history class :: Ha! The founding dates. Every single one of them. {values:+honesty} {tone:joking}
+
+? q.confess.ask_now | fn: deepen_bond reveal_character | level: 5 | follows: q.confess.pretend_understand | depth: 2
+Q: Is there something you've always been too embarrassed to ask? Ask me. I won't laugh.
+Q: Go on, ask me a question you'd never ask anyone else. I'll answer honestly.
+- How taxes work :: Ha! Nobody knows. Not even the tax office. {values:+knowledge} {tone:curious}
+- Why people grow up :: Oof. Ask me again when I've figured it out myself. {values:+knowledge} {tone:gentle}
+- What you think of me :: Honestly? I think you're good company. There. {values:+courage +honesty} {tone:bold}
+- I'll save it :: Fair. The offer doesn't expire. {values:+freedom} {tone:evasive}
+
+? q.confess.secret_snack | fn: deepen_bond reveal_character | level: 2
+Q: I eat sweets before supper and tell everyone I don't. Got any secret habits?
+Q: Confession time: what's your guilty little habit?
+- Snacks before bed :: A shinobi after my own heart. Our secret. {values:+honesty} {tone:playful}
+- Talking to myself :: Everyone does. The clever ones answer back. {values:+honesty} {tone:joking}
+- Skipping stretches :: Don't let your sensei hear that. Your legs will tell on you. {values:+freedom} {tone:teasing}
+- No habits at all :: None? Hm. I'll catch you at one yet. {values:+duty} {tone:proud}
+
+? q.confess.broke_something | fn: deepen_bond reveal_character | level: 3
+Q: When I was small I broke the shrine's bell rope and never told anyone. Ever broken something and kept quiet?
+Q: Have you ever broken something and hoped nobody would notice?
+- Yes, and I owned up :: Good for you. My bell rope still haunts me. {values:+honesty} {tone:honest}
+- Yes, and I hid it :: Ha! We're the same, then. Our secrets are safe with each other. {values:+loyalty -honesty} {tone:evasive}
+- Never broken a thing :: Never? Your hands must be made of silk. {values:+duty} {tone:proud}
+
+? q.confess.own_up_now | fn: deepen_bond reveal_character | level: 5 | follows: q.confess.broke_something | depth: 2
+Q: I've been thinking: should I finally tell the shrine keeper about that bell rope?
+Q: Thirty years later, is it too late to confess about the bell rope?
+- Yes, tell them :: You're right. It's been weighing on me long enough. I'll go tomorrow. {values:+honesty +courage} {tone:honest}
+- Let it rest :: You think so? It was a very old rope. Maybe that's mercy. {values:+kindness} {tone:gentle}
+- Buy them a new rope :: Ha! Confess with a gift in hand. You're a diplomat. {values:+kindness +honesty} {tone:playful}
+
+? q.confess.cried_story | fn: deepen_bond reveal_character | level: 4
+Q: I cried at the end of a puppet show last week. In public. Have you ever cried at a story?
+Q: Has a story ever made you cry? I won't tell a soul.
+- Yes, more than once :: A soft heart. Stories need people like you. {values:+kindness} {tone:honest}
+- Never :: Never? We'll have to find you the right story. {values:+strength} {tone:proud}
+- Only the sad dog ones :: The dog ones! Always the dog ones. Every time. {values:+kindness} {tone:joking}
+
+? q.confess.jealous | fn: deepen_bond reveal_character | level: 5
+Q: I get jealous of my brother sometimes. Everything comes easy to him. Do you ever feel that way about anyone?
+Q: Ever been jealous of someone, even a friend? It's all right to say.
+- Yes, of a classmate :: It's normal. Use it. Let it push you, not sour you. {values:+honesty +strength} {tone:honest}
+- Not really :: Lucky. Or very good at hiding it. Either way, good. {values:+kindness} {tone:humble}
+- Of people with families :: Oh. I didn't think. Thank you for telling me. You're always welcome at our table. {values:+honesty +family} {tone:gentle}
+
+? q.confess.jealous_after | fn: deepen_bond reveal_character | level: 7 | follows: q.confess.jealous | depth: 2 | gap: 5
+Q: About that jealousy we talked about. Has it got easier?
+Q: Do you still feel it, that envy you told me about?
+- Yes, much easier :: Good. I'm glad. Mine's eased too, talking about it. {values:+honesty} {tone:warm}
+- It comes and goes :: Like weather. I understand. Come and talk when it storms. {values:+honesty} {tone:gentle}
+- It pushes me now :: Then it's working for you instead of against you. Well done. {values:+strength} {tone:ambitious}
+
+? q.confess.scared_of | fn: deepen_bond reveal_character | level: 4
+Q: I'm a grown adult and I'm frightened of the dark. Is there something small that scares you?
+Q: What's a silly little thing that frightens you? I'll tell you mine after.
+- Thunder :: Big booms. I'll admit I hide under a blanket too. {values:+honesty} {tone:honest}
+- Deep water :: Wise to respect it. Stay near the shallows. {values:+honesty} {tone:cautious}
+- Geese :: Ha! Geese are terrifying. You're completely right. {values:+honesty} {tone:joking}
+- Nothing small :: Only the big things? Hm. You're braver than me. {values:+courage} {tone:bold}
+
+? q.confess.wish_different | fn: deepen_bond reveal_character | level: 6
+Q: If you could change one thing about yourself, would you?
+Q: Is there anything about yourself you wish were different?
+- I'd be braver :: You're braver than you think. I've seen it. {values:+courage} {tone:humble}
+- I'd be stronger :: Strength comes. Keep at it. {values:+strength} {tone:ambitious}
+- I'd be more patient :: Ha! Wouldn't we all. {values:+duty} {tone:honest}
+- Nothing, I'm fine :: Good. Liking yourself is half the battle won. {values:+freedom} {tone:proud}
+
+? q.confess.wish_after | fn: deepen_bond reveal_character | level: 7 | follows: q.confess.wish_different | depth: 2 | gap: 7
+Q: That thing you wished was different about yourself. Do you still wish it?
+Q: Do you feel any closer to the person you want to be?
+- Yes, I'm getting there :: I can see it. You've changed since we talked. {values:+strength} {tone:proud}
+- Not yet :: "Yet" is a good word. Keep it. {values:+honesty} {tone:humble}
+- I've stopped wishing :: You've made peace with it? That's a kind of strength too. {values:+freedom +kindness} {tone:gentle}
+
+? q.confess.lied_once | fn: deepen_bond reveal_character | level: 4 | axis: honesty_vs_kindness
+Q: I told my aunt I loved the scarf she knitted me. I hate it. I wear it anyway. Have you ever lied to be kind?
+Q: Have you ever told a fib just to make someone feel better?
+- Yes, and I'd do it again :: Me too. Some lies are a kind of gift. {values:+kindness} {tone:kind} {pole:-1}
+- Yes, and I felt awful :: It sits in the stomach, doesn't it? I know. {values:+honesty} {tone:honest} {pole:1}
+- I never lie :: Never? Then I'll never ask you about my scarf. {values:+honesty} {tone:stern} {pole:1}

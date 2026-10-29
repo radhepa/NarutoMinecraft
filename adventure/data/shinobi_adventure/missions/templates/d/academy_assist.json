@@ -93,7 +93,7 @@
   "tidy": {
    "objective": {
     "type": "collect",
-    "target": "practice_kunai",
+    "target": "item:practice_kunai",
     "at": "slot:yard",
     "count": 12
    },
@@ -110,7 +110,7 @@
   "search": {
    "objective": {
     "type": "collect",
-    "target": "practice_kunai",
+    "target": "item:practice_kunai",
     "at": "place:academy.grounds",
     "count": 4
    },

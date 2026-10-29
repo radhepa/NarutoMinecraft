@@ -120,7 +120,7 @@
   "turn_in": {
    "objective": {
     "type": "deliver",
-    "item": "old_kunai_cache",
+    "item": "item:mission_old_kunai_cache",
     "to": "slot:desk"
    },
    "next": "report"

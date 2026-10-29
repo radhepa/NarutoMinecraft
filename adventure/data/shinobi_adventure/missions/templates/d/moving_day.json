@@ -46,7 +46,7 @@
   "pack": {
    "objective": {
     "type": "collect",
-    "target": "moving_crate",
+    "target": "item:mission_moving_crate",
     "at": "slot:old",
     "count": 6
    },
@@ -55,7 +55,7 @@
   "move": {
    "objective": {
     "type": "deliver",
-    "item": "moving_crate",
+    "item": "item:mission_moving_crate",
     "to": "slot:new"
    },
    "branch": [
@@ -83,7 +83,7 @@
   "heirloom": {
    "objective": {
     "type": "deliver",
-    "item": "heirloom",
+    "item": "item:mission_heirloom",
     "to": "slot:new"
    },
    "next": "report"
@@ -107,7 +107,7 @@
   "move2": {
    "objective": {
     "type": "deliver",
-    "item": "chest",
+    "item": "item:mission_chest",
     "to": "slot:new"
    },
    "next": "report"

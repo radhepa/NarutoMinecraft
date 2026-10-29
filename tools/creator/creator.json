@@ -20,7 +20,7 @@
   },
 
   "roots": {
-    "_doc": "The Roots step: flavor and small leanings, never a story choice. temperament: a dialogue context tag only (the bond system gives the player no personality). knack: combat's starting leaning (+5% and a practice item). affinity: the nature you lean toward, shown at the Genin ceremony (choosing it there gives combat's bonus).",
+    "_doc": "The Roots step: flavor and small leanings, never a story choice. temperament: a dialogue context tag only (the bond system gives the player no personality). knack: combat's starting leaning (combat:knack.<id>: +5% and a practice item, balanced +2% to each). affinity: the nature you lean toward, shown at the Genin ceremony (choosing it there gives combat's bonus).",
     "temperament": {"options": ["bold", "steady", "cheerful", "quiet", "curious", "stubborn"], "default": "cheerful"},
     "knack": {"options": ["balanced", "taijutsu", "weapons", "ninjutsu"], "default": "balanced"},
     "affinity": {"options": ["undecided", "fire", "wind", "water", "earth", "lightning"], "default": "undecided"}
@@ -90,7 +90,7 @@
 
   "starting_key_item": {
     "_doc": "The one thing the player starts with, shown in hand on the review screen (the story session's item; the items session registers the id). It cannot be dropped, sold or stored away.",
-    "item": "half_charm",
+    "item": "item:half_charm",
     "line": "creator.review.key_item"
   },
 

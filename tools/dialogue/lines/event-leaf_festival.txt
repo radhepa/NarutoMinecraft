@@ -1,0 +1,95 @@
+# The Leaf Festival, summer 14, evening: stalls on the main street, lanterns, fireworks at 21:00 over the Hokage
+# Rock, goldfish scooping and target throwing for small ryo prizes, yukata (ROADMAP §11, The full event calendar).
+#! tags: event=leaf_festival
+
+## greet.event  fn=react
+Happy festival, {player}! The lanterns are going up all along the main street.
+There you are! Have you seen the stalls yet? The whole street smells of grilled squid.
+Festival night! Even the Mission Desk closed early for it.
+Evening, {player}. You'll want a good spot for the fireworks. They start at nine.
+The lanterns are lit! Every year I forget how pretty the main street looks.
+Look at the crowds! I think the whole village came out tonight.
+Good festival to you! Mind your purse in the press of people, it's easy to drop.
+
+## greet.event  personality=fiery|playful  fn=react
+Festival! Festival! I've already won two goldfish and lost one. Come on!
+Tonight's the night! I'm beating my score at target throwing if it takes all my ryo.
+
+## greet.event  personality=reserved|shy  fn=react
+Crowded tonight. ...The lanterns are nice, though.
+Oh, hello. I'm only staying for the fireworks. Then home.
+
+## greet.event  personality=stern|proud  fn=react
+Festival or not, keep your wits about you. A crowd is a crowd.
+
+## greet.event  stage=child  fn=react
+Festival! Did you bring ryo? I want candied apples and the mask stall and everything!
+You came! Let's do goldfish scooping first, then the fireworks, then more food!
+Are you wearing a yukata? I am! Well, mine's my cousin's, but it nearly fits.
+
+## chat.event  fn=worldbuild
+The fireworks go up over the Hokage Rock at nine. Best view is from the bridge by the river.
+Goldfish scooping is harder than it looks. The paper nets tear if you hesitate.
+Target throwing is a shinobi's game, but the stallkeeper swears a civilian won it once.
+The lanterns along the main street are hung by the Academy students. It's a tradition.
+Every stall on the street pays a few ryo to the festival fund. That pays for the fireworks.
+They say the first Leaf Festival was held the summer the village was founded.
+I bought a yukata this year. Blue, with white waves. I'm very pleased with myself.
+The grilled corn stall at the far end is the best one. Don't let anyone tell you otherwise.
+If you win a goldfish, the grocer sells little bowls for them. Clever, the grocer.
+The night watch still does its rounds tonight, festival or not. They get extra dango, though.
+My feet hurt, my purse is empty and I'm very happy. That's a good festival.
+The mask stall's selling fox and cat masks. The children are going wild for them.
+Fireworks are made by a family on the east road. They come every year with the cart.
+I've lost my friends in the crowd twice already. I'll meet them at the bridge for the fireworks.
+Candied apples, shaved ice, grilled squid. I'll regret all three in the morning.
+
+## chat.event  fn=teach
+Festival games pay out small prizes, a few ryo or a trinket. Good fun, not a living.
+The tailor sells yukata just before the festival. Buy early or they're gone.
+Events end by midnight, so make the most of it. The stalls pack up after the fireworks.
+
+## chat.event  personality=warmhearted|gentle  fn=worldbuild,reveal_character
+I made rice balls for the stallkeepers. They never get a chance to eat on festival night.
+I always buy one goldfish and set it free in the river. My mother did the same.
+
+## chat.event  personality=adventurous|curious  fn=worldbuild,reveal_character
+There's a stall from a village three days away, selling sweets I've never heard of. I've tried four.
+I want to know how they make the fireworks change colour. Nobody will tell me.
+
+## chat.event  personality=pragmatic|meticulous  fn=reveal_character
+I set myself a festival budget: thirty ryo. I'm at twenty-eight and it's only eight o'clock.
+The goldfish stall loses money every year. The keeper does it for the children's faces.
+
+## chat.event  time=night|late  fn=react
+Did you see the big gold one? It burst right over the four faces on the Rock.
+The fireworks are over, but nobody wants to go home yet. Look at them all, just standing about.
+
+## chat.event  stage=child  fn=worldbuild
+I scooped three goldfish! Then the net broke. But three!
+I hit the middle of the target twice! The stall gave me a paper fan.
+My big brother says the fireworks are louder from the Hokage Rock. We're not allowed up there.
+I'm going to stay up till the very last firework. Then I'll sleep for a week.
+Shaved ice gives you a headache if you eat it fast. I found out three times.
+The fox masks are best. You can sneak up on people and they don't know it's you.
+
+## chat.event  district=main_street  fn=worldbuild
+This end of the street is the food stalls, the far end is the games. The middle is just people.
+The lantern strings run from the Academy gate all the way to the Residence. Somebody counted once: four hundred.
+
+## chat.event  personality=thoughtful|reserved  fn=reveal_character
+I like the moment the fireworks stop. The smoke drifts over the Rock and the whole street sighs.
+
+## chat.event  personality=protective|stern  fn=reveal_character
+Hold onto your little ones tonight. Every year a child gets lost at the goldfish stall.
+I'm on the stall committee. Last year we had a fire at the squid grill. This year, buckets everywhere.
+
+## chat.event  group=civilian  fn=reveal_character
+I've run the target-throwing stall for eleven years. The Genin think they'll clear it. The prizes say otherwise.
+My family's sold candied apples at the festival since before I was born. I could dip them in my sleep.
+
+## chat.event  rank=genin|chunin|jonin  fn=reveal_character
+Shinobi aren't allowed to use chakra at the target stall. I've seen a few try. The keeper always knows.
+
+## chat.event  stage=child  personality=shy|gentle  fn=reveal_character
+I won a goldfish. I named it after the moon. It's very small, but so is the moon from here.

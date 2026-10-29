@@ -86,7 +86,7 @@
   "deliver": {
    "objective": {
     "type": "deliver",
-    "item": "treaty_draft",
+    "item": "item:mission_treaty_draft",
     "to": "slot:gate"
    },
    "next": "report"

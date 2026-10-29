@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for imaginative residents. Daydreams, colours and odd similes.
+#! tags: personality=imaginative
+
+## chat.personal  fn=reveal_character
+Dreamy. The morning fog made the whole village look like it was still being drawn. I didn't want it to finish.
+I spent the afternoon deciding what colour Firedays are. I've settled on a soft green, like moss after rain.
+I'm writing a story about a teapot that wants to be a kettle. It's going badly. The teapot is very stubborn.
+I watched the lanterns float on the river and imagined each was a little boat carrying a wish to sea.
+Today the clouds looked like a fleet of dumplings. I got hungry looking at the sky. Is that strange?
+I painted the Hokage Rock at sunset. It came out purple. My teacher said it's wrong. I think it's honest.
+My son says the shadows under the bridge are trolls. I've been making up their names. The big one's called Pebble.
+I'm sure the old willow by the river is listening when you walk under it. I always say hello. Just in case.
+The rain this morning sounded like a hundred tiny drummers on my roof. I lay in bed and conducted them.
+I made up a song for the crows on my roof. They didn't join in. They're not ready.
+I keep a box of buttons. Every one is a person I've imagined. That green one's a retired pirate.
+I dreamt the Academy was made of rice crackers and the teachers were trying to eat their way out. I woke up hungry.
+I've been sketching people's shoes at the market. Shoes tell you everything. Those sandals there are very tired.
+The smell of the bakery at dawn is the colour orange. I can't explain it. It just is.
+I've been building a tiny village out of pebbles in my garden. It has a mayor. It's a snail.
+I wrote a poem about my cat. Seven verses. The cat was asleep for all of them.
+The wind today kept trying to tell me something. I think it was "close the window". I did.
+I imagine the river is a long silver cat that never sleeps. It purrs under the bridges at night.
+I sewed stars onto my curtains so the night comes in even at noon. My husband says it's like living in a lantern.
+I was supposed to buy carrots, but a sunset happened. I came home with no carrots and a very good mood.
+I tell my children the stars are the windows of a village in the sky. Now they want to visit. I need a better ending.
+My tea went cold while I watched a spider build a web. It looked like a tiny map of the whole village.
+I've decided the fishmonger is secretly a retired sea captain. I'm building the whole story. Don't ruin it.
+Today I found a stone shaped like a heart, a leaf shaped like a hand, and a cloud shaped like my aunt.
+I hum while I work. The bread rises better. That's my theory, and I'm keeping it.
+I painted a door on my bedroom wall. Sometimes, before sleep, I imagine where it goes. Last night: a library of the sea.
+I've been inventing festivals nobody holds. The Festival of Lost Socks is my favourite. Very solemn.
+The first snow of last year looked like the sky was shaking out a pillow. I think about that every autumn.
+I made my daughter a kite with a dragon's face. Every time it dives, she screams. It's the happiest sound I know.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I paint shop signs. Today's was a fish wearing a hat for the fishmonger. Didn't ask for the hat. Loves the hat.
+I make paper lanterns. Every one I fold, I imagine whose window it'll hang in. It makes the work go quick.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+I've been designing a genjutsu that only makes you smell bread. Useless in a fight. Wonderful on a cold morning.
+On missions I imagine the trees are old giants watching us pass. Keeps me alert. And company, too.
+My summons would be a moth if I had one. Quiet, soft, drawn to lights. I've thought about this a great deal.
+
+## chat.personal  fn=worldbuild
+The Kurama lane has paintings on every wall. Some look like they move if you don't stare. I love that street.
+On the night of the moon viewing, people float paper boats on the river. Each one has a wish written on the sail.
+Children here say the Hokage faces turn their heads at night to watch over the village. I half think so myself.
+
+## chat.personal  fn=hook
+I lost my sketchbook somewhere on the market street. It's full of people's shoes. I'd die if anyone read it.
+A painting of mine went missing from the tea house wall. A purple Hokage Rock. Someone must love it. Or hate it.
+There's a door painted on the wall behind the dango shop that wasn't there last week. I'd love to know who's done it.
+
+## chat.personal  fn=filler
+Like a cup of tea with a cloud in it. Soft. Warm. A little foggy.
+Blue, with a bit of yellow coming in. That's how today feels.
+
+## chat.personal  fn=reveal_character
+I've been naming the steam clouds over the bathhouse. That one's a whale. That one's my landlord, as a whale.
+I wove a bit of red thread into every basket I sold today. Like a secret all my baskets share.
+I tried to paint the sound of the shrine bell. It came out as a gold spiral. Close enough.

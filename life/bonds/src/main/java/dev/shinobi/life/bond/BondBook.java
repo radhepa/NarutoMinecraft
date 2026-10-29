@@ -64,6 +64,7 @@ public final class BondBook {
     public static String goal(BondWorld w, String who) {
         var b = w.bond(who);
         if (b.level() >= Levels.MAX) return "bond.goal.max";
+        if (b.level() >= w.levelCap(b)) return "bond.goal.held";
         String gate = w.gate(who);
         if (!gate.isEmpty()) return "bond.goal." + gate;
         int need = (int) Math.ceil(Levels.threshold(b.level() + 1) - w.closeness(who));

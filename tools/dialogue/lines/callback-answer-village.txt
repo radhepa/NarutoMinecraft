@@ -1,0 +1,101 @@
+# Callbacks for questions/village.txt: what a resident says later, remembering the player's answer.
+#! fn: callback
+
+## callback.answer.q.village.favorite_place.a1
+Your favourite spot is Ichiraku, isn't it? I'm headed that way. Join me?
+
+## callback.answer.q.village.favorite_place.a2
+I went up the Hokage Rock because you said it was your favourite place. The view! You were right.
+
+## callback.answer.q.village.favorite_place.a3
+Your favourite place is the training grounds. Even on festival days, I bet.
+
+## callback.answer.q.village.favorite_place.a4
+I sat by the second bridge this morning, your favourite spot. The fish really are fat.
+
+## callback.answer.q.village.one_change.a1
+You wouldn't change a thing about the Leaf. I was grumbling about the roads today and remembered that.
+
+## callback.answer.q.village.one_change.a2
+More festivals, your one change. I'd vote for you on that alone.
+
+## callback.answer.q.village.one_change.a3
+Fewer rules, you'd want. Don't say it too loudly near the council chambers.
+
+## callback.answer.q.village.one_change.a4
+More help for the lonely, you said. I've started visiting the old widow next door because of that.
+
+## callback.answer.q.village.change_speed.a1
+The Leaf changes too fast, you said. A new shop went up on main street this week. I see what you mean.
+
+## callback.answer.q.village.change_speed.a2
+Not fast enough, you said of the village. Patience. It moves at the pace of its oldest elder.
+
+## callback.answer.q.village.change_speed.a3
+About right, the way the village changes. Steady, like a river. I liked how you put it.
+
+## callback.answer.q.village.clans.a1
+You think the clans keep the village's traditions. The Akimichi would set an extra plate for you for that.
+
+## callback.answer.q.village.clans.a2
+Clan or no clan, the same headband. Your words. I've heard them repeated in the market since.
+
+## callback.answer.q.village.clans.a3
+Clans should share what they know, you said. The Yamanaka gave a free lesson on flowers today. A start.
+
+## callback.answer.q.village.market_day.a1
+It's Market Day soon. You love the bustle, I remember. Want to walk the stalls together?
+
+## callback.answer.q.village.market_day.a2
+Market Day's coming. Too noisy for you, I know. I'll pick something up for you if you like.
+
+## callback.answer.q.village.market_day.a3
+The grilled corn man's back for Market Day. You said that's all you go for.
+
+## callback.answer.q.village.worth_protecting.a1
+The people. That's what's worth protecting, you said. Not the walls. I agree more every day.
+
+## callback.answer.q.village.worth_protecting.a2
+You'd protect the children before anything. I saw the Academy kids at play and thought of that.
+
+## callback.answer.q.village.worth_protecting.a3
+The old ways are worth protecting, you said. My grandmother would have liked you.
+
+## callback.answer.q.village.worth_protecting.a4
+Your friends are what's worth protecting, you said. Start close. I hope I'm close.
+
+## callback.answer.q.village.market_or_forest.a1
+By the market, that's where you'd live. Fresh bread every morning. I'm jealous already.
+
+## callback.answer.q.village.market_or_forest.a2
+The quiet forest edge for you. I walked out that way yesterday. Birds instead of hawkers, like you said.
+
+## callback.answer.q.village.market_or_forest.a3
+Somewhere in between the market and the forest. The residential lanes. Very you.
+
+## callback.answer.q.village.travellers.a1
+Open the gates wide, you said. A caravan came in from the south today. Spices everywhere.
+
+## callback.answer.q.village.travellers.a2
+Welcome travellers carefully, you told me. The gate guards agree with you, by the look on their faces.
+
+## callback.answer.q.village.travellers.a3
+Friends, not strangers. That's how you'd greet travellers. I bought tea from one today and we talked an hour.
+
+## callback.answer.q.village.festival_stall.a1
+You'd run a stall at the festival. Decided what you'll sell yet? I'll be your first customer.
+
+## callback.answer.q.village.festival_stall.a2
+You'd just enjoy the festival. Someone has to eat the food. I'll join you.
+
+## callback.answer.q.village.festival_stall.a3
+Helping at a friend's stall, that's your festival. I've got a stall. Hint, hint.
+
+## callback.answer.q.village.night_walk.a1
+You like walking the village at night. Did you see the lanterns on the river last night?
+
+## callback.answer.q.village.night_walk.a2
+The old shrine creaked all night in the wind. You'd have hated it. Spooky, you said.
+
+## callback.answer.q.village.night_walk.a3
+Straight home at night, you said. Sensible. It's getting dark. Off you go.

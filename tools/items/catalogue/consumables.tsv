@@ -1,0 +1,22 @@
+# Medicine, pills and field supplies (Shinobi Life). VF's three medical supplies are reused as they are.
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+soldier_pill	Soldier Pill	consumable	pill	genin	beta2	16	60	-	Restores half your chakra at once; the next fatigue stage comes an hour sooner	-	sprite	chakra=50%;fatigue=+60m;cooldown=120s
+food_pill	Food Pill	consumable	pill	genin	beta2	16	25	-	A field ration in a pill: hunger to full, no Well Fed	-	tint:soldier_pill	hunger=20
+blood_pill	Blood Pill	consumable	pill	genin	beta3	16	45	-	Restores six hearts over ten seconds	-	tint:soldier_pill	heal=12/10s
+chakra_candy	Chakra Drop	consumable	pill	academy	beta1	16	8	-	A hard sweet the Academy hands out: a little chakra back during practice	food:candy	icon	chakra=10%
+akimichi_pill	Akimichi Three-Colour Pills	consumable	pill	genin	later	3	0	clan:akimichi	The clan's secret pills: each colour unlocks more strength, at a cost	-	icon	bind=clan
+herbal_poultice	Herbal Poultice	consumable	medicine	academy	beta2	16	20	-	Three hearts over ten seconds	-	icon	heal=6/10s
+burn_salve	Burn Salve	consumable	medicine	genin	beta2	16	18	-	Puts out burning and heals two hearts	-	icon	cure=burning;heal=4
+antidote	Antidote	consumable	medicine	genin	beta2	16	35	-	Cures poison	-	sprite	cure=poison
+strong_antidote	Suzuran Antidote	consumable	medicine	chunin	later	16	90	-	Cures poison and paralysis and wards off both for a minute	-	tint:antidote	cure=poison,paralysis;ward=60s
+eye_drops	Eye Drops	consumable	medicine	genin	beta2	16	10	-	Clears blindness from smoke and flash	-	tint:antidote	cure=blindness
+bandage_wrap	Bandage Wrap	consumable	medicine	academy	beta1	16	8	vf	Village Friends' bandage: binds a wound (yours or a knocked-out squadmate's)	-	vf	vf=villagefriends:bandage_wrap
+smelling_salts	Smelling Salts	consumable	medicine	genin	beta2	16	30	vf	Village Friends' salts: wakes a knocked-out squadmate on a fifth of their health	-	vf	vf=villagefriends:smelling_salts
+revival_tonic	Revival Tonic	consumable	medicine	chunin	later	16	150	vf	Village Friends' tonic: wakes a knocked-out squadmate fully healed	-	vf	vf=villagefriends:revival_tonic
+coating_venom	Venom Coating	consumable	coating	genin	beta2	16	40	-	Coats senbon or a kunai: the next five hits poison	-	tint:antidote	coat=poison:5
+coating_numbing	Numbing Coating	consumable	coating	genin	beta3	16	80	-	Coats senbon: the next three hits slow a target to a crawl	-	tint:antidote	coat=paralysis:3
+coating_sleep	Sleep Coating	consumable	coating	genin	beta3	16	70	-	Coats senbon: the next two hits make a weak enemy doze off	-	tint:antidote	coat=sleep:2
+ration_bar	Field Ration	consumable	ration	genin	beta2	16	10	kit:genin	Dry, chewy, never spoils: six hunger on a mission	-	icon	food=6;sat=0.4
+insect_repellent	Insect Repellent	consumable	ward	genin	beta3	16	12	-	Keeps the forest's biting insects away for five minutes	-	icon	ward=insects:300s
+scent_powder	Scent-Masking Powder	consumable	ward	genin	beta3	16	20	-	Trackers and ninken lose your scent for three minutes	-	icon	ward=scent:180s
+refreshing_towel	Hot Towel	consumable	ward	any	beta2	1	0	shop:bath_house	From the bath house: the next fatigue stage comes an hour later	-	icon	fatigue=-60m

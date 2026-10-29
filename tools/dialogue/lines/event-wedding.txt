@@ -1,0 +1,53 @@
+# Residents' weddings at the shrine (adults), with family and friends, then a party. Plain talk, no romance words.
+#! tags: event=wedding
+
+## greet.event  fn=react
+There's a wedding at the shrine today! You can hear the drums from here.
+Good day, {player}. {friend} is getting married this afternoon, and I've been asked to carry the sake.
+A wedding! The whole street's turned out to see the procession.
+Morning! Have you heard? There's a wedding today. The shrine's been decked in white since dawn.
+Wedding day at the shrine. Everyone's in their best, even the dogs have ribbons.
+
+## greet.event  personality=warmhearted|gentle  fn=react
+A wedding today! I've cried twice already and it hasn't even started.
+
+## greet.event  personality=stern|reserved  fn=react
+A wedding. Good. They'll need patience. Every married pair does.
+
+## greet.event  stage=child  fn=react
+There's a wedding! I'm throwing the petals! I've been practising on my sister.
+Did you see the wedding procession? There was a big red umbrella and everybody bowed!
+
+## chat.event  fn=worldbuild
+The couple walk to the shrine under a red umbrella. The families follow in a long line behind.
+At the shrine the couple share three cups of sake, three sips each. It's very quiet, then everyone cheers.
+After the shrine, there's a party in the family's house. It goes on until someone falls asleep in the rice.
+Wedding guests bring ryo in a folded envelope. Odd numbers only, for luck.
+The two families sit across from each other at the wedding meal. By the end, you can't tell them apart.
+I was at a wedding where the dog walked the whole procession. Nobody minded. It looked very proud.
+The shrine priests go through the wedding blessing slow. It's one of the longest prayers they know.
+A wedding between two clans means two crests on the lanterns. People count how many of each.
+The couple gives every guest a little box of sweets to take home. I keep the boxes.
+My spouse and I married at that same shrine. The cedar by the steps was just a sapling then.
+
+## chat.event  fn=teach
+If you're invited to a wedding, wear your best and bring a gift. A small one is fine, a thoughtful one is better.
+
+## chat.event  personality=playful|fiery  fn=reveal_character
+I'm going to dance at the party until my feet fall off. Then I'll dance sitting down.
+
+## chat.event  personality=pragmatic|meticulous  fn=reveal_character
+I'm in charge of the seating plan. Two families, forty people, three old grudges. Pray for me.
+
+## chat.event  personality=thoughtful|steadfast  fn=reveal_character
+A wedding is two families agreeing to share their worries. That's a braver thing than people think.
+
+## chat.event  clan=akimichi  fn=worldbuild
+At an Akimichi wedding, the meal lasts longer than the ceremony. By about six hours.
+
+## chat.event  clan=inuzuka  fn=worldbuild
+In our clan the ninken walk in the wedding procession. A wedding without a howl isn't a proper one.
+
+## chat.event  stage=child  fn=worldbuild
+Weddings have the best food. I ate four sweet rice cakes and nobody stopped me.
+The grown-ups danced. It was very embarrassing. I loved it.

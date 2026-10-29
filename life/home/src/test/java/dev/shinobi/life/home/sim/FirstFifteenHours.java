@@ -47,19 +47,19 @@ public final class FirstFifteenHours {
 
     /** Side quests a typical player finishes, by day: the keepsakes and pieces they bring home, and their ryo. */
     static final Map<Integer, List<String>> REWARDS = new TreeMap<>(Map.ofEntries(
-            Map.entry(3, List.of("keepsake:shogi_board")), Map.entry(6, List.of("keepsake:cat_figurine")),
-            Map.entry(9, List.of("keepsake:framed_ladle", "piece:ichiraku_stool")), Map.entry(16, List.of("keepsake:race_ribbon")),
-            Map.entry(20, List.of("piece:tea_set")), Map.entry(23, List.of("keepsake:dogs_and_bugs_token")),
-            Map.entry(27, List.of("keepsake:ferry_lantern", "keepsake:clan_keepsake.nara")), Map.entry(30, List.of("keepsake:lake_lantern")),
-            Map.entry(34, List.of("keepsake:price_war_token", "keepsake:clan_keepsake.akimichi")), Map.entry(43, List.of("keepsake:post_splinter"))));
+            Map.entry(3, List.of("keepsake:keepsake_shogi_set")), Map.entry(6, List.of("keepsake:keepsake_cat_figurine")),
+            Map.entry(9, List.of("keepsake:keepsake_framed_ladle", "piece:ichiraku_stool")), Map.entry(16, List.of("keepsake:keepsake_race_ribbon")),
+            Map.entry(20, List.of("piece:tea_set")), Map.entry(23, List.of("keepsake:keepsake_peace_offering")),
+            Map.entry(27, List.of("keepsake:keepsake_ferry_lantern", "keepsake:keepsake_clan_nara")), Map.entry(30, List.of("keepsake:keepsake_lake_lantern")),
+            Map.entry(34, List.of("keepsake:keepsake_price_war", "keepsake:keepsake_clan_akimichi")), Map.entry(43, List.of("keepsake:keepsake_post_splinter"))));
     static final Map<Integer, String> PHOTOS = Map.of(2, "photo.class", 11, "photo.graduation", 12, "photo.squad", 19, "photo.first_c_rank",
             30, "photo.leaf_festival", 45, "photo.chunin_exams");
     /** What a typical player buys, in order, once it is in the shops and they can afford it. */
-    static final List<String> WISHLIST = List.of("floor_cushion", "tatami_mat", "paper_lamp", "houseplant", "display_shelf", "photo_frame", "scroll_shelf",
-            "pet_bed", "pet_bowl", "folding_screen", "leaf_banner", "barrel", "rug", "curtains", "training_dummy", "photo_frame",
-            "noren_curtain", "ramen_poster", "ramen_cup_tower", "bowl_shelf", "desk", "thick_futon", "meditation_mat", "icebox",
-            "andon_lamp", "tea_table", "zabuton_pair", "photo_frame", "balcony_planter", "wind_chime", "display_case", "kotatsu",
-            "hanging_scroll", "curio_cabinet", "ikebana_vase", "lantern_string", "festival_mask", "photo_frame", "weight_rack", "balcony_bench", "bonsai");
+    static final List<String> WISHLIST = List.of("zabuton", "tatami", "andon_lamp", "potted_fern", "display_shelf", "photo_frame", "scroll_shelf",
+            "pet_bed", "pet_bowl", "shoji_screen", "leaf_banner", "barrel", "rug", "curtains", "training_dummy", "photo_frame",
+            "noren", "poster", "ramen_cup_tower", "bowl_shelf", "low_desk", "futon_deluxe", "meditation_mat", "icebox",
+            "andon_lamp", "tea_table", "zabuton", "photo_frame", "balcony_planter", "wind_chime", "display_case", "kotatsu",
+            "hanging_scroll", "curio_cabinet", "ikebana", "lantern_string", "festival_mask", "photo_frame", "weight_rack", "balcony_bench", "potted_bonsai");
 
     public static Result run(long seed) {
         var w = Cast.world(seed);
@@ -124,7 +124,7 @@ public final class FirstFifteenHours {
                     ryo += 80;
                 } else home.place(r.substring(6));
             }
-            if (d == 8 && w.level(Cast.TEAMMATE_A) >= 3) home.keep(Catalog.KEEPSAKES.get("village_painting"));
+            if (d == 8 && w.level(Cast.TEAMMATE_A) >= 3) home.keep(Catalog.KEEPSAKES.get("keepsake_bond_teammate_a_1"));
             if (d == 5) home.pet("ninken");
             if (d == 30) home.place("goldfish_bowl");
             if (PHOTOS.containsKey(d)) {
