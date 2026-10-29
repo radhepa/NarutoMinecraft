@@ -5,7 +5,9 @@ import java.util.regex.Pattern;
 
 /**
  * Fills a line's tokens: {@code {player}} and its forms, {@code {name:<ref>}}, {@code {given:<ref>}},
- * {@code {family:<ref>}}, {@code {hokage:<n>}}, pronouns {@code {they:<ref>}}..., {@code {twist:<slot>}}, and
+ * {@code {family:<ref>}}, {@code {hokage:<n>}}, pronouns {@code {they:<ref>}}... ({@code player} is a reference too) with
+ * verbs that agree ({@code {is:<ref>}}, {@code {has:<ref>}}, {@code {was:<ref>}}, {@code {s:<ref>}}), a pet's name
+ * {@code {pet:<ref>}}, {@code {twist:<slot>}}, and
  * situational values from the context ({@code {item}}, {@code {place}}, {@code {friend}}...). Returns null when a
  * token has no value here, so the selector moves on to a line it can say.
  */
@@ -18,7 +20,7 @@ public final class Tokens {
         var out = new StringBuilder();
         while (m.find()) {
             String value = value(m.group(1), m.group(2), c, names);
-            if (value == null || value.isBlank()) return null;
+            if (value == null || value.isBlank() && !m.group(1).equals("s")) return null;
             m.appendReplacement(out, Matcher.quoteReplacement(value));
         }
         m.appendTail(out);
@@ -29,7 +31,18 @@ public final class Tokens {
     private static String value(String token, String arg, Context c, Names names) {
         if (arg != null) return switch (token) {
             case "name", "given", "family" -> names.name(arg, token);
-            case "they", "them", "their", "theirs" -> names.pronoun(arg, token);
+            case "they", "them", "their", "theirs", "themself" -> names.pronoun(arg, token);
+            case "pet" -> names.name(arg, "pet");
+            // Verbs that agree with someone's pronoun: "{they:x} {is:x} late" is "they are late" or "she is late".
+            case "is", "has", "was", "s" -> {
+                boolean plural = "they".equals(names.pronoun(arg, "they"));
+                yield switch (token) {
+                    case "is" -> plural ? "are" : "is";
+                    case "has" -> plural ? "have" : "has";
+                    case "was" -> plural ? "were" : "was";
+                    default -> plural ? "" : "s";
+                };
+            }
             case "twist" -> names.name("twist:" + arg, "name");
             case "hokage" -> { try { yield names.hokage(Integer.parseInt(arg)); } catch (NumberFormatException e) { yield null; } }
             default -> null;

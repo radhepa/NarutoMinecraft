@@ -133,7 +133,12 @@ footwork dojo, the Haruno market family). A clan line shows life inside the clan
   `{family:role:x}`; a Hokage is `{hokage:4}`; situational fills are `{friend}`, `{neighbor}`,
   `{rival}`, `{kin}`, `{place}`, `{item}`, `{dish}`, `{special}`, `{shop}`, `{technique}`,
   `{client}`, `{target}`, `{count}`, `{pay}`, `{event}`, `{season}`, `{weekday}`, `{time}`,
-  `{other}` (the other speaker in an exchange) and `{squad}`. No literal names: no names from the
+  `{other}` (the other speaker in an exchange) and `{squad}`. Pronouns take a reference, the
+  player included: `{they:player}`, `{them:role:x}`, `{their:...}`, `{theirs:...}`,
+  `{themself:...}`, with verbs that agree: `{they:role:x} {is:role:x} late`,
+  `{they:player} walk{s:player} fast` (`{is:}`, `{has:}`, `{was:}`, `{s:}`). `{pet:<ref>}` is
+  someone's pet's name. The player's temperament (`player_temperament`: bold steady cheerful quiet
+  curious stubborn) is a tag for flavour lines, never a gate. No literal names: no names from the
   name pools, and no canon Naruto characters or catchphrases. Place names like Ichiraku, the
   Hokage Rock and the Academy are fine.
 - **The player is always publicly a clanless orphan.** Never assume a clan; clan folk may wonder or

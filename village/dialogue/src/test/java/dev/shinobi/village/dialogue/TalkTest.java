@@ -141,6 +141,15 @@ class TalkTest {
         assertEquals(Talk.Why.EXHAUSTED, talk.chat("y", FIERY, 1, Fixture.random()).why(), "no item and no rival here");
     }
 
+    @Test void pronounsAndTheirVerbsAgree() {
+        var they = Names.of(java.util.Map.of());
+        var she = Names.of(java.util.Map.of("role:rival.they", "she", "role:rival.them", "her", "role:rival.pet", "Biscuit"));
+        var c = Context.of();
+        assertEquals("They are late again; they walk fast though.", Tokens.fill("{they:role:rival} {is:role:rival} late again; {they:role:rival} walk{s:role:rival} fast though.", c, they));
+        assertEquals("She is late again; she walks fast though.", Tokens.fill("{they:role:rival} {is:role:rival} late again; {they:role:rival} walk{s:role:rival} fast though.", c, she));
+        assertEquals("Biscuit misses her.", Tokens.fill("{pet:role:rival} misses {them:role:rival}.", c, she));
+    }
+
     @Test void barksDealEveryLineOnceBeforeAnyComesBack() {
         var talk = new Fixture()
                 .cycle("combat.fight_start.bandit", "Hand over the ryo!")

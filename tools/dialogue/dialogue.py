@@ -79,6 +79,7 @@ TAGS = {
                  'carpenters_lane', 'academy_streets', 'riverside', 'artists_lane', 'uchiha_quarter', 'stadium_streets'},
     'relation': {'friends', 'family', 'couple', 'coworkers', 'neighbors', 'rivals', 'clan', 'strangers', 'kids',
                  'shinobi', 'elders', 'parent_child', 'customers'},
+    'player_temperament': {'bold', 'steady', 'cheerful', 'quiet', 'curious', 'stubborn'},
     'job': None, 'role': None, 'place': None, 'shop': None, 'part': None, 'speaker': None, 'habit': None,
     'deed': None, 'story': None,
 }
@@ -87,7 +88,8 @@ TOKENS = {'player', 'player_family', 'player_full', 'player_rank', 'player_clan'
           'partner', 'kin', 'place', 'district', 'item', 'dish', 'special', 'technique', 'client', 'target', 'count',
           'pay', 'event', 'season', 'weekday', 'time', 'shop', 'other', 'clan', 'teller', 'victim', 'activity',
           'village', 'gift', 'nature', 'when', 'birthday', 'celebrant', 'boss', 'squad'}
-REF_TOKENS = {'name', 'given', 'family', 'they', 'them', 'their', 'theirs', 'twist'}
+# Tokens that take a reference ({they:role:sensei}); is/are, has/have, was/were and s agree with the pronoun ({they:x} {is:x}).
+REF_TOKENS = {'name', 'given', 'family', 'they', 'them', 'their', 'theirs', 'themself', 'twist', 'pet', 'is', 'has', 'was', 's'}
 CONDITIONS = {'all', 'any', 'not', 'flag', 'rank_at_least', 'rank_at_most', 'level_at_least', 'quest_state', 'friendship',
               'clan', 'clanless', 'age_stage', 'time_between', 'calendar', 'at_place', 'has_item', 'has_ryo',
               'knows_technique', 'nature', 'mode', 'difficulty', 'random', 'district', 'clan_status', 'event_active',
@@ -99,7 +101,7 @@ ACTIONS = {'set_flag', 'start_quest', 'advance_quest', 'give_item', 'take_item',
 MAX_LINE, MAX_LABEL = 300, 34
 ALL_AGES = ('bond.', 'talk.', 'hangout.', 'gift.', 'reaction.', 'life.', 'followup.', 'callback.', 'again', 'close')
 # Families whose keys may end in a personality (BondDialogue's <key>.<archetype>); elsewhere ".proud" is just a word.
-PERSONALITY_SUFFIXED = ('bond.greet', 'bond.jealous', 'bond.birthday', 'bond.romance', 'talk.', 'life.', 'hangout.', 'gift.',
+PERSONALITY_SUFFIXED = ('bond.greet', 'bond.levelup', 'bond.jealous', 'bond.birthday', 'bond.romance', 'talk.', 'life.', 'hangout.', 'gift.',
                         'reaction', 'callback.contradict', 'again', 'close', 'followup.', 'combat.')
 ROMANCE = re.compile(r"\b(kiss\w*|flirt\w*|crush(es)?|sweetheart\w*|darling|romanc\w*|romantic|in love|love letter\w*|"
                      r"go(ing)? on a date|dating|marry me|propos\w+ to|handsome|gorgeous|blush\w* at you)\b", re.I)

@@ -3,7 +3,7 @@
   "_doc": "The dialogue engine's tuning, compiled into data/narutominecraft/dialogue/rules.json. Every number the selector, the talk budget and the repeat behaviour use lives here, so a balance pass is a data change (DIALOGUE.md).",
   "tag_weights": {
     "role": 10, "quarrel": 6, "story": 6, "event": 4, "clan": 4, "personality": 4, "job": 3, "shop": 3, "rank": 3,
-    "level": 3, "band": 3, "player_rank": 2, "clan_status": 2, "same_clan": 3, "deed": 4, "district": 2, "place": 3,
+    "level": 3, "band": 3, "player_rank": 2, "player_temperament": 1, "clan_status": 2, "same_clan": 3, "deed": 4, "district": 2, "place": 3,
     "stage": 1, "player_stage": 1, "group": 2, "weather": 2, "mood": 2, "relation": 2, "time": 1, "season": 1,
     "market": 2, "slice": 2, "gender": 1, "tier": 1, "speaker": 1, "part": 0, "habit": 2, "when": 3
   },

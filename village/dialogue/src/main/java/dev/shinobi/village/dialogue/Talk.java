@@ -322,7 +322,7 @@ public final class Talk {
         return key;
     }
     /** Families whose keys may end in a personality; elsewhere ({@code village.mood.proud}) the last word is part of the key. */
-    static final List<String> SUFFIXED = List.of("bond.greet", "bond.jealous", "bond.birthday", "bond.romance", "talk.", "life.", "hangout.",
+    static final List<String> SUFFIXED = List.of("bond.greet", "bond.levelup", "bond.jealous", "bond.birthday", "bond.romance", "talk.", "life.", "hangout.",
             "gift.", "reaction", "callback.contradict", "again", "close", "followup.", "combat.");
     private Line byId(int id) {
         if (index == null) {

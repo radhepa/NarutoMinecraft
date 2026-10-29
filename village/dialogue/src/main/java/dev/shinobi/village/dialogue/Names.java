@@ -10,9 +10,12 @@ import java.util.Map;
 public interface Names {
     /** The player: {@code given}, {@code family}, {@code full}, {@code rank} (a title) or {@code clan} (display name). */
     String player(String form);
-    /** Someone by reference ({@code role:sensei}, {@code resident:41}, {@code twist:<slot>}): {@code name}, {@code given} or {@code family}. */
+    /**
+     * Someone by reference ({@code role:sensei}, {@code resident:41}, {@code twist:<slot>}, {@code player}): {@code name}
+     * ("Given Family"), {@code given}, {@code family}, or {@code pet} (the name of their pet).
+     */
     String name(String ref, String form);
-    /** Their pronoun ({@code they}, {@code them}, {@code their}, {@code theirs}), from how they are recorded. */
+    /** Their pronoun ({@code they}, {@code them}, {@code their}, {@code theirs}, {@code themself}), from how they are recorded. */
     String pronoun(String ref, String form);
     /** The given name of the Nth Hokage (rolled per save). */
     String hokage(int n);
