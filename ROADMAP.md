@@ -93,7 +93,7 @@ Jonin.
 | Minecraft version | Stay on VF's version, **Minecraft 26.3, Fabric Loader 0.19.5**, pinned for the whole beta. No version chasing mid-beta; port only between beta slices, if VF moves. |
 | Story and villain | An original antagonist and plot, kept in the developers-only [story bible](docs/story/STORY_BIBLE.md). The story specifics are the developers' creative call, so the owner can play it unspoiled. |
 | No spoilers | ROADMAP.md and the README stay spoiler-free: systems, formats, the map, the delivery plan and neutral chapter descriptions only. Every twist lives in the story bible. |
-| Bond ability | **Kindling Bond**: you can kindle a bonded ally's chakra nature or technique and borrow it briefly; deeper bonds (teammates, sensei, friends, spouse) unlock more, and it is one of the ways to gain more natures. A bond-flame flickers between you and the ally. Unlocked by a story moment after the beta ([Kindling Bond](#kindling-bond)). |
+| Bond ability | **Kindling Bond**: a top-tier bond ability whose power flows outward through people and grows with your web of bonds. It sees bonds, strengthens allies' own techniques, links a squad's chakra, and at its peak reaches deeply bonded allies across distance; it never copies techniques. Gated by bond depth; unlocked through the story ([Kindling Bond](#kindling-bond)). |
 | Hokage | All Hokage are original characters with custom faces. Four faces are on the Rock at the start; the player is meant to become the **Eighth**. Their **names are rolled per save**; their looks, clans and eras are fixed, because faces, portraits and statues are baked into the map. |
 | Names | **Most character names are rolled per save, in Classic and Varied alike**: squadmates, sensei, rivals, elders, recurring characters and the antagonists. Roles, personalities and looks stay as designed (Classic stays curated in everything but names). Given names come from seeded pools by gender; family names from the character's clan, or from the ordinary `family_names` pool in `tools/wardrobe/population.json`. All text uses name tokens ([Names](#names-rolled-per-save)). |
 | Rotating story roles | Some story roles are assigned per save from a few candidates, each with its own seeded clue trail, so a twist still surprises a player who knows the answer from another save ([Rotating story roles](#rotating-story-roles)). Which roles rotate, and the candidates, are in the story bible only. |
@@ -868,7 +868,7 @@ speech bubbles and dialogue; the levels come from Shinobi Life's bond engine
 fade or stay, personalities, story gates, squad dynamics, community standing and quarrel arcs; and
 time together ([LIFE_TOGETHER.md](LIFE_TOGETHER.md)): hangouts at 22 places, invitations both
 ways, rituals, residents' own lives, follow-ups and conversations that deepen with the bond. The beta adds **bond quests** (`kind:
-bond`) gated by friendship (bond levels also feed [Kindling Bond](#kindling-bond) after the beta): one per classmate in Beta 1, two per teammate in Beta 2, and one
+bond`) gated by friendship (bond levels also gate [Kindling Bond](#kindling-bond)): one per classmate in Beta 1, two per teammate in Beta 2, and one
 per teammate in Beta 3. Romance waits for the teen stage, after the beta; children have friendships and
 VF's harmless crushes in dialogue only, enforced in code.
 
@@ -1335,7 +1335,7 @@ marriage after 30 to 150 days at 65 or more). Shinobi Life extends it to the pla
 - **Dating:** at friendship level 7 ("spend time together": walks, ramen, festival nights);
   confessing at level 8 makes you sweethearts (village news).
 - **Marriage:** adults only, at level 10, a proposal and a wedding at the shrine; a spouse is the
-  strongest [Kindling Bond](#kindling-bond). Your spouse moves
+  strongest [Kindling Bond](#kindling-bond) (a spouse opens its Blaze tier). Your spouse moves
   in; a clanless player may join the spouse's clan, or the spouse may join yours.
 - **Children (post-game):** a married player can have children. They are VF residents born into
   your household (VF already records parents, households and surnames for residents' babies),
@@ -1343,22 +1343,25 @@ marriage after 30 to 150 days at 65 or more). Shinobi Life extends it to the pla
 
 ### Kindling Bond
 
-*Decided.* A bond ability the player unlocks at a story moment after the beta (the beta at most
-foreshadows it).
+*Decided.* A top-tier bond ability: its power flows outward through the people you are bonded to,
+and grows with your whole web of bonds. It is not a copying eye: it never takes or borrows
+another's techniques. When and how the player gets it belongs to the story.
 
-- **What it does:** kindle a bonded ally's chakra nature or one of their techniques and borrow it
-  briefly: a few casts of their nature's jutsu, or one use of their signature technique, then the
-  flame needs time to rekindle.
-- **Bonds decide what you can borrow:** friendship level 6 lets you borrow an ally's nature, level 8
-  one of their techniques, level 10 (or a teammate, your sensei, your spouse) both and for longer.
-  It ties combat to the friendship and romance systems: the village you befriend is your arsenal.
-- **Natures:** one of the ways to gain more elements. A nature borrowed often enough can be learned
-  for good with a master's trial.
-- **How it looks:** a bond-flame, a small watch-fire, flickers between you and the ally, and your
-  chakra takes their nature's colour while it burns.
-- **In the systems:** Shinobi Combat adds a `kindle` effect type; Shinobi Life's friendship and
-  romance levels are its bond levels; Core's natures list gains a "borrowed" source; Progression
-  unlocks it with a story flag.
+| Tier | Bond gate | What opens |
+|---|---|---|
+| **Spark** | Friendship 6 with an ally | **Thread Sight**: bonds appear as threads of light; you sense bonded allies anywhere, and a bonded speaker's lie shows as a flicker (strangers and enemies read poorly). Small kindles that steady an ally |
+| **Flame** | Friendship 8 | **Kindle**: empower an ally's own technique past its usual limits. **Ember Link**: a shared chakra pool, damage spread across the linked squad, and seeing through an ally's eyes |
+| **Blaze** | Friendship 10, or your spouse | **Ember Mark**: travel to a deeply bonded ally, or call them to you. **Unison techniques**, one per bonded pairing |
+| **Bonfire** | The whole bond web | The ultimate, scaling with every bond you hold |
+
+- **Costs:** you feel the pain of linked allies; overuse burns chakra and stamina; a quarrel dims a
+  bond's flame and a falling-out snuffs it out until the bond is mended.
+- **Natures:** learned by resonance: fight beside someone who has a nature, then pass their trial.
+- **How it looks:** an ember mark on the palm or chest, threads of light between bonded people, and
+  ember-gold chakra.
+- **Ownership:** Shinobi Combat models the techniques (the `kindle` action and its effects), the
+  bond system owns the gates (`kindling`, `kindling_uses`, `bond_web`), and the story owns the lore
+  and the timing.
 
 ### Elemental natures
 
@@ -1367,7 +1370,7 @@ foreshadows it).
 | First | Chosen at the Genin ceremony (Beta 2) |
 | Second | Chunin: a nature master's three trials |
 | Third | Jonin: a clan master or a mission line |
-| More | [Kindling Bond](#kindling-bond) (a nature borrowed often enough through a bond can be learned with a master's trial) and rare milestones in the later arcs |
+| More | Resonance through [Kindling Bond](#kindling-bond) (fight beside someone with the nature, then pass their trial) and rare milestones in the later arcs |
 
 Your natures' jutsu cost 25% less; other natures' jutsu cannot be learned.
 
@@ -1411,7 +1414,7 @@ touches them.
 - **Mind Transfer** (Yamanaka, Chunin or later): the camera moves into a mob or resident for 8 s;
   your body slumps and can be hit.
 - **Stealth** (Jonin and ANBU): detection by sight and sound, night operations.
-- **Kindling Bond** (after the beta): see [Kindling Bond](#kindling-bond).
+- **Kindling Bond:** see [Kindling Bond](#kindling-bond).
 
 ### The full event calendar
 
