@@ -117,6 +117,8 @@ Jonin.
 | Pets | Adopt a pet that follows you: a ninken pup or a cat. No summons. |
 | Hunger | Vanilla hunger stays; food from shops and Ichiraku adds small buffs. |
 | Gear | Shops, plus crafting at a **smithy** (kunai, shuriken, blades) and a **workbench** (paper bombs, smoke bombs, tags, furniture), station blocks in the world and in your apartment. |
+| No rent | Homes never cost rent, and the orphan's stipend continues all game. |
+| Collecting | A collection book (curios, gifts, keepsakes, photos, ninja info cards, clan crests and more), home storage with sort, search and deposit-all, and display cases. Owned by the home design; item ids by the items design. |
 | ANBU | An optional branch from Jonin, not a required rung. |
 | Hand signs | Both typed key sequences and a radial menu, chosen in the settings. |
 | Learning jutsu | A mix of mentors, scrolls bought with ryo, and mission rewards. |
@@ -781,6 +783,9 @@ candidate flats; in Classic it is always the same one.
 - **Your bed** is furniture too, but every home always keeps one bed; it is the bed that clears
   fatigue.
 - **Upgrades** (a flat, a house, a clan room, an estate) come after the beta ([Later systems](#11-later-systems)).
+- **Collecting and storage:** a collection book (curios, gifts, keepsakes, photos, ninja info
+  cards, clan crests and more), chests with sort, search and deposit-all, and display cases for the
+  apartment. Designed by the home session; this section will link its document when it lands.
 
 ### Ryo
 
@@ -792,7 +797,7 @@ in-game week (a little over two hours) of play.
 
 | Earn (beta) | Ryo | Spend (beta) | Ryo |
 |---|---|---|---|
-| Orphan's stipend (Academy only) | 30 a day | Ramen, onigiri, tea | 3 to 10 |
+| Orphan's stipend (all game; the final amount, and whether it changes by rank, come from the items design) | 30 a day | Ramen, onigiri, tea | 3 to 10 |
 | Part-time jobs (Ichiraku, grocer, flower shop, forge) | 40 to 80 a shift | Kunai, shuriken, smoke and paper bombs | 5 to 40 each |
 | D-rank mission | 60 to 150 | Soldier pill | 60 |
 | C-rank mission | 300 to 600 | Furniture | 20 to 800 a piece |
@@ -1302,7 +1307,7 @@ What the roadmap needs from it, spoiler-free:
 
 | Rank | Home |
 |---|---|
-| Chunin | Rent a two-room flat with a balcony (300 ryo a week), or move into your clan's quarter if clan-born |
+| Chunin | Move to a two-room flat with a balcony (no rent), or into your clan's quarter if clan-born |
 | Jonin | Buy a small house (about 30,000 ryo), or a larger clan room |
 | Clan founder | Your clan's estate |
 | Hokage | Quarters in the Residence |
