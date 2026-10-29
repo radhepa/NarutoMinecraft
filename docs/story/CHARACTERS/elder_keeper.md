@@ -17,7 +17,7 @@
 | Peeves | recklessness, lateness |
 | Dream | "protect the village" as he was taught; under it, to be forgiven for keeping quiet |
 | First appearance | Ch 1 (at the Fourth's shoulder) |
-| Last appearance | Ch 51 (dies at the archive door); remembered Ch 54, Ch 55 |
+| Last appearance | Ch 51b (dies at the archive door, fighting beside the player); remembered Ch 54, Ch 55 |
 
 ## Arc
 
@@ -52,7 +52,7 @@ what the Valley of Ash made of one Kagari.
 | Ch 19 | Hears "Kagari" was said. Knows Yūgure knows what the player is |
 | Ch 28 | Knows of the porter and the voice; suspects every candidate, including himself as a suspect in others' eyes |
 | Ch 35 to 36 | With the list, gives up the silence. With the Classic Uzumaki sealing master (`role:sensei_5`) he breaks the archive's old seals |
-| Ch 51 | Knows the leader wants the Hearthstone; holds the door |
+| Ch 51b | Knows the leader wants the Hearthstone; holds the door until the player arrives |
 
 **How he changes.**
 
@@ -62,10 +62,12 @@ what the Valley of Ash made of one Kagari.
 | Paper Trail | Absent except as a figure at council; he appears at the memorial stone once at night (Ch 10, after the sensei leaves, if the player lingers) |
 | Dusk over the Stadium | At the Kage box during the attack, then at the archive door all night while the village burns: he guards the door, not the people, and knows it |
 | Embers | Begins to speak, one fact at a time. Names the gift if the librarian cannot (Ch 25). Asks to walk with the player (Ch 32, at trust 40) |
-| Ashes | Opens the archive (Ch 36), reads the Third's letter aloud, decodes the cipher (Ch 38; the matching is the player's, at the case board with `role:sensei_4`, who never gives answers), stands beside the player at the council (Ch 40) |
-| The Last Bonfire | Grants the old ground's records for the restored house (Ch 46). Dies holding the door (Ch 51) and passes the keys and the duty to speak to the player |
+| Ashes | Opens the archive (Ch 36), reads the Third's letter aloud (the chapter ends on it), reads the Ash Road report on its own night (Ch 37.0), decodes the cipher (Ch 38; the matching is the player's, at the case board with `role:sensei_4`, who never gives answers), stands beside the player at the council (Ch 40) |
+| The Last Bonfire | Grants the old ground's records for the restored house (Ch 46). Holds the door alone until the player arrives (Ch 51b), then dies fighting beside them, and passes the keys and the duty to speak |
 
-**Ending.** He dies in Ch 51 at the archive door against a Yūgure cell, having failed to keep the
+**Ending.** In Ch 51b he is alive when the player reaches the archive door, holding it alone against
+a Yūgure hearth. He dies while they fight side by side, and the hearth takes the Hearthstone as he
+falls: he fails to keep the
 Hearthstone and having succeeded at the thing he really owed: he made sure the truth would outlive
 him. Last line: "I kept it quiet forty years. You say it now. All of it." His keys hang in the
 restored house's hall (or the archive, if the player founded their own clan). In the epilogue the
@@ -109,7 +111,7 @@ flicker is gone; a player who watched it vanish gets his line: "There. Nothing l
 - (Ch 32) "Come to me when you are a Jonin. I will show you a door. Be on time."
 - (Ch 36) "Forty years I have been the only one who knew this, {given:player}. It is not a thing
   a man should know alone."
-- (Ch 51) "I kept it quiet forty years. You say it now. All of it."
+- (Ch 51b) "I kept it quiet forty years. You say it now. All of it."
 
 ### Topics they care about
 
@@ -117,7 +119,7 @@ flicker is gone; a player who watched it vanish gets his line: "There. Nothing l
 |---|---|
 | Levels 0 to 2 | Punctuality; the village's records; whether you are where you should be at night |
 | 3 to 4 | The Third (as "my teacher"); old handwriting; the memorial stone and who visits it |
-| 5 to 6 | Duty against conscience; what a secret costs the one who keeps it; the Ash Road (only from Ch 36) |
+| 5 to 6 | Duty against conscience; what a secret costs the one who keeps it; the Ash Road (only from Ch 37.0) |
 | 7+ | His fear that he is a coward; what the archive should become; who should keep it after him |
 
 ### Never reveal before
@@ -128,7 +130,7 @@ flicker is gone; a player who watched it vanish gets his line: "There. Nothing l
 | The word "Kagari" | `story.ch36.done` (he uses "your fire" or "the old name" before) |
 | What is behind the door | `story.ch36.done` |
 | The fourth clause, the forged report, the renaming list, the Hearthstone | `story.ch36.done` |
-| That he signed the Ash Road sealing | `story.ch36.done` (scene 36.6) |
+| That he signed the Ash Road sealing | Ch 37.0 (the report's own night, after the archive chapter) |
 | That he asked the councillor to arrange the stipend | `story.ch36.done`; in a councillor-bound save he tells it in Ch 39 as part of the reveal |
 | His list of flickers (descendants) | `story.ch37.done` |
 | Which candidate he suspects | Never: he refuses to guess aloud ("I have been wrong about people for forty years") |
@@ -139,20 +141,20 @@ flicker is gone; a player who watched it vanish gets his line: "There. Nothing l
 |---|---|---|---|---|---|---|
 | `ans.elder_keeper.door` | Ch 4 | (Player asks; his reaction is the beat) | What's behind it / Someone was here / leave | "Someone was here" tests his honesty and frightens him (he lies) | Ch 36: "You told me someone had been at my door. You were right, and I said no one comes here." | "Someone was here" makes him check the seals every night after; in Ch 36 he credits the player with the first warning |
 | `ans.elder_keeper.late` | Ch 32 (the walk, trust 40) | "Is it worse to tell a truth too early, or too late?" | Too early: it hurts people unready / Too late: the hurt grows in the dark / Never is the worst | Too late honours conscience over duty; too early honours his old duty | Ch 36: he quotes it opening the door | "Too late" or "never" and he opens the archive himself in Ch 36 even below the trust gate (if trust ≥ 50) |
-| `ans.elder_keeper.oath` | Ch 33 (after the trial, a level-5 talk) | "If you swore an oath to someone you loved, and the oath was wrong, would you keep it?" | Keep it; an oath is an oath / Break it and tell them why / Keep it until it hurts someone, then break it | Tests duty against honesty | Ch 36: "You said until it hurts someone. It hurt someone on the Ash Road" | Shapes which line he reads the Third's letter with (relief / shame / grief) |
-| `ans.elder_keeper.who_keeps` | Ch 38 (case board, level 6) | "When I am gone, who should keep the archive?" | Nobody; open it / Someone who will read it aloud / You, as long as you can | Tests his fear of his own end | Ch 51 and Ch 55: the archive's next keeper; the player picks in Ch 55 | "Nobody" makes him leave the archive door unlocked in his will |
-| `ans.elder_keeper.forgive` | Ch 40 (after the council, level 6) | "Should the village forgive the people who kept quiet?" | Yes, once they speak / No, but it should let them help / It's not my forgiveness to give | Asks for himself without saying so | Ch 51: his last words read it ("You said once they speak. I spoke.") | The answer is the last thing he asks about |
+| `ans.elder_keeper.oath` | Ch 33 (after the trial, a level-5 talk) | "If you swore an oath to someone you loved, and the oath was wrong, would you keep it?" | Keep it; an oath is an oath / Break it and tell them why / Keep it until it hurts someone, then break it | Tests duty against honesty | Ch 37.0: "You said until it hurts someone. It hurt someone on the Ash Road". Unset: he reads the report without comment | Shapes which line he reads the Third's letter with (relief / shame / grief) |
+| `ans.elder_keeper.who_keeps` | Ch 38 (case board, level 6) | "When I am gone, who should keep the archive?" | Nobody; open it / Someone who will read it aloud / You, as long as you can | Tests his fear of his own end | Ch 51b and Ch 55: the archive's next keeper; the player picks in Ch 55 | "Nobody" makes him leave the archive door unlocked in his will |
+| `ans.elder_keeper.forgive` | Ch 40 (after the council, level 6) | "Should the village forgive the people who kept quiet?" | Yes, once they speak / No, but it should let them help / It's not my forgiveness to give | Asks for himself without saying so | Ch 51b: his last words read it ("You said once they speak. I spoke."); unset: "I spoke. Late. Say the rest." | The answer is the last thing he asks about |
 | `ans.elder_keeper.third` | Ch 36 (after the letter) | "She asked whoever reads it to say it for her. Will you?" | Yes, all of it / Yes, but my way / Say it with me | Duty handed on | Ch 40 testimony line; Ch 51 "You say it now" | "Say it with me" makes him stand and speak first at the council (40.2) |
 | `ans.elder_keeper.valley` | Ch 36 (the Valley of Ash, scene 36.5) | "One man did that. Should his whole clan have paid?" | No, never / No, but I understand why they were afraid / The village should pay now | Tests the player's view of collective guilt | Ch 54 (the leader's name): he is dead, but his notes on the archive desk quote it | Feeds the player's council testimony options |
 | `ans.elder_keeper.night` | After Ch 4 (level 1, if met at the door) | "Why were you out so late? Children sleep." | I couldn't sleep / I was chasing someone / Why were *you* out? | Tests the player's honesty; the last answer tests him | Ch 32 walk: "You asked me why I was out. I was guarding a door from you" | "Why were you" makes him avoid the player for the rest of the beta (a stronger red herring) |
 | `ans.elder_keeper.stone` | Paper Trail, level 2 (at the memorial stone at night, after Ch 10) | "Do you know why names go on stone?" | So they're remembered / so they can't be changed / so someone has to look at them | Duty; the third option is his guilt | Ch 41 re-carving: he stands by the gap and repeats your answer | "Can't be changed": in Ch 41 he says "I was wrong; they can. That's worse, and better" |
-| `ans.elder_keeper.afraid` | After Ch 19 (level 2, at the archive door the morning after the attack) | "Were you afraid, in the stadium?" | Yes / No / Only for my friends | Small confession invited; he admits he stayed at the door | Ch 51: "You asked me nothing then. I'll tell you now: I was afraid the whole night" (he answers his own question) | "Only for my friends": he begins to trust the player (trust +) |
+| `ans.elder_keeper.afraid` | After Ch 19 (level 2, at the archive door the morning after the attack) | "Were you afraid, in the stadium?" | Yes / No / Only for my friends | Small confession invited; he admits he stayed at the door | Ch 51b, during the fight: "You asked me nothing then. I'll tell you now: I was afraid the whole night" (he answers his own question) | "Only for my friends": he begins to trust the player (trust +) |
 | `ans.elder_keeper.teacher` | Embers, level 4 | "Who taught you the most? Not the most jutsu. The most." | My sensei / the camps / my friends / you, maybe | His past: the Third; "you, maybe" disarms him | Ch 36 (before the letter): "She taught me the most. Mostly what not to do" | "You": he gives the player his old archive ledger pen (a keepsake) |
 
 ### What their lines are for
 
 - **Functions:** red herring (beta), warning (beta), exposition of the backstory (Ch 36 to 38),
-  conscience made visible (Chunin to Jonin), farewell (Ch 51).
+  conscience made visible (Chunin to Jonin), farewell (Ch 51b).
 - **Mood states:** `guarded` (until trust 40), `testing` (40 to 59), `confiding` (60+ or after Ch 36),
   `grieving` (after Ch 40).
 - **Pools:** `npc.elder_keeper.greet.<state>`, `talk.q.elder_keeper.<topic>`, the `bond.greet.level.*`
@@ -164,7 +166,7 @@ flicker is gone; a player who watched it vanish gets his line: "There. Nothing l
 - `twist.traitor`: he is never bound. In a councillor-bound save his betrayal by an old colleague is a
   second blow in Ch 39 ("I asked him to keep you safe. He kept you on file"). In a librarian-bound
   save he names the gift alone in Ch 25 and teaches what the archive keeps of how the Kagari kept the flame (the watch-fire practices, the songs), never the abilities themselves.
-- `twist.lineage = fallen`: in 36.6 he says the Ash Road dead Jonin's name and looks at the player
+- `twist.lineage = fallen`: in 37.0 he says the Ash Road dead Jonin's name and looks at the player
   a moment too long; he suspects, and says nothing (the reveal is the Seventh's).
 - Ch 36's opening reads `bond_meter [elder_keeper, trust, 60]` and `friendship [elder_keeper, 6]`.
 
@@ -173,3 +175,5 @@ flicker is gone; a player who watched it vanish gets his line: "There. Nothing l
 `ans.elder_keeper.late`, `ans.elder_keeper.oath`, `ans.elder_keeper.who_keeps`,
 `ans.elder_keeper.forgive`, `ans.elder_keeper.third`, `ans.elder_keeper.valley`,
 `story.suspected.keeper`, `story.ch36.done`, `story.ch37.done`. Also: `ans.elder_keeper.night`, `ans.elder_keeper.stone`, `ans.elder_keeper.afraid`, `ans.elder_keeper.teacher`.
+
+Every main-path read of an `ans.elder_keeper.*` flag has an `unset` branch (a neutral line).
