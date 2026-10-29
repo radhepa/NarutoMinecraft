@@ -51,11 +51,13 @@ def protector_plate(face, x0: int = 0):
     stamp(face, LEAF, x0 + 5, 0, {"#": "M0"})
 
 
-def forehead_protector(g, band: str = "D", seed: int = 61):
+def forehead_protector(g, band: str = "D", seed: int = 61, ring: bool = True):
     """The forehead protector: a cloth band tied at the back, with a steel plate engraved with the
-    Hidden Leaf mark, drawn at triple resolution so the mark reads."""
-    ring = g.piece("band", "HEAD", (-4, -7.6, -4), (8, 1, 8), inflate=.6)
-    solid(ring, band, "weave", seed, 2, edge=False)
+    Hidden Leaf mark, drawn at triple resolution so the mark reads. `ring=False` leaves out the band
+    around the head, for headwear whose own cloth carries the plate."""
+    if ring:
+        box = g.piece("band", "HEAD", (-4, -7.6, -4), (8, 1, 8), inflate=.6)
+        solid(box, band, "weave", seed, 2, edge=False)
     plate = g.piece("plate", "HEAD", (-9, -4, -2), (18, 8, 2), pivot=(0, -7.0, -4.62), scale=(1 / 3, 1 / 3, 1 / 3))
     for face in plate.faces:
         fabric(face, "M", "plain", seed + 1, 2)

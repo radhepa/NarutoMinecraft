@@ -1,0 +1,392 @@
+{
+  "id": "t19_field_vest",
+  "kind": "top",
+  "name": "Field Vest",
+  "gender": "unisex",
+  "texture": "tops/t19_field_vest.png",
+  "extrasHeight": 48,
+  "tags": [
+    "jonin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_swirl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.2,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "right_swirl",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -3.55,
+        0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        6,
+        6
+      ],
+      "uv": [
+        27,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "left_swirl",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        3.05,
+        0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        6,
+        6
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        -2.7
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "scroll_pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.7,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        29,
+        14
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "scroll_pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.1,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        38,
+        14
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "scroll_pocket_2",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        47,
+        14
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "scroll_pocket_3",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        56,
+        14
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        3.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        22
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        3.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        22
+      ]
+    },
+    {
+      "id": "arm_pouch_strap",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        1.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        42,
+        22
+      ]
+    },
+    {
+      "id": "arm_pouch",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -4.0,
+        1.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        30
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Flak vest over a charcoal shirt with rolled sleeves, bandaged forearms and an arm pouch."
+}

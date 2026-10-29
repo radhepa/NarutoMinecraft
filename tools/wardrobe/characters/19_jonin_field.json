@@ -1,0 +1,5 @@
+{"id": "jonin_field", "name": "Field Jonin", "tagline": "Flak vest with sleeves rolled to the elbow, bandaged forearms and a bandana tied under the protector",
+ "face": "f01_shinobi", "hair": "h08_short_crop", "headwear": "w09_bandana_protector",
+ "top": "t19_field_vest", "bottom": "b01_shinobi_trousers",
+ "palette": "JONIN_FIELD", "hair_color": "RAVEN", "eye_color": "DARK", "eye_style": "soft_glint", "feminine": false,
+ "complexion": 4, "scale": 14, "rank": "jonin"}
