@@ -40,3 +40,14 @@ more with no blocking issues.
 - **Emotion:** a lonely-playthrough floor (the red cord is always the first flame; the sensei always gives theirs; a small-fire variant and a lonely epilogue tier); the lineage-B heart line rewritten; the archive chapter ending on the Third's letter, the Ash Road report on its own night; the player present at sensei_2's death; the keeper dying beside the player; one version of every key line.
 - **Ensemble:** the rival holds the Rock's stair in 51b; the Sarutobi senior carries a contested council in Ch 42; squad5_c given a Chunin-arc beat; every cross-file contradiction resolved.
 - **Owner decisions applied since:** the stipend continues all game (Ch 55 extends it and makes it law); the player is always a clanless orphan.
+
+### Round 2 — did not pass
+
+| Lens | Score | Blocking issues (summary) |
+|---|---|---|
+| (a) Structure and pacing | 7 | Beta 3 minutes and the second skip differ from ROADMAP on main (the roadmap's branch already has the fixes); the voice's start date contradicted in reveal dialogue; the succession could still need a grind; the last arc's hours did not add up; three optional-branch chapters had minutes but no scenes |
+| (b) Characters and the ensemble | 7 | The finale's flame order stated four ways; Ch 51's roster (squad3_a's climax missing; five files disagree on positions); two holes in the voice's knowledge (the Ch 0 raid; who carried messages before the porter); stale chapter numbers and doubled lines |
+| (c) Mystery fairness | 6 | Thread Sight rules contradicted across files (threads between strangers, a lie-detector reading); three rotation divergences before Ch 39 (the night shift's wording in two files, a Beta 3 side quest, a Jonin side quest's ink); the voice's timeline against the porter's and the medic's ages |
+| (d) Naruto tone and canon | 6 | The Chunin Exams stacked canon set pieces (the cheating test, disguised villains with a dupe, the invasion at the rival bout, the Hokage struck in his box, the forest awakening); the bell test with the rival Jonin in the same scene; the Undercroft still read as canon's hidden faction; the tone rule contradicted the canon names the setting uses |
+| (e) Agency and systems | 6 | The succession floor not yet guaranteed by the engine; a beta falling-out with a teammate had no story handling; several gift beats broke the gift's rules without a declared floor; answer flags with two definitions and main-path reads with no default; the finale's web thresholds uncalibrated |
+| (f) Emotional payoff | 7 | The "takes the blow for you" beat used four times; key lines in two versions; two mentor deaths back to back and the keeper's last line asking for what was already done; the second's fate crowded, wrong in lineage B and off screen; the leader overloaded with questions; the spouse's place and the lonely ending's stall |
