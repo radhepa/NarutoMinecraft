@@ -1,0 +1,49 @@
+{
+  "id": "t405_two_tone_zip_jacket",
+  "kind": "top",
+  "name": "Two-Tone Zip Jacket",
+  "gender": "unisex",
+  "texture": "tops/t405_two_tone_zip_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "hyuga",
+    "jacket",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.0,
+        -2.7
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Fitted jacket, lavender shoulders and sleeves over a cream body, high zipped collar."
+}

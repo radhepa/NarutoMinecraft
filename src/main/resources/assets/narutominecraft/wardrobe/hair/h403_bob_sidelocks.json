@@ -1,0 +1,322 @@
+{
+  "id": "h403_bob_sidelocks",
+  "kind": "hair",
+  "name": "Bob with Sidelocks",
+  "gender": "unisex",
+  "texture": "hair/h403_bob_sidelocks.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bob_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.0,
+        4.7
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        -0.5
+      ],
+      "size": [
+        10,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bob_side_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.0,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        7
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "bob_side_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -7.0,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        7
+      ],
+      "uv": [
+        40,
+        0
+      ]
+    },
+    {
+      "id": "sidelock_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.0,
+        -7.6,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        10,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    },
+    {
+      "id": "sidelock_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.0,
+        -7.6,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -1
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ]
+    },
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        7.800000000000001
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        14
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        7.800000000000001
+      ],
+      "origin": [
+        -0.5,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        12,
+        14
+      ]
+    },
+    {
+      "id": "fringe_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        2.4000000000000004
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        17,
+        14
+      ]
+    },
+    {
+      "id": "fringe_2",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -3.0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        24,
+        14
+      ]
+    },
+    {
+      "id": "fringe_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -8.399999999999999
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        31,
+        14
+      ]
+    },
+    {
+      "id": "fringe_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -8.399999999999999
+      ],
+      "origin": [
+        -0.5,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        38,
+        14
+      ]
+    }
+  ],
+  "description": "Short rounded bob, soft blunt fringe, long straight sidelocks to the collarbone."
+}

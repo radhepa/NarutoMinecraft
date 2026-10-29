@@ -1,0 +1,77 @@
+{
+  "id": "t404_heiress_hooded_jacket",
+  "kind": "top",
+  "name": "Heiress Hooded Jacket",
+  "gender": "unisex",
+  "texture": "tops/t404_heiress_hooded_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "hyuga",
+    "jacket",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.2,
+        3.0
+      ],
+      "rotation": [
+        24,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        9,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.2,
+        -2.7
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "inflate": 0.06
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Roomy cream zip jacket, lavender cuffs and hem, a fleece-edged hood down on the back."
+}

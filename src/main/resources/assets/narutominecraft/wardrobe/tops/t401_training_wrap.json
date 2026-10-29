@@ -1,0 +1,136 @@
+{
+  "id": "t401_training_wrap",
+  "kind": "top",
+  "name": "Training Wrap",
+  "gender": "unisex",
+  "texture": "tops/t401_training_wrap.png",
+  "extrasHeight": 16,
+  "tags": [
+    "hyuga",
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "sash_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        9.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sash_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.7,
+        9.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.9,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.06
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved cream wrap top with a lavender edge, a knotted sash and taped forearms."
+}
