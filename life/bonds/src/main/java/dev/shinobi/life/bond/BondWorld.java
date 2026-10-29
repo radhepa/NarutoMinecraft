@@ -194,12 +194,14 @@ public final class BondWorld {
         return delta;
     }
     public void reveal(String who, String fact) { bond(who).facts.add(fact); }
-    /** Kindling Bond was used with someone: what was granted (nothing if the tier is none), and the use counted for the master's trial. */
-    public Kindling.Grant kindle(String who) {
-        var tier = Kindling.tier(this, who);
-        if (tier == Kindling.Tier.NONE) return Kindling.grant(tier);
-        bond(who).kindled++;
-        return Kindling.grant(tier, who.equals(spouse()));
+    /** Kindling Bond was used with someone: their flame as it burns (tier none: nothing to kindle), the use counted, resonance built. */
+    public Kindling.Flame kindle(String who) {
+        var flame = Kindling.flame(this, who);
+        if (flame.tier() == Kindling.Tier.NONE) return flame;
+        var b = bond(who);
+        b.kindled++;
+        Kindling.resonate(this, b);
+        return Kindling.flame(this, who);
     }
     public void setBondFlag(String who, String f) { bond(who).flags.add(f); }
 
@@ -227,6 +229,7 @@ public final class BondWorld {
         if (!romanceOpen(who)) delta = delta.with(Meter.ROMANCE, 0);
         b.remember(act, delta, how, about, day);
         if (act.moment) b.moments.add(momentId != null ? momentId : act.id() + "@" + day);
+        if (how == Source.SELF && Kindling.FIGHTING.contains(act)) Kindling.resonate(this, b);
         hurt(b, p, act, delta, who);
         if (act.spreads) deed(act, who, witnesses);
         rise(b);

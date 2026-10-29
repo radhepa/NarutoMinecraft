@@ -50,7 +50,7 @@ public final class SaveFormat {
         m.put("met", b.met); m.put("last_contact", b.lastContact); m.put("last_together", b.lastTogether);
         m.put("talk_day", b.talkDay); m.put("gift_day", b.giftDay); m.put("gifts_today", b.giftsToday); m.put("last_gift", b.lastGift);
         m.put("contact_days", b.contactDays); m.put("together", b.together); m.put("warmth", b.warmth);
-        m.put("level", b.level); m.put("floor", b.floor); m.put("low_days", b.lowDays); m.put("kindled", b.kindled);
+        m.put("level", b.level); m.put("floor", b.floor); m.put("low_days", b.lowDays); m.put("kindled", b.kindled); m.put("resonance", b.resonance); m.put("resonance_day", b.resonanceDay);
         m.put("romance", b.romance.id()); m.put("romance_since", b.romanceSince); m.put("teen_since", b.teenSince);
         var memories = new ArrayList<Object>();
         for (var mem : b.memories) {
@@ -140,7 +140,7 @@ public final class SaveFormat {
         b.talkDay = lng(m.getOrDefault("talk_day", -1)); b.giftDay = lng(m.getOrDefault("gift_day", -1)); b.giftsToday = (int) lng(m.getOrDefault("gifts_today", 0));
         b.lastGift = (String) m.getOrDefault("last_gift", "");
         b.contactDays = (int) lng(m.getOrDefault("contact_days", 0)); b.together = (int) lng(m.getOrDefault("together", 0));
-        b.warmth = dbl(m.getOrDefault("warmth", 0)); b.level = (int) lng(m.getOrDefault("level", 0)); b.floor = (int) lng(m.getOrDefault("floor", 0)); b.kindled = (int) lng(m.getOrDefault("kindled", 0)); b.lowDays = (int) lng(m.getOrDefault("low_days", 0));
+        b.warmth = dbl(m.getOrDefault("warmth", 0)); b.level = (int) lng(m.getOrDefault("level", 0)); b.floor = (int) lng(m.getOrDefault("floor", 0)); b.kindled = (int) lng(m.getOrDefault("kindled", 0)); b.resonance = (int) lng(m.getOrDefault("resonance", 0)); b.resonanceDay = lng(m.getOrDefault("resonance_day", -1)); b.lowDays = (int) lng(m.getOrDefault("low_days", 0));
         b.romance = Courtship.Stage.of((String) m.getOrDefault("romance", "none"));
         b.romanceSince = lng(m.getOrDefault("romance_since", -1)); b.teenSince = lng(m.getOrDefault("teen_since", -1));
         for (Object o : (List<Object>) m.getOrDefault("memories", List.of())) {

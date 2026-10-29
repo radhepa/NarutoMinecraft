@@ -18,6 +18,8 @@ public final class DialogueKeys {
         for (var s : Conflict.State.values()) if (s != Conflict.State.NONE) { keys.add("bond.greet." + s.id()); keys.add("bond.conflict." + s.id()); }
         for (var s : Courtship.Stage.values()) if (s != Courtship.Stage.NONE) keys.add("bond.romance." + s.id());
         for (var t : Kindling.Tier.values()) keys.add("bond.kindling." + t.id());
+        for (String f : Kindling.FORMS) keys.add("bond.bonfire." + f);
+        keys.add("bond.kindling.dimmed"); keys.add("bond.kindling.nature_trial");
         keys.add("bond.jealous"); keys.add("bond.birthday.missed");
         for (var a : Act.values()) {
             if (!a.remembered()) continue;
