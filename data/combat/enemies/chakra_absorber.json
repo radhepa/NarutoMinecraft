@@ -1,0 +1,29 @@
+{
+ "format": 1,
+ "id": "combat:enemy.chakra_absorber",
+ "name": "Chakra absorber",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "chunin",
+ "levels": [
+  25,
+  45
+ ],
+ "band": "close",
+ "slice": "chunin",
+ "style": "combat:style.academy_basics",
+ "weapons": [],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 2,
+  "chakra": 30,
+  "will": 20
+ },
+ "traits": [
+  "absorbs_ninjutsu"
+ ],
+ "ai": {},
+ "barks": "rogue",
+ "note": "Drinks ninjutsu that hits it (heals for half): taijutsu and weapon users' favourite target"
+}

@@ -1,0 +1,198 @@
+{
+ "format": 1,
+ "id": "shimura",
+ "clan": "clan:shimura",
+ "name": "Shimura",
+ "standing": "noble",
+ "suggested_nature": [
+  "wind"
+ ],
+ "passives": {
+  "wind_power": 0.05
+ },
+ "techniques": [
+  {
+   "id": "combat:shimura.vacuum_blades",
+   "name": "Wind: Vacuum Blades",
+   "kind": "clan",
+   "nature": "wind",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "tiger",
+    "rat",
+    "ox"
+   ],
+   "chakra": 18,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 9.0,
+   "shape": {
+    "type": "cone",
+    "range": 10,
+    "degrees": 30,
+    "guard_pierce": 1.0
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    },
+    {
+     "status": "bleeding",
+     "ticks": 60
+    }
+   ],
+   "mechanic": "Breath blades in a 30-degree fan (10 blocks) that break through a guard",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.shimura"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "clan": "shimura",
+   "tier": 1
+  },
+  {
+   "id": "combat:shimura.vacuum_volley",
+   "name": "Wind: Vacuum Volley",
+   "kind": "clan",
+   "nature": "wind",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "tiger",
+    "rat",
+    "ox",
+    "rat"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 14.0,
+   "shape": {
+    "type": "projectile",
+    "range": 24,
+    "speed": 2.2,
+    "radius": 0.5,
+    "count": 5,
+    "interval": 3
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    }
+   ],
+   "mechanic": "Five vacuum bullets from a single breath",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.shimura"
+   ],
+   "slice": "chunin",
+   "clan": "shimura",
+   "tier": 2
+  },
+  {
+   "id": "combat:shimura.sealing_curse",
+   "name": "Sealing Curse",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "ox",
+    "tiger",
+    "dog"
+   ],
+   "chakra": 50,
+   "cast_ticks": 16,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 2.5
+   },
+   "effects": [
+    {
+     "status": "silenced",
+     "ticks": 120
+    }
+   ],
+   "mechanic": "A curse seal: the target cannot speak of what it saw (a quest tool on ANBU-branch missions) and cannot weave for 120 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.shimura"
+   ],
+   "slice": "anbu",
+   "clan": "shimura",
+   "tier": 3
+  },
+  {
+   "id": "combat:shimura.great_vacuum",
+   "name": "Wind: Great Vacuum",
+   "kind": "clan",
+   "nature": "wind",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "tiger",
+    "rat",
+    "ox",
+    "rat",
+    "ox"
+   ],
+   "chakra": 80,
+   "cast_ticks": 20,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "area",
+    "radius": 12
+   },
+   "effects": [
+    {
+     "pull": 8
+    },
+    {
+     "damage": "ninjutsu.wind"
+    }
+   ],
+   "mechanic": "A pull of air that drags every enemy in 12 blocks into a 2-block point, then a slicing burst",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.shimura"
+   ],
+   "slice": "road",
+   "clan": "shimura",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:shimura.cold_discipline",
+  "name": "Cold Discipline",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 18,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "Fear and confusion on you last half as long",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:shimura:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "shimura",
+  "lesser": true
+ }
+}

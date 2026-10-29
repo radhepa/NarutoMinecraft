@@ -1,0 +1,434 @@
+{
+ "format": 1,
+ "techniques": [
+  {
+   "id": "combat:fire.ember_shot",
+   "name": "Fire: Ember Shot",
+   "kind": "ninjutsu",
+   "nature": "fire",
+   "rank": "d",
+   "level": 8,
+   "signs": [
+    "tiger",
+    "snake",
+    "tiger"
+   ],
+   "chakra": 10,
+   "cast_ticks": 12,
+   "cooldown_ticks": 60,
+   "power": 5.0,
+   "shape": {
+    "type": "projectile",
+    "range": 20,
+    "speed": 2.0,
+    "radius": 0.5
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "status": "burning",
+     "ticks": 60
+    }
+   ],
+   "mechanic": "A small fast fire bolt (2 blocks a tick, 20 range) that sets the target alight",
+   "counters": "water jutsu (water beats fire), an earth or water wall, sidestep the slow projectile",
+   "teach": [
+    "scroll:scroll_shop"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:fire.great_fireball",
+   "name": "Fire: Great Fireball",
+   "kind": "ninjutsu",
+   "nature": "fire",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "snake",
+    "ram",
+    "monkey",
+    "boar",
+    "horse",
+    "tiger"
+   ],
+   "chakra": 18,
+   "cast_ticks": 24,
+   "cooldown_ticks": 120,
+   "power": 9.0,
+   "shape": {
+    "type": "projectile",
+    "range": 20,
+    "speed": 0.9,
+    "radius": 1.0,
+    "burst": 2.5
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "status": "burning",
+     "ticks": 80
+    }
+   ],
+   "mechanic": "A slow projectile 2 blocks wide (0.9 a tick, 20 range) that bursts in a 2.5-block radius and sets mobs alight; never sets blocks on fire",
+   "counters": "water jutsu (water beats fire), an earth or water wall, sidestep the slow projectile",
+   "teach": [
+    "ceremony:nature",
+    "mentor:role:nature_master.fire",
+    "clan:uchiha"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:fire.phoenix_flower",
+   "name": "Fire: Phoenix Sage Fire",
+   "kind": "ninjutsu",
+   "nature": "fire",
+   "rank": "c",
+   "level": 12,
+   "signs": [
+    "rat",
+    "tiger",
+    "dog",
+    "ox",
+    "hare",
+    "tiger"
+   ],
+   "chakra": 18,
+   "cast_ticks": 24,
+   "cooldown_ticks": 120,
+   "power": 10,
+   "shape": {
+    "type": "projectile",
+    "range": 18,
+    "speed": 1.4,
+    "radius": 0.4,
+    "count": 5,
+    "homing": 0.15
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "status": "burning",
+     "ticks": 40
+    }
+   ],
+   "mechanic": "Five small fireballs in a fan that curve gently toward the target (2 power each)",
+   "counters": "water jutsu (water beats fire), an earth or water wall, sidestep the slow projectile",
+   "teach": [
+    "scroll:scroll_shop",
+    "exam_reward"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:fire.dragon_flame",
+   "name": "Fire: Dragon Flame",
+   "kind": "weapon",
+   "nature": "fire",
+   "rank": "c",
+   "level": 14,
+   "signs": [
+    "snake",
+    "dragon",
+    "hare",
+    "tiger"
+   ],
+   "chakra": 18,
+   "cast_ticks": 16,
+   "cooldown_ticks": 120,
+   "power": 10.8,
+   "shape": {
+    "type": "line",
+    "range": 16,
+    "width": 0.6,
+    "needs": "wire"
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "status": "burning",
+     "ticks": 100
+    }
+   ],
+   "mechanic": "Breathe fire along a wire you have strung or tethered: the flame runs the wire and engulfs a bound target",
+   "counters": "water jutsu (water beats fire), an earth or water wall, sidestep the slow projectile",
+   "teach": [
+    "mentor:role:weapon_master",
+    "clan:uchiha"
+   ],
+   "slice": "beta3",
+   "requires": [
+    "item:wire_spool"
+   ]
+  },
+  {
+   "id": "combat:fire.fire_dragon_bullet",
+   "name": "Fire: Fire Dragon Bullet",
+   "kind": "ninjutsu",
+   "nature": "fire",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "snake",
+    "dragon",
+    "rat",
+    "ox",
+    "horse",
+    "dog",
+    "tiger"
+   ],
+   "chakra": 30,
+   "cast_ticks": 28,
+   "cooldown_ticks": 200,
+   "power": 14.0,
+   "shape": {
+    "type": "projectile",
+    "range": 24,
+    "speed": 1.0,
+    "radius": 0.8,
+    "homing": 0.3
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "status": "burning",
+     "ticks": 100
+    }
+   ],
+   "mechanic": "A dragon of flame that hunts its target (homing 0.3, 24 range)",
+   "counters": "water jutsu (water beats fire), an earth or water wall, sidestep the slow projectile",
+   "teach": [
+    "mentor:role:nature_master.fire"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:fire.flame_wall",
+   "name": "Fire: Flame Wall",
+   "kind": "ninjutsu",
+   "nature": "fire",
+   "rank": "b",
+   "level": 22,
+   "signs": [
+    "tiger",
+    "ox",
+    "dog",
+    "rat"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 8.4,
+   "shape": {
+    "type": "entity",
+    "entity": "fire_wall",
+    "ticks": 160,
+    "width": 8
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire",
+     "per": "crossing"
+    },
+    {
+     "status": "burning",
+     "ticks": 80
+    }
+   ],
+   "mechanic": "A wall of fire 8 blocks wide for 160 ticks: blocks thrown weapons, burns anyone crossing; wind fed into it doubles its height",
+   "counters": "water jutsu put it out; go around",
+   "teach": [
+    "mentor:role:nature_master.fire"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:fire.ash_pile_burning",
+   "name": "Fire: Ash Pile Burning",
+   "kind": "ninjutsu",
+   "nature": "fire",
+   "rank": "b",
+   "level": 24,
+   "signs": [
+    "ram",
+    "rat",
+    "monkey",
+    "boar",
+    "horse",
+    "tiger"
+   ],
+   "chakra": 30,
+   "cast_ticks": 24,
+   "cooldown_ticks": 200,
+   "power": 12.6,
+   "shape": {
+    "type": "cone",
+    "range": 6,
+    "degrees": 60
+   },
+   "effects": [
+    {
+     "status": "blinded",
+     "ticks": 40
+    },
+    {
+     "damage": "ninjutsu.fire",
+     "delay": 20
+    }
+   ],
+   "mechanic": "Exhale an ash cloud (6-block cone, blinded 40 ticks), then click the teeth: the ash ignites",
+   "counters": "wind blows the ash back; water soaks it",
+   "teach": [
+    "mentor:role:nature_master.fire",
+    "clan:sarutobi"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:fire.great_dragon_fire",
+   "name": "Fire: Great Dragon Fire",
+   "kind": "ninjutsu",
+   "nature": "fire",
+   "rank": "a",
+   "level": 30,
+   "signs": [
+    "snake",
+    "dragon",
+    "rat",
+    "ox",
+    "horse",
+    "dog",
+    "tiger",
+    "boar"
+   ],
+   "chakra": 50,
+   "cast_ticks": 32,
+   "cooldown_ticks": 360,
+   "power": 21.0,
+   "shape": {
+    "type": "projectile",
+    "range": 26,
+    "speed": 1.0,
+    "radius": 1.5,
+    "burst": 4
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "status": "burning",
+     "ticks": 120
+    }
+   ],
+   "mechanic": "Several dragon heads of fire on one target area (radius 4)",
+   "counters": "water jutsu (water beats fire), an earth or water wall, sidestep the slow projectile",
+   "teach": [
+    "mentor:role:nature_master.fire"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:fire.majestic_destroyer_flame",
+   "name": "Fire: Majestic Destroyer Flame",
+   "kind": "ninjutsu",
+   "nature": "fire",
+   "rank": "a",
+   "level": 36,
+   "signs": [
+    "horse",
+    "tiger",
+    "snake",
+    "ram",
+    "monkey",
+    "boar",
+    "horse",
+    "tiger"
+   ],
+   "chakra": 50,
+   "cast_ticks": 32,
+   "cooldown_ticks": 360,
+   "power": 23.1,
+   "shape": {
+    "type": "cone",
+    "range": 18,
+    "degrees": 70
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "status": "burning",
+     "ticks": 120
+    }
+   ],
+   "mechanic": "A sweeping wall of flame in an 18-block, 70-degree cone",
+   "counters": "water jutsu (water beats fire), an earth or water wall, sidestep the slow projectile",
+   "teach": [
+    "mission:a"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:fire.great_fire_annihilation",
+   "name": "Fire: Great Fire Annihilation",
+   "kind": "ninjutsu",
+   "nature": "fire",
+   "rank": "s",
+   "level": 46,
+   "signs": [
+    "snake",
+    "ram",
+    "monkey",
+    "boar",
+    "horse",
+    "tiger",
+    "dragon",
+    "tiger"
+   ],
+   "chakra": 80,
+   "cast_ticks": 32,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "area",
+    "radius": 12,
+    "centre": "ahead",
+    "offset": 8
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.fire"
+    },
+    {
+     "status": "burning",
+     "ticks": 160
+    },
+    {
+     "leaves": "storm_cloud"
+    }
+   ],
+   "mechanic": "A sea of fire (radius 12) and a cloud of smoke and heat overhead that lasts 400 ticks (a storm cloud for lightning users)",
+   "counters": "water jutsu (water beats fire), an earth or water wall, sidestep the slow projectile",
+   "teach": [
+    "scroll:forbidden_archive"
+   ],
+   "slice": "road"
+  }
+ ]
+}

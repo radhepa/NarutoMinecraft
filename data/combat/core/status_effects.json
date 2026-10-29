@@ -1,0 +1,356 @@
+{
+ "format": 1,
+ "statuses": {
+  "burning": {
+   "dot": 0.5,
+   "ticks": 60,
+   "stacks": 1,
+   "cleansed_by": [
+    "soaked",
+    "water"
+   ],
+   "vanilla": "on fire (no block fire)"
+  },
+  "shocked": {
+   "stun_ticks": 6,
+   "then_slow": 0.2,
+   "ticks": 30,
+   "dr_group": "stun"
+  },
+  "soaked": {
+   "ticks": 100,
+   "lightning_taken_mult": 1.3,
+   "fire_taken_mult": 0.7,
+   "cleanses": [
+    "burning"
+   ]
+  },
+  "chilled": {
+   "slow": 0.25,
+   "ticks": 60
+  },
+  "bleeding": {
+   "dot": 0.3,
+   "ticks": 80,
+   "stacks": 3
+  },
+  "poisoned": {
+   "dot": 0.4,
+   "ticks": 120,
+   "stacks": 5,
+   "resisted_by": [
+    "clan:suzuran",
+    "clan:aburame"
+   ]
+  },
+  "numbed": {
+   "slow": 0.15,
+   "attack_speed": -0.15,
+   "ticks": 100,
+   "stacks": 3,
+   "at_max": "paralysed"
+  },
+  "paralysed": {
+   "stun_ticks": 40,
+   "dr_group": "stun"
+  },
+  "drowsy": {
+   "slow": 0.2,
+   "ticks": 120,
+   "stacks": 3,
+   "at_max": "asleep"
+  },
+  "asleep": {
+   "stun_ticks": 100,
+   "breaks_on_damage": true,
+   "dr_group": "stun"
+  },
+  "stunned": {
+   "stun_ticks": 20,
+   "dr_group": "stun"
+  },
+  "staggered": {
+   "stun_ticks": 16,
+   "interrupts": true
+  },
+  "knocked_down": {
+   "stun_ticks": 24,
+   "interrupts": true,
+   "ground_hits_only": true
+  },
+  "airborne": {
+   "ticks": 20,
+   "juggle_gravity": 0.5
+  },
+  "bound": {
+   "root": true,
+   "no_cast": false,
+   "dr_group": "bind",
+   "note": "Roots, chains, webs, water prison: cannot move; can still weave unless the binding says otherwise"
+  },
+  "possessed": {
+   "copies_caster": true,
+   "stun_ticks": 100,
+   "dr_group": "bind",
+   "note": "Shadow Possession: copies the caster's movement"
+  },
+  "blinded": {
+   "ticks": 60,
+   "vision": "darkness effect",
+   "ai": "loses target, swings at noise"
+  },
+  "smoked": {
+   "ticks": 80,
+   "ai": "loses target unless sensing",
+   "player": "fog"
+  },
+  "silenced": {
+   "no_signs": true,
+   "ticks": 60,
+   "dr_group": "seal"
+  },
+  "chakra_sealed": {
+   "no_cast": true,
+   "ticks": 80,
+   "dr_group": "seal"
+  },
+  "points_closed": {
+   "stacks": 64,
+   "per_stack": {
+    "chakra_regen": -0.015,
+    "ninjutsu_power": -0.01
+   },
+   "decay_ticks": 200,
+   "note": "Gentle Fist closes chakra points: each stack lowers chakra regen and ninjutsu power; 64 stacks seal chakra for 6 s"
+  },
+  "marked": {
+   "ticks": 200,
+   "visible_through_walls": true,
+   "note": "Insects, ninken scent, sensing"
+  },
+  "genjutsu": {
+   "slow": 0.4,
+   "fake_entities": true,
+   "breaks": [
+    "release_sign",
+    "damage_over_10_percent",
+    "ally_touch"
+   ],
+   "note": "The shared genjutsu effect (see COMBAT.md)"
+  },
+  "fear": {
+   "ai": "flees or hesitates",
+   "ticks": 40,
+   "dr_group": "mind"
+  },
+  "confused": {
+   "ai": "attacks nearest",
+   "ticks": 60,
+   "dr_group": "mind"
+  },
+  "focus": {
+   "next_attack_mult": 1.25,
+   "ticks": 40,
+   "note": "After a perfect dodge"
+  },
+  "counter_window": {
+   "ticks": 12,
+   "next_attack_mult": 1.5,
+   "note": "After a parry"
+  },
+  "winded": {
+   "ticks": 30,
+   "no_dodge": true,
+   "note": "Stamina emptied"
+  },
+  "chakra_exhausted": {
+   "slow": 0.3,
+   "stamina_regen_mult": 0.5,
+   "no_cast_until_fraction": 0.2
+  },
+  "gate_strain": {
+   "slow": 0.4,
+   "damage_dealt_mult": 0.6,
+   "ticks": 600
+  },
+  "hardened": {
+   "physical_taken_mult": 0.5,
+   "slow": 0.2,
+   "note": "Earth armour"
+  },
+  "shrouded": {
+   "lightning_armour": true,
+   "move": 0.3,
+   "attack_speed": 0.3,
+   "chakra_per_second": 3
+  },
+  "expanded": {
+   "scale": 2.0,
+   "reach_mult": 1.6,
+   "knockback_mult": 2.0,
+   "poise_mult": 2.0,
+   "slow": 0.1
+  },
+  "hidden": {
+   "ai": "cannot see unless sensing or within 3 blocks",
+   "breaks_on_attack": true
+  },
+  "silent_steps": {
+   "noise_mult": 0.0
+  },
+  "well_fed": {
+   "note": "Shinobi Life food buffs feed combat stats (ramen: chakra; barbecue: taijutsu +5%)"
+  },
+  "decoy": {
+   "ticks": 100,
+   "note": "Clone Technique: mobs may switch to an illusory copy"
+  },
+  "disguised": {
+   "ticks": 1200,
+   "breaks_on_damage": true,
+   "ai": "mobs lose their target; residents do not recognize you"
+  },
+  "iframes": {
+   "ticks": 6,
+   "invulnerable": true
+  },
+  "sensing": {
+   "ticks": 200,
+   "note": "living things within the radius glow through walls; reveals hidden and disguised"
+  },
+  "unsensed": {
+   "ticks": 300,
+   "note": "sensing and Byakugan stage 1 cannot find you"
+  },
+  "read": {
+   "ticks": 200,
+   "note": "the target's chakra and next technique's nature shown"
+  },
+  "genjutsu_reflect": {
+   "ticks": 40,
+   "note": "the next genjutsu cast on you turns back on its caster"
+  },
+  "mind_immune": {
+   "ticks": 300,
+   "immune": [
+    "genjutsu",
+    "fear",
+    "confused"
+   ]
+  },
+  "mind_link": {
+   "ticks": 600,
+   "note": "squad shares sensing; commands instant; cohesion counts 10 higher"
+  },
+  "mind_transferred": {
+   "ticks": 160,
+   "stun_ticks": 160,
+   "note": "the caster's body slumps; damage to it ends the jutsu"
+  },
+  "nature_sealed": {
+   "ticks": 400,
+   "dr_group": "seal",
+   "note": "nature jutsu sealed; taijutsu and genjutsu still work"
+  },
+  "broken_guard": {
+   "ticks": 100,
+   "no_guard": true
+  },
+  "guarding_ally": {
+   "ticks": 300,
+   "redirect": 0.5
+  },
+  "immovable": {
+   "ticks": 200,
+   "knockback_resist": 1.0,
+   "stagger_immune": true
+  },
+  "light": {
+   "ticks": 200,
+   "move": 0.3,
+   "double_jump": true
+  },
+  "heavy": {
+   "ticks": 200,
+   "slow": 0.5,
+   "no_jump": true
+  },
+  "vitality_seal": {
+   "ticks": 6000,
+   "survive_lethal": true
+  },
+  "hundred_seal": {
+   "ticks": 400,
+   "heal_per_second": 2,
+   "free_chakra": true
+  },
+  "scalpel_hands": {
+   "ticks": 200,
+   "on_hit": "numbed",
+   "ignores_armour": true
+  },
+  "new_moon": {
+   "ticks": 100,
+   "next_hit": "no telegraph, S-rank damage"
+  },
+  "no_telegraph": {
+   "ticks": 200,
+   "note": "your blade attacks give no telegraph"
+  },
+  "poison_immune": {
+   "ticks": 400,
+   "immune": [
+    "poisoned"
+   ]
+  },
+  "butterfly": {
+   "ticks": 300,
+   "damage_dealt_mult": 2.0,
+   "move": 0.4,
+   "then": "gate_strain"
+  },
+  "blade_flow.fire": {
+   "ticks": 200,
+   "on_hit": "burning"
+  },
+  "blade_flow.wind": {
+   "ticks": 200,
+   "reach": 1.5,
+   "armour_pierce": 0.5
+  },
+  "blade_flow.lightning": {
+   "ticks": 200,
+   "on_hit": "shocked",
+   "reach": 0.5
+  },
+  "blade_flow.earth": {
+   "ticks": 200,
+   "poise_mult": 2.0
+  },
+  "blade_flow.water": {
+   "ticks": 200,
+   "on_hit": "soaked",
+   "knockback": 1
+  },
+  "kindled": {
+   "note": "Pluggable kindle effect (see kindle.json); its powers are not designed yet"
+  }
+ },
+ "diminishing_returns": {
+  "groups": [
+   "stun",
+   "bind",
+   "seal",
+   "mind"
+  ],
+  "window_ticks": 300,
+  "durations": [
+   1.0,
+   0.5,
+   0.25,
+   0.0
+  ],
+  "bosses": "bosses take 50% duration from the first and are immune after the second in a group, for 15 s",
+  "note": "A second stun within 15 s lasts half as long, the third a quarter, the fourth not at all. The same rule runs for binds, seals and mind effects."
+ }
+}

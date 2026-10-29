@@ -1,0 +1,45 @@
+{
+ "format": 1,
+ "genjutsu": {
+  "effect_type": "genjutsu",
+  "how": "Genjutsu is one shared effect: a caught target sees a client-side illusion (fake entities, a distorted screen, a wrong HUD) chosen by the technique's variant, and moves at 60% speed",
+  "strength": "power = caster's ninjutsu pillar x (1 + 0.1 clan bonus); duration x (1 - will / (will + 40))",
+  "breaks": [
+   "the target weaves Release (Ram): costs chakra equal to 10 + the illusion's rank cost / 2",
+   "damage over 10% of max health",
+   "a teammate's touch (interact with them)",
+   "a flash bomb",
+   "the Sharingan (stage 2) breaks any it sees cast"
+  ],
+  "needs_sight": "most genjutsu need the target to see the caster (look away to avoid; blinded targets are immune)",
+  "ai": "caught enemies attack phantoms, flee or stand; a caught boss spends its next phase transition breaking it",
+  "players": "on the player, genjutsu is drawn as a screen effect and fake mobs; HUD text flickers; it never takes control of the camera for more than 2 s",
+  "variants": [
+   "shifted",
+   "fear",
+   "confusion",
+   "phantoms",
+   "darkness",
+   "feathers",
+   "world",
+   "painted",
+   "binding",
+   "eyes"
+  ]
+ },
+ "medical": {
+  "who": "anyone with control 50 who trains with the medic (Beta 3); medical ninja are a role in the squad (Progression's squad roles)",
+  "healing": "Mystical Palm heals by control; healing a squadmate raises their bond (a shared experience)",
+  "revive": "downed squadmates (knocked out, never killed) can be revived by First Aid (slowly) or Resuscitation (at once)"
+ },
+ "sensing": {
+  "what": "Sensing shows living things through walls (the glowing effect), reveals hidden and disguised ones, and counters smoke, mist and clones",
+  "who": "sensors: Yamanaka (clan), anyone trained by the sensor master; Byakugan and Inuzuka smell are clan variants",
+  "ai": "enemy sensors (scout_sensor) are why stealth needs Tobari, mist or distance"
+ },
+ "fuinjutsu": {
+  "what": "Fuinjutsu uses sealing tags: capture, barriers, chakra seals, storage scrolls and marks",
+  "who": "the fuinjutsu master and the Uzumaki (sealing costs -20% for them)",
+  "never": "seals never change the map; barriers are short-lived entities"
+ }
+}

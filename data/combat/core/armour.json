@@ -1,0 +1,73 @@
+{
+ "format": 1,
+ "formula": "reduction = armour / (armour + 20), at most 0.6; pierce removes a share of armour first",
+ "classes": {
+  "physical": "Blades, fists, thrown tools",
+  "chakra": "Ninjutsu of every nature; nature resistances stack on top",
+  "will": "Genjutsu and sealing: strength x (1 - will / (will + 40))"
+ },
+ "gear": {
+  "item:forehead_protector": {
+   "physical": 1,
+   "slot": "head"
+  },
+  "item:mesh_undershirt": {
+   "physical": 3,
+   "slot": "chest",
+   "slice": "beta2"
+  },
+  "item:arm_guards": {
+   "physical": 2,
+   "parry_window_ticks": 1,
+   "slot": "arms",
+   "slice": "beta2"
+  },
+  "item:shin_guards": {
+   "physical": 2,
+   "kick_poise": 2,
+   "slot": "legs",
+   "slice": "beta2"
+  },
+  "item:flak_vest": {
+   "physical": 6,
+   "chakra": 3,
+   "pouch_slots": 2,
+   "slot": "chest",
+   "slice": "chunin"
+  },
+  "item:anbu_armor": {
+   "physical": 8,
+   "chakra": 4,
+   "noise_mult": 0.8,
+   "slot": "chest",
+   "slice": "anbu"
+  },
+  "item:training_weights": {
+   "speed_mult": 0.85,
+   "taijutsu_xp_mult": 1.5,
+   "release_burst": {
+    "speed": 0.3,
+    "ticks": 200
+   },
+   "slot": "legs",
+   "slice": "beta2"
+  },
+  "item:knuckle_wraps": {
+   "light_damage": 0.5,
+   "slot": "hands",
+   "slice": "beta1"
+  }
+ },
+ "will": {
+  "base": 10,
+  "per_level": 0.5,
+  "clans": {
+   "morino": 10,
+   "yuhi": 8,
+   "kurama": 8,
+   "uchiha": 5,
+   "yamanaka": 5
+  }
+ },
+ "note": "Three armour classes. Gear gives physical armour; chakra armour comes from vests, earth armour and some clans; will (genjutsu and sealing) grows with level and clan."
+}

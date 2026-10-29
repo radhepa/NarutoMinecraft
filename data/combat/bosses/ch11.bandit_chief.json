@@ -1,0 +1,48 @@
+{
+ "format": 1,
+ "id": "combat:boss.ch11.bandit_chief",
+ "name": "Bandit chief",
+ "chapter": 11,
+ "slice": "beta2",
+ "base": "combat:enemy.bandit_chief",
+ "level": 11,
+ "nonlethal": false,
+ "arena": "place:road.east_camp",
+ "win": "defeat",
+ "lose": "the player is downed",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Bluster",
+   "behaviour": "mace overheads (12-tick tell), a ground slam (radius 3)",
+   "adds": [
+    "combat:enemy.bandit_thug",
+    "combat:enemy.bandit_archer"
+   ],
+   "openings": "every overhead is parryable: a parry staggers him for 20"
+  },
+  {
+   "at_hp": 0.6,
+   "name": "Dirty fighting",
+   "behaviour": "throws smoke, then a paper bomb into it; calls two more bandits",
+   "adds": [
+    "combat:enemy.bandit_knife",
+    "combat:enemy.bandit_thug"
+   ],
+   "openings": "wind blows the smoke away; sensing sees through it"
+  },
+  {
+   "at_hp": 0.25,
+   "name": "Cornered",
+   "behaviour": "faster, no flee; grabs (red flash)",
+   "openings": "poise 70: a heavy chain breaks it"
+  }
+ ],
+ "hp_mult": 6.0,
+ "poise": 70,
+ "weapons": [
+  "item:mace",
+  "item:kunai"
+ ],
+ "dialogue": "dlg:combat.boss.ch11.bandit_chief"
+}

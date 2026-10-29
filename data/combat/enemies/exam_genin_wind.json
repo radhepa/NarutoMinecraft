@@ -1,0 +1,32 @@
+{
+ "format": 1,
+ "id": "combat:enemy.exam_genin_wind",
+ "name": "Foreign genin (fan)",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "genin",
+ "levels": [
+  13,
+  18
+ ],
+ "band": "far",
+ "slice": "beta3",
+ "weapons": [
+  "item:tessen"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:wind.great_breakthrough",
+  "combat:wind.gale_palm"
+ ],
+ "tools": {},
+ "nature": "wind",
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {},
+ "barks": "exam_genin"
+}

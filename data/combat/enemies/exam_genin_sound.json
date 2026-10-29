@@ -1,0 +1,33 @@
+{
+ "format": 1,
+ "id": "combat:enemy.exam_genin_sound",
+ "name": "Foreign genin (sonic)",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "genin",
+ "levels": [
+  13,
+  18
+ ],
+ "band": "mid",
+ "slice": "beta3",
+ "weapons": [
+  "item:kunai"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:gen.sly_mind"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "sonic_waves"
+ ],
+ "ai": {},
+ "barks": "exam_genin",
+ "note": "Arm tubes blast sonic waves (a cone that ignores guard and makes the screen wobble); a custom loadout move"
+}

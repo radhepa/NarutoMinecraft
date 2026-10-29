@@ -1,0 +1,188 @@
+{
+ "format": 1,
+ "id": "aburame",
+ "clan": "clan:aburame",
+ "name": "Aburame",
+ "standing": "noble",
+ "suggested_nature": [],
+ "passives": {
+  "poison_resist": 0.5,
+  "insects": "a hive in the body: insect techniques cost chakra from the swarm (half cost)"
+ },
+ "techniques": [
+  {
+   "id": "combat:aburame.insect_swarm",
+   "name": "Insect Swarm",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "ram",
+    "ox",
+    "dragon"
+   ],
+   "chakra": 18,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "insect_swarm",
+    "ticks": 200,
+    "range": 16
+   },
+   "effects": [
+    {
+     "drain_chakra_per_second": 1
+    },
+    {
+     "status": "marked",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "A swarm entity follows a target for 200 ticks: drains 1 chakra a second (you gain it) and marks it (it glows for you)",
+   "counters": "fire jutsu burn the swarm; smoke; running on water",
+   "teach": [
+    "mentor:role:clan_elder.aburame"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "clan": "aburame",
+   "tier": 1
+  },
+  {
+   "id": "combat:aburame.insect_clone",
+   "name": "Insect Clone",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "ram",
+    "ox",
+    "snake"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "insect_clone",
+    "ticks": 600
+   },
+   "effects": [],
+   "mechanic": "A clone of insects that bursts into a swarm when struck",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.aburame"
+   ],
+   "slice": "chunin",
+   "clan": "aburame",
+   "tier": 2
+  },
+  {
+   "id": "combat:aburame.insect_sphere",
+   "name": "Insect Sphere",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "ox",
+    "horse"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 6
+   },
+   "effects": [
+    {
+     "drain_chakra_per_second": 2
+    },
+    {
+     "status": "chilled",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "A dome of insects (radius 6) for 200 ticks: anyone inside loses 2 chakra a second and is slowed",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.aburame"
+   ],
+   "slice": "jonin",
+   "clan": "aburame",
+   "tier": 3
+  },
+  {
+   "id": "combat:aburame.hive_storm",
+   "name": "Hive Storm",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "snake",
+    "tiger",
+    "dog"
+   ],
+   "chakra": 80,
+   "cast_ticks": 16,
+   "cooldown_ticks": 800,
+   "power": 16.0,
+   "shape": {
+    "type": "area",
+    "radius": 16
+   },
+   "effects": [
+    {
+     "drain_chakra_per_second": 3,
+     "shared_with_squad": true
+    }
+   ],
+   "mechanic": "Every insect at once: a storm 16 blocks across that strips chakra from all enemies and feeds your squad",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.aburame"
+   ],
+   "slice": "road",
+   "clan": "aburame",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:aburame.bug_sense",
+  "name": "Bug Sense",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 18,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "A beetle rides on you: a hidden enemy within 8 blocks makes it buzz",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:aburame:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "aburame",
+  "lesser": true
+ }
+}

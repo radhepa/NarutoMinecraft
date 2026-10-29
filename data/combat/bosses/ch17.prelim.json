@@ -1,0 +1,29 @@
+{
+ "format": 1,
+ "id": "combat:boss.ch17.prelim",
+ "name": "Preliminary bout",
+ "chapter": 17,
+ "slice": "beta3",
+ "base": "combat:group.exam_team",
+ "level": 16,
+ "nonlethal": true,
+ "arena": "place:tower.arena",
+ "win": "the opponent is knocked out or yields (or the proctor stops it at 10%)",
+ "lose": "you are knocked out or yield",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Feeling out",
+   "behaviour": "the rolled exam rival's loadout; tests your guard"
+  },
+  {
+   "at_hp": 0.5,
+   "name": "All in",
+   "behaviour": "uses its signature (its loadout's best technique) on a 20-tick tell"
+  }
+ ],
+ "hp_mult": 3.0,
+ "poise": 50,
+ "notes": "The opponent is rolled from the combat stream among the exam rivals and your classmates' squad (role:classmate_c, role:classmate_d). Judged (see judging)",
+ "dialogue": "dlg:combat.boss.ch17.prelim"
+}

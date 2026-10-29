@@ -1,0 +1,168 @@
+{
+ "format": 1,
+ "id": "hagane",
+ "clan": "clan:hagane",
+ "name": "Hagane",
+ "standing": "minor",
+ "suggested_nature": [],
+ "passives": {
+  "poise_bonus": 10,
+  "blunt_power": 0.1
+ },
+ "techniques": [
+  {
+   "id": "combat:hagane.mace_arts",
+   "name": "Mace Arts",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "style": "combat:style.mace_arts"
+    }
+   ],
+   "mechanic": "Opens mace arts with the clan mace",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hagane"
+   ],
+   "slice": "beta2",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "hagane",
+   "tier": 1
+  },
+  {
+   "id": "combat:hagane.iron_guard_master",
+   "name": "Iron Guard Mastery",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [],
+   "mechanic": "Iron Guard tier 2 (the iron wall) and blocks never break while you stand still",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hagane"
+   ],
+   "slice": "chunin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "hagane",
+   "tier": 2
+  },
+  {
+   "id": "combat:hagane.steel_bracer",
+   "name": "Steel Bracer Counter",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [],
+   "chakra": 50,
+   "cast_ticks": 0,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [],
+   "mechanic": "A parry with bracers reflects 50% of the blow",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hagane"
+   ],
+   "slice": "jonin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "hagane",
+   "tier": 3
+  },
+  {
+   "id": "combat:hagane.gate_wall",
+   "name": "Gate Wall",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "tiger",
+    "bird"
+   ],
+   "chakra": 80,
+   "cast_ticks": 12,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "immovable",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "For 200 ticks you cannot be moved, staggered or knocked down; enemies who strike you are knocked back",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hagane"
+   ],
+   "slice": "road",
+   "clan": "hagane",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:hagane.iron_guard",
+  "name": "Iron Guard",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 18,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [
+   {
+    "style": "combat:style.iron_guard"
+   }
+  ],
+  "mechanic": "Opens Iron Guard (the gate guards' style)",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:hagane:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "hagane",
+  "lesser": true
+ }
+}

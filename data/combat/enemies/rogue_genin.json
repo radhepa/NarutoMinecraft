@@ -1,0 +1,35 @@
+{
+ "format": 1,
+ "id": "combat:enemy.rogue_genin",
+ "name": "Rogue genin",
+ "kind": "human",
+ "tier": "mook",
+ "rank": "genin",
+ "levels": [
+  8,
+  18
+ ],
+ "band": "mid",
+ "slice": "beta2",
+ "style": "combat:style.academy_basics",
+ "weapons": [
+  "item:kunai",
+  "item:shuriken"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.body_flicker",
+  "combat:fire.ember_shot"
+ ],
+ "tools": {
+  "item:smoke_bomb": 1
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {},
+ "barks": "rogue"
+}

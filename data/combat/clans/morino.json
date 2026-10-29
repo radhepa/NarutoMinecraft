@@ -1,0 +1,181 @@
+{
+ "format": 1,
+ "id": "morino",
+ "clan": "clan:morino",
+ "name": "Morino",
+ "standing": "minor",
+ "suggested_nature": [],
+ "passives": {
+  "will_bonus": 10,
+  "genjutsu_resist": 0.2
+ },
+ "techniques": [
+  {
+   "id": "combat:morino.stern_presence",
+   "name": "Stern Presence",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 18,
+   "cast_ticks": 4,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 8
+   },
+   "effects": [
+    {
+     "status": "fear",
+     "ticks": 30
+    }
+   ],
+   "mechanic": "A glare: enemies under rank chunin within 8 blocks hesitate (feared 30 ticks)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.morino"
+   ],
+   "slice": "beta2",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "morino",
+   "tier": 1
+  },
+  {
+   "id": "combat:morino.interrogation_hold",
+   "name": "Interrogation Hold",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [],
+   "chakra": 30,
+   "cast_ticks": 20,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 2.0
+   },
+   "effects": [
+    {
+     "surrender": true
+    }
+   ],
+   "mechanic": "A grab on a downed enemy: it surrenders and answers (a quest hook: combat:surrendered)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.morino"
+   ],
+   "slice": "chunin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "morino",
+   "tier": 2
+  },
+  {
+   "id": "combat:morino.iron_will",
+   "name": "Iron Will",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "tiger",
+    "dragon"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "mind_immune",
+     "ticks": 300
+    }
+   ],
+   "mechanic": "Immune to genjutsu, fear and confusion for 300 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.morino"
+   ],
+   "slice": "jonin",
+   "clan": "morino",
+   "tier": 3
+  },
+  {
+   "id": "combat:morino.breaking_point",
+   "name": "Breaking Point",
+   "kind": "family_art",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "tiger",
+    "horse"
+   ],
+   "chakra": 80,
+   "cast_ticks": 12,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "target",
+    "range": 8
+   },
+   "effects": [
+    {
+     "status": "broken_guard",
+     "ticks": 100
+    },
+    {
+     "fizzle_next": true
+    }
+   ],
+   "mechanic": "A target that fails its will check (strength vs will) drops its guard and its next technique for 100 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.morino"
+   ],
+   "slice": "road",
+   "clan": "morino",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:morino.unshaken",
+  "name": "Unshaken",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 18,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "+8 will",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:morino:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "morino",
+  "lesser": true
+ }
+}

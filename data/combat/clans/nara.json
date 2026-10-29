@@ -1,0 +1,198 @@
+{
+ "format": 1,
+ "id": "nara",
+ "clan": "clan:nara",
+ "name": "Nara",
+ "standing": "noble",
+ "suggested_nature": [],
+ "passives": {
+  "control_bonus": 10,
+  "strategist": "enemy cooldowns are shown above their heads"
+ },
+ "techniques": [
+  {
+   "id": "combat:nara.shadow_possession",
+   "name": "Shadow Possession",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "rat"
+   ],
+   "chakra": 18,
+   "cast_ticks": 8,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "line",
+    "range": 12,
+    "width": 0.5,
+    "ground": true,
+    "speed": 0.6,
+    "needs_light": true
+   },
+   "effects": [
+    {
+     "status": "possessed",
+     "ticks": 100
+    }
+   ],
+   "mechanic": "A shadow line crawls along the ground (0.6 a tick) to a target within 12 blocks; if it reaches, the target copies your movement for 100 ticks. Needs light: half range at night and indoors",
+   "counters": "jump over the line, stay out of light, break line of sight",
+   "teach": [
+    "mentor:role:clan_elder.nara"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "clan": "nara",
+   "tier": 1
+  },
+  {
+   "id": "combat:nara.shadow_neck_bind",
+   "name": "Shadow Neck Bind",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "rat",
+    "ox"
+   ],
+   "chakra": 30,
+   "cast_ticks": 8,
+   "cooldown_ticks": 200,
+   "power": 8.4,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "damage": "physical.blunt",
+     "per_second": true
+    }
+   ],
+   "mechanic": "While possessing: a shadow hand climbs to the throat, 1.5 power a second",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.nara"
+   ],
+   "slice": "chunin",
+   "requires": [
+    "combat:nara.shadow_possession"
+   ],
+   "clan": "nara",
+   "tier": 2
+  },
+  {
+   "id": "combat:nara.shadow_sewing",
+   "name": "Shadow Sewing",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "rat",
+    "ox",
+    "dog"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 21.0,
+   "shape": {
+    "type": "area",
+    "radius": 12,
+    "max_targets": 4
+   },
+   "effects": [
+    {
+     "damage": "physical.pierce"
+    },
+    {
+     "status": "bound",
+     "ticks": 60
+    }
+   ],
+   "mechanic": "Shadow needles pierce up to four targets within 12 blocks and pin them (bound 60 ticks)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.nara"
+   ],
+   "slice": "jonin",
+   "clan": "nara",
+   "tier": 3
+  },
+  {
+   "id": "combat:nara.shadow_gathering",
+   "name": "Shadow Gathering",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "rat",
+    "ox",
+    "dog",
+    "snake"
+   ],
+   "chakra": 80,
+   "cast_ticks": 16,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 16
+   },
+   "effects": [
+    {
+     "status": "possessed",
+     "ticks": 120
+    }
+   ],
+   "mechanic": "Possess every enemy within 16 blocks for 120 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.nara"
+   ],
+   "slice": "road",
+   "clan": "nara",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:nara.shadow_stitch",
+  "name": "Shadow Stitch",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [
+   "rat"
+  ],
+  "chakra": 18,
+  "cast_ticks": 8,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "line",
+   "range": 6,
+   "width": 0.5,
+   "ground": true
+  },
+  "effects": [
+   {
+    "status": "bound",
+    "ticks": 30
+   }
+  ],
+  "mechanic": "A short shadow (6 blocks) that pins one target's feet for 30 ticks",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:nara:7"
+  ],
+  "slice": "beta2",
+  "clan": "nara",
+  "lesser": true
+ }
+}

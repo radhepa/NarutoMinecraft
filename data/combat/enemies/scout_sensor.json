@@ -1,0 +1,33 @@
+{
+ "format": 1,
+ "id": "combat:enemy.scout_sensor",
+ "name": "Enemy sensor",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "genin",
+ "levels": [
+  10,
+  20
+ ],
+ "band": "far",
+ "slice": "beta2",
+ "weapons": [
+  "item:senbon"
+ ],
+ "techniques": [
+  "combat:sense.chakra_sense",
+  "combat:nin.substitution"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "sensor"
+ ],
+ "ai": {},
+ "barks": "cell",
+ "note": "Sees through clones, Transformation and smoke; take it out first"
+}

@@ -1,0 +1,104 @@
+{
+ "format": 1,
+ "rules": {
+  "how": "client-side movement with the server checking and charging chakra (ROADMAP)",
+  "control": "control lengthens wall-runs, lowers per-second costs (x(1.2 - control/250)) and lets you fight while water-walking",
+  "combat": "staggered while tree-walking or wall-running: you fall; while water-walking: you sink for 20 ticks"
+ },
+ "movement": [
+  {
+   "id": "combat:move.ninja_run",
+   "name": "Ninja run",
+   "slice": "beta2",
+   "chakra_per_second": 0,
+   "effect": "+15% sprint speed, arms back",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "control": 0
+  },
+  {
+   "id": "combat:move.roof_hop",
+   "name": "Roof and tree hopping",
+   "slice": "beta1",
+   "chakra": 1,
+   "effect": "a forward boost off leaves, logs and roofs (Beta 1 roof running at night, full hopping in Beta 2)",
+   "teach": [
+    "mentor:role:instructor"
+   ]
+  },
+  {
+   "id": "combat:move.chakra_jump",
+   "name": "Chakra jump",
+   "slice": "beta2",
+   "chakra": "2 to 6 by charge",
+   "effect": "hold jump to charge, up to 3x height; no fall damage while chakra lasts",
+   "teach": [
+    "mentor:role:sensei"
+   ]
+  },
+  {
+   "id": "combat:move.tree_walk",
+   "name": "Tree walking",
+   "slice": "beta2",
+   "chakra_per_second": 1,
+   "effect": "walk up trunks and walls; control +10 on first mastery",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "trial": "Ch 10 at Training Ground 3"
+  },
+  {
+   "id": "combat:move.wall_run",
+   "name": "Wall-running",
+   "slice": "beta2",
+   "chakra_per_second": 1.5,
+   "effect": "along or up a wall for up to 3 s (+1 s at control 60, +2 at 90)",
+   "teach": [
+    "mentor:role:sensei"
+   ]
+  },
+  {
+   "id": "combat:move.water_walk",
+   "name": "Water-walking",
+   "slice": "beta2",
+   "chakra_per_second": 0.5,
+   "effect": "stand on water (a mixin on canStandOnFluid); sneak to sink; a hit that staggers you dunks you",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "trial": "Ch 12"
+  },
+  {
+   "id": "combat:move.air_step",
+   "name": "Air step",
+   "slice": "chunin",
+   "chakra": 4,
+   "effect": "a second jump in the air",
+   "teach": [
+    "mentor:role:sensei"
+   ]
+  },
+  {
+   "id": "combat:move.wind_glide",
+   "name": "Wind glide",
+   "slice": "jonin",
+   "chakra_per_second": 2,
+   "nature": "wind",
+   "effect": "a slow fall with steering, like an elytra at a third of the speed",
+   "teach": [
+    "mentor:role:nature_master.wind"
+   ]
+  },
+  {
+   "id": "combat:move.silent_step",
+   "name": "Silent step",
+   "slice": "beta2",
+   "chakra_per_second": 0.3,
+   "effect": "footsteps make no noise for the AI's hearing (Tobari: free at night)",
+   "teach": [
+    "mentor:role:sensei"
+   ]
+  }
+ ]
+}

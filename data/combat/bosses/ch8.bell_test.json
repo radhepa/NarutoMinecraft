@@ -1,0 +1,38 @@
+{
+ "format": 1,
+ "id": "combat:boss.ch8.bell_test",
+ "name": "The bell test",
+ "chapter": 8,
+ "slice": "beta2",
+ "base": "combat:enemy.spar.chunin",
+ "level": 12,
+ "nonlethal": true,
+ "arena": "place:training_ground_3",
+ "win": "take a bell (touch the sensei's belt) with a teammate taking the other: hit them while staggered, bound, possessed or in genjutsu",
+ "lose": "the timer (until noon) runs out",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Reading a book",
+   "behaviour": "dodges everything 90%; counters with a light shove; ignores you if you only attack alone",
+   "openings": "a squad combo or a teammate's distraction makes it drop to 30% dodge for 60 ticks"
+  },
+  {
+   "at_hp": 0.0,
+   "name": "Lesson",
+   "behaviour": "when a bell is touched: Headhunter on the one who did not help"
+  }
+ ],
+ "hp_mult": 99.0,
+ "poise": 200,
+ "role": "role:sensei",
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.body_flicker",
+  "combat:nin.hiding_camouflage",
+  "combat:earth.headhunter"
+ ],
+ "style": "combat:style.academy_basics",
+ "notes": "Unwinnable alone by design; teaches squad commands and parry. Health never matters (hp 99x)",
+ "dialogue": "dlg:combat.boss.ch8.bell_test"
+}

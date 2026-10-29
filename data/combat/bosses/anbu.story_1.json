@@ -1,0 +1,18 @@
+{
+ "format": 1,
+ "id": "combat:boss.anbu.story_1",
+ "name": "Story boss",
+ "chapter": "anbu",
+ "slice": "anbu",
+ "base": "combat:enemy.assassin",
+ "level": 40,
+ "nonlethal": false,
+ "arena": null,
+ "win": "defeat",
+ "lose": "the player is downed",
+ "phases": [],
+ "hp_mult": 7.0,
+ "poise": 100,
+ "story": "bible:combat:boss.anbu.story_1",
+ "dialogue": "dlg:combat.boss.anbu.story_1"
+}

@@ -1,0 +1,31 @@
+{
+ "format": 1,
+ "id": "combat:enemy.sensor_team_lead",
+ "name": "Sensor team leader",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "chunin",
+ "levels": [
+  25,
+  40
+ ],
+ "band": "far",
+ "slice": "chunin",
+ "weapons": [],
+ "techniques": [
+  "combat:sense.wide_sense",
+  "combat:nin.body_flicker"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "sensor",
+  "calls_focus"
+ ],
+ "ai": {},
+ "barks": "cell"
+}

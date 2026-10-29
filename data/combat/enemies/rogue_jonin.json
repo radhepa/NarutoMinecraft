@@ -1,0 +1,37 @@
+{
+ "format": 1,
+ "id": "combat:enemy.rogue_jonin",
+ "name": "Rogue jonin",
+ "kind": "human",
+ "tier": "miniboss",
+ "rank": "jonin",
+ "levels": [
+  30,
+  45
+ ],
+ "band": "mid",
+ "slice": "chunin",
+ "style": "combat:style.academy_basics",
+ "weapons": [
+  "item:katana",
+  "item:kunai"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.shadow_clone",
+  "combat:lightning.false_darkness",
+  "combat:water.water_dragon",
+  "combat:water.hiding_mist"
+ ],
+ "tools": {
+  "item:paper_bomb": 4
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {},
+ "barks": "rogue"
+}

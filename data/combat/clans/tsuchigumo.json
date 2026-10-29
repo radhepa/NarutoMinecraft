@@ -1,0 +1,195 @@
+{
+ "format": 1,
+ "id": "tsuchigumo",
+ "clan": "clan:tsuchigumo",
+ "name": "Tsuchigumo",
+ "standing": "minor",
+ "suggested_nature": [
+  "earth"
+ ],
+ "passives": {
+  "earth_power": 0.05
+ },
+ "techniques": [
+  {
+   "id": "combat:tsuchigumo.earth_binding",
+   "name": "Earth Binding Web",
+   "kind": "clan",
+   "nature": "earth",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "boar",
+    "rat",
+    "tiger"
+   ],
+   "chakra": 18,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "web_trap",
+    "ticks": 400,
+    "radius": 2
+   },
+   "effects": [
+    {
+     "status": "bound",
+     "ticks": 80
+    }
+   ],
+   "mechanic": "A web-like binding trap (entity) on the ground for 400 ticks: the first enemy across is bound 80 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.tsuchigumo"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "clan": "tsuchigumo",
+   "tier": 1
+  },
+  {
+   "id": "combat:tsuchigumo.web_wall",
+   "name": "Spider Web Wall",
+   "kind": "clan",
+   "nature": "earth",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "boar",
+    "dog",
+    "ram",
+    "tiger"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "web_wall",
+    "ticks": 200,
+    "width": 6
+   },
+   "effects": [
+    {
+     "status": "bound",
+     "ticks": 40
+    }
+   ],
+   "mechanic": "A web wall 6 wide for 200 ticks: catches thrown weapons and binds anyone who walks into it",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.tsuchigumo"
+   ],
+   "slice": "chunin",
+   "clan": "tsuchigumo",
+   "tier": 2
+  },
+  {
+   "id": "combat:tsuchigumo.spider_armour",
+   "name": "Earth Spider Armour",
+   "kind": "clan",
+   "nature": "earth",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "boar",
+    "hare"
+   ],
+   "chakra": 50,
+   "cast_ticks": 8,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "hardened",
+     "ticks": 200
+    },
+    {
+     "on_struck": {
+      "status": "bound",
+      "ticks": 20
+     }
+    }
+   ],
+   "mechanic": "Rock Skin that also binds whoever strikes you in melee (20 ticks)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.tsuchigumo"
+   ],
+   "slice": "jonin",
+   "clan": "tsuchigumo",
+   "tier": 3
+  },
+  {
+   "id": "combat:tsuchigumo.heaven_earth_seal",
+   "name": "Creation of Heaven and Earth (sealed)",
+   "kind": "clan",
+   "nature": "earth",
+   "rank": "s",
+   "level": 44,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [],
+   "mechanic": "The clan's forbidden art. It cannot be used: the seal is the clan's to keep. Listed so data and story can refer to it",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.tsuchigumo"
+   ],
+   "slice": "never",
+   "tags": [
+    "forbidden",
+    "no_signs"
+   ],
+   "clan": "tsuchigumo",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:tsuchigumo.web_snare",
+  "name": "Web Snare",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [
+   "boar",
+   "rat"
+  ],
+  "chakra": 18,
+  "cast_ticks": 8,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "entity",
+   "entity": "web_trap",
+   "ticks": 300,
+   "radius": 1.5
+  },
+  "effects": [
+   {
+    "status": "bound",
+    "ticks": 30
+   }
+  ],
+  "mechanic": "A small web trap (bound 30 ticks)",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:tsuchigumo:7"
+  ],
+  "slice": "beta2_5",
+  "clan": "tsuchigumo",
+  "lesser": true
+ }
+}

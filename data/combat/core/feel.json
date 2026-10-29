@@ -1,0 +1,96 @@
+{
+ "format": 1,
+ "hit_stop_ticks": {
+  "light": 1,
+  "heavy": 3,
+  "launcher": 3,
+  "finisher": 5,
+  "parry": 4,
+  "counter": 4,
+  "guard_break": 4,
+  "jutsu_hit": 2,
+  "boss_phase": 8
+ },
+ "hit_stop_note": "The client pauses both fighters' animation; the server freezes only the target's AI for those ticks, so it is safe on an integrated server and over a network",
+ "camera_shake": {
+  "light": 0.0,
+  "heavy": 0.15,
+  "finisher": 0.3,
+  "earth_jutsu": 0.4,
+  "explosion": 0.5,
+  "boss_slam": 0.6,
+  "max": 0.8,
+  "falloff_blocks": 16
+ },
+ "telegraphs": {
+  "wind_up_ticks": {
+   "light": 4,
+   "heavy": 10,
+   "grab": 12,
+   "jutsu_signs": "the signs themselves",
+   "boss_signature": 20
+  },
+  "cues": [
+   "wind-up pose",
+   "a glint on blades (heavy)",
+   "a red flash on unblockables (Story and Shinobi)",
+   "a sound sting per telegraph class",
+   "ground decals for area jutsu"
+  ],
+  "unblockable_colour": "#ff3b30",
+  "parryable_colour": "#ffd60a"
+ },
+ "iframes": {
+  "dodge": 6,
+  "perfect_dodge_bonus": 4,
+  "substitution": 12,
+  "finisher_cinematic": "whole cinematic",
+  "get_up": 10,
+  "story_bonus": 2
+ },
+ "targets": {
+  "input_latency": "the first frame of a strike plays on the client the tick the key is pressed (client-predicted), the server confirms",
+  "combo_window_ticks": [
+   4,
+   10
+  ],
+  "dodge_cooldown_ticks": 30,
+  "ttk_mook_seconds": [
+   4,
+   8
+  ],
+  "ttk_elite_seconds": [
+   10,
+   20
+  ],
+  "ttk_boss_seconds": [
+   60,
+   150
+  ],
+  "player_survives_mook_hits": [
+   6,
+   10
+  ],
+  "fps": "60 fps with 12 fighters and 20 projectiles on a mid-range PC",
+  "network": "playable at 100 ms ping: server-side sweeps with 2 ticks of lag compensation"
+ },
+ "cinematic_camera": {
+  "on": [
+   "finishers",
+   "S and A rank jutsu",
+   "boss phase changes",
+   "squad combos"
+  ],
+  "length_ticks": [
+   20,
+   50
+  ],
+  "skippable": true,
+  "difficulty_hard": "off"
+ },
+ "lock_on": {
+  "key": "middle mouse",
+  "range": 24,
+  "soft_lock": "attacks curve 15 degrees toward the target in front"
+ }
+}

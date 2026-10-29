@@ -1,0 +1,87 @@
+{
+ "format": 1,
+ "who": "Strong Fist tier 3 and taijutsu rank 5 for the first gate; each further gate one more taijutsu rank",
+ "key": "hold Style (B) and press Weave: opens the next gate you know; again closes them",
+ "gates": [
+  {
+   "n": 1,
+   "name": "Opening",
+   "slice": "chunin",
+   "damage": 0.2,
+   "speed": 0.1,
+   "hp_drain_per_second": 0.2,
+   "max_ticks": 400,
+   "strain_ticks": 200
+  },
+  {
+   "n": 2,
+   "name": "Healing",
+   "slice": "chunin",
+   "damage": 0.3,
+   "speed": 0.15,
+   "heal_on_open": 0.1,
+   "hp_drain_per_second": 0.3,
+   "max_ticks": 400,
+   "strain_ticks": 240
+  },
+  {
+   "n": 3,
+   "name": "Life",
+   "slice": "jonin",
+   "damage": 0.45,
+   "speed": 0.25,
+   "hp_drain_per_second": 0.5,
+   "max_ticks": 360,
+   "strain_ticks": 300,
+   "look": "skin flushes red"
+  },
+  {
+   "n": 4,
+   "name": "Pain",
+   "slice": "jonin",
+   "damage": 0.6,
+   "speed": 0.3,
+   "hp_drain_per_second": 0.7,
+   "max_ticks": 300,
+   "strain_ticks": 360
+  },
+  {
+   "n": 5,
+   "name": "Limit",
+   "slice": "road",
+   "damage": 0.75,
+   "speed": 0.35,
+   "hp_drain_per_second": 0.9,
+   "max_ticks": 260,
+   "strain_ticks": 420
+  },
+  {
+   "n": 6,
+   "name": "View",
+   "slice": "road",
+   "damage": 0.9,
+   "speed": 0.4,
+   "hp_drain_per_second": 1.2,
+   "max_ticks": 220,
+   "strain_ticks": 600,
+   "look": "a blue-green aura"
+  },
+  {
+   "n": 7,
+   "name": "Wonder",
+   "slice": "post",
+   "damage": 1.1,
+   "speed": 0.5,
+   "hp_drain_per_second": 1.6,
+   "max_ticks": 160,
+   "strain_ticks": 1200,
+   "note": "post-game only"
+  },
+  {
+   "n": 8,
+   "name": "Death",
+   "slice": "never",
+   "note": "Not playable."
+  }
+ ]
+}

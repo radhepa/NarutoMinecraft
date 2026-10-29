@@ -1,0 +1,23 @@
+{
+ "format": 1,
+ "owner": "Progression's Judging reads these metrics; combat emits them per bout and per exam stage",
+ "metrics": [
+  "damage_dealt",
+  "damage_taken",
+  "time_to_win",
+  "parries",
+  "perfect_dodges",
+  "distinct_techniques",
+  "pillars_used",
+  "combos_landed",
+  "longest_combo",
+  "interrupts",
+  "squad_combos",
+  "allies_protected",
+  "civilians_protected",
+  "smart_counters (nature advantage, genjutsu released fast, sensing used)",
+  "yielded",
+  "knocked_out"
+ ],
+ "note": "Promotion is judged on how you fought (ROADMAP Ch 20): variety and protecting others count as much as winning"
+}

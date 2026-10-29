@@ -1,0 +1,194 @@
+{
+ "format": 1,
+ "id": "uzumaki",
+ "clan": "clan:uzumaki",
+ "name": "Uzumaki",
+ "standing": "noble",
+ "suggested_nature": [
+  "wind",
+  "water"
+ ],
+ "passives": {
+  "chakra_mult": 1.3,
+  "extra_hearts": 1,
+  "fuinjutsu_cost_mult": 0.8
+ },
+ "techniques": [
+  {
+   "id": "combat:uzumaki.sealing_chains",
+   "name": "Sealing Chains",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "ram",
+    "rat",
+    "horse"
+   ],
+   "chakra": 18,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 2.7,
+   "shape": {
+    "type": "line",
+    "range": 10,
+    "width": 0.5
+   },
+   "effects": [
+    {
+     "status": "bound",
+     "ticks": 80,
+     "no_signs": true
+    }
+   ],
+   "mechanic": "Chains of chakra burst from your back and hold one target within 10 blocks for 80 ticks; it cannot weave",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.uzumaki"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "clan": "uzumaki",
+   "tier": 1
+  },
+  {
+   "id": "combat:uzumaki.chain_fence",
+   "name": "Chain Fence",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "ram",
+    "tiger",
+    "dog",
+    "ox"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "chain_fence",
+    "ticks": 200,
+    "radius": 6
+   },
+   "effects": [],
+   "mechanic": "A fence of chains (radius 6) for 200 ticks: nobody crosses; you can reach through it",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.uzumaki"
+   ],
+   "slice": "chunin",
+   "clan": "uzumaki",
+   "tier": 2
+  },
+  {
+   "id": "combat:uzumaki.vitality_seal",
+   "name": "Vitality Seal",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "rat",
+    "ram"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "vitality_seal",
+     "ticks": 6000
+    }
+   ],
+   "mechanic": "A seal on your chest for the fight: the first lethal blow leaves you at 1 HP and heals 30% over 5 s",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.uzumaki"
+   ],
+   "slice": "jonin",
+   "clan": "uzumaki",
+   "tier": 3
+  },
+  {
+   "id": "combat:uzumaki.chain_cage",
+   "name": "Adamantine Chain Cage",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "tiger",
+    "dog",
+    "ox",
+    "boar"
+   ],
+   "chakra": 80,
+   "cast_ticks": 20,
+   "cooldown_ticks": 800,
+   "power": 12.8,
+   "shape": {
+    "type": "area",
+    "radius": 14,
+    "max_targets": 6
+   },
+   "effects": [
+    {
+     "status": "bound",
+     "ticks": 100
+    },
+    {
+     "status": "chakra_sealed",
+     "ticks": 100
+    }
+   ],
+   "mechanic": "Chains from every direction: up to six targets in 14 blocks bound for 100 ticks and their chakra sealed",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.uzumaki"
+   ],
+   "slice": "road",
+   "clan": "uzumaki",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:uzumaki.seal_basics",
+  "name": "Uzumaki Seal Basics",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [
+   "ram",
+   "rat",
+   "dragon"
+  ],
+  "chakra": 18,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "Your sealing tags and fuinjutsu cost 20% less and binding tags hold bosses 20 ticks longer",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:uzumaki:7"
+  ],
+  "slice": "beta2",
+  "clan": "uzumaki",
+  "lesser": true
+ }
+}

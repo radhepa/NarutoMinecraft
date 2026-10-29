@@ -1,0 +1,192 @@
+{
+ "format": 1,
+ "id": "inuzuka",
+ "clan": "clan:inuzuka",
+ "name": "Inuzuka",
+ "standing": "noble",
+ "suggested_nature": [],
+ "passives": {
+  "move_speed": 0.05,
+  "stamina_bonus": 10,
+  "smell": "track a marked or hidden target within 24 blocks",
+  "ninken": "a ninken partner from the clinic (VF pet code)"
+ },
+ "techniques": [
+  {
+   "id": "combat:inuzuka.fang_over_fang",
+   "name": "Fang over Fang",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 18,
+   "cast_ticks": 6,
+   "cooldown_ticks": 120,
+   "power": 9.9,
+   "shape": {
+    "type": "line",
+    "range": 10,
+    "width": 1.5,
+    "dash": true
+   },
+   "effects": [
+    {
+     "damage": "physical.slash"
+    },
+    {
+     "status": "knocked_down",
+     "ticks": 20
+    }
+   ],
+   "mechanic": "You and your ninken become spinning drills (a 10-block dash attack each, side by side)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.inuzuka"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "inuzuka",
+   "tier": 1
+  },
+  {
+   "id": "combat:inuzuka.dynamic_marking",
+   "name": "Dynamic Marking",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [],
+   "chakra": 30,
+   "cast_ticks": 4,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "marked",
+     "ticks": 600
+    }
+   ],
+   "mechanic": "Your ninken marks a target: marked for 600 ticks (visible through walls) and Fang over Fang homes on it",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.inuzuka"
+   ],
+   "slice": "chunin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "inuzuka",
+   "tier": 2
+  },
+  {
+   "id": "combat:inuzuka.tunnelling_fang",
+   "name": "Tunnelling Fang",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [],
+   "chakra": 50,
+   "cast_ticks": 8,
+   "cooldown_ticks": 360,
+   "power": 21.0,
+   "shape": {
+    "type": "line",
+    "range": 14,
+    "width": 1.5,
+    "dash": true,
+    "breaks_guard": true
+   },
+   "effects": [
+    {
+     "damage": "physical.slash"
+    }
+   ],
+   "mechanic": "A single drill so fast it bores through guards and barriers",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.inuzuka"
+   ],
+   "slice": "jonin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "inuzuka",
+   "tier": 3
+  },
+  {
+   "id": "combat:inuzuka.twin_wolf",
+   "name": "Twin-Headed Wolf",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "ox",
+    "rat"
+   ],
+   "chakra": 80,
+   "cast_ticks": 12,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "expanded",
+     "ticks": 300,
+     "scale": 2.5
+    },
+    {
+     "style": "combat:style.beast_fang"
+    }
+   ],
+   "mechanic": "You and your ninken become a giant two-headed wolf for 300 ticks (expanded 2.5x, claws only)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.inuzuka"
+   ],
+   "slice": "road",
+   "clan": "inuzuka",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:inuzuka.keen_nose",
+  "name": "Keen Nose",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 18,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "Your pet ninken (if you have one) can track hidden enemies within 16 blocks in a fight",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:inuzuka:7"
+  ],
+  "slice": "beta2",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "inuzuka",
+  "lesser": true
+ },
+ "style": "combat:style.beast_fang"
+}

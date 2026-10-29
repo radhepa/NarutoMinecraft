@@ -1,0 +1,14 @@
+{
+ "format": 1,
+ "status": "later (multiplayer after the single-player story)",
+ "rules": [
+  "Level and gear normalised to a chosen band (default: everyone at level 30, ranks equalised)",
+  "Shinobi difficulty timings, no aim assist, no habit adaptation",
+  "Diminishing returns on stun, bind, seal and mind: second within 15 s at half, third at a quarter, then immune",
+  "Genjutsu on a player: a screen effect for at most 3 s and never control of the camera; Mind Transfer cannot target players",
+  "Substitution: once per 25 s; Palm Rotation and barriers have a 10 s cooldown in PvP",
+  "S-rank jutsu disabled by default (a server rule can allow them)",
+  "Lag compensation: 2 ticks; hits are confirmed by the server sweep",
+  "Duels by invitation (/shinobi duel <player>) to 30% health; squad battles 3v3 in arenas; no PvP in the village outside arenas"
+ ]
+}

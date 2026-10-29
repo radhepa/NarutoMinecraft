@@ -1,0 +1,190 @@
+{
+ "format": 1,
+ "id": "akimichi",
+ "clan": "clan:akimichi",
+ "name": "Akimichi",
+ "standing": "noble",
+ "suggested_nature": [],
+ "passives": {
+  "extra_hearts": 2,
+  "poise_bonus": 15,
+  "stamina_bonus": 20,
+  "food_buffs_mult": 1.5
+ },
+ "techniques": [
+  {
+   "id": "combat:akimichi.expansion",
+   "name": "Expansion",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "ram",
+    "rat",
+    "monkey"
+   ],
+   "chakra": 18,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "expanded",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "Vanilla's scale attribute: grow to 2x for 200 ticks: reach x1.6, knockback x2, poise x2 (expanded); opens Human Boulder",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.akimichi"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "clan": "akimichi",
+   "tier": 1
+  },
+  {
+   "id": "combat:akimichi.partial_expansion",
+   "name": "Partial Expansion",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "ram",
+    "rat",
+    "bird"
+   ],
+   "chakra": 30,
+   "cast_ticks": 8,
+   "cooldown_ticks": 200,
+   "power": 14.0,
+   "shape": {
+    "type": "melee",
+    "range": 5.0,
+    "area": 4
+   },
+   "effects": [
+    {
+     "damage": "physical.blunt"
+    },
+    {
+     "status": "bound",
+     "ticks": 40
+    }
+   ],
+   "mechanic": "One arm grows: a slap that covers 4 blocks and a grab that holds a target 40 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.akimichi"
+   ],
+   "slice": "chunin",
+   "clan": "akimichi",
+   "tier": 2
+  },
+  {
+   "id": "combat:akimichi.super_expansion",
+   "name": "Super Expansion",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "boar",
+    "ox"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "expanded",
+     "ticks": 160,
+     "scale": 3.0
+    }
+   ],
+   "mechanic": "Grow to 3x (the cap; the map never breaks) for 160 ticks; body slams knock everything in 5 blocks down",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.akimichi"
+   ],
+   "slice": "jonin",
+   "clan": "akimichi",
+   "tier": 3
+  },
+  {
+   "id": "combat:akimichi.calorie_wings",
+   "name": "Calorie Control: Butterfly",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "boar",
+    "ox",
+    "dog"
+   ],
+   "chakra": 80,
+   "cast_ticks": 16,
+   "cooldown_ticks": 800,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "butterfly",
+     "ticks": 300
+    }
+   ],
+   "mechanic": "Burn the body's stores: butterfly wings of chakra for 300 ticks, all damage x2 and speed +40%; afterwards gate strain",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.akimichi"
+   ],
+   "slice": "road",
+   "clan": "akimichi",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:akimichi.hearty_meal",
+  "name": "Akimichi Hearty Meal",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 18,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "Leaf dishes give you the Akimichi's 1.5x food buffs",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:akimichi:7"
+  ],
+  "slice": "beta2",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "akimichi",
+  "lesser": true
+ },
+ "style": "combat:style.iron_body",
+ "notes": "The three coloured pills (spinach, curry, chili) are tier 3 and 4 consumables: items session ids item:akimichi_pill_green/yellow/red"
+}

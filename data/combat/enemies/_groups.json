@@ -1,0 +1,244 @@
+{
+ "format": 1,
+ "groups": [
+  {
+   "id": "combat:group.training_dummies",
+   "members": [
+    {
+     "entity": "combat:dummy.training",
+     "count": 3
+    }
+   ],
+   "slice": "beta1"
+  },
+  {
+   "id": "combat:group.bandits_small",
+   "members": [
+    {
+     "enemy": "combat:enemy.bandit_thug"
+    },
+    {
+     "enemy": "combat:enemy.bandit_knife"
+    },
+    {
+     "enemy": "combat:enemy.bandit_archer"
+    }
+   ],
+   "slice": "beta2"
+  },
+  {
+   "id": "combat:group.road_ambush",
+   "members": [
+    {
+     "enemy": "combat:enemy.bandit_thug",
+     "count": 2
+    },
+    {
+     "enemy": "combat:enemy.bandit_archer"
+    },
+    {
+     "enemy": "combat:enemy.bandit_brute"
+    }
+   ],
+   "slice": "beta2"
+  },
+  {
+   "id": "combat:group.bandits_camp",
+   "members": [
+    {
+     "enemy": "combat:enemy.bandit_thug",
+     "count": 2
+    },
+    {
+     "enemy": "combat:enemy.bandit_knife"
+    },
+    {
+     "enemy": "combat:enemy.bandit_archer"
+    },
+    {
+     "enemy": "combat:enemy.bandit_ronin"
+    },
+    {
+     "enemy": "combat:enemy.bandit_chief"
+    }
+   ],
+   "slice": "beta2"
+  },
+  {
+   "id": "combat:group.smugglers",
+   "members": [
+    {
+     "enemy": "combat:enemy.smuggler_runner",
+     "count": 2
+    },
+    {
+     "enemy": "combat:enemy.rogue_genin"
+    }
+   ],
+   "slice": "beta2"
+  },
+  {
+   "id": "combat:group.rogue_pair",
+   "members": [
+    {
+     "enemy": "combat:enemy.rogue_genin"
+    },
+    {
+     "enemy": "combat:enemy.rogue_bomber"
+    }
+   ],
+   "slice": "beta2"
+  },
+  {
+   "id": "combat:group.scout_pair",
+   "members": [
+    {
+     "enemy": "combat:enemy.scout_runner"
+    },
+    {
+     "enemy": "combat:enemy.scout_sensor"
+    }
+   ],
+   "slice": "beta2"
+  },
+  {
+   "id": "combat:group.cell_pair",
+   "members": [
+    {
+     "enemy": "combat:enemy.cell_vanguard"
+    },
+    {
+     "enemy": "combat:enemy.cell_support"
+    }
+   ],
+   "slice": "beta2"
+  },
+  {
+   "id": "combat:group.wolves_pack",
+   "members": [
+    {
+     "enemy": "combat:enemy.wolf",
+     "count": 3
+    }
+   ],
+   "slice": "beta2"
+  },
+  {
+   "id": "combat:group.forest_beasts",
+   "members": [
+    {
+     "enemy": "combat:enemy.giant_centipede"
+    },
+    {
+     "enemy": "combat:enemy.giant_leech",
+     "count": 2
+    }
+   ],
+   "slice": "beta3"
+  },
+  {
+   "id": "combat:group.exam_team",
+   "members": [
+    {
+     "pick": [
+      "combat:enemy.exam_genin_wind",
+      "combat:enemy.exam_genin_sound",
+      "combat:enemy.exam_genin_puppet",
+      "combat:enemy.exam_genin_needle",
+      "combat:enemy.exam_genin_brawler"
+     ],
+     "count": 3,
+     "distinct": true
+    }
+   ],
+   "slice": "beta3"
+  },
+  {
+   "id": "combat:group.rogue_cell_b",
+   "members": [
+    {
+     "enemy": "combat:enemy.rogue_chunin"
+    },
+    {
+     "enemy": "combat:enemy.hunter_nin"
+    }
+   ],
+   "slice": "chunin"
+  }
+ ],
+ "mission_bands": {
+  "d": {
+   "levels": [
+    5,
+    10
+   ],
+   "enemies": [
+    "combat:enemy.wolf",
+    "combat:enemy.boar",
+    "combat:enemy.monkey_thief",
+    "combat:enemy.bandit_thug",
+    "combat:enemy.bandit_knife"
+   ]
+  },
+  "c": {
+   "levels": [
+    9,
+    16
+   ],
+   "enemies": [
+    "combat:group.bandits_small",
+    "combat:group.road_ambush",
+    "combat:group.bandits_camp",
+    "combat:group.smugglers",
+    "combat:group.rogue_pair",
+    "combat:group.scout_pair",
+    "combat:group.wolves_pack"
+   ]
+  },
+  "b": {
+   "levels": [
+    16,
+    30
+   ],
+   "enemies": [
+    "combat:group.cell_pair",
+    "combat:group.rogue_cell_b",
+    "combat:enemy.mercenary_captain",
+    "combat:enemy.sealing_adept",
+    "combat:enemy.chakra_absorber"
+   ]
+  },
+  "a": {
+   "levels": [
+    30,
+    45
+   ],
+   "enemies": [
+    "combat:enemy.rogue_jonin",
+    "combat:enemy.foreign_jonin",
+    "combat:enemy.puppet_master",
+    "combat:enemy.cell_veteran",
+    "combat:enemy.samurai"
+   ]
+  },
+  "s": {
+   "levels": [
+    42,
+    60
+   ],
+   "enemies": [
+    "combat:enemy.cell_veteran",
+    "combat:enemy.foreign_jonin",
+    "combat:enemy.assassin"
+   ]
+  },
+  "level_rule": "enemy level = the band's level for the mission (from the player's level, clamped to the band) + the combat stream's jitter of -1 to +1",
+  "hooks": [
+   "combat:defeated <enemy|group>",
+   "combat:surrendered",
+   "combat:captured",
+   "combat:perform <technique|combo>",
+   "combat:no_damage_taken"
+  ]
+ }
+}

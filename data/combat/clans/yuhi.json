@@ -1,0 +1,204 @@
+{
+ "format": 1,
+ "id": "yuhi",
+ "clan": "clan:yuhi",
+ "name": "Yuhi",
+ "standing": "noble",
+ "suggested_nature": [],
+ "passives": {
+  "genjutsu_power": 0.1,
+  "will_bonus": 8
+ },
+ "techniques": [
+  {
+   "id": "combat:yuhi.tree_binding",
+   "name": "Genjutsu: Tree Binding",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "ram",
+    "ox",
+    "dog"
+   ],
+   "chakra": 18,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "target",
+    "range": 12,
+    "needs_sight": true
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 80,
+     "variant": "binding"
+    },
+    {
+     "status": "bound",
+     "ticks": 80
+    },
+    {
+     "blink_behind": true
+    }
+   ],
+   "mechanic": "The target sees itself bound by a tree and cannot move for 80 ticks; you appear behind it (a free back attack)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.yuhi"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "clan": "yuhi",
+   "tier": 1
+  },
+  {
+   "id": "combat:yuhi.thorn_illusion",
+   "name": "Genjutsu: Thorn Garden",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "ram",
+    "ox",
+    "boar"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "area",
+    "radius": 6
+   },
+   "effects": [
+    {
+     "status": "genjutsu",
+     "ticks": 160,
+     "variant": "binding"
+    },
+    {
+     "status": "chilled",
+     "ticks": 160,
+     "slow": 0.5
+    }
+   ],
+   "mechanic": "A garden of thorns in a 6-block circle (genjutsu): anyone inside believes it is cut with every step (slow 0.5, cannot sprint)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.yuhi"
+   ],
+   "slice": "chunin",
+   "clan": "yuhi",
+   "tier": 2
+  },
+  {
+   "id": "combat:yuhi.rose_reversal",
+   "name": "Genjutsu: Rose Reversal",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "tiger",
+    "rat"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "genjutsu_reflect",
+     "ticks": 80,
+     "mult": 2.0
+    }
+   ],
+   "mechanic": "Reflects genjutsu, and the reflected illusion lasts twice as long",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.yuhi"
+   ],
+   "slice": "jonin",
+   "clan": "yuhi",
+   "tier": 3
+  },
+  {
+   "id": "combat:yuhi.tree_binding_death",
+   "name": "Genjutsu: Tree Binding Death",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "snake",
+    "tiger",
+    "dog"
+   ],
+   "chakra": 80,
+   "cast_ticks": 16,
+   "cooldown_ticks": 800,
+   "power": 19.2,
+   "shape": {
+    "type": "area",
+    "radius": 12,
+    "max_targets": 3
+   },
+   "effects": [
+    {
+     "status": "bound",
+     "ticks": 100
+    },
+    {
+     "damage": "physical.slash",
+     "crit": true
+    }
+   ],
+   "mechanic": "Tree Binding on up to three targets, and your back attack on each is a guaranteed crit",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.yuhi"
+   ],
+   "slice": "road",
+   "clan": "yuhi",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:yuhi.crimson_eye",
+  "name": "Crimson Eye",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 18,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "Genjutsu cast by enemies within your sight are marked with a red ring before they land",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:yuhi:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "yuhi",
+  "lesser": true
+ }
+}

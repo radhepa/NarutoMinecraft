@@ -1,0 +1,18 @@
+{
+ "format": 1,
+ "id": "combat:boss.jonin.story_2",
+ "name": "Story boss",
+ "chapter": "jonin",
+ "slice": "jonin",
+ "base": "combat:enemy.cell_veteran",
+ "level": 40,
+ "nonlethal": false,
+ "arena": null,
+ "win": "defeat",
+ "lose": "the player is downed",
+ "phases": [],
+ "hp_mult": 7.0,
+ "poise": 100,
+ "story": "bible:combat:boss.jonin.story_2",
+ "dialogue": "dlg:combat.boss.jonin.story_2"
+}

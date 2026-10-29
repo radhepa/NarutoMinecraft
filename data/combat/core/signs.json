@@ -1,0 +1,121 @@
+{
+ "format": 1,
+ "signs": [
+  "rat",
+  "ox",
+  "tiger",
+  "hare",
+  "dragon",
+  "snake",
+  "horse",
+  "ram",
+  "monkey",
+  "bird",
+  "dog",
+  "boar"
+ ],
+ "ticks_per_sign": 4,
+ "weave_key": "key.shinobi.weave (R)",
+ "modes": {
+  "typed": {
+   "keys": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "0",
+    "-",
+    "="
+   ]
+  },
+  "radial": {
+   "slices": 12,
+   "deadzone": 0.25,
+   "controller": "right stick, flick to a sign, triggers confirm"
+  }
+ },
+ "hold_or_toggle": "hold (default) or toggle: press Weave once to start, again to cast",
+ "assist": {
+  "prefix_hint": "While weaving, the HUD lists the techniques you know that start with the signs so far (ghost signs show the rest)",
+  "auto_sign": "Accessibility: pick a known technique from the quick wheel and the signs play themselves at 6 ticks a sign. No fizzles, no mastery shortening",
+  "sign_buffer": "Inputs up to 2 ticks early are buffered, so fast typists never drop a sign"
+ },
+ "fizzle": {
+  "wrong_sequence_cost_fraction": 0.25,
+  "interrupted_cost_fraction": 0.5
+ },
+ "interrupt": "A stagger, knockdown or hit worth more than 10% of max health interrupts weaving (enemy casters: any hit). Story difficulty: light hits never interrupt the player",
+ "quick_slots": {
+  "keys": [
+   "Z",
+   "X",
+   "C",
+   "V"
+  ],
+  "requires_mastery": "mastered"
+ },
+ "mastery": {
+  "tiers": [
+   "novice",
+   "practiced",
+   "mastered",
+   "perfected"
+  ],
+  "uses_by_rank": {
+   "e": [
+    10,
+    30,
+    80
+   ],
+   "d": [
+    12,
+    40,
+    100
+   ],
+   "c": [
+    15,
+    50,
+    130
+   ],
+   "b": [
+    20,
+    60,
+    160
+   ],
+   "a": [
+    25,
+    75,
+    200
+   ],
+   "s": [
+    30,
+    90,
+    240
+   ]
+  },
+  "combat_use_counts": 2,
+  "effects": {
+   "practiced": {
+    "cost_mult": 0.95,
+    "power_mult": 1.03
+   },
+   "mastered": {
+    "cost_mult": 0.9,
+    "power_mult": 1.06,
+    "signs": "half (rounded up)",
+    "quick_slot": true
+   },
+   "perfected": {
+    "cost_mult": 0.8,
+    "power_mult": 1.1,
+    "signs": "one sign (E to C: no signs)",
+    "quick_slot": true
+   }
+  }
+ }
+}

@@ -1,0 +1,39 @@
+plugins {
+    id 'java-library'
+}
+
+// The combat core of Shinobi Combat (docs/COMBAT.md): pure Java, no Minecraft, deterministic and seeded.
+// Damage and resistance math, the nature triangle, combo state machines, chakra, stamina, poise and
+// cooldown accounting, hand-sign parsing, mastery and status effects. Phase 0's Combat mod depends on it
+// (`implementation project(':combat:core')`) and adds the thin world glue. It reads data/combat/ as JSON.
+version = '0.1.0'
+group = 'dev.shinobi'
+base { archivesName = 'shinobi-combat-core' }
+
+repositories { mavenCentral() }
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+def combatData = rootProject.file('data/combat')
+
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+test {
+    useJUnitPlatform()
+    systemProperty 'combat.data', combatData.absolutePath
+    inputs.dir combatData
+    testLogging { events 'failed'; exceptionFormat 'full' }
+}
+
+// The duel simulator: plays loadouts against each other and prints the balance tables
+// (time-to-kill by rank and level, build against build, the beta's boss fights).
+tasks.register('simulate', JavaExec) {
+    group = 'verification'
+    description = 'Plays the combat data against itself and prints the balance tables.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.shinobi.combat.sim.Balance'
+    systemProperty 'combat.data', combatData.absolutePath
+    args project.findProperty('seed') ?: '20261029', project.findProperty('runs') ?: '200'
+}

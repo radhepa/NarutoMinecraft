@@ -1,0 +1,30 @@
+{
+ "format": 1,
+ "id": "combat:boss.jonin.puppet_theatre",
+ "name": "The puppet master",
+ "chapter": "jonin",
+ "slice": "jonin",
+ "base": "combat:enemy.puppet_master",
+ "level": 36,
+ "nonlethal": false,
+ "arena": null,
+ "win": "defeat",
+ "lose": "the player is downed",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Three puppets",
+   "behaviour": "three puppets with poison blades",
+   "openings": "cut the threads (a slash between puppet and master)"
+  },
+  {
+   "at_hp": 0.4,
+   "name": "Master",
+   "behaviour": "the master fights",
+   "openings": "close in: it is weak up close"
+  }
+ ],
+ "hp_mult": 7.0,
+ "poise": 100,
+ "dialogue": "dlg:combat.boss.jonin.puppet_theatre"
+}

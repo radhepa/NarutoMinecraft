@@ -1,0 +1,33 @@
+{
+ "format": 1,
+ "id": "combat:enemy.sealing_adept",
+ "name": "Sealing adept",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "chunin",
+ "levels": [
+  25,
+  40
+ ],
+ "band": "far",
+ "slice": "chunin",
+ "weapons": [],
+ "techniques": [
+  "combat:seal.tag_barrier",
+  "combat:seal.chakra_suppression",
+  "combat:seal.binding_tag"
+ ],
+ "tools": {
+  "item:sealing_tag": 12
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "ninjutsu_resist_inside_barrier"
+ ],
+ "ai": {},
+ "barks": "cell"
+}

@@ -1,0 +1,1697 @@
+{
+ "format": 1,
+ "builds": [
+  {
+   "id": "sim.taijutsu.5",
+   "focus": "taijutsu",
+   "level": 5,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 35,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.weapons.5",
+   "focus": "weapons",
+   "level": 5,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 3,
+    "taijutsu": 1,
+    "ninjutsu": 1
+   },
+   "control": 35,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution"
+   ],
+   "style": "combat:style.academy_blade",
+   "style_tier": 2,
+   "melee": "item:tanto",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.ninjutsu.5",
+   "focus": "ninjutsu",
+   "level": 5,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 3,
+    "taijutsu": 1,
+    "weapons": 1
+   },
+   "control": 35,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.balanced.5",
+   "focus": "balanced",
+   "level": 5,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 2,
+    "weapons": 1
+   },
+   "control": 35,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.taijutsu.10",
+   "focus": "taijutsu",
+   "level": 10,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 40,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.weapons.10",
+   "focus": "weapons",
+   "level": 10,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 4,
+    "taijutsu": 2,
+    "ninjutsu": 2
+   },
+   "control": 40,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.tag_kunai",
+    "combat:weapon.shadow_shuriken",
+    "combat:wind.great_breakthrough"
+   ],
+   "style": "combat:style.academy_blade",
+   "style_tier": 2,
+   "melee": "item:tanto",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.ninjutsu.10",
+   "focus": "ninjutsu",
+   "level": 10,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 4,
+    "taijutsu": 2,
+    "weapons": 2
+   },
+   "control": 40,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.great_fireball",
+    "combat:fire.ember_shot"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.balanced.10",
+   "focus": "balanced",
+   "level": 10,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 40,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.tag_kunai"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.taijutsu.15",
+   "focus": "taijutsu",
+   "level": 15,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 45,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.mud_river",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.weapons.15",
+   "focus": "weapons",
+   "level": 15,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 6,
+    "taijutsu": 2,
+    "ninjutsu": 2
+   },
+   "control": 45,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.wind_shuriken",
+    "combat:weapon.tag_kunai",
+    "combat:wind.vacuum_wave"
+   ],
+   "style": "combat:style.crescent_moon",
+   "style_tier": 3,
+   "melee": "item:katana",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.ninjutsu.15",
+   "focus": "ninjutsu",
+   "level": 15,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 6,
+    "taijutsu": 2,
+    "weapons": 2
+   },
+   "control": 45,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.phoenix_flower",
+    "combat:fire.great_fireball",
+    "combat:fire.ember_shot"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.balanced.15",
+   "focus": "balanced",
+   "level": 15,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 3,
+    "weapons": 3
+   },
+   "control": 45,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.taijutsu.18",
+   "focus": "taijutsu",
+   "level": 18,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.mud_river",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.weapons.18",
+   "focus": "weapons",
+   "level": 18,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 7,
+    "taijutsu": 3,
+    "ninjutsu": 2
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.windmill_triple",
+    "combat:weapon.wind_shuriken",
+    "combat:wind.vacuum_wave"
+   ],
+   "style": "combat:style.crescent_moon",
+   "style_tier": 4,
+   "melee": "item:katana",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.ninjutsu.18",
+   "focus": "ninjutsu",
+   "level": 18,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 7,
+    "taijutsu": 3,
+    "weapons": 2
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.phoenix_flower",
+    "combat:fire.great_fireball",
+    "combat:fire.ember_shot"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.balanced.18",
+   "focus": "balanced",
+   "level": 18,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.taijutsu.25",
+   "focus": "taijutsu",
+   "level": 25,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 4,
+    "weapons": 3
+   },
+   "control": 55,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.earth_dragon_bullet",
+    "combat:earth.stone_spears"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.weapons.25",
+   "focus": "weapons",
+   "level": 25,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 8,
+    "taijutsu": 4,
+    "ninjutsu": 3
+   },
+   "control": 55,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.kunai_barrage",
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.windmill_triple",
+    "combat:wind.vacuum_bullet"
+   ],
+   "style": "combat:style.crescent_moon",
+   "style_tier": 4,
+   "melee": "item:katana",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.ninjutsu.25",
+   "focus": "ninjutsu",
+   "level": 25,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 8,
+    "taijutsu": 4,
+    "weapons": 3
+   },
+   "control": 55,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.fire_dragon_bullet",
+    "combat:fire.ash_pile_burning",
+    "combat:fire.flame_wall",
+    "combat:fire.phoenix_flower",
+    "combat:fire.great_fireball"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.balanced.25",
+   "focus": "balanced",
+   "level": 25,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 5,
+    "ninjutsu": 5,
+    "weapons": 5
+   },
+   "control": 55,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.false_darkness",
+    "combat:lightning.lightning_hound",
+    "combat:lightning.stunning_palm",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 1,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.taijutsu.30",
+   "focus": "taijutsu",
+   "level": 30,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 60,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.earth_dragon_bullet",
+    "combat:earth.stone_spears"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.weapons.30",
+   "focus": "weapons",
+   "level": 30,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 10,
+    "taijutsu": 4,
+    "ninjutsu": 4
+   },
+   "control": 60,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.kunai_barrage",
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.windmill_triple",
+    "combat:wind.pressure_damage"
+   ],
+   "style": "combat:style.crescent_moon",
+   "style_tier": 5,
+   "melee": "item:katana",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.ninjutsu.30",
+   "focus": "ninjutsu",
+   "level": 30,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 4,
+    "weapons": 4
+   },
+   "control": 60,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.great_dragon_fire",
+    "combat:fire.fire_dragon_bullet",
+    "combat:fire.ash_pile_burning",
+    "combat:fire.flame_wall",
+    "combat:fire.phoenix_flower"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.balanced.30",
+   "focus": "balanced",
+   "level": 30,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 6,
+    "weapons": 6
+   },
+   "control": 60,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.lightning_blade",
+    "combat:lightning.false_darkness",
+    "combat:lightning.lightning_hound",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.taijutsu.40",
+   "focus": "taijutsu",
+   "level": 40,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 7,
+    "weapons": 6
+   },
+   "control": 70,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.spiral_sphere",
+    "combat:earth.earth_dragon_bullet"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.weapons.40",
+   "focus": "weapons",
+   "level": 40,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 10,
+    "taijutsu": 7,
+    "ninjutsu": 6
+   },
+   "control": 70,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.kunai_barrage",
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.windmill_triple",
+    "combat:wind.vacuum_great_sphere"
+   ],
+   "style": "combat:style.crescent_moon",
+   "style_tier": 5,
+   "melee": "item:katana",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.ninjutsu.40",
+   "focus": "ninjutsu",
+   "level": 40,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 7,
+    "weapons": 6
+   },
+   "control": 70,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.spiral_sphere",
+    "combat:fire.majestic_destroyer_flame",
+    "combat:fire.great_dragon_fire",
+    "combat:fire.fire_dragon_bullet",
+    "combat:fire.ash_pile_burning"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.balanced.40",
+   "focus": "balanced",
+   "level": 40,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 8,
+    "weapons": 7
+   },
+   "control": 70,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.taijutsu.50",
+   "focus": "taijutsu",
+   "level": 50,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 9,
+    "weapons": 9
+   },
+   "control": 80,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.earth_splitting",
+    "combat:nin.spiral_sphere"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.weapons.50",
+   "focus": "weapons",
+   "level": 50,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 10,
+    "taijutsu": 9,
+    "ninjutsu": 9
+   },
+   "control": 80,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.kunai_barrage",
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.windmill_triple",
+    "combat:wind.vacuum_great_sphere"
+   ],
+   "style": "combat:style.crescent_moon",
+   "style_tier": 5,
+   "melee": "item:katana",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.ninjutsu.50",
+   "focus": "ninjutsu",
+   "level": 50,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 9,
+    "weapons": 9
+   },
+   "control": 80,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.great_fire_annihilation",
+    "combat:nin.spiral_sphere",
+    "combat:fire.majestic_destroyer_flame",
+    "combat:fire.great_dragon_fire",
+    "combat:fire.fire_dragon_bullet"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.balanced.50",
+   "focus": "balanced",
+   "level": 50,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 9,
+    "weapons": 9
+   },
+   "control": 80,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.taijutsu.60",
+   "focus": "taijutsu",
+   "level": 60,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 90,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.earth_splitting",
+    "combat:nin.spiral_sphere"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.weapons.60",
+   "focus": "weapons",
+   "level": 60,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 10,
+    "taijutsu": 10,
+    "ninjutsu": 10
+   },
+   "control": 90,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.kunai_barrage",
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.windmill_triple",
+    "combat:wind.vacuum_great_sphere"
+   ],
+   "style": "combat:style.crescent_moon",
+   "style_tier": 5,
+   "melee": "item:katana",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.ninjutsu.60",
+   "focus": "ninjutsu",
+   "level": 60,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 10,
+    "weapons": 10
+   },
+   "control": 90,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.great_fire_annihilation",
+    "combat:nin.spiral_sphere",
+    "combat:fire.majestic_destroyer_flame",
+    "combat:fire.great_dragon_fire",
+    "combat:fire.fire_dragon_bullet"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.balanced.60",
+   "focus": "balanced",
+   "level": 60,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 90,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.beta.taijutsu.3",
+   "focus": "taijutsu",
+   "level": 3,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 33,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai_practice",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.beta.weapons.3",
+   "focus": "weapons",
+   "level": 3,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 2,
+    "taijutsu": 1,
+    "ninjutsu": 1
+   },
+   "control": 33,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution"
+   ],
+   "style": "combat:style.academy_blade",
+   "style_tier": 1,
+   "melee": "item:kunai_practice",
+   "thrown": "item:shuriken_practice",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.beta.ninjutsu.3",
+   "focus": "ninjutsu",
+   "level": 3,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 2,
+    "taijutsu": 1,
+    "weapons": 1
+   },
+   "control": 33,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai_practice",
+   "thrown": "item:shuriken_practice",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.beta.balanced.3",
+   "focus": "balanced",
+   "level": 3,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 33,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai_practice",
+   "thrown": "item:shuriken_practice",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.beta.taijutsu.11",
+   "focus": "taijutsu",
+   "level": 11,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 41,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.beta.weapons.11",
+   "focus": "weapons",
+   "level": 11,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 4,
+    "taijutsu": 2,
+    "ninjutsu": 2
+   },
+   "control": 41,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.tag_kunai",
+    "combat:weapon.shadow_shuriken",
+    "combat:wind.great_breakthrough"
+   ],
+   "style": "combat:style.academy_blade",
+   "style_tier": 2,
+   "melee": "item:tanto",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.beta.ninjutsu.11",
+   "focus": "ninjutsu",
+   "level": 11,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 4,
+    "taijutsu": 2,
+    "weapons": 2
+   },
+   "control": 41,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.great_fireball",
+    "combat:fire.ember_shot"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.beta.balanced.11",
+   "focus": "balanced",
+   "level": 11,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 41,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.tag_kunai"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.beta.taijutsu.14",
+   "focus": "taijutsu",
+   "level": 14,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 44,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.mud_river",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.beta.weapons.14",
+   "focus": "weapons",
+   "level": 14,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 6,
+    "taijutsu": 2,
+    "ninjutsu": 2
+   },
+   "control": 44,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.wind_shuriken",
+    "combat:weapon.tag_kunai",
+    "combat:wind.vacuum_wave"
+   ],
+   "style": "combat:style.academy_blade",
+   "style_tier": 3,
+   "melee": "item:tanto",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.beta.ninjutsu.14",
+   "focus": "ninjutsu",
+   "level": 14,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 6,
+    "taijutsu": 2,
+    "weapons": 2
+   },
+   "control": 44,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.phoenix_flower",
+    "combat:fire.great_fireball",
+    "combat:fire.ember_shot"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.beta.balanced.14",
+   "focus": "balanced",
+   "level": 14,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 3,
+    "weapons": 3
+   },
+   "control": 44,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.beta.taijutsu.16",
+   "focus": "taijutsu",
+   "level": 16,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 46,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.mud_river",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.beta.weapons.16",
+   "focus": "weapons",
+   "level": 16,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 6,
+    "taijutsu": 3,
+    "ninjutsu": 2
+   },
+   "control": 46,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.wind_shuriken",
+    "combat:weapon.tag_kunai",
+    "combat:wind.vacuum_wave"
+   ],
+   "style": "combat:style.crescent_moon",
+   "style_tier": 3,
+   "melee": "item:katana",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.beta.ninjutsu.16",
+   "focus": "ninjutsu",
+   "level": 16,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 6,
+    "taijutsu": 3,
+    "weapons": 2
+   },
+   "control": 46,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.phoenix_flower",
+    "combat:fire.great_fireball",
+    "combat:fire.ember_shot"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.beta.balanced.16",
+   "focus": "balanced",
+   "level": 16,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 4,
+    "weapons": 3
+   },
+   "control": 46,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.beta.taijutsu.18",
+   "focus": "taijutsu",
+   "level": 18,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:earth.mud_river",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   }
+  },
+  {
+   "id": "sim.beta.weapons.18",
+   "focus": "weapons",
+   "level": 18,
+   "nature": "wind",
+   "ranks": {
+    "weapons": 7,
+    "taijutsu": 3,
+    "ninjutsu": 2
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:weapon.manipulated_shuriken",
+    "combat:weapon.wind_shuriken",
+    "combat:wind.vacuum_wave"
+   ],
+   "style": "combat:style.crescent_moon",
+   "style_tier": 4,
+   "melee": "item:katana",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 30,
+    "item:kunai": 10,
+    "item:paper_bomb": 4
+   }
+  },
+  {
+   "id": "sim.beta.ninjutsu.18",
+   "focus": "ninjutsu",
+   "level": 18,
+   "nature": "fire",
+   "ranks": {
+    "ninjutsu": 7,
+    "taijutsu": 3,
+    "weapons": 2
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:fire.phoenix_flower",
+    "combat:fire.great_fireball",
+    "combat:fire.ember_shot"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   }
+  },
+  {
+   "id": "sim.beta.balanced.18",
+   "focus": "balanced",
+   "level": 18,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "format": 1,
+ "id": "combat:enemy.spar.classmate",
+ "name": "Academy classmate",
+ "kind": "human",
+ "tier": "mook",
+ "rank": "academy",
+ "levels": [
+  1,
+  6
+ ],
+ "band": "close",
+ "slice": "beta1",
+ "style": "combat:style.academy_basics",
+ "weapons": [
+  "item:kunai_practice"
+ ],
+ "techniques": [
+  "combat:nin.substitution"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "nonlethal"
+ ],
+ "ai": {
+  "yield_at": 0.3,
+  "dodge": 0.1
+ },
+ "found": "Academy yard, training grounds",
+ "barks": "spar_partner"
+}

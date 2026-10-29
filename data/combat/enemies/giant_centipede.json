@@ -1,0 +1,29 @@
+{
+ "format": 1,
+ "id": "combat:enemy.giant_centipede",
+ "name": "Giant centipede",
+ "kind": "animal",
+ "tier": "elite",
+ "rank": "beast",
+ "levels": [
+  13,
+  18
+ ],
+ "band": "close",
+ "slice": "beta3",
+ "weapons": [],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 6,
+  "chakra": 0,
+  "will": 40
+ },
+ "traits": [
+  "poison_bite",
+  "armoured"
+ ],
+ "ai": {},
+ "found": "Forest of Death",
+ "barks": "beast_none"
+}

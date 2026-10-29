@@ -1,0 +1,28 @@
+{
+ "format": 1,
+ "id": "combat:enemy.boar",
+ "name": "Wild boar",
+ "kind": "animal",
+ "tier": "mook",
+ "rank": "beast",
+ "levels": [
+  3,
+  12
+ ],
+ "band": "close",
+ "slice": "beta2",
+ "weapons": [],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "charge"
+ ],
+ "ai": {},
+ "barks": "beast_none",
+ "note": "Charges in a straight line (10-tick tell): sidestep and it stuns itself on a tree"
+}

@@ -1,0 +1,30 @@
+{
+ "format": 1,
+ "id": "combat:boss.ch16.forest_beast",
+ "name": "A giant of the forest",
+ "chapter": 16,
+ "slice": "beta3",
+ "base": "combat:enemy.giant_snake",
+ "level": 16,
+ "nonlethal": false,
+ "arena": "place:forest_of_death.river",
+ "win": "defeat",
+ "lose": "the player is downed",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Coils",
+   "behaviour": "tail sweeps (radius 4, jump them), lunges (10-tick tell)",
+   "openings": "its head after a missed lunge"
+  },
+  {
+   "at_hp": 0.5,
+   "name": "Swallow",
+   "behaviour": "a red-flash grab: swallowed; deal 15% of its health from inside or a teammate frees you",
+   "openings": "fire and lightning from inside count double"
+  }
+ ],
+ "hp_mult": 6.0,
+ "poise": 90,
+ "dialogue": "dlg:combat.boss.ch16.forest_beast"
+}

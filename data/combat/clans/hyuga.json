@@ -1,0 +1,213 @@
+{
+ "format": 1,
+ "id": "hyuga",
+ "clan": "clan:hyuga",
+ "name": "Hyuga",
+ "standing": "noble",
+ "suggested_nature": [],
+ "passives": {
+  "control_bonus": 15
+ },
+ "techniques": [
+  {
+   "id": "combat:hyuga.gentle_fist",
+   "name": "Gentle Fist",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "style": "combat:style.gentle_fist"
+    }
+   ],
+   "mechanic": "Opens the Gentle Fist style (palms drain chakra and close points; see styles)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hyuga"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "hyuga",
+   "tier": 1
+  },
+  {
+   "id": "combat:hyuga.palm_rotation",
+   "name": "Eight Trigrams Palm Rotation",
+   "kind": "kekkei_genkai",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [],
+   "chakra": 15,
+   "cast_ticks": 2,
+   "cooldown_ticks": 120,
+   "power": 4.2,
+   "shape": {
+    "type": "area",
+    "radius": 3
+   },
+   "effects": [
+    {
+     "deflects": "all"
+    },
+    {
+     "knockback": 3
+    }
+   ],
+   "mechanic": "A spinning dome of chakra (radius 3): deflects every projectile and jutsu that is not S-rank, knocks back, 10 i-frames",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hyuga"
+   ],
+   "slice": "chunin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "hyuga",
+   "tier": 2
+  },
+  {
+   "id": "combat:hyuga.vacuum_palm_barrage",
+   "name": "Eight Trigrams Vacuum Palm Barrage",
+   "kind": "kekkei_genkai",
+   "nature": "none",
+   "rank": "a",
+   "level": 32,
+   "signs": [],
+   "chakra": 50,
+   "cast_ticks": 4,
+   "cooldown_ticks": 360,
+   "power": 18.9,
+   "shape": {
+    "type": "projectile",
+    "range": 8,
+    "speed": 3.0,
+    "radius": 0.8,
+    "count": 6,
+    "interval": 2
+   },
+   "effects": [
+    {
+     "damage": "chakra"
+    },
+    {
+     "closes_points": 12
+    }
+   ],
+   "mechanic": "Rapid air palms at range (8 blocks): six pressure hits that close chakra points",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hyuga"
+   ],
+   "slice": "jonin",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "hyuga",
+   "tier": 3
+  },
+  {
+   "id": "combat:hyuga.protection_64",
+   "name": "Eight Trigrams Sixty-Four Palms Protection",
+   "kind": "kekkei_genkai",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [],
+   "chakra": 80,
+   "cast_ticks": 4,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "area",
+    "radius": 3
+   },
+   "effects": [
+    {
+     "deflects": "all"
+    },
+    {
+     "damage": "chakra"
+    }
+   ],
+   "mechanic": "A wall of palms around you for 60 ticks: every attack entering 3 blocks is struck down and its attacker hit",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.hyuga"
+   ],
+   "slice": "road",
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "hyuga",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:hyuga.trigram_stance",
+  "name": "Eight Trigrams Stance",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 18,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "A defensive stance: guard reduction +10% and parry window +1 tick while you hold still",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:hyuga:7"
+  ],
+  "slice": "beta2",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "hyuga",
+  "lesser": true
+ },
+ "kekkei_genkai": {
+  "name": "Byakugan",
+  "stages": [
+   {
+    "stage": 1,
+    "slice": "beta2",
+    "gives": "sight through walls within 16 blocks (living things glow); 1 chakra a second"
+   },
+   {
+    "stage": 2,
+    "slice": "chunin",
+    "gives": "32 blocks; see chakra points: Gentle Fist palms crit to the back"
+   },
+   {
+    "stage": 3,
+    "slice": "jonin",
+    "gives": "50 blocks and near-360 sight: no back-attack bonus against you"
+   },
+   {
+    "stage": 4,
+    "slice": "road",
+    "gives": "see an enemy's chakra flow: its next technique's nature and target shown"
+   }
+  ],
+  "key": "toggle with the Eye key (B)"
+ },
+ "style": "combat:style.gentle_fist"
+}

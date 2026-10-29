@@ -1,0 +1,27 @@
+{
+ "format": 1,
+ "beats": {
+  "fire": "wind",
+  "wind": "lightning",
+  "lightning": "earth",
+  "earth": "water",
+  "water": "fire"
+ },
+ "affinity_vs_weak": 1.25,
+ "affinity_vs_strong": 0.8,
+ "clash": {
+  "stronger_passes_at": 0.5,
+  "same_nature": "higher remaining power wins, at the difference",
+  "neutral": "both dissipate; the larger keeps the difference"
+ },
+ "own_nature_cost_mult": 0.75,
+ "clan_nature_power_bonus": 0.1,
+ "colours": {
+  "fire": "#ff7a2a",
+  "wind": "#bfe9d6",
+  "lightning": "#9fd8ff",
+  "earth": "#a8814f",
+  "water": "#4b9be0"
+ },
+ "note": "Fire beats wind, wind beats lightning, lightning beats earth, earth beats water, water beats fire. A defender with an affinity takes x1.25 from the nature that beats theirs and x0.8 from the nature theirs beats. When two jutsu collide, the stronger nature passes through at half power; equal natures compare power."
+}

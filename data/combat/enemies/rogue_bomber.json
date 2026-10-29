@@ -1,0 +1,35 @@
+{
+ "format": 1,
+ "id": "combat:enemy.rogue_bomber",
+ "name": "Rogue bomber",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "genin",
+ "levels": [
+  10,
+  20
+ ],
+ "band": "far",
+ "slice": "beta2",
+ "weapons": [
+  "item:kunai"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:weapon.tag_kunai"
+ ],
+ "tools": {
+  "item:paper_bomb": 8
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "traps"
+ ],
+ "ai": {},
+ "barks": "rogue",
+ "note": "Lays paper-bomb mines and throws tagged kunai; ground decals show its mines on Story"
+}

@@ -1,0 +1,38 @@
+{
+ "format": 1,
+ "id": "combat:enemy.spar.chunin",
+ "name": "Chunin sparring partner",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "chunin",
+ "levels": [
+  15,
+  30
+ ],
+ "band": "mid",
+ "slice": "beta3",
+ "style": "combat:style.academy_basics",
+ "weapons": [
+  "item:kunai",
+  "item:shuriken"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.body_flicker",
+  "combat:nin.shadow_clone"
+ ],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "nonlethal",
+  "uses_your_nature_weakness"
+ ],
+ "ai": {
+  "yield_at": 0.3
+ },
+ "barks": "spar_partner"
+}

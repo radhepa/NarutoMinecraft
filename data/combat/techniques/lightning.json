@@ -1,0 +1,312 @@
+{
+ "format": 1,
+ "techniques": [
+  {
+   "id": "combat:lightning.spark_needle",
+   "name": "Lightning: Spark Needle",
+   "kind": "ninjutsu",
+   "nature": "lightning",
+   "rank": "d",
+   "level": 8,
+   "signs": [
+    "monkey",
+    "dog"
+   ],
+   "chakra": 10,
+   "cast_ticks": 8,
+   "cooldown_ticks": 60,
+   "power": 4.0,
+   "shape": {
+    "type": "projectile",
+    "range": 16,
+    "speed": 3.0,
+    "radius": 0.3
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.lightning"
+    },
+    {
+     "status": "shocked",
+     "ticks": 4
+    }
+   ],
+   "mechanic": "A thin fast bolt (3 blocks a tick, 16 range): shocked 4 ticks",
+   "counters": "wind jutsu (wind beats lightning), break line of sight, dodge on the charge",
+   "teach": [
+    "scroll:scroll_shop"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:lightning.stunning_palm",
+   "name": "Lightning: Stunning Palm",
+   "kind": "ninjutsu",
+   "nature": "lightning",
+   "rank": "c",
+   "level": 10,
+   "signs": [
+    "ram",
+    "ox",
+    "monkey"
+   ],
+   "chakra": 18,
+   "cast_ticks": 12,
+   "cooldown_ticks": 120,
+   "power": 8.1,
+   "shape": {
+    "type": "melee",
+    "range": 3.0,
+    "chain": 1
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.lightning"
+    },
+    {
+     "status": "shocked",
+     "ticks": 10
+    }
+   ],
+   "mechanic": "Charge a palm and strike (reach 3): shocked for 10 ticks, chains to one more enemy within 3 blocks",
+   "counters": "wind jutsu (wind beats lightning), break line of sight, dodge on the charge",
+   "teach": [
+    "ceremony:nature",
+    "mentor:role:nature_master.lightning"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:lightning.false_darkness",
+   "name": "Lightning: False Darkness",
+   "kind": "ninjutsu",
+   "nature": "lightning",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "monkey",
+    "ox",
+    "ram",
+    "dog"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 14.0,
+   "shape": {
+    "type": "line",
+    "range": 20,
+    "width": 0.8,
+    "pierce": 3
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.lightning"
+    },
+    {
+     "status": "shocked",
+     "ticks": 8
+    }
+   ],
+   "mechanic": "A spear of black lightning in a line (20 blocks) that pierces up to three targets",
+   "counters": "wind jutsu (wind beats lightning), break line of sight, dodge on the charge",
+   "teach": [
+    "mentor:role:nature_master.lightning"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:lightning.lightning_hound",
+   "name": "Lightning: Lightning Hound",
+   "kind": "ninjutsu",
+   "nature": "lightning",
+   "rank": "b",
+   "level": 24,
+   "signs": [
+    "dog",
+    "monkey",
+    "dog"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 14.0,
+   "shape": {
+    "type": "projectile",
+    "range": 24,
+    "speed": 1.4,
+    "radius": 0.8,
+    "homing": 0.4,
+    "splits": 2
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.lightning"
+    },
+    {
+     "status": "shocked",
+     "ticks": 10
+    }
+   ],
+   "mechanic": "A hound of lightning that runs the target down (homing 0.4); splits on a dodge",
+   "counters": "wind jutsu (wind beats lightning), break line of sight, dodge on the charge",
+   "teach": [
+    "mentor:role:clan_elder.hatake",
+    "mentor:role:nature_master.lightning"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:lightning.thunder_cage",
+   "name": "Lightning: Thunder Cage",
+   "kind": "ninjutsu",
+   "nature": "lightning",
+   "rank": "b",
+   "level": 26,
+   "signs": [
+    "monkey",
+    "ram",
+    "dog",
+    "ox"
+   ],
+   "chakra": 30,
+   "cast_ticks": 16,
+   "cooldown_ticks": 200,
+   "power": 7.0,
+   "shape": {
+    "type": "entity",
+    "entity": "thunder_cage",
+    "ticks": 120,
+    "radius": 5
+   },
+   "effects": [
+    {
+     "status": "shocked",
+     "ticks": 10
+    }
+   ],
+   "mechanic": "A ring of crackling posts (radius 5) for 120 ticks: anyone touching its edge is shocked; you can stand inside",
+   "counters": "wind jutsu (wind beats lightning), break line of sight, dodge on the charge",
+   "teach": [
+    "mission:b"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:lightning.lightning_blade",
+   "name": "Lightning Blade",
+   "kind": "ninjutsu",
+   "nature": "lightning",
+   "rank": "a",
+   "level": 30,
+   "signs": [
+    "ox",
+    "hare",
+    "monkey"
+   ],
+   "chakra": 50,
+   "cast_ticks": 32,
+   "cooldown_ticks": 360,
+   "power": 25.2,
+   "shape": {
+    "type": "line",
+    "range": 12,
+    "width": 1.0,
+    "dash": true,
+    "breaks_guard": true,
+    "breaks_barriers": true
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.lightning"
+    },
+    {
+     "status": "shocked",
+     "ticks": 12
+    }
+   ],
+   "mechanic": "Charge 20 ticks (the hand crackles; you are slowed), then a straight dash of 12 blocks that breaks through a guard, a parry or a barrier",
+   "counters": "sidestep at the last moment; wind jutsu; a substitution",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:lightning.armour",
+   "name": "Lightning: Armour",
+   "kind": "ninjutsu",
+   "nature": "lightning",
+   "rank": "a",
+   "level": 36,
+   "signs": [
+    "monkey",
+    "ox",
+    "ram"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "shrouded",
+     "ticks": 400
+    }
+   ],
+   "mechanic": "Shrouds the body in lightning (shrouded, 3 chakra a second): +30% speed and attack speed, physical damage taken -30%, opens Lightning Body",
+   "counters": "wind jutsu (wind beats lightning), break line of sight, dodge on the charge",
+   "teach": [
+    "mentor:role:nature_master.lightning"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:lightning.kirin",
+   "name": "Lightning: Kirin",
+   "kind": "ninjutsu",
+   "nature": "lightning",
+   "rank": "s",
+   "level": 50,
+   "signs": [
+    "monkey",
+    "ox",
+    "ram",
+    "dog",
+    "dragon"
+   ],
+   "chakra": 80,
+   "cast_ticks": 20,
+   "cooldown_ticks": 800,
+   "power": 41.6,
+   "shape": {
+    "type": "target",
+    "range": 40,
+    "instant": true
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.lightning"
+    },
+    {
+     "status": "shocked",
+     "ticks": 20
+    }
+   ],
+   "mechanic": "Calls a bolt from a storm cloud onto the target, instantly (no projectile). Needs rain, a thunderstorm or a fire user's storm cloud",
+   "counters": "be under a roof; a lightning rod (earth spire)",
+   "teach": [
+    "scroll:forbidden_archive"
+   ],
+   "slice": "road",
+   "requires": [
+    "weather:storm_cloud"
+   ]
+  }
+ ]
+}

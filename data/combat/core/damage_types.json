@@ -1,0 +1,84 @@
+{
+ "format": 1,
+ "types": {
+  "physical.blunt": {
+   "armour": "physical",
+   "poise_mult": 1.5,
+   "note": "Fists, staffs, maces, boulders"
+  },
+  "physical.slash": {
+   "armour": "physical",
+   "poise_mult": 1.0,
+   "bleed_chance": 0.1,
+   "note": "Blades, wind blades count as wind"
+  },
+  "physical.pierce": {
+   "armour": "physical",
+   "armour_pierce": 0.3,
+   "poise_mult": 0.6,
+   "note": "Kunai, shuriken, senbon"
+  },
+  "ninjutsu.fire": {
+   "armour": "chakra",
+   "nature": "fire",
+   "poise_mult": 0.8,
+   "status": "burning"
+  },
+  "ninjutsu.wind": {
+   "armour": "chakra",
+   "nature": "wind",
+   "poise_mult": 1.0,
+   "guard_pierce": 0.3
+  },
+  "ninjutsu.lightning": {
+   "armour": "chakra",
+   "nature": "lightning",
+   "poise_mult": 0.9,
+   "status": "shocked"
+  },
+  "ninjutsu.earth": {
+   "armour": "chakra",
+   "nature": "earth",
+   "poise_mult": 1.6
+  },
+  "ninjutsu.water": {
+   "armour": "chakra",
+   "nature": "water",
+   "poise_mult": 1.2,
+   "status": "soaked"
+  },
+  "ninjutsu.none": {
+   "armour": "chakra",
+   "poise_mult": 1.2,
+   "note": "Pure chakra (spiralling spheres, chakra fists)"
+  },
+  "chakra": {
+   "armour": "none",
+   "drains": "chakra",
+   "note": "Gentle Fist and insect drain: lowers the target's chakra and closes chakra points"
+  },
+  "genjutsu": {
+   "armour": "will",
+   "no_hp": true,
+   "poise_mult": 0,
+   "note": "Illusions: no health damage of their own; strength against the target's will"
+  },
+  "poison": {
+   "armour": "none",
+   "dot": true,
+   "poise_mult": 0,
+   "note": "Ticks over time; Suzuran are immune, Aburame resist"
+  },
+  "sealing": {
+   "armour": "will",
+   "no_hp": true,
+   "poise_mult": 0,
+   "note": "Seals chakra, techniques or movement; strength against will"
+  },
+  "true": {
+   "armour": "none",
+   "poise_mult": 0,
+   "note": "Gate strain and desperate casts: never reduced"
+  }
+ }
+}

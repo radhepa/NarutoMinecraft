@@ -1,0 +1,476 @@
+{
+ "format": 1,
+ "techniques": [
+  {
+   "id": "combat:weapon.tag_kunai",
+   "name": "Exploding-Tag Kunai",
+   "kind": "weapon",
+   "nature": "none",
+   "rank": "d",
+   "level": 6,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 10,
+   "power": 8,
+   "shape": {
+    "type": "projectile",
+    "range": 24,
+    "speed": 1.8,
+    "radius": 0.3,
+    "burst": 3
+   },
+   "effects": [
+    {
+     "damage": "physical.blunt"
+    }
+   ],
+   "mechanic": "With a paper bomb in the pouch, the throw key on a kunai throws it tagged: it sticks, then bursts (radius 3, fuse 20) or on Ram",
+   "counters": "knock the kunai down; substitution; wind blows it off course",
+   "teach": [
+    "mentor:role:sensei",
+    "mentor:role:weapon_master"
+   ],
+   "slice": "beta2",
+   "requires": [
+    "item:kunai",
+    "item:paper_bomb"
+   ],
+   "beta": true,
+   "tags": [
+    "no_signs"
+   ]
+  },
+  {
+   "id": "combat:weapon.shadow_shuriken",
+   "name": "Shadow Shuriken",
+   "kind": "weapon",
+   "nature": "none",
+   "rank": "d",
+   "level": 7,
+   "signs": [],
+   "chakra": 3,
+   "cast_ticks": 0,
+   "cooldown_ticks": 40,
+   "power": 5,
+   "shape": {
+    "type": "projectile",
+    "range": 22,
+    "speed": 2.4,
+    "radius": 0.3,
+    "hidden_second": true
+   },
+   "effects": [
+    {
+     "damage": "physical.pierce"
+    }
+   ],
+   "mechanic": "Throw one shuriken with a second hidden in its shadow: a dodge of the first meets the second",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:weapon_master"
+   ],
+   "slice": "beta2",
+   "requires": [
+    "item:shuriken:2"
+   ],
+   "beta": true,
+   "tags": [
+    "no_signs"
+   ]
+  },
+  {
+   "id": "combat:weapon.manipulated_shuriken",
+   "name": "Manipulated Shuriken",
+   "kind": "weapon",
+   "nature": "none",
+   "rank": "c",
+   "level": 12,
+   "signs": [],
+   "chakra": 8,
+   "cast_ticks": 4,
+   "cooldown_ticks": 120,
+   "power": 10,
+   "shape": {
+    "type": "projectile",
+    "range": 24,
+    "speed": 2.0,
+    "radius": 0.3,
+    "count": 5,
+    "homing": 0.4
+   },
+   "effects": [
+    {
+     "damage": "physical.pierce"
+    }
+   ],
+   "mechanic": "Shuriken on chakra threads: up to five curve to the target around cover (homing 0.4)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:weapon_master",
+    "exam_reward"
+   ],
+   "slice": "beta2",
+   "requires": [
+    "item:shuriken:5"
+   ],
+   "beta": true,
+   "tags": [
+    "no_signs"
+   ]
+  },
+  {
+   "id": "combat:weapon.windmill_triple",
+   "name": "Windmill Triple Attack",
+   "kind": "weapon",
+   "nature": "none",
+   "rank": "c",
+   "level": 16,
+   "signs": [],
+   "chakra": 10,
+   "cast_ticks": 6,
+   "cooldown_ticks": 120,
+   "power": 8,
+   "shape": {
+    "type": "projectile",
+    "range": 24,
+    "speed": 1.6,
+    "radius": 0.5,
+    "count": 3
+   },
+   "effects": [
+    {
+     "damage": "physical.slash"
+    },
+    {
+     "status": "bound",
+     "ticks": 60
+    }
+   ],
+   "mechanic": "Three windmill shuriken on wire: they wrap and bind the target (bound 60 ticks), then fire can run the wires",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:weapon_master",
+    "clan:uchiha"
+   ],
+   "slice": "chunin",
+   "requires": [
+    "item:shuriken_fuma",
+    "item:wire_spool"
+   ],
+   "tags": [
+    "no_signs"
+   ]
+  },
+  {
+   "id": "combat:weapon.wind_shuriken",
+   "name": "Wind-Channelled Shuriken",
+   "kind": "weapon",
+   "nature": "wind",
+   "rank": "c",
+   "level": 12,
+   "signs": [
+    "ram",
+    "horse"
+   ],
+   "chakra": 8,
+   "cast_ticks": 8,
+   "cooldown_ticks": 120,
+   "power": 5,
+   "shape": {
+    "type": "projectile",
+    "range": 32,
+    "speed": 2.6,
+    "radius": 0.4,
+    "pierce": 2
+   },
+   "effects": [
+    {
+     "damage": "ninjutsu.wind"
+    }
+   ],
+   "mechanic": "Wind chakra on a thrown shuriken: double damage, pierces two targets, range 32",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "mentor:role:nature_master.wind",
+    "exam_reward"
+   ],
+   "slice": "beta2",
+   "requires": [
+    "item:shuriken"
+   ],
+   "beta": true,
+   "note": "Weapon-plus-jutsu combo: scales with both the weapons and ninjutsu pillars (the average)"
+  },
+  {
+   "id": "combat:weapon.lightning_flow",
+   "name": "Lightning Flow Blade",
+   "kind": "weapon",
+   "nature": "lightning",
+   "rank": "c",
+   "level": 12,
+   "signs": [
+    "monkey"
+   ],
+   "chakra": 10,
+   "cast_ticks": 4,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "blade_flow.lightning",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "Lightning in the held blade for 200 ticks: every hit shocks (4 ticks) and reach +0.5",
+   "counters": "wind jutsu (wind beats lightning), break line of sight, dodge on the charge",
+   "teach": [
+    "mentor:role:nature_master.lightning",
+    "exam_reward"
+   ],
+   "slice": "beta2",
+   "beta": true
+  },
+  {
+   "id": "combat:weapon.fire_flow",
+   "name": "Fire Flow Blade",
+   "kind": "weapon",
+   "nature": "fire",
+   "rank": "c",
+   "level": 14,
+   "signs": [
+    "tiger",
+    "rat"
+   ],
+   "chakra": 10,
+   "cast_ticks": 8,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "blade_flow.fire",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "Fire in the held blade for 200 ticks: every hit sets alight",
+   "counters": "water jutsu (water beats fire), an earth or water wall, sidestep the slow projectile",
+   "teach": [
+    "mentor:role:nature_master.fire",
+    "clan:sarutobi"
+   ],
+   "slice": "beta3"
+  },
+  {
+   "id": "combat:weapon.wind_flow",
+   "name": "Wind Flow Blade",
+   "kind": "weapon",
+   "nature": "wind",
+   "rank": "c",
+   "level": 14,
+   "signs": [
+    "ram",
+    "bird"
+   ],
+   "chakra": 10,
+   "cast_ticks": 8,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "blade_flow.wind",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "Wind in the held blade for 200 ticks: reach +1.5 and armour pierce 0.5",
+   "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
+   "teach": [
+    "mentor:role:nature_master.wind"
+   ],
+   "slice": "beta3"
+  },
+  {
+   "id": "combat:weapon.earth_flow",
+   "name": "Earth Flow Blade",
+   "kind": "weapon",
+   "nature": "earth",
+   "rank": "c",
+   "level": 14,
+   "signs": [
+    "boar"
+   ],
+   "chakra": 10,
+   "cast_ticks": 4,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "blade_flow.earth",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "Earth in the held weapon for 200 ticks: poise damage x2",
+   "counters": "lightning jutsu (lightning beats earth), jump the ground wave, flank the wall",
+   "teach": [
+    "mentor:role:nature_master.earth"
+   ],
+   "slice": "beta3"
+  },
+  {
+   "id": "combat:weapon.water_flow",
+   "name": "Water Flow Blade",
+   "kind": "weapon",
+   "nature": "water",
+   "rank": "c",
+   "level": 14,
+   "signs": [
+    "ox"
+   ],
+   "chakra": 10,
+   "cast_ticks": 4,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "blade_flow.water",
+     "ticks": 200
+    }
+   ],
+   "mechanic": "Water on the held weapon for 200 ticks: soaked on hit and knockback +1",
+   "counters": "earth jutsu (earth beats water), stay away from water (water jutsu cost more far from it)",
+   "teach": [
+    "mentor:role:nature_master.water"
+   ],
+   "slice": "beta3"
+  },
+  {
+   "id": "combat:weapon.kunai_barrage",
+   "name": "Explosive Kunai Barrage",
+   "kind": "weapon",
+   "nature": "none",
+   "rank": "b",
+   "level": 22,
+   "signs": [
+    "ram",
+    "boar"
+   ],
+   "chakra": 10,
+   "cast_ticks": 8,
+   "cooldown_ticks": 200,
+   "power": 18,
+   "shape": {
+    "type": "projectile",
+    "range": 24,
+    "speed": 1.8,
+    "radius": 0.3,
+    "count": 6,
+    "burst": 3
+   },
+   "effects": [
+    {
+     "damage": "physical.blunt"
+    }
+   ],
+   "mechanic": "Throw six tagged kunai in a fan; they burst together on Ram",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:weapon_master"
+   ],
+   "slice": "chunin",
+   "requires": [
+    "item:kunai:6",
+    "item:paper_bomb:6"
+   ]
+  },
+  {
+   "id": "combat:weapon.rising_twin_dragons",
+   "name": "Rising Twin Dragons",
+   "kind": "weapon",
+   "nature": "none",
+   "rank": "b",
+   "level": 26,
+   "signs": [
+    "ram",
+    "rat",
+    "ox"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 15.4,
+   "shape": {
+    "type": "target",
+    "range": 20,
+    "radius": 6
+   },
+   "effects": [
+    {
+     "weapon_rain": 30
+    }
+   ],
+   "mechanic": "Two storage scrolls spiral up around you and you rain their weapons down (30 projectiles over 40 ticks)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:weapon_master"
+   ],
+   "slice": "chunin",
+   "requires": [
+    "combat:seal.storage_barrage"
+   ]
+  },
+  {
+   "id": "combat:weapon.shuriken_shadow_clone",
+   "name": "Shuriken Shadow Clone",
+   "kind": "weapon",
+   "nature": "none",
+   "rank": "a",
+   "level": 34,
+   "signs": [
+    "ram",
+    "rat",
+    "tiger"
+   ],
+   "chakra": 50,
+   "cast_ticks": 12,
+   "cooldown_ticks": 360,
+   "power": 21.0,
+   "shape": {
+    "type": "projectile",
+    "range": 28,
+    "speed": 2.4,
+    "radius": 0.3,
+    "count": 40,
+    "spread": 40
+   },
+   "effects": [
+    {
+     "damage": "physical.pierce"
+    }
+   ],
+   "mechanic": "One thrown shuriken becomes a storm of up to 40 real copies",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:sensei"
+   ],
+   "slice": "jonin",
+   "requires": [
+    "combat:nin.shadow_clone",
+    "item:shuriken"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "format": 1,
+ "tools": [
+  {
+   "item": "item:paper_bomb",
+   "name": "Paper bomb",
+   "slice": "beta2",
+   "use": "throw (sticks to surfaces and entities) or tag a kunai",
+   "fuse_ticks": 30,
+   "damage": 8.0,
+   "type": "physical.blunt",
+   "radius": 3.0,
+   "poise": 30,
+   "blocks": "never breaks blocks",
+   "remote": "Weave Ram detonates every bomb you placed (weapons rank 3)",
+   "trap": "placed on the ground it is a mine for 60 s"
+  },
+  {
+   "item": "item:smoke_bomb",
+   "name": "Smoke bomb",
+   "slice": "beta1",
+   "radius": 4.0,
+   "ticks": 120,
+   "effect": "smoked: enemies inside lose their target unless sensing; you leave their tracking",
+   "escape": "dropping one at your feet breaks lock-on"
+  },
+  {
+   "item": "item:flash_bomb",
+   "name": "Flash bomb",
+   "slice": "beta2",
+   "radius": 6.0,
+   "effect": "blinded 40 ticks for anyone facing it (yourself too)",
+   "counters": "genjutsu: a flash breaks genjutsu on allies"
+  },
+  {
+   "item": "item:wire_spool",
+   "name": "Ninja wire",
+   "slice": "beta1",
+   "uses": 8,
+   "modes": {
+    "tripwire": "between two points (a trap that trips, knocks down and triggers tagged bombs)",
+    "tether": "on a thrown kunai: yank it back with the throw key (and the target, if light)",
+    "binding": "throw two kunai past a target and pull: bound for 40 ticks (weapons rank 4)",
+    "fire_line": "a fire user can run a flame down a wire (Dragon Flame)"
+   }
+  },
+  {
+   "item": "item:caltrops",
+   "name": "Caltrops",
+   "slice": "beta2",
+   "radius": 2.0,
+   "ticks": 400,
+   "effect": "slow 0.4 and 1.0 damage a second to anyone walking (not running on chakra)"
+  },
+  {
+   "item": "item:sealing_tag",
+   "name": "Sealing tag",
+   "slice": "beta2",
+   "effect": "stick on a downed or stunned enemy: captured (a quest objective; bosses resist); or on a technique scroll: stores one cast",
+   "fuinjutsu": "the base of the sealing techniques (four tags make a barrier)"
+  },
+  {
+   "item": "item:tool_pouch",
+   "name": "Tool pouch",
+   "slice": "beta2",
+   "quick_slots": 4,
+   "use": "quick-throw key (G) throws the selected pouch slot without changing the hotbar; scroll with G held",
+   "upgrades": {
+    "item:tool_pouch_large": 6,
+    "weapons_rank_4": 1,
+    "weapons_rank_8": 1,
+    "item:flak_vest": 2
+   }
+  },
+  {
+   "item": "item:soldier_pill",
+   "name": "Soldier pill",
+   "slice": "beta2",
+   "restores": {
+    "chakra_fraction": 0.4,
+    "stamina": 100
+   },
+   "cooldown_ticks": 1200,
+   "side_effect": "hunger -3"
+  },
+  {
+   "item": "item:blood_pill",
+   "name": "Blood pill",
+   "slice": "beta3",
+   "restores": {
+    "hp_per_second": 0.5,
+    "ticks": 200
+   },
+   "cooldown_ticks": 1200
+  },
+  {
+   "item": "item:poultice",
+   "name": "Herbal poultice",
+   "slice": "beta2",
+   "restores": {
+    "hp": 6
+   },
+   "cleanses": [
+    "poisoned",
+    "bleeding"
+   ],
+   "use_ticks": 30,
+   "clan_craft": "suzuran"
+  },
+  {
+   "item": "item:antidote",
+   "name": "Antidote",
+   "slice": "beta2",
+   "cleanses": [
+    "poisoned",
+    "numbed",
+    "drowsy"
+   ],
+   "immunity_ticks": 200
+  }
+ ]
+}

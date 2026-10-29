@@ -1,0 +1,211 @@
+{
+ "format": 1,
+ "techniques": [
+  {
+   "id": "combat:seal.binding_tag",
+   "name": "Sealing: Binding Tag",
+   "kind": "fuinjutsu",
+   "nature": "none",
+   "rank": "d",
+   "level": 6,
+   "signs": [
+    "ram",
+    "dragon"
+   ],
+   "chakra": 8,
+   "cast_ticks": 8,
+   "cooldown_ticks": 60,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 2.0
+   },
+   "effects": [
+    {
+     "capture": true
+    }
+   ],
+   "mechanic": "Slap a sealing tag on a downed, stunned or bound enemy (needs item:sealing_tag): captured (a mission objective); bosses only bound 40 ticks",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:sensei",
+    "scroll:scroll_shop"
+   ],
+   "slice": "beta2",
+   "requires": [
+    "item:sealing_tag"
+   ],
+   "beta": true
+  },
+  {
+   "id": "combat:seal.tag_barrier",
+   "name": "Sealing: Four-Tag Barrier",
+   "kind": "fuinjutsu",
+   "nature": "none",
+   "rank": "c",
+   "level": 14,
+   "signs": [
+    "ram",
+    "snake",
+    "ox",
+    "dog"
+   ],
+   "chakra": 18,
+   "cast_ticks": 16,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "entity",
+    "entity": "barrier",
+    "ticks": 200,
+    "radius": 4
+   },
+   "effects": [],
+   "mechanic": "Throw four tags around an area (radius 4): a barrier wall for 200 ticks that nobody crosses (protect or trap)",
+   "counters": "Lightning Blade or a spiralling sphere breaks it; the tags can be shot down",
+   "teach": [
+    "mentor:role:fuinjutsu_master",
+    "clan:uzumaki"
+   ],
+   "slice": "beta3",
+   "requires": [
+    "item:sealing_tag:4"
+   ]
+  },
+  {
+   "id": "combat:seal.storage_barrage",
+   "name": "Sealing: Storage Scroll Barrage",
+   "kind": "weapon",
+   "nature": "none",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "ram",
+    "tiger",
+    "dog"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "target",
+    "range": 20,
+    "radius": 4
+   },
+   "effects": [
+    {
+     "weapon_rain": 20
+    }
+   ],
+   "mechanic": "Unroll a storage scroll: up to 20 stored weapons rain from above in a 4-block circle (uses your kunai and shuriken from it)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:weapon_master"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:seal.chakra_suppression",
+   "name": "Sealing: Chakra Suppression",
+   "kind": "fuinjutsu",
+   "nature": "none",
+   "rank": "b",
+   "level": 22,
+   "signs": [
+    "ram",
+    "ox",
+    "tiger"
+   ],
+   "chakra": 30,
+   "cast_ticks": 12,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 2.5
+   },
+   "effects": [
+    {
+     "status": "chakra_sealed",
+     "ticks": 80
+    }
+   ],
+   "mechanic": "A palm seal: the target cannot weave for 80 ticks (chakra sealed)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:fuinjutsu_master",
+    "clan:uzumaki"
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:seal.five_elements",
+   "name": "Sealing: Five Elements Seal",
+   "kind": "fuinjutsu",
+   "nature": "none",
+   "rank": "a",
+   "level": 34,
+   "signs": [
+    "ram",
+    "tiger",
+    "ox",
+    "dog",
+    "snake"
+   ],
+   "chakra": 50,
+   "cast_ticks": 20,
+   "cooldown_ticks": 360,
+   "power": 0,
+   "shape": {
+    "type": "melee",
+    "range": 2.5
+   },
+   "effects": [
+    {
+     "status": "nature_sealed",
+     "ticks": 400
+    }
+   ],
+   "mechanic": "Five fingertips of fire: the target's nature jutsu are sealed for 400 ticks (taijutsu and genjutsu still work)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:fuinjutsu_master"
+   ],
+   "slice": "jonin"
+  },
+  {
+   "id": "combat:seal.marked_teleport",
+   "name": "Sealing: Marked Teleport",
+   "kind": "fuinjutsu",
+   "nature": "none",
+   "rank": "s",
+   "level": 48,
+   "signs": [],
+   "chakra": 15,
+   "cast_ticks": 0,
+   "cooldown_ticks": 40,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "teleport_to": "mark"
+    }
+   ],
+   "mechanic": "Throw a marked kunai (up to 3 marks): press Weave to teleport to any mark in sight, instantly",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "scroll:forbidden_archive"
+   ],
+   "slice": "road",
+   "requires": [
+    "item:kunai"
+   ],
+   "tags": [
+    "no_signs"
+   ]
+  }
+ ]
+}

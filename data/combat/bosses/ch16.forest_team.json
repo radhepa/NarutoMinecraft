@@ -1,0 +1,32 @@
+{
+ "format": 1,
+ "id": "combat:boss.ch16.forest_team",
+ "name": "A hunting team in the forest",
+ "chapter": 16,
+ "slice": "beta3",
+ "base": "combat:group.exam_team",
+ "level": 16,
+ "nonlethal": false,
+ "arena": "place:forest_of_death",
+ "win": "take their scroll, or drive them off (two of three downed)",
+ "lose": "your scroll is taken or the squad is downed",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Ambush",
+   "behaviour": "traps and a genjutsu opener from the trees; one fighter stays hidden",
+   "openings": "sensing and Byakugan find the hidden one"
+  },
+  {
+   "at_hp": 0.5,
+   "name": "Hunt",
+   "behaviour": "they split your squad: one each",
+   "openings": "regroup command and a squad combo"
+  }
+ ],
+ "hp_mult": 2.5,
+ "poise": 40,
+ "notes": "A three-on-three",
+ "story": "bible:combat:boss.ch16.forest_team",
+ "dialogue": "dlg:combat.boss.ch16.forest_team"
+}

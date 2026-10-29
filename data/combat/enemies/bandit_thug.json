@@ -1,0 +1,32 @@
+{
+ "format": 1,
+ "id": "combat:enemy.bandit_thug",
+ "name": "Bandit thug",
+ "kind": "human",
+ "tier": "mook",
+ "rank": "civilian",
+ "levels": [
+  5,
+  14
+ ],
+ "band": "close",
+ "slice": "beta2",
+ "weapons": [
+  "item:bo_staff"
+ ],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [],
+ "ai": {
+  "flee_chance": 0.4,
+  "aggression": 0.8
+ },
+ "found": "roads, bandit camps",
+ "barks": "bandit",
+ "note": "Club swings, a shove; flees at 25%"
+}

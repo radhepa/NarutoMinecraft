@@ -1,0 +1,16 @@
+{
+ "format": 1,
+ "effect_type": "kindle",
+ "status": "pending: the Kindling Bond redesign waits for the owner's decision",
+ "contract": {
+  "input": "a grant from Shinobi Life's bond engine (dev.shinobi.life.bond.Kindling.Grant): who, what tier, uses, duration multiplier",
+  "hooks": [
+   "kindle.begin(grant)",
+   "kindle.cast(technique_or_nature)",
+   "kindle.end()"
+  ],
+  "slots": "combat:kindle is an effect type any technique, combo or item may carry; it resolves through a registered KindleHandler",
+  "default_handler": "none: until a design lands, kindle effects do nothing and log once"
+ },
+ "note": "Only the plug. No powers are designed here (COMBAT.md, Kindling Bond)."
+}

@@ -1,0 +1,192 @@
+{
+ "format": 1,
+ "id": "sarutobi",
+ "clan": "clan:sarutobi",
+ "name": "Sarutobi",
+ "standing": "noble",
+ "suggested_nature": [
+  "fire"
+ ],
+ "passives": {
+  "fire_cost_mult": 0.8
+ },
+ "techniques": [
+  {
+   "id": "combat:sarutobi.clan_staff",
+   "name": "Monkey King Staff Forms",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "c",
+   "level": 10,
+   "signs": [],
+   "chakra": 0,
+   "cast_ticks": 0,
+   "cooldown_ticks": 120,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "style": "combat:style.monkey_staff"
+    }
+   ],
+   "mechanic": "Opens the clan staff (item:clan_staff, 4.5 reach) with the Monkey King staff style",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.sarutobi"
+   ],
+   "slice": "beta2",
+   "beta": true,
+   "tags": [
+    "no_signs"
+   ],
+   "clan": "sarutobi",
+   "tier": 1
+  },
+  {
+   "id": "combat:sarutobi.fire_staff",
+   "name": "Fire Flow Staff",
+   "kind": "clan",
+   "nature": "fire",
+   "rank": "b",
+   "level": 20,
+   "signs": [
+    "tiger",
+    "ox"
+   ],
+   "chakra": 30,
+   "cast_ticks": 8,
+   "cooldown_ticks": 200,
+   "power": 0,
+   "shape": {
+    "type": "self"
+   },
+   "effects": [
+    {
+     "status": "blade_flow.fire",
+     "ticks": 300
+    }
+   ],
+   "mechanic": "Fire runs along the staff for 300 ticks: every sweep sets alight and its reach grows 1 block",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.sarutobi"
+   ],
+   "slice": "chunin",
+   "clan": "sarutobi",
+   "tier": 2
+  },
+  {
+   "id": "combat:sarutobi.ash_cloud",
+   "name": "Clan Ash Pile Burning",
+   "kind": "clan",
+   "nature": "fire",
+   "rank": "a",
+   "level": 32,
+   "signs": [
+    "ram",
+    "rat",
+    "monkey",
+    "boar",
+    "horse",
+    "tiger"
+   ],
+   "chakra": 50,
+   "cast_ticks": 24,
+   "cooldown_ticks": 360,
+   "power": 21.0,
+   "shape": {
+    "type": "cone",
+    "range": 10,
+    "degrees": 70
+   },
+   "effects": [
+    {
+     "status": "blinded",
+     "ticks": 80
+    },
+    {
+     "damage": "ninjutsu.fire",
+     "delay": 20
+    }
+   ],
+   "mechanic": "The clan's own Ash Pile Burning: 10-block cone, blinds longer (80 ticks)",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.sarutobi"
+   ],
+   "slice": "jonin",
+   "replaces": "combat:fire.ash_pile_burning",
+   "clan": "sarutobi",
+   "tier": 3
+  },
+  {
+   "id": "combat:sarutobi.extending_staff",
+   "name": "Staff of a Thousand Lengths",
+   "kind": "clan",
+   "nature": "none",
+   "rank": "s",
+   "level": 44,
+   "signs": [
+    "ram",
+    "ox",
+    "hare"
+   ],
+   "chakra": 80,
+   "cast_ticks": 6,
+   "cooldown_ticks": 800,
+   "power": 32.0,
+   "shape": {
+    "type": "line",
+    "range": 20,
+    "width": 1.5
+   },
+   "effects": [
+    {
+     "damage": "physical.blunt"
+    },
+    {
+     "knockback": 4
+    }
+   ],
+   "mechanic": "The staff stretches to 20 blocks for one sweep and comes back: hits everything in a line",
+   "counters": "dodge or interrupt the signs; walls block projectiles",
+   "teach": [
+    "mentor:role:clan_elder.sarutobi"
+   ],
+   "slice": "road",
+   "clan": "sarutobi",
+   "tier": 4
+  }
+ ],
+ "lesser": {
+  "id": "combat:sarutobi.will_of_fire",
+  "name": "Will of Fire",
+  "kind": "clan_lesser",
+  "nature": "none",
+  "rank": "c",
+  "level": 12,
+  "signs": [],
+  "chakra": 18,
+  "cast_ticks": 0,
+  "cooldown_ticks": 120,
+  "power": 0,
+  "shape": {
+   "type": "self"
+  },
+  "effects": [],
+  "mechanic": "When a squadmate falls, you gain +15% damage for 200 ticks",
+  "counters": "dodge or interrupt the signs; walls block projectiles",
+  "teach": [
+   "clan_friendship:sarutobi:7"
+  ],
+  "slice": "beta2_5",
+  "tags": [
+   "no_signs"
+  ],
+  "clan": "sarutobi",
+  "lesser": true
+ },
+ "style": "combat:style.monkey_staff"
+}

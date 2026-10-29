@@ -1,0 +1,29 @@
+{
+ "format": 1,
+ "id": "combat:enemy.wolf",
+ "name": "Wolf",
+ "kind": "animal",
+ "tier": "mook",
+ "rank": "beast",
+ "levels": [
+  3,
+  14
+ ],
+ "band": "close",
+ "slice": "beta2",
+ "weapons": [],
+ "techniques": [],
+ "tools": {},
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "pack",
+  "flanks"
+ ],
+ "ai": {},
+ "found": "the forests outside the walls",
+ "barks": "beast_none"
+}

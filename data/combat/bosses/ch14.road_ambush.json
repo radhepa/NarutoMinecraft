@@ -1,0 +1,35 @@
+{
+ "format": 1,
+ "id": "combat:boss.ch14.road_ambush",
+ "name": "Ambush on the road",
+ "chapter": 14,
+ "slice": "beta2",
+ "base": "combat:group.cell_pair",
+ "level": 14,
+ "nonlethal": false,
+ "arena": "place:road.east_bend",
+ "win": "the ambush is driven off and the client is safe; the quest may also ask for a capture (combat:captured)",
+ "lose": "the client falls, or you are downed",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Pin down",
+   "behaviour": "an enemy cell pair holds the road with smoke, caltrops and a fire-and-wind combo while a runner flees",
+   "adds": [
+    "combat:enemy.smuggler_runner"
+   ],
+   "openings": "bind, possess, wire or a shuriken to the legs stops the runner"
+  },
+  {
+   "at_hp": 0.5,
+   "name": "Mines",
+   "behaviour": "paper-bomb mines across the road and tagged kunai",
+   "openings": "wind or a flash shows the mines; a sealing tag captures a downed foe"
+  }
+ ],
+ "hp_mult": 3.0,
+ "poise": 40,
+ "notes": "Teaches enemy cells, smoke and paper bombs, capture with a sealing tag",
+ "story": "bible:combat:boss.ch14.road_ambush",
+ "dialogue": "dlg:combat.boss.ch14.road_ambush"
+}

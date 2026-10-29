@@ -1,0 +1,28 @@
+{
+ "format": 1,
+ "id": "combat:boss.chunin.mercenary_fort",
+ "name": "The mercenary fort",
+ "chapter": "chunin",
+ "slice": "chunin",
+ "base": "combat:enemy.mercenary_captain",
+ "level": 24,
+ "nonlethal": false,
+ "arena": null,
+ "win": "defeat",
+ "lose": "the player is downed",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Chains",
+   "behaviour": "kusarigama pulls into a guard line"
+  },
+  {
+   "at_hp": 0.4,
+   "name": "Flash",
+   "behaviour": "flash bombs and a charge"
+  }
+ ],
+ "hp_mult": 7.0,
+ "poise": 100,
+ "dialogue": "dlg:combat.boss.chunin.mercenary_fort"
+}

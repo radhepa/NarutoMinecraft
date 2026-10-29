@@ -1,0 +1,8 @@
+{
+ "format": 1,
+ "rules": "Sparring never kills: a spar ends at 30% health or a yield (hold the Yield key, Y, for 20 ticks), with no level loss (ROADMAP Death). Residents are knocked out, never killed (VF Knockouts)",
+ "where": "training grounds; ranked residents spar if their friendship is 3 or more (BONDS spar_won / spar_lost)",
+ "rewards": "pillar XP, a bond experience (spar), and a small ryo prize in Academy tournaments",
+ "dummies": "combat:dummy.training: posts that log damage, combo length and parries; a log post (substitution practice); a target board for throws",
+ "proctor": "exam bouts are stopped by the proctor at 10% health or a yield"
+}

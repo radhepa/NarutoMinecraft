@@ -1,0 +1,46 @@
+{
+ "format": 1,
+ "id": "combat:boss.ch2.rival_spar",
+ "name": "Spar with your rival",
+ "chapter": 2,
+ "slice": "beta1",
+ "base": "combat:enemy.spar.classmate",
+ "level": 3,
+ "nonlethal": true,
+ "arena": "place:academy.yard",
+ "win": "the rival drops to 30% health or yields",
+ "lose": "you drop to 30%: the story continues either way (a flag)",
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Show-off",
+   "behaviour": "fast three-hit chains, a dash kick; dodges 15%",
+   "openings": "the chain's 10-tick recovery: punish it",
+   "signature_tell": "the dash kick's crouch (8 ticks)"
+  },
+  {
+   "at_hp": 0.6,
+   "name": "Serious",
+   "behaviour": "starts blocking; a heavy after every blocked chain",
+   "openings": "block breaks with your own heavy"
+  },
+  {
+   "at_hp": 0.4,
+   "name": "Desperate",
+   "behaviour": "one substitution, then a rush",
+   "openings": "the log: wait for them to land"
+  }
+ ],
+ "hp_mult": 2.5,
+ "poise": 30,
+ "role": "role:rival",
+ "techniques": [
+  "combat:nin.substitution"
+ ],
+ "weapons": [
+  "item:kunai_practice"
+ ],
+ "style": "combat:style.academy_basics",
+ "notes": "Teaches combo, heavy, dodge and block; losing is allowed and remembered (bond: rivalry)",
+ "dialogue": "dlg:combat.boss.ch2.rival_spar"
+}

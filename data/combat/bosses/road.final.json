@@ -1,0 +1,18 @@
+{
+ "format": 1,
+ "id": "combat:boss.road.final",
+ "name": "Final boss",
+ "chapter": "road",
+ "slice": "road",
+ "base": "combat:enemy.cell_veteran",
+ "level": 50,
+ "nonlethal": false,
+ "arena": null,
+ "win": "defeat",
+ "lose": "the player is downed",
+ "phases": [],
+ "hp_mult": 12.0,
+ "poise": 200,
+ "story": "bible:combat:boss.road.final",
+ "dialogue": "dlg:combat.boss.road.final"
+}
