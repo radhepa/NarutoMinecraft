@@ -139,7 +139,8 @@
     "b402_hakama",
     "b403_heiress_trousers",
     "b404_cropped_trousers",
-    "b405_attendant_kimono_skirt"
+    "b405_attendant_kimono_skirt",
+    "b406_robe_trousers"
   ],
   "characters": [
     {
@@ -863,7 +864,7 @@
           "id": "jonin_robe",
           "name": "Jonin Robe",
           "top": "t406_jonin_apron_robe",
-          "bottom": "b401_training_shorts",
+          "bottom": "b406_robe_trousers",
           "rank": "jonin",
           "palettes": [
             "HYUGA_MAIN",

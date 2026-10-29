@@ -38,7 +38,7 @@
     {"id": "elder_haori", "name": "Elder Haori", "top": "t403_elder_haori", "bottom": "b402_hakama", "rank": "jonin", "palettes": ["HYUGA_ELDER"]},
     {"id": "heiress_jacket", "name": "Heiress Jacket", "top": "t404_heiress_hooded_jacket", "bottom": "b403_heiress_trousers", "rank": "genin", "palettes": ["HYUGA_HEIRESS", "HYUGA_MAIN"]},
     {"id": "two_tone_zip", "name": "Two-Tone Zip", "top": "t405_two_tone_zip_jacket", "bottom": "b403_heiress_trousers", "rank": "chunin", "palettes": ["HYUGA_HEIRESS", "HYUGA_MAIN"]},
-    {"id": "jonin_robe", "name": "Jonin Robe", "top": "t406_jonin_apron_robe", "bottom": "b401_training_shorts", "rank": "jonin", "palettes": ["HYUGA_MAIN", "HYUGA_BRANCH"]},
+    {"id": "jonin_robe", "name": "Jonin Robe", "top": "t406_jonin_apron_robe", "bottom": "b406_robe_trousers", "rank": "jonin", "palettes": ["HYUGA_MAIN", "HYUGA_BRANCH"]},
     {"id": "attendant_kimono", "name": "Attendant Kimono", "top": "t407_attendant_kimono", "bottom": "b405_attendant_kimono_skirt", "rank": "academy", "palettes": ["HYUGA_MAIN", "HYUGA_BRANCH", "HYUGA_NAVY"]},
     {"id": "scout_mantle", "name": "Scout Mantle", "top": "t408_scout_mantle", "bottom": "b404_cropped_trousers", "rank": "chunin", "palettes": ["HYUGA_MAIN", "HYUGA_BRANCH"]},
     {"id": "ceremonial_kimono", "name": "Ceremonial Kimono", "top": "t409_ceremonial_kimono", "bottom": "b402_hakama", "rank": "jonin", "palettes": ["HYUGA_CEREMONIAL"]},
