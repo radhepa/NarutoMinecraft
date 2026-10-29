@@ -1,0 +1,48 @@
+{
+  "id": "t503_genin_jacket",
+  "kind": "top",
+  "name": "Genin Jacket",
+  "gender": "unisex",
+  "texture": "tops/t503_genin_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "nara",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.6,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Open short-sleeved jacket with trim over a mesh shirt, clan crest on the back."
+}

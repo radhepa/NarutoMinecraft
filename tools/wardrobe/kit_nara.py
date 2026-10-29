@@ -51,3 +51,45 @@ def crest(face, x0: int, y0: int, key: str, ground: str | None = None):
             for x in range(8):
                 face.set(x0 + x, y0 + y, ground)
     stamp(face, CREST, x0, y0, {"#": key})
+
+
+def back_crest(g, role: str, key: str, seed: int, y: float = 2.0, z: float = 2.3, pid: str = "back_crest"):
+    """The crest on a cloth patch across the shoulder blades, the patch in `role`."""
+    from paint import fabric
+    patch = g.piece(pid, "TORSO", (-4, 0, 0), (8, 8, 1), pivot=(0, y, z))
+    fabric(patch.back, role, "weave", seed, 2)
+    crest(patch.back, 0, 0, key)
+    for face in (patch.top, patch.bottom, patch.right, patch.left, patch.front):
+        face.fill(f"{role}2")
+    return patch
+
+
+def arm_protector(g, band: str = "D", seed: int = 5099):
+    """The forehead protector tied round the left upper arm, plate out, the way Shikamaru wears it."""
+    from kit_shinobi import protector_plate
+    from paint import fabric, solid
+    ring = g.piece("arm_band", "LEFT_ARM", (-1.45, 0, -2.45), (5, 2, 5))
+    solid(ring, band, "weave", seed, 2, edge=False)
+    plate = g.piece("arm_plate", "LEFT_ARM", (0, -4, -9), (1, 8, 18), pivot=(3.55, 1.0, 0), scale=(1 / 3, 1 / 3, 1 / 3))
+    for face in plate.faces:
+        fabric(face, "M", "plain", seed + 1, 2)
+    protector_plate(plate.left)
+
+
+def net(face, x0: int, y0: int, x1: int, y1: int):
+    """Fine chain mesh read from a step back: a dark ground crossed by a lighter diamond lattice, so
+    it does not break up into a grid of skin squares at one texel per link."""
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            face.set(x, y, "K2" if (x + y) % 3 == 0 or (x - y) % 3 == 0 else "K1")
+
+
+def mesh_shirt(g, rows=(0, 11), sleeve_rows=None):
+    """The chain-mesh undershirt, on the body and optionally the arms."""
+    body = g.part("body")
+    for face in body.sides:
+        net(face, 0, rows[0], face.w - 1, rows[1])
+    if sleeve_rows:
+        for side in ("right", "left"):
+            arm = g.part(f"{side}_arm")
+            net(arm.strip, 0, sleeve_rows[0], arm.strip.w - 1, sleeve_rows[1])
