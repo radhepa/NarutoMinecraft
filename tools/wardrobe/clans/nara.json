@@ -19,7 +19,7 @@
   },
   "marks": {
     "nara_cheek_scar": {"rects": [[2.7, -2.6, 0.25, 1.5], [2.95, -1.3, 0.25, 0.9]], "color": null, "mirror": false},
-    "nara_twin_scars": {"rects": [[-3.3, -2.4, 0.25, 1.3], [3.0, -2.0, 0.25, 1.1]], "color": null, "mirror": false}
+    "nara_twin_scars": {"rects": [[-2.8, -1.7, 0.25, 1.4], [-1.9, -0.6, 0.25, 0.9]], "color": null, "mirror": false}
   },
   "pool": {
     "hair": ["h501_pineapple_tail", "h502_shadow_sideburns", "h503_sprout_tail", "h504_low_tail",
