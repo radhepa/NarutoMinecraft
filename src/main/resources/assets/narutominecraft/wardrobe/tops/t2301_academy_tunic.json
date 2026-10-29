@@ -1,0 +1,81 @@
+{
+  "id": "t2301_academy_tunic",
+  "kind": "top",
+  "name": "Academy Tunic",
+  "gender": "unisex",
+  "texture": "tops/t2301_academy_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "breast_spider",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        2.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        10,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved plum tunic edged in ochre web-line trim, a small spider on the breast."
+}

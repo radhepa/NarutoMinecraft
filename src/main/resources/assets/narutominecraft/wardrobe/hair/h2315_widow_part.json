@@ -1,0 +1,271 @@
+{
+  "id": "h2315_widow_part",
+  "kind": "hair",
+  "name": "Widow Part",
+  "gender": "unisex",
+  "texture": "hair/h2315_widow_part.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sheet",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.0,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        8,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sheet_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.0,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        10.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sheet_tip_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.0,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        11.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sheet_tip_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.0,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        1.0,
+        10.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        31,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sheet_tip_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.0,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        1.5,
+        11.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "curtain_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        9,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    },
+    {
+      "id": "curtain_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "curtain_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        9,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "curtain_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    }
+  ],
+  "description": "Long straight centre-parted hair, curtains past the cheeks and a straight sheet down the back."
+}

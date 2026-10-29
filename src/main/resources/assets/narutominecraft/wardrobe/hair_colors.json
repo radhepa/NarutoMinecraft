@@ -531,6 +531,46 @@
         "#bdbdbe"
       ]
     },
+    "TSUCHIGUMO_CHESTNUT": {
+      "name": "Tsuchigumo Chestnut",
+      "ramp": [
+        "#2a160e",
+        "#4a2a18",
+        "#6e4026",
+        "#94603a",
+        "#bd8c5c"
+      ]
+    },
+    "TSUCHIGUMO_SIENNA": {
+      "name": "Tsuchigumo Sienna",
+      "ramp": [
+        "#241009",
+        "#3f1d10",
+        "#5f2d18",
+        "#844426",
+        "#a9633a"
+      ]
+    },
+    "TSUCHIGUMO_INK": {
+      "name": "Tsuchigumo Ink",
+      "ramp": [
+        "#0f0a0e",
+        "#1c1219",
+        "#2b1d28",
+        "#3f2b3b",
+        "#5a4255"
+      ]
+    },
+    "TSUCHIGUMO_ASH": {
+      "name": "Tsuchigumo Ash",
+      "ramp": [
+        "#5e5650",
+        "#7e756d",
+        "#a0978d",
+        "#c2bab0",
+        "#e2dcd2"
+      ]
+    },
     "UCHIHA_INK": {
       "name": "Uchiha Ink",
       "ramp": [

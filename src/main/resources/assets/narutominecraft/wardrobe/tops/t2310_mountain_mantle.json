@@ -1,0 +1,134 @@
+{
+  "id": "t2310_mountain_mantle",
+  "kind": "top",
+  "name": "Mountain Mantle",
+  "gender": "unisex",
+  "texture": "tops/t2310_mountain_mantle.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -0.4,
+        -3
+      ],
+      "size": [
+        10,
+        5,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "mantle_right",
+      "bone": "TORSO",
+      "pivot": [
+        -6.4,
+        0.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        4,
+        6
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "mantle_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.4,
+        0.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        4,
+        6
+      ],
+      "uv": [
+        48,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "clasp",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.8,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short umber shoulder cape with an ochre clasp and web-line trim over a plum shirt."
+}

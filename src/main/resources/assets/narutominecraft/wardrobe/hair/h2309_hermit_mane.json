@@ -1,0 +1,561 @@
+{
+  "id": "h2309_hermit_mane",
+  "kind": "hair",
+  "name": "Hermit Mane",
+  "gender": "unisex",
+  "texture": "hair/h2309_hermit_mane.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mane",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.8,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.8,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_tip_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.8,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        11.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        28,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_tip_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.8,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_tip_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.8,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        10.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_tip_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.8,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_tip_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.8,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        0.0,
+        12.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_tip_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.8,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        2.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_tip_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.8,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        3.0,
+        10.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_right",
+      "bone": "HEAD",
+      "pivot": [
+        -3.9,
+        -6.4,
+        2.6
+      ],
+      "rotation": [
+        8,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        5,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_right_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.9,
+        -6.4,
+        2.6
+      ],
+      "rotation": [
+        8,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.0,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        12,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_right_tip_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -3.9,
+        -6.4,
+        2.6
+      ],
+      "rotation": [
+        8,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_left",
+      "bone": "HEAD",
+      "pivot": [
+        3.9,
+        -6.4,
+        2.6
+      ],
+      "rotation": [
+        8,
+        0,
+        6
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        24,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_left_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        3.9,
+        -6.4,
+        2.6
+      ],
+      "rotation": [
+        8,
+        0,
+        6
+      ],
+      "origin": [
+        -1.0,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        31,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "mane_left_tip_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        3.9,
+        -6.4,
+        2.6
+      ],
+      "rotation": [
+        8,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        38,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "frame_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        43,
+        11
+      ]
+    },
+    {
+      "id": "frame_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        50,
+        11
+      ]
+    },
+    {
+      "id": "frame_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        55,
+        11
+      ]
+    },
+    {
+      "id": "frame_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        21
+      ]
+    }
+  ],
+  "description": "Long heavy hair pushed back off the face, falling wide to the shoulder blades in ragged points."
+}

@@ -1,0 +1,385 @@
+{
+  "id": "h2302_gyoja_topknot",
+  "kind": "hair",
+  "name": "Gyoja Topknot",
+  "gender": "unisex",
+  "texture": "hair/h2302_gyoja_topknot.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.7,
+        0.6
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -3,
+        -1.5
+      ],
+      "size": [
+        3,
+        3,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "knot_cord",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.7,
+        0.6
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        -1.2,
+        -2.0
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        13,
+        0
+      ]
+    },
+    {
+      "id": "back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.2,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        7,
+        6,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.2,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.2,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.2,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.2,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.2,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        1.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        14,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_tip_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.2,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        2.0,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "temple_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.35,
+        -7.6,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        26,
+        8
+      ]
+    },
+    {
+      "id": "temple_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.35,
+        -7.6,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        31,
+        8
+      ]
+    },
+    {
+      "id": "temple_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.35,
+        -7.6,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        36,
+        8
+      ]
+    },
+    {
+      "id": "temple_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.35,
+        -7.6,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        8
+      ]
+    }
+  ],
+  "description": "Hair combed up into a small corded knot on the crown, the back hanging loose to the shoulders."
+}

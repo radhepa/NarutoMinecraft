@@ -1,0 +1,74 @@
+{
+  "id": "b2304_apron_trousers",
+  "kind": "bottom",
+  "name": "Apron Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b2304_apron_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "apron_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apron_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        5,
+        1
+      ],
+      "uv": [
+        17,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Dark trousers under umber front and back aprons edged with a web line, dark leg wraps."
+}

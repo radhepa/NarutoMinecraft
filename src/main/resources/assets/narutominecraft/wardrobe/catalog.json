@@ -288,7 +288,22 @@
     "h1512_shoulder_sweep",
     "h1513_strap_braid",
     "h1514_iai_gust",
-    "h1515_crossed_pin_bun"
+    "h1515_crossed_pin_bun",
+    "h2301_hotaru_tail",
+    "h2302_gyoja_topknot",
+    "h2303_spinner_buns",
+    "h2304_eight_legs",
+    "h2305_mountain_crop",
+    "h2306_web_braid",
+    "h2307_magaki_spikes",
+    "h2308_shrine_bob",
+    "h2309_hermit_mane",
+    "h2310_silk_tail",
+    "h2311_cocoon_bun",
+    "h2312_crag_swept",
+    "h2313_twin_threads",
+    "h2314_burrow_shag",
+    "h2315_widow_part"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -337,7 +352,9 @@
     "w1402_crimson_protector",
     "w1501_proctor_bandana",
     "w1502_cat_mask",
-    "w1503_crescent_hachimaki"
+    "w1503_crescent_hachimaki",
+    "w2301_web_kasa",
+    "w2302_spider_band"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -510,7 +527,17 @@
     "t1507_convalescent_wrap",
     "t1508_practice_gi",
     "t1509_scarf_knit",
-    "t1510_tasuki_iaido"
+    "t1510_tasuki_iaido",
+    "t2301_academy_tunic",
+    "t2302_hotaru_kosode",
+    "t2303_web_vest",
+    "t2304_thread_wraps",
+    "t2305_shrine_haori",
+    "t2306_stone_plates",
+    "t2307_magaki_coat",
+    "t2308_spinner_jacket",
+    "t2309_gyoja_robe",
+    "t2310_mountain_mantle"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -594,7 +621,11 @@
     "b1405_bandaged_shorts",
     "b1501_gekko_hakama",
     "b1502_swordsman_trousers",
-    "b1503_strap_leggings"
+    "b1503_strap_leggings",
+    "b2301_mountain_hakama",
+    "b2302_bound_trousers",
+    "b2303_crag_shorts",
+    "b2304_apron_trousers"
   ],
   "characters": [
     {
@@ -1430,6 +1461,48 @@
       ],
       "color": null,
       "mirror": false
+    },
+    "tsuchigumo_spider_eyes": {
+      "rects": [
+        [
+          -1.15,
+          -6.75,
+          0.35,
+          0.35
+        ],
+        [
+          0.8,
+          -6.75,
+          0.35,
+          0.35
+        ],
+        [
+          -0.55,
+          -6.3,
+          0.25,
+          0.25
+        ],
+        [
+          0.3,
+          -6.3,
+          0.25,
+          0.25
+        ]
+      ],
+      "color": "#5e2c52",
+      "mirror": false
+    },
+    "tsuchigumo_thread_line": {
+      "rects": [
+        [
+          3.05,
+          -2.0,
+          0.2,
+          1.4
+        ]
+      ],
+      "color": "#6b2d58",
+      "mirror": true
     },
     "uchiha_tear_troughs": {
       "rects": [
@@ -5152,6 +5225,381 @@
             "SHIMURA_ROOT",
             "SHIMURA_SLATE",
             "SHIMURA_ASH"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tsuchigumo",
+      "name": "Tsuchigumo",
+      "tagline": "The earth-spider clan of the mountain shrine: plum, ochre and umber shrine cloth edged with web-line trims, spider crests, shimenawa ropes and thread-bound limbs",
+      "standing": "minor",
+      "ability": "Tsuchigumo forbidden jutsu: a spider seal that gathers natural energy (Creation of Heaven and Earth) to release Fury, a blast able to level a village",
+      "palettes": {
+        "TSUCHIGUMO_PLUM": {
+          "name": "Tsuchigumo Plum",
+          "P": "#55294a",
+          "S": "#e8dcc2",
+          "A": "#c8932e",
+          "L": "#5c3b26",
+          "M": "#a69a8a",
+          "K": "#1a1117",
+          "D": "#3a2232"
+        },
+        "TSUCHIGUMO_AUBERGINE": {
+          "name": "Tsuchigumo Aubergine",
+          "P": "#36203a",
+          "S": "#ddd0b4",
+          "A": "#d3a23f",
+          "L": "#4e3324",
+          "M": "#a09486",
+          "K": "#140d13",
+          "D": "#24161f"
+        },
+        "TSUCHIGUMO_OCHRE": {
+          "name": "Tsuchigumo Ochre",
+          "P": "#a8742a",
+          "S": "#ece2ca",
+          "A": "#5e2c52",
+          "L": "#5c3b26",
+          "M": "#a69a8a",
+          "K": "#1c1314",
+          "D": "#3f2536"
+        },
+        "TSUCHIGUMO_UMBER": {
+          "name": "Tsuchigumo Umber",
+          "P": "#6a4632",
+          "S": "#e4d7bc",
+          "A": "#c9952f",
+          "L": "#3f2a1e",
+          "M": "#a29684",
+          "K": "#1a1210",
+          "D": "#3b2430"
+        },
+        "TSUCHIGUMO_CLAY": {
+          "name": "Tsuchigumo Clay",
+          "P": "#94573a",
+          "S": "#eadfc8",
+          "A": "#4f2647",
+          "L": "#553623",
+          "M": "#a69a8a",
+          "K": "#1c1312",
+          "D": "#40263a"
+        },
+        "TSUCHIGUMO_MULBERRY": {
+          "name": "Tsuchigumo Mulberry",
+          "P": "#6e2f5a",
+          "S": "#eadcc6",
+          "A": "#d8a84a",
+          "L": "#5a3a28",
+          "M": "#aa9e8e",
+          "K": "#1b1018",
+          "D": "#2f1b2a"
+        },
+        "TSUCHIGUMO_SHRINE": {
+          "name": "Tsuchigumo Shrine",
+          "P": "#5e2c52",
+          "S": "#f2ecdf",
+          "A": "#c8932e",
+          "L": "#5c3b26",
+          "M": "#a9a092",
+          "K": "#1d1418",
+          "D": "#4a2742"
+        },
+        "TSUCHIGUMO_MAGAKI": {
+          "name": "Tsuchigumo Magaki",
+          "P": "#3a2f35",
+          "S": "#d6cab4",
+          "A": "#b8742a",
+          "L": "#3a2a20",
+          "M": "#8f8780",
+          "K": "#0f0b0d",
+          "D": "#2a2026"
+        }
+      },
+      "hair_colors": {
+        "TSUCHIGUMO_CHESTNUT": {
+          "name": "Tsuchigumo Chestnut",
+          "ramp": [
+            "#2a160e",
+            "#4a2a18",
+            "#6e4026",
+            "#94603a",
+            "#bd8c5c"
+          ]
+        },
+        "TSUCHIGUMO_SIENNA": {
+          "name": "Tsuchigumo Sienna",
+          "ramp": [
+            "#241009",
+            "#3f1d10",
+            "#5f2d18",
+            "#844426",
+            "#a9633a"
+          ]
+        },
+        "TSUCHIGUMO_INK": {
+          "name": "Tsuchigumo Ink",
+          "ramp": [
+            "#0f0a0e",
+            "#1c1219",
+            "#2b1d28",
+            "#3f2b3b",
+            "#5a4255"
+          ]
+        },
+        "TSUCHIGUMO_ASH": {
+          "name": "Tsuchigumo Ash",
+          "ramp": [
+            "#5e5650",
+            "#7e756d",
+            "#a0978d",
+            "#c2bab0",
+            "#e2dcd2"
+          ]
+        }
+      },
+      "eye_colors": {
+        "TSUCHIGUMO_MULBERRY": {
+          "name": "Tsuchigumo Mulberry",
+          "ramp": [
+            "#0e080c",
+            "#3a1a30",
+            "#5e2c4e",
+            "#8a4e76",
+            "#efe8dc"
+          ]
+        }
+      },
+      "marks": {
+        "tsuchigumo_spider_eyes": {
+          "rects": [
+            [
+              -1.15,
+              -6.75,
+              0.35,
+              0.35
+            ],
+            [
+              0.8,
+              -6.75,
+              0.35,
+              0.35
+            ],
+            [
+              -0.55,
+              -6.3,
+              0.25,
+              0.25
+            ],
+            [
+              0.3,
+              -6.3,
+              0.25,
+              0.25
+            ]
+          ],
+          "color": "#5e2c52",
+          "mirror": false
+        },
+        "tsuchigumo_thread_line": {
+          "rects": [
+            [
+              3.05,
+              -2.0,
+              0.2,
+              1.4
+            ]
+          ],
+          "color": "#6b2d58",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h2301_hotaru_tail",
+          "h2302_gyoja_topknot",
+          "h2303_spinner_buns",
+          "h2304_eight_legs",
+          "h2305_mountain_crop",
+          "h2306_web_braid",
+          "h2307_magaki_spikes",
+          "h2308_shrine_bob",
+          "h2309_hermit_mane",
+          "h2310_silk_tail",
+          "h2311_cocoon_bun",
+          "h2312_crag_swept",
+          "h2313_twin_threads",
+          "h2314_burrow_shag",
+          "h2315_widow_part"
+        ],
+        "hair_colors": [
+          "TSUCHIGUMO_CHESTNUT",
+          "TSUCHIGUMO_CHESTNUT",
+          "TSUCHIGUMO_SIENNA",
+          "TSUCHIGUMO_INK",
+          "TSUCHIGUMO_INK",
+          "TSUCHIGUMO_ASH",
+          "ESPRESSO"
+        ],
+        "eye_colors": [
+          "DARK",
+          "TSUCHIGUMO_MULBERRY",
+          "TSUCHIGUMO_MULBERRY"
+        ],
+        "palettes": [
+          "TSUCHIGUMO_PLUM",
+          "TSUCHIGUMO_AUBERGINE",
+          "TSUCHIGUMO_OCHRE",
+          "TSUCHIGUMO_UMBER",
+          "TSUCHIGUMO_CLAY",
+          "TSUCHIGUMO_MULBERRY"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          "w2301_web_kasa",
+          "w2302_spider_band",
+          "w2302_spider_band",
+          "w02_forehead_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers",
+          "b2303_crag_shorts",
+          "b2304_apron_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "tsuchigumo_spider_eyes",
+            "chance": 0.08
+          },
+          {
+            "id": "tsuchigumo_thread_line",
+            "chance": 0.1
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "academy_tunic",
+          "name": "Academy Tunic",
+          "top": "t2301_academy_tunic",
+          "bottom": "b2303_crag_shorts",
+          "rank": "academy",
+          "palettes": [
+            "TSUCHIGUMO_PLUM",
+            "TSUCHIGUMO_MULBERRY"
+          ]
+        },
+        {
+          "id": "mountain_mantle",
+          "name": "Mountain Mantle",
+          "top": "t2310_mountain_mantle",
+          "bottom": "b2302_bound_trousers",
+          "rank": "academy",
+          "palettes": [
+            "TSUCHIGUMO_PLUM",
+            "TSUCHIGUMO_CLAY",
+            "TSUCHIGUMO_AUBERGINE"
+          ]
+        },
+        {
+          "id": "hotaru_kosode",
+          "name": "Hotaru Kosode",
+          "top": "t2302_hotaru_kosode",
+          "bottom": "b2301_mountain_hakama",
+          "rank": "genin",
+          "palettes": [
+            "TSUCHIGUMO_PLUM",
+            "TSUCHIGUMO_MULBERRY",
+            "TSUCHIGUMO_AUBERGINE"
+          ]
+        },
+        {
+          "id": "thread_wraps",
+          "name": "Thread Wraps",
+          "top": "t2304_thread_wraps",
+          "bottom": "b2302_bound_trousers",
+          "rank": "genin",
+          "palettes": [
+            "TSUCHIGUMO_UMBER",
+            "TSUCHIGUMO_AUBERGINE",
+            "TSUCHIGUMO_PLUM"
+          ]
+        },
+        {
+          "id": "web_vest",
+          "name": "Web Vest",
+          "top": "t2303_web_vest",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "TSUCHIGUMO_PLUM",
+            "TSUCHIGUMO_AUBERGINE",
+            "TSUCHIGUMO_MULBERRY"
+          ]
+        },
+        {
+          "id": "spinner_jacket",
+          "name": "Spinner Jacket",
+          "top": "t2308_spinner_jacket",
+          "bottom": "b2304_apron_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "TSUCHIGUMO_PLUM",
+            "TSUCHIGUMO_UMBER",
+            "TSUCHIGUMO_AUBERGINE"
+          ]
+        },
+        {
+          "id": "stone_plates",
+          "name": "Stone Plates",
+          "top": "t2306_stone_plates",
+          "bottom": "b2302_bound_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "TSUCHIGUMO_PLUM",
+            "TSUCHIGUMO_AUBERGINE",
+            "TSUCHIGUMO_MULBERRY"
+          ]
+        },
+        {
+          "id": "shrine_haori",
+          "name": "Shrine Haori",
+          "top": "t2305_shrine_haori",
+          "bottom": "b2301_mountain_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "TSUCHIGUMO_PLUM",
+            "TSUCHIGUMO_AUBERGINE",
+            "TSUCHIGUMO_OCHRE"
+          ]
+        },
+        {
+          "id": "magaki_coat",
+          "name": "Magaki Coat",
+          "top": "t2307_magaki_coat",
+          "bottom": "b2302_bound_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "TSUCHIGUMO_MAGAKI"
+          ]
+        },
+        {
+          "id": "gyoja_robe",
+          "name": "Gyoja Robe",
+          "top": "t2309_gyoja_robe",
+          "bottom": "b2301_mountain_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "TSUCHIGUMO_SHRINE"
           ]
         }
       ]

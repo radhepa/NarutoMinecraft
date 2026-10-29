@@ -1,0 +1,15 @@
+{
+  "id": "b2302_bound_trousers",
+  "kind": "bottom",
+  "name": "Bound Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b2302_bound_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Dark umber trousers with thread-bound shins over pale wraps and open-toe sandals."
+}
