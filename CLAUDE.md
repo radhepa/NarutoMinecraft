@@ -8,6 +8,8 @@ system is [BONDS.md](BONDS.md) (time together: [LIFE_TOGETHER.md](LIFE_TOGETHER.
 [MISSIONS.md](MISSIONS.md): templates authored in `tools/missions/` (`python tools/missions/missions.py --doc`,
 `--check`) and the pure Java generator `progression/missions` (`./gradlew :progression:missions:test`,
 `:progression:missions:simulate`).
+The home is [docs/HOME.md](docs/HOME.md); its engine is `life/home`, on top of the bond engine
+(`./gradlew :life:home:test`, `./gradlew :life:home:simulate`).
 
 ## Commits
 
