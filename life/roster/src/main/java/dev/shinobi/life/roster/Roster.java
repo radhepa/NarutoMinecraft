@@ -245,8 +245,10 @@ public final class Roster {
             CLASSMATE_D = "role:classmate_d", RIVAL = "role:rival";
     public static final List<String> SENIORS = List.of("role:squad5_a", "role:squad5_b", "role:squad5_c");
     public static final List<Peer> CLASS = List.of(
-            Peer.teammate(TEAMMATE_A, Niche.GENJUTSU, "kurama", -.4, .95),
-            Peer.teammate(TEAMMATE_B, Niche.TAIJUTSU, "", -1.2, -.1, 15, 1.12),
+            // Tuned against Combat's duel simulator (docs/COMBAT.md, "Balance"): genjutsu deals less damage than the
+            // player's mix, so the painter sits a little ahead; the brawler and their pup hit hard, so they settle behind.
+            Peer.teammate(TEAMMATE_A, Niche.GENJUTSU, "kurama", .4, .95),
+            Peer.teammate(TEAMMATE_B, Niche.TAIJUTSU, "", -1.2, -.8, 15, 1.12),
             Peer.rival(RIVAL, Niche.NINJUTSU, "uchiha"),
             Peer.classmate(CLASSMATE_C, Niche.TOOLS, "kinoshita", -.5, -.5, 1, 1),
             Peer.classmate(CLASSMATE_D, Niche.KENJUTSU, "gekko", .3, .3, 1, 1.05),

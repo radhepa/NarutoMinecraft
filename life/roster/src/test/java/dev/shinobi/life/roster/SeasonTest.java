@@ -17,7 +17,8 @@ class SeasonTest {
             for (String t : List.of(TEAMMATE_A, TEAMMATE_B)) {
                 var s = res.spread().get(t);
                 assertTrue(s.min() >= -3 && s.max() <= 2, at + " " + t + " " + s);
-                assertTrue(Math.abs(s.mean()) < 1, at + " " + t + " sits close to you on average: " + s.mean());
+                double belongs = res.roster().peer(t).late();
+                assertTrue(Math.abs(s.mean() - belongs) < 1, at + " " + t + " sits near where they belong on average: " + s.mean());
                 assertTrue(s.fromTarget() <= 1.5 + 1e-9, at + " " + t + " stays in the band: " + s.fromTarget());
             }
             // The pull does the work; the band is a safety net that should almost never step in (a little more for a

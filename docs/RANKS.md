@@ -372,8 +372,8 @@ names are for developers only.
 | `role:sensei_3` | Akane Yuhi | jonin | B | story-driving | pillar | yuhi (strong) | genjutsu | beta2 | 39 / 39 / 39 |
 | `role:sensei_4` | Masaru Morino | jonin | B | story-driving | pillar | morino (minor) | interrogation | beta2 | 37 / 37 / 37 |
 | `role:sensei_5` | Benkei Uzumaki | jonin | B | story-driving | pillar | uzumaki (great) | sealing | beta1 | 40 / 40 / 40 |
-| `role:teammate_a` | Sora Kurama | academy | E | story-driving | pillar | kurama (strong) | genjutsu (a painter) | beta1 | 5 / 14 / 17 |
-| `role:teammate_b` | Riku Ogawa (no clan) | academy | E | story-driving | pillar | none (clanless) | taijutsu, with a stray pup | beta1 | 5 / 14 / 18 |
+| `role:teammate_a` | Sora Kurama | academy | E | story-driving | pillar | kurama (strong) | genjutsu (a painter) | beta1 | 5 / 15 / 18 |
+| `role:teammate_b` | Riku Ogawa (no clan) | academy | E | story-driving | pillar | none (clanless) | taijutsu, with a stray pup | beta1 | 5 / 14 / 17 |
 | `role:rival` | Ryo Uchiha | academy | E | story-driving | pillar | uchiha (great) | ninjutsu (fire) | beta1 | 5 / 16 / 19 |
 | `role:classmate_c` | Kanta Kinoshita | academy | E | fan-favourite | named | kinoshita (minor) | traps and earth | beta1 | 5 / 14 / 17 |
 | `role:classmate_d` | Aya Gekko | academy | E | fan-favourite | named | gekko (strong) | kenjutsu | beta1 | 5 / 15 / 18 |
@@ -475,7 +475,8 @@ Each person has their own XP on the player's curve (about 50 minutes a level in 
   |---|---|
   | The rival | +1 |
   | The Hyuga heir | +0.9 |
-  | The loud teammate | −1.2, settling at −0.1 by level 15 (they catch up) |
+  | The painter teammate | +0.4: genjutsu hits less hard than the player's mix, so they sit a little ahead (tuned on Combat's duel simulator) |
+  | The loud teammate | −1.2, settling at −0.8 by level 15: they catch up, and their pup makes up the rest |
   | The Inuzuka | −1.5, settling at −0.4 by level 20 |
   | The squad a year ahead | +7.5 to +9 at the Academy, settling at +0.8 to +1.8 by level 30; their clanless prodigy runs strongest |
 
@@ -539,22 +540,22 @@ teammate's contribution over yours (see below).
 | Ch | Hours | You | Teammate A | Teammate B | Rival | Hyuga heir | Inuzuka | Senior prodigy | Share A / B |
 |---|---|---|---|---|---|---|---|---|---|
 | 7 Graduation | 4.0 | 5.0 | 5.0 | 5.0 | 5.0 | 5.0 | 5.0 | 13.7 | — |
-| 8 Team assignment | 4.9 | 5.8 | 5.5 | 5.4 | 6.9 | 6.8 | 5.6 | 14.5 | 1.02 / 1.00 |
-| 11 First C-rank | 8.3 | 10.7 | 10.0 | 9.8 | 11.9 | 11.7 | 10.0 | 17.6 | 0.99 / 0.97 |
-| 14 Second C-rank | 12.0 | 15.2 | 14.4 | 14.8 | 16.1 | 15.8 | 14.4 | 20.9 | 0.99 / 0.99 |
-| 20 Results | 15.0 | 18.3 | 17.9 | 18.3 | 19.5 | 19.2 | 17.9 | 23.6 | 1.02 / 1.01 |
-| Chunin arc end | 28.0 | 29.9 | 29.5 | 29.8 | 30.9 | 30.8 | 29.6 | 32.2 | 1.03 / 0.98 |
-| Jonin arc end | 45.0 | 41.4 | 41.0 | 41.5 | 42.6 | 42.5 | 41.3 | 43.2 | 1.03 / 1.01 |
-| Road to Hokage end | 60.0 | 50.0 | 48.5 | 48.7 | 50.3 | 49.9 | 48.7 | 51.0 | 1.03 / 1.00 |
+| 8 Team assignment | 4.9 | 5.8 | 5.7 | 5.3 | 6.9 | 6.8 | 5.6 | 14.5 | 1.06 / 0.99 |
+| 11 First C-rank | 8.3 | 10.7 | 10.7 | 9.4 | 11.9 | 11.7 | 10.0 | 17.6 | 1.06 / 0.93 |
+| 14 Second C-rank | 12.0 | 15.2 | 15.2 | 14.2 | 16.1 | 15.8 | 14.4 | 20.9 | 1.04 / 0.95 |
+| 20 Results | 15.0 | 18.3 | 18.6 | 17.6 | 19.5 | 19.2 | 17.9 | 23.6 | 1.06 / 0.97 |
+| Chunin arc end | 28.0 | 29.9 | 30.2 | 29.1 | 30.9 | 30.8 | 29.6 | 32.2 | 1.06 / 0.96 |
+| Jonin arc end | 45.0 | 41.4 | 41.8 | 40.8 | 42.6 | 42.5 | 41.3 | 43.2 | 1.05 / 0.99 |
+| Road to Hokage end | 60.0 | 50.0 | 49.2 | 48.0 | 50.3 | 49.9 | 48.7 | 51.0 | 1.04 / 0.99 |
 
 **Across five seeds** (`SEEDS` in `Season`). Gaps are against your best level, over every day of the
 60 hours:
 
 | Player | Teammates vs you | Rival vs you | Rival ahead | Band stepped in | Share (Genin on) | Beta end: you / A / B / rival |
 |---|---|---|---|---|---|---|
-| Devoted | −2.1 to +0.5 | −0.4 to +2.0 | 93% of days | never | 0.86 to 1.08 | 21–22 / 21 / 21–22 / 23 |
-| Typical | −1.7 to +1.1 | +0.0 to +2.4 | 99% | never | 0.92 to 1.12 | 18 / 17–18 / 18 / 19–20 |
-| Reckless | −1.3 to +1.4 | +0.1 to +2.7 | 87% | 0.1% of days | 0.91 to 1.38 | 15–18 / 16–18 / 16–18 / 18–19 |
+| Devoted | −2.3 to +0.8 | −0.4 to +2.0 | 93% of days | never | 0.84 to 1.11 | 21–22 / 21–22 / 20–21 / 23 |
+| Typical | −1.8 to +1.5 | +0.0 to +2.4 | 99% | never | 0.89 to 1.13 | 18 / 18 / 17–18 / 19–20 |
+| Reckless | −1.4 to +1.9 | +0.1 to +2.7 | 87% | 0.1% of days | 0.91 to 1.48 | 15–18 / 17–18 / 16–17 / 18–19 |
 
 What it shows:
 
@@ -563,9 +564,9 @@ What it shows:
 - **A devoted player** pulls about a level ahead. The slow-starting teammate trails by two at worst,
   early on.
 - **A reckless player who keeps dying is carried for a while.**
-  - Their teammates sit up to 1.4 levels above the player's best level, and further above the
+  - Their teammates sit up to 1.9 levels above the player's best level, and further above the
     player's current level after a death.
-  - Early in Genin life their share reaches 1.4.
+  - Early in Genin life their share reaches 1.5.
   - The stronger squad is the game's comment on how they play.
 - **The rival is ahead on 87 to 99% of days**, by about 1.3 levels on average. A devoted player
   passes them now and then.
@@ -585,12 +586,36 @@ What it shows:
 
 The target is teammates' damage and utility at **70 to 110% of the player's**.
 
-- **The roster's own first estimate** is `Contribution.share`: `power = level × (1 + 0.04 ×
-  techniques)`, and in 35% of fights the fight plays to their niche. For a typical player it gives
-  0.92 to 1.12 from team assignment on.
-- **The real numbers** come from Shinobi Combat's duel simulator, which runs the level tables above
-  with each teammate's kit and returns damage and utility shares.
-- **If teammates pull too much**, the lever is their offset (`Roster.CLASS`), not their XP.
+**Combat's duel simulator** (`./gradlew :combat:core:simulate`, final tables in
+[COMBAT.md](COMBAT.md), "Balance") ran the squad of three against two rogue genin and a rogue
+chunin at the player's level, 60 fights a row. Teammates were player-like builds with the niche
+edge and teammate B's pup. It reports teammates' combined share (damage, plus control counted at
+half a second of the player's damage per second) on the typical player's levels, with the earlier
+offsets:
+
+| | Ch 8 | Ch 11 | Ch 14 | Ch 16 | Ch 20 | 28 h | 45 h | 60 h |
+|---|---|---|---|---|---|---|---|---|
+| Teammate A (genjutsu) | 75% | 57% | 60% | 68% | 62% | 52% | 72% | 94% |
+| Teammate B (taijutsu and pup) | 211% | 95% | 109% | 125% | 120% | 106% | 95% | 71% |
+
+What was done about it:
+
+- **Teammate A was under the target** from Ch 11 to 28 h, so their offset went from −0.4 to
+  +0.4. The rest is a kit question: Combat can move their signature genjutsu earlier.
+- **Teammate B ran high** at Ch 16 to 20, so their late offset went from −0.1 to −0.8.
+  - At Ch 8 the high share is the player's, not theirs to fix: a player without a damaging jutsu
+    before level 8 deals little.
+  - At 60 h the pup no longer keeps up, which is a kit question for Combat.
+
+The new offsets are with Combat for a re-run, and the table above is replaced when the shares
+return. `Contribution.share`, the roster's own rough estimate, now gives 0.89 to 1.13 for a typical
+player; Combat's numbers are the ones that count.
+
+**Combat's fields.** Every named person in `roster.json` carries what Combat needs: `kit`
+(`combat:ally.<role>`), `niche` (Combat's six: genjutsu, taijutsu, ninjutsu, weapons, medical,
+sensing) and `niche_edge` (at their beta-end level), beside rank, tier, clan and levels. Stats
+derive from level by Combat's scaling. Clan power shifts only the level: there is no per-clan stat
+multiplier, and clans' flavour lives in their kits.
 
 ### Hooks for the other mods
 
@@ -640,4 +665,5 @@ per mission rank. The roster only needs the same XP the player earns, so in Phas
   the wandering legend), the proctors, the desk, the gate, the watch, the police, the Academy
   teachers and the clan heads.
 - **The tier glyph.** Should it read true two tiers up, or only one?
-- **Contribution shares.** Waiting on Combat's duel simulator.
+- **Contribution shares.** Combat re-runs its duel simulator with the new offsets, and may move teammate A's
+  signature genjutsu earlier and let teammate B's pup scale later.
