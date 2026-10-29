@@ -1,0 +1,156 @@
+{
+ "format": 1,
+ "id": "mission.d.flower_order",
+ "kind": "mission",
+ "rank": "d",
+ "category": "shop",
+ "status": "beta",
+ "title": "dlg:mission.d.flower_order.title",
+ "brief": "dlg:mission.d.flower_order.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.flower_order.brief",
+  "accept": "dlg:mission.d.flower_order.accept",
+  "decline": "dlg:mission.d.flower_order.decline",
+  "progress": "dlg:mission.d.flower_order.progress",
+  "success": "dlg:mission.d.flower_order.success",
+  "fail": "dlg:mission.d.flower_order.fail",
+  "report": "dlg:mission.d.flower_order.report"
+ },
+ "minutes": 8,
+ "party": "solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "clan": "yamanaka",
+    "job": "florist"
+   }
+  },
+  "shop": {
+   "pick": "anchor",
+   "tag": "clan.yamanaka.shop"
+  },
+  "venue": {
+   "pick": "anchor",
+   "tag": "shrine.hall"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "pick"
+  },
+  "pick": {
+   "objective": {
+    "type": "collect",
+    "target": "flower",
+    "at": "slot:shop",
+    "count": 12
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "wrong_meaning"
+     },
+     "next": "meaning"
+    },
+    {
+     "if": {
+      "twist": "wilting"
+     },
+     "next": "wilt"
+    }
+   ],
+   "next": "deliver"
+  },
+  "meaning": {
+   "objective": {
+    "type": "inspect",
+    "target": "flower_language",
+    "at": "slot:shop",
+    "count": 3
+   },
+   "next": "deliver"
+  },
+  "wilt": {
+   "objective": {
+    "type": "go",
+    "place": "slot:venue"
+   },
+   "next": "deliver"
+  },
+  "deliver": {
+   "objective": {
+    "type": "deliver",
+    "item": "bouquet",
+    "to": "slot:venue"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "wrong_meaning",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.flower_order.twist.wrong_meaning"
+  },
+  {
+   "id": "wilting",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.flower_order.twist.wilting"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "careful",
+  "fast"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "clan.yamanaka.shop",
+   "shrine.hall"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "village",
+  "market"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.shop",
+ "_premise": "Help the Yamanaka flower shop fill a wedding order, every flower saying the right thing.",
+ "_twists": {
+  "wrong_meaning": "Half the order says 'farewell' in the language of flowers.",
+  "wilting": "The heat is wilting the bouquets; get them there now."
+ }
+}

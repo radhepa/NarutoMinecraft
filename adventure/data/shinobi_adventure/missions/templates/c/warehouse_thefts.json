@@ -1,0 +1,246 @@
+{
+ "format": 1,
+ "id": "mission.c.warehouse_thefts",
+ "kind": "mission",
+ "rank": "c",
+ "category": "investigation",
+ "status": "beta",
+ "title": "dlg:mission.c.warehouse_thefts.title",
+ "brief": "dlg:mission.c.warehouse_thefts.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.warehouse_thefts.brief",
+  "accept": "dlg:mission.c.warehouse_thefts.accept",
+  "decline": "dlg:mission.c.warehouse_thefts.decline",
+  "progress": "dlg:mission.c.warehouse_thefts.progress",
+  "success": "dlg:mission.c.warehouse_thefts.success",
+  "fail": "dlg:mission.c.warehouse_thefts.fail",
+  "report": "dlg:mission.c.warehouse_thefts.report"
+ },
+ "minutes": 30,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "trader"
+   }
+  },
+  "warehouse": {
+   "pick": "anchor",
+   "tag": "warehouse"
+  },
+  "night_guard": {
+   "pick": "resident",
+   "where": {
+    "job": "guard"
+   }
+  },
+  "clerk": {
+   "pick": "resident",
+   "where": {
+    "job": "clerk"
+   }
+  },
+  "porter": {
+   "pick": "resident",
+   "where": {
+    "job": "porter"
+   }
+  },
+  "culprit": {
+   "pick": "suspect",
+   "from": [
+    "night_guard",
+    "clerk",
+    "porter"
+   ]
+  },
+  "fence": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.smugglers"
+   ]
+  },
+  "fence_spot": {
+   "pick": "anchor",
+   "tag": "alley.back"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "interview1"
+  },
+  "interview1": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:night_guard"
+   },
+   "next": "interview2"
+  },
+  "interview2": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:clerk"
+   },
+   "next": "interview3"
+  },
+  "interview3": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:porter"
+   },
+   "next": "clues"
+  },
+  "clues": {
+   "objective": {
+    "type": "inspect",
+    "target": "warehouse_clue",
+    "at": "slot:warehouse",
+    "count": 4
+   },
+   "next": "stakeout"
+  },
+  "stakeout": {
+   "objective": {
+    "type": "wait_until",
+    "time": "01:00",
+    "at": "slot:warehouse"
+   },
+   "next": "catch"
+  },
+  "catch": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:fence_spot"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "fight"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:fence",
+    "at": "slot:fence_spot"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:fence",
+      "slot:fence_spot"
+     ]
+    }
+   ],
+   "next": "accuse"
+  },
+  "accuse": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "night_guard": null,
+     "clerk": null,
+     "porter": null
+    },
+    "dialogue": "dlg:mission.c.warehouse_thefts.choice.accuse"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "culprit_guard",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.c.warehouse_thefts.twist.culprit_guard"
+  },
+  {
+   "id": "culprit_clerk",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.c.warehouse_thefts.twist.culprit_clerk"
+  },
+  {
+   "id": "culprit_porter",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.c.warehouse_thefts.twist.culprit_porter"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "kind_choice",
+  "spared"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.smugglers"
+ ],
+ "places": {
+  "anchors": [
+   "alley.back",
+   "warehouse"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.45
+ },
+ "tags": [
+  "village",
+  "investigation",
+  "night",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.investigation",
+ "_premise": "Goods keep vanishing from a warehouse; stake it out and find out who.",
+ "_twists": {
+  "culprit_guard": "The rolled culprit is the night guard.",
+  "culprit_clerk": "The rolled culprit is the clerk.",
+  "culprit_porter": "The rolled culprit is the porter."
+ },
+ "_choices": {
+  "accuse": "Name the culprit; the right answer is the rolled one."
+ }
+}

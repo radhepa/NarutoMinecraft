@@ -1,0 +1,721 @@
+{
+  "format": 1,
+  "_doc": "Ryo economy tuning (ITEMS.md, Economy). Hand-edited; a balance pass is an edit here. Mission and chapter pay are the missions session's: the numbers under missions and chapters are provisional until its tables land.",
+  "notes": [
+    1,
+    10,
+    100,
+    1000
+  ],
+  "sell_back": {
+    "furniture": 0.5,
+    "station": 0.5,
+    "keepsake": 0.0,
+    "default": 0.0
+  },
+  "pawn": {
+    "daily_purse": 400,
+    "repeat_decay": 0.1,
+    "repeat_floor": 0.25,
+    "markup_on_resale": 1.2
+  },
+  "discounts": {
+    "titles": {
+      "unwelcome": -0.2,
+      "newcomer": 0.0,
+      "helping_hand": 0.03,
+      "good_neighbor": 0.05,
+      "pillar": 0.08,
+      "hero": 0.12
+    },
+    "keeper_friendship": {
+      "5": 0.02,
+      "8": 0.03
+    },
+    "cap": 0.15,
+    "refuse_below": "unwelcome",
+    "_doc": "price = round(base x markup x (1 - discount)); discount = the better of the shop's community title and the player's village title, plus the keeper's friendship step, capped. Unwelcome pays 20% more and a clan shop refuses outright."
+  },
+  "haggle": {
+    "shops": "haggle=yes or pawn only",
+    "asks": {
+      "0.1": 0.55,
+      "0.2": 0.25
+    },
+    "standing_bonus": {
+      "helping_hand": 0.05,
+      "good_neighbor": 0.1,
+      "pillar": 0.15,
+      "hero": 0.2
+    },
+    "temper": {
+      "warmth": 0.1,
+      "pride": -0.1
+    },
+    "fail_locks_item_for_day": true,
+    "_doc": "One try per item per visit. Chance = asks[ask] + standing_bonus + temper.warmth x keeper warmth + temper.pride x keeper pride, from the shops stream (shop, day, item). A failed 20% ask also costs the keeper a little warmth (a gift_disliked-sized act)."
+  },
+  "grades": {
+    "levels": [
+      "standard",
+      "fine",
+      "masterwork"
+    ],
+    "durability": {
+      "standard": 1.0,
+      "fine": 1.5,
+      "masterwork": 2.0
+    },
+    "stat_hint": {
+      "standard": 0.0,
+      "fine": 0.1,
+      "masterwork": 0.2
+    },
+    "price": {
+      "standard": 1.0,
+      "fine": 1.6,
+      "masterwork": 2.5
+    },
+    "mastery_crafts": [
+      0,
+      5,
+      15,
+      35,
+      70,
+      120
+    ],
+    "fine_chance": {
+      "base": 0.05,
+      "per_mastery": 0.08,
+      "difficulty_penalty": 0.05,
+      "refined_bonus": 0.15
+    },
+    "masterwork_chance": {
+      "min_mastery": 3,
+      "base": 0.0,
+      "per_mastery_over": 0.04,
+      "refined_bonus": 0.05,
+      "max": 0.25
+    },
+    "_doc": "A craft rolls its grade from the crafts stream (player, station, count). Mastery is crafts done at that station family (levels at the counts above). stat_hint is a suggestion to the combat session, which owns weapon stats."
+  },
+  "repair": {
+    "factor": 0.3,
+    "masterwork_factor": 1.5,
+    "whetstone": 0.25,
+    "self_repair_at_forge": "one steel ingot per 40% of durability, fine and better need refined steel"
+  },
+  "jobs": {
+    "shifts_per_day": 2,
+    "raise_at": [
+      5,
+      15,
+      30
+    ],
+    "raise": 0.1,
+    "cap": 80
+  },
+  "stipend": {
+    "amount": 30,
+    "from_day": 2,
+    "until": null,
+    "_doc": "The orphan's stipend: 30 ryo every morning for the whole game (the owner: keep the stipend going; no rent). The Hokage's welcome purse on day 1 includes the first one. Flat, not by rank: it covers a frugal day's meals and nothing more, so savings, tools and everything you want still come from missions."
+  },
+  "board": {
+    "d_per_day": 2,
+    "c_open_from": "main.ch11"
+  },
+  "missions": {
+    "_doc": "The missions session's bands (its economy.json). beta2_mean is the median a steady player earns per mission after jitter, the pay weight and grades (its simulation: 105 and 445; 85 and 420 are its lower bounds).",
+    "d": {
+      "min": 60,
+      "max": 150,
+      "beta2_mean": 105
+    },
+    "c": {
+      "min": 300,
+      "max": 600,
+      "beta2_mean": 445
+    },
+    "camp_loot_pawn_value": 60
+  },
+  "rule_of_thumb": {
+    "d_rank_day": {
+      "missions": 2,
+      "left_min": 0.4,
+      "left_max": 0.6,
+      "mission_meal": "bento"
+    },
+    "starter_set_day": {
+      "min": 6,
+      "max": 9
+    },
+    "_doc": "ROADMAP §7 Ryo: a day of D-ranks covers food and leaves about half; the first proper furniture set (the set=starter pieces) takes about an in-game week. On a mission day a player also buys a packed lunch (mission_meal), in the rule and in the simulation."
+  },
+  "calendar": {
+    "beta1": [
+      1,
+      12
+    ],
+    "beta2": [
+      13,
+      36
+    ],
+    "beta3": [
+      37,
+      48
+    ]
+  },
+  "income": {
+    "_doc": "Reward events the simulation pays on a day. side: SIDE_QUESTS.md §8 ryo by the day each opens (the completion share is the profile's). chapters: PROVISIONAL main-path ryo for the story chapters with pay (the roadmap and story sessions own them; the missions session finds them sensible next to a C-rank).",
+    "welcome_purse": {
+      "day": 1,
+      "ryo": 100
+    },
+    "chapters": [
+      {
+        "id": "main.ch11",
+        "day": 22,
+        "ryo": 450
+      },
+      {
+        "id": "main.ch13",
+        "day": 29,
+        "ryo": 300
+      },
+      {
+        "id": "main.ch14",
+        "day": 34,
+        "ryo": 500
+      },
+      {
+        "id": "main.ch20",
+        "day": 48,
+        "ryo": 600
+      }
+    ],
+    "board_c": [
+      {
+        "day": 25,
+        "ryo": 445
+      },
+      {
+        "day": 28,
+        "ryo": 445
+      },
+      {
+        "day": 32,
+        "ryo": 445
+      }
+    ],
+    "side": [
+      {
+        "id": "side.b1.academy_cat",
+        "day": 2,
+        "ryo": 30
+      },
+      {
+        "id": "side.b1.shogi",
+        "day": 3,
+        "ryo": 60
+      },
+      {
+        "id": "district.b1.neighbours.2",
+        "day": 3,
+        "ryo": 40
+      },
+      {
+        "id": "side.b1.flower_delivery",
+        "day": 4,
+        "ryo": 40
+      },
+      {
+        "id": "filler.ramen_thief.1",
+        "day": 6,
+        "ryo": 50
+      },
+      {
+        "id": "district.b1.neighbours.3",
+        "day": 6,
+        "ryo": 30
+      },
+      {
+        "id": "district.b1.academy.overdue",
+        "day": 8,
+        "ryo": 50
+      },
+      {
+        "id": "filler.ramen_thief.3",
+        "day": 9,
+        "ryo": 200
+      },
+      {
+        "id": "district.b2.lost_and_found",
+        "day": 15,
+        "ryo": 60
+      },
+      {
+        "id": "side.b2.lost_letters",
+        "day": 16,
+        "ryo": 80
+      },
+      {
+        "id": "district.b2.grandmothers_recipe",
+        "day": 17,
+        "ryo": 50
+      },
+      {
+        "id": "side.b2.ninja_cart",
+        "day": 18,
+        "ryo": 40
+      },
+      {
+        "id": "district.b2.price_war",
+        "day": 20,
+        "ryo": 250
+      },
+      {
+        "id": "filler.dogs_and_bugs",
+        "day": 21,
+        "ryo": 250
+      },
+      {
+        "id": "district.b2.contraband",
+        "day": 23,
+        "ryo": 80
+      },
+      {
+        "id": "district.b2.ferryman",
+        "day": 26,
+        "ryo": 200
+      },
+      {
+        "id": "side.b2.tea_master",
+        "day": 16,
+        "ryo": 60
+      },
+      {
+        "id": "side.b2.pawned_scroll",
+        "day": 25,
+        "ryo": 100
+      },
+      {
+        "id": "side.b2.fishing_bet",
+        "day": 26,
+        "ryo": 60
+      },
+      {
+        "id": "filler.lake_lanterns",
+        "day": 30,
+        "ryo": 300
+      },
+      {
+        "id": "event.b2.lantern_maker",
+        "day": 27,
+        "ryo": 100
+      },
+      {
+        "id": "clan.wave1",
+        "day": 28,
+        "ryo": 400
+      },
+      {
+        "id": "clan.wave2",
+        "day": 33,
+        "ryo": 500
+      },
+      {
+        "id": "side.b3.stall_thief",
+        "day": 38,
+        "ryo": 100
+      },
+      {
+        "id": "side.b3.hospital_supplies",
+        "day": 41,
+        "ryo": 80
+      },
+      {
+        "id": "event.b3.betting_ring",
+        "day": 44,
+        "ryo": 80
+      }
+    ],
+    "favour": {
+      "ryo": 20,
+      "from_day": 4
+    }
+  },
+  "upkeep": {
+    "_doc": "Thrown tools and medicine used up, per mission. Retrieved kunai are not counted; lost ones are.",
+    "d": {
+      "kunai": 0.4,
+      "shuriken": 2,
+      "smoke_bomb": 0.25,
+      "bandage_wrap": 0.25
+    },
+    "c": {
+      "kunai": 1.5,
+      "shuriken": 6,
+      "smoke_bomb": 1,
+      "paper_bomb": 0.5,
+      "herbal_poultice": 1,
+      "antidote": 0.3,
+      "soldier_pill": 0.3
+    },
+    "death_tool_loss": {
+      "kunai": 2,
+      "shuriken": 6
+    }
+  },
+  "profiles": {
+    "frugal": {
+      "meals": {
+        "beta1": [
+          "onigiri",
+          "miso_soup_home",
+          "onigiri_okaka",
+          "shio_ramen"
+        ],
+        "beta2": [
+          "onigiri",
+          "onigiri_okaka",
+          "miso_ramen",
+          "home_curry",
+          "green_tea"
+        ],
+        "beta3": [
+          "onigiri",
+          "onigiri_okaka",
+          "miso_ramen",
+          "home_curry",
+          "green_tea"
+        ]
+      },
+      "shifts_per_day": {
+        "beta1": 0.6,
+        "beta2": 0.25,
+        "beta3": 0.1
+      },
+      "d_per_day": {
+        "beta2": 0.6,
+        "beta3": 0.2
+      },
+      "side_share": 0.8,
+      "favour_per_day": 0.4,
+      "deaths_per_slice": 0.5,
+      "reserve_days": 4,
+      "wishlist": [
+        "starter_set",
+        "adoption.cat",
+        "study_charm",
+        "gifts_small",
+        "nature_scroll",
+        "tool_pouch_spare",
+        "small_forge",
+        "festival",
+        "exam_prep"
+      ]
+    },
+    "typical": {
+      "meals": {
+        "beta1": [
+          "onigiri",
+          "miso_ramen",
+          "dango",
+          "home_dinner"
+        ],
+        "beta2": [
+          "onigiri_salmon",
+          "miso_ramen",
+          "dango",
+          "green_tea",
+          "home_dinner",
+          "yakiniku_weekly"
+        ],
+        "beta3": [
+          "onigiri_salmon",
+          "miso_ramen",
+          "dango",
+          "green_tea",
+          "home_dinner",
+          "katsudon"
+        ]
+      },
+      "shifts_per_day": {
+        "beta1": 0.5,
+        "beta2": 0.2,
+        "beta3": 0.1
+      },
+      "d_per_day": {
+        "beta2": 0.5,
+        "beta3": 0.15
+      },
+      "side_share": 0.7,
+      "favour_per_day": 0.3,
+      "deaths_per_slice": 1,
+      "reserve_days": 3,
+      "wishlist": [
+        "starter_set",
+        "adoption.pup",
+        "gifts",
+        "display_case",
+        "outfit_variant",
+        "bath_weekly",
+        "furnish_more",
+        "tanto",
+        "small_forge",
+        "nature_scroll",
+        "festival",
+        "lessons",
+        "kotatsu",
+        "second_scroll",
+        "bedroll",
+        "exam_prep"
+      ]
+    },
+    "spender": {
+      "meals": {
+        "beta1": [
+          "onigiri_salmon",
+          "miso_chashu_ramen",
+          "dango",
+          "wagashi",
+          "green_tea"
+        ],
+        "beta2": [
+          "bento",
+          "tonkotsu_ramen",
+          "dango",
+          "matcha",
+          "yakiniku_set"
+        ],
+        "beta3": [
+          "bento",
+          "tonkotsu_ramen",
+          "dango",
+          "matcha",
+          "yakiniku_set"
+        ]
+      },
+      "shifts_per_day": {
+        "beta1": 0.35,
+        "beta2": 0.15,
+        "beta3": 0.05
+      },
+      "d_per_day": {
+        "beta2": 0.45,
+        "beta3": 0.15
+      },
+      "side_share": 0.6,
+      "favour_per_day": 0.2,
+      "deaths_per_slice": 1.5,
+      "reserve_days": 2,
+      "wishlist": [
+        "starter_set",
+        "adoption.pup",
+        "gifts_big",
+        "outfit_variant",
+        "futon_deluxe",
+        "display_case",
+        "furnish_more",
+        "nature_scroll",
+        "tanto",
+        "mesh_shirt",
+        "outfit_variant",
+        "bath_weekly",
+        "festival",
+        "lessons",
+        "kotatsu",
+        "second_scroll",
+        "small_forge",
+        "folding_screen",
+        "exam_prep"
+      ]
+    }
+  },
+  "meal_bundles": {
+    "_doc": "Meals that are not one shop item: cooked at home from ingredients (their recipe's inputs at grocer prices).",
+    "miso_soup_home": {
+      "recipe": "miso_soup"
+    },
+    "home_curry": {
+      "recipe": "curry_rice"
+    },
+    "home_dinner": {
+      "recipe": "nikujaga",
+      "beta1": "soba"
+    },
+    "yakiniku_weekly": {
+      "item": "yakiniku_set",
+      "every_days": 7
+    }
+  },
+  "wishes": {
+    "_doc": "What the profiles save for, in their order. kind item buys items; service pays a service; set buys every set=starter piece; budget spends a sum on a kind of thing (gifts, more furniture, a festival night) that the sim does not itemise. every_days repeats a wish and never blocks the ones after it.",
+    "starter_set": {
+      "kind": "set",
+      "set": "starter",
+      "from_day": 2
+    },
+    "adoption.pup": {
+      "kind": "service",
+      "id": "service.adoption.pup",
+      "from_day": 4
+    },
+    "adoption.cat": {
+      "kind": "service",
+      "id": "service.adoption.cat",
+      "from_day": 4
+    },
+    "study_charm": {
+      "kind": "item",
+      "items": {
+        "study_charm": 1
+      },
+      "from_day": 3
+    },
+    "futon_deluxe": {
+      "kind": "item",
+      "items": {
+        "futon_deluxe": 1
+      },
+      "from_day": 6
+    },
+    "outfit_variant": {
+      "kind": "outfit",
+      "rank": "genin",
+      "from_day": 14
+    },
+    "nature_scroll": {
+      "kind": "item",
+      "items": {
+        "technique_scroll@fire.phoenix_flower": 1
+      },
+      "from_day": 27,
+      "nature_discount": 0.25
+    },
+    "second_scroll": {
+      "kind": "item",
+      "items": {
+        "technique_scroll@general.body_flicker": 1
+      },
+      "from_day": 30
+    },
+    "bath_weekly": {
+      "kind": "service",
+      "id": "service.bath",
+      "from_day": 15,
+      "every_days": 7
+    },
+    "tanto": {
+      "kind": "item",
+      "items": {
+        "tanto": 1
+      },
+      "from_day": 15
+    },
+    "mesh_shirt": {
+      "kind": "item",
+      "items": {
+        "mesh_shirt": 1
+      },
+      "from_day": 20
+    },
+    "tool_pouch_spare": {
+      "kind": "item",
+      "items": {
+        "leg_holster": 1
+      },
+      "from_day": 20
+    },
+    "small_forge": {
+      "kind": "item",
+      "items": {
+        "small_forge": 1
+      },
+      "from_day": 24
+    },
+    "kotatsu": {
+      "kind": "item",
+      "items": {
+        "kotatsu": 1
+      },
+      "from_day": 30
+    },
+    "folding_screen": {
+      "kind": "item",
+      "items": {
+        "folding_screen": 1
+      },
+      "from_day": 30
+    },
+    "bedroll": {
+      "kind": "item",
+      "items": {
+        "bedroll": 1
+      },
+      "from_day": 37
+    },
+    "gifts_small": {
+      "kind": "budget",
+      "ryo": 15,
+      "every_days": 4,
+      "from_day": 3,
+      "sink": "gifts"
+    },
+    "gifts": {
+      "kind": "budget",
+      "ryo": 25,
+      "every_days": 3,
+      "from_day": 3,
+      "sink": "gifts"
+    },
+    "gifts_big": {
+      "kind": "budget",
+      "ryo": 40,
+      "every_days": 2,
+      "from_day": 3,
+      "sink": "gifts"
+    },
+    "furnish_more": {
+      "kind": "budget",
+      "ryo": 100,
+      "every_days": 6,
+      "from_day": 15,
+      "sink": "furniture"
+    },
+    "festival": {
+      "kind": "budget",
+      "ryo": 120,
+      "from_day": 27,
+      "sink": "festival and events"
+    },
+    "lessons": {
+      "kind": "service",
+      "id": "service.lesson.gekko",
+      "from_day": 31,
+      "every_days": 7
+    },
+    "exam_prep": {
+      "kind": "item",
+      "items": {
+        "soldier_pill": 3,
+        "blood_pill": 2
+      },
+      "from_day": 37
+    },
+    "display_case": {
+      "kind": "item",
+      "items": {
+        "display_case": 1
+      },
+      "from_day": 6
+    }
+  },
+  "fallback_meals": [
+    "onigiri",
+    "onigiri",
+    "onigiri"
+  ],
+  "_fallback_doc": "When a player has less than two days of their usual meals they eat the fallback (three onigiri); a hungry day is one they cannot afford even that."
+}

@@ -1,0 +1,45 @@
+# Keepsakes: display items for your home, one per filler finale, clan welcome and some side and bond quests
+# (SIDE_QUESTS.md §2.6). Never sold or bought. They place like furniture (a small display block, block=keepsake)
+# and count toward the home's comfort. Story meaning, where there is any, lives only in the story bible.
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+keepsake_framed_ladle	Framed Ladle	keepsake	filler	any	beta1	1	0	quest:filler.ramen_thief.3	The ramen cook's thanks, in a frame	-	sprite	block=keepsake
+keepsake_lake_lantern	Lake Lantern	keepsake	filler	any	beta2	1	0	quest:filler.lake_lanterns.4	A small paper lantern that never quite goes out	-	icon	block=keepsake;light=8
+keepsake_peace_offering	Peace Offering	keepsake	filler	any	beta2	1	0	quest:filler.dogs_and_bugs.3	A dog-collar tag and a lacquered beetle charm on one cord	-	icon	block=keepsake
+keepsake_shogi_set	Old Shogi Set	keepsake	side	any	beta1	1	0	quest:side.b1.shogi	A worn board and pieces, polished by a lifetime of games	-	icon	block=keepsake
+keepsake_cat_figurine	Cat Figurine	keepsake	side	any	beta1	1	0	quest:district.b1.neighbours.3	A beckoning cat in painted clay	-	icon	block=keepsake
+keepsake_tea_set	Tea Master's Cup	keepsake	side	any	beta2	1	0	quest:side.b2.tea_master	A cup the tea master made, and gave to only a few	-	icon	block=keepsake
+keepsake_race_ribbon	Rooftop Race Ribbon	keepsake	side	any	beta2	1	0	quest:side.b2.rooftop_race	A red ribbon from the Market Day rooftop race	-	icon	block=keepsake
+keepsake_price_war	Pair of Teacups	keepsake	district	any	beta2	1	0	quest:district.b2.price_war.4	One cup from each house on the corner	-	icon	block=keepsake
+keepsake_ferry_lantern	Ferry Lantern	keepsake	district	any	beta2	1	0	quest:district.b2.ferryman.3	The ferry's bow lantern	-	icon	block=keepsake;light=10
+keepsake_post_splinter	Splinter of the Post	keepsake	district	any	beta2	1	0	quest:district.b2.unbeatable_post	A splinter from the training post nobody could knock over	-	icon	block=keepsake
+keepsake_squad_photo	Squad Photograph	keepsake	main	genin	beta2	1	0	quest:main.ch8	Your squad and sensei on the day you were assigned	-	icon	block=keepsake
+keepsake_bond_teammate_a_1	Keepsake of {given:teammate_a}	keepsake	bond	any	beta1	1	0	quest:bond.b1.classmate_a	A gift from a friend; its look and words are the bond quest's	-	icon	block=keepsake;named_by=quest
+keepsake_bond_teammate_a_2	Second Keepsake of {given:teammate_a}	keepsake	bond	any	beta2	1	0	quest:bond.b2.teammate_a.2	A gift from a friend	-	icon	block=keepsake;named_by=quest
+keepsake_bond_teammate_b_1	Keepsake of {given:teammate_b}	keepsake	bond	any	beta2	1	0	quest:bond.b2.teammate_b.1	A gift from a friend	-	icon	block=keepsake;named_by=quest
+keepsake_bond_teammate_b_2	Second Keepsake of {given:teammate_b}	keepsake	bond	any	beta2	1	0	quest:bond.b2.teammate_b.2	A gift from a friend	-	icon	block=keepsake;named_by=quest
+keepsake_clan_senju	Hall Tree Sapling	keepsake	clan	any	beta2	1	0	quest:clan.senju.1	A cutting from the tree the Senju hall grows around	-	icon	block=keepsake
+keepsake_clan_uzumaki	Spiral Seal Rubbing	keepsake	clan	any	beta2	1	0	quest:clan.uzumaki.1	A rubbing of the memorial's seals, every stroke clean	-	icon	block=keepsake
+keepsake_clan_uchiha	Patrol Armband	keepsake	clan	any	beta2	1	0	quest:clan.uchiha.1	The police patrol's armband, given for a brawl settled without a blade	-	icon	block=keepsake
+keepsake_clan_hyuga	Guest's Fan	keepsake	clan	any	beta2	1	0	quest:clan.hyuga.1	The fan a guest of the main house is given	-	icon	block=keepsake
+keepsake_clan_nara	Shed Antler	keepsake	clan	any	beta2	1	0	quest:clan.nara.1	An antler from the deer you helped count	-	icon	block=keepsake
+keepsake_clan_akimichi	Third-Helping Bowl	keepsake	clan	any	beta2	1	0	quest:clan.akimichi.1	A very large lacquered bowl	-	icon	block=keepsake
+keepsake_clan_yamanaka	Pressed Bouquet	keepsake	clan	any	beta2	1	0	quest:clan.yamanaka.1	The bouquet that said the right thing, pressed and framed	-	icon	block=keepsake
+keepsake_clan_inuzuka	Pawprint Plaque	keepsake	clan	any	beta2	1	0	quest:clan.inuzuka.1	A muddy pawprint on a board: the pup that chose you	-	icon	block=keepsake
+keepsake_clan_sarutobi	Will of Fire Lantern	keepsake	clan	any	beta2_5	1	0	quest:clan.sarutobi.1	A lantern from the clan's walk	-	icon	block=keepsake;light=10
+keepsake_clan_aburame	Hive Glass	keepsake	clan	any	beta2_5	1	0	quest:clan.aburame.1	A sealed glass where a few kikaichu hum	-	icon	block=keepsake
+keepsake_clan_hatake	Old Ninken Whistle	keepsake	clan	any	beta2_5	1	0	quest:clan.hatake.1	A dented whistle the old ninken still answer	-	icon	block=keepsake
+keepsake_clan_kurama	Your Portrait	keepsake	clan	any	beta2_5	1	0	quest:clan.kurama.1	The portrait you sat for	-	icon	block=keepsake
+keepsake_clan_shimura	Wax Seal Stamp	keepsake	clan	any	beta2_5	1	0	quest:clan.shimura.1	A plain brass seal: the clan trusts you with letters	-	icon	block=keepsake
+keepsake_clan_yuhi	Grove Teacup	keepsake	clan	any	beta2_5	1	0	quest:clan.yuhi.1	A teacup from the grove ceremony; it looks different in different light	-	icon	block=keepsake
+keepsake_clan_gekko	Crescent Tsuba	keepsake	clan	any	beta2_5	1	0	quest:clan.gekko.1	A sword guard with a crescent cut through it	-	icon	block=keepsake
+keepsake_clan_shiranui	Silver Senbon	keepsake	clan	any	beta2_5	1	0	quest:clan.shiranui.1	A contest-winner's needle	-	icon	block=keepsake
+keepsake_clan_morino	Stern Commendation	keepsake	clan	any	beta2_5	1	0	quest:clan.morino.1	A framed note: "Did not lie."	-	icon	block=keepsake
+keepsake_clan_umino	Class Photograph	keepsake	clan	any	beta2_5	1	0	quest:clan.umino.1	The unruly class, and you, all looking somewhere else	-	icon	block=keepsake
+keepsake_clan_haruno	Miniature Shop Sign	keepsake	clan	any	beta2_5	1	0	quest:clan.haruno.1	The family shop's sign in miniature, cherry blossoms and all	-	icon	block=keepsake
+keepsake_clan_namiashi	River Stone	keepsake	clan	any	beta2_5	1	0	quest:clan.namiashi.1	A stepping stone you crossed without a splash	-	icon	block=keepsake
+keepsake_clan_hagane	Relay Baton	keepsake	clan	any	beta2_5	1	0	quest:clan.hagane.1	The baton you carried around the wall before the bell	-	icon	block=keepsake
+keepsake_clan_kinoshita	Master's Mark Stool	keepsake	clan	any	beta2_5	1	0	quest:clan.kinoshita.1	The stool you built, branded with the master's mark	-	icon	block=keepsake;seat=yes
+keepsake_clan_tsuchigumo	Shimenawa Charm	keepsake	clan	any	beta2_5	1	0	quest:clan.tsuchigumo.1	A twist of the shrine's sacred rope	-	icon	block=keepsake
+keepsake_clan_suzuran	Pressed Lily Charm	keepsake	clan	any	beta2_5	1	0	quest:clan.suzuran.1	A lily of the valley pressed in glass	-	icon	block=keepsake
+keepsake_clan_tobari	Muffled Lantern	keepsake	clan	any	beta2_5	1	0	quest:clan.tobari.1	A night-watch lantern with a cloth hood	-	icon	block=keepsake;light=6
+photograph	Photograph	keepsake	photo	any	beta2	16	0	quest	A photograph of a milestone (the squad's first day, a promotion); frame it	-	icon	variant=milestone;block=keepsake;named_by=quest

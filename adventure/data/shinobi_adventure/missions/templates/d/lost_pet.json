@@ -1,0 +1,220 @@
+{
+ "format": 1,
+ "id": "mission.d.lost_pet",
+ "kind": "mission",
+ "rank": "d",
+ "category": "pets",
+ "status": "beta",
+ "title": "dlg:mission.d.lost_pet.title",
+ "brief": "dlg:mission.d.lost_pet.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.lost_pet.brief",
+  "accept": "dlg:mission.d.lost_pet.accept",
+  "decline": "dlg:mission.d.lost_pet.decline",
+  "progress": "dlg:mission.d.lost_pet.progress",
+  "success": "dlg:mission.d.lost_pet.success",
+  "fail": "dlg:mission.d.lost_pet.fail",
+  "report": "dlg:mission.d.lost_pet.report"
+ },
+ "minutes": 10,
+ "party": "squad_or_solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "has_pet": true
+   }
+  },
+  "pet_spot": {
+   "pick": "anchor",
+   "tag": "pet_hideout"
+  },
+  "second_spot": {
+   "pick": "anchor",
+   "tag": "pet_hideout"
+  },
+  "claimant": {
+   "pick": "resident"
+  }
+ },
+ "start": "ask",
+ "steps": {
+  "ask": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "find"
+  },
+  "find": {
+   "objective": {
+    "type": "collect",
+    "target": "slot:client.pet",
+    "at": "slot:pet_spot"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "two_pets"
+     },
+     "next": "second"
+    },
+    {
+     "if": {
+      "twist": "new_litter"
+     },
+     "next": "litter"
+    },
+    {
+     "if": {
+      "twist": "rival_claims"
+     },
+     "next": "claim"
+    }
+   ],
+   "next": "return"
+  },
+  "second": {
+   "objective": {
+    "type": "collect",
+    "target": "stray_pet",
+    "at": "slot:second_spot"
+   },
+   "next": "return"
+  },
+  "litter": {
+   "objective": {
+    "type": "perform",
+    "what": "carry_gently",
+    "at": "slot:pet_spot",
+    "count": 3
+   },
+   "next": "return"
+  },
+  "claim": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:claimant"
+   },
+   "next": "evidence"
+  },
+  "evidence": {
+   "objective": {
+    "type": "inspect",
+    "target": "pet_marks",
+    "count": 2
+   },
+   "next": "decide"
+  },
+  "decide": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "client": null,
+     "claimant": "given_to_claimant"
+    },
+    "dialogue": "dlg:mission.d.lost_pet.choice.decide"
+   },
+   "branch": [
+    {
+     "if": {
+      "chose": [
+       "decide",
+       "claimant"
+      ]
+     },
+     "next": "hand_over"
+    }
+   ],
+   "next": "return"
+  },
+  "hand_over": {
+   "objective": {
+    "type": "deliver",
+    "item": "slot:client.pet",
+    "to": "slot:claimant"
+   },
+   "on_done": [
+    {
+     "mission_outcome": "given_to_claimant"
+    }
+   ],
+   "next": null
+  },
+  "return": {
+   "objective": {
+    "type": "deliver",
+    "item": "slot:client.pet",
+    "to": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "two_pets",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.lost_pet.twist.two_pets"
+  },
+  {
+   "id": "new_litter",
+   "weight": 1,
+   "harder": true,
+   "premise": "dlg:mission.d.lost_pet.twist.new_litter"
+  },
+  {
+   "id": "rival_claims",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.lost_pet.twist.rival_claims"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "given_to_claimant": {
+   "pay": 0.6,
+   "standing": -1,
+   "other_standing": 2
+  }
+ },
+ "bonus": [
+  "gentle",
+  "fast",
+  "kind_choice"
+ ],
+ "fast_hours": 3,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "pet_hideout"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.2
+ },
+ "tags": [
+  "village",
+  "animal",
+  "search"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.pets",
+ "_premise": "A resident's cat or dog has run off again; find it and bring it home.",
+ "_twists": {
+  "two_pets": "It has made a friend: another runaway who needs taking home too.",
+  "new_litter": "It hid to give birth; carry the litter home without frightening them.",
+  "rival_claims": "A neighbour swears the pet is theirs; find out whose it really is."
+ }
+}

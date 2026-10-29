@@ -1,0 +1,24 @@
+# Scrolls, papers and books. A technique scroll is one item with a technique component; the techniques it can hold,
+# and their prices, are in variants.tsv (technique ids belong to the combat session).
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+blank_scroll	Blank Scroll	material	paper	any	beta1	64	6	-	A rolled sheet for a seal or a copy	item:scroll	tint:sealing_scroll	-
+technique_scroll	Technique Scroll	scroll	technique	genin	beta2	1	0	mission:c;quest	Read it, then practise: the technique it holds is learned after a short trial	item:scroll	sprite	variant=technique;mod=shinobi_combat
+sealing_scroll	Storage Scroll	scroll	sealing	genin	beta2	16	120	-	Seals one stack of items inside; open it anywhere to take them out	item:scroll	sprite	slots=1
+storage_scroll_large	Great Storage Scroll	scroll	sealing	chunin	later	1	900	-	Seals nine stacks: a chest on your back	item:scroll	tint:sealing_scroll	slots=9
+chakra_paper	Chakra Paper	material	paper	genin	beta2	64	15	-	Paper from a chakra-sensitive tree: burns, wets, crumbles, cuts or wrinkles by your nature	-	sprite	-
+mission_scroll_d	D-Rank Mission Scroll	key	mission	genin	beta2	1	0	mission:d	Your assignment from the Mission Desk: the client, the task and the pay	-	tint:sealing_scroll	mod=shinobi_progression;bind=quest
+mission_scroll_c	C-Rank Mission Scroll	key	mission	genin	beta2	1	0	mission:c	A sealed C-rank assignment	-	tint:sealing_scroll	mod=shinobi_progression;bind=quest
+mission_scroll_b	B-Rank Mission Scroll	key	mission	chunin	later	1	0	mission:b	A sealed B-rank assignment	-	tint:sealing_scroll	mod=shinobi_progression;bind=quest
+mission_report	Mission Report	key	mission	genin	beta2	1	0	mission:d;mission:c	Hand it in at the desk to be paid	-	icon	mod=shinobi_progression;bind=quest
+exam_scroll_heaven	Heaven Scroll	key	exam	genin	beta3	1	0	quest:main.ch16	One of the Forest of Death's pair: never open it before the tower	-	tint:sealing_scroll	mod=shinobi_progression;bind=quest
+exam_scroll_earth	Earth Scroll	key	exam	genin	beta3	1	0	quest:main.ch16	The other of the pair	-	tint:sealing_scroll	mod=shinobi_progression;bind=quest
+exam_entry_form	Exam Entry Form	key	exam	genin	beta3	1	0	quest:main.ch14	The squad's signed application for the Chunin Exams	-	icon	mod=shinobi_progression;bind=quest
+academy_textbook	Academy Textbook	key	book	academy	beta1	1	0	kit:academy	The Academy's first-year text: signs, tools and the village's history (opens the lesson notes)	item:book	icon	bind=quest
+konoha_map	Map of the Leaf	scroll	map	any	beta1	1	20	-	A folding map: open it to see districts, shops and their hours	item:scroll	icon	-
+festival_programme	Festival Programme	scroll	map	any	beta2	1	0	event:leaf_festival	When the stalls open, the games and the fireworks	-	icon	-
+adventure_novel	The Lantern Road	gift	book	any	beta1	16	25	-	A serial adventure novel, five volumes; a good gift for a reader	item:book	icon	variant=volume:1-5
+field_guide_herbs	Field Guide to Leaf Herbs	scroll	book	any	beta2	1	45	-	Shows which gathering spots grow which herbs; unlocks two apothecary recipes	item:book	icon	unlocks=recipe:herbal_poultice,recipe:burn_salve
+smithing_manual	Smith's Notebook	scroll	book	genin	beta2	1	0	quest:side.b2.forge_apprentice	The apprentice's notes: unlocks the senbon and caltrops recipes	item:book	icon	unlocks=recipe:senbon,recipe:makibishi
+recipe_card	Recipe Card	scroll	recipe	any	beta1	1	0	quest	A family recipe written out for you: right-click to learn it (VF's recipe cards)	-	vf	vf=villagefriends:recipe_card
+blueprint	Furniture Plan	scroll	recipe	any	beta1	1	0	quest:clan.kinoshita.1;shop:kinoshita_yard	A carpenter's drawing: unlocks one furniture recipe at the workbench	-	icon	variant=recipe
+hand_sign_primer	Hand-Sign Primer	scroll	book	academy	beta1	1	0	kit:knack.ninjutsu	An Academy primer of the twelve signs: practise them and your weaving steadies	item:book	icon	bind=player

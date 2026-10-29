@@ -1,0 +1,155 @@
+{
+ "format": 1,
+ "id": "mission.b.kiln_glaze",
+ "kind": "mission",
+ "rank": "b",
+ "category": "recovery",
+ "status": "later",
+ "title": "dlg:mission.b.kiln_glaze.title",
+ "brief": "dlg:mission.b.kiln_glaze.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.kiln_glaze.brief",
+  "accept": "dlg:mission.b.kiln_glaze.accept",
+  "decline": "dlg:mission.b.kiln_glaze.decline",
+  "progress": "dlg:mission.b.kiln_glaze.progress",
+  "success": "dlg:mission.b.kiln_glaze.success",
+  "fail": "dlg:mission.b.kiln_glaze.fail",
+  "report": "dlg:mission.b.kiln_glaze.report"
+ },
+ "minutes": 40,
+ "party": "squad",
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "role",
+   "role": "role:client.kiln_parent"
+  },
+  "workshop": {
+   "pick": "anchor",
+   "tag": "border.workshop"
+  },
+  "guards": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.hired_thugs"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "workshop"
+  },
+  "workshop": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:workshop"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "recipe"
+  },
+  "recipe": {
+   "objective": {
+    "type": "collect",
+    "target": "glaze_recipe",
+    "at": "slot:workshop"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "copied"
+     },
+     "next": "copies"
+    }
+   ],
+   "next": "report"
+  },
+  "copies": {
+   "objective": {
+    "type": "collect",
+    "target": "recipe_copy",
+    "at": "slot:workshop",
+    "count": 3
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "deliver",
+    "item": "glaze_recipe",
+    "to": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "copied",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.b.kiln_glaze.twist.copied"
+  },
+  {
+   "id": "rival_is_family",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.b.kiln_glaze.twist.rival_is_family"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "no_alarm",
+  "clean_record"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.hired_thugs"
+ ],
+ "places": {
+  "anchors": [
+   "border.workshop",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.55
+ },
+ "tags": [
+  "travel",
+  "stealth",
+  "recovery",
+  "chain"
+ ],
+ "contested": false,
+ "chain": "chain.kiln",
+ "classic": true,
+ "banter": "dlg:mission.banter.recovery",
+ "_premise": "The kiln family's secret glaze recipe was stolen by a workshop across the border; get it back quietly.",
+ "_twists": {
+  "copied": "They have already made copies.",
+  "rival_is_family": "The rival workshop belongs to an estranged branch of the same family."
+ }
+}

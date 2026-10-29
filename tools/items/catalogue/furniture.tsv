@@ -1,0 +1,99 @@
+# Furniture and stations: block items placed in furnish mode. The blocks themselves (model, collision, states)
+# are the Konoha build session's (tools/konoha/blocks.json); this table gives them their item, price and source.
+# block= names the block id asked of the Konoha session (see ITEMS.md, "Block requests"); set=starter marks the
+# first proper furniture set the economy is tuned around: the home session's Leaf set (docs/HOME.md), less the
+# futon and low table the flat comes with. The home session owns furniture's comfort, style and sets; this table
+# owns ids, prices and sources, and its rows from the home catalogue keep that session's ids and proposed prices.
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+futon	Futon	furniture	bed	any	beta1	1	120	home:apartment	A rolled-out bed in six colours. Your home always keeps one	-	block	block=futon;bed=yes;block_variants=futon|red_futon|green_futon|white_futon|brown_futon|pink_futon
+futon_deluxe	Thick Futon	furniture	bed	any	beta1	1	300	-	A plump quilted futon: Well Rested lasts an hour longer	-	block	block=futon_deluxe;bed=yes
+low_table	Low Table	furniture	table	any	beta1	1	60	-	A chabudai: meals here count as a proper sit-down meal	-	block	block=low_table;block_variants=low_table|dark_low_table|long_low_table
+kotatsu	Kotatsu	furniture	table	any	beta2	1	280	-	A low table with a quilt and a heater; sitting at it in winter clears the cold	-	block	block=kotatsu
+low_desk	Writing Desk	furniture	table	any	beta1	1	70	-	A low desk for letters and study	-	block	block=low_desk
+zabuton	Floor Cushion	furniture	seat	any	beta1	1	15	-	A square cushion; sit on it	-	block	block=zabuton;set=starter;count=2
+zaisu	Floor Chair	furniture	seat	any	beta1	1	35	-	A legless chair with a back	-	block	block=zaisu
+tatami	Tatami Mat	furniture	floor	any	beta1	16	40	-	A woven floor mat laid over the boards	-	block	block=tatami;set=starter;block_variants=tatami|aged_tatami
+rug	Woven Rug	furniture	floor	any	beta1	16	25	-	A cotton rug in any colour	-	block	block=rug;variant=colour
+shoji_screen	Shoji Screen	furniture	screen	any	beta1	1	80	-	A paper sliding screen to divide a room	-	block	block=shoji_screen;set=starter
+folding_screen	Painted Folding Screen	furniture	screen	any	beta2	1	220	-	A six-panel byobu with a painted landscape	-	block	block=folding_screen;block_variants=folding_screen|gold_folding_screen|pine_folding_screen|crane_folding_screen
+noren	Noren Curtain	furniture	screen	any	beta1	1	25	-	A split cloth curtain for a doorway	-	block	block=noren;block_variants=indigo_noren|red_noren|white_noren|brown_noren|black_noren
+bamboo_blind	Bamboo Blind	furniture	screen	any	beta1	1	20	-	A roll-down sudare for a window	-	block	block=bamboo_blind
+scroll_shelf	Scroll Shelf	furniture	storage	any	beta1	1	90	-	Shelves of scroll cubbies: holds 9 scrolls and books on display	-	block	block=scroll_shelf;set=starter;slots=9;block_variants=scroll_shelf|archive_scroll_shelf
+tansu_chest	Tansu Chest	furniture	storage	any	beta1	1	180	-	A stepped wooden chest of drawers: storage like a chest	-	block	block=tansu_chest;slots=27;block_variants=tansu_chest|dark_tansu_chest
+step_tansu	Step Tansu	furniture	storage	any	beta2	1	320	-	A staircase chest: storage, and it climbs to a loft	-	block	block=step_tansu;slots=27
+storage_chest	Wooden Chest	furniture	storage	any	beta1	1	10	vanilla	A plain chest	-	vanilla	vanilla=minecraft:chest;slots=27
+wardrobe_cabinet	Wardrobe	furniture	storage	any	beta1	1	200	-	Hang your outfits here: change clothes at home from everything you own	-	block	block=wardrobe_cabinet
+dresser_mirror	Dresser and Mirror	furniture	storage	any	beta1	1	120	-	Change your hair style and colour from those you have unlocked	-	block	block=dresser_mirror
+andon_lamp	Andon Lamp	furniture	light	any	beta1	1	35	-	A paper floor lamp	-	block	block=andon_lamp;set=starter;light=13;block_variants=andon_lamp|red_andon_lamp
+paper_lantern	Paper Lantern	furniture	light	any	beta1	1	20	-	A hanging lantern; any colour	-	block	block=paper_lantern;light=14;block_variants=red_paper_lantern|white_paper_lantern|festival_paper_lantern
+stone_lantern	Stone Lantern	furniture	light	any	beta2	1	150	-	A tōrō for a garden or a balcony	-	block	block=stone_lantern;light=12;block_variants=stone_lantern|mossy_stone_lantern|charred_stone_lantern
+potted_fern	Potted Fern	furniture	plant	any	beta1	1	25	-	Something green on the sill (vanilla's potted fern)	-	vanilla	vanilla_block=minecraft:potted_fern
+potted_bonsai	Bonsai	furniture	plant	any	beta1	1	120	-	A small pine, very old and very patient	-	block	block=potted_bonsai;block_variants=potted_bonsai|maple_potted_bonsai
+bamboo_vase	Bamboo Vase	furniture	plant	any	beta1	1	30	-	A cut-bamboo vase	-	block	block=bamboo_vase
+ikebana	Ikebana	furniture	plant	any	beta1	1	60	-	A flower arrangement from the flower shop; it wilts after a season	item:poppy	block	block=ikebana;variant=flowers
+hanging_scroll	Hanging Scroll	furniture	wall	any	beta1	1	80	-	A kakejiku: a painting or a word in ink	-	block	block=hanging_scroll;block_variants=hanging_scroll_fire|hanging_scroll_shinobi|hanging_scroll_harmony|hanging_scroll_landscape|hanging_scroll_crane|hanging_scroll_leaf
+poster	Poster	furniture	wall	any	beta1	1	10	-	A paper poster: the Rock, a ramen ad, the Academy, a festival	-	block	block=poster;block_variants=poster_ramen|poster_academy|poster_festival|poster_wanted|poster_exams|poster_village|poster_lake
+wall_clock	Wall Clock	furniture	wall	any	beta1	1	60	-	Shows the time and the day; chimes at six	-	block	block=wall_clock
+calendar_scroll	Wall Calendar	furniture	wall	any	beta1	1	15	-	The season and the coming events and birthdays	-	block	block=calendar_scroll
+wind_chime	Wind Chime	furniture	wall	any	beta1	1	12	-	A glass furin that rings in a breeze	item:bell	block	block=wind_chime
+mailbox	Mailbox	furniture	wall	any	beta1	1	30	home:apartment	Letters and clan summons arrive here in the morning	-	block	block=mailbox
+kamidana	Kamidana	furniture	shrine	any	beta1	1	90	-	A household shrine shelf: a small offering each morning gives a little luck	-	block	block=kamidana
+memorial_altar	Memorial Altar	furniture	shrine	any	beta2	1	250	-	A family altar for those who are gone	-	block	block=memorial_altar
+incense_burner	Incense Burner	furniture	shrine	any	beta1	1	30	-	Smoke curls up from it	-	block	block=incense_burner
+weapon_rack	Weapon Rack	furniture	training	genin	beta1	1	140	-	Holds and shows four weapons	-	block	block=weapon_rack;slots=4
+training_dummy	Training Dummy	furniture	training	any	beta1	1	160	-	Practise combos at home: a little training XP a day	-	block	block=training_dummy
+target_board	Target Board	furniture	training	any	beta1	1	70	-	Throw at it at home: a little training XP a day	-	block	block=target_board
+pet_bed	Pet Bed	furniture	pet	any	beta1	1	40	-	Where your pet sleeps when it is not at the foot of your bed	-	block	block=pet_bed
+pet_bowl	Pet Bowl	furniture	pet	any	beta1	1	15	-	Fill it, and your pet eats at home	-	block	block=pet_bowl
+cat_tower	Cat Tower	furniture	pet	any	beta1	1	90	-	Scratching posts and shelves; cats love it	-	block	block=cat_tower
+goldfish_bowl	Goldfish Bowl	furniture	pet	any	beta2	1	45	-	Put a festival goldfish in it	-	block	block=goldfish_bowl
+tea_set	Tea Set	furniture	table	any	beta2	1	60	-	A pot and cups on a tray; brew tea at home	item:glass	block	block=tea_set
+shogi_board	Shogi Board	furniture	game	any	beta1	1	50	-	A thick wooden board: play a resident who sits with you	-	block	block=shogi_board
+go_board	Go Board	furniture	game	any	beta2	1	50	-	Black and white stones in two pots	-	block	block=go_board
+bookcase	Bookcase	furniture	storage	any	beta1	1	110	-	Shows the books and novels you own; holds 18	item:book	block	block=bookcase;slots=18
+display_shelf	Display Shelf	furniture	storage	any	beta1	1	75	-	Shows keepsakes and figurines	-	block	block=display_shelf;slots=6
+workbench	Workbench	station	craft	any	beta1	1	250	-	Crafting station: smoke bombs, wire, tags, paper bombs (Genin), pouches and furniture	-	block	block=workbench;station=workbench
+small_forge	Small Forge	station	craft	genin	beta2	1	900	-	A forge and anvil for your apartment: thrown tools and repairs, up to a fine grade	-	block	block=small_forge;station=smithy;max_grade=fine
+apothecary_table	Apothecary Table	station	craft	genin	beta2	1	450	-	Mortar, scales and drying rack: medicine, antidotes and coatings	-	block	block=apothecary_table;station=apothecary
+sealing_desk	Sealing Desk	station	craft	chunin	later	1	600	-	A low desk with an ink stone and seal plates: storage scrolls and advanced tags	-	block	block=sealing_desk;station=sealing
+tailor_table	Tailor's Table	station	craft	chunin	later	1	400	-	Sewing frame and dye pots: recolour and alter your outfits at home	-	block	block=tailor_table;station=tailor
+cooking_pot	Cooking Pot	station	cook	any	beta1	1	80	vf	Village Friends' pot over a fire: pot dishes	-	vf	vf=villagefriends:cooking_pot;station=pot
+clay_oven	Clay Oven	station	cook	any	beta1	1	150	vf	Village Friends' oven	-	vf	vf=villagefriends:clay_oven;station=oven
+prep_table	Prep Table	station	cook	any	beta1	1	70	vf	Village Friends' prep table	-	vf	vf=villagefriends:prep_table;station=prep
+moving_crate	Moving Crate	container	crate	chunin	later	1	0	home:moving	Furniture and a chest's contents packed on moving day (friends help; moving is free)	-	block	block=moving_crate;keeps_contents=yes
+display_case	Display Case	furniture	display	any	beta1	1	130	-	A glass-topped case that shows four keepsakes, curios or weapons	-	block	block=glass_case;slots=4
+wall_mount	Wall Mount	furniture	display	any	beta1	1	45	-	A wooden wall bracket that shows one item: a blade, a mask, a fan, a curio	-	block	block=wall_mount;slots=1
+curio_cabinet	Curio Cabinet	furniture	display	any	beta2	1	220	-	A crowded cabinet of little shelves that shows twelve small things	-	block	block=curio_shelf;slots=12
+barrel	Barrel	furniture	storage	any	beta1	1	15	vanilla	A plain barrel for storage	-	vanilla	vanilla=minecraft:barrel;slots=27
+leaf_banner	Leaf Banner	furniture	wall	any	beta1	1	50	-	A cloth banner with the Leaf's mark; the heart of the Leaf set	-	block	block=leaf_banner;set=starter
+cupboard	Cupboard	furniture	kitchen	any	beta1	1	60	-	A kitchen cupboard: a pantry for your ingredients and dishes (storage)	-	block	block=cupboard;slots=18
+icebox	Icebox	furniture	kitchen	any	beta1	1	160	-	Keeps fresh ingredients from spoiling	-	block	block=icebox;slots=18
+tea_kettle	Tea Kettle	furniture	kitchen	any	beta1	1	25	-	An iron kettle: brew tea at home	-	block	block=tea_kettle
+bowl_shelf	Bowl Shelf	furniture	storage	any	beta1	1	40	-	A shelf of ramen bowls, for the ramen corner	-	block	block=bowl_shelf;slots=6
+ramen_cup_tower	Instant Ramen Tower	furniture	decor	any	beta1	1	15	-	A teetering stack of instant ramen cups. A monument	food:ramen	block	block=ramen_cup_tower
+ichiraku_stool	Ichiraku Stool	furniture	seat	any	beta1	1	0	quest:filler.ramen_thief.3	A real stool from the ramen stand, given by the cook	-	block	block=ramen_stool
+balcony_planter	Balcony Planter	furniture	plant	any	beta1	1	40	-	A long planter of herbs and flowers for the balcony; water it	-	block	block=balcony_planter
+balcony_bench	Balcony Bench	furniture	seat	any	beta1	1	70	-	A bench facing the Rock	-	block	block=balcony_bench
+laundry_line	Laundry Line	furniture	decor	any	beta1	1	15	-	A line of washing across the balcony	-	block	block=laundry_line;block_variants=laundry_line|laundry_line_futon|laundry_line_empty
+meditation_mat	Meditation Mat	furniture	training	any	beta1	1	30	-	Meditate here: chakra comes back a little faster	-	block	block=meditation_mat
+weight_rack	Weight Rack	furniture	training	any	beta2	1	120	-	Stone weights for strength training at home	-	block	block=weight_rack
+tea_table	Tea Table	furniture	table	any	beta2	1	90	-	A low lacquered table for the tea set	-	block	block=tea_table
+lantern_string	String of Lanterns	furniture	light	any	beta2	1	40	event:leaf_festival	Festival lanterns on a string across a room or balcony	-	block	block=lantern_string;light=10;block_variants=lantern_string|mixed_lantern_string
+fan_display	Fan Display	furniture	wall	any	beta2	1	20	event:leaf_festival	A painted festival fan on a wall stand	-	block	block=fan_display
+festival_drum	Festival Drum	furniture	decor	any	beta2	1	80	event:leaf_festival	A taiko on a stand; give it a bang	-	block	block=festival_drum
+curtains	Curtains	furniture	wall	any	beta1	1	25	-	Cotton curtains for a window, any colour	-	block	block=curtains;block_variants=curtains|indigo_curtains|red_curtains|green_curtains|yellow_curtains|brown_curtains
+alarm_clock	Alarm Clock	furniture	decor	any	beta1	1	15	-	Rings at the hour you set: no oversleeping after a late night	-	block	block=alarm_clock
+shoe_rack	Shoe Rack	furniture	storage	any	beta1	1	20	-	For the entryway	-	block	block=shoe_rack
+umbrella_stand	Umbrella Stand	furniture	decor	any	beta1	1	15	-	A ceramic stand for wet umbrellas	-	block	block=umbrella_stand
+bath_mat	Bath Mat	furniture	bath	any	beta1	1	10	-	A woven mat for the bath	-	block	block=bath_mat
+towel_rack	Towel Rack	furniture	bath	any	beta1	1	15	-	A bamboo towel rack	-	block	block=towel_rack
+photo_frame	Photo Frame	furniture	display	any	beta1	1	15	-	Frames one photograph	-	block	block=photo_frame;slots=1
+wooden_bed	Wooden Bed	furniture	bed	any	later	1	600	-	A raised bed with a carved frame	-	block	block=wooden_bed;bed=yes
+double_futon	Double Futon	furniture	bed	any	later	1	500	-	A futon for two	-	block	block=double_futon;bed=yes
+child_futon	Child's Futon	furniture	bed	any	later	1	150	-	A small futon	-	block	block=child_futon;bed=yes
+irori_hearth	Irori Hearth	furniture	kitchen	any	later	1	1200	-	A sunken hearth in the floor: cook, warm and gather round	-	block	block=irori_hearth
+engawa_bench	Engawa Bench	furniture	seat	any	later	1	250	-	A veranda bench along a house	-	block	block=engawa_bench
+clan_banner	Clan Banner	furniture	wall	any	beta2	1	60	clan	A banner in a clan's colours, sold in its quarter (wave 2 clans from Beta 2.5)	-	block	block=clan_banner;variant=clan:25;block_variants=clan_banner_<clan>
+clan_screen	Clan Screen	furniture	screen	any	beta2	1	120	clan	A folding screen with a clan's crest	-	block	block=clan_screen;variant=clan:25;block_variants=clan_screen_<clan>
+clan_lantern	Clan Lantern	furniture	light	any	beta2	1	70	clan	A lantern painted with a clan's crest	-	block	block=clan_lantern;variant=clan:25;block_variants=clan_lantern_<clan>;light=12
+pinboard	Pinboard	furniture	wall	any	later	1	40	-	A cork board for notes, maps and clues pinned to the wall	-	block	block=pinboard;slots=6

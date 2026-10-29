@@ -1,0 +1,181 @@
+{
+ "format": 1,
+ "id": "mission.c.mountain_pass",
+ "kind": "mission",
+ "rank": "c",
+ "category": "escort",
+ "status": "later",
+ "title": "dlg:mission.c.mountain_pass.title",
+ "brief": "dlg:mission.c.mountain_pass.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.mountain_pass.brief",
+  "accept": "dlg:mission.c.mountain_pass.accept",
+  "decline": "dlg:mission.c.mountain_pass.decline",
+  "progress": "dlg:mission.c.mountain_pass.progress",
+  "success": "dlg:mission.c.mountain_pass.success",
+  "fail": "dlg:mission.c.mountain_pass.fail",
+  "report": "dlg:mission.c.mountain_pass.report"
+ },
+ "minutes": 35,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "priest",
+    "resident_of": "any"
+   }
+  },
+  "slide": {
+   "pick": "anchor",
+   "tag": "pass.rockslide"
+  },
+  "shrine": {
+   "pick": "anchor",
+   "tag": "pass.shrine"
+  },
+  "ronin": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.ronin_band"
+   ]
+  }
+ },
+ "start": "meet",
+ "steps": {
+  "meet": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "travel"
+  },
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "clear"
+  },
+  "clear": {
+   "objective": {
+    "type": "perform",
+    "what": "move_boulder",
+    "at": "slot:slide",
+    "count": 4
+   },
+   "next": "escort"
+  },
+  "escort": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:shrine"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "ronin"
+     },
+     "next": "fight"
+    }
+   ],
+   "next": "report"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:ronin",
+    "at": "slot:slide"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:ronin",
+      "slot:slide"
+     ]
+    }
+   ],
+   "next": "escort2"
+  },
+  "escort2": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:shrine"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "ronin",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.c.mountain_pass.twist.ronin"
+  },
+  {
+   "id": "blizzard",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.c.mountain_pass.twist.blizzard"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "teamwork"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.ronin_band"
+ ],
+ "places": {
+  "anchors": [
+   "gate.travel_desk",
+   "pass.rockslide",
+   "pass.shrine"
+  ],
+  "regions": [
+   "region:mountain_pass"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "escort",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.escort",
+ "_premise": "Clear a rockslide and see a group of pilgrims through a mountain pass.",
+ "_twists": {
+  "ronin": "A band of masterless samurai has claimed the pass.",
+  "blizzard": "Snow closes in; keep everyone moving and warm."
+ }
+}

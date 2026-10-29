@@ -1,0 +1,215 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "side": "narutominecraft:block/konoha/grey_kawara_ridge_side",
+  "top": "narutominecraft:block/konoha/grey_kawara_ridge_top",
+  "end": "narutominecraft:block/konoha/grey_kawara_ridge_end",
+  "particle": "narutominecraft:block/konoha/grey_kawara_ridge_side"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    0,
+    4
+   ],
+   "to": [
+    16,
+    3,
+    12
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      13,
+      16,
+      16
+     ],
+     "texture": "#side"
+    },
+    "south": {
+     "uv": [
+      0,
+      13,
+      16,
+      16
+     ],
+     "texture": "#side"
+    },
+    "east": {
+     "uv": [
+      4,
+      13,
+      12,
+      16
+     ],
+     "texture": "#end"
+    },
+    "west": {
+     "uv": [
+      4,
+      13,
+      12,
+      16
+     ],
+     "texture": "#end"
+    },
+    "up": {
+     "uv": [
+      0,
+      4,
+      16,
+      12
+     ],
+     "texture": "#top"
+    },
+    "down": {
+     "uv": [
+      0,
+      4,
+      16,
+      12
+     ],
+     "texture": "#side"
+    }
+   }
+  },
+  {
+   "from": [
+    0,
+    3,
+    5
+   ],
+   "to": [
+    16,
+    5,
+    11
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      11,
+      16,
+      13
+     ],
+     "texture": "#side"
+    },
+    "south": {
+     "uv": [
+      0,
+      11,
+      16,
+      13
+     ],
+     "texture": "#side"
+    },
+    "east": {
+     "uv": [
+      5,
+      11,
+      11,
+      13
+     ],
+     "texture": "#end"
+    },
+    "west": {
+     "uv": [
+      5,
+      11,
+      11,
+      13
+     ],
+     "texture": "#end"
+    },
+    "up": {
+     "uv": [
+      0,
+      5,
+      16,
+      11
+     ],
+     "texture": "#top"
+    },
+    "down": {
+     "uv": [
+      0,
+      5,
+      16,
+      11
+     ],
+     "texture": "#side"
+    }
+   }
+  },
+  {
+   "from": [
+    0,
+    5,
+    6.5
+   ],
+   "to": [
+    16,
+    6,
+    9.5
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      10,
+      16,
+      11
+     ],
+     "texture": "#side"
+    },
+    "south": {
+     "uv": [
+      0,
+      10,
+      16,
+      11
+     ],
+     "texture": "#side"
+    },
+    "east": {
+     "uv": [
+      6.5,
+      10,
+      9.5,
+      11
+     ],
+     "texture": "#end"
+    },
+    "west": {
+     "uv": [
+      6.5,
+      10,
+      9.5,
+      11
+     ],
+     "texture": "#end"
+    },
+    "up": {
+     "uv": [
+      0,
+      6.5,
+      16,
+      9.5
+     ],
+     "texture": "#top"
+    },
+    "down": {
+     "uv": [
+      0,
+      6.5,
+      16,
+      9.5
+     ],
+     "texture": "#side"
+    }
+   }
+  }
+ ]
+}

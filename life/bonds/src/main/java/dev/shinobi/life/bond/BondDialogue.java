@@ -26,6 +26,16 @@ public final class BondDialogue {
         return keys;
     }
     /**
+     * What they say when a {@code level_up} event reaches a new level with the player ({@code bond.levelup.<n>}, apart
+     * from the level's name in the book, {@code bond.level.<n>}); empty for other events and for ties between residents.
+     */
+    public static List<String> levelUp(BondWorld w, BondEvent e) {
+        if (!e.kind().equals("level_up") || e.who().contains(">")) return List.of();
+        var keys = new ArrayList<String>();
+        both(keys, "bond.levelup." + e.detail(), w.person(e.who()).personality().archetype());
+        return keys;
+    }
+    /**
      * Something they heard or saw about you and haven't brought up yet: the newest fresh secondhand memory, as
      * {@code bond.heard.<act>} (or {@code bond.seen.<act>}). Brought up once; the bond remembers it was said.
      */

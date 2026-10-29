@@ -10,8 +10,9 @@ score, memories that fade or stay, personalities that take the same act differen
 its own dynamics, a village that talks, quarrels with arcs, romance and family after the beta, and
 Kindling Bond.
 
-Spending time together (hangouts, invitations, rituals, residents' own lives, follow-ups and
-conversation topics) is in [LIFE_TOGETHER.md](LIFE_TOGETHER.md).
+Spending time together (hangouts, invitations, rituals, residents' own lives, follow-ups,
+conversation topics, and the questions residents ask the player) is in
+[LIFE_TOGETHER.md](LIFE_TOGETHER.md).
 
 **No spoilers here.** This file describes systems and formats. Story-specific bond content (who
 confides what, whose arc pays off where) belongs in the developers-only
@@ -44,7 +45,7 @@ Life mod depends on it (`implementation project(':life:bonds')`) and adds the th
 | Everyone you are close to, as one number | `BondWeb` |
 
 ```
-./gradlew :life:bonds:test                  # 93 tests
+./gradlew :life:bonds:test                  # 111 tests
 ./gradlew :life:bonds:simulate              # the 60-hour pacing tables (-Pseed=N, -Pexplain=role:teammate_a)
 ./gradlew :life:bonds:simulateVillage       # a village of 300 for 180 days: cost, ties, clan drift, hooks
 ```
@@ -128,11 +129,11 @@ trust, a sensei who respects you, a sweetheart and a respectful rival can all be
 | 3 | 20 | 28 | Friendly | Village news; sparring |
 | 4 | 28 | 40 | Friend | They expect you on their birthday |
 | 5 | 36 | 58 | Good Friend | Heart-to-heart talks; their values |
-| 6 | 45 | 80 | Close Friend | Their dream; Kindling Bond: their nature |
+| 6 | 45 | 80 | Close Friend | Their dream; Kindling Bond: Spark |
 | 7 | 55 | 105 | Trusted Friend | Secrets; joining your clan; dating (teen and up) |
-| 8 | 66 | 140 | Best Friend | Kindling Bond: a technique; a confession (teen and up) |
+| 8 | 66 | 140 | Best Friend | Kindling Bond: Flame; a confession (teen and up) |
 | 9 | 80 | 170 | Kindred Spirit | A small gift saved for you each day |
-| 10 | 95 | 200 | Lifelong Bond | Kindling Bond at full strength; marriage (adults) |
+| 10 | 95 | 200 | Lifelong Bond | Kindling Bond: Blaze; marriage (adults) |
 
 Each step is wider than the last, so the top levels need every meter near the top. **Gates** stop
 points alone (`Levels.cap`), as VF's story gates do:
@@ -150,6 +151,10 @@ them, so a level-up can land mid-conversation) and **fall slowly**: only when cl
 below the level's threshold, one level a day. A level carried over from VF is a floor. The book's
 goal line says what is missing: `bond.goal.points:N`, `bond.goal.experience`, `bond.goal.moment`
 or `bond.goal.time`.
+
+**Held roles.** The story can hold one person's level with the player until a story flag is set:
+`{"level_cap": ["role:porter", 4, "story.ch28.done"]}` (kept as a bond flag, so saves carry it). While
+held, the goal line reads `bond.goal.held`; once the flag is set, the level is free to rise.
 
 ## 4. Memories
 
@@ -385,7 +390,7 @@ never click. **Stages:** interest (romance 15, hidden) → a **crush** (30 and l
 book until level 8) → **dating** (the player asks, at level 7 and romance 35) → **sweethearts** (a
 confession at level 8 and 50; village news) → **engaged** (a proposal between adults at level 10
 and 65, after 14 days as sweethearts) → **married** (the wedding at the shrine; a deed). One
-commitment at a time. A spouse is among the deepest bonds for Kindling Bond.
+commitment at a time. A spouse opens Kindling Bond's Blaze tier.
 
 **Children** (post-game, `Household`): a married adult player can have a child once the post-game
 flag is set, at most one a year. The child is a resident of the household (VF already records
@@ -402,27 +407,64 @@ rolled once a week. Progression's `Recruiting` owns the registry and asks `Recru
 
 ## 11. Kindling Bond
 
-Once the story unlocks it (`story.kindling.awakened`), the level a person acts on decides what you
-can borrow, by the roadmap's thresholds: level 6 their **nature**, level 8 one of their
-**techniques**, level 10 **both and for longer**. A teammate, your sensei and your spouse are the
-deepest bonds: the full tier opens for them at level 8. A quarrel dims the flame and a falling-out
-puts it out.
+Kindling Bond is power that flows outward through the people you are bonded to and grows with the
+whole web of them; it never copies or borrows techniques (ROADMAP.md, "Kindling Bond"). The bond
+engine owns who can be kindled and how strongly (`Kindling`); Shinobi Combat owns what the powers do
+and reads `Kindling.Flame` and `Kindling.Bonfire`; the story owns when it awakens
+(`story.kindling.awakened`) and when the Bonfire can be lit (`story.kindling.bonfire`).
 
-| Tier | Nature casts | Technique uses | Duration | Rekindle |
-|---|---|---|---|---|
-| nature | 3 | 0 | x1 | 3 in-game hours |
-| technique | 3 | 1 | x1 | 3 in-game hours |
-| full | 5 | 1 | x1.5 | 2 in-game hours |
+| Tier | Gate (the level they act on) | Powers |
+|---|---|---|
+| Spark | 6 | `thread_sight`, `small_kindle` |
+| Flame | 8 | and `kindle`, `ember_link` |
+| Blaze | 10, or your spouse (from 6) | and `ember_mark`, `unison` |
+| Bonfire | the whole web | the ultimate |
 
-A **spouse is the strongest bond**: their full kindling burns twice as long and rekindles in half the
-time. Every use is counted (`kindle`, `kindling_uses`): after 12 with one person, a master's trial
-can make their nature yours for good. Shinobi Combat's `kindle` effect spends a `Kindling.Grant`;
-Core's natures list gains a "borrowed" source.
+- **Flame strength** (0 to 1) per bonded person: `(feeling - 45) / 50` (at least 0.1 once they have
+  a tier), times the quarrel's dimming (an argument 0.5, a cold shoulder 0.25, making up 0.6, a
+  quarrel left unmended for a month 0.2), plus 0.1 if you fought side by side this week. A
+  falling-out snuffs it out (tier none) until the story mends it. Because the tier reads the level
+  they act on, a quarrel can also drop a tier.
+- **Thread Sight** (`Kindling.threadSight`) reads only people bonded to you at level 6 or more. It
+  shows *that* one of them hides something (a flicker, from a story bond flag `hides:<what>`), never
+  *what*, and a thread between two others only when both are readable (how close they are, and
+  whether they are at odds). Strangers and acquaintances stay unreadable.
+- **A freely offered flame** (`offered_flame`, a kept moment) is the only way someone below level 6
+  burns toward you (Spark). `gave_flame` is the player pouring their flame into someone (a kept
+  moment). The story uses both at a few scripted beats.
+- **Story floor:** a scripted gift beat can count its target as a tier for that one kindle,
+  `{"kindle": {"who": "role:x", "floor": "spark"}}`; the use and its resonance count, and the
+  tier goes back to what the bond says afterwards.
+- **Costs** (combat owns the numbers): you feel linked allies' pain; overuse burns chakra and
+  stamina; a quarrel dims a flame and a falling-out snuffs it.
+- **Ember Link** joins the squad members at Flame or above (`Kindling.emberLink`).
+- **Resonance** toward a nature: each day you fight beside someone at Spark or above (a mission, a
+  spar, training, defending the village, a kindle) counts once; at 30 their trial can teach you
+  their nature (`resonance`, `Flame.natureTrialReady`). Every kindle is also counted (`kindling_uses`).
+- **Bonfire** (`Kindling.bonfire`): every flame weighted by tier (Spark 1, Flame 2, Blaze 4) times
+  its strength, plus half a point for each community the web reaches (a clan, a district, a rank).
+  Forms: a **candle** under 5, a **campfire** under 12, a **bonfire** under 21, an **inferno** past
+  that. A loner gets a candle; a village of friends, a monstrous fire.
+- **Data:** `{"kindling": [who, "flame"]}`, `{"resonance": [who, 30]}`, `{"bonfire": "campfire"}` (or
+  a number), `{"kindling_uses": [who, n]}`, `{"bond_web": n}`; the action `{"kindle": who}`.
+  Dialogue keys: `bond.kindling.<tier>`, `bond.kindling.dimmed`, `bond.kindling.nature_trial`,
+  `bond.bonfire.<form>`.
 
-**The bond web** (`BondWeb`) is everyone you are close to as one number: each bond at level 6 counts
-1, at 7 counts 2, at 8 counts 3, at 9 counts 4 and at 10 counts 6, plus 1 for every community (a
-clan, a district, a rank) holding at least one of them, so a web reaching across the village counts
-for more than a deep circle in one corner. Quests read it with `bond_web`.
+**In the simulation** (the gift awakens at the second part of the Chunin arc, hour 20.8; players
+kindle a squadmate on some missions after that):
+
+| | Devoted | Typical | Reckless |
+|---|---|---|---|
+| First Spark / Flame | at the awakening (20.8 h) | at the awakening (20.8 h) | Spark at 40 h, no Flame |
+| First Blaze | 44 h | 59 h | never |
+| Flames at 60 h | 8 | 8 | 2 |
+| Nature trials ready | 3 | 3 | 2 |
+| Bonfire across five seeds | inferno (about 22 to 24) | bonfire (about 19) | candle (about 2 to 4) |
+
+**Combat reads** (no dependency on this module's internals needed beyond these records):
+`Kindling.flames(world)` (brightest first: who, tier, strength, dimmed, resonance, trial ready,
+kindles), `Kindling.flame(world, who)`, `Kindling.emberLink(world)`, `Kindling.bonfire(world)` and
+`world.kindle(who)` to spend a kindle.
 
 ## 12. The bond book
 
@@ -441,6 +483,22 @@ dialogue-bank key, never a name:
   fading ones (`bond.memory.<act>`, `.seen`, `.heard`, `.told`), and the shared experiences by kind.
 - **An index** of everyone you know, highest level first (`BondWorld.bonded`).
 
+**Gifts received** (`Gifts`, for the home's collection book): every gift a resident gives the
+player is kept: the item, who gave it, the day and the occasion (birthday, festival, thanks,
+souvenir, wedding, farewell, quest, kindred, new_year). Kindred spirits (level 9, not quarrelling)
+leave a small gift about once a week on their own, one of their favorite things. The glue and quests
+add the rest (`Gifts.receive`, or the action `{"give_player": {"from", "item", "occasion"}}`). The
+home reads `Gifts.received(world)` and `Gifts.from(world, who)`; when a giver sees their gift on
+display in the player's home, `Gifts.seenDisplayed(world, giftId)` warms them once per gift
+(`saw_gift_displayed`). Condition: `{"gifts_from": [who, n]}`.
+
+**At the player's home** ([docs/HOME.md](docs/HOME.md)): a visit is `visited_home` (a hangout the gates
+count). A keepsake or photo on show is noticed once (`Gifts.noticed(world, who, keepsake, photo)`):
+a gift from the ledger is marked seen (`saw_gift_displayed`), a photo is `saw_photo_together`, and
+either leaves the bond flag `home.noticed:<keepsake>`. A spare key is the bond flag `home.key`, not
+a moment, so it can be taken back and does not open a story gate; `{"bond_flag": [who, flag]}` reads
+either.
+
 ## 13. Data formats
 
 Bond conditions and actions join Core's condition and action language
@@ -458,7 +516,7 @@ member does, and an action applies to each member.**
 {"bond_moment":      ["role:teammate_a", "bond.teammate_a.1"]}
 {"bond_state":       ["role:teammate_b", "making_up"]} none, argument, cold_shoulder, making_up, falling_out
 {"romance_stage":    ["role:x", "dating"]}            at least this stage
-{"kindling":         ["role:teammate_a", "nature"]}   at least this tier
+{"kindling":         ["role:teammate_a", "flame"]}    at least this tier: spark, flame, blaze
 {"knows_fact":       ["role:rival", "dream"]}
 {"squad_cohesion":   60}
 {"in_squad":         "role:teammate_b"}
@@ -473,6 +531,7 @@ member does, and an action applies to each member.**
 {"bond_web":         40}
 {"ritual":           ["role:teammate_b", "ramen"]}   time together (LIFE_TOGETHER.md)
 {"hangouts":         ["role:teammate_b", 5]}
+{"answered":         ["role:teammate_b", "q.advice.first_mission", "go_for_it"]}   the answer is optional
 ```
 
 **Actions:**
@@ -497,6 +556,7 @@ member does, and an action applies to each member.**
 {"clan_event":        ["inuzuka", "aburame", 10, "festival"]}
 {"clan_deed":         {"clan": "hyuga", "act": "honored_custom"}}
 {"mood_event":        ["village", 0.4, 0]}              cheer and tension: a festival, an attack
+{"ask_question":      ["role:teammate_b", "q.advice.first_mission"]}  a scene asks it now
 ```
 
 An action returns "" or why it did nothing (`not_ready`, `not_eligible`, `level`...) for the quest
@@ -519,7 +579,8 @@ specific first, each as `<key>.<archetype>` then `<key>`: a greeting during a qu
 level (`bond.greet.level.<n>`). `BondDialogue.news` gives the newest thing they saw or heard about you
 and have not yet brought up (`bond.seen.<act>`, `bond.heard.<act>`), once, for the opening line after
 VF's own deed reactions. The book adds `bond.fact.*`, `bond.feel.*`, `bond.memory.*`, `bond.goal.*`,
-`bond.level.<n>` and `bond.perk.<n>`. Text uses name tokens only.
+`bond.level.<n>` (the level's name) and `bond.perk.<n>`. A `level_up` event with the player is spoken from
+`bond.levelup.<n>` (`BondDialogue.levelUp`). Text uses name tokens only.
 
 **Tuning.** Every number above is a constant in one place (`Levels`, `Bond`, `Act`, `Memory`,
 `Conflict`, `Squad`, `Gossip`, `Standing`, `Courtship`, `Kindling`, `Recruitment`). Phase 0 can move
@@ -578,7 +639,7 @@ breaks a confidence, disobeys and abandons a mission.
 | Team assignment (Ch 8) | ~4 | Teammates 4 to 6; sensei 3 | The bell test (a moment) |
 | First C-rank (Ch 11) | ~7 | **teammate_a 5 or more** | The campfire branch: `friendship [teammate_a, 5]` |
 | Beta end (Ch 20) | ~15 | Teammates 6 to 8, sensei 5 to 6, classmates 3 | Bond payoffs in the forest and the finals |
-| Chunin arc | ~28 | Teammates 8 to 9; sensei 7; dating possible | Kindling Bond: nature at 6, a technique at 8 |
+| Chunin arc | ~28 | Teammates 8 to 9; sensei 7; dating possible | Kindling Bond: Spark at 6, Flame at 8 |
 | Jonin arc | ~45 | Teammates 9; first level-10 bonds for devoted players | Marriage at 10 (adults) |
 | Road to Hokage | ~60 | Two or three bonds at 10, several at 5 to 7 | Hokage: the highest standing everywhere |
 
@@ -593,34 +654,43 @@ acts on at the end of each chapter, and squad cohesion):
 | 3 | Chakra | 1.4 | 6 | 1 | 2 | 1 | 2 | 1 | 1 | 1 | — |
 | 4 | Night | 1.8 | 7 | 1 | 2 | 1 | 2 | 1 | 1 | 1 | — |
 | 5 | Errands at the Academy | 2.1 | 8 | 1 | 2 | 1 | 2 | 1 | 1 | 1 | — |
-| 6 | Exam eve | 2.4 | 10 | 2 | 4 | 1 | 2 | 2 | 2 | 1 | — |
-| 7 | Graduation | 2.8 | 12 | 2 | 4 | 1 | 3 | 2 | 2 | 2 | — |
-| 8 | Team assignment | 3.7 | 15 | 3 | 6 | 3 | 3 | 2 | 2 | 2 | 41 |
-| 9 | The Mission Desk | 5.0 | 19 | 4 | 6 | 3 | 3 | 2 | 2 | 2 | 44 |
-| 10 | Tree walking | 6.0 | 22 | 4 | 6 | 3 | 3 | 3 | 2 | 2 | 47 |
-| 11 | First C-rank | 7.3 | 26 | 4 | 7 | 3 | 3 | 3 | 2 | 2 | 53 |
-| 12 | Water walking and natures | 8.4 | 29 | 4 | 5 | 3 | 3 | 3 | 2 | 2 | 42 |
-| 13 | A far village | 9.8 | 32 | 4 | 7 | 3 | 3 | 3 | 2 | 2 | 58 |
-| 14 | Second C-rank | 11.3 | 36 | 6 | 8 | 4 | 3 | 3 | 2 | 2 | 67 |
-| 16 | Forest of Death | 12.6 | 42 | 7 | 9 | 4 | 3 | 3 | 2 | 2 | 69 |
-| 19 | Chunin Exams finals | 14.1 | 50 | 8 | 9 | 5 | 3 | 3 | 3 | 2 | 71 |
-| 20 | Results | 14.3 | 51 | 8 | 9 | 5 | 3 | 3 | 3 | 2 | 72 |
+| 6 | Exam eve | 2.4 | 10 | 3 | 4 | 1 | 2 | 2 | 2 | 1 | — |
+| 7 | Graduation | 2.8 | 12 | 3 | 4 | 1 | 3 | 2 | 2 | 2 | — |
+| 8 | Team assignment | 3.7 | 15 | 4 | 6 | 3 | 3 | 2 | 2 | 2 | 42 |
+| 9 | The Mission Desk | 5.0 | 19 | 4 | 6 | 4 | 3 | 2 | 2 | 2 | 46 |
+| 10 | Tree walking | 6.0 | 22 | 5 | 6 | 4 | 3 | 2 | 2 | 2 | 49 |
+| 11 | First C-rank | 7.3 | 26 | 7 | 7 | 5 | 3 | 2 | 3 | 2 | 57 |
+| 12 | Water walking and natures | 8.4 | 29 | 7 | 6 | 5 | 3 | 3 | 3 | 2 | 47 |
+| 13 | A far village | 9.8 | 32 | 7 | 7 | 5 | 3 | 3 | 3 | 2 | 62 |
+| 14 | Second C-rank | 11.3 | 36 | 7 | 9 | 6 | 3 | 3 | 3 | 2 | 70 |
+| 16 | Forest of Death | 12.6 | 42 | 8 | 9 | 6 | 3 | 3 | 4 | 2 | 71 |
+| 19 | Chunin Exams finals | 14.1 | 50 | 9 | 9 | 6 | 3 | 3 | 4 | 3 | 73 |
+| 20 | Results | 14.3 | 51 | 9 | 9 | 6 | 4 | 3 | 4 | 3 | 73 |
 
-With this seed the typical player reaches Ch 11 with teammate_a one point short of level 5 (they
-forgot teammate_a's birthday), so the campfire talk does not play: low friendship changing a scene,
-as the roadmap intends. Across five seeds a typical player reaches it in four. Across the three
+With this seed the typical player reaches the Ch 11 campfire talk with teammate_a at level 6. Across
+five seeds a typical player reaches it in at least four; one who forgot teammate_a's birthday can fall
+a point short, and the scene plays differently, as the roadmap intends. Across the three
 players:
 
 | | Devoted | Typical | Reckless |
 |---|---|---|---|
-| Academy end, teammates | 3 / 4 | 2 / 4 | 2 / 1 (a broken confidence) |
-| Ch 11 campfire | plays (6) | skipped (4); plays in 4 of 5 seeds | skipped (2) |
-| Beta end, teammates | 9 / 9 | 8 / 9 | 3 / 3 (one teammate left, replaced) |
+| Academy end, teammates | 3 / 5 | 3 / 4 | 2 / 1 (a broken confidence) |
+| Ch 11 campfire | plays (7) | plays (6); at least 4 of 5 seeds | skipped |
+| Beta end, teammates | 9 / 9 | 9 / 9 | 3 / 3 (one teammate left, replaced) |
 | 60 h: bonds at level 10 (with time together) | 3 | 3 | 0 |
 | Romance in the beta | none | none | none |
 | 60 h: romance | married, a child in the post-game | married | none |
-| Kindling with teammates | full / full | full / full | nature / nature |
-| Quarrels / fallings-out | 0 / 0 | 1 / 0 | 3 / 1 |
+| Kindling with teammates | blaze / blaze | blaze / blaze | spark / spark |
+| Quarrels / fallings-out | 0 / 0 | 5 / 0 | 3 / 1 |
+
+**Standing** (`Playthrough.standingsAcross`, five seeds; the Hokage needs Hero with the village and
+Good Neighbor in every district and clan quarter):
+
+| | Devoted | Typical | Reckless |
+|---|---|---|---|
+| 45 h: village | Pillar (34 to 36), Hero in 1 of 5 | Pillar (32 to 34), never Hero | Good Neighbor (17 to 18) |
+| 60 h: village | Hero in 5 of 5 (38 to 40) | Hero in 5 of 5 (37 to 39) | Pillar (20 to 23), never Hero |
+| Good Neighbor everywhere | 5 of 5 at 45 h and 60 h | 5 of 5 at 45 h and 60 h | 3 of 5 at 45 h, 5 of 5 at 60 h |
 
 Run `./gradlew :life:bonds:simulate` for the full tables, or `-Pexplain=role:teammate_a` to see
 where one bond's meters come from. `TimeAndPacingTest` holds these targets on five seeds.
@@ -795,7 +865,7 @@ resolving some hooks):
 | Rivals, classmates, sparring with ranked residents raises friendship | `spar_won` / `spar_lost` (respect and rivalry; affection for a good match) |
 | Mentors teach at friendship and level thresholds; the sensei's exam recommendation | `friendship` plus Core's `level_at_least`; the recommendation reads `bond_meter [role:sensei, trust, N]` and `friendship [role:sensei, N]` |
 | Clanless players learn one lesser technique per friendly clan at friendship 7 | `clan_friendship [clan, 7]` |
-| Kindling Bond: nature at 6, technique at 8, both and longer at 10 or with a teammate, sensei or spouse; a spouse strongest; borrowed natures learned by a trial | Section 11 |
+| Kindling Bond: Spark at 6, Flame at 8, Blaze at 10 or a spouse, a Bonfire from the whole web; dimmed by quarrels, snuffed by a falling-out; natures learned by resonance and a trial | Section 11 |
 | Romance from the teen stage, never children, nothing in the beta, interest from personality and chemistry, dating at 7, confessing at 8 (village news) | Section 10 and `CourtshipTest`; the confession is a deed and village news |
 | Marriage: adults, level 10, a proposal and a shrine wedding; the spouse moves in; clan joining | `court(... "propose" / "wed")`; moving in and the clan change are Life's and Core's glue on the `wedding` event |
 | Children in the post-game | `Household` (section 10) |
@@ -806,9 +876,8 @@ resolving some hooks):
 
 ## 21. Open questions
 
-- **Kindling Bond for the deepest bonds.** The roadmap says level 10 "(or a teammate, your sensei,
-  your spouse)" gets both. Read here as: those three get the full tier from level 8. Or should
-  they get it at any level, or only the duration bonus?
+- **The Bonfire's bands** (5 / 12 / 21) are set so a devoted player's web reaches an inferno and a
+  typical one a bonfire; the story may want them by bond count instead.
 - **Romance and the squad.** Dating a teammate is allowed. Should it change squad dynamics
   (jealousy from the other teammate, cohesion), and what happens to the squad on a break-up?
 - **Can a falling-out ever mend outside the story?** Today only a story `mend` does.

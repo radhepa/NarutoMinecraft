@@ -37,7 +37,11 @@ public final class Bond {
 
     final String from, to;
     long met = -1, lastContact = -1, lastTogether = -1, talkDay = -1, giftDay = -1, romanceSince = -1, teenSince = -1;
-    int contactDays, together, giftsToday, level, floor, lowDays, kindled;
+    int contactDays, together, giftsToday, level, floor, lowDays, kindled, resonance;
+    long resonanceDay = -1;
+    /** Training and sparring together today (for teammates' growth, which reads it daily). */
+    int trainedCount;
+    long trainedDay = -1;
     double warmth;
     String lastGift = "";
     final List<Memory> memories = new ArrayList<>();
@@ -54,6 +58,13 @@ public final class Bond {
     /** What is going on in their life, and what either of you means to ask about later. */
     final List<LifeEvents.News> news = new ArrayList<>();
     final List<Together.FollowUp> followUps = new ArrayList<>();
+    /** Questions: what they asked and what the player answered, the question waiting for an answer, and how answers shaped them. */
+    final List<Questions.Answered> answers = new ArrayList<>();
+    String pendingQuestion = "";
+    long pendingSince = -1, lastQuestion = -1;
+    final java.util.Map<String, Double> nudges = new TreeMap<>();
+    String mood = "";
+    long moodDay = -1;
     /** Conversation topics already raised today. */
     final Set<String> topicsToday = new TreeSet<>();
     long topicsDay = -1;
@@ -71,8 +82,12 @@ public final class Bond {
     public int level() { return level; }
     /** A level kept for good: one earned in Village Friends before Shinobi Life arrived. */
     public int floor() { return floor; }
-    /** How many times Kindling Bond has borrowed from them (a master's trial can make a borrowed nature yours). */
+    /** How many times the player has kindled them. */
     public int kindled() { return kindled; }
+    /** Days fought side by side while their flame burned: toward learning their nature ({@link Kindling#TRIAL_RESONANCE}). */
+    public int resonance() { return resonance; }
+    /** Times they trained or sparred together (with the player, or with {@code to}) on that day. */
+    public int trainedOn(long day) { return trainedDay == day ? trainedCount : 0; }
     public Conflict conflict() { return conflict; }
     public Courtship.Stage romance() { return romance; }
     public List<Memory> memories() { return List.copyOf(memories); }
@@ -94,6 +109,10 @@ public final class Bond {
     public int declinedByYou() { return declinedByYou; }
     /** Whether the player talked with them today. */
     public boolean talkDayIsToday(long day) { return talkDay == day; }
+    public List<Questions.Answered> answers() { return List.copyOf(answers); }
+    public java.util.Map<String, Double> nudges() { return java.util.Map.copyOf(nudges); }
+    /** Their mood from the last answer, today only: touched, pleased, amused, impressed, fine, stung_but_respects, hurt, noticed_contradiction. */
+    public String mood(long day) { return moodDay == day ? mood : ""; }
 
     void meet(long day) { if (met < 0) met = day; }
     /** A day with any contact at all (a talk, a lesson, a mission). */
@@ -115,6 +134,10 @@ public final class Bond {
     /** Remembers an act (or folds it into a recent memory of the same small act). */
     Memory remember(Act act, Meters delta, Reaction.Source how, String about, long day) {
         if (act.experience != null && how == Reaction.Source.SELF) experiences.merge(act.experience, 1, Integer::sum);
+        if (how == Reaction.Source.SELF && (act.experience == Act.Experience.TRAINING || act.experience == Act.Experience.SPAR)) {
+            if (trainedDay != day) { trainedDay = day; trainedCount = 0; }
+            trainedCount++;
+        }
         if (!act.remembered() || delta.isZero()) return null;
         for (int i = memories.size() - 1; i >= 0; i--) {
             var m = memories.get(i);

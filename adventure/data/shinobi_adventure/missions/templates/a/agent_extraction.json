@@ -1,0 +1,143 @@
+{
+ "format": 1,
+ "id": "mission.a.agent_extraction",
+ "kind": "mission",
+ "rank": "a",
+ "category": "extraction",
+ "status": "later",
+ "title": "dlg:mission.a.agent_extraction.title",
+ "brief": "dlg:mission.a.agent_extraction.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.agent_extraction.brief",
+  "accept": "dlg:mission.a.agent_extraction.accept",
+  "decline": "dlg:mission.a.agent_extraction.decline",
+  "progress": "dlg:mission.a.agent_extraction.progress",
+  "success": "dlg:mission.a.agent_extraction.success",
+  "fail": "dlg:mission.a.agent_extraction.fail",
+  "report": "dlg:mission.a.agent_extraction.report"
+ },
+ "minutes": 50,
+ "party": "squad",
+ "unlock": {
+  "rank_at_least": "jonin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "jonin"
+   }
+  },
+  "safehouse": {
+   "pick": "anchor",
+   "tag": "foreign.safehouse"
+  },
+  "hunters": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.hunter_squad"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "contact"
+  },
+  "contact": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:safehouse"
+   },
+   "next": "extract"
+  },
+  "extract": {
+   "objective": {
+    "type": "escort",
+    "who": "agent",
+    "to": "place:gate.travel_desk"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:hunters",
+      "slot:safehouse"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "agent_wounded",
+   "weight": 2,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.a.agent_extraction.twist.agent_wounded"
+  },
+  {
+   "id": "agent_turned",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "dlg:mission.a.agent_extraction.twist.agent_turned"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "client_unharmed"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.hunter_squad"
+ ],
+ "places": {
+  "anchors": [
+   "foreign.safehouse",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:foreign_village"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "stealth",
+  "extraction"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.extraction",
+ "_premise": "Bring home a Leaf agent whose cover in a foreign village has been blown.",
+ "_twists": {
+  "agent_wounded": "The agent cannot walk.",
+  "agent_turned": "The agent is not sure they want to come home."
+ }
+}

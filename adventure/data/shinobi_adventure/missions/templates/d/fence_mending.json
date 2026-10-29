@@ -1,0 +1,187 @@
+{
+ "format": 1,
+ "id": "mission.d.fence_mending",
+ "kind": "mission",
+ "rank": "d",
+ "category": "repairs",
+ "status": "beta",
+ "title": "dlg:mission.d.fence_mending.title",
+ "brief": "dlg:mission.d.fence_mending.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.fence_mending.brief",
+  "accept": "dlg:mission.d.fence_mending.accept",
+  "decline": "dlg:mission.d.fence_mending.decline",
+  "progress": "dlg:mission.d.fence_mending.progress",
+  "success": "dlg:mission.d.fence_mending.success",
+  "fail": "dlg:mission.d.fence_mending.fail",
+  "report": "dlg:mission.d.fence_mending.report"
+ },
+ "minutes": 10,
+ "party": "squad_or_solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "household": true
+   }
+  },
+  "fence": {
+   "pick": "anchor",
+   "tag": "client_garden"
+  },
+  "neighbour": {
+   "pick": "resident",
+   "where": {
+    "district": "same:client"
+   }
+  },
+  "yard": {
+   "pick": "anchor",
+   "tag": "carpenters_yard"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "posts"
+  },
+  "posts": {
+   "objective": {
+    "type": "collect",
+    "target": "fence_post",
+    "at": "slot:yard",
+    "count": 6
+   },
+   "next": "mend"
+  },
+  "mend": {
+   "objective": {
+    "type": "perform",
+    "what": "set_post",
+    "at": "slot:fence",
+    "count": 6
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "fence_line"
+     },
+     "next": "line"
+    },
+    {
+     "if": {
+      "twist": "termites"
+     },
+     "next": "termites"
+    }
+   ],
+   "next": "report"
+  },
+  "line": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:neighbour"
+   },
+   "next": "settle"
+  },
+  "settle": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "fair": null,
+     "client": "sided_client",
+     "neighbour": "sided_neighbour"
+    },
+    "dialogue": "dlg:mission.d.fence_mending.choice.settle"
+   },
+   "next": "report"
+  },
+  "termites": {
+   "objective": {
+    "type": "perform",
+    "what": "replace_post",
+    "at": "slot:fence",
+    "count": 4
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "fence_line",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.fence_mending.twist.fence_line"
+  },
+  {
+   "id": "termites",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.fence_mending.twist.termites"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "sided_client": {
+   "pay": 1.0,
+   "standing": 1,
+   "hook": "quarrel_to_mediate"
+  },
+  "sided_neighbour": {
+   "pay": 0.7,
+   "standing": -1
+  }
+ },
+ "bonus": [
+  "kind_choice",
+  "fast"
+ ],
+ "fast_hours": 3,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "carpenters_yard",
+   "client_garden"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "village",
+  "talk",
+  "repairs"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.repairs",
+ "_premise": "Mend a garden fence between two houses.",
+ "_twists": {
+  "fence_line": "The neighbour says the fence was always a hand's width too far onto their land.",
+  "termites": "The old posts crumble in your hands."
+ },
+ "_choices": {
+  "settle": "Measure fairly, take the client's side, or the neighbour's."
+ }
+}

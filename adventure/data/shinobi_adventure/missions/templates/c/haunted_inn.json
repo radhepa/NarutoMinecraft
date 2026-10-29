@@ -1,0 +1,206 @@
+{
+ "format": 1,
+ "id": "mission.c.haunted_inn",
+ "kind": "mission",
+ "rank": "c",
+ "category": "investigation",
+ "status": "beta",
+ "title": "dlg:mission.c.haunted_inn.title",
+ "brief": "dlg:mission.c.haunted_inn.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.haunted_inn.brief",
+  "accept": "dlg:mission.c.haunted_inn.accept",
+  "decline": "dlg:mission.c.haunted_inn.decline",
+  "progress": "dlg:mission.c.haunted_inn.progress",
+  "success": "dlg:mission.c.haunted_inn.success",
+  "fail": "dlg:mission.c.haunted_inn.fail",
+  "report": "dlg:mission.c.haunted_inn.report"
+ },
+ "minutes": 30,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "innkeeper",
+    "resident_of": "any"
+   }
+  },
+  "inn": {
+   "pick": "anchor",
+   "tag": "road.east_waystation"
+  },
+  "cellar": {
+   "pick": "anchor",
+   "tag": "road.inn_cellar"
+  },
+  "gang": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.road_ambush"
+   ]
+  }
+ },
+ "start": "arrive",
+ "steps": {
+  "arrive": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "night"
+  },
+  "night": {
+   "objective": {
+    "type": "sleep",
+    "at": "slot:inn"
+   },
+   "next": "clues"
+  },
+  "clues": {
+   "objective": {
+    "type": "inspect",
+    "target": "ghost_sign",
+    "at": "slot:inn",
+    "count": 4
+   },
+   "next": "cellar"
+  },
+  "cellar": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:cellar"
+   },
+   "next": "reveal"
+  },
+  "reveal": {
+   "objective": {
+    "type": "inspect",
+    "target": "cellar",
+    "at": "slot:cellar"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "just_a_story"
+     },
+     "next": "story"
+    }
+   ],
+   "next": "fight"
+  },
+  "story": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "on_done": [
+    {
+     "mission_outcome": "no_ghost"
+    }
+   ],
+   "next": null
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:gang",
+    "at": "slot:cellar"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:gang",
+      "slot:cellar"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "gang_in_cellar",
+   "weight": 2,
+   "harder": true,
+   "modifier": true,
+   "premise": "dlg:mission.c.haunted_inn.twist.gang_in_cellar"
+  },
+  {
+   "id": "just_a_story",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.c.haunted_inn.twist.just_a_story"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "no_ghost": {
+   "pay": 0.7,
+   "standing": 1
+  }
+ },
+ "bonus": [
+  "unseen",
+  "spared"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.road_ambush"
+ ],
+ "places": {
+  "anchors": [
+   "road.east_waystation",
+   "road.inn_cellar"
+  ],
+  "regions": [
+   "region:east_road"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.45
+ },
+ "tags": [
+  "road",
+  "investigation",
+  "night",
+  "spooky"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.investigation",
+ "_premise": "Travellers say the waystation inn on the east road is haunted; some never checked out.",
+ "_twists": {
+  "gang_in_cellar": "A gang uses the cellar to rob sleeping guests.",
+  "just_a_story": "The innkeeper's grandfather made up the ghost to bring in curious guests."
+ }
+}

@@ -1,0 +1,40 @@
+# Ryo, gifts, collectibles and pet supplies (Shinobi Life). Gift tags (the gift column) are the ids the bond
+# engine's personalities love, like or dislike (life/bonds Personality); one tag can be met by many items.
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+ryo_1	1 Ryo	currency	ryo	any	beta1	64	1	pay	A one-ryo note	-	sprite	value=1
+ryo_10	10 Ryo	currency	ryo	any	beta1	64	10	pay	A ten-ryo note	-	tint:ryo_1	value=10
+ryo_100	100 Ryo	currency	ryo	any	beta1	64	100	pay	A hundred-ryo note	-	tint:ryo_1	value=100
+ryo_1000	1,000 Ryo	currency	ryo	any	beta1	64	1000	pay	A thousand-ryo note	-	tint:ryo_1	value=1000
+bouquet	Bouquet	gift	flowers	any	beta1	1	25	-	Flowers chosen by meaning at the flower shop; say something with them	item:poppy;item:dandelion;item:bouquet	icon	variant=flowers;wilts=7d
+pressed_flower	Pressed Flower	collectible	flowers	any	beta1	16	6	-	One of fourteen flowers of the Leaf, pressed; keep them in a chest or frame one	item:poppy	icon	variant=flower:14
+incense_sticks	Incense Sticks	gift	shrine	any	beta1	16	8	-	A bundle for an altar or a shrine	-	icon	-
+hairpin	Hairpin	gift	accessory	any	beta1	1	30	-	A lacquered kanzashi with a flower	-	icon	variant=flower
+ribbon	Ribbon	gift	accessory	any	beta1	16	8	-	A silk ribbon in any colour	-	icon	variant=colour
+handkerchief	Handkerchief	gift	accessory	any	beta1	16	10	-	An embroidered cotton square	-	icon	-
+hand_mirror	Hand Mirror	gift	accessory	any	beta1	1	25	-	A small round mirror in a lacquered case	-	icon	-
+sketchbook	Sketchbook	gift	art	any	beta1	1	15	-	Blank pages for a painter	item:brush	icon	-
+paint_set	Paint Set	gift	art	any	beta2	1	40	-	Pigments, water dish and brushes from the painters' lane	item:brush;item:ink	icon	-
+tea_tin	Tea Tin	gift	food	any	beta1	1	20	-	A tin of the tea house's best leaves	food:green_tea	icon	-
+spinning_top	Spinning Top	gift	toy	any	beta1	16	8	-	A wooden koma; children love it	item:toy	icon	-
+kendama	Kendama	gift	toy	any	beta1	1	12	-	A cup-and-ball toy	item:toy	icon	-
+kite	Kite	gift	toy	any	beta1	1	20	-	A paper kite with a painted face	item:toy	icon	-
+firework	Firework	gift	toy	any	beta2	16	15	-	A festival rocket; light it on the river bank	item:firework	icon	vanilla=minecraft:firework_rocket
+sparkler	Sparkler	gift	toy	any	beta2	16	3	-	Senko hanabi: a quiet summer firework	item:firework	icon	-
+hokage_figurine	Hokage Figurine	collectible	figurine	any	beta1	16	40	-	A painted figure of one of the Hokage on the Rock; collect all four	item:toy	icon	variant=hokage:1-4;block=keepsake
+info_card_pack	Ninja Info Card Pack	collectible	cards	any	beta1	16	10	-	Five random info cards of famous Leaf shinobi, clans and techniques	item:toy	icon	opens=info_card:5
+info_card	Ninja Info Card	collectible	cards	any	beta1	64	0	opens:info_card_pack;mission	A card about a person or an enemy: famous figures from packs, foes you defeat and clients you meet on missions; the back shows the rank (plain, bronze, silver, gold, black)	-	icon	variant=famous.<n>|enemy.<combat enemy id>|person.<role>;back=rank;sell=1
+festival_mask	Festival Mask	collectible	festival	any	beta2	1	20	-	A painted mask: fox, cat, the Hokage, a hero of a play	-	wardrobe	variant=mask:6;wear=head
+goldfish	Goldfish	collectible	festival	any	beta2	16	0	event:leaf_festival	Scooped at the festival, in a water bag; put it in a goldfish bowl	-	icon	-
+omikuji	Fortune Slip	collectible	shrine	any	beta1	16	2	-	Today's fortune; tie a bad one to the shrine's rope	-	icon	-
+pet_treat	Pet Treat	pet	food	any	beta1	64	4	-	A chewy treat; pets do tricks for it	item:pet_treat	icon	-
+ninken_kibble	Ninken Kibble	pet	food	any	beta1	64	6	-	A day's food for a dog	item:pet_treat	icon	pet=dog
+cat_food	Fish Flakes	pet	food	any	beta1	64	6	-	A day's food for a cat	item:pet_treat	icon	pet=cat
+pet_collar	Pet Collar	pet	accessory	any	beta1	1	20	-	A collar in any colour, with a bell for cats	-	icon	variant=colour
+pet_bandana	Pet Bandana	pet	accessory	any	beta1	1	25	-	A little forehead protector bandana for your pet	-	icon	variant=colour
+pet_brush	Pet Brush	pet	care	any	beta1	1	15	-	Brushing your pet each day keeps it happy	-	icon	-
+pet_whistle	Pet Whistle	pet	care	any	beta1	1	30	-	Calls your pet to you from anywhere in the village	-	icon	-
+pet_toy	Pet Toy	pet	care	any	beta1	1	8	-	A rope or a feather on a stick	item:pet_treat	icon	variant=pet
+ninken_vest	Ninken Vest	pet	gear	genin	later	1	300	-	Armour for a working ninken	-	icon	pet=dog
+clan_crest	Clan Crest	collectible	clan	any	beta2	16	0	quest:clan;standing:helping_hand	A small lacquered crest of one of the 25 clans, given by a clan to a friend of the house; hang it or keep it	-	icon	variant=clan:25;block=keepsake
+vegetable_basket	Vegetable Basket	gift	food	any	beta1	16	0	mission:d	A farmer's thanks: daikon, cabbage and green onion	-	icon	opens=daikon:2,cabbage:2,green_onion:2
+study_notes	Study Notes	gift	book	any	beta1	16	0	mission:d	A teacher's neat notes: reading them gives a little lesson XP	item:book	icon	xp=lesson_small

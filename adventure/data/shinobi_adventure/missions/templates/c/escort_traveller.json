@@ -1,0 +1,255 @@
+{
+ "format": 1,
+ "id": "mission.c.escort_traveller",
+ "kind": "mission",
+ "rank": "c",
+ "category": "escort",
+ "status": "beta",
+ "title": "dlg:mission.c.escort_traveller.title",
+ "brief": "dlg:mission.c.escort_traveller.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.escort_traveller.brief",
+  "accept": "dlg:mission.c.escort_traveller.accept",
+  "decline": "dlg:mission.c.escort_traveller.decline",
+  "progress": "dlg:mission.c.escort_traveller.progress",
+  "success": "dlg:mission.c.escort_traveller.success",
+  "fail": "dlg:mission.c.escort_traveller.fail",
+  "report": "dlg:mission.c.escort_traveller.report"
+ },
+ "minutes": 30,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch13.far_village",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "scholar",
+    "resident_of": "any"
+   }
+  },
+  "pass": {
+   "pick": "anchor",
+   "tag": "road.hill_pass"
+  },
+  "camp": {
+   "pick": "anchor",
+   "tag": "road.campsite"
+  },
+  "village": {
+   "pick": "anchor",
+   "tag": "border.square"
+  },
+  "thugs": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.bandits_small",
+    "combat:enemy.bandit_ronin"
+   ]
+  },
+  "healer": {
+   "pick": "anchor",
+   "tag": "border.healer"
+  }
+ },
+ "start": "meet",
+ "steps": {
+  "meet": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "travel"
+  },
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "pass"
+  },
+  "pass": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:pass"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "sick_on_road"
+     },
+     "next": "sick"
+    }
+   ],
+   "next": "fight"
+  },
+  "sick": {
+   "objective": {
+    "type": "perform",
+    "what": "first_aid",
+    "at": "slot:pass"
+   },
+   "next": "fight"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:thugs",
+    "at": "slot:pass"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:thugs",
+      "slot:pass"
+     ]
+    }
+   ],
+   "next": "camp"
+  },
+  "camp": {
+   "objective": {
+    "type": "sleep",
+    "at": "slot:camp"
+   },
+   "on_done": [
+    {
+     "bond_event": [
+      "role:squad",
+      "camp_night"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "client_secret"
+     },
+     "next": "secret"
+    }
+   ],
+   "next": "arrive"
+  },
+  "secret": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "choice"
+  },
+  "choice": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "keep_secret": null,
+     "report_it": "reported_client"
+    },
+    "dialogue": "dlg:mission.c.escort_traveller.choice.choice"
+   },
+   "next": "arrive"
+  },
+  "arrive": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:village"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "sick_on_road",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.escort_traveller.twist.sick_on_road"
+  },
+  {
+   "id": "client_secret",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.escort_traveller.twist.client_secret"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "reported_client": {
+   "pay": 1.0,
+   "standing": -2,
+   "acts": [
+    [
+     "slot:client",
+     "went_over_their_head"
+    ]
+   ]
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "kind_choice",
+  "no_knockouts"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.bandits_small",
+  "combat:enemy.bandit_ronin"
+ ],
+ "places": {
+  "anchors": [
+   "border.healer",
+   "border.square",
+   "gate.travel_desk",
+   "road.campsite",
+   "road.hill_pass"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.45
+ },
+ "tags": [
+  "road",
+  "escort",
+  "fight",
+  "camp",
+  "travel"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.escort",
+ "_premise": "Escort a scholar to the border village through the hills.",
+ "_twists": {
+  "sick_on_road": "The client is not used to the hills and falls ill at the pass.",
+  "client_secret": "At the fire the client admits why they are really going: a harmless secret they ask you to keep."
+ }
+}

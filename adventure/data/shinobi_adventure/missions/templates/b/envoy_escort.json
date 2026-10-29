@@ -1,0 +1,177 @@
+{
+ "format": 1,
+ "id": "mission.b.envoy_escort",
+ "kind": "mission",
+ "rank": "b",
+ "category": "escort",
+ "status": "later",
+ "title": "dlg:mission.b.envoy_escort.title",
+ "brief": "dlg:mission.b.envoy_escort.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.envoy_escort.brief",
+  "accept": "dlg:mission.b.envoy_escort.accept",
+  "decline": "dlg:mission.b.envoy_escort.decline",
+  "progress": "dlg:mission.b.envoy_escort.progress",
+  "success": "dlg:mission.b.envoy_escort.success",
+  "fail": "dlg:mission.b.envoy_escort.fail",
+  "report": "dlg:mission.b.envoy_escort.report"
+ },
+ "minutes": 40,
+ "party": "squad",
+ "days": 3,
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "envoy",
+    "resident_of": "any"
+   }
+  },
+  "court": {
+   "pick": "anchor",
+   "tag": "capital.court"
+  },
+  "road": {
+   "pick": "anchor",
+   "tag": "capital.road"
+  },
+  "attackers": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.assassins"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "road"
+  },
+  "road": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:road"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:attackers",
+      "slot:road"
+     ]
+    }
+   ],
+   "next": "court"
+  },
+  "court": {
+   "objective": {
+    "type": "protect",
+    "who": "slot:client",
+    "until": "+6h",
+    "at": "slot:court"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "poison"
+     },
+     "next": "poison"
+    }
+   ],
+   "next": "home"
+  },
+  "poison": {
+   "objective": {
+    "type": "inspect",
+    "target": "cup",
+    "at": "slot:court",
+    "count": 3
+   },
+   "next": "home"
+  },
+  "home": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "place:gate.main"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "poison",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.b.envoy_escort.twist.poison"
+  },
+  {
+   "id": "envoy_defects",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "dlg:mission.b.envoy_escort.twist.envoy_defects"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_alarm"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.assassins"
+ ],
+ "places": {
+  "anchors": [
+   "capital.court",
+   "capital.road",
+   "gate.main",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:capital"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.55
+ },
+ "tags": [
+  "travel",
+  "escort",
+  "politics",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.escort",
+ "_premise": "Escort a daimyo's envoy to a neighbouring land's court and back.",
+ "_twists": {
+  "poison": "The welcome tea is not what it seems.",
+  "envoy_defects": "The envoy wants to stay, and asks you not to stop them."
+ }
+}

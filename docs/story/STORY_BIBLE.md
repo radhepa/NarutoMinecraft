@@ -95,6 +95,11 @@ freely cannot be taken, and the leader's own mirror turns on him. The Seventh na
 successor. Their face is carved as the Eighth, and their first act extends the Fourth's stipend to
 every child brought home and makes it law.
 
+- **creator.reserved_family_names**: Kagari
+  (The character creator offers the clanless only `population.json`'s family names;
+  `tools/creator/creator.py --check` reads this line and fails if the pool or a clan carries a
+  reserved name, so no player starts with it.)
+
 ## Reveal pacing
 
 | By the end of | The player knows | The player suspects |
