@@ -1,0 +1,109 @@
+{
+  "id": "b2203_maekake_trousers",
+  "kind": "bottom",
+  "name": "Maekake Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b2203_maekake_trousers.png",
+  "extrasHeight": 32,
+  "tags": [
+    "kinoshita",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "maekake",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "maekake_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        13.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "motion": "flap_front",
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    }
+  ],
+  "description": "Straight indigo trousers, a long canvas shop apron with the crest, a cedar cord and tabi."
+}

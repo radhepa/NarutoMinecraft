@@ -1,0 +1,246 @@
+{
+  "id": "t2205_tobi_shirt",
+  "kind": "top",
+  "name": "Tobi Shirt",
+  "gender": "unisex",
+  "texture": "tops/t2205_tobi_shirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "kinoshita",
+    "shinobi",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "stand_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "towel",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.16
+    },
+    {
+      "id": "towel_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.8,
+        1.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ]
+    },
+    {
+      "id": "towel_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.8,
+        1.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "right_bunch_0",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        4.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        5,
+        8
+      ]
+    },
+    {
+      "id": "right_bunch_1",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5500000000000003,
+        5.6,
+        -2.5500000000000003
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        26,
+        8
+      ]
+    },
+    {
+      "id": "left_bunch_0",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        4.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        15
+      ]
+    },
+    {
+      "id": "left_bunch_1",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.55,
+        5.6,
+        -2.5500000000000003
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        15
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "High-collared work shirt with brass hook clasps, shoved-up sleeves and a towel round the neck."
+}

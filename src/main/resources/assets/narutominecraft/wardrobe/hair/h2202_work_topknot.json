@@ -1,0 +1,350 @@
+{
+  "id": "h2202_work_topknot",
+  "kind": "hair",
+  "name": "Work Topknot",
+  "gender": "unisex",
+  "texture": "hair/h2202_work_topknot.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "knot_root",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "knot_cord",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.6,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        1,
+        3
+      ],
+      "uv": [
+        13,
+        0
+      ]
+    },
+    {
+      "id": "brush_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.4,
+        0.4
+      ],
+      "rotation": [
+        -12,
+        0,
+        -34
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "brush_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.4,
+        0.4
+      ],
+      "rotation": [
+        -12,
+        0,
+        -34
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "brush_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.4,
+        0.4
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "brush_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.4,
+        0.4
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    },
+    {
+      "id": "brush_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.4,
+        0.4
+      ],
+      "rotation": [
+        -12,
+        0,
+        34
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        6
+      ]
+    },
+    {
+      "id": "brush_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.4,
+        0.4
+      ],
+      "rotation": [
+        -12,
+        0,
+        34
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        6
+      ]
+    },
+    {
+      "id": "brush_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.4,
+        0.4
+      ],
+      "rotation": [
+        16,
+        0,
+        -14
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        16,
+        6
+      ]
+    },
+    {
+      "id": "brush_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.4,
+        0.4
+      ],
+      "rotation": [
+        16,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        25,
+        6
+      ]
+    },
+    {
+      "id": "brush_4_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.4,
+        0.4
+      ],
+      "rotation": [
+        16,
+        0,
+        14
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        32,
+        6
+      ]
+    },
+    {
+      "id": "brush_4_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.4,
+        0.4
+      ],
+      "rotation": [
+        16,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        41,
+        6
+      ]
+    }
+  ],
+  "description": "Hair swept up into a stubby crown knot bound in cedar cord, the ends fanned like a brush."
+}

@@ -351,6 +351,36 @@
         "#b07a4b"
       ]
     },
+    "KINOSHITA_WALNUT": {
+      "name": "Kinoshita Walnut",
+      "ramp": [
+        "#1c120d",
+        "#2d1d14",
+        "#41291c",
+        "#583826",
+        "#734b33"
+      ]
+    },
+    "KINOSHITA_CEDAR": {
+      "name": "Kinoshita Cedar",
+      "ramp": [
+        "#311a10",
+        "#4f2a19",
+        "#723d24",
+        "#965433",
+        "#b56f47"
+      ]
+    },
+    "KINOSHITA_SAWDUST": {
+      "name": "Kinoshita Sawdust",
+      "ramp": [
+        "#5a4630",
+        "#7d6446",
+        "#a1865f",
+        "#c2a87c",
+        "#dcc69c"
+      ]
+    },
     "KURAMA_TEA": {
       "name": "Kurama Tea Brown",
       "ramp": [

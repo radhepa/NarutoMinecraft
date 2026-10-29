@@ -1,0 +1,332 @@
+{
+  "id": "t2207_trapwright_vest",
+  "kind": "top",
+  "name": "Trapwright Vest",
+  "gender": "unisex",
+  "texture": "tops/t2207_trapwright_vest.png",
+  "extrasHeight": 32,
+  "tags": [
+    "kinoshita",
+    "shinobi",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        2.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        2.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "pocket_2",
+      "bone": "TORSO",
+      "pivot": [
+        -3.8,
+        8.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "pocket_3",
+      "bone": "TORSO",
+      "pivot": [
+        1.8,
+        8.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "cord_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        28,
+        0
+      ],
+      "inflate": 0.32
+    },
+    {
+      "id": "skirt_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        11,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        22,
+        7
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        4,
+        4
+      ],
+      "uv": [
+        43,
+        7
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        4,
+        4
+      ],
+      "uv": [
+        54,
+        7
+      ]
+    },
+    {
+      "id": "wire_coil",
+      "bone": "TORSO",
+      "pivot": [
+        4.9,
+        10.4,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.5,
+        -0.5
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Long sashiko-quilted work vest with pockets, a coil of trip wire, indigo shirt and hand guards."
+}
