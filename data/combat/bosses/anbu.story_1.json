@@ -4,16 +4,36 @@
  "name": "Story boss",
  "chapter": "anbu",
  "slice": "anbu",
- "base": "combat:enemy.assassin",
- "level": 40,
+ "base": "combat:enemy.sealing_adept",
+ "level": 38,
  "nonlethal": false,
  "arena": null,
  "win": "defeat",
  "lose": "the player is downed",
- "phases": [],
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Masks",
+   "behaviour": "masked sealers lay sealing traps"
+  },
+  {
+   "at_hp": 0.5,
+   "name": "Prodigy",
+   "behaviour": "a kenjutsu and ninjutsu prodigy",
+   "adds": [
+    "combat:enemy.cell_veteran"
+   ]
+  }
+ ],
  "hp_mult": 7.0,
  "poise": 100,
  "damage_mult": 1.15,
  "story": "bible:combat:boss.anbu.story_1",
+ "scripted": [
+  {
+   "event": "stand_down",
+   "what": "dialogue can end the fight mid-way"
+  }
+ ],
  "dialogue": "dlg:combat.boss.anbu.story_1"
 }

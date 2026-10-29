@@ -5,7 +5,7 @@
  "chapter": "jonin",
  "slice": "jonin",
  "base": "combat:enemy.cell_veteran",
- "level": 36,
+ "level": 34,
  "nonlethal": false,
  "arena": null,
  "win": "defeat",
@@ -14,6 +14,27 @@
  "hp_mult": 7.0,
  "poise": 100,
  "damage_mult": 1.15,
+ "weapons": [
+  "item:katana"
+ ],
+ "style": "combat:style.crescent_moon",
  "story": "bible:combat:boss.jonin.story_1",
+ "scripted": [
+  {
+   "event": "retreat",
+   "at": "40% health",
+   "ends": true
+  }
+ ],
+ "objectives": [
+  {
+   "id": "basket",
+   "kind": "protect",
+   "what": "a block entity"
+  }
+ ],
+ "mechanics": [
+  "ink_lines: short-lived area-denial lines after each slash"
+ ],
  "dialogue": "dlg:combat.boss.jonin.story_1"
 }

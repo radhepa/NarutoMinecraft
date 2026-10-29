@@ -5,7 +5,7 @@
  "chapter": "road",
  "slice": "road",
  "base": "combat:enemy.cell_veteran",
- "level": 46,
+ "level": 45,
  "nonlethal": false,
  "arena": null,
  "win": "defeat",
@@ -14,6 +14,22 @@
  "hp_mult": 7.0,
  "poise": 100,
  "damage_mult": 1.15,
+ "weapons": [
+  "item:katana"
+ ],
+ "style": "combat:style.crescent_moon",
+ "notes": "The jonin.story_1 duellist's best loadout",
  "story": "bible:combat:boss.road.story_1",
+ "scripted": [
+  {
+   "event": "dialogue",
+   "at": "25% health",
+   "ends": true,
+   "no_kill": true
+  }
+ ],
+ "mechanics": [
+  "ink_lines"
+ ],
  "dialogue": "dlg:combat.boss.road.story_1"
 }

@@ -181,8 +181,8 @@ Counts: P0 62, P1 107, P2 28, P3 36, total 233.
 | `combat.squad.acknowledge` | 10 |  | resident |  |  |
 | `combat.squad.high_five` | 16 |  | both |  | After a squad combo |
 | `combat.squad.call_combo` | 12 |  | resident |  |  |
-| `combat.res.sensei_reading` | 40 | yes | resident |  | The bell test |
-| `combat.res.sensei_book_dodge` | 8 |  | resident |  | The bell test: dodges without looking up |
+| `combat.res.sensei_reading` | 40 | yes | resident |  | The cord test |
+| `combat.res.sensei_book_dodge` | 8 |  | resident |  | The cord test: dodges without looking up |
 | `combat.life.forging` | 30 | yes | player |  |  |
 
 ## P2

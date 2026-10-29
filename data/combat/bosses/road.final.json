@@ -10,10 +10,31 @@
  "arena": null,
  "win": "defeat",
  "lose": "the player is downed",
- "phases": [],
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Beam",
+   "behaviour": "drain_beam and adds"
+  },
+  {
+   "at_hp": 0.3,
+   "name": "every_fire",
+   "behaviour": "the player's damage and resistance scale with the story's bond-web tier: small under 20, strong from 20, the whole village from 41"
+  }
+ ],
  "hp_mult": 12.0,
  "poise": 200,
  "damage_mult": 1.15,
  "story": "bible:combat:boss.road.final",
+ "scripted": [
+  {
+   "event": "mirror_turns",
+   "ends": true
+  }
+ ],
+ "mechanics": [
+  "drain_beam: a channelled beam, broken by line of sight; drains chakra and health",
+  "adds scale with a story counter: 0 to 81 gives 0 to 6 extra combat:enemy.hollow_fighter"
+ ],
  "dialogue": "dlg:combat.boss.road.final"
 }

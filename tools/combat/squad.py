@@ -28,8 +28,8 @@ SQUAD_COMBOS = [
      "how": "A teammate strings wire, you tag it: the tripwire bursts along its length"},
     {"id": "combat:squad.pincer", "name": "Pincer", "slice": "beta2", "needs": "the Pincer formation",
      "how": "Two squadmates on opposite sides of a target: both get +20% damage and the target cannot guard both"},
-    {"id": "combat:squad.bell_grab", "name": "Distract and take", "slice": "beta2", "needs": "the bell test's lesson",
-     "how": "One distracts (any hit), the other takes: a stagger window of 30 ticks on the target. Taught by the bell test"},
+    {"id": "combat:squad.bell_grab", "name": "Distract and take", "slice": "beta2", "needs": "the cord test's lesson",
+     "how": "One distracts (any hit), the other takes: a stagger window of 30 ticks on the target. Taught by the cord test"},
     {"id": "combat:squad.shadow_and_strike", "name": "Shadow and strike", "slice": "beta2", "needs": "a Nara in the squad",
      "how": "While a target is possessed, every squadmate's hit is a crit"},
     {"id": "combat:squad.fang_and_swarm", "name": "Fang and swarm", "slice": "beta2", "needs": "an Inuzuka and an Aburame",
@@ -58,7 +58,7 @@ COMMANDS = {
         {"id": "heal", "what": "the medic heals the most hurt"},
     ],
     "response": "a command is obeyed after 4 ticks at cohesion 60+, 10 ticks at 30 to 59, 16 ticks under 30; under 30 a teammate ignores 1 in 10 (except Umino's Steady Voice)",
-    "slice": "beta2 (Ch 8, the bell test)",
+    "slice": "beta2 (Ch 8, the cord test)",
 }
 
 FORMATIONS = [

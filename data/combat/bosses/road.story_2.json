@@ -4,16 +4,26 @@
  "name": "Story boss",
  "chapter": "road",
  "slice": "road",
- "base": "combat:enemy.cell_veteran",
- "level": 48,
+ "base": "combat:group.cell_trio",
+ "level": 44,
  "nonlethal": false,
  "arena": null,
  "win": "defeat",
  "lose": "the player is downed",
  "phases": [],
- "hp_mult": 7.0,
+ "hp_mult": 2.2,
  "poise": 100,
  "damage_mult": 1.15,
  "story": "bible:combat:boss.road.story_2",
+ "objectives": [
+  {
+   "id": "basket",
+   "kind": "protect"
+  },
+  {
+   "id": "npc",
+   "kind": "protect"
+  }
+ ],
  "dialogue": "dlg:combat.boss.road.story_2"
 }

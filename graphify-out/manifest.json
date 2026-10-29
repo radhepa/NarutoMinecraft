@@ -2952,9 +2952,9 @@
     "semantic_hash": ""
   },
   "combat/core/src/main/java/dev/shinobi/combat/CombatData.java": {
-    "mtime": 1793311103.259594,
-    "seen": 1793311910.4940622,
-    "ast_hash": "31599b6b63b2cfb1cb5b4630ca865ee1",
+    "mtime": 1793312208.98708,
+    "seen": 1793312324.512598,
+    "ast_hash": "d38fdd4f6e221f43c5e9d253440a4775",
     "semantic_hash": ""
   },
   "combat/core/src/main/java/dev/shinobi/combat/ComboMachine.java": {
@@ -3102,9 +3102,9 @@
     "semantic_hash": ""
   },
   "combat/core/src/test/java/dev/shinobi/combat/sim/Balance.java": {
-    "mtime": 1793311988.9772432,
-    "seen": 1793312091.5931919,
-    "ast_hash": "249dbadbf78e27f7a2d06acd82bd9b5c",
+    "mtime": 1793312208.985807,
+    "seen": 1793312324.5126538,
+    "ast_hash": "472167d1ef1eb35670afe81e645732c1",
     "semantic_hash": ""
   },
   "combat/core/src/test/java/dev/shinobi/combat/sim/BalanceTest.java": {
@@ -3114,9 +3114,9 @@
     "semantic_hash": ""
   },
   "combat/core/src/test/java/dev/shinobi/combat/sim/Battle.java": {
-    "mtime": 1793311954.1919122,
-    "seen": 1793312091.593195,
-    "ast_hash": "58912037f4cb7ec27d18c5385d37f6bb",
+    "mtime": 1793312208.986507,
+    "seen": 1793312324.5126574,
+    "ast_hash": "c470f8e946662c9b2ee4c419fe3466d0",
     "semantic_hash": ""
   },
   "combat/core/src/test/java/dev/shinobi/combat/sim/Fighter.java": {
@@ -3138,9 +3138,9 @@
     "semantic_hash": ""
   },
   "tools/combat/animations.py": {
-    "mtime": 1793308931.0269983,
-    "seen": 1793311910.4944525,
-    "ast_hash": "b9011c5edde90eeca6dea32223468393",
+    "mtime": 1793312208.9825711,
+    "seen": 1793312324.5129323,
+    "ast_hash": "ffc3e16dec06a4b0589957976a43c24b",
     "semantic_hash": ""
   },
   "tools/combat/barks.py": {
@@ -3180,9 +3180,9 @@
     "semantic_hash": ""
   },
   "tools/combat/enemies.py": {
-    "mtime": 1793311954.1904128,
-    "seen": 1793312091.5934896,
-    "ast_hash": "945d50c458e1f40eae03a439f3f920bb",
+    "mtime": 1793312262.3510756,
+    "seen": 1793312324.5129435,
+    "ast_hash": "4860cad4d0b45c188761e9881d93d78e",
     "semantic_hash": ""
   },
   "tools/combat/progression.py": {
@@ -3192,9 +3192,9 @@
     "semantic_hash": ""
   },
   "tools/combat/squad.py": {
-    "mtime": 1793308757.734988,
-    "seen": 1793311910.49447,
-    "ast_hash": "963929f5e43cddd9250642084ed4ed15",
+    "mtime": 1793312208.9846644,
+    "seen": 1793312324.512947,
+    "ast_hash": "5b6aae09e0f7d141ad582c06d8d9f7be",
     "semantic_hash": ""
   },
   "tools/combat/taijutsu.py": {
@@ -3216,38 +3216,38 @@
     "semantic_hash": ""
   },
   "docs/COMBAT.md": {
-    "mtime": 1793312067.4204931,
-    "seen": 1793312091.593674,
-    "ast_hash": "f1f12cc72dcb3b4679a2a1b8e63d8247",
+    "mtime": 1793312301.7350779,
+    "seen": 1793312324.5131145,
+    "ast_hash": "f6ec1d2901dec716f485305675520515",
     "semantic_hash": ""
   },
   "docs/combat/animations.md": {
-    "mtime": 1793312067.5598743,
-    "seen": 1793312091.593678,
-    "ast_hash": "21324278118f3f45c85cc4db36855a9d",
+    "mtime": 1793312301.86035,
+    "seen": 1793312324.5131183,
+    "ast_hash": "d82f8cb6ef812be06cc20d5928d7dd5a",
     "semantic_hash": ""
   },
   "docs/combat/bestiary.md": {
-    "mtime": 1793312067.5594668,
-    "seen": 1793312091.5936794,
-    "ast_hash": "4852b339762022cc084a3056b0ce872a",
+    "mtime": 1793312301.8597956,
+    "seen": 1793312324.5131195,
+    "ast_hash": "1eaf0d97222b4a85d87c442d28aaa36d",
     "semantic_hash": ""
   },
   "docs/combat/clans.md": {
-    "mtime": 1793312067.5585034,
-    "seen": 1793312091.593681,
+    "mtime": 1793312301.8587773,
+    "seen": 1793312324.5131207,
     "ast_hash": "5f3a48504dc421012dd6c5d5a2744161",
     "semantic_hash": ""
   },
   "docs/combat/styles.md": {
-    "mtime": 1793312067.5590694,
-    "seen": 1793312091.5936825,
+    "mtime": 1793312301.8594475,
+    "seen": 1793312324.513122,
     "ast_hash": "638406b8777956b01ecdfea1e7347a1c",
     "semantic_hash": ""
   },
   "docs/combat/techniques.md": {
-    "mtime": 1793312067.557933,
-    "seen": 1793312091.5936837,
+    "mtime": 1793312301.8581586,
+    "seen": 1793312324.5131233,
     "ast_hash": "e8e3c809f0788e108a8aecace62021f7",
     "semantic_hash": ""
   }

@@ -194,6 +194,9 @@ HUMANS = [
           techniques=["nin.substitution", "nin.multi_shadow_clone", "water.water_dragon", "water.hiding_mist", "lightning.lightning_blade", "earth.flow_rampart"],
           tools={"item:paper_bomb": 6}, armour={"physical": 8, "chakra": 8, "will": 30}, slice_="road", barks="rogue",
           note="An S-rank bounty: no story, a neutral legend of the bingo book"),
+    enemy("hollow_fighter", "Flat-eyed fighter", "human", "elite", "chunin", (20, 50), "mid", style=AB, weapons=["item:kunai"],
+          techniques=["fire.fire_dragon_bullet", "wind.blade_of_wind", "lightning.false_darkness"], traits=["flat_ai", "no_flinch", "no_retreat", "cycles_natures"],
+          slice_="chunin", barks="beast_none", note="Flat AI: never flinches or retreats; cycles three natures"),
     enemy("chakra_absorber", "Chakra absorber", "human", "elite", "chunin", (25, 45), "close", style=AB,
           armour={"physical": 2, "chakra": 30, "will": 20}, traits=["absorbs_ninjutsu"], slice_="chunin", barks="rogue",
           note="Drinks ninjutsu that hits it (heals for half): taijutsu and weapon users' favourite target"),
@@ -228,6 +231,7 @@ GROUPS = [
     {"id": "combat:group.smugglers", "members": [{"enemy": "combat:enemy.smuggler_runner", "count": 2}, {"enemy": "combat:enemy.rogue_genin"}], "slice": "beta2"},
     {"id": "combat:group.rogue_pair", "members": [{"enemy": "combat:enemy.rogue_genin"}, {"enemy": "combat:enemy.rogue_bomber"}], "slice": "beta2"},
     {"id": "combat:group.scout_pair", "members": [{"enemy": "combat:enemy.scout_runner"}, {"enemy": "combat:enemy.scout_sensor"}], "slice": "beta2"},
+    {"id": "combat:group.cell_trio", "members": [{"enemy": "combat:enemy.cell_vanguard", "count": 2}, {"enemy": "combat:enemy.cell_support"}], "slice": "beta2"},
     {"id": "combat:group.cell_pair", "members": [{"enemy": "combat:enemy.cell_vanguard"}, {"enemy": "combat:enemy.cell_support"}], "slice": "beta2"},
     {"id": "combat:group.wolves_pack", "members": [{"enemy": "combat:enemy.wolf", "count": 3}], "slice": "beta2"},
     {"id": "combat:group.forest_beasts", "members": [{"enemy": "combat:enemy.giant_centipede"}, {"enemy": "combat:enemy.giant_leech", "count": 2}], "slice": "beta3"},
@@ -272,7 +276,8 @@ def phase(at, name, behaviour, adds=None, opening=None, tell=None):
 
 
 def boss(bid, name, chapter, slice_, base, level, *, role=None, nonlethal=False, arena=None, win=None, lose=None, phases=None,
-         techniques=None, weapons=None, style=None, hp=None, poise=None, armour=None, notes=None, story=False, damage=None):
+         techniques=None, weapons=None, style=None, hp=None, poise=None, armour=None, notes=None, story=False, damage=None,
+         scripted=None, objectives=None, mechanics=None, npc_only=False, optional=False):
     b = {"id": "combat:boss." + bid, "name": name, "chapter": chapter, "slice": slice_, "base": base, "level": level,
          "nonlethal": nonlethal, "arena": arena, "win": win or "defeat", "lose": lose or "the player is downed",
          "phases": phases or [], "hp_mult": hp or 7.0, "poise": poise or 100,
@@ -291,6 +296,16 @@ def boss(bid, name, chapter, slice_, base, level, *, role=None, nonlethal=False,
         b["notes"] = notes
     if story:
         b["story"] = "bible:" + b["id"]
+    if scripted:
+        b["scripted"] = scripted
+    if objectives:
+        b["objectives"] = objectives
+    if mechanics:
+        b["mechanics"] = mechanics
+    if npc_only:
+        b["npc_only"] = True
+    if optional:
+        b["optional"] = True
     b["dialogue"] = "dlg:combat.boss." + bid
     return b
 
@@ -303,13 +318,13 @@ BOSSES = [
                  phase(0.6, "Serious", "starts blocking; a heavy after every blocked chain", opening="block breaks with your own heavy"),
                  phase(0.4, "Desperate", "one substitution, then a rush", opening="the log: wait for them to land")],
          notes="Teaches combo, heavy, dodge and block; losing is allowed and remembered (bond: rivalry)"),
-    boss("ch8.bell_test", "The bell test", 8, "beta2", "combat:enemy.spar.chunin", 12, role="role:sensei", nonlethal=True,
+    boss("ch8.cord_test", "The cord test", 8, "beta2", "combat:enemy.spar.chunin", 12, role="role:sensei", nonlethal=True,
          arena="place:training_ground_3", hp=99.0, poise=200,
-         win="take a bell (touch the sensei's belt) with a teammate taking the other: hit them while staggered, bound, possessed or in genjutsu",
+         win="the squad takes the three small tags on the sensei's cord together: touch the cord while the sensei is staggered, bound, possessed or in genjutsu",
          lose="the timer (until noon) runs out", style=AB, techniques=["nin.substitution", "nin.body_flicker", "nin.hiding_camouflage", "earth.headhunter"],
          phases=[phase(1.0, "Reading a book", "dodges everything 90%; counters with a light shove; ignores you if you only attack alone",
                        opening="a squad combo or a teammate's distraction makes it drop to 30% dodge for 60 ticks"),
-                 phase(0.0, "Lesson", "when a bell is touched: Headhunter on the one who did not help")],
+                 phase(0.0, "Lesson", "when a tag is touched: Headhunter on the one who did not help")],
          notes="Unwinnable alone by design; teaches squad commands and parry. Health never matters (hp 99x)"),
     boss("ch11.bandit_chief", "Bandit chief", 11, "beta2", "combat:enemy.bandit_chief", 11, arena="place:road.east_camp", hp=5.0, poise=70, damage=0.8,
          weapons=["item:iron_mace", "item:kunai"],
@@ -318,18 +333,21 @@ BOSSES = [
                  phase(0.6, "Dirty fighting", "throws smoke, then a paper bomb into it; calls a knife-fighter from the tents", adds=["combat:enemy.bandit_knife"],
                        opening="wind blows the smoke away; sensing sees through it"),
                  phase(0.25, "Cornered", "faster, no flee; grabs (red flash)", opening="poise 70: a heavy chain breaks it")]),
-    boss("ch14.road_ambush", "Ambush on the road", 14, "beta2", "combat:group.cell_pair", 14, hp=1.8, poise=35,
-         arena="place:road.east_bend", win="the ambush is driven off and the client is safe; the quest may also ask for a capture (combat:captured)",
-         lose="the client falls, or you are downed",
-         phases=[phase(1.0, "Pin down", "an enemy cell pair holds the road with smoke, caltrops and a fire-and-wind combo while a runner flees",
+    boss("ch14.road_ambush", "Ambush on the road", 14, "beta2", "combat:group.cell_trio", 14, hp=1.1, poise=30, damage=0.8,
+         arena="place:road.east_bend", win="the runner is captured (combat:captured) and the ambush driven off",
+         lose="the runner escapes, the client falls, or you are downed",
+         phases=[phase(1.0, "Pin down", "a three-person cell in road clothes and face scarves holds the road with smoke, makibishi and a fire-and-wind combo while a runner flees",
                        adds=["combat:enemy.smuggler_runner"], opening="bind, possess, wire or a shuriken to the legs stops the runner"),
                  phase(0.5, "Mines", "paper-bomb mines across the road and tagged kunai", opening="wind or a flash shows the mines; a sealing tag captures a downed foe")],
+         scripted=[{"event": "bridge_cut", "at": "60% of the fight's time limit", "what": "an area-denial line across the pursuit path"}],
+         objectives=[{"id": "capture_runner", "required": True}],
          notes="Teaches enemy cells, smoke and paper bombs, capture with a sealing tag", story=True),
     boss("ch16.forest_team", "A hunting team in the forest", 16, "beta3", "combat:group.exam_team", 16, hp=1.5, poise=35, damage=0.85,
          arena="place:forest_of_death", win="take their scroll, or drive them off (two of three downed)", lose="your scroll is taken or the squad is downed",
          phases=[phase(1.0, "Ambush", "traps and a genjutsu opener from the trees; one fighter stays hidden", opening="sensing and Byakugan find the hidden one"),
                  phase(0.5, "Hunt", "they split your squad: one each", opening="regroup command and a squad combo")],
-         notes="A three-on-three", story=True),
+         scripted=[{"event": "interrupt", "at": "player health 25% or less", "what": "ends the fight, no loss"}],
+         notes="A hostile three-on-three", story=True),
     boss("ch16.forest_beast", "A giant of the forest", 16, "beta3", "combat:enemy.giant_snake", 16, hp=6.0, poise=90, arena="place:forest_of_death.river",
          phases=[phase(1.0, "Coils", "tail sweeps (radius 4, jump them), lunges (10-tick tell)", opening="its head after a missed lunge"),
                  phase(0.5, "Swallow", "a red-flash grab: swallowed; deal 15% of its health from inside or a teammate frees you",
@@ -345,11 +363,14 @@ BOSSES = [
          phases=[phase(1.0, "Pride", "aggressive fire jutsu at mid range and a fast chain close; dodges 30%", opening="interrupt the signs: it weaves at 4 blocks"),
                  phase(0.6, "Pressure", "shuriken with fire (phoenix flowers with hidden steel) and a clone feint", opening="sensing or parry the real one"),
                  phase(0.3, "No holding back", "its signature on a 20-tick tell; if it has the Sharingan, telegraphs are shorter against it", opening="water or a wall; then a finisher")],
-         notes="Role-based: the rival in Classic; in Varied the finals opponent is whoever the bracket gives (role:rival by default)"),
-    boss("ch19.stadium_cell", "Attackers in the stands", 19, "beta3", "combat:group.cell_pair", 18, hp=1.5, poise=40, damage=0.9, arena="place:stadium.stands",
-         win="the stands are cleared and the protect target survives", lose="the protect target falls or you are downed",
-         phases=[phase(1.0, "Smoke", "the attack's opening: smoke and fire in the stands; cells target civilians", opening="protect objective: Cover, walls, barriers"),
-                 phase(0.5, "Second wave", "a rogue bomber joins from the upper stands", adds=["combat:enemy.rogue_bomber"])],
+         npc_only=True,
+         notes="For the NPC exam seasons (the calendar event); role-based: role:rival by default"),
+    boss("ch19.stadium_cell", "Attackers in the stands", 19, "beta3", "combat:group.cell_trio", 18, hp=0.9, poise=30, damage=0.7, arena="place:stadium.stands",
+         win="the stands are cleared and the east stair is held", lose="the evacuation on the east stair is broken, or you are downed",
+         phases=[phase(1.0, "Smoke", "the attack's opening: smoke and fire in the stands; cells of three or more target civilians", opening="protect objective: Cover, walls, barriers"),
+                 phase(0.5, "Second wave", "a fresh runner of the cell tries for the stair (a race, not a fight)")],
+         objectives=[{"id": "east_stair", "kind": "protect", "what": "children evacuating down a stair"}],
+         scripted=[{"event": "stair_strike", "what": "an NPC on the stair is hit (a cinematic cutaway, no blood)"}, {"event": "tier_collapse"}],
          notes="The defence and protect objectives of the finals' attack", story=True),
     # Later arcs: non-story bosses
     boss("chunin.missing_nin_bounty", "A missing-nin with a bounty", "chunin", "chunin", "combat:enemy.rogue_jonin", 26, hp=6.0,
@@ -364,14 +385,32 @@ BOSSES = [
          phases=[phase(1.0, "Three puppets", "three puppets with poison blades", opening="cut the threads (a slash between puppet and master)"),
                  phase(0.4, "Master", "the master fights", opening="close in: it is weak up close")]),
     # Later arcs: story bosses. Neutral ids; what they are lives in the story bible.
-    boss("chunin.story_1", "Story boss", "chunin", "chunin", "combat:enemy.cell_veteran", 24, story=True),
-    boss("chunin.story_2", "Story boss", "chunin", "chunin", "combat:enemy.cell_veteran", 28, story=True),
-    boss("jonin.story_1", "Story boss", "jonin", "jonin", "combat:enemy.cell_veteran", 36, story=True),
-    boss("jonin.story_2", "Story boss", "jonin", "jonin", "combat:enemy.cell_veteran", 40, story=True),
-    boss("anbu.story_1", "Story boss", "anbu", "anbu", "combat:enemy.assassin", 40, story=True),
-    boss("road.story_1", "Story boss", "road", "road", "combat:enemy.cell_veteran", 46, story=True),
-    boss("road.story_2", "Story boss", "road", "road", "combat:enemy.cell_veteran", 48, story=True),
-    boss("road.final", "Final boss", "road", "road", "combat:enemy.cell_veteran", 50, hp=12.0, poise=200, story=True),
+    boss("chunin.story_1", "Story boss", "chunin", "chunin", "combat:enemy.hollow_fighter", 24, story=True,
+         mechanics=["never lands a killing blow on the player (floors at 1 HP)", "cycles three natures"],
+         scripted=[{"event": "ally_down", "starts": "phase 2"}, {"event": "recognition", "ends": True}],
+         phases=[phase(1.0, "First", "flat, relentless; cycles natures"), phase(0.0, "Second", "begins on ally_down")]),
+    boss("chunin.story_2", "Story boss", "chunin", "chunin", "combat:group.cell_trio", 28, hp=2.0, story=True,
+         mechanics=["smothered: no audio cues within 16 blocks"]),
+    boss("jonin.story_1", "Story boss", "jonin", "jonin", "combat:enemy.cell_veteran", 34, story=True, style="combat:style.crescent_moon",
+         weapons=["item:katana"], mechanics=["ink_lines: short-lived area-denial lines after each slash"],
+         objectives=[{"id": "basket", "kind": "protect", "what": "a block entity"}],
+         scripted=[{"event": "retreat", "at": "40% health", "ends": True}]),
+    boss("jonin.story_2", "Story boss", "jonin", "jonin", "combat:enemy.cell_veteran", 36, story=True, optional=True,
+         phases=[phase(1.0, "Leader and two", "a cell leader and two", adds=["combat:enemy.cell_vanguard", "combat:enemy.cell_support"])],
+         objectives=[{"id": "cells", "kind": "protect", "what": "children"}], notes="A stealth path skips most of it"),
+    boss("anbu.story_1", "Story boss", "anbu", "anbu", "combat:enemy.sealing_adept", 38, story=True,
+         phases=[phase(1.0, "Masks", "masked sealers lay sealing traps"), phase(0.5, "Prodigy", "a kenjutsu and ninjutsu prodigy", adds=["combat:enemy.cell_veteran"])],
+         scripted=[{"event": "stand_down", "what": "dialogue can end the fight mid-way"}]),
+    boss("road.story_1", "Story boss", "road", "road", "combat:enemy.cell_veteran", 45, story=True, style="combat:style.crescent_moon",
+         weapons=["item:katana"], mechanics=["ink_lines"], scripted=[{"event": "dialogue", "at": "25% health", "ends": True, "no_kill": True}],
+         notes="The jonin.story_1 duellist's best loadout"),
+    boss("road.story_2", "Story boss", "road", "road", "combat:group.cell_trio", 44, hp=2.2, story=True,
+         objectives=[{"id": "basket", "kind": "protect"}, {"id": "npc", "kind": "protect"}]),
+    boss("road.final", "Final boss", "road", "road", "combat:enemy.cell_veteran", 50, hp=12.0, poise=200, story=True,
+         mechanics=["drain_beam: a channelled beam, broken by line of sight; drains chakra and health",
+                    "adds scale with a story counter: 0 to 81 gives 0 to 6 extra combat:enemy.hollow_fighter"],
+         phases=[phase(1.0, "Beam", "drain_beam and adds"), phase(0.3, "every_fire", "the player's damage and resistance scale with the story's bond-web tier: small under 20, strong from 20, the whole village from 41")],
+         scripted=[{"event": "mirror_turns", "ends": True}]),
 ]
 
 SPARRING = {

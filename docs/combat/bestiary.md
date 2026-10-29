@@ -45,6 +45,7 @@ Every enemy the story uses, by loadout file (data/combat/enemies/<id>.json). Sto
 | `combat:enemy.cell_veteran` | Cell veteran | human | miniboss | jonin | 30-50 | mid | katana, kunai | nin.substitution, nin.shadow_clone, fire.great_dragon_fire, earth.flow_rampart, gen.bringer_of_darkness | - | jonin |
 | `combat:enemy.warlord` | Bandit warlord | human | miniboss | chunin | 20-32 | close | iron_mace, kunai | nin.substitution, earth.hardening, earth.mud_wall | ; A B-rank mission target holding a fort; the target is bound as a role by the mission | chunin |
 | `combat:enemy.legend_rogue` | Legendary missing-nin | human | boss | jonin | 45-60 | mid | katana, kunai | nin.substitution, nin.multi_shadow_clone, water.water_dragon, water.hiding_mist, lightning.lightning_blade, earth.flow_rampart | ; An S-rank bounty: no story, a neutral legend of the bingo book | road |
+| `combat:enemy.hollow_fighter` | Flat-eyed fighter | human | elite | chunin | 20-50 | mid | kunai | fire.fire_dragon_bullet, wind.blade_of_wind, lightning.false_darkness | flat_ai, no_flinch, no_retreat, cycles_natures; Flat AI: never flinches or retreats; cycles three natures | chunin |
 | `combat:enemy.chakra_absorber` | Chakra absorber | human | elite | chunin | 25-45 | close | - | - | absorbs_ninjutsu; Drinks ninjutsu that hits it (heals for half): taijutsu and weapon users' favourite target | chunin |
 | `combat:enemy.wolf` | Wolf | animal | mook | beast | 3-14 | close | - | - | pack, flanks | beta2 |
 | `combat:enemy.boar` | Wild boar | animal | mook | beast | 3-12 | close | - | - | charge; Charges in a straight line (10-tick tell): sidestep and it stuns itself on a tree | beta2 |
@@ -69,6 +70,7 @@ Every enemy the story uses, by loadout file (data/combat/enemies/<id>.json). Sto
 | `combat:group.smugglers` | 2 x smuggler_runner, 1 x rogue_genin | beta2 |
 | `combat:group.rogue_pair` | 1 x rogue_genin, 1 x rogue_bomber | beta2 |
 | `combat:group.scout_pair` | 1 x scout_runner, 1 x scout_sensor | beta2 |
+| `combat:group.cell_trio` | 2 x cell_vanguard, 1 x cell_support | beta2 |
 | `combat:group.cell_pair` | 1 x cell_vanguard, 1 x cell_support | beta2 |
 | `combat:group.wolves_pack` | 3 x wolf | beta2 |
 | `combat:group.forest_beasts` | 1 x giant_centipede, 2 x giant_leech | beta3 |
@@ -100,14 +102,14 @@ Base `combat:enemy.spar.classmate`, health x1.8, poise 25, damage x0.8, non-leth
 
 Teaches combo, heavy, dodge and block; losing is allowed and remembered (bond: rivalry)
 
-### `combat:boss.ch8.bell_test`: The bell test (chapter 8, level 12, beta2)
+### `combat:boss.ch8.cord_test`: The cord test (chapter 8, level 12, beta2)
 
-Base `combat:enemy.spar.chunin`, health x99.0, poise 200, damage x1.0, non-lethal. Win: take a bell (touch the sensei's belt) with a teammate taking the other: hit them while staggered, bound, possessed or in genjutsu. Lose: the timer (until noon) runs out.
+Base `combat:enemy.spar.chunin`, health x99.0, poise 200, damage x1.0, non-lethal. Win: the squad takes the three small tags on the sensei's cord together: touch the cord while the sensei is staggered, bound, possessed or in genjutsu. Lose: the timer (until noon) runs out.
 
 | From health | Phase | Behaviour | Adds | Openings | Signature tell |
 |---|---|---|---|---|---|
 | 100% | Reading a book | dodges everything 90%; counters with a light shove; ignores you if you only attack alone | - | a squad combo or a teammate's distraction makes it drop to 30% dodge for 60 ticks | - |
-| 0% | Lesson | when a bell is touched: Headhunter on the one who did not help | - | - | - |
+| 0% | Lesson | when a tag is touched: Headhunter on the one who did not help | - | - | - |
 
 Unwinnable alone by design; teaches squad commands and parry. Health never matters (hp 99x)
 
@@ -123,11 +125,11 @@ Base `combat:enemy.bandit_chief`, health x5.0, poise 70, damage x0.8. Win: defea
 
 ### `combat:boss.ch14.road_ambush`: Ambush on the road (chapter 14, level 14, beta2)
 
-Base `combat:group.cell_pair`, health x1.8, poise 35, damage x1.0. Win: the ambush is driven off and the client is safe; the quest may also ask for a capture (combat:captured). Lose: the client falls, or you are downed. Story beats: in the story bible under this id.
+Base `combat:group.cell_trio`, health x1.1, poise 30, damage x0.8. Win: the runner is captured (combat:captured) and the ambush driven off. Lose: the runner escapes, the client falls, or you are downed. Story beats: in the story bible under this id.
 
 | From health | Phase | Behaviour | Adds | Openings | Signature tell |
 |---|---|---|---|---|---|
-| 100% | Pin down | an enemy cell pair holds the road with smoke, caltrops and a fire-and-wind combo while a runner flees | enemy.smuggler_runner | bind, possess, wire or a shuriken to the legs stops the runner | - |
+| 100% | Pin down | a three-person cell in road clothes and face scarves holds the road with smoke, makibishi and a fire-and-wind combo while a runner flees | enemy.smuggler_runner | bind, possess, wire or a shuriken to the legs stops the runner | - |
 | 50% | Mines | paper-bomb mines across the road and tagged kunai | - | wind or a flash shows the mines; a sealing tag captures a downed foe | - |
 
 Teaches enemy cells, smoke and paper bombs, capture with a sealing tag
@@ -141,7 +143,7 @@ Base `combat:group.exam_team`, health x1.5, poise 35, damage x0.85. Win: take th
 | 100% | Ambush | traps and a genjutsu opener from the trees; one fighter stays hidden | - | sensing and Byakugan find the hidden one | - |
 | 50% | Hunt | they split your squad: one each | - | regroup command and a squad combo | - |
 
-A three-on-three
+A hostile three-on-three
 
 ### `combat:boss.ch16.forest_beast`: A giant of the forest (chapter 16, level 16, beta3)
 
@@ -173,16 +175,16 @@ Base `combat:enemy.spar.chunin`, health x3.0, poise 60, damage x0.7, non-lethal.
 | 60% | Pressure | shuriken with fire (phoenix flowers with hidden steel) and a clone feint | - | sensing or parry the real one | - |
 | 30% | No holding back | its signature on a 20-tick tell; if it has the Sharingan, telegraphs are shorter against it | - | water or a wall; then a finisher | - |
 
-Role-based: the rival in Classic; in Varied the finals opponent is whoever the bracket gives (role:rival by default)
+For the NPC exam seasons (the calendar event); role-based: role:rival by default
 
 ### `combat:boss.ch19.stadium_cell`: Attackers in the stands (chapter 19, level 18, beta3)
 
-Base `combat:group.cell_pair`, health x1.5, poise 40, damage x0.9. Win: the stands are cleared and the protect target survives. Lose: the protect target falls or you are downed. Story beats: in the story bible under this id.
+Base `combat:group.cell_trio`, health x0.9, poise 30, damage x0.7. Win: the stands are cleared and the east stair is held. Lose: the evacuation on the east stair is broken, or you are downed. Story beats: in the story bible under this id.
 
 | From health | Phase | Behaviour | Adds | Openings | Signature tell |
 |---|---|---|---|---|---|
-| 100% | Smoke | the attack's opening: smoke and fire in the stands; cells target civilians | - | protect objective: Cover, walls, barriers | - |
-| 50% | Second wave | a rogue bomber joins from the upper stands | enemy.rogue_bomber | - | - |
+| 100% | Smoke | the attack's opening: smoke and fire in the stands; cells of three or more target civilians | - | protect objective: Cover, walls, barriers | - |
+| 50% | Second wave | a fresh runner of the cell tries for the stair (a race, not a fight) | - | - | - |
 
 The defence and protect objectives of the finals' attack
 
@@ -224,41 +226,60 @@ Base `combat:enemy.puppet_master`, health x7.0, poise 100, damage x1.15. Win: de
 
 ### `combat:boss.chunin.story_1`: Story boss (chapter chunin, level 24, chunin)
 
-Base `combat:enemy.cell_veteran`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
+Base `combat:enemy.hollow_fighter`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
 
+| From health | Phase | Behaviour | Adds | Openings | Signature tell |
+|---|---|---|---|---|---|
+| 100% | First | flat, relentless; cycles natures | - | - | - |
+| 0% | Second | begins on ally_down | - | - | - |
 
 ### `combat:boss.chunin.story_2`: Story boss (chapter chunin, level 28, chunin)
 
-Base `combat:enemy.cell_veteran`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
+Base `combat:group.cell_trio`, health x2.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
 
 
-### `combat:boss.jonin.story_1`: Story boss (chapter jonin, level 36, jonin)
-
-Base `combat:enemy.cell_veteran`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
-
-
-### `combat:boss.jonin.story_2`: Story boss (chapter jonin, level 40, jonin)
+### `combat:boss.jonin.story_1`: Story boss (chapter jonin, level 34, jonin)
 
 Base `combat:enemy.cell_veteran`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
 
 
-### `combat:boss.anbu.story_1`: Story boss (chapter anbu, level 40, anbu)
+### `combat:boss.jonin.story_2`: Story boss (chapter jonin, level 36, jonin)
 
-Base `combat:enemy.assassin`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
+Base `combat:enemy.cell_veteran`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
 
+| From health | Phase | Behaviour | Adds | Openings | Signature tell |
+|---|---|---|---|---|---|
+| 100% | Leader and two | a cell leader and two | enemy.cell_vanguard, enemy.cell_support | - | - |
 
-### `combat:boss.road.story_1`: Story boss (chapter road, level 46, road)
+A stealth path skips most of it
+
+### `combat:boss.anbu.story_1`: Story boss (chapter anbu, level 38, anbu)
+
+Base `combat:enemy.sealing_adept`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
+
+| From health | Phase | Behaviour | Adds | Openings | Signature tell |
+|---|---|---|---|---|---|
+| 100% | Masks | masked sealers lay sealing traps | - | - | - |
+| 50% | Prodigy | a kenjutsu and ninjutsu prodigy | enemy.cell_veteran | - | - |
+
+### `combat:boss.road.story_1`: Story boss (chapter road, level 45, road)
 
 Base `combat:enemy.cell_veteran`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
 
 
-### `combat:boss.road.story_2`: Story boss (chapter road, level 48, road)
+The jonin.story_1 duellist's best loadout
 
-Base `combat:enemy.cell_veteran`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
+### `combat:boss.road.story_2`: Story boss (chapter road, level 44, road)
+
+Base `combat:group.cell_trio`, health x2.2, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
 
 
 ### `combat:boss.road.final`: Final boss (chapter road, level 50, road)
 
 Base `combat:enemy.cell_veteran`, health x12.0, poise 200, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
 
+| From health | Phase | Behaviour | Adds | Openings | Signature tell |
+|---|---|---|---|---|---|
+| 100% | Beam | drain_beam and adds | - | - | - |
+| 30% | every_fire | the player's damage and resistance scale with the story's bond-web tier: small under 20, strong from 20, the whole village from 41 | - | - | - |
 

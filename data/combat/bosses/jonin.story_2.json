@@ -5,15 +5,34 @@
  "chapter": "jonin",
  "slice": "jonin",
  "base": "combat:enemy.cell_veteran",
- "level": 40,
+ "level": 36,
  "nonlethal": false,
  "arena": null,
  "win": "defeat",
  "lose": "the player is downed",
- "phases": [],
+ "phases": [
+  {
+   "at_hp": 1.0,
+   "name": "Leader and two",
+   "behaviour": "a cell leader and two",
+   "adds": [
+    "combat:enemy.cell_vanguard",
+    "combat:enemy.cell_support"
+   ]
+  }
+ ],
  "hp_mult": 7.0,
  "poise": 100,
  "damage_mult": 1.15,
+ "notes": "A stealth path skips most of it",
  "story": "bible:combat:boss.jonin.story_2",
+ "objectives": [
+  {
+   "id": "cells",
+   "kind": "protect",
+   "what": "children"
+  }
+ ],
+ "optional": true,
  "dialogue": "dlg:combat.boss.jonin.story_2"
 }
