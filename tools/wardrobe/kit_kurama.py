@@ -4,7 +4,8 @@ clouds, wisteria sprays and the Kurama crest (a brush-stroke cloud in a ring).""
 from __future__ import annotations
 
 from anime import cel_box, lock
-from paint import k, rnd, solid
+from kit import arm_bone, arm_x
+from paint import fabric, k, rnd, solid
 
 
 # -- hair --------------------------------------------------------------------------------------
@@ -139,3 +140,76 @@ def brush_stroke(face, x0: int, y0: int, length: int, key: str, slope: float = .
         face.set(x0 + i, y, key)
         if i < length * .6:
             face.set(x0 + i, y + 1, key)
+
+
+def back_crest(g, pid: str = "back_crest", role: str = "P", ink: str = "A2", pivot=(0, 1.4, 2.06), base: int = 2,
+               texture: str = "weave", bone: str = "TORSO"):
+    """The Kurama crest across the shoulder blades at double resolution: a 5 x 5 cloth patch in the
+    garment's role with the cloud-in-a-ring stroked in `ink`."""
+    plate = g.piece(pid, bone, (-5, 0, 0), (10, 10, 1), pivot=pivot, scale=(.5, .5, .5))
+    for face in plate.faces:
+        fabric(face, role, texture, 12990, base)
+    stamp(plate.back, [r[::-1] for r in CREST], 0, 0, {"#": ink})
+    return plate
+
+
+def kimono_sleeves(g, role: str, texture: str = "weave", seed: int = 0, base: int = 2, length: int = 9, top: float = -2.4,
+                   trim: str | None = None, bell: bool = True, sides=("right", "left")):
+    """Wide kimono sleeves: a loose tube over the arm from the shoulder, opening into a deeper bell
+    above the wrist, the hem edged in `trim`. Returns the sleeve boxes."""
+    out = []
+    for side in sides:
+        tube = g.piece(f"{side}_kimono_sleeve", arm_bone(side), (arm_x(side) - .5, top, -2.5), (5, length, 5), inflate=.12)
+        solid(tube, role, texture, seed + (side == "left"), base)
+        fabric(tube.top, role, texture, seed, base + 1)
+        for f in tube.sides:
+            f.vline(f.w - 1, 1, length - 1, k(role, base - 1))
+            if trim:
+                f.hline(0, f.w - 1, length - 1, trim)
+        tube.bottom.fill(k(role, base - 2))
+        out.append(tube)
+        if bell:
+            mouth = g.piece(f"{side}_sleeve_bell", arm_bone(side), (arm_x(side) - 1, top + length - 2, -3), (6, 3, 6),
+                            inflate=.05)
+            solid(mouth, role, texture, seed + 2 + (side == "left"), base)
+            for f in mouth.sides:
+                f.hline(0, f.w - 1, 0, k(role, base + 1))
+                f.hline(0, f.w - 1, 2, trim or k(role, base - 1))
+            mouth.bottom.fill(k(role, base - 2))
+            out.append(mouth)
+    return out
+
+
+def wrap_front(face, edge: str, under: str | None = None, rows: int = 7, start: int = 1):
+    """The kimono wrap on a body front: a diagonal collar edge from the wearer's right shoulder down
+    to the left hip, with an optional under-collar line just inside it."""
+    for i in range(rows):
+        x = start + i
+        if x <= 7:
+            face.set(x, i, edge)
+            if under and x - 1 >= 0:
+                face.set(x - 1, i, under)
+
+
+def wisteria_hem(face, seed: int, light: str = "A3", dark: str = "A2", stem: str = "S2", step: int = 2, y0: int = 0):
+    """Wisteria hanging from a vine along row `y0`: a spray every `step` texels, each a short column of
+    florets alternating light and dark, the longer ones tapering to a light tip."""
+    face.hline(0, face.w - 1, y0, stem)
+    for x in range(int(rnd(seed, 1) * step), face.w, step):
+        n = 2 + int(rnd(x, 5, seed) * 3)
+        for d in range(n):
+            face.set(x, y0 + 1 + d, light if (d + x) % 2 == 0 else dark)
+        face.set(x, y0 + n, light)
+
+
+def splatter(face, seed: int, keys=("A2", "D2", "K2"), density: float = .06, rows=None):
+    """Paint spatters: single texels and two-texel drips in a few paint colors."""
+    rows = range(face.h) if rows is None else rows
+    for y in rows:
+        for x in range(face.w):
+            r = rnd(x, y, seed)
+            if r < density:
+                key = keys[int(rnd(x, y, seed + 1) * len(keys))]
+                face.set(x, y, key)
+                if r < density * .3:
+                    face.set(x, y + 1, key)

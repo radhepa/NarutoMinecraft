@@ -1,0 +1,134 @@
+{
+  "id": "t1206_calligrapher_tasuki",
+  "kind": "top",
+  "name": "Calligrapher's Kosode",
+  "gender": "unisex",
+  "texture": "tops/t1206_calligrapher_tasuki.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "right_gathered_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        -2.2,
+        -2.6
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_gathered_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        -2.2,
+        -2.6
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "brush_case",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        8.6,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        21,
+        12
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Kosode with the sleeves tied back by a crossed tasuki cord, ink-stained cuff, brush case at the hip."
+}
