@@ -1,0 +1,49 @@
+{
+  "id": "t1707_ribbed_turtleneck",
+  "kind": "top",
+  "name": "Ribbed Turtleneck",
+  "gender": "unisex",
+  "texture": "tops/t1707_ribbed_turtleneck.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "roll_neck",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -2.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Close slate sweater in heavy ribs with a tall rolled neck, black leather gloves."
+}

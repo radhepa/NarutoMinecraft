@@ -401,6 +401,36 @@
         "#a0828c"
       ]
     },
+    "MORINO_COAL": {
+      "name": "Morino Coal",
+      "ramp": [
+        "#0c0c0e",
+        "#16161a",
+        "#222228",
+        "#33343b",
+        "#4c4e57"
+      ]
+    },
+    "MORINO_GUNMETAL": {
+      "name": "Morino Gunmetal",
+      "ramp": [
+        "#1b1d21",
+        "#2b2e34",
+        "#3f434a",
+        "#5a5f67",
+        "#7e838b"
+      ]
+    },
+    "MORINO_RUST": {
+      "name": "Morino Rust",
+      "ramp": [
+        "#160c0b",
+        "#251412",
+        "#38201c",
+        "#4f2e27",
+        "#6e4237"
+      ]
+    },
     "NARA_PITCH": {
       "name": "Nara Pitch",
       "ramp": [

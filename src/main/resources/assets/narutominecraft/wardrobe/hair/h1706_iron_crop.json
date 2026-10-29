@@ -1,0 +1,42 @@
+{
+  "id": "h1706_iron_crop",
+  "kind": "hair",
+  "name": "Iron Crop",
+  "gender": "unisex",
+  "texture": "hair/h1706_iron_crop.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "nape_hem",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.4,
+        4.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "Short blunt crop cut straight across the brow and level round the ears."
+}

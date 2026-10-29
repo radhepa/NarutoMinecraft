@@ -1,0 +1,249 @@
+{
+  "id": "t1702_belted_trench",
+  "kind": "top",
+  "name": "Belted Trench",
+  "gender": "unisex",
+  "texture": "tops/t1702_belted_trench.png",
+  "extrasHeight": 32,
+  "tags": [
+    "coat",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "epaulette_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        -0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        2,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "epaulette_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        -0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        2,
+        1,
+        5
+      ],
+      "uv": [
+        15,
+        8
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "skirt_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        10.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        30,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        10.6,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        17
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        7,
+        4
+      ],
+      "uv": [
+        21,
+        17
+      ]
+    },
+    {
+      "id": "skirt_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        7,
+        4
+      ],
+      "uv": [
+        32,
+        17
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Black double-breasted trench buttoned to the throat, steel buttons, cinched belt, skirts to the knee."
+}

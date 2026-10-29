@@ -1,0 +1,76 @@
+{
+  "id": "h1702_high_and_tight",
+  "kind": "hair",
+  "name": "High and Tight",
+  "gender": "unisex",
+  "texture": "hair/h1702_high_and_tight.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "stubble_crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -1,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        1.06,
+        0.3,
+        1.06
+      ]
+    },
+    {
+      "id": "pad",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        -8.8,
+        -3.6
+      ],
+      "size": [
+        6,
+        1,
+        6
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.2
+    }
+  ],
+  "description": "Stubble sides and back with a short flat pad on top, squared at the brow."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "t1705_harness_tunic",
+  "kind": "top",
+  "name": "Harness Tunic",
+  "gender": "unisex",
+  "texture": "tops/t1705_harness_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "High-necked dark slate tunic crossed by a black leather harness on steel rings, black gloves."
+}

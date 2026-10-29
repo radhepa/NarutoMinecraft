@@ -1,0 +1,42 @@
+{
+  "id": "h1710_side_part",
+  "kind": "hair",
+  "name": "Side Part",
+  "gender": "unisex",
+  "texture": "hair/h1710_side_part.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "nape_hem",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.6,
+        4.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "Short regulation cut with a hard left part, combed flat, trimmed above the ears."
+}

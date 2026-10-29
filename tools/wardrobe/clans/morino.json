@@ -1,0 +1,54 @@
+{
+  "id": "morino", "name": "Morino",
+  "tagline": "Stern interrogators of the Torture and Interrogation Force: long black greatcoats, cloth protector caps, heavy boots, slate and black with oxblood, scarred faces.",
+  "standing": "minor", "ability": null,
+  "palettes": {
+    "MORINO_INTERROGATOR": {"name": "Morino Interrogator", "P": "#1c1c21", "S": "#7d828a", "A": "#6e1f26", "L": "#2b211d", "M": "#9aa0a7", "K": "#0f0f12", "D": "#3b3f47"},
+    "MORINO_SLATE":        {"name": "Morino Slate",        "P": "#2a2c32", "S": "#9a9ea4", "A": "#7a2229", "L": "#33261f", "M": "#a6abb1", "K": "#121215", "D": "#4a4f58"},
+    "MORINO_IRON":         {"name": "Morino Iron",         "P": "#3d4148", "S": "#b5b8bc", "A": "#5e1a20", "L": "#2a201b", "M": "#b0b5ba", "K": "#141417", "D": "#2a2d33"},
+    "MORINO_OXBLOOD":      {"name": "Morino Oxblood",      "P": "#141418", "S": "#646a72", "A": "#80242c", "L": "#3a2420", "M": "#8f959c", "K": "#0c0c0e", "D": "#2e3138"},
+    "MORINO_ASH":          {"name": "Morino Ash",          "P": "#25262b", "S": "#c6c6c2", "A": "#6a2228", "L": "#2f2520", "M": "#a9adb2", "K": "#111113", "D": "#55595f"},
+    "MORINO_WARDEN":       {"name": "Morino Warden",       "P": "#18181c", "S": "#555a62", "A": "#8c2a31", "L": "#2b1d19", "M": "#b8bcc0", "K": "#0b0b0d", "D": "#26282e"}
+  },
+  "hair_colors": {
+    "MORINO_COAL":     {"name": "Morino Coal",     "ramp": ["#0c0c0e", "#16161a", "#222228", "#33343b", "#4c4e57"]},
+    "MORINO_GUNMETAL": {"name": "Morino Gunmetal", "ramp": ["#1b1d21", "#2b2e34", "#3f434a", "#5a5f67", "#7e838b"]},
+    "MORINO_RUST":     {"name": "Morino Rust",     "ramp": ["#160c0b", "#251412", "#38201c", "#4f2e27", "#6e4237"]}
+  },
+  "eye_colors": {
+    "MORINO_FLINT": {"name": "Morino Flint", "ramp": ["#0b0b0d", "#24262b", "#3a3d44", "#5d626b", "#ecebe6"]}
+  },
+  "marks": {
+    "morino_brow_scar":   {"rects": [[-2.6, -6.6, 0.25, 1.6], [-2.4, -1.7, 0.25, 1.4]], "color": null, "mirror": false},
+    "morino_cheek_slash": {"rects": [[1.7, -1.5, 0.9, 0.25], [2.5, -1.2, 0.9, 0.25], [3.2, -0.9, 0.6, 0.25]], "color": null, "mirror": false},
+    "morino_chin_scar":   {"rects": [[-0.9, -0.7, 0.25, 0.6]], "color": null, "mirror": false}
+  },
+  "pool": {
+    "hair": ["h1701_interrogator_buzz", "h1702_high_and_tight", "h1703_flat_top", "h1704_slicked_back", "h1705_widow_peak",
+             "h1706_iron_crop", "h1707_severe_bun", "h1708_corded_tail", "h1709_undercut_sweep", "h1710_side_part",
+             "h1711_crest_ridge", "h1712_nape_braid", "h1713_blunt_bob", "h1714_receding_crop", "h1715_low_warden_tail"],
+    "hair_colors": ["MORINO_COAL", "MORINO_COAL", "MORINO_GUNMETAL", "RAVEN", "MORINO_RUST", "ESPRESSO"],
+    "eye_colors": ["MORINO_FLINT", "MORINO_FLINT", "DARK"],
+    "palettes": ["MORINO_INTERROGATOR", "MORINO_SLATE", "MORINO_IRON", "MORINO_OXBLOOD", "MORINO_ASH", "MORINO_WARDEN"],
+    "headwear": [null, null, null, null, "w1701_interrogator_cap", "w1701_interrogator_cap", "w1702_slate_cap",
+                 "w1703_oxblood_kerchief", "w02_forehead_protector"],
+    "bottoms": ["b01_shinobi_trousers"],
+    "complexions": [0, 1, 1, 2],
+    "marks": [{"id": "morino_brow_scar", "chance": 0.25}, {"id": "morino_cheek_slash", "chance": 0.2},
+              {"id": "morino_chin_scar", "chance": 0.1}]
+  },
+  "outfits": [
+    {"id": "cadet", "name": "Cadet", "top": "t1704_cadet_jacket", "bottom": "b1705_cadet_shorts", "rank": "academy"},
+    {"id": "young_warden", "name": "Young Warden", "top": "t1707_ribbed_turtleneck", "bottom": "b1703_strap_trousers", "rank": "genin"},
+    {"id": "harness", "name": "Harness Tunic", "top": "t1705_harness_tunic", "bottom": "b1701_boot_trousers", "rank": "genin"},
+    {"id": "black_flak", "name": "Black Flak", "top": "t1703_black_flak", "bottom": "b1701_boot_trousers", "rank": "chunin"},
+    {"id": "the_room", "name": "Interrogation Room", "top": "t1709_interrogation_shirt", "bottom": "b1702_jackboots", "rank": "chunin"},
+    {"id": "half_coat", "name": "Half Coat", "top": "t1708_half_coat", "bottom": "b1704_split_skirt", "rank": "chunin"},
+    {"id": "trench", "name": "Belted Trench", "top": "t1702_belted_trench", "bottom": "b1702_jackboots", "rank": "chunin"},
+    {"id": "greatcoat", "name": "Interrogator Greatcoat", "top": "t1701_interrogator_greatcoat", "bottom": "b1701_boot_trousers", "rank": "jonin",
+     "palettes": ["MORINO_INTERROGATOR", "MORINO_OXBLOOD", "MORINO_SLATE"]},
+    {"id": "caped", "name": "Caped Greatcoat", "top": "t1706_caped_greatcoat", "bottom": "b1702_jackboots", "rank": "jonin"},
+    {"id": "clan_head", "name": "Warden", "top": "t1710_warden_greatcoat", "bottom": "b1701_boot_trousers", "rank": "jonin",
+     "palettes": ["MORINO_WARDEN", "MORINO_INTERROGATOR"]}
+  ]
+}

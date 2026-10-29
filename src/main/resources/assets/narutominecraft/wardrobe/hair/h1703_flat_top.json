@@ -1,0 +1,43 @@
+{
+  "id": "h1703_flat_top",
+  "kind": "hair",
+  "name": "Flat Top",
+  "gender": "unisex",
+  "texture": "hair/h1703_flat_top.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "block",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -10,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.4
+    }
+  ],
+  "description": "Hair brushed up and cut dead level in a square block, close tapered sides."
+}

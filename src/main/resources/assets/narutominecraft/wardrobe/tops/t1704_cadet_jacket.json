@@ -1,0 +1,49 @@
+{
+  "id": "t1704_cadet_jacket",
+  "kind": "top",
+  "name": "Cadet Jacket",
+  "gender": "unisex",
+  "texture": "tops/t1704_cadet_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "jacket",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short slate zip jacket piped in oxblood, sleeves pushed to the elbow over a black undershirt."
+}
