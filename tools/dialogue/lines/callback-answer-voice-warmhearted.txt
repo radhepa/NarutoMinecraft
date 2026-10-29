@@ -84,7 +84,7 @@ I'm still visiting my neighbour. Friendship isn't medicine you stop taking. Your
 I gave my neighbour room, like you said. Now they visit me. Imagine that.
 
 ## callback.answer.q.advice.warm_neighbour_after.a3
-I asked again, as you said. My neighbour wants Thursdays. Just Thursdays. Perfect.
+I asked again, as you said. My neighbour wants Wooddays. Just Wooddays. Perfect.
 
 ## callback.answer.q.plans.warm_full_house.a1
 A house full to the rafters, that's your future, you said. Save me a cushion by the fire.

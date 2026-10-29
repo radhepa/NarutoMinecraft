@@ -345,7 +345,7 @@ My usual supplier in the river town hasn't answered three letters. Either they'r
 ## chat.job  job=librarian  fn=worldbuild
 The Academy library has four thousand scrolls and one rule: nothing leaves the room still rolled the wrong way.
 Children borrow the jutsu scrolls and bring them back with fingerprints on the hand sign pages. That's how I know they read them.
-The history shelf is the dustiest and the most important. I give it a wipe every Fifth Day and nobody notices.
+The history shelf is the dustiest and the most important. I give it a wipe every Metalday and nobody notices.
 Overdue books get a reminder slip, then a visit, then a note to the instructor. The note usually works.
 A library is the quietest place in a loud village. Even the Inuzuka children whisper in here.
 

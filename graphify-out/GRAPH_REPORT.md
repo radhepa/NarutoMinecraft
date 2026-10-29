@@ -1,7 +1,7 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 277 files · ~655,517 words
+- 277 files · ~655,713 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 31 file(s) not represented in the graph (top: .tsv 23, (none) 3, .properties 2)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d174c001`
+- Built from commit: `9ce9177a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -834,14 +834,14 @@ Nodes (3): Commits, graphify, Naruto Minecraft
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `BondWorld` connect `BondWorld` to `Village`, `.person`, `list`, `.classic`, `Person`, `VillageScaleTest`, `VisitsTest`, `Playthrough.java`, `.person`, `Run`, `.receive`, `SquadTest`, `.answer`, `FirstFifteenHours.java`, `Bond`, `GossipTest`, `Stage`, `Deed`, `Squad`, `map`, `.name`?**
-  _High betweenness centrality (0.073) - this node is a cross-community bridge._
+- **Why does `k()` connect `k` to `kit_uchiha.py`, `kit_senju.py`, `rnd`, `kit_kurama.py`, `kit_akimichi.py`, `kit_kunoichi.py`, `kit_suzuran.py`, `Shops`, `solid`, `fabric`, `kit_rugged.py`, `kit_tobari.py`, `kit_hagane.py`, `cel_box`, `kit_field.py`, `kit_tsuchigumo.py`, `Face`, `kit_haruno.py`, `kit_household.py`, `Custom blocks`?**
+  _High betweenness centrality (0.072) - this node is a cross-community bridge._
 - **What connects `TALK`, `GIFT_LOVED`, `GIFT_LIKED` to the rest of the system?**
   _342 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `creator.py` be split into smaller, more focused modules?**
   _Cohesion score 0.07058001397624039 - nodes in this community are weakly interconnected._
-- **Why does `k()` connect `k` to `kit_uchiha.py`, `kit_senju.py`, `rnd`, `kit_kurama.py`, `kit_akimichi.py`, `kit_kunoichi.py`, `kit_suzuran.py`, `Shops`, `solid`, `fabric`, `kit_rugged.py`, `kit_tobari.py`, `kit_hagane.py`, `cel_box`, `kit_field.py`, `kit_tsuchigumo.py`, `Face`, `kit_haruno.py`, `kit_household.py`, `Custom blocks`?**
-  _High betweenness centrality (0.072) - this node is a cross-community bridge._
+- **Why does `BondWorld` connect `BondWorld` to `Village`, `.person`, `list`, `.classic`, `Person`, `VillageScaleTest`, `VisitsTest`, `Playthrough.java`, `.person`, `Run`, `.receive`, `SquadTest`, `.answer`, `FirstFifteenHours.java`, `Bond`, `GossipTest`, `Stage`, `Deed`, `Squad`, `map`, `.name`?**
+  _High betweenness centrality (0.071) - this node is a cross-community bridge._
 - **Should `kit_uchiha.py` be split into smaller, more focused modules?**
   _Cohesion score 0.1286549707602339 - nodes in this community are weakly interconnected._
 - **Why does `solid()` connect `solid` to `kit_uchiha.py`, `kit_senju.py`, `rnd`, `kit_kurama.py`, `kit_akimichi.py`, `kit_kunoichi.py`, `kit_suzuran.py`, `k`, `Box`, `Shops`, `fabric`, `kit_rugged.py`, `kit_tobari.py`, `kit_hagane.py`, `cel_box`, `kit_field.py`, `kit_tsuchigumo.py`, `kit_haruno.py`, `kit_household.py`, `Custom blocks`?**

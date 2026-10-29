@@ -908,7 +908,7 @@ When my parents argue, they do it in whispers. I can still hear it, but they thi
 My dad makes paper cranes when he's thinking. Our whole house has cranes on every shelf.
 My mum sings when she cooks. She sings very badly. It's my favourite sound.
 My big brother says I'm too small to understand. I'm small, but I understand everything. Mostly.
-My aunt visits from the market every Fifth Day and brings melon. I love Fifth Days.
+My aunt visits from the market every Metalday and brings melon. I love Metaldays.
 I have three older sisters and they all tell me what to do. I'm going to be Hokage just so I can tell them what to do.
 My grandpa falls asleep in his chair after lunch, and I put his slippers on the wrong feet. He never notices.
 
@@ -1122,7 +1122,7 @@ The scroll shop has a scroll as long as the whole room, rolled up in a glass cas
 ## chat.child  stage=child  fn=reveal_character,filler
 My best friend and I have a secret handshake. It's eleven moves long. We get it wrong every time and laugh.
 I got into a fight with my best friend over the last rice cracker. Then we split it. Then we were friends again.
-My friend moved to the other side of the village. Now we meet at the Hokage Rock steps every Seventh Day.
+My friend moved to the other side of the village. Now we meet at the Hokage Rock steps every Sunday.
 There's a kid in my class who can do the Clone perfectly and never shows off. I want to be friends with them.
 My friend and I are going to be on the same squad. We've decided. We just have to tell the Hokage.
 I wrote my friend a letter even though they live two doors down. I gave it to the courier. It took a day.
