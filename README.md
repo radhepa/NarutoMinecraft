@@ -6,7 +6,9 @@ A Naruto-themed Minecraft mod built on the resident model from Village Friends: 
 
 The mod's goal is a living Hidden Leaf: you start as a ninja and work your way up to Hokage. Every character is dressed for one rank on that ladder, and the NPCs of each rank share a look so you can read someone's rank at a glance:
 
-**Academy → Genin → Chunin → Jonin → ANBU → Hokage**
+**Academy → Genin → Chunin → Jonin → Hokage**, with **ANBU** as an optional branch from Jonin
+
+The plan for the game around this wardrobe is in [ROADMAP.md](ROADMAP.md).
 
 Each character JSON sets `rank`. The role outfits are the village's general population. A few looks that echo characters from the show are marked `"signature": true` and kept apart in `lineup.png`.
 
