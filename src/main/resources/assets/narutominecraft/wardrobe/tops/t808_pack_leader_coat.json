@@ -1,0 +1,250 @@
+{
+  "id": "t808_pack_leader_coat",
+  "kind": "top",
+  "name": "Pack Leader Coat",
+  "gender": "unisex",
+  "texture": "tops/t808_pack_leader_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "coat",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_fur_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        8.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_fur_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        8.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "fur_lapel_right",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        -0.4,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "fur_lapel_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        -0.4,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "fur_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -1.6,
+        -2.4
+      ],
+      "size": [
+        10,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        31,
+        10
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "coat_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        21,
+        18
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Long dark coat with fur lapels and cuffs, belted, split skirts, a red fang on the back."
+}

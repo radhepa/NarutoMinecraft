@@ -1,0 +1,247 @@
+{
+  "id": "w801_fur_hood",
+  "kind": "headwear",
+  "name": "Fur Hood",
+  "gender": "unisex",
+  "texture": "headwear/w801_fur_hood.png",
+  "extrasHeight": 48,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hood_crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.75
+    },
+    {
+      "id": "hood_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -6,
+        3
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.75
+    },
+    {
+      "id": "hood_right",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -6,
+        -2.4
+      ],
+      "size": [
+        1,
+        8,
+        6
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.75
+    },
+    {
+      "id": "hood_left",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        3,
+        -6,
+        -2.4
+      ],
+      "size": [
+        1,
+        8,
+        6
+      ],
+      "uv": [
+        15,
+        11
+      ],
+      "inflate": 0.75
+    },
+    {
+      "id": "ruff_brow",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -9.2,
+        -5.2
+      ],
+      "size": [
+        10,
+        2,
+        2
+      ],
+      "uv": [
+        30,
+        11
+      ]
+    },
+    {
+      "id": "ruff_right",
+      "bone": "HEAD",
+      "pivot": [
+        -5.8,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        -7.6,
+        -5.2
+      ],
+      "size": [
+        2,
+        8,
+        2
+      ],
+      "uv": [
+        55,
+        11
+      ]
+    },
+    {
+      "id": "ruff_left",
+      "bone": "HEAD",
+      "pivot": [
+        3.8,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        -7.6,
+        -5.2
+      ],
+      "size": [
+        2,
+        8,
+        2
+      ],
+      "uv": [
+        0,
+        26
+      ]
+    },
+    {
+      "id": "ruff_chin",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0.2,
+        -4.6
+      ],
+      "size": [
+        10,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        26
+      ]
+    }
+  ],
+  "hidesHair": [
+    "*"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "A hood pulled up over the head with a thick ruff of fur round the face."
+}

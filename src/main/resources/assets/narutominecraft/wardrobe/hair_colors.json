@@ -150,6 +150,36 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "INUZUKA_BROWN": {
+      "name": "Inuzuka Brown",
+      "ramp": [
+        "#24150e",
+        "#3a2316",
+        "#55331f",
+        "#74482b",
+        "#98643c"
+      ]
+    },
+    "INUZUKA_MANE": {
+      "name": "Inuzuka Mane",
+      "ramp": [
+        "#160e0b",
+        "#231612",
+        "#33211a",
+        "#4a3125",
+        "#664535"
+      ]
+    },
+    "INUZUKA_UMBER": {
+      "name": "Inuzuka Umber",
+      "ramp": [
+        "#2e1a10",
+        "#4a2c1a",
+        "#6a4126",
+        "#8c5a35",
+        "#b07a4b"
+      ]
     }
   }
 }

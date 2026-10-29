@@ -1,0 +1,275 @@
+{
+  "id": "t804_kennel_keeper_wrap",
+  "kind": "top",
+  "name": "Kennel Keeper Wrap",
+  "gender": "unisex",
+  "texture": "tops/t804_kennel_keeper_wrap.png",
+  "extrasHeight": 32,
+  "tags": [
+    "chunin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "apron_bib",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "apron_strap_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4000000000000004,
+        -0.2,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "apron_strap_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4000000000000004,
+        -0.2,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        20,
+        0
+      ]
+    },
+    {
+      "id": "apron_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "apron_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apron_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        6,
+        1
+      ],
+      "uv": [
+        19,
+        8
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "right_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        4.2,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        38,
+        8
+      ]
+    },
+    {
+      "id": "left_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        4.2,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    },
+    {
+      "id": "hip_cord",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        10.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        21,
+        16
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Wrapped top with rolled sleeves, a belted leather apron with a tool pocket, a red hip cord."
+}
