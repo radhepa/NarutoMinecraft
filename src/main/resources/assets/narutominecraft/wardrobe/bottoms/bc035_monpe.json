@@ -1,0 +1,132 @@
+{
+  "id": "bc035_monpe",
+  "kind": "bottom",
+  "name": "Monpe",
+  "gender": "unisex",
+  "texture": "bottoms/bc035_monpe.png",
+  "extrasHeight": 32,
+  "tags": [
+    "civilian",
+    "trousers",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_balloon",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        1.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "right_ankle",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "left_balloon",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        1.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "left_ankle",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ]
+    }
+  ],
+  "description": "Roomy kasuri-flecked work trousers gathered at waist and ankle, white tabi and zori."
+}

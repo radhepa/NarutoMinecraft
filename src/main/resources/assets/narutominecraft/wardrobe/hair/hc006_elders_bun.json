@@ -1,0 +1,211 @@
+{
+  "id": "hc006_elders_bun",
+  "kind": "hair",
+  "name": "Elder's Bun",
+  "gender": "unisex",
+  "texture": "hair/hc006_elders_bun.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bun",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.6,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bun_cap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.6,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        13,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "bun_pin",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.6,
+        2.0
+      ],
+      "rotation": [
+        0,
+        20,
+        8
+      ],
+      "origin": [
+        -3,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        6,
+        1,
+        1
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "wisp_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -6.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "wisp_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -6.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": "wisp_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -6.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    },
+    {
+      "id": "wisp_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -6.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    }
+  ],
+  "description": "Thinning hair combed back from a high forehead into a small tight bun on the crown, wooden pin."
+}

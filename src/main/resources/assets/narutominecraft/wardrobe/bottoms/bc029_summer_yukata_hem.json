@@ -1,0 +1,132 @@
+{
+  "id": "bc029_summer_yukata_hem",
+  "kind": "bottom",
+  "name": "Summer Yukata Hem",
+  "gender": "unisex",
+  "texture": "bottoms/bc029_summer_yukata_hem.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "kimono"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "yukata_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "yukata_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "yukata_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        11.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        11,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "yukata_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        11.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        11,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "tc032_summer_yukata",
+  "description": "The yukata's checked skirt falling straight to the ankle, wooden geta."
+}

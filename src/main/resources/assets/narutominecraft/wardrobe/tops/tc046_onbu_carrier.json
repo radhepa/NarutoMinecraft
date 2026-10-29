@@ -1,0 +1,189 @@
+{
+  "id": "tc046_onbu_carrier",
+  "kind": "top",
+  "name": "Onbu Carrier",
+  "gender": "unisex",
+  "texture": "tops/tc046_onbu_carrier.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "civilian"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "strap_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -34
+      ],
+      "origin": [
+        -0.5,
+        -6,
+        -0.5
+      ],
+      "size": [
+        1,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "strap_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        34
+      ],
+      "origin": [
+        -0.5,
+        -6,
+        -0.5
+      ],
+      "size": [
+        1,
+        12,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "strap_waist",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "baby_bundle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.2,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        6,
+        3
+      ],
+      "uv": [
+        39,
+        0
+      ]
+    },
+    {
+      "id": "baby_bonnet",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        3,
+        3,
+        3
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "baby_pompom",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.6,
+        3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        13,
+        14
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Round-necked smock with rolled sleeves, carrier straps crossed over the chest, a bundled baby behind."
+}

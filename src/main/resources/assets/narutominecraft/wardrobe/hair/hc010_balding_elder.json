@@ -1,0 +1,238 @@
+{
+  "id": "hc010_balding_elder",
+  "kind": "hair",
+  "name": "Balding Elder",
+  "gender": "male",
+  "texture": "hair/hc010_balding_elder.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tuft_right_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -5.8,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        40
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tuft_right_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -5.8,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        40
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "tuft_right_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -5.8,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        40
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    },
+    {
+      "id": "tuft_right_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -5.8,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        40
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "tuft_left_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -5.8,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    },
+    {
+      "id": "tuft_left_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -5.8,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        41,
+        0
+      ]
+    },
+    {
+      "id": "tuft_left_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -5.8,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "tuft_left_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -5.8,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    }
+  ],
+  "description": "Bare crown, a ring of cropped hair round the back and sides, bushy tufts above the ears."
+}

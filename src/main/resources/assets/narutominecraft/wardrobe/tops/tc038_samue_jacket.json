@@ -1,0 +1,78 @@
+{
+  "id": "tc038_samue_jacket",
+  "kind": "top",
+  "name": "Samue Jacket",
+  "gender": "unisex",
+  "texture": "tops/tc038_samue_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "work",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tie_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        4.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tie_1",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        8.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Crossed cotton work jacket tied at the side, breast pocket with a pencil, banded wrists."
+}

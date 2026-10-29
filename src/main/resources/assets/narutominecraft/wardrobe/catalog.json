@@ -288,7 +288,12 @@
     "h1512_shoulder_sweep",
     "h1513_strap_braid",
     "h1514_iai_gust",
-    "h1515_crossed_pin_bun"
+    "h1515_crossed_pin_bun",
+    "hc006_elders_bun",
+    "hc007_matrons_bun",
+    "hc008_festival_updo",
+    "hc009_childs_cut",
+    "hc010_balding_elder"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -337,7 +342,12 @@
     "w1402_crimson_protector",
     "w1501_proctor_bandana",
     "w1502_cat_mask",
-    "w1503_crescent_hachimaki"
+    "w1503_crescent_hachimaki",
+    "wc006_side_fox_mask",
+    "wc007_flower_kanzashi",
+    "wc008_tenugui_kerchief",
+    "wc009_elders_cap",
+    "wc010_straw_sun_hat"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -510,7 +520,32 @@
     "t1507_convalescent_wrap",
     "t1508_practice_gi",
     "t1509_scarf_knit",
-    "t1510_tasuki_iaido"
+    "t1510_tasuki_iaido",
+    "tc026_everyday_kimono",
+    "tc027_haori_kimono",
+    "tc028_knit_cardigan",
+    "tc029_checked_shirt",
+    "tc030_jinbei_top",
+    "tc031_festival_yukata_top",
+    "tc032_summer_yukata",
+    "tc033_scholar_robe",
+    "tc034_shrine_kosode",
+    "tc035_padded_hanten",
+    "tc036_play_tee",
+    "tc037_kappogi_apron",
+    "tc038_samue_jacket",
+    "tc039_happi_coat",
+    "tc040_striped_sweater",
+    "tc041_knit_vest_shirt",
+    "tc042_blossom_blouse",
+    "tc043_furisode_kimono",
+    "tc044_shawl_kimono",
+    "tc045_tasuki_kimono",
+    "tc046_onbu_carrier",
+    "tc047_tenugui_undershirt",
+    "tc048_michiyuki_coat",
+    "tc049_heko_obi_kimono",
+    "tc050_miko_chihaya"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -594,7 +629,32 @@
     "b1405_bandaged_shorts",
     "b1501_gekko_hakama",
     "b1502_swordsman_trousers",
-    "b1503_strap_leggings"
+    "b1503_strap_leggings",
+    "bc026_kimono_skirt",
+    "bc027_village_hakama",
+    "bc028_shrine_hakama",
+    "bc029_summer_yukata_hem",
+    "bc030_house_trousers",
+    "bc031_jinbei_shorts",
+    "bc032_pleated_long_skirt",
+    "bc033_play_shorts",
+    "bc034_field_trousers",
+    "bc035_monpe",
+    "bc036_checked_skirt",
+    "bc037_kasuri_kimono_skirt",
+    "bc038_blossom_kimono_skirt",
+    "bc039_cropped_linen_trousers",
+    "bc040_festival_momohiki",
+    "bc041_wrap_skirt",
+    "bc042_corduroy_trousers",
+    "bc043_quilted_trousers",
+    "bc044_little_pleated_skirt",
+    "bc045_student_hakama",
+    "bc046_wide_culottes",
+    "bc047_maekake_apron",
+    "bc048_tiered_skirt",
+    "bc049_garden_trousers",
+    "bc050_lantern_skirt"
   ],
   "characters": [
     {
@@ -6739,6 +6799,603 @@
           "palettes": [
             "JONIN_COMMANDER"
           ]
+        }
+      ]
+    },
+    {
+      "id": "household",
+      "name": "Household",
+      "role": "civilian",
+      "tagline": "Everyday home and leisure life of the village: families, kids, elders, scholars, shrine attendants and festival-goers.",
+      "palettes": {
+        "HOUSEHOLD_INDIGO": {
+          "name": "Household Indigo",
+          "P": "#3a4f86",
+          "S": "#efeadb",
+          "A": "#c8463b",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#1c2030",
+          "D": "#9aa3b2"
+        },
+        "HOUSEHOLD_SAKURA": {
+          "name": "Household Sakura",
+          "P": "#e3a3b0",
+          "S": "#f4efe6",
+          "A": "#b3384a",
+          "L": "#9a7452",
+          "M": "#aab3b9",
+          "K": "#2a1f28",
+          "D": "#6b4a63"
+        },
+        "HOUSEHOLD_MATCHA": {
+          "name": "Household Matcha",
+          "P": "#7d9a5a",
+          "S": "#efe9d6",
+          "A": "#c9883a",
+          "L": "#7a5a3c",
+          "M": "#aab3b9",
+          "K": "#22251c",
+          "D": "#4a4436"
+        },
+        "HOUSEHOLD_PERSIMMON": {
+          "name": "Household Persimmon",
+          "P": "#cf6f3a",
+          "S": "#f0e6d2",
+          "A": "#6b3a2a",
+          "L": "#7a5a3c",
+          "M": "#aab3b9",
+          "K": "#221c1c",
+          "D": "#3e3a44"
+        },
+        "HOUSEHOLD_MAPLE": {
+          "name": "Household Maple",
+          "P": "#a3352f",
+          "S": "#efe7d8",
+          "A": "#e0b04a",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#1e1a18",
+          "D": "#3b3530"
+        },
+        "HOUSEHOLD_PLUM": {
+          "name": "Household Plum",
+          "P": "#6c3a5a",
+          "S": "#ece6e0",
+          "A": "#d9a6b8",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#1a1820",
+          "D": "#3a3a48"
+        },
+        "HOUSEHOLD_CHARCOAL": {
+          "name": "Household Charcoal",
+          "P": "#575c62",
+          "S": "#e6e2d8",
+          "A": "#8a3a34",
+          "L": "#6b5a45",
+          "M": "#aab3b9",
+          "K": "#1a1b1f",
+          "D": "#34373c"
+        },
+        "HOUSEHOLD_UMBER": {
+          "name": "Household Umber",
+          "P": "#7a5b42",
+          "S": "#e9e1cf",
+          "A": "#4f6a5a",
+          "L": "#9a7a56",
+          "M": "#aab3b9",
+          "K": "#1e1914",
+          "D": "#4a3b30"
+        },
+        "HOUSEHOLD_WISTERIA": {
+          "name": "Household Wisteria",
+          "P": "#9d88c2",
+          "S": "#f2eff0",
+          "A": "#e6c35c",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#211d2b",
+          "D": "#4d4370"
+        },
+        "HOUSEHOLD_SKY": {
+          "name": "Household Sky",
+          "P": "#7fb3d6",
+          "S": "#f5f3ec",
+          "A": "#e07a4a",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#1b2230",
+          "D": "#3c4f6e"
+        },
+        "HOUSEHOLD_MUSTARD": {
+          "name": "Household Mustard",
+          "P": "#d1a73e",
+          "S": "#f2ead5",
+          "A": "#8a3b2e",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#221f17",
+          "D": "#4b5a3a"
+        },
+        "HOUSEHOLD_ASH_ROSE": {
+          "name": "Household Ash Rose",
+          "P": "#b98d8a",
+          "S": "#f1ece6",
+          "A": "#5e6b8a",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#241d1d",
+          "D": "#5a4a48"
+        },
+        "HOUSEHOLD_MOSS": {
+          "name": "Household Moss",
+          "P": "#5c6b3c",
+          "S": "#ede7d4",
+          "A": "#c4703a",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#1f2218",
+          "D": "#8a7a5a"
+        },
+        "HOUSEHOLD_CREAM": {
+          "name": "Household Cream",
+          "P": "#e6d9bc",
+          "S": "#f7f3ea",
+          "A": "#3e6a9a",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#232630",
+          "D": "#5d6c80"
+        },
+        "HOUSEHOLD_TEAL": {
+          "name": "Household Teal",
+          "P": "#2e7a78",
+          "S": "#efeadb",
+          "A": "#e0a03a",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#18201f",
+          "D": "#2f3a48"
+        },
+        "HOUSEHOLD_PEONY": {
+          "name": "Household Peony",
+          "P": "#c43d6a",
+          "S": "#f6efe8",
+          "A": "#f0c040",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#1c1a26",
+          "D": "#2e3a66"
+        },
+        "HOUSEHOLD_SNOW_PINE": {
+          "name": "Household Snow Pine",
+          "P": "#3e5a4a",
+          "S": "#f0eee8",
+          "A": "#b23a3a",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#191d1b",
+          "D": "#5a5f66"
+        },
+        "HOUSEHOLD_SHRINE": {
+          "name": "Household Shrine",
+          "P": "#e9e4d8",
+          "S": "#f6f3ec",
+          "A": "#c2352e",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#1d1b1e",
+          "D": "#7a3a34"
+        },
+        "HOUSEHOLD_CHESTNUT": {
+          "name": "Household Chestnut",
+          "P": "#8a4e2e",
+          "S": "#efe4d0",
+          "A": "#d6a24a",
+          "L": "#8a6a48",
+          "M": "#aab3b9",
+          "K": "#1f1813",
+          "D": "#3a4250"
+        }
+      },
+      "pool": {
+        "hair": [
+          "hc006_elders_bun",
+          "hc007_matrons_bun",
+          "hc008_festival_updo",
+          "hc009_childs_cut",
+          "hc010_balding_elder"
+        ],
+        "hair_colors": [
+          "RAVEN",
+          "ESPRESSO",
+          "CHESTNUT",
+          "AUBURN",
+          "GINGER",
+          "HONEY",
+          "WHEAT",
+          "ASH_BLONDE",
+          "SILVER",
+          "SNOW"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "SKY",
+          "JADE"
+        ],
+        "palettes": [
+          "HOUSEHOLD_INDIGO",
+          "HOUSEHOLD_SAKURA",
+          "HOUSEHOLD_MATCHA",
+          "HOUSEHOLD_PERSIMMON",
+          "HOUSEHOLD_MAPLE",
+          "HOUSEHOLD_PLUM",
+          "HOUSEHOLD_CHARCOAL",
+          "HOUSEHOLD_UMBER",
+          "HOUSEHOLD_WISTERIA",
+          "HOUSEHOLD_SKY",
+          "HOUSEHOLD_MUSTARD",
+          "HOUSEHOLD_ASH_ROSE",
+          "HOUSEHOLD_MOSS",
+          "HOUSEHOLD_CREAM",
+          "HOUSEHOLD_TEAL",
+          "HOUSEHOLD_PEONY",
+          "HOUSEHOLD_SNOW_PINE",
+          "HOUSEHOLD_SHRINE",
+          "HOUSEHOLD_CHESTNUT"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "wc006_side_fox_mask",
+          "wc007_flower_kanzashi",
+          "wc008_tenugui_kerchief",
+          "wc009_elders_cap",
+          "wc010_straw_sun_hat"
+        ],
+        "bottoms": [
+          "bc032_pleated_long_skirt",
+          "bc041_wrap_skirt",
+          "bc044_little_pleated_skirt",
+          "bc048_tiered_skirt"
+        ],
+        "complexions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "outfits": [
+        {
+          "id": "everyday_kimono",
+          "name": "Everyday Kimono",
+          "top": "tc026_everyday_kimono",
+          "bottom": "bc026_kimono_skirt",
+          "palettes": [
+            "HOUSEHOLD_SAKURA",
+            "HOUSEHOLD_MATCHA",
+            "HOUSEHOLD_WISTERIA",
+            "HOUSEHOLD_SKY"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "haori_kimono",
+          "name": "Haori over Kimono",
+          "top": "tc027_haori_kimono",
+          "bottom": "bc027_village_hakama",
+          "palettes": [
+            "HOUSEHOLD_PLUM",
+            "HOUSEHOLD_SNOW_PINE",
+            "HOUSEHOLD_CHARCOAL",
+            "HOUSEHOLD_UMBER"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "knit_cardigan",
+          "name": "Knit Cardigan",
+          "top": "tc028_knit_cardigan",
+          "bottom": "bc030_house_trousers",
+          "palettes": [
+            "HOUSEHOLD_PERSIMMON",
+            "HOUSEHOLD_MAPLE",
+            "HOUSEHOLD_MUSTARD",
+            "HOUSEHOLD_CHESTNUT",
+            "HOUSEHOLD_MOSS"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "checked_shirt",
+          "name": "Checked Shirt",
+          "top": "tc029_checked_shirt",
+          "bottom": "bc049_garden_trousers",
+          "rank": "civilian"
+        },
+        {
+          "id": "jinbei",
+          "name": "Jinbei",
+          "top": "tc030_jinbei_top",
+          "bottom": "bc031_jinbei_shorts",
+          "palettes": [
+            "HOUSEHOLD_INDIGO",
+            "HOUSEHOLD_CREAM",
+            "HOUSEHOLD_TEAL",
+            "HOUSEHOLD_PEONY",
+            "HOUSEHOLD_SKY"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "festival_yukata",
+          "name": "Festival Yukata",
+          "top": "tc031_festival_yukata_top",
+          "bottom": "bc050_lantern_skirt",
+          "palettes": [
+            "HOUSEHOLD_INDIGO",
+            "HOUSEHOLD_CREAM",
+            "HOUSEHOLD_TEAL",
+            "HOUSEHOLD_PEONY",
+            "HOUSEHOLD_SKY"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "summer_yukata",
+          "name": "Summer Yukata",
+          "top": "tc032_summer_yukata",
+          "bottom": "bc029_summer_yukata_hem",
+          "palettes": [
+            "HOUSEHOLD_INDIGO",
+            "HOUSEHOLD_CREAM",
+            "HOUSEHOLD_TEAL",
+            "HOUSEHOLD_PEONY",
+            "HOUSEHOLD_SKY"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "scholar",
+          "name": "Scholar's Robe",
+          "top": "tc033_scholar_robe",
+          "bottom": "bc043_quilted_trousers",
+          "palettes": [
+            "HOUSEHOLD_CHARCOAL",
+            "HOUSEHOLD_UMBER",
+            "HOUSEHOLD_SNOW_PINE",
+            "HOUSEHOLD_INDIGO",
+            "HOUSEHOLD_PLUM"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "shrine_attendant",
+          "name": "Shrine Attendant",
+          "top": "tc034_shrine_kosode",
+          "bottom": "bc028_shrine_hakama",
+          "palettes": [
+            "HOUSEHOLD_SHRINE",
+            "HOUSEHOLD_INDIGO",
+            "HOUSEHOLD_SNOW_PINE",
+            "HOUSEHOLD_SAKURA",
+            "HOUSEHOLD_CHARCOAL"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "padded_hanten",
+          "name": "Padded Hanten",
+          "top": "tc035_padded_hanten",
+          "bottom": "bc037_kasuri_kimono_skirt",
+          "palettes": [
+            "HOUSEHOLD_CHARCOAL",
+            "HOUSEHOLD_UMBER",
+            "HOUSEHOLD_MOSS",
+            "HOUSEHOLD_ASH_ROSE",
+            "HOUSEHOLD_SNOW_PINE"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "play_tee",
+          "name": "Play Clothes",
+          "top": "tc036_play_tee",
+          "bottom": "bc033_play_shorts",
+          "palettes": [
+            "HOUSEHOLD_SKY",
+            "HOUSEHOLD_PERSIMMON",
+            "HOUSEHOLD_TEAL",
+            "HOUSEHOLD_MUSTARD",
+            "HOUSEHOLD_MATCHA",
+            "HOUSEHOLD_PEONY"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "kappogi",
+          "name": "Kitchen Kappogi",
+          "top": "tc037_kappogi_apron",
+          "bottom": "bc035_monpe",
+          "rank": "civilian"
+        },
+        {
+          "id": "samue",
+          "name": "Samue Workwear",
+          "top": "tc038_samue_jacket",
+          "bottom": "bc034_field_trousers",
+          "palettes": [
+            "HOUSEHOLD_INDIGO",
+            "HOUSEHOLD_CHARCOAL",
+            "HOUSEHOLD_UMBER",
+            "HOUSEHOLD_MOSS",
+            "HOUSEHOLD_CHESTNUT"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "happi",
+          "name": "Festival Happi",
+          "top": "tc039_happi_coat",
+          "bottom": "bc040_festival_momohiki",
+          "palettes": [
+            "HOUSEHOLD_INDIGO",
+            "HOUSEHOLD_PEONY",
+            "HOUSEHOLD_MAPLE",
+            "HOUSEHOLD_TEAL",
+            "HOUSEHOLD_PERSIMMON"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "striped_sweater",
+          "name": "Striped Sweater",
+          "top": "tc040_striped_sweater",
+          "bottom": "bc042_corduroy_trousers",
+          "palettes": [
+            "HOUSEHOLD_PERSIMMON",
+            "HOUSEHOLD_MAPLE",
+            "HOUSEHOLD_MUSTARD",
+            "HOUSEHOLD_CHESTNUT",
+            "HOUSEHOLD_MOSS"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "knit_vest",
+          "name": "Knit Vest",
+          "top": "tc041_knit_vest_shirt",
+          "bottom": "bc030_house_trousers",
+          "palettes": [
+            "HOUSEHOLD_MOSS",
+            "HOUSEHOLD_CHESTNUT",
+            "HOUSEHOLD_MUSTARD",
+            "HOUSEHOLD_CHARCOAL",
+            "HOUSEHOLD_PLUM"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "blossom_blouse",
+          "name": "Blossom Blouse",
+          "top": "tc042_blossom_blouse",
+          "bottom": "bc036_checked_skirt",
+          "palettes": [
+            "HOUSEHOLD_SAKURA",
+            "HOUSEHOLD_MATCHA",
+            "HOUSEHOLD_WISTERIA",
+            "HOUSEHOLD_SKY"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "furisode",
+          "name": "Furisode",
+          "top": "tc043_furisode_kimono",
+          "bottom": "bc038_blossom_kimono_skirt",
+          "palettes": [
+            "HOUSEHOLD_PEONY",
+            "HOUSEHOLD_SAKURA",
+            "HOUSEHOLD_WISTERIA",
+            "HOUSEHOLD_MAPLE",
+            "HOUSEHOLD_TEAL"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "shawl_kimono",
+          "name": "Shawl Kimono",
+          "top": "tc044_shawl_kimono",
+          "bottom": "bc026_kimono_skirt",
+          "palettes": [
+            "HOUSEHOLD_PLUM",
+            "HOUSEHOLD_SNOW_PINE",
+            "HOUSEHOLD_CHARCOAL",
+            "HOUSEHOLD_UMBER"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "tasuki_kimono",
+          "name": "Tasuki Kimono",
+          "top": "tc045_tasuki_kimono",
+          "bottom": "bc047_maekake_apron",
+          "rank": "civilian"
+        },
+        {
+          "id": "onbu_parent",
+          "name": "Parent with Baby",
+          "top": "tc046_onbu_carrier",
+          "bottom": "bc046_wide_culottes",
+          "rank": "civilian"
+        },
+        {
+          "id": "veranda_summer",
+          "name": "Veranda Summer",
+          "top": "tc047_tenugui_undershirt",
+          "bottom": "bc039_cropped_linen_trousers",
+          "palettes": [
+            "HOUSEHOLD_INDIGO",
+            "HOUSEHOLD_CREAM",
+            "HOUSEHOLD_TEAL",
+            "HOUSEHOLD_PEONY",
+            "HOUSEHOLD_SKY"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "michiyuki",
+          "name": "Michiyuki Coat",
+          "top": "tc048_michiyuki_coat",
+          "bottom": "bc045_student_hakama",
+          "palettes": [
+            "HOUSEHOLD_PLUM",
+            "HOUSEHOLD_SNOW_PINE",
+            "HOUSEHOLD_CHARCOAL",
+            "HOUSEHOLD_UMBER"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "heko_obi_child",
+          "name": "Child's Heko-obi Kimono",
+          "top": "tc049_heko_obi_kimono",
+          "bottom": "bc031_jinbei_shorts",
+          "palettes": [
+            "HOUSEHOLD_SKY",
+            "HOUSEHOLD_SAKURA",
+            "HOUSEHOLD_CREAM",
+            "HOUSEHOLD_MATCHA",
+            "HOUSEHOLD_PEONY"
+          ],
+          "rank": "civilian"
+        },
+        {
+          "id": "miko_dance",
+          "name": "Shrine Maiden's Dance",
+          "top": "tc050_miko_chihaya",
+          "bottom": "bc028_shrine_hakama",
+          "palettes": [
+            "HOUSEHOLD_SHRINE",
+            "HOUSEHOLD_INDIGO",
+            "HOUSEHOLD_SNOW_PINE",
+            "HOUSEHOLD_SAKURA",
+            "HOUSEHOLD_CHARCOAL"
+          ],
+          "rank": "civilian"
         }
       ]
     }

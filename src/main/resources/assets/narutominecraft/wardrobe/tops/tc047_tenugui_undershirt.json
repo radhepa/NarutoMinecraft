@@ -1,0 +1,106 @@
+{
+  "id": "tc047_tenugui_undershirt",
+  "kind": "top",
+  "name": "Tenugui and Undershirt",
+  "gender": "unisex",
+  "texture": "tops/tc047_tenugui_undershirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "civilian"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "towel_neck",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        -2.5
+      ],
+      "size": [
+        6,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.16
+    },
+    {
+      "id": "towel_right",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        0,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "towel_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        0,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Ribbed white sleeveless undershirt with a striped tenugui towel slung round the neck."
+}

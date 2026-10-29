@@ -1,0 +1,134 @@
+{
+  "id": "wc010_straw_sun_hat",
+  "kind": "headwear",
+  "name": "Straw Sun Hat",
+  "gender": "unisex",
+  "texture": "headwear/wc010_straw_sun_hat.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "brim",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.9,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -7,
+        0,
+        -7
+      ],
+      "size": [
+        14,
+        1,
+        14
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -10.6,
+        -4
+      ],
+      "size": [
+        8,
+        3,
+        8
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "inflate": 0.64
+    },
+    {
+      "id": "ribbon_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.8,
+        -8.0,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        33,
+        16
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "ribbon_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -8.0,
+        4.7
+      ],
+      "rotation": [
+        10,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        38,
+        16
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [
+    "*"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Broad woven straw hat with a ribbon round the crown and two trailing ribbon ends."
+}

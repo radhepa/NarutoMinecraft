@@ -1,0 +1,308 @@
+{
+  "id": "tc043_furisode_kimono",
+  "kind": "top",
+  "name": "Furisode Kimono",
+  "gender": "female",
+  "texture": "tops/tc043_furisode_kimono.png",
+  "extrasHeight": 48,
+  "tags": [
+    "civilian",
+    "formal",
+    "kimono",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "furisode_right",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        1.4,
+        -2.0
+      ],
+      "size": [
+        5,
+        12,
+        4
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "furisode_left",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.4,
+        -2.0
+      ],
+      "size": [
+        5,
+        12,
+        4
+      ],
+      "uv": [
+        19,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        6.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        17
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "obi_bow",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        29,
+        17
+      ]
+    },
+    {
+      "id": "obi_wing_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        8.0,
+        3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -2,
+        -1.5,
+        0
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        38,
+        17
+      ]
+    },
+    {
+      "id": "obi_wing_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.0,
+        8.0,
+        3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        0,
+        -1.5,
+        0
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        45,
+        17
+      ]
+    },
+    {
+      "id": "obi_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        8.6,
+        3.2
+      ],
+      "rotation": [
+        4,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        52,
+        17
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "obi_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        8.6,
+        3.2
+      ],
+      "rotation": [
+        4,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        57,
+        17
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "obiage",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.7,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        27
+      ],
+      "inflate": 0.22
+    },
+    {
+      "id": "obijime",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        27
+      ],
+      "inflate": 0.26
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "Swinging-sleeve silk kimono strewn with blossoms, broad obi with a sash-scarf and a front cord."
+}

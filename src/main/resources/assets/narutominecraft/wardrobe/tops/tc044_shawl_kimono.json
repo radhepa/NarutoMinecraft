@@ -1,0 +1,308 @@
+{
+  "id": "tc044_shawl_kimono",
+  "kind": "top",
+  "name": "Shawl Kimono",
+  "gender": "unisex",
+  "texture": "tops/tc044_shawl_kimono.png",
+  "extrasHeight": 48,
+  "tags": [
+    "civilian",
+    "kimono",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sleeve_right",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "sleeve_left",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "obi_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        13
+      ]
+    },
+    {
+      "id": "obi_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.9,
+        9.4,
+        2.8
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        38,
+        13
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "obi_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        9.4,
+        2.8
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        43,
+        13
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "shawl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        -3
+      ],
+      "size": [
+        10,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        21
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "shawl_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        33,
+        21
+      ]
+    },
+    {
+      "id": "shawl_end_right",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.2,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        54,
+        21
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "shawl_end_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        1.2,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        30
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "Fine-striped kimono with a narrow obi and a knitted shawl over the shoulders, ends down the front."
+}

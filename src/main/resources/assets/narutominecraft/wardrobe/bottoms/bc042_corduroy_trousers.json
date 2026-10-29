@@ -1,0 +1,74 @@
+{
+  "id": "bc042_corduroy_trousers",
+  "kind": "bottom",
+  "name": "Corduroy Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bc042_corduroy_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "civilian",
+    "trousers"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Straight wale-corduroy trousers with a turned cuff, leather shoes."
+}

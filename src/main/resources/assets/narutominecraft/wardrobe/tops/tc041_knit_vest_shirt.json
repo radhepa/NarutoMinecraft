@@ -1,0 +1,75 @@
+{
+  "id": "tc041_knit_vest_shirt",
+  "kind": "top",
+  "name": "Knit Vest and Shirt",
+  "gender": "unisex",
+  "texture": "tops/tc041_knit_vest_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "civilian"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar_right",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        -0.2,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        24
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "collar_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        -0.2,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        -24
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "White long-sleeved shirt with pointed collar tips under a ribbed V-neck knit vest."
+}

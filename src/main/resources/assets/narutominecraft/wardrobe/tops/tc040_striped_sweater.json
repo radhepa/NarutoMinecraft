@@ -1,0 +1,48 @@
+{
+  "id": "tc040_striped_sweater",
+  "kind": "top",
+  "name": "Striped Sweater",
+  "gender": "unisex",
+  "texture": "tops/tc040_striped_sweater.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "civilian"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "turtleneck",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        -2
+      ],
+      "size": [
+        6,
+        2,
+        4
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.2
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Rib-knit pullover in broad stripes with a rolled turtleneck and deep ribbed cuffs and hem."
+}

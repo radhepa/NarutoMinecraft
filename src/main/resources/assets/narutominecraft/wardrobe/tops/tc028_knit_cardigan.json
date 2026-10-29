@@ -1,0 +1,48 @@
+{
+  "id": "tc028_knit_cardigan",
+  "kind": "top",
+  "name": "Knit Cardigan",
+  "gender": "unisex",
+  "texture": "tops/tc028_knit_cardigan.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "civilian",
+    "jacket"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "shirt_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Open chunky-knit cardigan over a pale collared shirt, ribbed cuffs and hem, patch pockets, wooden buttons."
+}
