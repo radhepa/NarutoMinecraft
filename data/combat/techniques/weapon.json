@@ -155,8 +155,8 @@
    ],
    "slice": "chunin",
    "requires": [
-    "item:shuriken_fuma",
-    "item:wire_spool"
+    "item:fuma_shuriken",
+    "item:ninja_wire"
    ],
    "tags": [
     "no_signs"

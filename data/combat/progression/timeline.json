@@ -64,7 +64,7 @@
     "Body Flicker, Hiding in Camouflage (sensei)",
     "the nature ceremony: your nature's C-rank signature (Ch 12)",
     "the scroll shop: D-rank of your nature and second C-rank options",
-    "clan technique tier 1 and kekkei genkai stage 1 (clan-born, Ch 12); a lesser clan technique (clanless, clan friendship 7)",
+    "a lesser clan technique for each friendly clan (clan friendship 7); clan weapons from clans after their welcome quest (Good Neighbor)",
     "genjutsu basics (False Surroundings, Hell Viewing) from the genjutsu master; Binding Tag"
    ],
    "sources": [
@@ -93,15 +93,14 @@
     "style tier 2 finishers (taijutsu rank 3)"
    ],
    "weapons": [
-    "ninjato and katana, Crescent Moon kenjutsu (weapons rank 4; Gekko from Genin)",
-    "manji shuriken, kusarigama, weighted chain, iron fan: chain and fan arts",
-    "blood pills"
+    "ninjato and katana, Crescent Moon kenjutsu (weapons rank 4; the bokken at the Gekko dojo first)",
+    "weighted chain: chain arts",
+    "blood pills, barrier tags"
    ],
    "ninjutsu": [
     "the exam reward: one C-rank chosen by your sensei after the preliminaries (Ch 18)",
     "Mystical Palm (the medic, control 50), Chakra Sensing (Yamanaka or the sensor master)",
     "Four-Tag Barrier, Hiding Mist, Mist Servant",
-    "Sharingan stage 1 (an Uchiha in the forest, Ch 16)",
     "nature chakra flow on blades"
    ],
    "sources": [
@@ -132,14 +131,14 @@
    ],
    "weapons": [
     "windmill shuriken, Windmill Triple",
-    "storage scroll barrage, Explosive Kunai Barrage, Rising Twin Dragons",
-    "the great fan; chakra flow on staffs"
+    "kusarigama, war fan, battle fan: chain and fan arts",
+    "storage scroll barrage, Explosive Kunai Barrage, Rising Twin Dragons"
    ],
    "ninjutsu": [
     "B-rank of every nature you hold",
     "the second nature (a nature master's three trials)",
     "Shadow Clone (sensei)",
-    "clan tier 2, kekkei genkai stage 2",
+    "Kindling Bond: Spark (when the story unlocks it)",
     "medical B-rank, Wide Sensing, Chakra Suppression, Bringer of Darkness, Mirror Reversal",
     "air step"
    ],
@@ -147,8 +146,8 @@
     "B-rank missions",
     "nature masters",
     "the sensei",
-    "clan elders",
-    "Kindling Bond (pending design)"
+    "friendly clans",
+    "Kindling Bond"
    ]
   },
   {
@@ -177,7 +176,7 @@
    "ninjutsu": [
     "A-rank: Lightning Blade, Spiralling Sphere, Multi Shadow Clone, great dragons",
     "the third nature",
-    "clan tier 3, kekkei genkai stage 3",
+    "Kindling Bond: Flame, then Blaze",
     "Resuscitation, Five Elements Seal, Temple of Nirvana, Chakra Reading",
     "wind glide"
    ],
@@ -234,7 +233,7 @@
    "ninjutsu": [
     "S-rank: the forbidden archive's scrolls (Great Fire Annihilation, Kirin, Earth Splitting, Thousand Sharks, Sea of Ink, Marked Teleport)",
     "Great Spiralling Sphere, Spiralling Shuriken",
-    "clan tier 4, kekkei genkai stage 4",
+    "Kindling Bond: Bonfire",
     "Strength of a Hundred"
    ],
    "sources": [

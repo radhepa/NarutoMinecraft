@@ -1169,6 +1169,6122 @@
    }
   },
   {
+   "id": "sim.player.1",
+   "focus": "balanced",
+   "level": 1,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 1,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 31,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.teammate_a.1",
+   "focus": "ninjutsu",
+   "level": 1,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 2,
+    "taijutsu": 1,
+    "weapons": 1
+   },
+   "control": 31,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.06
+  },
+  {
+   "id": "sim.teammate_b.1",
+   "focus": "taijutsu",
+   "level": 1,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 31,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:practice_kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.06,
+   "pup": true
+  },
+  {
+   "id": "sim.player.2",
+   "focus": "balanced",
+   "level": 2,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 32,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.teammate_a.2",
+   "focus": "ninjutsu",
+   "level": 2,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 2,
+    "taijutsu": 1,
+    "weapons": 1
+   },
+   "control": 32,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.12
+  },
+  {
+   "id": "sim.teammate_b.2",
+   "focus": "taijutsu",
+   "level": 2,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 32,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:practice_kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.12,
+   "pup": true
+  },
+  {
+   "id": "sim.player.3",
+   "focus": "balanced",
+   "level": 3,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 33,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.teammate_a.3",
+   "focus": "ninjutsu",
+   "level": 3,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 2,
+    "taijutsu": 1,
+    "weapons": 1
+   },
+   "control": 33,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.18
+  },
+  {
+   "id": "sim.teammate_b.3",
+   "focus": "taijutsu",
+   "level": 3,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 33,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:practice_kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.18,
+   "pup": true
+  },
+  {
+   "id": "sim.player.4",
+   "focus": "balanced",
+   "level": 4,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 2,
+    "weapons": 1
+   },
+   "control": 34,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.teammate_a.4",
+   "focus": "ninjutsu",
+   "level": 4,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 3,
+    "taijutsu": 1,
+    "weapons": 1
+   },
+   "control": 34,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.24
+  },
+  {
+   "id": "sim.teammate_b.4",
+   "focus": "taijutsu",
+   "level": 4,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 34,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:practice_kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.24,
+   "pup": true
+  },
+  {
+   "id": "sim.player.5",
+   "focus": "balanced",
+   "level": 5,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 2,
+    "weapons": 1
+   },
+   "control": 35,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.teammate_a.5",
+   "focus": "ninjutsu",
+   "level": 5,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 3,
+    "taijutsu": 1,
+    "weapons": 1
+   },
+   "control": 35,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.3
+  },
+  {
+   "id": "sim.teammate_b.5",
+   "focus": "taijutsu",
+   "level": 5,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 1,
+    "weapons": 1
+   },
+   "control": 35,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.3,
+   "pup": true
+  },
+  {
+   "id": "sim.player.6",
+   "focus": "balanced",
+   "level": 6,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 36,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:weapon.tag_kunai"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.teammate_a.6",
+   "focus": "ninjutsu",
+   "level": 6,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 3,
+    "taijutsu": 2,
+    "weapons": 1
+   },
+   "control": 36,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:gen.false_surroundings"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.36
+  },
+  {
+   "id": "sim.teammate_b.6",
+   "focus": "taijutsu",
+   "level": 6,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 2,
+    "weapons": 1
+   },
+   "control": 36,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.36,
+   "pup": true
+  },
+  {
+   "id": "sim.player.7",
+   "focus": "balanced",
+   "level": 7,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 2,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 37,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:weapon.tag_kunai"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.teammate_a.7",
+   "focus": "ninjutsu",
+   "level": 7,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 3,
+    "taijutsu": 2,
+    "weapons": 1
+   },
+   "control": 37,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:gen.false_surroundings"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.42
+  },
+  {
+   "id": "sim.teammate_b.7",
+   "focus": "taijutsu",
+   "level": 7,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 2,
+    "weapons": 1
+   },
+   "control": 37,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.42,
+   "pup": true
+  },
+  {
+   "id": "sim.player.8",
+   "focus": "balanced",
+   "level": 8,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 38,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.spark_needle",
+    "combat:weapon.tag_kunai"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.teammate_a.8",
+   "focus": "ninjutsu",
+   "level": 8,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 4,
+    "taijutsu": 2,
+    "weapons": 1
+   },
+   "control": 38,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_bullet",
+    "combat:gen.false_surroundings",
+    "combat:gen.hell_viewing"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.48
+  },
+  {
+   "id": "sim.teammate_b.8",
+   "focus": "taijutsu",
+   "level": 8,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 2,
+    "weapons": 1
+   },
+   "control": 38,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.48,
+   "pup": true
+  },
+  {
+   "id": "sim.player.9",
+   "focus": "balanced",
+   "level": 9,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 39,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.spark_needle",
+    "combat:weapon.tag_kunai"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 0
+   }
+  },
+  {
+   "id": "sim.teammate_a.9",
+   "focus": "ninjutsu",
+   "level": 9,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 4,
+    "taijutsu": 2,
+    "weapons": 1
+   },
+   "control": 39,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_bullet",
+    "combat:gen.false_surroundings",
+    "combat:gen.hell_viewing"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.54
+  },
+  {
+   "id": "sim.teammate_b.9",
+   "focus": "taijutsu",
+   "level": 9,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 2,
+    "weapons": 1
+   },
+   "control": 39,
+   "armour": {
+    "physical": 1,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.54,
+   "pup": true
+  },
+  {
+   "id": "sim.player.10",
+   "focus": "balanced",
+   "level": 10,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 40,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.tag_kunai"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.10",
+   "focus": "ninjutsu",
+   "level": 10,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 4,
+    "taijutsu": 2,
+    "weapons": 2
+   },
+   "control": 40,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.wild_wave",
+    "combat:water.water_bullet",
+    "combat:gen.false_surroundings",
+    "combat:gen.hell_viewing",
+    "combat:kurama.painted_illusion"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.6
+  },
+  {
+   "id": "sim.teammate_b.10",
+   "focus": "taijutsu",
+   "level": 10,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 40,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.6,
+   "pup": true
+  },
+  {
+   "id": "sim.player.11",
+   "focus": "balanced",
+   "level": 11,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 41,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.tag_kunai"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.11",
+   "focus": "ninjutsu",
+   "level": 11,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 4,
+    "taijutsu": 2,
+    "weapons": 2
+   },
+   "control": 41,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.wild_wave",
+    "combat:water.water_bullet",
+    "combat:gen.false_surroundings",
+    "combat:gen.hell_viewing",
+    "combat:kurama.painted_illusion"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.66
+  },
+  {
+   "id": "sim.teammate_b.11",
+   "focus": "taijutsu",
+   "level": 11,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 41,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.headhunter"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.66,
+   "pup": true
+  },
+  {
+   "id": "sim.player.12",
+   "focus": "balanced",
+   "level": 12,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 3,
+    "weapons": 3
+   },
+   "control": 42,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.12",
+   "focus": "ninjutsu",
+   "level": 12,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 5,
+    "taijutsu": 2,
+    "weapons": 2
+   },
+   "control": 42,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.wild_wave",
+    "combat:water.water_bullet",
+    "combat:gen.hell_viewing",
+    "combat:kurama.painted_illusion",
+    "combat:gen.sly_mind"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.72
+  },
+  {
+   "id": "sim.teammate_b.12",
+   "focus": "taijutsu",
+   "level": 12,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 5,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 42,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.72,
+   "pup": true
+  },
+  {
+   "id": "sim.player.13",
+   "focus": "balanced",
+   "level": 13,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 3,
+    "ninjutsu": 3,
+    "weapons": 3
+   },
+   "control": 43,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.13",
+   "focus": "ninjutsu",
+   "level": 13,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 5,
+    "taijutsu": 2,
+    "weapons": 2
+   },
+   "control": 43,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.wild_wave",
+    "combat:water.water_bullet",
+    "combat:gen.hell_viewing",
+    "combat:kurama.painted_illusion",
+    "combat:gen.sly_mind"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.78
+  },
+  {
+   "id": "sim.teammate_b.13",
+   "focus": "taijutsu",
+   "level": 13,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 5,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 43,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.78,
+   "pup": true
+  },
+  {
+   "id": "sim.player.14",
+   "focus": "balanced",
+   "level": 14,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 3,
+    "weapons": 3
+   },
+   "control": 44,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.14",
+   "focus": "ninjutsu",
+   "level": 14,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 6,
+    "taijutsu": 2,
+    "weapons": 2
+   },
+   "control": 44,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.wild_wave",
+    "combat:water.water_bullet",
+    "combat:kurama.painted_illusion",
+    "combat:gen.sly_mind",
+    "combat:gen.mist_servant"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.84
+  },
+  {
+   "id": "sim.teammate_b.14",
+   "focus": "taijutsu",
+   "level": 14,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 44,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.84,
+   "pup": true
+  },
+  {
+   "id": "sim.player.15",
+   "focus": "balanced",
+   "level": 15,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 3,
+    "weapons": 3
+   },
+   "control": 45,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.15",
+   "focus": "ninjutsu",
+   "level": 15,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 6,
+    "taijutsu": 2,
+    "weapons": 2
+   },
+   "control": 45,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.wild_wave",
+    "combat:water.water_bullet",
+    "combat:kurama.painted_illusion",
+    "combat:gen.sly_mind",
+    "combat:gen.mist_servant"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 1,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.9
+  },
+  {
+   "id": "sim.teammate_b.15",
+   "focus": "taijutsu",
+   "level": 15,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 2,
+    "weapons": 2
+   },
+   "control": 45,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.9,
+   "pup": true
+  },
+  {
+   "id": "sim.player.16",
+   "focus": "balanced",
+   "level": 16,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 4,
+    "weapons": 3
+   },
+   "control": 46,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.16",
+   "focus": "ninjutsu",
+   "level": 16,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 6,
+    "taijutsu": 3,
+    "weapons": 2
+   },
+   "control": 46,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.wild_wave",
+    "combat:water.water_bullet",
+    "combat:kurama.painted_illusion",
+    "combat:gen.sly_mind",
+    "combat:gen.mist_servant"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 1.96
+  },
+  {
+   "id": "sim.teammate_b.16",
+   "focus": "taijutsu",
+   "level": 16,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 46,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 1.96,
+   "pup": true
+  },
+  {
+   "id": "sim.player.17",
+   "focus": "balanced",
+   "level": 17,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 4,
+    "weapons": 3
+   },
+   "control": 47,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.17",
+   "focus": "ninjutsu",
+   "level": 17,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 6,
+    "taijutsu": 3,
+    "weapons": 2
+   },
+   "control": 47,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.wild_wave",
+    "combat:water.water_bullet",
+    "combat:kurama.painted_illusion",
+    "combat:gen.sly_mind",
+    "combat:gen.mist_servant"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.02
+  },
+  {
+   "id": "sim.teammate_b.17",
+   "focus": "taijutsu",
+   "level": 17,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 47,
+   "armour": {
+    "physical": 8,
+    "chakra": 0
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": null,
+   "gates": 0,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.02,
+   "pup": true
+  },
+  {
+   "id": "sim.player.18",
+   "focus": "balanced",
+   "level": 18,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.18",
+   "focus": "ninjutsu",
+   "level": 18,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 7,
+    "taijutsu": 3,
+    "weapons": 2
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.wild_wave",
+    "combat:water.water_bullet",
+    "combat:kurama.painted_illusion",
+    "combat:gen.sly_mind",
+    "combat:gen.mist_servant"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.08
+  },
+  {
+   "id": "sim.teammate_b.18",
+   "focus": "taijutsu",
+   "level": 18,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 48,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.08,
+   "pup": true
+  },
+  {
+   "id": "sim.player.19",
+   "focus": "balanced",
+   "level": 19,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 4,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 49,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 0,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.19",
+   "focus": "ninjutsu",
+   "level": 19,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 7,
+    "taijutsu": 3,
+    "weapons": 2
+   },
+   "control": 49,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.wild_wave",
+    "combat:water.water_bullet",
+    "combat:kurama.painted_illusion",
+    "combat:gen.sly_mind",
+    "combat:gen.mist_servant"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.14
+  },
+  {
+   "id": "sim.teammate_b.19",
+   "focus": "taijutsu",
+   "level": 19,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 3,
+    "weapons": 2
+   },
+   "control": 49,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.14,
+   "pup": true
+  },
+  {
+   "id": "sim.player.20",
+   "focus": "balanced",
+   "level": 20,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 5,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 50,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.false_darkness",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 1,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.20",
+   "focus": "ninjutsu",
+   "level": 20,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 7,
+    "taijutsu": 3,
+    "weapons": 3
+   },
+   "control": 50,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_prison",
+    "combat:water.wild_wave",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.2
+  },
+  {
+   "id": "sim.teammate_b.20",
+   "focus": "taijutsu",
+   "level": 20,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 3,
+    "weapons": 3
+   },
+   "control": 50,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.2,
+   "pup": true
+  },
+  {
+   "id": "sim.player.21",
+   "focus": "balanced",
+   "level": 21,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 5,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 51,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.false_darkness",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.manipulated_shuriken"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 1,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.21",
+   "focus": "ninjutsu",
+   "level": 21,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 7,
+    "taijutsu": 3,
+    "weapons": 3
+   },
+   "control": 51,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_prison",
+    "combat:water.wild_wave",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.26
+  },
+  {
+   "id": "sim.teammate_b.21",
+   "focus": "taijutsu",
+   "level": 21,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 3,
+    "weapons": 3
+   },
+   "control": 51,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.26,
+   "pup": true
+  },
+  {
+   "id": "sim.player.22",
+   "focus": "balanced",
+   "level": 22,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 5,
+    "ninjutsu": 5,
+    "weapons": 4
+   },
+   "control": 52,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.false_darkness",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 1,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.22",
+   "focus": "ninjutsu",
+   "level": 22,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 8,
+    "taijutsu": 3,
+    "weapons": 3
+   },
+   "control": 52,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_prison",
+    "combat:water.wild_wave",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.32
+  },
+  {
+   "id": "sim.teammate_b.22",
+   "focus": "taijutsu",
+   "level": 22,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 3,
+    "weapons": 3
+   },
+   "control": 52,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.32,
+   "pup": true
+  },
+  {
+   "id": "sim.player.23",
+   "focus": "balanced",
+   "level": 23,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 5,
+    "ninjutsu": 5,
+    "weapons": 4
+   },
+   "control": 53,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.false_darkness",
+    "combat:lightning.stunning_palm",
+    "combat:lightning.spark_needle",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 1,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.23",
+   "focus": "ninjutsu",
+   "level": 23,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 8,
+    "taijutsu": 3,
+    "weapons": 3
+   },
+   "control": 53,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_prison",
+    "combat:water.wild_wave",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.38
+  },
+  {
+   "id": "sim.teammate_b.23",
+   "focus": "taijutsu",
+   "level": 23,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 3,
+    "weapons": 3
+   },
+   "control": 53,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.38,
+   "pup": true
+  },
+  {
+   "id": "sim.player.24",
+   "focus": "balanced",
+   "level": 24,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 5,
+    "ninjutsu": 5,
+    "weapons": 5
+   },
+   "control": 54,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.false_darkness",
+    "combat:lightning.lightning_hound",
+    "combat:lightning.stunning_palm",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 1,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.24",
+   "focus": "ninjutsu",
+   "level": 24,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 8,
+    "taijutsu": 4,
+    "weapons": 3
+   },
+   "control": 54,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_dragon",
+    "combat:water.water_prison",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.44
+  },
+  {
+   "id": "sim.teammate_b.24",
+   "focus": "taijutsu",
+   "level": 24,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 4,
+    "weapons": 3
+   },
+   "control": 54,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.44,
+   "pup": true
+  },
+  {
+   "id": "sim.player.25",
+   "focus": "balanced",
+   "level": 25,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 5,
+    "ninjutsu": 5,
+    "weapons": 5
+   },
+   "control": 55,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.false_darkness",
+    "combat:lightning.lightning_hound",
+    "combat:lightning.stunning_palm",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 1,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.25",
+   "focus": "ninjutsu",
+   "level": 25,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 8,
+    "taijutsu": 4,
+    "weapons": 3
+   },
+   "control": 55,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_dragon",
+    "combat:water.water_prison",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.5
+  },
+  {
+   "id": "sim.teammate_b.25",
+   "focus": "taijutsu",
+   "level": 25,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 4,
+    "weapons": 3
+   },
+   "control": 55,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.5,
+   "pup": true
+  },
+  {
+   "id": "sim.player.26",
+   "focus": "balanced",
+   "level": 26,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 5,
+    "weapons": 5
+   },
+   "control": 56,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.false_darkness",
+    "combat:lightning.lightning_hound",
+    "combat:lightning.thunder_cage",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.26",
+   "focus": "ninjutsu",
+   "level": 26,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 9,
+    "taijutsu": 4,
+    "weapons": 3
+   },
+   "control": 56,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_dragon",
+    "combat:water.water_prison",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.56
+  },
+  {
+   "id": "sim.teammate_b.26",
+   "focus": "taijutsu",
+   "level": 26,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 9,
+    "ninjutsu": 4,
+    "weapons": 3
+   },
+   "control": 56,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.56,
+   "pup": true
+  },
+  {
+   "id": "sim.player.27",
+   "focus": "balanced",
+   "level": 27,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 5,
+    "weapons": 5
+   },
+   "control": 57,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.false_darkness",
+    "combat:lightning.lightning_hound",
+    "combat:lightning.thunder_cage",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.27",
+   "focus": "ninjutsu",
+   "level": 27,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 9,
+    "taijutsu": 4,
+    "weapons": 3
+   },
+   "control": 57,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_dragon",
+    "combat:water.water_prison",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.62
+  },
+  {
+   "id": "sim.teammate_b.27",
+   "focus": "taijutsu",
+   "level": 27,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 9,
+    "ninjutsu": 4,
+    "weapons": 3
+   },
+   "control": 57,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.62,
+   "pup": true
+  },
+  {
+   "id": "sim.player.28",
+   "focus": "balanced",
+   "level": 28,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 6,
+    "weapons": 5
+   },
+   "control": 58,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.false_darkness",
+    "combat:lightning.lightning_hound",
+    "combat:lightning.thunder_cage",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.28",
+   "focus": "ninjutsu",
+   "level": 28,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 9,
+    "taijutsu": 4,
+    "weapons": 4
+   },
+   "control": 58,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_dragon",
+    "combat:water.water_prison",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.68
+  },
+  {
+   "id": "sim.teammate_b.28",
+   "focus": "taijutsu",
+   "level": 28,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 9,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 58,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.68,
+   "pup": true
+  },
+  {
+   "id": "sim.player.29",
+   "focus": "balanced",
+   "level": 29,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 6,
+    "weapons": 5
+   },
+   "control": 59,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.false_darkness",
+    "combat:lightning.lightning_hound",
+    "combat:lightning.thunder_cage",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.29",
+   "focus": "ninjutsu",
+   "level": 29,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 9,
+    "taijutsu": 4,
+    "weapons": 4
+   },
+   "control": 59,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.water_dragon",
+    "combat:water.water_prison",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.74
+  },
+  {
+   "id": "sim.teammate_b.29",
+   "focus": "taijutsu",
+   "level": 29,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 9,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 59,
+   "armour": {
+    "physical": 14,
+    "chakra": 3
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 2,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.74,
+   "pup": true
+  },
+  {
+   "id": "sim.player.30",
+   "focus": "balanced",
+   "level": 30,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 6,
+    "weapons": 6
+   },
+   "control": 60,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:lightning.false_darkness",
+    "combat:lightning.lightning_hound",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.30",
+   "focus": "ninjutsu",
+   "level": 30,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 4,
+    "weapons": 4
+   },
+   "control": 60,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.great_waterfall",
+    "combat:water.water_dragon",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.8
+  },
+  {
+   "id": "sim.teammate_b.30",
+   "focus": "taijutsu",
+   "level": 30,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 60,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.8,
+   "pup": true
+  },
+  {
+   "id": "sim.player.31",
+   "focus": "balanced",
+   "level": 31,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 6,
+    "ninjutsu": 6,
+    "weapons": 6
+   },
+   "control": 61,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:lightning.false_darkness",
+    "combat:lightning.lightning_hound",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.31",
+   "focus": "ninjutsu",
+   "level": 31,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 4,
+    "weapons": 4
+   },
+   "control": 61,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.great_waterfall",
+    "combat:water.water_dragon",
+    "combat:gen.mist_servant",
+    "combat:gen.bringer_of_darkness",
+    "combat:kurama.painted_beasts"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 2,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.86
+  },
+  {
+   "id": "sim.teammate_b.31",
+   "focus": "taijutsu",
+   "level": 31,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 4,
+    "weapons": 4
+   },
+   "control": 61,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.86,
+   "pup": true
+  },
+  {
+   "id": "sim.player.32",
+   "focus": "balanced",
+   "level": 32,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 6,
+    "weapons": 6
+   },
+   "control": 62,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.32",
+   "focus": "ninjutsu",
+   "level": 32,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 5,
+    "weapons": 4
+   },
+   "control": 62,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.92
+  },
+  {
+   "id": "sim.teammate_b.32",
+   "focus": "taijutsu",
+   "level": 32,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 5,
+    "weapons": 4
+   },
+   "control": 62,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.92,
+   "pup": true
+  },
+  {
+   "id": "sim.player.33",
+   "focus": "balanced",
+   "level": 33,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 6,
+    "weapons": 6
+   },
+   "control": 63,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.33",
+   "focus": "ninjutsu",
+   "level": 33,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 5,
+    "weapons": 4
+   },
+   "control": 63,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 2.98
+  },
+  {
+   "id": "sim.teammate_b.33",
+   "focus": "taijutsu",
+   "level": 33,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 5,
+    "weapons": 4
+   },
+   "control": 63,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 2.98,
+   "pup": true
+  },
+  {
+   "id": "sim.player.34",
+   "focus": "balanced",
+   "level": 34,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 7,
+    "weapons": 6
+   },
+   "control": 64,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.34",
+   "focus": "ninjutsu",
+   "level": 34,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 5,
+    "weapons": 5
+   },
+   "control": 64,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.04
+  },
+  {
+   "id": "sim.teammate_b.34",
+   "focus": "taijutsu",
+   "level": 34,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 5,
+    "weapons": 5
+   },
+   "control": 64,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.04,
+   "pup": true
+  },
+  {
+   "id": "sim.player.35",
+   "focus": "balanced",
+   "level": 35,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 7,
+    "weapons": 6
+   },
+   "control": 65,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.35",
+   "focus": "ninjutsu",
+   "level": 35,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 5,
+    "weapons": 5
+   },
+   "control": 65,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.1
+  },
+  {
+   "id": "sim.teammate_b.35",
+   "focus": "taijutsu",
+   "level": 35,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 5,
+    "weapons": 5
+   },
+   "control": 65,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.1,
+   "pup": true
+  },
+  {
+   "id": "sim.player.36",
+   "focus": "balanced",
+   "level": 36,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 7,
+    "weapons": 7
+   },
+   "control": 66,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.36",
+   "focus": "ninjutsu",
+   "level": 36,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 6,
+    "weapons": 5
+   },
+   "control": 66,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.16
+  },
+  {
+   "id": "sim.teammate_b.36",
+   "focus": "taijutsu",
+   "level": 36,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 6,
+    "weapons": 5
+   },
+   "control": 66,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.16,
+   "pup": true
+  },
+  {
+   "id": "sim.player.37",
+   "focus": "balanced",
+   "level": 37,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 7,
+    "ninjutsu": 7,
+    "weapons": 7
+   },
+   "control": 67,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.37",
+   "focus": "ninjutsu",
+   "level": 37,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 6,
+    "weapons": 5
+   },
+   "control": 67,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.22
+  },
+  {
+   "id": "sim.teammate_b.37",
+   "focus": "taijutsu",
+   "level": 37,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 6,
+    "weapons": 5
+   },
+   "control": 67,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.22,
+   "pup": true
+  },
+  {
+   "id": "sim.player.38",
+   "focus": "balanced",
+   "level": 38,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 7,
+    "weapons": 7
+   },
+   "control": 68,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.38",
+   "focus": "ninjutsu",
+   "level": 38,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 6,
+    "weapons": 6
+   },
+   "control": 68,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.28
+  },
+  {
+   "id": "sim.teammate_b.38",
+   "focus": "taijutsu",
+   "level": 38,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 6,
+    "weapons": 6
+   },
+   "control": 68,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.28,
+   "pup": true
+  },
+  {
+   "id": "sim.player.39",
+   "focus": "balanced",
+   "level": 39,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 7,
+    "weapons": 7
+   },
+   "control": 69,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.39",
+   "focus": "ninjutsu",
+   "level": 39,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 6,
+    "weapons": 6
+   },
+   "control": 69,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 3,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.34
+  },
+  {
+   "id": "sim.teammate_b.39",
+   "focus": "taijutsu",
+   "level": 39,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 6,
+    "weapons": 6
+   },
+   "control": 69,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.34,
+   "pup": true
+  },
+  {
+   "id": "sim.player.40",
+   "focus": "balanced",
+   "level": 40,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 8,
+    "weapons": 7
+   },
+   "control": 70,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.40",
+   "focus": "ninjutsu",
+   "level": 40,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 7,
+    "weapons": 6
+   },
+   "control": 70,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.4
+  },
+  {
+   "id": "sim.teammate_b.40",
+   "focus": "taijutsu",
+   "level": 40,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 7,
+    "weapons": 6
+   },
+   "control": 70,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.4,
+   "pup": true
+  },
+  {
+   "id": "sim.player.41",
+   "focus": "balanced",
+   "level": 41,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 8,
+    "weapons": 7
+   },
+   "control": 71,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.41",
+   "focus": "ninjutsu",
+   "level": 41,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 7,
+    "weapons": 6
+   },
+   "control": 71,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.46
+  },
+  {
+   "id": "sim.teammate_b.41",
+   "focus": "taijutsu",
+   "level": 41,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 7,
+    "weapons": 6
+   },
+   "control": 71,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 4,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.46,
+   "pup": true
+  },
+  {
+   "id": "sim.player.42",
+   "focus": "balanced",
+   "level": 42,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 8,
+    "weapons": 8
+   },
+   "control": 72,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.42",
+   "focus": "ninjutsu",
+   "level": 42,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 7,
+    "weapons": 7
+   },
+   "control": 72,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.52
+  },
+  {
+   "id": "sim.teammate_b.42",
+   "focus": "taijutsu",
+   "level": 42,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 7,
+    "weapons": 7
+   },
+   "control": 72,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.52,
+   "pup": true
+  },
+  {
+   "id": "sim.player.43",
+   "focus": "balanced",
+   "level": 43,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 8,
+    "ninjutsu": 8,
+    "weapons": 8
+   },
+   "control": 73,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.43",
+   "focus": "ninjutsu",
+   "level": 43,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 7,
+    "weapons": 7
+   },
+   "control": 73,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.58
+  },
+  {
+   "id": "sim.teammate_b.43",
+   "focus": "taijutsu",
+   "level": 43,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 7,
+    "weapons": 7
+   },
+   "control": 73,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.58,
+   "pup": true
+  },
+  {
+   "id": "sim.player.44",
+   "focus": "balanced",
+   "level": 44,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 9,
+    "ninjutsu": 8,
+    "weapons": 8
+   },
+   "control": 74,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.44",
+   "focus": "ninjutsu",
+   "level": 44,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 8,
+    "weapons": 7
+   },
+   "control": 74,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.64
+  },
+  {
+   "id": "sim.teammate_b.44",
+   "focus": "taijutsu",
+   "level": 44,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 8,
+    "weapons": 7
+   },
+   "control": 74,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.64,
+   "pup": true
+  },
+  {
+   "id": "sim.player.45",
+   "focus": "balanced",
+   "level": 45,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 9,
+    "ninjutsu": 8,
+    "weapons": 8
+   },
+   "control": 75,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.45",
+   "focus": "ninjutsu",
+   "level": 45,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 8,
+    "weapons": 7
+   },
+   "control": 75,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:nin.spiral_sphere",
+    "combat:water.great_waterfall",
+    "combat:kurama.painted_beasts",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.7
+  },
+  {
+   "id": "sim.teammate_b.45",
+   "focus": "taijutsu",
+   "level": 45,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 8,
+    "weapons": 7
+   },
+   "control": 75,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.7,
+   "pup": true
+  },
+  {
+   "id": "sim.player.46",
+   "focus": "balanced",
+   "level": 46,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 9,
+    "ninjutsu": 9,
+    "weapons": 8
+   },
+   "control": 76,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.46",
+   "focus": "ninjutsu",
+   "level": 46,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 8,
+    "weapons": 8
+   },
+   "control": 76,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.76
+  },
+  {
+   "id": "sim.teammate_b.46",
+   "focus": "taijutsu",
+   "level": 46,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 8,
+    "weapons": 8
+   },
+   "control": 76,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.76,
+   "pup": true
+  },
+  {
+   "id": "sim.player.47",
+   "focus": "balanced",
+   "level": 47,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 9,
+    "ninjutsu": 9,
+    "weapons": 8
+   },
+   "control": 77,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.47",
+   "focus": "ninjutsu",
+   "level": 47,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 8,
+    "weapons": 8
+   },
+   "control": 77,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 4,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.82
+  },
+  {
+   "id": "sim.teammate_b.47",
+   "focus": "taijutsu",
+   "level": 47,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 8,
+    "weapons": 8
+   },
+   "control": 77,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.82,
+   "pup": true
+  },
+  {
+   "id": "sim.player.48",
+   "focus": "balanced",
+   "level": 48,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 9,
+    "ninjutsu": 9,
+    "weapons": 9
+   },
+   "control": 78,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.48",
+   "focus": "ninjutsu",
+   "level": 48,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 9,
+    "weapons": 8
+   },
+   "control": 78,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.88
+  },
+  {
+   "id": "sim.teammate_b.48",
+   "focus": "taijutsu",
+   "level": 48,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 9,
+    "weapons": 8
+   },
+   "control": 78,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.88,
+   "pup": true
+  },
+  {
+   "id": "sim.player.49",
+   "focus": "balanced",
+   "level": 49,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 9,
+    "ninjutsu": 9,
+    "weapons": 9
+   },
+   "control": 79,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.49",
+   "focus": "ninjutsu",
+   "level": 49,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 9,
+    "weapons": 8
+   },
+   "control": 79,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 3.94
+  },
+  {
+   "id": "sim.teammate_b.49",
+   "focus": "taijutsu",
+   "level": 49,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 9,
+    "weapons": 8
+   },
+   "control": 79,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 3.94,
+   "pup": true
+  },
+  {
+   "id": "sim.player.50",
+   "focus": "balanced",
+   "level": 50,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 9,
+    "weapons": 9
+   },
+   "control": 80,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.50",
+   "focus": "ninjutsu",
+   "level": 50,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 9,
+    "weapons": 9
+   },
+   "control": 80,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.0
+  },
+  {
+   "id": "sim.teammate_b.50",
+   "focus": "taijutsu",
+   "level": 50,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 9,
+    "weapons": 9
+   },
+   "control": 80,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.0,
+   "pup": true
+  },
+  {
+   "id": "sim.player.51",
+   "focus": "balanced",
+   "level": 51,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 9,
+    "weapons": 9
+   },
+   "control": 81,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.51",
+   "focus": "ninjutsu",
+   "level": 51,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 9,
+    "weapons": 9
+   },
+   "control": 81,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.06
+  },
+  {
+   "id": "sim.teammate_b.51",
+   "focus": "taijutsu",
+   "level": 51,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 9,
+    "weapons": 9
+   },
+   "control": 81,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.06,
+   "pup": true
+  },
+  {
+   "id": "sim.player.52",
+   "focus": "balanced",
+   "level": 52,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 9
+   },
+   "control": 82,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.52",
+   "focus": "ninjutsu",
+   "level": 52,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 10,
+    "weapons": 9
+   },
+   "control": 82,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.12
+  },
+  {
+   "id": "sim.teammate_b.52",
+   "focus": "taijutsu",
+   "level": 52,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 9
+   },
+   "control": 82,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.12,
+   "pup": true
+  },
+  {
+   "id": "sim.player.53",
+   "focus": "balanced",
+   "level": 53,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 9
+   },
+   "control": 83,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.53",
+   "focus": "ninjutsu",
+   "level": 53,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 10,
+    "weapons": 9
+   },
+   "control": 83,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.18
+  },
+  {
+   "id": "sim.teammate_b.53",
+   "focus": "taijutsu",
+   "level": 53,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 9
+   },
+   "control": 83,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.18,
+   "pup": true
+  },
+  {
+   "id": "sim.player.54",
+   "focus": "balanced",
+   "level": 54,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 84,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.54",
+   "focus": "ninjutsu",
+   "level": 54,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 10,
+    "weapons": 10
+   },
+   "control": 84,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.24
+  },
+  {
+   "id": "sim.teammate_b.54",
+   "focus": "taijutsu",
+   "level": 54,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 84,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.24,
+   "pup": true
+  },
+  {
+   "id": "sim.player.55",
+   "focus": "balanced",
+   "level": 55,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 85,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.55",
+   "focus": "ninjutsu",
+   "level": 55,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 10,
+    "weapons": 10
+   },
+   "control": 85,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.3
+  },
+  {
+   "id": "sim.teammate_b.55",
+   "focus": "taijutsu",
+   "level": 55,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 85,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.3,
+   "pup": true
+  },
+  {
+   "id": "sim.player.56",
+   "focus": "balanced",
+   "level": 56,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 86,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.56",
+   "focus": "ninjutsu",
+   "level": 56,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 10,
+    "weapons": 10
+   },
+   "control": 86,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.36
+  },
+  {
+   "id": "sim.teammate_b.56",
+   "focus": "taijutsu",
+   "level": 56,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 86,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.36,
+   "pup": true
+  },
+  {
+   "id": "sim.player.57",
+   "focus": "balanced",
+   "level": 57,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 87,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.57",
+   "focus": "ninjutsu",
+   "level": 57,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 10,
+    "weapons": 10
+   },
+   "control": 87,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.42
+  },
+  {
+   "id": "sim.teammate_b.57",
+   "focus": "taijutsu",
+   "level": 57,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 87,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.42,
+   "pup": true
+  },
+  {
+   "id": "sim.player.58",
+   "focus": "balanced",
+   "level": 58,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 88,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.58",
+   "focus": "ninjutsu",
+   "level": 58,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 10,
+    "weapons": 10
+   },
+   "control": 88,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.48
+  },
+  {
+   "id": "sim.teammate_b.58",
+   "focus": "taijutsu",
+   "level": 58,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 88,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.48,
+   "pup": true
+  },
+  {
+   "id": "sim.player.59",
+   "focus": "balanced",
+   "level": 59,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 89,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.59",
+   "focus": "ninjutsu",
+   "level": 59,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 10,
+    "weapons": 10
+   },
+   "control": 89,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.54
+  },
+  {
+   "id": "sim.teammate_b.59",
+   "focus": "taijutsu",
+   "level": 59,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 89,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.54,
+   "pup": true
+  },
+  {
+   "id": "sim.player.60",
+   "focus": "balanced",
+   "level": 60,
+   "nature": "lightning",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 90,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:lightning.lightning_blade",
+    "combat:nin.spiral_sphere",
+    "combat:lightning.false_darkness",
+    "combat:weapon.kunai_barrage"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "gates": 2,
+   "tools": {
+    "item:shuriken": 20,
+    "item:kunai": 6,
+    "item:paper_bomb": 2
+   }
+  },
+  {
+   "id": "sim.teammate_a.60",
+   "focus": "ninjutsu",
+   "level": 60,
+   "nature": "water",
+   "ranks": {
+    "ninjutsu": 10,
+    "taijutsu": 10,
+    "weapons": 10
+   },
+   "control": 90,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:water.thousand_sharks",
+    "combat:nin.spiral_sphere",
+    "combat:gen.temple_of_nirvana",
+    "combat:kurama.living_canvas",
+    "combat:gen.false_world"
+   ],
+   "style": "combat:style.academy_basics",
+   "style_tier": 5,
+   "melee": "item:kunai",
+   "thrown": "item:shuriken",
+   "tools": {
+    "item:shuriken": 10
+   },
+   "niche": "genjutsu",
+   "niche_edge": 4.6
+  },
+  {
+   "id": "sim.teammate_b.60",
+   "focus": "taijutsu",
+   "level": 60,
+   "nature": "earth",
+   "ranks": {
+    "taijutsu": 10,
+    "ninjutsu": 10,
+    "weapons": 10
+   },
+   "control": 90,
+   "armour": {
+    "physical": 16,
+    "chakra": 5
+   },
+   "techniques": [
+    "combat:nin.substitution",
+    "combat:nin.clone",
+    "combat:nin.body_flicker",
+    "combat:earth.mud_river",
+    "combat:earth.hardening"
+   ],
+   "style": "combat:style.strong_fist",
+   "style_tier": 5,
+   "melee": null,
+   "gates": 6,
+   "thrown": "item:kunai",
+   "tools": {
+    "item:kunai": 6
+   },
+   "niche": "taijutsu",
+   "niche_edge": 4.6,
+   "pup": true
+  },
+  {
    "id": "sim.beta.taijutsu.3",
    "focus": "taijutsu",
    "level": 3,
@@ -1191,7 +7307,7 @@
    "style_tier": 1,
    "melee": null,
    "gates": 0,
-   "thrown": "item:kunai_practice",
+   "thrown": "item:practice_kunai",
    "tools": {
     "item:kunai": 6
    }
@@ -1217,8 +7333,8 @@
    ],
    "style": "combat:style.academy_blade",
    "style_tier": 1,
-   "melee": "item:kunai_practice",
-   "thrown": "item:shuriken_practice",
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
    "tools": {
     "item:shuriken": 30,
     "item:kunai": 10,
@@ -1246,8 +7362,8 @@
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
-   "melee": "item:kunai_practice",
-   "thrown": "item:shuriken_practice",
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
    "tools": {
     "item:shuriken": 10
    }
@@ -1273,8 +7389,8 @@
    ],
    "style": "combat:style.academy_basics",
    "style_tier": 1,
-   "melee": "item:kunai_practice",
-   "thrown": "item:shuriken_practice",
+   "melee": "item:practice_kunai",
+   "thrown": "item:practice_shuriken",
    "gates": 0,
    "tools": {
     "item:shuriken": 20,

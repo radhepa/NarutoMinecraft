@@ -5,12 +5,14 @@
   "styles": [
    "combat:style.academy_basics",
    "combat:style.strong_fist",
-   "combat:style.iron_guard",
+   "combat:style.iron_guard"
+  ],
+  "npc_styles": [
    "combat:style.gentle_fist",
    "combat:style.iron_body",
    "combat:style.beast_fang"
   ],
-  "moves": "Academy taijutsu in full (14 moves: the chain, heavy, dash attacks, sweep, launcher, a 4-hit air string, counter, palm rush); Strong Fist tiers 1 and 2; Iron Guard tier 1; the clan styles' tier 1",
+  "moves": "Academy taijutsu in full (14 moves: the chain, heavy, dash attacks, sweep, launcher, a 4-hit air string, counter, palm rush); Strong Fist tiers 1 and 2; Iron Guard tier 1. The clan styles (Gentle Fist, Iron Body, Beast Fang) are NPC kits while the player is clanless",
   "systems": [
    "block (Beta 1)",
    "parry and counter (Beta 2)",
@@ -23,36 +25,45 @@
  },
  "weapons": {
   "items": [
-   "item:kunai_practice",
-   "item:shuriken_practice",
+   "item:practice_kunai",
+   "item:practice_shuriken",
    "item:kunai",
    "item:shuriken",
-   "item:shuriken_manji",
+   "item:manji_shuriken",
    "item:senbon",
    "item:tanto",
+   "item:bokken",
    "item:ninjato",
    "item:katana",
    "item:kokuto",
-   "item:clan_staff",
+   "item:sarutobi_staff",
    "item:bo_staff",
-   "item:kusarigama",
-   "item:chain_weight",
-   "item:tessen",
-   "item:mace",
-   "item:knuckle_wraps"
+   "item:weighted_chain",
+   "item:iron_mace",
+   "item:knuckle_wraps",
+   "item:knuckle_guards"
   ],
   "tools": [
    "item:paper_bomb",
    "item:smoke_bomb",
    "item:flash_bomb",
-   "item:wire_spool",
-   "item:caltrops",
+   "item:stink_bomb",
+   "item:ninja_wire",
+   "item:makibishi",
    "item:sealing_tag",
+   "item:barrier_tag",
    "item:tool_pouch",
+   "item:tool_pouch_large",
    "item:soldier_pill",
    "item:blood_pill",
-   "item:poultice",
+   "item:food_pill",
+   "item:chakra_candy",
+   "item:herbal_poultice",
    "item:antidote",
+   "item:burn_salve",
+   "item:eye_drops",
+   "item:insect_repellent",
+   "item:scent_powder",
    "item:coating_numbing",
    "item:coating_sleep",
    "item:coating_venom"
@@ -66,8 +77,7 @@
    "combat:style.monkey_staff",
    "combat:style.mace_arts",
    "combat:style.crescent_moon",
-   "combat:style.chain_arts",
-   "combat:style.fan_arts"
+   "combat:style.chain_arts"
   ],
   "systems": [
    "throw, aim, retrieval, wire tethers",
@@ -113,33 +123,6 @@
    "combat:weapon.lightning_flow"
   ],
   "count": 32,
-  "clan_tier_1": [
-   "combat:senju.binding_roots",
-   "combat:uzumaki.sealing_chains",
-   "combat:uchiha.phoenix_shuriken",
-   "combat:hyuga.gentle_fist",
-   "combat:nara.shadow_possession",
-   "combat:akimichi.expansion",
-   "combat:yamanaka.mind_disturbance",
-   "combat:inuzuka.fang_over_fang",
-   "combat:sarutobi.clan_staff",
-   "combat:aburame.insect_swarm",
-   "combat:hatake.ninken_tracker",
-   "combat:kurama.painted_illusion",
-   "combat:shimura.vacuum_blades",
-   "combat:yuhi.tree_binding",
-   "combat:gekko.crescent_moon_dance",
-   "combat:shiranui.needle_spit",
-   "combat:morino.stern_presence",
-   "combat:umino.cover",
-   "combat:haruno.chakra_precision",
-   "combat:namiashi.wave_step",
-   "combat:hagane.mace_arts",
-   "combat:kinoshita.trap_craft",
-   "combat:tsuchigumo.earth_binding",
-   "combat:suzuran.coating_craft",
-   "combat:tobari.night_curtain"
-  ],
   "lesser": [
    "combat:senju.vitality_breath",
    "combat:uzumaki.seal_basics",
@@ -167,10 +150,38 @@
    "combat:suzuran.herb_lore",
    "combat:tobari.soft_steps"
   ],
-  "kekkei_genkai": [
-   "Byakugan stage 1 (Beta 2)",
-   "Wood Release stage 1 (Beta 2)",
-   "Sharingan stage 1 (Beta 3)"
+  "lesser_note": "The player is clanless (the owner's decision): their clan route is these lesser techniques, one per friendly clan at clan friendship 7, plus clan weapons and clan-taught styles",
+  "npc_clan_tier_1": [
+   "combat:senju.binding_roots",
+   "combat:uzumaki.sealing_chains",
+   "combat:uchiha.phoenix_shuriken",
+   "combat:hyuga.gentle_fist",
+   "combat:nara.shadow_possession",
+   "combat:akimichi.expansion",
+   "combat:yamanaka.mind_disturbance",
+   "combat:inuzuka.fang_over_fang",
+   "combat:sarutobi.clan_staff",
+   "combat:aburame.insect_swarm",
+   "combat:hatake.ninken_tracker",
+   "combat:kurama.painted_illusion",
+   "combat:shimura.vacuum_blades",
+   "combat:yuhi.tree_binding",
+   "combat:gekko.crescent_moon_dance",
+   "combat:shiranui.needle_spit",
+   "combat:morino.stern_presence",
+   "combat:umino.cover",
+   "combat:haruno.chakra_precision",
+   "combat:namiashi.wave_step",
+   "combat:hagane.mace_arts",
+   "combat:kinoshita.trap_craft",
+   "combat:tsuchigumo.earth_binding",
+   "combat:suzuran.coating_craft",
+   "combat:tobari.night_curtain"
+  ],
+  "npc_kekkei_genkai": [
+   "Byakugan stage 1",
+   "Wood Release stage 1",
+   "Sharingan stage 1 (an Uchiha classmate, Beta 3)"
   ],
   "systems": [
    "typed and radial signs, prefix hints, auto-sign",
@@ -183,16 +194,16 @@
    "nature combos with teammates"
   ]
  },
- "per_player": "A single beta player ends with about 10 to 14 techniques (Academy 5, sensei 3 to 4, nature 2 to 3, clan or lesser 1 to 2, exam reward 1), two or three styles, and five to eight weapons and tools in regular use",
+ "per_player": "A single beta player ends with about 10 to 14 techniques (Academy 5, sensei 3 to 4, nature 2 to 3, lesser 1 to 3, exam reward 1), two or three styles, and five to eight weapons and tools in regular use",
  "enemies": "22 human and 11 animal enemy types reachable in the beta, 9 beta bosses",
  "not_in_beta": [
   "B-rank and above",
   "inner gates",
   "Shadow Clone",
   "second nature",
-  "clan tiers 2 to 4",
+  "clan tiers 2 to 4 (NPC)",
   "Swaying Willow, Blossom Strength, Lightning Body, White Fang",
-  "windmill shuriken and great fan",
+  "windmill shuriken, kusarigama and the fans",
   "medical and sensing above C",
   "Kindling Bond"
  ]

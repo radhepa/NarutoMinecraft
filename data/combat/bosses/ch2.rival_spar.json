@@ -39,7 +39,7 @@
   "combat:nin.substitution"
  ],
  "weapons": [
-  "item:kunai_practice"
+  "item:practice_kunai"
  ],
  "style": "combat:style.academy_basics",
  "notes": "Teaches combo, heavy, dodge and block; losing is allowed and remembered (bond: rivalry)",

@@ -1,0 +1,39 @@
+{
+ "format": 1,
+ "id": "combat:enemy.legend_rogue",
+ "name": "Legendary missing-nin",
+ "kind": "human",
+ "tier": "boss",
+ "rank": "jonin",
+ "levels": [
+  45,
+  60
+ ],
+ "band": "mid",
+ "slice": "road",
+ "style": "combat:style.academy_basics",
+ "weapons": [
+  "item:katana",
+  "item:kunai"
+ ],
+ "techniques": [
+  "combat:nin.substitution",
+  "combat:nin.multi_shadow_clone",
+  "combat:water.water_dragon",
+  "combat:water.hiding_mist",
+  "combat:lightning.lightning_blade",
+  "combat:earth.flow_rampart"
+ ],
+ "tools": {
+  "item:paper_bomb": 6
+ },
+ "armour": {
+  "physical": 8,
+  "chakra": 8,
+  "will": 30
+ },
+ "traits": [],
+ "ai": {},
+ "barks": "rogue",
+ "note": "An S-rank bounty: no story, a neutral legend of the bingo book"
+}

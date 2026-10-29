@@ -12,7 +12,7 @@
  "band": "far",
  "slice": "beta3",
  "weapons": [
-  "item:tessen"
+  "item:war_fan"
  ],
  "techniques": [
   "combat:nin.substitution",

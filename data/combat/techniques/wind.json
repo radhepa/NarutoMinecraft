@@ -274,14 +274,14 @@
      "ticks": 20
     }
    ],
-   "mechanic": "Swing a great fan: a tornado of blades that walks 16 blocks forward (needs item:great_fan)",
+   "mechanic": "Swing a great fan: a tornado of blades that walks 16 blocks forward (needs item:battle_fan)",
    "counters": "fire jutsu (fire beats and swallows wind), an earth wall, a heavy stance (poise)",
    "teach": [
     "mentor:role:nature_master.wind"
    ],
    "slice": "jonin",
    "requires": [
-    "item:great_fan"
+    "item:battle_fan"
    ],
    "tags": [
     "no_signs"

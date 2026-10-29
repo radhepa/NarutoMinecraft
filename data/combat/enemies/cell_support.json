@@ -13,7 +13,7 @@
  "slice": "beta2",
  "weapons": [
   "item:shuriken",
-  "item:wire_spool"
+  "item:ninja_wire"
  ],
  "techniques": [
   "combat:nin.substitution",

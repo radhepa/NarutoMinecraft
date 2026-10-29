@@ -50,8 +50,15 @@ final class Battle {
     final List<Fighter> fighters = new ArrayList<>();
     private final PriorityQueue<Event> events = new PriorityQueue<>((a, b) -> a.tick != b.tick ? Long.compare(a.tick, b.tick) : Long.compare(a.seq, b.seq));
     private final Map<Pillar, Double> playerDamage = new EnumMap<>(Pillar.class);
+    /** What each fighter did: damage dealt, ticks of control (stun, bind, fear...) applied to enemies. */
+    final Map<Fighter, double[]> ledger = new java.util.HashMap<>();
     private long now, seq;
     boolean trace;
+    /** Kindling Bond for this fight: the player's tier with the teammates, the bond web, and whether Bonfire is open. */
+    dev.shinobi.combat.Kindle.Tier kindle = dev.shinobi.combat.Kindle.Tier.NONE;
+    double web;
+    boolean bonfire, unisonUsed;
+    private long linkUntil;
     private CombatData.Boss boss;
     private Fighter bossFighter;
     private int phase;
@@ -62,6 +69,17 @@ final class Battle {
     void boss(CombatData.Boss b, Fighter f) { this.boss = b; this.bossFighter = f; this.phase = 1; }
 
     Result run() {
+        var player = player();
+        if (player != null && kindle.ordinal() >= dev.shinobi.combat.Kindle.Tier.FLAME.ordinal())
+            linkUntil = dev.shinobi.combat.Kindle.EmberLink.TICKS;
+        if (player != null && bonfire) {
+            var form = dev.shinobi.combat.Kindle.bonfire(web);
+            for (var f : fighters) if (f.side == player.side && f.pillars) {
+                f.kindleDamage = f == player ? form.damage() : form.allyPower();
+                f.kindleTaken = f == player ? form.taken() : 1;
+            }
+            at(form.ticks(), () -> { for (var f : fighters) { f.kindleDamage = 1; f.kindleTaken = 1; } });
+        }
         for (; now < MAX_TICKS; now++) {
             tickFighters();
             while (!events.isEmpty() && events.peek().tick <= now) events.poll().run.run();
@@ -72,6 +90,24 @@ final class Battle {
         }
         return result(1, true);
     }
+    private Fighter player() { for (var f : fighters) if (f.player) return f; return null; }
+
+    /** Kindle: when a bonded teammate casts, the player may push chakra into it (once per ally per cooldown). */
+    private double kindled(Fighter caster, CombatData.Technique tech, double cost) {
+        var p = player();
+        if (kindle == dev.shinobi.combat.Kindle.Tier.NONE || p == null || caster == p || !caster.pillars || caster.side != p.side || !p.alive()) return 1;
+        String key = "kindle:" + caster.name;
+        double pay = dev.shinobi.combat.Kindle.cost(cost, kindle);
+        while (!p.kindles.isEmpty() && now - p.kindles.peekFirst() > 1200) p.kindles.pollFirst();
+        var burn = dev.shinobi.combat.Kindle.overuse(p.kindles.size() + 1, p.chakra.max());
+        if (!p.cd.ready(key, now) || p.chakra.value() < pay + burn.chakra() + 10) return 1;
+        p.chakra.drain(pay + burn.chakra());
+        p.stamina.spend(burn.stamina());
+        p.cd.start(key, now, dev.shinobi.combat.Kindle.cooldown(kindle));
+        p.kindles.addLast(now);
+        return dev.shinobi.combat.Kindle.boost(kindle).power();
+    }
+
     private Result result(int winner, boolean timeout) {
         double hp = fighters.stream().filter(f -> f.player).mapToDouble(Fighter::hpFraction).findFirst().orElse(0);
         return new Result(winner, now, Math.max(0, hp), playerDamage, timeout);
@@ -142,6 +178,7 @@ final class Battle {
         }
         for (var tech : f.techniques) if (selfBuff(f, tech)) return;
         if (decoy(f)) return;
+        if (unison(f, t)) return;
         if (t.status.has("decoy") && !f.player && f.side != t.side && now >= f.fooledUntil && rng.chance(0.6)) {
             f.fooledUntil = now + t.status.remaining("decoy");
             f.busyUntil = now + 30;
@@ -157,6 +194,22 @@ final class Battle {
         if (best != null) { best.run(); f.busyUntil += f.think; return; }
         if (flicker(f, t, d)) return;
         move(f, t, d);
+    }
+
+    /** A unison technique (Blaze): once a fight, the player and a teammate strike as one: two A-rank casts in one blow. */
+    private boolean unison(Fighter f, Fighter t) {
+        if (!f.player || kindle != dev.shinobi.combat.Kindle.Tier.BLAZE || unisonUsed || t.hpFraction() > 0.7 || f.distance(t) > 12) return false;
+        Fighter mate = null;
+        for (var o : fighters) if (o != f && o.side == f.side && o.pillars && o.alive() && o.chakra.value() >= 25) mate = o;
+        if (mate == null || f.chakra.value() < 25) return false;
+        unisonUsed = true;
+        f.chakra.drain(25);
+        mate.chakra.drain(25);
+        mate.busyUntil = Math.max(mate.busyUntil, now + 20);
+        f.busyUntil = now + 24;
+        schedule(new Strike(f, t, now + 20, 20, Delivery.JUTSU, 42, "ninjutsu.none", 60, Pillar.NINJUTSU, f.rankOf(Pillar.NINJUTSU), 1, List.of(), 4,
+                "combat:unison", true, false, true, 3, new Chain(), 0));
+        return true;
     }
 
     /** The Clone Technique as a defence: when pressed close, copies run off and each enemy may chase one. */
@@ -480,8 +533,10 @@ final class Battle {
             boolean knocks = false;
             for (var s : statuses) if (s.getKey().equals("knocked_down")) knocks = true;
             boolean melee = tech.shapeType().equals("melee");
+            double k = kindled(f, tech, cost);
             schedule(new Strike(f, t, now + travel, melee ? cast + travel : travel, melee ? Delivery.MELEE : Delivery.JUTSU,
-                    tech.power() * 1.03, type, tech.power() * 1.2, pillar, rank, f.buffDamage, statuses, radius, tech.id(), tech.breaksGuard(),
+                    tech.power() * 1.03, type, tech.power() * 1.2, pillar, rank, f.buffDamage * k, statuses,
+                    radius * (k > 1 ? dev.shinobi.combat.Kindle.boost(kindle).area() : 1), tech.id(), tech.breaksGuard(),
                     false, knocks, kb, new Chain(), 0));
         });
     }
@@ -525,12 +580,24 @@ final class Battle {
         if (guard == Guard.NONE && f0.substitutes && r.hp() >= 0.15 * f0.maxHp && substitute(f0, by)) return;
         if (guard == Guard.BLOCK && f0 == s.to()) s.chain().blocked = true;
         else if (f0 == s.to()) s.chain().landed = true;
-        f0.hp -= r.hp();
+        double dealt = r.hp() * f0.kindleTaken;
+        if (now < linkUntil && f0.side == 0 && f0.pillars) {
+            var linked = fighters.stream().filter(o -> o.side == 0 && o.pillars && o.alive()).toList();
+            if (linked.size() > 1) {
+                for (var o : linked) if (o != f0) o.hp -= dealt * (1 - dev.shinobi.combat.Kindle.EmberLink.KEEP) / (linked.size() - 1);
+                dealt *= dev.shinobi.combat.Kindle.EmberLink.KEEP;
+            }
+        }
+        f0.hp -= dealt;
+        ledger.computeIfAbsent(by, k -> new double[2])[0] += r.hp();
         if (trace) System.out.printf(java.util.Locale.ROOT, "%5d %-34s -> %-34s %-18s %-6s %5.1f  hp %5.1f/%5.1f%n", now, by.name, f0.name,
                 s.tech() != null ? s.tech().replace("combat:", "") : s.delivery().name().toLowerCase(), guard, r.hp(), f0.hp, f0.maxHp);
         if (by.player) playerDamage.merge(s.tech() != null && s.pillar() == Pillar.NINJUTSU ? Pillar.NINJUTSU : s.pillar(), r.hp(), Double::sum);
         if (r.chakraDrain() > 0) f0.chakra.drain(r.chakraDrain());
         f0.status.damaged();
+        if (by.pup && s.delivery() == Delivery.MELEE && guard == Guard.NONE && ++by.landed % 3 == 0)
+            at(now + 4, () -> { if (f0.alive()) schedule(new Strike(by, f0, now, 0, Delivery.MELEE, 2.0, "physical.slash", 3, Pillar.TAIJUTSU,
+                    by.rankOf(Pillar.TAIJUTSU), 1, List.of(), 0, "pup", false, false, false, 0, new Chain(), 1)); });
         if (r.hp() > 0) {
             by.momentum = Math.min(100, by.momentum + (guard == Guard.NONE ? 6 : 2));
             f0.momentum = Math.max(0, f0.momentum - 30);
@@ -554,9 +621,12 @@ final class Battle {
                 int ticks = st.getValue();
                 if (st.getKey().equals("genjutsu") || st.getKey().equals("fear") || st.getKey().equals("confused"))
                     ticks = (int) Math.min((ticks > 0 ? ticks : 60) * Damage.willScale(f0.will), 30);
-                if (ticks >= 0) f0.status.apply(st.getKey(), ticks, now);
+                if (ticks >= 0) {
+                    int applied = f0.status.apply(st.getKey(), ticks, now);
+                    if (CONTROL.contains(st.getKey())) ledger.computeIfAbsent(by, k -> new double[2])[1] += applied;
+                }
             }
-            if (s.knocksDown()) f0.status.apply("knocked_down", 24, now);
+            if (s.knocksDown()) ledger.computeIfAbsent(by, k -> new double[2])[1] += f0.status.apply("knocked_down", 24, now);
             if (s.launches()) { f0.status.apply("airborne", 20, now); by.airborneTarget = true; }
         }
         if (s.knockback() > 0) f0.x = Math.clamp(f0.x + Math.signum(f0.x - by.x == 0 ? 1 : f0.x - by.x) * s.knockback() * (guard == Guard.BLOCK ? 0.5 : 1), -ARENA, ARENA);
@@ -596,13 +666,18 @@ final class Battle {
     }
 
     private Damage.Attack attack(Fighter by, Fighter t, double base, String type, Delivery d, Pillar pillar, int rank, double mult) {
-        if (by.player) return Damage.Attack.player(base, type, d, by.level, pillar, rank, mult);
+        if (by.pillars) {
+            boolean niche = "taijutsu".equals(by.niche) && pillar == Pillar.TAIJUTSU
+                    || "genjutsu".equals(by.niche) && (type.equals("genjutsu") || pillar == Pillar.NINJUTSU);
+            int level = by.level + (niche ? (int) Math.round(by.nicheEdge) : 0);
+            return Damage.Attack.player(base, type, d, level, pillar, rank, mult * by.kindleDamage);
+        }
         double difficulty = by.side == 1 && t.side == 0 ? diff.enemyDamage() : 1;
         return Damage.Attack.enemy(base, type, d, by.level, mult * by.damageMult, difficulty);
     }
     private Damage.Defence defence(Fighter t, Guard g, String type) {
         double block = t.moves.id().contains("iron_guard") ? 0.75 : Damage.BLOCK_MELEE;
         double taken = t.status.takenMult(type) * (type.startsWith("physical") ? t.buffTaken : 1);
-        return new Damage.Defence(t.player, t.level, t.physical, t.chakraArmour, t.will, t.affinity, g, block, taken);
+        return new Damage.Defence(t.pillars, t.level, t.physical, t.chakraArmour, t.will, t.affinity, g, block, taken);
     }
 }

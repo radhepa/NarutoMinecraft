@@ -49,6 +49,7 @@ def build():
     write("core/difficulty.json", core.DIFFICULTY)
     write("core/feel.json", core.FEEL)
     write("core/kindle.json", core.KINDLE)
+    write("core/knacks.json", core.KNACKS)
 
     write("styles/taijutsu.json", {"tiers": taijutsu.TIERS, "styles": taijutsu.STYLES, "guard": taijutsu.GUARD,
                                    "competitive": taijutsu.COMPETITIVE})

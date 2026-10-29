@@ -195,7 +195,7 @@ ARMOUR = {
     },
     "gear": {
         "item:forehead_protector": {"physical": 1, "slot": "head"},
-        "item:mesh_undershirt": {"physical": 3, "slot": "chest", "slice": "beta2"},
+        "item:mesh_shirt": {"physical": 3, "slot": "chest", "slice": "beta2"},
         "item:arm_guards": {"physical": 2, "parry_window_ticks": 1, "slot": "arms", "slice": "beta2"},
         "item:shin_guards": {"physical": 2, "kick_poise": 2, "slot": "legs", "slice": "beta2"},
         "item:flak_vest": {"physical": 6, "chakra": 3, "pouch_slots": 2, "slot": "chest", "slice": "chunin"},
@@ -230,6 +230,7 @@ SIGN_INPUT = {
         "tiers": ["novice", "practiced", "mastered", "perfected"],
         "uses_by_rank": {"e": [10, 30, 80], "d": [12, 40, 100], "c": [15, 50, 130], "b": [20, 60, 160], "a": [25, 75, 200], "s": [30, 90, 240]},
         "combat_use_counts": 2,
+        "home_drill": "one hand-sign drill a day at home (Shinobi Life) counts one training use for each of up to 3 techniques drilled; real fights count 2",
         "effects": {
             "practiced": {"cost_mult": 0.95, "power_mult": 1.03},
             "mastered": {"cost_mult": 0.9, "power_mult": 1.06, "signs": "half (rounded up)", "quick_slot": True},
@@ -288,12 +289,73 @@ FEEL = {
 
 KINDLE = {
     "effect_type": "kindle",
-    "status": "pending: the Kindling Bond redesign waits for the owner's decision",
+    "status": "designed (the owner approved the redesign); unlock timing is the story's, bond tiers are the bond engine's",
+    "concept": "Power flows outward, through people: it grows with how many people you have truly bonded with and how deep those bonds go",
     "contract": {
-        "input": "a grant from Shinobi Life's bond engine (dev.shinobi.life.bond.Kindling.Grant): who, what tier, uses, duration multiplier",
-        "hooks": ["kindle.begin(grant)", "kindle.cast(technique_or_nature)", "kindle.end()"],
-        "slots": "combat:kindle is an effect type any technique, combo or item may carry; it resolves through a registered KindleHandler",
-        "default_handler": "none: until a design lands, kindle effects do nothing and log once",
+        "reads": "dev.shinobi.combat.Kindle.Bonds, implemented by the bond engine (Shinobi Life): tier(who), web(), bonfireOpen()",
+        "tiers": {"spark": "friendship 6", "flame": "friendship 8", "blaze": "friendship 10 or a spouse", "bonfire": "a large bond web (the bond engine's gate)"},
+        "quarrels": "a quarrel dims that person's tier by one; a falling-out puts it out (the bond engine decides; combat reads the tier)",
     },
-    "note": "Only the plug. No powers are designed here (COMBAT.md, Kindling Bond)."
+    "thread_sight": {
+        "tier": "spark", "always_on": True,
+        "combat": "bonded allies' health, chakra and cooldowns show along their threads; a telegraphed attack on a bonded ally flares on its thread 4 ticks earlier (6 at Flame, 8 at Blaze) so you can Cover or parry for them; any bonded ally is a beacon anywhere on the map",
+        "blind_spot": "strangers and enemies have no thread to you: no reads on them",
+        "outside_combat": "the bond engine's (who is tied to whom, fraying and one-sided ties, lies as a flicker)",
+    },
+    "kindle": {
+        "tier": "spark", "key": "Kindle (K) while a bonded ally weaves: your chakra goes into their technique",
+        "boost": {"spark": {"power": 1.4, "area": 1.2, "range": 1.5, "heal": 1.5, "revives": False},
+                  "flame": {"power": 1.9, "area": 1.4, "range": 2.5, "heal": 2.0, "revives": True},
+                  "blaze": {"power": 2.4, "area": 1.6, "range": 4.0, "heal": 2.5, "revives": True}},
+        "cost": "your chakra: 0.6 / 0.8 / 1.0 of the ally's technique cost (Spark / Flame / Blaze)",
+        "cooldown_ticks": {"spark": 400, "flame": 300, "blaze": 200},
+        "examples": "a fireball becomes a firestorm, a heal becomes a revival, a sensor's range covers the village",
+        "rule": "you never learn the technique: they do it, bigger",
+    },
+    "ember_link": {
+        "tier": "flame", "members": "you and up to 3 bonded allies within 24 blocks", "ticks": 600, "cooldown_ticks": 2400,
+        "shared_pool": "one chakra pool: a caster pays from their own share first, then evenly from the others",
+        "damage": "a hit on a linked member: the one struck keeps half, the rest is split across the others (you feel your allies' pain)",
+        "sight": "look through a linked ally's eyes (hold the Link key)",
+    },
+    "unison": {
+        "tier": "blaze", "rule": "a combination unique to each pairing that neither can do alone: your nature crossed with the ally's niche (and their nature)",
+        "cost": "25 chakra each, once per fight per pairing", "power": "two A-rank casts in one blow (42 base), 4-block burst",
+        "by_niche": {
+            "genjutsu": "Painted <your nature>: enemies caught in the ally's illusion take your nature's damage every second and cannot release it while it burns",
+            "taijutsu": "Twin Comet: both dash through the target; your nature coats the strike (with a ninken: three fangs)",
+            "ninjutsu": "a nature unison: the two natures' combo (combos/nature.json) at twice the power and range, or a pure-chakra lance when the natures match",
+            "medical": "Hearth: the squad heals as one and a downed member rises",
+            "sensing": "Beacon Sight: every enemy within 48 blocks marked, hidden ones revealed, for 30 s",
+            "weapons": "Ember Rain: the ally's weapon storm carries your nature",
+            "sealing": "Burning Seal: a barrier that burns what it holds",
+        },
+    },
+    "ember_mark": {
+        "tier": "blaze", "what": "leave an ember in a deeply bonded ally: travel to their side, or summon them to yours, across any distance",
+        "combat": "once per fight: swap places with a marked ally (an escape or a rescue); outside a fight, travel to them (5-minute cooldown)",
+    },
+    "bonfire": {
+        "tier": "bonfire", "ticks": 400, "burnout_ticks": 1200,
+        "formula": "m = 1 + 1.5 x (1 - e^(-web / 35)): your damage x m, damage taken x 1/sqrt(m), chakra regen x (1 + web / 25), allies' power x (1 + (m - 1) / 2)",
+        "scale": {"web 0": "a candle (x1.0)", "web 15": "x1.52", "web 40": "x2.02", "web 70": "x2.30"},
+        "burnout": "afterwards no kindling of any kind for 60 s, and the chakra bar empties",
+    },
+    "costs": ["while linked you feel your allies' pain (the damage split)", "past three kindles in a minute each burns 10% of your chakra bar and 30 stamina",
+              "a quarrel dims that person's flame, a falling-out snuffs it", "useless with strangers until you bond with them"],
+    "natures": "you still gain natures through bonds by resonance: fight beside someone often enough and their trial can teach you their nature (the bond engine counts, a nature master's trial teaches); you never copy it",
+    "look": "an ember mark on the palm or chest (never an eye), threads of light, ember-gold chakra",
+    "beta": "none of it ships in the beta; the story decides when Spark opens",
+}
+
+KNACKS = {
+    "owner": "the character creator picks one (Roots step); combat owns the effects",
+    "list": [
+        {"id": "combat:knack.balanced", "effect": {"taijutsu": 0.02, "weapons": 0.02, "ninjutsu": 0.02}, "starter": None, "default": True},
+        {"id": "combat:knack.taijutsu", "effect": {"taijutsu": 0.05}, "starter": "item:knuckle_wraps"},
+        {"id": "combat:knack.weapons", "effect": {"weapons": 0.05}, "starter": "item:practice_kunai x5 (fine)"},
+        {"id": "combat:knack.ninjutsu", "effect": {"ninjutsu": 0.05}, "starter": "item:hand_sign_primer"},
+    ],
+    "affinity": "the creator's affinity (or undecided) is shown at the Genin ceremony as your leaning; choosing it there gives +10% power with that nature",
+    "clanless_start": {"hearts": 10, "chakra": 53, "control": 35, "stamina": 110, "poise": 20},
 }

@@ -170,6 +170,146 @@
    "slice": "beta3"
   },
   {
+   "id": "combat:group.hired_thugs",
+   "members": [
+    {
+     "enemy": "combat:enemy.street_tough",
+     "count": 3
+    }
+   ],
+   "slice": "beta2",
+   "nonlethal": true
+  },
+  {
+   "id": "combat:group.pickpockets",
+   "members": [
+    {
+     "enemy": "combat:enemy.pickpocket",
+     "count": 3
+    }
+   ],
+   "slice": "beta2",
+   "nonlethal": true
+  },
+  {
+   "id": "combat:group.kidnappers",
+   "members": [
+    {
+     "enemy": "combat:enemy.street_tough",
+     "count": 3
+    },
+    {
+     "enemy": "combat:enemy.rogue_genin"
+    }
+   ],
+   "slice": "beta2"
+  },
+  {
+   "id": "combat:group.fort_guards",
+   "members": [
+    {
+     "enemy": "combat:enemy.bandit_thug",
+     "count": 2
+    },
+    {
+     "enemy": "combat:enemy.bandit_archer",
+     "count": 2
+    },
+    {
+     "enemy": "combat:enemy.bandit_brute"
+    }
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:group.mercenary_band",
+   "members": [
+    {
+     "enemy": "combat:enemy.bandit_ronin",
+     "count": 2
+    },
+    {
+     "enemy": "combat:enemy.bandit_brute",
+     "count": 2
+    },
+    {
+     "enemy": "combat:enemy.bandit_archer"
+    },
+    {
+     "enemy": "combat:enemy.mercenary_captain"
+    }
+   ],
+   "slice": "chunin",
+   "waves": [
+    3,
+    3
+   ]
+  },
+  {
+   "id": "combat:group.foreign_squad",
+   "members": [
+    {
+     "enemy": "combat:enemy.foreign_chunin",
+     "count": 3
+    }
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:group.hunter_squad",
+   "members": [
+    {
+     "enemy": "combat:enemy.hunter_nin",
+     "count": 3
+    }
+   ],
+   "slice": "chunin"
+  },
+  {
+   "id": "combat:group.foreign_platoon",
+   "members": [
+    {
+     "enemy": "combat:enemy.foreign_chunin",
+     "count": 5
+    },
+    {
+     "enemy": "combat:enemy.sensor_team_lead"
+    },
+    {
+     "enemy": "combat:enemy.foreign_jonin",
+     "count": 2
+    }
+   ],
+   "slice": "jonin",
+   "waves": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "combat:group.assassins",
+   "members": [
+    {
+     "enemy": "combat:enemy.assassin",
+     "count": 3
+    }
+   ],
+   "slice": "anbu"
+  },
+  {
+   "id": "combat:group.ronin_band",
+   "members": [
+    {
+     "pick": [
+      "combat:enemy.samurai",
+      "combat:enemy.bandit_ronin"
+     ],
+     "count": 4
+    }
+   ],
+   "slice": "chunin"
+  },
+  {
    "id": "combat:group.rogue_cell_b",
    "members": [
     {
@@ -254,7 +394,10 @@
    "combat:surrendered",
    "combat:captured",
    "combat:perform <technique|combo>",
-   "combat:no_damage_taken"
-  ]
+   "combat:no_damage_taken",
+   "combat:spotted <enemy|group> (an enemy first detects the player by sight, sound or sensing; `unseen` objectives fail on it)"
+  ],
+  "detection": "Enemies detect by sight (a cone of 70 degrees, 24 blocks by day, 12 at night), sound (footsteps 8 blocks, sprinting 16, jutsu 24; silent step and Tobari remove it) and sensing (sensors only, through walls). Hidden and disguised players are detected only within 3 blocks or by sensing",
+  "drops": "Loot drops use the enemy id: drop:<enemy id without the combat:enemy. prefix> (bandit_thug, bandit_chief, wolf, giant_snake...); the items session owns the loot tables"
  }
 }

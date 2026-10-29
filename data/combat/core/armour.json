@@ -11,7 +11,7 @@
    "physical": 1,
    "slot": "head"
   },
-  "item:mesh_undershirt": {
+  "item:mesh_shirt": {
    "physical": 3,
    "slot": "chest",
    "slice": "beta2"

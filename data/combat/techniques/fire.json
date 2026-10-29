@@ -170,7 +170,7 @@
    ],
    "slice": "beta3",
    "requires": [
-    "item:wire_spool"
+    "item:ninja_wire"
    ]
   },
   {

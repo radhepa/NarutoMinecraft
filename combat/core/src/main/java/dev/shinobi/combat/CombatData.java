@@ -96,7 +96,7 @@ public final class CombatData {
     }
     public record Build(String id, String focus, int level, Nature nature, Map<Scaling.Pillar, Integer> ranks, int control, double physical,
                         double chakraArmour, List<String> techniques, String style, int styleTier, String melee, String thrown, int gates,
-                        Map<String, Object> tools) {
+                        Map<String, Object> tools, String niche, double nicheEdge, boolean pup) {
         static Build of(Map<String, Object> m) {
             var r = Json.obj(m, "ranks");
             var ranks = new LinkedHashMap<Scaling.Pillar, Integer>();
@@ -107,7 +107,8 @@ public final class CombatData {
             return new Build(Json.str(m, "id", "?"), Json.str(m, "focus", "balanced"), Json.integer(m, "level", 1), Nature.of(Json.str(m, "nature", "none")),
                     ranks, Json.integer(m, "control", 30), Json.num(a, "physical", 0), Json.num(a, "chakra", 0), Json.strings(m, "techniques"),
                     Json.str(m, "style", "combat:style.academy_basics"), Json.integer(m, "style_tier", 1), Json.str(m, "melee", null),
-                    Json.str(m, "thrown", null), Json.integer(m, "gates", 0), Json.obj(m, "tools"));
+                    Json.str(m, "thrown", null), Json.integer(m, "gates", 0), Json.obj(m, "tools"), Json.str(m, "niche", null),
+                    Json.num(m, "niche_edge", 0), Json.bool(m, "pup"));
         }
         public int rank(Scaling.Pillar p) { return ranks.get(p); }
     }

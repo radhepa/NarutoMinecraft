@@ -13,7 +13,7 @@
  "slice": "beta1",
  "style": "combat:style.academy_basics",
  "weapons": [
-  "item:kunai_practice"
+  "item:practice_kunai"
  ],
  "techniques": [
   "combat:nin.substitution"

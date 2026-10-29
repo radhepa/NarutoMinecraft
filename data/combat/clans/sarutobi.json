@@ -31,7 +31,7 @@
      "style": "combat:style.monkey_staff"
     }
    ],
-   "mechanic": "Opens the clan staff (item:clan_staff, 4.5 reach) with the Monkey King staff style",
+   "mechanic": "Opens the clan staff (item:sarutobi_staff, 4.5 reach) with the Monkey King staff style",
    "counters": "dodge or interrupt the signs; walls block projectiles",
    "teach": [
     "mentor:role:clan_elder.sarutobi"

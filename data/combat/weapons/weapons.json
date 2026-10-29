@@ -1,21 +1,18 @@
 {
  "format": 1,
  "grades": {
-  "source": "the items session's crafted grades",
-  "default_mult": {
-   "common": 1.0,
+  "source": "the items session's grades, a data component on the stack (data/items/economy.json)",
+  "damage_mult": {
+   "standard": 1.0,
    "fine": 1.1,
-   "master": 1.2
+   "masterwork": 1.2
   },
-  "applies_to": [
-   "damage",
-   "durability"
-  ],
-  "note": "Combat reads the grade from the item stack; the multipliers are the items session's to tune"
+  "note": "Combat owns the damage multipliers; the items session owns durability (1.0 / 1.5 / 2.0) and the repair economy",
+  "clan_weapons": "Clan weapons (sarutobi_staff, kokuto, iron_mace, white_sabre) are given or sold by their clan after its welcome quest at Good Neighbor standing (source clan:<id>)"
  },
  "weapons": [
   {
-   "item": "item:kunai_practice",
+   "item": "item:practice_kunai",
    "name": "Practice kunai",
    "class": "both",
    "slice": "beta1",
@@ -41,7 +38,7 @@
    "notes": "Blunt Academy tool: no bleeding, no loss on death"
   },
   {
-   "item": "item:shuriken_practice",
+   "item": "item:practice_shuriken",
    "name": "Practice shuriken",
    "class": "thrown",
    "slice": "beta1",
@@ -114,10 +111,10 @@
    "notes": "Fast and stackable; three at once from Genin"
   },
   {
-   "item": "item:shuriken_manji",
+   "item": "item:manji_shuriken",
    "name": "Manji shuriken",
    "class": "thrown",
-   "slice": "beta3",
+   "slice": "beta2",
    "throw": {
     "damage": 3.2,
     "type": "physical.slash",
@@ -139,7 +136,7 @@
    "style": "combat:style.throwing_arts"
   },
   {
-   "item": "item:shuriken_fuma",
+   "item": "item:fuma_shuriken",
    "name": "Windmill shuriken",
    "class": "thrown",
    "slice": "chunin",
@@ -236,7 +233,7 @@
    "item": "item:kokuto",
    "name": "Black blade (kokuto)",
    "class": "melee",
-   "slice": "beta2",
+   "slice": "beta2_5",
    "melee": {
     "damage": 2.5,
     "type": "physical.slash",
@@ -247,7 +244,7 @@
    },
    "style": "combat:style.wave_foot",
    "notes": "The Namiashi's black sword: drinks light (no glint telegraph on your heavies)",
-   "clan": "namiashi"
+   "source": "clan:namiashi"
   },
   {
    "item": "item:white_sabre",
@@ -264,10 +261,10 @@
    },
    "style": "combat:style.white_fang",
    "notes": "A tanto that glows with chakra; its finisher is a lightning dash",
-   "clan": "hatake"
+   "source": "clan:hatake"
   },
   {
-   "item": "item:clan_staff",
+   "item": "item:sarutobi_staff",
    "name": "Clan staff",
    "class": "melee",
    "slice": "beta2",
@@ -281,7 +278,7 @@
    },
    "style": "combat:style.monkey_staff",
    "notes": "The Sarutobi's long staff (an item, not a summon): 4.5 blocks of reach, uses the combo system",
-   "clan": "sarutobi"
+   "source": "clan:sarutobi"
   },
   {
    "item": "item:bo_staff",
@@ -302,7 +299,7 @@
    "item": "item:kusarigama",
    "name": "Kusarigama",
    "class": "both",
-   "slice": "beta3",
+   "slice": "chunin",
    "melee": {
     "damage": 2.0,
     "type": "physical.slash",
@@ -329,7 +326,7 @@
    "notes": "Sickle on a chain: hook at six blocks and pull the target in, or wrap a weapon arm (disarms for 40 ticks)"
   },
   {
-   "item": "item:chain_weight",
+   "item": "item:weighted_chain",
    "name": "Weighted chain",
    "class": "melee",
    "slice": "beta3",
@@ -344,10 +341,10 @@
    "style": "combat:style.chain_arts"
   },
   {
-   "item": "item:tessen",
+   "item": "item:war_fan",
    "name": "Iron war fan",
    "class": "melee",
-   "slice": "beta3",
+   "slice": "chunin",
    "melee": {
     "damage": 2.0,
     "type": "physical.blunt",
@@ -360,7 +357,7 @@
    "notes": "Guard as a fan, strike with its edge; a wind user's gusts from it cost 20% less"
   },
   {
-   "item": "item:great_fan",
+   "item": "item:battle_fan",
    "name": "Great fan",
    "class": "melee",
    "slice": "chunin",
@@ -377,10 +374,10 @@
    "notes": "Wind jutsu cast through it gain 30% power and width"
   },
   {
-   "item": "item:mace",
+   "item": "item:iron_mace",
    "name": "Mace",
    "class": "melee",
-   "slice": "beta2",
+   "slice": "beta2_5",
    "melee": {
     "damage": 2.6,
     "type": "physical.blunt",
@@ -390,10 +387,10 @@
     "guard_damage_mult": 2.0
    },
    "style": "combat:style.mace_arts",
-   "clan": "hagane"
+   "source": "clan:hagane"
   },
   {
-   "item": "item:trench_knives",
+   "item": "item:chakra_blades",
    "name": "Chakra trench knives",
    "class": "melee",
    "slice": "jonin",
@@ -414,6 +411,64 @@
    "class": "gear",
    "slice": "beta1",
    "notes": "Taijutsu gear: +0.5 light damage, no weapon in hand"
+  },
+  {
+   "item": "item:knuckle_guards",
+   "name": "Steel tekko",
+   "class": "gear",
+   "slice": "beta2",
+   "notes": "Taijutsu gear: +1.0 light damage, +2 poise damage on every punch, parry window +1 tick"
+  },
+  {
+   "item": "item:fingerless_gloves",
+   "name": "Fingerless gloves",
+   "class": "gear",
+   "slice": "beta1",
+   "notes": "Throw spread -0.2 degrees; no stat in melee"
+  },
+  {
+   "item": "item:bokken",
+   "name": "Bokken",
+   "class": "melee",
+   "slice": "beta2",
+   "melee": {
+    "damage": 1.8,
+    "type": "physical.blunt",
+    "reach": 3.3,
+    "chain_interval_ticks": 7,
+    "poise": 6
+   },
+   "style": "combat:style.crescent_moon",
+   "notes": "A wooden practice sword: kenjutsu tier 1 before the steel; never lost on death",
+   "source": "the Gekko dojo"
+  },
+  {
+   "item": "item:chakra_metal_kunai",
+   "name": "Chakra-metal kunai",
+   "class": "both",
+   "slice": "jonin",
+   "melee": {
+    "damage": 2.4,
+    "type": "physical.pierce",
+    "reach": 2.6,
+    "chain_interval_ticks": 6,
+    "poise": 3,
+    "chakra_flow": "any"
+   },
+   "throw": {
+    "damage": 3.4,
+    "type": "physical.pierce",
+    "speed": 1.9,
+    "range": 26,
+    "spread_degrees": 1.0,
+    "retrievable": true,
+    "per_throw": 1,
+    "poise": 1,
+    "recovery_ticks": 12,
+    "embeds": true
+   },
+   "style": "combat:style.academy_blade",
+   "notes": "Chakra flow on it costs nothing"
   }
  ]
 }

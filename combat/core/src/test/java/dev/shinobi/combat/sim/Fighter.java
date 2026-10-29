@@ -50,6 +50,15 @@ final class Fighter {
     final Map<String, Integer> repeats = new HashMap<>();
     double damageMult = 1;
     int think;
+    /** Player-like scaling (the player and teammates built like the player); the niche and its edge in levels; a ninken pup. */
+    boolean pillars;
+    String niche;
+    double nicheEdge;
+    boolean pup;
+    int landed;
+    /** Kindling Bond: Bonfire's damage and taken multipliers on this fighter, and kindles spent in the last minute (the player). */
+    double kindleDamage = 1, kindleTaken = 1;
+    final java.util.ArrayDeque<Long> kindles = new java.util.ArrayDeque<>();
 
     double hp, x, momentum;
     int ammo, bombs;
@@ -74,6 +83,19 @@ final class Fighter {
         this.ammo = ammo; this.bombs = bombs;
     }
 
+    /** A teammate built like the player (data/combat/sim/builds.json, sim.teammate_*): same scaling, its niche edge, no tokens. */
+    static Fighter teammate(CombatData data, CombatData.Build b, Skill skill, int side) {
+        var p = player(data, b, skill, side);
+        var f = new Fighter(b.id(), side, false, false, b.level(), b.nature(), p.maxHp, p.chakra.max(), p.stamina.max(), p.poise.max(), data.statuses,
+                p.moves, p.tier, p.gatesKnown, p.control, p.ranks, p.melee, p.thrown, p.techniques, p.physical, p.chakraArmour, p.will, skill, p.band,
+                false, true, true, "genin", p.ammo, p.bombs);
+        f.pillars = true;
+        f.niche = b.niche();
+        f.nicheEdge = b.nicheEdge();
+        f.pup = b.pup();
+        return f;
+    }
+
     /** A player build from data/combat/sim/builds.json. */
     static Fighter player(CombatData data, CombatData.Build b, Skill skill, int side) {
         var techs = new ArrayList<CombatData.Technique>();
@@ -82,7 +104,7 @@ final class Fighter {
         var thrown = b.thrown() == null ? null : data.weapons.get(b.thrown());
         int ammo = 0;
         for (var e : b.tools().entrySet()) if (e.getKey().contains("kunai") || e.getKey().contains("shuriken")) ammo += ((Number) e.getValue()).intValue();
-        if (thrown != null && thrown.item().endsWith("_practice")) ammo = 999;
+        if (thrown != null && thrown.item().startsWith("item:practice_")) ammo = 999;
         int bombs = ((Number) b.tools().getOrDefault("item:paper_bomb", 0.0)).intValue();
         double stamina = 100 + 5 * (b.rank(Pillar.TAIJUTSU) - 1);
         double poise = 20 + 2 * (b.rank(Pillar.TAIJUTSU) - 1) + (b.style().contains("strong_fist") ? 8 : 0);
@@ -93,10 +115,12 @@ final class Fighter {
             case "weapons" -> b.level() >= 15 || b.level() < 5 ? RangeBands.Band.CLOSE : RangeBands.Band.MID;
             default -> RangeBands.Band.CLOSE;
         };
-        return new Fighter(b.id(), side, true, false, b.level(), b.nature(), Scaling.playerHp(b.level(), 0),
+        var f = new Fighter(b.id(), side, true, false, b.level(), b.nature(), Scaling.playerHp(b.level(), 0),
                 Scaling.maxChakra(b.level(), 1), stamina, poise, data.statuses, data.moveset(styleId), b.styleTier(), b.gates(), b.control(),
                 b.ranks(), melee, thrown, techs, b.physical(), b.chakraArmour(), 10 + 0.5 * b.level(), skill, band, false, true, false, "player",
                 ammo, bombs);
+        f.pillars = true;
+        return f;
     }
 
     /** An enemy (or an ally built from an enemy loadout) at a level, with a boss's overrides when given. */

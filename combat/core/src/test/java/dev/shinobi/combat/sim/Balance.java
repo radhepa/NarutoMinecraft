@@ -45,8 +45,96 @@ public final class Balance {
         out.append(ttkTable(Difficulty.STORY)).append('\n').append(ttkTable(Difficulty.SHINOBI)).append('\n');
         out.append(rankTable()).append('\n').append(pillarShare()).append('\n');
         out.append(matrix(new int[]{10, 18, 30, 50})).append('\n');
-        out.append(bosses(Difficulty.STORY)).append('\n').append(bosses(Difficulty.SHINOBI));
+        out.append(bosses(Difficulty.STORY)).append('\n').append(bosses(Difficulty.SHINOBI)).append('\n');
+        out.append(contribution(Difficulty.SHINOBI)).append('\n').append(kindling(Difficulty.SHINOBI));
         return out.toString();
+    }
+
+    /** The squad (player and both teammates at one level) against a bounty boss, with each Kindling Bond tier. */
+    Stats kindled(int level, dev.shinobi.combat.Kindle.Tier tier, double web, boolean bonfire, Difficulty diff) {
+        double wins = 0, time = 0, hp = 0;
+        var boss = data.bosses.get("combat:boss.chunin.missing_nin_bounty");
+        for (int i = 0; i < runs; i++) {
+            var battle = new Battle(data, diff, seed * 19 + i * 6007L + level);
+            battle.kindle = tier;
+            battle.web = web;
+            battle.bonfire = bonfire;
+            battle.add(Fighter.player(data, data.builds.get("sim.player." + level), Fighter.Skill.AVERAGE, 0), 0);
+            battle.add(Fighter.teammate(data, data.builds.get("sim.teammate_a." + level), Fighter.Skill.AVERAGE, 0), -1);
+            battle.add(Fighter.teammate(data, data.builds.get("sim.teammate_b." + level), Fighter.Skill.AVERAGE, 0), -2);
+            battle.boss(boss, battle.add(Fighter.enemy(data, data.enemies.get(boss.base()), level + 2, diff, 1, boss, false), 9));
+            battle.add(Fighter.enemy(data, data.enemies.get(ELITE), level, diff, 1, null, false), 10);
+            var r = battle.run();
+            if (r.winner() == 0) { wins++; time += r.ticks() / 20.0; hp += r.playerHp(); }
+        }
+        return new Stats(wins / runs, wins == 0 ? 0 : time / wins, wins == 0 ? 0 : hp / wins, Map.of());
+    }
+
+    String kindling(Difficulty diff) {
+        var t = new StringBuilder("Kindling Bond: the squad against a bounty boss two levels up and an elite, ").append(diff.id())
+                .append(" (win rate, mean seconds, player health left)\n\n| Kindling | Level 30 | Level 45 |\n|---|---|---|\n");
+        Object[][] rows = {{"none", dev.shinobi.combat.Kindle.Tier.NONE, 0.0, false}, {"Spark (kindle)", dev.shinobi.combat.Kindle.Tier.SPARK, 0.0, false},
+                {"Flame (kindle, Ember Link)", dev.shinobi.combat.Kindle.Tier.FLAME, 0.0, false}, {"Blaze (and a unison technique)", dev.shinobi.combat.Kindle.Tier.BLAZE, 0.0, false},
+                {"Blaze + Bonfire, web 15", dev.shinobi.combat.Kindle.Tier.BLAZE, 15.0, true}, {"Blaze + Bonfire, web 40", dev.shinobi.combat.Kindle.Tier.BLAZE, 40.0, true},
+                {"Blaze + Bonfire, web 70", dev.shinobi.combat.Kindle.Tier.BLAZE, 70.0, true}};
+        for (var r : rows) {
+            t.append("| ").append(r[0]).append(" |");
+            for (int lv : new int[]{30, 45}) {
+                var s = kindled(lv, (dev.shinobi.combat.Kindle.Tier) r[1], (double) r[2], (boolean) r[3], diff);
+                t.append(String.format(Locale.ROOT, " %.0f%% %.0fs %.0f%% |", s.win() * 100, s.seconds(), s.hpLeft() * 100));
+            }
+            t.append('\n');
+        }
+        return t.toString();
+    }
+
+    /** The ranks session's typical player (seed 20261029): chapter, player level, teammate_a's, teammate_b's (docs/RANKS.md). */
+    static final double[][] SQUAD_LEVELS = {{8, 5.8, 5.5, 5.6}, {11, 10.7, 10.0, 10.4}, {14, 15.2, 14.4, 14.9}, {16, 16.6, 15.9, 16.2},
+            {20, 18.3, 17.9, 18.3}, {28, 29.9, 29.4, 29.8}, {45, 41.4, 41.0, 41.6}, {60, 50.0, 48.4, 48.8}};
+
+    /** Damage and control shares of each teammate against the player's, in a squad fight against level-matched enemies. */
+    record Share(double damage, double control, double combined) {}
+
+    Share[] shares(int pl, int a, int b, Difficulty diff) {
+        double[] sum = new double[6];
+        for (int i = 0; i < runs; i++) {
+            var battle = new Battle(data, diff, seed * 13 + i * 7919L + pl * 31L);
+            var p = battle.add(Fighter.player(data, data.builds.get("sim.player." + pl), Fighter.Skill.AVERAGE, 0), 0);
+            var ta = battle.add(Fighter.teammate(data, data.builds.get("sim.teammate_a." + a), Fighter.Skill.AVERAGE, 0), -1);
+            var tb = battle.add(Fighter.teammate(data, data.builds.get("sim.teammate_b." + b), Fighter.Skill.AVERAGE, 0), -2);
+            battle.add(Fighter.enemy(data, data.enemies.get(MOOK), pl, diff, 1, null, false), 8);
+            battle.add(Fighter.enemy(data, data.enemies.get(MOOK), pl, diff, 1, null, false), 9);
+            battle.add(Fighter.enemy(data, data.enemies.get(ELITE), pl, diff, 1, null, false), 10);
+            battle.run();
+            int k = 0;
+            for (var f : new Fighter[]{p, ta, tb}) {
+                var l = battle.ledger.getOrDefault(f, new double[2]);
+                sum[k++] += l[0];
+                sum[k++] += l[1] / 20.0;
+            }
+        }
+        double pd = sum[0], pc = sum[1];
+        // One second of an enemy held is worth what the squad would deal in half a second: the player's damage a second.
+        double perControlSecond = pd / Math.max(1, runs * 20.0) * 0.5;
+        var out = new Share[2];
+        for (int t = 0; t < 2; t++) {
+            double d = sum[2 + 2 * t], c = sum[3 + 2 * t];
+            out[t] = new Share(d / pd, pc == 0 ? 0 : c / pc, (d + c * perControlSecond) / (pd + pc * perControlSecond));
+        }
+        return out;
+    }
+
+    String contribution(Difficulty diff) {
+        var t = new StringBuilder("Teammates' share of the player's damage, control and the two combined (target 70-110%), squad of three against two rogue genin and a rogue chunin at the player's level, ")
+                .append(diff.id()).append("\n\n| Chapter | Player | teammate_a (genjutsu) | damage | control | combined | teammate_b (taijutsu, pup) | damage | control | combined |\n|---|---|---|---|---|---|---|---|---|---|\n");
+        for (var row : SQUAD_LEVELS) {
+            int pl = (int) Math.round(row[1]), a = (int) Math.round(row[2]), b = (int) Math.round(row[3]);
+            var s = shares(pl, a, b, diff);
+            t.append(String.format(Locale.ROOT, "| %s | %d | %d | %.0f%% | %.0f%% | %.0f%% | %d | %.0f%% | %.0f%% | %.0f%% |%n",
+                    row[0] >= 28 ? (int) row[0] + " h" : "Ch " + (int) row[0], pl, a, 100 * s[0].damage(), 100 * s[0].control(), 100 * s[0].combined(),
+                    b, 100 * s[1].damage(), 100 * s[1].control(), 100 * s[1].combined()));
+        }
+        return t.toString();
     }
 
     Stats duel(String buildId, String enemy, int level, Difficulty diff, Fighter.Skill skill) {

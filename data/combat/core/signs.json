@@ -99,6 +99,7 @@
    ]
   },
   "combat_use_counts": 2,
+  "home_drill": "one hand-sign drill a day at home (Shinobi Life) counts one training use for each of up to 3 techniques drilled; real fights count 2",
   "effects": {
    "practiced": {
     "cost_mult": 0.95,

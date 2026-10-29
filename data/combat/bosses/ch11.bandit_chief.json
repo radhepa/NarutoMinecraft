@@ -40,7 +40,7 @@
  "poise": 70,
  "damage_mult": 0.8,
  "weapons": [
-  "item:mace",
+  "item:iron_mace",
   "item:kunai"
  ],
  "dialogue": "dlg:combat.boss.ch11.bandit_chief"

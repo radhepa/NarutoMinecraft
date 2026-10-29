@@ -1,0 +1,37 @@
+{
+ "format": 1,
+ "id": "combat:enemy.cat_burglar",
+ "name": "Cat burglar",
+ "kind": "human",
+ "tier": "elite",
+ "rank": "civilian",
+ "levels": [
+  6,
+  16
+ ],
+ "band": "far",
+ "slice": "beta2",
+ "weapons": [
+  "item:shuriken"
+ ],
+ "techniques": [],
+ "tools": {
+  "item:smoke_bomb": 2,
+  "item:makibishi": 1
+ },
+ "armour": {
+  "physical": 0,
+  "chakra": 0,
+  "will": 10
+ },
+ "traits": [
+  "nonlethal",
+  "runner",
+  "roof_runner"
+ ],
+ "ai": {
+  "flee_first": true
+ },
+ "barks": "bandit",
+ "note": "Runs the rooftops faster than a genin: wire, binds and shuriken to the legs stop them; a chase objective"
+}

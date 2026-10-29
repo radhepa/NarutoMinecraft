@@ -35,7 +35,7 @@
    "counters": "genjutsu: a flash breaks genjutsu on allies"
   },
   {
-   "item": "item:wire_spool",
+   "item": "item:ninja_wire",
    "name": "Ninja wire",
    "slice": "beta1",
    "uses": 8,
@@ -47,7 +47,7 @@
    }
   },
   {
-   "item": "item:caltrops",
+   "item": "item:makibishi",
    "name": "Caltrops",
    "slice": "beta2",
    "radius": 2.0,
@@ -75,6 +75,109 @@
    }
   },
   {
+   "item": "item:stink_bomb",
+   "name": "Stink bomb",
+   "slice": "beta1",
+   "radius": 4.0,
+   "ticks": 100,
+   "effect": "animals and civilians flee it (feared 60 ticks); shinobi only cough (slow 0.1); a prank before it is a tool"
+  },
+  {
+   "item": "item:paper_bomb_chain",
+   "name": "Paper-bomb chain",
+   "slice": "chunin",
+   "use": "a string of five tags thrown as a line (8 blocks) that bursts end to end",
+   "damage": 6.0,
+   "per": "tag",
+   "radius": 2.0,
+   "fuse_ticks": 30
+  },
+  {
+   "item": "item:barrier_tag",
+   "name": "Barrier tag",
+   "slice": "beta3",
+   "use": "four of them cast the Four-Tag Barrier without knowing it (half the duration)"
+  },
+  {
+   "item": "item:chakra_suppression_tag",
+   "name": "Chakra suppression tag",
+   "slice": "chunin",
+   "use": "on a downed or bound enemy: chakra sealed for 400 ticks (prisoners)"
+  },
+  {
+   "item": "item:tabi_boots",
+   "name": "Tabi boots",
+   "slice": "beta2",
+   "effect": "wall-runs last 0.5 s longer; tree walking costs 20% less"
+  },
+  {
+   "item": "item:food_pill",
+   "name": "Food pill",
+   "slice": "beta2",
+   "restores": {
+    "stamina": 100,
+    "hp": 2
+   },
+   "cooldown_ticks": 600
+  },
+  {
+   "item": "item:chakra_candy",
+   "name": "Chakra candy",
+   "slice": "beta1",
+   "restores": {
+    "chakra_fraction": 0.1
+   },
+   "cooldown_ticks": 600
+  },
+  {
+   "item": "item:burn_salve",
+   "name": "Burn salve",
+   "slice": "beta2",
+   "cleanses": [
+    "burning"
+   ],
+   "immunity_ticks": 100
+  },
+  {
+   "item": "item:eye_drops",
+   "name": "Eye drops",
+   "slice": "beta2",
+   "cleanses": [
+    "blinded",
+    "smoked"
+   ]
+  },
+  {
+   "item": "item:strong_antidote",
+   "name": "Strong antidote",
+   "slice": "chunin",
+   "cleanses": [
+    "poisoned",
+    "numbed",
+    "drowsy",
+    "paralysed"
+   ],
+   "immunity_ticks": 600
+  },
+  {
+   "item": "item:insect_repellent",
+   "name": "Insect repellent",
+   "slice": "beta3",
+   "effect": "giant leeches and insect swarms ignore you for 1200 ticks (Aburame swarms at half time)"
+  },
+  {
+   "item": "item:scent_powder",
+   "name": "Scent powder",
+   "slice": "beta3",
+   "effect": "animals and ninken lose your scent for 1200 ticks"
+  },
+  {
+   "item": "item:hand_sign_primer",
+   "name": "Hand-sign primer",
+   "slice": "beta1",
+   "effect": "the ninjutsu knack's starter: E-rank uses count double toward mastery until level 5"
+  },
+  {
    "item": "item:soldier_pill",
    "name": "Soldier pill",
    "slice": "beta2",
@@ -96,7 +199,7 @@
    "cooldown_ticks": 1200
   },
   {
-   "item": "item:poultice",
+   "item": "item:herbal_poultice",
    "name": "Herbal poultice",
    "slice": "beta2",
    "restores": {
