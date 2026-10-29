@@ -379,6 +379,7 @@ class Garment:
         if self.kind == "headwear":
             data["hidesHair"] = list(m.get("hides_hair", []))
             data["coversFace"] = bool(m.get("covers_face", False))
+            data["coversMouth"] = bool(m.get("covers_mouth", False))
         if self.kind == "tops":
             data["tucked"] = bool(m.get("tucked", False))
             data["coversWaist"] = bool(m.get("covers_waist", False))
@@ -423,6 +424,9 @@ class Garment:
         for p in self.pieces:
             if kind in ("hair", "headwear") and not self.meta.get("covers_face"):
                 lo, hi = world_bounds(p)
+                # A face mask may cover the face below the open eye (EYE_BOTTOM, y -2).
+                if self.meta.get("covers_mouth") and lo[1] >= -2.05:
+                    continue
                 if lo[2] < -4.1 and lo[0] < 3 and hi[0] > -3 and hi[1] > -5.02 and lo[1] < 0:
                     errors.append(f"piece {p.id} hangs over the eyes/nose/mouth")
             for f in p.box.faces:
@@ -574,6 +578,9 @@ def compatible(top: Garment, bottom: Garment) -> bool:
 EYE_STYLES = ("starlit", "soft_glint")   # the Living Eyes styles, see living_eyes.py
 BROWS = ("fine", "bold")
 MARKS = ("whiskers",)
+# The career ladder of the living village: every character is dressed for one rank. Signature
+# characters are one-off looks; the rest are role outfits the village mixes onto residents.
+RANKS = ("academy", "genin", "chunin", "jonin", "anbu", "kage")
 CHARACTER_SLOTS = {"face": "faces", "hair": "hair", "headwear": "headwear", "top": "tops", "bottom": "bottoms"}
 
 
@@ -606,6 +613,10 @@ def validate_catalog(garments: dict, data: dict) -> list[str]:
                 errors.append(f"character {cid} names unknown cheek mark {m}")
         if c.get("brows", "fine") not in BROWS:
             errors.append(f"character {cid} brows must be one of {', '.join(BROWS)}")
+        if c.get("rank") not in RANKS:
+            errors.append(f"character {cid} needs a rank: {', '.join(RANKS)}")
+        if not isinstance(c.get("signature", False), bool):
+            errors.append(f"character {cid} signature must be true or false")
         if c.get("complexion") not in range(6):
             errors.append(f"character {cid} needs a complexion 0-5")
     for eid, e in eyes.items():

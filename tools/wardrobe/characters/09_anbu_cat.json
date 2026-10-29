@@ -1,0 +1,5 @@
+{"id": "anbu_cat", "name": "ANBU Cat", "tagline": "Hood up, cat mask with violet stripes, a long grey cloak over the plated armor",
+ "face": "f01_shinobi", "hair": "h04_long_straight", "headwear": "w04_anbu_cat_hood",
+ "top": "t09_anbu_cloak", "bottom": "b01_shinobi_trousers",
+ "palette": "ANBU_SHADOW", "hair_color": "RAVEN", "eye_color": "DARK", "eye_style": "starlit", "feminine": true,
+ "complexion": 0, "scale": 14, "rank": "anbu"}

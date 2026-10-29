@@ -2,4 +2,4 @@
  "face": "f01_shinobi", "hair": "h03_uchiha_spikes", "headwear": "w02_forehead_protector",
  "top": "t03_uchiha_high_collar", "bottom": "b02_uchiha_shorts",
  "palette": "UCHIHA", "hair_color": "UCHIHA_BLACK", "eye_color": "SHARINGAN", "eye_style": "starlit", "feminine": false,
- "complexion": 0, "scale": 14}
+ "complexion": 0, "scale": 14, "rank": "genin", "signature": true}

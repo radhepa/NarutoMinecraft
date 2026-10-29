@@ -157,7 +157,7 @@ class Character:
             for p in g.pieces:
                 if g is bottom and top.meta.get("covers_waist") and p.id.startswith("waist"):
                     continue
-                if g is hairdo and hidden and p.id.startswith(hidden):
+                if g is hairdo and hidden and ("*" in hidden or p.id.startswith(hidden)):
                     continue
                 self.pieces.append((p, tex, bool(g.meta.get("emissive"))))
         # The Living Eyes planes take their colors the way ResidentSkins bakes them: brow and lash
@@ -174,6 +174,7 @@ class Character:
         body = np.array(Image.open(BODY / f"{spec['complexion']}.png").convert("RGB"))
         self.face = dict(style=spec["eye_style"], feminine=spec["feminine"], hair=rgb(hair[2]),
                          brows=spec.get("brows", "fine"), marks=tuple(spec.get("marks", [])), masked=bool(hat and hat.meta.get("covers_face")),
+                         mouth=not (hat and hat.meta.get("covers_mouth")),
                          skin=tuple(int(c) for c in body[12, 12]), iris=rgb(eyes[2]), white=rgb(eyes[4]),
                          pattern=pattern, glow=bool(eye.get("glow")))
 
@@ -283,7 +284,7 @@ def sheet(ch: Character, out: Path):
     print(out)
 
 
-def lineup(chars: list[Character], out: Path):
+def lineup(chars: list[Character], out: Path, subtitle: str = "Shinobi of the Hidden Leaf, built on the Village Friends resident"):
     W_, H_ = 340 * len(chars) + 120, 900
     w, h = W_ * SS, H_ * SS
     bg = backdrop(w, h)
@@ -298,13 +299,18 @@ def lineup(chars: list[Character], out: Path):
     img = Image.fromarray(canvas.img.clip(0, 255).astype(np.uint8)).resize((W_, H_), Image.LANCZOS)
     d = ImageDraw.Draw(img)
     d.text((44, 30), "Naruto Minecraft", font=font(46, True), fill=(62, 38, 28))
-    d.text((46, 88), "Shinobi of the Hidden Leaf, built on the Village Friends resident", font=font(20), fill=(120, 92, 70))
+    d.text((46, 88), subtitle, font=font(20), fill=(120, 92, 70))
     for x, ch in zip(xs, chars):
         tw = d.textlength(ch.spec["name"], font=font(22, True))
         d.text((x - tw / 2, 820), ch.spec["name"], font=font(22, True), fill=(62, 38, 28))
     out.parent.mkdir(parents=True, exist_ok=True)
     img.save(out)
     print(out)
+
+
+RANK_TITLES = {"academy": "Academy students", "genin": "Genin: the village's young ninja",
+               "chunin": "Chunin", "jonin": "Jonin: the elite of the Hidden Leaf",
+               "anbu": "ANBU Black Ops: the Hokage's masked guard", "kage": "Kage"}
 
 
 def main():
@@ -324,7 +330,12 @@ def main():
     for ch in chars:
         sheet(ch, Path(a.out) if a.out and len(chars) == 1 else OUT / f"{ch.spec['id']}.png")
     if a.all:
-        lineup(chars, OUT / "lineup.png")
+        showcase = [c for c in chars if c.spec.get("signature") or c.spec["rank"] == "kage"]
+        lineup(showcase, OUT / "lineup.png")
+        for rank in W.RANKS:
+            group = [c for c in chars if c.spec["rank"] == rank and not c.spec.get("signature")]
+            if len(group) > 1:
+                lineup(group, OUT / f"lineup_{rank}.png", RANK_TITLES[rank])
 
 
 if __name__ == "__main__":

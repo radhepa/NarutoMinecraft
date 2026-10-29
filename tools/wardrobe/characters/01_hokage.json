@@ -2,4 +2,4 @@
  "face": "f01_shinobi", "hair": "h01_kage_spikes", "headwear": "w01_kage_hat",
  "top": "t01_hokage_haori", "bottom": "b01_shinobi_trousers",
  "palette": "HOKAGE", "hair_color": "HOKAGE_GOLD", "eye_color": "SKY", "eye_style": "starlit", "feminine": false,
- "complexion": 1, "scale": 14}
+ "complexion": 1, "scale": 14, "rank": "kage"}

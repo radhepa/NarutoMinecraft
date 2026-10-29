@@ -1,5 +1,5 @@
 {"id": "green_beast", "name": "Green Beast", "tagline": "Green bodysuit, orange leg warmers, the protector as a belt, a glossy bowl cut and bold brows",
  "face": "f01_shinobi", "hair": "h07_bowl_cut", "headwear": null,
  "top": "t08_green_jumpsuit", "bottom": "b05_green_leggings",
- "palette": "GREEN_BEAST", "hair_color": "RAVEN", "eye_color": "DARK", "eye_style": "soft_glint", "feminine": false,
- "brows": "bold", "complexion": 1, "scale": 14}
+ "palette": "GREEN_BEAST", "hair_color": "RAVEN", "eye_color": "DARK", "eye_style": "soft_glint", "feminine": false, "brows": "bold",
+ "complexion": 1, "scale": 14, "rank": "genin", "signature": true}

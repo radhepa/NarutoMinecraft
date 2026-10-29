@@ -1,5 +1,5 @@
-{"id": "anbu", "name": "ANBU Black Ops", "tagline": "Porcelain animal mask, plated chest armor, white arm guards, a tanto across the back",
+{"id": "anbu", "name": "ANBU Fox", "tagline": "Fox mask, plated chest armor, white arm guards, a tanto across the back",
  "face": "f01_shinobi", "hair": "h05_swept_spikes", "headwear": "w03_anbu_mask",
  "top": "t06_anbu_armor", "bottom": "b01_shinobi_trousers",
- "palette": "ANBU", "hair_color": "SNOW", "eye_color": "DARK", "eye_style": "soft_glint", "feminine": false,
- "complexion": 1, "scale": 14}
+ "palette": "ANBU", "hair_color": "ESPRESSO", "eye_color": "DARK", "eye_style": "soft_glint", "feminine": false,
+ "complexion": 1, "scale": 14, "rank": "anbu"}

@@ -1,7 +1,7 @@
 {
   "id": "w03_anbu_mask",
   "kind": "headwear",
-  "name": "ANBU Mask",
+  "name": "ANBU Fox Mask",
   "gender": "unisex",
   "texture": "headwear/w03_anbu_mask.png",
   "extrasHeight": 32,
@@ -85,9 +85,9 @@
         0
       ],
       "origin": [
-        -2,
+        -2.0,
         0,
-        -2
+        -1.0
       ],
       "size": [
         4,
@@ -105,7 +105,7 @@
       ]
     },
     {
-      "id": "ear_right",
+      "id": "ear_right_0",
       "bone": "HEAD",
       "pivot": [
         -2.6,
@@ -119,12 +119,12 @@
       ],
       "origin": [
         -1.5,
-        -3,
+        -2.0,
         -1
       ],
       "size": [
         3,
-        3,
+        2,
         2
       ],
       "uv": [
@@ -138,7 +138,40 @@
       ]
     },
     {
-      "id": "ear_left",
+      "id": "ear_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "ear_left_0",
       "bone": "HEAD",
       "pivot": [
         2.6,
@@ -152,16 +185,49 @@
       ],
       "origin": [
         -1.5,
-        -3,
+        -2.0,
         -1
       ],
       "size": [
         3,
-        3,
+        2,
         2
       ],
       "uv": [
+        7,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "ear_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
         0,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        18,
         27
       ],
       "scale": [
@@ -173,5 +239,6 @@
   ],
   "hidesHair": [],
   "coversFace": true,
-  "description": "White porcelain animal mask with red markings, eye slits and pointed ears."
+  "coversMouth": false,
+  "description": "White porcelain fox mask with red markings, eye slits and pointed ears."
 }

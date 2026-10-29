@@ -66,7 +66,8 @@
   "headwear": [
     "w01_kage_hat",
     "w02_forehead_protector",
-    "w03_anbu_mask"
+    "w03_anbu_mask",
+    "w04_anbu_cat_hood"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -76,7 +77,8 @@
     "t05_kunoichi_qipao",
     "t06_anbu_armor",
     "t07_hyuga_robe",
-    "t08_green_jumpsuit"
+    "t08_green_jumpsuit",
+    "t09_anbu_cloak"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -101,12 +103,13 @@
       "eye_style": "starlit",
       "feminine": false,
       "complexion": 1,
-      "scale": 14
+      "scale": 14,
+      "rank": "kage"
     },
     {
       "id": "ninja",
-      "name": "Leaf Ninja",
-      "tagline": "Konoha flak vest, forehead protector, shinobi trousers and wraps",
+      "name": "Leaf Jonin",
+      "tagline": "The standard jonin kit: green flak vest, forehead protector, navy shinobi trousers",
       "face": "f01_shinobi",
       "hair": "h02_leaf_spikes",
       "headwear": "w02_forehead_protector",
@@ -118,7 +121,8 @@
       "eye_style": "soft_glint",
       "feminine": false,
       "complexion": 2,
-      "scale": 14
+      "scale": 14,
+      "rank": "jonin"
     },
     {
       "id": "uchiha",
@@ -135,7 +139,9 @@
       "eye_style": "starlit",
       "feminine": false,
       "complexion": 0,
-      "scale": 14
+      "scale": 14,
+      "rank": "genin",
+      "signature": true
     },
     {
       "id": "genin",
@@ -155,7 +161,9 @@
         "whiskers"
       ],
       "complexion": 1,
-      "scale": 14
+      "scale": 14,
+      "rank": "genin",
+      "signature": true
     },
     {
       "id": "kunoichi",
@@ -172,24 +180,27 @@
       "eye_style": "starlit",
       "feminine": true,
       "complexion": 0,
-      "scale": 14
+      "scale": 14,
+      "rank": "genin",
+      "signature": true
     },
     {
       "id": "anbu",
-      "name": "ANBU Black Ops",
-      "tagline": "Porcelain animal mask, plated chest armor, white arm guards, a tanto across the back",
+      "name": "ANBU Fox",
+      "tagline": "Fox mask, plated chest armor, white arm guards, a tanto across the back",
       "face": "f01_shinobi",
       "hair": "h05_swept_spikes",
       "headwear": "w03_anbu_mask",
       "top": "t06_anbu_armor",
       "bottom": "b01_shinobi_trousers",
       "palette": "ANBU",
-      "hair_color": "SNOW",
+      "hair_color": "ESPRESSO",
       "eye_color": "DARK",
       "eye_style": "soft_glint",
       "feminine": false,
       "complexion": 1,
-      "scale": 14
+      "scale": 14,
+      "rank": "anbu"
     },
     {
       "id": "hyuga",
@@ -206,7 +217,9 @@
       "eye_style": "starlit",
       "feminine": false,
       "complexion": 0,
-      "scale": 14
+      "scale": 14,
+      "rank": "genin",
+      "signature": true
     },
     {
       "id": "green_beast",
@@ -224,7 +237,27 @@
       "feminine": false,
       "brows": "bold",
       "complexion": 1,
-      "scale": 14
+      "scale": 14,
+      "rank": "genin",
+      "signature": true
+    },
+    {
+      "id": "anbu_cat",
+      "name": "ANBU Cat",
+      "tagline": "Hood up, cat mask with violet stripes, a long grey cloak over the plated armor",
+      "face": "f01_shinobi",
+      "hair": "h04_long_straight",
+      "headwear": "w04_anbu_cat_hood",
+      "top": "t09_anbu_cloak",
+      "bottom": "b01_shinobi_trousers",
+      "palette": "ANBU_SHADOW",
+      "hair_color": "RAVEN",
+      "eye_color": "DARK",
+      "eye_style": "starlit",
+      "feminine": true,
+      "complexion": 0,
+      "scale": 14,
+      "rank": "anbu"
     }
   ]
 }

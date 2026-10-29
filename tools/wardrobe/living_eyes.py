@@ -64,12 +64,12 @@ def fit(x, y, left, right, top, bottom, h=1.0):
 
 
 def planes(style, feminine, hair, skin, iris, white, pattern=None, glow=False, brows="fine", masked=False, marks=(),
-           blink=0.0, gaze=(0.0, 0.0)):
+           mouth=True, blink=0.0, gaze=(0.0, 0.0)):
     """Every face plane for one pose, laid out exactly as ResidentModel.layer + animateFace.
 
     Two additions to Village Friends: `brows="bold"` draws a full-pixel brow, wider than the eye
     (a taijutsu specialist's), `marks` adds thin cheek marks (whiskers) and `masked` (headwear that covers the face) leaves only
-    the neck shade.
+    the neck shade. `mouth=False` (a cloth face mask) leaves out the lips.
     """
     out = []
     if masked:
@@ -113,9 +113,9 @@ def planes(style, feminine, hair, skin, iris, white, pattern=None, glow=False, b
         for x, y, w, h in MARKS[name]:
             for side in (-1, 1):
                 out.append(Plane("HEAD", side * x, y, -4.02, w, h, mark(skin)))
-    if feminine:
+    if mouth and feminine:
         out.append(Plane("HEAD", 0, -1.45, -4.02, 1, .5, rose_lip(skin)))
-    else:
+    elif mouth:
         out.append(Plane("HEAD", 0, -1.425, -4.02, 1.5, .45, lip(skin)))
     out.append(Plane("TORSO", 0, .35, -2.055, 4, .7, shadow(skin)))
     return out

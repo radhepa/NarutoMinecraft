@@ -2,4 +2,4 @@
  "face": "f01_shinobi", "hair": "h04_long_straight", "headwear": "w02_forehead_protector",
  "top": "t05_kunoichi_qipao", "bottom": "b04_kunoichi_shorts",
  "palette": "KUNOICHI", "hair_color": "BLOSSOM_PINK", "eye_color": "JADE", "eye_style": "starlit", "feminine": true,
- "complexion": 0, "scale": 14}
+ "complexion": 0, "scale": 14, "rank": "genin", "signature": true}
