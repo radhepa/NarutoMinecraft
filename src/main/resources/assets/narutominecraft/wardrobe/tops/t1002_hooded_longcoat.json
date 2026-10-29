@@ -1,0 +1,391 @@
+{
+  "id": "t1002_hooded_longcoat",
+  "kind": "top",
+  "name": "Hooded Longcoat",
+  "gender": "unisex",
+  "texture": "tops/t1002_hooded_longcoat.png",
+  "extrasHeight": 80,
+  "tags": [
+    "aburame",
+    "coat",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -4.0,
+        4.2
+      ],
+      "size": [
+        10,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "collar_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.2,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        0,
+        -3.6,
+        -5.2
+      ],
+      "size": [
+        1,
+        4,
+        10
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "collar_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.2,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        0,
+        -3.6,
+        -5.2
+      ],
+      "size": [
+        1,
+        4,
+        10
+      ],
+      "uv": [
+        0,
+        15
+      ]
+    },
+    {
+      "id": "collar_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -2.2,
+        -5.2
+      ],
+      "size": [
+        10,
+        3,
+        1
+      ],
+      "uv": [
+        23,
+        15
+      ]
+    },
+    {
+      "id": "hood_down",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        2.6
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        30
+      ]
+    },
+    {
+      "id": "hood_point",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        2.6
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        25,
+        30
+      ]
+    },
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        36,
+        30
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        40
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        7,
+        4
+      ],
+      "uv": [
+        21,
+        40
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        7,
+        4
+      ],
+      "uv": [
+        32,
+        40
+      ]
+    },
+    {
+      "id": "sling",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        34
+      ],
+      "origin": [
+        -0.5,
+        -7,
+        -0.5
+      ],
+      "size": [
+        1,
+        14,
+        1
+      ],
+      "uv": [
+        43,
+        40
+      ]
+    },
+    {
+      "id": "satchel",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        9.0,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        48,
+        40
+      ]
+    },
+    {
+      "id": "beetle_badge",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        4.6,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        56
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Knee-length olive coat, collar to the nose, hood down on the shoulders, satchel strap."
+}

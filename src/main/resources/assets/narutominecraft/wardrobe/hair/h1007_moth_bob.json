@@ -1,0 +1,322 @@
+{
+  "id": "h1007_moth_bob",
+  "kind": "hair",
+  "name": "Moth Bob",
+  "gender": "unisex",
+  "texture": "hair/h1007_moth_bob.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "wing_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.55,
+        -7.4,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        9
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -3.5
+      ],
+      "size": [
+        1,
+        8,
+        7
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "wing_tip_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.55,
+        -7.4,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        9
+      ],
+      "origin": [
+        -0.5,
+        8,
+        -3.5
+      ],
+      "size": [
+        1,
+        1,
+        3
+      ],
+      "uv": [
+        17,
+        0
+      ]
+    },
+    {
+      "id": "wing_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.55,
+        -7.4,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -9
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -3.5
+      ],
+      "size": [
+        1,
+        8,
+        7
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "wing_tip_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.55,
+        -7.4,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -9
+      ],
+      "origin": [
+        -0.5,
+        8,
+        -3.5
+      ],
+      "size": [
+        1,
+        1,
+        3
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    },
+    {
+      "id": "back_panel",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.0,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    },
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        22
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        16
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        22
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        28,
+        16
+      ]
+    },
+    {
+      "id": "fringe_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        30
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        33,
+        16
+      ]
+    },
+    {
+      "id": "fringe_2",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -30
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        40,
+        16
+      ]
+    },
+    {
+      "id": "fringe_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -22
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        16
+      ]
+    },
+    {
+      "id": "fringe_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -22
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        54,
+        16
+      ]
+    }
+  ],
+  "description": "Middle-parted chin-length bob, the side panels flaring out at the hem like wings."
+}

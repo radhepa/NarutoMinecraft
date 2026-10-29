@@ -1,0 +1,51 @@
+{
+  "id": "aburame", "name": "Aburame",
+  "tagline": "Hidden faces: round dark lenses, collars to the nose, deep hoods and the kikaichu in earthy olive, moss and dusty brown",
+  "palettes": {
+    "ABURAME_SAGE":  {"name": "Aburame Sage",  "P": "#7b8670", "S": "#d8d2bd", "A": "#4f5f36", "L": "#6e5a40", "M": "#9aa39c", "K": "#1c1f1b", "D": "#5f4c39"},
+    "ABURAME_OLIVE": {"name": "Aburame Olive", "P": "#5f6843", "S": "#d2cbb2", "A": "#a08a3e", "L": "#5f4a33", "M": "#9aa39c", "K": "#191b16", "D": "#4a4436"},
+    "ABURAME_SLATE": {"name": "Aburame Slate", "P": "#6c7379", "S": "#dad8d0", "A": "#5e7048", "L": "#5b4a3a", "M": "#a7adb0", "K": "#1a1c20", "D": "#3a3f45"},
+    "ABURAME_KHAKI": {"name": "Aburame Khaki", "P": "#a39572", "S": "#e4dcc4", "A": "#5f6e3c", "L": "#6b5136", "M": "#a4a69a", "K": "#22201a", "D": "#5c5040"},
+    "ABURAME_MOSS":  {"name": "Aburame Moss",  "P": "#4d5c3c", "S": "#d6d0b8", "A": "#b08a3a", "L": "#5a4632", "M": "#9aa090", "K": "#171a14", "D": "#3b3a2c"},
+    "ABURAME_ROOT":  {"name": "Aburame Root",  "P": "#2a2c30", "S": "#d4d0c4", "A": "#8d2a2a", "L": "#3c3530", "M": "#8f979c", "K": "#111214", "D": "#1f2124"},
+    "ABURAME_DUST":  {"name": "Aburame Dust",  "P": "#7a6450", "S": "#ddd3bd", "A": "#5f6b48", "L": "#4f3d2c", "M": "#9d9a8c", "K": "#1e1a16", "D": "#4a4038"},
+    "ABURAME_MOTH":  {"name": "Aburame Moth",  "P": "#bdb294", "S": "#f0eadb", "A": "#6f7f55", "L": "#7a6046", "M": "#aab0a8", "K": "#2a2822", "D": "#6c6658"}
+  },
+  "hair_colors": {
+    "ABURAME_UMBER": {"name": "Aburame Umber", "ramp": ["#160f0b", "#24180f", "#352418", "#4b3523", "#634a33"]},
+    "ABURAME_BLACK": {"name": "Aburame Black", "ramp": ["#0d0e0c", "#171915", "#22251f", "#30352b", "#434a3b"]},
+    "ABURAME_ASH":   {"name": "Aburame Ash",   "ramp": ["#24201b", "#352f28", "#4a4339", "#62594c", "#7d7363"]}
+  },
+  "eye_colors": {
+    "ABURAME_AMBER": {"name": "Aburame Amber", "ramp": ["#0e0c08", "#3b2a14", "#6e4f22", "#a57e3e", "#efe9da"]}
+  },
+  "marks": {
+    "aburame_beetle": {"rects": [[2.7, -1.7, 0.6, 0.45], [2.85, -1.85, 0.3, 0.15]], "color": "#2b2a1c", "mirror": false},
+    "aburame_kikai_dots": {"rects": [[2.6, -1.6, 0.25, 0.25], [3.1, -1.3, 0.25, 0.25], [2.85, -1.0, 0.25, 0.25]], "color": null, "mirror": true}
+  },
+  "pool": {
+    "hair": ["h1001_shino_spikes", "h1002_swept_back", "h1003_shibi_mane", "h1004_torune_slick", "h1005_kikai_crest",
+             "h1006_beetle_dome", "h1007_moth_bob", "h1008_hive_bun", "h1009_hood_shag", "h1010_spiked_tail",
+             "h1011_antenna_locks", "h1012_long_tied", "h1013_cicada_layers", "h1014_mantis_crop", "h1015_wing_sweep"],
+    "hair_colors": ["ABURAME_UMBER", "ABURAME_UMBER", "ABURAME_BLACK", "ABURAME_ASH", "ESPRESSO", "RAVEN"],
+    "eye_colors": ["DARK", "ABURAME_AMBER"],
+    "palettes": ["ABURAME_SAGE", "ABURAME_OLIVE", "ABURAME_SLATE", "ABURAME_KHAKI", "ABURAME_MOSS", "ABURAME_DUST"],
+    "headwear": [null, null, null, "w1001_round_shades", "w1001_round_shades", "w1001_round_shades", "w1002_oval_tints",
+                 "w1003_deep_hood", "w1004_optic_visor", "w1005_tassel_shades", "w1006_shades_protector", "w02_forehead_protector"],
+    "bottoms": ["b01_shinobi_trousers", "b1002_field_shorts", "b1004_wrapped_slacks"],
+    "complexions": [0, 1, 2],
+    "marks": [{"id": "aburame_beetle", "chance": 0.08}, {"id": "aburame_kikai_dots", "chance": 0.1}]
+  },
+  "outfits": [
+    {"id": "shino_coat", "name": "Shino Coat", "top": "t1001_shino_coat", "bottom": "b1001_aburame_trousers", "rank": "genin", "palettes": ["ABURAME_SAGE"]},
+    {"id": "hooded_longcoat", "name": "Hooded Longcoat", "top": "t1002_hooded_longcoat", "bottom": "b1001_aburame_trousers", "rank": "chunin", "palettes": ["ABURAME_OLIVE", "ABURAME_MOSS", "ABURAME_SAGE"]},
+    {"id": "kikai_flak", "name": "Kikai Flak", "top": "t1003_kikai_flak", "bottom": "b01_shinobi_trousers", "rank": "jonin", "palettes": ["ABURAME_OLIVE", "ABURAME_MOSS"]},
+    {"id": "teacher_jacket", "name": "Teacher Jacket", "top": "t1004_teacher_jacket", "bottom": "b1004_wrapped_slacks", "rank": "jonin", "palettes": ["ABURAME_SLATE", "ABURAME_SAGE"]},
+    {"id": "shibi_robe", "name": "Shibi Robe", "top": "t1005_shibi_robe", "bottom": "b1001_aburame_trousers", "rank": "jonin", "palettes": ["ABURAME_SAGE", "ABURAME_DUST", "ABURAME_SLATE"]},
+    {"id": "torune_suit", "name": "Torune Suit", "top": "t1006_torune_suit", "bottom": "b1003_root_apron", "rank": "anbu", "palettes": ["ABURAME_ROOT"]},
+    {"id": "moth_cape", "name": "Moth Cape", "top": "t1007_moth_cape", "bottom": "b1002_field_shorts", "rank": "genin", "palettes": ["ABURAME_MOTH", "ABURAME_KHAKI"]},
+    {"id": "field_shirt", "name": "Field Shirt", "top": "t1008_field_shirt", "bottom": "b1002_field_shorts", "rank": "chunin", "palettes": ["ABURAME_KHAKI", "ABURAME_MOTH"]},
+    {"id": "hive_tunic", "name": "Hive Tunic", "top": "t1009_hive_tunic", "bottom": "b1004_wrapped_slacks", "rank": "genin", "palettes": ["ABURAME_MOSS", "ABURAME_KHAKI", "ABURAME_MOTH"]},
+    {"id": "elder_mantle", "name": "Elder Mantle", "top": "t1010_elder_mantle", "bottom": "b1001_aburame_trousers", "rank": "jonin", "palettes": ["ABURAME_DUST"]}
+  ]
+}
