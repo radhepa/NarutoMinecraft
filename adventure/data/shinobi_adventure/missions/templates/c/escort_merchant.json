@@ -1,0 +1,320 @@
+{
+ "format": 1,
+ "id": "mission.c.escort_merchant",
+ "kind": "mission",
+ "rank": "c",
+ "category": "escort",
+ "status": "beta",
+ "title": "dlg:mission.c.escort_merchant.title",
+ "brief": "dlg:mission.c.escort_merchant.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.escort_merchant.brief",
+  "accept": "dlg:mission.c.escort_merchant.accept",
+  "decline": "dlg:mission.c.escort_merchant.decline",
+  "progress": "dlg:mission.c.escort_merchant.progress",
+  "success": "dlg:mission.c.escort_merchant.success",
+  "fail": "dlg:mission.c.escort_merchant.fail",
+  "report": "dlg:mission.c.escort_merchant.report"
+ },
+ "minutes": 30,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "trader",
+    "resident_of": "any"
+   }
+  },
+  "bend": {
+   "pick": "anchor",
+   "tag": "road.east_bend"
+  },
+  "camp": {
+   "pick": "anchor",
+   "tag": "road.campsite"
+  },
+  "waystation": {
+   "pick": "anchor",
+   "tag": "road.east_waystation"
+  },
+  "bandits": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.bandits_small",
+    "combat:group.road_ambush"
+   ]
+  },
+  "bridge": {
+   "pick": "anchor",
+   "tag": "road.bridge"
+  },
+  "ford": {
+   "pick": "anchor",
+   "tag": "road.ford"
+  }
+ },
+ "start": "meet",
+ "steps": {
+  "meet": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.main"
+   },
+   "next": "road"
+  },
+  "road": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:bend"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "bridge_out"
+     },
+     "next": "detour"
+    }
+   ],
+   "next": "ambush"
+  },
+  "detour": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:ford"
+   },
+   "next": "ambush"
+  },
+  "ambush": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:bandits",
+    "at": "slot:bend"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:bandits",
+      "slot:bend"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "all": [
+       {
+        "client_is": "role:merchant"
+       },
+       {
+        "flag": "story.ch14.done"
+       }
+      ]
+     },
+     "next": "merchant_talk"
+    }
+   ],
+   "next": "camp"
+  },
+  "merchant_talk": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client",
+    "dialogue": "dlg:mission.chain.merchant.camp_talk"
+   },
+   "on_done": [
+    {
+     "set_flag": [
+      "story.merchant.camp_talks",
+      "+1"
+     ]
+    }
+   ],
+   "next": "camp"
+  },
+  "camp": {
+   "objective": {
+    "type": "sleep",
+    "at": "slot:camp"
+   },
+   "on_done": [
+    {
+     "bond_event": [
+      "role:squad",
+      "camp_night"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "night_raid"
+     },
+     "next": "raid"
+    }
+   ],
+   "next": "last_leg"
+  },
+  "raid": {
+   "objective": {
+    "type": "protect",
+    "who": "slot:client",
+    "until": "06:00",
+    "at": "slot:camp"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "combat:group.bandits_small",
+      "slot:camp"
+     ]
+    }
+   ],
+   "next": "last_leg"
+  },
+  "last_leg": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:client",
+    "to": "slot:waystation"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "extra_passenger"
+     },
+     "next": "passenger"
+    }
+   ],
+   "next": "captive"
+  },
+  "passenger": {
+   "objective": {
+    "type": "talk",
+    "who": "traveller"
+   },
+   "next": "captive"
+  },
+  "captive": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "hand_over": null,
+     "let_go": "bandits_released"
+    },
+    "dialogue": "dlg:mission.c.escort_merchant.choice.captive"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "bridge_out",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.escort_merchant.twist.bridge_out"
+  },
+  {
+   "id": "night_raid",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.c.escort_merchant.twist.night_raid"
+  },
+  {
+   "id": "extra_passenger",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.c.escort_merchant.twist.extra_passenger"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0,
+   "acts": [
+    [
+     "role:squad",
+     "mission_success"
+    ]
+   ]
+  },
+  "bandits_released": {
+   "pay": 0.9,
+   "standing": 0,
+   "rival_risk": "combat:group.bandits_small"
+  }
+ },
+ "bonus": [
+  "client_unharmed",
+  "no_knockouts",
+  "spared"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.bandits_small",
+  "combat:group.road_ambush"
+ ],
+ "places": {
+  "anchors": [
+   "gate.main",
+   "road.bridge",
+   "road.campsite",
+   "road.east_bend",
+   "road.east_waystation",
+   "road.ford"
+  ],
+  "regions": [
+   "region:east_road"
+  ]
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.4
+ },
+ "tags": [
+  "road",
+  "escort",
+  "fight",
+  "camp"
+ ],
+ "contested": false,
+ "chain": "chain.merchant",
+ "classic": true,
+ "banter": "dlg:mission.banter.escort",
+ "_premise": "Escort a travelling trader and his cart along the east road to the waystation.",
+ "_twists": {
+  "bridge_out": "The bridge is down; the ford is slower and easier to ambush.",
+  "night_raid": "They come back at night for the cart.",
+  "extra_passenger": "A traveller begs to walk with the cart for safety."
+ },
+ "_choices": {
+  "captive": "Hand the captured bandits to the waystation's guards, or let them run."
+ }
+}

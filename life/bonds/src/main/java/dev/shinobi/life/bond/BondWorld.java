@@ -38,6 +38,18 @@ public final class BondWorld {
     private Map<String, Map<String, Double>> contacts;
     /** The village-scale society, when one is settled ({@link Village#settle}); without it gossip runs on circles. */
     Village village;
+    /** Time together: hangouts planned, invitations residents sent the player, and when each last invited them. */
+    final List<Together.Plan> plans = new ArrayList<>();
+    final List<Together.Invitation> invitations = new ArrayList<>();
+    final Map<String, Long> invitedOn = new TreeMap<>();
+    int planSerial, giftSerial;
+    /** Gifts the player has received (the home's collection book reads them). */
+    final List<Gifts.Received> received = new ArrayList<>();
+    /** Questions asked across everyone today (the daily budget). */
+    int questionsToday, questionsDry;
+    long questionsDay = -1;
+    /** The questions residents can ask (content, loaded by the glue from the dialogue data; not saved). */
+    final List<Question> questionBank = new ArrayList<>();
 
     public BondWorld(long seed, long day) { this.seed = seed; this.day = day; }
 
@@ -184,14 +196,33 @@ public final class BondWorld {
         return delta;
     }
     public void reveal(String who, String fact) { bond(who).facts.add(fact); }
-    /** Kindling Bond was used with someone: what was granted (nothing if the tier is none), and the use counted for the master's trial. */
-    public Kindling.Grant kindle(String who) {
-        var tier = Kindling.tier(this, who);
-        if (tier == Kindling.Tier.NONE) return Kindling.grant(tier);
-        bond(who).kindled++;
-        return Kindling.grant(tier, who.equals(spouse()));
+    /** Kindling Bond was used with someone: their flame as it burns (tier none: nothing to kindle), the use counted, resonance built. */
+    public Kindling.Flame kindle(String who) {
+        var flame = Kindling.flame(this, who);
+        if (flame.tier() == Kindling.Tier.NONE) return flame;
+        var b = bond(who);
+        b.kindled++;
+        Kindling.resonate(this, b);
+        return Kindling.flame(this, who);
     }
     public void setBondFlag(String who, String f) { bond(who).flags.add(f); }
+    public void clearBondFlag(String who, String f) { bond(who).flags.remove(f); }
+
+    /** A change worked out elsewhere (an answer to a question), remembered as {@code act}: contact, memory, a possible quarrel, a level-up. */
+    Meters applyDelta(String who, Act act, Meters delta) {
+        var p = need(who); var b = bond(who);
+        b.contact(day);
+        var d = romanceOpen(who) ? delta : delta.with(Meter.ROMANCE, 0);
+        b.remember(act, d, Source.SELF, "", day);
+        hurt(b, p, act, d, who);
+        rise(b);
+        return d;
+    }
+    /** Times the engine had a question budget for someone but nothing left to ask them (the bank is too small). */
+    public int questionsDry() { return questionsDry; }
+
+    /** Something they feel about the player without the player being there (overlooked, let down). */
+    void npcFelt(String who, Act act) { apply(who, act, Source.SELF, "", null, List.of(), false); }
 
     private Meters apply(String who, Act act, Source how, String about, String momentId, Collection<String> witnesses, boolean contact) {
         var p = need(who); var b = bond(who);
@@ -201,6 +232,7 @@ public final class BondWorld {
         if (!romanceOpen(who)) delta = delta.with(Meter.ROMANCE, 0);
         b.remember(act, delta, how, about, day);
         if (act.moment) b.moments.add(momentId != null ? momentId : act.id() + "@" + day);
+        if (how == Source.SELF && Kindling.FIGHTING.contains(act)) Kindling.resonate(this, b);
         hurt(b, p, act, delta, who);
         if (act.spreads) deed(act, who, witnesses);
         rise(b);
@@ -412,6 +444,9 @@ public final class BondWorld {
             if (b.to.equals(PLAYER)) courtship(b);
             updateLevel(b, 1);
         }
+        Together.daily(this);
+        Gifts.daily(this);
+        LifeEvents.daily(this);
         if (village != null) village.endDay();
         day++;
     }

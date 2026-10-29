@@ -1,0 +1,167 @@
+{
+ "format": 1,
+ "id": "mission.d.training_upkeep",
+ "kind": "mission",
+ "rank": "d",
+ "category": "training",
+ "status": "beta",
+ "title": "dlg:mission.d.training_upkeep.title",
+ "brief": "dlg:mission.d.training_upkeep.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.training_upkeep.brief",
+  "accept": "dlg:mission.d.training_upkeep.accept",
+  "decline": "dlg:mission.d.training_upkeep.decline",
+  "progress": "dlg:mission.d.training_upkeep.progress",
+  "success": "dlg:mission.d.training_upkeep.success",
+  "fail": "dlg:mission.d.training_upkeep.fail",
+  "report": "dlg:mission.d.training_upkeep.report"
+ },
+ "minutes": 8,
+ "party": "squad",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "groundskeeper"
+   }
+  },
+  "ground": {
+   "pick": "anchor",
+   "tag": "training_ground"
+  },
+  "challenger": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "age": "child"
+   }
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "repair"
+  },
+  "repair": {
+   "objective": {
+    "type": "perform",
+    "what": "repair_dummy",
+    "at": "slot:ground",
+    "count": 4
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "stray_shuriken"
+     },
+     "next": "shuriken"
+    },
+    {
+     "if": {
+      "twist": "challenge"
+     },
+     "next": "spar"
+    }
+   ],
+   "next": "rake"
+  },
+  "shuriken": {
+   "objective": {
+    "type": "collect",
+    "target": "stray_shuriken",
+    "at": "slot:ground",
+    "count": 10
+   },
+   "next": "rake"
+  },
+  "spar": {
+   "objective": {
+    "type": "perform",
+    "what": "spar",
+    "at": "slot:ground"
+   },
+   "on_done": [
+    {
+     "bond_event": [
+      "slot:challenger",
+      "spar_won"
+     ]
+    }
+   ],
+   "next": "rake"
+  },
+  "rake": {
+   "objective": {
+    "type": "perform",
+    "what": "rake",
+    "at": "slot:ground",
+    "count": 6
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "stray_shuriken",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.training_upkeep.twist.stray_shuriken"
+  },
+  {
+   "id": "challenge",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.training_upkeep.twist.challenge"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "all_found",
+  "fast"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "training_ground"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.25
+ },
+ "tags": [
+  "outdoors",
+  "training"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.training",
+ "_premise": "Repair the dummies and posts at a training ground and rake the field.",
+ "_twists": {
+  "stray_shuriken": "Last week's class left the grass full of shuriken.",
+  "challenge": "A Genin from another squad wants a spar before you go."
+ }
+}

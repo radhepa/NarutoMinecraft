@@ -1,0 +1,136 @@
+{
+ "format": 1,
+ "id": "mission.anbu.deep_cover",
+ "kind": "mission",
+ "rank": "s",
+ "category": "anbu",
+ "status": "later",
+ "title": "dlg:mission.anbu.deep_cover.title",
+ "brief": "dlg:mission.anbu.deep_cover.brief",
+ "dialogue": {
+  "brief": "dlg:mission.anbu.deep_cover.brief",
+  "accept": "dlg:mission.anbu.deep_cover.accept",
+  "decline": "dlg:mission.anbu.deep_cover.decline",
+  "progress": "dlg:mission.anbu.deep_cover.progress",
+  "success": "dlg:mission.anbu.deep_cover.success",
+  "fail": "dlg:mission.anbu.deep_cover.fail",
+  "report": "dlg:mission.anbu.deep_cover.report"
+ },
+ "minutes": 60,
+ "party": "solo",
+ "days": 5,
+ "unlock": {
+  "rank_at_least": "anbu"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "anbu"
+   }
+  },
+  "town": {
+   "pick": "anchor",
+   "tag": "foreign.town"
+  },
+  "works": {
+   "pick": "anchor",
+   "tag": "foreign.works"
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "settle"
+  },
+  "settle": {
+   "objective": {
+    "type": "perform",
+    "what": "transformation_hold",
+    "at": "slot:town",
+    "count": 3
+   },
+   "next": "learn"
+  },
+  "learn": {
+   "objective": {
+    "type": "inspect",
+    "target": "works",
+    "at": "slot:works",
+    "count": 4
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "friend_made",
+   "weight": 2,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.anbu.deep_cover.twist.friend_made"
+  },
+  {
+   "id": "cover_blown",
+   "weight": 1,
+   "harder": true,
+   "modifier": true,
+   "premise": "dlg:mission.anbu.deep_cover.twist.cover_blown"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "no_alarm"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "foreign.town",
+   "foreign.works",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:foreign_town"
+  ]
+ },
+ "pay": {
+  "band": "s",
+  "xp_band": "s",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "anbu",
+  "stealth",
+  "talk"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.anbu",
+ "_premise": "Live under a false name in a foreign town for five days and learn what its lord is building.",
+ "_twists": {
+  "friend_made": "Someone in the town becomes a real friend to your false self.",
+  "cover_blown": "A visitor from the Leaf recognises you on the street."
+ }
+}

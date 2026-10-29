@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "narutominecraft:block/konoha/green_awning"
+  },
+  "facing=east": {
+   "model": "narutominecraft:block/konoha/green_awning",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "narutominecraft:block/konoha/green_awning",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "narutominecraft:block/konoha/green_awning",
+   "y": 270
+  }
+ }
+}

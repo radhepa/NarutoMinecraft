@@ -1,0 +1,27 @@
+plugins {
+    id 'java-library'
+}
+
+// The player's look in Shinobi Village (CHARACTER_CREATION.md): age stages, the creator's rules and the server's
+// check of a creator submission, names, Varied's seeded "Roll a life", restyling and growing up. Pure Java, no
+// Minecraft. Phase 0's Village mod depends on it (`implementation project(':village:look')`) and includes it in its jar.
+version = '0.1.0'
+group = 'dev.shinobi'
+base { archivesName = 'shinobi-village-look' }
+
+repositories { mavenCentral() }
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+test {
+    useJUnitPlatform()
+    testLogging { events 'failed'; exceptionFormat 'full' }
+    // The compiled creator data (tools/creator/creator.py), the same file the game will load.
+    def data = rootProject.file('src/main/resources/data/narutominecraft/creator/creator.json')
+    systemProperty 'creator.json', data.absolutePath
+    inputs.file data
+}

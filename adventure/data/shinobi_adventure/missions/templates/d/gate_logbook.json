@@ -1,0 +1,169 @@
+{
+ "format": 1,
+ "id": "mission.d.gate_logbook",
+ "kind": "mission",
+ "rank": "d",
+ "category": "gate",
+ "status": "beta",
+ "title": "dlg:mission.d.gate_logbook.title",
+ "brief": "dlg:mission.d.gate_logbook.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.gate_logbook.brief",
+  "accept": "dlg:mission.d.gate_logbook.accept",
+  "decline": "dlg:mission.d.gate_logbook.decline",
+  "progress": "dlg:mission.d.gate_logbook.progress",
+  "success": "dlg:mission.d.gate_logbook.success",
+  "fail": "dlg:mission.d.gate_logbook.fail",
+  "report": "dlg:mission.d.gate_logbook.report"
+ },
+ "minutes": 8,
+ "party": "solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "clan": "hagane"
+   }
+  },
+  "gate": {
+   "pick": "anchor",
+   "tag": "gate.main"
+  },
+  "farmer": {
+   "pick": "resident",
+   "where": {
+    "job": "farmer"
+   }
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "log"
+  },
+  "log": {
+   "objective": {
+    "type": "inspect",
+    "target": "traveller_pass",
+    "at": "slot:gate",
+    "count": 6
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "odd_cart"
+     },
+     "next": "cart"
+    },
+    {
+     "if": {
+      "twist": "lost_traveller"
+     },
+     "next": "guide"
+    }
+   ],
+   "next": "report"
+  },
+  "cart": {
+   "objective": {
+    "type": "inspect",
+    "target": "cart",
+    "at": "slot:gate"
+   },
+   "next": "decide"
+  },
+  "decide": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "pass": null,
+     "hold": "held_cart"
+    },
+    "dialogue": "dlg:mission.d.gate_logbook.choice.decide"
+   },
+   "next": "report"
+  },
+  "guide": {
+   "objective": {
+    "type": "escort",
+    "who": "traveller",
+    "to": "place:inn"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "odd_cart",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.gate_logbook.twist.odd_cart"
+  },
+  {
+   "id": "lost_traveller",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.gate_logbook.twist.lost_traveller"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "held_cart": {
+   "pay": 1.0,
+   "standing": 0,
+   "lead": "district.b2.contraband"
+  }
+ },
+ "bonus": [
+  "fast",
+  "kind_choice"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "gate.main",
+   "inn"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.3
+ },
+ "tags": [
+  "village",
+  "gate",
+  "talk"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.gate",
+ "_premise": "Help the gate guards log the day's travellers through the main gate.",
+ "_twists": {
+  "odd_cart": "A cart's papers are in order, but it sits too low on its wheels.",
+  "lost_traveller": "A traveller has no idea where the inn they booked is."
+ },
+ "_choices": {
+  "decide": "Let the cart through or hold it for the guard captain."
+ }
+}

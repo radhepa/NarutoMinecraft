@@ -44,7 +44,7 @@ class MemoryTest {
         assertTrue(b.memories().size() <= Bond.MEMORY_CAP);
         assertTrue(b.remembers(Act.SAVED_LIFE));
         w.advance(400);
-        assertTrue(b.memories().stream().allMatch(m -> m.permanent() || m.act() == Act.MISSED_BIRTHDAY),
-                "only the big memory outlasts a year of silence (and a friend still noticed you forgot their birthday)");
+        assertTrue(b.memories().stream().allMatch(m -> m.permanent() || m.act() == Act.MISSED_BIRTHDAY || m.act() == Act.FELT_OVERLOOKED),
+                "only the big memory outlasts a year of silence (and a friend noticed the forgotten birthday and the unanswered invitations)");
     }
 }

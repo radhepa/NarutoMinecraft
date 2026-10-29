@@ -1,0 +1,186 @@
+{
+ "format": 1,
+ "id": "mission.c.bear",
+ "kind": "mission",
+ "rank": "c",
+ "category": "beasts",
+ "status": "beta",
+ "title": "dlg:mission.c.bear.title",
+ "brief": "dlg:mission.c.bear.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.bear.brief",
+  "accept": "dlg:mission.c.bear.accept",
+  "decline": "dlg:mission.c.bear.decline",
+  "progress": "dlg:mission.c.bear.progress",
+  "success": "dlg:mission.c.bear.success",
+  "fail": "dlg:mission.c.bear.fail",
+  "report": "dlg:mission.c.bear.report"
+ },
+ "minutes": 20,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "groundskeeper"
+   }
+  },
+  "ground": {
+   "pick": "anchor",
+   "tag": "outside.training_ground"
+  },
+  "honey": {
+   "pick": "anchor",
+   "tag": "outside.beehives"
+  },
+  "beast": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:enemy.bear"
+   ]
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "find"
+  },
+  "find": {
+   "objective": {
+    "type": "go",
+    "place": "slot:ground"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "honey_trail"
+     },
+     "next": "lure"
+    }
+   ],
+   "next": "fight"
+  },
+  "lure": {
+   "objective": {
+    "type": "collect",
+    "target": "honeycomb",
+    "at": "slot:honey"
+   },
+   "next": "lead"
+  },
+  "lead": {
+   "objective": {
+    "type": "perform",
+    "what": "lure_away",
+    "at": "slot:ground"
+   },
+   "on_done": [
+    {
+     "mission_outcome": "lured_away"
+    }
+   ],
+   "next": null
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:beast",
+    "at": "slot:ground"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:beast",
+      "slot:ground"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "honey_trail",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.bear.twist.honey_trail"
+  },
+  {
+   "id": "cubs",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.c.bear.twist.cubs"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "lured_away": {
+   "pay": 1.0,
+   "standing": 1
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "gentle"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:enemy.bear"
+ ],
+ "places": {
+  "anchors": [
+   "outside.beehives",
+   "outside.training_ground"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.4
+ },
+ "tags": [
+  "outside",
+  "beast",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.beasts",
+ "_premise": "A bear has wandered into the outer training grounds and will not leave.",
+ "_twists": {
+  "honey_trail": "The groundskeeper's beehives give you an idea.",
+  "cubs": "There are cubs in the bushes, and she knows you are near them."
+ }
+}

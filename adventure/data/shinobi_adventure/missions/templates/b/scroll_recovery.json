@@ -1,0 +1,186 @@
+{
+ "format": 1,
+ "id": "mission.b.scroll_recovery",
+ "kind": "mission",
+ "rank": "b",
+ "category": "recovery",
+ "status": "later",
+ "title": "dlg:mission.b.scroll_recovery.title",
+ "brief": "dlg:mission.b.scroll_recovery.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.scroll_recovery.brief",
+  "accept": "dlg:mission.b.scroll_recovery.accept",
+  "decline": "dlg:mission.b.scroll_recovery.decline",
+  "progress": "dlg:mission.b.scroll_recovery.progress",
+  "success": "dlg:mission.b.scroll_recovery.success",
+  "fail": "dlg:mission.b.scroll_recovery.fail",
+  "report": "dlg:mission.b.scroll_recovery.report"
+ },
+ "minutes": 40,
+ "party": "squad",
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "priest",
+    "resident_of": "any"
+   }
+  },
+  "trail": {
+   "pick": "anchor",
+   "tag": "forest.trail"
+  },
+  "camp": {
+   "pick": "anchor",
+   "tag": "forest.camp"
+  },
+  "pair": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.rogue_pair"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "trail"
+  },
+  "trail": {
+   "objective": {
+    "type": "inspect",
+    "target": "tracks",
+    "at": "slot:trail",
+    "count": 4
+   },
+   "next": "camp"
+  },
+  "camp": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:pair",
+    "at": "slot:camp"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:pair",
+      "slot:camp"
+     ]
+    }
+   ],
+   "next": "scroll"
+  },
+  "scroll": {
+   "objective": {
+    "type": "collect",
+    "target": "sealed_scroll",
+    "at": "slot:camp"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "buyer"
+     },
+     "next": "buyer"
+    }
+   ],
+   "next": "report"
+  },
+  "buyer": {
+   "objective": {
+    "type": "defeat",
+    "group": "combat:enemy.rogue_chunin",
+    "at": "slot:camp"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "combat:enemy.rogue_chunin",
+      "slot:camp"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "deliver",
+    "item": "sealed_scroll",
+    "to": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "buyer",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.b.scroll_recovery.twist.buyer"
+  },
+  {
+   "id": "decoy_scroll",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.b.scroll_recovery.twist.decoy_scroll"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "no_knockouts",
+  "clean_record"
+ ],
+ "fast_hours": 24,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.rogue_pair",
+  "combat:enemy.rogue_chunin"
+ ],
+ "places": {
+  "anchors": [
+   "forest.camp",
+   "forest.trail",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:northern_forest"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.55
+ },
+ "tags": [
+  "travel",
+  "fight",
+  "recovery",
+  "tracking"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.recovery",
+ "_premise": "Two missing-nin stole a sealed technique scroll from a temple; get it back before they sell it.",
+ "_twists": {
+  "buyer": "The buyer arrives as you take the scroll back.",
+  "decoy_scroll": "The scroll they carry is a decoy; the real one is buried at their camp."
+ }
+}

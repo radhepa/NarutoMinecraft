@@ -1,0 +1,170 @@
+{
+ "format": 1,
+ "id": "mission.a.border_skirmish",
+ "kind": "mission",
+ "rank": "a",
+ "category": "war",
+ "status": "later",
+ "title": "dlg:mission.a.border_skirmish.title",
+ "brief": "dlg:mission.a.border_skirmish.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.border_skirmish.brief",
+  "accept": "dlg:mission.a.border_skirmish.accept",
+  "decline": "dlg:mission.a.border_skirmish.decline",
+  "progress": "dlg:mission.a.border_skirmish.progress",
+  "success": "dlg:mission.a.border_skirmish.success",
+  "fail": "dlg:mission.a.border_skirmish.fail",
+  "report": "dlg:mission.a.border_skirmish.report"
+ },
+ "minutes": 50,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "jonin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "jonin"
+   }
+  },
+  "crossing": {
+   "pick": "anchor",
+   "tag": "front.crossing"
+  },
+  "platoon": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.foreign_platoon"
+   ]
+  },
+  "jonin": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:enemy.foreign_jonin"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "dig_in"
+  },
+  "dig_in": {
+   "objective": {
+    "type": "perform",
+    "what": "set_trap",
+    "at": "slot:crossing",
+    "count": 6
+   },
+   "next": "hold"
+  },
+  "hold": {
+   "objective": {
+    "type": "survive",
+    "until": "+12h",
+    "at": "slot:crossing"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:platoon",
+      "slot:crossing"
+     ]
+    }
+   ],
+   "next": "commander"
+  },
+  "commander": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:jonin",
+    "at": "slot:crossing"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:jonin",
+      "slot:crossing"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "flanked",
+   "weight": 2,
+   "harder": true,
+   "modifier": true,
+   "premise": "dlg:mission.a.border_skirmish.twist.flanked"
+  },
+  {
+   "id": "wounded_ally",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.a.border_skirmish.twist.wounded_ally"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "teamwork"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.foreign_platoon",
+  "combat:enemy.foreign_jonin"
+ ],
+ "places": {
+  "anchors": [
+   "front.crossing",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:front"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.5
+ },
+ "tags": [
+  "travel",
+  "war",
+  "defence",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.war",
+ "_premise": "An enemy platoon has crossed the border; hold the line at a river crossing until reinforcements come.",
+ "_twists": {
+  "flanked": "A second squad comes around through the reeds.",
+  "wounded_ally": "An allied squad is pinned on the far bank."
+ }
+}

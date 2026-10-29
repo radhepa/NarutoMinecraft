@@ -1,0 +1,164 @@
+{
+ "format": 1,
+ "id": "mission.a.cell_hunt",
+ "kind": "mission",
+ "rank": "a",
+ "category": "hunt",
+ "status": "later",
+ "title": "dlg:mission.a.cell_hunt.title",
+ "brief": "dlg:mission.a.cell_hunt.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.cell_hunt.brief",
+  "accept": "dlg:mission.a.cell_hunt.accept",
+  "decline": "dlg:mission.a.cell_hunt.decline",
+  "progress": "dlg:mission.a.cell_hunt.progress",
+  "success": "dlg:mission.a.cell_hunt.success",
+  "fail": "dlg:mission.a.cell_hunt.fail",
+  "report": "dlg:mission.a.cell_hunt.report"
+ },
+ "minutes": 50,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "jonin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "council"
+   }
+  },
+  "far": {
+   "pick": "region",
+   "from": [
+    "region:far_lands",
+    "region:northern_forest",
+    "region:mountain_pass",
+    "region:coast_town"
+   ]
+  },
+  "trail": {
+   "pick": "anchor",
+   "tag": "far.trail"
+  },
+  "lair": {
+   "pick": "anchor",
+   "tag": "far.lair"
+  },
+  "cell": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.cell_pair"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "trail"
+  },
+  "trail": {
+   "objective": {
+    "type": "inspect",
+    "target": "tracks",
+    "at": "slot:trail",
+    "count": 5
+   },
+   "next": "lair"
+  },
+  "lair": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:cell",
+    "at": "slot:lair"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:cell",
+      "slot:lair"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "trap_lair",
+   "weight": 2,
+   "harder": true,
+   "modifier": true,
+   "premise": "dlg:mission.a.cell_hunt.twist.trap_lair"
+  },
+  {
+   "id": "prisoners",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.a.cell_hunt.twist.prisoners"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "fast"
+ ],
+ "fast_hours": 36,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.cell_pair"
+ ],
+ "places": {
+  "anchors": [
+   "far.lair",
+   "far.trail",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:coast_town",
+   "region:far_lands",
+   "region:mountain_pass",
+   "region:northern_forest"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "hunt",
+  "fight",
+  "tracking"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.hunt",
+ "_premise": "Track a band of rogue ninja in a far region.",
+ "_twists": {
+  "trap_lair": "The lair is bait.",
+  "prisoners": "They are holding travellers."
+ }
+}

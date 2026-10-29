@@ -39,10 +39,20 @@ public enum Act {
     MISSION_TOGETHER(def(Size.NOTABLE, 60).meters(1.5, 2.5, 1, 0).exp(Experience.MISSION).honors(Value.DUTY)),
     CAMP_NIGHT(def(Size.NOTABLE, 90).meters(3, 2.5, 0, 0).exp(Experience.CAMP).lean(Trait.OPENNESS, Meter.AFFECTION, 1)),
     FESTIVAL_TOGETHER(def(Size.NOTABLE, 90).meters(3, 0.5, 0, 0).romance(4).exp(Experience.FESTIVAL).lean(Trait.OPENNESS, Meter.AFFECTION, 1)),
+    HUNG_OUT(def(Size.SMALL, 45).meters(2, 1, 0, 0).exp(Experience.HANGOUT).lean(Trait.OPENNESS, Meter.AFFECTION, 0.5)),
+    HIGHLIGHT(def(Size.NOTABLE, 150).meters(2.5, 1.5, 0, 0)),
+    SAW_GIFT_DISPLAYED(def(Size.NOTABLE, 120).meters(2.5, 1, 0, 0).lean(Trait.WARMTH, Meter.AFFECTION, 1)),
+    VISITED_HOME(def(Size.SMALL, 45).meters(2, 1.5, 0, 0).exp(Experience.HANGOUT).honors(Value.FAMILY).lean(Trait.OPENNESS, Meter.AFFECTION, 0.5)),
+    SAW_PHOTO_TOGETHER(def(Size.NOTABLE, 120).meters(2.5, 1, 0, 0).lean(Trait.WARMTH, Meter.AFFECTION, 1)),
+    AWKWARD_HANGOUT(def(Size.SMALL, 20).meters(-1, 0, 0, 0)),
+    CELEBRATED_WITH_THEM(def(Size.SMALL, 60).meters(2, 1, 0, 0).honors(Value.FAMILY)),
+    COMFORTED(def(Size.NOTABLE, 120).meters(3, 4, 0, 0).honors(Value.KINDNESS).lean(Trait.WARMTH, Meter.AFFECTION, 1)),
+    ASKED_AFTER_THEM(def(Size.SMALL, 30).meters(1, 1, 0, 0).honors(Value.KINDNESS)),
+    ASKED_ADVICE(def(Size.SMALL, 30).meters(1, 1, 0.5, 0).honors(Value.KNOWLEDGE).lean(Trait.PRIDE, Meter.AFFECTION, 1)),
     DATE(def(Size.NOTABLE, 90).meters(2.5, 1, 0, 0).romance(8).exp(Experience.DATE).romantic()),
 
     // Moments: the story gates want these (bond quests, heart-to-hearts, a life saved, a secret kept).
-    BOND_MOMENT(def(Size.BIG, 0).meters(1.5, 2, 0.5, 0).moment()),
+    BOND_MOMENT(def(Size.BIG, 0).meters(2, 2.5, 0.5, 0).moment()),
     HEART_TO_HEART(def(Size.NOTABLE, 120).meters(2.5, 3, 0, 0).lean(Trait.OPENNESS, Meter.AFFECTION, 1)),
     SAVED_LIFE(def(Size.BIG, 0).meters(9, 11, 5, 0).moment().honors(Value.COURAGE, Value.LOYALTY).deed(20)),
     SAVED_BY_THEM(def(Size.BIG, 0).meters(5, 3.5, 0, 0).moment().lean(Trait.WARMTH, Meter.AFFECTION, 2)),
@@ -62,6 +72,8 @@ public enum Act {
     HELPED_RESIDENT(def(Size.SMALL, 60).meters(2, 2, 0.5, 0).honors(Value.KINDNESS).deed(5)),
     DEFENDED_VILLAGE(def(Size.NOTABLE, 120).meters(2.5, 2.5, 3.5, 0).honors(Value.COURAGE, Value.DUTY).deed(12)),
     APOLOGIZED(def(Size.SMALL, 30).meters(1, 1, 0, 0)),
+    ANSWERED(def(Size.NOTABLE, 120).meters(0.5, 0.5, 0, 0)),
+    STATED(def(Size.SMALL, 30)),
     MEDIATED(def(Size.NOTABLE, 90).meters(2, 3, 2, 0).honors(Value.KINDNESS).deed(4)),
     HONORED_CUSTOM(def(Size.NOTABLE, 90).meters(2, 2, 1.5, 0).honors(Value.FAMILY, Value.DUTY).deed(4)),
     GUEST_IN_QUARTER(def(Size.SMALL, 60).meters(1, 1, 0, 0).deed(1)),
@@ -78,6 +90,8 @@ public enum Act {
     PRIED(def(Size.SMALL, 30).meters(-2, -2, 0, 0).peeve(Peeve.NOSINESS).lean(Trait.OPENNESS, Meter.AFFECTION, 1)),
     MISSED_BIRTHDAY(def(Size.NOTABLE, 30).meters(-2.5, -0.5, 0, 0).peeve(Peeve.NEGLECT).violates(Value.FAMILY)),
     FELT_OVERLOOKED(def(Size.SMALL, 30).meters(-2, -0.5, 0, 1).peeve(Peeve.NEGLECT).lean(Trait.PRIDE, Meter.RIVALRY, 2)),
+    STOOD_UP(def(Size.NOTABLE, 60).meters(-3, -5, 0, 0).violates(Value.HONESTY).peeve(Peeve.LATENESS)),
+    CAUGHT_CONTRADICTION(def(Size.SMALL, 60).meters(-0.5, -1.5, 0, 0).violates(Value.HONESTY).peeve(Peeve.DISHONESTY)),
     BROKE_PROMISE(def(Size.NOTABLE, 60).meters(-2.5, -6, -0.5, 0).violates(Value.HONESTY).peeve(Peeve.LATENESS)),
     WENT_OVER_THEIR_HEAD(def(Size.NOTABLE, 60).meters(-2, -5, 0, 0.5).violates(Value.LOYALTY).lean(Trait.DISCIPLINE, Meter.TRUST, 2.5)),
     SIDED_AGAINST(def(Size.NOTABLE, 60).meters(-3, -3, 0, 1).violates(Value.LOYALTY)),
@@ -100,7 +114,7 @@ public enum Act {
 
     public enum Size { SMALL, NOTABLE, BIG }
     /** The kinds of shared experience the gates count. */
-    public enum Experience { STUDY, TRAINING, MEAL, SPAR, MISSION, CAMP, FESTIVAL, DATE }
+    public enum Experience { STUDY, TRAINING, MEAL, SPAR, MISSION, CAMP, FESTIVAL, DATE, HANGOUT }
     public record Lean(Trait trait, Meter meter, double amount) {}
 
     public final Size size;
