@@ -173,7 +173,7 @@ the pair's seeded spark plus their warmth and openness, [BONDS.md §2](BONDS.md#
 | Root | Options | Default | What it does |
 |---|---|---|---|
 | **Temperament** | bold, steady, cheerful, quiet, curious, stubborn | cheerful | A dialogue context tag (`player.temperament`): some lines notice how you carry yourself (the instructor's comments, a shopkeeper's aside). Never a gate, never a bond modifier |
-| **Knack** | balanced, taijutsu, weapons, ninjutsu | balanced | Combat's starting leaning: +5% to that kind of fighting and one practice item to start with (the combat and items sessions own the numbers and ids). Balanced has neither |
+| **Knack** | balanced, taijutsu, weapons, ninjutsu | balanced | Combat's starting leaning (`combat:knack.<id>`): +5% to that kind of fighting and one practice item to start with; balanced gives +2% to each and no item (the combat and items sessions own the numbers and ids) |
 | **Affinity** | undecided, fire, wind, water, earth, lightning | undecided | The nature you lean toward. The first nature is still chosen at the Genin ceremony (Ch 12), which offers every nature and shows your affinity as your leaning; choosing it there gives combat's bonus (+10% power with that nature). Undecided has no bonus and no leaning |
 
 ### 7 Review
@@ -208,7 +208,7 @@ ever offers allowed choices, so a refusal means a mismatched pack. Then the prol
 ## 6. Starting stats and kit
 
 Every player starts with the same numbers; Roots add only small leanings. From the combat session
-(final values in its `data/combat/resources.json`, branch `combat`):
+(its `data/combat/core/knacks.json`, `clanless_start`):
 
 | What | Start | Owner |
 |---|---|---|
@@ -219,7 +219,7 @@ Every player starts with the same numbers; Roots add only small leanings. From t
 | Stamina | 110 (100 base, +10 for a player of no clan) | Combat |
 | Poise | 20 | Combat |
 | Taijutsu | Academy basics | Combat |
-| Knack | +5% to the chosen kind (combat), and its kit: `kit:knack.taijutsu` (`item:knuckle_wraps`), `kit:knack.weapons` (5 `item:practice_kunai` of fine grade), `kit:knack.ninjutsu` (`item:hand_sign_primer`); balanced has none | Combat, Items |
+| Knack | `combat:knack.<id>`: +5% to the chosen kind, or +2% to each for balanced; and its kit: `kit:knack.taijutsu` (`item:knuckle_wraps`), `kit:knack.weapons` (5 `item:practice_kunai` of fine grade), `kit:knack.ninjutsu` (`item:hand_sign_primer`); balanced has no kit | Combat, Items |
 | Techniques, nature | None; Clone, Transformation and Substitution are learned in Beta 1; the first nature at the Genin ceremony | Combat |
 | Key item, from the creator | `item:half_charm`: a small charred wooden charm, half of a matched pair; bound to the player, cannot be dropped, sold or stored away (given at the creator screen, in `kit:start`) | Story, Items |
 | In the prologue | The charm and the prologue clothes | Items |
@@ -469,5 +469,4 @@ Roll a life in Varied only.
 
 Asked of the sibling sessions (owners decide):
 
-- **Combat:** the knack's +5% and the affinity bonus at the ceremony, as ids in its data.
 - **Dialogue:** the tokens and the address rules (§10), `player.temperament` as a context tag.

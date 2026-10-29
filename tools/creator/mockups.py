@@ -313,7 +313,7 @@ def roots_screen(world, data):
     blurbs = {
         "temperament": ("Temperament", "How you carry yourself. Some lines notice it; friendships do not depend on it.",
                         {"bold": "Bold", "steady": "Steady", "cheerful": "Cheerful", "quiet": "Quiet", "curious": "Curious", "stubborn": "Stubborn"}, "curious"),
-        "knack": ("Knack", "What comes easily at the Academy: +5% to it, and a practice item to start.",
+        "knack": ("Knack", "What comes easily at the Academy: +5% to it and a practice item (balanced: +2% to each).",
                   {"balanced": "Balanced", "taijutsu": "Taijutsu", "weapons": "Weapons", "ninjutsu": "Ninjutsu"}, "taijutsu"),
         "affinity": ("Affinity", "The nature you lean toward. The Genin ceremony offers every nature; choosing this one there gives a bonus.",
                      {"undecided": "Undecided", "fire": "Fire", "wind": "Wind", "water": "Water", "earth": "Earth", "lightning": "Lightning"}, "wind"),
