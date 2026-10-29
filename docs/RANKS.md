@@ -626,9 +626,9 @@ for growth:
 
 - **Teammate A at Ch 11 and Ch 20.** Their genjutsu holds enemies about five times as long as the
   player does, and the combined share undercounts that control.
-- **Teammate B through the exams.** The pup peaks there and the brawler falls back later. A flat
-  offset change would push the 28 h and 60 h shares out of the band, so the pup's mid-game is
-  Combat's to tune.
+- **Teammate B through the exams** (119 to 122%). A flat offset change would push the 28 h and 60 h
+  shares out of the band. Capping the pup's growth until level 18 barely moved it, so the heat comes
+  from the taijutsu niche edge. It is a known item in COMBAT.md's open questions.
 - **Ch 8.** It stays the player's no-jutsu gap.
 
 `Contribution.share` is the roster's own rough estimate and gives 0.89 to 1.13 for a typical
@@ -687,5 +687,5 @@ per mission rank. The roster only needs the same XP the player earns, so in Phas
   arrives: the showcase pillars (the kenjutsu instructor, the returning captain, the old scroll-seller,
   the wandering legend), the proctors, the desk, the gate, the watch, the police, the Academy
   teachers and the clan heads.
-- **Contribution shares.** In the band for most of the path; Combat may tune teammate B's pup through
-  the exams (118–123%).
+- **Contribution shares.** In the band for most of the path. Teammate B runs 119–122% through the exams
+  (the taijutsu niche edge), a known item in COMBAT.md.
