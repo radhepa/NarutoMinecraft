@@ -1,0 +1,18 @@
+{
+  "id": "tg028_mesh_half_tee",
+  "kind": "top",
+  "name": "Mesh Half-Sleeve Tee",
+  "gender": "unisex",
+  "texture": "tops/tg028_mesh_half_tee.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Round-necked tee with accent-edged half sleeves over a mesh undershirt and mesh forearms."
+}

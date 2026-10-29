@@ -1,0 +1,15 @@
+{
+  "id": "bg031_jika_tabi_trousers",
+  "kind": "bottom",
+  "name": "Jika-Tabi Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bg031_jika_tabi_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Slim ankle trousers over dark split-toe work boots with metal clasps."
+}

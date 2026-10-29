@@ -1,0 +1,238 @@
+{
+  "id": "hg018_side_part",
+  "kind": "hair",
+  "name": "Side Part",
+  "gender": "unisex",
+  "texture": "hair/hg018_side_part.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sweep_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        70
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "sweep_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        70
+      ],
+      "origin": [
+        -1.0,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "sweep_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        72
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    },
+    {
+      "id": "sweep_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        72
+      ],
+      "origin": [
+        -1.0,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "sweep_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        74
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    },
+    {
+      "id": "sweep_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        74
+      ],
+      "origin": [
+        -1.0,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ]
+    },
+    {
+      "id": "sweep_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        30
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "sweep_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        -3.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        30
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    }
+  ],
+  "description": "Neat short cut parted on the left, the top combed across in a soft wave above the brow."
+}

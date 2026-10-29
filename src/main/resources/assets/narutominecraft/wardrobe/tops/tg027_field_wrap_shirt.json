@@ -1,0 +1,135 @@
+{
+  "id": "tg027_field_wrap_shirt",
+  "kind": "top",
+  "name": "Field Wrap Shirt",
+  "gender": "unisex",
+  "texture": "tops/tg027_field_wrap_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "sash_knot",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        9.8,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "sash_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sash_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Crossed wrap shirt with elbow sleeves, a knotted sash with hanging ends, bandaged forearms."
+}

@@ -1,0 +1,254 @@
+{
+  "id": "wg005_field_bandana",
+  "kind": "headwear",
+  "name": "Field Bandana",
+  "gender": "unisex",
+  "texture": "headwear/wg005_field_bandana.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bandana",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "bandana_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -6,
+        3
+      ],
+      "size": [
+        8,
+        4,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "plate",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.0,
+        -4.62
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -9,
+        -4,
+        -2
+      ],
+      "size": [
+        18,
+        8,
+        2
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.1,
+        4.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        11
+      ]
+    },
+    {
+      "id": "tail_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.6,
+        -6.4,
+        4.9
+      ],
+      "rotation": [
+        22,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        48,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -6.4,
+        4.9
+      ],
+      "rotation": [
+        22,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        53,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "bandana_end_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -2.4,
+        4.7
+      ],
+      "rotation": [
+        18,
+        0,
+        22
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        58,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "bandana_end_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -2.4,
+        4.7
+      ],
+      "rotation": [
+        18,
+        0,
+        -16
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        22
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [
+    "*"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Dark bandana over the crown with a protector plate, knotted at the nape with long ends."
+}

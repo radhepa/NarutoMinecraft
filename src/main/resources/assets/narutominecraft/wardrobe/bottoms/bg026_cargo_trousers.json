@@ -1,0 +1,115 @@
+{
+  "id": "bg026_cargo_trousers",
+  "kind": "bottom",
+  "name": "Cargo Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bg026_cargo_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_cargo",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.25,
+        1.4,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "id": "left_cargo",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.25,
+        1.4,
+        0
+      ],
+      "rotation": [
+        0,
+        -90,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "id": "right_shin_pocket",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.25,
+        5.0,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        18,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    }
+  ],
+  "description": "Full-length trousers with thigh and shin cargo pockets, tucked into leather boots."
+}
