@@ -1,0 +1,131 @@
+{
+  "id": "bg059_tail_skirt",
+  "kind": "bottom",
+  "name": "Tail Skirt",
+  "gender": "unisex",
+  "texture": "bottoms/bg059_tail_skirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.3,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "waist_tail",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        10,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "waist_tail_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        10.0,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        6,
+        2
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "waist_tail_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.0,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        6,
+        2
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    }
+  ],
+  "description": "Fitted three-quarter trousers with a long back overskirt to the calf, sandals."
+}

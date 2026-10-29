@@ -1,0 +1,131 @@
+{
+  "id": "bg053_sash_trousers",
+  "kind": "bottom",
+  "name": "Sash Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bg053_sash_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.1,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "waist_sash_knot",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        9.1,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "waist_sash_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        10.1,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_sash_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        10.1,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Slim trousers, a long sash knotted at the left hip to the knee, wrapped ankles."
+}

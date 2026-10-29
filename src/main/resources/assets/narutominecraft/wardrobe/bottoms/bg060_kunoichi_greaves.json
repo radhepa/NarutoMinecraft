@@ -1,0 +1,104 @@
+{
+  "id": "bg060_kunoichi_greaves",
+  "kind": "bottom",
+  "name": "Kunoichi Greaves",
+  "gender": "unisex",
+  "texture": "bottoms/bg060_kunoichi_greaves.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_greave",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        5.0,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        0,
+        -0.6
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_greave",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        5.0,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        0,
+        -0.6
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "waist_wrap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.3,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        22,
+        0
+      ],
+      "inflate": 0.15
+    }
+  ],
+  "description": "Fitted leggings, steel shin greaves strapped knee to ankle, a hip wrap, sandals."
+}

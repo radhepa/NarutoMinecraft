@@ -1,0 +1,160 @@
+{
+  "id": "bg041_split_skirt_shorts",
+  "kind": "bottom",
+  "name": "Split Skirt Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/bg041_split_skirt_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "holster_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "holster",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -3.0,
+        2.4,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "waist_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        28,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "waist_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        21,
+        7
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Fitted shorts under a short skirt split front and back, a thigh holster, sandals."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "tg043_high_collar_sleeveless",
+  "kind": "top",
+  "name": "High Collar Sleeveless",
+  "gender": "unisex",
+  "texture": "tops/tg043_high_collar_sleeveless.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Fitted sleeveless top zipped to a tall collar, a front panel, long arm warmers."
+}

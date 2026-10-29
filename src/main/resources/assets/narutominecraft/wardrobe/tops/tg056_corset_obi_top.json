@@ -1,0 +1,48 @@
+{
+  "id": "tg056_corset_obi_top",
+  "kind": "top",
+  "name": "Corset Obi Top",
+  "gender": "female",
+  "texture": "tops/tg056_corset_obi_top.png",
+  "extrasHeight": 16,
+  "tags": [
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "corset",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        5.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.14
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Long-sleeved fitted top with flared cuffs, a tall laced corset obi."
+}

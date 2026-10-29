@@ -353,6 +353,26 @@
         "#b84a56",
         "#f1ebe4"
       ]
+    },
+    "KUNOICHI_HAZEL": {
+      "name": "Kunoichi Hazel",
+      "ramp": [
+        "#120c08",
+        "#5a3b1c",
+        "#8a6232",
+        "#c49a5c",
+        "#f1efe6"
+      ]
+    },
+    "KUNOICHI_GREY": {
+      "name": "Kunoichi Grey",
+      "ramp": [
+        "#0c0d10",
+        "#3d4652",
+        "#66727f",
+        "#a3aeb8",
+        "#f1efe6"
+      ]
     }
   }
 }

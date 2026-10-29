@@ -1,0 +1,73 @@
+{
+  "id": "bg051_tabi_leggings",
+  "kind": "bottom",
+  "name": "Tabi Leggings",
+  "gender": "unisex",
+  "texture": "bottoms/bg051_tabi_leggings.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_scroll",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        6,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    }
+  ],
+  "description": "Close leggings with an outer seam, split-toe tabi boots, a belt with a scroll case."
+}

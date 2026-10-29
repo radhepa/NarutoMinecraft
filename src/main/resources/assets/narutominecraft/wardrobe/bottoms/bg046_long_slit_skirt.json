@@ -1,0 +1,104 @@
+{
+  "id": "bg046_long_slit_skirt",
+  "kind": "bottom",
+  "name": "Side Slit Long Skirt",
+  "gender": "female",
+  "texture": "bottoms/bg046_long_slit_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "waist_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        11,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Ankle-length skirt slit high at both sides, shorts beneath, narrow belt, flat shoes."
+}

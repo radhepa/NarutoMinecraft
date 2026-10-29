@@ -1,0 +1,17 @@
+{
+  "id": "bg056_stocking_shorts",
+  "kind": "bottom",
+  "name": "Stocking Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/bg056_stocking_shorts.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Loose drawstring shorts, long striped stockings above the knee, sandals."
+}

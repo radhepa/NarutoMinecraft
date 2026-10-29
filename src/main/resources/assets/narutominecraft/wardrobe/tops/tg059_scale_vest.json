@@ -1,0 +1,20 @@
+{
+  "id": "tg059_scale_vest",
+  "kind": "top",
+  "name": "Scale Vest",
+  "gender": "unisex",
+  "texture": "tops/tg059_scale_vest.png",
+  "extrasHeight": 0,
+  "tags": [
+    "armor",
+    "jonin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short vest of lacquered scales bound in the accent over a dark long-sleeved shirt."
+}

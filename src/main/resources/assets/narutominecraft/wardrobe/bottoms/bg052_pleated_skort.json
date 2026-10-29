@@ -1,0 +1,131 @@
+{
+  "id": "bg052_pleated_skort",
+  "kind": "bottom",
+  "name": "Pleated Skort",
+  "gender": "female",
+  "texture": "bottoms/bg052_pleated_skort.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "waist_skirt_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        4,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "waist_skirt_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        4,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "description": "Short pleated skirt over shorts, banded knee-high socks, sandals."
+}

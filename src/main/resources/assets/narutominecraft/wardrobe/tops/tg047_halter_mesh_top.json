@@ -1,0 +1,18 @@
+{
+  "id": "tg047_halter_mesh_top",
+  "kind": "top",
+  "name": "Halter Mesh Top",
+  "gender": "female",
+  "texture": "tops/tg047_halter_mesh_top.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Halter-neck top with a mesh yoke over bare shoulders, wide waistband, wrapped wrists."
+}

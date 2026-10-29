@@ -1,0 +1,189 @@
+{
+  "id": "bg045_hakama_skirt",
+  "kind": "bottom",
+  "name": "Hakama Skirt",
+  "gender": "unisex",
+  "texture": "bottoms/bg045_hakama_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "hakama",
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_hakama_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_hakama_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "waist_hakama_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        10.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "waist_hakama_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    },
+    {
+      "id": "waist_koshiita",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.6,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "waist_himo",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        13,
+        11
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "description": "Short pleated hakama skirt with a back board and ties, dark leggings, tabi boots."
+}
