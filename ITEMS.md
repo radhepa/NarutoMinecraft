@@ -402,7 +402,7 @@ back except furniture (half price) and loot and curios at the pawn shop.
 | Story chapters with pay | 300 to 600 (provisional) | Outfits | 100 to 480 |
 | Side quests (SIDE_QUESTS.md §2.6) | 10 to 400 | Gifts for friends | the bond engine's three a day |
 | Small favours (generated) | 10 to 30 | Services: bath 8, lessons 50 to 60, repairs, orders, adoption 40 to 100, restyles 30 to 60 | |
-| Pawning camp loot and curios | 1 to 30 each, 400 a day at most | Later: a house (30,000), a clan (20,000), estate halls | |
+| Pawning camp loot and curios | 1 to 30 each, 400 a day at most | Later: a house (30,000), a clan (20,000), estate halls; moving is free | |
 
 **The stipend.** The owner decided: no rent, and the stipend keeps going. It stays **flat at 30 ryo a day for the
 whole game**, not by rank: it covers a frugal day's meals and nothing more, so savings, tools, furniture and
@@ -479,7 +479,7 @@ swap is one line. Previews: [sprites](docs/renders/items/sprites.png), [palette 
 | Konoha build | 119 block requests (furniture, interiors, displays, stations) adopted into `tools/konoha/blocks.json`; renames `tatami` and vanilla `potted_fern`; colour and noren variants written into the rows; new: `wall_mount`, `barber_chair`, the barber's site, eleven more shop noren; slot counts for displays; gathering-spot anchors |
 | Combat | Weapon, tool, coating and gear ids reconciled (combat keys stats by these ids; grade multipliers agreed); clan weapons are clan-line rewards now that the player is clanless; enemy ids for `drop.*` tables to confirm |
 | Missions | 18 curio tables under its names, 45 `mission_*` items (9 more reuse existing ids), 20 mission keepsakes, client gifts mapped to items, info cards, technique scrolls by pool; pay bands used in the simulation, means to confirm |
-| Home | No collection book: curios, keepsakes, cards and crests are ordinary items kept in chests and on display furniture (display case, wall mount, curio cabinet, shelves); its furniture catalogue merged into the registry (new pieces keep its ids and prices; duplicates map to the ids the Konoha blocks use); the starter set is its Leaf set; the stipend; houses, movers and the spare key are its numbers |
+| Home | No collection book: curios, keepsakes, cards and crests are ordinary items kept in chests and on display furniture (display case, wall mount, curio cabinet, shelves); its furniture catalogue merged into the registry (new pieces keep its ids and prices; duplicates map to the ids the Konoha blocks use); the starter set is its Leaf set; the stipend; the house price and the spare key are its numbers (moving is free) |
 | Character creation | The starting, knack and rank kits; the story's starting key item; restyle prices at the barber |
 | Dialogue | Shop ids, keeper roles and districts for `dlg:shop.<shop>.*` pools, plus haggle, order and job lines |
 | Roadmap and side quests | The stipend; this file's summary in ROADMAP §7; SIDE_QUESTS.md §8's rewards used as written |

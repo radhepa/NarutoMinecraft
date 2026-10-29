@@ -14,7 +14,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | ingredient | 47 |
 | scroll | 10 |
 | material | 46 |
-| furniture | 82 |
+| furniture | 83 |
 | station | 8 |
 | keepsake | 61 |
 | curio | 51 |
@@ -103,7 +103,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 
 | Id | Name | Group | Rank | Slice | Stack | Price | Sources | Use |
 |---|---|---|---|---|---|---|---|---|
-| `moving_crate` | Moving Crate | crate | chunin | later | 1 | — | service:movers | Furniture and a chest's contents packed for the mover |
+| `moving_crate` | Moving Crate | crate | chunin | later | 1 | — | home:moving | Furniture and a chest's contents packed on moving day (friends help; moving is free) |
 | `leg_holster` | Kunai Holster | pouch | genin | beta2 | 1 | 45 | shop:tool_shop, craft:workbench | A thigh holster for six kunai, drawn without a hotbar slot |
 | `medic_pouch` | Medic Pouch | pouch | genin | beta2 | 1 | 90 | shop:tool_shop, craft:workbench | Holds medicine and bandages; using one from it is faster |
 | `scroll_case` | Scroll Case | pouch | chunin | later | 1 | 120 | shop:tool_shop | A lacquered tube for scrolls on your back |
@@ -396,6 +396,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `hanging_scroll` | Hanging Scroll | wall | any | beta1 | 1 | 80 | shop:painters_studio | A kakejiku: a painting or a word in ink |
 | `leaf_banner` | Leaf Banner | wall | any | beta1 | 1 | 50 | shop:furniture_shop | A cloth banner with the Leaf's mark; the heart of the Leaf set |
 | `mailbox` | Mailbox | wall | any | beta1 | 1 | 30 | home:apartment | Letters and clan summons arrive here in the morning |
+| `pinboard` | Pinboard | wall | any | later | 1 | 40 | shop:furniture_shop | A cork board for notes, maps and clues pinned to the wall |
 | `poster` | Poster | wall | any | beta1 | 1 | 10 | shop:bookshop, shop:haruno_store, shop:painters_studio | A paper poster: the Rock, a ramen ad, the Academy, a festival |
 | `wall_clock` | Wall Clock | wall | any | beta1 | 1 | 60 | shop:furniture_shop | Shows the time and the day; chimes at six |
 | `wind_chime` | Wind Chime | wall | any | beta1 | 1 | 12 | shop:furniture_shop, shop:haruno_store | A glass furin that rings in a breeze |
@@ -610,7 +611,7 @@ tables and rerun. The design is in [ITEMS.md](../../ITEMS.md).
 | `mission_treaty_draft` | Treaty Draft | mission | genin | later | 1 | — | mission:mission.b.allied_courier | A draft treaty under escort |
 | `scent_cloth` | Scent Cloth | mission | genin | beta2 | 1 | — | mission:d, mission:c | Something that smells of who you are looking for: a ninken tracks it |
 | `wish_plaque` | Wish Plaque | shrine | any | beta1 | 16 | 5 | quest:district.b1.shrine.wishes, shop:shrine_office | A wooden ema: write a wish and hang it at the shrine |
-| `half_charm` | Half Charm | story | any | beta1 | 1 | — | kit:start | Half of a small charm. You have always had it |
+| `half_charm` | Half a Charm | story | any | beta1 | 1 | — | kit:start | Charred wood, carved by hand. Half of a pair. |
 | `travel_permit` | Travel Permit | travel | genin | beta2 | 1 | — | mission:c, quest:main.ch13 | Lets the travel desk send you beyond the border |
 
 ## gift
@@ -1002,6 +1003,7 @@ carpenters_lane; 09:00 to 18:00, closed Moonday; from beta1; keeper `role:shop.f
 | `child_futon` |  |  | later | 1 | weekly | core |
 | `irori_hearth` |  |  | later | 1 | weekly | core |
 | `engawa_bench` |  |  | later | 1 | weekly | core |
+| `pinboard` |  |  | later | 1 | weekly | core |
 
 ### Kinoshita Yard (`kinoshita_yard`)
 
