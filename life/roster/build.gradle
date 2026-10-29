@@ -1,0 +1,34 @@
+plugins {
+    id 'java-library'
+}
+
+// The roster engine of Shinobi Life (docs/RANKS.md): how the player's classmates, squad and rival grow beside them.
+// Pure Java, no Minecraft, deterministic and seeded. Phase 0's Life mod depends on it
+// (`implementation project(':life:roster')`) and feeds it the player's XP, the squad's days and the bond levels.
+version = '0.1.0'
+group = 'dev.shinobi'
+base { archivesName = 'shinobi-life-roster' }
+
+repositories { mavenCentral() }
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+test {
+    useJUnitPlatform()
+    testLogging { events 'failed'; exceptionFormat 'full' }
+}
+
+// Prints the seeded 60-hour growth tables: the player's level and every classmate's, per chapter, for three kinds of player.
+tasks.register('simulate', JavaExec) {
+    group = 'verification'
+    description = 'Plays the scripted 60-hour path and prints the squad growth tables.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.shinobi.life.roster.sim.Season'
+    args project.findProperty('seed') ?: '20261029'
+    if (project.hasProperty('seeds')) systemProperty 'seeds', project.property('seeds')
+    if (project.hasProperty('stretches')) systemProperty 'stretches', 'true'
+}
