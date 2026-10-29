@@ -1,0 +1,16 @@
+{
+  "id": "b1403_grey_slacks",
+  "kind": "bottom",
+  "name": "Grey Slacks",
+  "gender": "unisex",
+  "texture": "bottoms/b1403_grey_slacks.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Plain straight slacks cuffed at the ankle, tan leather sandals."
+}

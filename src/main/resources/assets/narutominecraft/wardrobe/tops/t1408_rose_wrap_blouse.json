@@ -1,0 +1,139 @@
+{
+  "id": "t1408_rose_wrap_blouse",
+  "kind": "top",
+  "name": "Rose Wrap Blouse",
+  "gender": "female",
+  "texture": "tops/t1408_rose_wrap_blouse.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "side_tie",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        8.4,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "peplum_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "peplum_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        1.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "brooch_bloom",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        0.6,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.5,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Crimson wrap blouse with a rose at the shoulder, one mesh sleeve, bandaged wrist, short peplum."
+}
