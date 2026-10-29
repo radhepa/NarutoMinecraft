@@ -63,7 +63,22 @@
     "h06_low_ponytail",
     "h07_bowl_cut",
     "h08_short_crop",
-    "h09_high_ponytail"
+    "h09_high_ponytail",
+    "h1501_proctor_cut",
+    "h1502_crescent_sweep",
+    "h1503_night_curtain",
+    "h1504_swordsman_topknot",
+    "h1505_crescent_tail",
+    "h1506_night_bob",
+    "h1507_tousled_shag",
+    "h1508_wrapped_tail",
+    "h1509_moonveil",
+    "h1510_nape_tail",
+    "h1511_half_up_knot",
+    "h1512_shoulder_sweep",
+    "h1513_strap_braid",
+    "h1514_iai_gust",
+    "h1515_crossed_pin_bun"
   ],
   "headwear": [
     "w01_kage_hat",
