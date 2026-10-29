@@ -1,7 +1,7 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 277 files · ~654,694 words
+- 277 files · ~654,737 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 31 file(s) not represented in the graph (top: .tsv 23, (none) 3, .properties 2)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7447b832`
+- Built from commit: `ee581607`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -889,7 +889,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `fabric` be split into smaller, more focused modules?**
   _Cohesion score 0.03449048152295633 - nodes in this community are weakly interconnected._
 - **Why does `BondWorld` connect `BondWorld` to `Person`, `Conflict`, `.answer`, `.receive`, `.person`, `Playthrough`, `Kind`, `.talk`, `Stage`, `QuestionsTest`, `.tier`, `SquadTest`, `.greeting`, `CourtshipTest`, `Village`, `VillageScaleTest`, `Bond`, `.read`, `Deed`, `.write`, `.romance`, `Playthrough.java`, `.person`, `.of`, `.classic`, `Run`, `VisitsTest`, `treemap`, `Seeds`, `.key`?**
-  _High betweenness centrality (0.072) - this node is a cross-community bridge._
+  _High betweenness centrality (0.073) - this node is a cross-community bridge._
 - **Should `kit_uchiha.py` be split into smaller, more focused modules?**
   _Cohesion score 0.1286549707602339 - nodes in this community are weakly interconnected._
 - **Why does `solid()` connect `solid` to `fabric`, `kit_uchiha.py`, `kit_senju.py`, `kit_kurama.py`, `Shops`, `kit_akimichi.py`, `kit_kunoichi.py`, `kit_suzuran.py`, `paint.py`, `Box`, `kit_rugged.py`, `kit_haruno.py`, `kit_hagane.py`, `cel_box`, `kit_market.py`, `kit_kinoshita.py`, `k`, `strip_fabric`?**
