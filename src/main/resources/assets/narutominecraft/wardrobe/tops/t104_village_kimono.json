@@ -1,0 +1,248 @@
+{
+  "id": "t104_village_kimono",
+  "kind": "top",
+  "name": "Village Kimono",
+  "gender": "unisex",
+  "texture": "tops/t104_village_kimono.png",
+  "extrasHeight": 32,
+  "tags": [
+    "robe",
+    "senju"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "obi_bow",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        7.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "kimono_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "kimono_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "kimono_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.75,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2.1
+      ],
+      "size": [
+        1,
+        7,
+        4
+      ],
+      "uv": [
+        21,
+        9
+      ]
+    },
+    {
+      "id": "kimono_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.75,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2.1
+      ],
+      "size": [
+        1,
+        7,
+        4
+      ],
+      "uv": [
+        32,
+        9
+      ]
+    },
+    {
+      "id": "right_tamoto",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.5,
+        -2.5
+      ],
+      "size": [
+        3,
+        6,
+        5
+      ],
+      "uv": [
+        43,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_tamoto",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        3.5,
+        -2.5
+      ],
+      "size": [
+        3,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        21
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Wrapped kimono to the knee, cream collar, wide obi with a flat bow, broad hanging sleeves."
+}

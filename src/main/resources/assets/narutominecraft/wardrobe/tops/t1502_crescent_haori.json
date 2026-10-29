@@ -1,0 +1,166 @@
+{
+  "id": "t1502_crescent_haori",
+  "kind": "top",
+  "name": "Crescent Haori",
+  "gender": "unisex",
+  "texture": "tops/t1502_crescent_haori.png",
+  "extrasHeight": 16,
+  "tags": [
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "chest_cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "chest_cord_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "haori_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "haori_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "back_crescent",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.4,
+        2.32
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -4,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Indigo haori to mid-thigh over a pale kimono, wide sleeves, a silver crescent on the back."
+}

@@ -14,6 +14,7 @@ every outfit, and a clan of 10 outfits and 15 hairstyles yields thousands of loo
 {
   "id": "hyuga", "name": "Hyuga",
   "tagline": "One line on the clan's look",
+  "standing": "noble", "ability": "Byakugan: near-360 degree sight that sees chakra",
   "palettes":    {"HYUGA_BRANCH": {"name": "Hyuga Branch", "P": "#...", "S": "#...", "A": "#...", "L": "#...", "M": "#...", "K": "#...", "D": "#..."}},
   "hair_colors": {"HYUGA_INDIGO": {"name": "Hyuga Indigo", "ramp": ["#14141f", "#1f2033", "#2c2e4a", "#3f4268", "#5c6191"]}},
   "eye_colors":  {},
@@ -38,7 +39,9 @@ every outfit, and a clan of 10 outfits and 15 hairstyles yields thousands of loo
   outfits' own bottoms. Pool entries may name shared pieces (`h03_uchiha_spikes`, `b01_...`).
 - `outfits` are the designed top + bottom pairs. `palettes` on an outfit overrides the pool's for
   that outfit (a ceremonial white set, a black mourning set). `rank` is one of academy, genin,
-  chunin, jonin, anbu, kage.
+  chunin, jonin, anbu, kage, civilian.
+- `standing` is `noble` (the great clans, 1-15) or `minor` (the families that pad out the village,
+  16-25). `ability` is one line on the clan's technique or bloodline, or null for an ordinary family.
 - Marks are thin planes on the face: `[x, y, width, height]` in face pixels, x from the face centre
   (-4..4), y from the top of the head (-8) to the chin (0), eyes on rows -4..-2. `mirror` repeats
   each rect on the other side of the face; `color` null draws a darker shade of the skin.
@@ -81,9 +84,49 @@ Every clan owns a block of ids so clans can be built in parallel without clashin
 | 13 | Shimura | h1301-h1315 | t1301-t1310 | b1301- | w1301- |
 | 14 | Yuhi | h1401-h1415 | t1401-t1410 | b1401- | w1401- |
 | 15 | Gekko | h1501-h1515 | t1501-t1510 | b1501- | w1501- |
+| 16 | Shiranui (minor) | h1601-h1615 | t1601-t1610 | b1601- | w1601- |
+| 17 | Morino (minor) | h1701-h1715 | t1701-t1710 | b1701- | w1701- |
+| 18 | Umino (minor) | h1801-h1815 | t1801-t1810 | b1801- | w1801- |
+| 19 | Haruno (minor) | h1901-h1915 | t1901-t1910 | b1901- | w1901- |
+| 20 | Namiashi (minor) | h2001-h2015 | t2001-t2010 | b2001- | w2001- |
+| 21 | Hagane (minor) | h2101-h2115 | t2101-t2110 | b2101- | w2101- |
+| 22 | Kinoshita (minor, original) | h2201-h2215 | t2201-t2210 | b2201- | w2201- |
+| 23 | Tsuchigumo (minor, ability) | h2301-h2315 | t2301-t2310 | b2301- | w2301- |
+| 24 | Suzuran (minor, original, ability) | h2401-h2415 | t2401-t2410 | b2401- | w2401- |
+| 25 | Tobari (minor, original, ability) | h2501-h2515 | t2501-t2510 | b2501- | w2501- |
 
 Paint seeds follow the same blocks: a clan's pieces use seeds from `<n>000` to `<n>999`
 (Senju 1000-1999, Aburame 10000-10999), so no two pieces share a noise pattern by accident.
+
+## Collections: the general wardrobe
+
+Most of the village belongs to no great clan. Their clothes live in collections,
+`tools/wardrobe/collections/<id>.json`, in the clan file's schema plus `"role": "shinobi"` or
+`"civilian"` (no `standing`). Collections are not separate looks: clanless residents mix across every
+collection of their role at once (`wardrobe.general_resident`), so a top from one collection meets a
+bottom from another and a hairstyle from a third. Build every collection piece to mismatch freely;
+a matching outfit is the template, never the rule. Civilians wear the civilian collections' clothes
+and draw from every shinobi collection's hairstyles as well as their own.
+
+| Collection | Role | Hair | Tops | Bottoms | Headwear | Seeds |
+|---|---|---|---|---|---|---|
+| core | shinobi | h02-h09 (shared) | t02, t13-t21 | b01-b08 | w02, w09 | (existing) |
+| academy_genin | shinobi | hg001-hg010 | tg001-tg020 | bg001-bg020 | wg001-wg004 | 31000-31999 |
+| field | shinobi | hg011-hg020 | tg021-tg040 | bg021-bg040 | wg005-wg008 | 32000-32999 |
+| kunoichi | shinobi | hg021-hg030 | tg041-tg060 | bg041-bg060 | wg009-wg012 | 33000-33999 |
+| specialist | shinobi | hg031-hg040 | tg061-tg080 | bg061-bg080 | wg013-wg016 | 34000-34999 |
+| rugged | shinobi | hg041-hg050 | tg081-tg100 | bg081-bg100 | wg017-wg020 | 35000-35999 |
+| market | civilian | hc001-hc005 | tc001-tc025 | bc001-bc025 | wc001-wc005 | 36000-36999 |
+| household | civilian | hc006-hc010 | tc026-tc050 | bc026-bc050 | wc006-wc010 | 37000-37999 |
+
+## Population
+
+`tools/wardrobe/population.json` sets how often each kind of resident appears, in weights per
+thousand: civilians (450), clanless shinobi (280), the ten minor clans (10-17 each) and the noble
+clans (2-15 each: an Uchiha or a Hyuga is about one resident in seventy, a Hatake one in five
+hundred). `wardrobe.village_resident` draws a group by weight, then a resident from it; civilians and
+clanless shinobi take an ordinary family name from `family_names`. A group whose files have not
+landed is skipped and the rest renormalise. Every clan needs a weight (`--check` enforces it).
 
 ## Commands
 
@@ -93,6 +136,9 @@ From `tools/wardrobe/`:
 python3 wardrobe.py                 # compile every piece into src/main/resources/assets/narutominecraft/wardrobe/
 python3 wardrobe.py --check         # validate pieces, characters and clans
 python3 render.py --clan hyuga      # docs/renders/clans/hyuga/: hair_N.png, outfits_N.png, mixes_N.png
+python3 render.py --collection field  # the same set for a collection, in docs/renders/collections/field/
+python3 render.py --general         # clanless shinobi mixed across every collection: docs/renders/general/
+python3 render.py --village         # residents drawn by population weight, plus the share of each group
 python3 render.py --hair h401_x h402_y --colors HYUGA_INDIGO --out /tmp/hair.png
 python3 render.py t401_x            # not for clan pieces; use --clan, or a character sheet
 ```

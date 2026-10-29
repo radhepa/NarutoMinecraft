@@ -1,0 +1,16 @@
+{
+  "id": "b1402_wrapped_trousers",
+  "kind": "bottom",
+  "name": "Wrapped Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b1402_wrapped_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Dark trousers, shins bound in bandage wraps, thorn stem down the outer seam, navy sandals."
+}

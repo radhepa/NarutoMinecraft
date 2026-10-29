@@ -1,0 +1,16 @@
+{
+  "id": "b1401_bandaged_thighs",
+  "kind": "bottom",
+  "name": "Bandaged Thighs",
+  "gender": "female",
+  "texture": "bottoms/b1401_bandaged_thighs.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Dark shorts, broad bandages round the upper thighs, bare shins, navy sandals."
+}

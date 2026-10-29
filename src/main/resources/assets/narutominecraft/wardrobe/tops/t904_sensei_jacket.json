@@ -1,0 +1,200 @@
+{
+  "id": "t904_sensei_jacket",
+  "kind": "top",
+  "name": "Sensei Jacket",
+  "gender": "unisex",
+  "texture": "tops/t904_sensei_jacket.png",
+  "extrasHeight": 32,
+  "tags": [
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.6,
+        2.33
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sleeve_crest",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -3.33,
+        0.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -5
+      ],
+      "size": [
+        1,
+        10,
+        10
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "scarf_wrap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.8,
+        -2.7
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        21
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "scarf_knot",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        1.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        29,
+        21
+      ]
+    },
+    {
+      "id": "scarf_tail",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        1.6,
+        2.7
+      ],
+      "rotation": [
+        10,
+        0,
+        -4
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        38,
+        21
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "scarf_front",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        0.6,
+        -2.9
+      ],
+      "rotation": [
+        -6,
+        0,
+        3
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        5,
+        1
+      ],
+      "uv": [
+        47,
+        21
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Dark zipped jacket with the Sarutobi crest on back and sleeve, a blue scarf over the chest."
+}

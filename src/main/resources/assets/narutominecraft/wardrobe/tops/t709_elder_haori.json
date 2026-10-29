@@ -1,0 +1,226 @@
+{
+  "id": "t709_elder_haori",
+  "kind": "top",
+  "name": "Elder Haori",
+  "gender": "unisex",
+  "texture": "tops/t709_elder_haori.png",
+  "extrasHeight": 32,
+  "tags": [
+    "jonin",
+    "robe",
+    "yamanaka"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "haori_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        11.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        28,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "haori_front_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        11.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "haori_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "right_wide_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        -1.8,
+        -2.6
+      ],
+      "size": [
+        5,
+        9,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_wide_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        -1.8,
+        -2.6
+      ],
+      "size": [
+        5,
+        9,
+        5
+      ],
+      "uv": [
+        21,
+        10
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Thigh-length purple haori over a pale kimono, cord tie, wide sleeves, blossom crest."
+}

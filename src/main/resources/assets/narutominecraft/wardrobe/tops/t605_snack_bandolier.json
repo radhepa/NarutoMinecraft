@@ -1,0 +1,336 @@
+{
+  "id": "t605_snack_bandolier",
+  "kind": "top",
+  "name": "Snack Bandolier",
+  "gender": "unisex",
+  "texture": "tops/t605_snack_bandolier.png",
+  "extrasHeight": 16,
+  "tags": [
+    "akimichi",
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "snack_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        1.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "snack_1",
+      "bone": "TORSO",
+      "pivot": [
+        -0.3,
+        4.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "snack_2",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        7.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        10.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "gourd_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.4,
+        10.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gourd_1",
+      "bone": "TORSO",
+      "pivot": [
+        -4.4,
+        10.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        55,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gourd_2",
+      "bone": "TORSO",
+      "pivot": [
+        -4.4,
+        10.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gourd_3",
+      "bone": "TORSO",
+      "pivot": [
+        -4.4,
+        10.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -1.5,
+        3,
+        -1.5
+      ],
+      "size": [
+        3,
+        3,
+        3
+      ],
+      "uv": [
+        5,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gourd_stopper",
+      "bone": "TORSO",
+      "pivot": [
+        -4.4,
+        10.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        18,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "right_pad",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        23,
+        8
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_pad",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        44,
+        8
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Quilted vest, a bandolier of snack bags across the chest, a sake gourd at the hip."
+}

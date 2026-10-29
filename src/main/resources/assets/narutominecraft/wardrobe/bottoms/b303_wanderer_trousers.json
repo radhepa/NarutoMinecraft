@@ -1,0 +1,103 @@
+{
+  "id": "b303_wanderer_trousers",
+  "kind": "bottom",
+  "name": "Wanderer Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b303_wanderer_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_cloth_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_cloth_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        7,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "waist_cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.35
+    }
+  ],
+  "description": "Dark ankle trousers under a navy waist cloth to the knee, navy sandals."
+}

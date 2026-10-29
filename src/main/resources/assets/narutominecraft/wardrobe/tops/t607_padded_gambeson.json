@@ -1,0 +1,280 @@
+{
+  "id": "t607_padded_gambeson",
+  "kind": "top",
+  "name": "Padded Gambeson",
+  "gender": "unisex",
+  "texture": "tops/t607_padded_gambeson.png",
+  "extrasHeight": 32,
+  "tags": [
+    "akimichi",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "padding_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        4.0,
+        -2.5
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.35
+    },
+    {
+      "id": "padding_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.42
+    },
+    {
+      "id": "shawl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "rope_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        9.6,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        9
+      ],
+      "inflate": 0.45
+    },
+    {
+      "id": "gourd_0",
+      "bone": "TORSO",
+      "pivot": [
+        3.8,
+        10.8,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        58,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gourd_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.8,
+        10.8,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gourd_2",
+      "bone": "TORSO",
+      "pivot": [
+        3.8,
+        10.8,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gourd_3",
+      "bone": "TORSO",
+      "pivot": [
+        3.8,
+        10.8,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -1.5,
+        3,
+        -1.5
+      ],
+      "size": [
+        3,
+        3,
+        3
+      ],
+      "uv": [
+        14,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gourd_stopper",
+      "bone": "TORSO",
+      "pivot": [
+        3.8,
+        10.8,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        27,
+        18
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Thick quilted jacket, white shawl collar, twisted rope belt with a gourd, quilted sleeves."
+}

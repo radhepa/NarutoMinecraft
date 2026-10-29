@@ -1,0 +1,101 @@
+{
+  "id": "b1204_rolled_trousers",
+  "kind": "bottom",
+  "name": "Rolled Work Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b1204_rolled_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_roll",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "waist_rag",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        10.0,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Sturdy trousers rolled to mid-calf, flecked with paint, a rag at the waist, sandals."
+}

@@ -103,6 +103,176 @@
         "...111111...",
         "....1111...."
       ]
+    },
+    "ABURAME_AMBER": {
+      "name": "Aburame Amber",
+      "ramp": [
+        "#0e0c08",
+        "#3b2a14",
+        "#6e4f22",
+        "#a57e3e",
+        "#efe9da"
+      ]
+    },
+    "AKIMICHI_AMBER": {
+      "name": "Akimichi Amber",
+      "ramp": [
+        "#120a05",
+        "#6a3c0e",
+        "#b07018",
+        "#e3a640",
+        "#f3eee4"
+      ]
+    },
+    "GEKKO_HAZEL": {
+      "name": "Gekko Hazel",
+      "ramp": [
+        "#0d0a0a",
+        "#3a2618",
+        "#5e3f27",
+        "#8c6a48",
+        "#f1ede3"
+      ]
+    },
+    "HATAKE_GREY": {
+      "name": "Hatake Grey",
+      "ramp": [
+        "#0e0f12",
+        "#2a2d33",
+        "#454a52",
+        "#7b828c",
+        "#f1efe9"
+      ]
+    },
+    "KURAMA_HAZE": {
+      "name": "Kurama Haze",
+      "ramp": [
+        "#120e18",
+        "#4f3f6b",
+        "#7b67a0",
+        "#b3a3cf",
+        "#f2efe8"
+      ]
+    },
+    "KURAMA_BROWN": {
+      "name": "Kurama Brown",
+      "ramp": [
+        "#120c0a",
+        "#5a3a26",
+        "#8a5f3e",
+        "#c09572",
+        "#f2eee6"
+      ]
+    },
+    "NARA_BARK": {
+      "name": "Nara Bark",
+      "ramp": [
+        "#0d0b0c",
+        "#2a211c",
+        "#3f3229",
+        "#62503f",
+        "#efebe1"
+      ]
+    },
+    "SARUTOBI_EMBER_RED": {
+      "name": "Sarutobi Ember Red",
+      "ramp": [
+        "#0d0607",
+        "#5c1416",
+        "#9c2a26",
+        "#d0574a",
+        "#f2ece4"
+      ]
+    },
+    "SENJU_HAZEL": {
+      "name": "Senju Hazel",
+      "ramp": [
+        "#0d0b0a",
+        "#3a2a1a",
+        "#5e4628",
+        "#91744a",
+        "#f1ede3"
+      ]
+    },
+    "SENJU_EMBER": {
+      "name": "Senju Ember",
+      "ramp": [
+        "#0e0a0a",
+        "#5a1a1c",
+        "#8f2a2a",
+        "#c25a4e",
+        "#f1ede3"
+      ]
+    },
+    "UCHIHA_ONYX": {
+      "name": "Uchiha Onyx",
+      "ramp": [
+        "#08080a",
+        "#1a1a20",
+        "#2c2c35",
+        "#4f4f5c",
+        "#f1ede3"
+      ]
+    },
+    "UZUMAKI_VIOLET": {
+      "name": "Uzumaki Violet",
+      "ramp": [
+        "#0e0b14",
+        "#3f2f63",
+        "#66509a",
+        "#a28fd0",
+        "#f2efe8"
+      ]
+    },
+    "UZUMAKI_RUBY": {
+      "name": "Uzumaki Ruby",
+      "ramp": [
+        "#120709",
+        "#6b1420",
+        "#a8243a",
+        "#e0697a",
+        "#f3eee8"
+      ]
+    },
+    "YAMANAKA": {
+      "name": "Yamanaka Aqua",
+      "ramp": [
+        "#0a1416",
+        "#1f6f78",
+        "#3fa8b0",
+        "#8fdbdc",
+        "#f1efe6"
+      ]
+    },
+    "YAMANAKA_TEAL": {
+      "name": "Yamanaka Teal",
+      "ramp": [
+        "#0a1412",
+        "#1d5f58",
+        "#2f8f85",
+        "#79c9bd",
+        "#f1efe6"
+      ]
+    },
+    "YUHI_RED": {
+      "name": "Yuhi Red",
+      "ramp": [
+        "#14050a",
+        "#7a0f1c",
+        "#b81d2b",
+        "#e45663",
+        "#f3ece6"
+      ]
+    },
+    "YUHI_GARNET": {
+      "name": "Yuhi Garnet",
+      "ramp": [
+        "#120608",
+        "#5e1420",
+        "#8a2230",
+        "#b84a56",
+        "#f1ebe4"
+      ]
     }
   }
 }

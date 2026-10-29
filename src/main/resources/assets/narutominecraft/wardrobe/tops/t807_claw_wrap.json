@@ -1,0 +1,134 @@
+{
+  "id": "t807_claw_wrap",
+  "kind": "top",
+  "name": "Claw Wrap",
+  "gender": "unisex",
+  "texture": "tops/t807_claw_wrap.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "sash_knot",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        9.2,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "sash_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.5,
+        11.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "sash_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.5,
+        11.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Tight sleeveless wrapped top raked with red claw slashes, a knotted red sash, bandaged forearms."
+}

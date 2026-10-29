@@ -1,0 +1,144 @@
+{
+  "id": "w1004_optic_visor",
+  "kind": "headwear",
+  "name": "Optic Visor",
+  "gender": "unisex",
+  "texture": "headwear/w1004_optic_visor.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "visor_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -4.5
+      ],
+      "size": [
+        9,
+        1,
+        9
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.96,
+        0.6,
+        0.96
+      ]
+    },
+    {
+      "id": "visor_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -4.5
+      ],
+      "size": [
+        9,
+        1,
+        9
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "scale": [
+        0.96,
+        0.6,
+        0.96
+      ]
+    },
+    {
+      "id": "visor_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -4.5
+      ],
+      "size": [
+        9,
+        1,
+        9
+      ],
+      "uv": [
+        0,
+        22
+      ],
+      "scale": [
+        0.96,
+        0.6,
+        0.96
+      ]
+    },
+    {
+      "id": "visor_clasp",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.8,
+        4.62
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        37,
+        22
+      ]
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": true,
+  "coversMouth": false,
+  "description": "Three strips of dark lens wrapped across the eyes and round the head."
+}

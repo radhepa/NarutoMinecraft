@@ -1,0 +1,103 @@
+{
+  "id": "b704_florist_trousers",
+  "kind": "bottom",
+  "name": "Florist Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b704_florist_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "florist"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        8.0,
+        -2.0
+      ],
+      "size": [
+        4,
+        2,
+        4
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "left_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        8.0,
+        -2.0
+      ],
+      "size": [
+        4,
+        2,
+        4
+      ],
+      "uv": [
+        17,
+        0
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "waist_tie",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "inflate": 0.15
+    }
+  ],
+  "description": "Easy dark trousers rolled to a cream cuff above the ankle, tie belt, navy sandals."
+}

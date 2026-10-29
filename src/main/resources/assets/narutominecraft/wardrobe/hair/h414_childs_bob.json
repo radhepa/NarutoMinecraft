@@ -1,0 +1,238 @@
+{
+  "id": "h414_childs_bob",
+  "kind": "hair",
+  "name": "Child's Bob",
+  "gender": "unisex",
+  "texture": "hair/h414_childs_bob.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bob_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.6,
+        4.8
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        -0.5
+      ],
+      "size": [
+        10,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bob_curl",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0.2,
+        4.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        -1
+      ],
+      "size": [
+        10,
+        1,
+        2
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "bob_side_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.0,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        7,
+        8
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "bob_side_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -7.0,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        7,
+        8
+      ],
+      "uv": [
+        19,
+        9
+      ]
+    },
+    {
+      "id": "fringe_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        9.0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        38,
+        9
+      ]
+    },
+    {
+      "id": "fringe_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        3.0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        45,
+        9
+      ]
+    },
+    {
+      "id": "fringe_2",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -3.0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        52,
+        9
+      ]
+    },
+    {
+      "id": "fringe_3",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -9.0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        25
+      ]
+    }
+  ],
+  "description": "A round bob cut level at the jaw, full blunt fringe, ends curving in at the neck."
+}

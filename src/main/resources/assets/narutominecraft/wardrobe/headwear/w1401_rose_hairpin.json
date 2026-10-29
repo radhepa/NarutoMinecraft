@@ -1,0 +1,83 @@
+{
+  "id": "w1401_rose_hairpin",
+  "kind": "headwear",
+  "name": "Rose Hairpin",
+  "gender": "unisex",
+  "texture": "headwear/w1401_rose_hairpin.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "rose_bloom",
+      "bone": "HEAD",
+      "pivot": [
+        4.95,
+        -6.2,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        -90,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.5,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pin",
+      "bone": "HEAD",
+      "pivot": [
+        4.75,
+        -5.6,
+        0.6
+      ],
+      "rotation": [
+        -20,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -2
+      ],
+      "size": [
+        1,
+        1,
+        4
+      ],
+      "uv": [
+        11,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        1
+      ]
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "A crimson rose pinned above the left ear with a dark lacquered pin."
+}

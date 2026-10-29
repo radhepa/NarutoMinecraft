@@ -1,0 +1,498 @@
+{
+  "id": "h1312_ink_braid",
+  "kind": "hair",
+  "name": "Ink Braid",
+  "gender": "unisex",
+  "texture": "hair/h1312_ink_braid.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        20
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        20
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -20
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -20
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "frame_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        24,
+        0
+      ]
+    },
+    {
+      "id": "frame_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "frame_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "frame_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ]
+    },
+    {
+      "id": "braid_root",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.0,
+        4.6
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        44,
+        0
+      ]
+    },
+    {
+      "id": "braid_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.7
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.75,
+        0.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.7
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.25,
+        2.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        13,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.7
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.75,
+        4.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        26,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.7
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.25,
+        6.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        39,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_4",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.7
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.25,
+        8.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        52,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_5",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.7
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -0.75,
+        10.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_tuft",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.7
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        12.0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        9,
+        13
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_cord",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.7
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        11.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        18,
+        13
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Sleek centre-parted hair, a light pointed fringe, one long braid down the back with a red cord."
+}

@@ -1,0 +1,326 @@
+{
+  "id": "h613_curly_ponytail",
+  "kind": "hair",
+  "name": "Curly Ponytail",
+  "gender": "unisex",
+  "texture": "hair/h613_curly_ponytail.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tie",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.0,
+        2.6
+      ],
+      "rotation": [
+        30,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tail_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.0,
+        4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        -1.5,
+        -2.0
+      ],
+      "size": [
+        4,
+        3,
+        4
+      ],
+      "uv": [
+        13,
+        0
+      ]
+    },
+    {
+      "id": "tail_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.6,
+        6.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -2.0,
+        -2.0
+      ],
+      "size": [
+        5,
+        4,
+        4
+      ],
+      "uv": [
+        30,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.6,
+        6.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -2.0,
+        -2.0
+      ],
+      "size": [
+        5,
+        4,
+        4
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -0.8,
+        6.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        -1.5,
+        -1.5
+      ],
+      "size": [
+        4,
+        3,
+        3
+      ],
+      "uv": [
+        19,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_4",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        1.4,
+        6.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        34,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "ear_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -5.0,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -1.5
+      ],
+      "size": [
+        2,
+        4,
+        3
+      ],
+      "uv": [
+        47,
+        9
+      ]
+    },
+    {
+      "id": "ear_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -5.0,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -1.5
+      ],
+      "size": [
+        2,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "fringe_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -7.4,
+        -4.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        11,
+        18
+      ]
+    },
+    {
+      "id": "fringe_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.4,
+        -7.4,
+        -4.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        20,
+        18
+      ]
+    },
+    {
+      "id": "fringe_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.0,
+        -7.4,
+        -4.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        18
+      ]
+    }
+  ],
+  "description": "A big tail of curls tied high on the crown, curly bangs and curls over the ears."
+}

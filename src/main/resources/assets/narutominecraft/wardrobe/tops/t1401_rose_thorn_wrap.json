@@ -1,0 +1,80 @@
+{
+  "id": "t1401_rose_thorn_wrap",
+  "kind": "top",
+  "name": "Rose Thorn Wrap",
+  "gender": "female",
+  "texture": "tops/t1401_rose_thorn_wrap.png",
+  "extrasHeight": 16,
+  "tags": [
+    "dress",
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [
+    "skirt"
+  ],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Thorn-printed bandage wrap dress, one red mesh sleeve on the right arm, bandaged hands."
+}

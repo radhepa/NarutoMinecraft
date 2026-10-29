@@ -1,0 +1,104 @@
+{
+  "id": "b105_ranger_shorts",
+  "kind": "bottom",
+  "name": "Ranger Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/b105_ranger_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_rope",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.32
+    },
+    {
+      "id": "waist_rope_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        10.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_rope_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        10.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Knee shorts, cream leg wraps, knotted rope belt, dark split-toe tabi boots."
+}

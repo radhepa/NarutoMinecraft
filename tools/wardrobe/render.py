@@ -341,11 +341,12 @@ def hair_chart(garments: dict, hair_ids: list[str], out: Path, title: str = "Hai
     print(out)
 
 
-def clan_renders(clan_id: str, garments: dict):
-    """A clan's review set in docs/renders/clans/<id>/: its hairstyles in charts of five, every outfit
-    template as designed, and residents assembled at random the way the game will mix them."""
-    clan = W.load_clans()[clan_id]
-    out = OUT / "clans" / clan_id
+def clan_renders(clan_id: str, garments: dict, collection: bool = False):
+    """A clan's review set in docs/renders/clans/<id>/ (a collection's in docs/renders/collections/<id>/):
+    its hairstyles in charts of five, every outfit template as designed, and residents assembled at
+    random the way the game will mix them."""
+    clan = (W.load_collections() if collection else W.load_clans())[clan_id]
+    out = OUT / ("collections" if collection else "clans") / clan_id
     pool = clan["pool"]
     o0 = clan["outfits"][0]
     base = {"id": "chart", "name": "", "face": "f01_shinobi", "headwear": None, "top": o0["top"], "bottom": o0["bottom"],
@@ -364,9 +365,33 @@ def clan_renders(clan_id: str, garments: dict):
         lineup(mixes[i:i + 5], out / f"mixes_{i // 5 + 1}.png", f"{clan['name']}: residents mixed at random")
 
 
+def general_renders(garments: dict, count: int = 20):
+    """Clanless residents mixed across every collection: docs/renders/general/mixes_N.png."""
+    mixes = [Character(W.general_resident(garments, i), garments) for i in range(count)]
+    for i in range(0, count, 5):
+        lineup(mixes[i:i + 5], OUT / "general" / f"mixes_{i // 5 + 1}.png", "Hidden Leaf: residents mixed across the collections")
+
+
+def village_renders(garments: dict, count: int = 20):
+    """Residents drawn by population weight, labelled with their clan or family name, and the
+    share of each group over 1,000 draws: docs/renders/village/."""
+    clans = W.load_clans()
+    mixes = []
+    for i in range(count):
+        spec = W.village_resident(garments, i)
+        spec["name"] = clans[spec["clan"]]["name"] if "clan" in spec else f"{spec['family']} ({spec['role']})"
+        mixes.append(Character(spec, garments))
+    for i in range(0, count, 5):
+        lineup(mixes[i:i + 5], OUT / "village" / f"residents_{i // 5 + 1}.png", "Hidden Leaf: residents by population")
+    from collections import Counter
+    tally = Counter(s.get("clan", s.get("role")) for s in (W.village_resident(garments, 10_000 + i) for i in range(1000)))
+    print("  ".join(f"{k} {v / 10:.1f}%" for k, v in tally.most_common()))
+
+
 RANK_TITLES = {"academy": "Academy students", "genin": "Genin: the village's young ninja",
                "chunin": "Chunin", "jonin": "Jonin: the elite of the Hidden Leaf",
-               "anbu": "ANBU Black Ops: the Hokage's masked guard", "kage": "Kage"}
+               "anbu": "ANBU Black Ops: the Hokage's masked guard", "kage": "Kage",
+               "civilian": "Civilians of the Hidden Leaf"}
 
 
 def main():
@@ -375,11 +400,23 @@ def main():
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--out")
     ap.add_argument("--clan", help="render a clan's hair charts, outfit line-ups and random mixes")
+    ap.add_argument("--collection", help="render a collection's hair charts, outfit line-ups and random mixes")
+    ap.add_argument("--general", action="store_true", help="render clanless residents mixed across every collection")
+    ap.add_argument("--village", action="store_true", help="render residents drawn by population weight")
     ap.add_argument("--hair", nargs="+", help="a hair chart of these hairstyle ids")
     ap.add_argument("--colors", nargs="+", default=["RAVEN"], help="hair colors the chart cycles through")
     a = ap.parse_args()
     if a.clan:
         clan_renders(a.clan, W.build_all())
+        return
+    if a.collection:
+        clan_renders(a.collection, W.build_all(), collection=True)
+        return
+    if a.general:
+        general_renders(W.build_all())
+        return
+    if a.village:
+        village_renders(W.build_all())
         return
     if a.hair:
         hair_chart(W.build_all(), a.hair, Path(a.out) if a.out else OUT / "hair_chart.png", colors=a.colors)

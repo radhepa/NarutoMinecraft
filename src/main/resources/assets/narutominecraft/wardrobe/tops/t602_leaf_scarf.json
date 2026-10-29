@@ -1,0 +1,169 @@
+{
+  "id": "t602_leaf_scarf",
+  "kind": "top",
+  "name": "Leaf Scarf",
+  "gender": "unisex",
+  "texture": "tops/t602_leaf_scarf.png",
+  "extrasHeight": 48,
+  "tags": [
+    "akimichi",
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "chest_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        4.8,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -9,
+        -9,
+        -1
+      ],
+      "size": [
+        18,
+        18,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "scarf",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.4,
+        -2.7
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        20
+      ],
+      "inflate": 0.22
+    },
+    {
+      "id": "scarf_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        1.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        29,
+        20
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "scarf_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        36,
+        20
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        29
+      ],
+      "inflate": 0.3
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Open short-sleeved coat over a white shirt with the food crest, a thick white scarf."
+}

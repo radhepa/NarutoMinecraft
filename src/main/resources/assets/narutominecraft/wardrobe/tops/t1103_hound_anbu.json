@@ -1,0 +1,103 @@
+{
+  "id": "t1103_hound_anbu",
+  "kind": "top",
+  "name": "Hound ANBU",
+  "gender": "unisex",
+  "texture": "tops/t1103_hound_anbu.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tanto_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        2.4,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        34
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tanto_guard",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        2.4,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        34
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "tanto_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        2.4,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        34
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "ANBU plated armor, white arm guards, the shoulder spiral and a white-hilted tanto across the back."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "t801_fur_hood_jacket",
+  "kind": "top",
+  "name": "Fur Hood Jacket",
+  "gender": "unisex",
+  "texture": "tops/t801_fur_hood_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.0,
+        3.0
+      ],
+      "rotation": [
+        26,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        9,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "hood_ruff",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        2.6
+      ],
+      "rotation": [
+        26,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -1,
+        -2
+      ],
+      "size": [
+        10,
+        2,
+        4
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Grey zip jacket, the hood pushed back with a pale fur ruff, red fangs on the sleeves."
+}

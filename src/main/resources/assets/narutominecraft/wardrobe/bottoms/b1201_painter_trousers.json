@@ -1,0 +1,132 @@
+{
+  "id": "b1201_painter_trousers",
+  "kind": "bottom",
+  "name": "Painter's Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b1201_painter_trousers.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_bag",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "right_gather",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        7.8,
+        -2.2
+      ],
+      "size": [
+        4,
+        2,
+        4
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_bag",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        38,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_gather",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        7.8,
+        -2.2
+      ],
+      "size": [
+        4,
+        2,
+        4
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "description": "Baggy deep-violet trousers gathered at the ankle, open-toe sandals."
+}

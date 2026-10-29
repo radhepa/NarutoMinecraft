@@ -1,0 +1,238 @@
+{
+  "id": "h1308_council_part",
+  "kind": "hair",
+  "name": "Council Part",
+  "gender": "unisex",
+  "texture": "hair/h1308_council_part.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -8.5,
+        -4.5
+      ],
+      "size": [
+        6,
+        1,
+        9
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "crown_low",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.5,
+        -8.3,
+        -4.5
+      ],
+      "size": [
+        3,
+        1,
+        9
+      ],
+      "uv": [
+        31,
+        0
+      ]
+    },
+    {
+      "id": "sweep_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.8000000000000003,
+        -8.4,
+        -4.4
+      ],
+      "rotation": [
+        -6,
+        0,
+        64
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ]
+    },
+    {
+      "id": "sweep_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.8000000000000003,
+        -8.4,
+        -4.4
+      ],
+      "rotation": [
+        -6,
+        0,
+        64
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "sweep_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.20000000000000018,
+        -8.4,
+        -4.4
+      ],
+      "rotation": [
+        -6,
+        0,
+        70
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        5,
+        11
+      ]
+    },
+    {
+      "id": "sweep_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.20000000000000018,
+        -8.4,
+        -4.4
+      ],
+      "rotation": [
+        -6,
+        0,
+        70
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        11
+      ]
+    },
+    {
+      "id": "sweep_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.4,
+        -8.4,
+        -4.4
+      ],
+      "rotation": [
+        -6,
+        0,
+        74
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        17,
+        11
+      ]
+    },
+    {
+      "id": "sweep_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.4,
+        -8.4,
+        -4.4
+      ],
+      "rotation": [
+        -6,
+        0,
+        74
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        24,
+        11
+      ]
+    }
+  ],
+  "description": "Neat short cut, a hard side part, the fringe combed across the brow in one sweep."
+}

@@ -1,0 +1,322 @@
+{
+  "id": "h1310_swept_back",
+  "kind": "hair",
+  "name": "Swept Back",
+  "gender": "unisex",
+  "texture": "hair/h1310_swept_back.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -8.5,
+        -4.2
+      ],
+      "size": [
+        9,
+        1,
+        9
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "brow_roll",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -9,
+        -4.6
+      ],
+      "size": [
+        8,
+        2,
+        2
+      ],
+      "uv": [
+        37,
+        0
+      ]
+    },
+    {
+      "id": "nape_flick_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -1.2,
+        4.3
+      ],
+      "rotation": [
+        -34,
+        0,
+        -16
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "nape_flick_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -1.2,
+        4.3
+      ],
+      "rotation": [
+        -34,
+        0,
+        -16
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        11
+      ]
+    },
+    {
+      "id": "nape_flick_0_2",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -1.2,
+        4.3
+      ],
+      "rotation": [
+        -34,
+        0,
+        -16
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        16,
+        11
+      ]
+    },
+    {
+      "id": "nape_flick_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.3
+      ],
+      "rotation": [
+        -34,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        11
+      ]
+    },
+    {
+      "id": "nape_flick_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.3
+      ],
+      "rotation": [
+        -34,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        30,
+        11
+      ]
+    },
+    {
+      "id": "nape_flick_1_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.2,
+        4.3
+      ],
+      "rotation": [
+        -34,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        11
+      ]
+    },
+    {
+      "id": "nape_flick_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -1.2,
+        4.3
+      ],
+      "rotation": [
+        -34,
+        0,
+        16
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        42,
+        11
+      ]
+    },
+    {
+      "id": "nape_flick_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -1.2,
+        4.3
+      ],
+      "rotation": [
+        -34,
+        0,
+        16
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        51,
+        11
+      ]
+    },
+    {
+      "id": "nape_flick_2_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -1.2,
+        4.3
+      ],
+      "rotation": [
+        -34,
+        0,
+        16
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        58,
+        11
+      ]
+    }
+  ],
+  "description": "Combed hard back from the brow, flat and glossy, ends turning up in short points at the nape."
+}

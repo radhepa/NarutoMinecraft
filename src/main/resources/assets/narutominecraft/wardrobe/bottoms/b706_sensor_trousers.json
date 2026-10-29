@@ -1,0 +1,129 @@
+{
+  "id": "b706_sensor_trousers",
+  "kind": "bottom",
+  "name": "Sensor Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b706_sensor_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_shin_guard",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        5.6,
+        -2.5
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_shin_guard",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        5.6,
+        -2.5
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    },
+    {
+      "id": "holster",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -3.0,
+        1.4,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "uv": [
+        22,
+        0
+      ]
+    },
+    {
+      "id": "holster_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        1.8,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    }
+  ],
+  "description": "Dark trousers with aqua side piping, a thigh holster, shin guards, navy sandals."
+}

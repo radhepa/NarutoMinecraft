@@ -1,0 +1,190 @@
+{
+  "id": "t1007_moth_cape",
+  "kind": "top",
+  "name": "Moth Cape",
+  "gender": "unisex",
+  "texture": "tops/t1007_moth_cape.png",
+  "extrasHeight": 32,
+  "tags": [
+    "aburame",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cape_yoke",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -0.4,
+        -2.6
+      ],
+      "size": [
+        10,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "cape_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        2.6
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        0,
+        0
+      ],
+      "size": [
+        11,
+        7,
+        1
+      ],
+      "uv": [
+        31,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "cape_wing_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.5,
+        8.4,
+        2.95
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "cape_wing_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.5,
+        8.4,
+        2.95
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "cape_drape_right",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        9,
+        9
+      ]
+    },
+    {
+      "id": "cape_drape_left",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        30,
+        9
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless top under a short wing-shaped shoulder cape with a moth on the back, arm wraps."
+}

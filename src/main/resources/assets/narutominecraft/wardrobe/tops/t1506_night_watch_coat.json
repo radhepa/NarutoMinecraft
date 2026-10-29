@@ -1,0 +1,220 @@
+{
+  "id": "t1506_night_watch_coat",
+  "kind": "top",
+  "name": "Night Watch Coat",
+  "gender": "unisex",
+  "texture": "tops/t1506_night_watch_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "coat",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.5,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "coat_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "katana_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.2,
+        3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        42,
+        8
+      ]
+    },
+    {
+      "id": "katana_guard",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.2,
+        3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        47,
+        8
+      ]
+    },
+    {
+      "id": "katana_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.2,
+        3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -27
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        56,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Long slate coat to the knee, high collar, buckled belt, silver piping, a katana on the back."
+}

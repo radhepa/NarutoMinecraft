@@ -1,0 +1,47 @@
+{
+  "id": "t1202_training_kimono",
+  "kind": "top",
+  "name": "Training Kimono",
+  "gender": "female",
+  "texture": "tops/t1202_training_kimono.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        6.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short wrapped kimono top, one long sleeve and one short, mesh on the bare arm, a wide sash."
+}

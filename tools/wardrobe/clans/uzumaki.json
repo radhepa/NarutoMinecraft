@@ -1,0 +1,397 @@
+{
+  "id": "uzumaki",
+  "name": "Uzumaki",
+  "tagline": "Red hair of every shade, sealing robes, seal-tag trim and the whirlpool of Uzushiogakure",
+  "palettes": {
+    "UZUMAKI_WHIRLPOOL": {
+      "name": "Uzumaki Whirlpool",
+      "P": "#b02a37",
+      "S": "#efe6d2",
+      "A": "#e2742c",
+      "L": "#6b4a36",
+      "M": "#b5b9bd",
+      "K": "#1e1a24",
+      "D": "#24485a"
+    },
+    "UZUMAKI_TIDE": {
+      "name": "Uzumaki Tide",
+      "P": "#2f7f86",
+      "S": "#ece6d6",
+      "A": "#c4303a",
+      "L": "#6a4c38",
+      "M": "#b0b8bc",
+      "K": "#18222a",
+      "D": "#1f3a4c"
+    },
+    "UZUMAKI_SEALER": {
+      "name": "Uzumaki Sealer",
+      "P": "#e3d6b8",
+      "S": "#f4efe4",
+      "A": "#b8283a",
+      "L": "#5e4634",
+      "M": "#a9adb2",
+      "K": "#201c22",
+      "D": "#6b2a30"
+    },
+    "UZUMAKI_HABANERO": {
+      "name": "Uzumaki Habanero",
+      "P": "#de6a2a",
+      "S": "#f0e8d8",
+      "A": "#b52530",
+      "L": "#6b4a36",
+      "M": "#b5b9bd",
+      "K": "#1d1b24",
+      "D": "#2b3f5c"
+    },
+    "UZUMAKI_SEA": {
+      "name": "Uzumaki Sea",
+      "P": "#26405c",
+      "S": "#e9e4d8",
+      "A": "#d04a36",
+      "L": "#5c4434",
+      "M": "#aab3b9",
+      "K": "#161b24",
+      "D": "#2f6f78"
+    },
+    "UZUMAKI_HOMESTEAD": {
+      "name": "Uzumaki Homestead",
+      "P": "#8a9a6a",
+      "S": "#f0ece0",
+      "A": "#b8283a",
+      "L": "#6b5a45",
+      "M": "#aab3b9",
+      "K": "#1d1f26",
+      "D": "#3a4a5c"
+    },
+    "UZUMAKI_RAIN": {
+      "name": "Uzumaki Rain",
+      "P": "#3c4250",
+      "S": "#dcd8cf",
+      "A": "#a82a36",
+      "L": "#4b4038",
+      "M": "#9aa3ab",
+      "K": "#15171c",
+      "D": "#262c38"
+    },
+    "UZUMAKI_JONIN": {
+      "name": "Uzumaki Jonin",
+      "P": "#5f6e3c",
+      "S": "#e6e1d3",
+      "A": "#c42a30",
+      "L": "#7a6346",
+      "M": "#aab3b9",
+      "K": "#1d2236",
+      "D": "#2a3f55"
+    },
+    "UZUMAKI_CEREMONY": {
+      "name": "Uzumaki Ceremony",
+      "P": "#e6ddcc",
+      "S": "#f6f2ea",
+      "A": "#b02a37",
+      "L": "#5e4634",
+      "M": "#c9b98a",
+      "K": "#1c1820",
+      "D": "#3a2a40"
+    },
+    "UZUMAKI_SENSOR": {
+      "name": "Uzumaki Sensor",
+      "P": "#a08cc4",
+      "S": "#efeae0",
+      "A": "#7b5aa6",
+      "L": "#5c4434",
+      "M": "#aab3b9",
+      "K": "#1a1820",
+      "D": "#2a2836"
+    }
+  },
+  "hair_colors": {
+    "UZUMAKI_CRIMSON": {
+      "name": "Uzumaki Crimson",
+      "ramp": [
+        "#4a0d14",
+        "#7a1622",
+        "#a8202d",
+        "#d0383c",
+        "#ee6c5e"
+      ]
+    },
+    "UZUMAKI_SCARLET": {
+      "name": "Uzumaki Scarlet",
+      "ramp": [
+        "#5a130d",
+        "#8f2014",
+        "#c4321e",
+        "#e65430",
+        "#f8885c"
+      ]
+    },
+    "UZUMAKI_GARNET": {
+      "name": "Uzumaki Garnet",
+      "ramp": [
+        "#2a080e",
+        "#460f19",
+        "#681926",
+        "#8a2536",
+        "#b03c4c"
+      ]
+    },
+    "UZUMAKI_ROSEWOOD": {
+      "name": "Uzumaki Rosewood",
+      "ramp": [
+        "#3d1113",
+        "#621c1f",
+        "#88292a",
+        "#ad3c38",
+        "#cf5d52"
+      ]
+    },
+    "UZUMAKI_EMBER": {
+      "name": "Uzumaki Ember",
+      "ramp": [
+        "#5c1d0a",
+        "#8e3010",
+        "#c04a18",
+        "#e06a28",
+        "#f6974c"
+      ]
+    },
+    "UZUMAKI_CORAL": {
+      "name": "Uzumaki Coral",
+      "ramp": [
+        "#6b1a26",
+        "#9c2a39",
+        "#c9404d",
+        "#e56669",
+        "#f6988e"
+      ]
+    }
+  },
+  "eye_colors": {
+    "UZUMAKI_VIOLET": {
+      "name": "Uzumaki Violet",
+      "ramp": [
+        "#0e0b14",
+        "#3f2f63",
+        "#66509a",
+        "#a28fd0",
+        "#f2efe8"
+      ]
+    },
+    "UZUMAKI_RUBY": {
+      "name": "Uzumaki Ruby",
+      "ramp": [
+        "#120709",
+        "#6b1420",
+        "#a8243a",
+        "#e0697a",
+        "#f3eee8"
+      ]
+    }
+  },
+  "marks": {
+    "uzumaki_diamond_seal": {
+      "rects": [
+        [
+          0,
+          -7.0,
+          0.5,
+          0.25
+        ],
+        [
+          0,
+          -6.7,
+          1.0,
+          0.35
+        ],
+        [
+          0,
+          -6.4,
+          0.5,
+          0.25
+        ]
+      ],
+      "color": "#6a3a8c",
+      "mirror": false
+    }
+  },
+  "pool": {
+    "hair": [
+      "h201_kushina_long",
+      "h202_karin_asymmetric",
+      "h203_nagato_fringe",
+      "h204_mito_twin_buns",
+      "h205_tide_spikes",
+      "h206_whirl_bun",
+      "h207_habanero_tail",
+      "h208_tide_braid",
+      "h209_clip_bob",
+      "h210_rain_mane",
+      "h211_wave_crop",
+      "h212_twin_tide_tails",
+      "h213_seal_knot",
+      "h214_rain_shag",
+      "h215_side_tail"
+    ],
+    "hair_colors": [
+      "UZUMAKI_CRIMSON",
+      "UZUMAKI_CRIMSON",
+      "UZUMAKI_SCARLET",
+      "UZUMAKI_GARNET",
+      "UZUMAKI_ROSEWOOD",
+      "UZUMAKI_EMBER",
+      "UZUMAKI_CORAL",
+      "AUBURN"
+    ],
+    "eye_colors": [
+      "UZUMAKI_VIOLET",
+      "UZUMAKI_VIOLET",
+      "DARK",
+      "SKY",
+      "UZUMAKI_RUBY"
+    ],
+    "palettes": [
+      "UZUMAKI_WHIRLPOOL",
+      "UZUMAKI_TIDE",
+      "UZUMAKI_HABANERO",
+      "UZUMAKI_SEA"
+    ],
+    "headwear": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      "w02_forehead_protector",
+      "w201_whirlpool_protector",
+      "w202_sealer_hachimaki"
+    ],
+    "bottoms": [
+      "b01_shinobi_trousers",
+      "b04_kunoichi_shorts"
+    ],
+    "complexions": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "marks": [
+      {
+        "id": "uzumaki_diamond_seal",
+        "chance": 0.06
+      }
+    ]
+  },
+  "outfits": [
+    {
+      "id": "sealing_master",
+      "name": "Sealing Master",
+      "top": "t201_sealing_master_robe",
+      "bottom": "b204_tide_hakama",
+      "rank": "jonin",
+      "palettes": [
+        "UZUMAKI_SEALER",
+        "UZUMAKI_WHIRLPOOL",
+        "UZUMAKI_SEA"
+      ]
+    },
+    {
+      "id": "whirlpool_haori",
+      "name": "Whirlpool Haori",
+      "top": "t202_whirlpool_haori",
+      "bottom": "b201_whirl_trousers",
+      "rank": "chunin",
+      "palettes": [
+        "UZUMAKI_WHIRLPOOL",
+        "UZUMAKI_HABANERO"
+      ]
+    },
+    {
+      "id": "homestead",
+      "name": "Homestead Dress",
+      "top": "t203_homestead_dress",
+      "bottom": "b202_village_long_skirt",
+      "rank": "academy",
+      "palettes": [
+        "UZUMAKI_HOMESTEAD",
+        "UZUMAKI_SEA",
+        "UZUMAKI_TIDE"
+      ]
+    },
+    {
+      "id": "sensor",
+      "name": "Sensor",
+      "top": "t204_sensor_jacket",
+      "bottom": "b207_sensor_shorts",
+      "rank": "genin",
+      "palettes": [
+        "UZUMAKI_SENSOR",
+        "UZUMAKI_SENSOR",
+        "UZUMAKI_TIDE"
+      ]
+    },
+    {
+      "id": "rain_wanderer",
+      "name": "Rain Wanderer",
+      "top": "t205_rain_wrap_shirt",
+      "bottom": "b206_rain_leggings",
+      "rank": "genin",
+      "palettes": [
+        "UZUMAKI_RAIN",
+        "UZUMAKI_SEA"
+      ]
+    },
+    {
+      "id": "whirlpool_jonin",
+      "name": "Whirlpool Jonin",
+      "top": "t206_whirlpool_flak_vest",
+      "bottom": "b201_whirl_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "UZUMAKI_JONIN"
+      ]
+    },
+    {
+      "id": "tidewater",
+      "name": "Tidewater Genin",
+      "top": "t207_tidewater_wrap",
+      "bottom": "b203_sealer_shorts",
+      "rank": "genin",
+      "palettes": [
+        "UZUMAKI_TIDE",
+        "UZUMAKI_WHIRLPOOL",
+        "UZUMAKI_SEA"
+      ]
+    },
+    {
+      "id": "sealer_coat",
+      "name": "Sealer",
+      "top": "t208_sealer_coat",
+      "bottom": "b206_rain_leggings",
+      "rank": "jonin"
+    },
+    {
+      "id": "harbor",
+      "name": "Harbor Villager",
+      "top": "t209_harbor_vest",
+      "bottom": "b201_whirl_trousers",
+      "rank": "academy",
+      "palettes": [
+        "UZUMAKI_SEA",
+        "UZUMAKI_TIDE",
+        "UZUMAKI_HOMESTEAD",
+        "UZUMAKI_WHIRLPOOL"
+      ]
+    },
+    {
+      "id": "mito_ceremony",
+      "name": "Ceremonial Kimono",
+      "top": "t210_mito_ceremonial_kimono",
+      "bottom": "b205_ceremonial_kimono_skirt",
+      "rank": "jonin",
+      "palettes": [
+        "UZUMAKI_CEREMONY"
+      ]
+    }
+  ]
+}

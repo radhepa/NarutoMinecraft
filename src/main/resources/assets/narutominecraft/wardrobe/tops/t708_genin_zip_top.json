@@ -1,0 +1,49 @@
+{
+  "id": "t708_genin_zip_top",
+  "kind": "top",
+  "name": "Genin Zip Top",
+  "gender": "unisex",
+  "texture": "tops/t708_genin_zip_top.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi",
+    "yamanaka"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.9,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless purple zip top with lavender side panels, bandaged elbows and forearms."
+}

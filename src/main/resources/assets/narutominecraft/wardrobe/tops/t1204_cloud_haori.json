@@ -1,0 +1,353 @@
+{
+  "id": "t1204_cloud_haori",
+  "kind": "top",
+  "name": "Cloud Haori",
+  "gender": "unisex",
+  "texture": "tops/t1204_cloud_haori.png",
+  "extrasHeight": 48,
+  "tags": [
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "himo_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        5.0,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "id": "himo_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        5.0,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "scale": [
+        1,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "id": "himo_tassel",
+      "bone": "TORSO",
+      "pivot": [
+        -0.2,
+        5.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "motion": "sway",
+      "scale": [
+        0.6,
+        1,
+        0.6
+      ]
+    },
+    {
+      "id": "right_haori_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.7,
+        -2.3,
+        -2.7
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        15,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_haori_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.7,
+        -2.3,
+        -2.7
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "lapel_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        -0.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        13,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    },
+    {
+      "id": "lapel_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        -0.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        13,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ]
+    },
+    {
+      "id": "skirt_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        7,
+        1
+      ],
+      "uv": [
+        5,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        7,
+        1
+      ],
+      "uv": [
+        14,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        23,
+        15
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        2.32
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        30
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Open haori painted with ink-wash clouds over a dark kosode, cream collar bands, chest cord, crest."
+}

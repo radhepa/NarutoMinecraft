@@ -1,0 +1,18 @@
+{
+  "id": "t1403_striped_overshirt",
+  "kind": "top",
+  "name": "Striped Overshirt",
+  "gender": "unisex",
+  "texture": "tops/t1403_striped_overshirt.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless overshirt with three stripes over a black long-sleeved shirt."
+}

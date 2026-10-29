@@ -1,0 +1,160 @@
+{
+  "id": "t1004_teacher_jacket",
+  "kind": "top",
+  "name": "Teacher Jacket",
+  "gender": "unisex",
+  "texture": "tops/t1004_teacher_jacket.png",
+  "extrasHeight": 32,
+  "tags": [
+    "aburame",
+    "coat",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -3.4,
+        4.2
+      ],
+      "size": [
+        10,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "collar_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.2,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        0,
+        -3.3,
+        -3.0
+      ],
+      "size": [
+        1,
+        4,
+        8
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "collar_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.2,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        0,
+        -3.3,
+        -3.0
+      ],
+      "size": [
+        1,
+        4,
+        8
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "lapel_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ]
+    },
+    {
+      "id": "lapel_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        5,
+        13
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Open slate jacket over a dark shirt, collar turned up behind the neck."
+}

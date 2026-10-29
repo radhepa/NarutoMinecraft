@@ -1,0 +1,518 @@
+{
+  "id": "h308_captain_swept",
+  "kind": "hair",
+  "name": "Captain Swept",
+  "gender": "unisex",
+  "texture": "hair/h308_captain_swept.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "crown_comb_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.3,
+        -3.4
+      ],
+      "rotation": [
+        96,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "crown_comb_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.3,
+        -3.4
+      ],
+      "rotation": [
+        96,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "crown_comb_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.3,
+        -3.6
+      ],
+      "rotation": [
+        98,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    },
+    {
+      "id": "crown_comb_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.3,
+        -3.6
+      ],
+      "rotation": [
+        98,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "crown_comb_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.3,
+        -3.4
+      ],
+      "rotation": [
+        96,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    },
+    {
+      "id": "crown_comb_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.3,
+        -3.4
+      ],
+      "rotation": [
+        96,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ]
+    },
+    {
+      "id": "back_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -6.6,
+        4.4
+      ],
+      "rotation": [
+        24,
+        0,
+        18
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "back_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -6.6,
+        4.4
+      ],
+      "rotation": [
+        24,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "back_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -6.6,
+        4.4
+      ],
+      "rotation": [
+        24,
+        0,
+        6
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        6
+      ]
+    },
+    {
+      "id": "back_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -6.6,
+        4.4
+      ],
+      "rotation": [
+        24,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        6
+      ]
+    },
+    {
+      "id": "back_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -6.6,
+        4.4
+      ],
+      "rotation": [
+        24,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        12,
+        6
+      ]
+    },
+    {
+      "id": "back_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -6.6,
+        4.4
+      ],
+      "rotation": [
+        24,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        19,
+        6
+      ]
+    },
+    {
+      "id": "back_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -6.6,
+        4.4
+      ],
+      "rotation": [
+        24,
+        0,
+        -18
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        24,
+        6
+      ]
+    },
+    {
+      "id": "back_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -6.6,
+        4.4
+      ],
+      "rotation": [
+        24,
+        0,
+        -18
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        31,
+        6
+      ]
+    },
+    {
+      "id": "sidelock_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        36,
+        6
+      ]
+    },
+    {
+      "id": "sidelock_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        43,
+        6
+      ]
+    },
+    {
+      "id": "sidelock_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        48,
+        6
+      ]
+    },
+    {
+      "id": "sidelock_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -7.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        55,
+        6
+      ]
+    }
+  ],
+  "description": "Combed straight back off the brow, layered at the back, short side locks."
+}

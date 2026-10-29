@@ -1,0 +1,136 @@
+{
+  "id": "t507_matron_apron",
+  "kind": "top",
+  "name": "Matron Apron",
+  "gender": "unisex",
+  "texture": "tops/t507_matron_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "nara",
+    "shinobi",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "apron",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        8,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "sash_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        9.0,
+        2.75
+      ],
+      "rotation": [
+        6,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sash_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        9.0,
+        2.75
+      ],
+      "rotation": [
+        6,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Wrap blouse with a sash, a plain apron to the knee, sleeves tied back."
+}

@@ -63,7 +63,232 @@
     "h06_low_ponytail",
     "h07_bowl_cut",
     "h08_short_crop",
-    "h09_high_ponytail"
+    "h09_high_ponytail",
+    "h101_hashirama_mane",
+    "h102_tobirama_spikes",
+    "h103_twin_low_tails",
+    "h104_nawaki_spikes",
+    "h105_war_mane",
+    "h106_warring_topknot",
+    "h107_wrapped_tail",
+    "h108_village_bob",
+    "h109_swept_mane",
+    "h110_forest_braid",
+    "h111_wild_high_tail",
+    "h112_shaggy_nape",
+    "h113_layered_flick",
+    "h114_half_up_knot",
+    "h115_nape_chignon",
+    "h201_kushina_long",
+    "h202_karin_asymmetric",
+    "h203_nagato_fringe",
+    "h204_mito_twin_buns",
+    "h205_tide_spikes",
+    "h206_whirl_bun",
+    "h207_habanero_tail",
+    "h208_tide_braid",
+    "h209_clip_bob",
+    "h210_rain_mane",
+    "h211_wave_crop",
+    "h212_twin_tide_tails",
+    "h213_seal_knot",
+    "h214_rain_shag",
+    "h215_side_tail",
+    "h301_avenger_spikes",
+    "h302_crow_tail",
+    "h303_war_mane",
+    "h304_goggle_spikes",
+    "h305_flicker_curls",
+    "h306_matriarch_long",
+    "h307_little_brother",
+    "h308_captain_swept",
+    "h309_new_moon_bob",
+    "h310_mirror_wave",
+    "h311_sage_topknot",
+    "h312_wanderer_shag",
+    "h313_warring_tail",
+    "h314_hime_cut",
+    "h315_raven_feathers",
+    "h401_tip_tied_mane",
+    "h402_hime_cut",
+    "h403_bob_sidelocks",
+    "h404_clan_head",
+    "h405_side_parted_long",
+    "h406_branch_crop",
+    "h407_long_braid",
+    "h408_elder_topknot",
+    "h409_half_up_tail",
+    "h410_low_twin_tails",
+    "h411_waist_length",
+    "h412_kanzashi_bun",
+    "h413_shaggy_shoulder",
+    "h414_childs_bob",
+    "h415_swept_back_long",
+    "h501_pineapple_tail",
+    "h502_shadow_sideburns",
+    "h503_sprout_tail",
+    "h504_low_tail",
+    "h505_twin_sprouts",
+    "h506_loose_wisps",
+    "h507_lazy_bedhead",
+    "h508_antler_tufts",
+    "h509_shogi_knot",
+    "h510_herder_wrap",
+    "h511_drooping_tail",
+    "h512_side_tail",
+    "h513_tail_let_down",
+    "h514_cropped_spikes",
+    "h515_swept_sprout",
+    "h601_choji_spikes",
+    "h602_choza_mane",
+    "h603_chocho_volume",
+    "h604_ember_crest",
+    "h605_wild_tail",
+    "h606_cloud_puffs",
+    "h607_dumpling_buns",
+    "h608_lion_mane",
+    "h609_long_mane",
+    "h610_sumo_topknot",
+    "h611_shaggy_crop",
+    "h612_braided_mane",
+    "h613_curly_ponytail",
+    "h614_butterfly_spikes",
+    "h615_bushy_bob",
+    "h701_ino_ponytail",
+    "h702_mind_walker_tail",
+    "h703_inojin_tail",
+    "h704_root_low_tail",
+    "h705_petal_bob",
+    "h706_florist_bun",
+    "h707_sensor_spikes",
+    "h708_petal_twin_tails",
+    "h709_loose_sweep",
+    "h710_side_braid",
+    "h711_half_up_tail",
+    "h712_swept_crop",
+    "h713_bloom_ponytail",
+    "h714_elder_mane",
+    "h715_sensor_topknot",
+    "h801_fang_crop",
+    "h802_wild_mane",
+    "h803_long_low_tail",
+    "h804_ruff_spikes",
+    "h805_hound_shag",
+    "h806_pup_tufts",
+    "h807_feral_sweep",
+    "h808_wild_topknot",
+    "h809_hackle_crest",
+    "h810_mane_tail",
+    "h811_hound_buns",
+    "h812_windblown",
+    "h813_long_shag",
+    "h814_wolf_tail",
+    "h815_scruff_tails",
+    "h901_young_hiruzen",
+    "h902_guardian_beard",
+    "h903_elder_goatee",
+    "h904_scarf_kid_spikes",
+    "h905_sensei_spikes",
+    "h906_mirai_bob",
+    "h907_warring_topknot",
+    "h908_ash_chinstrap",
+    "h909_enma_tail",
+    "h910_will_of_fire",
+    "h911_monkey_puffs",
+    "h912_guard_pixie",
+    "h913_sage_mane",
+    "h914_crown_bun",
+    "h915_jungle_spikes",
+    "h1001_shino_spikes",
+    "h1002_swept_back",
+    "h1003_shibi_mane",
+    "h1004_torune_slick",
+    "h1005_kikai_crest",
+    "h1006_beetle_dome",
+    "h1007_moth_bob",
+    "h1008_hive_bun",
+    "h1009_hood_shag",
+    "h1010_spiked_tail",
+    "h1011_antenna_locks",
+    "h1012_long_tied",
+    "h1013_cicada_layers",
+    "h1014_mantis_crop",
+    "h1015_wing_sweep",
+    "h1101_scarecrow_spikes",
+    "h1102_white_fang_ponytail",
+    "h1103_young_scarecrow",
+    "h1104_sixth_hokage",
+    "h1105_anbu_shag",
+    "h1106_windswept_bob",
+    "h1107_hound_tail",
+    "h1108_silver_shag",
+    "h1109_crescent_topknot",
+    "h1110_fang_ridge",
+    "h1111_long_white_fang",
+    "h1112_twin_fangs",
+    "h1113_cropped_spikes",
+    "h1114_sidelong_lock",
+    "h1115_braided_fang",
+    "h1201_yakumo_braid",
+    "h1202_unkai_tail",
+    "h1203_wisteria_waves",
+    "h1204_brush_topknot",
+    "h1205_ink_bob",
+    "h1206_scholar_half_up",
+    "h1207_shoulder_tail",
+    "h1208_cloud_curls",
+    "h1209_calligrapher_part",
+    "h1210_twin_braids",
+    "h1211_easel_shag",
+    "h1212_elder_long_tie",
+    "h1213_veiled_sweep",
+    "h1214_wisteria_buns",
+    "h1215_mist_hime",
+    "h1301_danzo_shag",
+    "h1302_warring_youth",
+    "h1303_sai_sleek",
+    "h1304_root_buzz",
+    "h1305_foundation_tail",
+    "h1306_elder_topknot",
+    "h1307_councilor_bun",
+    "h1308_council_part",
+    "h1309_shimura_bob",
+    "h1310_swept_back",
+    "h1311_council_shag",
+    "h1312_ink_braid",
+    "h1313_shin_spikes",
+    "h1314_half_up",
+    "h1315_ink_curtain",
+    "h1401_kurenai_wild_mane",
+    "h1402_kurenai_shoulder_waves",
+    "h1403_shinku_shag",
+    "h1404_mirai_layered_bob",
+    "h1405_guard_tail",
+    "h1406_thorn_half_up",
+    "h1407_rose_bun",
+    "h1408_mist_veil",
+    "h1409_illusion_sweep",
+    "h1410_bramble_crop",
+    "h1411_wave_ponytail",
+    "h1412_thorn_braids",
+    "h1413_crimson_flare",
+    "h1414_elder_waves",
+    "h1415_wrapped_tail",
+    "h1501_proctor_cut",
+    "h1502_crescent_sweep",
+    "h1503_night_curtain",
+    "h1504_swordsman_topknot",
+    "h1505_crescent_tail",
+    "h1506_night_bob",
+    "h1507_tousled_shag",
+    "h1508_wrapped_tail",
+    "h1509_moonveil",
+    "h1510_nape_tail",
+    "h1511_half_up_knot",
+    "h1512_shoulder_sweep",
+    "h1513_strap_braid",
+    "h1514_iai_gust",
+    "h1515_crossed_pin_bun"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -74,7 +299,45 @@
     "w06_anbu_hawk_mask",
     "w07_root_mask",
     "w08_masked_protector",
-    "w09_bandana_protector"
+    "w09_bandana_protector",
+    "w101_senju_brow_guard",
+    "w102_travel_kasa",
+    "w103_nawaki_goggles",
+    "w201_whirlpool_protector",
+    "w202_sealer_hachimaki",
+    "w401_brow_wrap",
+    "w402_branch_protector",
+    "w501_herder_kasa",
+    "w502_shadow_protector",
+    "w601_akimichi_protector",
+    "w602_hachimaki",
+    "w701_sensor_headset",
+    "w702_florist_kerchief",
+    "w801_fur_hood",
+    "w802_pup_rider",
+    "w901_battle_helmet",
+    "w902_kid_goggles",
+    "w903_fire_headband",
+    "w1001_round_shades",
+    "w1002_oval_tints",
+    "w1003_deep_hood",
+    "w1004_optic_visor",
+    "w1005_tassel_shades",
+    "w1006_shades_protector",
+    "w1101_scarecrow_mask",
+    "w1102_hatake_cloth_mask",
+    "w1103_slanted_protector",
+    "w1104_anbu_hound_mask",
+    "w1201_kasa_hat",
+    "w1202_painted_protector",
+    "w1203_training_headband",
+    "w1301_eye_bandage",
+    "w1302_brow_bandage",
+    "w1401_rose_hairpin",
+    "w1402_crimson_protector",
+    "w1501_proctor_bandana",
+    "w1502_cat_mask",
+    "w1503_crescent_hachimaki"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -97,7 +360,157 @@
     "t18_sentinel_vest",
     "t19_field_vest",
     "t20_kunoichi_jonin",
-    "t21_commander_coat"
+    "t21_commander_coat",
+    "t101_senju_war_armor",
+    "t102_tobirama_armor",
+    "t103_clan_haori",
+    "t104_village_kimono",
+    "t105_crest_tunic",
+    "t106_gambler_haori",
+    "t107_ranger_vest",
+    "t108_training_gi",
+    "t109_ceremonial_montsuki",
+    "t110_scout_cuirass",
+    "t201_sealing_master_robe",
+    "t202_whirlpool_haori",
+    "t203_homestead_dress",
+    "t204_sensor_jacket",
+    "t205_rain_wrap_shirt",
+    "t206_whirlpool_flak_vest",
+    "t207_tidewater_wrap",
+    "t208_sealer_coat",
+    "t209_harbor_vest",
+    "t210_mito_ceremonial_kimono",
+    "t301_avenger_open_shirt",
+    "t302_police_vest",
+    "t303_warring_armor",
+    "t304_fan_zip_jacket",
+    "t305_clan_tunic",
+    "t306_crow_mesh_shirt",
+    "t307_fan_jonin_vest",
+    "t308_clan_head_haori",
+    "t309_travel_poncho",
+    "t310_fan_wrap_top",
+    "t401_training_wrap",
+    "t402_branch_guard_kimono",
+    "t403_elder_haori",
+    "t404_heiress_hooded_jacket",
+    "t405_two_tone_zip_jacket",
+    "t406_jonin_apron_robe",
+    "t407_attendant_kimono",
+    "t408_scout_mantle",
+    "t409_ceremonial_kimono",
+    "t410_courtyard_yukata",
+    "t501_open_flak_vest",
+    "t502_mesh_tee",
+    "t503_genin_jacket",
+    "t504_clan_head_haori",
+    "t505_herder_tunic",
+    "t506_forest_mantle",
+    "t507_matron_apron",
+    "t508_shogi_sweater",
+    "t509_sprout_top",
+    "t510_evening_yukata",
+    "t601_shoku_armor",
+    "t602_leaf_scarf",
+    "t603_lacquer_samurai",
+    "t604_mawashi_wrap",
+    "t605_snack_bandolier",
+    "t606_sash_kimono",
+    "t607_padded_gambeson",
+    "t608_scarf_tunic",
+    "t609_akimichi_jonin",
+    "t610_feast_haori",
+    "t701_mind_bloom_crop",
+    "t702_mind_walker_coat",
+    "t703_ink_crop_jacket",
+    "t704_florist_apron",
+    "t705_florist_wrap",
+    "t706_sensor_corps_tunic",
+    "t707_interrogation_coat",
+    "t708_genin_zip_top",
+    "t709_elder_haori",
+    "t710_lily_blouse",
+    "t801_fur_hood_jacket",
+    "t802_fang_parka",
+    "t803_fur_collar_vest",
+    "t804_kennel_keeper_wrap",
+    "t805_clan_flak_vest",
+    "t806_tracker_mantle",
+    "t807_claw_wrap",
+    "t808_pack_leader_coat",
+    "t809_paw_hoodie",
+    "t810_handler_jerkin",
+    "t901_guardian_vest",
+    "t902_monkey_king_armor",
+    "t903_long_scarf_tee",
+    "t904_sensei_jacket",
+    "t905_ember_haori",
+    "t906_guard_detail_vest",
+    "t907_warring_breastplate",
+    "t908_ash_training_wrap",
+    "t909_corps_hoodie",
+    "t910_will_of_fire_tunic",
+    "t1001_shino_coat",
+    "t1002_hooded_longcoat",
+    "t1003_kikai_flak",
+    "t1004_teacher_jacket",
+    "t1005_shibi_robe",
+    "t1006_torune_suit",
+    "t1007_moth_cape",
+    "t1008_field_shirt",
+    "t1009_hive_tunic",
+    "t1010_elder_mantle",
+    "t1101_scarecrow_vest",
+    "t1102_white_fang_vest",
+    "t1103_hound_anbu",
+    "t1104_prodigy_shirt",
+    "t1105_sixth_haori",
+    "t1106_retired_zip_jacket",
+    "t1107_ninken_handler",
+    "t1108_scarecrow_kunoichi",
+    "t1109_training_wrap",
+    "t1110_hatake_clan_coat",
+    "t1201_painter_robe",
+    "t1202_training_kimono",
+    "t1203_scholar_robe",
+    "t1204_cloud_haori",
+    "t1205_painters_smock",
+    "t1206_calligrapher_tasuki",
+    "t1207_travel_cloak",
+    "t1208_genin_tunic",
+    "t1209_chunin_vest",
+    "t1210_elder_kimono",
+    "t1301_danzo_robe",
+    "t1302_shackled_arm",
+    "t1303_warring_armor",
+    "t1304_sai_jacket",
+    "t1305_root_strap_jacket",
+    "t1306_councilor_haori",
+    "t1307_village_kosode",
+    "t1308_ink_smock",
+    "t1309_mourning_haori",
+    "t1310_foundation_vest",
+    "t1401_rose_thorn_wrap",
+    "t1402_genjutsu_jonin_vest",
+    "t1403_striped_overshirt",
+    "t1404_crimson_kimono",
+    "t1405_bandage_bodice",
+    "t1406_mist_haori",
+    "t1407_thorn_sash_tunic",
+    "t1408_rose_wrap_blouse",
+    "t1409_simple_wrap_dress",
+    "t1410_illusion_cloak",
+    "t1501_proctor_vest",
+    "t1502_crescent_haori",
+    "t1503_anbu_swordswoman",
+    "t1504_strap_tunic",
+    "t1505_moon_dancer",
+    "t1506_night_watch_coat",
+    "t1507_convalescent_wrap",
+    "t1508_practice_gi",
+    "t1509_scarf_knit",
+    "t1510_tasuki_iaido"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -107,7 +520,81 @@
     "b05_green_leggings",
     "b06_anbu_greaves",
     "b07_cargo_shorts",
-    "b08_mesh_leggings"
+    "b08_mesh_leggings",
+    "b101_armored_hakama",
+    "b102_wrapped_trousers",
+    "b103_pleated_hakama",
+    "b104_field_trousers",
+    "b105_ranger_shorts",
+    "b201_whirl_trousers",
+    "b202_village_long_skirt",
+    "b203_sealer_shorts",
+    "b204_tide_hakama",
+    "b205_ceremonial_kimono_skirt",
+    "b206_rain_leggings",
+    "b207_sensor_shorts",
+    "b301_clan_hakama",
+    "b302_war_tassets",
+    "b303_wanderer_trousers",
+    "b304_warmer_shorts",
+    "b305_fan_skirt",
+    "b401_training_shorts",
+    "b402_hakama",
+    "b403_heiress_trousers",
+    "b404_cropped_trousers",
+    "b405_attendant_kimono_skirt",
+    "b406_robe_trousers",
+    "b501_shadow_trousers",
+    "b502_herder_trousers",
+    "b503_knee_shorts",
+    "b504_wrap_skirt",
+    "b505_yukata_hem",
+    "b601_armored_hakama",
+    "b602_sagari_shorts",
+    "b603_padded_trousers",
+    "b604_lacquer_greaves",
+    "b605_long_boots",
+    "b701_slit_apron_skirt",
+    "b702_bandaged_shorts",
+    "b703_wrapped_trousers",
+    "b704_florist_trousers",
+    "b705_long_slit_skirt",
+    "b706_sensor_trousers",
+    "b801_tracker_trousers",
+    "b802_capri_pants",
+    "b803_kennel_boots",
+    "b804_fur_wrap_shorts",
+    "b901_guardian_trousers",
+    "b902_monkey_shorts",
+    "b903_warring_hakama",
+    "b904_battle_greaves",
+    "b905_wrap_skirt_leggings",
+    "b1001_aburame_trousers",
+    "b1002_field_shorts",
+    "b1003_root_apron",
+    "b1004_wrapped_slacks",
+    "b1101_scarecrow_trousers",
+    "b1102_prodigy_shorts",
+    "b1103_hound_wrap_skirt",
+    "b1104_night_trousers",
+    "b1201_painter_trousers",
+    "b1202_wrap_skirt",
+    "b1203_scholar_hakama",
+    "b1204_rolled_trousers",
+    "b1205_genin_shorts",
+    "b1206_elder_kimono_skirt",
+    "b1301_council_hakama",
+    "b1302_root_trousers",
+    "b1303_bandaged_trousers",
+    "b1304_wrap_skirt",
+    "b1401_bandaged_thighs",
+    "b1402_wrapped_trousers",
+    "b1403_grey_slacks",
+    "b1404_thorn_hem_skirt",
+    "b1405_bandaged_shorts",
+    "b1501_gekko_hakama",
+    "b1502_swordsman_trousers",
+    "b1503_strap_leggings"
   ],
   "characters": [
     {
@@ -523,7 +1010,5737 @@
       ],
       "color": null,
       "mirror": true
+    },
+    "aburame_beetle": {
+      "rects": [
+        [
+          2.7,
+          -1.7,
+          0.6,
+          0.45
+        ],
+        [
+          2.85,
+          -1.85,
+          0.3,
+          0.15
+        ]
+      ],
+      "color": "#2b2a1c",
+      "mirror": false
+    },
+    "aburame_kikai_dots": {
+      "rects": [
+        [
+          2.6,
+          -1.6,
+          0.25,
+          0.25
+        ],
+        [
+          3.1,
+          -1.3,
+          0.25,
+          0.25
+        ],
+        [
+          2.85,
+          -1.0,
+          0.25,
+          0.25
+        ]
+      ],
+      "color": null,
+      "mirror": true
+    },
+    "akimichi_swirl": {
+      "rects": [
+        [
+          3.05,
+          -1.72,
+          1.5,
+          0.22
+        ],
+        [
+          3.69,
+          -1.18,
+          0.22,
+          0.86
+        ],
+        [
+          3.05,
+          -0.64,
+          1.5,
+          0.22
+        ],
+        [
+          2.41,
+          -1.02,
+          0.22,
+          0.54
+        ],
+        [
+          2.86,
+          -1.2,
+          0.68,
+          0.2
+        ],
+        [
+          3.12,
+          -0.98,
+          0.2,
+          0.3
+        ]
+      ],
+      "color": "#c4392b",
+      "mirror": true
+    },
+    "akimichi_swirl_violet": {
+      "rects": [
+        [
+          3.05,
+          -1.72,
+          1.5,
+          0.22
+        ],
+        [
+          3.69,
+          -1.18,
+          0.22,
+          0.86
+        ],
+        [
+          3.05,
+          -0.64,
+          1.5,
+          0.22
+        ],
+        [
+          2.41,
+          -1.02,
+          0.22,
+          0.54
+        ],
+        [
+          2.86,
+          -1.2,
+          0.68,
+          0.2
+        ],
+        [
+          3.12,
+          -0.98,
+          0.2,
+          0.3
+        ]
+      ],
+      "color": "#8a4a8c",
+      "mirror": true
+    },
+    "gekko_tired_eyes": {
+      "rects": [
+        [
+          2.1,
+          -1.72,
+          2.0,
+          0.42
+        ]
+      ],
+      "color": null,
+      "mirror": true
+    },
+    "gekko_violet_eyes": {
+      "rects": [
+        [
+          2.1,
+          -1.72,
+          2.0,
+          0.42
+        ]
+      ],
+      "color": "#8d7a8e",
+      "mirror": true
+    },
+    "hatake_scar": {
+      "rects": [
+        [
+          2.0,
+          -5.1,
+          0.3,
+          2.3
+        ],
+        [
+          2.0,
+          -1.35,
+          0.3,
+          1.3
+        ]
+      ],
+      "color": "#9c5e57",
+      "mirror": false
+    },
+    "hyuga_caged_bird": {
+      "rects": [
+        [
+          -0.56,
+          -7.26,
+          0.34,
+          0.34
+        ],
+        [
+          -0.28,
+          -6.98,
+          0.34,
+          0.34
+        ],
+        [
+          0,
+          -6.7,
+          0.34,
+          0.34
+        ],
+        [
+          0.28,
+          -6.42,
+          0.34,
+          0.34
+        ],
+        [
+          0.56,
+          -6.14,
+          0.34,
+          0.34
+        ],
+        [
+          1.15,
+          -6.7,
+          0.6,
+          0.24
+        ]
+      ],
+      "color": "#3f8a47",
+      "mirror": true
+    },
+    "inuzuka_fangs": {
+      "rects": [
+        [
+          2.7,
+          -1.3,
+          1.2,
+          0.35
+        ],
+        [
+          2.7,
+          -0.95,
+          0.9,
+          0.35
+        ],
+        [
+          2.7,
+          -0.6,
+          0.55,
+          0.35
+        ],
+        [
+          2.7,
+          -0.3,
+          0.25,
+          0.25
+        ]
+      ],
+      "color": "#c0242a",
+      "mirror": true
+    },
+    "kurama_ink_smudge": {
+      "rects": [
+        [
+          2.7,
+          -1.75,
+          0.8,
+          0.3
+        ],
+        [
+          3.1,
+          -1.45,
+          0.4,
+          0.25
+        ]
+      ],
+      "color": "#2a2633",
+      "mirror": false
+    },
+    "kurama_beauty_mark": {
+      "rects": [
+        [
+          -2.6,
+          -1.55,
+          0.3,
+          0.3
+        ]
+      ],
+      "color": null,
+      "mirror": false
+    },
+    "nara_cheek_scar": {
+      "rects": [
+        [
+          2.7,
+          -2.6,
+          0.25,
+          1.5
+        ],
+        [
+          2.95,
+          -1.3,
+          0.25,
+          0.9
+        ]
+      ],
+      "color": null,
+      "mirror": false
+    },
+    "nara_twin_scars": {
+      "rects": [
+        [
+          -2.8,
+          -1.7,
+          0.25,
+          1.4
+        ],
+        [
+          -1.9,
+          -0.6,
+          0.25,
+          0.9
+        ]
+      ],
+      "color": null,
+      "mirror": false
+    },
+    "sarutobi_age_lines": {
+      "rects": [
+        [
+          2.1,
+          -1.85,
+          1.2,
+          0.2
+        ],
+        [
+          2.5,
+          -1.45,
+          0.8,
+          0.2
+        ]
+      ],
+      "color": null,
+      "mirror": true
+    },
+    "sarutobi_soot_smudge": {
+      "rects": [
+        [
+          -3.1,
+          -1.7,
+          1.1,
+          0.5
+        ],
+        [
+          -2.6,
+          -1.25,
+          0.6,
+          0.3
+        ]
+      ],
+      "color": "#3d3532",
+      "mirror": false
+    },
+    "senju_strength_seal": {
+      "rects": [
+        [
+          -0.25,
+          -7.15,
+          0.5,
+          0.25
+        ],
+        [
+          -0.5,
+          -6.9,
+          1.0,
+          0.4
+        ],
+        [
+          -0.25,
+          -6.5,
+          0.5,
+          0.25
+        ]
+      ],
+      "color": "#7b3fa0",
+      "mirror": false
+    },
+    "senju_war_stripes": {
+      "rects": [
+        [
+          2.7,
+          -1.75,
+          0.3,
+          1.1
+        ],
+        [
+          0.0,
+          -0.32,
+          0.3,
+          0.3
+        ]
+      ],
+      "color": "#b3262d",
+      "mirror": true
+    },
+    "shimura_x_scar": {
+      "rects": [
+        [
+          0,
+          -0.62,
+          0.25,
+          0.25
+        ],
+        [
+          -0.25,
+          -0.87,
+          0.25,
+          0.25
+        ],
+        [
+          0.25,
+          -0.87,
+          0.25,
+          0.25
+        ],
+        [
+          -0.25,
+          -0.37,
+          0.25,
+          0.25
+        ],
+        [
+          0.25,
+          -0.37,
+          0.25,
+          0.25
+        ]
+      ],
+      "color": null,
+      "mirror": false
+    },
+    "uchiha_tear_troughs": {
+      "rects": [
+        [
+          1.3,
+          -1.9,
+          0.22,
+          0.9
+        ]
+      ],
+      "color": null,
+      "mirror": true
+    },
+    "uzumaki_diamond_seal": {
+      "rects": [
+        [
+          0,
+          -7.0,
+          0.5,
+          0.25
+        ],
+        [
+          0,
+          -6.7,
+          1.0,
+          0.35
+        ],
+        [
+          0,
+          -6.4,
+          0.5,
+          0.25
+        ]
+      ],
+      "color": "#6a3a8c",
+      "mirror": false
+    },
+    "yamanaka_beauty_mark": {
+      "rects": [
+        [
+          2.7,
+          -1.7,
+          0.45,
+          0.45
+        ]
+      ],
+      "color": null,
+      "mirror": false
+    },
+    "yamanaka_blush": {
+      "rects": [
+        [
+          2.5,
+          -1.6,
+          1.3,
+          0.35
+        ]
+      ],
+      "color": "#e79aa6",
+      "mirror": true
+    },
+    "yuhi_violet_lids": {
+      "rects": [
+        [
+          1.2,
+          -4.3,
+          2.2,
+          0.22
+        ]
+      ],
+      "color": "#6c4a86",
+      "mirror": true
+    },
+    "yuhi_thorn_scar": {
+      "rects": [
+        [
+          2.7,
+          -2.0,
+          0.28,
+          1.1
+        ]
+      ],
+      "color": null,
+      "mirror": false
     }
   },
-  "clans": []
+  "clans": [
+    {
+      "id": "aburame",
+      "name": "Aburame",
+      "tagline": "Hidden faces: round dark lenses, collars to the nose, deep hoods and the kikaichu in earthy olive, moss and dusty brown",
+      "palettes": {
+        "ABURAME_SAGE": {
+          "name": "Aburame Sage",
+          "P": "#7b8670",
+          "S": "#d8d2bd",
+          "A": "#4f5f36",
+          "L": "#6e5a40",
+          "M": "#9aa39c",
+          "K": "#1c1f1b",
+          "D": "#5f4c39"
+        },
+        "ABURAME_OLIVE": {
+          "name": "Aburame Olive",
+          "P": "#5f6843",
+          "S": "#d2cbb2",
+          "A": "#a08a3e",
+          "L": "#5f4a33",
+          "M": "#9aa39c",
+          "K": "#191b16",
+          "D": "#4a4436"
+        },
+        "ABURAME_SLATE": {
+          "name": "Aburame Slate",
+          "P": "#6c7379",
+          "S": "#dad8d0",
+          "A": "#5e7048",
+          "L": "#5b4a3a",
+          "M": "#a7adb0",
+          "K": "#1a1c20",
+          "D": "#3a3f45"
+        },
+        "ABURAME_KHAKI": {
+          "name": "Aburame Khaki",
+          "P": "#a39572",
+          "S": "#e4dcc4",
+          "A": "#5f6e3c",
+          "L": "#6b5136",
+          "M": "#a4a69a",
+          "K": "#22201a",
+          "D": "#5c5040"
+        },
+        "ABURAME_MOSS": {
+          "name": "Aburame Moss",
+          "P": "#4d5c3c",
+          "S": "#d6d0b8",
+          "A": "#b08a3a",
+          "L": "#5a4632",
+          "M": "#9aa090",
+          "K": "#171a14",
+          "D": "#3b3a2c"
+        },
+        "ABURAME_ROOT": {
+          "name": "Aburame Root",
+          "P": "#2a2c30",
+          "S": "#d4d0c4",
+          "A": "#8d2a2a",
+          "L": "#3c3530",
+          "M": "#8f979c",
+          "K": "#111214",
+          "D": "#1f2124"
+        },
+        "ABURAME_DUST": {
+          "name": "Aburame Dust",
+          "P": "#7a6450",
+          "S": "#ddd3bd",
+          "A": "#5f6b48",
+          "L": "#4f3d2c",
+          "M": "#9d9a8c",
+          "K": "#1e1a16",
+          "D": "#4a4038"
+        },
+        "ABURAME_MOTH": {
+          "name": "Aburame Moth",
+          "P": "#bdb294",
+          "S": "#f0eadb",
+          "A": "#6f7f55",
+          "L": "#7a6046",
+          "M": "#aab0a8",
+          "K": "#2a2822",
+          "D": "#6c6658"
+        }
+      },
+      "hair_colors": {
+        "ABURAME_UMBER": {
+          "name": "Aburame Umber",
+          "ramp": [
+            "#160f0b",
+            "#24180f",
+            "#352418",
+            "#4b3523",
+            "#634a33"
+          ]
+        },
+        "ABURAME_BLACK": {
+          "name": "Aburame Black",
+          "ramp": [
+            "#0d0e0c",
+            "#171915",
+            "#22251f",
+            "#30352b",
+            "#434a3b"
+          ]
+        },
+        "ABURAME_ASH": {
+          "name": "Aburame Ash",
+          "ramp": [
+            "#24201b",
+            "#352f28",
+            "#4a4339",
+            "#62594c",
+            "#7d7363"
+          ]
+        }
+      },
+      "eye_colors": {
+        "ABURAME_AMBER": {
+          "name": "Aburame Amber",
+          "ramp": [
+            "#0e0c08",
+            "#3b2a14",
+            "#6e4f22",
+            "#a57e3e",
+            "#efe9da"
+          ]
+        }
+      },
+      "marks": {
+        "aburame_beetle": {
+          "rects": [
+            [
+              2.7,
+              -1.7,
+              0.6,
+              0.45
+            ],
+            [
+              2.85,
+              -1.85,
+              0.3,
+              0.15
+            ]
+          ],
+          "color": "#2b2a1c",
+          "mirror": false
+        },
+        "aburame_kikai_dots": {
+          "rects": [
+            [
+              2.6,
+              -1.6,
+              0.25,
+              0.25
+            ],
+            [
+              3.1,
+              -1.3,
+              0.25,
+              0.25
+            ],
+            [
+              2.85,
+              -1.0,
+              0.25,
+              0.25
+            ]
+          ],
+          "color": null,
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h1001_shino_spikes",
+          "h1002_swept_back",
+          "h1003_shibi_mane",
+          "h1004_torune_slick",
+          "h1005_kikai_crest",
+          "h1006_beetle_dome",
+          "h1007_moth_bob",
+          "h1008_hive_bun",
+          "h1009_hood_shag",
+          "h1010_spiked_tail",
+          "h1011_antenna_locks",
+          "h1012_long_tied",
+          "h1013_cicada_layers",
+          "h1014_mantis_crop",
+          "h1015_wing_sweep"
+        ],
+        "hair_colors": [
+          "ABURAME_UMBER",
+          "ABURAME_UMBER",
+          "ABURAME_BLACK",
+          "ABURAME_ASH",
+          "ESPRESSO",
+          "RAVEN"
+        ],
+        "eye_colors": [
+          "DARK",
+          "ABURAME_AMBER"
+        ],
+        "palettes": [
+          "ABURAME_SAGE",
+          "ABURAME_OLIVE",
+          "ABURAME_SLATE",
+          "ABURAME_KHAKI",
+          "ABURAME_MOSS",
+          "ABURAME_DUST"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          "w1001_round_shades",
+          "w1001_round_shades",
+          "w1001_round_shades",
+          "w1002_oval_tints",
+          "w1003_deep_hood",
+          "w1004_optic_visor",
+          "w1005_tassel_shades",
+          "w1006_shades_protector",
+          "w02_forehead_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers",
+          "b1002_field_shorts",
+          "b1004_wrapped_slacks"
+        ],
+        "complexions": [
+          0,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "aburame_beetle",
+            "chance": 0.08
+          },
+          {
+            "id": "aburame_kikai_dots",
+            "chance": 0.1
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "shino_coat",
+          "name": "Shino Coat",
+          "top": "t1001_shino_coat",
+          "bottom": "b1001_aburame_trousers",
+          "rank": "genin",
+          "palettes": [
+            "ABURAME_SAGE"
+          ]
+        },
+        {
+          "id": "hooded_longcoat",
+          "name": "Hooded Longcoat",
+          "top": "t1002_hooded_longcoat",
+          "bottom": "b1001_aburame_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "ABURAME_OLIVE",
+            "ABURAME_MOSS",
+            "ABURAME_SAGE"
+          ]
+        },
+        {
+          "id": "kikai_flak",
+          "name": "Kikai Flak",
+          "top": "t1003_kikai_flak",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "ABURAME_OLIVE",
+            "ABURAME_MOSS"
+          ]
+        },
+        {
+          "id": "teacher_jacket",
+          "name": "Teacher Jacket",
+          "top": "t1004_teacher_jacket",
+          "bottom": "b1004_wrapped_slacks",
+          "rank": "jonin",
+          "palettes": [
+            "ABURAME_SLATE",
+            "ABURAME_SAGE"
+          ]
+        },
+        {
+          "id": "shibi_robe",
+          "name": "Shibi Robe",
+          "top": "t1005_shibi_robe",
+          "bottom": "b1001_aburame_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "ABURAME_SAGE",
+            "ABURAME_DUST",
+            "ABURAME_SLATE"
+          ]
+        },
+        {
+          "id": "torune_suit",
+          "name": "Torune Suit",
+          "top": "t1006_torune_suit",
+          "bottom": "b1003_root_apron",
+          "rank": "anbu",
+          "palettes": [
+            "ABURAME_ROOT"
+          ]
+        },
+        {
+          "id": "moth_cape",
+          "name": "Moth Cape",
+          "top": "t1007_moth_cape",
+          "bottom": "b1002_field_shorts",
+          "rank": "genin",
+          "palettes": [
+            "ABURAME_MOTH",
+            "ABURAME_KHAKI"
+          ]
+        },
+        {
+          "id": "field_shirt",
+          "name": "Field Shirt",
+          "top": "t1008_field_shirt",
+          "bottom": "b1002_field_shorts",
+          "rank": "chunin",
+          "palettes": [
+            "ABURAME_KHAKI",
+            "ABURAME_MOTH"
+          ]
+        },
+        {
+          "id": "hive_tunic",
+          "name": "Hive Tunic",
+          "top": "t1009_hive_tunic",
+          "bottom": "b1004_wrapped_slacks",
+          "rank": "genin",
+          "palettes": [
+            "ABURAME_MOSS",
+            "ABURAME_KHAKI",
+            "ABURAME_MOTH"
+          ]
+        },
+        {
+          "id": "elder_mantle",
+          "name": "Elder Mantle",
+          "top": "t1010_elder_mantle",
+          "bottom": "b1001_aburame_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "ABURAME_DUST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "akimichi",
+      "name": "Akimichi",
+      "tagline": "Wild red-brown manes, red lacquered armor with the food kanji, white scarves and snack pouches",
+      "palettes": {
+        "AKIMICHI_CRIMSON": {
+          "name": "Akimichi Crimson",
+          "P": "#b8342c",
+          "S": "#ecebe3",
+          "A": "#d9a441",
+          "L": "#6e4a30",
+          "M": "#b3aba0",
+          "K": "#241a1a",
+          "D": "#3f2a28"
+        },
+        "AKIMICHI_FOREST": {
+          "name": "Akimichi Forest",
+          "P": "#5d7a3a",
+          "S": "#ecebe3",
+          "A": "#c4302b",
+          "L": "#7a5236",
+          "M": "#aab3b9",
+          "K": "#1f1e1a",
+          "D": "#4a3328"
+        },
+        "AKIMICHI_LACQUER": {
+          "name": "Akimichi Lacquer",
+          "P": "#8a2226",
+          "S": "#ede4cf",
+          "A": "#d6a640",
+          "L": "#4a3024",
+          "M": "#c9b48a",
+          "K": "#1a1414",
+          "D": "#2f4430"
+        },
+        "AKIMICHI_HARVEST": {
+          "name": "Akimichi Harvest",
+          "P": "#cc6a2c",
+          "S": "#f0e8d6",
+          "A": "#9a2c24",
+          "L": "#6b4630",
+          "M": "#aab3b9",
+          "K": "#2a1e1a",
+          "D": "#46502e"
+        },
+        "AKIMICHI_JONIN": {
+          "name": "Akimichi Jonin",
+          "P": "#5f6e3c",
+          "S": "#ecebe3",
+          "A": "#b8302a",
+          "L": "#7a6346",
+          "M": "#aab3b9",
+          "K": "#1d2236",
+          "D": "#6a2a24"
+        },
+        "AKIMICHI_CHOCHO": {
+          "name": "Akimichi Chocho",
+          "P": "#c8463a",
+          "S": "#f1ede4",
+          "A": "#e2b23a",
+          "L": "#6e4a30",
+          "M": "#aab3b9",
+          "K": "#1c1a1e",
+          "D": "#2a2830"
+        },
+        "AKIMICHI_FEAST": {
+          "name": "Akimichi Feast",
+          "P": "#33302f",
+          "S": "#efe9dc",
+          "A": "#b8302a",
+          "L": "#6b4630",
+          "M": "#c9b48a",
+          "K": "#141214",
+          "D": "#5a1e1e"
+        }
+      },
+      "hair_colors": {
+        "AKIMICHI_RUST": {
+          "name": "Akimichi Rust",
+          "ramp": [
+            "#43180f",
+            "#6a2716",
+            "#93391d",
+            "#b85428",
+            "#d9773c"
+          ]
+        },
+        "AKIMICHI_MAHOGANY": {
+          "name": "Akimichi Mahogany",
+          "ramp": [
+            "#2a0f0e",
+            "#451917",
+            "#642521",
+            "#86372c",
+            "#a8503b"
+          ]
+        },
+        "AKIMICHI_COPPER": {
+          "name": "Akimichi Copper",
+          "ramp": [
+            "#5a2010",
+            "#8a3418",
+            "#b44c22",
+            "#d66c33",
+            "#ef9455"
+          ]
+        },
+        "AKIMICHI_COCOA": {
+          "name": "Akimichi Cocoa",
+          "ramp": [
+            "#1e110e",
+            "#311b16",
+            "#46281f",
+            "#5f382a",
+            "#7e4d39"
+          ]
+        }
+      },
+      "eye_colors": {
+        "AKIMICHI_AMBER": {
+          "name": "Akimichi Amber",
+          "ramp": [
+            "#120a05",
+            "#6a3c0e",
+            "#b07018",
+            "#e3a640",
+            "#f3eee4"
+          ]
+        }
+      },
+      "marks": {
+        "akimichi_swirl": {
+          "rects": [
+            [
+              3.05,
+              -1.72,
+              1.5,
+              0.22
+            ],
+            [
+              3.69,
+              -1.18,
+              0.22,
+              0.86
+            ],
+            [
+              3.05,
+              -0.64,
+              1.5,
+              0.22
+            ],
+            [
+              2.41,
+              -1.02,
+              0.22,
+              0.54
+            ],
+            [
+              2.86,
+              -1.2,
+              0.68,
+              0.2
+            ],
+            [
+              3.12,
+              -0.98,
+              0.2,
+              0.3
+            ]
+          ],
+          "color": "#c4392b",
+          "mirror": true
+        },
+        "akimichi_swirl_violet": {
+          "rects": [
+            [
+              3.05,
+              -1.72,
+              1.5,
+              0.22
+            ],
+            [
+              3.69,
+              -1.18,
+              0.22,
+              0.86
+            ],
+            [
+              3.05,
+              -0.64,
+              1.5,
+              0.22
+            ],
+            [
+              2.41,
+              -1.02,
+              0.22,
+              0.54
+            ],
+            [
+              2.86,
+              -1.2,
+              0.68,
+              0.2
+            ],
+            [
+              3.12,
+              -0.98,
+              0.2,
+              0.3
+            ]
+          ],
+          "color": "#8a4a8c",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h601_choji_spikes",
+          "h602_choza_mane",
+          "h603_chocho_volume",
+          "h604_ember_crest",
+          "h605_wild_tail",
+          "h606_cloud_puffs",
+          "h607_dumpling_buns",
+          "h608_lion_mane",
+          "h609_long_mane",
+          "h610_sumo_topknot",
+          "h611_shaggy_crop",
+          "h612_braided_mane",
+          "h613_curly_ponytail",
+          "h614_butterfly_spikes",
+          "h615_bushy_bob"
+        ],
+        "hair_colors": [
+          "AKIMICHI_RUST",
+          "AKIMICHI_MAHOGANY",
+          "AKIMICHI_COPPER",
+          "AKIMICHI_COCOA",
+          "AKIMICHI_RUST",
+          "AUBURN",
+          "CHESTNUT"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "AKIMICHI_AMBER"
+        ],
+        "palettes": [
+          "AKIMICHI_CRIMSON",
+          "AKIMICHI_CRIMSON",
+          "AKIMICHI_FOREST",
+          "AKIMICHI_LACQUER",
+          "AKIMICHI_HARVEST"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w601_akimichi_protector",
+          "w601_akimichi_protector",
+          "w602_hachimaki"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          1,
+          2,
+          3
+        ],
+        "marks": [
+          {
+            "id": "akimichi_swirl",
+            "chance": 0.7
+          },
+          {
+            "id": "akimichi_swirl_violet",
+            "chance": 0.2
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "shoku_armor",
+          "name": "Shoku Armor",
+          "top": "t601_shoku_armor",
+          "bottom": "b604_lacquer_greaves",
+          "rank": "chunin",
+          "palettes": [
+            "AKIMICHI_CRIMSON",
+            "AKIMICHI_LACQUER"
+          ]
+        },
+        {
+          "id": "leaf_scarf",
+          "name": "Leaf Scarf",
+          "top": "t602_leaf_scarf",
+          "bottom": "b603_padded_trousers",
+          "rank": "genin",
+          "palettes": [
+            "AKIMICHI_FOREST"
+          ]
+        },
+        {
+          "id": "lacquer_samurai",
+          "name": "Lacquer Samurai",
+          "top": "t603_lacquer_samurai",
+          "bottom": "b601_armored_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "AKIMICHI_LACQUER"
+          ]
+        },
+        {
+          "id": "mawashi_wrap",
+          "name": "Mawashi Wrap",
+          "top": "t604_mawashi_wrap",
+          "bottom": "b602_sagari_shorts",
+          "rank": "genin",
+          "palettes": [
+            "AKIMICHI_CRIMSON",
+            "AKIMICHI_HARVEST"
+          ]
+        },
+        {
+          "id": "snack_bandolier",
+          "name": "Snack Bandolier",
+          "top": "t605_snack_bandolier",
+          "bottom": "b603_padded_trousers",
+          "rank": "genin",
+          "palettes": [
+            "AKIMICHI_HARVEST",
+            "AKIMICHI_FOREST"
+          ]
+        },
+        {
+          "id": "sash_kimono",
+          "name": "Sash Kimono",
+          "top": "t606_sash_kimono",
+          "bottom": "b605_long_boots",
+          "rank": "genin",
+          "palettes": [
+            "AKIMICHI_CHOCHO",
+            "AKIMICHI_CRIMSON"
+          ]
+        },
+        {
+          "id": "padded_gambeson",
+          "name": "Padded Gambeson",
+          "top": "t607_padded_gambeson",
+          "bottom": "b601_armored_hakama",
+          "rank": "chunin",
+          "palettes": [
+            "AKIMICHI_FOREST",
+            "AKIMICHI_HARVEST"
+          ]
+        },
+        {
+          "id": "scarf_tunic",
+          "name": "Scarf Tunic",
+          "top": "t608_scarf_tunic",
+          "bottom": "b603_padded_trousers",
+          "rank": "academy",
+          "palettes": [
+            "AKIMICHI_HARVEST",
+            "AKIMICHI_CRIMSON"
+          ]
+        },
+        {
+          "id": "akimichi_jonin",
+          "name": "Akimichi Jonin",
+          "top": "t609_akimichi_jonin",
+          "bottom": "b604_lacquer_greaves",
+          "rank": "jonin",
+          "palettes": [
+            "AKIMICHI_JONIN"
+          ]
+        },
+        {
+          "id": "feast_haori",
+          "name": "Feast Haori",
+          "top": "t610_feast_haori",
+          "bottom": "b601_armored_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "AKIMICHI_FEAST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gekko",
+      "name": "Gekko",
+      "tagline": "A quiet family of swordsmen of the Crescent Moon: pale, tired-eyed, dressed in night indigo and moonlight silver, a blade always on the back or at the hip",
+      "palettes": {
+        "GEKKO_PROCTOR": {
+          "name": "Gekko Proctor",
+          "P": "#5f6e3c",
+          "S": "#e2e2dc",
+          "A": "#b8372d",
+          "L": "#5a4a3c",
+          "M": "#b9c1cc",
+          "K": "#171a26",
+          "D": "#2a3150"
+        },
+        "GEKKO_NIGHT": {
+          "name": "Gekko Night",
+          "P": "#2b3256",
+          "S": "#c8ced8",
+          "A": "#d8c88a",
+          "L": "#4a4038",
+          "M": "#c3cad4",
+          "K": "#14161f",
+          "D": "#3a4258"
+        },
+        "GEKKO_SLATE": {
+          "name": "Gekko Slate",
+          "P": "#4f5866",
+          "S": "#d9dde3",
+          "A": "#6b7fb8",
+          "L": "#463c34",
+          "M": "#b5bec8",
+          "K": "#16181d",
+          "D": "#2a3040"
+        },
+        "GEKKO_MOONLIGHT": {
+          "name": "Gekko Moonlight",
+          "P": "#b3bac6",
+          "S": "#eef0f3",
+          "A": "#3c4a86",
+          "L": "#5b4e44",
+          "M": "#d0d6de",
+          "K": "#1a1c26",
+          "D": "#2e3550"
+        },
+        "GEKKO_DUSK": {
+          "name": "Gekko Dusk",
+          "P": "#5a4a6e",
+          "S": "#e6e0d6",
+          "A": "#c9b77a",
+          "L": "#6b5a45",
+          "M": "#b5bcc6",
+          "K": "#1d1b26",
+          "D": "#333a55"
+        },
+        "GEKKO_ANBU": {
+          "name": "Gekko ANBU",
+          "P": "#c4c8c6",
+          "S": "#efeee8",
+          "A": "#b5232b",
+          "L": "#3b3a42",
+          "M": "#aab3b9",
+          "K": "#15171c",
+          "D": "#262a33"
+        }
+      },
+      "hair_colors": {
+        "GEKKO_BROWN": {
+          "name": "Gekko Brown",
+          "ramp": [
+            "#2a1a12",
+            "#432a1d",
+            "#5f3d29",
+            "#7d5539",
+            "#9f7250"
+          ]
+        },
+        "GEKKO_ASH": {
+          "name": "Gekko Ash",
+          "ramp": [
+            "#241f1c",
+            "#3a322d",
+            "#524840",
+            "#6d6157",
+            "#8c8074"
+          ]
+        },
+        "GEKKO_PLUM": {
+          "name": "Gekko Plum",
+          "ramp": [
+            "#1f1428",
+            "#33213f",
+            "#4c3160",
+            "#684684",
+            "#8a65a8"
+          ]
+        },
+        "GEKKO_INDIGO": {
+          "name": "Gekko Indigo",
+          "ramp": [
+            "#10121c",
+            "#1b1e2e",
+            "#282c44",
+            "#3a4062",
+            "#566087"
+          ]
+        }
+      },
+      "eye_colors": {
+        "GEKKO_HAZEL": {
+          "name": "Gekko Hazel",
+          "ramp": [
+            "#0d0a0a",
+            "#3a2618",
+            "#5e3f27",
+            "#8c6a48",
+            "#f1ede3"
+          ]
+        }
+      },
+      "marks": {
+        "gekko_tired_eyes": {
+          "rects": [
+            [
+              2.1,
+              -1.72,
+              2.0,
+              0.42
+            ]
+          ],
+          "color": null,
+          "mirror": true
+        },
+        "gekko_violet_eyes": {
+          "rects": [
+            [
+              2.1,
+              -1.72,
+              2.0,
+              0.42
+            ]
+          ],
+          "color": "#8d7a8e",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h1501_proctor_cut",
+          "h1502_crescent_sweep",
+          "h1503_night_curtain",
+          "h1504_swordsman_topknot",
+          "h1505_crescent_tail",
+          "h1506_night_bob",
+          "h1507_tousled_shag",
+          "h1508_wrapped_tail",
+          "h1509_moonveil",
+          "h1510_nape_tail",
+          "h1511_half_up_knot",
+          "h1512_shoulder_sweep",
+          "h1513_strap_braid",
+          "h1514_iai_gust",
+          "h1515_crossed_pin_bun"
+        ],
+        "hair_colors": [
+          "GEKKO_BROWN",
+          "GEKKO_BROWN",
+          "GEKKO_ASH",
+          "GEKKO_PLUM",
+          "GEKKO_INDIGO",
+          "ESPRESSO"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "GEKKO_HAZEL"
+        ],
+        "palettes": [
+          "GEKKO_NIGHT",
+          "GEKKO_SLATE",
+          "GEKKO_MOONLIGHT",
+          "GEKKO_DUSK"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w1501_proctor_bandana",
+          "w1503_crescent_hachimaki",
+          "w02_forehead_protector",
+          "w1502_cat_mask"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "marks": [
+          {
+            "id": "gekko_tired_eyes",
+            "chance": 0.7
+          },
+          {
+            "id": "gekko_violet_eyes",
+            "chance": 0.15
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "proctor",
+          "name": "Exam Proctor",
+          "top": "t1501_proctor_vest",
+          "bottom": "b1502_swordsman_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "GEKKO_PROCTOR"
+          ]
+        },
+        {
+          "id": "cat_blade",
+          "name": "ANBU Cat Blade",
+          "top": "t1503_anbu_swordswoman",
+          "bottom": "b06_anbu_greaves",
+          "rank": "anbu",
+          "palettes": [
+            "GEKKO_ANBU"
+          ]
+        },
+        {
+          "id": "crescent_haori",
+          "name": "Crescent Haori",
+          "top": "t1502_crescent_haori",
+          "bottom": "b1501_gekko_hakama",
+          "rank": "jonin"
+        },
+        {
+          "id": "strap_tunic",
+          "name": "Sword-Strap Tunic",
+          "top": "t1504_strap_tunic",
+          "bottom": "b1503_strap_leggings",
+          "rank": "chunin"
+        },
+        {
+          "id": "moon_dancer",
+          "name": "Crescent Dancer",
+          "top": "t1505_moon_dancer",
+          "bottom": "b1501_gekko_hakama",
+          "rank": "chunin"
+        },
+        {
+          "id": "night_watch",
+          "name": "Night Watch",
+          "top": "t1506_night_watch_coat",
+          "bottom": "b1502_swordsman_trousers",
+          "rank": "jonin"
+        },
+        {
+          "id": "convalescent",
+          "name": "Convalescent",
+          "top": "t1507_convalescent_wrap",
+          "bottom": "b1501_gekko_hakama",
+          "rank": "chunin"
+        },
+        {
+          "id": "practice_gi",
+          "name": "Practice Gi",
+          "top": "t1508_practice_gi",
+          "bottom": "b1503_strap_leggings",
+          "rank": "academy"
+        },
+        {
+          "id": "cough_scarf",
+          "name": "Winter Knit",
+          "top": "t1509_scarf_knit",
+          "bottom": "b1502_swordsman_trousers",
+          "rank": "genin"
+        },
+        {
+          "id": "tasuki_iaido",
+          "name": "Tasuki Iaido",
+          "top": "t1510_tasuki_iaido",
+          "bottom": "b1501_gekko_hakama",
+          "rank": "jonin"
+        }
+      ]
+    },
+    {
+      "id": "hatake",
+      "name": "Hatake",
+      "tagline": "Silver hair that defies gravity, cloth masks and slanted protectors, the White Fang's tanto",
+      "palettes": {
+        "HATAKE_JONIN": {
+          "name": "Hatake Jonin",
+          "P": "#5f6e3c",
+          "S": "#e8e6df",
+          "A": "#b8372d",
+          "L": "#6b5a45",
+          "M": "#aeb6bc",
+          "K": "#1b1e27",
+          "D": "#283552"
+        },
+        "HATAKE_WHITE_FANG": {
+          "name": "White Fang",
+          "P": "#56603f",
+          "S": "#f1efe8",
+          "A": "#b02a2a",
+          "L": "#5e4e3e",
+          "M": "#b4bcc2",
+          "K": "#181a20",
+          "D": "#2e3647"
+        },
+        "HATAKE_SLATE": {
+          "name": "Hatake Slate",
+          "P": "#55606d",
+          "S": "#ebeae5",
+          "A": "#a8323a",
+          "L": "#4b4038",
+          "M": "#b4bcc2",
+          "K": "#16181d",
+          "D": "#27304a"
+        },
+        "HATAKE_NAVY": {
+          "name": "Hatake Navy",
+          "P": "#2c3652",
+          "S": "#e9e8e2",
+          "A": "#8a95a8",
+          "L": "#4b4038",
+          "M": "#aab3b9",
+          "K": "#14161d",
+          "D": "#3a445e"
+        },
+        "HATAKE_GREY": {
+          "name": "Hatake Grey",
+          "P": "#868b93",
+          "S": "#f0efe9",
+          "A": "#2f4a7a",
+          "L": "#4a4239",
+          "M": "#b8c0c6",
+          "K": "#1a1c22",
+          "D": "#2a3348"
+        },
+        "HATAKE_ANBU": {
+          "name": "Hatake ANBU",
+          "P": "#c8ccc8",
+          "S": "#f0efea",
+          "A": "#b5232b",
+          "L": "#3f3a36",
+          "M": "#b8c0c6",
+          "K": "#14161b",
+          "D": "#22262e"
+        }
+      },
+      "hair_colors": {
+        "HATAKE_SILVER": {
+          "name": "Hatake Silver",
+          "ramp": [
+            "#565b68",
+            "#80858f",
+            "#aeb2b9",
+            "#d3d6da",
+            "#eef0f1"
+          ]
+        },
+        "HATAKE_WHITE_FANG": {
+          "name": "White Fang",
+          "ramp": [
+            "#6c6f78",
+            "#999ca3",
+            "#c7c9cc",
+            "#e4e5e4",
+            "#fbfbf8"
+          ]
+        },
+        "HATAKE_ASH": {
+          "name": "Hatake Ash",
+          "ramp": [
+            "#45484f",
+            "#686c74",
+            "#8f939a",
+            "#b7babe",
+            "#dadcdd"
+          ]
+        }
+      },
+      "eye_colors": {
+        "HATAKE_GREY": {
+          "name": "Hatake Grey",
+          "ramp": [
+            "#0e0f12",
+            "#2a2d33",
+            "#454a52",
+            "#7b828c",
+            "#f1efe9"
+          ]
+        }
+      },
+      "marks": {
+        "hatake_scar": {
+          "rects": [
+            [
+              2.0,
+              -5.1,
+              0.3,
+              2.3
+            ],
+            [
+              2.0,
+              -1.35,
+              0.3,
+              1.3
+            ]
+          ],
+          "color": "#9c5e57",
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h1101_scarecrow_spikes",
+          "h1102_white_fang_ponytail",
+          "h1103_young_scarecrow",
+          "h1104_sixth_hokage",
+          "h1105_anbu_shag",
+          "h1106_windswept_bob",
+          "h1107_hound_tail",
+          "h1108_silver_shag",
+          "h1109_crescent_topknot",
+          "h1110_fang_ridge",
+          "h1111_long_white_fang",
+          "h1112_twin_fangs",
+          "h1113_cropped_spikes",
+          "h1114_sidelong_lock",
+          "h1115_braided_fang"
+        ],
+        "hair_colors": [
+          "HATAKE_SILVER",
+          "HATAKE_SILVER",
+          "HATAKE_SILVER",
+          "HATAKE_WHITE_FANG",
+          "HATAKE_WHITE_FANG",
+          "HATAKE_ASH",
+          "SILVER"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "DARK",
+          "HATAKE_GREY"
+        ],
+        "palettes": [
+          "HATAKE_JONIN",
+          "HATAKE_SLATE",
+          "HATAKE_NAVY",
+          "HATAKE_GREY"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          "w1101_scarecrow_mask",
+          "w1101_scarecrow_mask",
+          "w1102_hatake_cloth_mask",
+          "w1102_hatake_cloth_mask",
+          "w1103_slanted_protector",
+          "w02_forehead_protector",
+          "w1104_anbu_hound_mask"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers",
+          "b06_anbu_greaves"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "hatake_scar",
+            "chance": 0.12
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "scarecrow_jonin",
+          "name": "Scarecrow Jonin",
+          "top": "t1101_scarecrow_vest",
+          "bottom": "b1101_scarecrow_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "HATAKE_JONIN"
+          ]
+        },
+        {
+          "id": "white_fang",
+          "name": "White Fang",
+          "top": "t1102_white_fang_vest",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "HATAKE_WHITE_FANG"
+          ]
+        },
+        {
+          "id": "hound_anbu",
+          "name": "Hound ANBU",
+          "top": "t1103_hound_anbu",
+          "bottom": "b06_anbu_greaves",
+          "rank": "anbu",
+          "palettes": [
+            "HATAKE_ANBU"
+          ]
+        },
+        {
+          "id": "young_prodigy",
+          "name": "Young Prodigy",
+          "top": "t1104_prodigy_shirt",
+          "bottom": "b1102_prodigy_shorts",
+          "rank": "genin",
+          "palettes": [
+            "HATAKE_NAVY",
+            "HATAKE_SLATE"
+          ]
+        },
+        {
+          "id": "sixth_hokage",
+          "name": "Sixth Hokage",
+          "top": "t1105_sixth_haori",
+          "bottom": "b1101_scarecrow_trousers",
+          "rank": "kage",
+          "palettes": [
+            "HATAKE_JONIN"
+          ]
+        },
+        {
+          "id": "retired",
+          "name": "Retired Hatake",
+          "top": "t1106_retired_zip_jacket",
+          "bottom": "b1104_night_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "HATAKE_GREY",
+            "HATAKE_SLATE"
+          ]
+        },
+        {
+          "id": "ninken_handler",
+          "name": "Ninken Handler",
+          "top": "t1107_ninken_handler",
+          "bottom": "b1101_scarecrow_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "HATAKE_SLATE",
+            "HATAKE_GREY"
+          ]
+        },
+        {
+          "id": "scarecrow_kunoichi",
+          "name": "Scarecrow Kunoichi",
+          "top": "t1108_scarecrow_kunoichi",
+          "bottom": "b1103_hound_wrap_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "HATAKE_SLATE",
+            "HATAKE_NAVY",
+            "HATAKE_GREY"
+          ]
+        },
+        {
+          "id": "training_wrap",
+          "name": "Training Wrap",
+          "top": "t1109_training_wrap",
+          "bottom": "b1102_prodigy_shorts",
+          "rank": "academy",
+          "palettes": [
+            "HATAKE_NAVY",
+            "HATAKE_SLATE"
+          ]
+        },
+        {
+          "id": "clan_coat",
+          "name": "Hatake Clan Coat",
+          "top": "t1110_hatake_clan_coat",
+          "bottom": "b1104_night_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "HATAKE_SLATE",
+            "HATAKE_NAVY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hyuga",
+      "name": "Hyuga",
+      "tagline": "Pale Byakugan eyes, long straight dark hair and off-white wrapped robes trimmed in lavender and navy",
+      "palettes": {
+        "HYUGA_MAIN": {
+          "name": "Hyuga Main House",
+          "P": "#e6e0d2",
+          "S": "#f4f2ec",
+          "A": "#7d6fa6",
+          "L": "#6b5a45",
+          "M": "#aab3b9",
+          "K": "#2a2833",
+          "D": "#2f3452"
+        },
+        "HYUGA_BRANCH": {
+          "name": "Hyuga Branch House",
+          "P": "#d5d4cf",
+          "S": "#efeee9",
+          "A": "#58667f",
+          "L": "#5e5144",
+          "M": "#aab3b9",
+          "K": "#2c2d33",
+          "D": "#3a3f52"
+        },
+        "HYUGA_HEIRESS": {
+          "name": "Hyuga Heiress",
+          "P": "#e9e2ee",
+          "S": "#f5f2f7",
+          "A": "#8a76b8",
+          "L": "#6b5a45",
+          "M": "#b6bcc6",
+          "K": "#2a2733",
+          "D": "#2c3256"
+        },
+        "HYUGA_ELDER": {
+          "name": "Hyuga Elder",
+          "P": "#4c4a58",
+          "S": "#e7e3da",
+          "A": "#a597c6",
+          "L": "#5a4c3e",
+          "M": "#aab3b9",
+          "K": "#2b2a31",
+          "D": "#2a2938"
+        },
+        "HYUGA_NAVY": {
+          "name": "Hyuga Navy",
+          "P": "#38405f",
+          "S": "#ece6d8",
+          "A": "#a89bd0",
+          "L": "#5e4e3e",
+          "M": "#aab3b9",
+          "K": "#24252d",
+          "D": "#4a5070"
+        },
+        "HYUGA_CEREMONIAL": {
+          "name": "Hyuga Ceremonial",
+          "P": "#efece5",
+          "S": "#fbfaf6",
+          "A": "#3f4677",
+          "L": "#6b5a45",
+          "M": "#b5bcc2",
+          "K": "#2b2a33",
+          "D": "#2b3050"
+        }
+      },
+      "hair_colors": {
+        "HYUGA_INDIGO": {
+          "name": "Hyuga Indigo",
+          "ramp": [
+            "#14141f",
+            "#1f2033",
+            "#2c2e4a",
+            "#3f4268",
+            "#5c6191"
+          ]
+        },
+        "HYUGA_UMBER": {
+          "name": "Hyuga Umber",
+          "ramp": [
+            "#22140d",
+            "#3a2316",
+            "#553421",
+            "#714830",
+            "#946447"
+          ]
+        },
+        "HYUGA_ELDER_ASH": {
+          "name": "Hyuga Elder Ash",
+          "ramp": [
+            "#3a3634",
+            "#57514d",
+            "#77706a",
+            "#9a938b",
+            "#bdb6ad"
+          ]
+        }
+      },
+      "eye_colors": {},
+      "marks": {
+        "hyuga_caged_bird": {
+          "rects": [
+            [
+              -0.56,
+              -7.26,
+              0.34,
+              0.34
+            ],
+            [
+              -0.28,
+              -6.98,
+              0.34,
+              0.34
+            ],
+            [
+              0,
+              -6.7,
+              0.34,
+              0.34
+            ],
+            [
+              0.28,
+              -6.42,
+              0.34,
+              0.34
+            ],
+            [
+              0.56,
+              -6.14,
+              0.34,
+              0.34
+            ],
+            [
+              1.15,
+              -6.7,
+              0.6,
+              0.24
+            ]
+          ],
+          "color": "#3f8a47",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h401_tip_tied_mane",
+          "h402_hime_cut",
+          "h403_bob_sidelocks",
+          "h404_clan_head",
+          "h405_side_parted_long",
+          "h406_branch_crop",
+          "h407_long_braid",
+          "h408_elder_topknot",
+          "h409_half_up_tail",
+          "h410_low_twin_tails",
+          "h411_waist_length",
+          "h412_kanzashi_bun",
+          "h413_shaggy_shoulder",
+          "h414_childs_bob",
+          "h415_swept_back_long"
+        ],
+        "hair_colors": [
+          "HYUGA_INDIGO",
+          "HYUGA_INDIGO",
+          "HYUGA_UMBER",
+          "ESPRESSO",
+          "HYUGA_ELDER_ASH"
+        ],
+        "eye_colors": [
+          "BYAKUGAN"
+        ],
+        "palettes": [
+          "HYUGA_MAIN",
+          "HYUGA_MAIN",
+          "HYUGA_BRANCH",
+          "HYUGA_HEIRESS",
+          "HYUGA_NAVY"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w401_brow_wrap",
+          "w402_branch_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          0,
+          1
+        ],
+        "marks": [
+          {
+            "id": "hyuga_caged_bird",
+            "chance": 0.3
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "training_wrap",
+          "name": "Training Wrap",
+          "top": "t401_training_wrap",
+          "bottom": "b401_training_shorts",
+          "rank": "academy",
+          "palettes": [
+            "HYUGA_MAIN",
+            "HYUGA_BRANCH",
+            "HYUGA_NAVY"
+          ]
+        },
+        {
+          "id": "branch_guard",
+          "name": "Branch Guard",
+          "top": "t402_branch_guard_kimono",
+          "bottom": "b402_hakama",
+          "rank": "chunin",
+          "palettes": [
+            "HYUGA_BRANCH",
+            "HYUGA_MAIN"
+          ]
+        },
+        {
+          "id": "elder_haori",
+          "name": "Elder Haori",
+          "top": "t403_elder_haori",
+          "bottom": "b402_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "HYUGA_ELDER"
+          ]
+        },
+        {
+          "id": "heiress_jacket",
+          "name": "Heiress Jacket",
+          "top": "t404_heiress_hooded_jacket",
+          "bottom": "b403_heiress_trousers",
+          "rank": "genin",
+          "palettes": [
+            "HYUGA_HEIRESS",
+            "HYUGA_MAIN"
+          ]
+        },
+        {
+          "id": "two_tone_zip",
+          "name": "Two-Tone Zip",
+          "top": "t405_two_tone_zip_jacket",
+          "bottom": "b403_heiress_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "HYUGA_HEIRESS",
+            "HYUGA_MAIN"
+          ]
+        },
+        {
+          "id": "jonin_robe",
+          "name": "Jonin Robe",
+          "top": "t406_jonin_apron_robe",
+          "bottom": "b406_robe_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "HYUGA_MAIN",
+            "HYUGA_BRANCH"
+          ]
+        },
+        {
+          "id": "attendant_kimono",
+          "name": "Attendant Kimono",
+          "top": "t407_attendant_kimono",
+          "bottom": "b405_attendant_kimono_skirt",
+          "rank": "academy",
+          "palettes": [
+            "HYUGA_MAIN",
+            "HYUGA_BRANCH",
+            "HYUGA_NAVY"
+          ]
+        },
+        {
+          "id": "scout_mantle",
+          "name": "Scout Mantle",
+          "top": "t408_scout_mantle",
+          "bottom": "b404_cropped_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "HYUGA_MAIN",
+            "HYUGA_BRANCH"
+          ]
+        },
+        {
+          "id": "ceremonial_kimono",
+          "name": "Ceremonial Kimono",
+          "top": "t409_ceremonial_kimono",
+          "bottom": "b402_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "HYUGA_CEREMONIAL"
+          ]
+        },
+        {
+          "id": "courtyard_yukata",
+          "name": "Courtyard Yukata",
+          "top": "t410_courtyard_yukata",
+          "bottom": "b404_cropped_trousers",
+          "rank": "genin",
+          "palettes": [
+            "HYUGA_MAIN",
+            "HYUGA_HEIRESS",
+            "HYUGA_BRANCH"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inuzuka",
+      "name": "Inuzuka",
+      "tagline": "Wild-haired ninken handlers of the Hidden Leaf: fur-lined hoods, rugged tracker wear and red fang marks on both cheeks.",
+      "palettes": {
+        "INUZUKA_GREY": {
+          "name": "Inuzuka Grey",
+          "P": "#7b7d82",
+          "S": "#ebe4d4",
+          "A": "#b8302a",
+          "L": "#6b4a33",
+          "M": "#aab3b9",
+          "K": "#211f22",
+          "D": "#3b3e46"
+        },
+        "INUZUKA_SHADOW": {
+          "name": "Inuzuka Shadow",
+          "P": "#2e2c30",
+          "S": "#e2dacb",
+          "A": "#b52a28",
+          "L": "#5c4130",
+          "M": "#aab3b9",
+          "K": "#161518",
+          "D": "#45454d"
+        },
+        "INUZUKA_TAN": {
+          "name": "Inuzuka Tan",
+          "P": "#a3835a",
+          "S": "#efe6d2",
+          "A": "#ad2f29",
+          "L": "#5e4130",
+          "M": "#aab3b9",
+          "K": "#2a2522",
+          "D": "#4a4642"
+        },
+        "INUZUKA_EARTH": {
+          "name": "Inuzuka Earth",
+          "P": "#5f5447",
+          "S": "#ddd2bc",
+          "A": "#b8402c",
+          "L": "#6e4c34",
+          "M": "#aab3b9",
+          "K": "#221f1d",
+          "D": "#3e4048"
+        },
+        "INUZUKA_JONIN": {
+          "name": "Inuzuka Jonin",
+          "P": "#5f6e3c",
+          "S": "#e6dfcf",
+          "A": "#b8302a",
+          "L": "#6b4a33",
+          "M": "#aab3b9",
+          "K": "#1d1f24",
+          "D": "#2f3138"
+        }
+      },
+      "hair_colors": {
+        "INUZUKA_BROWN": {
+          "name": "Inuzuka Brown",
+          "ramp": [
+            "#24150e",
+            "#3a2316",
+            "#55331f",
+            "#74482b",
+            "#98643c"
+          ]
+        },
+        "INUZUKA_MANE": {
+          "name": "Inuzuka Mane",
+          "ramp": [
+            "#160e0b",
+            "#231612",
+            "#33211a",
+            "#4a3125",
+            "#664535"
+          ]
+        },
+        "INUZUKA_UMBER": {
+          "name": "Inuzuka Umber",
+          "ramp": [
+            "#2e1a10",
+            "#4a2c1a",
+            "#6a4126",
+            "#8c5a35",
+            "#b07a4b"
+          ]
+        }
+      },
+      "eye_colors": {},
+      "marks": {
+        "inuzuka_fangs": {
+          "rects": [
+            [
+              2.7,
+              -1.3,
+              1.2,
+              0.35
+            ],
+            [
+              2.7,
+              -0.95,
+              0.9,
+              0.35
+            ],
+            [
+              2.7,
+              -0.6,
+              0.55,
+              0.35
+            ],
+            [
+              2.7,
+              -0.3,
+              0.25,
+              0.25
+            ]
+          ],
+          "color": "#c0242a",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h801_fang_crop",
+          "h802_wild_mane",
+          "h803_long_low_tail",
+          "h804_ruff_spikes",
+          "h805_hound_shag",
+          "h806_pup_tufts",
+          "h807_feral_sweep",
+          "h808_wild_topknot",
+          "h809_hackle_crest",
+          "h810_mane_tail",
+          "h811_hound_buns",
+          "h812_windblown",
+          "h813_long_shag",
+          "h814_wolf_tail",
+          "h815_scruff_tails"
+        ],
+        "hair_colors": [
+          "INUZUKA_BROWN",
+          "INUZUKA_BROWN",
+          "INUZUKA_MANE",
+          "INUZUKA_UMBER",
+          "ESPRESSO"
+        ],
+        "eye_colors": [
+          "DARK"
+        ],
+        "palettes": [
+          "INUZUKA_GREY",
+          "INUZUKA_SHADOW",
+          "INUZUKA_TAN",
+          "INUZUKA_EARTH"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w801_fur_hood",
+          "w802_pup_rider"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          1,
+          2,
+          3
+        ],
+        "marks": [
+          {
+            "id": "inuzuka_fangs",
+            "chance": 0.95
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "fur_hood_jacket",
+          "name": "Fur Hood Jacket",
+          "top": "t801_fur_hood_jacket",
+          "bottom": "b802_capri_pants",
+          "rank": "genin",
+          "palettes": [
+            "INUZUKA_GREY",
+            "INUZUKA_TAN"
+          ]
+        },
+        {
+          "id": "fang_parka",
+          "name": "Fang Parka",
+          "top": "t802_fang_parka",
+          "bottom": "b801_tracker_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "INUZUKA_SHADOW",
+            "INUZUKA_EARTH"
+          ]
+        },
+        {
+          "id": "fur_collar_vest",
+          "name": "Fur Collar Vest",
+          "top": "t803_fur_collar_vest",
+          "bottom": "b804_fur_wrap_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "kennel_keeper",
+          "name": "Kennel Keeper",
+          "top": "t804_kennel_keeper_wrap",
+          "bottom": "b803_kennel_boots",
+          "rank": "chunin"
+        },
+        {
+          "id": "clan_head",
+          "name": "Clan Head",
+          "top": "t805_clan_flak_vest",
+          "bottom": "b801_tracker_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "INUZUKA_JONIN"
+          ]
+        },
+        {
+          "id": "tracker_mantle",
+          "name": "Tracker Mantle",
+          "top": "t806_tracker_mantle",
+          "bottom": "b803_kennel_boots",
+          "rank": "genin"
+        },
+        {
+          "id": "claw_wrap",
+          "name": "Claw Wrap",
+          "top": "t807_claw_wrap",
+          "bottom": "b804_fur_wrap_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "pack_leader",
+          "name": "Pack Leader",
+          "top": "t808_pack_leader_coat",
+          "bottom": "b803_kennel_boots",
+          "rank": "jonin",
+          "palettes": [
+            "INUZUKA_SHADOW",
+            "INUZUKA_EARTH",
+            "INUZUKA_GREY"
+          ]
+        },
+        {
+          "id": "paw_hoodie",
+          "name": "Paw Hoodie",
+          "top": "t809_paw_hoodie",
+          "bottom": "b802_capri_pants",
+          "rank": "academy"
+        },
+        {
+          "id": "ninken_handler",
+          "name": "Ninken Handler",
+          "top": "t810_handler_jerkin",
+          "bottom": "b801_tracker_trousers",
+          "rank": "chunin"
+        }
+      ]
+    },
+    {
+      "id": "kurama",
+      "name": "Kurama",
+      "tagline": "A refined household of genjutsu painters: wisteria lilac, paper cream and ink, soft side-parted waves, brushes and scrolls.",
+      "palettes": {
+        "KURAMA_WISTERIA": {
+          "name": "Kurama Wisteria",
+          "P": "#9a89b4",
+          "S": "#efe6d2",
+          "A": "#c4707f",
+          "L": "#6b4a33",
+          "M": "#aaa6a2",
+          "K": "#1d1a24",
+          "D": "#4b4163"
+        },
+        "KURAMA_BLOSSOM": {
+          "name": "Kurama Blossom",
+          "P": "#d39ba5",
+          "S": "#f3ead9",
+          "A": "#7c4f7a",
+          "L": "#7a5238",
+          "M": "#b4aeb0",
+          "K": "#221a22",
+          "D": "#6b5b88"
+        },
+        "KURAMA_INKWASH": {
+          "name": "Kurama Ink Wash",
+          "P": "#e6dcc6",
+          "S": "#f6f1e4",
+          "A": "#a8473c",
+          "L": "#7a5a3c",
+          "M": "#b6b2aa",
+          "K": "#141318",
+          "D": "#3b3a44"
+        },
+        "KURAMA_SAGE": {
+          "name": "Kurama Sage",
+          "P": "#8c9b7c",
+          "S": "#ece4cf",
+          "A": "#8c79a8",
+          "L": "#6a4b30",
+          "M": "#a6a69b",
+          "K": "#1d1f1a",
+          "D": "#4b5443"
+        },
+        "KURAMA_UMBER": {
+          "name": "Kurama Umber",
+          "P": "#7e5c43",
+          "S": "#eadfc6",
+          "A": "#8e7aa8",
+          "L": "#4d3424",
+          "M": "#b0a58f",
+          "K": "#1f1813",
+          "D": "#3f3a4b"
+        },
+        "KURAMA_NIGHT": {
+          "name": "Kurama Night Ink",
+          "P": "#33303d",
+          "S": "#e9e2d0",
+          "A": "#a08ec2",
+          "L": "#4e3a2a",
+          "M": "#9c99a2",
+          "K": "#121117",
+          "D": "#24222c"
+        }
+      },
+      "hair_colors": {
+        "KURAMA_TEA": {
+          "name": "Kurama Tea Brown",
+          "ramp": [
+            "#3d2617",
+            "#5e3c24",
+            "#82573a",
+            "#a77852",
+            "#c99c72"
+          ]
+        },
+        "KURAMA_UMBER": {
+          "name": "Kurama Umber",
+          "ramp": [
+            "#21150f",
+            "#352219",
+            "#4c3224",
+            "#664634",
+            "#86604a"
+          ]
+        },
+        "KURAMA_INK": {
+          "name": "Kurama Ink",
+          "ramp": [
+            "#121118",
+            "#1c1a24",
+            "#282533",
+            "#383447",
+            "#4d4860"
+          ]
+        },
+        "KURAMA_ASHEN": {
+          "name": "Kurama Ashen",
+          "ramp": [
+            "#3a3633",
+            "#57514c",
+            "#7a726a",
+            "#9c948a",
+            "#bfb8ac"
+          ]
+        },
+        "KURAMA_MAUVE": {
+          "name": "Kurama Mauve Brown",
+          "ramp": [
+            "#2e1f26",
+            "#47303a",
+            "#634552",
+            "#80606c",
+            "#a0828c"
+          ]
+        }
+      },
+      "eye_colors": {
+        "KURAMA_HAZE": {
+          "name": "Kurama Haze",
+          "ramp": [
+            "#120e18",
+            "#4f3f6b",
+            "#7b67a0",
+            "#b3a3cf",
+            "#f2efe8"
+          ]
+        },
+        "KURAMA_BROWN": {
+          "name": "Kurama Brown",
+          "ramp": [
+            "#120c0a",
+            "#5a3a26",
+            "#8a5f3e",
+            "#c09572",
+            "#f2eee6"
+          ]
+        }
+      },
+      "marks": {
+        "kurama_ink_smudge": {
+          "rects": [
+            [
+              2.7,
+              -1.75,
+              0.8,
+              0.3
+            ],
+            [
+              3.1,
+              -1.45,
+              0.4,
+              0.25
+            ]
+          ],
+          "color": "#2a2633",
+          "mirror": false
+        },
+        "kurama_beauty_mark": {
+          "rects": [
+            [
+              -2.6,
+              -1.55,
+              0.3,
+              0.3
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h1201_yakumo_braid",
+          "h1202_unkai_tail",
+          "h1203_wisteria_waves",
+          "h1204_brush_topknot",
+          "h1205_ink_bob",
+          "h1206_scholar_half_up",
+          "h1207_shoulder_tail",
+          "h1208_cloud_curls",
+          "h1209_calligrapher_part",
+          "h1210_twin_braids",
+          "h1211_easel_shag",
+          "h1212_elder_long_tie",
+          "h1213_veiled_sweep",
+          "h1214_wisteria_buns",
+          "h1215_mist_hime"
+        ],
+        "hair_colors": [
+          "KURAMA_TEA",
+          "KURAMA_TEA",
+          "KURAMA_TEA",
+          "KURAMA_UMBER",
+          "KURAMA_UMBER",
+          "KURAMA_MAUVE",
+          "KURAMA_INK",
+          "KURAMA_ASHEN",
+          "HONEY",
+          "CHESTNUT"
+        ],
+        "eye_colors": [
+          "KURAMA_BROWN",
+          "KURAMA_BROWN",
+          "KURAMA_HAZE",
+          "KURAMA_HAZE",
+          "DARK"
+        ],
+        "palettes": [
+          "KURAMA_WISTERIA",
+          "KURAMA_BLOSSOM",
+          "KURAMA_INKWASH",
+          "KURAMA_SAGE",
+          "KURAMA_UMBER"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w1202_painted_protector",
+          "w1203_training_headband",
+          "w1201_kasa_hat"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers",
+          "b08_mesh_leggings"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "kurama_beauty_mark",
+            "chance": 0.15
+          },
+          {
+            "id": "kurama_ink_smudge",
+            "chance": 0.12
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "painter_robe",
+          "name": "Painter's Robe",
+          "top": "t1201_painter_robe",
+          "bottom": "b1201_painter_trousers",
+          "rank": "genin",
+          "palettes": [
+            "KURAMA_BLOSSOM",
+            "KURAMA_WISTERIA",
+            "KURAMA_INKWASH"
+          ]
+        },
+        {
+          "id": "training_kimono",
+          "name": "Training Kimono",
+          "top": "t1202_training_kimono",
+          "bottom": "b1202_wrap_skirt",
+          "rank": "genin",
+          "palettes": [
+            "KURAMA_BLOSSOM",
+            "KURAMA_WISTERIA",
+            "KURAMA_SAGE"
+          ]
+        },
+        {
+          "id": "scholar_robe",
+          "name": "Scholar's Robe",
+          "top": "t1203_scholar_robe",
+          "bottom": "b1203_scholar_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "KURAMA_UMBER",
+            "KURAMA_NIGHT",
+            "KURAMA_SAGE"
+          ]
+        },
+        {
+          "id": "cloud_haori",
+          "name": "Cloud Haori",
+          "top": "t1204_cloud_haori",
+          "bottom": "b1201_painter_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "KURAMA_INKWASH",
+            "KURAMA_WISTERIA",
+            "KURAMA_SAGE"
+          ]
+        },
+        {
+          "id": "painters_smock",
+          "name": "Painter's Smock",
+          "top": "t1205_painters_smock",
+          "bottom": "b1204_rolled_trousers",
+          "rank": "academy"
+        },
+        {
+          "id": "calligrapher",
+          "name": "Calligrapher's Kosode",
+          "top": "t1206_calligrapher_tasuki",
+          "bottom": "b1203_scholar_hakama",
+          "rank": "chunin"
+        },
+        {
+          "id": "travel_cloak",
+          "name": "Wisteria Travel Cloak",
+          "top": "t1207_travel_cloak",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "KURAMA_WISTERIA",
+            "KURAMA_UMBER",
+            "KURAMA_NIGHT"
+          ]
+        },
+        {
+          "id": "genin_tunic",
+          "name": "Kurama Genin Tunic",
+          "top": "t1208_genin_tunic",
+          "bottom": "b1205_genin_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "chunin_vest",
+          "name": "Kurama Chunin Vest",
+          "top": "t1209_chunin_vest",
+          "bottom": "b1201_painter_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "KURAMA_SAGE"
+          ]
+        },
+        {
+          "id": "elder_kimono",
+          "name": "Elder's Layered Kimono",
+          "top": "t1210_elder_kimono",
+          "bottom": "b1206_elder_kimono_skirt",
+          "rank": "jonin",
+          "palettes": [
+            "KURAMA_NIGHT",
+            "KURAMA_UMBER",
+            "KURAMA_WISTERIA"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nara",
+      "name": "Nara",
+      "tagline": "Lazy strategists of the deer forest: pineapple tails, open flak vests over mesh, olive, brown and shadow-black.",
+      "palettes": {
+        "NARA_FOREST": {
+          "name": "Nara Forest",
+          "P": "#5e6b3b",
+          "S": "#d8d0b8",
+          "A": "#8b4a2b",
+          "L": "#6a5034",
+          "M": "#a7aca8",
+          "K": "#18171b",
+          "D": "#3b4046"
+        },
+        "NARA_SHADOW": {
+          "name": "Nara Shadow",
+          "P": "#3a3d42",
+          "S": "#b9b6a8",
+          "A": "#7d8a4a",
+          "L": "#5b4632",
+          "M": "#a2a8ab",
+          "K": "#121215",
+          "D": "#2a2d33"
+        },
+        "NARA_DEER": {
+          "name": "Nara Deer",
+          "P": "#7d5b3b",
+          "S": "#e2d5ba",
+          "A": "#56653a",
+          "L": "#5a3f28",
+          "M": "#b0aa9a",
+          "K": "#1c1714",
+          "D": "#45443f"
+        },
+        "NARA_STRATEGIST": {
+          "name": "Nara Strategist",
+          "P": "#5f6e3c",
+          "S": "#c9c6bb",
+          "A": "#9c3f2c",
+          "L": "#6e5a40",
+          "M": "#aab3b9",
+          "K": "#1a1c21",
+          "D": "#33373f"
+        },
+        "NARA_MOSS": {
+          "name": "Nara Moss",
+          "P": "#7f8761",
+          "S": "#ebe5d2",
+          "A": "#6e3d36",
+          "L": "#6b5238",
+          "M": "#b4b2a6",
+          "K": "#1d1b1a",
+          "D": "#4a4a44"
+        },
+        "NARA_DUSK": {
+          "name": "Nara Dusk",
+          "P": "#4b4f5e",
+          "S": "#e6dfcd",
+          "A": "#a8763a",
+          "L": "#5e4a36",
+          "M": "#aeb1b5",
+          "K": "#15151a",
+          "D": "#2e3038"
+        }
+      },
+      "hair_colors": {
+        "NARA_PITCH": {
+          "name": "Nara Pitch",
+          "ramp": [
+            "#0f0e0f",
+            "#1a1819",
+            "#272425",
+            "#3a3535",
+            "#56504d"
+          ]
+        },
+        "NARA_UMBER": {
+          "name": "Nara Umber",
+          "ramp": [
+            "#160f0b",
+            "#231912",
+            "#33251b",
+            "#4a3627",
+            "#6a5039"
+          ]
+        },
+        "NARA_SMOKE": {
+          "name": "Nara Smoke",
+          "ramp": [
+            "#2a2a2c",
+            "#3e3e41",
+            "#58585b",
+            "#77777a",
+            "#9c9c9e"
+          ]
+        }
+      },
+      "eye_colors": {
+        "NARA_BARK": {
+          "name": "Nara Bark",
+          "ramp": [
+            "#0d0b0c",
+            "#2a211c",
+            "#3f3229",
+            "#62503f",
+            "#efebe1"
+          ]
+        }
+      },
+      "marks": {
+        "nara_cheek_scar": {
+          "rects": [
+            [
+              2.7,
+              -2.6,
+              0.25,
+              1.5
+            ],
+            [
+              2.95,
+              -1.3,
+              0.25,
+              0.9
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        },
+        "nara_twin_scars": {
+          "rects": [
+            [
+              -2.8,
+              -1.7,
+              0.25,
+              1.4
+            ],
+            [
+              -1.9,
+              -0.6,
+              0.25,
+              0.9
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h501_pineapple_tail",
+          "h502_shadow_sideburns",
+          "h503_sprout_tail",
+          "h504_low_tail",
+          "h505_twin_sprouts",
+          "h506_loose_wisps",
+          "h507_lazy_bedhead",
+          "h508_antler_tufts",
+          "h509_shogi_knot",
+          "h510_herder_wrap",
+          "h511_drooping_tail",
+          "h512_side_tail",
+          "h513_tail_let_down",
+          "h514_cropped_spikes",
+          "h515_swept_sprout"
+        ],
+        "hair_colors": [
+          "NARA_PITCH",
+          "NARA_PITCH",
+          "NARA_UMBER",
+          "RAVEN",
+          "ESPRESSO",
+          "NARA_SMOKE"
+        ],
+        "eye_colors": [
+          "NARA_BARK",
+          "NARA_BARK",
+          "DARK"
+        ],
+        "palettes": [
+          "NARA_FOREST",
+          "NARA_SHADOW",
+          "NARA_DEER",
+          "NARA_STRATEGIST",
+          "NARA_MOSS",
+          "NARA_DUSK"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w502_shadow_protector",
+          "w502_shadow_protector",
+          null,
+          "w501_herder_kasa"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "nara_cheek_scar",
+            "chance": 0.12
+          },
+          {
+            "id": "nara_twin_scars",
+            "chance": 0.05
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "open_vest",
+          "name": "Open Flak Vest",
+          "top": "t501_open_flak_vest",
+          "bottom": "b501_shadow_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "NARA_STRATEGIST",
+            "NARA_FOREST"
+          ]
+        },
+        {
+          "id": "cloud_watcher",
+          "name": "Cloud Watcher",
+          "top": "t502_mesh_tee",
+          "bottom": "b503_knee_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "young_strategist",
+          "name": "Young Strategist",
+          "top": "t503_genin_jacket",
+          "bottom": "b501_shadow_trousers",
+          "rank": "genin"
+        },
+        {
+          "id": "clan_head",
+          "name": "Clan Head",
+          "top": "t504_clan_head_haori",
+          "bottom": "b501_shadow_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "NARA_SHADOW",
+            "NARA_FOREST",
+            "NARA_DUSK"
+          ]
+        },
+        {
+          "id": "deer_keeper",
+          "name": "Deer Keeper",
+          "top": "t505_herder_tunic",
+          "bottom": "b502_herder_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "NARA_FOREST",
+            "NARA_MOSS",
+            "NARA_DUSK"
+          ]
+        },
+        {
+          "id": "forest_walk",
+          "name": "Forest Mantle",
+          "top": "t506_forest_mantle",
+          "bottom": "b502_herder_trousers",
+          "rank": "chunin"
+        },
+        {
+          "id": "sprout",
+          "name": "Sprout Top",
+          "top": "t509_sprout_top",
+          "bottom": "b503_knee_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "household",
+          "name": "Household",
+          "top": "t507_matron_apron",
+          "bottom": "b504_wrap_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "NARA_MOSS",
+            "NARA_DEER",
+            "NARA_DUSK"
+          ]
+        },
+        {
+          "id": "shogi_afternoon",
+          "name": "Shogi Afternoon",
+          "top": "t508_shogi_sweater",
+          "bottom": "b501_shadow_trousers",
+          "rank": "chunin"
+        },
+        {
+          "id": "evening_yukata",
+          "name": "Evening Yukata",
+          "top": "t510_evening_yukata",
+          "bottom": "b505_yukata_hem",
+          "rank": "jonin",
+          "palettes": [
+            "NARA_DUSK",
+            "NARA_SHADOW",
+            "NARA_MOSS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sarutobi",
+      "name": "Sarutobi",
+      "tagline": "The Will of Fire's own house: monkey-king armor, guardian sashes and long scarves, warm browns and greens with fire-red.",
+      "palettes": {
+        "SARUTOBI_GUARDIAN": {
+          "name": "Sarutobi Guardian",
+          "P": "#5e6c3a",
+          "S": "#d9d2bf",
+          "A": "#b8402a",
+          "L": "#6b4a30",
+          "M": "#a9b0b4",
+          "K": "#1b1c22",
+          "D": "#2b3858"
+        },
+        "SARUTOBI_MONKEY_KING": {
+          "name": "Sarutobi Monkey King",
+          "P": "#3d3833",
+          "S": "#c9bfa8",
+          "A": "#b3302a",
+          "L": "#5a3e2a",
+          "M": "#9aa0a6",
+          "K": "#141418",
+          "D": "#33384a"
+        },
+        "SARUTOBI_SCARF": {
+          "name": "Sarutobi Scarf",
+          "P": "#d3ad4a",
+          "S": "#8f9294",
+          "A": "#c4352b",
+          "L": "#6b4630",
+          "M": "#a9adb0",
+          "K": "#1c1c22",
+          "D": "#3f6db5"
+        },
+        "SARUTOBI_SENSEI": {
+          "name": "Sarutobi Sensei",
+          "P": "#2c3448",
+          "S": "#d5cfc0",
+          "A": "#c53f2b",
+          "L": "#5d4330",
+          "M": "#aab1b6",
+          "K": "#16171c",
+          "D": "#29447a"
+        },
+        "SARUTOBI_EMBER": {
+          "name": "Sarutobi Ember",
+          "P": "#6e3a26",
+          "S": "#ead8b5",
+          "A": "#df6a2a",
+          "L": "#5a3a26",
+          "M": "#b0a99a",
+          "K": "#1e1612",
+          "D": "#4b5b38"
+        },
+        "SARUTOBI_FOREST": {
+          "name": "Sarutobi Forest",
+          "P": "#4d5d36",
+          "S": "#dccba5",
+          "A": "#c03b26",
+          "L": "#6b4a2f",
+          "M": "#a8aba4",
+          "K": "#19191a",
+          "D": "#5a4430"
+        },
+        "SARUTOBI_ASH": {
+          "name": "Sarutobi Ash",
+          "P": "#4a4643",
+          "S": "#d6cfc2",
+          "A": "#cc4a2a",
+          "L": "#5e4634",
+          "M": "#aeb0b2",
+          "K": "#151517",
+          "D": "#2e3a4e"
+        },
+        "SARUTOBI_WARRING": {
+          "name": "Sarutobi Warring",
+          "P": "#2e2a29",
+          "S": "#cdb98f",
+          "A": "#a8281f",
+          "L": "#4f3322",
+          "M": "#8a857c",
+          "K": "#121012",
+          "D": "#3a3330"
+        }
+      },
+      "hair_colors": {
+        "SARUTOBI_BARK": {
+          "name": "Sarutobi Bark",
+          "ramp": [
+            "#140d09",
+            "#21150e",
+            "#311f15",
+            "#48301f",
+            "#664430"
+          ]
+        },
+        "SARUTOBI_SOOT": {
+          "name": "Sarutobi Soot",
+          "ramp": [
+            "#0e0c0b",
+            "#181412",
+            "#231d1a",
+            "#342b26",
+            "#4c403a"
+          ]
+        },
+        "SARUTOBI_ELDER": {
+          "name": "Sarutobi Elder",
+          "ramp": [
+            "#3e3c3a",
+            "#5b5856",
+            "#7d7a77",
+            "#a19e9a",
+            "#c8c5c0"
+          ]
+        }
+      },
+      "eye_colors": {
+        "SARUTOBI_EMBER_RED": {
+          "name": "Sarutobi Ember Red",
+          "ramp": [
+            "#0d0607",
+            "#5c1416",
+            "#9c2a26",
+            "#d0574a",
+            "#f2ece4"
+          ]
+        }
+      },
+      "marks": {
+        "sarutobi_age_lines": {
+          "rects": [
+            [
+              2.1,
+              -1.85,
+              1.2,
+              0.2
+            ],
+            [
+              2.5,
+              -1.45,
+              0.8,
+              0.2
+            ]
+          ],
+          "color": null,
+          "mirror": true
+        },
+        "sarutobi_soot_smudge": {
+          "rects": [
+            [
+              -3.1,
+              -1.7,
+              1.1,
+              0.5
+            ],
+            [
+              -2.6,
+              -1.25,
+              0.6,
+              0.3
+            ]
+          ],
+          "color": "#3d3532",
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h901_young_hiruzen",
+          "h902_guardian_beard",
+          "h903_elder_goatee",
+          "h904_scarf_kid_spikes",
+          "h905_sensei_spikes",
+          "h906_mirai_bob",
+          "h907_warring_topknot",
+          "h908_ash_chinstrap",
+          "h909_enma_tail",
+          "h910_will_of_fire",
+          "h911_monkey_puffs",
+          "h912_guard_pixie",
+          "h913_sage_mane",
+          "h914_crown_bun",
+          "h915_jungle_spikes"
+        ],
+        "hair_colors": [
+          "SARUTOBI_BARK",
+          "SARUTOBI_BARK",
+          "SARUTOBI_SOOT",
+          "SARUTOBI_SOOT",
+          "SARUTOBI_ELDER",
+          "ESPRESSO",
+          "CHESTNUT"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "DARK",
+          "SARUTOBI_EMBER_RED"
+        ],
+        "palettes": [
+          "SARUTOBI_GUARDIAN",
+          "SARUTOBI_FOREST",
+          "SARUTOBI_EMBER",
+          "SARUTOBI_ASH",
+          "SARUTOBI_SENSEI",
+          "SARUTOBI_SCARF"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w903_fire_headband",
+          "w902_kid_goggles",
+          "w901_battle_helmet"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "sarutobi_age_lines",
+            "chance": 0.1
+          },
+          {
+            "id": "sarutobi_soot_smudge",
+            "chance": 0.08
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "guardian",
+          "name": "Guardian Vest",
+          "top": "t901_guardian_vest",
+          "bottom": "b901_guardian_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SARUTOBI_GUARDIAN",
+            "SARUTOBI_FOREST"
+          ]
+        },
+        {
+          "id": "monkey_king",
+          "name": "Monkey King Armor",
+          "top": "t902_monkey_king_armor",
+          "bottom": "b904_battle_greaves",
+          "rank": "kage",
+          "palettes": [
+            "SARUTOBI_MONKEY_KING",
+            "SARUTOBI_ASH"
+          ]
+        },
+        {
+          "id": "scarf_kid",
+          "name": "Long Scarf",
+          "top": "t903_long_scarf_tee",
+          "bottom": "b902_monkey_shorts",
+          "rank": "academy",
+          "palettes": [
+            "SARUTOBI_SCARF",
+            "SARUTOBI_EMBER",
+            "SARUTOBI_FOREST"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei Jacket",
+          "top": "t904_sensei_jacket",
+          "bottom": "b901_guardian_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SARUTOBI_SENSEI",
+            "SARUTOBI_ASH"
+          ]
+        },
+        {
+          "id": "ember_haori",
+          "name": "Ember Haori",
+          "top": "t905_ember_haori",
+          "bottom": "b903_warring_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SARUTOBI_EMBER",
+            "SARUTOBI_FOREST",
+            "SARUTOBI_ASH"
+          ]
+        },
+        {
+          "id": "guard_detail",
+          "name": "Guard Detail",
+          "top": "t906_guard_detail_vest",
+          "bottom": "b901_guardian_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SARUTOBI_GUARDIAN",
+            "SARUTOBI_SENSEI"
+          ]
+        },
+        {
+          "id": "warring",
+          "name": "Warring Breastplate",
+          "top": "t907_warring_breastplate",
+          "bottom": "b903_warring_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SARUTOBI_WARRING"
+          ]
+        },
+        {
+          "id": "ash_training",
+          "name": "Ash Training",
+          "top": "t908_ash_training_wrap",
+          "bottom": "b904_battle_greaves",
+          "rank": "chunin"
+        },
+        {
+          "id": "corps_hoodie",
+          "name": "Corps Hoodie",
+          "top": "t909_corps_hoodie",
+          "bottom": "b902_monkey_shorts",
+          "rank": "academy",
+          "palettes": [
+            "SARUTOBI_SCARF",
+            "SARUTOBI_FOREST",
+            "SARUTOBI_EMBER"
+          ]
+        },
+        {
+          "id": "will_of_fire",
+          "name": "Will of Fire Tunic",
+          "top": "t910_will_of_fire_tunic",
+          "bottom": "b905_wrap_skirt_leggings",
+          "rank": "chunin",
+          "palettes": [
+            "SARUTOBI_EMBER",
+            "SARUTOBI_FOREST",
+            "SARUTOBI_ASH",
+            "SARUTOBI_GUARDIAN"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "senju",
+      "name": "Senju",
+      "tagline": "The clan of a thousand hands: long dark manes and white spikes, red and navy Warring States armor laced in green, forest haori and calm village kimono under the split-circle crest.",
+      "palettes": {
+        "SENJU_RED": {
+          "name": "Senju Red Lacquer",
+          "P": "#8f2a26",
+          "S": "#e9dfc6",
+          "A": "#3f6b3a",
+          "L": "#6b4a30",
+          "M": "#a9b0b4",
+          "K": "#1c1a1d",
+          "D": "#2a2e40"
+        },
+        "SENJU_NAVY": {
+          "name": "Senju Navy",
+          "P": "#2f4170",
+          "S": "#eeeae0",
+          "A": "#b23a30",
+          "L": "#5a4636",
+          "M": "#aab3b9",
+          "K": "#16181f",
+          "D": "#262a3a"
+        },
+        "SENJU_FOREST": {
+          "name": "Senju Forest",
+          "P": "#3f6e41",
+          "S": "#e6dcc2",
+          "A": "#a8452f",
+          "L": "#7a5a3a",
+          "M": "#a9b0b4",
+          "K": "#1b1d18",
+          "D": "#2e3428"
+        },
+        "SENJU_EARTH": {
+          "name": "Senju Earth",
+          "P": "#7d5d3b",
+          "S": "#ddd0b0",
+          "A": "#4f7a3c",
+          "L": "#5a3f28",
+          "M": "#a6a59a",
+          "K": "#1d1915",
+          "D": "#36382c"
+        },
+        "SENJU_MOSS": {
+          "name": "Senju Moss",
+          "P": "#6b7a45",
+          "S": "#d9d4bf",
+          "A": "#7a3a52",
+          "L": "#5e4a35",
+          "M": "#a9b0b4",
+          "K": "#1a1c16",
+          "D": "#3b3f45"
+        },
+        "SENJU_FORMAL": {
+          "name": "Senju Formal",
+          "P": "#26242b",
+          "S": "#f0ede4",
+          "A": "#5d7a52",
+          "L": "#4a3a2c",
+          "M": "#b0b4b8",
+          "K": "#121115",
+          "D": "#34323a"
+        },
+        "SENJU_TSUNADE": {
+          "name": "Senju Tsunade",
+          "P": "#56794a",
+          "S": "#a8a7a1",
+          "A": "#b8322a",
+          "L": "#6b5440",
+          "M": "#aab3b9",
+          "K": "#1b1c22",
+          "D": "#2b3a5e"
+        }
+      },
+      "hair_colors": {
+        "SENJU_WOOD_BLACK": {
+          "name": "Senju Wood Black",
+          "ramp": [
+            "#140f0d",
+            "#211915",
+            "#30241d",
+            "#463428",
+            "#634a38"
+          ]
+        },
+        "SENJU_BARK": {
+          "name": "Senju Bark",
+          "ramp": [
+            "#24170f",
+            "#382417",
+            "#4f3420",
+            "#6b4a2e",
+            "#8c6640"
+          ]
+        },
+        "SENJU_WHITE": {
+          "name": "Senju White",
+          "ramp": [
+            "#7d7a78",
+            "#a8a5a1",
+            "#cdcac4",
+            "#e6e3dd",
+            "#f8f6f1"
+          ]
+        },
+        "SENJU_GOLD": {
+          "name": "Senju Gold",
+          "ramp": [
+            "#6e5222",
+            "#957131",
+            "#bf9744",
+            "#dcbb63",
+            "#f1d98e"
+          ]
+        }
+      },
+      "eye_colors": {
+        "SENJU_HAZEL": {
+          "name": "Senju Hazel",
+          "ramp": [
+            "#0d0b0a",
+            "#3a2a1a",
+            "#5e4628",
+            "#91744a",
+            "#f1ede3"
+          ]
+        },
+        "SENJU_EMBER": {
+          "name": "Senju Ember",
+          "ramp": [
+            "#0e0a0a",
+            "#5a1a1c",
+            "#8f2a2a",
+            "#c25a4e",
+            "#f1ede3"
+          ]
+        }
+      },
+      "marks": {
+        "senju_strength_seal": {
+          "rects": [
+            [
+              -0.25,
+              -7.15,
+              0.5,
+              0.25
+            ],
+            [
+              -0.5,
+              -6.9,
+              1.0,
+              0.4
+            ],
+            [
+              -0.25,
+              -6.5,
+              0.5,
+              0.25
+            ]
+          ],
+          "color": "#7b3fa0",
+          "mirror": false
+        },
+        "senju_war_stripes": {
+          "rects": [
+            [
+              2.7,
+              -1.75,
+              0.3,
+              1.1
+            ],
+            [
+              0.0,
+              -0.32,
+              0.3,
+              0.3
+            ]
+          ],
+          "color": "#b3262d",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h101_hashirama_mane",
+          "h102_tobirama_spikes",
+          "h103_twin_low_tails",
+          "h104_nawaki_spikes",
+          "h105_war_mane",
+          "h106_warring_topknot",
+          "h107_wrapped_tail",
+          "h108_village_bob",
+          "h109_swept_mane",
+          "h110_forest_braid",
+          "h111_wild_high_tail",
+          "h112_shaggy_nape",
+          "h113_layered_flick",
+          "h114_half_up_knot",
+          "h115_nape_chignon",
+          "h07_bowl_cut"
+        ],
+        "hair_colors": [
+          "SENJU_WOOD_BLACK",
+          "SENJU_WHITE",
+          "SENJU_BARK",
+          "SENJU_GOLD",
+          "SENJU_WOOD_BLACK",
+          "SENJU_BARK",
+          "SENJU_WOOD_BLACK",
+          "RAVEN",
+          "ESPRESSO"
+        ],
+        "eye_colors": [
+          "SENJU_HAZEL",
+          "SENJU_HAZEL",
+          "DARK",
+          "DARK",
+          "SENJU_EMBER"
+        ],
+        "palettes": [
+          "SENJU_FOREST",
+          "SENJU_FOREST",
+          "SENJU_RED",
+          "SENJU_NAVY",
+          "SENJU_EARTH",
+          "SENJU_MOSS",
+          "SENJU_TSUNADE"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w101_senju_brow_guard",
+          "w102_travel_kasa",
+          "w103_nawaki_goggles"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "senju_strength_seal",
+            "chance": 0.08
+          },
+          {
+            "id": "senju_war_stripes",
+            "chance": 0.06
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "war_armor",
+          "name": "Senju War Armor",
+          "top": "t101_senju_war_armor",
+          "bottom": "b101_armored_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SENJU_RED"
+          ]
+        },
+        {
+          "id": "tobirama_armor",
+          "name": "Tobirama Armor",
+          "top": "t102_tobirama_armor",
+          "bottom": "b101_armored_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SENJU_NAVY"
+          ]
+        },
+        {
+          "id": "clan_haori",
+          "name": "Clan Haori",
+          "top": "t103_clan_haori",
+          "bottom": "b103_pleated_hakama",
+          "rank": "chunin"
+        },
+        {
+          "id": "village_kimono",
+          "name": "Village Kimono",
+          "top": "t104_village_kimono",
+          "bottom": "b103_pleated_hakama",
+          "rank": "academy"
+        },
+        {
+          "id": "crest_tunic",
+          "name": "Crest Tunic",
+          "top": "t105_crest_tunic",
+          "bottom": "b105_ranger_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "gambler_haori",
+          "name": "Gambler Haori",
+          "top": "t106_gambler_haori",
+          "bottom": "b104_field_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SENJU_TSUNADE"
+          ]
+        },
+        {
+          "id": "ranger_vest",
+          "name": "Ranger Vest",
+          "top": "t107_ranger_vest",
+          "bottom": "b102_wrapped_trousers",
+          "rank": "chunin"
+        },
+        {
+          "id": "training_gi",
+          "name": "Training Gi",
+          "top": "t108_training_gi",
+          "bottom": "b102_wrapped_trousers",
+          "rank": "genin"
+        },
+        {
+          "id": "ceremonial",
+          "name": "Ceremonial Montsuki",
+          "top": "t109_ceremonial_montsuki",
+          "bottom": "b103_pleated_hakama",
+          "rank": "kage",
+          "palettes": [
+            "SENJU_FORMAL"
+          ]
+        },
+        {
+          "id": "scout_cuirass",
+          "name": "Scout Cuirass",
+          "top": "t110_scout_cuirass",
+          "bottom": "b104_field_trousers",
+          "rank": "chunin"
+        }
+      ]
+    },
+    {
+      "id": "shimura",
+      "name": "Shimura",
+      "tagline": "Austere grey, charcoal, off-white and black with one dark-red accent: Danzo's council robes, bandages and the hidden Root",
+      "palettes": {
+        "SHIMURA_ELDER": {
+          "name": "Shimura Elder",
+          "P": "#74726c",
+          "S": "#e4e0d2",
+          "A": "#6b1a1e",
+          "L": "#3b322b",
+          "M": "#a88c55",
+          "K": "#141418",
+          "D": "#2c2c31"
+        },
+        "SHIMURA_ROOT": {
+          "name": "Shimura Root",
+          "P": "#25262b",
+          "S": "#e2e0d8",
+          "A": "#7c1b20",
+          "L": "#3a3029",
+          "M": "#959ca3",
+          "K": "#0e0f12",
+          "D": "#1b1c20"
+        },
+        "SHIMURA_ASH": {
+          "name": "Shimura Ash",
+          "P": "#9a978f",
+          "S": "#ecebe5",
+          "A": "#761c21",
+          "L": "#4a3d33",
+          "M": "#a3a8ad",
+          "K": "#1c1d22",
+          "D": "#3b3c42"
+        },
+        "SHIMURA_SLATE": {
+          "name": "Shimura Slate",
+          "P": "#474951",
+          "S": "#dedbd0",
+          "A": "#6e1b1f",
+          "L": "#42372e",
+          "M": "#9ea4aa",
+          "K": "#16171b",
+          "D": "#2a2c32"
+        },
+        "SHIMURA_PAPER": {
+          "name": "Shimura Paper",
+          "P": "#d3cdbc",
+          "S": "#f0ede4",
+          "A": "#7a1d22",
+          "L": "#5a4a3c",
+          "M": "#a3a8ad",
+          "K": "#1d1e23",
+          "D": "#3f4046"
+        },
+        "SHIMURA_MOURNING": {
+          "name": "Shimura Mourning",
+          "P": "#16171a",
+          "S": "#d6d3c9",
+          "A": "#5a1418",
+          "L": "#2e2621",
+          "M": "#8d9297",
+          "K": "#0b0b0d",
+          "D": "#222327"
+        }
+      },
+      "hair_colors": {
+        "SHIMURA_INK": {
+          "name": "Shimura Ink",
+          "ramp": [
+            "#0c0d12",
+            "#15171f",
+            "#1f222d",
+            "#2f3342",
+            "#474d63"
+          ]
+        },
+        "SHIMURA_CHARCOAL": {
+          "name": "Shimura Charcoal",
+          "ramp": [
+            "#151313",
+            "#221f1e",
+            "#302c2a",
+            "#433e3b",
+            "#5d5752"
+          ]
+        },
+        "SHIMURA_GREY": {
+          "name": "Shimura Grey",
+          "ramp": [
+            "#3a3a3c",
+            "#565658",
+            "#77777a",
+            "#9a9a9c",
+            "#bdbdbe"
+          ]
+        }
+      },
+      "eye_colors": {},
+      "marks": {
+        "shimura_x_scar": {
+          "rects": [
+            [
+              0,
+              -0.62,
+              0.25,
+              0.25
+            ],
+            [
+              -0.25,
+              -0.87,
+              0.25,
+              0.25
+            ],
+            [
+              0.25,
+              -0.87,
+              0.25,
+              0.25
+            ],
+            [
+              -0.25,
+              -0.37,
+              0.25,
+              0.25
+            ],
+            [
+              0.25,
+              -0.37,
+              0.25,
+              0.25
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h1301_danzo_shag",
+          "h1302_warring_youth",
+          "h1303_sai_sleek",
+          "h1304_root_buzz",
+          "h1305_foundation_tail",
+          "h1306_elder_topknot",
+          "h1307_councilor_bun",
+          "h1308_council_part",
+          "h1309_shimura_bob",
+          "h1310_swept_back",
+          "h1311_council_shag",
+          "h1312_ink_braid",
+          "h1313_shin_spikes",
+          "h1314_half_up",
+          "h1315_ink_curtain"
+        ],
+        "hair_colors": [
+          "SHIMURA_INK",
+          "SHIMURA_CHARCOAL",
+          "SHIMURA_CHARCOAL",
+          "SHIMURA_GREY",
+          "RAVEN",
+          "ESPRESSO"
+        ],
+        "eye_colors": [
+          "DARK"
+        ],
+        "palettes": [
+          "SHIMURA_ELDER",
+          "SHIMURA_ROOT",
+          "SHIMURA_ASH",
+          "SHIMURA_SLATE"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w1301_eye_bandage",
+          "w1302_brow_bandage",
+          "w02_forehead_protector",
+          "w07_root_mask"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers",
+          "b06_anbu_greaves"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "shimura_x_scar",
+            "chance": 0.15
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "council_elder",
+          "name": "Council Elder",
+          "top": "t1301_danzo_robe",
+          "bottom": "b1301_council_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SHIMURA_ELDER"
+          ]
+        },
+        {
+          "id": "shackled_founder",
+          "name": "Shackled Founder",
+          "top": "t1302_shackled_arm",
+          "bottom": "b1301_council_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SHIMURA_ELDER",
+            "SHIMURA_SLATE"
+          ]
+        },
+        {
+          "id": "warring_youth",
+          "name": "Warring Youth",
+          "top": "t1303_warring_armor",
+          "bottom": "b1303_bandaged_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SHIMURA_SLATE",
+            "SHIMURA_ASH",
+            "SHIMURA_ELDER"
+          ]
+        },
+        {
+          "id": "ink_operative",
+          "name": "Ink Operative",
+          "top": "t1304_sai_jacket",
+          "bottom": "b1302_root_trousers",
+          "rank": "anbu",
+          "palettes": [
+            "SHIMURA_ROOT",
+            "SHIMURA_SLATE"
+          ]
+        },
+        {
+          "id": "root_operative",
+          "name": "Root Operative",
+          "top": "t1305_root_strap_jacket",
+          "bottom": "b1302_root_trousers",
+          "rank": "anbu",
+          "palettes": [
+            "SHIMURA_ROOT",
+            "SHIMURA_SLATE"
+          ]
+        },
+        {
+          "id": "councilor",
+          "name": "Councilor",
+          "top": "t1306_councilor_haori",
+          "bottom": "b1301_council_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SHIMURA_SLATE",
+            "SHIMURA_ROOT",
+            "SHIMURA_ELDER"
+          ]
+        },
+        {
+          "id": "village_kosode",
+          "name": "Village Kosode",
+          "top": "t1307_village_kosode",
+          "bottom": "b1303_bandaged_trousers",
+          "rank": "genin",
+          "palettes": [
+            "SHIMURA_ASH",
+            "SHIMURA_PAPER",
+            "SHIMURA_SLATE"
+          ]
+        },
+        {
+          "id": "ink_artisan",
+          "name": "Ink Artisan",
+          "top": "t1308_ink_smock",
+          "bottom": "b1302_root_trousers",
+          "rank": "genin",
+          "palettes": [
+            "SHIMURA_ASH",
+            "SHIMURA_PAPER",
+            "SHIMURA_SLATE"
+          ]
+        },
+        {
+          "id": "mourning_dress",
+          "name": "Mourning Dress",
+          "top": "t1309_mourning_haori",
+          "bottom": "b1301_council_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SHIMURA_MOURNING"
+          ]
+        },
+        {
+          "id": "foundation_kunoichi",
+          "name": "Foundation Kunoichi",
+          "top": "t1310_foundation_vest",
+          "bottom": "b1304_wrap_skirt",
+          "rank": "anbu",
+          "palettes": [
+            "SHIMURA_ROOT",
+            "SHIMURA_SLATE",
+            "SHIMURA_ASH"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uchiha",
+      "name": "Uchiha",
+      "tagline": "Blue-black hair, high navy and black collars with the red-and-white fan on the back, and now and then the red of the Sharingan.",
+      "palettes": {
+        "UCHIHA_NIGHT": {
+          "name": "Uchiha Night",
+          "P": "#1b1d27",
+          "S": "#e9e6dd",
+          "A": "#c4282b",
+          "L": "#5a4a3a",
+          "M": "#aab3b9",
+          "K": "#111218",
+          "D": "#2c3247"
+        },
+        "UCHIHA_INDIGO": {
+          "name": "Uchiha Indigo",
+          "P": "#2b3160",
+          "S": "#ece8df",
+          "A": "#c22a30",
+          "L": "#6b5a45",
+          "M": "#aab3b9",
+          "K": "#14161f",
+          "D": "#232742"
+        },
+        "UCHIHA_POLICE": {
+          "name": "Uchiha Police",
+          "P": "#3d4350",
+          "S": "#e6e2d8",
+          "A": "#c4282b",
+          "L": "#4d3f33",
+          "M": "#aab3b9",
+          "K": "#15171d",
+          "D": "#252a36"
+        },
+        "UCHIHA_WAR": {
+          "name": "Uchiha War Red",
+          "P": "#8e1e22",
+          "S": "#e3dccb",
+          "A": "#d23a33",
+          "L": "#4a3426",
+          "M": "#a8a9a3",
+          "K": "#141317",
+          "D": "#2b2530"
+        },
+        "UCHIHA_ASH": {
+          "name": "Uchiha Ash",
+          "P": "#44454d",
+          "S": "#ebe8e0",
+          "A": "#b3262c",
+          "L": "#5c4b3c",
+          "M": "#aab3b9",
+          "K": "#18191d",
+          "D": "#2a2c35"
+        },
+        "UCHIHA_PLUM": {
+          "name": "Uchiha Plum",
+          "P": "#3b2438",
+          "S": "#ece6e0",
+          "A": "#c4282b",
+          "L": "#5f4a3f",
+          "M": "#aab3b9",
+          "K": "#171319",
+          "D": "#2b2333"
+        },
+        "UCHIHA_HOMESTEAD": {
+          "name": "Uchiha Homestead",
+          "P": "#3d2a4d",
+          "S": "#ece8df",
+          "A": "#c4282b",
+          "L": "#6b5a45",
+          "M": "#aab3b9",
+          "K": "#1a1520",
+          "D": "#7a2f45"
+        },
+        "UCHIHA_PALE": {
+          "name": "Uchiha Pale",
+          "P": "#d9d6ce",
+          "S": "#f2f0ea",
+          "A": "#c4282b",
+          "L": "#6b5a45",
+          "M": "#aab3b9",
+          "K": "#16171d",
+          "D": "#2b3048"
+        }
+      },
+      "hair_colors": {
+        "UCHIHA_INK": {
+          "name": "Uchiha Ink",
+          "ramp": [
+            "#08090d",
+            "#111319",
+            "#1c1f29",
+            "#2c3140",
+            "#4a536b"
+          ]
+        },
+        "UCHIHA_BLUE_BLACK": {
+          "name": "Uchiha Blue-Black",
+          "ramp": [
+            "#0c0f1c",
+            "#172038",
+            "#24325a",
+            "#37508a",
+            "#5f7fc0"
+          ]
+        },
+        "UCHIHA_UMBER": {
+          "name": "Uchiha Umber",
+          "ramp": [
+            "#110c0a",
+            "#21170f",
+            "#33241a",
+            "#4b3628",
+            "#6a4e3a"
+          ]
+        }
+      },
+      "eye_colors": {
+        "UCHIHA_ONYX": {
+          "name": "Uchiha Onyx",
+          "ramp": [
+            "#08080a",
+            "#1a1a20",
+            "#2c2c35",
+            "#4f4f5c",
+            "#f1ede3"
+          ]
+        }
+      },
+      "marks": {
+        "uchiha_tear_troughs": {
+          "rects": [
+            [
+              1.3,
+              -1.9,
+              0.22,
+              0.9
+            ]
+          ],
+          "color": null,
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h301_avenger_spikes",
+          "h302_crow_tail",
+          "h303_war_mane",
+          "h304_goggle_spikes",
+          "h305_flicker_curls",
+          "h306_matriarch_long",
+          "h307_little_brother",
+          "h308_captain_swept",
+          "h309_new_moon_bob",
+          "h310_mirror_wave",
+          "h311_sage_topknot",
+          "h312_wanderer_shag",
+          "h313_warring_tail",
+          "h314_hime_cut",
+          "h315_raven_feathers"
+        ],
+        "hair_colors": [
+          "UCHIHA_BLACK",
+          "UCHIHA_BLACK",
+          "UCHIHA_BLUE_BLACK",
+          "UCHIHA_BLUE_BLACK",
+          "UCHIHA_INK",
+          "RAVEN",
+          "UCHIHA_UMBER"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "DARK",
+          "DARK",
+          "DARK",
+          "UCHIHA_ONYX",
+          "UCHIHA_ONYX",
+          "UCHIHA_ONYX",
+          "SHARINGAN"
+        ],
+        "palettes": [
+          "UCHIHA",
+          "UCHIHA",
+          "UCHIHA_NIGHT",
+          "UCHIHA_INDIGO",
+          "UCHIHA_ASH",
+          "UCHIHA_PLUM"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector"
+        ],
+        "bottoms": [
+          "b02_uchiha_shorts",
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "uchiha_tear_troughs",
+            "chance": 0.12
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "avenger",
+          "name": "Avenger",
+          "top": "t301_avenger_open_shirt",
+          "bottom": "b303_wanderer_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "UCHIHA",
+            "UCHIHA_NIGHT",
+            "UCHIHA_INDIGO"
+          ]
+        },
+        {
+          "id": "military_police",
+          "name": "Military Police",
+          "top": "t302_police_vest",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "UCHIHA_POLICE",
+            "UCHIHA_NIGHT"
+          ]
+        },
+        {
+          "id": "warring_states",
+          "name": "Warring States",
+          "top": "t303_warring_armor",
+          "bottom": "b302_war_tassets",
+          "rank": "jonin",
+          "palettes": [
+            "UCHIHA_WAR",
+            "UCHIHA_WAR",
+            "UCHIHA_NIGHT"
+          ]
+        },
+        {
+          "id": "academy_zip",
+          "name": "Academy Zip",
+          "top": "t304_fan_zip_jacket",
+          "bottom": "b304_warmer_shorts",
+          "rank": "academy",
+          "palettes": [
+            "UCHIHA",
+            "UCHIHA_INDIGO",
+            "UCHIHA_ASH"
+          ]
+        },
+        {
+          "id": "clan_tunic",
+          "name": "Clan Tunic",
+          "top": "t305_clan_tunic",
+          "bottom": "b305_fan_skirt",
+          "rank": "genin",
+          "palettes": [
+            "UCHIHA_HOMESTEAD",
+            "UCHIHA",
+            "UCHIHA_PLUM",
+            "UCHIHA_INDIGO",
+            "UCHIHA_PALE"
+          ]
+        },
+        {
+          "id": "crow_mesh",
+          "name": "Crow Mesh",
+          "top": "t306_crow_mesh_shirt",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "UCHIHA_NIGHT",
+            "UCHIHA",
+            "UCHIHA_ASH"
+          ]
+        },
+        {
+          "id": "fan_jonin",
+          "name": "Fan Jonin",
+          "top": "t307_fan_jonin_vest",
+          "bottom": "b303_wanderer_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "KONOHA_JONIN",
+            "UCHIHA_POLICE"
+          ]
+        },
+        {
+          "id": "clan_head",
+          "name": "Clan Head",
+          "top": "t308_clan_head_haori",
+          "bottom": "b301_clan_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "UCHIHA_NIGHT",
+            "UCHIHA",
+            "UCHIHA_PLUM"
+          ]
+        },
+        {
+          "id": "wanderer",
+          "name": "Wanderer",
+          "top": "t309_travel_poncho",
+          "bottom": "b301_clan_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "UCHIHA_ASH",
+            "UCHIHA_NIGHT"
+          ]
+        },
+        {
+          "id": "fan_wrap",
+          "name": "Fan Wrap",
+          "top": "t310_fan_wrap_top",
+          "bottom": "b304_warmer_shorts",
+          "rank": "chunin",
+          "palettes": [
+            "UCHIHA",
+            "UCHIHA_PLUM",
+            "UCHIHA_INDIGO",
+            "UCHIHA_PALE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uzumaki",
+      "name": "Uzumaki",
+      "tagline": "Red hair of every shade, sealing robes, seal-tag trim and the whirlpool of Uzushiogakure",
+      "palettes": {
+        "UZUMAKI_WHIRLPOOL": {
+          "name": "Uzumaki Whirlpool",
+          "P": "#b02a37",
+          "S": "#efe6d2",
+          "A": "#e2742c",
+          "L": "#6b4a36",
+          "M": "#b5b9bd",
+          "K": "#1e1a24",
+          "D": "#24485a"
+        },
+        "UZUMAKI_TIDE": {
+          "name": "Uzumaki Tide",
+          "P": "#2f7f86",
+          "S": "#ece6d6",
+          "A": "#c4303a",
+          "L": "#6a4c38",
+          "M": "#b0b8bc",
+          "K": "#18222a",
+          "D": "#1f3a4c"
+        },
+        "UZUMAKI_SEALER": {
+          "name": "Uzumaki Sealer",
+          "P": "#e3d6b8",
+          "S": "#f4efe4",
+          "A": "#b8283a",
+          "L": "#5e4634",
+          "M": "#a9adb2",
+          "K": "#201c22",
+          "D": "#6b2a30"
+        },
+        "UZUMAKI_HABANERO": {
+          "name": "Uzumaki Habanero",
+          "P": "#de6a2a",
+          "S": "#f0e8d8",
+          "A": "#b52530",
+          "L": "#6b4a36",
+          "M": "#b5b9bd",
+          "K": "#1d1b24",
+          "D": "#2b3f5c"
+        },
+        "UZUMAKI_SEA": {
+          "name": "Uzumaki Sea",
+          "P": "#26405c",
+          "S": "#e9e4d8",
+          "A": "#d04a36",
+          "L": "#5c4434",
+          "M": "#aab3b9",
+          "K": "#161b24",
+          "D": "#2f6f78"
+        },
+        "UZUMAKI_HOMESTEAD": {
+          "name": "Uzumaki Homestead",
+          "P": "#8a9a6a",
+          "S": "#f0ece0",
+          "A": "#b8283a",
+          "L": "#6b5a45",
+          "M": "#aab3b9",
+          "K": "#1d1f26",
+          "D": "#3a4a5c"
+        },
+        "UZUMAKI_RAIN": {
+          "name": "Uzumaki Rain",
+          "P": "#3c4250",
+          "S": "#dcd8cf",
+          "A": "#a82a36",
+          "L": "#4b4038",
+          "M": "#9aa3ab",
+          "K": "#15171c",
+          "D": "#262c38"
+        },
+        "UZUMAKI_JONIN": {
+          "name": "Uzumaki Jonin",
+          "P": "#5f6e3c",
+          "S": "#e6e1d3",
+          "A": "#c42a30",
+          "L": "#7a6346",
+          "M": "#aab3b9",
+          "K": "#1d2236",
+          "D": "#2a3f55"
+        },
+        "UZUMAKI_CEREMONY": {
+          "name": "Uzumaki Ceremony",
+          "P": "#e6ddcc",
+          "S": "#f6f2ea",
+          "A": "#b02a37",
+          "L": "#5e4634",
+          "M": "#c9b98a",
+          "K": "#1c1820",
+          "D": "#3a2a40"
+        },
+        "UZUMAKI_SENSOR": {
+          "name": "Uzumaki Sensor",
+          "P": "#a08cc4",
+          "S": "#efeae0",
+          "A": "#7b5aa6",
+          "L": "#5c4434",
+          "M": "#aab3b9",
+          "K": "#1a1820",
+          "D": "#2a2836"
+        }
+      },
+      "hair_colors": {
+        "UZUMAKI_CRIMSON": {
+          "name": "Uzumaki Crimson",
+          "ramp": [
+            "#4a0d14",
+            "#7a1622",
+            "#a8202d",
+            "#d0383c",
+            "#ee6c5e"
+          ]
+        },
+        "UZUMAKI_SCARLET": {
+          "name": "Uzumaki Scarlet",
+          "ramp": [
+            "#5a130d",
+            "#8f2014",
+            "#c4321e",
+            "#e65430",
+            "#f8885c"
+          ]
+        },
+        "UZUMAKI_GARNET": {
+          "name": "Uzumaki Garnet",
+          "ramp": [
+            "#2a080e",
+            "#460f19",
+            "#681926",
+            "#8a2536",
+            "#b03c4c"
+          ]
+        },
+        "UZUMAKI_ROSEWOOD": {
+          "name": "Uzumaki Rosewood",
+          "ramp": [
+            "#3d1113",
+            "#621c1f",
+            "#88292a",
+            "#ad3c38",
+            "#cf5d52"
+          ]
+        },
+        "UZUMAKI_EMBER": {
+          "name": "Uzumaki Ember",
+          "ramp": [
+            "#5c1d0a",
+            "#8e3010",
+            "#c04a18",
+            "#e06a28",
+            "#f6974c"
+          ]
+        },
+        "UZUMAKI_CORAL": {
+          "name": "Uzumaki Coral",
+          "ramp": [
+            "#6b1a26",
+            "#9c2a39",
+            "#c9404d",
+            "#e56669",
+            "#f6988e"
+          ]
+        }
+      },
+      "eye_colors": {
+        "UZUMAKI_VIOLET": {
+          "name": "Uzumaki Violet",
+          "ramp": [
+            "#0e0b14",
+            "#3f2f63",
+            "#66509a",
+            "#a28fd0",
+            "#f2efe8"
+          ]
+        },
+        "UZUMAKI_RUBY": {
+          "name": "Uzumaki Ruby",
+          "ramp": [
+            "#120709",
+            "#6b1420",
+            "#a8243a",
+            "#e0697a",
+            "#f3eee8"
+          ]
+        }
+      },
+      "marks": {
+        "uzumaki_diamond_seal": {
+          "rects": [
+            [
+              0,
+              -7.0,
+              0.5,
+              0.25
+            ],
+            [
+              0,
+              -6.7,
+              1.0,
+              0.35
+            ],
+            [
+              0,
+              -6.4,
+              0.5,
+              0.25
+            ]
+          ],
+          "color": "#6a3a8c",
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h201_kushina_long",
+          "h202_karin_asymmetric",
+          "h203_nagato_fringe",
+          "h204_mito_twin_buns",
+          "h205_tide_spikes",
+          "h206_whirl_bun",
+          "h207_habanero_tail",
+          "h208_tide_braid",
+          "h209_clip_bob",
+          "h210_rain_mane",
+          "h211_wave_crop",
+          "h212_twin_tide_tails",
+          "h213_seal_knot",
+          "h214_rain_shag",
+          "h215_side_tail"
+        ],
+        "hair_colors": [
+          "UZUMAKI_CRIMSON",
+          "UZUMAKI_CRIMSON",
+          "UZUMAKI_SCARLET",
+          "UZUMAKI_GARNET",
+          "UZUMAKI_ROSEWOOD",
+          "UZUMAKI_EMBER",
+          "UZUMAKI_CORAL",
+          "AUBURN"
+        ],
+        "eye_colors": [
+          "UZUMAKI_VIOLET",
+          "UZUMAKI_VIOLET",
+          "DARK",
+          "SKY",
+          "UZUMAKI_RUBY"
+        ],
+        "palettes": [
+          "UZUMAKI_WHIRLPOOL",
+          "UZUMAKI_TIDE",
+          "UZUMAKI_HABANERO",
+          "UZUMAKI_SEA"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w201_whirlpool_protector",
+          "w202_sealer_hachimaki"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers",
+          "b04_kunoichi_shorts"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "uzumaki_diamond_seal",
+            "chance": 0.06
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "sealing_master",
+          "name": "Sealing Master",
+          "top": "t201_sealing_master_robe",
+          "bottom": "b204_tide_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "UZUMAKI_SEALER",
+            "UZUMAKI_WHIRLPOOL",
+            "UZUMAKI_SEA"
+          ]
+        },
+        {
+          "id": "whirlpool_haori",
+          "name": "Whirlpool Haori",
+          "top": "t202_whirlpool_haori",
+          "bottom": "b201_whirl_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "UZUMAKI_WHIRLPOOL",
+            "UZUMAKI_HABANERO"
+          ]
+        },
+        {
+          "id": "homestead",
+          "name": "Homestead Dress",
+          "top": "t203_homestead_dress",
+          "bottom": "b202_village_long_skirt",
+          "rank": "academy",
+          "palettes": [
+            "UZUMAKI_HOMESTEAD",
+            "UZUMAKI_SEA",
+            "UZUMAKI_TIDE"
+          ]
+        },
+        {
+          "id": "sensor",
+          "name": "Sensor",
+          "top": "t204_sensor_jacket",
+          "bottom": "b207_sensor_shorts",
+          "rank": "genin",
+          "palettes": [
+            "UZUMAKI_SENSOR",
+            "UZUMAKI_SENSOR",
+            "UZUMAKI_TIDE"
+          ]
+        },
+        {
+          "id": "rain_wanderer",
+          "name": "Rain Wanderer",
+          "top": "t205_rain_wrap_shirt",
+          "bottom": "b206_rain_leggings",
+          "rank": "genin",
+          "palettes": [
+            "UZUMAKI_RAIN",
+            "UZUMAKI_SEA"
+          ]
+        },
+        {
+          "id": "whirlpool_jonin",
+          "name": "Whirlpool Jonin",
+          "top": "t206_whirlpool_flak_vest",
+          "bottom": "b201_whirl_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "UZUMAKI_JONIN"
+          ]
+        },
+        {
+          "id": "tidewater",
+          "name": "Tidewater Genin",
+          "top": "t207_tidewater_wrap",
+          "bottom": "b203_sealer_shorts",
+          "rank": "genin",
+          "palettes": [
+            "UZUMAKI_TIDE",
+            "UZUMAKI_WHIRLPOOL",
+            "UZUMAKI_SEA"
+          ]
+        },
+        {
+          "id": "sealer_coat",
+          "name": "Sealer",
+          "top": "t208_sealer_coat",
+          "bottom": "b206_rain_leggings",
+          "rank": "jonin"
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Villager",
+          "top": "t209_harbor_vest",
+          "bottom": "b201_whirl_trousers",
+          "rank": "academy",
+          "palettes": [
+            "UZUMAKI_SEA",
+            "UZUMAKI_TIDE",
+            "UZUMAKI_HOMESTEAD",
+            "UZUMAKI_WHIRLPOOL"
+          ]
+        },
+        {
+          "id": "mito_ceremony",
+          "name": "Ceremonial Kimono",
+          "top": "t210_mito_ceremonial_kimono",
+          "bottom": "b205_ceremonial_kimono_skirt",
+          "rank": "jonin",
+          "palettes": [
+            "UZUMAKI_CEREMONY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yamanaka",
+      "name": "Yamanaka",
+      "tagline": "Platinum ponytails, sleek purple and lavender, bandaged limbs, the flower shop and the sensor corps",
+      "palettes": {
+        "YAMANAKA_VIOLET": {
+          "name": "Yamanaka Violet",
+          "P": "#6e3f96",
+          "S": "#ddd2e8",
+          "A": "#e06a9a",
+          "L": "#6b5a45",
+          "M": "#aab3b9",
+          "K": "#241d2e",
+          "D": "#3d3557"
+        },
+        "YAMANAKA_LAVENDER": {
+          "name": "Yamanaka Lavender",
+          "P": "#a587c7",
+          "S": "#f1ecf4",
+          "A": "#8a3e8f",
+          "L": "#7a6346",
+          "M": "#b8bec4",
+          "K": "#2a2433",
+          "D": "#4a4266"
+        },
+        "YAMANAKA_FLORIST": {
+          "name": "Yamanaka Florist",
+          "P": "#7d5aa6",
+          "S": "#efe6d2",
+          "A": "#e2a43a",
+          "L": "#7a5a3a",
+          "M": "#aab3b9",
+          "K": "#262230",
+          "D": "#3d3a5c"
+        },
+        "YAMANAKA_SENSOR": {
+          "name": "Yamanaka Sensor",
+          "P": "#3d3650",
+          "S": "#bdb5cd",
+          "A": "#4fb8b8",
+          "L": "#4b4038",
+          "M": "#aab3b9",
+          "K": "#16141c",
+          "D": "#2a2638"
+        },
+        "YAMANAKA_PLUM": {
+          "name": "Yamanaka Plum",
+          "P": "#5c2e5e",
+          "S": "#e6d8e0",
+          "A": "#d8b250",
+          "L": "#6b4a3a",
+          "M": "#b5aa8a",
+          "K": "#1e1520",
+          "D": "#3a2a40"
+        }
+      },
+      "hair_colors": {
+        "YAMANAKA_PLATINUM": {
+          "name": "Yamanaka Platinum",
+          "ramp": [
+            "#7d7356",
+            "#a99d74",
+            "#d2c793",
+            "#ebe2b4",
+            "#fbf6dc"
+          ]
+        },
+        "YAMANAKA_STRAW": {
+          "name": "Yamanaka Straw",
+          "ramp": [
+            "#7a5a22",
+            "#a77f33",
+            "#cfa64b",
+            "#e5c56c",
+            "#f6e29a"
+          ]
+        },
+        "YAMANAKA_ASH": {
+          "name": "Yamanaka Ash",
+          "ramp": [
+            "#706d5c",
+            "#9b9781",
+            "#c6c1a6",
+            "#e0dcc4",
+            "#f7f5e6"
+          ]
+        },
+        "YAMANAKA_RED": {
+          "name": "Yamanaka Red",
+          "ramp": [
+            "#4a1414",
+            "#74201d",
+            "#a2302a",
+            "#c64a3a",
+            "#e2735a"
+          ]
+        }
+      },
+      "eye_colors": {
+        "YAMANAKA": {
+          "name": "Yamanaka Aqua",
+          "ramp": [
+            "#0a1416",
+            "#1f6f78",
+            "#3fa8b0",
+            "#8fdbdc",
+            "#f1efe6"
+          ]
+        },
+        "YAMANAKA_TEAL": {
+          "name": "Yamanaka Teal",
+          "ramp": [
+            "#0a1412",
+            "#1d5f58",
+            "#2f8f85",
+            "#79c9bd",
+            "#f1efe6"
+          ]
+        }
+      },
+      "marks": {
+        "yamanaka_beauty_mark": {
+          "rects": [
+            [
+              2.7,
+              -1.7,
+              0.45,
+              0.45
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        },
+        "yamanaka_blush": {
+          "rects": [
+            [
+              2.5,
+              -1.6,
+              1.3,
+              0.35
+            ]
+          ],
+          "color": "#e79aa6",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h701_ino_ponytail",
+          "h702_mind_walker_tail",
+          "h703_inojin_tail",
+          "h704_root_low_tail",
+          "h705_petal_bob",
+          "h706_florist_bun",
+          "h707_sensor_spikes",
+          "h708_petal_twin_tails",
+          "h709_loose_sweep",
+          "h710_side_braid",
+          "h711_half_up_tail",
+          "h712_swept_crop",
+          "h713_bloom_ponytail",
+          "h714_elder_mane",
+          "h715_sensor_topknot"
+        ],
+        "hair_colors": [
+          "YAMANAKA_PLATINUM",
+          "YAMANAKA_PLATINUM",
+          "YAMANAKA_PLATINUM",
+          "YAMANAKA_PLATINUM",
+          "YAMANAKA_STRAW",
+          "YAMANAKA_STRAW",
+          "YAMANAKA_ASH",
+          "YAMANAKA_ASH",
+          "YAMANAKA_RED"
+        ],
+        "eye_colors": [
+          "YAMANAKA",
+          "YAMANAKA",
+          "YAMANAKA_TEAL"
+        ],
+        "palettes": [
+          "YAMANAKA_VIOLET",
+          "YAMANAKA_LAVENDER",
+          "YAMANAKA_FLORIST",
+          "YAMANAKA_SENSOR",
+          "YAMANAKA_PLUM"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w701_sensor_headset",
+          "w702_florist_kerchief",
+          "w02_forehead_protector"
+        ],
+        "bottoms": [
+          "b08_mesh_leggings"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "yamanaka_beauty_mark",
+            "chance": 0.12
+          },
+          {
+            "id": "yamanaka_blush",
+            "chance": 0.15
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "mind_bloom",
+          "name": "Mind Bloom",
+          "top": "t701_mind_bloom_crop",
+          "bottom": "b701_slit_apron_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "YAMANAKA_VIOLET",
+            "YAMANAKA_LAVENDER"
+          ]
+        },
+        {
+          "id": "mind_walker",
+          "name": "Mind Walker",
+          "top": "t702_mind_walker_coat",
+          "bottom": "b703_wrapped_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "YAMANAKA_VIOLET",
+            "YAMANAKA_PLUM",
+            "YAMANAKA_SENSOR"
+          ]
+        },
+        {
+          "id": "ink_painter",
+          "name": "Ink Painter",
+          "top": "t703_ink_crop_jacket",
+          "bottom": "b702_bandaged_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "shop_apron",
+          "name": "Flower Shop",
+          "top": "t704_florist_apron",
+          "bottom": "b704_florist_trousers",
+          "rank": "genin",
+          "palettes": [
+            "YAMANAKA_FLORIST",
+            "YAMANAKA_LAVENDER"
+          ]
+        },
+        {
+          "id": "florist_wrap",
+          "name": "Florist Wrap",
+          "top": "t705_florist_wrap",
+          "bottom": "b705_long_slit_skirt",
+          "rank": "genin",
+          "palettes": [
+            "YAMANAKA_FLORIST",
+            "YAMANAKA_LAVENDER",
+            "YAMANAKA_VIOLET"
+          ]
+        },
+        {
+          "id": "sensor_corps",
+          "name": "Sensor Corps",
+          "top": "t706_sensor_corps_tunic",
+          "bottom": "b706_sensor_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "YAMANAKA_SENSOR",
+            "YAMANAKA_VIOLET"
+          ]
+        },
+        {
+          "id": "interrogation",
+          "name": "Interrogation",
+          "top": "t707_interrogation_coat",
+          "bottom": "b703_wrapped_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "YAMANAKA_SENSOR",
+            "YAMANAKA_PLUM"
+          ]
+        },
+        {
+          "id": "genin_zip",
+          "name": "Genin Zip",
+          "top": "t708_genin_zip_top",
+          "bottom": "b702_bandaged_shorts",
+          "rank": "genin",
+          "palettes": [
+            "YAMANAKA_VIOLET",
+            "YAMANAKA_LAVENDER"
+          ]
+        },
+        {
+          "id": "elder_haori",
+          "name": "Elder Haori",
+          "top": "t709_elder_haori",
+          "bottom": "b704_florist_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "YAMANAKA_PLUM",
+            "YAMANAKA_VIOLET"
+          ]
+        },
+        {
+          "id": "lily_blouse",
+          "name": "Lily Blouse",
+          "top": "t710_lily_blouse",
+          "bottom": "b705_long_slit_skirt",
+          "rank": "jonin",
+          "palettes": [
+            "YAMANAKA_VIOLET",
+            "YAMANAKA_LAVENDER",
+            "YAMANAKA_PLUM"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yuhi",
+      "name": "Yuhi",
+      "tagline": "Wild black waves and crimson eyes, rose-and-thorn bandage wraps, mist-grey haori: the genjutsu clan",
+      "palettes": {
+        "YUHI_THORN": {
+          "name": "Yuhi Thorn",
+          "P": "#e3d8c6",
+          "S": "#f1ece2",
+          "A": "#b01e2e",
+          "L": "#6b4a3a",
+          "M": "#aab3b9",
+          "K": "#1b1418",
+          "D": "#3b2a33"
+        },
+        "YUHI_CRIMSON": {
+          "name": "Yuhi Crimson",
+          "P": "#8f1d2a",
+          "S": "#efe7dc",
+          "A": "#e07a86",
+          "L": "#5e3f30",
+          "M": "#b5aa8a",
+          "K": "#1a1214",
+          "D": "#3a2128"
+        },
+        "YUHI_NOCTURNE": {
+          "name": "Yuhi Nocturne",
+          "P": "#2c252b",
+          "S": "#e6ddd6",
+          "A": "#c42a3c",
+          "L": "#4a3a33",
+          "M": "#9aa3aa",
+          "K": "#141013",
+          "D": "#3e2a34"
+        },
+        "YUHI_DUSK_ROSE": {
+          "name": "Yuhi Dusk Rose",
+          "P": "#b77f86",
+          "S": "#f3ebe4",
+          "A": "#7d1d2d",
+          "L": "#6b4a3a",
+          "M": "#b5aa8a",
+          "K": "#2a1e22",
+          "D": "#5b3b45"
+        },
+        "YUHI_MIST": {
+          "name": "Yuhi Mist",
+          "P": "#8a8190",
+          "S": "#ece7ee",
+          "A": "#b52638",
+          "L": "#5a4a44",
+          "M": "#aab3b9",
+          "K": "#1d1a22",
+          "D": "#3f3848"
+        },
+        "YUHI_JONIN": {
+          "name": "Yuhi Jonin",
+          "P": "#5f6e3c",
+          "S": "#e6e1d3",
+          "A": "#b8232f",
+          "L": "#7a6346",
+          "M": "#aab3b9",
+          "K": "#1b1518",
+          "D": "#3a2630"
+        },
+        "YUHI_BURGUNDY": {
+          "name": "Yuhi Burgundy",
+          "P": "#6c1f30",
+          "S": "#ece6dc",
+          "A": "#e0603e",
+          "L": "#a07a52",
+          "M": "#aab3b9",
+          "K": "#18141a",
+          "D": "#8b8a8f"
+        }
+      },
+      "hair_colors": {
+        "YUHI_BLACK": {
+          "name": "Yuhi Black",
+          "ramp": [
+            "#0c090c",
+            "#181216",
+            "#251b21",
+            "#3a2a32",
+            "#56404a"
+          ]
+        },
+        "YUHI_WINE_BLACK": {
+          "name": "Yuhi Wine Black",
+          "ramp": [
+            "#12070a",
+            "#22101a",
+            "#341824",
+            "#4f2434",
+            "#723447"
+          ]
+        },
+        "YUHI_UMBER": {
+          "name": "Yuhi Umber",
+          "ramp": [
+            "#140c0a",
+            "#251712",
+            "#38241c",
+            "#523629",
+            "#734c3a"
+          ]
+        },
+        "YUHI_ASH": {
+          "name": "Yuhi Ash",
+          "ramp": [
+            "#2e2a2e",
+            "#4a4549",
+            "#6b656a",
+            "#8f898d",
+            "#b5b0b3"
+          ]
+        }
+      },
+      "eye_colors": {
+        "YUHI_RED": {
+          "name": "Yuhi Red",
+          "ramp": [
+            "#14050a",
+            "#7a0f1c",
+            "#b81d2b",
+            "#e45663",
+            "#f3ece6"
+          ]
+        },
+        "YUHI_GARNET": {
+          "name": "Yuhi Garnet",
+          "ramp": [
+            "#120608",
+            "#5e1420",
+            "#8a2230",
+            "#b84a56",
+            "#f1ebe4"
+          ]
+        }
+      },
+      "marks": {
+        "yuhi_violet_lids": {
+          "rects": [
+            [
+              1.2,
+              -4.3,
+              2.2,
+              0.22
+            ]
+          ],
+          "color": "#6c4a86",
+          "mirror": true
+        },
+        "yuhi_thorn_scar": {
+          "rects": [
+            [
+              2.7,
+              -2.0,
+              0.28,
+              1.1
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h1401_kurenai_wild_mane",
+          "h1402_kurenai_shoulder_waves",
+          "h1403_shinku_shag",
+          "h1404_mirai_layered_bob",
+          "h1405_guard_tail",
+          "h1406_thorn_half_up",
+          "h1407_rose_bun",
+          "h1408_mist_veil",
+          "h1409_illusion_sweep",
+          "h1410_bramble_crop",
+          "h1411_wave_ponytail",
+          "h1412_thorn_braids",
+          "h1413_crimson_flare",
+          "h1414_elder_waves",
+          "h1415_wrapped_tail"
+        ],
+        "hair_colors": [
+          "YUHI_BLACK",
+          "YUHI_BLACK",
+          "YUHI_BLACK",
+          "YUHI_BLACK",
+          "YUHI_WINE_BLACK",
+          "YUHI_WINE_BLACK",
+          "YUHI_UMBER",
+          "YUHI_ASH"
+        ],
+        "eye_colors": [
+          "YUHI_RED",
+          "YUHI_RED",
+          "YUHI_RED",
+          "YUHI_RED",
+          "YUHI_GARNET",
+          "YUHI_GARNET",
+          "DARK"
+        ],
+        "palettes": [
+          "YUHI_THORN",
+          "YUHI_CRIMSON",
+          "YUHI_NOCTURNE",
+          "YUHI_DUSK_ROSE",
+          "YUHI_MIST"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w1401_rose_hairpin",
+          "w1401_rose_hairpin",
+          "w1402_crimson_protector",
+          "w02_forehead_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "yuhi_violet_lids",
+            "chance": 0.2
+          },
+          {
+            "id": "yuhi_thorn_scar",
+            "chance": 0.08
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "rose_thorn",
+          "name": "Rose Thorn",
+          "top": "t1401_rose_thorn_wrap",
+          "bottom": "b1401_bandaged_thighs",
+          "rank": "jonin",
+          "palettes": [
+            "YUHI_THORN"
+          ]
+        },
+        {
+          "id": "genjutsu_jonin",
+          "name": "Genjutsu Jonin",
+          "top": "t1402_genjutsu_jonin_vest",
+          "bottom": "b1402_wrapped_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "YUHI_JONIN"
+          ]
+        },
+        {
+          "id": "after_the_war",
+          "name": "After the War",
+          "top": "t1403_striped_overshirt",
+          "bottom": "b1403_grey_slacks",
+          "rank": "jonin",
+          "palettes": [
+            "YUHI_BURGUNDY"
+          ]
+        },
+        {
+          "id": "crimson_kimono",
+          "name": "Crimson Kimono",
+          "top": "t1404_crimson_kimono",
+          "bottom": "b1404_thorn_hem_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "YUHI_CRIMSON",
+            "YUHI_NOCTURNE"
+          ]
+        },
+        {
+          "id": "bandage_bodice",
+          "name": "Bandage Bodice",
+          "top": "t1405_bandage_bodice",
+          "bottom": "b1405_bandaged_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "mist_haori",
+          "name": "Mist Haori",
+          "top": "t1406_mist_haori",
+          "bottom": "b1402_wrapped_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "YUHI_MIST",
+            "YUHI_NOCTURNE"
+          ]
+        },
+        {
+          "id": "thorn_sash",
+          "name": "Thorn Sash",
+          "top": "t1407_thorn_sash_tunic",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "YUHI_NOCTURNE",
+            "YUHI_CRIMSON",
+            "YUHI_MIST"
+          ]
+        },
+        {
+          "id": "rose_wrap",
+          "name": "Rose Wrap",
+          "top": "t1408_rose_wrap_blouse",
+          "bottom": "b1405_bandaged_shorts",
+          "rank": "chunin",
+          "palettes": [
+            "YUHI_CRIMSON",
+            "YUHI_DUSK_ROSE"
+          ]
+        },
+        {
+          "id": "quiet_years",
+          "name": "Quiet Years",
+          "top": "t1409_simple_wrap_dress",
+          "bottom": "b1401_bandaged_thighs",
+          "rank": "jonin",
+          "palettes": [
+            "YUHI_DUSK_ROSE",
+            "YUHI_THORN"
+          ]
+        },
+        {
+          "id": "illusion_cloak",
+          "name": "Illusion Cloak",
+          "top": "t1410_illusion_cloak",
+          "bottom": "b1402_wrapped_trousers",
+          "rank": "anbu",
+          "palettes": [
+            "YUHI_NOCTURNE",
+            "YUHI_MIST"
+          ]
+        }
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "id": "core",
+      "name": "Core",
+      "role": "shinobi",
+      "tagline": "The first general ninja wardrobe: the Leaf's standard field kit before the collections expanded it.",
+      "pool": {
+        "hair": [
+          "h02_leaf_spikes",
+          "h04_long_straight",
+          "h05_swept_spikes",
+          "h06_low_ponytail",
+          "h08_short_crop",
+          "h09_high_ponytail"
+        ],
+        "hair_colors": [
+          "RAVEN",
+          "ESPRESSO",
+          "CHESTNUT",
+          "AUBURN",
+          "GINGER",
+          "HONEY",
+          "WHEAT",
+          "ASH_BLONDE",
+          "SILVER"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "SKY",
+          "JADE"
+        ],
+        "palettes": [
+          "BRAWLER",
+          "GENIN_SCOUT",
+          "GENIN_TRACKER",
+          "JONIN_COMMANDER",
+          "JONIN_FIELD",
+          "JONIN_KUNOICHI",
+          "JONIN_SENTINEL",
+          "KONOHA_JONIN",
+          "KUNOICHI_VIOLET",
+          "SCROLL_BEARER"
+        ],
+        "headwear": [
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w09_bandana_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers",
+          "b03_genin_track_pants",
+          "b07_cargo_shorts",
+          "b08_mesh_leggings"
+        ],
+        "complexions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "outfits": [
+        {
+          "id": "konoha_jonin",
+          "name": "Konoha Flak Vest",
+          "top": "t02_konoha_flak_vest",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "KONOHA_JONIN"
+          ]
+        },
+        {
+          "id": "genin_scout",
+          "name": "Scout Hoodie",
+          "top": "t13_scout_hoodie",
+          "bottom": "b07_cargo_shorts",
+          "rank": "genin",
+          "palettes": [
+            "GENIN_SCOUT"
+          ]
+        },
+        {
+          "id": "genin_brawler",
+          "name": "Brawler Vest",
+          "top": "t14_brawler_vest",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "genin",
+          "palettes": [
+            "BRAWLER"
+          ]
+        },
+        {
+          "id": "genin_kunoichi",
+          "name": "Kunoichi Tunic",
+          "top": "t15_kunoichi_tunic",
+          "bottom": "b08_mesh_leggings",
+          "rank": "genin",
+          "palettes": [
+            "KUNOICHI_VIOLET"
+          ]
+        },
+        {
+          "id": "genin_tracker",
+          "name": "Tracker Zip Vest",
+          "top": "t16_tracker_zip_vest",
+          "bottom": "b03_genin_track_pants",
+          "rank": "genin",
+          "palettes": [
+            "GENIN_TRACKER"
+          ]
+        },
+        {
+          "id": "genin_scroll",
+          "name": "Scroll Bearer",
+          "top": "t17_scroll_bearer",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "genin",
+          "palettes": [
+            "SCROLL_BEARER"
+          ]
+        },
+        {
+          "id": "jonin_sentinel",
+          "name": "Sentinel Vest",
+          "top": "t18_sentinel_vest",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "JONIN_SENTINEL"
+          ]
+        },
+        {
+          "id": "jonin_field",
+          "name": "Field Vest",
+          "top": "t19_field_vest",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "JONIN_FIELD"
+          ]
+        },
+        {
+          "id": "jonin_kunoichi",
+          "name": "Kunoichi Jonin",
+          "top": "t20_kunoichi_jonin",
+          "bottom": "b08_mesh_leggings",
+          "rank": "jonin",
+          "palettes": [
+            "JONIN_KUNOICHI"
+          ]
+        },
+        {
+          "id": "jonin_commander",
+          "name": "Commander Coat",
+          "top": "t21_commander_coat",
+          "bottom": "b01_shinobi_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "JONIN_COMMANDER"
+          ]
+        }
+      ]
+    }
+  ]
 }

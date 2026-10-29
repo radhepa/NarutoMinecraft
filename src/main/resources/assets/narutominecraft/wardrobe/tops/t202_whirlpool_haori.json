@@ -1,0 +1,136 @@
+{
+  "id": "t202_whirlpool_haori",
+  "kind": "top",
+  "name": "Whirlpool Haori",
+  "gender": "unisex",
+  "texture": "tops/t202_whirlpool_haori.png",
+  "extrasHeight": 16,
+  "tags": [
+    "haori",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lapel_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        0.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        27,
+        0
+      ]
+    },
+    {
+      "id": "lapel_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        0.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    },
+    {
+      "id": "haori_cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short open red haori over a dark shirt, wave-edged sleeves, a great whirlpool on the back."
+}

@@ -1,0 +1,163 @@
+{
+  "id": "t408_scout_mantle",
+  "kind": "top",
+  "name": "Scout Mantle",
+  "gender": "unisex",
+  "texture": "tops/t408_scout_mantle.png",
+  "extrasHeight": 32,
+  "tags": [
+    "hyuga",
+    "mantle",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "right_capelet",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        -2.4,
+        -2.6
+      ],
+      "size": [
+        4,
+        4,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "left_capelet",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.4,
+        -2.4,
+        -2.6
+      ],
+      "size": [
+        4,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "toggle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        11
+      ]
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.0,
+        3.2
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        -1
+      ],
+      "size": [
+        8,
+        3,
+        2
+      ],
+      "uv": [
+        26,
+        11
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short cream hooded mantle over the shoulders, a fitted dark shirt, a lavender toggle."
+}

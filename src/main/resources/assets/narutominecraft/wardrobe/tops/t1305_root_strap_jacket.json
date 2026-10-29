@@ -1,0 +1,75 @@
+{
+  "id": "t1305_root_strap_jacket",
+  "kind": "top",
+  "name": "Root Strap Jacket",
+  "gender": "unisex",
+  "texture": "tops/t1305_root_strap_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "belt_ring",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.7,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Black bodysuit and gloves, a short dark jacket, dark-red straps over both shoulders, a ringed belt."
+}
