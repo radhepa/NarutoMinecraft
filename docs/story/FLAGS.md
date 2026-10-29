@@ -29,7 +29,7 @@ the Night Watch). Gates in the character briefs use them ("never before `story.c
 | `story.seed.ruined_shrine` | Ch 0.5 | Ch 46 |
 | `story.seed.watcher` | Ch 0.8 | Ch 52 |
 | `story.clue.medic.1` | Ch 0.6 | Ch 38 |
-| `story.seed.stipend` | Ch 1.2 | Ch 7, Ch 19 to 20, Ch 55 |
+| `story.seed.stipend` | Ch 1.2 | Ch 19 to 20, Ch 55 (extended in the Fourth's name to every child brought home, and made law). The stipend itself (30 ryo every morning) continues for the whole game |
 | `story.seed.keeper_noticed` | Ch 1.2 | Ch 32, Ch 36 |
 | `story.clue.councillor.1` | Ch 1.2 | Ch 38 |
 | `story.seed.flare` | Ch 3.2 | Ch 24, `filler.lake_lanterns` |

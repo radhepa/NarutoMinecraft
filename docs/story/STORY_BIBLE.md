@@ -71,7 +71,7 @@ The Academy and the Genin years are a life: classmates, a squad, a sensei, missi
 them, small wrong things: a medic who records a chakra sample, a flare that takes on a partner's
 nature, a sinking sun scratched on a door, a cut page in the library, chakra paper that chars
 violet in the player's hand, a stranger who tells a teammate their lost parent is alive, two
-shadows in ash-violet cloaks and one word, **Yūgure**. At the Chunin Exams Yūgure attacks the
+shadows with soot-marked wrists and one word, **Yūgure**. At the Chunin Exams Yūgure attacks the
 stadium; a burning woman stops in front of the player and says **"Kagari"**; the Fourth falls, is
 crippled or is taken; the Fifth, a hard Hyuga, distrusts the player's blood.
 
@@ -90,15 +90,16 @@ On the road to Hokage the player restores the Kagari (or founds a clan), learns 
 are, and learns Yūgure's real goal: not the Last Bonfire of the creed but the **Hollow Crown**, the
 whole Leaf's chakra forced through the player as a wick and taken by the leader, the last Kagari
 child of the purge, ageless on stolen chakra. On the Rock, offered the dark mirror, the player
-refuses; every bond they made kindles toward them by choice; a fire given freely cannot be taken,
-and the leader's own mirror turns on him. The Seventh names the player successor. Their face is
-carved as the Eighth.
+refuses; every bond they made kindles toward them by choice, first the red cord; a fire given
+freely cannot be taken, and the leader's own mirror turns on him. The Seventh names the player
+successor. Their face is carved as the Eighth, and their first act extends the Fourth's stipend to
+every child brought home and makes it law.
 
 ## Reveal pacing
 
 | By the end of | The player knows | The player suspects |
 |---|---|---|
-| Academy (beta) | Someone in a sinking-sun cloak took you and is watching you | Your chakra is strange; the keeper knows something; someone cut a page |
+| Academy (beta) | Someone who marks doors with a sinking sun took you and is watching you | Your chakra is strange; the keeper knows something; someone cut a page |
 | Genin (beta) | The name **Yūgure**; it smuggles chakra paper and orphans; the paper chars near you | The sensei knows what you are; someone in the Leaf helps them |
 | Chunin Exams (beta) | Yūgure attacked the Leaf; a woman of theirs called you **Kagari** | Kagari is a clan, and you are of it |
 | Chunin | Your gift is Kindling (you see bonds as threads and can kindle a friend past their limits), a Kagari gift; the paper hunts your bloodline; the porter was the hand; there is a voice; teammate_b's parent is with Yūgure; the charm half is a parent's pair | The Leaf erased the Kagari; who the voice is (an attentive player knows) |
@@ -116,7 +117,7 @@ four are on the Rock at the start; the Fifth and Sixth are fixed carvings placed
 | 1 | Senju | Broad, long dark hair, a calm founder's face | The founding | The charter with its fourth clause, the memorial stone |
 | 2 | Uchiha | Lean, sharp-featured, a high collar | The first generation | The Academy, the ANBU, the Chunin Exams; the Quiet Ending, the sealed archive and the chiselled names |
 | 3 | Sarutobi | A woman with a long braid and a kind, lined face | Thirty years of peace | The clan council, the Will of Fire lantern walk, the keeper's oath, and a letter in the archive "for whoever comes asking" |
-| 4 | Akimichi | A big, warm man with a broad smile | Sitting when you arrive | The orphan's stipend; his fate at the finals is `twist.fourth_fate` |
+| 4 | Akimichi | A big, warm man with a broad smile | Sitting when you arrive | The orphan's stipend (it runs the whole game; the Eighth extends it and makes it law); his fate at the finals is `twist.fourth_fate` |
 | 5 | Hyuga | A severe woman, pale eyes, hair tied high | After the finals; the Chunin years | Curfews and a sensor corps; steps down after the Tobari crisis (Ch 31) |
 | 6 | Yamanaka | A soft-spoken man with long pale hair | The Jonin years | Opens the archive, makes the Quiet Ending public, raises the Kagari memorial, resigns (Ch 42) |
 | 7 | The sensei | The sensei's own look | The road to Hokage | Leads the Leaf through the war with Yūgure; names you successor |
@@ -163,7 +164,7 @@ four are on the Rock at the start; the Fifth and Sixth are fixed carvings placed
 
 | Roadmap says | The truth |
 |---|---|
-| The prologue's hideout | A Yūgure nursery; the guards wear ash-violet cloaks with a sinking sun |
+| The prologue's hideout | A Yūgure nursery; the guards wear road clothes with a sinking sun drawn in soot inside the wrist, and ash-violet scarves |
 | The ruined shrine in the prologue hills | The Kagari clan shrine, burned in the Quiet Ending; the old Kagari land, where the player can restore the clan |
 | The sealed door at the foot of the Rock | The archive of the Quiet Ending, with the Hearthstone |
 | The memorial stone at Training Ground 3 | Names chiselled off: the Kagari dead |
@@ -171,8 +172,8 @@ four are on the Rock at the start; the Fifth and Sixth are fixed carvings placed
 | Kindling Bond, unlocked by a story moment after the beta | The Kagari gift; the dark mirror is taking chakra by force |
 | Rotating story roles bound by the `twists` stream | `twist.traitor`, `twist.lineage`, `twist.fourth_fate` |
 | The Chunin Exams finals | Yūgure attacks the stadium; the second names you Kagari; the Fourth's fate; the Fifth named |
-| The antagonist organization, its scouts and cells | Yūgure and its two-man cells |
-| The Shimura clan home | Its cellar is the entrance to the Undercroft (the ANBU branch) |
+| The antagonist organization, its scouts and cells | Yūgure and its hearths (cells of three or more, each tied to a nursery) |
+| The Shimura clan home | Its cellar shelters the Undercroft, the heirs of the sealing team of the Quiet Ending (the ANBU branch) |
 
 ## Side quest secrets
 
@@ -228,7 +229,7 @@ Story ties of board missions ([SYSTEMS.md](SYSTEMS.md) §1). The board's premise
 |---|---|
 | `clan.kurama.3` | The missing painting shows the Kagari shrine before it burned; a Kurama painter (one of the twenty-seven's adoptive family) made it and was punished |
 | `clan.tsuchigumo.3` | The intruder at the sealed shrine room is a Yūgure scout looking for the clan's natural-energy seal |
-| `clan.shimura.3` | The unexplained matter belongs to the Undercroft; helping opens the Night Watch's first contact |
+| `clan.shimura.3` | The unexplained matter is the Undercroft that a Shimura elder shelters; helping opens the Night Watch's cellar door (N3) |
 | `clan.tobari.3` | What moves on the wall unheard is a Yūgure cell using a sound-smothering technique learned from a Tobari deserter (Ch 30 to 31) |
 | `clan.hatake.4` | The keepsake's heir is the sensei if no Hatake lives in the save; otherwise the last Hatake |
 | `clan.uzumaki.3` | The scattered Uzumaki is genuine, and a sealing expert who helps with the archive's seals (Ch 36) |
@@ -245,13 +246,13 @@ quest actions and conditions on roles, never code. Questions and answers: [DIALO
 | Ch 0, the red cord | `lost_child` | Bond created at level 2 with `bond_flag red_cord`; it does not grow while she is gone; it starts growing when she comes home (N6 or Ch 47) |
 | Ch 3, the flare | `teammate_a` | `bond_event trained_together`; flavor only, never a Kindling grant |
 | Ch 6, a classmate confides | `teammate_b` | Keep it (`kept_secret`) or tell the instructor (`broke_secret`) |
-| Ch 8, the bells | whoever grabs with you | `shared_moment bond.bells` |
+| Ch 8, the bells (three bells on one red cord, taken together) | the squad | `shared_moment bond.bells` |
 | Ch 11, the campfire | `teammate_a` | Needs `friendship [teammate_a, 5]`; `shared_moment`, `heart_to_heart` |
 | Ch 13, the stranger | `teammate_b`, `sensei` | Tell the sensei: `went_over_their_head` with b, `kept_promise` with the sensei. Keep: `kept_secret` with b. Go: `stood_by_them` and a `reckless_charge` the sensei hears of |
 | Ch 14, the suspicion | `sensei` | `bond_meter [sensei, trust, 50]` gates the secret training (Ch 25) |
 | Ch 16, the night watch | teammates | `shared_moment bond.night_watch`; the campfire leans only with `squad_cohesion 50` |
 | Ch 19, the attack | teammates or the rival | The higher level covers you (`saved_by_them`); both under 4: the rival |
-| Ch 24, the first kindling | the teammate at the highest level, 6 or more; else the sensei | `saved_by_them`; their nature kindled; `story.kindling.awakened` |
+| Ch 24, the first kindling | the teammate at the highest level, 6 or more; else the sensei | `saved_by_them`; their own technique kindled past its limits; `story.kindling.awakened`. Story floor: the scripted target counts as Spark in this scene |
 | Ch 26, b's road | `teammate_b` | `bond_meter [teammate_b, trust]`: 60+ stays, 30 to 59 nearly joins (`return_to_squad`), under 30 leaves (`remove_from_squad story`) |
 | Ch 36, the keeper's door | `elder_keeper` | `bond_meter [elder_keeper, trust, 60]` and `friendship [elder_keeper, 6]`: he opens it himself |
 | Ch 39, the voice | `twist.traitor` | Never gated by the reveal. `start_conflict` with `broke_secret`; turning needs `friendship 4`; at 7, "Why you" |
@@ -260,6 +261,7 @@ quest actions and conditions on roles, never code. Questions and answers: [DIALO
 | N6 / Ch 47, giving flame | `lost_child` | `gave_flame` (requested act); her bond grows from 2 |
 | Ch 50, the doors | clans and districts | `standing` gates per quarter |
 | Ch 53, every fire | everyone at 6+ | The watch-fire's size is `BondWeb.score` (15 small, 40 strong, 70 the whole village) |
-| Ch 53, the second | `yugure_second` | Lives with `bond_web 40` or `friendship 4` |
-| The librarian trains the gift (innocent) | `librarian` | `friendship [librarian, 7]` and `kindling_uses` on any bond of 6+ |
+| Ch 53, the first flames | `lost_child`, `sensei` | The red cord and the sensei kindle first in every save, at any level (the lonely floor) |
+| Ch 53, the second | `yugure_second` | Lives with `bond_web 40`, or `friendship 4`, or `friendship [squad4_c, 6]` with `ans.squad4_c.second` not "someone else first" |
+| The librarian teaches the gift's old forms | `librarian` | Before Ch 39, identical in every save: `friendship [librarian, 7]` and `story.kindling.awakened` (lore and practice: the songs, keeping the flame, the ember mark). After Ch 40 only if innocent |
 | The merchant turns informant (innocent) | `merchant` | `friendship [merchant, 6]` after Ch 40 |
