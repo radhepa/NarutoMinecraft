@@ -7,7 +7,7 @@ Come in, {player}. Browse as long as you like, reading the first page is free.
 Hello! Mind the stack by the door, it's the new arrivals and it's leaning.
 Good day. If you're looking for something, I've probably read it.
 
-## shop.bookshop.greet  shop=bookshop  stage=child|teen  fn=commerce,react
+## shop.bookshop.greet  shop=bookshop  player_stage=child|teen  fn=commerce,react
 Card packs? Top of the counter. The new set came in yesterday.
 
 ## shop.bookshop.browse  shop=bookshop  fn=commerce

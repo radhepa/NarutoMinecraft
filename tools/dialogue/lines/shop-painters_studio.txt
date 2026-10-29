@@ -1,0 +1,51 @@
+# The Kurama painters' studio in the artists' lane: paints, brushes, screens and portraits by commission.
+#! fn: commerce
+
+## shop.painters_studio.greet  shop=painters_studio  fn=commerce
+Welcome. Careful near the easels, the paint's still wet.
+Come in, {player}. Look all you like, the pictures don't mind.
+Hello. Paints in the cabinet, finished work on the walls, and me in the middle of it all.
+Welcome to the studio. Speak softly, someone's sitting for a portrait.
+
+## shop.painters_studio.greet  shop=painters_studio  clan=kurama  fn=commerce,worldbuild
+Welcome to the Kurama studio. Every screen in this lane was painted by someone in our family.
+
+## shop.painters_studio.browse  shop=painters_studio  fn=commerce
+Ground pigments in the jars. Vermilion, indigo, malachite. Mix with glue and water.
+Brushes from rat whisker to wolf hair. The finer the line, the dearer the brush.
+Painted screens and scrolls, for sale. A room changes with one picture on the wall.
+Portraits by commission. Sit three afternoons, and you'll be on a scroll forever.
+
+## shop.painters_studio.buy  shop=painters_studio  kind=cycle  fn=commerce
+{item}. {pay}. Keep the jars sealed or the colour fades.
+That's {pay}. Bring me the first thing you paint with it.
+Here. Roll it loose, never fold a painting.
+{pay}, thank you. Hang it where the morning light reaches it.
+
+## shop.painters_studio.cant_afford  shop=painters_studio  kind=cycle  fn=commerce
+That screen is a month of work, and the price says so. A small scroll, perhaps?
+Short. Ink and paper cost little, and great painters began with only that.
+
+## shop.painters_studio.sold_out  shop=painters_studio  kind=cycle  fn=commerce
+No {item} left. Indigo comes from far away, and slowly.
+That painting found a home this morning. I'm glad, and a little sad.
+
+## shop.painters_studio.order_ready  shop=painters_studio  kind=cycle  fn=commerce
+Your portrait's finished. I think I caught you. Come and see if you agree.
+The {item} you ordered is dry and mounted. Handle it by the rollers.
+Your commission is ready. I added a little sky behind, I hope you don't mind.
+All done. The last coat took a week to dry, but it was worth it.
+
+## shop.painters_studio.closing  shop=painters_studio  time=evening|night  fn=commerce
+The light's going. I don't sell colours by lamplight, they lie.
+Closing the studio. Come back in the morning, when the paintings are awake.
+
+## shop.painters_studio.recommend  shop=painters_studio  fn=commerce,teach
+Start with ink alone. Learn the line, then learn colour.
+The {item}. It's the colour of the river at dusk.
+A small painting for your room. It's a window when you can't leave.
+A portrait makes a gift people keep all their lives. Think of someone, and book a sitting.
+
+## shop.painters_studio.regular  shop=painters_studio  level=3..10  fn=commerce,deepen_bond
+You have an eye for it. I've watched you stand in front of the same screen for an hour.
+Sit, if you like. I'll sketch while you look. It's how I say thank you.

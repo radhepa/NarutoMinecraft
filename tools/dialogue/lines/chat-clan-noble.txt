@@ -21,11 +21,6 @@ Living in a founding family means everyone expects you to be wise. Mostly I just
 ## chat.clan  clan=senju  fn=hook
 A dry week is coming, the elders say, and the tree drinks more than the well gives. We'll need extra hands with buckets.
 
-## chat.clan  clan=senju  same_clan=yes  fn=worldbuild,deepen_bond
-Have you planted your sapling yet, {player}? There's a spot by the gate with good soil. I've been keeping it clear.
-The tree knows its own. Sit under it for an hour and see if you don't feel it, cousin.
-You're Senju, so the hall's tea is yours whenever you want it. Nobody has to invite you; you just come in.
-
 # -- Uzumaki -------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=uzumaki  fn=worldbuild
@@ -45,11 +40,6 @@ Some days the memorial feels heavy. Then I repaint a seal and it feels like keep
 
 ## chat.clan  clan=uzumaki  fn=hook
 The ladder by the memorial has a cracked rung, and nobody here is a carpenter. I'd rather ask before somebody falls.
-
-## chat.clan  clan=uzumaki  same_clan=yes  fn=worldbuild,deepen_bond
-Another Uzumaki in the village! You've no idea how much that means here. Come and see the wall; we'll find a place for your brush.
-Every one of us helps with the spring seals, {player}. I'll teach you the first stroke. It's harder than it looks and more fun than it sounds.
-When you walk into the memorial hall, say your name out loud. The old ones like to hear it.
 
 # -- Uchiha --------------------------------------------------------------------------------------------
 
@@ -72,11 +62,6 @@ I practise fire jutsu at the lake at dawn. My little cousin counts how long the 
 ## chat.clan  clan=uchiha  fn=hook
 A market stall keeps reporting thefts to the station and then refusing to say what was taken. I'd like to know what we're guarding.
 
-## chat.clan  clan=uchiha  same_clan=yes  fn=worldbuild,deepen_bond
-You wear the fan, {player}. Carry it straight. Every Uchiha on the street will notice if you don't.
-The station has a bench outside for family. Sit there anytime. The officers on duty will pretend not to see you, which is how we say welcome.
-We don't say it often, but you're one of us. That counts for something in this quarter.
-
 # -- Hyuga ---------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=hyuga  fn=worldbuild
@@ -97,11 +82,6 @@ I can tell how angry my father is by how quietly he sets down his cup. Today it 
 ## chat.clan  clan=hyuga  fn=hook
 One of the young branch-house cousins has been training alone at night, far past the curfew. I'd like someone to check on them without making it a matter.
 
-## chat.clan  clan=hyuga  same_clan=yes  fn=worldbuild,deepen_bond
-You'll be expected at the dojo, {player}. Not to win. To show up, every week, without being asked.
-The elders watch how kin hold their teacups. Keep your wrist level and your eyes down and they'll warm to you faster.
-Come and feed the koi with me some morning. It's the only thing in the estate nobody judges you for.
-
 # -- Nara ----------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=nara  fn=worldbuild
@@ -121,11 +101,6 @@ The deer trust me more than people do. I don't take it personally; deer are bett
 
 ## chat.clan  clan=nara  fn=hook
 A few of the deer have been limping near the forest's north edge. It's probably a fallen fence. Probably.
-
-## chat.clan  clan=nara  same_clan=yes  fn=worldbuild,deepen_bond
-There's a spare shogi board on my porch with your name on it, {player}. Loser feeds the deer.
-Family helps with the deer count. Bring a notebook and something to sit on; it's mostly waiting.
-You don't have to be clever to be a Nara. You just have to know when not to bother. You'll get there.
 
 # -- Akimichi ------------------------------------------------------------------------------------------
 
@@ -148,11 +123,6 @@ My favourite sound is a full table going quiet because the food's arrived.
 ## chat.clan  clan=akimichi  fn=hook
 The barbecue house has had a quiet season. Some of the elders want to change the menu, and some would rather close it than change a thing.
 
-## chat.clan  clan=akimichi  same_clan=yes  fn=worldbuild,deepen_bond
-You're family, so you don't need an invitation to the kitchen hall. Come hungry, {player}. Come very hungry.
-Akimichi feed their own first. If anyone in the quarter sees you skip a meal, they'll tell my grandmother, and then you'll eat twice.
-The clan feast needs every pair of hands. Can you carry a tray without tipping it? We'll find out.
-
 # -- Yamanaka ------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=yamanaka  fn=worldbuild
@@ -172,11 +142,6 @@ Some days I'd like to be a little less perceptive. You notice too much about peo
 
 ## chat.clan  clan=yamanaka  fn=hook
 Someone keeps ordering a bouquet with a message no flower should send, and asking us to leave it unsigned. I'd like to know who it's for.
-
-## chat.clan  clan=yamanaka  same_clan=yes  fn=worldbuild,deepen_bond
-Every Yamanaka works a shift at the shop, {player}. You'll learn the language of flowers by the end of your first week, or I'll eat a rose.
-Pick a flower for your windowsill from the greenhouse. Family takes one free. Choose carefully; we'll all read it.
-The quiet hall's door is never locked to kin. Go and sit in there when the street's too loud. It helps.
 
 # -- Inuzuka -------------------------------------------------------------------------------------------
 
@@ -198,11 +163,6 @@ I've never been able to whisper. Grew up shouting over forty dogs, so the dogs g
 ## chat.clan  clan=inuzuka  fn=hook
 A young ninken has gone missing near the wall. Its partner's frantic, and the scent trail stops dead at a stream.
 
-## chat.clan  clan=inuzuka  same_clan=yes  fn=worldbuild,deepen_bond
-Family doesn't wait on the pairing day, {player}. Come round the kennels and let the pups have a look at you. One of them is already staring.
-Inuzuka look after Inuzuka, two legs or four. Anyone gives you trouble, the whole pack hears about it.
-The kennels are short a pair of hands at feeding time. Kin eats with the dogs once a week. It's tradition, mostly because I said so.
-
 # -- Sarutobi ------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=sarutobi  fn=worldbuild
@@ -222,11 +182,6 @@ I'm tired a lot. A Sarutobi is supposed to burn bright, and nobody mentions how 
 
 ## chat.clan  clan=sarutobi  fn=hook
 We need a hundred more lanterns for the walk this year, and the paper merchant's sold out. Somebody has to find another supplier.
-
-## chat.clan  clan=sarutobi  same_clan=yes  fn=worldbuild,deepen_bond
-The hearth seat is yours, {player}. Kin doesn't have to be offered it twice.
-You'll carry a lantern in the New Year walk with the rest of us. Don't let it go out; my grandmother keeps a list.
-Come to the staff yard some evening. Every Sarutobi learns the first form, and you're no exception.
 
 # -- Aburame -------------------------------------------------------------------------------------------
 
@@ -248,11 +203,6 @@ I laughed once, at the Academy. It surprised everyone so much I've been careful 
 ## chat.clan  clan=aburame  fn=hook
 A rare beetle is hatching in the east garden this week, and the dogs next door won't stay out. I'd value a polite fence.
 
-## chat.clan  clan=aburame  same_clan=yes  fn=worldbuild,deepen_bond
-The hives know you're family, {player}. They settled the moment you came in. That is not a small thing.
-Kin help move a hive once a season. It takes patience and slow hands. I think you have both.
-You are welcome in the garden at any hour. The insects will not mind you. That is the highest compliment I know.
-
 # -- Hatake --------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=hatake  fn=worldbuild
@@ -272,12 +222,6 @@ The old ninken sleeps on the porch every afternoon in the same patch of sun. I t
 
 ## chat.clan  clan=hatake  fn=hook
 The lane's landlord keeps asking whether the house is for sale. It isn't. I could use someone to say so more loudly than I do.
-
-## chat.clan  clan=hatake  same_clan=yes  fn=worldbuild,deepen_bond
-Another Hatake. The house just doubled. Come in, {player}. The dogs already know your scent.
-There's a room upstairs nobody's using. It's not much, but it's family, and that counts here.
-The ninken followed you home yesterday, didn't they? That's how this house says hello.
-I don't have much to teach you that a book can't. But I can make tea, and the kettle is always warm.
 
 # -- Kurama --------------------------------------------------------------------------------------------
 
@@ -299,11 +243,6 @@ Some days I'm not sure whether I'm seeing what's there or what I'd rather paint.
 ## chat.clan  clan=kurama  fn=hook
 One of the smaller screens from the hall has gone missing. The house won't say much about it, but everyone is rather quiet today.
 
-## chat.clan  clan=kurama  same_clan=yes  fn=worldbuild,deepen_bond
-Kin have a brush on the studio wall. I've hung one for you, {player}. You don't have to use it, but it's there.
-Every Kurama sits for a family portrait once. When you're ready, the north studio is yours for an afternoon.
-Come and grind ink with me. It's the dullest job in the house, and the one everybody secretly loves.
-
 # -- Shimura -------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=shimura  fn=worldbuild
@@ -323,12 +262,6 @@ I respect the Sarutobi, though I would never say so at council. Their hearth is 
 
 ## chat.clan  clan=shimura  fn=hook
 A council letter went astray between the Residence and our gate last week. It was found, still sealed. Someone wanted it found.
-
-## chat.clan  clan=shimura  same_clan=yes  fn=worldbuild,deepen_bond
-You are Shimura. Stand still when others fidget. It will be noticed, {player}.
-Kin carry the family's letters once they are old enough. I think you are old enough.
-This house says little. Know that when we say you are welcome, we have chosen the word carefully.
-The evening table has a place for you. Same time, every night. Be on time and nothing more will be asked.
 
 # -- Yuhi ----------------------------------------------------------------------------------------------
 
@@ -350,11 +283,6 @@ I've been told I have a cold stare. I've practised it in the mirror, so I'm glad
 ## chat.clan  clan=yuhi  fn=hook
 One of the old trees in the grove is losing its leaves out of season. The elders blame the Kurama's studio water. The Kurama blame the weather.
 
-## chat.clan  clan=yuhi  same_clan=yes  fn=worldbuild,deepen_bond
-Come to the grove at dusk, {player}. Kin learn the first illusion under the split tree. It never quite works the first time.
-Pick a rose for your room. Family picks first. Mind the thorns; they don't know you yet.
-You'll pour tea at the spring viewing with the rest of us. Whether it is tea is up to you.
-
 # -- Gekko ---------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=gekko  fn=worldbuild
@@ -375,7 +303,3 @@ I cough in the cold. I always have. A swordsman learns to make even a cough soun
 ## chat.clan  clan=gekko  fn=hook
 A named blade in the family was lent, against custom, and hasn't come back. Nobody will say who lent it. Everybody knows.
 
-## chat.clan  clan=gekko  same_clan=yes  fn=worldbuild,deepen_bond
-Stand in the crescent on the dojo floor, {player}. Every Gekko has. Now you have.
-Come up to the platform on the next full moon. Kin watch the duels from the front row.
-When you're ready, you'll name your blade. Take your time. It's harder than naming a child, my mother says.

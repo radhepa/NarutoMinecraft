@@ -1,0 +1,47 @@
+# The Academy supply counter: practice gear, notebooks and brushes, for Academy students only.
+#! fn: commerce
+
+## shop.academy_supply.greet  shop=academy_supply  fn=commerce
+Supply counter. Student card, please. Well, your face will do, I know everyone.
+Hello, {player}! Run out of practice shuriken again?
+Come in. Quick, before the bell. The queue's long after the throwing lesson.
+Good morning. Notebooks, brushes, practice gear. What'll it be?
+
+## shop.academy_supply.greet  shop=academy_supply  player_rank=!academy  fn=commerce,react
+You've graduated! This counter is for students only now. Try the weapon shop on the market street.
+
+## shop.academy_supply.browse  shop=academy_supply  fn=commerce
+Practice kunai, blunt-tipped. Practice shuriken, rubber-edged. Nobody loses an eye on my watch.
+Notebooks ruled for hand signs, and brushes for the calligraphy lesson.
+Training weights for your ankles. The taijutsu teacher recommends them, your legs won't.
+Target paper by the sheet. Draw your own rings if you like.
+
+## shop.academy_supply.buy  shop=academy_supply  kind=cycle  fn=commerce
+{item}. {pay}. Don't lose it on the first day.
+Here you go. Write your name on it.
+That's {pay}. Study hard!
+One {item}, student price. {pay}.
+{pay}. Bring it back if it breaks in a lesson, I'll swap it.
+
+## shop.academy_supply.cant_afford  shop=academy_supply  kind=cycle  fn=commerce
+Short? Your stipend comes in tomorrow. Come back then.
+Not enough. Borrow from the lending box, under the counter. Return it clean.
+A little under. The plain notebook is cheaper and has the same pages.
+
+## shop.academy_supply.sold_out  shop=academy_supply  kind=cycle  fn=commerce
+Out of {item}. Every first-year bought one this week.
+No practice kunai left. The yard eats them, I swear.
+
+## shop.academy_supply.closing  shop=academy_supply  time=afternoon|evening  fn=commerce
+The counter shuts when the last lesson ends. Hurry.
+Closing! Go home and do your homework.
+
+## shop.academy_supply.recommend  shop=academy_supply  fn=commerce,teach
+Buy a spare brush. They always split the week before the written test.
+The {item}. Every teacher here used one as a student.
+Ankle weights, if you want to be faster at the obstacle course. Take them off for the test.
+Practice shuriken are cheap. Throw a hundred a day, and the real ones will feel easy.
+
+## shop.academy_supply.regular  shop=academy_supply  level=3..10  fn=commerce,deepen_bond
+You again! You go through more target paper than the whole class.
+I saved you a good brush. The rest of the batch is scratchy.

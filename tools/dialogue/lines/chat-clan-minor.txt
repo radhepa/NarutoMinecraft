@@ -19,11 +19,6 @@ My father taught me one thing about guarding: the dull hour is the dangerous one
 ## chat.clan  clan=shiranui  fn=hook
 Somebody keeps moving the targets on our wall a hand's width to the left every night. My aim's fine; my patience isn't.
 
-## chat.clan  clan=shiranui  same_clan=yes  fn=worldbuild,deepen_bond
-Family throws at the wall every evening, {player}. Bring your own needles and don't aim at the windows.
-Relax your shoulders, cousin. A Shiranui never looks like they're trying, even when they are.
-I've got a spare senbon case with the family mark on the clasp. It's yours. Don't lose it in the river.
-
 # -- Morino --------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=morino  fn=worldbuild
@@ -43,15 +38,10 @@ I've never raised my voice in an interview. Quiet is far more effective. It work
 ## chat.clan  clan=morino  fn=hook
 A woman from the river district keeps coming to our gate asking for news of her brother. We've no word, but she should hear that from someone kind.
 
-## chat.clan  clan=morino  same_clan=yes  fn=worldbuild,deepen_bond
-You don't have to frown to be a Morino, {player}. You just have to listen longer than anyone else.
-Family gets a coat when they're ready. Yours is on the hook by the door, a little big. You'll grow.
-Come for the dinner without questions. You'll find out how restful it is.
-
 # -- Umino ---------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=umino  fn=worldbuild
-Half the village was taught by an Umino. The other half was taught by someone an Umino taught.
+Ask any shopkeeper on the Academy streets who taught them to write, and nine times in ten the answer is an Umino.
 Our houses are on the Academy streets, so close you can hear the morning roll call from our kitchens.
 Clan day is teachers' day. Former pupils leave notes on our doorsteps, and some of them are very rude about our handwriting.
 We tie our hair back with a brush cord, every one of us. It started as a joke and became a family mark.
@@ -66,11 +56,6 @@ Patience isn't a gift. It's a muscle, and mine is very tired on Fifth Days.
 
 ## chat.clan  clan=umino  fn=hook
 One of the pupils has stopped coming to class. The family hasn't said why, and the child's desk is very tidy now.
-
-## chat.clan  clan=umino  same_clan=yes  fn=worldbuild,deepen_bond
-An Umino at the Academy, {player}! The instructors will have opinions about whether you should be easier or harder on yourself.
-Family helps mark the practice tests. Red brush, light hand, kind comments. You'll be good at it.
-You'll teach one day. All of us do, sooner or later, whether we mean to or not.
 
 # -- Haruno --------------------------------------------------------------------------------------------
 
@@ -91,10 +76,6 @@ Bargaining is a conversation. The best customers are the ones who haggle back an
 ## chat.clan  clan=haruno  fn=commerce
 Haruno prices are fair and we'll tell you so twice. Rice crackers two ryo, tea tins ten, and the cushions are on sale this week.
 
-## chat.clan  clan=haruno  same_clan=yes  fn=worldbuild,deepen_bond
-Family works the counter, {player}. One Market Day with me and you'll never be cheated at a stall again.
-There's a pink apron in the back with your size on it. Wear it with pride, or at least with tolerance.
-
 # -- Namiashi ------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=namiashi  fn=worldbuild
@@ -113,11 +94,6 @@ I envy the Gekko their moon platform. I'd never tell them. Please don't.
 
 ## chat.clan  clan=namiashi  fn=hook
 Somebody has shifted one of the river stones our children train on. Just a little, just enough to make the youngest slip.
-
-## chat.clan  clan=namiashi  same_clan=yes  fn=worldbuild,deepen_bond
-Family crosses the stones every morning at dawn, {player}. Come along. I'll catch you the first time, but only the first time.
-Take your sandals off when you come into the dojo. Feel the floor. That's the first lesson, and the longest.
-A Namiashi never stamps. Walk softly, cousin, and you'll hear far more than anyone stomping around you.
 
 # -- Hagane --------------------------------------------------------------------------------------------
 
@@ -138,11 +114,6 @@ I know every carter by the sound of their wheels. That one squeaks, that one wob
 ## chat.clan  clan=hagane  fn=hook
 A message on the relay came back with the seal broken. Nobody on the route admits to dropping it, and I've asked everybody twice.
 
-## chat.clan  clan=hagane  same_clan=yes  fn=worldbuild,deepen_bond
-Family runs the wall relay once a season, {player}. All the way round before the bell. You'll be fast at it.
-Come and sit in the gate booth with me. You'll hear more news in an hour there than in a week anywhere else.
-Kin get a key to the shop's back door. Mind the step; it's the only thing we never fixed.
-
 # -- Kinoshita -----------------------------------------------------------------------------------------
 
 ## chat.clan  clan=kinoshita  fn=worldbuild
@@ -161,11 +132,6 @@ I like the smell of sawdust better than flowers. My spouse buys me cedar shaving
 
 ## chat.clan  clan=kinoshita  fn=hook
 A cheap crew from outside the lane is underbidding us on every roof. Their joints won't last a winter, and someone will get hurt.
-
-## chat.clan  clan=kinoshita  same_clan=yes  fn=worldbuild,deepen_bond
-Family gets a bench in the yard, {player}. Yours is the one by the window with the good light.
-Build your first stool with us. Every Kinoshita does. It'll be terrible, and we'll keep it forever.
-Kin buy furniture at cost. Don't tell the shop I said so out loud.
 
 # -- Tsuchigumo ----------------------------------------------------------------------------------------
 
@@ -186,11 +152,6 @@ The quarry dust gets into everything. My tea tastes of stone and I've grown to l
 ## chat.clan  clan=tsuchigumo  fn=hook
 Somebody left the wrong offering at the shrine gate: a coin and a scrap of cloth. The elders are uneasy, and they don't say why lightly.
 
-## chat.clan  clan=tsuchigumo  same_clan=yes  fn=worldbuild,deepen_bond
-Climb to the shrine with me some morning, {player}. Family twists a strand of the rope; yours is waiting.
-Pick a stone from the quarry for your windowsill. A Tsuchigumo always keeps one. It reminds you where you stand.
-You're of the mountain now, cousin. The village is home, but the shrine is where the family remembers itself.
-
 # -- Suzuran -------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=suzuran  fn=worldbuild
@@ -210,11 +171,6 @@ I've never been ill a day in my life. I take no credit; I've just been mildly po
 ## chat.clan  clan=suzuran  fn=hook
 The hospital's run short on fever root, and the clan's patch by the river was dug up. Not picked. Dug, roots and all.
 
-## chat.clan  clan=suzuran  same_clan=yes  fn=worldbuild,deepen_bond
-Family tastes the new tonic first, {player}. Hold your nose and drink it in one. It's tradition, and it's terrible.
-Come and turn the drying racks with me. You'll learn more plants in an afternoon than in a month of scrolls.
-You've got the family stomach, I'm sure of it. We'll find out at the next clan day.
-
 # -- Tobari --------------------------------------------------------------------------------------------
 
 ## chat.clan  clan=tobari  fn=worldbuild
@@ -233,11 +189,6 @@ I've seen more sunrises than anyone I know, and I've never once been awake for a
 
 ## chat.clan  clan=tobari  fn=hook
 Three lanterns along the north wall keep going out before midnight. The wicks are trimmed, the oil's full, and still.
-
-## chat.clan  clan=tobari  same_clan=yes  fn=worldbuild,deepen_bond
-Walk the night round with me some evening, {player}. Bring a muffler. If I can hear you, you're doing it wrong.
-Family lights the first lantern on clan day. This year it could be you.
-Rest well before you come out with the watch. A tired Tobari is a loud one, and a loud Tobari is just a person.
 
 # -- more from each family -------------------------------------------------------------------------------
 

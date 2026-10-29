@@ -391,7 +391,7 @@ Hm. Good day. People cross the street when they see the coat. I've stopped takin
 Good day. Our house is near the police headquarters. We argue with the Uchiha about whose cases are whose.
 Good day. My family asks questions for a living. Mostly I ask how people take their tea.
 Hm. An honest answer is the only kind I value. I'll give you the same.
-Good day. At home, my family is the gentlest on the street. You'd never believe it from the coats.
+Good day. At home, my family is the gentlest on the street. You'd never guess it from the coats.
 
 ## greet.clan  clan=morino  fn=reveal_character
 Good day. I make jam on my day off. Plum. Don't tell anyone at work.
