@@ -323,8 +323,9 @@ quietly; nobody is told.
 Short practice at home: the **training dummy** (taijutsu forms), **hand-sign drills** (no piece
 needed), **meditation** on the mat (chakra control), and **study** at the scroll shelf or desk. It
 counts at **40% of a training ground's rate**, and at most **one in-game hour a day** counts (an
-hour and a half with the whole training set). One hand-sign drill a day counts toward mastering a
-jutsu. It is paid as player XP at Progression's training-ground rate (`ranks.json`), solo, so it is
+hour and a half with the whole training set). The day's first hand-sign drill counts one training use toward
+mastery for each of up to three techniques drilled (a real fight counts two; Shinobi Combat's
+`signs.json`). It is paid as player XP at Progression's training-ground rate (`ranks.json`), solo, so it is
 never shared with the squad. It fills a quiet evening; real training stays at the training grounds.
 
 ## 11. Money
