@@ -4,6 +4,11 @@ From a wardrobe of Naruto-styled residents to the **Shinobi Modpack**: a modpack
 of the Hidden Leaf, where you arrive as an orphaned academy student and grow up to be the Eighth
 Hokage.
 
+**No spoilers here.** This roadmap describes systems, formats, the map and the plan, with neutral
+chapter descriptions. The plot, its twists and its characters' secrets are in a separate,
+developers-only [story bible](docs/story/STORY_BIBLE.md). Do not open it if you want to play the
+game unspoiled.
+
 **How to read this plan.** We build the first **~15 hours** (the beta, Academy to Chunin) and lay
 out the foundations of the whole **~60-hour** story without building it yet. Every section carries
 one of two tags:
@@ -28,7 +33,7 @@ This plan builds on [Village Friends](https://github.com/radhepa/Village-Friends
 | 7 | [Systems in the beta](#7-systems-in-the-beta) | BUILD (beta) |
 | 8 | [The beta, chapter by chapter](#8-the-beta-chapter-by-chapter) | BUILD (beta) |
 | 9 | [Delivery plan](#9-delivery-plan) | BUILD (beta) |
-| 10 | [Story bible](#10-story-bible) | FOUNDATION (later) |
+| 10 | [Story bible](#10-story-bible) (spoilers, in a separate file) | FOUNDATION (later) |
 | 11 | [Later systems](#11-later-systems) | FOUNDATION (later) |
 | 12 | [Risks and open questions](#12-risks-and-open-questions) | both |
 
@@ -40,15 +45,13 @@ The Shinobi Modpack is a single-player adventure of the Hidden Leaf: a pack of s
 hand-made map of one walled village under the Hokage Rock, full of residents who live their own
 days.
 
-**The story.** You are an orphan. A Leaf squad raids a hideout of **Yūgure**, a band of missing-nin
-from across the five nations, and carries you out. The Hokage enrolls you in the Academy and gives
-you a small apartment. From there it is your life in the village: lessons, missions, money,
-friends, a squad of your own, later romance, a pet, and every night home to bed. You cannot break
-or place blocks in the world. What you can do is earn ryo, buy and craft things, furnish your
-apartment and fill its chests, grow up from an Academy kid into an adult, and learn why Yūgure
-took you: you carry the blood of the **Kagari**, a clan the Leaf erased and buried in its own
-history. Four Hokage look down from the Rock when you arrive. Three more rise during your story,
-and you are meant to become the **Eighth**.
+**The story.** You are an orphan. A Leaf squad rescues you from a rogue ninja hideout, and the
+Hokage enrolls you in the Academy and gives you a small apartment. From there it is your life in the
+village: lessons, missions, money, friends, a squad of your own, a pet, and every night home to
+bed. You cannot break or place blocks in the world. What you can do is earn ryo, buy and craft
+things, furnish your apartment and fill its chests, grow up from an Academy kid into an adult, and
+find out who took you and why. Four Hokage look down from the Rock when you arrive; one day your
+face is meant to join them.
 
 **Length.** The main path from the Academy to Hokage is about **60 hours**: Academy ~4 h, Genin
 ~8 h, Chunin Exams ~3 h, Chunin ~13 h, Jonin ~17 h, the road to Hokage ~15 h. The optional ANBU
@@ -88,8 +91,10 @@ Jonin.
 | Side quests | A ton of optional side quests and anime-filler-style arcs, outside the main-path hour budget, as data in the Adventure datapack ([Side quests](#side-quests-in-the-beta)). |
 | World creation | **Classic** (curated, fixed cast and order) or **Varied** (rolled from one save seed, reproducible). Main plot beats fixed in both ([World creation](#world-creation-classic-or-varied)). |
 | Minecraft version | Stay on VF's version, **Minecraft 26.3, Fabric Loader 0.19.5**, pinned for the whole beta. No version chasing mid-beta; port only between beta slices, if VF moves. |
-| Villain | **Yūgure** (夕暮れ, "Dusk"), a band of missing-nin led by the last survivor of the erased **Kagari** clan; the player carries Kagari blood ([Story bible](#10-story-bible)). |
-| Hokage | All Hokage are original characters with custom faces. Four faces are on the Rock at the start; the Fifth to Seventh come during the story; the player is meant to become the **Eighth**. |
+| Story and villain | An original antagonist and plot, kept in the developers-only [story bible](docs/story/STORY_BIBLE.md). The story specifics are the developers' creative call, so the owner can play it unspoiled. |
+| No spoilers | ROADMAP.md and the README stay spoiler-free: systems, formats, the map, the delivery plan and neutral chapter descriptions only. Every twist lives in the story bible. |
+| Bond ability | **Kindling Bond**: you can kindle a bonded ally's chakra nature or technique and borrow it briefly; deeper bonds (teammates, sensei, friends, spouse) unlock more, and it is one of the ways to gain more natures. A bond-flame flickers between you and the ally. Unlocked by a story moment after the beta ([Kindling Bond](#kindling-bond)). |
+| Hokage | All Hokage are original characters with custom faces. Four faces are on the Rock at the start; the player is meant to become the **Eighth**. |
 | Canon | Original characters only, maybe cameos of named characters. |
 | Players | **Single player first.** Multiplayer is later. The code stays server-authoritative (single player runs an integrated server). |
 | World | A **fixed, hand-made map with a border**. Only the Leaf for now; more regions later, with room left in the architecture. |
@@ -100,7 +105,7 @@ Jonin.
 | VF changes | *Default:* fine to add small public APIs to VF: extra wardrobe namespaces, a currency item, hand-built taverns, and a resident appearance seed (for Varied saves). |
 | Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe, and clan or clanless. |
 | Growing up | Academy kid, teen, adult, then adult for good. No old age and no death of age. |
-| Clans | 25 clans: the 15 noble clans and 10 minor clans ([CLANS.md](CLANS.md)). Born into one of them or clanless. *Default:* all 25 pickable at creation, alongside clanless; a player can also create their own clan. *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship. Creating a clan includes restoring the Kagari. |
+| Clans | 25 clans: the 15 noble clans and 10 minor clans ([CLANS.md](CLANS.md)). Born into one of them or clanless. *Default:* all 25 pickable at creation, alongside clanless; a player can also create their own clan. *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship. |
 | Population | The village is mostly clanless, drawn by clan rarity from `tools/wardrobe/population.json` (weights per thousand): about 45% civilians, 28% clanless shinobi with ordinary family names, 15% from the 10 minor clans and 13% from the 15 noble clans (an Uchiha or a Hyuga about 1 in 70, a Hatake about 1 in 500). Civilians wear their own clothing collections (market and household); the general shinobi wardrobe adds 100 tops, 100 bottoms and 50 hairstyles ([Population](#population)). |
 | Kekkei genkai | Playable through clan membership. Out of scope for now: summoning, and with it tailed beasts. |
 | Squad | Teammates and sensei are original characters with personalities, friendship levels and connections, fixed per save (curated in Classic, rolled in Varied). They can leave the squad. |
@@ -310,14 +315,14 @@ without a rewrite. These are the format decisions, fixed before Beta 1 content i
 
 ### Story flags
 
-- **Shape:** namespaced keys with a value: `story.ch3.flare_seen = true`,
-  `story.kagari.awareness = 2`, `side.ramen_thief.culprit = "role:rival"`. Values are booleans,
+- **Shape:** namespaced keys with a value: `story.ch3.done = true`,
+  `story.arc2.trust = 2`, `side.ramen_thief.culprit = "role:rival"`. Values are booleans,
   integers or strings.
 - **Scopes:** `player` (your story, the default) and `world` (the village's state: `world.hokage = 4`,
   `world.stadium.damaged = true`).
 - **Seeds and payoffs:** flags set in the beta that later arcs read are declared in
   `story/seeds.json` with the arc that pays them off, so a validator can warn when a seed is never
-  used or a payoff reads a flag nothing sets ([seed table](#threads-seeded-in-the-beta)).
+  used or a payoff reads a flag nothing sets (the seed table is in the spoiler-only [story bible](docs/story/STORY_BIBLE.md)).
 - **Never deleted:** retired flags move to a `deprecated` list with their migration.
 
 ### Conditions and actions
@@ -325,7 +330,7 @@ without a rewrite. These are the format decisions, fixed before Beta 1 content i
 ```json
 {"all": [
   {"rank_at_least": "genin"},
-  {"flag": "story.ch14.yugure_named"},
+  {"flag": "story.ch14.done"},
   {"not": {"quest_state": ["side.paper_lanterns", "done"]}},
   {"any": [{"clan": "nara"}, {"friendship": ["role:teammate_b", 6]}]},
   {"time_between": ["18:00", "23:00"]}
@@ -363,8 +368,8 @@ Reserved now for later arcs, so the format does not change: `time_skip`, `carve_
     "escort": {"objective": {"type": "escort", "who": "role:merchant_kenta", "to": "place:road.east_waystation"},
                "on_enter": [{"spawn_group": ["bandits_small", "place:road.east_bend"]}],
                "next": "search"},
-    "search": {"objective": {"type": "inspect", "target": "cart_false_floor"},
-               "on_done": [{"set_flag": ["story.seed.chakra_paper", true]}],
+    "search": {"objective": {"type": "inspect", "target": "cart_cargo"},
+               "on_done": [{"set_flag": ["story.seed.cargo_found", true]}],
                "branch": [{"if": {"friendship": ["role:teammate_a", 5]}, "next": "campfire"}],
                "next": "report"},
     "campfire": {"objective": {"type": "talk", "who": "role:teammate_a", "dialogue": "bond.campfire.a"}, "next": "report"},
@@ -430,7 +435,7 @@ know their shape.
 
 - Every file carries `"format"`. The engine reads older formats or refuses with a clear log line.
 - The save stores the content version. A migration file maps renamed flags and replaced quests:
-  `{"from": "0.2", "flags": {"story.ch3.flare": "story.ch3.flare_seen"}}`.
+  `{"from": "0.2", "flags": {"story.ch3.finished": "story.ch3.done"}}`.
 - Board missions in progress are stored by template id plus their rolled slots, so a template edit
   never corrupts a save.
 
@@ -462,8 +467,8 @@ taken from the world seed or typed in).
   pools, VF personalities, families), resident families and clan populations, which side-quest arcs
   appear and in what order, mission and event rolls, shop stock, and the apartment from a set of
   candidate flats in `homes.json`.
-- **Fixed in both:** the main plot beats, the fixed characters of the story bible (the Hokage, the
-  elder, Yūgure's members), and every authored chapter.
+- **Fixed in both:** the main plot beats, the fixed characters of the story bible, and every
+  authored chapter.
 
 **One seed, many streams.** Each system draws from its own stream derived from the save seed, so
 systems never disturb each other and a save is reproducible with the same seed and pack version:
@@ -518,8 +523,7 @@ kilometres across, which in Minecraft would be empty walking.
   takes about two minutes; roof-hopping with chakra about one. That fits roughly 250 to 400
   buildings, of which perhaps 180 homes.
 - **Hokage Rock:** a cliff behind the village about 70 blocks high, each face about 24 blocks tall.
-  **Four faces** at the start and room for four more: the Fifth to Seventh, carved during the
-  story, and yours, the Eighth. The streets fan out from its foot, so
+  **Four faces** at the start, with room for more. The streets fan out from its foot, so
   the Rock is visible from every street.
 - **Outside the wall:** the Forest of Death, outer training grounds, the hills of the prologue,
   bandit camps and roads to the gates. The whole map is about **1,200 × 1,200 blocks**, closed by
@@ -544,7 +548,7 @@ the map tools paste it at a fixed spot. Anything that appears once and defines t
 | Homes, apartments, shops, tea houses | Pasted from blueprints | Konoha kit: plaster walls in cream and terracotta, round water tanks on flat roofs (check against the art), awnings, paper lanterns, stacked apartment blocks. Every home has a House Plaque so VF Homes flood-fills it and assigns beds. The player's apartment block is one of these, with the player's flat kept empty of residents |
 | Streets, alleys, bridges, the river | Pasted | A Konoha `roads.py`: packed dirt and stone lanes, utility poles, signs |
 | Wall and gates | Pasted modules, gates by hand | Wall segments are one repeated module. The main gate, with あん painted across its doors, and the guard booth are hand-built ([Konohagakure](https://naruto.fandom.com/wiki/Konohagakure)) |
-| Hokage Rock | By hand | Voxel sculpting; four custom faces of original Hokage, and four blank spots: the Fifth to Seventh are carved at story beats, and the Eighth becomes the player's face. The village expands onto the plateau above it only in a much later era, so leave the top as forest ([Hokage Rock](https://naruto.fandom.com/wiki/Hokage_Rock)) |
+| Hokage Rock | By hand | Voxel sculpting; four custom faces of original Hokage, with room for more. The village expands onto the plateau above it only in a much later era, so leave the top as forest ([Hokage Rock](https://naruto.fandom.com/wiki/Hokage_Rock)) |
 | Hokage Residence | By hand | Circular, one of the largest buildings in the village, with 火 (fire) painted on the roof. It stands near the Academy, right below the faces. Mission desk on the ground floor, the clan registry, the Hokage's office upstairs ([Hokage Residence](https://naruto.fandom.com/wiki/Hokage_Residence)) |
 | Ninja Academy | By hand | A large building at the base of the Hokage Rock, recognizable by the tree with a swing out front and a big 火 sign. Classroom, yard, target posts; the vertical slice. The office part is often confused with the Hokage Residence, but they are two buildings ([Ninja Academy file](https://naruto.fandom.com/wiki/File:Ninja_Academy.png), [Hokage Residence](https://naruto.fandom.com/wiki/Hokage_Residence)) |
 | Ichiraku Ramen | By hand (small) | A VF tavern building (once the tavern hook exists), so the tavern code seats and serves residents |
@@ -606,7 +610,7 @@ JSON. A clan-born player can move into their clan's quarter from Chunin on.
 | Aburame | Clan home | Wooded edge of a residential district | Dark timber house with insect gardens and hive walls |
 | Hatake | Clan home | A quiet lane | A lone, worn family house (a near-vanished clan), its own small yard with ninken kennels |
 | Kurama | Clan home | An old artists' lane | House with a painting studio; genjutsu-themed scrolls and screens |
-| Shimura | Clan home | Close to the Hokage Rock, near the hidden ANBU entrance | Stern house; its cellar links to the ANBU branch's story |
+| Shimura | Clan home | Close to the Hokage Rock, near the hidden ANBU entrance | A stern, quiet house |
 | Yuhi | Clan home | Residential district with gardens | House in a grove of old trees used for genjutsu training |
 | Gekko | Clan home | By the training grounds | Kenjutsu dojo with a moon-viewing platform |
 
@@ -633,10 +637,10 @@ off (closed gates, streets under repair) or is not built yet.
 | By | Districts and landmarks | Why |
 |---|---|---|
 | Phase 0 | One test street of pasted homes with plaques and a Village Marker | Proves pasting, homes, residents and ryo trades on a hand-made map |
-| **Beta 1** | The prologue hills and the Yūgure hideout (with the burnt shrine nearby); the main gate and its stretch of wall; the main street to the Hokage Residence (exterior and ground floor); the Academy (by hand) with its yard, library and workshop; the player's apartment block (all candidate flats for Varied) and ~12 homes around it; Ichiraku; the furniture shop, grocer and Inuzuka clinic (pets); the hospital; the shrine; the Hokage Rock with its four faces and the sealed door at its foot; a gate and main hall for each of the 15 noble clan quarters; the civilian market street and residential streets | The opening, the Academy, life sim, pets, clan-born kin from day one, seeds for later |
+| **Beta 1** | The prologue hills, the hideout and a ruined shrine; the main gate and its stretch of wall; the main street to the Hokage Residence (exterior and ground floor); the Academy (by hand) with its yard, library and workshop; the player's apartment block (all candidate flats for Varied) and ~12 homes around it; Ichiraku; the furniture shop, grocer and Inuzuka clinic (pets); the hospital; the shrine; the Hokage Rock with its four faces; a gate and main hall for each of the 15 noble clan quarters; the civilian market street and residential streets | The opening, the Academy, life sim, pets, clan-born kin from day one, seeds for later |
 | **Beta 2** | The Mission Desk (Residence ground floor); Training Ground 3 (by hand) and two pasted training grounds with the lake and the climbing cliff; the market street with the weapon shop and forge, scroll shop, tea house, barbecue house; the 15 noble clan quarters filled out; the 10 minor clans' neighbourhoods; bandit camps outside the wall; the east road and its waystation; the first far-location region (a border village) | Genin missions, training arcs, crafting, story C-ranks, clan techniques |
 | **Beta 3** | The Forest of Death (pasted trees, the tower by hand, 44 gates); the stadium with seated spectators; the exam hall in the Academy; foreign teams' lodging | The Chunin Exams and the attack |
-| Later | The rest of the homes and shops, police HQ, the full wall and all gates, ANBU HQ, the Second's sealed archive under the Rock, the four vacant estates (one on the old Kagari land), the far regions of later arcs | Chunin to Hokage ([Story bible](#10-story-bible)) |
+| Later | The rest of the homes and shops, police HQ, the full wall and all gates, ANBU HQ, the later arcs' story locations, the four vacant estates, the far regions of later arcs | Chunin to Hokage ([Story bible](#10-story-bible)) |
 
 ### How the map is made
 
@@ -677,7 +681,7 @@ off (closed gates, streets under repair) or is not built yet.
 | Taijutsu | Three-hit combo, heavy, dodge, block | Parry, launcher | — |
 | Chakra movement | — | Tree walking, wall-running, water-walking, chakra jump, ninja run | — |
 | Tools | Practice kunai and shuriken | Thrown kunai, shuriken, paper and smoke bombs, tool pouch | — |
-| Enemies | Sparring classmates; Yūgure guards (prologue, scripted) | Bandits, rogue ninja, Yūgure scouts | Exam rivals, Yūgure two-man cells |
+| Enemies | Sparring classmates; the prologue's guards (scripted) | Bandits, rogue ninja, enemy scouts | Exam rivals, enemy cells |
 | Quests | Main chapters, bond and side quests | Mission Desk (D and C rank), filler arcs, clan quests | Exam stages |
 | Events | — | Leaf Festival, New Year | Chunin Exams as a calendar event |
 
@@ -685,8 +689,7 @@ off (closed gates, streets under repair) or is not built yet.
 
 A creator screen in the prologue: hair, eyes, skin (the six complexions), marks and a starting
 outfit from the wardrobe, shown on your child-stage model; then born to one of the 25 clans (its
-look, and from Genin its technique and kekkei genkai) or clanless. Whatever you pick, the story
-gives you Kagari blood.
+look, and from Genin its technique and kekkei genkai) or clanless.
 
 ### Adventure rules
 
@@ -804,7 +807,7 @@ knocked out, never killed. No summons.
 
 The squad, classmates and neighbours are VF residents, so friendship uses VF's ten levels,
 relationship meters, gifts, speech bubbles and dialogue. The beta adds **bond quests** (`kind:
-bond`) gated by friendship: two per classmate in Beta 1 and two per teammate in Beta 2, with
+bond`) gated by friendship (bond levels also feed [Kindling Bond](#kindling-bond) after the beta): two per classmate in Beta 1 and two per teammate in Beta 2, with
 payoffs in Beta 3. Romance waits for the teen stage, after the beta; children have friendships and
 VF's harmless crushes in dialogue only, enforced in code.
 
@@ -856,14 +859,13 @@ Quests refer to characters by **role**; the save binds each role to a character.
 
 | Role | Who | Classic | Varied |
 |---|---|---|---|
-| `role:captain` / `role:sensei` | The Jonin who rescues you, later your sensei, later the Seventh Hokage | Curated | Rolled |
+| `role:captain` / `role:sensei` | The Jonin who rescues you, later your sensei | Curated | Rolled |
 | `role:instructor` | The Chunin from the rescue, your Academy instructor | Curated | Rolled |
 | `role:medic` | The medic from the rescue, at the hospital | Curated | Rolled |
 | `role:teammate_a`, `role:teammate_b` | Two classmates who become your squad | Curated | Rolled from the four classmates |
 | `role:classmate_c`, `role:classmate_d` | The other two classmates, later on a rival squad | Curated | Rolled |
 | `role:rival` | Your rival, on another squad | Curated | Rolled |
-| `role:akari` | The child left behind in the hideout | Fixed (story bible) | Fixed |
-| Fixed story roles | The Fourth Hokage, the elder, the librarian, Yūgure's members | Fixed | Fixed |
+| Fixed story roles | The characters the story bible fixes in every save | Fixed | Fixed |
 
 Rolled characters take a group by the population weights (shinobi groups only, so most are clanless), a look from that group's pieces, a VF personality, a family in the
 village and a name from VF's name pools; once rolled they are fixed for the save. A teammate can
@@ -925,8 +927,8 @@ the tool pouch (quick-throw from the hotbar). Shop or crafted.
 model and our wardrobe. Its brain keeps a range band (close for taijutsu, mid for throws, far for
 jutsu), strafes, dodges telegraphed attacks with a chance set by rank, uses substitution once per
 fight and retreats to heal. Each enemy has a loadout file (techniques, rank, level, tools). Beta
-enemies: Yūgure guards (scripted, prologue), sparring classmates, bandits, rogue ninja, Yūgure
-scouts, exam rivals, Yūgure two-man cells. Sparring with ranked residents at training grounds
+enemies: the prologue's guards (scripted), sparring classmates, bandits, rogue ninja, enemy
+scouts, exam rivals, enemy cells. Sparring with ranked residents at training grounds
 raises friendship.
 
 **Difficulty.**
@@ -951,7 +953,7 @@ first-person arm path for hand signs and throws: Phase 0's spike and Beta 1's ma
 slice: the prologue's crouch, slipping out and being carried, hand signs, combo strikes, heavy,
 dodge, block, throw, meditation, a tired slouch, petting (Beta 1); parry, launcher, ninja run,
 chakra jump, wall-run, water stance, forging and workbench, the first clan techniques (Beta 2);
-the Yūgure fighters and the stadium crowd (Beta 3).
+the finals' fighters and the stadium crowd (Beta 3).
 
 ### Residents react to your rank
 
@@ -963,69 +965,63 @@ places above your rank (the Forest of Death outside the exams) by dialogue, not 
 ## 8. The beta, chapter by chapter
 
 *BUILD (beta).* Every main chapter of the first 15 hours, with its time on the main path (a
-first-time player, Story difficulty), what it teaches and the seeds it plants for later arcs.
-Characters in *italics* are role-bound: the Classic cast names them below, Varied saves roll them.
-Fixed characters are in the [story bible](#recurring-characters).
+first-time player, Story difficulty) and what it teaches, described neutrally. What happens in each
+chapter, and what it sets up for later, is in the spoiler-only
+[story bible](docs/story/STORY_BIBLE.md).
 
 ### Beta 1: the opening and the Academy (~4 h)
 
 About 2.8 hours of authored chapters and 1.2 hours of systemic play (lessons between chapters,
-jobs, furnishing, adopting a pet, friends), over about 12 in-game days.
+jobs, furnishing, adopting a pet, friends), over about 12 in-game days. Chapter titles here are
+working titles; the story behind each chapter is in the story bible.
 
-| Ch | Title | Time | What happens | Teaches | Seeds |
-|---|---|---|---|---|---|
-| 0 | Cinders | 20 min | The creator screen. You wake in a cell of a Yūgure hideout in the hills, among other children. A girl in the next cell, **Akari**, pushes a red cord through the bars before guards in ash-violet cloaks drag her away. You slip out and hide; the Leaf squad (*captain*, *instructor*, *medic*) raids the camp; a chase through the forest past a burnt shrine; the *captain* carries you over a ravine; a cloaked figure with a sinking sun watches you go | Looking, sneaking, following, dodging, sprinting, climbing | Akari and the red cord; the burnt shrine (old Kagari ground); the sinking sun |
-| 1 | A Key and a Bowl | 20 min | The gate at night, the Rock's four faces, the Fourth Hokage **Akimichi Gōzan**, the orphan's apartment and stipend. **Elder Mibu Tatsuhide** watches from the Hokage's side. Next morning: Ichiraku with the *instructor*, enrolment, the four classmates and the *rival* | The HUD, ryo, shops, the apartment, talking, VF friendship | The elder's look; the Fourth's orphan stipend (his legacy) |
-| 2 | Forms | 20 min | First lessons: taijutsu forms and throwing at targets; a spar with the *rival* | Combo, heavy, dodge, block, practice kunai and shuriken | — |
-| 3 | The Leaf on Your Brow | 25 min | The chakra lesson (a leaf stuck to your forehead) unlocks the chakra bar. In a sparring lesson your chakra flares in the shape of fire and scorches the training post; the *instructor* hushes it up; the elder is at the window | Chakra, meditation, hand signs (typed or radial) | `story.ch3.flare_seen`: the Kagari ability |
-| 4 | Sinking Sun | 25 min | A sinking-sun mark scratched on your door at night. You chase a figure across the rooftops until it vanishes at the foot of the Rock, by a sealed stone door | Night, fatigue, roof running, the cost of staying up | The sealed door (the Second's archive); Yūgure inside the walls |
-| 5 | The Missing Page | 15 min | A library chore for **Fumiko** the librarian: the founding history has a page cut out. The *instructor*'s tour of the Rock: four faces, four blank spots, "one day yours, maybe" | Errands, the journal, inspecting | The missing page (the Kagari purge); the blank spots |
-| 6 | Exam Eve | 20 min | A study night at a classmate's home: Transformation, Substitution and the Clone with your classmates; you dream of Akari | Clone, Transformation, Substitution; bond quests | Classmates' families and ties; Akari |
-| 7 | Graduation | 25 min | The quiz, the throwing test and the clone test; the forehead protector; the Fourth's speech; the stipend ends | The exam flow, promotion | — |
+| Ch | Chapter | Time | Content | Teaches |
+|---|---|---|---|---|
+| 0 | Prologue | 20 min | The creator screen; the rescue from a rogue ninja hideout; a chase through the forest | Looking, sneaking, following, dodging, sprinting, climbing |
+| 1 | First morning | 20 min | The gate, the Hokage, your apartment and stipend; Ichiraku; enrolment; your classmates and your rival | The HUD, ryo, shops, the apartment, talking, VF friendship |
+| 2 | First lessons | 20 min | Taijutsu forms and throwing; a spar with your rival | Combo, heavy, dodge, block, practice kunai and shuriken |
+| 3 | Chakra | 25 min | The chakra lesson and a paired chakra exercise | Chakra, meditation, hand signs (typed or radial) |
+| 4 | Night | 25 min | A night out in the village | Night, fatigue, roof running, the cost of staying up |
+| 5 | Errands at the Academy | 15 min | A library chore and a tour of the Hokage Rock | Errands, the journal, inspecting |
+| 6 | Exam eve | 20 min | A study night with your classmates | Clone, Transformation, Substitution; bond quests |
+| 7 | Graduation | 25 min | The graduation exam and the forehead protector | The exam flow, promotion |
 
 ### Beta 2: Genin life (~8 h)
 
 About 4 hours of authored chapters and 4 hours of systemic play: about 12 board D-ranks (~2 h),
 3 board C-ranks (~1.5 h), training and your clan's lesson (~0.5 h), over about 24 in-game days.
 
-| Ch | Title | Time | What happens | Teaches | Seeds |
-|---|---|---|---|---|---|
-| 8 | Three and a Bell | 35 min | Team assignment: *teammate_a*, *teammate_b* and you, under the *captain*, now your *sensei*. The bell test at Training Ground 3: you only pass if a teammate gets a bell too | Squad commands, parry, teamwork | — |
-| 9 | Small Jobs | 15 min | The Mission Desk; the squad's first D-rank; the board opens | Board missions, mission pay, failure on death | — |
-| 10 | Climbing Trees | 25 min | Tree walking at Training Ground 3. By the memorial stone the *sensei* stops at a place where names were chiselled off | Tree walking, wall-running, chakra jump, roof hopping | The chiselled names (Kagari dead) |
-| 11 | Paper Trail | 45 min | First story C-rank: escort the merchant **Kenta** east. Bandits on the road; a false floor in his cart hides chakra paper bound for the border; a campfire talk with *teammate_a* | Escort, defeat, inspect, camping, bond | `story.seed.chakra_paper` (Yūgure's testing network) |
-| 12 | Still Water | 30 min | Water walking on the lake; the nature ceremony (choose your first nature); your clan's elder teaches the clan technique, or a friendly clan teaches a clanless player a lesser one | Water-walking, natures, the first elemental jutsu, the clan technique, the scroll shop | — |
-| 13 | The Empty Bed | 45 min | The first far region: a border village whose orphan has vanished. The trail ends at an abandoned waystation marked with a sinking sun. Back home, a stranger approaches *teammate_b* | Travel, investigation, ninken tracking | `story.seed.teammate_approached` (a teammate's later choice) |
-| 14 | Two Shadows | 50 min | Escorting Kenta again, a two-man team in ash-violet cloaks slips past the squad. You capture their smuggler, who says one word: **Yūgure**. The *sensei* starts to suspect what you are and recommends the squad for the Chunin Exams | Two-man cell enemies, smoke and paper bombs | `story.ch14.yugure_named`; the sensei's suspicion |
+| Ch | Chapter | Time | Content | Teaches |
+|---|---|---|---|---|
+| 8 | Team assignment | 35 min | Your squad and sensei; the bell test at Training Ground 3 | Squad commands, parry, teamwork |
+| 9 | The Mission Desk | 15 min | The squad's first D-rank; the board opens | Board missions, mission pay, failure on death |
+| 10 | Tree walking | 25 min | Chakra training at Training Ground 3 | Tree walking, wall-running, chakra jump, roof hopping |
+| 11 | First C-rank | 45 min | Escorting a merchant east; bandits on the road; a night at camp | Escort, defeat, inspect, camping, bond |
+| 12 | Water walking and natures | 30 min | The lake; the nature ceremony; your clan's lesson (or a friendly clan's) | Water-walking, natures, the first elemental jutsu, the clan technique, the scroll shop |
+| 13 | A far village | 45 min | The first far region and an investigation there | Travel, investigation, ninken tracking |
+| 14 | Second C-rank | 50 min | Another escort east, and a recommendation for the Chunin Exams | Enemy cells, smoke and paper bombs |
 
 ### Beta 3: the Chunin Exams (~3 h)
 
-About 2.5 hours authored and 0.5 hours systemic (the training break). The beta ends with the promotion, not a time skip. The exams are also a
-calendar event that runs with NPC teams every season.
+About 2.5 hours authored and 0.5 hours systemic (the training break). The exams are also a
+calendar event that runs with NPC teams every season. The beta ends with the promotion results,
+not a time skip.
 
-| Ch | Title | Time | What happens | Teaches | Seeds |
-|---|---|---|---|---|---|
-| 15 | Ink | 20 min | The written test in an Academy hall: ten impossible questions; the real test is gathering answers unseen (Byakugan, Transformation, a clone in the rafters, a bribe in dialogue). A foreign team sits two rows ahead | Stealth objectives, choice | The foreign team |
-| 16 | The Forest | 60 min | The Forest of Death: one scroll of a pair and five in-game days (nights at camp) to reach the tower with both. The foreign team is Yūgure in disguise and stalks you; an Uchiha player's Sharingan awakens in a moment of danger | Survival, bedroll camping, On Duty, tree-hopping fights | Hotaru (a member of the foreign team) |
-| 17 | The Tower | 20 min | One-on-one preliminaries in the tower's arena | Duels, judged performance | — |
-| 18 | One Month | 30 min | The training break, compressed to six days: the *sensei* teaches your exam reward technique; festival crowds and stalls | Systemic: training, crafting, side quests | — |
-| 19 | Dusk over the Stadium | 40 min | The finals before the whole village. Yūgure attacks: smoke, fire, two-man cells in the stands. In the chaos **Hotaru** stops in front of you and says the name **Kagari**. The Fourth Hokage falls defending the stadium | Defence, protect objectives, the cinematic camera | `story.ch19.kagari_named`; `world.hokage = 4 → 5` |
-| 20 | Embers | 10 min | The funeral. **Hyuga Sayo** is named the Fifth Hokage. Promotion results (judged on how you fought). The squad's evening at Ichiraku, and the *sensei*'s warning that Yūgure will come again. End of the beta: you are still a child, and the time skip opens the Chunin arc later | Promotion | The Fifth's hard line |
+| Ch | Chapter | Time | Content | Teaches |
+|---|---|---|---|---|
+| 15 | Written test | 20 min | Ten impossible questions; gather answers unseen | Stealth objectives, choice |
+| 16 | Forest of Death | 60 min | One scroll of a pair and five in-game days to reach the tower with both | Survival, bedroll camping, On Duty, tree-hopping fights |
+| 17 | Preliminaries | 20 min | One-on-one bouts in the tower's arena | Duels, judged performance |
+| 18 | Training break | 30 min | Six days of training with your sensei; festival crowds | Systemic: training, crafting, side quests; your exam reward technique |
+| 19 | Chunin Exams finals | 40 min | The finals in the stadium before the whole village | Duels and protect objectives, the cinematic camera |
+| 20 | Results | 10 min | Promotion results, judged on how you fought | Promotion |
 
 ### The squad bonding arc
 
-Bond quests (`kind: bond`) carry the squad through the beta, gated by friendship:
-
-| When | Bond beat |
-|---|---|
-| Beta 1, Ch 6 | Study night: you learn each classmate's family and what they want to become |
-| Beta 1 | Two bond quests per classmate (for example *teammate_a*'s painting of the village from the Rock; *teammate_b*'s runaway pup) |
-| Beta 2, Ch 8 | The bell test: pass together or not at all |
-| Beta 2, Ch 11 | The campfire with *teammate_a* |
-| Beta 2 | Two bond quests per teammate, and a squad dinner at the barbecue house after Ch 14 |
-| Beta 2, Ch 13 | *teammate_b* and the stranger: tell the *sensei*, keep the secret, or follow them (a flag later arcs read) |
-| Beta 3, Ch 16 | The night watch in the forest: each teammate's fear |
-| Beta 3, Ch 19 | Your teammates cover you in the attack; low friendship changes who does |
+Bond quests (`kind: bond`) carry the squad through the beta, gated by friendship: a study night
+(Ch 6), two bond quests per classmate in Beta 1, the bell test (Ch 8), a campfire talk (Ch 11), two
+bond quests per teammate and a squad dinner in Beta 2, a choice about a teammate (Ch 13), the
+forest night watch (Ch 16) and the finals (Ch 19). Low friendship changes how these play out.
 
 ### Side quests in the beta
 
@@ -1105,7 +1101,7 @@ Deliverables name the mod they land in: **Core**, **Village**, **Combat**, **Lif
 - **Life:** apartment and furnish mode, the first Leaf furniture set, chests, ryo, stipend, jobs,
   the daily cycle and fatigue, hospital wakes, Leaf dish buffs, the workbench, pets.
 - **Combat:** chakra, typed and radial signs, Clone, Transformation, Substitution, taijutsu v1,
-  practice tools, the Story difficulty, the prologue's scripted Yūgure guards.
+  practice tools, the Story difficulty, the prologue's scripted guards.
 - **Progression:** levels 1 to 5, death penalty and floors, roles bound, the Academy chapters,
   bond quests, the graduation exam, promotion to Genin, the Academy rank pools.
 - **Map:** the prologue, the Academy district and the other Beta 1 districts.
@@ -1133,7 +1129,7 @@ the Beta 2 districts.
   director with the Leaf Festival and New Year.
 - **Combat:** chakra movement; parry and launcher; the nature ceremony and one jutsu per nature;
   the clan techniques (first tier) of the 15 noble clans and the three minor clans with abilities and the first kekkei genkai stages; thrown tools and bombs;
-  the shinobi entity and brain v1 (bandits, rogue ninja, Yūgure scouts and the first two-man cell).
+  the shinobi entity and brain v1 (bandits, rogue ninja, enemy scouts and cells).
 - **Life:** the tool, weapon and scroll shops; the smithy and its recipes; crafted grades.
 - **Core:** the region interface and the first far region.
 - **Map:** the Beta 2 districts.
@@ -1152,10 +1148,8 @@ the Beta 2 districts.
 districts.
 
 - **Progression:** the Chunin Exams as a calendar event, with NPC teams every season and results in
-  village news; the three stages; judged promotion; the Fifth
-  Hokage (`world.hokage = 5`) and her face on the Rock; the exam reward technique.
-- **Combat:** Yūgure two-man cells with their own loadouts; the Sharingan's awakening; the
-  uncontrolled Kagari flare as a story moment.
+  village news; the three stages; judged promotion; the exam reward technique.
+- **Combat:** the finals' enemy loadouts; the Sharingan's awakening.
 - **Life:** bedroll camping and On Duty fatigue.
 - **Village:** the Chunin wardrobe.
 - **Map:** the Forest of Death, the stadium with seated spectators, the attack dressing (smoke,
@@ -1181,128 +1175,22 @@ districts.
 
 ## 10. Story bible
 
-*FOUNDATION (later).* The whole ~60-hour story, laid out so the beta plants the right seeds and the
-data formats can hold it. Only the beta's arcs are built now. All characters are original; named
-canon characters appear only as cameos.
+*FOUNDATION (later).* The whole ~60-hour story is laid out in a separate file:
 
-### Yūgure
+> **[docs/story/STORY_BIBLE.md](docs/story/STORY_BIBLE.md): SPOILERS, for developers only.** It holds
+> the antagonist, the twists, the Hokage line, the recurring characters, the arcs from the Academy
+> to the Eighth Hokage, the beta's chapters in full and the seeds the beta plants for later arcs.
+> Do not open it if you want to play the game unspoiled.
 
-**Yūgure** (夕暮れ, "Dusk") is a band of missing-nin from across the five nations. They work in
-**two-man cells** and wear **ash-violet cloaks marked with a sinking sun**. Their creed: *the
-shinobi world must end at dusk so that a true dawn can come.*
+What the roadmap needs from it, spoiler-free:
 
-- **Origin.** About twenty years before the story, **Kagari Seiren**, the last survivor of the
-  Kagari, gathered missing-nin whom the hidden villages had wronged: soldiers abandoned after wars,
-  orphans used and discarded, clans broken by treaties. Each had a grievance; Seiren gave them a
-  purpose.
-- **Goal.** The **Last Bonfire**: a Kagari rite that gathers chakra like kindling and spreads as fire
-  through the hidden villages, so that none of them stands at dawn. It needs a Kagari bloodline as
-  its wick. Orphans with unusual chakra are its fuel and its soldiers. You are the wick.
-- **Method.** Cells smuggle chakra paper to test children for unusual chakra, buy and steal
-  orphans, and plant agents in villages. Inside the Leaf they have one source: the elder.
-
-### The Kagari
-
-The **Kagari** (篝, "bonfire") were a Warring States clan whose chakra flared, gathered and spread
-like flame. In the last war before the Leaf's founding a Kagari bonfire burned a valley with both
-armies in it. When the Senju and the Uchiha made peace, the founding clans agreed the Kagari could
-not be allowed to exist, and ended them. The Second Hokage sealed the records in an archive under
-the Rock and had their names chiselled off the memorial stone; the Third knew and kept silent.
-One child, Seiren, survived, hidden in the clan's shrine in the southern hills, the burnt shrine
-the prologue's chase runs past.
-
-**The Kagari ability** is an open design question: a bonfire-like chakra that flares, gathers and
-spreads like flame, with no canon kekkei genkai's name or power. The beta shows only the
-uncontrolled flare (Chapter 3) and the scorched post.
-
-### You and Seiren
-
-Seiren's daughter fled Yūgure to live quietly in a border town, and died when you were small.
-Yūgure found you and took you to the hideout where the Leaf squad found you. **Seiren is your
-grandparent**: the leader of Yūgure wants you back as heir and as wick. A clan-born player's other
-parent was of that clan; a clanless player's Kagari blood is all they have. Later, the
-[player clan](#player-clans) choice lets you restore the Kagari under their old name and crest, or
-found a new clan.
-
-### Reveal pacing
-
-| By the end of | The player knows | The player suspects |
-|---|---|---|
-| Academy (beta) | Someone in a sinking-sun cloak took you and is watching you | Your chakra is strange; the elder knows something |
-| Genin (beta) | The name **Yūgure**; it smuggles chakra paper and orphans | The sensei knows what you are |
-| Chunin Exams (beta) | Yūgure attacked the Leaf; a Yūgure member called you **Kagari** | Kagari is a clan, and you are of it |
-| Chunin | Yūgure's two-man cells and creed; Akari is one of them; your fire is a Kagari ability | The Leaf erased the Kagari |
-| Jonin | The Kagari purge, the Second's archive, the Third's silence; the elder is the traitor | Who leads Yūgure |
-| Road to Hokage | Seiren is the last Kagari, your grandparent, and the Last Bonfire needs you | — |
-
-### The Hokage line
-
-Four faces are on the Rock when you arrive; three more are carved during the story; yours is the
-Eighth. All are original characters with custom faces.
-
-| # | Hokage | Era | What they left behind |
-|---|---|---|---|
-| 1 | **Senju Tsugumori**, the Founder | The founding | The wall, the founding charter (with its missing page), the memorial stone, and the agreement that ended the Kagari |
-| 2 | **Uchiha Reiga**, the Builder | The first generation | The Academy, the ANBU, the Chunin Exams, and the sealed archive under the Rock with the chiselled names: the rule of silence |
-| 3 | **Sarutobi Kaede**, the Long Peace | Thirty years of peace | The clan council, the Will of Fire lantern walk, and a letter in the archive "for whoever comes asking" |
-| 4 | **Akimichi Gōzan**, the Kind One | Sitting when you arrive | The orphan's stipend that pays for your apartment; he dies defending the stadium in the Chunin Exam attack (Beta 3) |
-| 5 | **Hyuga Sayo**, the Hard Line | Named at the end of the beta; the Chunin years | Border watch posts, curfews and a sensor corps; she distrusts your blood. She steps down when her hard line brings a clan quarter to the edge of revolt |
-| 6 | **Yamanaka Ren**, the Listener | The Jonin years | Opens the archive with you, makes the Kagari purge public, raises a memorial to the Kagari, and resigns to take responsibility for the Leaf's buried crime |
-| 7 | **The sensei** (`role:sensei`; Classic: Ōtori Kaname), the Bridge | The road to Hokage | The captain who rescued you leads the village through the war with Yūgure and names you successor |
-| 8 | **You** | — | — |
-
-### Recurring characters
-
-| Character | Fixed or role | First appears | Through the story |
-|---|---|---|---|
-| **Akimichi Gōzan**, the Fourth Hokage | Fixed | Ch 1 | Warm, protective; his stipend is why you have a home; dies in Ch 19 |
-| **Elder Mibu Tatsuhide** | Fixed | Ch 1 | His clan took part in the purge. Guilt turned into treason: he fed Yūgure the names of gifted orphans, believing Seiren only wanted the Kagari back, not the villages burned. Unmasked in the Jonin years |
-| **Fumiko**, the Academy librarian | Fixed | Ch 5 | Keeps the cut page of the founding history; an ally who helps you understand your fire in the Chunin years |
-| **Akari**, the girl left behind | Fixed | Ch 0 | Taken deeper into Yūgure; returns in the Chunin years as a Yūgure operative; can be turned back on the ANBU branch or in the road to Hokage |
-| **Hotaru** | Fixed | Ch 16 | Yūgure, an ember user, Seiren's second; names you Kagari in Ch 19; doubts the Last Bonfire; defects in the road to Hokage and leads you to Seiren |
-| **Usuzumi** | Fixed | Ch 14 (one of the two shadows) | Hotaru's partner, an ink-and-dusk swordsman; your recurring duel |
-| **Kagari Seiren** | Fixed | Ch 0 (the watching figure) | The leader of Yūgure, your grandparent |
-| The **sensei** | Role | Ch 0 | Rescues you, trains you, suspects what you are (Ch 14), becomes the Seventh Hokage |
-| The **instructor** and **medic** | Roles | Ch 0 | Mentors through the whole story; the medic runs the hospital in the war |
-| **teammate_a**, **teammate_b** | Roles | Ch 1 | Your squad; *teammate_b*'s choice after the stranger (Ch 13) decides whether they stay, leave, or nearly join Yūgure in the Chunin years |
-| The **rival** | Role | Ch 1 | Rival to ally; fights beside you in the war |
-| **Kenta**, the merchant | Role | Ch 11 | Keeps hiring the squad; an unwitting carrier for Yūgure's chakra paper, later an informant |
-
-### The arcs
-
-| Stretch | Arc | Hours | Major beats | Status |
-|---|---|---|---|---|
-| Academy | **Cinders** | ~4 | The rescue; the apartment; the flare; the sinking sun on your door; the missing page; graduation | Beta 1 |
-| Genin | **Paper Trail** | ~8 | The squad and the bell test; tree and water walking; chakra paper in Kenta's cart; the empty bed in the border village; the stranger and *teammate_b*; "Yūgure" | Beta 2 |
-| Chunin Exams | **Dusk over the Stadium** | ~3 | The written test; the forest and the false team; the tower; the attack; "Kagari"; the Fourth's fall; the Fifth; promotion | Beta 3 |
-| Chunin | **Embers** | ~13 | Opens with the first time skip: a year later, a teen. The Fifth's curfews and suspicion; your fire awakens and must be trained in secret with Fumiko and the sensei; B-rank missions on Yūgure's trail; Akari returns in a raid on a border post; *teammate_b*'s choice pays off; you can found a clan; a Yūgure strike sets a clan quarter against the Fifth, who steps down; the Sixth is named | Later |
-| Jonin | **Ashes** | ~17 | Three years later, an adult and a Jonin. Your own Genin team; A-rank hunts for cells in far regions; the Sixth opens the archive with you: the Third's letter and the missing page reveal the Kagari purge; Elder Mibu is unmasked as the traitor; the truth is made public and the Kagari get a memorial; the Sixth resigns and the sensei becomes the Seventh; romance can lead to marriage | Later |
-| ANBU (optional) | **Night Watch** | +~8 | Masks and covert operations against Yūgure's cells; the Shimura storyline (a hidden faction that wants to use you as a weapon); the best path to bring Akari home | Later |
-| Road to Hokage | **The Last Bonfire** | ~15 | Restore the Kagari on their old land by the burnt shrine, or found your own clan; Hotaru defects and leads you to Seiren, your grandparent; Yūgure lights the Last Bonfire at the Leaf; the whole village defends itself, every friendship and clan you built counts; you face Seiren; the Seventh names you successor; the inauguration and your face as the Eighth | Later |
-
-### Threads seeded in the beta
-
-Every thread the beta plants, the flag that records it (declared in `story/seeds.json`), and where
-it pays off.
-
-| Seed | Planted in | Flag | Pays off in |
-|---|---|---|---|
-| Akari and the red cord | Ch 0 | `story.seed.akari_cord` | Chunin (she returns), ANBU or road to Hokage (she can come home); the cord is a key item |
-| The burnt shrine in the hills | Ch 0 | `story.seed.burnt_shrine` | Road to Hokage: the old Kagari land, where you can restore the clan (one of the vacant estates) |
-| The watching figure in a sinking-sun cloak | Ch 0, Ch 4 | `story.seed.watcher` | Road to Hokage: it was Seiren |
-| The elder's long look | Ch 1, Ch 3 | `story.seed.elder_noticed` | Jonin: the traitor |
-| The Fourth's orphan stipend | Ch 1 | `story.seed.stipend` | Ch 19 (his fall) and Hokage: you can restore the stipend as the Eighth |
-| The fire-shaped flare | Ch 3 | `story.ch3.flare_seen` | Chunin: the Kagari ability awakens |
-| The sealed door at the foot of the Rock | Ch 4 | `story.seed.sealed_door` | Jonin: the Second's archive |
-| The missing page | Ch 5 | `story.seed.missing_page` | Jonin: the Kagari purge |
-| The blank spots on the Rock | Ch 5 | `story.seed.blank_spots` | Every new Hokage, and the Eighth |
-| The chiselled names on the memorial stone | Ch 10 | `story.seed.chiselled_names` | Jonin: the Kagari memorial |
-| Chakra paper in Kenta's cart | Ch 11 | `story.seed.chakra_paper` | Chunin: Yūgure's testing network; Kenta as informant |
-| The stranger and *teammate_b* | Ch 13 | `story.seed.teammate_approached` (and your choice) | Chunin: *teammate_b* stays, leaves or nearly joins Yūgure |
-| The two shadows (Usuzumi and partner) | Ch 14 | `story.ch14.yugure_named` | Chunin and Jonin duels with Usuzumi |
-| The sensei's suspicion | Ch 14 | `story.seed.sensei_knows` | Chunin: the sensei trains your fire in secret |
-| Hotaru says "Kagari" | Ch 19 | `story.ch19.kagari_named` | Road to Hokage: Hotaru defects |
-| The Fourth's fall, the Fifth's hard line | Ch 19 to 20 | `world.hokage` | Chunin: the Fifth steps down |
+- **Stretches and hours** follow the [length budget](#1-vision): Academy, Genin and Chunin Exams in
+  the beta; Chunin, Jonin, the optional ANBU branch and the road to Hokage later.
+- **Seeds:** every story flag the beta sets for a later arc is declared in `story/seeds.json`, and
+  `quests.py --check` warns about seeds never paid off ([Story flags](#story-flags)).
+- **Roles:** the story's characters are role-bound or fixed ([Your squad and roles](#your-squad-and-roles)),
+  so later arcs work in Classic and Varied saves alike.
+- **Later arcs** exist as stubs in `story/arcs.json` (titles, unlock conditions, the seeds they read).
 
 ## 11. Later systems
 
@@ -1348,9 +1236,8 @@ the Hokage Residence: Chunin, level 20, 20,000 ryo, and Good Neighbor standing o
   take the clan's colors and outfits, and join your missions. Up to 3 at founding, 8 at Jonin, 20
   as Hokage.
 - **Home:** one of the four vacant estates; halls open as you buy them (5,000 to 15,000 ryo each).
-- **Restoring the Kagari:** once the story reveals the Kagari's history, the registry offers to
-  restore them under their old name and crest, on their old land by the burnt shrine, with the
-  Kagari ability as the clan art.
+- **A story-unlocked option:** later in the story the registry offers one more founding path
+  (details in the story bible).
 
 ### Romance and marriage
 
@@ -1362,11 +1249,31 @@ marriage after 30 to 150 days at 65 or more). Shinobi Life extends it to the pla
   beta.
 - **Dating:** at friendship level 7 ("spend time together": walks, ramen, festival nights);
   confessing at level 8 makes you sweethearts (village news).
-- **Marriage:** adults only, at level 10, a proposal and a wedding at the shrine. Your spouse moves
+- **Marriage:** adults only, at level 10, a proposal and a wedding at the shrine; a spouse is the
+  strongest [Kindling Bond](#kindling-bond). Your spouse moves
   in; a clanless player may join the spouse's clan, or the spouse may join yours.
 - **Children (post-game):** a married player can have children. They are VF residents born into
   your household (VF already records parents, households and surnames for residents' babies),
   grow up through VF's children's routines, games and lessons, and can enrol at the Academy.
+
+### Kindling Bond
+
+*Decided.* A bond ability the player unlocks at a story moment after the beta (the beta at most
+foreshadows it).
+
+- **What it does:** kindle a bonded ally's chakra nature or one of their techniques and borrow it
+  briefly: a few casts of their nature's jutsu, or one use of their signature technique, then the
+  flame needs time to rekindle.
+- **Bonds decide what you can borrow:** friendship level 6 lets you borrow an ally's nature, level 8
+  one of their techniques, level 10 (or a teammate, your sensei, your spouse) both and for longer.
+  It ties combat to the friendship and romance systems: the village you befriend is your arsenal.
+- **Natures:** one of the ways to gain more elements. A nature borrowed often enough can be learned
+  for good with a master's trial.
+- **How it looks:** a bond-flame, a small watch-fire, flickers between you and the ally, and your
+  chakra takes their nature's colour while it burns.
+- **In the systems:** Shinobi Combat adds a `kindle` effect type; Shinobi Life's friendship and
+  romance levels are its bond levels; Core's natures list gains a "borrowed" source; Progression
+  unlocks it with a story flag.
 
 ### Elemental natures
 
@@ -1375,7 +1282,7 @@ marriage after 30 to 150 days at 65 or more). Shinobi Life extends it to the pla
 | First | Chosen at the Genin ceremony (Beta 2) |
 | Second | Chunin: a nature master's three trials |
 | Third | Jonin: a clan master or a mission line |
-| Fourth, fifth | Rare milestones in the later arcs and the Hokage's archive |
+| More | [Kindling Bond](#kindling-bond) (a nature borrowed often enough through a bond can be learned with a master's trial) and rare milestones in the later arcs |
 
 Your natures' jutsu cost 25% less; other natures' jutsu cannot be learned.
 
@@ -1419,7 +1326,7 @@ touches them.
 - **Mind Transfer** (Yamanaka, Chunin or later): the camera moves into a mob or resident for 8 s;
   your body slumps and can be hit.
 - **Stealth** (Jonin and ANBU): detection by sight and sound, night operations.
-- **The Kagari ability** (Chunin onward): to be designed ([open question](#still-open)).
+- **Kindling Bond** (after the beta): see [Kindling Bond](#kindling-bond).
 
 ### The full event calendar
 
@@ -1435,14 +1342,14 @@ the Leaf Festival, New Year and the Chunin Exams; the rest arrive with the later
 | Weddings | When a couple marries (residents or the player) | A ceremony at the shrine with family and friends, then a party | VF romance and marriage, party behavior |
 | Clan days (15 noble clans, a shared day for the minor clans' neighbourhoods, plus player clans) | One per clan per year, spread so no two fall in the same week | Senju and Uzumaki: founders' memorial at the shrine (Spring); Hyuga: main and branch house ceremony; Akimichi: harvest feast (Autumn); Inuzuka: ninken pairing, where children get their first pup; Nara: deer count in the forest; Yamanaka: flower festival (Spring); Uchiha: police parade; Sarutobi: the Will of Fire lantern walk (New Year eve); Aburame: insect night, with fireflies over the gardens (Summer); Hatake: a quiet visit to the memorial stone; Kurama: painting exhibition; Yuhi: grove viewing (Spring); Gekko: moon-viewing kenjutsu duels (Autumn full moon); Shimura: none in public, a beat of the ANBU branch instead; player clans: their chosen day | Party behavior, Hearth & Harvest dishes, VF pets for the pups |
 | Border incident | Random, about weekly | Rogue ninja or bandits at a gate or on a road; a short fight, a deed, a small reward | VF guard call-out |
-| Crisis arcs | Story-gated | The unique ninja plot, once each: Yūgure ([story bible](#10-story-bible)): watchers in the Academy years, cells brushing past your Genin missions, the attack on the Chunin Exam finals, then (in outline) the traitor elder, the truth about the Kagari, and the leader's attack that decides the succession | Guards, knockouts, the arena |
+| Story arcs | Story-gated | The main plot's big moments, once each (see the story bible) | Guards, knockouts, the arena |
 
 Story events never damage the map: "damage" is dressing (smoke, rubble entities, closed streets)
 removed when the arc moves on.
 
 ### Regions and multiplayer
 
-New regions (other villages, the lands where Yūgure hides) are datapack regions with their world
+New regions (other villages and far lands) are datapack regions with their world
 data ([Regions](#regions)). Multiplayer comes after the single-player story ([Multiplayer](#multiplayer-later)).
 
 ## 12. Risks and open questions
@@ -1466,12 +1373,10 @@ data ([Regions](#regions)). Multiplayer comes after the single-player story ([Mu
 | Map building cost | The beta alone needs the Academy district, the civilian streets, 15 noble clan quarters, 10 minor clan neighbourhoods, training grounds, the forest and the stadium | Paste everything repeatable; hand-build only landmarks; clan quarters as cores in Beta 1 |
 | Economy and fatigue balance | Too easy or too harsh | Every number in data; playtest each slice |
 | Performance | 150 to 250 residents in one area | Measure in Phase 0 and Beta 3; split Konoha into several VF settlements if needed |
+| Spoilers leaking | The owner will play the game | Every twist lives only in the story bible; the roadmap, the README, commit messages and summaries stay neutral |
 | Naming and IP | Naruto names, symbols and places belong to their owners | Original characters, Hokage and plot; cameos only; the pack's own name; a free fan project |
 
 ### Still open
 
-1. **The Kagari ability.** What exactly does it do? A bonfire-like chakra, with no canon kekkei
-   genkai name or power. Needed before the Chunin arc; the beta only shows the flare.
-2. **Story bible approval.** The Hokage line (names and legacies), the Classic cast, Seiren as your
-   grandparent, and Elder Mibu as the traitor are proposals inside the approved Yūgure premise.
-   Confirm or change before Beta 1's dialogue is written.
+Nothing is open right now. The story's specifics are the developers' creative call, kept in the
+story bible so the owner can play unspoiled.
