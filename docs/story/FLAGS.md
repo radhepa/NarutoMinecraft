@@ -128,7 +128,7 @@ Spark; Ch 31: Flame), whatever the level.
 `doc.ledger_sample` (Ch 0), `doc.stipend_papers` (Ch 1), `doc.shelving_slip` (Ch 5),
 `doc.delivery_page` (Ch 11): journal documents the case board (Ch 38) compares. `ans.player.feast`
 (Ch 20, falls variant). `shared_moment bond.squad5_c.porter` (Ch 28.5). Act `saved_the_village`
-(end of Ch 53; a deed worth 40). `world.roster.<role>.gone` (set when a role leaves the roster:
+(end of Ch 53; a lived deed worth 90 that forgives earlier bad deeds, so every finisher reaches Hero with the village). `world.roster.<role>.gone` (set when a role leaves the roster:
 neutral aliases read by the ranks session): `hokage_4` at Ch 20 if `twist.fourth_fate = falls`; the bound candidate at Ch 39 if arrested; `sensei_2` and `elder_keeper` at Ch 51b.
 
 ## Tokens the story needs
