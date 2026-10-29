@@ -1,5 +1,5 @@
 # At the player's door (HOME.md §3, §9, §11): who knocks and what they say, a key holder waiting inside, the
-# notes left in the mailbox, the Academy stipend and the landlady. These come round again, so they cycle.
+# notes left in the mailbox and the Academy stipend. These come round again, so they cycle.
 #! kind: cycle
 #! fn: deepen_bond
 
@@ -150,22 +150,3 @@ The Academy stipend: thirty ryo in a plain envelope with the Academy seal. It co
 "Thirty ryo, for the student's keep. Spend it wisely." The Academy office's handwriting, same as every morning.
 The morning envelope from the Academy: thirty ryo for every day you're a student. Rice first, then furniture.
 Thirty ryo again. Put a little by each morning and the furniture shop stops being a dream.
-
-# == the landlady ==================================================================================
-## home.landlady.thanks  stage=teen|adult  fn=react
-Rent's in, right on time. Thank you. Here, have a mikan for the road.
-Fifty ryo, all counted. You're a better tenant than half the grown-ups in this building.
-Paid on Market Day, like clockwork. I wish everyone were as reliable as you.
-Thank you. I'll write it in the book. And mind the third stair, it's loose again.
-
-## home.landlady.forgiven  stage=teen|adult
-Rent's late? Never mind it this once. Missions don't keep to Market Day, I know.
-You're short this week. That's all right. One late week a season, I always say.
-Don't look so worried. I'll let this week pass. You're young and you work hard.
-Late, is it? I've been late on worse things. Pay me when you can, and eat something meanwhile.
-
-## home.landlady.reminder  stage=teen|adult  fn=teach
-A note under the door, in a neat hand: "Rent carried over from last week. No rush, but don't forget."
-"Two weeks owing now. Come and see me when you can, and we'll sort it out. Nobody is putting you out."
-"Just a reminder: rent is due on Market Day. I've added last week's on. Bring it when you're able."
-"Rent's still owing. I know Genin pay is thin. Come round for tea and we'll work it out together."

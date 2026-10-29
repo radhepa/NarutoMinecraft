@@ -178,7 +178,7 @@ I look at the sky differently now. It's partly yours, I think.
 The sky's been clear all week and we haven't once sat out on your balcony.
 I saw a shooting star from my window and had nobody to tell.
 ## hangout.balcony_stargazing.highlight.1
-A shooting star! Did you see it? Make a wish, quick! [SPARKLE]
+There, over the rooftops, a falling star! Wish on it before it's gone! [SPARKLE]
 ## hangout.balcony_stargazing.highlight.2
 We named a whole constellation after the ramen bowl. You can see the chopsticks!
 ## hangout.balcony_stargazing.highlight.3

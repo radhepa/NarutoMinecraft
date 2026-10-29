@@ -354,6 +354,24 @@ Look at you, more in our colours than half my cousins! I'm telling them. They'll
 ## home.visit.decor.clan.gentle
 Those are my colours. Seeing them here feels like you've saved me a seat.
 
+# == curios =======================================================================================
+## home.visit.curios
+What is all this? A cracked bell, a stone with a face, half a kite... I love it.
+Your shelf of odd things grows every time I come. Where does it all come from?
+Is that a single straw sandal? Where's the other one? Don't tell me, I like the mystery.
+None of this is useful at all, is it? That's what makes it wonderful.
+A bent spoon, a bottle with a bead inside and a painted pebble. Every one has a story, I bet.
+## home.visit.curios.curious
+Wait, wait. Where did you find the bottle with the bead in? How did the bead get in? [QUESTION]
+## home.visit.curios.pragmatic
+You could sell the lot for about four ryo. ...Don't. Somehow it's worth more on the shelf.
+## home.visit.curios.imaginative
+A museum of tiny, useless treasures. I could make up a legend for every one.
+## home.visit.curios.meticulous
+If you sorted them by size, or colour, or age... no? Fine. They're charming as they are.
+## home.visit.curios.playful
+I'm bringing you something for the collection next time. Something truly pointless.
+
 # == the plant and the pet =========================================================================
 ## home.visit.plant.flowering
 Your plant is flowering! You've been looking after it.
