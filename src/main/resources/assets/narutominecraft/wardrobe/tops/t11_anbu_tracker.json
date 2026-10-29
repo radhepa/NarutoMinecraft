@@ -1,0 +1,271 @@
+{
+  "id": "t11_anbu_tracker",
+  "kind": "top",
+  "name": "ANBU Tracker",
+  "gender": "unisex",
+  "texture": "tops/t11_anbu_tracker.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bandolier",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -1,
+        -7,
+        -0.5
+      ],
+      "size": [
+        2,
+        14,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "kunai_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -1.5,
+        -5.5,
+        -1.1
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "kunai_ring_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -6.5,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    },
+    {
+      "id": "kunai_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -1.5,
+        -2.5,
+        -1.1
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "kunai_ring_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -3.5,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "kunai_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -1.5,
+        0.5,
+        -1.1
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "kunai_ring_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ]
+    },
+    {
+      "id": "kunai_3",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -1.5,
+        3.5,
+        -1.1
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ]
+    },
+    {
+      "id": "kunai_ring_3",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        2.5,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Plated armor over black long sleeves, white arm guards, a bandolier of kunai."
+}

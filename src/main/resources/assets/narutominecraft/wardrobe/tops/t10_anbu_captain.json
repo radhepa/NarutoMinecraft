@@ -1,0 +1,246 @@
+{
+  "id": "t10_anbu_captain",
+  "kind": "top",
+  "name": "ANBU Captain",
+  "gender": "unisex",
+  "texture": "tops/t10_anbu_captain.png",
+  "extrasHeight": 32,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_pauldron",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.7,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "right_pauldron_lame",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -0.9,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "left_pauldron",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.7,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_pauldron_lame",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -0.9,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "scarf",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.2,
+        -2.7
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "ninjato_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        1.2,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        50,
+        8
+      ]
+    },
+    {
+      "id": "ninjato_guard",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        1.2,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        55,
+        8
+      ]
+    },
+    {
+      "id": "ninjato_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        1.2,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Plated armor with black lacquer pauldrons, a blue scarf, a captain's armband and a ninjato."
+}

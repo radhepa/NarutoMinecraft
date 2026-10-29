@@ -67,7 +67,9 @@
     "w01_kage_hat",
     "w02_forehead_protector",
     "w03_anbu_mask",
-    "w04_anbu_cat_hood"
+    "w04_anbu_cat_hood",
+    "w05_anbu_wolf_mask",
+    "w06_anbu_hawk_mask"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -78,14 +80,17 @@
     "t06_anbu_armor",
     "t07_hyuga_robe",
     "t08_green_jumpsuit",
-    "t09_anbu_cloak"
+    "t09_anbu_cloak",
+    "t10_anbu_captain",
+    "t11_anbu_tracker"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
     "b02_uchiha_shorts",
     "b03_genin_track_pants",
     "b04_kunoichi_shorts",
-    "b05_green_leggings"
+    "b05_green_leggings",
+    "b06_anbu_greaves"
   ],
   "characters": [
     {
@@ -256,6 +261,42 @@
       "eye_style": "starlit",
       "feminine": true,
       "complexion": 0,
+      "scale": 14,
+      "rank": "anbu"
+    },
+    {
+      "id": "anbu_wolf",
+      "name": "ANBU Wolf Captain",
+      "tagline": "Wolf mask, black lacquer pauldrons, the captain's blue scarf and a ninjato across the back",
+      "face": "f01_shinobi",
+      "hair": "h06_low_ponytail",
+      "headwear": "w05_anbu_wolf_mask",
+      "top": "t10_anbu_captain",
+      "bottom": "b01_shinobi_trousers",
+      "palette": "ANBU_WOLF",
+      "hair_color": "RAVEN",
+      "eye_color": "DARK",
+      "eye_style": "soft_glint",
+      "feminine": false,
+      "complexion": 2,
+      "scale": 14,
+      "rank": "anbu"
+    },
+    {
+      "id": "anbu_hawk",
+      "name": "ANBU Hawk Tracker",
+      "tagline": "Beaked hawk mask, black long sleeves under the plates, a bandolier of kunai, strapped shin guards",
+      "face": "f01_shinobi",
+      "hair": "h04_long_straight",
+      "headwear": "w06_anbu_hawk_mask",
+      "top": "t11_anbu_tracker",
+      "bottom": "b06_anbu_greaves",
+      "palette": "ANBU_HAWK",
+      "hair_color": "VIOLET",
+      "eye_color": "DARK",
+      "eye_style": "starlit",
+      "feminine": true,
+      "complexion": 1,
       "scale": 14,
       "rank": "anbu"
     }

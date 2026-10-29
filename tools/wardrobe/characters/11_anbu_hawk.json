@@ -1,0 +1,5 @@
+{"id": "anbu_hawk", "name": "ANBU Hawk Tracker", "tagline": "Beaked hawk mask, black long sleeves under the plates, a bandolier of kunai, strapped shin guards",
+ "face": "f01_shinobi", "hair": "h04_long_straight", "headwear": "w06_anbu_hawk_mask",
+ "top": "t11_anbu_tracker", "bottom": "b06_anbu_greaves",
+ "palette": "ANBU_HAWK", "hair_color": "VIOLET", "eye_color": "DARK", "eye_style": "starlit", "feminine": true,
+ "complexion": 1, "scale": 14, "rank": "anbu"}

@@ -1,0 +1,16 @@
+{
+  "id": "b06_anbu_greaves",
+  "kind": "bottom",
+  "name": "ANBU Greaves",
+  "gender": "unisex",
+  "texture": "bottoms/b06_anbu_greaves.png",
+  "extrasHeight": 0,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Black trousers, white strapped shin guards, open-toe sandals."
+}

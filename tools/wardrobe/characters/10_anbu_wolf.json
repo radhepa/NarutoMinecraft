@@ -1,0 +1,5 @@
+{"id": "anbu_wolf", "name": "ANBU Wolf Captain", "tagline": "Wolf mask, black lacquer pauldrons, the captain's blue scarf and a ninjato across the back",
+ "face": "f01_shinobi", "hair": "h06_low_ponytail", "headwear": "w05_anbu_wolf_mask",
+ "top": "t10_anbu_captain", "bottom": "b01_shinobi_trousers",
+ "palette": "ANBU_WOLF", "hair_color": "RAVEN", "eye_color": "DARK", "eye_style": "soft_glint", "feminine": false,
+ "complexion": 2, "scale": 14, "rank": "anbu"}

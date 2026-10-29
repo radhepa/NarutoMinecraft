@@ -53,12 +53,16 @@ def ears(g, segments, x: float = 2.6, tilt: float = 14, y: float = -7.6, z: floa
                 box.front.vline(w // 2 - 1, 0, h - 1, inner)
 
 
-def beak(g, length: int = 5, pivot=(0, -4.2, -4.7)):
-    """A hooked bird beak: a wide root on the plate tapering forward and down to a dark tip."""
-    for i, (w, h, d, dy) in enumerate(((4, 3, 2, 0), (2, 3, 2, .5), (2, 2, 2, 1.5))[:max(1, length // 2)]):
-        box = g.piece(f"beak_{i}", "HEAD", (-w / 2, dy * 2, -d - i * 2), (w, h, d), pivot=pivot,
-                      rotation=(18, 0, 0), scale=HALF)
+def beak(g, pivot=(0, -4.4, -4.8), tip: str = "S1", ridge: str | None = "A2"):
+    """A hooked bird beak: a broad root on the plate, a narrower bridge and a tip curling down, with
+    a colored ridge along the top and down the front of the hook."""
+    for i, (origin, size) in enumerate((((-3, 0, -3), (6, 4, 3)), ((-2, 1, -6), (4, 3, 3)), ((-1, 3, -7), (2, 3, 2)))):
+        box = g.piece(f"beak_{i}", "HEAD", origin, size, pivot=pivot, scale=HALF)
         solid(box, "S", "plain", 176 + i, 3)
+        fabric(box.top, "S", "plain", 176 + i, 4)
+        if ridge:
+            w = size[0]
+            box.top.vline(w // 2 - 1, 0, box.top.h - 1, ridge), box.top.vline(w // 2, 0, box.top.h - 1, ridge)
+            box.front.vline(w // 2 - 1, 0, box.front.h - 1, ridge), box.front.vline(w // 2, 0, box.front.h - 1, ridge)
         if i == 2:
-            box.front.fill("S1"), box.bottom.fill("K1")
-        box.front.hline(0, w - 1, 0, k("S", 4))
+            box.front.hline(0, 1, box.front.h - 1, tip), box.bottom.fill("K1")

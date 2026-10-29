@@ -7,5 +7,7 @@
   "ANBU": {"name": "ANBU", "P": "#c9cdc8", "S": "#efeee8", "A": "#b5232b", "L": "#4b4038", "M": "#aab3b9", "K": "#15171c", "D": "#23262d"},
   "HYUGA": {"name": "Hyuga", "P": "#e4ddcf", "S": "#f2f0ea", "A": "#7a6a99", "L": "#6b5a45", "M": "#aab3b9", "K": "#1d1b26", "D": "#3d3850"},
   "GREEN_BEAST": {"name": "Green Beast", "P": "#3f8f3c", "S": "#ecebe3", "A": "#c4302b", "L": "#f2892a", "M": "#aab3b9", "K": "#1b1f2e", "D": "#2d3c60"},
-  "ANBU_SHADOW": {"name": "ANBU Shadow", "P": "#bfc3c0", "S": "#efeee8", "A": "#7b3d8c", "L": "#3b404b", "M": "#aab3b9", "K": "#15171c", "D": "#23262d"}
+  "ANBU_SHADOW": {"name": "ANBU Shadow", "P": "#bfc3c0", "S": "#efeee8", "A": "#7b3d8c", "L": "#3b404b", "M": "#aab3b9", "K": "#15171c", "D": "#23262d"},
+  "ANBU_WOLF": {"name": "ANBU Wolf", "P": "#a3aaae", "S": "#efeee8", "A": "#2f5f8a", "L": "#3a2f2a", "M": "#b8c0c6", "K": "#15171c", "D": "#1e2229"},
+  "ANBU_HAWK": {"name": "ANBU Hawk", "P": "#c4c6bf", "S": "#efeee8", "A": "#b0602a", "L": "#4b3a2c", "M": "#aab3b9", "K": "#17171c", "D": "#22242b"}
 }
