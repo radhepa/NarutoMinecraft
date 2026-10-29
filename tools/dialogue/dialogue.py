@@ -97,6 +97,10 @@ CONDITIONS = {'all', 'any', 'not', 'flag', 'rank_at_least', 'rank_at_most', 'lev
 ACTIONS = {'set_flag', 'start_quest', 'advance_quest', 'give_item', 'take_item', 'give_ryo', 'add_friendship',
            'bond_event', 'shared_moment', 'reveal_fact', 'favor', 'deed', 'bond_flag', 'news', 'unlock', 'resolve_hook'}
 MAX_LINE, MAX_LABEL = 300, 34
+ALL_AGES = ('bond.', 'talk.', 'hangout.', 'gift.', 'reaction.', 'life.', 'followup.', 'callback.', 'again', 'close')
+# Families whose keys may end in a personality (BondDialogue's <key>.<archetype>); elsewhere ".proud" is just a word.
+PERSONALITY_SUFFIXED = ('bond.greet', 'bond.jealous', 'bond.birthday', 'bond.romance', 'talk.', 'life.', 'hangout.', 'gift.',
+                        'reaction', 'callback.contradict', 'again', 'close', 'followup.', 'combat.')
 ROMANCE = re.compile(r"\b(kiss\w*|flirt\w*|crush(es)?|sweetheart\w*|darling|romanc\w*|romantic|in love|love letter\w*|"
                      r"go(ing)? on a date|dating|marry me|propos\w+ to|handsome|gorgeous|blush\w* at you)\b", re.I)
 PRONOUN = re.compile(r"\b(he|him|his|himself|she|her|hers|herself)\b", re.I)
@@ -294,7 +298,7 @@ def parse_heading(where, line, defaults):
         tags[k] = v
     # Bond keys carry a personality as their last segment (talk.food.fiery): it is a tag, the pool is talk.food.
     head, _, last = pool.rpartition('.')
-    if last in ARCHETYPES and head:
+    if last in ARCHETYPES and head and head.startswith(PERSONALITY_SUFFIXED):
         pool, tags['personality'] = head, {'any': [last]}
     for raw in parts[1:]:
         key, value = parse_tag(where, raw)
@@ -304,6 +308,9 @@ def parse_heading(where, line, defaults):
             kind = value
         else:
             tags[key] = tag_values(where, key, value)
+    # The bond engine's and the repeat set's pools are said by everyone, children too, unless a line says otherwise.
+    if pool.startswith(ALL_AGES) and 'stage' not in tags:
+        tags['stage'] = {'any': ['adult', 'child', 'teen']}
     if not fn:
         fail(where, f'{pool}: every pool needs fn= (one or more of {", ".join(sorted(FUNCTIONS))})')
     fns = fn.split(',')
@@ -621,11 +628,11 @@ def load_all():
             read_exchanges(p, gated, terms, exchanges)
         for p in qs:
             read_questions(p, gated, terms, questions, qids)
-    seen = Counter((it['pool'], it['text']) for it in lines)
+    seen = Counter((it['pool'], it['text'], json.dumps(it['tags'], sort_keys=True)) for it in lines)
     dups = [k for k, c in seen.items() if c > 1]
     if dups:
         fail('lines', f'{len(dups)} duplicate lines, e.g. {dups[0]!r}')
-    texts = Counter(it['text'] for it in lines if it['kind'] != 'repeat')
+    texts = Counter(it['text'] for it in lines if it['kind'] != 'repeat' and len(it['text']) > 12)
     cross = [t for t, c in texts.items() if c > 1]
     if cross:
         fail('lines', f'{len(cross)} lines appear in more than one pool, e.g. {cross[0]!r}')

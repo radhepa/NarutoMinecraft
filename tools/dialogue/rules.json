@@ -15,7 +15,7 @@
       "resident": {"daily": 3, "base": 16,   "per_level": 6, "per_slice": 4},
       "passerby": {"daily": 1, "base": 5,    "per_level": 2, "per_slice": 0}
     },
-    "exempt": ["bond.seen", "bond.heard", "bond.level", "bond.greet.argument", "bond.greet.cold_shoulder", "bond.greet.making_up", "bond.greet.falling_out", "bond.birthday", "life", "followup", "callback", "hook", "quest", "story", "event.today", "mission", "combat", "shop"],
+    "exempt": ["bond.seen", "bond.heard", "bond.level", "bond.levelup", "bond.greet.argument", "bond.greet.cold_shoulder", "bond.greet.making_up", "bond.greet.falling_out", "bond.birthday", "life", "followup", "callback", "hook", "quest", "story", "event.today", "mission", "combat", "shop"],
     "over_budget": ["again", "repeat", "close"]
   },
   "questions": {

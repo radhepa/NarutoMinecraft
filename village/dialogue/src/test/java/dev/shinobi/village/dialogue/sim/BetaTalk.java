@@ -88,7 +88,8 @@ public final class BetaTalk {
                     conversations++;
                     boolean hitBudget = false;
                     var g = talk.greet(p.id(), c, day, r);
-                    hitBudget |= count(stats, "greet", g);
+                    String who = p.stage().equals("child") ? (p.tier().equals("cast") ? " (child cast)" : " (children)") : p.tier().equals("cast") ? " (adult cast)" : "";
+                    hitBudget |= count(stats, "greet" + who, g);
                     if (g.why() == Talk.Why.EXHAUSTED && firstExhausted < 0) firstExhausted = day;
                     int topics = player.topicsMin() + r.nextInt(player.topicsMax() - player.topicsMin() + 1);
                     for (int t = 0; t < topics; t++) {
@@ -104,7 +105,7 @@ public final class BetaTalk {
                                 continue;
                             }
                         }
-                        if (roll < 6 || p.stage().equals("child")) { s = talk.chat(p.id(), c, day, r); fam = "chat"; }
+                        if (roll < 6) { s = talk.chat(p.id(), c, day, r); fam = "chat"; }
                         else {
                             int k = r.nextInt(TOPICS.size());
                             if (TOPIC_LEVEL[k] > level) k = 0;
@@ -112,7 +113,7 @@ public final class BetaTalk {
                             s = talk.topic(p.id(), key, c, day, r);
                             fam = k == 0 ? "chat" : "talk";
                         }
-                        hitBudget |= count(stats, fam, s);
+                        hitBudget |= count(stats, fam + who, s);
                         if (s.line() != null && s.fresh()) fillCounts[s.line().filler() ? 1 : 0]++;
                         if (s.why() == Talk.Why.EXHAUSTED && firstExhausted < 0) firstExhausted = day;
                         if (s.ended()) break;

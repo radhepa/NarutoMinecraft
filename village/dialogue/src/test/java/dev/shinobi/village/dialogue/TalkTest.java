@@ -167,5 +167,6 @@ class TalkTest {
         assertEquals("FOOD! Ramen! Now!", said.text());
         assertEquals("talk.food", Talk.normalize("talk.food.fiery"));
         assertEquals("bond.greet.level.3", Talk.normalize("bond.greet.level.3"));
+        assertEquals("village.mood.proud", Talk.normalize("village.mood.proud"), "a mood, not a personality");
     }
 }

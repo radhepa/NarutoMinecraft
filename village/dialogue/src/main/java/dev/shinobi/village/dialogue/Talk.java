@@ -316,8 +316,14 @@ public final class Talk {
     /** A bond key's trailing personality is a tag in the compiled bank: {@code talk.food.fiery} is pool {@code talk.food}. */
     public static String normalize(String key) {
         int dot = key.lastIndexOf('.');
-        return dot > 0 && ARCHETYPES.contains(key.substring(dot + 1)) ? key.substring(0, dot) : key;
+        if (dot <= 0 || !ARCHETYPES.contains(key.substring(dot + 1))) return key;
+        String head = key.substring(0, dot);
+        for (String p : SUFFIXED) if (head.startsWith(p)) return head;
+        return key;
     }
+    /** Families whose keys may end in a personality; elsewhere ({@code village.mood.proud}) the last word is part of the key. */
+    static final List<String> SUFFIXED = List.of("bond.greet", "bond.jealous", "bond.birthday", "bond.romance", "talk.", "life.", "hangout.",
+            "gift.", "reaction", "callback.contradict", "again", "close", "followup.", "combat.");
     private Line byId(int id) {
         if (index == null) {
             index = new java.util.HashMap<>();

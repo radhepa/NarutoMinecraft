@@ -65,6 +65,8 @@ def compose(path):
         for voice, text in kernel['lines']:
             if voice == 'any':
                 rest = [a for a in ARCHETYPES if a not in covered]
+                if not rest:
+                    continue  # every personality has its own voice of this kernel
                 tag = f'personality={"|".join(rest)}' if covered else ''
             elif voice in REGISTERS:
                 tag = 'personality=' + '|'.join(REGISTERS[voice])

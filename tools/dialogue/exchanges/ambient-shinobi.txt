@@ -22,10 +22,10 @@ A: Paper bombs went up a ryo at the tool shop.
 B: Powder cart's late. Everything's gone up a ryo.
 
 A: Who's got the night watch on the wall?
-B: The Tobari, mostly. They hear things before they happen.
+B: The Tobari, mostly. They can hear a cat land three roofs away.
 
 A: How long were you out?
-B: Six days. I'd kill for a bath. Not literally. Mostly.
+B: Six days. I'd trade my headband for a hot bath.
 
 ## ambient.shinobi  fn=teach
 A: Did you eat before the spar?
