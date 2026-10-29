@@ -1,0 +1,166 @@
+{
+  "id": "t105_crest_tunic",
+  "kind": "top",
+  "name": "Crest Tunic",
+  "gender": "unisex",
+  "texture": "tops/t105_crest_tunic.png",
+  "extrasHeight": 32,
+  "tags": [
+    "genin",
+    "senju",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "chest_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        2.6,
+        -2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        -1
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        19,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "hip_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        10.0,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "right_sleeve_hem",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "left_sleeve_hem",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        10
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved tunic, cream yoke, Senju crest on the chest, bandaged forearms, belt pouch."
+}

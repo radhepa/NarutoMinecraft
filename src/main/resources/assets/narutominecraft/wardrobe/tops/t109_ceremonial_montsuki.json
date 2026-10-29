@@ -1,0 +1,322 @@
+{
+  "id": "t109_ceremonial_montsuki",
+  "kind": "top",
+  "name": "Ceremonial Montsuki",
+  "gender": "unisex",
+  "texture": "tops/t109_ceremonial_montsuki.png",
+  "extrasHeight": 64,
+  "tags": [
+    "formal",
+    "robe",
+    "senju"
+  ],
+  "requires": [
+    "hakama"
+  ],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "kimono_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "kimono_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        1.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "kimono_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.7,
+        10.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        9,
+        4
+      ],
+      "uv": [
+        21,
+        11
+      ]
+    },
+    {
+      "id": "kimono_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.7,
+        10.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        9,
+        4
+      ],
+      "uv": [
+        32,
+        11
+      ]
+    },
+    {
+      "id": "crest_chest_right",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        4.6,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -4,
+        -0.5
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        43,
+        11
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "crest_chest_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        4.6,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -4,
+        -0.5
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        25
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "crest_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.0,
+        2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -4,
+        -0.5
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        19,
+        25
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "right_tamoto",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.0,
+        -2.5
+      ],
+      "size": [
+        3,
+        7,
+        5
+      ],
+      "uv": [
+        38,
+        25
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_tamoto",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -2.5
+      ],
+      "size": [
+        3,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        38
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Formal black kimono with five white Senju crests, white under-collar, long skirts."
+}

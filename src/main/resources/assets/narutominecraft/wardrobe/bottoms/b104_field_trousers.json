@@ -1,0 +1,101 @@
+{
+  "id": "b104_field_trousers",
+  "kind": "bottom",
+  "name": "Field Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b104_field_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "holster_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        1.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "holster",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -3.0,
+        0.8,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    }
+  ],
+  "description": "Straight dark trousers, coloured knee patches, ankle wraps, holster, dark sandals."
+}

@@ -1,0 +1,161 @@
+{
+  "id": "b101_armored_hakama",
+  "kind": "bottom",
+  "name": "Armored Hakama",
+  "gender": "unisex",
+  "texture": "bottoms/b101_armored_hakama.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "hakama",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [
+    "formal"
+  ],
+  "pieces": [
+    {
+      "id": "waist_tasset_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0.0
+      ],
+      "size": [
+        8,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "waist_tasset_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0.0
+      ],
+      "size": [
+        8,
+        5,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "waist_tasset_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.7,
+        10.2,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": "waist_tasset_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.7,
+        10.2,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        49,
+        0
+      ]
+    },
+    {
+      "id": "waist_cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.35
+    }
+  ],
+  "description": "Dark hakama trousers, laced plate tassets at the waist, plate shin guards, dark sandals."
+}
