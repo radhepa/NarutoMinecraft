@@ -12,7 +12,7 @@ class CatalogTest {
 
     @Test void everyPieceIsWellFormed() {
         for (var p : Catalog.PIECES.values()) {
-            assertTrue(p.id().matches("[a-z_]+(\\.[a-z_]+)?"), p.id());
+            assertTrue(p.id().matches("[a-z_]+(@[a-z_]+)?"), p.id());
             assertTrue(SLICES.contains(p.slice()), p.id());
             if (p.inSet()) assertNotNull(Catalog.set(p.set()), p.id() + " names a missing set");
             if (p.source() == Source.QUEST) assertTrue(p.tags().stream().anyMatch(t -> t.startsWith("from:")), p.id() + " names no quest");
@@ -38,19 +38,19 @@ class CatalogTest {
         assertEquals(25, clans.size());
         for (String c : clans) {
             assertEquals(3, Catalog.set("clan." + c).pieces().size(), c);
-            assertNotNull(Catalog.KEEPSAKES.get("clan_keepsake." + c), c);
-            assertEquals("clan." + c + ".1", Catalog.KEEPSAKES.get("clan_keepsake." + c).from());
+            assertNotNull(Catalog.KEEPSAKES.get("keepsake_clan_" + c), c);
+            assertEquals("clan." + c + ".1", Catalog.KEEPSAKES.get("keepsake_clan_" + c).from());
         }
     }
     @Test void counts() {
         long beta = Catalog.PIECES.values().stream().filter(p -> !p.slice().equals("later")).count();
         long clan = Catalog.PIECES.values().stream().filter(p -> p.source() == Source.CLAN).count();
         assertEquals(75, clan);
-        assertEquals(156, Catalog.PIECES.size());
+        assertEquals(155, Catalog.PIECES.size());
         assertEquals(Catalog.PIECES.size(), beta + Catalog.PIECES.values().stream().filter(p -> p.slice().equals("later")).count());
-        assertEquals(39, Catalog.KEEPSAKES.size());
+        assertEquals(38, Catalog.KEEPSAKES.size());
         assertEquals(12, Photo.MILESTONES.size());
-        assertEquals(List.of("futon", "low_table", "cupboard", "storage_chest", "wardrobe_cabinet", "cooking_pot"), Catalog.STARTER);
+        assertEquals(List.of("futon", "low_table", "cupboard", "storage_chest", "cooking_pot"), Catalog.STARTER);
     }
     @Test void flatsAreRolledFromTheSeedInVariedAndFixedInClassic() {
         assertSame(Flat.CLASSIC, Flat.starting(1, true));

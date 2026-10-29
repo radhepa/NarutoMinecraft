@@ -282,8 +282,8 @@
     "semantic_hash": ""
   },
   "life/bonds/build.gradle": {
-    "mtime": 1793310708.5866947,
-    "seen": 1793310715.8366623,
+    "mtime": 1793310903.0669737,
+    "seen": 1793310910.5207767,
     "ast_hash": "db6693d36ce312762afdd54d275e8cec",
     "semantic_hash": ""
   },
@@ -690,8 +690,8 @@
     "semantic_hash": ""
   },
   "life/home/build.gradle": {
-    "mtime": 1793310708.58723,
-    "seen": 1793310715.8367631,
+    "mtime": 1793310903.0677938,
+    "seen": 1793310910.5209007,
     "ast_hash": "a8e689af4d45624cf4a1afd6943b4145",
     "semantic_hash": ""
   },
@@ -702,9 +702,9 @@
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Catalog.java": {
-    "mtime": 1793310377.6053932,
-    "seen": 1793310715.836766,
-    "ast_hash": "e8a74cb19bc2f6de4afed19f50624f8d",
+    "mtime": 1793310813.6322374,
+    "seen": 1793310910.5209045,
+    "ast_hash": "277636ec6e12146eebafd00f076bd014",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Comfort.java": {
@@ -780,9 +780,9 @@
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Practice.java": {
-    "mtime": 1793310690.5638258,
-    "seen": 1793310715.8367832,
-    "ast_hash": "67c85b20113c0621b3cf75376ae2840d",
+    "mtime": 1793310813.636236,
+    "seen": 1793310910.5209243,
+    "ast_hash": "e6ac6ef77b801e0f4c55baec09b6e07a",
     "semantic_hash": ""
   },
   "life/home/src/main/java/dev/shinobi/life/home/Rest.java": {
@@ -804,15 +804,15 @@
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/CatalogTest.java": {
-    "mtime": 1793310571.490327,
-    "seen": 1793310715.836788,
-    "ast_hash": "969b487d0fdbe945e459e9395d2ffcc8",
+    "mtime": 1793310833.8462157,
+    "seen": 1793310910.52093,
+    "ast_hash": "9729a1652c668c1c5a6823153630c2f6",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/ComfortTest.java": {
-    "mtime": 1793310410.8313963,
-    "seen": 1793310715.8367891,
-    "ast_hash": "f3511b536b55b1e9cb50b60412d017e9",
+    "mtime": 1793310833.85264,
+    "seen": 1793310910.5209312,
+    "ast_hash": "6f32b5ecabb2e3ab376be9cac2ae507a",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/LivingTest.java": {
@@ -822,15 +822,15 @@
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/MoveTest.java": {
-    "mtime": 1793310410.831608,
-    "seen": 1793310715.8367918,
-    "ast_hash": "db1ad4abdb6ba88a0d21a226ca8b7d87",
+    "mtime": 1793310813.6410904,
+    "seen": 1793310910.5209343,
+    "ast_hash": "16ad5ca80c02e71dcd939d66f8ed4d14",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/RestTest.java": {
-    "mtime": 1793309461.6325583,
-    "seen": 1793310715.8367932,
-    "ast_hash": "27335ccbd1214abab0a5dd5e13fc9ff0",
+    "mtime": 1793310813.6396656,
+    "seen": 1793310910.5209363,
+    "ast_hash": "570e4fd98ad92b334b266ca2b216b2b1",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/VisitsTest.java": {
@@ -840,9 +840,9 @@
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/sim/FirstFifteenHours.java": {
-    "mtime": 1793310410.8302867,
-    "seen": 1793310715.8367958,
-    "ast_hash": "a67be7949f62adfc164f85be6babaf82",
+    "mtime": 1793310833.849343,
+    "seen": 1793310910.5209386,
+    "ast_hash": "f18074bf3385a56ae6246075ca455c25",
     "semantic_hash": ""
   },
   "life/home/src/test/java/dev/shinobi/life/home/sim/FirstFifteenHoursTest.java": {
@@ -852,9 +852,9 @@
     "semantic_hash": ""
   },
   "docs/HOME.md": {
-    "mtime": 1793310690.580306,
-    "seen": 1793310715.836976,
-    "ast_hash": "89fbd2ef250885ec9d65dc69c1d63bc3",
+    "mtime": 1793310896.2984061,
+    "seen": 1793310910.5212007,
+    "ast_hash": "145c58ff67ad9ec5f043e2974aa0c4e2",
     "semantic_hash": ""
   },
   "life/bonds/src/main/java/dev/shinobi/life/bond/Gifts.java": {

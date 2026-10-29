@@ -17,7 +17,7 @@ class ComfortTest {
         var s = score(new Home("player", Flat.CLASSIC));
         assertEquals(Tier.BARE, s.tier());
         assertTrue(s.comfort() >= 7, "a futon, a table and a cupboard: " + s.comfort());
-        assertEquals(1, s.sets(), "the futon and the low table are two of the Leaf set");
+        assertEquals(0, s.sets(), "the Leaf set is still all to buy");
     }
     @Test void theLeafSetMakesItComfortable() {
         var s = score(leafFlat());
@@ -26,8 +26,8 @@ class ComfortTest {
         assertEquals(5, s.sets());
     }
     @Test void piecesOfOneKindDiminish() {
-        var one = new Home("player", Flat.CLASSIC); one.place("floor_cushion");
-        var many = new Home("player", Flat.CLASSIC); for (int i = 0; i < 6; i++) many.place("floor_cushion");
+        var one = new Home("player", Flat.CLASSIC); one.place("zabuton");
+        var many = new Home("player", Flat.CLASSIC); for (int i = 0; i < 6; i++) many.place("zabuton");
         double gainOne = score(one).pieces() - score(new Home("player", Flat.CLASSIC)).pieces();
         double gainMany = score(many).pieces() - score(new Home("player", Flat.CLASSIC)).pieces();
         assertTrue(gainMany < 6 * gainOne * .6, "six cushions are not six times one: " + gainMany);
@@ -36,7 +36,7 @@ class ComfortTest {
     @Test void theFlatHoldsSoMuchComfortAndRunsOutOfFloor() {
         var h = leafFlat();
         String last = "ok";
-        for (int i = 0; i < 40 && last.equals("ok"); i++) last = h.place(i % 2 == 0 ? "kotatsu" : "zabuton_pair");
+        for (int i = 0; i < 40 && last.equals("ok"); i++) last = h.place(i % 2 == 0 ? "kotatsu" : "zabuton");
         assertEquals("no_room", last);
         assertTrue(Comfort.of(h, 0, 3, "").comfort() <= Flat.Tier.ACADEMY_FLAT.cap);
     }
@@ -57,15 +57,15 @@ class ComfortTest {
     @Test void clanPiecesComfortTheirOwnClan() {
         var h = new Home("player", Flat.CLASSIC);
         for (String id : Catalog.set("clan.nara").pieces()) h.place(id);
-        assertEquals(2, Comfort.of(h, 0, 0, "nara").sets() - 1);
-        assertEquals(0, Comfort.of(h, 0, 0, "").sets() - 1);
+        assertEquals(2, Comfort.of(h, 0, 0, "nara").sets());
+        assertEquals(0, Comfort.of(h, 0, 0, "").sets());
     }
     @Test void keepsakesAndPhotosAddStyle() {
         var h = new Home("player", Flat.CLASSIC);
         h.place("photo_frame");
         double before = score(h).style();
-        h.keep(Catalog.KEEPSAKES.get("framed_ladle"));
-        assertEquals("ok", h.display("framed_ladle"));
+        h.keep(Catalog.KEEPSAKES.get("keepsake_framed_ladle"));
+        assertEquals("ok", h.display("keepsake_framed_ladle"));
         h.photo("photo.class", 3, java.util.List.of("role:teammate_a"), "child");
         assertEquals("ok", h.hang("photo.class"));
         assertEquals(before + 2, score(h).style(), 1e-9);
@@ -73,7 +73,7 @@ class ComfortTest {
     @Test void aPetAndACaredForPlantAddComfort() {
         var h = new Home("player", Flat.CLASSIC);
         double base = score(h).comfort();
-        h.place("houseplant"); h.place("pet_bed"); h.pet("cat"); h.plant.water(0);
+        h.place("potted_fern"); h.place("pet_bed"); h.pet("cat"); h.plant.water(0);
         assertTrue(score(h).extras() >= 3);
         assertTrue(score(h).comfort() > base + 3);
     }

@@ -1,17 +1,17 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 233 files · ~286,427 words
+- 233 files · ~286,444 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .properties 2, .jar 1)
 
 ## Summary
-- 3943 nodes · 9370 edges · 171 communities (136 shown, 35 thin omitted)
-- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 1062 edges (avg confidence: 0.87)
+- 3943 nodes · 9373 edges · 172 communities (137 shown, 35 thin omitted)
+- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 1065 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1f0dda17`
+- Built from commit: `7305d4d5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -114,7 +114,7 @@
 - 4.4 The minor clans
 - AgeStage
 - 2. Quest framework
-- 5. Process
+- utility_pole
 - Label
 - .daily
 - mockups.py
@@ -128,14 +128,14 @@
 - .look
 - Tier
 - Home
-- noren
+- Konoha: the build plan
 - Custom blocks
 - Niche
 - VisitsTest
 - konoha/preview.py
 - roster.py
 - Pantry
-- Flat
+- Tier
 - Ranks
 - Json
 - FirstFifteenHours.java
@@ -158,7 +158,7 @@
 - Category
 - Data
 - ClanRelations
-- .react
+- 15. Furniture
 - kit_sarutobi.py
 - ClanPower
 - Stretch
@@ -174,6 +174,7 @@
 - 6. Filler arcs
 - street.py
 - .person
+- .tidiness
 
 ## God Nodes (most connected - your core abstractions)
 1. `k()` - 227 edges
@@ -202,7 +203,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (171 total, 35 thin omitted)
+## Communities (172 total, 35 thin omitted)
 
 ### Community 0 - "creator.py"
 Cohesion: 0.09
@@ -270,7 +271,7 @@ Nodes (10): Activity, BondEvent, Answer, Highlight, Invitation, Outcome, Plan, T
 
 ### Community 17 - "pathlib"
 Cohesion: 0.12
-Nodes (5): check(), main(), build(), build(), build()
+Nodes (3): build(), build(), build()
 
 ### Community 18 - "Economy"
 Cohesion: 0.10
@@ -365,8 +366,8 @@ Cohesion: 0.29
 Nodes (7): 9. Delivery plan, Beta 1: the opening and the Academy (~4 h main path), Beta 2.5: clan welcomes, wave 2 (content drop), Beta 2: Genin life (+~8 h), Beta 3: the Chunin Exams (+~3 h), Phase 0: Foundations, Playtesting
 
 ### Community 41 - "blocks.py"
-Cohesion: 0.15
-Nodes (15): Roofs, Streets, auto_uv(), block(), Block, box(), compile_all(), kawara_ridge() (+7 more)
+Cohesion: 0.13
+Nodes (21): 6. Prototypes, Facades and shop fronts, Roofs, auto_uv(), awning(), block(), Block, box() (+13 more)
 
 ### Community 42 - "kit_rugged.py"
 Cohesion: 0.06
@@ -437,8 +438,8 @@ Cohesion: 0.13
 Nodes (5): Answered, Outcome, Questions, QuestionsTest, SampleQuestions
 
 ### Community 64 - "Tex"
-Cohesion: 0.14
-Nodes (3): paper_lantern(), hexrgb(), Tex
+Cohesion: 0.16
+Nodes (3): Lanterns, paper_lantern(), Tex
 
 ### Community 65 - "Squad"
 Cohesion: 0.10
@@ -485,8 +486,8 @@ Cohesion: 0.09
 Nodes (20): AnswerTag, AMBITIOUS, BLUNT, BOLD, CAUTIOUS, CURIOUS, DUTIFUL, EVASIVE (+12 more)
 
 ### Community 78 - "Home"
-Cohesion: 0.09
-Nodes (6): Home, Tidiness, LIVED_IN, MESSY, TIDY, Photo
+Cohesion: 0.08
+Nodes (5): 17. What the map needs, Flat, Room, Home, Photo
 
 ### Community 79 - "Face"
 Cohesion: 0.15
@@ -541,7 +542,7 @@ Cohesion: 0.12
 Nodes (16): 3. Building catalogue, Apartment buildings, Clan builds, Design programs, Every building, Forest of Death, Homes, Landmarks (+8 more)
 
 ### Community 95 - ".of"
-Cohesion: 0.20
+Cohesion: 0.17
 Nodes (4): Rest, Rested, ComfortTest, RestTest
 
 ### Community 96 - "Side quests"
@@ -560,16 +561,16 @@ Nodes (5): AgeStage, ADULT, CHILD, TEEN, GrowUp
 Cohesion: 0.20
 Nodes (10): 2.1 Kinds, 2.2 Unlock rules, 2.3 How quests are found, 2.4 Repeatability, 2.5 Failure and expiry, 2.6 Rewards, 2.7 Pacing, 2.8 Classic and Varied (+2 more)
 
-### Community 100 - "5. Process"
-Cohesion: 0.50
-Nodes (4): 5. Process, Order of work, The pieces, What needs you at your PC
+### Community 100 - "utility_pole"
+Cohesion: 0.22
+Nodes (7): 2. Style guide: the Konoha kit, By building type, Shared palette, Shrine, Streets, utility_pole(), shimenawa()
 
 ### Community 101 - "Label"
 Cohesion: 0.20
 Nodes (7): Label, ALLIES, COOL, FEUD, FRIENDLY, NEUTRAL, RIVALS
 
 ### Community 102 - ".daily"
-Cohesion: 0.18
+Cohesion: 0.13
 Nodes (4): Friends, Day, Visit, Visits
 
 ### Community 103 - "mockups.py"
@@ -613,23 +614,23 @@ Cohesion: 0.12
 Nodes (12): Power, EMBER_LINK, EMBER_MARK, KINDLE, SMALL_KINDLE, THREAD_SIGHT, UNISON, Tier (+4 more)
 
 ### Community 114 - "Home"
-Cohesion: 0.08
-Nodes (24): 10. The training corner, 11. Money, 12. Growing up: homes by era, 13. Multiplayer, 14. The story at home, 15. Furniture, 16. Keepsakes, 1. Design rules (+16 more)
+Cohesion: 0.09
+Nodes (22): 10. The training corner, 11. Money, 12. Growing up: homes by era, 13. Multiplayer, 14. The story at home, 16. Keepsakes, 1. Design rules, 20. By beta slice (+14 more)
 
-### Community 115 - "noren"
-Cohesion: 0.12
-Nodes (18): 1. The answer: how much it will be, 2. Style guide: the Konoha kit, 6. Prototypes, 7. Effort estimate, 8. Registration notes for Phase 0, By building type, Calibration, Contents (+10 more)
+### Community 115 - "Konoha: the build plan"
+Cohesion: 0.13
+Nodes (15): 1. The answer: how much it will be, 4. Block catalogue, 5. Process, 7. Effort estimate, 8. Registration notes for Phase 0, Calibration, Contents, Konoha: the build plan (+7 more)
 
 ### Community 116 - "Custom blocks"
-Cohesion: 0.13
-Nodes (14): Academy, Residence, hospital, stadium, Clan signatures, Crafting stations, Crests and banners, Custom blocks, Displays (item-rendering), Festival, Furniture (the Leaf set) (+6 more)
+Cohesion: 0.15
+Nodes (13): Academy, Residence, hospital, stadium, Clan signatures, Crafting stations, Crests and banners, Custom blocks, Displays (item-rendering), Festival, Furniture (the Leaf set) (+5 more)
 
 ### Community 117 - "Niche"
 Cohesion: 0.12
 Nodes (13): The model, Niche, GENJUTSU, KENJUTSU, MEDICAL, NINJUTSU, SEALING, SENSING (+5 more)
 
 ### Community 118 - "VisitsTest"
-Cohesion: 0.20
+Cohesion: 0.23
 Nodes (3): Cast, Setup, VisitsTest
 
 ### Community 119 - "konoha/preview.py"
@@ -644,9 +645,9 @@ Nodes (13): bucket(), check(), check_name(), counts(), first_level(), group_of()
 Cohesion: 0.35
 Nodes (3): Food, Meal, Pantry
 
-### Community 122 - "Flat"
-Cohesion: 0.10
-Nodes (12): 17. What the map needs, 2. The flat, The Classic flat: `flat.leaf_block.3a`, Varied candidates, Tier, BARE, BELOVED, COMFORTABLE (+4 more)
+### Community 122 - "Tier"
+Cohesion: 0.14
+Nodes (9): Score, Tier, BARE, BELOVED, COMFORTABLE, COSY, HOMELY, Practice (+1 more)
 
 ### Community 123 - "Ranks"
 Cohesion: 0.11
@@ -712,9 +713,9 @@ Nodes (4): 4.1 The shape of a clan line, 4.2 Clan relations at the start, 4.5 Cl
 Cohesion: 0.12
 Nodes (17): Category, BATH, BED, DECOR, DISPLAY, FIXTURE, FLOOR, KITCHEN (+9 more)
 
-### Community 151 - ".react"
-Cohesion: 0.17
-Nodes (3): Score, Practice, Session
+### Community 151 - "15. Furniture"
+Cohesion: 0.40
+Nodes (5): 15. Furniture, Beta 1, Beta 2, Fixtures and starter pieces (Beta 1), Later (designed now)
 
 ### Community 152 - "kit_sarutobi.py"
 Cohesion: 0.13
@@ -737,8 +738,8 @@ Cohesion: 0.27
 Nodes (3): 15. Pacing, TimeAndPacingTest, 9. Pacing with time together
 
 ### Community 159 - "shade"
-Cohesion: 0.25
-Nodes (7): 4. Block catalogue, Interior fittings, Totals, Vanilla mappings, tatami(), tatami_top(), shade()
+Cohesion: 0.28
+Nodes (4): tatami(), tatami_top(), hexrgb(), shade()
 
 ### Community 160 - "Tier"
 Cohesion: 0.22
@@ -748,25 +749,29 @@ Nodes (7): Tier, A, B, C, D, E, S
 Cohesion: 0.50
 Nodes (4): 6. Filler arcs, In the beta, Later (foundation), Later one-offs (foundation)
 
+### Community 170 - ".tidiness"
+Cohesion: 0.40
+Nodes (4): Tidiness, LIVED_IN, MESSY, TIDY
+
 ## Knowledge Gaps
 - **325 isolated node(s):** `TALK`, `GIFT_LOVED`, `GIFT_LIKED`, `GIFT_PLAIN`, `GIFT_DISLIKED` (+320 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1423 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1422 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `k()` connect `k` to `kit_uchiha.py`, `kit_senju.py`, `solid`, `kit_kurama.py`, `rnd`, `kit_kunoichi.py`, `kit_suzuran.py`, `kit_sarutobi.py`, `kit_uzumaki.py`, `kit_market.py`, `kit_tobari.py`, `fabric`, `kit_rugged.py`, `kit_tsuchigumo.py`, `cel_box`, `Face`, `kit_haruno.py`, `kit_household.py`, `Custom blocks`?**
+- **Why does `k()` connect `k` to `kit_uchiha.py`, `kit_senju.py`, `solid`, `kit_kurama.py`, `rnd`, `kit_kunoichi.py`, `kit_suzuran.py`, `kit_sarutobi.py`, `kit_uzumaki.py`, `kit_market.py`, `kit_tobari.py`, `fabric`, `kit_rugged.py`, `kit_tsuchigumo.py`, `cel_box`, `Face`, `kit_haruno.py`, `utility_pole`, `kit_household.py`?**
   _High betweenness centrality (0.093) - this node is a cross-community bridge._
 - **What connects `TALK`, `GIFT_LOVED`, `GIFT_LIKED` to the rest of the system?**
   _325 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `creator.py` be split into smaller, more focused modules?**
   _Cohesion score 0.08879492600422834 - nodes in this community are weakly interconnected._
 - **Why does `BondWorld` connect `BondWorld` to `VillageSim.java`, `.romance`, `.person`, `org.junit.jupiter.api.Test`, `.test`, `.page`, `.person`, `Run`, `.talk`, `SquadTest`, `Stage`, `list`, `Question`, `Squad`, `VillageScaleTest`, `Bond`, `.of`, `Person`, `Deed`, `AnswerTag`, `Village`, `.tier`, `VisitsTest`, `18. The engine`?**
-  _High betweenness centrality (0.088) - this node is a cross-community bridge._
+  _High betweenness centrality (0.087) - this node is a cross-community bridge._
 - **Should `kit_uchiha.py` be split into smaller, more focused modules?**
   _Cohesion score 0.1286549707602339 - nodes in this community are weakly interconnected._
-- **Why does `solid()` connect `solid` to `kit_uchiha.py`, `kit_senju.py`, `kit_kurama.py`, `rnd`, `kit_kunoichi.py`, `kit_suzuran.py`, `k`, `Box`, `kit_sarutobi.py`, `kit_uzumaki.py`, `kit_market.py`, `kit_tobari.py`, `fabric`, `kit_rugged.py`, `kit_tsuchigumo.py`, `cel_box`, `kit_haruno.py`, `kit_household.py`, `Custom blocks`?**
-  _High betweenness centrality (0.066) - this node is a cross-community bridge._
+- **Why does `solid()` connect `solid` to `kit_uchiha.py`, `kit_senju.py`, `kit_kurama.py`, `rnd`, `kit_kunoichi.py`, `kit_suzuran.py`, `k`, `Box`, `kit_sarutobi.py`, `kit_uzumaki.py`, `kit_market.py`, `kit_tobari.py`, `fabric`, `kit_rugged.py`, `kit_tsuchigumo.py`, `cel_box`, `kit_haruno.py`, `utility_pole`, `kit_household.py`?**
+  _High betweenness centrality (0.067) - this node is a cross-community bridge._
 - **Should `render.py` be split into smaller, more focused modules?**
   _Cohesion score 0.12312312312312312 - nodes in this community are weakly interconnected._
