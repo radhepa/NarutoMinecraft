@@ -42,7 +42,9 @@ public final class BondWorld {
     final List<Together.Plan> plans = new ArrayList<>();
     final List<Together.Invitation> invitations = new ArrayList<>();
     final Map<String, Long> invitedOn = new TreeMap<>();
-    int planSerial;
+    int planSerial, giftSerial;
+    /** Gifts the player has received (the home's collection book reads them). */
+    final List<Gifts.Received> received = new ArrayList<>();
     /** Questions asked across everyone today (the daily budget). */
     int questionsToday, questionsDry;
     long questionsDay = -1;
@@ -442,6 +444,7 @@ public final class BondWorld {
             updateLevel(b, 1);
         }
         Together.daily(this);
+        Gifts.daily(this);
         LifeEvents.daily(this);
         if (village != null) village.endDay();
         day++;
