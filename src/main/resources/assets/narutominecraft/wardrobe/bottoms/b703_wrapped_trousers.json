@@ -1,0 +1,45 @@
+{
+  "id": "b703_wrapped_trousers",
+  "kind": "bottom",
+  "name": "Wrapped Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b703_wrapped_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    }
+  ],
+  "description": "Slim purple trousers, bandage wraps from knee to ankle, dark sash, navy sandals."
+}

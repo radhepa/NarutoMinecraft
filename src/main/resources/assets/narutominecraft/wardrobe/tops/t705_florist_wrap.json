@@ -1,0 +1,206 @@
+{
+  "id": "t705_florist_wrap",
+  "kind": "top",
+  "name": "Florist Wrap",
+  "gender": "unisex",
+  "texture": "tops/t705_florist_wrap.png",
+  "extrasHeight": 32,
+  "tags": [
+    "florist",
+    "robe",
+    "yamanaka"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        6.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "obi_knot_across",
+      "bone": "TORSO",
+      "pivot": [
+        1.8,
+        8.3,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        5,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "obi_knot_down",
+      "bone": "TORSO",
+      "pivot": [
+        1.8,
+        8.3,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2.5,
+        -0.4
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "obi_knot_heart",
+      "bone": "TORSO",
+      "pivot": [
+        1.8,
+        8.3,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.9
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "right_wide_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_wide_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        21,
+        9
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Blossom-print wrap top with a crossed collar, a wide obi with a flower knot, wide half sleeves."
+}

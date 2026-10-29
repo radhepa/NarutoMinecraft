@@ -1,0 +1,104 @@
+{
+  "id": "b705_long_slit_skirt",
+  "kind": "bottom",
+  "name": "Long Slit Skirt",
+  "gender": "unisex",
+  "texture": "bottoms/b705_long_slit_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "waist_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        10,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Long purple skirt to the shin slit at the front, bandaged legs, lavender sash, sandals."
+}

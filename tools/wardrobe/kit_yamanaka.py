@@ -43,9 +43,8 @@ def wrapped(face, x0: int, y0: int, x1: int, y1: int, role: str = "S"):
 
 
 def petal_fabric(face, role: str, seed: int, base: int = 2, motif: str = "A"):
-    """Cloth scattered with a sparse print of tiny four-texel blossoms."""
+    """Cloth scattered with a sparse print of tiny blossoms: a bright texel over a petal shade."""
     fabric(face, role, "plain", seed, base)
     for y in range(1, face.h - 1, 4):
-        for x in range((y // 4) % 2 * 2 + 1, face.w - 1, 4):
-            face.set(x, y, k(motif, 3))
-            face.set(x + 1, y, k(motif, 2)), face.set(x, y + 1, k(motif, 2))
+        for x in range((y // 4) % 2 * 2 + 1, face.w, 4):
+            face.set(x, y, k(motif, 3)), face.set(x, y + 1, k(role, base - 1))
