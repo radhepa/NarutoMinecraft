@@ -319,6 +319,21 @@
     "h1713_blunt_bob",
     "h1714_receding_crop",
     "h1715_low_warden_tail",
+    "h1801_iruka_tail",
+    "h1802_fountain_tail",
+    "h1803_teacher_bun",
+    "h1804_low_sea_tail",
+    "h1805_academy_crop",
+    "h1806_twin_high_tails",
+    "h1807_half_up_brush",
+    "h1808_long_high_tail",
+    "h1809_off_duty_tail",
+    "h1810_tide_spikes",
+    "h1811_harbor_side_tail",
+    "h1812_braided_tail",
+    "h1813_elder_topknot",
+    "h1814_wave_bob",
+    "h1815_windswept_tail",
     "h1901_cherry_long",
     "h1902_kunoichi_cut",
     "h1903_medic_bob",
@@ -524,6 +539,7 @@
     "w1701_interrogator_cap",
     "w1702_slate_cap",
     "w1703_oxblood_kerchief",
+    "w1801_tide_protector",
     "w1901_hairband_protector",
     "w2001_guard_bandana",
     "w2002_wave_hachimaki",
@@ -759,6 +775,16 @@
     "t1708_half_coat",
     "t1709_interrogation_shirt",
     "t1710_warden_greatcoat",
+    "t1801_instructor_vest",
+    "t1802_mission_desk_jacket",
+    "t1803_academy_wave_tee",
+    "t1804_dolphin_hoodie",
+    "t1805_tide_coat",
+    "t1806_teacher_cardigan",
+    "t1807_harbor_tunic",
+    "t1808_senior_vest",
+    "t1809_wave_wrap_blouse",
+    "t1810_desk_runner",
     "t1901_crest_qipao",
     "t1902_crest_zip_top",
     "t1903_academy_tee",
@@ -1062,6 +1088,11 @@
     "b1703_strap_trousers",
     "b1704_split_skirt",
     "b1705_cadet_shorts",
+    "b1801_desk_trousers",
+    "b1802_academy_shorts",
+    "b1803_wave_skirt",
+    "b1804_tide_hakama",
+    "b1805_rolled_slacks",
     "b1901_shinobi_bike_shorts",
     "b1902_split_apron_skirt",
     "b1903_maekake_trousers",
@@ -2326,6 +2357,30 @@
       ],
       "color": null,
       "mirror": true
+    },
+    "umino_nose_scar": {
+      "rects": [
+        [
+          0,
+          -1.78,
+          4.4,
+          0.4
+        ],
+        [
+          -2.5,
+          -1.9,
+          0.7,
+          0.36
+        ],
+        [
+          2.5,
+          -1.66,
+          0.7,
+          0.36
+        ]
+      ],
+      "color": null,
+      "mirror": false
     },
     "uzumaki_diamond_seal": {
       "rects": [
@@ -8953,6 +9008,322 @@
             "UCHIHA_PLUM",
             "UCHIHA_INDIGO",
             "UCHIHA_PALE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "umino",
+      "name": "Umino",
+      "tagline": "The sea field's teachers: high brush ponytails, the scar across the nose, instructor vests over warm navy, sea-blue waves and sand.",
+      "standing": "minor",
+      "ability": null,
+      "palettes": {
+        "UMINO_INSTRUCTOR": {
+          "name": "Umino Instructor",
+          "P": "#55705a",
+          "S": "#dcc9a0",
+          "A": "#4a93b8",
+          "L": "#6b4a32",
+          "M": "#a9b2b6",
+          "K": "#17191f",
+          "D": "#2c3a5c"
+        },
+        "UMINO_HARBOR": {
+          "name": "Umino Harbor",
+          "P": "#2f4468",
+          "S": "#e2cfa4",
+          "A": "#57a7c9",
+          "L": "#704b30",
+          "M": "#b0b8bc",
+          "K": "#15171d",
+          "D": "#26324f"
+        },
+        "UMINO_SHALLOWS": {
+          "name": "Umino Shallows",
+          "P": "#3d7f9e",
+          "S": "#efe2c2",
+          "A": "#2b3e66",
+          "L": "#7a5536",
+          "M": "#b6bec2",
+          "K": "#181a20",
+          "D": "#2a3858"
+        },
+        "UMINO_DUNE": {
+          "name": "Umino Dune",
+          "P": "#c4a978",
+          "S": "#f2e8d0",
+          "A": "#3b88aa",
+          "L": "#6e4b30",
+          "M": "#aeb4b4",
+          "K": "#1b1a1d",
+          "D": "#2d3a59"
+        },
+        "UMINO_DEEP": {
+          "name": "Umino Deep",
+          "P": "#22304f",
+          "S": "#cdb98c",
+          "A": "#6db5cf",
+          "L": "#5c3f2b",
+          "M": "#a2abb2",
+          "K": "#111318",
+          "D": "#1c2640"
+        },
+        "UMINO_SUNSET": {
+          "name": "Umino Sunset",
+          "P": "#3a4f73",
+          "S": "#e8d6ae",
+          "A": "#d0784e",
+          "L": "#73492f",
+          "M": "#b3b5b5",
+          "K": "#18181d",
+          "D": "#2b3653"
+        }
+      },
+      "hair_colors": {
+        "UMINO_DRIFTWOOD": {
+          "name": "Umino Driftwood",
+          "ramp": [
+            "#140d0a",
+            "#22160f",
+            "#332218",
+            "#4a3324",
+            "#674a34"
+          ]
+        },
+        "UMINO_KELP": {
+          "name": "Umino Kelp",
+          "ramp": [
+            "#0f0d0c",
+            "#1b1714",
+            "#29231e",
+            "#3b332b",
+            "#55493d"
+          ]
+        },
+        "UMINO_SANDBAR": {
+          "name": "Umino Sandbar",
+          "ramp": [
+            "#2a1a10",
+            "#3f2818",
+            "#5a3b24",
+            "#7a5434",
+            "#a0744a"
+          ]
+        }
+      },
+      "eye_colors": {
+        "UMINO_TIDEPOOL": {
+          "name": "Umino Tidepool",
+          "ramp": [
+            "#0d0b0b",
+            "#2e2219",
+            "#4a3626",
+            "#6e543c",
+            "#f0ece2"
+          ]
+        }
+      },
+      "marks": {
+        "umino_nose_scar": {
+          "rects": [
+            [
+              0,
+              -1.78,
+              4.4,
+              0.4
+            ],
+            [
+              -2.5,
+              -1.9,
+              0.7,
+              0.36
+            ],
+            [
+              2.5,
+              -1.66,
+              0.7,
+              0.36
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h1801_iruka_tail",
+          "h1802_fountain_tail",
+          "h1803_teacher_bun",
+          "h1804_low_sea_tail",
+          "h1805_academy_crop",
+          "h1806_twin_high_tails",
+          "h1807_half_up_brush",
+          "h1808_long_high_tail",
+          "h1809_off_duty_tail",
+          "h1810_tide_spikes",
+          "h1811_harbor_side_tail",
+          "h1812_braided_tail",
+          "h1813_elder_topknot",
+          "h1814_wave_bob",
+          "h1815_windswept_tail"
+        ],
+        "hair_colors": [
+          "UMINO_DRIFTWOOD",
+          "UMINO_DRIFTWOOD",
+          "UMINO_KELP",
+          "UMINO_SANDBAR",
+          "ESPRESSO",
+          "CHESTNUT"
+        ],
+        "eye_colors": [
+          "UMINO_TIDEPOOL",
+          "UMINO_TIDEPOOL",
+          "DARK"
+        ],
+        "palettes": [
+          "UMINO_INSTRUCTOR",
+          "UMINO_HARBOR",
+          "UMINO_SHALLOWS",
+          "UMINO_DUNE",
+          "UMINO_DEEP",
+          "UMINO_SUNSET"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w1801_tide_protector",
+          "w1801_tide_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers",
+          "b1805_rolled_slacks"
+        ],
+        "complexions": [
+          1,
+          2,
+          2,
+          3
+        ],
+        "marks": [
+          {
+            "id": "umino_nose_scar",
+            "chance": 0.3
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "academy_pupil",
+          "name": "Academy Pupil",
+          "top": "t1803_academy_wave_tee",
+          "bottom": "b1802_academy_shorts",
+          "rank": "academy",
+          "palettes": [
+            "UMINO_HARBOR",
+            "UMINO_SHALLOWS",
+            "UMINO_SUNSET"
+          ]
+        },
+        {
+          "id": "dolphin_hoodie",
+          "name": "Dolphin Hoodie",
+          "top": "t1804_dolphin_hoodie",
+          "bottom": "b1802_academy_shorts",
+          "rank": "academy",
+          "palettes": [
+            "UMINO_SHALLOWS",
+            "UMINO_HARBOR",
+            "UMINO_DEEP"
+          ]
+        },
+        {
+          "id": "harbor_genin",
+          "name": "Harbor Genin",
+          "top": "t1807_harbor_tunic",
+          "bottom": "b1805_rolled_slacks",
+          "rank": "genin",
+          "palettes": [
+            "UMINO_SHALLOWS",
+            "UMINO_HARBOR",
+            "UMINO_SUNSET"
+          ]
+        },
+        {
+          "id": "desk_runner",
+          "name": "Desk Runner",
+          "top": "t1810_desk_runner",
+          "bottom": "b1801_desk_trousers",
+          "rank": "genin"
+        },
+        {
+          "id": "instructor",
+          "name": "Instructor Vest",
+          "top": "t1801_instructor_vest",
+          "bottom": "b1801_desk_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "UMINO_INSTRUCTOR",
+            "UMINO_INSTRUCTOR",
+            "UMINO_SUNSET"
+          ]
+        },
+        {
+          "id": "mission_desk",
+          "name": "Mission Desk",
+          "top": "t1802_mission_desk_jacket",
+          "bottom": "b1801_desk_trousers",
+          "rank": "chunin"
+        },
+        {
+          "id": "classroom",
+          "name": "Classroom Cardigan",
+          "top": "t1806_teacher_cardigan",
+          "bottom": "b1805_rolled_slacks",
+          "rank": "chunin",
+          "palettes": [
+            "UMINO_HARBOR",
+            "UMINO_DEEP",
+            "UMINO_SUNSET"
+          ]
+        },
+        {
+          "id": "kunoichi_teacher",
+          "name": "Kunoichi Teacher",
+          "top": "t1809_wave_wrap_blouse",
+          "bottom": "b1803_wave_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "UMINO_SHALLOWS",
+            "UMINO_DUNE",
+            "UMINO_SUNSET"
+          ]
+        },
+        {
+          "id": "senior_instructor",
+          "name": "Senior Instructor",
+          "top": "t1808_senior_vest",
+          "bottom": "b1801_desk_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "UMINO_INSTRUCTOR",
+            "UMINO_DEEP"
+          ]
+        },
+        {
+          "id": "tide_coat",
+          "name": "Tide Coat",
+          "top": "t1805_tide_coat",
+          "bottom": "b1804_tide_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "UMINO_DEEP",
+            "UMINO_HARBOR",
+            "UMINO_DUNE"
           ]
         }
       ]
