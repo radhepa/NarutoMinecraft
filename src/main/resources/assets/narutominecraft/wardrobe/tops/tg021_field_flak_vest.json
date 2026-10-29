@@ -1,0 +1,181 @@
+{
+  "id": "tg021_field_flak_vest",
+  "kind": "top",
+  "name": "Field Flak Vest",
+  "gender": "unisex",
+  "texture": "tops/tg021_field_flak_vest.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        -2.7
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.3,
+        2.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        2.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pocket_2",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        5.2,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pocket_3",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        7.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Padded zip vest, stand collar, offset pocket layout, long-sleeved shirt taped at the wrists."
+}

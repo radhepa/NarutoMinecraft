@@ -1,0 +1,110 @@
+{
+  "id": "tg034_cowl_vest",
+  "kind": "top",
+  "name": "Cowl Vest",
+  "gender": "unisex",
+  "texture": "tops/tg034_cowl_vest.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cowl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2,
+        -2.7
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "cowl_fold",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.8,
+        -2.5
+      ],
+      "rotation": [
+        18,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        -1
+      ],
+      "size": [
+        6,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "chest_pocket",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Side-buckled vest with a bunched cloth cowl at the neck over a long-sleeved shirt."
+}

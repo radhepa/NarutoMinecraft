@@ -1,0 +1,43 @@
+{
+  "id": "hg016_buzz_cut",
+  "kind": "hair",
+  "name": "Buzz Cut",
+  "gender": "unisex",
+  "texture": "hair/hg016_buzz_cut.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "pile",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "description": "Even short pile all over with a crisp squared hairline."
+}

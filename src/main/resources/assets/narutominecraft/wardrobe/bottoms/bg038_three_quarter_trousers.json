@@ -1,0 +1,15 @@
+{
+  "id": "bg038_three_quarter_trousers",
+  "kind": "bottom",
+  "name": "Three-Quarter Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bg038_three_quarter_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Mid-calf trousers with patched knees and an accent side stripe over shin wraps, sandals."
+}

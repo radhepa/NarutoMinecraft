@@ -1,0 +1,119 @@
+{
+  "id": "tg026_chest_rig",
+  "kind": "top",
+  "name": "Chest Rig",
+  "gender": "unisex",
+  "texture": "tops/tg026_chest_rig.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "rig_pouch_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        3.0,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -2
+      ],
+      "size": [
+        4,
+        5,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "rig_pouch_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.0,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -2
+      ],
+      "size": [
+        4,
+        5,
+        2
+      ],
+      "uv": [
+        13,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "rig_pouch_2",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        3.0,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -2
+      ],
+      "size": [
+        4,
+        5,
+        2
+      ],
+      "uv": [
+        26,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless undershirt with a padded chest rig, three front pouches and taped forearms."
+}

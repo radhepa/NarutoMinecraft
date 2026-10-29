@@ -1,0 +1,104 @@
+{
+  "id": "bg027_split_hakama",
+  "kind": "bottom",
+  "name": "Split Hakama Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bg027_split_hakama.png",
+  "extrasHeight": 32,
+  "tags": [
+    "hakama",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hakama_right",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "hakama_left",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "waist_tie",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "inflate": 0.2
+    }
+  ],
+  "description": "Loose hakama-trousers flaring to below the knee over pale shin wraps and sandals."
+}

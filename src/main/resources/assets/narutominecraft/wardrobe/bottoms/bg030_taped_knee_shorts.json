@@ -1,0 +1,129 @@
+{
+  "id": "bg030_taped_knee_shorts",
+  "kind": "bottom",
+  "name": "Taped Knee Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/bg030_taped_knee_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_hem",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_hem",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_holster_strap_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        1.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "right_holster",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -3.0,
+        0.8,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        7
+      ]
+    }
+  ],
+  "description": "Knee-length shorts with a cuffed hem, taped knees, bare shins, a thigh holster and sandals."
+}

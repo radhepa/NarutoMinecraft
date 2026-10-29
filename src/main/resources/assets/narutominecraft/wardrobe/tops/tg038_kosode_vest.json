@@ -1,0 +1,134 @@
+{
+  "id": "tg038_kosode_vest",
+  "kind": "top",
+  "name": "Kosode Vest",
+  "gender": "unisex",
+  "texture": "tops/tg038_kosode_vest.png",
+  "extrasHeight": 32,
+  "tags": [
+    "jonin",
+    "shinobi",
+    "vest",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_wide_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        -2.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -3.4,
+        0,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_wide_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        -2.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -1.6,
+        0,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        7.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "inflate": 0.22
+    },
+    {
+      "id": "obi_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        13
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Crossed kosode with wide elbow sleeves under a short open padded vest and a broad obi."
+}

@@ -1,0 +1,313 @@
+{
+  "id": "tg025_utility_harness",
+  "kind": "top",
+  "name": "Utility Harness",
+  "gender": "unisex",
+  "texture": "tops/tg025_utility_harness.png",
+  "extrasHeight": 32,
+  "tags": [
+    "chunin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "front_strap_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.3,
+        4.6,
+        -2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -4.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "back_strap_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.3,
+        4.6,
+        2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -4.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "shoulder_strap_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.3,
+        -0.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -2.6
+      ],
+      "size": [
+        1,
+        1,
+        5
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "front_strap_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.3,
+        4.6,
+        -2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -4.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "back_strap_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.3,
+        4.6,
+        2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -4.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        28,
+        0
+      ]
+    },
+    {
+      "id": "shoulder_strap_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.3,
+        -0.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -2.6
+      ],
+      "size": [
+        1,
+        1,
+        5
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "chest_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "chest_pouch_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.3,
+        4.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -2
+      ],
+      "size": [
+        3,
+        4,
+        2
+      ],
+      "uv": [
+        29,
+        11
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "chest_pouch_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.3,
+        4.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -2
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        40,
+        11
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        18
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Long-sleeved shirt under a leather shoulder harness with a chest band, clip pouches and a belt."
+}

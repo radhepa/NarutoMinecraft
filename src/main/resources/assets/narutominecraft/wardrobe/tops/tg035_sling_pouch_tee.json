@@ -1,0 +1,108 @@
+{
+  "id": "tg035_sling_pouch_tee",
+  "kind": "top",
+  "name": "Sling-Pouch Tee",
+  "gender": "unisex",
+  "texture": "tops/tg035_sling_pouch_tee.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sling",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        5.0,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        14,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "sling_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        5.0,
+        2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        -38
+      ],
+      "origin": [
+        -0.5,
+        -7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        14,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "sling_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        8.6,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -3
+      ],
+      "size": [
+        4,
+        4,
+        3
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved tee with a collar tab, a chest strap to a hip pouch, taped wrists."
+}

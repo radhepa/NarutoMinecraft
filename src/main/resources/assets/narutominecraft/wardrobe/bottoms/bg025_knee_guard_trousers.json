@@ -1,0 +1,184 @@
+{
+  "id": "bg025_knee_guard_trousers",
+  "kind": "bottom",
+  "name": "Knee-Guard Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bg025_knee_guard_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_blouse",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_blouse",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_knee_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        4.8,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "right_knee_pad",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        3.4,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "left_knee_strap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.45,
+        4.8,
+        -2.45
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        9,
+        8
+      ]
+    },
+    {
+      "id": "left_knee_pad",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        3.4,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        30,
+        8
+      ]
+    }
+  ],
+  "description": "Trousers with steel-faced knee guards, bloused low into short shin wraps, sandals."
+}

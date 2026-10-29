@@ -1,0 +1,241 @@
+{
+  "id": "hg013_tied_back_crop",
+  "kind": "hair",
+  "name": "Tied-Back Crop",
+  "gender": "unisex",
+  "texture": "hair/hg013_tied_back_crop.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tie",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.2,
+        4.6
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "stub_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.0,
+        4.8
+      ],
+      "rotation": [
+        22,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        11,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "stub_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.0,
+        4.8
+      ],
+      "rotation": [
+        22,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        22,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "stub_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.0,
+        4.8
+      ],
+      "rotation": [
+        22,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        3.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "temple_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -7.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "temple_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -7.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "temple_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -7.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "temple_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -7.6,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    }
+  ],
+  "description": "Hair pulled straight back into a short stub tail at the nape, loose strands at the temples."
+}

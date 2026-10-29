@@ -288,7 +288,17 @@
     "h1512_shoulder_sweep",
     "h1513_strap_braid",
     "h1514_iai_gust",
-    "h1515_crossed_pin_bun"
+    "h1515_crossed_pin_bun",
+    "hg011_field_fade",
+    "hg012_slick_undercut",
+    "hg013_tied_back_crop",
+    "hg014_low_tail",
+    "hg015_wild_spikes",
+    "hg016_buzz_cut",
+    "hg017_topknot",
+    "hg018_side_part",
+    "hg019_shaggy_mop",
+    "hg020_braided_tail"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -337,7 +347,11 @@
     "w1402_crimson_protector",
     "w1501_proctor_bandana",
     "w1502_cat_mask",
-    "w1503_crescent_hachimaki"
+    "w1503_crescent_hachimaki",
+    "wg005_field_bandana",
+    "wg006_long_tail_protector",
+    "wg007_field_hood",
+    "wg008_side_knot_protector"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -510,7 +524,27 @@
     "t1507_convalescent_wrap",
     "t1508_practice_gi",
     "t1509_scarf_knit",
-    "t1510_tasuki_iaido"
+    "t1510_tasuki_iaido",
+    "tg021_field_flak_vest",
+    "tg022_side_pouch_vest",
+    "tg023_scroll_rack_vest",
+    "tg024_open_field_vest",
+    "tg025_utility_harness",
+    "tg026_chest_rig",
+    "tg027_field_wrap_shirt",
+    "tg028_mesh_half_tee",
+    "tg029_scroll_bandolier",
+    "tg030_rain_shell",
+    "tg031_sleeveless_combat_top",
+    "tg032_quilted_field_vest",
+    "tg033_ridge_vest",
+    "tg034_cowl_vest",
+    "tg035_sling_pouch_tee",
+    "tg036_longline_vest",
+    "tg037_messenger_jacket",
+    "tg038_kosode_vest",
+    "tg039_medic_field_vest",
+    "tg040_bandaged_combat_wrap"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -594,7 +628,27 @@
     "b1405_bandaged_shorts",
     "b1501_gekko_hakama",
     "b1502_swordsman_trousers",
-    "b1503_strap_leggings"
+    "b1503_strap_leggings",
+    "bg021_taped_trousers",
+    "bg022_drop_holster_trousers",
+    "bg023_twin_holster_trousers",
+    "bg024_wrapped_legs",
+    "bg025_knee_guard_trousers",
+    "bg026_cargo_trousers",
+    "bg027_split_hakama",
+    "bg028_hip_pouch_trousers",
+    "bg029_ranger_boots",
+    "bg030_taped_knee_shorts",
+    "bg031_jika_tabi_trousers",
+    "bg032_strapped_leggings",
+    "bg033_shin_guard_trousers",
+    "bg034_rolled_cuff_trousers",
+    "bg035_quilted_trousers",
+    "bg036_drawstring_trousers",
+    "bg037_field_hakama",
+    "bg038_three_quarter_trousers",
+    "bg039_scroll_belt_trousers",
+    "bg040_padded_greaves"
   ],
   "characters": [
     {
@@ -6738,6 +6792,432 @@
           "rank": "jonin",
           "palettes": [
             "JONIN_COMMANDER"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "field",
+      "name": "Field",
+      "role": "shinobi",
+      "tagline": "Everyday field gear of the working chunin and jonin: vests, rigs and harnesses, taped and guarded legs, practical hair.",
+      "palettes": {
+        "FIELD_MOSS": {
+          "name": "Field Moss",
+          "P": "#5c6b40",
+          "S": "#e4dfcf",
+          "A": "#b5502f",
+          "L": "#6e5638",
+          "M": "#a3aab0",
+          "K": "#1c2130",
+          "D": "#2b3650"
+        },
+        "FIELD_SLATE": {
+          "name": "Field Slate",
+          "P": "#5e6b76",
+          "S": "#e2ded5",
+          "A": "#c49235",
+          "L": "#5e4b3a",
+          "M": "#a9b1b6",
+          "K": "#181c22",
+          "D": "#2a3038"
+        },
+        "FIELD_KHAKI": {
+          "name": "Field Khaki",
+          "P": "#8c8160",
+          "S": "#ece6d4",
+          "A": "#3f6f8f",
+          "L": "#6b4f33",
+          "M": "#b0b0a8",
+          "K": "#22201c",
+          "D": "#3d4a3b"
+        },
+        "FIELD_NAVY": {
+          "name": "Field Navy",
+          "P": "#36486c",
+          "S": "#e6e2d6",
+          "A": "#c9a13c",
+          "L": "#5a4634",
+          "M": "#a9b0b8",
+          "K": "#141822",
+          "D": "#2b3036"
+        },
+        "FIELD_BARK": {
+          "name": "Field Bark",
+          "P": "#6a5441",
+          "S": "#e2d8c3",
+          "A": "#4f8a6b",
+          "L": "#4a3526",
+          "M": "#a8a49a",
+          "K": "#1e1a17",
+          "D": "#38404a"
+        },
+        "FIELD_FERN": {
+          "name": "Field Fern",
+          "P": "#4c6642",
+          "S": "#ddd9c9",
+          "A": "#c9603c",
+          "L": "#6a5236",
+          "M": "#a5aaa6",
+          "K": "#1a1e1c",
+          "D": "#39424f"
+        },
+        "FIELD_DRAB": {
+          "name": "Field Drab",
+          "P": "#6b6946",
+          "S": "#e8e2cf",
+          "A": "#a33d3d",
+          "L": "#6e5a3c",
+          "M": "#aab0b0",
+          "K": "#1d2028",
+          "D": "#2e3a4b"
+        },
+        "FIELD_STORM": {
+          "name": "Field Storm",
+          "P": "#4b5762",
+          "S": "#dadad3",
+          "A": "#6aa2ba",
+          "L": "#4f4237",
+          "M": "#b2b8bd",
+          "K": "#15181d",
+          "D": "#23282f"
+        },
+        "FIELD_SAND": {
+          "name": "Field Sand",
+          "P": "#a08f6a",
+          "S": "#f0e8d6",
+          "A": "#8c3b2b",
+          "L": "#6b4c32",
+          "M": "#b3ada0",
+          "K": "#221e19",
+          "D": "#4a4437"
+        },
+        "FIELD_PINE": {
+          "name": "Field Pine",
+          "P": "#3a5040",
+          "S": "#e1ddd0",
+          "A": "#d08a42",
+          "L": "#5c4632",
+          "M": "#a6adaa",
+          "K": "#161b1a",
+          "D": "#2b3341"
+        },
+        "FIELD_DUSK": {
+          "name": "Field Dusk",
+          "P": "#56526a",
+          "S": "#e3dfd8",
+          "A": "#c7a24e",
+          "L": "#5a4639",
+          "M": "#aeb0b8",
+          "K": "#17161d",
+          "D": "#2c2b38"
+        },
+        "FIELD_UMBER": {
+          "name": "Field Umber",
+          "P": "#5f4d3e",
+          "S": "#e6dccb",
+          "A": "#c46a3a",
+          "L": "#3f2e22",
+          "M": "#a7a198",
+          "K": "#1b1714",
+          "D": "#3a3f36"
+        }
+      },
+      "pool": {
+        "hair": [
+          "hg011_field_fade",
+          "hg012_slick_undercut",
+          "hg013_tied_back_crop",
+          "hg014_low_tail",
+          "hg015_wild_spikes",
+          "hg016_buzz_cut",
+          "hg017_topknot",
+          "hg018_side_part",
+          "hg019_shaggy_mop",
+          "hg020_braided_tail"
+        ],
+        "hair_colors": [
+          "RAVEN",
+          "RAVEN",
+          "ESPRESSO",
+          "ESPRESSO",
+          "CHESTNUT",
+          "AUBURN",
+          "GINGER",
+          "HONEY",
+          "WHEAT",
+          "ASH_BLONDE",
+          "SILVER",
+          "SNOW"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "DARK",
+          "SKY",
+          "JADE"
+        ],
+        "palettes": [
+          "FIELD_MOSS",
+          "FIELD_SLATE",
+          "FIELD_KHAKI",
+          "FIELD_NAVY",
+          "FIELD_BARK",
+          "FIELD_FERN",
+          "FIELD_DRAB",
+          "FIELD_STORM",
+          "FIELD_SAND",
+          "FIELD_PINE",
+          "FIELD_DUSK",
+          "FIELD_UMBER"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w09_bandana_protector",
+          "wg005_field_bandana",
+          "wg006_long_tail_protector",
+          "wg007_field_hood",
+          "wg008_side_knot_protector"
+        ],
+        "bottoms": [],
+        "complexions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "outfits": [
+        {
+          "id": "field_flak",
+          "name": "Field Flak Vest",
+          "top": "tg021_field_flak_vest",
+          "bottom": "bg021_taped_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "FIELD_MOSS",
+            "FIELD_DRAB",
+            "FIELD_FERN"
+          ]
+        },
+        {
+          "id": "side_pouch",
+          "name": "Side-Pouch Vest",
+          "top": "tg022_side_pouch_vest",
+          "bottom": "bg033_shin_guard_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "FIELD_SLATE",
+            "FIELD_STORM"
+          ]
+        },
+        {
+          "id": "scroll_rack",
+          "name": "Scroll Rack Vest",
+          "top": "tg023_scroll_rack_vest",
+          "bottom": "bg039_scroll_belt_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "FIELD_KHAKI",
+            "FIELD_SAND"
+          ]
+        },
+        {
+          "id": "open_vest",
+          "name": "Open Field Vest",
+          "top": "tg024_open_field_vest",
+          "bottom": "bg025_knee_guard_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "FIELD_NAVY",
+            "FIELD_DUSK"
+          ]
+        },
+        {
+          "id": "utility_harness",
+          "name": "Utility Harness",
+          "top": "tg025_utility_harness",
+          "bottom": "bg026_cargo_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "FIELD_FERN",
+            "FIELD_PINE",
+            "FIELD_MOSS"
+          ]
+        },
+        {
+          "id": "chest_rig",
+          "name": "Chest Rig",
+          "top": "tg026_chest_rig",
+          "bottom": "bg032_strapped_leggings",
+          "rank": "chunin",
+          "palettes": [
+            "FIELD_DRAB",
+            "FIELD_STORM"
+          ]
+        },
+        {
+          "id": "wrap_shirt",
+          "name": "Field Wrap Shirt",
+          "top": "tg027_field_wrap_shirt",
+          "bottom": "bg027_split_hakama",
+          "rank": "chunin",
+          "palettes": [
+            "FIELD_PINE",
+            "FIELD_UMBER",
+            "FIELD_BARK"
+          ]
+        },
+        {
+          "id": "mesh_tee",
+          "name": "Mesh Half-Sleeve Tee",
+          "top": "tg028_mesh_half_tee",
+          "bottom": "bg030_taped_knee_shorts",
+          "rank": "genin",
+          "palettes": [
+            "FIELD_NAVY",
+            "FIELD_SLATE",
+            "FIELD_KHAKI"
+          ]
+        },
+        {
+          "id": "scroll_bandolier",
+          "name": "Scroll Bandolier",
+          "top": "tg029_scroll_bandolier",
+          "bottom": "bg022_drop_holster_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "FIELD_SAND",
+            "FIELD_KHAKI"
+          ]
+        },
+        {
+          "id": "rain_shell",
+          "name": "Rain Shell",
+          "top": "tg030_rain_shell",
+          "bottom": "bg029_ranger_boots",
+          "rank": "chunin",
+          "palettes": [
+            "FIELD_FERN",
+            "FIELD_STORM",
+            "FIELD_UMBER"
+          ]
+        },
+        {
+          "id": "sleeveless_combat",
+          "name": "Sleeveless Combat Top",
+          "top": "tg031_sleeveless_combat_top",
+          "bottom": "bg036_drawstring_trousers",
+          "rank": "genin",
+          "palettes": [
+            "FIELD_UMBER",
+            "FIELD_DRAB"
+          ]
+        },
+        {
+          "id": "quilted_vest",
+          "name": "Quilted Field Vest",
+          "top": "tg032_quilted_field_vest",
+          "bottom": "bg035_quilted_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "FIELD_BARK",
+            "FIELD_SLATE"
+          ]
+        },
+        {
+          "id": "ridge_vest",
+          "name": "Ridge Vest",
+          "top": "tg033_ridge_vest",
+          "bottom": "bg040_padded_greaves",
+          "rank": "jonin",
+          "palettes": [
+            "FIELD_MOSS",
+            "FIELD_DRAB"
+          ]
+        },
+        {
+          "id": "cowl_vest",
+          "name": "Cowl Vest",
+          "top": "tg034_cowl_vest",
+          "bottom": "bg024_wrapped_legs",
+          "rank": "chunin",
+          "palettes": [
+            "FIELD_SAND",
+            "FIELD_DUSK"
+          ]
+        },
+        {
+          "id": "sling_tee",
+          "name": "Sling-Pouch Tee",
+          "top": "tg035_sling_pouch_tee",
+          "bottom": "bg038_three_quarter_trousers",
+          "rank": "genin",
+          "palettes": [
+            "FIELD_PINE",
+            "FIELD_KHAKI"
+          ]
+        },
+        {
+          "id": "longline_vest",
+          "name": "Longline Vest",
+          "top": "tg036_longline_vest",
+          "bottom": "bg023_twin_holster_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "FIELD_STORM",
+            "FIELD_NAVY"
+          ]
+        },
+        {
+          "id": "messenger",
+          "name": "Messenger Jacket",
+          "top": "tg037_messenger_jacket",
+          "bottom": "bg034_rolled_cuff_trousers",
+          "rank": "genin",
+          "palettes": [
+            "FIELD_UMBER",
+            "FIELD_FERN"
+          ]
+        },
+        {
+          "id": "kosode_vest",
+          "name": "Kosode Vest",
+          "top": "tg038_kosode_vest",
+          "bottom": "bg037_field_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "FIELD_BARK",
+            "FIELD_PINE"
+          ]
+        },
+        {
+          "id": "medic_vest",
+          "name": "Medic Field Vest",
+          "top": "tg039_medic_field_vest",
+          "bottom": "bg031_jika_tabi_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "FIELD_MOSS",
+            "FIELD_SLATE"
+          ]
+        },
+        {
+          "id": "bandaged_wrap",
+          "name": "Bandaged Combat Wrap",
+          "top": "tg040_bandaged_combat_wrap",
+          "bottom": "bg028_hip_pouch_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "FIELD_DUSK",
+            "FIELD_UMBER"
           ]
         }
       ]

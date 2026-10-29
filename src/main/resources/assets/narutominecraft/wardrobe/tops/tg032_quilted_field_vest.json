@@ -1,0 +1,115 @@
+{
+  "id": "tg032_quilted_field_vest",
+  "kind": "top",
+  "name": "Quilted Field Vest",
+  "gender": "unisex",
+  "texture": "tops/tg032_quilted_field_vest.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.4,
+        -2.7
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "hand_pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        7.0,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "hand_pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        7.0,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Diamond-quilted zip vest with a funnel collar and slanted pockets over mesh sleeves."
+}
