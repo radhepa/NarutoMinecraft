@@ -1,0 +1,99 @@
+# Callbacks for questions/voice-proud.txt, in the proud asker's voice.
+#! fn: callback
+#! tags: personality=proud
+
+## callback.answer.q.values.proud_second_place.a1
+Second place is worth nothing, we agreed. I came second at the archery post today. Unacceptable.
+
+## callback.answer.q.values.proud_second_place.a2
+Second is a step, you said. Keep climbing. I'm watching your progress. Don't disappoint.
+
+## callback.answer.q.values.proud_second_place.a3
+Losing to a master is no shame, you said. To a fool, it is. I lost to a fool today. Hm.
+
+## callback.answer.q.values.proud_lose_to.a1
+You'd hate losing to your rival most. Don't let them win. I'll be furious on your behalf.
+
+## callback.answer.q.values.proud_lose_to.a2
+Losing to a friend stings most, you said. I lost to mine at shogi. You were right. It stings.
+
+## callback.answer.q.values.proud_lose_to.a3
+Losing is losing, whoever wins. Cold answer. I've come round to it.
+
+## callback.answer.q.values.proud_name.a1
+A name is a promise to those before you. You said it. I've thought of it every time I sign mine.
+
+## callback.answer.q.values.proud_name.a2
+A name is what you make it. Your view. Make yours something worth hearing.
+
+## callback.answer.q.values.proud_name.a3
+Pride must be earned, even in a name. Even mine. I didn't enjoy agreeing. I agree.
+
+## callback.answer.q.plans.proud_best_at.a1
+The best at taijutsu, your aim. I saw you at the posts. Your left side is weak. Fix it.
+
+## callback.answer.q.plans.proud_best_at.a2
+The best at ninjutsu. Control, I said, as well as power. Have you been working on control?
+
+## callback.answer.q.plans.proud_best_at.a3
+The best strategist in the village. Prove it. Beat me at shogi.
+
+## callback.answer.q.plans.proud_best_at.a4
+You don't need to be the best, you said. I still find it strange. I still think it might be wise.
+
+## callback.answer.q.plans.proud_best_how.a1
+Twice as hard as everyone. Your plan. I've been watching. You're keeping to it.
+
+## callback.answer.q.plans.proud_best_how.a2
+Find a master, you said. Pride shouldn't stop you learning. Have you found one?
+
+## callback.answer.q.plans.proud_best_how.a3
+Learn from losing. Wiser than I was. Still annoyingly wise.
+
+## callback.answer.q.values.proud_praise.a1
+You like praise, honestly. So: well done this week. Don't let it go to your head.
+
+## callback.answer.q.values.proud_praise.a2
+Praise embarrasses you. Learn to take it, I said. Here's practice: you're doing well.
+
+## callback.answer.q.values.proud_praise.a3
+Only earned praise. Agreed. Which is why I haven't praised you yet today. Ha.
+
+## callback.answer.q.dilemma.proud_help_rival.a1
+You'd help your rival. A strong rival makes you stronger. I still hate that it's true.
+
+## callback.answer.q.dilemma.proud_help_rival.a2
+Never help a rival. At least you're honest. I respect it, against my better judgement.
+
+## callback.answer.q.dilemma.proud_help_rival.a3
+Help them, then beat them. The proper way. I've been quoting you.
+
+## callback.answer.q.values.proud_sorry.a1
+Sorry is hard for both of us. Don't tell anyone, I said. I haven't. Have you?
+
+## callback.answer.q.values.proud_sorry.a2
+Sorry comes easily to you. I tried it today. It came out sideways. Teach me.
+
+## callback.answer.q.values.proud_sorry.a3
+Sorry is hardest when you're right. Your joke. I keep laughing at it at the worst moments.
+
+## callback.answer.q.past.proud_last_sorry.a1
+You apologised not long ago and meant it. I did too. This week. It was... fine.
+
+## callback.answer.q.past.proud_last_sorry.a2
+Too long since your last real apology, for both of us. I made one yesterday. Your turn.
+
+## callback.answer.q.past.proud_last_sorry.a3
+Pride keeps its own counsel. You said it about your last apology. I understand. Too well.
+
+## callback.answer.q.pref.proud_standards.a1
+Your training is where you never cut corners. Good. Sloppy training makes sloppy shinobi.
+
+## callback.answer.q.pref.proud_standards.a2
+Your word, held highest. Correct. I trust it, for what that's worth.
+
+## callback.answer.q.pref.proud_standards.a3
+A clean vest is a discipline, I said. Yours is clean today. Noted.
+
+## callback.answer.q.pref.proud_standards.a4
+Still relaxed about your standards? I'm still working on you. Don't think I've forgotten.

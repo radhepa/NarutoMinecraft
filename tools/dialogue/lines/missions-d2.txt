@@ -745,7 +745,7 @@ Snow clearing, done. Your nose is the colour of a festival lantern. Logged. Go a
 A low groan from the roof and the whole sheet of snow is letting go at once. Move!
 
 ## mission.d.snow_clearing.twist.snowball_ambush  fn=quest,react
-A snowball, right in the back of the neck. Then three more. {kids} have declared war.
+A snowball, right in the back of the neck. Then three more. {kids} and the whole street of children have declared war.
 
 # -- flower_order: a wedding order. Slots: client (a Yamanaka florist), shop, venue ---------------
 
