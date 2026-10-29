@@ -52,6 +52,14 @@ hairstyles `gender: "unisex"` unless they are truly one-gender. Use `locked_to` 
 each other) only for a set that is one garment, like a full kimono or a jumpsuit. A hairstyle must
 not hang over the eyes (`wardrobe.py --check` enforces it); a fringe may reach the brows.
 
+## Reference images
+
+Design from real reference art, not memory alone. Before building a hairstyle or outfit, find
+images of the characters it is based on (the Naruto Fandom wiki, official anime and manga art
+across Part I, Shippuden and Boruto, the clan crest). Download them into a scratch folder outside
+the repo (never commit them), look at them, and compare each render side by side with its
+reference until the silhouette, hair shape, colors and details read as the character's style.
+
 ## Piece ids
 
 Every clan owns a block of ids so clans can be built in parallel without clashing:
@@ -66,9 +74,16 @@ Every clan owns a block of ids so clans can be built in parallel without clashin
 | 6 | Akimichi | h601-h615 | t601-t610 | b601- | w601- |
 | 7 | Yamanaka | h701-h715 | t701-t710 | b701- | w701- |
 | 8 | Inuzuka | h801-h815 | t801-t810 | b801- | w801- |
+| 9 | Sarutobi | h901-h915 | t901-t910 | b901- | w901- |
+| 10 | Aburame | h1001-h1015 | t1001-t1010 | b1001- | w1001- |
+| 11 | Hatake | h1101-h1115 | t1101-t1110 | b1101- | w1101- |
+| 12 | Kurama | h1201-h1215 | t1201-t1210 | b1201- | w1201- |
+| 13 | Shimura | h1301-h1315 | t1301-t1310 | b1301- | w1301- |
+| 14 | Yuhi | h1401-h1415 | t1401-t1410 | b1401- | w1401- |
+| 15 | Gekko | h1501-h1515 | t1501-t1510 | b1501- | w1501- |
 
 Paint seeds follow the same blocks: a clan's pieces use seeds from `<n>000` to `<n>999`
-(Senju 1000-1999, Inuzuka 8000-8999), so no two pieces share a noise pattern by accident.
+(Senju 1000-1999, Aburame 10000-10999), so no two pieces share a noise pattern by accident.
 
 ## Commands
 
