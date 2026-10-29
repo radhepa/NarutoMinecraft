@@ -1,0 +1,13 @@
+{
+  "id": "f01_shinobi",
+  "kind": "face",
+  "name": "Shinobi Face",
+  "gender": "unisex",
+  "texture": "faces/f01_shinobi.png",
+  "extrasHeight": 0,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Starlit eyes looking forward, straight brows, small mouth."
+}

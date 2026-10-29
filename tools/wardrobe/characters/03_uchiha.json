@@ -1,0 +1,4 @@
+{"id": "uchiha", "name": "Uchiha", "tagline": "Sharingan, blue-black spikes, the clan crest on a high-collared shirt",
+ "face": "f02_sharingan", "hair": "h03_uchiha_spikes", "headwear": "w02_forehead_protector",
+ "top": "t03_uchiha_high_collar", "bottom": "b02_uchiha_shorts",
+ "palette": "UCHIHA", "hair_color": "UCHIHA_BLACK", "eye_color": "SHARINGAN", "complexion": 0, "scale": 14}

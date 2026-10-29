@@ -1,0 +1,394 @@
+{
+  "id": "t01_hokage_haori",
+  "kind": "top",
+  "name": "Hokage Haori",
+  "gender": "unisex",
+  "texture": "tops/t01_hokage_haori.png",
+  "extrasHeight": 64,
+  "tags": [
+    "kage",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_kanji",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.2,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        14,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "right_haori_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.7,
+        2.5,
+        -2.7
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        27,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_haori_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.7,
+        2.5,
+        -2.7
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "vest_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        16
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "lapel_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        0.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        50,
+        16
+      ]
+    },
+    {
+      "id": "lapel_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        0.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        11,
+        1
+      ],
+      "uv": [
+        55,
+        16
+      ]
+    },
+    {
+      "id": "scroll_pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.5,
+        4.5,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        29
+      ]
+    },
+    {
+      "id": "scroll_pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.5,
+        4.5,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        7,
+        29
+      ]
+    },
+    {
+      "id": "skirt_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        10,
+        1
+      ],
+      "uv": [
+        14,
+        29
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        11.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        10,
+        1
+      ],
+      "uv": [
+        23,
+        29
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        11.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        10,
+        1
+      ],
+      "uv": [
+        32,
+        29
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        9,
+        4
+      ],
+      "uv": [
+        53,
+        29
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.05,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        9,
+        4
+      ],
+      "uv": [
+        0,
+        43
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "White haori with a flame hem and 火 on the back, open over a green flak vest and navy shirt."
+}

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "keys": {
+    "P0": "#1f2d4d",
+    "P1": "#2f4673",
+    "P2": "#44619a",
+    "P3": "#6585bd",
+    "P4": "#93b0dc",
+    "S0": "#6b5d47",
+    "S1": "#968566",
+    "S2": "#c4b28c",
+    "S3": "#e0d0ab",
+    "S4": "#f5ebcf",
+    "A0": "#4d1519",
+    "A1": "#78232b",
+    "A2": "#a8363c",
+    "A3": "#cc5d57",
+    "A4": "#eb958e",
+    "L0": "#2c1c13",
+    "L1": "#4a2f20",
+    "L2": "#6b4630",
+    "L3": "#8f6444",
+    "L4": "#b38962",
+    "M0": "#39342f",
+    "M1": "#655b4d",
+    "M2": "#968870",
+    "M3": "#c4b594",
+    "M4": "#eee2c0",
+    "K0": "#14100c",
+    "K1": "#221a14",
+    "K2": "#2f251d",
+    "K3": "#3c3026",
+    "K4": "#4a3c30",
+    "D0": "#162640",
+    "D1": "#243a5f",
+    "D2": "#355280",
+    "D3": "#5578a7",
+    "D4": "#8ba7d0",
+    "H0": "#3a2213",
+    "H1": "#5c381f",
+    "H2": "#80522d",
+    "H3": "#a86f3c",
+    "H4": "#d09655",
+    "E0": "#0b0a10",
+    "E1": "#2a3d5c",
+    "E2": "#3f6aa0",
+    "E3": "#7aa6d6",
+    "E4": "#f2efe6"
+  },
+  "shadowKeys": {
+    "X1": 46,
+    "X2": 84
+  },
+  "faces": [
+    "f01_shinobi",
+    "f02_sharingan"
+  ],
+  "hair": [
+    "h01_kage_spikes",
+    "h02_leaf_spikes",
+    "h03_uchiha_spikes"
+  ],
+  "headwear": [
+    "w01_kage_hat",
+    "w02_forehead_protector"
+  ],
+  "tops": [
+    "t01_hokage_haori",
+    "t02_konoha_flak_vest",
+    "t03_uchiha_high_collar"
+  ],
+  "bottoms": [
+    "b01_shinobi_trousers",
+    "b02_uchiha_shorts"
+  ],
+  "characters": [
+    {
+      "id": "hokage",
+      "name": "Hokage",
+      "tagline": "Kage hat, white flame haori over the jonin flak vest",
+      "face": "f01_shinobi",
+      "hair": "h01_kage_spikes",
+      "headwear": "w01_kage_hat",
+      "top": "t01_hokage_haori",
+      "bottom": "b01_shinobi_trousers",
+      "palette": "HOKAGE",
+      "hair_color": "HOKAGE_GOLD",
+      "eye_color": "SKY",
+      "complexion": 1,
+      "scale": 14
+    },
+    {
+      "id": "ninja",
+      "name": "Leaf Ninja",
+      "tagline": "Konoha flak vest, forehead protector, shinobi trousers and wraps",
+      "face": "f01_shinobi",
+      "hair": "h02_leaf_spikes",
+      "headwear": "w02_forehead_protector",
+      "top": "t02_konoha_flak_vest",
+      "bottom": "b01_shinobi_trousers",
+      "palette": "KONOHA_JONIN",
+      "hair_color": "CHESTNUT",
+      "eye_color": "DARK",
+      "complexion": 2,
+      "scale": 14
+    },
+    {
+      "id": "uchiha",
+      "name": "Uchiha",
+      "tagline": "Sharingan, blue-black spikes, the clan crest on a high-collared shirt",
+      "face": "f02_sharingan",
+      "hair": "h03_uchiha_spikes",
+      "headwear": "w02_forehead_protector",
+      "top": "t03_uchiha_high_collar",
+      "bottom": "b02_uchiha_shorts",
+      "palette": "UCHIHA",
+      "hair_color": "UCHIHA_BLACK",
+      "eye_color": "SHARINGAN",
+      "complexion": 0,
+      "scale": 14
+    }
+  ]
+}

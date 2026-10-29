@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "colors": {
+    "DARK": {
+      "name": "Dark",
+      "ramp": [
+        "#0d0b0f",
+        "#24191a",
+        "#3b2a26",
+        "#6a5146",
+        "#f1ede3"
+      ]
+    },
+    "SKY": {
+      "name": "Sky Blue",
+      "ramp": [
+        "#0b0f1a",
+        "#1f4f8c",
+        "#3a7fc6",
+        "#8cc4f0",
+        "#f1efe6"
+      ]
+    },
+    "SHARINGAN": {
+      "name": "Sharingan",
+      "ramp": [
+        "#0b0608",
+        "#6d0b14",
+        "#c4141f",
+        "#ec4a44",
+        "#f3eee6"
+      ]
+    }
+  }
+}

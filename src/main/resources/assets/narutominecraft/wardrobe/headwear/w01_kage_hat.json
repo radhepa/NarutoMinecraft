@@ -1,0 +1,299 @@
+{
+  "id": "w01_kage_hat",
+  "kind": "headwear",
+  "name": "Kage Hat",
+  "gender": "unisex",
+  "texture": "headwear/w01_kage_hat.png",
+  "extrasHeight": 80,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "kasa_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -9.0,
+        -7.0,
+        -9.0
+      ],
+      "size": [
+        18,
+        1,
+        18
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "kasa_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -7.5,
+        -8.4,
+        -7.5
+      ],
+      "size": [
+        15,
+        2,
+        15
+      ],
+      "uv": [
+        0,
+        20
+      ]
+    },
+    {
+      "id": "kasa_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        -9.8,
+        -6.0
+      ],
+      "size": [
+        12,
+        2,
+        12
+      ],
+      "uv": [
+        61,
+        20
+      ]
+    },
+    {
+      "id": "kasa_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -11.2,
+        -4.5
+      ],
+      "size": [
+        9,
+        2,
+        9
+      ],
+      "uv": [
+        0,
+        38
+      ]
+    },
+    {
+      "id": "kasa_4",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        -12.6,
+        -3.0
+      ],
+      "size": [
+        6,
+        2,
+        6
+      ],
+      "uv": [
+        37,
+        38
+      ]
+    },
+    {
+      "id": "kasa_5",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -14.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        62,
+        38
+      ]
+    },
+    {
+      "id": "front_panel",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.05,
+        -9.05
+      ],
+      "rotation": [
+        -47,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        -16,
+        0
+      ],
+      "size": [
+        12,
+        16,
+        1
+      ],
+      "uv": [
+        75,
+        38
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "veil_back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.6,
+        4.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        8,
+        1
+      ],
+      "uv": [
+        102,
+        38
+      ]
+    },
+    {
+      "id": "veil_right",
+      "bone": "HEAD",
+      "pivot": [
+        -5.6,
+        -6.6,
+        1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        7,
+        6
+      ],
+      "uv": [
+        0,
+        56
+      ]
+    },
+    {
+      "id": "veil_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -6.6,
+        1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        7,
+        6
+      ],
+      "uv": [
+        15,
+        56
+      ]
+    }
+  ],
+  "description": "Stepped red kasa, white front panel with the fire kanji, white veil."
+}
