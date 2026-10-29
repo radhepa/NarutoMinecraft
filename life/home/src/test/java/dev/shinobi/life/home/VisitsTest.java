@@ -80,6 +80,11 @@ class VisitsTest {
         assertTrue(w.bond(Cast.TEAMMATE_B).has(BondFriends.KEY_FLAG));
         assertEquals(moments, w.bond(Cast.TEAMMATE_B).moments(), "a key is not a moment");
         assertEquals("already", Visits.giveKey(s.h, s.f, Cast.TEAMMATE_B, w.day()));
+        double warmth = w.closeness(Cast.TEAMMATE_B);
+        Visits.takeKey(s.h, s.f, Cast.TEAMMATE_B);
+        assertFalse(w.bond(Cast.TEAMMATE_B).has(BondFriends.KEY_FLAG));
+        assertEquals("ok", Visits.giveKey(s.h, s.f, Cast.TEAMMATE_B, w.day()));
+        assertEquals(warmth, w.closeness(Cast.TEAMMATE_B), 1e-9, "giving the key again earns nothing more");
     }
     @Test void whileYouAreOutTheyLeaveANoteOrWaitInside() {
         var s = friendsWorld(); var w = s.f.world();
@@ -126,7 +131,12 @@ class VisitsTest {
         }
         assertEquals("hosted.home_dinner", result);
         assertFalse(w.bond(Cast.TEAMMATE_A).flags().isEmpty() && s.h.mess() == 0, "a dinner leaves dishes");
-        var study = Visits.host(s.h, s.f, Cast.day(w.day(), 1, 17, false), List.of(Cast.CLASSMATE_C), "study_night", 19);
-        assertTrue(study.met() || study.kind().endsWith(".busy"), study.toString());
+        // A study night is asked like any hangout: some evenings they say not today, and one evening they come.
+        Visits.Visit study = null;
+        for (int i = 0; i < 20 && (study == null || !study.met()); i++) {
+            study = Visits.host(s.h, s.f, Cast.day(w.day(), 1, 17, false), List.of(Cast.CLASSMATE_C), "study_night", 19);
+            w.endDay();
+        }
+        assertTrue(study.met(), study.toString());
     }
 }
