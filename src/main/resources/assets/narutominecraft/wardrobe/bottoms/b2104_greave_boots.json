@@ -1,0 +1,185 @@
+{
+  "id": "b2104_greave_boots",
+  "kind": "bottom",
+  "name": "Greave Boots",
+  "gender": "unisex",
+  "texture": "bottoms/b2104_greave_boots.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_shin_guard",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_shin_guard",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "waist_chain_0",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        12
+      ]
+    },
+    {
+      "id": "waist_chain_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.8,
+        11.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        34,
+        12
+      ]
+    },
+    {
+      "id": "waist_chain_2",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        12.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        39,
+        12
+      ]
+    }
+  ],
+  "description": "Gunmetal trousers in tall leather boots with riveted steel greaves, a belt with a chain."
+}

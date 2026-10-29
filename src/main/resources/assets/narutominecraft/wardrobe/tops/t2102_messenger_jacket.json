@@ -1,0 +1,159 @@
+{
+  "id": "t2102_messenger_jacket",
+  "kind": "top",
+  "name": "Messenger Jacket",
+  "gender": "unisex",
+  "texture": "tops/t2102_messenger_jacket.png",
+  "extrasHeight": 32,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_bracer",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_bracer",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "satchel_strap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        -36
+      ],
+      "origin": [
+        -0.5,
+        -7,
+        -0.5
+      ],
+      "size": [
+        1,
+        14,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "satchel_strap_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.0,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        -36
+      ],
+      "origin": [
+        -0.5,
+        -7,
+        -0.5
+      ],
+      "size": [
+        1,
+        14,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "satchel",
+      "bone": "TORSO",
+      "pivot": [
+        -4.9,
+        8.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -2
+      ],
+      "size": [
+        3,
+        3,
+        4
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short gunmetal zip jacket, off-white shoulder yoke, rust piping, plated bracers, a dispatch satchel."
+}

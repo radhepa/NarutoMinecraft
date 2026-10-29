@@ -1,0 +1,18 @@
+{
+  "id": "t2106_academy_ringer",
+  "kind": "top",
+  "name": "Academy Ringer",
+  "gender": "unisex",
+  "texture": "tops/t2106_academy_ringer.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Rust-orange ringer tee with gunmetal bands, a small steel badge on the chest, wrapped wrists."
+}
