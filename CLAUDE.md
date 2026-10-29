@@ -10,6 +10,8 @@ system is [BONDS.md](BONDS.md) (time together: [LIFE_TOGETHER.md](LIFE_TOGETHER.
 `:progression:missions:simulate`).
 The home is [docs/HOME.md](docs/HOME.md); its engine is `life/home`, on top of the bond engine
 (`./gradlew :life:home:test`, `./gradlew :life:home:simulate`).
+Combat is [docs/COMBAT.md](docs/COMBAT.md): data authored in `tools/combat/` (`python3 tools/combat/build.py --check`)
+and the pure Java module `combat/core` (`./gradlew :combat:core:test`, `:combat:core:simulate`, `:combat:core:trace`).
 
 ## Commits
 
