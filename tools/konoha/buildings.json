@@ -1,0 +1,801 @@
+{
+ "note": "The Konoha building catalogue: design programs and every building or landmark with its count by slice. KONOHA_BUILD.md's tables and totals are generated from this file by catalogue.py.",
+ "programs": [
+  {
+   "id": "home_plaster_2f",
+   "name": "Two-storey plaster home",
+   "makes": "homes",
+   "first": "P0",
+   "status": "prototype"
+  },
+  {
+   "id": "home_plaster_1f",
+   "name": "Single-storey home with an engawa",
+   "makes": "homes",
+   "first": "P0",
+   "status": "planned"
+  },
+  {
+   "id": "machiya_row",
+   "name": "Row of 3 to 4 narrow townhouses",
+   "makes": "homes",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "home_corner",
+   "name": "L-shaped corner house",
+   "makes": "homes",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "home_garden",
+   "name": "Larger house in a walled garden",
+   "makes": "homes",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "home_riverside",
+   "name": "Riverside house with a veranda over the bank",
+   "makes": "homes",
+   "first": "B2",
+   "status": "planned"
+  },
+  {
+   "id": "apartment_block",
+   "name": "Walk-up apartment block, 2 to 4 storeys",
+   "makes": "apartments",
+   "first": "P0",
+   "status": "prototype"
+  },
+  {
+   "id": "apartment_tower",
+   "name": "Round apartment tower, 4 to 6 storeys, large tank on top",
+   "makes": "apartments",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "shop_apartment",
+   "name": "Shops on the ground floor, flats above (also the inns)",
+   "makes": "apartments",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "shop_tea_house",
+   "name": "Small shop-house with an open front, awning and noren",
+   "makes": "shops",
+   "first": "P0",
+   "status": "prototype"
+  },
+  {
+   "id": "shop_house",
+   "name": "Two-storey shop-house with a display front",
+   "makes": "shops",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "shop_large",
+   "name": "Wide store with a showroom (furniture, weapons, post office)",
+   "makes": "shops",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "market_stall",
+   "name": "Row of open market stalls",
+   "makes": "shops",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "restaurant",
+   "name": "Restaurant with a dining hall (barbecue house, izakaya)",
+   "makes": "shops",
+   "first": "B2",
+   "status": "planned"
+  },
+  {
+   "id": "clan_gate",
+   "name": "Clan gate with its stretch of compound wall, crest and palette from the clan JSON",
+   "makes": "clans",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "clan_house",
+   "name": "A clan member's house in the clan's palette",
+   "makes": "clans",
+   "first": "B2",
+   "status": "planned"
+  },
+  {
+   "id": "dojo",
+   "name": "Small dojo (Namiashi, the Gekko's hall, training halls)",
+   "makes": "clans",
+   "first": "B2",
+   "status": "planned"
+  },
+  {
+   "id": "wall",
+   "name": "Village wall: a profile swept along the wall's circle in 16-block segments",
+   "makes": "wall",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "wall_tower",
+   "name": "Watch tower on the wall",
+   "makes": "wall",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "fod_fence",
+   "name": "Forest of Death fence swept along its circle",
+   "makes": "forest",
+   "first": "B3",
+   "status": "planned"
+  },
+  {
+   "id": "fod_gate",
+   "name": "Forest of Death numbered gate",
+   "makes": "forest",
+   "first": "B3",
+   "status": "planned"
+  },
+  {
+   "id": "giant_tree",
+   "name": "Giant tree, 4 to 7 thick and 60 to 90 tall, four forms (straight, arched roots, hollow, leaning)",
+   "makes": "forest",
+   "first": "B3",
+   "status": "planned"
+  },
+  {
+   "id": "forest_tree",
+   "name": "Understorey tree for the forest and the outer woods",
+   "makes": "forest",
+   "first": "B3",
+   "status": "planned"
+  },
+  {
+   "id": "village_tree",
+   "name": "Street and garden trees: cherry, pine, maple",
+   "makes": "streets",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "bridge_flat",
+   "name": "Flat timber bridge",
+   "makes": "streets",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "bridge_arched",
+   "name": "Arched bridge with giboshi posts",
+   "makes": "streets",
+   "first": "B2",
+   "status": "planned"
+  },
+  {
+   "id": "training_props",
+   "name": "Training-ground prop sets: target lines, post rows, log circles",
+   "makes": "training",
+   "first": "B1",
+   "status": "planned"
+  },
+  {
+   "id": "roads",
+   "name": "roads.py: streets, kerbs, poles and wires, lamps from layout.json polylines",
+   "makes": "streets",
+   "first": "P0",
+   "status": "planned"
+  },
+  {
+   "id": "camp",
+   "name": "Camp kit: tents, fire, crates (bandit camps, forest camps)",
+   "makes": "story",
+   "first": "B2",
+   "status": "planned"
+  },
+  {
+   "id": "rock_faces",
+   "name": "rock_faces.py: the Hokage Rock faces as voxel sculpts from depth maps",
+   "makes": "landmarks",
+   "first": "B1",
+   "status": "planned"
+  }
+ ],
+ "buildings": [
+  {
+   "group": "homes",
+   "id": "home_plaster_2f",
+   "name": "Two-storey plaster home",
+   "how": "program",
+   "footprint": "11 x 11",
+   "counts": {
+    "P0": 5,
+    "B1": 14,
+    "B2": 8,
+    "B3": 2,
+    "later": 10
+   },
+   "notes": "2 to 3 residents; wall, roof and mirror rolled per plot"
+  },
+  {
+   "group": "homes",
+   "id": "home_plaster_1f",
+   "name": "Single-storey home",
+   "how": "program",
+   "footprint": "11 x 9",
+   "counts": {
+    "P0": 3,
+    "B1": 8,
+    "B2": 6,
+    "B3": 2,
+    "later": 8
+   },
+   "notes": "1 to 2 residents"
+  },
+  {
+   "group": "homes",
+   "id": "machiya_row",
+   "name": "Townhouse (one unit of a row)",
+   "how": "program",
+   "footprint": "5 x 11 a unit",
+   "counts": {
+    "B1": 8,
+    "B2": 4,
+    "B3": 2,
+    "later": 6
+   },
+   "notes": "Rows of 3 to 4 units on the market and residential streets"
+  },
+  {
+   "group": "homes",
+   "id": "home_corner",
+   "name": "Corner house",
+   "how": "program",
+   "footprint": "11 x 11",
+   "counts": {
+    "B1": 4,
+    "B2": 2,
+    "later": 4
+   },
+   "notes": "Street corners"
+  },
+  {
+   "group": "homes",
+   "id": "home_garden",
+   "name": "Garden house",
+   "how": "program",
+   "footprint": "15 x 15",
+   "counts": {
+    "B1": 4,
+    "B2": 4,
+    "later": 2
+   },
+   "notes": "Elders, well-off families; the Haruno house is one"
+  },
+  {
+   "group": "homes",
+   "id": "home_riverside",
+   "name": "Riverside house",
+   "how": "program",
+   "footprint": "9 x 13",
+   "counts": {
+    "B2": 4
+   },
+   "notes": "The riverside district"
+  },
+  {
+   "group": "apartments",
+   "id": "apartment_block",
+   "name": "Apartment block",
+   "how": "program",
+   "footprint": "14 x 11",
+   "counts": {
+    "P0": 1,
+    "B1": 3,
+    "B2": 1,
+    "later": 1
+   },
+   "notes": "9 flats; the player's block and two more candidate blocks in Beta 1"
+  },
+  {
+   "group": "apartments",
+   "id": "apartment_tower",
+   "name": "Round apartment tower",
+   "how": "program",
+   "footprint": "13 x 13",
+   "counts": {
+    "B1": 1,
+    "later": 2
+   },
+   "notes": "12 flats; the skyline's round towers (check against the art)"
+  },
+  {
+   "group": "apartments",
+   "id": "shop_apartment",
+   "name": "Shops with flats above",
+   "how": "program",
+   "footprint": "13 x 11",
+   "counts": {
+    "B1": 2,
+    "B2": 1,
+    "B3": 1,
+    "later": 2
+   },
+   "notes": "4 flats over 2 shops; the Beta 3 one is the foreign teams' inn"
+  },
+  {
+   "group": "shops",
+   "id": "shop_tea_house",
+   "name": "Small shop-house",
+   "how": "program",
+   "footprint": "11 x 11",
+   "counts": {
+    "P0": 1,
+    "B1": 3,
+    "B2": 3,
+    "later": 3
+   },
+   "notes": "Tea houses (two rivals on one corner), dango, sweets, the test street's shop"
+  },
+  {
+   "group": "shops",
+   "id": "shop_house",
+   "name": "Shop-house",
+   "how": "program",
+   "footprint": "11 x 11",
+   "counts": {
+    "B1": 6,
+    "B2": 7,
+    "later": 6
+   },
+   "notes": "Grocer and market fillers (B1); scrolls, pawn, tools, tailor, medicine, metalworker (B2)"
+  },
+  {
+   "group": "shops",
+   "id": "shop_large",
+   "name": "Large store",
+   "how": "program + hand dressing",
+   "footprint": "17 x 13",
+   "counts": {
+    "B1": 1,
+    "B2": 2,
+    "later": 2
+   },
+   "notes": "The furniture shop and its showroom (B1); the weapon shop and the post office (B2)"
+  },
+  {
+   "group": "shops",
+   "id": "market_stall",
+   "name": "Market stall row",
+   "how": "program",
+   "footprint": "13 x 5",
+   "counts": {
+    "B1": 6,
+    "B2": 2,
+    "B3": 4,
+    "later": 4
+   },
+   "notes": "Vegetables, fish, rice; exam-week stalls in B3"
+  },
+  {
+   "group": "shops",
+   "id": "restaurant",
+   "name": "Restaurant",
+   "how": "program",
+   "footprint": "15 x 13",
+   "counts": {
+    "B2": 1,
+    "later": 2
+   },
+   "notes": "The barbecue house (B2), an izakaya"
+  },
+  {
+   "group": "clans",
+   "id": "clan_gate",
+   "name": "Clan gate and wall",
+   "how": "program",
+   "footprint": "varies",
+   "counts": {
+    "B1": 15
+   },
+   "notes": "All 15 noble quarters in Beta 1, crest and palette from the clan JSON"
+  },
+  {
+   "group": "clans",
+   "id": "clan_hall",
+   "name": "Clan hall or clan home",
+   "how": "one-off + hand finish",
+   "footprint": "varies",
+   "counts": {
+    "B1": 15
+   },
+   "notes": "8 great clans' main halls and the 7 smaller clans' homes"
+  },
+  {
+   "group": "clans",
+   "id": "clan_house",
+   "name": "Clan member's house",
+   "how": "program",
+   "footprint": "11 x 11",
+   "counts": {
+    "B2": 16
+   },
+   "notes": "1 to 3 per great compound"
+  },
+  {
+   "group": "clans",
+   "id": "clan_signature",
+   "name": "Clan signature features",
+   "how": "hand",
+   "footprint": "varies",
+   "counts": {
+    "B1": 1,
+    "B2": 14
+   },
+   "notes": "Inuzuka kennels and clinic (B1, pets); deer forest, koi pond and dojo, greenhouse, shrines, studio, grove, moon platform (B2)"
+  },
+  {
+   "group": "clans",
+   "id": "minor_clan_mark",
+   "name": "Minor clan mark",
+   "how": "pasted variant + hand",
+   "footprint": "varies",
+   "counts": {
+    "B2": 10
+   },
+   "notes": "Carpenters' yard and a sealed shrine room by hand; a dojo and a metalworker's shop from programs; the rest homes dressed for the family"
+  },
+  {
+   "group": "clans",
+   "id": "vacant_estate",
+   "name": "Vacant estate",
+   "how": "one-off + hand finish",
+   "footprint": "40 x 40",
+   "counts": {
+    "later": 4
+   },
+   "notes": "Sealed walled estates for player clans"
+  },
+  {
+   "group": "landmarks",
+   "id": "hokage_rock",
+   "name": "Hokage Rock with four faces",
+   "how": "sculpt + hand",
+   "footprint": "~200 x 60, 70 tall",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "rock_faces.py sculpts the faces, the user finishes; a hidden room's door at its foot"
+  },
+  {
+   "group": "landmarks",
+   "id": "hokage_residence",
+   "name": "Hokage Residence",
+   "how": "one-off + hand finish",
+   "footprint": "~33 round",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "Round, 火 on the roof; exterior and ground floor in B1, the Mission Desk and council gallery dressed in B2"
+  },
+  {
+   "group": "landmarks",
+   "id": "academy",
+   "name": "Ninja Academy",
+   "how": "one-off + hand finish",
+   "footprint": "~48 x 32",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "Classrooms, yard with target posts, library, workshop, the tree with the swing; exam hall dressed in B3"
+  },
+  {
+   "group": "landmarks",
+   "id": "hospital",
+   "name": "Hospital",
+   "how": "one-off + hand finish",
+   "footprint": "~32 x 24",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "Wards, the wake room, the herb garden behind"
+  },
+  {
+   "group": "landmarks",
+   "id": "shrine",
+   "name": "Shrine",
+   "how": "one-off + hand finish",
+   "footprint": "~30 x 40",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "Torii, bell, offering box, wish plaques, komainu, toro"
+  },
+  {
+   "group": "landmarks",
+   "id": "main_gate",
+   "name": "Main gate and guard booth",
+   "how": "one-off + hand finish",
+   "footprint": "~30 x 12, 20 tall",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "あん on the doors"
+  },
+  {
+   "group": "landmarks",
+   "id": "ichiraku",
+   "name": "Ramen stand",
+   "how": "one-off + hand finish",
+   "footprint": "7 x 6",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "A VF tavern by bounds"
+  },
+  {
+   "group": "landmarks",
+   "id": "prologue",
+   "name": "Prologue hills: the hideout and a ruined shrine",
+   "how": "hand",
+   "footprint": "~120 x 120",
+   "counts": {
+    "B1": 1
+   },
+   "notes": "South of the wall, inside the border"
+  },
+  {
+   "group": "landmarks",
+   "id": "smithy",
+   "name": "Smithy and forge",
+   "how": "one-off + hand finish",
+   "footprint": "11 x 11",
+   "counts": {
+    "B2": 1
+   },
+   "notes": "Behind the weapon shop"
+  },
+  {
+   "group": "landmarks",
+   "id": "bath_house",
+   "name": "Bath house",
+   "how": "one-off + hand finish",
+   "footprint": "17 x 15",
+   "counts": {
+    "B2": 1
+   },
+   "notes": ""
+  },
+  {
+   "group": "landmarks",
+   "id": "memorial",
+   "name": "Ino-Shika-Cho memorial",
+   "how": "hand",
+   "footprint": "9 x 9",
+   "counts": {
+    "B2": 1
+   },
+   "notes": "By the Nara forest"
+  },
+  {
+   "group": "landmarks",
+   "id": "ferry",
+   "name": "Ferry landing",
+   "how": "hand",
+   "footprint": "9 x 7",
+   "counts": {
+    "B2": 1
+   },
+   "notes": "With the site of the future bridge"
+  },
+  {
+   "group": "landmarks",
+   "id": "waystation",
+   "name": "East road waystation",
+   "how": "one-off + hand finish",
+   "footprint": "21 x 21",
+   "counts": {
+    "B2": 1
+   },
+   "notes": ""
+  },
+  {
+   "group": "landmarks",
+   "id": "bandit_camp",
+   "name": "Bandit camp",
+   "how": "camp program + hand",
+   "footprint": "~30 x 30",
+   "counts": {
+    "B2": 3
+   },
+   "notes": "Outside the wall"
+  },
+  {
+   "group": "landmarks",
+   "id": "border_village",
+   "name": "Border village (first far region)",
+   "how": "pasted homes + hand",
+   "footprint": "~120 x 120",
+   "counts": {
+    "B2": 1
+   },
+   "notes": "Its own region, with a few outlying buildings"
+  },
+  {
+   "group": "landmarks",
+   "id": "fod_tower",
+   "name": "Forest of Death tower",
+   "how": "one-off + hand finish",
+   "footprint": "~33 x 33, 40 tall",
+   "counts": {
+    "B3": 1
+   },
+   "notes": "The preliminaries' arena inside"
+  },
+  {
+   "group": "landmarks",
+   "id": "stadium",
+   "name": "Chunin Exam stadium",
+   "how": "one-off + hand finish",
+   "footprint": "~96 round",
+   "counts": {
+    "B3": 1
+   },
+   "notes": "64-block floor, ~150 seats, the Kage box"
+  },
+  {
+   "group": "landmarks",
+   "id": "later_landmarks",
+   "name": "Police HQ, ANBU HQ, three more gates",
+   "how": "one-off + hand finish",
+   "footprint": "varies",
+   "counts": {
+    "later": 5
+   },
+   "notes": "Later arcs; their story locations are added as the arcs are written"
+  },
+  {
+   "group": "training",
+   "id": "training_ground_3",
+   "name": "Training Ground 3",
+   "how": "hand",
+   "footprint": "~60 x 60",
+   "counts": {
+    "B2": 1
+   },
+   "notes": "Three stumps, the memorial stone, the river"
+  },
+  {
+   "group": "training",
+   "id": "training_ground",
+   "name": "Training ground (pasted props)",
+   "how": "program + hand terrain",
+   "footprint": "~50 x 50",
+   "counts": {
+    "B2": 2,
+    "later": 5
+   },
+   "notes": "The lake ground and the cliff ground in B2; outer grounds later"
+  },
+  {
+   "group": "forest",
+   "id": "giant_tree",
+   "name": "Forest of Death giant tree",
+   "how": "program",
+   "footprint": "4-7 thick",
+   "counts": {
+    "B3": 260
+   },
+   "notes": "Seeded, four forms"
+  },
+  {
+   "group": "forest",
+   "id": "forest_tree",
+   "name": "Understorey tree",
+   "how": "program",
+   "footprint": "2-3 thick",
+   "counts": {
+    "B3": 400
+   },
+   "notes": "Between the giants"
+  },
+  {
+   "group": "forest",
+   "id": "fod_gate",
+   "name": "Forest of Death gate",
+   "how": "program",
+   "footprint": "7 x 3",
+   "counts": {
+    "B3": 44
+   },
+   "notes": "On a fence swept along the forest's circle"
+  },
+  {
+   "group": "wall",
+   "id": "wall_segment",
+   "name": "Wall segment (16 blocks of the swept wall)",
+   "how": "program",
+   "footprint": "16 x 5, 14 tall",
+   "counts": {
+    "B1": 14,
+    "B2": 22,
+    "B3": 20,
+    "later": 70
+   },
+   "notes": "~2,010 blocks of wall"
+  },
+  {
+   "group": "wall",
+   "id": "wall_tower",
+   "name": "Wall watch tower",
+   "how": "program",
+   "footprint": "9 x 9",
+   "counts": {
+    "B1": 2,
+    "B2": 3,
+    "B3": 3,
+    "later": 8
+   },
+   "notes": ""
+  },
+  {
+   "group": "streets",
+   "id": "bridge",
+   "name": "Bridge",
+   "how": "program",
+   "footprint": "varies",
+   "counts": {
+    "B1": 2,
+    "B2": 2,
+    "later": 2
+   },
+   "notes": "Flat bridges first, arched from B2"
+  },
+  {
+   "group": "streets",
+   "id": "village_tree",
+   "name": "Street and garden tree",
+   "how": "program",
+   "footprint": "varies",
+   "counts": {
+    "B1": 60,
+    "B2": 40,
+    "later": 50
+   },
+   "notes": ""
+  },
+  {
+   "group": "streets",
+   "id": "utility_pole",
+   "name": "Utility pole (placed by roads.py)",
+   "how": "roads.py",
+   "footprint": "1 x 1",
+   "counts": {
+    "P0": 13,
+    "B1": 120,
+    "B2": 100,
+    "B3": 40,
+    "later": 150
+   },
+   "notes": "Every 12 blocks on main and ring streets"
+  }
+ ],
+ "streets_km": {
+  "P0": 0.15,
+  "B1": 2.4,
+  "B2": 2.0,
+  "B3": 0.8,
+  "later": 3.0
+ }
+}

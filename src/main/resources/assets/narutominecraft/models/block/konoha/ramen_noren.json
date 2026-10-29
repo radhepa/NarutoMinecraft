@@ -1,0 +1,255 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "cloth": "narutominecraft:block/konoha/ramen_noren",
+  "rod": "narutominecraft:block/konoha/noren_rod",
+  "particle": "narutominecraft:block/konoha/ramen_noren"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    14.5,
+    7.25
+   ],
+   "to": [
+    16,
+    16,
+    8.75
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      0,
+      16,
+      1.5
+     ],
+     "texture": "#rod"
+    },
+    "south": {
+     "uv": [
+      0,
+      0,
+      16,
+      1.5
+     ],
+     "texture": "#rod"
+    },
+    "east": {
+     "uv": [
+      7.25,
+      0,
+      8.75,
+      1.5
+     ],
+     "texture": "#rod"
+    },
+    "west": {
+     "uv": [
+      7.25,
+      0,
+      8.75,
+      1.5
+     ],
+     "texture": "#rod"
+    },
+    "up": {
+     "uv": [
+      0,
+      7.25,
+      16,
+      8.75
+     ],
+     "texture": "#rod"
+    },
+    "down": {
+     "uv": [
+      0,
+      7.25,
+      16,
+      8.75
+     ],
+     "texture": "#rod"
+    }
+   }
+  },
+  {
+   "from": [
+    0,
+    3,
+    7.8
+   ],
+   "to": [
+    5.1,
+    14.5,
+    8.2
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      10.9,
+      1.5,
+      16,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "south": {
+     "uv": [
+      0,
+      1.5,
+      5.1,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "east": {
+     "uv": [
+      7.8,
+      1.5,
+      8.2,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "west": {
+     "uv": [
+      7.8,
+      1.5,
+      8.2,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "down": {
+     "uv": [
+      0,
+      7.8,
+      5.1,
+      8.2
+     ],
+     "texture": "#cloth"
+    }
+   }
+  },
+  {
+   "from": [
+    5.45,
+    3,
+    7.8
+   ],
+   "to": [
+    10.55,
+    14.5,
+    8.2
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      5.45,
+      1.5,
+      10.55,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "south": {
+     "uv": [
+      5.45,
+      1.5,
+      10.55,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "east": {
+     "uv": [
+      7.8,
+      1.5,
+      8.2,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "west": {
+     "uv": [
+      7.8,
+      1.5,
+      8.2,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "down": {
+     "uv": [
+      5.45,
+      7.8,
+      10.55,
+      8.2
+     ],
+     "texture": "#cloth"
+    }
+   }
+  },
+  {
+   "from": [
+    10.9,
+    3,
+    7.8
+   ],
+   "to": [
+    16,
+    14.5,
+    8.2
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      1.5,
+      5.1,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "south": {
+     "uv": [
+      10.9,
+      1.5,
+      16,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "east": {
+     "uv": [
+      7.8,
+      1.5,
+      8.2,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "west": {
+     "uv": [
+      7.8,
+      1.5,
+      8.2,
+      13
+     ],
+     "texture": "#cloth"
+    },
+    "down": {
+     "uv": [
+      10.9,
+      7.8,
+      16,
+      8.2
+     ],
+     "texture": "#cloth"
+    }
+   }
+  }
+ ]
+}
