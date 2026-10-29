@@ -666,9 +666,9 @@
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/BondInput.java": {
-    "mtime": 1793308368.5260556,
-    "seen": 1793309672.7363873,
-    "ast_hash": "b2b608c385ffb2b4786a6e320a62bfdd",
+    "mtime": 1793310553.6602604,
+    "seen": 1793310685.7078383,
+    "ast_hash": "bb0e9f8135cc35a395cd8c6f26f8638c",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/Contribution.java": {
@@ -768,9 +768,9 @@
     "semantic_hash": ""
   },
   "docs/RANKS.md": {
-    "mtime": 1793310419.684503,
-    "seen": 1793310436.2976713,
-    "ast_hash": "f9779d7b722b90f446106a64ecfcd0cb",
+    "mtime": 1793310672.8141055,
+    "seen": 1793310685.7079546,
+    "ast_hash": "af19b3e16c0b63c6c70be29554b1eb00",
     "semantic_hash": ""
   },
   "life/roster/src/main/java/dev/shinobi/life/roster/ClanPower.java": {

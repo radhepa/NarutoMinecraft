@@ -122,7 +122,10 @@
     "exams": 58
    },
    "story": true,
-   "group": "circle"
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.hokage_4.gone"
+   }
   },
   {
    "role": "role:elder_keeper",
@@ -144,7 +147,10 @@
     "exams": 38
    },
    "story": true,
-   "group": "circle"
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.elder_keeper.gone"
+   }
   },
   {
    "role": "role:elder_councillor",
@@ -166,7 +172,10 @@
     "exams": 36
    },
    "story": true,
-   "group": "circle"
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.elder_councillor.gone"
+   }
   },
   {
    "role": "role:elder_hyuga",
@@ -188,7 +197,10 @@
     "exams": 37
    },
    "story": true,
-   "group": "circle"
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.elder_hyuga.gone"
+   }
   },
   {
    "role": "role:anbu_cat",
@@ -215,7 +227,10 @@
    "job": "anbu",
    "showcase": [
     "ch1.residence_roof"
-   ]
+   ],
+   "leaves_on": {
+    "flag": "world.roster.anbu_cat.gone"
+   }
   },
   {
    "role": "role:anbu_hawk",
@@ -239,7 +254,10 @@
    "masked": true,
    "group": "anbu",
    "look": "anbu_hawk",
-   "job": "anbu"
+   "job": "anbu",
+   "leaves_on": {
+    "flag": "world.roster.anbu_hawk.gone"
+   }
   },
   {
    "role": "role:sensei",
@@ -265,9 +283,11 @@
    "leads": "squad_1",
    "showcase": [
     "ch0.rescue",
-    "ch8.bells",
-    "ch10.spar_with_sensei_2"
-   ]
+    "ch8.bells"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.sensei.gone"
+   }
   },
   {
    "role": "role:sensei_2",
@@ -292,8 +312,11 @@
    "group": "senseis",
    "leads": "squad_2",
    "showcase": [
-    "ch10.spar_with_sensei_2"
-   ]
+    "ch10.senbon_rings"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.sensei_2.gone"
+   }
   },
   {
    "role": "role:sensei_3",
@@ -317,7 +340,10 @@
    "story": true,
    "group": "senseis",
    "leads": "squad_3",
-   "look": "jonin_kunoichi"
+   "look": "jonin_kunoichi",
+   "leaves_on": {
+    "flag": "world.roster.sensei_3.gone"
+   }
   },
   {
    "role": "role:sensei_4",
@@ -340,7 +366,10 @@
    },
    "story": true,
    "group": "senseis",
-   "leads": "squad_4"
+   "leads": "squad_4",
+   "leaves_on": {
+    "flag": "world.roster.sensei_4.gone"
+   }
   },
   {
    "role": "role:sensei_5",
@@ -363,7 +392,10 @@
    },
    "story": true,
    "group": "senseis",
-   "leads": "squad_5"
+   "leads": "squad_5",
+   "leaves_on": {
+    "flag": "world.roster.sensei_5.gone"
+   }
   },
   {
    "role": "role:teammate_a",
@@ -390,7 +422,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_1"
+   "squad": "squad_1",
+   "leaves_on": {
+    "flag": "world.roster.teammate_a.gone"
+   }
   },
   {
    "role": "role:teammate_b",
@@ -417,7 +452,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_1"
+   "squad": "squad_1",
+   "leaves_on": {
+    "flag": "world.roster.teammate_b.gone"
+   }
   },
   {
    "role": "role:rival",
@@ -444,7 +482,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_2"
+   "squad": "squad_2",
+   "leaves_on": {
+    "flag": "world.roster.rival.gone"
+   }
   },
   {
    "role": "role:classmate_c",
@@ -454,7 +495,7 @@
    "family": "Kinoshita",
    "rank": "academy",
    "tier": "E",
-   "importance": "story-driving",
+   "importance": "fan-favourite",
    "spotlight": "named",
    "clan": "kinoshita",
    "clan_power": "minor",
@@ -471,7 +512,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_2"
+   "squad": "squad_2",
+   "leaves_on": {
+    "flag": "world.roster.classmate_c.gone"
+   }
   },
   {
    "role": "role:classmate_d",
@@ -481,7 +525,7 @@
    "family": "Gekko",
    "rank": "academy",
    "tier": "E",
-   "importance": "story-driving",
+   "importance": "fan-favourite",
    "spotlight": "named",
    "clan": "gekko",
    "clan_power": "strong",
@@ -498,7 +542,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_2"
+   "squad": "squad_2",
+   "leaves_on": {
+    "flag": "world.roster.classmate_d.gone"
+   }
   },
   {
    "role": "role:squad3_a",
@@ -525,7 +572,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_3"
+   "squad": "squad_3",
+   "leaves_on": {
+    "flag": "world.roster.squad3_a.gone"
+   }
   },
   {
    "role": "role:squad3_b",
@@ -553,7 +603,10 @@
    "story": true,
    "group": "class",
    "squad": "squad_3",
-   "notes": "the Hokage's grandson"
+   "notes": "the Hokage's grandson",
+   "leaves_on": {
+    "flag": "world.roster.squad3_b.gone"
+   }
   },
   {
    "role": "role:squad3_c",
@@ -580,7 +633,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_3"
+   "squad": "squad_3",
+   "leaves_on": {
+    "flag": "world.roster.squad3_c.gone"
+   }
   },
   {
    "role": "role:squad4_a",
@@ -608,7 +664,10 @@
    "story": true,
    "group": "class",
    "squad": "squad_4",
-   "notes": "the Hyuga main house's heir"
+   "notes": "the Hyuga main house's heir",
+   "leaves_on": {
+    "flag": "world.roster.squad4_a.gone"
+   }
   },
   {
    "role": "role:squad4_b",
@@ -618,7 +677,7 @@
    "family": "Inuzuka",
    "rank": "academy",
    "tier": "E",
-   "importance": "story-driving",
+   "importance": "fan-favourite",
    "spotlight": "named",
    "clan": "inuzuka",
    "clan_power": "strong",
@@ -635,7 +694,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_4"
+   "squad": "squad_4",
+   "leaves_on": {
+    "flag": "world.roster.squad4_b.gone"
+   }
   },
   {
    "role": "role:squad4_c",
@@ -662,7 +724,10 @@
    "grows": true,
    "story": true,
    "group": "class",
-   "squad": "squad_4"
+   "squad": "squad_4",
+   "leaves_on": {
+    "flag": "world.roster.squad4_c.gone"
+   }
   },
   {
    "role": "role:squad5_a",
@@ -689,7 +754,10 @@
    "grows": true,
    "story": true,
    "group": "seniors",
-   "squad": "squad_5"
+   "squad": "squad_5",
+   "leaves_on": {
+    "flag": "world.roster.squad5_a.gone"
+   }
   },
   {
    "role": "role:squad5_b",
@@ -716,7 +784,10 @@
    "grows": true,
    "story": true,
    "group": "seniors",
-   "squad": "squad_5"
+   "squad": "squad_5",
+   "leaves_on": {
+    "flag": "world.roster.squad5_b.gone"
+   }
   },
   {
    "role": "role:squad5_c",
@@ -744,11 +815,13 @@
    "story": true,
    "group": "seniors",
    "squad": "squad_5",
-   "look": "green_beast"
+   "leaves_on": {
+    "flag": "world.roster.squad5_c.gone"
+   }
   },
   {
-   "role": "role:taijutsu_master",
-   "name": "{name:role:taijutsu_master}",
+   "role": "role:kenjutsu_instructor",
+   "name": "{name:role:kenjutsu_instructor}",
    "placeholder": "Tora Matsuda (no clan)",
    "given": "Tora",
    "family": "Matsuda",
@@ -758,7 +831,7 @@
    "spotlight": "pillar",
    "clan": "none",
    "clan_power": "clanless",
-   "specialty": "taijutsu",
+   "specialty": "kenjutsu",
    "first": "beta1",
    "levels": {
     "academy": 45,
@@ -769,10 +842,13 @@
    "provisional": true,
    "look": "jonin_sentinel",
    "showcase": [
-    "ch2.yard_demo",
-    "ch18.training_break"
+    "ch2.sword_drills"
    ],
-   "where": "training_grounds"
+   "where": "academy",
+   "notes": "runs the Academy's sword drills for every class",
+   "leaves_on": {
+    "flag": "world.roster.kenjutsu_instructor.gone"
+   }
   },
   {
    "role": "role:elite_scout",
@@ -798,7 +874,10 @@
    "look": "jonin_field",
    "showcase": [
     "ch11.east_road"
-   ]
+   ],
+   "leaves_on": {
+    "flag": "world.roster.elite_scout.gone"
+   }
   },
   {
    "role": "role:legend_veteran",
@@ -824,7 +903,10 @@
    "where": "scroll_shop",
    "showcase": [
     "ch12.scroll_shop"
-   ]
+   ],
+   "leaves_on": {
+    "flag": "world.roster.legend_veteran.gone"
+   }
   },
   {
    "role": "role:legend_wanderer",
@@ -848,7 +930,10 @@
    "group": "elite",
    "provisional": true,
    "on_map": false,
-   "notes": "away on a long mission for the whole beta; spoken of at the standby station and in letters"
+   "notes": "away on a long mission for the whole beta; spoken of at the standby station and in letters",
+   "leaves_on": {
+    "flag": "world.roster.legend_wanderer.gone"
+   }
   },
   {
    "role": "role:instructor",
@@ -871,7 +956,10 @@
    },
    "story": true,
    "group": "academy",
-   "job": "academy_teacher"
+   "job": "academy_teacher",
+   "leaves_on": {
+    "flag": "world.roster.instructor.gone"
+   }
   },
   {
    "role": "role:instructor_2",
@@ -894,7 +982,10 @@
    },
    "group": "academy",
    "provisional": true,
-   "job": "academy_teacher"
+   "job": "academy_teacher",
+   "leaves_on": {
+    "flag": "world.roster.instructor_2.gone"
+   }
   },
   {
    "role": "role:instructor_3",
@@ -917,7 +1008,10 @@
    },
    "group": "academy",
    "provisional": true,
-   "job": "academy_teacher"
+   "job": "academy_teacher",
+   "leaves_on": {
+    "flag": "world.roster.instructor_3.gone"
+   }
   },
   {
    "role": "role:headmaster",
@@ -939,20 +1033,23 @@
     "exams": 34
    },
    "group": "academy",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.headmaster.gone"
+   }
   },
   {
    "role": "role:proctor_written",
    "name": "{name:role:proctor_written}",
-   "placeholder": "Kiyoshi Morino",
+   "placeholder": "Kiyoshi Goto (no clan)",
    "given": "Kiyoshi",
-   "family": "Morino",
+   "family": "Goto",
    "rank": "special_jonin",
    "tier": "B",
    "importance": "fan-favourite",
    "spotlight": "named",
-   "clan": "morino",
-   "clan_power": "minor",
+   "clan": "none",
+   "clan_power": "clanless",
    "specialty": "interrogation",
    "first": "beta3",
    "levels": {
@@ -962,7 +1059,10 @@
    },
    "group": "exams",
    "provisional": true,
-   "where": "exam_hall"
+   "where": "exam_hall",
+   "leaves_on": {
+    "flag": "world.roster.proctor_written.gone"
+   }
   },
   {
    "role": "role:proctor_forest",
@@ -985,7 +1085,10 @@
    },
    "group": "exams",
    "provisional": true,
-   "where": "forest_of_death"
+   "where": "forest_of_death",
+   "leaves_on": {
+    "flag": "world.roster.proctor_forest.gone"
+   }
   },
   {
    "role": "role:proctor_finals",
@@ -1008,7 +1111,10 @@
    },
    "group": "exams",
    "provisional": true,
-   "where": "stadium"
+   "where": "stadium",
+   "leaves_on": {
+    "flag": "world.roster.proctor_finals.gone"
+   }
   },
   {
    "role": "role:desk_chunin_1",
@@ -1031,7 +1137,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "mission_desk"
+   "job": "mission_desk",
+   "leaves_on": {
+    "flag": "world.roster.desk_chunin_1.gone"
+   }
   },
   {
    "role": "role:desk_chunin_2",
@@ -1054,7 +1163,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "mission_desk"
+   "job": "mission_desk",
+   "leaves_on": {
+    "flag": "world.roster.desk_chunin_2.gone"
+   }
   },
   {
    "role": "role:gate_guard_1",
@@ -1077,7 +1189,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "gate_guard"
+   "job": "gate_guard",
+   "leaves_on": {
+    "flag": "world.roster.gate_guard_1.gone"
+   }
   },
   {
    "role": "role:gate_guard_2",
@@ -1100,7 +1215,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "gate_guard"
+   "job": "gate_guard",
+   "leaves_on": {
+    "flag": "world.roster.gate_guard_2.gone"
+   }
   },
   {
    "role": "role:night_watch",
@@ -1123,7 +1241,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "wall_watch"
+   "job": "wall_watch",
+   "leaves_on": {
+    "flag": "world.roster.night_watch.gone"
+   }
   },
   {
    "role": "role:police_chief",
@@ -1148,8 +1269,11 @@
    "provisional": true,
    "job": "police",
    "also": [
-    "role:clan_head.uchiha"
-   ]
+    "role:head_uchiha"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.police_chief.gone"
+   }
   },
   {
    "role": "role:police_officer",
@@ -1172,7 +1296,10 @@
    },
    "group": "duty",
    "provisional": true,
-   "job": "police"
+   "job": "police",
+   "leaves_on": {
+    "flag": "world.roster.police_officer.gone"
+   }
   },
   {
    "role": "role:medic",
@@ -1195,7 +1322,10 @@
    },
    "story": true,
    "group": "duty",
-   "job": "medic"
+   "job": "medic",
+   "leaves_on": {
+    "flag": "world.roster.medic.gone"
+   }
   },
   {
    "role": "role:hospital_head",
@@ -1220,8 +1350,11 @@
    "provisional": true,
    "job": "medic",
    "also": [
-    "role:clan_head.suzuran"
-   ]
+    "role:head_suzuran"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.hospital_head.gone"
+   }
   },
   {
    "role": "role:standby_jonin_1",
@@ -1244,7 +1377,10 @@
    },
    "group": "standby",
    "provisional": true,
-   "job": "jonin_standby"
+   "job": "jonin_standby",
+   "leaves_on": {
+    "flag": "world.roster.standby_jonin_1.gone"
+   }
   },
   {
    "role": "role:standby_jonin_2",
@@ -1267,7 +1403,10 @@
    },
    "group": "standby",
    "provisional": true,
-   "job": "jonin_standby"
+   "job": "jonin_standby",
+   "leaves_on": {
+    "flag": "world.roster.standby_jonin_2.gone"
+   }
   },
   {
    "role": "role:standby_jonin_3",
@@ -1290,11 +1429,141 @@
    },
    "group": "standby",
    "provisional": true,
-   "job": "jonin_standby"
+   "job": "jonin_standby",
+   "leaves_on": {
+    "flag": "world.roster.standby_jonin_3.gone"
+   }
   },
   {
-   "role": "role:clan_head.nara",
-   "name": "{name:role:clan_head.nara}",
+   "role": "role:head_senju",
+   "name": "{name:role:head_senju}",
+   "placeholder": "Mokuren Senju",
+   "given": "Mokuren",
+   "family": "Senju",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "senju",
+   "clan_power": "great",
+   "specialty": "ninjutsu (wood)",
+   "first": "beta2",
+   "levels": {
+    "academy": 36,
+    "genin": 36,
+    "exams": 36
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_senju.gone"
+   }
+  },
+  {
+   "role": "role:head_hyuga",
+   "name": "{name:role:head_hyuga}",
+   "placeholder": "Takeshi Hyuga",
+   "given": "Takeshi",
+   "family": "Hyuga",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "hyuga",
+   "clan_power": "great",
+   "specialty": "taijutsu (gentle fist)",
+   "first": "beta2",
+   "levels": {
+    "academy": 41,
+    "genin": 41,
+    "exams": 41
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "notes": "the main house; role:squad4_a's parent",
+   "leaves_on": {
+    "flag": "world.roster.head_hyuga.gone"
+   }
+  },
+  {
+   "role": "role:head_akimichi",
+   "name": "{name:role:head_akimichi}",
+   "placeholder": "Dai Akimichi",
+   "given": "Dai",
+   "family": "Akimichi",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "akimichi",
+   "clan_power": "strong",
+   "specialty": "taijutsu (expansion)",
+   "first": "beta2",
+   "levels": {
+    "academy": 38,
+    "genin": 38,
+    "exams": 38
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_akimichi.gone"
+   }
+  },
+  {
+   "role": "role:head_yamanaka",
+   "name": "{name:role:head_yamanaka}",
+   "placeholder": "Kaoru Yamanaka",
+   "given": "Kaoru",
+   "family": "Yamanaka",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "yamanaka",
+   "clan_power": "strong",
+   "specialty": "sensing (mind)",
+   "first": "beta2",
+   "levels": {
+    "academy": 37,
+    "genin": 37,
+    "exams": 37
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "notes": "role:squad3_c's parent",
+   "leaves_on": {
+    "flag": "world.roster.head_yamanaka.gone"
+   }
+  },
+  {
+   "role": "role:head_uzumaki",
+   "name": "{name:role:head_uzumaki}",
+   "placeholder": "Kenshin Uzumaki",
+   "given": "Kenshin",
+   "family": "Uzumaki",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "uzumaki",
+   "clan_power": "great",
+   "specialty": "sealing",
+   "first": "beta2",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_uzumaki.gone"
+   }
+  },
+  {
+   "role": "role:head_nara",
+   "name": "{name:role:head_nara}",
    "placeholder": "Shikou Nara",
    "given": "Shikou",
    "family": "Nara",
@@ -1312,11 +1581,14 @@
     "exams": 41
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_nara.gone"
+   }
   },
   {
-   "role": "role:clan_head.inuzuka",
-   "name": "{name:role:clan_head.inuzuka}",
+   "role": "role:head_inuzuka",
+   "name": "{name:role:head_inuzuka}",
    "placeholder": "Hayabusa Inuzuka",
    "given": "Hayabusa",
    "family": "Inuzuka",
@@ -1334,11 +1606,14 @@
     "exams": 36
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_inuzuka.gone"
+   }
   },
   {
-   "role": "role:clan_head.sarutobi",
-   "name": "{name:role:clan_head.sarutobi}",
+   "role": "role:head_sarutobi",
+   "name": "{name:role:head_sarutobi}",
    "placeholder": "Enzo Sarutobi",
    "given": "Enzo",
    "family": "Sarutobi",
@@ -1356,11 +1631,14 @@
     "exams": 35
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_sarutobi.gone"
+   }
   },
   {
-   "role": "role:clan_head.aburame",
-   "name": "{name:role:clan_head.aburame}",
+   "role": "role:head_aburame",
+   "name": "{name:role:head_aburame}",
    "placeholder": "Mushi Aburame",
    "given": "Mushi",
    "family": "Aburame",
@@ -1378,11 +1656,14 @@
     "exams": 35
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_aburame.gone"
+   }
   },
   {
-   "role": "role:clan_head.kurama",
-   "name": "{name:role:clan_head.kurama}",
+   "role": "role:head_kurama",
+   "name": "{name:role:head_kurama}",
    "placeholder": "Utsuro Kurama",
    "given": "Utsuro",
    "family": "Kurama",
@@ -1400,11 +1681,14 @@
     "exams": 30
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_kurama.gone"
+   }
   },
   {
-   "role": "role:clan_head.shimura",
-   "name": "{name:role:clan_head.shimura}",
+   "role": "role:head_shimura",
+   "name": "{name:role:head_shimura}",
    "placeholder": "Gonzo Shimura",
    "given": "Gonzo",
    "family": "Shimura",
@@ -1422,11 +1706,14 @@
     "exams": 32
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_shimura.gone"
+   }
   },
   {
-   "role": "role:clan_head.yuhi",
-   "name": "{name:role:clan_head.yuhi}",
+   "role": "role:head_yuhi",
+   "name": "{name:role:head_yuhi}",
    "placeholder": "Kaede Yuhi",
    "given": "Kaede",
    "family": "Yuhi",
@@ -1444,11 +1731,14 @@
     "exams": 34
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_yuhi.gone"
+   }
   },
   {
-   "role": "role:clan_head.gekko",
-   "name": "{name:role:clan_head.gekko}",
+   "role": "role:head_gekko",
+   "name": "{name:role:head_gekko}",
    "placeholder": "Tsukiko Gekko",
    "given": "Tsukiko",
    "family": "Gekko",
@@ -1466,11 +1756,14 @@
     "exams": 33
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_gekko.gone"
+   }
   },
   {
-   "role": "role:clan_head.shiranui",
-   "name": "{name:role:clan_head.shiranui}",
+   "role": "role:head_shiranui",
+   "name": "{name:role:head_shiranui}",
    "placeholder": "Senbei Shiranui",
    "given": "Senbei",
    "family": "Shiranui",
@@ -1488,11 +1781,14 @@
     "exams": 26
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_shiranui.gone"
+   }
   },
   {
-   "role": "role:clan_head.morino",
-   "name": "{name:role:clan_head.morino}",
+   "role": "role:head_morino",
+   "name": "{name:role:head_morino}",
    "placeholder": "Takumi Morino",
    "given": "Takumi",
    "family": "Morino",
@@ -1510,11 +1806,14 @@
     "exams": 32
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_morino.gone"
+   }
   },
   {
-   "role": "role:clan_head.umino",
-   "name": "{name:role:clan_head.umino}",
+   "role": "role:head_umino",
+   "name": "{name:role:head_umino}",
    "placeholder": "Kazuo Umino",
    "given": "Kazuo",
    "family": "Umino",
@@ -1532,11 +1831,14 @@
     "exams": 24
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_umino.gone"
+   }
   },
   {
-   "role": "role:clan_head.haruno",
-   "name": "{name:role:clan_head.haruno}",
+   "role": "role:head_haruno",
+   "name": "{name:role:head_haruno}",
    "placeholder": "Momoe Haruno",
    "given": "Momoe",
    "family": "Haruno",
@@ -1554,11 +1856,14 @@
     "exams": 22
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_haruno.gone"
+   }
   },
   {
-   "role": "role:clan_head.namiashi",
-   "name": "{name:role:clan_head.namiashi}",
+   "role": "role:head_namiashi",
+   "name": "{name:role:head_namiashi}",
    "placeholder": "Hayato Namiashi",
    "given": "Hayato",
    "family": "Namiashi",
@@ -1576,11 +1881,14 @@
     "exams": 23
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_namiashi.gone"
+   }
   },
   {
-   "role": "role:clan_head.hagane",
-   "name": "{name:role:clan_head.hagane}",
+   "role": "role:head_hagane",
+   "name": "{name:role:head_hagane}",
    "placeholder": "Kurogane Hagane",
    "given": "Kurogane",
    "family": "Hagane",
@@ -1598,11 +1906,14 @@
     "exams": 22
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_hagane.gone"
+   }
   },
   {
-   "role": "role:clan_head.kinoshita",
-   "name": "{name:role:clan_head.kinoshita}",
+   "role": "role:head_kinoshita",
+   "name": "{name:role:head_kinoshita}",
    "placeholder": "Mokuzo Kinoshita",
    "given": "Mokuzo",
    "family": "Kinoshita",
@@ -1620,11 +1931,14 @@
     "exams": 18
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_kinoshita.gone"
+   }
   },
   {
-   "role": "role:clan_head.tsuchigumo",
-   "name": "{name:role:clan_head.tsuchigumo}",
+   "role": "role:head_tsuchigumo",
+   "name": "{name:role:head_tsuchigumo}",
    "placeholder": "Iwao Tsuchigumo",
    "given": "Iwao",
    "family": "Tsuchigumo",
@@ -1642,11 +1956,14 @@
     "exams": 27
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_tsuchigumo.gone"
+   }
   },
   {
-   "role": "role:clan_head.tobari",
-   "name": "{name:role:clan_head.tobari}",
+   "role": "role:head_tobari",
+   "name": "{name:role:head_tobari}",
    "placeholder": "Yoru Tobari",
    "given": "Yoru",
    "family": "Tobari",
@@ -1664,7 +1981,10 @@
     "exams": 26
    },
    "group": "clan_heads",
-   "provisional": true
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_tobari.gone"
+   }
   }
  ],
  "civilians": [
@@ -1678,7 +1998,10 @@
    "clan": "none",
    "first": "beta1",
    "story": true,
-   "where": "academy_library"
+   "where": "academy_library",
+   "leaves_on": {
+    "flag": "world.roster.librarian.gone"
+   }
   },
   {
    "role": "role:porter",
@@ -1690,7 +2013,10 @@
    "clan": "none",
    "first": "beta1",
    "story": true,
-   "where": "furniture_shop"
+   "where": "furniture_shop",
+   "leaves_on": {
+    "flag": "world.roster.porter.gone"
+   }
   },
   {
    "role": "role:merchant",
@@ -1702,7 +2028,10 @@
    "clan": "none",
    "first": "beta2",
    "story": true,
-   "where": "east_road"
+   "where": "east_road",
+   "leaves_on": {
+    "flag": "world.roster.merchant.gone"
+   }
   },
   {
    "role": "role:residence_clerk",
@@ -1714,7 +2043,10 @@
    "clan": "none",
    "first": "beta1",
    "provisional": true,
-   "where": "residence"
+   "where": "residence",
+   "leaves_on": {
+    "flag": "world.roster.residence_clerk.gone"
+   }
   }
  ]
 }
