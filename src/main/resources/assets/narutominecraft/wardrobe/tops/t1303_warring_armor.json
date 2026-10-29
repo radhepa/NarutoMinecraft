@@ -1,0 +1,194 @@
+{
+  "id": "t1303_warring_armor",
+  "kind": "top",
+  "name": "Warring Armor",
+  "gender": "unisex",
+  "texture": "tops/t1303_warring_armor.png",
+  "extrasHeight": 32,
+  "tags": [
+    "armor",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "high_neck",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -1.4,
+        -2.4
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_shoulder_guard",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "left_shoulder_guard",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.4,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "tasset_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tasset_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        10
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Dark high-necked shirt under laced grey lamellar armor, round shoulder guards, tassets, bandaged forearms."
+}

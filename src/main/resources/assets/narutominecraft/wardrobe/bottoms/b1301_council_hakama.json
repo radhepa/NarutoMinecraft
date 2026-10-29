@@ -1,0 +1,160 @@
+{
+  "id": "b1301_council_hakama",
+  "kind": "bottom",
+  "name": "Council Hakama",
+  "gender": "unisex",
+  "texture": "bottoms/b1301_council_hakama.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_hem",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "left_hem",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "waist_cord_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "waist_cord_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.5,
+        10.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_cord_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.5,
+        10.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Wide pleated charcoal hakama to the ankle, tied waist cords, flaring hems, sandals."
+}

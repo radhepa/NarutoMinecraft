@@ -1,0 +1,225 @@
+{
+  "id": "t1306_councilor_haori",
+  "kind": "top",
+  "name": "Councilor Haori",
+  "gender": "unisex",
+  "texture": "tops/t1306_councilor_haori.png",
+  "extrasHeight": 48,
+  "tags": [
+    "robe",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "himo",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.0,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "right_sleeve_bag",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.3,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        5,
+        6,
+        3
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_sleeve_bag",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.3,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        5,
+        6,
+        3
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "haori_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        17,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "haori_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        38,
+        10
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.6,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        20
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Open charcoal haori over an off-white kosode, a dark sash, wide hanging sleeves, the clan crest on the back."
+}

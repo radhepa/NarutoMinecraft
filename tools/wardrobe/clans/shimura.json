@@ -1,0 +1,317 @@
+{
+  "id": "shimura",
+  "name": "Shimura",
+  "tagline": "Austere grey, charcoal, off-white and black with one dark-red accent: Danzo's council robes, bandages and the hidden Root",
+  "palettes": {
+    "SHIMURA_ELDER": {
+      "name": "Shimura Elder",
+      "P": "#74726c",
+      "S": "#e4e0d2",
+      "A": "#6b1a1e",
+      "L": "#3b322b",
+      "M": "#a88c55",
+      "K": "#141418",
+      "D": "#2c2c31"
+    },
+    "SHIMURA_ROOT": {
+      "name": "Shimura Root",
+      "P": "#25262b",
+      "S": "#e2e0d8",
+      "A": "#7c1b20",
+      "L": "#3a3029",
+      "M": "#959ca3",
+      "K": "#0e0f12",
+      "D": "#1b1c20"
+    },
+    "SHIMURA_ASH": {
+      "name": "Shimura Ash",
+      "P": "#9a978f",
+      "S": "#ecebe5",
+      "A": "#761c21",
+      "L": "#4a3d33",
+      "M": "#a3a8ad",
+      "K": "#1c1d22",
+      "D": "#3b3c42"
+    },
+    "SHIMURA_SLATE": {
+      "name": "Shimura Slate",
+      "P": "#474951",
+      "S": "#dedbd0",
+      "A": "#6e1b1f",
+      "L": "#42372e",
+      "M": "#9ea4aa",
+      "K": "#16171b",
+      "D": "#2a2c32"
+    },
+    "SHIMURA_PAPER": {
+      "name": "Shimura Paper",
+      "P": "#d3cdbc",
+      "S": "#f0ede4",
+      "A": "#7a1d22",
+      "L": "#5a4a3c",
+      "M": "#a3a8ad",
+      "K": "#1d1e23",
+      "D": "#3f4046"
+    },
+    "SHIMURA_MOURNING": {
+      "name": "Shimura Mourning",
+      "P": "#16171a",
+      "S": "#d6d3c9",
+      "A": "#5a1418",
+      "L": "#2e2621",
+      "M": "#8d9297",
+      "K": "#0b0b0d",
+      "D": "#222327"
+    }
+  },
+  "hair_colors": {
+    "SHIMURA_INK": {
+      "name": "Shimura Ink",
+      "ramp": [
+        "#0c0d12",
+        "#15171f",
+        "#1f222d",
+        "#2f3342",
+        "#474d63"
+      ]
+    },
+    "SHIMURA_CHARCOAL": {
+      "name": "Shimura Charcoal",
+      "ramp": [
+        "#151313",
+        "#221f1e",
+        "#302c2a",
+        "#433e3b",
+        "#5d5752"
+      ]
+    },
+    "SHIMURA_GREY": {
+      "name": "Shimura Grey",
+      "ramp": [
+        "#3a3a3c",
+        "#565658",
+        "#77777a",
+        "#9a9a9c",
+        "#bdbdbe"
+      ]
+    }
+  },
+  "eye_colors": {},
+  "marks": {
+    "shimura_x_scar": {
+      "rects": [
+        [
+          0,
+          -0.62,
+          0.25,
+          0.25
+        ],
+        [
+          -0.25,
+          -0.87,
+          0.25,
+          0.25
+        ],
+        [
+          0.25,
+          -0.87,
+          0.25,
+          0.25
+        ],
+        [
+          -0.25,
+          -0.37,
+          0.25,
+          0.25
+        ],
+        [
+          0.25,
+          -0.37,
+          0.25,
+          0.25
+        ]
+      ],
+      "color": null,
+      "mirror": false
+    }
+  },
+  "pool": {
+    "hair": [
+      "h1301_danzo_shag",
+      "h1302_warring_youth",
+      "h1303_sai_sleek",
+      "h1304_root_buzz",
+      "h1305_foundation_tail",
+      "h1306_elder_topknot",
+      "h1307_councilor_bun",
+      "h1308_council_part",
+      "h1309_shimura_bob",
+      "h1310_swept_back",
+      "h1311_council_shag",
+      "h1312_ink_braid",
+      "h1313_shin_spikes",
+      "h1314_half_up",
+      "h1315_ink_curtain"
+    ],
+    "hair_colors": [
+      "SHIMURA_INK",
+      "SHIMURA_CHARCOAL",
+      "SHIMURA_CHARCOAL",
+      "SHIMURA_GREY",
+      "RAVEN",
+      "ESPRESSO"
+    ],
+    "eye_colors": [
+      "DARK"
+    ],
+    "palettes": [
+      "SHIMURA_ELDER",
+      "SHIMURA_ROOT",
+      "SHIMURA_ASH",
+      "SHIMURA_SLATE"
+    ],
+    "headwear": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "w1301_eye_bandage",
+      "w1302_brow_bandage",
+      "w02_forehead_protector",
+      "w07_root_mask"
+    ],
+    "bottoms": [
+      "b01_shinobi_trousers",
+      "b06_anbu_greaves"
+    ],
+    "complexions": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "marks": [
+      {
+        "id": "shimura_x_scar",
+        "chance": 0.15
+      }
+    ]
+  },
+  "outfits": [
+    {
+      "id": "council_elder",
+      "name": "Council Elder",
+      "top": "t1301_danzo_robe",
+      "bottom": "b1301_council_hakama",
+      "rank": "jonin",
+      "palettes": [
+        "SHIMURA_ELDER"
+      ]
+    },
+    {
+      "id": "shackled_founder",
+      "name": "Shackled Founder",
+      "top": "t1302_shackled_arm",
+      "bottom": "b1301_council_hakama",
+      "rank": "jonin",
+      "palettes": [
+        "SHIMURA_ELDER",
+        "SHIMURA_SLATE"
+      ]
+    },
+    {
+      "id": "warring_youth",
+      "name": "Warring Youth",
+      "top": "t1303_warring_armor",
+      "bottom": "b1303_bandaged_trousers",
+      "rank": "jonin",
+      "palettes": [
+        "SHIMURA_SLATE",
+        "SHIMURA_ASH",
+        "SHIMURA_ELDER"
+      ]
+    },
+    {
+      "id": "ink_operative",
+      "name": "Ink Operative",
+      "top": "t1304_sai_jacket",
+      "bottom": "b1302_root_trousers",
+      "rank": "anbu",
+      "palettes": [
+        "SHIMURA_ROOT",
+        "SHIMURA_SLATE"
+      ]
+    },
+    {
+      "id": "root_operative",
+      "name": "Root Operative",
+      "top": "t1305_root_strap_jacket",
+      "bottom": "b1302_root_trousers",
+      "rank": "anbu",
+      "palettes": [
+        "SHIMURA_ROOT",
+        "SHIMURA_SLATE"
+      ]
+    },
+    {
+      "id": "councilor",
+      "name": "Councilor",
+      "top": "t1306_councilor_haori",
+      "bottom": "b1301_council_hakama",
+      "rank": "jonin",
+      "palettes": [
+        "SHIMURA_SLATE",
+        "SHIMURA_ROOT",
+        "SHIMURA_ELDER"
+      ]
+    },
+    {
+      "id": "village_kosode",
+      "name": "Village Kosode",
+      "top": "t1307_village_kosode",
+      "bottom": "b1303_bandaged_trousers",
+      "rank": "genin",
+      "palettes": [
+        "SHIMURA_ASH",
+        "SHIMURA_PAPER",
+        "SHIMURA_SLATE"
+      ]
+    },
+    {
+      "id": "ink_artisan",
+      "name": "Ink Artisan",
+      "top": "t1308_ink_smock",
+      "bottom": "b1302_root_trousers",
+      "rank": "genin",
+      "palettes": [
+        "SHIMURA_ASH",
+        "SHIMURA_PAPER",
+        "SHIMURA_SLATE"
+      ]
+    },
+    {
+      "id": "mourning_dress",
+      "name": "Mourning Dress",
+      "top": "t1309_mourning_haori",
+      "bottom": "b1301_council_hakama",
+      "rank": "jonin",
+      "palettes": [
+        "SHIMURA_MOURNING"
+      ]
+    },
+    {
+      "id": "foundation_kunoichi",
+      "name": "Foundation Kunoichi",
+      "top": "t1310_foundation_vest",
+      "bottom": "b1304_wrap_skirt",
+      "rank": "anbu",
+      "palettes": [
+        "SHIMURA_ROOT",
+        "SHIMURA_SLATE",
+        "SHIMURA_ASH"
+      ]
+    }
+  ]
+}

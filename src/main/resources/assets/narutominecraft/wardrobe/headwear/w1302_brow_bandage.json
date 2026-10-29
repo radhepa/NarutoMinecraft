@@ -1,0 +1,132 @@
+{
+  "id": "w1302_brow_bandage",
+  "kind": "headwear",
+  "name": "Brow Bandage",
+  "gender": "unisex",
+  "texture": "headwear/w1302_brow_bandage.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bandage",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -7.2,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        -0.4,
+        -6.5,
+        4.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "end_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.8,
+        -5.8,
+        4.9
+      ],
+      "rotation": [
+        22,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "end_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.2,
+        -5.8,
+        4.9
+      ],
+      "rotation": [
+        22,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Plain bandage wound round the forehead, knotted at the back with two short ends."
+}
