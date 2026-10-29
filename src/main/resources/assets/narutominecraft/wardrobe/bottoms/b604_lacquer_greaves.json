@@ -4,7 +4,7 @@
   "name": "Lacquer Greaves",
   "gender": "unisex",
   "texture": "bottoms/b604_lacquer_greaves.png",
-  "extrasHeight": 16,
+  "extrasHeight": 32,
   "tags": [
     "akimichi",
     "armor",
@@ -43,6 +43,35 @@
       "inflate": 0.12
     },
     {
+      "id": "right_haidate",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0.4,
+        -2.8
+      ],
+      "size": [
+        5,
+        3,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
       "id": "right_knee_strap",
       "bone": "RIGHT_LEG",
       "pivot": [
@@ -66,7 +95,7 @@
         5
       ],
       "uv": [
-        19,
+        32,
         0
       ],
       "inflate": 0.08
@@ -95,10 +124,39 @@
         4
       ],
       "uv": [
-        40,
-        0
+        0,
+        10
       ],
       "inflate": 0.12
+    },
+    {
+      "id": "left_haidate",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0.4,
+        -2.8
+      ],
+      "size": [
+        5,
+        3,
+        1
+      ],
+      "uv": [
+        19,
+        10
+      ],
+      "inflate": 0.15
     },
     {
       "id": "left_knee_strap",
@@ -124,11 +182,11 @@
         5
       ],
       "uv": [
-        0,
+        32,
         10
       ],
       "inflate": 0.08
     }
   ],
-  "description": "Dark trousers, red lacquered shin guards laced in gold, leather straps, sandals."
+  "description": "Deep red trousers, lacquered thigh plates and shin guards laced in gold, sandals."
 }

@@ -7,6 +7,7 @@
     "AKIMICHI_LACQUER": {"name": "Akimichi Lacquer", "P": "#8a2226", "S": "#ede4cf", "A": "#d6a640", "L": "#4a3024", "M": "#c9b48a", "K": "#1a1414", "D": "#2f4430"},
     "AKIMICHI_HARVEST": {"name": "Akimichi Harvest", "P": "#cc6a2c", "S": "#f0e8d6", "A": "#9a2c24", "L": "#6b4630", "M": "#aab3b9", "K": "#2a1e1a", "D": "#46502e"},
     "AKIMICHI_JONIN": {"name": "Akimichi Jonin", "P": "#5f6e3c", "S": "#ecebe3", "A": "#b8302a", "L": "#7a6346", "M": "#aab3b9", "K": "#1d2236", "D": "#6a2a24"},
+    "AKIMICHI_CHOCHO": {"name": "Akimichi Chocho", "P": "#c8463a", "S": "#f1ede4", "A": "#e2b23a", "L": "#6e4a30", "M": "#aab3b9", "K": "#1c1a1e", "D": "#2a2830"},
     "AKIMICHI_FEAST": {"name": "Akimichi Feast", "P": "#33302f", "S": "#efe9dc", "A": "#b8302a", "L": "#6b4630", "M": "#c9b48a", "K": "#141214", "D": "#5a1e1e"}
   },
   "hair_colors": {
@@ -19,17 +20,18 @@
     "AKIMICHI_AMBER": {"name": "Akimichi Amber", "ramp": ["#120a05", "#6a3c0e", "#b07018", "#e3a640", "#f3eee4"]}
   },
   "marks": {
-    "akimichi_swirl": {"rects": [[3.05, -1.72, 1.5, 0.22], [3.69, -1.18, 0.22, 0.86], [3.05, -0.64, 1.5, 0.22], [2.41, -1.02, 0.22, 0.54], [2.86, -1.2, 0.68, 0.2], [3.12, -0.98, 0.2, 0.3]], "color": "#c4392b", "mirror": true}
+    "akimichi_swirl": {"rects": [[3.05, -1.72, 1.5, 0.22], [3.69, -1.18, 0.22, 0.86], [3.05, -0.64, 1.5, 0.22], [2.41, -1.02, 0.22, 0.54], [2.86, -1.2, 0.68, 0.2], [3.12, -0.98, 0.2, 0.3]], "color": "#c4392b", "mirror": true},
+    "akimichi_swirl_violet": {"rects": [[3.05, -1.72, 1.5, 0.22], [3.69, -1.18, 0.22, 0.86], [3.05, -0.64, 1.5, 0.22], [2.41, -1.02, 0.22, 0.54], [2.86, -1.2, 0.68, 0.2], [3.12, -0.98, 0.2, 0.3]], "color": "#8a4a8c", "mirror": true}
   },
   "pool": {
-    "hair": ["h601_choji_spikes", "h602_choza_mane", "h603_chocho_volume", "h604_ember_crest", "h605_wild_tail", "h606_cloud_puffs", "h607_dumpling_buns", "h608_lion_mane", "h609_elder_mane", "h610_sumo_topknot", "h611_shaggy_crop", "h612_braided_mane", "h613_curly_ponytail", "h614_butterfly_spikes", "h615_bushy_bob"],
+    "hair": ["h601_choji_spikes", "h602_choza_mane", "h603_chocho_volume", "h604_ember_crest", "h605_wild_tail", "h606_cloud_puffs", "h607_dumpling_buns", "h608_lion_mane", "h609_long_mane", "h610_sumo_topknot", "h611_shaggy_crop", "h612_braided_mane", "h613_curly_ponytail", "h614_butterfly_spikes", "h615_bushy_bob"],
     "hair_colors": ["AKIMICHI_RUST", "AKIMICHI_MAHOGANY", "AKIMICHI_COPPER", "AKIMICHI_COCOA", "AKIMICHI_RUST", "AUBURN", "CHESTNUT"],
     "eye_colors": ["DARK", "DARK", "AKIMICHI_AMBER"],
     "palettes": ["AKIMICHI_CRIMSON", "AKIMICHI_CRIMSON", "AKIMICHI_FOREST", "AKIMICHI_LACQUER", "AKIMICHI_HARVEST"],
     "headwear": [null, null, null, null, "w02_forehead_protector", "w601_akimichi_protector", "w601_akimichi_protector", "w602_hachimaki"],
     "bottoms": ["b01_shinobi_trousers"],
     "complexions": [0, 1, 1, 2, 3],
-    "marks": [{"id": "akimichi_swirl", "chance": 0.85}]
+    "marks": [{"id": "akimichi_swirl", "chance": 0.7}, {"id": "akimichi_swirl_violet", "chance": 0.2}]
   },
   "outfits": [
     {"id": "shoku_armor", "name": "Shoku Armor", "top": "t601_shoku_armor", "bottom": "b604_lacquer_greaves", "rank": "chunin", "palettes": ["AKIMICHI_CRIMSON", "AKIMICHI_LACQUER"]},
@@ -37,7 +39,7 @@
     {"id": "lacquer_samurai", "name": "Lacquer Samurai", "top": "t603_lacquer_samurai", "bottom": "b601_armored_hakama", "rank": "jonin", "palettes": ["AKIMICHI_LACQUER"]},
     {"id": "mawashi_wrap", "name": "Mawashi Wrap", "top": "t604_mawashi_wrap", "bottom": "b602_sagari_shorts", "rank": "genin", "palettes": ["AKIMICHI_CRIMSON", "AKIMICHI_HARVEST"]},
     {"id": "snack_bandolier", "name": "Snack Bandolier", "top": "t605_snack_bandolier", "bottom": "b603_padded_trousers", "rank": "genin", "palettes": ["AKIMICHI_HARVEST", "AKIMICHI_FOREST"]},
-    {"id": "butterfly_coat", "name": "Butterfly Coat", "top": "t606_butterfly_coat", "bottom": "b604_lacquer_greaves", "rank": "chunin", "palettes": ["AKIMICHI_CRIMSON", "AKIMICHI_LACQUER"]},
+    {"id": "sash_kimono", "name": "Sash Kimono", "top": "t606_sash_kimono", "bottom": "b605_long_boots", "rank": "genin", "palettes": ["AKIMICHI_CHOCHO", "AKIMICHI_CRIMSON"]},
     {"id": "padded_gambeson", "name": "Padded Gambeson", "top": "t607_padded_gambeson", "bottom": "b601_armored_hakama", "rank": "chunin", "palettes": ["AKIMICHI_FOREST", "AKIMICHI_HARVEST"]},
     {"id": "scarf_tunic", "name": "Scarf Tunic", "top": "t608_scarf_tunic", "bottom": "b603_padded_trousers", "rank": "academy", "palettes": ["AKIMICHI_HARVEST", "AKIMICHI_CRIMSON"]},
     {"id": "akimichi_jonin", "name": "Akimichi Jonin", "top": "t609_akimichi_jonin", "bottom": "b604_lacquer_greaves", "rank": "jonin", "palettes": ["AKIMICHI_JONIN"]},

@@ -1,16 +1,16 @@
-"""Elder Mane: the clan elders' waist-length wild hair, a broad sheet down the back breaking into
-ragged points, spiky locks over the shoulders and a crown of spikes swept back."""
+"""Long Mane: grown-up Choji's hair (Part II), long wild spikes falling to the waist in a broad sheet
+that breaks into ragged points, spiky locks over the shoulders and a crown swept back."""
 from anime import bangs, curtain, ring_shell, sidelocks, spike
 from paint import scalp
 
-META = {"name": "Elder Mane", "gender": "unisex",
-        "description": "Long wild hair down the back in ragged points, spiky shoulder locks, swept-back crown."}
+META = {"name": "Long Mane", "gender": "unisex",
+        "description": "Waist-long wild hair in ragged points, spiky shoulder locks, swept-back crown."}
 
 
 def build(g):
     scalp(g, 6361, side_rows=7, back_rows=8, sideburn=2)
     ring_shell(g, 6361, side_rows=7, back_rows=8, ring_row=1)
-    curtain(g, "mane", (0, -6.4, 4.7), (-6, 0, 0), 10, 11, hem=((0, 2, 4), (2, 2, 2), (4, 2, 5), (6, 2, 3), (8, 2, 4)),
+    curtain(g, "mane", (0, -6.4, 4.7), (-6, 0, 0), 10, 14, hem=((0, 2, 4), (2, 2, 3), (4, 2, 5), (6, 2, 3), (8, 2, 4)),
             seed=6367, depth=2)
     for i, (x, z, rx, rz) in enumerate(((-2.4, -2.0, -50, -18), (0, -2.4, -56, 0), (2.4, -2.0, -50, 18),
                                         (-1.4, 1.0, -74, -8), (1.4, 1.0, -74, 8))):

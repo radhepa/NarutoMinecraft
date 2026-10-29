@@ -1,6 +1,6 @@
-"""Shoku Armor: the Akimichi's red lacquered plates over a dark undershirt, the 食 ("food") crest
-in a white disc on the chest, a rounded stack of belly lames, two-tier shoulder sode, red forearm
-guards and a leather belt with a snack pouch."""
+"""Shoku Armor: grown-up Choji's armor (Part II), red lacquered plates over a deep red bodysuit, the
+食 ("food") crest in a white disc on the chest, a rounded stack of belly lames, two-tier shoulder
+sode, plated forearm guards and a leather belt with a snack pouch."""
 from kit import arm_bone, arm_x, belt
 from kit_akimichi import lames, shoku_disc, snack_pouch, sode
 from paint import cap, fabric, solid, strip_fabric
@@ -8,15 +8,15 @@ from paint import cap, fabric, solid, strip_fabric
 META = {
     "name": "Shoku Armor",
     "gender": "unisex",
-    "description": "Red lacquered chest and belly plates with the food crest, shoulder sode, forearm guards.",
+    "description": "Red plates over a deep red bodysuit: food crest, rounded belly lames, shoulder sode, forearm guards.",
     "tags": ["shinobi", "armor", "akimichi"],
 }
 
 
 def build(g):
     body = g.part("body")
-    strip_fabric(body, "K", "weave", 6681, 2)
-    cap(body, "K", seed=6681)
+    strip_fabric(body, "P", "weave", 6681, 1)
+    cap(body, "P", seed=6681, base=1)
     # The cuirass and the belly lames, each a little deeper than the last so the front rounds out.
     lames(g, "chest_plate", [(.2, 4, .3)], seed=6682, lacing=None)
     lames(g, "belly_lame", [(4.2, 2, .42), (6.2, 2, .5), (8.0, 2, .4)], seed=6684)
@@ -26,8 +26,9 @@ def build(g):
     snack_pouch(g, "pouch", (2.6, 11.4, -2.9), role="A", size=(2, 2, 1), seed=6694)
     for side in ("right", "left"):
         arm = g.part(f"{side}_arm")
-        strip_fabric(arm, "K", "weave", 6695 + (side == "left"), 2, 0, 5)
-        fabric(arm.top, "K", "weave", 6695, 3)
+        strip_fabric(arm, "P", "weave", 6695 + (side == "left"), 1, 0, 11)
+        fabric(arm.top, "P", "weave", 6695, 2)
+        fabric(arm.bottom, "P", "weave", 6695, 0)
         guard = g.piece(f"{side}_guard", arm_bone(side), (arm_x(side) - .3, 5.4, -2.3), (4, 4, 4), inflate=.12)
         solid(guard, "P", "smooth", 6697 + (side == "left"), 2, edge=False)
         for face in guard.sides:

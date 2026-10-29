@@ -72,7 +72,7 @@
     "h606_cloud_puffs",
     "h607_dumpling_buns",
     "h608_lion_mane",
-    "h609_elder_mane",
+    "h609_long_mane",
     "h610_sumo_topknot",
     "h611_shaggy_crop",
     "h612_braided_mane",
@@ -120,7 +120,7 @@
     "t603_lacquer_samurai",
     "t604_mawashi_wrap",
     "t605_snack_bandolier",
-    "t606_butterfly_coat",
+    "t606_sash_kimono",
     "t607_padded_gambeson",
     "t608_scarf_tunic",
     "t609_akimichi_jonin",
@@ -138,7 +138,8 @@
     "b601_armored_hakama",
     "b602_sagari_shorts",
     "b603_padded_trousers",
-    "b604_lacquer_greaves"
+    "b604_lacquer_greaves",
+    "b605_long_boots"
   ],
   "characters": [
     {
@@ -596,6 +597,48 @@
       ],
       "color": "#c4392b",
       "mirror": true
+    },
+    "akimichi_swirl_violet": {
+      "rects": [
+        [
+          3.05,
+          -1.72,
+          1.5,
+          0.22
+        ],
+        [
+          3.69,
+          -1.18,
+          0.22,
+          0.86
+        ],
+        [
+          3.05,
+          -0.64,
+          1.5,
+          0.22
+        ],
+        [
+          2.41,
+          -1.02,
+          0.22,
+          0.54
+        ],
+        [
+          2.86,
+          -1.2,
+          0.68,
+          0.2
+        ],
+        [
+          3.12,
+          -0.98,
+          0.2,
+          0.3
+        ]
+      ],
+      "color": "#8a4a8c",
+      "mirror": true
     }
   },
   "clans": [
@@ -653,6 +696,16 @@
           "M": "#aab3b9",
           "K": "#1d2236",
           "D": "#6a2a24"
+        },
+        "AKIMICHI_CHOCHO": {
+          "name": "Akimichi Chocho",
+          "P": "#c8463a",
+          "S": "#f1ede4",
+          "A": "#e2b23a",
+          "L": "#6e4a30",
+          "M": "#aab3b9",
+          "K": "#1c1a1e",
+          "D": "#2a2830"
         },
         "AKIMICHI_FEAST": {
           "name": "Akimichi Feast",
@@ -761,6 +814,48 @@
           ],
           "color": "#c4392b",
           "mirror": true
+        },
+        "akimichi_swirl_violet": {
+          "rects": [
+            [
+              3.05,
+              -1.72,
+              1.5,
+              0.22
+            ],
+            [
+              3.69,
+              -1.18,
+              0.22,
+              0.86
+            ],
+            [
+              3.05,
+              -0.64,
+              1.5,
+              0.22
+            ],
+            [
+              2.41,
+              -1.02,
+              0.22,
+              0.54
+            ],
+            [
+              2.86,
+              -1.2,
+              0.68,
+              0.2
+            ],
+            [
+              3.12,
+              -0.98,
+              0.2,
+              0.3
+            ]
+          ],
+          "color": "#8a4a8c",
+          "mirror": true
         }
       },
       "pool": {
@@ -773,7 +868,7 @@
           "h606_cloud_puffs",
           "h607_dumpling_buns",
           "h608_lion_mane",
-          "h609_elder_mane",
+          "h609_long_mane",
           "h610_sumo_topknot",
           "h611_shaggy_crop",
           "h612_braided_mane",
@@ -825,7 +920,11 @@
         "marks": [
           {
             "id": "akimichi_swirl",
-            "chance": 0.85
+            "chance": 0.7
+          },
+          {
+            "id": "akimichi_swirl_violet",
+            "chance": 0.2
           }
         ]
       },
@@ -884,14 +983,14 @@
           ]
         },
         {
-          "id": "butterfly_coat",
-          "name": "Butterfly Coat",
-          "top": "t606_butterfly_coat",
-          "bottom": "b604_lacquer_greaves",
-          "rank": "chunin",
+          "id": "sash_kimono",
+          "name": "Sash Kimono",
+          "top": "t606_sash_kimono",
+          "bottom": "b605_long_boots",
+          "rank": "genin",
           "palettes": [
-            "AKIMICHI_CRIMSON",
-            "AKIMICHI_LACQUER"
+            "AKIMICHI_CHOCHO",
+            "AKIMICHI_CRIMSON"
           ]
         },
         {
