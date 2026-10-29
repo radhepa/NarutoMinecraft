@@ -1,0 +1,20 @@
+{
+  "id": "tc025_chanchanko_vest",
+  "kind": "top",
+  "name": "Elder's Chanchanko",
+  "gender": "unisex",
+  "texture": "tops/tc025_chanchanko_vest.png",
+  "extrasHeight": 0,
+  "tags": [
+    "civilian",
+    "kimono",
+    "vest",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Padded sleeveless vest with a dark collar band over a plain long-sleeved kimono."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "tc014_noren_jacket",
+  "kind": "top",
+  "name": "Noren Jacket",
+  "gender": "unisex",
+  "texture": "tops/tc014_noren_jacket.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "civilian",
+    "jacket"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short cotton jacket printed at the hem like a split noren curtain, cord-toggled front."
+}

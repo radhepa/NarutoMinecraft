@@ -1,0 +1,52 @@
+{
+  "id": "bc020_jinbei_shorts",
+  "kind": "bottom",
+  "name": "Jinbei Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/bc020_jinbei_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "civilian",
+    "shorts"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_string",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway",
+      "scale": [
+        0.6,
+        1,
+        0.6
+      ]
+    }
+  ],
+  "description": "Loose kasuri shorts cut above the knee with a drawstring, wooden geta."
+}

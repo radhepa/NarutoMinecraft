@@ -1,0 +1,132 @@
+{
+  "id": "wc001_tenugui_twist",
+  "kind": "headwear",
+  "name": "Twisted Tenugui",
+  "gender": "unisex",
+  "texture": "headwear/wc001_tenugui_twist.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -7.6,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.2,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "end_0",
+      "bone": "HEAD",
+      "pivot": [
+        -5.0,
+        -7.0,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        20,
+        -60
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "end_1",
+      "bone": "HEAD",
+      "pivot": [
+        -5.0,
+        -7.0,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        -30,
+        -30
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Cotton towel twisted tight round the brow, knotted at the right temple."
+}

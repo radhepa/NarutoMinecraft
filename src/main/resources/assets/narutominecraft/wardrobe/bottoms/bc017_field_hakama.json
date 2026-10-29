@@ -1,0 +1,103 @@
+{
+  "id": "bc017_field_hakama",
+  "kind": "bottom",
+  "name": "Field Hakama",
+  "gender": "unisex",
+  "texture": "bottoms/bc017_field_hakama.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "hakama"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hakama_right",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "hakama_left",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "waist_board",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    }
+  ],
+  "description": "Wide pleated hakama cut to mid-calf, plain back board, straw sandals."
+}

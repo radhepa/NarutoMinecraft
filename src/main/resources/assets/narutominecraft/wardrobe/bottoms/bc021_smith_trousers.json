@@ -1,0 +1,17 @@
+{
+  "id": "bc021_smith_trousers",
+  "kind": "bottom",
+  "name": "Smith's Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bc021_smith_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "civilian",
+    "trousers",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Heavy twill trousers with strapped leather spats over the shins, leather work shoes."
+}

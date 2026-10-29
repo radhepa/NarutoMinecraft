@@ -1,0 +1,17 @@
+{
+  "id": "bc015_sashiko_trousers",
+  "kind": "bottom",
+  "name": "Sashiko Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bc015_sashiko_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "civilian",
+    "trousers",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Heavy indigo work trousers stitched over knee and seat, narrow shins, jika-tabi."
+}

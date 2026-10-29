@@ -1,0 +1,140 @@
+{
+  "id": "wc003_mugiwara",
+  "kind": "headwear",
+  "name": "Mugiwara Straw Hat",
+  "gender": "unisex",
+  "texture": "headwear/wc003_mugiwara.png",
+  "extrasHeight": 48,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "brim",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -7,
+        -8.8,
+        -7
+      ],
+      "size": [
+        14,
+        1,
+        14
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "crown_dome",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -11.4,
+        -4.5
+      ],
+      "size": [
+        9,
+        3,
+        9
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    },
+    {
+      "id": "crown_lid",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -12.2,
+        -3.5
+      ],
+      "size": [
+        7,
+        1,
+        7
+      ],
+      "uv": [
+        0,
+        29
+      ]
+    },
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -9.9,
+        -4.6
+      ],
+      "size": [
+        9,
+        1,
+        9
+      ],
+      "uv": [
+        0,
+        38
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "hidesHair": [
+    "knot",
+    "brush",
+    "bun",
+    "pin_",
+    "crown",
+    "puff_",
+    "spike",
+    "tuft",
+    "top"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Round straw hat with a domed crown, a cloth band and a broad flat brim."
+}

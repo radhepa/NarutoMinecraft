@@ -1,0 +1,147 @@
+{
+  "id": "tc009_farmer_noragi",
+  "kind": "top",
+  "name": "Farmer's Noragi",
+  "gender": "unisex",
+  "texture": "tops/tc009_farmer_noragi.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "jacket",
+    "work",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "rope_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "neck_towel",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "towel_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        0.3,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.75,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ],
+      "motion": "sway",
+      "scale": [
+        0.75,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "towel_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        0.3,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.75,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "sway",
+      "scale": [
+        0.75,
+        1,
+        1
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Patched indigo field jacket with sashiko stitching, a rope belt and a towel at the neck."
+}

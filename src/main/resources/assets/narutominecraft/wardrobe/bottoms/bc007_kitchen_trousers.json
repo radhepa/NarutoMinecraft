@@ -1,0 +1,86 @@
+{
+  "id": "bc007_kitchen_trousers",
+  "kind": "bottom",
+  "name": "Kitchen Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/bc007_kitchen_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "civilian",
+    "trousers",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_string_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        9.4,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    {
+      "id": "waist_string_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        9.4,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        1,
+        0.5
+      ]
+    }
+  ],
+  "description": "Straight pale cotton trousers with a drawstring waist, wooden geta."
+}

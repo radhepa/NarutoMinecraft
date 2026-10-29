@@ -1,0 +1,261 @@
+{
+  "id": "tc007_smith_leather_apron",
+  "kind": "top",
+  "name": "Smith's Leather Apron",
+  "gender": "unisex",
+  "texture": "tops/tc007_smith_leather_apron.png",
+  "extrasHeight": 32,
+  "tags": [
+    "apron",
+    "civilian",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "leather_bib",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "leather_skirt_panel",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        7,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "leather_skirt_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "leather_skirt_tie_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.8,
+        9.200000000000001,
+        2.6
+      ],
+      "rotation": [
+        8,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "leather_skirt_tie_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.8,
+        9.200000000000001,
+        2.6
+      ],
+      "rotation": [
+        8,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        5,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "neck_towel",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        10,
+        11
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "towel_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        0.3,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.75,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        39,
+        11
+      ],
+      "motion": "sway",
+      "scale": [
+        0.75,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "towel_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        0.3,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.75,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        46,
+        11
+      ],
+      "motion": "sway",
+      "scale": [
+        0.75,
+        1,
+        1
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "Heavy scorched leather bib apron to the knee over a sleeveless shirt, wrist wraps, a towel at the neck."
+}
