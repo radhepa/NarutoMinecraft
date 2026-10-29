@@ -1,0 +1,39 @@
+# Every shop in the Leaf. keeper and staff are roles bound to residents from map markers (names are tokens);
+# their days come from VF routines (the keeper works open to close; staff from opens+1h). closed is a weekday
+# (VF's week: Moonday Bellday Hearthday Wellday Lanternday Hayday "Market Day") or "-"; event shops open only
+# while their calendar event runs. standing is the community whose standing title sets the discount
+# (economy.json "discounts"). haggle: no, yes (one try per item per visit) or pawn (haggle what it pays you).
+# interior blocks may name a variant after @ (shop_noren@ramen_noren: the Konoha session's variant ids).
+# markup multiplies base prices (event stalls charge more). interior lists the blocks asked of the Konoha session.
+id	name	district	keeper	staff	opens	closes	closed	slice	rank	standing	haggle	markup	rotating	orders	interior
+ichiraku	Ichiraku Ramen	main_street	role:shop.ichiraku.cook	role:shop.ichiraku.helper	11:00	23:00	-	beta1	any	district:main_street	no	1.0	1	catering	ramen_counter;ramen_stool;noodle_kitchen;menu_board;shop_noren@ramen_noren
+grocer	Market Grocer	market	role:shop.grocer.keeper	role:shop.grocer.porter	07:00	19:00	-	beta1	any	district:market	no	1.0	2	-	shop_counter;produce_crate_display;goods_shelf;rice_sack_pile;menu_board;shop_noren@grocer_noren
+fishmonger	Fish Stall	market	role:shop.fishmonger.keeper	-	06:00	13:00	Moonday	beta1	any	district:market	no	1.0	1	-	market_stall;fish_ice_display;shop_noren@fish_noren
+dango_stand	Dango Stand	main_street	role:shop.dango.keeper	-	10:00	20:00	-	beta1	any	district:main_street	no	1.0	1	-	dango_grill;shop_counter;bench_red_cloth;parasol;menu_board
+tea_house	Willow Tea House	market	role:shop.tea_house.owner	role:shop.tea_house.server	09:00	21:00	-	beta1	any	district:market	no	1.0	2	-	tea_counter;low_table;zabuton;tea_set;menu_board;shop_noren@tea_noren
+tea_house_rival	Lantern Tea House	market	role:shop.tea_house_rival.owner	role:shop.tea_house_rival.server	09:00	21:00	-	beta2	any	district:market	no	1.0	2	-	tea_counter;low_table;zabuton;tea_set;menu_board;shop_noren@tea_noren
+barbecue_house	Barbecue House	market	role:shop.barbecue.owner	role:shop.barbecue.server	11:00	22:00	-	beta2	any	clan:akimichi	no	1.0	1	reservation	barbecue_table;bench_seat;shop_counter;menu_board;shop_noren@barbecue_noren
+weapon_shop	Weapon Shop	market	role:shop.weapon.smith	role:shop.weapon.apprentice	08:00	19:00	-	beta1	any	district:market	no	1.0	2	commission;repair	shop_counter;weapon_display_wall;weapon_rack;glass_case;forge;anvil;quench_trough;whetstone_wheel;shop_noren@weapon_noren
+tool_shop	Ninja Tool Shop	market	role:shop.tools.keeper	-	08:00	20:00	-	beta2	genin	district:market	no	1.0	2	-	shop_counter;goods_shelf;glass_case;pouch_hooks;shop_noren@tools_noren
+scroll_shop	Scroll Shop	academy_streets	role:shop.scrolls.keeper	-	09:00	18:00	Moonday	beta2	genin	district:academy_streets	no	1.0	2	order_scroll	shop_counter;scroll_rack;scroll_display_case;calligraphy_desk;shop_noren@scroll_noren
+flower_shop	Yamanaka Flowers	main_street	role:shop.flowers.keeper	role:shop.flowers.runner	08:00	19:00	-	beta1	any	clan:yamanaka	no	1.0	2	bouquet	shop_counter;flower_bucket_stand;flower_pot_tiers;arranging_table;shop_noren@flower_noren
+furniture_shop	Furniture Shop	carpenters_lane	role:shop.furniture.keeper	role:shop.furniture.porter	09:00	18:00	Moonday	beta1	any	district:carpenters_lane	no	1.0	3	custom_colour	shop_counter;showroom_plinth;catalogue_lectern;shop_noren@furniture_noren
+kinoshita_yard	Kinoshita Yard	carpenters_lane	role:clan.kinoshita.master	role:clan.kinoshita.apprentice	07:00	17:00	Moonday	beta2	any	clan:kinoshita	no	1.0	2	custom_furniture	workbench;lumber_rack;sawhorse;shop_counter
+tailor	Tailor	market	role:shop.tailor.keeper	role:shop.tailor.seamstress	09:00	18:00	Moonday	beta1	any	district:market	no	1.0	4	custom_outfit;alteration	shop_counter;bolt_shelf;mannequin;fitting_screen;tailor_table;shop_noren@tailor_noren
+pawn_shop	Pawn Shop	market	role:shop.pawn.keeper	-	10:00	20:00	-	beta2	any	district:market	pawn	1.2	3	-	pawn_counter_grille;curio_shelf;glass_case;shop_noren@pawn_noren
+bath_house	Bath House	riverside	role:shop.bath.keeper	role:shop.bath.attendant	15:00	24:00	Moonday	beta2	any	district:riverside	no	1.0	0	-	bath_counter;locker_shelf;wash_stool;shop_noren@bath_noren
+pharmacy	Suzuran Pharmacy	hospital	role:clan.suzuran.herbalist	role:clan.suzuran.apprentice	08:00	20:00	-	beta2	any	clan:suzuran	no	1.0	2	-	shop_counter;medicine_drawer_wall;herb_drying_rack;apothecary_table;shop_noren@medicine_noren
+hospital_dispensary	Hospital Dispensary	hospital	role:medic.dispensary	-	00:00	24:00	-	beta1	any	district:hospital	no	1.0	0	-	hospital_counter;medicine_drawer_wall
+bookshop	Bookshop	academy_streets	role:shop.books.keeper	-	09:00	19:00	-	beta2	any	district:academy_streets	no	1.0	2	-	shop_counter;bookshelf_tall;book_display_table;shop_noren@books_noren
+haruno_store	Haruno General Store	market	role:clan.haruno.shopkeeper	role:clan.haruno.child	08:00	19:00	-	beta1	any	clan:haruno	no	1.0	3	-	shop_counter;general_store_shelf;goods_shelf;crate_display;shop_noren@general_noren
+academy_supply	Academy Supply Counter	academy	role:academy.supply_clerk	-	08:00	16:00	Market Day	beta1	academy	district:academy_streets	no	0.8	0	-	shop_counter;goods_shelf
+inuzuka_clinic	Inuzuka Clinic	gate	role:clan.inuzuka.vet	role:clan.inuzuka.kennel_hand	07:00	19:00	-	beta1	any	clan:inuzuka	no	1.0	1	adoption	shop_counter;kennel;vet_table;pet_supply_shelf
+cat_shelter	Cat Shelter	residential	role:shop.shelter.keeper	-	09:00	17:00	-	beta1	any	district:residential	no	1.0	0	adoption	shop_counter;cat_tower;pet_bed;pet_supply_shelf
+hagane_metalworks	Hagane Metalworks	market	role:clan.hagane.metalworker	-	08:00	18:00	-	beta2	any	clan:hagane	no	1.0	1	-	shop_counter;metal_stock_rack;anvil;goods_shelf
+shrine_office	Shrine Office	shrine	role:shrine.priest	role:shrine.attendant	06:00	18:00	-	beta1	any	district:shrine	no	1.0	1	-	charm_stall;ema_rack;omikuji_rack;offering_box
+painters_studio	Painters' Studio	artists_lane	role:clan.kurama.painter	-	10:00	18:00	Moonday	beta2	any	clan:kurama	no	1.0	2	portrait	easel_canvas;paint_display;shop_counter;hanging_scroll
+senbei_shop	Rice Cracker Shop	uchiha_quarter	role:clan.uchiha.cracker_baker	-	09:00	18:00	-	beta2	any	clan:uchiha	no	1.0	1	-	cracker_grill;jar_shelf;shop_counter;shop_noren@sweets_noren
+market_day_stalls	Market Day Stalls	market	role:merchant	role:market.stallholder	07:00	15:00	not_market_day	beta1	any	district:market	yes	1.0	6	-	market_stall;crate_display;parasol
+festival_stalls	Leaf Festival Stalls	main_street	role:festival.stallholder	-	17:00	24:00	event:leaf_festival	beta2	any	village	yes	1.3	0	-	festival_stall;goldfish_pool;target_game_booth;prize_shelf;paper_lantern
+exam_stalls	Exam-Week Stalls	stadium_streets	role:exam.stallholder	-	08:00	22:00	event:chunin_exams	beta3	any	village	yes	1.2	4	-	festival_stall;market_stall;prize_shelf
+barber	Barber	market	role:shop.barber.keeper	-	09:00	18:00	Moonday	beta1	any	district:market	no	1.0	0	restyle	barber_chair;dresser_mirror;shop_counter;shop_noren@barber_noren

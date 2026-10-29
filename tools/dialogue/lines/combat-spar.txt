@@ -1,0 +1,207 @@
+# Combat barks: a resident or classmate sparring with the player at the training grounds. Friendly,
+# competitive, encouraging. A spar ends when either side drops to 30% health: nobody is hurt badly.
+# Pools are combat.<event>.spar_partner. Classmates are children, so every line suits any age.
+#! kind: cycle
+#! fn: react
+#! tags: stage=child|teen|adult
+
+## combat.fight_start.spar_partner
+Ready when you are. Bow first!
+Best of one? Loser buys the dango.
+No holding back, all right? I won't either.
+Stretch first. Nobody wants a pulled leg.
+Same rules as always: no jutsu near the targets.
+I've been practising since last time. Brace yourself!
+Let's go! I'll go easy on you. Probably.
+
+## combat.taunt.spar_partner
+Too slow! Want me to count you in?
+You blinked. I saw you blink.
+Is that a new stance? It's wobbly.
+Come on, I know you've got more than that!
+My little cousin dodges better than this!
+Ha! You're thinking too hard. Just move!
+Feet! Watch your feet!
+
+## combat.low_health.spar_partner
+Phew. Almost at the line.
+Okay, okay, you're good today.
+I'm getting tired. Don't tell anyone.
+One more hit and I'm calling it.
+Hang on, let me catch my breath!
+
+## combat.ally_down.spar_partner
+They're out! It's just you and me now!
+Hey, you all right over there? Sit this one out.
+Two on one? That's hardly fair. On you, I mean.
+Taken out already? We'll train more later.
+
+## combat.knocked_out.spar_partner
+Ow. That's thirty. I'm out.
+And I'm on the ground. Good one.
+I'll just... lie in the grass and think about that.
+That's the line. You got me fair and square.
+
+## combat.yield.spar_partner
+I yield! I yield! You win this round.
+That's enough for me. Water break?
+All right, you've got me. Well fought.
+Mercy! I give! My arms are noodles.
+Okay, I'm calling it. Before I lose my dignity.
+
+## combat.flee.spar_partner
+Tactical retreat! That's a real thing!
+Give me a head start! Ten seconds!
+I'm not running, I'm repositioning!
+
+## combat.victory.spar_partner
+Ha! Got you! Good match, though.
+Yes! That's one for me! Rematch tomorrow?
+Close one! You nearly had me.
+Up you get. Want a hand?
+I win! You owe me a skewer of dango.
+That was fun! Same time next week?
+
+## combat.defeat.spar_partner
+Ugh! You win. Help me up?
+Well fought. Really. I mean it.
+You've been practising, haven't you? Teach me that last move.
+I'll get you next time. Count on it.
+Fine, fine. Dango's on me.
+Good match. My pride hurts more than my arm.
+
+## combat.parry_landed.spar_partner
+Ha! Caught it!
+Saw that one coming!
+Blocked! I've been practising that!
+Nope! Try again.
+Read you like a scroll!
+
+## combat.got_parried.spar_partner
+Whoa! Where did you learn that?
+Nice block! My wrist's tingling.
+Hey, that's a good parry!
+Ouch. Okay, I'll stop swinging so wide.
+
+## combat.combo_finisher_landed.spar_partner
+Three in a row! Did you see that?
+Got you with the full combo!
+And that's the finisher!
+Ha! Bet you felt that one.
+
+## combat.jutsu_cast.spar_partner
+{technique}! Been saving that one!
+Watch out! {technique}!
+Ready? Here comes {technique}!
+I finally got {technique} right! Look!
+Hand signs, here we go! {technique}!
+
+## combat.jutsu_countered.spar_partner
+Hey! I practised that all week!
+Countered? You've been reading ahead.
+No fair, you knew that one was coming!
+Back to the scrolls for me, I guess.
+
+## combat.genjutsu_caught.spar_partner
+Wait, why are there three of you?
+The trees are upside down! Is that you doing that?
+Okay, this is weird. Very weird.
+
+## combat.genjutsu_broken.spar_partner
+Release! Ha! I'm out!
+Nice try! I broke it!
+Got out of it! Sensei would be proud.
+
+## combat.smoke_bomb.spar_partner
+Cough! Hey, no fair!
+Smoke? Where are you?
+I'll find you! You can't hide forever!
+Not the smoke! Not in my eyes!
+
+## combat.substitution.spar_partner
+A log! You got me with a log!
+Wait, that wasn't you! Where'd you go?
+Substitution! I fall for it every time!
+Hey! That was perfect timing!
+
+# -- more ---------------------------------------------------------------------------------------------
+
+## combat.fight_start.spar_partner
+Ready? Three, two, one... go!
+Winner picks where we eat after.
+
+## combat.taunt.spar_partner
+Ha! Too high! Aim for my middle!
+You're tired already? We just started!
+
+## combat.low_health.spar_partner
+Ow! Good one. Really good one.
+Okay, now you've made me serious.
+
+## combat.ally_down.spar_partner
+Our partner's out! Do we keep going, or call it?
+
+## combat.knocked_out.spar_partner
+Ugh. The sky looks nice from here at least.
+
+## combat.yield.spar_partner
+I'm done! Sit with me a while?
+
+## combat.flee.spar_partner
+Catch me if you can!
+
+## combat.victory.spar_partner
+That was close. You're getting good, you know.
+Got you! Same time tomorrow? I want to see if you get me back.
+
+## combat.defeat.spar_partner
+You're getting fast. I'm going to have to train extra.
+Wow. Okay. You're really good. Can you show me that last part slowly?
+
+## combat.parry_landed.spar_partner
+Ha! Your shoulder gave that one away!
+
+## combat.got_parried.spar_partner
+Hey! You learned to parry! When did that happen?
+
+## combat.combo_finisher_landed.spar_partner
+And the third hit! Just like the instructor showed us!
+
+## combat.jutsu_cast.spar_partner
+Don't laugh if {technique} fizzles, okay?
+
+## combat.jutsu_countered.spar_partner
+You stopped {technique}? Teach me how!
+
+## combat.genjutsu_caught.spar_partner
+Why does the training post have a face? Is that you?
+
+## combat.genjutsu_broken.spar_partner
+Pinched myself! Back in the real world!
+
+## combat.smoke_bomb.spar_partner
+I can hear you giggling in there!
+
+## combat.substitution.spar_partner
+I keep falling for the log! How do you time that?
+
+## combat.fight_start.spar_partner
+Hands up, eyes on me. Here I come!
+
+## combat.taunt.spar_partner
+You've got a tell, you know. I'm not telling you what it is.
+
+## combat.yield.spar_partner
+Hold! Hold! That's thirty for me. You win this one.
+
+## combat.victory.spar_partner
+That's the line! Good spar. You almost had me twice.
+
+## combat.defeat.spar_partner
+Thirty already? Your combos are getting nasty. In a good way.
+
+## combat.low_health.spar_partner
+Nearly at thirty. Last chance to show me something!
+
+## combat.parry_landed.spar_partner
+Too far forward! You're leaning again!

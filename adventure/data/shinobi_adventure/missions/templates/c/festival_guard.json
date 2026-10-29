@@ -1,0 +1,197 @@
+{
+ "format": 1,
+ "id": "mission.c.festival_guard",
+ "kind": "mission",
+ "rank": "c",
+ "category": "guard",
+ "status": "beta",
+ "title": "dlg:mission.c.festival_guard.title",
+ "brief": "dlg:mission.c.festival_guard.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.festival_guard.brief",
+  "accept": "dlg:mission.c.festival_guard.accept",
+  "decline": "dlg:mission.c.festival_guard.decline",
+  "progress": "dlg:mission.c.festival_guard.progress",
+  "success": "dlg:mission.c.festival_guard.success",
+  "fail": "dlg:mission.c.festival_guard.fail",
+  "report": "dlg:mission.c.festival_guard.report"
+ },
+ "minutes": 25,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "event": {
+  "during": "event.leaf_festival"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "organiser"
+   }
+  },
+  "street": {
+   "pick": "anchor",
+   "tag": "main_street"
+  },
+  "den": {
+   "pick": "anchor",
+   "tag": "alley.back"
+  },
+  "gang": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.pickpockets"
+   ]
+  },
+  "guest": {
+   "pick": "resident",
+   "where": {
+    "job": "noble_guest",
+    "resident_of": "any"
+   }
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "patrol"
+  },
+  "patrol": {
+   "objective": {
+    "type": "inspect",
+    "target": "pickpocket",
+    "at": "slot:street",
+    "count": 3
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "fireworks_theft"
+     },
+     "next": "fireworks"
+    },
+    {
+     "if": {
+      "twist": "lost_guest"
+     },
+     "next": "guest"
+    }
+   ],
+   "next": "den"
+  },
+  "fireworks": {
+   "objective": {
+    "type": "collect",
+    "target": "fireworks_crate",
+    "at": "slot:den"
+   },
+   "next": "den"
+  },
+  "guest": {
+   "objective": {
+    "type": "escort",
+    "who": "slot:guest",
+    "to": "slot:street"
+   },
+   "next": "den"
+  },
+  "den": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:gang",
+    "at": "slot:den"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:gang",
+      "slot:den"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "fireworks_theft",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.festival_guard.twist.fireworks_theft"
+  },
+  {
+   "id": "lost_guest",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.c.festival_guard.twist.lost_guest"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_alarm",
+  "spared",
+  "fast"
+ ],
+ "fast_hours": 4,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.pickpockets"
+ ],
+ "places": {
+  "anchors": [
+   "alley.back",
+   "main_street"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.35
+ },
+ "tags": [
+  "village",
+  "guard",
+  "event",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.guard",
+ "_premise": "Keep the festival safe from a gang of pickpockets working the crowd.",
+ "_twists": {
+  "fireworks_theft": "The gang's real target is the fireworks.",
+  "lost_guest": "A visiting noble's child has slipped their guards to see the stalls."
+ }
+}

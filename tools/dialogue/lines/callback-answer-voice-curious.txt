@@ -1,0 +1,105 @@
+# Callbacks for questions/voice-curious.txt, in the curious asker's voice.
+#! fn: callback
+#! tags: personality=curious
+
+## callback.answer.q.pref.cur_how_it_works.a1
+How jutsu work, your big question. I asked a Chunin today. They talked for an hour. I understood a minute of it.
+
+## callback.answer.q.pref.cur_how_it_works.a2
+How the stars move. I borrowed a star chart from the scroll keepers. Want to look tonight?
+
+## callback.answer.q.pref.cur_how_it_works.a3
+How people think. I watched the market crowd today for an hour. Still no answer. Lovely puzzle.
+
+## callback.answer.q.pref.cur_how_it_works.a4
+I tried to find out how ramen broth is made, like you wanted. They chased me out of the kitchen. Ha!
+
+## callback.answer.q.pref.cur_found_out.a1
+You found out a little about your puzzle! You still owe me the diagrams.
+
+## callback.answer.q.pref.cur_found_out.a2
+Still wondering about your puzzle? Good. I'm still wondering about mine.
+
+## callback.answer.q.pref.cur_found_out.a3
+More complicated than you thought, you said. That means you're close. Any closer?
+
+## callback.answer.q.values.cur_rumours.a1
+You never believe rumours. I heard a wild one today and thought: what would you say? So I didn't swallow it.
+
+## callback.answer.q.values.cur_rumours.a2
+Some rumours are true, you said. The trick is which. I've been keeping a tally. It's about half.
+
+## callback.answer.q.values.cur_rumours.a3
+Only the fun rumours, you believe. There's a fun one about a giant carp in the river. True, do you think?
+
+## callback.answer.q.pref.cur_ask_hokage.a1
+How does Lord Hokage do it all? Your question. I saw the lamp in the office window at midnight. Still wondering.
+
+## callback.answer.q.pref.cur_ask_hokage.a2
+Lord Hokage's favourite food, your question. I've heard three different answers at the market. I'm investigating.
+
+## callback.answer.q.pref.cur_ask_hokage.a3
+You'd ask to see the Hokage's office. I walked past it today and looked up. Must be some view.
+
+## callback.answer.q.pref.cur_ask_hokage.a4
+Who taught Lord Hokage? Your question. I've been reading about it. Every teacher had a teacher, you know.
+
+## callback.answer.q.past.cur_learned_today.a1
+Learned any new moves since you told me? Show me. Not near the pots.
+
+## callback.answer.q.past.cur_learned_today.a2
+You learned something about a friend, last time. Learned anything new about me lately?
+
+## callback.answer.q.past.cur_learned_today.a3
+You hadn't learned anything yet, that day. So: here's something. Herons sleep on one leg.
+
+## callback.answer.q.past.cur_learned_today.a4
+You learned a new word, last time. I've got one for you today: "crepuscular". Look it up.
+
+## callback.answer.q.past.cur_week_surprise.a1
+A surprise about the village, last week. Found any new ones? There's always another.
+
+## callback.answer.q.past.cur_week_surprise.a2
+You surprised yourself, you said. Good surprise or bad? You never said. I'm still curious.
+
+## callback.answer.q.past.cur_week_surprise.a3
+A surprise about someone else. You kept it to yourself. Good. Some aren't ours to share.
+
+## callback.answer.q.past.cur_week_surprise.a4
+Nothing surprises you, you said. I've been plotting. I'll surprise you yet.
+
+## callback.answer.q.dilemma.cur_sealed_letter.a1
+You'd never read someone's letter. I found one on a bench today. I didn't peek. Your fault.
+
+## callback.answer.q.dilemma.cur_sealed_letter.a2
+A peek, just to find the owner. Ha. I keep that excuse in my pocket now.
+
+## callback.answer.q.dilemma.cur_sealed_letter.a3
+Take a stray letter to the courier's office. I did that today. Nosy-proof, like you said.
+
+## callback.answer.q.values.cur_curious_or_nosy.a1
+Curious turns nosy when it hurts someone. I try to remember your line. I mostly manage.
+
+## callback.answer.q.values.cur_curious_or_nosy.a2
+When they ask you to stop, that's the line. Your rule. A neighbour asked me to stop today. I did!
+
+## callback.answer.q.values.cur_curious_or_nosy.a3
+No line between curious and nosy, you said. Dangerous. I still like it.
+
+## callback.answer.q.values.cur_too_nosy_me.a1
+You said I've never been too nosy with you. I'm still very relieved. Can I ask you something?
+
+## callback.answer.q.values.cur_too_nosy_me.a2
+Once or twice too nosy, you said. I've been minding the line. Have you noticed?
+
+## callback.answer.q.values.cur_too_nosy_me.a3
+A little nosy, but you don't mind. I'm keeping it to a little. Mostly.
+
+## callback.answer.q.pref.cur_taken_apart.a1
+You took something apart and fixed it! I've got a broken music box. Interested?
+
+## callback.answer.q.pref.cur_taken_apart.a2
+Your drawer full of pieces, like mine. I added a clock spring to mine today.
+
+## callback.answer.q.pref.cur_taken_apart.a3
+You've never taken anything apart. I brought you a broken lock. Go on. It's already broken.

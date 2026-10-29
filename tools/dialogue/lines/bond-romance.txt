@@ -1,0 +1,46 @@
+# Courtship greetings (BONDS.md §10): after the beta only. Romance needs both people teens or both adults,
+# never a child, so every pool here is tagged. Interest and a crush are hidden: the lines only hint.
+#! fn: deepen_bond
+
+## bond.romance.interest  stage=teen|adult  player_stage=teen|adult
+Oh, {player}. I was just... hello. You've done something different. No? Must be the light.
+Hello. I keep finding reasons to walk this way. Odd, isn't it.
+{player}! Sorry, I didn't mean to say it that loudly.
+
+## bond.romance.crush  stage=teen|adult  player_stage=teen|adult
+Hi. Um. You look nice today. You always do. I mean... hello.
+I saved you a seat. I didn't plan to. My hands just did it.
+{player}. I had something to say, and now you're here and it's gone right out of my head. [BLUSH]
+
+## bond.romance.dating  stage=teen|adult  player_stage=teen|adult
+There you are. I've been counting the hours, which is embarrassing, so forget I said it.
+{player}! Walk with me a while? I like the street better when you're on it.
+Hello, you. I was hoping it'd be you at the door. [HEART]
+
+## bond.romance.sweethearts  stage=teen|adult  player_stage=teen|adult
+My sweetheart. I still can't say it without grinning.
+Everyone on the street knows about us now. I don't mind one bit.
+{player}. Come here. The day only starts properly when I've seen you. [HEART]
+
+## bond.romance.engaged  stage=adult  player_stage=adult
+My betrothed! I've been practising saying that. How does it sound?
+I keep looking at the date on the shrine calendar. Not long now, {player}.
+Hello, my soon-to-be. I've started a list of who sits where at the wedding. It's a long list.
+
+## bond.romance.married  stage=adult  player_stage=adult
+Welcome home. I've the kettle on, and your slippers by the door.
+There you are. I married well, didn't I? Don't answer that, I know I did.
+{player}. Every day I wake up and remember we're married, and it's a good day. [HEART]
+
+## bond.romance.dating.shy  stage=teen|adult  player_stage=teen|adult
+H-hi. I still get nervous. Good nervous. Is that all right?
+## bond.romance.dating.fiery  stage=teen|adult  player_stage=teen|adult
+{player}! I told the whole training ground about you! Was that too much? It wasn't enough!
+## bond.romance.dating.proud  stage=teen|adult  player_stage=teen|adult
+Walk beside me. I want the whole street to see who I chose.
+## bond.romance.dating.reserved  stage=teen|adult  player_stage=teen|adult
+...You came. Good. Stay a while.
+## bond.romance.sweethearts.warmhearted  stage=teen|adult  player_stage=teen|adult
+I made your lunch. And tomorrow's. Don't argue, sweetheart, just eat.
+## bond.romance.sweethearts.playful  stage=teen|adult  player_stage=teen|adult
+Sweetheart! I've a new nickname for you. You'll hate it. I love it.

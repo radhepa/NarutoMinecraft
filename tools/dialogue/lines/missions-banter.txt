@@ -1,0 +1,350 @@
+# Mission banter: mission.banter.<moment>.<speaker_kind>, for any board mission. Speakers are
+# sensei (the squad's Jonin), teammate (a squadmate, a child in the beta) and client (whoever hired
+# the squad). Generic voices until the cast is written. Squad-cohesion variants are in
+# missions-banter-bands.txt.
+#! kind: cycle
+
+# -- brief: hearing the job ------------------------------------------------------------------------
+
+## mission.banter.brief.sensei  fn=react,teach
+Listen to the whole brief before you ask anything. Half your questions answer themselves.
+Read the job, then read it again for what it doesn't say. That's where the trouble lives.
+Every mission has a client. The client is the mission. Remember that when you get bored.
+Small jobs teach the habits that keep you alive on big ones. Take this seriously.
+Questions now, not halfway there. Out on the road, I'd rather you were listening.
+
+## mission.banter.brief.teammate  fn=react,deepen_bond  stage=child|teen
+That's it? That's the whole mission? I was hoping for something with a scroll in it.
+I'm writing it down. Don't look at me like that, I forget things.
+Did they say "outside the wall"? Did they actually say that? Yes!
+Who gets to carry the map? Not you. You held it upside down last time.
+Fine. It's not glamorous. But we're doing it properly. Deal?
+
+## mission.banter.brief.client  fn=react
+You're younger than I expected. No, no, I'm sure you're very good.
+I've written it all down for you. Twice, in case you lose one.
+Is it always this formal? I thought I'd just ask and you'd come.
+Please don't think it's silly. It isn't silly to me.
+I can pay. It's all here, counted. I just want it done right.
+
+# -- depart: leaving -------------------------------------------------------------------------------
+
+## mission.banter.depart.sensei  fn=react,teach
+Last check. Water, wire, rations, bandages. If it isn't on you now, it isn't coming.
+Gate in five minutes. Anyone who needs the latrine, this is your moment.
+We leave together and we come back together. That's not a rule. It's a promise.
+Packs tight, straps short. A rattle is a noise, and noise is a mistake.
+Wave goodbye to the gate guards. They count us out and they like to count us in.
+
+## mission.banter.depart.teammate  fn=react,deepen_bond  stage=child|teen
+I forgot something. I don't know what. I just have the feeling.
+My stomach's doing a flip. The good kind. Mostly.
+Look, the gate guard's waving at us. We're a real squad now.
+Let's make a promise: nobody does anything stupid. I'll start breaking it in an hour.
+Bet I can spot the first milestone before you.
+
+## mission.banter.depart.client  fn=react
+Is everyone ready? I've been ready since dawn.
+I said goodbye to my family like I was going to war. Silly, isn't it?
+Walk on my left, if you would. I'm deaf in the right ear.
+I've packed snacks. For all of you. Don't argue.
+Right. Off we go. I'll try not to slow you down.
+
+# -- travel: on the road ---------------------------------------------------------------------------
+
+## mission.banter.travel.sensei  fn=react,teach
+Walk where the ground is hard. Soft ground keeps your footprints and your secrets.
+Breathe through your nose. You'll go twice as far before your legs complain.
+If you're thirsty, you waited too long. Drink a little, often.
+Notice the birds. When they go quiet, something is moving.
+We'll stop when I say. Not when your feet say. Your feet are liars.
+
+## mission.banter.travel.teammate  fn=react,deepen_bond  stage=child|teen
+Want to play a game? First one to see a fox gets the last rice ball.
+My sandal strap's rubbing. No, keep going. It's fine. It's not fine.
+That cloud looks like the Hokage Rock. Sort of. If you squint.
+Tell me something about you I don't know. We've got a long way to go.
+I'm not tired. I'm walking slower to save energy. There's a difference.
+
+## mission.banter.travel.client  fn=react
+I never knew the country was this green so close to home.
+You don't talk much on the road, do you? I'll talk enough for everyone.
+My knees are telling me about every hill. In detail.
+Do ninja ever just walk? Without watching every tree?
+There used to be a tea stall around this bend. Gone now. Shame.
+
+# -- arrive: reaching the job ----------------------------------------------------------------------
+
+## mission.banter.arrive.sensei  fn=react,teach
+Stop. Look before you walk in. Exits, people, anything out of place.
+We're here. Now the real work starts. The walk was just the walk.
+Find the client, confirm the job, then set out your plan. In that order.
+First impressions count. Stand up straight, you represent the Leaf.
+Note the time. It goes in the report, and it tells us how we paced.
+
+## mission.banter.arrive.teammate  fn=react,deepen_bond  stage=child|teen
+We're actually here! I thought that road would never end.
+It looks smaller than I pictured. Everything does, close up.
+Okay. Okay. What do we do first? Someone tell me what we do first.
+I'm so hungry I could eat this fence. Not now. After. Right.
+We made it, all of us. That has to count for something.
+
+## mission.banter.arrive.client  fn=react
+Here at last! You can't know how much I've worried about this.
+Let me show you around. It won't take long. It's not a big place.
+Thank you for coming all this way. Sit, rest, there's tea.
+It looks worse than it did yesterday. I'm sure of it.
+You came. I half thought nobody would.
+
+# -- ambush: attacked ------------------------------------------------------------------------------
+
+## mission.banter.ambush.sensei  fn=react,teach
+Down! Guard the client. Count them before you count on anything.
+Backs together. Don't chase anyone into the trees.
+Calm. They chose the ground, so we choose the moment.
+Watch the flanks. The loud one in front is meant to be watched.
+Hold. Hold. Let them come to us.
+
+## mission.banter.ambush.teammate  fn=react,deepen_bond  stage=child|teen
+Behind you! No, other behind!
+I knew that bush looked wrong. I knew it!
+Stay close. I've got the left. Don't argue, I've got the left.
+They picked the wrong squad. Probably. Hopefully.
+My hands are shaking. That's fine. They still throw.
+
+## mission.banter.ambush.client  fn=react
+What's happening? Who are they? What do I do?
+I'll stay down! I'm very good at staying down!
+Don't let them take the cart. Or me. Mostly me.
+I knew this road was cursed. I said so. Didn't I say so?
+Behind the wheel. I'm behind the wheel. Is that right?
+
+# -- twist: something changes ----------------------------------------------------------------------
+
+## mission.banter.twist.sensei  fn=react,teach
+That's not in the brief. Good. Now we find out what you're made of.
+Plans change. People who can't change with them get hurt. Think.
+Take a breath. Then tell me what you see. Not what you expected. What you see.
+A job is only simple until it isn't. Stay calm and adjust.
+Nobody panics. We've just been given more information. Use it.
+
+## mission.banter.twist.teammate  fn=react,deepen_bond  stage=child|teen
+Wait, what? That wasn't supposed to happen. Was it?
+I take back what I said about this being boring.
+Okay. New plan. Does anyone have a new plan?
+This is either very bad or very interesting. I can't tell yet.
+Nobody told us about this! We're telling the desk about this.
+
+## mission.banter.twist.client  fn=react
+I didn't know! I swear I didn't know about this!
+Is that bad? Your faces say it's bad.
+That's never happened before. Never. Not once in all my years.
+Oh dear. Oh dear, oh dear. What now?
+Can you still do it? Please say you can still do it.
+
+# -- fight -----------------------------------------------------------------------------------------
+
+## mission.banter.fight.sensei  fn=react,teach
+Feet first, hands second. A good stance wins more fights than a fast kunai.
+Don't stare at the weapon. Watch their shoulders.
+Keep moving. Standing still makes you a target.
+Breathe out when you strike. Hold your breath and you'll tire twice as fast.
+Finish what you start, then look for the next one.
+
+## mission.banter.fight.teammate  fn=react,deepen_bond  stage=child|teen
+I've got this one! I think I've got this one!
+Cover me! Just for a second!
+Was that your shuriken? Nice throw!
+Left! On your left! Okay, now it's my left!
+Is anyone else's heart this loud? Mine's like a drum.
+
+## mission.banter.fight.client  fn=react
+I can't look. Tell me when it's over.
+Is it supposed to be that loud?
+Good hit! Was that a good hit? It looked like a good hit.
+I'm counting them. Three down! No, two. Two and a bit.
+Please be careful. I've no idea how to carry you home.
+
+# -- low_health: someone's hurt --------------------------------------------------------------------
+
+## mission.banter.low_health.sensei  fn=react,teach
+You're bleeding. Fall back. That's an order, not a suggestion.
+Pressure on it, now. Pride heals slower than a cut.
+Step behind me and get your breath. I'll hold the line.
+Wounded fighters make wounded choices. Get out of the front.
+Bandage first, bravery after.
+
+## mission.banter.low_health.teammate  fn=react,deepen_bond  stage=child|teen
+You're hurt! Get back, I'll cover you. Go!
+Don't you dare pass out on me. Hey. Look at me.
+Here, take my bandage roll. I've got another. I think.
+Lean on me. Come on. We go together.
+That looks bad. Does it hurt? Of course it hurts. Sorry.
+
+## mission.banter.low_health.client  fn=react
+You're hurt! Sit down, sit down, I've got a clean cloth.
+Stop, please. No job is worth this.
+I've seen worse on the farm. Not much worse, though.
+Let me help. I'm no medic, but I can hold a bandage.
+Here, drink. Water helps. My mother always said water helps.
+
+# -- choice: a decision point ----------------------------------------------------------------------
+
+## mission.banter.choice.sensei  fn=react,teach
+This one's yours to decide. I'll tell you what I think after, not before.
+There's no rule for this. That's why it's hard.
+Think about who it helps, who it hurts, and whether you can live with it.
+Whatever you pick, own it in the report. Honestly.
+Shinobi make calls like this every day. You'll make better ones for having made this one.
+
+## mission.banter.choice.teammate  fn=react,deepen_bond  stage=child|teen
+I don't know. What would you do? Really?
+Whatever you decide, I'm with you. I just want to say that first.
+This feels bigger than the brief said. Is it allowed to feel this big?
+I'd go the other way. But I'm often wrong. Like, a lot.
+Take your time. No, actually, don't take too much time.
+
+## mission.banter.choice.client  fn=react
+It's your call. I'll trust you. I think.
+I can't tell you what to do. I can tell you what I hope.
+Whatever you choose, I won't hold it against you. Not much.
+I've thought about this a hundred times. I still don't know.
+Please, think it over. It matters to more people than me.
+
+# -- camp: a night out -----------------------------------------------------------------------------
+
+## mission.banter.camp.sensei  fn=react,teach
+Fire small, backs to the rock, kit where you can find it in the dark.
+First watch is mine. Get your sleep while it's offered.
+Dry your socks. Wet feet will end a mission faster than any bandit.
+Tell me one thing you'd do differently today. Just one.
+Bank the fire before you sleep. Embers by dawn, not ashes.
+
+## mission.banter.camp.teammate  fn=react,deepen_bond  stage=child|teen
+Do you ever think about what you'll be, after? When we're Jonin and everything?
+That owl's been shouting for an hour. Doesn't it sleep?
+Swap you my pickled radish for your fish. Please. I'll owe you.
+My mattress at home is lumpy. I never thought I'd miss it.
+If you wake up and I'm snoring, kick me. Gently.
+
+## mission.banter.camp.client  fn=react
+I haven't slept outdoors since I was a child. I'd forgotten the noise.
+Do you take turns watching? All night? You must be so tired.
+I brought dried persimmons. Have some. They're better by firelight.
+Back home, my family will be having supper about now.
+Is it safe to sleep? You'll wake me if it isn't?
+
+# -- victory: the fight's won ----------------------------------------------------------------------
+
+## mission.banter.victory.sensei  fn=react,teach
+Good. Now check yourselves, check the client, then check the ground.
+That was clean work. Don't celebrate until we're back inside the wall.
+Tie them up properly. Two knots. People slip one.
+You held your ground. That's the whole lesson for today.
+Nobody down, nobody missing. That's what winning looks like.
+
+## mission.banter.victory.teammate  fn=react,deepen_bond  stage=child|teen
+We did it! Did you see? We actually did it!
+My legs have gone wobbly. Is that normal? Tell me it's normal.
+High five. No, the other hand. The one that isn't bleeding.
+I'm telling everyone at the Academy about this. Everyone.
+We make a good squad. I'm just saying it. Don't make it weird.
+
+## mission.banter.victory.client  fn=react
+Is it over? It's over! Oh, thank goodness.
+You were incredible. All of you. I've never seen anything like it.
+I'm going to tell this story for the rest of my life.
+I take back what I said about you being young.
+I didn't run! Did you see? I didn't run.
+
+# -- grade_s: an outstanding job -------------------------------------------------------------------
+
+## mission.banter.grade_s.sensei  fn=react,teach
+That's as good as it gets. Remember how it felt. Then do it again.
+Clean, quick, careful. If I'd written the plan myself, I'd be pleased with it.
+Every box ticked. I don't say this often: I'm proud of you.
+That's how a mission should go. Don't let it make you careless next time.
+Outstanding. I'll be putting that word in the report. In ink.
+
+## mission.banter.grade_s.teammate  fn=react,deepen_bond  stage=child|teen
+That was perfect! Not one thing went wrong. Not one!
+Did you see sensei's face? That was almost a smile!
+We're legends. Small ones. But legends.
+I want to frame this day and hang it on my wall.
+Let's do every mission like that. Every single one.
+
+## mission.banter.grade_s.client  fn=react
+Better than I hoped. Far better. I'll be asking for you by name.
+I've never seen a job done so well. I'll tell everyone.
+You thought of things I hadn't even thought of. Thank you.
+There's extra in the purse. No, take it. You've earned it.
+That's the Leaf I was told about. That's exactly it.
+
+# -- partial: done, but not all of it -------------------------------------------------------------
+
+## mission.banter.partial.sensei  fn=react,teach
+Half a job is still a job. Learn from the half you missed.
+We got the important part. The rest we'll put down honestly.
+Not perfect. Few missions are. What matters is why.
+Don't hang your head. Write it down, understand it, do better.
+Good enough to pay for, not good enough to brag about. Fair?
+
+## mission.banter.partial.teammate  fn=react,deepen_bond  stage=child|teen
+We did most of it. Most counts. Doesn't most count?
+I keep thinking about the bit we missed. Do you?
+Next time we'll get all of it. I'm sure of it.
+At least nobody got hurt. That's the main thing, right?
+It's not a fail. It's a "nearly". I'm calling it a "nearly".
+
+## mission.banter.partial.client  fn=react
+Not quite what I wanted, but better than nothing. Thank you.
+Most of it's done. I can manage the rest myself.
+I'm not unhappy. Just a little sorry about the rest.
+It's all right. You tried, and it shows.
+Half is half more than I could have done alone.
+
+# -- fail ------------------------------------------------------------------------------------------
+
+## mission.banter.fail.sensei  fn=react,teach
+It didn't work. We go home, we report it straight, and we learn from it.
+Failing a mission is not failing as a shinobi. Not unless you stop.
+I've failed missions. Every Jonin has. Some taught me more than the wins.
+Pick yourselves up. We carry this home together.
+We'll talk about it tomorrow. Tonight, eat and sleep.
+
+## mission.banter.fail.teammate  fn=react,deepen_bond  stage=child|teen
+I'm sorry. I should have been faster. I should have been something.
+Don't look at me like that. I know. I know.
+We'll get another one. There's always another one. Right?
+I don't want to go back to the desk. They'll know just from our faces.
+At least we were together for it. That's something. Isn't it?
+
+## mission.banter.fail.client  fn=react
+It's all right. Really. You did what you could.
+I'm disappointed, I won't lie. But not in you.
+Maybe it was never going to work. Maybe I asked too much.
+Thank you for coming anyway. Not everyone would have.
+Go home safe. That's the main thing.
+
+# -- report: back at the desk ---------------------------------------------------------------------
+
+## mission.banter.report.sensei  fn=react,teach
+Report it as it happened, not as you wish it had.
+Times, names, what went right, what didn't. Short sentences.
+The desk reads every word. Make the words worth reading.
+Good report. Clear and honest. That's half of being a shinobi.
+Hand it over and stand up straight. You did the work.
+
+## mission.banter.report.teammate  fn=react,deepen_bond  stage=child|teen
+Can I hand it in? Please? I want to see the clerk's face.
+Do we mention the thing? The thing with the bucket?
+I'm so tired I wrote my own name wrong. Twice.
+Is the pay today? I've got plans for that pay.
+Same time tomorrow? Another one? I'm in if you are.
+
+## mission.banter.report.client  fn=react
+I came to give my thanks in person. You deserve that.
+I've written a note for the desk. All good things.
+If I ever need help again, I'm asking for you.
+I told the clerk you were wonderful. They didn't look surprised.
+Thank you, all of you. I mean it.

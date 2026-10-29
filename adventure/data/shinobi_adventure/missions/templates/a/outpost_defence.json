@@ -1,0 +1,176 @@
+{
+ "format": 1,
+ "id": "mission.a.outpost_defence",
+ "kind": "mission",
+ "rank": "a",
+ "category": "defence",
+ "status": "later",
+ "title": "dlg:mission.a.outpost_defence.title",
+ "brief": "dlg:mission.a.outpost_defence.brief",
+ "dialogue": {
+  "brief": "dlg:mission.a.outpost_defence.brief",
+  "accept": "dlg:mission.a.outpost_defence.accept",
+  "decline": "dlg:mission.a.outpost_defence.decline",
+  "progress": "dlg:mission.a.outpost_defence.progress",
+  "success": "dlg:mission.a.outpost_defence.success",
+  "fail": "dlg:mission.a.outpost_defence.fail",
+  "report": "dlg:mission.a.outpost_defence.report"
+ },
+ "minutes": 45,
+ "party": "squad",
+ "unlock": {
+  "rank_at_least": "jonin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "shinobi",
+    "rank": "jonin"
+   }
+  },
+  "outpost": {
+   "pick": "anchor",
+   "tag": "border.outpost"
+  },
+  "squad": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.foreign_squad"
+   ]
+  },
+  "jonin": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:enemy.foreign_jonin"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "ready"
+  },
+  "ready": {
+   "objective": {
+    "type": "perform",
+    "what": "set_trap",
+    "at": "slot:outpost",
+    "count": 4
+   },
+   "next": "hold"
+  },
+  "hold": {
+   "objective": {
+    "type": "survive",
+    "until": "06:00",
+    "at": "slot:outpost"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:squad",
+      "slot:outpost"
+     ]
+    }
+   ],
+   "branch": [
+    {
+     "if": {
+      "twist": "their_jonin"
+     },
+     "next": "jonin"
+    }
+   ],
+   "next": "report"
+  },
+  "jonin": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:jonin",
+    "at": "slot:outpost"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:jonin",
+      "slot:outpost"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "their_jonin",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.a.outpost_defence.twist.their_jonin"
+  },
+  {
+   "id": "fog",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.a.outpost_defence.twist.fog"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "no_knockouts",
+  "teamwork"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.foreign_squad",
+  "combat:enemy.foreign_jonin"
+ ],
+ "places": {
+  "anchors": [
+   "border.outpost",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:border_village"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.55
+ },
+ "tags": [
+  "travel",
+  "defence",
+  "night",
+  "fight"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.defence",
+ "_premise": "Hold a Leaf outpost against an enemy squad until the night is over.",
+ "_twists": {
+  "their_jonin": "Their Jonin leads the last assault himself.",
+  "fog": "A thick fog rolls in; the sensors are blind."
+ }
+}

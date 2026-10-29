@@ -1,0 +1,170 @@
+{
+ "format": 1,
+ "id": "mission.b.hostage_rescue",
+ "kind": "mission",
+ "rank": "b",
+ "category": "rescue",
+ "status": "later",
+ "title": "dlg:mission.b.hostage_rescue.title",
+ "brief": "dlg:mission.b.hostage_rescue.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.hostage_rescue.brief",
+  "accept": "dlg:mission.b.hostage_rescue.accept",
+  "decline": "dlg:mission.b.hostage_rescue.decline",
+  "progress": "dlg:mission.b.hostage_rescue.progress",
+  "success": "dlg:mission.b.hostage_rescue.success",
+  "fail": "dlg:mission.b.hostage_rescue.fail",
+  "report": "dlg:mission.b.hostage_rescue.report"
+ },
+ "minutes": 40,
+ "party": "squad",
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "trader"
+   }
+  },
+  "mill": {
+   "pick": "anchor",
+   "tag": "river.mill"
+  },
+  "kidnappers": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:group.kidnappers"
+   ]
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "approach"
+  },
+  "approach": {
+   "objective": {
+    "type": "sneak",
+    "to": "slot:mill"
+   },
+   "bonus": [
+    "unseen"
+   ],
+   "next": "rescue"
+  },
+  "rescue": {
+   "objective": {
+    "type": "escort",
+    "who": "hostage",
+    "to": "place:gate.main"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "discovered"
+     },
+     "next": "fight"
+    }
+   ],
+   "next": "report"
+  },
+  "fight": {
+   "objective": {
+    "type": "protect",
+    "who": "hostage",
+    "at": "slot:mill"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:kidnappers",
+      "slot:mill"
+     ]
+    }
+   ],
+   "next": "rescue2"
+  },
+  "rescue2": {
+   "objective": {
+    "type": "escort",
+    "who": "hostage",
+    "to": "place:gate.main"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "discovered",
+   "weight": 2,
+   "harder": true,
+   "premise": "dlg:mission.b.hostage_rescue.twist.discovered"
+  },
+  {
+   "id": "two_hostages",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.b.hostage_rescue.twist.two_hostages"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "client_unharmed",
+  "no_alarm"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:group.kidnappers"
+ ],
+ "places": {
+  "anchors": [
+   "gate.main",
+   "gate.travel_desk",
+   "river.mill"
+  ],
+  "regions": [
+   "region:river_crossing"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "rescue",
+  "stealth"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.rescue",
+ "_premise": "Kidnappers hold a merchant family's child in a river mill; get the child out alive.",
+ "_twists": {
+  "discovered": "A kidnapper comes down for water at the worst moment.",
+  "two_hostages": "There are two children, not one."
+ }
+}

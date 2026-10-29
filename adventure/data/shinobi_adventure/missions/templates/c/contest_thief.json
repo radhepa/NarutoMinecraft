@@ -1,0 +1,192 @@
+{
+ "format": 1,
+ "id": "mission.c.contest_thief",
+ "kind": "mission",
+ "rank": "c",
+ "category": "contest",
+ "status": "beta",
+ "title": "dlg:mission.c.contest_thief.title",
+ "brief": "dlg:mission.c.contest_thief.brief",
+ "dialogue": {
+  "brief": "dlg:mission.c.contest_thief.brief",
+  "accept": "dlg:mission.c.contest_thief.accept",
+  "decline": "dlg:mission.c.contest_thief.decline",
+  "progress": "dlg:mission.c.contest_thief.progress",
+  "success": "dlg:mission.c.contest_thief.success",
+  "fail": "dlg:mission.c.contest_thief.fail",
+  "report": "dlg:mission.c.contest_thief.report"
+ },
+ "minutes": 20,
+ "party": "squad",
+ "unlock": {
+  "all": [
+   {
+    "rank_at_least": "genin"
+   },
+   {
+    "quest_state": [
+     "main.ch11.paper_trail",
+     "done"
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "clerk"
+   }
+  },
+  "rooftops": {
+   "pick": "anchor",
+   "tag": "rooftop_route"
+  },
+  "hideout": {
+   "pick": "anchor",
+   "tag": "alley.back"
+  },
+  "burglar": {
+   "pick": "enemy_group",
+   "from": [
+    "combat:enemy.cat_burglar"
+   ]
+  },
+  "rival_squad": {
+   "pick": "role",
+   "role": "role:rival_squad"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "chase"
+  },
+  "chase": {
+   "objective": {
+    "type": "perform",
+    "what": "rooftop_chase",
+    "at": "slot:rooftops"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "rival_trick"
+     },
+     "next": "trick"
+    }
+   ],
+   "next": "corner"
+  },
+  "trick": {
+   "objective": {
+    "type": "perform",
+    "what": "outrun",
+    "at": "slot:rooftops"
+   },
+   "next": "corner"
+  },
+  "corner": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:burglar",
+    "at": "slot:hideout"
+   },
+   "on_enter": [
+    {
+     "spawn_group": [
+      "slot:burglar",
+      "slot:hideout"
+     ]
+    }
+   ],
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "rival_trick",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.c.contest_thief.twist.rival_trick"
+  },
+  {
+   "id": "team_up",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.c.contest_thief.twist.team_up"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0,
+   "acts": [
+    [
+     "role:rival",
+     "spar_won"
+    ]
+   ]
+  },
+  "lost_race": {
+   "pay": 0.3,
+   "standing": 0,
+   "acts": [
+    [
+     "role:rival",
+     "spar_lost"
+    ]
+   ]
+  }
+ },
+ "bonus": [
+  "fast",
+  "teamwork"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:enemy.cat_burglar"
+ ],
+ "places": {
+  "anchors": [
+   "alley.back",
+   "rooftop_route"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "c",
+  "xp_band": "c",
+  "weight": 0.4
+ },
+ "tags": [
+  "village",
+  "movement",
+  "contest",
+  "fight"
+ ],
+ "contested": true,
+ "classic": true,
+ "banter": "dlg:mission.banter.contest",
+ "_premise": "The desk sent two squads after the same cat burglar; the squad that brings them in gets the pay.",
+ "_twists": {
+  "rival_trick": "The rival squad sends you down the wrong street.",
+  "team_up": "The burglar is too fast for either squad alone; the race becomes a partnership."
+ }
+}

@@ -1,0 +1,96 @@
+# Reaching a level (BONDS.md §3): what a resident says the moment the bond rises. Levels rise at once, so a
+# level-up can land mid-conversation.
+
+# -- reaching a level: said by the resident, the moment it happens --------------------------------------
+## bond.levelup.0  fn=deepen_bond
+Nice to meet you. I'm sure we'll see more of each other.
+Well, now we've met. That's a start.
+
+## bond.levelup.1  fn=deepen_bond
+I'll remember you now, {player}. You've got one of those faces.
+Next time you pass, I'll know who's waving.
+
+## bond.levelup.2  fn=deepen_bond
+You know what? I like having you around. Come by whenever.
+I think we're past "hello" now, {player}. Ask me anything.
+
+## bond.levelup.3  fn=deepen_bond
+We're friendly now, you and me. I'll keep you up on the news.
+I'd call this a proper friendship starting. Don't you think?
+
+## bond.levelup.4  fn=deepen_bond
+You're my friend, {player}. I hope you know that. And you'd better come on my birthday.
+Friends, then. Real ones. I'm glad.
+
+## bond.levelup.5  fn=deepen_bond
+I could tell you things now I wouldn't tell most people. That's new for me.
+You've become a good friend, {player}. The kind I can talk to properly.
+
+## bond.levelup.6  fn=deepen_bond
+I don't have many close friends. I have one more now.
+Somewhere along the way you became one of my people, {player}.
+
+## bond.levelup.7  fn=deepen_bond
+I trust you, {player}. Completely. I've never said that so easily.
+There's nothing I'd keep from you now. Not really.
+
+## bond.levelup.8  fn=deepen_bond
+You're my best friend. I've known it a while. Now I've said it.
+Best friends, {player}. Me and you. I like the sound of that.
+
+## bond.levelup.9  fn=deepen_bond
+Some people just fit, like a key in a lock. You fit, {player}.
+I think we're kindred spirits. I'll keep a little something for you every day.
+
+## bond.levelup.10  fn=deepen_bond
+Whatever happens, for the rest of our lives, you'll have me. That's a bond for life.
+I can't imagine the years ahead without you in them, {player}.
+
+# -- children: classmates and the kids of the street --------------------------------------------------
+## bond.levelup.0  stage=child  fn=deepen_bond
+Hi! You're new. Do you want to see my frog? It's in my pocket.
+## bond.levelup.1  stage=child  fn=deepen_bond
+I'll remember you! You're the one who didn't laugh when I fell in the pond.
+## bond.levelup.2  stage=child  fn=deepen_bond
+You can sit with me at lunch if you want. I've got two rice balls.
+## bond.levelup.3  stage=child  fn=deepen_bond
+Okay, you're my friend now. That means you get to know where the good climbing tree is.
+## bond.levelup.4  stage=child  fn=deepen_bond
+You're my real friend, {player}. Like, for real. You have to come to my birthday.
+## bond.levelup.5  stage=child  fn=deepen_bond
+I'll tell you a secret. Not now. When nobody's listening. Pinky promise you won't tell?
+## bond.levelup.6  stage=child  fn=deepen_bond
+You're in my top three friends. Actually, top two. Don't tell the other one.
+## bond.levelup.7  stage=child  fn=deepen_bond
+I'd share my last piece of candy with you. That's the biggest thing I can say.
+## bond.levelup.8  stage=child  fn=deepen_bond
+Best friends! We should have a secret handshake. I'll make one up tonight.
+## bond.levelup.9  stage=child  fn=deepen_bond
+I'm going to save you something every day. Even the green sweets, which are the best ones.
+## bond.levelup.10  stage=child  fn=deepen_bond
+When we're old, like thirty, we'll still be best friends. Swear it on the Hokage Rock.
+
+# The bond book's name for each level (BondBook.page header; BONDS.md §3).
+#! kind: cycle
+## bond.level.0  fn=deepen_bond  stage=child|teen|adult
+New Face
+## bond.level.1  fn=deepen_bond  stage=child|teen|adult
+Familiar Face
+## bond.level.2  fn=deepen_bond  stage=child|teen|adult
+Acquaintance
+## bond.level.3  fn=deepen_bond  stage=child|teen|adult
+Friendly
+## bond.level.4  fn=deepen_bond  stage=child|teen|adult
+Friend
+## bond.level.5  fn=deepen_bond  stage=child|teen|adult
+Good Friend
+## bond.level.6  fn=deepen_bond  stage=child|teen|adult
+Close Friend
+## bond.level.7  fn=deepen_bond  stage=child|teen|adult
+Trusted Friend
+## bond.level.8  fn=deepen_bond  stage=child|teen|adult
+Best Friend
+## bond.level.9  fn=deepen_bond  stage=child|teen|adult
+Kindred Spirit
+## bond.level.10  fn=deepen_bond  stage=child|teen|adult
+Lifelong Bond

@@ -1,0 +1,70 @@
+# Overheard talk between children: games, lessons, snacks, siblings, dares.
+#! tags: relation=kids stage=child
+
+## ambient.kids  fn=worldbuild
+A: Dare you to touch the Hokage Rock's nose.
+B: You can't even get up there. It's taller than the whole Academy.
+
+A: I've got two ryo. Dango or a spinning top?
+B: Dango. Then you can spin the stick.
+
+A: The teacher's got a new chalk board. It squeaks.
+B: Good. Now we'll hear when the questions are coming.
+
+A: Want to play shinobi and bandits?
+B: I'm the shinobi.
+A: You're always the shinobi!
+
+A: I saw a deer at the edge of the Nara forest!
+B: Did it see you?
+A: It looked at me like I was boring.
+
+A: My big sister says ghosts live under the old bridge.
+B: Your big sister says lots of things to make you cry.
+
+A: Let's catch tadpoles by the river after lessons.
+B: My mother said no more tadpoles in the house.
+A: We'll keep them in a bucket. A secret bucket.
+
+A: Hide and seek. You count to fifty.
+B: Last time you hid so well we went home.
+A: That's the point!
+
+A: My dad lets me hold the kunai when he cleans them. The blunt end.
+B: My grandpa lets me sharpen pencils with one. Sort of the same.
+
+A: I learnt a new hand sign today. Watch.
+B: That's just your fingers crossed.
+A: It's a very advanced hand sign.
+
+## ambient.kids  fn=reveal_character
+A: Do you think I'll be good at missions?
+B: You found my lost sandal in the river. You're already good at missions.
+
+A: I don't like the dark.
+B: Me neither. That's why I sleep with the lantern on. Don't tell.
+
+A: When I grow up I'm opening a ramen stand.
+B: Then I'll eat there every day for free.
+A: Every day for half price. I'll need money.
+
+A: I miss my cousin. They moved to the farms.
+B: You can write letters. I'll help with the hard words.
+
+## ambient.kids  fn=react
+A: It's snowing! It's snowing!
+B: Snowball fight! Last one to the yard is a turnip!
+
+A: I fell off the climbing frame.
+B: Are you hurt?
+A: Only my feelings. And my knee. Mostly my feelings.
+
+A: The festival's tonight!
+B: I've saved four ryo. I'm going to win a goldfish.
+
+A: I got a good mark on the written test!
+B: Really? Show me. ...Wow. I'm telling everyone.
+
+## ambient.kids  fn=filler
+A: Race you home!
+B: Go!

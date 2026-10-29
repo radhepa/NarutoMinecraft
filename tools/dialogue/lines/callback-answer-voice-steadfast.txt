@@ -1,0 +1,96 @@
+# Callbacks for questions/voice-steadfast.txt, in the steadfast asker's voice.
+#! fn: callback
+#! tags: personality=steadfast
+
+## callback.answer.q.past.stead_hardest_promise.a1
+A small promise that cost a lot. That's the true test, I said. You passed it. I keep remembering that.
+
+## callback.answer.q.past.stead_hardest_promise.a2
+No hard promise kept yet, you said. Clean record. Still clean?
+
+## callback.answer.q.past.stead_hardest_promise.a3
+You wouldn't say which promise. That's fine. A kept promise doesn't need telling.
+
+## callback.answer.q.values.stead_duty_or_want.a1
+Duty wins, you said. Not easy, but simple. I said that to my apprentice today.
+
+## callback.answer.q.values.stead_duty_or_want.a2
+What you want wins, over duty. Can you live with it? I hope so.
+
+## callback.answer.q.values.stead_duty_or_want.a3
+It depends on what's at stake, you said, duty or wish. I've been weighing my own that way.
+
+## callback.answer.q.values.stead_duty_cost.a1
+Duty cost you something once. I'm still proud of you for it. Both things are true.
+
+## callback.answer.q.values.stead_duty_cost.a2
+Duty hasn't cost you yet. When it does, come talk to me. You'll know what you're made of.
+
+## callback.answer.q.values.stead_duty_cost.a3
+You'd pay duty's cost again. That's steel. I've told people so.
+
+## callback.answer.q.pref.stead_routine.a1
+Same routine every day, you said. I saw the sun come up at the usual time and thought of yours.
+
+## callback.answer.q.pref.stead_routine.a2
+You like variety in your days. Keep one thing steady, I said. Found your one thing yet?
+
+## callback.answer.q.pref.stead_routine.a3
+Mostly the same routine. Most of us are mostly. I still say so.
+
+## callback.answer.q.dilemma.stead_cover_shift.a1
+You'd cover a friend's shift, tired or not. I've a strong tea here. For next time.
+
+## callback.answer.q.dilemma.stead_cover_shift.a2
+A tired guard is half a guard. You were right. I said no to an extra shift this week.
+
+## callback.answer.q.dilemma.stead_cover_shift.a3
+Find someone else to cover it. That's what you'd do. I did, when my partner asked. Worked well.
+
+## callback.answer.q.values.stead_rely_on.a1
+You lean on your squad. Good. How is your squad holding up?
+
+## callback.answer.q.values.stead_rely_on.a2
+Your teacher's the one you rely on. Tell them that someday. It matters.
+
+## callback.answer.q.values.stead_rely_on.a3
+You rely on yourself most. Don't make it only yourself, I said. Lean on me too, if need be.
+
+## callback.answer.q.values.stead_rely_on.a4
+One good friend, the one you lean on. Hold on to them.
+
+## callback.answer.q.values.stead_rely_on_you.a1
+Your squad leans on you. Carry it well. You are.
+
+## callback.answer.q.values.stead_rely_on_you.a2
+No one relies on you yet, you said. I do, now. So there's one.
+
+## callback.answer.q.values.stead_rely_on_you.a3
+More people rely on you than you know. You said it yourself. I'm one of them.
+
+## callback.answer.q.plans.stead_promise_leaf.a1
+You'd promise to protect the Leaf. Said plainly. I remember it whenever I see you on the road.
+
+## callback.answer.q.plans.stead_promise_leaf.a2
+Never leave the Leaf, your promise. I believed you then. I still do.
+
+## callback.answer.q.plans.stead_promise_leaf.a3
+Make the Leaf proud, your promise. You're doing it already, in small ways.
+
+## callback.answer.q.plans.stead_promise_daily.a1
+Training every day, rain or shine. That's how you keep your promise. I've seen the proof.
+
+## callback.answer.q.plans.stead_promise_daily.a2
+Helping where you can. A promise kept quietly. I noticed, you know.
+
+## callback.answer.q.plans.stead_promise_daily.a3
+Showing up. Half of duty is just being there, you said. I've repeated it a dozen times since.
+
+## callback.answer.q.values.stead_truth_hurts.a1
+Honest with a friend even when it hurts. That's your rule. I'll expect nothing less from you.
+
+## callback.answer.q.values.stead_truth_hurts.a2
+You'd spare a friend a painful truth. Kind. I'm still not sure I could.
+
+## callback.answer.q.values.stead_truth_hurts.a3
+The truth wrapped in care. Your way. I tried it on my brother. It went well.

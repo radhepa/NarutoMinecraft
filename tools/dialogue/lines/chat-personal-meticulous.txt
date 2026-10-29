@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for meticulous residents. Their own life, in their voice.
+#! tags: personality=meticulous
+
+## chat.personal  fn=reveal_character
+Productive. I relabelled every jar in my kitchen. Then I relabelled the labels. The first set was crooked.
+I wake at 5:40 exactly. Not 5:30, that's too early, and not 6:00, that's lazy. 5:40 is correct.
+I've finally finished alphabetising my spices. Cinnamon was in the "S" section. I don't know how long that went on.
+My neighbour borrowed my broom and returned it facing the wrong way. I'm choosing to say nothing. I'm saying it to you.
+I've written tomorrow's schedule on a card. Nine items. There's a slot for "unexpected things". It's eleven minutes long.
+This morning I ironed my handkerchiefs. All of them. Even the ones I don't use. Especially those.
+Three grams short! I measured my rice this morning, and the bag was light. I'll be having a word with the grocer.
+I keep a ledger of every ryo I spend. Today: tea, two ryo. Bread, four. A sweet I didn't need, one. I've noted the sweet.
+Sock drawer: reorganised by colour, then by thickness. The thickness system won.
+My husband stacks the bowls largest at the top. Twelve years married, and I still restack them every night.
+I spent the morning re-rolling my scrolls so all the seals face the same way. You don't know how satisfying that is.
+There are four hundred and twelve tiles on my roof. I counted after the storm. Four hundred and eleven now. I'll fix it.
+I don't like surprises. I like plans. A surprise is just a plan that someone forgot to tell you about.
+Every pencil in the house is sharpened. Then I lined them up by length. Now I'm afraid to use them.
+I sorted my letters by date received, then by sender. I've received a lot of letters from my mother.
+Today's tea steeped three minutes, twenty seconds. Perfect. Yesterday's was three-forty. I don't talk about yesterday.
+Laundry goes in thirds. Halves leave a crease down the middle, and I won't have that.
+I swept the street in front of my house. Then the street in front of my neighbour's, so mine would look right.
+Ask me any date. My calendar has every festival, birthday and holiday for the next two years.
+I made a chart of when the shops open and close. The dango shop never matches it. I suspect the owner of whims.
+I spent an hour straightening the picture frames in the tea house. The owner didn't ask. The owner didn't stop me.
+My handwriting has been the same since I was nine. I practised until it couldn't change. Some things should stay put.
+That clock in the square runs four minutes fast. I've told three people. Nobody's done anything.
+I wrote a list of my favourite things. Then I ranked it. Number one is a well-made list.
+It's three hundred and sixty steps to the market. If it's more, I've taken a wrong turn or I'm tired.
+I repainted the trim on my door. The colour's called "pine shade". It's one shade lighter than before. Nobody noticed.
+Receipts. I keep all of them. In boxes, by season. My daughter says I could build a second house out of them.
+My garden rows are exactly a forearm apart. The carrots are thriving. I credit the forearm.
+I spent my day off reorganising the drawers at my sister's place. She was out. She's back now. She is not pleased.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I keep the books for three shops on the market street. Today the numbers matched to the last ryo. I nearly wept.
+I tailor uniforms. A Chunin vest needs fourteen pockets, and every one must sit level. I check them with a ruler.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+I check my pouch three times before every mission: kunai, wire, tags, bandages, in that order. My squad calls it the ritual.
+I write mission reports the evening I get back. My squad hands theirs in three days late. I've stopped commenting. Mostly.
+I keep my kunai sharpened to the same angle. My sensei said it doesn't matter. It matters to me.
+
+## chat.personal  fn=worldbuild
+Did you know the Mission Desk files every report by rank, then by date, then by squad number? Beautiful system.
+The library shelves its scrolls by the colour of the cord: red for history, blue for jutsu theory, green for herbs.
+The market's weights are checked by an inspector every season. A stamped weight means you can trust the scale.
+
+## chat.personal  fn=hook
+Someone's been moving the stones in the shrine garden. One a day. I've noticed. I'd like to know who.
+I'm missing one teacup from a set of six. Blue glaze, a crane on the side. It's ruining the set.
+The sign at the ramen stand is spelled wrong. I've drafted a correction. I just need someone to give it to them.
+I lost my ledger somewhere between the bank and the tea house. Small, black, very neat. Very, very neat.
+
+## chat.personal  fn=filler
+On schedule. Which is all I ask of a day.
+Orderly. Thank you for asking.
+
+## chat.personal  fn=reveal_character
+I re-spaced the pegs on my washing line. Seven fingers apart. The laundry dries evenly now. You can see the difference.
+I wrote the neighbour a note about their gutter. A polite note. Two drafts. Both polite.

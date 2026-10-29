@@ -1,0 +1,6962 @@
+{
+ "format": 1,
+ "_doc": "Every wardrobe outfit as a folded_outfit variant; compiled from tools/wardrobe collections and clans.",
+ "count": 410,
+ "prices": {
+  "academy": 100,
+  "civilian": 120,
+  "genin": 180,
+  "chunin": 320,
+  "jonin": 480,
+  "anbu": 0,
+  "kage": 0
+ },
+ "outfits": [
+  {
+   "id": "academy_genin.first_day",
+   "name": "First Day",
+   "source": "collection:academy_genin",
+   "rank": "academy",
+   "pieces": [
+    "tg001_academy_tee",
+    "bg001_academy_shorts"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_SUNRISE",
+    "ACADEMY_GENIN_SKY",
+    "ACADEMY_GENIN_MINT"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.cold_morning",
+   "name": "Cold Morning",
+   "source": "collection:academy_genin",
+   "rank": "academy",
+   "pieces": [
+    "tg002_pullover_hoodie",
+    "bg004_track_pants"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_TOMATO",
+    "ACADEMY_GENIN_INDIGO",
+    "ACADEMY_GENIN_BERRY"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.lap_runner",
+   "name": "Lap Runner",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg003_track_top",
+    "bg019_cuffed_joggers"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_SKY",
+    "ACADEMY_GENIN_FOREST",
+    "ACADEMY_GENIN_CORAL"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.taijutsu_drill",
+   "name": "Taijutsu Drill",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg004_wrapped_tank",
+    "bg017_bandaged_shorts"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_MOSS",
+    "ACADEMY_GENIN_MUSTARD",
+    "ACADEMY_GENIN_TEAL"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.kimono_jacket",
+   "name": "Kimono Jacket",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg005_short_kimono_jacket",
+    "bg003_laced_shin_trousers"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_PLUM",
+    "ACADEMY_GENIN_INDIGO",
+    "ACADEMY_GENIN_TEAL"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.first_mission",
+   "name": "First Mission",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg006_vest_over_tee",
+    "bg005_cargo_capris"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_FOREST",
+    "ACADEMY_GENIN_SAND",
+    "ACADEMY_GENIN_MUSTARD"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.ball_game",
+   "name": "Ball Game",
+   "source": "collection:academy_genin",
+   "rank": "academy",
+   "pieces": [
+    "tg007_raglan_tee",
+    "bg011_shorts_knee_socks"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_LEMON",
+    "ACADEMY_GENIN_SKY",
+    "ACADEMY_GENIN_ROSE"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.old_manuals",
+   "name": "Old Manuals",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg008_stand_collar_shirt",
+    "bg014_tabi_trousers"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_INDIGO",
+    "ACADEMY_GENIN_TEAL",
+    "ACADEMY_GENIN_PLUM"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.tabard",
+   "name": "Tabard",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg009_tabard_tunic",
+    "bg013_ankle_tie_trousers"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_MOSS",
+    "ACADEMY_GENIN_SAND",
+    "ACADEMY_GENIN_BERRY"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.rain_patrol",
+   "name": "Rain Patrol",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg010_half_zip_anorak",
+    "bg016_kneepad_pants"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_CORAL",
+    "ACADEMY_GENIN_MINT",
+    "ACADEMY_GENIN_FOREST"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.hand_me_down",
+   "name": "Hand-Me-Down",
+   "source": "collection:academy_genin",
+   "rank": "academy",
+   "pieces": [
+    "tg011_striped_sweater",
+    "bg002_striped_capris"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_MUSTARD",
+    "ACADEMY_GENIN_ROSE",
+    "ACADEMY_GENIN_LAVENDER"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.layers",
+   "name": "Layers",
+   "source": "collection:academy_genin",
+   "rank": "academy",
+   "pieces": [
+    "tg012_layered_tee",
+    "bg012_shorts_over_leggings"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_TOMATO",
+    "ACADEMY_GENIN_SUNRISE",
+    "ACADEMY_GENIN_SKY"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.festival",
+   "name": "Festival",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg013_happi_jacket",
+    "bg015_sash_shorts"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_SUNRISE",
+    "ACADEMY_GENIN_LEMON",
+    "ACADEMY_GENIN_BERRY"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.always_moving",
+   "name": "Always Moving",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg014_sleeveless_hoodie",
+    "bg007_drawstring_shorts"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_MINT",
+    "ACADEMY_GENIN_LAVENDER",
+    "ACADEMY_GENIN_CORAL"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.picture_book",
+   "name": "Picture Book",
+   "source": "collection:academy_genin",
+   "rank": "academy",
+   "pieces": [
+    "tg015_scarf_tee",
+    "bg010_patched_trousers"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_SAND",
+    "ACADEMY_GENIN_TEAL",
+    "ACADEMY_GENIN_SKY"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.summer_heat",
+   "name": "Summer Heat",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg016_jinbei_top",
+    "bg008_baggy_pants"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_TEAL",
+    "ACADEMY_GENIN_LEMON",
+    "ACADEMY_GENIN_MOSS"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.borrowed_jacket",
+   "name": "Borrowed Jacket",
+   "source": "collection:academy_genin",
+   "rank": "academy",
+   "pieces": [
+    "tg017_bomber_jacket",
+    "bg012_shorts_over_leggings"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_PLUM",
+    "ACADEMY_GENIN_ROSE",
+    "ACADEMY_GENIN_INDIGO"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.chunin_dreams",
+   "name": "Chunin Dreams",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg018_mesh_tank",
+    "bg009_knee_breeches"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_FOREST",
+    "ACADEMY_GENIN_TOMATO",
+    "ACADEMY_GENIN_MUSTARD"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.packed",
+   "name": "Packed for Anything",
+   "source": "collection:academy_genin",
+   "rank": "genin",
+   "pieces": [
+    "tg019_bandolier_shirt",
+    "bg001_academy_shorts"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_SKY",
+    "ACADEMY_GENIN_CORAL",
+    "ACADEMY_GENIN_SAND"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "academy_genin.dungarees",
+   "name": "Dungarees",
+   "source": "collection:academy_genin",
+   "rank": "academy",
+   "pieces": [
+    "tg020_dungaree_bib",
+    "bg020_dungaree_shorts"
+   ],
+   "palettes": [
+    "ACADEMY_GENIN_SUNRISE",
+    "ACADEMY_GENIN_LAVENDER",
+    "ACADEMY_GENIN_MINT",
+    "ACADEMY_GENIN_LEMON"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "core.konoha_jonin",
+   "name": "Konoha Flak Vest",
+   "source": "collection:core",
+   "rank": "jonin",
+   "pieces": [
+    "t02_konoha_flak_vest",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "KONOHA_JONIN"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "core.genin_scout",
+   "name": "Scout Hoodie",
+   "source": "collection:core",
+   "rank": "genin",
+   "pieces": [
+    "t13_scout_hoodie",
+    "b07_cargo_shorts"
+   ],
+   "palettes": [
+    "GENIN_SCOUT"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "core.genin_brawler",
+   "name": "Brawler Vest",
+   "source": "collection:core",
+   "rank": "genin",
+   "pieces": [
+    "t14_brawler_vest",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "BRAWLER"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "core.genin_kunoichi",
+   "name": "Kunoichi Tunic",
+   "source": "collection:core",
+   "rank": "genin",
+   "pieces": [
+    "t15_kunoichi_tunic",
+    "b08_mesh_leggings"
+   ],
+   "palettes": [
+    "KUNOICHI_VIOLET"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "core.genin_tracker",
+   "name": "Tracker Zip Vest",
+   "source": "collection:core",
+   "rank": "genin",
+   "pieces": [
+    "t16_tracker_zip_vest",
+    "b03_genin_track_pants"
+   ],
+   "palettes": [
+    "GENIN_TRACKER"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "core.genin_scroll",
+   "name": "Scroll Bearer",
+   "source": "collection:core",
+   "rank": "genin",
+   "pieces": [
+    "t17_scroll_bearer",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "SCROLL_BEARER"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "core.jonin_sentinel",
+   "name": "Sentinel Vest",
+   "source": "collection:core",
+   "rank": "jonin",
+   "pieces": [
+    "t18_sentinel_vest",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "JONIN_SENTINEL"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "core.jonin_field",
+   "name": "Field Vest",
+   "source": "collection:core",
+   "rank": "jonin",
+   "pieces": [
+    "t19_field_vest",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "JONIN_FIELD"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "core.jonin_kunoichi",
+   "name": "Kunoichi Jonin",
+   "source": "collection:core",
+   "rank": "jonin",
+   "pieces": [
+    "t20_kunoichi_jonin",
+    "b08_mesh_leggings"
+   ],
+   "palettes": [
+    "JONIN_KUNOICHI"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "core.jonin_commander",
+   "name": "Commander Coat",
+   "source": "collection:core",
+   "rank": "jonin",
+   "pieces": [
+    "t21_commander_coat",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "JONIN_COMMANDER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.field_flak",
+   "name": "Field Flak Vest",
+   "source": "collection:field",
+   "rank": "chunin",
+   "pieces": [
+    "tg021_field_flak_vest",
+    "bg021_taped_trousers"
+   ],
+   "palettes": [
+    "FIELD_MOSS",
+    "FIELD_DRAB",
+    "FIELD_FERN"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.side_pouch",
+   "name": "Side-Pouch Vest",
+   "source": "collection:field",
+   "rank": "chunin",
+   "pieces": [
+    "tg022_side_pouch_vest",
+    "bg033_shin_guard_trousers"
+   ],
+   "palettes": [
+    "FIELD_SLATE",
+    "FIELD_STORM"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.scroll_rack",
+   "name": "Scroll Rack Vest",
+   "source": "collection:field",
+   "rank": "jonin",
+   "pieces": [
+    "tg023_scroll_rack_vest",
+    "bg039_scroll_belt_trousers"
+   ],
+   "palettes": [
+    "FIELD_KHAKI",
+    "FIELD_SAND"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.open_vest",
+   "name": "Open Field Vest",
+   "source": "collection:field",
+   "rank": "jonin",
+   "pieces": [
+    "tg024_open_field_vest",
+    "bg025_knee_guard_trousers"
+   ],
+   "palettes": [
+    "FIELD_NAVY",
+    "FIELD_DUSK"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.utility_harness",
+   "name": "Utility Harness",
+   "source": "collection:field",
+   "rank": "chunin",
+   "pieces": [
+    "tg025_utility_harness",
+    "bg026_cargo_trousers"
+   ],
+   "palettes": [
+    "FIELD_FERN",
+    "FIELD_PINE",
+    "FIELD_MOSS"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.chest_rig",
+   "name": "Chest Rig",
+   "source": "collection:field",
+   "rank": "chunin",
+   "pieces": [
+    "tg026_chest_rig",
+    "bg032_strapped_leggings"
+   ],
+   "palettes": [
+    "FIELD_DRAB",
+    "FIELD_STORM"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.wrap_shirt",
+   "name": "Field Wrap Shirt",
+   "source": "collection:field",
+   "rank": "chunin",
+   "pieces": [
+    "tg027_field_wrap_shirt",
+    "bg027_split_hakama"
+   ],
+   "palettes": [
+    "FIELD_PINE",
+    "FIELD_UMBER",
+    "FIELD_BARK"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.mesh_tee",
+   "name": "Mesh Half-Sleeve Tee",
+   "source": "collection:field",
+   "rank": "genin",
+   "pieces": [
+    "tg028_mesh_half_tee",
+    "bg030_taped_knee_shorts"
+   ],
+   "palettes": [
+    "FIELD_NAVY",
+    "FIELD_SLATE",
+    "FIELD_KHAKI"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.scroll_bandolier",
+   "name": "Scroll Bandolier",
+   "source": "collection:field",
+   "rank": "chunin",
+   "pieces": [
+    "tg029_scroll_bandolier",
+    "bg022_drop_holster_trousers"
+   ],
+   "palettes": [
+    "FIELD_SAND",
+    "FIELD_KHAKI"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.rain_shell",
+   "name": "Rain Shell",
+   "source": "collection:field",
+   "rank": "chunin",
+   "pieces": [
+    "tg030_rain_shell",
+    "bg029_ranger_boots"
+   ],
+   "palettes": [
+    "FIELD_FERN",
+    "FIELD_STORM",
+    "FIELD_UMBER"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.sleeveless_combat",
+   "name": "Sleeveless Combat Top",
+   "source": "collection:field",
+   "rank": "genin",
+   "pieces": [
+    "tg031_sleeveless_combat_top",
+    "bg036_drawstring_trousers"
+   ],
+   "palettes": [
+    "FIELD_UMBER",
+    "FIELD_DRAB"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.quilted_vest",
+   "name": "Quilted Field Vest",
+   "source": "collection:field",
+   "rank": "chunin",
+   "pieces": [
+    "tg032_quilted_field_vest",
+    "bg035_quilted_trousers"
+   ],
+   "palettes": [
+    "FIELD_BARK",
+    "FIELD_SLATE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.ridge_vest",
+   "name": "Ridge Vest",
+   "source": "collection:field",
+   "rank": "jonin",
+   "pieces": [
+    "tg033_ridge_vest",
+    "bg040_padded_greaves"
+   ],
+   "palettes": [
+    "FIELD_MOSS",
+    "FIELD_DRAB"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.cowl_vest",
+   "name": "Cowl Vest",
+   "source": "collection:field",
+   "rank": "chunin",
+   "pieces": [
+    "tg034_cowl_vest",
+    "bg024_wrapped_legs"
+   ],
+   "palettes": [
+    "FIELD_SAND",
+    "FIELD_DUSK"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.sling_tee",
+   "name": "Sling-Pouch Tee",
+   "source": "collection:field",
+   "rank": "genin",
+   "pieces": [
+    "tg035_sling_pouch_tee",
+    "bg038_three_quarter_trousers"
+   ],
+   "palettes": [
+    "FIELD_PINE",
+    "FIELD_KHAKI"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.longline_vest",
+   "name": "Longline Vest",
+   "source": "collection:field",
+   "rank": "jonin",
+   "pieces": [
+    "tg036_longline_vest",
+    "bg023_twin_holster_trousers"
+   ],
+   "palettes": [
+    "FIELD_STORM",
+    "FIELD_NAVY"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.messenger",
+   "name": "Messenger Jacket",
+   "source": "collection:field",
+   "rank": "genin",
+   "pieces": [
+    "tg037_messenger_jacket",
+    "bg034_rolled_cuff_trousers"
+   ],
+   "palettes": [
+    "FIELD_UMBER",
+    "FIELD_FERN"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.kosode_vest",
+   "name": "Kosode Vest",
+   "source": "collection:field",
+   "rank": "jonin",
+   "pieces": [
+    "tg038_kosode_vest",
+    "bg037_field_hakama"
+   ],
+   "palettes": [
+    "FIELD_BARK",
+    "FIELD_PINE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.medic_vest",
+   "name": "Medic Field Vest",
+   "source": "collection:field",
+   "rank": "chunin",
+   "pieces": [
+    "tg039_medic_field_vest",
+    "bg031_jika_tabi_trousers"
+   ],
+   "palettes": [
+    "FIELD_MOSS",
+    "FIELD_SLATE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "field.bandaged_wrap",
+   "name": "Bandaged Combat Wrap",
+   "source": "collection:field",
+   "rank": "jonin",
+   "pieces": [
+    "tg040_bandaged_combat_wrap",
+    "bg028_hip_pouch_trousers"
+   ],
+   "palettes": [
+    "FIELD_DUSK",
+    "FIELD_UMBER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.everyday_kimono",
+   "name": "Everyday Kimono",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc026_everyday_kimono",
+    "bc026_kimono_skirt"
+   ],
+   "palettes": [
+    "HOUSEHOLD_SAKURA",
+    "HOUSEHOLD_MATCHA",
+    "HOUSEHOLD_WISTERIA",
+    "HOUSEHOLD_SKY"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.haori_kimono",
+   "name": "Haori over Kimono",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc027_haori_kimono",
+    "bc027_village_hakama"
+   ],
+   "palettes": [
+    "HOUSEHOLD_PLUM",
+    "HOUSEHOLD_SNOW_PINE",
+    "HOUSEHOLD_CHARCOAL",
+    "HOUSEHOLD_UMBER"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.knit_cardigan",
+   "name": "Knit Cardigan",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc028_knit_cardigan",
+    "bc030_house_trousers"
+   ],
+   "palettes": [
+    "HOUSEHOLD_PERSIMMON",
+    "HOUSEHOLD_MAPLE",
+    "HOUSEHOLD_MUSTARD",
+    "HOUSEHOLD_CHESTNUT",
+    "HOUSEHOLD_MOSS"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.checked_shirt",
+   "name": "Checked Shirt",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc029_checked_shirt",
+    "bc049_garden_trousers"
+   ],
+   "palettes": [],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.jinbei",
+   "name": "Jinbei",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc030_jinbei_top",
+    "bc031_jinbei_shorts"
+   ],
+   "palettes": [
+    "HOUSEHOLD_INDIGO",
+    "HOUSEHOLD_CREAM",
+    "HOUSEHOLD_TEAL",
+    "HOUSEHOLD_PEONY",
+    "HOUSEHOLD_SKY"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.festival_yukata",
+   "name": "Festival Yukata",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc031_festival_yukata_top",
+    "bc050_lantern_skirt"
+   ],
+   "palettes": [
+    "HOUSEHOLD_INDIGO",
+    "HOUSEHOLD_CREAM",
+    "HOUSEHOLD_TEAL",
+    "HOUSEHOLD_PEONY",
+    "HOUSEHOLD_SKY"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.summer_yukata",
+   "name": "Summer Yukata",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc032_summer_yukata",
+    "bc029_summer_yukata_hem"
+   ],
+   "palettes": [
+    "HOUSEHOLD_INDIGO",
+    "HOUSEHOLD_CREAM",
+    "HOUSEHOLD_TEAL",
+    "HOUSEHOLD_PEONY",
+    "HOUSEHOLD_SKY"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.scholar",
+   "name": "Scholar's Robe",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc033_scholar_robe",
+    "bc043_quilted_trousers"
+   ],
+   "palettes": [
+    "HOUSEHOLD_CHARCOAL",
+    "HOUSEHOLD_UMBER",
+    "HOUSEHOLD_SNOW_PINE",
+    "HOUSEHOLD_INDIGO",
+    "HOUSEHOLD_PLUM"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.shrine_attendant",
+   "name": "Shrine Attendant",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc034_shrine_kosode",
+    "bc028_shrine_hakama"
+   ],
+   "palettes": [
+    "HOUSEHOLD_SHRINE",
+    "HOUSEHOLD_INDIGO",
+    "HOUSEHOLD_SNOW_PINE",
+    "HOUSEHOLD_SAKURA",
+    "HOUSEHOLD_CHARCOAL"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.padded_hanten",
+   "name": "Padded Hanten",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc035_padded_hanten",
+    "bc037_kasuri_kimono_skirt"
+   ],
+   "palettes": [
+    "HOUSEHOLD_CHARCOAL",
+    "HOUSEHOLD_UMBER",
+    "HOUSEHOLD_MOSS",
+    "HOUSEHOLD_ASH_ROSE",
+    "HOUSEHOLD_SNOW_PINE"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.play_tee",
+   "name": "Play Clothes",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc036_play_tee",
+    "bc033_play_shorts"
+   ],
+   "palettes": [
+    "HOUSEHOLD_SKY",
+    "HOUSEHOLD_PERSIMMON",
+    "HOUSEHOLD_TEAL",
+    "HOUSEHOLD_MUSTARD",
+    "HOUSEHOLD_MATCHA",
+    "HOUSEHOLD_PEONY"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.kappogi",
+   "name": "Kitchen Kappogi",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc037_kappogi_apron",
+    "bc035_monpe"
+   ],
+   "palettes": [],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.samue",
+   "name": "Samue Workwear",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc038_samue_jacket",
+    "bc034_field_trousers"
+   ],
+   "palettes": [
+    "HOUSEHOLD_INDIGO",
+    "HOUSEHOLD_CHARCOAL",
+    "HOUSEHOLD_UMBER",
+    "HOUSEHOLD_MOSS",
+    "HOUSEHOLD_CHESTNUT"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.happi",
+   "name": "Festival Happi",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc039_happi_coat",
+    "bc040_festival_momohiki"
+   ],
+   "palettes": [
+    "HOUSEHOLD_INDIGO",
+    "HOUSEHOLD_PEONY",
+    "HOUSEHOLD_MAPLE",
+    "HOUSEHOLD_TEAL",
+    "HOUSEHOLD_PERSIMMON"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.striped_sweater",
+   "name": "Striped Sweater",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc040_striped_sweater",
+    "bc042_corduroy_trousers"
+   ],
+   "palettes": [
+    "HOUSEHOLD_PERSIMMON",
+    "HOUSEHOLD_MAPLE",
+    "HOUSEHOLD_MUSTARD",
+    "HOUSEHOLD_CHESTNUT",
+    "HOUSEHOLD_MOSS"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.knit_vest",
+   "name": "Knit Vest",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc041_knit_vest_shirt",
+    "bc030_house_trousers"
+   ],
+   "palettes": [
+    "HOUSEHOLD_MOSS",
+    "HOUSEHOLD_CHESTNUT",
+    "HOUSEHOLD_MUSTARD",
+    "HOUSEHOLD_CHARCOAL",
+    "HOUSEHOLD_PLUM"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.blossom_blouse",
+   "name": "Blossom Blouse",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc042_blossom_blouse",
+    "bc036_checked_skirt"
+   ],
+   "palettes": [
+    "HOUSEHOLD_SAKURA",
+    "HOUSEHOLD_MATCHA",
+    "HOUSEHOLD_WISTERIA",
+    "HOUSEHOLD_SKY"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.furisode",
+   "name": "Furisode",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc043_furisode_kimono",
+    "bc038_blossom_kimono_skirt"
+   ],
+   "palettes": [
+    "HOUSEHOLD_PEONY",
+    "HOUSEHOLD_SAKURA",
+    "HOUSEHOLD_WISTERIA",
+    "HOUSEHOLD_MAPLE",
+    "HOUSEHOLD_TEAL"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.shawl_kimono",
+   "name": "Shawl Kimono",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc044_shawl_kimono",
+    "bc026_kimono_skirt"
+   ],
+   "palettes": [
+    "HOUSEHOLD_PLUM",
+    "HOUSEHOLD_SNOW_PINE",
+    "HOUSEHOLD_CHARCOAL",
+    "HOUSEHOLD_UMBER"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.tasuki_kimono",
+   "name": "Tasuki Kimono",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc045_tasuki_kimono",
+    "bc047_maekake_apron"
+   ],
+   "palettes": [],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.onbu_parent",
+   "name": "Parent with Baby",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc046_onbu_carrier",
+    "bc046_wide_culottes"
+   ],
+   "palettes": [],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.veranda_summer",
+   "name": "Veranda Summer",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc047_tenugui_undershirt",
+    "bc039_cropped_linen_trousers"
+   ],
+   "palettes": [
+    "HOUSEHOLD_INDIGO",
+    "HOUSEHOLD_CREAM",
+    "HOUSEHOLD_TEAL",
+    "HOUSEHOLD_PEONY",
+    "HOUSEHOLD_SKY"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.michiyuki",
+   "name": "Michiyuki Coat",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc048_michiyuki_coat",
+    "bc045_student_hakama"
+   ],
+   "palettes": [
+    "HOUSEHOLD_PLUM",
+    "HOUSEHOLD_SNOW_PINE",
+    "HOUSEHOLD_CHARCOAL",
+    "HOUSEHOLD_UMBER"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.heko_obi_child",
+   "name": "Child's Heko-obi Kimono",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc049_heko_obi_kimono",
+    "bc031_jinbei_shorts"
+   ],
+   "palettes": [
+    "HOUSEHOLD_SKY",
+    "HOUSEHOLD_SAKURA",
+    "HOUSEHOLD_CREAM",
+    "HOUSEHOLD_MATCHA",
+    "HOUSEHOLD_PEONY"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "household.miko_dance",
+   "name": "Shrine Maiden's Dance",
+   "source": "collection:household",
+   "rank": "civilian",
+   "pieces": [
+    "tc050_miko_chihaya",
+    "bc028_shrine_hakama"
+   ],
+   "palettes": [
+    "HOUSEHOLD_SHRINE",
+    "HOUSEHOLD_INDIGO",
+    "HOUSEHOLD_SNOW_PINE",
+    "HOUSEHOLD_SAKURA",
+    "HOUSEHOLD_CHARCOAL"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.wrap_runner",
+   "name": "Wrap Runner",
+   "source": "collection:kunoichi",
+   "rank": "genin",
+   "pieces": [
+    "tg041_crossed_wrap_top",
+    "bg041_split_skirt_shorts"
+   ],
+   "palettes": [
+    "KUNOICHI_PLUM",
+    "KUNOICHI_SAKURA",
+    "KUNOICHI_TEAL"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.mesh_jacket",
+   "name": "Mesh Jacket",
+   "source": "collection:kunoichi",
+   "rank": "chunin",
+   "pieces": [
+    "tg042_cropped_mesh_jacket",
+    "bg058_mesh_shorts_boots"
+   ],
+   "palettes": [
+    "KUNOICHI_SLATE",
+    "KUNOICHI_INDIGO",
+    "KUNOICHI_CRIMSON"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.high_collar",
+   "name": "High Collar",
+   "source": "collection:kunoichi",
+   "rank": "genin",
+   "pieces": [
+    "tg043_high_collar_sleeveless",
+    "bg047_shorts_thigh_wraps"
+   ],
+   "palettes": [
+    "KUNOICHI_CRIMSON",
+    "KUNOICHI_JADE",
+    "KUNOICHI_LILAC"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.qipao_scout",
+   "name": "Qipao Scout",
+   "source": "collection:kunoichi",
+   "rank": "chunin",
+   "pieces": [
+    "tg044_qipao_tunic",
+    "bg051_tabi_leggings"
+   ],
+   "palettes": [
+    "KUNOICHI_CRIMSON",
+    "KUNOICHI_JADE",
+    "KUNOICHI_INDIGO"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.armored_bodice",
+   "name": "Armored Bodice",
+   "source": "collection:kunoichi",
+   "rank": "jonin",
+   "pieces": [
+    "tg045_armored_bodice",
+    "bg060_kunoichi_greaves"
+   ],
+   "palettes": [
+    "KUNOICHI_MOSS",
+    "KUNOICHI_NIGHT",
+    "KUNOICHI_CRIMSON"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.kimono_sleeve",
+   "name": "Kimono Sleeve",
+   "source": "collection:kunoichi",
+   "rank": "chunin",
+   "pieces": [
+    "tg046_kimono_sleeve_obi",
+    "bg045_hakama_skirt"
+   ],
+   "palettes": [
+    "KUNOICHI_INDIGO",
+    "KUNOICHI_PLUM",
+    "KUNOICHI_SAKURA"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.halter_skort",
+   "name": "Halter and Skort",
+   "source": "collection:kunoichi",
+   "rank": "genin",
+   "pieces": [
+    "tg047_halter_mesh_top",
+    "bg052_pleated_skort"
+   ],
+   "palettes": [
+    "KUNOICHI_TEAL",
+    "KUNOICHI_SAKURA",
+    "KUNOICHI_LILAC"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.flak_wrap",
+   "name": "Flak Wrap",
+   "source": "collection:kunoichi",
+   "rank": "jonin",
+   "pieces": [
+    "tg048_flak_wrap",
+    "bg059_tail_skirt"
+   ],
+   "palettes": [
+    "KUNOICHI_MOSS",
+    "KUNOICHI_JADE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.infiltrator",
+   "name": "Infiltrator",
+   "source": "collection:kunoichi",
+   "rank": "chunin",
+   "pieces": [
+    "tg049_infiltration_top",
+    "bg043_mesh_leggings_kneepads"
+   ],
+   "palettes": [
+    "KUNOICHI_NIGHT",
+    "KUNOICHI_INDIGO"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.half_cape",
+   "name": "Half Cape",
+   "source": "collection:kunoichi",
+   "rank": "jonin",
+   "pieces": [
+    "tg050_shoulder_cape_top",
+    "bg049_wrap_skirt_boots"
+   ],
+   "palettes": [
+    "KUNOICHI_AMBER",
+    "KUNOICHI_TEAL",
+    "KUNOICHI_CRIMSON"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.bolero",
+   "name": "Bolero",
+   "source": "collection:kunoichi",
+   "rank": "genin",
+   "pieces": [
+    "tg051_bolero_tunic",
+    "bg056_stocking_shorts"
+   ],
+   "palettes": [
+    "KUNOICHI_AMBER",
+    "KUNOICHI_TEAL",
+    "KUNOICHI_SAND"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.long_tunic",
+   "name": "Long Tunic",
+   "source": "collection:kunoichi",
+   "rank": "genin",
+   "pieces": [
+    "tg052_vented_long_tunic",
+    "bg044_wrapped_capris"
+   ],
+   "palettes": [
+    "KUNOICHI_SAND",
+    "KUNOICHI_MOSS",
+    "KUNOICHI_SLATE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.short_haori",
+   "name": "Short Haori",
+   "source": "collection:kunoichi",
+   "rank": "jonin",
+   "pieces": [
+    "tg053_short_haori",
+    "bg057_narrow_hakama"
+   ],
+   "palettes": [
+    "KUNOICHI_PLUM",
+    "KUNOICHI_INDIGO",
+    "KUNOICHI_NIGHT"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.sarashi",
+   "name": "Sarashi Jacket",
+   "source": "collection:kunoichi",
+   "rank": "chunin",
+   "pieces": [
+    "tg054_sarashi_jacket",
+    "bg054_cargo_capris"
+   ],
+   "palettes": [
+    "KUNOICHI_AMBER",
+    "KUNOICHI_SAND",
+    "KUNOICHI_MOSS"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.field_medic",
+   "name": "Field Medic",
+   "source": "collection:kunoichi",
+   "rank": "chunin",
+   "pieces": [
+    "tg055_medic_tunic",
+    "bg042_apron_skirt_leggings"
+   ],
+   "palettes": [
+    "KUNOICHI_JADE",
+    "KUNOICHI_LILAC",
+    "KUNOICHI_SAKURA"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.corset_obi",
+   "name": "Corset Obi",
+   "source": "collection:kunoichi",
+   "rank": "jonin",
+   "pieces": [
+    "tg056_corset_obi_top",
+    "bg046_long_slit_skirt"
+   ],
+   "palettes": [
+    "KUNOICHI_CRIMSON",
+    "KUNOICHI_PLUM",
+    "KUNOICHI_NIGHT"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.taijutsu",
+   "name": "Taijutsu Gi",
+   "source": "collection:kunoichi",
+   "rank": "genin",
+   "pieces": [
+    "tg057_taijutsu_gi",
+    "bg050_flared_trousers"
+   ],
+   "palettes": [
+    "KUNOICHI_CRIMSON",
+    "KUNOICHI_INDIGO",
+    "KUNOICHI_AMBER"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.split_sleeve",
+   "name": "Split Sleeve",
+   "source": "collection:kunoichi",
+   "rank": "chunin",
+   "pieces": [
+    "tg058_split_sleeve_tunic",
+    "bg055_asymmetric_skirt"
+   ],
+   "palettes": [
+    "KUNOICHI_LILAC",
+    "KUNOICHI_SAKURA",
+    "KUNOICHI_TEAL"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.scale_guard",
+   "name": "Scale Guard",
+   "source": "collection:kunoichi",
+   "rank": "jonin",
+   "pieces": [
+    "tg059_scale_vest",
+    "bg048_armored_tassets"
+   ],
+   "palettes": [
+    "KUNOICHI_NIGHT",
+    "KUNOICHI_CRIMSON",
+    "KUNOICHI_SLATE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "kunoichi.travel_coat",
+   "name": "Travel Coat",
+   "source": "collection:kunoichi",
+   "rank": "jonin",
+   "pieces": [
+    "tg060_sleeveless_long_coat",
+    "bg053_sash_trousers"
+   ],
+   "palettes": [
+    "KUNOICHI_SLATE",
+    "KUNOICHI_AMBER",
+    "KUNOICHI_INDIGO"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.ramen_cook",
+   "name": "Ramen Cook",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc001_ramen_cook_jacket",
+    "bc007_kitchen_trousers"
+   ],
+   "palettes": [
+    "MARKET_RAMEN"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.noodle_server",
+   "name": "Noodle Server",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc002_noodle_server_kosode",
+    "bc019_kasuri_long_skirt"
+   ],
+   "palettes": [
+    "MARKET_SAKURA",
+    "MARKET_PERSIMMON",
+    "MARKET_INDIGO"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.stall_happi",
+   "name": "Stallholder's Happi",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc003_festival_happi",
+    "bc002_momohiki"
+   ],
+   "palettes": [
+    "MARKET_FESTIVAL",
+    "MARKET_INDIGO",
+    "MARKET_MUSTARD"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.haragake",
+   "name": "Tradesman",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc004_haragake_bib",
+    "bc004_wharf_trousers"
+   ],
+   "palettes": [
+    "MARKET_INDIGO",
+    "MARKET_BENGARA",
+    "MARKET_UMBER"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.teahouse",
+   "name": "Teahouse Server",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc005_teahouse_kosode",
+    "bc005_short_kimono_skirt"
+   ],
+   "palettes": [
+    "MARKET_TEA",
+    "MARKET_SAKURA",
+    "MARKET_WISTERIA"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.merchant",
+   "name": "Merchant",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc006_merchant_haori",
+    "bc009_striped_kimono_skirt"
+   ],
+   "palettes": [
+    "MARKET_UMBER",
+    "MARKET_CHARCOAL",
+    "MARKET_SLATE"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.smith",
+   "name": "Smith",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc007_smith_leather_apron",
+    "bc021_smith_trousers"
+   ],
+   "palettes": [
+    "MARKET_SOOT",
+    "MARKET_SLATE"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.carpenter",
+   "name": "Carpenter",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc008_carpenter_banten",
+    "bc018_carpenter_trousers"
+   ],
+   "palettes": [
+    "MARKET_STRAW",
+    "MARKET_SAND",
+    "MARKET_INDIGO"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.farmer",
+   "name": "Farmer",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc009_farmer_noragi",
+    "bc013_patched_monpe"
+   ],
+   "palettes": [
+    "MARKET_INDIGO",
+    "MARKET_HARBOR",
+    "MARKET_MOSS"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.porter",
+   "name": "Porter",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc010_porter_vest",
+    "bc012_porter_shorts"
+   ],
+   "palettes": [
+    "MARKET_BENGARA",
+    "MARKET_UMBER",
+    "MARKET_MOSS"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.fishmonger",
+   "name": "Fishmonger",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc011_fishmonger_apron",
+    "bc011_fish_market_boots"
+   ],
+   "palettes": [
+    "MARKET_HARBOR",
+    "MARKET_INDIGO",
+    "MARKET_FESTIVAL"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.runner",
+   "name": "Delivery Runner",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc012_runner_tunic",
+    "bc010_hanzubon"
+   ],
+   "palettes": [
+    "MARKET_MUSTARD",
+    "MARKET_PERSIMMON",
+    "MARKET_TEA"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.shop_clerk",
+   "name": "Shop Clerk",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc013_shop_clerk_maekake",
+    "bc001_monpe"
+   ],
+   "palettes": [
+    "MARKET_SLATE",
+    "MARKET_SAND",
+    "MARKET_STRAW"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.noren_jacket",
+   "name": "Stallholder",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc014_noren_jacket",
+    "bc008_showa_slacks"
+   ],
+   "palettes": [
+    "MARKET_MOSS",
+    "MARKET_PERSIMMON",
+    "MARKET_PLUM"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.roofer",
+   "name": "Roofer",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc015_sashiko_jacket",
+    "bc015_sashiko_trousers"
+   ],
+   "palettes": [
+    "MARKET_INDIGO",
+    "MARKET_CHARCOAL"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.dango_vendor",
+   "name": "Dango Vendor",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc016_kappogi_smock",
+    "bc022_pleated_skirt"
+   ],
+   "palettes": [
+    "MARKET_PERSIMMON",
+    "MARKET_PLUM",
+    "MARKET_TEA"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.summer_evening",
+   "name": "Summer Evening",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc017_jinbei",
+    "bc020_jinbei_shorts"
+   ],
+   "palettes": [
+    "MARKET_INDIGO",
+    "MARKET_WISTERIA",
+    "MARKET_SLATE"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.shopkeeper",
+   "name": "Shopkeeper",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc018_showa_cardigan",
+    "bc008_showa_slacks"
+   ],
+   "palettes": [
+    "MARKET_UMBER",
+    "MARKET_MOSS",
+    "MARKET_SAND"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.greengrocer",
+   "name": "Greengrocer",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc019_grocer_shirt",
+    "bc016_wrap_work_skirt"
+   ],
+   "palettes": [
+    "MARKET_TEA",
+    "MARKET_MUSTARD",
+    "MARKET_HARBOR"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.innkeeper",
+   "name": "Innkeeper",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc020_innkeeper_kimono",
+    "bc025_innkeeper_kimono_skirt"
+   ],
+   "palettes": [
+    "MARKET_PLUM",
+    "MARKET_CHARCOAL",
+    "MARKET_WISTERIA"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.potter",
+   "name": "Potter",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc021_potter_samue",
+    "bc003_karusan_hakama"
+   ],
+   "palettes": [
+    "MARKET_SAND",
+    "MARKET_UMBER",
+    "MARKET_SLATE"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.dyer",
+   "name": "Indigo Dyer",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc022_dyer_shirt",
+    "bc014_dyer_trousers"
+   ],
+   "palettes": [
+    "MARKET_INDIGO",
+    "MARKET_HARBOR"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.night_stall",
+   "name": "Night Stall Keeper",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc023_padded_hanten",
+    "bc023_quilted_trousers"
+   ],
+   "palettes": [
+    "MARKET_WISTERIA",
+    "MARKET_BENGARA",
+    "MARKET_CHARCOAL"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.peddler",
+   "name": "Medicine Peddler",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc024_peddler_kimono",
+    "bc006_hitched_kimono"
+   ],
+   "palettes": [
+    "MARKET_HARBOR",
+    "MARKET_INDIGO",
+    "MARKET_UMBER"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "market.elder",
+   "name": "Shop Elder",
+   "source": "collection:market",
+   "rank": "civilian",
+   "pieces": [
+    "tc025_chanchanko_vest",
+    "bc017_field_hakama"
+   ],
+   "palettes": [
+    "MARKET_CHARCOAL",
+    "MARKET_BENGARA",
+    "MARKET_PLUM"
+   ],
+   "price": 120,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.sleeveless_gi",
+   "name": "Sleeveless Gi",
+   "source": "collection:rugged",
+   "rank": "genin",
+   "pieces": [
+    "tg081_sleeveless_gi",
+    "bg081_baggy_fighting_trousers"
+   ],
+   "palettes": [
+    "RUGGED_RUST",
+    "RUGGED_EMBER",
+    "RUGGED_CLAY"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.chest_wraps",
+   "name": "Chest Wraps",
+   "source": "collection:rugged",
+   "rank": "genin",
+   "pieces": [
+    "tg082_chest_wraps",
+    "bg091_tattered_trousers"
+   ],
+   "palettes": [
+    "RUGGED_SAND",
+    "RUGGED_BARK",
+    "RUGGED_RUST"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.open_field_vest",
+   "name": "Open Field Vest",
+   "source": "collection:rugged",
+   "rank": "chunin",
+   "pieces": [
+    "tg083_open_field_vest",
+    "bg083_greaved_trousers"
+   ],
+   "palettes": [
+    "RUGGED_MOSS",
+    "RUGGED_STORM",
+    "RUGGED_FERN"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.fur_collar",
+   "name": "Fur-Collar Jacket",
+   "source": "collection:rugged",
+   "rank": "jonin",
+   "pieces": [
+    "tg084_fur_collar_jacket",
+    "bg085_fur_lined_boots"
+   ],
+   "palettes": [
+    "RUGGED_BARK",
+    "RUGGED_STORM",
+    "RUGGED_SNOW"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.blanket_poncho",
+   "name": "Blanket Poncho",
+   "source": "collection:rugged",
+   "rank": "chunin",
+   "pieces": [
+    "tg085_travel_poncho",
+    "bg088_travel_gaiters"
+   ],
+   "palettes": [
+    "RUGGED_EMBER",
+    "RUGGED_SAND",
+    "RUGGED_CLAY"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.shoulder_cape",
+   "name": "Shoulder Cape",
+   "source": "collection:rugged",
+   "rank": "chunin",
+   "pieces": [
+    "tg086_short_cape",
+    "bg086_wrapped_shorts"
+   ],
+   "palettes": [
+    "RUGGED_STORM",
+    "RUGGED_SLATE",
+    "RUGGED_MOSS"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.straw_rain_coat",
+   "name": "Straw Rain Coat",
+   "source": "collection:rugged",
+   "rank": "jonin",
+   "pieces": [
+    "tg087_straw_coat",
+    "bg082_wrapped_hakama"
+   ],
+   "palettes": [
+    "RUGGED_STRAW",
+    "RUGGED_SAND"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.rain_cape",
+   "name": "Rain Cape",
+   "source": "collection:rugged",
+   "rank": "jonin",
+   "pieces": [
+    "tg088_rain_cape",
+    "bg097_ranger_boots"
+   ],
+   "palettes": [
+    "RUGGED_RAIN",
+    "RUGGED_SLATE",
+    "RUGGED_STORM"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.forest_camo",
+   "name": "Forest Camo",
+   "source": "collection:rugged",
+   "rank": "chunin",
+   "pieces": [
+    "tg089_forest_camo_tunic",
+    "bg087_camo_trousers"
+   ],
+   "palettes": [
+    "RUGGED_FERN",
+    "RUGGED_MOSS"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.storm_layers",
+   "name": "Storm Layers",
+   "source": "collection:rugged",
+   "rank": "jonin",
+   "pieces": [
+    "tg090_storm_layers",
+    "bg090_storm_trousers"
+   ],
+   "palettes": [
+    "RUGGED_STORM",
+    "RUGGED_SNOW",
+    "RUGGED_SLATE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.training_dogi",
+   "name": "Training Dogi",
+   "source": "collection:rugged",
+   "rank": "genin",
+   "pieces": [
+    "tg091_training_dogi",
+    "bg092_shin_guard_shorts"
+   ],
+   "palettes": [
+    "RUGGED_RUST",
+    "RUGGED_SLATE",
+    "RUGGED_EMBER"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.wanderer",
+   "name": "Wanderer's Tunic",
+   "source": "collection:rugged",
+   "rank": "genin",
+   "pieces": [
+    "tg092_wanderer_tunic",
+    "bg084_rolled_trousers"
+   ],
+   "palettes": [
+    "RUGGED_SAND",
+    "RUGGED_CLAY",
+    "RUGGED_OCHRE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.hunter",
+   "name": "Hunter's Jerkin",
+   "source": "collection:rugged",
+   "rank": "chunin",
+   "pieces": [
+    "tg093_hunter_jerkin",
+    "bg089_hunter_breeches"
+   ],
+   "palettes": [
+    "RUGGED_MOSS",
+    "RUGGED_BARK",
+    "RUGGED_FERN"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.mountain_wrap",
+   "name": "Mountain Wrap",
+   "source": "collection:rugged",
+   "rank": "jonin",
+   "pieces": [
+    "tg094_mountain_wrap",
+    "bg094_mountain_hakama"
+   ],
+   "palettes": [
+    "RUGGED_EMBER",
+    "RUGGED_OCHRE",
+    "RUGGED_DUSK"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.wayfarer",
+   "name": "Wayfarer Mantle",
+   "source": "collection:rugged",
+   "rank": "jonin",
+   "pieces": [
+    "tg095_wayfarer_mantle",
+    "bg093_waist_wrap_trousers"
+   ],
+   "palettes": [
+    "RUGGED_SAND",
+    "RUGGED_DUSK",
+    "RUGGED_STORM"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.padded_vest",
+   "name": "Padded Long Vest",
+   "source": "collection:rugged",
+   "rank": "jonin",
+   "pieces": [
+    "tg096_padded_vest",
+    "bg099_greaved_hakama"
+   ],
+   "palettes": [
+    "RUGGED_RUST",
+    "RUGGED_SLATE",
+    "RUGGED_DUSK"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.patchwork_haori",
+   "name": "Patchwork Haori",
+   "source": "collection:rugged",
+   "rank": "chunin",
+   "pieces": [
+    "tg097_patchwork_haori",
+    "bg096_drawstring_trousers"
+   ],
+   "palettes": [
+    "RUGGED_OCHRE",
+    "RUGGED_CLAY",
+    "RUGGED_BARK"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.scarf_runner",
+   "name": "Long-Scarf Runner",
+   "source": "collection:rugged",
+   "rank": "genin",
+   "pieces": [
+    "tg098_scarf_tank",
+    "bg098_climbing_pants"
+   ],
+   "palettes": [
+    "RUGGED_EMBER",
+    "RUGGED_MOSS",
+    "RUGGED_SLATE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.lamellar",
+   "name": "Lamellar Vest",
+   "source": "collection:rugged",
+   "rank": "jonin",
+   "pieces": [
+    "tg099_lamellar_vest",
+    "bg095_knee_bound_trousers"
+   ],
+   "palettes": [
+    "RUGGED_BARK",
+    "RUGGED_RUST",
+    "RUGGED_DUSK"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "rugged.snowfield",
+   "name": "Snowfield Parka",
+   "source": "collection:rugged",
+   "rank": "jonin",
+   "pieces": [
+    "tg100_snowfield_parka",
+    "bg100_fur_wrapped_leggings"
+   ],
+   "palettes": [
+    "RUGGED_SNOW",
+    "RUGGED_STORM",
+    "RUGGED_BARK"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.medic_coat",
+   "name": "Medic Coat",
+   "source": "collection:specialist",
+   "rank": "chunin",
+   "pieces": [
+    "tg061_medic_coat",
+    "bg062_medic_slacks"
+   ],
+   "palettes": [
+    "SPECIALIST_MEDIC",
+    "SPECIALIST_WARD"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.field_medic",
+   "name": "Field Medic",
+   "source": "collection:specialist",
+   "rank": "jonin",
+   "pieces": [
+    "tg062_field_medic_vest",
+    "bg061_ward_trousers"
+   ],
+   "palettes": [
+    "SPECIALIST_MEDIC",
+    "SPECIALIST_WARD",
+    "SPECIALIST_HERBAL"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.ward_trainee",
+   "name": "Ward Trainee",
+   "source": "collection:specialist",
+   "rank": "genin",
+   "pieces": [
+    "tg063_ward_tunic",
+    "bg076_ward_split_skirt"
+   ],
+   "palettes": [
+    "SPECIALIST_HERBAL",
+    "SPECIALIST_WARD"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.barrier_robe",
+   "name": "Barrier Robe",
+   "source": "collection:specialist",
+   "rank": "chunin",
+   "pieces": [
+    "tg064_barrier_robe",
+    "bg064_barrier_hakama"
+   ],
+   "palettes": [
+    "SPECIALIST_BARRIER",
+    "SPECIALIST_SEALER"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.sealer_haori",
+   "name": "Sealer Haori",
+   "source": "collection:specialist",
+   "rank": "jonin",
+   "pieces": [
+    "tg065_sealer_haori",
+    "bg063_sealer_hakama"
+   ],
+   "palettes": [
+    "SPECIALIST_SEALER",
+    "SPECIALIST_BARRIER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.seal_tabard",
+   "name": "Seal Tabard",
+   "source": "collection:specialist",
+   "rank": "chunin",
+   "pieces": [
+    "tg066_seal_tabard",
+    "bg077_sealer_split_skirt"
+   ],
+   "palettes": [
+    "SPECIALIST_BARRIER",
+    "SPECIALIST_SEALER"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.cipher_coat",
+   "name": "Cipher Coat",
+   "source": "collection:specialist",
+   "rank": "jonin",
+   "pieces": [
+    "tg067_cipher_coat",
+    "bg065_archive_slacks"
+   ],
+   "palettes": [
+    "SPECIALIST_CIPHER",
+    "SPECIALIST_INK"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.archivist",
+   "name": "Archivist",
+   "source": "collection:specialist",
+   "rank": "chunin",
+   "pieces": [
+    "tg068_archivist_jacket",
+    "bg078_scholar_split_skirt"
+   ],
+   "palettes": [
+    "SPECIALIST_ARCHIVE",
+    "SPECIALIST_CIPHER"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.intelligence",
+   "name": "Intelligence Overcoat",
+   "source": "collection:specialist",
+   "rank": "jonin",
+   "pieces": [
+    "tg069_intelligence_overcoat",
+    "bg066_umanori_hakama"
+   ],
+   "palettes": [
+    "SPECIALIST_INK",
+    "SPECIALIST_CIPHER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.sensor_mantle",
+   "name": "Sensor Mantle",
+   "source": "collection:specialist",
+   "rank": "chunin",
+   "pieces": [
+    "tg070_sensor_mantle",
+    "bg068_sensor_trousers"
+   ],
+   "palettes": [
+    "SPECIALIST_SENSOR"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.tracking_cloak",
+   "name": "Tracking Cloak",
+   "source": "collection:specialist",
+   "rank": "jonin",
+   "pieces": [
+    "tg071_tracking_cloak",
+    "bg067_tracker_wraps"
+   ],
+   "palettes": [
+    "SPECIALIST_TRACKER",
+    "SPECIALIST_SENSOR"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.sensor_cowl",
+   "name": "Sensor Cowl",
+   "source": "collection:specialist",
+   "rank": "genin",
+   "pieces": [
+    "tg072_sensor_cowl",
+    "bg067_tracker_wraps"
+   ],
+   "palettes": [
+    "SPECIALIST_SENSOR",
+    "SPECIALIST_TRACKER"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.instructor",
+   "name": "Academy Instructor",
+   "source": "collection:specialist",
+   "rank": "chunin",
+   "pieces": [
+    "tg073_instructor_vest",
+    "bg069_instructor_trousers"
+   ],
+   "palettes": [
+    "SPECIALIST_INSTRUCTOR",
+    "SPECIALIST_PROCTOR"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.proctor",
+   "name": "Exam Proctor",
+   "source": "collection:specialist",
+   "rank": "jonin",
+   "pieces": [
+    "tg074_proctor_vest",
+    "bg065_archive_slacks"
+   ],
+   "palettes": [
+    "SPECIALIST_PROCTOR",
+    "SPECIALIST_INSTRUCTOR"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.gate_guard",
+   "name": "Gate Guard",
+   "source": "collection:specialist",
+   "rank": "chunin",
+   "pieces": [
+    "tg075_gate_guard",
+    "bg070_guard_greaves"
+   ],
+   "palettes": [
+    "SPECIALIST_GATE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.night_patrol",
+   "name": "Night Patrol",
+   "source": "collection:specialist",
+   "rank": "chunin",
+   "pieces": [
+    "tg076_night_patrol_coat",
+    "bg071_patrol_trousers"
+   ],
+   "palettes": [
+    "SPECIALIST_NIGHT_WATCH"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.courier",
+   "name": "Courier",
+   "source": "collection:specialist",
+   "rank": "genin",
+   "pieces": [
+    "tg077_courier_harness",
+    "bg072_courier_breeches"
+   ],
+   "palettes": [
+    "SPECIALIST_COURIER",
+    "SPECIALIST_SKY_COURIER"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.messenger",
+   "name": "Messenger",
+   "source": "collection:specialist",
+   "rank": "chunin",
+   "pieces": [
+    "tg078_messenger_jacket",
+    "bg073_runner_wraps"
+   ],
+   "palettes": [
+    "SPECIALIST_SKY_COURIER",
+    "SPECIALIST_COURIER"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.blade_bandolier",
+   "name": "Blade Bandolier",
+   "source": "collection:specialist",
+   "rank": "genin",
+   "pieces": [
+    "tg079_blade_bandolier",
+    "bg074_armory_trousers"
+   ],
+   "palettes": [
+    "SPECIALIST_BLADE",
+    "SPECIALIST_ARMORY"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "specialist.armorer",
+   "name": "Armorer",
+   "source": "collection:specialist",
+   "rank": "jonin",
+   "pieces": [
+    "tg080_armorer_coat",
+    "bg074_armory_trousers"
+   ],
+   "palettes": [
+    "SPECIALIST_ARMORY",
+    "SPECIALIST_BLADE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor"
+  },
+  {
+   "id": "aburame.shino_coat",
+   "name": "Shino Coat",
+   "source": "clan:aburame",
+   "rank": "genin",
+   "pieces": [
+    "t1001_shino_coat",
+    "b1001_aburame_trousers"
+   ],
+   "palettes": [
+    "ABURAME_SAGE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "aburame.hooded_longcoat",
+   "name": "Hooded Longcoat",
+   "source": "clan:aburame",
+   "rank": "chunin",
+   "pieces": [
+    "t1002_hooded_longcoat",
+    "b1001_aburame_trousers"
+   ],
+   "palettes": [
+    "ABURAME_OLIVE",
+    "ABURAME_MOSS",
+    "ABURAME_SAGE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "aburame.kikai_flak",
+   "name": "Kikai Flak",
+   "source": "clan:aburame",
+   "rank": "jonin",
+   "pieces": [
+    "t1003_kikai_flak",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "ABURAME_OLIVE",
+    "ABURAME_MOSS"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "aburame.teacher_jacket",
+   "name": "Teacher Jacket",
+   "source": "clan:aburame",
+   "rank": "jonin",
+   "pieces": [
+    "t1004_teacher_jacket",
+    "b1004_wrapped_slacks"
+   ],
+   "palettes": [
+    "ABURAME_SLATE",
+    "ABURAME_SAGE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "aburame.shibi_robe",
+   "name": "Shibi Robe",
+   "source": "clan:aburame",
+   "rank": "jonin",
+   "pieces": [
+    "t1005_shibi_robe",
+    "b1001_aburame_trousers"
+   ],
+   "palettes": [
+    "ABURAME_SAGE",
+    "ABURAME_DUST",
+    "ABURAME_SLATE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "aburame.torune_suit",
+   "name": "Torune Suit",
+   "source": "clan:aburame",
+   "rank": "anbu",
+   "pieces": [
+    "t1006_torune_suit",
+    "b1003_root_apron"
+   ],
+   "palettes": [
+    "ABURAME_ROOT"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  },
+  {
+   "id": "aburame.moth_cape",
+   "name": "Moth Cape",
+   "source": "clan:aburame",
+   "rank": "genin",
+   "pieces": [
+    "t1007_moth_cape",
+    "b1002_field_shorts"
+   ],
+   "palettes": [
+    "ABURAME_MOTH",
+    "ABURAME_KHAKI"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "aburame.field_shirt",
+   "name": "Field Shirt",
+   "source": "clan:aburame",
+   "rank": "chunin",
+   "pieces": [
+    "t1008_field_shirt",
+    "b1002_field_shorts"
+   ],
+   "palettes": [
+    "ABURAME_KHAKI",
+    "ABURAME_MOTH"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "aburame.hive_tunic",
+   "name": "Hive Tunic",
+   "source": "clan:aburame",
+   "rank": "genin",
+   "pieces": [
+    "t1009_hive_tunic",
+    "b1004_wrapped_slacks"
+   ],
+   "palettes": [
+    "ABURAME_MOSS",
+    "ABURAME_KHAKI",
+    "ABURAME_MOTH"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "aburame.elder_mantle",
+   "name": "Elder Mantle",
+   "source": "clan:aburame",
+   "rank": "jonin",
+   "pieces": [
+    "t1010_elder_mantle",
+    "b1001_aburame_trousers"
+   ],
+   "palettes": [
+    "ABURAME_DUST"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "akimichi.shoku_armor",
+   "name": "Shoku Armor",
+   "source": "clan:akimichi",
+   "rank": "chunin",
+   "pieces": [
+    "t601_shoku_armor",
+    "b604_lacquer_greaves"
+   ],
+   "palettes": [
+    "AKIMICHI_CRIMSON",
+    "AKIMICHI_LACQUER"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "akimichi.leaf_scarf",
+   "name": "Leaf Scarf",
+   "source": "clan:akimichi",
+   "rank": "genin",
+   "pieces": [
+    "t602_leaf_scarf",
+    "b603_padded_trousers"
+   ],
+   "palettes": [
+    "AKIMICHI_FOREST"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "akimichi.lacquer_samurai",
+   "name": "Lacquer Samurai",
+   "source": "clan:akimichi",
+   "rank": "jonin",
+   "pieces": [
+    "t603_lacquer_samurai",
+    "b601_armored_hakama"
+   ],
+   "palettes": [
+    "AKIMICHI_LACQUER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "akimichi.mawashi_wrap",
+   "name": "Mawashi Wrap",
+   "source": "clan:akimichi",
+   "rank": "genin",
+   "pieces": [
+    "t604_mawashi_wrap",
+    "b602_sagari_shorts"
+   ],
+   "palettes": [
+    "AKIMICHI_CRIMSON",
+    "AKIMICHI_HARVEST"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "akimichi.snack_bandolier",
+   "name": "Snack Bandolier",
+   "source": "clan:akimichi",
+   "rank": "genin",
+   "pieces": [
+    "t605_snack_bandolier",
+    "b603_padded_trousers"
+   ],
+   "palettes": [
+    "AKIMICHI_HARVEST",
+    "AKIMICHI_FOREST"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "akimichi.sash_kimono",
+   "name": "Sash Kimono",
+   "source": "clan:akimichi",
+   "rank": "genin",
+   "pieces": [
+    "t606_sash_kimono",
+    "b605_long_boots"
+   ],
+   "palettes": [
+    "AKIMICHI_CHOCHO",
+    "AKIMICHI_CRIMSON"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "akimichi.padded_gambeson",
+   "name": "Padded Gambeson",
+   "source": "clan:akimichi",
+   "rank": "chunin",
+   "pieces": [
+    "t607_padded_gambeson",
+    "b601_armored_hakama"
+   ],
+   "palettes": [
+    "AKIMICHI_FOREST",
+    "AKIMICHI_HARVEST"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "akimichi.scarf_tunic",
+   "name": "Scarf Tunic",
+   "source": "clan:akimichi",
+   "rank": "academy",
+   "pieces": [
+    "t608_scarf_tunic",
+    "b603_padded_trousers"
+   ],
+   "palettes": [
+    "AKIMICHI_HARVEST",
+    "AKIMICHI_CRIMSON"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "akimichi.akimichi_jonin",
+   "name": "Akimichi Jonin",
+   "source": "clan:akimichi",
+   "rank": "jonin",
+   "pieces": [
+    "t609_akimichi_jonin",
+    "b604_lacquer_greaves"
+   ],
+   "palettes": [
+    "AKIMICHI_JONIN"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "akimichi.feast_haori",
+   "name": "Feast Haori",
+   "source": "clan:akimichi",
+   "rank": "jonin",
+   "pieces": [
+    "t610_feast_haori",
+    "b601_armored_hakama"
+   ],
+   "palettes": [
+    "AKIMICHI_FEAST"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "gekko.proctor",
+   "name": "Exam Proctor",
+   "source": "clan:gekko",
+   "rank": "jonin",
+   "pieces": [
+    "t1501_proctor_vest",
+    "b1502_swordsman_trousers"
+   ],
+   "palettes": [
+    "GEKKO_PROCTOR"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "gekko.cat_blade",
+   "name": "ANBU Cat Blade",
+   "source": "clan:gekko",
+   "rank": "anbu",
+   "pieces": [
+    "t1503_anbu_swordswoman",
+    "b06_anbu_greaves"
+   ],
+   "palettes": [
+    "GEKKO_ANBU"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  },
+  {
+   "id": "gekko.crescent_haori",
+   "name": "Crescent Haori",
+   "source": "clan:gekko",
+   "rank": "jonin",
+   "pieces": [
+    "t1502_crescent_haori",
+    "b1501_gekko_hakama"
+   ],
+   "palettes": [],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "gekko.strap_tunic",
+   "name": "Sword-Strap Tunic",
+   "source": "clan:gekko",
+   "rank": "chunin",
+   "pieces": [
+    "t1504_strap_tunic",
+    "b1503_strap_leggings"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "gekko.moon_dancer",
+   "name": "Crescent Dancer",
+   "source": "clan:gekko",
+   "rank": "chunin",
+   "pieces": [
+    "t1505_moon_dancer",
+    "b1501_gekko_hakama"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "gekko.night_watch",
+   "name": "Night Watch",
+   "source": "clan:gekko",
+   "rank": "jonin",
+   "pieces": [
+    "t1506_night_watch_coat",
+    "b1502_swordsman_trousers"
+   ],
+   "palettes": [],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "gekko.convalescent",
+   "name": "Convalescent",
+   "source": "clan:gekko",
+   "rank": "chunin",
+   "pieces": [
+    "t1507_convalescent_wrap",
+    "b1501_gekko_hakama"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "gekko.practice_gi",
+   "name": "Practice Gi",
+   "source": "clan:gekko",
+   "rank": "academy",
+   "pieces": [
+    "t1508_practice_gi",
+    "b1503_strap_leggings"
+   ],
+   "palettes": [],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "gekko.cough_scarf",
+   "name": "Winter Knit",
+   "source": "clan:gekko",
+   "rank": "genin",
+   "pieces": [
+    "t1509_scarf_knit",
+    "b1502_swordsman_trousers"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "gekko.tasuki_iaido",
+   "name": "Tasuki Iaido",
+   "source": "clan:gekko",
+   "rank": "jonin",
+   "pieces": [
+    "t1510_tasuki_iaido",
+    "b1501_gekko_hakama"
+   ],
+   "palettes": [],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hagane.gate_guard",
+   "name": "Gate Guard",
+   "source": "clan:hagane",
+   "rank": "chunin",
+   "pieces": [
+    "t2101_gate_guard_vest",
+    "b2101_guard_trousers"
+   ],
+   "palettes": [
+    "HAGANE_GUARD"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hagane.messenger",
+   "name": "Messenger",
+   "source": "clan:hagane",
+   "rank": "genin",
+   "pieces": [
+    "t2102_messenger_jacket",
+    "b2102_runner_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hagane.bracer_tee",
+   "name": "Bracer Tee",
+   "source": "clan:hagane",
+   "rank": "genin",
+   "pieces": [
+    "t2103_bracer_tee",
+    "b2101_guard_trousers"
+   ],
+   "palettes": [
+    "HAGANE_GUNMETAL",
+    "HAGANE_RUST",
+    "HAGANE_ASH"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hagane.mace_bearer",
+   "name": "Mace Bearer",
+   "source": "clan:hagane",
+   "rank": "chunin",
+   "pieces": [
+    "t2104_mace_bearer",
+    "b2104_greave_boots"
+   ],
+   "palettes": [
+    "HAGANE_GUNMETAL",
+    "HAGANE_ASH",
+    "HAGANE_RUST"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hagane.iron_coat",
+   "name": "Iron Coat",
+   "source": "clan:hagane",
+   "rank": "jonin",
+   "pieces": [
+    "t2105_iron_coat",
+    "b2104_greave_boots"
+   ],
+   "palettes": [
+    "HAGANE_GUNMETAL",
+    "HAGANE_ASH"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hagane.academy_ringer",
+   "name": "Academy Ringer",
+   "source": "clan:hagane",
+   "rank": "academy",
+   "pieces": [
+    "t2106_academy_ringer",
+    "b2102_runner_shorts"
+   ],
+   "palettes": [
+    "HAGANE_GUNMETAL",
+    "HAGANE_ASH"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hagane.smith_wrap",
+   "name": "Smith Wrap",
+   "source": "clan:hagane",
+   "rank": "chunin",
+   "pieces": [
+    "t2107_smith_wrap",
+    "b2103_plated_wrap_skirt"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hagane.rivet_gambeson",
+   "name": "Rivet Gambeson",
+   "source": "clan:hagane",
+   "rank": "genin",
+   "pieces": [
+    "t2108_rivet_gambeson",
+    "b2101_guard_trousers"
+   ],
+   "palettes": [
+    "HAGANE_GUNMETAL",
+    "HAGANE_RUST",
+    "HAGANE_ASH"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hagane.runner_wrap",
+   "name": "Runner Wrap",
+   "source": "clan:hagane",
+   "rank": "genin",
+   "pieces": [
+    "t2109_runner_wrap",
+    "b2103_plated_wrap_skirt"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hagane.clan_head",
+   "name": "Clan Head",
+   "source": "clan:hagane",
+   "rank": "jonin",
+   "pieces": [
+    "t2110_plated_vest",
+    "b2104_greave_boots"
+   ],
+   "palettes": [
+    "HAGANE_GUARD"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "haruno.academy_tee",
+   "name": "Academy Tee",
+   "source": "clan:haruno",
+   "rank": "academy",
+   "pieces": [
+    "t1903_academy_tee",
+    "b1905_academy_shorts"
+   ],
+   "palettes": [
+    "HARUNO_BLOSSOM",
+    "HARUNO_QIPAO",
+    "HARUNO_MEDIC"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "haruno.crest_qipao",
+   "name": "Crest Qipao",
+   "source": "clan:haruno",
+   "rank": "genin",
+   "pieces": [
+    "t1901_crest_qipao",
+    "b1901_shinobi_bike_shorts"
+   ],
+   "palettes": [
+    "HARUNO_QIPAO",
+    "HARUNO_BLOSSOM"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "haruno.kimono_trim",
+   "name": "Kimono Trim",
+   "source": "clan:haruno",
+   "rank": "genin",
+   "pieces": [
+    "t1904_kimono_trim_blouse",
+    "b1906_field_leggings"
+   ],
+   "palettes": [
+    "HARUNO_ROSEWOOD",
+    "HARUNO_BLOSSOM",
+    "HARUNO_SHOPKEEPER"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "haruno.blossom_jacket",
+   "name": "Blossom Jacket",
+   "source": "clan:haruno",
+   "rank": "genin",
+   "pieces": [
+    "t1910_blossom_jacket",
+    "b1901_shinobi_bike_shorts"
+   ],
+   "palettes": [
+    "HARUNO_BLOSSOM",
+    "HARUNO_ROSEWOOD"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "haruno.crest_zip",
+   "name": "Crest Zip",
+   "source": "clan:haruno",
+   "rank": "chunin",
+   "pieces": [
+    "t1902_crest_zip_top",
+    "b1902_split_apron_skirt"
+   ],
+   "palettes": [
+    "HARUNO_QIPAO",
+    "HARUNO_MEDIC"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "haruno.medic",
+   "name": "Medic",
+   "source": "clan:haruno",
+   "rank": "chunin",
+   "pieces": [
+    "t1906_medic_tunic",
+    "b1906_field_leggings"
+   ],
+   "palettes": [
+    "HARUNO_MEDIC",
+    "HARUNO_ROSEWOOD"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "haruno.shop_happi",
+   "name": "Shop Happi",
+   "source": "clan:haruno",
+   "rank": "chunin",
+   "pieces": [
+    "t1905_merchant_happi",
+    "b1903_maekake_trousers"
+   ],
+   "palettes": [
+    "HARUNO_SHOPKEEPER",
+    "HARUNO_ROSEWOOD"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "haruno.spring_qipao",
+   "name": "Spring Qipao",
+   "source": "clan:haruno",
+   "rank": "jonin",
+   "pieces": [
+    "t1908_spring_qipao",
+    "b1904_slit_tights"
+   ],
+   "palettes": [
+    "HARUNO_QIPAO",
+    "HARUNO_MEDIC",
+    "HARUNO_ROSEWOOD"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "haruno.crest_vest",
+   "name": "Crest Vest",
+   "source": "clan:haruno",
+   "rank": "jonin",
+   "pieces": [
+    "t1907_crest_flak_vest",
+    "b1906_field_leggings"
+   ],
+   "palettes": [
+    "HARUNO_JONIN"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "haruno.shop_haori",
+   "name": "Shop Haori",
+   "source": "clan:haruno",
+   "rank": "jonin",
+   "pieces": [
+    "t1909_shop_haori",
+    "b1903_maekake_trousers"
+   ],
+   "palettes": [
+    "HARUNO_SHOPKEEPER",
+    "HARUNO_ROSEWOOD"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hatake.scarecrow_jonin",
+   "name": "Scarecrow Jonin",
+   "source": "clan:hatake",
+   "rank": "jonin",
+   "pieces": [
+    "t1101_scarecrow_vest",
+    "b1101_scarecrow_trousers"
+   ],
+   "palettes": [
+    "HATAKE_JONIN"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hatake.white_fang",
+   "name": "White Fang",
+   "source": "clan:hatake",
+   "rank": "jonin",
+   "pieces": [
+    "t1102_white_fang_vest",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "HATAKE_WHITE_FANG"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hatake.hound_anbu",
+   "name": "Hound ANBU",
+   "source": "clan:hatake",
+   "rank": "anbu",
+   "pieces": [
+    "t1103_hound_anbu",
+    "b06_anbu_greaves"
+   ],
+   "palettes": [
+    "HATAKE_ANBU"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  },
+  {
+   "id": "hatake.young_prodigy",
+   "name": "Young Prodigy",
+   "source": "clan:hatake",
+   "rank": "genin",
+   "pieces": [
+    "t1104_prodigy_shirt",
+    "b1102_prodigy_shorts"
+   ],
+   "palettes": [
+    "HATAKE_NAVY",
+    "HATAKE_SLATE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hatake.sixth_hokage",
+   "name": "Sixth Hokage",
+   "source": "clan:hatake",
+   "rank": "kage",
+   "pieces": [
+    "t1105_sixth_haori",
+    "b1101_scarecrow_trousers"
+   ],
+   "palettes": [
+    "HATAKE_JONIN"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  },
+  {
+   "id": "hatake.retired",
+   "name": "Retired Hatake",
+   "source": "clan:hatake",
+   "rank": "jonin",
+   "pieces": [
+    "t1106_retired_zip_jacket",
+    "b1104_night_trousers"
+   ],
+   "palettes": [
+    "HATAKE_GREY",
+    "HATAKE_SLATE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hatake.ninken_handler",
+   "name": "Ninken Handler",
+   "source": "clan:hatake",
+   "rank": "chunin",
+   "pieces": [
+    "t1107_ninken_handler",
+    "b1101_scarecrow_trousers"
+   ],
+   "palettes": [
+    "HATAKE_SLATE",
+    "HATAKE_GREY"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hatake.scarecrow_kunoichi",
+   "name": "Scarecrow Kunoichi",
+   "source": "clan:hatake",
+   "rank": "chunin",
+   "pieces": [
+    "t1108_scarecrow_kunoichi",
+    "b1103_hound_wrap_skirt"
+   ],
+   "palettes": [
+    "HATAKE_SLATE",
+    "HATAKE_NAVY",
+    "HATAKE_GREY"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hatake.training_wrap",
+   "name": "Training Wrap",
+   "source": "clan:hatake",
+   "rank": "academy",
+   "pieces": [
+    "t1109_training_wrap",
+    "b1102_prodigy_shorts"
+   ],
+   "palettes": [
+    "HATAKE_NAVY",
+    "HATAKE_SLATE"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hatake.clan_coat",
+   "name": "Hatake Clan Coat",
+   "source": "clan:hatake",
+   "rank": "jonin",
+   "pieces": [
+    "t1110_hatake_clan_coat",
+    "b1104_night_trousers"
+   ],
+   "palettes": [
+    "HATAKE_SLATE",
+    "HATAKE_NAVY"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hyuga.training_wrap",
+   "name": "Training Wrap",
+   "source": "clan:hyuga",
+   "rank": "academy",
+   "pieces": [
+    "t401_training_wrap",
+    "b401_training_shorts"
+   ],
+   "palettes": [
+    "HYUGA_MAIN",
+    "HYUGA_BRANCH",
+    "HYUGA_NAVY"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hyuga.branch_guard",
+   "name": "Branch Guard",
+   "source": "clan:hyuga",
+   "rank": "chunin",
+   "pieces": [
+    "t402_branch_guard_kimono",
+    "b402_hakama"
+   ],
+   "palettes": [
+    "HYUGA_BRANCH",
+    "HYUGA_MAIN"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hyuga.elder_haori",
+   "name": "Elder Haori",
+   "source": "clan:hyuga",
+   "rank": "jonin",
+   "pieces": [
+    "t403_elder_haori",
+    "b402_hakama"
+   ],
+   "palettes": [
+    "HYUGA_ELDER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hyuga.heiress_jacket",
+   "name": "Heiress Jacket",
+   "source": "clan:hyuga",
+   "rank": "genin",
+   "pieces": [
+    "t404_heiress_hooded_jacket",
+    "b403_heiress_trousers"
+   ],
+   "palettes": [
+    "HYUGA_HEIRESS",
+    "HYUGA_MAIN"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hyuga.two_tone_zip",
+   "name": "Two-Tone Zip",
+   "source": "clan:hyuga",
+   "rank": "chunin",
+   "pieces": [
+    "t405_two_tone_zip_jacket",
+    "b403_heiress_trousers"
+   ],
+   "palettes": [
+    "HYUGA_HEIRESS",
+    "HYUGA_MAIN"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hyuga.jonin_robe",
+   "name": "Jonin Robe",
+   "source": "clan:hyuga",
+   "rank": "jonin",
+   "pieces": [
+    "t406_jonin_apron_robe",
+    "b406_robe_trousers"
+   ],
+   "palettes": [
+    "HYUGA_MAIN",
+    "HYUGA_BRANCH"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hyuga.attendant_kimono",
+   "name": "Attendant Kimono",
+   "source": "clan:hyuga",
+   "rank": "academy",
+   "pieces": [
+    "t407_attendant_kimono",
+    "b405_attendant_kimono_skirt"
+   ],
+   "palettes": [
+    "HYUGA_MAIN",
+    "HYUGA_BRANCH",
+    "HYUGA_NAVY"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hyuga.scout_mantle",
+   "name": "Scout Mantle",
+   "source": "clan:hyuga",
+   "rank": "chunin",
+   "pieces": [
+    "t408_scout_mantle",
+    "b404_cropped_trousers"
+   ],
+   "palettes": [
+    "HYUGA_MAIN",
+    "HYUGA_BRANCH"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hyuga.ceremonial_kimono",
+   "name": "Ceremonial Kimono",
+   "source": "clan:hyuga",
+   "rank": "jonin",
+   "pieces": [
+    "t409_ceremonial_kimono",
+    "b402_hakama"
+   ],
+   "palettes": [
+    "HYUGA_CEREMONIAL"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "hyuga.courtyard_yukata",
+   "name": "Courtyard Yukata",
+   "source": "clan:hyuga",
+   "rank": "genin",
+   "pieces": [
+    "t410_courtyard_yukata",
+    "b404_cropped_trousers"
+   ],
+   "palettes": [
+    "HYUGA_MAIN",
+    "HYUGA_HEIRESS",
+    "HYUGA_BRANCH"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "inuzuka.fur_hood_jacket",
+   "name": "Fur Hood Jacket",
+   "source": "clan:inuzuka",
+   "rank": "genin",
+   "pieces": [
+    "t801_fur_hood_jacket",
+    "b802_capri_pants"
+   ],
+   "palettes": [
+    "INUZUKA_GREY",
+    "INUZUKA_TAN"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "inuzuka.fang_parka",
+   "name": "Fang Parka",
+   "source": "clan:inuzuka",
+   "rank": "chunin",
+   "pieces": [
+    "t802_fang_parka",
+    "b801_tracker_trousers"
+   ],
+   "palettes": [
+    "INUZUKA_SHADOW",
+    "INUZUKA_EARTH"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "inuzuka.fur_collar_vest",
+   "name": "Fur Collar Vest",
+   "source": "clan:inuzuka",
+   "rank": "genin",
+   "pieces": [
+    "t803_fur_collar_vest",
+    "b804_fur_wrap_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "inuzuka.kennel_keeper",
+   "name": "Kennel Keeper",
+   "source": "clan:inuzuka",
+   "rank": "chunin",
+   "pieces": [
+    "t804_kennel_keeper_wrap",
+    "b803_kennel_boots"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "inuzuka.clan_head",
+   "name": "Clan Head",
+   "source": "clan:inuzuka",
+   "rank": "jonin",
+   "pieces": [
+    "t805_clan_flak_vest",
+    "b801_tracker_trousers"
+   ],
+   "palettes": [
+    "INUZUKA_JONIN"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "inuzuka.tracker_mantle",
+   "name": "Tracker Mantle",
+   "source": "clan:inuzuka",
+   "rank": "genin",
+   "pieces": [
+    "t806_tracker_mantle",
+    "b803_kennel_boots"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "inuzuka.claw_wrap",
+   "name": "Claw Wrap",
+   "source": "clan:inuzuka",
+   "rank": "genin",
+   "pieces": [
+    "t807_claw_wrap",
+    "b804_fur_wrap_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "inuzuka.pack_leader",
+   "name": "Pack Leader",
+   "source": "clan:inuzuka",
+   "rank": "jonin",
+   "pieces": [
+    "t808_pack_leader_coat",
+    "b803_kennel_boots"
+   ],
+   "palettes": [
+    "INUZUKA_SHADOW",
+    "INUZUKA_EARTH",
+    "INUZUKA_GREY"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "inuzuka.paw_hoodie",
+   "name": "Paw Hoodie",
+   "source": "clan:inuzuka",
+   "rank": "academy",
+   "pieces": [
+    "t809_paw_hoodie",
+    "b802_capri_pants"
+   ],
+   "palettes": [],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "inuzuka.ninken_handler",
+   "name": "Ninken Handler",
+   "source": "clan:inuzuka",
+   "rank": "chunin",
+   "pieces": [
+    "t810_handler_jerkin",
+    "b801_tracker_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kinoshita.hanten_jacket",
+   "name": "Hanten Jacket",
+   "source": "clan:kinoshita",
+   "rank": "chunin",
+   "pieces": [
+    "t2201_hanten_jacket",
+    "b2201_tobi_trousers"
+   ],
+   "palettes": [
+    "KINOSHITA_AIZOME",
+    "KINOSHITA_NIGHT"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kinoshita.haragake_apron",
+   "name": "Haragake Apron",
+   "source": "clan:kinoshita",
+   "rank": "genin",
+   "pieces": [
+    "t2202_haragake_apron",
+    "b2202_momohiki_gaiters"
+   ],
+   "palettes": [
+    "KINOSHITA_AIZOME",
+    "KINOSHITA_WASHED"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kinoshita.tool_harness",
+   "name": "Tool Harness",
+   "source": "clan:kinoshita",
+   "rank": "genin",
+   "pieces": [
+    "t2203_tool_harness",
+    "b2204_toolbelt_trousers"
+   ],
+   "palettes": [
+    "KINOSHITA_AIZOME",
+    "KINOSHITA_NIGHT"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kinoshita.builder_flak",
+   "name": "Field Engineer",
+   "source": "clan:kinoshita",
+   "rank": "jonin",
+   "pieces": [
+    "t2204_builder_flak",
+    "b2204_toolbelt_trousers"
+   ],
+   "palettes": [
+    "KINOSHITA_JONIN"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kinoshita.tobi_shirt",
+   "name": "Scaffold Crew",
+   "source": "clan:kinoshita",
+   "rank": "genin",
+   "pieces": [
+    "t2205_tobi_shirt",
+    "b2201_tobi_trousers"
+   ],
+   "palettes": [
+    "KINOSHITA_CEDAR",
+    "KINOSHITA_WASHED"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kinoshita.apprentice_smock",
+   "name": "Apprentice",
+   "source": "clan:kinoshita",
+   "rank": "academy",
+   "pieces": [
+    "t2206_apprentice_smock",
+    "b2205_work_shorts"
+   ],
+   "palettes": [
+    "KINOSHITA_AIZOME",
+    "KINOSHITA_WASHED"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kinoshita.trapwright_vest",
+   "name": "Trapwright",
+   "source": "clan:kinoshita",
+   "rank": "chunin",
+   "pieces": [
+    "t2207_trapwright_vest",
+    "b2202_momohiki_gaiters"
+   ],
+   "palettes": [
+    "KINOSHITA_AIZOME",
+    "KINOSHITA_HINOKI"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kinoshita.timber_cuirass",
+   "name": "Fortifier",
+   "source": "clan:kinoshita",
+   "rank": "chunin",
+   "pieces": [
+    "t2208_timber_cuirass",
+    "b2201_tobi_trousers"
+   ],
+   "palettes": [
+    "KINOSHITA_AIZOME",
+    "KINOSHITA_NIGHT"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kinoshita.master_haori",
+   "name": "Master Builder",
+   "source": "clan:kinoshita",
+   "rank": "jonin",
+   "pieces": [
+    "t2209_master_haori",
+    "b2203_maekake_trousers"
+   ],
+   "palettes": [
+    "KINOSHITA_NIGHT",
+    "KINOSHITA_AIZOME"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kinoshita.mallet_wrap",
+   "name": "Mallet Wrap",
+   "source": "clan:kinoshita",
+   "rank": "genin",
+   "pieces": [
+    "t2210_mallet_wrap",
+    "b2203_maekake_trousers"
+   ],
+   "palettes": [
+    "KINOSHITA_AIZOME",
+    "KINOSHITA_CEDAR"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kurama.painter_robe",
+   "name": "Painter's Robe",
+   "source": "clan:kurama",
+   "rank": "genin",
+   "pieces": [
+    "t1201_painter_robe",
+    "b1201_painter_trousers"
+   ],
+   "palettes": [
+    "KURAMA_BLOSSOM",
+    "KURAMA_WISTERIA",
+    "KURAMA_INKWASH"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kurama.training_kimono",
+   "name": "Training Kimono",
+   "source": "clan:kurama",
+   "rank": "genin",
+   "pieces": [
+    "t1202_training_kimono",
+    "b1202_wrap_skirt"
+   ],
+   "palettes": [
+    "KURAMA_BLOSSOM",
+    "KURAMA_WISTERIA",
+    "KURAMA_SAGE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kurama.scholar_robe",
+   "name": "Scholar's Robe",
+   "source": "clan:kurama",
+   "rank": "jonin",
+   "pieces": [
+    "t1203_scholar_robe",
+    "b1203_scholar_hakama"
+   ],
+   "palettes": [
+    "KURAMA_UMBER",
+    "KURAMA_NIGHT",
+    "KURAMA_SAGE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kurama.cloud_haori",
+   "name": "Cloud Haori",
+   "source": "clan:kurama",
+   "rank": "chunin",
+   "pieces": [
+    "t1204_cloud_haori",
+    "b1201_painter_trousers"
+   ],
+   "palettes": [
+    "KURAMA_INKWASH",
+    "KURAMA_WISTERIA",
+    "KURAMA_SAGE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kurama.painters_smock",
+   "name": "Painter's Smock",
+   "source": "clan:kurama",
+   "rank": "academy",
+   "pieces": [
+    "t1205_painters_smock",
+    "b1204_rolled_trousers"
+   ],
+   "palettes": [],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kurama.calligrapher",
+   "name": "Calligrapher's Kosode",
+   "source": "clan:kurama",
+   "rank": "chunin",
+   "pieces": [
+    "t1206_calligrapher_tasuki",
+    "b1203_scholar_hakama"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kurama.travel_cloak",
+   "name": "Wisteria Travel Cloak",
+   "source": "clan:kurama",
+   "rank": "jonin",
+   "pieces": [
+    "t1207_travel_cloak",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "KURAMA_WISTERIA",
+    "KURAMA_UMBER",
+    "KURAMA_NIGHT"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kurama.genin_tunic",
+   "name": "Kurama Genin Tunic",
+   "source": "clan:kurama",
+   "rank": "genin",
+   "pieces": [
+    "t1208_genin_tunic",
+    "b1205_genin_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kurama.chunin_vest",
+   "name": "Kurama Chunin Vest",
+   "source": "clan:kurama",
+   "rank": "chunin",
+   "pieces": [
+    "t1209_chunin_vest",
+    "b1201_painter_trousers"
+   ],
+   "palettes": [
+    "KURAMA_SAGE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "kurama.elder_kimono",
+   "name": "Elder's Layered Kimono",
+   "source": "clan:kurama",
+   "rank": "jonin",
+   "pieces": [
+    "t1210_elder_kimono",
+    "b1206_elder_kimono_skirt"
+   ],
+   "palettes": [
+    "KURAMA_NIGHT",
+    "KURAMA_UMBER",
+    "KURAMA_WISTERIA"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "morino.cadet",
+   "name": "Cadet",
+   "source": "clan:morino",
+   "rank": "academy",
+   "pieces": [
+    "t1704_cadet_jacket",
+    "b1705_cadet_shorts"
+   ],
+   "palettes": [],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "morino.young_warden",
+   "name": "Young Warden",
+   "source": "clan:morino",
+   "rank": "genin",
+   "pieces": [
+    "t1707_ribbed_turtleneck",
+    "b1703_strap_trousers"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "morino.harness",
+   "name": "Harness Tunic",
+   "source": "clan:morino",
+   "rank": "genin",
+   "pieces": [
+    "t1705_harness_tunic",
+    "b1701_boot_trousers"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "morino.black_flak",
+   "name": "Black Flak",
+   "source": "clan:morino",
+   "rank": "chunin",
+   "pieces": [
+    "t1703_black_flak",
+    "b1701_boot_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "morino.the_room",
+   "name": "Interrogation Room",
+   "source": "clan:morino",
+   "rank": "chunin",
+   "pieces": [
+    "t1709_interrogation_shirt",
+    "b1702_jackboots"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "morino.half_coat",
+   "name": "Half Coat",
+   "source": "clan:morino",
+   "rank": "chunin",
+   "pieces": [
+    "t1708_half_coat",
+    "b1704_split_skirt"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "morino.trench",
+   "name": "Belted Trench",
+   "source": "clan:morino",
+   "rank": "chunin",
+   "pieces": [
+    "t1702_belted_trench",
+    "b1702_jackboots"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "morino.greatcoat",
+   "name": "Interrogator Greatcoat",
+   "source": "clan:morino",
+   "rank": "jonin",
+   "pieces": [
+    "t1701_interrogator_greatcoat",
+    "b1701_boot_trousers"
+   ],
+   "palettes": [
+    "MORINO_INTERROGATOR",
+    "MORINO_OXBLOOD",
+    "MORINO_SLATE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "morino.caped",
+   "name": "Caped Greatcoat",
+   "source": "clan:morino",
+   "rank": "jonin",
+   "pieces": [
+    "t1706_caped_greatcoat",
+    "b1702_jackboots"
+   ],
+   "palettes": [],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "morino.clan_head",
+   "name": "Warden",
+   "source": "clan:morino",
+   "rank": "jonin",
+   "pieces": [
+    "t1710_warden_greatcoat",
+    "b1701_boot_trousers"
+   ],
+   "palettes": [
+    "MORINO_WARDEN",
+    "MORINO_INTERROGATOR"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "namiashi.hokage_guard",
+   "name": "Hokage's Guard",
+   "source": "clan:namiashi",
+   "rank": "jonin",
+   "pieces": [
+    "t2001_guard_vest",
+    "b2001_guard_trousers"
+   ],
+   "palettes": [
+    "NAMIASHI_GUARD",
+    "NAMIASHI_TIDE",
+    "NAMIASHI_DEEPWATER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "namiashi.clan_head",
+   "name": "Clan Head",
+   "source": "clan:namiashi",
+   "rank": "jonin",
+   "pieces": [
+    "t2004_ink_haori",
+    "b2001_guard_trousers"
+   ],
+   "palettes": [
+    "NAMIASHI_TIDE",
+    "NAMIASHI_INK",
+    "NAMIASHI_DEEPWATER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "namiashi.night_sentinel",
+   "name": "Night Sentinel",
+   "source": "clan:namiashi",
+   "rank": "jonin",
+   "pieces": [
+    "t2007_sentinel_coat",
+    "b2004_bound_leggings"
+   ],
+   "palettes": [],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "namiashi.guard_blade",
+   "name": "Guard's Blade",
+   "source": "clan:namiashi",
+   "rank": "chunin",
+   "pieces": [
+    "t2005_harness_shirt",
+    "b2004_bound_leggings"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "namiashi.tide_patrol",
+   "name": "Tide Patrol",
+   "source": "clan:namiashi",
+   "rank": "chunin",
+   "pieces": [
+    "t2006_tide_jacket",
+    "b2001_guard_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "namiashi.crossed_wrap",
+   "name": "Crossed Wrap",
+   "source": "clan:namiashi",
+   "rank": "chunin",
+   "pieces": [
+    "t2008_crossed_wrap",
+    "b2003_tide_skirt"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "namiashi.young_guard",
+   "name": "Young Guard",
+   "source": "clan:namiashi",
+   "rank": "genin",
+   "pieces": [
+    "t2002_wave_hem_tunic",
+    "b2002_wave_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "namiashi.sword_hall",
+   "name": "Sword Hall",
+   "source": "clan:namiashi",
+   "rank": "genin",
+   "pieces": [
+    "t2009_practice_gi",
+    "b2004_bound_leggings"
+   ],
+   "palettes": [
+    "NAMIASHI_TIDE",
+    "NAMIASHI_INK",
+    "NAMIASHI_GUARD",
+    "NAMIASHI_SLATE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "namiashi.academy_tee",
+   "name": "Academy Tee",
+   "source": "clan:namiashi",
+   "rank": "academy",
+   "pieces": [
+    "t2003_academy_tee",
+    "b2002_wave_shorts"
+   ],
+   "palettes": [
+    "NAMIASHI_TIDE",
+    "NAMIASHI_INK",
+    "NAMIASHI_DEEPWATER",
+    "NAMIASHI_SLATE"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "namiashi.wave_hoodie",
+   "name": "Wave Hoodie",
+   "source": "clan:namiashi",
+   "rank": "academy",
+   "pieces": [
+    "t2010_wave_hoodie",
+    "b2001_guard_trousers"
+   ],
+   "palettes": [],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "nara.open_vest",
+   "name": "Open Flak Vest",
+   "source": "clan:nara",
+   "rank": "chunin",
+   "pieces": [
+    "t501_open_flak_vest",
+    "b501_shadow_trousers"
+   ],
+   "palettes": [
+    "NARA_STRATEGIST",
+    "NARA_FOREST"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "nara.cloud_watcher",
+   "name": "Cloud Watcher",
+   "source": "clan:nara",
+   "rank": "genin",
+   "pieces": [
+    "t502_mesh_tee",
+    "b503_knee_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "nara.young_strategist",
+   "name": "Young Strategist",
+   "source": "clan:nara",
+   "rank": "genin",
+   "pieces": [
+    "t503_genin_jacket",
+    "b501_shadow_trousers"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "nara.clan_head",
+   "name": "Clan Head",
+   "source": "clan:nara",
+   "rank": "jonin",
+   "pieces": [
+    "t504_clan_head_haori",
+    "b501_shadow_trousers"
+   ],
+   "palettes": [
+    "NARA_SHADOW",
+    "NARA_FOREST",
+    "NARA_DUSK"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "nara.deer_keeper",
+   "name": "Deer Keeper",
+   "source": "clan:nara",
+   "rank": "chunin",
+   "pieces": [
+    "t505_herder_tunic",
+    "b502_herder_trousers"
+   ],
+   "palettes": [
+    "NARA_FOREST",
+    "NARA_MOSS",
+    "NARA_DUSK"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "nara.forest_walk",
+   "name": "Forest Mantle",
+   "source": "clan:nara",
+   "rank": "chunin",
+   "pieces": [
+    "t506_forest_mantle",
+    "b502_herder_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "nara.sprout",
+   "name": "Sprout Top",
+   "source": "clan:nara",
+   "rank": "genin",
+   "pieces": [
+    "t509_sprout_top",
+    "b503_knee_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "nara.household",
+   "name": "Household",
+   "source": "clan:nara",
+   "rank": "chunin",
+   "pieces": [
+    "t507_matron_apron",
+    "b504_wrap_skirt"
+   ],
+   "palettes": [
+    "NARA_MOSS",
+    "NARA_DEER",
+    "NARA_DUSK"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "nara.shogi_afternoon",
+   "name": "Shogi Afternoon",
+   "source": "clan:nara",
+   "rank": "chunin",
+   "pieces": [
+    "t508_shogi_sweater",
+    "b501_shadow_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "nara.evening_yukata",
+   "name": "Evening Yukata",
+   "source": "clan:nara",
+   "rank": "jonin",
+   "pieces": [
+    "t510_evening_yukata",
+    "b505_yukata_hem"
+   ],
+   "palettes": [
+    "NARA_DUSK",
+    "NARA_SHADOW",
+    "NARA_MOSS"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "sarutobi.guardian",
+   "name": "Guardian Vest",
+   "source": "clan:sarutobi",
+   "rank": "jonin",
+   "pieces": [
+    "t901_guardian_vest",
+    "b901_guardian_trousers"
+   ],
+   "palettes": [
+    "SARUTOBI_GUARDIAN",
+    "SARUTOBI_FOREST"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "sarutobi.monkey_king",
+   "name": "Monkey King Armor",
+   "source": "clan:sarutobi",
+   "rank": "kage",
+   "pieces": [
+    "t902_monkey_king_armor",
+    "b904_battle_greaves"
+   ],
+   "palettes": [
+    "SARUTOBI_MONKEY_KING",
+    "SARUTOBI_ASH"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  },
+  {
+   "id": "sarutobi.scarf_kid",
+   "name": "Long Scarf",
+   "source": "clan:sarutobi",
+   "rank": "academy",
+   "pieces": [
+    "t903_long_scarf_tee",
+    "b902_monkey_shorts"
+   ],
+   "palettes": [
+    "SARUTOBI_SCARF",
+    "SARUTOBI_EMBER",
+    "SARUTOBI_FOREST"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "sarutobi.sensei",
+   "name": "Sensei Jacket",
+   "source": "clan:sarutobi",
+   "rank": "jonin",
+   "pieces": [
+    "t904_sensei_jacket",
+    "b901_guardian_trousers"
+   ],
+   "palettes": [
+    "SARUTOBI_SENSEI",
+    "SARUTOBI_ASH"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "sarutobi.ember_haori",
+   "name": "Ember Haori",
+   "source": "clan:sarutobi",
+   "rank": "jonin",
+   "pieces": [
+    "t905_ember_haori",
+    "b903_warring_hakama"
+   ],
+   "palettes": [
+    "SARUTOBI_EMBER",
+    "SARUTOBI_FOREST",
+    "SARUTOBI_ASH"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "sarutobi.guard_detail",
+   "name": "Guard Detail",
+   "source": "clan:sarutobi",
+   "rank": "jonin",
+   "pieces": [
+    "t906_guard_detail_vest",
+    "b901_guardian_trousers"
+   ],
+   "palettes": [
+    "SARUTOBI_GUARDIAN",
+    "SARUTOBI_SENSEI"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "sarutobi.warring",
+   "name": "Warring Breastplate",
+   "source": "clan:sarutobi",
+   "rank": "jonin",
+   "pieces": [
+    "t907_warring_breastplate",
+    "b903_warring_hakama"
+   ],
+   "palettes": [
+    "SARUTOBI_WARRING"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "sarutobi.ash_training",
+   "name": "Ash Training",
+   "source": "clan:sarutobi",
+   "rank": "chunin",
+   "pieces": [
+    "t908_ash_training_wrap",
+    "b904_battle_greaves"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "sarutobi.corps_hoodie",
+   "name": "Corps Hoodie",
+   "source": "clan:sarutobi",
+   "rank": "academy",
+   "pieces": [
+    "t909_corps_hoodie",
+    "b902_monkey_shorts"
+   ],
+   "palettes": [
+    "SARUTOBI_SCARF",
+    "SARUTOBI_FOREST",
+    "SARUTOBI_EMBER"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "sarutobi.will_of_fire",
+   "name": "Will of Fire Tunic",
+   "source": "clan:sarutobi",
+   "rank": "chunin",
+   "pieces": [
+    "t910_will_of_fire_tunic",
+    "b905_wrap_skirt_leggings"
+   ],
+   "palettes": [
+    "SARUTOBI_EMBER",
+    "SARUTOBI_FOREST",
+    "SARUTOBI_ASH",
+    "SARUTOBI_GUARDIAN"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "senju.war_armor",
+   "name": "Senju War Armor",
+   "source": "clan:senju",
+   "rank": "jonin",
+   "pieces": [
+    "t101_senju_war_armor",
+    "b101_armored_hakama"
+   ],
+   "palettes": [
+    "SENJU_RED"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "senju.tobirama_armor",
+   "name": "Tobirama Armor",
+   "source": "clan:senju",
+   "rank": "jonin",
+   "pieces": [
+    "t102_tobirama_armor",
+    "b101_armored_hakama"
+   ],
+   "palettes": [
+    "SENJU_NAVY"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "senju.clan_haori",
+   "name": "Clan Haori",
+   "source": "clan:senju",
+   "rank": "chunin",
+   "pieces": [
+    "t103_clan_haori",
+    "b103_pleated_hakama"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "senju.village_kimono",
+   "name": "Village Kimono",
+   "source": "clan:senju",
+   "rank": "academy",
+   "pieces": [
+    "t104_village_kimono",
+    "b103_pleated_hakama"
+   ],
+   "palettes": [],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "senju.crest_tunic",
+   "name": "Crest Tunic",
+   "source": "clan:senju",
+   "rank": "genin",
+   "pieces": [
+    "t105_crest_tunic",
+    "b105_ranger_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "senju.gambler_haori",
+   "name": "Gambler Haori",
+   "source": "clan:senju",
+   "rank": "jonin",
+   "pieces": [
+    "t106_gambler_haori",
+    "b104_field_trousers"
+   ],
+   "palettes": [
+    "SENJU_TSUNADE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "senju.ranger_vest",
+   "name": "Ranger Vest",
+   "source": "clan:senju",
+   "rank": "chunin",
+   "pieces": [
+    "t107_ranger_vest",
+    "b102_wrapped_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "senju.training_gi",
+   "name": "Training Gi",
+   "source": "clan:senju",
+   "rank": "genin",
+   "pieces": [
+    "t108_training_gi",
+    "b102_wrapped_trousers"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "senju.ceremonial",
+   "name": "Ceremonial Montsuki",
+   "source": "clan:senju",
+   "rank": "kage",
+   "pieces": [
+    "t109_ceremonial_montsuki",
+    "b103_pleated_hakama"
+   ],
+   "palettes": [
+    "SENJU_FORMAL"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  },
+  {
+   "id": "senju.scout_cuirass",
+   "name": "Scout Cuirass",
+   "source": "clan:senju",
+   "rank": "chunin",
+   "pieces": [
+    "t110_scout_cuirass",
+    "b104_field_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shimura.council_elder",
+   "name": "Council Elder",
+   "source": "clan:shimura",
+   "rank": "jonin",
+   "pieces": [
+    "t1301_danzo_robe",
+    "b1301_council_hakama"
+   ],
+   "palettes": [
+    "SHIMURA_ELDER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shimura.shackled_founder",
+   "name": "Shackled Founder",
+   "source": "clan:shimura",
+   "rank": "jonin",
+   "pieces": [
+    "t1302_shackled_arm",
+    "b1301_council_hakama"
+   ],
+   "palettes": [
+    "SHIMURA_ELDER",
+    "SHIMURA_SLATE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shimura.warring_youth",
+   "name": "Warring Youth",
+   "source": "clan:shimura",
+   "rank": "jonin",
+   "pieces": [
+    "t1303_warring_armor",
+    "b1303_bandaged_trousers"
+   ],
+   "palettes": [
+    "SHIMURA_SLATE",
+    "SHIMURA_ASH",
+    "SHIMURA_ELDER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shimura.ink_operative",
+   "name": "Ink Operative",
+   "source": "clan:shimura",
+   "rank": "anbu",
+   "pieces": [
+    "t1304_sai_jacket",
+    "b1302_root_trousers"
+   ],
+   "palettes": [
+    "SHIMURA_ROOT",
+    "SHIMURA_SLATE"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  },
+  {
+   "id": "shimura.root_operative",
+   "name": "Root Operative",
+   "source": "clan:shimura",
+   "rank": "anbu",
+   "pieces": [
+    "t1305_root_strap_jacket",
+    "b1302_root_trousers"
+   ],
+   "palettes": [
+    "SHIMURA_ROOT",
+    "SHIMURA_SLATE"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  },
+  {
+   "id": "shimura.councilor",
+   "name": "Councilor",
+   "source": "clan:shimura",
+   "rank": "jonin",
+   "pieces": [
+    "t1306_councilor_haori",
+    "b1301_council_hakama"
+   ],
+   "palettes": [
+    "SHIMURA_SLATE",
+    "SHIMURA_ROOT",
+    "SHIMURA_ELDER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shimura.village_kosode",
+   "name": "Village Kosode",
+   "source": "clan:shimura",
+   "rank": "genin",
+   "pieces": [
+    "t1307_village_kosode",
+    "b1303_bandaged_trousers"
+   ],
+   "palettes": [
+    "SHIMURA_ASH",
+    "SHIMURA_PAPER",
+    "SHIMURA_SLATE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shimura.ink_artisan",
+   "name": "Ink Artisan",
+   "source": "clan:shimura",
+   "rank": "genin",
+   "pieces": [
+    "t1308_ink_smock",
+    "b1302_root_trousers"
+   ],
+   "palettes": [
+    "SHIMURA_ASH",
+    "SHIMURA_PAPER",
+    "SHIMURA_SLATE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shimura.mourning_dress",
+   "name": "Mourning Dress",
+   "source": "clan:shimura",
+   "rank": "jonin",
+   "pieces": [
+    "t1309_mourning_haori",
+    "b1301_council_hakama"
+   ],
+   "palettes": [
+    "SHIMURA_MOURNING"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shimura.foundation_kunoichi",
+   "name": "Foundation Kunoichi",
+   "source": "clan:shimura",
+   "rank": "anbu",
+   "pieces": [
+    "t1310_foundation_vest",
+    "b1304_wrap_skirt"
+   ],
+   "palettes": [
+    "SHIMURA_ROOT",
+    "SHIMURA_SLATE",
+    "SHIMURA_ASH"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  },
+  {
+   "id": "shiranui.bodyguard",
+   "name": "Hokage's Bodyguard",
+   "source": "clan:shiranui",
+   "rank": "jonin",
+   "pieces": [
+    "t1601_bodyguard_flak",
+    "b1601_holster_trousers"
+   ],
+   "palettes": [
+    "SHIRANUI_ESCORT",
+    "SHIRANUI_GUARD",
+    "SHIRANUI_STEEL"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shiranui.needle_harness",
+   "name": "Needle Harness",
+   "source": "clan:shiranui",
+   "rank": "chunin",
+   "pieces": [
+    "t1602_needle_harness",
+    "b1601_holster_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shiranui.guard_haori",
+   "name": "Guard Haori",
+   "source": "clan:shiranui",
+   "rank": "jonin",
+   "pieces": [
+    "t1603_guard_haori",
+    "b1602_steel_slacks"
+   ],
+   "palettes": [
+    "SHIRANUI_STEEL",
+    "SHIRANUI_GUARD",
+    "SHIRANUI_ASH"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shiranui.half_zip",
+   "name": "Half-Zip Jacket",
+   "source": "clan:shiranui",
+   "rank": "chunin",
+   "pieces": [
+    "t1604_half_zip_jacket",
+    "b1601_holster_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shiranui.academy",
+   "name": "Academy Tee",
+   "source": "clan:shiranui",
+   "rank": "academy",
+   "pieces": [
+    "t1605_academy_tee",
+    "b1603_knee_shorts"
+   ],
+   "palettes": [],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shiranui.sleeveless_wrap",
+   "name": "Sleeveless Wrap",
+   "source": "clan:shiranui",
+   "rank": "genin",
+   "pieces": [
+    "t1606_sleeveless_wrap",
+    "b1603_knee_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shiranui.field_coat",
+   "name": "Field Coat",
+   "source": "clan:shiranui",
+   "rank": "jonin",
+   "pieces": [
+    "t1607_field_coat",
+    "b1602_steel_slacks"
+   ],
+   "palettes": [
+    "SHIRANUI_STEEL",
+    "SHIRANUI_GUARD",
+    "SHIRANUI_UMBER"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shiranui.slit_tunic",
+   "name": "Slit Tunic",
+   "source": "clan:shiranui",
+   "rank": "chunin",
+   "pieces": [
+    "t1608_slit_tunic",
+    "b1604_slit_skirt"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shiranui.needle_vest",
+   "name": "Needle Vest",
+   "source": "clan:shiranui",
+   "rank": "chunin",
+   "pieces": [
+    "t1609_needle_vest",
+    "b1602_steel_slacks"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "shiranui.rookie",
+   "name": "Rookie Jacket",
+   "source": "clan:shiranui",
+   "rank": "genin",
+   "pieces": [
+    "t1610_rookie_jacket",
+    "b1603_knee_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "suzuran.academy_smock",
+   "name": "Academy Smock",
+   "source": "clan:suzuran",
+   "rank": "academy",
+   "pieces": [
+    "t2401_academy_smock",
+    "b2403_herb_shorts"
+   ],
+   "palettes": [
+    "SUZURAN_JADE",
+    "SUZURAN_CELADON",
+    "SUZURAN_LEAF"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "suzuran.lily_wrap",
+   "name": "Lily Wrap",
+   "source": "clan:suzuran",
+   "rank": "genin",
+   "pieces": [
+    "t2402_wrap_shirt",
+    "b2401_medic_trousers"
+   ],
+   "palettes": [
+    "SUZURAN_JADE",
+    "SUZURAN_CELADON",
+    "SUZURAN_PORCELAIN"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "suzuran.garden_tunic",
+   "name": "Garden Tunic",
+   "source": "clan:suzuran",
+   "rank": "genin",
+   "pieces": [
+    "t2409_bandaged_tunic",
+    "b2404_bell_skirt"
+   ],
+   "palettes": [
+    "SUZURAN_LEAF",
+    "SUZURAN_JADE",
+    "SUZURAN_NIGHTSHADE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "suzuran.herbalist",
+   "name": "Herbalist Haori",
+   "source": "clan:suzuran",
+   "rank": "genin",
+   "pieces": [
+    "t2405_herbalist_haori",
+    "b2402_lily_hakama"
+   ],
+   "palettes": [
+    "SUZURAN_JADE",
+    "SUZURAN_CELADON",
+    "SUZURAN_LEAF"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "suzuran.fume_worker",
+   "name": "Fume Jacket",
+   "source": "clan:suzuran",
+   "rank": "chunin",
+   "pieces": [
+    "t2406_fume_jacket",
+    "b2405_field_trousers"
+   ],
+   "palettes": [
+    "SUZURAN_LEAF",
+    "SUZURAN_NIGHTSHADE",
+    "SUZURAN_JADE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "suzuran.apothecary",
+   "name": "Apothecary Vest",
+   "source": "clan:suzuran",
+   "rank": "chunin",
+   "pieces": [
+    "t2403_apothecary_vest",
+    "b2401_medic_trousers"
+   ],
+   "palettes": [
+    "SUZURAN_JADE",
+    "SUZURAN_PORCELAIN",
+    "SUZURAN_CELADON",
+    "SUZURAN_NIGHTSHADE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "suzuran.field_medic",
+   "name": "Field Medic",
+   "source": "clan:suzuran",
+   "rank": "chunin",
+   "pieces": [
+    "t2408_field_medic_flak",
+    "b2405_field_trousers"
+   ],
+   "palettes": [
+    "SUZURAN_LEAF",
+    "SUZURAN_JADE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "suzuran.lily_medic",
+   "name": "Lily Medic Coat",
+   "source": "clan:suzuran",
+   "rank": "jonin",
+   "pieces": [
+    "t2404_medic_coat",
+    "b2401_medic_trousers"
+   ],
+   "palettes": [
+    "SUZURAN_JADE",
+    "SUZURAN_LEAF",
+    "SUZURAN_CELADON"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "suzuran.poison_master",
+   "name": "Poison Master",
+   "source": "clan:suzuran",
+   "rank": "jonin",
+   "pieces": [
+    "t2407_nightshade_robe",
+    "b2405_field_trousers"
+   ],
+   "palettes": [
+    "SUZURAN_NIGHTSHADE",
+    "SUZURAN_LEAF"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "suzuran.elder",
+   "name": "Elder Kosode",
+   "source": "clan:suzuran",
+   "rank": "jonin",
+   "pieces": [
+    "t2410_elder_kosode",
+    "b2402_lily_hakama"
+   ],
+   "palettes": [
+    "SUZURAN_LEAF",
+    "SUZURAN_JADE",
+    "SUZURAN_NIGHTSHADE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tobari.night_curtain",
+   "name": "Night Curtain",
+   "source": "clan:tobari",
+   "rank": "jonin",
+   "pieces": [
+    "t2501_night_curtain_mantle",
+    "b2504_gathered_hakama"
+   ],
+   "palettes": [
+    "TOBARI_NIGHT",
+    "TOBARI_DEEP"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tobari.hooded_scout",
+   "name": "Hooded Scout",
+   "source": "clan:tobari",
+   "rank": "chunin",
+   "pieces": [
+    "t2502_scout_hood_vest",
+    "b2501_tabi_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tobari.lantern_keeper",
+   "name": "Lantern Keeper",
+   "source": "clan:tobari",
+   "rank": "chunin",
+   "pieces": [
+    "t2503_lantern_keeper_coat",
+    "b2504_gathered_hakama"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tobari.silent_anbu",
+   "name": "Silent ANBU",
+   "source": "clan:tobari",
+   "rank": "anbu",
+   "pieces": [
+    "t2504_silent_anbu",
+    "b2501_tabi_trousers"
+   ],
+   "palettes": [
+    "TOBARI_ANBU"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  },
+  {
+   "id": "tobari.academy_tunic",
+   "name": "Lantern Pupil",
+   "source": "clan:tobari",
+   "rank": "academy",
+   "pieces": [
+    "t2505_lantern_tunic",
+    "b2503_scout_shorts"
+   ],
+   "palettes": [
+    "TOBARI_MOON",
+    "TOBARI_CHARCOAL"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tobari.layered_wrap",
+   "name": "Layered Wrap",
+   "source": "clan:tobari",
+   "rank": "genin",
+   "pieces": [
+    "t2506_layered_wrap",
+    "b2503_scout_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tobari.night_watch",
+   "name": "Night Watch Haori",
+   "source": "clan:tobari",
+   "rank": "jonin",
+   "pieces": [
+    "t2507_watch_haori",
+    "b2501_tabi_trousers"
+   ],
+   "palettes": [],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tobari.drape_kunoichi",
+   "name": "Drape Kunoichi",
+   "source": "clan:tobari",
+   "rank": "chunin",
+   "pieces": [
+    "t2508_drape_kunoichi",
+    "b2502_drape_skirt"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tobari.scout_jacket",
+   "name": "Scout Jacket",
+   "source": "clan:tobari",
+   "rank": "genin",
+   "pieces": [
+    "t2509_scout_jacket",
+    "b2501_tabi_trousers"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tobari.curtain_keeper",
+   "name": "Curtain Keeper",
+   "source": "clan:tobari",
+   "rank": "jonin",
+   "pieces": [
+    "t2510_curtain_tabard",
+    "b2502_drape_skirt"
+   ],
+   "palettes": [
+    "TOBARI_DEEP",
+    "TOBARI_CHARCOAL"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tsuchigumo.academy_tunic",
+   "name": "Academy Tunic",
+   "source": "clan:tsuchigumo",
+   "rank": "academy",
+   "pieces": [
+    "t2301_academy_tunic",
+    "b2303_crag_shorts"
+   ],
+   "palettes": [
+    "TSUCHIGUMO_PLUM",
+    "TSUCHIGUMO_MULBERRY"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tsuchigumo.mountain_mantle",
+   "name": "Mountain Mantle",
+   "source": "clan:tsuchigumo",
+   "rank": "academy",
+   "pieces": [
+    "t2310_mountain_mantle",
+    "b2302_bound_trousers"
+   ],
+   "palettes": [
+    "TSUCHIGUMO_PLUM",
+    "TSUCHIGUMO_CLAY",
+    "TSUCHIGUMO_AUBERGINE"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tsuchigumo.hotaru_kosode",
+   "name": "Hotaru Kosode",
+   "source": "clan:tsuchigumo",
+   "rank": "genin",
+   "pieces": [
+    "t2302_hotaru_kosode",
+    "b2301_mountain_hakama"
+   ],
+   "palettes": [
+    "TSUCHIGUMO_PLUM",
+    "TSUCHIGUMO_MULBERRY",
+    "TSUCHIGUMO_AUBERGINE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tsuchigumo.thread_wraps",
+   "name": "Thread Wraps",
+   "source": "clan:tsuchigumo",
+   "rank": "genin",
+   "pieces": [
+    "t2304_thread_wraps",
+    "b2302_bound_trousers"
+   ],
+   "palettes": [
+    "TSUCHIGUMO_UMBER",
+    "TSUCHIGUMO_AUBERGINE",
+    "TSUCHIGUMO_PLUM"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tsuchigumo.web_vest",
+   "name": "Web Vest",
+   "source": "clan:tsuchigumo",
+   "rank": "chunin",
+   "pieces": [
+    "t2303_web_vest",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "TSUCHIGUMO_PLUM",
+    "TSUCHIGUMO_AUBERGINE",
+    "TSUCHIGUMO_MULBERRY"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tsuchigumo.spinner_jacket",
+   "name": "Spinner Jacket",
+   "source": "clan:tsuchigumo",
+   "rank": "chunin",
+   "pieces": [
+    "t2308_spinner_jacket",
+    "b2304_apron_trousers"
+   ],
+   "palettes": [
+    "TSUCHIGUMO_PLUM",
+    "TSUCHIGUMO_UMBER",
+    "TSUCHIGUMO_AUBERGINE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tsuchigumo.stone_plates",
+   "name": "Stone Plates",
+   "source": "clan:tsuchigumo",
+   "rank": "jonin",
+   "pieces": [
+    "t2306_stone_plates",
+    "b2302_bound_trousers"
+   ],
+   "palettes": [
+    "TSUCHIGUMO_PLUM",
+    "TSUCHIGUMO_AUBERGINE",
+    "TSUCHIGUMO_MULBERRY"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tsuchigumo.shrine_haori",
+   "name": "Shrine Haori",
+   "source": "clan:tsuchigumo",
+   "rank": "jonin",
+   "pieces": [
+    "t2305_shrine_haori",
+    "b2301_mountain_hakama"
+   ],
+   "palettes": [
+    "TSUCHIGUMO_PLUM",
+    "TSUCHIGUMO_AUBERGINE",
+    "TSUCHIGUMO_OCHRE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tsuchigumo.magaki_coat",
+   "name": "Magaki Coat",
+   "source": "clan:tsuchigumo",
+   "rank": "jonin",
+   "pieces": [
+    "t2307_magaki_coat",
+    "b2302_bound_trousers"
+   ],
+   "palettes": [
+    "TSUCHIGUMO_MAGAKI"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "tsuchigumo.gyoja_robe",
+   "name": "Gyoja Robe",
+   "source": "clan:tsuchigumo",
+   "rank": "jonin",
+   "pieces": [
+    "t2309_gyoja_robe",
+    "b2301_mountain_hakama"
+   ],
+   "palettes": [
+    "TSUCHIGUMO_SHRINE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uchiha.avenger",
+   "name": "Avenger",
+   "source": "clan:uchiha",
+   "rank": "chunin",
+   "pieces": [
+    "t301_avenger_open_shirt",
+    "b303_wanderer_trousers"
+   ],
+   "palettes": [
+    "UCHIHA",
+    "UCHIHA_NIGHT",
+    "UCHIHA_INDIGO"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uchiha.military_police",
+   "name": "Military Police",
+   "source": "clan:uchiha",
+   "rank": "chunin",
+   "pieces": [
+    "t302_police_vest",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "UCHIHA_POLICE",
+    "UCHIHA_NIGHT"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uchiha.warring_states",
+   "name": "Warring States",
+   "source": "clan:uchiha",
+   "rank": "jonin",
+   "pieces": [
+    "t303_warring_armor",
+    "b302_war_tassets"
+   ],
+   "palettes": [
+    "UCHIHA_WAR",
+    "UCHIHA_WAR",
+    "UCHIHA_NIGHT"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uchiha.academy_zip",
+   "name": "Academy Zip",
+   "source": "clan:uchiha",
+   "rank": "academy",
+   "pieces": [
+    "t304_fan_zip_jacket",
+    "b304_warmer_shorts"
+   ],
+   "palettes": [
+    "UCHIHA",
+    "UCHIHA_INDIGO",
+    "UCHIHA_ASH"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uchiha.clan_tunic",
+   "name": "Clan Tunic",
+   "source": "clan:uchiha",
+   "rank": "genin",
+   "pieces": [
+    "t305_clan_tunic",
+    "b305_fan_skirt"
+   ],
+   "palettes": [
+    "UCHIHA_HOMESTEAD",
+    "UCHIHA",
+    "UCHIHA_PLUM",
+    "UCHIHA_INDIGO",
+    "UCHIHA_PALE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uchiha.crow_mesh",
+   "name": "Crow Mesh",
+   "source": "clan:uchiha",
+   "rank": "chunin",
+   "pieces": [
+    "t306_crow_mesh_shirt",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "UCHIHA_NIGHT",
+    "UCHIHA",
+    "UCHIHA_ASH"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uchiha.fan_jonin",
+   "name": "Fan Jonin",
+   "source": "clan:uchiha",
+   "rank": "jonin",
+   "pieces": [
+    "t307_fan_jonin_vest",
+    "b303_wanderer_trousers"
+   ],
+   "palettes": [
+    "KONOHA_JONIN",
+    "UCHIHA_POLICE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uchiha.clan_head",
+   "name": "Clan Head",
+   "source": "clan:uchiha",
+   "rank": "jonin",
+   "pieces": [
+    "t308_clan_head_haori",
+    "b301_clan_hakama"
+   ],
+   "palettes": [
+    "UCHIHA_NIGHT",
+    "UCHIHA",
+    "UCHIHA_PLUM"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uchiha.wanderer",
+   "name": "Wanderer",
+   "source": "clan:uchiha",
+   "rank": "jonin",
+   "pieces": [
+    "t309_travel_poncho",
+    "b301_clan_hakama"
+   ],
+   "palettes": [
+    "UCHIHA_ASH",
+    "UCHIHA_NIGHT"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uchiha.fan_wrap",
+   "name": "Fan Wrap",
+   "source": "clan:uchiha",
+   "rank": "chunin",
+   "pieces": [
+    "t310_fan_wrap_top",
+    "b304_warmer_shorts"
+   ],
+   "palettes": [
+    "UCHIHA",
+    "UCHIHA_PLUM",
+    "UCHIHA_INDIGO",
+    "UCHIHA_PALE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "umino.academy_pupil",
+   "name": "Academy Pupil",
+   "source": "clan:umino",
+   "rank": "academy",
+   "pieces": [
+    "t1803_academy_wave_tee",
+    "b1802_academy_shorts"
+   ],
+   "palettes": [
+    "UMINO_HARBOR",
+    "UMINO_SHALLOWS",
+    "UMINO_SUNSET"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "umino.dolphin_hoodie",
+   "name": "Dolphin Hoodie",
+   "source": "clan:umino",
+   "rank": "academy",
+   "pieces": [
+    "t1804_dolphin_hoodie",
+    "b1802_academy_shorts"
+   ],
+   "palettes": [
+    "UMINO_SHALLOWS",
+    "UMINO_HARBOR",
+    "UMINO_DEEP"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "umino.harbor_genin",
+   "name": "Harbor Genin",
+   "source": "clan:umino",
+   "rank": "genin",
+   "pieces": [
+    "t1807_harbor_tunic",
+    "b1805_rolled_slacks"
+   ],
+   "palettes": [
+    "UMINO_SHALLOWS",
+    "UMINO_HARBOR",
+    "UMINO_SUNSET"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "umino.desk_runner",
+   "name": "Desk Runner",
+   "source": "clan:umino",
+   "rank": "genin",
+   "pieces": [
+    "t1810_desk_runner",
+    "b1801_desk_trousers"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "umino.instructor",
+   "name": "Instructor Vest",
+   "source": "clan:umino",
+   "rank": "chunin",
+   "pieces": [
+    "t1801_instructor_vest",
+    "b1801_desk_trousers"
+   ],
+   "palettes": [
+    "UMINO_INSTRUCTOR",
+    "UMINO_INSTRUCTOR",
+    "UMINO_SUNSET"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "umino.mission_desk",
+   "name": "Mission Desk",
+   "source": "clan:umino",
+   "rank": "chunin",
+   "pieces": [
+    "t1802_mission_desk_jacket",
+    "b1801_desk_trousers"
+   ],
+   "palettes": [],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "umino.classroom",
+   "name": "Classroom Cardigan",
+   "source": "clan:umino",
+   "rank": "chunin",
+   "pieces": [
+    "t1806_teacher_cardigan",
+    "b1805_rolled_slacks"
+   ],
+   "palettes": [
+    "UMINO_HARBOR",
+    "UMINO_DEEP",
+    "UMINO_SUNSET"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "umino.kunoichi_teacher",
+   "name": "Kunoichi Teacher",
+   "source": "clan:umino",
+   "rank": "chunin",
+   "pieces": [
+    "t1809_wave_wrap_blouse",
+    "b1803_wave_skirt"
+   ],
+   "palettes": [
+    "UMINO_SHALLOWS",
+    "UMINO_DUNE",
+    "UMINO_SUNSET"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "umino.senior_instructor",
+   "name": "Senior Instructor",
+   "source": "clan:umino",
+   "rank": "jonin",
+   "pieces": [
+    "t1808_senior_vest",
+    "b1801_desk_trousers"
+   ],
+   "palettes": [
+    "UMINO_INSTRUCTOR",
+    "UMINO_DEEP"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "umino.tide_coat",
+   "name": "Tide Coat",
+   "source": "clan:umino",
+   "rank": "jonin",
+   "pieces": [
+    "t1805_tide_coat",
+    "b1804_tide_hakama"
+   ],
+   "palettes": [
+    "UMINO_DEEP",
+    "UMINO_HARBOR",
+    "UMINO_DUNE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uzumaki.sealing_master",
+   "name": "Sealing Master",
+   "source": "clan:uzumaki",
+   "rank": "jonin",
+   "pieces": [
+    "t201_sealing_master_robe",
+    "b204_tide_hakama"
+   ],
+   "palettes": [
+    "UZUMAKI_SEALER",
+    "UZUMAKI_WHIRLPOOL",
+    "UZUMAKI_SEA"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uzumaki.whirlpool_haori",
+   "name": "Whirlpool Haori",
+   "source": "clan:uzumaki",
+   "rank": "chunin",
+   "pieces": [
+    "t202_whirlpool_haori",
+    "b201_whirl_trousers"
+   ],
+   "palettes": [
+    "UZUMAKI_WHIRLPOOL",
+    "UZUMAKI_HABANERO"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uzumaki.homestead",
+   "name": "Homestead Dress",
+   "source": "clan:uzumaki",
+   "rank": "academy",
+   "pieces": [
+    "t203_homestead_dress",
+    "b202_village_long_skirt"
+   ],
+   "palettes": [
+    "UZUMAKI_HOMESTEAD",
+    "UZUMAKI_SEA",
+    "UZUMAKI_TIDE"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uzumaki.sensor",
+   "name": "Sensor",
+   "source": "clan:uzumaki",
+   "rank": "genin",
+   "pieces": [
+    "t204_sensor_jacket",
+    "b207_sensor_shorts"
+   ],
+   "palettes": [
+    "UZUMAKI_SENSOR",
+    "UZUMAKI_SENSOR",
+    "UZUMAKI_TIDE"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uzumaki.rain_wanderer",
+   "name": "Rain Wanderer",
+   "source": "clan:uzumaki",
+   "rank": "genin",
+   "pieces": [
+    "t205_rain_wrap_shirt",
+    "b206_rain_leggings"
+   ],
+   "palettes": [
+    "UZUMAKI_RAIN",
+    "UZUMAKI_SEA"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uzumaki.whirlpool_jonin",
+   "name": "Whirlpool Jonin",
+   "source": "clan:uzumaki",
+   "rank": "jonin",
+   "pieces": [
+    "t206_whirlpool_flak_vest",
+    "b201_whirl_trousers"
+   ],
+   "palettes": [
+    "UZUMAKI_JONIN"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uzumaki.tidewater",
+   "name": "Tidewater Genin",
+   "source": "clan:uzumaki",
+   "rank": "genin",
+   "pieces": [
+    "t207_tidewater_wrap",
+    "b203_sealer_shorts"
+   ],
+   "palettes": [
+    "UZUMAKI_TIDE",
+    "UZUMAKI_WHIRLPOOL",
+    "UZUMAKI_SEA"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uzumaki.sealer_coat",
+   "name": "Sealer",
+   "source": "clan:uzumaki",
+   "rank": "jonin",
+   "pieces": [
+    "t208_sealer_coat",
+    "b206_rain_leggings"
+   ],
+   "palettes": [],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uzumaki.harbor",
+   "name": "Harbor Villager",
+   "source": "clan:uzumaki",
+   "rank": "academy",
+   "pieces": [
+    "t209_harbor_vest",
+    "b201_whirl_trousers"
+   ],
+   "palettes": [
+    "UZUMAKI_SEA",
+    "UZUMAKI_TIDE",
+    "UZUMAKI_HOMESTEAD",
+    "UZUMAKI_WHIRLPOOL"
+   ],
+   "price": 100,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "uzumaki.mito_ceremony",
+   "name": "Ceremonial Kimono",
+   "source": "clan:uzumaki",
+   "rank": "jonin",
+   "pieces": [
+    "t210_mito_ceremonial_kimono",
+    "b205_ceremonial_kimono_skirt"
+   ],
+   "palettes": [
+    "UZUMAKI_CEREMONY"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yamanaka.mind_bloom",
+   "name": "Mind Bloom",
+   "source": "clan:yamanaka",
+   "rank": "chunin",
+   "pieces": [
+    "t701_mind_bloom_crop",
+    "b701_slit_apron_skirt"
+   ],
+   "palettes": [
+    "YAMANAKA_VIOLET",
+    "YAMANAKA_LAVENDER"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yamanaka.mind_walker",
+   "name": "Mind Walker",
+   "source": "clan:yamanaka",
+   "rank": "jonin",
+   "pieces": [
+    "t702_mind_walker_coat",
+    "b703_wrapped_trousers"
+   ],
+   "palettes": [
+    "YAMANAKA_VIOLET",
+    "YAMANAKA_PLUM",
+    "YAMANAKA_SENSOR"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yamanaka.ink_painter",
+   "name": "Ink Painter",
+   "source": "clan:yamanaka",
+   "rank": "genin",
+   "pieces": [
+    "t703_ink_crop_jacket",
+    "b702_bandaged_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yamanaka.shop_apron",
+   "name": "Flower Shop",
+   "source": "clan:yamanaka",
+   "rank": "genin",
+   "pieces": [
+    "t704_florist_apron",
+    "b704_florist_trousers"
+   ],
+   "palettes": [
+    "YAMANAKA_FLORIST",
+    "YAMANAKA_LAVENDER"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yamanaka.florist_wrap",
+   "name": "Florist Wrap",
+   "source": "clan:yamanaka",
+   "rank": "genin",
+   "pieces": [
+    "t705_florist_wrap",
+    "b705_long_slit_skirt"
+   ],
+   "palettes": [
+    "YAMANAKA_FLORIST",
+    "YAMANAKA_LAVENDER",
+    "YAMANAKA_VIOLET"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yamanaka.sensor_corps",
+   "name": "Sensor Corps",
+   "source": "clan:yamanaka",
+   "rank": "chunin",
+   "pieces": [
+    "t706_sensor_corps_tunic",
+    "b706_sensor_trousers"
+   ],
+   "palettes": [
+    "YAMANAKA_SENSOR",
+    "YAMANAKA_VIOLET"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yamanaka.interrogation",
+   "name": "Interrogation",
+   "source": "clan:yamanaka",
+   "rank": "jonin",
+   "pieces": [
+    "t707_interrogation_coat",
+    "b703_wrapped_trousers"
+   ],
+   "palettes": [
+    "YAMANAKA_SENSOR",
+    "YAMANAKA_PLUM"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yamanaka.genin_zip",
+   "name": "Genin Zip",
+   "source": "clan:yamanaka",
+   "rank": "genin",
+   "pieces": [
+    "t708_genin_zip_top",
+    "b702_bandaged_shorts"
+   ],
+   "palettes": [
+    "YAMANAKA_VIOLET",
+    "YAMANAKA_LAVENDER"
+   ],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yamanaka.elder_haori",
+   "name": "Elder Haori",
+   "source": "clan:yamanaka",
+   "rank": "jonin",
+   "pieces": [
+    "t709_elder_haori",
+    "b704_florist_trousers"
+   ],
+   "palettes": [
+    "YAMANAKA_PLUM",
+    "YAMANAKA_VIOLET"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yamanaka.lily_blouse",
+   "name": "Lily Blouse",
+   "source": "clan:yamanaka",
+   "rank": "jonin",
+   "pieces": [
+    "t710_lily_blouse",
+    "b705_long_slit_skirt"
+   ],
+   "palettes": [
+    "YAMANAKA_VIOLET",
+    "YAMANAKA_LAVENDER",
+    "YAMANAKA_PLUM"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yuhi.rose_thorn",
+   "name": "Rose Thorn",
+   "source": "clan:yuhi",
+   "rank": "jonin",
+   "pieces": [
+    "t1401_rose_thorn_wrap",
+    "b1401_bandaged_thighs"
+   ],
+   "palettes": [
+    "YUHI_THORN"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yuhi.genjutsu_jonin",
+   "name": "Genjutsu Jonin",
+   "source": "clan:yuhi",
+   "rank": "jonin",
+   "pieces": [
+    "t1402_genjutsu_jonin_vest",
+    "b1402_wrapped_trousers"
+   ],
+   "palettes": [
+    "YUHI_JONIN"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yuhi.after_the_war",
+   "name": "After the War",
+   "source": "clan:yuhi",
+   "rank": "jonin",
+   "pieces": [
+    "t1403_striped_overshirt",
+    "b1403_grey_slacks"
+   ],
+   "palettes": [
+    "YUHI_BURGUNDY"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yuhi.crimson_kimono",
+   "name": "Crimson Kimono",
+   "source": "clan:yuhi",
+   "rank": "chunin",
+   "pieces": [
+    "t1404_crimson_kimono",
+    "b1404_thorn_hem_skirt"
+   ],
+   "palettes": [
+    "YUHI_CRIMSON",
+    "YUHI_NOCTURNE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yuhi.bandage_bodice",
+   "name": "Bandage Bodice",
+   "source": "clan:yuhi",
+   "rank": "genin",
+   "pieces": [
+    "t1405_bandage_bodice",
+    "b1405_bandaged_shorts"
+   ],
+   "palettes": [],
+   "price": 180,
+   "slice": "beta1",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yuhi.mist_haori",
+   "name": "Mist Haori",
+   "source": "clan:yuhi",
+   "rank": "jonin",
+   "pieces": [
+    "t1406_mist_haori",
+    "b1402_wrapped_trousers"
+   ],
+   "palettes": [
+    "YUHI_MIST",
+    "YUHI_NOCTURNE"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yuhi.thorn_sash",
+   "name": "Thorn Sash",
+   "source": "clan:yuhi",
+   "rank": "chunin",
+   "pieces": [
+    "t1407_thorn_sash_tunic",
+    "b01_shinobi_trousers"
+   ],
+   "palettes": [
+    "YUHI_NOCTURNE",
+    "YUHI_CRIMSON",
+    "YUHI_MIST"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yuhi.rose_wrap",
+   "name": "Rose Wrap",
+   "source": "clan:yuhi",
+   "rank": "chunin",
+   "pieces": [
+    "t1408_rose_wrap_blouse",
+    "b1405_bandaged_shorts"
+   ],
+   "palettes": [
+    "YUHI_CRIMSON",
+    "YUHI_DUSK_ROSE"
+   ],
+   "price": 320,
+   "slice": "beta3",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yuhi.quiet_years",
+   "name": "Quiet Years",
+   "source": "clan:yuhi",
+   "rank": "jonin",
+   "pieces": [
+    "t1409_simple_wrap_dress",
+    "b1401_bandaged_thighs"
+   ],
+   "palettes": [
+    "YUHI_DUSK_ROSE",
+    "YUHI_THORN"
+   ],
+   "price": 480,
+   "slice": "later",
+   "sold_at": "tailor:clan_members"
+  },
+  {
+   "id": "yuhi.illusion_cloak",
+   "name": "Illusion Cloak",
+   "source": "clan:yuhi",
+   "rank": "anbu",
+   "pieces": [
+    "t1410_illusion_cloak",
+    "b1402_wrapped_trousers"
+   ],
+   "palettes": [
+    "YUHI_NOCTURNE",
+    "YUHI_MIST"
+   ],
+   "price": 0,
+   "slice": "later",
+   "sold_at": "given"
+  }
+ ]
+}

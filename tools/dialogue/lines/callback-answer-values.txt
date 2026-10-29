@@ -1,0 +1,175 @@
+# Callbacks for questions/values.txt: what a resident says later, remembering the player's answer.
+#! fn: callback
+
+## callback.answer.q.values.awful_painting.a1
+I showed my sister's painting to a friend and remembered you: the truth, gently. It went fine.
+You said you'd tell a friend the truth, gently. I've been practising the gently part.
+
+## callback.answer.q.values.awful_painting.a2
+If I ever show you a painting, I'll know you'd love it no matter what. Comforting, really.
+
+## callback.answer.q.values.awful_painting.a3
+"Ask what they like about it." I tried that with the potter's lopsided bowl. They admitted it themselves.
+
+## callback.answer.q.values.awful_painting.a4
+Still thinking about painting lessons with a terrible painter? I'd pay to watch.
+
+## callback.answer.q.values.hard_truth.a1
+You said you were grateful for a hard truth once. So here's one: you work too hard. Rest a little.
+
+## callback.answer.q.values.hard_truth.a2
+That truth that still stings, the one you mentioned. Does it sting less these days? I hope so.
+
+## callback.answer.q.values.hard_truth.a3
+You'd rather not have known, you said. I think of that whenever I'm about to say something blunt.
+
+## callback.answer.q.values.break_rule.a1
+Rules first, you told me. The gate guards would adore you. I mean that kindly.
+
+## callback.answer.q.values.break_rule.a2
+Mission first, rules second. Did you ever have to explain that to a sensei? I'd love to hear it.
+
+## callback.answer.q.values.break_rule.a3
+"Some rules are walls and some are fences." I've been sorting the village's rules into the two ever since.
+
+## callback.answer.q.values.leave_behind.a1
+You said you'd follow the order and leave a teammate. I hope that day never comes for you.
+
+## callback.answer.q.values.leave_behind.a2
+I keep thinking about what you said: you'd go back for a teammate, orders or not. I'd want you on my side.
+
+## callback.answer.q.values.leave_behind.a3
+A third way, you said, when the choice is the mission or a friend. Have you found one yet?
+
+## callback.answer.q.values.strong.a1
+Winning fights, that's strength to you. How many did you win this week? I'm keeping count.
+
+## callback.answer.q.values.strong.a2
+You told me strong means protecting people. I think of that every time the night patrol walks past.
+
+## callback.answer.q.values.strong.a3
+Never giving up. That's what you said strength was. I had a bad day and remembered it. Thank you.
+
+## callback.answer.q.values.strong.a4
+"Knowing yourself." I've been chewing on that answer of yours for days.
+
+## callback.answer.q.values.work_alone.a1
+You work best alone, I know. I'll leave this here and go. Call if you need a second pair of hands.
+
+## callback.answer.q.values.work_alone.a2
+You said you work best with a team. I've got a job that needs two. Interested?
+
+## callback.answer.q.values.work_alone.a3
+"Depends on the team." Have you found the right one yet?
+
+## callback.answer.q.values.ask_for_help.a1
+I know you'd rather handle things yourself. Just remember that offer of mine is still open.
+
+## callback.answer.q.values.ask_for_help.a2
+You told me you'd tell a friend when something's wrong. I'm a friend. That's all I'm saying.
+
+## callback.answer.q.values.ask_for_help.a3
+Still learning to ask for help? Here's practice: ask me for something. Anything.
+
+## callback.answer.q.values.afraid.a1
+You said being alone frightens you. So I thought I'd come and sit with you a while.
+
+## callback.answer.q.values.afraid.a2
+You're afraid of letting people down. For what it's worth, you've never let me down.
+
+## callback.answer.q.values.afraid.a3
+There was an enormous spider in the bathhouse this morning. I thought of you and shooed it out.
+
+## callback.answer.q.values.afraid.a4
+Afraid of nothing at all, you told me. Not even my cooking? Brave.
+
+## callback.answer.q.values.broken_promise.a1
+A promise is never to be broken, you said. So I'll only ask you for small ones.
+
+## callback.answer.q.values.broken_promise.a2
+You said you'd break a promise to spare someone pain. I keep turning that over. It's kind, and it's risky.
+
+## callback.answer.q.values.broken_promise.a3
+"Break it only if you explain why." I had to do just that with my brother. It worked.
+
+## callback.answer.q.values.forgive.a1
+You forgive right away, you told me. I hope people deserve it as quickly as you give it.
+
+## callback.answer.q.values.forgive.a2
+Sorry is a word, you said, and what comes after is the apology. I've been holding people to that.
+
+## callback.answer.q.values.forgive.a3
+Some things take a day to forgive, and some take years. Your answer. I think about the long ones.
+
+## callback.answer.q.values.old_customs.a1
+You'd keep the old customs, you said. The shrine keeper would like you. Bow at the gate, like the elders do.
+
+## callback.answer.q.values.old_customs.a2
+You'd let some old customs go. One went this spring: the noodle shop opened on a holiday. Happy?
+
+## callback.answer.q.values.old_customs.a3
+I asked an elder why we tie paper at the shrine, like you suggested. It's a long story. Want it?
+
+## callback.answer.q.values.speak_up.a1
+You'd speak up to the elders if they were wrong. Just remember to bow first.
+
+## callback.answer.q.values.speak_up.a2
+You said you'd trust the elders. I hope they earn it.
+
+## callback.answer.q.values.speak_up.a3
+A word in private, not in public. That's your way with elders. Mine too, now that I think of it.
+
+## callback.answer.q.values.how_you_win.a1
+How you win matters, you said. I told that to a Genin who was gloating at the training grounds.
+
+## callback.answer.q.values.how_you_win.a2
+A win is a win, you told me. So, how many wins this month?
+
+## callback.answer.q.values.how_you_win.a3
+Anything goes against a bandit, fair play with friends. Your rule. I've adopted it for card games.
+
+## callback.answer.q.values.family.a1
+You count your friends here as family. I set an extra cup at supper. Just in case.
+I've been thinking about what you said, about friends being family. Count me in.
+
+## callback.answer.q.values.family.a2
+Your squad is your family, you said. How is the family? Eating properly?
+
+## callback.answer.q.values.family.a3
+The whole village as family. A lot of cousins. I'm glad I'm one of them.
+
+## callback.answer.q.values.family.a4
+Still finding your family, you said. Take your time. There's room at my table meanwhile.
+
+## callback.answer.q.values.big_mistake.a1
+Own up at once, you told me. I did, yesterday, over the broken teapot. It went better than I feared.
+
+## callback.answer.q.values.big_mistake.a2
+Fix it quietly. That's your way with mistakes. I tried it with a cracked bowl. Glue and silence.
+
+## callback.answer.q.values.big_mistake.a3
+Learn from it and move on, you said. I'm trying that with last week. Slowly.
+
+## callback.answer.q.values.big_mistake.a4
+One day of sulking, then back to work. I've taken up your method. Today was my day.
+
+## callback.answer.q.values.small_lies.a1
+Little lies are harmless, you said. So tell me: is my new haircut nice?
+
+## callback.answer.q.values.small_lies.a2
+No little lies for you, you said. Good. I need an honest opinion on my new sandals. Ugly, yes?
+
+## callback.answer.q.values.small_lies.a3
+The silent compliment. I used your trick on my uncle's new hat. Nobody noticed.
+
+## callback.answer.q.values.look_up_to.a1
+You look up to your teachers. Did you ever tell them? You should.
+
+## callback.answer.q.values.look_up_to.a2
+You said you look up to your friends. I hope you know some of them look up to you.
+
+## callback.answer.q.values.look_up_to.a3
+The Hokage, you said, when I asked who you look up to. Aim high. I haven't forgotten.
+
+## callback.answer.q.values.look_up_to.a4
+Nobody to look up to yet, you said. Then you're making your own path. Good.

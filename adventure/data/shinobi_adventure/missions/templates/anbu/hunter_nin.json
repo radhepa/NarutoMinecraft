@@ -1,0 +1,137 @@
+{
+ "format": 1,
+ "id": "mission.anbu.hunter_nin",
+ "kind": "mission",
+ "rank": "a",
+ "category": "anbu",
+ "status": "later",
+ "title": "dlg:mission.anbu.hunter_nin.title",
+ "brief": "dlg:mission.anbu.hunter_nin.brief",
+ "dialogue": {
+  "brief": "dlg:mission.anbu.hunter_nin.brief",
+  "accept": "dlg:mission.anbu.hunter_nin.accept",
+  "decline": "dlg:mission.anbu.hunter_nin.decline",
+  "progress": "dlg:mission.anbu.hunter_nin.progress",
+  "success": "dlg:mission.anbu.hunter_nin.success",
+  "fail": "dlg:mission.anbu.hunter_nin.fail",
+  "report": "dlg:mission.anbu.hunter_nin.report"
+ },
+ "minutes": 50,
+ "party": "anbu_cell",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "anbu"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "group": "anbu"
+   }
+  },
+  "target": {
+   "pick": "role",
+   "role": "role:target.missing_nin"
+  },
+  "trail": {
+   "pick": "anchor",
+   "tag": "far.trail"
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "trail"
+  },
+  "trail": {
+   "objective": {
+    "type": "inspect",
+    "target": "tracks",
+    "at": "slot:trail",
+    "count": 5
+   },
+   "next": "fight"
+  },
+  "fight": {
+   "objective": {
+    "type": "defeat",
+    "group": "slot:target",
+    "at": "slot:trail"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "other_hunters",
+   "weight": 2,
+   "harder": true,
+   "modifier": true,
+   "premise": "dlg:mission.anbu.hunter_nin.twist.other_hunters"
+  },
+  {
+   "id": "plea",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.anbu.hunter_nin.twist.plea"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "fast",
+  "unseen"
+ ],
+ "fast_hours": 36,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [
+  "combat:enemy.rogue_jonin"
+ ],
+ "places": {
+  "anchors": [
+   "far.trail",
+   "gate.travel_desk"
+  ],
+  "regions": [
+   "region:far_lands"
+  ]
+ },
+ "pay": {
+  "band": "a",
+  "xp_band": "a",
+  "weight": 0.6
+ },
+ "tags": [
+  "travel",
+  "anbu",
+  "hunt",
+  "target"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.anbu",
+ "_premise": "Hunt a missing-nin who carries the Leaf's secrets in their head, before another village catches them.",
+ "_twists": {
+  "other_hunters": "Another village's hunters got there first.",
+  "plea": "The target begs to be taken home instead."
+ }
+}

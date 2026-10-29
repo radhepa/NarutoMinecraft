@@ -1,0 +1,63 @@
+# Overheard talk between rivals: friendly or not quite, at the training grounds, the market and the shops.
+#! tags: relation=rivals
+
+## ambient.rivals  fn=react
+A: Forty laps this morning.
+B: Forty-one.
+A: You're lying.
+B: Count them yourself tomorrow.
+
+A: Your shuriken went wide on the third throw.
+B: You were watching? I'm flattered.
+
+A: I hear you're top of the Mission Desk tally this month.
+B: Jealous?
+A: Motivated.
+
+A: Rematch. Training ground three. Dawn.
+B: Bring a spare headband. You'll want to hide your face after.
+
+A: Nice footwork yesterday.
+B: Was that a compliment?
+A: Don't get used to it.
+
+## ambient.rivals  fn=worldbuild
+A: My stall sold more chestnuts than yours today.
+B: Mine sold better chestnuts.
+A: Nobody can taste "better" through the shell.
+
+A: Your tea's a ryo cheaper than mine again.
+B: And yours is a ryo worse.
+A: Ha! We'll see who's still open in spring.
+
+A: My garden's chrysanthemums are taller.
+B: Mine have more heads. The judges count heads.
+A: The judges are your cousins.
+
+A: The tea house has your name above mine on the go board.
+B: Read it again. It's in order of wins.
+
+## ambient.rivals  fn=reveal_character
+A: Why do you always train at the same time as me?
+B: Why do you always train at the same time as me?
+A: ...Fair.
+
+A: You pushed me today. I'll admit that.
+B: I always push you. That's the point of me.
+
+A: When we were small, I wanted to be you.
+B: And now?
+A: Now I want to beat you. It's healthier.
+
+A: If you ever leave the village, who'll I compete with?
+B: I'm not going anywhere. Who'd keep you honest?
+
+## ambient.rivals  stage=child  fn=react
+A: I can climb the Academy wall faster than you.
+B: Can not.
+A: Can so. Race you.
+B: ...Tomorrow. I've got a stitch.
+
+A: I got a better mark on the throwing test.
+B: By one point.
+A: One point is still a point!

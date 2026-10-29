@@ -1,0 +1,100 @@
+# Callbacks to quiet hangout highlights: fishing, stargazing, painting, shogi and the library.
+#! kind: cycle
+#! fn: callback
+
+## callback.hangout.fishing.highlight.1
+That big one we hauled in together! I've told the story so often it's grown to twice the size.
+## callback.hangout.fishing.highlight.2
+That heron that out-fished us both. I saw it again yesterday, looking smug.
+## callback.hangout.fishing.highlight.3
+You falling into the river! I still laugh about it in the bath.
+## callback.hangout.fishing.highlight.4
+The sun through the mist on the river. I think of that morning when I can't sleep.
+## callback.hangout.fishing.highlight.5
+The same fish on both our lines. Nobody believes me. You'll back me up, won't you?
+## callback.hangout.fishing.highlight.6
+That otter on the far bank. I've started leaving it a bit of bait when I go.
+## callback.hangout.fishing.highlight.7
+That hour by the river without a word. I miss that kind of quiet.
+## callback.hangout.fishing.highlight.8
+Your sandal catch! I keep looking at people's feet in the market for the one-sandalled culprit.
+## callback.hangout.fishing.highlight.9
+The fish we grilled on the bank. I've tried to cook it like that since. It's never as good.
+## callback.hangout.fishing.highlight.10
+"Come back bigger." You said that to a fish. I think about it more than I should.
+
+## callback.hangout.stargazing.highlight.1
+That shooting star on the Rock. Did your wish come true? Mine's working on it.
+## callback.hangout.stargazing.highlight.2
+I showed someone our Ramen constellation. They couldn't see it. Their loss.
+## callback.hangout.stargazing.highlight.3
+The village lanterns going out one by one below us. I picture it every night now.
+## callback.hangout.stargazing.highlight.4
+Three shooting stars in a row! I still haven't decided what to use my third wish on.
+## callback.hangout.stargazing.highlight.5
+You fell asleep on the Rock mid-sentence. You never finished that story, you know.
+## callback.hangout.stargazing.highlight.6
+The owl on the stone head above us. I'm sure it's the same one that hoots outside my window.
+## callback.hangout.stargazing.highlight.7
+Spilt rice across the dark. That's how I describe the Milky Way now. It's your fault.
+## callback.hangout.stargazing.highlight.8
+We watched the whole night turn, up on the Rock. I'd do that again in a heartbeat.
+## callback.hangout.stargazing.highlight.9
+Out of all the stars, we picked the same one. I look for it every clear night.
+## callback.hangout.stargazing.highlight.10
+That story about the stars you told me. I told it to the children on my street. They loved it.
+
+## callback.hangout.painting.highlight.1
+Your painting blowing away over the valley! Someone out there has a free masterpiece.
+## callback.hangout.painting.highlight.2
+That painting you did of me. I look at it when I need cheering up.
+## callback.hangout.painting.highlight.3
+The rainbow over the overlook. My painting of it's terrible, but I love it anyway.
+## callback.hangout.painting.highlight.4
+Your purple cloud. I've started seeing purple in every cloud since.
+## callback.hangout.painting.highlight.5
+That little deer that came to look at our easels. I wonder what it thought of our work.
+## callback.hangout.painting.highlight.6
+The inkpot mountain. Your best painting, and it was an accident.
+## callback.hangout.painting.highlight.7
+I still say you should have sold that painting to the merchant. Five ryo!
+## callback.hangout.painting.highlight.8
+Painting the dusk at the overlook. I've never managed to get those colours right since.
+
+## callback.hangout.shogi.highlight.1
+That perfect draw at the tea house. I've set up the position at home. I stare at it.
+## callback.hangout.shogi.highlight.2
+Taken by a pawn. A PAWN. I still wake up thinking about it.
+## callback.hangout.shogi.highlight.3
+The crowd round our board! The old players still nod at me in the street.
+## callback.hangout.shogi.highlight.4
+Your twenty-move trap. I've studied it since. I still don't know how you saw it.
+## callback.hangout.shogi.highlight.5
+The old champion said "good move" to you. I've been chasing that compliment ever since.
+## callback.hangout.shogi.highlight.6
+Three cold pots of tea over one game. That's how good it was.
+## callback.hangout.shogi.highlight.7
+Rebuilding the board from memory after my elbow! We make a good team, don't we?
+## callback.hangout.shogi.highlight.8
+You let me take back a move once. I've been trying to repay that debt ever since.
+## callback.hangout.shogi.highlight.9
+Your comeback from three pieces down. I replay it in my head when I'm feeling too confident.
+## callback.hangout.shogi.highlight.10
+Our accidental opening! I've been using it. I call it by our names. Don't tell anyone.
+
+## callback.hangout.library.highlight.1
+That pressed flower in the old scroll. I keep wondering who hid it there.
+## callback.hangout.library.highlight.2
+The shush that blew out a candle. I still giggle walking past the librarian.
+## callback.hangout.library.highlight.3
+Your name next to the riddle in the margin. I checked. It's still there.
+## callback.hangout.library.highlight.4
+The scroll about falling objects that fell on your head! The library has a sense of humour.
+## callback.hangout.library.highlight.5
+The oldest scroll in the Academy. We breathed on history, you and me.
+## callback.hangout.library.highlight.6
+That rainy afternoon in the library. Whenever it rains now I want a pile of scrolls and you.
+## callback.hangout.library.highlight.7
+You woke up with my notes printed backwards on your cheek. I wish I'd had a mirror.
+## callback.hangout.library.highlight.8
+That old map of the village, with everything in the wrong place. I'd like to go and find it again.

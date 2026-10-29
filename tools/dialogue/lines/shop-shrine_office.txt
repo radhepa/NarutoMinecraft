@@ -1,0 +1,45 @@
+# The shrine office: charms, paper fortunes and wooden wish plaques.
+#! fn: commerce
+
+## shop.shrine_office.greet  shop=shrine_office  fn=commerce
+Welcome to the shrine. Charms, fortunes and wish plaques at the window.
+Good day, {player}. Have you come to ask the gods for something?
+Peace on your visit. Please, take your time.
+Hello. Bow at the gate first, then come to the window. That's the order of things.
+
+## shop.shrine_office.greet  shop=shrine_office  event=new_year  fn=commerce,react
+New Year's blessings! The fortune box is full, and the queue is long. Worth the wait.
+
+## shop.shrine_office.browse  shop=shrine_office  fn=commerce
+Charms for safe travel, for study, for health and for good business.
+Paper fortunes, drawn from the box. Good ones you keep, bad ones you tie to the rack.
+Wish plaques: write your wish on the back, hang it on the wall with the others.
+There is a new charm for shinobi, braided in the village colours, to wear past the gate.
+
+## shop.shrine_office.buy  shop=shrine_office  kind=cycle  fn=commerce
+{item}. {pay}. Keep it close, not in a drawer.
+Here is your charm. It lasts one year, then bring it back to be burned.
+That's {pay}. Write slowly, the gods read every word.
+{pay}. May it bring you what you need, which isn't always what you want.
+
+## shop.shrine_office.cant_afford  shop=shrine_office  kind=cycle  fn=commerce
+Short? A bow and a clap at the hall costs nothing, and the gods hear that too.
+The charm is a little more than you have. Come back another day, it will wait.
+
+## shop.shrine_office.sold_out  shop=shrine_office  kind=cycle  fn=commerce
+No more {item} today. The priests are making more by hand.
+The plaques have run out. So many wishes this season.
+
+## shop.shrine_office.closing  shop=shrine_office  time=evening|night  fn=commerce
+The office closes at dusk, but the shrine is always open.
+Last charms of the day. The priests have evening prayers.
+
+## shop.shrine_office.recommend  shop=shrine_office  fn=commerce,teach
+A study charm before an exam. It won't learn for you, but it helps you sit still.
+The safe travel charm, for missions outside the wall. Hang it on your pouch.
+Draw a fortune. If it's bad, tie it to the rack and leave the bad luck here.
+The {item}. Many come back for it a second year.
+
+## shop.shrine_office.regular  shop=shrine_office  level=3..10  fn=commerce,deepen_bond
+You visit often. The gods notice those who come in good times as well as bad.
+I've seen your plaque on the wall. I won't say what it says. I hope it comes true.

@@ -1,0 +1,123 @@
+{
+ "format": 1,
+ "_doc": "Client rapport, requests by name, recurring clients and chains, rival squads. MISSIONS.md section 5.",
+ "rapport": {
+  "tiers": [
+   [
+    "stranger",
+    -99
+   ],
+   [
+    "known",
+    1
+   ],
+   [
+    "regular",
+    3
+   ],
+   [
+    "trusted",
+    6
+   ],
+   [
+    "patron",
+    10
+   ]
+  ],
+  "soured_below": -2,
+  "_doc": "Points per mission by grade come from economy.json; a client below `soured_below` stops posting to you for 14 days."
+ },
+ "requests": {
+  "min_tier": "known",
+  "min_avg_score": 85,
+  "chance_per_day": 0.25,
+  "max_on_board": 1,
+  "expires_days": 4,
+  "pay": 1.15,
+  "decline": "free"
+ },
+ "chains": [
+  {
+   "id": "chain.merchant",
+   "role": "role:merchant",
+   "_doc": "The travelling merchant who keeps hiring the squad (ROADMAP Classic cast).",
+   "unlock": {
+    "quest_state": [
+     "main.ch14.second_escort",
+     "done"
+    ]
+   },
+   "templates": [
+    "mission.c.escort_merchant",
+    "mission.c.caravan_guard"
+   ],
+   "per_week": 1
+  },
+  {
+   "id": "chain.kiln",
+   "_doc": "A family of potters you work for from Genin to Jonin.",
+   "roles": {
+    "role:client.kiln_grandmother": "an elderly civilian potter",
+    "role:client.kiln_parent": "a civilian potter, her child",
+    "role:client.kiln_heir": "the parent's eldest, an apprentice potter"
+   },
+   "unlock": {
+    "flag": "story.ch10.done"
+   },
+   "stages": [
+    {
+     "template": "mission.d.kiln_firing",
+     "after": null
+    },
+    {
+     "template": "mission.c.kiln_delivery",
+     "after": "mission.d.kiln_firing",
+     "min_tier": "known"
+    },
+    {
+     "template": "mission.b.kiln_glaze",
+     "after": "mission.c.kiln_delivery",
+     "min_tier": "regular"
+    },
+    {
+     "template": "mission.a.kiln_court",
+     "after": "mission.b.kiln_glaze",
+     "min_tier": "trusted"
+    }
+   ],
+   "per_week": 1
+  }
+ ],
+ "returning": {
+  "_doc": "When the board casts a client, it first tries someone you have already worked for (known or better, and not too recently), so the village's regulars come back.",
+  "chance": 0.3,
+  "min_tier": "known"
+ },
+ "rival_squads": {
+  "rival": {
+   "role": "role:rival_squad",
+   "members": [
+    "role:rival",
+    "role:classmate_c",
+    "role:classmate_d"
+   ],
+   "unlock": {
+    "quest_state": [
+     "main.ch9.small_jobs",
+     "done"
+    ]
+   },
+   "contests_per_week": 1,
+   "win_chance": {
+    "genin": 0.45,
+    "chunin": 0.5
+   }
+  },
+  "npc_squads": {
+   "count": 4,
+   "take_unclaimed_after_days": 1,
+   "chance": 0.2,
+   "_doc": "Other Genin squads take offers you leave on the board; the board says who took it."
+  }
+ }
+}

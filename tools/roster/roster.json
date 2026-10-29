@@ -1,0 +1,2052 @@
+{
+ "format": 1,
+ "_doc": "Every named shinobi of the beta (docs/RANKS.md). Names are rolled per save: text uses the name token, never the placeholder (given name first, family name last; a Hokage by given name only), which is for developers only. Clan members carry their clan's name; everyone else an ordinary family name from population.json that never matches a clan, and clan \"none\" says so. rank is each character's public rank when the player first sees them. levels are whole levels on the player's curve at the end of each stretch: adults hold theirs through the beta; the year's class and the squad a year ahead grow beside the player (grows: true; from life:roster's typical run, so guides, not fixed). tier is read from the level at first sight; clan_power from the clan. importance is the story's weight; spotlight is the writing and art budget. story: true marks a role docs/story/ owns: only its public rank and role live here. provisional: true marks a placeholder that waits for the story's cast. tools/roster/roster.py --check validates this file.",
+ "slices": [
+  "beta1",
+  "beta2",
+  "beta2.5",
+  "beta3",
+  "spoken"
+ ],
+ "ranks": [
+  "kage",
+  "elder",
+  "jonin_commander",
+  "anbu",
+  "jonin",
+  "special_jonin",
+  "chunin",
+  "genin",
+  "academy",
+  "retired",
+  "civilian"
+ ],
+ "importance": {
+  "story-driving": "the story moves through them: the Hokage's circle, the senseis, your year and the squad ahead",
+  "fan-favourite": "they do not move the story, but players will look for them: showcase elites, proctors, the gate",
+  "background": "a face with a job and a rank"
+ },
+ "spotlight": {
+  "pillar": "few: a unique look and kit, a signature technique, showcase scenes",
+  "named": "their own lines and quests; a kit from the shared pool with one twist",
+  "background": "a rank, a role outfit, generated lines",
+  "legend": "spoken of, not met in the beta"
+ },
+ "class_clan_weights": {
+  "_doc": "How a Varied save rolls the player's year (the eleven classmates): by clan group, then by population.json's weights inside the group, so familiar clans appear early. The village population is unchanged.",
+  "noble": 0.68,
+  "minor": 0.2,
+  "clanless": 0.12
+ },
+ "squad_clan_weights": {
+  "_doc": "The same for the squad a year ahead and the five senseis: leaning noble, less than the class.",
+  "noble": 0.45,
+  "minor": 0.3,
+  "clanless": 0.25
+ },
+ "squads": {
+  "squad_1": {
+   "sensei": "role:sensei",
+   "members": [
+    "player",
+    "role:teammate_a",
+    "role:teammate_b"
+   ],
+   "bench": [
+    "role:classmate_c"
+   ]
+  },
+  "squad_2": {
+   "sensei": "role:sensei_2",
+   "members": [
+    "role:rival",
+    "role:classmate_c",
+    "role:classmate_d"
+   ]
+  },
+  "squad_3": {
+   "sensei": "role:sensei_3",
+   "members": [
+    "role:squad3_a",
+    "role:squad3_b",
+    "role:squad3_c"
+   ]
+  },
+  "squad_4": {
+   "sensei": "role:sensei_4",
+   "members": [
+    "role:squad4_a",
+    "role:squad4_b",
+    "role:squad4_c"
+   ]
+  },
+  "squad_5": {
+   "sensei": "role:sensei_5",
+   "members": [
+    "role:squad5_a",
+    "role:squad5_b",
+    "role:squad5_c"
+   ],
+   "notes": "a year ahead of you; genin from the start"
+  }
+ },
+ "player": {
+  "clan": "none",
+  "levels": {
+   "academy": 5,
+   "genin": 15,
+   "exams": 18,
+   "chunin": 30,
+   "jonin": 42,
+   "road": 50
+  }
+ },
+ "people": [
+  {
+   "role": "role:hokage_4",
+   "name": "{name:role:hokage_4}",
+   "placeholder": "Hiroshi",
+   "given": "Hiroshi",
+   "family": null,
+   "rank": "kage",
+   "tier": "S",
+   "importance": "story-driving",
+   "spotlight": "pillar",
+   "clan": "akimichi",
+   "clan_power": "strong",
+   "specialty": "taijutsu (expansion)",
+   "first": "beta1",
+   "levels": {
+    "academy": 58,
+    "genin": 58,
+    "exams": 58
+   },
+   "story": true,
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.hokage_4.gone"
+   }
+  },
+  {
+   "role": "role:elder_keeper",
+   "name": "{name:role:elder_keeper}",
+   "placeholder": "Genzo Kubo (no clan)",
+   "given": "Genzo",
+   "family": "Kubo",
+   "rank": "elder",
+   "tier": "B",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "records",
+   "first": "beta1",
+   "levels": {
+    "academy": 38,
+    "genin": 38,
+    "exams": 38
+   },
+   "story": true,
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.elder_keeper.gone"
+   }
+  },
+  {
+   "role": "role:elder_councillor",
+   "name": "{name:role:elder_councillor}",
+   "placeholder": "Ichiro Senju",
+   "given": "Ichiro",
+   "family": "Senju",
+   "rank": "elder",
+   "tier": "B",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "senju",
+   "clan_power": "great",
+   "specialty": "ninjutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 36,
+    "genin": 36,
+    "exams": 36
+   },
+   "story": true,
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.elder_councillor.gone"
+   }
+  },
+  {
+   "role": "role:elder_hyuga",
+   "name": "{name:role:elder_hyuga}",
+   "placeholder": "Sadako Hyuga",
+   "given": "Sadako",
+   "family": "Hyuga",
+   "rank": "elder",
+   "tier": "B",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "hyuga",
+   "clan_power": "great",
+   "specialty": "taijutsu (gentle fist)",
+   "first": "beta1",
+   "levels": {
+    "academy": 37,
+    "genin": 37,
+    "exams": 37
+   },
+   "story": true,
+   "group": "circle",
+   "leaves_on": {
+    "flag": "world.roster.elder_hyuga.gone"
+   }
+  },
+  {
+   "role": "role:anbu_cat",
+   "name": "{name:role:anbu_cat}",
+   "placeholder": "Cat (masked)",
+   "given": null,
+   "family": null,
+   "rank": "anbu",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "unknown",
+   "clan_power": "unknown",
+   "specialty": "kenjutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 34,
+    "genin": 34,
+    "exams": 34
+   },
+   "masked": true,
+   "group": "anbu",
+   "look": "anbu_cat",
+   "job": "anbu",
+   "showcase": [
+    "ch1.residence_roof"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.anbu_cat.gone"
+   }
+  },
+  {
+   "role": "role:anbu_hawk",
+   "name": "{name:role:anbu_hawk}",
+   "placeholder": "Hawk (masked)",
+   "given": null,
+   "family": null,
+   "rank": "anbu",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "unknown",
+   "clan_power": "unknown",
+   "specialty": "sensing",
+   "first": "beta2",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "masked": true,
+   "group": "anbu",
+   "look": "anbu_hawk",
+   "job": "anbu",
+   "leaves_on": {
+    "flag": "world.roster.anbu_hawk.gone"
+   }
+  },
+  {
+   "role": "role:sensei",
+   "name": "{name:role:sensei}",
+   "placeholder": "Jun Takeda (no clan)",
+   "given": "Jun",
+   "family": "Takeda",
+   "rank": "jonin",
+   "tier": "A",
+   "importance": "story-driving",
+   "spotlight": "pillar",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "ninjutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 44,
+    "genin": 44,
+    "exams": 44
+   },
+   "story": true,
+   "group": "senseis",
+   "leads": "squad_1",
+   "showcase": [
+    "ch0.rescue",
+    "ch8.bells"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.sensei.gone"
+   }
+  },
+  {
+   "role": "role:sensei_2",
+   "name": "{name:role:sensei_2}",
+   "placeholder": "Raiden Shiranui",
+   "given": "Raiden",
+   "family": "Shiranui",
+   "rank": "jonin",
+   "tier": "A",
+   "importance": "story-driving",
+   "spotlight": "pillar",
+   "clan": "shiranui",
+   "clan_power": "minor",
+   "specialty": "tools (senbon)",
+   "first": "beta2",
+   "levels": {
+    "academy": 43,
+    "genin": 43,
+    "exams": 43
+   },
+   "story": true,
+   "group": "senseis",
+   "leads": "squad_2",
+   "showcase": [
+    "ch10.senbon_rings"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.sensei_2.gone"
+   }
+  },
+  {
+   "role": "role:sensei_3",
+   "name": "{name:role:sensei_3}",
+   "placeholder": "Akane Yuhi",
+   "given": "Akane",
+   "family": "Yuhi",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "story-driving",
+   "spotlight": "pillar",
+   "clan": "yuhi",
+   "clan_power": "strong",
+   "specialty": "genjutsu",
+   "first": "beta2",
+   "levels": {
+    "academy": 39,
+    "genin": 39,
+    "exams": 39
+   },
+   "story": true,
+   "group": "senseis",
+   "leads": "squad_3",
+   "look": "jonin_kunoichi",
+   "leaves_on": {
+    "flag": "world.roster.sensei_3.gone"
+   }
+  },
+  {
+   "role": "role:sensei_4",
+   "name": "{name:role:sensei_4}",
+   "placeholder": "Masaru Morino",
+   "given": "Masaru",
+   "family": "Morino",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "story-driving",
+   "spotlight": "pillar",
+   "clan": "morino",
+   "clan_power": "minor",
+   "specialty": "interrogation",
+   "first": "beta2",
+   "levels": {
+    "academy": 37,
+    "genin": 37,
+    "exams": 37
+   },
+   "story": true,
+   "group": "senseis",
+   "leads": "squad_4",
+   "leaves_on": {
+    "flag": "world.roster.sensei_4.gone"
+   }
+  },
+  {
+   "role": "role:sensei_5",
+   "name": "{name:role:sensei_5}",
+   "placeholder": "Benkei Uzumaki",
+   "given": "Benkei",
+   "family": "Uzumaki",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "story-driving",
+   "spotlight": "pillar",
+   "clan": "uzumaki",
+   "clan_power": "great",
+   "specialty": "sealing",
+   "first": "beta1",
+   "levels": {
+    "academy": 40,
+    "genin": 40,
+    "exams": 40
+   },
+   "story": true,
+   "group": "senseis",
+   "leads": "squad_5",
+   "leaves_on": {
+    "flag": "world.roster.sensei_5.gone"
+   }
+  },
+  {
+   "role": "role:teammate_a",
+   "name": "{name:role:teammate_a}",
+   "placeholder": "Sora Kurama",
+   "given": "Sora",
+   "family": "Kurama",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "story-driving",
+   "spotlight": "pillar",
+   "clan": "kurama",
+   "clan_power": "strong",
+   "specialty": "genjutsu (a painter)",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 17,
+    "chunin": 29,
+    "jonin": 40,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_1",
+   "leaves_on": {
+    "flag": "world.roster.teammate_a.gone"
+   }
+  },
+  {
+   "role": "role:teammate_b",
+   "name": "{name:role:teammate_b}",
+   "placeholder": "Riku Ogawa (no clan)",
+   "given": "Riku",
+   "family": "Ogawa",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "story-driving",
+   "spotlight": "pillar",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "taijutsu, with a stray pup",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 18,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_1",
+   "leaves_on": {
+    "flag": "world.roster.teammate_b.gone"
+   }
+  },
+  {
+   "role": "role:rival",
+   "name": "{name:role:rival}",
+   "placeholder": "Ryo Uchiha",
+   "given": "Ryo",
+   "family": "Uchiha",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "story-driving",
+   "spotlight": "pillar",
+   "clan": "uchiha",
+   "clan_power": "great",
+   "specialty": "ninjutsu (fire)",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 16,
+    "exams": 19,
+    "chunin": 30,
+    "jonin": 42,
+    "road": 50
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_2",
+   "leaves_on": {
+    "flag": "world.roster.rival.gone"
+   }
+  },
+  {
+   "role": "role:classmate_c",
+   "name": "{name:role:classmate_c}",
+   "placeholder": "Kanta Kinoshita",
+   "given": "Kanta",
+   "family": "Kinoshita",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "kinoshita",
+   "clan_power": "minor",
+   "specialty": "traps and earth",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 17,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_2",
+   "leaves_on": {
+    "flag": "world.roster.classmate_c.gone"
+   }
+  },
+  {
+   "role": "role:classmate_d",
+   "name": "{name:role:classmate_d}",
+   "placeholder": "Aya Gekko",
+   "given": "Aya",
+   "family": "Gekko",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "gekko",
+   "clan_power": "strong",
+   "specialty": "kenjutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 15,
+    "exams": 18,
+    "chunin": 30,
+    "jonin": 42,
+    "road": 49
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_2",
+   "leaves_on": {
+    "flag": "world.roster.classmate_d.gone"
+   }
+  },
+  {
+   "role": "role:squad3_a",
+   "name": "{name:role:squad3_a}",
+   "placeholder": "Natsu Nara",
+   "given": "Natsu",
+   "family": "Nara",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "nara",
+   "clan_power": "strong",
+   "specialty": "strategy (shadows)",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 18,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_3",
+   "leaves_on": {
+    "flag": "world.roster.squad3_a.gone"
+   }
+  },
+  {
+   "role": "role:squad3_b",
+   "name": "{name:role:squad3_b}",
+   "placeholder": "Goro Akimichi",
+   "given": "Goro",
+   "family": "Akimichi",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "akimichi",
+   "clan_power": "strong",
+   "specialty": "taijutsu (expansion); cooks",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 18,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_3",
+   "notes": "the Hokage's grandson",
+   "leaves_on": {
+    "flag": "world.roster.squad3_b.gone"
+   }
+  },
+  {
+   "role": "role:squad3_c",
+   "name": "{name:role:squad3_c}",
+   "placeholder": "Yusei Yamanaka",
+   "given": "Yusei",
+   "family": "Yamanaka",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "yamanaka",
+   "clan_power": "strong",
+   "specialty": "sensing (mind)",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 18,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_3",
+   "leaves_on": {
+    "flag": "world.roster.squad3_c.gone"
+   }
+  },
+  {
+   "role": "role:squad4_a",
+   "name": "{name:role:squad4_a}",
+   "placeholder": "Rei Hyuga",
+   "given": "Rei",
+   "family": "Hyuga",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "hyuga",
+   "clan_power": "great",
+   "specialty": "taijutsu (gentle fist, Byakugan)",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 15,
+    "exams": 19,
+    "chunin": 30,
+    "jonin": 42,
+    "road": 49
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_4",
+   "notes": "the Hyuga main house's heir",
+   "leaves_on": {
+    "flag": "world.roster.squad4_a.gone"
+   }
+  },
+  {
+   "role": "role:squad4_b",
+   "name": "{name:role:squad4_b}",
+   "placeholder": "Taiga Inuzuka",
+   "given": "Taiga",
+   "family": "Inuzuka",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "inuzuka",
+   "clan_power": "strong",
+   "specialty": "tracking, with a very large ninken",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 17,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_4",
+   "leaves_on": {
+    "flag": "world.roster.squad4_b.gone"
+   }
+  },
+  {
+   "role": "role:squad4_c",
+   "name": "{name:role:squad4_c}",
+   "placeholder": "Sumire Suzuran",
+   "given": "Sumire",
+   "family": "Suzuran",
+   "rank": "academy",
+   "tier": "E",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "suzuran",
+   "clan_power": "minor",
+   "specialty": "medical (herbs)",
+   "first": "beta1",
+   "levels": {
+    "academy": 5,
+    "genin": 14,
+    "exams": 17,
+    "chunin": 29,
+    "jonin": 41,
+    "road": 48
+   },
+   "grows": true,
+   "story": true,
+   "group": "class",
+   "squad": "squad_4",
+   "leaves_on": {
+    "flag": "world.roster.squad4_c.gone"
+   }
+  },
+  {
+   "role": "role:squad5_a",
+   "name": "{name:role:squad5_a}",
+   "placeholder": "Haruto Sarutobi",
+   "given": "Haruto",
+   "family": "Sarutobi",
+   "rank": "genin",
+   "tier": "D",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "sarutobi",
+   "clan_power": "strong",
+   "specialty": "taijutsu (staff)",
+   "first": "beta1",
+   "levels": {
+    "academy": 12,
+    "genin": 19,
+    "exams": 22,
+    "chunin": 31,
+    "jonin": 42,
+    "road": 50
+   },
+   "grows": true,
+   "story": true,
+   "group": "seniors",
+   "squad": "squad_5",
+   "leaves_on": {
+    "flag": "world.roster.squad5_a.gone"
+   }
+  },
+  {
+   "role": "role:squad5_b",
+   "name": "{name:role:squad5_b}",
+   "placeholder": "Kasumi Tobari",
+   "given": "Kasumi",
+   "family": "Tobari",
+   "rank": "genin",
+   "tier": "D",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "tobari",
+   "clan_power": "minor",
+   "specialty": "sensing (night scout)",
+   "first": "beta1",
+   "levels": {
+    "academy": 12,
+    "genin": 19,
+    "exams": 22,
+    "chunin": 31,
+    "jonin": 42,
+    "road": 49
+   },
+   "grows": true,
+   "story": true,
+   "group": "seniors",
+   "squad": "squad_5",
+   "leaves_on": {
+    "flag": "world.roster.squad5_b.gone"
+   }
+  },
+  {
+   "role": "role:squad5_c",
+   "name": "{name:role:squad5_c}",
+   "placeholder": "Isamu Kondo (no clan)",
+   "given": "Isamu",
+   "family": "Kondo",
+   "rank": "genin",
+   "tier": "D",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "taijutsu (outworks everyone)",
+   "first": "beta1",
+   "levels": {
+    "academy": 13,
+    "genin": 20,
+    "exams": 23,
+    "chunin": 32,
+    "jonin": 43,
+    "road": 50
+   },
+   "grows": true,
+   "story": true,
+   "group": "seniors",
+   "squad": "squad_5",
+   "leaves_on": {
+    "flag": "world.roster.squad5_c.gone"
+   }
+  },
+  {
+   "role": "role:kenjutsu_instructor",
+   "name": "{name:role:kenjutsu_instructor}",
+   "placeholder": "Tora Matsuda (no clan)",
+   "given": "Tora",
+   "family": "Matsuda",
+   "rank": "jonin",
+   "tier": "A",
+   "importance": "fan-favourite",
+   "spotlight": "pillar",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "kenjutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 45,
+    "genin": 45,
+    "exams": 45
+   },
+   "group": "elite",
+   "provisional": true,
+   "look": "jonin_sentinel",
+   "showcase": [
+    "ch2.sword_drills"
+   ],
+   "where": "academy",
+   "notes": "runs the Academy's sword drills for every class",
+   "leaves_on": {
+    "flag": "world.roster.kenjutsu_instructor.gone"
+   }
+  },
+  {
+   "role": "role:elite_scout",
+   "name": "{name:role:elite_scout}",
+   "placeholder": "Kyo Fujita (no clan)",
+   "given": "Kyo",
+   "family": "Fujita",
+   "rank": "jonin",
+   "tier": "A",
+   "importance": "fan-favourite",
+   "spotlight": "pillar",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "kenjutsu",
+   "first": "beta2",
+   "levels": {
+    "academy": 43,
+    "genin": 43,
+    "exams": 43
+   },
+   "group": "elite",
+   "provisional": true,
+   "look": "jonin_field",
+   "showcase": [
+    "ch11.east_road"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.elite_scout.gone"
+   }
+  },
+  {
+   "role": "role:legend_veteran",
+   "name": "{name:role:legend_veteran}",
+   "placeholder": "Sanjuro Endo (no clan)",
+   "given": "Sanjuro",
+   "family": "Endo",
+   "rank": "retired",
+   "tier": "A",
+   "importance": "fan-favourite",
+   "spotlight": "pillar",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "ninjutsu (fire)",
+   "first": "beta2",
+   "levels": {
+    "academy": 44,
+    "genin": 44,
+    "exams": 44
+   },
+   "group": "elite",
+   "provisional": true,
+   "where": "scroll_shop",
+   "showcase": [
+    "ch12.scroll_shop"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.legend_veteran.gone"
+   }
+  },
+  {
+   "role": "role:legend_wanderer",
+   "name": "{name:role:legend_wanderer}",
+   "placeholder": "Mugen Aoki (no clan)",
+   "given": "Mugen",
+   "family": "Aoki",
+   "rank": "jonin",
+   "tier": "S",
+   "importance": "fan-favourite",
+   "spotlight": "legend",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "ninjutsu",
+   "first": "spoken",
+   "levels": {
+    "academy": 55,
+    "genin": 55,
+    "exams": 55
+   },
+   "group": "elite",
+   "provisional": true,
+   "on_map": false,
+   "notes": "away on a long mission for the whole beta; spoken of at the standby station and in letters",
+   "leaves_on": {
+    "flag": "world.roster.legend_wanderer.gone"
+   }
+  },
+  {
+   "role": "role:instructor",
+   "name": "{name:role:instructor}",
+   "placeholder": "Kenta Hayashi (no clan)",
+   "given": "Kenta",
+   "family": "Hayashi",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "ninjutsu (teaching)",
+   "first": "beta1",
+   "levels": {
+    "academy": 24,
+    "genin": 24,
+    "exams": 24
+   },
+   "story": true,
+   "group": "academy",
+   "job": "academy_teacher",
+   "leaves_on": {
+    "flag": "world.roster.instructor.gone"
+   }
+  },
+  {
+   "role": "role:instructor_2",
+   "name": "{name:role:instructor_2}",
+   "placeholder": "Nobu Umino",
+   "given": "Nobu",
+   "family": "Umino",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "umino",
+   "clan_power": "minor",
+   "specialty": "tools (throwing)",
+   "first": "beta1",
+   "levels": {
+    "academy": 22,
+    "genin": 22,
+    "exams": 22
+   },
+   "group": "academy",
+   "provisional": true,
+   "job": "academy_teacher",
+   "leaves_on": {
+    "flag": "world.roster.instructor_2.gone"
+   }
+  },
+  {
+   "role": "role:instructor_3",
+   "name": "{name:role:instructor_3}",
+   "placeholder": "Emi Sakamoto (no clan)",
+   "given": "Emi",
+   "family": "Sakamoto",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "chakra control",
+   "first": "beta1",
+   "levels": {
+    "academy": 20,
+    "genin": 20,
+    "exams": 20
+   },
+   "group": "academy",
+   "provisional": true,
+   "job": "academy_teacher",
+   "leaves_on": {
+    "flag": "world.roster.instructor_3.gone"
+   }
+  },
+  {
+   "role": "role:headmaster",
+   "name": "{name:role:headmaster}",
+   "placeholder": "Tatsuo Umino",
+   "given": "Tatsuo",
+   "family": "Umino",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "umino",
+   "clan_power": "minor",
+   "specialty": "teaching",
+   "first": "beta1",
+   "levels": {
+    "academy": 34,
+    "genin": 34,
+    "exams": 34
+   },
+   "group": "academy",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.headmaster.gone"
+   }
+  },
+  {
+   "role": "role:proctor_written",
+   "name": "{name:role:proctor_written}",
+   "placeholder": "Kiyoshi Goto (no clan)",
+   "given": "Kiyoshi",
+   "family": "Goto",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "interrogation",
+   "first": "beta3",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "exams",
+   "provisional": true,
+   "where": "exam_hall",
+   "leaves_on": {
+    "flag": "world.roster.proctor_written.gone"
+   }
+  },
+  {
+   "role": "role:proctor_forest",
+   "name": "{name:role:proctor_forest}",
+   "placeholder": "Anzu Hirano (no clan)",
+   "given": "Anzu",
+   "family": "Hirano",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "survival",
+   "first": "beta3",
+   "levels": {
+    "academy": 36,
+    "genin": 36,
+    "exams": 36
+   },
+   "group": "exams",
+   "provisional": true,
+   "where": "forest_of_death",
+   "leaves_on": {
+    "flag": "world.roster.proctor_forest.gone"
+   }
+  },
+  {
+   "role": "role:proctor_finals",
+   "name": "{name:role:proctor_finals}",
+   "placeholder": "Seiji Gekko",
+   "given": "Seiji",
+   "family": "Gekko",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "gekko",
+   "clan_power": "strong",
+   "specialty": "kenjutsu",
+   "first": "beta3",
+   "levels": {
+    "academy": 34,
+    "genin": 34,
+    "exams": 34
+   },
+   "group": "exams",
+   "provisional": true,
+   "where": "stadium",
+   "leaves_on": {
+    "flag": "world.roster.proctor_finals.gone"
+   }
+  },
+  {
+   "role": "role:desk_chunin_1",
+   "name": "{name:role:desk_chunin_1}",
+   "placeholder": "Kotaro Noguchi (no clan)",
+   "given": "Kotaro",
+   "family": "Noguchi",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "administration",
+   "first": "beta2",
+   "levels": {
+    "academy": 19,
+    "genin": 19,
+    "exams": 19
+   },
+   "group": "duty",
+   "provisional": true,
+   "job": "mission_desk",
+   "leaves_on": {
+    "flag": "world.roster.desk_chunin_1.gone"
+   }
+  },
+  {
+   "role": "role:desk_chunin_2",
+   "name": "{name:role:desk_chunin_2}",
+   "placeholder": "Mika Namiashi",
+   "given": "Mika",
+   "family": "Namiashi",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "namiashi",
+   "clan_power": "minor",
+   "specialty": "administration",
+   "first": "beta2",
+   "levels": {
+    "academy": 18,
+    "genin": 18,
+    "exams": 18
+   },
+   "group": "duty",
+   "provisional": true,
+   "job": "mission_desk",
+   "leaves_on": {
+    "flag": "world.roster.desk_chunin_2.gone"
+   }
+  },
+  {
+   "role": "role:gate_guard_1",
+   "name": "{name:role:gate_guard_1}",
+   "placeholder": "Tetsuya Hagane",
+   "given": "Tetsuya",
+   "family": "Hagane",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "hagane",
+   "clan_power": "minor",
+   "specialty": "tools (mace)",
+   "first": "beta1",
+   "levels": {
+    "academy": 20,
+    "genin": 20,
+    "exams": 20
+   },
+   "group": "duty",
+   "provisional": true,
+   "job": "gate_guard",
+   "leaves_on": {
+    "flag": "world.roster.gate_guard_1.gone"
+   }
+  },
+  {
+   "role": "role:gate_guard_2",
+   "name": "{name:role:gate_guard_2}",
+   "placeholder": "Izumi Kikuchi (no clan)",
+   "given": "Izumi",
+   "family": "Kikuchi",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "taijutsu",
+   "first": "beta1",
+   "levels": {
+    "academy": 19,
+    "genin": 19,
+    "exams": 19
+   },
+   "group": "duty",
+   "provisional": true,
+   "job": "gate_guard",
+   "leaves_on": {
+    "flag": "world.roster.gate_guard_2.gone"
+   }
+  },
+  {
+   "role": "role:night_watch",
+   "name": "{name:role:night_watch}",
+   "placeholder": "Shizuka Tobari",
+   "given": "Shizuka",
+   "family": "Tobari",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "tobari",
+   "clan_power": "minor",
+   "specialty": "sensing (sound)",
+   "first": "beta1",
+   "levels": {
+    "academy": 23,
+    "genin": 23,
+    "exams": 23
+   },
+   "group": "duty",
+   "provisional": true,
+   "job": "wall_watch",
+   "leaves_on": {
+    "flag": "world.roster.night_watch.gone"
+   }
+  },
+  {
+   "role": "role:police_chief",
+   "name": "{name:role:police_chief}",
+   "placeholder": "Kagen Uchiha",
+   "given": "Kagen",
+   "family": "Uchiha",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "uchiha",
+   "clan_power": "great",
+   "specialty": "ninjutsu (fire)",
+   "first": "beta2",
+   "levels": {
+    "academy": 39,
+    "genin": 39,
+    "exams": 39
+   },
+   "group": "duty",
+   "provisional": true,
+   "job": "police",
+   "also": [
+    "role:head_uchiha"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.police_chief.gone"
+   }
+  },
+  {
+   "role": "role:police_officer",
+   "name": "{name:role:police_officer}",
+   "placeholder": "Shun Uchiha",
+   "given": "Shun",
+   "family": "Uchiha",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "uchiha",
+   "clan_power": "great",
+   "specialty": "taijutsu",
+   "first": "beta2",
+   "levels": {
+    "academy": 21,
+    "genin": 21,
+    "exams": 21
+   },
+   "group": "duty",
+   "provisional": true,
+   "job": "police",
+   "leaves_on": {
+    "flag": "world.roster.police_officer.gone"
+   }
+  },
+  {
+   "role": "role:medic",
+   "name": "{name:role:medic}",
+   "placeholder": "Yui Ishikawa (no clan)",
+   "given": "Yui",
+   "family": "Ishikawa",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "story-driving",
+   "spotlight": "named",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "medical",
+   "first": "beta1",
+   "levels": {
+    "academy": 21,
+    "genin": 21,
+    "exams": 21
+   },
+   "story": true,
+   "group": "duty",
+   "job": "medic",
+   "leaves_on": {
+    "flag": "world.roster.medic.gone"
+   }
+  },
+  {
+   "role": "role:hospital_head",
+   "name": "{name:role:hospital_head}",
+   "placeholder": "Yomogi Suzuran",
+   "given": "Yomogi",
+   "family": "Suzuran",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "suzuran",
+   "clan_power": "minor",
+   "specialty": "medical",
+   "first": "beta1",
+   "levels": {
+    "academy": 35,
+    "genin": 35,
+    "exams": 35
+   },
+   "group": "duty",
+   "provisional": true,
+   "job": "medic",
+   "also": [
+    "role:head_suzuran"
+   ],
+   "leaves_on": {
+    "flag": "world.roster.hospital_head.gone"
+   }
+  },
+  {
+   "role": "role:standby_jonin_1",
+   "name": "{name:role:standby_jonin_1}",
+   "placeholder": "Daisuke Arai (no clan)",
+   "given": "Daisuke",
+   "family": "Arai",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "ninjutsu (earth)",
+   "first": "beta2",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "standby",
+   "provisional": true,
+   "job": "jonin_standby",
+   "leaves_on": {
+    "flag": "world.roster.standby_jonin_1.gone"
+   }
+  },
+  {
+   "role": "role:standby_jonin_2",
+   "name": "{name:role:standby_jonin_2}",
+   "placeholder": "Mai Kawaguchi (no clan)",
+   "given": "Mai",
+   "family": "Kawaguchi",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "ninjutsu (water)",
+   "first": "beta2",
+   "levels": {
+    "academy": 32,
+    "genin": 32,
+    "exams": 32
+   },
+   "group": "standby",
+   "provisional": true,
+   "job": "jonin_standby",
+   "leaves_on": {
+    "flag": "world.roster.standby_jonin_2.gone"
+   }
+  },
+  {
+   "role": "role:standby_jonin_3",
+   "name": "{name:role:standby_jonin_3}",
+   "placeholder": "Satoru Ueda (no clan)",
+   "given": "Satoru",
+   "family": "Ueda",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "none",
+   "clan_power": "clanless",
+   "specialty": "genjutsu",
+   "first": "beta2",
+   "levels": {
+    "academy": 31,
+    "genin": 31,
+    "exams": 31
+   },
+   "group": "standby",
+   "provisional": true,
+   "job": "jonin_standby",
+   "leaves_on": {
+    "flag": "world.roster.standby_jonin_3.gone"
+   }
+  },
+  {
+   "role": "role:head_senju",
+   "name": "{name:role:head_senju}",
+   "placeholder": "Mokuren Senju",
+   "given": "Mokuren",
+   "family": "Senju",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "senju",
+   "clan_power": "great",
+   "specialty": "ninjutsu (wood)",
+   "first": "beta2",
+   "levels": {
+    "academy": 36,
+    "genin": 36,
+    "exams": 36
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_senju.gone"
+   }
+  },
+  {
+   "role": "role:head_hyuga",
+   "name": "{name:role:head_hyuga}",
+   "placeholder": "Takeshi Hyuga",
+   "given": "Takeshi",
+   "family": "Hyuga",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "hyuga",
+   "clan_power": "great",
+   "specialty": "taijutsu (gentle fist)",
+   "first": "beta2",
+   "levels": {
+    "academy": 41,
+    "genin": 41,
+    "exams": 41
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "notes": "the main house; role:squad4_a's parent",
+   "leaves_on": {
+    "flag": "world.roster.head_hyuga.gone"
+   }
+  },
+  {
+   "role": "role:head_akimichi",
+   "name": "{name:role:head_akimichi}",
+   "placeholder": "Dai Akimichi",
+   "given": "Dai",
+   "family": "Akimichi",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "akimichi",
+   "clan_power": "strong",
+   "specialty": "taijutsu (expansion)",
+   "first": "beta2",
+   "levels": {
+    "academy": 38,
+    "genin": 38,
+    "exams": 38
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_akimichi.gone"
+   }
+  },
+  {
+   "role": "role:head_yamanaka",
+   "name": "{name:role:head_yamanaka}",
+   "placeholder": "Kaoru Yamanaka",
+   "given": "Kaoru",
+   "family": "Yamanaka",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "yamanaka",
+   "clan_power": "strong",
+   "specialty": "sensing (mind)",
+   "first": "beta2",
+   "levels": {
+    "academy": 37,
+    "genin": 37,
+    "exams": 37
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "notes": "role:squad3_c's parent",
+   "leaves_on": {
+    "flag": "world.roster.head_yamanaka.gone"
+   }
+  },
+  {
+   "role": "role:head_uzumaki",
+   "name": "{name:role:head_uzumaki}",
+   "placeholder": "Kenshin Uzumaki",
+   "given": "Kenshin",
+   "family": "Uzumaki",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "named",
+   "clan": "uzumaki",
+   "clan_power": "great",
+   "specialty": "sealing",
+   "first": "beta2",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_uzumaki.gone"
+   }
+  },
+  {
+   "role": "role:head_nara",
+   "name": "{name:role:head_nara}",
+   "placeholder": "Shikou Nara",
+   "given": "Shikou",
+   "family": "Nara",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "nara",
+   "clan_power": "strong",
+   "specialty": "strategy (shadows)",
+   "first": "beta2",
+   "levels": {
+    "academy": 41,
+    "genin": 41,
+    "exams": 41
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_nara.gone"
+   }
+  },
+  {
+   "role": "role:head_inuzuka",
+   "name": "{name:role:head_inuzuka}",
+   "placeholder": "Hayabusa Inuzuka",
+   "given": "Hayabusa",
+   "family": "Inuzuka",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "fan-favourite",
+   "spotlight": "named",
+   "clan": "inuzuka",
+   "clan_power": "strong",
+   "specialty": "tracking, with ninken",
+   "first": "beta2",
+   "levels": {
+    "academy": 36,
+    "genin": 36,
+    "exams": 36
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_inuzuka.gone"
+   }
+  },
+  {
+   "role": "role:head_sarutobi",
+   "name": "{name:role:head_sarutobi}",
+   "placeholder": "Enzo Sarutobi",
+   "given": "Enzo",
+   "family": "Sarutobi",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "sarutobi",
+   "clan_power": "strong",
+   "specialty": "ninjutsu (fire)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 35,
+    "genin": 35,
+    "exams": 35
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_sarutobi.gone"
+   }
+  },
+  {
+   "role": "role:head_aburame",
+   "name": "{name:role:head_aburame}",
+   "placeholder": "Mushi Aburame",
+   "given": "Mushi",
+   "family": "Aburame",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "aburame",
+   "clan_power": "strong",
+   "specialty": "tracking (insects)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 35,
+    "genin": 35,
+    "exams": 35
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_aburame.gone"
+   }
+  },
+  {
+   "role": "role:head_kurama",
+   "name": "{name:role:head_kurama}",
+   "placeholder": "Utsuro Kurama",
+   "given": "Utsuro",
+   "family": "Kurama",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "kurama",
+   "clan_power": "strong",
+   "specialty": "genjutsu",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 30,
+    "genin": 30,
+    "exams": 30
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_kurama.gone"
+   }
+  },
+  {
+   "role": "role:head_shimura",
+   "name": "{name:role:head_shimura}",
+   "placeholder": "Gonzo Shimura",
+   "given": "Gonzo",
+   "family": "Shimura",
+   "rank": "retired",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "shimura",
+   "clan_power": "strong",
+   "specialty": "ninjutsu (wind)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 32,
+    "genin": 32,
+    "exams": 32
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_shimura.gone"
+   }
+  },
+  {
+   "role": "role:head_yuhi",
+   "name": "{name:role:head_yuhi}",
+   "placeholder": "Kaede Yuhi",
+   "given": "Kaede",
+   "family": "Yuhi",
+   "rank": "jonin",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "yuhi",
+   "clan_power": "strong",
+   "specialty": "genjutsu",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 34,
+    "genin": 34,
+    "exams": 34
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_yuhi.gone"
+   }
+  },
+  {
+   "role": "role:head_gekko",
+   "name": "{name:role:head_gekko}",
+   "placeholder": "Tsukiko Gekko",
+   "given": "Tsukiko",
+   "family": "Gekko",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "gekko",
+   "clan_power": "strong",
+   "specialty": "kenjutsu",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 33,
+    "genin": 33,
+    "exams": 33
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_gekko.gone"
+   }
+  },
+  {
+   "role": "role:head_shiranui",
+   "name": "{name:role:head_shiranui}",
+   "placeholder": "Senbei Shiranui",
+   "given": "Senbei",
+   "family": "Shiranui",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "shiranui",
+   "clan_power": "minor",
+   "specialty": "tools (senbon)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 26,
+    "genin": 26,
+    "exams": 26
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_shiranui.gone"
+   }
+  },
+  {
+   "role": "role:head_morino",
+   "name": "{name:role:head_morino}",
+   "placeholder": "Takumi Morino",
+   "given": "Takumi",
+   "family": "Morino",
+   "rank": "special_jonin",
+   "tier": "B",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "morino",
+   "clan_power": "minor",
+   "specialty": "interrogation",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 32,
+    "genin": 32,
+    "exams": 32
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_morino.gone"
+   }
+  },
+  {
+   "role": "role:head_umino",
+   "name": "{name:role:head_umino}",
+   "placeholder": "Kazuo Umino",
+   "given": "Kazuo",
+   "family": "Umino",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "umino",
+   "clan_power": "minor",
+   "specialty": "teaching",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 24,
+    "genin": 24,
+    "exams": 24
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_umino.gone"
+   }
+  },
+  {
+   "role": "role:head_haruno",
+   "name": "{name:role:head_haruno}",
+   "placeholder": "Momoe Haruno",
+   "given": "Momoe",
+   "family": "Haruno",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "haruno",
+   "clan_power": "minor",
+   "specialty": "chakra control",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 22,
+    "genin": 22,
+    "exams": 22
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_haruno.gone"
+   }
+  },
+  {
+   "role": "role:head_namiashi",
+   "name": "{name:role:head_namiashi}",
+   "placeholder": "Hayato Namiashi",
+   "given": "Hayato",
+   "family": "Namiashi",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "namiashi",
+   "clan_power": "minor",
+   "specialty": "taijutsu (footwork)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 23,
+    "genin": 23,
+    "exams": 23
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_namiashi.gone"
+   }
+  },
+  {
+   "role": "role:head_hagane",
+   "name": "{name:role:head_hagane}",
+   "placeholder": "Kurogane Hagane",
+   "given": "Kurogane",
+   "family": "Hagane",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "hagane",
+   "clan_power": "minor",
+   "specialty": "tools (metalwork)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 22,
+    "genin": 22,
+    "exams": 22
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_hagane.gone"
+   }
+  },
+  {
+   "role": "role:head_kinoshita",
+   "name": "{name:role:head_kinoshita}",
+   "placeholder": "Mokuzo Kinoshita",
+   "given": "Mokuzo",
+   "family": "Kinoshita",
+   "rank": "retired",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "kinoshita",
+   "clan_power": "minor",
+   "specialty": "carpentry",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 18,
+    "genin": 18,
+    "exams": 18
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_kinoshita.gone"
+   }
+  },
+  {
+   "role": "role:head_tsuchigumo",
+   "name": "{name:role:head_tsuchigumo}",
+   "placeholder": "Iwao Tsuchigumo",
+   "given": "Iwao",
+   "family": "Tsuchigumo",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "tsuchigumo",
+   "clan_power": "minor",
+   "specialty": "ninjutsu (earth binding)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 27,
+    "genin": 27,
+    "exams": 27
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_tsuchigumo.gone"
+   }
+  },
+  {
+   "role": "role:head_tobari",
+   "name": "{name:role:head_tobari}",
+   "placeholder": "Yoru Tobari",
+   "given": "Yoru",
+   "family": "Tobari",
+   "rank": "chunin",
+   "tier": "C",
+   "importance": "background",
+   "spotlight": "background",
+   "clan": "tobari",
+   "clan_power": "minor",
+   "specialty": "sensing (sound)",
+   "first": "beta2.5",
+   "levels": {
+    "academy": 26,
+    "genin": 26,
+    "exams": 26
+   },
+   "group": "clan_heads",
+   "provisional": true,
+   "leaves_on": {
+    "flag": "world.roster.head_tobari.gone"
+   }
+  }
+ ],
+ "civilians": [
+  {
+   "role": "role:librarian",
+   "name": "{name:role:librarian}",
+   "placeholder": "Chiyo Nishimura (no clan)",
+   "given": "Chiyo",
+   "family": "Nishimura",
+   "rank": "civilian",
+   "clan": "none",
+   "first": "beta1",
+   "story": true,
+   "where": "academy_library",
+   "leaves_on": {
+    "flag": "world.roster.librarian.gone"
+   }
+  },
+  {
+   "role": "role:porter",
+   "name": "{name:role:porter}",
+   "placeholder": "Bunta Okada (no clan)",
+   "given": "Bunta",
+   "family": "Okada",
+   "rank": "civilian",
+   "clan": "none",
+   "first": "beta1",
+   "story": true,
+   "where": "furniture_shop",
+   "leaves_on": {
+    "flag": "world.roster.porter.gone"
+   }
+  },
+  {
+   "role": "role:merchant",
+   "name": "{name:role:merchant}",
+   "placeholder": "Gonta Fukuda (no clan)",
+   "given": "Gonta",
+   "family": "Fukuda",
+   "rank": "civilian",
+   "clan": "none",
+   "first": "beta2",
+   "story": true,
+   "where": "east_road",
+   "leaves_on": {
+    "flag": "world.roster.merchant.gone"
+   }
+  },
+  {
+   "role": "role:residence_clerk",
+   "name": "{name:role:residence_clerk}",
+   "placeholder": "Rika Tamura (no clan)",
+   "given": "Rika",
+   "family": "Tamura",
+   "rank": "civilian",
+   "clan": "none",
+   "first": "beta1",
+   "provisional": true,
+   "where": "residence",
+   "leaves_on": {
+    "flag": "world.roster.residence_clerk.gone"
+   }
+  }
+ ]
+}

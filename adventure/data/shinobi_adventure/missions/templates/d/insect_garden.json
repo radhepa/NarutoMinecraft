@@ -1,0 +1,155 @@
+{
+ "format": 1,
+ "id": "mission.d.insect_garden",
+ "kind": "mission",
+ "rank": "d",
+ "category": "clans",
+ "status": "beta",
+ "title": "dlg:mission.d.insect_garden.title",
+ "brief": "dlg:mission.d.insect_garden.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.insect_garden.brief",
+  "accept": "dlg:mission.d.insect_garden.accept",
+  "decline": "dlg:mission.d.insect_garden.decline",
+  "progress": "dlg:mission.d.insect_garden.progress",
+  "success": "dlg:mission.d.insect_garden.success",
+  "fail": "dlg:mission.d.insect_garden.fail",
+  "report": "dlg:mission.d.insect_garden.report"
+ },
+ "minutes": 10,
+ "party": "solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "clan": "aburame"
+   }
+  },
+  "garden": {
+   "pick": "anchor",
+   "tag": "clan.aburame.garden"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "tend"
+  },
+  "tend": {
+   "objective": {
+    "type": "perform",
+    "what": "water_beds",
+    "at": "slot:garden",
+    "count": 8
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "escaped_beetles"
+     },
+     "next": "beetles"
+    },
+    {
+     "if": {
+      "twist": "night_bloom"
+     },
+     "next": "night"
+    }
+   ],
+   "next": "report"
+  },
+  "beetles": {
+   "objective": {
+    "type": "collect",
+    "target": "beetle",
+    "at": "slot:garden",
+    "count": 6
+   },
+   "next": "report"
+  },
+  "night": {
+   "objective": {
+    "type": "wait_until",
+    "time": "21:00",
+    "at": "slot:garden"
+   },
+   "next": "note"
+  },
+  "note": {
+   "objective": {
+    "type": "inspect",
+    "target": "night_bloom",
+    "at": "slot:garden"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "escaped_beetles",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.insect_garden.twist.escaped_beetles"
+  },
+  {
+   "id": "night_bloom",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.insect_garden.twist.night_bloom"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0,
+   "clan_deed": [
+    "aburame",
+    "helped_resident"
+   ]
+  }
+ },
+ "bonus": [
+  "gentle",
+  "careful"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "clan.aburame.garden"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.35
+ },
+ "tags": [
+  "village",
+  "animal",
+  "clan"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.clans",
+ "_premise": "Tend the Aburame insect gardens while the keepers are on duty.",
+ "_twists": {
+  "escaped_beetles": "A rare beetle colony has walked out of its box.",
+  "night_bloom": "The keepers need someone to watch a flower that opens only at night."
+ }
+}

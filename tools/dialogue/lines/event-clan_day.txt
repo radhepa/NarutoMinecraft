@@ -1,0 +1,154 @@
+# Clan days: one per clan per year. Generic lines use {clan}; clan-tagged lines are said by that clan's members
+# on their own day (ROADMAP §11). A clan line shows life inside the clan, never a secret.
+#! tags: event=clan_day
+
+## greet.event  fn=react
+Good day to you! It's the {clan} clan's day. The whole quarter's dressed up.
+Have you heard? The {clan} are holding their clan day, and the gates are open.
+A clan day today. The {clan} put on a good one, I hear.
+Morning, {player}. Banners are up for the {clan}. Lovely colours.
+
+## chat.event  fn=worldbuild
+Every clan has a day of its own, spread through the year so no two fall in the same week.
+Clan days are when the clans open their gates. Even civilians get a peek inside.
+The minor clans share a day of their own, out in the neighbourhoods. Tables in the street, everyone's invited.
+On a clan day, the clan's elders sit in the gateway and greet everyone who passes.
+The {clan} clan's day is a good one to visit. They feed anyone who turns up polite.
+I keep a list of the clan days on my wall. My calendar is nothing but feasts and ceremonies.
+
+## chat.event  group=civilian  fn=reveal_character
+I'm not from any clan, but I go to every clan day. It's like visiting a different village for an afternoon.
+
+# -- Akimichi: the harvest feast (autumn) --
+
+## greet.event  clan=akimichi  fn=react,worldbuild
+Harvest feast today! Come, come, there's a seat at the long table for you. There always is.
+
+## chat.event  clan=akimichi  fn=worldbuild
+The harvest feast runs from noon until the last pot is scraped. Some years that's midnight.
+On feast day the Akimichi kitchen cooks for the whole village. We set out more bowls than we have family.
+Every family brings one dish to the harvest feast. My grandmother's pickled radish is the first thing gone.
+We say a thank you to the fields before we eat. Then we eat a lot.
+
+# -- Inuzuka: the ninken pairing --
+
+## greet.event  clan=inuzuka  fn=react,worldbuild
+Pairing day! The pups are washed, the children are nervous, and the whole kennel is howling.
+
+## chat.event  clan=inuzuka  fn=worldbuild
+On pairing day, our children meet their first pups. The pup chooses, never the child.
+The kennels are scrubbed for a week before pairing day. You could eat off the floor. Don't.
+My partner chose me on pairing day when we were both tiny. We've not been apart a day since.
+Pairing day ends with a run round the outer fields, every child and every pup together.
+
+# -- Nara: the deer count --
+
+## greet.event  clan=nara  fn=react,worldbuild
+Deer count today. We walk the forest from dawn, so forgive me if I yawn at you.
+
+## chat.event  clan=nara  fn=worldbuild
+Once a year we count the deer in the clan forest. Every fawn gets a name in the book.
+The deer count is slow. You sit, you wait, they come to you. Rushing only scares them off.
+We bring the deer a little rice cake on count day. They know the date better than we do.
+The antlers the stags shed are gathered on count day, for the clan's medicine work.
+
+# -- Yamanaka: the flower festival (spring) --
+
+## greet.event  clan=yamanaka  fn=react,worldbuild
+The flower festival! The shop's front is one great wall of blossom. Come and see.
+
+## chat.event  clan=yamanaka  fn=worldbuild
+For the flower festival we fill the main street with pots from the greenhouse. It takes all night.
+Every guest at the flower festival leaves with one stem. We choose it for them by how they look.
+The greenhouse opens to the public only once a year, on our festival day.
+My first arrangement was in the flower festival when I was six. Lopsided. My father kept it anyway.
+
+# -- Uchiha: the police parade --
+
+## greet.event  clan=uchiha  fn=react,worldbuild
+The police parade's today. Uniforms pressed, crests polished, and my boots are pinching.
+
+## chat.event  clan=uchiha  fn=worldbuild
+The Military Police parade from the compound to the Residence once a year. The children line the street.
+The parade is mostly marching, then the captains bow to the Hokage. It's very solemn, then we eat.
+Every officer polishes the fan crest on their jacket the night before. We inspect each other.
+The parade goes past the market, and the stallkeepers throw paper flowers. It's a nice custom.
+
+# -- Aburame: insect night with fireflies (summer) --
+
+## greet.event  clan=aburame  fn=react,worldbuild
+Insect night. Come to the gardens after dark. Stay quiet, and you will see.
+
+## chat.event  clan=aburame  fn=worldbuild
+On insect night the fireflies rise over our gardens. Thousands. We have tended them for a year.
+Guests are asked not to carry lanterns on insect night. The fireflies give all the light anyone needs.
+Children always try to catch the fireflies. We let them, gently, then they let them go.
+Insect night is very quiet. Perhaps that is why so few come. Those who come, come back.
+
+# -- Yuhi: the grove viewing (spring) --
+
+## greet.event  clan=yuhi  fn=react,worldbuild
+Grove viewing today. The old trees are in flower, and the grove's open to everyone.
+
+## chat.event  clan=yuhi  fn=worldbuild
+Our grove is the oldest stand of trees in the village. On viewing day, people sit under them and say nothing.
+We sweep the grove paths at dawn and lay mats under the blossoms. Bring tea, if you come.
+The grove looks different every hour of viewing day. At dusk, everyone stays to watch the light change.
+
+# -- Gekko: the moon-viewing duels (autumn full moon) --
+
+## greet.event  clan=gekko  fn=react,worldbuild
+Moon-viewing duels tonight. The platform's swept and the blades are polished.
+
+## chat.event  clan=gekko  fn=worldbuild
+The duels are fought on the moon-viewing platform, by moonlight only. No lanterns.
+A moon duel ends at the first touch. It's about grace, not winning. Though winning is nice.
+Guests sit on the slope below the dojo and watch. The swords flash silver in the moonlight.
+We drink one cup of tea to the moon before the first duel. Then the dojo goes silent.
+
+# -- Sarutobi: the lantern walk (New Year eve) --
+
+## greet.event  clan=sarutobi  fn=react,worldbuild
+The lantern walk is tonight. Find a lantern and join us at the Residence.
+
+## chat.event  clan=sarutobi  fn=worldbuild
+We walk from our house to the Hokage Rock with lit lanterns. Anyone can join behind us.
+The lantern walk is about passing the flame along. Each lantern is lit from the one before it.
+By the time the walk reaches the Rock, there are hundreds of lanterns. You can see them from the wall.
+
+# -- Senju and Uzumaki: the founders' memorial (spring) --
+
+## greet.event  clan=senju|uzumaki  fn=react,worldbuild
+The founders' memorial is today, at the shrine. It's a quiet day for us.
+
+## chat.event  clan=senju  fn=worldbuild
+At the founders' memorial we lay a branch from the living tree on the shrine altar.
+The memorial is short. A few words, a bow, and the whole village remembers who built it.
+
+## chat.event  clan=uzumaki  fn=worldbuild
+At the memorial we read the names aloud, every one. It takes a long time. Nobody minds.
+We stand beside the Senju at the memorial. Old allies, old friends. That has never changed.
+
+# -- Kurama: the painting exhibition --
+
+## chat.event  clan=kurama  fn=worldbuild
+Our studio opens for the exhibition today. Every painting on the walls was finished this year.
+Visitors always ask how long a painting takes. The honest answer is: longer than you think.
+
+# -- The minor clans' shared day --
+
+## chat.event  group=minor  fn=worldbuild
+On our shared day the minor clans set tables down the neighbourhood streets. Anyone can sit anywhere.
+Each family brings out its trade on the shared day. Herbs, carpentry, metalwork. It's half fair, half feast.
+
+## chat.event  clan=hagane  fn=worldbuild
+On the shared day we open the forge doors and let children try a hammer on cold iron. Gently.
+
+## chat.event  clan=kinoshita  fn=worldbuild
+For the shared day our yard builds one new bench for the street. We've done it so long the street is all benches.
+
+## chat.event  clan=suzuran  fn=worldbuild
+On the shared day we give away little bags of dried herbs. For sleep, for colds, for tea.
+
+## chat.event  clan=umino  fn=worldbuild
+On the shared day the teachers' houses on the Academy streets open their doors for anyone with questions.

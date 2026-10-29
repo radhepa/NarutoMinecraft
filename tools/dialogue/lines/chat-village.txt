@@ -1,0 +1,223 @@
+# Small talk, part A: the village as a whole. Places, prices, customs, rules, what's coming up.
+
+## chat.village  fn=worldbuild
+You can see the Hokage Rock from every street in the Leaf. People say that's on purpose: nobody's ever out of sight of the faces.
+Four faces on the Rock, and plenty of bare stone beside them. The carvers say they left room on purpose.
+Every spring the stonemasons climb the Rock to clear the moss from the faces. They hang off ropes like spiders. Brave folk.
+When the morning sun hits the Hokage Rock, the faces go gold for about a minute. Early risers stop in the street to watch.
+Up on top of the Rock it's all forest. Kids say you can see the whole village from there like a map. They're right.
+The Hokage Residence is the big round building right under the faces. Fire painted on the roof. You can't miss it.
+Mission Desk on the ground floor, the Hokage's office at the top. Everything in between the Residence holds is paperwork.
+Walking the whole wall round the Leaf takes half a morning. Guards walk it every night.
+Two characters are painted on the main gate's doors, one on each. Every child learns what they mean in their first week.
+Even the Hokage signs the gate guards' ledger. Everyone who comes and goes goes in that book.
+Travellers coming in through the gate always stop and stare at the Rock first. You can tell the newcomers that way.
+The Academy sits at the foot of the Rock. Big fire sign out front, and that old swing hanging from the tree.
+That swing in front of the Academy has been there longer than most teachers. Generations of children have sat on it.
+Inside the Academy there's a library, a workshop and a yard full of target posts. The posts are older than they look and very scarred.
+On graduation days the Academy yard is full of parents. Spring and autumn, every year. The whole street smells of celebration rice.
+Ichiraku's been serving ramen since before I was born. A few stools at a counter, and the best broth in the Leaf.
+Ichiraku's counter seats only a handful. Everyone ends up elbow to elbow, Genin, Jonin and grandmothers alike.
+Right through the middle of the Leaf runs the river. Most bridges are wood. The old stone one near the market is the oldest.
+In summer the children jump off the low bridge into the deep pool. The adults pretend not to notice. Some join in.
+Fishermen line the river at dawn. You can buy their catch right off the bank, if you're quick.
+From the main street to the river, the market street sells fish, vegetables, tea, weapons. Everything on one long walk.
+Market Day comes once a week. Farmers bring their carts in through the gate at dawn. It's the busiest morning of the week.
+The hospital's the tall white building near the herb gardens. Medics and nurses work day and night there.
+If you collapse or get hurt on a mission, you'll wake up in the hospital. The beds are hard but the nurses are kind.
+Mint and something bitter: that's the smell of the Suzuran drying racks in the gardens by the hospital.
+The shrine's up the long stone steps. People go there at New Year, for weddings, and when they need to think.
+At dawn and dusk the shrine bell rings. If you hear it, you know the time without looking at the sun.
+Twenty-five clans live in the Leaf, from the great compounds to the small trade families. Most folk belong to none.
+The Senju compound is beside the Residence. Their hall is grown around a living tree. Leaves come through the roof in spring.
+Next to the Senju stands the Uzumaki memorial shrine. The spiral crest is carved on every lantern there.
+Close to the centre is the Hyuga estate. Two halves, a dojo and a koi pond people say is older than the wall.
+Out at the edge of the village, by their deer forest, live the Nara. The deer wander out sometimes and eat people's flowers.
+The Akimichi compound is by the market street. Their kitchen hall smokes from dawn till night. The barbecue house is theirs too.
+Every wedding and every funeral in the Leaf has flowers from the Yamanaka shop on the main street.
+You'll hear the Inuzuka ninken before you see them. Their kennels and the vet clinic are right by the main gate.
+The Uchiha compound is on the outskirts, walled, with their fan crest on every wall. The police headquarters is theirs.
+At the wooded edge of a residential street sits the Aburame clan home. Their garden hums. Not unpleasantly.
+Near the Residence there's the Sarutobi house, with a monkey crest over the door and a yard for fire training.
+On the old artists' lane live the Kurama. Their walls are painted inside and out. Some of the paintings look back at you.
+The Gekko keep a sword dojo by the training grounds with a platform for watching the moon. Very quiet place.
+Minor clans live among everyone else. The Hagane forge on the market street, the Kinoshita in the carpenters' lane.
+Half the teachers in the Leaf are related to the other half. Most are Umino, living in the streets near the Academy.
+Every sensei has a story about Ground 3. Three stumps in a row, a river nearby. The training grounds are all numbered.
+Outside the wall there's a fenced forest with forty-four gates. Training Ground 44. The trees there are as wide as houses.
+When the stadium's full for the Chunin Exam finals, you can hear the crowd from the market.
+Nearly every big street has a bathhouse. The oldest has a painted mountain on the wall behind the water.
+Six generations of one family have run the tea house by the bridge. The cups are older than the furniture.
+On festival nights the barbecue house is full to the door. You order by the plate, and they never stop coming.
+Every season the flower shop changes its window. People walk past just to see what's in it.
+Blank scrolls, ink, sealing paper: the scroll shop's owner can tell how many sheets you need just by looking at you.
+People go into the furniture shop just to sit on the chairs. Every piece they make is in the showroom.
+Out back of the weapon shop is the forge. You can hear the hammers from the market street all day.
+Onigiri wrapped and ready by the grocer's door every morning. Shinobi grab them on the way out.
+Old armour, odd swords, other villages' coins: the pawn shop on the corner takes anything. Pays half, never more.
+Pink, white and green. People argue about the right order to eat the dango from the shop by the river.
+Round water tanks sit on the Leaf's roofs. On hot days, kids climb up and dip their feet in them. Not allowed. Very common.
+Most of the Leaf's homes are plaster, in cream and terracotta. When the sun's low, the whole village looks warm.
+Lanterns hang along the main street. The lamp keepers light them at dusk and put them out at dawn.
+You can follow your nose from the main gate to the carpenters' lane. Fresh cedar, always.
+The Uchiha police walk the main street at night. They're strict, but they'll walk you home if you're lost.
+Shinobi apartment blocks are stacked and plain. Nobody needs fancy rooms when half the tenants are never home.
+Our water comes from springs up behind the Rock. That's why it's so cold and sweet.
+There's a memorial stone at one of the training grounds. People leave flowers and stand there quietly. You'll see it.
+All the main streets point at the faces, like spokes of a wheel. The founders built the Leaf in a fan around the Rock.
+
+## chat.village  fn=worldbuild  rank=!civilian
+Shinobi in the Leaf travel by rooftop as often as by street. The tiles on the market street get replaced every year because of it.
+Every shinobi in the Leaf wears the headband somewhere. Forehead, arm, belt. The way you wear it says something about you.
+
+## chat.village  fn=worldbuild
+Village rule: no fighting in the streets. Disputes go to the training grounds or the police. That's been the law since the founding.
+Jutsu aren't allowed in the market. A fire jutsu near paper lanterns? You can imagine the trouble.
+Roof-running is allowed, but not on the shrine or the Residence. People who forget get a visit from the police.
+In the Leaf, you take your sandals off before stepping onto someone's tatami. Even in a hurry. Even on a mission.
+It's custom to bow to the Hokage Rock when you come back from far away. Some do it, some just look up and smile.
+You don't whistle at night near the shrine. Old superstition. Most people still won't do it.
+When someone new moves onto a street, the neighbours bring rice. It's how you say welcome in the Leaf.
+When a squad leaves on a long mission, families tie a strip of cloth to the gate post. It comes down when they're home.
+In the Leaf you never pour your own tea when someone else is at the table. You pour theirs, and they pour yours.
+No curfew for grown folk here, but the shops close by evening and the streets get quiet fast.
+Everyone stops working when the shrine bell rings at New Year. Even the forge goes silent.
+Clans of every kind live side by side here. The Inuzuka's dogs sleep on the Hyuga steps. Nobody minds. Mostly.
+In the Leaf, the Hokage's name is on every mission scroll. It's a reminder that each job is for the whole village.
+Farmers, traders, orphans: the Leaf takes in people from everywhere. If you live here, you're Leaf.
+There's an old saying here: "the leaves grow from one tree". It means we all share the same roots.
+
+## chat.village  fn=worldbuild,commerce
+A bowl of ramen at Ichiraku runs about eight ryo. More if you want extra pork. Worth every coin.
+Onigiri from the grocer cost three ryo. A cup of tea's about five. Cheapest meal in the village.
+Kunai at the weapon shop run five to forty ryo, depending on the steel. Shuriken are cheaper. Smoke bombs are a fortune.
+Soldier pills cost sixty ryo each. Most shinobi carry one and pray they never need it.
+Furniture's dear. A good table costs more than a month of ramen. People save for years for a proper chest of drawers.
+Festival games cost a ryo or two. The prizes are mostly paper fans and bags of sweets. People play anyway.
+A new outfit from the tailor costs a few hundred ryo. Most people wear the same three until they fall apart.
+Dango's two ryo a skewer at the stand by the river. Three if you want the sweet sauce.
+Prices go up before festivals. The grocer says it's demand. Everyone else says it's the grocer.
+Two ryo for the bathhouse, or one if you bring your own towel. Children go free with a parent.
+Rice is cheapest in autumn after the harvest. In late winter, everybody's counting grains.
+A part-time shift at Ichiraku or the grocer pays forty to eighty ryo. Not bad for a few hours of chopping onions.
+A single stem at the flower shop is a ryo, a whole bouquet ten. Lots of people buy one stem every week.
+Steel for a smith costs a few ryo a bar. Good steel costs more. Cheap steel costs more in the end.
+
+## chat.village  fn=guide
+The Mission Desk is on the Residence's ground floor. Eight in the morning till six in the evening.
+Ichiraku's on the main street. Follow your nose. If you smell pork broth, you're there.
+Near the herb gardens, white walls, big doors: that's the hospital. You'll see medics going in and out.
+Up the long stone steps at the end of the lane is the shrine. Count the steps if you like. Nobody agrees on the number.
+Want to see the whole village? Climb the stairs to the top of the Hokage Rock. The view's worth the legs.
+Off the main street, running down to the river, is the market street. You can buy nearly anything there.
+Anyone can walk round the furniture shop's showroom. You can see every piece they sell before you buy.
+Want a ninken pup? Ask at the Inuzuka clinic by the main gate.
+Anyone can read in the Academy library, but keep quiet. The librarian is very fast.
+Look for the smoke and listen for the hammers. That's the weapon shop and forge, on the market street.
+Blue curtains, by the bridge: the tea house. Best place to sit and watch the river.
+Next to the Akimichi compound is the barbecue house. Go hungry. Leave happy.
+On the corner of the market street is the pawn shop. Bring things you don't need. Leave with ryo.
+Training grounds are past the edge of the houses. Ground 3 is the one with the three stumps.
+Sealing paper? Try the scroll shop on the market street, near the forge.
+Look for the red umbrella by the second bridge. That's the dango stand.
+The flower shop is on the main street, at the front of the Yamanaka compound. Can't miss the colours.
+For hot water and a lot of chatter, go to the oldest bathhouse, the one with the mountain painting.
+At the end of the main street is the main gate. That's where the squads leave and the travellers come in.
+Look for the swing in front and the big fire sign. That's the Academy, at the foot of the Rock.
+
+## chat.village  fn=worldbuild
+Every festival has a committee of shopkeepers who argue for a month and then make it perfect in one night.
+The shrine keeps a great drum that's only played at New Year and weddings. You feel it in your chest from the market.
+Visiting teams for the Chunin Exams lodge at the inns near the gate. The innkeepers learn a dozen new accents a season.
+New Genin always buy their first proper kunai pouch the week after graduation. The weapon shop does a roaring trade.
+On festival nights the bridges are closed to carts. Too many people, too many lanterns, and far too much dancing.
+Festival stall spots are handed out by the market council. Families keep the same spot for generations and guard it fiercely.
+The fireworks for every festival are made by one family outside the wall. Nobody's allowed to watch them work.
+Each clan has its own clan day. The Akimichi feast is the one everyone hopes to be invited to.
+Weddings at the shrine are open to the whole street. You don't need to know the couple to throw rice.
+Market Day turns into a kind of fair when the weather's good. Music, jugglers, and the fishmongers' shouting contest.
+
+## chat.village  fn=hook
+Someone's been leaving paper cranes on the Academy swing every morning. Nobody knows who. It's been weeks now.
+The second bridge has a loose plank that's been loose for a month. Someone's going to go through it into the river.
+There's a stray dog by the main gate that follows anyone with food. The guards have been feeding it. It's getting very round.
+Half the lanterns on the market street haven't been lit in days. The lamp keeper fell ill. It's dark down there at night.
+The notice board by the Residence is overflowing. Lost pets, sales, someone wanting a cart pushed. Anyone could help.
+Anyone who can carry trays without spilling is wanted at the tea house for the festival. They're short a pair of hands.
+A family's moving house on the residential street and they've far more boxes than arms. They're asking around for help.
+After the storm, the shrine steps need sweeping. The priest is getting on and can't manage it all.
+The flower shop's lost a delivery crate somewhere between the gate and the main street. Full of lilies. They're wilting fast.
+There's something nesting in the water tank on the apartment block roof. The tenants are hearing scratching at night.
+A merchant at the market lost a purse full of foreign coins. Says it'll pay a good reward if it's returned. No questions asked.
+Kids say there's a frog as big as a cat in the Academy pond. The teachers are pretending not to hear about it.
+Somebody keeps knocking the stones off the shrine's lantern posts. The priest is quietly furious about it.
+The Nara deer got into the market again and ate a whole stall of cabbages. The grocer wants someone to walk them back.
+The bathhouse boiler's been making a noise like a dying goose. If it breaks before festival week, half the village goes unwashed.
+The farm road outside the gate washed out in the last rain. The farmers' carts are getting stuck. They need a few strong backs.
+Everyone's turning up late for everything. The old clock by the market's stopped again. Someone should tell the clockmaker.
+The swing at the Academy needs a new rope. It's fraying. Someone's going to have a very short flight.
+A ninken pup's gone missing from the Inuzuka kennels. It's small and brown and likes to chew sandals.
+Overdue scrolls are piling up at the library. The librarian's started writing the borrowers' names on a board.
+
+## chat.village  fn=filler
+A good place to live, the Leaf. Busy, noisy, a little nosy. Home.
+Nice to walk around the village on a day like this.
+Every street in the Leaf has something going on. That's what I like about it.
+
+## chat.village  fn=worldbuild
+Half the steps in the Leaf were cut by the Tsuchigumo families. They live in stone houses by the quarry.
+The Shiranui house near the gate barracks has a wall bristling with senbon. Target practice, decades of it.
+Near the training grounds the Namiashi run a little footwork dojo. You can hear the tapping from the street, like rain.
+The Haruno family's garden on the residential street is the neatest in the Leaf. Not a weed dares.
+In a grove of old trees sits the Yuhi house. People say the paths there are never quite where you left them.
+On a quiet lane is the Hatake house, a lone old place with a small yard. Most people walk past without noticing it.
+The Tobari live behind the wall in shuttered houses. Their lane is the quietest place in the village. Even footsteps go soft.
+Barred windows on the Morino house near the police headquarters. The family's perfectly polite. The house just looks grim.
+Look under your table. Most of the furniture in the Leaf was made in the Kinoshita yard, and their mark's there.
+Every hinge in the Leaf still swings thanks to the Hagane metalworkers. Their shop's beside the forge.
+On harvest day the Akimichi feed anyone who helps carry the rice sacks into their storehouse. The line is very long.
+Feed the Nara deer if you like, but you can't chase them. They're protected. They know it, too. Bold creatures.
+The Inuzuka ninken have the run of the gate district. If a big dog sits in your path, you wait. That's just manners.
+For a ryo, the ferryman at the wide bend takes you across. There's a bridge further down, but the ferry's more fun.
+Each district has a well with a little roof over it. People meet at the wells in the morning. That's where news starts.
+Letters to the farms and the border villages go from the courier office near the Residence. Couriers run the roads every day.
+The Leaf's oldest residents sit on the benches by the main street every afternoon and rate everyone's walk. Be warned.
+At night the lanterns on the wall's watchtowers look like a ring of stars around the village.
+There's a sound the Leaf makes at dusk: shutters closing, pots on stoves, dogs being called home. You'll learn it.
+No two bridges over the river are quite alike. The Kinoshita built the newest, the founders built the oldest.
+Each stone lantern along the shrine path was donated by a family. Their crests are carved on the bases.
+The Leaf has gardens tucked everywhere: on roofs, in alleys, on balconies. If there's sun, somebody's growing something.
+Most houses in the Leaf keep a lantern by the door. It's lit when someone's out late, so they can find their way home.
+Before dawn the bakery on the main street opens. The smell reaches the gate. The night guards call it their alarm.
+Behind the market street there's a maze of alleys with tiny workshops: lacquer, paper, combs, kites. Worth getting lost in.
+For hard winters there's a village storehouse, run by the Akimichi and the council. Rice for everyone, if the snow comes.
+Every year on the founding day, the oldest residents tell stories in the square. The stories get bigger every year.
+There's a little island in the river with one pine and a great many ducks. Children swim out to it every summer.
+Herons stand by the fishmongers' stalls by the river like customers. The fishmongers throw them scraps.
+Each of the big compounds has a gate with its crest. Strangers aren't to go in uninvited, but most clans are friendly.
+
+## chat.village  fn=guide
+Need a letter taken to the farms? The courier office is near the Residence.
+Ring the bell on the post at the wide bend of the river and the ferryman comes.
+Past the stone houses at the edge of the village is the quarry. Mind the carts. They don't stop quickly.
+If you need furniture mended, ask in the Kinoshita yard. Carpenters' lane, off the market street.
+The herb gardens are next to the hospital. The Suzuran will sell you a bundle of medicine herbs if you ask nicely.
+Requests go up on the notice board outside the Residence every morning. Some pay. Some just say thank you.
+Lost something important? The police keep a lost-and-found at their headquarters, in a corner of the Uchiha compound.
+You'll know the Gekko dojo by the moon-viewing platform on its roof. It's by the training grounds.
+Stand by a well for ten minutes in the morning and you'll know everything. That's where the gossip happens.
+Walk the Kurama lane in the evening when the light's golden. It's the one with paintings on the walls.
+
+## chat.village  fn=hook
+The ferry bell's gone missing from its post. The ferryman's been shouting across the river all week. Voice is nearly gone.
+Someone's been drawing chalk faces on the bridge railings. Funny faces. The builders don't find them funny.
+Muddy water's coming up from the well on the residential street. Someone should tell the builders before it gets worse.
+There's a crate of festival lanterns sitting in the rain behind the shrine. Somebody forgot them. They'll be ruined soon.
+The herons at the fish stalls have started stealing straight off the counters. The fishmongers want a scarecrow, or a hero.
+A cart lost a wheel on the main street this morning. The owner's been sitting next to it all day looking for help.
+A kite from the workshop in the alleys is stuck on the Residence roof. Nobody wants to be the one to fetch it.
+Anyone with fast legs is wanted at the courier office. They're behind on letters to the farms.
+Something's been digging up the flower beds by the Yamanaka shop at night. The Yamanaka suspect the Nara deer. The Nara deny it.
+The founding-day storyteller lost the old picture scroll they use every year. Without it, the story falls apart.
+Toppled in the storm: the stone lantern by the shrine path. It's too heavy for the priest to set right.
+The fisherfolk keep finding someone's sandals in their nets. Same sandals, always one at a time. Someone upstream is very careless.

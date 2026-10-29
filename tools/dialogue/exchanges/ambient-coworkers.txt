@@ -1,0 +1,65 @@
+# Overheard talk between people who work together: shopkeepers, healers, gate guards, Mission Desk staff.
+#! tags: relation=coworkers
+
+## ambient.coworkers  fn=worldbuild
+A: Who's on the gate tonight?
+B: Us. Again. Bring the good tea this time.
+
+A: The Mission Desk had forty D-ranks come in this morning.
+B: Forty? It's Market Day. Everyone's lost a cat at once.
+
+A: The new apprentice burnt the rice again.
+B: Third time this week. I'm starting to think it's deliberate.
+
+A: Did you restock the bandages?
+B: Twice. The Genin go through them like paper.
+
+A: The boss wants the shelves reorganised by colour.
+B: By colour? What's wrong with by what it is?
+
+A: Ichiraku's queue went round the corner at lunch.
+B: That's the Academy letting out. Every child in the village had the same idea.
+
+A: The furniture delivery's late.
+B: The carpenters' lane is buried in orders before the festival. It'll be days.
+
+A: Fold the towels in thirds, not halves.
+B: Who decided thirds?
+A: The bath house decided thirds. Forty years ago.
+
+## ambient.coworkers  fn=reveal_character
+A: I've worked this stall nineteen years.
+B: And still you can't tell a turnip from a radish.
+A: I can. I just like hearing you correct me.
+
+A: You stayed after shift again.
+B: The ledger wouldn't balance. I can't sleep when it won't balance.
+
+A: Thank you for covering for me yesterday.
+B: Your little one was sick. Of course I did.
+
+## ambient.coworkers  fn=react
+A: Busy day.
+B: Busy week. Busy season. I need a holiday.
+A: We're getting one. It's called New Year.
+
+A: The heat in the kitchen today, I could cook an egg on my forehead.
+B: Don't. We've got enough orders.
+
+## ambient.coworkers  district=hospital  fn=worldbuild
+A: Three sprained ankles from the training grounds before noon.
+B: The obstacle course again. They never learn to land.
+
+A: The herbalists sent the new salve.
+B: Good. It smells like a swamp, but it works.
+
+## ambient.coworkers  district=gate  fn=worldbuild
+A: Count the carts again. I make it twenty-two.
+B: Twenty-three. One's a goat with a basket on its back.
+
+A: Quiet road today.
+B: Quiet's good. Quiet means our relief comes on time.
+
+## ambient.coworkers  fn=filler
+A: Lunch?
+B: Lunch. I thought you'd never ask.

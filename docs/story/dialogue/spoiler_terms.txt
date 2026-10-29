@@ -1,0 +1,14 @@
+# SPOILERS. Extra terms the dialogue compiler keeps out of every pool outside docs/story/dialogue/.
+# Proper nouns the story bible bolds are read from STORY_BIBLE.md automatically; these are the rest.
+Yugure
+sinking sun
+sinking-sun
+ash-violet
+red cord
+Hollow Crown
+Kagari-bi
+chiselled names
+chiseled names
+watching figure
+missing page
+sealed door

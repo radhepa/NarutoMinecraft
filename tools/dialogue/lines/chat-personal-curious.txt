@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for curious residents. Questions, rumours, how things work.
+#! tags: personality=curious
+
+## chat.personal  fn=reveal_character
+Fascinating! I took apart my clock to see how it works. Now I know. It doesn't, any more.
+I spent the morning figuring out why the bathhouse water stays hot. There's a whole furnace under there! Did you know?
+Why do cats always sit on the one paper you're reading? I watched mine for an hour. I have theories. No answers.
+I asked the fishmonger how far fish swim in a day. The fishmonger asked me to leave. Still, I'd like to know.
+I've been timing how long the bread takes to rise in different rooms. The kitchen wins. I'm testing the attic tomorrow.
+Did you know ants walk in a line because they follow a smell? I put a lemon peel across one line. Total chaos.
+A traveller at the gate had shoes with metal on the bottom. Metal! For ice, apparently. Where do they have that much ice?
+I've been trying to work out how the Hokage faces were carved. Ladders? Ropes? Earth jutsu? Nobody gives a straight answer.
+My daughter asked how rain gets into the clouds. I said "it climbs." I need a better answer by dinnertime.
+I spent an hour watching the potter. Did you know the wheel has to spin a certain speed or the bowl flops? Wonderful.
+I read a whole scroll about bees. They dance to show each other where flowers are! I tried it. My neighbour stared.
+I can't stop wondering what the Aburame feed their insects. Is it rude to ask? I asked. It was a bit rude.
+I've started a list of every bird I hear in the morning. Seven so far. One of them sounds like a squeaky door.
+I peeked into the scroll shop's back room. Shelves to the ceiling! The owner shooed me out, but I saw a map.
+Have you ever wondered why ramen broth goes cloudy? It's the bones! I asked at Ichiraku. Got a lecture and a free egg.
+I'm learning how lanterns are folded. There's a trick at the corners. I've ruined twelve sheets. Thirteen's lucky.
+I measured how deep the river is under the second bridge. Deeper than my rope. I need a longer rope.
+Someone told me the tea house has a secret menu. I've been ordering random things to find it. I've found indigestion.
+I've been asking old residents what the village looked like when they were young. Everyone remembers a different Leaf.
+I heard snow is just tiny ice flowers. I caught some on a black cloth last winter. They really are! Every one different.
+I took a compass to the training grounds and it pointed slightly off near the big rock. Iron in the stone? Has to be.
+I spent the evening wondering why we say "good morning" but not "good noon". Language is so odd.
+I asked a medic how bones heal. Very long answer. I understood a third. I want the rest, though.
+I've been comparing the dango shops. Shape, sweetness, chew. My notes are very serious. My teeth are very sore.
+My son found a beetle with a blue shell. We spent the whole afternoon looking it up. Still not sure what it is.
+I tried to find where the river starts. Followed it upstream until the wall. What's beyond? I'm dying to know.
+I've been listening to the bells at the shrine. Each one rings a slightly different note. Who tuned them?
+I spent an hour asking the carpenter how joints fit without nails. I think I owe the carpenter a lunch now.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I sell paper at the market. You'd never guess how many kinds there are. Seal paper, letter paper, lantern paper, all different.
+I've been watching the shinobi train from my window. How do they stick to walls? Chakra in the feet, they say. But how?
+
+## chat.personal  rank=!civilian  fn=reveal_character
+I've been testing how much chakra it takes to walk on water versus up a wall. Water's harder. Why? It moves, I suppose.
+On my last mission, I found a plant that glows faintly at dusk. I pressed one. The library has no record. Exciting!
+I keep asking my sensei why hand signs work. The answer is always "practice". That's not an answer. That's homework.
+
+## chat.personal  fn=worldbuild
+Every clan in the Leaf has its own crest, and the old ones are carved above their gates. I've drawn every one.
+The Leaf's water comes down from the hills in clay pipes. Some of them are older than the Academy. Imagine that.
+The bathhouse, the bakery and the forge all share a chimney flue under the market street. That's why it's so warm there.
+
+## chat.personal  fn=hook
+I heard there's a fish in the river as big as a dog. The fisherfolk say it steals bait. I want to see it so badly.
+Someone's leaving little stacks of stones at the crossroads every morning. Seven stones each time. What does it mean?
+I lent my magnifying glass to someone at the Academy and never got it back. Brass handle. I need it for my beetles.
+There's a locked shed behind the potter's. Nobody uses it. There's light under the door sometimes. Now I can't stop wondering.
+
+## chat.personal  fn=filler
+Good! Wait, why do people ask that? Do you really want to know? I'm curious.
+Interesting, as always! Something's always going on.
+
+## chat.personal  fn=reveal_character
+I've been wondering why the dango shop's bell sounds sweeter than the tea house's. Same size. Different metal?
+A medic let me look at a leaf under a glass lens. It's full of tiny rooms! Like a village!
+Why do the Hyuga koi all swim the same way round the pond? I watched for an hour. Clockwise. Always.

@@ -1,0 +1,41 @@
+# Exam week: the Academy's end-of-term tests before graduation day. Students cram, parents fret, the library
+# is full.
+#! tags: event=exam_week
+
+## greet.event  fn=react
+Exam week at the Academy. You can tell from all the tired faces on the street.
+Morning, {player}. The Academy library has been full since dawn.
+It's exam week, so the whole Academy street has gone quiet. Even the dogs are behaving.
+Exam week! The ink seller's out of ink, and the dango stall's out of patience.
+
+## greet.event  player_rank=academy  fn=react
+Exam week, {player}! Have you studied? Ate well? Slept? Good. Do all three again.
+
+## greet.event  stage=child  fn=react
+Exam week! I've been practising the transformation all night. My hands are numb.
+I can't play today, it's exam week. Well. Maybe after.
+
+## chat.event  fn=worldbuild
+Every exam week, the parents line up outside the Academy gate. As if they're the ones being tested.
+The teachers set the target posts out in the yard for the throwing test. Same posts as thirty years ago.
+The Academy library stays open late during exam week. The librarian brings tea for the stragglers.
+The written test is the one everyone fears. The clone test is the one everyone fails.
+Ichiraku gives a free egg to any Academy student during exam week. Bless that stand.
+You can hear the students reciting hand signs through the Academy windows.
+
+## chat.event  fn=teach
+Sleep before midnight in exam week. Waking well rested gives you more chakra for the morning.
+A full stomach and a good night's sleep do more for a test than another hour of reading.
+
+## chat.event  personality=warmhearted|protective  fn=reveal_character
+I make onigiri for every child on my street during exam week. Somebody has to.
+Exam week always makes me nervous for the little ones, even though it's not my exam.
+
+## chat.event  personality=stern|meticulous  fn=reveal_character
+I passed by reviewing every hand sign every morning for a month. There's no trick but repetition.
+
+## chat.event  stage=child  fn=worldbuild
+I wrote all the hand signs on my arm. Then I washed my arm. So that's gone.
+My big sister says the clone test is easy if you don't think about it. How do you not think about it?
+I studied so much I dreamed in hand signs. Tiger, boar, ox, dog...
+If I pass, I'm getting the large bowl at Ichiraku. With two eggs.

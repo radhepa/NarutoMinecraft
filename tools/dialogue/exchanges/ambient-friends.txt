@@ -1,0 +1,66 @@
+# Overheard talk between friends.
+#! tags: relation=friends
+
+## ambient.friends  fn=worldbuild
+A: Ichiraku tonight?
+B: Ichiraku every night. Why do you even ask anymore?
+
+A: I finally beat the dango stall's record. Twelve skewers.
+B: And how's your stomach?
+A: We don't talk about my stomach.
+
+A: Did you see the new tea house across the market? Half the price.
+B: Half the tea, too. I'll stay loyal, thanks.
+
+A: Let's go up the Hokage Rock at sunset.
+B: Last time we did that you got stuck on the third face.
+A: Second face. And it was dark.
+
+A: The bath house has fruit milk again.
+B: Then my whole evening is decided.
+
+A: I'm learning to make dumplings. My kitchen looks like a snowstorm.
+B: Bring me the failures. I'm not fussy.
+
+A: The fishmonger gave me extra eel today.
+B: You must be the favourite. The fishmonger only ever gives me bones.
+
+A: Did you hear the bell from the shrine at dawn?
+B: Every morning. I've stopped hearing it. Is that sad?
+A: A little. Come and listen with me tomorrow.
+
+## ambient.friends  fn=reveal_character
+A: Do you ever think about leaving the village? Seeing the coast?
+B: Every time the fish cart comes in. Then I eat the fish and forget.
+
+A: You've been quiet all week.
+B: Work's heavy. It'll pass.
+A: Then I'll be loud enough for both of us till it does.
+
+A: I kept the letter you sent when I was laid up with fever.
+B: That silly drawing of the cat?
+A: It's on my wall. Don't you dare laugh.
+
+A: Thank you for helping me move. My back's still talking to me about it.
+B: Mine too. We'll go to the bath house and complain together.
+
+A: When did we meet? I can't remember a time before.
+B: The flood year. You lent me a dry pair of sandals.
+A: And you never gave them back.
+
+## ambient.friends  fn=react
+A: Rain again! My washing's been out for three days.
+B: Bring it to mine. I've got a line by the stove.
+
+A: You look tired.
+B: I sat up reading till two. The tea house is my only hope.
+
+A: Your cooking's improved.
+B: That's the nicest lie anyone's told me all week.
+
+## ambient.friends  fn=filler
+A: Lovely evening.
+B: It is. Let's just stand here a moment.
+
+A: Same time tomorrow?
+B: Same time, same bench.

@@ -1,0 +1,85 @@
+# Stale food from the cupboard (HOME.md §3): a stale meal feeds a little less, a very stale one not at all, and
+# never makes anyone ill. The player's own inner voice, or a visitor's remark. Light and funny, never gross.
+#! kind: cycle
+#! fn: react
+
+## home.pantry.stale.milk
+This milk has started to have opinions. Still drinkable. Just.
+The milk smells like it's thinking about becoming cheese.
+Slightly sour milk. Good for the bones, maybe. Less good for the face you're making.
+## home.pantry.very_stale.milk
+The milk has turned into yoghurt without asking anyone's permission.
+This milk is no longer milk. It's a new and independent thing. Leave it in peace.
+Pouring the milk makes a sound milk shouldn't make. Down the sink it goes.
+
+## home.pantry.stale.onigiri
+The onigiri's gone a little hard. Crunchy rice is still rice.
+Yesterday's onigiri. The seaweed has given up, but the rice soldiers on.
+This rice ball could double as a training weight. Chew slowly.
+## home.pantry.very_stale.onigiri
+This onigiri has turned to stone. You could practise on the target board with it.
+The onigiri clonks on the plate. Maybe the sparrows will want it.
+That rice ball is a doorstop now. A small, sad doorstop.
+
+## home.pantry.stale.dango
+The dango's gone chewy. Very chewy. Your jaw is getting a workout.
+Stale dango. The sauce has set like varnish, but it's still sweet.
+Day-old dango tastes a little like patience.
+## home.pantry.very_stale.dango
+The dango could bounce now. Go on, try it. ...It does bounce.
+These dango are so hard they clack together like beads on a string.
+Old dango, stiff as the stick it's on. Your teeth would rather you didn't.
+
+## home.pantry.stale.bread
+The bread's gone a bit dry. Toast it and nobody will ever know.
+Crusty bread. Crustier than anyone intended.
+This bread crunches when you squeeze it. That's not usual.
+## home.pantry.very_stale.bread
+The bread is hard enough to knock on. Someone might answer.
+This loaf could be a training weapon. Not a good one.
+The bread snaps instead of tearing. Crumble it for the birds on the balcony.
+
+## home.pantry.stale.fruit
+The fruit's gone soft and wrinkly. Sweeter for it, maybe.
+A bit of a bruise on this one. Eat around it.
+The mikan's skin is loose and baggy, as if it's wearing someone else's coat.
+## home.pantry.very_stale.fruit
+This fruit has gone so wrinkly it looks a hundred years old.
+The fruit is very, very soft. It's had a long life. Let it rest.
+This apple squashes if you so much as look at it. Time for a new one.
+
+## home.pantry.stale.vegetables
+The cabbage is a bit floppy. Soup will hide it.
+These carrots bend. Carrots shouldn't bend.
+The greens have wilted. They look how you feel after laps round the training ground.
+## home.pantry.very_stale.vegetables
+The carrots bend all the way round into circles now. Impressive. Not supper.
+The cabbage has gone so limp it's lying down. Let it sleep.
+These vegetables have given up entirely. Off to the compost with them, with thanks.
+
+## home.pantry.stale.home_dish
+Leftovers from a few days back. Fine warmed up, though the flavour's gone a bit flat.
+This stew tastes more like a memory of stew.
+Day-old curry is better than fresh, people say. Third-day curry is a gamble.
+## home.pantry.very_stale.home_dish
+The leftovers have been here so long they've forgotten what they were.
+That home cooking is past saving. Better make a fresh pot.
+Whatever this was, it was delicious once. Farewell, supper.
+
+## home.pantry.stale.bento
+The bento's rice is going hard at the edges. The pickles are fine, at least.
+Yesterday's bento. The egg's gone a little rubbery, but it'll do.
+A tired bento. Everything's still in its little section, holding on bravely.
+## home.pantry.very_stale.bento
+That bento has sat in the cupboard so long it belongs in a museum.
+Even the pickles in this bento look disappointed.
+That bento box needs a wash and a fresh start, in that order.
+
+## home.pantry.stale.any
+A bit past its best, this. Still food, though.
+That's gone a little stale. It shouldn't have sat in the cupboard so long.
+Not fresh, not ruined. Somewhere in between, like a grey afternoon.
+## home.pantry.very_stale.any
+That's been in the cupboard so long it's practically a lodger.
+Very stale. If it had a name, it would be "Too Late".
+Time to clear out the cupboard. Some of this is older than your kunai pouch.

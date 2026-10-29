@@ -1,0 +1,201 @@
+# Greetings by season: the Leaf's year as residents feel it.
+
+## greet.season  season=spring  fn=worldbuild
+Spring at last! The cherry trees along the river are about to burst.
+The Uzumaki repaint the seals on their memorial every spring. You can smell the fresh ink from the street.
+The rice paddies outside the wall are flooded for planting. From the Rock they look like mirrors.
+Every kite in the village is out this week. Three of them are stuck in the Academy swing tree.
+The frogs are back in the irrigation ditches. Loud little things. I missed them.
+The Senju children plant their saplings in spring. You'll see them out with tiny watering cans.
+The grocer's got the first bamboo shoots in. Spring's officially here when those come.
+Spring cleaning season. Every balcony in the apartments has a futon hanging over it.
+The Yuhi grove is in flower. You can smell it from two streets away.
+Spring rain and spring mud. The training grounds look like a pig pen.
+
+## greet.season  season=spring  fn=react
+Warmer today, isn't it? I took my winter coat off and nearly danced.
+Spring air, {player}! Smell that? Everything's growing.
+You've blossom in your hair. Don't brush it off, it suits you.
+
+## greet.season  season=spring  fn=guide
+If you want the best blossom, walk the river path past the third bridge. Nobody goes that far.
+The flower shop has spring bulbs out by the door. Cheap, if you want something green on your windowsill.
+
+## greet.season  season=spring  personality=imaginative  fn=reveal_character
+In spring the whole village blushes pink. I've been trying to mix that colour for years.
+
+## greet.season  season=spring  personality=pragmatic  fn=reveal_character
+Spring. Seed prices go up and I start counting every grain. Happy spring.
+
+## greet.season  season=spring  personality=gentle  fn=reveal_character
+The swallows are nesting under my eaves again. I've put a board under them for the mess.
+
+## greet.season  season=spring  personality=fiery  fn=react
+Spring! New season, new me! I'm going to master three new jutsu before summer!
+
+## greet.season  season=spring  personality=thoughtful  fn=reveal_character
+Spring always feels like a page turning. I wonder what this one will have written on it.
+
+## greet.season  season=spring  personality=adventurous  fn=reveal_character
+The mountain passes clear in spring. Caravans from the far villages will start coming through any day.
+
+## greet.season  season=spring  personality=meticulous  fn=reveal_character
+I've drawn up my garden plan for the year. Rows of eight, a hand apart. Nothing out of place.
+
+## greet.season  season=spring  personality=reserved  fn=filler
+Spring. ...Nice.
+
+## greet.season  season=spring  personality=warmhearted  fn=react
+Spring! Have some of my sakura mochi, I made far too many again.
+
+## greet.season  season=summer  fn=worldbuild
+The cicadas are deafening this year. You can't hear yourself chew.
+Summer means festival yukata hung out to air on every line in the residential streets.
+The kids have discovered the deep pool under the old bridge again. Their mothers have too.
+The shaved ice stall by the market is open. The queue's longer than Ichiraku's.
+Fireflies along the river after dark. Summer's best gift, if you ask me.
+Mosquitoes are vicious by the water this year. Burn some incense on your sill.
+Even the faces on the Rock look like they want to go for a swim.
+The Akimichi are buying watermelons by the cartload. I've never seen one go to waste.
+Every training ground is half empty after noon. Too hot to throw anything but water.
+The bathhouse switched to cool baths for summer. Not that anyone's complaining.
+
+## greet.season  season=summer  fn=teach
+Heat wears you down faster than a spar. Drink water, rest in the shade, train early or late.
+In summer the Academy shortens afternoon drills. Even the teachers give up in this heat.
+
+## greet.season  season=summer  fn=react
+Hot, isn't it? I've been fanning myself since breakfast.
+Summer, {player}! Sun on your face. Don't forget a hat.
+You've caught the sun! Your nose is pink as a radish.
+
+## greet.season  season=summer  personality=playful  fn=react
+Summer! Let's sneak to the river and see who can stay underwater longest. I'm a fish. Probably.
+
+## greet.season  season=summer  personality=stern  fn=teach
+Summer heat makes people lazy. Don't let it make you careless.
+
+## greet.season  season=summer  personality=curious  fn=react
+Do you know why cicadas only sing when it's hot? I've asked three people and got three answers.
+
+## greet.season  season=summer  personality=protective  fn=react
+Summer's when the river takes people. Swim where the others swim, never alone.
+
+## greet.season  season=summer  personality=shy  fn=reveal_character
+I like summer evenings. Everyone's outside, so nobody's looking at just me.
+
+## greet.season  season=summer  personality=proud  fn=reveal_character
+My family hangs the finest wind chimes on the street every summer. Listen, you'll hear them.
+
+## greet.season  season=summer  personality=imaginative  fn=reveal_character
+Summer afternoons go wobbly, like the air is a pond somebody stirred.
+
+## greet.season  season=autumn  fn=worldbuild
+The maples on the Rock have turned. The faces look like they're wearing red scarves.
+Chestnut season! The roasting cart by the tea house is out from noon.
+Persimmons drying on every eave in the residential streets. Orange lanterns that you can eat.
+The Akimichi harvest feast is coming. The smell from their kitchen hall reaches the market.
+The Nara count their deer in autumn. Half the clan stalks through the forest with tally sticks.
+Moon-viewing season. The Gekko platform will be full every clear night now.
+Every gutter in the village is full of leaves. The sweepers can't keep up.
+Rice harvest's in, outside the wall. The farmers are celebrating with too much sake.
+The grocer's piled sweet potatoes to the ceiling. Autumn's the only season the rice gets competition.
+The Academy holds its sports day when the leaves turn. Parents shout louder than the kids.
+
+## greet.season  season=autumn  fn=react
+Cooler today. Autumn's the best season for running, I think.
+Look at you, crunching through the leaves. Every step sounds like a snack.
+Autumn already, {player}. The year goes quicker every time.
+
+## greet.season  season=autumn  fn=guide
+For the best maple colour, take the path up the side of the Rock in the morning.
+The tea house does a chestnut dango in autumn. Only in autumn. Go.
+
+## greet.season  season=autumn  personality=thoughtful  fn=reveal_character
+Autumn makes me reflective. Leaves fall, and the tree doesn't mourn them. I envy it.
+
+## greet.season  season=autumn  personality=warmhearted  fn=react
+I've roasted far too many chestnuts. Hold out your hands. Careful, they're hot!
+
+## greet.season  season=autumn  personality=meticulous  fn=reveal_character
+I've raked my yard three times today. The tree is winning, but I'm keeping score.
+
+## greet.season  season=autumn  personality=adventurous  fn=reveal_character
+Autumn's the best season for the road. Cool days, clear skies, and every farm along the way has apples.
+
+## greet.season  season=autumn  personality=reserved  fn=reveal_character
+Autumn's my season. ...Quieter. Everything gets quieter.
+
+## greet.season  season=autumn  personality=steadfast  fn=reveal_character
+Time to mend the roof before winter. Same job every year. Somebody's got to do it.
+
+## greet.season  season=autumn  personality=playful  fn=react
+I jumped in the big leaf pile by the Academy. There was a cat in it. We're both fine. Mostly.
+
+## greet.season  season=winter  fn=worldbuild
+The Sarutobi are preparing lanterns for the New Year walk. Their whole yard glows at night.
+Winter means the bathhouse drops yuzu in the big tub. Smells like a whole grove in there.
+The oden carts are out. Nothing warms the hands like a cup of broth on a cold street.
+The days are so short in winter. It's dark before the Mission Desk even closes.
+Every house on the street has a kotatsu going. You can tell by who doesn't come out.
+The New Year's coming. The shrine is already stacking up sake barrels for the visits.
+Mochi pounding at the end of the year is the loudest thing in the residential streets.
+Frost on the training posts in the morning. Hit one and your hand rings for an hour.
+The river's slow and grey in winter. The ferry runs half as often.
+Winter's quiet. Even the market slows down.
+
+## greet.season  season=winter  fn=teach
+Cold slows your chakra in the fingers. Rub your hands before you form signs, or they'll fumble.
+Eat a hot meal before training in winter. Your body burns through it just staying warm.
+
+## greet.season  season=winter  fn=react
+You're out in the cold? Your ears are red as plums.
+Winter, {player}. I can see your breath from here.
+Bundle up! The wind off the Rock goes straight through you.
+
+## greet.season  season=winter  personality=gentle  fn=reveal_character
+I've knitted little coats for the shrine's cats. They hate them. They wear them anyway.
+
+## greet.season  season=winter  personality=fiery  fn=react
+Cold? I'm not cold! I'm burning! My spirit's burning! My toes are freezing!
+
+## greet.season  season=winter  personality=pragmatic  fn=teach
+Winter. Charcoal goes up, vegetables go up. Buy in autumn next year, like I told you last year.
+
+## greet.season  season=winter  personality=curious  fn=react
+Is it true the Hokage Rock faces get icicles on their noses? I want to climb up and see.
+
+## greet.season  season=winter  personality=protective  fn=react
+Cold out. Have you got a proper coat? A cold that settles in winter lasts till spring.
+
+## greet.season  season=winter  personality=proud  fn=reveal_character
+In winter I train without a coat. Builds character. Mine is very well built.
+
+## greet.season  season=winter  personality=imaginative  fn=reveal_character
+In winter the village looks like it's been drawn in charcoal and someone forgot the colours.
+
+## greet.season  season=winter  personality=shy  fn=reveal_character
+Winter's nice. You can hide half your face in a scarf and nobody thinks it's odd.
+
+## greet.season  season=spring  fn=teach
+Spring's the season to start new training. Muscles come back fastest when the days are getting longer, the old Jonin say.
+
+## greet.season  season=summer  fn=guide
+Hot? The covered benches by the river under the first bridge catch every breeze there is.
+The Bon lanterns go out on the river at the end of summer. Get a spot on the bridge early.
+
+## greet.season  season=summer  personality=warmhearted  fn=react
+Summer! I've cold barley tea in the well bucket. Come by any time you're baking out there.
+
+## greet.season  season=autumn  fn=teach
+Autumn leaves hide the ground. Watch your footing on the training grounds; there are roots under there.
+Short sleeves won't do in autumn evenings, {player}. The cold comes in fast after sunset now.
+
+## greet.season  season=autumn  personality=curious  fn=react
+Why do the maples on the Rock turn before the ones down here? Is it the height? The wind? I need to know.
+
+## greet.season  season=winter  fn=guide
+Need a warm-up? The shrine hands out sweet amazake on cold mornings, free to anyone who rings the bell.
+
+## greet.season  season=winter  personality=stern  fn=react
+Winter. Good weather for discipline. Nobody dawdles in the cold.

@@ -1,0 +1,102 @@
+# Callbacks for questions/voice-adventurous.txt, in the adventurous asker's voice.
+#! fn: callback
+#! tags: personality=adventurous
+
+## callback.answer.q.plans.adv_come_to_coast.a1
+You said yes to the sea! I've still got the map. The offer's open. Pack light.
+
+## callback.answer.q.plans.adv_come_to_coast.a2
+Duties here, you said, when I asked about the sea. Someone has to keep the village standing. I'll send stories.
+
+## callback.answer.q.plans.adv_come_to_coast.a3
+I've still got your shell on my list. The prettiest one on the beach. Promise.
+
+## callback.answer.q.plans.adv_most_want_see.a1
+The sea, that's what you most want to see. I dreamt of the coast last night. Thought of you.
+
+## callback.answer.q.plans.adv_most_want_see.a2
+Mountains, you'd see first. A merchant came through from the north today with snow still on the packs. Freezing, they said.
+
+## callback.answer.q.plans.adv_most_want_see.a3
+Other villages, their food and festivals. I tasted a southern spice today. You'd have loved it.
+
+## callback.answer.q.plans.adv_most_want_see.a4
+The road itself, you'd see. A true traveller. I still grin thinking about that answer.
+
+## callback.answer.q.pref.adv_sleep_outside.a1
+You love sleeping under the stars. Clear night tonight. Just saying.
+
+## callback.answer.q.pref.adv_sleep_outside.a2
+You've never slept out under the sky. Clear night tonight. We're fixing that, remember?
+
+## callback.answer.q.pref.adv_sleep_outside.a3
+Bugs, your problem with sleeping outside. I bought you a net. Now no excuses.
+
+## callback.answer.q.values.adv_safe_or_exciting.a1
+A safe life, you'd choose. My feet still itch thinking about it. Ha. But I understand.
+
+## callback.answer.q.values.adv_safe_or_exciting.a2
+Life's too short for safe, we agreed. I signed up for the long caravan route this autumn!
+
+## callback.answer.q.values.adv_safe_or_exciting.a3
+Wild now, a porch chair later. Your plan. I've picked out my porch. Thirty years from now.
+
+## callback.answer.q.values.adv_too_much_danger.a1
+Danger's too much when others could get hurt, you said. I turned back on a cliff path last week because of that.
+
+## callback.answer.q.values.adv_too_much_danger.a2
+No line on danger, you said. I worry about you a little. Even I have a line.
+
+## callback.answer.q.values.adv_too_much_danger.a3
+Turn back when you're truly scared. Your rule. I listened to my fear on the river crossing. Glad I did.
+
+## callback.answer.q.pref.adv_blank_map.a1
+Fill in the blank on the map, you'd go. I've found a map with three blanks. Pick one.
+
+## callback.answer.q.pref.adv_blank_map.a2
+"Why is it blank?" Your first question. I asked an old mapmaker. The answer was: a very big bog.
+
+## callback.answer.q.pref.adv_blank_map.a3
+I drew a dragon in the blank space of my map, like you said. Looks fierce. Bit wobbly.
+
+## callback.answer.q.plans.adv_first_place.a1
+The sea first, past the border. I talked to a fisher from the coast at the market. Told them you're coming someday.
+
+## callback.answer.q.plans.adv_first_place.a2
+A big city first, you'd go. Lanterns on every street. I'll draw you a map of the one I saw.
+
+## callback.answer.q.plans.adv_first_place.a3
+The mountains, your first trip out. Bring warm socks. Two pairs. Trust me.
+
+## callback.answer.q.plans.adv_first_place.a4
+Wherever the road goes, your plan. The best plan. I took a road today just to see. Found a lovely tea house.
+
+## callback.answer.q.values.adv_brave_or_foolish.a1
+Going somewhere unknown is brave, you said. Someone has to go first. I keep telling myself that.
+
+## callback.answer.q.values.adv_brave_or_foolish.a2
+Foolish without a plan, you said. So I've started planning my trips. A bit. It helps, annoyingly.
+
+## callback.answer.q.values.adv_brave_or_foolish.a3
+A bit of both, brave and foolish. Your honest answer. Like most of my best days.
+
+## callback.answer.q.past.adv_furthest.a1
+Just past the gate, so far. Every road starts there, I said. Go a little further next time.
+
+## callback.answer.q.past.adv_furthest.a2
+You've been out on a mission! The road gets into you. Has it got into you yet?
+
+## callback.answer.q.past.adv_furthest.a3
+Nowhere yet, you said. Still jealous. The first time is coming for you.
+
+## callback.answer.q.past.adv_how_it_felt.a1
+Out past the village, you felt free. I've been thinking about that word ever since.
+
+## callback.answer.q.past.adv_how_it_felt.a2
+A little scared, out there. Everyone is the first time. You were paying attention. Good.
+
+## callback.answer.q.past.adv_how_it_felt.a3
+You missed home out there. That's how you know where home is. I said it, and I meant it.
+
+## callback.answer.q.past.adv_how_it_felt.a4
+You haven't been out yet. Still waiting for you, the road. Lucky.

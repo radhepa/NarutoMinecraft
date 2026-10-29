@@ -1,0 +1,53 @@
+# The barber on the market street (the items session's shop `barber`): restyles hair, hair colour and marks, and
+# sells ribbons and hairpins. Restyles take the place of a purchase.
+#! tags: shop=barber
+
+## shop.barber.greet  fn=commerce,worldbuild
+Sit, sit. The chair's warm and the scissors are sharp. What are we doing today?
+Mind the clippings, {player}. Half the market's hair ends up on this floor by noon.
+A new face in my chair? Good. I like a head I haven't cut a hundred times.
+Come in! The mirror's freshly polished, so you'll see every snip.
+Ah, a customer who isn't a Genin asking for "something cool". Or are you?
+Morning trade is all trims. Afternoons, people get brave. Which are you?
+
+## shop.barber.greet  stage=child  fn=commerce
+Up you hop. Sit on the cushion so I can reach. No wriggling, now.
+
+## shop.barber.browse  fn=commerce,teach
+Ribbons on the left, hairpins on the right. A restyle is the chair. Take your time.
+The colour pots are for restyles only. Don't sniff them, they're stronger than they look.
+Pins hold a headband steadier on a mission, if you ask me. The cheap ones bend.
+Hairpins come in lacquer or plain steel. Steel doesn't snap mid-somersault.
+Every mark I paint lasts till you ask me to change it. Rain won't touch it.
+
+## shop.barber.restyle  kind=cycle  fn=commerce,react
+Hold still... and done. Turn your head. See? A whole new you.
+There. Shorter at the back, longer where it counts.
+Look in the mirror before you decide you hate it. Go on.
+Clean lines. Your sensei won't recognise you from behind.
+That colour suits you. Better than I expected, and I expected a lot.
+Done. Shake it out. Nothing falls in your eyes when you jump now.
+Sharp as a fresh kunai. Next!
+New look, same {player}. That'll be {pay}.
+
+## shop.barber.cant_afford  kind=cycle  fn=commerce
+Not quite enough ryo for that one. A trim's cheaper, if you like.
+That style's {pay}. Come back after a few errands and the chair will still be here.
+I can't cut on credit, sorry. My scissors need sharpening and the grinder wants paying.
+
+## shop.barber.recommend  fn=commerce,worldbuild
+Short sides are in with the Genin this season. Practical, too.
+If you want something that lasts a mission, tie it back. Loose hair catches on branches.
+A ribbon in your clan's colour, or any colour you like. Plenty of people make one up.
+Try a darker shade before the festival. Lantern light washes the pale ones out.
+
+## shop.barber.regular  level=3..10  fn=commerce,deepen_bond
+Back already? Your hair grows faster than my apprentice learns.
+I saved the good chair for you. Same as last time, or are we being brave?
+You're my favourite kind of customer: you sit still and you tip in gossip.
+Every time you sit down, I learn one more thing about the Leaf. Go on, what's new?
+
+## shop.barber.closing  kind=cycle  fn=commerce,guide
+Last cut of the day, {player}. After this, the broom and I have an appointment.
+The shutters come down at sunset. Quick trims only now.
+Come back tomorrow morning. My hands are steadier before lunch.

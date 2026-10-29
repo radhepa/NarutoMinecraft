@@ -1,0 +1,229 @@
+# The repeatable set, by personality: "we already talked today" (again) and politely ending the chat (close).
+# Never spent: these come back. The general set is in repeat.txt.
+#! kind: repeat
+#! fn: react
+
+## again personality=warmhearted  stage=teen|adult
+I've told you all my news, dear. Come for supper tomorrow and I'll have more.
+You've heard everything twice! Here, at least take a rice ball for the road.
+Back again? I love it, but I've nothing new. Except leftovers. Always leftovers.
+I've talked your ear off already today. Go and rest, {player}.
+Nothing new since this morning, dear. Just the same old pot on the stove.
+Tomorrow I'll have gossip and soup. Today, only soup.
+## close personality=warmhearted  stage=teen|adult
+Off you go, then. Eat something proper, promise me.
+I'll let you get on. Wrap up warm, {player}.
+Run along now. My door's always open.
+That's me back to the stove. Take care of yourself.
+
+## again personality=thoughtful
+I think I've said all I've considered today. Let me gather some new thoughts.
+We've covered it, I believe. Tomorrow I may have a better answer.
+I'm out of ideas worth sharing for the day. Give me a night with my books.
+Repeating myself would only weaken what I said. Come back tomorrow.
+I've nothing new to offer just now, {player}. That's honest, at least.
+Let what we talked about settle. There'll be more tomorrow.
+## close personality=thoughtful
+I'll leave you to your day. Thank you for the conversation.
+I should get back to my reading. Until next time, {player}.
+Good talk. I'll think on it.
+That's enough for now, I think. Take care.
+
+## again personality=playful
+Again? I've used up all my jokes! Even the bad ones!
+I'm out of tricks for today. Come back tomorrow, I'll have restocked.
+You again! Ha! I've got nothing. Literally. Look, empty pockets.
+If I talk any more I'll just start making noises. Want to hear? No? Fair.
+Today's fun is all used up. Tomorrow's fun starts at sunrise!
+I've told you everything. Except the secret. Which I'm not telling. Tomorrow, maybe.
+## close personality=playful
+Race you to the corner! ...You go first. I'll catch up. Bye!
+I'm off before I get bored. Not of you! Of standing still.
+Tag, you're it! Bye, {player}!
+Right, I'm vanishing. Poof!
+
+## again personality=adventurous
+I've no new stories till I've been somewhere new. Tomorrow, maybe!
+You've heard all my roads today. Let me go find another one.
+Nothing new under this sky, {player}. Give me a day out past the wall.
+I'm all talked out. Time to walk it off.
+Same tales as this morning, I'm afraid. I need fresh dirt on my boots.
+I'll have a new adventure for you tomorrow. Today's is told.
+## close personality=adventurous
+Well, the road's calling. See you on the other side of it.
+I'm heading out. Don't get lost without me.
+Off I go! Safe travels, even if it's just across the street.
+That's me. Keep your eyes on the horizon, {player}.
+
+## again personality=meticulous
+We covered all of that at our last conversation. I have notes.
+I've nothing further to add today. My list is complete.
+That was already discussed. Same time tomorrow?
+There's nothing new on today's schedule, {player}.
+I've said what I planned to say. Repeating it would be inefficient.
+Tomorrow I'll have new items for you. Today's are checked off.
+## close personality=meticulous
+That concludes things for today. Thank you, {player}.
+I'll see you at the usual time. Don't be late.
+Back to my desk. Good day.
+## close personality=meticulous  stage=teen|adult
+I must get back to work. I'm two minutes behind already.
+
+## again personality=steadfast
+I've told you what I know. It'll still be true tomorrow.
+Nothing's changed since we spoke, {player}.
+Same as before. I'll let you know if that changes.
+I've said my piece. I'll be here tomorrow, same as always.
+That's all I've got today. Come back, I'll have more.
+I don't say things twice. Not because I won't. Because once is enough.
+## close personality=steadfast
+I'll get back to it. You know where to find me.
+Take care, {player}. See you tomorrow.
+I'll be here. Off you go.
+## close personality=steadfast  stage=teen|adult
+Back to work. Stay out of trouble.
+
+## again personality=reserved
+...We talked already.
+That's all.
+Nothing new.
+Tomorrow.
+I'm out of words for today.
+Hm. Again?
+## close personality=reserved
+Bye.
+...See you.
+I'm going.
+Later.
+
+## again personality=imaginative
+My head's empty as a sky with no clouds. Come back when it's filled up again.
+I've told you every story I had today. Tomorrow I'll dream new ones.
+The well's dry for today, {player}. Ideas need a night to refill.
+I'd only be painting the same picture twice. Come back tomorrow.
+Today's colours are all used up. Tomorrow's will be brighter.
+I've nothing new. Unless you count a daydream about a cloud shaped like a teapot.
+## close personality=imaginative
+I'm drifting off somewhere in my head. Better go before I walk into a wall.
+I'll let you go. Have a day worth painting.
+Off you float, {player}. See you soon.
+Back to my sketches. Goodbye for now!
+
+## again personality=pragmatic
+Nothing new to report. I'll let you know if there is.
+I've given you everything I've got today. No sense repeating it.
+I'm all out. Try me tomorrow.
+Talking in circles won't get either of us anywhere.
+## again personality=pragmatic  stage=teen|adult
+We've been over this. Time's money, {player}. Come back tomorrow.
+Same news as before. Prices haven't changed either.
+## close personality=pragmatic  stage=teen|adult
+I've customers waiting. Off you go.
+Right, back to work. Good seeing you.
+That's all for today. Don't waste the daylight.
+Busy afternoon. Take care, {player}.
+
+## again personality=curious
+I've asked you all my questions for today! ...Nearly all. Okay, all.
+I've got nothing new yet. I'm still finding things out. Tomorrow!
+You've heard all my rumours. I'll go dig up more.
+I'm out of things to wonder about out loud. That never happens!
+Nothing new since we talked. I'll be investigating, though.
+I'll have new questions by tomorrow. Bigger ones.
+## close personality=curious
+Oh! I just thought of something to look into. Bye!
+I'll let you go. Tell me if anything interesting happens!
+See you, {player}. Come back with answers!
+Off to poke around. Bye for now!
+
+## again personality=protective
+I've nothing more to tell you. Just stay safe.
+Nothing new. Which is good. Nothing new means nothing wrong.
+I've said what I needed to. Keep it in mind.
+Same as before. Watch yourself out there.
+## again personality=protective  stage=teen|adult
+We've talked enough today. Go home and rest, {player}.
+You've heard it all. Now go get something to eat.
+## close personality=protective
+I'll see you tomorrow. Get there safely.
+## close personality=protective  stage=teen|adult
+Go straight home, all right? It's getting late.
+Off you go. Stick to the main streets.
+Take care of yourself. I mean that.
+
+## again personality=gentle
+I think we've talked enough for today. That's all right.
+I've nothing new, I'm sorry. Come back tomorrow, if you like.
+You've heard all my little news already.
+Let's rest our voices until tomorrow.
+Nothing's changed since we spoke. The sparrows are still at the window.
+I'm a bit tired from talking. Maybe tomorrow?
+## close personality=gentle
+Take care, {player}. Be kind to yourself.
+I'll let you go now. Mind the step.
+Goodbye for now. It was nice talking.
+Off you go. Come back whenever you like.
+
+## again personality=proud
+I've already given you my time today. Don't be greedy.
+I don't repeat myself, {player}.
+That was settled. There's nothing more to discuss.
+You've had my thoughts. That's more than most get.
+Come back tomorrow, when I've something worth saying.
+Twice in a day? You flatter me. Still no.
+## close personality=proud
+I have matters to attend to. Good day.
+You may go. I mean that kindly. Mostly.
+Enough for today. Carry yourself well.
+I'll take my leave. Don't slouch on your way.
+
+## again personality=fiery
+I'm talked out! For now! I'll be back to full volume tomorrow!
+Again?! I love that you keep coming back! But I've got nothing new!
+Tomorrow! I'll have ten new things to shout about tomorrow!
+I've said everything! Twice! Let's train instead!
+My throat's sore from all the talking! Worth it! Come back tomorrow!
+Nothing new today! But tomorrow's going to be HUGE!
+## close personality=fiery
+I've got to go burn off some energy! See you!
+Laps! I need to do laps! Bye, {player}!
+Off I go! Don't miss me too much!
+Right! I'm going! Fast! Bye!
+
+## again personality=shy
+Oh, um... I think I already said everything.
+I don't have anything new. Sorry.
+We talked earlier... it was nice, though.
+I... can't think of anything else to say. Tomorrow?
+Um. Same as before. Sorry, {player}.
+I've used up all my brave words for today.
+## close personality=shy
+I should... um, go now. Bye.
+See you. I mean, if you want.
+Bye, {player}. Thanks for talking to me.
+I'll go now. Sorry. Bye!
+
+## again personality=stern
+I don't waste words. Neither should you.
+Nothing has changed. Come back when something has.
+Repetition is for drills, not conversation.
+Tomorrow. Not before.
+## again personality=stern  stage=teen|adult
+We've spoken. Use what I told you.
+You've had my instruction for the day. Go and practise it.
+## close personality=stern  stage=teen|adult
+Dismissed. Go and do something useful.
+That's all. Back to your duties.
+Off with you. Don't dawdle.
+Enough. Train well, {player}.
+
+# -- all-ages lines for the voices whose sets above suit grown-ups only ---------------------------------
+## again personality=warmhearted
+We already talked! I'd love to keep going, but I've run out of news. Tomorrow?
+That's all my news for today. Come back and I'll have more, I promise.
+## close personality=warmhearted
+Bye! Come back soon, all right?
+## close personality=pragmatic
+Right, I've things to do. See you.
+## close personality=stern
+That's enough for today. Go on.

@@ -1,0 +1,69 @@
+# New Year, winter 28 into spring 1: the shrine visit, the Hokage's address, the one night everyone stays up
+# (no fatigue until 02:00).
+#! tags: event=new_year
+
+## greet.event  fn=react
+Happy New Year, {player}! Or nearly. Are you going up to the shrine?
+The last night of the year! The whole village is heading for the shrine.
+New Year's greetings to you! May your kunai fly straight this year.
+There you are. Everyone's waiting for the Hokage's address in the square.
+A good year to you, {player}! Have you made your wish yet?
+Warm hands, warm heart. Here, have a roasted chestnut, it's New Year.
+
+## greet.event  personality=stern|steadfast  fn=react
+A new year. A clean slate. Make better use of it than the last.
+
+## greet.event  personality=playful|fiery  fn=react
+New Year! Nobody sleeps tonight! Those are the rules, I just made them!
+
+## greet.event  stage=child  fn=react
+It's New Year! We get to stay up! The whole night!
+Happy New Year! My grandmother gave me envelopes of ryo. Don't tell my sister how much.
+
+## chat.event  fn=worldbuild
+At the shrine you ring the bell, bow twice, clap twice, and make your wish. Don't tell anyone what it is.
+The Hokage speaks to the village from the Residence balcony every New Year. Short, usually. Everyone's cold.
+The shrine sells fortunes on paper slips. If you get a bad one, tie it to the tree and leave it there.
+The first sunrise of the year is best from the Hokage Rock. The climb is worth it.
+My family eats long noodles on the last night, for a long life. Then sweet rice cakes in the morning.
+The bell at the shrine rings a hundred and eight times before midnight. One for every worry.
+The Academy children write their resolutions on strips of paper. Mine said "stop losing kunai." It didn't work.
+New Year is the one night the shops stay open late. Everyone wants hot sake and sweet soup.
+The shrine steps are icy. Hold the rail, the priests don't salt them well enough.
+Everyone cleans their whole house the week before. It sweeps last year out the door.
+The year's first meal should be cooked by someone you love. That's what my mother said, anyway.
+
+## chat.event  fn=teach
+Tonight nobody sleeps, so the tiredness comes late. You'll be fine until two, then you'll feel it.
+If you're staying up for the sunrise, eat something after midnight. A meal keeps your legs going.
+Go home and sleep after the first sunrise. Tomorrow is a holiday, but your bed doesn't know that.
+
+## chat.event  personality=thoughtful|reserved  fn=reveal_character
+I like the quiet after the bell stops. The whole village holding its breath.
+Every year I write down one thing I'm grateful for and burn it in the shrine fire.
+
+## chat.event  personality=curious|imaginative  fn=reveal_character
+What do you think the Hokage wishes for? I've always wondered.
+I like to imagine the faces on the Rock watching us all celebrate. They must be bored by now.
+
+## chat.event  rank=genin|chunin|jonin  fn=reveal_character
+Even on New Year someone stands at the gate. I did it last year. The guards' tea was surprisingly good.
+
+## chat.event  stage=child  fn=worldbuild
+I'm going to ring the shrine bell so hard the whole village hears it.
+My fortune said "great luck"! That means I'll win at everything this year, right?
+We made rice cakes this morning. You have to pound and pound and pound. My arms hurt.
+I'm wishing for a dog. Don't tell anyone, or it won't come true.
+
+## chat.event  district=shrine  fn=worldbuild
+The queue for the bell goes all the way down the shrine steps. It moves faster than it looks.
+They burn last year's charms in the bonfire behind the shrine. Bring yours, the priests take them.
+
+## chat.event  personality=warmhearted|gentle  fn=reveal_character
+I'm making sweet bean soup for anyone who comes by tonight. Cold hands should never go home empty.
+
+## chat.event  personality=adventurous|fiery  fn=reveal_character
+This year I'm going to climb to the very top of the Rock for the sunrise. The very top!
+
+## chat.event  group=civilian  fn=reveal_character
+The shops close for the first three days of the year. I spend them doing absolutely nothing. Bliss.

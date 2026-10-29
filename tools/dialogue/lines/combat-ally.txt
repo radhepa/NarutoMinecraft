@@ -1,0 +1,348 @@
+# Combat barks, pilot: the player's allies (teammates and sensei, pool combat.<event>.player_ally) and
+# the rival (combat.<event>.rival). Generic voices until the cast is written; a few personality
+# variants. Teammates and the rival are children, so every line here suits any age. Under 80 characters.
+#! kind: cycle
+#! fn: react
+#! tags: stage=child|teen|adult
+
+# -- player_ally: the fight ----------------------------------------------------------------------------
+
+## combat.fight_start.player_ally
+Formation! Just like we drilled it.
+Stay close and watch each other's backs.
+Here they come. Together, on my mark!
+
+## combat.fight_start.player_ally  personality=fiery
+Finally! I've been itching for a real fight!
+
+## combat.fight_start.player_ally  personality=stern
+Eyes forward. Nobody charges without a signal.
+
+## combat.fight_start.player_ally  personality=shy
+I'm right behind you. I think. Yes. Right behind you.
+
+## combat.taunt.player_ally
+Over here! Try me instead!
+Is that all? We've had harder mornings at training.
+Hey! Leave my teammate alone!
+
+## combat.taunt.player_ally  personality=playful
+Yoo-hoo! Missed me! Missed me again!
+
+## combat.low_health.player_ally
+I'm hit! Cover me a moment!
+Running low. Don't wait for me!
+Still standing. Barely. Keep going!
+
+## combat.low_health.player_ally  personality=proud
+This is nothing. I've had worse from a sparring dummy.
+
+## combat.ally_down.player_ally
+They're down! Someone get to them!
+Guard them! I'll draw the attack!
+Hang on, we're coming for you!
+
+## combat.ally_down.player_ally  personality=protective
+Nobody touches them again. Nobody.
+
+## combat.knocked_out.player_ally
+Sorry... keep going...
+Go on... don't worry about me...
+That one... got me...
+
+## combat.yield.player_ally
+They're giving up! Hold your strikes!
+Stand down! They yielded!
+
+## combat.flee.player_ally
+Fall back! There are too many!
+Back to the trees! Now!
+Retreat! We regroup at the stream!
+
+## combat.victory.player_ally
+We did it! Everyone all right?
+Good work. Check your tools and catch your breath.
+Ha! That's teamwork!
+
+## combat.victory.player_ally  personality=warmhearted
+Everyone in one piece? Good. Here, have a rice ball.
+
+## combat.victory.player_ally  personality=meticulous
+Kunai collected: all but two. We'll find those before we leave.
+
+## combat.defeat.player_ally
+We'll get them next time. Help me up.
+That didn't go to plan. We'll talk it through.
+Everyone breathing? Then we can still fix this.
+
+## combat.parry_landed.player_ally
+Caught it! Your turn!
+Blocked! Hit them now!
+Ha! Opening!
+
+## combat.got_parried.player_ally
+They read me! Careful!
+Bounced right off. They're good.
+Argh, too obvious.
+
+## combat.combo_finisher_landed.player_ally
+That's the chain!
+Down! Nice set-up!
+Got them clean!
+
+## combat.jutsu_cast.player_ally
+{technique}! Clear the way!
+Covering you! {technique}!
+Step aside! {technique}, now!
+
+## combat.jutsu_countered.player_ally
+They stopped it! Watch out!
+My jutsu didn't take. Plan B!
+Countered. They know what they're doing.
+
+## combat.genjutsu_caught.player_ally
+Something's wrong. The trees keep moving.
+Is that you? Say something only you would say.
+I can't tell what's real!
+
+## combat.genjutsu_broken.player_ally
+Release! I'm back. Thanks.
+Snapped out of it! Where are they?
+Clear head again. Let's go.
+
+## combat.smoke_bomb.player_ally
+Smoke! Use it, move!
+They can't see us. Go quiet, go now!
+Into the smoke. Flank them!
+
+## combat.substitution.player_ally
+A log! They swapped out!
+Behind you! That was a substitution!
+Gone! Watch the trees!
+
+# -- player_ally: orders and team moves ---------------------------------------------------------------
+
+## combat.command_ack.attack  speaker=player_ally
+On it!
+Going in!
+Right behind you. Attack!
+Understood. Hitting the one on the left.
+
+## combat.command_ack.attack  speaker=player_ally  personality=fiery
+Yes! Finally!
+
+## combat.command_ack.defend  speaker=player_ally
+Guarding!
+I'll hold them off. Go!
+Shields up. Nobody gets past me.
+Defending. Call if you need me.
+
+## combat.command_ack.follow  speaker=player_ally
+Right with you.
+Following your lead.
+Lead the way. I'm close.
+Stay in sight. I'm on your heels.
+
+## combat.command_ack.hold  speaker=player_ally
+Holding here.
+Not moving. Promise.
+Staying put. Say the word.
+Holding position. Eyes open.
+
+## combat.command_ack.hold  speaker=player_ally  personality=fiery
+Hold? Ugh. Fine. But not for long!
+
+## combat.command_ack.combo  speaker=player_ally
+Ready when you are!
+Combo! On three!
+Let's put it together!
+Set them up. I'll finish!
+
+## combat.combo_call.player_ally
+Now! Together!
+Hit them high, I'll go low!
+Your strike, then mine! Go!
+Push them to me! I've got the finish!
+Same time! Three, two, one!
+
+## combat.nature_combo.player_ally
+Your {nature} and mine together! Now!
+Add your jutsu to mine! It'll double!
+Fire on wind! Make it roar!
+Water first, then lightning! Trust me!
+Let's mix our chakra. On my signal!
+
+## combat.heal_given.player_ally
+Hold still. This will sting a little.
+There. That should close it up.
+Breathe. You're all right. Back in it.
+Here, a soldier pill and a bandage. Go!
+Patched you up. Try not to get hit there again.
+
+# -- rival -------------------------------------------------------------------------------------------
+
+## combat.fight_start.rival
+Finally. Just you and me.
+I've been waiting for this. No excuses afterwards.
+Let's settle it. Here, now.
+
+## combat.taunt.rival
+That's it? I expected more from you.
+You're slower than last time.
+Try to keep up, will you?
+
+## combat.low_health.rival
+Not bad... but I'm not done.
+This doesn't mean anything!
+I won't lose to you. Not to you.
+
+## combat.knocked_out.rival
+Next time... I'll win...
+You got lucky. Remember that.
+
+## combat.yield.rival
+Fine. Fine! This round's yours.
+I'm stopping. Not because you won. I'm stopping.
+
+## combat.flee.rival
+This isn't over. Not even close.
+I'll finish this when it counts.
+
+## combat.victory.rival
+Told you. I'm ahead.
+Get up. That's one more for me.
+Train harder. I'll be waiting.
+
+## combat.defeat.rival
+You won. Don't let it go to your head.
+Hmph. I'll be twice as good next time.
+Again. Tomorrow. Same place.
+
+## combat.parry_landed.rival
+Predictable. I know all your habits.
+I've watched you train. I knew that was coming.
+
+## combat.got_parried.rival
+You... read that?
+Tch. Since when can you do that?
+
+## combat.combo_finisher_landed.rival
+Feel that? That's the difference between us.
+Clean. Like I practised.
+
+## combat.jutsu_cast.rival
+{technique}. Learned it before you, of course.
+I mastered {technique} first. Watch and weep.
+{technique}! Don't blink.
+
+## combat.jutsu_countered.rival
+You countered it? Who taught you that?
+That won't work twice. Neither will your counter.
+
+## combat.genjutsu_caught.rival
+Stop it. This is a trick. I know it's a trick.
+You're using illusions now? Coward's way out.
+
+## combat.genjutsu_broken.rival
+Broken. Is that all you've got?
+Release. Pathetic illusion.
+
+## combat.smoke_bomb.rival
+Hiding? Come out and fight me!
+Smoke won't save you from me.
+
+## combat.substitution.rival
+A log. Of course. Show yourself!
+Cheap trick. Very cheap.
+
+# -- player_ally: personality variants ----------------------------------------------------------------
+
+## combat.fight_start.player_ally  personality=playful
+Last one to land a hit buys the ramen!
+
+## combat.fight_start.player_ally  personality=protective
+Stay where I can see you. All of you.
+
+## combat.fight_start.player_ally  personality=meticulous
+Three of them. Two kunai each, one smoke bomb left. Plan accordingly.
+
+## combat.fight_start.player_ally  personality=reserved
+Hm. Let's be done quickly.
+
+## combat.taunt.player_ally  personality=fiery
+Come on! I'm right here! Hit me if you can!
+
+## combat.taunt.player_ally  personality=proud
+You call that a stance? Our Academy first-years stand straighter.
+
+## combat.low_health.player_ally  personality=shy
+I'm... I'm okay. Mostly okay. Keep going.
+
+## combat.low_health.player_ally  personality=stern
+I'm hurt. It changes nothing. Keep to the plan.
+
+## combat.ally_down.player_ally  personality=fiery
+Hey! You'll pay for that! Every bit of it!
+
+## combat.ally_down.player_ally  personality=gentle
+Oh no. Hold on, I'm coming. Please hold on.
+
+## combat.victory.player_ally  personality=fiery
+Yes! Did you see that? We were amazing!
+
+## combat.victory.player_ally  personality=stern
+Adequate. Your guard dropped twice. We'll drill it tonight.
+
+## combat.victory.player_ally  personality=playful
+That was the best! Again! Can we do it again?
+
+## combat.victory.player_ally  personality=pragmatic
+Done. Nothing broken, nothing lost. A good day's work.
+
+## combat.defeat.player_ally  personality=steadfast
+We lost the fight, not the mission. Get up. We go again.
+
+## combat.defeat.player_ally  personality=warmhearted
+Come here, let me look at that scrape. We'll be all right.
+
+## combat.combo_call.player_ally  personality=fiery
+Now, now, NOW! All together!
+
+## combat.combo_call.player_ally  personality=meticulous
+On my count. Three beats. Strike on the third.
+
+## combat.heal_given.player_ally  personality=gentle
+Shh, it's all right. Let me wrap it. There we are.
+
+## combat.heal_given.player_ally  personality=stern
+Hold still. If you'd blocked, I wouldn't need to do this.
+
+## combat.command_ack.defend  speaker=player_ally  personality=protective
+Nobody gets near you. You have my word.
+
+## combat.command_ack.follow  speaker=player_ally  personality=shy
+Okay. Right behind you. Don't go too fast?
+
+# -- rival: more --------------------------------------------------------------------------------------
+
+## combat.fight_start.rival
+Don't hold back. I'd know.
+
+## combat.taunt.rival
+Is that your new move? I've seen it already.
+
+## combat.ally_down.rival
+Get up! I won't let them think our team is weak!
+You took my teammate down? Then I'll take you down.
+
+## combat.knocked_out.rival
+Not... over...
+
+## combat.victory.rival
+Write that one down. Rival: one. You: zero.
+
+## combat.combo_finisher_landed.rival
+Three hits. You didn't block one.
+
+## combat.flee.rival
+I'm not running. I'm choosing a better day.

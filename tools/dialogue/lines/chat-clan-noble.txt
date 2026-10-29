@@ -1,0 +1,367 @@
+# Small talk from inside the fifteen noble clans: customs, the quarter, clan day, neighbours. Never a secret.
+
+# -- Senju ---------------------------------------------------------------------------------------------
+
+## chat.clan  clan=senju  fn=worldbuild
+The tree in our hall was a sapling when the village was founded. We water it before we feed ourselves, every morning.
+Every Senju child plants a sapling on their first clan day. Mine is by the east wall, crooked and stubborn, a lot like me.
+Guests at the hall are given tea under the tree. Nobody refuses, and nobody has ever been allowed to sit with their back to it.
+The founders' shrine is swept twice a day. Most mornings the cousins argue over whose turn it is, which is half the point.
+Our quarter sits right under the Rock, beside the Residence. Living that close to the faces, you learn to stand up straight.
+The hall roof leaks wherever the branches grew through it. We put bowls under the drips and call it the tree's music.
+The Uzumaki memorial stands just over our wall. Our elders leave a cup of tea there on the first morning of every month.
+We were a great clan once and we're a small one now. The tree doesn't seem to mind, so we try not to either.
+
+## chat.clan  clan=senju  fn=reveal_character
+I like pruning best. You have to know what to cut and what to leave, and the tree tells you if you got it wrong.
+My grandmother can name every Senju who ever sat under that tree. It takes her most of an afternoon.
+I'm not as strong as the stories about my family. I've made my peace with being good at gardening instead.
+Living in a founding family means everyone expects you to be wise. Mostly I just remember to water things.
+
+## chat.clan  clan=senju  fn=hook
+A dry week is coming, the elders say, and the tree drinks more than the well gives. We'll need extra hands with buckets.
+
+# -- Uzumaki -------------------------------------------------------------------------------------------
+
+## chat.clan  clan=uzumaki  fn=worldbuild
+Our hall is mostly a memorial now. The spiral is on every beam, and every name on the wall is read aloud once a year.
+The seals on the memorial are repainted each spring. One wrong stroke and you start the whole panel again.
+There are so few of us that clan day is one long table. We set out bowls for the ones who aren't here and fill them anyway.
+The sealing-mask hall is the loudest quiet room in the village. All those faces on the wall, and you can feel them watching.
+The Senju have looked after us since before I was born. We repay them with noise and seals, which seems to suit them.
+We live long, my family. My great-aunt still climbs the memorial ladder at ninety, and complains when anyone holds it.
+Brushes for sealing are made from the tips of a weasel's tail. I've got one that belonged to someone I never met.
+
+## chat.clan  clan=uzumaki  fn=reveal_character
+I practise seal strokes on the back of rice paper every night. My hand is steady now; it used to look like a spider walked through ink.
+I'm loud, I know. When there's only a handful of you, you have to be loud enough for everyone who's missing.
+I learned all the names on the wall before I learned my letters. My grandfather made a song out of them.
+Some days the memorial feels heavy. Then I repaint a seal and it feels like keeping a promise instead.
+
+## chat.clan  clan=uzumaki  fn=hook
+The ladder by the memorial has a cracked rung, and nobody here is a carpenter. I'd rather ask before somebody falls.
+
+# -- Uchiha --------------------------------------------------------------------------------------------
+
+## chat.clan  clan=uchiha  fn=worldbuild
+The fan is on every wall in our quarter. My grandmother stitches it into the hem of every cloth she owns, dishcloths too.
+Most of the Military Police are Uchiha. The station is in the far corner of the quarter, and the lanterns there never go out.
+At sixteen we take the police oath in front of the whole clan. I've seen grown Jonin cry at it and swear it was the smoke.
+Our quarter is on the edge of the village. People say it's so we keep watch on the wall. People say a lot of things.
+Guests in an Uchiha house don't ask about eyes. That's the first rule, and nearly the only one we explain.
+The police festival parade goes through the main street every summer. The children wear paper fans and march out of step.
+The Morino think they should hold every prisoner. We think prisoners should be held by people who caught them. Old argument.
+Our grilled rice crackers are the best in the Leaf. That's not pride; it's just true, and I'll fight anyone who says otherwise.
+
+## chat.clan  clan=uchiha  fn=reveal_character
+I joined the police because my family expected it. I stayed because I'm good at it, and that surprised me.
+We have a reputation for taking offence. I take offence at that, so I suppose it's earned.
+I'd like to see the main street without someone stepping aside for me. Just once. It's the uniform, mostly.
+I practise fire jutsu at the lake at dawn. My little cousin counts how long the fireball lasts and never gets the number right.
+
+## chat.clan  clan=uchiha  fn=hook
+A market stall keeps reporting thefts to the station and then refusing to say what was taken. I'd like to know what we're guarding.
+
+# -- Hyuga ---------------------------------------------------------------------------------------------
+
+## chat.clan  clan=hyuga  fn=worldbuild
+A bow in the Hyuga estate has a depth for every person: elder, guest, cousin, main house, branch. You learn them before you can read.
+Tea in the main hall is taken in silence. The first person to speak sets the topic, so nobody speaks lightly.
+Sparring is how we talk. Two cousins who quarrel will be on the dojo floor before dinner, and friends by dessert.
+The koi in our pond are older than some of the servants. The eldest is white with one gold spot and it sulks if you're late with the food.
+The estate is two houses under one roof line, main and branch. Visitors notice; we pretend they don't.
+We're a short walk from the Residence. Hyuga have carried messages along that road for longer than anyone remembers.
+The gardeners rake the gravel in straight lines every morning. A crooked line means someone ran across it, and everyone knows who.
+
+## chat.clan  clan=hyuga  fn=reveal_character
+I've held a bow at exactly the right depth for an hour while an elder spoke. My back remembers it better than my head.
+In the branch house we're taught that duty is a kind of freedom. Some days I'm sure of it. Some days I spar very hard.
+My favourite place in the estate is the edge of the pond at dawn, before anyone asks me to be correct.
+I can tell how angry my father is by how quietly he sets down his cup. Today it barely made a sound.
+
+## chat.clan  clan=hyuga  fn=hook
+One of the young branch-house cousins has been training alone at night, far past the curfew. I'd like someone to check on them without making it a matter.
+
+# -- Nara ----------------------------------------------------------------------------------------------
+
+## chat.clan  clan=nara  fn=worldbuild
+Every porch in our quarter has a shogi board. Nobody finishes a game in one sitting; we leave them set up for weeks.
+The deer forest is behind the house, and the deer are counted every year by hand. You'd be amazed how badly deer stand in line.
+People call us lazy. We call it thinking lying down. The clouds help.
+The memorial for the three clans stands near the forest's edge. The Yamanaka bring flowers, the Akimichi bring snacks, we bring the shade.
+Our alliance with the Akimichi and the Yamanaka is older than the village. We still split the bill three ways at the barbecue house.
+Antlers the deer drop in spring are gathered by the children. What happens to them after that is family business.
+The forest paths look the same to visitors, but every Nara knows them by the shadows at noon.
+
+## chat.clan  clan=nara  fn=reveal_character
+I once spent a whole summer afternoon watching one cloud. My mother asked what I'd done all day. I said, a lot.
+I lose at shogi to my grandfather every time. I've started to suspect it's on purpose, so I'll keep coming back.
+Strategy is just being too lazy to make the same mistake twice.
+The deer trust me more than people do. I don't take it personally; deer are better judges of character.
+
+## chat.clan  clan=nara  fn=hook
+A few of the deer have been limping near the forest's north edge. It's probably a fallen fence. Probably.
+
+# -- Akimichi ------------------------------------------------------------------------------------------
+
+## chat.clan  clan=akimichi  fn=worldbuild
+Our kitchen hall feeds forty on an ordinary night. On clan day, nobody's counting.
+We always set one more place than we need. Someone always turns up to fill it.
+Never refuse the third helping in an Akimichi house. The first two are hospitality; the third is a promise.
+The storehouse behind the hall has rice from three harvests. A clan that eats this well plans for the lean years.
+The barbecue house down the street is ours. Every Akimichi child learns to turn meat before they learn to throw a kunai.
+Strength is like food: it's meant to be shared. That's the first thing my grandfather taught me, at a table, naturally.
+We live right by the market street. The fishmongers know us by name and the grocer saves us the big sacks.
+The three-clan alliance meets for barbecue once a month. The Nara never pay on time and the Yamanaka always bring flowers we can't eat.
+
+## chat.clan  clan=akimichi  fn=reveal_character
+I can cook for fifty, but I've never cooked for one. I wouldn't know how to make a pot that small.
+Some of my family want to be shinobi, some want to be chefs. I want both, and I'm told that's greedy. Fine.
+Comment on an Akimichi's size and you'll learn a lot about yourself very quickly. I'm just warning you.
+My favourite sound is a full table going quiet because the food's arrived.
+
+## chat.clan  clan=akimichi  fn=hook
+The barbecue house has had a quiet season. Some of the elders want to change the menu, and some would rather close it than change a thing.
+
+# -- Yamanaka ------------------------------------------------------------------------------------------
+
+## chat.clan  clan=yamanaka  fn=worldbuild
+The flower shop is the front of our compound, right on the main street. Most of the village thinks that's all we are.
+A bouquet always says something. Get the flowers wrong and you've said something you didn't mean.
+The greenhouse behind the shop grows what the market can't: orchids, winter roses and a moonflower that blooms once a year.
+The quiet hall at the back is where we train. It's called quiet for a reason; even the birds seem to land softly there.
+Many of the village's sensors are Yamanaka. We hear things in a crowd that others miss, and we learn early not to repeat them.
+The Suzuran sell herbs on the same street. We send each other customers at the hospital and steal them at the market.
+At clan day we make a garland of one flower from every member's garden. It's longer every year, and that's the point.
+
+## chat.clan  clan=yamanaka  fn=reveal_character
+I can read a room the way other people read a menu. It's not a technique, just years behind a shop counter.
+My favourite flower is the one nobody buys. The plain ones are honest, and I like honest.
+I tried to give up the shop for the field once. I lasted a month before I missed the smell of the cold room.
+Some days I'd like to be a little less perceptive. You notice too much about people at the counter.
+
+## chat.clan  clan=yamanaka  fn=hook
+Someone keeps ordering a bouquet with a message no flower should send, and asking us to leave it unsigned. I'd like to know who it's for.
+
+# -- Inuzuka -------------------------------------------------------------------------------------------
+
+## chat.clan  clan=inuzuka  fn=worldbuild
+Every Inuzuka has a ninken. You don't pick the dog; the dog picks you, and a dog's choice is final.
+Our compound is right by the main gate, which suits us. The dogs need the outer fields and so do we.
+On clan day the pups are brought out and the children sit in a circle. The pups wander until one sits down in a lap. That's that.
+The clinic sees half the dogs in the village, not just ours. There's always one barking, and it's usually the healthy one.
+Dinner in our house is loud. Dinner in the kennels is louder. Nobody minds either.
+The Aburame think we're too noisy. We think they're too quiet. Every year we race them in the outer fields to settle it.
+The run behind the kennels is the size of a training ground, and the fence still has holes the dogs pretend aren't theirs.
+
+## chat.clan  clan=inuzuka  fn=reveal_character
+My partner's been with me since I was six. I can't remember a morning I woke up without a cold nose in my ear.
+I'd go hungry before my dog did. Anybody in the clan would. That's the whole of the rule.
+People say I smell like a kennel. I say they smell like soap and shame, and the dogs agree with me.
+I've never been able to whisper. Grew up shouting over forty dogs, so the dogs got the volume and so did I.
+
+## chat.clan  clan=inuzuka  fn=hook
+A young ninken has gone missing near the wall. Its partner's frantic, and the scent trail stops dead at a stream.
+
+# -- Sarutobi ------------------------------------------------------------------------------------------
+
+## chat.clan  clan=sarutobi  fn=worldbuild
+Every guest in a Sarutobi house is offered a seat by the hearth. Even in summer, even if the guest is only delivering a letter.
+The monkey on our gate has been repainted so many times its face has softened. My uncle swears it used to look fierce.
+The fire-training yard behind the house is black to the ankle. Nothing grows there, and we like it like that.
+We have a long staff tradition. The old staves hang in the hall by height, and the tallest is taller than the doorway.
+At New Year our family leads the lantern walk through the village. A thousand lanterns and every one lit from the same flame.
+The Shimura disagree with us about everything at council, and I mean everything. Once it was the colour of the new curtains.
+Our house is near the Residence. When I was small, I thought the Hokage was just a neighbour who worked very late.
+
+## chat.clan  clan=sarutobi  fn=reveal_character
+I've given more of my life to this village than to my own garden, and my garden is a mess. I'd choose the same again.
+My grandfather taught me to light a pipe, a lantern and a fireball in the same week. My mother has never forgiven him.
+I talk too much about the village. Tell me if I start a speech; my cousins time them.
+I'm tired a lot. A Sarutobi is supposed to burn bright, and nobody mentions how much fuel that takes.
+
+## chat.clan  clan=sarutobi  fn=hook
+We need a hundred more lanterns for the walk this year, and the paper merchant's sold out. Somebody has to find another supplier.
+
+# -- Aburame -------------------------------------------------------------------------------------------
+
+## chat.clan  clan=aburame  fn=worldbuild
+Visitors to the insect gardens stand still and let the kikaichu taste their chakra. It takes about a minute. Nobody has ever enjoyed that minute.
+The first rule of the Aburame house: never swat. The second is to remember the first.
+Our hive walls hum all night. Guests can't sleep; family can't sleep without it.
+Insect night is in early summer. We open the garden gates and the fireflies come up off the grass all at once. The whole street goes quiet.
+The house is dark timber at the edge of the woods. The insects prefer shade, and so, frankly, do we.
+The Inuzuka's dogs dig in our garden beds. We document every incident, with drawings. The file is very thick.
+Every Aburame wears lenses outdoors. People think it's to hide. It's because pollen is a nightmare.
+
+## chat.clan  clan=aburame  fn=reveal_character
+People find me cold. I'm not. I simply see no reason to say a thing twice when once was accurate.
+I keep a notebook of every beetle in the village. There are one hundred and twelve kinds. I've named the rarest ones after the weather.
+My favourite hour is dusk in the garden. The day insects go to bed and the night ones wake, and for a moment nobody is working.
+I laughed once, at the Academy. It surprised everyone so much I've been careful ever since.
+
+## chat.clan  clan=aburame  fn=hook
+A rare beetle is hatching in the east garden this week, and the dogs next door won't stay out. I'd value a polite fence.
+
+# -- Hatake --------------------------------------------------------------------------------------------
+
+## chat.clan  clan=hatake  fn=worldbuild
+The house is mostly empty. The ninken come and go as they please; they've lived here longer than I have.
+Everyone in the village knows this lane. Very few knock on the door. I've stopped minding.
+The yard has kennels for six. Two of them are in use, and the other four still get fresh straw every week.
+There's a memorial stone I visit quietly. That's a custom in this family, and there's nothing more to it than that.
+The roof leaks over the old study. I've put a bucket there so long the bucket has a name.
+
+## chat.clan  clan=hatake  fn=reveal_character
+I'm the only one in the family who still lives here. Some evenings I set two cups out of habit.
+I read too much. When the house is this quiet, a book is the only voice that doesn't echo.
+The dogs decide who's worth greeting. They've been right about everyone so far, including me, which was humbling.
+I'm not good at visits. If I come to your door and stand there for a while, it means I'm trying.
+I keep the house the way it was. Not because I'm sad, mostly. It's easier than deciding what to change.
+The old ninken sleeps on the porch every afternoon in the same patch of sun. I think it's waiting for something. I don't ask.
+
+## chat.clan  clan=hatake  fn=hook
+The lane's landlord keeps asking whether the house is for sale. It isn't. I could use someone to say so more loudly than I do.
+
+# -- Kurama --------------------------------------------------------------------------------------------
+
+## chat.clan  clan=kurama  fn=worldbuild
+Our house is on the old artists' lane. Every room is half studio, and the screens are painted on both sides.
+A portrait is a promise in this family. You don't paint someone unless you mean to keep them in your life.
+A painted eye is never finished in public. We cover the easel when the last stroke goes on.
+The light in the north studio is the best in the village. We fight over it, politely, in turns.
+Our genjutsu and our painting grew from the same root. Nobody outside the family quite believes that until they see a screen move.
+The Yuhi have their grove and we have our studio. Two schools of illusion, and we compliment each other's work in the most cutting way possible.
+We hold an exhibition every autumn. Half the village comes for the art and half comes to see whether the paintings blink.
+
+## chat.clan  clan=kurama  fn=reveal_character
+I paint the same pear every morning before I'm allowed to paint anything else. Thirty years, and the pear is still the hardest subject.
+Ink gets under my nails and never comes out. I've accepted being permanently grey at the fingertips.
+I can't look at a wall without wanting to paint it. My landlord has asked me to stop asking.
+Some days I'm not sure whether I'm seeing what's there or what I'd rather paint. That's the family gift, and the family worry.
+
+## chat.clan  clan=kurama  fn=hook
+One of the smaller screens from the hall has gone missing. The house won't say much about it, but everyone is rather quiet today.
+
+# -- Shimura -------------------------------------------------------------------------------------------
+
+## chat.clan  clan=shimura  fn=worldbuild
+A sealed letter is never opened by its carrier. In this house that rule is older than the house itself.
+Silence is a courtesy here. If I don't speak, I'm not ignoring you. I'm being polite.
+The house is close to the Rock. The shadow of the faces reaches our roof by mid-afternoon.
+Shimura sit on the council and always have. We disagree with the Sarutobi on every point, and we keep the minutes of each disagreement.
+We eat at the same time every evening, in the same order, at the same table. Visitors find it severe. We find it restful.
+Our garden is gravel and three stones. Anything more would be decoration.
+
+## chat.clan  clan=shimura  fn=reveal_character
+I was taught to say exactly what I mean, once. Most people use three times the words for half the meaning.
+I have one indulgence: a sweet bean cake after a long council day. Don't tell anyone.
+People think our family is cold. We are not cold. We are simply not wasteful with warmth.
+I run the same route along the wall every morning before light. I've done it for twenty years, and I intend to do it for twenty more.
+I respect the Sarutobi, though I would never say so at council. Their hearth is warm. Their arguments are not good.
+
+## chat.clan  clan=shimura  fn=hook
+A council letter went astray between the Residence and our gate last week. It was found, still sealed. Someone wanted it found.
+
+# -- Yuhi ----------------------------------------------------------------------------------------------
+
+## chat.clan  clan=yuhi  fn=worldbuild
+Our house sits in a grove of old trees. We train among them, and the trees have long since learned not to believe their eyes.
+Grove viewing is in spring, when the roses climb the oldest trunks. Guests come for the flowers and stay for the tea.
+Tea in our grove may not be tea. Guests are told so before they drink. It's only polite.
+Roses, thorns and crimson. Every Yuhi house has the same three things on its gate.
+The Kurama paint their illusions; we grow ours. They say ours are untidy. We say theirs are flat.
+The oldest tree in the grove has a split down the middle. Children of the family sit in the split on their first clan day.
+The thorns on our hedge are left long on purpose. The gardeners wear thick gloves and grumble beautifully.
+
+## chat.clan  clan=yuhi  fn=reveal_character
+I prune roses at dawn because nobody can see me get pricked. I always get pricked.
+My grandmother could make a guest believe the teacup was empty for a whole afternoon. I'm still working on a minute.
+I like the grove best in the rain, when the illusions and the mist get mixed up and nobody can tell which is which.
+I've been told I have a cold stare. I've practised it in the mirror, so I'm glad it works.
+
+## chat.clan  clan=yuhi  fn=hook
+One of the old trees in the grove is losing its leaves out of season. The elders blame the Kurama's studio water. The Kurama blame the weather.
+
+# -- Gekko ---------------------------------------------------------------------------------------------
+
+## chat.clan  clan=gekko  fn=worldbuild
+Our dojo is by the training grounds, and the moon-viewing platform is on its roof. On a clear night you can see half the village from there.
+Kenjutsu duels are held under the full moon. The moon is the judge; the clan is only the audience.
+A blade in this family is named and never lent. Lend your sword and you might as well lend your hand.
+We're a quiet family. Most people only notice us when we come off the night shift, pale and polite.
+The Namiashi think they move like water. We move like moonlight. We've argued about which is faster for a hundred years.
+The dojo floor has a crescent worn into it where the first form ends. Every Gekko child has stood in that crescent.
+Moon viewing in autumn is our clan day. Rice dumplings on the platform, and the duels after.
+
+## chat.clan  clan=gekko  fn=reveal_character
+I sleep poorly. Most of my family do. We tell ourselves it's the moon, and that's a fine story.
+I practise the first kata three hundred times before breakfast. It's dull, which is the point.
+My blade is called Still Water. I named it at twelve, and I've regretted how serious that sounds ever since.
+I cough in the cold. I always have. A swordsman learns to make even a cough sound polite.
+
+## chat.clan  clan=gekko  fn=hook
+A named blade in the family was lent, against custom, and hasn't come back. Nobody will say who lent it. Everybody knows.
+
+
+# -- to a clanless orphan: curiosity, teasing and welcome ------------------------------------------------
+
+## chat.clan  clan=senju  clan_status=clanless  fn=worldbuild,deepen_bond
+No clan of your own? The founders started this village so that wouldn't matter. Come and have tea under the tree sometime.
+The tree in our hall shelters whoever sits under it, {player}. It has never once asked anybody for a family name.
+
+## chat.clan  clan=uzumaki  clan_status=clanless  fn=worldbuild,deepen_bond
+We know a little about being a family of few, {player}. You'll always be welcome to sit with us at the long table.
+A clanless child living alone in the blocks? Come to the memorial in spring and help us paint. We could use the noise.
+
+## chat.clan  clan=uchiha  clan_status=clanless  fn=worldbuild,reveal_character
+No crest at all? Hm. Then whatever you become, nobody will be able to say it was handed to you. I almost envy that.
+You stare at the fan on our gate like it might bite. It won't, {player}. Most of us only bite at the police station.
+
+## chat.clan  clan=hyuga  clan_status=clanless  fn=worldbuild,reveal_character
+You bowed at our gate like a startled crane. No clan to teach you, I suppose. Watch the gardener; a gardener's bow is the safest to copy.
+The elders asked who you were, and I said no one's. They found that very interesting. You may get invited to tea, which is terrifying.
+
+## chat.clan  clan=nara  clan_status=clanless  fn=worldbuild,deepen_bond
+No family telling you how to think? Lucky. Half my life is cousins explaining a strategy I already figured out.
+Clanless, living alone, and still turning up to the Academy every morning. That takes more effort than most Nara spend in a year.
+
+## chat.clan  clan=akimichi  clan_status=clanless  fn=worldbuild,deepen_bond
+You live alone in the blocks? Then who's feeding you? Never mind, I know the answer. Come to the kitchen hall on clan day.
+We set one more place than we need, remember. Most nights lately, I've been thinking of it as your place, {player}.
+
+## chat.clan  clan=yamanaka  clan_status=clanless  fn=worldbuild,deepen_bond
+No clan flower to call your own? Pick one. Go on, any flower in the shop. A person should have something that's theirs.
+The quiet ones without a family name often see the most. I'd wager you notice more of this street than you let on.
+
+## chat.clan  clan=inuzuka  clan_status=clanless  fn=worldbuild,deepen_bond
+No clan? No pack, then. That's no good. Come round the kennels; the pups don't care whose kid you are.
+The dogs keep sniffing round you, {player}. They do that with people who need a pack. Take the hint.
+
+## chat.clan  clan=sarutobi  clan_status=clanless  fn=worldbuild,deepen_bond
+The Will of Fire doesn't care who your family is. Every child of the Leaf carries it. That includes you, {player}.
+There's a seat by our hearth for anyone in the village, and especially for the ones who don't have a hearth of their own.
+
+## chat.clan  clan=aburame  clan_status=clanless  fn=worldbuild,reveal_character
+You have no clan's chakra pattern. The kikaichu found you very interesting for that reason. So do I, objectively speaking.
+A clanless student asks better questions about insects than our own children. I find that both encouraging and slightly embarrassing.
+
+## chat.clan  clan=hatake  clan_status=clanless  fn=reveal_character,deepen_bond
+An empty house and a flat on your own. We have that in common, more or less. Stop by if the quiet gets loud.
+The old ninken took a liking to you. They don't do that for clans; they do it for people.
+
+## chat.clan  clan=kurama  clan_status=clanless  fn=worldbuild,reveal_character
+A face with no family resemblance to anyone is a gift to a painter. You'd be a fascinating portrait, {player}.
+Clanless? Then nobody has told you what colours you're supposed to like. Lucky. Most of us were raised arguing about blue.
+
+## chat.clan  clan=shimura  clan_status=clanless  fn=worldbuild,reveal_character
+No clan behind you. Then your conduct will be your only name. Keep it clean.
+The clanless serve the village without asking what it owes their family. I respect that more than I say.
+
+## chat.clan  clan=yuhi  clan_status=clanless  fn=worldbuild,reveal_character
+No family grove to train in? The old trees don't check lineage. Come to the grove viewing in spring and see what they make of you.
+I was curious what a clanless orphan would make of our tea. You spotted it wasn't tea faster than my cousins do. Interesting.
+
+## chat.clan  clan=gekko  clan_status=clanless  fn=worldbuild,reveal_character
+You've no family blade to inherit, so the blade you carry one day will be named by you alone. That's a rare thing in this family's eyes.
+Clanless and up at dawn for practice? I passed you on my way home. A swordsman notices who keeps hours like that.

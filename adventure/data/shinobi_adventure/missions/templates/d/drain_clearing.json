@@ -1,0 +1,171 @@
+{
+ "format": 1,
+ "id": "mission.d.drain_clearing",
+ "kind": "mission",
+ "rank": "d",
+ "category": "clearing",
+ "status": "beta",
+ "title": "dlg:mission.d.drain_clearing.title",
+ "brief": "dlg:mission.d.drain_clearing.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.drain_clearing.brief",
+  "accept": "dlg:mission.d.drain_clearing.accept",
+  "decline": "dlg:mission.d.drain_clearing.decline",
+  "progress": "dlg:mission.d.drain_clearing.progress",
+  "success": "dlg:mission.d.drain_clearing.success",
+  "fail": "dlg:mission.d.drain_clearing.fail",
+  "report": "dlg:mission.d.drain_clearing.report"
+ },
+ "minutes": 8,
+ "party": "squad_or_solo",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "household": true
+   }
+  },
+  "drain": {
+   "pick": "anchor",
+   "tag": "street_drain"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "clear"
+  },
+  "clear": {
+   "objective": {
+    "type": "collect",
+    "target": "drain_muck",
+    "at": "slot:drain",
+    "count": 8
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "lost_ring"
+     },
+     "next": "ring"
+    },
+    {
+     "if": {
+      "twist": "frogs"
+     },
+     "next": "frogs"
+    }
+   ],
+   "next": "report"
+  },
+  "ring": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "return": null,
+     "keep": "kept_ring"
+    },
+    "dialogue": "dlg:mission.d.drain_clearing.choice.ring"
+   },
+   "branch": [
+    {
+     "if": {
+      "chose": [
+       "ring",
+       "return"
+      ]
+     },
+     "next": "owner"
+    }
+   ],
+   "next": "report"
+  },
+  "owner": {
+   "objective": {
+    "type": "deliver",
+    "item": "ring",
+    "to": "slot:client"
+   },
+   "next": "report"
+  },
+  "frogs": {
+   "objective": {
+    "type": "collect",
+    "target": "frog",
+    "at": "slot:drain",
+    "count": 5
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "lost_ring",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.drain_clearing.twist.lost_ring"
+  },
+  {
+   "id": "frogs",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.drain_clearing.twist.frogs"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  },
+  "kept_ring": {
+   "pay": 1.0,
+   "standing": 0,
+   "item": "ring",
+   "clean_record": false
+  }
+ },
+ "bonus": [
+  "fast",
+  "clean_record"
+ ],
+ "fast_hours": 2,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "street_drain"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.25
+ },
+ "tags": [
+  "village",
+  "clearing"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.clearing",
+ "_premise": "Clear a blocked drain before the street floods.",
+ "_twists": {
+  "lost_ring": "A ring glints in the muck; the client lost one last spring.",
+  "frogs": "The drain is a frog kingdom; move them to the river."
+ }
+}

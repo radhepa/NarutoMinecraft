@@ -1,0 +1,61 @@
+# Overheard talk between a parent and a grown or teenage child.
+#! tags: relation=parent_child
+
+## ambient.parent_child  fn=worldbuild
+A: Have you eaten?
+B: I ate at Ichiraku.
+A: That's not eating. That's slurping. Sit.
+
+A: Your sensei came by asking for you.
+B: Was I in trouble?
+A: Only for being late. Again.
+
+A: Take the umbrella.
+B: It's not going to rain.
+A: Take the umbrella.
+
+A: Help me carry the rice sacks in.
+B: I just got back from a mission!
+A: Then your arms are warmed up.
+
+A: You left your headband on the washing line.
+B: I was drying it!
+A: It was dry yesterday. It's been there three days.
+
+A: The neighbours say you've been training at the lake at dawn.
+B: Is that bad?
+A: It's wonderful. Just tell me next time, so I don't worry.
+
+## ambient.parent_child  fn=reveal_character
+A: You look more like your grandmother every year.
+B: Is that good?
+A: She was the bravest woman on this street. So yes.
+
+A: When you were small, you were afraid of the ninken.
+B: I'm still a little afraid of the ninken.
+A: Good. They're very big.
+
+A: I'm proud of you. I don't say it enough.
+B: You say it every time I leave the house.
+A: Then I'll say it when you come back, too.
+
+A: Did you want to be a shinobi, or did you just want to make me proud?
+B: Both. Is that allowed?
+A: That's how most of us started.
+
+## ambient.parent_child  fn=react
+A: You're home late.
+B: The mission ran over. I'm fine. Look, all ten fingers.
+
+A: You've grown out of that jacket.
+B: I like that jacket.
+A: Your elbows like it less. Let's go to the tailor.
+
+A: Is that a new cut?
+B: Training. It's nothing.
+A: Let me see. Sit down. Let me see.
+
+## ambient.parent_child  fn=filler
+A: Go to sleep.
+B: Five more minutes.
+A: You said that an hour ago.

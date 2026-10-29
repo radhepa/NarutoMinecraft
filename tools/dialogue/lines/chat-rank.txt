@@ -1,0 +1,275 @@
+# Small talk, part A: the life of each rank, as the speaker lives it. Academy-rank speakers are children (another file).
+
+## chat.rank  rank=civilian  fn=reveal_character
+Shop opened at seven, closed at six, and in between I sold forty bowls of rice. Not a single jutsu involved.
+I watch the squads leave through the gate every morning on my way to the stall. I always wonder which ones I'll see come back tired.
+People think civilians just sit about while the shinobi work. You try hauling fish crates at dawn.
+My stall is right by the Mission Desk road. I can tell how a mission went by how fast a squad walks home.
+I'm the third generation of my family to run this shop. None of us could mould chakra. All of us could make change.
+My son wants to join the Academy. I'm proud. I'm terrified. Mostly I'm buying him a lot of rice.
+I tried to throw a kunai once at the festival stall. Hit the stall owner's hat. They gave me a prize just to make me stop.
+My neighbour's a Jonin. Lovely person, never home. I water the plants and they bring me odd fruit from far places.
+I do the books for the hardware shop. Shinobi buy wire by the mile. I've stopped asking what for.
+The best thing about being a civilian? When the alarm bell rings, my job is to go home and lock the door. Simple.
+I launder Chunin vests for half the shinobi on this street. You'd never believe what ends up in those pockets.
+I've lived in the Leaf my whole life and never once climbed a wall without a ladder. I'm very proud of my ladder.
+When I was young I wanted to be a shinobi. Now I bake. Some mornings, shaping dough feels like a kind of jutsu.
+My daughter's a Genin now. She tells me nothing about her missions. I find out from the laundry.
+I sell sandals. Shinobi wear through three pairs a season. Bless them, they pay my rent.
+Some shinobi come in and pay with odd coins from far villages. I keep a jar of them. It's like having a little map.
+I sweep the street outside my shop and find shuriken in the gutter. I keep a box for them. Someone always comes back.
+Running a tea house means hearing everything and repeating nothing. That's the civilian's code, more or less.
+I don't have a headband, but I've got a good knife and the sharpest tongue on the market street.
+My husband's a carpenter. He fixes what the training grounds break. There's always a lot to fix.
+The farmers outside the wall are civilians too. They grow every grain of rice this village eats. Never forget that.
+I deliver letters. On a good day I can walk the whole village twice. Shinobi do it in ten minutes, over the roofs. Show-offs.
+Every time a squad brings a merchant back safe, the merchant comes to my inn. I hear the story twice: once scared, once brave.
+I don't understand half of what the shinobi say. "C-rank", "B-rank". I just know an A means they'll be gone a while.
+I had a ninja come in to buy flour, and they paid by walking up the wall to get the top sack. Very helpful.
+I can't make a clone, but I can make three dinners at once. I think that's a fair trade.
+I grow vegetables for the Akimichi kitchen. They say my carrots taste of sunshine. They're being polite. They're right.
+I'm a civilian born to shinobi parents. Couldn't mould a scrap of chakra. My mother said I'd have a longer life. She was right so far.
+I sit on the market council. Mostly we argue about where carts may stop. It's very important. To us.
+My fishing boat's older than most of the Jonin. Still floats. Still catches more than they do.
+My job is to keep the bath hot and the gossip cold. I'm good at the first one.
+
+## chat.rank  rank=civilian  fn=worldbuild
+Civilians run the Leaf's daily life: the shops, the farms, the baths. The shinobi protect it. That's the deal.
+Shinobi pay the same prices as everyone. No discount for a headband. Some of them still try.
+The market council is all civilians. Even the Hokage has to ask us before moving a stall.
+On festival nights the civilians run everything: the stalls, the music, the lanterns. The shinobi just eat.
+Civilian children can enrol in the Academy like anyone else. Most come out with nothing but good manners and strong legs.
+When a squad doesn't come home, the whole street knows within the hour. The shops close early. Nobody says why.
+Civilian families keep shrines for their shinobi neighbours too. We light a candle when they leave on a long mission.
+Most of the shops in the Leaf are civilian-run, even the weapon shop's front. The forge is the only shinobi-run part.
+The Leaf pays farmers in good times and bad. In return, the farms feed the village through any winter.
+Some civilian families have run the same shop since the founding. The noodle stalls have the longest memory of all.
+
+## chat.rank  rank=civilian  fn=teach
+If a shop's shutter is half down, the owner will still sell to you. All the way down means go home and come back at seven.
+Market Day is once a week. Farmers come in from outside the wall with the freshest produce. Prices drop by noon.
+If you want work without a headband, ask the shops. Ichiraku, the grocer, the flower shop and the forge all take part-timers.
+The pawn shop will take what you don't need for half its price. Don't expect more. They've heard every story.
+
+## chat.rank  rank=civilian  fn=hook
+A Genin squad was meant to deliver my flour this morning. They never came. I'd ask the Desk, but I can't leave the shop.
+My grandson's training sword snapped. Shinobi gear's beyond me. Maybe someone knows a smith who'd look at it.
+Somebody's chickens keep getting into my lettuce. I suspect a ninken's been chasing them out of their coop.
+My mother's shrine charm was lost at the last festival. Small red bag. She's convinced it's what keeps the roof up.
+A squad walked through my garden on a roof run and squashed half my melons. I'd like them to know.
+
+## chat.rank  rank=civilian  fn=filler
+Shop's open, bills are paid, no shinobi crashed through my roof. A good day.
+Busy, busy. Not as busy as the Mission Desk, thank goodness.
+
+## chat.rank  rank=genin  fn=reveal_character
+Weeded three gardens today. Three. My sensei says it builds character. My back says it builds blisters.
+We spent the morning chasing a lost cat. Third time this month. Same cat. I think it enjoys the attention.
+My squad almost finished a D-rank without arguing. Almost. We argued about the last bucket.
+I got my first proper mission pay today. Ninety ryo. I bought ramen for the whole squad. Now I have six ryo.
+My sensei made us carry logs up and down the training ground for two hours. I can't feel my arms. Worth it, apparently.
+Painting a fence is a D-rank. Who knew? We did the whole thing in an hour. Our sensei did a different one in five minutes.
+My teammate's always late. Every single morning. We started meeting fifteen minutes earlier, and they're still late.
+I tried to impress my sensei with a new jutsu. It fizzled. My sensei laughed and showed me where I was wrong.
+We escorted an old merchant to the farms and back. Long walk. The merchant told us the same joke four times.
+I fell in the river during a fishing D-rank. My squad laughed. I caught the biggest fish anyway. Ha.
+My sensei says teamwork matters more than talent. I'm talented and terrible at teamwork. I'm working on it.
+My squad has a code word for "the sensei's watching". We use it so much now it doesn't mean anything.
+I wear my headband to bed sometimes. Don't tell anyone. I'm still not used to having one.
+The Mission Desk gave us a babysitting job. Three toddlers. Hardest mission of my life. I'm not joking.
+I've been practising tree walking. I can get halfway up now before I slip. Yesterday it was a third.
+My squad got our first C-rank and the whole thing was carrying boxes. Still. A C! I'm putting it on my wall.
+Some days I feel like a real shinobi. Today I picked up rubbish by the river for four hours. Not one of those days.
+We trained until sunset. My sensei bought us dango. I think that's the reward system. I'm learning.
+My teammates and I have a bet on who'll make Chunin first. The loser buys ramen for a month.
+I learned to tell how heavy a crate is by looking. That's from D-ranks, not training. Very useful skill, honestly.
+I spent all morning trying to catch a bird that escaped from the tea house. It sat on my head when I gave up.
+Got a scolding from my sensei for showing off a trick during a mission. Fair. I still think it was a good trick.
+I helped rebuild a farmer's fence. The farmer gave us a sack of potatoes. Best pay I've had.
+I can throw four shuriken at once now. Two hit. One got stuck in a tree. One's missing. We're looking.
+My parents still treat me like a child even with the headband. I'm a shinobi! Who also has to be home by dinner.
+My sensei can tell when I've skipped warm-ups just by watching me walk. It's very annoying.
+Our squad's first mission outside the wall was a delivery to the waystation. I've never been so far. Didn't see a single bandit.
+I thought Genin life would be all battles. It's mostly gardens, cats and helping people move furniture.
+My squad finally learned to read each other's hand signals. Took months. Now we can be rude to each other silently.
+We had a squad sleepover at our sensei's after a late mission. Our sensei snores. Loudly. Like a bear.
+My teammate's mother makes the best rice balls. We always take that teammate's lunch. Team effort.
+I'm saving for a better kunai pouch. Eight more D-ranks. Maybe nine if I buy dango.
+I asked my sensei why we do D-ranks. The answer: "So the village knows your face before it needs your fists."
+
+## chat.rank  rank=genin  fn=worldbuild
+Every Genin squad is three students and a Jonin sensei. You do everything together. Everything.
+D-ranks are the village's chores: weeding, deliveries, lost pets, fence painting. The Leaf runs on them.
+Genin get their missions from the Mission Desk on the Residence's ground floor. You line up with your squad.
+The Chunin Exams happen in spring and autumn. Squads enter together or not at all.
+A sensei can refuse to put a squad forward for the exams. Mine says we'll go when we're ready. I'm ready now!
+The headband's metal plate is pressed with the Leaf's symbol at the smithy. They're all the same. Feels special anyway.
+There's an unspoken rule that the newest Genin squad gets the muddiest D-rank. It's a kind of welcome.
+Genin squads keep a log of every mission. Ours has eighty-three entries. Fifty are about weeds.
+Senseis can train their students at any ground they like. Ground 3 is the most popular. The stumps are famous.
+
+## chat.rank  rank=genin  fn=teach
+The Mission Desk is open from eight till six. Come early. The good D-ranks go first.
+Training before a mission helps, but not too much. Exhausted Genin make mistakes.
+A D-rank pays sixty to a hundred and fifty ryo. Enough to eat well and save a little.
+If a mission's going badly, you go back and report. Pride doesn't count as a reason to keep going.
+
+## chat.rank  rank=genin  fn=hook
+We were supposed to find a client's lost ring at the farms. We didn't. It's still out there somewhere.
+I left my training weights at Ground 3. They're heavy, so probably nobody took them. Probably.
+My squad's been asked to paint the Academy fence, but we're one short this week. If you know a pair of hands...
+
+## chat.rank  rank=genin  fn=filler
+Long day. Good day. I'm a Genin. Every day's both.
+Missions done, sensei satisfied, ramen next. Life's good.
+
+## chat.rank  rank=chunin  fn=reveal_character
+Desk duty all morning. I stamped two hundred mission forms. My hand has become a stamp.
+I lead my first squad of Genin next week. I'm more nervous than I was in my own exams.
+I spent the day teaching a squad how to set a camp. One of them set their tent on fire. Learning.
+I took the Chunin Exams twice before passing. I tell every Genin that. It helps more than any advice.
+The vest is warm in winter and terrible in summer. Fourteen pockets and I still can't find my keys.
+I'm on the Mission Desk rotation this month. You learn a lot about a village from what it asks for help with.
+I escorted a merchant caravan to the border village and back. Six days, no trouble. That's the best kind.
+I proctored a written exam at the Academy. Saw two cheating attempts and one very creative sandwich.
+Some days I'm a leader, some days I'm a clerk. Today I was both before lunch.
+I make the Genin squads I lead do warm-ups whether they like it or not. They do not like it.
+I got my first B-rank. I'm not allowed to talk about it. I'm allowed to say I'm very tired.
+My younger brother's a Genin now. He's on a squad I trained with once. It's strange watching from the other side.
+Sometimes I miss D-ranks. You weed a garden, the garden's weeded. Simple. Leading a squad is never that simple.
+I filled in for a sick Jonin sensei for a week. The squad asked when their sensei was coming back. Every hour.
+I keep a little book of every mistake I've made on a mission. It's thick. I read it before every new one.
+I spent the night on wall watch. The stars are beautiful from the top. The cold isn't.
+I was given a squad of three loud Genin. I have learned to speak in a whisper so they have to stop and listen.
+I was sent to teach a class at the Academy on wire traps. The children wanted to know if I'd ever fought a bear.
+The hardest part of being a Chunin is deciding. On a mission, someone has to choose, and now that's me.
+I wrote my first report as a squad leader. Eight pages. My Jonin said it should have been two.
+I spent a week guarding a farm against wild boars. They came on the last night. I'll be telling that story for years.
+I passed the exams last autumn. My parents still introduce me as "the Chunin". It's lovely. And a bit embarrassing.
+My Jonin sensei still checks on me after every mission. I'm a Chunin! It's nice, though.
+I train new Genin in chakra control twice a week. They're bad at it. I was worse.
+I ran messages for the Hokage's office all day. Up and down the Residence stairs. I've decided stairs are a jutsu.
+I'm saving for my own apartment. Shinobi pay's good when you get C-ranks, but rent on the main street is steep.
+I volunteered to help with the next Chunin Exams. Watching from the other side is harder than taking them.
+
+## chat.rank  rank=chunin  fn=worldbuild
+Chunin lead squads, staff the Mission Desk, teach at the Academy and watch the wall. Most of the village's work is ours.
+The Chunin vest has scroll pockets on the chest. Old shinobi say that's where your life's work goes.
+A Chunin can be promoted to Jonin by the Hokage. There's no exam for that, just years and a good record.
+The Chunin Exams are held in spring and autumn. Squads from other villages come, and the whole Leaf turns out to watch the finals.
+Chunin on wall duty take four-hour watches. You learn to love tea and hate wind.
+Every Chunin in the Leaf takes a shift at the Mission Desk sooner or later. It's how you learn what the village needs.
+
+## chat.rank  rank=chunin  fn=teach
+The Mission Desk opens at eight and closes at six. Bring your squad and your report. In that order.
+C-rank missions pay three to six hundred ryo, but they go beyond the wall. Prepare properly.
+If a squad comes in hurt, they go straight to the hospital. The report can wait. That's a rule.
+
+## chat.rank  rank=chunin  fn=hook
+A Genin squad's been bringing back the same lost cat every week. I think someone's letting it out on purpose. For the pay.
+A crate of mission scrolls went missing between the Desk and the archive. Probably misfiled. Probably.
+The training post at Ground 3 has a crack straight through it. Someone ought to tell the builders before a Genin gets a splinter.
+
+## chat.rank  rank=chunin  fn=filler
+Busy. Forms, squads, more forms. You get used to it.
+
+## chat.rank  rank=jonin  fn=reveal_character
+I came back from a month-long mission yesterday. My house plants are dead. My neighbour fed my cat. Priorities.
+I'm a sensei now. My three Genin argue like a family of crows. I'm growing fond of them, which is terrifying.
+I'm home for a week, then gone again. I try to eat at my favourite stall every day I'm here.
+My students passed the Chunin Exams. All three. I cried in the stands. Don't tell them.
+I've been a Jonin for ten years. The missions get harder. The quiet days get sweeter.
+I spent the morning teaching my students to walk on water. Two did it. One swam. Honestly, the swimmer had the best form.
+I write my students' parents a note after every mission. One parent sends back cake. That's my favourite student. Don't tell.
+I sleep twelve hours when I get home. Then I eat everything in the house. Then I sleep again.
+I carry a photo of my squad from when I was a Genin. Most of them are Jonin too. We still meet for ramen when we can.
+Long missions make you miss the small things. The smell of the tea house. My own pillow. The noise of the market.
+I'm teaching my squad to read terrain. They'd rather learn fireballs. Terrain keeps you alive. Fireballs don't, always.
+I spent today asleep under a tree at Ground 3 while my students trained. Officially, I was "observing".
+My sensei is retired now. Grows cabbages by the river. I go and help. Still learning things from that old teacher.
+I keep a diary of where I've been. Seven countries. Two oceans. One very bad inn I'll never forget.
+After a long mission, the first thing I do is walk the whole village. Just to see it's all still here.
+I was supposed to rest today. My students found me. Now I'm training them. That's a Jonin's rest day.
+Being a sensei is half teaching, half making sure they've eaten. I buy a lot of dango.
+My spouse is a medic at the hospital. We see each other between shifts and missions. It works. Somehow.
+I have a rule: on my first night home, I don't talk about the mission. Just food, friends, and bed.
+I taught my students to set a trap. They caught me in it. I've never been prouder or more annoyed.
+I've had my flak vest for nine years. It's been patched so many times it's mostly patch.
+I've been offered a desk job at the Residence. I said no. Not yet. My students need me in the field.
+
+## chat.rank  rank=jonin  fn=worldbuild
+Jonin take on the hardest missions, lead the best squads, and teach the newest Genin. Some do all three in a week.
+A Jonin sensei chooses whether a new squad passes their first test. Many don't. They go back to the Academy.
+Jonin meet in a hall at the Residence before big missions. Quiet room. Very good tea.
+Some Jonin specialise: medics, trackers, sealing experts. The Leaf needs every kind.
+A Jonin's flak vest is the same as a Chunin's. What changes is how long you've worn it.
+
+## chat.rank  rank=jonin  fn=teach
+Read a mission scroll's client line twice. The rank tells you the danger. The client tells you the trouble.
+Pack light, pack smart. A kunai, a wire, a bandage, a ration. Everything else is weight.
+A good shinobi eats well before a mission. Ichiraku's ramen restores a little chakra. Don't scoff at it.
+
+## chat.rank  rank=jonin  fn=hook
+My Genin left their training notes in a tree at Ground 3. All three of them. Separately. I'm not climbing three trees.
+I promised my students a picnic if they passed their drill. They passed. I don't have a picnic basket.
+
+## chat.rank  rank=jonin  fn=filler
+Home. Fed. Not on a mission. That's a good day.
+
+## chat.rank  rank=anbu  fn=reveal_character
+My day? Quiet. Let's leave it there.
+I'm off duty. That's all you need to know, and most of what I can say.
+I like the tea house. The corner table. People don't look twice. That's important to me.
+I slept until noon. Some days that's the whole report.
+I water my plants. They don't ask where I've been.
+Today I bought vegetables like anyone else. I enjoyed it more than you'd think.
+
+## chat.rank  rank=anbu  fn=worldbuild
+The Leaf has people who keep it safe in the dark. You won't see them. That's the point.
+There are masks that guard this village. If you see one, you didn't. Understand?
+
+## chat.rank  rank=anbu  fn=filler
+Fine. Thank you for asking. Really.
+Good enough. Keep walking.
+
+## chat.rank  rank=civilian  fn=reveal_character
+I mend the nets for the fisherfolk. My fingers are quicker than any jutsu I've seen, and I've seen a few from my porch.
+I run the bathhouse boiler. Shinobi come in after missions grey with dust and leave pink and grateful. Best part of the job.
+When the squads come home at dusk, I put the kettle on. My shop's the first one past the gate. They know the smell.
+I sell paper for seals and letters. I can't read a single seal, but I know which paper the Uzumaki like. Thick, cream, no dye.
+My cousin's a Chunin. At family dinners everyone asks about missions. Nobody asks about my cabbages. My cabbages are excellent.
+I spent today fixing the shrine roof with the carpenters. No chakra, just ladders, rope and a lot of shouting.
+I keep the inn by the east road. Squads stop for one cup on the way out and three on the way back.
+I watched the Genin squads racing across the rooftops this morning. My tiles were not consulted.
+
+## chat.rank  rank=genin  fn=reveal_character
+I spent the whole D-rank carrying bags for a lady moving house. The piano nearly beat all three of us.
+Our sensei has a bell test every month. We've never taken the bell. One day. One day soon.
+I wrapped my hands for training and wore the wraps to dinner without noticing. My mother noticed.
+I took a mission alone for the first time. Delivering a letter across the village. I ran the whole way like it was an S-rank.
+My squad got praised by the client today. The client said we were "quite tidy". Highest compliment of my career.
+We had to clean the Academy's storage room. Found my old practice targets. My aim was awful. It's less awful now.
+My sensei made us meditate by the river for an hour. One of us fell asleep. Two of us fell in. I was the sleeper.
+I spent today learning to read a map properly. Turns out I've been holding it upside down for weeks.
+The squad I'm on has a cat now. It followed us home from a lost-pet mission. The client didn't want it back.
+
+## chat.rank  rank=chunin  fn=reveal_character
+I spent the morning sorting D-ranks into piles: easy, muddy, impossible. The impossible pile is mostly cats.
+I gave a squad of Genin their first C-rank briefing. Their faces lit up like festival lanterns. I remember that feeling.
+My first squad of Genin bought me a cake on my birthday. It said "Thank you, scary". I keep the card.
+I took a quiet wall shift at dawn. Watched the farms wake up beyond the gate. Smoke, roosters, mist. Lovely.
+The hardest part of desk duty is telling a Genin squad there are no missions left. Their faces. Every time.
+I've started cooking for myself instead of eating at stalls. My first stew was a disaster. My second was fine.
+I lent my vest to a Genin who was shivering on wall watch. Got it back with a kunai hole and an apology.
+I run the evening sparring sessions at Ground 2. Most nights it's a mess. Sometimes, something clicks for someone.
+I spent all morning writing up a mission that took twenty minutes. Paperwork's the real enemy of the Leaf.
+I'm learning medical jutsu in my spare time. Can heal a paper cut now. Very slowly. With great concentration.
+
+## chat.rank  rank=jonin  fn=reveal_character
+I came home to find my students had cleaned my house as a surprise. I can't find anything. I'm very touched.
+I've been teaching for so long that my first students now have students. I feel old. I'm buying them all dinner anyway.
+My students asked me what I was like as a Genin. I told the truth. Now they think I'm human. I preferred the mystery.
+I spent my day off at the Academy, talking to the graduating class. Most asked about missions. One asked about my lunch.
+On the long missions, I count the days by meals. Forty-two rations, then a bowl of Ichiraku at the end of it.
+I keep a photo of every squad I've taught on the day they got their headbands. Every squad's grinning like they've won the world.
+A good mission is one where nothing happens. The best one this year was nine days of nothing. I slept like a baby after.

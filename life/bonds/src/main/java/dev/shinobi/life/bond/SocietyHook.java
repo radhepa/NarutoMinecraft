@@ -15,16 +15,20 @@ public record SocietyHook(String id, String type, Map<String, String> roles, Str
         List<Map<String, Object>> requires, Map<String, Object> stakes) {
     public static final int FORMAT = 1;
     /** The hook types and the outcomes a quest can resolve each with. */
-    public static final Map<String, List<String>> OUTCOMES = Map.of(
-            "clan_feud", List.of("mediated", "sided_a", "sided_b"),
-            "favor_needed", List.of("done", "refused"),
-            "quarrel_to_mediate", List.of("mediated", "failed"),
-            "secret_crush", List.of("helped", "kept_quiet", "told"),
-            "lost_item", List.of("returned", "kept"),
-            "newcomer", List.of("befriended", "ignored"),
-            "elder_request", List.of("done", "refused"),
-            "rivalry_heating", List.of("cooled", "fanned"),
-            "forbidden_match", List.of("supported", "discouraged"));
+    public static final Map<String, List<String>> OUTCOMES = Map.ofEntries(
+            Map.entry("clan_feud", List.of("mediated", "sided_a", "sided_b")),
+            Map.entry("favor_needed", List.of("done", "refused")),
+            Map.entry("quarrel_to_mediate", List.of("mediated", "failed")),
+            Map.entry("secret_crush", List.of("helped", "kept_quiet", "told")),
+            Map.entry("lost_item", List.of("returned", "kept")),
+            Map.entry("newcomer", List.of("befriended", "ignored")),
+            Map.entry("elder_request", List.of("done", "refused")),
+            Map.entry("rivalry_heating", List.of("cooled", "fanned")),
+            Map.entry("forbidden_match", List.of("supported", "discouraged")),
+            Map.entry("estrangement", List.of("reconciled", "failed")));
+    /** The kinds of favor a {@code favor_needed} hook can ask for ({@code stakes.variant}), picked from the client's life. */
+    public static final List<String> FAVOR_VARIANTS = List.of("neighbor", "elder_errand", "lost_pet", "escort", "sick_relative", "shop_trouble",
+            "apprentice", "festival_help");
 
     public SocietyHook {
         roles = Map.copyOf(roles); requires = List.copyOf(requires); stakes = Map.copyOf(stakes);

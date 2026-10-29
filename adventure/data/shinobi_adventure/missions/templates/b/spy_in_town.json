@@ -1,0 +1,189 @@
+{
+ "format": 1,
+ "id": "mission.b.spy_in_town",
+ "kind": "mission",
+ "rank": "b",
+ "category": "investigation",
+ "status": "later",
+ "title": "dlg:mission.b.spy_in_town.title",
+ "brief": "dlg:mission.b.spy_in_town.brief",
+ "dialogue": {
+  "brief": "dlg:mission.b.spy_in_town.brief",
+  "accept": "dlg:mission.b.spy_in_town.accept",
+  "decline": "dlg:mission.b.spy_in_town.decline",
+  "progress": "dlg:mission.b.spy_in_town.progress",
+  "success": "dlg:mission.b.spy_in_town.success",
+  "fail": "dlg:mission.b.spy_in_town.fail",
+  "report": "dlg:mission.b.spy_in_town.report"
+ },
+ "minutes": 40,
+ "party": "squad",
+ "days": 2,
+ "unlock": {
+  "rank_at_least": "chunin"
+ },
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "job": "magistrate",
+    "resident_of": "any"
+   }
+  },
+  "town": {
+   "pick": "anchor",
+   "tag": "town.square"
+  },
+  "a": {
+   "pick": "resident",
+   "where": {
+    "resident_of": "any"
+   }
+  },
+  "b": {
+   "pick": "resident",
+   "where": {
+    "resident_of": "any"
+   }
+  },
+  "c": {
+   "pick": "resident",
+   "where": {
+    "resident_of": "any"
+   }
+  },
+  "dead_drop": {
+   "pick": "anchor",
+   "tag": "town.shrine"
+  }
+ },
+ "start": "travel",
+ "steps": {
+  "travel": {
+   "objective": {
+    "type": "go",
+    "place": "place:gate.travel_desk"
+   },
+   "next": "talk_a"
+  },
+  "talk_a": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:a"
+   },
+   "next": "talk_b"
+  },
+  "talk_b": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:b"
+   },
+   "next": "talk_c"
+  },
+  "talk_c": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:c"
+   },
+   "next": "drop"
+  },
+  "drop": {
+   "objective": {
+    "type": "wait_until",
+    "time": "02:00",
+    "at": "slot:dead_drop"
+   },
+   "next": "accuse"
+  },
+  "accuse": {
+   "objective": {
+    "type": "choose",
+    "options": {
+     "a": null,
+     "b": null,
+     "c": null
+    },
+    "dialogue": "dlg:mission.b.spy_in_town.choice.accuse"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "spy_a",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.b.spy_in_town.twist.spy_a"
+  },
+  {
+   "id": "spy_b",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.b.spy_in_town.twist.spy_b"
+  },
+  {
+   "id": "spy_c",
+   "weight": 1,
+   "harder": false,
+   "modifier": true,
+   "premise": "dlg:mission.b.spy_in_town.twist.spy_c"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "unseen",
+  "kind_choice"
+ ],
+ "fail": {
+  "on_death": true,
+  "timeout_days": 3
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "gate.travel_desk",
+   "town.shrine",
+   "town.square"
+  ],
+  "regions": [
+   "region:post_town"
+  ]
+ },
+ "pay": {
+  "band": "b",
+  "xp_band": "b",
+  "weight": 0.55
+ },
+ "tags": [
+  "travel",
+  "investigation",
+  "talk"
+ ],
+ "contested": false,
+ "trail_drop": {
+  "chance": 0.25,
+  "pool": "journal:trail.roads"
+ },
+ "classic": true,
+ "banter": "dlg:mission.banter.investigation",
+ "_premise": "Find the spy who sells the post town's caravan schedules to raiders.",
+ "_twists": {
+  "spy_a": "The rolled spy is the first suspect.",
+  "spy_b": "The rolled spy is the second.",
+  "spy_c": "The rolled spy is the third."
+ }
+}

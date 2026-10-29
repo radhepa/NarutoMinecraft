@@ -1,0 +1,421 @@
+# More conversation topics, part B (LIFE_TOGETHER.md §6): their family, your story, teasing, their values, advice,
+# their dream, their worries. A second line per personality, more general lines (all ages, then grown-ups
+# only), and kids' own lines. Your story stays awkward for the reserved; teasing stings the proud, shy and stern.
+
+# == their family ==================================================================================
+## talk.their_family  fn=reveal_character
+We have a rule at home: whoever gets back last makes the tea. I'm always last.
+There's a crack in our kitchen wall where everyone's height is marked. I'm catching up.
+My family's always late to everything. We call it being on family time.
+We've got an old dog who thinks it's the head of the house. It might be right.
+Every New Year we all squeeze into one room and tell the year's worst story. Mine usually wins.
+My grandmother's the boss of our house. Nobody voted. It just happened.
+We don't have much, but there's always enough for one more at the table.
+My cousins live next door. The fence between our houses has a gap we all pretend isn't there.
+We're not a loud family. We talk with looks mostly. You'd understand if you met us.
+Somebody in my house snores like a saw. Nobody will admit who.
+Our house smells of woodsmoke and miso. I'd know it anywhere.
+## talk.their_family  stage=teen|adult  fn=reveal_character
+My parents are getting older. I visit every evening now, even if it's only for a cup of tea.
+I've been the one holding the house together since I was young. I don't mind. Most days.
+My spouse puts up with me. That's the best thing I can say about a marriage, and I mean it kindly.
+The children are growing faster than I can sew new sleeves.
+
+## talk.their_family.warmhearted  fn=reveal_character
+Every birthday in our family, everyone cooks one dish. The table bends in the middle.
+## talk.their_family.thoughtful  fn=reveal_character
+My grandfather kept a diary every day of his life. We read a page aloud on his birthday.
+## talk.their_family.playful  fn=reveal_character
+My family plays a prank war that's been going on for six years. I'm currently losing.
+## talk.their_family.adventurous  fn=reveal_character
+I've an aunt who travels with the merchant caravans. She brings back the best stories.
+## talk.their_family.meticulous  fn=reveal_character
+I sorted our family's shoes by size at the door. Nobody's thanked me. I'll keep doing it.
+## talk.their_family.steadfast  fn=reveal_character
+My family's always there when it matters. Same as I try to be.
+## talk.their_family.reserved  fn=reveal_character
+We're close. We don't say it.
+## talk.their_family.imaginative  fn=reveal_character
+My little brother thinks our house is a castle. I've started drawing him the towers.
+## talk.their_family.pragmatic  fn=reveal_character
+My family keeps a jar for rainy days. When it rained hard one year, the jar saved us.
+## talk.their_family.curious  fn=reveal_character
+My uncle won't tell anyone how he lost his eyebrow. I'll find out. One day.
+## talk.their_family.protective  fn=reveal_character
+I walk my little cousins to the Academy every morning. They pretend they don't need me to.
+## talk.their_family.gentle  fn=reveal_character
+My grandmother taught me the names of all the flowers by the shrine. I teach them to the little ones now.
+## talk.their_family.proud  fn=reveal_character
+Our family crest is stitched inside every one of our jackets. I touch it before anything difficult.
+## talk.their_family.fiery  fn=reveal_character
+My family arm-wrestles to decide who does the dishes! I've never lost! Well, once!
+## talk.their_family.shy  fn=reveal_character
+My big sister always speaks up for me. I'm trying to learn how to do it myself.
+## talk.their_family.stern  fn=reveal_character
+My mother never praised me. Then I found every report card I ever had, kept in a box. She kept all of them.
+
+## talk.their_family  stage=child  fn=reveal_character
+My little sister copies everything I do. It's annoying. And a bit nice.
+My dad snores so loud the cat leaves the room.
+We've got a new baby at home and nobody sleeps. Not even the baby.
+My grandpa can do a magic trick with a coin. He won't tell me how.
+My mum makes me wear a scarf even when it's not cold. Every day.
+I've got three big brothers. I always get the smallest piece of everything.
+
+# == your story ====================================================================================
+## talk.your_story  fn=deepen_bond
+Thank you for telling me that. I'll think about it a lot, I think.
+You can tell me anything, {player}. I mean it. Anything at all.
+That's not a small thing to say out loud. I'm glad you said it to me.
+I didn't know. I'm sorry. I'm here, all right?
+You're braver than you let on. Did you know that?
+I'll keep that safe. You've got my word.
+Thank you. I understand you a little better now.
+You don't have to be fine all the time. Not with me.
+That explains a lot. In a good way. You make more sense to me now.
+Come and find me whenever you want to talk about it. Even at night.
+I'm really glad you told me. I was hoping you would.
+## talk.your_story  stage=teen|adult  fn=deepen_bond
+I've lived long enough to know some things don't get lighter. They get easier to carry, with company.
+I'm older than you, {player}, and I still don't know what to say. Except that I'm listening.
+You've done a lot of growing up on your own. You don't have to do the rest of it alone.
+If anyone gives you trouble over any of that, you send them to me.
+
+## talk.your_story.warmhearted  fn=deepen_bond
+Oh, my dear friend. Come and sit by me. You don't have to finish if you don't want to.
+## talk.your_story.thoughtful  fn=deepen_bond
+Can I ask one question about it? Just one. Then I'll only listen.
+## talk.your_story.playful  fn=deepen_bond
+I'm not going to joke. I'm going to sit here and be quiet for once. You can tell people I managed it.
+## talk.your_story.adventurous  fn=deepen_bond
+You've come a long way, even if you never left the village. That counts as a journey.
+## talk.your_story.meticulous  fn=deepen_bond
+Thank you for telling me in order. I know that wasn't easy. I followed every bit of it.
+## talk.your_story.steadfast  fn=deepen_bond
+I'll be here tomorrow, and the day after. That's what I can give you. It's yours.
+## talk.your_story.reserved  fn=react
+...I'm not the right person for this. I'm sorry. I just don't know how.
+## talk.your_story.imaginative  fn=deepen_bond
+If I painted what you just told me, it would be dark at the edges and bright in the middle. The middle's you.
+## talk.your_story.pragmatic  fn=deepen_bond
+Right. What do you need? Not feelings. Things. Tell me, and I'll help with those.
+## talk.your_story.curious  fn=deepen_bond
+I won't ask any more questions. That's how much this matters. Thank you.
+## talk.your_story.protective  fn=deepen_bond
+Whatever happened, it's behind you now, and I'm beside you. That's the order of things.
+## talk.your_story.gentle  fn=deepen_bond
+Thank you. Here, hold this warm cup. Sometimes hands need something to do.
+## talk.your_story.proud  fn=deepen_bond
+That's part of who you are, and who you are is someone I respect. Don't forget it.
+## talk.your_story.fiery  fn=deepen_bond
+I'm so glad you're you, {player}! Everything you went through, and you're still you!
+## talk.your_story.shy  fn=deepen_bond
+I... I've never told anyone my story. Maybe, one day, I'll tell you mine.
+## talk.your_story.stern  fn=deepen_bond
+Then you've already survived the hardest training there is. Good. Now we build on it.
+
+## talk.your_story  stage=child  fn=deepen_bond
+Thanks for telling me. I won't tell anyone. Not even my mum.
+That's really sad. Do you want half my rice ball? It helps a bit.
+You can be in my family if you want. We've got lots of room. Well, some room.
+I didn't know that. You're really brave, you know.
+Pinky promise I'll keep it secret. Pinky promises can't be broken.
+I'm glad you're my friend. That's all. I'm just glad.
+
+# == teasing =======================================================================================
+## talk.tease  fn=deepen_bond
+Oh, you think you're so funny. ...You are, a little.
+Ha! Just you wait. I know where you live.
+That's it. You're getting a snowball down the back of the neck next winter.
+My ears have stopped working. Very convenient timing.
+How dare you. ...How dare you be right.
+Fine. Fine! I'm writing that one down for revenge.
+Rude. Accurate, but rude.
+You've been saving that one up, haven't you?
+I'm going to laugh. I'm not going to give you the satisfaction. ...I'm laughing.
+Wow. I let you into my life, and this is what I get.
+## talk.tease  stage=teen|adult  fn=deepen_bond
+Cheek, from someone half my age. I'll allow it. This once.
+Careful. I've been teased by better than you, and I outlasted all of them.
+Ha! My spouse says the same thing. You two should never meet.
+Well, at least someone in this village has the nerve to say it.
+You'd make a fine market haggler with a tongue like that.
+
+## talk.tease.warmhearted  fn=deepen_bond
+Ooh, you little rascal! Come here so I can pinch your cheeks for that.
+## talk.tease.thoughtful  fn=deepen_bond
+I'm composing a reply. It will be devastating. Give me until next week.
+## talk.tease.playful  fn=deepen_bond
+Oh, that's a declaration of war. I accept. Watch your sandals, {player}.
+## talk.tease.adventurous  fn=deepen_bond
+Big words! Say them again halfway up a cliff, and we'll see who's laughing.
+## talk.tease.meticulous  fn=deepen_bond
+I'll have you know my sleeves are folded to exactly the same length. It's not strange. It's correct.
+## talk.tease.steadfast  fn=deepen_bond
+Ha. Yes, I'm predictable. You always know where to find me. There are worse things.
+## talk.tease.reserved  fn=deepen_bond
+...Hm. Funny.
+## talk.tease.imaginative  fn=deepen_bond
+In my next story, there's going to be a character who looks just like you. And they fall in a pond.
+## talk.tease.pragmatic  fn=deepen_bond
+Funny. Now tease me while you carry these boxes. Two birds, one stone.
+## talk.tease.curious  fn=deepen_bond
+Do I really ask that many questions? Do I? ...Wait. Oh no.
+## talk.tease.protective  fn=deepen_bond
+Tease all you like. I'll still pick you up when you trip.
+## talk.tease.gentle  fn=deepen_bond
+Oh, you. That's not very kind. ...It is very funny though.
+## talk.tease.proud  fn=react
+I don't find that amusing. Perhaps you'll find something else to say.
+## talk.tease.fiery  fn=deepen_bond
+Oh, you want to go?! Rematch! Words or fists, you pick!
+## talk.tease.shy  fn=react
+I... I know. You don't have to say it. Everyone already does.
+## talk.tease.stern  fn=react
+Is that the sort of thing you say to people who are trying to help you?
+
+## talk.tease  stage=child  fn=deepen_bond
+Hey! That's not true! ...Okay, it's a bit true.
+You're the one with mud on your face, actually. Ha!
+I'm telling! ...No I'm not. But I could.
+Take it back or I'll tickle you. I mean it!
+That's so mean! Do another one.
+You're just jealous. Of what? I'll think of something.
+
+# == their values ==================================================================================
+## talk.their_values  fn=reveal_character
+Say sorry when you're wrong. Even when it's embarrassing. Especially then.
+Share what you have. Even if it's only half a rice ball.
+Never laugh at someone for trying.
+Help when you can. Ask for help when you can't.
+Be the same person on your own as you are in a crowd.
+Look after the small things, and the big things look after themselves.
+If someone's alone, go and stand next to them. You don't even have to talk.
+A promise is a promise. Even a small one.
+Be brave when it's quiet, not just when people are watching.
+Always thank the cook.
+## talk.their_values  stage=teen|adult  fn=reveal_character
+Pay what you owe and owe as little as you can. My father taught me that. It's served me well.
+Work hard, rest properly, and don't confuse the two.
+Raise children who can say no to you. That's the hardest one.
+Never take a job you'd be ashamed to explain to your neighbours.
+Leave the village better for the ones who come after. That's all any of us can do.
+
+## talk.their_values.warmhearted  fn=reveal_character
+Nobody should go to bed hungry, or sad, or alone. If I can stop one of those, I will.
+## talk.their_values.thoughtful  fn=reveal_character
+If I don't know something, I say so. Pretending is how mistakes grow.
+## talk.their_values.playful  fn=reveal_character
+Don't let anyone make you smaller to fit their box. And be nice to everyone anyway.
+## talk.their_values.adventurous  fn=reveal_character
+Go and see for yourself. Don't let someone else tell you what's over the hill.
+## talk.their_values.meticulous  fn=reveal_character
+Finish what you start. Half-done work is worse than no work. It misleads people.
+## talk.their_values.steadfast  fn=reveal_character
+If I said I'd be there, I'm there. Rain, snow, whatever. That's who I am.
+## talk.their_values.reserved  fn=reveal_character
+Mind your own business. Tell the truth when it's asked.
+## talk.their_values.imaginative  fn=reveal_character
+Everyone should make something, once, just because they wanted it to exist.
+## talk.their_values.pragmatic  fn=reveal_character
+Say what you mean. Do what you said. Saves everyone a lot of time.
+## talk.their_values.curious  fn=reveal_character
+Never believe something just because everybody says it. Ask why. Then ask again.
+## talk.their_values.protective  fn=reveal_character
+You stand by your own. If one of us is in trouble, we're all in trouble.
+## talk.their_values.gentle  fn=reveal_character
+Be soft with people. You never know what they're carrying.
+## talk.their_values.proud  fn=reveal_character
+Never shame your name. And never let anyone shame your family's while you stand there.
+## talk.their_values.fiery  fn=reveal_character
+Never give up! And if your friend's in trouble, you RUN to them! No thinking! Just running!
+## talk.their_values.shy  fn=reveal_character
+I think... being gentle with people is a kind of strength. Even if it's a quiet one.
+## talk.their_values.stern  fn=reveal_character
+Do your duty even when nobody thanks you. Especially then. That's when it counts.
+
+## talk.their_values  stage=child  fn=reveal_character
+You should always share your sweets. Except the green ones. Those are mine.
+It's not fair to leave someone out of a game. That's the worst thing.
+If you break something, you say so. Even if you'll get in trouble. My mum says.
+You stick up for your friends. Even against big kids.
+Never pull a cat's tail. Or a dog's. Or anyone's.
+If you make a promise you have to keep it, or your nose falls off. Probably.
+
+# == asking their advice ===========================================================================
+## talk.ask_advice  fn=teach
+Talk to the person, not about the person. It's scarier and it works better.
+Do the hard thing first. The rest of the day gets easier.
+If you're scared of it, that might mean it matters.
+Wait until you're calm. Angry words are hard to take back.
+Ask someone who's done it before. They'll know the bit nobody tells you.
+Don't decide when you're hungry, tired or cross. Fix those first.
+Say sorry first. It costs less than you think.
+Try it for a week. If it's still wrong after a week, change it.
+Be honest, but be kind about how. Both matter.
+If you can't fix it today, write it down and sleep. Tomorrow you'll see it better.
+## talk.ask_advice  stage=teen|adult  fn=teach
+Never lend what you can't afford to lose. Not ryo, not trust.
+In my experience, the sensible choice and the brave choice are the same more often than you'd think.
+When I was your age I worried about everything. Most of it never happened. Worry about the rest.
+Don't let anyone hurry you into a promise. A good one keeps.
+If you have to ask whether it's wrong, it probably is.
+
+## talk.ask_advice.warmhearted  fn=teach
+Bring them something warm to eat and say what you need to say. Food makes everything gentler.
+## talk.ask_advice.thoughtful  fn=teach
+Ask yourself what you'll think of this a year from now. That's usually the answer.
+## talk.ask_advice.playful  fn=teach
+Make it a game. Hard things are easier when you're trying to win.
+## talk.ask_advice.adventurous  fn=teach
+When you can't decide between two paths, take the one with the better view.
+## talk.ask_advice.meticulous  fn=teach
+Make a list. Then cross out everything you can't change. What's left is what to do.
+## talk.ask_advice.steadfast  fn=teach
+Show up. Whatever it is, show up for it. That's half of everything.
+## talk.ask_advice.reserved  fn=teach
+Don't tell everyone your plans. Just do them.
+## talk.ask_advice.imaginative  fn=teach
+Picture the best way it could go. Then take one small step toward that picture.
+## talk.ask_advice.pragmatic  fn=teach
+Start with what you've got, not what you wish you had.
+## talk.ask_advice.curious  fn=teach
+Ask a lot of questions. People like being asked, and you'll learn the bit you were missing.
+## talk.ask_advice.protective  fn=teach
+Tell someone where you're going before you go. Always. That's my whole advice.
+## talk.ask_advice.gentle  fn=teach
+Listen first. People often tell you what they need if you're quiet long enough.
+## talk.ask_advice.proud  fn=teach
+Never beg. Ask once, clearly, and stand straight while you do it.
+## talk.ask_advice.fiery  fn=teach
+Shout it! Whatever it is! If you mean it, say it loud and see what happens!
+## talk.ask_advice.shy  fn=teach
+I'd... write it down first. Then say it. That's how I do it, anyway.
+## talk.ask_advice.stern  fn=teach
+You're overthinking. Decide, act, then learn from the result.
+
+## talk.ask_advice  stage=child  fn=teach
+If someone's mean to you, tell a teacher. Or a big kid. A nice big kid.
+When I'm scared I count to ten. Sometimes twenty.
+Just say sorry. Then it's over and you can play again.
+Eat a sweet first. Everything's easier after a sweet.
+If you don't know the answer, guess. Sometimes you're right!
+Ask your mum. Mums know everything. Well, mine does.
+
+# == their dream ===================================================================================
+## talk.their_dream  fn=reveal_character
+I want to be the best at something. Really the best. I've nearly picked what.
+I want people to remember my name. For something good.
+My dream's so big I'm a bit scared of it. That's how I know it's the right one.
+I think about my dream every night before I sleep. It's the last thing in my head.
+I want to do something nobody in my family has ever done.
+I've drawn my dream a hundred times. In every drawing I'm smiling.
+When I reach it, I want you to be there. That's part of the dream now.
+I've told my dream to the river, the moon and now you. You're the first who answered.
+Some days the dream feels silly. Then I see someone living theirs, and it doesn't.
+I don't need everyone to understand my dream. Just one or two people. You, maybe.
+## talk.their_dream  stage=teen|adult  fn=reveal_character
+I had a dream when I was young. I put it down for a while. I've picked it back up.
+People think it's too late for me. I don't. I've been saving for it for ten years.
+My dream changed when I had a family. It got bigger, not smaller.
+I want to leave something behind that lasts longer than me. That's all.
+
+## talk.their_dream.warmhearted  fn=reveal_character
+I dream about a long table with every friend I've ever had around it. All at once. Imagine!
+## talk.their_dream.thoughtful  fn=reveal_character
+I'd like to write something one day that makes someone think differently. Just one someone.
+## talk.their_dream.playful  fn=reveal_character
+Promise you won't tell anyone? Okay. ...I'm still not telling. But I promise it's a good one.
+## talk.their_dream.adventurous  fn=reveal_character
+There's a map in the library with a blank space in the corner. I want to be the one who fills it in.
+## talk.their_dream.meticulous  fn=reveal_character
+I'll know I've reached my dream when there's nothing left on the list. I check it every night.
+## talk.their_dream.steadfast  fn=reveal_character
+My dream's slow. I'm slow. We'll get there together, me and the dream.
+## talk.their_dream.reserved  fn=reveal_character
+It's mine. That's enough for now.
+## talk.their_dream.imaginative  fn=reveal_character
+I dreamt my dream once, while I was asleep. It looked exactly like I hoped. I woke up crying, the happy kind.
+## talk.their_dream.pragmatic  fn=reveal_character
+Dreams need ryo, time and stubbornness. I've got the last one. Working on the first two.
+## talk.their_dream.curious  fn=reveal_character
+My dream keeps changing as I learn more. Is that allowed? I think that's allowed.
+## talk.their_dream.protective  fn=reveal_character
+If my dream comes true, nobody I love will ever have to be scared again. That's the size of it.
+## talk.their_dream.gentle  fn=reveal_character
+I hope my dream makes someone's day a little softer. That would be enough.
+## talk.their_dream.proud  fn=reveal_character
+I'll reach it. Then I'll set a higher one. My family doesn't stop at one.
+## talk.their_dream.fiery  fn=reveal_character
+Every morning I shout my dream at the sunrise! The neighbours have complained! I don't care!
+## talk.their_dream.shy  fn=reveal_character
+I wrote my dream on a lantern once and let it float away. Maybe it'll find its way.
+## talk.their_dream.stern  fn=reveal_character
+I'll reach it, or I'll have trained the next one who does. Either way, it's done.
+
+## talk.their_dream  stage=child  fn=reveal_character
+When I grow up I'm going to be a Jonin. With a cool vest and everything.
+I want to have a shop that only sells sweets. Every kind. Even the weird ones.
+I'm going to be the Hokage! Or the Hokage's best friend. That's almost as good.
+I want to have a hundred dogs. Maybe fifty. Okay, ten.
+I want to be a medic so nobody's ever sick again. Not even a little bit.
+I'm going to climb to the top of the tallest tree in the whole world.
+
+# == what worries them =============================================================================
+## talk.their_worries  fn=reveal_character
+I worry I'll never be good enough at the thing I love most.
+Sometimes I worry everyone else knows what they're doing except me.
+I'm scared of being forgotten. Is that silly?
+I worry about my friends going on missions. I can't help it.
+I worry that I'm too much. Too loud, too much, too everything.
+I worry I'll say the wrong thing and lose someone. It's happened before.
+I'm afraid of the dark. There. Still. A little.
+I worry the people I love will change and leave me behind.
+Sometimes I worry I'm only brave when someone's watching.
+I worry that I'll never find the thing I'm meant to do.
+## talk.their_worries  stage=teen|adult  fn=reveal_character
+I worry about my parents. They're getting older, and I'm not ready.
+I worry about the children. Every parent does. Every single day.
+I worry the shop won't last. I've put everything into it.
+I worry I've already made my best choices, and they're behind me.
+
+## talk.their_worries.warmhearted  fn=reveal_character
+I worry about the people I can't help. The ones I don't even know are struggling.
+## talk.their_worries.thoughtful  fn=reveal_character
+I worry that I've misunderstood something important, and I won't find out until it's too late.
+## talk.their_worries.playful  fn=reveal_character
+I worry that if I stop joking, people will see I'm scared. So I keep joking.
+## talk.their_worries.adventurous  fn=reveal_character
+I worry the world out there is smaller than the one in my head. That it won't live up to it.
+## talk.their_worries.meticulous  fn=reveal_character
+I worry about the things I can't control. Which is most things. Which is the worry.
+## talk.their_worries.steadfast  fn=reveal_character
+I worry I'll be needed somewhere and I won't be there. I've never missed a day. I'm afraid of the first one.
+## talk.their_worries.reserved  fn=reveal_character
+That I'll want to say something, and won't.
+## talk.their_worries.imaginative  fn=reveal_character
+I worry that my head's so full of stories I'll miss the real one happening in front of me.
+## talk.their_worries.pragmatic  fn=reveal_character
+I worry about waste. Wasted time, wasted chances. Wasted people, even.
+## talk.their_worries.curious  fn=reveal_character
+I worry that some questions don't have answers. And that I'll spend my life asking them anyway.
+## talk.their_worries.protective  fn=reveal_character
+I worry about you, honestly. Not a lot. Just enough to check you're eating.
+## talk.their_worries.gentle  fn=reveal_character
+I worry about the strays in winter. And the people with nobody. Mostly both.
+## talk.their_worries.proud  fn=reveal_character
+I worry that pride will cost me something I can't get back. I've seen it happen to others.
+## talk.their_worries.fiery  fn=reveal_character
+I worry my temper will hurt someone someday. I'm working on it. Really working on it.
+## talk.their_worries.shy  fn=reveal_character
+I worry nobody would notice if I wasn't here. ...You'd notice. Wouldn't you?
+## talk.their_worries.stern  fn=reveal_character
+I worry I've forgotten how to say I'm proud of someone. I'll practise on you. I'm proud of you.
+
+## talk.their_worries  stage=child  fn=reveal_character
+I'm scared I'll fail the Academy test and everyone will laugh.
+Sometimes I'm scared of thunder. Don't tell anyone.
+I worry my best friend will find a better best friend.
+I'm scared of the big dog on our street. It barks really loud.
+I worry my mum works too hard. She's always tired.
+What if I'm never as good as the big kids? What if I'm always small?

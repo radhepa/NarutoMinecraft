@@ -1,0 +1,105 @@
+# Callbacks for questions/voice-protective.txt, in the protective asker's voice.
+#! fn: callback
+#! tags: personality=protective
+
+## callback.answer.q.past.prot_got_home.a1
+You got home safe last time. Good. I'll ask again tonight, though. Fair warning.
+
+## callback.answer.q.past.prot_got_home.a2
+The long, lit way home. You promised. I saw the lanterns go out early tonight. Same route?
+
+## callback.answer.q.past.prot_got_home.a3
+You stayed out very late last time. I asked you to send word. Did you forget? Humour me.
+
+## callback.answer.q.values.prot_stronger_foe.a1
+Brave, you said, to fight someone stronger for a friend. I'd hate you doing it. I meant both halves.
+
+## callback.answer.q.values.prot_stronger_foe.a2
+Run for help, you said. That's sense. I'm glad you think so. I sleep better.
+
+## callback.answer.q.values.prot_stronger_foe.a3
+Both brave and reckless, and worth it. Your honest answer. I think about it when you're on a mission.
+
+## callback.answer.q.values.prot_step_in_front.a1
+Without thinking, you said. You'd step in front. I worry about you forever now. I said I would.
+
+## callback.answer.q.values.prot_step_in_front.a2
+If you had to, you'd step in. The steadiest answer. I trust it.
+
+## callback.answer.q.values.prot_step_in_front.a3
+A smarter way, you'd find. Good. Keep thinking first. It keeps you alive.
+
+## callback.answer.q.pref.prot_always_carry.a1
+Still carrying bandages? Here, a fresh roll. You can never have enough.
+
+## callback.answer.q.pref.prot_always_carry.a2
+That spare kunai you carry. Still sharp? Let me see. Hm. Good.
+
+## callback.answer.q.pref.prot_always_carry.a3
+Your emergency snack. Still in the pouch? I've added a second one. Just in case.
+
+## callback.answer.q.pref.prot_always_carry.a4
+You carried nothing, so I gave you a bandage and a whistle. Still got them? Show me.
+
+## callback.answer.q.values.prot_watch_over.a1
+Your squad, the ones you protect. How are they? Watching each other's backs?
+
+## callback.answer.q.values.prot_watch_over.a2
+You'd protect the little ones. I saw the Academy children crossing the bridge and thought of you.
+
+## callback.answer.q.values.prot_watch_over.a3
+Everyone, you'd protect. A heavy load. Share it, I said. Remember.
+
+## callback.answer.q.values.prot_watch_over.a4
+Yourself first. Good. Are you eating? Sleeping? That's protecting yourself too.
+
+## callback.answer.q.values.prot_who_guards_you.a1
+Your friends watch over you. Good. Tell them I said thanks.
+
+## callback.answer.q.values.prot_who_guards_you.a2
+Your sensei protects you. I've seen your sensei on the road. Good shield.
+
+## callback.answer.q.values.prot_who_guards_you.a3
+You protect yourself, you said. You don't have to do it alone. I'm still saying it.
+
+## callback.answer.q.values.prot_who_guards_you.a4
+"Maybe you do." You said that about me. I meant my answer. I'm watching out for you.
+
+## callback.answer.q.dilemma.prot_friend_danger.a1
+Stop a friend from danger, even if they're cross. Your way. I did that to my brother today. He's furious. He's safe.
+
+## callback.answer.q.dilemma.prot_friend_danger.a2
+Let them choose, you said, a friend set on danger. It's hard. I'm still trying to learn that one.
+
+## callback.answer.q.dilemma.prot_friend_danger.a3
+Go with them, you'd do. Then at least you're there. That's what I'd do, too. I said so.
+
+## callback.answer.q.advice.prot_worry_nephew.a1
+I'm trusting my nephew's training, like you said. I slept four hours last night. Progress.
+
+## callback.answer.q.advice.prot_worry_nephew.a2
+I kept busy, as you advised. The house has never been cleaner. My worry, about the same.
+
+## callback.answer.q.advice.prot_worry_nephew.a3
+I write to my nephew every week now, your idea. They say the letters help on the road.
+
+## callback.answer.q.advice.prot_worry_nephew.a4
+You can't stop worrying, that's love. You were right. I've stopped trying to stop.
+
+## callback.answer.q.advice.prot_worry_after.a1
+I told my nephew how I worried, like you said. They hugged me. Didn't say a word. Didn't need to.
+
+## callback.answer.q.advice.prot_worry_after.a2
+I just fed my nephew, as you said. Three bowls. They knew. They always know.
+
+## callback.answer.q.advice.prot_worry_after.a3
+A little, I told them. Enough. Your advice was just right.
+
+## callback.answer.q.plans.prot_join_guard.a1
+The village guard one day, you said. I've put in a good word already. Early, I know.
+
+## callback.answer.q.plans.prot_join_guard.a2
+Missions for you, not the walls. Come back safe, every time. I'll be counting.
+
+## callback.answer.q.plans.prot_join_guard.a3
+Maybe the guard, later. After the roads. That's how most of us start. I did.

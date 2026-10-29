@@ -1,0 +1,185 @@
+{
+ "format": 1,
+ "id": "mission.d.moving_day",
+ "kind": "mission",
+ "rank": "d",
+ "category": "household",
+ "status": "beta",
+ "title": "dlg:mission.d.moving_day.title",
+ "brief": "dlg:mission.d.moving_day.brief",
+ "dialogue": {
+  "brief": "dlg:mission.d.moving_day.brief",
+  "accept": "dlg:mission.d.moving_day.accept",
+  "decline": "dlg:mission.d.moving_day.decline",
+  "progress": "dlg:mission.d.moving_day.progress",
+  "success": "dlg:mission.d.moving_day.success",
+  "fail": "dlg:mission.d.moving_day.fail",
+  "report": "dlg:mission.d.moving_day.report"
+ },
+ "minutes": 12,
+ "party": "squad",
+ "slots": {
+  "client": {
+   "pick": "resident",
+   "where": {
+    "household": true
+   }
+  },
+  "old": {
+   "pick": "anchor",
+   "tag": "client_home"
+  },
+  "new": {
+   "pick": "anchor",
+   "tag": "vacant_home"
+  }
+ },
+ "start": "brief",
+ "steps": {
+  "brief": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": "pack"
+  },
+  "pack": {
+   "objective": {
+    "type": "collect",
+    "target": "moving_crate",
+    "at": "slot:old",
+    "count": 6
+   },
+   "next": "move"
+  },
+  "move": {
+   "objective": {
+    "type": "deliver",
+    "item": "moving_crate",
+    "to": "slot:new"
+   },
+   "branch": [
+    {
+     "if": {
+      "twist": "heirloom"
+     },
+     "next": "heirloom"
+    },
+    {
+     "if": {
+      "twist": "cat_hides"
+     },
+     "next": "cat"
+    },
+    {
+     "if": {
+      "twist": "heavy_chest"
+     },
+     "next": "chest"
+    }
+   ],
+   "next": "report"
+  },
+  "heirloom": {
+   "objective": {
+    "type": "deliver",
+    "item": "heirloom",
+    "to": "slot:new"
+   },
+   "next": "report"
+  },
+  "cat": {
+   "objective": {
+    "type": "inspect",
+    "target": "hiding_cat",
+    "at": "slot:old"
+   },
+   "next": "report"
+  },
+  "chest": {
+   "objective": {
+    "type": "perform",
+    "what": "chakra_lift",
+    "at": "slot:old"
+   },
+   "next": "move2"
+  },
+  "move2": {
+   "objective": {
+    "type": "deliver",
+    "item": "chest",
+    "to": "slot:new"
+   },
+   "next": "report"
+  },
+  "report": {
+   "objective": {
+    "type": "talk",
+    "who": "slot:client"
+   },
+   "next": null
+  }
+ },
+ "twists": [
+  {
+   "id": "heirloom",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.moving_day.twist.heirloom"
+  },
+  {
+   "id": "cat_hides",
+   "weight": 2,
+   "harder": false,
+   "premise": "dlg:mission.d.moving_day.twist.cat_hides"
+  },
+  {
+   "id": "heavy_chest",
+   "weight": 1,
+   "harder": false,
+   "premise": "dlg:mission.d.moving_day.twist.heavy_chest"
+  }
+ ],
+ "outcomes": {
+  "done": {
+   "pay": 1.0,
+   "standing": 0
+  }
+ },
+ "bonus": [
+  "careful",
+  "teamwork",
+  "fast"
+ ],
+ "fast_hours": 4,
+ "fail": {
+  "on_death": true,
+  "timeout_days": 1
+ },
+ "enemies": [],
+ "places": {
+  "anchors": [
+   "client_home",
+   "vacant_home"
+  ],
+  "regions": []
+ },
+ "pay": {
+  "band": "d",
+  "xp_band": "d",
+  "weight": 0.45
+ },
+ "tags": [
+  "village",
+  "household"
+ ],
+ "contested": false,
+ "classic": true,
+ "banter": "dlg:mission.banter.household",
+ "_premise": "Help a family move house across the village.",
+ "_twists": {
+  "heirloom": "Grandmother's tea set travels by hand, and only by hand.",
+  "cat_hides": "The cat does not want to move and has found the one place nobody looks.",
+  "heavy_chest": "A chest nobody can lift without chakra."
+ }
+}

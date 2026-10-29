@@ -1,0 +1,183 @@
+# Part-time jobs (ROADMAP §7, Ryo: 40 to 80 ryo a shift): what the employer says when a shift starts, when the
+# player is doing well, and when it is done. Shifts repeat, so every pool cycles.
+#! kind: cycle
+
+## job.ichiraku.start  fn=teach,commerce
+Apron on, hair back, hands washed. You're on bowls and broth today.
+Right! Noodles in for ninety breaths, no more. I'll shout when the orders come.
+Wipe the counter between every customer. Nobody wants the last one's spilled soup.
+Busy night ahead. Keep the bowls coming from the back and we'll be fine.
+
+## job.ichiraku.good  fn=commerce,react
+Look at you, ladling like you were born behind this counter!
+Not a drop spilled. You've got the hands for this.
+The customers are smiling. That's the broth, but it's also you.
+Faster than my last helper, and tidier. Keep it up!
+
+## job.ichiraku.done  fn=commerce
+That's the shift. {pay}, and a bowl on the house. You earned both.
+Done! Here's your {pay}. Same time next week?
+Stools up, pot scrubbed. {pay} for you. Good work tonight.
+There's your {pay}. Go home and put your feet up.
+
+## job.grocer.start  fn=teach,commerce
+Carry the crates in from the cart first, then stack the greens, heavy at the bottom.
+You'll weigh beans today. A full scoop is a full scoop, don't skimp and don't spill.
+Sweep out the front, then mind the counter while I go to the farms.
+Sort the bruised fruit from the good. Bruised goes in the cheap basket, not the bin.
+
+## job.grocer.good  fn=commerce,react
+Nicely stacked! Customers buy more when it looks tidy.
+You're quick with the scale. My old helper counted on fingers.
+The onion crates are done already? I'm impressed.
+That's how you talk to a customer. Friendly, quick, honest.
+
+## job.grocer.done  fn=commerce
+That'll do for today. Here's {pay}, and take a few onigiri home.
+All done. {pay} for you. My back thanks you.
+Shift's over. {pay}. Come again on Market Day, I'll need you then.
+There's your {pay}. Take a radish too. Go on.
+
+## job.flower_shop.start  fn=teach,commerce
+Water the pots on the steps first, then change every bucket inside.
+Cut the stems on a slant, under water, so they drink. Like this.
+Wrap the orders on the counter. Paper first, then the ribbon, then the card.
+Mind the roses. The thorns don't care that you're helping.
+
+## job.flower_shop.good  fn=commerce,react
+That bouquet's lovely! You've an eye for colour.
+Every bucket fresh and every stem trimmed. Wonderful.
+A customer asked who made the arrangement in the window. I said you did.
+You're gentle with them. Flowers can tell, you know.
+
+## job.flower_shop.done  fn=commerce
+That's the day done. {pay}, and take a stem home for your room.
+Thank you! Here's {pay}. Come and help again soon.
+All finished. {pay} for you. The shop's never looked so good.
+There's your {pay}. You smell like lilies now, sorry.
+
+## job.tea_house.start  fn=teach,commerce
+Two hands on the tray, and bow before you set the cups down.
+Water just off the boil for green tea, never boiling. Boiling makes it bitter.
+Clear the tables as soon as guests leave. A dirty table makes a slow afternoon.
+Speak softly in here. Guests come for the quiet.
+
+## job.tea_house.good  fn=commerce,react
+Not a single cup rattled. You'd make a fine tea server.
+The guests at the window asked for you by name. Well done.
+Your matcha's foaming nicely. You've been practising.
+Quick and quiet. That's exactly how it's done.
+
+## job.tea_house.done  fn=commerce
+That's the afternoon finished. {pay}, and a cup for yourself before you go.
+Thank you. Here is {pay}. Please come again.
+All tidy. {pay} for you. The kettle will miss you.
+There's your {pay}. Rest your feet, you've earned it.
+
+## job.haruno_store.start  fn=teach,commerce
+Count the stock on the shelves and write down what's low. Neat writing, please.
+Mind the counter while I'm in the back. Prices are on the little tags.
+Wrap every gift in cloth, corners tucked. My mother checks.
+Dust the glass case. Gently, those fans are older than both of us.
+
+## job.haruno_store.good  fn=commerce,react
+Tidy list! I can actually read it.
+You sold three fans while I was out? You're a natural.
+Those wrapping corners are perfect. My mother would approve.
+Look how fast that went. Thank you.
+
+## job.haruno_store.done  fn=commerce
+Done for the day. {pay}, and a sweet from the jar.
+Thank you! {pay} for you. The shop runs smoother with you here.
+All finished. Here's {pay}. Same time next week?
+There's your {pay}. Mind how you go.
+
+## job.furniture_shop.start  fn=teach,commerce
+Dust every piece on the floor, then oil the tables. Thin coat, rub it in.
+Help me carry the new delivery in. Lift with your legs, not your back.
+Mind the shop while I'm out. If anyone sells back, it's half what they paid. Check the book.
+Straighten the cushions and screens. People buy what looks like a home.
+
+## job.furniture_shop.good  fn=commerce,react
+That table shines! You could see your face in it.
+Not a scratch on the delivery. Careful hands.
+A customer bought the screen you set up by the window. Good eye.
+You're quick, and you don't bang into things. Rare.
+
+## job.furniture_shop.done  fn=commerce
+That's the shift. {pay}. Come back when the next delivery's in.
+All done. {pay} for you. My shoulders thank you.
+Finished. Here's {pay}. The floor looks better than when I opened.
+There's your {pay}. Off you go.
+
+## job.forge.start  fn=teach,commerce
+On the bellows. Slow and steady. Too fast and you'll burn the steel.
+Fetch charcoal from the shed, then sort the salvage. Iron in one pile, junk in the other.
+Hold the tongs low and firm. If the piece slips, step back, don't catch it.
+Quench in the tank when I say, not before. Then stand clear of the steam.
+
+## job.forge.good  fn=commerce,react
+Good heat! That's the colour we want, cherry red.
+Your pumping's even. The fire likes you.
+Clean salvage pile. You can tell good iron from rust now.
+Steady with the tongs. Another month of this and I'll show you the hammer.
+
+## job.forge.done  fn=commerce
+Fire's banked. {pay}. Wash the soot off before you go home.
+That's a shift. Here's {pay}. You'll sleep well tonight.
+Good work. {pay}, and you can take an offcut of steel.
+There's your {pay}. Same time, same apron, next week.
+
+## job.bath_house.start  fn=teach,commerce
+Scrub the washing area first, then fold the towels. Corners square.
+Keep the boiler fed, a shovel of wood every so often. Watch the gauge.
+Check the cubbies for things people left behind. They always leave something.
+Restock the fruit milk in the cooler. Strawberry at the front, it sells fastest.
+
+## job.bath_house.good  fn=commerce,react
+The tiles are spotless. I could eat off them, if I were mad.
+Perfect towels! The guests noticed.
+The water's just right. You've got a feel for the boiler.
+Quick work. The evening rush won't catch us out today.
+
+## job.bath_house.done  fn=commerce
+That's the shift. {pay}, and you can have a free soak before you go.
+All done. {pay}. Take a fruit milk, too.
+Finished. Here's {pay}. You've earned that bath.
+There's your {pay}. Off home, clean as anything.
+
+## job.kinoshita_yard.start  fn=teach,commerce
+Stack the planks crossways so the air gets between them. Flat, or they'll warp.
+Sweep the shavings into the sacks. The bath house buys them to light the boiler.
+Sand this panel along the grain. Never across, you'll leave scratches.
+Hold the board steady while I saw. Don't let go until I say.
+
+## job.kinoshita_yard.good  fn=commerce,react
+Straight stack! The old carpenters would nod at that.
+Smooth as a river stone. Good sanding.
+You held that board like a rock. Clean cut.
+The yard's never been so tidy. Don't let it go to your head.
+
+## job.kinoshita_yard.done  fn=commerce
+That's the day. {pay}, and take an offcut home for a shelf.
+All done. {pay}. Come back and I'll teach you a joint.
+Finished. Here's {pay}. Your hands will be sore tomorrow. That's normal.
+There's your {pay}. Brush the sawdust out of your hair.
+
+## job.pharmacy.start  fn=teach,commerce
+Turn the herbs on the drying racks. Gently, the leaves break.
+Grind these roots fine, then measure them into the paper twists. Exactly one spoon each.
+Label every jar. If it's not labelled, it's poison until proven otherwise.
+Watch the kettle of fever tea. When it goes dark, take it off the fire.
+
+## job.pharmacy.good  fn=commerce,react
+Lovely and fine, that powder. Just right.
+Every twist the same weight. You have patient hands.
+Clear labels! Thank you, nobody ever writes clearly.
+You're careful. In this work, careful is everything.
+
+## job.pharmacy.done  fn=commerce
+That's enough for today. {pay}, and a little bag of tea for your trouble.
+All done. Here's {pay}. Wash your hands well before you eat.
+Finished. {pay} for you. The racks are in better order than ever.
+There's your {pay}. Thank you, truly.

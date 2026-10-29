@@ -1,0 +1,71 @@
+# Callbacks to seasonal hangout highlights: blossoms, the lake, the moon and the snow.
+#! kind: cycle
+#! fn: callback
+
+## callback.hangout.flower_viewing.highlight.1
+The petal in your cup! Has your year been lucky? Mine's been all right since that day.
+## callback.hangout.flower_viewing.highlight.2
+When the tree snowed blossoms on us. I'll never forget that sound.
+## callback.hangout.flower_viewing.highlight.3
+That family who shared their sweets under the blossoms. I saw them in the market and we waved.
+## callback.hangout.flower_viewing.highlight.4
+You had petals in your hair all the way home. I never told you.
+## callback.hangout.flower_viewing.highlight.5
+Waking up under the tree with a pink blanket of petals. Best nap of my life.
+## callback.hangout.flower_viewing.highlight.6
+I keep humming that flute tune from the flower park. I wish I knew its name.
+## callback.hangout.flower_viewing.highlight.7
+You caught three falling petals and I caught a leaf. I still have the leaf. Don't judge me.
+## callback.hangout.flower_viewing.highlight.8
+The blossoms glowing under the lanterns as we left. I think about that view a lot.
+
+## callback.hangout.lake_swim.highlight.1
+Another tie, at the rock in the lake! We're too evenly matched, you and me.
+## callback.hangout.lake_swim.highlight.2
+That fish that tickled my toes! I still squeal thinking about it.
+## callback.hangout.lake_swim.highlight.3
+Your flip off the jetty. I tried it after. I landed flat. It stung.
+## callback.hangout.lake_swim.highlight.4
+Floating on our backs, watching the clouds. I want another afternoon like that.
+## callback.hangout.lake_swim.highlight.5
+The dragonfly on your nose! You never believed me. It was there, I swear.
+## callback.hangout.lake_swim.highlight.6
+That splash war at the lake. I still say I won before I surrendered.
+## callback.hangout.lake_swim.highlight.7
+Watermelon on the warm rocks. Sticky, sunburnt and happy. Summer at its best.
+## callback.hangout.lake_swim.highlight.8
+Nine skips on one stone! I've been practising since. I'm up to four.
+
+## callback.hangout.moon_viewing.highlight.1
+That huge orange moon coming up over the hills. Every autumn now I'll think of you.
+## callback.hangout.moon_viewing.highlight.2
+I still see the rabbit on the moon, ever since you squinted at it with me.
+## callback.hangout.moon_viewing.highlight.3
+The geese flying across the moon. I tried to paint it. It doesn't do it justice.
+## callback.hangout.moon_viewing.highlight.4
+Our terrible moon poem. I wrote it down. It's on my wall.
+## callback.hangout.moon_viewing.highlight.5
+Those crickets starting all at once when the moon cleared the trees. Magic.
+## callback.hangout.moon_viewing.highlight.6
+You held the moon in your tea cup. I'll never forget the look on your face.
+## callback.hangout.moon_viewing.highlight.7
+That veil of cloud across the moon. You gasped. So did I.
+## callback.hangout.moon_viewing.highlight.8
+We watched the moon go from orange to silver, nearly all night. My favourite night of the autumn.
+
+## callback.hangout.snowball_fight.highlight.1
+My direct hit to the back of your head! The best throw of my life. Still not sorry.
+## callback.hangout.snowball_fight.highlight.2
+The snow war, us against everyone! The kids on my street still talk about it.
+## callback.hangout.snowball_fight.highlight.3
+Our fort with the tower! Someone should have drawn it before it melted.
+## callback.hangout.snowball_fight.highlight.4
+The snowballs that hit each other in mid-air! Nobody believes it happened.
+## callback.hangout.snowball_fight.highlight.5
+That Chunin throwing a snowball back at us! I still can't believe we got away with it.
+## callback.hangout.snowball_fight.highlight.6
+Our snow angels, side by side. I went back and they were still there the next morning.
+## callback.hangout.snowball_fight.highlight.7
+Your snowman of the Academy instructor! I've never laughed so hard in the cold.
+## callback.hangout.snowball_fight.highlight.8
+Hot tea in our snow fort while it snowed. That's what I think of when I hear the word winter.

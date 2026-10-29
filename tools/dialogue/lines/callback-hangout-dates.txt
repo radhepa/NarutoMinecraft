@@ -1,0 +1,50 @@
+# Callbacks to date highlights: evening walks and lantern nights, after the beta, teens and adults only.
+#! kind: cycle
+#! fn: callback
+#! tags: stage=teen|adult player_stage=teen|adult
+
+## callback.hangout.evening_walk.highlight.1
+All those fireflies along the river. I still look for the one that landed on your sleeve.
+## callback.hangout.evening_walk.highlight.2
+You never let go of my hand after the stepping stones. I think about that more than I'd admit.
+## callback.hangout.evening_walk.highlight.3
+That silver heron lifting off the river. Whenever I see one, I think of our walk.
+## callback.hangout.evening_walk.highlight.4
+Your jacket over us both in the rain. I'd walk in a hundred storms for another night like that.
+## callback.hangout.evening_walk.highlight.5
+The river turning gold under the bridge. I go and stand there sometimes, on my own, remembering.
+## callback.hangout.evening_walk.highlight.6
+I pressed the flower you picked me on our walk. It's in my favourite book.
+## callback.hangout.evening_walk.highlight.7
+The night we walked all the way to the old mill. Let's go further next time.
+## callback.hangout.evening_walk.highlight.8
+Talking on the riverbank until the moon came up. I'd give anything for another evening like it.
+## callback.hangout.evening_walk.highlight.9
+That musician on the bridge. I hum the tune when I'm missing you.
+## callback.hangout.evening_walk.highlight.10
+What you told me that night by the river. It's still safe with me. It always will be.
+## callback.hangout.evening_walk.highlight.11
+Our sinking stones! Yours sank more. I'm still proud of that.
+## callback.hangout.evening_walk.highlight.12
+The lanterns coming on one by one all the way home. I think of it every evening at dusk.
+
+## callback.hangout.lantern_night.highlight.1
+Our lantern leading all the others out on the lake. I knew it would.
+## callback.hangout.lantern_night.highlight.2
+I still haven't told you what I wished for on our lantern. One day.
+## callback.hangout.lantern_night.highlight.3
+Two skies, one above and one below, on lantern night. I dream about it sometimes.
+## callback.hangout.lantern_night.highlight.4
+Our lantern drifting back to us on the shore. Like it knew where it belonged.
+## callback.hangout.lantern_night.highlight.5
+The whole shore singing with that boatman. I've never felt so part of something.
+## callback.hangout.lantern_night.highlight.6
+Your hands around the candle so it wouldn't go out. I remember how careful you were.
+## callback.hangout.lantern_night.highlight.7
+Staying on the shore after the last lantern went out. My favourite part of the night.
+## callback.hangout.lantern_night.highlight.8
+That fish leaping through our lantern's reflection! A hundred lights. I still see them.
+## callback.hangout.lantern_night.highlight.9
+The fireworks just as our lantern touched the water. It felt like the sky was cheering.
+## callback.hangout.lantern_night.highlight.10
+Sitting on the shore with your head on my shoulder. I'd like a thousand more of those nights.

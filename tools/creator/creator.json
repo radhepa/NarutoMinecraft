@@ -1,0 +1,300 @@
+{
+  "format": 1,
+  "_doc": "The character creator's rules (CHARACTER_CREATION.md). creator.py resolves them against the wardrobe into one allowed list per origin (clanless or a clan) and checks them; the compiled file is src/main/resources/data/narutominecraft/creator/creator.json. Piece, color and mark ids are the wardrobe's.",
+
+  "stages": {
+    "child": {"ages": [11, 12], "scale": 0.78, "head": 1.1, "outfit_ranks": ["academy", "genin"], "from": "creation"},
+    "teen":  {"ages": [13, 17], "scale": 0.9,  "head": 1.0, "outfit_ranks": ["genin", "chunin"], "from": "time_skip_1"},
+    "adult": {"ages": [18, null], "scale": 1.0, "head": 1.0, "outfit_ranks": ["chunin", "jonin", "anbu", "kage"], "from": "time_skip_2"}
+  },
+
+  "creatable": {
+    "_doc": "Origins the creator offers. For now the player is born to no clan; every clan's rules stay below so clan-born play can return as an option.",
+    "origins": ["clanless"]
+  },
+
+  "pronouns": {
+    "_doc": "How text refers to the player in the third person ({they:player}, {them:player}, {their:player}). Independent of the body; the creator preselects by body.",
+    "options": ["they", "she", "he"],
+    "default_for_body": {"male": "he", "female": "she"}
+  },
+
+  "roots": {
+    "_doc": "The Roots step: flavor and small leanings, never a story choice. temperament: a dialogue context tag only (the bond system gives the player no personality). knack: combat's starting leaning (+5% and a practice item). affinity: the nature you lean toward, shown at the Genin ceremony (choosing it there gives combat's bonus).",
+    "temperament": {"options": ["bold", "steady", "cheerful", "quiet", "curious", "stubborn"], "default": "cheerful"},
+    "knack": {"options": ["balanced", "taijutsu", "weapons", "ninjutsu"], "default": "balanced"},
+    "affinity": {"options": ["undecided", "fire", "wind", "water", "earth", "lightning"], "default": "undecided"}
+  },
+
+  "name": {"min": 2, "max": 16, "allowed": "letters (any script), spaces, apostrophes and hyphens; starts with a letter; no two spaces in a row"},
+
+  "bodies": {
+    "male":   {"label": "creator.body.a", "feminine": false},
+    "female": {"label": "creator.body.b", "feminine": true}
+  },
+  "complexions": [
+    {"id": 0, "label": "creator.complexion.porcelain", "swatch": "#e9c8af"},
+    {"id": 1, "label": "creator.complexion.peach",     "swatch": "#d9a37d"},
+    {"id": 2, "label": "creator.complexion.honey",     "swatch": "#c38b64"},
+    {"id": 3, "label": "creator.complexion.amber",     "swatch": "#ac7653"},
+    {"id": 4, "label": "creator.complexion.umber",     "swatch": "#89543e"},
+    {"id": 5, "label": "creator.complexion.ebony",     "swatch": "#643f33"}
+  ],
+  "eye_styles": ["starlit", "soft_glint"],
+  "brows": ["fine", "bold"],
+  "max_marks": 2,
+  "roll_open_mark_chance": 0.05,
+
+  "open": {
+    "_doc": "What every player may pick, clanless or clan-born.",
+    "hair": "every collection",
+    "hair_colors": ["RAVEN", "ESPRESSO", "CHESTNUT", "AUBURN", "GINGER", "HONEY", "WHEAT", "ASH_BLONDE", "SILVER", "SNOW", "SUN_BLOND", "BLOSSOM_PINK", "VIOLET"],
+    "eye_colors": ["DARK", "SKY", "JADE", "KUNOICHI_HAZEL", "KUNOICHI_GREY"],
+    "marks": ["whiskers"],
+    "outfits": {"collection": "academy_genin", "ranks": ["academy"]},
+    "headwear": [null, "wg001_flight_goggles", "wg003_streamer_headband"]
+  },
+
+  "never_at_creation": {
+    "_doc": "Shared ids no one picks in the creator, with the reason. A clan's own colors and marks are its members' alone.",
+    "hair_colors": {"HOKAGE_GOLD": "a Hokage's fixed look"},
+    "eye_colors": {"SHARINGAN": "awakens in the story (Uchiha-born, Beta 3), never chosen"},
+    "marks": {
+      "hyuga_caged_bird": "conferred by the clan in the story, never chosen",
+      "senju_strength_seal": "earned by mastery, never chosen",
+      "uzumaki_diamond_seal": "earned by mastery, never chosen",
+      "sarutobi_age_lines": "adult stage only"
+    }
+  },
+
+  "reserved": {
+    "_doc": "Shared-table ids that belong to one clan, like the colors a clan file defines itself.",
+    "hair_colors": {"UCHIHA_BLACK": "uchiha"},
+    "eye_colors": {"BYAKUGAN": "hyuga"}
+  },
+
+  "stage_marks": {"sarutobi_age_lines": "adult"},
+  "stage_hair": {
+    "_doc": "Hairstyles that wait for a later stage (beards, sideburns, receding and elders' styles); every other style is open from creation.",
+    "h502_shadow_sideburns": "teen",
+    "h1212_elder_long_tie": "adult", "h1306_elder_topknot": "adult", "h1414_elder_waves": "adult", "h1705_widow_peak": "adult",
+    "h1714_receding_crop": "adult", "h1813_elder_topknot": "adult", "h2415_elder_mane": "adult", "h306_matriarch_long": "adult",
+    "h408_elder_topknot": "adult", "h714_elder_mane": "adult", "h902_guardian_beard": "adult", "h903_elder_goatee": "adult",
+    "h908_ash_chinstrap": "adult", "hc002_balding_crown": "adult", "hc006_elders_bun": "adult", "hc010_balding_elder": "adult"
+  },
+  "default_overrides": {
+    "_doc": "Opening looks that differ from the computed ones (the clan pool's most common draws).",
+    "clanless": {"male": {"hair": "hg001_messy_mop", "hair_color": "ESPRESSO"},
+                 "female": {"hair": "hg009_stubby_ponytail", "hair_color": "CHESTNUT", "outfit": "academy_genin.picture_book", "palette": "ACADEMY_GENIN_TEAL"}}
+  },
+
+  "starting_key_item": {
+    "_doc": "The one thing the player starts with, shown in hand on the review screen (the story session's item; the items session registers the id). It cannot be dropped, sold or stored away.",
+    "item": "item:half_charm",
+    "line": "creator.review.key_item"
+  },
+
+  "prologue_look": {
+    "_doc": "Worn through the prologue (Ch 0): your own hair, eyes and marks, in plain worn clothes. The outfit you chose is waiting at the apartment in Ch 1.",
+    "top": "tg011_striped_sweater", "bottom": "bg010_patched_trousers", "palette": "ACADEMY_GENIN_SAND", "headwear": null
+  },
+
+  "changes": {
+    "_doc": "Where each choice can change after creation: locked (the story or a life event may still change it), barber, home, or the settings screen.",
+    "given_name": {"where": "locked"},
+    "family_name": {"where": "locked", "except": "the clan registry: founding a clan (from Chunin), or joining one by invitation or marriage, offers to take the clan's name or keep yours"},
+    "pronouns": {"where": "settings"},
+    "temperament": {"where": "locked"},
+    "knack": {"where": "locked"},
+    "affinity": {"where": "locked", "note": "a leaning only: the Genin ceremony still offers every nature"},
+    "body": {"where": "locked"},
+    "complexion": {"where": "locked"},
+    "eye_color": {"where": "locked", "except": "a kekkei genkai shows itself (Sharingan, Byakugan) on its own"},
+    "eye_style": {"where": "locked"},
+    "brows": {"where": "barber"},
+    "clan": {"where": "locked", "except": "marriage, a clan's invitation, or founding a clan"},
+    "hair": {"where": "barber", "cost": 40},
+    "hair_color": {"where": "barber", "cost": 60},
+    "marks": {"where": "barber", "cost": 30, "note": "face paint and chosen marks; scars the story gives stay"},
+    "outfit": {"where": "home", "note": "the wardrobe cabinet in your home (item:wardrobe_cabinet) holds every outfit you own; the tailor sells outfits by rank, alterations and dye"},
+    "headwear": {"where": "home", "note": "kept in the wardrobe cabinet; from Genin the forehead protector is one of them"}
+  },
+
+  "time_skip_restyle": {"_doc": "At each time skip the Years Later mirror opens: hair, hair color, brows, marks and outfit may be re-picked for free, from the new stage's lists.", "fields": ["hair", "hair_color", "brows", "marks", "outfit", "headwear"]},
+
+  "grows_into": {
+    "_doc": "Suggested grown-up hairstyle per stage, preselected on the Years Later mirror; a style not listed stays as it is.",
+    "hg001_messy_mop":        {"teen": "hg008_shaggy_layers"},
+    "hg002_cowlick_crop":     {"teen": "hg006_short_spikes"},
+    "hg003_short_twin_tails": {"teen": "hg004_low_pigtails", "adult": "hg021_tied_long_straight"},
+    "hg004_low_pigtails":     {"adult": "hg021_tied_long_straight"},
+    "hg005_messy_buns":       {"teen": "hg023_nape_double_buns"},
+    "hg007_side_swept_bob":   {"adult": "hg026_short_hime"},
+    "hg009_stubby_ponytail":  {"teen": "h09_high_ponytail"},
+    "hg010_fluffy_curls":     {"adult": "hg008_shaggy_layers"}
+  },
+
+  "clanless": {
+    "blurb": "No clan. Most of the Leaf belongs to none: civilians' children and shinobi of ordinary families. You start even with everyone and earn your place yourself.",
+    "means": [
+      "An ordinary family name, on your papers; the creator shows \"no clan\"",
+      "Every collection's hairstyles and the open colors",
+      "From Genin: one lesser technique from each clan where a friend reaches level 7",
+      "Clan lines play as the outsider's welcome test; a clan may invite you to join it later"
+    ]
+  },
+
+  "clans": {
+    "senju": {
+      "blurb": "The founders' clan: calm, generous, with a long memory. A living tree grows through their hall.",
+      "technique": "Wood Release: short-lived wooden barriers and binding roots", "kekkei_genkai": "Wood Release",
+      "quarter": "A compound beside the Hokage Residence, under the Rock",
+      "start_headwear": ["w103_nawaki_goggles"]
+    },
+    "uzumaki": {
+      "blurb": "Few living members, a memorial shrine with the spiral crest, and the finest sealing tradition in the Leaf. Loud, warm, long-lived.",
+      "technique": "Sealing chains and a deep chakra pool", "kekkei_genkai": null,
+      "quarter": "A small compound next to the Senju, mostly a memorial",
+      "start_headwear": ["w202_sealer_hachimaki"]
+    },
+    "uchiha": {
+      "blurb": "Proud, private and quick to take offence; they run the Military Police from their walled quarter at the village edge.",
+      "technique": "The Sharingan's sight: earlier warnings, wider parries, techniques learned by watching", "kekkei_genkai": "Sharingan",
+      "quarter": "A walled compound on the village's outskirts",
+      "start_headwear": []
+    },
+    "hyuga": {
+      "blurb": "Formal and exact, split into a main house and a branch house. Every Hyuga has the pale eyes of the Byakugan.",
+      "technique": "Byakugan and the Gentle Fist: sight through walls, strikes that drain chakra", "kekkei_genkai": "Byakugan",
+      "quarter": "A formal estate a short walk from the Residence",
+      "start_headwear": ["w401_brow_wrap"],
+      "lock": {"eye_color": "BYAKUGAN"}
+    },
+    "nara": {
+      "blurb": "Unhurried strategists who keep the deer forest at the village edge. Old allies of the Akimichi and the Yamanaka.",
+      "technique": "Shadow Possession: your shadow holds a target to your movements", "kekkei_genkai": null,
+      "quarter": "A plain compound against the clan's deer forest",
+      "start_headwear": []
+    },
+    "akimichi": {
+      "blurb": "Big-hearted and proud of it; their table is always open. Old allies of the Nara and the Yamanaka.",
+      "technique": "Expansion and the Human Boulder", "kekkei_genkai": null,
+      "quarter": "A compound with a big kitchen hall, by the market street",
+      "start_headwear": ["w602_hachimaki"]
+    },
+    "yamanaka": {
+      "blurb": "Florists and sensors on the main street; the flower shop out front, a quiet hall behind. Old allies of the Nara and the Akimichi.",
+      "technique": "Mind Transfer (later tiers) and sensing", "kekkei_genkai": null,
+      "quarter": "A compound on the main street, behind the flower shop",
+      "start_headwear": ["w702_florist_kerchief"]
+    },
+    "inuzuka": {
+      "blurb": "Loud, loyal ninken handlers who live by the pack. Children get their first pup at the clan day.",
+      "technique": "Fang over Fang, together with your ninken", "kekkei_genkai": null,
+      "quarter": "Kennels and a clinic by the main gate",
+      "start_headwear": ["w801_fur_hood"]
+    },
+    "sarutobi": {
+      "blurb": "An old council family that carries the Will of Fire: warm, stubborn, fond of long scarves.",
+      "technique": "Fire mastery and the clan staff", "kekkei_genkai": null,
+      "quarter": "A family house near the Residence with a fire-training yard",
+      "start_headwear": ["w902_kid_goggles", "w903_fire_headband"]
+    },
+    "aburame": {
+      "blurb": "Private, patient and precise; they share their bodies with the kikaichu insects and keep their faces behind lenses and collars.",
+      "technique": "The insect swarm: it follows a target, drains chakra and marks it", "kekkei_genkai": null,
+      "quarter": "A dark timber house with insect gardens",
+      "start_headwear": ["w1001_round_shades", "w1002_oval_tints", "w1003_deep_hood"]
+    },
+    "hatake": {
+      "blurb": "A house almost empty; everyone respects the name, few visit. Silver hair and ninken run in the family.",
+      "technique": "A ninken tracker and the chakra sabre", "kekkei_genkai": null,
+      "quarter": "A lone, worn family house on a quiet lane",
+      "start_headwear": ["w1102_hatake_cloth_mask"]
+    },
+    "kurama": {
+      "blurb": "A refined household of painters whose brushes make illusions. A polite rivalry with the Yuhi's school.",
+      "technique": "Painted illusion: a genjutsu world closes over a target", "kekkei_genkai": null,
+      "quarter": "A house with a painting studio on the old artists' lane",
+      "start_headwear": ["w1203_training_headband"]
+    },
+    "shimura": {
+      "blurb": "A stern, quiet council family that keeps to itself. Disagrees with the Sarutobi about everything.",
+      "technique": "Vacuum blades and sealing", "kekkei_genkai": null,
+      "quarter": "A stern house close to the Hokage Rock",
+      "start_headwear": []
+    },
+    "yuhi": {
+      "blurb": "The genjutsu clan of crimson eyes and old trees; their grove is a training ground for illusions.",
+      "technique": "Tree binding: the target sees itself bound while you step behind it", "kekkei_genkai": null,
+      "quarter": "A house in a grove of old trees, in the garden district",
+      "start_headwear": ["w1401_rose_hairpin"]
+    },
+    "gekko": {
+      "blurb": "A quiet family of swordsmen of the Crescent Moon: pale, tired-eyed, always with a blade at hand.",
+      "technique": "Dance of the Crescent Moon: two short-lived clones strike with you", "kekkei_genkai": null,
+      "quarter": "A kenjutsu dojo with a moon-viewing platform, by the training grounds",
+      "start_headwear": ["w1503_crescent_hachimaki"]
+    },
+    "shiranui": {
+      "blurb": "Cool-headed senbon specialists of the Hokage's guard, easy smiles and all.",
+      "technique": null, "kekkei_genkai": null,
+      "quarter": "A family house near the gate barracks",
+      "start_headwear": ["w1601_backward_bandana"]
+    },
+    "morino": {
+      "blurb": "Stern interrogators in long coats, and surprisingly gentle at home.",
+      "technique": null, "kekkei_genkai": null,
+      "quarter": "A severe house near the police HQ",
+      "start_headwear": ["w1703_oxblood_kerchief"]
+    },
+    "umino": {
+      "blurb": "The teachers' family: half the village was taught by an Umino.",
+      "technique": null, "kekkei_genkai": null,
+      "quarter": "Teachers' houses in the Academy streets",
+      "start_headwear": []
+    },
+    "haruno": {
+      "blurb": "A cheerful merchant household whose children became ninja.",
+      "technique": null, "kekkei_genkai": null,
+      "quarter": "A neat family house and garden on a residential street",
+      "start_headwear": []
+    },
+    "namiashi": {
+      "blurb": "Quiet swordsmen of the Hokage's guard, the wave-foot family.",
+      "technique": null, "kekkei_genkai": null,
+      "quarter": "A small footwork dojo near the training grounds",
+      "start_headwear": ["w2002_wave_hachimaki"]
+    },
+    "hagane": {
+      "blurb": "Gate guards and messengers, with a metalworker's shop beside the forge.",
+      "technique": null, "kekkei_genkai": null,
+      "quarter": "A metalworker's shop on the market street",
+      "start_headwear": []
+    },
+    "kinoshita": {
+      "blurb": "The carpenters and builders who raised and rebuilt the Leaf's houses; the furniture is made in their yard.",
+      "technique": null, "kekkei_genkai": null,
+      "quarter": "The carpenters' and builders' yard",
+      "start_headwear": ["w2201_nejiri_hachimaki"]
+    },
+    "tsuchigumo": {
+      "blurb": "A mountain shrine clan that lives in the Leaf but keeps its own counsel.",
+      "technique": "Earth binding: earth-style ninjutsu and a web-like trap", "kekkei_genkai": null,
+      "quarter": "Stone houses by the quarry",
+      "start_headwear": ["w2302_spider_band"]
+    },
+    "suzuran": {
+      "blurb": "Herbalists of the hospital gardens, with lily blood that shrugs off poison.",
+      "technique": "Herbalist: immune to poison, poultices and coatings at the workbench", "kekkei_genkai": null,
+      "quarter": "Herbalists' houses by the hospital",
+      "start_headwear": ["w2402_bell_hairpin"]
+    },
+    "tobari": {
+      "blurb": "Silent scouts and night watchmen of the dark lanes behind the wall.",
+      "technique": "Smothering: silence around you at night", "kekkei_genkai": null,
+      "quarter": "Shuttered houses behind the wall",
+      "start_headwear": ["w2502_scout_hood", "w2501_night_muffler"]
+    }
+  }
+}

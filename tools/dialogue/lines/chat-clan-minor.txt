@@ -1,0 +1,266 @@
+# Small talk from the ten minor clans: families without walls, living among civilians and clanless shinobi.
+
+# -- Shiranui ------------------------------------------------------------------------------------------
+
+## chat.clan  clan=shiranui  fn=worldbuild
+Our house is the one by the gate barracks with the target wall out front. The wall has more holes than wall by now.
+Every Shiranui learns senbon before chopsticks. My little brother eats noodles by spearing them one at a time.
+We serve in the Hokage's guard, mostly. It's quiet work: a lot of standing and a little of being very fast.
+Clan day is a throwing contest by the barracks. The guard comes to watch, and the Hagane bet on the outcome.
+Yes, we keep a senbon in our mouths. No, it isn't sharp at that end. Everybody asks.
+The Namiashi and we share the guard rotation, and we'll never agree on who's better at it. Keeps both houses sharp.
+
+## chat.clan  clan=shiranui  fn=reveal_character
+I smile easy and worry hard. Somebody in the guard has to look calm, and it may as well be me.
+I can hit a falling leaf with a senbon at twenty paces. Parties, you'd think I'd be popular. Mostly people back away.
+I nap standing up. Fourteen years of guard duty will do that.
+My father taught me one thing about guarding: the dull hour is the dangerous one.
+
+## chat.clan  clan=shiranui  fn=hook
+Somebody keeps moving the targets on our wall a hand's width to the left every night. My aim's fine; my patience isn't.
+
+# -- Morino --------------------------------------------------------------------------------------------
+
+## chat.clan  clan=morino  fn=worldbuild
+Our house is near the police station, with bars on the windows. The bars are for the neighbours' peace of mind, not ours.
+Morino work as interrogators. People cross the street when we pass in our greatcoats. Then they come to us for advice on their landlords.
+At home we're gentle. My grandmother grows violets on the windowsill behind the bars and talks to them every morning.
+The police and we disagree over who holds a prisoner and for how long. We argue over it at tea. The tea is very polite.
+Clan day is a long dinner with no questions at the table. That's the rule: one night a year, nobody asks anybody anything.
+Every Morino coat has the same deep inner pocket. Children fill it with sweets before they're old enough to fill it with notes.
+
+## chat.clan  clan=morino  fn=reveal_character
+I can tell when someone's lying by how they hold a cup. It ruins dinner parties.
+The village thinks we're frightening. I think honesty is frightening, and we just don't look away from it.
+I keep canaries. Three of them. They sing whenever I come home, and it's the best part of my day.
+I've never raised my voice in an interview. Quiet is far more effective. It works on my children too.
+
+## chat.clan  clan=morino  fn=hook
+A woman from the river district keeps coming to our gate asking for news of her brother. We've no word, but she should hear that from someone kind.
+
+# -- Umino ---------------------------------------------------------------------------------------------
+
+## chat.clan  clan=umino  fn=worldbuild
+Ask any shopkeeper on the Academy streets who taught them to write, and nine times in ten the answer is an Umino.
+Our houses are on the Academy streets, so close you can hear the morning roll call from our kitchens.
+Clan day is teachers' day. Former pupils leave notes on our doorsteps, and some of them are very rude about our handwriting.
+We tie our hair back with a brush cord, every one of us. It started as a joke and became a family mark.
+There's always a pile of marking on an Umino table. We eat around it.
+Umino don't take holidays in exam week. We don't take holidays much at all, if I'm honest.
+
+## chat.clan  clan=umino  fn=reveal_character
+I can hear a pencil stop moving from across a classroom. It means the child is either stuck or about to throw it.
+I keep a box of every note a pupil has ever given me. The box is three boxes now.
+I'm stretched thin. Everyone's children are my children for four hours a day, and then they're mine again in my dreams.
+Patience isn't a gift. It's a muscle, and mine is very tired on Fifth Days.
+
+## chat.clan  clan=umino  fn=hook
+One of the pupils has stopped coming to class. The family hasn't said why, and the child's desk is very tidy now.
+
+# -- Haruno --------------------------------------------------------------------------------------------
+
+## chat.clan  clan=haruno  fn=worldbuild
+Our shop is on the market street, the one with the pink awning. You can't miss it, and believe me, plenty of people have tried.
+The Haruno sold dry goods for four generations, and then the children started becoming ninja. The shop survives anyway.
+Every Haruno works the counter at least one Market Day a month, ninja or not. Even the Chunin.
+Our garden is small and very neat. The cherry tree in it was planted the year the shop first opened.
+We buy shelves and crates from the Kinoshita yard every season. They complain about our prices; we complain about their splinters.
+The anniversary sale is our clan day, more or less. The whole family wears pink aprons and the street eats free sweets.
+
+## chat.clan  clan=haruno  fn=reveal_character
+I can count change faster than most shinobi can throw a kunai. Different skill, same reflexes.
+I love the shop and I love the field, and I've never been able to choose. So I do both, badly, and happily.
+I keep the books in a pink ledger. It's not a family rule; I just think numbers deserve a nice home.
+Bargaining is a conversation. The best customers are the ones who haggle back and leave smiling.
+
+## chat.clan  clan=haruno  fn=commerce
+Haruno prices are fair and we'll tell you so twice. Rice crackers two ryo, tea tins ten, and the cushions are on sale this week.
+
+# -- Namiashi ------------------------------------------------------------------------------------------
+
+## chat.clan  clan=namiashi  fn=worldbuild
+Our dojo near the training grounds is small, but the floor is polished like water. That's on purpose.
+They call us wave-foot. Every Namiashi learns to cross the river stepping stones without a splash before they can hold a sword.
+We serve in the Hokage's guard beside the Shiranui and the Gekko. Three families, three styles, and one long argument.
+The Gekko say they move like moonlight. We say moonlight doesn't move at all, it just sits there looking pale.
+Clan day is a footwork contest on the river stones. Whoever splashes first serves dinner.
+Barefoot in the dojo, sandals on the street, and never shoes. Shoes make you forget where the ground is.
+
+## chat.clan  clan=namiashi  fn=reveal_character
+I can't walk across a room without counting my steps. It's a family habit, and it makes me very punctual.
+I fell in the river eleven times before I crossed it dry. My grandfather made me count every one out loud.
+I'm quiet, I know. Swordsmen of my family speak with their feet.
+I envy the Gekko their moon platform. I'd never tell them. Please don't.
+
+## chat.clan  clan=namiashi  fn=hook
+Somebody has shifted one of the river stones our children train on. Just a little, just enough to make the youngest slip.
+
+# -- Hagane --------------------------------------------------------------------------------------------
+
+## chat.clan  clan=hagane  fn=worldbuild
+Hagane guard the gate and run the messages. If anything happens in the Leaf, we've heard about it by lunch.
+Every Hagane name means some kind of metal. My cousins are Iron, Copper and a very unlucky one named after tin.
+Our family shop is the metalworker's beside the forge on the market street. Hinges, locks, gate fittings, the solid stuff.
+The gate's boring for weeks and then it isn't for an hour. A Hagane learns to be ready for that hour.
+The Tobari take the wall at night and we take it by day. We leave each other notes in the gate booth, mostly about the kettle.
+A bandaged nose is practically our family crest. Doors, maces, the odd cart. We bump into things at speed.
+
+## chat.clan  clan=hagane  fn=reveal_character
+I can't keep a secret, so nobody tells me any. It's very freeing.
+I carry a mace because my grandmother did. It's heavy, ugly and I wouldn't trade it for any blade in the Leaf.
+My favourite sound is the gate bell at dawn. Means everyone made it through the night.
+I know every carter by the sound of their wheels. That one squeaks, that one wobbles, that one owes me a peach.
+
+## chat.clan  clan=hagane  fn=hook
+A message on the relay came back with the seal broken. Nobody on the route admits to dropping it, and I've asked everybody twice.
+
+# -- Kinoshita -----------------------------------------------------------------------------------------
+
+## chat.clan  clan=kinoshita  fn=worldbuild
+Our yard on the carpenters' lane raised half the houses in the Leaf and rebuilt the other half after storms.
+Every piece of furniture in the furniture shop comes from our benches. If it wobbles, it isn't ours.
+The yard opens with the sound of six planes on cedar at dawn. The neighbours set their clocks by it.
+Clan day is a roof-raising. We pick a house that needs a new roof and the whole family puts one on in a day.
+The Haruno buy our crates and shelves every season. We grumble about their bargaining; they grumble about splinters.
+A Kinoshita child's first piece is a stool. Mine still stands in the yard, and nobody's allowed to sit on it.
+
+## chat.clan  clan=kinoshita  fn=reveal_character
+I can tell what wood a beam is by tapping it with a knuckle. My knuckles are mostly scar.
+I hate nails. A joint that needs a nail is a joint that wasn't cut right.
+I build furniture for other people's homes and my own flat is three crates and a cushion. Isn't that always the way?
+I like the smell of sawdust better than flowers. My spouse buys me cedar shavings for birthdays.
+
+## chat.clan  clan=kinoshita  fn=hook
+A cheap crew from outside the lane is underbidding us on every roof. Their joints won't last a winter, and someone will get hurt.
+
+# -- Tsuchigumo ----------------------------------------------------------------------------------------
+
+## chat.clan  clan=tsuchigumo  fn=worldbuild
+Our stone houses are at the quarry edge of the village. Stone stays cool in summer and stubborn in winter, like us.
+The shrine up the slope is ours. The shimenawa ropes over its gate are renewed every year, and the knots are older than the Leaf.
+The spider on our cloth is a guardian, not a threat. Visitors flinch at it; children of the family pat it for luck.
+We live in the Leaf and we keep our own counsel. That isn't coldness. A mountain doesn't explain itself either.
+Offerings at our shrine are simple: rice, salt and a stone from the quarry. Choose the stone carefully.
+Clan day is the rope renewal. Every member twists one strand, so the rope has all of us in it.
+
+## chat.clan  clan=tsuchigumo  fn=reveal_character
+I can split a slab along its grain with one tap. It's the only party trick I have, and I'm proud of it.
+I came down from the shrine to live in the village when I was twelve. It still feels too loud, and I still like it.
+I don't talk about the shrine. That isn't secrecy; it's just that some things lose something when you describe them.
+The quarry dust gets into everything. My tea tastes of stone and I've grown to like it.
+
+## chat.clan  clan=tsuchigumo  fn=hook
+Somebody left the wrong offering at the shrine gate: a coin and a scrap of cloth. The elders are uneasy, and they don't say why lightly.
+
+# -- Suzuran -------------------------------------------------------------------------------------------
+
+## chat.clan  clan=suzuran  fn=worldbuild
+Our houses are beside the hospital herb gardens. The drying racks run along every fence, and the whole street smells like tea.
+Lily of the valley is our flower. It's beautiful and every part of it is poison. People find that a little too fitting.
+Suzuran can drink what would make you very ill. We were raised on bitter brews, which explains our faces.
+The hospital buys our salves and the Yamanaka buy our cuttings. Then they undercut us at the market. We sigh and carry on.
+Clan day, we brew the year's first tonic and everyone in the family takes one cup. Nobody enjoys it.
+A Suzuran apprentice spends a year naming plants before touching a pestle. The poisonous ones are named twice.
+
+## chat.clan  clan=suzuran  fn=reveal_character
+I've tasted every plant in the garden, including the ones on the second shelf. My grandmother says that's why I'm so calm.
+I'm a healer who knows ten ways to stop a heart. The two go together more than people like to think.
+I love the drying room at night. Everything smells of summer, even in the snow.
+I've never been ill a day in my life. I take no credit; I've just been mildly poisoned for thirty years.
+
+## chat.clan  clan=suzuran  fn=hook
+The hospital's run short on fever root, and the clan's patch by the river was dug up. Not picked. Dug, roots and all.
+
+# -- Tobari --------------------------------------------------------------------------------------------
+
+## chat.clan  clan=tobari  fn=worldbuild
+Our houses are on the dark lanes behind the wall, shuttered and padded. You can shout in our parlour and the street won't hear.
+Tobari keep the night watch and the lanterns. If a lamp's lit on the wall after dark, one of us lit it.
+We walk softly. Every Tobari child learns to cross a floor of dry leaves without a sound before they learn to run.
+The Hagane take the day and we take the night. Their kettle is never where we left it.
+Clan day is the lantern-keepers' round. Every lantern in the village is cleaned, trimmed and relit by one of us in a single night.
+We wear mufflers all year round. Partly for the cold, mostly for the quiet.
+
+## chat.clan  clan=tobari  fn=reveal_character
+I sleep in the afternoons with a pillow over my head. The village is very loud when you're used to the night.
+Nobody thanks the night watch. That's fine. The thanks is waking up and finding the village still there.
+I can hear a moth land. It's not a technique, just years of listening.
+I've seen more sunrises than anyone I know, and I've never once been awake for a breakfast.
+
+## chat.clan  clan=tobari  fn=hook
+Three lanterns along the north wall keep going out before midnight. The wicks are trimmed, the oil's full, and still.
+
+# -- more from each family -------------------------------------------------------------------------------
+
+## chat.clan  clan=shiranui  fn=worldbuild
+Our family keeps its senbon in bamboo cases, one per member, hung by the door. Count the cases and you know who's home.
+The gate barracks cook feeds us for free on festival nights. We guard the door; it's a fair trade.
+
+## chat.clan  clan=morino  fn=worldbuild
+The bars on our windows were put up by a great-grandfather nobody remembers liking. We've kept them; the violets climb them nicely.
+A Morino greatcoat is passed down, not bought. Mine has three generations of mending in the lining.
+
+## chat.clan  clan=umino  fn=worldbuild
+Every Umino house has a slate by the door. Visitors write their name; we correct the spelling. We can't help it.
+The family meets for dinner on the last day of term. Twelve teachers at one table, and nobody is allowed to mention a pupil.
+
+## chat.clan  clan=haruno  fn=worldbuild
+The shop bell is the one my great-grandmother hung on the first day. It's cracked, and we'd never replace it.
+Haruno children grow up stacking crates. That's why so many of us made Genin; our arms were ready before our jutsu.
+
+## chat.clan  clan=namiashi  fn=worldbuild
+The dojo floor is oiled every new moon. The whole family slides about in socks for a day afterwards, pretending it's training.
+Our swords are short and light. A Namiashi blade follows the feet, never the other way round.
+
+## chat.clan  clan=hagane  fn=worldbuild
+Clan day, every Hagane hammers one nail into the beam over the shop door. The beam's more iron than wood by now.
+We swap gate gossip at dinner like other families swap recipes. My grandfather keeps score of who heard it first.
+
+## chat.clan  clan=kinoshita  fn=worldbuild
+The yard keeps a plank from every house we've built, labelled and stacked in the loft. The loft is groaning.
+Kinoshita apprentices sweep the shavings for a year before they touch a saw. The yard is very clean and the apprentices are very bored.
+
+## chat.clan  clan=tsuchigumo  fn=worldbuild
+Our houses have no wood in the walls at all. A fire can't touch us, and a draught can't find a way in.
+The quarry bell rings at noon so the cutters stop for rice. The family eats on the same flat stone it always has.
+
+## chat.clan  clan=suzuran  fn=worldbuild
+Our kitchen and our workroom share a wall, and the jars are labelled very clearly. Visitors still check before they take a biscuit.
+Suzuran gardens are planted by the moon. Roots at new moon, leaves at full, and seeds whenever the old folks stop arguing.
+
+## chat.clan  clan=tobari  fn=worldbuild
+Our breakfast is at sunset. Guests who come at dawn find the family yawning over bowls of soup.
+The lantern-keepers' oil is stored in our cellar. The whole lane smells faintly of it, and nobody here notices anymore.
+
+# -- to a clanless orphan -----------------------------------------------------------------------------------
+
+## chat.clan  clan=shiranui  clan_status=clanless  fn=worldbuild,deepen_bond
+No clan? Half the guard's clanless, {player}, and they throw as well as any of us. Come try the target wall.
+
+## chat.clan  clan=morino  clan_status=clanless  fn=worldbuild,reveal_character
+I asked about you, out of habit. Clanless, the Hokage's apartment, top marks for turning up on time. That's a cleaner file than most.
+
+## chat.clan  clan=umino  clan_status=clanless  fn=worldbuild,deepen_bond
+Plenty of my best pupils had no clan to lean on. They leaned on each other, and on their instructors. You can lean on us too.
+If nobody at home checks your homework, bring it to an Umino door. Somebody's always marking anyway.
+
+## chat.clan  clan=haruno  clan_status=clanless  fn=worldbuild,deepen_bond
+We're hardly a great clan ourselves, {player}. Shopkeepers with ninja children. You'd fit right in at our counter.
+
+## chat.clan  clan=namiashi  clan_status=clanless  fn=worldbuild,reveal_character
+You walk light for someone nobody taught. No family footwork, just your own. I'd like to see what the river stones make of it.
+
+## chat.clan  clan=hagane  clan_status=clanless  fn=worldbuild,deepen_bond
+Clanless kid in the Hokage's blocks, top of the gate gossip for a week. Don't worry, it was all nice. Mostly.
+
+## chat.clan  clan=kinoshita  clan_status=clanless  fn=worldbuild,deepen_bond
+On your own in a flat with nothing in it? Come by the yard. We always have an offcut stool going spare.
+
+## chat.clan  clan=tsuchigumo  clan_status=clanless  fn=worldbuild,reveal_character
+A child without a clan, alone in a loud village. We came down from the mountain the same way. It gets easier.
+
+## chat.clan  clan=suzuran  clan_status=clanless  fn=worldbuild,deepen_bond
+Living alone, are you eating properly? I can tell from here you're not. Take this tea home; it isn't poison, I promise.
+
+## chat.clan  clan=tobari  clan_status=clanless  fn=worldbuild,reveal_character
+I've seen your window lit late from the wall. Alone in the blocks, I'd guess. Sleep, {player}. The watch has the night.

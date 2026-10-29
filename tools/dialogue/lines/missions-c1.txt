@@ -1,0 +1,534 @@
+# Board missions, C-rank (part 1): the missions team's templates, one block per template.
+# Same conventions as missions-d1.txt: job=mission_desk is the clerk, untagged lines the client.
+# C-ranks go out by squad and often leave the village; fights never kill.
+#! kind: cycle
+#! fn: quest
+
+# -- bandit_clearing: a camp robbing the farms. Slots: client (farmer), camp, lookout, hostages ----
+
+## mission.c.bandit_clearing.title
+Clear the Bandit Camp
+
+## mission.c.bandit_clearing.brief  job=mission_desk  fn=quest,guide
+C-rank. A bandit camp at {camp} has been robbing the outer farms. {client} brought the complaint. Clear it out. {pay}.
+
+## mission.c.bandit_clearing.brief  fn=quest,guide
+They come down from {camp} every few nights. Took my seed rice, my neighbour's ox, half the village's tools.
+There's a lookout at {lookout}. Get past that and the rest are in the hollow.
+
+## mission.c.bandit_clearing.accept
+Thank you. I'll tell the other farms help is coming. They'll sleep tonight.
+Good. Be careful. They're rough, and there are more of them than you'd think.
+
+## mission.c.bandit_clearing.decline
+Then we keep sitting up with pitchforks every night. Until something happens.
+No? We'll bar the doors and hope. It hasn't worked yet.
+
+## mission.c.bandit_clearing.progress
+Did you see the lookout? Are they still up there?
+Smoke from the hollow. They're cooking. That means they're all in.
+
+## mission.c.bandit_clearing.success
+The camp's empty and our tools are back. You've given the farms their nights back.
+Is that my ox? It is! You found my ox! Thank you, all of you.
+
+## mission.c.bandit_clearing.fail
+They're still up there. We'll keep the lamps lit and the dogs loose.
+It didn't work. They'll be angrier now. I'm not blaming you. I'm just afraid.
+
+## mission.c.bandit_clearing.report  job=mission_desk
+Bandit camp cleared. The farms outside the wall have sent a thank-you in the form of a very large radish. Logged.
+C-rank done, everyone back on their own feet. That's the result I like best. Paid.
+
+## mission.c.bandit_clearing.twist.hostages  fn=quest,react
+There are people tied up by the fire. Farmhands. Get them clear before the fighting reaches them.
+
+## mission.c.bandit_clearing.twist.leader_flees  fn=quest,react
+The leader's running! Straight for the hills, leaving the rest behind. After them!
+
+## mission.c.bandit_clearing.twist.desperate_farmers  fn=quest,react
+These aren't bandits. Look at their hands, their boots. Farmers, from a village that burned. Starving.
+They're thin as rakes and fighting with hoes. Whatever they've done, these are farmers, not raiders.
+
+## mission.c.bandit_clearing.choice.farmers
+Starving farmers, not hardened thieves. Talk them down and show mercy, or arrest them all?
+
+# -- bear: on the outer training grounds. Slots: client (groundskeeper), ground, honey, beast -----
+
+## mission.c.bear.title
+Bear on the Outer Training Grounds
+
+## mission.c.bear.brief  job=mission_desk  fn=quest,guide
+C-rank. A bear has moved into {ground} and won't leave. {client} wants it gone before the squads come back. {pay}.
+
+## mission.c.bear.brief  fn=quest,guide
+Big, brown, and sitting in the middle of {ground} like it pays rent. Nobody can train with that out there.
+Move it on, back to the hills. Hurt it only if you must. It's just a bear doing bear things.
+
+## mission.c.bear.accept
+Good. Don't run if it charges. Or do. I'm not a bear expert.
+Thank you. I'll keep everyone off the grounds till you're back.
+
+## mission.c.bear.decline
+Then the squads train in the village yards for another week. Crowded and grumpy.
+No? Fine. The bear doesn't mind waiting. It's very patient.
+
+## mission.c.bear.progress
+Is it still by the target posts? It likes the target posts.
+Claw marks on the fence. Fresh ones. It's close.
+
+## mission.c.bear.success
+Gone, back to the hills, and nobody hurt. Including the bear. Good.
+The grounds are clear. The squads can come back tomorrow. Thank you.
+
+## mission.c.bear.fail
+Still there. Still eating the straw dummies. We'll try again.
+It won't budge. Come back when you've rested.
+
+## mission.c.bear.report  job=mission_desk
+Bear moved on from the outer grounds. The training squads are delighted. The bear, less so. Logged.
+C-rank, done. No one mauled. I like a report with no hospital forms attached.
+
+## mission.c.bear.twist.honey_trail  fn=quest,react
+{client}'s beehives at {honey}. A bear will follow honey anywhere. Even away from here.
+
+## mission.c.bear.twist.cubs  fn=quest,react
+Cubs in the bushes. Two of them. And their mother knows exactly how close you are.
+
+# -- beast_hunt: a giant boar. Slots: client (farmer), fields, lair, beast -----------------------
+
+## mission.c.beast_hunt.title
+Giant Boar in the Fields
+
+## mission.c.beast_hunt.brief  job=mission_desk  fn=quest,guide
+C-rank. A giant boar is wrecking the farms at {fields}. Track it to its wallow and stop it. {client} is desperate. {pay}.
+
+## mission.c.beast_hunt.brief  fn=quest,guide
+It's the size of an ox. Tore up three fields and a fence. My children won't go outside.
+The tracks lead towards {lair}. Mud, mostly. And broken saplings.
+
+## mission.c.beast_hunt.accept
+Thank you. Its tusks are as long as my arm. Please, be careful.
+Good. Bring it down or drive it off. Either way, I can plant again.
+
+## mission.c.beast_hunt.decline
+Then we lose the spring crop. We've lost worse. Not much worse.
+No? I'll build the fence higher. It'll break it again.
+
+## mission.c.beast_hunt.progress
+That's its track. See how deep? Heavier than a horse.
+The smell from the wallow. You can't miss it.
+
+## mission.c.beast_hunt.success
+The fields are safe. The children can play outside again. Thank you.
+It's done. I can plant tomorrow. I didn't think I'd be able to say that.
+
+## mission.c.beast_hunt.fail
+It's still out there, and angry now. We'll keep the children in.
+Not today. We'll mend what we can and wait.
+
+## mission.c.beast_hunt.report  job=mission_desk
+Boar dealt with. The farmer sent a basket of turnips. I'm told that's the highest honour. Logged.
+C-rank, done. That's a field that will feed people this summer. Good work.
+
+## mission.c.beast_hunt.twist.mother_with_young  fn=quest,react
+Piglets. A whole litter, tucked behind her. She's a mother, and she's been driven out of her own forest.
+
+## mission.c.beast_hunt.twist.two_beasts  fn=quest,react
+A second set of tracks crosses the first. Bigger. There are two of them.
+
+## mission.c.beast_hunt.choice.young
+A mother with piglets, driven from her forest. Drive her off somewhere safe, or fight to end the threat?
+
+# -- wolf_pack: livestock taken at night. Slots: client (farmer), pen, den, pack, camp ----------
+
+## mission.c.wolf_pack.title
+Wolves at the Outer Farms
+
+## mission.c.wolf_pack.brief  job=mission_desk  fn=quest,guide
+C-rank. Wolves are taking livestock from the outer farms at night. Guard {pen}, then find the den. {pay}.
+
+## mission.c.wolf_pack.brief  fn=quest,guide
+Three goats and a calf this week. They come after midnight, quiet as smoke. My dogs are terrified.
+Watch {pen} tonight. When they come, follow them home. The den's somewhere above {den}.
+
+## mission.c.wolf_pack.accept
+Thank you. I'll leave a lamp in the window. Don't let it fool you, I'll be hiding under the bed.
+Good. Take my lantern. And this stick. It's a good stick.
+
+## mission.c.wolf_pack.decline
+Then we lose another goat tonight. And tomorrow.
+No? We'll bring the animals into the house. It's crowded, but it's safe.
+
+## mission.c.wolf_pack.progress
+Did you hear them? Out past the stream. Howling.
+Tracks in the frost. Five, maybe six of them.
+
+## mission.c.wolf_pack.success
+Not a single animal taken last night. First time in weeks. Thank you.
+The wolves are gone from the hills above us. I don't know how you did it. Thank you.
+
+## mission.c.wolf_pack.fail
+Another pen broken. We'll keep watch ourselves. It's all we can do.
+They're still out there. Come back when you're ready. Please.
+
+## mission.c.wolf_pack.report  job=mission_desk
+Wolf trouble at the outer farms, settled. You look like you've been up all night. Because you have. Logged.
+C-rank, done. The farmers say the hills are quiet again. Paid.
+
+## mission.c.wolf_pack.twist.driven_out  fn=quest,react
+Smoke on the hills above the den. Campfires. A bandit gang's fires drove the wolves down to the farms.
+
+## mission.c.wolf_pack.twist.alpha  fn=quest,react
+That wolf at the front. It's the size of a pony. The rest of the pack follow it like a shadow.
+
+# -- noble_child: a lord's child for a day. Slots: client (noble guest), inn, market -------------
+
+## mission.c.noble_child.title
+Bodyguard for a Noble Child
+
+## mission.c.noble_child.brief  job=mission_desk  fn=quest,guide
+C-rank. A visiting noble, {client}, wants a squad to guard their child for a day in the village, from {inn} to {market}. {pay}.
+
+## mission.c.noble_child.brief  fn=quest,guide
+My child wants to see the village. The market, the shops, the Hokage Rock. Keep them safe and keep them happy.
+We stay at {inn}. Collect the child there at nine. Return by sunset, and not a moment later.
+
+## mission.c.noble_child.accept
+Very good. My child is curious, and has no sense of danger. That is your job.
+Excellent. Do try to make it fun. The last guards were dreadfully dull.
+
+## mission.c.noble_child.decline
+How disappointing. We will tour the village with our own guards, I suppose.
+I see. The Leaf is busier than I was told.
+
+## mission.c.noble_child.progress
+Is my child enjoying the day? Good. And safe? Better.
+They wrote to me already. "Bought a wooden kunai." I did not approve that.
+
+## mission.c.noble_child.success
+Home safe and full of stories. My child says the Leaf is the best place in the world. Thank you.
+A happy day and not a hair out of place. You have my gratitude, and my good word with your Hokage.
+
+## mission.c.noble_child.fail
+My child is safe, but it was too close. I expected better from the Leaf.
+We will be leaving early. I'm sure you understand.
+
+## mission.c.noble_child.report  job=mission_desk
+Noble child, returned in one piece. {client} sent a very formal letter. Mostly polite. Logged.
+Bodyguard C-rank, done. A happy child and a calm parent. Diplomacy on legs. Good work.
+
+## mission.c.noble_child.twist.runs_away  fn=quest,react
+The child was right here a second ago. Gone. Slipped off to see the village alone.
+
+## mission.c.noble_child.twist.kidnap_attempt  fn=quest,react
+Those men by the stall have been following since the inn. Someone's paid them to take the child.
+
+# -- contest_thief: two squads, one burglar. Slots: client (clerk), rooftops, hideout, rival_squad
+
+## mission.c.contest_thief.title
+Race for the Cat Burglar
+
+## mission.c.contest_thief.brief  job=mission_desk  fn=quest,guide
+C-rank, contested. A cat burglar's working {rooftops}. I've sent two squads. First to bring them in gets the pay: {pay}.
+
+## mission.c.contest_thief.brief  fn=quest,guide
+Six houses this month, always the rooftops, always gone before the dogs bark. The other squad left ten minutes ago.
+The burglar's hideout is somewhere around {hideout}. Nobody's found it. Yet.
+
+## mission.c.contest_thief.accept
+Good. Run. The other squad is already out the door.
+Right. Bring them in alive, unbruised if possible, and before the others do.
+
+## mission.c.contest_thief.decline
+Then the other squad takes it uncontested. Easy money for them.
+No? I'll tell them they've got the whole field. They'll be smug.
+
+## mission.c.contest_thief.progress
+Sighted on the bakery roof ten minutes ago. Heading east.
+The other squad came past here at a sprint. They're ahead of you.
+
+## mission.c.contest_thief.success
+Caught, and before the other squad! The rooftops are safe again.
+You beat them to it. They'll be sulking for a week.
+
+## mission.c.contest_thief.fail
+The burglar's slipped away, and the other squad's still looking. Not today.
+The other squad got there first. Shake hands. It's still the Leaf.
+
+## mission.c.contest_thief.report  job=mission_desk
+Cat burglar, in custody. And you beat the other squad. I'm not supposed to have favourites. I do. Logged.
+Contest closed. The rooftops are quiet. Pay's yours.
+
+## mission.c.contest_thief.twist.rival_trick  fn=quest,react
+That tip about the east alley was {rival_squad}'s doing. Wrong street. Deliberately.
+
+## mission.c.contest_thief.twist.team_up  fn=quest,react
+The burglar's too quick for either squad alone. {rival_squad} are nodding. Work together, split the credit.
+
+# -- courier_relay: a sealed message to the border. Slots: client (clerk), post, pass, scouts ----
+
+## mission.c.courier_relay.title
+Sealed Message to the Border Post
+
+## mission.c.courier_relay.brief  job=mission_desk  fn=quest,guide
+C-rank. Rush a sealed message to {post} within the day. Through {pass}, no stops. {pay}.
+
+## mission.c.courier_relay.brief  fn=quest,guide
+Sealed, and stays sealed. Hand it to the post commander at {post}. Nobody else.
+Take the pass at {pass}. It's the fastest way, which is also why it's the one people watch.
+
+## mission.c.courier_relay.accept
+Good. Here's the case. It doesn't leave your body until you're at the post.
+Right. Run light, eat on the move. Sleep when you're back.
+
+## mission.c.courier_relay.decline
+Then I send it with the next squad and hope it's not too late.
+No? It'll have to wait. The border hates waiting.
+
+## mission.c.courier_relay.progress
+At the pass already? Good time. Keep moving.
+The seal's still whole? Good. Don't stop to look at it every mile.
+
+## mission.c.courier_relay.success
+Delivered, sealed, inside the day. The post commander sends thanks.
+Clean run. Exactly how a courier mission should go.
+
+## mission.c.courier_relay.fail
+Too late for it to matter. We'll find another way.
+The message didn't get through. Come back and we'll talk about what happened.
+
+## mission.c.courier_relay.report  job=mission_desk
+Courier run, done. The border post says the seal was intact and the runners looked exhausted. Both good signs. Logged.
+Message delivered on time. Go and sleep. You've earned that before the pay.
+
+## mission.c.courier_relay.twist.interceptors  fn=quest,react
+Two figures at the pass, waiting, watching the road. Scouts, and they know exactly what you're carrying.
+
+## mission.c.courier_relay.twist.wait_answer  fn=quest,react
+The commander wants you to wait. There's an answer to carry back, and it's being written now.
+
+# -- border_delivery: medicine to the border village. Slots: client (medic), healer, road, hideout
+
+## mission.c.border_delivery.title
+Medicine for the Border Village
+
+## mission.c.border_delivery.brief  job=mission_desk  fn=quest,guide
+C-rank, two days. Medicine and supplies for the healer at {healer}, by the hill road at {road}. {pay}.
+
+## mission.c.border_delivery.brief  fn=quest,guide
+Fever remedies, bandages, a crate of salves. The border village's healer is nearly out of everything.
+The crates are fragile and the road at {road} is rough. Slow on the hills, quick on the flat.
+
+## mission.c.border_delivery.accept
+Thank you. There are people waiting on this. Real people. Children.
+Good. The cart's loaded. The horse is called Biscuit. Don't ask me why.
+
+## mission.c.border_delivery.decline
+Then I'll send it with a trader and pray it arrives.
+No? I'll wait for another squad. The healer can't wait long.
+
+## mission.c.border_delivery.progress
+Crates all still roped? Check the knots at every stop.
+Halfway. The healer will have sent someone to watch the road for you.
+
+## mission.c.border_delivery.success
+Every crate delivered. The healer wrote to say three fevers broke the first night.
+It got there. All of it. You've no idea how many people that helps.
+
+## mission.c.border_delivery.fail
+Not everything arrived. The healer will make do. They always do, out there.
+It didn't get through. We'll send another cart. Thank you for trying.
+
+## mission.c.border_delivery.report  job=mission_desk
+Medical delivery to the border, done. The healer sent a letter. It's mostly gratitude and a list of what to send next. Logged.
+C-rank, done. That's medicine where it was needed. The best kind of mission.
+
+## mission.c.border_delivery.twist.stolen  fn=quest,react
+The cart's lighter. You turned your back to water the horse and two crates are gone.
+
+## mission.c.border_delivery.twist.toll  fn=quest,react
+Thugs on the only bridge, with a sign and a box. A "toll", they say. For crossing their bridge.
+
+## mission.c.border_delivery.twist.storm  fn=quest,react
+The sky's gone black over the pass. Storm. Get the cart under the overhang and wait it out.
+
+## mission.c.border_delivery.choice.toll
+Pay the thugs' toll and keep the medicine moving, or fight your way across the bridge?
+
+# -- kiln_delivery: pottery to the border market. Slots: client (the kiln family), kiln, market, road
+
+## mission.c.kiln_delivery.title
+Kiln Pottery to the Border Market
+
+## mission.c.kiln_delivery.brief  job=mission_desk  fn=quest,guide
+C-rank, two days. The kiln family's best pottery from {kiln} to the market at {market}, unbroken. {pay}.
+
+## mission.c.kiln_delivery.brief  fn=quest,guide
+This is a year's best work. Packed in straw, roped in crates. Not one chip, please, or it's worthless.
+The road at {road} has a reputation. Thieves know what good pottery fetches at the border.
+
+## mission.c.kiln_delivery.accept
+Thank you. Drive the cart like it's carrying eggs. Because it might as well be.
+Good. If anyone asks what's in the crates, say turnips.
+
+## mission.c.kiln_delivery.decline
+Then we miss the market. A year's work sits in the shed.
+No? I'll wait for the next squad. The market won't wait long.
+
+## mission.c.kiln_delivery.progress
+Still ringing true when you tap the crates? Good.
+Halfway to {market}. Slow on the downhill.
+
+## mission.c.kiln_delivery.success
+Every piece arrived whole. They sold out by noon on the first day. Thank you.
+Not a crack. My grandmother would have hugged you. I might.
+
+## mission.c.kiln_delivery.fail
+Broken. Half of it. A year's work in shards on the road.
+It didn't reach the market. We'll start again. Potters always start again.
+
+## mission.c.kiln_delivery.report  job=mission_desk
+Pottery delivered whole. That's harder than any fight, if you ask me. Logged.
+C-rank, done. {client} says the market bought every piece. Good work.
+
+## mission.c.kiln_delivery.twist.ambush  fn=quest,react
+Rope across the road and figures in the trees. Thieves, and they know what's under that straw.
+
+## mission.c.kiln_delivery.twist.rival_potter  fn=quest,react
+A rival workshop's master is shouting across the market: the glaze on these pots was stolen from them.
+
+# -- outpost_supply: up to a hill outpost. Slots: client (a Chunin), outpost, trail, raiders -----
+
+## mission.c.outpost_supply.title
+Supplies to the Hill Outpost
+
+## mission.c.outpost_supply.brief  job=mission_desk  fn=quest,guide
+C-rank, two days. A cart of supplies to the watch outpost at {outpost}, up the trail at {trail}. {pay}.
+
+## mission.c.outpost_supply.brief  fn=quest,guide
+Rice, oil, bandages and arrows. The outpost has been on short rations for a week.
+The trail at {trail} is steep and narrow. Mind the cart wheels on the switchbacks.
+
+## mission.c.outpost_supply.accept
+Good. The watch up there will be glad to see you. They don't get many visitors.
+Right. Load is checked. Go.
+
+## mission.c.outpost_supply.decline
+Then the outpost tightens its belt another notch. They're used to it.
+No? I'll find a squad that will. Soon, I hope.
+
+## mission.c.outpost_supply.progress
+Switchbacks ahead. Push from the back, pull from the front.
+The outpost will have seen your dust by now.
+
+## mission.c.outpost_supply.success
+Supplies delivered. The watch sends thanks and a request for more pickles next time.
+The outpost is stocked for a month. Good work.
+
+## mission.c.outpost_supply.fail
+The supplies didn't reach the top. The outpost will be hungry.
+Not today. We'll send another cart. Rest first.
+
+## mission.c.outpost_supply.report  job=mission_desk
+Outpost supplied. The Chunin up there wrote "thank you" in very large letters. Logged.
+C-rank, done. A fed outpost is a watchful outpost. Paid.
+
+## mission.c.outpost_supply.twist.outpost_sick  fn=quest,react
+Half the outpost is flat on their mats with fever. The ones still standing are swaying.
+
+## mission.c.outpost_supply.twist.landslide  fn=quest,react
+The cart road's gone. A landslide took it overnight. The crates go up the rest of the way by hand.
+
+# -- dojo_challenge: a wandering swordsman. Slots: client (a Gekko), dojo, swordsman -------------
+
+## mission.c.dojo_challenge.title
+The Signboard Taker
+
+## mission.c.dojo_challenge.brief  job=mission_desk  fn=quest,guide
+C-rank. A wandering swordsman is beating the village's dojos one by one and taking their signboards. {client} wants it stopped. {pay}.
+
+## mission.c.dojo_challenge.brief  fn=quest,guide
+Four dojos beaten. Four signboards taken. A challenge notice was nailed to {dojo} this morning.
+The Gekko don't hire help for swords. But this one is good, and we're tired of losing boards.
+
+## mission.c.dojo_challenge.accept
+Good. Watch the footwork, not the blade. The blade lies. The feet don't.
+Thank you. Bring the signboards home. They mean more than they look.
+
+## mission.c.dojo_challenge.decline
+Then the swordsman takes another board tonight.
+Understood. We'll face it ourselves. We'll lose, but we'll face it.
+
+## mission.c.dojo_challenge.progress
+The challenge notice says sunset. Be there early.
+Not every swordsman is what they seem. Watch the sleeves.
+
+## mission.c.dojo_challenge.success
+The signboards are back on their walls. Every dojo in the Leaf owes you.
+Well fought. The Gekko will remember this.
+
+## mission.c.dojo_challenge.fail
+Another board gone. We'll train harder. That's all we can do.
+Not today. The swordsman is still out there. So are we.
+
+## mission.c.dojo_challenge.report  job=mission_desk
+Dojo challenge, settled. The signboards are home. {client} bowed to me. I didn't know what to do. Logged.
+C-rank, done. The dojos are calling it a fine duel. Pay's here.
+
+## mission.c.dojo_challenge.twist.honourable  fn=quest,react
+The swordsman kneels and lays the blade down. All this was only for a worthy opponent. And now, a request: to be taught.
+
+## mission.c.dojo_challenge.twist.cheater  fn=quest,react
+A glint at the swordsman's sleeve. Needles, and the tips are wet. Poison.
+
+## mission.c.dojo_challenge.choice.talk
+Beaten, the swordsman waits. Take the signboards and send them off, or agree to teach them?
+
+# -- escort_merchant: the east road. Slots: client (trader), bend, camp, waystation, bridge, ford --
+
+## mission.c.escort_merchant.title
+Escort a Trader, East Road
+
+## mission.c.escort_merchant.brief  job=mission_desk  fn=quest,guide
+C-rank, two days. Escort {client} and a cart of goods along the east road to {waystation}. Bandits reported near {bend}. {pay}.
+
+## mission.c.escort_merchant.brief  fn=quest,guide
+Silk, salt and lacquer boxes, all the way to {waystation}. Two days on the east road. I've heard stories about that road.
+We'll camp at {camp} the first night. Then the bridge, then the waystation. Easy, if nothing happens.
+
+## mission.c.escort_merchant.accept
+Good. I walk slowly and talk a lot. You'll get used to both.
+Excellent. I'll pay for the first night's meal at the waystation. A good one.
+
+## mission.c.escort_merchant.decline
+Then I'll go alone. Or not go. Probably not go.
+No? I'll ask another squad. Or hire some muscle in the market. Cheaper, louder.
+
+## mission.c.escort_merchant.progress
+Is that the bend? I always hold my breath at the bend.
+The cart's holding up. The axle grumbles, but it always grumbles.
+
+## mission.c.escort_merchant.success
+The waystation! And every box intact. You're the best escort I've ever paid for.
+We made it. I'll tell every trader on this road to ask for your squad.
+
+## mission.c.escort_merchant.fail
+We lost half the cart. I'm alive, though. That counts for something.
+It didn't go well. I'll turn back. Thank you for keeping me breathing.
+
+## mission.c.escort_merchant.report  job=mission_desk
+Escort to the east waystation, done. {client} sent a bolt of silk for the desk. It's very nice. Logged.
+C-rank complete. Trader safe, goods safe, squad home. That's the whole job.
+
+## mission.c.escort_merchant.twist.bridge_out  fn=quest,react
+The bridge is gone. Washed out. The ford's the only way now, and it's slow and open on both sides.
+
+## mission.c.escort_merchant.twist.night_raid  fn=quest,react
+Movement past the firelight. They've come back, at night, for the cart.
+
+## mission.c.escort_merchant.twist.extra_passenger  fn=quest,react
+A traveller on the road, alone, begging to walk with the cart. For safety, they say.
+
+## mission.c.escort_merchant.choice.captive
+One bandit didn't run. Tied up by the cart, they swear they'll never come back. Hand them over at the waystation, or let them go?

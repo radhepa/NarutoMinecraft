@@ -1,0 +1,125 @@
+# Callbacks for questions/plans.txt: what a resident says later, remembering the player's answer.
+#! fn: callback
+
+## callback.answer.q.plans.shinobi_kind.a1
+A shinobi who protects people. That's what you told me you'd be. I can already see it.
+
+## callback.answer.q.plans.shinobi_kind.a2
+Still aiming to be the strongest? Then you'd better finish that bowl. Strength needs fuel.
+
+## callback.answer.q.plans.shinobi_kind.a3
+The cleverest shinobi in the Leaf, you said. Solve this, then: why does my roof only leak on dry days?
+
+## callback.answer.q.plans.shinobi_kind.a4
+A shinobi who sees the world. When you go, send me a postcard from somewhere with mountains.
+
+## callback.answer.q.plans.why_that.a1
+You said someone you admire set you on your path. Have you told them yet? People like hearing that.
+
+## callback.answer.q.plans.why_that.a2
+You want to prove yourself. To yourself first, I said. I still mean it.
+
+## callback.answer.q.plans.why_that.a3
+"I just know," you said, about your dream. I envy that. I've never just known anything.
+
+## callback.answer.q.plans.why_that.a4
+Hard to explain, your dream. That's all right. I think I understood anyway.
+
+## callback.answer.q.plans.stay_or_travel.a1
+You'd stay in the Leaf your whole life, you said. Good. I'd miss you otherwise.
+
+## callback.answer.q.plans.stay_or_travel.a2
+You want to see the world. I met a traveller from the coast today and thought of you.
+
+## callback.answer.q.plans.stay_or_travel.a3
+Travel, then come home. Your plan. Mine too, if my knees allow.
+
+## callback.answer.q.plans.year_away.a1
+A whole year away, gladly, you said. I'd keep your seat warm. Just come back.
+
+## callback.answer.q.plans.year_away.a2
+Only if your squad came too. Home walks with you, then. I liked that answer.
+
+## callback.answer.q.plans.year_away.a3
+You'd stay rather than go a year. The village is lucky to have someone who wants to stay.
+
+## callback.answer.q.plans.hokage.a1
+Future Hokage! I'm being extra nice to you now, you'll notice. Remember me when you're famous.
+
+## callback.answer.q.plans.hokage.a2
+Too much paperwork, you said about being Hokage. I saw the stacks carried up today. You were right.
+
+## callback.answer.q.plans.hokage.a3
+"Maybe, one day." I still think about your face carved up on the Rock. It suits the stone.
+
+## callback.answer.q.plans.hokage.a4
+Someone better should be Hokage, you said. Be careful. Modest people sometimes end up there anyway.
+
+## callback.answer.q.plans.chunin_hurry.a1
+As soon as you can, you said about Chunin. Don't rush past the good parts on the way.
+
+## callback.answer.q.plans.chunin_hurry.a2
+When you're ready, you said. The vest will keep. I like that you're not in a hurry.
+
+## callback.answer.q.plans.chunin_hurry.a3
+Rank doesn't matter to you, I remember. Rare, in a ninja. Don't let anyone talk you out of it.
+
+## callback.answer.q.plans.ten_years.a1
+Leading a squad in ten years. Be the captain you'd want to follow, I said. Still true.
+
+## callback.answer.q.plans.ten_years.a2
+A ninja who runs a shop someday. I've been thinking what you'd sell. Kunai and pickles?
+
+## callback.answer.q.plans.ten_years.a3
+Out on the road in ten years, you told me. Write. I mean it.
+
+## callback.answer.q.plans.ten_years.a4
+Ten years from now, here with your friends. I'm counting myself in that.
+
+## callback.answer.q.plans.pick_nature.a1
+Fire's your nature, if you got to choose. Mind my eyebrows when you learn it.
+
+## callback.answer.q.plans.pick_nature.a2
+Water, you'd pick. Calm on top, strong underneath. I still think that suits you.
+
+## callback.answer.q.plans.pick_nature.a3
+Wind for you, you said. Felt a breeze earlier and thought of you. Silly, I know.
+
+## callback.answer.q.plans.pick_nature.a4
+Earth or lightning, you couldn't choose. Still torn? The nature ceremony will decide for you.
+
+## callback.answer.q.plans.dream_home.a1
+Your dream home is a big house full of people. When it's built, I want a room.
+
+## callback.answer.q.plans.dream_home.a2
+A quiet place by the river. I walked past a little house by the water today. For sale, too.
+
+## callback.answer.q.plans.dream_home.a3
+Any home will do, so long as it has a kitchen. I respect that more every day.
+
+## callback.answer.q.plans.dream_home.a4
+Still dreaming of a tent, always moving? It's going to rain all week. Think it over.
+
+## callback.answer.q.plans.remembered_for.a1
+You want to be remembered for being kind. You will be. You already are, a little.
+
+## callback.answer.q.plans.remembered_for.a2
+Strong, that's how you want to be remembered. Strong for others, I hope. I think you will be.
+
+## callback.answer.q.plans.remembered_for.a3
+"They always kept their word." That's your stone, you said. I'll make sure it gets carved right. In a hundred years.
+
+## callback.answer.q.plans.remembered_for.a4
+You want to be remembered for making people laugh. Well, you made me laugh this week. That's a start.
+
+## callback.answer.q.plans.first_jutsu.a1
+Your dream jutsu is a flashy one. When you learn it, warn the laundry lines first.
+
+## callback.answer.q.plans.first_jutsu.a2
+A healing jutsu, if you could pick any. The hospital's always looking for helpers, you know.
+
+## callback.answer.q.plans.first_jutsu.a3
+A sneaky jutsu, you said. Is that why I never hear you coming?
+
+## callback.answer.q.plans.first_jutsu.a4
+A jutsu that protects. Of all the jutsu in the scrolls, that's the one you'd pick. I keep remembering that.

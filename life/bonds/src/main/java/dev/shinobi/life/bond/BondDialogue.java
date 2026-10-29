@@ -26,6 +26,16 @@ public final class BondDialogue {
         return keys;
     }
     /**
+     * What they say when a {@code level_up} event reaches a new level with the player ({@code bond.levelup.<n>}, apart
+     * from the level's name in the book, {@code bond.level.<n>}); empty for other events and for ties between residents.
+     */
+    public static List<String> levelUp(BondWorld w, BondEvent e) {
+        if (!e.kind().equals("level_up") || e.who().contains(">")) return List.of();
+        var keys = new ArrayList<String>();
+        both(keys, "bond.levelup." + e.detail(), w.person(e.who()).personality().archetype());
+        return keys;
+    }
+    /**
      * Something they heard or saw about you and haven't brought up yet: the newest fresh secondhand memory, as
      * {@code bond.heard.<act>} (or {@code bond.seen.<act>}). Brought up once; the bond remembers it was said.
      */
@@ -40,6 +50,34 @@ public final class BondDialogue {
         }
         return Optional.empty();
     }
+    /**
+     * A highlight from a hangout at least a week ago, brought up now and then ({@code callback.hangout.<activity>.highlight.<n>}):
+     * at most once every two weeks per person, the newest first.
+     */
+    public static Optional<String> callback(BondWorld w, String who) {
+        var b = w.bond(who);
+        if (b.flags.stream().anyMatch(f -> f.startsWith("callback:") && w.day() - Long.parseLong(f.substring(9)) < 14)) return Optional.empty();
+        var h = b.highlights().reversed().stream().filter(x -> w.day() - x.day() >= 7).findFirst();
+        if (h.isEmpty()) return Optional.empty();
+        b.flags.removeIf(f -> f.startsWith("callback:"));
+        b.flags.add("callback:" + w.day());
+        return Optional.of("callback." + h.get().key());
+    }
+    /**
+     * Something they meant to ask the player, now due ({@code followup.<topic>}: how the exam went, the ritual they
+     * miss); asking shows they care, so it warms the bond a little. Once each.
+     */
+    public static Optional<String> followUp(BondWorld w, String who) {
+        var b = w.bond(who);
+        var f = b.followUps.stream().filter(x -> x.theyAsk() && x.due() <= w.day()).findFirst();
+        if (f.isEmpty()) return Optional.empty();
+        b.followUps.remove(f.get());
+        w.addFriendship(who, .5);
+        return Optional.of("followup." + f.get().topic());
+    }
+    /** Their news, when they would tell it: see {@link LifeEvents#tell}. */
+    public static Optional<String> lifeNews(BondWorld w, String who) { return LifeEvents.tell(w, who); }
+
     private static void both(List<String> keys, String key, String archetype) { keys.add(key + "." + archetype); keys.add(key); }
 
     private BondDialogue() {}

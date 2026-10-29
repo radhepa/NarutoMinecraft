@@ -1,0 +1,45 @@
+# callback.contradict: a resident notices the player has just answered the opposite of something
+# they said before (two answers on opposite poles of one axis). Teasing or thoughtful, never cruel.
+#! fn: callback,reveal_character
+
+## callback.contradict
+Funny. Last time we talked, you said the exact opposite.
+Hm. That's not what you told me before. Changed your mind?
+Wait, didn't you say something quite different a while ago?
+You've turned right around since we last spoke about this. What happened?
+I remember you answering the other way. People change, I suppose.
+Now that's interesting. A month ago you'd have argued against that.
+You're full of surprises. You said the reverse to me not long ago.
+Either you've grown, or you've forgotten what you told me. Which is it?
+That's a change of heart. I won't hold you to the old answer. Much.
+Both answers can't be true. Or maybe they can, on different days.
+
+## callback.contradict  personality=stern
+You said the opposite before. Choose one, and stand by it.
+
+## callback.contradict  personality=playful
+Ha! Caught you! You said the complete opposite last time! Which one's the real you?
+
+## callback.contradict  personality=thoughtful
+You answered differently before. I don't think that's inconsistency. I think you're still deciding.
+
+## callback.contradict  personality=meticulous
+That contradicts what you told me earlier. I noted it at the time. I note it again.
+
+## callback.contradict  personality=gentle
+Oh, you feel differently now? That's all right. Hearts are allowed to change.
+
+## callback.contradict  personality=proud
+That's not what you said before. I respect someone who admits a change of mind. Do you admit it?
+
+## callback.contradict  personality=curious
+Ooh, you've switched sides! What changed? Tell me everything!
+
+## callback.contradict  personality=reserved
+Hm. Different from last time. ...Fine.
+
+## callback.contradict  personality=fiery
+What?! You said the opposite before! Make up your mind! No, wait, tell me why!
+
+## callback.contradict  personality=steadfast
+You told me otherwise before. A person can change their mind. Just change it honestly.
