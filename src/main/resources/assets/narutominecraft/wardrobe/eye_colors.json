@@ -204,6 +204,26 @@
         "#f1ede3"
       ]
     },
+    "SUZURAN_CELADON": {
+      "name": "Suzuran Celadon",
+      "ramp": [
+        "#0a1412",
+        "#2e6b52",
+        "#4f9a78",
+        "#9fd6b8",
+        "#f1efe6"
+      ]
+    },
+    "SUZURAN_VIOLET": {
+      "name": "Suzuran Violet",
+      "ramp": [
+        "#100a16",
+        "#4b2a6a",
+        "#7a4ca8",
+        "#b993dc",
+        "#f1efe6"
+      ]
+    },
     "UCHIHA_ONYX": {
       "name": "Uchiha Onyx",
       "ramp": [

@@ -1,0 +1,411 @@
+{
+  "id": "t2409_bandaged_tunic",
+  "kind": "top",
+  "name": "Bandaged Tunic",
+  "gender": "unisex",
+  "texture": "tops/t2409_bandaged_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "cord_knot",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        8.9,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "cord_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        9.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "sway",
+      "scale": [
+        0.6,
+        1,
+        0.6
+      ]
+    },
+    {
+      "id": "cord_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        9.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "sway",
+      "scale": [
+        0.6,
+        1,
+        0.6
+      ]
+    },
+    {
+      "id": "sprig_stem",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        11.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        70
+      ],
+      "origin": [
+        0,
+        -1,
+        -0.5
+      ],
+      "size": [
+        7,
+        1,
+        1
+      ],
+      "uv": [
+        46,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_leaf",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        11.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        70
+      ],
+      "origin": [
+        -1,
+        -4,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_bell_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        11.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        70
+      ],
+      "origin": [
+        1,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        7
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_lip_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        11.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        70
+      ],
+      "origin": [
+        0.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        12,
+        7
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_bell_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        11.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        70
+      ],
+      "origin": [
+        3,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        7
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_lip_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        11.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        70
+      ],
+      "origin": [
+        2.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        26,
+        7
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_bell_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        11.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        70
+      ],
+      "origin": [
+        5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        35,
+        7
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_lip_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        11.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        70
+      ],
+      "origin": [
+        4.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        40,
+        7
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless high-necked tunic, bandaged forearms, a violet cord belt with a hanging bell sprig."
+}

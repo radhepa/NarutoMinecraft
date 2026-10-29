@@ -1,0 +1,365 @@
+{
+  "id": "h2411_herbalist_topknot",
+  "kind": "hair",
+  "name": "Herbalist Topknot",
+  "gender": "unisex",
+  "texture": "hair/h2411_herbalist_topknot.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.2,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -3,
+        -1.5
+      ],
+      "size": [
+        3,
+        3,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tuft",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -11.2,
+        1.0
+      ],
+      "rotation": [
+        -20,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -2,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        13,
+        0
+      ]
+    },
+    {
+      "id": "cord",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.2,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        -1.4,
+        -2.0
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        22,
+        0
+      ]
+    },
+    {
+      "id": "sprig_stem",
+      "bone": "HEAD",
+      "pivot": [
+        -1.6,
+        -10.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        0,
+        -1,
+        -0.5
+      ],
+      "size": [
+        7,
+        1,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_leaf",
+      "bone": "HEAD",
+      "pivot": [
+        -1.6,
+        -10.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        -1,
+        -4,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_bell_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.6,
+        -10.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        1,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_lip_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.6,
+        -10.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        0.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        5,
+        7
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_bell_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.6,
+        -10.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        3,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        14,
+        7
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_lip_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.6,
+        -10.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        2.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        19,
+        7
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_bell_2",
+      "bone": "HEAD",
+      "pivot": [
+        -1.6,
+        -10.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        28,
+        7
+      ],
+      "inflate": 0.15,
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "sprig_lip_2",
+      "bone": "HEAD",
+      "pivot": [
+        -1.6,
+        -10.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        4.5,
+        1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        33,
+        7
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "description": "Hair drawn up smooth into a tight crown topknot with a green cord and a bell sprig."
+}

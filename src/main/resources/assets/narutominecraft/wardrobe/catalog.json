@@ -288,7 +288,22 @@
     "h1512_shoulder_sweep",
     "h1513_strap_braid",
     "h1514_iai_gust",
-    "h1515_crossed_pin_bun"
+    "h1515_crossed_pin_bun",
+    "h2401_bell_bob",
+    "h2402_stem_ponytail",
+    "h2403_drooping_bells",
+    "h2404_apothecary_bun",
+    "h2405_leaf_crop",
+    "h2406_veiled_sweep",
+    "h2407_low_twin_tails",
+    "h2408_shaggy_medic",
+    "h2409_braided_crown",
+    "h2410_long_veil",
+    "h2411_herbalist_topknot",
+    "h2412_wild_points",
+    "h2413_back_braid",
+    "h2414_half_up_bells",
+    "h2415_elder_mane"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -337,7 +352,10 @@
     "w1402_crimson_protector",
     "w1501_proctor_bandana",
     "w1502_cat_mask",
-    "w1503_crescent_hachimaki"
+    "w1503_crescent_hachimaki",
+    "w2401_fume_mask",
+    "w2402_bell_hairpin",
+    "w2403_masked_protector"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -510,7 +528,17 @@
     "t1507_convalescent_wrap",
     "t1508_practice_gi",
     "t1509_scarf_knit",
-    "t1510_tasuki_iaido"
+    "t1510_tasuki_iaido",
+    "t2401_academy_smock",
+    "t2402_wrap_shirt",
+    "t2403_apothecary_vest",
+    "t2404_medic_coat",
+    "t2405_herbalist_haori",
+    "t2406_fume_jacket",
+    "t2407_nightshade_robe",
+    "t2408_field_medic_flak",
+    "t2409_bandaged_tunic",
+    "t2410_elder_kosode"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -594,7 +622,12 @@
     "b1405_bandaged_shorts",
     "b1501_gekko_hakama",
     "b1502_swordsman_trousers",
-    "b1503_strap_leggings"
+    "b1503_strap_leggings",
+    "b2401_medic_trousers",
+    "b2402_lily_hakama",
+    "b2403_herb_shorts",
+    "b2404_bell_skirt",
+    "b2405_field_trousers"
   ],
   "characters": [
     {
@@ -1429,6 +1462,18 @@
         ]
       ],
       "color": null,
+      "mirror": false
+    },
+    "suzuran_venom_dot": {
+      "rects": [
+        [
+          2.8,
+          -1.6,
+          0.4,
+          0.4
+        ]
+      ],
+      "color": "#8a52b8",
       "mirror": false
     },
     "uchiha_tear_troughs": {
@@ -5152,6 +5197,328 @@
             "SHIMURA_ROOT",
             "SHIMURA_SLATE",
             "SHIMURA_ASH"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suzuran",
+      "name": "Suzuran",
+      "tagline": "Lily of the valley: porcelain-white medic coats over pale jade and leaf green, white bells on green stems, vial sashes, long gloves, fume masks and a drop of toxic violet",
+      "standing": "minor",
+      "ability": "Lily blood: a hereditary resistance to poisons and the art of brewing toxins and antidotes into chakra-infused medicines",
+      "palettes": {
+        "SUZURAN_JADE": {
+          "name": "Suzuran Jade",
+          "P": "#6fae94",
+          "S": "#eef1ea",
+          "A": "#8a52b8",
+          "L": "#6e5638",
+          "M": "#b9c8c4",
+          "K": "#1b2824",
+          "D": "#2f6b45"
+        },
+        "SUZURAN_LEAF": {
+          "name": "Suzuran Leaf",
+          "P": "#3f8752",
+          "S": "#f0f2ec",
+          "A": "#9a5ec8",
+          "L": "#6b4a30",
+          "M": "#aab8b4",
+          "K": "#18231d",
+          "D": "#24533a"
+        },
+        "SUZURAN_PORCELAIN": {
+          "name": "Suzuran Porcelain",
+          "P": "#dbe4dc",
+          "S": "#f6f7f2",
+          "A": "#7f4aa8",
+          "L": "#74603f",
+          "M": "#b9c8c4",
+          "K": "#22302b",
+          "D": "#3f7d58"
+        },
+        "SUZURAN_CELADON": {
+          "name": "Suzuran Celadon",
+          "P": "#9ccbb2",
+          "S": "#f4f5ef",
+          "A": "#9f6fcc",
+          "L": "#7a6040",
+          "M": "#c0ccc8",
+          "K": "#1f2c27",
+          "D": "#3d7a50"
+        },
+        "SUZURAN_NIGHTSHADE": {
+          "name": "Suzuran Nightshade",
+          "P": "#283a32",
+          "S": "#e3eae2",
+          "A": "#a463d6",
+          "L": "#4e3c2c",
+          "M": "#9fb0ab",
+          "K": "#111915",
+          "D": "#2e4d3c"
+        }
+      },
+      "hair_colors": {
+        "SUZURAN_GREEN_BLACK": {
+          "name": "Suzuran Green-Black",
+          "ramp": [
+            "#0e1612",
+            "#18241e",
+            "#24352c",
+            "#33493d",
+            "#486352"
+          ]
+        },
+        "SUZURAN_SILVER": {
+          "name": "Suzuran Silver",
+          "ramp": [
+            "#6f7a76",
+            "#98a39e",
+            "#bfc9c3",
+            "#dde4df",
+            "#f4f8f4"
+          ]
+        },
+        "SUZURAN_MOSS": {
+          "name": "Suzuran Moss",
+          "ramp": [
+            "#1a2416",
+            "#2a3a22",
+            "#3d5131",
+            "#566d45",
+            "#7a8f60"
+          ]
+        }
+      },
+      "eye_colors": {
+        "SUZURAN_CELADON": {
+          "name": "Suzuran Celadon",
+          "ramp": [
+            "#0a1412",
+            "#2e6b52",
+            "#4f9a78",
+            "#9fd6b8",
+            "#f1efe6"
+          ]
+        },
+        "SUZURAN_VIOLET": {
+          "name": "Suzuran Violet",
+          "ramp": [
+            "#100a16",
+            "#4b2a6a",
+            "#7a4ca8",
+            "#b993dc",
+            "#f1efe6"
+          ]
+        }
+      },
+      "marks": {
+        "suzuran_venom_dot": {
+          "rects": [
+            [
+              2.8,
+              -1.6,
+              0.4,
+              0.4
+            ]
+          ],
+          "color": "#8a52b8",
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h2401_bell_bob",
+          "h2402_stem_ponytail",
+          "h2403_drooping_bells",
+          "h2404_apothecary_bun",
+          "h2405_leaf_crop",
+          "h2406_veiled_sweep",
+          "h2407_low_twin_tails",
+          "h2408_shaggy_medic",
+          "h2409_braided_crown",
+          "h2410_long_veil",
+          "h2411_herbalist_topknot",
+          "h2412_wild_points",
+          "h2413_back_braid",
+          "h2414_half_up_bells",
+          "h2415_elder_mane"
+        ],
+        "hair_colors": [
+          "SUZURAN_GREEN_BLACK",
+          "SUZURAN_GREEN_BLACK",
+          "SUZURAN_GREEN_BLACK",
+          "SUZURAN_SILVER",
+          "SUZURAN_SILVER",
+          "SUZURAN_MOSS",
+          "SUZURAN_MOSS",
+          "RAVEN",
+          "ESPRESSO"
+        ],
+        "eye_colors": [
+          "SUZURAN_CELADON",
+          "SUZURAN_CELADON",
+          "SUZURAN_CELADON",
+          "DARK",
+          "SUZURAN_VIOLET"
+        ],
+        "palettes": [
+          "SUZURAN_JADE",
+          "SUZURAN_LEAF",
+          "SUZURAN_PORCELAIN",
+          "SUZURAN_CELADON",
+          "SUZURAN_NIGHTSHADE"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w2401_fume_mask",
+          "w2401_fume_mask",
+          "w2402_bell_hairpin",
+          "w2402_bell_hairpin",
+          "w02_forehead_protector",
+          "w2403_masked_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          3
+        ],
+        "marks": [
+          {
+            "id": "suzuran_venom_dot",
+            "chance": 0.12
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "academy_smock",
+          "name": "Academy Smock",
+          "top": "t2401_academy_smock",
+          "bottom": "b2403_herb_shorts",
+          "rank": "academy",
+          "palettes": [
+            "SUZURAN_JADE",
+            "SUZURAN_CELADON",
+            "SUZURAN_LEAF"
+          ]
+        },
+        {
+          "id": "lily_wrap",
+          "name": "Lily Wrap",
+          "top": "t2402_wrap_shirt",
+          "bottom": "b2401_medic_trousers",
+          "rank": "genin",
+          "palettes": [
+            "SUZURAN_JADE",
+            "SUZURAN_CELADON",
+            "SUZURAN_PORCELAIN"
+          ]
+        },
+        {
+          "id": "garden_tunic",
+          "name": "Garden Tunic",
+          "top": "t2409_bandaged_tunic",
+          "bottom": "b2404_bell_skirt",
+          "rank": "genin",
+          "palettes": [
+            "SUZURAN_LEAF",
+            "SUZURAN_JADE",
+            "SUZURAN_NIGHTSHADE"
+          ]
+        },
+        {
+          "id": "herbalist",
+          "name": "Herbalist Haori",
+          "top": "t2405_herbalist_haori",
+          "bottom": "b2402_lily_hakama",
+          "rank": "genin",
+          "palettes": [
+            "SUZURAN_JADE",
+            "SUZURAN_CELADON",
+            "SUZURAN_LEAF"
+          ]
+        },
+        {
+          "id": "fume_worker",
+          "name": "Fume Jacket",
+          "top": "t2406_fume_jacket",
+          "bottom": "b2405_field_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "SUZURAN_LEAF",
+            "SUZURAN_NIGHTSHADE",
+            "SUZURAN_JADE"
+          ]
+        },
+        {
+          "id": "apothecary",
+          "name": "Apothecary Vest",
+          "top": "t2403_apothecary_vest",
+          "bottom": "b2401_medic_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "SUZURAN_JADE",
+            "SUZURAN_PORCELAIN",
+            "SUZURAN_CELADON",
+            "SUZURAN_NIGHTSHADE"
+          ]
+        },
+        {
+          "id": "field_medic",
+          "name": "Field Medic",
+          "top": "t2408_field_medic_flak",
+          "bottom": "b2405_field_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "SUZURAN_LEAF",
+            "SUZURAN_JADE"
+          ]
+        },
+        {
+          "id": "lily_medic",
+          "name": "Lily Medic Coat",
+          "top": "t2404_medic_coat",
+          "bottom": "b2401_medic_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SUZURAN_JADE",
+            "SUZURAN_LEAF",
+            "SUZURAN_CELADON"
+          ]
+        },
+        {
+          "id": "poison_master",
+          "name": "Poison Master",
+          "top": "t2407_nightshade_robe",
+          "bottom": "b2405_field_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SUZURAN_NIGHTSHADE",
+            "SUZURAN_LEAF"
+          ]
+        },
+        {
+          "id": "elder",
+          "name": "Elder Kosode",
+          "top": "t2410_elder_kosode",
+          "bottom": "b2402_lily_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SUZURAN_LEAF",
+            "SUZURAN_JADE",
+            "SUZURAN_NIGHTSHADE"
           ]
         }
       ]

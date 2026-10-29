@@ -1,0 +1,256 @@
+{
+  "id": "t2401_academy_smock",
+  "kind": "top",
+  "name": "Academy Smock",
+  "gender": "unisex",
+  "texture": "tops/t2401_academy_smock.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        1.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        1.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "sash_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        8.8,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sash_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        4.2,
+        8.8,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        8.8,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        39,
+        8
+      ]
+    },
+    {
+      "id": "pouch_herbs",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        8.8,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -1,
+        -2,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        50,
+        8
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "id": "pouch_bell",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        8.8,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        0.4,
+        -2.4,
+        -0.7
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        57,
+        8
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved tunic with a white collar band, green side sash and a herb pouch at the hip."
+}

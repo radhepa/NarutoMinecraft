@@ -1,0 +1,497 @@
+{
+  "id": "h2410_long_veil",
+  "kind": "hair",
+  "name": "Long Veil",
+  "gender": "unisex",
+  "texture": "hair/h2410_long_veil.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "veil",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.8,
+        4.6
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        10,
+        14,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "veil_tip_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.8,
+        4.6
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        14.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "veil_tip_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.8,
+        4.6
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        15.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        32,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "veil_tip_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.8,
+        4.6
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        14.0,
+        -0.5
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        37,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "veil_tip_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.8,
+        4.6
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        16.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "veil_tip_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.8,
+        4.6
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        2.0,
+        14.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "veil_tip_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.8,
+        4.6
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        3.0,
+        15.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "front_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        5,
+        16
+      ]
+    },
+    {
+      "id": "front_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        16
+      ]
+    },
+    {
+      "id": "front_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "front_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        24,
+        16
+      ]
+    },
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        30
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        16
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        30
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        36,
+        16
+      ]
+    },
+    {
+      "id": "fringe_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        24
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        16
+      ]
+    },
+    {
+      "id": "fringe_2",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -24
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        48,
+        16
+      ]
+    },
+    {
+      "id": "fringe_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -30
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        55,
+        16
+      ]
+    },
+    {
+      "id": "fringe_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -30
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        26
+      ]
+    }
+  ],
+  "description": "Waist-length straight hair, centre part, long front locks, a short split fringe."
+}
