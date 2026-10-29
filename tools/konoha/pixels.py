@@ -2,12 +2,13 @@
 seeded noise for grain, then lines and stamps. Every texture is RGBA uint8."""
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-FONT = Path("/usr/share/fonts/truetype/fonts-japanese-gothic.ttf")
+FONT = Path(os.environ.get("NARUTO_JAPANESE_FONT", "/usr/share/fonts/truetype/fonts-japanese-gothic.ttf"))
 
 
 def hexrgb(c) -> tuple[int, int, int]:

@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import math
+import os
 from pathlib import Path
 
 import numpy as np
@@ -22,7 +23,7 @@ import wardrobe as W
 BODY = W.ROOT / "src/main/resources/assets/narutominecraft/textures/body"
 OUT = W.ROOT / "docs/renders"
 SS = 2  # supersampling factor
-FONT_DIR = Path("/usr/share/fonts/truetype/dejavu")
+FONT_DIR = Path(os.environ.get("NARUTO_FONT_DIR", "/usr/share/fonts/truetype/dejavu"))
 
 
 def font(size, bold=False):

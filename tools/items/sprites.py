@@ -24,6 +24,9 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'docs/renders/items'
 ITEMS = ROOT / 'data/items/items.json'
 
+sys.path.insert(0, str(ROOT / 'tools'))
+from output_checks import matches  # noqa: E402
+
 # Three tones (light, mid, dark) and an outline per material.
 MATERIALS = {
     'steel': ('d7dde3', 'a3adb8', '6e7886', '2b3038'),
@@ -468,7 +471,7 @@ def main(argv):
         print(f'icons to draw: {len(icons)}')
         return 0
     if '--check' in argv:
-        stale = [p for p, data in files.items() if not (OUT / p).exists() or (OUT / p).read_bytes() != data]
+        stale = [p for p, data in files.items() if not matches(OUT / p, data)]
         if stale:
             print('stale (rerun python tools/items/sprites.py): ' + ', '.join(stale))
             return 1

@@ -30,6 +30,8 @@ from PIL import Image
 
 TOOL = Path(__file__).resolve().parent
 ROOT = TOOL.parents[1]
+sys.path.insert(0, str(ROOT / 'tools'))
+from output_checks import matches  # noqa: E402
 OUT = ROOT / "src/main/resources/assets/narutominecraft/wardrobe"
 KINDS = ("faces", "hair", "headwear", "tops", "bottoms")
 KIND_NAME = {"faces": "face", "hair": "hair", "headwear": "headwear", "tops": "top", "bottoms": "bottom"}
@@ -871,7 +873,7 @@ def main(argv=None):
         return 1
     files = outputs(garments, full)
     if args.check:
-        stale = [p for p, data in files.items() if not p.exists() or p.read_bytes() != data]
+        stale = [p for p, data in files.items() if not matches(p, data)]
         if full:
             known = set(files)
             stale += [p for kind in KINDS for p in (OUT / kind).glob("*") if p not in known]
