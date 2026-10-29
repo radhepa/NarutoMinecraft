@@ -150,6 +150,36 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "SARUTOBI_BARK": {
+      "name": "Sarutobi Bark",
+      "ramp": [
+        "#140d09",
+        "#21150e",
+        "#311f15",
+        "#48301f",
+        "#664430"
+      ]
+    },
+    "SARUTOBI_SOOT": {
+      "name": "Sarutobi Soot",
+      "ramp": [
+        "#0e0c0b",
+        "#181412",
+        "#231d1a",
+        "#342b26",
+        "#4c403a"
+      ]
+    },
+    "SARUTOBI_ELDER": {
+      "name": "Sarutobi Elder",
+      "ramp": [
+        "#3e3c3a",
+        "#5b5856",
+        "#7d7a77",
+        "#a19e9a",
+        "#c8c5c0"
+      ]
     }
   }
 }

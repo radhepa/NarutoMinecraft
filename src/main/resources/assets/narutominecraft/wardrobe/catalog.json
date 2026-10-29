@@ -89,7 +89,10 @@
     "w06_anbu_hawk_mask",
     "w07_root_mask",
     "w08_masked_protector",
-    "w09_bandana_protector"
+    "w09_bandana_protector",
+    "w901_battle_helmet",
+    "w902_kid_goggles",
+    "w903_fire_headband"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -112,7 +115,17 @@
     "t18_sentinel_vest",
     "t19_field_vest",
     "t20_kunoichi_jonin",
-    "t21_commander_coat"
+    "t21_commander_coat",
+    "t901_guardian_vest",
+    "t902_monkey_king_armor",
+    "t903_long_scarf_tee",
+    "t904_sensei_jacket",
+    "t905_ember_haori",
+    "t906_guard_detail_vest",
+    "t907_warring_breastplate",
+    "t908_ash_training_wrap",
+    "t909_corps_hoodie",
+    "t910_will_of_fire_tunic"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -122,7 +135,12 @@
     "b05_green_leggings",
     "b06_anbu_greaves",
     "b07_cargo_shorts",
-    "b08_mesh_leggings"
+    "b08_mesh_leggings",
+    "b901_guardian_trousers",
+    "b902_monkey_shorts",
+    "b903_warring_hakama",
+    "b904_battle_greaves",
+    "b905_wrap_skirt_leggings"
   ],
   "characters": [
     {
@@ -538,7 +556,399 @@
       ],
       "color": null,
       "mirror": true
+    },
+    "sarutobi_age_lines": {
+      "rects": [
+        [
+          2.1,
+          -1.85,
+          1.2,
+          0.2
+        ],
+        [
+          2.5,
+          -1.45,
+          0.8,
+          0.2
+        ]
+      ],
+      "color": null,
+      "mirror": true
+    },
+    "sarutobi_soot_smudge": {
+      "rects": [
+        [
+          -3.1,
+          -1.7,
+          1.1,
+          0.5
+        ],
+        [
+          -2.6,
+          -1.25,
+          0.6,
+          0.3
+        ]
+      ],
+      "color": "#3d3532",
+      "mirror": false
     }
   },
-  "clans": []
+  "clans": [
+    {
+      "id": "sarutobi",
+      "name": "Sarutobi",
+      "tagline": "The Will of Fire's own house: monkey-king armor, guardian sashes and long scarves, warm browns and greens with fire-red.",
+      "palettes": {
+        "SARUTOBI_GUARDIAN": {
+          "name": "Sarutobi Guardian",
+          "P": "#5e6c3a",
+          "S": "#d9d2bf",
+          "A": "#b8402a",
+          "L": "#6b4a30",
+          "M": "#a9b0b4",
+          "K": "#1b1c22",
+          "D": "#2b3858"
+        },
+        "SARUTOBI_MONKEY_KING": {
+          "name": "Sarutobi Monkey King",
+          "P": "#3d3833",
+          "S": "#c9bfa8",
+          "A": "#b3302a",
+          "L": "#5a3e2a",
+          "M": "#9aa0a6",
+          "K": "#141418",
+          "D": "#33384a"
+        },
+        "SARUTOBI_SCARF": {
+          "name": "Sarutobi Scarf",
+          "P": "#d3ad4a",
+          "S": "#8f9294",
+          "A": "#c4352b",
+          "L": "#6b4630",
+          "M": "#a9adb0",
+          "K": "#1c1c22",
+          "D": "#3f6db5"
+        },
+        "SARUTOBI_SENSEI": {
+          "name": "Sarutobi Sensei",
+          "P": "#2c3448",
+          "S": "#d5cfc0",
+          "A": "#c53f2b",
+          "L": "#5d4330",
+          "M": "#aab1b6",
+          "K": "#16171c",
+          "D": "#29447a"
+        },
+        "SARUTOBI_EMBER": {
+          "name": "Sarutobi Ember",
+          "P": "#6e3a26",
+          "S": "#ead8b5",
+          "A": "#df6a2a",
+          "L": "#5a3a26",
+          "M": "#b0a99a",
+          "K": "#1e1612",
+          "D": "#4b5b38"
+        },
+        "SARUTOBI_FOREST": {
+          "name": "Sarutobi Forest",
+          "P": "#4d5d36",
+          "S": "#dccba5",
+          "A": "#c03b26",
+          "L": "#6b4a2f",
+          "M": "#a8aba4",
+          "K": "#19191a",
+          "D": "#5a4430"
+        },
+        "SARUTOBI_ASH": {
+          "name": "Sarutobi Ash",
+          "P": "#4a4643",
+          "S": "#d6cfc2",
+          "A": "#cc4a2a",
+          "L": "#5e4634",
+          "M": "#aeb0b2",
+          "K": "#151517",
+          "D": "#2e3a4e"
+        },
+        "SARUTOBI_WARRING": {
+          "name": "Sarutobi Warring",
+          "P": "#2e2a29",
+          "S": "#cdb98f",
+          "A": "#a8281f",
+          "L": "#4f3322",
+          "M": "#8a857c",
+          "K": "#121012",
+          "D": "#3a3330"
+        }
+      },
+      "hair_colors": {
+        "SARUTOBI_BARK": {
+          "name": "Sarutobi Bark",
+          "ramp": [
+            "#140d09",
+            "#21150e",
+            "#311f15",
+            "#48301f",
+            "#664430"
+          ]
+        },
+        "SARUTOBI_SOOT": {
+          "name": "Sarutobi Soot",
+          "ramp": [
+            "#0e0c0b",
+            "#181412",
+            "#231d1a",
+            "#342b26",
+            "#4c403a"
+          ]
+        },
+        "SARUTOBI_ELDER": {
+          "name": "Sarutobi Elder",
+          "ramp": [
+            "#3e3c3a",
+            "#5b5856",
+            "#7d7a77",
+            "#a19e9a",
+            "#c8c5c0"
+          ]
+        }
+      },
+      "eye_colors": {
+        "SARUTOBI_EMBER_RED": {
+          "name": "Sarutobi Ember Red",
+          "ramp": [
+            "#0d0607",
+            "#5c1416",
+            "#9c2a26",
+            "#d0574a",
+            "#f2ece4"
+          ]
+        }
+      },
+      "marks": {
+        "sarutobi_age_lines": {
+          "rects": [
+            [
+              2.1,
+              -1.85,
+              1.2,
+              0.2
+            ],
+            [
+              2.5,
+              -1.45,
+              0.8,
+              0.2
+            ]
+          ],
+          "color": null,
+          "mirror": true
+        },
+        "sarutobi_soot_smudge": {
+          "rects": [
+            [
+              -3.1,
+              -1.7,
+              1.1,
+              0.5
+            ],
+            [
+              -2.6,
+              -1.25,
+              0.6,
+              0.3
+            ]
+          ],
+          "color": "#3d3532",
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h901_young_hiruzen",
+          "h902_guardian_beard",
+          "h903_elder_goatee",
+          "h904_scarf_kid_spikes",
+          "h905_sensei_spikes",
+          "h906_mirai_bob",
+          "h907_warring_topknot",
+          "h908_ash_chinstrap",
+          "h909_enma_tail",
+          "h910_will_of_fire",
+          "h911_monkey_puffs",
+          "h912_guard_pixie",
+          "h913_sage_mane",
+          "h914_crown_bun",
+          "h915_jungle_spikes"
+        ],
+        "hair_colors": [
+          "SARUTOBI_BARK",
+          "SARUTOBI_BARK",
+          "SARUTOBI_SOOT",
+          "SARUTOBI_SOOT",
+          "SARUTOBI_ELDER",
+          "ESPRESSO",
+          "CHESTNUT"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "DARK",
+          "SARUTOBI_EMBER_RED"
+        ],
+        "palettes": [
+          "SARUTOBI_GUARDIAN",
+          "SARUTOBI_FOREST",
+          "SARUTOBI_EMBER",
+          "SARUTOBI_ASH",
+          "SARUTOBI_SENSEI",
+          "SARUTOBI_SCARF"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w903_fire_headband",
+          "w902_kid_goggles",
+          "w901_battle_helmet"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "sarutobi_age_lines",
+            "chance": 0.1
+          },
+          {
+            "id": "sarutobi_soot_smudge",
+            "chance": 0.08
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "guardian",
+          "name": "Guardian Vest",
+          "top": "t901_guardian_vest",
+          "bottom": "b901_guardian_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SARUTOBI_GUARDIAN",
+            "SARUTOBI_FOREST"
+          ]
+        },
+        {
+          "id": "monkey_king",
+          "name": "Monkey King Armor",
+          "top": "t902_monkey_king_armor",
+          "bottom": "b904_battle_greaves",
+          "rank": "kage",
+          "palettes": [
+            "SARUTOBI_MONKEY_KING",
+            "SARUTOBI_ASH"
+          ]
+        },
+        {
+          "id": "scarf_kid",
+          "name": "Long Scarf",
+          "top": "t903_long_scarf_tee",
+          "bottom": "b902_monkey_shorts",
+          "rank": "academy",
+          "palettes": [
+            "SARUTOBI_SCARF",
+            "SARUTOBI_EMBER",
+            "SARUTOBI_FOREST"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei Jacket",
+          "top": "t904_sensei_jacket",
+          "bottom": "b901_guardian_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SARUTOBI_SENSEI",
+            "SARUTOBI_ASH"
+          ]
+        },
+        {
+          "id": "ember_haori",
+          "name": "Ember Haori",
+          "top": "t905_ember_haori",
+          "bottom": "b903_warring_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SARUTOBI_EMBER",
+            "SARUTOBI_FOREST",
+            "SARUTOBI_ASH"
+          ]
+        },
+        {
+          "id": "guard_detail",
+          "name": "Guard Detail",
+          "top": "t906_guard_detail_vest",
+          "bottom": "b901_guardian_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SARUTOBI_GUARDIAN",
+            "SARUTOBI_SENSEI"
+          ]
+        },
+        {
+          "id": "warring",
+          "name": "Warring Breastplate",
+          "top": "t907_warring_breastplate",
+          "bottom": "b903_warring_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SARUTOBI_WARRING"
+          ]
+        },
+        {
+          "id": "ash_training",
+          "name": "Ash Training",
+          "top": "t908_ash_training_wrap",
+          "bottom": "b904_battle_greaves",
+          "rank": "chunin"
+        },
+        {
+          "id": "corps_hoodie",
+          "name": "Corps Hoodie",
+          "top": "t909_corps_hoodie",
+          "bottom": "b902_monkey_shorts",
+          "rank": "academy",
+          "palettes": [
+            "SARUTOBI_SCARF",
+            "SARUTOBI_FOREST",
+            "SARUTOBI_EMBER"
+          ]
+        },
+        {
+          "id": "will_of_fire",
+          "name": "Will of Fire Tunic",
+          "top": "t910_will_of_fire_tunic",
+          "bottom": "b905_wrap_skirt_leggings",
+          "rank": "chunin",
+          "palettes": [
+            "SARUTOBI_EMBER",
+            "SARUTOBI_FOREST",
+            "SARUTOBI_ASH",
+            "SARUTOBI_GUARDIAN"
+          ]
+        }
+      ]
+    }
+  ]
 }
