@@ -1,74 +1,80 @@
 {
   "tools/wardrobe/anime.py": {
-    "mtime": 1793298861.6617742,
-    "seen": 1793298972.592752,
+    "mtime": 1793299231.0414755,
+    "seen": 1793300143.6319563,
     "ast_hash": "ccfd5c055da4c2da9da9ac7c1ab50259",
     "semantic_hash": ""
   },
   "tools/wardrobe/glyphs.py": {
-    "mtime": 1793294178.0561597,
-    "seen": 1793298972.5927613,
+    "mtime": 1793299231.042287,
+    "seen": 1793300143.6319647,
     "ast_hash": "a5933d737d3251c2477bf391b39b1962",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit.py": {
-    "mtime": 1793293668.2658365,
-    "seen": 1793298972.592774,
+    "mtime": 1793299231.043725,
+    "seen": 1793300143.6319685,
     "ast_hash": "6551015bee97fb7e2345848bcc660020",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_shinobi.py": {
-    "mtime": 1793298380.9366143,
-    "seen": 1793298972.592775,
+    "mtime": 1793299231.043725,
+    "seen": 1793300143.6319706,
     "ast_hash": "6b48ddf73d5251f05e329be19a131db5",
     "semantic_hash": ""
   },
   "tools/wardrobe/living_eyes.py": {
-    "mtime": 1793299032.3431902,
-    "seen": 1793299186.3352156,
+    "mtime": 1793299231.043725,
+    "seen": 1793300143.6319742,
     "ast_hash": "7f5b5fb1aa7f9f92827e9a48ee4d5ed4",
     "semantic_hash": ""
   },
   "tools/wardrobe/masks.py": {
-    "mtime": 1793297718.1194913,
-    "seen": 1793298972.592777,
+    "mtime": 1793299231.043725,
+    "seen": 1793300143.631976,
     "ast_hash": "8b187e54f0fbdbb2ba3347b4fa673238",
     "semantic_hash": ""
   },
   "tools/wardrobe/paint.py": {
-    "mtime": 1793293668.2658176,
-    "seen": 1793298972.5927782,
+    "mtime": 1793299231.043725,
+    "seen": 1793300143.6319776,
     "ast_hash": "ad94d8936df39ee76c0c3a9ea2928172",
     "semantic_hash": ""
   },
   "tools/wardrobe/render.py": {
-    "mtime": 1793299053.1111307,
-    "seen": 1793299186.3352208,
+    "mtime": 1793299231.043725,
+    "seen": 1793300143.631979,
     "ast_hash": "1b525e283b3c9711013c77976cd43436",
     "semantic_hash": ""
   },
   "tools/wardrobe/wardrobe.py": {
-    "mtime": 1793299032.34369,
-    "seen": 1793299186.3352222,
+    "mtime": 1793299231.0455172,
+    "seen": 1793300143.6319807,
     "ast_hash": "eb8c3afab65699feab78a5d31eaad9f4",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1793298621.064391,
-    "seen": 1793298972.5927818,
+    "mtime": 1793299230.9301243,
+    "seen": 1793300143.631985,
     "ast_hash": "121d8a62c08ccab1a4bf02ed2df433c0",
     "semantic_hash": ""
   },
   "CLANS.md": {
-    "mtime": 1793299179.737772,
-    "seen": 1793299186.3352242,
+    "mtime": 1793299230.9301243,
+    "seen": 1793300143.6319823,
     "ast_hash": "693b85b7832ec7c3484ec551b40c44f8",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1793299179.739504,
-    "seen": 1793299186.3352253,
+    "mtime": 1793299230.9301243,
+    "seen": 1793300143.6319838,
     "ast_hash": "4cbceca0d28d6029514c07062b2db5f8",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_uchiha.py": {
+    "mtime": 1793300014.3779821,
+    "seen": 1793300143.6319723,
+    "ast_hash": "226bec0715a1eddde24eef64b1ac1771",
     "semantic_hash": ""
   }
 }
