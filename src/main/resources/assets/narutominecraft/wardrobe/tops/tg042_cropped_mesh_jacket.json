@@ -1,0 +1,48 @@
+{
+  "id": "tg042_cropped_mesh_jacket",
+  "kind": "top",
+  "name": "Cropped Mesh Jacket",
+  "gender": "unisex",
+  "texture": "tops/tg042_cropped_mesh_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.9,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short open jacket to the ribs, elbow sleeves, over a chain-mesh undershirt."
+}

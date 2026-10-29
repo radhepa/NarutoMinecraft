@@ -1,0 +1,248 @@
+{
+  "id": "bg055_asymmetric_skirt",
+  "kind": "bottom",
+  "name": "Asymmetric Skirt",
+  "gender": "female",
+  "texture": "bottoms/bg055_asymmetric_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.3,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "waist_skirt_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        10.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_skirt_front_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5,
+        10.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        5,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_skirt_front_2",
+      "bone": "TORSO",
+      "pivot": [
+        1.5,
+        10.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_skirt_back_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        10.2,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "waist_skirt_back_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5,
+        10.2,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "waist_skirt_back_2",
+      "bone": "TORSO",
+      "pivot": [
+        1.5,
+        10.2,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        9,
+        10
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "waist_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        8,
+        4
+      ],
+      "uv": [
+        18,
+        10
+      ]
+    }
+  ],
+  "description": "Skirt short on the right and long over the left leg, shorts, one mesh stocking."
+}

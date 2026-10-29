@@ -1,0 +1,387 @@
+{
+  "id": "tg048_flak_wrap",
+  "kind": "top",
+  "name": "Flak Wrap",
+  "gender": "unisex",
+  "texture": "tops/tg048_flak_wrap.png",
+  "extrasHeight": 48,
+  "tags": [
+    "jonin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_swirl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.2,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        -2.7
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        27,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "scroll_pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.7,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "scroll_pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.1,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "scroll_pocket_2",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        9,
+        14
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "scroll_pocket_3",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        3.4,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        18,
+        14
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "kimono_sleeve_right",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -1.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        27,
+        14
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "kimono_sleeve_left",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        24
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        10.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        24
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "sash_knot",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        10.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        50,
+        24
+      ]
+    },
+    {
+      "id": "sash_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        11.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        57,
+        24
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "sash_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        11.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        34
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Flak vest over a wrap shirt with kimono sleeves, forearm guards, a hip-knotted sash."
+}

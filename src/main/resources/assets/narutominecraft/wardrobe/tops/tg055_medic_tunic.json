@@ -1,0 +1,105 @@
+{
+  "id": "tg055_medic_tunic",
+  "kind": "top",
+  "name": "Medic Tunic",
+  "gender": "unisex",
+  "texture": "tops/tg055_medic_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi",
+    "tunic"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "hip_pouch_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.2,
+        9.6,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "hip_pouch_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        9.6,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Fitted side-buttoned medic tunic, short sleeves, a pale hem band, pouches on both hips."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "tg045_armored_bodice",
+  "kind": "top",
+  "name": "Armored Bodice",
+  "gender": "unisex",
+  "texture": "tops/tg045_armored_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "pauldron",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        -2.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Laced leather bodice over a mesh undershirt, one lacquered pauldron, leather bracers."
+}

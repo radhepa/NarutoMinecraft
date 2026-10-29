@@ -1,0 +1,134 @@
+{
+  "id": "tg054_sarashi_jacket",
+  "kind": "top",
+  "name": "Sarashi Jacket",
+  "gender": "unisex",
+  "texture": "tops/tg054_sarashi_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cord_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "cord_belt_knot",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        9.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "cord_belt_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        10.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "cord_belt_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        10.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Pale chest binding under a short open sleeveless jacket, bandaged arms, cord belt."
+}

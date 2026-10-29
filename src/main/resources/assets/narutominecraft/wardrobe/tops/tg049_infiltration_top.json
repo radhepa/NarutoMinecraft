@@ -1,0 +1,77 @@
+{
+  "id": "tg049_infiltration_top",
+  "kind": "top",
+  "name": "Infiltration Top",
+  "gender": "unisex",
+  "texture": "tops/tg049_infiltration_top.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "cowl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.3
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Dark fitted long-sleeved top, cowl neck, shaped seams, narrow sash, plated gloves."
+}

@@ -1,0 +1,78 @@
+{
+  "id": "tg053_short_haori",
+  "kind": "top",
+  "name": "Short Haori",
+  "gender": "unisex",
+  "texture": "tops/tg053_short_haori.png",
+  "extrasHeight": 16,
+  "tags": [
+    "coat",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "haori_sleeve_right",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -1.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "haori_sleeve_left",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Hip-length open haori with half sleeves and dark lapels, cords over a high-neck shirt."
+}

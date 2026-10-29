@@ -1,0 +1,49 @@
+{
+  "id": "tg058_split_sleeve_tunic",
+  "kind": "top",
+  "name": "Split Sleeve Tunic",
+  "gender": "female",
+  "texture": "tops/tg058_split_sleeve_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "chunin",
+    "shinobi",
+    "tunic"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "High-necked tunic, long sleeves split open to the wrist ribbons, a slim sash."
+}

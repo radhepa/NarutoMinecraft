@@ -1,0 +1,104 @@
+{
+  "id": "bg042_apron_skirt_leggings",
+  "kind": "bottom",
+  "name": "Apron Skirt Leggings",
+  "gender": "unisex",
+  "texture": "bottoms/bg042_apron_skirt_leggings.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.3,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "waist_apron_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_apron_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        7,
+        1
+      ],
+      "uv": [
+        46,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Full leggings under a front-and-back apron skirt open at the sides, shin wraps."
+}
