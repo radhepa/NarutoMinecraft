@@ -379,6 +379,21 @@
     "h2113_shaggy_mane",
     "h2114_cowlick_shag",
     "h2115_braided_spikes",
+    "h2201_sawdust_crop",
+    "h2202_work_topknot",
+    "h2203_rafter_spikes",
+    "h2204_cloth_tail",
+    "h2205_pencil_bun",
+    "h2206_shaving_curls",
+    "h2207_close_buzz",
+    "h2208_twin_cord_tails",
+    "h2209_ridge_crest",
+    "h2210_shoulder_braid",
+    "h2211_half_up_knot",
+    "h2212_shaggy_mop",
+    "h2213_wrapped_long_tail",
+    "h2214_master_side_part",
+    "h2215_windblown_scaffold",
     "h2301_hotaru_tail",
     "h2302_gyoja_topknot",
     "h2303_spinner_buns",
@@ -545,6 +560,8 @@
     "w2002_wave_hachimaki",
     "w2003_tide_protector",
     "w2101_hachigane",
+    "w2201_nejiri_hachimaki",
+    "w2202_pencil_protector",
     "w2301_web_kasa",
     "w2302_spider_band",
     "w2401_fume_mask",
@@ -815,6 +832,16 @@
     "t2108_rivet_gambeson",
     "t2109_runner_wrap",
     "t2110_plated_vest",
+    "t2201_hanten_jacket",
+    "t2202_haragake_apron",
+    "t2203_tool_harness",
+    "t2204_builder_flak",
+    "t2205_tobi_shirt",
+    "t2206_apprentice_smock",
+    "t2207_trapwright_vest",
+    "t2208_timber_cuirass",
+    "t2209_master_haori",
+    "t2210_mallet_wrap",
     "t2301_academy_tunic",
     "t2302_hotaru_kosode",
     "t2303_web_vest",
@@ -1107,6 +1134,11 @@
     "b2102_runner_shorts",
     "b2103_plated_wrap_skirt",
     "b2104_greave_boots",
+    "b2201_tobi_trousers",
+    "b2202_momohiki_gaiters",
+    "b2203_maekake_trousers",
+    "b2204_toolbelt_trousers",
+    "b2205_work_shorts",
     "b2301_mountain_hakama",
     "b2302_bound_trousers",
     "b2303_crag_shorts",
@@ -1979,6 +2011,36 @@
       ],
       "color": "#c0242a",
       "mirror": true
+    },
+    "kinoshita_sawdust": {
+      "rects": [
+        [
+          2.3,
+          -1.7,
+          1.3,
+          0.4
+        ],
+        [
+          2.7,
+          -1.25,
+          0.7,
+          0.3
+        ]
+      ],
+      "color": "#d9c79d",
+      "mirror": false
+    },
+    "kinoshita_nick": {
+      "rects": [
+        [
+          -2.7,
+          -5.6,
+          0.25,
+          1.1
+        ]
+      ],
+      "color": null,
+      "mirror": false
     },
     "kurama_ink_smudge": {
       "rects": [
@@ -5045,6 +5107,322 @@
           "top": "t810_handler_jerkin",
           "bottom": "b801_tracker_trousers",
           "rank": "chunin"
+        }
+      ]
+    },
+    {
+      "id": "kinoshita",
+      "name": "Kinoshita",
+      "tagline": "The carpenter family who raised and rebuilt the Leaf's houses: indigo work-cloth and cedar-red sashes, rolled sleeves, bib aprons and tool harnesses hung with saws, chisels and the steel square, twisted hachimaki, split-toe tabi and the square-in-a-ring crest.",
+      "standing": "minor",
+      "ability": null,
+      "palettes": {
+        "KINOSHITA_AIZOME": {
+          "name": "Kinoshita Aizome",
+          "P": "#2f4b80",
+          "S": "#e9dcbd",
+          "A": "#b8542e",
+          "L": "#8a5a35",
+          "M": "#aaa69c",
+          "K": "#1c1b1f",
+          "D": "#27344f"
+        },
+        "KINOSHITA_WASHED": {
+          "name": "Kinoshita Washed Indigo",
+          "P": "#6584ab",
+          "S": "#efe4c8",
+          "A": "#a9472b",
+          "L": "#7d5132",
+          "M": "#aaa69c",
+          "K": "#1c1b1f",
+          "D": "#2b3a5a"
+        },
+        "KINOSHITA_CEDAR": {
+          "name": "Kinoshita Cedar",
+          "P": "#a4482b",
+          "S": "#ecdec0",
+          "A": "#2f4b80",
+          "L": "#6e4528",
+          "M": "#aaa69c",
+          "K": "#1c1b1f",
+          "D": "#2a3756"
+        },
+        "KINOSHITA_HINOKI": {
+          "name": "Kinoshita Hinoki",
+          "P": "#d4b98c",
+          "S": "#f2e8cf",
+          "A": "#b8542e",
+          "L": "#7a4e2c",
+          "M": "#aaa69c",
+          "K": "#1c1b1f",
+          "D": "#2e3f66"
+        },
+        "KINOSHITA_NIGHT": {
+          "name": "Kinoshita Night Crew",
+          "P": "#1f2c4a",
+          "S": "#e7dabb",
+          "A": "#c4643a",
+          "L": "#7a4e2c",
+          "M": "#aaa69c",
+          "K": "#151419",
+          "D": "#1a2338"
+        },
+        "KINOSHITA_JONIN": {
+          "name": "Kinoshita Jonin",
+          "P": "#5f6e3c",
+          "S": "#e9dcbd",
+          "A": "#b8542e",
+          "L": "#8a5a35",
+          "M": "#aaa69c",
+          "K": "#1c1b1f",
+          "D": "#27344f"
+        }
+      },
+      "hair_colors": {
+        "KINOSHITA_WALNUT": {
+          "name": "Kinoshita Walnut",
+          "ramp": [
+            "#1c120d",
+            "#2d1d14",
+            "#41291c",
+            "#583826",
+            "#734b33"
+          ]
+        },
+        "KINOSHITA_CEDAR": {
+          "name": "Kinoshita Cedar",
+          "ramp": [
+            "#311a10",
+            "#4f2a19",
+            "#723d24",
+            "#965433",
+            "#b56f47"
+          ]
+        },
+        "KINOSHITA_SAWDUST": {
+          "name": "Kinoshita Sawdust",
+          "ramp": [
+            "#5a4630",
+            "#7d6446",
+            "#a1865f",
+            "#c2a87c",
+            "#dcc69c"
+          ]
+        }
+      },
+      "eye_colors": {},
+      "marks": {
+        "kinoshita_sawdust": {
+          "rects": [
+            [
+              2.3,
+              -1.7,
+              1.3,
+              0.4
+            ],
+            [
+              2.7,
+              -1.25,
+              0.7,
+              0.3
+            ]
+          ],
+          "color": "#d9c79d",
+          "mirror": false
+        },
+        "kinoshita_nick": {
+          "rects": [
+            [
+              -2.7,
+              -5.6,
+              0.25,
+              1.1
+            ]
+          ],
+          "color": null,
+          "mirror": false
+        }
+      },
+      "pool": {
+        "hair": [
+          "h2201_sawdust_crop",
+          "h2202_work_topknot",
+          "h2203_rafter_spikes",
+          "h2204_cloth_tail",
+          "h2205_pencil_bun",
+          "h2206_shaving_curls",
+          "h2207_close_buzz",
+          "h2208_twin_cord_tails",
+          "h2209_ridge_crest",
+          "h2210_shoulder_braid",
+          "h2211_half_up_knot",
+          "h2212_shaggy_mop",
+          "h2213_wrapped_long_tail",
+          "h2214_master_side_part",
+          "h2215_windblown_scaffold"
+        ],
+        "hair_colors": [
+          "KINOSHITA_WALNUT",
+          "KINOSHITA_WALNUT",
+          "KINOSHITA_CEDAR",
+          "KINOSHITA_CEDAR",
+          "KINOSHITA_SAWDUST",
+          "ESPRESSO",
+          "RAVEN"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "DARK",
+          "JADE"
+        ],
+        "palettes": [
+          "KINOSHITA_AIZOME",
+          "KINOSHITA_AIZOME",
+          "KINOSHITA_WASHED",
+          "KINOSHITA_CEDAR",
+          "KINOSHITA_NIGHT"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          "w2201_nejiri_hachimaki",
+          "w2201_nejiri_hachimaki",
+          "w2202_pencil_protector",
+          "w02_forehead_protector"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          1,
+          2,
+          2,
+          3
+        ],
+        "marks": [
+          {
+            "id": "kinoshita_sawdust",
+            "chance": 0.25
+          },
+          {
+            "id": "kinoshita_nick",
+            "chance": 0.12
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "hanten_jacket",
+          "name": "Hanten Jacket",
+          "top": "t2201_hanten_jacket",
+          "bottom": "b2201_tobi_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "KINOSHITA_AIZOME",
+            "KINOSHITA_NIGHT"
+          ]
+        },
+        {
+          "id": "haragake_apron",
+          "name": "Haragake Apron",
+          "top": "t2202_haragake_apron",
+          "bottom": "b2202_momohiki_gaiters",
+          "rank": "genin",
+          "palettes": [
+            "KINOSHITA_AIZOME",
+            "KINOSHITA_WASHED"
+          ]
+        },
+        {
+          "id": "tool_harness",
+          "name": "Tool Harness",
+          "top": "t2203_tool_harness",
+          "bottom": "b2204_toolbelt_trousers",
+          "rank": "genin",
+          "palettes": [
+            "KINOSHITA_AIZOME",
+            "KINOSHITA_NIGHT"
+          ]
+        },
+        {
+          "id": "builder_flak",
+          "name": "Field Engineer",
+          "top": "t2204_builder_flak",
+          "bottom": "b2204_toolbelt_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "KINOSHITA_JONIN"
+          ]
+        },
+        {
+          "id": "tobi_shirt",
+          "name": "Scaffold Crew",
+          "top": "t2205_tobi_shirt",
+          "bottom": "b2201_tobi_trousers",
+          "rank": "genin",
+          "palettes": [
+            "KINOSHITA_CEDAR",
+            "KINOSHITA_WASHED"
+          ]
+        },
+        {
+          "id": "apprentice_smock",
+          "name": "Apprentice",
+          "top": "t2206_apprentice_smock",
+          "bottom": "b2205_work_shorts",
+          "rank": "academy",
+          "palettes": [
+            "KINOSHITA_AIZOME",
+            "KINOSHITA_WASHED"
+          ]
+        },
+        {
+          "id": "trapwright_vest",
+          "name": "Trapwright",
+          "top": "t2207_trapwright_vest",
+          "bottom": "b2202_momohiki_gaiters",
+          "rank": "chunin",
+          "palettes": [
+            "KINOSHITA_AIZOME",
+            "KINOSHITA_HINOKI"
+          ]
+        },
+        {
+          "id": "timber_cuirass",
+          "name": "Fortifier",
+          "top": "t2208_timber_cuirass",
+          "bottom": "b2201_tobi_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "KINOSHITA_AIZOME",
+            "KINOSHITA_NIGHT"
+          ]
+        },
+        {
+          "id": "master_haori",
+          "name": "Master Builder",
+          "top": "t2209_master_haori",
+          "bottom": "b2203_maekake_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "KINOSHITA_NIGHT",
+            "KINOSHITA_AIZOME"
+          ]
+        },
+        {
+          "id": "mallet_wrap",
+          "name": "Mallet Wrap",
+          "top": "t2210_mallet_wrap",
+          "bottom": "b2203_maekake_trousers",
+          "rank": "genin",
+          "palettes": [
+            "KINOSHITA_AIZOME",
+            "KINOSHITA_CEDAR"
+          ]
         }
       ]
     },
