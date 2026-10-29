@@ -1361,7 +1361,8 @@ another's techniques. When and how the player gets it belongs to the story.
 - **How it looks:** an ember mark on the palm or chest, threads of light between bonded people, and
   ember-gold chakra.
 - **Ownership:** Shinobi Combat models the techniques (the `kindle` action and its effects), the
-  bond system owns the gates (`kindling`, `kindling_uses`, `bond_web`), and the story owns the lore
+  bond system owns the gates, flame strength, resonance and the Bonfire's size (`kindling`,
+  `kindling_uses`, `resonance`, `bonfire`, `bond_web`; [BONDS.md](BONDS.md#11-kindling-bond)), and the story owns the lore
   and the timing.
 
 ### Elemental natures
