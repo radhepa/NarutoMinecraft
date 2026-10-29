@@ -1,0 +1,583 @@
+{
+  "id": "hg050_undercut_braid",
+  "kind": "hair",
+  "name": "Undercut Braid",
+  "gender": "unisex",
+  "texture": "hair/hg050_undercut_braid.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sweep_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.4,
+        -8.3,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -96
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "sweep_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.4,
+        -8.3,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -96
+      ],
+      "origin": [
+        -1.0,
+        3.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    },
+    {
+      "id": "sweep_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.4,
+        -8.3,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -96
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        20,
+        0
+      ]
+    },
+    {
+      "id": "sweep_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.4,
+        -8.3,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -96
+      ],
+      "origin": [
+        -1.0,
+        3.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        31,
+        0
+      ]
+    },
+    {
+      "id": "sweep_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.4,
+        -8.3,
+        1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -96
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        40,
+        0
+      ]
+    },
+    {
+      "id": "sweep_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.4,
+        -8.3,
+        1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -96
+      ],
+      "origin": [
+        -1.0,
+        3.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    },
+    {
+      "id": "sweep_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.4,
+        -8.3,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -96
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        6
+      ]
+    },
+    {
+      "id": "sweep_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.4,
+        -8.3,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -96
+      ],
+      "origin": [
+        -1.0,
+        3.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        11,
+        6
+      ]
+    },
+    {
+      "id": "fall_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -7.2,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        5,
+        2
+      ],
+      "uv": [
+        20,
+        6
+      ]
+    },
+    {
+      "id": "fall_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -7.2,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        29,
+        6
+      ]
+    },
+    {
+      "id": "braid_root",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.4,
+        4.4
+      ],
+      "rotation": [
+        -20,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        36,
+        6
+      ]
+    },
+    {
+      "id": "braid_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.75,
+        0.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        49,
+        6
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.25,
+        2.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.75,
+        4.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        13,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.25,
+        6.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        26,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_4",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.75,
+        8.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        39,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_5",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -0.75,
+        10.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        52,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_6",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.25,
+        12.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        20
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_tuft",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        14.0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        9,
+        20
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_wrap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.4,
+        4.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        12.4,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        18,
+        20
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Right side shaved, the rest swept to the left side, one long braid down the back with a leather end."
+}

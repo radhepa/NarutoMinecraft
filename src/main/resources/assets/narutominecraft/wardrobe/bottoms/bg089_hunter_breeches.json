@@ -1,0 +1,247 @@
+{
+  "id": "bg089_hunter_breeches",
+  "kind": "bottom",
+  "name": "Hunter's Breeches",
+  "gender": "unisex",
+  "texture": "bottoms/bg089_hunter_breeches.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_chap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        0.4,
+        -2.6
+      ],
+      "size": [
+        4,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "right_chap_strap_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        1.2,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        11,
+        0
+      ],
+      "inflate": 0.32
+    },
+    {
+      "id": "right_chap_strap_5",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        5.6,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        28,
+        0
+      ],
+      "inflate": 0.32
+    },
+    {
+      "id": "left_chap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        0.4,
+        -2.6
+      ],
+      "size": [
+        4,
+        7,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_chap_strap_1",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        1.2,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.32
+    },
+    {
+      "id": "left_chap_strap_5",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        5.6,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        17,
+        9
+      ],
+      "inflate": 0.32
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        34,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_knife",
+      "bone": "TORSO",
+      "pivot": [
+        -3.8,
+        10.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    }
+  ],
+  "description": "Sturdy trousers with leather chaps over the thighs and knees, soft boots, a belt knife."
+}

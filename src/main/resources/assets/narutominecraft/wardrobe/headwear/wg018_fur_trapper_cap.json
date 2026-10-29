@@ -1,0 +1,160 @@
+{
+  "id": "wg018_fur_trapper_cap",
+  "kind": "headwear",
+  "name": "Fur Trapper Cap",
+  "gender": "unisex",
+  "texture": "headwear/wg018_fur_trapper_cap.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cap_crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -9,
+        -4
+      ],
+      "size": [
+        8,
+        3,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.65
+    },
+    {
+      "id": "cap_brim",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -7.2,
+        -5
+      ],
+      "size": [
+        10,
+        2,
+        10
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "ear_flap_right",
+      "bone": "HEAD",
+      "pivot": [
+        -5.0,
+        -4.8,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        41,
+        12
+      ]
+    },
+    {
+      "id": "ear_flap_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.0,
+        -4.8,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        52,
+        12
+      ]
+    },
+    {
+      "id": "cap_back_flap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.8,
+        4.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        25
+      ]
+    }
+  ],
+  "hidesHair": [
+    "*"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Quilted round cap with a thick shaggy fur brim and fur ear flaps beside the cheeks."
+}

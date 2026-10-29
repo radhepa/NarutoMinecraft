@@ -1,0 +1,160 @@
+{
+  "id": "tg100_snowfield_parka",
+  "kind": "top",
+  "name": "Snowfield Parka",
+  "gender": "unisex",
+  "texture": "tops/tg100_snowfield_parka.png",
+  "extrasHeight": 16,
+  "tags": [
+    "coat",
+    "jonin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belly_pocket",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_fur_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        7.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "left_fur_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        36,
+        0
+      ]
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -2.4,
+        2.8
+      ],
+      "rotation": [
+        -14,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        5,
+        3
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "hood_fur",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -3.0,
+        2.4
+      ],
+      "rotation": [
+        -14,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        4
+      ],
+      "uv": [
+        23,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Thick pullover parka with a fur-rimmed hood thrown back, a belly pocket, toggles and fur cuffs."
+}

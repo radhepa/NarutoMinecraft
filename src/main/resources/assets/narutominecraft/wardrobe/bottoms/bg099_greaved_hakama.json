@@ -1,0 +1,278 @@
+{
+  "id": "bg099_greaved_hakama",
+  "kind": "bottom",
+  "name": "Greaved Hakama",
+  "gender": "unisex",
+  "texture": "bottoms/bg099_greaved_hakama.png",
+  "extrasHeight": 32,
+  "tags": [
+    "hakama",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hakama_right",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "hakama_left",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "greave_right",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        6.0,
+        -2.75
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "greave_right_strap_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        6.6,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "greave_right_strap_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        8.6,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        17,
+        12
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "greave_left",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        6.0,
+        -2.75
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        34,
+        12
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "greave_left_strap_0",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        6.6,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        45,
+        12
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "greave_left_strap_1",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        8.6,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        18
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "waist_tie",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        9.3,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        17,
+        18
+      ],
+      "inflate": 0.2
+    }
+  ],
+  "description": "Short split hakama to the knee with iron greaves over the shins, pale tabi, straw sandals."
+}

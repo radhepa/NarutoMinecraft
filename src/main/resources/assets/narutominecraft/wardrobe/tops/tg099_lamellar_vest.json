@@ -1,0 +1,108 @@
+{
+  "id": "tg099_lamellar_vest",
+  "kind": "top",
+  "name": "Lamellar Vest",
+  "gender": "unisex",
+  "texture": "tops/tg099_lamellar_vest.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "jonin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_shoulder_plate",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        -2.4,
+        -2.6
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_shoulder_plate",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        -2.4,
+        -2.6
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "cord_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        9.6,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Laced rows of small leather plates over long sleeves, tied shoulder plates and a cord belt."
+}

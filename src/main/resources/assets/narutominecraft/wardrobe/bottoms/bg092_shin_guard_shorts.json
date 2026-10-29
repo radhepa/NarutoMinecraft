@@ -1,0 +1,335 @@
+{
+  "id": "bg092_shin_guard_shorts",
+  "kind": "bottom",
+  "name": "Shin Guard Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/bg092_shin_guard_shorts.png",
+  "extrasHeight": 32,
+  "tags": [
+    "genin",
+    "shinobi",
+    "taijutsu"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_hem",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_hem",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "shin_guard_right",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        5.4,
+        -2.75
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "shin_guard_right_strap_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        6.0,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "shin_guard_right_strap_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        9.0,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        17,
+        8
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "shin_guard_right_knee",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.2,
+        -2.85
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "shin_guard_left",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        5.4,
+        -2.75
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        43,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "shin_guard_left_strap_0",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        6.0,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "shin_guard_left_strap_1",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        9.0,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        17,
+        15
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "shin_guard_left_knee",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.2,
+        -2.85
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        15
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        21
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "description": "Sturdy shorts, tall leather shin guards with knee caps strapped over bare legs, sandals."
+}
