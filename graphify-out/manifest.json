@@ -282,8 +282,8 @@
     "semantic_hash": ""
   },
   "life/bonds/build.gradle": {
-    "mtime": 1793310950.3253615,
-    "seen": 1793310988.42831,
+    "mtime": 1793310998.8353336,
+    "seen": 1793311043.1110404,
     "ast_hash": "db6693d36ce312762afdd54d275e8cec",
     "semantic_hash": ""
   },
@@ -672,8 +672,8 @@
     "semantic_hash": ""
   },
   "village/dialogue/build.gradle": {
-    "mtime": 1793310972.5496435,
-    "seen": 1793310988.4287286,
+    "mtime": 1793310998.9158213,
+    "seen": 1793311043.1114755,
     "ast_hash": "48f90eba7a30d30ea9e4585a250752ec",
     "semantic_hash": ""
   },
@@ -2106,8 +2106,8 @@
     "semantic_hash": ""
   },
   "life/economy/build.gradle": {
-    "mtime": 1793310810.811569,
-    "seen": 1793310988.4284627,
+    "mtime": 1793310998.8713336,
+    "seen": 1793311043.111166,
     "ast_hash": "34d702f69d324cd512871b1dfc8582d0",
     "semantic_hash": ""
   },
@@ -2220,8 +2220,8 @@
     "semantic_hash": ""
   },
   "life/home/build.gradle": {
-    "mtime": 1793310950.3413882,
-    "seen": 1793310988.4284952,
+    "mtime": 1793310998.8793724,
+    "seen": 1793311043.111198,
     "ast_hash": "a8e689af4d45624cf4a1afd6943b4145",
     "semantic_hash": ""
   },
@@ -2382,8 +2382,8 @@
     "semantic_hash": ""
   },
   "life/roster/build.gradle": {
-    "mtime": 1793310871.8907292,
-    "seen": 1793310988.4285357,
+    "mtime": 1793310998.888731,
+    "seen": 1793311043.1112416,
     "ast_hash": "b1b808246f648418d5a0f1c5091d90bf",
     "semantic_hash": ""
   },
@@ -2496,8 +2496,8 @@
     "semantic_hash": ""
   },
   "progression/missions/build.gradle": {
-    "mtime": 1793310810.839342,
-    "seen": 1793310988.428563,
+    "mtime": 1793310998.8993337,
+    "seen": 1793311043.111268,
     "ast_hash": "3f93dcb2ca7d9bbbcaec1f16ee560b7e",
     "semantic_hash": ""
   },
@@ -2790,8 +2790,8 @@
     "semantic_hash": ""
   },
   "village/look/build.gradle": {
-    "mtime": 1793310810.845812,
-    "seen": 1793310988.4287612,
+    "mtime": 1793310998.9073336,
+    "seen": 1793311043.1115005,
     "ast_hash": "9dcce2c0f73025f8ebd905faf843a67c",
     "semantic_hash": ""
   },
@@ -2937,6 +2937,12 @@
     "mtime": 1793309872.9233842,
     "seen": 1793310988.4288235,
     "ast_hash": "759d41e7fd1d1293ce1cd4bec5b1781b",
+    "semantic_hash": ""
+  },
+  "tools/dialogue/lines/bond-extra.txt": {
+    "mtime": 1793311038.7393317,
+    "seen": 1793311043.1115913,
+    "ast_hash": "7b54c14501547249a16a0a19b41dc79b",
     "semantic_hash": ""
   }
 }
