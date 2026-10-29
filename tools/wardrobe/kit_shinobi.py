@@ -34,10 +34,10 @@ def bandage(face, x0: int, y0: int, x1: int, y1: int):
 
 
 def mesh(face, x0: int, y0: int, x1: int, y1: int, key: str = "K2"):
-    """Chain mesh: a dark net over the skin, every other texel left open so the skin shows through."""
+    """Chain mesh: a dark net over the skin, one texel in four left open so the skin shows through."""
     for y in range(y0, y1 + 1):
         for x in range(x0, x1 + 1):
-            if (x + y) % 2 == 0:
+            if x % 2 == 0 or y % 2 == 0:
                 face.set(x, y, key)
 
 

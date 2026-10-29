@@ -86,7 +86,8 @@
     "t10_anbu_captain",
     "t11_anbu_tracker",
     "t12_root_tunic",
-    "t13_scout_hoodie"
+    "t13_scout_hoodie",
+    "t14_brawler_vest"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -338,6 +339,25 @@
       "eye_style": "starlit",
       "feminine": false,
       "complexion": 1,
+      "scale": 14,
+      "rank": "genin"
+    },
+    {
+      "id": "genin_brawler",
+      "name": "Genin Brawler",
+      "tagline": "Open red vest over chain mesh, a knotted mustard sash, bandaged fists ready for taijutsu",
+      "face": "f01_shinobi",
+      "hair": "h02_leaf_spikes",
+      "headwear": "w02_forehead_protector",
+      "top": "t14_brawler_vest",
+      "bottom": "b01_shinobi_trousers",
+      "palette": "BRAWLER",
+      "hair_color": "AUBURN",
+      "eye_color": "DARK",
+      "eye_style": "soft_glint",
+      "feminine": false,
+      "brows": "bold",
+      "complexion": 3,
       "scale": 14,
       "rank": "genin"
     }
