@@ -129,8 +129,10 @@ The desk shows a **board**: a column per rank the player may take, each a few of
 
 ### 2.4 Reporting back
 
-The last step of every template is the report: the client signs off (a `talk` with them), and the player
-turns the mission in at the desk for the **grade screen**: grade, pay, XP, the client's rapport, gifts.
+The last step of every template is the report: the client signs off (a `talk` with them, speaking the
+template's `success` lines, or `fail` on a failed run), and the player turns the mission in at the desk,
+where the clerk speaks the `report` lines over the **grade screen**: grade, pay, XP, the client's rapport,
+gifts.
 After 18:00 the turn-in waits for the morning without penalty, unless the time limit runs out.
 
 ### 2.5 Failure, partial success and abandonment
