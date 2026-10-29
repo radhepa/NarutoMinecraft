@@ -248,7 +248,8 @@ Core:
 
 This repository becomes a Gradle multi-project, the way VF hosts `rpg/`: `core/`, `village/`
 (today's wardrobe resources move here), `combat/`, `life/`, `progression/`, `adventure/` (the
-datapack, blueprints and paste scripts) and `pack/` (the manifest). Python authoring tools stay
+datapack, blueprints and paste scripts) and `pack/` (the manifest). The root build and the first
+module already exist: `life/bonds`, Shinobi Life's pure bond engine ([BONDS.md](BONDS.md)). Python authoring tools stay
 under `tools/`. Each mod has its own version; the pack manifest pins a tested set.
 
 The master world is **not** in git. It ships as a zipped save on GitHub Releases; the repository
@@ -261,7 +262,7 @@ keeps only what rebuilds or checks it: blueprints, paste scripts and the datapac
 | Core | `record`, `seed`, `logic` (conditions, actions), `flags`, `events`, `stats`, `data`, `settings`, `wallet`, `region` | `SaveSeed`, `Conditions`, `FlagStore`, `Difficulty`, `StatMath` |
 | Village | `wardrobe`, `clan`, `resident` (markers, cast), `look` (creator, age stages), client `render` | `ClanFile`, `CastRoll`, `AgeStage` |
 | Combat | `chakra`, `technique`, `combat`, `movement`, `tools`, `shinobi`, client `anim`, `hud`, `signs` | `SignSequence`, `Mastery`, `Costs`, `ComboTiming`, `HitArc`, `WallRun`, `RangeBands` |
-| Life | `rules`, `home`, `furniture`, `economy`, `craft`, `food`, `pet`, `romance`, `day`, client `furnish`, `hud` | `Fatigue`, `DayClock`, `FurnishRules`, `Prices`, `Courtship` |
+| Life | `rules`, `home`, `furniture`, `economy`, `craft`, `food`, `pet`, `romance`, `day`, `bond` (the pure engine in `life/bonds`, [BONDS.md](BONDS.md)), client `furnish`, `hud`, `bondbook` | `Fatigue`, `DayClock`, `FurnishRules`, `Prices`, `Courtship`, `BondWorld`, `Levels`, `Squad`, `Gossip` |
 | Progression | `rank`, `level`, `quest`, `mission`, `exam`, `event`, `squad`, `cutscene`, `playerclan`, `reaction`, client `journal`, `screens` | `Ladder`, `Levels`, `QuestGraph`, `MissionRoll`, `Judging`, `RoleBinding`, `Recruiting` |
 
 Every mod follows the VF pattern: pure classes with JUnit tests, thin world glue, and client game
@@ -343,12 +344,19 @@ without a rewrite. These are the format decisions, fixed before Beta 1 content i
 Conditions in the beta: `flag`, `rank_at_least`, `level_at_least`, `quest_state`, `friendship`,
 `clan`, `clanless`, `age_stage`, `time_between`, `calendar` (season, day, weekday), `at_place`,
 `has_item`, `has_ryo`, `knows_technique`, `nature`, `mode` (classic or varied), `difficulty`,
-`random` (from the quest's seed stream). Combinators: `all`, `any`, `not`.
+`random` (from the quest's seed stream). Combinators: `all`, `any`, `not`. The bond conditions
+([BONDS.md](BONDS.md#13-data-formats)): `friendship` reads the level a character acts on (lowered
+while a quarrel lasts), plus `bond_meter`, `bond_memory`, `bond_moment`, `bond_state`,
+`romance_stage`, `kindling`, `knows_fact`, `squad_cohesion`, `in_squad`, `squad_can_return`,
+`standing` and `jealous`. `role:squad` is the current teammates and sensei, `role:teammates` the
+teammates alone; a role group passes only if every member does.
 
 Actions in the beta: `set_flag`, `start_quest`, `advance_quest`, `fail_quest`, `give_item`,
 `take_item`, `give_ryo`, `give_xp`, `teach_technique`, `add_friendship`, `cutscene`, `dialogue`,
 `spawn_group` (enemies or residents at an anchor), `move_role` (send a character somewhere),
-`promote`, `unlock` (a place, a shop item, a recipe), `news` (VF village news), `set_time`.
+`promote`, `unlock` (a place, a shop item, a recipe), `news` (VF village news), `set_time`; and
+the bond actions `bond_event`, `shared_moment`, `start_conflict`, `apologize`, `reconcile`, `mend`,
+`reveal_fact`, `romance`, `return_to_squad`, `favor`, `deed`, `celebrate_birthday` and `bond_flag`.
 Reserved now for later arcs, so the format does not change: `time_skip`, `carve_face`,
 `set_hokage`, `remove_from_squad`, `found_clan`, `marry`.
 
@@ -494,6 +502,9 @@ stream(domain, key) = SplitMix64(hash64(saveSeed, domain, key))
 | `names` | role id | Given name (by gender) and, for clanless characters, a family name; Hokage get a given name only | Village (both modes) |
 | `twists` | twist slot | Which candidate fills each rotating story role | Progression (both modes) |
 | `combat` | encounter id | Enemy loadout variations | Combat |
+| `chemistry`, `romance` | the pair | How two people click; a pair's romantic spark | Life (both modes) |
+| `gossip`, `ties` | deed, people, day; circle and pair | Who hears a deed from whom; who talks with whom in a big circle | Life (both modes) |
+| `recruit`, `household` | resident, clan, week; child | Whether a resident joins your clan this week; a child's personality | Life (both modes) |
 
 Residents are shipped as **markers** in the map (a resident spot with a home, a job and a role
 tag), not as saved entities. On first load, Shinobi Village spawns each one from its curated
@@ -839,8 +850,10 @@ knocked out, never killed. No summons.
 
 ### Friendship and bonds
 
-The squad, classmates and neighbours are VF residents, so friendship uses VF's ten levels,
-relationship meters, gifts, speech bubbles and dialogue. The beta adds **bond quests** (`kind:
+The squad, classmates and neighbours are VF residents, so friendship keeps VF's ten levels, gifts,
+speech bubbles and dialogue; the levels come from Shinobi Life's bond engine
+([BONDS.md](BONDS.md)): five meters (affection, trust, respect, rivalry, romance), memories that
+fade or stay, personalities, story gates, squad dynamics, community standing and quarrel arcs. The beta adds **bond quests** (`kind:
 bond`) gated by friendship (bond levels also feed [Kindling Bond](#kindling-bond) after the beta): two per classmate in Beta 1 and two per teammate in Beta 2, with
 payoffs in Beta 3. Romance waits for the teen stage, after the beta; children have friendships and
 VF's harmless crushes in dialogue only, enforced in code.
@@ -903,8 +916,9 @@ Quests refer to characters by **role**; the save binds each role to a character.
 
 Names are rolled per save in both modes. Rolled characters (Varied) take a group by the population weights (shinobi groups only, so most are clanless), a look from that group's pieces, a VF personality, a family in the
 village and a name from VF's name pools; once rolled they are fixed for the save. A teammate can
-leave the squad (low friendship that stays low, a failed exam, or the story), stays in the village
-and is replaced by a classmate. Squad members are knocked out, never killed.
+leave the squad (a bond that stays low for two weeks, a failed exam, or the story), stays in the
+village and is replaced by a classmate; once the bond recovers, a return quest can bring them back
+([BONDS.md](BONDS.md#7-the-squad)). Squad members are knocked out, never killed.
 
 ### Combat in the beta
 
