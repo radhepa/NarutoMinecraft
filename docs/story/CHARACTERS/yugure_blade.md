@@ -6,8 +6,8 @@
 
 | | |
 |---|---|
-| Role | The second's partner in her two-man cell; Yūgure's best swordsman; the player's recurring duel |
-| Look (fixed) | About forty, broad-shouldered, a grey-streaked topknot, a face weathered like old wood. Dark blue-black clothes under the ash-violet cloak, sleeves tied back. A long, plain sword in a black lacquer scabbard he calls **Last Light**. Ink-dark lines hang in the air for a heartbeat after each cut. Under Transformation in Ch 15 to 17 he is a foreign Genin who writes left-handed |
+| Role | The second's partner: "the only pair he ever allowed" (every other Yūgure unit is a hearth of three or more); Yūgure's best swordsman; the player's recurring duel |
+| Look (fixed) | About forty, broad-shouldered, a grey-streaked topknot, a face weathered like old wood. Dark blue-black road clothes, sleeves tied back, a soot sinking sun on the inside of his wrist; an ash-violet scarf over his face when they mean to be seen. A long, plain sword in a black lacquer scabbard he calls **Last Light**. Ink-dark lines hang in the air for a heartbeat after each cut. Under Transformation in Ch 15 to 17 he is a foreign Genin who writes left-handed |
 | Pronouns | He / him |
 | Clan | No clan. An ordinary family name of the Reed Marshes (rolled; Given Family order). From the **Reed Marshes**, a small country between two great nations' armies, burned in a border war when he was fourteen. The great villages' shinobi fought over the marsh roads and left |
 | Rank | Missing-nin; Jonin-level kenjutsu |
@@ -16,7 +16,7 @@
 | Peeves | Cowardice, dishonesty |
 | Dream | Protect what is left (the second; the marsh children in Yūgure) |
 | First appears | Ch 14.2 (one cut that drops a bridge) |
-| Duels | Ch 19.3 (with the sensei, seen), Ch 27.2, Ch 37.3, Ch 51.4 |
+| Duels | Ch 19.3 (with the sensei, seen), Ch 27.2, Ch 37.3, Ch 51b |
 | Last appears | Ch 52.5 (he dies on the Rock); Ch 54.2 (his burial, if asked) |
 
 ## Arc
@@ -37,7 +37,7 @@ the leader) and fights with honour so that at least the cuts are his own.
 
 | Secret | Who learns it |
 |---|---|
-| He has spared Leaf children before (he forfeited his prelim in Ch 17 rather than draw on a child in front of the Jonin, and because he would not) | The player, Ch 51.4 if they ask |
+| He has spared Leaf children before (he forfeited his prelim in Ch 17 rather than draw on a child in front of the Jonin, and because he would not) | The player, Ch 51b if they ask |
 | He knows nothing of the Hollow Crown | He learns it on the Rock, Ch 52.5 |
 | He knows the second lost a child (both lineages; he does not know the child in A is the player) | — |
 
@@ -51,12 +51,12 @@ hollow, the player sees his thread go taut and then dark; that is the moment he 
 
 | Duel | Who he is |
 |---|---|
-| Ch 14 | A legend in a cloak: one cut, no fight. "Not with children" |
+| Ch 14 | A legend in a scarf: one cut, no fight. "Not with children" |
 | Ch 19 | The sensei's equal; he pulls the second away when the sensei's kunai is at her throat |
 | Ch 27 | He fights the player for the first time, as a teacher would: lets them pick up a dropped kunai. Stopped by the second |
 | Ch 37 | He breaks into the archive for the Hearthstone on orders. Beaten, he warns the player of a trap if they try to capture him (`ans.yugure_blade.archive`) |
-| Ch 51 | His best fight, on the rooftops at dusk. Beaten, he asks why the player never killed him (`ans.yugure_blade.why`). All answers send him to the Rock |
-| Ch 52 | He sees the second torn hollow by the leader's mirror, understands what the Bonfire is, and turns his sword on the leader: "Dusk was supposed to end in morning." He dies |
+| Ch 51b | His best fight, on the rooftops at dusk. Beaten, he asks why the player never killed him (`ans.yugure_blade.why`). All answers send him to the Rock |
+| Ch 52 | He sees the second torn hollow by the leader's mirror, understands what the Bonfire is, and turns his sword on the leader: "Dusk was supposed to be for them, not for her." He dies |
 
 ## Dialogue brief
 
@@ -76,7 +76,7 @@ hollow, the player sees his thread go taut and then dark; that is the moment he 
 - (Ch 27) "Pick it up. I will not win against an empty hand."
 - (Ch 37) "Your guard is your sensei's. Your feet are your own. Better."
 - (Ch 51) "Why did you never finish it? You could have. Twice."
-- (Ch 52.5) "Dusk was supposed to end in morning."
+- (Ch 52.5) "Dusk was supposed to be for them, not for her."
 
 ### Never reveal before
 
@@ -84,20 +84,20 @@ hollow, the player sees his thread go taut and then dark; that is the moment he 
 |---|---|
 | His country's name and story | Ch 37 (if `ans.yugure_blade.country` is asked) |
 | Any tenderness toward the second in words | Ch 52.5 |
-| That he does not know the Bonfire's truth | Ch 51.4 (he says "I don't need to know what it burns. I know what it ends") |
+| That he does not know the Bonfire's truth | Ch 51b (he says "I don't need to know what it burns. I know what it ends") |
 
 ### Questions for the player
 
 | Id | When | Question | Options | Honours / tests | Remembered | How it changes him |
 |---|---|---|---|---|---|---|
-| `ans.yugure_blade.fight` | Ch 27.2, mid-duel, as he lets the player pick up the kunai | "Why do you fight?" | for my friends, for the village, so no one takes me again, I don't know yet | Loyalty / duty; "I don't know yet" honours honesty (he respects it most) | Ch 51.4: "You told me once you fought for ___. Still?" | His Ch 51 stance: he fights harder against "for the village" (his enemy's reason), more gently against "for my friends" |
-| `ans.yugure_blade.archive` | Ch 37.3 | (Player: let him go when beaten / try to capture him) | let_go, capture | — | Ch 51.4: if "let_go": "You let me walk out of the archive. I didn't understand it then" | Capture shows his honour: he warns of a trap he set |
+| `ans.yugure_blade.fight` | Ch 27.2, mid-duel, as he lets the player pick up the kunai | "Why do you fight?" | for my friends, for the village, so no one takes me again, I don't know yet | Loyalty / duty; "I don't know yet" honours honesty (he respects it most) | Ch 51b: "You told me once you fought for ___. Still?" | His Ch 51 stance: he fights harder against "for the village" (his enemy's reason), more gently against "for my friends" |
+| `ans.yugure_blade.archive` | Ch 37.3 | (Player: let him go when beaten / try to capture him) | let_go, capture | — | Ch 51b: if "let_go": "You let me walk out of the archive. I didn't understand it then" | Capture shows his honour: he warns of a trap he set |
 | `ans.yugure_blade.country` | Ch 37.3, after the duel, as he backs into the dark | "Do you know what the Reed Marshes were?" | no (tell me), a country the great villages burned, should I? | Knowledge / honesty | Ch 52.5: if he told it, his last words include "Bury me facing the reeds" (the player can honour it in Ch 54.2) | Being asked lets him say the country's name out loud for the first time in the game |
-| `ans.yugure_blade.why` | Ch 51.4 | "Why did you never kill me?" | kunai ("Because you let me pick up the kunai"), her ("Because she wouldn't want it"), see ("Because I want you to see what he's doing"); plus "She asked me to" if `ans.yugure_second.blade = yes` | Each sends him to the Rock | Ch 52.5: his turn is coloured by it (kunai: a salute to the player first; her: he goes to the second first; see: he looks at the array, then turns) | — |
+| `ans.yugure_blade.why` | Ch 51b, after the last duel | "Why did you never kill me?" | kunai ("Because you let me pick up the kunai"), her ("Because she wouldn't want it"), see ("Because I want you to see what he's doing"); plus "She asked me to" if `ans.yugure_second.blade = yes` | Each sends him to the Rock | Ch 52.5: his turn is coloured by it (kunai: a salute to the player first; her: he goes to the second first; see: he looks at the array, then turns) | — |
 | `ans.yugure_blade.sword` | Ch 52.5, dying | "Take it. Last Light. Don't hang it on a wall." | take it, bury it with you, give it to her | Duty / family | Ch 54.2 and the epilogue: the sword in your house's hall, in his grave, or at the second's side (if she lives) | — |
 | `ans.yugure_blade.stance` | Ch 27.2, mid-duel, after the first exchange | "Who taught you to stand like that?" | my sensei; no one; the camps | Honesty | Ch 37.3: "Your guard is your sensei's. Your feet are your own" (varies: "the camps" makes him say "Your feet are the camps'. Unlearn them") | — |
-| `ans.yugure_blade.burn` | Ch 37.3, among the shelves, before he strikes | "Would you burn this place to keep what's in it secret?" | yes; no; it's been burning for eighty years | Honesty / theme | Ch 51.4: he has read nothing from the archive, but the third answer makes him ask what was in it | "Eighty years" seeds his doubt one arc early |
-| `ans.yugure_blade.dusk` | Ch 51.4, before the last duel | "Do you know what dusk is for?" | the end; the night; the morning after | Theme | Ch 52.5: his last line ("Dusk was supposed to end in morning") is his own if "morning", and an answer to the player's if not | — |
+| `ans.yugure_blade.burn` | Ch 37.3, among the shelves, before he strikes | "Would you burn this place to keep what's in it secret?" | yes; no; it's been burning for eighty years | Honesty / theme | Ch 51b: he has read nothing from the archive, but the third answer makes him ask what was in it | "Eighty years" seeds his doubt one arc early |
+| `ans.yugure_blade.dusk` | Ch 51b, before the last duel | "Do you know what dusk is for?" | the end; the night; the morning after | Theme | Ch 52.5: his last line ("Dusk was supposed to be for them, not for her") answers the player's: "the end": "You were right, it was an end" first; "the night": unchanged; "the morning after": "Make it morning" after | — |
 
 ### What his lines are for
 

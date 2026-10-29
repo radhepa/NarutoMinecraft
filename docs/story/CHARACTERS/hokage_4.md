@@ -16,7 +16,7 @@
 | Values | Family, kindness |
 | Peeves | Cruelty, neglect (and anyone calling an Akimichi fat) |
 | Dream | That no child in the Leaf goes to bed hungry; the orphan's stipend is his |
-| Family | A daughter who runs the barbecue house |
+| Family | A daughter who runs the barbecue house; a grandson, `squad3_b` (Akimichi in every save), in your Academy class |
 | First / last | Ch 1 / Ch 19 to 20 (falls) or Ch 55 (crippled, taken) |
 
 ## Arc
@@ -55,9 +55,9 @@ to. That choice is his only real regret, spoken only if he lives (Ch 40 or 49).
 
 | `twist.fourth_fate` | His end |
 |---|---|
-| Falls | Dies covering the evacuation (Ch 19). Funeral in rain (Ch 20). His bowl to you (Ch 21). The stipend restored in his name (Ch 55) |
+| Falls | No barrier: he fights on the arena floor to cover the Academy children's evacuation and falls, shown through the cinematic cutaway (child-stage safe) (Ch 19). Ch 20: an **Akimichi farewell feast**: the whole village eats his favourite dish in the street, his bowl set at an empty place; `squad3_b` or his daughter quotes `ans.hokage_4.want`. His bowl to you (Ch 21). The stipend restored in his name (Ch 55) |
 | Crippled | Abdicates from his bed and names the Fifth. Mentor through the Chunin arc; at the Academy in Ch 51; at your inauguration |
-| Taken | Carried off in Ch 19; rescued in Ch 21 (The Empty Seat), hollowed; mentor as crippled; warns of the array in Ch 49 |
+| Taken | Carried off in Ch 19 (`squad3_b`, beside you on the east stair, runs toward the Kage box when he is hit); rescued in Ch 21 (The Empty Seat, led by `sensei_2`; `squad3_b` carries his grandfather out), hollowed; mentor as crippled; warns of the array in Ch 49 |
 
 ## Dialogue brief
 
@@ -108,6 +108,10 @@ Voice samples, not shipped lines:
 | `ans.hokage_4.daughter` | Level 3, at the barbecue house | "My girl wants to close early on festival nights. Should I let her?" | yes / no, the village needs the grill / ask her why | Family | Ch 21 (falls: she tells you he took your advice) | — |
 | `ans.hokage_4.practised` | Taken: Ch 21.2c; crippled: Ch 22 to 25 | "Do you want to know what they did to me? Some people don't." | yes / not now / only what helps us stop them | — | Ch 49.3 (how much he tells the council) | Sets how much of the dark mirror he describes |
 | `ans.hokage_4.inauguration` | Ch 55 (living fates) | "Can I still call you little one? Just once more." | yes / only in private / call me Lord Eighth | — (warmth) | Epilogue line | — |
+
+**Who sees the guard rotation.** Crippled or taken, if asked (Chunin or Jonin arc, or at the case board): "Half the village, child. Medics, vendors, the council, the Academy." Identical in every rotation.
+
+**Unset answers.** Every main-path read of an `ans.hokage_4.*` flag (Ch 7.3, Ch 20, Ch 55) has an `unset` branch; Ch 7.3's speech then lists all four wants.
 
 ### What their lines are for
 

@@ -54,17 +54,21 @@ They ordered yours and stared at it. Go find them."
 | | |
 |---|---|
 | Role | Head of the Undercroft (Night Watch) |
-| Name | Given name rolled; family name Shimura |
-| Look (fixed) | A small old Shimura woman, about seventy-five, white hair cut straight at the chin, a cane she does not need, an old ANBU tattoo on her upper arm, an ash-grey haori |
+| Name | No clan; an ordinary family name (Given Family order) |
+| Look (fixed) | A small old woman, about seventy-five, white hair cut straight at the chin, a cane she does not need, an old ANBU tattoo on her upper arm, an ash-grey haori |
 | Pronouns | She / her |
 | Archetype | `stern` leaning `pragmatic` |
 | Values / peeves / dream | Duty, strength / recklessness, dishonesty / protect the village (at any price) |
-| Appears | N3 to N7; Ch 50 (if brought under the Hokage); Ch 51 (on the wall, any path) |
+| Appears | N3 to N7 (N3 needs `story.ch44.done`); Ch 50 (if brought under the Hokage); Ch 51a (on the wall, any path) |
 
-**Arc.** She commanded ANBU under the Third and believes the Quiet Ending's only mistake was waste.
-She has intercepted Yūgure's mail for years and knows the player's nursery number. She wants the
-gift caged and aimed. She does not resist arrest (N7): "You will need us when he comes," and in
-every path she fights at the wall in Ch 51.
+**Arc.** The Undercroft is the heirs of the **sealing team that sealed the twenty-seven** in the
+Quiet Ending: a mixed-clan oath society of old ANBU and sealers who never stopped believing the
+gift must be sealed and used. A Shimura elder shelters them under the Shimura house (the Shimura are
+complicit, not the faction). She is the sealing team leader's granddaughter, sworn in as a child,
+and commanded ANBU under the Third. She believes the Quiet Ending's only mistake was waste. She has
+intercepted Yūgure's mail for years and knows the player's nursery number. She wants the gift caged
+and aimed. She does not resist arrest (N7): "You will need us when he comes," and in every path she
+fights at the wall in Ch 51a.
 
 **Voice.** Precise, unhurried, contemptuous of sentiment, never raises her voice. Calls the player
 "Nine" until N7, then "Hokage's hound", then (Ch 51, if she survives the night) by name.
@@ -90,7 +94,7 @@ only after Ch 38, so it never pre-empts the voice's slip; see note below).
 
 | | |
 |---|---|
-| Role | The masked captain who recruits and leads the player in Night Watch |
+| Role | The masked captain who recruits and leads the player in Night Watch (N1 to N2 need level 35 and `story.ch39.done`) |
 | Look | Rolled shinobi; ANBU armour and a heron mask; never unmasked in the story |
 | Pronouns | They (rolled) |
 | Archetype | `reserved` |
@@ -114,7 +118,7 @@ role traits:
 
 | Role | Fixed trait | Arc in one line |
 |---|---|---|
-| `genin_1` | If `ans.player.ch0.freed_boy = freed`, he is the boy from the third cell, grown (fixed male, fixed look then); else rolled | Wants to be like the person who opened his door; learns to open doors for others (he leads the Academy children out in Ch 51.2) |
+| `genin_1` | If `ans.player.ch0.freed_boy = freed`, he is the boy from the third cell, grown (fixed male, fixed look then); else rolled | Wants to be like the person who opened his door; learns to open doors for others (he leads the Academy children out in Ch 51a) |
 | `genin_2` | A rolled clan or clanless child; the team's loud one | Wants to beat the other two; learns the bell test's lesson from your test |
 | `genin_3` | A Kagari descendant with a faint sealed flame (`story.seed.genin_flame`) | Afraid of what they are once they know; the Undercroft targets them in N5 if the player refuses; in Ch 53 their flame is one of the first to kindle toward you |
 
@@ -125,7 +129,7 @@ bond engine's favouritism applies to them as to a squad).
 
 | Id | Who | Question | Options | Remembered |
 |---|---|---|---|---|
-| `ans.genin_1.door` | genin_1 | "Why did you open my door? You didn't know me." (if freed) / "Why did you pick our test that way?" (else) | it was locked and I could open it, someone would've done it for me, I didn't think | Ch 51.2: he says it to the children he leads out |
+| `ans.genin_1.door` | genin_1 | "Why did you open my door? You didn't know me." (if freed) / "Why did you pick our test that way?" (else) | it was locked and I could open it, someone would've done it for me, I didn't think | Ch 51a: he says it to the children he leads out |
 | `ans.genin_2.best` | genin_2 | "Who's your favourite? Out of us. Be honest." | none, all three, you (to genin_2), tell them honestly | Jealousy: "you" raises genin_2 and costs the others (the favouritism rule) |
 | `ans.genin_3.flame` | genin_3 | "Is this thing in me going to hurt someone?" | no, not if you learn it, it might, so let's learn together | Ch 53: their line as their flame kindles toward you |
 
@@ -136,10 +140,10 @@ bond engine's favouritism applies to them as to a squad).
 | | |
 |---|---|
 | Role | `teammate_b`'s parent, who walked out of the Leaf when b was small and joined Yūgure |
-| Look | Rolled shinobi of the same family; older, scarred; an ash-violet cloak from Ch 51 |
+| Look | Rolled shinobi of the same family; older, scarred; road clothes, a soot sun on the wrist, an ash-violet scarf in Ch 51a |
 | Pronouns | They (rolled) |
 | Archetype | `fiery` gone sour (bitter) |
-| Appears | Mentioned Ch 6.2; the stranger's lure Ch 13; alive (Ch 26); met only in Ch 51.3 |
+| Appears | Mentioned Ch 6.2; the stranger's lure Ch 13; alive (Ch 26); met only in Ch 51a |
 
 **Arc.** A Leaf Chunin abandoned on a failed mission by a captain who chose the objective over his
 team; the village gave the captain a medal. They walked out the next week, too ashamed to take the
@@ -148,7 +152,7 @@ out if b was alive, and she used it as a lure (Ch 13).
 
 **Voice.** Rough, short, defensive; softens only when b asks the player's question.
 
-**Ch 51.3.** b asks your question (`ans.teammate_b.ask`):
+**Ch 51a.** b asks your question (`ans.teammate_b.ask`):
 
 | Question | Their answer |
 |---|---|
@@ -159,7 +163,7 @@ out if b was alive, and she used it as a lure (Ch 13).
 b's choice reads `ans.teammate_b.come_back` (yes: bring them in; only if sorry: make them say it;
 no: let them go). They live in all three.
 
-**Questions** (Ch 51.3, to the player, only if `ans.player.b_parent = stand`):
+**Questions** (Ch 51a, to the player, only if `ans.player.b_parent = stand`):
 
 | Id | Question | Options | Remembered |
 |---|---|---|---|
@@ -245,10 +249,9 @@ stipend list at dinner. Every name").
 
 ## Note on the Undercroft and the slip
 
-The Undercroft knows the player's nursery number. N3 can only be reached after Ch 38 begins
-(the invitation needs the case to be underway), so it cannot muddy the Ch 25 slip before the case
-board. If the build allows N3 between Ch 38 and Ch 39, the case board should not count the head's
-"Nine" as a slip (she is not a candidate), and nothing changes.
+The Undercroft knows the player's nursery number. N1 to N2 open after Ch 39 and N3 (the cellar)
+only after Ch 44, so the head's "Nine" always comes after the voice's case is closed and never
+muddies the Ch 25 slip.
 
 ## New flags
 

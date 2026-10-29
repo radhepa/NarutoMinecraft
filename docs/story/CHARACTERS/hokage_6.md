@@ -46,7 +46,7 @@ truth to a village that cannot bear it, and break it.
 | Ch 32 | A reluctant Hokage who asks more questions than he answers |
 | Ch 33 to 36 | The player's protector at the council; he orders or allows the archive open |
 | Ch 40 | The bravest thing he ever does: he says it all to the clan heads |
-| Ch 42 | He resigns to take responsibility for the Leaf's buried crime and to let a Hokage with clean hands lead the war he sees coming |
+| Ch 42 | He resigns to take responsibility for the Leaf's buried crime and names the sensei. The council is **contested**: it balks at naming a Hokage who signed the Ash Road field report. He does not overrule them; `squad5_a`'s public stand ("I'm with them") carries the vote. His line after: "I could have ordered it. It's better that they chose." |
 | Ch 51 | He teaches at last: at the Academy with the instructor, with children, during the assault |
 
 ## Dialogue brief
@@ -91,7 +91,7 @@ truth to a village that cannot bear it, and break it.
 | `ans.hokage_6.letter` | Ch 36.7, after the Third's letter | "She asked whoever came to say it for her. Will you, or shall I?" | you; me; together | Duty | Ch 40.2: who speaks first at the council | — |
 | `ans.hokage_6.certain` | Ch 38.6, before the accusation (if the player brings it to him) | "Are you certain? Certain enough to ruin them if you're wrong?" | yes; no, but I have to; help me be sure | Honesty | Ch 40.3: if an innocent was accused after "help me", he shares the blame publicly | "Help me" lets him point out one missing proof (a hint, not the answer) |
 | `ans.hokage_6.last_line` | Ch 41, before the unveiling | "The memorial needs a last line under the names. What should it say?" | their names were theirs; we did this; come home | Theme | The memorial's inscription for the rest of the game | — |
-| `ans.hokage_6.children` | Ch 51.2, at the Academy | "What do I tell the children is happening?" | the truth; that we're keeping them safe; a story | Kindness / honesty | Epilogue: an Academy child repeats what he told them | — |
+| `ans.hokage_6.children` | Ch 51a, at the Academy | "What do I tell the children is happening?" | the truth; that we're keeping them safe; a story | Kindness / honesty | Epilogue: an Academy child repeats what he told them | — |
 
 ### What his lines are for
 

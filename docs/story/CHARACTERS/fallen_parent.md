@@ -14,7 +14,7 @@
 | Name | Given Family, both rolled (an ordinary family name, **no clan**: the renamed grandmother's adoptive family was clanless). On the memorial stone at Ch 10, just beside the chiselled gap; moved beside the Kagari names in Ch 41 |
 | Line | Grandchild of one of the twenty-seven renamed Kagari children; sealed flame that flickered |
 | Habits | Hummed the watch-fire song on missions; loved persimmons; laughed at their own jokes |
-| Appears | Only through others: the sensei (Ch 10, 13, 18, 21, 25, 36, 48), the stone, the archive (Ch 36 to 37), the box (lineage B) |
+| Appears | Only through others: the sensei (Ch 10, 13, 18, 21, 25, 37, 48), the stone, the archive (Ch 37), the box (lineage B) |
 
 ## Who they were
 
@@ -43,7 +43,7 @@ box the sensei took from the team's camp; the other was sewn into the child's sl
 |---|---|---|
 | Their name on the memorial stone | Training Ground 3 | Both |
 | A persimmon left every year by the sensei | The stone, Ch 21 | Both |
-| The sealed Ash Road report | The archive, Ch 36 | Both |
+| The sealed Ash Road report | The archive, Ch 37.0 | Both |
 | Their grandmother's line on the renaming list | The archive, Ch 37 | Both |
 | Their forehead protector | The sensei's box | Both (the box exists in both saves; seen only in B) |
 | Half a watch-fire charm | The sensei's box | **B only** |
@@ -58,10 +58,13 @@ Others speak of them; they never speak. Rules:
   Never "your parent" before Ch 48 in either lineage.
 - **`sensei_3`** remembers them as the one who made the team laugh, and blames the sensei a little
   for sending her back; her lines live in the ensemble files.
-- **The keeper** knew of them as a name on a sealed report; his line in Ch 36 is guilt, not memory.
+- **The keeper** knew of them as a name on a sealed report; his line in Ch 37 is guilt, not memory.
 - **The memorial** (Ch 41) and teammate_a's mural show them in shadow; the mural never shows a face
   (no fixed look exists).
 - **Lineage B, Ch 48:** the sensei tells the story of the ambush in full and reads the unsent letter.
+  Their heart line: "I carried you over a ravine and didn't know. Then I suspected, and the report
+  said the persimmon house burned with everyone in it, and I was afraid to be wrong, so I never
+  opened the box."
   The player's answer is `ans.player.parent_meet` ("You found me anyway" / "You should have looked" /
   say their teammate's name).
 - **The lost child (theirs)** is never mentioned by anyone before Ch 48 in either save. In lineage A,
@@ -70,7 +73,7 @@ Others speak of them; they never speak. Rules:
 - **Lineage A:** at Ch 48 to 49 the sensei says, of the second: "They'd have liked her. They liked
   anyone who fought for kids."
 - **Never reveal before:** that they were Kagari (Ch 25 for the flame, Ch 37 for the line); that
-  Yūgure killed them (Ch 36); the box's charm (B, Ch 48); that they had a child at all (Ch 48, both saves).
+  Yūgure killed them (Ch 37.0); the box's charm (B, Ch 48); that they had a child at all (Ch 48, both saves).
 
 ## Questions
 

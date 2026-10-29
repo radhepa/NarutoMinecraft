@@ -23,14 +23,16 @@
 ### In every save
 
 The medic was a nursery-age orphan once: an orphanage on the border burned when they were seven;
-cloaked strangers pulled them out three days before the Leaf arrived and kept them a month in a
+strangers in road clothes, soot marks on their wrists, pulled them out three days before the Leaf arrived and kept them a month in a
 camp, kindly, before leaving them at a Leaf outpost. They never knew who the strangers were.
 They became a medic to be the person who arrives in time. They test every rescued child (the Ch 0
 sample) because the hospital found that camp children carry chakra injuries no one sees.
 
 **Something they hide, in every save.** For years they have quietly written to border outposts
-asking after the cloaked strangers who saved them, and keep the replies in the crane jar. It is
-private, not sinister. It matters because, once the player has **Thread Sight** (Ch 24 on), a
+asking after the strangers who saved them, and keep the replies in the crane jar. It is private,
+not sinister. **The held-back piece, in every save:** the last reply in the jar (an outpost captain
+who saw soot-marked wrists and ash-violet scarves) stays hidden until Ch 39 (bound) or Ch 40
+(innocent), so the flicker never goes out early in any rotation. It matters because, once the player has **Thread Sight** (Ch 24 on), a
 bonded person at level 6 or more who is hiding something shows a flicker in their thread: the
 innocent medic flickers too (the letters), so the flicker alone never convicts them. The bound medic
 flickers for both reasons; Thread Sight shows *that*, never *what*.
@@ -45,8 +47,13 @@ They learned who the strangers were at nineteen, when a letter came: "You were o
 only numbers." For six years they sent readings, telling themselves numbers hurt no one and that
 the people who saved them were saving others. They sent your Ch 0 reading. They visited after the
 flare (Ch 3) to report it (and were glad the instructor gave them a reason). They tore the intake
-pages on the night shift (a twenty-minute gap in the surgery roster). Then the lost child came back
-hollow (Ch 24): they had measured her, years ago, from a ledger at a border clinic. That broke them.
+pages on the night shift (a twenty-minute gap in the surgery roster, which only `squad4_c`'s copy
+shows at Ch 38). Then, in Ch 25, they treated the border post's wounded, the friend she struck among
+them, and saw the hollow wounds: chakra torn out in cold patches. From the reports they knew the
+pale girl was a child they had measured, years ago, at a border clinic. That broke them. Their
+access in every save, as for every candidate: the stadium triage posts list (which names the
+guard posts for the finals), the Sixth's clerk's news that the archive would be open (Ch 37), and,
+after the porter falls (Ch 28), the outpost letters as a channel (used only if bound).
 By Ch 25 they are half ready to be caught; the slip ("better than ninety, for a ninth—") is almost
 a confession.
 
@@ -54,6 +61,9 @@ a confession.
 
 Everything in "every save" is true and nothing else. The visit was the instructor's request. The
 pages were torn by the night patient (the Ch 11 smuggler) while they were in surgery all night.
+**The night shift is identical in every save**: the player is sent on an errand across the hospital
+during the window and never sees the medic's station; only `squad4_c`'s surgery roster (Ch 38)
+shows them in surgery all night (innocent) or the gap (bound).
 The diverted supplies' requisition was forged (`side.b3.hospital_supplies` clears them).
 
 **What they know and when.**
@@ -72,7 +82,7 @@ The diverted supplies' requisition was forged (`side.b3.hospital_supplies` clear
 | Arc | Change |
 |---|---|
 | 1 Cinders | The careful adult who writes you down |
-| 2 Paper Trail | Treats the squad's injuries with scolding; the night shift side quest |
+| 2 Paper Trail | Treats the squad's injuries with scolding; the night shift side quest (identical in every save) |
 | 3 Dusk | Runs the stadium triage in Ch 19 |
 | 4 Embers | Treats you after the border post; the slip (bound) or the parallel kind line (innocent); treats the porter (Ch 28) |
 | 5 Ashes | Bound: unmasked (Ch 39). Innocent: cleared (Ch 40), asks to care for the lost child |
@@ -113,7 +123,7 @@ Voice samples, not shipped lines:
 | Their values (5) | "Come in early. Not late. Early." |
 | Advice (5) | Practical, about sleep and grief; about the lost child: "Hollow isn't empty. It's quiet" |
 | Their dream (6) | A children's ward for camp children, with windows that open |
-| Worries (7) | Bound: that someone they measured was hurt (said obliquely before Ch 39). Innocent: that they will be too late |
+| Worries (7) | The same line in every save before Ch 39: that they will be too late. Bound: after Ch 39, that someone they measured was hurt |
 
 ### Never reveal before
 
@@ -125,7 +135,8 @@ Voice samples, not shipped lines:
 | That they measured the lost child | Bound only, Ch 39 |
 | That the instructor asked them to visit | Ch 25 (both saves) |
 | Any line that is warmer or colder in one save than another | Never before Ch 25: beta lines are identical in every save |
-| The outpost letters (the innocent flicker's cause) | Level 7, or Ch 40; both saves have them |
+| The outpost letters exist | Level 7, both saves (they mention writing to outposts) |
+| The last reply in the jar (the held-back piece) | Ch 39 (bound) / Ch 40 (innocent); never earlier in any save |
 
 ### Questions for the player
 
@@ -141,7 +152,10 @@ Voice samples, not shipped lines:
 | `ans.medic.sleep` | Ch 4 aftermath (fatigue), level 1 | "How many hours did you sleep? Lie and I'll know." | the truth / round up / I don't sleep well since the camps | Honesty | Ch 21 (they ask again, a year later, and compare) | "The camps": they give you a tea that helps (a small Well Rested item) |
 | `ans.medic.records` | Ch 12 to 14, level 3 | "Should records ever be private from the people they're about?" | never / sometimes, to protect them / only if they ask | Knowledge, duty | Ch 38 (they open your file to you at the case board, every save) | — |
 | `ans.medic.too_late` | Ch 20 (after the stadium), level 4 | "I was too late for someone today. What do you do with that?" | you carry it / you put it down / you tell someone, like now | Comfort (a hard-news response) | Ch 51 (they say your words back to you over a wounded friend) | Counts as `comfort` for the bond gate |
-| `ans.medic.strangers` | Level 7 (innocent: Ch 40; bound: before Ch 39 as a half-confession) | "If you found the people who saved you were bad people, would you still be grateful?" | yes / no / for that one day, yes | Tests their secret | Bound Ch 39c; innocent Ch 40 (the outpost letters) | Innocent: they burn the letters, or keep them, by your answer |
+| `ans.medic.strangers` | Level 7, identical in every save | "If you found the people who saved you were bad people, would you still be grateful?" | yes / no / for that one day, yes | Tests their secret | Bound: Ch 39c; innocent: Ch 40 (the last reply in the jar) | Innocent: they burn the letters, or keep them, by your answer. The answer never ends the flicker early |
+
+**Unset answers.** Every main-path read of an `ans.medic.*` flag (Ch 39, Ch 40, Ch 51) has an `unset`
+branch with a neutral line.
 
 ### What their lines are for
 
