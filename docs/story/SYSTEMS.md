@@ -34,11 +34,11 @@ the bible's side quest secrets).
 | `district.b1.academy.overdue` | `story.clue.librarian.3` (the cipher slip) |
 | `event.b2.council_day` | `story.clue.councillor.3`; introduces the council for Ch 31 and Ch 40 |
 | `district.b2.contraband` | `story.clue.merchant.3` |
-| `district.b2.night_shift` | `story.seed.night_patient` (Ch 23), `story.clue.medic.3`, and the medic's alibi or failed alibi (the player witnesses it) |
+| `district.b2.night_shift` | Sets `story.seed.night_patient` (Ch 23) and `story.clue.medic.3`; nothing about the medic is seen; identical in every save (the alibi is only the roster at Ch 38) |
 | `side.b2.pawned_scroll` | `story.seed.second_page`: a second cut page; the keeper buys it from you in the Jonin arc (trust +) |
 | `side.b2.lost_letters` | `story.seed.unknown_family`: a letter to a family that no longer exists, one of the twenty-seven's old names (Ch 37 makes it land) |
 | `side.b3.lost_genin` | The foreign Genin (Ch 15, 16) |
-| `side.b3.hospital_supplies` | `story.clue.medic.4` |
+| `side.b3.hospital_supplies` | `story.clue.medic.4`, a pure red herring in every save |
 | `clan.tobari.3` | Ch 30 shortcut; the Tobari deserter who taught Yūgure the smothering technique |
 | `clan.shimura.3` | Opens the Night Watch's cellar (N3) |
 | `clan.kurama.3` | The hidden painting of the shrine before it burned, brought out in Ch 40 |
@@ -46,11 +46,11 @@ the bible's side quest secrets).
 | `clan.uzumaki.3` | The sealing expert who helps break the archive's old seals in Ch 36 if present (otherwise the keeper's keys alone) |
 | `clan.hatake.4` | The keepsake's heir is the sensei if no Hatake lives in the save |
 | `clan.senju.4` | If the councillor is the voice, the founders' shrine dispute becomes his house's reckoning |
-| `clan.<id>.5` (Legacy) | Ch 50: a clan whose Legacy step is done opens its quarter's anchors and sends fighters to Ch 51 |
+| `clan.<id>.5` (Legacy) | Ch 50: a clan whose Legacy step is done opens its quarter's anchors and sends fighters to Ch 51a |
 | `filler.lake_lanterns` | If `story.seed.flare`, the lantern leans toward you (an echo) |
 | Snowbound (Chunin, later) | A courier carrying Yūgure paper unknowingly: a trail drop |
 | The Puppet Theatre (Jonin, later) | A gifted orphan hidden from a Yūgure recruiter; can join your restored house later |
-| The Forger's Ink (Jonin, later) | The ink of the bound voice's household; consistent with `twist.traitor` |
+| The Forger's Ink (Jonin, later) | Gated to `story.ch39.done`; the ink of the voice's household, consistent with `twist.traitor` |
 
 **New story side quests** (spoiler-zone premises; neutral premises to send the roadmap session):
 
@@ -86,6 +86,13 @@ The bond engine ([BONDS.md](../../BONDS.md), [LIFE_TOGETHER.md](../../LIFE_TOGET
 - **Life events** for story characters are authored, not rolled, at story beats (the teammate's
   injury after Ch 24, b's parent news after Ch 26, the keeper's illness hint before Ch 51), so
   comforting them can earn the moments the gates ask for.
+- **A teammate who leaves.** Any teammate who leaves from Ch 8 on (a falling-out, a low bond) is
+  replaced by a stand-in lent by `sensei_2` (classmate_c, else classmate_d). If b has already left
+  by Ch 13, the stranger approaches b anyway (easier to reach outside the squad) and Ch 26 plays as
+  *left*. The story mends a falling-out at Ch 25 for the friend who fell and at Ch 25.4 for the
+  sensei; in Ch 53 the sensei's flame overrides a falling-out.
+- **Unset answers.** Every main-path read of an `ans.*` flag has an `unset` default
+  ([FLAGS.md](FLAGS.md)).
 - **The village talks.** Big beats are deeds everyone hears: the stadium (Ch 19), the border post
   (Ch 24), the testimony (Ch 31), the council (Ch 40), the war (Ch 51a and 51b). Residents' greetings react.
 
@@ -105,7 +112,7 @@ finale reading each bond at 6+ in a fixed order (spouse, teammates, sensei, riva
 
 ## 4. Clans
 
-- **The player is a clanless orphan** (a user decision "for now"; clan-born play may return later). Clans reach the player as hosts and teachers: a lesser technique from the clan of their closest classmate (Ch 12), welcome quests, invitations at high friendship (BONDS §10), and the Legacy steps.
+- **The player is a clanless orphan** (a user decision "for now"; clan-born play may return later). Clans reach the player as hosts and teachers: a lesser technique from the clan of the closest classmate who has a clan (Ch 12), welcome quests, invitations at high friendship (BONDS §10), and the Legacy steps.
 - **Clan politics in the plot**: the Tobari crisis (Ch 30 to 31) is a clan story told through the
   bond engine's relations (`clan_relation tobari hagane`, moods); the council (Ch 40) moves every
   founding clan's relation with the village; the Legacy steps decide who stands with you in Ch 51a.
@@ -123,7 +130,7 @@ not mechanics):
 | **Ember chakra**: the second's burning kunai and ember palms | Ch 16, 19, 27 |
 | **The hollow**: an enemy with flat AI and several stolen natures (cycles through them), who does not flinch | Ch 24 (the lost child), Ch 52 to 53 (hollow fighters) |
 | **Smothered fights**: no sound cues | Ch 31 |
-| **Kindling Bond** (approved design, [WORLD.md](WORLD.md#kindling-bond-in-the-story)): Thread Sight from Ch 24 (with the mystery limit: reads only bonds at 6+, shows *that* someone hides, never *what*); a Kindle that makes an ally's own technique exceed its limits (Ch 24's scripted kindle must work on any teammate's or the sensei's signature technique); Ember Link in a dark, soundless fight (Ch 31); Ember Mark travel across the village (Ch 51); the Bonfire (Ch 53) | Ch 24 onward |
+| **Kindling Bond** (approved design, [WORLD.md](WORLD.md#kindling-bond-in-the-story)): Thread Sight from Ch 24 (with the mystery limit: reads only bonds at 6+; the flicker is a steady `hides:` state, never a lie detector; the only exceptions are the `thread_floor` list in FLAGS.md); a Kindle that makes an ally's own technique exceed its limits (Ch 24's scripted kindle must work on any teammate's or the sensei's signature technique); Ember Link in a dark, soundless fight (Ch 31); Ember Mark travel across the village (Ch 51); the Bonfire (Ch 53) | Ch 24 onward |
 | **Unison techniques** for the player with each close character (ideas in each character file) | Jonin arc onward |
 | **The dark mirror** as an enemy attack: a drain beam the player must break line of sight from | Ch 52 |
 | **The finale**: a fight where the player's power grows with each flame given (data: the bond web) | Ch 53 |

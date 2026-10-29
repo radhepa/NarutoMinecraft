@@ -43,6 +43,9 @@ season's exams, during the time skip. squad4_b fails twice and is promoted late 
 | **Story-driving** | All five senseis; the rival; teammates a and b; squad3_a, squad3_b, squad3_c; squad4_a, squad4_c; squad5_a, squad5_b, squad5_c | Each moves the main plot at least once (a clue, a choice, a rescue, a betrayal or not, a sacrifice) |
 | **Fan-favourite** | `classmate_c`, `classmate_d`, `squad4_b` | Side quests, bonds, comedy and heart; small, warm moments in the main path |
 
+**Voices that must not blur.** The rival issues challenges and asks questions dressed as insults
+(no catchphrase, no scorekeeping). `sensei_2` keeps score. `squad5_c` prices things ("Pay it.").
+
 ## The senseis
 
 | Role | Specialty | History and ties | Want | Flaw | Arc |

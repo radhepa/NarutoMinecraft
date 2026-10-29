@@ -251,11 +251,11 @@ money in the Jonin arc to move his family into a house; he has told no one.
 | Arc | Change |
 |---|---|
 | 1 Cinders | Ch 7: at the graduation, ignores everything; watches the player's clone test and says "Sloppy." |
-| 3 Dusk | Ch 17: wins his preliminary in seconds. Ch 19.3: in the attack he joins the player's sensei against the blade on the arena floor, holds his own for six strokes, and takes a cut across the cheek. The blade, leaving, tells him "Good. Get a better sword." Promoted in Ch 20 |
+| 3 Dusk | Ch 17: wins his preliminary in seconds. Ch 19.3: in the attack he joins the player's sensei against the blade on the arena floor, holds his own for six strokes, and takes a cut across the cheek (shown as a cut; the scar comes later, no blood). The blade, leaving, tells him "Good. Get a better sword." Promoted in Ch 20 |
 | 4 Embers | Ch 28.5: at the porter's empty room, the morning after, he is already there with his hands in his pockets: "He carried my sister's cot up four floors. Wouldn't take a coin." (`shared_moment bond.squad5_c.porter`). Chunin, then ANBU at the end of the arc, younger than anyone in years. Brilliant and alone |
-| 5 Ashes | Between Ch 39 and Ch 44, recruited by the Undercroft, an oath society of old ANBU and sealers (the heirs of the sealing team of the Quiet Ending) sheltered under the Shimura house: money for his family, and the promise of real power ("We'll teach you what the ANBU won't"). Ch 44: on the same A-rank hill as the player, he arrives in an ANBU mask with orders to take the lost child alive; she is gone before either of them reaches her, and he will not say whose orders |
+| 5 Ashes | Between Ch 39 and Ch 44, recruited by the Undercroft, an oath society of old ANBU and sealers (the heirs of the sealing team of the Quiet Ending) who meet in the derelict sealing hall under the old quarry: money for his family, and the promise of real power ("We'll teach you what the ANBU won't"). Ch 44: on the same A-rank hill as the player, he arrives in an ANBU mask with orders to take the lost child alive; she is gone before either of them reaches her, and he will not say whose orders |
 | 6 Night Watch | N4: he guards the lost child's cell, masked; the player sees him through the bars. N6: he is the last of the old masks between the player and her. **Betray or not** (below) |
-| 7 Last Bonfire | Ch 47 (if the Night Watch was declined or not finished; a half-played branch resolves here): he arrives at the shrine with Undercroft orders to take her. **Betray or not** (below); either way the orders reach the Seventh and the Undercroft is disbanded quietly. Ch 51: whatever happened, he fights for the Leaf at the wall |
+| 7 Last Bonfire | Ch 47 (if the Night Watch was declined or not finished; a half-played branch resolves here): the morning after she comes home to the shrine, he arrives with Undercroft orders to take her. **Betray or not** (below); either way the orders reach the Seventh and the Undercroft is disbanded quietly. Ch 51a: whatever happened, he comes to the wall later in the fight and holds a stretch of it |
 
 **Betray or not** (N6, or Ch 47 if the Night Watch was declined or not finished; `story.squad5_c.stand`). The
 player asks him: "What did they promise you?" His answer is `ans.squad5_c.offer` (his own words,
@@ -267,7 +267,7 @@ reach him:
 | Outcome | Needs | What happens |
 |---|---|---|
 | **Stands down** (talked down) | `friendship [squad5_c, 4]` and the player's reply meets his offer (power → "Nobody who holds a cage is free"; house → "You'll have one. Not like this"; teach → "I'll teach you myself"; nothing → "Then say no now"), helped by `ans.squad5_c.cage = key` or `ans.squad5_c.free = never` (either lowers the friendship need to 3); or the player tells him the Undercroft's plan for her (seen in N4) | He lowers his sword: "They said she was a weapon. She's a kid from a cell." In N6 he opens the cell himself and walks out of the Undercroft with the player; in Ch 47 he turns and guards the shrine stair. He returns the Undercroft's money (`stood_down`) |
-| **Fights** | Otherwise | A full duel; beaten, he yields and leaves the ANBU (N6) or is arrested on the Seventh's order (Ch 47); released for the war, he returns in Ch 51 at the wall and fights without a word (`fought`) |
+| **Fights** | Otherwise | A full duel; beaten, he yields and leaves the ANBU (N6) or is arrested on the Seventh's order (Ch 47); released for the war, he comes to the wall later in Ch 51a and fights without a word (`fought`) |
 
 He never kills anyone in either branch, and never fully joins the dark: the story says he was
 offered a cage with a key and had to choose to use the key.
@@ -287,7 +287,7 @@ Voice samples, not shipped lines:
 - "Sloppy."
 - "No clan either? Then you'll have to be better than them. Good. So do I."
 - (counting under his breath) "...four, five. Pay it."
-- (to the blade, Ch 19, through blood) "Not done."
+- (to the blade, Ch 19, getting up) "Not done."
 - (Ch 44) "Orders. Go home, {given:player}. This isn't yours."
 - (stands down) "They said she was a weapon. She's a kid from a cell."
 
@@ -311,8 +311,8 @@ from Ch 28.5 ("He carried my sister's cot up four floors. Wouldn't take a coin."
 | `ans.squad5_c.porter` | Ch 28.5 (at the porter's room) or later at level 3 | "Did you hate him? The porter?" | No / I don't know / I miss him | Honesty | His only gentle line, at the shrine where the porter sweeps (Ch 47 or 54) | — |
 | `ans.squad5_c.thanks` | Ch 54 | "I never said thanks. For anything. Do I have to?" | No / Once would be nice / You just did | Pride | Epilogue | — |
 | `ans.squad5_c.offer` | N6 or Ch 47 | (His answer to "What did they promise you?"; the player's reply follows) | power / house / teach / nothing | Pride, family | The stand-down table above; epilogue: his free class's sign | — |
-| `ans.squad5_c.scar` | Ch 20 (the cheek still bandaged) | "He said get a better sword. Should I?" | Yes / Keep yours, get better / I'll help you pay for one | Pride | Ch 51: the sword he carries (a new one, the old one, or the one you bought with him); the blade's last duel (Ch 51.4) he asks "Better sword?" if he sees him | "Help pay": a level of trust (a favor he never forgets) |
-| `ans.squad5_c.anbu` | End of the Chunin arc (his ANBU appointment) | "They want me in a mask at fifteen. Should I?" | Yes, you've earned it / Not alone / Only if it pays your family | Strength, family | Ch 44: under the mask he says "You said ___" | "Not alone": he asks for you to be told where he is, a thread you can follow (Thread Sight) in Ch 44 |
+| `ans.squad5_c.scar` | Ch 20 (the cheek still bandaged) | "He said get a better sword. Should I?" | Yes / Keep yours, get better / I'll help you pay for one | Pride | Ch 51a: the sword he carries (a new one, the old one, or the one you bought with him); the blade's last duel (Ch 51.4) he asks "Better sword?" if he sees him | "Help pay": a level of trust (a favor he never forgets) |
+| `ans.squad5_c.anbu` | End of the Chunin arc (his ANBU appointment) | "They want me in a mask at fifteen. Should I?" | Yes, you've earned it / Not alone / Only if it pays your family | Strength, family | Ch 44: under the mask he says "You said ___" | "Not alone": he asks for you to be told where he is; in Ch 44 he lets you see his face under the mask for a moment (unset: he stays masked) |
 | `ans.squad5_c.sisters` | Level 4 | "My sisters want to meet the one who keeps beating me in races. Will you come?" | Yes / Bring food / Only if you stop letting me win | Family | A dinner-at-their-home hangout; Ch 47 or N6: the sisters are the reason his stand-down line works ("They asked about you") | — |
 
 **Unison technique (Blaze).** *Edge of Dawn*: his single perfect draw, kindled, becomes a cut of
