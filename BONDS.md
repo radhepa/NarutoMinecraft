@@ -556,7 +556,8 @@ specific first, each as `<key>.<archetype>` then `<key>`: a greeting during a qu
 level (`bond.greet.level.<n>`). `BondDialogue.news` gives the newest thing they saw or heard about you
 and have not yet brought up (`bond.seen.<act>`, `bond.heard.<act>`), once, for the opening line after
 VF's own deed reactions. The book adds `bond.fact.*`, `bond.feel.*`, `bond.memory.*`, `bond.goal.*`,
-`bond.level.<n>` and `bond.perk.<n>`. Text uses name tokens only.
+`bond.level.<n>` (the level's name) and `bond.perk.<n>`. A `level_up` event with the player is spoken from
+`bond.levelup.<n>` (`BondDialogue.levelUp`). Text uses name tokens only.
 
 **Tuning.** Every number above is a constant in one place (`Levels`, `Bond`, `Act`, `Memory`,
 `Conflict`, `Squad`, `Gossip`, `Standing`, `Courtship`, `Kindling`, `Recruitment`). Phase 0 can move

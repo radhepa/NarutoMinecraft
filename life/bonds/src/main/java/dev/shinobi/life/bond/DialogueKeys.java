@@ -14,7 +14,7 @@ public final class DialogueKeys {
     /** Required pools: a line must exist for each. */
     public static List<String> required() {
         var keys = new TreeSet<String>();
-        for (int level = 0; level <= Levels.MAX; level++) { keys.add("bond.greet.level." + level); keys.add("bond.level." + level); keys.add("bond.perk." + level); }
+        for (int level = 0; level <= Levels.MAX; level++) { keys.add("bond.greet.level." + level); keys.add("bond.level." + level); keys.add("bond.perk." + level); if (level > 0) keys.add("bond.levelup." + level); }
         for (var s : Conflict.State.values()) if (s != Conflict.State.NONE) { keys.add("bond.greet." + s.id()); keys.add("bond.conflict." + s.id()); }
         for (var s : Courtship.Stage.values()) if (s != Courtship.Stage.NONE) keys.add("bond.romance." + s.id());
         for (var t : Kindling.Tier.values()) keys.add("bond.kindling." + t.id());
