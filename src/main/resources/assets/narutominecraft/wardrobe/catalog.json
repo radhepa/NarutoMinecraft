@@ -403,7 +403,17 @@
     "hg007_side_swept_bob",
     "hg008_shaggy_layers",
     "hg009_stubby_ponytail",
-    "hg010_fluffy_curls"
+    "hg010_fluffy_curls",
+    "hg031_neat_side_part",
+    "hg032_top_knot",
+    "hg033_slicked_back",
+    "hg034_long_tied",
+    "hg035_braided_crown",
+    "hg036_low_bun",
+    "hg037_swept_tail",
+    "hg038_cropped_part",
+    "hg039_long_braid",
+    "hg040_half_up_knot"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -472,7 +482,11 @@
     "w2504_owl_mask",
     "wg001_flight_goggles",
     "wg002_crown_protector",
-    "wg003_streamer_headband"
+    "wg003_streamer_headband",
+    "wg013_medic_kerchief",
+    "wg014_seal_tag_band",
+    "wg015_tracker_hood",
+    "wg016_courier_protector"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -735,7 +749,27 @@
     "tg017_bomber_jacket",
     "tg018_mesh_tank",
     "tg019_bandolier_shirt",
-    "tg020_dungaree_bib"
+    "tg020_dungaree_bib",
+    "tg061_medic_coat",
+    "tg062_field_medic_vest",
+    "tg063_ward_tunic",
+    "tg064_barrier_robe",
+    "tg065_sealer_haori",
+    "tg066_seal_tabard",
+    "tg067_cipher_coat",
+    "tg068_archivist_jacket",
+    "tg069_intelligence_overcoat",
+    "tg070_sensor_mantle",
+    "tg071_tracking_cloak",
+    "tg072_sensor_cowl",
+    "tg073_instructor_vest",
+    "tg074_proctor_vest",
+    "tg075_gate_guard",
+    "tg076_night_patrol_coat",
+    "tg077_courier_harness",
+    "tg078_messenger_jacket",
+    "tg079_blade_bandolier",
+    "tg080_armorer_coat"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -871,7 +905,27 @@
     "bg017_bandaged_shorts",
     "bg018_wrap_skirt",
     "bg019_cuffed_joggers",
-    "bg020_dungaree_shorts"
+    "bg020_dungaree_shorts",
+    "bg061_ward_trousers",
+    "bg062_medic_slacks",
+    "bg063_sealer_hakama",
+    "bg064_barrier_hakama",
+    "bg065_archive_slacks",
+    "bg066_umanori_hakama",
+    "bg067_tracker_wraps",
+    "bg068_sensor_trousers",
+    "bg069_instructor_trousers",
+    "bg070_guard_greaves",
+    "bg071_patrol_trousers",
+    "bg072_courier_breeches",
+    "bg073_runner_wraps",
+    "bg074_armory_trousers",
+    "bg075_long_split_skirt",
+    "bg076_ward_split_skirt",
+    "bg077_sealer_split_skirt",
+    "bg078_scholar_split_skirt",
+    "bg079_wide_trousers",
+    "bg080_kobakama"
   ],
   "characters": [
     {
@@ -10020,6 +10074,496 @@
           "rank": "jonin",
           "palettes": [
             "JONIN_COMMANDER"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specialist",
+      "name": "Specialist",
+      "role": "shinobi",
+      "tagline": "The Leaf's divisions and specialist corps: medics, sealers, codebreakers, sensors, instructors, guards, couriers and weapon masters.",
+      "palettes": {
+        "SPECIALIST_MEDIC": {
+          "name": "Specialist Medic",
+          "P": "#e6e3da",
+          "S": "#4f8a5e",
+          "A": "#3a8a50",
+          "L": "#7a6346",
+          "M": "#aab3b9",
+          "K": "#1d2236",
+          "D": "#3d4a5a"
+        },
+        "SPECIALIST_WARD": {
+          "name": "Specialist Ward",
+          "P": "#cfe0cc",
+          "S": "#f0eee6",
+          "A": "#2f7444",
+          "L": "#6e5a42",
+          "M": "#aab3b9",
+          "K": "#22262e",
+          "D": "#4a5b52"
+        },
+        "SPECIALIST_HERBAL": {
+          "name": "Specialist Herbal",
+          "P": "#5e8a5a",
+          "S": "#ebe7da",
+          "A": "#e6e3da",
+          "L": "#6b5236",
+          "M": "#aab3b9",
+          "K": "#1f2620",
+          "D": "#2f3b34"
+        },
+        "SPECIALIST_BARRIER": {
+          "name": "Specialist Barrier",
+          "P": "#3b4160",
+          "S": "#e9e0c4",
+          "A": "#b8372d",
+          "L": "#6b5236",
+          "M": "#a7adb5",
+          "K": "#1c1c26",
+          "D": "#2a2e44"
+        },
+        "SPECIALIST_SEALER": {
+          "name": "Specialist Sealer",
+          "P": "#7a3a2e",
+          "S": "#ebe2c8",
+          "A": "#2c2c38",
+          "L": "#5c4430",
+          "M": "#b0aba0",
+          "K": "#1e1a1a",
+          "D": "#3a3036"
+        },
+        "SPECIALIST_CIPHER": {
+          "name": "Specialist Cipher",
+          "P": "#33404e",
+          "S": "#dcd6c4",
+          "A": "#9a7a34",
+          "L": "#5a4636",
+          "M": "#a7adb5",
+          "K": "#141418",
+          "D": "#262c36"
+        },
+        "SPECIALIST_ARCHIVE": {
+          "name": "Specialist Archive",
+          "P": "#6a5340",
+          "S": "#e4d9bf",
+          "A": "#3c5a7a",
+          "L": "#4e3a2a",
+          "M": "#b0aba0",
+          "K": "#1a1612",
+          "D": "#3a3a40"
+        },
+        "SPECIALIST_INK": {
+          "name": "Specialist Ink",
+          "P": "#2a2a30",
+          "S": "#cfc9b8",
+          "A": "#8a2e2e",
+          "L": "#4a3a2c",
+          "M": "#a0a4aa",
+          "K": "#0f0f12",
+          "D": "#35353d"
+        },
+        "SPECIALIST_SENSOR": {
+          "name": "Specialist Sensor",
+          "P": "#6c704e",
+          "S": "#d8d0b4",
+          "A": "#4d708c",
+          "L": "#6b5236",
+          "M": "#aab3b9",
+          "K": "#1f2218",
+          "D": "#3a3f30"
+        },
+        "SPECIALIST_TRACKER": {
+          "name": "Specialist Tracker",
+          "P": "#7d6449",
+          "S": "#c9c0a4",
+          "A": "#a24a2c",
+          "L": "#4e3a28",
+          "M": "#a7adb5",
+          "K": "#1e1a14",
+          "D": "#3b3a33"
+        },
+        "SPECIALIST_INSTRUCTOR": {
+          "name": "Specialist Instructor",
+          "P": "#5f6e3c",
+          "S": "#e6e1d3",
+          "A": "#3d5b8a",
+          "L": "#7a6346",
+          "M": "#aab3b9",
+          "K": "#1d2236",
+          "D": "#2d3c60"
+        },
+        "SPECIALIST_PROCTOR": {
+          "name": "Specialist Proctor",
+          "P": "#4b5a6e",
+          "S": "#e0dccd",
+          "A": "#a8362f",
+          "L": "#6b5236",
+          "M": "#aab3b9",
+          "K": "#1a1d24",
+          "D": "#2b3140"
+        },
+        "SPECIALIST_GATE": {
+          "name": "Specialist Gate",
+          "P": "#56693f",
+          "S": "#d9d3bf",
+          "A": "#c0892c",
+          "L": "#6b4a30",
+          "M": "#a9b0b5",
+          "K": "#1d2236",
+          "D": "#34405a"
+        },
+        "SPECIALIST_NIGHT_WATCH": {
+          "name": "Specialist Night Watch",
+          "P": "#2c3442",
+          "S": "#8e98a6",
+          "A": "#c9a646",
+          "L": "#4a3a2c",
+          "M": "#9aa3ad",
+          "K": "#111318",
+          "D": "#22262f"
+        },
+        "SPECIALIST_COURIER": {
+          "name": "Specialist Courier",
+          "P": "#b5642f",
+          "S": "#efe6cf",
+          "A": "#2d4f7a",
+          "L": "#6b4a30",
+          "M": "#aab3b9",
+          "K": "#1d1a18",
+          "D": "#33405a"
+        },
+        "SPECIALIST_SKY_COURIER": {
+          "name": "Specialist Sky Courier",
+          "P": "#4e7ea6",
+          "S": "#eee8d6",
+          "A": "#d0a03a",
+          "L": "#6b5236",
+          "M": "#aab3b9",
+          "K": "#1a2030",
+          "D": "#2c3a52"
+        },
+        "SPECIALIST_ARMORY": {
+          "name": "Specialist Armory",
+          "P": "#3d3b39",
+          "S": "#a8a090",
+          "A": "#9c2f2a",
+          "L": "#5a3e2a",
+          "M": "#c4c8cc",
+          "K": "#121212",
+          "D": "#2a2a2c"
+        },
+        "SPECIALIST_BLADE": {
+          "name": "Specialist Blade",
+          "P": "#2f3b5e",
+          "S": "#c9c2ae",
+          "A": "#b08a3a",
+          "L": "#4e3a2a",
+          "M": "#c4c8cc",
+          "K": "#14161f",
+          "D": "#262b3a"
+        }
+      },
+      "pool": {
+        "hair": [
+          "hg031_neat_side_part",
+          "hg032_top_knot",
+          "hg033_slicked_back",
+          "hg034_long_tied",
+          "hg035_braided_crown",
+          "hg036_low_bun",
+          "hg037_swept_tail",
+          "hg038_cropped_part",
+          "hg039_long_braid",
+          "hg040_half_up_knot"
+        ],
+        "hair_colors": [
+          "RAVEN",
+          "ESPRESSO",
+          "ESPRESSO",
+          "CHESTNUT",
+          "AUBURN",
+          "GINGER",
+          "HONEY",
+          "WHEAT",
+          "ASH_BLONDE",
+          "SILVER",
+          "SILVER",
+          "SNOW"
+        ],
+        "eye_colors": [
+          "DARK",
+          "DARK",
+          "DARK",
+          "SKY",
+          "JADE"
+        ],
+        "palettes": [
+          "SPECIALIST_MEDIC",
+          "SPECIALIST_WARD",
+          "SPECIALIST_HERBAL",
+          "SPECIALIST_BARRIER",
+          "SPECIALIST_SEALER",
+          "SPECIALIST_CIPHER",
+          "SPECIALIST_ARCHIVE",
+          "SPECIALIST_INK",
+          "SPECIALIST_SENSOR",
+          "SPECIALIST_TRACKER",
+          "SPECIALIST_INSTRUCTOR",
+          "SPECIALIST_PROCTOR",
+          "SPECIALIST_GATE",
+          "SPECIALIST_NIGHT_WATCH",
+          "SPECIALIST_COURIER",
+          "SPECIALIST_SKY_COURIER",
+          "SPECIALIST_ARMORY",
+          "SPECIALIST_BLADE"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "wg013_medic_kerchief",
+          "wg014_seal_tag_band",
+          "wg015_tracker_hood",
+          "wg016_courier_protector"
+        ],
+        "bottoms": [
+          "bg075_long_split_skirt",
+          "bg079_wide_trousers",
+          "bg080_kobakama"
+        ],
+        "complexions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "outfits": [
+        {
+          "id": "medic_coat",
+          "name": "Medic Coat",
+          "top": "tg061_medic_coat",
+          "bottom": "bg062_medic_slacks",
+          "rank": "chunin",
+          "palettes": [
+            "SPECIALIST_MEDIC",
+            "SPECIALIST_WARD"
+          ]
+        },
+        {
+          "id": "field_medic",
+          "name": "Field Medic",
+          "top": "tg062_field_medic_vest",
+          "bottom": "bg061_ward_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SPECIALIST_MEDIC",
+            "SPECIALIST_WARD",
+            "SPECIALIST_HERBAL"
+          ]
+        },
+        {
+          "id": "ward_trainee",
+          "name": "Ward Trainee",
+          "top": "tg063_ward_tunic",
+          "bottom": "bg076_ward_split_skirt",
+          "rank": "genin",
+          "palettes": [
+            "SPECIALIST_HERBAL",
+            "SPECIALIST_WARD"
+          ]
+        },
+        {
+          "id": "barrier_robe",
+          "name": "Barrier Robe",
+          "top": "tg064_barrier_robe",
+          "bottom": "bg064_barrier_hakama",
+          "rank": "chunin",
+          "palettes": [
+            "SPECIALIST_BARRIER",
+            "SPECIALIST_SEALER"
+          ]
+        },
+        {
+          "id": "sealer_haori",
+          "name": "Sealer Haori",
+          "top": "tg065_sealer_haori",
+          "bottom": "bg063_sealer_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SPECIALIST_SEALER",
+            "SPECIALIST_BARRIER"
+          ]
+        },
+        {
+          "id": "seal_tabard",
+          "name": "Seal Tabard",
+          "top": "tg066_seal_tabard",
+          "bottom": "bg077_sealer_split_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "SPECIALIST_BARRIER",
+            "SPECIALIST_SEALER"
+          ]
+        },
+        {
+          "id": "cipher_coat",
+          "name": "Cipher Coat",
+          "top": "tg067_cipher_coat",
+          "bottom": "bg065_archive_slacks",
+          "rank": "jonin",
+          "palettes": [
+            "SPECIALIST_CIPHER",
+            "SPECIALIST_INK"
+          ]
+        },
+        {
+          "id": "archivist",
+          "name": "Archivist",
+          "top": "tg068_archivist_jacket",
+          "bottom": "bg078_scholar_split_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "SPECIALIST_ARCHIVE",
+            "SPECIALIST_CIPHER"
+          ]
+        },
+        {
+          "id": "intelligence",
+          "name": "Intelligence Overcoat",
+          "top": "tg069_intelligence_overcoat",
+          "bottom": "bg066_umanori_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SPECIALIST_INK",
+            "SPECIALIST_CIPHER"
+          ]
+        },
+        {
+          "id": "sensor_mantle",
+          "name": "Sensor Mantle",
+          "top": "tg070_sensor_mantle",
+          "bottom": "bg068_sensor_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "SPECIALIST_SENSOR"
+          ]
+        },
+        {
+          "id": "tracking_cloak",
+          "name": "Tracking Cloak",
+          "top": "tg071_tracking_cloak",
+          "bottom": "bg067_tracker_wraps",
+          "rank": "jonin",
+          "palettes": [
+            "SPECIALIST_TRACKER",
+            "SPECIALIST_SENSOR"
+          ]
+        },
+        {
+          "id": "sensor_cowl",
+          "name": "Sensor Cowl",
+          "top": "tg072_sensor_cowl",
+          "bottom": "bg067_tracker_wraps",
+          "rank": "genin",
+          "palettes": [
+            "SPECIALIST_SENSOR",
+            "SPECIALIST_TRACKER"
+          ]
+        },
+        {
+          "id": "instructor",
+          "name": "Academy Instructor",
+          "top": "tg073_instructor_vest",
+          "bottom": "bg069_instructor_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "SPECIALIST_INSTRUCTOR",
+            "SPECIALIST_PROCTOR"
+          ]
+        },
+        {
+          "id": "proctor",
+          "name": "Exam Proctor",
+          "top": "tg074_proctor_vest",
+          "bottom": "bg065_archive_slacks",
+          "rank": "jonin",
+          "palettes": [
+            "SPECIALIST_PROCTOR",
+            "SPECIALIST_INSTRUCTOR"
+          ]
+        },
+        {
+          "id": "gate_guard",
+          "name": "Gate Guard",
+          "top": "tg075_gate_guard",
+          "bottom": "bg070_guard_greaves",
+          "rank": "chunin",
+          "palettes": [
+            "SPECIALIST_GATE"
+          ]
+        },
+        {
+          "id": "night_patrol",
+          "name": "Night Patrol",
+          "top": "tg076_night_patrol_coat",
+          "bottom": "bg071_patrol_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "SPECIALIST_NIGHT_WATCH"
+          ]
+        },
+        {
+          "id": "courier",
+          "name": "Courier",
+          "top": "tg077_courier_harness",
+          "bottom": "bg072_courier_breeches",
+          "rank": "genin",
+          "palettes": [
+            "SPECIALIST_COURIER",
+            "SPECIALIST_SKY_COURIER"
+          ]
+        },
+        {
+          "id": "messenger",
+          "name": "Messenger",
+          "top": "tg078_messenger_jacket",
+          "bottom": "bg073_runner_wraps",
+          "rank": "chunin",
+          "palettes": [
+            "SPECIALIST_SKY_COURIER",
+            "SPECIALIST_COURIER"
+          ]
+        },
+        {
+          "id": "blade_bandolier",
+          "name": "Blade Bandolier",
+          "top": "tg079_blade_bandolier",
+          "bottom": "bg074_armory_trousers",
+          "rank": "genin",
+          "palettes": [
+            "SPECIALIST_BLADE",
+            "SPECIALIST_ARMORY"
+          ]
+        },
+        {
+          "id": "armorer",
+          "name": "Armorer",
+          "top": "tg080_armorer_coat",
+          "bottom": "bg074_armory_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SPECIALIST_ARMORY",
+            "SPECIALIST_BLADE"
           ]
         }
       ]
