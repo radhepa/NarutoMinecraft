@@ -486,7 +486,7 @@ def read_questions(path, gated, terms, out, ids):
             q = {'id': qid, 'fn': (defaults.get('fn') or '').split(',') if defaults.get('fn') else [], 'level': 0,
                  'tags': dict(defaults.get('tags', {})), 'when': None, 'axis': None, 'follows': None, 'depth': 1,
                  'asks': [], 'answers': [], 'gated': gated, 'where': where, 'kind': 'question', 'qkind': None,
-                 'public': False, 'gap': 0, 'sets': None}
+                 'public': False, 'gap': 0, 'sets': None, 'per_friend': False}
             for part in head[1:]:
                 key, _, value = part.partition(':')
                 key, value = key.strip(), value.strip()
@@ -513,6 +513,8 @@ def read_questions(path, gated, terms, out, ids):
                     q['qkind'] = value
                 elif key == 'public':
                     q['public'] = value in ('yes', 'true')
+                elif key == 'per_friend':
+                    q['per_friend'] = value in ('yes', 'true')
                 elif key == 'gap':
                     q['gap'] = int(value)
                 elif key == 'sets':
@@ -671,7 +673,7 @@ def compiled_question(q):
     out = {'id': q['id'], 'num': q['num'], 'fn': q['fn'], 'level': q['level']}
     if q.get('qkind'):
         out['kind'] = q['qkind']
-    for k in ('tags', 'when', 'axis', 'follows', 'public', 'gap', 'sets'):
+    for k in ('tags', 'when', 'axis', 'follows', 'public', 'gap', 'sets', 'per_friend'):
         if q.get(k):
             out[k] = q[k]
     out['depth'] = q['depth']

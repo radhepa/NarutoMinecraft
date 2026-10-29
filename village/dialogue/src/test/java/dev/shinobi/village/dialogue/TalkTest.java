@@ -104,6 +104,28 @@ class TalkTest {
         assertEquals(48, castFresh, "the cast has no lifetime cap: six a day, every day");
     }
 
+    @Test void unusedTalkIsBankedForUpToThreeDays() {
+        var f = new Fixture();
+        for (int k = 0; k < 40; k++) f.line("chat.personal", "Chat number " + k + ".");
+        f.line("chat.personal", "Lovely evening.", "time=evening");
+        f.repeat("again", "Again?");
+        var talk = f.talk();
+        var r = Fixture.random();
+        var c = Context.of("tier", "named", "stage", "adult", "time", "morning");
+        int day1 = 0;
+        for (int k = 0; k < 5; k++) if (talk.chat("x", c, 1, r).fresh()) day1++;
+        assertEquals(2, day1, "two a day for this tier");
+        int day4 = 0;
+        for (int k = 0; k < 10; k++) if (talk.chat("x", c, 4, r).fresh()) day4++;
+        assertEquals(6, day4, "three quiet days banked their allowance: three days' worth, the cap");
+        int day30 = 0;
+        for (int k = 0; k < 10; k++) {
+            var s = talk.chat("x", c, 30, r);
+            if (s.fresh()) { day30++; assertNotEquals("Lovely evening.", s.text(), "only the count is banked: lines still fit the moment"); }
+        }
+        assertEquals(6, day30, "a long absence banks no more than the cap");
+    }
+
     @Test void newsAndBondMomentsAreExemptFromTheBudget() {
         var talk = new Fixture()
                 .line("chat.personal", "One.").line("chat.personal", "Two.").line("chat.personal", "Three.")

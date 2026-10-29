@@ -50,7 +50,7 @@ On a JDK older than 25, add `-PjavaRelease=21`: the engine uses nothing newer.
 11. [Simulation](#11-simulation)
 12. [Story-gated pools](#12-story-gated-pools)
 13. [What waits](#13-what-waits)
-14. [Open questions](#14-open-questions)
+14. [Decisions and open questions](#14-decisions-and-open-questions)
 
 ## 1. Freshness: never repeat
 
@@ -74,15 +74,24 @@ ledger**: one bit per id the player has heard.
 
 ## 2. Talk budgets
 
-Each speaker has a limited number of **fresh exchanges** for the player: a daily allowance, and,
-for everyone but the cast, a **lifetime allowance** that grows with the bond.
+Each speaker has a limited number of **fresh exchanges** for the player: a daily allowance, banked
+on days you do not talk, and, for everyone but the cast, a **lifetime allowance** that grows with
+the bond.
 
-| Tier | Who | Daily | Lifetime |
-|---|---|---|---|
-| `cast` | The bound roles: squad, sensei, rival, classmates, instructor, medic, the merchant | 6 | none (story pools keep feeding them) |
-| `named` | Shopkeepers, clan elders, quest givers, recurring residents | 4 | 40 + 8 per bond level + 10 per slice reached |
-| `resident` | Everyone else who lives in the Leaf | 3 | 16 + 6 per bond level + 4 per slice reached |
-| `passerby` | Gate guards on duty, crowd extras, visitors | 1 | 5 + 2 per bond level |
+| Tier | Who | Daily | Banked up to | Lifetime |
+|---|---|---|---|---|
+| `cast` | The bound roles: squad, sensei, rival, classmates, instructor, medic, the merchant | 6 | 18 | none (story pools keep feeding them) |
+| `named` | Shopkeepers, clan elders, quest givers, recurring residents | 4 | 12 | 40 + 8 per bond level + 10 per slice reached |
+| `resident` | Everyone else who lives in the Leaf | 3 | 9 | 16 + 6 per bond level + 4 per slice reached |
+| `passerby` | Gate guards on duty, crowd extras, visitors | 1 | 3 | 5 + 2 per bond level |
+
+- **Conversations carry over** (the owner's decision). A day without talk banks that day's
+  allowance, up to **three days' worth**. A friend you have not seen in a while has more to say, and
+  it plays out over the visit. A longer absence banks no more, so a week away is not a wall of talk.
+  Only the *count* is banked, never lines: every line is chosen when it is said, from what fits then
+  (the time, the season, an event, your rank and stage, a quarrel...), so nothing stale or
+  time-bound comes out of the bank. Partly used days bank what is left. The bank starts the day
+  you meet someone.
 
 - **An exchange** is one fresh line given in answer to the player: a topic, a question, a second
   greeting. **The first greeting of the day is free.** So a resident's day is a hello plus three
@@ -102,11 +111,12 @@ for everyone but the cast, a **lifetime allowance** that grows with the bond.
   say, a neighbour more, a friend more still, and every bond level opens six more fresh exchanges
   with a resident. Each new slice of the story adds a few, because the village has new things to talk
   about. The cast has no cap: they carry the story, and their pools grow with it.
-- **Tuning:** every number is in `rules.json` (`budget.tiers`, `budget.exempt`).
+- **Tuning:** every number is in `rules.json` (`budget.tiers` with `daily` and `bank_days`,
+  `budget.exempt`).
 
 ## 3. Beyond the budget
 
-When a speaker is out of fresh exchanges for today, has reached their lifetime allowance, or simply
+When a speaker is out of fresh exchanges for today (their banked ones included), has reached their lifetime allowance, or simply
 has nothing fresh that fits, the player has used up their time with that speaker, and the speaker
 begins to repeat, in three steps:
 
@@ -118,6 +128,9 @@ begins to repeat, in three steps:
    it from them before.
 3. **A polite close** from the `close` pool ("Well, I'd better get back to it"). The chat ends for
    today: the window keeps gifts, trades and quest talk, and hides the talk topics until tomorrow.
+
+A repeated line is not marked in the window (the owner's decision): the "we already talked" line
+says enough.
 
 The counter resets each in-game day. Running out of fresh lines (not of budget) follows the same
 three steps. The simulation counts it separately, because it is the repetition the player would
@@ -132,8 +145,8 @@ Village mod; `Heard.write` / `Heard.read`):
 |---|---|
 | `lines`: a bitset of heard ids, Base64 | 1 bit per line in the bank: 30,000 lines → 3.75 KB raw, 5 KB as text |
 | `groups`: a bitset of spent groups | 1 bit per group |
-| `speakers`: per speaker talked to, in base 36: day, today's count, over-budget step, greeting day, lifetime count, fresh count, filler count, and the last six line ids said | ~40 bytes each; 300 speakers → 12 KB |
-| `answers`: question → answer; `axes`: axis → last pole and question | ~25 bytes per answered question |
+| `speakers`: per speaker talked to, in base 36: day, today's count, over-budget step, greeting day, lifetime count, fresh count, filler count, last question day, banked credits and their day, and the last six line ids said | ~45 bytes each; 300 speakers → 13 KB |
+| `answers`: question → answer; `axes`: axis → last pole and question; `asked_by`: per-friend questions by speaker | ~25 bytes per answered question |
 
 A **100-hour worst case** (30,000 lines with 25,000 of them heard, all 300 residents with a full
 recall ring, 80 answered questions) is about **25 KB** (`QuestionsAndLedgerTest`); the beta's real
@@ -286,6 +299,10 @@ Compiled (`questions.json`): `{"id", "num" (the ledger id), "fn", "level", "kind
   `gap` in days): it is asked only after the first is answered, and deeper questions come first
   once open.
 - **Never repeated.** Answering spends the question in the heard ledger: no one asks it again.
+- **Per-friend opinion questions** (`per_friend: yes`, the owner's decision): a few light opinion
+  questions ("What season do you like best?", "How do you order your ramen?") may be asked once by
+  each close friend (level 5 or more) rather than once in all. They are kept per speaker
+  (`asked_by`). Twelve questions are per-friend today.
 - **Pacing** is the bond engine's (`Questions.next`). Questions start at bond level 2, at most one
   a day across everyone, and one person waits 8, 6 or 4 days between questions at levels 2-3, 4-6
   and 7+. It calls the dialogue engine's `Talk.askable` as a veto: never answered, the level, the
@@ -422,34 +439,33 @@ show where the next writing must go first.
 exam weeks, the Leaf Festival) and the player's rank and stage by slice. The player meets known faces
 first and someone new now and then, and asks topics and answers questions at the rates above.
 
-Seed 20261029, the bank above:
+Seed 20261029, the bank above, with talk banked for up to three days:
 
-| A thorough player's beta (75 days, 975 conversations, 168 people) | Requests | Fresh | Past the budget | Nothing fresh left |
+| A thorough player's beta (75 days, 975 conversations, 175 people) | Requests | Fresh | Past the budget | Nothing fresh left |
 |---|---|---|---|---|
-| Residents' small talk | 829 | 96.4% | 3.6% | 0 |
-| Children's small talk (residents) | 341 | 93.8% | 6.2% | 0 |
-| The cast's small talk (adult / child) | 203 / 252 | 98.5% / 99.2% | 1.5% / 0.8% | 0 / 0 |
-| Greetings, all speakers | 975 | 97.6% | 1.2% | 1.1% (children and child cast only) |
-| Bond topics, all speakers | 272 | 94.1% | 5.1% | 0.7% |
-| **Everything** | **2,872** | **96.7%** | **2.9%** | **0.45%** |
+| Small talk, all speakers | 904 | 99.8% | 0.2% | 0 |
+| Greetings, all speakers | 524 | 99.8% | 0.2% | 0 |
+| Bond topics, all speakers | 97 | 95.9% | 4.1% | 0 |
+| **Everything** (children and the cast included) | **2,815** | **99.6%** | **0.4%** | **0** |
 
-- **Lines repeat for 0.45% of requests** in a thorough player's beta, and the first pool ever to run
-  dry does so on day 74 of 75. Conversations reach a speaker's budget 4.3% of the time. 35
-  questions are answered (one contradicting an earlier answer), the filler share of fresh lines is
-  1.5%, 2,812 lines are heard, and the ledger is 13 KB.
+- **Nothing runs dry in a thorough player's beta**: no request finds nothing fresh, and 0.7% of
+  conversations reach a speaker's budget (4.3% before talk was banked). 35 questions are answered
+  (two contradicting an earlier answer), the filler share of fresh lines is 1.4%, 2,837 lines are
+  heard, and the ledger is 14 KB.
 - **A player who talks to everyone** (eight residents per part of the day, seven of the cast, three
-  to six exchanges each) reaches a speaker's budget in 32% of conversations and finds nothing fresh
-  in 31% of requests from day 24. That is the rule working as designed: they have used up their
-  time, and residents say "we already talked", repeat a line and close the chat.
-- **The whole game on the beta's pools alone** (300 days) runs dry for 42% of requests after day
-  74. This is expected: later slices bring their own pools (rank, stage, events, districts, the
-  cast's story voices). The ledger reaches 24 KB.
+  to six exchanges each) reaches a speaker's budget in 11% of conversations and finds nothing fresh
+  in 39% of requests from day 20. Because a line heard from anyone is spent for all (the owner's
+  decision), a player who drains the shared pools hears the repeat steps: "we already talked", a
+  line said before, a close.
+- **The whole game on the beta's pools alone** (300 days) runs dry for 41% of requests after day
+  80. This is expected: later slices bring their own pools (rank, stage, events, districts, the
+  cast's story voices). The ledger reaches 25 KB.
 - **What it took.** The first run (11,000 lines) repeated for 20% of requests from day 20, because
   the beta's classmates and teammates are children and children could speak only from children's
   pools. Opening the bond engine's pools to every age (with adult-only lines tagged), 1,100 more
-  children's lines and 480 more topic lines brought it to 0.45%. The pools most used at the
-  beta's end are the bond topics (compliments 50 of 56, food 44 of 58), the children's greetings
-  (328 of 437) and the season talk (75 of 120): the next writing goes there.
+  children's lines and 480 more topic lines brought it to 0.45%; banking talk took it to 0. The pools
+  most used at the beta's end are the tutorial helpers (102 of 122), the place greetings (105 of
+  132), Market Day (19 of 25) and the bond topics (compliments 41 of 56): the next writing goes there.
 
 ## 12. Story-gated pools
 
@@ -478,15 +494,20 @@ them: a `role=` tag outweighs every other tag.
 | Moving the compiled bank to `village/src/main/resources` | Phase 0's repository layout |
 | A JDK 25 run of the tests | This session's container had JDK 21 (`-PjavaRelease=21`) |
 
-## 14. Open questions
+## 14. Decisions and open questions
 
-- **Budget numbers.** 3 fresh exchanges a day for a resident and 6 for the cast is a guess at how
-  much talk a day can hold before it feels like a chore. Playtests should say whether the
-  "busy" message comes too soon.
-- **Should a repeat be marked?** A repeated line is said as it was ("As I said, ..." would make it a
-  different line). Should the window grey it out, or is the voice's "we already talked" enough?
-- **Spending across speakers.** A line heard from one resident is spent for all. This is the
-  freshest reading of the rule, and it makes the shared pools the bottleneck. The alternative is
-  spending per speaker plus a short global no-repeat window.
-- **Questions across speakers.** An answered question is never asked again by anyone. Should a few
-  "opinion" questions be askable once per close friend ("What do *you* think of the rain?")?
+Decided by the owner:
+
+- **Budgets:** 3 fresh exchanges a day for residents and 6 for the cast, with unused talk banked
+  (up to three days' worth here; section 2).
+- **Repeats are not marked** in the window.
+- **Spending stays global:** a line heard from anyone is spent for everyone.
+- **A few opinion questions** can be asked once per close friend (section 8).
+- **The writers' small inventions stay:** the ferry, the river island, the courier office, the
+  district wells, the mural bathhouse, ramen at 8 ryo, the gate closing at dusk, the weekday names.
+  The Konoha build adds the places.
+
+Still open:
+
+- **The bank's size.** Three days' worth (9 exchanges for a resident) is generous for one visit.
+  Playtests may want two days, or a cap per conversation.
