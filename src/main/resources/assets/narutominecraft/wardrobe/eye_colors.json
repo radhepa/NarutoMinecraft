@@ -103,6 +103,26 @@
         "...111111...",
         "....1111...."
       ]
+    },
+    "UZUMAKI_VIOLET": {
+      "name": "Uzumaki Violet",
+      "ramp": [
+        "#0e0b14",
+        "#3f2f63",
+        "#66509a",
+        "#a28fd0",
+        "#f2efe8"
+      ]
+    },
+    "UZUMAKI_RUBY": {
+      "name": "Uzumaki Ruby",
+      "ramp": [
+        "#120709",
+        "#6b1420",
+        "#a8243a",
+        "#e0697a",
+        "#f3eee8"
+      ]
     }
   }
 }
