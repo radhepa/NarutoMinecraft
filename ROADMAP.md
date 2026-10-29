@@ -94,7 +94,9 @@ Jonin.
 | Story and villain | An original antagonist and plot, kept in the developers-only [story bible](docs/story/STORY_BIBLE.md). The story specifics are the developers' creative call, so the owner can play it unspoiled. |
 | No spoilers | ROADMAP.md and the README stay spoiler-free: systems, formats, the map, the delivery plan and neutral chapter descriptions only. Every twist lives in the story bible. |
 | Bond ability | **Kindling Bond**: you can kindle a bonded ally's chakra nature or technique and borrow it briefly; deeper bonds (teammates, sensei, friends, spouse) unlock more, and it is one of the ways to gain more natures. A bond-flame flickers between you and the ally. Unlocked by a story moment after the beta ([Kindling Bond](#kindling-bond)). |
-| Hokage | All Hokage are original characters with custom faces. Four faces are on the Rock at the start; the player is meant to become the **Eighth**. |
+| Hokage | All Hokage are original characters with custom faces. Four faces are on the Rock at the start; the player is meant to become the **Eighth**. Their **names are rolled per save**; their looks, clans and eras are fixed, because faces, portraits and statues are baked into the map. |
+| Names | **Most character names are rolled per save, in Classic and Varied alike**: squadmates, sensei, rivals, elders, recurring characters and the antagonists. Roles, personalities and looks stay as designed (Classic stays curated in everything but names). Given names come from seeded pools by gender; family names from the character's clan, or from the ordinary `family_names` pool in `tools/wardrobe/population.json`. All text uses name tokens ([Names](#names-rolled-per-save)). |
+| Rotating story roles | Some story roles are assigned per save from a few candidates, each with its own seeded clue trail, so a twist still surprises a player who knows the answer from another save ([Rotating story roles](#rotating-story-roles)). Which roles rotate, and the candidates, are in the story bible only. |
 | Canon | Original characters only, maybe cameos of named characters. |
 | Players | **Single player first.** Multiplayer is later. The code stays server-authoritative (single player runs an integrated server). |
 | World | A **fixed, hand-made map with a border**. Only the Leaf for now; more regions later, with room left in the architecture. |
@@ -200,10 +202,10 @@ dependencies run one way. Village Friends stays its own mod; we only add small p
 |---|---|---|---|
 | **Village Friends** | `villagefriends` | Residents, routines, society, dialogue, homes, taverns, notice boards, calendar, knockouts, pets, animation clips | Fabric API. Unchanged except small public APIs: extra wardrobe namespaces, a currency item, hand-built taverns, a resident appearance seed |
 | **Shinobi Core** | `shinobi_core` | The shared player record (rank, level, age stage, clan id, difficulty), the **save seed** and its derived streams, the **condition and action language**, story flags, the event bus, stat modifiers, data loading and validation, settings, the wallet and region interfaces | Fabric API |
-| **Shinobi Village** (the Naruto content mod) | `narutominecraft` | The wardrobe, the 25 clans, the collections, the population draw and the clan loader, Leaf residents spawned from map markers (curated or rolled), resident ranks, the character creator and the player's look, age-stage scaling, the resident animation pack and dialogue pools, Konoha decor blocks | Village Friends, Shinobi Core |
+| **Shinobi Village** (the Naruto content mod) | `narutominecraft` | The wardrobe, the 25 clans, the collections, the population draw and the clan loader, Leaf residents spawned from map markers (curated or rolled), name rolling and name tokens, resident ranks, the character creator and the player's look, age-stage scaling, the resident animation pack and dialogue pools, Konoha decor blocks | Village Friends, Shinobi Core |
 | **Shinobi Combat** | `shinobi_combat` | Chakra, techniques, hand-sign input, elemental natures, kekkei genkai, genjutsu, taijutsu, chakra movement, ninja tools, the shinobi enemy entity and its AI, sparring, the player poser | Shinobi Core, Shinobi Village |
 | **Shinobi Life** | `shinobi_life` | Adventure rules, the player's home, furniture and furnish mode, moving, ryo, shops and jobs, crafting stations, food buffs, pets, player romance, the daily cycle, sleep, fatigue, waking at home or in hospital | Shinobi Core, Village Friends |
-| **Shinobi Progression** | `shinobi_progression` | Ranks and milestones, levels and XP, the death penalty, the **quest engine** (main chapters, side quests, filler arcs, board missions), exams, the event director, the squad and roles, cutscenes and time skips, player clans, residents reacting to rank | Shinobi Core, Shinobi Village, Shinobi Combat, Shinobi Life, Village Friends |
+| **Shinobi Progression** | `shinobi_progression` | Ranks and milestones, levels and XP, the death penalty, the **quest engine** (main chapters, side quests, filler arcs, board missions), exams, the event director, the squad and roles, rotating story roles (twist slots), cutscenes and time skips, player clans, residents reacting to rank | Shinobi Core, Shinobi Village, Shinobi Combat, Shinobi Life, Village Friends |
 | **Shinobi Adventure** (the map) | world save (a GitHub Release asset) + datapack `shinobi_adventure` | The hand-made Leaf with its border; the story, chapters, side quests, missions, events, the Classic cast, shop stock, homes, districts and regions as data | Every mod above |
 | **Pack manifest** | `pack/` | A Modrinth `.mrpack` (and a CurseForge export) pinning Minecraft 26.3, Fabric Loader 0.19.5, Fabric API, Village Friends and every Shinobi mod by version and hash, with default config as overrides; the world is a separate release download | — |
 
@@ -304,8 +306,9 @@ without a rewrite. These are the format decisions, fixed before Beta 1 content i
    board missions are all quests with a `kind`. The journal, tracking, rewards, failure and save
    code is written once.
 3. **Characters by role, not by entity.** Quests name roles (`role:sensei`, `role:teammate_a`,
-   `role:rival`, `role:elder_keeper`), never a resident's UUID. A save binds roles to characters
-   (curated in Classic, rolled in Varied), so later arcs written today work in every save.
+   `role:rival`, `role:instructor`), never a resident's UUID. A save binds roles to characters
+   (curated in Classic, rolled in Varied; names rolled in both), so later arcs written today work in
+   every save. Text never contains a character's name, only name tokens.
 4. **Places by anchor.** Quests name anchors (`place:academy.yard`, `place:forest.gate_12`) defined
    in `districts.json`, never coordinates, so the map can be rebuilt without editing quests.
 5. **One condition and action language** in Core, shared by quests, missions, events, dialogue,
@@ -365,7 +368,7 @@ Reserved now for later arcs, so the format does not change: `time_skip`, `carve_
   "start": "meet",
   "steps": {
     "meet":   {"objective": {"type": "go", "place": "place:gate.main"}, "next": "escort"},
-    "escort": {"objective": {"type": "escort", "who": "role:merchant_kenta", "to": "place:road.east_waystation"},
+    "escort": {"objective": {"type": "escort", "who": "role:merchant", "to": "place:road.east_waystation"},
                "on_enter": [{"spawn_group": ["bandits_small", "place:road.east_bend"]}],
                "next": "search"},
     "search": {"objective": {"type": "inspect", "target": "cart_cargo"},
@@ -388,7 +391,7 @@ Reserved now for later arcs, so the format does not change: `time_skip`, `carve_
   dialogue choice that sets a flag). New types are added in code as later arcs need them.
 - **Kinds:** `main`, `side`, `filler` (an arc of linked side quests), `clan`, `bond` (squad and
   friend stories), `mission` (board missions), `event`.
-- **Text** is keys into the dialogue bank, never inline strings.
+- **Text** is keys into the dialogue bank, never inline strings, and names are always tokens.
 
 ### Board missions
 
@@ -460,15 +463,16 @@ know their shape.
 At world creation the player picks a mode; the save stores it with one **save seed** (64-bit,
 taken from the world seed or typed in).
 
-- **Classic:** the curated cast (`cast/classic.json`: sensei, classmates, rival, families),
+- **Classic:** the curated cast (`cast/classic.json`: sensei, classmates, rival, families: looks,
+  personalities and clans curated, names rolled),
   curated clan populations, a fixed order of side-quest arcs, a fixed apartment, curated shop stock;
   missions and events still use the seed, so even Classic is reproducible from its seed.
 - **Varied:** the seed rolls the sensei, classmates and rival (looks from the wardrobe and clan
   pools, VF personalities, families), resident families and clan populations, which side-quest arcs
   appear and in what order, mission and event rolls, shop stock, and the apartment from a set of
   candidate flats in `homes.json`.
-- **Fixed in both:** the main plot beats, the fixed characters of the story bible, and every
-  authored chapter.
+- **Fixed in both:** the main plot beats, the looks and roles of the story bible's fixed
+  characters, and every authored chapter. Names and the rotating story roles are rolled in both.
 
 **One seed, many streams.** Each system draws from its own stream derived from the save seed, so
 systems never disturb each other and a save is reproducible with the same seed and pack version:
@@ -487,11 +491,41 @@ stream(domain, key) = SplitMix64(hash64(saveSeed, domain, key))
 | `events` | year + event id | Event variations (stall lineups, festival games) | Progression |
 | `shops` | shop id + week | Weekly stock | Life (Varied only) |
 | `quest` | quest id + step | `random` conditions inside quests | Progression |
+| `names` | role id | Given name (by gender) and, for clanless characters, a family name; Hokage get a given name only | Village (both modes) |
+| `twists` | twist slot | Which candidate fills each rotating story role | Progression (both modes) |
 | `combat` | encounter id | Enemy loadout variations | Combat |
 
 Residents are shipped as **markers** in the map (a resident spot with a home, a job and a role
 tag), not as saved entities. On first load, Shinobi Village spawns each one from its curated
 profile (Classic) or its rolled profile (Varied), so the same world file serves both modes.
+
+### Names rolled per save
+
+- **Pools:** `names/given.json` in Shinobi Village (original Japanese given names by gender:
+  male, female, unisex), family names from each clan file (a clan character carries the clan's
+  name) and from `family_names` in `tools/wardrobe/population.json` for clanless shinobi and
+  civilians.
+- **Who:** every role-bound and fixed story character, in both modes; the Hokage's given names.
+  Residents spawned from markers already get rolled names in Varied (VF's name pools are not used
+  for Leaf residents).
+- **Tokens:** dialogue and quest text use `{name:<role>}` (full name), `{given:<role>}`,
+  `{family:<role>}`, `{hokage:<n>}` and `{player}`; the journal, speech bubbles and VF's dialogue
+  bank resolve them. A name is never written into text.
+- **Checks:** `quests.py --check` and the dialogue compiler reject any literal from the name pools
+  in authored text, and every token must name a role that exists.
+- **Stable within a save:** names are rolled once, at world creation, from the `names` stream and
+  saved with the cast, so a character keeps their name for the whole playthrough.
+
+### Rotating story roles
+
+- **Twist slots:** `story/twists.json` lists slots, each with 2 to 4 candidate characters. At world
+  creation the `twists` stream binds one candidate per slot, in Classic and Varied alike.
+- **Clue trails:** each candidate has its own clue quests and flags (`story.clue.<candidate>.<n>`).
+  Every candidate's clues are planted; the bound candidate's turn out true, the others' get innocent
+  explanations. Quests address the bound character as `role:twist.<slot>` or `{twist:<slot>}`.
+- **Checks:** `quests.py --check` verifies that every candidate has a complete clue trail and an
+  innocent explanation, and that every arc reads the slot rather than a fixed character.
+- **No spoilers:** which roles rotate and who the candidates are live only in the story bible.
 
 ## 6. The map
 
@@ -548,7 +582,7 @@ the map tools paste it at a fixed spot. Anything that appears once and defines t
 | Homes, apartments, shops, tea houses | Pasted from blueprints | Konoha kit: plaster walls in cream and terracotta, round water tanks on flat roofs (check against the art), awnings, paper lanterns, stacked apartment blocks. Every home has a House Plaque so VF Homes flood-fills it and assigns beds. The player's apartment block is one of these, with the player's flat kept empty of residents |
 | Streets, alleys, bridges, the river | Pasted | A Konoha `roads.py`: packed dirt and stone lanes, utility poles, signs |
 | Wall and gates | Pasted modules, gates by hand | Wall segments are one repeated module. The main gate, with あん painted across its doors, and the guard booth are hand-built ([Konohagakure](https://naruto.fandom.com/wiki/Konohagakure)) |
-| Hokage Rock | By hand | Voxel sculpting; four custom faces of original Hokage, with room for more. The village expands onto the plateau above it only in a much later era, so leave the top as forest ([Hokage Rock](https://naruto.fandom.com/wiki/Hokage_Rock)) |
+| Hokage Rock | By hand | Voxel sculpting; four custom faces of original Hokage, with room for more. Faces, portraits and statues are baked, so each Hokage's look is fixed while their name is rolled per save. The village expands onto the plateau above it only in a much later era, so leave the top as forest ([Hokage Rock](https://naruto.fandom.com/wiki/Hokage_Rock)) |
 | Hokage Residence | By hand | Circular, one of the largest buildings in the village, with 火 (fire) painted on the roof. It stands near the Academy, right below the faces. Mission desk on the ground floor, the clan registry, the Hokage's office upstairs ([Hokage Residence](https://naruto.fandom.com/wiki/Hokage_Residence)) |
 | Ninja Academy | By hand | A large building at the base of the Hokage Rock, recognizable by the tree with a swing out front and a big 火 sign. Classroom, yard, target posts; the vertical slice. The office part is often confused with the Hokage Residence, but they are two buildings ([Ninja Academy file](https://naruto.fandom.com/wiki/File:Ninja_Academy.png), [Hokage Residence](https://naruto.fandom.com/wiki/Hokage_Residence)) |
 | Ichiraku Ramen | By hand (small) | A VF tavern building (once the tavern hook exists), so the tavern code seats and serves residents |
@@ -867,7 +901,7 @@ Quests refer to characters by **role**; the save binds each role to a character.
 | `role:rival` | Your rival, on another squad | Curated | Rolled |
 | Fixed story roles | The characters the story bible fixes in every save | Fixed | Fixed |
 
-Rolled characters take a group by the population weights (shinobi groups only, so most are clanless), a look from that group's pieces, a VF personality, a family in the
+Names are rolled per save in both modes. Rolled characters (Varied) take a group by the population weights (shinobi groups only, so most are clanless), a look from that group's pieces, a VF personality, a family in the
 village and a name from VF's name pools; once rolled they are fixed for the save. A teammate can
 leave the squad (low friendship that stays low, a failed exam, or the story), stays in the village
 and is replaced by a classmate. Squad members are knocked out, never killed.
@@ -1040,18 +1074,20 @@ the filler arcs come in a rolled order; Classic uses a fixed selection.
 
 ### The Classic cast
 
-The curated cast of a Classic save (all original), mostly clanless like the village. Varied saves roll these roles by the population weights (shinobi groups only).
+The curated cast of a Classic save (all original), mostly clanless like the village. Their looks,
+personalities and clans are curated; **their names are rolled per save** like everyone's. Varied
+saves roll these roles entirely, by the population weights (shinobi groups only).
 
-| Role | Classic character |
+| Role | Classic design (name rolled per save) |
 |---|---|
-| `role:captain` / `role:sensei` | **Ōtori Kaname**, a quiet clanless Jonin with an old burn scar |
-| `role:instructor` | **Ibuki Sora**, a cheerful Chunin who believes in everyone |
-| `role:medic` | **Hoshino Yūna**, the hospital's young medic |
-| `role:teammate_a` | **Kurama Tōji**, shy, imaginative, paints, a born genjutsu user |
-| `role:teammate_b` | **Tanaka Mei**, clanless, loud and fearless, with a stray pup she named Kōta |
-| `role:classmate_c`, `role:classmate_d` | **Kinoshita Shion** (a carpenter's child, thoughtful) and **Gekko Ryō** (protective, a kenjutsu prodigy) |
-| `role:rival` | **Uchiha Hikaru**, proud and lonely |
-| `role:merchant_kenta` | **Kenta**, a travelling merchant who keeps hiring the squad |
+| `role:captain` / `role:sensei` | A quiet clanless Jonin with an old burn scar |
+| `role:instructor` | A cheerful clanless Chunin who believes in everyone |
+| `role:medic` | The hospital's young clanless medic |
+| `role:teammate_a` | A Kurama: shy, imaginative, paints, a born genjutsu user |
+| `role:teammate_b` | Clanless, loud and fearless, with a stray pup |
+| `role:classmate_c`, `role:classmate_d` | A Kinoshita carpenter's child (thoughtful) and a Gekko (protective, a kenjutsu prodigy) |
+| `role:rival` | An Uchiha: proud and lonely |
+| `role:merchant` | A travelling merchant who keeps hiring the squad |
 
 ## 9. Delivery plan
 
