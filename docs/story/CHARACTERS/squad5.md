@@ -253,7 +253,7 @@ money in the Jonin arc to move his family into a house; he has told no one.
 | 1 Cinders | Ch 7: at the graduation, ignores everything; watches the player's clone test and says "Sloppy." |
 | 3 Dusk | Ch 17: wins his preliminary in seconds. Ch 19.3: in the attack he joins the player's sensei against the blade on the arena floor, holds his own for six strokes, and takes a cut across the cheek. The blade, leaving, tells him "Good. Get a better sword." Promoted in Ch 20 |
 | 4 Embers | Chunin, then ANBU at the end of the arc, younger than anyone in years. Brilliant and alone |
-| 5 Ashes | Recruited by the Undercroft (money for his family, and the promise of real power: "We'll teach you what the ANBU won't"). Ch 44: on the same A-rank hill as the player, he is hunting the lost child under Undercroft orders; he backs off when the player's Genin are there |
+| 5 Ashes | Recruited by the Undercroft (money for his family, and the promise of real power: "We'll teach you what the ANBU won't"). Ch 44: on the same A-rank hill as the player, he arrives in an ANBU mask with orders to take the lost child alive; she is gone before either of them reaches her, and he will not say whose orders |
 | 6 Night Watch | N4: he guards the lost child's cell, masked; the player sees him through the bars. N6: he is the last of the old masks between the player and her. **Betray or not** (below) |
 | 7 Last Bonfire | Ch 47 (if the Night Watch was not played): he arrives at the shrine with Undercroft orders to take her. **Betray or not** (below); either way the orders reach the Seventh and the Undercroft is disbanded quietly. Ch 51: whatever happened, he fights for the Leaf at the wall |
 
