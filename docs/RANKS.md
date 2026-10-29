@@ -609,9 +609,30 @@ What was done about it:
     before level 8 deals little.
   - At 60 h the pup no longer keeps up, which is a kit question for Combat.
 
-The new offsets are with Combat for a re-run, and the table above is replaced when the shares
-return. `Contribution.share`, the roster's own rough estimate, now gives 0.89 to 1.13 for a typical
-player; Combat's numbers are the ones that count.
+**The re-run** used the new offsets and two kit fixes on Combat's side:
+
+- Painted Beasts opens at level 15 for the Kurama.
+- The pup's bite grows with its owner: ×(1 + level / 50).
+
+200 fights a row, with combined shares:
+
+| | Ch 8 | Ch 11 | Ch 14 | Ch 16 | Ch 20 | 28 h | 45 h | 60 h |
+|---|---|---|---|---|---|---|---|---|
+| Teammate A (genjutsu) | 75% | 55% | 78% | 77% | 58% | 75% | 85% | 74% |
+| Teammate B (taijutsu and pup) | 211% | 91% | 118% | 121% | 123% | 73% | 96% | 76% |
+
+Both teammates are in the band for most of the path. What remains is a matter for the kits, not
+for growth:
+
+- **Teammate A at Ch 11 and Ch 20.** Their genjutsu holds enemies about five times as long as the
+  player does, and the combined share undercounts that control.
+- **Teammate B through the exams.** The pup peaks there and the brawler falls back later. A flat
+  offset change would push the 28 h and 60 h shares out of the band, so the pup's mid-game is
+  Combat's to tune.
+- **Ch 8.** It stays the player's no-jutsu gap.
+
+`Contribution.share` is the roster's own rough estimate and gives 0.89 to 1.13 for a typical
+player. Combat's numbers (docs/COMBAT.md §15 on the `combat` branch) are the ones that count.
 
 **Combat's fields.** Every named person in `roster.json` carries what Combat needs: `kit`
 (`combat:ally.<role>`), `niche` (Combat's six: genjutsu, taijutsu, ninjutsu, weapons, medical,
@@ -666,5 +687,5 @@ per mission rank. The roster only needs the same XP the player earns, so in Phas
   arrives: the showcase pillars (the kenjutsu instructor, the returning captain, the old scroll-seller,
   the wandering legend), the proctors, the desk, the gate, the watch, the police, the Academy
   teachers and the clan heads.
-- **Contribution shares.** Combat re-runs its duel simulator with the new offsets, and may move teammate A's
-  signature genjutsu earlier and let teammate B's pup scale later.
+- **Contribution shares.** In the band for most of the path; Combat may tune teammate B's pup through
+  the exams (118–123%).

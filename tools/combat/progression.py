@@ -24,7 +24,7 @@ TIMELINE = [
      "sources": ["the sensei", "clan elders", "nature masters", "the scroll shop", "board missions (D, C)", "friendly clans"]},
     {"stretch": "chunin_exams", "slice": "beta3", "levels": [15, 18], "hours": [12, 15], "pillar_cap": 12,
      "taijutsu": ["Strong Fist tier 2: Leaf Great Whirlwind", "style tier 2 finishers (taijutsu rank 3)"],
-     "weapons": ["ninjato and katana, Crescent Moon kenjutsu (weapons rank 4; the bokken at the Gekko dojo first)", "weighted chain: chain arts", "blood pills, barrier tags"],
+     "weapons": ["ninjato and katana, long-blade kenjutsu (the weapon master, weapons rank 4); Crescent Moon from the Gekko dojo (clan friendship 7)", "weighted chain: chain arts", "blood pills, barrier tags"],
      "ninjutsu": ["the exam reward: one C-rank chosen by your sensei after the preliminaries (Ch 18)", "Mystical Palm (the medic, control 50), Chakra Sensing (Yamanaka or the sensor master)",
                   "Four-Tag Barrier, Hiding Mist, Mist Servant", "nature chakra flow on blades"],
      "sources": ["the sensei (exam reward)", "the medic", "the sensor master", "the weapon master", "exam-week stalls"]},
@@ -85,7 +85,7 @@ def beta_loadout():
                       "item:herbal_poultice", "item:antidote", "item:burn_salve", "item:eye_drops", "item:insect_repellent", "item:scent_powder",
                       "item:coating_numbing", "item:coating_sleep", "item:coating_venom"],
             "styles": ["combat:style.academy_blade", "combat:style.throwing_arts", "combat:style.needle_arts", "combat:style.wire_arts",
-                       "combat:style.wave_foot", "combat:style.monkey_staff", "combat:style.mace_arts", "combat:style.crescent_moon",
+                       "combat:style.wave_foot", "combat:style.monkey_staff", "combat:style.mace_arts", "combat:style.crescent_moon", "combat:style.long_blade",
                        "combat:style.chain_arts"],
             "systems": ["throw, aim, retrieval, wire tethers", "tool pouch quick-throw", "coatings", "chakra flow on blades", "paper-bomb mines and remote detonation"],
         },
@@ -181,7 +181,7 @@ def build(focus, level, nature):
         b["thrown"] = "item:kunai" if level >= 5 else "item:practice_kunai"
         b["tools"] = {"item:kunai": 6}
     elif focus == "weapons":
-        b["style"] = "combat:style.crescent_moon" if level >= 15 else "combat:style.academy_blade"
+        b["style"] = "combat:style.long_blade" if level >= 15 else "combat:style.academy_blade"
         b["style_tier"] = tier(ranks["weapons"])
         b["melee"] = melee_for(focus, level)
         b["thrown"] = "item:shuriken" if level >= 5 else "item:practice_shuriken"

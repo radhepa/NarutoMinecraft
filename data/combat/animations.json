@@ -1697,6 +1697,60 @@
    "slice": "later",
    "keys": null
   },
+  "combat.wpn.long_blade.cut": {
+   "ticks": 10,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.long_blade.cut_3": {
+   "ticks": 17,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.long_blade.thrust": {
+   "ticks": 24,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.long_blade.reading_guard": {
+   "ticks": 9,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.long_blade.rising_cut": {
+   "ticks": 16,
+   "loop": false,
+   "who": "both",
+   "fp": true,
+   "priority": "P2",
+   "slice": "beta3",
+   "keys": null
+  },
+  "combat.wpn.long_blade.single_stroke": {
+   "ticks": 27,
+   "loop": false,
+   "who": "both",
+   "fp": false,
+   "priority": "P3",
+   "slice": "later",
+   "keys": null
+  },
   "combat.wpn.kenjutsu.iaido_stance": {
    "ticks": 40,
    "loop": true,
@@ -2147,7 +2201,7 @@
  "counts": {
   "P0": 62,
   "P1": 107,
-  "P3": 36,
-  "P2": 28
+  "P3": 37,
+  "P2": 33
  }
 }

@@ -45,6 +45,7 @@ Every enemy the story uses, by loadout file (data/combat/enemies/<id>.json). Sto
 | `combat:enemy.cell_veteran` | Cell veteran | human | miniboss | jonin | 30-50 | mid | katana, kunai | nin.substitution, nin.shadow_clone, fire.great_dragon_fire, earth.flow_rampart, gen.bringer_of_darkness | - | jonin |
 | `combat:enemy.warlord` | Bandit warlord | human | miniboss | chunin | 20-32 | close | iron_mace, kunai | nin.substitution, earth.hardening, earth.mud_wall | ; A B-rank mission target holding a fort; the target is bound as a role by the mission | chunin |
 | `combat:enemy.legend_rogue` | Legendary missing-nin | human | boss | jonin | 45-60 | mid | katana, kunai | nin.substitution, nin.multi_shadow_clone, water.water_dragon, water.hiding_mist, lightning.lightning_blade, earth.flow_rampart | ; An S-rank bounty: no story, a neutral legend of the bingo book | road |
+| `combat:enemy.lone_duellist` | Lone duellist | human | miniboss | jonin | 30-50 | close | katana | nin.substitution, nin.body_flicker | ink_lines, parries; A single long blade, no clan's art; ink_lines (short-lived area-denial lines after each slash) is its signature | jonin |
 | `combat:enemy.hollow_fighter` | Flat-eyed fighter | human | elite | chunin | 20-50 | mid | kunai | fire.fire_dragon_bullet, wind.blade_of_wind, lightning.false_darkness | flat_ai, no_flinch, no_retreat, cycles_natures; Flat AI: never flinches or retreats; cycles three natures | chunin |
 | `combat:enemy.chakra_absorber` | Chakra absorber | human | elite | chunin | 25-45 | close | - | - | absorbs_ninjutsu; Drinks ninjutsu that hits it (heals for half): taijutsu and weapon users' favourite target | chunin |
 | `combat:enemy.wolf` | Wolf | animal | mook | beast | 3-14 | close | - | - | pack, flanks | beta2 |
@@ -240,7 +241,7 @@ Base `combat:group.cell_trio`, health x2.0, poise 100, damage x1.15. Win: defeat
 
 ### `combat:boss.jonin.story_1`: Story boss (chapter jonin, level 34, jonin)
 
-Base `combat:enemy.cell_veteran`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
+Base `combat:enemy.lone_duellist`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
 
 
 ### `combat:boss.jonin.story_2`: Story boss (chapter jonin, level 36, jonin)
@@ -264,7 +265,7 @@ Base `combat:enemy.sealing_adept`, health x7.0, poise 100, damage x1.15. Win: de
 
 ### `combat:boss.road.story_1`: Story boss (chapter road, level 45, road)
 
-Base `combat:enemy.cell_veteran`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
+Base `combat:enemy.lone_duellist`, health x7.0, poise 100, damage x1.15. Win: defeat. Lose: the player is downed. Story beats: in the story bible under this id.
 
 
 The jonin.story_1 duellist's best loadout

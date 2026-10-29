@@ -212,8 +212,8 @@
     "chain_interval_ticks": 6,
     "poise": 6
    },
-   "style": "combat:style.crescent_moon",
-   "notes": "Straight short sword; works with every kenjutsu style"
+   "style": "combat:style.long_blade",
+   "notes": "Straight short sword; long-blade kenjutsu by default, any kenjutsu style a mentor taught you"
   },
   {
    "item": "item:katana",
@@ -227,7 +227,7 @@
     "chain_interval_ticks": 7,
     "poise": 7
    },
-   "style": "combat:style.crescent_moon"
+   "style": "combat:style.long_blade"
   },
   {
    "item": "item:kokuto",

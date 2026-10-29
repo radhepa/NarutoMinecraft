@@ -4,7 +4,7 @@
 
 Every pose and clip the player and residents need for combat, keyed the way VF keys its clips (tools/combat/animations.py; keyframes are authored later into the same table). P0: the Phase 0 spike and Beta 1; P1: Beta 2; P2: Beta 3; P3: later. fp: needs the first-person arm path.
 
-Counts: P0 62, P1 107, P2 28, P3 36, total 233.
+Counts: P0 62, P1 107, P2 33, P3 37, total 239.
 
 ## P0
 
@@ -205,6 +205,11 @@ Counts: P0 62, P1 107, P2 28, P3 36, total 233.
 | `combat.wpn.kenjutsu.moon_rising` | 16 |  | both | yes |  |
 | `combat.wpn.kenjutsu.unsheathe` | 8 |  | both | yes |  |
 | `combat.wpn.kenjutsu.sheathe` | 10 |  | both | yes |  |
+| `combat.wpn.long_blade.cut` | 10 |  | both | yes |  |
+| `combat.wpn.long_blade.cut_3` | 17 |  | both | yes |  |
+| `combat.wpn.long_blade.thrust` | 24 |  | both | yes |  |
+| `combat.wpn.long_blade.reading_guard` | 9 |  | both | yes |  |
+| `combat.wpn.long_blade.rising_cut` | 16 |  | both | yes |  |
 | `combat.wpn.chain.lash` | 11 |  | both | yes |  |
 | `combat.wpn.chain.hook_pull` | 20 |  | both | yes |  |
 | `combat.wpn.chain.wrap_bind` | 18 |  | both | yes |  |
@@ -256,6 +261,7 @@ Counts: P0 62, P1 107, P2 28, P3 36, total 233.
 | `combat.tai.lightning_body.liger_bomb` | 42 |  | both |  |  |
 | `combat.wpn.throw.rain` | 20 |  | both |  |  |
 | `combat.wpn.kenjutsu.crescent_finish` | 26 |  | both |  |  |
+| `combat.wpn.long_blade.single_stroke` | 27 |  | both |  |  |
 | `combat.wpn.kenjutsu.iaido_stance` | 40 | yes | both |  |  |
 | `combat.wpn.staff.whirling_staff` | 33 |  | both |  |  |
 

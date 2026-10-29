@@ -59,6 +59,7 @@ class ComboAndStatusTest {
         assertEquals("morning_peacock", sf.find(List.of("L", "L", "L", "H"), 5, 100, 6).id(), "the highest tier on a path wins");
         var sword = DATA.moveset("combat:style.crescent_moon");
         assertEquals("arc_1", sword.find(List.of("L"), 1, 0, 0).id());
+        assertEquals("cut_1", DATA.moveset("combat:style.long_blade").find(List.of("L"), 1, 0, 0).id());
         assertFalse(sword.strings("", 1, 0, 0).isEmpty());
     }
     @Test void everyStyleHasAPlayableTree() {

@@ -297,7 +297,7 @@
     "combat:weapon.tag_kunai",
     "combat:wind.vacuum_wave"
    ],
-   "style": "combat:style.crescent_moon",
+   "style": "combat:style.long_blade",
    "style_tier": 3,
    "melee": "item:katana",
    "thrown": "item:shuriken",
@@ -427,7 +427,7 @@
     "combat:weapon.wind_shuriken",
     "combat:wind.vacuum_wave"
    ],
-   "style": "combat:style.crescent_moon",
+   "style": "combat:style.long_blade",
    "style_tier": 4,
    "melee": "item:katana",
    "thrown": "item:shuriken",
@@ -558,7 +558,7 @@
     "combat:weapon.windmill_triple",
     "combat:wind.vacuum_wave"
    ],
-   "style": "combat:style.crescent_moon",
+   "style": "combat:style.long_blade",
    "style_tier": 4,
    "melee": "item:katana",
    "thrown": "item:shuriken",
@@ -691,7 +691,7 @@
     "combat:weapon.windmill_triple",
     "combat:wind.vacuum_wave"
    ],
-   "style": "combat:style.crescent_moon",
+   "style": "combat:style.long_blade",
    "style_tier": 5,
    "melee": "item:katana",
    "thrown": "item:shuriken",
@@ -824,7 +824,7 @@
     "combat:weapon.windmill_triple",
     "combat:wind.vacuum_wave"
    ],
-   "style": "combat:style.crescent_moon",
+   "style": "combat:style.long_blade",
    "style_tier": 5,
    "melee": "item:katana",
    "thrown": "item:shuriken",
@@ -957,7 +957,7 @@
     "combat:weapon.windmill_triple",
     "combat:wind.vacuum_wave"
    ],
-   "style": "combat:style.crescent_moon",
+   "style": "combat:style.long_blade",
    "style_tier": 5,
    "melee": "item:katana",
    "thrown": "item:shuriken",
@@ -1090,7 +1090,7 @@
     "combat:weapon.windmill_triple",
     "combat:wind.vacuum_wave"
    ],
-   "style": "combat:style.crescent_moon",
+   "style": "combat:style.long_blade",
    "style_tier": 5,
    "melee": "item:katana",
    "thrown": "item:shuriken",
@@ -7710,7 +7710,7 @@
     "combat:weapon.tag_kunai",
     "combat:wind.vacuum_wave"
    ],
-   "style": "combat:style.crescent_moon",
+   "style": "combat:style.long_blade",
    "style_tier": 3,
    "melee": "item:katana",
    "thrown": "item:shuriken",
@@ -7839,7 +7839,7 @@
     "combat:weapon.wind_shuriken",
     "combat:wind.vacuum_wave"
    ],
-   "style": "combat:style.crescent_moon",
+   "style": "combat:style.long_blade",
    "style_tier": 4,
    "melee": "item:katana",
    "thrown": "item:shuriken",
