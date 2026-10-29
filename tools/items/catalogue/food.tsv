@@ -1,0 +1,59 @@
+# Leaf dishes (Shinobi Life items, cooked at VF Hearth & Harvest stations or bought ready). props: food and sat are
+# hunger and saturation; tier is VF's Well Fed tier (0 none); buff is the Leaf buff (ROADMAP §7 Food), time in seconds.
+# Every proper meal also halves fatigue's movement penalty for an hour (meal=yes).
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+shio_ramen	Shio Ramen	food	ramen	any	beta1	16	10	-	Clear salt broth. Restores a little chakra	food:ramen	tint:miso_ramen	food=8;sat=0.6;tier=1;buff=chakra+10%;time=120;meal=yes
+shoyu_ramen	Shoyu Ramen	food	ramen	any	beta1	16	11	-	Soy broth with bamboo shoots	food:ramen	tint:miso_ramen	food=8;sat=0.6;tier=1;buff=chakra+10%;time=120;meal=yes
+miso_ramen	Miso Ramen	food	ramen	any	beta1	16	12	-	Ichiraku's thick miso	food:ramen	sprite	food=8;sat=0.7;tier=1;buff=chakra+12%;time=150;meal=yes
+miso_chashu_ramen	Miso Chashu Ramen	food	ramen	any	beta1	16	15	-	Miso with extra roast pork	food:ramen	tint:miso_ramen	food=10;sat=0.8;tier=2;buff=chakra+15%;time=180;meal=yes
+tonkotsu_ramen	Tonkotsu Ramen	food	ramen	any	beta1	16	15	-	Rich pork-bone broth	food:ramen	tint:miso_ramen	food=10;sat=0.8;tier=2;buff=chakra+15%;time=180;meal=yes
+ichiraku_special	Ichiraku Special	food	ramen	any	beta1	16	25	-	The extra-large bowl with everything; the cook's pride	food:ramen	tint:miso_ramen	food=12;sat=1.0;tier=3;buff=chakra+25%;time=240;meal=yes
+instant_ramen	Instant Ramen	food	ramen	any	beta1	16	4	-	Just add hot water at a cooking pot. A lonely kid's supper	food:ramen	sprite	food=5;sat=0.3;tier=0;meal=yes
+gyoza	Gyoza	food	side	any	beta1	16	8	-	Pan-fried dumplings	-	icon	food=5;sat=0.6;tier=1;time=90
+onigiri	Onigiri	food	rice	any	beta1	16	3	-	A plain salted rice ball	food:onigiri	sprite	food=4;sat=0.5;tier=0
+onigiri_umeboshi	Umeboshi Onigiri	food	rice	any	beta1	16	4	-	A rice ball around a sour plum	food:onigiri	tint:onigiri	food=5;sat=0.6;tier=1;time=60
+onigiri_okaka	Okaka Onigiri	food	rice	any	beta1	16	4	-	A rice ball with soy-dressed bonito flakes	food:onigiri;food:onigiri_okaka	tint:onigiri	food=5;sat=0.6;tier=1;time=60
+onigiri_salmon	Salmon Onigiri	food	rice	any	beta1	16	5	-	A rice ball with grilled salmon	food:onigiri	tint:onigiri	food=5;sat=0.7;tier=1;time=60
+onigiri_kombu	Kombu Onigiri	food	rice	any	beta1	16	4	-	A rice ball with simmered kelp	food:onigiri	tint:onigiri	food=5;sat=0.6;tier=1;time=60
+bento	Bento	food	rice	any	beta1	16	15	-	A lunch box: rice, fish, egg and pickles	-	icon	food=10;sat=0.8;tier=2;time=180;meal=yes
+dango	Hanami Dango	food	sweet	any	beta1	16	5	-	Three colours on a stick. Speeds chakra recovery	food:dango	sprite	food=3;sat=0.4;tier=1;buff=regen+20%;time=120
+mitarashi_dango	Mitarashi Dango	food	sweet	any	beta1	16	5	-	Grilled dango in sweet soy glaze	food:dango	tint:dango	food=3;sat=0.4;tier=1;buff=regen+20%;time=120
+anko_dango	Anko Dango	food	sweet	any	beta1	16	6	-	Dango under red bean paste	food:dango	tint:dango	food=3;sat=0.5;tier=1;buff=regen+20%;time=150
+dango_platter	Dango Platter	food	sweet	any	beta1	16	25	-	A dozen sticks to share: everyone eating with you gets the buff	food:dango	icon	food=8;sat=0.6;tier=2;buff=regen+25%;time=240;share=yes
+green_tea	Green Tea	food	tea	any	beta1	16	4	-	Holds off fatigue: the next stage comes an hour later	food:green_tea	sprite	food=1;sat=0.1;tier=0;buff=fatigue-60m
+matcha	Matcha	food	tea	any	beta1	16	7	-	Whisked powdered tea: fatigue an hour later and a little chakra regen	food:green_tea	tint:green_tea	food=1;sat=0.1;tier=0;buff=fatigue-60m,regen+10%;time=120
+hojicha	Hojicha	food	tea	any	beta2	16	5	-	Roasted tea, gentle at night: fatigue an hour later	food:green_tea	tint:green_tea	food=1;sat=0.1;tier=0;buff=fatigue-60m
+wagashi	Wagashi	food	sweet	any	beta1	16	8	-	A tea-house sweet shaped like the season's flower	food:candy	icon	food=2;sat=0.3;tier=1;time=60
+anmitsu	Anmitsu	food	sweet	any	beta2	16	10	-	Agar jelly, fruit and red beans in syrup	-	icon	food=4;sat=0.4;tier=1;time=90
+zenzai	Zenzai	food	sweet	any	beta2	16	9	-	Warm sweet red-bean soup with mochi; warms you in winter	-	icon	food=5;sat=0.5;tier=1;buff=warmth;time=180
+sakura_mochi	Sakura Mochi	food	sweet	any	beta1	16	6	-	Pink rice cake in a pickled cherry leaf (spring)	food:candy	icon	food=3;sat=0.4;tier=1;time=60;season=spring
+kakigori	Kakigori	food	sweet	any	beta2	16	7	-	Shaved ice with syrup (summer): no heat fatigue	-	icon	food=2;sat=0.2;tier=0;buff=cool;time=300;season=summer
+senbei	Senbei	food	snack	any	beta2	16	3	-	A crisp soy rice cracker	-	icon	food=2;sat=0.3;tier=0
+hard_candy	Hard Candy	food	snack	any	beta1	64	2	-	A twist of boiled sugar; children love it	food:candy	icon	food=1;sat=0.1;tier=0
+yakiniku_set	Yakiniku Set	food	barbecue	any	beta2	16	35	-	Grill-your-own beef at the barbecue house: taijutsu hits harder for five minutes	-	icon	food=12;sat=0.9;tier=2;buff=taijutsu+5%;time=300;meal=yes
+kalbi_plate	Kalbi Plate	food	barbecue	any	beta2	16	20	-	Marinated short rib	-	icon	food=8;sat=0.8;tier=2;buff=taijutsu+5%;time=180;meal=yes
+grilled_vegetables	Grilled Vegetables	food	barbecue	any	beta2	16	10	-	Peppers, onion and pumpkin off the grill	-	icon	food=6;sat=0.6;tier=1;time=120;meal=yes
+barbecue_feast	Barbecue Feast	food	barbecue	any	beta2	1	120	-	A whole table's grill for a squad dinner: taijutsu and Well Fed III for everyone at the table	-	icon	food=14;sat=1.0;tier=3;buff=taijutsu+8%;time=360;share=yes;meal=yes
+miso_soup	Miso Soup	food	home	any	beta1	16	4	-	Tofu and green onion in miso	-	icon	food=4;sat=0.5;tier=1;time=90;vessel=bowl
+grilled_fish	Grilled Fish	food	home	any	beta1	16	8	-	A whole mackerel salted and grilled	food:grilled_fish	sprite	food=6;sat=0.7;tier=1;time=120;meal=yes
+tamagoyaki	Tamagoyaki	food	home	any	beta1	16	6	-	A rolled sweet omelette	-	icon	food=4;sat=0.6;tier=1;time=90
+curry_rice	Curry Rice	food	home	any	beta2	16	14	-	A thick, spicy curry: dodge recovers a little faster for three minutes	-	icon	food=9;sat=0.8;tier=2;buff=agility;time=180;meal=yes;vessel=bowl
+oyakodon	Oyakodon	food	home	any	beta2	16	12	-	Chicken and egg over rice	-	icon	food=9;sat=0.8;tier=2;time=180;meal=yes;vessel=bowl
+katsudon	Katsudon	food	home	any	beta2	16	14	-	A fried pork cutlet over rice; eaten for luck before an exam	-	icon	food=10;sat=0.8;tier=2;buff=luck;time=180;meal=yes;vessel=bowl
+nikujaga	Nikujaga	food	home	any	beta2	16	12	-	Beef and potato stew, the taste of home	-	icon	food=9;sat=0.8;tier=2;time=180;meal=yes;vessel=bowl
+tempura	Tempura	food	home	any	beta2	16	12	-	Battered prawns and vegetables	-	icon	food=7;sat=0.7;tier=2;time=150;meal=yes
+soba	Soba	food	home	any	beta1	16	9	-	Buckwheat noodles. New neighbours give soba when they move in	-	icon	food=7;sat=0.6;tier=1;time=120;meal=yes;vessel=bowl
+udon	Udon	food	home	any	beta2	16	9	-	Thick noodles in a light broth	-	icon	food=7;sat=0.6;tier=1;time=120;meal=yes;vessel=bowl
+oden	Oden	food	home	any	beta2	16	10	-	Winter hotpot of fish cakes, egg and daikon; warms you	-	icon	food=8;sat=0.7;tier=2;buff=warmth;time=240;meal=yes;season=winter;vessel=bowl
+sukiyaki	Sukiyaki	food	home	any	beta2	1	40	-	A party pot of beef, tofu and greens for four	-	icon	food=12;sat=0.9;tier=3;time=300;share=yes;meal=yes
+ozoni	Ozoni	food	home	any	beta2	16	12	-	New Year's mochi soup	-	icon	food=8;sat=0.7;tier=2;buff=luck;time=300;season=new_year;vessel=bowl
+osechi_box	Osechi Box	food	home	any	beta2	1	60	event:new_year	The New Year's lacquered boxes of lucky dishes	-	icon	food=14;sat=1.0;tier=3;buff=luck;time=600;season=new_year;share=yes
+okonomiyaki	Okonomiyaki	food	street	any	beta2	16	12	-	A savoury cabbage pancake off the griddle	-	icon	food=8;sat=0.7;tier=2;time=150;meal=yes
+yakitori	Yakitori	food	street	any	beta1	16	6	-	Grilled chicken skewers	-	icon	food=5;sat=0.6;tier=1;time=90
+takoyaki	Takoyaki	food	street	any	beta2	16	8	-	Octopus balls, too hot to eat at once	-	icon	food=5;sat=0.6;tier=1;time=90
+taiyaki	Taiyaki	food	street	any	beta2	16	6	-	A fish-shaped cake filled with red bean	food:candy	icon	food=4;sat=0.4;tier=1;time=60
+candied_apple	Candied Apple	food	street	any	beta2	16	5	-	A festival apple in red glass sugar	food:candy	icon	food=4;sat=0.3;tier=0
+cotton_candy	Cotton Candy	food	street	any	beta2	16	4	-	A festival cloud of sugar	food:candy	icon	food=1;sat=0.1;tier=0
+onsen_egg	Onsen Egg	food	snack	any	beta2	16	3	-	Slow-cooked in the bath house's hot spring	-	icon	food=3;sat=0.5;tier=0
+tsukemono	Tsukemono	food	side	any	beta1	16	3	-	Pickled vegetables; keep for a season	-	icon	food=2;sat=0.3;tier=0;keeps=yes
+grandmothers_dish	Grandmother's Dish	food	home	any	beta2	16	0	quest:district.b2.grandmothers_recipe	The old recipe brought back to life: Well Fed III for a long while	-	icon	food=10;sat=1.0;tier=3;time=480;meal=yes;secret=yes

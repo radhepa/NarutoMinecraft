@@ -860,23 +860,28 @@ furnishing is only allowed inside them.
 
 ### Ryo
 
-Ryo is the only money: notes as items (1, 10, 100 and 1,000 ryo), so it works with vanilla
-trading, fits in chests and shows on the HUD as a total. VF's notice rewards and trades use ryo
-through the currency API. The economy is small and closed; rule of thumb: a day of D-rank missions
-covers food and leaves about half to save, and the first proper furniture set takes about an
-in-game week (a little over two hours) of play.
+Ryo is the only money: notes as items (1, 10, 100 and 1,000 ryo), so it works with vanilla trading, fits in chests
+and shows on the HUD as a total; a purchase takes notes and gives change in the fewest notes. The economy is small
+and closed. The orphan's stipend, **30 ryo every morning for the whole game** (there is no rent), covers a frugal
+day's meals and nothing more; missions, jobs and quests pay for everything else. Rules of thumb, held by the
+seeded simulation in `life/economy` over the beta's 48 days: a day of D-rank missions covers food and leaves about
+half to save (a typical Genin keeps 59%), and the first proper furniture set (325 ryo) takes about an in-game
+week (a typical player finishes it on day 6 to 8). The full design, every price, shop and sink is in
+**[ITEMS.md](ITEMS.md)**.
 
 | Earn (beta) | Ryo | Spend (beta) | Ryo |
 |---|---|---|---|
-| Orphan's stipend (all game; the final amount, and whether it changes by rank, come from the items design) | 30 a day | Ramen, onigiri, tea | 3 to 10 |
-| Part-time jobs (Ichiraku, grocer, flower shop, forge) | 40 to 80 a shift | Kunai, shuriken, smoke and paper bombs | 5 to 40 each |
-| D-rank mission | 60 to 150 | Soldier pill | 60 |
-| C-rank mission | 300 to 600 | Furniture | 20 to 800 a piece |
-| Side quests | 20 to 300 | Outfit variants (rank outfits are given) | 100 to 600 |
-| Festival games | small prizes | Crafting materials (steel, paper, powder) | 2 to 30 |
+| Orphan's stipend (all game) | 30 a day | Ramen, onigiri, tea, dango | 3 to 15 |
+| Part-time jobs (Ichiraku, grocer, flower shop, tea house, Haruno's, furniture deliveries; the forge, bath house, Kinoshita yard and pharmacy from Genin) | 40 to 80 a shift | Kunai, shuriken, smoke and paper bombs | 2 to 30 each |
+| D-rank mission (a steady median of 105) | 60 to 150 | Soldier pill | 60 |
+| C-rank mission | 300 to 600 | Furniture | 10 to 900 a piece |
+| Side quests | 10 to 400 | Outfits (rank outfits are given) | 100 to 480 |
+| Festival games | small prizes | Crafting materials (steel, paper, powder) | 1 to 45 |
+| Pawning camp loot and curios | 1 to 30 each | Technique scrolls, services (bath, lessons, repairs, restyles) | 5 to 600 |
 
-Furniture sells back at half price; loot from bandit camps sells at the pawn shop. There is no
-other way to turn things into money.
+Shops discount by your standing (up to 15% with the keeper's friendship) and only stalls and the pawn shop
+haggle. Furniture sells back at half price; loot from bandit camps and curios sell at the pawn shop, which has a
+daily till. There is no other way to turn things into money, and crafting never pays more than its inputs cost.
 
 **Mission pay** ([MISSIONS.md](MISSIONS.md#3-ranks-and-the-economy)) is the player's share, set
 within the rank's band by the template and scaled by the grade (S ×1.25, A ×1.1, B ×1, C ×0.85;
@@ -924,22 +929,29 @@ Forest of Death) gives *On Duty*, delaying fatigue by three hours.
 
 ### Food
 
-Vanilla hunger stays. Leaf dishes from Ichiraku, the barbecue house, the tea house, the grocer or
-your own cooking pot add small, short buffs through VF's `WellFed` tiers: ramen restores a little
-chakra, dango speeds chakra regen, barbecue raises taijutsu damage slightly, green tea holds off
-fatigue.
+Vanilla hunger stays. Leaf dishes from Ichiraku, the barbecue house, the tea houses, the dango stand, the grocer or
+your own cooking pot add small, short buffs through VF's `WellFed` tiers: ramen restores a little chakra, dango
+speeds chakra regen, barbecue raises taijutsu damage slightly, green tea holds off fatigue, and every proper meal
+halves fatigue's movement penalty for an hour. There are 55 dishes; 41 of them cook at VF's Hearth & Harvest pot,
+oven and prep table from ingredients the grocer and the fish stall sell, cheaper than eating out
+([ITEMS.md](ITEMS.md#13-highlights-by-family)).
 
 ### Gear and crafting
 
 | Station | Where | From | Makes |
 |---|---|---|---|
-| Workbench | The Academy workshop; one for your apartment | Beta 1 | Smoke bombs, wire, sealing tags, paper bombs (from Genin), furniture from planks and cloth |
-| Smithy (forge and anvil) | The weapon shop's forge; a small forge for your apartment | Beta 2 | Kunai, shuriken, senbon, a tanto, from steel bought at the smithy and salvage from bandit camps |
+| Workbench | The Academy workshop and the Kinoshita yard; one for your apartment | Beta 1 | Smoke bombs, wire, sealing tags, paper bombs (from Genin), pouches, furniture from planks, paper and cloth |
+| Smithy (forge and anvil) | The weapon shop's forge; a small forge for your apartment | Beta 2 | Kunai, shuriken, senbon, caltrops, a tanto, guards and chains from steel bought at Hagane Metalworks and salvage from bandit camps; repairs and upgrades |
 | Cooking station | VF Hearth & Harvest pot, oven, prep table | Beta 1 | Leaf dishes |
+| Apothecary table | The Suzuran pharmacy and the hospital; one for your apartment | Beta 2 | Poultices, salves, antidotes, pills, venom, numbing and sleep coatings, Forest of Death wards |
+| Tailor's table | The tailor | Beta 1 | Cloth gear, pet accessories, bandages, outfit recolouring |
+| Sealing desk | The scroll shop | Beta 2 | Blank and storage scrolls; advanced tags from Chunin |
 
-Recipes unlock by rank, by mentors (the smith teaches you after a few jobs at the forge) and by
-scrolls. Crafted tools can be a grade better than shop stock. Stations reuse VF's workstation
-pattern (`WorkstationBlock`, Hearth's `StationBlock` and its screens), with recipes as data.
+Recipes unlock by rank, by part-time jobs (the smith teaches you after a few shifts at the forge), by mentors,
+books, furniture plans, clan friendship (a clan teaches its recipes once its welcome quest is done) and VF recipe
+cards. Crafted tools roll a grade (standard, fine or masterwork) from your mastery at the station, so they can beat
+shop stock. Stations reuse VF's workstation pattern (`WorkstationBlock`, Hearth's `StationBlock` and its screens),
+with recipes as data. Every item, recipe, station and loot table is in [ITEMS.md](ITEMS.md).
 
 ### Pets
 

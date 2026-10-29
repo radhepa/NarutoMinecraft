@@ -1,0 +1,71 @@
+# Mission items and mission keepsakes, as the missions session asked (its needs.json and economy.json
+# collectibles). Mission items are bound to their mission and vanish when it ends; creatures (cat, frog, ninken,
+# stray pet) are followers, not items. Nine mission needs reuse items that already exist: bouquet, lamp_oil,
+# practice_kunai, stolen_goods, tea_leaves, herb (healing_herb), groceries (grocery_order), parcel (quest_parcel),
+# sealed_letter (quest_letter). Keepsakes are the first A grade or better on their mission.
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+mission_beetle	Beetle in a Jar	key	mission	genin	beta2	1	0	mission:mission.d.insect_garden	A garden beetle in a jar with air holes	-	icon	bind=quest;mod=shinobi_progression
+mission_bottled_letter	Bottled Letter	key	mission	genin	beta2	1	0	mission:mission.d.river_cleanup	A letter in a bottle, fished from the river	-	icon	bind=quest;mod=shinobi_progression
+mission_cart_axle	Cart Axle	key	mission	genin	beta2	1	0	mission:mission.d.harvest	A replacement axle for a farm cart	-	icon	bind=quest;mod=shinobi_progression
+mission_cart_wheel	Cart Wheel	key	mission	genin	beta2	1	0	mission:mission.c.caravan_guard	A spare wheel for a caravan cart	-	icon	bind=quest;mod=shinobi_progression
+mission_catering_box	Catering Box	key	mission	genin	beta2	16	0	mission:mission.d.catering	A stacked lacquer box of food for a client's guests	-	icon	bind=quest;mod=shinobi_progression
+mission_chest	Client's Chest	key	mission	genin	beta2	1	0	mission:mission.d.moving_day	A heavy chest of someone's belongings	-	icon	bind=quest;mod=shinobi_progression
+mission_copied_report	Copied Report	key	mission	genin	beta2	16	0	mission:mission.d.scroll_sorting	A clean copy of an old report	-	icon	bind=quest;mod=shinobi_progression
+mission_crop	Harvest Basket	key	mission	genin	beta2	16	0	mission:mission.d.harvest	A basket of the client's crop	-	icon	bind=quest;mod=shinobi_progression
+mission_debris	Debris	key	mission	genin	beta2	16	0	mission:mission.d.lot_clearing	Rubble and junk from a lot being cleared	-	icon	bind=quest;mod=shinobi_progression
+mission_dojo_signboard	Dojo Signboard	key	mission	genin	beta2	1	0	mission:mission.c.dojo_challenge	The dojo's own signboard, won in a challenge	-	icon	bind=quest;mod=shinobi_progression
+mission_drain_muck	Bucket of Drain Muck	key	mission	genin	beta2	16	0	mission:mission.d.drain_clearing	Exactly what it sounds like	-	icon	bind=quest;mod=shinobi_progression
+mission_fence_post	Fence Post	key	mission	genin	beta2	16	0	mission:mission.d.fence_mending	A cedar post for mending a fence	-	icon	bind=quest;mod=shinobi_progression
+mission_firewood	Firewood Bundle	key	mission	genin	beta2	16	0	mission:mission.d.kiln_firing	Split wood for a kiln	-	icon	bind=quest;mod=shinobi_progression
+mission_fireworks_crate	Fireworks Crate	key	mission	genin	beta2	1	0	mission:mission.c.festival_guard;mission:mission.d.festival_setup	A crate of fireworks: handle with care	-	icon	bind=quest;mod=shinobi_progression
+mission_fish_crate	Fish Crate	key	mission	genin	beta2	16	0	mission:mission.d.fishing_haul	The day's catch on ice	-	icon	bind=quest;mod=shinobi_progression
+mission_flower	Cut Flowers	key	mission	genin	beta2	16	0	mission:mission.d.flower_order	Fresh flowers for an order	-	icon	bind=quest;mod=shinobi_progression
+mission_forbidden_scroll	Sealed Scroll (Forbidden)	key	mission	genin	later	1	0	mission:mission.a.forbidden_scroll;mission:mission.s.stronghold	A heavily sealed scroll that must not be opened	-	icon	bind=quest;mod=shinobi_progression
+mission_glaze_recipe	Glaze Recipe	key	mission	genin	later	1	0	mission:mission.b.kiln_glaze	A potter's secret glaze, written out	-	icon	bind=quest;mod=shinobi_progression
+mission_heirloom	Heirloom	key	mission	genin	beta2	1	0	mission:mission.c.heirloom;mission:mission.d.moving_day	A family heirloom, wrapped in silk	-	icon	bind=quest;mod=shinobi_progression
+mission_honeycomb	Honeycomb	key	mission	genin	beta2	16	0	mission:mission.c.bear	A slab of wild honeycomb	-	icon	bind=quest;mod=shinobi_progression
+mission_ledger	Fortress Ledger	key	mission	genin	later	1	0	mission:mission.b.fortress_infiltration	A ledger of a fortress's stores	-	icon	bind=quest;mod=shinobi_progression
+mission_linen	Clean Linen	key	mission	genin	beta2	16	0	mission:mission.d.hospital_orderly;mission:mission.d.laundry	Folded hospital linen	-	icon	bind=quest;mod=shinobi_progression
+mission_medicine	Medicine Packet	key	mission	genin	beta2	16	0	mission:mission.d.babysitting	A child's medicine, at the right hour	-	icon	bind=quest;mod=shinobi_progression
+mission_medicine_crate	Medicine Crate	key	mission	genin	beta2	1	0	mission:mission.b.quarantine;mission:mission.c.border_delivery	Sealed medicine for a far clinic	-	icon	bind=quest;mod=shinobi_progression
+mission_moving_crate	Moving Box	key	mission	genin	beta2	16	0	mission:mission.d.moving_day	A box of a client's things on moving day	-	icon	bind=quest;mod=shinobi_progression
+mission_net_patch	Net Patch	key	mission	genin	beta2	16	0	mission:mission.d.fishing_haul	Twine and a needle for a torn net	-	icon	bind=quest;mod=shinobi_progression
+mission_offering	Shrine Offering	key	mission	genin	beta2	16	0	mission:mission.d.shrine_cleaning	Rice and sake for the shrine	-	icon	bind=quest;mod=shinobi_progression
+mission_old_kunai_cache	Old Kunai Cache	key	mission	genin	beta2	1	0	mission:mission.d.farm_weeding	A rusted bundle of kunai buried in a field	-	icon	bind=quest;mod=shinobi_progression
+mission_pass_ledger	Pass Ledger	key	mission	genin	later	1	0	mission:mission.anbu.corrupt_official	A ledger of travel passes, some of them odd	-	icon	bind=quest;mod=shinobi_progression
+mission_persimmon	Persimmon	key	mission	genin	beta2	16	0	mission:mission.d.orchard	A ripe orchard persimmon	-	icon	bind=quest;mod=shinobi_progression
+mission_poster	Notice Poster	key	mission	genin	beta2	16	0	mission:mission.d.posters	A poster to paste up around the village	-	icon	bind=quest;mod=shinobi_progression
+mission_pottery_crate	Pottery Crate	key	mission	genin	beta2	1	0	mission:mission.c.kiln_delivery	Fragile kiln ware, packed in straw	-	icon	bind=quest;mod=shinobi_progression
+mission_recipe_copy	Recipe Copy	key	mission	genin	later	1	0	mission:mission.b.kiln_glaze	A copy of the glaze recipe	-	icon	bind=quest;mod=shinobi_progression
+mission_ring	Lost Ring	key	mission	genin	beta2	1	0	mission:mission.d.drain_clearing	A ring that went down the drain	-	icon	bind=quest;mod=shinobi_progression
+mission_river_rubbish	River Rubbish	key	mission	genin	beta2	16	0	mission:mission.d.river_cleanup	Junk pulled from the river	-	icon	bind=quest;mod=shinobi_progression
+mission_roof_tile	Roof Tile	key	mission	genin	beta2	16	0	mission:mission.d.roof_repair	A clay roof tile	-	icon	bind=quest;mod=shinobi_progression
+mission_sealed_message	Sealed Message	key	mission	genin	beta2	1	0	mission:mission.c.courier_relay	A message under a seal for the relay	-	icon	bind=quest;mod=shinobi_progression
+mission_sealed_scroll	Sealed Scroll	key	mission	genin	later	1	0	mission:mission.b.scroll_recovery	A stolen scroll under its seal	-	icon	bind=quest;mod=shinobi_progression
+mission_shed_antler	Shed Antler	key	mission	genin	beta2	16	0	mission:mission.d.deer_count	An antler a Nara deer has dropped	-	icon	bind=quest;mod=shinobi_progression
+mission_sheet	Laundry Sheet	key	mission	genin	beta2	16	0	mission:mission.d.laundry	A sheet off the line	-	icon	bind=quest;mod=shinobi_progression
+mission_spice	Spice Pouch	key	mission	genin	beta2	16	0	mission:mission.d.kitchen_help	A pouch of the barbecue house's spice mix	-	icon	bind=quest;mod=shinobi_progression
+mission_stray_shuriken	Stray Shuriken	key	mission	genin	beta2	16	0	mission:mission.d.training_upkeep	A shuriken lost in the training ground grass	-	icon	bind=quest;mod=shinobi_progression
+mission_supply_crate	Supply Crate	key	mission	genin	beta2	1	0	mission:mission.a.siege_relief;mission:mission.c.outpost_supply	A crate of supplies for an outpost	-	icon	bind=quest;mod=shinobi_progression
+mission_timber	Timber	key	mission	genin	beta2	16	0	mission:mission.d.timber_haul	A length of timber for the carpenters	-	icon	bind=quest;mod=shinobi_progression
+mission_treaty_draft	Treaty Draft	key	mission	genin	later	1	0	mission:mission.b.allied_courier	A draft treaty under escort	-	icon	bind=quest;mod=shinobi_progression
+keepsake_festival_lantern	Festival Lantern	keepsake	mission	any	beta2	1	0	mission:mission.d.festival_setup	The lantern you hung for the festival	-	icon	block=keepsake
+keepsake_first_firing_cup	First-Firing Cup	keepsake	mission	any	beta2	1	0	mission:mission.d.kiln_firing	A lopsided cup from the kiln's first firing	-	icon	block=keepsake
+keepsake_pet_collar_charm	Pet Collar Charm	keepsake	mission	any	beta2	1	0	mission:mission.d.lost_pet	The charm off a runaway pet's collar, given in thanks	-	icon	block=keepsake
+keepsake_bottle_letter	Letter in a Bottle	keepsake	mission	any	beta2	1	0	mission:mission.d.river_cleanup	A message in a bottle, framed: who wrote it is still a mystery	-	icon	block=keepsake
+keepsake_snow_rabbit	Snow Rabbit	keepsake	mission	any	beta2	1	0	mission:mission.d.snow_clearing	A rabbit carved in white wood, from a snowy roof	-	icon	block=keepsake
+keepsake_trader_map	Trader's Map	keepsake	mission	any	beta2	1	0	mission:mission.c.escort_merchant	A merchant's hand-drawn map of the east road	-	icon	block=keepsake
+keepsake_bandit_banner	Bandit Banner	keepsake	mission	any	beta2	1	0	mission:mission.c.bandit_clearing	The banner of a camp you cleared	-	icon	block=keepsake
+keepsake_boar_tusk	Great Boar Tusk	keepsake	mission	any	beta2	1	0	mission:mission.c.beast_hunt	A tusk from the beast that troubled the fields	-	icon	block=keepsake
+keepsake_honey_pot	Honey Pot	keepsake	mission	any	beta2	1	0	mission:mission.c.bear	A clay pot the farmers filled for you	-	icon	block=keepsake
+keepsake_ghost_lantern	Ghost Lantern	keepsake	mission	any	beta2	1	0	mission:mission.c.haunted_inn	The inn's haunted lantern, quiet now	-	icon	block=keepsake
+keepsake_dojo_signboard	Dojo Signboard	keepsake	mission	any	beta2	1	0	mission:mission.c.dojo_challenge	The signboard of a dojo you bested	-	icon	block=keepsake
+keepsake_burglar_mask	Burglar's Mask	keepsake	mission	any	beta2	1	0	mission:mission.c.contest_thief	The mask of a thief you caught	-	icon	block=keepsake
+keepsake_noble_fan	Noble's Fan	keepsake	mission	any	beta2	1	0	mission:mission.c.noble_child	A fan from a noble child you kept safe	-	icon	block=keepsake
+keepsake_market_bowl	Market Bowl	keepsake	mission	any	beta2	1	0	mission:mission.c.kiln_delivery	A glazed bowl from the border market	-	icon	block=keepsake
+keepsake_glaze_tile	Glaze Tile	keepsake	mission	any	later	1	0	mission:mission.b.kiln_glaze	A test tile of a famous glaze	-	icon	block=keepsake
+keepsake_bridge_plank	Bridge Plank	keepsake	mission	any	later	1	0	mission:mission.b.bridge_builders	A plank from the bridge you helped build	-	icon	block=keepsake
+keepsake_court_vase	Court Vase	keepsake	mission	any	later	1	0	mission:mission.a.kiln_court	A vase from the daimyo's court	-	icon	block=keepsake
+keepsake_castle_banner	Castle Banner	keepsake	mission	any	later	1	0	mission:mission.a.siege_relief	A banner from a castle you relieved	-	icon	block=keepsake
+keepsake_summit_seal	Summit Seal	keepsake	mission	any	later	1	0	mission:mission.s.peace_summit	A seal from a peace summit	-	icon	block=keepsake
+keepsake_festival_mask	Shadow Festival Mask	keepsake	mission	any	later	1	0	mission:mission.anbu.village_shadow	A festival mask from a night you cannot talk about	-	icon	block=keepsake

@@ -1,0 +1,30 @@
+# Services: ryo spent on something other than an item (ROADMAP §7 Ryo, "Spend"). price "-" is computed (see note).
+id	provider	rank	slice	price	effect	note
+service.bath	bath_house	any	beta2	8	Refreshed: fatigue cleared to the start of Tired and Well Rested for two hours	Once a day
+service.repair	weapon_shop	any	beta2	-	Restores a weapon's durability	ceil(base price x missing durability x 0.3); masterwork x1.5
+service.sharpen	weapon_shop	any	beta2	5	A quarter of a blade's durability while you wait	-
+service.commission	weapon_shop	genin	beta2	-	A fine-grade weapon in three days	2.2 x base price; half as a deposit
+service.alteration	tailor	any	beta1	30	Change a folded outfit's palette to another of its own	-
+service.dye	tailor	any	beta1	20	Recolour one role of an outfit to any wardrobe colour	-
+service.custom_outfit	tailor	genin	beta2	-	An outfit of the collections in your clan's palette (clan members) or your own colours	1.5 x the outfit's price; three days
+service.custom_colour	furniture_shop	any	beta1	-	Any furniture piece in a chosen wood or colour	1.2 x price; two days
+service.custom_furniture	kinoshita_yard	genin	beta2	-	A fine-grade piece from the yard's blueprints	2 x price; three days
+service.catering	ichiraku	genin	beta2	60	Ramen for the squad delivered to a training ground or your flat	Feeds four; counts as a squad meal (bond experience)
+service.reservation	barbecue_house	genin	beta2	20	A table held for the squad's evening	Required for the squad dinner after Ch 14; refunded against the bill
+service.order_scroll	scroll_shop	genin	beta2	-	Order a technique scroll of your natures not in this week's stock	1.25 x price; five days
+service.bouquet	flower_shop	any	beta1	25	A bouquet delivered to a resident's door with your note	Counts as a gift; one a day
+service.portrait	painters_studio	any	beta2	150	A painted portrait of you, or of you with a friend (a hanging scroll)	Five days
+service.lesson.gekko	place:gekko.dojo	genin	beta2_5	60	A kenjutsu lesson at the Gekko dojo: training XP and blade proficiency	Once a day; after clan.gekko.1
+service.lesson.namiashi	place:namiashi.dojo	genin	beta2_5	50	A footwork lesson: training XP and a shorter dodge cooldown for the day	Once a day; after clan.namiashi.1
+service.shrine_offering	shrine_office	any	beta1	5	An offering: a day of the shrine's small luck	Once a day
+service.adoption.pup	inuzuka_clinic	any	beta1	100	Adopt a ninken pup	Includes a collar and a day of kibble
+service.adoption.cat	cat_shelter	any	beta1	40	Adopt a cat	Includes a collar
+service.house	housing_office	jonin	later	30000	Buy a small house	The home session's number (no rent: homes are bought or given)
+service.movers	housing_office	chunin	later	200	The mover packs your furniture and chests into moving crates	Per move; the home session's number
+service.found_clan	clan_registry	chunin	later	20000	Found a clan	ROADMAP §11 Player clans
+service.estate_hall	clan_registry	chunin	later	5000	Open one hall of your estate	5,000 to 15,000 by hall
+service.travel	travel_desk	genin	later	50	A personal trip to an open far region	Free on missions
+service.restyle.hair	barber	any	beta1	40	A new hairstyle from those you have unlocked	The character creation session's price
+service.restyle.hair_colour	barber	any	beta1	60	A new hair colour	The character creation session's price
+service.restyle.marks	barber	any	beta1	30	Add, change or remove face marks	The character creation session's price
+service.locksmith	housing_office	any	beta1	20	Cut a spare key to your home	The home session's spare key

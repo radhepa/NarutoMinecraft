@@ -1,0 +1,39 @@
+# Ninja tools and weapons. Registered by Shinobi Combat; combat stats live in the combat session's table, keyed by these ids.
+# Columns (every catalogue file): id, name, category, group, rank, slice, stack, price, sources, use, gift, art, props.
+# See tools/items/items.py for what each column means. "-" is empty.
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+practice_kunai	Practice Kunai	tool	thrown	academy	beta1	16	2	kit:academy	Blunt training kunai: combo strikes and throws at the Academy posts; never draws blood on a spar	-	tint:kunai	combat=thrown,melee
+practice_shuriken	Practice Shuriken	tool	thrown	academy	beta1	64	1	kit:academy	Blunt wooden-edged stars for target practice	-	tint:shuriken	combat=thrown
+kunai	Kunai	tool	thrown	genin	beta2	16	12	kit:genin;salvage:bandit_camp	The shinobi's knife: combo weapon in hand, right click throws it like a trident and it can be picked up again	-	sprite	combat=thrown,melee;grades=yes;durability=120
+rusty_kunai	Rusty Kunai	tool	thrown	any	beta2	16	0	salvage:bandit_camp;drop:bandit	A bandit's pitted blade. Throws badly; the forge melts it down to scrap steel	-	tint:kunai	combat=thrown,melee;sell=2;durability=40
+shuriken	Shuriken	tool	thrown	genin	beta2	64	4	kit:genin	Four-point throwing star; fast, stackable, three at once from Genin	-	sprite	combat=thrown;grades=yes
+fuma_shuriken	Windmill Shuriken	tool	thrown	chunin	later	1	180	-	A folding giant shuriken that arcs back toward you	-	model	combat=thrown;grades=yes;durability=200
+senbon	Senbon	tool	thrown	genin	beta2	64	2	-	Steel needles: little damage, but they carry a coating and pin a nerve point	-	sprite	combat=thrown;coatable=yes;grades=yes
+makibishi	Caltrops	tool	trap	genin	beta2	16	6	-	A pouch of iron spikes scattered behind you; slows and hurts pursuers	-	icon	combat=trap
+ninja_wire	Ninja Wire	tool	trap	academy	beta1	16	8	-	A coil of thin steel wire: a trip trap between two posts, or binding	-	sprite	combat=trap
+smoke_bomb	Smoke Bomb	tool	bomb	academy	beta1	16	10	-	Bursts into thick smoke: blinds, and mobs lose their target	-	sprite	combat=bomb
+stink_bomb	Stink Bomb	tool	bomb	academy	beta1	16	3	quest:district.b1.neighbours.1	An Academy prank: a cloud nobody wants to stand in; residents complain	-	tint:smoke_bomb	combat=bomb
+flash_bomb	Flash Bomb	tool	bomb	genin	beta2	16	25	-	A blinding flash; enemies facing it are stunned for a moment	-	tint:smoke_bomb	combat=bomb
+sealing_tag	Sealing Tag	tool	tag	academy	beta1	16	6	-	A simple seal: closes a box or door for a quest; on an enemy it stops chakra recovery for a few seconds	-	sprite	combat=tag
+paper_bomb	Paper Bomb	tool	tag	genin	beta2	16	30	-	An explosive tag: stick it to a surface or a kunai; hurts entities, never blocks	-	sprite	combat=bomb,tag;grades=yes
+paper_bomb_chain	Chained Paper Bombs	tool	tag	chunin	later	16	110	-	Five tags on one string that go off in a row	-	tint:paper_bomb	combat=bomb,tag
+barrier_tag	Barrier Tag	tool	tag	chunin	later	16	140	-	Four tags raise a short-lived barrier entity	-	tint:sealing_tag	combat=tag
+chakra_suppression_tag	Suppression Tag	tool	tag	jonin	later	16	260	-	Pressed onto a foe it seals their chakra for a few seconds	-	tint:sealing_tag	combat=tag
+bokken	Bokken	weapon	melee	academy	beta2	1	40	quest:clan.gekko.1	A wooden practice sword for the Gekko dojo's forms	-	model	combat=melee;durability=300
+tanto	Tanto	weapon	melee	genin	beta2	1	220	-	A short blade with a longer reach than a kunai; the combo's third strike cuts deep	-	model	combat=melee;grades=yes;durability=250
+knuckle_guards	Knuckle Guards	weapon	melee	genin	beta2	1	60	-	Steel tekko for taijutsu: empty-hand combos hit a little harder	-	icon	combat=melee;grades=yes;durability=300
+weighted_chain	Weighted Chain	weapon	melee	genin	beta2	1	90	-	A chain with a weight on each end: wraps a target's legs from mid range	-	model	combat=melee,trap;grades=yes;durability=220
+bo_staff	Bo Staff	weapon	melee	genin	beta2	1	120	-	A long staff with 4.5 blocks of reach that uses the combo system	-	model	combat=melee;grades=yes;durability=260
+ninjato	Ninjato	weapon	melee	genin	beta3	1	650	reward:exam_kenjutsu	A straight sword for kenjutsu	-	model	combat=melee;grades=yes;durability=400
+kusarigama	Kusarigama	weapon	melee	chunin	later	1	480	-	A sickle on a long chain: hook, pull and strike	-	model	combat=melee;grades=yes;durability=320
+iron_mace	Iron Mace	weapon	melee	genin	beta2_5	1	260	clan:hagane	A gate guard's flanged mace: slow, and it staggers through a block	-	model	combat=melee;grades=yes;durability=380
+war_fan	War Fan	weapon	melee	chunin	later	1	300	-	An iron-ribbed folding fan: parries well, and carries wind techniques further	-	model	combat=melee;grades=yes;durability=300
+battle_fan	Great Battle Fan	weapon	melee	jonin	later	1	900	-	A fan as tall as you are; its swings throw wind	-	model	combat=melee;grades=yes;durability=420
+chakra_blades	Chakra Blades	weapon	melee	jonin	later	1	1200	-	Paired trench knives of chakra metal that lengthen with wind chakra	-	model	combat=melee;grades=yes;durability=500
+chakra_metal_kunai	Chakra Metal Kunai	tool	thrown	jonin	later	16	90	-	A kunai forged from chakra metal: it carries your nature's chakra	-	tint:kunai	combat=thrown,melee;grades=yes;durability=300
+sarutobi_staff	Clan Staff (Sarutobi)	weapon	melee	genin	beta2	1	0	clan:sarutobi	The Sarutobi's long staff, given by the clan to its own; the clan staff of the clan technique	-	model	combat=melee;durability=400;bind=clan
+white_sabre	White Sabre	weapon	melee	jonin	later	1	0	clan:hatake	The Hatake tanto whose combo finisher is a lightning dash	-	model	combat=melee;durability=600;bind=clan
+manji_shuriken	Manji Shuriken	tool	thrown	genin	beta2	16	9	-	A heavier four-armed star with hooked blades: slower, but it cuts deeper	-	tint:shuriken	combat=thrown;grades=yes
+katana	Katana	weapon	melee	genin	beta3	1	900	reward:exam_kenjutsu	A curved long sword: the kenjutsu route's blade	-	model	combat=melee;grades=yes;durability=450
+kokuto	Kokuto	weapon	melee	genin	beta2_5	1	0	clan:namiashi	The Namiashi's black-lacquered blade, given by the clan to its own	-	model	combat=melee;durability=420;bind=clan
+knuckle_wraps	Knuckle Wraps	gear	arms	academy	beta1	1	20	-	Cloth fist wraps for taijutsu: no weapon, a little sturdier fists	-	icon	wear=arms;combat=melee

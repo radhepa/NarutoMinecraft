@@ -1,0 +1,48 @@
+# Crafting materials, salvage and monster parts (Shinobi Life). sell= is what the pawn shop pays before haggling.
+id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
+steel_ingot	Steel Ingot	material	metal	any	beta2	64	20	salvage:bandit_camp	Folded tamahagane steel for blades	item:iron_ingot	sprite	-
+scrap_steel	Scrap Steel	material	metal	any	beta2	64	3	salvage:bandit_camp;drop:bandit	Broken blades and buckles; four make an ingot at the forge	-	tint:steel_ingot	sell=1
+iron_sand	Iron Sand	material	metal	any	beta2	64	4	gather:river_bend	Black sand from the river bend, smelted into steel	-	icon	-
+charcoal	Charcoal	material	fuel	any	beta1	64	1	vanilla	Forge fuel	-	vanilla	vanilla=minecraft:charcoal
+steel_wire	Steel Wire	material	metal	any	beta1	64	3	-	Drawn wire for ninja wire and chains	-	icon	-
+chain_links	Chain Links	material	metal	any	beta2	64	8	-	Forged links for chains and the mesh shirt	-	icon	-
+chakra_metal	Chakra Metal	material	metal	jonin	later	16	300	-	A rare ore that carries chakra, for the finest blades	-	icon	-
+refined_steel	Refined Steel	material	metal	genin	beta2	64	45	-	Steel folded again: the forge's material for a fine grade	-	tint:steel_ingot	-
+whetstone	Whetstone	material	tool	any	beta1	16	15	-	Sharpens a blade in the field: restores a quarter of its durability	item:whetstone	icon	repair=25%
+washi_paper	Washi Paper	material	paper	any	beta1	64	2	-	Strong mulberry paper for tags	-	icon	-
+ink	Ink	material	paper	any	beta1	64	5	-	A stick of sumi ink	item:ink	icon	-
+brush	Brush	material	tool	any	beta1	1	15	-	A calligraphy brush: needed at the sealing desk	item:brush	icon	-
+ink_stone	Ink Stone	gift	writing	any	beta2	1	30	-	A slate for grinding ink; a fine gift for a calligrapher	item:ink	icon	-
+blasting_powder	Blasting Powder	material	powder	genin	beta2	64	6	salvage:bandit_camp	Black powder for paper bombs	-	icon	-
+smoke_powder	Smoke Powder	material	powder	academy	beta1	64	4	-	Dense smoke for smoke bombs	-	icon	-
+flash_powder	Flash Powder	material	powder	genin	beta2	64	8	-	Magnesium and salts for flash bombs	-	icon	-
+cotton_cloth	Cotton Cloth	material	cloth	any	beta1	64	4	-	Plain woven cotton	-	icon	-
+silk	Silk	material	cloth	any	beta2	64	15	-	Fine silk for festival clothes	-	icon	-
+thread	Thread	material	cloth	any	beta1	64	1	-	Spooled thread	-	icon	-
+leather_strip	Leather Strip	material	cloth	any	beta1	64	4	drop:boar	Tanned leather for grips and pouches	-	icon	-
+dye	Dye	material	cloth	any	beta1	64	3	-	A pot of dye in any wardrobe colour	-	icon	variant=colour
+hinoki_planks	Hinoki Planks	material	wood	any	beta1	64	3	-	Pale cypress boards for furniture	item:planks	icon	-
+lacquer	Lacquer	material	wood	any	beta2	64	12	-	Red or black urushi for fine furniture	-	icon	-
+tatami_rush	Tatami Rush	material	wood	any	beta1	64	2	-	Woven igusa reed	-	icon	-
+bamboo	Bamboo	material	wood	any	beta1	64	1	vanilla;gather:bamboo_grove	-	-	vanilla	vanilla=minecraft:bamboo
+paper	Paper	material	paper	any	beta1	64	1	vanilla	-	-	vanilla	vanilla=minecraft:paper
+lamp_oil	Lamp Oil	material	fuel	any	beta1	64	3	-	For lanterns and andon lamps	-	icon	-
+beeswax	Beeswax	material	wax	any	beta1	64	3	-	For salves and candles	-	icon	-
+healing_herb	Mugwort	material	herb	any	beta1	64	3	gather:herb_garden;gather:forest_floor	The commonest healing herb	-	icon	-
+bellflower_root	Bellflower Root	material	herb	any	beta2	64	5	gather:herb_garden	A root for antidotes	-	icon	-
+aloe	Aloe	material	herb	any	beta2	64	4	gather:herb_garden	Cooling sap for burns	-	icon	-
+ginger_root	Ginger	material	herb	any	beta1	64	2	gather:herb_garden	Warming root for teas and tonics	-	icon	-
+lily_of_the_valley	Lily of the Valley	material	herb	genin	beta2	64	6	gather:herb_garden	Pretty and poisonous; the Suzuran's flower	-	icon	-
+nightshade	Nightshade	material	herb	genin	beta2	64	8	gather:forest_floor	A poison berry for coatings	-	icon	-
+ginseng_root	Mountain Ginseng	material	herb	genin	beta3	64	25	gather:forest_of_death	A rare root from the Forest of Death, for blood pills	-	icon	-
+boar_tusk	Boar Tusk	material	monster	any	beta2	64	10	drop:boar	A curved tusk	-	icon	sell=5
+wolf_pelt	Wolf Pelt	material	monster	any	beta2	64	15	drop:wild_wolf	A grey pelt	-	icon	sell=7
+snake_skin	Snake Skin	material	monster	genin	beta3	64	18	drop:giant_snake;gather:forest_of_death	A shed skin longer than you are tall	-	icon	sell=9
+centipede_plate	Centipede Plate	material	monster	genin	beta3	64	30	drop:giant_centipede	A plate of chitin from the Forest of Death	-	icon	sell=15
+tiger_pelt	Tiger Pelt	material	monster	genin	beta3	64	60	drop:forest_tiger	A striped pelt, a trophy of the forest	-	icon	sell=30
+spider_silk	Spider Silk	material	monster	genin	beta3	64	25	drop:giant_spider	Tough silk for wire and cloth	-	icon	sell=12
+hawk_feather	Hawk Feather	material	monster	any	beta2	64	6	gather:cliff_nest	A long barred feather for fletching and charms	-	icon	sell=3
+bandit_trinket	Bandit Trinket	material	loot	any	beta2	64	0	salvage:bandit_camp;drop:bandit	A ring, a comb, a lucky coin: worth something to the pawnbroker	-	icon	variant=look;sell=12
+bandit_purse	Bandit Purse	material	loot	any	beta2	16	0	drop:bandit;salvage:bandit_camp	A purse of stolen coin: open it for 5 to 40 ryo	-	icon	opens=ryo:5-40
+broken_blade	Broken Blade	material	loot	any	beta2	64	0	salvage:bandit_camp;drop:bandit	A snapped sword: the forge melts it into scrap steel	-	icon	sell=4;smelt=scrap_steel:2
+stolen_goods	Stolen Goods	key	loot	any	beta2	64	0	salvage:bandit_camp	A crate of someone's things: return them for a reward and a deed, or sell them and live with it	-	icon	sell=20;deed=returned_goods
