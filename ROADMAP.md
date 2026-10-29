@@ -106,11 +106,11 @@ Jonin.
 | Content mod id | `narutominecraft`, kept. |
 | VF's RPG add-on | Not shipped. |
 | VF changes | *Default:* fine to add small public APIs to VF: extra wardrobe namespaces, a currency item, hand-built taverns, and a resident appearance seed (for Varied saves). |
-| Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe, and clan or clanless. |
+| Character creation | A creator screen at the opening: hair, eyes, skin and outfit from the wardrobe. No clan choice: the player is a clanless orphan with an ordinary family name, and that is public and known. A clan-born start may return later as an option. |
 | Growing up | Academy kid, teen, adult, then adult for good. No old age and no death of age. |
-| Clans | 25 clans: the 15 noble clans and 10 minor clans ([CLANS.md](CLANS.md)). Born into one of them or clanless. *Default:* all 25 pickable at creation, alongside clanless; a player can also create their own clan. *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship. |
+| Clans | 25 clans: the 15 noble clans and 10 minor clans ([CLANS.md](CLANS.md)). The player starts clanless (see Character creation). *Default:* a clanless player can join a clan later through marriage or a clan's invitation at high friendship, or found their own clan. Clan side quests work for a clanless player through standing and friendship. |
 | Population | The village is mostly clanless, drawn by clan rarity from `tools/wardrobe/population.json` (weights per thousand): about 45% civilians, 28% clanless shinobi with ordinary family names, 15% from the 10 minor clans and 13% from the 15 noble clans (an Uchiha or a Hyuga about 1 in 70, a Hatake about 1 in 500). Civilians wear their own clothing collections (market and household); the general shinobi wardrobe adds 100 tops, 100 bottoms and 50 hairstyles ([Population](#population)). |
-| Kekkei genkai | Playable through clan membership. Out of scope for now: summoning, and with it tailed beasts. |
+| Kekkei genkai | A bloodline of its clan: residents, teammates and enemies of those clans use them. The player, a clanless orphan for now, does not have one. Out of scope for now: summoning, and with it tailed beasts. |
 | Squad | Teammates and sensei are original characters with personalities, friendship levels and connections, fixed per save (curated in Classic, rolled in Varied). They can leave the squad. |
 | Romance | Friendships can grow into romance and marriage, from the teen stage. Foundation only for now: nothing romantic in the beta, and the beta does not end on a time skip or a dating unlock. |
 | Children | A married player can have children in the post-game (a life-sim foundation). |
@@ -118,7 +118,7 @@ Jonin.
 | Hunger | Vanilla hunger stays; food from shops and Ichiraku adds small buffs. |
 | Gear | Shops, plus crafting at a **smithy** (kunai, shuriken, blades) and a **workbench** (paper bombs, smoke bombs, tags, furniture), station blocks in the world and in your apartment. |
 | No rent | Homes never cost rent, and the orphan's stipend continues all game. |
-| Collecting | A collection book (curios, gifts, keepsakes, photos, ninja info cards, clan crests and more), home storage with sort, search and deposit-all, and display cases. Owned by the home design; item ids by the items design. |
+| Collecting | No collection book. Storage is plain vanilla chests and barrels at home, with more chests from furniture. Curios (useless but charming loot), gifts and keepsakes are ordinary items you keep; displays use item frames and shelves. No completion milestones and no custom sort or search. |
 | ANBU | An optional branch from Jonin, not a required rung. |
 | Hand signs | Both typed key sequences and a radial menu, chosen in the settings. |
 | Learning jutsu | A mix of mentors, scrolls bought with ryo, and mission rewards. |
@@ -660,7 +660,7 @@ clan's style, for their few members (2 to 6). The seven smaller noble clans have
 one hand-built house or dojo with its signature feature. The ten **minor clans** have no walls: they
 share mixed neighbourhoods with civilians and clanless shinobi, with a family house or workshop
 that marks each one. Each quarter is one plot group in the map layout file, filled from its clan
-JSON. A clan-born player can move into their clan's quarter from Chunin on.
+JSON. A player who joins a clan later (by marriage or invitation) can move into its quarter.
 
 | Clan | Kind | Where | Signature build |
 |---|---|---|---|
@@ -703,7 +703,7 @@ off (closed gates, streets under repair) or is not built yet.
 | By | Districts and landmarks | Why |
 |---|---|---|
 | Phase 0 | One test street of pasted homes with plaques and a Village Marker | Proves pasting, homes, residents and ryo trades on a hand-made map |
-| **Beta 1** | The prologue hills, the hideout and a ruined shrine; the main gate and its stretch of wall; the main street to the Hokage Residence (exterior and ground floor); the Academy (by hand) with its yard, library and workshop; the player's apartment block (all candidate flats for Varied) and ~12 homes around it; Ichiraku; the furniture shop, grocer and Inuzuka clinic (pets); the hospital; the shrine; the Hokage Rock with its four faces; a gate and main hall for each of the 15 noble clan quarters; the civilian market street and residential streets | The opening, the Academy, life sim, pets, clan-born kin from day one, seeds for later |
+| **Beta 1** | The prologue hills, the hideout and a ruined shrine; the main gate and its stretch of wall; the main street to the Hokage Residence (exterior and ground floor); the Academy (by hand) with its yard, library and workshop; the player's apartment block (all candidate flats for Varied) and ~12 homes around it; Ichiraku; the furniture shop, grocer and Inuzuka clinic (pets); the hospital; the shrine; the Hokage Rock with its four faces; a gate and main hall for each of the 15 noble clan quarters; the civilian market street and residential streets | The opening, the Academy, life sim, pets, the clans' presence from day one, seeds for later |
 | **Beta 2** | The Mission Desk (Residence ground floor); Training Ground 3 (by hand) and two pasted training grounds with the lake and the climbing cliff; the market street with the weapon shop and forge, scroll shop, tea house, barbecue house; the 15 noble clan quarters filled out; the 10 minor clans' neighbourhoods; bandit camps outside the wall; the east road and its waystation; the first far-location region (a border village) | Genin missions, training arcs, crafting, story C-ranks, clan techniques |
 | **Beta 3** | The Forest of Death (pasted trees, the tower by hand, 44 gates); the stadium with seated spectators; the exam hall in the Academy; foreign teams' lodging | The Chunin Exams and the attack |
 | Later | The rest of the homes and shops, police HQ, the full wall and all gates, ANBU HQ, the later arcs' story locations, the four vacant estates, the far regions of later arcs | Chunin to Hokage ([Story bible](#10-story-bible)) |
@@ -734,7 +734,7 @@ effort estimate) is in **[KONOHA_BUILD.md](KONOHA_BUILD.md)**.
 | System | Beta 1 (opening, Academy) | Beta 2 (Genin) | Beta 3 (Chunin Exams) |
 |---|---|---|---|
 | World creation | Classic or Varied, the save seed | — | — |
-| Character creation | Creator screen, one of 25 clans or clanless | — | — |
+| Character creation | Creator screen (a clanless orphan; no clan choice) | — | — |
 | Adventure rules | No breaking or placing | — | — |
 | Home and furniture | Apartment, furnish mode, chests | Forge for the apartment | — |
 | Ryo and shops | Stipend, jobs, furniture shop, grocer, Ichiraku | Mission pay, tool, weapon and scroll shops | Exam-week stalls |
@@ -747,7 +747,7 @@ effort estimate) is in **[KONOHA_BUILD.md](KONOHA_BUILD.md)**.
 | Ranks | Academy → Genin | Chunin Exam eligibility | Genin → Chunin (judged) |
 | Growing up | Child stage (the whole beta) | — | — |
 | Hand signs and chakra | Chakra bar, typed and radial signs | — | — |
-| Jutsu | Clone, Transformation, Substitution | Nature ceremony, one jutsu per nature, clan technique first tier, kekkei genkai first stage | One exam reward technique |
+| Jutsu | Clone, Transformation, Substitution | Nature ceremony, one jutsu per nature, a friendly clan's lesser technique | One exam reward technique |
 | Taijutsu | Three-hit combo, heavy, dodge, block | Parry, launcher | — |
 | Chakra movement | — | Tree walking, wall-running, water-walking, chakra jump, ninja run | — |
 | Tools | Practice kunai and shuriken | Thrown kunai, shuriken, paper and smoke bombs, tool pouch | — |
@@ -758,8 +758,9 @@ effort estimate) is in **[KONOHA_BUILD.md](KONOHA_BUILD.md)**.
 ### Character creation
 
 A creator screen in the prologue: hair, eyes, skin (the six complexions), marks and a starting
-outfit from the wardrobe, shown on your child-stage model; then born to one of the 25 clans (its
-look, and from Genin its technique and kekkei genkai) or clanless.
+outfit from the wardrobe, shown on your child-stage model. There is no clan choice: the player is a
+clanless orphan with an ordinary family name (from `family_names` in `population.json`), publicly
+and known to everyone. A clan-born start may return later as an option.
 
 ### Adventure rules
 
@@ -788,9 +789,9 @@ candidate flats; in Classic it is always the same one.
 - **Your bed** is furniture too, but every home always keeps one bed; it is the bed that clears
   fatigue.
 - **Upgrades** (a flat, a house, a clan room, an estate) come after the beta ([Later systems](#11-later-systems)).
-- **Collecting and storage:** a collection book (curios, gifts, keepsakes, photos, ninja info
-  cards, clan crests and more), chests with sort, search and deposit-all, and display cases for the
-  apartment. Designed by the home session; this section will link its document when it lands.
+- **Collecting and storage:** vanilla chests and barrels (more chests from the furniture shop);
+  curios, gifts and keepsakes are ordinary items, displayed in item frames and on shelves. No
+  collection book.
 
 ### Ryo
 
@@ -992,8 +993,8 @@ and **mission rewards**.
 | Transformation | Dog-Boar-Ram | Your render becomes a chosen resident's look; mobs lose their target; residents do not recognize you | Beta 1, lessons |
 | Substitution | (dodge timing) | See taijutsu | Beta 1, lessons |
 | Nature jutsu (one per nature) | e.g. Snake-Ram-Monkey-Boar-Horse-Tiger (Fireball) | Fire: a projectile that sets mobs alight; Wind: a wind-charge gust; Water: a pushing wave that puts out fire; Earth: a short-lived wall entity; Lightning: a stunning palm strike | Beta 2, the nature ceremony (you choose your first nature) |
-| Clan technique, first tier | per clan (the noble clans and the three minor clans with abilities: Tsuchigumo, Suzuran, Tobari) | For example Shadow Possession (Nara), Expansion (Akimichi), Gentle Fist (Hyuga), Fang over Fang with your ninken (Inuzuka), Insect swarm (Aburame); the full table is in [Later systems](#clan-techniques-and-kekkei-genkai) | Beta 2, your clan's elder (clan-born); clanless players learn one lesser technique from a friendly clan |
-| Kekkei genkai, first stage | — | Byakugan's sight through walls within 16 blocks; the Sharingan's first tomoe (earlier telegraphs); Wood Release's binding roots | Beta 2 (Byakugan, Wood), Beta 3 (the Sharingan awakens in the forest) |
+| A friendly clan's lesser technique | per clan | A clanless player learns one lesser technique from each friendly clan (bond and standing gates). The clans' full techniques belong to their members: teammates, sparring partners, residents and enemies use them, for example Shadow Possession (Nara), Expansion (Akimichi), Gentle Fist (Hyuga), Fang over Fang (Inuzuka), Insect swarm (Aburame); the full table is in [Later systems](#clan-techniques-and-kekkei-genkai) | Beta 2, from a friendly clan |
+| Kekkei genkai (residents only) | — | Byakugan, Sharingan and Wood Release are used by teammates, sparring partners and enemies of their clans; the player has none for now | Beta 2 and Beta 3, on residents |
 | Exam reward | — | One C-rank technique chosen by your sensei after the preliminaries | Beta 3 |
 
 **Ninja tools.** Kunai (combo weapon; right click throws it like a trident, retrievable),
@@ -1087,7 +1088,7 @@ working titles; the story behind each chapter is in the story bible.
 ### Beta 2: Genin life (~8 h)
 
 About 4 hours of authored chapters and 4 hours of systemic play: about 12 board D-ranks (~2 h),
-3 board C-ranks (~1.5 h), training and your clan's lesson (~0.5 h), over about 24 in-game days.
+3 board C-ranks (~1.5 h), training and a friendly clan's lesson (~0.5 h), over about 24 in-game days.
 
 | Ch | Chapter | Time | Content | Teaches |
 |---|---|---|---|---|
@@ -1095,7 +1096,7 @@ About 4 hours of authored chapters and 4 hours of systemic play: about 12 board 
 | 9 | The Mission Desk | 15 min | The squad's first D-rank; the board opens | Board missions, mission pay, failure on death |
 | 10 | Tree walking | 25 min | Chakra training at Training Ground 3 | Tree walking, wall-running, chakra jump, roof hopping |
 | 11 | First C-rank | 45 min | Escorting a merchant east; bandits on the road; a night at camp | Escort, defeat, inspect, camping, bond |
-| 12 | Water walking and natures | 30 min | The lake; the nature ceremony; your clan's lesson (or a friendly clan's) | Water-walking, natures, the first elemental jutsu, the clan technique, the scroll shop |
+| 12 | Water walking and natures | 30 min | The lake; the nature ceremony; a friendly clan's lesson | Water-walking, natures, the first elemental jutsu, the clan technique, the scroll shop |
 | 13 | A far village | 45 min | The first far region and an investigation there | Travel, investigation, ninken tracking |
 | 14 | Second C-rank | 50 min | Another escort east, and a recommendation for the Chunin Exams | Enemy cells, smoke and paper bombs |
 
@@ -1236,7 +1237,9 @@ generated courtesy quests are in Beta 2; only the other 17 welcome quests wait f
   team assignment and the bell test; teammates who can leave; mentors; levels 5 to 15; the event
   director with the Leaf Festival and New Year.
 - **Combat:** chakra movement; parry and launcher; the nature ceremony and one jutsu per nature;
-  the clan techniques (first tier) of the 15 noble clans and the three minor clans with abilities and the first kekkei genkai stages; thrown tools and bombs;
+  the clan techniques of the 15 noble clans and the three minor clans with abilities, and the
+  kekkei genkai, for clan members (teammates, sparring partners, enemies), with lesser techniques
+  the clanless player learns from friendly clans; thrown tools and bombs;
   the shinobi entity and brain v1 (bandits, rogue ninja, enemy scouts and cells).
 - **Life:** the tool, weapon and scroll shops; the smithy and its recipes; crafted grades.
 - **Core:** the region interface and the first far region.
@@ -1247,8 +1250,8 @@ generated courtesy quests are in Beta 2; only the other 17 welcome quests wait f
   path), learning jutsu from a mentor, a bought scroll and a mission reward.
 - Every mission template completes, and fails on death, in a client game test; a Varied save's
   board differs from a Classic save's and is the same for the same seed.
-- Bandits use at least four techniques and dodge; each clan technique works for a clan-born player
-  and a clan sparring partner.
+- Bandits use at least four techniques and dodge; each clan's techniques work for a clan sparring
+  partner, and each lesser technique works for the player.
 
 ### Beta 2.5: clan welcomes, wave 2 (content drop)
 
@@ -1258,8 +1261,7 @@ techniques of the clans that have one. Data, dialogue and small builds only; no 
 ships as a datapack and map update between Beta 2 and Beta 3 and is played during Genin life.
 
 **Exit criteria**
-- Every clan's welcome quest completes for a clanless player, a member of another clan and a
-  clan-born player (a client game test per clan).
+- Every clan's welcome quest completes for a clanless player (a client game test per clan).
 - `quests.py --check` passes with all 25 welcome quests, and their keepsakes place in the
   apartment.
 
@@ -1270,7 +1272,7 @@ districts.
 
 - **Progression:** the Chunin Exams as a calendar event, with NPC teams every season and results in
   village news; the three stages; judged promotion; the exam reward technique.
-- **Combat:** the finals' enemy loadouts; the Sharingan's awakening.
+- **Combat:** the finals' enemy loadouts.
 - **Life:** bedroll camping and On Duty fatigue.
 - **Village:** the Chunin wardrobe.
 - **Map:** the Forest of Death, the stadium with seated spectators, the attack dressing (smoke,
@@ -1332,7 +1334,7 @@ What the roadmap needs from it, spoiler-free:
 
 | Rank | Home |
 |---|---|
-| Chunin | Move to a two-room flat with a balcony (no rent), or into your clan's quarter if clan-born |
+| Chunin | Move to a two-room flat with a balcony (no rent), or into a clan's quarter if you have joined one |
 | Jonin | Buy a small house (about 30,000 ryo), or a larger clan room |
 | Clan founder | Your clan's estate |
 | Hokage | Quarters in the Residence |
@@ -1342,7 +1344,7 @@ contents) and placed again in furnish mode.
 
 ### Player clans
 
-A clanless player (or a clan-born player leaving their clan) can found a clan at the registry in
+A clanless player can found a clan at the registry in
 the Hokage Residence: Chunin, level 20, 20,000 ryo, and Good Neighbor standing or better.
 
 - **The clan file:** saved as a clan JSON in exactly the [CLANS.md](CLANS.md) format, in the world
@@ -1413,8 +1415,10 @@ Your natures' jutsu cost 25% less; other natures' jutsu cannot be learned.
 
 ### Clan techniques and kekkei genkai
 
-Clan-born players learn the first tier in Beta 2; later tiers come with rank. Kekkei genkai come
-only through clan membership; clanless players learn one lesser technique per friendly clan.
+Clan members (teammates, residents, enemies) use their clan's techniques and kekkei genkai, which
+grow with rank. The player starts as a clanless orphan and learns one lesser technique per friendly
+clan; joining a clan later (by marriage or invitation) teaches its signature technique, but never a
+bloodline. A clan-born start may return later as an option.
 Summoning, and with it tailed beasts, are out of scope.
 
 | Clan | Technique | Minecraft mechanic | Animation |
