@@ -3256,5 +3256,11 @@
     "seen": 1793312526.7200966,
     "ast_hash": "8d1a48d7a65dcf53f1db97a0681326c6",
     "semantic_hash": ""
+  },
+  "STORY_CHECK_HANDOFF.md": {
+    "mtime": 1793316992.7541616,
+    "seen": 1793317010.3047774,
+    "ast_hash": "37ed99b9ad6f444df28858fff075ce28",
+    "semantic_hash": ""
   }
 }
