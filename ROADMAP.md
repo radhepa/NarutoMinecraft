@@ -352,7 +352,7 @@ while a quarrel lasts), plus `bond_meter`, `bond_memory`, `bond_moment`, `bond_s
 `romance_stage`, `kindling`, `knows_fact`, `squad_cohesion`, `in_squad`, `squad_can_return`,
 `standing` (a district or clan and a title, such as `["clan:nara", "good_neighbor"]`), `jealous`,
 `clan_friendship`, `clan_relation` (the relation between two clans, at least a label such as
-`rivals` or a number), `village_mood`, `hook_open`, `kindling_uses` and `bond_web`. Side quests use
+`rivals` or a number), `village_mood`, `hook_open`, `kindling_uses`, `bond_web`, `ritual` and `hangouts`. Side quests use
 these directly: there is no separate `standing_at_least` or `bond_at_least`. `role:squad` is the
 current teammates and sensei, `role:teammates` the teammates alone; a role group passes only if
 every member does. The hook actions (`resolve_hook`, `clan_event`, `clan_deed`, `mood_event`) are in
@@ -865,7 +865,9 @@ knocked out, never killed. No summons.
 The squad, classmates and neighbours are VF residents, so friendship keeps VF's ten levels, gifts,
 speech bubbles and dialogue; the levels come from Shinobi Life's bond engine
 ([BONDS.md](BONDS.md)): five meters (affection, trust, respect, rivalry, romance), memories that
-fade or stay, personalities, story gates, squad dynamics, community standing and quarrel arcs. The beta adds **bond quests** (`kind:
+fade or stay, personalities, story gates, squad dynamics, community standing and quarrel arcs; and
+time together ([LIFE_TOGETHER.md](LIFE_TOGETHER.md)): hangouts at 22 places, invitations both
+ways, rituals, residents' own lives, follow-ups and conversations that deepen with the bond. The beta adds **bond quests** (`kind:
 bond`) gated by friendship (bond levels also feed [Kindling Bond](#kindling-bond) after the beta): one per classmate in Beta 1, two per teammate in Beta 2, and one
 per teammate in Beta 3. Romance waits for the teen stage, after the beta; children have friendships and
 VF's harmless crushes in dialogue only, enforced in code.

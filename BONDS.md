@@ -10,6 +10,9 @@ score, memories that fade or stay, personalities that take the same act differen
 its own dynamics, a village that talks, quarrels with arcs, romance and family after the beta, and
 Kindling Bond.
 
+Spending time together (hangouts, invitations, rituals, residents' own lives, follow-ups and
+conversation topics) is in [LIFE_TOGETHER.md](LIFE_TOGETHER.md).
+
 **No spoilers here.** This file describes systems and formats. Story-specific bond content (who
 confides what, whose arc pays off where) belongs in the developers-only
 [story bible](docs/story/STORY_BIBLE.md), under each role.
@@ -41,7 +44,7 @@ Life mod depends on it (`implementation project(':life:bonds')`) and adds the th
 | Everyone you are close to, as one number | `BondWeb` |
 
 ```
-./gradlew :life:bonds:test                  # 76 tests
+./gradlew :life:bonds:test                  # 91 tests
 ./gradlew :life:bonds:simulate              # the 60-hour pacing tables (-Pseed=N, -Pexplain=role:teammate_a)
 ./gradlew :life:bonds:simulateVillage       # a village of 300 for 180 days: cost, ties, clan drift, hooks
 ```
@@ -468,6 +471,8 @@ member does, and an action applies to each member.**
 {"hook_open":        "hook.clan_feud.12"}
 {"kindling_uses":    ["role:teammate_a", 12]}
 {"bond_web":         40}
+{"ritual":           ["role:teammate_b", "ramen"]}   time together (LIFE_TOGETHER.md)
+{"hangouts":         ["role:teammate_b", 5]}
 ```
 
 **Actions:**
@@ -584,39 +589,41 @@ acts on at the end of each chapter, and squad cohesion):
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 0 | Prologue | 0.3 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | — |
 | 1 | First morning | 0.7 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | — |
-| 2 | First lessons | 1.0 | 4 | 1 | 2 | 1 | 1 | 1 | 1 | 1 | — |
+| 2 | First lessons | 1.0 | 4 | 1 | 2 | 1 | 2 | 1 | 1 | 1 | — |
 | 3 | Chakra | 1.4 | 6 | 1 | 2 | 1 | 2 | 1 | 1 | 1 | — |
 | 4 | Night | 1.8 | 7 | 1 | 2 | 1 | 2 | 1 | 1 | 1 | — |
-| 5 | Errands at the Academy | 2.1 | 8 | 2 | 2 | 1 | 2 | 1 | 1 | 1 | — |
+| 5 | Errands at the Academy | 2.1 | 8 | 1 | 2 | 1 | 2 | 1 | 1 | 1 | — |
 | 6 | Exam eve | 2.4 | 10 | 2 | 4 | 1 | 2 | 2 | 2 | 1 | — |
-| 7 | Graduation | 2.8 | 12 | 2 | 4 | 1 | 2 | 2 | 2 | 2 | — |
-| 8 | Team assignment | 3.7 | 15 | 4 | 6 | 3 | 3 | 2 | 2 | 2 | 41 |
-| 9 | The Mission Desk | 5.0 | 19 | 4 | 6 | 3 | 3 | 2 | 2 | 2 | 43 |
-| 10 | Tree walking | 6.0 | 22 | 4 | 6 | 3 | 3 | 2 | 3 | 2 | 46 |
-| 11 | First C-rank | 7.3 | 26 | **5** | 6 | 3 | 3 | 2 | 3 | 2 | 54 |
-| 12 | Water walking and natures | 8.4 | 29 | 5 | 5 | 3 | 3 | 2 | 3 | 2 | 44 |
-| 13 | A far village | 9.8 | 32 | 6 | 7 | 3 | 3 | 2 | 3 | 2 | 60 |
-| 14 | Second C-rank | 11.3 | 36 | 6 | 8 | 5 | 3 | 3 | 3 | 2 | 68 |
-| 16 | Forest of Death | 12.6 | 42 | 7 | 8 | 5 | 3 | 3 | 3 | 2 | 69 |
-| 19 | Chunin Exams finals | 14.1 | 50 | 7 | 9 | 5 | 3 | 3 | 3 | 2 | 71 |
-| 20 | Results | 14.3 | 51 | 8 | 9 | 6 | 3 | 3 | 3 | 3 | 71 |
+| 7 | Graduation | 2.8 | 12 | 2 | 4 | 1 | 3 | 2 | 2 | 2 | — |
+| 8 | Team assignment | 3.7 | 15 | 3 | 6 | 3 | 3 | 2 | 2 | 2 | 41 |
+| 9 | The Mission Desk | 5.0 | 19 | 4 | 6 | 3 | 3 | 2 | 2 | 2 | 45 |
+| 10 | Tree walking | 6.0 | 22 | 4 | 6 | 3 | 3 | 3 | 2 | 2 | 47 |
+| 11 | First C-rank | 7.3 | 26 | 4 | 6 | 3 | 3 | 3 | 2 | 2 | 53 |
+| 12 | Water walking and natures | 8.4 | 29 | 4 | 5 | 3 | 3 | 3 | 2 | 2 | 43 |
+| 13 | A far village | 9.8 | 32 | 4 | 7 | 3 | 3 | 3 | 2 | 2 | 58 |
+| 14 | Second C-rank | 11.3 | 36 | 6 | 8 | 4 | 3 | 3 | 3 | 2 | 67 |
+| 16 | Forest of Death | 12.6 | 42 | 7 | 9 | 5 | 3 | 3 | 3 | 2 | 69 |
+| 19 | Chunin Exams finals | 14.1 | 50 | 7 | 9 | 5 | 3 | 3 | 4 | 2 | 71 |
+| 20 | Results | 14.3 | 51 | 8 | 9 | 6 | 3 | 3 | 4 | 2 | 71 |
 
-(Ch 12's dip is a scripted quarrel with teammate_b: argument, cold shoulder, making up, mended by
-Ch 13.) Across the three players:
+With this seed the typical player reaches Ch 11 with teammate_a one point short of level 5 (they
+forgot teammate_a's birthday), so the campfire talk does not play: low friendship changing a scene,
+as the roadmap intends. Across five seeds a typical player reaches it in four. Across the three
+players:
 
 | | Devoted | Typical | Reckless |
 |---|---|---|---|
-| Academy end, teammates | 3 / 4 | 2 / 4 | 2 / 1 (a broken confidence) |
-| Ch 11 campfire | plays (6) | plays (5) | skipped (2) |
+| Academy end, teammates | 3 / 5 | 2 / 4 | 2 / 1 (a broken confidence) |
+| Ch 11 campfire | plays (5) | skipped (4); plays in 4 of 5 seeds | skipped (2) |
 | Beta end, teammates | 8 / 9 | 8 / 9 | 3 / 3 (one teammate left, replaced) |
-| Quarrels / fallings-out | 0 / 0 | 2 / 0 | 3 / 1 |
+| 60 h: bonds at level 10 (with time together) | 3 | 3 | 0 |
 | Romance in the beta | none | none | none |
-| 60 h: bonds at level 10 | 3 | 2 | 0 |
-| 60 h: romance | married, a child in the post-game | sweethearts | none |
-| Kindling with teammates | full / full | full / full | none / nature |
+| 60 h: romance | married, a child in the post-game | married | none |
+| Kindling with teammates | full / full | full / full | nature / none |
+| Quarrels / fallings-out | 0 / 0 | 1 / 0 | 4 / 1 |
 
 Run `./gradlew :life:bonds:simulate` for the full tables, or `-Pexplain=role:teammate_a` to see
-where one bond's meters come from. `TimeAndPacingTest` holds these targets on two seeds.
+where one bond's meters come from. `TimeAndPacingTest` holds these targets on five seeds.
 
 ## 16. What stays in Village Friends, and what moves
 
