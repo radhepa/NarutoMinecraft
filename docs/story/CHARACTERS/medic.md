@@ -102,7 +102,7 @@ The diverted supplies' requisition was forged (`side.b3.hospital_supplies` clear
 | 4 Embers | Treats you after the border post; the slip (bound) or the parallel kind line (innocent); treats the porter (Ch 28) |
 | 5 Ashes | Bound: unmasked (Ch 39). Innocent: cleared (Ch 40), asks to care for the lost child |
 | 6 Night Watch | Treats the lost child after N6 (innocent; or from custody, bound, if you allow it) |
-| 7 Last Bonfire | In Ch 51a the hospital (a cutaway) with `sensei_4`, `squad4_c` and, if home, the lost child; Runs the war hospital (innocent or turned); bound and arrested: asks to be let out to work; the ruling (Ch 55) |
+| 7 Last Bonfire | In Ch 51a the hospital (a cutaway) with `sensei_4`, `squad4_c` and, if home, the lost child: runs the war hospital (innocent or turned); bound and arrested: asks to be let out to work; the ruling (Ch 55) |
 
 **Endings.**
 

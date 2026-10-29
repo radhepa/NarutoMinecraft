@@ -114,7 +114,7 @@ Voice samples, not shipped lines:
 | `ans.classmate_d.night` (new) | d, Ch 51a eve (war-eve window) (L6) | "If I fall tomorrow, who do I tell first?" | your sibling / me / no one, you won't fall | family, protective | Ch 51a (d holds the Residence steps with c; if *no one*, they joke about it mid-fight; **unset**: they say nothing and hold) | Their courage under fear |
 | `ans.classmate_d.stand` | d, B1 bond (L2) | "Is it braver to stand in front of someone or beside them?" | in front / beside / behind, to catch them | Ch 55.3: their post as your guard, in that position (**unset**: beside), and their line |
 | `ans.classmate_d.hesitate` (new) | d, Ch 17 after the bout | "I hesitated, once. Did you see?" | yes / no / hesitating isn't the same as failing | Their Chunin promotion speech; their training ritual with you |
-| `ans.classmate_d.reckless` (new) | d, after Ch 24 (L5) | "You stayed when your sensei said fall back. Was it brave or stupid?" | brave / stupid / both, and I'd do it again | Ch 51 (d covers your left without asking, or argues first) |
+| `ans.classmate_d.reckless` (new) | d, after Ch 24 (L5) | "You stayed when your sensei said fall back. Was it brave or stupid?" | brave / stupid / both, and I'd do it again | Ch 51a, the Residence steps (when you pass: *brave* d covers your left without asking; *stupid* they argue first, then cover it; *again* they laugh and say "so would I"; unset: they cover it) |
 | `ans.classmate_d.sibling` (new) | d, level 7 (Jonin) | "Should I tell my sibling I've blamed myself all these years?" | yes / no, carry it / tell them you're grateful instead | An epilogue scene with the sibling |
 
 ### What their lines are for

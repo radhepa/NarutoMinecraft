@@ -97,11 +97,15 @@ daily schedules and night movements are identical in every save until Ch 39.
 - **Ch 39 reveal:** their cart in the rain at the east gate, half packed to run. "It was paper. Then
   it was paper and names. Then once there were children under the floor, and they paid me three times
   over, and I told myself it was the last time." Then the held-back piece: "The night at the
-  waystation, I didn't get threatened. I got paid." They kept hiring the squad because they liked
+  waystation, I didn't get threatened. I got paid." The stadium (keyed to `twist.fourth_fate`): "I sold
+  them the stall permits. They said it was a show of strength; no one would be hurt." *Falls*: "And
+  then the big man went down on the stair, carrying kids." / *crippled*: "And then he was in a chair." /
+  *taken*: "And then they carried him over the wall, and I was selling buns." They kept hiring the squad because they liked
   it, and because being close to it kept them close to the news; they cannot say which mattered more.
 - **Fate:** *arrested*: the delivery book helps the A-rank hunts. *Turned* (needs
   `friendship [merchant, 4]`): they run false cargo to Yūgure, and in Ch 51a a wave of the assault
-  arrives without its cinder bombs. Ch 55's ruling: pardon (they open the shop under watch), exile,
+  arrives without its cinder bombs (and, as in every turned save, one district's anchors are already
+  broken). Ch 55's ruling: pardon (they open the shop under watch), exile,
   or service (they drive supplies to the rebuilt border posts for life).
 
 ### How they change

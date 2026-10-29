@@ -36,7 +36,11 @@ admitting it, to be a porter: a man people say good morning to.
 doorstep, but he has never seen what it does).
 
 **Secrets.** He is the hand: he carries the voice's messages out and Yūgure's orders in, steals what
-the hearths ask (the cut page, the ledger pages, the borrowed seal), and lays the array. He does not
+the hearths ask **in saves where the candidate is innocent** (he cuts the history page when the
+librarian is innocent; he uses the councillor's open seal box on post days when the councillor is
+innocent; he uses the library's returns cart as a dead drop when the librarian is innocent; in a
+bound save the candidate does their own act, and the hospital ledger pages are never his: the night
+patient tears them when the medic is innocent), and lays the array. He does not
 know the Hollow Crown; he was told the marks are "so we can find our friends' homes".
 
 **What he knows.** The voice's identity (he cannot say it: a cinder seal in his palm, under the burn scar, burns his memory out if he tries); the array's
@@ -57,7 +61,7 @@ and has never read them.
 interrogator (`role:sensei_4`) reaches him first and tries to hold the seal back, and cannot. He tries to name the voice;
 the cinder seal in his palm flares under the burn scar; he says the same line in every save: "Years in its
 own hand. All of them in its own hand." Then the seal burns his memory away. His delivery ledger, found in
-his room, is the array map (Ch 49).
+his room, lists every crate since he was sixteen: the array map (Ch 49).
 
 **Ch 28.5.** In his room, `role:squad5_c` stands in the doorway: "He carried my sister's cot up four
 floors." (`shared_moment bond.squad5_c.porter`.) It is the only time anyone in the village says what
@@ -136,8 +140,9 @@ with him afterwards (`ans.porter.after = now`), his thread at 6+ is clear and st
 ### Variants
 
 - Fixed in every save and both modes; name rolled (a cover name).
-- He steals for the voice whoever it is: the cut page, the ledger pages, the borrowed seal, the dead
-  drops. His Ch 28 line is identical in every rotation.
+- His acts depend on the rotation only where a candidate is innocent (the page, the open seal box,
+  the returns cart, as above); never the ledger pages. His Ch 28 line is identical in every rotation.
+- Held role: `level_cap [role:porter, 4, story.ch28.done]` (he never reaches 6 before Ch 28).
 
 ## New flags
 

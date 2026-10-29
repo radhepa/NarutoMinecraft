@@ -66,12 +66,12 @@ Yūgure hearths in Ch 44).
 - **Home by the shrine (Ch 47)**: shorter recovery; she still asks the questions, compressed into
   Ch 47 to Ch 54.
 - **She always comes home by Ch 47**, by N6 or by the Ch 47 path.
-- **First words home.** N6: "So someone remembers I was here. You did." Ch 47: "I found you this
-  time." Variants by `ans.lost_child.cell`: *remember* → N6 adds "You remembered."; Ch 47 "You
+- **First words home.** N6: "I was here. You kept it. You did." Ch 47: "I found you this time."
+  Variants by `ans.lost_child.cell`: *remember* → N6 "You remembered. You did."; Ch 47 "You
   remembered. So I found you this time." *find* → N6 "You found me. You said you would."; Ch 47 "You
   said you'd find me. I found you this time." *silent* or **unset** → the base lines.
 - **Ch 24.6**, her hollow echo of your Ch 0 words: *remember* "I'll remember"; *find* "I'll find
-  you"; *silent* or unset "...someone remembers."
+  you"; *silent* or unset "...the cord. Kept. Kept."
 - **Ch 44.3**: through her, the leader speaks one sentence to you in her flat voice: "Grow, little
   flame. I like your friends." She does not know she said it.
 - **Ch 44** (`ans.lost_child.echo`): *follow* opens the Night Watch lead (the cloth strip pointing to
@@ -79,8 +79,8 @@ Yūgure hearths in Ch 44).
 - **Ch 53: the red cord is always the first flame,** at any level (`bond_flag red_cord`, an
   `offered_flame`): "So someone remembers. Take it. It's mine to give." It is the finale's lonely
   floor. Fixed order after it: the sensei, the spouse, the friend who fell in Ch 24, the other
-  teammate, the rival, then faces. If the player is very close to her (`friendship 8`), she
-  appears again among the faces with one short line: "I'm still here."
+  teammate, the rival, then faces. If the player is very close to her (`friendship 9` or more),
+  she appears again among the faces with one short line: "I'm still here."
 - She **cannot die** in the story after her return; before it, she always escapes.
 
 ## Dialogue brief
@@ -141,15 +141,15 @@ or compressed into Ch 47 to 54). Her answers to *you* (the player's choices) sha
 | `ans.lost_child.echo` | Ch 44.2 | (your reaction) | follow her / protect the Genin | — | Night Watch lead | — |
 | `ans.lost_child.name` (new) | Home, first day | "Did you know my name? Before?" | no, I'm sorry / I asked the medic / I called you "the girl with the cord" | honesty | Every greeting after: she uses the name you gave her back to you ("Cord-keeper", if the last) | Small; how she names you |
 | `ans.lost_child.what_like` (new) | Home, first week (L2) | "What do people *like*? How do you know?" | you try things / you watch what makes you forget the time / you ask a friend | freedom, curiosity | Her personality shift: *try* → adventurous; *forget time* → imaginative; *ask a friend* → warmhearted (`Personality` nudged 0.2 toward it) | Her archetype drifts |
-| `ans.lost_child.voices` (new) | Home, L3 | "Some nights I still hear the voices. Will they go?" | yes, in time / maybe not, and you'll learn to live with them / I'll sit with you until they do | honesty, kindness | Ch 53 (if *I'll sit*: "You sat with me. I'll stand with you.") | Her nights: a ritual (`ritual` stargazing on the Rock) if *I'll sit* |
+| `ans.lost_child.voices` (new) | Home, L3 | "Some nights I still hear the voices. Will they go?" | yes, in time / maybe not, and you'll learn to live with them / I'll sit with you until they do | honesty, kindness | Ch 54 Morning (if *I'll sit*: "You sat with me. I'll stand with you.") | Her nights: a ritual (`ritual` stargazing on the Rock) if *I'll sit* |
 | `ans.lost_child.blame` (new) | Home, L5 | "I hurt people at the border post. Your friend. Do they hate me?" | no / ask them yourself / yes, and that's theirs to give up | honesty | A scene with the teammate who fell in Ch 24 (if *ask them*: a reconciliation between them, a `reconciled` moment for both) | Whether she faces it |
 | `ans.lost_child.leader` (new) | After Ch 49, L5 | "He sang to me. The same song you know. Was he ever good?" | once, before they burned his home / no / maybe that's not the question | honesty | Ch 54 leader's name choice (she says her view) | Her mercy or her hardness |
 | `ans.lost_child.dream` (new) | Ch 47 or later, L6 | "I think I want something. Is it allowed, to want things this late?" | yes: what is it? / it's never late / you can want many things | freedom | Epilogue: she chooses between shrine keeper (if she spent time at the shrine), medic's apprentice (if her bond with the medic is 4+), shinobi of your house, traveller | Her dream is set |
 | `ans.lost_child.number` (new) | Home, first week | "They called me Seven. They called you Nine. Do you ever forget it's not your name?" | never, it's in me / sometimes, on bad nights / I forget it on purpose every morning | honesty | Ch 55 epilogue (she burns the nursery list's page with your name and hers, or keeps it) | Whether she makes peace with the past or burns it |
-| `ans.lost_child.squad5_c` (new) | After Home Fires, if `squad5_c` hunted her (Ch 44, Ch 47, N-branch) | "The one who hunted me says sorry every time they see me. Do I have to forgive them?" | no / not yet / forgiving is yours, not theirs | honesty, freedom | Ch 53 (squad5_c's flame comes after hers, or apart) | Her first choice about someone who wronged her |
+| `ans.lost_child.squad5_c` (new) | After Home Fires, if `squad5_c` hunted her (Ch 44, Ch 47, N-branch) | "The one who hunted me says sorry every time they see me. Do I have to forgive them?" | no / not yet / forgiving is yours, not theirs | honesty, freedom | Ch 54 (at the funerals squad5_c stands beside her, or apart) | Her first choice about someone who wronged her |
 | `ans.lost_child.ramen` (new) | First ramen, Ichiraku (hangout) | "Is this your order? Can it be mine too?" | yes, it's ours / no, pick your own / try every one | filler with payoff | The cook calls her order from then on | A ritual (`ritual ramen`) |
 | `ans.lost_child.shrine` (new) | Shrine visit hangout (L3) | "This is where he hid when they burned it. Should I hate the place?" | no, it's ours now / it's allowed / we'll make new memories here | kindness | The epilogue (shrine keeper path) | Pulls her toward the shrine |
-| `ans.lost_child.thread` (new) | L6, after you tell her about Thread Sight | "What does my thread look like now?" | copper, and getting brighter / tangled, like mine / it's yours, you choose | honesty | Ch 53 (her flame's colour line) | She watches her own recovery through your eyes |
+| `ans.lost_child.thread` (new) | L6, after you tell her about Thread Sight | "What does my thread look like now?" | copper, and getting brighter / tangled, like mine / it's yours, you choose | honesty | Ch 53 (no line: the cord's flame arrives in that colour) | She watches her own recovery through your eyes |
 | `ans.lost_child.cord` (new) | Ch 54 Morning | "Do you still have it? The cord?" | give it back / keep it / tie it on the shrine basket together | — | Decides the epilogue's last image, Ch 55.5 (**unset**: the basket; *give back*: she wears it; *keep*: you do) | The last image |
 
 ### What her lines are for
@@ -172,6 +172,14 @@ or compressed into Ch 47 to 54). Her answers to *you* (the player's choices) sha
 - **Romance:** possible only after return, as adults, and only after her `ans.lost_child.dream` is
   answered (she must have chosen something for herself first). Gated by level 7 and the usual
   chemistry.
+
+### In the war and in her recovery
+
+- **Ch 51a, if home:** she is at the hospital with `squad4_c` and the medic, carrying the wounded in
+  (a cutaway as the player passes the market street).
+- **N6 / Ch 47:** `squad4_c` (the Suzuran herbalist) tends her after the kindling and finds that the
+  stolen embers still in her carry the leader's voice (the one that spoke through her at 44.3); she
+  quiets it with a poultice and a long night. The lost child's first full night's sleep follows.
 
 ### Who hunts her
 

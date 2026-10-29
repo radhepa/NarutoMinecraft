@@ -34,9 +34,14 @@
   files the Academy's exam-hall duty rosters, which list the finals' guard posts (one of the routes
   by which a rotation could leak, true in every save).
 - She is nervous by nature around authority and around the founding history.
+- She writes to a cousin in a border town; in every save the letters go by the ordinary post. (In
+  an innocent save the cousin is real; in a bound save the leader's letters come under the same
+  cousin's name. Letters are not a movement difference.)
 - The fresh-cut page (Ch 5) listed the families who adopted the twenty-seven, under a chapter
   heading about "the settling of the southern hills". It went to Yūgure through the porter in every
-  save. Who cut it is the rotation. **She knows what the page listed** (it matches her family
+  save. It was cut that week because the stipend registry had just flagged a new Kagari-reactive
+  child (the player), and the voice was asked to send the page that names the twenty-seven's
+  families. Who cut it is the rotation. **She knows what the page listed** (it matches her family
   notebook) in every save.
 - **Her every-save secret:** she is a Kagari descendant whose family kept the true history.
 - **Her held-back piece:** what the cut page listed. She shares her heritage at Ch 25.3 (if she comes)
@@ -85,8 +90,8 @@ daily schedules and night movements are identical in every save until Ch 39.
   fires with the bonded, and the meaning of the ember mark. Lore and practice that deepen Thread
   Sight and Kindle; she teaches no ability of her own.
 - **Road to Hokage:** she joins the restored house if the player restores the Kagari and asks (she
-  says yes if `friendship 6`). She teaches the song to the new members. In the finale her flame is
-  among the first from outside the squad.
+  says yes if `friendship 6`). She teaches the song to the new members. In the finale she is a face among the
+  flames, with one short line only if she is at level 9 or more.
 - **Ending:** keeper of the archive if the player chooses her in Ch 55, or the restored house's
   historian.
 
@@ -115,12 +120,17 @@ daily schedules and night movements are identical in every save until Ch 39.
 - **Ch 39 reveal:** the library at night, among the aptitude scrolls; the cut page's copy in her
   sleeve. "My grandmother was one of the twenty-seven. She whispered our real name to me once and
   never again. He wrote to me for sixteen years like a cousin. He said he was finding the lost ones. I gave
-  him children, and I told myself I was giving them home." The page, at last: "It listed the
+  him children, and I told myself I was giving them home." The stadium (keyed to `twist.fourth_fate`):
+  "I sent him a duty roster. He said the finals would be a show of strength; no one would be hurt."
+  *Falls*: "Then the Fourth went down on the stair with children in his arms." / *crippled*: "Then I
+  saw him carried past the library in a chair." / *taken*: "Then his seat was empty for a year, and I
+  shelved the news." The page, at last: "It listed the
   families. I gave him the families."
 - **Fate:** *arrested*: the notebook goes to the archive; she asks to teach the old songs to the
   restored house from her cell (allowed if the player asks the Seventh). *Turned* (she wishes to make
   amends, so turning does not need friendship 4): she keeps writing to the leader, now false news,
-  and Ch 51a opens with one district's anchors already broken. Either way, Ch 55's ruling: pardon (she
+  and her false signals delay the assault by an hour; Ch 51a opens with one district's anchors already
+  broken (as in every turned save). Either way, Ch 55's ruling: pardon (she
   keeps the archive under watch), exile (she leaves her notebook to the house), or service (she
   teaches the song to every new member, for life).
 
@@ -130,7 +140,7 @@ daily schedules and night movements are identical in every save until Ch 39.
 |---|---|---|
 | Cinders to Embers | Nervous, kind; breaks her grandmother's promise for the player (25.3) | Identical (only the Ch 25.1 slip line and the alibi result differ) |
 | Ashes | Cleared; tells the page; speaks her name aloud | Revealed; confesses |
-| Last Bonfire | Teaches the house its song | Imprisoned or turned; in the finale (turned) her false signal saves lives |
+| Last Bonfire | Teaches the house its song | Imprisoned or turned; in the finale (turned) her false signals buy an hour |
 
 ## Dialogue brief
 
@@ -180,7 +190,7 @@ daily schedules and night movements are identical in every save until Ch 39.
 
 | Id | When | Question | Options | Honours / tests | Remembered | Changes her | Bound answer in Ch 39c |
 |---|---|---|---|---|---|---|---|
-| `ans.librarian.forget` | Ch 5 | "Do you think some things are better forgotten?" | Yes, if remembering only hurts / No, forgetting is how it happens again / It depends who chose to forget | "No" honours knowledge; "who chose" is her own question | Innocent: Ch 40 ("You said forgetting is how it happens again. I'm done forgetting"). Bound: Ch 39c. Unset: a neutral line about the page | "No" or "who chose" gives her the courage for 25.3 a level sooner (at friendship 2), in both tracks | "You said it depends who chose. I let him choose for me." |
+| `ans.librarian.forget` | Ch 5 | "Do you think some things are better forgotten?" | Yes, if remembering only hurts / No, forgetting is how it happens again / It depends who chose to forget | "No" honours knowledge; "who chose" is her own question | Innocent: Ch 40 ("You said forgetting is how it happens again. I'm done forgetting"). Bound: Ch 39c. Unset: a neutral line about the page | "No" or "who chose": at 25.3 she brings the song's words written out for the player to keep (both tracks; the gate stays `friendship 3`) | "You said it depends who chose. I let him choose for me." |
 | `ans.librarian.book` | After Ch 5, level 2 | "What kind of story do you want me to find you?" | Heroes / true things / something sad / anything with food in it | Light; sets her book gifts | Her book gifts all game; a callback when she sends a book to the hospital (Ch 25) | Picks the Ch 25 books | — |
 | `ans.librarian.history` | Level 4 | "Who should write history: the people who won, or the people who remember?" | The ones who remember / both, side by side / whoever's honest | Knowledge, honesty | Ch 40's speech; her history of the Leaf's preface (epilogue) | Innocent: her history's shape. Bound: the reason she gives in 39c | "I thought he was the one who remembered." |
 | `ans.librarian.lie` | Level 5 | "Have you ever lied to protect someone?" | Yes, and I'd do it again / Yes, and I regret it / No | Tests honesty; she is asking about herself | Ch 39 or 40 | "Again": she trusts the player with the notebook sooner. "Regret": she confesses (bound) without the chase if accused with only one proof | "You said you'd do it again. So would I. That's the worst thing I know about myself." |

@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | Role | `role:elder_councillor`, the council elder who keeps the orphan stipend registry |
-| Look | Fixed: a broad, upright man in his late sixties, white hair tied back Senju-style, a neat short beard, green-and-brown council robes, a seal box of dark wood carried by a cord; his personal seal is a pine sprig |
+| Look | Fixed: a broad, upright man in his late sixties, white hair tied back Senju-style, a neat short beard, green-and-brown council robes, a seal box of dark wood that sits on his desk; his personal seal is a pine sprig |
 | Pronouns | He / him |
 | Clan | Senju (a cadet household); family name Senju |
 | Rank | Jonin (retired), elder of the council |
@@ -29,7 +29,8 @@
   wanted to look after orphans.
 - He keeps the orphan stipend registry, which also lists the border-village orphans the Leaf
   sponsors. Every orphan has a number: the player is **S-114**. His
-  personal pine-sprig seal goes on papers he handles himself.
+  personal pine-sprig seal goes on papers he handles himself, and beside entries he cares about he
+  draws a small **pine-sprig flourish by hand** (his private mark, not the stamp).
 - He arranged the player's stipend personally **because the keeper asked him to** (Ch 1). That is
   true in every save.
 - With the keeper, he **signed the sealing of the Ash Road report** (~Y-8). He told himself an
@@ -75,6 +76,8 @@ daily schedules and night movements are identical in every save until Ch 39.
   after Ch 48: "I signed away the truth of your parent's death."
 - **Road to Hokage:** he supports the restoration at the registry (Ch 46: he waives the founding fee
   "on behalf of a debt"); in Ch 50 he opens the Senju quarter's anchors himself.
+- **`clan.senju.4`** (gated on `story.ch39.done`): the founders' shrine dispute, with him as a
+  witness for his clan's debt.
 - **Ending:** keeps his seat; at Ch 55 he hands the player the registry's first new page: the
   stipend extended and made law in the Fourth's name. A possible archive keeper.
 
@@ -96,14 +99,19 @@ daily schedules and night movements are identical in every save until Ch 39.
   Chunin." (The registry keeps no such count, and you are S-114.)
 - **The failed alibi:** his clerk's log shows him signing the seal box out himself and sealing a
   travel pass on that date; the guest roll shows he left court early.
-- **Ch 38:** the list is indexed by S-numbers with pine marks.
+- **Ch 38:** the list is indexed by S-numbers with his hand-drawn pine-sprig flourishes.
 - **Ch 39 reveal:** his study, the seal box open. "My grandfather drafted the fourth clause and then
   voted to end them. The Senju owe a clan its name. The village would never pay; he said he would
-  make it pay without blood. I believed the part I wanted. Sixteen years of numbers." In lineage B he adds only: "I signed the
+  make it pay without blood. I believed the part I wanted. Sixteen years of numbers." The stadium (keyed to `twist.fourth_fate`): "He said the finals
+  would be a show of strength. No one would be hurt." Then, *falls*: "I watched him go down on the
+  stair with children in his arms." / *crippled*: "I visit him. He thanks me for visiting." / *taken*:
+  "I sat in his chair's council for a year while they kept him." "Without blood" was the lie he was
+  told, and believed. In lineage B he adds only: "I signed the
   Ash Road away too. A Jonin's death." (Nothing more until after Ch 48.)
-- **Fate:** *arrested*: stripped of his seat; the Senju line's Heart step (`clan.senju.4`) becomes his
-  house's reckoning. *Turned* (needs `friendship [elder_councillor, 4]`): he keeps his seat as a mole
-  and feeds the leader a false finals-style rotation for the assault; Ch 51a's west wall is ready.
+- **Fate:** *arrested*: stripped of his seat; the Senju line's Heart step (`clan.senju.4`, gated on
+  `story.ch39.done` in every save) becomes his house's reckoning. *Turned* (needs `friendship [elder_councillor, 4]`): he keeps his seat as a mole
+  and feeds the leader a false rotation for the assault: Ch 51a's west wall is ready, and (as in
+  every turned save) one district's anchors are already broken.
   Ch 55's ruling: pardon (he serves the registry he betrayed), exile, or service (he records every
   descendant's restored name).
 

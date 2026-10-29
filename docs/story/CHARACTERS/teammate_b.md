@@ -77,6 +77,23 @@ else* is the last push of their arc: they were never the point, and they choose 
   promise and their trust is 45 or more; `ans.teammate_b.grandma` (any answer; **unset** adds
   nothing) adds 10 trust before the bridge. Otherwise the chase, the fight and the talk-down.
 - **Ch 51a:** b holds the market street with `squad4_b` and the dogs; the parent comes there.
+- **A falling-out with b** is mended by the story at the Ch 49 return, or at 51a.4 if the player
+  stands with b before the parent (`mend`).
+- **If teammate_b is out of the squad** (a falling-out, the *left* path, or a low bond): a stand-in from
+  Squad 2 (classmate_c, else classmate_d) takes their squad lines in Ch 31 (the scripted pair link
+  goes to the friend who fell in Ch 24 only if that friend is in the squad; otherwise the link binds
+  everyone at 6+ and nothing more), Ch 35, Ch 45 and Ch 50. In Ch 53.2 their slot is skipped while a
+  falling-out lasts (the flame is snuffed); the stand-in appears among the faces only at level 9+.
+- **Ch 53 line table** (b speaks in slot 4 if they fell in Ch 24, else slot 5; one line; the arc
+  cites this table):
+
+  | Reads `ans.teammate_b.drag_back` | Line |
+  |---|---|
+  | promise | "You dragged me back. Now I'm dragging you. Take it!" |
+  | wont_leave | "Told you I wouldn't leave. Take it!" |
+  | walk_with | "We're walking together. That's the deal. Take it!" |
+  | unset | "Later's not goodbye. Take it!" |
+
 - **Ch 13 → Ch 26 path** (`story.teammate_b.path`):
   - *stayed* (trust 60+): b brings you the second note; together you trap the bridge. Ever after b
     says "we" about every danger. Ch 51: steady, asks the question calmly.

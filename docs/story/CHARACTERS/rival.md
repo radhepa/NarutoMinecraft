@@ -28,7 +28,7 @@ the Ch 29 spar; the Jonin trial pair (Ch 33); the family ceremony (Ch 43); the f
 ## Arc
 
 **Wants.** To be strongest; underneath, to be *seen* by a family that looked past them. Nobody from
-their family came to their Academy graduation (Ch 7: a beat the player can notice — the rival
+their family came to their Academy graduation (Ch 7.3b: they leave before the speech ends — the rival
 stands alone after the speech).
 
 **Fears.** Being ordinary. Needing anyone. That strength given (by blood, by a gift, by friends) is
@@ -65,18 +65,25 @@ worth more than strength earned, which would make their whole life a mistake.
 **Endings and variants.**
 - **Ch 19 cover:** with both teammates under level 4, the rival drags you out of a collapsing tier
   of the stands (`saved_by_them`; no wound). Their Ch 20 line: "Don't thank me. You owe me a match."
-- **Ch 51b, fixed in every save:** on the Rock's stair the rival holds the way against the strongest
-  hearth so you can climb: "Go. You owe me a match." They are badly hurt and live; the match is
-  paid in the epilogue (`ans.rival.spar_last`).
-- **Ch 29 answer** (`ans.rival.theirs`) decides their Ch 53 line: *my memory of them* → "Then
-  remember me. Take it."; *nothing, so I won't let them go* → "Then don't let go."; *me, the person
-  they chose to trust* → "You said I'd be what's left. Then take it." (ARCS/7 already uses this
-  last line; the others are the alternates.) **Unset** (Ch 29 skipped): "I'm not giving you this
-  because I lost. Take it."
-- **Ch 43** (`ans.rival.why_came`) adds the second half of the Ch 53 line: *you'd have come for me*
-  → "You were right. I came."; *I wanted to* → "I wanted to."; *you asked* → "You didn't even ask."; **unset** (Ch 43 skipped):
-  no second half
-- If you **never go** to the ceremony (Ch 43), they still kindle at 6+, without the second half.
+- **Ch 51b, fixed in every save:** the rival fights up the Rock's stair beside you; near the top
+  they see the trio pinned on the steps below (a hearth's strongest has them cornered), and turn
+  back: "Go. You owe me a match." They are badly hurt and live; the match is paid in the epilogue
+  (`ans.rival.spar_last`). The `ans.rival.ordinary` answer is read here, as they turn (see the
+  question row).
+- **Ch 53 line table** (the rival speaks in slot 6; one line built from two reads; the arc cites
+  this table). First half by `ans.rival.theirs` (Ch 29):
+
+  | `ans.rival.theirs` | First half |
+  |---|---|
+  | memory | "Then remember me." |
+  | hold_on | "Then don't let go." |
+  | chosen | "You said I'd be what's left." |
+  | unset | "Take it. Don't say anything." (the whole line; no second half) |
+
+  Second half by `ans.rival.why_came` (Ch 43), only if the first half is set: *youd_come* "You were
+  right. I came. Take it."; *wanted* "I wanted to. Take it."; *asked* "You didn't even ask. Take
+  it."; unset: "Take it."
+- If you **never go** to the ceremony (Ch 43), they still kindle at 6+, with the unset second half.
 - **Romance** (teen and up): a rival romance is slow (pride); the confession is a challenge ("Spar
   me. If I win, you hear something."). Never in the child stage.
 - **Thread Sight on them** (from Ch 24, level 6+): their thread is thin, taut and bright, like
@@ -98,15 +105,15 @@ worth more than strength earned, which would make their whole life a mistake.
 
 ### Voice
 
-- **Child:** clipped, cutting, few words; "Hmph" is allowed once a chapter, no more; questions
-  disguised as insults.
+- **Child:** clipped, cutting, few words; questions disguised as insults.
 - **Teen:** the same clipped voice with more vocabulary; compliments that sound like complaints
   ("That was barely adequate. Is that all?").
 - **Adult:** dry, loyal, still competitive about trivial things (who orders faster at Ichiraku);
-  says "we" exactly once (Ch 53).
+  rarely says "we".
 - **Never:** says thank you plainly before Ch 43; cries in front of you; brags about their clan
   (peeve); asks personal questions directly (peeve: nosiness) — they ask sideways.
-- **Tics:** crossed arms; challenges and questions dressed as insults ("Is that all?", "You call
+- **Tics:** taps two fingers on their clan crest (Classic; a Varied rival taps their family mark)
+  when thinking; crossed arms; challenges and questions dressed as insults ("Is that all?", "You call
   that a fall?"); never keeps score (that is `sensei_2`'s habit, and the rival hates it).
 
 Voice samples, not shipped lines:
@@ -115,7 +122,7 @@ Voice samples, not shipped lines:
 - (teen, Ch 29) "Is it yours, or theirs?"
 - (teen, Ch 20) "Don't thank me. You owe me a match."
 - (adult, Ch 43) "Why did you come?"
-- (adult, Ch 53) "You said I'd be what's left. Then take it."
+- (adult, Ch 51b, turning back on the stair) "Go. You owe me a match."
 
 ### Topics they care about
 
@@ -132,7 +139,7 @@ Voice samples, not shipped lines:
 
 | Secret / fact | Gate |
 |---|---|
-| Nobody came to their graduation | Ch 43 (said); seen in Ch 7.3b, where the player can go to them or let them be |
+| Nobody came to their graduation | Ch 43 (said); seen in Ch 7.3b (they leave before the speech ends; the player can follow or let them be) |
 | The sibling's secret training | `side.b3.rivals_sibling` (the sibling tells you, not the rival) |
 | The fear about gifts | Ch 29 |
 | Any warmth toward you in words | Ch 43 |
@@ -147,9 +154,9 @@ Voice samples, not shipped lines:
 | `ans.rival.score` (new) | Genin, after a spar (L2) | "My sensei keeps a tally against yours. Pathetic. Do you think counting makes anyone better?" | no, only trying does / it helps some people / your sensei's just lonely | rivalry vs warmth | Ch 33 (their trial line: "I didn't count. I just didn't lose."); Ch 54 (sensei_2's notebook: the rival keeps it) | *lonely*: they soften toward sensei_2 and keep the notebook after Ch 54 |
 | `ans.rival.sibling` (new) | Ch 18, after `side.b3.rivals_sibling` | "You trained my sibling. Behind my back." | they asked me / they'll be better than both of us / you should've trained them | family | Ch 43 (the sibling attends the ceremony, or not) | *you should've*: the rival trains the sibling; the sibling comes to Ch 43 |
 | `ans.rival.finals` (new) | Ch 20.4 or Chunin talk (L3) | "We never fought. Who would have won?" | you / me / we'll never know, so let's find out | pride | Ch 33 trial line; epilogue spar | *let's find out*: a ritual spar on the Rock each year |
-| `ans.rival.clan` (new) | Ch 40 aftermath (L6) | "My clan's elder forged it. Do I carry that?" | no, you weren't born / yes, we all carry the village's / carry it by making it right | family, honesty | Ch 40 council break; Ch 51 (they fight beside the Kagari house's members) | Whether they stand up in the council |
-| `ans.rival.ordinary` (new) | Jonin, level 7 (worries) | "What if I'm just... ordinary? Good, but ordinary." | then be the best ordinary there is / you're not / ordinary people held the wall in the war | honesty | Ch 51 wall scene (if "ordinary people" — they say it to the defenders) | Settles their fear |
-| `ans.rival.graduation` | Ch 7.3b | (the rival alone after the speech; nobody came for them) | go to them / let them be | *go*: they snap "What?", then don't leave; respect for leaving them their pride if *let go* | Ch 43.1 ("You came over at graduation. I hated it. I've thought about it every year." / "You left me alone at graduation. That was the kindest thing anyone did that day.") | Whether the Ch 43 invitation is a return of a favour or a first reach |
+| `ans.rival.clan` (new) | Ch 40 aftermath (L6) | "My clan's elder forged it. Do I carry that?" | no, you weren't born / yes, we all carry the village's / carry it by making it right | family, honesty | Ch 40 council break; Ch 51b (on the stair they fight beside the Kagari house's members) | Whether they stand up in the council |
+| `ans.rival.ordinary` (new) | Jonin, level 7 (worries) | "What if I'm just... ordinary? Good, but ordinary." | then be the best ordinary there is / you're not / ordinary people held the wall in the war | honesty | Ch 51b stair, as they turn back: *best ordinary* "Best ordinary there is. Watch."; *not* "You said I'm not. Prove it by going."; *held_wall* "Ordinary people hold stairs too."; unset: no extra line | Settles their fear |
+| `ans.rival.graduation` | Ch 7.3b | (nobody came for the rival; they slip away before the Fourth's speech ends; you can follow to the water pump) | go to them / let them be | *go*: they snap "What?", then don't leave; respect for leaving them their pride if *let go* | Ch 43.1 ("You came over at graduation. I hated it. I've thought about it every year." / "You left me alone at graduation. That was the kindest thing anyone did that day.") | Whether the Ch 43 invitation is a return of a favour or a first reach |
 | `ans.rival.forest` (new) | Ch 29, after their awakening in the spar (L4) | "You saw it. Don't tell anyone until I show them." | I won't / you should be proud of it / it suits you | honesty, pride | Ch 33 trial (they show it to the examiners with a glance at you) | *won't*: trust +; *proud*: they're annoyed and pleased |
 | `ans.rival.team` (new) | Genin, after `sensei_2`'s teasing (L3) | "Is your sensei as embarrassing as mine?" | worse / mine eats apples to look mysterious / yours is great, actually | playful (filler) | A running joke; Ch 42 (sensei_2 at the Seventh's naming, and the rival's line) | Small: their softening toward their own sensei |
 | `ans.rival.give_up` (new) | Ch 31 aftermath (L5) | "You stood up in front of the whole council for a clan that isn't yours. Why?" | because they were right / because no one stood up for mine / because I could | loyalty, family | Ch 40 (the rival stands in the council for the truth) | Teaches them public courage |
