@@ -1,17 +1,17 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 329 files · ~744,550 words
+- 329 files · ~744,570 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 31 file(s) not represented in the graph (top: .tsv 23, (none) 3, .properties 2)
 
 ## Summary
-- 5400 nodes · 12668 edges · 218 communities (166 shown, 52 thin omitted)
+- 5400 nodes · 12669 edges · 218 communities (166 shown, 52 thin omitted)
 - Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 1384 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `74e90e1d`
+- Built from commit: `067ee6c6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -206,7 +206,7 @@
 - ComboMachine
 - Tier
 - SignBook
-- COMBAT.md
+- Animation clips
 - Technique catalogue
 - Technique
 - GossipTest
@@ -855,8 +855,8 @@ Cohesion: 0.29
 Nodes (7): A rank, ANBU operations, B rank, C rank, D rank, Mission catalogue, S rank
 
 ### Community 180 - "Bosses"
-Cohesion: 0.09
-Nodes (22): Bosses, `combat:boss.anbu.story_1`: Story boss (chapter anbu, level 40, anbu), `combat:boss.ch11.bandit_chief`: Bandit chief (chapter 11, level 11, beta2), `combat:boss.ch14.road_ambush`: Ambush on the road (chapter 14, level 14, beta2), `combat:boss.ch16.forest_beast`: A giant of the forest (chapter 16, level 16, beta3), `combat:boss.ch16.forest_team`: A hunting team in the forest (chapter 16, level 16, beta3), `combat:boss.ch17.prelim`: Preliminary bout (chapter 17, level 16, beta3), `combat:boss.ch19.finals`: Finals bout (chapter 19, level 18, beta3) (+14 more)
+Cohesion: 0.08
+Nodes (24): Bestiary, groups and bosses, Bosses, `combat:boss.anbu.story_1`: Story boss (chapter anbu, level 40, anbu), `combat:boss.ch11.bandit_chief`: Bandit chief (chapter 11, level 11, beta2), `combat:boss.ch14.road_ambush`: Ambush on the road (chapter 14, level 14, beta2), `combat:boss.ch16.forest_beast`: A giant of the forest (chapter 16, level 16, beta3), `combat:boss.ch16.forest_team`: A hunting team in the forest (chapter 16, level 16, beta3), `combat:boss.ch17.prelim`: Preliminary bout (chapter 17, level 16, beta3) (+16 more)
 
 ### Community 181 - "docs.py"
 Cohesion: 0.07
@@ -882,9 +882,9 @@ Nodes (3): ComboMachine, Context, Started
 Cohesion: 0.22
 Nodes (6): Mastery, Tier, MASTERED, NOVICE, PERFECTED, PRACTICED
 
-### Community 202 - "COMBAT.md"
-Cohesion: 0.17
-Nodes (7): Animation clips, P0, P1, P2, P3, Bestiary, groups and bosses, Groups
+### Community 202 - "Animation clips"
+Cohesion: 0.33
+Nodes (5): Animation clips, P0, P1, P2, P3
 
 ### Community 203 - "Technique catalogue"
 Cohesion: 0.15
