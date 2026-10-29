@@ -1,0 +1,157 @@
+{
+  "id": "b07_cargo_shorts",
+  "kind": "bottom",
+  "name": "Cargo Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/b07_cargo_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_hem",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_hem",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_cargo",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -3.0,
+        1.2,
+        -1.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        3
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "left_cargo",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.0,
+        1.2,
+        -1.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        3
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    },
+    {
+      "id": "waist_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5,
+        9.4,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ]
+    }
+  ],
+  "description": "Slate knee shorts with thigh pockets, shin wraps, a belt pouch, navy sandals."
+}

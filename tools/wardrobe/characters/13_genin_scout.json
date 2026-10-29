@@ -1,0 +1,5 @@
+{"id": "genin_scout", "name": "Genin Scout", "tagline": "Teal zip-up with the hood pushed back, cargo shorts, shin wraps and a fresh forehead protector",
+ "face": "f01_shinobi", "hair": "h05_swept_spikes", "headwear": "w02_forehead_protector",
+ "top": "t13_scout_hoodie", "bottom": "b07_cargo_shorts",
+ "palette": "GENIN_SCOUT", "hair_color": "GINGER", "eye_color": "JADE", "eye_style": "starlit", "feminine": false,
+ "complexion": 1, "scale": 14, "rank": "genin"}

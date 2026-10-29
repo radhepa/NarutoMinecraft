@@ -1,0 +1,80 @@
+{
+  "id": "t13_scout_hoodie",
+  "kind": "top",
+  "name": "Scout Hoodie",
+  "gender": "unisex",
+  "texture": "tops/t13_scout_hoodie.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.2,
+        3.0
+      ],
+      "rotation": [
+        24,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        9,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "back_leaf",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.4,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Teal zip-up hoodie with the hood down, mustard trim, a kangaroo pocket and a leaf crest."
+}

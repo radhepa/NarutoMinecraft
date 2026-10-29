@@ -85,7 +85,8 @@
     "t09_anbu_cloak",
     "t10_anbu_captain",
     "t11_anbu_tracker",
-    "t12_root_tunic"
+    "t12_root_tunic",
+    "t13_scout_hoodie"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -93,7 +94,8 @@
     "b03_genin_track_pants",
     "b04_kunoichi_shorts",
     "b05_green_leggings",
-    "b06_anbu_greaves"
+    "b06_anbu_greaves",
+    "b07_cargo_shorts"
   ],
   "characters": [
     {
@@ -320,6 +322,24 @@
       "complexion": 0,
       "scale": 14,
       "rank": "anbu"
+    },
+    {
+      "id": "genin_scout",
+      "name": "Genin Scout",
+      "tagline": "Teal zip-up with the hood pushed back, cargo shorts, shin wraps and a fresh forehead protector",
+      "face": "f01_shinobi",
+      "hair": "h05_swept_spikes",
+      "headwear": "w02_forehead_protector",
+      "top": "t13_scout_hoodie",
+      "bottom": "b07_cargo_shorts",
+      "palette": "GENIN_SCOUT",
+      "hair_color": "GINGER",
+      "eye_color": "JADE",
+      "eye_style": "starlit",
+      "feminine": false,
+      "complexion": 1,
+      "scale": 14,
+      "rank": "genin"
     }
   ]
 }
