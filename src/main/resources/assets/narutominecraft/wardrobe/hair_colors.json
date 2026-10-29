@@ -150,6 +150,56 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "KURAMA_TEA": {
+      "name": "Kurama Tea Brown",
+      "ramp": [
+        "#3d2617",
+        "#5e3c24",
+        "#82573a",
+        "#a77852",
+        "#c99c72"
+      ]
+    },
+    "KURAMA_UMBER": {
+      "name": "Kurama Umber",
+      "ramp": [
+        "#21150f",
+        "#352219",
+        "#4c3224",
+        "#664634",
+        "#86604a"
+      ]
+    },
+    "KURAMA_INK": {
+      "name": "Kurama Ink",
+      "ramp": [
+        "#121118",
+        "#1c1a24",
+        "#282533",
+        "#383447",
+        "#4d4860"
+      ]
+    },
+    "KURAMA_ASHEN": {
+      "name": "Kurama Ashen",
+      "ramp": [
+        "#3a3633",
+        "#57514c",
+        "#7a726a",
+        "#9c948a",
+        "#bfb8ac"
+      ]
+    },
+    "KURAMA_MAUVE": {
+      "name": "Kurama Mauve Brown",
+      "ramp": [
+        "#2e1f26",
+        "#47303a",
+        "#634552",
+        "#80606c",
+        "#a0828c"
+      ]
     }
   }
 }

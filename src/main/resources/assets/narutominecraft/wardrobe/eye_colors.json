@@ -103,6 +103,26 @@
         "...111111...",
         "....1111...."
       ]
+    },
+    "KURAMA_HAZE": {
+      "name": "Kurama Haze",
+      "ramp": [
+        "#120e18",
+        "#4f3f6b",
+        "#7b67a0",
+        "#b3a3cf",
+        "#f2efe8"
+      ]
+    },
+    "KURAMA_BROWN": {
+      "name": "Kurama Brown",
+      "ramp": [
+        "#120c0a",
+        "#5a3a26",
+        "#8a5f3e",
+        "#c09572",
+        "#f2eee6"
+      ]
     }
   }
 }
