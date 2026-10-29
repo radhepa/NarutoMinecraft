@@ -17,6 +17,7 @@ import animations  # noqa: E402
 import barks  # noqa: E402
 import clans  # noqa: E402
 import core  # noqa: E402
+import docs  # noqa: E402
 import enemies  # noqa: E402
 import progression  # noqa: E402
 import squad  # noqa: E402
@@ -160,10 +161,9 @@ def spoiler_terms_from_bible():
 def public_text_hashes():
     """Every word and two-word phrase of every public text combat writes, hashed."""
     files = glob.glob(os.path.join(OUT, "**", "*.json"), recursive=True)
-    for extra in ("docs/COMBAT.md",):
-        p = os.path.join(ROOT, extra)
-        if os.path.exists(p):
-            files.append(p)
+    files += glob.glob(os.path.join(ROOT, "docs", "combat", "*.md"))
+    if os.path.exists(os.path.join(ROOT, "docs", "COMBAT.md")):
+        files.append(os.path.join(ROOT, "docs", "COMBAT.md"))
     files += glob.glob(os.path.join(ROOT, "tools", "combat", "*.py"))
     files += glob.glob(os.path.join(ROOT, "combat", "**", "*.java"), recursive=True)
     seen = {}
@@ -321,8 +321,9 @@ def check(every):
 
 def main():
     every = build()
+    pages = docs.write_all()
     n = len(glob.glob(os.path.join(OUT, "**", "*.json"), recursive=True))
-    print("wrote %d files to %s (%d techniques)" % (n, os.path.relpath(OUT, ROOT), len(every)))
+    print("wrote %d files to %s (%d techniques) and %d pages to docs/combat/" % (n, os.path.relpath(OUT, ROOT), len(every), len(pages)))
     if "--check" in sys.argv:
         errs = check(every)
         for e in errs:

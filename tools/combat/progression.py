@@ -101,7 +101,7 @@ def beta_loadout():
         },
         "per_player": "A single beta player ends with about 10 to 14 techniques (Academy 5, sensei 3 to 4, nature 2 to 3, lesser 1 to 3, exam reward 1), "
                       "two or three styles, and five to eight weapons and tools in regular use",
-        "enemies": "22 human and 11 animal enemy types reachable in the beta, 9 beta bosses",
+        "enemies": "26 human and 10 animal enemy types reachable in the beta, 9 beta bosses",
         "not_in_beta": ["B-rank and above", "inner gates", "Shadow Clone", "second nature", "clan tiers 2 to 4 (NPC)", "Swaying Willow, Blossom Strength, Lightning Body, White Fang",
                         "windmill shuriken, kusarigama and the fans", "medical and sensing above C", "Kindling Bond"],
     }
