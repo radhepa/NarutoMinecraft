@@ -70,7 +70,8 @@ a Shimura finds a stranger using their cellar as a mail drop for sealed letters,
 the Undercroft's courier, which opens N3). She is the sealing team leader's granddaughter, sworn in
 as a child,
 and commanded ANBU under the Third. She believes the Quiet Ending's only mistake was waste. She has
-intercepted Yūgure's mail for years and knows the player's nursery number. She wants the gift caged
+intercepted Yūgure's mail for years: from it they knew of "Nine" and of a voice inside the Leaf,
+but never learned who the voice was, and they kept silent to use the knowledge, not to share it. She wants the gift caged
 and aimed: in N4 to N5 her plan is **the jar**, their old sealed jar, with the lost child as its
 mouth. She does not resist arrest (N7): "You will need us when he comes," and in every path she
 fights at the wall in Ch 51a.
@@ -103,7 +104,7 @@ only after Ch 44, so it never pre-empts the voice's slip; see note below).
 | Look | Rolled shinobi; ANBU armour and a heron mask; never unmasked in the story |
 | Pronouns | They (rolled) |
 | Archetype | `reserved` |
-| Appears | N1, N2, N6 (fights beside the player against the Undercroft, having chosen the Hokage over old loyalties) |
+| Appears | N1, N2, N5.3, N6 (with the Hokage's masks at the quarry mouth if told, `ans.anbu_captain.alone = told`) |
 
 **Voice.** Whispers. Never uses names in the field ("Out here you have no name. Come home with it").
 
@@ -112,6 +113,8 @@ only after Ch 44, so it never pre-empts the voice's slip; see note below).
 | Id | When | Question | Options | Remembered |
 |---|---|---|---|---|
 | `ans.anbu_captain.mask` | N1.2 | "Why do you want a mask?" | to work unseen, to stop being Nine, I don't, I want the job | N6: as they fight the Undercroft, "You said ___. Good. Keep it" |
+| `ans.anbu_captain.letter` | N2.3, the courier's sealed letters | (A choice, not their question) Report the letters / keep one | report, keep | N5.3: if "keep", they say "I know about the letter. Masks come off at home. Remember where yours is."; N3 can open from the reported letters. Unset: as report |
+| `ans.anbu_captain.alone` | N5.3, on the wall the night before N6 | ("Masks come off at home. Remember where yours is.") Tell the captain everything / go alone | told, alone | N6: told: the Hokage's masks hold the quarry mouth and the fight is shorter; alone or unset: the whole fight. N7: told: the captain stands beside you before the Hokage |
 | `ans.anbu_captain.name` | N6, after the fight | "If I took this off, would you want to know who I was?" | yes, no, only if you want | Epilogue: if "yes", they unmask at the inauguration (a resident the player already knows, chosen by the dialogue session from the player's level-3+ shinobi bonds) |
 
 ---
@@ -123,9 +126,9 @@ role traits:
 
 | Role | Fixed trait | Arc in one line |
 |---|---|---|
-| `genin_1` | If `ans.player.ch0.freed_boy = freed`, he is the boy from the third cell, grown (fixed male, fixed look then); else rolled | Wants to be like the person who opened his door; learns to open doors for others (he leads the Academy children out in Ch 51a) |
+| `genin_1` | If `ans.player.ch0.freed_boy = freed`, he is the boy from the third cell, grown (fixed male, fixed look then); else rolled | Wants to be like the person who opened his door; learns to open doors for others: in Ch 51a (a cutaway) **he leads the Academy children out** |
 | `genin_2` | A rolled clan or clanless child; the team's loud one | Wants to beat the other two; learns the cord test's lesson from your test |
-| `genin_3` | A Kagari descendant with a faint sealed flame (`story.seed.genin_flame`) | Afraid of what they are once they know; the Undercroft targets them in N5 if the player refuses; in Ch 53 their flame is one of the first to kindle toward you |
+| `genin_3` | A Kagari descendant with a faint sealed flame (`story.seed.genin_flame`) | Afraid of what they are once they know; the Undercroft takes them as the jar's fallback mouth in N5.2 if the player refused and reported their flicker; in Ch 53 they are a face among the flames (no spoken line unless at level 9) |
 
 **Voice.** Genin energy: arguments, eating, competing for your attention (jealousy is live: the
 bond engine's favouritism applies to them as to a squad).
@@ -136,7 +139,7 @@ bond engine's favouritism applies to them as to a squad).
 |---|---|---|---|---|
 | `ans.genin_1.door` | genin_1 | "Why did you open my door? You didn't know me." (if freed) / "Why did you pick our test that way?" (else) | it was locked and I could open it, someone would've done it for me, I didn't think | Ch 51a: he says it to the children he leads out |
 | `ans.genin_2.best` | genin_2 | "Who's your favourite? Out of us. Be honest." | none, all three, you (to genin_2), tell them honestly | Jealousy: "you" raises genin_2 and costs the others (the favouritism rule) |
-| `ans.genin_3.flame` | genin_3 | "Is this thing in me going to hurt someone?" | no, not if you learn it, it might, so let's learn together | Ch 53: their line as their flame kindles toward you |
+| `ans.genin_3.flame` | genin_3 | "Is this thing in me going to hurt someone?" | no, not if you learn it, it might, so let's learn together | N5.2 / N6 (if taken as the fallback): what they whisper when the player reaches them; the epilogue: their line about their own flame. Unset: no callback |
 
 ---
 
@@ -266,6 +269,8 @@ muddies the Ch 25 slip.
 - `ans.ramen_cook.new_stand` (never, once, good)
 - `ans.undercroft_head.waste` (no, as_people, ask_her)
 - `ans.anbu_captain.mask` (unseen, not_nine, the_job)
+- `ans.anbu_captain.letter` (report, keep)
+- `ans.anbu_captain.alone` (told, alone)
 - `ans.anbu_captain.name` (yes, no, if_you_want)
 - `ans.genin_1.door` (locked, someone_would, didnt_think)
 - `ans.genin_2.best` (none, all, you, honest)

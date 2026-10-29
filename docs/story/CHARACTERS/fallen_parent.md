@@ -26,7 +26,8 @@ a Yuhi genjutsu user), whom the sensei sent back to signal for help. They died; 
 burned pulling them out; `sensei_3` came back with help too late.
 
 **In every save** they had a young child with a civilian spouse in a border village, kept far from
-the village's eyes. After the Ash Road ambush the report lists the spouse and child as "lost". The
+the village's eyes. After the Ash Road ambush the sealed report lists the spouse and child as "lost"
+in both lineages; the player reads it at Ch 37.0, and no one comments on the child before Ch 48. The
 sensei and `sensei_3` know a child was lost and never speak of it before Ch 48. They carved a pair
 of watch-fire charms for the child (they didn't know the custom's meaning, only that their
 grandmother did it).

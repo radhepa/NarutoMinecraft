@@ -61,7 +61,7 @@ it is the only way he knows to say that the sensei still matters to him.
 |---|---|
 | The Ash Road was a disaster his rival survived | Before Y0 |
 | The player is "the kid they carried out" | Ch 8 |
-| "Kagari" was said at the stadium | Ch 20 (as a senior Jonin) |
+| "Kagari" was said at the stadium | Ch 31 (at the Tobari council, where the player's gift is spoken of openly) |
 | The player's chakra is "anomalous" (the corps' report) | Ch 22, as Commander |
 | The Tobari are innocent | Ch 31, with everyone |
 | The Quiet Ending | Ch 40 (public) |
@@ -71,7 +71,7 @@ it is the only way he knows to say that the sensei still matters to him.
 
 | Arc | Change |
 |---|---|
-| 2 Paper Trail | The comic rival: in the Academy hall right after assignment (Ch 8.1) he challenges the player's sensei, in front of both squads, to that week's contest (threading senbon through the lantern rings on the wall walk, one run each, at dusk). He loses, writes it down, and shows the squads the page: **38 to 211**. "I'm catching up." |
+| 2 Paper Trail | The comic rival: in the Academy hall right after assignment (Ch 8.1), before anyone leaves, he challenges the player's sensei to a senbon-footwork contest across the hall's beams. The sensei does it once, without comment; he misses, and writes in his notebook: "Thirty-eight to two hundred and eleven. I'm counting the practice." (**38 to 211**.) His later contests run on guard rotations (lantern rings on the wall walk, the gate-bell relay) |
 | 3 Dusk | Ch 18.2: in the training break he is caught betting on the finals against his own squad ("It's called hedging. Sunshine, don't look at me like that."). Ch 19: on duty at the Hokage's seat when the attack begins at the opening lantern-lighting; he fights his way toward the east stair as the Fourth's fate plays out there, too late. Afterwards he stops joking for a week |
 | 4 Embers | Leads the Empty Seat rescue (Ch 21c). The Fifth makes him Jonin Commander: he enforces a curfew he hates, strictly and fairly, teasing the player while writing their name in the night log. At the Tobari council (Ch 31.3) he puts down the Commander's armband in front of his own Hokage: "I'm with the kid." The first serious thing he has ever said in public |
 | 5 Ashes | One of the two examiners in the player's Jonin trial (Ch 33.2). Kneels first to the Seventh (Ch 42), the tally now 51 to 289: "You win this one too. Don't get used to it." He writes 51 to 290 |
@@ -253,7 +253,7 @@ Voice samples, not shipped lines:
 | Training (1) | Genjutsu release, gently; "the trick is to notice" |
 | Hobby (2) | Pressing flowers; she gives one to anyone at level 3 |
 | Family (4) | Her squad first; the Yuhi grove second |
-| Values (5) | "Kindness costs. Pay it anyway." |
+| Values (5) | "Kindness costs. Spend it anyway." |
 | Advice (5) | On regret: "Say it to the person. Even if they're on the stone." |
 | Dream (6) | Before Ch 37.0: "To stop dreaming the same road." After: "To be bored with him, at festivals." |
 | Worries (7) | Her squad; squad3_a most |
@@ -463,8 +463,8 @@ faster, stayed), `ans.sensei_4.flicker` (everyone, worth_asking, yes), `ans.sens
 **Fears.** That he talked his whole life and nobody heard the important part. That he once
 didn't ask a question he should have.
 
-**Secrets.** Forty years ago the Third asked him to inspect "a very old seal under the Rock". He
-renewed it and did not ask what it held. He has wondered ever since. He taught half the Jonin of
+**Secrets.** Forty-six years ago (Y-40, the year the keeper was sworn) he helped the Third seal the
+archive door under the Rock, and did not ask what it held. He has wondered ever since. He taught half the Jonin of
 the Leaf (the player's sensei, sensei_2, sensei_3 as Academy guest-teacher), and calls them by
 pet names.
 
@@ -484,8 +484,8 @@ pet names.
 | 1 Cinders | Ch 7: watches the graduation with his senior squad, loudly commenting |
 | 3 Dusk | Ch 19: seals the stadium's gates so the evacuation can run, shouting instructions at everyone |
 | 4 Embers | Ch 28: reads the burned palm seal: "Whoever drew this has been drawing for a very long time." (A seed: the leader's age) |
-| 5 Ashes | Ch 36: breaks the archive's old seals with the keeper: "I put my hand on this door forty years ago and I didn't ask. I'm asking now." |
-| 7 Last Bonfire | Ch 50: teaches the village to break cinder seals (systemic: a technique scroll and a lesson every district needs); Ch 52: holds the array's last anchor on the Rock shut with his own chakra while the player faces the leader. He survives, drained, and spends the epilogue teaching squad5_b, who finally talks back |
+| 5 Ashes | Ch 36: breaks the archive's old seals with the keeper: "I put my hand on this door forty-six years ago and I didn't ask. I'm asking now." |
+| 7 Last Bonfire | Ch 50: teaches the village to break cinder seals (systemic: a technique scroll and a lesson every district needs); Ch 52: on the Rock top he holds part of the array shut by seal-work, his hands on the channel's seals, redrawing them as fast as they burn, while the player faces the leader. He survives, drained, and spends the epilogue teaching squad5_b, who finally talks back |
 
 His growth: from talking to listening. The silent squad5_b is his lesson.
 
@@ -507,8 +507,8 @@ Voice samples, not shipped lines:
 - "Ha! A seal is a promise with good handwriting. Sit, sit, this will take an hour."
 - "My quiet one, my loud one, my sad one, and my baker. And now you. What are you?"
 - "Whoever drew this has been drawing for a very long time."
-- "I put my hand on this door forty years ago and I didn't ask. I'm asking now."
-- (Ch 52, quiet) "Go on. I've got this one. I've had it for forty years."
+- "I put my hand on this door forty-six years ago and I didn't ask. I'm asking now."
+- (Ch 52, quiet, hands on the channel's seals) "Go on. I've got this one. I've been drawing longer than you've been alive."
 
 **Topics.**
 
@@ -527,7 +527,7 @@ Voice samples, not shipped lines:
 
 | Fact | Not before |
 |---|---|
-| He renewed the seal under the Rock | Ch 36 (at level 7, in the Jonin arc, he can hint "I once sealed something I didn't understand") |
+| He helped seal the archive door under the Rock | Ch 36 (at level 7, in the Jonin arc, he can hint "I once sealed something I didn't understand") |
 | The leader's age read from the seal | Said at Ch 28 as a strange fact; never connected aloud before Ch 49 |
 | The array | Ch 49 |
 

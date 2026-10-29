@@ -85,7 +85,7 @@ player is 12 at Y0. Lines spoken in later arcs count years from this table.
 | Point | Year | Player's age | Stage |
 |---|---|---|---|
 | Ch 0 (prologue) | Y0 | 12 | Child |
-| Ch 8 (team assignment) | Y0 + about a month | 12 | Child |
+| Ch 8 (team assignment) | Y0 + about two weeks | 12 | Child |
 | Ch 20 (end of the beta) | Y0 + about two months | 12 | Child |
 | Ch 21 (first skip) | Y+1 | 13 | Teen |
 | Ch 32 (end of the Chunin arc) | Y+2 | 14 | Teen |
@@ -151,10 +151,20 @@ turns. The second and the blade are the exception: a pair, "the only pair he eve
   **the hand** (`porter`, since Y-6; an old carter before him) and **the voice** (`twist.traitor`).
   The voice's sources reach border children too: the library files the border outposts' entrance
   tests with the aptitude scrolls; the stipend registry lists the border-village orphans the Leaf
-  sponsors; the hospital ledger logs every rescued child; the merchant's book logs every stop. The
-  candidates' daily schedules and night movements are identical in every save until Ch 39.
+  sponsors; the hospital ledger logs every rescued child; the merchant's book logs every stop.
+  **Schedule rule:** the candidates' visible daily schedules and movements are identical in every
+  save until Ch 39; the four alibi moments are never shown on screen, only recorded (rosters, logs,
+  visitor books). Every channel the voice uses after Ch 28 reaches Yūgure's pickup at the east-road
+  waystation within two days, equally in every rotation.
+- **The porter's acts.** In every save the porter carries, lays the anchors and carries the voice's
+  messages. In a save where a candidate is innocent he also does the act that casts suspicion on
+  them: he cuts the founding history's page (librarian innocent), uses the councillor's seal box
+  where it sits open on the desk on post days (councillor innocent) and uses the library's returns
+  cart as a dead drop (librarian innocent); the hospital ledger's pages are torn by the night
+  patient, the wounded smuggler (medic innocent). In the bound save the candidate does their own act.
+  The porter was rescued by Yūgure at eight.
 - **The marks**: the sinking sun scratched on walls is a hearth's sign, and in the Leaf it is also an
-  **anchor of the array**: a cinder seal laid under the scratch. Over six years in the Leaf the porter laid
+  **anchor of the array**: a cinder seal laid under the scratch. Since Y-6 the porter has laid
   eighty-one of them across the village under crates, sills and doorsteps. The one on the player's
   door (Ch 4) marks the wick's home.
 
@@ -170,7 +180,9 @@ turns. The second and the blade are the exception: a pair, "the only pair he eve
 | Ch 24 | The lost child raids the border post, ordered to wound and never kill the wick; he watches from a ridge (24.7) | To wake the gift by making a friend fall |
 | Ch 30 | The Tobari cinder bombs | A test: does the Leaf turn on its own when frightened? Its answer feeds his plan to strike when it is divided |
 | Ch 37.3 | The blade's raid on the archive for the Hearthstone | The array's heart; it fails |
+| After Ch 30 | He waits, for years | He needs the Hearthstone out of the archive (the archive must be opened) and the wick's web grown |
 | Ch 44 | A sentence sent through the lost child's stolen voices: "Grow, little flame. I like your friends." | He wants the web to grow: the wider it is, the more there is to take |
+| Ch 48 to 50 | The second's defection and the anchor hunt hasten him | Every anchor broken weakens the array: he must strike before it is gone |
 | Ch 51b | His voice comes through the array as the player climbs the Rock | He needs the wick at the heart |
 | Ch 52 | The array lit; the dark mirror offered | The Hollow Crown |
 
@@ -181,8 +193,11 @@ He never calls the player kin; he calls them "little flame".
 1. **The array**: eighty-one cinder seals around the village (laid by the porter).
 2. **The heart**: the Hearthstone, the Kagari relic sealed in the archive under the Rock. Only it
    can join the array into one fire.
-3. **The wick**: a Kagari of strong flame at the heart. The array forces every chakra in its reach
-   into the wick (force-kindling: the dark mirror at the scale of a village).
+3. **The wick**: once lit, the array drags every chakra in its reach into **the strongest Kagari
+   flame in reach, wherever it stands** (force-kindling: the dark mirror at the scale of a village).
+   Keeping the player away would only pick another wick (genin_3, the lost child, the second) or
+   hollow the player where they stand. The Hearthstone on the Rock is the only place the array can
+   be broken. The Seventh argues against the player going up (Ch 49, Ch 51b); the player chooses to go.
 4. **The taking**: the leader takes the gathered fire from the wick with the dark mirror. The wick
    and everyone in the array are left hollow.
 
@@ -235,17 +250,30 @@ The gift must play in every save, including a lonely one:
   the burning village on the rooftops, guided by `squad4_a`'s Byakugan. Fewer Blaze friends, a
   longer run.
 - **The lonely finale.** The red cord is always the first flame: the lost child always comes home by
-  Ch 47, and `bond_flag red_cord` kindles at any level ("Take it. It's mine to give."). The sensei
-  always gives theirs second (`saved_by_them`, Ch 0; it overrides even a falling-out). Ch 53's order
-  is fixed: the cord, the sensei, the spouse, the friend who fell in Ch 24, the other teammate, the
-  rival, then faces without spoken lines (others by level, clans, districts). Below the web's lowest
+  Ch 47, and `bond_flag red_cord` kindles at any level ("So someone remembers. Take it. It's mine to
+  give." The phrase "So someone remembers" is spoken only in Ch 0 and here). The sensei always gives
+  theirs second (`saved_by_them`, Ch 0; it overrides even a falling-out).
+- **The speaking rule (Ch 53).** Six fixed speakers, in order: the cord, the sensei, the spouse, the
+  friend who fell in Ch 24, the other teammate, the rival. If the sensei was the one who fell in
+  Ch 24, slot 4 is skipped and slot 5 is the higher teammate. Each speaker's line lives in one table
+  in their character file. Anyone else at level 9 or more may have one short line among the faces,
+  unordered; everyone else (others by level, clans, districts) is a face without a spoken line. Below the web's lowest
   threshold the Bonfire is an honest small fire (two or three flames on a quiet Rock), and it still
   wins: a fire freely given cannot be taken, however small. The thresholds are data, calibrated by
   the bonds session's simulation of `BondWeb.score` ([BONDS.md](../../BONDS.md) §11). The epilogue
   has a matching lonely tier: "You carried this with very few hands. Let more in now."
 - **The second and the blade at the end.** The blade turns in Ch 51b and lives (taken into custody;
-  in the epilogue he asks to guard the shrine or the second's grave). The second's fate resolves in
-  Ch 53.5, before the leader's end in 53.6.
+  in the epilogue he asks to guard the shrine or the second's grave); on the Rock his attack opens the
+  fight (he strikes first, so the leader turns). The second's fate resolves in Ch 53.5, before the
+  leader's end in 53.6; if she will die, she is held in the player's arms through 53.6 and dies at
+  morning, the first scene of Ch 54.
+- **Three sacrifices, no more.** The gate (`sensei_2`), the door (the keeper; the player fights beside
+  him as he falls) and the shield (the second, Ch 52.4). `sensei_5` holds the array by seal-work, his
+  hands on the channel's seals, not with his body; the rival fights up the stair beside the player,
+  then turns back for the pinned trio ("Go. You owe me a match."), not a lone stand.
+- **Held roles** (engine caps, [FLAGS.md](FLAGS.md)): `level_cap [role:porter, 4, story.ch28.done]`;
+  `level_cap [role:lost_child, 2, story.lost_child.home]`; `level_cap [role:yugure_second, 2,
+  story.ch41.done]`.
 
 ### Thread Sight and the mystery (one engine rule)
 
@@ -272,9 +300,11 @@ save and every rotation:
    Ch 52); teammate_b's fraying thread before the bridge (Ch 26, every branch); the blade's thread to
    the second, **only in Ch 52**. The porter and every traitor candidate are never exceptions before
    Ch 39. The leader has **no threads at all**: eighty years without one bond.
-5. **Only two things may differ between rotations before Ch 39**: the Ch 25.1 slip line, and the
-   results of the four alibi checks (Chunin side content and Ch 38). Every other scene, vote,
-   schedule and question plays identically in every save ([ROTATIONS.md](ROTATIONS.md) §1).
+5. **Only three things may differ between rotations before Ch 39** (the complete list): (1) the
+   Ch 25.1 slip line; (2) the recorded results of the four alibi checks; (3) the content of Yūgure's
+   list (notation, hand, private mark) as decoded at Ch 38. Every other scene, vote, schedule and
+   question plays identically in every save ([ROTATIONS.md](ROTATIONS.md) §1). The bound candidate's
+   threads to third parties look the same as in any other save.
 
 The keeper flickers too, honestly (he hides the archive) until Ch 36.
 
@@ -297,7 +327,7 @@ The keeper flickers too, honestly (he hides the archive) until Ch 36.
 |---|---|---|
 | The Hokage | Four at the start; three more change hands in the story | — |
 | The elder council | Three elders: the `elder_keeper` (archive), the `elder_councillor` (registry and stipends), and a Hyuga elder (`elder_hyuga`, the Fifth's uncle, a minor role) | Sealed the Ash Road report; the keeper and councillor know parts of the truth |
-| The sensor corps | Hyuga and Yamanaka sensors | Under the Fifth: watches "anomalous chakra" |
+| The sensor corps | Hyuga and Yamanaka sensors | Under the Fifth: watches "anomalous chakra". Council law forbids reading a citizen's mind without proof; the Sixth vows at Ch 32 never to look into anyone who hasn't asked him to |
 | The Undercroft | The heirs of the sealing team that sealed the twenty-seven in the Quiet Ending: a mixed-clan oath society of old ANBU and sealers, led by the sealing team leader's granddaughter (`undercroft_head`, no clan), meeting in the sealing team's derelict hall under the old quarry. The Shimura have no part in it (a Shimura helps expose it) | Believes the gift must stay sealed, and be used: their sealed **jar**, and a plan to make the lost child its mouth (Night Watch) |
 
 ## Places the story adds

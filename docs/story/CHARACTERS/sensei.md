@@ -84,9 +84,9 @@ name is on the report).
 | 2 Paper Trail | Becomes your teacher by refusing to teach in words; starts to suspect (Ch 14) and decides to stay close rather than report |
 | 3 Dusk | Protects you openly for the first time (the kunai at the second's throat); the warning "Don't say it" |
 | 4 Embers | Breaks their own rule of distance: trains a forbidden gift at night, against the Fifth's watch |
-| 5 Ashes | Learns their own signature buried their teammate's truth; cries once (if you follow them, Ch 37.0); accepts the hat because the village must be led by someone who was wrong and admits it |
+| 5 Ashes | Receives the Ash Road report from the Sixth at Ch 37.0 (both lineages); learns their own signature buried their teammate's truth; cries once (if you follow them, Ch 37.0); accepts the hat as the bridge the Sixth hands it to ("The one who opens the archive shouldn't be the one who builds on it") and says plainly they were always the bridge |
 | 6 Night Watch | As Hokage (or under the Sixth), the authority you bring the Undercroft to; their choice follows yours |
-| 7 Last Bonfire | Leads the war; tells the truth in lineage B; names you successor and stops trying to carry everything |
+| 7 Last Bonfire | Leads the war; argues against you climbing the Rock (Ch 49, 51b) and lets you choose; holds the gate, then the Rock's foot, in 51a/51b; tells the truth in lineage B; names you successor and stops trying to carry everything |
 
 **Endings and variants.**
 
@@ -106,7 +106,7 @@ name is on the report).
 
 Short sentences. Answers questions with questions or with silence. Never praises in public; praises
 in private with one word ("Good."). Eats an apple when they want to look relaxed and are not.
-Says your name rarely, so it lands. Calls the Hokage "the old man" / "the boss" only in private.
+Says your name rarely, so it lands. Calls the Hokage "the boss" only in private (never "the old man").
 Never says "I'm sorry" until Ch 48; never explains the scar until Ch 37; never says "Kagari" before
 you do.
 
@@ -122,6 +122,9 @@ Voice samples, not shipped lines:
 - (Ch 32.4) "Jonin, then. All of you. Four years."
 - (training) "Don't push harder. Push *into* me. Let me do the rest."
 - (as Hokage) "I'll still be around to complain. Go on."
+- (Ch 1.2, to the Fourth, about the anonymous map that found the hideout) "The map was good. Unsigned."
+- (Ch 42) "I was always the bridge. Somebody has to be. Then somebody walks over it."
+- (Ch 49 and 51b, arguing against the player going up the Rock) "It'll pick you wherever you stand. I know. I still don't want you up there."
 
 ### Topics they care about
 
@@ -163,9 +166,9 @@ Voice samples, not shipped lines:
 | `ans.sensei.stone` | Ch 10.2 | (at the memorial stone) | gap / name / silence | Silence honours them (`stood_by_them`) | Ch 21.3, Ch 41 ("You stood there with me once") | Silence: they open up one beat earlier at Ch 25 |
 | `ans.sensei.ash_road` | Ch 13.2 | (at the waystation) | ask / dont | Asking gently is fine; never prying here | Ch 37.0 | Asked: at Ch 37 they say "You asked me once. Here's the answer" |
 | `ans.sensei.born` | Ch 14.4 | "Where were you born?" | truth (the tree, the camps) / dont_know / why | Honesty | Ch 21.3, Ch 48 | Truth: sets up the persimmon blow; why: they respect it and answer "Because I'm afraid for you" |
-| `ans.sensei.song` | Ch 18.1 | (asks about the hummed song) | sing / dont_know / dream | — | Ch 25.4, Ch 48 | Sing: they know it is their teammate's; they hum it back in Ch 53 |
+| `ans.sensei.song` | Ch 18.1 | (asks about the hummed song) | sing / dont_know / dream | — | Ch 25.4, Ch 48 | Sing: they know it is their teammate's; at the Ch 48 ruins (lineage B) or the Ch 41 stone (lineage A and B alike before Ch 48: they hum one line, nothing more) |
 | `ans.sensei.kagari_word` | Ch 20.5 | "Don't say it to anyone. Not yet." | promise / ask / silent | Promise kept through Ch 22: `kept_promise` | Ch 22.2 | Promise kept: their trust passes 50 earlier (secret training) |
-| `ans.sensei.know` | Ch 25.4 | "Do you want to know what you are? Even if it changes how you see yourself?" | everything / need / no | Everything: their honesty; No: their freedom ("Good answer too") | Ch 36 to 37 (how much they bring you), Ch 53 line | Everything: they bring you to the archive in Ch 36 and to the report in Ch 37 |
+| `ans.sensei.know` | Ch 25.4 | "Do you want to know what you are? Even if it changes how you see yourself?" | everything / need / no | Everything: their honesty; No: their freedom ("Good answer too") | Ch 36 to 37 (how much they bring you) | Everything: they bring you to the archive in Ch 36 and to the report in Ch 37 |
 | `ans.sensei.apple` | Level 4, a training hangout | "Why do you think I'm always eating something when I'm worried?" | to look calm / to have something to do with my hands / you're just hungry | — (filler with a function: shows they know you see them) | Ch 49 war council: they hold an apple and don't eat it | — |
 | `ans.sensei.hat` | Ch 42, before the succession (level 6) | "Should someone who kept quiet about a rewritten report be Hokage?" | yes, because you know the cost / no, but you're the best we have / only if you say it out loud | Honesty | Ch 42 speech: they confess the signature in public if "say it out loud" | Changes the Seventh's first act: a public confession, or a quiet one to the council |
 | `ans.sensei.successor` | Ch 54.4 | "Do you want it? Honestly." | yes / not yet / only if you stay near | — | Ch 55.2 | "Only if you stay near": they become your advisor in the post-game |
@@ -174,8 +177,17 @@ Voice samples, not shipped lines:
 | `ans.sensei.revenge` | Ch 37.0 (if you follow them to the Rock), else Ch 38 | "Should I find the ones who did the Ash Road, before anything else?" | yes, they owe it / no, the living first / only if they're still killing | Loyalty to the dead against duty | Ch 49 war council and Ch 51a (whether the Seventh personally hunts hearths before the assault) | "The living first": the Seventh's war plan protects the Academy before striking cells |
 | `ans.sensei.sensei_3` | Ch 25 to 31, level 6, a training hangout | "There was a third of us that night. I sent them back. Should I have?" | yes, one of you lived / no, you needed them / ask them, not me | Honesty | Ch 41 (the memorial: they stand next to `sensei_3`, or apart) | "Ask them": they finally talk to `sensei_3` (ensemble scene) |
 
-**Ch 53.** The sensei's flame is always the second, after the cord; it overrides a falling-out
-(and a falling-out with the sensei earlier is mended by story at Ch 25.4).
+**Ch 53: the sensei's flame line (the only table for it; ARCS cites it).** The sensei is always the
+second speaker, after the cord; their flame overrides a falling-out (a falling-out with the sensei
+is mended by story at Ch 25.4). If the sensei is the one who fell in Ch 24, slot 4 is skipped.
+
+| Condition | Line |
+|---|---|
+| Base (`ans.sensei.orders` unset) | "Hold on. We're nearly out." |
+| `ans.sensei.orders = obey` | "Hold on. That's an order. We're nearly out." |
+| `ans.sensei.orders = ask` | "Hold on. You want to know why? Because we're nearly out." |
+| `ans.sensei.orders = right` | "Hold on. Do it right. We're nearly out." |
+| `story.finale.reached` (any of the above) | The cord's flame arrives grey-edged first; the sensei's line gains a first sentence: "I saw you reach. You let go. That's the whole job." |
 
 **Unset answers.** Every main-path read of an `ans.sensei.*` flag has an `unset` branch with a
 neutral line (for example Ch 42 with `orders` unset: "My students taught me to explain my orders.

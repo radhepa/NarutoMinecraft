@@ -16,14 +16,20 @@ and every player can solve it at the case board (Ch 38) from evidence they have 
 
 ### Allowed divergences (the only ones)
 
-Before Ch 39, exactly two things may differ between rotations. Everything else (every scene, vote,
-question, visit, withdrawal, flicker and line) is identical in every save, and every other file
-cites this list:
+Before Ch 39, exactly three things may differ between rotations. Everything else (every scene,
+vote, question, visit, withdrawal, flicker, thread and line) is identical in every save, and every
+other file cites this list:
 
 1. **The slip** (Ch 25.1): the bound candidate's one line.
-2. **The results of the four alibi checks** (`side.c.returned_book`, `side.c.court_roll`,
+2. **The recorded results of the four alibi checks** (`side.c.returned_book`, `side.c.court_roll`,
    `mission.b.false_floors`, the surgery roster at Ch 38): the innocent's alibi holds, the bound
    one's fails.
+3. **The content of Yūgure's list** as decoded at Ch 38: its notation, its hand and its private mark.
+
+**The schedule rule.** Candidates' visible daily schedules and movements are identical in every
+save. The four alibi moments are never shown on screen; they exist only as records (rosters, logs,
+visitor books). The bound candidate's threads to third parties (squad4_c to the medic, and so on)
+look the same in every save before Ch 39.
 
 From Ch 39 on, the reveal, the clearing scenes and their callbacks differ freely.
 
@@ -34,7 +40,7 @@ From Ch 39 on, the reveal, the clearing scenes and their callbacks differ freely
 ### What is fixed in every save
 
 - **The hand** is always the `porter` (fixed role, fixed look: a lanky young man with a carrying
-  frame, polite, a burn scar on his palm). He was a nursery child, "rescued" by Yūgure at nine and
+  frame, polite, a burn scar on his palm). He was a nursery child, "rescued" by Yūgure at eight and
   sent into the Leaf at sixteen as a porter for the furniture shop and the post. He carries for
   everyone: furniture into the player's flat (Ch 1), the library's returns cart, the hospital's
   linen, the council's letter bags, crates loaded onto merchants' carts at the east gate. He lays
@@ -57,7 +63,24 @@ From Ch 39 on, the reveal, the clearing scenes and their callbacks differ freely
 - **The hideout's cells were unnumbered**, and no Leaf rescuer heard "Nine": only the player and
   Yūgure know it.
 - **Daily lives are identical**: every candidate's schedule and night movements are the same in
-  every save until Ch 39.
+  every save until Ch 39 (the schedule rule above). The innocent librarian writes to a real cousin in
+  a border town too, so letters are no difference.
+- **Who does the deed, by save** (single source; character files cite this):
+
+| Deed | Bound save | Innocent save |
+|---|---|---|
+| The cut page (Ch 5) | The librarian cuts it and hands it to the porter | The porter cuts it while collecting returns |
+| The dead drop in the returns cart (`overdue`) | The librarian's | The porter's |
+| The travel pass's seal (Ch 14) | The councillor seals it himself | The porter uses the open seal box on a post day |
+| The intake ledger's torn pages (night shift) | The medic tears them out | The night patient (the smuggler) tears them out |
+| The false floor (Ch 11) | The merchant built it | A carpenter in the east built it before the sale |
+
+- **Why the page was cut that week (Ch 5).** The stipend registry had just flagged a new
+  Kagari-reactive child (the player, S-114). Yūgure asked the voice for the page that names the
+  twenty-seven's families, to know which Leaf families to test next.
+- **Ch 37 timing.** Three days pass between the Ash Road report (37.0) and the blade's raid (37.3):
+  the archive stays open while the keeper copies the list. Every candidate's post-Ch-28 channel
+  reaches Yūgure's pickup at the east-road waystation within two days, equally in every rotation.
 - **Yūgure's list** is kept in the voice's own notation. A cell's copy, captured in the Valley of
   Ash (Ch 35), holds sixteen years of entries (from ~Y-10), all in one notation and one hand: the
   voice's. (Why a Leaf
@@ -69,12 +92,15 @@ From Ch 39 on, the reveal, the clearing scenes and their callbacks differ freely
 |---|---|---|---|
 | `librarian` | The Academy aptitude scrolls, filed in the library | Shelf marks: `Leaf 7-iii` (Ch 5, shelving the scrolls) | A small brushed circle beside a gifted child |
 | `medic` | The hospital intake ledger of rescued and orphaned children | Pulse counts in green ink: `p 88 / 112` (Ch 0, your own sample) | A tiny folded-crane stroke |
-| `elder_councillor` | The orphan stipend registry | Stipend numbers: `S-114` (Ch 1, your own papers; you are S-114) | A pine-sprig seal mark |
+| `elder_councillor` | The orphan stipend registry | Stipend numbers: `S-114` (Ch 1, your own papers; you are S-114) | A hand-drawn pine-sprig flourish beside a name (not the seal stamp) |
 | `merchant` | Their delivery book of orphanages and waystations | Road-stop shorthand: `E3 · two · bright` (Ch 11, the book in the cart) | A tick with a tail |
 
 - **The red herring** in every save is the `elder_keeper`, who watches the player, guards a door and
   lies about knowing things. He is never the voice; his secret is the archive.
-- **Journal documents** (`journal.documents`). Four scenes each add an unmissable document to the
+- **The Undercroft** (Night Watch) knew of "Nine" and of a voice from intercepted mail, but never
+  learned who; they kept silent to use the knowledge, not to share it.
+- **Journal documents** (`journal.documents`), each in the candidate's own hand (the shelving slip is
+  the librarian's). Four scenes each add an unmissable document to the
   journal, showing the notation and the private mark, in every save: Ch 0.6 the medic's intake slip
   (your own reading, green ink, the crane stroke; the medic hands you a copy "for your records");
   Ch 1.2 your stipend papers (S-114, the pine seal); Ch 5.1 the shelving slip (a shelf mark with a
@@ -117,7 +143,8 @@ From Ch 39 on, the reveal, the clearing scenes and their callbacks differ freely
   loaded the raid squad's crates), so the raid points at no candidate.
 
   If the player asks the Fourth (crippled or taken saves) who sees the guard rotation, he says the
-  same in every save: "Half the village, child. Medics, vendors, the council, the Academy." 
+  same in every save, in one version: "Half the village, child. Medics, vendors, the council, the
+  Academy." 
 
 ### The shared clue trail (identical in every save)
 
@@ -152,12 +179,12 @@ quiet and lands inside a kindness:
 | Bound | The slip |
 |---|---|
 | Librarian | "Rest. Even the ninth flame of a fire needs tending." |
-| Medic | "Your pulse is good. Better than ninety, for a ninth—" (they stop, and say "for a Chunin") |
+| Medic | "Your pulse is good. Better than eighty-eight, for a ninth—" (they stop, and say "for a Chunin") |
 | Councillor | "The council is pleased. Number nine of the registry's children to make Chunin." (The registry has no such count; you are S-114) |
 | Merchant | The note: "For the ninth of my favourite customers. Eat the persimmons first." |
 
 Innocent candidates' parallel lines carry no number (the innocent medic: "Your pulse is good. Better
-than ninety, for a Chunin."), and no other line anywhere puts a count of nine near the player. A player who caught "Nine" in Ch 0 can solve
+than eighty-eight, for a Chunin."), and no other line anywhere puts a count of nine near the player. A player who caught "Nine" in Ch 0 can solve
 the case here. The journal records the line (`story.clue.slip.heard`), so the case board can recall
 it.
 
@@ -194,21 +221,39 @@ the list's notation, a failed alibi. The player may also accuse anyone without p
 
 | Accusation | What happens |
 |---|---|
-| **The bound candidate, with proof** | The confrontation (below). The player chooses: **arrest** them openly, or **turn** them (they keep feeding Yūgure, now false news: in Ch 50 one district's array anchors are already broken, and in Ch 51a the leader's assault starts an hour late). Turning needs `friendship [bound, 4]` or the candidate's own wish to make amends (librarian, medic) |
+| **The bound candidate, with proof** | The confrontation (below). The player chooses: **arrest** them openly, or **turn** them (they keep feeding Yūgure, now false news: in Ch 50 one district's array anchors are already broken, plus the candidate's own payoff, below). Turning needs `friendship [bound, 4]` or the candidate's own wish to make amends (librarian, medic) |
 | **The bound candidate, without proof** | They deny it; the keeper refuses to act; two days later they try to run (a chase at the east gate, Ch 39b). Caught: arrested, no turning |
 | **An innocent candidate** | The Sixth detains them on your word. `start_conflict` with them (`went_over_their_head` if you were close). The real voice, alarmed, tries to steal the archive key that night: the chase (Ch 39b). The innocent is freed; an apology quest (`bond.c.wrongly_accused.<candidate>`) can mend it |
 
 Every path reaches the truth in Ch 39 and the same Ch 40. Agency changes the cost and the help you
 get in the finale, never whether the story continues.
 
+**Turned payoffs** (in every turned save, one district's anchors are already broken in Ch 50; and
+each candidate adds their own):
+
+| Turned | Payoff in Ch 51a |
+|---|---|
+| Librarian | Her false signals delay the assault by an hour |
+| Medic | False casualty lists sent to Yūgure; the hospital is ready before the first wave |
+| Councillor | False council orders; the west wall is ready where the hearths planned to break it |
+| Merchant | False cargo: one wave arrives without its cinder bombs |
+
 ### The four reveals
+
+**The voice owns the stadium.** Each reveal has one line about the finals' guard rotation, keyed
+to `twist.fourth_fate`: what they were told it was for ("a show of strength; no one would be
+hurt") and what they felt when the Fourth was hit on the stair (falls: "I watched him fall on the
+stair I had given them."; crippled: "I watched him carried down the stair I had given them, and I
+went home."; taken: "I watched them lift him over the wall, and I told myself he'd come back.").
+The councillor's "without blood" is the lie he was told and believed. `squad3_b` hears of it at
+the Ch 40 council.
 
 | Bound | The scene | What they say (the heart of it) | After |
 |---|---|---|---|
 | **Librarian** | In the library at night, among the aptitude scrolls; she has the cut page's copy in her sleeve | "My grandmother was one of the twenty-seven. She whispered our real name to me once and never again. He wrote to me for sixteen years like a cousin. He said he was finding the lost ones. I gave him children, and I told myself I was giving them home." She knew you were Nine before you came to the Leaf | Arrested: her family's secret history goes to the archive; she asks to teach the old songs to the restored clan from her cell. Turned: she sends the false signals, and in the epilogue the player as Hokage rules on her |
-| **Medic** | The hospital roof at dawn; they have the green ink on their fingers | "They pulled me out of a burning orphanage when the Leaf was three days away. I owed them my life. I sent readings, sixteen years of them. Just numbers, I said. Then I treated your friend after the border post, and saw what she had done with what was put in her." (They mean the lost child, Ch 24; the medic treated the fallen friend in Ch 25.) "That was mine. I measured her." | Arrested, or turned; they ask to treat the lost child, whatever happens to them |
+| **Medic** | The hospital roof at dawn; they have the green ink on their fingers | "They pulled me out of a burning orphanage when the Leaf was three days away. I owed them my life. I sent readings, sixteen years of them. Just numbers, I said. Then I treated your friend after the border post, and saw what she had done with what was put in her." (They mean the lost child, Ch 24; the medic treated the fallen friend in Ch 25.) "That was mine. I measured her." | Arrested, or turned; they ask to treat the lost child, whatever happens to them. (They learned what the strangers were at 21, when the leader's gatherers who had saved them at ~Y-24 came to collect the debt) |
 | **Councillor** | His study, his seal box open | "My grandfather drafted the fourth clause at the founding and voted to end them ten years later. The Senju owe a clan its name. The village would never pay; he said he would make it pay without blood. I believed the part I wanted." He arranged your stipend to keep you safe *and* on file, and cannot say which he meant more | Arrested and stripped of the council seat; the Senju clan line's Heart step (`clan.senju.4`) becomes his house's reckoning. Turned: he keeps his seat as a mole, hating every day of it |
-| **Merchant** | Their cart in the rain at the east gate, half packed to run | "It was paper. Then it was paper and names. Then once there were children under the floor, and they paid me three times over, and I told myself it was the last time." They kept hiring your squad because you were the one child they had carried who came back | Arrested; their delivery book helps the A-rank hunts. Turned: they run the false cargo |
+| **Merchant** | Their cart in the rain at the east gate, half packed to run | "It was paper. Then it was paper and names. Then once there were children under the floor, and they paid me three times over, and I told myself it was the last time." (They kept hiring the squad because they liked it, and being close kept them close to the news.) | Arrested; their delivery book helps the A-rank hunts. Turned: they run the false cargo |
 
 The bound candidate's bond is never gated by the reveal: the player can be close to them. On the
 reveal: `start_conflict` with `broke_secret` for the bound candidate (the betrayal is of the
@@ -270,6 +315,14 @@ merchant becomes the squad's informant on the roads. If the player suspected the
 - Every clue appears in both saves (the song, the charm, the sparing, the suspicion, the persimmon).
   In each save the explanations that point the wrong way stay true (the second really did lose a
   child; the sensei really did lose a teammate with the same flame).
+- **Identical before Ch 48 in both lineages:** the sealed Ash Road report the player reads at
+  Ch 37.0 lists `fallen_parent`'s spouse and child as "lost"; the Sixth hands the report to the
+  sensei; the keeper gives the player a long look as he says the Ash Road Jonin's name. No one
+  comments on the child before Ch 48. `twist.lineage` is read only at Ch 27 (the persimmon, no
+  visible giver) and from Ch 48.
+- **The second's defection.** A: she finds "Nine: her child. Keep from her." in the leader's notes.
+  B: the Valley children (Ch 35) tell her of the nursery where her son died, and she goes into the
+  leader's notes looking for him.
 - The decisive evidence (the matching half charm) is held back to the reveal in both. The story
   never lies to the player: the second never claims to be or not be the parent before Ch 48; the
   sensei never says "your parent" before Ch 48.

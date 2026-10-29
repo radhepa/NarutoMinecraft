@@ -58,23 +58,25 @@ that the Third, a Sarutobi, kept the silence). The Hollow Crown at Ch 49.
 |---|---|
 | 1 Cinders | Ch 7: heckles the graduation cheerfully: "Welcome to the bottom! It's great down here!" |
 | 3 Dusk | Exams: fights in the preliminaries with a showy staff bout and loses gracefully; when the attack begins at the opening lantern-lighting he carries Academy children out of the stands |
-| 4 Embers | Chunin after the skip; declares himself the player's rival "for the hat" (friendly; the bond engine's rivalry meter is the joke) |
+| 4 Embers | Chunin after the skip; declares himself the player's friendly rival for the Hokage's seat (the bond engine's rivalry meter is the joke) |
 | 5 Ashes | Ch 40.2: the council. His clan's Hokage kept the silence for thirty years; he stands through the whole session without a word and sits only when the vote is called. Ch 40.2b: that night, on the Rock under the Third's face, he asks the player the question he can't ask his family (`ans.squad5_a.will`). Ch 42: the naming is contested: the council balks at a Hokage who signed the Ash Road field report. He stands up in the public gallery and says "I'm with them," the crowd follows, and his stand carries the vote |
-| 7 Last Bonfire | Ch 51a: on the wall with the former Fifth, the Tobari and the Hagane. Ch 53: a face among the flames (a short line only if the player is very close to him). Ch 55: becomes the Eighth's Jonin Commander in `sensei_2`'s place, his oath quoting `ans.squad5_a.will`, and taking the post "until I take your hat" |
+| 7 Last Bonfire | Ch 51a: on the wall with the former Fifth, the Tobari and the Hagane. Ch 53: a face among the flames (one short line only at level 9 or more). After the war (Ch 55) he becomes the Eighth's Jonin Commander, his oath quoting `ans.squad5_a.will`. The Ch 55 line names it "the Commander's post `sensei_2` held" only if `ans.sensei_2.armband = get_back` (sensei_2 took the armband back in Ch 42); otherwise "the post the war left empty" |
 
 **Endings.** He lives; the epilogue line reads `ans.squad5_a.serve` and `ans.squad5_a.will`.
 
 ### Dialogue brief
 
-**Voice.** Loud, open, fast; big gestures; quotes the Will of Fire; laughs at himself; uses "we"
-for the village. After Ch 40, quieter; uses "I" for the first time. Never sneers; never lies.
+**Voice.** Loud, open, fast; big gestures; talks about the lantern walk and his grandmother's
+lanterns, and asks what the old words mean instead of reciting them ("What does 'keep the fire' even
+mean, if nobody tells you what's burning?"); laughs at himself; uses "we" for the village. After Ch 40, quieter; uses "I" for the first time. Never sneers; never lies.
 
 Voice samples, not shipped lines:
 - "Welcome to the bottom! It's great down here! Lots of room to climb!"
 - "One day that's my face. Second from the left of the new ones. You can have the one after."
 - (Ch 40.2b, on the Rock) "She lied. For thirty years. And I'd have done the lantern walk for her with my eyes shut."
 - (Ch 42, in the gallery, over the council's objection) "I'm with them."
-- (Ch 55) "Commander. Fine. Until I take your hat."
+- (lantern prep) "My grandmother says you write the name of someone you'd keep warm. What does that mean when they're on the stone?"
+- (Ch 55) "Commander. Fine. Someone has to do the shouting."
 
 **Topics.** Training (1): staff sparring, every day. Family (4): the Sarutobi hearth; his
 grandmother's lanterns. Values (5): "The village is everyone in it. Even the ones it forgot."
@@ -98,7 +100,7 @@ before Ch 49.
 | `ans.squad5_a.spar` | Level 2, a staff spar | "Staff or fists? Pick how I lose." | Staff / Fists / Neither, race me | Courage | His sparring hangout favourite becomes yours | Opens a ritual (sparring or rooftop races) |
 | `ans.squad5_a.faces` | Level 4, on the Rock | "Which face up there do you like best? You can't say the Fourth, everyone says the Fourth." | The First / The Third / The empty spaces / The Fourth anyway | His faith | Ch 40.2b: under the Third's face he remembers it ("You liked her best") or not | "The Third": the Ch 40 hurt is sharper and his recovery stronger |
 | `ans.squad5_a.campaign` | Ch 33 (his cheerful campaign) | "Vote for me? I'm accepting endorsements. And dumplings." | Yes / Only if you buy dumplings / I'm running too | Pride, fun | Ch 45: his speech to the squad; Ch 55: "You endorsed me once. Look where it got you" | "Running too": the rivalry meter (friendly) rises; `ans.squad5_a.serve` reads warmer |
-| `ans.squad5_a.wall` | Ch 49 (war council) | "If the wall falls, do I stay on it or come to you?" | Stay on the wall / Come to me / Go where you're needed most | Duty | Ch 51a: how the wall scene ends for him (holds his stretch / sends word to the player / goes to the gate's second line); unset: holds his stretch | "Come to me": in Ch 53 his face comes with a short line if the player is very close |
+| `ans.squad5_a.wall` | Ch 49 (war council) | "If the wall falls, do I stay on it or come to you?" | Stay on the wall / Come to me / Go where you're needed most | Duty | Ch 51a: how the wall scene ends for him (holds his stretch / sends word to the player / goes to the gate's second line); unset: holds his stretch | "Come to me": none beyond Ch 51a (his Ch 53 face has a line only at level 9 or more, as for anyone) |
 | `ans.squad5_a.sensei_2` | Ch 54 (after the funerals) | "He'd have made a joke about this. Should I?" | Yes, make the worst one / No / Write it in his notebook | Grief | Ch 55: his first act as Commander (a joke at the gate, silence, or a tally line) | — |
 
 **Unison technique (Blaze).** *Hearth Wheel*: his burning staff spin, kindled, becomes a turning
@@ -194,7 +196,7 @@ asked). Nothing of Yūgure before Ch 30 beyond public news.
 | `ans.squad5_b.hand` | Ch 19 (she passes routes by hand signs) | (Signs, subtitled) "Can you read this?" | Yes / Teach me / No, say it | Freedom | Chunin arc: she signs to you instead of speaking; Ch 31.1 the drain fight uses signs if you learned | "Teach me": a hand-sign hangout opens; in Ch 31 she can sign the cell's position before the Ember Link |
 | `ans.squad5_b.grandmother` | Ch 31.2 (after the kindling) | "She's never given anything to anyone outside the quarter. Why you?" | Because you asked me to come / Because I listened / I don't know | Belonging | Epilogue: the grandmother's line at your inauguration | — |
 | `ans.squad5_b.lanterns` | Level 3, at the lake (after `filler.lake_lanterns`, or Beta 2 lanterns) | "My great-uncle kept a lantern for a son for twenty years. Is that love or stubbornness?" | Love / Both / Stubbornness, and that's fine | Family | Ch 54: she lights a lantern on the lake for `sensei_2` and asks if it's the same | — |
-| `ans.squad5_b.watch` | Level 6, Jonin arc | "Will you walk a night watch with me? Not for work." | Yes / Only if you talk / Bring ramen | Belonging | A ritual (`ritual [squad5_b, night_watch]`); Ch 53 her flame line: "Not for work" | — |
+| `ans.squad5_b.watch` | Level 6, Jonin arc | "Will you walk a night watch with me? Not for work." | Yes / Only if you talk / Bring ramen | Belonging | A ritual (`ritual [squad5_b, night_watch]`); at level 9 or more, her one short line among the Ch 53 faces: "Not for work" (else a face only) | — |
 **Unison technique (Blaze).** *Lantern Hush*: her smothering, kindled, becomes a hush across a
 district in which only bonded allies can hear each other.
 

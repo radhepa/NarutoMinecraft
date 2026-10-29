@@ -50,14 +50,14 @@ to. That choice is his only real regret, spoken only if he lives (Ch 40 or 49).
 | 3 Dusk | Buns at the training ground; then his fate on the east stair |
 | 4 Embers | Falls: a statue and a bowl. Crippled: a teacher in a wheelchair. Taken: a hollowed man brought home who still jokes |
 | 5 Ashes | (Living) hears the archive's truth and admits he chose not to ask |
-| 7 Last Bonfire | (Living) feels the array (crippled: "at the stadium"; taken: "in their hold"); sits in the Academy with the children in Ch 51a; in Ch 53.4 the chakra the leader took returns through the array and some of it reaches him: he stands up for a moment, laughing; at your inauguration |
+| 7 Last Bonfire | (Living) feels the array (crippled: "at the stadium"; taken: "in their hold"); sits in the Academy with the children in Ch 51a, sending word to the Seventh; in Ch 53.4 the chakra the leader took returns through the array and some of it reaches him: he stands up for a moment, laughing; at your inauguration |
 
 **Endings.**
 
 | `twist.fourth_fate` | His end |
 |---|---|
-| Falls | Hit in the stands while carrying Academy children down the east stair (no seat, no barrier); he dies there, shown through the cinematic cutaway (child-stage safe) (Ch 19). Ch 20: an **Akimichi farewell feast**: the whole village eats his favourite dish in the street, his bowl set at an empty place; `squad3_b` or his daughter quotes `ans.hokage_4.want`. His bowl to you (Ch 21). The stipend continues in his name; you **extend** it as the Eighth (Ch 55) |
-| Crippled | Hit on the same east stair, carrying children; the dark mirror tears half his chakra. Abdicates from his bed and names the Fifth. Mentor through the Chunin arc; at the Academy in Ch 51; at your inauguration |
+| Falls | Hit in the stands while carrying Academy children down the east stair (no seat, no barrier); he dies there, shown through the cinematic cutaway (child-stage safe); his last words to you as you pass on the stair: "Win for you." (Ch 19). Ch 20: an **Akimichi farewell feast**: the whole village eats his favourite dish in the street, his bowl set at an empty place; `squad3_b` or his daughter quotes `ans.hokage_4.want`. His bowl to you (Ch 21). The stipend continues in his name; you **extend** it as the Eighth (Ch 55) |
+| Crippled | Hit on the same east stair, carrying children; the dark mirror tears half his chakra. Abdicates from his bed and names the Fifth. Mentor through the Chunin arc; at the Academy with the children in Ch 51a, sending word to the Seventh; at your inauguration |
 | Taken | Hit on the east stair with a binding seal and carried off over the wall in Ch 19 (`squad3_b`, beside you on the stair, runs after him); rescued in Ch 21 (The Empty Seat, led by `sensei_2`; `squad3_b` carries his grandfather out), hollowed; mentor as crippled; warns of the array in Ch 49 |
 
 ## Dialogue brief
@@ -104,7 +104,7 @@ Voice samples, not shipped lines:
 | `ans.hokage_4.hard` | Crippled/taken: Ch 22 to 31, visiting him | "Is she too hard on you? The Fifth?" | yes / she's scared / she's right to watch me | Kindness | Ch 31.4 (he visits her after she steps down and repeats it) | "She's scared": he softens the village toward her after she steps down |
 | `ans.hokage_4.didnt_ask` | Living, Ch 40 | "I chose not to ask what was under the Rock. Would you have asked?" | yes / no / I'd have asked the keeper to tell me himself | Honesty | Ch 49 war council | — |
 | `ans.hokage_4.bun` | Ch 18.3 | "Pork or bean paste?" (the buns) | pork / bean / both / for my squad first | Family | Ch 21 (falls: his daughter knows your bun; living: he brings it) | — (life with a function: a memory to grieve or keep) |
-| `ans.hokage_4.office` | Ch 1, after the stipend (level 1) | "Big office, isn't it? Too big?" | too big / just right / it smells like food | — | Ch 20 (falls: the empty office; crippled/taken: he asks again from his bed) | — |
+| `ans.hokage_4.office` | Ch 1, after the stipend (level 1) | "Big office, isn't it? Too big?" | too big / just right / it smells like food | — | Ch 20 (falls: the empty office; crippled: he asks again from his bed; taken: not asked, he is captive) | — |
 | `ans.hokage_4.council` | Ch 9 to 14, a village meeting (level 2) | "The council wants me to be harder. Should a Hokage be feared a little?" | yes, a little / never / feared by enemies only | Kindness | Ch 20 (crippled: he cites it naming the Fifth); Ch 31 | — |
 | `ans.hokage_4.daughter` | Level 3, at the barbecue house | "My girl wants to close early on festival nights. Should I let her?" | yes / no, the village needs the grill / ask her why | Family | Ch 21 (falls: she tells you he took your advice) | — |
 | `ans.hokage_4.practised` | Taken: Ch 21.2c; crippled: Ch 22 to 25 | "Do you want to know what they did to me? Some people don't." | yes / not now / only what helps us stop them | — | Ch 49.3 (how much he tells the council) | Sets how much of the dark mirror he describes |

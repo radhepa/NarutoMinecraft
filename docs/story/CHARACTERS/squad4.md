@@ -270,10 +270,10 @@ is shaken, because she admires the medic; it becomes part of her arc (below).
 | Dusk | Ch 16 to 19: treats the injured in the forest and the stands |
 | Embers | A Chunin on the medic's rotation; **Ch 25**: in the hospital after the border post, she changes the player's bandages and talks to the fallen friend while they sleep |
 | Ashes | **Ch 38**: the roster (above). If the medic is the voice, she visits the medic in a cell and asks why; if innocent, she becomes the medic's partner in treating the lost child |
-| Last Bonfire | Treats the lost child after her return (N6 or Ch 47) with the medic (or alone, if the medic is arrested). **Ch 51a to 51b**: runs the hospital with sensei_4 and the medic through the assault. **Ch 52 to 53**: climbs the Rock's slope after the player; one way the second lives (below) |
+| Last Bonfire | **N6 or Ch 47 (fixed beat)**: treating the lost child after her return, she finds that the stolen embers still in her carry the leader's voice (the sentence he sent through her in Ch 44.3) and quiets it with a herb-and-chakra binding; the lost child sleeps through a night for the first time. She treats her afterwards with the medic (or alone, if the medic is arrested). **Ch 51a to 51b**: runs the hospital with sensei_4, the medic and (if home) the lost child through the assault. **After 51b**: climbs to the Rock's slope behind the player; one way the second lives (below) |
 
 **Ch 53.5: the revival.** If `friendship [squad4_c, 6]` and `ans.squad4_c.second` is not "someone
-else first" (unset counts as yes), she is on the Rock's slope (she climbs after the player in Ch 52) and the player can kindle her healing past its limit: it becomes a
+else first" (unset counts as yes), she is on the Rock's slope (she climbs there after 51b) and the player can kindle her healing past its limit: it becomes a
 revival, and the second, torn hollow, comes back. This is one of the three ways for `story.second.lives` (53.5, before the leader's end), with the
 web at "strong" or above and `friendship [yugure_second, 4]`. Her line: "Everyone gave up on her. I
 didn't get the chance to."
@@ -334,11 +334,11 @@ shy. Teen: steady. Adult: calm in every storm.
 | `ans.squad4_c.bruise` | After Ch 2, level 1 (she patches the class) | "Did the rival do this or did you do it falling?" | "the rival", "me, falling", "the camps taught me to fall" | Honesty | She asks the rival to spar more gently, or teaches you to fall better | Filler |
 | `ans.squad4_c.medic` | Paper Trail, level 3 | "I want to be a medic like {name:medic}. Is that a good thing to want?" | "yes", "be a medic like you", "be better than them" | Kindness, knowledge | Ch 39 or Ch 40: how she speaks of the medic once the truth is out | Her admiration's shape |
 | `ans.squad4_c.forest` | Ch 16, treating a teammate at camp, level 3 | "If two people are hurt and I can only help one, how do I choose?" | "the worse hurt", "the one who can still fight", "ask them" | Kindness against duty | Ch 51a: whom she treats first at the hospital | — |
-| `ans.squad4_c.herb` | Ashes, level 5 (a herb walk) | "Lily of the valley is poison and medicine. Which are you?" | "medicine", "poison", "depends on the hand" | Creativity, honesty | Her Ch 53 line when the player kindles her | — |
-| `ans.squad4_c.second` | Ch 49 to 52, if the second is with the Leaf, level 4+ | "She tore half the village. Would you want me to save her, if it came to it?" | "yes", "only if she wants it", "save someone else first" | Kindness against justice | Ch 53.6: "yes" or "only if she wants it" lets her try the revival; "someone else first" she treats the wounded instead and the revival needs another path | Gates her revival |
+| `ans.squad4_c.herb` | Ashes, level 5 (a herb walk) | "Lily of the valley is poison and medicine. Which are you?" | "medicine", "poison", "depends on the hand" | Creativity, honesty | Ch 53.5: if she performs the revival, her line follows it (medicine: "Medicine, then."; poison: "Even poison can be a cure."; hand: "Depends on the hand. It's yours."); otherwise, at level 9+, one short face line | — |
+| `ans.squad4_c.second` | Ch 49 to 51a, if the second is with the Leaf, level 4+; read at 53.5 | "She tore half the village. Would you want me to save her, if it came to it?" | "yes", "only if she wants it", "save someone else first" | Kindness against justice | Ch 53.6: "yes" or "only if she wants it" lets her try the revival; "someone else first" she treats the wounded instead and the revival needs another path | Gates her revival |
 
 **What her lines are for.** Clue (the roster, Ch 38; identical before), plot (the lost child's care,
-the Ch 53 revival), bond, teach (herb items, healing buffs), life. Mood states: by the medic's
+the Ch 53.5 revival), bond, teach (herb items, healing buffs), life. Mood states: by the medic's
 rotation after Ch 39 (grieving the medic's betrayal, or working beside them).
 
 **Variants.** Varied may roll any clan; the ★ trait is **the medic trainee who keeps the roster**.

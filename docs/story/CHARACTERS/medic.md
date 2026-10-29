@@ -24,7 +24,7 @@
 
 Born ~Y-31; 31 at Y0 ("the hospital's young medic" in Classic, young for the post). The medic was
 an orphan once: an orphanage on the border burned when they were seven (~Y-24);
-strangers in road clothes, soot marks on their wrists, pulled them out three days before the Leaf arrived and kept them a month in a
+strangers in road clothes, soot marks on their wrists (the leader's gatherers, before Yūgure was founded), pulled them out three days before the Leaf arrived and kept them a month in a
 camp, kindly, before leaving them at a Leaf outpost. They never knew who the strangers were.
 They became a medic to be the person who arrives in time. They test every rescued child (the Ch 0
 sample) because the hospital found that camp children carry chakra injuries no one sees.
@@ -64,12 +64,16 @@ access in every save, as for every candidate: the stadium triage posts list (whi
 guard posts for the finals), the Sixth's clerk's news that the archive would be open (Ch 37), and,
 after the porter falls (Ch 28), the outpost letters as a channel (used only if bound).
 By Ch 25 they are half ready to be caught; the slip ("Better than ninety, for a ninth—" and they
-stop, and say "for a Chunin") is almost a confession. At Ch 39: "Sixteen years. Just numbers, I said."
+stop, and say "for a Chunin") is almost a confession. At Ch 39: "Sixteen years. Just numbers, I said." Their stadium line, keyed to `twist.fourth_fate`:
+they were told the triage posts list was wanted "for a show of strength; no one would be hurt".
+Falls: "I was on the east stair's post. I reached him after. There was nothing to do." Crippled: "I
+set his chair myself. Every day I set it, I knew." Taken: "I counted the wounded and he wasn't one.
+He was just gone, and I'd drawn them the map of where we'd stand."
 
 ### If innocent
 
 Everything in "every save" is true and nothing else. The visit was the instructor's request.
-Their Ch 25.1 line: "Your pulse is good. Better than ninety, for a Chunin." The
+Their Ch 25.1 line: "Your pulse is good. Better than eighty-eight, for a Chunin." The
 pages were torn by the night patient (the Ch 11 smuggler) while they were in surgery all night.
 **The night shift is identical in every save**: the player is sent on an errand across the hospital
 during the window and never sees the medic's station; only `squad4_c`'s surgery roster (Ch 38)
@@ -85,7 +89,7 @@ The diverted supplies' requisition was forged (`side.b3.hospital_supplies` clear
 | Your nursery number "Nine" | Before Ch 0 (Yūgure's lists) | **Bound only** |
 | That you can see their thread flicker | Ch 25 onward, if you tell them; every save reacts the same ("Then you'll know I'm hiding something. Good. Keep me honest.") | Both |
 | That the strangers may have been Yūgure (a suspicion) | Ch 19 onward | Both |
-| The strangers who saved them were Yūgure | Age 19 | **Bound only**; innocent: Ch 40, when the council makes the nurseries public, they realise it and come to you shaken |
+| The strangers who saved them were the leader's people | Age 21 (~Y-10) | **Bound only**; innocent: Ch 40, when the council makes the nurseries public, they realise it and come to you shaken |
 | The lost child was "theirs" (measured) | Ch 24 | Bound only |
 
 **How they change.**
@@ -98,14 +102,14 @@ The diverted supplies' requisition was forged (`side.b3.hospital_supplies` clear
 | 4 Embers | Treats you after the border post; the slip (bound) or the parallel kind line (innocent); treats the porter (Ch 28) |
 | 5 Ashes | Bound: unmasked (Ch 39). Innocent: cleared (Ch 40), asks to care for the lost child |
 | 6 Night Watch | Treats the lost child after N6 (innocent; or from custody, bound, if you allow it) |
-| 7 Last Bonfire | Runs the war hospital (innocent or turned); bound and arrested: asks to be let out to work; the ruling (Ch 55) |
+| 7 Last Bonfire | In Ch 51a the hospital (a cutaway) with `sensei_4`, `squad4_c` and, if home, the lost child; Runs the war hospital (innocent or turned); bound and arrested: asks to be let out to work; the ruling (Ch 55) |
 
 **Endings.**
 
 | | Bound | Innocent |
 |---|---|---|
 | Reveal | The hospital roof at dawn, green ink on their fingers ([ROTATIONS.md](../ROTATIONS.md)) | Cleared in Ch 40 |
-| Turned | Keeps sending readings, now false; in Ch 51 they lead a hollow-fighter's wounded away from the false anchors | — |
+| Turned | Keeps sending readings, now false: false casualty lists, so the hospital is ready when Ch 51a comes | — |
 | Arrested | Asks only to treat the lost child; the Hokage's ruling in Ch 55 (pardon / exile / service) | — |
 | Wrongly accused (innocent) | — | Detained two days; `bond.c.wrongly_accused.medic`: they ask you to fold a crane with them before they'll speak |
 
@@ -140,7 +144,7 @@ Voice samples, not shipped lines:
 
 | Fact | Not before |
 |---|---|
-| "Nine", the ninth | **Only the bound save's Ch 25 slip line**; never in any other save or scene before Ch 39. The innocent Ch 25 line says "ninety" (a pulse, and the parallel line) and nothing else counted near you |
+| "Nine", the ninth | **Only the bound save's Ch 25 slip line**; never in any other save or scene before Ch 39. The innocent Ch 25 line says "eighty-eight" (a pulse) and nothing else counted near you |
 | Their own orphanage rescue by strangers | Level 5 (both saves; the story is the same) |
 | That the strangers were Yūgure | Bound: Ch 39. Innocent: Ch 40 |
 | That they measured the lost child | Bound only, Ch 39 |
