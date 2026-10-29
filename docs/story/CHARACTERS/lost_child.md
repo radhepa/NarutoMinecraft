@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | Role | `role:lost_child`: the girl in the next cell (Ch 0); hollowed by the leader; Yūgure's weapon (Ch 24); deserter (Ch 44); home (N6 or Ch 47) |
-| Look | **Fixed** in every save: a thin girl with a cropped dark fringe and a scar through one eyebrow; as hollow: chalk-pale, eyes flat grey, the ash-violet cloak; at home: colour returns slowly over the Road to Hokage |
+| Look | **Fixed** in every save: a thin girl with a cropped dark fringe and a scar through one eyebrow; as hollow: chalk-pale, eyes flat grey, an ash-violet scarf over her mouth; at home: colour returns slowly over the Road to Hokage |
 | Pronouns | She / her (fixed look) |
 | Name | Given Family. Her given name is rolled; her **family name** is unknown to her (and to the Leaf) until Yūgure's list is decoded (Ch 38): the nursery recorded it when she was taken. Until then the medic's records say "unknown" |
 | Clan | **No clan**; a distant Kagari descendant (her chakra charred the paper) |
@@ -27,14 +27,14 @@ home: to find out what she likes, who she would have been, and to be called by h
 
 **Fears.** Being forgotten (Ch 0). As hollow, there is only an echo of fear: being taken again. At
 home: that the stolen voices are still in her; that she hurt people (she did: the border post, the
-Yūgure cells in Ch 44).
+Yūgure hearths in Ch 44).
 
 **Secrets.**
 - In the nursery she was "Seven". She heard the guards call you "Nine" (she never uses it: she
   hated hers).
 - The leader took her chakra the night of Ch 0 to test the dark mirror on a Kagari-sensitive child;
-  then cells forced stolen embers into her to make a weapon. She remembers the leader's song.
-- In Ch 44 she was already hunting Yūgure cells on her own: the cord was pulling her back.
+  then a hearth forced stolen embers into her to make a weapon. She remembers the leader's song.
+- In Ch 44 she was already hunting Yūgure hearths on her own: the cord was pulling her back.
 - She remembers the hideout's layout and two of the leader's hiding places (useful in Ch 49 and the
   S-ranks before Ch 51, if she is home by then).
 
@@ -54,7 +54,7 @@ Yūgure cells in Ch 44).
 | Phase | Change |
 |---|---|
 | Ch 0 | Brave, whispering, gives away the only thing she has |
-| Ch 24 | Hollow; stops at the cord |
+| Ch 24 | Hollow. At 24.2 you only doubt (the scar through the eyebrow, the flat eyes of someone you knew); certainty comes at the cord (24.6), when she stops |
 | Ch 44 | Breaking: "Too many voices in here. One of them is yours." |
 | N6 / Ch 47 | Her own extinguished flame kindled back alive by you, through the cord's thread; home, empty and new; says Ch 0's words finished |
 | Road to Hokage | Learns what she likes; asks the questions she never asked; kindles toward you in Ch 53 |
@@ -65,12 +65,20 @@ Yūgure cells in Ch 44).
   and helps map the hills.
 - **Home by the shrine (Ch 47)**: shorter recovery; she still asks the questions, compressed into
   Ch 47 to Ch 54.
-- **Ch 0 words** (`ans.lost_child.cell`) return in Ch 24 and N6/Ch 47: *remember* → "You
-  remembered"; *find* → "You found me. You said you would."; *silent* → "Someone remembers. You did."
+- **She always comes home by Ch 47**, by N6 or by the Ch 47 path.
+- **First words home.** N6: "So someone remembers I was here. You did." Ch 47: "I found you this
+  time." Variants by `ans.lost_child.cell`: *remember* → N6 adds "You remembered."; Ch 47 "You
+  remembered. So I found you this time." *find* → N6 "You found me. You said you would."; Ch 47 "You
+  said you'd find me. I found you this time." *silent* or **unset** → the base lines.
+- **Ch 24.6**, her hollow echo of your Ch 0 words: *remember* "I'll remember"; *find* "I'll find
+  you"; *silent* or unset "...someone remembers."
+- **Ch 44.3**: through her, the leader speaks one sentence to you in her flat voice: "Grow, little
+  flame. I like your friends." She does not know she said it.
 - **Ch 44** (`ans.lost_child.echo`): *follow* opens the Night Watch lead (the cloth strip to the
   Shimura house); *protect* keeps your Genin safe and she says nothing more.
-- **Ch 53**: if home and at `friendship 6`, her flame comes before the instructor's: "So someone
-  remembers." If home but under 6, she watches, and in the epilogue says she wishes she had.
+- **Ch 53: the red cord is always the first flame,** at any level (`bond_flag red_cord`, an
+  `offered_flame`): "So someone remembers. It's mine to give." It is the finale's lonely floor. At
+  `friendship 6` she speaks again in her own place in the order (after the rival): "I'm still here."
 - She **cannot die** in the story after her return; before it, she always escapes.
 
 ## Dialogue brief
@@ -94,6 +102,7 @@ Voice samples, not shipped lines:
 - (Ch 0) "They're taking me tonight. Here. So someone remembers I was here."
 - (hollow, Ch 24) "Up. Little flame. Up. ...I'll remember."
 - (Ch 44) "Too many voices in here. One of them is yours."
+- (Ch 44, the leader through her) "Grow, little flame. I like your friends."
 - (home) "What's this called? Ramen. Do I like ramen? ...I think I like ramen."
 - (home, later) "{player}. Say my name again. I want to hear it in your voice."
 - (Ch 53) "So someone remembers. Take it. It's mine to give."
@@ -117,7 +126,7 @@ Voice samples, not shipped lines:
 | Her nursery number | Never |
 | What the leader did, in detail | After return, level 5, and only if you ask (pried before it) |
 | The leader's hiding places | After return (Ch 49 or before) |
-| That she hunted cells in Ch 44 | After return |
+| That she hunted hearths in Ch 44 | After return |
 
 ### Questions for the player
 
@@ -139,7 +148,7 @@ or compressed into Ch 47 to 54). Her answers to *you* (the player's choices) sha
 | `ans.lost_child.ramen` (new) | First ramen, Ichiraku (hangout) | "Is this your order? Can it be mine too?" | yes, it's ours / no, pick your own / try every one | filler with payoff | The cook calls her order from then on | A ritual (`ritual ramen`) |
 | `ans.lost_child.shrine` (new) | Shrine visit hangout (L3) | "This is where he hid when they burned it. Should I hate the place?" | no, it's ours now / it's allowed / we'll make new memories here | kindness | The epilogue (shrine keeper path) | Pulls her toward the shrine |
 | `ans.lost_child.thread` (new) | L6, after you tell her about Thread Sight | "What does my thread look like now?" | copper, and getting brighter / tangled, like mine / it's yours, you choose | honesty | Ch 53 (her flame's colour line) | She watches her own recovery through your eyes |
-| `ans.lost_child.cord` (new) | Ch 54 Morning | "Do you still have it? The cord?" | give it back / keep it / tie it on the shrine basket together | — | The epilogue's last image (the basket is the default; *give back*: she wears it; *keep*: you do) | The last image |
+| `ans.lost_child.cord` (new) | Ch 54 Morning | "Do you still have it? The cord?" | give it back / keep it / tie it on the shrine basket together | — | Decides the epilogue's last image, Ch 55.5 (**unset**: the basket; *give back*: she wears it; *keep*: you do) | The last image |
 
 ### What her lines are for
 

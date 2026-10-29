@@ -32,6 +32,13 @@ space a parent left.
 **Fears.** That they *are* their parent: someone who walks away (Ch 16: "If I ever start walking
 away, drag me back"). Being left behind by the squad.
 
+**Why Yūgure wanted b.** Not for b's chakra: b has no Kagari blood. The leader wanted a way into
+Nine's squad: eyes on the wick as it grows, and a door for later. b's parent, a hearth member for
+years, was the bait; the second was given the job (Ch 13) and hated it. She says so in Ch 49 if b
+asks her (`ans.teammate_b.stranger_face` = ask or come_with): "He didn't want you. He wanted to stand
+next to your friend. I'm sorry I used your parent's name." b's anger at being *used for someone
+else* is the last push of their arc: they were never the point, and they choose to be anyway.
+
 **Secrets.**
 - Their parent left; the village says "missing-nin" (told to you in Ch 6; `ans.teammate_b.parent_first`).
 - They keep the parent's old forehead protector (shown in B2 bond quest 2).
@@ -66,13 +73,15 @@ away, drag me back"). Being left behind by the squad.
 - **Ch 13 → Ch 26 path** (`story.teammate_b.path`):
   - *stayed* (trust 60+): b brings you the second note; together you trap the bridge. Ever after b
     says "we" about every danger. Ch 51: steady, asks the question calmly.
-  - *nearly* (30 to 59): the walk to the well, the cloak in their hands, your drag-back line. A
+  - *nearly* (30 to 59): the walk to the well, the ash-violet scarf in their hands, your drag-back line. A
     `reconciled`-weight moment when they come back. Ch 51: shaky; they look at you before they speak.
   - *left* (under 30): b quits the squad (`remove_from_squad story`), trains alone, sleeps badly.
     Their return quest (Ch 32) needs `friendship 4`; if never done, b returns in Ch 49 when the
     second's truth makes Yūgure impossible, and fights in Ch 51 apart from you (no shared line in 51.3).
-- **Ch 51 parent scene** reads `ans.teammate_b.ask` (the question b asks) and
-  `ans.teammate_b.come_back`: *yes* → b brings the parent in (epilogue: an awkward dinner at the
+- **Ch 51a parent scene** (the parent in road clothes, a sinking sun in soot on the inside of the
+  wrist, an ash-violet scarf pulled down) reads `ans.teammate_b.ask` (the question b asks; **unset**:
+  b asks "why") and
+  `ans.teammate_b.come_back` (**unset**: "only if sorry"): *yes* → b brings the parent in (epilogue: an awkward dinner at the
   grandmother's); *only if sorry* → the parent must say it; if b's parent bond flag `parent_sorry`
   (set by the ask = "are you sorry") they do, else they walk away; *no* → b lets them go and does not
   look back (epilogue: b at the bridge, alone, at peace). The parent lives in all three.
@@ -82,7 +91,9 @@ away, drag me back"). Being left behind by the squad.
   opens on them; you push your chakra into them; they rise for one moment with the pup, and their
   own fang technique (Classic: a spinning pup-and-partner rush) goes past its limits into a storm
   that tears the post's smoke away and drives the hollow girl back. Ch 25: "Did you SEE that? That
-  was me! ...It was me, right? You just made it bigger."
+  was me! ...It was me, right? You just made it bigger." If b already knew (`bond_flag knows_flame`,
+  Ch 23): at 24.4 "Do the thing! The fire thing!", and at 25.2 "Knew it. Knew it since the school."
+  The fall line itself reads `ans.teammate_b.drag_back` (**unset**: "Don't you dare walk off—").
 - **Thread Sight on them** (from Ch 24, level 6+): the thread frays toward the bridge on the nights
   they go there; it flickers when they hide the stranger's notes (Ch 26 *nearly*, until the well).
   On the *left* path it thins to one strand that never quite breaks.
@@ -151,7 +162,7 @@ Voice samples, not shipped lines:
 | `ans.teammate_b.forest_voice` | Ch 16.8 | "That's the voice from the bridge. Do we tell sensei?" | tell sensei / keep it between us | duty vs loyalty | Ch 26 (the sensei is ready, if told: `stayed` gets a sensei ambush) | Whether they trust adults with it |
 | `ans.teammate_b.pup_name` (new) | Ch 2 or first talk (L1) | "The pup needs a real name. You pick." | a food / a jutsu sound / your name for them / "Pup" | playful | Every scene the pup is in; Ch 51 (the parent asks its name) | Filler with payoff: the pup's name token `{pet:role:teammate_b}` |
 | `ans.teammate_b.loud` (new) | Genin hangout, rooftop race (L3) | "Am I too loud? Grandma says I'm too loud." | yes, and don't stop / sometimes / you're as loud as you need | freedom, kindness | Ch 33 (captain's voice) | Whether they learn quiet or keep the noise as theirs |
-| `ans.teammate_b.cloak` (new) | Ch 26 *nearly* or *left* return | "What would you have done if I'd put it on?" | come after you / let you go / put one on too, to drag you out | loyalty | Ch 51 (if the parent offers b a cloak again, b answers with yours) | |
+| `ans.teammate_b.cloak` (new) | Ch 26 *nearly* or *left* return | "What would you have done if I'd tied it on?" (the scarf) | come after you / let you go / tie one on too, to drag you out | loyalty | Ch 51 (if the parent offers b a scarf again, b answers with yours) | |
 | `ans.teammate_b.parent_hate` (new) | Jonin, level 7 talk (worries), after Ch 40 | "The village erased a whole clan and called it peace. Maybe my parent wasn't wrong to leave." | they weren't wrong to be angry / they were wrong to leave you / both | honesty | Ch 51 parent scene (b quotes you) | Lets b grant the parent's grievance without excusing them |
 | `ans.teammate_b.squad4` (new) | Genin, after a squad4_b brawl (L3) | "squad4_b says their dog's braver than mine. Settle it." | yours / theirs / have a race and find out | playful, filler with payoff | Ch 33 (a race at the Jonin promotion), Ch 51 (the two dogs side by side) | A rivalry that keeps b anchored to the village |
 | `ans.teammate_b.grandma` (new) | Life event: the grandmother sick (L4) | "If she goes, I've got nobody. Don't say I've got you, that's cheesy." | you've got me anyway / you've got the squad / you've got the pup, at least | family | Ch 26 (on the *nearly* path, your answer is what stops them at the well) | Who b counts as family |

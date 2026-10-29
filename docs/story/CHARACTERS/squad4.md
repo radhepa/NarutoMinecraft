@@ -8,7 +8,7 @@ interrogator who bakes). In Classic it is a Hyuga heir, an Inuzuka and a Suzuran
 rule-keeper, the noise and the healer**. sensei_4 calls them "my three weather systems".
 
 All three are rolled-look roles. ★ role traits fixed in every save: squad4_a is **the future
-Fifth's niece** (always Hyuga, main house), squad4_c is **a herbalist medic trainee** who keeps the
+Fifth's niece** (always Hyuga, main house: **a fixed clan in every save**, because the Fifth's look and clan are fixed; only her look and gender roll), squad4_c is **a herbalist medic trainee** who keeps the
 hospital's surgery roster (always Suzuran in Classic; in Varied, any clan, but always the medic
 trainee). squad4_b is a fan favourite: in Varied any clan with a large companion animal or a loud
 style (see Variants).

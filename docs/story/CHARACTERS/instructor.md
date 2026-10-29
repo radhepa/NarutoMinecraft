@@ -54,14 +54,14 @@ room of children calm (Ch 51 is that day, and it is).
 | 3 Dusk | Evacuates the Academy children in Ch 19 (seen from the east stair) |
 | 4 Embers | Quietly defies the Fifth's curfew to run night lessons for nursery-rescued children |
 | 5 Ashes | Becomes Academy head; asks you to teach a class; hears the council and adds the twenty-seven to the history lessons |
-| 7 Last Bonfire | Holds the Academy in the assault (Ch 51.2); asks the face question at your carving |
+| 7 Last Bonfire | Holds the Academy in the assault (Ch 51a) with `sensei_3` and `squad3_b`; asks the face question at your carving |
 
 **Endings and variants.**
 
 | | |
 |---|---|
 | `twist.fourth_fate = crippled/taken` | They share the Academy with the Fourth (who teaches history); comic and tender scenes together |
-| `twist.fourth_fate = falls` | They speak at the statue's unveiling (Ch 21) |
+| `twist.fourth_fate = falls` | In Ch 19 they lead the Academy children out while he covers them on the arena floor; at the Akimichi farewell feast (Ch 20) they keep the children fed and busy; they speak at the statue's unveiling (Ch 21) |
 | `ans.instructor.face` | Ch 42 and Ch 55 callbacks |
 | `ans.player.ramen` | They order it for you whenever they pay |
 
@@ -114,8 +114,11 @@ Voice samples, not shipped lines:
 | `ans.instructor.recess` | Ch 2, level 1 | "Recess! Join the tag game or keep training?" | play / train / watch first | Kindness, freedom | Ch 6 study night (they seat you by the kids you played with) | — (life with a function: who your first friends are) |
 | `ans.instructor.rival` | Ch 2 to 4, level 2 | "The {family:rival} kid. Should I make you two partners?" | yes / no / let us decide | Kindness | Ch 8.1 (they say, at the assignment, "I asked for you two to be apart. Sorry. Or not") | Shapes the rival's first-month greetings (warmer if "yes") |
 | `ans.instructor.flare` | Ch 31, level 5 (after the gift is public) | "I hushed you, that day with the post. Should I have asked you first?" | yes / no, you protected me / I didn't know what to say either | Kindness, honesty | Ch 40 (they speak at the council for the descendants if "yes") | "Yes": they start asking children before deciding for them |
-| `ans.instructor.raid` | Level 6, a ramen hangout | "Do you remember me at the raid? I was the loud one." | yes, you carried two kids / no / I remember your voice | — (their past) | Ch 51.2 (they tell the Academy children your answer as a story) | — |
-| `ans.instructor.war` | Ch 51.2 eve (Ch 50), level 5 | "If it comes to it, do I keep the kids inside, or run them out?" | inside, with you / out, through the north gate / ask the Seventh | Duty | Ch 51.2 (where the children are when the cell arrives) | Changes the Academy set-piece (siege or escort) |
+| `ans.instructor.raid` | Level 6, a ramen hangout | "Do you remember me at the raid? I was the loud one." | yes, you carried two kids / no / I remember your voice | — (their past) | Ch 51a (they tell the Academy children your answer as a story) | — |
+| `ans.instructor.war` | Ch 50 (the eve of Ch 51a), level 5 | "If it comes to it, do I keep the kids inside, or run them out?" | inside, with you / out, through the north gate / ask the Seventh | Duty | Ch 51a (where the children are when the cell arrives) | Changes the Academy set-piece (siege or escort) |
+
+**Unset answers.** Every main-path read of an `ans.instructor.*` flag (Ch 42, Ch 51a, Ch 55) has an
+`unset` branch with a neutral line.
 
 ### What their lines are for
 

@@ -92,7 +92,8 @@ hurt because of it (Ch 16). Later: being made into a tool (the sensor corps, the
   describes them, burned shrine and all; *should* → the same faces at the Leaf's festivals, as if
   they had never left; *both* → two panels, and they ask you which goes on the left. It reads
   `ans.teammate_a.show`: *brave* → they unveil it; *foolish* → they ask you to; *both* → they hold the
-  cloth with you.
+  cloth with you. **Unset** (quests never done): one panel, the faces as the archive describes
+  them, and they ask you to hold the other corner.
 - **Romance** (teen and up, if chemistry allows): dating moves the painting hangout to *their*
   studio; the confession (level 8) is a painting of you they never finished in public (the Kurama
   custom: "a painted eye is never finished in public"). If you date them, `teammate_b` gets the
@@ -122,7 +123,7 @@ Voice samples, not shipped lines:
 - (teen, Ch 30) "They want me to read people for the corps. I'd rather paint them. Is that selfish?"
 - (teen, after Ch 24) "I didn't freeze. I want you to know that. I was so scared, and I didn't."
 - (adult, Ch 41) "{player}. Hold the other corner. If they hate it, they hate it with both of us."
-- (adult, Ch 53) "You told me once you were afraid of being alone. Look how many of us there are."
+- (adult, Ch 53, by `ans.teammate_a.your_fear`) alone: "You told me once you were afraid of being alone. Look how many of us there are." / taken: "Nobody takes you. We give." / nobody: "Nobody? Look how many of us know your name." / fire: "This is the good kind." / unset: "Here. All of it. It's yours."
 
 ### Topics they care about
 
@@ -160,7 +161,7 @@ Voice samples, not shipped lines:
 | `ans.teammate_a.colour` (new) | Hangout: painting at the overlook (L3, any arc) | "If you were a colour, which one?" | the red of the cord / ash-grey / the green of the Leaf / whatever you'd paint me | creativity (filler with a payoff) | Their portrait of you (Ch 55 epilogue, or the confession painting) uses it | Small: sets your colour in their art |
 | `ans.teammate_a.seen` (new) | Chunin, level 6 talk (dream) | "Do you think I'd still be me if nobody ever saw my paintings?" | yes, you paint for you / no, art needs eyes / I'd see them | creativity / kindness | Ch 41: whether they sign the mural | *yes*: unsigned mural; *no*: signed large; *I'd see them*: signed small, with a mark only you know |
 | `ans.teammate_a.used` (new) | Jonin, level 7 (worries), after Ch 36 | "The founders used a whole clan's gift and then erased it. Are we using you, when we fight beside you?" | no, I'm choosing / sometimes, and that's all right / yes, so watch me | honesty, kindness | Ch 53 (their flame line: "You said you were choosing. So am I.") / an epilogue line | Settles their fear of being a tool by seeing you choose |
-| `ans.teammate_a.squad` (new) | Ch 8, after the bells (L3) | "Why did you grab the bell with me? You could have taken it alone." | because we pass together / because you were there / because you'd have done it for me | kindness, loyalty | Ch 16 night watch (they say they've thought about it since) | Their first belief that they're chosen, not just near |
+| `ans.teammate_a.squad` (new) | Ch 8, after the bells, three bells on one red cord (L3) | "Why did you hand me the cord's end at the bells? You could have tried alone." | because we pass together / because you were there / because you'd have done it for me | kindness, loyalty | Ch 16 night watch (they say they've thought about it since) | Their first belief that they're chosen, not just near |
 | `ans.teammate_a.hurt` (new) | Life event after Ch 24 (injured; comfort at L5) | "My hand shakes when I hold the brush now. Should I stop for a while?" | rest, the brush will wait / paint the shaking / paint with your other hand, I'll hold the paper | creativity | Ch 41 (the mural has a shaky line they kept, or doesn't) | How they carry the injury |
 | `ans.teammate_a.secret_kept` (new) | Chunin, level 7 (after Thread Sight sees their flicker) | "You can see I'm hiding something, can't you. Do you want to know?" | only when you want to tell me / yes / I already know it's about me | honesty, privacy (asking "yes" is pried if under 7) | Romance confession, or the warm-room sketchbook shown | Teaches them that hiding from you is allowed |
 | `ans.teammate_a.after` (new) | Road to Hokage, Ch 46 hangout at the shrine | "When this is over, will you still have time to sit for a portrait?" | always / only if you paint me tired / I'll make time | kindness | Ch 55 epilogue: the portrait | The epilogue portrait's pose |

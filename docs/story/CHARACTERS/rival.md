@@ -63,12 +63,17 @@ worth more than strength earned, which would make their whole life a mistake.
 **Endings and variants.**
 - **Ch 19 cover:** with both teammates under level 4, the rival takes the blade meant for you
   (`saved_by_them`). Their Ch 20 line: "Don't thank me. I want our match back."
+- **Ch 51b, fixed in every save:** on the Rock's stair the rival holds the way against the strongest
+  hearth so you can climb: "Go. You owe me a match." They are badly hurt and live; the match is
+  paid in the epilogue (`ans.rival.spar_last`).
 - **Ch 29 answer** (`ans.rival.theirs`) decides their Ch 53 line: *my memory of them* → "Then
   remember me. Take it."; *nothing, so I won't let them go* → "Then don't let go."; *me, the person
   they chose to trust* → "You said I'd be what's left. Then take it." (ARCS/7 already uses this
-  last line; the others are the alternates.)
+  last line; the others are the alternates.) **Unset** (Ch 29 skipped): "I'm not giving you this
+  because I lost. Take it."
 - **Ch 43** (`ans.rival.why_came`) adds the second half of the Ch 53 line: *you'd have come for me*
-  → "You were right. I came."; *I wanted to* → "I wanted to."; *you asked* → "You didn't even ask."
+  → "You were right. I came."; *I wanted to* → "I wanted to."; *you asked* → "You didn't even ask."; **unset** (Ch 43 skipped):
+  no second half
 - If you **never go** to the ceremony (Ch 43), they still kindle at 6+, without the second half.
 - **Romance** (teen and up): a rival romance is slow (pride); the confession is a challenge ("Spar
   me. If I win, you hear something."). Never in the child stage.

@@ -48,7 +48,7 @@ been on the Ash Road with them.
 luck and has never earned it.
 
 **Secrets.** He asked to go on the Ash Road mission and was turned down (the roster was full). He
-has blamed himself, a little, for twelve years. He keeps the contest tally in a notebook because
+has blamed himself, a little, ever since. He keeps the contest tally in a notebook because
 it is the only way he knows to say that the sensei still matters to him.
 
 **What he knows and when.**
@@ -67,20 +67,21 @@ it is the only way he knows to say that the sensei still matters to him.
 
 | Arc | Change |
 |---|---|
-| 2 Paper Trail | The comic rival: drops out of a tree at Training Ground 3 to challenge the player's sensei (Ch 8.2: who can stay silent longest; the sensei wins without noticing there was a contest) |
+| 2 Paper Trail | The comic rival: drops off the wall walk at Training Ground 3 to challenge the player's sensei to that week's contest (Ch 8.2: threading senbon through the lantern rings on the wall walk, one run each). He loses, writes it down, and shows the squad the page: **38 to 211**. "I'm catching up." |
 | 3 Dusk | Guards the Kage box when the attack starts; holds it while the Fourth's fate plays out (Ch 19). Afterwards he stops joking for a week |
 | 4 Embers | Leads the Empty Seat rescue (Ch 21c). The Fifth makes him Jonin Commander: he enforces a curfew he hates, strictly and fairly, teasing the player while writing their name in the night log. At the Tobari council (Ch 31.3) he puts down the Commander's armband in front of his own Hokage: "I'm with the kid." The first serious thing he has ever said in public |
-| 5 Ashes | One of the two examiners in the player's Jonin trial (Ch 33.2). Kneels first to the Seventh (Ch 42): "Two hundred and eleven to two hundred and nine. You win this one. Don't get used to it." |
-| 7 Last Bonfire | Holds the main gate in the war (Ch 51.1) until the evacuation is through, and dies there; "You won" |
+| 5 Ashes | One of the two examiners in the player's Jonin trial (Ch 33.2). Kneels first to the Seventh (Ch 42): "Thirty-eight to two hundred and eleven. You win this one too. Don't get used to it." |
+| 7 Last Bonfire | Holds the main gate in the war (Ch 51) until the evacuation is through, and dies there as the Seventh and the player reach him (Ch 51b); "You won" |
 
-**His ending (every save).** In Ch 51 he holds the main gate with a handful of Chunin against the
-leader's strongest cells until the evacuation is through (he has already sent his own squad, the
-rival, c and d, to the market street). When the player's sensei, now the Seventh, reaches him he is
-dying, and asks: "Did I win?" "You won," the Seventh says: the only contest they ever conceded. In
-Ch 54 the Seventh finds the notebook; the last line, written before the gate, is: *"If I'm not
-around to collect: 212 to 211. Mine."* If `ans.sensei_2.on_purpose` is `counts`, the Seventh reads
-it aloud and laughs, the first time anyone has heard them laugh; if `doesnt`, they write "Counts."
-under it.
+**His ending (every save, main path).** In Ch 51 he holds the main gate with a handful of Chunin
+against the leader's strongest hearths until the evacuation is through (he has already sent his own
+squad, the rival, c and d, to the market street). In Ch 51b the player's route to the Rock passes
+the gate: the player is with the Seventh when they reach him. He is dying, and he always asks:
+**"Did I win?"** "You won," the Seventh says: the only contest they ever conceded. In Ch 54 the
+Seventh finds the notebook; the last line, written at the gate in a lull, is: *"Held the gate
+longer than you would have. 39 to 211. Mine."* If `ans.sensei_2.on_purpose` is `counts`, the
+Seventh reads it aloud and laughs, the first time anyone has heard them laugh; if `doesnt`, they
+write "Counts." under it; `secret` or unset, they close the notebook and keep it.
 
 ### Relationships
 
@@ -111,7 +112,7 @@ Voice samples, not shipped lines:
 |---|---|
 | Small talk (0) | A bet about the weather |
 | Training (1) | Speed and footwork; challenges you to a race |
-| Hobby (2) | The tally, and a collection of every contest's "prize" (a lost sandal, a bad poem) |
+| Hobby (2) | The tally (lopsided, proudly: 38 wins in twenty years), and the contests he invents on guard rotations: lantern rings, the gate-bell relay, the wall walk in the rain |
 | Family (4) | A big Shiranui family of guards; "I'm the one who doesn't stand still" |
 | Values (5) | "Be fun to lose to. Be impossible to beat when it matters." |
 | Advice (5) | "If it can hurt you, laugh at it first. Then deal with it." (After Ch 31: "Or don't laugh. Sometimes don't.") |
@@ -136,12 +137,12 @@ Voice samples, not shipped lines:
 | `ans.sensei_2.on_purpose` | Ch 42 (after he kneels) | "If I lost a contest on purpose, would it still count?" | It counts / It doesn't / Only if they never find out | Freedom, loyalty | Ch 51 and Ch 54 (the last line of the tally) | "Counts": the Seventh laughs reading it. "Doesn't": the Seventh says "It counts" anyway |
 | `ans.sensei_2.wasnt_there` | Level 7 hangout, Jonin arc | "Ever been somewhere you weren't, in your head? Some night you should've been at?" | Yes, the night they took the girl / No / Every day | Honesty | Ch 51: his last order quotes it ("Not this time") | Opens his Ash Road confession |
 | `ans.sensei_2.nickname` | Any hangout, level 3 | "Everybody gets a nickname. What's yours going to be?" | Pick from three he offers ("Matchstick", "Stray", "Trouble") / refuse | Playfulness | He uses it forever; it is the last word in the notebook's margin | — |
-| `ans.sensei_2.contest` | Level 2, a rooftop race | "Name a contest. Anything. I'll beat you at it." | Who can eat more ramen / Who can stay awake longer / Who can make my sensei talk first | Freedom | His greetings keep your running score; the third becomes a joint campaign (he and you vs the sensei) | — |
+| `ans.sensei_2.contest` | Level 2, on his guard rotation | "Name a contest. Anything on this wall. I'll beat you at it." | Senbon through the lantern rings / The gate-bell relay / Who can make my sensei talk first | Freedom | His greetings keep your running score (he loses to you too, cheerfully); the third becomes a joint campaign (he and you vs the sensei) | Opens a ritual on his rotation |
 | `ans.sensei_2.armband` | Ch 31 (after the council) | "I just put down the best job I ever hated. Was that stupid?" | No, it was right / A little, and right / You'll get it back | Loyalty vs duty | Ch 42: when the Seventh offers him the armband back, he takes it if you said "get it back", else he asks to stay at the gate | Where he serves in the war (Ch 51: the gate either way) |
 | `ans.sensei_2.squad` | Level 5, Chunin arc | "My Sunshine still doesn't smile. Should I make them, or leave them be?" | Make them / Leave them be / Make them fight beside someone | His teaching | The rival's Ch 43 ceremony: he is there (make them), absent with a note (leave), or brings the whole squad (fight beside) | The rival's ally arc moves a little faster with "fight beside" |
 | `ans.sensei_2.tally_end` | Level 6 | "What happens to the tally when one of us is gone?" | It stops / The other one keeps it / Someone new picks it up | Loyalty | Ch 54: the Seventh keeps the notebook (other one), closes it (stops), or gives it to you (someone new; you inherit a contest line in the epilogue) | — |
-| `ans.sensei_2.serious` | Level 7, Jonin arc | "Ever wish I'd be serious? Honest." | No, you're right as you are / Sometimes / You are serious, you just hide it | Honesty | Ch 51: his last joke, or his last plain sentence | "You hide it": his final line is plain ("Tell them I was there") instead of "Did I win?" followed by a joke |
-| `ans.sensei_2.gate` | Ch 49 (the war council) | "Someone has to hold the main gate. Who'd you pick?" | You / My sensei / Whoever volunteers / Nobody alone | Duty | Ch 51.1: "You said me. Good pick." / "Nobody alone. So I brought a handful." | — |
+| `ans.sensei_2.serious` | Level 7, Jonin arc | "Ever wish I'd be serious? Honest." | No, you're right as you are / Sometimes / You are serious, you just hide it | Honesty | Ch 51b: a second line after "Did I win?" and "You won" (never instead of them) | As you are: a last joke ("Write it down"); sometimes: nothing more; hide it: a plain line ("Tell them I was there"); unset: nothing more |
+| `ans.sensei_2.gate` | Ch 49 (the war council) | "Someone has to hold the main gate. Who'd you pick?" | You / My sensei / Whoever volunteers / Nobody alone | Duty | Ch 51a (seen from the wall): "You said me. Good pick." / "Nobody alone. So I brought a handful." | — |
 
 **What his lines are for.** Comedy that carries feeling (life, bond); the curfew system's teacher
 (teach, Ch 22 to 31: passes, night logs); the Ch 31 turn (plot); the war's first sacrifice
@@ -158,7 +159,7 @@ becomes a rain of ember-gold needles that pin a whole cell's shadows at once.
 (liked, right, both), `ans.sensei_2.curfew_friend` (yes, pass, depends),
 `ans.sensei_2.on_purpose` (counts, doesnt, secret), `ans.sensei_2.wasnt_there` (girl_night, no,
 every_day), `ans.sensei_2.nickname` (matchstick, stray, trouble, none), `ans.sensei_2.contest`
-(ramen, awake, make_talk), `ans.sensei_2.armband` (right, little, get_back), `ans.sensei_2.squad`
+(rings, bell, make_talk), `ans.sensei_2.armband` (right, little, get_back), `ans.sensei_2.squad`
 (make, leave, fight_beside), `ans.sensei_2.tally_end` (stops, keeps, someone_new),
 `ans.sensei_2.serious` (as_you_are, sometimes, hide_it), `ans.sensei_2.gate` (you, sensei,
 volunteers, nobody_alone).
@@ -192,7 +193,7 @@ blamed her; that is the problem: there is nothing to forgive, so she cannot be f
 **Fears.** Being spared again while someone else stays.
 
 **Secrets.** On the Ash Road the sensei ordered her back to signal for help. She went. She has
-replayed the choice to disobey every night for eight years. She remembers `fallen_parent`'s laugh
+replayed the choice to disobey every night since. She remembers `fallen_parent`'s laugh
 and the watch-fire song. She does not know the ambush was Yūgure until Ch 36.
 
 **What she knows and when.**
@@ -213,15 +214,15 @@ She never speaks of `fallen_parent`'s home life or family before Ch 48.
 |---|---|
 | 2 Paper Trail | Ch 10: at the memorial stone at dusk with the player's sensei; they stand two metres apart and do not speak. The player sees it |
 | 3 Dusk | In the forest, she is a proctor at a tower gate; she lets the player's squad rest an hour longer than the rules allow (a kindness the player can notice) |
-| 4 Embers | Ch 25: after the sensei tells her, she seeks out the player once: "He told you? Then you know I left." |
-| 5 Ashes | Ch 36.6: stays when the sensei walks out, reads the report twice, and says the thing she has never said: "They sent me back so I'd live. I've been angry at them for eight years for it." Later, on the Rock, the two finally talk (onscreen if the player followed the sensei, told by her afterwards if the player stayed). She asks the sensei to blame her; they refuse, then say "I was angry you went. I was glad you lived." It is enough |
+| 4 Embers | Ch 25.3b: she seeks out the player once: "If you're what I think, {they:sensei} will tell you about a road someday. When that day comes, remember I was sent away. I didn't run." |
+| 5 Ashes | Ch 37.0 (the Ash Road report's own night): stays when the sensei walks out, reads the report twice, and says the thing she has never said: "They sent me back so I'd live. I've been angry at them for fourteen years for it." Later, on the Rock, the two finally talk (onscreen if the player followed the sensei, told by her afterwards if the player stayed). She asks the sensei to blame her; they refuse, then say "I was angry you went. I was glad you lived." It is enough |
 | 7 Last Bonfire | Ch 51.2: her genjutsu hides the Academy's evacuation, a whole grove over the streets; she stays behind in the illusion until the last child is out. She is spared again, and this time she lets herself be |
 
 **Endings.** She lives. Epilogue: she and the sensei leave persimmons at the stone together.
 
 ### Relationships
 
-- **The player's sensei:** eight years of silence, ended in Ch 36.
+- **The player's sensei:** fourteen years of silence, ended in Ch 37.
 - **sensei_2:** the only person who makes her laugh; she knows why he keeps the tally.
 - **Her squad:** she teaches the trio as a family, not a formation; squad3_a's freeze is a mirror of
   her own Ash Road moment, and she says so in Ch 51.
@@ -235,7 +236,7 @@ about herself; images from gardens and trees. When hurt, she becomes very polite
 Voice samples, not shipped lines:
 - "Sit. You can stand later; everyone stands later."
 - "Illusions don't lie. They show you what you were already afraid of."
-- "He told you? Then you know I left."
+- (Ch 25.3b) "If you're what I think, {they:sensei} will tell you about a road someday. When that day comes, remember I was sent away. I didn't run."
 - (Ch 51) "Go on. I'll keep the trees up. I'm good at staying, it turns out."
 - (to her squad) "A plan is a garden. Some of it dies. You plant again."
 
@@ -265,7 +266,7 @@ Voice samples, not shipped lines:
 
 | Id | When | Question | Options | Honours / tests | Remembered | Changes her |
 |---|---|---|---|---|---|---|
-| `ans.sensei_3.spared` | Ch 25 (her visit) | "Would you rather be the one who's saved, or the one who stays?" | Saved, so I can come back / The one who stays / Neither: we all leave together | Her guilt | Ch 51: "You said ___. I'm choosing the other one, this once" or "You said together. Then go, I'll be right behind" | Decides how she frames her stay in Ch 51 |
+| `ans.sensei_3.spared` | Ch 25.3b (her visit) | "Would you rather be the one who's saved, or the one who stays?" | Saved, so I can come back / The one who stays / Neither: we all leave together | Her guilt | Ch 51: "You said ___. I'm choosing the other one, this once" or "You said together. Then go, I'll be right behind" | Decides how she frames her stay in Ch 51 |
 | `ans.sensei_3.coward` | Level 5 hangout (Chunin) | "Is it cowardice to obey an order to run?" | No, it's trust / Sometimes / Yes, but forgivable | Kindness to herself | Ch 36: she quotes you to the sensei | "No": she can ask for forgiveness at last. "Yes, but": she asks to be blamed first |
 | `ans.sensei_3.illusion` | Level 3 hangout (flower pressing) | "If an illusion made someone happy, would you break it?" | Yes, truth first / No / Only if they asked | Honesty vs kindness | Ch 40 (the council): "We've all lived in a nice illusion" | Her stance on making the Quiet Ending public |
 | `ans.sensei_3.flower` | Level 3 | "Which flower should I press for you?" | Persimmon blossom / Rose / A weed from the training ground | Kindness | She gives it; it is in your apartment as a keepsake | — |
@@ -345,9 +346,9 @@ He never knows the bound answer before the player does; he never suggests a name
 | Arc | Change |
 |---|---|
 | 2 Paper Trail | Ch 14: interrogates the smuggler for a night and gets one word. "That word was the most frightened thing I've ever heard a man say." |
-| 4 Embers | Ch 23: the tester. Ch 28: reaches the porter first and tries to hold the tongue seal back with a binding; fails; stays with him until the medic comes and is visibly shaken |
+| 4 Embers | Ch 23: the tester. Ch 28: reaches the porter first and tries to hold the cinder seal in his palm back with a binding; fails; stays with him until the medic comes and is visibly shaken |
 | 5 Ashes | Ch 38: sits with the player at the case board; asks good questions, never gives answers; distrusts Thread Sight ("A flicker isn't proof. Everyone hides something. I hide bread."). Ch 39: makes the arrest. If the player accused without proof, he warns once ("Are you sure? Then sign it.") |
-| 7 Last Bonfire | Ch 51: defends the hospital with squad4_c |
+| 7 Last Bonfire | Ch 51: runs the hospital with squad4_c through the war (triage, the door, the bread) |
 
 **Endings.** He lives. If the player thanks him for the bread (`ans.sensei_4.bread = thanked`
 after Ch 39), the village learns it was him; in the epilogue a line of children waits at his door.
@@ -467,7 +468,7 @@ pet names.
 |---|---|
 | A seal under the Rock, renewed for the Third | Before Y0 |
 | What it guarded (the archive) | Ch 36 |
-| Cinder seals: what they are | Ch 28 (he examines the one on the porter's tongue) and Ch 49 (the array) |
+| Cinder seals: what they are | Ch 28 (he examines the one burned into the porter's palm) and Ch 49 (the array) |
 | The Hollow Crown | Ch 49 |
 
 **How he changes.**
@@ -476,7 +477,7 @@ pet names.
 |---|---|
 | 1 Cinders | Ch 7: watches the graduation with his senior squad, loudly commenting |
 | 3 Dusk | Ch 19: seals the stadium's gates so the evacuation can run, shouting instructions at everyone |
-| 4 Embers | Ch 28: reads the burned tongue seal: "Whoever drew this has been drawing for eighty years." (A seed: the leader's age) |
+| 4 Embers | Ch 28: reads the burned palm seal: "Whoever drew this has been drawing for a very long time." (A seed: the leader's age) |
 | 5 Ashes | Ch 36: breaks the archive's old seals with the keeper: "I put my hand on this door forty years ago and I didn't ask. I'm asking now." |
 | 7 Last Bonfire | Ch 50: teaches the village to break cinder seals (systemic: a technique scroll and a lesson every district needs); Ch 52: holds the array's last anchor on the Rock shut with his own chakra while the player faces the leader. He survives, drained, and spends the epilogue teaching squad5_b, who finally talks back |
 
@@ -499,7 +500,7 @@ question; laughs at his own jokes; then, rarely, one quiet line that is the poin
 Voice samples, not shipped lines:
 - "Ha! A seal is a promise with good handwriting. Sit, sit, this will take an hour."
 - "My quiet one, my loud one, my sad one, and my baker. And now you. What are you?"
-- "Whoever drew this has been drawing for eighty years."
+- "Whoever drew this has been drawing for a very long time."
 - "I put my hand on this door forty years ago and I didn't ask. I'm asking now."
 - (Ch 52, quiet) "Go on. I've got this one. I've had it for forty years."
 
@@ -534,7 +535,7 @@ Voice samples, not shipped lines:
 | `ans.sensei_5.quiet` | Level 4 | "My quiet one never talks to me. What am I doing wrong?" | Talking / Nothing, wait / Ask her something and stop | His growth | Epilogue: squad5_b's first long answer to him | Starts his learning-to-listen arc early |
 | `ans.sensei_5.name` | Level 2 (writing lesson) | "Shall I teach you to write your name? Or the name you'd like?" | My name / A name I don't know yet / Kagari (only offered after Ch 40) | Identity | Your name scroll keepsake reads it; Ch 46 the clan hall's first seal is in his hand | — |
 | `ans.sensei_5.gates` | Ch 20 (after the attack) | "I sealed the gates behind the children. If someone had been on the wrong side, should I have waited?" | Yes / No, the children first / You'd have found a way | Duty vs kindness | Ch 52: on the anchor, "This time nobody's on the wrong side" | — |
-| `ans.sensei_5.seal_read` | Ch 28 (he reads the tongue seal) | "Eighty years of practice in that seal. Who lives eighty years and still draws like that?" | Someone who never stopped / Someone very old / Someone who isn't old | Knowledge | Ch 49: "You said ___. You were right." | A seed only; never answered before Ch 49 |
+| `ans.sensei_5.seal_read` | Ch 28 (he reads the palm seal) | "A lifetime of practice in that seal. Longer than mine. Who draws like that for so long?" | Someone who never stopped / Someone very old / Someone who isn't old | Knowledge | Ch 49: "You said ___. You were right." | A seed only; never answered before Ch 49 |
 | `ans.sensei_5.loud` | Level 3 | "Am I too loud? Everyone says so and then nobody says it again." | Yes / Never stop / Only in the library | Honesty | His volume in the archive (Ch 36) and his rare quiet lines | "Yes": he tries whispering, badly, for a week (comic pool) |
 | `ans.sensei_5.third` | Level 6, Jonin arc | "I knew the Third. Do you want to know what she was like, or would you rather she stayed a face on the Rock?" | Tell me / A face is enough / Tell me after the archive | Knowledge | Ch 36: he tells, or keeps quiet as the letter is read, or tells you on the way out | "Tell me": the Third's letter lands harder (his line: "That's her handwriting. She always pressed too hard") |
 | `ans.sensei_5.last_lesson` | Ch 50 (after the seal lessons) | "If this was my last lesson, what should it have been?" | How to break a seal / How to make one hold / How to listen / Nothing, you'll teach more | Family | Ch 52: his line on the anchor; epilogue: what he teaches squad5_b | "How to listen": his epilogue scene is listening to squad5_b's paragraph |

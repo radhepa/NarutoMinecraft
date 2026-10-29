@@ -100,7 +100,7 @@ Voice samples, not shipped lines:
 
 | Id | Who, when | Question | Options | Remembered / changes |
 |---|---|---|---|---|
-| `ans.classmate_c.make` | c, B1 bond (L3) | "What would you make for someone you've never met?" | a door that's always open / a bowl / a name plate / a bed | Carved into your clan hall's door (Ch 46). The options echo the porter's door, the ramen bowl, the chiselled names and the first home |
+| `ans.classmate_c.make` | c, B1 bond (L3) | "What would you make for someone you've never met?" | a door that's always open / a bowl / a name plate / a bed | Carved into your clan hall's door (Ch 46; **unset**: a plain watch-fire basket in the lintel, and c says "I didn't know what you'd want, so I made what I'd want"). The options echo the porter's door, the ramen bowl, the chiselled names and the first home |
 | `ans.classmate_c.last` (new) | c, Genin hangout (L4) | "What's the oldest thing you've ever touched?" | the memorial stone / the cord / my charm / the Rock | Ch 41: they show you the oldest stone they carve |
 | `ans.classmate_c.argue` (new) | c, Chunin (L5), after the rival squad quarrels | "When friends fight, do you take a side or hold the ladder?" | take a side / hold the ladder / walk away until they cool | How c mediates in Ch 40's aftermath wave (a scene in `side.j.roots`) |
 | `ans.classmate_c.rebuild` (new) | c, Ch 54 | "Rebuild it like it was, or better?" | like it was / better / ask the people who live there | The market's new look in the epilogue |
@@ -110,7 +110,7 @@ Voice samples, not shipped lines:
 | `ans.classmate_d.guard` (new) | d, Chunin (L4) | "My sibling says the guard is boring. Is it wrong to want boring?" | no, boring means everyone's safe / a little / you'll never be bored next to me | loyalty | Ch 55 guard post line | Confirms the dream |
 | `ans.classmate_d.sensei2` (new) | d, Genin (L3) | "Our sensei teases yours constantly. Should I stop them?" | no, it's how they say they like each other / yes / join in | playful | Ch 42 (d laughs at sensei_2's speech) | Small: lightness |
 | `ans.classmate_d.night` (new) | d, Ch 51 night before (L6) | "If I fall tomorrow, who do I tell first?" | your sibling / me / no one, you won't fall | family, protective | Ch 51 (d holds the Residence steps; if *no one*, they joke about it mid-fight) | Their courage under fear |
-| `ans.classmate_d.stand` | d, B1 bond (L3) | "Is it braver to stand in front of someone or beside them?" | in front / beside / behind, to catch them | Ch 55: their post as your guard, in that position, and their line |
+| `ans.classmate_d.stand` | d, B1 bond (L3) | "Is it braver to stand in front of someone or beside them?" | in front / beside / behind, to catch them | Ch 55.3: their post as your guard, in that position (**unset**: beside), and their line |
 | `ans.classmate_d.hesitate` (new) | d, Ch 17 after the bout | "I hesitated, once. Did you see?" | yes / no / hesitating isn't the same as failing | Their Chunin promotion speech; their training ritual with you |
 | `ans.classmate_d.reckless` (new) | d, after Ch 24 (L5) | "You stayed when your sensei said fall back. Was it brave or stupid?" | brave / stupid / both, and I'd do it again | Ch 51 (d covers your left without asking, or argues first) |
 | `ans.classmate_d.sibling` (new) | d, level 7 (Jonin) | "Should I tell my sibling I've blamed myself all these years?" | yes / no, carry it / tell them you're grateful instead | An epilogue scene with the sibling |

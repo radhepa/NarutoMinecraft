@@ -55,7 +55,7 @@ that the Third, a Sarutobi, kept the silence). The Hollow Crown at Ch 49.
 | 1 Cinders | Ch 7: heckles the graduation cheerfully: "Welcome to the bottom! It's great down here!" |
 | 3 Dusk | Exams: fights in the preliminaries with a showy staff bout and loses gracefully; in the attack he carries Academy children out of the stands |
 | 4 Embers | Chunin after the skip; declares himself the player's rival "for the hat" (friendly; the bond engine's rivalry meter is the joke) |
-| 5 Ashes | Ch 40.2: the council. His clan's Hokage kept the silence for thirty years; he stands through the whole session without a word. Ch 40.2b: that night, on the Rock under the Third's face, he asks the player the question he can't ask his family (`ans.squad5_a.will`). Ch 42: when the sensei is named Seventh, he stands up in the crowd and says "I'm with them," and the crowd follows |
+| 5 Ashes | Ch 40.2: the council. His clan's Hokage kept the silence for thirty years; he stands through the whole session without a word. Ch 40.2b: that night, on the Rock under the Third's face, he asks the player the question he can't ask his family (`ans.squad5_a.will`). Ch 42: the naming is contested: the council balks at a Hokage who signed the Ash Road field report. He stands up in the public gallery and says "I'm with them," the crowd follows, and his stand carries the vote |
 | 7 Last Bonfire | Ch 51: on the wall with the former Fifth and the Tobari. Ch 55: becomes the Eighth's Jonin Commander in `sensei_2`'s place, his oath quoting `ans.squad5_a.will`, and taking the post "until I take your hat" |
 
 **Endings.** He lives; the epilogue line reads `ans.squad5_a.serve` and `ans.squad5_a.will`.
@@ -69,7 +69,7 @@ Voice samples, not shipped lines:
 - "Welcome to the bottom! It's great down here! Lots of room to climb!"
 - "One day that's my face. Second from the left of the new ones. You can have the one after."
 - (Ch 40.2b, on the Rock) "She lied. For thirty years. And I'd have done the lantern walk for her with my eyes shut."
-- (Ch 42) "I'm with them."
+- (Ch 42, in the gallery, over the council's objection) "I'm with them."
 - (Ch 55) "Commander. Fine. Until I take your hat."
 
 **Topics.** Training (1): staff sparring, every day. Family (4): the Sarutobi hearth; his
@@ -218,7 +218,7 @@ talk, ramen).
 | Pronouns | Classic: he. Varied: rolled; dialogue uses `{they:squad5_c}` |
 | Specialty and style | Kenjutsu and ninjutsu, self-taught from library scrolls and watching others; fast, economical, no wasted motion; the strongest genin of all at Y0 |
 | Rank | Genin at Y0 → **Chunin in Ch 20** → ANBU in the Chunin arc's last year (young) → Jonin by Ch 33 |
-| Archetype | Classic: **proud** (warmth -.4, boldness .5, pride .9, discipline .6) |
+| Archetype | Classic: **pragmatic**, with pride (warmth -.3, boldness .3, pride .5, discipline .8, openness -.3): where the rival's pride is about who they are, his is about what he has paid for |
 | Values | Strength, family (his mother and two small sisters) |
 | Peeves | Bragging, nosiness |
 | Dream | Master his art; underneath, never be poor or powerless again |
@@ -243,8 +243,8 @@ money in the Jonin arc to move his family into a house; he has told no one.
 | The porter was kind and strange (he never slept) | Before Y0 |
 | The blade's style (from fighting him) | Ch 19 |
 | The porter was the hand | Ch 28 (public in the shinobi ranks) |
-| The Undercroft exists | Jonin arc (recruited; after Ch 38) |
-| The Undercroft wants the lost child | N3 or Ch 44 |
+| The Undercroft exists | Jonin arc (recruited between Ch 39 and Ch 44) |
+| The Undercroft wants the lost child | Ch 44 (N3 and later open only after Ch 44) |
 
 **How he changes.**
 
@@ -252,12 +252,12 @@ money in the Jonin arc to move his family into a house; he has told no one.
 |---|---|
 | 1 Cinders | Ch 7: at the graduation, ignores everything; watches the player's clone test and says "Sloppy." |
 | 3 Dusk | Ch 17: wins his preliminary in seconds. Ch 19.3: in the attack he joins the player's sensei against the blade on the arena floor, holds his own for six strokes, and takes a cut across the cheek. The blade, leaving, tells him "Good. Get a better sword." Promoted in Ch 20 |
-| 4 Embers | Chunin, then ANBU at the end of the arc, younger than anyone in years. Brilliant and alone |
-| 5 Ashes | Recruited by the Undercroft (money for his family, and the promise of real power: "We'll teach you what the ANBU won't"). Ch 44: on the same A-rank hill as the player, he arrives in an ANBU mask with orders to take the lost child alive; she is gone before either of them reaches her, and he will not say whose orders |
+| 4 Embers | Ch 28.5: at the porter's empty room, the morning after, he is already there with his hands in his pockets: "He carried my sister's cot up four floors. Wouldn't take a coin." (`shared_moment bond.squad5_c.porter`). Chunin, then ANBU at the end of the arc, younger than anyone in years. Brilliant and alone |
+| 5 Ashes | Between Ch 39 and Ch 44, recruited by the Undercroft, an oath society of old ANBU and sealers (the heirs of the sealing team of the Quiet Ending) sheltered under the Shimura house: money for his family, and the promise of real power ("We'll teach you what the ANBU won't"). Ch 44: on the same A-rank hill as the player, he arrives in an ANBU mask with orders to take the lost child alive; she is gone before either of them reaches her, and he will not say whose orders |
 | 6 Night Watch | N4: he guards the lost child's cell, masked; the player sees him through the bars. N6: he is the last of the old masks between the player and her. **Betray or not** (below) |
-| 7 Last Bonfire | Ch 47 (if the Night Watch was not played): he arrives at the shrine with Undercroft orders to take her. **Betray or not** (below); either way the orders reach the Seventh and the Undercroft is disbanded quietly. Ch 51: whatever happened, he fights for the Leaf at the wall |
+| 7 Last Bonfire | Ch 47 (if the Night Watch was declined or not finished; a half-played branch resolves here): he arrives at the shrine with Undercroft orders to take her. **Betray or not** (below); either way the orders reach the Seventh and the Undercroft is disbanded quietly. Ch 51: whatever happened, he fights for the Leaf at the wall |
 
-**Betray or not** (N6, or Ch 47 if the Night Watch was not played; `story.squad5_c.stand`). The
+**Betray or not** (N6, or Ch 47 if the Night Watch was declined or not finished; `story.squad5_c.stand`). The
 player asks him: "What did they promise you?" His answer is `ans.squad5_c.offer` (his own words,
 picked by the state of his life: `power` "That I'd never be powerless again", `house` "A house.
 A door that locks", `teach` "Everything the ANBU won't teach", `nothing` "Nothing I wanted. I
@@ -280,12 +280,14 @@ a year later, and he says "Thanks for beating me."
 
 **Voice.** Clipped, flat, precise; never thanks anyone (until he does, once); measures people by
 technique; contempt for clan privilege, which softens into respect for people who work. Talks
-about money plainly. Never brags. Never says "I need help".
+about money plainly. Tic: counts coins under his breath, and ends a hard thought with "Pay it."
+Never brags. Never says "I need help".
 
 Voice samples, not shipped lines:
 - "Sloppy."
 - "No clan either? Then you'll have to be better than them. Good. So do I."
-- (to the blade, Ch 19, through blood) "Again."
+- (counting under his breath) "...four, five. Pay it."
+- (to the blade, Ch 19, through blood) "Not done."
 - (Ch 44) "Orders. Go home, {given:player}. This isn't yours."
 - (stands down) "They said she was a weapon. She's a kid from a cell."
 
@@ -293,9 +295,9 @@ Voice samples, not shipped lines:
 blades for coins). Family (4): his sisters, the one room, his mother's cough. Values (5): "Nothing
 is free. So pay." Dream (6): "A door that locks. My door." Worries (7): the money.
 
-**Never reveal before.** The Undercroft: before N3 or Ch 44, nothing; his recruitment: only at N4
+**Never reveal before.** The Undercroft: before Ch 44, nothing (N3 opens only after it); his recruitment: only at N4
 or Ch 44 (he refuses to say who gives his orders before then). His feelings for the porter: only
-after Ch 28 ("He carried my sister's cot up four floors and wouldn't take a coin").
+from Ch 28.5 ("He carried my sister's cot up four floors. Wouldn't take a coin.").
 
 **Questions for the player.**
 
@@ -306,11 +308,11 @@ after Ch 28 ("He carried my sister's cot up four floors and wouldn't take a coin
 | `ans.squad5_c.money` | Level 4 | "What would you do for money if you had none?" | Anything honest / Anything / Ask for help | Family, pride | N4: he admits the Undercroft's money | "Ask for help": in Ch 51 he does, once |
 | `ans.squad5_c.cage` | Level 5, Jonin arc (before Ch 44) | "If someone offered you a cage with a key inside it, would you go in?" | Yes, and use the key / No / Only for my family | Pride | N6 / Ch 47: the stand-down condition ("You said there was a key. Here it is.") | — |
 | `ans.squad5_c.taught` | Level 6 | "Who taught you, really? Not the Academy. Who?" | My sensei / The camps / People I watched / Myself, like you | Strength | Epilogue: his free class's first lesson repeats it | — |
-| `ans.squad5_c.porter` | After Ch 28, level 3 | "Did you hate him? The porter?" | No / I don't know / I miss him | Honesty | His only gentle line, at the shrine where the porter sweeps (Ch 47 or 54) | — |
+| `ans.squad5_c.porter` | Ch 28.5 (at the porter's room) or later at level 3 | "Did you hate him? The porter?" | No / I don't know / I miss him | Honesty | His only gentle line, at the shrine where the porter sweeps (Ch 47 or 54) | — |
 | `ans.squad5_c.thanks` | Ch 54 | "I never said thanks. For anything. Do I have to?" | No / Once would be nice / You just did | Pride | Epilogue | — |
 | `ans.squad5_c.offer` | N6 or Ch 47 | (His answer to "What did they promise you?"; the player's reply follows) | power / house / teach / nothing | Pride, family | The stand-down table above; epilogue: his free class's sign | — |
 | `ans.squad5_c.scar` | Ch 20 (the cheek still bandaged) | "He said get a better sword. Should I?" | Yes / Keep yours, get better / I'll help you pay for one | Pride | Ch 51: the sword he carries (a new one, the old one, or the one you bought with him); the blade's last duel (Ch 51.4) he asks "Better sword?" if he sees him | "Help pay": a level of trust (a favor he never forgets) |
-| `ans.squad5_c.anbu` | End of the Chunin arc (his ANBU appointment) | "They want me in a mask at sixteen. Should I?" | Yes, you've earned it / Not alone / Only if it pays your family | Strength, family | Ch 44: under the mask he says "You said ___" | "Not alone": he asks for you to be told where he is, a thread you can follow (Thread Sight) in Ch 44 |
+| `ans.squad5_c.anbu` | End of the Chunin arc (his ANBU appointment) | "They want me in a mask at fifteen. Should I?" | Yes, you've earned it / Not alone / Only if it pays your family | Strength, family | Ch 44: under the mask he says "You said ___" | "Not alone": he asks for you to be told where he is, a thread you can follow (Thread Sight) in Ch 44 |
 | `ans.squad5_c.sisters` | Level 4 | "My sisters want to meet the one who keeps beating me in races. Will you come?" | Yes / Bring food / Only if you stop letting me win | Family | A dinner-at-their-home hangout; Ch 47 or N6: the sisters are the reason his stand-down line works ("They asked about you") | — |
 
 **Unison technique (Blaze).** *Edge of Dawn*: his single perfect draw, kindled, becomes a cut of
