@@ -30,7 +30,7 @@ public final class DialogueKeys {
         for (String m : List.of("affection.dislikes", "affection.wary", "affection.neutral", "affection.fond", "affection.warm", "affection.devoted",
                 "trust.distrusts", "trust.unsure", "trust.trusts", "trust.relies", "trust.with_their_life", "respect.unimpressed", "respect.notices",
                 "respect.respects", "respect.admires", "respect.looks_up", "rivalry.none", "rivalry.friendly", "rivalry.rival", "rivalry.fierce")) keys.add("bond.feel." + m);
-        for (String g : List.of("experience", "moment", "time", "max", "points")) keys.add("bond.goal." + g);
+        for (String g : List.of("experience", "moment", "time", "max", "points", "held")) keys.add("bond.goal." + g);
         for (var a : Activity.CATALOG.values()) {
             for (String part : List.of("ask", "yes", "no.busy", "no.not_today", "no.not_their_thing", "no.not_close_enough", "invite", "arrive", "rough", "fine",
                     "good", "great", "stood_up", "ritual", "ritual_missed")) keys.add("hangout." + a.id() + "." + part);

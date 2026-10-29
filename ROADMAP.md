@@ -372,7 +372,8 @@ Actions in the beta: `set_flag`, `start_quest`, `advance_quest`, `fail_quest`, `
 `promote`, `unlock` (a place, a shop item, a recipe), `news` (VF village news), `set_time`; and
 the bond actions `bond_event`, `shared_moment`, `start_conflict`, `apologize`, `reconcile`, `mend`,
 `reveal_fact`, `romance`, `return_to_squad`, `favor`, `deed`, `celebrate_birthday`, `bond_flag`,
-`kindle`, `resolve_hook`, `clan_event`, `clan_deed`, `mood_event` and `ask_question`.
+`kindle`, `resolve_hook`, `clan_event`, `clan_deed`, `mood_event`, `ask_question`, `give_player`,
+`clear_bond_flag` and `level_cap`.
 Reserved now for later arcs, so the format does not change: `time_skip`, `carve_face`,
 `set_hokage`, `remove_from_squad`, `found_clan`, `marry`.
 
