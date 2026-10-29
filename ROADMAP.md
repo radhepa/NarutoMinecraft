@@ -88,7 +88,7 @@ Jonin.
 | Name and shape | The **Shinobi Modpack**: a modpack and adventure pack, not one jar. Separate mods with a one-way dependency direction, plus the map and a pack manifest ([Architecture](#4-technical-architecture)). |
 | Build scope | **The first ~15 hours** (Academy to Chunin), detailed fully and built in three slices. The whole ~60-hour story is laid out as foundations: a story bible, seeds in the beta, and data formats that hold the later arcs without a rewrite. |
 | Length | Main path ~60 h (Academy ~4, Genin ~8, Chunin Exams ~3, Chunin ~13, Jonin ~17, road to Hokage ~15); ANBU branch +~8 h; completionist 100 h or more. All tuned by playtesting. |
-| Side quests | A ton of optional side quests and anime-filler-style arcs, outside the main-path hour budget, as data in the Adventure datapack ([Side quests](#side-quests-in-the-beta)). |
+| Side quests | A ton of optional side quests and anime-filler-style arcs, outside the main-path hour budget, as data in the Adventure datapack. The full design is in [SIDE_QUESTS.md](SIDE_QUESTS.md) ([summary](#side-quests-in-the-beta)). |
 | World creation | **Classic** (curated, fixed cast and order) or **Varied** (rolled from one save seed, reproducible). Main plot beats fixed in both ([World creation](#world-creation-classic-or-varied)). |
 | Minecraft version | Stay on VF's version, **Minecraft 26.3, Fabric Loader 0.19.5**, pinned for the whole beta. No version chasing mid-beta; port only between beta slices, if VF moves. |
 | Story and villain | An original antagonist and plot, kept in the developers-only [story bible](docs/story/STORY_BIBLE.md). The story specifics are the developers' creative call, so the owner can play it unspoiled. |
@@ -343,7 +343,10 @@ without a rewrite. These are the format decisions, fixed before Beta 1 content i
 Conditions in the beta: `flag`, `rank_at_least`, `level_at_least`, `quest_state`, `friendship`,
 `clan`, `clanless`, `age_stage`, `time_between`, `calendar` (season, day, weekday), `at_place`,
 `has_item`, `has_ryo`, `knows_technique`, `nature`, `mode` (classic or varied), `difficulty`,
-`random` (from the quest's seed stream). Combinators: `all`, `any`, `not`.
+`random` (from the quest's seed stream), and for side content `rank_at_most`, `district`,
+`standing_at_least` (per district or clan), `bond_at_least` (the bond system's levels),
+`clan_relation` (born, member, other clan, clanless) and `event_active`. Combinators: `all`, `any`,
+`not`.
 
 Actions in the beta: `set_flag`, `start_quest`, `advance_quest`, `fail_quest`, `give_item`,
 `take_item`, `give_ryo`, `give_xp`, `teach_technique`, `add_friendship`, `cutscene`, `dialogue`,
@@ -841,8 +844,8 @@ knocked out, never killed. No summons.
 
 The squad, classmates and neighbours are VF residents, so friendship uses VF's ten levels,
 relationship meters, gifts, speech bubbles and dialogue. The beta adds **bond quests** (`kind:
-bond`) gated by friendship (bond levels also feed [Kindling Bond](#kindling-bond) after the beta): two per classmate in Beta 1 and two per teammate in Beta 2, with
-payoffs in Beta 3. Romance waits for the teen stage, after the beta; children have friendships and
+bond`) gated by friendship (bond levels also feed [Kindling Bond](#kindling-bond) after the beta): one per classmate in Beta 1, two per teammate in Beta 2, and one
+per teammate in Beta 3. Romance waits for the teen stage, after the beta; children have friendships and
 VF's harmless crushes in dialogue only, enforced in code.
 
 ### Levels
@@ -1053,24 +1056,29 @@ not a time skip.
 ### The squad bonding arc
 
 Bond quests (`kind: bond`) carry the squad through the beta, gated by friendship: a study night
-(Ch 6), two bond quests per classmate in Beta 1, the bell test (Ch 8), a campfire talk (Ch 11), two
+(Ch 6), one bond quest per classmate in Beta 1, the bell test (Ch 8), a campfire talk (Ch 11), two
 bond quests per teammate and a squad dinner in Beta 2, a choice about a teammate (Ch 13), the
 forest night watch (Ch 16) and the finals (Ch 19). Low friendship changes how these play out.
 
 ### Side quests in the beta
 
-Optional, outside the main-path hours, all `side`, `filler`, `clan`, `bond` or `event` quests in
-the Adventure datapack, unlocked by rank, place, friendship, clan and events.
+Optional, outside the main-path hours: `side`, `filler`, `clan`, `bond`, `event`, `district` and
+`generated` quests, as data in the Adventure datapack, found through notice boards, quest markers,
+gossip leads, overheard talk, clan summons and your own apartment block. The full design (the
+framework, the generated-quest templates that run on the bond system's society hooks, all 25 clan
+lines, district quests, filler arcs, inter-clan politics and the catalogue) is in
+**[SIDE_QUESTS.md](SIDE_QUESTS.md)**.
 
-| Slice | Target | Includes |
-|---|---|---|
-| Beta 1 | 10 | The filler arc **The Ramen Thief** (3 parts: who keeps eating Ichiraku's stock at night?); 4 bond quests; one-offs like the lost Academy cat, the old shogi player, the flower shop's delivery |
-| Beta 2 | 20 + 25 clan quests | The filler arcs **Lanterns on the Lake** (4 parts: a ghost light over the training lake) and **Dogs and Bugs** (3 parts: an Inuzuka-Aburame feud over a missing beetle); 4 bond quests; one-offs (the pawn shop's forged scroll, the forge's apprentice, a festival lost child); one quest per clan (noble and minor) for its members and friends; civilian quests on the market street |
-| Beta 3 | 4 | Exam week: a lost foreign Genin, a stall thief, the *rival*'s younger sibling, the hospital's missing supplies |
+| Slice | Authored quests | Highlights | Generated templates active |
+|---|---|---|---|
+| Beta 1 | 17 | The filler arc **The Ramen Thief** (3 parts); your apartment block's neighbours; the Academy and the shrine; one bond quest per classmate | 6 |
+| Beta 2 | 61 | The filler arcs **Lanterns on the Lake** and **Dogs and Bugs**; the market's price war, the ferryman, the hospital night shift; the Leaf Festival; **25 clan welcome quests** | 13 |
+| Beta 3 | 7 | Exam week in the village; night-watch bond talks | 13 |
+| **Beta** | **85** | About 10 hours for a thorough player, 14 for a completionist | 13 templates |
 
-That is about 34 side quests plus 25 clan quests, roughly 8 to 10 hours of optional play. In
-Varied saves each slice draws from a larger pool (for example 30 Beta 2 one-offs, 12 shown) and
-the filler arcs come in a rolled order; Classic uses a fixed selection.
+In Varied saves each slice draws its one-offs, neighbours and some filler arcs from larger pools
+(for example Beta 2: 8 one-offs shown from a pool of 20, 2 filler arcs from 3); district chains,
+clan lines and bond quests are always present. Classic uses a fixed selection.
 
 ### The Classic cast
 

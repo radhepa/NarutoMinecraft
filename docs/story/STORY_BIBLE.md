@@ -276,3 +276,47 @@ Bond quests (`kind: bond`) carry the squad through the beta, gated by friendship
 | The Chunin Exams finals | Yūgure attacks the stadium; *yugure_second* names you Kagari; the Fourth's fate; the Fifth named (`world.hokage = 5`) |
 | The antagonist organization, its scouts and cells | Yūgure and its two-man cells |
 | The Shimura clan home | Its cellar is the entrance to the hidden faction of the ANBU branch's story |
+
+## Side quest secrets
+
+Solutions, culprits and story ties for [SIDE_QUESTS.md](../../SIDE_QUESTS.md), keyed by quest id.
+Side quests stay optional: none of these is required for the main path, but several plant or echo
+its seeds.
+
+### Filler arcs
+
+| Quest | The truth |
+|---|---|
+| `filler.ramen_thief` | The thief is the old neighbour's cat from `district.b1.neighbours.3` and its whole litter, let in at night by the cook's own grandson, who feeds them because the fish stall closed. Catching the culprit means choosing: scold the boy, or get the stall reopened (which also finishes the neighbour's quest). Free ramen either way |
+| `filler.lake_lanterns` | The ghost light is a retired Tobari lantern-keeper who walks the lake every night to tend a lantern for a son lost on a mission; the "ghost" moves because he water-walks. The finale is helping him set the lantern down for good. If `story.seed.flare` is set, the lantern's flame leans toward you as you pass (a Kindling Bond echo) |
+| `filler.dogs_and_bugs` | Neither: the beetle crawled into the Kinoshita yard's timber and was built into a new shrine bench. Both clans were wrong, and laughing about it together is the finale (a large relation boost between the Inuzuka and Aburame) |
+| `filler.silent_bell` | A swallow's nest inside the bell; the chicks fledge if you wait a week, or you can move the nest (the priest prefers waiting). A Tsuchigumo shrine-keeper knew all along and was testing whether you would listen |
+| A Hundred Masks (later) | A Kurama apprentice's runaway illusion copies the faces of people the apprentice admires; yours among them |
+| Snowbound (later) | Every traveller's secret is harmless except one: a courier carrying Yūgure's chakra paper, unaware of what it is |
+| The Puppet Theatre (later) | The puppeteer's mute assistant is a gifted orphan with chakra strings; the theatre is hiding them from a recruiter (a Yūgure cell, if the Chunin arc is done) |
+| The Forger's Ink (later) | The forgeries use the ink of the bound traitor candidate's household; if the bound candidate is innocent, the ink was stolen from them (a clue trail cameo, consistent with `twist.traitor`) |
+
+### District quests and one-offs
+
+| Quest | The truth |
+|---|---|
+| `district.b2.price_war` | Both tea houses buy from the same supplier, who sets them against each other to sell more; uniting them against him ends the war |
+| `district.b2.ferryman` | The ferryman cannot swim; his last season is about teaching a child the river before he hangs up the pole. The new bridge is named after him if you finish it |
+| `district.b2.night_shift` | One of the three patients is a Yūgure smuggler from Ch 11, injured and silent; the night ends with him slipping out. Sets `story.seed.night_patient` (pays off in the Chunin arc) |
+| `district.b2.unbeatable_post` | The post is a sealed Uzumaki training post that hardens under chakra; it falls only to plain taijutsu with no chakra at all |
+| `side.b2.pawned_scroll` | The scroll is real: a page of an old Academy textbook with the same cut as the missing page (Ch 5); the pawnbroker does not know who sold it. Sets `story.seed.second_page` |
+| `side.b2.lost_letters` | One letter is addressed to a family that no longer exists in the census; returning it to the shrine sets `story.seed.unknown_family` (a quiet Kagari echo) |
+| `side.b3.stall_thief` | A member of the disguised foreign team, testing the village's guards; you can catch them but not hold them |
+| `side.b3.hospital_supplies` | Diverted by an exam official for a foreign team; if `twist.traitor` is the medic, the trail touches her too (a clue), otherwise it clears her name |
+| `event.b3.betting_ring` | Run by the Hagane gate guards out of boredom; your odds improve if you finished `district.b2.contraband` |
+
+### Clan lines
+
+| Quest | The truth |
+|---|---|
+| `clan.kurama.3` | The missing painting shows the ruined shrine in the southern hills as it was before it burned; the Kurama hid it because a painter of their house was punished for making it |
+| `clan.tsuchigumo.3` | The intruder at the sealed shrine room is a Yūgure scout looking for the clan's natural-energy seal |
+| `clan.shimura.3` | The unexplained matter belongs to the hidden faction of the ANBU branch's story; helping opens that branch's first contact |
+| `clan.tobari.3` | What moves on the wall unheard is a Yūgure cell using a sound-smothering technique learned from a Tobari deserter |
+| `clan.hatake.4` | The keepsake's heir is the *sensei* if no Hatake lives in the save; otherwise the last Hatake |
+| `clan.uzumaki.3` | The scattered Uzumaki is genuine, and a sealing expert who later helps restore a Kagari seal (Road to Hokage) |
