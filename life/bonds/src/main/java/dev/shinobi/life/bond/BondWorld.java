@@ -206,6 +206,7 @@ public final class BondWorld {
         return Kindling.flame(this, who);
     }
     public void setBondFlag(String who, String f) { bond(who).flags.add(f); }
+    public void clearBondFlag(String who, String f) { bond(who).flags.remove(f); }
 
     /** A change worked out elsewhere (an answer to a question), remembered as {@code act}: contact, memory, a possible quarrel, a level-up. */
     Meters applyDelta(String who, Act act, Meters delta) {

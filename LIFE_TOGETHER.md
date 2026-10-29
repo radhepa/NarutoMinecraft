@@ -44,7 +44,7 @@ free** within three days.
 
 ## 3. Hangouts
 
-Twenty-two activities, as data (`Activity`; the Adventure datapack adds more with the same fields):
+Twenty-seven activities, as data (`Activity`; the Adventure datapack adds more with the same fields):
 
 | Activity | Where | Hours | Season | Ryo | From level | Up to | Counts as | Loved by |
 |---|---|---|---|---|---|---|---|---|
@@ -64,6 +64,11 @@ Twenty-two activities, as data (`Activity`; the Adventure datapack adds more wit
 | Shrine visit | the shrine | 6–18 | | 0 | 2 | 4 | hanging out | steadfast, gentle, stern |
 | Walking a pet | the river | 6–20 | | 0 | 1 | 3 | hanging out | protective, fiery, gentle |
 | Dinner at their home | their home | 18–21 | | 0 | 5 | 6 | a meal | warmhearted, protective, steadfast |
+| Study night | your home | 18–23 | | 0 | 2 | 4 | studying | thoughtful, meticulous, curious, shy |
+| Cooking together | your home | 17–22 | | 0 | 3 | 4 | a meal | warmhearted, playful, gentle |
+| Balcony stargazing | your home | 20–24 | | 0 | 4 | 3 | hanging out | curious, imaginative, shy, thoughtful |
+| Squad crash | your home | 18–23 | | 0 | 3 | 3 | hanging out | fiery, adventurous, playful |
+| Tea at home | your home | 13–20 | | 0 | 4 | 3 | hanging out | thoughtful, stern, gentle, pragmatic |
 | Flower viewing | flower park | 9–19 | spring | 0 | 2 | 6 | a festival | gentle, imaginative, warmhearted |
 | Swimming | the lake | 9–18 | summer | 0 | 2 | 6 | hanging out | adventurous, playful, fiery |
 | Moon viewing | the Hokage Rock | 19–24 | autumn | 0 | 3 | 6 | hanging out | thoughtful, gentle, stern |
@@ -307,7 +312,7 @@ per-personality variants that override a general pool.
 | Personality variants (16 archetypes on greetings, topics, life events and hangouts) | 7,952 possible | write the 20% that matter most, 2 each | ~3,200 |
 | The cast's own voices (about 10 beta roles: their own greetings, hangout lines, highlights, topic answers and life events) | ~150 per character | 2 each | ~3,000 |
 | Bond quests (one per classmate in Beta 1, two per teammate in Beta 2, one per teammate in Beta 3) and the squad beats | ~20 quests and 7 beats | scenes | ~30 scenes |
-| Hangout scenes (Minecraft): anchors, seats, clips, the highlight beat | 22 activities | 1 scene each, ~10 highlight beats | 22 scenes |
+| Hangout scenes (Minecraft): anchors, seats, clips, the highlight beat | 27 activities | 1 scene each, ~10 highlight beats | 27 scenes |
 | Clan customs, elders' requests, feud and match hooks | 25 clans, 9 hook types | | ~800 |
 | Questions (general, per personality, per major character) with 2 to 4 answers each | ~350 | question, answers, callbacks | ~2,500 |
 | **Beta's social layer, about** | | | **~12,500 lines, 50 scenes** |

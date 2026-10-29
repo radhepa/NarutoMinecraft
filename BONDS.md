@@ -476,6 +476,13 @@ home reads `Gifts.received(world)` and `Gifts.from(world, who)`; when a giver se
 display in the player's home, `Gifts.seenDisplayed(world, giftId)` warms them once per gift
 (`saw_gift_displayed`). Condition: `{"gifts_from": [who, n]}`.
 
+**At the player's home** ([docs/HOME.md](docs/HOME.md)): a visit is `visited_home` (a hangout the gates
+count). A keepsake or photo on show is noticed once (`Gifts.noticed(world, who, keepsake, photo)`):
+a gift from the ledger is marked seen (`saw_gift_displayed`), a photo is `saw_photo_together`, and
+either leaves the bond flag `home.noticed:<keepsake>`. A spare key is the bond flag `home.key`, not
+a moment, so it can be taken back and does not open a story gate; `{"bond_flag": [who, flag]}` reads
+either.
+
 ## 13. Data formats
 
 Bond conditions and actions join Core's condition and action language
