@@ -248,7 +248,7 @@ Every landing has a shoe rack and a notice board. The board is mostly rules abou
 The roof is where everyone hangs laundry, watches fireworks and practises jutsu they've been told not to practise indoors.
 The landlady lives on the ground floor and hears every door. Whatever time you came in, the ground floor knows, and has opinions.
 Water tanks on the roof feed every flat. In summer the morning shower is warm and the evening one is warmer.
-The stairwell smells of whatever the third floor is cooking. Tuesdays it's curry, and nobody knows who's making it.
+The stairwell smells of whatever the third floor is cooking. Firedays it's curry, and nobody knows who's making it.
 
 ## chat.place  district=apartments  fn=guide
 The furniture shop is a short walk up the main street. Your flat looks better with more than a futon in it.

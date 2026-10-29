@@ -175,6 +175,8 @@ footwork dojo, the Haruno market family). A clan line shows life inside the clan
 - **The world's own vocabulary:** ryo, Genin, Chunin, Jonin, the Academy, the Mission Desk, the
   Hokage Rock, the training grounds, chakra, jutsu, kunai, Ichiraku, dango, the Leaf. Light
   Japanese flavour (onigiri, tatami, festival yukata), no heavy romaji, no modern slang.
+- **The week** is Moonday, Fireday, Waterday, Woodday, Metalday, Earthday and Sunday (Market Day is
+  Sunday). Real weekday names are rejected.
 - **Humour is welcome**, cruelty is not. Residents can grumble, tease and disagree.
 - **The player has a life.** Lines can notice the time, the weather, the player's rank, a festival,
   a quarrel, but only through tags or tokens, never by assuming them.

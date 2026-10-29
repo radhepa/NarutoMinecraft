@@ -7,7 +7,7 @@
 Q: My cousin wants me to help run a shop in a town three days from here. Should I go?
 Q: Can I ask your advice? I've been offered work far from the Leaf. Go, or stay?
 - Go, see somewhere new :: You think so? Part of me hoped you'd say that. {values:+freedom +courage} {tone:bold} {pole:-1}
-- Stay, your life is here :: My friends, my street, my bath on Thursdays. You're right. {values:+family} {tone:warm} {pole:1}
+- Stay, your life is here :: My friends, my street, my bath on Wooddays. You're right. {values:+family} {tone:warm} {pole:1}
 - Try it for one season :: A season. Not forever. Why didn't I think of that? {values:+knowledge} {tone:cautious}
 
 ? q.advice.cousin_shop_failing | fn: deepen_bond reveal_character | level: 5 | follows: q.advice.cousin_shop | depth: 2 | gap: 5

@@ -110,6 +110,8 @@ KIN = re.compile(r"\b(mother|father|mom|mum|dad|ma|pa|papa|mama|brother|sister|g
                  r"son|daughter|wife|husband|uncle|aunt|auntie|nephew|niece|boy|girl|man|woman|lady|gentleman|"
                  r"grandson|granddaughter|widow|widower|priest|priestess|mister|missus|old man|old woman|king|queen|"
                  r"tom|mare|stallion|hen|rooster|cow|bull)\b", re.I)
+# The Leaf's week (the owner's decision): Moonday Fireday Waterday Woodday Metalday Earthday Sunday.
+REAL_WEEKDAY = re.compile(r"\b(monday|tuesday|wednesday|thursday|friday|saturday)s?\b|\b(Fifth|Seventh) Days?\b", re.I)
 ADDRESS = re.compile(r"\b(young man|young lady|lad|lass|laddie|missy|sonny|my boy|my girl|good sir|ma'am|madam|"
                      r"little lady|little man|sir)\b", re.I)
 CANON = re.compile(r"\b(naruto|sasuke|kakashi|hinata|shikamaru|choji|chouji|kiba|shino|neji|tenten|gaara|itachi|"
@@ -228,6 +230,8 @@ def check_text(where, text, terms, tags, gated, limit=MAX_LINE, pool=''):
     for name in NAME_LITERALS:
         if re.search(r'\b' + re.escape(name) + r'\b', plain):
             fail(where, f'literal name {name!r}: names are tokens ({{name:role:x}}, {{given:...}}, {{player}})')
+    if REAL_WEEKDAY.search(plain):
+        fail(where, f'weekday {REAL_WEEKDAY.search(plain).group(0)!r}: the Leaf\'s week is Moonday, Fireday, Waterday, Woodday, Metalday, Earthday, Sunday')
     if ADDRESS.search(plain):
         fail(where, f'gendered address {ADDRESS.search(plain).group(0)!r}: the player is addressed by token or neutrally')
     if PRONOUN.search(plain) and not KIN.search(plain):

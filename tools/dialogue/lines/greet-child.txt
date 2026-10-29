@@ -272,7 +272,7 @@ Hi {player}. I've written my homework in my neatest writing. Even the dots on th
 {player}, I sorted all my marbles by colour, then by size, then by how much I like them.
 Hi. Our class lines up by height and I'm always in the right place. Some people aren't.
 {player}, you dropped a leaf from your hair. I picked it up. Do you want it back?
-Hi {player}. I know the Academy timetable by heart. Ask me anything. Third lesson Thursday? Hand signs.
+Hi {player}. I know the Academy timetable by heart. Ask me anything. Third lesson Woodday? Hand signs.
 {player}. I fold my clothes into squares every night. My brother just throws his on the floor.
 Hi {player}. I've got three pencils. One for writing, one for drawing, one for emergencies.
 {player}, your sandal's untied. Left foot. A ninja should never have an untied sandal.

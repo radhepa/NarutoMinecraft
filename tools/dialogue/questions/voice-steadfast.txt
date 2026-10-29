@@ -61,7 +61,7 @@ Q: One promise to the whole village. What do you swear?
 
 ? q.plans.stead_promise_daily | fn: deepen_bond reveal_character | level: 6 | follows: q.plans.stead_promise_leaf | depth: 2
 Q: That promise to the Leaf. How do you keep it, day to day?
-Q: Big promises are kept in small days. What does yours look like on a Tuesday?
+Q: Big promises are kept in small days. What does yours look like on a Fireday?
 - Training every day :: Every day. Rain or shine. That's how. {values:+duty +strength} {tone:dutiful}
 - Helping where I can :: A hand here, an errand there. That's a promise kept quietly. {values:+kindness} {tone:kind}
 - Showing up :: Showing up. Half of duty is just being there. Well said. {values:+loyalty +duty} {tone:honest}

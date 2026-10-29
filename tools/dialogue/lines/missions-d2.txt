@@ -912,7 +912,7 @@ Still a few broken posts. Squads will just have to aim around them.
 Not finished. I'll do the rest at dawn. Thank you anyway.
 
 ## mission.d.training_upkeep.report  job=mission_desk
-Training ground upkeep, done. Somebody will break it all again by Friday. Logged.
+Training ground upkeep, done. Somebody will break it all again by Metalday. Logged.
 {client} says the field's never been flatter. Paid.
 
 ## mission.d.training_upkeep.twist.stray_shuriken  fn=quest,react

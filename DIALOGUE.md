@@ -197,6 +197,18 @@ ones for tests and the simulation.
 `{target}`, `{count}`, `{pay}`, `{event}`, `{season}`, `{weekday}`, `{time}`, `{other}`, `{squad}`).
 A line whose token cannot be filled here is skipped, as in VF.
 
+**The Leaf's week** (the owner's decision). Lines name the days of the elemental week, never real
+weekdays, which the compiler rejects (Sunday is the one shared name). They map onto Village
+Friends' calendar week (`Routine.weekday`, day number mod 7) in order:
+
+| Day mod 7 | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|---|
+| Village Friends | Moonday | Bellday | Hearthday | Wellday | Lanternday | Hayday | Market Day |
+| The Leaf | Moonday | Fireday | Waterday | Woodday | Metalday | Earthday | Sunday (Market Day) |
+
+So Market Day is always a Sunday, and the council day of SIDE_QUESTS (the first Moonday of a
+season) is VF's Moonday. `{weekday}` fills with the Leaf's name.
+
 ## 6. Conversations
 
 The conversation window keeps VF's layout (portrait, typed line, numbered replies, the dock). What

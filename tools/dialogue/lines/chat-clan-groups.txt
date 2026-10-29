@@ -84,7 +84,7 @@ We civilians remember the shinobi who were kind to us as children. You'd be surp
 
 ## chat.clan  group=civilian  fn=worldbuild
 Civilian children who leave the Academy still keep their practice headbands. Half the shopkeepers on the market street have one in a drawer.
-Our neighbourhood association meets at the tea house every Seventh Day. We argue about drains for an hour and then eat cake.
+Our neighbourhood association meets at the tea house every Sunday. We argue about drains for an hour and then eat cake.
 When the gate bell rings for a squad coming home, the whole riverside steps out to look. We don't know them all, but we wave anyway.
 A civilian wedding at the shrine has no clan crests and no rules about bows. Just a lot of family and far too much sweet rice.
 
