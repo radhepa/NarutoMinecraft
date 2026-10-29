@@ -23,6 +23,22 @@ Tag every line (in the dialogue source, as a comment) with its function. A line 
 
 Filler is welcome (the user asked for it), but even filler says something about who is talking.
 
+## 1b. Tone and canon (line rules)
+
+From [WORLD.md](WORLD.md#tone); every line follows them.
+
+- No canon catchphrases or verbal tics; no canon characters' signature techniques by name. Clan art
+  names (ROADMAP §11) and Academy basics are fine.
+- "The Will of Fire" only as the Sarutobi lantern walk, or inside a character's question about it.
+  Never a slogan, never in greetings.
+- Child stage (the whole beta): no blood, no gore, no romance; deaths only in the cinematic cutaway;
+  the hollow are pale and quiet.
+- Humour stays: every chapter's pool has at least one `life` or comedy line, the war chapters
+  included.
+- Big speeches quote this save's flags; a speech never claims a bond the player did not live.
+- Recurring callback lines (the rival's "You owe me a match", sensei_2's tally) stay in their scripted
+  beats and out of greeting pools.
+
 ## 2. Tokens and pronouns
 
 - Names: `{name:<role>}`, `{given:<role>}`, `{family:<role>}`, `{hokage:<n>}`, `{player}`. Never a
@@ -159,6 +175,10 @@ remembers" is used only in Ch 0 and in the lost child's Ch 53 line.
 | Yūgure's second | [CHARACTERS/yugure_second.md](CHARACTERS/yugure_second.md) |
 | Yūgure's blade | [CHARACTERS/yugure_blade.md](CHARACTERS/yugure_blade.md) |
 | Yūgure's leader | [CHARACTERS/yugure_leader.md](CHARACTERS/yugure_leader.md) |
+| The senseis 2 to 5 | [CHARACTERS/senseis.md](CHARACTERS/senseis.md) |
+| Squad 3 | [CHARACTERS/squad3.md](CHARACTERS/squad3.md) |
+| Squad 4 | [CHARACTERS/squad4.md](CHARACTERS/squad4.md) |
+| The senior squad | [CHARACTERS/squad5.md](CHARACTERS/squad5.md) |
 | Minor recurring roles | [CHARACTERS/minor.md](CHARACTERS/minor.md) |
 
 ## 6. Work order for the dialogue session

@@ -44,7 +44,7 @@ the bible's side quest secrets).
 | `clan.kurama.3` | The hidden painting of the shrine before it burned, brought out in Ch 40 |
 | `clan.tsuchigumo.3` | A Yūgure scout seeking their seal: a trail drop in the Chunin arc |
 | `clan.uzumaki.3` | The sealing expert who helps break the archive's old seals in Ch 36 if present (otherwise the keeper's keys alone) |
-| `clan.hatake.4` | The keepsake's heir is the sensei if no Hatake lives in the save |
+| `clan.hatake.4` | The keepsake's heir is the last Hatake; if no Hatake lives in the save, it goes to the house's caretaker and its old ninken, who choose whom to follow |
 | `clan.senju.4` | If the councillor is the voice, the founders' shrine dispute becomes his house's reckoning |
 | `clan.<id>.5` (Legacy) | Ch 50: a clan whose Legacy step is done opens its quarter's anchors and sends fighters to Ch 51a |
 | `filler.lake_lanterns` | If `story.seed.flare`, the lantern leans toward you (an echo) |
@@ -108,7 +108,7 @@ what) is a rule of the engine, not of the story.
 **Other requests (bonds session):** the Kindling tiers read friendship levels as approved (Spark 6, Flame 8, Blaze 10 or a spouse, Bonfire the web); answer flags (`ans.*`) as player-scope string flags, readable by a
 `flag` condition with a value; authored life events for story roles at story beats; an act
 `gave_flame` (big, kept; the lost child's return) and `shielded_with_life` (the second); the
-finale reading each bond at 6+ in a fixed order (spouse, teammates, sensei, rival, others by level).
+finale reading the six fixed speakers in order (the cord, the sensei, the spouse, the friend who fell in Ch 24, the other teammate, the rival), then everyone else at 6+ as faces (ARCS/7 53.2).
 
 ## 3b. Rank gates (the failure rule)
 

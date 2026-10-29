@@ -251,7 +251,7 @@ Story fights in the combat session's boss files (`data/combat/bosses/<id>.json`,
 | `clan.tsuchigumo.3` | The intruder at the sealed shrine room is a Yūgure scout looking for the clan's natural-energy seal |
 | `clan.shimura.3` | A Shimura found a stranger using their cellar as a mail drop for sealed letters and wants it gone quietly; helping catches the Undercroft's courier, which opens the Night Watch's N3. The Shimura have no part in the Undercroft |
 | `clan.tobari.3` | What moves on the wall unheard is a Yūgure cell using a sound-smothering technique learned from a Tobari deserter (Ch 30 to 31) |
-| `clan.hatake.4` | The keepsake's heir is the sensei if no Hatake lives in the save; otherwise the last Hatake |
+| `clan.hatake.4` | The keepsake's heir is the last Hatake; if no Hatake lives in the save, it goes to the house's caretaker and its old ninken, who choose whom to follow; otherwise the last Hatake |
 | `clan.uzumaki.3` | The scattered Uzumaki is genuine, and a sealing expert who helps with the archive's seals (Ch 36) |
 | `clan.senju.4` | Opens only after `story.ch39.done`. If `twist.traitor = councillor`, the founders' shrine dispute becomes his house's reckoning |
 
@@ -266,7 +266,7 @@ quest actions and conditions on roles, never code. Questions and answers: [DIALO
 | Ch 0, the red cord | `lost_child` | Bond created at level 2 with `bond_flag red_cord`; it does not grow while she is gone; it starts growing when she comes home (N6 or Ch 47) |
 | Ch 3, the flare | `teammate_a` | `bond_event trained_together`; flavor only, never a Kindling grant |
 | Ch 6, a classmate confides | `teammate_b` | Keep it (`kept_secret`) or tell the instructor (`broke_secret`) |
-| Ch 8, the cord test (three watch-fire tags on one red cord, taken together) | the squad | `shared_moment bond.cord_test` |
+| Ch 8, the cord test (three watch-fire tags on one plain hemp cord, taken together) | the squad | `shared_moment bond.cord` |
 | Ch 11, the campfire | `teammate_a` | Needs `friendship [teammate_a, 5]`; `shared_moment`, `heart_to_heart` |
 | Ch 13, the stranger | `teammate_b`, `sensei` | Tell the sensei: `went_over_their_head` with b, `kept_promise` with the sensei. Keep: `kept_secret` with b. Go: `stood_by_them` and a `reckless_charge` the sensei hears of |
 | Ch 14, the suspicion | `sensei` | `bond_meter [sensei, trust, 50]` gates the secret training (Ch 25) |

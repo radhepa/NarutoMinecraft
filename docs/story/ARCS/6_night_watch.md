@@ -14,7 +14,7 @@ S-rank missions, the mask's night operations).
 | Ch 47 | Waits until the branch is finished or declined. At the Ch 46 registry a prompt asks whether to finish the night work first or go on. Going on closes the branch through the Ch 47 path: the Undercroft's orders reach the shrine instead (`squad5_c` at the shrine) |
 | After Ch 47 | Once `story.ch47.done` is set, the branch is never offered again |
 
-A player can return to regular duty at any time. A player turned down for the invitation (a bad
+A player can return to regular duty at any time **before N4.1**; once she is caged, the branch runs to N7 and Ch 47 waits for it (the Ch 46.4 prompt is offered only before N4.1). A player turned down for the invitation (a bad
 deed) still meets the Undercroft's story through Ch 47.
 
 **What the arc is for.** The Leaf's shadow: the people who learned nothing from the archive,
@@ -91,7 +91,7 @@ forced into her have nothing to hold on to and leave. It costs you: you collapse
 a day.
 
 She wakes as herself. Her first words are the ones she said through the bars in Ch 0, finished:
-"Someone remembers I was here. You did." (Variants by `ans.lost_child.cell` in her file;
+"I was here. You kept it. You did." (Variants by `ans.lost_child.cell` in her file;
 `story.lost_child.home = nightwatch`; her bond starts growing from 2.)
 
 Afterwards, in the hospital, `squad4_c` finds that the last stolen embers in her still carry the

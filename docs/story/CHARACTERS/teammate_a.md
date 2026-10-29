@@ -99,9 +99,7 @@ hurt because of it (Ch 16). Later: being made into a tool (the sensor corps, the
 - **A falling-out with teammate_a** is mended by the story at the Ch 41 unveiling if the player comes
   (`mend`; they hand you the corner of the cloth without a word). If the player stays away, it stays.
 - **If teammate_a is out of the squad** (a falling-out, the *left* path, or a low bond): a stand-in from
-  Squad 2 (classmate_c, else classmate_d) takes their squad lines in Ch 31 (the scripted pair link
-  goes to the friend who fell in Ch 24 only if that friend is in the squad; otherwise the link binds
-  everyone at 6+ and nothing more), Ch 35, Ch 45 and Ch 50. In Ch 53.2 their slot is skipped while a
+  Squad 2 (classmate_c, else classmate_d) takes their squad lines in Ch 31 (the drain's story floor links everyone present, the stand-in included), Ch 35, Ch 45 and Ch 50. In Ch 53.2 their slot is skipped while a
   falling-out lasts (the flame is snuffed); the stand-in appears among the faces only at level 9+.
 - **Thread Sight on them** (from Ch 24, level 6+): a steady flicker while they carry a `hides:`
   bond flag (never line by line, never a lie detector): `hides:warm_room` (the drawings, until shown), `hides:corps` (Ch 30, until they ask you),

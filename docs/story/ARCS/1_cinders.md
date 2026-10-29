@@ -123,7 +123,7 @@ Systemic after Ch 1: shops, a first job at Ichiraku, furnishing, the first side-
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 7.1 | The exam | `instructor`, examiners | The quiz, the throwing test, the clone test. Failing a part allows one retry on Story difficulty | teach | — |
+| 7.1 | The exam | `instructor`, examiners | The quiz, the throwing test, the clone test. A failed part is retaken the next day, on any difficulty (SYSTEMS §3b) | teach | — |
 | 7.2 | The forehead protector | `instructor` | The instructor ties it on you personally, crooked, and refuses to fix it ("It's how I'll know it's you"), then wipes their eyes and pretends it's dust | bond | — |
 | 7.3 | The Fourth's speech | `hokage_4`, the village | In the yard. He quotes your Ch 1 answer as if about all of them ("Some of you came here wanting to be strong enough that no one takes you again..."). The stipend stays (30 ryo every morning, "till you're grown and as long as you need it"); what changes is pride, not money: "From today you're a shinobi of the Leaf. The bowl's on me a while longer; the pride's yours." | bond, seed | — |
 | 7.3b | Empty seats | `rival`, the senior squad | The families crowd the yard. Nobody has come for the `rival`; they stand very straight beside an empty space and leave before the speech ends. On the wall, a year-older squad watches the graduates: `squad5_a` cheering too loudly, `squad5_b` silent, `squad5_c` not looking at anyone | seed (Ch 43; the senior squad) | Go after the rival / let them go (`ans.rival.graduation`: went, let go). Going: they say "Don't," and you sit with them anyway, a `stood_by_them` memory. Ch 43 reads it |

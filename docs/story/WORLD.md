@@ -241,8 +241,8 @@ their nature. You never copy it.
 The gift must play in every save, including a lonely one:
 
 - **Scripted scenes.** A scripted gift scene treats its scripted target as at the tier it needs
-  (Ch 24: Spark; Ch 31: Flame), whatever their level. Ch 31's link binds everyone at 6+ plus a
-  scripted pair link with the friend who fell in Ch 24.
+  (Ch 24: Spark; Ch 31: Flame), whatever their level. Ch 31's link binds **everyone in the drain** (the squad as fielded, any Squad 2 stand-in, and
+  `squad5_b`), each treated as Flame for Ch 31.1 to 31.2 only.
 - **`offered_flame`.** A person below level 6 can kindle toward the player only by freely offering
   their flame (an act, recorded as a permanent moment). It is how `squad5_b`'s grandmother kindles in
   Ch 31, how whole clans and districts kindle in Ch 53, and how the red cord kindles.
@@ -352,8 +352,15 @@ The keeper flickers too, honestly (he hides the archive) until Ch 36.
   (Clone, Transformation, Substitution, tree and water walking); canon places the map uses
   (Ichiraku, the Hokage Rock, the Forest of Death, Training Ground 3); "the Will of Fire" only as the
   Sarutobi lantern-walk custom and in characters' questions about it, never as a slogan.
-- **Forbidden:** canon characters' signature techniques by name in story scenes, canon catchphrases
-  and verbal tics, canon exam gimmicks, canon scenes restaged.
+- **Allowed setting structure (fixed by the ROADMAP):** the squad test at Training Ground 3 (as the
+  cord test), a three-stage exam with a written stage (as the observation test), the Forest of
+  Death's scroll pair and tower, preliminaries, a training break and stadium finals. The Second
+  Hokage being an Uchiha who founded the Academy, the ANBU and the exams inverts canon on purpose;
+  do not "correct" it.
+- **Forbidden:** canon characters' signature techniques by name in story scenes; canon catchphrases
+  and verbal tics; canon exam gimmicks (the tenth question, cheating as the thing being tested,
+  enemies posing as exam takers, a sensei marking a pupil in the forest, a Hokage duel inside a
+  barrier); canon scenes restaged; the phrase "self-declared rival" or "eternal rival" in dialogue.
 - **Child stage is safe.** No romance, no gore, no blood (a cut is "a cut, a scar later"). Deaths happen off-screen or in the cinematic camera's
   cutaway; the hollow are pale and quiet, not mutilated.
 - **Earned speeches.** A speech about bonds lands only after the player has lived the bonds it

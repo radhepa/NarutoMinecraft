@@ -47,8 +47,8 @@ name is on the report).
   `sensei_2` (Classic: Shiranui) has challenged the sensei to senbon footwork contests on guard
   rotations since the Academy (threading senbon through the lantern rings on the wall walk, the
   timed relay of the gate's bell). The tally is lopsided: at Ch 8 **sensei_2 trails 38 to 211** and
-  keeps the notebook; by Ch 42 it is 51 to 289, and the new Seventh says "You win this one too" and
-  loses on purpose (51 to 290). In Ch 51b sensei_2 dies holding the main gate, the player and the
+  keeps the notebook; by Ch 42 it is 51 to 289; at the naming sensei_2 kneels and concedes one more ("You win this one
+  too": 51 to 290). In Ch 51b sensei_2 dies holding the main gate, the player and the
   Seventh beside him; his last words are always "Did I win?" and the Seventh answers "You won." In
   Ch 54 his notebook's last line is read: "Held the gate longer than you would have. 52 to 290.
   Mine." `sensei_5` (Uzumaki) taught the sensei sealing once: old teacher,
