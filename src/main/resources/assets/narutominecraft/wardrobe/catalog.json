@@ -58,18 +58,21 @@
     "h01_kage_spikes",
     "h02_leaf_spikes",
     "h03_uchiha_spikes",
-    "h04_long_straight"
+    "h04_long_straight",
+    "h05_swept_spikes"
   ],
   "headwear": [
     "w01_kage_hat",
-    "w02_forehead_protector"
+    "w02_forehead_protector",
+    "w03_anbu_mask"
   ],
   "tops": [
     "t01_hokage_haori",
     "t02_konoha_flak_vest",
     "t03_uchiha_high_collar",
     "t04_genin_track_jacket",
-    "t05_kunoichi_qipao"
+    "t05_kunoichi_qipao",
+    "t06_anbu_armor"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -164,6 +167,23 @@
       "eye_style": "starlit",
       "feminine": true,
       "complexion": 0,
+      "scale": 14
+    },
+    {
+      "id": "anbu",
+      "name": "ANBU Black Ops",
+      "tagline": "Porcelain animal mask, plated chest armor, white arm guards, a tanto across the back",
+      "face": "f01_shinobi",
+      "hair": "h05_swept_spikes",
+      "headwear": "w03_anbu_mask",
+      "top": "t06_anbu_armor",
+      "bottom": "b01_shinobi_trousers",
+      "palette": "ANBU",
+      "hair_color": "SNOW",
+      "eye_color": "DARK",
+      "eye_style": "soft_glint",
+      "feminine": false,
+      "complexion": 1,
       "scale": 14
     }
   ]
