@@ -197,15 +197,15 @@ step for the client) and `clean_record` (nothing kept that was not yours).
 - **Techniques from missions** (ROADMAP §7, "Learning jutsu"): the first S grade on a C-rank or above can
   carry a technique scroll from the rank's pool (`technique_scrolls`; the pools are the combat
   session's).
-- **Collectibles** for the collection book (`economy.json` `collectibles`; the items session registers the
-  ids and loot tables, the home session owns the book):
+- **Collectibles** (`economy.json` `collectibles`; the items session registers the ids and loot tables).
+  They are ordinary items for a collector's chests and shelves; there is no separate collection book:
   - **Curios**, charming and useless things with flavor text (a cracked mask, a foreign headband, an old
     coin): on a B grade or better, 12% of D-ranks, 35% of C, 45% of B, 50% of A, 60% of S, from a table
     by the template's setting (`loot:curio.road`, `.river`, `.shrine`, `.wilds`, `.far_lands`, `.covert`
     and more); and 15% of defeated enemies drop one by their kind (`loot:curio.bandit`, `.smuggler`,
     `.ronin`, `.foreign`, `.beast`).
-  - **Ninja info cards**: one per enemy kind on its first defeat (`card:enemy.<id>`) and one per person
-    met on a mission (`card:person.<role>`), with a card back by rank.
+  - **Ninja info cards**: card items, one per enemy kind on its first defeat (`card:enemy.<id>`) and one
+    per person met on a mission (`card:person.<role>`), with a card back by rank.
   - **Keepsakes**: 20 memorable missions give a unique display piece on their first A grade or better (the
     festival lantern, the haunted inn's lantern, a dojo signboard, the kiln family's pieces at every rank).
 
@@ -415,7 +415,7 @@ chapters on their days) gives:
   out-levels the path by the board alone, which the fading D-rank XP slows.
 - Over 200 days (Chunin from day 60, Jonin from day 140) the board keeps its variety: a template never
   returns within its gap (8 days for D), and clients number in the dozens. B-to-S pay is provisional
-  until the later arcs bring their costs (rent, a house, a clan estate).
+  until the later arcs bring their costs (a house, a clan estate, furniture); the stipend runs all game and there is no rent.
 
 ### 7.2 The variety guard
 
@@ -528,3 +528,6 @@ For the owner:
    squad only until Chunin, as in the anime?
 3. **Board C-ranks for a Genin:** one a week (current, matching ROADMAP §8's three in Genin life), or two
    for players who want more fights?
+4. **Later-rank pay.** With the stipend running all game and no rent, B to S pay (800 to 12,000) piles up
+   fast in the 200-day simulation (about 100,000 ryo saved by Jonin). Lower the later bands, or keep them
+   and let houses, clan estates and furniture be the sinks?

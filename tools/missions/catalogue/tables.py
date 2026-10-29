@@ -59,7 +59,7 @@ ECONOMY = {
         "pools": {"c": "pool:scroll.c_rank", "b": "pool:scroll.b_rank", "a": "pool:scroll.a_rank", "s": "pool:scroll.s_rank"},
     },
     "collectibles": {
-        "_doc": "Drop sources for the collection book (the home session's): curios, ninja info cards and keepsakes. The items session registers the item ids and loot tables; these are the requests.",
+        "_doc": "Drop sources for collectibles (ordinary items kept in chests; no collection book): curios, ninja info cards and keepsakes. The items session registers the item ids and loot tables; these are the requests.",
         "curios": {
             "_doc": "Useless, charming things with flavor text. Rolled on turn-in at grade B or better; the table is the first tag the template has.",
             "chance": {"d": 0.12, "c": 0.35, "b": 0.45, "a": 0.5, "s": 0.6},
