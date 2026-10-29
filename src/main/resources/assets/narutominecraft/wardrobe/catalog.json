@@ -62,7 +62,8 @@
     "h05_swept_spikes",
     "h06_low_ponytail",
     "h07_bowl_cut",
-    "h08_short_crop"
+    "h08_short_crop",
+    "h09_high_ponytail"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -87,7 +88,8 @@
     "t11_anbu_tracker",
     "t12_root_tunic",
     "t13_scout_hoodie",
-    "t14_brawler_vest"
+    "t14_brawler_vest",
+    "t15_kunoichi_tunic"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -96,7 +98,8 @@
     "b04_kunoichi_shorts",
     "b05_green_leggings",
     "b06_anbu_greaves",
-    "b07_cargo_shorts"
+    "b07_cargo_shorts",
+    "b08_mesh_leggings"
   ],
   "characters": [
     {
@@ -358,6 +361,24 @@
       "feminine": false,
       "brows": "bold",
       "complexion": 3,
+      "scale": 14,
+      "rank": "genin"
+    },
+    {
+      "id": "genin_kunoichi",
+      "name": "Genin Kunoichi",
+      "tagline": "Violet tunic piped in gold, mesh sleeves and leggings, a high ponytail that swings when she runs",
+      "face": "f01_shinobi",
+      "hair": "h09_high_ponytail",
+      "headwear": "w02_forehead_protector",
+      "top": "t15_kunoichi_tunic",
+      "bottom": "b08_mesh_leggings",
+      "palette": "KUNOICHI_VIOLET",
+      "hair_color": "HONEY",
+      "eye_color": "SKY",
+      "eye_style": "starlit",
+      "feminine": true,
+      "complexion": 0,
       "scale": 14,
       "rank": "genin"
     }

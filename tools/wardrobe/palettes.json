@@ -12,5 +12,6 @@
   "ANBU_HAWK": {"name": "ANBU Hawk", "P": "#c4c6bf", "S": "#efeee8", "A": "#b0602a", "L": "#4b3a2c", "M": "#aab3b9", "K": "#17171c", "D": "#22242b"},
   "ANBU_ROOT": {"name": "ANBU Root", "P": "#2e3037", "S": "#ebeae4", "A": "#8a1c22", "L": "#4a3d33", "M": "#9aa3aa", "K": "#121318", "D": "#1c1d22"},
   "GENIN_SCOUT": {"name": "Genin Scout", "P": "#2e8a86", "S": "#ecebe3", "A": "#e2a33a", "L": "#7a6346", "M": "#aab3b9", "K": "#2a3240", "D": "#2d3c60"},
-  "BRAWLER": {"name": "Brawler", "P": "#8c2f2f", "S": "#ecebe3", "A": "#d9a441", "L": "#7a6346", "M": "#aab3b9", "K": "#23262f", "D": "#3a3f4c"}
+  "BRAWLER": {"name": "Brawler", "P": "#8c2f2f", "S": "#ecebe3", "A": "#d9a441", "L": "#7a6346", "M": "#aab3b9", "K": "#23262f", "D": "#3a3f4c"},
+  "KUNOICHI_VIOLET": {"name": "Kunoichi Violet", "P": "#6c4a9a", "S": "#ecebe3", "A": "#e6c35c", "L": "#7a6346", "M": "#aab3b9", "K": "#23262f", "D": "#2d3c60"}
 }
