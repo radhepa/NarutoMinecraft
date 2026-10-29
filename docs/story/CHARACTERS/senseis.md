@@ -532,7 +532,13 @@ Voice samples, not shipped lines:
 | `ans.sensei_5.ask` | Ch 36 (at the door) | "Should I have asked, back then?" | Yes / You trusted her; that's not nothing / You're asking now | Knowledge vs loyalty | Ch 52: his last line | "Yes": he takes the blame aloud at the council (Ch 40) |
 | `ans.sensei_5.teach_one` | Level 5, Chunin arc | "If you could only teach one person everything you know, who would you pick?" | A friend / A stranger who needs it / Someone like me / Nobody, I'd teach everyone a little | Family | Ch 50: how he runs the village seal lessons (one student, or all) | "Everyone": Ch 50 finds more anchors (district lessons count double) |
 | `ans.sensei_5.quiet` | Level 4 | "My quiet one never talks to me. What am I doing wrong?" | Talking / Nothing, wait / Ask her something and stop | His growth | Epilogue: squad5_b's first long answer to him | Starts his learning-to-listen arc early |
-| `ans.sensei_5.name` | Level 2 (writing lesson) | "Shall I teach you to write your name? Or the name you'd like?" | My name / Nine (allowed only after Ch 28; otherwise "a name I don't know yet") / Kagari (after Ch 40) | Identity | Your name scroll keepsake reads it; Ch 46 the clan hall's first seal is in his hand | — |
+| `ans.sensei_5.name` | Level 2 (writing lesson) | "Shall I teach you to write your name? Or the name you'd like?" | My name / A name I don't know yet / Kagari (only offered after Ch 40) | Identity | Your name scroll keepsake reads it; Ch 46 the clan hall's first seal is in his hand | — |
+| `ans.sensei_5.gates` | Ch 20 (after the attack) | "I sealed the gates behind the children. If someone had been on the wrong side, should I have waited?" | Yes / No, the children first / You'd have found a way | Duty vs kindness | Ch 52: on the anchor, "This time nobody's on the wrong side" | — |
+| `ans.sensei_5.seal_read` | Ch 28 (he reads the tongue seal) | "Eighty years of practice in that seal. Who lives eighty years and still draws like that?" | Someone who never stopped / Someone very old / Someone who isn't old | Knowledge | Ch 49: "You said ___. You were right." | A seed only; never answered before Ch 49 |
+| `ans.sensei_5.loud` | Level 3 | "Am I too loud? Everyone says so and then nobody says it again." | Yes / Never stop / Only in the library | Honesty | His volume in the archive (Ch 36) and his rare quiet lines | "Yes": he tries whispering, badly, for a week (comic pool) |
+| `ans.sensei_5.third` | Level 6, Jonin arc | "I knew the Third. Do you want to know what she was like, or would you rather she stayed a face on the Rock?" | Tell me / A face is enough / Tell me after the archive | Knowledge | Ch 36: he tells, or keeps quiet as the letter is read, or tells you on the way out | "Tell me": the Third's letter lands harder (his line: "That's her handwriting. She always pressed too hard") |
+| `ans.sensei_5.last_lesson` | Ch 50 (after the seal lessons) | "If this was my last lesson, what should it have been?" | How to break a seal / How to make one hold / How to listen / Nothing, you'll teach more | Family | Ch 52: his line on the anchor; epilogue: what he teaches squad5_b | "How to listen": his epilogue scene is listening to squad5_b's paragraph |
+| `ans.sensei_5.brush` | Epilogue gate (Ch 54) | "Who gets my brushes when I'm done with them?" | Me / squad5_b / The Academy / You're not done | Family | Epilogue | — |
 
 **What his lines are for.** Sealing exposition in character (teach); the archive's last lock and
 the array's breaking (plot); warmth and comedy (life); a long-life perspective on the Third's era
@@ -547,4 +553,8 @@ does not appear.
 
 **New flags.** `ans.sensei_5.carve` (home, remember, together, open), `ans.sensei_5.ask` (yes,
 trusted, asking_now), `ans.sensei_5.teach_one` (friend, stranger, like_me, everyone),
-`ans.sensei_5.quiet` (talking, wait, ask), `ans.sensei_5.name` (mine, nine_or_unknown, kagari).
+`ans.sensei_5.quiet` (talking, wait, ask), `ans.sensei_5.name` (mine, unknown, kagari),
+`ans.sensei_5.gates` (wait, children_first, found_a_way), `ans.sensei_5.seal_read` (never_stopped,
+very_old, not_old), `ans.sensei_5.loud` (yes, never_stop, library), `ans.sensei_5.third` (tell,
+face, after), `ans.sensei_5.last_lesson` (break, hold, listen, not_last), `ans.sensei_5.brush` (me,
+squad5_b, academy, not_done).
