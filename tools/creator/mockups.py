@@ -451,7 +451,7 @@ def face_screen(world, data, origin="clanless"):
         d.rounded_rectangle((x - 2, y - 2, x + 152, y + 152), 8, outline=ACCENT if on else FAINT, width=3 if on else 1)
         name = world.garments[h].meta["name"] if h else "Bare head"
         d.text((x + 75 - d.textlength(name, font=font(13)) / 2, y + 158), name, font=font(13), fill=INK)
-    scr.changeable(250, 690, "headwear: your home's wardrobe chest")
+    scr.changeable(250, 690, "headwear: your home's wardrobe cabinet")
     scr.footer()
     scr.save("4_face")
 
@@ -484,7 +484,7 @@ def outfit_screen(world, data, origin="clanless"):
     cur = next(x for x in outfits if x["id"] == look["outfit"])
     for i, pid in enumerate(cur["palettes"][:14]):
         palette_chip(scr, 250 + i * 52, 712, world, pid, pid == look["palette"])
-    scr.changeable(250, 766, "outfit and colors: your home's wardrobe chest; the tailor sells more")
+    scr.changeable(250, 766, "outfit and colors: your home's wardrobe cabinet; the tailor sells more")
     scr.footer()
     scr.save("5_outfit")
 
