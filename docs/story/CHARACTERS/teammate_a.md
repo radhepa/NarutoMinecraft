@@ -64,8 +64,13 @@ hurt because of it (Ch 16). Later: being made into a tool (the sensor corps, the
   opens and the first thread you ever see is theirs, bright and steady. You push your chakra into
   them; they rise for one moment and cast their *own* painted genjutsu past its limits: it swallows
   the whole post, and the hollow girl stands inside a painting of the border post as it was before
-  it burned, long enough for the two of you to finish the fight together. Their Ch 25 line is "That
-  was the warm room again" (if the flare was shared) or "So that's what it was" (if not); they gain
+  it burned, long enough for the two of you to finish the fight together. Their Ch 24.4 line as they
+  fall answers `ans.teammate_a.your_fear`: *taken* "Nobody's taking you—"; *alone* "You won't be
+  alone—"; *nobody* "You're not nobody, you're—"; *fire* "It's not that kind of fire—"; **unset**
+  "I'm right here—". If they already knew (`bond_flag knows_flame`, Ch 23), they add: "I knew. Since
+  the school. Do it." Their Ch 25 line is "That was the warm room again" (if the flare was shared),
+  "I knew it would be you. I didn't know it would feel like that" (if `knows_flame` and not shared),
+  or "So that's what it was" (neither); they gain
   a permanent `saved_by_them` memory toward you and a `trained_together` streak in the secret
   training. If someone else fell: they arrive at the hospital last and say they should have been
   faster.

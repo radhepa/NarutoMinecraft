@@ -52,7 +52,7 @@ style (see Variants).
 | Dusk | Ch 17: beats squad4_b in the prelims and apologises to him. **Promoted in Ch 20** |
 | Embers | **Ch 22**: assigned by her aunt to shadow the player. Awkward, exact, she logs everything. She can become a friend if the player lets her (the old `sensor_shadow` beats: night passes, a day off, the stake-out in Ch 28). **Ch 31**: at the council she testifies against her aunt's lockdown of the Tobari ("I watched {player} for nine months. I watched the Tobari for one night. I was wrong about the second") |
 | Ashes | **Ch 40**: when her great-uncle (`elder_hyuga`) walks out of the council, she stays in her seat |
-| Last Bonfire | **Ch 51**: on the Rock's shoulder with her Byakugan, she is the Seventh's eyes for the whole battle, calling out the cells. Ch 55: the head of her house's next generation, with the branch house's petitions read |
+| Last Bonfire | **Ch 51**: on the Rock's shoulder with her Byakugan, she is the Seventh's eyes for the whole battle, calling out the hearths. Ch 55: the head of her house's next generation, with the branch house's petitions read |
 
 **Endings.** Heir of the Hyuga, the first to read the branch house's petitions aloud. If
 `ans.squad4_a.choose` was "fairness", the Hyuga line's Heart step (`clan.hyuga.4`) goes the
@@ -79,7 +79,7 @@ warm under the form.
 - "At twenty-two hundred you were out without a pass. I have written it down. I have also written down that it was for a good reason."
 - "My aunt is not cruel. She is afraid. I have never said that aloud before."
 - (Ch 31) "I watched {player} for nine months. I watched the Tobari for one night. I was wrong about the second."
-- (Ch 51) "Three cells, north wall. Two on the roofs. One alone, in the square. That one is waiting for you."
+- (Ch 51) "Three hearths, north wall. Two on the roofs. One alone, in the square. That one is waiting for you."
 
 **Topics by depth.**
 
@@ -166,7 +166,7 @@ sees the enemy's chakra paths for a few seconds, and every strike lands on a poi
 | Paper Trail | **Ch 9**: his dog makes the goat chase worse; `filler.dogs_and_bugs` (his dog is the accused) |
 | Dusk | Loses his prelim to squad4_a and cheers for her anyway |
 | Embers | Fails the exam twice. **Ch 26**: if teammate_b leaves the squad, he is the one who keeps b company at the bridge, and tells the player where b is (a lead). `side.c.third_time`: promoted at last; the squad throws him a party |
-| Ashes | A tracker on A-ranks; finds the Valley nursery's back entrance by smell (Ch 35, a small assist) |
+| Ashes | A tracker on A-ranks; **Ch 35**: lent to the Valley of Ash A-rank, his nose finds the nursery's back entrance, which lets squad3_a's no-fight plan work |
 | Last Bonfire | **Ch 51**: the dogs hold the market street with teammate_b while b faces their parent; his dog is wounded, and lives |
 
 **Endings.** A Jonin of the Inuzuka kennels, and the loudest voice at every festival.
@@ -270,10 +270,10 @@ is shaken, because she admires the medic; it becomes part of her arc (below).
 | Dusk | Ch 16 to 19: treats the injured in the forest and the stands |
 | Embers | A Chunin on the medic's rotation; **Ch 25**: in the hospital after the border post, she changes the player's bandages and talks to the fallen friend while they sleep |
 | Ashes | **Ch 38**: the roster (above). If the medic is the voice, she visits the medic in a cell and asks why; if innocent, she becomes the medic's partner in treating the lost child |
-| Last Bonfire | Treats the lost child after her return (N6 or Ch 47) with the medic (or alone, if the medic is arrested). **Ch 53**: one way the second lives (below) |
+| Last Bonfire | Treats the lost child after her return (N6 or Ch 47) with the medic (or alone, if the medic is arrested). **Ch 51**: runs the hospital with sensei_4 through the assault. **Ch 52 to 53**: climbs the Rock's slope after the player; one way the second lives (below) |
 
-**Ch 53: the revival.** If `friendship [squad4_c, 6]` and she is on the Rock's slope (she always
-climbs after the player in Ch 52), the player can kindle her healing past its limit: it becomes a
+**Ch 53: the revival.** If `friendship [squad4_c, 6]` and `ans.squad4_c.second` is not "someone
+else first" (unset counts as yes), she is on the Rock's slope (she climbs after the player in Ch 52) and the player can kindle her healing past its limit: it becomes a
 revival, and the second, torn hollow, comes back. This is a third way for `story.second.lives`
 beside `bond_web 40` and `friendship [yugure_second, 4]`. Her line: "Everyone gave up on her. I
 didn't get the chance to."
@@ -333,7 +333,7 @@ shy. Teen: steady. Adult: calm in every storm.
 | `ans.squad4_c.notebook` | Level 7 | "This is everyone I couldn't save. Do you want to see?" | "yes", "only if you want me to", "burn it" | Respect | Ch 55: the crossed-out name | — |
 | `ans.squad4_c.bruise` | After Ch 2, level 1 (she patches the class) | "Did the rival do this or did you do it falling?" | "the rival", "me, falling", "the camps taught me to fall" | Honesty | She asks the rival to spar more gently, or teaches you to fall better | Filler |
 | `ans.squad4_c.medic` | Paper Trail, level 3 | "I want to be a medic like {name:medic}. Is that a good thing to want?" | "yes", "be a medic like you", "be better than them" | Kindness, knowledge | Ch 39 or Ch 40: how she speaks of the medic once the truth is out | Her admiration's shape |
-| `ans.squad4_c.forest` | Ch 16, treating a teammate at camp, level 3 | "If two people are hurt and I can only help one, how do I choose?" | "the worse hurt", "the one who can still fight", "ask them" | Kindness against duty | Ch 51: whom she treats first at the Academy | — |
+| `ans.squad4_c.forest` | Ch 16, treating a teammate at camp, level 3 | "If two people are hurt and I can only help one, how do I choose?" | "the worse hurt", "the one who can still fight", "ask them" | Kindness against duty | Ch 51: whom she treats first at the hospital | — |
 | `ans.squad4_c.herb` | Ashes, level 5 (a herb walk) | "Lily of the valley is poison and medicine. Which are you?" | "medicine", "poison", "depends on the hand" | Creativity, honesty | Her Ch 53 line when the player kindles her | — |
 | `ans.squad4_c.second` | Ch 49 to 52, if the second is with the Leaf, level 4+ | "She tore half the village. Would you want me to save her, if it came to it?" | "yes", "only if she wants it", "save someone else first" | Kindness against justice | Ch 53.6: "yes" or "only if she wants it" lets her try the revival; "someone else first" she treats the wounded instead and the revival needs another path | Gates her revival |
 

@@ -14,7 +14,7 @@ All three are rolled-look roles: in Varied their gender, look and clan are rolle
 weights, and dialogue uses pronoun tokens (`{they:squad3_a}`). The ★ role traits from ENSEMBLE.md
 stay fixed in every save: squad3_b is **the Fourth's grandson** (his clan is the Fourth's, so
 `squad3_b` is always Akimichi), squad3_c is **a sensor** (always Yamanaka: the Sixth's nephew).
-squad3_a's clan is the only one Varied may change (see Variants).
+**squad3_b and squad3_c have fixed clans in every save** (Akimichi and Yamanaka), because their Hokage relatives have fixed looks and clans; only their looks and genders roll. squad3_a's clan is the only one Varied may change (see Variants).
 
 ---
 
@@ -55,8 +55,8 @@ squad3_a's clan is the only one Varied may change (see Variants).
 | Paper Trail | Plans for her squad and hates that squad3_b improvises; shogi with the player becomes a ritual |
 | Dusk | **Ch 16**: the forest truce. Her plan (a decoy scroll and a shadow trap) saves Squad 1 and Squad 3 from the foreign team's traps. In Ch 19 her plan for the stands collapses in the smoke and she freezes; squad3_b drags her out |
 | Embers | Promoted in the skip. Writes every plan twice. Starts to ask the player about improvising |
-| Ashes | Ch 35: with your old squad and hers in the Valley of Ash, her plan brings twenty children home without a fight |
-| Last Bonfire | **Ch 50**: plans the hunt for the eighty-one anchors (districts, clans, standing, who opens which door). **Ch 51**: the main gate falls (sensei_2 dies there) and her plan breaks. For the first time she improvises: she turns the market street into a trap with nothing written down. After the war she keeps one blank page in every notebook |
+| Ashes | **Ch 35**: with your old squad and hers in the Valley of Ash (squad4_b lent to the A-rank; his nose finds the nursery's back entrance), her plan gets twenty children out and home without a fight |
+| Last Bonfire | **Ch 50**: plans the hunt for the eighty-one anchors (districts, clans, standing, who opens which door). **Ch 51a**: the gate's first line breaks and her plan breaks with it. For the first time she improvises: she builds the second line at the gate out of whatever is left, with nothing written down (the market street is teammate_b's and squad4_b's). In 51b sensei_2 dies holding that gate; her line is what he held. After the war she keeps one blank page in every notebook |
 
 **Endings.** She becomes the Eighth's strategist. If the player answered her improvising question
 (`ans.squad3_a.improvise`) with "you will", she says it back on the gate: "You said I would."
@@ -161,11 +161,11 @@ after every shogi game she loses.
 
 ### Arc
 
-- **Wants:** to be himself and not "the Fourth's grandson".
+- **Wants:** to be a chef and a shinobi both, and not his grandfather's shadow.
 - **Fears:** that he is not enough of either: not the shinobi his grandfather was, not the cook his
   mother is.
-- **Secret (small):** he wants to quit the shinobi path for the kitchen and has never told his
-  grandfather. (He will never get to tell him in the *falls* variant.)
+- **Secret (small):** he wants the kitchen as much as the flak jacket, and has never told his
+  grandfather he means to have both. (He will never get to tell him in the *falls* variant.)
 - **Knows, and when:** the Fourth tells his family more than he tells the village. squad3_b knows
   the stipend was his grandfather's own idea, paid partly from his own pocket in the first years
   (he tells the player at level 4). In *taken*, he knows from his grandfather (Ch 21) that "they
@@ -175,18 +175,18 @@ after every shogi game she loses.
 |---|---|
 | Cinders | Brings food to everything. **Ch 6**: arrives at the study night with a pot from the barbecue house; when classmate_c's parent thanks "the Hokage's grandson", he goes quiet |
 | Paper Trail | Serves the squad dinner after Ch 14 at his mother's barbecue house; his expansion is clumsy |
-| Dusk | **Ch 19**: in the evacuation he runs the wrong way, toward the Kage box. What he sees is `twist.fourth_fate` (below) |
+| Dusk | **Ch 19**: he holds the east stair beside the player; when the Fourth is hit he runs the wrong way, toward the Kage box. What he sees is `twist.fourth_fate` (below) |
 | Embers | By the variant (below) |
 | Ashes | Ch 35: carries children two at a time. Ch 40: says out loud that his grandfather never knew about the archive, and asks the player if that makes it better or worse |
-| Last Bonfire | **Ch 51**: holds the Academy door with the instructor (expanded to fill the doorway for an hour). Ch 55: restores the stipend with the player in his grandfather's name |
+| Last Bonfire | **Ch 51a**: holds the Academy door with the instructor and sensei_3 (expanded to fill the doorway for an hour). Ch 55: restores the stipend with the player in his grandfather's name |
 
 **By `twist.fourth_fate`:**
 
 | | Falls | Crippled | Taken |
 |---|---|---|---|
-| Ch 19 | Sees his grandfather fall covering the Academy children; the player's squad pulls him back from the floor | Reaches the box as the dark mirror tears into his grandfather; carries him out | Sees the cloaks lift his grandfather over the wall; tries to follow and is knocked flat |
-| Ch 20 | At the funeral he cooks for the whole village because he cannot speak | At the hospital he sleeps in the chair | He refuses to leave the Kage box until the sensei carries him home |
-| Ch 21 | At the statue: tells the player he was going to quit; now he cannot | His grandfather's caretaker; learns to cook soft food; tells his grandfather he wants the kitchen, and is told "Then why are you still here?" | **Insists on joining the Empty Seat rescue** under `sensei_2`; he is the one who carries his grandfather out |
+| Ch 19 | Sees his grandfather fall on the arena floor covering the Academy children's evacuation (the cinematic cutaway); the player's squad pulls him back from the floor | Reaches the box as the dark mirror tears into his grandfather; carries him out | Sees the ash-violet scarves lift his grandfather over the wall; tries to follow and is knocked flat |
+| Ch 20 | **The Akimichi farewell feast**: the whole village eats the Fourth's favourite dish in the street, his bowl set at an empty place. squad3_b cooks because he cannot speak, then speaks once: he quotes what the Fourth asked the player (`ans.hokage_4.want`: "He asked {player} what they wanted to be. They said..."; unset: "He asked everyone what they wanted to be. He never asked me. I'd have said: both.") | At the hospital he sleeps in the chair | He refuses to leave the Kage box until the sensei carries him home |
+| Ch 21 | At the statue: tells the player he was going to quit; now he cannot | His grandfather's caretaker; learns to cook soft food; tells his grandfather he wants the kitchen, and is told "Then why are you still here?" | **Insists on joining the Empty Seat rescue**, which `sensei_2` leads; he is the one who carries his grandfather out |
 | Endings | Opens the barbecue house's second room as a ramen-and-grill named for the Fourth; stays a Jonin | Cooks for his grandfather every night; a Jonin who runs a kitchen | Both, and his grandfather eats there every night |
 
 ### Relationships
@@ -243,7 +243,7 @@ the squad. Adult: a host's voice.
 | `ans.squad3_b.recipe` | Road to Hokage, level 7 | "Grandpa's recipe has one ingredient missing. Do I guess or leave the gap?" | guess, "leave it, it's his", "add yours" | Creativity, family | Ch 55's dish | The dish at the Eighth's inauguration |
 | `ans.squad3_b.third_helping` | Cinders, level 1 (lunch in the yard) | "Do you want the last dumpling? You have to say yes, it's rude otherwise." | "yes", "split it", "you have it" | Family custom ("never refuse"); "you have it" is kind but against custom, and he is delighted and scandalised | He always saves you the last one at the squad dinner (Ch 14.6) | Filler that becomes a ritual |
 | `ans.squad3_b.mother` | Paper Trail, level 4 (the barbecue house) | "Mum says I cook like Grandpa fights. Is that a compliment?" | "yes", "it depends how he fights", "ask her" | Family; "ask her" sends you to `hokage_4_daughter` | Her taste question (minor.md) opens with it | Small |
-| `ans.squad3_b.funeral` | Ch 20 (falls) / hospital (crippled) / the empty box (taken), level 3+ | Falls: "Should I cook for the funeral? Or is that weird?" Crippled: "Should I tell him I'm scared?" Taken: "Is it wrong to eat when he might be hungry?" | Falls: cook / sit with your mother / both. Crippled: tell him / be brave for him / tell me first. Taken: eat / eat for him / save him a bowl every night | Grief, family | Ch 21 by variant: the funeral dish, the hospital confession, or the saved bowls he gives his grandfather after the Empty Seat | His grief takes the shape of your answer |
+| `ans.squad3_b.funeral` | Ch 20 (falls) / hospital (crippled) / the empty box (taken), level 3+ | Falls: "Should I cook at the feast? Or is that weird?" Crippled: "Should I tell him I'm scared?" Taken: "Is it wrong to eat when he might be hungry?" | Falls: cook / sit with your mother / both. Crippled: tell him / be brave for him / tell me first. Taken: eat / eat for him / save him a bowl every night | Grief, family | Ch 21 by variant: the funeral dish, the hospital confession, or the saved bowls he gives his grandfather after the Empty Seat | His grief takes the shape of your answer |
 | `ans.squad3_b.expansion` | Embers, level 4 (a training hangout) | "I hate growing big. Everyone stares. Do I use it anyway?" | "use it, they can stare", "only when it protects someone", "make it yours, not the clan's" | Courage, family | Ch 51: he expands in the Academy doorway and says why | — |
 | `ans.squad3_b.player_food` | Ashes, level 6 (dinner at his home) | "You never talk about what you ate in the camps. You don't have to. Do you want to?" | "yes" (a heart-to-heart), "not yet", "they fed us ash bread" | Openness; a real moment if "yes" at level 6 (`heart_to_heart`) | He never serves ash-coloured bread again; Ch 55's dish avoids it | Deepens the bond; "not yet" he asks once more at level 8 |
 
@@ -298,9 +298,9 @@ running to someone who is gone (a grief thread: grey, unfrayed).
 |---|---|
 | Cinders | **Ch 3**: after the flare he says to the player, not unkindly, "Your chakra just moved into theirs." No one else hears |
 | Paper Trail | Watches everyone; good on tracking missions; his mind technique is weak because he will not commit to it |
-| Dusk | Ch 19: senses the cells in the stands a second before the smoke and is not believed |
+| Dusk | Ch 19: senses the hearths in the stands a second before the smoke and is not believed |
 | Embers | **Ch 22**: the sensor who flags the player "Anomalous". He seeks the player out that night (if level 2+) to say he is sorry, or does not (below). Through Ch 31 he watches the Fifth's sweeps and starts to hate them |
-| Ashes | Ch 40: his uncle the Sixth makes the archive public; he admits he flagged a Kagari descendant before anyone knew the word. **Ch 44**: on an A-rank with the player's Genin he reads the lost child: "There are dozens of people in there. One of them is you." |
+| Ashes | Ch 40: his uncle the Sixth makes the archive public; he admits he flagged a Kagari descendant before anyone knew the word. **Ch 44**: on an A-rank with the player's Genin he reads the lost child: "There are a dozen people in there. She's at the bottom." |
 | Last Bonfire | **Ch 49 to 50**: with the porter's ledger and the player's description he can feel cinder seals under floors; he finds the anchors the ledger missed. Ch 53: his flame is the first sensor's flame the player ever feels: a cool, exact light |
 
 **Endings.** A sensor captain who trusts at least one person without reading them (the player,
@@ -328,7 +328,7 @@ eerie. Teen: blunt. Adult: gentle, and still blunt.
 - "You're lying. It's fine. Everyone does. I just hear it."
 - (Ch 22, after) "I flagged you. I'd do it again. I'm sorry anyway."
 - "My aunt puts a flower here every morning. It means 'come home'. She doesn't know I know."
-- (Ch 44) "There are dozens of people in there. One of them is you."
+- (Ch 44) "There are a dozen people in there. She's at the bottom."
 
 **Topics by depth.**
 
