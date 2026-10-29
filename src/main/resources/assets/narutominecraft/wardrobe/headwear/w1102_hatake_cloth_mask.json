@@ -1,0 +1,75 @@
+{
+  "id": "w1102_hatake_cloth_mask",
+  "kind": "headwear",
+  "name": "Hatake Cloth Mask",
+  "gender": "unisex",
+  "texture": "headwear/w1102_hatake_cloth_mask.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "face_mask",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -1.75,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.25
+    },
+    {
+      "id": "face_mask_neck",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        -3.5
+      ],
+      "size": [
+        7,
+        1,
+        7
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": true,
+  "description": "A navy knit mask over the nose and mouth, running down into the collar."
+}

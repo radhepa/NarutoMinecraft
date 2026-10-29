@@ -1,0 +1,194 @@
+{
+  "id": "t1108_scarecrow_kunoichi",
+  "kind": "top",
+  "name": "Scarecrow Kunoichi",
+  "gender": "unisex",
+  "texture": "tops/t1108_scarecrow_kunoichi.png",
+  "extrasHeight": 32,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        9.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "sash_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        9.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "high_neck",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.4,
+        -1.6,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "flap_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        14
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "flap_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        22
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless high-neck slate tunic with the clan crest, a navy sash, mesh arms and black warmers."
+}

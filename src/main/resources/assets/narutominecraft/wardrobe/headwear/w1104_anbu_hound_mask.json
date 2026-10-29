@@ -1,0 +1,312 @@
+{
+  "id": "w1104_anbu_hound_mask",
+  "kind": "headwear",
+  "name": "ANBU Hound Mask",
+  "gender": "unisex",
+  "texture": "headwear/w1104_anbu_hound_mask.png",
+  "extrasHeight": 48,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "strap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -5.4,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.55
+    },
+    {
+      "id": "mask",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.6,
+        -4.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8,
+        0,
+        -1
+      ],
+      "size": [
+        16,
+        15,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "muzzle",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -3.4,
+        -5.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        -2.0
+      ],
+      "size": [
+        6,
+        4,
+        4
+      ],
+      "uv": [
+        35,
+        10
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "ear_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -18
+      ],
+      "origin": [
+        -2.0,
+        -2.0,
+        -1
+      ],
+      "size": [
+        4,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "ear_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -18
+      ],
+      "origin": [
+        -1.5,
+        -3.0,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        13,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "ear_right_2",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -18
+      ],
+      "origin": [
+        -1.0,
+        -4.0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        24,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "ear_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -2.0,
+        -2.0,
+        -1
+      ],
+      "size": [
+        4,
+        2,
+        2
+      ],
+      "uv": [
+        33,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "ear_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -1.5,
+        -3.0,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        46,
+        27
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "ear_left_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -7.6,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -1.0,
+        -4.0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        32
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "hidesHair": [
+    "fringe"
+  ],
+  "coversFace": true,
+  "coversMouth": false,
+  "description": "White hound mask, short pricked ears, a blunt muzzle and red sweeping markings."
+}

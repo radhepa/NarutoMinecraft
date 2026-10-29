@@ -1,0 +1,160 @@
+{
+  "id": "t1104_prodigy_shirt",
+  "kind": "top",
+  "name": "Prodigy Shirt",
+  "gender": "unisex",
+  "texture": "tops/t1104_prodigy_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "high_neck",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.4,
+        -1.4,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "kunai_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -3.8,
+        9.0,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "tanto_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        2.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        -4,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ]
+    },
+    {
+      "id": "tanto_guard",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        2.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        45,
+        0
+      ]
+    },
+    {
+      "id": "tanto_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        2.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        38
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Navy short-sleeved high-neck shirt, a kunai pouch at the hip, a white-hilted tanto across the back."
+}
