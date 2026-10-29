@@ -52,6 +52,12 @@ public record Activity(String id, String place, int from, int to, int season, in
                 a("shrine_visit", "place:shrine", 6, 18, 0, 2, 4, Act.HUNG_OUT, Set.of("steadfast", "gentle", "stern"), Set.of(), Set.of(Value.FAMILY, Value.DUTY), 8),
                 a("pet_walk", "place:river", 6, 20, 0, 1, 3, Act.HUNG_OUT, Set.of("protective", "fiery", "gentle"), Set.of(), Set.of(Value.KINDNESS), 8),
                 a("home_dinner", "home", 18, 21, 0, 5, 6, Act.MEAL_TOGETHER, Set.of("warmhearted", "protective", "steadfast"), Set.of(), Set.of(Value.FAMILY), 12),
+                // At the player's home (HOME.md, "Home hangouts"); the player hosts.
+                a("study_night", "home", 18, 23, 0, 2, 4, Act.STUDIED_TOGETHER, Set.of("thoughtful", "meticulous", "curious", "shy"), Set.of("adventurous"), Set.of(Value.KNOWLEDGE), 8),
+                a("cook_together", "home", 17, 22, 0, 3, 4, Act.MEAL_TOGETHER, Set.of("warmhearted", "playful", "gentle"), Set.of(), Set.of(Value.FAMILY), 8),
+                a("balcony_stargazing", "home", 20, 24, 0, 4, 3, Act.HUNG_OUT, Set.of("curious", "imaginative", "shy", "thoughtful"), Set.of(), Set.of(Value.KNOWLEDGE), 8),
+                a("squad_crash", "home", 18, 23, 0, 3, 3, Act.HUNG_OUT, Set.of("fiery", "adventurous", "playful"), Set.of("reserved"), Set.of(Value.LOYALTY), 8),
+                a("tea_at_home", "home", 13, 20, 0, 4, 3, Act.HUNG_OUT, Set.of("thoughtful", "stern", "gentle", "pragmatic"), Set.of("fiery"), Set.of(), 8),
                 a("flower_viewing", "place:flower_park", 9, 19, 0, 2, 6, Act.FESTIVAL_TOGETHER, Set.of("gentle", "imaginative", "warmhearted"), Set.of(), Set.of(Value.CREATIVITY), 8).in(0),
                 a("lake_swim", "place:lake", 9, 18, 0, 2, 6, Act.HUNG_OUT, Set.of("adventurous", "playful", "fiery"), Set.of("reserved"), Set.of(Value.FREEDOM), 8).in(1),
                 a("moon_viewing", "place:hokage_rock", 19, 24, 0, 3, 6, Act.HUNG_OUT, Set.of("thoughtful", "gentle", "stern"), Set.of(), Set.of(Value.FAMILY), 8).in(2),

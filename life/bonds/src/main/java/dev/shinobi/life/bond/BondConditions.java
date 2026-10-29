@@ -33,6 +33,7 @@ import java.util.Map;
  * {"bond_web":       40}                             see BondWeb
  * {"ritual":         ["role:teammate_b", "ramen"]}   a hangout that became theirs
  * {"hangouts":       ["role:teammate_b", 5]}          times spent together at any activity
+ * {"bond_flag":      ["role:teammate_b", "home.key"]}  a bond flag: a spare key, home.noticed:<keepsake>
  * {"answered":       ["role:teammate_b", "q.advice.first_mission", "be_careful"]}  the answer is optional
  * </pre>
  * {@code all}, {@code any} and {@code not} are here only so the bond engine can be tested alone; Core owns them.
@@ -76,6 +77,7 @@ public final class BondConditions {
             case "kindling_uses" -> every(w, at(arg, 0), who -> w.bond(who).kindled() >= num(at(arg, 1)));
             case "bond_web" -> BondWeb.score(w) >= num(arg);
             case "answered" -> every(w, at(arg, 0), who -> Questions.answered(w, who, str(at(arg, 1)), arg instanceof List<?> l && l.size() > 2 ? str(l.get(2)) : ""));
+            case "bond_flag" -> every(w, at(arg, 0), who -> w.bond(who).has(str(at(arg, 1))));
             case "ritual" -> every(w, at(arg, 0), who -> w.bond(who).rituals().contains(str(at(arg, 1))));
             case "hangouts" -> every(w, at(arg, 0), who -> Activity.CATALOG.keySet().stream().mapToInt(a -> w.bond(who).hangoutCount(a)).sum() >= num(at(arg, 1)));
             default -> throw new IllegalArgumentException("not a bond condition: " + e.getKey());
@@ -84,7 +86,7 @@ public final class BondConditions {
     public static boolean known(String name) {
         return List.of("friendship", "bond_meter", "bond_memory", "bond_moment", "bond_state", "romance_stage", "kindling", "knows_fact",
                 "squad_cohesion", "in_squad", "squad_can_return", "standing", "jealous", "clan_friendship", "clan_relation", "village_mood",
-                "hook_open", "kindling_uses", "bond_web", "ritual", "hangouts", "answered", "resonance", "bonfire", "gifts_from").contains(name);
+                "hook_open", "kindling_uses", "bond_web", "ritual", "hangouts", "answered", "resonance", "bonfire", "gifts_from", "bond_flag").contains(name);
     }
 
     static boolean every(BondWorld w, Object ref, java.util.function.Predicate<String> test) {

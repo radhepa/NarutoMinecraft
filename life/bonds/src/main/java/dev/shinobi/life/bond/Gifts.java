@@ -47,6 +47,18 @@ public final class Gifts {
         return true;
     }
 
+    /**
+     * A visitor saw something of theirs on show at the player's home: a gift they gave (the ledger marks it seen) or a
+     * photo with them. Once per keepsake, remembered as the bond flag {@code home.noticed:<keepsake>}.
+     */
+    public static boolean noticed(BondWorld w, String who, String keepsake, boolean photo) {
+        if (!w.bond(who).flags.add("home.noticed:" + keepsake)) return false;
+        var gift = photo ? null : w.received.stream().filter(r -> r.from().equals(who) && r.item().equals(keepsake) && !r.seen()).findFirst().orElse(null);
+        if (gift != null) seenDisplayed(w, gift.id());
+        else w.act(who, photo ? Act.SAW_PHOTO_TOGETHER : Act.SAW_GIFT_DISPLAYED);
+        return true;
+    }
+
     /** End of day: kindred spirits (level 9 and up, not quarrelling) may leave a small gift, one of their favorite things. */
     static void daily(BondWorld w) {
         for (var b : List.copyOf(w.bonds.values())) {

@@ -42,6 +42,8 @@ public enum Act {
     HUNG_OUT(def(Size.SMALL, 45).meters(2, 1, 0, 0).exp(Experience.HANGOUT).lean(Trait.OPENNESS, Meter.AFFECTION, 0.5)),
     HIGHLIGHT(def(Size.NOTABLE, 150).meters(2.5, 1.5, 0, 0)),
     SAW_GIFT_DISPLAYED(def(Size.NOTABLE, 120).meters(2.5, 1, 0, 0).lean(Trait.WARMTH, Meter.AFFECTION, 1)),
+    VISITED_HOME(def(Size.SMALL, 45).meters(2, 1.5, 0, 0).exp(Experience.HANGOUT).honors(Value.FAMILY).lean(Trait.OPENNESS, Meter.AFFECTION, 0.5)),
+    SAW_PHOTO_TOGETHER(def(Size.NOTABLE, 120).meters(2.5, 1, 0, 0).lean(Trait.WARMTH, Meter.AFFECTION, 1)),
     AWKWARD_HANGOUT(def(Size.SMALL, 20).meters(-1, 0, 0, 0)),
     CELEBRATED_WITH_THEM(def(Size.SMALL, 60).meters(2, 1, 0, 0).honors(Value.FAMILY)),
     COMFORTED(def(Size.NOTABLE, 120).meters(3, 4, 0, 0).honors(Value.KINDNESS).lean(Trait.WARMTH, Meter.AFFECTION, 1)),

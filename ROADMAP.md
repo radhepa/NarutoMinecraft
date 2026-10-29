@@ -353,7 +353,7 @@ while a quarrel lasts), plus `bond_meter`, `bond_memory`, `bond_moment`, `bond_s
 `romance_stage`, `kindling`, `knows_fact`, `squad_cohesion`, `in_squad`, `squad_can_return`,
 `standing` (a district or clan and a title, such as `["clan:nara", "good_neighbor"]`), `jealous`,
 `clan_friendship`, `clan_relation` (the relation between two clans, at least a label such as
-`rivals` or a number), `village_mood`, `hook_open`, `kindling_uses`, `bond_web`, `ritual`, `hangouts` and `answered` (an answer the player gave to
+`rivals` or a number), `village_mood`, `hook_open`, `kindling_uses`, `bond_web`, `ritual`, `hangouts`, `bond_flag` (a spare key, a keepsake noticed), `gifts_from` and `answered` (an answer the player gave to
 a resident's question). Side quests use
 these directly: there is no separate `standing_at_least` or `bond_at_least`. `role:squad` is the
 current teammates and sensei, `role:teammates` the teammates alone; a role group passes only if
