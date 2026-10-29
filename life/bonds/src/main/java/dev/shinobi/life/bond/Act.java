@@ -39,6 +39,13 @@ public enum Act {
     MISSION_TOGETHER(def(Size.NOTABLE, 60).meters(1.5, 2.5, 1, 0).exp(Experience.MISSION).honors(Value.DUTY)),
     CAMP_NIGHT(def(Size.NOTABLE, 90).meters(3, 2.5, 0, 0).exp(Experience.CAMP).lean(Trait.OPENNESS, Meter.AFFECTION, 1)),
     FESTIVAL_TOGETHER(def(Size.NOTABLE, 90).meters(3, 0.5, 0, 0).romance(4).exp(Experience.FESTIVAL).lean(Trait.OPENNESS, Meter.AFFECTION, 1)),
+    HUNG_OUT(def(Size.SMALL, 45).meters(2, 1, 0, 0).exp(Experience.HANGOUT).lean(Trait.OPENNESS, Meter.AFFECTION, 0.5)),
+    HIGHLIGHT(def(Size.NOTABLE, 150).meters(2.5, 1.5, 0, 0)),
+    AWKWARD_HANGOUT(def(Size.SMALL, 20).meters(-1, 0, 0, 0)),
+    CELEBRATED_WITH_THEM(def(Size.SMALL, 60).meters(2, 1, 0, 0).honors(Value.FAMILY)),
+    COMFORTED(def(Size.NOTABLE, 120).meters(3, 4, 0, 0).honors(Value.KINDNESS).lean(Trait.WARMTH, Meter.AFFECTION, 1)),
+    ASKED_AFTER_THEM(def(Size.SMALL, 30).meters(1, 1, 0, 0).honors(Value.KINDNESS)),
+    ASKED_ADVICE(def(Size.SMALL, 30).meters(1, 1, 0.5, 0).honors(Value.KNOWLEDGE).lean(Trait.PRIDE, Meter.AFFECTION, 1)),
     DATE(def(Size.NOTABLE, 90).meters(2.5, 1, 0, 0).romance(8).exp(Experience.DATE).romantic()),
 
     // Moments: the story gates want these (bond quests, heart-to-hearts, a life saved, a secret kept).
@@ -78,6 +85,7 @@ public enum Act {
     PRIED(def(Size.SMALL, 30).meters(-2, -2, 0, 0).peeve(Peeve.NOSINESS).lean(Trait.OPENNESS, Meter.AFFECTION, 1)),
     MISSED_BIRTHDAY(def(Size.NOTABLE, 30).meters(-2.5, -0.5, 0, 0).peeve(Peeve.NEGLECT).violates(Value.FAMILY)),
     FELT_OVERLOOKED(def(Size.SMALL, 30).meters(-2, -0.5, 0, 1).peeve(Peeve.NEGLECT).lean(Trait.PRIDE, Meter.RIVALRY, 2)),
+    STOOD_UP(def(Size.NOTABLE, 60).meters(-3, -5, 0, 0).violates(Value.HONESTY).peeve(Peeve.LATENESS)),
     BROKE_PROMISE(def(Size.NOTABLE, 60).meters(-2.5, -6, -0.5, 0).violates(Value.HONESTY).peeve(Peeve.LATENESS)),
     WENT_OVER_THEIR_HEAD(def(Size.NOTABLE, 60).meters(-2, -5, 0, 0.5).violates(Value.LOYALTY).lean(Trait.DISCIPLINE, Meter.TRUST, 2.5)),
     SIDED_AGAINST(def(Size.NOTABLE, 60).meters(-3, -3, 0, 1).violates(Value.LOYALTY)),
@@ -100,7 +108,7 @@ public enum Act {
 
     public enum Size { SMALL, NOTABLE, BIG }
     /** The kinds of shared experience the gates count. */
-    public enum Experience { STUDY, TRAINING, MEAL, SPAR, MISSION, CAMP, FESTIVAL, DATE }
+    public enum Experience { STUDY, TRAINING, MEAL, SPAR, MISSION, CAMP, FESTIVAL, DATE, HANGOUT }
     public record Lean(Trait trait, Meter meter, double amount) {}
 
     public final Size size;

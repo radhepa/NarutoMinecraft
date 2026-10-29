@@ -12,14 +12,15 @@ import java.util.Map;
  * every string here is a dialogue-bank key, never a name (the screen resolves {@code {name:<id>}}).
  *
  * <p>What you know grows with the bond, and quests can reveal a fact early ({@code reveal_fact}):
- * level 0 who they are (clan, rank); 2 favorite things; 3 their hobby (VF personality); 4 family; 5 values;
- * 6 dream; 7 pet peeves.
+ * level 0 who they are (clan, rank); 2 favorite things; 3 their hobby (VF personality); 4 family and their favorite
+ * way to spend time together; 5 values; 6 dream; 7 pet peeves; 8 what worries them.
  */
 public final class BondBook {
     public static final Map<String, Integer> FACTS = facts();
     private static Map<String, Integer> facts() {
         var m = new LinkedHashMap<String, Integer>();
-        m.put("who", 0); m.put("loves", 2); m.put("hobby", 3); m.put("family", 4); m.put("values", 5); m.put("dream", 6); m.put("peeves", 7);
+        m.put("who", 0); m.put("loves", 2); m.put("hobby", 3); m.put("favorite_hangout", 4); m.put("family", 4); m.put("values", 5); m.put("dream", 6);
+        m.put("peeves", 7); m.put("worries", 8);
         return m;
     }
     public static final int RECENT = 6;
@@ -36,7 +37,7 @@ public final class BondBook {
         var facts = new ArrayList<Fact>();
         for (var f : FACTS.entrySet()) {
             boolean known = acting >= f.getValue() || b.facts().contains(f.getKey());
-            facts.add(new Fact("bond.fact." + f.getKey(), known, known ? value(p, f.getKey()) : ""));
+            facts.add(new Fact("bond.fact." + f.getKey(), known, known ? value(w, p, f.getKey()) : ""));
         }
         var feelings = new LinkedHashMap<String, String>();
         feelings.put("affection", "bond.feel.affection." + band(m.affection(), new double[]{-30, 0, 15, 40, 70}, "dislikes", "wary", "neutral", "fond", "warm", "devoted"));
@@ -72,7 +73,7 @@ public final class BondBook {
         String how = m.source() == Reaction.Source.SELF ? "" : "." + m.source().name().toLowerCase(java.util.Locale.ROOT);
         return new MemoryLine("bond.memory." + m.act().id() + how, m.day(), m.about(), kept);
     }
-    private static String value(Person p, String fact) {
+    private static String value(BondWorld w, Person p, String fact) {
         var pp = p.personality();
         return switch (fact) {
             case "who" -> (p.clan().isEmpty() ? "clanless" : p.clan()) + "," + (p.shinobi() ? Person.RANKS.get(p.rank()) : "civilian");
@@ -81,6 +82,8 @@ public final class BondBook {
             case "family" -> String.join(",", p.family().keySet());
             case "values" -> String.join(",", pp.values().stream().map(v -> v.name().toLowerCase(java.util.Locale.ROOT)).sorted().toList());
             case "dream" -> pp.dream();
+            case "favorite_hangout" -> Activity.favorite(w.seed(), p.id());
+            case "worries" -> pp.dream().isEmpty() ? "" : "worry." + pp.dream();
             case "peeves" -> String.join(",", pp.peeves().stream().map(v -> v.name().toLowerCase(java.util.Locale.ROOT)).sorted().toList());
             default -> "";
         };

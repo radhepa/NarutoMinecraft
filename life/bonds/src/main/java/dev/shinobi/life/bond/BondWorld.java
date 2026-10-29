@@ -38,6 +38,11 @@ public final class BondWorld {
     private Map<String, Map<String, Double>> contacts;
     /** The village-scale society, when one is settled ({@link Village#settle}); without it gossip runs on circles. */
     Village village;
+    /** Time together: hangouts planned, invitations residents sent the player, and when each last invited them. */
+    final List<Together.Plan> plans = new ArrayList<>();
+    final List<Together.Invitation> invitations = new ArrayList<>();
+    final Map<String, Long> invitedOn = new TreeMap<>();
+    int planSerial;
 
     public BondWorld(long seed, long day) { this.seed = seed; this.day = day; }
 
@@ -192,6 +197,9 @@ public final class BondWorld {
         return Kindling.grant(tier, who.equals(spouse()));
     }
     public void setBondFlag(String who, String f) { bond(who).flags.add(f); }
+
+    /** Something they feel about the player without the player being there (overlooked, let down). */
+    void npcFelt(String who, Act act) { apply(who, act, Source.SELF, "", null, List.of(), false); }
 
     private Meters apply(String who, Act act, Source how, String about, String momentId, Collection<String> witnesses, boolean contact) {
         var p = need(who); var b = bond(who);
@@ -412,6 +420,8 @@ public final class BondWorld {
             if (b.to.equals(PLAYER)) courtship(b);
             updateLevel(b, 1);
         }
+        Together.daily(this);
+        LifeEvents.daily(this);
         if (village != null) village.endDay();
         day++;
     }

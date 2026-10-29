@@ -28,6 +28,8 @@ import java.util.Map;
  * {"hook_open":      "hook.clan_feud.12"}
  * {"kindling_uses":  ["role:teammate_a", 12]}         borrowed this often (a master's trial)
  * {"bond_web":       40}                             see BondWeb
+ * {"ritual":         ["role:teammate_b", "ramen"]}   a hangout that became theirs
+ * {"hangouts":       ["role:teammate_b", 5]}          times spent together at any activity
  * </pre>
  * {@code all}, {@code any} and {@code not} are here only so the bond engine can be tested alone; Core owns them.
  */
@@ -65,13 +67,15 @@ public final class BondConditions {
             case "hook_open" -> w.village() != null && w.village().hook(str(arg)) != null;
             case "kindling_uses" -> every(w, at(arg, 0), who -> w.bond(who).kindled() >= num(at(arg, 1)));
             case "bond_web" -> BondWeb.score(w) >= num(arg);
+            case "ritual" -> every(w, at(arg, 0), who -> w.bond(who).rituals().contains(str(at(arg, 1))));
+            case "hangouts" -> every(w, at(arg, 0), who -> Activity.CATALOG.keySet().stream().mapToInt(a -> w.bond(who).hangoutCount(a)).sum() >= num(at(arg, 1)));
             default -> throw new IllegalArgumentException("not a bond condition: " + e.getKey());
         };
     }
     public static boolean known(String name) {
         return List.of("friendship", "bond_meter", "bond_memory", "bond_moment", "bond_state", "romance_stage", "kindling", "knows_fact",
                 "squad_cohesion", "in_squad", "squad_can_return", "standing", "jealous", "clan_friendship", "clan_relation", "village_mood",
-                "hook_open", "kindling_uses", "bond_web").contains(name);
+                "hook_open", "kindling_uses", "bond_web", "ritual", "hangouts").contains(name);
     }
 
     static boolean every(BondWorld w, Object ref, java.util.function.Predicate<String> test) {
