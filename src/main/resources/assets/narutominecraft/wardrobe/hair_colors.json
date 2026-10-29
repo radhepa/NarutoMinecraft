@@ -261,6 +261,56 @@
         "#566087"
       ]
     },
+    "HARUNO_CHERRY": {
+      "name": "Haruno Cherry",
+      "ramp": [
+        "#8a3a56",
+        "#b9577a",
+        "#e07fa1",
+        "#f2a8c1",
+        "#fbd3e0"
+      ]
+    },
+    "HARUNO_SAKURA": {
+      "name": "Haruno Sakura",
+      "ramp": [
+        "#9b4a64",
+        "#c86a8a",
+        "#eb97b4",
+        "#f7bfd2",
+        "#fde4ec"
+      ]
+    },
+    "HARUNO_PETAL": {
+      "name": "Haruno Petal",
+      "ramp": [
+        "#a3647a",
+        "#cf8ea4",
+        "#efb7c8",
+        "#f9d6e0",
+        "#fff0f4"
+      ]
+    },
+    "HARUNO_MEBUKI": {
+      "name": "Haruno Mebuki",
+      "ramp": [
+        "#7a4e1e",
+        "#ab7526",
+        "#d9a43c",
+        "#efc768",
+        "#fbe6a4"
+      ]
+    },
+    "HARUNO_STRAWBERRY": {
+      "name": "Haruno Strawberry",
+      "ramp": [
+        "#8a4632",
+        "#b86a4e",
+        "#e0957a",
+        "#f2b9a2",
+        "#fbdccf"
+      ]
+    },
     "HATAKE_SILVER": {
       "name": "Hatake Silver",
       "ramp": [

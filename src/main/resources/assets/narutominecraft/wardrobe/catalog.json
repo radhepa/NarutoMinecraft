@@ -288,7 +288,22 @@
     "h1512_shoulder_sweep",
     "h1513_strap_braid",
     "h1514_iai_gust",
-    "h1515_crossed_pin_bun"
+    "h1515_crossed_pin_bun",
+    "h1901_cherry_long",
+    "h1902_kunoichi_cut",
+    "h1903_medic_bob",
+    "h1904_kizashi_bloom",
+    "h1905_mebuki_flip",
+    "h1906_ribbon_long",
+    "h1907_shop_buns",
+    "h1908_ledger_tail",
+    "h1909_petal_crop",
+    "h1910_spring_spikes",
+    "h1911_side_tail",
+    "h1912_layered_shag",
+    "h1913_merchant_topknot",
+    "h1914_half_up_bun",
+    "h1915_blossom_braid"
   ],
   "headwear": [
     "w01_kage_hat",
@@ -337,7 +352,8 @@
     "w1402_crimson_protector",
     "w1501_proctor_bandana",
     "w1502_cat_mask",
-    "w1503_crescent_hachimaki"
+    "w1503_crescent_hachimaki",
+    "w1901_hairband_protector"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -510,7 +526,17 @@
     "t1507_convalescent_wrap",
     "t1508_practice_gi",
     "t1509_scarf_knit",
-    "t1510_tasuki_iaido"
+    "t1510_tasuki_iaido",
+    "t1901_crest_qipao",
+    "t1902_crest_zip_top",
+    "t1903_academy_tee",
+    "t1904_kimono_trim_blouse",
+    "t1905_merchant_happi",
+    "t1906_medic_tunic",
+    "t1907_crest_flak_vest",
+    "t1908_spring_qipao",
+    "t1909_shop_haori",
+    "t1910_blossom_jacket"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -594,7 +620,13 @@
     "b1405_bandaged_shorts",
     "b1501_gekko_hakama",
     "b1502_swordsman_trousers",
-    "b1503_strap_leggings"
+    "b1503_strap_leggings",
+    "b1901_shinobi_bike_shorts",
+    "b1902_split_apron_skirt",
+    "b1903_maekake_trousers",
+    "b1904_slit_tights",
+    "b1905_academy_shorts",
+    "b1906_field_leggings"
   ],
   "characters": [
     {
@@ -1159,6 +1191,42 @@
         ]
       ],
       "color": "#8d7a8e",
+      "mirror": true
+    },
+    "haruno_diamond": {
+      "rects": [
+        [
+          -0.25,
+          -7.0,
+          0.5,
+          0.25
+        ],
+        [
+          -0.5,
+          -6.75,
+          1.0,
+          0.35
+        ],
+        [
+          -0.25,
+          -6.4,
+          0.5,
+          0.25
+        ]
+      ],
+      "color": "#8a4fb3",
+      "mirror": false
+    },
+    "haruno_cheeks": {
+      "rects": [
+        [
+          2.4,
+          -1.7,
+          1.2,
+          0.5
+        ]
+      ],
+      "color": "#f0a3b5",
       "mirror": true
     },
     "hatake_scar": {
@@ -2564,6 +2632,376 @@
           "top": "t1510_tasuki_iaido",
           "bottom": "b1501_gekko_hakama",
           "rank": "jonin"
+        }
+      ]
+    },
+    {
+      "id": "haruno",
+      "name": "Haruno",
+      "tagline": "A cheerful merchant household whose children became ninja: cherry-blossom pink and honey-blonde hair, red qipao tops with the white circle on the back, beige and rose shop wear",
+      "standing": "minor",
+      "ability": null,
+      "palettes": {
+        "HARUNO_QIPAO": {
+          "name": "Haruno Qipao",
+          "P": "#c2324f",
+          "S": "#f4eee8",
+          "A": "#ee93ad",
+          "L": "#7a5a44",
+          "M": "#b5bcc2",
+          "K": "#2a2128",
+          "D": "#3f5440"
+        },
+        "HARUNO_BLOSSOM": {
+          "name": "Haruno Blossom",
+          "P": "#e6849f",
+          "S": "#f8f1ea",
+          "A": "#b52f4f",
+          "L": "#7a5a44",
+          "M": "#b5bcc2",
+          "K": "#2e252c",
+          "D": "#4a4552"
+        },
+        "HARUNO_SHOPKEEPER": {
+          "name": "Haruno Shopkeeper",
+          "P": "#cdb08a",
+          "S": "#f3e8d6",
+          "A": "#c94a6a",
+          "L": "#6e4f3a",
+          "M": "#b5aa8a",
+          "K": "#2c2420",
+          "D": "#5c4a3c"
+        },
+        "HARUNO_ROSEWOOD": {
+          "name": "Haruno Rosewood",
+          "P": "#b8707e",
+          "S": "#f1e6de",
+          "A": "#e8b9c4",
+          "L": "#6b4a3a",
+          "M": "#b5bcc2",
+          "K": "#2b2226",
+          "D": "#4f4a46"
+        },
+        "HARUNO_MEDIC": {
+          "name": "Haruno Medic",
+          "P": "#d8577a",
+          "S": "#f6f2ec",
+          "A": "#7fae8a",
+          "L": "#7a5a44",
+          "M": "#b5bcc2",
+          "K": "#2a2329",
+          "D": "#3d3f4c"
+        },
+        "HARUNO_JONIN": {
+          "name": "Haruno Jonin",
+          "P": "#5f6e3c",
+          "S": "#efe6dc",
+          "A": "#c44766",
+          "L": "#7a6346",
+          "M": "#aab3b9",
+          "K": "#1d2236",
+          "D": "#2d3c60"
+        }
+      },
+      "hair_colors": {
+        "HARUNO_CHERRY": {
+          "name": "Haruno Cherry",
+          "ramp": [
+            "#8a3a56",
+            "#b9577a",
+            "#e07fa1",
+            "#f2a8c1",
+            "#fbd3e0"
+          ]
+        },
+        "HARUNO_SAKURA": {
+          "name": "Haruno Sakura",
+          "ramp": [
+            "#9b4a64",
+            "#c86a8a",
+            "#eb97b4",
+            "#f7bfd2",
+            "#fde4ec"
+          ]
+        },
+        "HARUNO_PETAL": {
+          "name": "Haruno Petal",
+          "ramp": [
+            "#a3647a",
+            "#cf8ea4",
+            "#efb7c8",
+            "#f9d6e0",
+            "#fff0f4"
+          ]
+        },
+        "HARUNO_MEBUKI": {
+          "name": "Haruno Mebuki",
+          "ramp": [
+            "#7a4e1e",
+            "#ab7526",
+            "#d9a43c",
+            "#efc768",
+            "#fbe6a4"
+          ]
+        },
+        "HARUNO_STRAWBERRY": {
+          "name": "Haruno Strawberry",
+          "ramp": [
+            "#8a4632",
+            "#b86a4e",
+            "#e0957a",
+            "#f2b9a2",
+            "#fbdccf"
+          ]
+        }
+      },
+      "eye_colors": {
+        "HARUNO_JADE": {
+          "name": "Haruno Jade",
+          "ramp": [
+            "#0b1410",
+            "#2c6e45",
+            "#47a066",
+            "#93d6a6",
+            "#f2efe6"
+          ]
+        },
+        "HARUNO_TEAL": {
+          "name": "Haruno Teal",
+          "ramp": [
+            "#0a1414",
+            "#2a6466",
+            "#3f9294",
+            "#88cfcf",
+            "#f2efe6"
+          ]
+        }
+      },
+      "marks": {
+        "haruno_diamond": {
+          "rects": [
+            [
+              -0.25,
+              -7.0,
+              0.5,
+              0.25
+            ],
+            [
+              -0.5,
+              -6.75,
+              1.0,
+              0.35
+            ],
+            [
+              -0.25,
+              -6.4,
+              0.5,
+              0.25
+            ]
+          ],
+          "color": "#8a4fb3",
+          "mirror": false
+        },
+        "haruno_cheeks": {
+          "rects": [
+            [
+              2.4,
+              -1.7,
+              1.2,
+              0.5
+            ]
+          ],
+          "color": "#f0a3b5",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h1901_cherry_long",
+          "h1902_kunoichi_cut",
+          "h1903_medic_bob",
+          "h1904_kizashi_bloom",
+          "h1905_mebuki_flip",
+          "h1906_ribbon_long",
+          "h1907_shop_buns",
+          "h1908_ledger_tail",
+          "h1909_petal_crop",
+          "h1910_spring_spikes",
+          "h1911_side_tail",
+          "h1912_layered_shag",
+          "h1913_merchant_topknot",
+          "h1914_half_up_bun",
+          "h1915_blossom_braid"
+        ],
+        "hair_colors": [
+          "HARUNO_CHERRY",
+          "HARUNO_CHERRY",
+          "HARUNO_CHERRY",
+          "HARUNO_SAKURA",
+          "HARUNO_SAKURA",
+          "HARUNO_PETAL",
+          "HARUNO_MEBUKI",
+          "HARUNO_MEBUKI",
+          "HARUNO_MEBUKI",
+          "HARUNO_STRAWBERRY"
+        ],
+        "eye_colors": [
+          "HARUNO_JADE",
+          "HARUNO_JADE",
+          "HARUNO_JADE",
+          "HARUNO_TEAL"
+        ],
+        "palettes": [
+          "HARUNO_QIPAO",
+          "HARUNO_BLOSSOM",
+          "HARUNO_SHOPKEEPER",
+          "HARUNO_ROSEWOOD",
+          "HARUNO_MEDIC"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w1901_hairband_protector",
+          "w1901_hairband_protector",
+          "w02_forehead_protector"
+        ],
+        "bottoms": [
+          "b1904_slit_tights"
+        ],
+        "complexions": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "haruno_cheeks",
+            "chance": 0.2
+          },
+          {
+            "id": "haruno_diamond",
+            "chance": 0.04
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "academy_tee",
+          "name": "Academy Tee",
+          "top": "t1903_academy_tee",
+          "bottom": "b1905_academy_shorts",
+          "rank": "academy",
+          "palettes": [
+            "HARUNO_BLOSSOM",
+            "HARUNO_QIPAO",
+            "HARUNO_MEDIC"
+          ]
+        },
+        {
+          "id": "crest_qipao",
+          "name": "Crest Qipao",
+          "top": "t1901_crest_qipao",
+          "bottom": "b1901_shinobi_bike_shorts",
+          "rank": "genin",
+          "palettes": [
+            "HARUNO_QIPAO",
+            "HARUNO_BLOSSOM"
+          ]
+        },
+        {
+          "id": "kimono_trim",
+          "name": "Kimono Trim",
+          "top": "t1904_kimono_trim_blouse",
+          "bottom": "b1906_field_leggings",
+          "rank": "genin",
+          "palettes": [
+            "HARUNO_ROSEWOOD",
+            "HARUNO_BLOSSOM",
+            "HARUNO_SHOPKEEPER"
+          ]
+        },
+        {
+          "id": "blossom_jacket",
+          "name": "Blossom Jacket",
+          "top": "t1910_blossom_jacket",
+          "bottom": "b1901_shinobi_bike_shorts",
+          "rank": "genin",
+          "palettes": [
+            "HARUNO_BLOSSOM",
+            "HARUNO_ROSEWOOD"
+          ]
+        },
+        {
+          "id": "crest_zip",
+          "name": "Crest Zip",
+          "top": "t1902_crest_zip_top",
+          "bottom": "b1902_split_apron_skirt",
+          "rank": "chunin",
+          "palettes": [
+            "HARUNO_QIPAO",
+            "HARUNO_MEDIC"
+          ]
+        },
+        {
+          "id": "medic",
+          "name": "Medic",
+          "top": "t1906_medic_tunic",
+          "bottom": "b1906_field_leggings",
+          "rank": "chunin",
+          "palettes": [
+            "HARUNO_MEDIC",
+            "HARUNO_ROSEWOOD"
+          ]
+        },
+        {
+          "id": "shop_happi",
+          "name": "Shop Happi",
+          "top": "t1905_merchant_happi",
+          "bottom": "b1903_maekake_trousers",
+          "rank": "chunin",
+          "palettes": [
+            "HARUNO_SHOPKEEPER",
+            "HARUNO_ROSEWOOD"
+          ]
+        },
+        {
+          "id": "spring_qipao",
+          "name": "Spring Qipao",
+          "top": "t1908_spring_qipao",
+          "bottom": "b1904_slit_tights",
+          "rank": "jonin",
+          "palettes": [
+            "HARUNO_QIPAO",
+            "HARUNO_MEDIC",
+            "HARUNO_ROSEWOOD"
+          ]
+        },
+        {
+          "id": "crest_vest",
+          "name": "Crest Vest",
+          "top": "t1907_crest_flak_vest",
+          "bottom": "b1906_field_leggings",
+          "rank": "jonin",
+          "palettes": [
+            "HARUNO_JONIN"
+          ]
+        },
+        {
+          "id": "shop_haori",
+          "name": "Shop Haori",
+          "top": "t1909_shop_haori",
+          "bottom": "b1903_maekake_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "HARUNO_SHOPKEEPER",
+            "HARUNO_ROSEWOOD"
+          ]
         }
       ]
     },

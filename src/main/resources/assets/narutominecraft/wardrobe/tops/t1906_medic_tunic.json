@@ -1,0 +1,204 @@
+{
+  "id": "t1906_medic_tunic",
+  "kind": "top",
+  "name": "Medic Tunic",
+  "gender": "unisex",
+  "texture": "tops/t1906_medic_tunic.png",
+  "extrasHeight": 32,
+  "tags": [
+    "chunin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_arm_crest",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -3.55,
+        0.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        6,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "left_arm_crest",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        3.05,
+        0.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        6,
+        6
+      ],
+      "uv": [
+        15,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        -1.4,
+        -2.4
+      ],
+      "size": [
+        6,
+        2,
+        5
+      ],
+      "uv": [
+        30,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "medic_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        9.6,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        29,
+        13
+      ]
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.0,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        38,
+        13
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Rose tunic with a standing collar, cream chest panel and long sleeves, sash and hip pouch, circles on the sleeves."
+}

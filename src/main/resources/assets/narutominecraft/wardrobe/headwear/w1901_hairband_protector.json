@@ -1,0 +1,135 @@
+{
+  "id": "w1901_hairband_protector",
+  "kind": "headwear",
+  "name": "Hairband Protector",
+  "gender": "unisex",
+  "texture": "headwear/w1901_hairband_protector.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8,
+        -1.4
+      ],
+      "size": [
+        8,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.66
+    },
+    {
+      "id": "band_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.66,
+        -8.0,
+        -0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        5,
+        2
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "band_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.66,
+        -8.0,
+        -0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        5,
+        2
+      ],
+      "uv": [
+        28,
+        0
+      ]
+    },
+    {
+      "id": "plate",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.7,
+        -3.3
+      ],
+      "rotation": [
+        -38,
+        0,
+        0
+      ],
+      "origin": [
+        -9,
+        -4,
+        -2
+      ],
+      "size": [
+        18,
+        8,
+        2
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "scale": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    }
+  ],
+  "hidesHair": [],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "Forehead protector worn as a hairband over the crown, the plate above the fringe, forehead bare."
+}

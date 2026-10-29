@@ -1,0 +1,15 @@
+{
+  "id": "b1904_slit_tights",
+  "kind": "bottom",
+  "name": "Slit Tights",
+  "gender": "unisex",
+  "texture": "bottoms/b1904_slit_tights.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Dark fitted tights to the ankle, a thin rose waist band, dark low boots."
+}

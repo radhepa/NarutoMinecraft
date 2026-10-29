@@ -134,6 +134,26 @@
         "#f1ede3"
       ]
     },
+    "HARUNO_JADE": {
+      "name": "Haruno Jade",
+      "ramp": [
+        "#0b1410",
+        "#2c6e45",
+        "#47a066",
+        "#93d6a6",
+        "#f2efe6"
+      ]
+    },
+    "HARUNO_TEAL": {
+      "name": "Haruno Teal",
+      "ramp": [
+        "#0a1414",
+        "#2a6466",
+        "#3f9294",
+        "#88cfcf",
+        "#f2efe6"
+      ]
+    },
     "HATAKE_GREY": {
       "name": "Hatake Grey",
       "ramp": [
