@@ -67,7 +67,7 @@ The story must agree with the merged designs on `main`. Earlier rounds found mis
 
 These are settled. Do not reopen them.
 
-- **The player:** always a clanless orphan (Kagari only). There is no clan-born start.
+- **The player:** always a clanless orphan. There is no clan-born start.
 - **Money:**
   - No rent.
   - The Academy stipend is 30 ryo a day for the whole game, plus 100 ryo on day 1.
