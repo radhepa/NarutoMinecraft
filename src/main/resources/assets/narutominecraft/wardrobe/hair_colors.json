@@ -150,6 +150,46 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "SENJU_WOOD_BLACK": {
+      "name": "Senju Wood Black",
+      "ramp": [
+        "#140f0d",
+        "#211915",
+        "#30241d",
+        "#463428",
+        "#634a38"
+      ]
+    },
+    "SENJU_BARK": {
+      "name": "Senju Bark",
+      "ramp": [
+        "#24170f",
+        "#382417",
+        "#4f3420",
+        "#6b4a2e",
+        "#8c6640"
+      ]
+    },
+    "SENJU_WHITE": {
+      "name": "Senju White",
+      "ramp": [
+        "#7d7a78",
+        "#a8a5a1",
+        "#cdcac4",
+        "#e6e3dd",
+        "#f8f6f1"
+      ]
+    },
+    "SENJU_GOLD": {
+      "name": "Senju Gold",
+      "ramp": [
+        "#6e5222",
+        "#957131",
+        "#bf9744",
+        "#dcbb63",
+        "#f1d98e"
+      ]
     }
   }
 }

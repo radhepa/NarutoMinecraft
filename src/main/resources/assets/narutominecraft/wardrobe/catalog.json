@@ -89,7 +89,9 @@
     "w06_anbu_hawk_mask",
     "w07_root_mask",
     "w08_masked_protector",
-    "w09_bandana_protector"
+    "w09_bandana_protector",
+    "w101_senju_brow_guard",
+    "w102_travel_kasa"
   ],
   "tops": [
     "t01_hokage_haori",
@@ -112,7 +114,17 @@
     "t18_sentinel_vest",
     "t19_field_vest",
     "t20_kunoichi_jonin",
-    "t21_commander_coat"
+    "t21_commander_coat",
+    "t101_senju_war_armor",
+    "t102_tobirama_armor",
+    "t103_clan_haori",
+    "t104_village_kimono",
+    "t105_crest_tunic",
+    "t106_gambler_haori",
+    "t107_ranger_vest",
+    "t108_training_gi",
+    "t109_ceremonial_montsuki",
+    "t110_scout_cuirass"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -122,7 +134,12 @@
     "b05_green_leggings",
     "b06_anbu_greaves",
     "b07_cargo_shorts",
-    "b08_mesh_leggings"
+    "b08_mesh_leggings",
+    "b101_armored_hakama",
+    "b102_wrapped_trousers",
+    "b103_pleated_hakama",
+    "b104_field_trousers",
+    "b105_ranger_shorts"
   ],
   "characters": [
     {
@@ -538,7 +555,385 @@
       ],
       "color": null,
       "mirror": true
+    },
+    "senju_strength_seal": {
+      "rects": [
+        [
+          -0.25,
+          -7.15,
+          0.5,
+          0.25
+        ],
+        [
+          -0.5,
+          -6.9,
+          1.0,
+          0.4
+        ],
+        [
+          -0.25,
+          -6.5,
+          0.5,
+          0.25
+        ]
+      ],
+      "color": "#7b3fa0",
+      "mirror": false
+    },
+    "senju_war_stripes": {
+      "rects": [
+        [
+          2.0,
+          -1.9,
+          0.35,
+          1.5
+        ],
+        [
+          -0.2,
+          -0.55,
+          0.4,
+          0.5
+        ]
+      ],
+      "color": "#b3262d",
+      "mirror": true
     }
   },
-  "clans": []
+  "clans": [
+    {
+      "id": "senju",
+      "name": "Senju",
+      "tagline": "The clan of a thousand hands: long dark manes and white spikes, red and navy Warring States armor laced in green, forest haori and calm village kimono under the split-circle crest.",
+      "palettes": {
+        "SENJU_RED": {
+          "name": "Senju Red Lacquer",
+          "P": "#8f2a26",
+          "S": "#e9dfc6",
+          "A": "#3f6b3a",
+          "L": "#6b4a30",
+          "M": "#a9b0b4",
+          "K": "#1c1a1d",
+          "D": "#2a2e40"
+        },
+        "SENJU_NAVY": {
+          "name": "Senju Navy",
+          "P": "#2f4170",
+          "S": "#eeeae0",
+          "A": "#b23a30",
+          "L": "#5a4636",
+          "M": "#aab3b9",
+          "K": "#16181f",
+          "D": "#262a3a"
+        },
+        "SENJU_FOREST": {
+          "name": "Senju Forest",
+          "P": "#3f6e41",
+          "S": "#e6dcc2",
+          "A": "#a8452f",
+          "L": "#7a5a3a",
+          "M": "#a9b0b4",
+          "K": "#1b1d18",
+          "D": "#2e3428"
+        },
+        "SENJU_EARTH": {
+          "name": "Senju Earth",
+          "P": "#7d5d3b",
+          "S": "#ddd0b0",
+          "A": "#4f7a3c",
+          "L": "#5a3f28",
+          "M": "#a6a59a",
+          "K": "#1d1915",
+          "D": "#36382c"
+        },
+        "SENJU_MOSS": {
+          "name": "Senju Moss",
+          "P": "#6b7a45",
+          "S": "#d9d4bf",
+          "A": "#7a3a52",
+          "L": "#5e4a35",
+          "M": "#a9b0b4",
+          "K": "#1a1c16",
+          "D": "#3b3f45"
+        },
+        "SENJU_FORMAL": {
+          "name": "Senju Formal",
+          "P": "#26242b",
+          "S": "#f0ede4",
+          "A": "#5d7a52",
+          "L": "#4a3a2c",
+          "M": "#b0b4b8",
+          "K": "#121115",
+          "D": "#34323a"
+        }
+      },
+      "hair_colors": {
+        "SENJU_WOOD_BLACK": {
+          "name": "Senju Wood Black",
+          "ramp": [
+            "#140f0d",
+            "#211915",
+            "#30241d",
+            "#463428",
+            "#634a38"
+          ]
+        },
+        "SENJU_BARK": {
+          "name": "Senju Bark",
+          "ramp": [
+            "#24170f",
+            "#382417",
+            "#4f3420",
+            "#6b4a2e",
+            "#8c6640"
+          ]
+        },
+        "SENJU_WHITE": {
+          "name": "Senju White",
+          "ramp": [
+            "#7d7a78",
+            "#a8a5a1",
+            "#cdcac4",
+            "#e6e3dd",
+            "#f8f6f1"
+          ]
+        },
+        "SENJU_GOLD": {
+          "name": "Senju Gold",
+          "ramp": [
+            "#6e5222",
+            "#957131",
+            "#bf9744",
+            "#dcbb63",
+            "#f1d98e"
+          ]
+        }
+      },
+      "eye_colors": {
+        "SENJU_HAZEL": {
+          "name": "Senju Hazel",
+          "ramp": [
+            "#0d0b0a",
+            "#3a2a1a",
+            "#5e4628",
+            "#91744a",
+            "#f1ede3"
+          ]
+        },
+        "SENJU_EMBER": {
+          "name": "Senju Ember",
+          "ramp": [
+            "#0e0a0a",
+            "#5a1a1c",
+            "#8f2a2a",
+            "#c25a4e",
+            "#f1ede3"
+          ]
+        }
+      },
+      "marks": {
+        "senju_strength_seal": {
+          "rects": [
+            [
+              -0.25,
+              -7.15,
+              0.5,
+              0.25
+            ],
+            [
+              -0.5,
+              -6.9,
+              1.0,
+              0.4
+            ],
+            [
+              -0.25,
+              -6.5,
+              0.5,
+              0.25
+            ]
+          ],
+          "color": "#7b3fa0",
+          "mirror": false
+        },
+        "senju_war_stripes": {
+          "rects": [
+            [
+              2.0,
+              -1.9,
+              0.35,
+              1.5
+            ],
+            [
+              -0.2,
+              -0.55,
+              0.4,
+              0.5
+            ]
+          ],
+          "color": "#b3262d",
+          "mirror": true
+        }
+      },
+      "pool": {
+        "hair": [
+          "h101_hashirama_mane",
+          "h102_tobirama_spikes",
+          "h103_twin_low_tails",
+          "h104_nawaki_spikes",
+          "h105_war_mane",
+          "h106_warring_topknot",
+          "h107_wrapped_tail",
+          "h108_village_bob",
+          "h109_swept_mane",
+          "h110_forest_braid",
+          "h111_wild_high_tail",
+          "h112_shaggy_nape",
+          "h113_layered_flick",
+          "h114_half_up_knot",
+          "h115_nape_chignon"
+        ],
+        "hair_colors": [
+          "SENJU_WOOD_BLACK",
+          "SENJU_WHITE",
+          "SENJU_BARK",
+          "SENJU_GOLD",
+          "SENJU_WOOD_BLACK",
+          "SENJU_BARK",
+          "SENJU_WOOD_BLACK",
+          "RAVEN",
+          "ESPRESSO"
+        ],
+        "eye_colors": [
+          "SENJU_HAZEL",
+          "SENJU_HAZEL",
+          "DARK",
+          "DARK",
+          "SENJU_EMBER"
+        ],
+        "palettes": [
+          "SENJU_FOREST",
+          "SENJU_FOREST",
+          "SENJU_RED",
+          "SENJU_NAVY",
+          "SENJU_EARTH",
+          "SENJU_MOSS"
+        ],
+        "headwear": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "w02_forehead_protector",
+          "w02_forehead_protector",
+          "w101_senju_brow_guard",
+          "w102_travel_kasa"
+        ],
+        "bottoms": [
+          "b01_shinobi_trousers"
+        ],
+        "complexions": [
+          0,
+          1,
+          2
+        ],
+        "marks": [
+          {
+            "id": "senju_strength_seal",
+            "chance": 0.08
+          },
+          {
+            "id": "senju_war_stripes",
+            "chance": 0.06
+          }
+        ]
+      },
+      "outfits": [
+        {
+          "id": "war_armor",
+          "name": "Senju War Armor",
+          "top": "t101_senju_war_armor",
+          "bottom": "b101_armored_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SENJU_RED"
+          ]
+        },
+        {
+          "id": "tobirama_armor",
+          "name": "Tobirama Armor",
+          "top": "t102_tobirama_armor",
+          "bottom": "b101_armored_hakama",
+          "rank": "jonin",
+          "palettes": [
+            "SENJU_NAVY"
+          ]
+        },
+        {
+          "id": "clan_haori",
+          "name": "Clan Haori",
+          "top": "t103_clan_haori",
+          "bottom": "b103_pleated_hakama",
+          "rank": "chunin"
+        },
+        {
+          "id": "village_kimono",
+          "name": "Village Kimono",
+          "top": "t104_village_kimono",
+          "bottom": "b103_pleated_hakama",
+          "rank": "academy"
+        },
+        {
+          "id": "crest_tunic",
+          "name": "Crest Tunic",
+          "top": "t105_crest_tunic",
+          "bottom": "b105_ranger_shorts",
+          "rank": "genin"
+        },
+        {
+          "id": "gambler_haori",
+          "name": "Gambler Haori",
+          "top": "t106_gambler_haori",
+          "bottom": "b104_field_trousers",
+          "rank": "jonin",
+          "palettes": [
+            "SENJU_MOSS",
+            "SENJU_FOREST"
+          ]
+        },
+        {
+          "id": "ranger_vest",
+          "name": "Ranger Vest",
+          "top": "t107_ranger_vest",
+          "bottom": "b102_wrapped_trousers",
+          "rank": "chunin"
+        },
+        {
+          "id": "training_gi",
+          "name": "Training Gi",
+          "top": "t108_training_gi",
+          "bottom": "b102_wrapped_trousers",
+          "rank": "genin"
+        },
+        {
+          "id": "ceremonial",
+          "name": "Ceremonial Montsuki",
+          "top": "t109_ceremonial_montsuki",
+          "bottom": "b103_pleated_hakama",
+          "rank": "kage",
+          "palettes": [
+            "SENJU_FORMAL"
+          ]
+        },
+        {
+          "id": "scout_cuirass",
+          "name": "Scout Cuirass",
+          "top": "t110_scout_cuirass",
+          "bottom": "b104_field_trousers",
+          "rank": "chunin"
+        }
+      ]
+    }
+  ]
 }

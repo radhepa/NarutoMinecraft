@@ -103,6 +103,26 @@
         "...111111...",
         "....1111...."
       ]
+    },
+    "SENJU_HAZEL": {
+      "name": "Senju Hazel",
+      "ramp": [
+        "#0d0b0a",
+        "#3a2a1a",
+        "#5e4628",
+        "#91744a",
+        "#f1ede3"
+      ]
+    },
+    "SENJU_EMBER": {
+      "name": "Senju Ember",
+      "ramp": [
+        "#0e0a0a",
+        "#5a1a1c",
+        "#8f2a2a",
+        "#c25a4e",
+        "#f1ede3"
+      ]
     }
   }
 }
