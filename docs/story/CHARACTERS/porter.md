@@ -22,7 +22,7 @@
 ## Arc
 
 **Who he is.** A nursery child "rescued" by Yūgure at nine from a burning orphanage (the kind of
-rescue the medic remembers too), raised in the cells' care, sent into the Leaf at sixteen under a
+rescue the medic remembers too), raised in a hearth's care, sent into the Leaf at sixteen under a
 cover name to carry. He carries for everyone: the furniture shop, the post, the library's returns
 cart, the hospital's linen, the council's letter bags, crates for merchants' carts at the east gate.
 He is genuinely kind. He also laid eighty-one cinder seals under what he carried and scratched the
@@ -35,10 +35,10 @@ admitting it, to be a porter: a man people say good morning to.
 doorstep, but he has never seen what it does).
 
 **Secrets.** He is the hand: he carries the voice's messages out and Yūgure's orders in, steals what
-the cells ask (the cut page, the ledger pages, the borrowed seal), and lays the array. He does not
+the hearths ask (the cut page, the ledger pages, the borrowed seal), and lays the array. He does not
 know the Hollow Crown; he was told the marks are "so we can find our friends' homes".
 
-**What he knows.** The voice's identity (he cannot say it: a cinder seal on his tongue); the array's
+**What he knows.** The voice's identity (he cannot say it: a cinder seal in his palm, under the burn scar, burns his memory out if he tries); the array's
 anchors (in his ledger, as deliveries); that the player is "the ninth" (the voice's reports passed
 through his hands).
 
@@ -53,9 +53,13 @@ through his hands).
 
 **Ch 28.** Caught on the Rock's slope after the second rooftop chase. The Classic Morino
 interrogator (`role:sensei_4`) reaches him first and tries to hold the seal back, and cannot. He tries to name the voice;
-the tongue seal burns; he says the same line in every save: "The voice keeps the names in its own
-hand. Six years in its own hand." Then the seal burns his memory away. His delivery ledger, found in
+the cinder seal in his palm flares under the burn scar; he says the same line in every save: "Years in its
+own hand. All of them in its own hand." Then the seal burns his memory away. His delivery ledger, found in
 his room, is the array map (Ch 49).
+
+**Ch 28.5.** In his room, `role:squad5_c` stands in the doorway: "He carried my sister's cot up four
+floors." (`shared_moment bond.squad5_c.porter`.) It is the only time anyone in the village says what
+the porter was to them, and it is true in every save.
 
 **Ending.** He lives, remembering nothing before Ch 28. The shrine priest takes him in. In the Road
 to Hokage he sweeps the restored Kagari shrine (or the village shrine if the player founded their own
@@ -86,7 +90,7 @@ with him afterwards (`ans.porter.after = now`), his thread at 6+ is clear and st
 
 - (Ch 1) "First home? I'll fix that sticky door. Doors should open for you."
 - (Ch 4) "Morning. Heavy one today. Who orders a stone basin to the fourth floor?"
-- (Ch 28) "The voice keeps the names in its own hand. Six years in its own hand." (Every save.)
+- (Ch 28) "Years in its own hand. All of them in its own hand." (Every save.)
 - (after Ch 28) "Do I know you? I feel like I carried something for you once."
 
 ### Topics they care about
@@ -95,7 +99,7 @@ with him afterwards (`ans.porter.after = now`), his thread at 6+ is clear and st
 |---|---|
 | 0 to 2 | The weight of things; stairs; the furniture shop's orders; the weather for carrying |
 | 3 to 4 | What makes a home a home; the families he delivers to |
-| 5 | "Family" (he means the cells, and talks about them as if they were a large kind household in the east) |
+| 5 | "Family" (he means the hearths, and talks about them as if they were a large kind household in the east) |
 
 ### Never reveal before
 

@@ -22,7 +22,7 @@ Transformation as Genin of a small foreign village, with one real foreign Genin 
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 15.1 | The hall | a proctor, all candidates (your class's squads, the senior squad) | Ten questions no Genin could answer. The answers exist in the hall: on a proctor's sleeve, in a scroll in the rafters, on a sleeping Chunin's notes. The test is gathering them unseen | teach | How: Byakugan, Transformation, a clone in the rafters, a bribe in dialogue, or honest guessing (judged later; each method has its own judging tag) |
+| 15.1 | The hall | a proctor, all candidates (your class's squads, the senior squad) | Ten questions no Genin could answer. The answers exist in the hall: on a proctor's sleeve, in a scroll in the rafters, on a sleeping Chunin's notes. The test is gathering them unseen | teach | How: Transformation, a clone in the rafters, a bribe in dialogue, a teammate's signal (teammate_a's small genjutsu shows you a proctor's sleeve), or honest guessing (judged later; each method has its own judging tag) |
 | 15.2 | The last question | the proctor | The last minute: "Write one true thing you noticed about another team." | seed, clue | What you noticed about the foreign team two rows ahead: the tall girl's hands are burned like a smith's (she is the second; ember chakra scars) / their swordsman writes left-handed / their third member is frightened of them / nothing (`ans.player.foreign_team`). Any true answer earns the proctor's nod and is remembered by the sensei |
 | 15.3 | Lost Genin | `foreign_genin` (side `side.b3.lost_genin`) | The night before, a foreign Genin was lost in the village; if you helped them, they whisper in the hall: "My teammates aren't... I don't know them" | clue (optional) | — |
 
@@ -65,7 +65,7 @@ Transformation as Genin of a small foreign village, with one real foreign Genin 
 
 ---
 
-## Ch 18: One Month (30 min)
+## Ch 18: Six Days (30 min)
 
 *Teaches: training, crafting, side quests; the exam reward technique.*
 
@@ -77,30 +77,30 @@ Transformation as Genin of a small foreign village, with one real foreign Genin 
 
 ---
 
-## Ch 19: Dusk over the Stadium (40 min)
+## Ch 19: Dusk over the Stadium (35 min)
 
 *Teaches: defence, protect objectives, the cinematic camera.*
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
 | 19.1 | The finals | the village, the Kage box | The whole village in the stands. Your first bout against a foreign Genin; your second against the `rival`. The rival fights with everything they have | plot, bond | Fight. The judges score how |
-| 19.2 | Dusk | Yūgure cells | At the peak of the rival bout, smoke bombs in the stands, fire, two-man cells in ash-violet cloaks among the spectators; the guard rotation had a gap exactly where they came in (the voice's work). The rival is knocked flat beside you | plot | — |
+| 19.2 | Dusk | Yūgure hearths | At the peak of the rival bout, smoke bombs in the stands, fire, and hearths of Yūgure fighters among the spectators, ash-violet scarves pulled up over their faces; the guard rotation had a gap exactly where they came in (the voice's work). The rival is knocked flat beside you | plot | — |
 | 19.3 | Hold the stair | squad, `sensei`, `sensei_5`, `squad5_c`, `yugure_blade` | Protect the east stair while the Academy children are evacuated. The sensei fights the swordsman on the arena floor (ink-dark cuts in the air), and `squad5_c` jumps down to fight beside them and takes a cut across the face. `sensei_5` seals the stadium's gates behind the children | teach, plot | — |
-| 19.4 | Covered | the highest-level teammate (or the rival) | A cloak's blade comes at you from the smoke; a friend takes it (`saved_by_them` with the teammate at the higher level; with both under 4, the rival). Low friendship changes who | bond | — |
-| 19.5 | "Kagari" | `yugure_second` (undisguised) | She steps out of the smoke in front of you, ember chakra lighting her face, a hand raised to take you, and stops. She says one word, quietly, as if it hurt: **"Kagari."** Then the sensei's kunai is at her throat and the swordsman pulls her away | plot, seed (`story.ch19.named`) | — |
-| 19.6 | The Fourth | `hokage_4`, `squad3_b`, `sensei_2` (holding the Kage box), `yugure_leader` (unseen) | The Fourth's fate (`twist.fourth_fate`; his grandson `squad3_b` sees it from the stair beside you; [ROTATIONS.md](../ROTATIONS.md) §3) | plot (`world.hokage = 4 → 5`) | — |
+| 19.4 | Covered | the highest-level teammate (or the rival) | A scarved fighter's blade comes at you from the smoke; a friend takes it (`saved_by_them` with the teammate at the higher level; with both under 4, the rival). Low friendship changes who | bond | — |
+| 19.5 | "Kagari" | `yugure_second` (undisguised) | Her order was to find the strongest flame in the stadium and tell the leader how it burns (a test of her: he already knows; nobody is ordered to take the player). She steps out of the smoke in front of you, scarf down, ember chakra lighting her face, a hand raised toward you as if to feel the heat, and stops. Instead of reporting, she says one word aloud, quietly, as if it hurt: **"Kagari."** Then the sensei's kunai is at her throat and the swordsman pulls her away | plot, seed (`story.ch19.named`) | — |
+| 19.6 | The Fourth | `hokage_4`, `squad3_b`, `sensei_2` (holding the Kage box), `yugure_leader` (unseen) | The Fourth's fate (`twist.fourth_fate`; his grandson `squad3_b`, on the stair beside you, runs toward the Kage box when the Fourth is hit; the fall is shown through the cinematic cutaway; [ROTATIONS.md](../ROTATIONS.md) §3) | plot (`world.hokage = 4 → 5`) | — |
 
 ---
 
-## Ch 20: Embers (10 min)
+## Ch 20: Embers (15 min)
 
 *Teaches: promotion.*
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 20.1 | After | the village | The funeral, the abdication or the empty seat (by `twist.fourth_fate`) | plot | — |
+| 20.1 | After | the village, `squad3_b`, the Fourth's daughter | By `twist.fourth_fate`: *falls*: the **Akimichi farewell feast**: the whole village eats his favourite dish in the street, his bowl set at an empty place; `squad3_b` (or his mother) says what the Fourth told them about you, quoting `ans.hokage_4.want` (unset: "He said you were hungry. He liked hungry kids."). *Crippled*: the hospital, where he abdicates from his bed. *Taken*: the empty seat, and `squad3_b` refusing to leave the Kage box | plot, bond | Sit at the feast beside `squad3_b` / carry the bowl to the empty place (*falls* only; `ans.player.feast`: sat, carried; the bowl comes back to you in Ch 21.2a) |
 | 20.2 | The Fifth | `hokage_5`, the council | The Fifth Hokage, a severe Hyuga woman, is named. Her first order: curfews and a sensor watch. Her eyes find you in the crowd and stay | plot, seed (`story.seed.fifth_hard_line`) | — |
-| 20.3 | Results | proctors, `sensei` | Promotion results, judged on how you fought, protected and gathered. On Story difficulty the player is promoted if they finished the attack; the judging changes the speech and the rank-up's standing. Promoted with you: the `rival`, `squad5_c`, `squad4_a`, and one of your teammates (the stronger, by the roster); the rest of the class makes Chunin next season ([ENSEMBLE.md](../ENSEMBLE.md)) | plot (`promote chunin`) | — |
+| 20.3 | Results | proctors, `sensei` | Promotion results, judged on how you fought, protected and gathered. On Story difficulty the player is promoted if they finished the attack; the judging changes the speech and the rank-up's standing; the proctor's note reads your Ch 15 answer (`ans.player.foreign_team`: "You saw her hands," "You saw the left hand," "You saw their third was afraid," or, unset or nothing, "Next time, look harder"). Promoted with you: the `rival`, `squad5_c`, `squad4_a`, and one of your teammates (the stronger, by the roster); the rest of the class makes Chunin next season ([ENSEMBLE.md](../ENSEMBLE.md)) | plot (`promote chunin`) | — |
 | 20.4 | Ichiraku | squad, `rival` (if they come) | The squad's evening at Ichiraku. Nobody talks about it, then everybody does. Your order is set down without asking | bond | Whoever covered you: thank them now / later (thanking now: a `kept_promise`-sized warmth and a line they remember) |
 | 20.5 | The warning | `sensei` | Walking you home: "That word she said. Don't say it to anyone. Not yet. They'll come again." | seed | Promise / ask what it means / say nothing (`ans.sensei.kagari_word`). Promising sets `kept_promise` when you keep it through Ch 22 (the Fifth's interrogation) |
 
