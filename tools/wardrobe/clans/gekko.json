@@ -1,0 +1,50 @@
+{
+  "id": "gekko", "name": "Gekko",
+  "tagline": "A quiet family of swordsmen of the Crescent Moon: pale, tired-eyed, dressed in night indigo and moonlight silver, a blade always on the back or at the hip",
+  "palettes": {
+    "GEKKO_PROCTOR":   {"name": "Gekko Proctor",   "P": "#5f6e3c", "S": "#e2e2dc", "A": "#b8372d", "L": "#5a4a3c", "M": "#b9c1cc", "K": "#171a26", "D": "#2a3150"},
+    "GEKKO_NIGHT":     {"name": "Gekko Night",     "P": "#2b3256", "S": "#c8ced8", "A": "#d8c88a", "L": "#4a4038", "M": "#c3cad4", "K": "#14161f", "D": "#3a4258"},
+    "GEKKO_SLATE":     {"name": "Gekko Slate",     "P": "#4f5866", "S": "#d9dde3", "A": "#6b7fb8", "L": "#463c34", "M": "#b5bec8", "K": "#16181d", "D": "#2a3040"},
+    "GEKKO_MOONLIGHT": {"name": "Gekko Moonlight", "P": "#b3bac6", "S": "#eef0f3", "A": "#3c4a86", "L": "#5b4e44", "M": "#d0d6de", "K": "#1a1c26", "D": "#2e3550"},
+    "GEKKO_DUSK":      {"name": "Gekko Dusk",      "P": "#5a4a6e", "S": "#e6e0d6", "A": "#c9b77a", "L": "#6b5a45", "M": "#b5bcc6", "K": "#1d1b26", "D": "#333a55"},
+    "GEKKO_ANBU":      {"name": "Gekko ANBU",      "P": "#c4c8c6", "S": "#efeee8", "A": "#b5232b", "L": "#3b3a42", "M": "#aab3b9", "K": "#15171c", "D": "#262a33"}
+  },
+  "hair_colors": {
+    "GEKKO_BROWN":  {"name": "Gekko Brown",  "ramp": ["#2a1a12", "#432a1d", "#5f3d29", "#7d5539", "#9f7250"]},
+    "GEKKO_ASH":    {"name": "Gekko Ash",    "ramp": ["#241f1c", "#3a322d", "#524840", "#6d6157", "#8c8074"]},
+    "GEKKO_PLUM":   {"name": "Gekko Plum",   "ramp": ["#1f1428", "#33213f", "#4c3160", "#684684", "#8a65a8"]},
+    "GEKKO_INDIGO": {"name": "Gekko Indigo", "ramp": ["#10121c", "#1b1e2e", "#282c44", "#3a4062", "#566087"]}
+  },
+  "eye_colors": {
+    "GEKKO_HAZEL": {"name": "Gekko Hazel", "ramp": ["#0d0a0a", "#3a2618", "#5e3f27", "#8c6a48", "#f1ede3"]}
+  },
+  "marks": {
+    "gekko_tired_eyes":  {"rects": [[2.1, -1.72, 2.0, 0.42]], "color": null, "mirror": true},
+    "gekko_violet_eyes": {"rects": [[2.1, -1.72, 2.0, 0.42]], "color": "#8d7a8e", "mirror": true}
+  },
+  "pool": {
+    "hair": ["h1501_proctor_cut", "h1502_crescent_sweep", "h1503_night_curtain", "h1504_swordsman_topknot",
+             "h1505_crescent_tail", "h1506_night_bob", "h1507_tousled_shag", "h1508_wrapped_tail", "h1509_moonveil",
+             "h1510_nape_tail", "h1511_half_up_knot", "h1512_shoulder_sweep", "h1513_strap_braid", "h1514_iai_gust",
+             "h1515_crossed_pin_bun"],
+    "hair_colors": ["GEKKO_BROWN", "GEKKO_BROWN", "GEKKO_ASH", "GEKKO_PLUM", "GEKKO_INDIGO", "ESPRESSO"],
+    "eye_colors": ["DARK", "DARK", "GEKKO_HAZEL"],
+    "palettes": ["GEKKO_NIGHT", "GEKKO_SLATE", "GEKKO_MOONLIGHT", "GEKKO_DUSK"],
+    "headwear": [null, null, null, null, null, null, "w1501_proctor_bandana", "w1503_crescent_hachimaki", "w02_forehead_protector", "w1502_cat_mask"],
+    "bottoms": ["b01_shinobi_trousers"],
+    "complexions": [0, 0, 0, 1, 1],
+    "marks": [{"id": "gekko_tired_eyes", "chance": 0.7}, {"id": "gekko_violet_eyes", "chance": 0.15}]
+  },
+  "outfits": [
+    {"id": "proctor", "name": "Exam Proctor", "top": "t1501_proctor_vest", "bottom": "b1502_swordsman_trousers", "rank": "jonin", "palettes": ["GEKKO_PROCTOR"]},
+    {"id": "cat_blade", "name": "ANBU Cat Blade", "top": "t1503_anbu_swordswoman", "bottom": "b06_anbu_greaves", "rank": "anbu", "palettes": ["GEKKO_ANBU"]},
+    {"id": "crescent_haori", "name": "Crescent Haori", "top": "t1502_crescent_haori", "bottom": "b1501_gekko_hakama", "rank": "jonin"},
+    {"id": "strap_tunic", "name": "Sword-Strap Tunic", "top": "t1504_strap_tunic", "bottom": "b1503_strap_leggings", "rank": "chunin"},
+    {"id": "moon_dancer", "name": "Crescent Dancer", "top": "t1505_moon_dancer", "bottom": "b1501_gekko_hakama", "rank": "chunin"},
+    {"id": "night_watch", "name": "Night Watch", "top": "t1506_night_watch_coat", "bottom": "b1502_swordsman_trousers", "rank": "jonin"},
+    {"id": "convalescent", "name": "Convalescent", "top": "t1507_convalescent_wrap", "bottom": "b1501_gekko_hakama", "rank": "chunin"},
+    {"id": "practice_gi", "name": "Practice Gi", "top": "t1508_practice_gi", "bottom": "b1503_strap_leggings", "rank": "academy"},
+    {"id": "cough_scarf", "name": "Winter Knit", "top": "t1509_scarf_knit", "bottom": "b1502_swordsman_trousers", "rank": "genin"},
+    {"id": "tasuki_iaido", "name": "Tasuki Iaido", "top": "t1510_tasuki_iaido", "bottom": "b1501_gekko_hakama", "rank": "jonin"}
+  ]
+}
