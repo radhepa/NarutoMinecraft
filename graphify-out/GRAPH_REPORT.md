@@ -1,17 +1,17 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 214 files · ~266,055 words
+- 214 files · ~266,329 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .properties 2, .jar 1)
 
 ## Summary
-- 3700 nodes · 8830 edges · 151 communities (125 shown, 26 thin omitted)
+- 3700 nodes · 8831 edges · 151 communities (125 shown, 26 thin omitted)
 - Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 1013 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `53a5479e`
+- Built from commit: `39e92da6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -703,10 +703,10 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `creator.py` be split into smaller, more focused modules?**
   _Cohesion score 0.07058001397624039 - nodes in this community are weakly interconnected._
 - **Why does `k()` connect `k` to `kit_uchiha.py`, `kit_senju.py`, `solid`, `kit_kurama.py`, `rnd`, `kit_kunoichi.py`, `kit_suzuran.py`, `kit_rugged.py`, `fabric`, `wide_sleeves`, `kit_market.py`, `kit_kinoshita.py`, `senbon`, `kit_tsuchigumo.py`, `paint.py`, `kit_hagane.py`, `Face`, `kit_haruno.py`, `kit_household.py`?**
-  _High betweenness centrality (0.079) - this node is a cross-community bridge._
+  _High betweenness centrality (0.080) - this node is a cross-community bridge._
 - **Should `kit_uchiha.py` be split into smaller, more focused modules?**
   _Cohesion score 0.1286549707602339 - nodes in this community are weakly interconnected._
 - **Why does `Bonds` connect `Person` to `.of`, `.read`, `Story bible`, `Levels`, `Conflict`, `Life together`, `.person`, `Value`, `Village`, `Stage`, `Personality`, `.tier`, `.classic`, `Meters`?**
-  _High betweenness centrality (0.076) - this node is a cross-community bridge._
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
 - **Should `render.py` be split into smaller, more focused modules?**
   _Cohesion score 0.11282051282051282 - nodes in this community are weakly interconnected._
