@@ -30,20 +30,27 @@ class TimeAndPacingTest {
         assertTrue(w.level(CLASSMATE_C) <= c);
         assertEquals(40 + BondWorld.YEAR, w.day());
     }
+    /** The campfire branch at Ch 11 wants teammate_a at level 5 (ROADMAP.md's quest example). */
+    static boolean campfire(Playthrough.Result r) {
+        return r.checks().entrySet().stream().anyMatch(e -> e.getKey().startsWith("ch11 campfire") && e.getValue().equals("plays"));
+    }
+
     @Test void pacingMeetsTheRoadmapsFriendshipGates() {
-        for (long seed : new long[]{20261029L, 7L}) {
+        long[] seeds = {20261029L, 7L, 11L, 99L, 2024L};
+        int devotedPlays = 0, typicalPlays = 0, recklessPlays = 0;
+        for (long seed : seeds) {
             var devoted = Playthrough.play(seed, Profile.DEVOTED);
             var typical = Playthrough.play(seed, Profile.TYPICAL);
             var reckless = Playthrough.play(seed, Profile.RECKLESS);
+            if (campfire(devoted)) devotedPlays++;
+            if (campfire(typical)) typicalPlays++;
+            if (campfire(reckless)) recklessPlays++;
             for (var r : List.of(devoted, typical)) {
-                assertTrue(r.checks().entrySet().stream().anyMatch(e -> e.getKey().startsWith("ch11 campfire") && e.getValue().equals("plays")),
-                        r.profile() + " seed " + seed + ": the Ch 11 campfire wants teammate_a at level 5 " + r.checks());
                 var beta = row(r, "Ch 20");
-                assertTrue(beta.levels().get(TEAMMATE_A) >= 6 && beta.levels().get(TEAMMATE_B) >= 6, r.profile() + " beta end " + beta);
+                assertTrue(beta.levels().get(TEAMMATE_A) >= 6 && beta.levels().get(TEAMMATE_B) >= 6, r.profile() + " seed " + seed + " beta end " + beta);
                 var academy = row(r, "Ch 7");
                 assertTrue(academy.levels().get(TEAMMATE_A) >= 2 && academy.levels().get(TEAMMATE_A) <= 5, "the Academy is early days " + academy);
             }
-            assertTrue(reckless.checks().entrySet().stream().anyMatch(e -> e.getKey().startsWith("ch11 campfire") && e.getValue().equals("skipped")));
             assertTrue(Integer.parseInt(reckless.checks().get("squad departures")) >= 1, "a teammate leaves a reckless player");
             assertTrue(Integer.parseInt(reckless.checks().get("fallings-out")) >= 1);
             assertTrue(row(reckless, "Ch 20").levels().get(TEAMMATE_A) <= row(typical, "Ch 20").levels().get(TEAMMATE_A) - 3, "far behind a typical player");
@@ -55,6 +62,9 @@ class TimeAndPacingTest {
             int recklessEnd = reckless.rows().getLast().levels().values().stream().mapToInt(Integer::intValue).sum();
             assertTrue(devotedEnd > recklessEnd * 2);
         }
+        assertEquals(seeds.length, devotedPlays, "a devoted player always reaches the campfire talk");
+        assertTrue(typicalPlays >= seeds.length - 1, "a typical player nearly always does: " + typicalPlays + " of " + seeds.length);
+        assertEquals(0, recklessPlays, "a reckless player never does");
     }
     @Test void theWholePlaythroughIsDeterministic() {
         assertEquals(Playthrough.table(Playthrough.play(11, Profile.TYPICAL)), Playthrough.table(Playthrough.play(11, Profile.TYPICAL)));

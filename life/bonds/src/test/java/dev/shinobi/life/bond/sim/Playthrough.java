@@ -8,6 +8,12 @@ import dev.shinobi.life.bond.BondWorld;
 import dev.shinobi.life.bond.Conflict;
 import dev.shinobi.life.bond.Household;
 import dev.shinobi.life.bond.Kindling;
+import dev.shinobi.life.bond.Activity;
+import dev.shinobi.life.bond.BondDialogue;
+import dev.shinobi.life.bond.Conversation;
+import dev.shinobi.life.bond.LifeEvents;
+import dev.shinobi.life.bond.Schedule;
+import dev.shinobi.life.bond.Together;
 import dev.shinobi.life.bond.Leaf;
 import dev.shinobi.life.bond.Levels;
 import dev.shinobi.life.bond.Person;
@@ -59,6 +65,7 @@ public final class Playthrough {
         final Map<String, String> checks = new LinkedHashMap<>(); final List<BondEvent> events = new ArrayList<>();
         final List<String> villagers = new ArrayList<>();
         double hours; int bondQuests, part; long betaEnd = -1;
+        int asked, hangouts, invited, acceptedInvites, stoodUp, highlights, rituals, newsTold, newsAnswered, deepTalks;
         Run(BondWorld w, Profile p, long seed) {
             this.w = w; this.p = p; this.rng = Seeds.stream(seed, "playthrough", p.id());
             for (var person : w.people()) if (person.id().startsWith("resident:")) villagers.add(person.id());
@@ -256,6 +263,9 @@ public final class Playthrough {
         r.checks.put("romance before the first time skip", r.events.stream().anyMatch(e -> e.kind().equals("romance") && e.day() < r.betaEnd) ? "YES (bug)" : "none");
         r.checks.put("bonds at level 10", Long.toString(w.bonded().stream().filter(id -> w.level(id) >= 10).count()));
         r.checks.put("bond quests played", Integer.toString(r.bondQuests));
+        r.checks.put("time together", String.format("asked %d, hung out %d, highlights %d, rituals %d; invited %d times, accepted %d; stood someone up %d",
+                r.asked, r.hangouts, r.highlights, r.rituals, r.invited, r.acceptedInvites, r.stoodUp));
+        r.checks.put("their lives", String.format("news told %d, responded to %d; deeper talks %d", r.newsTold, r.newsAnswered, r.deepTalks));
         return new Result(profile, rows, r.checks, w, r.events);
     }
 
@@ -295,6 +305,7 @@ public final class Playthrough {
         if (r.roll(p.gift)) { String who = r.pick(); w.gift(who, r.item(who)); }
         if (r.roll(p.gift * .6)) { String who = r.pick(); w.experience(Act.MEAL_TOGETHER, List.of(who)); w.favor(who, 2); }
         for (String who : w.bonded()) if (w.birthday(who) && r.roll(p.birthdays)) w.celebrate(who);
+        together(r);
         // Quarrels: say sorry, then make up when they are ready.
         for (String who : w.bonded()) {
             var c = w.bond(who).conflict();
@@ -302,6 +313,60 @@ public final class Playthrough {
             if (c.canReconcile() && r.roll(p.apologizes)) { w.reconcile(who); r.note("made up with " + who.substring(5)); }
         }
         if (w.squad() != null) for (String gone : w.squad().departed().keySet()) if (w.canReturn(gone) && r.roll(p.sideQuests)) { w.returnToSquad(gone); r.note(gone.substring(5) + " came back"); }
+    }
+
+    /** How often each kind of player hangs out, answers invitations, turns up, responds to news and talks deeper. */
+    static final java.util.Map<Profile, double[]> TOGETHER = java.util.Map.of(
+            // ask every n days, accept an invitation, turn up, respond kindly to news, a deeper talk a day
+            Profile.DEVOTED, new double[]{2, .9, 1, .95, .8},
+            Profile.TYPICAL, new double[]{4, .6, .95, .7, .35},
+            Profile.RECKLESS, new double[]{10, .3, .6, .3, .05});
+
+    /** One day of time together: invitations answered, a hangout asked for, plans kept, news heard, a conversation. */
+    static void together(Run r) {
+        var w = r.w; var t = TOGETHER.get(r.p);
+        for (var inv : Together.invitations(w)) {
+            r.invited++;
+            boolean yes = r.roll(t[1]);
+            if (Together.answer(w, inv.id(), yes) != null) r.acceptedInvites++;
+        }
+        for (var plan : Together.plans(w)) if (plan.day() == w.day()) {
+            boolean came = r.roll(t[2]);
+            var out = Together.go(w, plan.id(), came);
+            if (!came) r.stoodUp++; else { r.hangouts++; if (out.highlight() != null) r.highlights++; r.rituals += out.newRituals().size(); }
+        }
+        if (w.day() % (long) t[0] == 0) {
+            var friends = w.bonded().stream().filter(id -> w.effectiveLevel(id) >= 1 && !id.equals(MERCHANT)).limit(6).toList();
+            if (!friends.isEmpty()) {
+                // Most hangouts are with the teammate they favor; the rest go around their circle.
+                String who = w.squad() != null && r.roll(r.p.favoriteBias) ? r.pick() : friends.get(r.rng.below(friends.size()));
+                String act = w.bond(who).facts().contains("favorite_hangout") ? Activity.favorite(w.seed(), who)
+                        : List.of("ramen", "dango", "spar", "market_stroll", "train").get(r.rng.below(5));
+                var slot = Schedule.nextFree(w.seed(), List.of(w.person(who)), Activity.of(act), w.day() + 1, 10, 3);
+                if (slot != null) { r.asked++; Together.invite(w, List.of(who), act, slot[0], (int) slot[1]); }
+            }
+        }
+        for (String who : w.bonded()) {
+            if (w.bond(who).contactDays() == 0 || w.bond(who).talkDayIsToday(w.day())) {
+                var news = LifeEvents.tell(w, who);
+                if (news.isPresent()) {
+                    r.newsTold++;
+                    boolean hard = LifeEvents.Kind.of(news.get().substring(5)).valence < 0;
+                    String response = r.roll(t[3]) ? (hard ? "comfort" : "congratulate") : "shrug";
+                    if (LifeEvents.respond(w, who, response).isEmpty()) r.newsAnswered++;
+                }
+                BondDialogue.followUp(w, who);
+            }
+        }
+        if (r.roll(t[4])) {
+            var close = w.bonded().stream().filter(id -> w.effectiveLevel(id) >= 2).toList();
+            if (!close.isEmpty()) {
+                String who = close.get(r.rng.below(close.size()));
+                var topics = Conversation.topics(w, who);
+                Conversation.talk(w, who, topics.getLast(), null);
+                r.deepTalks++;
+            }
+        }
     }
 
     /** The later arcs: bond moments, romance, a clan. */
