@@ -74,7 +74,7 @@
   "oil2": {
    "objective": {
     "type": "buy",
-    "item": "lamp_oil",
+    "item": "item:lamp_oil",
     "at": "place:market.oil",
     "count": 2
    },
@@ -92,7 +92,7 @@
   "prowl": {
    "objective": {
     "type": "collect",
-    "target": "stolen_goods",
+    "target": "item:stolen_goods",
     "at": "slot:prowler"
    },
    "next": "report"

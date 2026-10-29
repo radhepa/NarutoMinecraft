@@ -47,7 +47,7 @@
   "pick": {
    "objective": {
     "type": "collect",
-    "target": "flower",
+    "target": "item:mission_flower",
     "at": "slot:shop",
     "count": 12
    },
@@ -86,7 +86,7 @@
   "deliver": {
    "objective": {
     "type": "deliver",
-    "item": "bouquet",
+    "item": "item:bouquet",
     "to": "slot:venue"
    },
    "next": "report"

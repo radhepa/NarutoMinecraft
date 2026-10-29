@@ -98,7 +98,7 @@
   "fireworks": {
    "objective": {
     "type": "collect",
-    "target": "fireworks_crate",
+    "target": "item:mission_fireworks_crate",
     "at": "slot:den"
    },
    "next": "den"

@@ -46,7 +46,7 @@
   "gather": {
    "objective": {
     "type": "collect",
-    "target": "herb",
+    "target": "item:healing_herb",
     "at": "slot:slope",
     "count": 10
    },
@@ -85,7 +85,7 @@
   "deliver": {
    "objective": {
     "type": "deliver",
-    "item": "herb",
+    "item": "item:healing_herb",
     "to": "slot:hospital"
    },
    "next": "report"

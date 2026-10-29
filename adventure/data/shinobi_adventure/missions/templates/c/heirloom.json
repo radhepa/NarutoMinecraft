@@ -90,7 +90,7 @@
   "take": {
    "objective": {
     "type": "collect",
-    "target": "heirloom",
+    "target": "item:mission_heirloom",
     "at": "slot:back_room"
    },
    "branch": [
@@ -120,7 +120,7 @@
   "take2": {
    "objective": {
     "type": "collect",
-    "target": "heirloom",
+    "target": "item:mission_heirloom",
     "at": "slot:pawn"
    },
    "next": "report"
@@ -144,7 +144,7 @@
   "report": {
    "objective": {
     "type": "deliver",
-    "item": "heirloom",
+    "item": "item:mission_heirloom",
     "to": "slot:client"
    },
    "next": null

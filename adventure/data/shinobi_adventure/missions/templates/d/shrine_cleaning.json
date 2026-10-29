@@ -78,7 +78,7 @@
   "crows": {
    "objective": {
     "type": "collect",
-    "target": "offering",
+    "target": "item:mission_offering",
     "at": "slot:crow_roost",
     "count": 4
    },

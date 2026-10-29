@@ -72,7 +72,7 @@
   "shuriken": {
    "objective": {
     "type": "collect",
-    "target": "stray_shuriken",
+    "target": "item:mission_stray_shuriken",
     "at": "slot:ground",
     "count": 10
    },

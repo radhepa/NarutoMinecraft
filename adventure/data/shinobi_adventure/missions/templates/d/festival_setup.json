@@ -114,7 +114,7 @@
   "fireworks": {
    "objective": {
     "type": "deliver",
-    "item": "fireworks_crate",
+    "item": "item:mission_fireworks_crate",
     "to": "slot:store"
    },
    "next": "report"

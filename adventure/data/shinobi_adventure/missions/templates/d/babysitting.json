@@ -101,7 +101,7 @@
   "back": {
    "objective": {
     "type": "deliver",
-    "item": "medicine",
+    "item": "item:mission_medicine",
     "to": "slot:home"
    },
    "next": "dinner"

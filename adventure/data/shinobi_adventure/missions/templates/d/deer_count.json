@@ -73,7 +73,7 @@
   "antlers": {
    "objective": {
     "type": "collect",
-    "target": "shed_antler",
+    "target": "item:mission_shed_antler",
     "at": "slot:forest",
     "count": 3
    },

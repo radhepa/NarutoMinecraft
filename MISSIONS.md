@@ -72,7 +72,9 @@ The full list, with every premise and twist, is generated into
 ## 2. The Mission Desk
 
 *BUILD (Beta 2).* The desk is on the Hokage Residence's ground floor (`place:residence.mission_desk`),
-open 08:00 to 18:00 (ROADMAP §7, "The daily cycle"). It opens with Ch 9 ("The Mission Desk").
+open 08:00 to 18:00 (ROADMAP §7, "The daily cycle"). It opens with Ch 9 ("The Mission Desk"). Two Chunin clerks
+staff it (`role:desk_chunin_1`, `role:desk_chunin_2`, the ranks session's roster), and gate guards
+(`role:gate_guard_1`, `role:gate_guard_2`) keep the travel desk.
 
 ### 2.1 How missions are offered
 
@@ -118,7 +120,7 @@ The desk shows a **board**: a column per rank the player may take, each a few of
 |---|---|---|
 | In the village | Walk, run, roof-hop to the anchors | Minutes |
 | Outside the wall, inside the map | Out through a gate (main, east, the farm gate); bandit camps, farms, the outer training grounds, the east road and its waystation are open terrain | An hour or two of game time |
-| Far regions | The **travel desk** at the main gate (`place:gate.travel_desk`): a short travel scene of the road (ROADMAP §6), then the region's entry point. The scene can roll a road event: a traveller, an ambush, a night at camp | Half a day to a day each way |
+| Far regions | The **travel desk** at the main gate (`place:gate.travel_desk`): a short travel scene of the road (ROADMAP §6), then the region's entry point. The scene can roll a road event (35%, `desk.json` `road_events`): a traveller, an ambush, a night at camp, or on the east road an elite squad passing by (`role:elite_scout`) | Half a day to a day each way |
 
 - A C-rank of two days spends a **night at camp**: a bedroll at an anchor, a `camp_night` bond act with
   the squad, a campfire banter scene, and On Duty fatigue rules when the night is a watch.
@@ -127,8 +129,10 @@ The desk shows a **board**: a column per rank the player may take, each a few of
 
 ### 2.4 Reporting back
 
-The last step of every template is the report: the client signs off (a `talk` with them), and the player
-turns the mission in at the desk for the **grade screen**: grade, pay, XP, the client's rapport, gifts.
+The last step of every template is the report: the client signs off (a `talk` with them, speaking the
+template's `success` lines, or `fail` on a failed run), and the player turns the mission in at the desk,
+where the clerk speaks the `report` lines over the **grade screen**: grade, pay, XP, the client's rapport,
+gifts.
 After 18:00 the turn-in waits for the morning without penalty, unless the time limit runs out.
 
 ### 2.5 Failure, partial success and abandonment
@@ -164,7 +168,7 @@ score = 60                                   (the job is done)
 | **C** | below 65 | ×0.85 | ×0.85 | +0.5 | 0 |
 
 An S needs every bonus objective. The bonuses (`mkit.BONUSES`): `fast` (within the template's fast
-time), `unseen`, `no_knockouts`, `client_unharmed`, `all_found`, `gentle` (the animal or person unhurt),
+time), `unseen` (never `combat:spotted`), `no_knockouts`, `client_unharmed`, `all_found`, `gentle` (the animal or person unhurt),
 `kind_choice` (the choice the client hoped for), `no_alarm`, `spared` (enemies captured or routed),
 `teamwork` (every teammate's role used), `careful` (nothing fragile broken), `extra_mile` (an optional
 step for the client) and `clean_record` (nothing kept that was not yours).
@@ -204,8 +208,9 @@ step for the client) and `clean_record` (nothing kept that was not yours).
     by the template's setting (`loot:curio.road`, `.river`, `.shrine`, `.wilds`, `.far_lands`, `.covert`
     and more); and 15% of defeated enemies drop one by their kind (`loot:curio.bandit`, `.smuggler`,
     `.ronin`, `.foreign`, `.beast`).
-  - **Ninja info cards**: card items, one per enemy kind on its first defeat (`card:enemy.<id>`) and one
-    per person met on a mission (`card:person.<role>`), with a card back by rank.
+  - **Ninja info cards**: the item `item:info_card` with a variant, one per enemy kind on its first defeat
+    (`enemy.<combat enemy id>`) and one per person met on a mission (`person.<role>`), with a card back by
+    rank.
   - **Keepsakes**: 20 memorable missions give a unique display piece on their first A grade or better (the
     festival lantern, the haunted inn's lantern, a dojo signboard, the kiln family's pieces at every rank).
 
@@ -500,13 +505,15 @@ cohesion; and Beta 2's mission counts, savings and variety for a steady player.
 |---|---|---|
 | **Konoha build** (anchors in `districts.json`) | 88 anchor tags in the beta: in-village spots (`academy.yard`, `market.stall`, `riverbank`, `street_drain`, `client_home`, `pet_hideout`, `poster_board`, `residence.mission_desk`, `residence.records`, `gate.travel_desk`, `kiln_yard` and more), outside the wall (`farm_field`, `orchard`, `woodlot`, `herb_slope`, `outside.bandit_camp`, `outside.wolf_den`, `outside.ravine`), the east road (`road.east_bend`, `road.campsite`, `road.east_waystation`, `road.ford`, `road.inn_cellar`) and the border village (`border.square`, `border.healer`, `border.post`, `border.market`, `border.pawnshop`). Generic tags (`client_home`, `pet_hideout`, `farm_field`) want several instances each; named places one | 88 of 133 |
 | **Map** | Regions `region:east_road` and `region:border_village` (Beta 2); 21 later regions (hill fort, post town, capital, coast town, mountain pass, far lands and more) | 2 of 23 |
-| **Combat** (enemy groups and loadouts) | 14 in the beta, from the combat session's registry: `combat:group.bandits_small`, `.road_ambush`, `.bandits_camp`, `.smugglers`, `.scout_pair`, `.wolves_pack`, `combat:enemy.bandit_chief`, `.bandit_archer`, `.bandit_ronin`, `.boar`, `.bear`; requested and not yet registered: `combat:group.hired_thugs`, `combat:group.pickpockets` (village street fights, non-lethal) and `combat:enemy.cat_burglar`. 17 later (`combat:group.rogue_pair`, `.cell_pair`, `combat:enemy.rogue_chunin`, `.foreign_jonin`, `.giant_snake` and others; requested: `fort_guards`, `mercenary_band`, `foreign_squad`, `hunter_squad`, `foreign_platoon`, `assassins`, `kidnappers`, `ronin_band`, `combat:enemy.warlord`, `.legend_rogue`). Plus the technique scroll pools and the combat performs. Combat emits the hooks the objectives listen to (`combat:defeated`, `combat:surrendered`, `combat:captured`) | 14 of 31 |
-| **Items** | 51 mission items in the beta (parcels, crates, a sealed letter, medicine, firewood, lantern crates, pottery), the gifts' items, and the collectibles: curio loot tables, info cards and 20 keepsakes (`economy.json` `gifts` and `collectibles`) | 51 of 58 |
+| **Combat** (enemy groups and loadouts) | 14 in the beta, from the combat session's registry: `combat:group.bandits_small`, `.road_ambush`, `.bandits_camp`, `.smugglers`, `.scout_pair`, `.wolves_pack`, `combat:enemy.bandit_chief`, `.bandit_archer`, `.bandit_ronin`, `.boar`, `.bear``combat:group.hired_thugs`, `combat:group.pickpockets` (village street fights, non-lethal) and `combat:enemy.cat_burglar`. 17 later (`combat:group.rogue_pair`, `.cell_pair`, `.fort_guards`, `.mercenary_band`, `.foreign_squad`, `.hunter_squad`, `.foreign_platoon`, `.assassins`, `.kidnappers`, `.ronin_band`, `combat:enemy.rogue_chunin`, `.foreign_jonin`, `.giant_snake`, `.warlord`, `.legend_rogue` and others), all registered. Plus the technique scroll pools and the combat performs. Combat emits the hooks the objectives and bonuses listen to: `combat:defeated` (defeat), `combat:surrendered` and `combat:captured` (`spared`), `combat:spotted` (breaks `unseen`) | 14 of 31 |
+| **Items** | Registered by the items session: mission items as `item:mission_<name>` (nine reuse existing items, such as `item:quest_parcel`; the cat, the ninken, the frog and a stray pet are followers, not items), the gifts' items, the 17 curio loot tables, `item:info_card`, `item:technique_scroll` and 20 `item:keepsake_<name>` (`economy.json` `gifts` and `collectibles`; the compiler maps the authoring names) | 51 of 58 |
 | **Dialogue** | Every template's `title`, `brief`, twist premises and choices; the banter keys (§6); the desk clerk's lines; NPC squads' and the rival squad's board lines | all |
 | **Life** | Ryo through the wallet; bedroll camping and On Duty; chores' work clips | all |
 | **Bonds** | The acts and deeds of §3.2 and §6 (`mission_success`, `failed_client`, `abandoned_mission`, `camp_night`, `helped_resident`); cohesion | all |
 
-The ids above are requests until the owning sessions confirm them in their registries.
+The Konoha build has placed all 88 beta anchor tags under these names ([KONOHA_BUILD.md](KONOHA_BUILD.md)
+§3, "Mission anchors"; generic tags get 4 to 8 instances); later regions' anchors wait for those regions.
+The combat session has registered every enemy and group id above, and the items session every item, loot table, keepsake and card id.
 
 ## 11. What waits for Phase 0
 
@@ -518,7 +525,9 @@ The ids above are requests until the owning sessions confirm them in their regis
   (markers, VF's census and households) and Core's player record and flags in place of `Player`; the
   travel desk and travel scenes (Core's regions); `perform` chores as work points with clips; spawning
   enemy groups (Combat); the wallet, bedroll and On Duty (Life); bond acts and deeds on turn-in (Life's
-  bond glue); saving offers and missions in hand by template id and slots; and client game tests that
+  bond glue); saving offers and missions in hand by template id and slots; a `MissionEnded` event on Core's bus
+  (template, rank, end, grade, client, `with_squad`, `slept_away`, days away) that the home's visit
+  scheduler reads ([HOME.md](HOME.md) §9); and client game tests that
   complete and fail every template (ROADMAP §9, Beta 2's exit criteria).
 
 ## 12. Open questions

@@ -50,7 +50,7 @@
   "o1": {
    "objective": {
     "type": "deliver",
-    "item": "sealed_letter",
+    "item": "item:quest_letter",
     "to": "slot:o1"
    },
    "next": "o2"
@@ -58,7 +58,7 @@
   "o2": {
    "objective": {
     "type": "deliver",
-    "item": "sealed_letter",
+    "item": "item:quest_letter",
     "to": "slot:o2"
    },
    "branch": [
@@ -82,7 +82,7 @@
   "o3": {
    "objective": {
     "type": "deliver",
-    "item": "sealed_letter",
+    "item": "item:quest_letter",
     "to": "slot:o3"
    },
    "branch": [

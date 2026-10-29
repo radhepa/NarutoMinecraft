@@ -104,7 +104,7 @@
   "signboards": {
    "objective": {
     "type": "collect",
-    "target": "dojo_signboard",
+    "target": "item:mission_dojo_signboard",
     "count": 3
    },
    "next": "report"

@@ -73,7 +73,7 @@
   "stores": {
    "objective": {
     "type": "deliver",
-    "item": "supply_crate",
+    "item": "item:mission_supply_crate",
     "to": "slot:gate"
    },
    "next": "break"

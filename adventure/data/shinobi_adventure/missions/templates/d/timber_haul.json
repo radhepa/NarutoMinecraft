@@ -46,7 +46,7 @@
   "haul": {
    "objective": {
     "type": "deliver",
-    "item": "timber",
+    "item": "item:mission_timber",
     "to": "slot:yard"
    },
    "branch": [
@@ -68,7 +68,7 @@
   "roll": {
    "objective": {
     "type": "collect",
-    "target": "timber",
+    "target": "item:mission_timber",
     "at": "slot:woodlot",
     "count": 3
    },
@@ -77,7 +77,7 @@
   "haul2": {
    "objective": {
     "type": "deliver",
-    "item": "timber",
+    "item": "item:mission_timber",
     "to": "slot:yard"
    },
    "next": "report"
