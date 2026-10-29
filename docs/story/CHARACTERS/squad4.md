@@ -50,9 +50,9 @@ style (see Variants).
 | Cinders | The top of the class beside the rival; corrects the instructor politely |
 | Paper Trail | Squad 4's rule-keeper; carries her clan's formality into missions; wins the council-day seat in the gallery and explains the clans to the player (`event.b2.council_day`) |
 | Dusk | Ch 17: beats squad4_b in the prelims and apologises to him. **Promoted in Ch 20** |
-| Embers | **Ch 22**: assigned by her aunt to shadow the player. Awkward, exact, she logs everything. She can become a friend if the player lets her (the old `sensor_shadow` beats: night passes, a day off, the stake-out in Ch 28). **Ch 31**: at the council she testifies against her aunt's lockdown of the Tobari ("I watched {player} for nine months. I watched the Tobari for one night. I was wrong about the second") |
+| Embers | **Ch 22**: assigned by her aunt to shadow the player. Awkward, exact, she logs everything. She can become a friend if the player lets her (the old `sensor_shadow` beats: night passes, a day off, the stake-out in Ch 28). **Ch 31**: at the council she testifies against her aunt's lockdown of the Tobari ("I watched {player} for ten months. I watched the Tobari for one night. I was wrong about the second") |
 | Ashes | **Ch 40**: when her great-uncle (`elder_hyuga`) walks out of the council, she stays in her seat |
-| Last Bonfire | **Ch 51**: on the Rock's shoulder with her Byakugan, she is the Seventh's eyes for the whole battle, calling out the hearths. Ch 55: the head of her house's next generation, with the branch house's petitions read |
+| Last Bonfire | **Ch 51a to 51b**: on the Rock's shoulder with her Byakugan, she is the Seventh's eyes for the whole battle, calling out the hearths. Ch 55: the head of her house's next generation, with the branch house's petitions read |
 
 **Endings.** Heir of the Hyuga, the first to read the branch house's petitions aloud. If
 `ans.squad4_a.choose` was "fairness", the Hyuga line's Heart step (`clan.hyuga.4`) goes the
@@ -78,8 +78,8 @@ warm under the form.
 - "Good morning. I am to follow you. I apologise in advance."
 - "At twenty-two hundred you were out without a pass. I have written it down. I have also written down that it was for a good reason."
 - "My aunt is not cruel. She is afraid. I have never said that aloud before."
-- (Ch 31) "I watched {player} for nine months. I watched the Tobari for one night. I was wrong about the second."
-- (Ch 51) "Three hearths, north wall. Two on the roofs. One alone, in the square. That one is waiting for you."
+- (Ch 31) "I watched {player} for ten months. I watched the Tobari for one night. I was wrong about the second."
+- (Ch 51a) "Three hearths, north wall. Two on the roofs. One alone, in the square. That one is waiting for you."
 
 **Topics by depth.**
 
@@ -108,17 +108,17 @@ warm under the form.
 |---|---|---|---|---|---|---|
 | `ans.squad4_a.shadow` | Ch 22, the first day | "May I follow you closely, or would you prefer I follow from a distance?" | closely, distance, "walk with me instead" | "With me" breaks protocol and honours loyalty | Her report to the Fifth (Ch 31) | "with me" starts the friendship |
 | `ans.squad4_a.pass` | Ch 30.4, the night pass to get squad5_b out of the locked Tobari quarter | "You need a night pass and you will not tell me why. Do I write it?" | "trust me", "come with me and see", "write it down, I'll take the blame" | Loyalty against duty | Ch 31 testimony: she was there (come), she covered (trust), or her log names you and she defends it (blame) | Teaches her to choose |
-| `ans.squad4_a.choose` | Before Ch 31, level 5 | "If duty and fairness point different ways, which do I follow?" | duty, fairness, "the one you can explain to the person it hurts" | Tests her core | Ch 31 testimony; Ch 40 staying; her ending | Decides her ending |
+| `ans.squad4_a.choose` | Before Ch 31, level 5 | "If duty and fairness point different ways, which do I follow?" | duty, fairness, "the one you can explain to the person it hurts" | Tests her core | Ch 31 testimony; Ch 40 staying; her ending (unset: she testifies and stays, quietly, as if by duty) | Decides her ending |
 | `ans.squad4_a.aunt` | After Ch 31.4, level 5 | "She stepped down. Was I a traitor to my family?" | "no, you were honest with it", "you were a little, and it was right", "ask her" | Honesty, family | Ch 51: her aunt fights on the wall and says one line to her (by answer) | "ask her" gives a reconciliation scene (Ch 32) |
 | `ans.squad4_a.petition` | Level 7 | "I have carried petitions no one reads. Should I read them aloud myself?" | yes, "only with the branch house beside you", "not yet" | Fairness | `clan.hyuga.4`; Ch 55 | — |
 | `ans.squad4_a.calligraphy` | Hobby, level 2 | "Write a character for me. Any one. I want to see a stroke that isn't perfect." | fire, home, friend | Creativity | She hangs it in her room; it appears in Ch 55's montage | — |
 | `ans.squad4_a.bow` | Cinders, level 1 (the Academy yard) | "How deeply should I bow to you? You have no rank and no clan. I do not know the rule." | "don't bow", "the same as you'd bow to anyone", "a nod, like friends" | Duty against freedom | Every greeting: her bow or nod to you | Her first broken rule |
 | `ans.squad4_a.prelim` | Ch 17, after her bout with squad4_b | "I beat him and he cheered. Should I have lost?" | "no, he wanted you to win", "you should thank him", "beat him again next time, he'd love it" | Strength, kindness | squad4_b's party (`side.c.third_time`): her toast | — |
-| `ans.squad4_a.log` | Embers, level 4 (the shadow's log) | "My log of you has three hundred pages. Would you like to read it?" | "yes", "no, keep it", "burn the parts about my friends" | Honesty, loyalty | Ch 31: the log is her evidence (yes: you know what is in it; burn: she testifies from memory) | — |
+| `ans.squad4_a.log` | Embers, level 4 (the shadow's log) | "My log of you has three hundred pages. Would you like to read it?" | "yes", "no, keep it", "burn the parts about my friends" | Honesty, loyalty | Ch 31: the log is her evidence (yes: you know what is in it; burn: she testifies from memory; keep or unset: she reads from it and you hear it for the first time) | — |
 | `ans.squad4_a.branch` | Ashes, level 5 | "A branch-house girl asked me if I would ever bow to her. What should I say?" | "yes, first", "when your house bows to hers too", "ask her what she wants" | Fairness | `clan.hyuga.4`; Ch 55's montage | — |
 | `ans.squad4_a.eyes` | Ch 50, before the war | "The Seventh wants me on the Rock as their eyes. I would rather fight beside you. Which?" | "be their eyes", "beside me", "both: link with me" (Ember Link if Flame) | Duty against loyalty | Ch 51: where she stands; "link" lets the player see her Byakugan view in Ch 51 | — |
 
-**What her lines are for.** Plot (Ch 22 watch, Ch 31 testimony, Ch 51 eyes), teach (curfew and
+**What her lines are for.** Plot (Ch 22 watch, Ch 31 testimony, Ch 51a to 51b eyes), teach (curfew and
 night passes in Ch 22 are taught through her), bond (watcher to friend), life (reports as humour).
 Mood states: on duty (Ch 22 to 31), after the testimony, at war.
 
@@ -165,9 +165,9 @@ sees the enemy's chakra paths for a few seconds, and every strike lands on a poi
 | Cinders | Late to enrolment with his dog; competes with teammate_b instantly |
 | Paper Trail | **Ch 9**: his dog makes the goat chase worse; `filler.dogs_and_bugs` (his dog is the accused) |
 | Dusk | Loses his prelim to squad4_a and cheers for her anyway |
-| Embers | Fails the exam twice. **Ch 26**: if teammate_b leaves the squad, he is the one who keeps b company at the bridge, and tells the player where b is (a lead). `side.c.third_time`: promoted at last; the squad throws him a party |
+| Embers | Fails the exam twice. **Ch 26, before the bridge, in every branch**: he finds the player: "{given:teammate_b}'s been at the bridge three nights. Something's wrong." (the same days the player's Thread Sight shows b's thread fraying). If b leaves the squad, he is the one who keeps b company at the bridge and tells the player where b is (a lead). `side.c.third_time`: promoted at last; the squad throws him a party |
 | Ashes | A tracker on A-ranks; **Ch 35**: lent to the Valley of Ash A-rank, his nose finds the nursery's back entrance, which lets squad3_a's no-fight plan work |
-| Last Bonfire | **Ch 51**: the dogs hold the market street with teammate_b while b faces their parent; his dog is wounded, and lives |
+| Last Bonfire | **Ch 51a**: the dogs hold the market street with teammate_b while b faces their parent; his dog is wounded, and lives |
 
 **Endings.** A Jonin of the Inuzuka kennels, and the loudest voice at every festival.
 
@@ -192,7 +192,7 @@ you smell like ramen. He's right."). Never mean. Child, teen and adult are the s
 **Topics by depth.** Food (1: eating contests), training (1: anything that involves running),
 family (4: a pack of siblings and a mother who runs the clinic), worries (7: being the joke).
 
-**Never reveal before.** Nothing of the twists; his Ch 26 lead only exists if b left.
+**Never reveal before.** Nothing of the twists; his Ch 26 warning plays in every branch, his later lead only if b left; never mentions b's parent before Ch 26.
 
 **Questions for the player.**
 
@@ -208,7 +208,7 @@ family (4: a pack of siblings and a mother who runs the clinic), worries (7: bei
 | `ans.squad4_b.dog_hurt` | After Ch 51, level 5 | "He's going to be okay. Right? Say right." | "right", "I'll sit with him tonight", "he's the bravest dog in the Leaf" | — | Ch 55's montage: the dog wearing a medal | — |
 
 **What his lines are for.** Life and filler (the village's comic noise), bond, small plot assists
-(Ch 26 lead, Ch 35 entrance, Ch 51 market). Pools: greetings, eating-contest lines, dog lines.
+(Ch 26 lead, Ch 35 entrance, Ch 51a market). Pools: greetings, eating-contest lines, dog lines.
 
 **Variants.** Varied may roll any clan; the skin is **loud with a big companion** (an Inuzuka with
 a ninken; a clanless kid with a huge stray; an Aburame who is, against every clan custom, the
@@ -270,12 +270,12 @@ is shaken, because she admires the medic; it becomes part of her arc (below).
 | Dusk | Ch 16 to 19: treats the injured in the forest and the stands |
 | Embers | A Chunin on the medic's rotation; **Ch 25**: in the hospital after the border post, she changes the player's bandages and talks to the fallen friend while they sleep |
 | Ashes | **Ch 38**: the roster (above). If the medic is the voice, she visits the medic in a cell and asks why; if innocent, she becomes the medic's partner in treating the lost child |
-| Last Bonfire | Treats the lost child after her return (N6 or Ch 47) with the medic (or alone, if the medic is arrested). **Ch 51**: runs the hospital with sensei_4 through the assault. **Ch 52 to 53**: climbs the Rock's slope after the player; one way the second lives (below) |
+| Last Bonfire | Treats the lost child after her return (N6 or Ch 47) with the medic (or alone, if the medic is arrested). **Ch 51a to 51b**: runs the hospital with sensei_4 and the medic through the assault. **Ch 52 to 53**: climbs the Rock's slope after the player; one way the second lives (below) |
 
-**Ch 53: the revival.** If `friendship [squad4_c, 6]` and `ans.squad4_c.second` is not "someone
+**Ch 53.5: the revival.** If `friendship [squad4_c, 6]` and `ans.squad4_c.second` is not "someone
 else first" (unset counts as yes), she is on the Rock's slope (she climbs after the player in Ch 52) and the player can kindle her healing past its limit: it becomes a
-revival, and the second, torn hollow, comes back. This is a third way for `story.second.lives`
-beside `bond_web 40` and `friendship [yugure_second, 4]`. Her line: "Everyone gave up on her. I
+revival, and the second, torn hollow, comes back. This is one of the three ways for `story.second.lives` (53.5, before the leader's end), with the
+web at "strong" or above and `friendship [yugure_second, 4]`. Her line: "Everyone gave up on her. I
 didn't get the chance to."
 
 **Endings.** The hospital's head herbalist; her notebook of the lost has one name crossed out (the
@@ -301,7 +301,7 @@ shy. Teen: steady. Adult: calm in every storm.
 - "Lily of the valley is poison. It's also medicine. It depends on the hand."
 - "I copied it. I didn't read it like that."
 - (to the lost child) "You don't have to talk. I'll tell you what each herb is. You can just listen."
-- (Ch 53) "Everyone gave up on her. I didn't get the chance to."
+- (Ch 53.5) "Everyone gave up on her. I didn't get the chance to."
 
 **Topics by depth.**
 
@@ -327,7 +327,7 @@ shy. Teen: steady. Adult: calm in every storm.
 |---|---|---|---|---|---|---|
 | `ans.squad4_c.poison` | `clan.suzuran.1` or a herb walk, level 2 | "Would you taste it? I promise it's mild." | "yes", "only if you taste it first", "no" | Trust | She serves you that herb tea for good | — |
 | `ans.squad4_c.hurt` | Ch 25, the hospital | "Does it hurt more where they hit you, or where you watched them fall?" | "where I watched", "both", "neither, I'm fine" (a lie she hears) | Honesty | Her bedside lines in Ch 47 | Lying makes her watch you more closely |
-| `ans.squad4_c.give_up` | Embers, level 5 | "When is it right to stop trying to save someone?" | "never", "when they ask you to", "when trying hurts someone else" | Kindness, knowledge | Ch 53 revival line | Decides whether she climbs the Rock in Ch 52 eagerly ("never") or reluctantly |
+| `ans.squad4_c.give_up` | Embers, level 5 | "When is it right to stop trying to save someone?" | "never", "when they ask you to", "when trying hurts someone else" | Kindness, knowledge | Ch 53.5 revival line | Decides whether she climbs the Rock in Ch 52 eagerly ("never") or reluctantly (the others; unset: steadily, without a line) |
 | `ans.squad4_c.roster` | Ch 38, after the page | "Should I have read it sooner?" | "you couldn't have known", "yes, and you'll read everything now", "it's not your fault, it's theirs" | — | Her ending (meticulous or gentle) | Shifts her archetype toward meticulous ("yes") |
 | `ans.squad4_c.lost_child` | After the lost child's return | "She asked me what her real name was. I don't know. Do I tell her I don't know?" | "tell her", "help her find it", "let her choose one" | Honesty; freedom | `story.lost_child.family_known`: her name scene | — |
 | `ans.squad4_c.notebook` | Level 7 | "This is everyone I couldn't save. Do you want to see?" | "yes", "only if you want me to", "burn it" | Respect | Ch 55: the crossed-out name | — |

@@ -20,13 +20,13 @@ done when both are). Gates in the character briefs use them ("never before `stor
 | Night Watch N3 onward | `story.ch44.done` |
 | Ch 47 | The Night Watch finished (`story.chN7.done`) or declined or never offered; entering Ch 47 with the branch half played closes it through Ch 47 |
 | Ch 49 | Level 47 |
-| Ch 55.1 | Level 50, Hero standing with the village, Good Neighbor in every district and clan quarter (the Ch 51 defence counts as a great deed everywhere) |
+| Ch 55 | Plays directly after Ch 54. Finishing Ch 53 applies a **level-50 floor** and the deed `saved_the_village` (lived by every resident), which lifts the village to Hero and every district and clan quarter to Good Neighbor, so ROADMAP's Hokage requirement is met by the story |
 
 ## Twist slots (bound at world creation)
 
 | Flag | Values | Read in |
 |---|---|---|
-| `twist.traitor` | `librarian`, `medic`, `councillor`, `merchant` | Ch 25 (the slip), Chunin alibis, Ch 35 to 40, Ch 51 (turned), Ch 55 (ruling) |
+| `twist.traitor` | `librarian`, `medic`, `councillor`, `merchant` | Ch 25 (the slip), Chunin alibis, Ch 35 to 40, Ch 50 and 51a (turned), Ch 55 (ruling) |
 | `twist.lineage` | `second`, `fallen` | Ch 21, 27, 48, 52 to 55 |
 | `twist.fourth_fate` | `falls`, `crippled`, `taken` | Ch 19 to 21, 49, 51, 55 |
 
@@ -51,7 +51,7 @@ done when both are). Gates in the character briefs use them ("never before `stor
 | `story.clue.librarian.1`, `.2` | Ch 5.2 | Ch 38 |
 | `story.seed.blank_spots` | Ch 5.3 | Ch 32, 42, 55 |
 | `story.seed.watchfire_song` | Ch 6.3 | Ch 16, 18, 25, 48, 52, 53 |
-| `story.seed.bell_flicker` | Ch 8.3 | Ch 24 |
+| `story.seed.cord_flicker` (was `bell_flicker`) | Ch 8.3 | Ch 24 |
 | `story.seed.chiselled_names` | Ch 10.2 | Ch 41 |
 | `story.seed.fallen_name` | Ch 10.2 | Ch 21, 41, 48 |
 | `story.seed.cargo_found` | Ch 11.3 | Ch 23 |
@@ -104,13 +104,13 @@ done when both are). Gates in the character briefs use them ("never before `stor
 | `story.trail.count` (a counter) | B-rank trail drops (Chunin) | Ch 27.3 (three or more: an extra line from the second) |
 | `story.merchant.camp_talks` (a counter) | `chain.merchant` camp step (after Ch 14) | The merchant's lines; after Ch 40 the informant chain |
 | `story.finale.reached` | Ch 52.3 | Ch 55 epilogue line |
-| `story.finale.offered_leader` | Ch 53.5 | Ch 54.3 |
-| `story.second.lives` | Ch 53.6 | Ch 54, 55 |
+| `story.finale.offered_leader` | Ch 53.6 | Ch 54.3 |
 | `story.traitor.ruling` | Ch 55.3 | Epilogue |
 | `story.suspected.keeper` | Any accusation of the keeper (Ch 4 to 38) | Ch 36 (his dry line) |
 | `story.lost_child.family_known` | Ch 38 (the decoded list names her family) | Her file; Ch 47, 55 |
 | `bond_flag parent_sorry` on `yugure_b_parent` | Ch 51a.4 (when `ans.teammate_b.ask = sorry` and the parent apologises) | Ch 51a.4 branch |
-| `story.second.lives` also by `friendship [squad4_c, 6]` with `ans.squad4_c.second` not "someone else first" | Ch 53.6 | Ch 54, 55 |
+| `story.second.lives` | Ch 53.5: the web at "strong" or above, or `friendship [yugure_second, 4]`, or `friendship [squad4_c, 6]` with `ans.squad4_c.second` not "someone else first" | Ch 54, 55 |
+| `story.blade.custody` | Ch 52 (he lives) | Ch 54, 55 |
 
 ## Acts the story asks of the bond engine
 
@@ -122,6 +122,25 @@ done when both are). Gates in the character briefs use them ("never before `stor
 
 **Story floor.** A scripted gift scene treats its scripted target as at the tier it needs (Ch 24:
 Spark; Ch 31: Flame), whatever the level.
+
+**`thread_floor`: the only scripted Thread Sight exceptions.** Thread Sight shows a thread only for
+people bonded to the player at 6+ (between two others, only when both are). The flicker is a steady
+state from one `hides:` bond flag, never a lie detector. The exceptions, each a `thread_floor`:
+
+| Exception | Where |
+|---|---|
+| The red cord's grey thread to the lost child | Ch 24.6, N6, Ch 47 |
+| The second's one-sided thread toward the player | From Ch 27; fraying from Ch 49 to 52; held by the player in Ch 53.5 |
+| teammate_b's fraying thread before the bridge (every branch) | Ch 26 |
+| The blade's thread to the second | Ch 52 only |
+
+The porter and every traitor candidate are never exceptions before Ch 39. The leader has no
+threads.
+
+**The bond web's sizes are data.** `BondWeb.score` ([BONDS.md](../../BONDS.md) §11) maps to four tiers:
+a small fire, strong, great, the whole village. The thresholds live in the datapack and are
+calibrated by the bonds session's simulation so a typical player reaches "strong" and a devoted one
+"the whole village". Story conditions read the tier (`bond_web_tier strong`), never a raw number.
 
 ## Journal documents and other ids
 
@@ -143,6 +162,11 @@ Player-scope string flags: `ans.<role>.<topic> = <option>`. The question tables 
 [character file](CHARACTERS/) are the source of truth for their options and payoffs; the arc
 files show where each is asked. Naming: `ans.player.*` are the player's own choices that are not
 answers to one character (how you describe the Leaf, your ramen order, your speech).
+
+**Renamed in round 2:** `ans.player.bell_given` → `ans.player.cord_given` (`handed` / `together`);
+`story.seed.bell_flicker` → `story.seed.cord_flicker`; the keepsake `bell` → `cord_tag`; the speech
+choice "the bell" → "the cord tag". `ans.sensei_3.spared` keeps the Ch 25.3b definition; the
+senseis.md question that used that id is `ans.sensei_3.saved_choice`.
 
 Every `ans.*` flag must be read at least once after it is set (a callback line, a branch, or an
 epilogue line). `quests.py --check` treats `ans.*` like seeds.

@@ -53,10 +53,10 @@ that the Third, a Sarutobi, kept the silence). The Hollow Crown at Ch 49.
 | Arc | Change |
 |---|---|
 | 1 Cinders | Ch 7: heckles the graduation cheerfully: "Welcome to the bottom! It's great down here!" |
-| 3 Dusk | Exams: fights in the preliminaries with a showy staff bout and loses gracefully; in the attack he carries Academy children out of the stands |
+| 3 Dusk | Exams: fights in the preliminaries with a showy staff bout and loses gracefully; when the attack begins at the opening lantern-lighting he carries Academy children out of the stands |
 | 4 Embers | Chunin after the skip; declares himself the player's rival "for the hat" (friendly; the bond engine's rivalry meter is the joke) |
-| 5 Ashes | Ch 40.2: the council. His clan's Hokage kept the silence for thirty years; he stands through the whole session without a word. Ch 40.2b: that night, on the Rock under the Third's face, he asks the player the question he can't ask his family (`ans.squad5_a.will`). Ch 42: the naming is contested: the council balks at a Hokage who signed the Ash Road field report. He stands up in the public gallery and says "I'm with them," the crowd follows, and his stand carries the vote |
-| 7 Last Bonfire | Ch 51: on the wall with the former Fifth and the Tobari. Ch 55: becomes the Eighth's Jonin Commander in `sensei_2`'s place, his oath quoting `ans.squad5_a.will`, and taking the post "until I take your hat" |
+| 5 Ashes | Ch 40.2: the council. His clan's Hokage kept the silence for thirty years; he stands through the whole session without a word and sits only when the vote is called. Ch 40.2b: that night, on the Rock under the Third's face, he asks the player the question he can't ask his family (`ans.squad5_a.will`). Ch 42: the naming is contested: the council balks at a Hokage who signed the Ash Road field report. He stands up in the public gallery and says "I'm with them," the crowd follows, and his stand carries the vote |
+| 7 Last Bonfire | Ch 51a: on the wall with the former Fifth, the Tobari and the Hagane. Ch 53: a face among the flames (a short line only if the player is very close to him). Ch 55: becomes the Eighth's Jonin Commander in `sensei_2`'s place, his oath quoting `ans.squad5_a.will`, and taking the post "until I take your hat" |
 
 **Endings.** He lives; the epilogue line reads `ans.squad5_a.serve` and `ans.squad5_a.will`.
 
@@ -94,7 +94,7 @@ before Ch 49.
 | `ans.squad5_a.spar` | Level 2, a staff spar | "Staff or fists? Pick how I lose." | Staff / Fists / Neither, race me | Courage | His sparring hangout favourite becomes yours | Opens a ritual (sparring or rooftop races) |
 | `ans.squad5_a.faces` | Level 4, on the Rock | "Which face up there do you like best? You can't say the Fourth, everyone says the Fourth." | The First / The Third / The empty spaces / The Fourth anyway | His faith | Ch 40.2b: under the Third's face he remembers it ("You liked her best") or not | "The Third": the Ch 40 hurt is sharper and his recovery stronger |
 | `ans.squad5_a.campaign` | Ch 33 (his cheerful campaign) | "Vote for me? I'm accepting endorsements. And dumplings." | Yes / Only if you buy dumplings / I'm running too | Pride, fun | Ch 45: his speech to the squad; Ch 55: "You endorsed me once. Look where it got you" | "Running too": the rivalry meter (friendly) rises; `ans.squad5_a.serve` reads warmer |
-| `ans.squad5_a.wall` | Ch 49 (war council) | "If the wall falls, do I stay on it or come to you?" | Stay on the wall / Come to me / Go where you're needed most | Duty | Ch 51.1: where he fights at the end of the wall scene | "Come to me": he is the first flame from a non-squad friend in Ch 53 |
+| `ans.squad5_a.wall` | Ch 49 (war council) | "If the wall falls, do I stay on it or come to you?" | Stay on the wall / Come to me / Go where you're needed most | Duty | Ch 51a: how the wall scene ends for him (holds his stretch / sends word to the player / goes to the gate's second line); unset: holds his stretch | "Come to me": in Ch 53 his face comes with a short line if the player is very close |
 | `ans.squad5_a.sensei_2` | Ch 54 (after the funerals) | "He'd have made a joke about this. Should I?" | Yes, make the worst one / No / Write it in his notebook | Grief | Ch 55: his first act as Commander (a joke at the gate, silence, or a tally line) | — |
 
 **Unison technique (Blaze).** *Hearth Wheel*: his burning staff spin, kindled, becomes a turning
@@ -152,7 +152,7 @@ the cell in the drain (Ch 31, with the player).
 | 3 Dusk | Ch 16: the player glimpses her watching from the forest's high branches, never moving; Ch 19: scouts the stands and gives sensei_5 the stair routes by hand signs |
 | 4 Embers | Ch 30: her quarter is locked down. She comes to the player at night, unseen, and says the longest thing she has ever said: "They'll arrest my grandmother. I need someone they'll listen to." She partners the player in the lanes and the drain (Ch 30.4, 31.1). If the player asked her (see `ans.squad5_b.deserter`), she gives up the deserter's name, which leads to the drain. Ch 31.2: her grandmother, a Tobari elder, is the first near-stranger to kindle toward the player |
 | 5 Ashes | Leads the night watch; the Tobari are seen |
-| 7 Last Bonfire | Ch 51: the Tobari seal the wall's lanes behind sensei_2's stand; she is the last to see him at the gate |
+| 7 Last Bonfire | Ch 51a: beside the main gate, she and the Tobari smother the lanes so the evacuation moves unheard behind sensei_2's stand |
 
 **Endings.** She lives. Epilogue: she answers sensei_5 in a full paragraph for the first time.
 
@@ -167,7 +167,7 @@ Voice samples, not shipped lines:
 - "You're loud. Even when you're quiet."
 - "They'll arrest my grandmother. I need someone they'll listen to."
 - (Ch 31) "You saw us."
-- (Ch 51) "He told us to go. So we went. Then we came back." (about sensei_2)
+- (Ch 51a) "He said keep it quiet. So it's quiet." (about sensei_2, at the lanes)
 
 **Topics.** Training (1): footwork, silence. Hobby (2): lantern-keeping; the lake's lanterns
 (`filler.lake_lanterns`'s old keeper is her great-uncle). Family (4): her grandmother. Values (5):
@@ -183,7 +183,7 @@ asked). Nothing of Yūgure before Ch 30 beyond public news.
 |---|---|---|---|---|---|---|
 | `ans.squad5_b.quiet` | Level 2 (a night walk) | "Do you like quiet?" | Yes / I'm learning / No, but I like yours | Freedom | Her greetings: silent if yes, a single word if "learning", a whole sentence if "yours" | — |
 | `ans.squad5_b.notice` | Level 4 | "Would you notice if I were gone?" | Yes / I'd notice the quiet / I'd look for you | Belonging | Ch 30: she comes to you because of it ("You said you'd look. So I came first") | Decides whether she seeks you or you must find her |
-| `ans.squad5_b.sound` | Level 3, on a roof at night | "What does the village sound like to you?" | Ramen and arguments / Bells / Safe / Like nobody's listening | Openness | Ch 51: after the war, she asks again, and you hear her answer | — |
+| `ans.squad5_b.sound` | Level 3, on a roof at night | "What does the village sound like to you?" | Ramen and arguments / The shrine at dusk / Safe / Like nobody's listening | Openness | Ch 54: after the war, she asks again, and you hear her answer | — |
 | `ans.squad5_b.deserter` | Ch 30 (in the lanes) | (She shows you a Tobari family crest scratched out) "If someone in your family helped them... would you say?" | Yes, even if it hurts / Only to someone I trust / No | Honesty | Ch 30 to 31: she names the deserter (yes or trust); without it, the drain takes an extra investigation step | The `clan.tobari.3` shortcut opens either way |
 | `ans.squad5_b.seen` | Ch 31 (after the council) | "You saw us. Why?" | Because nobody else would / Because you asked / Because I know what it's like to be watched | Belonging | Ch 51 and the epilogue's wave at night | — |
 | `ans.squad5_b.teacher` | Level 5, Jonin arc | "The old man talks to me like I'm a wall he likes. Should I talk back?" | Yes / Only when you have something to say / Try once and see | Her growth | Epilogue: her paragraph to sensei_5 | — |
@@ -199,7 +199,7 @@ elder (the grandmother is marker-fixed in the Tobari quarter); if squad5_b is no
 the Tobari elder's apprentice instead of her granddaughter.
 
 **New flags.** `ans.squad5_b.quiet` (yes, learning, yours), `ans.squad5_b.notice` (yes, quiet,
-look), `ans.squad5_b.sound` (ramen, bells, safe, nobody), `ans.squad5_b.deserter` (say, trust, no),
+look), `ans.squad5_b.sound` (ramen, shrine, safe, nobody), `ans.squad5_b.deserter` (say, trust, no),
 `ans.squad5_b.seen` (nobody_else, you_asked, watched), `ans.squad5_b.teacher` (yes, when_needed,
 try_once), `ans.squad5_b.hand` (yes, teach_me, say_it), `ans.squad5_b.grandmother` (asked,
 listened, dont_know), `ans.squad5_b.lanterns` (love, both, stubborn), `ans.squad5_b.watch` (yes,

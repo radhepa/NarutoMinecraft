@@ -53,10 +53,10 @@ stay fixed in every save: squad3_b is **the Fourth's grandson** (his clan is the
 |---|---|
 | Cinders | The girl who answers every question and asks the instructor for extra homework; challenges the player to shogi after Ch 2 |
 | Paper Trail | Plans for her squad and hates that squad3_b improvises; shogi with the player becomes a ritual |
-| Dusk | **Ch 16**: the forest truce. Her plan (a decoy scroll and a shadow trap) saves Squad 1 and Squad 3 from the foreign team's traps. In Ch 19 her plan for the stands collapses in the smoke and she freezes; squad3_b drags her out |
+| Dusk | **Ch 16**: the forest truce. Her plan (a decoy scroll and a shadow trap) saves Squad 1 and Squad 3 from another team's traps. In Ch 19 her plan for the stands collapses in the smoke and she freezes; squad3_b drags her out |
 | Embers | Promoted in the skip. Writes every plan twice. Starts to ask the player about improvising |
 | Ashes | **Ch 35**: with your old squad and hers in the Valley of Ash (squad4_b lent to the A-rank; his nose finds the nursery's back entrance), her plan gets twenty children out and home without a fight |
-| Last Bonfire | **Ch 50**: plans the hunt for the eighty-one anchors (districts, clans, standing, who opens which door). **Ch 51a**: the gate's first line breaks and her plan breaks with it. For the first time she improvises: she builds the second line at the gate out of whatever is left, with nothing written down (the market street is teammate_b's and squad4_b's). In 51b sensei_2 dies holding that gate; her line is what he held. After the war she keeps one blank page in every notebook |
+| Last Bonfire | **Ch 50**: plans the hunt for the eighty-one anchors (districts, clans, standing, who opens which door). **Ch 51a.5**: the gate's first line breaks and her plan breaks with it. For the first time she improvises: she builds the second line at the gate out of whatever is left, with nothing written down (the market street is teammate_b's and squad4_b's). In 51b sensei_2 dies holding that gate; her line is what he held. After the war she keeps one blank page in every notebook |
 
 **Endings.** She becomes the Eighth's strategist. If the player answered her improvising question
 (`ans.squad3_a.improvise`) with "you will", she says it back on the gate: "You said I would."
@@ -110,18 +110,18 @@ little bossy. Teen: dry. Adult: still lists, but she lets other people finish th
 | Id | When | Question | Options | Honours / tests | Remembered | How it changes her |
 |---|---|---|---|---|---|---|
 | `ans.squad3_a.shogi` | After Ch 2, first shogi game (`side.b1.shogi` or a hangout) | "Do you play to win or to not lose?" | win, not_lose, "to see what you'll do" (watch) | Win tests her caution; not_lose honours duty; watch intrigues her | Every shogi greeting; Ch 50's plan has a "{player} gambit" if win | She starts opening aggressively against you |
-| `ans.squad3_a.forest` | Ch 16.2b, the truce | "Do we split up or stay together? You decide, I'll plan either." | split, together, "your call, it's your plan" (yours) | Yours honours her and also makes her freeze a second | Ch 51: on the gate she says "You let me choose in the forest. I'm choosing" | together: Squad 3 trusts Squad 1 for good; yours: she grows faster |
-| `ans.squad3_a.froze` | Ch 20 or the first hangout after Ch 19 (level 3) | "I froze in the stands. Did you see?" | "I saw, and it's all right", "I didn't see" (a kind lie), "Then plan for freezing" | Plan honours knowledge; the lie violates honesty if she finds out (squad3_b saw you watching) | Ch 51 if "plan for freezing": she has a written plan for her own freeze, and uses it | Planning for freezing is her turning point |
-| `ans.squad3_a.improvise` | Embers, level 5 (Asking their advice, reversed) | "How do you decide when there's no time?" | "I don't, I just move", "I trust whoever's beside me", "I already decided who I am, so the rest is easy" | All three teach her something different | Ch 51 improvisation line quotes it | Shapes how she improvises: alone, with others, or from values |
+| `ans.squad3_a.forest` | Ch 16.2b, the truce | "Do we split up or stay together? You decide, I'll plan either." | split, together, "your call, it's your plan" (yours) | Yours honours her and also makes her freeze a second | Ch 51a.5: on the gate she says "You let me choose in the forest. I'm choosing" (unset: "Nobody let me choose before. I'm choosing now.") | together: Squad 3 trusts Squad 1 for good; yours: she grows faster |
+| `ans.squad3_a.froze` | Ch 20 or the first hangout after Ch 19 (level 3) | "I froze in the stands. Did you see?" | "I saw, and it's all right", "I didn't see" (a kind lie), "Then plan for freezing" | Plan honours knowledge; the lie violates honesty if she finds out (squad3_b saw you watching) | Ch 51a.5 if "plan for freezing": she has a written plan for her own freeze, and uses it (other answers and unset: she freezes for one beat, then moves) | Planning for freezing is her turning point |
+| `ans.squad3_a.improvise` | Embers, level 5 (Asking their advice, reversed) | "How do you decide when there's no time?" | "I don't, I just move", "I trust whoever's beside me", "I already decided who I am, so the rest is easy" | All three teach her something different | Ch 51a.5 improvisation line quotes it (unset: "No time. Fine. Go.") | Shapes how she improvises: alone, with others, or from values |
 | `ans.squad3_a.children` | Ch 35, the night camp | "Twenty children and a road. If it goes wrong, who do we save first?" | the youngest, the closest, "nobody first: we plan so we don't choose" | None is right; tests duty and kindness | Ch 50: her anchor plan's priorities follow it | Her war plan orders districts by your answer |
 | `ans.squad3_a.worry` | Level 7 (worries) | "Would you trust a plan from someone who froze once and repeated a whole year?" | yes, "only if they planned for it", "I'd trust them more" | "More" honours her completely | Ch 55: she shows you the blank page | `supported_dream` if "more" |
 | `ans.squad3_a.hokage` | Road to Hokage, level 6+ | "When you're Hokage, will you want a strategist who tells you no?" | yes, "only in private", "you'll tell me no anyway" | Yes honours honesty | Ch 55: she accepts the strategist's post with your words | She becomes the Eighth's strategist (if answered at all; otherwise she runs the Academy's tactics class) |
 | `ans.squad3_a.homework` | Cinders, level 1 (small talk in the Academy yard) | "Did you finish the reading? All of it? Even the footnotes?" | "all of it", "most of it", "there was reading?" | Knowledge; "there was reading?" breaks a peeve gently and makes her laugh despite herself | Ch 7 exam eve: she offers you her notes (most / none) or asks for yours (all) | Small: who studies with whom at the Ch 6 table |
 | `ans.squad3_a.squad` | Paper Trail, level 3 (a tea-house shogi game) | "My squad never follows the plan. Do I change the plan or change the squad?" | "change the plan", "change how you tell them", "keep both, add a backup" | Duty against kindness | Ch 16.2b: her plan has a part for squad3_b's improvising ("change how you tell them") | Her squad's cohesion lines in Ch 19 |
-| `ans.squad3_a.loss` | After Ch 19, level 4 (the first hangout after the attack) | "We lost people in the stands I'd counted. Do you count people, in a fight?" | "every one", "only mine", "I don't count, I just go" | Duty, loyalty; "just go" scares and fascinates her | Ch 50: the anchor plan counts residents by your answer (every district / squads first / no headcount) | Shades her war plan's priorities with `children` |
+| `ans.squad3_a.loss` | After Ch 19, level 4 (the first hangout after the attack) | "We lost people in the stands I'd counted. Do you count people, in a fight?" | "every one", "only mine", "I don't count, I just go" | Duty, loyalty; "just go" scares and fascinates her | Ch 50: the anchor plan counts residents by your answer (every district / squads first / no headcount; unset: every district) | Shades her war plan's priorities with `children` |
 | `ans.squad3_a.sensei` | Embers, level 5 | "Our sensei says a good illusion has gaps on purpose. Does a good plan?" | "yes", "no, close every gap", "leave one for someone you trust" | Creativity against discipline | Ch 51: the gap she leaves in the market trap is for you ("one for someone you trust") | Feeds the blank page |
 
-**What her lines are for.** Plot (Ch 16, Ch 50, Ch 51 plans), teach (she explains clan standing and
+**What her lines are for.** Plot (Ch 16, Ch 50, Ch 51a.5 plans), teach (she explains clan standing and
 the anchor map as a strategy board in Ch 50: the player's checklist in character), bond (shogi
 ritual), filler (shogi trash talk, deadlines). Mood states: normal, frozen (short, repeated
 "wait"), quarrel (she schedules the reconciliation). Pools: greetings by arc, shogi win/loss lines,
@@ -130,7 +130,7 @@ a "freeze" pool for combat.
 **Variants.** Varied may roll her any clan of the class weights; the ★ trait is **the planner who
 freezes**. Skins: a Nara or Sarutobi (shogi and shadow/fire traps), a clanless one (a scroll-shop
 child with scroll traps), a Hyuga or Aburame (formation tactics). The Ch 16 truce, Ch 50 plan and
-Ch 51 improvisation stay.
+Ch 51a.5 improvisation stay.
 
 **Unison technique (Blaze).** *Shadow Ember Snare*: her shadow binding carries the player's ember
 along it; anything it catches is pinned and marked for the whole linked squad.
@@ -175,7 +175,7 @@ after every shogi game she loses.
 |---|---|
 | Cinders | Brings food to everything. **Ch 6**: arrives at the study night with a pot from the barbecue house; when classmate_c's parent thanks "the Hokage's grandson", he goes quiet |
 | Paper Trail | Serves the squad dinner after Ch 14 at his mother's barbecue house; his expansion is clumsy |
-| Dusk | **Ch 19**: he holds the east stair beside the player; when the Fourth is hit he runs the wrong way, toward the Kage box. What he sees is `twist.fourth_fate` (below) |
+| Dusk | **Ch 19**: the attack starts at the opening lantern-lighting; he is on the east stair beside the player, helping children down, when his grandfather, carrying children down the same stair, is hit. He runs to him. What he sees is `twist.fourth_fate` (below) |
 | Embers | By the variant (below) |
 | Ashes | Ch 35: carries children two at a time. Ch 40: says out loud that his grandfather never knew about the archive, and asks the player if that makes it better or worse |
 | Last Bonfire | **Ch 51a**: holds the Academy door with the instructor and sensei_3 (expanded to fill the doorway for an hour). Ch 55: restores the stipend with the player in his grandfather's name |
@@ -184,8 +184,8 @@ after every shogi game she loses.
 
 | | Falls | Crippled | Taken |
 |---|---|---|---|
-| Ch 19 | Sees his grandfather fall on the arena floor covering the Academy children's evacuation (the cinematic cutaway); the player's squad pulls him back from the floor | Reaches the box as the dark mirror tears into his grandfather; carries him out | Sees the ash-violet scarves lift his grandfather over the wall; tries to follow and is knocked flat |
-| Ch 20 | **The Akimichi farewell feast**: the whole village eats the Fourth's favourite dish in the street, his bowl set at an empty place. squad3_b cooks because he cannot speak, then speaks once: he quotes what the Fourth asked the player (`ans.hokage_4.want`: "He asked {player} what they wanted to be. They said..."; unset: "He asked everyone what they wanted to be. He never asked me. I'd have said: both.") | At the hospital he sleeps in the chair | He refuses to leave the Kage box until the sensei carries him home |
+| Ch 19 | His grandfather falls on the east stair with children in his arms (the cinematic cutaway); squad3_b reaches him as the children run clear, and the player's squad pulls him back | Reaches him on the stair as the dark mirror tears into his grandfather; carries him down | Sees ash-violet scarves lift his grandfather off the stair and over the wall; tries to follow and is knocked flat |
+| Ch 20 | **The Akimichi farewell feast**: the whole village eats the Fourth's favourite dish in the street, his bowl set at an empty place. squad3_b cooks because he cannot speak, then speaks once: he quotes what the Fourth asked the player (`ans.hokage_4.want`: "He asked {player} what they wanted to be. They said..."; unset: "He asked everyone what they wanted to be. He never asked me. I'd have said: both.") | At the hospital he sleeps in the chair | He refuses to leave the east stair until the sensei carries him home |
 | Ch 21 | At the statue: tells the player he was going to quit; now he cannot | His grandfather's caretaker; learns to cook soft food; tells his grandfather he wants the kitchen, and is told "Then why are you still here?" | **Insists on joining the Empty Seat rescue**, which `sensei_2` leads; he is the one who carries his grandfather out |
 | Endings | Opens the barbecue house's second room as a ramen-and-grill named for the Fourth; stays a Jonin | Cooks for his grandfather every night; a Jonin who runs a kitchen | Both, and his grandfather eats there every night |
 
@@ -314,8 +314,8 @@ answered).
   to doubt his own reading. He tries.
 - **squad4_a:** the two sensors of the Fifth's watch on the player. She follows; he flags. They
   argue about it until Ch 31.
-- **The player:** guilt, then respect. From Ch 31 he is the one who tells the player, quietly, when
-  a sweep is coming.
+- **The player:** guilt, then respect. From Ch 28 he is the one who tells the player, quietly, where
+  the sensor watch walks tonight.
 
 ### Dialogue brief
 
@@ -325,7 +325,7 @@ eerie. Teen: blunt. Adult: gentle, and still blunt.
 
 *Voice samples, not shipped lines:*
 - "Your chakra just moved into theirs."
-- "You're lying. It's fine. Everyone does. I just hear it."
+- "You're hiding something. It's fine. Everyone does. I just feel it."
 - (Ch 22, after) "I flagged you. I'd do it again. I'm sorry anyway."
 - "My aunt puts a flower here every morning. It means 'come home'. She doesn't know I know."
 - (Ch 44) "There are a dozen people in there. She's at the bottom."
@@ -341,6 +341,8 @@ eerie. Teen: blunt. Adult: gentle, and still blunt.
 | Values (5) | "Doubt your own reading first." |
 | Worries (7) | That he will never stop reading people long enough to have a friend |
 
+**Fairness rule.** His sensing reads feeling (fear, anger, grief, guilt), never whether a sentence is true, and guilt reads the same as grief. He refuses to read the four traitor candidates for the player ("Doubt your own reading first. I won't read people for a case."), in every save.
+
 **Never reveal before.**
 
 | Fact | Gate |
@@ -355,14 +357,14 @@ eerie. Teen: blunt. Adult: gentle, and still blunt.
 | Id | When | Question | Options | Honours / tests | Remembered | How it changes him |
 |---|---|---|---|---|---|---|
 | `ans.squad3_c.moved` | Ch 3.3, a reply to his line | (He doesn't ask; he waits.) The player may answer "What do you mean?", "Don't tell anyone", or walk away | ask, hush, walk | Hush makes him complicit; ask honours honesty | Ch 22: "You asked me what I meant. I still don't know." / "You told me not to tell. I'm telling." / nothing | Changes his Ch 22 apology |
-| `ans.squad3_c.flagged` | Ch 22.1, that night | "I flagged you. Are you going to hate me?" | "yes", "no, you did your job", "ask me when I know what I am" | Honesty; duty | Ch 31: he warns you of the sweep only if "no" or "ask me" | "yes" starts a quarrel he lets run its course |
+| `ans.squad3_c.flagged` | Ch 22.1, that night | "I flagged you. Are you going to hate me?" | "yes", "no, you did your job", "ask me when I know what I am" | Honesty; duty | Ch 28: the night of the stake-out he tells you which streets the sensor watch walks tonight ("no" or "ask me"); "yes" or unset: he says nothing, and slipping past the watch is harder | "yes" starts a quarrel he lets run its course |
 | `ans.squad3_c.read` | Embers, level 5 | "Do you want me to stop reading you? I can try." | "yes", "no, I've got nothing to hide", "then don't, and just ask me" | "Then don't" honours freedom deeply; "nothing to hide" makes him smile (he can hear that it's untrue, and likes you for it) | His ending | "then don't" is the turning point of his arc |
 | `ans.squad3_c.flower` | Hobby talk, level 3 | "If you were a flower, what would you be saying?" | "come home", "I'm still here", "don't look at me" | Creativity | His aunt starts putting that flower in the player's window in the Jonin arc | — |
 | `ans.squad3_c.voices` | Ch 44, after | "Should I tell the Hokage what I read in her?" | "yes", "only that she's breaking free", "no, it's hers to tell" | Duty against privacy | N3 and Ch 47: what the Undercroft knows depends on his report (if "yes", they learn faster) | — |
 | `ans.squad3_c.anchors` | Ch 50 | "I can feel them now. All of them. It hurts. Do I keep going?" | "keep going", "rest, we'll find them", "I'll link with you" (Ember Link if Flame) | — | Ch 50: "link" finds ten more anchors | Ember Link with him is his first unread trust |
-| `ans.squad3_c.lie` | Paper Trail, level 2 | "Tell me something true and something false. I'll say which." | true first, false first, "two true things" | Honesty; "two true things" stumps him, the first time anyone has | He tries the game again at level 6 and loses on purpose | Filler that becomes trust |
+| `ans.squad3_c.lie` | Paper Trail, level 2 | "Tell me something true and something false. I'll guess which." | true first, false first, "two true things" | Honesty; he guesses wrong half the time (his sensing reads feeling, not truth); "two true things" makes him laugh | He tries the game again at level 6 and still guesses wrong | Filler that becomes trust |
 | `ans.squad3_c.stands` | After Ch 19, level 3 | "I felt them in the stands before the smoke. Nobody listened. Should I have shouted?" | "yes, always shout", "you couldn't have known it was real", "next time, tell me" | Duty, loyalty | Ch 22: "next time, tell me" makes him warn you about the sweep before it reaches you | — |
-| `ans.squad3_c.uncle` | Ashes, after Ch 32, level 4 | "My uncle is Hokage now. People are nicer to me. Can I believe any of them?" | "believe the ones who were nice before", "read them and decide", "believe me" | Honesty | Ch 40: whether he stands beside his uncle at the council or watches from the back | — |
+| `ans.squad3_c.uncle` | Ashes, after Ch 32, level 4 | "My uncle is Hokage now. People are nicer to me. Can I believe any of them?" | "believe the ones who were nice before", "read them and decide", "believe me" | Honesty | Ch 40: whether he stands beside his uncle at the council (nice before, me) or watches from the back (read; unset: the back) | — |
 | `ans.squad3_c.purge` | After Ch 40, level 5 | "I flagged you for being what my village killed. What do I owe you?" | "nothing", "remember it", "help me find the others like me" | Duty, kindness | Ch 46: "help me" makes him the sensor who finds descendants for your house | His recruitment role |
 | `ans.squad3_c.quiet` | Road to Hokage, level 7 (stargazing on the Rock) | "Do you ever want everyone to stop being so loud inside?" | "yes", "no, I like the noise", "with you it's quiet" | Openness; the last is a real moment at level 7 | His Ch 53 flame line | — |
 
