@@ -250,7 +250,7 @@ It's a muddle still. Records rooms are always a muddle. Don't take it to heart.
 
 ## mission.d.scroll_sorting.report  job=mission_desk
 Records sorted. Finally. Do you know how long I've waited for that? Logged with joy.
-{client} says the shelves are in order. I'll believe it when I find a file in under a minute.
+{client} says the shelves are in order. We'll see when I next find a file in under a minute.
 
 ## mission.d.scroll_sorting.twist.ink_spill  fn=quest,react
 The ink jar tipped. Two reports are black from corner to corner. Copy them fresh before the clerk sees.
