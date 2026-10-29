@@ -1,0 +1,173 @@
+# Callbacks for questions/deeper.txt: what a resident says later, remembering the player's answer.
+#! fn: callback
+
+## callback.answer.q.values.felt_strong.a1
+You last felt strong winning a spar, you said. Win any more since? I'd like to hear about it.
+
+## callback.answer.q.values.felt_strong.a2
+You feel strongest helping a friend. I've been trying that myself. It's true.
+
+## callback.answer.q.values.felt_strong.a3
+Getting up after a fall, that's when you felt strong. I fell off a ladder today and thought of it.
+
+## callback.answer.q.values.felt_strong.a4
+You haven't felt truly strong yet, you said. Let me know when you do. I want to be there.
+
+## callback.answer.q.values.faced_fear.a1
+You faced your fear and it shrank. I keep thinking about that. I'm going to try with mine.
+
+## callback.answer.q.values.faced_fear.a2
+Not yet, you said, about facing your fear. When you do, call me. I meant that promise.
+
+## callback.answer.q.values.faced_fear.a3
+A little, every day. That's how you face your fear. I've told nobody, but it moved me.
+
+## callback.answer.q.values.forgive_self.a1
+Forgiving yourself is the hard part, you said. So I'll say it for you: you're forgiven. For whatever it was.
+
+## callback.answer.q.values.forgive_self.a2
+Other people are harder to forgive than yourself, you said. I hope that list stays short.
+
+## callback.answer.q.values.forgive_self.a3
+You forgive yourself and others the same. Fair all round. I'm still learning that.
+
+## callback.answer.q.values.lose_on_purpose.a1
+You'd never throw a match, even for a friend. So when I beat you at cards, I'll know I earned it.
+
+## callback.answer.q.values.lose_on_purpose.a2
+You'd let a sad friend win, sometimes. A gift nobody sees. I won't tell them.
+
+## callback.answer.q.values.lose_on_purpose.a3
+Only at cards, you'd lose on purpose. Fancy a game? I need cheering up. Ha.
+
+## callback.answer.q.values.worst_mistake.a1
+Showing off, your biggest mistake. Ha. I showed off at the bathhouse today. Slipped right over.
+
+## callback.answer.q.values.worst_mistake.a2
+Not listening, that was your big mistake. You're listening to me right now, so there's progress.
+
+## callback.answer.q.values.worst_mistake.a3
+That time you were unkind still bothers you, you said. That tells me how kind you really are.
+
+## callback.answer.q.values.worst_mistake.a4
+You kept your biggest mistake to yourself. That's all right. It's still yours to keep.
+
+## callback.answer.q.values.told_them.a1
+You told the people you look up to. Good. I'm going to tell mine, too, because of you.
+
+## callback.answer.q.values.told_them.a2
+Write it on a card, I said. Did you? Too embarrassed still?
+
+## callback.answer.q.values.told_them.a3
+They know, you said. Words are nice too, though. Think about it.
+
+## callback.answer.q.pref.season_memory.a1
+That festival night in your favourite season. I hope this year's is just as good.
+
+## callback.answer.q.pref.season_memory.a2
+Your best memory of the season is training in it. Of course it is. Ha.
+
+## callback.answer.q.pref.season_memory.a3
+A quiet afternoon, your best seasonal memory. I had one like it today. I thought of you.
+
+## callback.answer.q.pref.season_memory.a4
+You hadn't had that perfect day in your season yet. It's coming round again. Let's plan one.
+
+## callback.answer.q.pref.gift_given.a1
+The best gift you ever gave was something you made. Made anything lately? I'm curious.
+
+## callback.answer.q.pref.gift_given.a2
+A meal you cooked, the best gift you've given. Lucky whoever ate it.
+
+## callback.answer.q.pref.gift_given.a3
+An afternoon together, the gift you're proudest of. I'd take one of those any day.
+
+## callback.answer.q.pref.gift_given.a4
+You haven't given that great gift yet, you said. Any ideas? I'll help you look.
+
+## callback.answer.q.pref.thinking_about.a1
+Up in your thinking spot, dreaming big, you said. Any new dreams since?
+
+## callback.answer.q.pref.thinking_about.a2
+You think about your friends, alone in your spot. I hope you think of me sometimes.
+
+## callback.answer.q.pref.thinking_about.a3
+You think about nothing at all, up there. I tried it. Couldn't manage it. You're gifted.
+
+## callback.answer.q.pref.thinking_about.a4
+Always planning what comes next, in your thinking spot. What's next, then?
+
+## callback.answer.q.plans.hokage_first_act.a1
+Free ramen for all, your first act as Lord Hokage. The Ichiraku family heard me tell it. They laughed.
+
+## callback.answer.q.plans.hokage_first_act.a2
+Visit every family, you'd do first as Hokage. Start with mine. The kettle's on.
+
+## callback.answer.q.plans.hokage_first_act.a3
+Training the Genin yourself, if you were Hokage. The Genin today could have used you.
+
+## callback.answer.q.plans.hokage_first_act.a4
+Fix the roads, your first order as Hokage. My cart hit a pothole this morning. Hurry up and get elected.
+
+## callback.answer.q.plans.nature_why.a1
+That nature suits your temper, you said. I saw a flash of it today, I think. Ha.
+
+## callback.answer.q.plans.nature_why.a2
+The most useful nature. Practical you. I keep thinking that's the wisest reason.
+
+## callback.answer.q.plans.nature_why.a3
+You'd pick a nature because it's beautiful. I watched a Genin practise today and saw what you meant.
+
+## callback.answer.q.plans.nature_why.a4
+You don't know why that nature calls you. Maybe the ceremony will tell you. I'm curious.
+
+## callback.answer.q.plans.remembered_by.a1
+You'd want your friends to remember you. They will. I'll make sure of it.
+
+## callback.answer.q.plans.remembered_by.a2
+The whole village remembering you. I looked up at the Hokage Rock today and imagined it.
+
+## callback.answer.q.plans.remembered_by.a3
+Your students, one day. A teacher at heart, I said. Still think so.
+
+## callback.answer.q.plans.remembered_by.a4
+Just one person, you said, whose memory matters most. I never asked who. I still won't.
+
+## callback.answer.q.dilemma.blamed_twice.a1
+Tell the instructor if someone blames you twice. Your answer. Sensible.
+
+## callback.answer.q.dilemma.blamed_twice.a2
+You'd face a blamer yourself. Calmly, I said. I still say it.
+
+## callback.answer.q.dilemma.blamed_twice.a3
+You'd forgive a blamer a second time. Big heart. Remember what I said about doormats.
+
+## callback.answer.q.village.share_place.a1
+You'd take a friend to your favourite spot, you said. Still waiting on my invitation.
+
+## callback.answer.q.village.share_place.a2
+Your favourite place is yours alone. I won't ask where. Everyone needs one.
+
+## callback.answer.q.village.share_place.a3
+Only your closest friend gets to see your favourite spot. Someday, maybe me.
+
+## callback.answer.q.village.join_clan.a1
+You'd join a clan gladly, if asked. I heard the Akimichi talking about you. Nice things.
+
+## callback.answer.q.village.join_clan.a2
+You'd stay clanless. Your own name, your own path. I tell people that when they ask about you.
+
+## callback.answer.q.village.join_clan.a3
+Which clan would depend, you said. Decided yet? My vote's for whoever cooks best.
+
+## callback.answer.q.village.how_protect.a1
+Become strong, to protect the Leaf. You're well on your way. I see you training.
+
+## callback.answer.q.village.how_protect.a2
+Know everyone, that's how you'd protect us. You already know half the street. Keep going.
+
+## callback.answer.q.village.how_protect.a3
+Keep the peace, your way of protecting the village. Hardest job there is. You'd be good at it.
+
+## callback.answer.q.village.how_protect.a4
+Stand watch, you said. When you're on the walls one night, I'll bring you tea.

@@ -1,0 +1,56 @@
+# Academy graduation day, spring 7 and autumn 7: a public ceremony in the Academy yard. Kept neutral: the player
+# may or may not be graduating today.
+#! tags: event=graduation
+
+## greet.event  fn=react
+Graduation day! The Academy yard is full of proud families.
+Morning, {player}. Did you see the new headbands? The yard's sparkling with them.
+It's graduation today. Half the village is at the Academy gate.
+Good day to you! The Academy's sending another class of Genin out into the world.
+The bell rang for the ceremony a moment ago. I can hear the cheering from here.
+
+## greet.event  stage=child  fn=react
+Graduation day! Look at the big kids with their headbands! Someday that's us!
+I'm going to watch the ceremony. My cousin's graduating. If my cousin can, anyone can.
+
+## chat.event  fn=worldbuild
+The Hokage comes to the yard and every new Genin is called by name. It takes all morning.
+The families sit on benches along the yard wall. The front row is fought over like a market stall.
+After the ceremony, the new Genin all go for ramen. Ichiraku's queue goes round the corner.
+The headbands are blessed at the shrine the night before. That's an old Leaf custom.
+I still have my headband from my own graduation. The cloth's faded, but the plate still shines.
+The teachers pretend not to cry. They do every time.
+The Academy holds graduation twice a year, spring and autumn. Two chances, for those who need a second.
+A photographer sets up by the gate. Every family wants a picture with a new headband in it.
+The new Genin are put into squads right after. That's when the real nerves start.
+There's always one who trips on the steps. Nobody forgets it, nobody minds.
+
+## chat.event  personality=warmhearted|gentle  fn=reveal_character
+I made a basket of sweet buns for the new Genin. They're so nervous, they forget to eat.
+I always cry at graduation, even when I don't know anybody. All those proud faces.
+
+## chat.event  personality=stern|proud  fn=reveal_character
+A headband is a beginning. The hard part starts tomorrow.
+In my day, the exam was harder. Still, they look a capable lot.
+
+## chat.event  personality=playful|fiery  fn=reveal_character
+I threw my headband in the air at my graduation and it landed on the roof. True story.
+Listen to them cheer! I want to run down there and cheer too.
+
+## chat.event  rank=genin|chunin|jonin  fn=reveal_character
+My sensei found me at my graduation and said, "Well. Let's see." I've never forgotten it.
+Seeing a new class graduate makes me feel old. And I'm not old.
+
+## chat.event  group=civilian  fn=reveal_character
+None of my family ever went to the Academy. I still come and watch. It's the village's day, too.
+
+## chat.event  stage=child  fn=worldbuild
+I counted the graduates. Twenty-three! Last time there were nineteen.
+The new Genin get to choose where they sit at ramen. That's the best part, I think.
+When I graduate, I'm going to wear my headband on my arm. Or my forehead. I can't decide.
+
+## chat.event  job=teacher  fn=reveal_character
+I taught most of this class to throw. Watching them cross the yard is the best day of my year.
+
+## chat.event  district=academy  fn=worldbuild
+The yard was swept and raked at dawn. By noon there'll be footprints everywhere and nobody will care.

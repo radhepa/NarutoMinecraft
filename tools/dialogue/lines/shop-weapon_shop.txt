@@ -1,0 +1,83 @@
+# The weapon shop on the market street: blades, kunai, shuriken, senbon, guards, repairs and commissions. Its forge
+# is the smithy (Beta 2), where the smith teaches after a few shifts (ROADMAP §7, Gear and crafting).
+#! fn: commerce
+
+## shop.weapon_shop.greet  shop=weapon_shop  fn=commerce
+Welcome. Don't touch the edges, they're sharper than they look.
+Come in. Kunai on the wall, shuriken in the trays, blades behind the counter.
+Need steel, {player}? Everything here's been weighed and balanced by hand.
+Hello. If you're here to test a throw, the target board's out back, not in here.
+In you come. Close the door, the wind knocks the shuriken trays about.
+Stand by the door till I've quenched this. Then we'll talk.
+
+## shop.weapon_shop.greet  shop=weapon_shop  player_rank=academy  fn=commerce,react
+Academy student? Practice kunai are in the barrel. The real ones wait for your headband.
+
+## shop.weapon_shop.greet  shop=weapon_shop  player_rank=genin|chunin|jonin|anbu|hokage  fn=commerce,react
+A headband! Then you'll want more than practice blades. Have a look at the good stock.
+
+## shop.weapon_shop.greet  shop=weapon_shop  time=dawn|morning  fn=commerce,react
+Morning. The forge takes an hour to come up to heat, so I've been here since five.
+
+## shop.weapon_shop.browse  shop=weapon_shop  fn=commerce
+Kunai, five to a bundle. The ring's wrapped so it won't slip when your hand's wet.
+Four-point shuriken for beginners, six-point for showing off.
+Senbon in the slim box. Light, quiet, and easy to lose.
+Tanto on the rack, short and honest. Longer blades by commission only.
+Arm guards and shin guards on the hooks. Steel plate over leather, they'll turn a kunai.
+Bring me a chipped blade and I'll grind it true. Repairs while you wait, if the forge is hot.
+Want something no one else carries? Commissions take a week and half the price up front.
+
+## shop.weapon_shop.buy  shop=weapon_shop  kind=cycle  fn=commerce
+{item}. {pay}. Keep them dry.
+Done. Point them away from your friends.
+That's {pay}. Thrown tools you lose on a mission don't come back, so buy a spare.
+Here. I sharpened the batch this morning.
+{pay}, thanks. Count them before you leave, I won't take complaints after.
+There you go. Wipe them after every use and they'll last a year.
+One {item}, wrapped in oilcloth. That's {pay}.
+
+## shop.weapon_shop.cant_afford  shop=weapon_shop  kind=cycle  fn=commerce
+That's more than your purse holds. Fewer kunai, then?
+Short. Buy what you can, then go earn the rest at the Mission Desk.
+Can't do it for that. Steel costs what steel costs.
+Not enough. A practice set is cheaper and will teach you just as much.
+
+## shop.weapon_shop.sold_out  shop=weapon_shop  kind=cycle  fn=commerce
+All out of {item}. A squad came through and cleared the tray.
+Out of stock. The forge is making more, check back tomorrow.
+Gone. The Hagane haven't sent my steel this week, so the rack's thin.
+
+## shop.weapon_shop.haggle  shop=weapon_shop  fn=commerce,reveal_character
+Haggle over a blade that might save your life? Pay the price and sleep well.
+Buy a full bundle and I'll drop a ryo or two. That's as soft as I get.
+I'll give you a sharpening for free next time. That's worth more than a discount.
+I don't haggle at a hot forge. Too much sweat in my eyes to count.
+
+## shop.weapon_shop.order_ready  shop=weapon_shop  kind=cycle  fn=commerce
+Your {item}'s done. Feel that balance. That's a week of my life in your hand.
+The commission's finished. Come and see it before I'm tempted to keep it.
+Repair's done. Ground the nick out and re-wrapped the grip. Like new.
+There it is, your {item}. Fresh off the anvil, cooled and oiled.
+
+## shop.weapon_shop.closing  shop=weapon_shop  time=evening|night  fn=commerce
+Closing. I don't sell sharp things after dark to tired people.
+Shutters coming down. Anything else for your pouch?
+Fire's banked for the night. Buy now or come at dawn.
+
+## shop.weapon_shop.recommend  shop=weapon_shop  fn=commerce,teach
+Carry more kunai than you think you need. What you throw on a mission, you rarely pick up again.
+Try the {item}. It's balanced for a smaller hand.
+The {special} just came off the anvil. Lovely work, if I say so myself.
+Forge your own kunai and they can come out a grade better than anything on the shelf.
+Bring salvage from the bandit camps to the forge. Melted down, it's as good as bought steel.
+Work a few shifts at the forge and I'll show you the anvil properly. Recipes stick better when your hands learn them.
+A small forge for your apartment, once you're a Genin. Then you're not waiting on me.
+Guards before blades. You can't fight with a cut arm.
+
+## shop.weapon_shop.regular  shop=weapon_shop  level=3..10  fn=commerce,deepen_bond
+You've been through more kunai than anyone your age. I've started stocking extra.
+Here's my best customer. Let me see your edges, I'll touch them up.
+Your strikes at the anvil are getting even. Another month and you'll make a better kunai than the shop sells.
+Still alive, still buying. That's how I like my regulars.
+I set aside a bar of the good steel. Make something you're proud of.

@@ -1,0 +1,74 @@
+# Questions only a playful resident asks: games, dares, pranks, silly hats.
+#! tags: personality=playful
+
+? q.pref.play_truth_or_dare | fn: deepen_bond reveal_character | level: 2
+Q: Truth or dare? Quick, no thinking!
+Q: Pick one, fast: truth or dare?
+- Truth :: Ha! Then tell me your most embarrassing training accident. Later. Tonight. {values:+honesty} {tone:honest}
+- Dare :: Dare! Ring the shrine bell at midnight. Kidding. Mostly. {values:+courage} {tone:bold}
+- Neither, I'm leaving :: Ha! Chicken! Bwak bwak! {values:+freedom} {tone:joking}
+
+? q.pref.play_round_two | fn: deepen_bond | level: 4 | follows: q.pref.play_truth_or_dare | depth: 2 | gap: 2
+Q: Truth or dare, round two! Bigger stakes this time. Same pick?
+Q: Rematch! Truth or dare, and no running off this time!
+- Truth again :: Fine! Who's the funniest person in the village? Besides me. {values:+honesty} {tone:honest}
+- Dare again :: Ha! Walk backwards to the noodle stand and order in a whisper. Go! {values:+courage +freedom} {tone:bold}
+- Switch it up :: Unpredictable! I love it. I'll think of something terrible. {values:+creativity} {tone:playful}
+
+? q.pref.play_best_game | fn: deepen_bond reveal_character | level: 2
+Q: What's the best game ever invented? Wrong answers only. No, right answers. Go.
+Q: Tag, hide and seek, shogi: what's the greatest game there is?
+- Tag :: Classic! You're it. Ha, got you. {values:+freedom} {tone:playful}
+- Hide and seek :: Ninja hide and seek! Takes hours. Sometimes days. {values:+creativity} {tone:joking}
+- Shogi :: Ooh, a thinker. I'm terrible at it. Teach me? {values:+knowledge} {tone:curious}
+- Kick the can :: Ha! The old street game! Nobody plays it anymore. Let's revive it. {values:+family +freedom} {tone:bold}
+
+? q.values.play_jutsu_cheating | fn: deepen_bond reveal_character | kind: opinion | level: 2
+Q: Is it cheating to use a jutsu in hide and seek?
+Q: Using clones in a game of tag: fair play or cheating?
+- Totally fair :: Ha! Then you'll never find me. I can turn into a bush. {values:+freedom +creativity} {tone:playful}
+- Cheating! :: A purist! Fine, no jutsu. Just legs and cunning. {values:+honesty} {tone:stern}
+- Only clones are fair :: Ha! A whole rulebook in one sentence. I accept. {values:+creativity} {tone:joking}
+
+? q.plans.play_prank_target | fn: deepen_bond reveal_character | level: 3 | public: yes
+Q: If you could prank anyone in the village and get away with it, who would it be?
+Q: One perfect prank, no consequences. Who's the target?
+- My sensei :: Ha! Brave, brave, brave. I'd help. From a safe distance. {values:+courage} {tone:teasing}
+- The gate guards :: They stand still so long! They'd never see it coming. {values:+freedom} {tone:playful}
+- Lord Hokage :: Ha! The ultimate prank. Legends are made this way. Or careers end. {values:+courage} {tone:bold}
+- Nobody, I'm good :: Nobody? I'll make a prankster of you yet. {values:+kindness} {tone:humble}
+
+? q.plans.play_prank_plan | fn: deepen_bond | level: 5 | follows: q.plans.play_prank_target | depth: 2
+Q: Your perfect prank. How would you do it? Spill the plan.
+Q: All right, the prank. Walk me through it. I won't tell. Probably.
+- Clones everywhere :: Fifty of you, all waving. Ha! Chaos. Beautiful chaos. {values:+creativity} {tone:playful}
+- Paint, lots of paint :: Something bright and harmless. It washes off. Eventually. {values:+creativity +freedom} {tone:joking}
+- Bucket over the door :: The classics never fail. Respect. {values:+family} {tone:teasing}
+
+? q.pref.play_race | fn: deepen_bond reveal_character | level: 2
+Q: Race you to the end of the street! Wait, do you even like racing?
+Q: First one to the bridge wins! Unless you're not a racer?
+- Love it :: Ha! Ready, set... I'm already gone! {values:+freedom +strength} {tone:bold}
+- I'd rather stroll :: A stroller! Fine, I'll race you there and back, you walk. {values:+freedom} {tone:gentle}
+- Only if I win :: Ha! Then I'll give you a head start. Three steps. {values:+strength} {tone:ambitious}
+
+? q.values.play_grownups_fun | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Do you think grown-ups forget how to have fun?
+Q: Why do people get so serious as they get older?
+- Yes, mostly :: Not me! I refuse. I'll be spinning tops at ninety. {values:+freedom} {tone:playful}
+- No, they hide it :: Ha! Secret fun. Like the elders playing cards behind the shrine. {values:+knowledge} {tone:curious}
+- Not you, anyway :: Ha! Best compliment I've had all week. {values:+kindness} {tone:warm}
+
+? q.pref.play_silly_hat | fn: deepen_bond | level: 2
+Q: Would you wear a silly hat all day for a hundred ryo?
+Q: A hundred ryo to wear a ridiculous hat from dawn to dusk. Deal?
+- Yes, easy :: Ha! Easy ryo. I'll find the silliest one in the market. {values:+freedom} {tone:joking}
+- For two hundred :: A negotiator! Fine. Two hundred, and it has feathers. {values:+freedom} {tone:teasing}
+- I'd wear it for free :: Ha! That's the spirit. You're my favourite. {values:+creativity} {tone:playful}
+
+? q.pref.play_fish_hat | fn: deepen_bond | level: 4 | follows: q.pref.play_silly_hat | depth: 2
+Q: Raising the stakes: a hat shaped like a fish. For the whole festival.
+Q: The fish hat. Full festival. Everyone watching. Still brave?
+- Done :: Ha! Legend. I'm telling everyone. {values:+courage} {tone:bold}
+- Absolutely not :: Even you have limits! I knew it. {values:+honesty} {tone:honest}
+- Only if you wear one too :: Ha! Matching fish hats. It's a deal. Shake on it. {values:+loyalty +freedom} {tone:playful}

@@ -1,0 +1,122 @@
+# Callbacks for questions/confess.txt: what a resident says later, remembering the player's answer.
+#! fn: callback
+
+## callback.answer.q.confess.pretend_understand.a1
+Another lecture on chakra theory at the scroll shop today. I nodded along and thought of you, my fellow pretender.
+
+## callback.answer.q.confess.pretend_understand.a2
+You always ask the question nobody else will. I tried it in a meeting today. The whole room sighed in relief.
+
+## callback.answer.q.confess.pretend_understand.a3
+Founding dates, you said. The history lessons. I still can't remember a single one either.
+
+## callback.answer.q.confess.ask_now.a1
+I asked the tax office how taxes work, because of you. They didn't know either. I was right!
+
+## callback.answer.q.confess.ask_now.a2
+Why do people grow up? Your question. I still haven't an answer. I'm working on it.
+
+## callback.answer.q.confess.ask_now.a3
+You asked what I think of you. I'll say it again: good company. Still true.
+
+## callback.answer.q.confess.ask_now.a4
+You were saving a question for me, remember. Ready to ask it yet?
+
+## callback.answer.q.confess.secret_snack.a1
+Snacks before bed, our shared secret. I bought extra rice crackers. For both of us.
+
+## callback.answer.q.confess.secret_snack.a2
+I caught myself talking to myself in the market and thought of you. I answered back, too.
+
+## callback.answer.q.confess.secret_snack.a3
+Still skipping stretches? Your legs looked stiff today. Just saying.
+
+## callback.answer.q.confess.secret_snack.a4
+No guilty habits, you claimed. I'm still watching. I'll catch one yet.
+
+## callback.answer.q.confess.broke_something.a1
+You owned up when you broke something. I keep meaning to do the same about the bell rope.
+
+## callback.answer.q.confess.broke_something.a2
+Our broken-things secrets are safe, aren't they? I haven't told a soul about yours.
+
+## callback.answer.q.confess.broke_something.a3
+Never broken anything, you said. Silk hands. I dropped a whole tray of cups today. Envious.
+
+## callback.answer.q.confess.own_up_now.a1
+I told the shrine keeper about the bell rope, like you said. They laughed! They'd always known.
+
+## callback.answer.q.confess.own_up_now.a2
+I let the bell rope rest, as you suggested. Some secrets are better as stories.
+
+## callback.answer.q.confess.own_up_now.a3
+I bought the shrine a new bell rope and confessed with it in my hands. Your idea. Perfect.
+
+## callback.answer.q.confess.cried_story.a1
+There's a new puppet show at the festival grounds. Sad ending, I hear. Bring a handkerchief, soft heart.
+
+## callback.answer.q.confess.cried_story.a2
+You've never cried at a story, you said. I've found one that might do it. A scroll about a lighthouse keeper.
+
+## callback.answer.q.confess.cried_story.a3
+The storyteller by the bridge told the one about the faithful dog today. I thought of you, and teared up.
+
+## callback.answer.q.confess.jealous.a1
+You told me you're sometimes jealous of a classmate. Is it still pushing you, and not souring you?
+
+## callback.answer.q.confess.jealous.a2
+Not jealous of anyone, you said. I'm a little jealous of that.
+
+## callback.answer.q.confess.jealous.a3
+You told me you feel it, sometimes, around people with families. My table's still open. Always.
+
+## callback.answer.q.confess.jealous_after.a1
+Easier now, the jealousy, you said. I'm so glad. You seem lighter.
+
+## callback.answer.q.confess.jealous_after.a2
+Comes and goes, like weather, you said. If it storms today, I'm here.
+
+## callback.answer.q.confess.jealous_after.a3
+Your envy pushes you now. I saw you at the training grounds. It shows.
+
+## callback.answer.q.confess.scared_of.a1
+Thunder tonight, they say. Blanket ready? Mine is.
+
+## callback.answer.q.confess.scared_of.a2
+You're wary of deep water. Good. The river's high after the rain; stay in the shallows.
+
+## callback.answer.q.confess.scared_of.a3
+There's a gaggle of geese loose by the rice fields. Consider yourself warned.
+
+## callback.answer.q.confess.scared_of.a4
+Nothing small scares you. Not even geese? I'm still not convinced.
+
+## callback.answer.q.confess.wish_different.a1
+You wish you were braver, you said. I've seen you be brave since. I'm telling you so.
+
+## callback.answer.q.confess.wish_different.a2
+You wanted to be stronger. Whatever you're doing, it's working. I can tell.
+
+## callback.answer.q.confess.wish_different.a3
+More patience, that's what you'd change. Ha. I waited for you five minutes today and thought of it.
+
+## callback.answer.q.confess.wish_different.a4
+You'd change nothing about yourself. Good. I wouldn't either.
+
+## callback.answer.q.confess.wish_after.a1
+Getting there, you said, closer to who you want to be. You are. I see it every time we talk.
+
+## callback.answer.q.confess.wish_after.a2
+"Not yet." I like how you said that. Yet is a hopeful word.
+
+## callback.answer.q.confess.wish_after.a3
+You've stopped wishing to be different. I think that's the bravest of the three answers.
+
+## callback.answer.q.confess.lied_once.a1
+I wore my aunt's awful scarf today and thought of you. Some lies are a kind of gift, we agreed.
+
+## callback.answer.q.confess.lied_once.a2
+A kind fib that left you feeling awful. I know that feeling. My scarf knows it too.
+
+## callback.answer.q.confess.lied_once.a3
+You never lie, I remember. So I'm not asking you about my scarf. Not today, anyway.

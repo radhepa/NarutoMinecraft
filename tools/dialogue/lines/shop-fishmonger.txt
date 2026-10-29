@@ -1,0 +1,71 @@
+# The fishmonger by the river: river fish, salted and dried fish, eel, shellfish from the coast carts. Mornings only,
+# closed Moonday.
+#! fn: commerce
+
+## shop.fishmonger.greet  shop=fishmonger  fn=commerce
+Fresh fish! Caught at dawn, gutted by noon!
+Come and look! Eyes clear, gills red, that's how you tell.
+Hello, {player}. What'll it be, river or salted?
+Welcome! Ignore the smell. It means it's fresh.
+Step up! The ice is melting, so everything's moving fast today.
+
+## shop.fishmonger.greet  shop=fishmonger  time=dawn|morning  fn=commerce,react
+Early bird! The boats only just came in. You get first pick.
+
+## shop.fishmonger.greet  shop=fishmonger  market=yes  fn=commerce,react
+Market Day! The coast cart came in, and there's squid and clams today!
+
+## shop.fishmonger.browse  shop=fishmonger  fn=commerce
+River trout, carp and sweetfish on the ice. Salted mackerel hanging up there.
+Eel in the tank. Live, so don't put your fingers in.
+Dried fish by the string. They keep for weeks, good for long missions.
+Shellfish only when the coast cart comes. Clams today, if you're lucky.
+Fish heads and bones for stock, nearly free. Ask, and I'll wrap them.
+We're shut on Moonday, so buy for two days if you're cooking tomorrow.
+Open at dawn, gone by noon. The fish don't wait and neither do I.
+
+## shop.fishmonger.buy  shop=fishmonger  kind=cycle  fn=commerce
+{item}, wrapped in leaves. That's {pay}.
+There you go! Cook it today, it's too fresh to waste.
+That's {pay}. Grill it with salt and nothing else.
+Here! I took the bones out for you.
+{pay}, thank you. Keep it cool on the walk home.
+One {item}. Lovely and firm, that one.
+Sold! Tell your friends the trout are fat this week.
+
+## shop.fishmonger.cant_afford  shop=fishmonger  kind=cycle  fn=commerce
+That's too much for you today. A string of dried sardines is cheaper.
+Short! Come back just before noon, everything's cheaper then.
+Not enough, I'm afraid. Fish heads for soup? Those I'll practically give away.
+A little under. Smaller fish, then?
+
+## shop.fishmonger.sold_out  shop=fishmonger  kind=cycle  fn=commerce
+No {item} left. The barbecue house bought half the catch.
+Sold out! The boats go out again at dawn.
+All gone, sorry. The river's been stingy this week.
+
+## shop.fishmonger.haggle  shop=fishmonger  fn=commerce,reveal_character
+Haggle all you like, but the fish is getting warmer while we talk.
+Buy two and I'll take a ryo off. Fresh fish has to move.
+You bargain like a river trader! Fine, a little off. Just this once.
+The price drops every hour toward noon. Patience is the best haggle.
+
+## shop.fishmonger.closing  shop=fishmonger  time=noon  fn=commerce
+Last of the catch, half price! It won't keep till tomorrow!
+Closing up! Everything on the ice has to go.
+I'm packing the ice away. Take something home for supper.
+Noon already. The stall shuts until tomorrow's boats.
+
+## shop.fishmonger.recommend  shop=fishmonger  fn=commerce,teach
+Going on a long mission? Dried fish. Light, salty and it won't spoil.
+The {item}. Grilled over charcoal, there's nothing better.
+Sweetfish, in summer. Salt and a stick through it, that's all it needs.
+The {special}. Came up from the coast this morning.
+Fish heads and miso make a soup that'll set you up for a whole day of training.
+Got a cat? Take the scraps, free. Your cat will think you're a hero.
+
+## shop.fishmonger.regular  shop=fishmonger  level=3..10  fn=commerce,deepen_bond
+Saved you the best trout under the ice. Don't tell the barbecue house.
+You know your fish now! I watched you check the gills.
+My favourite regular. Here, a little extra eel for nothing.
+Back again! You eat more fish than the cats at the shelter.

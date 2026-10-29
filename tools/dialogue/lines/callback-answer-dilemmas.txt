@@ -1,0 +1,134 @@
+# Callbacks for questions/dilemmas.txt: what a resident says later, remembering the player's answer.
+#! fn: callback
+
+## callback.answer.q.dilemma.found_purse.a1
+A found purse goes to the police, you said. The lost-and-found had a whole drawer of them this week.
+
+## callback.answer.q.dilemma.found_purse.a2
+You'd hunt down a purse's owner yourself. If I ever lose mine, I'll hope you're the one who finds it.
+
+## callback.answer.q.dilemma.found_purse.a3
+I've been holding my purse a little tighter around you. Joking. Mostly joking.
+
+## callback.answer.q.dilemma.found_purse.a4
+Ramen for everyone from a found purse. I keep laughing about that answer.
+
+## callback.answer.q.dilemma.rude_owner.a1
+You'd return a rude person's purse anyway. Their manners, your manners. I quote you on that.
+
+## callback.answer.q.dilemma.rude_owner.a2
+"Give it back with a look." I did exactly that with a borrowed umbrella last week. Very satisfying.
+
+## callback.answer.q.dilemma.rude_owner.a3
+Let someone else return it, you said. It gets home either way. I suppose that's true.
+
+## callback.answer.q.dilemma.shogi_cheat.a1
+You'd call out a cheat right at the shogi table. Remind me never to play you badly.
+
+## callback.answer.q.dilemma.shogi_cheat.a2
+A quiet word in private with a cheating friend. That's how I'd want to be told, too.
+
+## callback.answer.q.dilemma.shogi_cheat.a3
+You'd say nothing about a friend cheating. Loyal. I still feel for the old fellow in the park, though.
+
+## callback.answer.q.dilemma.friend_angry.a1
+Worth losing a friend's temper for the truth, you said. Stubborn. I like stubborn.
+
+## callback.answer.q.dilemma.friend_angry.a2
+You'd say sorry if the truth hurt a friend. For the hurt, not the truth. I hope that's how you meant it.
+
+## callback.answer.q.dilemma.friend_angry.a3
+Let a friend cool off, then dango. Your recipe for an argument. It worked on my brother.
+
+## callback.answer.q.dilemma.last_dango.a1
+Here, the last dango. You always give it away, you said, so this time it's yours.
+
+## callback.answer.q.dilemma.last_dango.a2
+Half a dango is still a dango. Your rule. I split one with my neighbour today because of it.
+
+## callback.answer.q.dilemma.last_dango.a3
+One dango left. I remember your answer. Ready? On three, we race.
+
+## callback.answer.q.dilemma.last_dango.a4
+I'm eating this last dango quickly. You taught me that. Shameless, but fast.
+
+## callback.answer.q.dilemma.worrying_secret.a1
+You'd keep a friend's secret, even a worrying one. That's why people tell you things, I expect.
+
+## callback.answer.q.dilemma.worrying_secret.a2
+Tell an adult, if a secret worried you. Hard and right. I've thought about that more than once.
+
+## callback.answer.q.dilemma.worrying_secret.a3
+Talk to the friend first. That's what you'd do with a worrying secret. It's what I'd want, too.
+
+## callback.answer.q.dilemma.hard_secret.a1
+You've kept a hard secret before. I won't ask what. I just trust you a little more for it.
+
+## callback.answer.q.dilemma.hard_secret.a2
+Nobody tells you secrets, you said. Here's one: I hate the taste of green tea. Don't tell.
+
+## callback.answer.q.dilemma.hard_secret.a3
+You'd rather not say about secrets. That was answer enough. I still think about it.
+
+## callback.answer.q.dilemma.promise_or_stranger.a1
+You'd stop for a stranger even with a friend waiting. I'll wait for you any day, then.
+
+## callback.answer.q.dilemma.promise_or_stranger.a2
+A promise kept over a stranger in need. Hard rule. I always know where I stand with you.
+
+## callback.answer.q.dilemma.promise_or_stranger.a3
+Help fast, then run. Is that why you always turn up breathless?
+
+## callback.answer.q.dilemma.extra_change.a1
+You'd give back extra change. The grocer short-changed themselves today. I sent them your way. Ha.
+
+## callback.answer.q.dilemma.extra_change.a2
+Keep quiet about extra change, you said. I count mine twice now, whenever you're near.
+
+## callback.answer.q.dilemma.extra_change.a3
+Spend the extra change in the same shop. I keep telling people your clever answer.
+
+## callback.answer.q.dilemma.hurt_rival.a1
+You'd wait for a hurt rival to heal. A win that's fair. That's what you said, and I agree.
+
+## callback.answer.q.dilemma.hurt_rival.a2
+Fight a hurt rival anyway, because they'd want it. You know your rival better than I do.
+
+## callback.answer.q.dilemma.hurt_rival.a3
+Ask the rival, you said, if they're hurt. Let them decide. That's respect, and I said so.
+
+## callback.answer.q.dilemma.blamed.a1
+If someone blames you, you tell the truth straight out. Good. Keep that.
+
+## callback.answer.q.dilemma.blamed.a2
+You'd take the blame for someone else. Don't make a habit of it. I meant that.
+
+## callback.answer.q.dilemma.blamed.a3
+Give them a chance to own up first. That's what you said. More generous than me.
+
+## callback.answer.q.dilemma.shortcut.a1
+The long road, always, you said. My cousin took the shortcut last week. Came back covered in burrs.
+
+## callback.answer.q.dilemma.shortcut.a2
+Through bear country to save an hour, you'd go. Did you ever meet a bear? Tell me no.
+
+## callback.answer.q.dilemma.shortcut.a3
+Scout the shortcut first, you said. I think about that every time I take the back lanes.
+
+## callback.answer.q.dilemma.regret_risk.a1
+A risk you regret, and you learned from it. Then it was worth something. Still true.
+
+## callback.answer.q.dilemma.regret_risk.a2
+No regrets, ever, you said. Lucky or careful. I've decided it's both.
+
+## callback.answer.q.dilemma.regret_risk.a3
+"Regrets come later." I said that to myself before I tried the eel skewers. They were fine.
+
+## callback.answer.q.dilemma.stuck_cart.a1
+On a mission, you'd walk past a stuck cart. The client's time comes first. Sensible, I suppose.
+
+## callback.answer.q.dilemma.stuck_cart.a2
+You'd stop to help a stuck cart, mission or no. That's how the Leaf got its good name. I said that, and meant it.
+
+## callback.answer.q.dilemma.stuck_cart.a3
+A quick shove and away. Your answer about the farmer's cart. Practical, like I said.

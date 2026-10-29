@@ -1,0 +1,177 @@
+# Small talk, part A: the season in the Leaf. What's ahead, what's cooking, what needs doing.
+
+## chat.season  season=spring  fn=worldbuild
+Spring means graduation at the Academy. The yard fills up with families, and the new headbands catch the sun.
+Spring brings the Chunin Exams. Teams from other villages start arriving, and the inns fill up overnight.
+When the cherry trees bloom along the river, half the Leaf takes its lunch outside. Nobody gets any work done.
+Spring is planting season at the farms. The Mission Desk fills up with D-ranks for digging and sowing.
+Fawns are born in the Nara forest in spring. They wobble about the forest edge on legs like chopsticks.
+In spring the market's full of bamboo shoots and wild greens. Everyone's soup tastes of the forest for a month.
+Spring cleaning's serious business in the Leaf. Every futon in the village gets beaten on the balconies the same week.
+High water in spring, with snowmelt from the hills. Kids are told to stay off the low bridge.
+Spring rain comes soft and often. The moss on the shrine steps turns bright green overnight.
+Come spring, the Yamanaka flower shop's window is all blossoms and tulips. People queue just to look.
+Swallows come back to the eaves in spring. Families mark the nests and argue about whose are the same birds.
+In spring the roofers are everywhere, fixing what the winter snow cracked. The village sounds like a drum.
+Spring's Chunin Exam finals fill the stadium. Even the shopkeepers close up to go and watch.
+
+## chat.season  season=spring  fn=reveal_character
+I planted my beans this week. Every spring I promise myself a neat garden, and every summer it's a jungle.
+Spring makes me restless. I find myself staring at the gate, wondering what the roads are like this year.
+My nose hasn't stopped running since the blossoms came out. Lovely to look at. Terrible to breathe.
+I always make sakura mochi in spring. Pink rice, salted leaf, sweet bean inside. My children eat them faster than I make them.
+I put away the winter quilts today. Every year I'm sure I'm doing it too early, and every year I'm right.
+
+## chat.season  season=spring  fn=react
+Blossoms are out! I can't walk past the river without stopping. Even the stern folk smile under those trees.
+Spring rain again. The gardens are happy. My laundry isn't.
+Warm enough to leave the shutters open. Spring in the Leaf smells of wet earth and blossom.
+
+## chat.season  season=spring  fn=hook
+Late snow broke a branch on the cherry tree by the bridge. If it isn't tied up, the blossoms will go to waste.
+Farms are behind on planting. They're asking for anyone with a strong back and a free morning.
+A swallow's nest fell off the eaves at the tea house. The chicks are in a basket on the counter. They need a new home.
+
+## chat.season  season=spring  fn=teach
+Spring rain makes the training-ground logs slick. Shinobi say you learn more balance in one wet spring than in three dry summers.
+
+## chat.season  season=spring  fn=filler
+Spring at last. Everything feels new.
+I love this time of year. Everyone's in a good mood.
+
+## chat.season  season=summer  fn=worldbuild
+Summer's the Leaf Festival. Lanterns on every street, food stalls from the gate to the river, fireworks over the Rock.
+Summer means cicadas. They start before dawn and go until dusk. You stop hearing them after a week. Mostly.
+In summer the river's full of children from noon till dusk. The deep pool under the low bridge is the favourite.
+Summer storms come in fast over the hills. One minute blue sky, the next the whole village is running for cover.
+Ichiraku does cold noodles in summer. Same broth, chilled. People who swear by hot ramen sneak a bowl anyway.
+Every rooftop water tank in the Leaf is warm by afternoon in summer. Free hot baths, if you're not fussy.
+Summer at the market is watermelons stacked like cannonballs. The grocer lets the children pick the biggest.
+Festival fireworks go up from the top of the Rock. You can see them from every street in the village.
+Festival yukata come out in summer. The tailors are busy for weeks beforehand, and nobody gets theirs early.
+Wind chimes go up on every porch in summer. On a breezy evening the whole street sings.
+Summer's the time for night markets. Grilled corn, shaved ice and goldfish scooping by lantern light.
+In summer the training grounds are at their hardest. Sensei love making squads run when it's hot.
+Fireflies come out by the river in early summer. People walk down after dinner just to see them.
+
+## chat.season  season=summer  fn=reveal_character
+I've been sleeping with the shutters open. The cicadas wake me before dawn, but the breeze is worth it.
+Shaved ice with sweet syrup is the only thing that keeps me alive in summer. Strawberry, if anyone asks.
+I always buy a new fan before the Leaf Festival. I've got forty fans. I'll buy another this year.
+Summer's for staying in the shade and doing as little as possible. I take that very seriously.
+I won a goldfish at the festival scooping game last year. It's still alive. It's huge. I'm a little afraid of it.
+
+## chat.season  season=summer  fn=react
+Hot! Even the dogs are lying flat in the shade. The Leaf melts a little more every afternoon.
+Leaf Festival's coming. I can feel it. The lantern-makers are working through the night.
+Another summer storm last night. The streets are steaming already.
+
+## chat.season  season=summer  fn=hook
+Someone's goldfish from the festival jumped out of its bowl into the river. The owner's been crying on the bridge all morning.
+Wind chimes went missing from the tea house in the storm. The owner says the summer won't feel right without them.
+Lantern-makers are short of paper for the festival. If someone could fetch a stack from the scroll shop, they'd be grateful.
+
+## chat.season  season=summer  fn=teach
+Drink water in summer, especially on missions. Heat's beaten more Genin than bandits have.
+
+## chat.season  season=summer  fn=filler
+Hot day, isn't it? Stay in the shade.
+Summer. Long days, short nights, and too many bugs.
+
+## chat.season  season=autumn  fn=worldbuild
+Autumn brings the Chunin Exams again. Foreign teams in the market, everyone guessing who'll make the finals.
+Graduation comes round again in autumn. New Genin, nervous parents, lots of photos by the Academy swing.
+Harvest comes in autumn. Carts of rice roll in through the gate every morning, and the farmers stay for a drink.
+Maples by the training grounds go red in autumn. People walk out there just to see them.
+Moon-viewing night is in autumn. People sit on their roofs with rice dumplings and tea and look up.
+In autumn the market fills with chestnuts, sweet potatoes and persimmons. The whole street smells roasted.
+Autumn's when the Leaf stocks up for winter. Firewood stacked by every door, pickles in every pantry.
+Persimmons hang drying from every balcony in autumn. The crows think it's a feast laid out for them.
+Every autumn the Akimichi hold a harvest feast. If you help carry the rice in, you're invited to eat it.
+Autumn winds blow down from the hills. The kites come out again, the last good kite days of the year.
+In autumn the Nara deer grow thick coats and start to look very pleased with themselves.
+Leaves pile up so fast in autumn that the shrine priest gives up sweeping after noon.
+Harvest jobs flood the Mission Desk in autumn. Every Genin in the Leaf learns to carry a rice sack.
+
+## chat.season  season=autumn  fn=reveal_character
+I love roasting sweet potatoes in the fire pit in autumn. The smell brings the whole street out.
+I make persimmon jam every autumn. My mother's recipe. I've never got it right. I'm going to try again.
+Autumn makes me a bit wistful. Everything's beautiful and leaving at the same time.
+I always pick the reddest maple leaf I can find in autumn and press it in a book. I've got thirty years of them.
+I've been stacking firewood all week. My back aches. The pile looks magnificent.
+
+## chat.season  season=autumn  fn=react
+Maples are turning. The whole training ground looks like it's on fire.
+Chilly mornings, warm afternoons. Autumn can't make up its mind.
+Harvest's coming in. You can hear the carts rumbling through the gate at dawn.
+
+## chat.season  season=autumn  fn=hook
+More rice than hands at the farms this year. They're paying anyone who'll help with the harvest.
+Someone's been stealing persimmons off the drying lines on the residential street. Probably crows. Possibly not crows.
+Gekko dojo's moon-viewing platform needs a new rail before moon-viewing night. They're short of carpenters.
+
+## chat.season  season=autumn  fn=teach
+Eat hot food when the cold comes. A good meal takes the weight off tired legs for a while, and autumn nights get long.
+
+## chat.season  season=autumn  fn=filler
+Autumn's my favourite. Everything smells like smoke and apples.
+Getting cooler. Time to find the warm coat.
+
+## chat.season  season=winter  fn=worldbuild
+New Year comes at the end of winter. The shrine bell rings at midnight, and the line up the steps goes down the hill.
+First snow is a little holiday here. Lessons go quiet, and every child in the Leaf is outside throwing snowballs.
+In winter the Hokage faces wear snow caps. The children call them the Hokage's hats.
+Winter means hot pots. Every home in the Leaf has one bubbling in the evening, and the windows all fog up.
+Deep winter freezes the river at the edges. People skate the shallows by the reeds. Never the middle.
+In winter the bathhouses are packed. The steam from them rises over the rooftops like the village is breathing.
+Winter's when the Leaf mends things. Nets, sandals, roofs, coats. Every porch has someone sewing or whittling.
+Rice cakes are pounded in the shrine yard for New Year. Anyone can take a turn with the big mallet.
+In winter the gate guards get a brazier by the booth. Half the village stops to warm their hands on the way past.
+Snow piles high on the market awnings. The stallholders knock it off with brooms every hour.
+Winter nights in the Leaf are long and quiet. The lamp keepers light the street lanterns early.
+New Year's first sunrise is watched from the top of the Rock. People climb up in the dark to see it.
+Winter is the slow season at the Mission Desk. Mostly snow clearing and firewood runs.
+
+## chat.season  season=winter  fn=reveal_character
+I keep a kettle on the stove all winter. Anyone who knocks gets tea. That's my rule.
+I knit through the whole winter. By spring, everyone I know has a new scarf whether they want one or not.
+I hate the cold. I sleep in three blankets and still wake up with a frozen nose.
+Winter's my favourite. Snow makes everything quiet and clean. I like the village best like this.
+I make sweet red bean soup every winter. With a toasted rice cake on top. My family queues for it.
+
+## chat.season  season=winter  fn=react
+Snow again! The whole street's white. The Rock looks like it's wearing a blanket.
+Cold this morning. My breath froze on my scarf. Mind the ice on the bridges.
+New Year's coming. The shrine's busy hanging the straw ropes, and everyone's cleaning their house top to bottom.
+
+## chat.season  season=winter  fn=hook
+The old woman on my lane can't clear her own path in the snow. Someone ought to shovel it before she slips.
+More hands are wanted at the shrine for the New Year rice pounding. They're short of people who can swing a mallet.
+Gate booth's brazier has gone cold. The guards' firewood store is empty, and the courier's late.
+
+## chat.season  season=winter  fn=teach
+Snow on the roofs makes for bad footing. Shinobi keep to the ridges in winter, where the tiles show through.
+
+## chat.season  season=winter  fn=filler
+Cold out, isn't it? Stay warm.
+Winter. Good weather for tea and staying in.
+
+## chat.season  season=spring  fn=worldbuild
+In spring the Academy hangs paper carp from the roof for the new students. They flap like they're swimming upstream.
+Spring is when the clans repaint their gate crests. You'll see ladders and paint pots outside every compound for a week.
+First green tea of the year arrives at the tea house in spring. The old folk taste it and argue about whether it's better than last year's.
+
+## chat.season  season=summer  fn=worldbuild
+In the hottest weeks of summer the Mission Desk sends Genin to carry water to the farms. Every bucket counts.
+Summer evenings in the Leaf are for sitting on the porch in a cotton robe with a fan and a cold barley tea.
+Shops run the Leaf Festival games: ring toss, goldfish, target throwing. The shinobi are banned from that last one.
+
+## chat.season  season=autumn  fn=worldbuild
+In autumn the sweet-potato cart comes round the residential streets at dusk. You hear the seller's song before you see the steam.
+Autumn's when the Leaf's roofs are checked before the snow. The Kinoshita carpenters are booked for weeks.
+Rice straw from the harvest is woven into ropes and sandals in autumn. Half of it ends up as New Year decorations.
+
+## chat.season  season=winter  fn=worldbuild
+At the end of winter every house in the Leaf is scrubbed top to bottom for New Year. Dust is not allowed into the new year.
+In winter the Inuzuka ninken grow so fluffy you can barely see their eyes. The children follow them about to pat them.
+Winter market sells hot ginger tea, roasted chestnuts and padded jackets. It closes early, when the cold sets in.

@@ -1,0 +1,223 @@
+# Quarrel arcs (BONDS.md §9): greetings while a quarrel lasts, the book's line for each state, a missed
+# birthday and jealousy. Argument: raw and fresh. Cold shoulder: the silence. Making up: thawing, wanting to
+# mend. Falling-out: a door closed for good (only the story mends it).
+
+## bond.greet.argument  fn=react
+I'm still angry, {player}. Give me a day before you try to talk me round.
+Not now. What you did is still sitting in my chest like a stone.
+You've got a nerve, turning up here today.
+
+## bond.greet.cold_shoulder  fn=react
+...
+Hm.
+I've nothing to say to you right now.
+
+## bond.greet.making_up  fn=react
+{player}. I've been thinking about what happened. Maybe we both said too much.
+I don't want to stay angry. I'm just not sure how to stop.
+It's been quiet without you. Too quiet. Can we talk?
+
+## bond.greet.falling_out  fn=react
+We're done, {player}. Some things don't mend.
+I'll be civil. Don't ask for more than that.
+You know why I'm not smiling. Leave it there.
+
+# -- personalities -------------------------------------------------------------------------------------
+## bond.greet.argument.warmhearted  fn=react  stage=teen|adult
+I'd usually offer you tea. Not today. It hurt, {player}. It really did.
+## bond.greet.cold_shoulder.warmhearted  fn=react  stage=teen|adult
+I'm busy with the pot. ...Just go, please. I'll only say something unkind.
+## bond.greet.making_up.warmhearted  fn=react  stage=teen|adult
+I made your favourite and then didn't know what to do with it. Come here. Let's talk.
+## bond.greet.falling_out.warmhearted  fn=react  stage=teen|adult
+I fed you at my own table, {player}. I can't do that anymore.
+
+## bond.greet.argument.thoughtful  fn=react
+I'd like to understand why you did it. I can't yet. Give me time to think.
+## bond.greet.cold_shoulder.thoughtful  fn=react
+I'm choosing my words carefully, so I'm choosing very few of them.
+## bond.greet.making_up.thoughtful  fn=react
+I've thought it through from your side. I see more of it now. Shall we talk properly?
+## bond.greet.falling_out.thoughtful  fn=react
+I've considered it from every angle, {player}. The answer doesn't change.
+
+## bond.greet.argument.playful  fn=react
+No jokes today. That's how you know I'm upset.
+## bond.greet.cold_shoulder.playful  fn=react
+I'm playing a game. It's called not talking to you. I'm winning.
+## bond.greet.making_up.playful  fn=react
+Truce? I'll even let you pick the next game. That's a big offer, {player}.
+## bond.greet.falling_out.playful  fn=react
+It's not funny anymore. It won't be again.
+
+## bond.greet.argument.adventurous  fn=react
+I'd rather walk off a cliff than talk to you right now. Go away.
+## bond.greet.cold_shoulder.adventurous  fn=react
+I'm heading out. Somewhere you aren't.
+## bond.greet.making_up.adventurous  fn=react
+I walked all the way to the outer wall to cool off. It worked, mostly. Let's mend this.
+## bond.greet.falling_out.adventurous  fn=react
+Our roads split, {player}. I won't be looking back down yours.
+
+## bond.greet.argument.meticulous  fn=react
+I've written down exactly what was said. Twice. I'm not ready to discuss it.
+## bond.greet.cold_shoulder.meticulous  fn=react
+You aren't on today's schedule.
+## bond.greet.making_up.meticulous  fn=react
+I've gone over it again. Some of the fault was mine. I want to set it right, properly.
+## bond.greet.falling_out.meticulous  fn=react
+Your name is crossed out in my book, {player}. In ink.
+
+## bond.greet.argument.steadfast  fn=react
+I trusted you. That doesn't come back overnight.
+## bond.greet.cold_shoulder.steadfast  fn=react  stage=teen|adult
+I'll do my job. Don't expect more today.
+## bond.greet.making_up.steadfast  fn=react
+I said I'd always be here for you. I meant it, even now. Let's fix this.
+## bond.greet.falling_out.steadfast  fn=react
+I keep my word. I gave it to you once. You broke yours.
+
+## bond.greet.argument.reserved  fn=react
+Don't.
+## bond.greet.cold_shoulder.reserved  fn=react
+...Not today.
+## bond.greet.making_up.reserved  fn=react
+I'm not good at this. But I don't want to lose it. Us.
+## bond.greet.falling_out.reserved  fn=react
+I let you in once. I won't again.
+
+## bond.greet.argument.imaginative  fn=react
+Everything's grey today, and you painted it that way. Please go.
+## bond.greet.cold_shoulder.imaginative  fn=react
+I'm pretending you're a fog bank. Fog doesn't need answering.
+## bond.greet.making_up.imaginative  fn=react
+I've been writing our story with a happier ending. Can we try for that one?
+## bond.greet.falling_out.imaginative  fn=react
+Some stories just end, {player}. Ours did.
+
+## bond.greet.argument.pragmatic  fn=react
+You cost me more than you know. Come back when you've counted it.
+## bond.greet.cold_shoulder.pragmatic  fn=react  stage=teen|adult
+Shop's open. For customers.
+## bond.greet.making_up.pragmatic  fn=react  stage=teen|adult
+Staying angry is costing us both. Let's settle accounts and start fresh.
+## bond.greet.falling_out.pragmatic  fn=react  stage=teen|adult
+I've written you off, {player}. It's nothing personal anymore. It's done.
+
+## bond.greet.argument.curious  fn=react
+I don't even want to ask you anything. That's how bad it is.
+## bond.greet.cold_shoulder.curious  fn=react
+No questions today. Not for you.
+## bond.greet.making_up.curious  fn=react
+I keep wondering what you were thinking. Will you tell me? I want to understand.
+## bond.greet.falling_out.curious  fn=react
+I used to wonder about you. I stopped.
+
+## bond.greet.argument.protective  fn=react
+I'd have stood between you and anything. And you did that? Go home, {player}.
+## bond.greet.cold_shoulder.protective  fn=react
+Get home safe. That's all I've got for you today.
+## bond.greet.making_up.protective  fn=react
+I've been watching for you anyway. Old habit. Let's put this right.
+## bond.greet.falling_out.protective  fn=react
+I'll still look out for the street. You're on your own, {player}.
+
+## bond.greet.argument.gentle  fn=react
+I'm not angry, exactly. I'm hurt. Please give me a little room.
+## bond.greet.cold_shoulder.gentle  fn=react
+I... I can't talk right now. I'm sorry.
+## bond.greet.making_up.gentle  fn=react
+I'd like us to be friends again. If you would. No hurry.
+## bond.greet.falling_out.gentle  fn=react
+I wish you well, {player}. From a distance.
+
+## bond.greet.argument.proud  fn=react
+You insulted me. You don't get to stand there as if nothing happened.
+## bond.greet.cold_shoulder.proud  fn=react
+I don't speak to those who wrong me.
+## bond.greet.making_up.proud  fn=react
+I am... willing to hear an apology. Or to offer one. Possibly both.
+## bond.greet.falling_out.proud  fn=react
+My family remembers slights for generations. So will I.
+
+## bond.greet.argument.fiery  fn=react
+I'm SO angry at you right now! Don't come any closer!
+## bond.greet.cold_shoulder.fiery  fn=react
+Hmph! Not talking! Not even a little! ...Hmph!
+## bond.greet.making_up.fiery  fn=react
+Fine! I miss you! There, I said it! Can we stop fighting already?
+## bond.greet.falling_out.fiery  fn=react
+I'd have done anything for you! ANYTHING! And you threw it away!
+
+## bond.greet.argument.shy  fn=react
+I... I don't want to cry in front of you. Please.
+## bond.greet.cold_shoulder.shy  fn=react
+...
+## bond.greet.making_up.shy  fn=react
+Um. I wrote you a note, but I was too scared to give it. It says sorry. Mostly.
+## bond.greet.falling_out.shy  fn=react
+I was brave enough to trust you once. Not again.
+
+## bond.greet.argument.stern  fn=react
+That was beneath you. You know it was.
+## bond.greet.cold_shoulder.stern  fn=react  stage=teen|adult
+Dismissed.
+## bond.greet.making_up.stern  fn=react
+I've been hard on you. You deserved some of it. Not all. Let's speak.
+## bond.greet.falling_out.stern  fn=react
+I hold my people to a standard, {player}. You are not one of my people now.
+
+# -- the bond book: the quarrel's state ---------------------------------------------------------------
+## bond.conflict.argument  fn=react  kind=cycle
+You argued. It's still raw.
+A fresh quarrel stands between you.
+
+## bond.conflict.cold_shoulder  fn=react  kind=cycle
+They aren't speaking to you.
+The cold shoulder: a silence you'll have to wait out, or apologise through.
+
+## bond.conflict.making_up  fn=react  kind=cycle
+They're ready to make up, if you are.
+The quarrel is thawing. Go and mend it.
+
+## bond.conflict.falling_out  fn=react  kind=cycle
+A falling-out. The door between you is shut.
+Something broke between you that time alone won't fix.
+
+# -- a missed birthday --------------------------------------------------------------------------------
+## bond.birthday.missed  fn=react
+My birthday came and went, {player}. I kept looking up when the door opened.
+You missed my birthday. It's fine. ...It's not really fine.
+I saved you a slice of the cake. It went stale waiting.
+
+## bond.birthday.missed.warmhearted  fn=react  stage=teen|adult
+I set a place for you at my birthday supper. It stayed empty all night.
+## bond.birthday.missed.fiery  fn=react
+My BIRTHDAY, {player}! You forgot my birthday! I'm not over it!
+## bond.birthday.missed.proud  fn=react
+I don't care that you forgot my birthday. I simply noticed. That's all.
+## bond.birthday.missed.shy  fn=react
+It's okay you forgot. I didn't tell many people. I just... hoped you'd remember.
+## bond.birthday.missed.stern  fn=react
+A friend remembers the dates that matter. Write mine down this time.
+## bond.birthday.missed.playful  fn=react
+I threw myself a surprise party and you didn't even show up to be surprised at.
+
+# -- jealousy -----------------------------------------------------------------------------------------
+## bond.jealous  fn=react
+You've got plenty of time for everyone else these days.
+I see you've found better company. Don't let me keep you.
+Funny, I used to be the one you came to first.
+
+## bond.jealous.fiery  fn=react
+Why does everyone else get your time and I get NOTHING? It's not fair!
+## bond.jealous.proud  fn=react
+I'm not jealous. I simply expected to rank higher than that.
+## bond.jealous.shy  fn=react
+You're always with them now. It's fine. I'm used to being... quiet.
+## bond.jealous.warmhearted  fn=react  stage=teen|adult
+I made your favourite again, but you went off with the others. I'll freeze it.
+## bond.jealous.reserved  fn=react
+Busy, are you. Hm.
+## bond.jealous.playful  fn=react
+Oh, I see. I've been traded in for a newer friend. Was it the jokes? It was the jokes.

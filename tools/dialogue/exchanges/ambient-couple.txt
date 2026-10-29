@@ -1,0 +1,53 @@
+# Overheard talk between married or settled couples (adults only; plain domestic life, no romance words).
+#! tags: relation=couple stage=adult
+
+## ambient.couple  fn=worldbuild
+A: Did you buy the radishes?
+B: I bought a lamp.
+A: We needed radishes.
+B: We needed a lamp. We'll have radishes in the dark otherwise.
+
+A: Your mother's visiting for the festival.
+B: The whole festival?
+A: The whole festival. And the week after.
+
+A: The roof's leaking over the futon again.
+B: I'll ask the Kinoshita yard. Again.
+
+A: You left your kunai on the kitchen table.
+B: I'll move them.
+A: You said that yesterday. And the day before.
+
+A: The tailor says your jacket can't be mended anymore.
+B: That jacket's been on more missions than most Jonin.
+A: Then let it retire.
+
+A: Shall we walk down to the river after supper?
+B: Like we used to. Yes, let's.
+
+## ambient.couple  fn=reveal_character
+A: Twelve years married this spring.
+B: Twelve? I'd have guessed fewer.
+A: That's the kindest thing you've said all year.
+
+A: You worried while I was away, didn't you?
+B: I reorganised the whole spice shelf.
+A: So yes.
+
+A: I still have the paper lantern from the night we met.
+B: That old thing? It barely holds a candle.
+A: It holds enough.
+
+A: I'm sorry about this morning.
+B: So am I. Let's have supper and forget the sharp words.
+
+## ambient.couple  fn=react
+A: You're home early!
+B: The mission was quick. The client cried, the cat was found, I came home.
+
+A: Snow's coming. I can smell it.
+B: Then I'm not leaving this house until spring.
+
+## ambient.couple  fn=filler
+A: Tea?
+B: Please. You always make it better than I do.

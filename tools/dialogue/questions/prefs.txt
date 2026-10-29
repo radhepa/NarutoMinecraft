@@ -1,0 +1,103 @@
+# Friendship questions about tastes: food, seasons, training, days off. Light, early-level questions.
+# Axis poles: alone_or_together (1 alone, -1 together), stay_or_see_world (1 stay, -1 see the world).
+
+? q.pref.favorite_food | fn: deepen_bond reveal_character | level: 2
+Q: What's your favourite food? I'm always looking for an excuse to eat.
+Q: If you could eat one thing every day, what would it be?
+- Ramen, obviously :: Ichiraku, I'd guess. Half the village would say the same. {values:+family} {tone:bold}
+- Dango :: Three on a stick, sweet sauce. Good taste. {values:+kindness} {tone:warm}
+- Grilled fish :: Salted, straight off the fire by the river. Simple and perfect. {values:+honesty} {tone:blunt}
+- Whatever's free :: Ha! A shinobi's answer if ever I heard one. {values:+freedom} {tone:joking}
+
+? q.pref.cook_for_friends | fn: deepen_bond reveal_character | level: 3 | follows: q.pref.favorite_food | depth: 2 | axis: alone_or_together
+Q: If you cooked one meal for all your friends, what would you make?
+Q: Say you're hosting supper for everyone you know. What's on the table?
+- A big hot pot to share :: Everyone reaching into one pot. That's how a meal should be. {values:+family} {tone:warm} {pole:-1}
+- Something I invented :: Brave! I'll bring a backup rice ball, just in case. {values:+creativity} {tone:bold}
+- Takeout from Ichiraku :: Wise. Nobody gets food poisoning that way. {values:+honesty} {tone:joking}
+
+? q.pref.season | fn: deepen_bond reveal_character | level: 2
+Q: Which season do you like best?
+Q: Spring, summer, autumn or winter: which one's yours?
+- Spring, for the blossoms :: The cherry trees along the river. Nothing like them. {values:+creativity} {tone:warm}
+- Summer, for the festivals :: Lanterns, fireworks, and too much shaved ice. Good choice. {values:+freedom} {tone:bold}
+- Autumn, for the leaves :: The whole forest goes red and gold. I'd pick it too. {values:+family} {tone:humble}
+- Winter, for the snow :: Brr. You must like hot baths afterwards. {values:+strength} {tone:joking}
+
+? q.pref.train_how | fn: deepen_bond reveal_character | level: 2 | axis: alone_or_together
+Q: How do you like to train?
+Q: When you practise, what does a good session look like?
+- Alone at dawn :: Quiet field, cold air, no one watching. I know the feeling. {values:+duty} {tone:stern} {pole:1}
+- Sparring with friends :: More fun, and you learn more when someone hits back. {values:+loyalty +strength} {tone:warm} {pole:-1}
+- Reading the scrolls :: A thinker. The best fighters know why a move works. {values:+knowledge} {tone:curious}
+- Until I drop :: Careful with that. Rest is training too. {values:+strength} {tone:bold}
+
+? q.pref.hardest_training | fn: deepen_bond reveal_character | kind: player_past | level: 4 | follows: q.pref.train_how | depth: 2
+Q: What's the hardest thing your training has ever asked of you?
+Q: What part of being a shinobi is hardest for you, honestly?
+- Being patient :: Patience is a jutsu nobody can teach. You just have to live through it. {values:+duty} {tone:humble}
+- Losing to someone :: Losing teaches more than winning. It just doesn't feel like it. {values:+strength} {tone:gentle}
+- Trusting others :: That's a deep one. I hope it gets easier. {values:+loyalty} {tone:evasive}
+- Getting up early :: Ha! The great enemy of every Genin. {values:+honesty} {tone:joking}
+
+? q.pref.morning_or_night | fn: deepen_bond reveal_character | level: 2
+Q: Are you a morning person or a night owl?
+Q: Up with the sun, or up with the moon?
+- Morning, always :: The best hour of the day is the first one. Agreed. {values:+duty} {tone:warm}
+- Night, definitely :: The village is so quiet at night. It's like a different place. {values:+freedom} {tone:curious}
+- Neither, I like naps :: Ha! A noon person. Rare, and wise. {values:+honesty} {tone:joking}
+
+? q.pref.rainy_day | fn: deepen_bond reveal_character | level: 2
+Q: What do you do on a rainy day?
+Q: The rain's coming down hard. Where do you go?
+- Train anyway :: Rain makes the ground slippery. Good practice, I suppose. {values:+duty +strength} {tone:stern}
+- Read indoors :: A scroll and a cup of tea by the window. Perfect. {values:+knowledge} {tone:warm}
+- Jump in puddles :: Ha! I hope you've got a dry pair of sandals at home. {values:+freedom} {tone:joking}
+- Sleep through it :: Rain on the roof is the best sleeping sound there is. {values:+honesty} {tone:gentle}
+
+? q.pref.thinking_spot | fn: deepen_bond reveal_character | level: 3
+Q: Where do you go when you need to think?
+Q: Everyone has a spot for thinking things through. Where's yours?
+- The Hokage Rock :: The whole village laid out below you. It makes problems feel smaller. {values:+duty} {tone:humble}
+- The river :: Water helps. It keeps moving, so your thoughts do too. {values:+freedom} {tone:warm}
+- The training grounds :: You think with your fists? Ha. Sometimes it works. {values:+strength} {tone:bold}
+- A rooftop at night :: Up with the stars. I won't tell anyone where. {values:+freedom} {tone:gentle}
+
+? q.pref.best_gift | fn: deepen_bond reveal_character | level: 2
+Q: What's the best gift anyone could give you?
+Q: If someone wanted to make your day, what should they bring?
+- Something handmade :: The time in it is the gift. I agree completely. {values:+creativity} {tone:warm}
+- Their time :: Just being there. That's the rarest gift of all. {values:+loyalty +family} {tone:humble}
+- A good meal :: Practical and delicious. I like how you think. {values:+family} {tone:joking}
+- A new scroll :: Something to learn. Of course you'd say that. {values:+knowledge} {tone:curious}
+
+? q.pref.cats_or_dogs | fn: deepen_bond reveal_character | level: 2
+Q: Cats or dogs?
+Q: Important question: are you a cat person or a dog person?
+- Dogs :: Loyal, loud, and always happy to see you. The Inuzuka would approve. {values:+loyalty} {tone:warm}
+- Cats :: Independent. They love you on their own terms. Good choice. {values:+freedom} {tone:proud}
+- Birds :: Birds! Now there's an answer I didn't expect. {values:+creativity} {tone:curious}
+- Any animal at all :: You'd feed every stray in the village, wouldn't you? {values:+kindness} {tone:warm}
+
+? q.pref.festival_part | fn: deepen_bond reveal_character | level: 2
+Q: What's the best part of a festival, for you?
+Q: Festival night. Where am I most likely to find you?
+- The food stalls :: Squid on a stick, candied apples, sweet corn. Lead the way. {values:+family} {tone:bold}
+- The fireworks :: Lying on the grass, watching the sky burst. Lovely. {values:+creativity} {tone:warm}
+- The games :: The goldfish scoop! Everyone's terrible at it. {values:+freedom} {tone:joking}
+- Being with friends :: The festival's just the excuse, isn't it? {values:+loyalty} {tone:humble}
+
+? q.pref.free_day | fn: deepen_bond reveal_character | level: 2 | axis: stay_or_see_world
+Q: You get a whole day free: no training, no missions. What do you do?
+Q: A day off with nothing planned. How do you spend it?
+- Explore past the gate :: Out into the forest? Take a map. And a snack. {values:+freedom +courage} {tone:bold} {pole:-1}
+- Wander the village :: There's always a new shop or a lane you've never walked. {values:+family} {tone:curious} {pole:1}
+- Sleep till noon :: The most honest answer anyone's ever given me. {values:+honesty} {tone:joking}
+- Spend it with friends :: Doesn't matter where, then. Just who. {values:+loyalty} {tone:warm}
+
+? q.pref.sweet_or_salty | fn: deepen_bond | level: 2
+Q: Sweet or salty?
+Q: Red bean bun or salted rice cracker?
+- Sweet :: Red bean paste, then. A sweet tooth is a happy tooth. {values:+kindness} {tone:warm}
+- Salty :: Crackers and pickles! Someone after my own heart. {values:+honesty} {tone:blunt}
+- Both at once :: Sweet soy dango. The best of both. You're clever. {values:+creativity} {tone:joking}

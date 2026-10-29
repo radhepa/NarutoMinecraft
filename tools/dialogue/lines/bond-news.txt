@@ -1,0 +1,138 @@
+# Word gets round (BONDS.md §8): the opening line when someone saw, or heard about, something you did and has
+# not brought it up yet. Said once, after VF's own deed reactions. Seen is first-hand; heard is gossip,
+# and it may have bent a little on the way.
+#! fn: react
+
+## bond.seen.abandoned_mission
+I saw you turn back, {player}. The others kept going. I keep thinking about that.
+I was at the gate when you came back alone. What happened out there?
+
+## bond.heard.abandoned_mission
+People are saying you walked away from a mission. Tell me that's not how it went.
+I heard you left a mission half done. I'd rather hear it from you.
+
+## bond.seen.child_born  player_stage=adult
+I saw the little one! Those tiny fists. Congratulations, truly.
+I was there when they brought your baby out. I've never seen you smile like that.
+
+## bond.heard.child_born  player_stage=adult
+Is it true? A new baby in your house? Congratulations!
+## bond.heard.child_born  player_stage=adult  stage=teen|adult
+The whole street's talking about your little one. I'll bring something round.
+
+## bond.seen.defended_village
+I saw you on the wall when it mattered. Thank you, {player}.
+I watched you stand your ground for the village. I won't forget it.
+You were out there in the thick of it. I saw. We all saw.
+
+## bond.heard.defended_village
+They're saying you held the line for the village. Is that right? Good for you.
+Word is you stood up for all of us. The tea house is full of it.
+
+## bond.seen.failed_client
+I saw your client leave the Mission Desk in a temper. Rough day?
+## bond.seen.failed_client  stage=teen|adult
+I was there when the client came back unhappy. It happens. It shouldn't happen twice.
+
+## bond.heard.failed_client
+I heard a client of yours came home disappointed. That gets around, {player}.
+Someone at the market says you let a client down. Is there more to it?
+
+## bond.seen.guest_in_quarter
+I saw you at the gate of the clan quarter, invited in. That's an honour, you know.
+You were a guest in the quarter the other evening. I saw you bow at the door. Nicely done.
+
+## bond.heard.guest_in_quarter
+I heard a clan had you in as a guest. Not everyone gets past those gates.
+Word is you've been a guest in one of the quarters. Moving up in the world!
+
+## bond.seen.helped_resident
+I saw you carry that load for the old fishmonger. Kind of you.
+I watched you help someone out the other day, and you didn't even look round to see who noticed.
+That was good of you, what you did by the well. I saw.
+
+## bond.heard.helped_resident
+I heard you lent someone a hand. People remember that kind of thing.
+Someone told me you helped out on their street. I wasn't surprised.
+
+## bond.seen.honored_custom
+I saw you keep the old custom, properly, with all the bows. It meant a lot to them.
+You did the custom right. I was there. Not many outsiders bother.
+
+## bond.heard.honored_custom
+I heard you honoured a clan's custom. That gets talked about, in a good way.
+They say you kept the old ways when you didn't have to. That's respect.
+
+## bond.seen.hurt_resident
+I saw what you did, {player}. I don't know what to say to you.
+I was there. That wasn't you. Or I hope it wasn't.
+
+## bond.heard.hurt_resident
+People are saying you hurt someone. I hope they're wrong.
+I heard something about you I didn't like. I'm still deciding whether it's true.
+
+## bond.seen.insulted_clan
+I saw you insult that clan to their faces. You'll be a long time living that down.
+I was there when you said it. Half the quarter heard it too.
+
+## bond.heard.insulted_clan
+I heard you insulted a clan. Clans have long memories, {player}.
+Word is you said something you shouldn't have about a clan. Fix it, if you can.
+
+## bond.seen.left_them_behind
+I saw you leave them back there. I can't stop seeing it.
+You left someone behind. I watched it happen.
+
+## bond.heard.left_them_behind
+They're saying you left a comrade behind. Please tell me it isn't true.
+I heard you came home without someone you should have brought. That's a heavy thing.
+
+## bond.seen.mediated
+I saw you talk those two down. I didn't think anyone could.
+That was good work, settling their quarrel. I was watching.
+
+## bond.heard.mediated
+I heard you made peace between two people who weren't speaking. How did you manage that?
+Word is you patched up a quarrel nobody else could. Well done.
+
+## bond.seen.protected_them
+I saw you step in front of them. Brave, {player}. Maybe a bit foolish. Mostly brave.
+You put yourself between them and trouble. I saw it all.
+
+## bond.heard.protected_them
+I heard you protected someone when it counted. Of course you did.
+People say you stood in front of someone who needed it. I believe them.
+
+## bond.seen.quarrel
+I saw you two arguing in the street. Everything all right?
+That was quite a row I walked past. Do you want to talk about it?
+
+## bond.heard.quarrel
+I heard you had a falling-out with someone. Want to tell me your side?
+Word is you've quarrelled with somebody. These things blow over. Usually.
+
+## bond.seen.rank_up
+I saw you at the ceremony! You stood up so straight. Congratulations!
+I was there when they announced it. I clapped louder than anyone. Well done, {player_rank}.
+Look at you, promoted! I saw the whole thing. I'm so proud.
+
+## bond.heard.rank_up
+I heard you were promoted! Congratulations, {player_rank}!
+The whole street knows you went up a rank. You'll have to buy the dango now.
+Word travels: {player_rank} now, is it? Well earned.
+
+## bond.seen.saved_life
+I saw you pull them back. You saved a life, {player}. Do you understand that?
+I was right there. If you hadn't moved when you did... thank you.
+
+## bond.heard.saved_life
+I heard you saved someone's life. The whole village is saying it.
+Is it true? You saved a life? Come here. That's something.
+
+## bond.seen.wedding  player_stage=adult
+I saw you at the shrine! It was beautiful. I cried into my sleeve, I admit it.
+Your wedding was lovely. I was at the back, but I saw everything.
+
+## bond.heard.wedding  player_stage=adult
+I heard you were married! Congratulations, both of you.
+Married! The news reached our street before the rice was even swept up.

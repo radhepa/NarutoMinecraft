@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for stern residents. Discipline, terse, cares by demanding more.
+#! tags: personality=stern
+
+## chat.personal  fn=reveal_character
+Adequate. I rose at five, trained, worked, and ate plainly. That is how a day should be spent.
+My son left his sandals in the hallway. Again. He will be cleaning every sandal in the house tomorrow.
+I corrected the tea house menu. "Their" was wrong. Nobody else would have done it.
+The children on my lane were throwing stones in the river. I made them pick up every stone and put it back. All of them.
+I don't celebrate birthdays. A day is a day. My family celebrates mine anyway. I allow it. Once a year.
+Sloppy footwork everywhere at the training grounds today. I said nothing. Today.
+I sweep my step every morning. If you sweep only when it's dirty, you'll never notice when it starts.
+I reprimanded a merchant for short-changing an old woman. The merchant paid her back, double. Good.
+My father taught me to stand straight. I teach my children the same. They complain. Their backs will thank me.
+Naps? No. Naps are for those who did not sleep properly. Sleep properly.
+A Genin skipped warm-ups in front of me today. Pulled a muscle within five minutes. The lesson taught itself.
+I finished my chores before dawn. The rest of the day is for work, and the evening is for reflection. Nothing else.
+My wife says I could smile more. I smiled at the festival last year. Once is sufficient.
+The neighbour's fence joints: I re-did them. They were wrong. Now they are not.
+I do one hundred push-ups each morning. At my age, it's ninety. Next year, eighty. Never zero.
+I keep my house the way my mother kept hers. Spotless. You can tell everything about a person from their kitchen.
+My daughter came home with a scraped knee and a good mark. I asked about the mark first. Then I cleaned the knee.
+Strong, bitter tea. That's how I make it. Sweet tea makes people soft.
+I do not gossip. But I heard the bridge repairs are behind schedule, and someone should be held to account.
+No alarm. I wake on my own. The body learns if you're strict with it.
+I told my nephew his calligraphy was poor. He rewrote it thirty times. Now it's acceptable. He's proud. As he should be.
+The neighbour's children now bow correctly. I taught them. They were doing it like ducks.
+Some people waste the morning. I am not some people.
+Finished a book on discipline. Mostly correct. The final chapter was soft.
+My grandmother lived to ninety-seven on rice, pickles and no complaining. I intend to follow her example.
+Sandals in a line by the door. Toes forward. You leave a house ready to return to it.
+I don't like waste. Food, time, words. You'll notice I'm not wasting many now.
+I helped the old woman on my lane with her roof. She thanked me. I told her not to climb up there again. She won't.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I run the bathhouse. Wash before you soak. Every time. I don't care whose child you are.
+I teach the abacus to merchants' children. If they can't add, they'll be cheated. I won't allow that.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+My squad ran drills until sunset. They hate me today. They'll thank me on a mission.
+I've seen what carelessness costs out there. That's why I check every knot twice. You should too.
+I gave the Mission Desk a report so thorough they asked me to shorten it. I declined.
+
+## chat.personal  fn=worldbuild
+The Leaf forbids fighting in the streets. Disputes go to the training grounds or the police. That rule keeps us standing.
+Every Genin learns the founders' rules at the Academy. Most forget them by Chunin. I recite them every morning.
+The Military Police keep order inside the walls. Respect them. They earned it.
+
+## chat.personal  fn=hook
+Someone's been dumping rubbish behind the shrine. I want it found and stopped. I have my suspicions.
+The lantern on the corner's been out three nights. The lamp keeper's lazy. Someone needs to light a fire under them.
+The steps up to the Rock are cracked on the fourth landing. Report it, if you pass the builders. I've told them twice.
+
+## chat.personal  fn=filler
+Acceptable.
+Productive. As it should be.
+
+## chat.personal  fn=reveal_character
+I timed my morning run. Thirty seconds slower than last year. Unacceptable. I'll run twice tomorrow.
+I made my nephew rewrite his thank-you letter to his aunt. Twice. A thank-you is not a shopping list.
+I told the dango seller the skewers were overcooked. The next batch was perfect. Standards are a gift you give others.
+I don't hold grudges. I simply remember. Clearly.

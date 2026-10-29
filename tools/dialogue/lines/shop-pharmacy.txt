@@ -1,0 +1,53 @@
+# The pharmacy by the herb gardens near the hospital, kept by a Suzuran herbalist: medicine, antidotes, salves, teas.
+#! fn: commerce
+
+## shop.pharmacy.greet  shop=pharmacy  fn=commerce
+Welcome. Step softly, the drying racks are just above your head.
+Come in, {player}. Something aching, or something to keep for later?
+Hello. Don't mind the smell. Bitter herbs make the best medicine.
+Good day. Sit if you're unwell, stand if you're browsing.
+
+## shop.pharmacy.greet  shop=pharmacy  clan=suzuran  fn=commerce,worldbuild
+Welcome to our shop. Every herb here grew in a Suzuran garden, and every one has a name in our book.
+
+## shop.pharmacy.browse  shop=pharmacy  fn=commerce
+Salves for cuts and bruises, in the little clay pots.
+Antidotes on the high shelf. Each one's for a different poison, so tell me what bit you.
+Fever tea, cough tea, sleep tea. Brew them weak; they're stronger than they taste.
+Bandages and splints by the counter. Every pouch should carry a roll.
+Soldier pills come from this back room. The tool shop buys them from us.
+
+## shop.pharmacy.buy  shop=pharmacy  kind=cycle  fn=commerce
+{item}. {pay}. Twice a day, with food.
+Here. Keep it somewhere cool and dark.
+That's {pay}. If it doesn't help in two days, come back.
+{pay}, thank you. Rest helps more than any jar on my shelf.
+One {item}, wrapped in paper. Read the label before you use it.
+
+## shop.pharmacy.cant_afford  shop=pharmacy  kind=cycle  fn=commerce
+Short. Take the small jar, and come back for the rest.
+I can't lower the price of an antidote. If it's urgent, the hospital won't charge you.
+Not enough for that. The fever tea is cheaper and nearly as good.
+
+## shop.pharmacy.sold_out  shop=pharmacy  kind=cycle  fn=commerce
+No {item} left. The herbs need another week to dry.
+Out of salve. The night watch took the last of it.
+
+## shop.pharmacy.haggle  shop=pharmacy  fn=commerce,reveal_character
+I don't bargain over medicine. But I'd never send someone sick away empty-handed.
+Bring me fresh herbs from the forest edge, and I'll trade instead of sell.
+
+## shop.pharmacy.closing  shop=pharmacy  time=evening|night  fn=commerce
+Closing. If it's an emergency, go straight to the hospital.
+I'm taking the racks in before the dew. Last sale.
+
+## shop.pharmacy.recommend  shop=pharmacy  fn=commerce,teach
+Carry an antidote outside the wall. You won't need it until you very much do.
+The {item}. My grandmother's recipe, unchanged.
+A salve for your pouch. Training cuts close faster if you clean them and cover them.
+Sleep tea, if you've been staying up. A proper night in your own bed fixes more than I can.
+
+## shop.pharmacy.regular  shop=pharmacy  level=3..10  fn=commerce,deepen_bond
+You again! I hope it's only shopping this time, not another sprain.
+I made you a little bag of ginger tea. For the cold nights.
+You know which jar is which now. You'd make a fair herbalist.

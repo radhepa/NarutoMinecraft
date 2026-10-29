@@ -1,0 +1,113 @@
+# Friendship questions about the player's own past in the Leaf. Only what everyone knows: the player
+# came to the village young, alone, and the Hokage found them an apartment. Never ask about life before.
+# The q.past family makes these kind: player_past.
+
+? q.past.first_impression | fn: deepen_bond reveal_character | level: 3
+Q: What did you think of the Leaf, the first time you walked its streets?
+Q: Do you remember your first look at the village? What struck you?
+- It was so big :: The Hokage Rock, the rooftops going on forever. I remember that feeling too. {values:+courage} {tone:honest}
+- Noisy and warm :: Hawkers shouting, someone always cooking. That's the Leaf. {values:+family} {tone:warm}
+- Lonely, at first :: At first. I hope "at first" is the important part. {values:+honesty} {tone:gentle}
+- Like home already :: Some places just know you. I'm glad this one did. {values:+loyalty} {tone:warm}
+
+? q.past.home_now | fn: deepen_bond reveal_character | level: 6 | follows: q.past.first_impression | depth: 2 | gap: 7
+Q: Does the Leaf feel more like home now?
+Q: Now that you've been here a while, is this place home?
+- Yes, it's home :: Good. That makes me happier than I can say. {values:+family +loyalty} {tone:warm}
+- Getting there :: Getting there is fine. Homes take time to settle into. {values:+honesty} {tone:humble}
+- Not yet :: That's honest. I'll keep the lantern lit till it does. {values:+honesty} {tone:gentle}
+
+? q.past.best_day | fn: deepen_bond reveal_character | level: 2
+Q: What's the best day you've had in the Leaf so far?
+Q: If you could live one day here over again, which would it be?
+- A festival day :: Lanterns and music and everyone out. A good choice. {values:+freedom} {tone:playful}
+- A day with friends :: Not what you did, but who with. Lovely. {values:+loyalty} {tone:warm}
+- A training breakthrough :: The day something finally clicked. I know that feeling. {values:+strength} {tone:proud}
+- Maybe today :: Today? Ha! Then I'll try not to spoil it. {values:+kindness} {tone:teasing}
+
+? q.past.hard_day | fn: deepen_bond reveal_character | level: 6 | follows: q.past.best_day | depth: 2
+Q: And the hardest day you've had here? You don't have to say.
+Q: There's always a bad day too. What was yours, if you'll tell me?
+- A test I failed :: One failed test. And you're still here, still trying. That's what matters. {values:+honesty} {tone:humble}
+- A day I felt alone :: I'm sorry. Next time, come and find me. I mean it. {values:+honesty} {tone:gentle}
+- A fight I lost :: Losing hurts. It also teaches. You've grown since, I can tell. {values:+strength} {tone:blunt}
+- I'd rather not say :: That's all right. The door's open if you ever want to. {values:+freedom} {tone:evasive}
+
+? q.past.academy_weeks | fn: deepen_bond reveal_character | level: 2
+Q: What do you remember most about your first weeks at the Academy?
+Q: Your first days at the Academy: what stuck with you?
+- The instructor :: A good teacher at the start makes all the difference. {values:+knowledge} {tone:humble}
+- Making friends :: The best thing the Academy gives you, if you ask me. {values:+loyalty} {tone:warm}
+- Failing a test :: Ha! Everyone fails one. The good ones fail early. {values:+honesty} {tone:honest}
+- The lunches :: The rice balls by the window. Some things never change. {values:+family} {tone:joking}
+
+? q.past.glad_met | fn: deepen_bond reveal_character | level: 5 | follows: q.past.academy_weeks | depth: 2
+Q: Is there anyone from the Academy you're especially glad you met?
+Q: Of everyone in your class, who are you gladdest to know?
+- A friend for life :: Hold on to that one. Friends from the Academy stay. {values:+loyalty} {tone:warm}
+- My rival, oddly :: Ha! The ones who push us are a gift. An annoying gift. {values:+strength} {tone:teasing}
+- Everyone, really :: A generous heart. Your whole class is lucky. {values:+kindness} {tone:kind}
+- Not yet :: Classes are long. There's still time. {values:+honesty} {tone:honest}
+
+? q.past.first_ryo | fn: deepen_bond reveal_character | level: 2
+Q: What did you buy with the first ryo you ever earned?
+Q: First mission pay, first ryo of your own: where did it go?
+- Ramen :: Straight to Ichiraku. A proper start. {values:+family} {tone:joking}
+- Kunai :: Tools before treats. A shinobi already. {values:+duty +strength} {tone:dutiful}
+- I saved it :: Saved! I'm impressed. My first coin was gone in an hour. {values:+duty} {tone:cautious}
+- A gift for someone :: Your first pay, and you spent it on someone else. That says a lot. {values:+kindness +loyalty} {tone:kind}
+
+? q.past.apartment | fn: deepen_bond reveal_character | level: 3
+Q: How are you finding your apartment?
+Q: Is your apartment treating you well? Warm enough? Leaky roof?
+- Cozy :: Good. A cozy home is worth more than a big one. {values:+family} {tone:warm}
+- A bit too quiet :: Quiet can be loud, can't it? Come visit whenever you like. {values:+honesty} {tone:gentle}
+- Messy, honestly :: Ha! Everyone's apartment is messy. Mine too. Don't look. {values:+honesty} {tone:joking}
+- I've decorated it :: Really? You'll have to show me sometime. {values:+creativity} {tone:proud}
+
+? q.past.quiet_nights | fn: deepen_bond reveal_character | level: 7 | follows: q.past.apartment | depth: 2 | gap: 5
+Q: Do you ever get lonely in that apartment at night?
+Q: When it's late and quiet at home, how are you, really?
+- Sometimes :: Thank you for telling me. Sometimes is all right. You're not the only one. {values:+honesty} {tone:honest}
+- No, I like the quiet :: Good. Quiet you choose is a fine thing. {values:+freedom} {tone:free}
+- I visit friends instead :: Smart. My door counts. Knock any evening. {values:+loyalty +family} {tone:warm}
+- I'd rather not talk about it :: All right. I won't push. Just know I asked because I care. {values:+freedom} {tone:evasive}
+
+? q.past.laughed_hard | fn: deepen_bond reveal_character | level: 2
+Q: When did you last laugh so hard it hurt?
+Q: What's the funniest thing that's happened to you here?
+- With my friends :: Nothing better than laughing till your sides ache with friends. {values:+loyalty} {tone:playful}
+- A training mishap :: Ha! Somebody fell off a training post, didn't they? {values:+honesty} {tone:teasing}
+- I can't remember :: Then we'll have to fix that. Soon. {values:+kindness} {tone:gentle}
+- Just now :: Ha! Was it my face? It's my face, isn't it? {values:+freedom} {tone:joking}
+
+? q.past.proud_of | fn: deepen_bond reveal_character | level: 3
+Q: What's something you've done here that you're proud of?
+Q: Tell me one thing you've done that you're proud of. Don't be modest.
+- Passing a hard test :: Hard tests make the best memories. Afterwards. {values:+strength +duty} {tone:proud}
+- Helping someone :: That's the best kind of pride there is. {values:+kindness} {tone:humble}
+- Not giving up :: Stubbornness. The most underrated shinobi skill. {values:+courage} {tone:bold}
+- Making a friend :: A friend made is worth more than a test passed. {values:+loyalty} {tone:warm}
+
+? q.past.someone_proud | fn: deepen_bond reveal_character | level: 6 | follows: q.past.proud_of | depth: 2
+Q: Has anyone ever told you they were proud of you?
+Q: Does anyone tell you when you've done well?
+- Yes, my teachers :: Good. Teachers notice more than they say. {values:+knowledge +loyalty} {tone:humble}
+- Not really :: Then I'll say it: I'm proud of you. There. {values:+honesty} {tone:gentle}
+- My friends do :: Friends who say it out loud. Keep those ones close. {values:+loyalty} {tone:warm}
+
+? q.past.big_lesson | fn: deepen_bond reveal_character | level: 4
+Q: What's the most important thing you've learned since coming to the Leaf?
+Q: If you had to teach a newcomer one thing about life here, what would it be?
+- Friends matter most :: Took me years to learn that. You're ahead of me. {values:+loyalty} {tone:warm}
+- Hard work pays off :: It does. Slowly, and then all at once. {values:+duty +strength} {tone:dutiful}
+- Ask for help :: The hardest lesson of all. I'm glad you've learned it. {values:+honesty} {tone:humble}
+- Never skip breakfast :: Ha! The wisest thing anyone's told me this week. {values:+family} {tone:joking}
+
+? q.past.who_taught | fn: deepen_bond reveal_character | level: 5 | follows: q.past.big_lesson | depth: 2
+Q: That lesson you told me about. Who taught it to you?
+Q: Where did you learn that, if you don't mind me asking?
+- A teacher :: Then that teacher did their job, and then some. {values:+knowledge} {tone:humble}
+- A friend :: The best lessons come from friends. They don't charge. {values:+loyalty} {tone:warm}
+- I learned it alone :: The hard way. Those lessons stick hardest. {values:+strength +freedom} {tone:proud}
+- The village itself :: Ha! The Leaf is a good teacher, isn't it? Strict, but fair. {values:+family} {tone:curious}

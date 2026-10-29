@@ -1,0 +1,60 @@
+# The Kinoshita yard in the carpenters' lane: timber, lacquer, furniture plans, and commissions from the benches.
+# The Kinoshita are a minor clan of carpenters and builders.
+#! fn: commerce
+
+## shop.kinoshita_yard.greet  shop=kinoshita_yard  fn=commerce
+Welcome to the yard! Watch your head, planks swing round corners here.
+Come in, {player}. Smell that? Fresh-cut cedar and hot lacquer.
+Hello! Timber in the sheds, plans in the office, sawdust everywhere.
+Mind the shavings, they're slippery. What are you building?
+
+## shop.kinoshita_yard.greet  shop=kinoshita_yard  clan=kinoshita  fn=commerce,worldbuild
+Welcome. Half the roofs in this village went up on Kinoshita beams. We're proud of that.
+
+## shop.kinoshita_yard.browse  shop=kinoshita_yard  fn=commerce
+Planks by the bundle: cedar, cypress, pine. Cypress smells best and costs most.
+Lacquer pots on the shelf. Black, red, clear. Thin coats, lots of patience.
+Furniture plans in the office. Learn one, and you can build that piece at your own workbench.
+Offcuts in the bin, nearly free. Good for shelves, stools and learning to saw straight.
+Cloth and cord for cushions and screens, if you're making your own.
+
+## shop.kinoshita_yard.buy  shop=kinoshita_yard  kind=cycle  fn=commerce
+{item}. {pay}. Keep it flat and dry or it'll warp.
+That's {pay}. Measure twice when you cut it.
+Here. Straight grain, no knots. I picked it myself.
+{pay}, thank you. Bring me a picture of what you make.
+One {item}, tied with cord. Carry it on your shoulder, not your back.
+
+## shop.kinoshita_yard.cant_afford  shop=kinoshita_yard  kind=cycle  fn=commerce
+Short. The pine's cheaper, and it's kind to a beginner's saw.
+Not enough for that plan. Try a stool first, it's cheap and it teaches joints.
+That's more than you've got. Sweep the yard one afternoon and we'll see.
+
+## shop.kinoshita_yard.sold_out  shop=kinoshita_yard  kind=cycle  fn=commerce
+No {item} left. The timber cart comes down from the hills every five days.
+The cypress is all gone. A temple roof took the lot.
+
+## shop.kinoshita_yard.haggle  shop=kinoshita_yard  fn=commerce,reveal_character
+Haggle over timber? The tree took sixty years. I'll not argue over a few ryo.
+Buy the plan and the planks together, and I'll throw in the offcuts.
+
+## shop.kinoshita_yard.order_ready  shop=kinoshita_yard  kind=cycle  fn=commerce
+Your {item} is off the bench! Three coats of lacquer, look at that shine.
+The commission's done. Come and feel the joints, not a nail in it.
+Your order's waiting in the shed. Bring a friend to help carry.
+Finished this morning. The lacquer's dry, I checked with my thumb.
+
+## shop.kinoshita_yard.closing  shop=kinoshita_yard  time=evening|night  fn=commerce
+The saws stop at dusk. Village rule, and the neighbours are grateful.
+Closing the sheds. Tomorrow, early, if you want first pick.
+
+## shop.kinoshita_yard.recommend  shop=kinoshita_yard  fn=commerce,teach
+Learn a furniture plan here, then build it yourself. Cheaper than buying from the shop, and it's yours.
+The {item}. Good wood for a first piece.
+Start with a low table. Four legs, one top. If it stands, you're a carpenter.
+Lacquer outside or with a window open. It's lovely, but it'll make you dizzy.
+
+## shop.kinoshita_yard.regular  shop=kinoshita_yard  level=3..10  fn=commerce,deepen_bond
+Your joints are getting tight. The old carpenters noticed, you know.
+Here's my favourite customer. I saved a plank of the good cypress.
+Come round the back, I want to show you what we're building for the shrine.

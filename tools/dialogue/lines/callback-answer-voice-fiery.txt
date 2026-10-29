@@ -1,0 +1,108 @@
+# Callbacks for questions/voice-fiery.txt, in the fiery asker's voice.
+#! fn: callback
+#! tags: personality=fiery
+
+## callback.answer.q.plans.fiery_beat_one.a1
+Beaten your rival yet?! You said they're the one! Then beat them again!
+
+## callback.answer.q.plans.fiery_beat_one.a2
+Yourself from yesterday! I've been trying to beat mine all week! It's hard! You were right!
+
+## callback.answer.q.plans.fiery_beat_one.a3
+Nobody you want to beat! I still don't get it! But I like you anyway!
+
+## callback.answer.q.plans.fiery_beat_one.a4
+You said you wanted to beat me! Training ground! Now! I've been waiting!
+
+## callback.answer.q.plans.fiery_after_win.a1
+"Good fight." That's what you'll say when you win. You're better than me! I'd shout!
+
+## callback.answer.q.plans.fiery_after_win.a2
+"Told you so!" Ha! I've been practising saying it with you! For when it happens!
+
+## callback.answer.q.plans.fiery_after_win.a3
+The silent smile, after the win. Cold! Brilliant! I tried it in a mirror. Couldn't stop grinning.
+
+## callback.answer.q.plans.fiery_after_win.a4
+"Rematch!" Your first word after winning. Ha! Never stop! I still love it!
+
+## callback.answer.q.pref.fiery_spicy.a1
+The hottest stall at the festival! You said bring it on! It's on! Next festival!
+
+## callback.answer.q.pref.fiery_spicy.a2
+Mild for you, I remember! I ate a red pepper skewer for you yesterday! Still sweating!
+
+## callback.answer.q.pref.fiery_spicy.a3
+Hotter than me, you claimed! The challenge stands! I've found a pepper the size of my thumb!
+
+## callback.answer.q.values.fiery_give_up.a1
+NEVER give up! You said it! I yelled it at the training posts this morning!
+
+## callback.answer.q.values.fiery_give_up.a2
+Sometimes you have to give up, you said. I hated it. I stopped a fight I couldn't win yesterday. You were right!
+
+## callback.answer.q.values.fiery_give_up.a3
+Stop, breathe, charge again! Your way! I did exactly that today! Twice!
+
+## callback.answer.q.plans.fiery_shout_dream.a1
+HOKAGE! You shouted it! The whole street heard! I still tell people!
+
+## callback.answer.q.plans.fiery_shout_dream.a2
+The strongest shinobi! Your dream with teeth! How's it coming?!
+
+## callback.answer.q.plans.fiery_shout_dream.a3
+To protect everyone! The biggest dream of all! I shout it for you sometimes!
+
+## callback.answer.q.plans.fiery_shout_dream.a4
+You whispered your dream instead of shouting it. I shouted it for you! Did you hear?
+
+## callback.answer.q.plans.fiery_first_step.a1
+Dawn training! I was there this morning! Were you? We're racing the sun, remember!
+
+## callback.answer.q.plans.fiery_first_step.a2
+Found a teacher yet?! I know a few loud ones! I'll introduce you!
+
+## callback.answer.q.plans.fiery_first_step.a3
+Already started on your dream! You said! I've started too! Don't leave me behind!
+
+## callback.answer.q.dilemma.fiery_friend_insulted.a1
+Stand up to them! Words first! Your rule! I used words today! Only words! I'm so proud of me!
+
+## callback.answer.q.dilemma.fiery_friend_insulted.a2
+Walk away with your friend. The bigger thing. I tried it! It was so hard! I did it though!
+
+## callback.answer.q.dilemma.fiery_friend_insulted.a3
+Turn an insult into a joke! Your trick! The whole market laughed at the loudmouth!
+
+## callback.answer.q.values.fiery_show_feelings.a1
+Feelings are for feeling! Out loud! We agreed! I cried at the noodle stand today! Happy crying!
+
+## callback.answer.q.values.fiery_show_feelings.a2
+You keep feelings in! I'd burst! I still think you're stronger than me for it!
+
+## callback.answer.q.values.fiery_show_feelings.a3
+Depends on the moment, you said! I kept quiet at the shrine today! For a whole minute!
+
+## callback.answer.q.past.fiery_burst.a1
+The festival fireworks! Your big feeling! Next festival, we scream together!
+
+## callback.answer.q.past.fiery_burst.a2
+Heart pounding in a fight! That's your big feeling! Spar with me and feel it again!
+
+## callback.answer.q.past.fiery_burst.a3
+Cheering for a friend! Your best kind of shouting! I cheered for you at the training ground!
+
+## callback.answer.q.past.fiery_burst.a4
+You couldn't remember a big feeling! We said we'd fix that! Let's go do something huge!
+
+## callback.answer.q.pref.fiery_hardest_drill.a1
+A hundred laps! I did a hundred and two this morning! Beat that!
+
+## callback.answer.q.pref.fiery_hardest_drill.a2
+Under a waterfall! I tried it because of you! I can't feel my ears! Worth it!
+
+## callback.answer.q.pref.fiery_hardest_drill.a3
+Push-ups until dark! I did them until supper! Then I ate supper! Then more push-ups!
+
+## callback.answer.q.pref.fiery_hardest_drill.a4
+Nothing crazy, your hardest drill! Come train with me! The offer's still open! Loudly!

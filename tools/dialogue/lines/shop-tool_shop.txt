@@ -1,0 +1,58 @@
+# The tool shop: tool pouches, ninja wire, smoke and paper bombs, sealing tags, pills and camping gear. Genin and up.
+#! fn: commerce
+
+## shop.tool_shop.greet  shop=tool_shop  fn=commerce
+Welcome. Pouches by the door, bombs behind the counter, and please don't light anything.
+Come in, {player}. Going out past the wall? You've come to the right shop.
+Hello. Smells of powder and canvas in here. That's the smell of a mission starting.
+In you come. Mind the bedrolls, they fall over if you look at them.
+
+## shop.tool_shop.greet  shop=tool_shop  player_rank=academy  fn=commerce,react,teach
+Sorry, this counter is for Genin and up. Come back with a headband and I'll sell you the lot.
+No headband, no bombs. Village rule, and a good one. The Academy workshop has practice gear.
+
+## shop.tool_shop.browse  shop=tool_shop  fn=commerce
+Smoke bombs in the red paper, flash in the yellow. Don't mix them up mid-fight.
+Ninja wire, fifty paces a spool. Strong enough to hang a cart from.
+Paper bombs, locked in the cabinet. Ask, and I'll want to see your headband.
+Sealing tags are blank. You'll want a steady brush and a quiet room to make use of them.
+Tool pouches, leg or hip, leather or canvas.
+Soldier pills in the jar. Sixty ryo each, and worth it on a bad day.
+Camping gear on the back wall: bedrolls, tinder kits, cook pots that fold flat.
+
+## shop.tool_shop.buy  shop=tool_shop  kind=cycle  fn=commerce
+{item}. {pay}. Keep it away from your cooking fire.
+That's {pay}. Pack the bombs on top, never at the bottom of the pouch.
+Here you go. Every spool tested before it went on the shelf.
+{pay}, thank you. Come back in one piece.
+One {item}, wrapped. Don't sit on that pouch.
+Done. Count your tags at the gate, not in the field.
+
+## shop.tool_shop.cant_afford  shop=tool_shop  kind=cycle  fn=commerce
+Short. A smoke bomb's cheaper than a paper bomb, and running away is a skill.
+That's beyond you today. A D-rank or two and you'll have it.
+Not enough. Pills don't come cheap, I'm afraid. Nor should they.
+A little under. Leave the bedroll, take the tinder kit.
+
+## shop.tool_shop.sold_out  shop=tool_shop  kind=cycle  fn=commerce
+No {item} left. A whole squad kitted out this morning.
+No smoke bombs left. The powder cart's late again.
+Out of pills. The pharmacy makes them, and the pharmacy is busy.
+
+## shop.tool_shop.haggle  shop=tool_shop  fn=commerce,reveal_character
+No bargains on bombs. Cheap powder is how fingers go missing.
+Buy a full pouch's worth and I'll throw in a spool of wire.
+The price of a soldier pill is the price of a soldier pill. I don't make the herbs grow.
+
+## shop.tool_shop.closing  shop=tool_shop  time=evening|night  fn=commerce
+Locking the bomb cabinet in a minute. Decide quick.
+Closing up. If you're leaving at dawn, buy tonight. I don't open early.
+Last sale of the day. Check your pouch before I go.
+
+## shop.tool_shop.recommend  shop=tool_shop  fn=commerce,teach
+A smoke bomb in every pouch. Running is a skill too.
+Wire and a couple of tags. Half of being a shinobi is setting things up before anyone arrives.
+One soldier pill, kept for emergencies. Not for breakfast.
+The {item}. I'd pack it for any mission outside the wall.
+A spare tool pouch. When the first one tears, you'll be glad.
+Going on a long road? A bedroll. The ground outside the wall is harder than you think.

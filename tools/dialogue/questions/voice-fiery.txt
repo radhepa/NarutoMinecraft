@@ -1,0 +1,77 @@
+# Questions only a fiery resident asks: loud, eager, big feelings, bigger dreams.
+#! tags: personality=fiery
+
+? q.plans.fiery_beat_one | fn: deepen_bond reveal_character | level: 3
+Q: Who's the one person you want to beat more than anybody?
+Q: Everyone's got someone they want to beat! Who's yours?
+- My rival :: Ha! Of course! Beat them, then beat them again! {values:+strength} {tone:bold}
+- Myself from yesterday :: Ooh. That's deep. And harder than any rival. {values:+strength +knowledge} {tone:humble}
+- Nobody, really :: Nobody?! How do you get up in the morning? {values:+kindness} {tone:gentle}
+- You :: Ha! Then let's go! Training ground, right now! {values:+courage} {tone:teasing}
+
+? q.plans.fiery_after_win | fn: deepen_bond reveal_character | level: 5 | follows: q.plans.fiery_beat_one | depth: 2
+Q: And when you finally beat them, what are you going to say?
+Q: The big win! The moment! What are your first words?
+- "Good fight" :: Gracious! I'd shout something. You're better than me. {values:+kindness +honesty} {tone:humble}
+- "Told you so" :: Ha! YES! Exactly that! {values:+strength} {tone:proud}
+- Nothing, just smile :: Ooh, the silent smile. Cold. Brilliant. {values:+strength} {tone:cold}
+- "Rematch!" :: Ha! Never stop! I love it! {values:+courage +strength} {tone:bold}
+
+? q.pref.fiery_spicy | fn: deepen_bond reveal_character | level: 2
+Q: How spicy can you handle your food? I mean REALLY spicy!
+Q: The red pepper skewers at the festival! Can you take them?
+- Bring it on :: YES! The hottest stall at the festival! You and me! {values:+courage} {tone:bold}
+- Mild, please :: Mild! Ha! Fine, I'll eat the hot ones for both of us. {values:+honesty} {tone:honest}
+- Hotter than you :: Oh, is that a challenge? It's a challenge! {values:+strength +courage} {tone:teasing}
+
+? q.values.fiery_give_up | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Is there ever a time to give up?
+Q: When things get really, really hard, do you ever just stop?
+- Never! :: NEVER! Ha! I knew you had it in you! {values:+courage +strength} {tone:bold}
+- Sometimes, yes :: Sometimes? Hm. I hate it. But maybe you're right. Maybe. {values:+knowledge} {tone:honest}
+- Only to start again :: Ooh! Stop, catch your breath, and charge again! I like that! {values:+courage} {tone:ambitious}
+
+? q.plans.fiery_shout_dream | fn: deepen_bond reveal_character | level: 4
+Q: What's your biggest dream? Shout it! Go on, nobody's listening! Well, a few people.
+Q: Tell me your dream! Loud! Like you mean it!
+- Hokage! :: YES! Say it louder! The whole street heard that! {values:+duty +courage} {tone:ambitious}
+- The strongest shinobi! :: Ha! A dream with teeth! I love it! {values:+strength} {tone:bold}
+- To protect everyone! :: Everyone! That's the biggest dream of all! {values:+loyalty +duty} {tone:loyal}
+- I'd rather not shout :: Oh. Fine. Whisper it then. I'll shout it for you. {values:+freedom} {tone:gentle}
+
+? q.plans.fiery_first_step | fn: deepen_bond reveal_character | level: 5 | follows: q.plans.fiery_shout_dream | depth: 2
+Q: That dream! What's your first step, starting tomorrow? No, starting today!
+Q: Dreams need feet! What are you doing about yours, right now?
+- Train at dawn :: Dawn! I'll be there! We'll race the sun! {values:+duty +strength} {tone:dutiful}
+- Find a teacher :: A teacher! Smart! I know a few loud ones. {values:+knowledge} {tone:curious}
+- Already started :: Already?! Ha! I'm late! Wait for me! {values:+courage} {tone:proud}
+
+? q.dilemma.fiery_friend_insulted | fn: deepen_bond reveal_character | level: 3
+Q: Someone insults your friend right in front of you, in the street. What do you do?
+Q: Some loudmouth is mocking your friend at the market. Your move!
+- Stand up to them :: YES! Not with fists, though. Words first! Then maybe fists. No. Words. {values:+loyalty +courage} {tone:loyal}
+- Walk away with my friend :: Hm! Hard for me. But that's the bigger thing, isn't it? {values:+kindness} {tone:cautious}
+- Make everyone laugh :: Ha! Turn it on them with a joke! Clever! {values:+creativity +loyalty} {tone:playful}
+
+? q.values.fiery_show_feelings | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Is it better to show what you feel, or keep it in?
+Q: When you're angry or happy, do you let everyone see?
+- Show it :: Yes! Feelings are for feeling! Out loud! {values:+honesty +courage} {tone:bold}
+- Keep it in :: Keep it in? I'd burst! You're stronger than me. {values:+duty} {tone:cautious}
+- Depends on the moment :: Ha. Fair. Even I keep quiet at a funeral. Mostly. {values:+knowledge} {tone:honest}
+
+? q.past.fiery_burst | fn: deepen_bond reveal_character | level: 5 | follows: q.values.fiery_show_feelings | depth: 2
+Q: When did you last feel something so big you couldn't hold it in?
+Q: Tell me about a time a feeling just burst right out of you!
+- At a festival :: The fireworks! Everyone screaming! Ha! The best feeling! {values:+freedom} {tone:playful}
+- In a fight :: The fight! Heart pounding! Yes! I know that one! {values:+courage +strength} {tone:bold}
+- When a friend did well :: Cheering for a friend! That's the best kind of shouting! {values:+loyalty} {tone:warm}
+- Can't remember :: Then we have to fix that! Let's go do something huge! {values:+honesty} {tone:honest}
+
+? q.pref.fiery_hardest_drill | fn: deepen_bond reveal_character | level: 2
+Q: What's the hardest training you've ever done? I bet I've done harder!
+Q: Your toughest drill! Tell me! I'll try to top it!
+- A hundred laps :: A hundred! Ha! I did a hundred and one! Just now! {values:+strength +duty} {tone:proud}
+- Under a waterfall :: A waterfall! Freezing! Respect! {values:+courage +strength} {tone:bold}
+- Push-ups until dark :: Until dark! YES! My arms hurt just hearing it! {values:+strength} {tone:ambitious}
+- Nothing crazy :: Nothing crazy?! Come train with me, then! {values:+honesty} {tone:honest}

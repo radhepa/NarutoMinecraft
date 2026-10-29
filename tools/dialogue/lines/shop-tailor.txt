@@ -1,0 +1,71 @@
+# The tailor: outfit variants (100 to 600 ryo; rank outfits are given), festival yukata, mending.
+#! fn: commerce
+
+## shop.tailor.greet  shop=tailor  fn=commerce
+Welcome! Pins on the floor, so please watch your step.
+Come in, {player}. Stand up straight, let me guess your measurements.
+Hello there. A new look, or a mending job?
+Step in. Bolts of cloth to the left, finished pieces to the right.
+Welcome. I've just pressed the new batch, so it smells of hot steam in here.
+
+## shop.tailor.greet  shop=tailor  season=summer  fn=commerce,react
+Summer! Everyone wants a yukata for the festival. I've hardly slept.
+
+## shop.tailor.browse  shop=tailor  fn=commerce
+Outfits on the rack, sized small to large. Try anything behind the screen.
+That jacket's in three colours. The dark green hides mud from the training grounds.
+Yukata are along the back. Cotton for summer, the heavier ones for autumn evenings.
+I do sleeves short or long, collars high or low. Tell me how you move and I'll cut for it.
+Your rank outfit comes from the village. Everything else, you come to me for.
+Scarves and sashes by the mirror. A little colour never hurt a shinobi.
+
+## shop.tailor.buy  shop=tailor  kind=cycle  fn=commerce
+Your {item}. {pay}. Wear it well.
+There, it fits like it was made for you. That's because it was.
+That's {pay}. Wash it cold or it'll shrink.
+Sold. Shall I wrap it, or will you wear it out the door?
+{pay}, thank you. Come back if a seam ever gives.
+Here's your {item}. Turn around, let me see. Yes, very good.
+That's {pay}, and I took the hem up a finger's width for free.
+
+## shop.tailor.cant_afford  shop=tailor  kind=cycle  fn=commerce
+That outfit is out of reach today. Some of these are a week's missions, I know.
+A little short. I'll keep it behind the counter for you a few days.
+Not enough, I'm afraid. A sash costs much less and changes the whole look.
+Save for it. Good cloth is worth the wait.
+
+## shop.tailor.sold_out  shop=tailor  kind=cycle  fn=commerce
+That {item} is gone in your size. I can cut another, give me a week.
+Sold out of yukata. Festival rush, I'm afraid.
+The last one went this morning. The weaver's sending more cloth soon.
+
+## shop.tailor.haggle  shop=tailor  fn=commerce,reveal_character
+Haggle? Every stitch is my own hand. Look at the seams, then tell me it's too dear.
+I won't move the price, but I'll take it in for free if it's loose.
+Buy an outfit and I'll mend your old clothes for nothing.
+A few ryo off for the ones on the end rack. Last season's colours.
+
+## shop.tailor.closing  shop=tailor  time=evening|night  fn=commerce
+I'm putting the needles away. Decide, or come back tomorrow.
+Closing soon. The light's too poor for fine stitching.
+Last fitting of the day. Come behind the screen if you want it.
+
+## shop.tailor.recommend  shop=tailor  fn=commerce,teach
+For the Leaf Festival, a yukata. Everyone dresses up, and you'll feel left out otherwise.
+The {item} would suit you. The cut lets you move without catching.
+Dark colours for night work, light ones for summer days. It's not just for looks.
+The {special}. Brand new pattern. Nobody else in the village has it yet.
+If you want something hard-wearing, the canvas jacket. Training-ground proof.
+A spare outfit. When one's in the wash, you're not stuck.
+
+## shop.tailor.regular  shop=tailor  level=3..10  fn=commerce,deepen_bond
+You're my best-dressed customer. People ask who your tailor is. I tell them.
+I kept a remnant of that blue you liked. Enough for a sash.
+Stand still, you've grown. Let me take your measurements again.
+Back for another? I've been thinking about what would suit you next.
+
+## shop.tailor.order_ready  shop=tailor  kind=cycle  fn=commerce
+Your {item} is finished. Try it on behind the screen, let me see the shoulders.
+The order's ready! I pressed it twice so the creases are sharp.
+Here it is, made to your measure. Nobody else in the Leaf has one quite like it.
+Done and folded. If anything pinches, come straight back.

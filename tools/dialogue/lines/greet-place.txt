@@ -1,0 +1,238 @@
+# Greetings by district, and on Market Day.
+
+## greet.place  district=academy  fn=guide
+Visiting the Academy? The library's through the main doors and left. The workshop's out the back by the yard.
+The target posts in the yard are free after lessons. Just don't use the swing tree as a target. It's been tried.
+If you're looking for a teacher, try the staff room upstairs. Knock loudly; they're all marking.
+
+## greet.place  district=academy  fn=worldbuild
+Hear that bell? Every child in the Leaf learns to run at that sound.
+The swing tree out front has carvings in its bark going back generations. Half the Jonin in the village left one.
+The big fire sign on the Academy roof gets repainted every spring. The students do it. Badly. Then the teachers fix it.
+Mind the yard, the kids drew a throwing line in chalk and they'll be very cross if you scuff it.
+The Academy and the Hokage Residence are two buildings, you know. Visitors mix them up every single day.
+Every graduation year, somebody climbs the swing tree to tie their old practice headband on a branch.
+
+## greet.place  district=academy  fn=react
+Back at the Academy, {player}? Some people never leave, you know. They become teachers.
+Hello! Waiting for someone from class? They'll be out at noon, unless somebody's kept back.
+The Academy grounds are quiet between lessons. Lovely, really. Like the eye of a storm.
+
+## greet.place  district=market  fn=guide
+The grocer's at the top of the market street, the fishmongers by the river end. Everything else is in between.
+Need a tool? The weapon shop's past the tea house; follow the sound of the forge.
+The flower stalls are under the striped awnings. You'll smell them before you see them.
+The pawn shop's down the side alley by the dumpling seller. They'll buy bandit gear, nothing else.
+
+## greet.place  district=market  fn=worldbuild
+The market street's been here longer than the wall. Some of the stalls are run by the fifth generation.
+Every stallholder on this street knows every other stallholder's prices. Nobody admits it.
+Mind the carts. Market traffic waits for no one, and the radish cart least of all.
+The market street smells of grilled squid at one end and cut flowers at the other.
+Busy today. Somebody always gets their sandal trodden off by noon.
+
+## greet.place  district=market  fn=react
+Shopping, {player}? Don't buy from the first stall you see. Walk the whole street first.
+Hello! Out for groceries? The pickled radish is fresh today, I saw the barrels come in.
+There you are in the crowd. I nearly missed you behind that stack of melons.
+
+## greet.place  district=main_street  fn=guide
+Ichiraku's just along the main street. Look for the red lanterns and the queue.
+Follow the main street all the way and you'll reach the Hokage Residence, right under the Rock.
+The tea house is two doors past the furniture shop. Benches out front, shogi inside.
+The Mission Desk is on the Residence's ground floor. Open from eight till six.
+
+## greet.place  district=main_street  fn=worldbuild
+The main street runs straight from the gate to the Rock. You can see the faces from every step of it.
+Every shop on the main street hangs its own lantern. Count them some evening; it's never the same number.
+The main street was paved stone by stone. Every family on it laid a few. Some of the stones have initials.
+Parades come down the main street at festivals. The rest of the year it's carts, kids and arguments.
+The utility poles along here hum on wet days. The old folk say it's the village talking to itself.
+
+## greet.place  district=main_street  fn=react
+Hello, {player}! Busy out here, isn't it? Everyone's going somewhere.
+Off along the main street? Say hello to the tea house owner for me.
+Nice to see you, {player}. The main street's never short of faces, but yours is a welcome one.
+
+## greet.place  district=residential  fn=worldbuild
+Quiet street, this. The loudest thing here is the neighbour's rooster.
+The houses on this street all have round water tanks on the roof. On hot days you can hear them ticking.
+Every house here has its own plaque by the door. Ours is a bit crooked. My father hung it.
+Laundry lines from one balcony to the next. If you see a sock fall, nobody's going to claim it.
+The residential streets wake up slowly. First the kettles, then the shutters, then the arguing.
+This lane's had the same families in it for generations. Everyone knows whose cat is whose.
+
+## greet.place  district=residential  fn=react
+Hello, neighbour! Well, near enough a neighbour. Everyone's a neighbour on this street.
+Walking through, {player}? Mind the potted plants on the steps. Somebody's always got new ones.
+Hello! You look at home on this street already.
+
+## greet.place  district=residential  fn=guide
+If you're cutting through, take the lane by the well. It comes out right by the market.
+The bathhouse is at the end of this street, past the big persimmon tree. You can't miss the chimney.
+The furniture shop delivers to anyone on these streets. Ask nicely and they'll carry it up the stairs too.
+
+## greet.place  district=gate  fn=guide
+That's the main gate. If you're heading out on a mission, sign the guard's book first.
+The guard booth's on the left. They'll answer any question you've got, and several you haven't.
+Waiting for a squad? Missions usually leave from right here, under the big characters.
+
+## greet.place  district=gate  fn=worldbuild
+Those two huge characters on the gate doors? One on each. Every traveller stops to stare at them.
+The gate's the best place to hear news. Every cart, every courier, every rumour comes through here first.
+The wall runs right round the village from here. The guards walk the whole of it twice a day.
+The Inuzuka kennels are just inside the gate. If you hear barking, that's the welcome committee.
+Caravans line up out there at dawn. The merchants have to show their papers, every one of them.
+Coming home through this gate feels different from leaving. Everyone says so.
+
+## greet.place  district=gate  fn=react
+Off somewhere, {player}? Or just watching the road like the rest of us?
+Hello! The gate's always busy. You picked a good spot to people-watch.
+Waiting for someone to come home? I do that too, sometimes.
+
+## greet.place  district=hokage_rock  fn=worldbuild
+Look up. Four faces, and room left for more. Everyone in the village wonders whose will be next.
+The faces on the Rock were carved by hand, with ropes and chisels. It took years for each.
+The stairs up the side of the Rock have more steps than anyone agrees on. Count them yourself.
+From up there you can see the whole fan of the village, every street running out from here.
+The Rock catches the sun first in the morning and last at night. The faces never sleep.
+Children dare each other to touch the nose of the first face. Few get anywhere near.
+
+## greet.place  district=hokage_rock  fn=guide
+The path up the Rock starts behind the Residence. Take water; it's a climb.
+The best view of the faces is from the bench at the foot of the main street. Sit, look up, breathe.
+The Hokage Residence is right below the faces. Mission Desk on the ground floor, offices upstairs.
+
+## greet.place  district=hokage_rock  fn=react
+Come to look at the faces, {player}? I never get tired of them.
+Hello up here! Bit windy, isn't it? Hold on to your headband.
+Climbing the Rock? Mind the loose stones near the top.
+
+## greet.place  district=training  fn=teach
+Training? Warm up first, then the posts. Cold muscles pull, and pulled muscles take a week.
+The lake on this ground is for water-walking. Keep your chakra steady in your feet, not too much, not too little.
+The cliff's for wall-running. Start low. Everyone who starts at the top starts again at the bottom.
+A spar here ends when someone yields or can barely stand. Nobody dies on the training ground. That's the rule.
+
+## greet.place  district=training  fn=worldbuild
+Hear that? Kunai into wood, all day long. The posts get replaced every season.
+Three stumps in a row at Training Ground Three. Every Genin squad in the village has stood at them.
+Somebody's been at the logs since dawn. Look at the dents.
+The grass on the training grounds never grows back in the middle. Too many feet.
+
+## greet.place  district=training  fn=react
+Here to train, {player}? Good. The posts have been waiting for you.
+Hello! Mind the shuriken line, there's a squad practising over there and they're not very accurate.
+Taking a break? Sit on the stump. Everyone sits on that stump.
+You look ready for a spar. Or a nap. It's hard to tell on the training ground.
+
+## greet.place  district=hospital  fn=teach
+If you ever pass out from exhaustion or a fight, this is where you'll wake up. The beds are better than you'd think.
+Hospital stays are free in the Leaf. No bill, no fuss. Just rest and do what the medics say.
+Rest when you're told to rest. The medics here can mend a bone in an afternoon, but not a stubborn patient.
+
+## greet.place  district=hospital  fn=worldbuild
+The hospital garden smells of mint. The Suzuran herb beds are right behind it.
+The second floor's for the long stays. They play shogi up there all day.
+The windows on the children's ward are covered in paper cranes. Every patient folds one.
+Medics come and go at all hours. The lights here never go off.
+
+## greet.place  district=hospital  fn=react
+Visiting someone, {player}? Or did you get hurt? Tell me you didn't get hurt.
+Hello. Quiet voices, please. People are trying to rest.
+Oh, {player}. Seeing you here makes me nervous. You're all right, aren't you?
+
+## greet.place  district=shrine  fn=worldbuild
+Hear the bell? Everyone gets one ring. Make it count.
+The shrine's where the village comes for New Year and for weddings. Most days it's just the crows and me.
+The fortune papers tied to the rope there? Bad luck, left behind so it doesn't follow people home.
+The steps up to the shrine are worn smooth in the middle. Hundreds of years of feet.
+The shrine's foxes are carved stone, but people still leave them fried tofu. Someone always eats it.
+Quiet up here, isn't it? Even the wind seems to whisper.
+
+## greet.place  district=shrine  fn=guide
+Ring the bell, bow twice, clap twice, bow once more. That's all there is to it.
+Fortunes are drawn from the box by the bell. A few ryo, and you'll know your luck for the season.
+The bench behind the main hall faces the Rock. Best place in the village to sit and think.
+
+## greet.place  district=shrine  fn=react
+Come to pray, {player}? Or just to sit? Both are welcome here.
+Hello. You climbed all those steps. Sit and catch your breath.
+Drawing a fortune today? I got a middling one. Middling is fine. Middling is safe.
+
+## greet.place  district=river  fn=worldbuild
+The river splits the village in two, and the bridges sew it back together.
+The fishing boats tie up under the second bridge. The fishermen argue there every evening.
+The water's clear enough to see the stones on the bottom, right up until the rain.
+The ferry's run from the same landing for a hundred years. The ferryman's rope is new every spring.
+Herons fish along this bank at dawn. Stand still and they'll come within arm's reach.
+The kids skip stones off the third bridge. The record's nine. Nobody's beaten it in years.
+
+## greet.place  district=river  fn=teach
+Don't swim where the river bends. The current pulls harder than it looks.
+The stepping stones by the old bridge are good balance practice. They're also good for falling in.
+
+## greet.place  district=river  fn=react
+Hello, {player}! Come to watch the water? Me too. It's better than thinking.
+Lovely by the river today. Sit a while, if you have time.
+Careful near the edge, {player}, the bank's slippery.
+Fishing? Or just looking? Either way, the river doesn't mind.
+
+## greet.place  district=apartments  fn=worldbuild
+The stairwell lamp's out on the third floor again. Mind the steps.
+Every flat in this block has the same layout and nobody's furnished two the same.
+Thin walls in these blocks. I know what my neighbour has for breakfast by the sound of it.
+The roof of the block has the best view of the Rock. People sneak up to watch the sunset.
+Somebody on the fourth floor plays the flute every evening. We've all learned to like it.
+The landlord sweeps the stairs once a week. We sweep them the other six days.
+
+## greet.place  district=apartments  fn=react
+Hello, neighbour! Settling in to the block all right?
+Heading up to your flat? Your door's the one with the dent, isn't it? Everybody's got a dent.
+Hello, {player}! I heard you moving furniture last night. Finally making it home?
+
+## greet.place  district=apartments  fn=teach
+Furnishing your flat? Pieces sell back for half what you paid, so choose things you'll keep.
+Your own bed's the best sleep you'll get. Hospital beds and bedrolls clear the tiredness too, but nothing beats home.
+If you're stuck on what to put in your flat, the furniture shop has everything laid out in a showroom.
+
+## greet.market  market=yes  fn=worldbuild
+Market Day! Every farmer from outside the wall is here, and every one of them is shouting.
+It's Market Day, {player}! The main street's been stalls end to end since dawn.
+Mind your purse on Market Day. Not because of thieves. Because of the dango.
+Market Day means the travelling merchants are in. Strange spices, strange cloth, strange hats.
+Smell that? Every food stall in the village is grilling at once. Market Day's the best day of the week.
+The fishmongers bring their best catch on Market Day. The cats know. Look at them all lined up.
+Market Day! I've been saving all week. Today I'm buying the good pickles.
+Every Market Day the same two farmers set up side by side and argue about turnips. It's tradition now.
+The flower stalls spill right across the street on Market Day. You can't walk without stepping in petals.
+Market Day crowds! I nearly lost my shoe by the tea house. Somebody handed it back on a stick.
+The Akimichi buy half the meat on Market Day. The other half's for the rest of us, if we're quick.
+Market Day brings the whole village out. Even the Aburame come, quiet as always, buying honey.
+
+## greet.market  market=yes  fn=guide
+Market Day! The bargains are at the river end, where the farmers are. The fancy stalls are by the Rock.
+If you want the best produce, go before nine. After that it's picked over and the prices go up.
+The travelling merchants set up by the gate on Market Day. Go and see; they've things nobody here sells.
+For lunch on Market Day, skip Ichiraku's queue and try the dumpling cart by the second bridge.
+Prices drop at the end of Market Day. Wait until the stalls start packing up, and haggle.
+
+## greet.market  market=yes  fn=react
+Market Day, {player}! What are you after? I'll tell you who has it cheapest.
+Out for Market Day? Me too. I've a list as long as my arm and ryo as short as my thumb.
+Look at all this! Market Day never stops surprising me, and I've been to a thousand of them.
+Hello, {player}! Market Day crowds, eh? Stay close to the stalls, the middle of the street's a river of people.
+Bought anything yet, {player}? I've bought three things I didn't need and none I did.
+
+## greet.market  market=yes  personality=pragmatic  fn=teach
+Market Day. Never pay the first price, never buy at the first stall, and always count your change.
+
+## greet.market  market=yes  personality=playful  fn=react
+Market Day! I'm going to try one of everything. I'm on stall six. I've eaten so much.
+
+## greet.market  market=yes  personality=curious  fn=react
+Market Day! A merchant's selling a fruit with spikes on it. Nobody knows what it tastes like. I have to find out.
+
+## greet.place  district=hospital  fn=guide
+The hospital's front desk keeps a list of visiting hours. Afternoons are best; mornings are for rounds.
+If you need a medic quickly, the side door by the herb garden is closer to the treatment rooms.

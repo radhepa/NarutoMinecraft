@@ -1,0 +1,74 @@
+# The scroll shop on the market street (Beta 2): technique scrolls, Genin and up; blank scrolls, ink, brushes, chakra paper.
+#! fn: commerce
+
+## shop.scroll_shop.greet  shop=scroll_shop  fn=commerce
+Welcome. Speak softly, the paper doesn't like shouting.
+Come in. Mind the ink pots on the step.
+Good day, {player}. Every scroll in here was copied by hand, so touch the edges only.
+Hello. Looking to learn, or looking to look? Both are welcome.
+Shut the door behind you, the draught curls the paper.
+
+## shop.scroll_shop.greet  shop=scroll_shop  player_rank=academy  fn=commerce,react,teach
+An Academy student. You may read the spines, but the jutsu scrolls wait until you wear a headband.
+Not yet, little scholar. Jutsu scrolls are for Genin and up. Blank paper and ink, though, I'll sell you.
+
+## shop.scroll_shop.browse  shop=scroll_shop  fn=commerce
+Blank scrolls on the bottom shelf, ink and brushes beside them.
+Chakra paper in the drawer. Hold a slip, push a little chakra in, and it tells you your nature.
+The racks go by element and by rank. Start at the low ones and work up.
+Those boxes are storage scrolls. Clever things. A whole camp kit rolled up in your sleeve.
+Calligraphy brushes, three sizes. The fine one is for sealing work.
+Read the first panel before you buy. If it makes no sense, it isn't your scroll yet.
+
+## shop.scroll_shop.browse  shop=scroll_shop  player_rank=!academy  fn=commerce,teach
+Jutsu scrolls are behind the counter. Tell me what you've mastered and I'll tell you what's next.
+
+## shop.scroll_shop.buy  shop=scroll_shop  kind=cycle  fn=commerce
+{item}. {pay}, and a cloth to wrap it in.
+There. Read it twice, practise it a hundred times.
+That's {pay}. Keep it out of the rain.
+Yours. If the ink smudges, bring it back and I'll recopy the panel.
+{pay}, thank you. A good choice for your level.
+One {item}, rolled tight. Untie it at home, not in the street.
+
+## shop.scroll_shop.cant_afford  shop=scroll_shop  kind=cycle  fn=commerce
+That scroll costs more than you carry. Knowledge is patient, it'll wait.
+Short. A blank scroll and some ink are cheaper, and copying teaches a great deal.
+Not quite. Come back after your next mission.
+I can't lower it, the copyist has to eat. But I'll hold it a few days.
+
+## shop.scroll_shop.sold_out  shop=scroll_shop  kind=cycle  fn=commerce
+The last {item} went yesterday. The copyist needs a week for another.
+Sold out. The Academy bought a stack for the new Genin.
+None left, I'm afraid. I'll put your name in the book.
+
+## shop.scroll_shop.haggle  shop=scroll_shop  fn=commerce,reveal_character
+Haggle over learning? Shame. Though I'll throw in a brush.
+Every panel took a day to copy. The price is fair, and I'll not argue it.
+Buy two from the same set and the second is a little cheaper. The set was meant to be read together.
+A discount for a student who reads the whole thing first? That's how I'd like to sell, honestly.
+
+## shop.scroll_shop.closing  shop=scroll_shop  time=evening|night  fn=commerce
+The lamps are too dim to read by soon. I close before I ruin my eyes.
+Closing shortly. Choose your scroll, or choose tomorrow.
+Last sale. I'm rolling the shutters before the evening damp gets in.
+
+## shop.scroll_shop.recommend  shop=scroll_shop  fn=commerce,teach
+The {item}. It's below your rank, which means you'll master it quickly. Confidence is worth the price.
+New jutsu don't come from scrolls alone. Read it here, practise it at the training grounds.
+If you're stuck on a technique, a scroll on chakra control will do more than a scroll on fire.
+The {special}. One of the copyist's best hands, look at that brushwork.
+Blank scrolls and good ink. Write down what your sensei says. You'll forget it otherwise.
+Not sure which element suits you? Buy a slip of chakra paper first. It burns, soaks, crumbles or cuts, and then you know.
+
+## shop.scroll_shop.regular  shop=scroll_shop  level=3..10  fn=commerce,deepen_bond
+My most devoted reader! I saved the new copy for you to see first.
+You've read half my shelves standing at that counter. I should charge rent.
+Sit, if you like. Regulars may read by the window.
+I noticed you underline in pencil. Good. Ink would be a crime.
+
+## shop.scroll_shop.order_ready  shop=scroll_shop  kind=cycle  fn=commerce
+Your {item} is copied and dry. Unroll it gently the first time, the paper's still stiff.
+The copyist finished your order this morning. Every panel checked twice.
+Here's the scroll you ordered. I tied it with a green cord so you'd know it was yours.
+Your order's in. Read the last panel first, it's the one people skip.

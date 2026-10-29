@@ -1,0 +1,302 @@
+# Quiet hangouts (LIFE_TOGETHER.md §3): fishing at the river, stargazing on the Hokage Rock, painting at the
+# overlook, shogi at the tea house, and the Academy library. Parts as in hangout-meals.txt; callbacks in
+# callback-hangout-quiet.txt.
+#! kind: cycle
+#! fn: deepen_bond
+
+# == fishing =======================================================================================
+## hangout.fishing.ask
+Fishing at dawn? The river's high and the trout are hungry.
+I've a spare rod, {player}. Come sit by the river with me a while.
+Let's go fishing. We don't even have to catch anything. Just sit.
+## hangout.fishing.invite
+River at first light. I'll bring the bait, you bring the patience.
+A note tucked in your door: "Fishing tomorrow, early. The flat rock by the bend."
+## hangout.fishing.yes
+Fishing? Yes. Quiet water's just what I need.
+I'll dig up some worms. Meet you at the bend.
+## hangout.fishing.no.busy
+I'm busy this morning. {when}? The fish will wait.
+Can't today. Try me {when}, early.
+## hangout.fishing.no.not_today
+The river's too muddy after the rain. Another day.
+Not today. I couldn't sit still if I tried.
+## hangout.fishing.no.not_their_thing
+Sitting still for hours waiting for a fish? I'd go mad. Sorry.
+## hangout.fishing.no.not_close_enough
+Fishing's my quiet time. Maybe when we know each other better.
+## hangout.fishing.arrive
+Here's the spot. Cast past the reeds, and then just... wait.
+Mist on the water. Perfect. Quiet now, or you'll scare them off.
+## hangout.fishing.rough
+Not a nibble, and not much to say either. Oh well.
+## hangout.fishing.fine
+Two small ones and a sunburn. A fair morning.
+## hangout.fishing.good
+That was peaceful. I didn't think about anything for hours. Thank you.
+Good catch, good company. Let's come back.
+## hangout.fishing.great
+That was the best morning I've had in a long time. The river, the quiet, you.
+I'm going to remember this morning when things get loud.
+## hangout.fishing.stood_up
+I fished alone until noon. Caught one. Talked to it about you. It didn't care either.
+## hangout.fishing.ritual
+Our fishing mornings. The flat rock at the bend is ours now, as far as I'm concerned.
+## hangout.fishing.ritual_missed
+Our rock at the river's been empty for weeks. Somebody else sat on it. I glared.
+## hangout.fishing.highlight.1
+A big one! Pull, {player}, pull! ...We got it! Look at the size of it!
+## hangout.fishing.highlight.2
+A heron landed right next to us and fished better than both of us combined.
+## hangout.fishing.highlight.3
+You fell in! Right in! Come here, I'll pull you out. Stop laughing, you'll swallow the river.
+## hangout.fishing.highlight.4
+The sun's coming up through the mist. Look at the water. It's on fire.
+## hangout.fishing.highlight.5
+We caught the same fish on both our lines! How is that even possible?
+## hangout.fishing.highlight.6
+An otter's watching us from the other bank. I think it wants our bait.
+## hangout.fishing.highlight.7
+We just sat in silence for an hour, and it was the best conversation we've had.
+## hangout.fishing.highlight.8
+You caught a sandal. A whole sandal! Someone in the village is walking around with one.
+## hangout.fishing.highlight.9
+We grilled our catch right here on the bank. Nothing's ever tasted this good.
+## hangout.fishing.highlight.10
+You let the little one go. "Come back bigger," you said. I liked that.
+
+# == stargazing ====================================================================================
+## hangout.stargazing.ask
+Stargazing on the Hokage Rock tonight? The sky's going to be clear.
+Come up the Rock with me after dark. I want to show you a constellation.
+It's a clear night. Let's lie on the Rock and count shooting stars.
+## hangout.stargazing.invite
+The Hokage Rock, after dark. I'll bring a blanket and tea.
+A note: "Clear skies tonight. Meet me on top of the Rock. Look up."
+## hangout.stargazing.yes
+Stars? Yes. I'll bring the warm tea.
+I'd love that. Let's go before the moon rises and washes them out.
+## hangout.stargazing.no.busy
+Not tonight, I've an early start. {when}, if it's clear?
+I'm busy after dark tonight. How about {when}?
+## hangout.stargazing.no.not_today
+The clouds are coming in. We'd see nothing. Another night.
+I'm too tired to climb the Rock tonight. Soon, though.
+## hangout.stargazing.no.not_their_thing
+Lying on cold rock staring at dots? Not for me, sorry.
+## hangout.stargazing.no.not_close_enough
+Up on the Rock at night, just us? Maybe once we know each other better.
+## hangout.stargazing.arrive
+Lie back. No, further. There. Now look straight up.
+Here, blanket. The stone's cold. Now give your eyes a minute.
+## hangout.stargazing.rough
+Clouds rolled in, and so did the awkward silence. Ah well.
+## hangout.stargazing.fine
+A clear patch, a few stars. Not bad for a weeknight.
+## hangout.stargazing.good
+I always feel small up there. Small in a good way. Thanks for coming.
+That was lovely. Let's do it again when the sky's this clear.
+## hangout.stargazing.great
+I've never seen the sky like that. And I've never wanted to share it with anyone before.
+That was magic, {player}. I'm still dizzy from all the stars.
+## hangout.stargazing.stood_up
+I lay on the Rock and watched the stars alone. There were a lot of them. I counted.
+## hangout.stargazing.ritual
+Our nights on the Rock. I've named a star after them. Not after you. After the nights.
+## hangout.stargazing.ritual_missed
+I haven't been up the Rock at night in weeks. It doesn't feel the same alone.
+## hangout.stargazing.highlight.1
+A shooting star! Did you see it? Make a wish, quick!
+## hangout.stargazing.highlight.2
+That cluster there looks just like a ramen bowl. You see it too? The Ramen! We've named one!
+## hangout.stargazing.highlight.3
+The whole village's lanterns are going out one by one below us. Like it's falling asleep.
+## hangout.stargazing.highlight.4
+Three shooting stars in a row! That's three wishes. Don't waste them.
+## hangout.stargazing.highlight.5
+You fell asleep mid-sentence. I let you. The stars were keeping watch anyway.
+## hangout.stargazing.highlight.6
+An owl landed on the stone head right above us. It's watching us watch the sky.
+## hangout.stargazing.highlight.7
+The Milky Way's so bright tonight. It looks like spilt rice across the dark.
+## hangout.stargazing.highlight.8
+We stayed up until the sky went grey. We watched the whole night turn.
+## hangout.stargazing.highlight.9
+We both pointed at the same star at the same time. Of all of them.
+## hangout.stargazing.highlight.10
+You told me the story your teacher told about the stars. I'd never heard it. I love it.
+
+# == painting at the overlook ======================================================================
+## hangout.painting.ask
+Come paint with me at the overlook? You don't have to be good. I'm not.
+I've got spare brushes and a whole roll of paper. Paint the valley with me?
+The light's lovely at the overlook today. Let's go and paint it.
+## hangout.painting.invite
+The overlook, midday. I'll set up two easels.
+A note, with a little ink drawing of a tree: "Paint with me tomorrow?"
+## hangout.painting.yes
+Painting? I'd love to. I'll try not to get ink on your sleeves.
+Yes. I'll bring the good paper.
+## hangout.painting.no.busy
+I'm busy today. {when}? The view will keep.
+Not right now. {when}, when the light's better?
+## hangout.painting.no.not_today
+I'm not feeling creative today. Everything I paint would be grey.
+The wind's too strong at the overlook today. Another time.
+## hangout.painting.no.not_their_thing
+Painting? I can't draw a straight line. I'd just be embarrassed.
+## hangout.painting.no.not_close_enough
+I don't paint in front of people I don't know well. It's too personal.
+## hangout.painting.arrive
+There. The whole valley. Don't paint what you see, paint what you feel. Or both.
+Water, ink, brush. Start with the sky. It's the easiest to get wrong.
+## hangout.painting.rough
+Neither of us got anything down that we liked. Oh well. Ink washes off.
+## hangout.painting.fine
+A few decent sketches. A nice way to pass the afternoon.
+## hangout.painting.good
+Look at yours! You've got a feel for it. I'm a little jealous.
+That was peaceful. I'll pin today's painting by my door.
+## hangout.painting.great
+Today I painted the best thing I've ever painted, and I think it's because you were here.
+That was wonderful. Let's swap paintings. I want yours.
+## hangout.painting.stood_up
+I set up two easels at the overlook. I painted the empty one, in the end.
+## hangout.painting.ritual
+Our painting afternoons. I've a whole folder of your work now. Don't ask for it back.
+## hangout.painting.ritual_missed
+My brushes have gone stiff. I haven't been to the overlook since we stopped going.
+## hangout.painting.highlight.1
+A gust took your painting right off the easel! It's flying over the valley! Bye!
+## hangout.painting.highlight.2
+You painted me! When? That's me, isn't it? It's lovely!
+## hangout.painting.highlight.3
+A rainbow's come out over the valley, right where we're painting. Quick, quick!
+## hangout.painting.highlight.4
+We both painted the same cloud, in completely different colours. Yours is purple!
+## hangout.painting.highlight.5
+A little deer walked right up to the easels to see what we were doing.
+## hangout.painting.highlight.6
+You knocked the inkpot over and made the best accidental mountain I've ever seen.
+## hangout.painting.highlight.7
+A passing merchant offered to buy your painting! Five ryo! Sell it! Don't sell it!
+## hangout.painting.highlight.8
+We painted until the light went, and then we painted the dusk.
+
+# == shogi =========================================================================================
+## hangout.shogi.ask
+A game of shogi at the tea house? I promise not to gloat. Much.
+I've been studying openings. Play me, {player}? I need a victim.
+Shogi this afternoon? Loser pays for the tea.
+## hangout.shogi.invite
+Shogi at the tea house this afternoon. I'll set up the board.
+A note: "I challenge you to shogi. Tea house. Bring your best defence."
+## hangout.shogi.yes
+Shogi? Yes. Prepare to lose your rook.
+Gladly. It's been ages since I had a real opponent.
+## hangout.shogi.no.busy
+I can't right now. {when}? I'll be sharper then.
+Busy today. Play me {when}.
+## hangout.shogi.no.not_today
+My head's too full to think three moves ahead. Another day.
+Not today. I'd play badly and blame you.
+## hangout.shogi.no.not_their_thing
+Shogi bores me, I'm afraid. All that sitting and staring.
+## hangout.shogi.no.not_close_enough
+I'm particular about who I play. Let's get to know each other first.
+## hangout.shogi.arrive
+Board's set. You move first. Think carefully.
+Tea's poured, pieces are out. Begin when you're ready.
+## hangout.shogi.rough
+That game went sideways, and so did the conversation. Next time.
+## hangout.shogi.fine
+A decent game. Neither of us disgraced ourselves.
+## hangout.shogi.good
+Good game. You made me think. That doesn't happen often.
+I'll be replaying that game in my head all night. Well played.
+## hangout.shogi.great
+That was the best game I've played in a year. I'd frame the board if I could.
+Brilliant. Every move a conversation. Let's play again soon.
+## hangout.shogi.stood_up
+I set up the board and played both sides. I lost. To myself. Where were you?
+## hangout.shogi.ritual
+Our shogi games. The tea house keeps our board in the corner now.
+## hangout.shogi.ritual_missed
+Our board's been gathering dust in the tea house corner. The owner asked if you'd quit.
+## hangout.shogi.highlight.1
+A draw! Perfectly balanced! Nobody can move! That never happens!
+## hangout.shogi.highlight.2
+You took my king with a lowly pawn. A pawn! I'll never live that down.
+## hangout.shogi.highlight.3
+A crowd's gathered round our board. Old players, nodding. I'm sweating.
+## hangout.shogi.highlight.4
+That trap you set took twenty moves to spring. Twenty! I didn't see it at all.
+## hangout.shogi.highlight.5
+The old champion at the next table leaned over and said "good move" to you. To YOU.
+## hangout.shogi.highlight.6
+We played so long the tea went cold three times.
+## hangout.shogi.highlight.7
+I knocked the board with my elbow and we had to rebuild it from memory. And we did!
+## hangout.shogi.highlight.8
+You let me take back one move. Just one. I'm grateful and humiliated.
+## hangout.shogi.highlight.9
+Your comeback, from three pieces down! I had you! How did I not have you?
+## hangout.shogi.highlight.10
+We invented a new opening by accident. We should name it after ourselves.
+
+# == the Academy library ===========================================================================
+## hangout.library.ask
+Study with me at the Academy library? I've a scroll I can't make sense of alone.
+The library's quiet this afternoon. Come read with me, {player}?
+Let's go to the library. I need someone to stop me falling asleep on the desk.
+## hangout.library.invite
+Academy library, after lunch. I'll save the table by the window.
+A note in very neat writing: "Library tomorrow? I've found a scroll you'll like."
+## hangout.library.yes
+The library? Yes. I've three scrolls I want to finish.
+Gladly. Two heads are better than one for those old scrolls.
+## hangout.library.no.busy
+I'm busy just now. {when}? The scrolls won't run away.
+Can't today. {when}, maybe?
+## hangout.library.no.not_today
+My eyes are too tired for reading today. Another time.
+Not today. My brain's full.
+## hangout.library.no.not_their_thing
+Sitting in a library all afternoon? I'd fall asleep in minutes. Sorry.
+## hangout.library.no.not_close_enough
+I'm a bit private when I study. Maybe once we know each other better.
+## hangout.library.arrive
+Shh. Window table's free. I'll get the scrolls, you get the ink.
+Here. Mind the librarian, they hear everything.
+## hangout.library.rough
+We didn't get much done, and we got shushed twice. Oh well.
+## hangout.library.fine
+Productive afternoon. My hand aches from notes.
+## hangout.library.good
+I understand it now! You explained it better than the scroll did.
+Good study session. Let's make a habit of it.
+## hangout.library.great
+That was the best afternoon of study I've ever had. I actually enjoyed it!
+I feel twice as clever. Let's do this every week.
+## hangout.library.stood_up
+I saved the window table all afternoon. The librarian kept giving me pitying looks.
+## hangout.library.ritual
+Our library afternoons. The librarian sets out two cushions for us now.
+## hangout.library.ritual_missed
+I've been studying alone again. The window table feels very big.
+## hangout.library.highlight.1
+We found a pressed flower inside an old history scroll. Someone hid it there years ago.
+## hangout.library.highlight.2
+We both laughed at the same line and the librarian shushed us so hard a candle went out.
+## hangout.library.highlight.3
+You solved the riddle in the margin! The one nobody's solved! Write your name next to it!
+## hangout.library.highlight.4
+A scroll fell off the top shelf right onto your head. Are you all right? It's about falling objects!
+## hangout.library.highlight.5
+The librarian showed us the oldest scroll in the Academy. We weren't allowed to touch it. We breathed on it.
+## hangout.library.highlight.6
+Rain against the window, a pile of scrolls and nowhere to be. Perfect.
+## hangout.library.highlight.7
+You fell asleep on my notes and woke up with my writing on your cheek. Backwards!
+## hangout.library.highlight.8
+We found a map of the village from before the Academy was built. Everything's in the wrong place!

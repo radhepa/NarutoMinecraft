@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for thoughtful residents. Their own life, in their voice.
+#! tags: personality=thoughtful
+
+## chat.personal  fn=reveal_character
+I've been rereading a book of travel letters. The writer complains about inns for forty pages. Strangely comforting.
+Slow, in a good way. I watched the river for an hour and decided not to decide anything today.
+I've been wondering why we bow lower to the Hokage Rock in the morning than in the evening. Nobody I've asked knows.
+I wrote a letter to an old friend and then didn't send it. Writing it was the point, I think.
+I keep a notebook of things children ask me. Today's entry: "Does the moon get tired?" I still don't have an answer.
+My father used to say a question is a door you leave open. I've been leaving a lot of doors open lately.
+I finished a book this morning and felt that small grief you feel when a good book ends. Do you know it?
+I tried to count the stone steps up to the shrine. I lost count twice, so I've decided there are "enough".
+A quiet day. I sat in the library and read the same page three times. The page was fine. My mind wasn't.
+I've been thinking about how the Leaf smells different in every street. Bread here, ink there, wet dog by the gate.
+Someone asked me what I'd do with a free afternoon, and I couldn't answer. So I took one to find out.
+I learned that the old bridge was built without a single nail. I've walked over it for years and never once wondered.
+I like to sit at the back of the tea house and guess what people are talking about. I'm almost always wrong.
+My wife says I think too slowly to win an argument. I say I'm still thinking. We've been married twenty years.
+I planted a tree this spring knowing I'd likely never sit in its shade. That felt right, somehow.
+There's a line in an old poem: "the frog jumps; the water remembers." I've been chewing on it all week.
+I spent the morning sorting my books by how they made me feel. It was a terrible system. I loved it.
+I've decided patience is mostly just curiosity that's learned to sit still.
+Today I watched an old man teach a child to skip stones. Neither of them was good at it. Both were very happy.
+I keep meaning to learn calligraphy properly. Every brush I buy ends up holding a bookmark.
+It rained on my walk and I didn't hurry. There's a kind of freedom in being already wet.
+I read that the first Academy had only one classroom. I wonder what the teachers argued about.
+I've been trying to remember my grandmother's voice. I can remember her laugh, but not her speaking. Odd, isn't it?
+My son asked why the sky is blue. I gave him three answers and he found a flaw in each. Proud of him, honestly.
+I spent an hour choosing a tea and then forgot to drink it. Typical.
+I think the best conversations happen while doing something else. Shelling peas, walking, mending a net.
+I've noticed the cicadas start their song at the same minute each evening. I timed it. My neighbours think I'm odd.
+I've been keeping a list of words that have no good translation. "The smell after rain" is my favourite so far.
+A strange thing: every time I'm sure I'm right, I learn something that makes me less sure. It's getting tiring.
+I spent the evening watching the lanterns go on, one window at a time. Every light is somebody's whole life.
+I lent a book to someone two winters ago. I don't want it back. I just hope they read it.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I copy old scrolls for the archive. Today's was a grocery list from sixty years ago. Eggs were cheaper. Everything was.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+On watch last night I counted the stars I could name. Eleven. On a long mission you learn which ones keep you company.
+My sensei told me a jutsu learned too fast is forgotten just as fast. I didn't believe that at twelve. I do now.
+
+## chat.personal  fn=worldbuild
+The Leaf's library lends scrolls for a season at a time. People say it's so you finish them. I think it's so you miss them.
+Old residents still call the main street "the long road", from before the shops. Words outlive the things they name.
+The shrine keeps a book where anyone may write a wish. I read the old pages sometimes. People wished for rain a great deal.
+They say each Hokage's face on the Rock was carved by a different hand. You can see it in the eyebrows, if you look.
+
+## chat.personal  fn=hook
+I left my reading glasses somewhere along the river this morning. I've been squinting at everything since.
+There's a word carved on the bridge railing I can't read. Old script. I'd love to know what it says.
+I lost a bookmark from my late father. Plain wood, a pressed maple leaf. Probably in the library, somewhere.
+
+## chat.personal  fn=filler
+Hm. Let me think. Decent, I'd say. Yes. Decent.
+Good, I think. I'll know for certain tonight, when I look back on it.
+
+## chat.personal  fn=reveal_character
+I've been asking myself whether the river is the same river every day. The water's new. The name's old. Hm.
+I watched the potter break a bowl that had a flaw only the potter could see. I keep thinking about that.

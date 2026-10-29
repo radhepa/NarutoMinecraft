@@ -1,0 +1,15 @@
+# The spare key (HOME.md §9.2): at bond level 6 you give someone a key to your flat. give: their first reaction.
+# accept: as they take it, what it will mean. Once each.
+#! fn: deepen_bond
+
+## home.key.give
+A key? To your flat? You trust me with that? ...I won't let you down.
+You're giving me a key. I don't know what to say. Nobody's ever done that for me. [BLUSH]
+Your spare key! I'm threading it on a string so I can never lose it. [EXCLAIM]
+A key to your home. That's a big thing, {player}. I know it is. Thank you. [HEART]
+
+## home.key.accept
+I'll keep it safe. And if you're ever away too long, I'll come and water the plant.
+Right. If you're out when I come by, I'll wait inside. With the kettle on.
+I'll only use it when it matters. Or when you've run out of food. Which matters.
+It goes next to my own house key. Now I've two homes to look after.

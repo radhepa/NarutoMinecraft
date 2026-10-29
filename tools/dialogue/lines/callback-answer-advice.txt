@@ -1,0 +1,173 @@
+# Callbacks for questions/advice.txt: the resident remembers the player's advice, and how it went.
+#! fn: callback
+
+## callback.answer.q.advice.cousin_shop.a1
+I've been thinking about your advice: go, see somewhere new. I've started packing. Slowly.
+
+## callback.answer.q.advice.cousin_shop.a2
+I told my cousin no. I'm staying. You were right: my life's here. Thursdays at the bath and all.
+
+## callback.answer.q.advice.cousin_shop.a3
+One season at my cousin's shop, like you said. I've written to say I'll come for the summer.
+
+## callback.answer.q.advice.cousin_shop_failing.a1
+I went and helped my cousin, like you said. The shop's back on its feet. Family first.
+
+## callback.answer.q.advice.cousin_shop_failing.a2
+"It's not your burden." I wrote that to my cousin, more gently. They understood. Mostly.
+
+## callback.answer.q.advice.cousin_shop_failing.a3
+I sent my cousin an apprentice and some savings instead of myself. They're doing well. Your idea.
+
+## callback.answer.q.advice.row_with_friend.a1
+I apologised first, like you told me. We laughed about the teapot after. Thank you.
+
+## callback.answer.q.advice.row_with_friend.a2
+I gave it a few days, as you said. The steam's mostly out. We nodded at each other at the market.
+
+## callback.answer.q.advice.row_with_friend.a3
+I turned up with buns, like you said. My friend took one, then two, then hugged me. It worked!
+
+## callback.answer.q.advice.row_with_friend.a4
+I said what really hurt. It wasn't the teapot at all, of course. Your advice was hard, and right.
+
+## callback.answer.q.advice.friend_still_cold.a1
+I kept trying, like you said. Third visit, my friend made tea. We're mending.
+
+## callback.answer.q.advice.friend_still_cold.a2
+I gave my friend space, as you advised. Yesterday they knocked on my door. Space worked.
+
+## callback.answer.q.advice.friend_still_cold.a3
+A go-between, you suggested. My friend's aunt carried a message. We're talking again.
+
+## callback.answer.q.advice.worst_shifts.a1
+I spoke up at the workshop. Politely, like you said. My hands shook, but I did it.
+
+## callback.answer.q.advice.worst_shifts.a2
+I worked harder, as you said, and kept quiet. My master noticed. I got the morning shift!
+
+## callback.answer.q.advice.worst_shifts.a3
+I found a new workshop, like you suggested. Better hours, kinder master. Thank you.
+
+## callback.answer.q.advice.shifts_awkward.a1
+You told me speaking up was right. I've stopped worrying. My master's warming again.
+
+## callback.answer.q.advice.shifts_awkward.a2
+I brought my master tea one morning, your idea. Now we drink it together before the shift starts.
+
+## callback.answer.q.advice.shifts_awkward.a3
+"It'll pass," you said. It did. Like a bruise, just as you said.
+
+## callback.answer.q.advice.pottery.a1
+I signed up at the potter's! Never too old, you said. My hands are grey with clay every evening.
+
+## callback.answer.q.advice.pottery.a2
+Start with a cup, you told me. I've made three. None of them stand up straight, but they're cups.
+
+## callback.answer.q.advice.pottery.a3
+I owe you something from my wheel, I remember. It's coming. Don't expect much.
+
+## callback.answer.q.advice.first_bowl.a1
+Bowl number four! I kept going, like you said. This one only leaks a little.
+
+## callback.answer.q.advice.first_bowl.a2
+My leaky first bowl holds dried flowers on my windowsill now. You were right. It's lovely there.
+
+## callback.answer.q.advice.first_bowl.a3
+I swallowed my pride and took a lesson. You were right. I'd been holding the clay all wrong.
+
+## callback.answer.q.advice.child_academy.a1
+I let my little one join the Academy, like you said. They come home glowing every day.
+
+## callback.answer.q.advice.child_academy.a2
+We're waiting a year, as you suggested. My child sulked a week, then started training in the yard.
+
+## callback.answer.q.advice.child_academy.a3
+We visited the Academy together, your idea. The instructors were so patient. I feel better.
+
+## callback.answer.q.advice.academy_bruises.a1
+Bruises heal, you told me. I've stopped fussing. Well, I fuss less.
+
+## callback.answer.q.advice.academy_bruises.a2
+I talked to the instructor, as you said. My child's doing well. The bruises are from enthusiasm.
+
+## callback.answer.q.advice.academy_bruises.a3
+I asked my child if they were happy, like you said. Grinning ear to ear. That was my answer.
+
+## callback.answer.q.advice.birthday_gift.a1
+I knitted my neighbour a scarf, like you suggested. It's crooked. They wear it every day anyway.
+
+## callback.answer.q.advice.birthday_gift.a2
+Sweet buns for my neighbour's birthday, your idea. Gone in an hour. Perfect gift.
+
+## callback.answer.q.advice.birthday_gift.a3
+I asked around, as you said. My neighbour wanted a new tea strainer. Who knew?
+
+## callback.answer.q.advice.birthday_gift.a4
+Flowers from the Yamanaka shop for my neighbour. You were right; they knew exactly what to pick.
+
+## callback.answer.q.advice.lend_money.a1
+I said no to the loan, kindly, like you told me. My friend took it better than I feared.
+
+## callback.answer.q.advice.lend_money.a2
+I lent the money again. You said trust them, and I did. We'll see.
+
+## callback.answer.q.advice.lend_money.a3
+Only lend what you can lose, you said. I lent a little. It felt right.
+
+## callback.answer.q.advice.repaid.a1
+Doubt was fair, you told me. I've forgiven myself for it. And I'm still eating those chestnuts.
+
+## callback.answer.q.advice.repaid.a2
+I told my friend I'd doubted them, like you suggested. They laughed. They'd doubted themselves too.
+
+## callback.answer.q.advice.repaid.a3
+I've just been glad, as you said. Didn't say a word. We roasted the chestnuts together.
+
+## callback.answer.q.advice.change_trade.a1
+You said change it. I've started an apprenticeship with the carpenter. Five generations of fish, and now wood.
+
+## callback.answer.q.advice.change_trade.a2
+I'm keeping the family nets, as you advised. I went out at dawn and the river was beautiful. You were right.
+
+## callback.answer.q.advice.change_trade.a3
+Nets in the morning, lessons in the afternoon. Your plan. I'm tired, but happy.
+
+## callback.answer.q.advice.family_quiet.a1
+I gave my family time, like you said. Last night my father asked about my new trade. Asked!
+
+## callback.answer.q.advice.family_quiet.a2
+I showed my family a plan, as you suggested. Numbers and all. My mother read it twice. They're coming round.
+
+## callback.answer.q.advice.family_quiet.a3
+I went ahead anyway, like you said. It's frightening. It's also the best month I've had in years.
+
+## callback.answer.q.advice.wedding_speech.a1
+I kept the speech short, your advice. Two minutes. Everyone said it was the best part.
+
+## callback.answer.q.advice.wedding_speech.a2
+I told the river story at my sister's wedding. She threw a rice ball at me. Then she hugged me.
+
+## callback.answer.q.advice.wedding_speech.a3
+Thank you for listening to me practise that speech. All six times. You're a saint.
+
+## callback.answer.q.advice.wedding_speech.a4
+I spoke from the heart, like you said. Forgot my notes entirely. My sister cried. Good crying.
+
+## callback.answer.q.advice.speech_after.a1
+I said yes to my cousin's wedding speech, because you said I'm good at it. Now I'm terrified again.
+
+## callback.answer.q.advice.speech_after.a2
+I slept on it, as you said, and woke up wanting to. So yes, another speech.
+
+## callback.answer.q.advice.speech_after.a3
+I let my cousin's best friend give the speech, your idea. They were wonderful. I just ate cake.
+
+## callback.answer.q.advice.lost_bet.a1
+I paid up my bet. A week of chores, done. Never betting against an Akimichi again.
+
+## callback.answer.q.advice.lost_bet.a2
+I went double or nothing against the Akimichi, like you said. Now I owe two weeks. Thanks a lot.
+
+## callback.answer.q.advice.lost_bet.a3
+We laughed it off over a drink, your idea. My friend forgave the chores. Mostly.

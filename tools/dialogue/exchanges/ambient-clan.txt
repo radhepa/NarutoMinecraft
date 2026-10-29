@@ -1,0 +1,88 @@
+# Overheard talk between members of the same clan: life inside the clan, never its secrets.
+#! tags: relation=clan
+
+## ambient.clan  fn=worldbuild
+A: The elders want everyone at the main hall for the evening meal.
+B: Everyone? Even the cousins from the border post?
+A: Even them. It must be important. Or someone's birthday.
+
+A: Who's sweeping the clan gate this week?
+B: You are. I did it last week, and the week before.
+
+A: The crest on the gate needs repainting.
+B: Ask the painters' lane. They did it beautifully last time.
+
+A: Our clan day's coming. Have you thought about what to bring?
+B: Grandmother's pickles. I'm afraid of what happens if I don't.
+
+## ambient.clan  clan=akimichi  fn=worldbuild
+A: The storehouse is full to the rafters.
+B: Then the feast's on. Nothing in an Akimichi storehouse stays full for long.
+
+A: Another bowl?
+B: I've had four.
+A: That wasn't a question.
+
+## ambient.clan  clan=nara  fn=worldbuild
+A: A doe gave birth by the stream this morning.
+B: Write it in the book. And leave them both be for a week.
+
+A: You fell asleep in the forest again.
+B: I was watching clouds. It's clan work, technically.
+
+## ambient.clan  clan=inuzuka  fn=worldbuild
+A: The kennels need mucking out.
+B: The kennels always need mucking out. That's the whole of the clan's history.
+
+A: Your partner's been howling at the gate since you left.
+B: Four hours! I was only at the market.
+
+## ambient.clan  clan=yamanaka  fn=worldbuild
+A: The orchids in the greenhouse opened overnight.
+B: Then the shop window changes today. Bring the ladder.
+
+## ambient.clan  clan=aburame  fn=worldbuild
+A: The hives are calm today.
+B: Good. Calm hives, calm clan.
+
+A: The garden beds need turning before the fireflies hatch.
+B: Gently. Last year someone dug too deep.
+
+## ambient.clan  clan=uchiha  fn=worldbuild
+A: Inspection at the police headquarters tomorrow. Polish your boots.
+B: My boots are always polished.
+A: Polish them again.
+
+## ambient.clan  clan=senju  fn=worldbuild
+A: The living tree has a new shoot by the hall door.
+B: Then we'll need to move the door. Again.
+
+## ambient.clan  clan=uzumaki  fn=worldbuild
+A: I brushed the old names on the memorial wall this morning.
+B: All of them?
+A: All of them. Every single one.
+
+## ambient.clan  clan=gekko  fn=worldbuild
+A: You held your guard too high again.
+B: The moon was in my eyes.
+A: The moon will always be in your eyes. Lower it.
+
+## ambient.clan  clan=hagane  fn=worldbuild
+A: The forge was cold when I came in. Who banked it badly?
+B: The apprentice. I've already given the talk.
+
+## ambient.clan  clan=kinoshita  fn=worldbuild
+A: The shrine wants a new gate before the New Year.
+B: Then the whole yard's on it. Cypress, and no nails.
+
+## ambient.clan  clan=suzuran  fn=worldbuild
+A: The racks of willow bark are dry.
+B: Then grind them tonight. The hospital wants fever powder by morning.
+
+## ambient.clan  fn=reveal_character
+A: Do you ever wish you'd been born outside the clan?
+B: Sometimes. Then I sit at the long table, and I don't.
+
+A: The elder praised your work at the meeting.
+B: Out loud?
+A: Out loud. In front of everyone. I nearly fell off the bench.

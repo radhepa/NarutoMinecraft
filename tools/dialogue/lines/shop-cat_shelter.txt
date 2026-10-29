@@ -1,0 +1,62 @@
+# The cat shelter: cats to adopt, cat food, toys and baskets.
+#! fn: commerce
+
+## shop.cat_shelter.greet  shop=cat_shelter  fn=commerce
+Welcome. Speak softly, please, the new arrivals are still nervous.
+Come in, and close the door quick. They'll be out in a flash.
+Hello, {player}. Here to meet someone?
+Welcome to the shelter. Sit on the cushion and wait. The cats choose you, not the other way round.
+In you come. Mind the tabby on the step, that's where it likes to sleep.
+
+## shop.cat_shelter.greet  shop=cat_shelter  weather=rain|thunder  fn=commerce,react
+Rainy days, every cat in the place piles into one basket. Come see.
+
+## shop.cat_shelter.browse  shop=cat_shelter  fn=commerce
+The ones on the high shelf are shy. The ones on your lap are not.
+Cat food on the shelf: dried fish, rice mash, and a jelly they go mad for.
+Baskets, blankets and little bells on ribbons. The bells are for you, so you know where they are.
+That one's been here longest. Very gentle, a little grumpy before breakfast.
+Toys in the box. Feathers on sticks, mostly. They like the stick better.
+
+## shop.cat_shelter.buy  shop=cat_shelter  kind=cycle  fn=commerce
+{item}. {pay}. Your cat will pretend not to care, but it will.
+Here you go. A bowl near the window, they like to eat and watch.
+That's {pay}. Thank you for looking after one of ours.
+Done. Every ryo here goes to food and blankets.
+{pay}. If your cat ignores it for a day, don't worry, that's normal.
+Yours. Bring a picture next time, we love to see where they end up.
+
+## shop.cat_shelter.cant_afford  shop=cat_shelter  kind=cycle  fn=commerce
+Not quite enough. The dried fish is cheaper, and they love it more anyway.
+You're a little short. Come and help clean the litter trays, we'll make it up.
+That's beyond your purse today. The cats will still be here.
+A few ryo shy. I can't lower it, the shelter barely covers its fish bills.
+
+## shop.cat_shelter.sold_out  shop=cat_shelter  kind=cycle  fn=commerce
+The {item}'s all gone. Donations come on Market Day.
+No kittens just now, they all found homes this week. Isn't that lovely?
+Out of stock. The fishmonger sends scraps tomorrow.
+
+## shop.cat_shelter.haggle  shop=cat_shelter  fn=commerce,reveal_character
+Haggling at a shelter? Bold. But every ryo here feeds a cat, so no.
+If you give one of them a home, the food for the first week is free.
+I can't do less. I can do an extra feather toy, though.
+Volunteer a morning, and we'll talk about a discount.
+
+## shop.cat_shelter.closing  shop=cat_shelter  time=evening|night  fn=commerce
+Closing soon. Night is when they all wake up and want attention.
+Last chance tonight. I'm doing the evening feed shortly.
+We shut at dusk. Say goodbye to whoever's on your lap.
+
+## shop.cat_shelter.recommend  shop=cat_shelter  fn=commerce,teach
+A cat suits a busy life. It'll keep the apartment warm while you're on missions.
+The {item}. It's the one that makes the old tabby purr.
+If you adopt, sit with your cat every day. That's how the trust grows.
+A basket by the window. Cats like to watch the street almost as much as sleep.
+Cats are tougher than they look. If yours gets into trouble, it'll get knocked out, not worse. Bring it straight here.
+
+## shop.cat_shelter.regular  shop=cat_shelter  level=3..10  fn=commerce,deepen_bond
+The grey one runs to the door when you come. Did you notice?
+Back again! You're our best volunteer, even when you're not volunteering.
+I saved the softest blanket for your cat. Take it home.
+How's your cat? I think about every one of them after they leave.

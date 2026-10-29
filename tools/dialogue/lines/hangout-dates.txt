@@ -1,0 +1,132 @@
+# Hangouts that are dates (LIFE_TOGETHER.md §3): an evening walk by the river and lantern night on the lake, for
+# teens and adults who are dating, after the beta. Every pool here is tagged so no child ever hears it.
+# no.not_close_enough plays when you are not dating them. Parts as in hangout-meals.txt.
+#! kind: cycle
+#! fn: deepen_bond
+#! tags: stage=teen|adult player_stage=teen|adult
+
+# == an evening walk by the river ==================================================================
+## hangout.evening_walk.ask
+Walk with me by the river tonight? Just the two of us.
+The river's beautiful at dusk. Would you walk it with me, {player}?
+I'd like an evening with you. A slow walk, nowhere to be. Come?
+## hangout.evening_walk.invite
+The river path at dusk. I'll wait by the willow.
+A note, folded very carefully: "Walk with me tonight? The willow, after sunset."
+## hangout.evening_walk.yes
+A walk with you? I'd like nothing better.
+Yes. I've been hoping you'd ask.
+## hangout.evening_walk.no.busy
+I can't tonight, I'm sorry. {when}? I'll be counting the hours.
+Not tonight. Ask me {when}. Please do.
+## hangout.evening_walk.no.not_today
+I'm not quite myself tonight. Another evening, I promise.
+Not tonight. I want to be good company when we go.
+## hangout.evening_walk.no.not_their_thing
+Long walks aren't really my sort of evening. Could we do something else together?
+## hangout.evening_walk.no.not_close_enough
+A walk like that, just us? I don't think we're there, {player}. I'm sorry.
+## hangout.evening_walk.arrive
+There's the willow. Shall we go downstream? The light's better that way.
+Here we are. Listen to the water. Walk slowly, there's no rush tonight.
+## hangout.evening_walk.rough
+That was a bit awkward, wasn't it. We'll find our footing.
+## hangout.evening_walk.fine
+A nice walk. Thank you for tonight.
+## hangout.evening_walk.good
+I didn't want it to end. Thank you, {player}.
+I'll sleep well tonight. Let's walk again soon.
+## hangout.evening_walk.great
+I'll remember every step of tonight. Every single one.
+That was the loveliest evening of my life. I mean that.
+## hangout.evening_walk.stood_up
+I waited by the willow until the stars came out. You didn't come.
+## hangout.evening_walk.ritual
+Our walks by the river. I find myself walking toward the willow without thinking now.
+## hangout.evening_walk.ritual_missed
+I walk past our willow and keep going. It's not the same without you.
+## hangout.evening_walk.highlight.1
+Fireflies! All along the river! Look, there's one on your sleeve.
+## hangout.evening_walk.highlight.2
+You took my hand on the stepping stones and didn't let go after. I noticed. [BLUSH]
+## hangout.evening_walk.highlight.3
+A heron lifted off the water right in front of us, silver in the last light.
+## hangout.evening_walk.highlight.4
+The rain started and you held your jacket over us both. We didn't even hurry.
+## hangout.evening_walk.highlight.5
+We stopped on the bridge and the whole river turned gold under us.
+## hangout.evening_walk.highlight.6
+You picked me a flower from the bank. I'm going to press it.
+## hangout.evening_walk.highlight.7
+We walked so far we reached the old mill. I've never been out this far with anyone.
+## hangout.evening_walk.highlight.8
+We sat on the bank and talked until the moon came up. I lost track of everything else.
+## hangout.evening_walk.highlight.9
+A street musician on the bridge played just for us. Well, for anyone. But it felt like us.
+## hangout.evening_walk.highlight.10
+You told me something you've never told anyone. I'll keep it safe, I promise.
+## hangout.evening_walk.highlight.11
+We skipped stones and laughed every time they sank. Yours sank more.
+## hangout.evening_walk.highlight.12
+Walking back, the lanterns came on one by one, all the way home.
+
+# == lantern night on the lake =====================================================================
+## hangout.lantern_night.ask
+Lantern night on the lake? We could float one together.
+Come to the lake tonight, {player}. I've made a paper lantern for us.
+There's a lantern night on the water. Would you come with me?
+## hangout.lantern_night.invite
+The lake shore, after dark. I'll bring the lantern and a candle.
+A note with a tiny painted lantern: "Tonight, on the lake. With me?"
+## hangout.lantern_night.yes
+Lanterns on the lake with you? Yes. Of course yes.
+I'd love that. I'll write something on ours.
+## hangout.lantern_night.no.busy
+I can't tonight. {when}? I'll save the lantern for us.
+Not tonight, sorry. {when}, if you'll still have me.
+## hangout.lantern_night.no.not_today
+I'm too tired tonight. I want to be awake for it.
+Not tonight. Another lantern night will come.
+## hangout.lantern_night.no.not_their_thing
+Crowds on the shore at night aren't really my thing. Could we do something quieter?
+## hangout.lantern_night.no.not_close_enough
+That's for people who are... together. I don't think we are, {player}.
+## hangout.lantern_night.arrive
+Here's a good spot. Hold the lantern while I light it. Careful, it's paper.
+Look at them all already on the water. Let's add ours.
+## hangout.lantern_night.rough
+The wind kept blowing the candle out. Maybe next time.
+## hangout.lantern_night.fine
+A pretty night. Thank you for coming.
+## hangout.lantern_night.good
+Ours floated out so far! I'm glad we did this.
+That was lovely. I keep looking back at the water.
+## hangout.lantern_night.great
+I'll remember tonight forever. Every light on the water, and you.
+I've never felt so happy. Thank you for tonight, {player}.
+## hangout.lantern_night.stood_up
+I floated our lantern alone. I wrote both our names on it anyway.
+## hangout.lantern_night.ritual
+Our lantern nights. I keep a stack of paper ready now, for the next one.
+## hangout.lantern_night.ritual_missed
+I haven't made a lantern since we stopped going. The paper's still in the drawer.
+## hangout.lantern_night.highlight.1
+Our lantern's drifted out further than all the others! Look, it's leading them!
+## hangout.lantern_night.highlight.2
+We wrote our wishes on it and didn't show each other. I'll tell you mine one day.
+## hangout.lantern_night.highlight.3
+The lights are reflected in the water so it looks like two skies. One above, one below.
+## hangout.lantern_night.highlight.4
+A breeze pushed our lantern back to the shore, right to us. Like it didn't want to leave.
+## hangout.lantern_night.highlight.5
+Someone on a boat started singing and the whole shore joined in.
+## hangout.lantern_night.highlight.6
+You shielded the candle with your hands so it wouldn't go out. It didn't.
+## hangout.lantern_night.highlight.7
+We sat on the shore until the last lantern went out. Then we stayed a bit longer.
+## hangout.lantern_night.highlight.8
+A fish jumped right through the reflection of our lantern. It scattered into a hundred lights.
+## hangout.lantern_night.highlight.9
+The fireworks started over the far shore just as ours touched the water.
+## hangout.lantern_night.highlight.10
+You leaned on my shoulder and we watched the water without a word. [HEART]

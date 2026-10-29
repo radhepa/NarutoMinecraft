@@ -1,0 +1,65 @@
+# Overheard talk between neighbours: shared walls, shared stairwells, shared opinions about each other's plants.
+#! tags: relation=neighbors
+
+## ambient.neighbors  fn=worldbuild
+A: Your cat was on my roof again.
+B: It thinks your roof is its roof.
+A: It might be right. It's up there more than I am.
+
+A: Are you using the well this morning?
+B: After you. I'm still finding my sandals.
+
+A: Who plays the flute at midnight?
+B: The new tenant on the top floor.
+A: Lovely tune. Terrible hour.
+
+A: I've got too many persimmons. Take a basket.
+B: Again? My whole kitchen is orange.
+
+A: The stairwell lamp's out again.
+B: I'll bring a candle. I'm not buying another wick, it's your turn.
+
+A: Lend me a cup of rice? I'll pay you back on Market Day.
+B: You said that last Market Day.
+A: And I paid you back! Mostly.
+
+A: Your washing's dripping on my step.
+B: Sorry! I'll move the line.
+A: Don't. My step's never been so clean.
+
+A: The street's having a sweep-out before the festival. Are you in?
+B: If there's tea after, I'm in.
+
+## ambient.neighbors  fn=reveal_character
+A: I heard you singing in the bath last night.
+B: The walls are thinner than I thought.
+A: You're better than you think, too.
+
+A: I've lived on this lane thirty years.
+B: Then you've seen everything.
+A: I've seen everyone. That's better.
+
+A: I made too much soup.
+B: You always make too much soup.
+A: And you always come and help me eat it.
+
+## ambient.neighbors  fn=react
+A: Did the storm get your fence?
+B: Half of it. The other half is in your garden.
+
+A: Quiet street tonight.
+B: Everyone's gone to the festival. Shall we sit out on the step?
+
+A: Your little one waved at me from the window this morning.
+B: Every morning. You're the window friend now.
+
+## ambient.neighbors  district=apartments  fn=worldbuild
+A: Someone's been leaving their sandals on the third-floor landing.
+B: A whole tower of them. I counted nine pairs.
+
+A: The building's water's hot again!
+B: Only took the landlord a month. A festival of a day.
+
+## ambient.neighbors  fn=filler
+A: Morning.
+B: Morning. Looks like a fine one.

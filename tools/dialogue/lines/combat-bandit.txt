@@ -1,0 +1,242 @@
+# Combat barks: bandits on the roads outside the Leaf. Loud, greedy, cowardly when it turns, funny
+# when they lose. Fights never kill: they are knocked out, tied up or run off. Keep it PG.
+# Pools are combat.<event>.bandit. Lines under 80 characters.
+#! kind: cycle
+#! fn: react
+
+## combat.fight_start.bandit
+Purse on the ground, and nobody gets bruised.
+Wrong road, traveller. This stretch has a toll.
+Everyone up! We've got company!
+That headband won't keep your coin in your pocket.
+A Leaf ninja, way out here? Rush them before they make signs!
+Spread out and circle round. Easy pickings.
+Nobody passes the old cedar without paying. Nobody.
+Look at all those shiny tools. I'll take the pouch first.
+
+## combat.fight_start.bandit  player_stage=child
+Run home, kid. This road's for grown-ups with money.
+They sent a kid? The Leaf must be short of ninja.
+
+## combat.taunt.bandit
+Is that all the Academy teaches these days?
+Come on, swing! My grandmother hits harder.
+You fight like a scarecrow in a gale.
+Tired yet? We've got all afternoon.
+Three of us, one of you. Do the sums.
+Nice kunai. Shame you can't aim it.
+Keep dancing. You'll trip sooner or later.
+I've robbed tougher merchants than you before breakfast.
+
+## combat.taunt.bandit  player_stage=child
+Shouldn't you be in a classroom, kid?
+Does your teacher know you're out this late?
+
+## combat.low_health.bandit
+Ow! Nobody said the Leaf ones bite!
+This isn't worth my cut. It really isn't.
+My ribs... somebody cover me!
+Back off, back off! I need a breath!
+I'm seeing two of you. Stop that.
+That's it. I'm charging double for this job.
+
+## combat.ally_down.bandit
+They flattened our biggest one!
+Get up, you lump! We're losing!
+Hey! That was my cousin!
+One down already? Who taught you to fight like that?
+Somebody drag them out of the ditch!
+Now it's personal. Mostly about money, but also personal.
+
+## combat.knocked_out.bandit
+Should've... stayed a farmer...
+Tell my mother... I was robbing politely...
+The stars are... very pretty from down here...
+Not the face... not the...
+I'll just... lie here a bit...
+Worst. Ambush. Ever.
+
+## combat.yield.bandit
+All right, all right! I give!
+Enough! I'm done, I'm done!
+You win! Just stop hitting me!
+I yield! See? Hands empty, nothing up my sleeves!
+Truce! Truce! I know when I'm beaten.
+
+## combat.surrender.bandit
+Take the purse! Take all of it! It wasn't even ours!
+We'll come quietly. Just don't hand us to the Uchiha police.
+The stolen crates are in the barn by the creek. Honest.
+Tie us up if you must, but loosely? My wrists bruise.
+We surrender. Can we at least keep our sandals?
+Fine, we'll walk to the village. Is there food in your cells?
+Here. The cart, the mule, the lot. We're out of business.
+
+## combat.flee.bandit
+Every bandit for themselves!
+Run! The pay's not worth this!
+Scatter! Meet at the old mill!
+I left the stew on! Bye!
+Not today! Not ever, actually!
+Retreat! I mean, advance in the other direction!
+
+## combat.victory.bandit
+Ha! Down they go. Check the pouch.
+Who's laughing now, Leaf?
+Leave them by the road. Someone'll find them.
+Easy money. Told you it'd be easy money.
+And that's why you pay the toll.
+Wait till the others hear we beat a ninja!
+
+## combat.defeat.bandit
+My head. What happened? Where's everyone?
+I'm going straight. Farming. Fishing. Anything.
+Nobody tells the others about this. Nobody.
+Lost to a Leaf ninja. My old gang will never let me forget it.
+Can we talk this over? Tea? You're paying?
+
+## combat.defeat.bandit  player_stage=child
+Beaten by a kid half my size. I'm retiring.
+
+## combat.parry_landed.bandit
+Ha! Saw that coming a mile off!
+Blocked! Street fighting beats school fighting.
+Nice try. I've been hit by better.
+Too slow! Even with a club I'm faster.
+Nope! Not today, ninja.
+
+## combat.got_parried.bandit
+Ow, my wrist! How did you—
+Hey! You're supposed to get hit!
+My club went... where did my club go?
+Argh! It's like hitting a wall!
+That's cheating! Ninja cheating!
+
+## combat.combo_finisher_landed.bandit
+And stay down!
+That's how we do it on the north road!
+Ha! Right in the middle!
+Like splitting firewood!
+Bet that rang your bell!
+
+## combat.jutsu_cast.bandit
+My one trick: {technique}! Paid good ryo to learn it!
+Watch this! {technique}! I practised all winter!
+Whoa, {technique}?! Nobody said they'd use {technique}!
+That's {technique}! Duck!
+Hand signs! Stop them doing the hand signs!
+Ninja tricks! Cover your eyes!
+
+## combat.jutsu_countered.bandit
+My trick! You broke my only trick!
+That took me a whole winter to learn!
+The fellow who sold me that swore it never fails.
+Countered? What does countered even mean?
+Five years of practice, gone in a puff.
+
+## combat.genjutsu_caught.bandit
+Why is the road melting?
+Snakes! Snakes everywhere!
+Mother? What are you doing out here?
+Is the sky supposed to be purple?
+The trees are whispering about my debts!
+
+## combat.genjutsu_broken.bandit
+Hah! Wasn't real! I knew it wasn't real!
+Shook it off. Nice try with the snakes.
+I bit my tongue and the trees stopped talking. Good.
+My head's clear now. Yours is next.
+
+## combat.smoke_bomb.bandit
+Cough! Where'd they go?
+I can't see a thing! Who's that? Is that you?
+Don't swing, it might be me!
+Smoke! The sneak used smoke!
+Fan it away! Somebody fan it away!
+Hold your breath and spread out!
+
+## combat.substitution.bandit
+A log?! I just punched a log!
+Where did they... oh. It's a log. It's always a log.
+Splinters! I've got splinters!
+I hit them! I swear I hit... a stump.
+Not the log trick again!
+
+# -- more ---------------------------------------------------------------------------------------------
+
+## combat.fight_start.bandit
+Hold it right there! This is a robbery. A polite one, if you behave.
+The boss said nobody'd come. The boss is always wrong.
+
+## combat.taunt.bandit
+Your sandals are untied. Made you look!
+Hit me, then! I've been hit by doors harder than you.
+
+## combat.low_health.bandit
+I want my mother. I want my mother's cooking, anyway.
+Who said ninja were small and harmless? Who?
+
+## combat.ally_down.bandit
+Wake up! You owe me three ryo!
+
+## combat.knocked_out.bandit
+I see... a big bowl of noodles... coming for me...
+Good night... road... good night... cart...
+
+## combat.yield.bandit
+I give up! I was only in it for the snacks anyway!
+Stop! I'll go home! I'll even write to my aunt!
+
+## combat.surrender.bandit
+We'll give back the rice! Most of it! We ate a bit.
+No more toll roads, we swear. We'll take up basket weaving.
+
+## combat.flee.bandit
+Feet, don't fail me now!
+Into the bushes! No, the other bushes!
+
+## combat.victory.bandit
+Not so tough without your team, eh?
+Grab the pouch and go before the rest of them turn up!
+
+## combat.defeat.bandit
+Ugh. Is it morning? Why am I tied to a tree?
+Fine. You win. Tell the guards I was the nice one.
+
+## combat.parry_landed.bandit
+Ha! Twenty years of bar fights, ninja!
+
+## combat.got_parried.bandit
+My arm's gone numb! Is that normal?
+
+## combat.combo_finisher_landed.bandit
+Ha! Didn't see that coming, did you?
+
+## combat.jutsu_cast.bandit
+Run! They're doing {technique}! I hate {technique}!
+
+## combat.jutsu_countered.bandit
+Not fair! You're not supposed to know the counter!
+
+## combat.genjutsu_caught.bandit
+Why's my club turned into a fish?
+I'm floating! Help! Or don't, it's quite nice.
+
+## combat.genjutsu_broken.bandit
+The fish is a club again. Good. Very good.
+
+## combat.smoke_bomb.bandit
+Who stepped on my foot? Was that you?
+
+## combat.substitution.bandit
+I've been fighting a log for a whole minute!
+That log is wearing their jacket! How?!
+
+## combat.taunt.bandit
+Ha! You call that a kick? My mule kicks harder.
+
+## combat.flee.bandit
+I'm a lover of peace! Peace and running away!
+
+## combat.victory.bandit
+Rope! Get the rope! Wait, who brought the rope?

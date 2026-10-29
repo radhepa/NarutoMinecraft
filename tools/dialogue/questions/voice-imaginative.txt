@@ -1,0 +1,80 @@
+# Questions only an imaginative resident asks: colours, clouds, dreams, stories.
+# Axis poles: tradition_or_change (1 tradition, -1 change).
+#! tags: personality=imaginative
+
+? q.pref.imag_your_colour | fn: deepen_bond reveal_character | level: 2
+Q: If you were a colour, which colour would you be?
+Q: I think everyone has a colour. What's yours?
+- Bright orange :: Like a lantern at dusk. Yes, I can see it. {values:+courage} {tone:bold}
+- Deep blue :: The river at night. Calm and a little secret. {values:+knowledge} {tone:gentle}
+- Leaf green :: The village's own colour. You belong here, then. {values:+loyalty +family} {tone:warm}
+- All of them :: A rainbow person! That's the best answer. {values:+creativity} {tone:joking}
+
+? q.pref.imag_colour_feel | fn: deepen_bond reveal_character | level: 4 | follows: q.pref.imag_your_colour | depth: 2
+Q: Your colour. What does it feel like, from the inside?
+Q: If your colour were a feeling, what would it be?
+- Like warmth :: A warm colour from the inside. Like holding a teacup. Lovely. {values:+kindness} {tone:warm}
+- Like quiet :: The quiet between two raindrops. I know that one. {values:+freedom} {tone:gentle}
+- Like the open air :: A colour with the sky in it. That's you exactly. {values:+freedom} {tone:free}
+- It just is :: Ha! Colours don't need reasons. You're right. {values:+honesty} {tone:honest}
+
+? q.pref.imag_cloud | fn: deepen_bond reveal_character | level: 2
+Q: Look at that cloud. What does it look like to you?
+Q: That one, just over the Hokage Rock. What do you see?
+- A dragon :: A dragon! With a curly tail, look. You've a good eye. {values:+creativity +courage} {tone:bold}
+- A bowl of ramen :: Ha! Noodles and all. Are you hungry? You're hungry. {values:+family} {tone:joking}
+- A sleeping cat :: Curled up on the sky's lap. Oh, that's sweet. {values:+kindness} {tone:gentle}
+- Just a cloud :: Just a cloud. Ha! Keep your feet on the ground for both of us. {values:+honesty} {tone:blunt}
+
+? q.plans.imag_animal_day | fn: deepen_bond reveal_character | level: 2
+Q: If you could become any animal for a day, which would you be?
+Q: One day as an animal. Which one, and what would you do?
+- A hawk :: The whole village from above! You'd have to tell me what the rooftops look like. {values:+freedom} {tone:free}
+- A fish :: Under the river, all green light and quiet. How peaceful. {values:+freedom} {tone:gentle}
+- A fox :: Sly and quick. Ha. I can see you with a bushy tail. {values:+creativity} {tone:teasing}
+- A lazy cat :: A day of sunbeams. The wisest choice of all. {values:+freedom} {tone:joking}
+
+? q.values.imag_dreams_mean | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: Do you think dreams mean anything?
+Q: When you dream, is it your heart talking, or just your supper?
+- Yes, they do :: I think so too. Mine are always trying to tell me something. In riddles. {values:+creativity} {tone:curious}
+- No, just supper :: Ha! Too much pickled radish before bed. Maybe you're right. {values:+honesty} {tone:blunt}
+- Only the good ones :: Clever! Keep the good, forget the rest. {values:+freedom} {tone:playful}
+
+? q.past.imag_last_dream | fn: deepen_bond reveal_character | level: 4 | follows: q.values.imag_dreams_mean | depth: 2
+Q: What did you dream last night? Tell me everything.
+Q: Tell me a dream you've had lately. The stranger the better.
+- Flying :: Over the rooftops! The best dream there is. {values:+freedom} {tone:free}
+- Falling :: Ooh. Everyone has that one. You always wake before the end. {values:+honesty} {tone:honest}
+- Food. Lots of food :: Ha! Your supper was talking. A feast dream is a good omen, I've decided. {values:+family} {tone:joking}
+- I don't remember :: Gone with the morning. Keep a brush by your bed. {values:+honesty} {tone:gentle}
+
+? q.pref.imag_paint_village | fn: deepen_bond reveal_character | level: 3
+Q: If you painted the village, what would you paint first?
+Q: One painting of the Leaf. What's in it?
+- The Hokage Rock :: The great faces in morning light. Ambitious. {values:+duty} {tone:ambitious}
+- The river at sunset :: Orange water and the bridges black against it. Oh, yes. {values:+creativity} {tone:warm}
+- The market crowds :: All those faces and colours! You'd need a very big scroll. {values:+family} {tone:curious}
+- My window's view :: The view you see every day. That's the truest painting. {values:+honesty} {tone:gentle}
+
+? q.plans.imag_story_title | fn: deepen_bond reveal_character | level: 3
+Q: If someone wrote a story about you, what would it be called?
+Q: Your life as a scroll on the shop shelf. What's the title?
+- Never Giving Up :: A good title. I'd buy it. {values:+courage} {tone:bold}
+- The Quiet One :: Mysterious. Readers love a quiet hero. {values:+freedom} {tone:gentle}
+- Ramen and Glory :: Ha! A comedy. I'd buy two copies. {values:+freedom} {tone:joking}
+- Not written yet :: Of course. You're still in the first chapters. {values:+honesty} {tone:humble}
+
+? q.plans.imag_story_end | fn: deepen_bond reveal_character | level: 5 | follows: q.plans.imag_story_title | depth: 2
+Q: And your story. How should it end?
+Q: The last page of your scroll. What's on it?
+- Happily :: Happily. The best stories earn it. {values:+kindness} {tone:warm}
+- A new beginning :: Ah, the kind that closes one door and opens another. Lovely. {values:+freedom +courage} {tone:free}
+- It never ends :: Ha! A story that goes on and on. The best kind. {values:+creativity} {tone:playful}
+
+? q.values.imag_art_rules | fn: deepen_bond reveal_character | kind: opinion | level: 4 | axis: tradition_or_change
+Q: Should art have rules?
+Q: The old masters had a hundred rules for painting a crane. Should we follow them?
+- Some, yes :: The rules hold the brush steady. Fair. {values:+duty +knowledge} {tone:cautious} {pole:1}
+- None at all :: Paint the crane purple! Yes! {values:+creativity +freedom} {tone:bold} {pole:-1}
+- Learn them, then break them :: The old painters' secret. You've found it. {values:+knowledge +creativity} {tone:curious}

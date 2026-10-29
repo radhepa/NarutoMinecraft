@@ -1,0 +1,99 @@
+# Callbacks for questions/voice-playful.txt, in the playful asker's voice.
+#! fn: callback
+#! tags: personality=playful
+
+## callback.answer.q.pref.play_truth_or_dare.a1
+You picked truth! And you still owe me that embarrassing training story. Tonight, remember?
+
+## callback.answer.q.pref.play_truth_or_dare.a2
+Dare, you picked! I've thought of a better one than the shrine bell. Ready? No? Later then!
+
+## callback.answer.q.pref.play_truth_or_dare.a3
+Bwak bwak! Ha! You ran off on truth or dare. I haven't forgotten, chicken.
+
+## callback.answer.q.pref.play_round_two.a1
+You said I'm the second funniest in the village. I'm still deciding whether to be offended.
+
+## callback.answer.q.pref.play_round_two.a2
+The noodle cook still talks about someone ordering backwards in a whisper. Was that you? Ha!
+
+## callback.answer.q.pref.play_round_two.a3
+You switched it up on me last round. I still haven't thought of anything terrible enough. Soon.
+
+## callback.answer.q.pref.play_best_game.a1
+Tag! You're it! Ha. You said it's the best game, so you can't complain.
+
+## callback.answer.q.pref.play_best_game.a2
+Hide and seek, the best game. I've found the perfect spot. You'll never find me. Want to try?
+
+## callback.answer.q.pref.play_best_game.a3
+I bought a shogi set, because you love it. Teach me before I lose to my grandmother again.
+
+## callback.answer.q.pref.play_best_game.a4
+Kick the can, your pick! I've found a can. And three kids. Coming?
+
+## callback.answer.q.values.play_jutsu_cheating.a1
+Jutsu are fair in games, you said. So I learned to hide in a bush. Didn't work. Bush walked off.
+
+## callback.answer.q.values.play_jutsu_cheating.a2
+No jutsu in games, you said. Legs and cunning only. I've been practising my cunning.
+
+## callback.answer.q.values.play_jutsu_cheating.a3
+Only clones are fair, your rule. I've written it down. The official rulebook has one rule now.
+
+## callback.answer.q.plans.play_prank_target.a1
+Your sensei, your dream prank target. I saw your sensei today and nearly laughed out loud.
+
+## callback.answer.q.plans.play_prank_target.a2
+The gate guards stood perfectly still all morning. I thought of your prank. So tempting.
+
+## callback.answer.q.plans.play_prank_target.a3
+Lord Hokage, your prank target! I walked past the Residence and giggled. A guard frowned at me.
+
+## callback.answer.q.plans.play_prank_target.a4
+Nobody to prank, you said. I'm still working on you. I'll make a prankster of you yet.
+
+## callback.answer.q.plans.play_prank_plan.a1
+Fifty clones all waving. Your prank plan. I dreamt about it. Beautiful chaos.
+
+## callback.answer.q.plans.play_prank_plan.a2
+I bought a pot of bright paint. Washable. For research, after your prank plan. Ha!
+
+## callback.answer.q.plans.play_prank_plan.a3
+A bucket over the door. Your plan. I tried it on my brother. Classic, like you said.
+
+## callback.answer.q.pref.play_race.a1
+Race to the bridge? You love racing, I remember. Ready, set... I'm already gone!
+
+## callback.answer.q.pref.play_race.a2
+You're a stroller, not a racer. Fine. I'll run circles round you while you stroll.
+
+## callback.answer.q.pref.play_race.a3
+You only race if you win. So, three-step head start, like I offered?
+
+## callback.answer.q.values.play_grownups_fun.a1
+Grown-ups forget how to have fun, you said. Not me. I spun a top in the market today. At my age!
+
+## callback.answer.q.values.play_grownups_fun.a2
+Secret grown-up fun! I caught the elders playing cards behind the shrine, just like we said.
+
+## callback.answer.q.values.play_grownups_fun.a3
+You said I'm the grown-up who hasn't forgotten fun. I'm still glowing about it.
+
+## callback.answer.q.pref.play_silly_hat.a1
+I found the silliest hat in the market. A hundred ryo, you said, easy. Want to earn it?
+
+## callback.answer.q.pref.play_silly_hat.a2
+Two hundred ryo and feathers, your price for a silly hat. I've found the feathers.
+
+## callback.answer.q.pref.play_silly_hat.a3
+You'd wear a silly hat for free! I've brought one. It has bells.
+
+## callback.answer.q.pref.play_fish_hat.a1
+The fish hat, the whole festival. You said done! I've ordered it. It has fins.
+
+## callback.answer.q.pref.play_fish_hat.a2
+Even you have limits: no fish hat. I'm still laughing about your face.
+
+## callback.answer.q.pref.play_fish_hat.a3
+Matching fish hats! We shook on it, remember? The festival's coming. Get ready.

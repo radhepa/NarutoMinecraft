@@ -1,0 +1,227 @@
+# Small talk about the weather: rain, thunder and snow, and only the clear days worth mentioning.
+
+# -- rain ----------------------------------------------------------------------------------------------
+
+## chat.weather  weather=rain  fn=react,worldbuild
+Rain like this and the Ichiraku queue doubles. Everybody wants something hot, and nobody wants to cook it.
+The gutters on the market street can't take more than an hour of this. By noon the fish stall will be selling from a puddle.
+The training grounds turn to porridge in the rain. Good for practising your footing, terrible for your sandals.
+The stone steps up to the shrine get slick as river rocks. Take the handrail, whatever your pride says.
+The frogs in the Academy pond are singing like they've been paid. You can hear them from the main street.
+Rain on the Hokage Rock runs down the faces in streaks. The children say the Hokage are crying, and the grown-ups say they're washing.
+The bath house will be full by four today. Wet people want warm water; it's simple arithmetic.
+Every paper umbrella in the Leaf is open at once. From the Rock, the main street must look like a row of mushrooms.
+The river's up to the second step at the ferry landing. Another day of this and the ferryman will be poling over the washing stones.
+Laundry day ruined again. Every balcony on this street has the same sad row of damp shirts.
+The drying racks behind the fish stall are all under tarps. Rain is bad news for anyone selling dried mackerel.
+A good soaking rain is what the farmers outside the wall have been praying for. The cabbages will be the size of heads.
+Rain makes the dogs at the kennels sulk. Forty damp ninken, all piled together and smelling exactly like you'd expect.
+The roofs are too slippery for jumping today. You'll see a lot of shinobi walking the streets like ordinary people.
+Mission scrolls go out in oiled pouches on days like this. A wet briefing is no briefing at all.
+The tea houses close their garden doors in the rain and light the braziers. The best seats are by the window, watching it come down.
+The water tanks on the roofs are filling nicely. That's a warm bath for the whole block for a week.
+My sandals squeak in this weather. I can't sneak up on anyone, which my family is very grateful for.
+The Academy moved yard practice into the hall today. Thirty children throwing practice shuriken indoors: the janitor is not happy.
+Rain stops the market haggling dead. Nobody wants to stand in it arguing over two ryo; the prices fall all morning.
+
+## chat.weather  weather=rain  fn=react,reveal_character
+I like the rain, honestly. The village goes quiet and soft, like somebody turned the noise down.
+I left my umbrella at the tea house again. That's three this month. The owner's started a collection.
+Rain makes my old knee ache. That's how I know it's coming before the clouds do.
+I always mean to stay home on rainy days, and I always end up out in it. Something about puddles.
+
+## chat.weather  weather=rain  personality=playful|fiery  fn=react
+Race you to the end of the street without an umbrella! Loser buys the hot tea. [EXCLAIM]
+Puddles this deep are basically a training exercise. Jump them all and you've done your footwork for the day!
+
+## chat.weather  weather=rain  personality=gentle|warmhearted  fn=react
+Are you dry enough? Stand under the awning a minute. A cold now and you'll be sniffling all week.
+The stray cats have all found doorways to sit in. I put out a dish under the eaves for them.
+
+## chat.weather  weather=rain  personality=pragmatic|meticulous  fn=react
+Rain means indoor work: mending, inventory, sharpening. I've had my whole list ready since yesterday's clouds.
+Rain or no rain, the Mission Desk opens at eight. A D-rank doesn't care that you're wet.
+
+## chat.weather  weather=rain  job=farmer|grocer|fishmonger|ferryman  fn=react,worldbuild
+This rain is worth a hundred ryo a day to the fields. I'd dance in it, if my knees would let me.
+Wet days, the river carries mud down from the hills. The fish go deep and sulk, and so does my trade.
+
+## chat.weather  weather=rain  job=ramen_cook|cook|tea_master|bath_keeper  fn=react,commerce
+Rain is good for business. A bowl of something hot never sells better than when the street's a river.
+I put an extra pot on this morning. The clouds were too grey to waste.
+
+## chat.weather  weather=rain  rank=genin|chunin|jonin  fn=react,worldbuild
+Tracking's useless in this. Every scent washed off and every footprint a puddle. Ask any Inuzuka how they feel about it.
+Rain hides sound well. Good for scouting, terrible for hearing who's scouting you.
+Paper bombs and wet days don't mix. Keep your tags wrapped, or you'll be throwing very expensive confetti.
+
+## chat.weather  weather=rain  season=spring  fn=react,worldbuild
+Spring rain knocks the cherry blossoms off in a single night. Tomorrow every street will be pink and soggy.
+
+## chat.weather  weather=rain  season=summer  fn=react,worldbuild
+Summer rain is warm enough to stand in. The children are out in it already, catching it in their mouths.
+
+## chat.weather  weather=rain  season=autumn  fn=react,worldbuild
+Autumn rain strips the maples. By tomorrow the training grounds will be a red carpet with mud underneath.
+
+# -- thunder -------------------------------------------------------------------------------------------
+
+## chat.weather  weather=thunder  fn=react,worldbuild
+Every dog in the Inuzuka kennels is under a blanket right now. Even the war-trained ones hate thunder.
+The Mission Desk sometimes holds outgoing squads in weather like this. Lightning picks the tallest thing on a ridge, and that's usually a Genin.
+The tea houses shutter their windows at the first crack. Nobody wants to drop a cup when the sky bangs.
+That one rattled the bowls on the shelf. My grandmother says it's the sky clapping for somebody.
+The shrine keeps a lightning rod on the cedar. The tree has been hit three times in a hundred years, and it's still standing.
+Thunder echoes off the Hokage Rock like a drum. It sounds twice as loud by the Residence.
+Storms like this blow the lanterns off the market street. The stallholders will be picking paper out of the gutters tomorrow.
+The bath house never closes for a storm. The keeper says no lightning has ever got through all that steam.
+Thunder at night and the whole apartment block wakes. You can hear every flat's kettle go on at once.
+The river turns brown and fast in a storm. The ferry's tied up and the ferryman is sitting under the landing roof, glaring at the sky.
+Children at the Academy count between the flash and the bang. The instructors pretend it's an arithmetic lesson.
+The farmers will be out with tarps over the seed beds the moment this passes. One big storm can flatten a month of growing.
+Lightning lit the whole village white for a moment just then. I could see every roof tile down to the wall.
+The gate guards bring the booth's kettle inside in a storm. Someone learned that the hard way.
+The roof-runners are all on the ground today. Running across tiles in a thunderstorm is how you meet the hospital staff.
+A storm this size usually clears overnight. Tomorrow will be rinsed clean and smell like cut grass.
+The Tobari night watch calls a storm a blind night. You can't hear anything on the wall, so you have to watch twice as hard.
+That was close. The air smells like a forge right after a strike, burnt and sharp.
+Thunderstorms send the herons up off the river in a cloud. They'll be back on their stones by morning, as if nothing happened.
+My cat is under the bed and won't come out until the sky apologises.
+
+## chat.weather  weather=thunder  fn=react,reveal_character
+I love a good storm. I sit on the porch with the shutters half open and count the strikes. Twenty-three last time.
+I'm not scared of thunder. I just happen to be standing very close to this doorway, that's all.
+When I was small, my father told me thunder was the Hokage moving furniture upstairs. I believed him for years.
+Storms make me restless. I'd rather be out in it doing something than inside listening to it.
+
+## chat.weather  weather=thunder  personality=shy|gentle  fn=react
+Is it... is it getting closer? I'll just stay under this roof a bit longer, if that's all right.
+The baby birds under the eaves are all huddled up. I hope the nest holds.
+
+## chat.weather  weather=thunder  personality=fiery|adventurous  fn=react
+Listen to that sky! That's what a lightning jutsu ought to sound like. [EXCLAIM]
+Storms are the best time to train your nerve. Anyone can concentrate when it's quiet!
+
+## chat.weather  weather=thunder  personality=stern|protective  fn=react
+Stay off the roofs and away from the training ground trees. I won't say it twice.
+Go home if you've nowhere you need to be. There's nothing out here worth a lightning strike.
+
+## chat.weather  weather=thunder  rank=genin|chunin|jonin  fn=react,worldbuild
+A lightning-natured shinobi feels a storm in their teeth. I know three who can't sleep through one.
+Thunder covers footsteps. On a mission, a storm is a friend for about an hour, and then it's an enemy.
+Missions don't stop for weather, but smart squads do. Shelter, wait it out and move when it passes.
+
+## chat.weather  weather=thunder  job=smith|carpenter|painter|tailor  fn=react,worldbuild
+Damp in the air and my glue won't set. Today's a day for sharpening, not building.
+A storm's no time for the forge. Lightning likes metal, and I like having eyebrows.
+
+## chat.weather  weather=thunder  job=vet|kennel_keeper  fn=react,worldbuild
+Every pup in the clinic is pressed against my legs. I've been standing in the same spot for an hour.
+
+## chat.weather  weather=thunder  season=summer  fn=react,worldbuild
+Summer storms come up over the hills in the afternoon and blow out by supper. Like a bad temper.
+
+## chat.weather  weather=thunder  season=autumn|spring  fn=react,worldbuild
+Storms between seasons are the worst. Warm wind, cold rain and thunder that can't make up its mind.
+
+# -- snow ----------------------------------------------------------------------------------------------
+
+## chat.weather  weather=snow  fn=react,worldbuild
+The Hokage faces have snowy eyebrows this morning. The second one looks like a very stern grandparent.
+Snow on the training grounds means footprints for everyone to read. A sneaking exercise in this is a lesson in humility.
+The bath house will be packed by sunset. In this weather, a hot soak is worth more than ryo.
+The market street shovels a path down the middle at dawn. By noon it's packed ice, and somebody's always sliding.
+Every roof in the Leaf has a white cap. The round water tanks look like giant rice cakes.
+The Akimichi kitchen hall has a pot of hot soup going all day when it snows. Their doors are open to anyone cold.
+Snow muffles the whole village. Even the kennels are quiet, and that never happens.
+The children have built a snow Hokage outside the Academy. It looks nothing like any of them and it's perfect.
+The river's freezing at the edges. The ferryman says another cold week and you'll be able to walk across without chakra.
+The shrine priest knits caps for the fox statues when it snows. They've all got new ones on today.
+The gate guards drink their tea standing in a snowfall. They say sitting makes your bottom freeze to the bench.
+Fresh snow at dawn is the best time to see who's been out at night. Every alley has its own story in footprints.
+The tea house has put out its winter cushions, thick and heavy. You sink into them like a bowl of rice.
+Snow makes the main street look twice as wide. All those dark roofs turned to white, and the lanterns glowing through it.
+The deer in the Nara forest come right up to the house when it snows. The clan feeds them on the porch.
+Grocers sell more sweet potatoes on a snowy day than in a month of sun. There's a man with a roasting cart on every corner.
+The ice on the Academy pond is thick enough to skate on. The instructors have forbidden it, which means everyone is skating on it.
+Wet snow sticks to the training dummies. They look like snowmen in sparring stances.
+The Uchiha police walk their rounds in black coats in the snow. You can see them from the Rock, dark spots moving along every street.
+A snowy village sounds like a held breath. Even the shinobi landing on rooftops make a soft little thump.
+
+## chat.weather  weather=snow  fn=react,reveal_character
+I've never been able to resist the first footprint in fresh snow. It's like signing your name on the day.
+Snow makes me want to stay home under the kotatsu with a book and a bowl of oranges. I'm fighting it.
+I grew up in a village where it never snowed. My first winter here, I thought the sky was falling.
+I'm terrible on ice. Two winters ago I slid the length of the market street on my back. Nobody let me forget it.
+
+## chat.weather  weather=snow  personality=playful|fiery  fn=react
+Snowball war at the Academy yard, this afternoon! Clan against clan, and the clanless get to pick sides. [EXCLAIM]
+Bet you can't walk up that drift without sinking. Chakra or no chakra!
+
+## chat.weather  weather=snow  personality=warmhearted|protective  fn=react
+You're not dressed for this. Wrap a scarf round your face at least; your nose is going red.
+Make sure you've got something hot for dinner tonight. Cold days creep into your bones if you skip a meal.
+
+## chat.weather  weather=snow  personality=imaginative|thoughtful  fn=react
+Snow makes the village look like a painting someone hasn't finished. All the colours waiting under the white.
+Every snowflake is different, they say. I wonder who checked.
+
+## chat.weather  weather=snow  rank=genin|chunin|jonin  fn=react,worldbuild
+Snow hides sound and shows tracks. A squad that walks in single file and steps in the same prints is a squad that knows its trade.
+Cold slows chakra in the hands. Warm your fingers before you weave signs, or you'll fumble the Tiger.
+Water-walking on a half-frozen lake is a lesson you only need once. Ask me how I know.
+
+## chat.weather  weather=snow  job=farmer|merchant|courier  fn=react,worldbuild
+Carts can't get through the east road in this. Everything in the market today is whatever was already in the village.
+Deliveries take twice as long in the snow. I've had to swap my sandals for straw boots, and they're terrible for running.
+
+## chat.weather  weather=snow  job=ramen_cook|dango_maker|tea_master|barbecue_cook  fn=react,commerce
+Snow days are my best days. The steam off my counter brings people in from all the way down the street.
+
+## chat.weather  weather=snow  season=winter  fn=react,worldbuild
+Deep winter now. The shops open late and close early, and everyone carries a little charcoal warmer in their sleeve.
+
+## chat.weather  weather=snow  season=autumn|spring  fn=react,worldbuild
+Snow this early? The farmers will be rushing to get the last of the radishes in before the ground freezes.
+
+# -- clear (only the days worth mentioning) ----------------------------------------------------------------
+
+## chat.weather  weather=clear  season=summer  fn=react,worldbuild
+This heat would melt a kunai. The children have taken over the river shallows and the dogs have taken over every shadow.
+Ichiraku sells cold noodles on days like this, and the queue still goes round the corner.
+The cicadas are so loud by the training grounds you can't hear yourself throw. Everyone's chakra feels like it's boiling.
+The bath house keeper says nobody comes on a day this hot. Then the cold box of milk sells out by noon.
+The stone of the Hokage Rock holds the heat until midnight. Sit against it after dark and it's like a warm stove.
+The tea houses are serving barley tea over ice. It's the only thing anyone wants in this weather.
+Shinobi in full gear on a day like this are made of sweat and determination. Mostly sweat.
+
+## chat.weather  weather=clear  fn=react,worldbuild
+Not a cloud from the Rock to the wall. You can see all four faces sharp as if they were carved this morning.
+That's a perfect sky. The kind of blue you only get after a week of rain.
+Wind's up from the east today. All the laundry on the residential streets is trying to fly away.
+The wind's strong enough today that the Academy cancelled shuriken practice. Half of yesterday's throws ended up on the main street.
+Sky this clear and the hawks from the Residence loft are flying high. You can see them circling over the Rock.
+On a day this clear you can see the far hills past the wall, blue in the distance, like a painting of somewhere else.
+Clear night ahead. If you stay up, the stars over the training grounds are better than any festival.
+
+## chat.weather  weather=clear  season=winter  fn=react,worldbuild
+Bright sun on yesterday's snow. Everyone's squinting and the icicles are dripping from every roof.
+A clear winter morning is the coldest kind. Frost on every railing and your breath hanging in front of you like a cloud.
+
+## chat.weather  weather=clear  season=autumn  fn=react,worldbuild
+Clear autumn air and the maples on the Rock look like they're on fire. Best week of the year to climb the stairs.
+Crisp and windy. The kites are out over the Academy yard, and three of them are already stuck in the big tree.
+
+## chat.weather  weather=clear  season=spring  fn=react,worldbuild
+Clear spring day and a warm wind. The cherry petals are blowing down the main street like pink snow.
+
+## chat.weather  weather=thunder  district=market|main_street  fn=react,worldbuild
+The awnings on this street are flapping like sails. Half the stallholders have given up and gone to the tea house.
+Every shop on the street has pulled its shutters halfway down. You can still buy things, you just have to duck.
+
+## chat.weather  weather=snow  district=training|academy  fn=react,worldbuild
+The target posts are wearing snow hats. Hit one and it drops the whole lot on your head; the Genin call it the second lesson.
+The yard's under a foot of snow, so practice today is clearing it. The instructor calls that taijutsu.
+
+## chat.weather  weather=clear  time=evening|night  fn=react,worldbuild
+The moon's so bright tonight you could read a mission scroll by it. The Gekko will be up on their platform.

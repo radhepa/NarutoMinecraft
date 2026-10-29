@@ -1,0 +1,149 @@
+# The three kinds of street stall, where haggling is expected: Market Day stalls (travelling merchants and farm
+# carts), festival stalls (Leaf Festival food and games) and exam stalls (Chunin Exam weeks, by the stadium).
+#! fn: commerce
+
+## shop.market_day_stalls.greet  shop=market_day_stalls  fn=commerce
+Come and look! Brought this all the way down the east road!
+Fresh from the farm, {player}! Squeeze it, smell it, then make me an offer.
+Bargains! Bargains! Everything on this cloth must go before the cart goes home!
+Step up, step up! Things you won't find in any Leaf shop.
+
+## shop.market_day_stalls.browse  shop=market_day_stalls  fn=commerce
+Bolts of cloth from the coast, spices from the south, a teapot from who knows where.
+Turnips, leeks, chestnuts, mountain potatoes. All dug yesterday.
+Lacquered combs and copper bells. Small, pretty and easy to carry home.
+Everything's got a price, and every price has a little give in it.
+
+## shop.market_day_stalls.buy  shop=market_day_stalls  kind=cycle  fn=commerce
+{item}! {pay}, and you've got yourself a bargain.
+Sold! Tell your friends where my cart is.
+That's {pay}. I'll be back next Market Day if you want more.
+Done! Wrap it up, next customer!
+
+## shop.market_day_stalls.cant_afford  shop=market_day_stalls  kind=cycle  fn=commerce
+Not enough? Make me an offer, I might surprise you.
+Short. Come back after noon, I'll be cheaper by then.
+
+## shop.market_day_stalls.sold_out  shop=market_day_stalls  kind=cycle  fn=commerce
+The {item}? Gone at dawn. Market Day waits for no one.
+Sold the last of it. Next week, same corner.
+
+## shop.market_day_stalls.haggle  shop=market_day_stalls  fn=commerce
+Make me an offer. Not an insult, an offer.
+That's the price on the cloth. What's the price in your head?
+I walked three days to sell this. Start high, and we'll meet somewhere fair.
+
+## shop.market_day_stalls.haggle_win  shop=market_day_stalls  kind=cycle  fn=commerce
+Fine, fine! {pay}. You'd do well on the road, you would.
+You win. {pay}, and don't tell the stall next to me.
+Agreed! {pay}. I'd rather sell it cheap than carry it home.
+
+## shop.market_day_stalls.haggle_fail  shop=market_day_stalls  kind=cycle  fn=commerce
+No, no. I've children to feed in two villages. The price stays.
+Ha! Try that on the farmer's cart, not on me.
+Too low. I'd sooner give it to my mule.
+
+## shop.market_day_stalls.closing  shop=market_day_stalls  time=afternoon|evening  fn=commerce
+Packing up soon! Everything left is half price, nearly.
+Last chance! The cart leaves at sundown.
+
+## shop.market_day_stalls.recommend  shop=market_day_stalls  fn=commerce,teach
+Come after noon, when the farmers don't want to cart things home. That's when to haggle.
+The {item}. You won't see it again till next Market Day.
+
+## shop.festival_stalls.greet  shop=festival_stalls  fn=commerce
+Festival treats! Candied apples, shaved ice, grilled squid!
+Try your luck, {player}! Three throws for a ryo!
+Goldfish scooping! Paper nets, two ryo a go, keep what you catch!
+Step right up! Every prize on the shelf can be won tonight!
+
+## shop.festival_stalls.browse  shop=festival_stalls  fn=commerce
+Fox masks, cat masks, a mask of the Hokage Rock with all four faces.
+Shaved ice: strawberry, melon, lemon, or all three if you're greedy.
+Hit the middle of the target three times and pick any prize on the top shelf.
+Paper lanterns and sparklers for the walk home.
+
+## shop.festival_stalls.buy  shop=festival_stalls  kind=cycle  fn=commerce
+{item}! {pay}. Happy festival!
+There you go! Mind the syrup on your yukata.
+That's {pay}. Good luck with the net!
+{pay}! Enjoy the fireworks!
+
+## shop.festival_stalls.cant_afford  shop=festival_stalls  kind=cycle  fn=commerce
+Short? One go instead of three, then.
+Not enough for that one. The little prizes are cheaper, and just as fun.
+
+## shop.festival_stalls.sold_out  shop=festival_stalls  kind=cycle  fn=commerce
+All out of {item}! Festival night, everyone's hungry.
+No fox masks left. Every child in the Leaf is a fox tonight.
+
+## shop.festival_stalls.haggle  shop=festival_stalls  fn=commerce
+Haggle at a festival? Go on then, it's a festival. What'll you give me?
+Two goes for the price of one if you can make me laugh.
+
+## shop.festival_stalls.haggle_win  shop=festival_stalls  kind=cycle  fn=commerce
+Festival price, just for you! {pay}. Don't tell the queue.
+All right, you've charmed me. {pay}, and an extra net.
+Ha! You win. {pay}. It's a night for giving in.
+
+## shop.festival_stalls.haggle_fail  shop=festival_stalls  kind=cycle  fn=commerce
+No, no, the fireworks fund needs its share. Full price.
+Nice try! The queue behind you is paying full, so must you.
+Not tonight. Festival nights are my whole year.
+
+## shop.festival_stalls.closing  shop=festival_stalls  time=night|late  fn=commerce
+After the fireworks, we pack up. Last chance for a prize!
+Closing the stall soon. Everything left goes cheap!
+
+## shop.festival_stalls.recommend  shop=festival_stalls  fn=commerce,teach
+Goldfish scooping: don't chase them. Slide the net under, lift quick and flat.
+Target throwing pays a little ryo or a trinket. Fun, not a living.
+The {item}. Best thing on the whole street tonight.
+
+## shop.exam_stalls.greet  shop=exam_stalls  fn=commerce
+Exam snacks! Exam cushions! Exam souvenirs! Step up!
+Cheer for your team, {player}! Banners and flags, right here!
+Hungry before the match? Best rice balls by the stadium.
+Visitors welcome! We take ryo from every village.
+
+## shop.exam_stalls.browse  shop=exam_stalls  fn=commerce
+Seat cushions for the stadium. The stone benches are cold, trust me.
+Little flags in every village's colours. The Leaf ones sell fastest.
+Rice balls, roasted chestnuts, bottles of cold tea for the long matches.
+Souvenir fans with the stadium painted on. Very popular with the visitors.
+
+## shop.exam_stalls.buy  shop=exam_stalls  kind=cycle  fn=commerce
+{item}! {pay}. Enjoy the matches!
+There you go. Cheer loud!
+That's {pay}. Get to your seat before the gates close.
+{pay}! Good luck to whichever team you're backing.
+
+## shop.exam_stalls.cant_afford  shop=exam_stalls  kind=cycle  fn=commerce
+Short? Exam prices, I know. A small flag, then.
+Not enough. Come back after the matches, prices drop when the crowds go home.
+
+## shop.exam_stalls.sold_out  shop=exam_stalls  kind=cycle  fn=commerce
+No more {item}! The visitors bought the lot.
+Out of cushions. The finals crowd sat on every one I had.
+
+## shop.exam_stalls.haggle  shop=exam_stalls  fn=commerce
+Haggle? Everyone haggles in exam week. Go on, then.
+A local? I'll give you a better price than the visitors get. A little.
+
+## shop.exam_stalls.haggle_win  shop=exam_stalls  kind=cycle  fn=commerce
+Local price! {pay}. Keep it quiet near the visitors.
+Fine, {pay}. The match is starting, I haven't time to argue.
+You win. {pay}, and cheer for the Leaf.
+
+## shop.exam_stalls.haggle_fail  shop=exam_stalls  kind=cycle  fn=commerce
+Not in exam week. The stall fee by the stadium is daylight robbery.
+No. I've a hundred visitors behind you who'll pay full.
+Ha! Try again after the finals, when I'm desperate.
+
+## shop.exam_stalls.closing  shop=exam_stalls  time=evening|night  fn=commerce
+The matches are over for today. Last snacks, cheap!
+Packing up. Same spot tomorrow, earlier.
+
+## shop.exam_stalls.recommend  shop=exam_stalls  fn=commerce,teach
+A cushion and a cold tea. The matches go on longer than you'd think.
+The {item}. Every visitor wants one to take home.

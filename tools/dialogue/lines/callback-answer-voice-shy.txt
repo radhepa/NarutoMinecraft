@@ -1,0 +1,102 @@
+# Callbacks for questions/voice-shy.txt, in the shy asker's voice.
+#! fn: callback
+#! tags: personality=shy
+
+## callback.answer.q.pref.shy_quiet_time.a1
+I... brought you a scroll. You said you like reading, when it's quiet. It's a good one. I think.
+
+## callback.answer.q.pref.shy_quiet_time.a2
+You draw, when it's quiet. I drew a bird yesterday. It looks like a potato. Don't tell.
+
+## callback.answer.q.pref.shy_quiet_time.a3
+Long walks, you said. I took one by the river. Nobody talked to me. It was lovely.
+
+## callback.answer.q.pref.shy_quiet_time.a4
+Naps are the best quiet thing. I had one today. Because of you. Sort of.
+
+## callback.answer.q.values.shy_small_brave.a1
+Small brave things count the most, you said. I asked the grocer for a discount today. Small. Brave.
+
+## callback.answer.q.values.shy_small_brave.a2
+Big brave things matter more, you said. Big ones start small, though. I'm still starting.
+
+## callback.answer.q.values.shy_small_brave.a3
+All brave things count. I've been counting mine. Three this week.
+
+## callback.answer.q.past.shy_brave_thing.a1
+You spoke up in class. In front of everyone. I still think about that. I'd like to, one day.
+
+## callback.answer.q.past.shy_brave_thing.a2
+Making a friend, your brave thing. I think... I'm trying to do that too. Right now.
+
+## callback.answer.q.past.shy_brave_thing.a3
+You tried something new. I tried something new today. A new tea. It was awful. But I tried.
+
+## callback.answer.q.past.shy_brave_thing.a4
+You couldn't think of a brave thing. But talking to me counts. A bit. I still mean that.
+
+## callback.answer.q.pref.shy_crowds.a1
+Crowds bother you a bit too. Market Day's coming. Maybe we can... hide together. Behind the library.
+
+## callback.answer.q.pref.shy_crowds.a2
+You like crowds. Could I... stand next to you, at the festival? Like I said?
+
+## callback.answer.q.pref.shy_crowds.a3
+With a friend, crowds are fine. So... could we go to the market together? As friends?
+
+## callback.answer.q.dilemma.shy_know_answer.a1
+You'd say the answer in class, even with everyone looking. I put my hand up today. Halfway.
+
+## callback.answer.q.dilemma.shy_know_answer.a2
+Whisper it to a friend, like me. I whispered an answer today. My friend got a gold star. Ha.
+
+## callback.answer.q.dilemma.shy_know_answer.a3
+We'd both keep quiet. We said we'd try. Did you try? I... almost did.
+
+## callback.answer.q.dilemma.shy_practise_speaking.a1
+I said hello to the baker today. Out loud. Like you told me. They said hello back!
+
+## callback.answer.q.dilemma.shy_practise_speaking.a2
+"Is this seat free?" I asked it at the tea house. It was free. I sat. I did it.
+
+## callback.answer.q.dilemma.shy_practise_speaking.a3
+My name, out loud, to a stranger. I said next week. It's next week. ...Maybe next week.
+
+## callback.answer.q.pref.shy_make_things.a1
+Could we draw together? You said you draw too. I brought two brushes. Just in case.
+
+## callback.answer.q.pref.shy_make_things.a2
+You cook. The best kind of making, you can eat it. I... made rice balls. They're lumpy.
+
+## callback.answer.q.pref.shy_make_things.a3
+You write things down. Have you... written anything new? I'd still like to read it.
+
+## callback.answer.q.pref.shy_make_things.a4
+You don't make things, you said. Watching is nice too. Would you... watch me draw?
+
+## callback.answer.q.values.shy_quiet_friends.a1
+Quiet people make the best friends. You said that. I wrote it inside my sketchbook.
+
+## callback.answer.q.values.shy_quiet_friends.a2
+Of course quiet people can be friends, you said. I've been less worried. Thank you.
+
+## callback.answer.q.values.shy_quiet_friends.a3
+Talking doesn't matter in a friend. So... is it okay if we just sit here?
+
+## callback.answer.q.values.shy_are_we_friends.a1
+You said we're friends. Of course, you said. I still... I still remember it.
+
+## callback.answer.q.values.shy_are_we_friends.a2
+Good friends, you said. I'm still smiling about it. Sorry. Can't stop.
+
+## callback.answer.q.values.shy_are_we_friends.a3
+Getting there, we are. I... think we got a bit closer this week. Didn't we?
+
+## callback.answer.q.past.shy_first_talk.a1
+You remember the first time we spoke. I was so nervous. I'm less nervous now. With you.
+
+## callback.answer.q.past.shy_first_talk.a2
+You don't remember our first talk. That's still a relief. Ha.
+
+## callback.answer.q.past.shy_first_talk.a3
+You were nervous too, the first time. I think about that whenever I'm nervous now.

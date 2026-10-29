@@ -1,0 +1,64 @@
+# Overheard talk on event days: the festival, New Year, the exams, the first snow, blossom week.
+#! fn: worldbuild
+
+## ambient.friends  relation=friends  event=leaf_festival
+A: Meet at the bridge for the fireworks?
+B: Bridge at nine. If you're late, I'm eating your candied apple.
+
+A: You won a goldfish?
+B: I won a goldfish. I have no idea how to keep a goldfish.
+
+## ambient.couple  relation=couple  stage=adult  event=leaf_festival
+A: You wore the blue yukata.
+B: You said you liked it, the first festival.
+A: I did. I still do.
+
+## ambient.kids  relation=kids  stage=child  event=leaf_festival
+A: My net broke on the very first goldfish!
+B: Mine broke before I even touched the water. Let's try target throwing instead.
+
+A: Fox mask or cat mask?
+B: Fox. Then we can sneak up on the grown-ups.
+
+## ambient.family  relation=family  event=new_year
+A: Did you clean behind the stove?
+B: It's New Year's Eve. I'm not cleaning behind anything.
+A: Last year's dust will follow you into the new one.
+
+A: What did you wish for at the shrine?
+B: If I tell you, it won't come true.
+A: Then wish for something I can help with next year.
+
+## ambient.neighbors  relation=neighbors  event=first_snow
+A: Shall we clear the lane together?
+B: You take the top, I'll take the bottom. Tea at the middle.
+
+## ambient.elders  relation=elders  event=cherry_blossoms
+A: How many blossom weeks have we seen?
+B: More than I can count. Each one the first, somehow.
+
+## ambient.customers  relation=customers  event=chunin_exams  fn=commerce
+A: Cushions for the finals, please. Four.
+B: Last four in the stall. You're lucky. The visitors have been buying since dawn.
+
+## ambient.shinobi  relation=shinobi  event=chunin_exams
+A: Watching the finals?
+B: Every match. Taking notes.
+A: For when it's your turn?
+B: For when it's my turn.
+
+## ambient.coworkers  relation=coworkers  event=market_day
+A: How many carts through the gate?
+B: Sixty-one. And a goat.
+A: There's always a goat.
+
+## ambient.parent_child  relation=parent_child  event=graduation
+A: You've got your headband on crooked.
+B: Leave it. Everyone's looking.
+A: That's exactly why I'm fixing it.
+
+## ambient.rivals  relation=rivals  event=moon_viewing
+A: Duel by moonlight?
+B: Only if you don't cry when you lose.
+A: You've never once seen me cry.
+B: It's dark. That's why.

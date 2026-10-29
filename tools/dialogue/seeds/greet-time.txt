@@ -1,0 +1,134 @@
+# Greetings by time of day, one idea in several voices (compose.py writes generated/gen-greet-time.txt).
+
+## greet.time  time=dawn  fn=teach
+* shops_seven
+warm:    The shops won't open until about seven. Sit with me a while; the kettle's nearly boiled.
+bright:  Shops open at seven! I've timed it. The grocer's shutter always sticks halfway up.
+precise: The shops open at seven. The grocer's at five past, on account of that sticky shutter.
+proud:   Nothing opens before seven. Use the hour to train, as I do.
+quiet:   Shops... not till seven. It's nice, though. Empty.
+bold:    Two hours till the shops open! You could run the whole wall by then!
+any:     Nothing's open till seven or so. You've got the whole street to yourself.
+
+## greet.time  time=dawn  fn=worldbuild
+* farm_carts
+warm:    The farm carts are rolling in through the main gate. The first one always brings the sweetest melons.
+bright:  Hear the wheels? Farm carts! I like guessing what's under the covers. Usually turnips.
+bold:    Farm carts coming in from beyond the wall. Every dawn I ask where they've been.
+calm:    The farm carts come in at first light, same as they have for longer than I've been alive.
+dreamy:  The carts come through the gate in the mist, like boats drifting in off a lake.
+precise: First farm cart through the gate at half past five, the last by six. Then the gate guards eat.
+any:     The farm carts are coming in. By seven the grocer will have fresh greens.
+
+## greet.time  time=morning  fn=teach
+* desk_board
+bold:    Mission Desk's been open since eight! The best jobs go first, so what are you doing here?
+calm:    The Mission Desk opened at eight. The good jobs are taken early, but there's always something honest left.
+precise: Desk opened at eight; the board's half picked over by nine. Get there early next time.
+proud:   The Mission Desk opened an hour ago. The serious shinobi have already taken their pick.
+bright:  The Mission Desk's open! I always peek at the board. Someone's lost a cat again, I'd bet you.
+guard:   Desk's open. Read a mission's details before you take it. Every time.
+any:     The Mission Desk opened at eight. If there's work you want, go before the queue does.
+
+## greet.time  time=morning  fn=worldbuild
+* sweet_buns
+warm:    The bakery's sweet buns sell out by nine. I bought two. One is yours, eat it while it's warm.
+bright:  Sweet buns at the bakery! Gone by nine every morning. I've never once been fast enough.
+precise: The bakery makes forty sweet buns a morning. They're gone by nine. Plan accordingly.
+quiet:   The sweet buns are gone by nine. I always get one. ...Don't tell anyone where I queue.
+dreamy:  The bakery's sweet buns smell like a whole summer folded into bread.
+any:     If you want a sweet bun from the bakery, hurry. They're gone by nine.
+
+## greet.time  time=noon  fn=guide
+* ramen_queue
+warm:    Noon! Get yourself to Ichiraku before the queue gets long. You need something hot inside you.
+bright:  Ichiraku at noon! The queue goes round the corner, but they hand out tea while you wait.
+precise: Ichiraku's queue peaks between twelve and half past. Go at one and you'll sit right away.
+bold:    Noon means ramen! Ichiraku! Last one there waits in the queue!
+proud:   Ichiraku at noon is a scrum of elbows. Wiser to eat at one, as I do.
+any:     Ichiraku's queue gets long around noon. Go now, or wait for one.
+
+## greet.time  time=noon  fn=teach
+* drink_water
+warm:    It's so hot! Drink some water, please. You'll faint chasing kunai in this sun.
+guard:   Sun's straight overhead. Water, shade, and don't train hard for an hour.
+proud:   Only fools train hard at noon. Drink something. Rest. Then outwork the fools.
+calm:    Noon's heat is hard on a body. Drink, sit, let it pass. The afternoon will wait.
+bright:  Hot hot hot! The well by the market is the coldest one, I tested all of them.
+any:     Hot one. Get some water in you before the afternoon.
+
+## greet.time  time=afternoon  fn=teach
+* part_time
+precise: Short of ryo? The grocer, the flower shop, the forge and Ichiraku all take part-time hands. Forty to eighty a shift.
+warm:    If money's tight, Ichiraku hires help in the afternoon. They feed you too, which matters more.
+bright:  Want to earn ryo? Ask at the flower shop! They let you carry buckets and pay you for it!
+proud:   An honest afternoon shift at the forge is good for the arms and the purse.
+calm:    Afternoons are when the shops need extra hands. A shift is good money, and you learn the street.
+any:     If you're short of ryo, the shops take part-time help in the afternoon. A shift pays well.
+
+## greet.time  time=afternoon  fn=guide
+* spar_grounds
+bold:    Afternoon! The training grounds are packed with people looking for a spar. Go and pick a fight!
+proud:   The training grounds are full this afternoon. Choose an opponent better than you. You'll learn more.
+guard:   If you spar this afternoon, remember a spar ends when someone yields. Yield before you're hurt.
+bright:  Everyone's at the training grounds! Somebody's trying to walk on the lake and keeps falling in.
+calm:    The training grounds are busy now. A good afternoon to find a partner and practise.
+any:     The training grounds are busy in the afternoon. Plenty of partners, if you want a spar.
+
+## greet.time  time=evening  fn=guide
+* ichiraku_evening
+warm:    Evening! Go and get a bowl at Ichiraku. Sit at the end of the counter; it's warmest by the pot.
+bold:    It's ramen hour! Ichiraku's packed but the stools turn over fast. Elbow in!
+quiet:   Ichiraku's busy now. The end stool's usually free. ...That's where I sit.
+precise: Ichiraku after six is full until half past seven. Then it empties out. Go at half past.
+dreamy:  Ichiraku's lantern is lit. The steam rolls out the curtain like a cloud that smells of pork.
+any:     Ichiraku's busiest after six. Worth the wait, though.
+
+## greet.time  time=evening  fn=react
+* day_report
+warm:    Evening, {player}! Tell me about your day. Every bit of it. Did you eat lunch?
+bright:  Evening! What did you do today? Anything exciting? Anything at all? Tell me!
+calm:    Evening. Good day? Tell me one thing you learned. Just one.
+proud:   Evening. I trust you did something today worth remembering.
+quiet:   Evening. ...Good day? You don't have to tell me. I just hope so.
+guard:   Evening. Home in one piece? Good. That's all I ask.
+any:     Evening, {player}. How was your day?
+
+## greet.time  time=night  fn=teach
+* before_midnight
+warm:    It's getting late, {player}. Bed before midnight and you'll wake rested and full of chakra. I'll warm some milk.
+calm:    Sleep before midnight and the morning is kind to you. Your chakra comes back quickly until noon.
+proud:   The best shinobi are asleep before midnight. They wake with chakra to spare. Draw your own conclusions.
+precise: In bed before midnight means well rested: chakra recovers a tenth faster until noon. Simple arithmetic.
+bright:  Did you know if you sleep before midnight you wake up extra full of chakra? It's true! I tested it!
+guard:   It's late. Get home and asleep before midnight; you'll be sharper tomorrow, and safer.
+any:     Bed before midnight, {player}, and you'll wake well rested.
+
+## greet.time  time=night  fn=react
+* walk_home
+warm:    Heading home? Take a lantern, it's dark past the bridge. You can bring it back tomorrow.
+guard:   Dark out. Stick to the lit streets on your way home, and don't cut through the alleys.
+bright:  Going home? Count the lanterns on the way. I always get a different number.
+quiet:   Going home? ...Good night.
+bold:    Home already? Fine, but race me to the corner first!
+calm:    Time to go home, I think. The night will look after itself.
+any:     Off home? Good night, {player}. Mind your step in the dark.
+
+## greet.time  time=late  fn=teach
+* collapse_dawn
+precise: Stay awake till six and you collapse. You'll wake in your bed at noon, half a day gone. Don't.
+calm:    If you're still up at dawn, your body will choose for you. You'll wake at noon, and the morning will be lost.
+guard:   Stay up all night and you'll drop wherever you're standing. I've carried people home. Go to bed.
+bright:  If you stay up all night you just fall over! Then you wake up at noon in bed! I don't know how either!
+warm:    Please go to bed. If you're up till sunrise you'll collapse, and I'll worry myself sick.
+any:     Stay up till dawn and you'll collapse and sleep the whole morning away. Go home.
+
+## greet.time  time=late  fn=react
+* go_to_bed
+warm:    Look at you, you're half asleep on your feet! Bed, {player}. Go on.
+proud:   You're swaying. A shinobi who can't stand straight is no shinobi at all. Sleep.
+quiet:   You should be asleep. ...So should I.
+bold:    Even I'm tired, and I'm never tired! Bed! Both of us!
+dreamy:  You look like a candle at the bottom of its wick. Go and sleep, before you go out.
+calm:    The day's long over. Whatever you're doing will be easier after sleep.
+any:     It's very late. Go home and sleep, {player}.

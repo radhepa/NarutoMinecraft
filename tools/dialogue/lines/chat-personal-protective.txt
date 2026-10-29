@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for protective residents. Watches over people, warns, checks.
+#! tags: personality=protective
+
+## chat.personal  fn=reveal_character
+Busy keeping an eye on things. The children on my street were playing too near the river again. I moved them to the yard.
+I stayed up until my daughter got home from training. She's sixteen and says I fuss. I do. I'll keep doing it.
+Every lock on my street: checked last night. Twice. Habit. Nobody complains when the thieves go elsewhere.
+I walked the old man from the tea house home. The lane's dark past the bend. It's ten minutes. Why wouldn't I?
+I put a railing on our steps after my wife slipped last winter. Now I'm wondering about the neighbours' steps.
+My little brother's on his first long mission. I've been to the gate three times today to see if the squad's back.
+There's a first-aid kit in every room of my house. My husband says three is enough. Five is enough. I'm at six.
+The ice on the pond looks solid but it isn't yet. I've told every child on the lane. Some of them twice.
+That stray dog by the market has a sore paw. I wrapped it. Now it follows me home. That's fine.
+I don't sleep well when the weather turns. I lie there listening for the wind on my neighbours' roofs.
+I taught my son to whistle for help. Three short, one long. Every child on my street knows it now.
+I walked my sister to the hospital for her check-up. She's fine. I'm still worried. That's my job.
+A cart nearly hit a kid on the main street this morning. I had a word with the driver. A long word.
+There's a lantern lit in my window at night so anyone walking home can see the corner. It's a small thing.
+Every time there's thunder, I go round to the widow next door and sit with her. She hates storms.
+I made the kids on my street promise to walk to the Academy in pairs. They roll their eyes. They do it.
+I patched a hole in the fence by the river. Someone's toddler would've been through it in a week.
+I've learned the name of every child on my street, just in case. I'd want someone to know mine.
+My mother lives alone now. I visit before work and after work. She says I hover. She also leaves the door open.
+I chased off a fox that was eyeing my neighbour's chickens. It came back. I'll be up tonight again.
+A spare scarf goes with me everywhere. It's never for me.
+I asked the gate guards how many came in today. They told me. It's not my job. I just like to know.
+After every rain, I check the river level. If it's up past the second post, I warn the houses on the bank.
+I followed a lost child around the market for half an hour until the parents turned up. Wasn't going to leave the poor thing.
+My son's sensei sends a note after every mission now. I may have asked for that. Politely. Loudly.
+That old bridge in the dark worries me. Half the boards are loose. I walk across it first and test them.
+My sandals sleep by the bed. If anyone shouts, I'm out the door. My wife thinks I'm ridiculous.
+
+## chat.personal  rank=civilian  fn=reveal_character
+I'm no shinobi, but I know every alley on this side of the river. If anyone's in trouble, I can get them out.
+I run the corner shop, so I see everyone go by. If a child's out too late, I send them home with a rice ball.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+I always take rear guard on missions. If something comes, I want it to come through me first.
+I'm back from escort duty. Three days, a merchant with five crates, no trouble. No trouble is the goal.
+I checked my squad's gear before we left this morning. One had a dull kunai. You fix that before, not during.
+When the gate opens at dawn, I count my squad back in. Every time. Even when we came in together.
+
+## chat.personal  fn=worldbuild
+The Leaf has watch posts along the wall, manned day and night. You'll see the lamps if you look up at night.
+Every street has a fire bucket line. If the bell rings twice, everyone grabs a bucket. We practise it every spring.
+The hospital rings a bell when someone comes in hurt from a mission. People stop and look toward the gate.
+The Military Police walk the main street twice a night. Some think it's too much. I sleep better for it.
+
+## chat.personal  fn=hook
+There's a gap in the fence behind the Academy yard. Kids slip through it to the river. Somebody should report it.
+The old man on my lane hasn't been seen since the storm. His door's closed, and I've got a pot of soup on.
+A dog's been howling near the forest edge all night. Might be hurt. Might be stuck. I'm on shift and can't check.
+
+## chat.personal  fn=filler
+Good, so far. Everyone's accounted for.
+Fine. You got here all right? Good.
+
+## chat.personal  fn=reveal_character
+I spent the morning showing the children on my lane where to go if the fire bell rings. They thought it was a game. Good.
+I carried an umbrella to the Academy at noon. Rain was coming. My nephew pretended not to know me. Took the umbrella though.
+I warned the fisherfolk the bank by the willows is crumbling. They nodded. I'll check tomorrow anyway.

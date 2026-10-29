@@ -1,0 +1,61 @@
+# Small talk, part A: the answer to "How's your day?" for proud residents. Standards, family name, competitive.
+#! tags: personality=proud
+
+## chat.personal  fn=reveal_character
+Excellent, naturally. My persimmons took first prize at the market again. Third year running. Not that I'm counting.
+My family has made tea bowls for five generations. I glazed one this morning that my grandfather would have signed.
+I was second in the river race this morning. Second. I'll be training until it's first.
+The neighbours have a new garden lantern. Stone, very nice. Mine's bigger. Older, too. I just thought you should know.
+My son brought home top marks in calligraphy. Of course he did. I taught him to hold a brush before he could walk.
+I don't do anything halfway. If I sweep the step, I sweep it so well people stop and look.
+I've been told my grilled eel is the best on the street. I've also been told by people who haven't tried it. Same result.
+I wore my grandmother's festival yukata to the shrine. It still fits perfectly. Some things are made to last.
+I beat the tea house owner at shogi today. Two moves before the owner saw it coming. I'll remember that for weeks.
+My sister thinks her dumplings are better than mine. Hers are fine. Mine are a tradition.
+Someone said my garden was "nice". Nice! It took me nine years. Nice is a word for weather.
+My family's name is carved on the old bridge. We helped build it. I polish the letters every spring.
+I don't accept help with my roof. I've done it myself since I was fifteen. It hasn't leaked once. Not once.
+I wrote a poem for the shrine contest. It's very good. I'm only saying so because it's true.
+My husband says I'm too competitive. I'm not. I'm simply better at being competitive than he is.
+I repainted the family crest on our gate. Took all morning. The gold has to be exactly right, or it looks cheap.
+I never wear the same outfit twice in a week. People notice these things. I notice them, at least.
+I was asked to judge the dango contest. I accepted, obviously. My standards are the reason they asked.
+I'm teaching my nephew to fish. He caught one today. Small. I told him it was enormous. Don't repeat that.
+I lost at cards to my brother. He cheated. I'm almost certain he cheated. We play again tomorrow.
+My great-grandfather planted the cherry tree by the river. Everyone sits under it. Nobody knows. I know.
+I made a kimono from scratch. Every stitch mine. If you see it at the festival, you'll know it's mine. It's the best one.
+I don't brag. But my rice is the whitest on the lane, and people should know how much work that takes.
+I've never been late in my life. I was early to my own birth, according to my mother.
+The new family down the road asked me for gardening advice. Of course they did. I gave them a full list.
+I keep my grandfather's medal in a frame by the door. I'm not showing off. It's simply where the light is best.
+I won't say I'm the best cook on this street. I'll let the empty bowls say it.
+
+## chat.personal  rank=civilian  fn=reveal_character
+My shop has the best tea on the market street. The other shops sell leaves. I sell a reputation.
+I'm a civilian, and proud of it. Somebody has to bake the bread the shinobi eat before they go out heroing.
+
+## chat.personal  rank=!civilian  fn=reveal_character
+I finished the D-rank in half the time the client expected. I'd like that written down somewhere.
+My squad placed first in the sensei's tracking drill. My idea, my plan. I'm just stating facts.
+My family has served the Leaf for four generations. I'd be ashamed to be the one who did it badly.
+My throwing's improved. Nine targets out of ten. The tenth was windy. The wind will regret it.
+
+## chat.personal  fn=worldbuild
+The founding families of the Leaf still have their names on the old bridge stones. Some of us still polish them.
+Every year the Academy hangs the best calligraphy in the front hall. The names under them stay for a whole season.
+The market street has a prize for the best stall sign each spring. Winning means something on that street. Trust me.
+
+## chat.personal  fn=hook
+Someone scratched the paint on my gate. My family crest! I want to know who. And I want an apology.
+My prize persimmons are being picked at night. One or two at a time. Whoever it is has excellent taste, and must stop.
+I've challenged the potter across the lane to a bowl contest, but I need someone fair to judge. Everyone's taken sides.
+
+## chat.personal  fn=filler
+Very good. As usual.
+Better than most, I'd imagine.
+
+## chat.personal  fn=reveal_character
+My calligraphy hangs at the tea house now. Above the good table. Where it belongs.
+My mother's pickle recipe won a ribbon forty years ago. I won the same ribbon with it today. Two ribbons. One jar.
+My lantern was the brightest at the last festival. Somebody asked who made it. I said nothing. I simply stood next to it.
+I spent the whole morning polishing my grandfather's armour. It doesn't fit anyone now. It still shines.
