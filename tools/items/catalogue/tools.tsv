@@ -5,7 +5,7 @@ id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
 practice_kunai	Practice Kunai	tool	thrown	academy	beta1	16	2	kit:academy	Blunt training kunai: combo strikes and throws at the Academy posts; never draws blood on a spar	-	tint:kunai	combat=thrown,melee
 practice_shuriken	Practice Shuriken	tool	thrown	academy	beta1	64	1	kit:academy	Blunt wooden-edged stars for target practice	-	tint:shuriken	combat=thrown
 kunai	Kunai	tool	thrown	genin	beta2	16	12	kit:genin;salvage:bandit_camp	The shinobi's knife: combo weapon in hand, right click throws it like a trident and it can be picked up again	-	sprite	combat=thrown,melee;grades=yes;durability=120
-rusty_kunai	Rusty Kunai	tool	thrown	any	beta2	16	0	salvage:bandit_camp;drop:bandit	A bandit's pitted blade. Throws badly; the forge melts it down to scrap steel	-	tint:kunai	combat=thrown,melee;sell=2;durability=40
+rusty_kunai	Rusty Kunai	tool	thrown	any	beta2	16	0	salvage:bandit_camp;drop:bandit_thug	A bandit's pitted blade. Throws badly; the forge melts it down to scrap steel	-	tint:kunai	combat=thrown,melee;sell=2;durability=40
 shuriken	Shuriken	tool	thrown	genin	beta2	64	4	kit:genin	Four-point throwing star; fast, stackable, three at once from Genin	-	sprite	combat=thrown;grades=yes
 fuma_shuriken	Windmill Shuriken	tool	thrown	chunin	later	1	180	-	A folding giant shuriken that arcs back toward you	-	model	combat=thrown;grades=yes;durability=200
 senbon	Senbon	tool	thrown	genin	beta2	64	2	-	Steel needles: little damage, but they carry a coating and pin a nerve point	-	sprite	combat=thrown;coatable=yes;grades=yes

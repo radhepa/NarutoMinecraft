@@ -318,7 +318,7 @@
     "count": "1"
    }
   ],
-  "drop.bandit": [
+  "drop.bandit_archer": [
    {
     "item": "rusty_kunai",
     "weight": 4,
@@ -340,6 +340,138 @@
     "count": "1"
    }
   ],
+  "drop.bandit_brute": [
+   {
+    "item": "rusty_kunai",
+    "weight": 4,
+    "count": "1-2"
+   },
+   {
+    "item": "scrap_steel",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "bandit_purse",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "broken_blade",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.bandit_chief": [
+   {
+    "item": "rusty_kunai",
+    "weight": 4,
+    "count": "1-2"
+   },
+   {
+    "item": "scrap_steel",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "bandit_purse",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "broken_blade",
+    "weight": 1,
+    "count": "1"
+   },
+   {
+    "item": "bounty_token",
+    "weight": 6,
+    "count": "1"
+   },
+   {
+    "item": "steel_ingot",
+    "weight": 2,
+    "count": "1"
+   }
+  ],
+  "drop.bandit_knife": [
+   {
+    "item": "rusty_kunai",
+    "weight": 4,
+    "count": "1-2"
+   },
+   {
+    "item": "scrap_steel",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "bandit_purse",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "broken_blade",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.bandit_ronin": [
+   {
+    "item": "rusty_kunai",
+    "weight": 4,
+    "count": "1-2"
+   },
+   {
+    "item": "scrap_steel",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "bandit_purse",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "broken_blade",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.bandit_thug": [
+   {
+    "item": "rusty_kunai",
+    "weight": 4,
+    "count": "1-2"
+   },
+   {
+    "item": "scrap_steel",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "bandit_purse",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "broken_blade",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.bear": [
+   {
+    "item": "leather_strip",
+    "weight": 4,
+    "count": "2-4"
+   },
+   {
+    "item": "curio_huge_claw",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
   "drop.boar": [
    {
     "item": "boar_tusk",
@@ -352,18 +484,23 @@
     "count": "1-2"
    }
   ],
-  "drop.forest_tiger": [
-   {
-    "item": "tiger_pelt",
-    "weight": 1,
-    "count": "1"
-   }
-  ],
   "drop.giant_centipede": [
    {
     "item": "centipede_plate",
     "weight": 1,
     "count": "1-2"
+   }
+  ],
+  "drop.giant_leech": [
+   {
+    "item": "curio_tuft_of_fur",
+    "weight": 1,
+    "count": "1"
+   },
+   {
+    "item": "healing_herb",
+    "weight": 2,
+    "count": "1"
    }
   ],
   "drop.giant_snake": [
@@ -380,7 +517,97 @@
     "count": "1-3"
    }
   ],
-  "drop.wild_wolf": [
+  "drop.giant_tiger": [
+   {
+    "item": "tiger_pelt",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.monkey_thief": [
+   {
+    "item": "bandit_trinket",
+    "weight": 3,
+    "count": "1"
+   },
+   {
+    "item": "stolen_goods",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "curio_old_coin",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.rogue_bomber": [
+   {
+    "item": "blasting_powder",
+    "weight": 4,
+    "count": "1-3"
+   },
+   {
+    "item": "smoke_powder",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "paper_bomb",
+    "weight": 1,
+    "count": "1"
+   },
+   {
+    "item": "washi_paper",
+    "weight": 2,
+    "count": "1-3"
+   }
+  ],
+  "drop.rogue_genin": [
+   {
+    "item": "kunai",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "shuriken",
+    "weight": 3,
+    "count": "2-4"
+   },
+   {
+    "item": "scrap_steel",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "sealing_tag",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.smuggler_runner": [
+   {
+    "item": "rusty_kunai",
+    "weight": 4,
+    "count": "1-2"
+   },
+   {
+    "item": "scrap_steel",
+    "weight": 3,
+    "count": "1-2"
+   },
+   {
+    "item": "bandit_purse",
+    "weight": 2,
+    "count": "1"
+   },
+   {
+    "item": "broken_blade",
+    "weight": 1,
+    "count": "1"
+   }
+  ],
+  "drop.wolf": [
    {
     "item": "wolf_pelt",
     "weight": 1,

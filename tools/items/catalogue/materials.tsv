@@ -1,7 +1,7 @@
 # Crafting materials, salvage and monster parts (Shinobi Life). sell= is what the pawn shop pays before haggling.
 id	name	category	group	rank	slice	stack	price	sources	use	gift	art	props
 steel_ingot	Steel Ingot	material	metal	any	beta2	64	20	salvage:bandit_camp	Folded tamahagane steel for blades	item:iron_ingot	sprite	-
-scrap_steel	Scrap Steel	material	metal	any	beta2	64	3	salvage:bandit_camp;drop:bandit	Broken blades and buckles; four make an ingot at the forge	-	tint:steel_ingot	sell=1
+scrap_steel	Scrap Steel	material	metal	any	beta2	64	3	salvage:bandit_camp;drop:bandit_thug	Broken blades and buckles; four make an ingot at the forge	-	tint:steel_ingot	sell=1
 iron_sand	Iron Sand	material	metal	any	beta2	64	4	gather:river_bend	Black sand from the river bend, smelted into steel	-	icon	-
 charcoal	Charcoal	material	fuel	any	beta1	64	1	vanilla	Forge fuel	-	vanilla	vanilla=minecraft:charcoal
 steel_wire	Steel Wire	material	metal	any	beta1	64	3	-	Drawn wire for ninja wire and chains	-	icon	-
@@ -36,13 +36,13 @@ lily_of_the_valley	Lily of the Valley	material	herb	genin	beta2	64	6	gather:herb
 nightshade	Nightshade	material	herb	genin	beta2	64	8	gather:forest_floor	A poison berry for coatings	-	icon	-
 ginseng_root	Mountain Ginseng	material	herb	genin	beta3	64	25	gather:forest_of_death	A rare root from the Forest of Death, for blood pills	-	icon	-
 boar_tusk	Boar Tusk	material	monster	any	beta2	64	10	drop:boar	A curved tusk	-	icon	sell=5
-wolf_pelt	Wolf Pelt	material	monster	any	beta2	64	15	drop:wild_wolf	A grey pelt	-	icon	sell=7
+wolf_pelt	Wolf Pelt	material	monster	any	beta2	64	15	drop:wolf	A grey pelt	-	icon	sell=7
 snake_skin	Snake Skin	material	monster	genin	beta3	64	18	drop:giant_snake;gather:forest_of_death	A shed skin longer than you are tall	-	icon	sell=9
 centipede_plate	Centipede Plate	material	monster	genin	beta3	64	30	drop:giant_centipede	A plate of chitin from the Forest of Death	-	icon	sell=15
-tiger_pelt	Tiger Pelt	material	monster	genin	beta3	64	60	drop:forest_tiger	A striped pelt, a trophy of the forest	-	icon	sell=30
+tiger_pelt	Tiger Pelt	material	monster	genin	beta3	64	60	drop:giant_tiger	A striped pelt, a trophy of the forest	-	icon	sell=30
 spider_silk	Spider Silk	material	monster	genin	beta3	64	25	drop:giant_spider	Tough silk for wire and cloth	-	icon	sell=12
 hawk_feather	Hawk Feather	material	monster	any	beta2	64	6	gather:cliff_nest	A long barred feather for fletching and charms	-	icon	sell=3
-bandit_trinket	Bandit Trinket	material	loot	any	beta2	64	0	salvage:bandit_camp;drop:bandit	A ring, a comb, a lucky coin: worth something to the pawnbroker	-	icon	variant=look;sell=12
-bandit_purse	Bandit Purse	material	loot	any	beta2	16	0	drop:bandit;salvage:bandit_camp	A purse of stolen coin: open it for 5 to 40 ryo	-	icon	opens=ryo:5-40
-broken_blade	Broken Blade	material	loot	any	beta2	64	0	salvage:bandit_camp;drop:bandit	A snapped sword: the forge melts it into scrap steel	-	icon	sell=4;smelt=scrap_steel:2
+bandit_trinket	Bandit Trinket	material	loot	any	beta2	64	0	salvage:bandit_camp;drop:bandit_thug	A ring, a comb, a lucky coin: worth something to the pawnbroker	-	icon	variant=look;sell=12
+bandit_purse	Bandit Purse	material	loot	any	beta2	16	0	drop:bandit_thug;salvage:bandit_camp	A purse of stolen coin: open it for 5 to 40 ryo	-	icon	opens=ryo:5-40
+broken_blade	Broken Blade	material	loot	any	beta2	64	0	salvage:bandit_camp;drop:bandit_thug	A snapped sword: the forge melts it into scrap steel	-	icon	sell=4;smelt=scrap_steel:2
 stolen_goods	Stolen Goods	key	loot	any	beta2	64	0	salvage:bandit_camp	A crate of someone's things: return them for a reward and a deed, or sell them and live with it	-	icon	sell=20;deed=returned_goods

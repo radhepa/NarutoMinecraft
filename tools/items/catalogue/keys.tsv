@@ -16,7 +16,7 @@ grocery_order	Grocery Order	key	mission	genin	beta2	16	0	mission:d	A neighbour's
 scent_cloth	Scent Cloth	key	mission	genin	beta2	1	0	mission:d;mission:c	Something that smells of who you are looking for: a ninken tracks it	-	icon	bind=quest
 escort_pass	Escort Pass	key	mission	genin	beta2	1	0	mission:c	The Leaf's pass for an escort on the road	-	icon	bind=quest
 travel_permit	Travel Permit	key	travel	genin	beta2	1	0	mission:c;quest:main.ch13	Lets the travel desk send you beyond the border	-	icon	bind=quest
-bounty_token	Bandit Bounty Token	key	mission	genin	beta2	64	0	mission:c;drop:bandit_leader	Proof a camp was cleared: hand it in for the bounty	-	icon	bind=quest
+bounty_token	Bandit Bounty Token	key	mission	genin	beta2	64	0	mission:c;drop:bandit_chief	Proof a camp was cleared: hand it in for the bounty	-	icon	bind=quest
 festival_ticket	Festival Game Ticket	key	event	any	beta2	64	2	event:leaf_festival	One try at a festival game	-	icon	-
 prize_token	Prize Token	currency	event	any	beta2	64	0	event:leaf_festival;event:chunin_exams	Won at games; trade at the prize stall	-	icon	-
 spare_key	Spare Key	key	home	any	beta1	1	0	service:locksmith	A spare key to your home, to give to someone you trust	-	icon	mod=shinobi_life
