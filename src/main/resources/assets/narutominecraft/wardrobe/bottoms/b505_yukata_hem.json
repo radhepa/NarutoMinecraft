@@ -1,0 +1,17 @@
+{
+  "id": "b505_yukata_hem",
+  "kind": "bottom",
+  "name": "Yukata Hem",
+  "gender": "unisex",
+  "texture": "bottoms/b505_yukata_hem.png",
+  "extrasHeight": 0,
+  "tags": [
+    "nara",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "lockedTo": "t510_evening_yukata",
+  "description": "The yukata's skirt falling straight to the ankle, over wooden geta."
+}

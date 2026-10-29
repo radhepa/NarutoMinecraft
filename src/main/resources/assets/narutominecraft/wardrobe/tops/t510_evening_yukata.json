@@ -1,0 +1,107 @@
+{
+  "id": "t510_evening_yukata",
+  "kind": "top",
+  "name": "Evening Yukata",
+  "gender": "unisex",
+  "texture": "tops/t510_evening_yukata.png",
+  "extrasHeight": 32,
+  "tags": [
+    "nara",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "right_wide_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.5,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_wide_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.5,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "lockedTo": "b505_yukata_hem",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Summer yukata wrapped left over right, wide sleeves, narrow obi, antler-sprig print."
+}

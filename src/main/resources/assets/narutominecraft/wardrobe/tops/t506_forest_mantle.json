@@ -1,0 +1,134 @@
+{
+  "id": "t506_forest_mantle",
+  "kind": "top",
+  "name": "Forest Mantle",
+  "gender": "unisex",
+  "texture": "tops/t506_forest_mantle.png",
+  "extrasHeight": 32,
+  "tags": [
+    "cloak",
+    "nara",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        -3
+      ],
+      "size": [
+        12,
+        6,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "mantle_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        4,
+        1
+      ],
+      "uv": [
+        37,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.4,
+        3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ]
+    },
+    {
+      "id": "clasp",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        19,
+        13
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short shoulder cape with a crest clasp over a loose long-sleeved shirt."
+}

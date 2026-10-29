@@ -1,0 +1,18 @@
+{
+  "id": "t508_shogi_sweater",
+  "kind": "top",
+  "name": "Shogi Sweater",
+  "gender": "unisex",
+  "texture": "tops/t508_shogi_sweater.png",
+  "extrasHeight": 0,
+  "tags": [
+    "nara",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Slouchy knit sweater with a shogi-board band at the hem and a shogi piece on the chest."
+}

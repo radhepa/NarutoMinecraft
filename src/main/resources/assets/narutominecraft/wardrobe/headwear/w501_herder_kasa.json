@@ -1,0 +1,189 @@
+{
+  "id": "w501_herder_kasa",
+  "kind": "headwear",
+  "name": "Herder Kasa",
+  "gender": "unisex",
+  "texture": "headwear/w501_herder_kasa.png",
+  "extrasHeight": 64,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "crown",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -9,
+        -4
+      ],
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.62
+    },
+    {
+      "id": "brim_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -7.0,
+        -8.0,
+        -7.0
+      ],
+      "size": [
+        14,
+        1,
+        14
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "brim_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        -9.0,
+        -5.0
+      ],
+      "size": [
+        10,
+        1,
+        10
+      ],
+      "uv": [
+        0,
+        27
+      ]
+    },
+    {
+      "id": "brim_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        -10.0,
+        -3.0
+      ],
+      "size": [
+        6,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        39
+      ]
+    },
+    {
+      "id": "brim_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -10.6,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        25,
+        39
+      ]
+    },
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -8,
+        -4
+      ],
+      "size": [
+        8,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        47
+      ],
+      "inflate": 0.7
+    }
+  ],
+  "hidesHair": [
+    "*"
+  ],
+  "coversFace": false,
+  "coversMouth": false,
+  "description": "A broad shallow woven hat for the deer paddocks."
+}

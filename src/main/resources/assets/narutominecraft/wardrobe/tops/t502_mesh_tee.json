@@ -1,0 +1,47 @@
+{
+  "id": "t502_mesh_tee",
+  "kind": "top",
+  "name": "Mesh Tee",
+  "gender": "unisex",
+  "texture": "tops/t502_mesh_tee.png",
+  "extrasHeight": 16,
+  "tags": [
+    "nara",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.5,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Loose untucked short-sleeved shirt, open neck over mesh, the Nara crest on the back."
+}
