@@ -1,0 +1,33 @@
+# Boss phase lines for the combat session's beta bosses that are not story-bound (dlg:combat.boss.<id>.phase_<n>).
+# The story bosses' lines (and the cast's: the rival's spar, the bell test) wait for the story lock.
+#! kind: cycle
+
+## combat.boss.ch11.bandit_chief.phase_1  fn=react
+Kids with headbands. The road tax just went up.
+You picked the wrong cart to guard, little shinobi.
+## combat.boss.ch11.bandit_chief.phase_2  fn=react
+Enough games! Everybody, on them!
+That stung. Now I'm awake.
+## combat.boss.ch11.bandit_chief.phase_3  fn=react
+I've been robbing this road since before you could walk!
+Fine! Take the cart! Just... let me keep the boots.
+
+## combat.boss.ch17.prelim.phase_1  stage=child|teen  fn=react
+No hard feelings. I just can't lose this one.
+They drew our names together. Lucky me, or lucky you?
+## combat.boss.ch17.prelim.phase_2  stage=child|teen  fn=react
+You're better than the proctor said. I'm done holding back.
+Everyone's watching. Let's give them something.
+## combat.boss.ch17.prelim.phase_3  stage=child|teen  fn=react
+Still standing? Then so am I!
+One more exchange. Whoever's left gets the finals.
+
+## combat.boss.ch19.finals.phase_1  stage=child|teen  fn=react
+The whole village is in those stands. Don't embarrass me.
+I've studied every fight you've had. Let's see if it was worth it.
+## combat.boss.ch19.finals.phase_2  stage=child|teen  fn=react
+Hear the crowd? They're starting to cheer for you. I hate that.
+You adapt fast. I'll adapt faster.
+## combat.boss.ch19.finals.phase_3  stage=child|teen  fn=react
+Everything I've got. Right now.
+Win or lose, they'll remember this one.
