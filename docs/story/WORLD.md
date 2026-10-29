@@ -19,6 +19,15 @@ and the other is a bug.
   call them *they* and dialogue uses pronoun tokens (`{they:<role>}`, `{them:<role>}`,
   `{their:<role>}`, requested from the dialogue and character-creation sessions). The player's
   gender comes from the creator screen and is always a token.
+- **Full names, Given Family.** Everyone but the Hokage has a family name; `{name:<role>}` renders
+  "Given Family". A clan member carries the clan's name; anyone outside the 25 clans carries an
+  ordinary family name that never matches a clan (`family_names` in `population.json`), and their
+  character file says **no clan** plainly. The renamed Kagari descendants carry their adoptive
+  families' names. Honorifics stay natural ("{family:sensei_4}-sensei", "Lord Fourth"); Hokage
+  are named by given name only.
+- **The ensemble** (the four squads of the player's class, the senior squad and five senseis) is in
+  [ENSEMBLE.md](ENSEMBLE.md). Their looks are curated in Classic and rolled in Varied, so they are
+  *they* in dialogue tokens too.
 - **`role:fallen_parent`** is the sensei's dead teammate. Their gender is rolled per save from the
   `names` stream (they have no fixed look: they appear only in a painted portrait, drawn in shadow,
   and in memory).
@@ -60,9 +69,9 @@ story counts in ordinary years.
 | ~Y-25 | The surviving boy, now ageless on taken chakra, gathers soldiers abandoned after wars, orphans used and discarded and clans broken by treaties | — |
 | ~Y-20 | **Yūgure** is founded (see below) | — |
 | ~Y-15 | The keeper notices descendants of the renamed children showing chakra the sealing should have smothered. The seal is weakening over the generations | The keeper |
-| ~Y-13 | `fallen_parent`, a Leaf Jonin and grandchild of a renamed child, serves on a team with the future sensei. Their gift is sealed but flickers in danger: a campfire that leans toward the team | The sensei (without knowing what it was) |
+| ~Y-13 | `fallen_parent`, a Leaf Jonin and grandchild of a renamed child, serves on a team with the future sensei and `sensei_3`. Their gift is sealed but flickers in danger: a campfire that leans toward the team | The sensei (without knowing what it was) |
 | ~Y-12 | **The player is born.** Who the parent is, is `twist.lineage` ([ROTATIONS.md](ROTATIONS.md)). In every save the baby ends up in a border village, in a house with a persimmon tree, with a family who sing it the Kagari watch-fire song | — |
-| ~Y-8 | **The Ash Road ambush.** A Yūgure cell carrying chakra paper (which chars ash-violet near Kagari chakra) ambushes the sensei's team to test `fallen_parent`. The parent dies; the sensei is burned trying to pull them out (the scar). The elders, the keeper among them, record it as a bandit ambush and seal the report: an open inquiry would have asked why Yūgure wanted that Jonin | The keeper, the councillor (who signed the sealing) |
+| ~Y-8 | **The Ash Road ambush.** A Yūgure cell carrying chakra paper (which chars ash-violet near Kagari chakra) ambushes the three-person team of `fallen_parent`, the future sensei and `sensei_3`, to test `fallen_parent`. The sensei sends `sensei_3` back for help, then goes back in; `fallen_parent` dies; the sensei is burned trying to pull them out (the scar). `fallen_parent` had a young child with a civilian spouse in a border village; after the ambush the report lists the spouse and child as "lost" (in lineage A they truly died; in lineage B the child is the player, see [ROTATIONS.md](ROTATIONS.md) §2). Persimmons were `fallen_parent`'s favourite fruit; the sensei leaves one at the memorial stone every year. The elders, the keeper among them, record it as a bandit ambush and seal the report: an open inquiry would have asked why Yūgure wanted that Jonin | The keeper, the councillor (who signed the sealing) |
 | ~Y-6 | Yūgure finds the persimmon house. The family is killed or scattered; the child (six) is taken to Yūgure's **nurseries**, camps where gifted children are tested, numbered and trained. The player becomes **"Nine"** | — |
 | Y-6 to Y0 | Six years in the nurseries. The player's flame is the strongest any test has shown. The leader keeps the child's existence from his own second | The leader, the traitor (the reports), the porter |
 | Y0 | The prologue. The hideout in the southern hills, by the ruined Kagari shrine. That night the leader takes a strong girl's chakra (`lost_child`) to test the dark mirror on a Kagari-sensitive child. The Leaf raids the camp the same night: the keeper had received an anonymous map. **The map came from the second**, who learned the hideout was emptying children and could not bear it | The second |
@@ -71,7 +80,7 @@ story counts in ordinary years.
 
 The **Kagari** (篝, "bonfire") were a Warring States clan of watch-fire keepers. In camp, a Kagari
 would sit at the fire with soldiers who trusted them, and the fire would "lean" toward the bonded:
-the Kagari could borrow a comrade's nature or a technique for a moment, by consent. Their crest is
+the Kagari could push their chakra into a comrade's and make the comrade's own technique burn past its limits, by consent. Their crest is
 a watch-fire basket (篝籠) of four crossed staves holding a flame. Their songs survive as one
 lullaby, **the watch-fire song**, sung in the families of the renamed children without anyone
 knowing why.
@@ -132,31 +141,66 @@ wick, and it will not burn for a taker. The leader's own mirror turns on him.
 
 ## Kindling Bond in the story
 
-The ability list is being redesigned (working proposal: perceive bonds, kindle allies, a link, a
-mark to travel to or call bonded allies, an ultimate that scales with the bond web; tiers Spark,
-Flame, Blaze, Bonfire). **The story depends only on these rules**, which any final design must keep:
+*Approved design.* The Kagari gift is **Kindling Bond**: power that flows outward, through people.
+It grows with how many people the player has truly bonded with and how deep those bonds go. At its
+height it is as strong as the great eye techniques, but it is not an eye: its sign is an **ember
+mark** on the palm (later the chest), threads of light, and ember-gold chakra. Nothing is ever
+copied or borrowed.
+
+| Power | What it does | Tier (friendship level) |
+|---|---|---|
+| **Thread Sight** | Always on. Bonds appear as threads of light: who is tied to whom, how strongly, which ties fray or run one way. Bonded allies are sensed anywhere on the map. A bonded person who is hiding something shows a flicker in their thread | Spark (6) |
+| **Kindle** | Push your chakra into a bonded ally so *their own* technique goes past its limits: a fireball becomes a firestorm, healing becomes a revival, a sensor's range covers the village. They do it, bigger | Spark (small kindles), Flame (8: full) |
+| **Ember Link** | Bind the squad into one flame: a shared chakra pool, damage spread across the squad, seeing through a linked ally's eyes. **Unison techniques**, unique to each pairing | Flame (8); unison at Blaze |
+| **Ember Mark** | An ember left in a deeply bonded ally: travel to their side, or call them to yours, across any distance | Blaze (10, or a spouse) |
+| **Bonfire** | The ultimate: every bond at once. Its strength is the whole bond web; a player who befriended half the village burns like a sun, a loner holds a candle | Bonfire (the bond web) |
+
+**Costs.** While linked you feel your allies' pain. Overuse burns your own chakra and stamina. A
+quarrel dims that person's flame; a falling-out puts it out. With strangers it does nothing.
+**Natures** come by resonance: fight beside someone often enough and their trial can teach you
+their nature. You never copy it.
+
+### The rules the story keeps
 
 1. **It needs a bond, and the bond's consent.** It works through people who trust you; it fails with
    strangers, enemies and anyone in a falling-out.
-2. **It shares, never takes.** A kindled ally loses nothing.
-3. **It is visible.** A small watch-fire flame between you and the ally (*Kagari-bi*).
-4. **It can give as well as borrow.** Pouring your own flame into someone is possible (the lost
-   child's return), and costly.
-5. **It grows with the web.** The more people (and the more kinds of people) who would kindle for
-   you, the greater it is. Its ultimate is the whole village choosing you.
-6. **The dark mirror is its shadow**: taking chakra by force. The player never gets it; it is offered
-   once (Ch 52), and refusing is the climax.
+2. **It gives, never takes.** A kindled ally loses nothing and gains. Pouring your flame into
+   someone can relight theirs (the lost child's return), and it costs you.
+3. **It grows with the web.** Its ultimate is the whole village choosing you.
+4. **The dark mirror is its shadow**: taking chakra by force, without a bond. The player never gets
+   it; it is offered once (Ch 52), and refusing is the climax.
 
-**Story milestones of the gift** (mapped to the proposed tiers where they line up; if the ability
-list changes, the milestone moves with the nearest ability):
+### Thread Sight and the mystery (a principled limit)
 
-| Milestone | Where | Proposed tier |
+Thread Sight could solve the voice's case in a glance; it does not, for three reasons that hold in
+every save and every rotation:
+
+1. **It reads only your own web.** A person shows a thread (and can flicker) only if they are bonded
+   to you at level 6 or more. A thread between two *other* people shows only when both are bonded to
+   you at 6+. Strangers, enemies and acquaintances are dark.
+2. **It shows *that*, never *what*.** A flicker means "hiding something from you". Every one of the
+   four traitor candidates hides a true secret in every save (the librarian her Kagari family
+   history; the medic their years of letters to the strangers who once saved them; the councillor
+   his signature on the Ash Road sealing; the merchant old debts and smuggling for bandits), so all
+   four flicker whenever the player probes them. The flicker narrows nothing.
+3. **The hand is never in your web.** The porter is never at 6+ before Ch 28, and after it his
+   memory is burned, so the voice's tie to the hand is never visible.
+
+The keeper flickers too, honestly (he hides the archive) until Ch 36. The leader has **no threads
+at all**: eighty years without one bond. The second shows a faint **one-sided** thread toward the
+player from Ch 27, in both lineages. The blade has one strong thread, to the second.
+
+### Story milestones of the gift
+
+| Milestone | Where | Tier |
 |---|---|---|
-| Foreshadowing: the flare, the flicker, the leaning campfire | Ch 3, Ch 8, Ch 16 | — |
-| **Awakening**: the first real kindling, a fallen teammate's nature | Ch 24 | Spark |
-| The gift named and trained in secret | Ch 25 to Ch 29 | Spark |
-| The gift seen in the open; the first time someone kindles *toward* you | Ch 31 | Flame |
-| Giving flame: the lost child's return | Night Watch N6 or Ch 47 | Blaze |
+| Foreshadowing: the flare, the flicker at the bells, the leaning campfire | Ch 3, Ch 8, Ch 16 | — |
+| **Awakening.** At the border post a friend falls for you; the threads appear; you kindle them and they rise once and cast their own technique past its limits | Ch 24 | Spark |
+| The gift named, its old forms learned, trained in secret: Thread Sight drills, small kindles | Ch 25 to Ch 29 | Spark |
+| The gift in the open: the squad linked as one flame in the drain; a near-stranger offers their flame | Ch 31 | Flame |
+| Unison techniques with the closest bonds; the first Ember Mark (spouse or a level-10 friend) | Jonin arc, systemic | Blaze |
+| Relighting a flame: the lost child's return | Night Watch N6 or Ch 47 | Blaze (the cord) |
+| Ember Marks across the burning village: travel to the friends who need you | Ch 51 | Blaze |
 | The Bonfire: every bond in the village | Ch 53 | Bonfire |
 
 ## The Leaf's people in power

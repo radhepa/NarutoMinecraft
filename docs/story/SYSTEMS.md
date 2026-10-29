@@ -58,7 +58,8 @@ the bible's side quest secrets).
 |---|---|---|---|
 | `side.c.returned_book` | Chunin | A library book keeps being returned on days the library is closed | The librarian's alibi or failed alibi |
 | `side.c.court_roll` | Chunin | A clerk from the daimyo's court is stuck in the village with a damaged guest roll | The councillor's alibi or failed alibi |
-| `side.c.sensor_shadow` | Chunin | The young sensor assigned to you would like, very much, to have a single day off | The sensor shadow's bond line |
+| `side.c.sensor_shadow` | Chunin | The young sensor assigned to you would like, very much, to have a single day off | squad4_a's bond line |
+| `side.c.third_time` | Chunin | A loud Genin and his enormous dog are taking the Chunin Exams for the third time | squad4_b's promotion at last (fan favourite) |
 | `side.j.roots` | Jonin | Families come asking the archive where they came from | The descendants after Ch 40 |
 | `bond.c.wrongly_accused.<candidate>` | Jonin | Make amends to someone you wronged | After a wrong accusation |
 
@@ -88,7 +89,7 @@ The bond engine ([BONDS.md](../../BONDS.md), [LIFE_TOGETHER.md](../../LIFE_TOGET
 - **The village talks.** Big beats are deeds everyone hears: the stadium (Ch 19), the border post
   (Ch 24), the testimony (Ch 31), the council (Ch 40), the war (Ch 51). Residents' greetings react.
 
-**Requests (bonds session):** answer flags (`ans.*`) as player-scope string flags, readable by a
+**Requests (bonds session):** the Kindling tiers read friendship levels as approved (Spark 6, Flame 8, Blaze 10 or a spouse, Bonfire the web); answer flags (`ans.*`) as player-scope string flags, readable by a
 `flag` condition with a value; authored life events for story roles at story beats; an act
 `gave_flame` (big, kept; the lost child's return) and `shielded_with_life` (the second); the
 finale reading each bond at 6+ in a fixed order (spouse, teammates, sensei, rival, others by level).
@@ -115,7 +116,8 @@ not mechanics):
 | **Ember chakra**: the second's burning kunai and ember palms | Ch 16, 19, 27 |
 | **The hollow**: an enemy with flat AI and several stolen natures (cycles through them), who does not flinch | Ch 24 (the lost child), Ch 52 to 53 (hollow fighters) |
 | **Smothered fights**: no sound cues | Ch 31 |
-| **Kindling Bond** as the story uses it (rules in [WORLD.md](WORLD.md)), whatever the final ability list | Ch 24 onward |
+| **Kindling Bond** (approved design, [WORLD.md](WORLD.md#kindling-bond-in-the-story)): Thread Sight from Ch 24 (with the mystery limit: reads only bonds at 6+, shows *that* someone hides, never *what*); a Kindle that makes an ally's own technique exceed its limits (Ch 24's scripted kindle must work on any teammate's or the sensei's signature technique); Ember Link in a dark, soundless fight (Ch 31); Ember Mark travel across the village (Ch 51); the Bonfire (Ch 53) | Ch 24 onward |
+| **Unison techniques** for the player with each close character (ideas in each character file) | Jonin arc onward |
 | **The dark mirror** as an enemy attack: a drain beam the player must break line of sight from | Ch 52 |
 | **The finale**: a fight where the player's power grows with each flame given (data: the bond web) | Ch 53 |
 | **Protect objectives** with evacuating residents | Ch 19, 51 |

@@ -7,6 +7,7 @@
 
 | | |
 |---|---|
+| Name | Given Family (`{name:role:teammate_a}`); Classic family name Kurama (the clan's name), given name rolled |
 | Role | `role:teammate_a`: classmate (Ch 1), your paired-exercise partner (Ch 3), squadmate (Ch 8 on) |
 | Look | Classic: curated (a Kurama, ink-stained fingers, a brush behind the ear). Varied: rolled from the four classmates |
 | Pronouns | Rolled: *they* here; dialogue uses `{they:role:teammate_a}`, `{them:…}`, `{their:…}` |
@@ -59,10 +60,24 @@ hurt because of it (Ch 16). Later: being made into a tool (the sensor corps, the
 | Last Bonfire | Kindles toward you without being asked (Ch 53); their line answers the fear you told them in Ch 11 |
 
 **Endings and variants.**
-- **Who fell in Ch 24.** If teammate_a fell: their Ch 25 line is "That was the warm room again" (if
-  the flare was shared) or "So that's what it was" (if not); they gain a permanent `saved_by_them`
-  memory toward you and a `trained_together` streak in the secret training. If someone else fell:
-  they arrive at the hospital last and say they should have been faster.
+- **Who fell in Ch 24.** If teammate_a fell: they lie hurt in the burning post; your Thread Sight
+  opens and the first thread you ever see is theirs, bright and steady. You push your chakra into
+  them; they rise for one moment and cast their *own* painted genjutsu past its limits: it swallows
+  the whole post, and the hollow girl stands inside a painting of the border post as it was before
+  it burned, long enough for the two of you to finish the fight together. Their Ch 25 line is "That
+  was the warm room again" (if the flare was shared) or "So that's what it was" (if not); they gain
+  a permanent `saved_by_them` memory toward you and a `trained_together` streak in the secret
+  training. If someone else fell: they arrive at the hospital last and say they should have been
+  faster.
+- **Thread Sight on them** (from Ch 24, level 6+): their thread flickers whenever they are hiding
+  something from you: the warm-room drawings (until shown), the corps decision (Ch 30, until they
+  ask you), the sketch of you for the confession (romance). You see *that*, never *what*; asking
+  before they offer is prying.
+- **Unison technique (Blaze tier, Ember Link): "Ink Dawn".** You hold the squad's shared flame
+  while they paint; your ember-gold chakra becomes their paint, and the genjutsu they cast is a
+  sunrise over the whole field that every enemy inside sees as their own home burning down to dusk,
+  then dawn. Enemies stop to watch it; allies see only warm light. It is the one illusion they ever
+  make that is about hope.
 - **Ch 30 corps choice** (`ans.teammate_a.corps`): *join if you want* → they ask for time and choose
   painting first, corps second (a part-time sensor; Ch 50 they find anchors by feel). *Don't let them
   choose for you* → they refuse the corps; a quarrel with their family (a life event: "a quarrel
@@ -124,6 +139,7 @@ Voice samples, not shipped lines:
 | Their fear of being invisible | Ch 11 campfire (`friendship 5`); or level 7 topic |
 | Anything about your gift to anyone else | Never, unless the player broke the flare secret first |
 | The word "Kagari" | Ch 40 (they don't know it before) |
+| What a Thread Sight flicker on them means | Never told by the game; only by their own later confession |
 
 ### Questions for the player
 

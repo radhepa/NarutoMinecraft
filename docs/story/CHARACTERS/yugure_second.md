@@ -11,7 +11,7 @@
 | Look (fixed) | Tall, lean, about thirty-four at Y0. Dark red-brown hair cut at the jaw, one lock singed shorter than the rest. Hands scarred like a smith's from her own ember chakra (the burns are the tell the player can notice in Ch 15). Ash-violet cloak with the sinking sun; under it a plain grey travelling coat. Her half of the watch-fire charm hangs on a cord under her collar, never shown before Ch 48 |
 | Disguise (Ch 15 to 17) | A tall Genin girl of a small foreign village, under Transformation; the burned hands do not change |
 | Pronouns | She / her |
-| Clan | None by name. A Kagari descendant: her great-grandmother was one of the twenty-seven, renamed into a Leaf household, who later left the Leaf for a border town. Her flame broke its seal as ember chakra |
+| Clan | No clan. An ordinary family name (rolled from the `family_names` pool; Given Family order). A Kagari descendant: her great-grandmother was one of the twenty-seven, renamed into a Leaf household, who later left the Leaf for a border town. Her flame broke its seal as ember chakra |
 | Rank | Missing-nin; Jonin-level. Yūgure's second since about Y-15 |
 | Archetype (bond engine) | `reserved` leaning `protective` (warmth .1, bold .4, pride .3, discipline .6, open -.7) |
 | Values | Loyalty, family |
@@ -104,6 +104,15 @@
    and never again.
 7. **Ch 52:** She shields the player as a debt to her son.
 8. **Ch 53:** Lives (rekindled) or dies at dawn; the player can lay her under the persimmon tree.
+
+### Her thread (Thread Sight)
+
+From Ch 27, when the player has Thread Sight, a **faint, one-sided thread** runs from her toward
+the player: she feels for a child she cannot name. It shows in both lineages (in A it is a
+mother's; in B it is for her son, landing on the nearest child of the nurseries) and must never
+be explained before Ch 48. She has no thread the player could read toward anyone else in Yūgure
+except one, strong and old, to the blade. After her defection the thread becomes two-sided as her
+bond with the player grows; in Ch 52 it is the thread the leader's mirror tears.
 
 ### Her bond
 

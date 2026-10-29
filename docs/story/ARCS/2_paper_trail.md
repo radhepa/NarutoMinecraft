@@ -18,8 +18,8 @@ first sight of the two shadows and a sensei who has started to look at the playe
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 8.1 | Assignment | `instructor`, class | Squads read out: you, `teammate_a`, `teammate_b`, under the Jonin who carried you out of the hills. The rival is put with `classmate_c` and `classmate_d` under another Jonin and pretends not to care | plot, bond | — |
-| 8.2 | The sensei | `sensei` | Training Ground 3 at dawn. The sensei is late on purpose, eats an apple, and says almost nothing: "Two bells. Three of you. Noon." | life | — |
+| 8.1 | Assignment | `instructor`, class | Four squads read out, each with its Jonin ([ENSEMBLE.md](../ENSEMBLE.md)): you, `teammate_a`, `teammate_b`, under the Jonin who carried you out of the hills. The rival is put with `classmate_c` and `classmate_d` under another Jonin under `sensei_2` and pretends not to care; the trio of `squad3_a`, `squad3_b`, `squad3_c` under `sensei_3`; `squad4_a`, `squad4_b`, `squad4_c` under `sensei_4` | plot, bond | — |
+| 8.2 | The sensei | `sensei`, `sensei_2` | Training Ground 3 at dawn. `sensei_2` drops out of a tree to challenge your sensei to a contest (who can stay silent longest; your sensei wins without noticing) and leaves. Then: The sensei is late on purpose, eats an apple, and says almost nothing: "Two bells. Three of you. Noon." | life | — |
 | 8.3 | The test | `sensei`, the squad | You only pass if a teammate gets a bell too. Alone, it is impossible; together (squad commands: a feint, a trap, a timed rush), it is hard. As you and a teammate grab the bells together, a faint flame flickers between your hands; the sensei sees it and says nothing | plot, teach, seed (`story.seed.bell_flicker`), bond (`shared_moment bond.bells` with whoever grabs with you) | Who you grab with: the player picks the moment; whoever is beside you (the teammate you gave the command to). Giving away your own bell so both teammates pass is allowed (`ans.player.bell_given`): the sensei passes all three and remembers it |
 | 8.4 | Lunch | `sensei` | The sensei shares their lunch and asks one question: "When I give an order you think is wrong, what will you do?" | bond | Obey and trust you / Ask why first / Do what's right and take the blame (`ans.sensei.orders`). Ch 24 (the order to fall back) and the Seventh's speech (Ch 42) read it |
 
@@ -45,7 +45,7 @@ After Ch 9 the board, `Dogs and Bugs` and the market's price war open (second si
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
 | 10.1 | Tree walking | `sensei`, squad | Climb a tree with chakra feet; mark your height with a kunai. Each teammate's struggle shows who they are (a careful climber, a reckless one) | teach | — |
-| 10.2 | The stone | `sensei` | Evening, the memorial stone. The sensei stands at one name, just beside a long chiselled gap where names were cut away | seed (`story.seed.chiselled_names`, `story.seed.fallen_name`) | Ask about the gap / ask about the name / stand with them in silence (`ans.sensei.stone`). Gap: "Names someone decided to forget." Name: "A teammate. The best of us." Silence: they say, after a while, "Thank you," and you gain trust (`stood_by_them`) |
+| 10.2 | The stone | `sensei`, `sensei_3` | Evening, the memorial stone. `sensei_3` is already there; the two Jonin nod and do not speak, and she leaves. The sensei stands at one name, just beside a long chiselled gap where names were cut away | seed (`story.seed.chiselled_names`, `story.seed.fallen_name`) | Ask about the gap / ask about the name / stand with them in silence (`ans.sensei.stone`). Gap: "Names someone decided to forget." Name: "A teammate. The best of us." Silence: they say, after a while, "Thank you," and you gain trust (`stood_by_them`) |
 
 ---
 
@@ -99,10 +99,10 @@ day (third side wave).
 |---|---|---|---|---|---|
 | 14.1 | East again | `merchant`, squad | The merchant hires the squad again, and this time slows them down: a lame horse that isn't lame, a forgotten bag, a long lunch | clue (`story.clue.merchant.2`) | Push them on / let them set the pace (no effect on the bound answer; a pushed merchant later says "you were right to hurry") |
 | 14.2 | The shadows | `yugure_second`, `yugure_blade` (cloaked), a smuggler | At the river crossing, two figures in ash-violet cloaks with a sinking sun slip across the water ahead of you. The swordsman cuts the rope bridge behind them with one stroke that leaves an ink-dark line in the air. Their smuggler is left behind | plot, seed (`story.ch14.done`) | — |
-| 14.3 | The smuggler | squad | Smoke and paper bombs; you capture the smuggler. He says one word, as if it should frighten you: **"Yūgure."** In his coat, a travel pass sealed with a pine-sprig seal | plot, clue (`story.clue.councillor.2`) | — |
+| 14.3 | The smuggler | squad, `sensei_4` | Smoke and paper bombs; you capture the smuggler. Back in the village `sensei_4` questions him for a night; he gets the same one word and nothing else. He says one word, as if it should frighten you: **"Yūgure."** In his coat, a travel pass sealed with a pine-sprig seal | plot, clue (`story.clue.councillor.2`) | — |
 | 14.4 | The suspicion | `sensei` | That night the sensei finds you alone. They have seen paper char near you twice now. "Where were you born?" | seed (`story.seed.sensei_knows`), bond | The truth as you know it: a house with a tree, then the camps / "I don't know" / "Why does it matter?" (`ans.sensei.born`). If you mention the tree, the sensei asks "What kind of tree?" and you can say persimmon (sets `story.lineage.persimmon_told`): in lineage B it lands hard (Ch 21 calls it back) |
 | 14.5 | The recommendation | `sensei` | Back at the Desk, the sensei recommends the squad for the Chunin Exams. To you, privately: "Keep your fire low until you need it." | plot (`story.ch14.recommended`) | — |
-| 14.6 | Squad dinner | squad, `sensei` | The barbecue house: the sensei pays, under protest; teammate_b eats everything | bond (`meal_together` with all; `shared_moment bond.squad_dinner`) | — |
+| 14.6 | Squad dinner | squad, `sensei` | The barbecue house (the Fourth's daughter's): the sensei pays, under protest; teammate_b eats everything; `squad3_b`, working the grill for his mother, sneaks you extra | bond (`meal_together` with all; `shared_moment bond.squad_dinner`) | — |
 
 ---
 

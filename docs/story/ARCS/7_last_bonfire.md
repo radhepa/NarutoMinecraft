@@ -23,12 +23,13 @@ player knows.
 
 ---
 
-## Ch 47: The Lost Child / The Warm Room (45 min)
+## Ch 47: The Lost Child / Home Fires (45 min)
 
 | If | What happens |
 |---|---|
 | **Night Watch not finished** | **The Lost Child.** She comes to the shrine at night, half hollow, hunted by Yūgure for deserting. Cells follow her. You fight them off at the stone basket, then give her your flame through the cord as in N6 (shorter: the shrine's old fire helps). `story.lost_child.home = shrine`. Needs `bond_flag red_cord` kept from Ch 0 (the cord cannot be lost); if the player never saw her in Ch 44 the scene still plays |
-| **Night Watch finished** | **The Warm Room.** Her recovery. She stays at your clan hall. She asks the questions she never got to ask in the cells (see her character file); a walk through the village she never grew up in; the first bowl of ramen. Her answers to your questions become who she is |
+| **`squad5_c`** | If the Night Watch was not played, `squad5_c` comes to the shrine with Undercroft orders to take her. Talk him down (`ans.squad5_c.offer`) or fight him: a betrayal, or not. Either way the orders reach the Seventh, and the Undercroft is disbanded quietly |
+| **Night Watch finished** | **Home Fires.** Her recovery, with `squad4_c` tending her and the medic watching. She stays at your clan hall. She asks the questions she never got to ask in the cells (see her character file); a walk through the village she never grew up in; the first bowl of ramen. Her answers to your questions become who she is |
 
 ---
 
@@ -52,8 +53,8 @@ The lineage reveal (`twist.lineage`, [ROTATIONS.md](../ROTATIONS.md) §2).
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 49.1 | The truth | `yugure_second`, the Seventh, Player | She tells the Seventh's council the leader's true plan: the array, the Hearthstone, the wick, the taking ([WORLD.md](../WORLD.md)). "The Bonfire was never for all of us. It was for him." She learned it from his own notes. The blade does not know | plot (`story.hollow_crown.known`) | Whether the council trusts her: you vouch / you let her speak for herself / you say nothing (`ans.player.vouch`). Vouching ties your standing to her (a deed) |
-| 49.2 | The map | Player, the porter's ledger | The porter's ledger (Ch 28) is the array: eighty-one doorsteps, sills and crates. One of them is your old door (Ch 4) | plot, seed paid (`story.seed.door_mark`, `story.seed.porter_ledger`) | — |
+| 49.1 | The truth | `yugure_second`, the Seventh, Player | She tells the Seventh's council the leader's true plan: the array, the Hearthstone, the wick, the taking ([WORLD.md](../WORLD.md)). "The Bonfire was never for all of us. It was for him." She learned it from his own notes. The blade does not know | plot (`story.hollow_crown.known`), bond (a `shared_moment bond.second.truth` if you vouch or let her speak: her first real moment with you) | Whether the council trusts her: you vouch / you let her speak for herself / you say nothing (`ans.player.vouch`). Vouching ties your standing to her (a deed) |
+| 49.2 | The map | Player, the porter's ledger | The porter's ledger (Ch 28) is the array: eighty-one doorsteps, sills and crates. One of them is your old door (Ch 4). `squad3_c` can feel the anchors once he knows what to listen for; `squad3_a` turns the ledger into a plan; `sensei_5` teaches the village to break a cinder seal | plot, seed paid (`story.seed.door_mark`, `story.seed.porter_ledger`) | — |
 | 49.3 | The Fourth | `hokage_4` (if crippled or taken) | "I've felt this before. In their hold. It was practice for this" | plot | — |
 
 ---
@@ -84,12 +85,12 @@ The assault on the Leaf. A sequence of set-pieces, each led by a character the p
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 51.1 | The wall | the Seventh, the Fifth, the Tobari, the Hagane | Yūgure comes at dusk from three sides. The former Fifth fights on the wall beside the Tobari she once locked down | plot, bond | — |
-| 51.2 | The Academy | `instructor`, the Fourth (if alive), children | The instructor holds the Academy with the children inside, cheerful in the worst hour ("Rows of two! Who wants to see a really big clone?") | plot, bond | — |
-| 51.3 | The parent | `teammate_b`, b's parent (`yugure_b_parent`) | In the market street, b meets their parent in an ash-violet cloak. b asks your question (`ans.teammate_b.ask`). The parent's answer, and b's choice, read `ans.teammate_b.come_back`: bring them in (yes), make them say sorry first (only if sorry), or let them go (no). The parent lives in all three; only "yes" brings them home | plot, bond | Stand with b / let b choose alone (`ans.player.b_parent`) |
+| 51.1 | The wall | the Seventh, the Fifth, `sensei_2`, `squad5_b`, `squad3_a`, the Tobari, the Hagane | Yūgure comes at dusk from three sides. The former Fifth fights on the wall beside the Tobari she once locked down. `sensei_2` holds the main gate with a handful of Chunin against the leader's strongest cells until the evacuation is through; when your sensei reaches him he is dying, and asks if he won. "You won," your sensei says: the only contest they ever conceded. `squad3_a`'s plan breaks with the gate, and she improvises the second line herself | plot, bond | — |
+| 51.2 | The Academy | `instructor`, `sensei_3`, `squad3_b`, the Fourth (if alive), children | The instructor holds the Academy with the children inside, with `sensei_3`'s genjutsu hiding the evacuation route and `squad3_b`, expanded, as the Academy's door; cheerful in the worst hour ("Rows of two! Who wants to see a really big clone?") | plot, bond | — |
+| 51.3 | The parent | `teammate_b`, `squad4_b`, b's parent (`yugure_b_parent`) | In the market street, held by `squad4_b` and his dogs, b meets their parent in an ash-violet cloak. b asks your question (`ans.teammate_b.ask`). The parent's answer, and b's choice, read `ans.teammate_b.come_back`: bring them in (yes), make them say sorry first (only if sorry), or let them go (no). The parent lives in all three; only "yes" brings them home | plot, bond | Stand with b / let b choose alone (`ans.player.b_parent`) |
 | 51.4 | The blade | `yugure_blade` | The last duel, on the rooftops at dusk. He fights at his best. Beaten, he asks why you never killed him | plot | "Because you let me pick up the kunai" / "Because she wouldn't want it" / "Because I want you to see what he's doing" (`ans.yugure_blade.why`). All three send him to the Rock |
 | 51.5 | The door | `elder_keeper` | The archive door. The keeper holds it alone against a cell. When you get there he is dying, and the Hearthstone is gone. He presses the archive keys into your hand: "I kept it quiet forty years. You say it now. All of it." | plot, bond | — |
-| 51.6 | The Rock | Player | The leader has the Hearthstone on top of the Rock. You go | plot | — |
+| 51.6 | The Rock | Player | The leader has the Hearthstone on top of the Rock. With `squad4_a`'s Byakugan as the Seventh's eyes, you cross the burning village by Ember Mark, from friend to friend, and go up | plot | — |
 
 ---
 
@@ -97,7 +98,7 @@ The assault on the Leaf. A sequence of set-pieces, each led by a character the p
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 52.1 | The array lights | `yugure_leader`, Player | The leader sets the Hearthstone in the old stone channels on the Rock's top. Every unbroken anchor in the village flares ash-violet. You feel the village's chakra being dragged toward you, into you. You are the wick | plot | — |
+| 52.1 | The array lights | `yugure_leader`, Player | The leader sets the Hearthstone in the old stone channels on the Rock's top. Every unbroken anchor in the village flares ash-violet. You feel the village's chakra being dragged toward you, into you. You are the wick. `sensei_5` reaches the top behind you and throws himself on the nearest anchor channel to hold part of the array shut | plot | — |
 | 52.2 | The leader | `yugure_leader` | Ageless, gentle, tired. He tells you about the shrine, the ash pit, nine years old, the sound of the chiselling. "They took our names. I'll take everything. Then nothing can ever be taken from anyone again, because I'll be holding it." He sings two lines of the watch-fire song | plot | — |
 | 52.3 | The offer | `yugure_leader` | "Or you hold it. Take it from me instead. You could heal every hollow child. You could make them kneel and say our names forever." The dark mirror, offered | plot | **Refuse** / **Reach for it** (`story.finale.reached`). Reaching plays a vision: the village hollow, you alone on the Rock, the red cord gone grey; then the people you love pull at you (their voices, by bond) and you let go. Either way you refuse |
 | 52.4 | The shield | `yugure_second` | The leader turns the mirror on you. The second steps in front of it and is torn hollow | plot, bond | — |
@@ -110,11 +111,11 @@ The assault on the Leaf. A sequence of set-pieces, each led by a character the p
 | # | Scene | What happens |
 |---|---|---|
 | 53.1 | The pull | The array keeps dragging the village's fire into you, by force. It hurts everyone |
-| 53.2 | Given | Then the flames start to come on their own. Everyone at friendship 6 or more chooses to kindle toward you, and their flame leaves the array's pull and becomes yours to hold, freely given. Each comes with a face and a line, in this order: your spouse (if married); your teammates (reading their questions); the Seventh (`ans.sensei.orders`, `ans.sensei.know`); the rival (`ans.rival.borrowed` and `ans.rival.why_came`: "You said I'd be what's left. Then take it"); the lost child (if home: "So someone remembers"); the instructor; your Genin; your clan; then whole clans and districts as one fire each |
+| 53.2 | Given | Then the flames start to come on their own. Everyone at friendship 6 or more chooses to kindle toward you, and their flame leaves the array's pull and becomes yours to hold, freely given. Each comes with a face and a line, in this order: your spouse (if married); your teammates (reading their questions); the Seventh (`ans.sensei.orders`, `ans.sensei.know`); the rival (`ans.rival.theirs` and `ans.rival.why_came`: "You said I'd be what's left. Then take it"); the lost child (if home: "So someone remembers"); the instructor; your Genin; your clan; then whole clans and districts as one fire each |
 | 53.3 | The size | The watch-fire's size is `BondWeb.score` ([BONDS.md](../../../BONDS.md) §11): small (15: the squad and a few friends) / strong (40) / the whole village (70). The thresholds are data. A thin web still wins; a wide one changes the scene (the whole village lit on the Rock's face) and the epilogue |
 | 53.4 | It won't burn for him | The leader reaches into the wick to take the gathered fire. A fire given freely cannot be taken. His mirror turns on him; eighty years of taken chakra goes back to the array, back to the village, out of him |
 | 53.5 | The last Kagari | He is old now, as old as he is. You can kindle toward him: offer him a bond (`story.finale.offered_leader`). He can't take it; there is no bond to take. He hears the song from you, sings the last line, and dies on the Rock at dawn |
-| 53.6 | The second | If `bond_web 40` or `friendship [yugure_second, 4]`: the watch-fire rekindles her and she lives. Else she dies at dawn, holding your half of the charm with hers (`story.second.lives`) |
+| 53.6 | The second | If `bond_web 40`, or `friendship [yugure_second, 4]`, or `friendship [squad4_c, 6]` (you kindle `squad4_c`'s healing into a revival): the watch-fire rekindles her and she lives. Else she dies at dawn, holding your half of the charm with hers (`story.second.lives`) |
 
 ---
 
@@ -135,7 +136,7 @@ The assault on the Leaf. A sequence of set-pieces, each led by a character the p
 |---|---|---|---|---|---|
 | 55.1 | Ready | the Seventh | When level 50 and Hero standing everywhere are reached, the New Year succession | plot (`set_hokage 8`) | — |
 | 55.2 | The speech | the Seventh, then Player | The Seventh's speech reads lineage B (their teammate's name) or A (the second, alive or remembered). Then yours: pick the three things you say from what the story gave you (`ans.player.speech`: the cord, the bell, the bowl, the names, the fire) | plot | — |
-| 55.3 | First acts | Player | As Hokage: restore the orphan's stipend in the Fourth's name; rule on the voice (pardon / exile / service to the restored clan's archive) (`story.traitor.ruling`); `classmate_d` takes the post of your guard (quoting `ans.classmate_d.stand`) | plot, bond | The ruling |
+| 55.3 | First acts | Player | As Hokage: restore the orphan's stipend in the Fourth's name; rule on the voice (pardon / exile / service to the restored clan's archive) (`story.traitor.ruling`); `classmate_d` takes the post of your guard (quoting `ans.classmate_d.stand`); `squad5_a` becomes your Jonin Commander in `sensei_2`'s place (quoting `ans.squad5_a.will`); `squad3_b` stands beside you when the stipend is restored | plot, bond | The ruling |
 | 55.4 | The face | the Rock | Your face is carved as the Eighth; the instructor asks the Ch 5 question one more time | plot (`carve_face 8`) | — |
 | 55.5 | Epilogue | everyone | A montage read from flags: the squad, the lost child, the second (or her grave under the persimmon tree), b and their parent, the rival, your house, your Genin, the porter sweeping the shrine, the child who repeats what the Leaf is. The last image: a red cord tied on the stone watch-fire basket at the shrine | bond | — |
 

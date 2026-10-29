@@ -22,6 +22,7 @@ canon characters appear only as cameos.
 | [ARCS/5_ashes.md](ARCS/5_ashes.md) | Jonin, Ch 33 to 45 |
 | [ARCS/6_night_watch.md](ARCS/6_night_watch.md) | ANBU branch (optional), N1 to N7 |
 | [ARCS/7_last_bonfire.md](ARCS/7_last_bonfire.md) | Road to Hokage, Ch 46 to 55, and the epilogue |
+| [ENSEMBLE.md](ENSEMBLE.md) | The class as four squads, the senior squad and five senseis: tiers, wants, flaws and where each moves the plot |
 | [CHARACTERS/](CHARACTERS/) | One file per recurring character: arc, knowledge over time, endings, and their dialogue brief |
 | [DIALOGUE_BRIEFS.md](DIALOGUE_BRIEFS.md) | Rules for every line, global spoiler gates, the questions characters ask the player |
 | [SYSTEMS.md](SYSTEMS.md) | How the story uses missions, side quests, bonds, clans and combat; requests to each system |
@@ -94,7 +95,7 @@ carved as the Eighth.
 | Academy (beta) | Someone in a sinking-sun cloak took you and is watching you | Your chakra is strange; the keeper knows something; someone cut a page |
 | Genin (beta) | The name **Yūgure**; it smuggles chakra paper and orphans; the paper chars near you | The sensei knows what you are; someone in the Leaf helps them |
 | Chunin Exams (beta) | Yūgure attacked the Leaf; a woman of theirs called you **Kagari** | Kagari is a clan, and you are of it |
-| Chunin | Your gift is Kindling, a Kagari gift; the paper hunts your bloodline; the porter was the hand; there is a voice; teammate_b's parent is with Yūgure; the charm half is a parent's pair | The Leaf erased the Kagari; who the voice is (an attentive player knows) |
+| Chunin | Your gift is Kindling (you see bonds as threads and can kindle a friend past their limits), a Kagari gift; the paper hunts your bloodline; the porter was the hand; there is a voice; teammate_b's parent is with Yūgure; the charm half is a parent's pair | The Leaf erased the Kagari; who the voice is (an attentive player knows) |
 | Jonin | The Quiet Ending, the archive, the twenty-seven, the Third's silence; who the voice is | Yūgure wants something worse than the creed |
 | Road to Hokage | Your lineage; the Hollow Crown, and that you are its wick | — |
 
@@ -137,7 +138,8 @@ four are on the Rock at the start; the Fifth and Sixth are fixed carvings placed
 | `yugure_leader` | Yes (man) | Ch 0 (the watcher) | The last Kagari child of the purge | [yugure_leader](CHARACTERS/yugure_leader.md) |
 | `hokage_5`, `hokage_6` | Yes | Ch 20, Ch 32 | The hard line; the truth told | [5](CHARACTERS/hokage_5.md), [6](CHARACTERS/hokage_6.md) |
 | `fallen_parent` | No look (memory only) | Ch 10 (a name) | The sensei's teammate; a lineage candidate | [fallen_parent](CHARACTERS/fallen_parent.md) |
-| Minor: `sensor_shadow`, `ramen_cook`, `undercroft_head`, `anbu_captain`, `genin_1..3`, `yugure_b_parent`, `foreign_genin`, `elder_hyuga` | Mixed | Various | — | [minor](CHARACTERS/minor.md) |
+| The ensemble: `sensei_2..5`, `squad3_*`, `squad4_*`, `squad5_*` | Mixed | Ch 1 to 8 | Four squads of your class, a senior squad and their senseis ([ENSEMBLE.md](ENSEMBLE.md)) | [senseis](CHARACTERS/senseis.md), [squad3](CHARACTERS/squad3.md), [squad4](CHARACTERS/squad4.md), [squad5](CHARACTERS/squad5.md) |
+| Minor: `ramen_cook`, `undercroft_head`, `anbu_captain`, `genin_1..3`, `yugure_b_parent`, `foreign_genin`, `elder_hyuga` | Mixed | Various | — | [minor](CHARACTERS/minor.md) |
 
 ## The arcs
 

@@ -7,10 +7,11 @@
 
 | | |
 |---|---|
+| Name | Given Family (`{name:role:teammate_b}`). **No clan.** Family name drawn from the ordinary `family_names` pool (never a clan's name), shared with the grandmother and the absent parent |
 | Role | `role:teammate_b`: classmate (Ch 1), squadmate (Ch 8 on); the one Yūgure tries to recruit |
 | Look | Classic: curated (clanless, scuffed jacket with a pup in it, a too-big forehead protector that was their parent's). Varied: rolled from the four classmates |
 | Pronouns | Rolled: *they*; dialogue uses `{they:role:teammate_b}` and the rest |
-| Clan (Classic) | Clanless; raised by a grandmother in the shinobi apartment blocks |
+| Clan (Classic) | No clan; raised by a grandmother in the shinobi apartment blocks |
 | Rank | Academy → Genin → Chunin → Jonin (a frontline captain) |
 | Archetype | Classic: **fiery** (warmth .6, boldness .9, pride .4, discipline -.5, openness .8) |
 | Values | courage, loyalty |
@@ -77,8 +78,20 @@ away, drag me back"). Being left behind by the squad.
   look back (epilogue: b at the bridge, alone, at peace). The parent lives in all three.
   `ans.teammate_b.parent_good` colours b's last line ("I'm going to be better than you" / "I'm
   already better than you" / "I don't need to be anything to you").
-- **Ch 24** if b fell: "Told you. Drag me back—" (reads `ans.teammate_b.drag_back`); Ch 25: "You
-  stole my move!" (they mean the nature you borrowed).
+- **Ch 24** if b fell: "Told you. Drag me back—" (reads `ans.teammate_b.drag_back`). Thread Sight
+  opens on them; you push your chakra into them; they rise for one moment with the pup, and their
+  own fang technique (Classic: a spinning pup-and-partner rush) goes past its limits into a storm
+  that tears the post's smoke away and drives the hollow girl back. Ch 25: "Did you SEE that? That
+  was me! ...It was me, right? You just made it bigger."
+- **Thread Sight on them** (from Ch 24, level 6+): the thread frays toward the bridge on the nights
+  they go there; it flickers when they hide the stranger's notes (Ch 26 *nearly*, until the well).
+  On the *left* path it thins to one strand that never quite breaks.
+- **Unison technique (Blaze tier, Ember Link): "Pack Fire".** You, b and the pup move as one flame:
+  three ember-gold rushes from three sides, the pup leading, landing at once; the pup's bark sets
+  the timing. Unique because it needs the pup: if the pup is home, it doesn't exist.
+- **Their rival-friend:** `squad4_b`, the loud Inuzuka with the big ninken, from Squad 4. The two
+  compete over everything (whose dog is braver, who eats more at the barbecue house), and squad4_b
+  is the one person b admits to missing on the *left* path.
 - **Romance** (teen and up): b confesses loudly, in public, at a festival (a deed the village hears).
   Dating a teammate triggers the other's squad-dinner scene.
 

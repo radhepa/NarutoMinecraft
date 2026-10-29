@@ -10,7 +10,7 @@
 | Role | The Fourth Hokage, sitting when you arrive |
 | Look | **Fixed** (baked into the Rock and portraits): a big, warm Akimichi man with a broad smile, about fifty-eight |
 | Pronouns | He |
-| Clan | Akimichi (family name is the clan's; given name rolled) |
+| Name | Hokage carry no family name in text: given name rolled; spoken of as "Lord Fourth" ({hokage:4}); his clan is Akimichi |
 | Rank | Hokage (Y-28 to Ch 19/20) → mentor (crippled or taken) or memory (falls) |
 | Archetype | **warmhearted** (with the Akimichi upbringing: warmth, sharing) |
 | Values | Family, kindness |

@@ -6,6 +6,11 @@ Every flag the story sets, where it is set and where it is read. `story/seeds.js
 from the **Seeds** table; `quests.py --check` warns about a seed never read or a read never set.
 Flags are player scope unless they start with `world.`.
 
+## Chapter flags
+
+Every main chapter sets `story.ch<N>.done` when it ends (`story.chN1.done` to `story.chN7.done` for
+the Night Watch). Gates in the character briefs use them ("never before `story.ch36.done`").
+
 ## Twist slots (bound at world creation)
 
 | Flag | Values | Read in |
@@ -87,6 +92,16 @@ Flags are player scope unless they start with `world.`.
 | `story.finale.offered_leader` | Ch 53.5 | Ch 54.3 |
 | `story.second.lives` | Ch 53.6 | Ch 54, 55 |
 | `story.traitor.ruling` | Ch 55.3 | Epilogue |
+| `story.suspected.keeper` | Any accusation of the keeper (Ch 4 to 38) | Ch 36 (his dry line) |
+| `story.lost_child.family_known` | Ch 38 (the decoded list names her family) | Her file; Ch 47, 55 |
+| `bond_flag parent_sorry` on `yugure_b_parent` | Ch 51.3 (when `ans.teammate_b.ask = sorry` and the parent apologises) | Ch 51.3 branch |
+| `story.second.lives` also by `friendship [squad4_c, 6]` | Ch 53.6 | Ch 54, 55 |
+
+## Tokens the story needs
+
+`{they:<role>}`, `{them:<role>}`, `{their:<role>}`, `{theirs:<role>}`, `{themself:<role>}` and verb
+helpers for rolled-look roles and the player; `{pet:role:teammate_b}` and `{pet:role:squad4_b}` (pet
+names the player can choose).
 
 ## Answers (`ans.*`)
 

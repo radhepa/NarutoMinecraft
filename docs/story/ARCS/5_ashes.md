@@ -19,7 +19,7 @@ is the player's own sensei, and a warning that Yūgure wants something worse tha
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 33.1 | Three years | Player, squad | Adult now. Montage vignettes: the squad as Chunin captains, the rival's rise, a wedding or two in the village | plot (`time_skip`) | — |
+| 33.1 | Three years | Player, squad | Adult now. Montage vignettes of the class grown up: the squad as Chunin captains, the rival's rise, `squad3_b` running his mother's grill on rest days, `squad5_a` campaigning (cheerfully, uninvited) to be the next Hokage, `squad5_c` gone into the ANBU, `squad4_b` finally a Chunin, a wedding or two in the village | plot (`time_skip`) | — |
 | 33.2 | The bout | `rival`, two examiners | The Jonin trial bout: you and the rival as a pair against two examiners. The rival hates needing you and fights better beside you than anyone | teach, bond | — |
 | 33.3 | The review | `hokage_6`, the council | The council review. The `elder_hyuga` asks about "the rumour of your blood" (Ch 31 was seen by half a quarter). The Sixth stops him. Then asks you, gently, one question | plot, bond | "What is a Hokage for?" To protect the village / To protect the people the village forgets / To carry what no one else should (`ans.hokage_6.for`). The Sixth's resignation (Ch 42) answers it |
 | 33.4 | Jonin | squad, `sensei` | Promotion. The sensei gives you their old Jonin vest's spare patch | plot (`promote jonin`), bond | — |
@@ -45,7 +45,7 @@ small bond quests; see [SYSTEMS.md](../SYSTEMS.md)).
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 35.1 | The valley | squad (your old one, as Jonin), the sensei | The Valley of Ash: grey grass, old armour, nothing grows above knee height. "They say both armies just lay down here," the sensei says | plot, seed (the Valley's story, told in Ch 36) | — |
+| 35.1 | The valley | squad (your old one, as Jonin), the sensei, the trio (`squad3_a`, `squad3_b`, `squad3_c`) | The Valley of Ash: grey grass, old armour, nothing grows above knee height. "They say both armies just lay down here," the sensei says | plot, seed (the Valley's story, told in Ch 36) | — |
 | 35.2 | The nursery | a Yūgure nursery in the caves | Children in numbered cells. Among them, the boy from the empty bed (Ch 13), four years older, who remembers your squad's voices outside the waystation | plot, bond | — |
 | 35.3 | The list | a cell leader | In the cell leader's chest, Yūgure's list: six years of children, in cipher | clue (`story.clue.list_found`) | — |
 | 35.4 | Home | the children | Leading twenty children home along the Ash Road; a night at camp where they ask you what the Leaf is like | bond, life | How you describe the Leaf: a place that feeds you / a place that's trying / a place you choose (`ans.player.leaf_is`). One of them repeats it at the memorial (Ch 41) |
@@ -56,12 +56,12 @@ small bond quests; see [SYSTEMS.md](../SYSTEMS.md)).
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 36.1 | The door | `elder_keeper`, `hokage_6` | If `bond_meter [elder_keeper, trust, 60]` and `friendship [elder_keeper, 6]`: the keeper comes for you at night himself: "I said I would show you a door." Else the Sixth orders the archive opened after Ch 35's list, and the keeper obeys like a man going to his execution | plot, bond | — |
-| 36.2 | The archive | the keeper, the Sixth | Under the Rock: shelves, sealed boxes, and in the centre a stone watch-fire basket holding an ember that has burned for a century: **the Hearthstone**. It leans toward you | plot | — |
+| 36.1 | The door | `elder_keeper`, `hokage_6`, `sensei_5` | If `bond_meter [elder_keeper, trust, 60]` and `friendship [elder_keeper, 6]`: the keeper comes for you at night himself: "I said I would show you a door." Else the Sixth orders the archive opened after Ch 35's list, and the keeper obeys like a man going to his execution | plot, bond | — |
+| 36.2 | The archive | the keeper, the Sixth | `sensei_5` and the keeper break the door's old seals together (the `clan.uzumaki.3` expert helps if present). Under the Rock: shelves, sealed boxes, and in the centre a stone watch-fire basket holding an ember that has burned for a century: **the Hearthstone**. It leans toward you | plot | — |
 | 36.3 | The charter | the keeper | The founding charter's fourth clause: the Kagari invited as a founding clan, in the First's hand | plot | — |
 | 36.4 | The order | the keeper | The Second's order for the Quiet Ending, and the report it rested on. The keeper: "It was forged. I've known for forty years" | plot | — |
 | 36.5 | The Valley | the keeper | What happened in the Valley of Ash: one Kagari's dark mirror, and a whole clan blamed | plot, teach (the dark mirror, named) | — |
-| 36.6 | The Ash Road | the keeper, (the `sensei`, if present) | The sealed report of the Ash Road ambush: Yūgure, not bandits, after `fallen_parent`'s blood. The keeper's signature and the councillor's. If the sensei came, they read it standing up and walk out without a word | plot, bond | Follow the sensei / stay with the keeper (`ans.player.archive_follow`). Following: the sensei on the Rock, the first time you see them cry; staying: the keeper tells you why he kept silent ("Because she asked me to. And because I was afraid") |
+| 36.6 | The Ash Road | the keeper, the `sensei` and `sensei_3` (if present) | The sealed report of the Ash Road ambush: Yūgure, not bandits, after `fallen_parent`'s blood. The keeper's signature and the councillor's. If the sensei came, they read it standing up and walk out without a word. `sensei_3` stays, reads it twice, and says the thing she has never said: "They sent me back so I'd live. I've been angry at them for eight years for it" | plot, bond | Follow the sensei / stay with the keeper (`ans.player.archive_follow`). Following: the sensei on the Rock, the first time you see them cry; staying: the keeper tells you why he kept silent ("Because she asked me to. And because I was afraid") |
 | 36.7 | The letter | the Third's letter | Read aloud: "For whoever comes asking. We ended a clan for a peace we could have kept with them. I kept quiet for thirty years and called it wisdom. It was not. If you are reading this, say it for me." | plot | — |
 
 ---
@@ -83,10 +83,10 @@ The detective chapter. Pace: the player's own.
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 38.1 | The board | Player | The case board (journal page and pinboard furniture) collects every clue, slip and alibi so far | teach | — |
+| 38.1 | The board | Player, `sensei_4` | The case board (journal page and pinboard furniture) collects every clue, slip and alibi so far. `sensei_4` sits with you through it: he asks good questions ("What would they have to know to write that?") and never gives an answer | teach | — |
 | 38.2 | Decoding | the keeper, (the `librarian` if innocent) | With the porter's words ("in its own hand"), the cipher breaks: the list is indexed in one notation over six years | clue | — |
 | 38.3 | Matching | Player | Compare the list with the documents in the journal: the green-ink sample from Ch 0, the S-114 papers from Ch 1, the shelving slip from Ch 5, the delivery book page from Ch 11 | clue | — |
-| 38.4 | Alibis | Player, witnesses | Check any alibis not yet checked (the shrine book, the surgery roster, the court roll, the carpenter's shop) | clue | — |
+| 38.4 | Alibis | Player, witnesses | Check any alibis not yet checked (the shrine book; the surgery roster, kept by `squad4_c`; the court roll; the carpenter's shop) | clue | — |
 | 38.5 | The slip | Player | The journal recalls the Ch 25 hospital lines if `story.clue.slip.heard` | clue | — |
 | 38.6 | Decide | Player | Accuse with proof (two of three), or accuse without | plot | Who (`story.accused = <candidate>`) |
 
@@ -100,6 +100,7 @@ The reveal ([ROTATIONS.md](../ROTATIONS.md) §1: the four scenes, the accusation
 |---|---|---|
 | 39.1 | The confrontation | The bound candidate's scene (library at night, hospital roof at dawn, the councillor's study, the cart in the rain) |
 | 39.2 | The choice | Arrest or turn (turning needs `friendship [bound, 4]` or the candidate's own wish) (`story.traitor.fate`: arrested, turned) |
+| 39.3 | The arrest | `sensei_4` makes the arrest in every outcome but turning; the village sees a Morino take a respected person away, and for once nobody whispers about his clan |
 | 39b | The chase (if accused without proof, or an innocent was accused) | The voice tries to steal the archive key at night; a chase to the east gate; arrested |
 | 39c | Why you (if `friendship [bound, 7]`) | The candidate answers the question they once asked you, in light of what they did |
 
@@ -110,7 +111,8 @@ The reveal ([ROTATIONS.md](../ROTATIONS.md) §1: the four scenes, the accusation
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
 | 40.1 | Before the council | `hokage_6`, Player | The Sixth asks you how much to say | bond | Everything / Everything but the renamed families' names / Let each family decide whether to be named (`ans.hokage_6.names`). This decides how the descendants learn (Ch 46 recruitment and the side wave) |
-| 40.2 | The council | the clan heads, the village | The Sixth makes the Quiet Ending public, with you as witness. The Senju head bows to the floor; the Uchiha head protests that a dead elder's forgery is not his clan's crime; the elder_hyuga walks out | plot, mood (`mood_event village grieving`) | Your testimony: for the dead / for the living descendants / against the silence (`ans.player.council_testimony`) |
+| 40.2 | The council | the clan heads, the village | The Sixth makes the Quiet Ending public, with you as witness. The Senju head bows to the floor; the Uchiha head protests that a dead elder's forgery is not his clan's crime; the elder_hyuga walks out, and his grand-niece `squad4_a` does not follow him; `squad5_a`, whose clan's Hokage kept the silence for thirty years, stands up in the gallery and sits down again without a word | plot, mood (`mood_event village grieving`) | Your testimony: for the dead / for the living descendants / against the silence (`ans.player.council_testimony`) |
+| 40.2b | Faith | `squad5_a` | That night, on the Rock under the Third's face, `squad5_a` asks you the question he can't ask anyone in his family | bond | "Does it still count, the Will of Fire, if the one who taught it to us kept this quiet?" It counts more now / It never counted / It counts if we say it out loud (`ans.squad5_a.will`). He stands with the Seventh in Ch 42 either way; the answer is his speech when he becomes your Commander (Ch 55) |
 | 40.3 | The cleared | the innocent candidates | Each cleared candidate's scene (ROTATIONS §1) | bond | — |
 | 40.4 | The village | residents | A side-quest wave: families learning their roots, old friends quarrelling over blame, a Kurama painter bringing out a hidden painting of the shrine (`clan.kurama.3`) | life, systems | — |
 
@@ -151,7 +153,7 @@ The reveal ([ROTATIONS.md](../ROTATIONS.md) §1: the four scenes, the accusation
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
 | 44.1 | Reports | the Seventh | Yūgure cells found emptied in the hills: someone pale is hunting them | plot | — |
-| 44.2 | Her | `lost_child` | On an A-rank with your Genin, she appears. She could kill them; she stops when genin_3's flame flickers, and when she sees the cord. "Too many voices in here," she says, touching her chest. "One of them is yours." She goes | plot, seed (`story.seed.lost_child_breaking`) | Follow her / protect the Genin (`ans.lost_child.echo`). Following: she leaves a strip of ash-violet cloth tied to a branch, pointing toward the Shimura house (opening the Night Watch line's lead) |
+| 44.2 | Her | `lost_child` | On an A-rank with your Genin (and `squad3_c`, lent to you as a sensor), she appears; `squad3_c` hears what's in her: "There are a dozen people in there. She's at the bottom." Then a second hunter arrives: `squad5_c`, in an ANBU mask, with orders to take her alive. She is gone before either of you reaches her. She could kill them; she stops when genin_3's flame flickers, and when she sees the cord. "Too many voices in here," she says, touching her chest. "One of them is yours." She goes | plot, seed (`story.seed.lost_child_breaking`) | Follow her / protect the Genin (`ans.lost_child.echo`). Following: she leaves a strip of ash-violet cloth tied to a branch, pointing toward the Shimura house (opening the Night Watch line's lead) |
 
 ---
 

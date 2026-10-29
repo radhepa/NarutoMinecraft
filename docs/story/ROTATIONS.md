@@ -44,6 +44,13 @@ been shown.
 
 - **The red herring** in every save is the `elder_keeper`, who watches the player, guards a door and
   lies about knowing things. He is never the voice; his secret is the archive.
+- **Thread Sight cannot solve it.** From Ch 24 the player sees bonds as threads, and a bonded
+  person who hides something flickers. The limit ([WORLD.md](WORLD.md#thread-sight-and-the-mystery-a-principled-limit)):
+  it reads only people bonded to the player at 6+, it shows *that* someone hides, never *what*, and
+  all four candidates hide a true secret in every save (the librarian her Kagari family history;
+  the medic their letters to the strangers who saved them; the councillor his signature on the Ash
+  Road sealing; the merchant old debts and bandit smuggling). All four flicker the same. The hand
+  (the porter) is never in the player's web, so the voice's tie to him never shows.
 
 ### The shared clue trail (identical in every save)
 
@@ -85,6 +92,16 @@ quiet and lands inside a kindness:
 Innocent candidates' parallel lines carry no number. A player who caught "Nine" in Ch 0 can solve
 the case here. The journal records the line (`story.clue.slip.heard`), so the case board can recall
 it.
+
+**Ch 25.3, the gift's name.** The librarian comes that night in **every** save, with the song book:
+in the innocent track she names the gift herself; in the bound track she brings the book and lets the
+keeper, who arrives behind her, do the naming ("Ask him. He has read more than I have."). Both
+versions are warm; neither is a tell on its own.
+
+**Small divergences after the beta** (allowed, each with an innocent reading): the councillor's
+vote at the Ch 31 council (bound: he abstains, "for the registry's neutrality"; innocent: he votes
+for the Tobari), and, in the merchant's bound track, a remembered line about a cart ride "years
+ago" that an innocent merchant says about a different child.
 
 **2. The hand's last words (Ch 28).** The caught porter cannot say the voice's name: a cinder seal on
 his tongue burns when he tries. What he manages: *"The voice keeps the names in its own hand.
@@ -163,7 +180,11 @@ merchant becomes the squad's informant on the roads. If the player suspected the
 - The player has one possession from before: **half a carved wooden watch-fire charm**, sewn into a
   sleeve and missed by the nursery guards (a key item from the creator screen, never droppable).
   Watch-fire charms are carved in pairs, one for a parent and one for a child.
-- `fallen_parent` (the sensei's teammate, a Kagari descendant) died in the Ash Road ambush ~Y-8.
+- `fallen_parent` (the sensei's teammate, a Kagari descendant) died in the Ash Road ambush ~Y-8. In
+  every save they had a young child with a civilian spouse, both reported "lost" after the ambush;
+  the sensei and `sensei_3` know a child was lost and never speak of it before Ch 48. Persimmons were
+  `fallen_parent`'s favourite fruit; the sensei leaves one at the memorial stone every year.
+- The sensei keeps a box with `fallen_parent`'s forehead protector in every save.
 - `yugure_second` is a Kagari descendant and an ember user, and she lost a child.
 - **Both** the sensei and the second know the watch-fire song. Both react to it.
 
@@ -171,11 +192,12 @@ merchant becomes the squad's informant on the roads. If the player suspected the
 
 | | **A: the second is your mother** (`twist.lineage = second`) | **B: the fallen Leaf shinobi was your parent** (`twist.lineage = fallen`) |
 |---|---|---|
+| `fallen_parent`'s lost child | Truly died with the spouse after the ambush | Is you: the spouse fled with you to the spouse's sister in the persimmon house |
 | The truth | At twenty-two, the second bore you (the father, a border-town civilian, died in a skirmish before you were born). She hid you with her sister's family in the persimmon house to keep you from the leader, who wanted a pure flame. When the cells took you at six, the leader told her you had died in the fire. She believed him | `fallen_parent` married a civilian of the border village and kept the child there, far from the village's eyes. After the Ash Road ambush the spouse fled with the child to the spouse's sister in the persimmon house. Yūgure found it two years later |
-| Who holds the other charm half | The second, on a cord under her collar | The sensei, in a box with `fallen_parent`'s forehead protector |
-| Why the second spares you in the forest (Ch 16) and names you (Ch 19) | She hears the watch-fire song in your camp; she feels the flame; she does not let herself believe | She feels a flame she has only felt once, in herself; she sees a child of the nurseries she swore to protect; her own son died in a nursery |
+| Who holds the other charm half | The second, on a cord under her collar | The sensei, in the box with `fallen_parent`'s forehead protector (the box exists in both saves; only in B does it hold a charm half and an unsent letter) |
+| Why the second spares you in the forest (Ch 16.3) and names you (Ch 19) | She feels the flame on day three; on the last night she hears the watch-fire song from your camp (16.7); she does not let herself believe | She feels a flame she has only felt once, in herself; she sees a child of the nurseries she swore to protect; her own son died in a nursery |
 | Why the sensei suspects you (Ch 14) | Your flame is `fallen_parent`'s flame: the leaning campfire on their old missions. They suspect *what* you are | They suspect *who* you are; the persimmon detail (Ch 21) is a blow |
-| The persimmon on the sill (Ch 27) | The second left it, having learned where you live | The sensei left it on the anniversary of the ambush, as they leave one at the memorial stone every year |
+| The persimmon on the sill (Ch 27) | The second left it, having learned where you live | The sensei left it on the anniversary, as they leave one at the memorial stone every year (the stone ritual happens in both saves) |
 | The hint (Chunin, Ch 25) | The librarian or keeper names the charm and the song: someone has the other half; it is your parent's | Same |
 | The reveal (Road to Hokage, Ch 48) | The second defects (Ch 48), comes to the persimmon house's ruins, and shows her half. The halves fit. "I sang you that song. I did not know you would keep it" | The Seventh (the sensei) takes you to the persimmon house's ruins and gives you the box: the forehead protector, the half charm. "I should have looked for you. I believed the report I signed" |
 | Who carries the succession | The second's choice in the finale (she shields you); the Seventh names you successor as a teacher | The Seventh names you successor as the child of their teammate; the succession speech carries `fallen_parent`'s name |

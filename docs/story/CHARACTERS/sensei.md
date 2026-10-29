@@ -8,9 +8,9 @@
 | | |
 |---|---|
 | Role | `role:captain` in Ch 0 to 7, `role:sensei` from Ch 8 (one character, two role ids bound to the same resident); the **Seventh Hokage** from Ch 42 (`{hokage:7}` resolves to them) |
-| Look | Classic: curated (a quiet clanless Jonin with an old burn scar down the neck and left forearm). Varied: rolled, but **the burn scar is always added** (a mark the story needs) |
+| Look | Classic: curated (a quiet Jonin of no clan with an old burn scar down the neck and left forearm). Varied: rolled, but **the burn scar is always added** (a mark the story needs) |
 | Pronouns | Rolled with the look in Varied: *they* here; dialogue uses `{they:sensei}`, `{them:sensei}`, `{their:sensei}` |
-| Clan | Classic: clanless. Varied: rolled from shinobi groups (the story never depends on it) |
+| Name | Given Family (rolled); Classic: **no clan**, an ordinary family name that never matches a clan. Varied: rolled from shinobi groups (the story never depends on the clan). Called "{family:sensei}-sensei" by the squad; "Lord Seventh" from Ch 42 |
 | Rank | Jonin → Hokage (Ch 42) |
 | Archetype | Classic: **reserved** (warmth -.2, discipline .3, openness -.8). Varied: rolled; the arc reads the same with any archetype, only the voice changes |
 | Values | Freedom, honesty (Classic); in every save the story treats **loyalty to the dead** as theirs |
@@ -35,19 +35,26 @@ signed the report).
 - *Lineage B only:* they keep a box with `fallen_parent`'s forehead protector and half a watch-fire
   charm. They do not know the child had the other half until Ch 48.
 - They leave a persimmon at the memorial stone every year on the Ash Road anniversary.
+- The Ash Road team was three: the sensei, `fallen_parent` and `sensei_3` (Classic: a Yuhi genjutsu
+  user). `sensei_3` survived uninjured because the sensei ordered her back to signal for help; the
+  two have never talked about that night. Among the other senseis: `sensei_2` (Classic: Shiranui)
+  has been the sensei's teasing contest-rival since the Academy ("Best of three. Again.");
+  `sensei_4` (Morino) and `sensei_5` (Uzumaki, the sealing master who helps at the archive) are
+  colleagues, not friends. Their lines are written in the ensemble's files.
 
 **What they know and when.**
 
 | Knowledge | From |
 |---|---|
 | The player is a nursery child, "Nine" to the guards | Never told; they read only the raid's list of children (numbers were not on it). They never say "Nine" |
-| The child points toward the lost girl (if `ans.captain.ch0 = point`) | Ch 0: their first failure with you; they never stop looking for her |
+| The child points toward the lost girl (if `ans.sensei.ch0 = point`) | Ch 0: their first failure with you; they never stop looking for her |
 | The bell flicker | Ch 8 (they see it, say nothing) |
 | Chakra paper chars near the player | Ch 11 (if shown) or Ch 14 |
 | The persimmon tree (if `story.lineage.persimmon_told`) | Ch 14 |
 | The watch-fire song in the player's mouth | Ch 16 (heard from the tower report) / Ch 18 (if sung) |
 | The word "Kagari" was said to the player | Ch 19 (they were there with a kunai at her throat) |
-| The flame is the same as `fallen_parent`'s | Ch 24 to 25 (certain) |
+| The flame is the same as `fallen_parent`'s | Ch 24 to 25 (certain: they see the ember-gold chakra and the mark on your palm) |
+| You can see bonds (Thread Sight): the sensei shows as a thread to you, and when they hide something from you, a flicker | Ch 25 (you tell them, or they guess). From then on they stop lying to you and say "I can't tell you yet" instead, because they know you would see the flicker |
 | The Ash Road was Yūgure, and why | Ch 36 |
 | The Quiet Ending, the twenty-seven | Ch 36 to 37 |
 | The Hollow Crown | Ch 49 |
@@ -94,6 +101,7 @@ Voice samples, not shipped lines:
 - "Keep your fire low until you need it."
 - "...Good."
 - (Ch 25) "I've seen that fire before. Once. I couldn't keep it lit."
+- (training) "Don't push harder. Push *into* me. Let me do the rest."
 - (as Hokage) "I'll still be around to complain. Go on."
 
 ### Topics they care about
@@ -103,7 +111,7 @@ Voice samples, not shipped lines:
 | Small talk (0) | Weather and food in two words; deflects with a question about your training |
 | Training (1) | Their real love: exact, practical, specific to your last fight |
 | Their hobby (2) | Whittling (shavings in their pockets); later they whittle a small watch-fire basket |
-| Their family (4) | "Had a team. That's family enough." |
+| Their family (4) | "Had a team. That's family enough." (At level 6: "Three of us. One's on the stone. One won't look at me at festivals." That is `sensei_3`) |
 | Your story (4) | They listen without interrupting and remember every detail |
 | Their values (5) | "Come back with everyone. Then the mission." |
 | Their advice (5) | Practical and blunt; for grief: "Eat something. Then cry. In that order." |
@@ -115,6 +123,7 @@ Voice samples, not shipped lines:
 | Fact | Not before |
 |---|---|
 | Their teammate had "your fire" | Ch 25 (`story.kindling.awakened`) |
+| That `sensei_3` was the third on the Ash Road team | Ch 25 (the fact); what happened between them, Ch 36 |
 | The song is their teammate's song | Ch 25; before, they only react (turn away) |
 | The Ash Road was Yūgure; they signed the sealed report | Ch 36 |
 | The persimmon at the stone is for their teammate (they may leave it in view in Ch 21; the reason only at Ch 21.3 as "They loved these") | Ch 21 |
@@ -127,7 +136,7 @@ Voice samples, not shipped lines:
 
 | Id | When | Question | Options | Honours / tests | Remembered | Changes them |
 |---|---|---|---|---|---|---|
-| `ans.captain.ch0` | Ch 0.4 (the raid) | (not a question: the look) | run / hide / point | — | Ch 24 ("You pointed, that night. I sent two people. I should have gone myself") if point | Point: they carry the lost girl as their own failure and ask after her in Ch 44 |
+| `ans.sensei.ch0` | Ch 0.4 (the raid) | (not a question: the look) | run / hide / point | — | Ch 24 ("You pointed, that night. I sent two people. I should have gone myself") if point | Point: they carry the lost girl as their own failure and ask after her in Ch 44 |
 | `ans.sensei.orders` | Ch 8.4 | "When I give an order you think is wrong, what will you do?" | obey / ask / right | Obey: their discipline; Ask: their honesty; Right: their freedom (and their fear) | Ch 24.3; Ch 42 inaugural speech | Shapes how the Seventh commands: obey → strict; ask → explains orders; right → "Do it right" |
 | `ans.sensei.stone` | Ch 10.2 | (at the memorial stone) | gap / name / silence | Silence honours them (`stood_by_them`) | Ch 21.3, Ch 41 ("You stood there with me once") | Silence: they open up one beat earlier at Ch 25 |
 | `ans.sensei.ash_road` | Ch 13.2 | (at the waystation) | ask / dont | Asking gently is fine; never prying here | Ch 36.6 | Asked: at Ch 36 they say "You asked me once. Here's the answer" |
@@ -147,7 +156,10 @@ Voice samples, not shipped lines:
   lineages until Ch 48.
 - **Bond:** their trust meter gates training (Ch 25); their sparse praise is the reward.
 - **Teach:** squad commands (Ch 8), tree walking (Ch 10), water walking (Ch 12), the exam technique
-  (Ch 18), Kindling (Ch 25 onward).
+  (Ch 18), the gift (Ch 25 onward): Thread Sight first, then Kindle (they let you push your chakra
+  into their own technique, so it goes past its limits; the sensei's trademark technique, kindled,
+  is the Ch 25 training's first success), then Ember Link drills with the squad. Their way of putting
+  it: "You don't take anything. You make the other person more."
 - **Life:** apples, late arrivals, paying at the barbecue house under protest.
 - **Pools:** greetings per arc (captain: formal; sensei: clipped; Hokage: tired and warm);
   quarrel pools (cold shoulder = they assign you to the dullest D-ranks); a `bond.seen.disobeyed_orders`

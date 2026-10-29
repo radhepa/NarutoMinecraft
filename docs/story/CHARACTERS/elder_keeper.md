@@ -10,7 +10,7 @@
 | Role | `role:elder_keeper`, the council elder who keeps the archive under the Rock |
 | Look | Fixed: a tall, thin old man (~60), shaved head, a long grey archivist's coat with ink-stained cuffs, a ring of old iron keys on a cord at his belt, one cloudy eye |
 | Pronouns | He / him |
-| Clan | Clanless (an archivist's family) |
+| Clan | No clan (an archivist's family with an ordinary family name from the pool; Given Family order) |
 | Rank | Jonin (retired), elder of the council |
 | Archetype | `stern` (warmth −.1, bold .3, pride .4, discipline .9, open −.5) |
 | Values | duty, loyalty (to the Third's oath; slowly, to the truth) |
@@ -51,7 +51,7 @@ what the Valley of Ash made of one Kagari.
 | Ch 4 | Knows someone tried the archive door (he was checking the seals that night). Does not know who |
 | Ch 19 | Hears "Kagari" was said. Knows Yūgure knows what the player is |
 | Ch 28 | Knows of the porter and the voice; suspects every candidate, including himself as a suspect in others' eyes |
-| Ch 35 to 36 | With the list, gives up the silence |
+| Ch 35 to 36 | With the list, gives up the silence. With the Classic Uzumaki sealing master (`role:sensei_5`) he breaks the archive's old seals |
 | Ch 51 | Knows the leader wants the Hearthstone; holds the door |
 
 **How he changes.**
@@ -62,7 +62,7 @@ what the Valley of Ash made of one Kagari.
 | Paper Trail | Absent except as a figure at council; he appears at the memorial stone once at night (Ch 10, after the sensei leaves, if the player lingers) |
 | Dusk over the Stadium | At the Kage box during the attack, then at the archive door all night while the village burns: he guards the door, not the people, and knows it |
 | Embers | Begins to speak, one fact at a time. Names the gift if the librarian cannot (Ch 25). Asks to walk with the player (Ch 32, at trust 40) |
-| Ashes | Opens the archive (Ch 36), reads the Third's letter aloud, decodes the list (Ch 38), stands beside the player at the council (Ch 40) |
+| Ashes | Opens the archive (Ch 36), reads the Third's letter aloud, decodes the cipher (Ch 38; the matching is the player's, at the case board with `role:sensei_4`, who never gives answers), stands beside the player at the council (Ch 40) |
 | The Last Bonfire | Grants the old ground's records for the restored house (Ch 46). Dies holding the door (Ch 51) and passes the keys and the duty to speak to the player |
 
 **Ending.** He dies in Ch 51 at the archive door against a Yūgure cell, having failed to keep the
@@ -79,6 +79,14 @@ the case board (Ch 38) never lets the player accuse him: his name is not among t
 A player who suspected him aloud (`story.suspected.keeper`, from talking to the sensei or the
 instructor in the Chunin arc) gets a dry line in Ch 36: "You thought it was me. Good. So did I, some
 nights."
+
+## Thread Sight and the keeper
+
+From Ch 24 the player can see bonds as threads of light. If the keeper is bonded to the player at
+6 or more and the player probes him before Ch 36, his thread shows the flicker of someone hiding
+something (he is: the archive). This deepens the red herring honestly: the flicker says *that*, never
+*what*, and the four candidates flicker too ([ROTATIONS.md](../ROTATIONS.md)). After Ch 36 his
+flicker is gone; a player who watched it vanish gets his line: "There. Nothing left in me to hide."
 
 ## Dialogue brief
 
@@ -151,7 +159,7 @@ nights."
 - Identical in Classic and Varied (fixed look, fixed role); name rolled.
 - `twist.traitor`: he is never bound. In a councillor-bound save his betrayal by an old colleague is a
   second blow in Ch 39 ("I asked him to keep you safe. He kept you on file"). In a librarian-bound
-  save he names the gift alone in Ch 25 and teaches the old forms from the archive.
+  save he names the gift alone in Ch 25 and teaches what the archive keeps of how the Kagari kept the flame (the watch-fire practices, the songs), never the abilities themselves.
 - `twist.lineage = fallen`: in 36.6 he says the Ash Road dead Jonin's name and looks at the player
   a moment too long; he suspects, and says nothing (the reveal is the Seventh's).
 - Ch 36's opening reads `bond_meter [elder_keeper, trust, 60]` and `friendship [elder_keeper, 6]`.

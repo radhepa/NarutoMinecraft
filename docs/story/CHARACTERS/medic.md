@@ -8,9 +8,9 @@
 | | |
 |---|---|
 | Role | The medic of the rescue squad; the hospital's young medic; a traitor candidate |
-| Look | Classic: curated (young, clanless, hospital whites, ink-stained fingers, green ink). Varied: rolled; the green ink stain stays |
+| Look | Classic: curated (young, no clan, hospital whites, ink-stained fingers, green ink). Varied: rolled; the green ink stain stays |
 | Pronouns | *they*; `{they:medic}` and the rest |
-| Clan | Classic: clanless |
+| Name | Given Family (rolled); Classic: **no clan**, an ordinary family name that never matches a clan |
 | Rank | Chunin medic → head of children's care (Jonin arc) |
 | Archetype | Classic: **meticulous** (discipline .8; values duty, knowledge) |
 | Peeves | Lateness, recklessness |
@@ -27,6 +27,13 @@ cloaked strangers pulled them out three days before the Leaf arrived and kept th
 camp, kindly, before leaving them at a Leaf outpost. They never knew who the strangers were.
 They became a medic to be the person who arrives in time. They test every rescued child (the Ch 0
 sample) because the hospital found that camp children carry chakra injuries no one sees.
+
+**Something they hide, in every save.** For years they have quietly written to border outposts
+asking after the cloaked strangers who saved them, and keep the replies in the crane jar. It is
+private, not sinister. It matters because, once the player has **Thread Sight** (Ch 24 on), a
+bonded person at level 6 or more who is hiding something shows a flicker in their thread: the
+innocent medic flickers too (the letters), so the flicker alone never convicts them. The bound medic
+flickers for both reasons; Thread Sight shows *that*, never *what*.
 
 **Wants.** To be the one who arrives in time. **Fears.** Being too late again; being owed to
 anyone. **Habit.** Writes everything down. Folds paper cranes when anxious; the crane stroke on
@@ -56,6 +63,7 @@ The diverted supplies' requisition was forged (`side.b3.hospital_supplies` clear
 | Your chakra reading | Ch 0 | Both |
 | The flare (if `ans.medic.flare = told`) | Ch 3 | Both |
 | Your nursery number "Nine" | Before Ch 0 (Yūgure's lists) | **Bound only** |
+| That you can see their thread flicker | Ch 25 onward, if you tell them; both saves react the same ("Then you'll know when I'm lying. Good. Keep me honest.") | Both |
 | The strangers who saved them were Yūgure | Age 19 | **Bound only**; innocent: Ch 40, when the council makes the nurseries public, they realise it and come to you shaken |
 | The lost child was "theirs" (measured) | Ch 24 | Bound only |
 
@@ -117,6 +125,7 @@ Voice samples, not shipped lines:
 | That they measured the lost child | Bound only, Ch 39 |
 | That the instructor asked them to visit | Ch 25 (both saves) |
 | Any line that is warmer or colder in one save than another | Never before Ch 25: beta lines are identical in every save |
+| The outpost letters (the innocent flicker's cause) | Level 7, or Ch 40; both saves have them |
 
 ### Questions for the player
 

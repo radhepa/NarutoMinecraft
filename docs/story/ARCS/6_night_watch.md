@@ -3,8 +3,8 @@
 > **SPOILERS: for developers only.** Part of the [story bible](../STORY_BIBLE.md).
 
 **+~8 h** (about 4 h authored over 7 chapters, 4 h systemic: covert and S-rank missions, the mask's
-night operations). Opens with the invitation at **level 35**, after Ch 38 (so the voice's case
-is underway), any time before Ch 46. A player can return to regular duty at any time; the branch
+night operations). Opens with the invitation at **level 35**, after Ch 39 (so the voice's case
+is closed and the Undercroft's knowledge of "Nine" can never be mistaken for evidence), any time before Ch 46. A player can return to regular duty at any time; the branch
 can be finished during the Jonin arc or early in the Road to Hokage.
 
 **What the arc is for.** The Leaf's shadow: the people who learned nothing from the archive,
@@ -82,4 +82,6 @@ The choice of what to do with them:
 | **Bring them under the Hokage** | They become a legitimate night unit; in Ch 50 they find twelve array anchors no one else could |
 | **Expose them publicly** | The Shimura line's Heart step becomes a reckoning; the village's trust in the ANBU dips (a standing loss with `rank:anbu`); the head resigns |
 
-If the branch is finished, Ch 47 becomes **The Warm Room** (her recovery) instead of her rescue.
+If the branch is finished, Ch 47 becomes **Home Fires** (her recovery) instead of her rescue.
+
+**`squad5_c` in the branch.** The senior squad's clanless prodigy joined the ANBU young and was recruited by the Undercroft (they offered him what he always wanted: never to be powerless). In N4 he guards her cell; in N6 he is the last of the old masks between you and her. You can fight him, or talk him down (`ans.squad5_c.offer`: his answer to your question "What did they promise you?"). Talked down, he opens the cell himself and walks out of the Undercroft with you: **a betrayal, or not**. Fought, he is beaten and leaves the ANBU; he returns in Ch 51 at the wall either way.

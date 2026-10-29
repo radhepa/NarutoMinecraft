@@ -1,0 +1,522 @@
+# The other senseis: `role:sensei_2`, `role:sensei_3`, `role:sensei_4`, `role:sensei_5`
+
+> **SPOILERS: for developers only.** Part of the [story bible](../STORY_BIBLE.md). Ensemble plan:
+> [ENSEMBLE.md](../ENSEMBLE.md). The player's own sensei: [sensei.md](sensei.md).
+
+Four Jonin who teach the rest of the class and the senior squad. Each has a history with the
+player's sensei, a squad of their own, and at least one beat that moves the main plot. All four
+have **rolled looks in Varied** (so *they* here and pronoun tokens in dialogue); the Classic
+curation gives each a fixed look and gender, stated below.
+
+**How the five relate** (the "staff room"):
+
+| | sensei | sensei_2 | sensei_3 | sensei_4 | sensei_5 |
+|---|---|---|---|---|---|
+| **sensei** | — | Contest-rival since the Academy; the tally | The Ash Road team; unspoken since | Colleagues; respect, no warmth | Their old sealing teacher |
+| **sensei_2** | "Best of three. Again." | — | Teases her gently; the only one who makes her laugh | Calls him "the Baker" to his face | Their teacher; still afraid of him |
+| **sensei_3** | Won't look at them at festivals | Lets him tease her | — | Shares a bench at the hospital some nights | Their teacher; visits him on his birthday |
+| **sensei_4** | Thinks they keep too many secrets | Thinks he isn't serious; is wrong | Brings her bread | — | Their teacher in binding seals |
+| **sensei_5** | "My quiet one." | "My loud one, who pretends to be quiet." | "My sad one." | "My baker." | — |
+
+---
+
+## `role:sensei_2`
+
+### At a glance
+
+| | |
+|---|---|
+| Role | Squad 2's Jonin (the `rival`, `classmate_c`, `classmate_d`); the Fifth's **Jonin Commander** (Ch 22 to 31) |
+| Name | Given Family, rolled. Classic: a **Shiranui** (the clan's name as family name) |
+| Look | Classic: curated: a lean man in a guard's flak vest, hair tied back, a senbon always turning between two fingers, a small battered notebook in the vest pocket. Varied: rolled |
+| Pronouns | Classic: he. Varied: rolled; dialogue uses `{they:sensei_2}` |
+| Specialty and style | Senbon at speed: needle volleys that pin sleeves and shadows; a guard's footwork; never wastes a step |
+| Rank | Jonin; Jonin Commander from Ch 22; a Jonin of the Seventh's guard from Ch 42 |
+| Archetype | Classic: **playful** with a guard's discipline (warmth .5, boldness .3, discipline -.2 in manner, .5 on duty) |
+| Values | Freedom, loyalty |
+| Peeves | Laziness, recklessness (other people's) |
+| Dream | To win one contest that matters |
+| Tier | Story-driving |
+| First / last | Ch 8 (assignment) / Ch 51 (the main gate); his notebook in Ch 54 |
+
+### Arc
+
+**Wants.** To beat the player's sensei at something that counts. The real want under it: to have
+been on the Ash Road with them.
+
+**Fears.** That if anything is taken seriously it can hurt him. That he was spared the Ash Road by
+luck and has never earned it.
+
+**Secrets.** He asked to go on the Ash Road mission and was turned down (the roster was full). He
+has blamed himself, a little, for twelve years. He keeps the contest tally in a notebook because
+it is the only way he knows to say that the sensei still matters to him.
+
+**What he knows and when.**
+
+| Knowledge | From |
+|---|---|
+| The Ash Road was a disaster his rival survived | Before Y0 |
+| The player is "the kid they carried out" | Ch 8 |
+| "Kagari" was said at the stadium | Ch 20 (as a senior Jonin) |
+| The player's chakra is "anomalous" (the corps' report) | Ch 22, as Commander |
+| The Tobari are innocent | Ch 31, with everyone |
+| The Quiet Ending | Ch 40 (public) |
+| The Hollow Crown | Ch 49 (the war council) |
+
+**How he changes.**
+
+| Arc | Change |
+|---|---|
+| 2 Paper Trail | The comic rival: challenges the player's sensei on the spot at assignment (Ch 8: "Who can say less. Starting now." He loses in four seconds) |
+| 3 Dusk | Guards the Kage box when the attack starts; holds it while the Fourth's fate plays out (Ch 19). Afterwards he stops joking for a week |
+| 4 Embers | Leads the Empty Seat rescue (Ch 21c). The Fifth makes him Jonin Commander: he enforces a curfew he hates, strictly and fairly, teasing the player while writing their name in the night log. At the Tobari council (Ch 31) he speaks against his own Hokage's lockdown. The first serious thing he has ever said in public |
+| 5 Ashes | One of the two examiners in the player's Jonin trial (Ch 33.2). Kneels first to the Seventh (Ch 42): "Two hundred and eleven to two hundred and nine. You win this one. Don't get used to it." |
+| 7 Last Bonfire | Holds the main gate in the war (Ch 51.1) and dies there |
+
+**His ending (every save).** At the main gate in Ch 51 the first wave breaks on him and his squad
+(the rival, c and d, now Jonin and Chunin). He sends them to the market street, holds the gate alone
+long enough for the Tobari to seal the wall's lanes, and dies there. The player's sensei, as the
+Seventh, arrives too late. In Ch 54 the sensei finds the notebook; the last line is: *"Held the
+gate longer than you would have. 212 to 211. Mine."* If `ans.sensei_2.on_purpose` is `counts`, the
+sensei reads it aloud and laughs, the first time anyone has heard them laugh.
+
+### Relationships
+
+- **The player's sensei:** the tally (a running joke through every arc; numbers in his greetings).
+- **His squad:** he calls the rival "Sunshine" because they never smile; c "the Architect"; d
+  "the Wall". He is a better teacher than he lets anyone see: the rival's growth into an ally is
+  half his work (he makes the rival fight beside people).
+- **The Fifth:** loyal, then honest; she respects him more for Ch 31.
+
+### Dialogue brief
+
+**Voice.** Dry, quick, teasing; never raises his voice; turns everything into a bet; calls people
+by nicknames; switches to plain, short sentences when it is serious, and that switch is the tell.
+Never says "I'm proud of you"; says "Not bad" and writes it in the notebook. Never jokes about the
+Ash Road.
+
+Voice samples, not shipped lines:
+- "Best of three. Again. Loser buys."
+- "Curfew's ten. It's ten-oh-two. I'm writing 'ten-oh-one'. You owe me."
+- "You want to know a secret? He's terrible at this. Has been since we were nine."
+- (Ch 31, plain) "No. Not like this. I'll say it to her face."
+- (Ch 51) "Go. That's an order. I'm winning this one."
+
+**Topics.**
+
+| Topic (level) | What he says |
+|---|---|
+| Small talk (0) | A bet about the weather |
+| Training (1) | Speed and footwork; challenges you to a race |
+| Hobby (2) | The tally, and a collection of every contest's "prize" (a lost sandal, a bad poem) |
+| Family (4) | A big Shiranui family of guards; "I'm the one who doesn't stand still" |
+| Values (5) | "Be fun to lose to. Be impossible to beat when it matters." |
+| Advice (5) | "If it can hurt you, laugh at it first. Then deal with it." (After Ch 31: "Or don't laugh. Sometimes don't.") |
+| Dream (6) | "One win that counts." |
+| Worries (7) | "That I'll be the one who wasn't there. Again." |
+
+**Never reveal before.**
+
+| Fact | Not before |
+|---|---|
+| He asked to be on the Ash Road mission | Level 7 and Ch 36 (when the report is opened) |
+| Anything about the player's chakra beyond "anomalous" | Ch 31 |
+| The war plan, the anchors | Ch 49 |
+
+**Questions for the player.**
+
+| Id | When | Question | Options | Honours / tests | Remembered | Changes him |
+|---|---|---|---|---|---|---|
+| `ans.sensei_2.laugh` | Ch 8 or a hangout at level 2 | "Your sensei. Do they ever laugh? Be honest." | Never / Only when they think no one's looking / You'd have to make them | Freedom (playful truth) | Ch 54: the notebook scene | "Make them": he keeps trying, and the tally gains a column called "Made them laugh: 0" |
+| `ans.sensei_2.liked_right` | Ch 22 to 30, during a curfew check | "Is it better to be liked or to be right?" | Liked / Right / Both, if you work at it | Loyalty vs honesty | Ch 31: he quotes you before he speaks against the lockdown | "Right": he speaks first and alone. "Liked": he waits until you testify, then stands with you. "Both": he brings the Hagane and Tobari together before speaking |
+| `ans.sensei_2.curfew_friend` | Ch 28 (the stake-out night pass) | "Would you break curfew for a friend?" | Yes / I'd ask for a pass first / Depends on the friend | Rules vs loyalty | Ch 28: he signs the pass, or catches you and lets you go | Shapes his night log: "yes" earns a wink and a forged time |
+| `ans.sensei_2.on_purpose` | Ch 42 (after he kneels) | "If I lost a contest on purpose, would it still count?" | It counts / It doesn't / Only if they never find out | Freedom, loyalty | Ch 51 and Ch 54 (the last line of the tally) | "Counts": the Seventh laughs reading it. "Doesn't": the Seventh says "It counts" anyway |
+| `ans.sensei_2.wasnt_there` | Level 7 hangout, Jonin arc | "Ever been somewhere you weren't, in your head? Some night you should've been at?" | Yes, the night they took the girl / No / Every day | Honesty | Ch 51: his last order quotes it ("Not this time") | Opens his Ash Road confession |
+| `ans.sensei_2.nickname` | Any hangout, level 3 | "Everybody gets a nickname. What's yours going to be?" | Pick from three he offers ("Matchstick", "Stray", "Trouble") / refuse | Playfulness | He uses it forever; it is the last word in the notebook's margin | — |
+
+**What his lines are for.** Comedy that carries feeling (life, bond); the curfew system's teacher
+(teach, Ch 22 to 31: passes, night logs); the Ch 31 turn (plot); the war's first sacrifice
+(plot, bond). Pools: greetings with a tally number (per arc), curfew lines (on duty), a quiet
+pool after Ch 19 and after Ch 31, war lines.
+
+**Unison technique (Blaze, with the player).** *Needle Rain of Embers*: his senbon volley, kindled,
+becomes a rain of ember-gold needles that pin a whole cell's shadows at once.
+
+**Variants.** Varied: any archetype; keep the tally and the switch to plain speech when serious.
+`twist.fourth_fate = taken`: he leads the Empty Seat (Ch 21c) and carries the Fourth out himself.
+
+**New flags.** `ans.sensei_2.laugh` (never, unseen, make_them), `ans.sensei_2.liked_right`
+(liked, right, both), `ans.sensei_2.curfew_friend` (yes, pass, depends),
+`ans.sensei_2.on_purpose` (counts, doesnt, secret), `ans.sensei_2.wasnt_there` (girl_night, no,
+every_day), `ans.sensei_2.nickname` (matchstick, stray, trouble, none).
+
+---
+
+## `role:sensei_3`
+
+### At a glance
+
+| | |
+|---|---|
+| Role | Squad 3's Jonin (`squad3_a`, `squad3_b`, `squad3_c`); the Ash Road team's survivor |
+| Name | Given Family, rolled. Classic: a **Yuhi** |
+| Look | Classic: curated: a tall woman with dark wavy hair, crimson-ringed eyes, a rose-thorn pattern on her sleeves, always a little apart. Varied: rolled |
+| Pronouns | Classic: she. Varied: rolled; dialogue uses `{they:sensei_3}` |
+| Specialty and style | Genjutsu of the Yuhi grove: illusions that root a target in place; a short blade for the step behind |
+| Rank | Jonin throughout |
+| Archetype | Classic: **gentle**, with grief (warmth .7, boldness -.4, pride -.5) |
+| Values | Kindness, family (her squad as family) |
+| Peeves | Cruelty, rudeness |
+| Dream | To be forgiven by the one person who never blamed her |
+| Tier | Story-driving |
+| First / last | Ch 8 / epilogue |
+
+### Arc
+
+**Wants.** Forgiveness, from the player's sensei, for leaving the Ash Road alive. They never
+blamed her; that is the problem: there is nothing to forgive, so she cannot be forgiven.
+
+**Fears.** Being spared again while someone else stays.
+
+**Secrets.** On the Ash Road the sensei ordered her back to signal for help. She went. She has
+replayed the choice to disobey every night for eight years. She remembers `fallen_parent`'s laugh
+and the watch-fire song. She does not know the ambush was Yūgure until Ch 36.
+
+**What she knows and when.**
+
+| Knowledge | From |
+|---|---|
+| The Ash Road ambush, as "bandits" | Before Y0 |
+| The song (from `fallen_parent`) | Before Y0; she hears the player hum it in the forest report (Ch 16) and says nothing |
+| The player has `fallen_parent`'s fire | Ch 25 (the sensei tells her, the first words between them in years) |
+| The Ash Road was Yūgure | Ch 36 |
+| The Hollow Crown | Ch 49 |
+
+She never speaks of `fallen_parent`'s home life or family before Ch 48.
+
+**How she changes.**
+
+| Arc | Change |
+|---|---|
+| 2 Paper Trail | Ch 10: at the memorial stone at dusk with the player's sensei; they stand two metres apart and do not speak. The player sees it |
+| 3 Dusk | In the forest, she is a proctor at a tower gate; she lets the player's squad rest an hour longer than the rules allow (a kindness the player can notice) |
+| 4 Embers | Ch 25: after the sensei tells her, she seeks out the player once: "He told you? Then you know I left." |
+| 5 Ashes | Ch 36: reads the sealed report with the sensei; on the Rock afterwards they finally talk (offscreen if the player stayed with the keeper, onscreen if the player followed). She asks the sensei to blame her, and they refuse, and then they say "I was angry you went. I was glad you lived." It is enough |
+| 7 Last Bonfire | Ch 51.2: her genjutsu hides the Academy's evacuation, a whole grove over the streets; she stays behind in the illusion until the last child is out. She is spared again, and this time she lets herself be |
+
+**Endings.** She lives. Epilogue: she and the sensei leave persimmons at the stone together.
+
+### Relationships
+
+- **The player's sensei:** eight years of silence, ended in Ch 36.
+- **sensei_2:** the only person who makes her laugh; she knows why he keeps the tally.
+- **Her squad:** she teaches the trio as a family, not a formation; squad3_a's freeze is a mirror of
+  her own Ash Road moment, and she says so in Ch 51.
+
+### Dialogue brief
+
+**Voice.** Soft, careful, complete sentences; she asks about the other person before answering
+about herself; images from gardens and trees. When hurt, she becomes very polite. Never says
+"bandits" after Ch 36; never says "I'm fine" and means it.
+
+Voice samples, not shipped lines:
+- "Sit. You can stand later; everyone stands later."
+- "Illusions don't lie. They show you what you were already afraid of."
+- "He told you? Then you know I left."
+- (Ch 51) "Go on. I'll keep the trees up. I'm good at staying, it turns out."
+- (to her squad) "A plan is a garden. Some of it dies. You plant again."
+
+**Topics.**
+
+| Topic (level) | What she says |
+|---|---|
+| Small talk (0) | Flowers in season; asks how you slept |
+| Training (1) | Genjutsu release, gently; "the trick is to notice" |
+| Hobby (2) | Pressing flowers; she gives one to anyone at level 3 |
+| Family (4) | Her squad first; the Yuhi grove second |
+| Values (5) | "Kindness costs. Pay it anyway." |
+| Advice (5) | On regret: "Say it to the person. Even if they're on the stone." |
+| Dream (6) | Before Ch 36: "To stop dreaming the same road." After: "To be bored with him, at festivals." |
+| Worries (7) | Her squad; squad3_a most |
+
+**Never reveal before.**
+
+| Fact | Not before |
+|---|---|
+| She was the third on the Ash Road | Ch 25 (by the sensei) |
+| She left on the sensei's order | Ch 25 (her own line) |
+| The ambush was Yūgure | Ch 36 |
+| Anything about `fallen_parent`'s spouse, child or home | Ch 48 |
+
+**Questions for the player.**
+
+| Id | When | Question | Options | Honours / tests | Remembered | Changes her |
+|---|---|---|---|---|---|---|
+| `ans.sensei_3.spared` | Ch 25 (her visit) | "Would you rather be the one who's saved, or the one who stays?" | Saved, so I can come back / The one who stays / Neither: we all leave together | Her guilt | Ch 51: "You said ___. I'm choosing the other one, this once" or "You said together. Then go, I'll be right behind" | Decides how she frames her stay in Ch 51 |
+| `ans.sensei_3.coward` | Level 5 hangout (Chunin) | "Is it cowardice to obey an order to run?" | No, it's trust / Sometimes / Yes, but forgivable | Kindness to herself | Ch 36: she quotes you to the sensei | "No": she can ask for forgiveness at last. "Yes, but": she asks to be blamed first |
+| `ans.sensei_3.illusion` | Level 3 hangout (flower pressing) | "If an illusion made someone happy, would you break it?" | Yes, truth first / No / Only if they asked | Honesty vs kindness | Ch 40 (the council): "We've all lived in a nice illusion" | Her stance on making the Quiet Ending public |
+| `ans.sensei_3.flower` | Level 3 | "Which flower should I press for you?" | Persimmon blossom / Rose / A weed from the training ground | Kindness | She gives it; it is in your apartment as a keepsake | — |
+| `ans.sensei_3.say_it` | Ch 41 (at the memorial) | "Is there anyone on this stone you'd say something to?" | The girl's family / My parent, whoever they were / Nobody yet | Grief | Ch 54: she stands with you at the stone and says it with you | — |
+| `ans.sensei_3.squad` | Level 6, Jonin arc | "If one of mine froze, and someone got hurt, would you tell them it wasn't their fault?" | Yes / No, I'd tell them it's how they learn / I'd tell them I froze once too | Kindness | Ch 51: what she says to squad3_a when the gate falls | squad3_a's growth line |
+
+**What her lines are for.** The Ash Road's living witness (seed, plot); a gentle adult for the
+player in the Chunin years (bond); the trio's teacher (ensemble). Pools: greetings by arc; a
+polite-hurt pool (festivals, before Ch 36); the forest proctor lines (Ch 16).
+
+**Unison technique (Blaze).** *Grove of Embers*: her rooting illusion, kindled, becomes a forest of
+ember-lit trees covering a district, hiding everyone the player is bonded to.
+
+**Variants.** Varied: any genjutsu-capable shinobi; the Ash Road role is fixed.
+`twist.lineage = fallen`: in Ch 48 aftermath she says, "They talked about a child once. I never
+asked." `= second`: she says nothing new.
+
+**New flags.** `ans.sensei_3.spared` (saved, stay, together), `ans.sensei_3.coward` (trust,
+sometimes, forgivable), `ans.sensei_3.illusion` (break, keep, if_asked), `ans.sensei_3.flower`
+(persimmon, rose, weed), `ans.sensei_3.say_it` (girl_family, my_parent, nobody),
+`ans.sensei_3.squad` (not_fault, learn, froze_too).
+
+---
+
+## `role:sensei_4`
+
+### At a glance
+
+| | |
+|---|---|
+| Role | Squad 4's Jonin (`squad4_a`, `squad4_b`, `squad4_c`); the Leaf's interrogator in the story's key captures |
+| Name | Given Family, rolled. Classic: a **Morino** |
+| Look | Classic: curated: a very large man in a long dark greatcoat, a shaved head with old scars, flour on his cuffs. Varied: rolled |
+| Pronouns | Classic: he. Varied: rolled; dialogue uses `{they:sensei_4}` |
+| Specialty and style | Interrogation, binding wire, pressure: he fights slowly and never misses a grab |
+| Rank | Jonin throughout |
+| Archetype | Classic: **stern** at work, **warmhearted** at home (two pools) |
+| Values | Honesty, duty |
+| Peeves | Dishonesty, cruelty |
+| Dream | To be trusted, not feared |
+| Tier | Story-driving |
+| First / last | Ch 8 / Ch 55 |
+
+### Arc
+
+**Wants.** To be trusted. The village crosses the street from the Morino.
+
+**Fears.** That he is what they think: a man who sees the worst in people first. (He usually is
+right, and it costs him.)
+
+**Secrets.** He bakes bread every morning for the hospital and his squad and has never told anyone
+it was him. He once got a confession from an innocent man (years ago) and has never trusted a
+confession since.
+
+**What he knows and when.**
+
+| Knowledge | From |
+|---|---|
+| "Yūgure" (the smuggler's only word) | Ch 14 |
+| The paper looks for "the old fire" | Ch 23 (the tester) |
+| A voice inside; "in its own hand" | Ch 28 (he hears the porter) |
+| Each candidate's alibi status | Only what the player brings to the case board (Ch 38) |
+| The voice | Ch 39 |
+
+He never knows the bound answer before the player does; he never suggests a name.
+
+**How he changes.**
+
+| Arc | Change |
+|---|---|
+| 2 Paper Trail | Ch 14: interrogates the smuggler for a night and gets one word. "That word was the most frightened thing I've ever heard a man say." |
+| 4 Embers | Ch 23: the tester. Ch 28: reaches the porter first and tries to hold the tongue seal back with a binding; fails; stays with him until the medic comes and is visibly shaken |
+| 5 Ashes | Ch 38: sits with the player at the case board; asks good questions, never gives answers; distrusts Thread Sight ("A flicker isn't proof. Everyone hides something. I hide bread."). Ch 39: makes the arrest. If the player accused without proof, he warns once ("Are you sure? Then sign it.") |
+| 7 Last Bonfire | Ch 51: defends the hospital with squad4_c |
+
+**Endings.** He lives. If the player thanks him for the bread (`ans.sensei_4.bread = thanked`
+after Ch 39), the village learns it was him; in the epilogue a line of children waits at his door.
+
+### Relationships
+
+- **His squad:** squad4_a (fairness), squad4_b (noise), squad4_c (quiet); he is gentle with all three
+  and terrifying to everyone else.
+- **sensei_2:** "the Baker" to his face; respects him more than he admits.
+- **The medic:** works beside them at the hospital; in `twist.traitor = medic` saves, the arrest is
+  the hardest thing he does.
+
+### Dialogue brief
+
+**Voice.** Slow, low, few words; asks questions he already knows the answer to, to see how you
+answer; never threatens, just waits. At home (and with his squad), suddenly warm: "Eat. You're
+thin." Never guesses aloud. Never says "I know you're lying"; says "Try again."
+
+Voice samples, not shipped lines:
+- "Sit. Take your time. I have all night. I brought bread."
+- "Try again."
+- "A flicker isn't proof. Everyone hides something."
+- (case board) "What would have to be true for this to be them? Now: what would have to be true for it not to be?"
+- (Ch 39) "I'll do it. It's my job to be the one they hate."
+
+**Topics.**
+
+| Topic (level) | What he says |
+|---|---|
+| Small talk (0) | One word answers |
+| Training (1) | "Listen more than you talk. Then listen again." |
+| Hobby (2) | Denies baking (at level 5 admits it) |
+| Family (4) | The Morino house: "Bars on the windows so the neighbours feel safe. Inside, we have a cat." |
+| Values (5) | "The truth is heavy. Carry it anyway, and don't drop it on people." |
+| Advice (5) | On suspicion: "Write down why. If you can't, you don't suspect them, you just dislike them." |
+| Dream (6) | "A street where people don't cross over." |
+| Worries (7) | The innocent man he broke; you, at the case board |
+
+**Never reveal before.**
+
+| Fact | Not before |
+|---|---|
+| Any opinion on who the voice is | Never (he only asks questions) |
+| The porter's words, to anyone but the player | Ch 38 |
+| The bread | Level 5 |
+
+**Questions for the player.**
+
+| Id | When | Question | Options | Honours / tests | Remembered | Changes him |
+|---|---|---|---|---|---|---|
+| `ans.sensei_4.see_first` | Ch 14 or level 2 | "When you look at me, what do you see first?" | The coat / The scars / The flour on your cuffs | Honesty | Level 5: "You saw the flour. Nobody sees the flour." | "Flour" opens his warm pool early |
+| `ans.sensei_4.worse` | Ch 28 (after the porter) | "Which is worse: trusting a liar, or doubting an honest man?" | Trusting a liar / Doubting an honest man / Doing either without checking | Honesty, duty | Ch 38: his opening question at the case board | Sets how hard he presses you on proof before the accusation |
+| `ans.sensei_4.confess` | Level 3 hangout | "What would you confess to, if I asked nicely?" | Eating the cook's last egg / Breaking curfew / Nothing, ask harder | Humour | A running joke in his greetings | — |
+| `ans.sensei_4.second_chance` | Ch 40 (after the reveal) | "Do people deserve a second chance after they've lied to you?" | Yes / If they tell the truth now / No | Duty vs kindness | Ch 55: his line about your ruling on the voice | — |
+| `ans.sensei_4.bread` | Level 5 (he admits it) | "Don't tell anyone." | Promise / Tell them anyway / Ask to learn | Trust | Epilogue: the line of children | "Learn": a baking hangout opens |
+| `ans.sensei_4.feared` | Level 6, Jonin arc | "Would you rather be feared and right, or trusted and wrong?" | Feared and right / Trusted and wrong / Neither, I'd work harder | His dream | Ch 51: at the hospital he says which he chose | — |
+
+**What his lines are for.** The interrogations and the case board (clue: he frames, never solves);
+the fairness of the mystery made visible (he refuses to treat a flicker as evidence); his squad's
+father figure; comedy in the warm pool. Pools: stern and warm greetings; case-board prompts
+(generic, rotation-free); arrest lines per candidate (written with the reveals).
+
+**Unison technique (Blaze).** *Iron Hearth*: his binding wire, kindled, becomes a cage of ember
+light that holds a target without hurting it.
+
+**Variants.** Varied: any steady, stern shinobi. Rotations: his Ch 39 arrest lines differ by
+`twist.traitor`; the medic's is the hardest.
+
+**New flags.** `ans.sensei_4.see_first` (coat, scars, flour), `ans.sensei_4.worse` (trust_liar,
+doubt_honest, unchecked), `ans.sensei_4.confess` (egg, curfew, nothing), `ans.sensei_4.second_chance`
+(yes, if_truth, no), `ans.sensei_4.bread` (promise, tell, learn), `ans.sensei_4.feared` (feared,
+trusted, neither).
+
+---
+
+## `role:sensei_5`
+
+### At a glance
+
+| | |
+|---|---|
+| Role | The senior squad's Jonin (`squad5_a`, `squad5_b`, `squad5_c`); the Leaf's old sealing master |
+| Name | Given Family, rolled. Classic: an **Uzumaki** |
+| Look | Classic: curated: an old man (about seventy) with a long white braid that was once red, round spectacles, a coat of sealing brushes, a loud laugh. Varied: rolled (always old) |
+| Pronouns | Classic: he. Varied: rolled; dialogue uses `{they:sensei_5}` |
+| Specialty and style | Sealing: barriers, binding chains, seals that hold or break; fights by drawing faster than people move |
+| Rank | Jonin (refuses to retire) |
+| Archetype | Classic: **warmhearted**, talkative (warmth .8, openness .5, discipline -.1) |
+| Values | Family, knowledge |
+| Peeves | Neglect, laziness |
+| Dream | To pass on everything before he goes |
+| Tier | Story-driving |
+| First / last | Ch 7 (with the senior squad at graduation) / epilogue |
+
+### Arc
+
+**Wants.** To teach everything he knows before he dies, to someone who will listen.
+
+**Fears.** That he talked his whole life and nobody heard the important part. That he once
+didn't ask a question he should have.
+
+**Secrets.** Forty years ago the Third asked him to inspect "a very old seal under the Rock". He
+renewed it and did not ask what it held. He has wondered ever since. He taught half the Jonin of
+the Leaf (the player's sensei, sensei_2, sensei_3 as Academy guest-teacher), and calls them by
+pet names.
+
+**What he knows and when.**
+
+| Knowledge | From |
+|---|---|
+| A seal under the Rock, renewed for the Third | Before Y0 |
+| What it guarded (the archive) | Ch 36 |
+| Cinder seals: what they are | Ch 28 (he examines the one on the porter's tongue) and Ch 49 (the array) |
+| The Hollow Crown | Ch 49 |
+
+**How he changes.**
+
+| Arc | Change |
+|---|---|
+| 1 Cinders | Ch 7: watches the graduation with his senior squad, loudly commenting |
+| 3 Dusk | Ch 19: seals the stadium's gates so the evacuation can run, shouting instructions at everyone |
+| 4 Embers | Ch 28: reads the burned tongue seal: "Whoever drew this has been drawing for eighty years." (A seed: the leader's age) |
+| 5 Ashes | Ch 36: breaks the archive's old seals with the keeper: "I put my hand on this door forty years ago and I didn't ask. I'm asking now." |
+| 7 Last Bonfire | Ch 50: teaches the village to break cinder seals (systemic: a technique scroll and a lesson every district needs); Ch 52: holds the array's last anchor on the Rock shut with his own chakra while the player faces the leader. He survives, drained, and spends the epilogue teaching squad5_b, who finally talks back |
+
+His growth: from talking to listening. The silent squad5_b is his lesson.
+
+### Relationships
+
+- **His senior squad:** squad5_a (hope), squad5_b (silence he has to learn to hear), squad5_c
+  (talent he cannot hold).
+- **The other senseis:** his pet names; he scolds them like students.
+- **The Uzumaki line:** if `clan.uzumaki.3` is done, the scattered Uzumaki is his great-niece and
+  helps him in Ch 36.
+
+### Dialogue brief
+
+**Voice.** Loud, warm, long sentences with digressions; tells a story to answer a yes-or-no
+question; laughs at his own jokes; then, rarely, one quiet line that is the point. Never says
+"I'm too old." Never says anything he hasn't checked twice about seals.
+
+Voice samples, not shipped lines:
+- "Ha! A seal is a promise with good handwriting. Sit, sit, this will take an hour."
+- "My quiet one, my loud one, my sad one, and my baker. And now you. What are you?"
+- "Whoever drew this has been drawing for eighty years."
+- "I put my hand on this door forty years ago and I didn't ask. I'm asking now."
+- (Ch 52, quiet) "Go on. I've got this one. I've had it for forty years."
+
+**Topics.**
+
+| Topic (level) | What he says |
+|---|---|
+| Small talk (0) | A story about the weather in a year you've never heard of |
+| Training (1) | Sealing basics; brush grip |
+| Hobby (2) | Calligraphy; he will teach you to write your name properly |
+| Family (4) | The Uzumaki: "Few of us left, all of us loud" |
+| Values (5) | "Ask the question. Even if the answer is heavy." |
+| Advice (5) | "Listen to the quiet ones. They've been waiting." (He is learning it himself) |
+| Dream (6) | "One student who'll hold everything I drop." |
+| Worries (7) | The door he didn't ask about |
+
+**Never reveal before.**
+
+| Fact | Not before |
+|---|---|
+| He renewed the seal under the Rock | Ch 36 (at level 7, in the Jonin arc, he can hint "I once sealed something I didn't understand") |
+| The leader's age read from the seal | Said at Ch 28 as a strange fact; never connected aloud before Ch 49 |
+| The array | Ch 49 |
+
+**Questions for the player.**
+
+| Id | When | Question | Options | Honours / tests | Remembered | Changes him |
+|---|---|---|---|---|---|---|
+| `ans.sensei_5.carve` | Level 3 hangout (calligraphy) | "If you had to write one word on a seal that must hold forever, what would it be?" | Home / Remember / Together / Open | Knowledge, family | Ch 52: he writes your word on the last anchor's seal as he holds it | — |
+| `ans.sensei_5.ask` | Ch 36 (at the door) | "Should I have asked, back then?" | Yes / You trusted her; that's not nothing / You're asking now | Knowledge vs loyalty | Ch 52: his last line | "Yes": he takes the blame aloud at the council (Ch 40) |
+| `ans.sensei_5.teach_one` | Level 5, Chunin arc | "If you could only teach one person everything you know, who would you pick?" | A friend / A stranger who needs it / Someone like me / Nobody, I'd teach everyone a little | Family | Ch 50: how he runs the village seal lessons (one student, or all) | "Everyone": Ch 50 finds more anchors (district lessons count double) |
+| `ans.sensei_5.quiet` | Level 4 | "My quiet one never talks to me. What am I doing wrong?" | Talking / Nothing, wait / Ask her something and stop | His growth | Epilogue: squad5_b's first long answer to him | Starts his learning-to-listen arc early |
+| `ans.sensei_5.name` | Level 2 (writing lesson) | "Shall I teach you to write your name? Or the name you'd like?" | My name / Nine (allowed only after Ch 28; otherwise "a name I don't know yet") / Kagari (after Ch 40) | Identity | Your name scroll keepsake reads it; Ch 46 the clan hall's first seal is in his hand | — |
+
+**What his lines are for.** Sealing exposition in character (teach); the archive's last lock and
+the array's breaking (plot); warmth and comedy (life); a long-life perspective on the Third's era
+(seed, world). Pools: loud greetings; quiet lines (rare, after Ch 36); lesson lines (Ch 50).
+
+**Unison technique (Blaze).** *Spiral Hearth*: his binding chains, kindled, become a spiral of
+ember chains that seal an area against chakra drain (the counter to the dark mirror's pull for a
+moment; Ch 52 dressing).
+
+**Variants.** Varied: any old sealing specialist. If the Uzumaki line is not done, his great-niece
+does not appear.
+
+**New flags.** `ans.sensei_5.carve` (home, remember, together, open), `ans.sensei_5.ask` (yes,
+trusted, asking_now), `ans.sensei_5.teach_one` (friend, stranger, like_me, everyone),
+`ans.sensei_5.quiet` (talking, wait, ask), `ans.sensei_5.name` (mine, nine_or_unknown, kagari).

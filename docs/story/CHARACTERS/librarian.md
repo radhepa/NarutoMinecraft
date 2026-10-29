@@ -10,7 +10,7 @@
 | Role | `role:librarian`, keeper of the Academy library |
 | Look | Fixed: a slight woman in her forties, ink-dark hair in a low knot held by two brushes, round spectacles, a grey-green library apron over a plain kimono, a faded red thread around one finger (a habit, not a Yūgure tally) |
 | Pronouns | She / her |
-| Clan | Clanless (a renamed Kagari child's granddaughter: she knows) |
+| Clan | No clan; an ordinary family name from the pool (the renamed family's Leaf name). She is a renamed Kagari child's granddaughter, and she knows |
 | Rank | Chunin (retired from the field at 25 after an injury; walks with a slight limp) |
 | Archetype | `thoughtful` (warmth .2, bold −.2, pride 0, discipline .4, open −.2) |
 | Values | knowledge, honesty (which she betrays daily by keeping her family's secret) |
@@ -30,6 +30,14 @@
 - She files the Academy aptitude scrolls by shelf mark (`Leaf 7-iii`) and puts a small brushed circle
   beside a child who "might need a little more". She means it kindly in every save.
 - She is nervous by nature around authority and around the founding history.
+- **Her every-save secret** (the true thing she hides in every rotation): she is a Kagari descendant
+  whose family kept the true history.
+
+**Thread Sight.** From Ch 24, if she is bonded to the player at 6 or more and the player probes her,
+her thread flickers: she is hiding something. In every save she is (her heritage), so the flicker
+shows whether she is the voice or not, and never says what. Her tie to the porter is never visible
+(the porter is never at 6+ with the player). After Ch 40 (innocent) or Ch 39 (bound) the flicker
+goes out.
 - The fresh-cut page (Ch 5) listed the families who adopted the twenty-seven, under a chapter
   heading about "the settling of the southern hills". It went to Yūgure through the porter in every
   save. Who cut it is the rotation.
@@ -57,8 +65,10 @@
   not hers and then, because it is not, cries with relief.
 - **Ch 40 cleared:** she gives the player the family notebook for the archive and stands up at the
   council to say her grandmother's real name aloud. Her training line opens
-  (`friendship [librarian, 7]` and `kindling_uses` on any bond at 6+): the old forms of the gift,
-  taught from the notebook's watch-fire practices.
+  (`friendship [librarian, 7]` and the gift awakened): the old forms of the gift, taught from the
+  notebook: the watch-fire songs, how the Kagari kept the flame low in peace, how they sat at camp
+  fires with the bonded, and the meaning of the ember mark. Lore and practice that deepen Thread
+  Sight and Kindle; she teaches no ability of her own.
 - **Road to Hokage:** she joins the restored house if the player restores the Kagari and asks (she
   says yes if `friendship 6`). She teaches the song to the new members. In the finale her flame is
   among the first from outside the squad.
@@ -175,7 +185,7 @@
 - Identical in Classic and Varied (fixed role and look); name rolled.
 - `twist.traitor = librarian`: the bound track. Otherwise innocent.
 - `twist.lineage`: no change to her.
-- If she is bound, the keeper names the gift (Ch 25) and teaches the old forms; the song's words
+- If she is bound, the keeper names the gift (Ch 25) and teaches what the archive keeps of the old forms; the song's words
   reach the player in Ch 48 from the second (A) or the Seventh (B, from `fallen_parent`'s letters).
 
 ## New flags

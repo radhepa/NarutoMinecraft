@@ -7,9 +7,9 @@
 | | |
 |---|---|
 | Role | The Chunin from the rescue; your Academy instructor; later head of the Academy |
-| Look | Classic: curated (a cheerful clanless Chunin, sleeves rolled, chalk on everything). Varied: rolled |
+| Look | Classic: curated (a cheerful Chunin of no clan, sleeves rolled, chalk on everything). Varied: rolled |
 | Pronouns | *they*; dialogue uses `{they:instructor}` and the rest |
-| Clan | Classic: clanless (an Umino in a save that rolls them so, by chance) |
+| Name | Given Family (rolled); Classic: **no clan**, an ordinary family name that never matches a clan. Varied: rolled. Called "{family:instructor}-sensei" by the class |
 | Rank | Chunin → Academy head (Jonin arc) |
 | Archetype | Classic: **warmhearted** (warmth .8, openness .5) |
 | Values | Kindness, family |
