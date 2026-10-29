@@ -6137,7 +6137,8 @@
    "use": "A line of washing across the balcony",
    "art": "block",
    "props": {
-    "block": "laundry_line"
+    "block": "laundry_line",
+    "block_variants": "laundry_line|laundry_line_futon|laundry_line_empty"
    }
   },
   {
@@ -6509,6 +6510,7 @@
    "props": {
     "block": "clan_lantern",
     "variant": "clan:25",
+    "block_variants": "clan_lantern_<clan>",
     "light": "12"
    }
   },
@@ -6532,7 +6534,8 @@
    "art": "block",
    "props": {
     "block": "lantern_string",
-    "light": "10"
+    "light": "10",
+    "block_variants": "lantern_string|mixed_lantern_string"
    }
   },
   {
@@ -6836,7 +6839,8 @@
    "art": "block",
    "props": {
     "block": "clan_screen",
-    "variant": "clan:25"
+    "variant": "clan:25",
+    "block_variants": "clan_screen_<clan>"
    }
   },
   {
@@ -7630,7 +7634,8 @@
    "art": "block",
    "props": {
     "block": "clan_banner",
-    "variant": "clan:25"
+    "variant": "clan:25",
+    "block_variants": "clan_banner_<clan>"
    }
   },
   {
@@ -7653,7 +7658,7 @@
    "art": "block",
    "props": {
     "block": "curtains",
-    "variant": "colour"
+    "block_variants": "curtains|indigo_curtains|red_curtains|green_curtains|yellow_curtains|brown_curtains"
    }
   },
   {
@@ -7791,7 +7796,7 @@
    "art": "block",
    "props": {
     "block": "poster",
-    "block_variants": "poster_academy|poster_festival|poster_wanted|poster_exams|poster_village|poster_lake"
+    "block_variants": "poster_ramen|poster_academy|poster_festival|poster_wanted|poster_exams|poster_village|poster_lake"
    }
   },
   {
