@@ -1,0 +1,238 @@
+{
+  "id": "h1309_shimura_bob",
+  "kind": "hair",
+  "name": "Shimura Bob",
+  "gender": "unisex",
+  "texture": "hair/h1309_shimura_bob.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "side_right",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.7,
+        -7.8,
+        -3.6
+      ],
+      "size": [
+        1,
+        9,
+        8
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "side_left",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        3.7,
+        -7.8,
+        -3.6
+      ],
+      "size": [
+        1,
+        9,
+        8
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "back",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -7.8,
+        3.7
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": "fringe_bar",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -8.4,
+        -4.6
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "fringe_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        18
+      ]
+    },
+    {
+      "id": "fringe_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        28,
+        18
+      ]
+    },
+    {
+      "id": "fringe_2",
+      "bone": "HEAD",
+      "pivot": [
+        0.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        35,
+        18
+      ]
+    },
+    {
+      "id": "fringe_3",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        18
+      ]
+    }
+  ],
+  "description": "Blunt jaw-length bob, a straight fringe to the brows."
+}

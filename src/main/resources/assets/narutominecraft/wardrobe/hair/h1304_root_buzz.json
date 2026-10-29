@@ -1,0 +1,294 @@
+{
+  "id": "h1304_root_buzz",
+  "kind": "hair",
+  "name": "Root Buzz",
+  "gender": "unisex",
+  "texture": "hair/h1304_root_buzz.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "crown_tuft_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.0,
+        -7.9,
+        -1.4
+      ],
+      "rotation": [
+        -10,
+        0,
+        -10
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.0,
+        -7.9,
+        -1.4
+      ],
+      "rotation": [
+        -10,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -7.9,
+        -1.8
+      ],
+      "rotation": [
+        -12,
+        0,
+        8
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -7.9,
+        -1.8
+      ],
+      "rotation": [
+        -12,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -7.9,
+        0.4
+      ],
+      "rotation": [
+        6,
+        0,
+        16
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.4,
+        -7.9,
+        0.4
+      ],
+      "rotation": [
+        6,
+        0,
+        16
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        41,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -7.9,
+        1.6
+      ],
+      "rotation": [
+        14,
+        0,
+        -12
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -7.9,
+        1.6
+      ],
+      "rotation": [
+        14,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_4_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -7.9,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "crown_tuft_4_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -7.9,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        4
+      ]
+    }
+  ],
+  "description": "Close-clipped field cut with a little texture on the crown."
+}
