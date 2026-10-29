@@ -35,6 +35,8 @@ class QuestionsCompiledTest {
         var again = Question.parse(honestOrKindAgain());
         assertEquals("q.values.honest_or_kind", again.followUpOf());
         assertEquals(java.util.Set.of("thoughtful"), again.archetypes());
+        var withSets = new java.util.HashMap<>(honestOrKind()); withSets.put("sets", "talked_about_honesty");
+        assertEquals("talked_about_honesty", Question.parse(withSets).answer("a3").sets(), "a question-level flag for every answer");
     }
     @Test void valuesAndToneLandOnTheirPersonalityAndOppositePolesContradict() {
         var w = TogetherTest.friends(CLASSMATE_C, 60); // thoughtful: values knowledge and honesty
