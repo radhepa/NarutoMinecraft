@@ -61,3 +61,14 @@ more with no blocking issues.
 - **Characters:** a single Ch 51 who-is-where; the 51b order with a beat of play between deaths; squad3_a's second line (51a.5); the leader's beat table complete and his questions cut to four; the blade turns and lives; the sensei's Ash Road signature defined; distinct voices for the rival, sensei_2 and squad5_c.
 - **Agency:** a beta falling-out handled (stand-ins, story mends); every main-path answer read has an unset default; scripted thread floors; the web's tiers calibrated by the bond simulation (small under 20, strong from 20, the whole village from 41); the war's end applies the level floor and the standing lift, so the Eighth follows at once.
 - **Emotion:** the body-shield beat used only twice (Ch 24, Ch 52); one version of every key line; the second's fate resolved before the leader's, held through her thread, split by lineage; six spoken flames in a fixed order; a lonely epilogue line that does not scold; humour beats added in Arcs 3 and 5.
+
+### Round 3 — did not pass
+
+| Lens | Score | Blocking issues (summary) |
+|---|---|---|
+| (a) Structure and pacing | 7 | The player's route through Ch 51a unstated; three gaps in the optional branch's gating (re-offer after Ch 47, the registry hand-off, N3's entry without the Ch 44 strip); a few year spans still off the WORLD table |
+| (b) Characters and the ensemble | 7 | Why the wick goes up the Rock unmotivated; the voice's reveals never owned the stadium leak; the Ch 51a table incomplete; the Ch 53 speaking rule broken by character files; two story-driving members without an unconditional main-path beat; a sensei knowing "Kagari" too early; the merchant's motive stated two ways |
+| (c) Mystery fairness | 6 | One character-file line changed who names the gift in the librarian's save; two lineage-B-only beats before Ch 48; a clan side quest diverging before Ch 39; the allowed-divergences list missing the list's own contents, and the schedule rule contradicting the alibis; the porter's innocent-save actions stated two ways; the Ch 37 leak faster than its channels |
+| (d) Naruto tone and canon | 7 | Two voice briefs carried a canon slogan and a canon tic; the ROADMAP's Ch 15 line lagged (fixed on the roadmap branch); the tree-climbing lesson restaged a canon scene |
+| (e) Agency and systems | 7 | A failed rank gate on harder difficulties had no path; a teammate's falling-out had no story mend unless they were the one who fell; held roles (the porter, the lost child) never declared as data; the optional branch's entry gaps; SYSTEMS.md's requests to the bond system stale |
+| (f) Emotional payoff | 7 | The Ch 0 map never shown before Ch 48 rests on it; the Third's letter in three versions; the Ch 53 flame lines not locked to one version; the war repeating "holds alone"; the second's death running into the leader's tender end; the red cord diluted by a tally and the squad test's cord |
