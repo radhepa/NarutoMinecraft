@@ -662,6 +662,18 @@ The Ramen Thief and draw two of the other three in a rolled order.
 | **The Last Summer** | 5 | Road to Hokage | Your old classmates plan one last summer trip before everything changes |
 | **The Statue Thief** | 3 | Road to Hokage | The Hokage statues' heads keep disappearing overnight |
 
+### Later one-offs (foundation)
+
+Standalone `side` quests for the later stretches. Premises only; the answers are in the story bible.
+
+| Id | Stretch | Premise |
+|---|---|---|
+| `side.c.returned_book` | Chunin | A library book keeps being returned on days the library is closed |
+| `side.c.court_roll` | Chunin | A clerk from the daimyo's court is stuck in the village with a damaged guest roll |
+| `side.c.sensor_shadow` | Chunin | The young sensor assigned to you would like, very much, to have a single day off |
+| `side.c.third_time` | Chunin | A loud Genin and his enormous dog are taking the Chunin Exams for the third time |
+| `side.j.roots` | Jonin | Families come asking the archive where they came from |
+
 ## 7. Inter-clan politics as quests
 
 *BUILD (beta) light; FOUNDATION (later) in full.* The bond system keeps live relations between

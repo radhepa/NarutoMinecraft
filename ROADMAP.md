@@ -797,7 +797,8 @@ The full design is in **[CHARACTER_CREATION.md](CHARACTER_CREATION.md)**. In sho
 - **Locked:** names, body, complexion, eyes, roots. **Changeable:** hair, hair color, brows and
   marks at a barber; outfits and headwear at home; pronouns in the settings; a free restyle on the
   Years Later mirror at each time skip, where hair grows and outfits follow the rank.
-  The last name changes only at the clan registry (founding or joining a clan: take the clan's
+  You pick a given name and an ordinary family name; the family name changes only at the clan
+  registry (founding or joining a clan: take the clan's
   name or keep yours).
 - **Varied's Roll a life** rolls a whole character from the save seed (the same seed, the same
   suggestion); every row also has its own dice.
@@ -1038,7 +1039,8 @@ outfits line up with the stages. Your classmates and squad are adult VF resident
 tag and the same scale values, so they grow up alongside you (VF's own children stay vanilla
 babies with their games and lessons). The calendar alone would age you less than two years in 60
 hours, so the story uses two time skips: about a year after the Chunin Exams (opening the Chunin arc,
-after the beta) and about three years before the Jonin trial.
+after the beta) and about four years before the Jonin trial, so the player is an adult (18) when the
+Jonin arc opens.
 
 ### Your squad and roles
 
@@ -1202,7 +1204,7 @@ working titles; the story behind each chapter is in the story bible.
 ### Beta 2: Genin life (~8 h)
 
 About 4 hours of authored chapters and 4 hours of systemic play: about 12 board D-ranks (~2 h),
-3 board C-ranks (~1.5 h), training and a friendly clan's lesson (~0.5 h), over about 24 in-game days.
+3 board C-ranks (~1.5 h), training (~0.5 h), over about 24 in-game days.
 
 | Ch | Chapter | Time | Content | Teaches |
 |---|---|---|---|---|
@@ -1225,9 +1227,9 @@ not a time skip.
 | 15 | Written test | 20 min | Ten impossible questions; gather answers unseen | Stealth objectives, choice |
 | 16 | Forest of Death | 60 min | One scroll of a pair and five in-game days to reach the tower with both | Survival, bedroll camping, On Duty, tree-hopping fights |
 | 17 | Preliminaries | 20 min | One-on-one bouts in the tower's arena | Duels, judged performance |
-| 18 | Training break | 30 min | Six days of training with your sensei; festival crowds | Systemic: training, crafting, side quests; your exam reward technique |
-| 19 | Chunin Exams finals | 40 min | The finals in the stadium before the whole village | Duels and protect objectives, the cinematic camera |
-| 20 | Results | 10 min | Promotion results, judged on how you fought | Promotion |
+| 18 | Six days | 30 min | Six days of training with your sensei; festival crowds | Systemic: training, crafting, side quests; your exam reward technique |
+| 19 | Chunin Exams finals | 35 min | The finals in the stadium before the whole village | Duels and protect objectives, the cinematic camera |
+| 20 | Results | 15 min | Promotion results, judged on how you fought | Promotion |
 
 ### The squad bonding arc
 
@@ -1441,9 +1443,9 @@ What the roadmap needs from it, spoiler-free:
 | Rank | Requirements | Unlocks |
 |---|---|---|
 | Chunin | Promotion in Beta 3 | B-rank missions, leading NPC Genin on missions, the outer training grounds, a flat or a clan room, founding a clan, the second-nature trials |
-| Jonin | Level 30, 10 B-rank and 2 A-rank missions, lead three squad missions without losing a teammate, master one A-rank jutsu; a trial bout and a council review | The Jonin wardrobe, A-rank missions, your own NPC Genin team, the standby station, clan masters, the third nature |
+| Jonin | Level 30, 10 B-rank missions and one A-rank mission led under a Jonin's supervision, lead three squad missions without losing a teammate, master one A-rank jutsu; a trial bout and a council review | The Jonin wardrobe, A-rank missions, your own NPC Genin team, the standby station, clan masters, the third nature |
 | ANBU (optional branch) | An invitation at level 35 with a stealth record and no bad deeds in the last season; a night infiltration test | Masks and armor, ANBU HQ, S-rank and covert missions; the mask hides your identity from residents; you can return to regular duty at any time |
-| Hokage | Jonin (ANBU or not), level 50, the highest standing in every district and clan quarter, the last arc | The Kage hat and haori, the office and quarters, assigning NPC teams, setting festivals, approving promotions and clan estates, your face as the Eighth |
+| Hokage | Jonin (ANBU or not), level 50, Hero standing with the village and at least Good Neighbor in every district and clan quarter, the last arc (defending the village in it counts toward standing) | The Kage hat and haori, the office and quarters, assigning NPC teams, setting festivals, approving promotions and clan estates, your face as the Eighth |
 
 ### Homes after the beta
 
