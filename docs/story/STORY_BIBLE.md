@@ -142,7 +142,7 @@ four are on the Rock at the start; the Fifth and Sixth are fixed carvings placed
 | `merchant` | Classic: yes; Varied: rolled | Ch 11 | A traitor candidate | [merchant](CHARACTERS/merchant.md) |
 | `lost_child` | Yes (girl) | Ch 0 | The girl in the next cell; hollowed; comes home | [lost_child](CHARACTERS/lost_child.md) |
 | `yugure_second` | Yes (woman) | Ch 13 (the stranger), Ch 16 | An ember user; names you Kagari; a lineage candidate; defects | [yugure_second](CHARACTERS/yugure_second.md) |
-| `yugure_blade` | Yes (man) | Ch 14 | Her partner, an ink-and-dusk swordsman; your recurring duel | [yugure_blade](CHARACTERS/yugure_blade.md) |
+| `yugure_blade` | Yes (man) | Ch 14 | Her partner, an ink-and-dusk swordsman; your recurring duel; turns in Ch 51b, fights beside you on the Rock, lives in custody | [yugure_blade](CHARACTERS/yugure_blade.md) |
 | `yugure_leader` | Yes (man) | Ch 0 (the watcher) | The last Kagari child of the purge | [yugure_leader](CHARACTERS/yugure_leader.md) |
 | `hokage_5`, `hokage_6` | Yes | Ch 20, Ch 32 | The hard line; the truth told | [5](CHARACTERS/hokage_5.md), [6](CHARACTERS/hokage_6.md) |
 | `fallen_parent` | No look (memory only) | Ch 10 (a name) | The sensei's teammate; a lineage candidate | [fallen_parent](CHARACTERS/fallen_parent.md) |
@@ -262,6 +262,7 @@ quest actions and conditions on roles, never code. Questions and answers: [DIALO
 | N6 / Ch 47, giving flame | `lost_child` | `gave_flame` (requested act); her bond grows from 2 |
 | Ch 50, the doors | clans and districts | `standing` gates per quarter |
 | Ch 53, every fire | everyone at 6+ | The watch-fire's size is `BondWeb.score` ([BONDS.md](../../BONDS.md) §11), in three tiers: a small fire (under 20), strong (from 20), the whole village (from 41). The thresholds are data, calibrated by the bonds session's simulation (60 h: reckless 4 to 10, typical 34 to 40, devoted 42 to 50) |
+| Ch 52, the blade | `yugure_blade` | His one thread to the second burns bright for this scene only (`thread_floor`); he lives (`story.blade.custody`) |
 | Ch 53, the spoken flames | `lost_child`, `sensei`, spouse, the friend who fell in Ch 24, the other teammate, `rival` | Fixed order; the red cord and the sensei kindle first in every save at any level (the lonely floor; the sensei's flame overrides a falling-out); then faces without spoken lines |
 | Ch 53, the second | `yugure_second` | Lives in any of three ways: the web at "strong" (score 20 or more); `friendship [yugure_second, 4]`; or `friendship [squad4_c, 6]` with `ans.squad4_c.second` not "someone else first". Resolved before the leader's end (53.5) |
 | The librarian teaches the gift's old forms | `librarian` | Before Ch 39, identical in every save: `friendship [librarian, 7]` and `story.kindling.awakened` (lore and practice: the songs, keeping the flame, the ember mark). After Ch 40 only if innocent |

@@ -146,8 +146,8 @@ living descendant, or an old Leaf family who kept silent).
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
 | 41.1 | Re-carving | `classmate_c`, the village | The chiselled gap on the memorial stone is re-carved with the Kagari dead's names and a dedication chosen by your council testimony; `fallen_parent`'s name is moved beside them. classmate_c's family does the carving | plot | — |
-| 41.2 | The mural | `teammate_a` | teammate_a's mural beside the stone, painted from your answer in Beta 1 (`ans.teammate_a.paint`) and unveiled by them or by you (`ans.teammate_a.show`) | bond (`supported_dream` if you helped) | — |
-| 41.3 | The children | the Valley children | One of the rescued children repeats what you told them the Leaf is (`ans.player.leaf_is`) | bond | — |
+| 41.2 | The mural | `teammate_a` | teammate_a's mural beside the stone, painted from your answer in Beta 1 (`ans.teammate_a.paint`; unset: both panels) and unveiled by them or by you (`ans.teammate_a.show`; unset: by them, with you beside them) | bond (`supported_dream` if you helped) | — |
+| 41.3 | The children | the Valley children | One of the rescued children repeats what you told them the Leaf is (`ans.player.leaf_is`; unset: "You said we'd see.") | bond | — |
 | 41.4 | At night | `yugure_second` | At the stone at night, a woman in plain road clothes traces a name (her line's). The second. No fight. The first real conversation | plot, bond | She asks: "What will you do with that fire when they come for it?" Give it / Keep it / Share it, the way it's meant (`ans.yugure_second.fire`). She says: "He says the Bonfire will free everyone. Lately I wonder what it needs to burn." (`story.seed.second_doubts`) |
 
 ---
@@ -156,9 +156,9 @@ living descendant, or an old Leaf family who kept silent).
 
 | # | Scene | Who | What happens | For | Choices |
 |---|---|---|---|---|---|
-| 42.1 | Resignation | `hokage_6` | The Sixth resigns to take responsibility for the Leaf's buried crime: "A Hokage is for..." (answers `ans.hokage_6.for`) | plot | — |
+| 42.1 | Resignation | `hokage_6` | The Sixth resigns to take responsibility for the Leaf's buried crime: "A Hokage is for..." (answers `ans.hokage_6.for`; unset: "...for saying what the village would rather not hear.") | plot | — |
 | 42.2 | The Seventh | `sensei`, the council, `squad5_a`, `sensei_2`, the village | The council balks: the sensei signed the Ash Road field report, the elders rewrote it above their name, and when the sensei saw the rewrite years later they said nothing, to keep their post; the `elder_hyuga` says a Hokage who signed a lie cannot ask the village to tell the truth. `sensei_2` kneels first. Then `squad5_a`, the Sarutobi heir whose clan's Hokage kept the silence, stands up in the gallery: "I'm with them. Because they're the one who'll say it was wrong." The vote carries. `sensei_2`, kneeling, mutters to your sensei: "That's 51 to 289. You win this one too." (51 to 290.) New Year: the sensei is named Seventh Hokage. Their speech quotes your Ch 8 answer about wrong orders (`ans.sensei.orders`; unset: "One of my students once told me nothing at all, and did the right thing anyway") and, if you once handed the cord over (`ans.player.cord_given = handed`), "and one of them once handed the whole cord to the others" | plot (`set_hokage 7`, `carve_face 6`), bond | — |
-| 42.3 | The face | the Rock | The Seventh's face begins to be carved. The instructor's Ch 5 question is called back (`ans.instructor.face`) | bond | — |
+| 42.3 | The face | the Rock | The Seventh's face begins to be carved. The instructor's Ch 5 question is called back (`ans.instructor.face`; unset: "You never told me whose face you'd pick. I think I know now.") | bond | — |
 
 ---
 

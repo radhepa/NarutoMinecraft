@@ -154,6 +154,8 @@ raw number.
 (end of Ch 53; a lived deed worth 90 that forgives earlier bad deeds, so every finisher reaches Hero with the village). `world.roster.<role>.gone` (set when a role leaves the roster:
 neutral aliases read by the ranks session): `hokage_4` at Ch 20 if `twist.fourth_fate = falls`; the bound candidate at Ch 39 if arrested; `sensei_2` and `elder_keeper` at Ch 51b.
 
+New ids from round 2: `ans.anbu_captain.letter`, `ans.anbu_captain.alone` (Night Watch), `story.blade.custody` (Ch 52 to 54).
+
 ## Tokens the story needs
 
 `{they:<role>}`, `{them:<role>}`, `{their:<role>}`, `{theirs:<role>}`, `{themself:<role>}` and verb
