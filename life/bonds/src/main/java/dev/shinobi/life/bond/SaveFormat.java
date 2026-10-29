@@ -41,6 +41,9 @@ public final class SaveFormat {
         out.put("invitations", w.invitations.stream().map(i -> (Object) map("id", i.id(), "from", i.from(), "activity", i.activity(), "day", i.day(), "hour", i.hour(), "expires", i.expires())).toList());
         out.put("invited_on", new TreeMap<>(w.invitedOn));
         out.put("plan_serial", w.planSerial);
+        out.put("gift_serial", w.giftSerial);
+        out.put("received", w.received.stream().map(r -> (Object) map("id", r.id(), "item", r.item(), "from", r.from(), "day", r.day(),
+                "occasion", r.occasion(), "seen", r.seen())).toList());
         out.put("questions_today", w.questionsToday); out.put("questions_day", w.questionsDay);
         return out;
     }
@@ -126,6 +129,13 @@ public final class SaveFormat {
         }
         ((Map<String, Object>) in.getOrDefault("invited_on", Map.of())).forEach((k, v) -> w.invitedOn.put(k, lng(v)));
         w.planSerial = (int) lng(in.getOrDefault("plan_serial", 0));
+        w.giftSerial = (int) lng(in.getOrDefault("gift_serial", 0));
+        for (Object o : (List<Object>) in.getOrDefault("received", List.of())) {
+            var r = (Map<String, Object>) o;
+            if (w.person((String) r.get("from")) == null) continue;
+            w.received.add(new Gifts.Received((int) lng(r.get("id")), (String) r.get("item"), (String) r.get("from"), lng(r.get("day")),
+                    (String) r.get("occasion"), (Boolean) r.get("seen")));
+        }
         w.questionsToday = (int) lng(in.getOrDefault("questions_today", 0)); w.questionsDay = lng(in.getOrDefault("questions_day", -1));
         // Answers that shaped someone: their personality as the answers left it.
         for (var b : w.bonds.values()) for (var n : b.nudges.entrySet()) {

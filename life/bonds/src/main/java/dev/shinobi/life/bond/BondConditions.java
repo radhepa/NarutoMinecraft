@@ -17,6 +17,7 @@ import java.util.Map;
  * {"romance_stage":  ["role:x", "dating"]}            at least this stage
  * {"kindling":       ["role:teammate_a", "flame"]}    at least this tier: spark, flame, blaze
  * {"resonance":      ["role:teammate_a", 30]}         days fought side by side at spark or above (a nature trial)
+ * {"gifts_from":     ["role:teammate_b", 3]}         gifts the player has received from them
  * {"bonfire":        "campfire"}                       the whole web's fire, at least this form (or a number)
  * {"knows_fact":     ["role:rival", "dream"]}
  * {"squad_cohesion": 60}
@@ -68,6 +69,7 @@ public final class BondConditions {
             }
             case "village_mood" -> w.village() != null && w.village().mood(str(at(arg, 0))).label() == Mood.Label.of(str(at(arg, 1)));
             case "hook_open" -> w.village() != null && w.village().hook(str(arg)) != null;
+            case "gifts_from" -> every(w, at(arg, 0), who -> Gifts.from(w, who).size() >= num(at(arg, 1)));
             case "resonance" -> every(w, at(arg, 0), who -> w.bond(who).resonance() >= num(at(arg, 1)));
             case "bonfire" -> arg instanceof Number n ? Kindling.bonfire(w).strength() >= n.doubleValue()
                     : Kindling.FORMS.indexOf(Kindling.bonfire(w).form()) >= Kindling.FORMS.indexOf(str(arg));
@@ -82,7 +84,7 @@ public final class BondConditions {
     public static boolean known(String name) {
         return List.of("friendship", "bond_meter", "bond_memory", "bond_moment", "bond_state", "romance_stage", "kindling", "knows_fact",
                 "squad_cohesion", "in_squad", "squad_can_return", "standing", "jealous", "clan_friendship", "clan_relation", "village_mood",
-                "hook_open", "kindling_uses", "bond_web", "ritual", "hangouts", "answered", "resonance", "bonfire").contains(name);
+                "hook_open", "kindling_uses", "bond_web", "ritual", "hangouts", "answered", "resonance", "bonfire", "gifts_from").contains(name);
     }
 
     static boolean every(BondWorld w, Object ref, java.util.function.Predicate<String> test) {
