@@ -521,7 +521,9 @@ The other ids are requests until the owning sessions confirm them in their regis
   (markers, VF's census and households) and Core's player record and flags in place of `Player`; the
   travel desk and travel scenes (Core's regions); `perform` chores as work points with clips; spawning
   enemy groups (Combat); the wallet, bedroll and On Duty (Life); bond acts and deeds on turn-in (Life's
-  bond glue); saving offers and missions in hand by template id and slots; and client game tests that
+  bond glue); saving offers and missions in hand by template id and slots; a `MissionEnded` event on Core's bus
+  (template, rank, end, grade, client, `with_squad`, `slept_away`, days away) that the home's visit
+  scheduler reads ([HOME.md](HOME.md) §9); and client game tests that
   complete and fail every template (ROADMAP §9, Beta 2's exit criteria).
 
 ## 12. Open questions
