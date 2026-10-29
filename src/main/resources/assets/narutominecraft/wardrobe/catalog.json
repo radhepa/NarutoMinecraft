@@ -89,7 +89,8 @@
     "t12_root_tunic",
     "t13_scout_hoodie",
     "t14_brawler_vest",
-    "t15_kunoichi_tunic"
+    "t15_kunoichi_tunic",
+    "t16_tracker_zip_vest"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -379,6 +380,24 @@
       "eye_style": "starlit",
       "feminine": true,
       "complexion": 0,
+      "scale": 14,
+      "rank": "genin"
+    },
+    {
+      "id": "genin_tracker",
+      "name": "Genin Tracker",
+      "tagline": "Padded khaki zip vest up to a high collar, ribbed arm warmers, a satchel for maps and scent cloths",
+      "face": "f01_shinobi",
+      "hair": "h08_short_crop",
+      "headwear": "w02_forehead_protector",
+      "top": "t16_tracker_zip_vest",
+      "bottom": "b03_genin_track_pants",
+      "palette": "GENIN_TRACKER",
+      "hair_color": "CHESTNUT",
+      "eye_color": "DARK",
+      "eye_style": "soft_glint",
+      "feminine": false,
+      "complexion": 2,
       "scale": 14,
       "rank": "genin"
     }
