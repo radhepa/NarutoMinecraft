@@ -1,0 +1,469 @@
+{
+  "id": "h2210_shoulder_braid",
+  "kind": "hair",
+  "name": "Shoulder Braid",
+  "gender": "unisex",
+  "texture": "hair/h2210_shoulder_braid.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "gather",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -3.2,
+        1.0
+      ],
+      "rotation": [
+        -22,
+        0,
+        10
+      ],
+      "origin": [
+        -1.5,
+        -2,
+        -1.5
+      ],
+      "size": [
+        3,
+        3,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "braid_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -3.2,
+        1.0
+      ],
+      "rotation": [
+        -22,
+        0,
+        10
+      ],
+      "origin": [
+        -1.75,
+        1,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        13,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -3.2,
+        1.0
+      ],
+      "rotation": [
+        -22,
+        0,
+        10
+      ],
+      "origin": [
+        -1.25,
+        3,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        26,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_2",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -3.2,
+        1.0
+      ],
+      "rotation": [
+        -22,
+        0,
+        10
+      ],
+      "origin": [
+        -1.75,
+        5,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_3",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -3.2,
+        1.0
+      ],
+      "rotation": [
+        -22,
+        0,
+        10
+      ],
+      "origin": [
+        -0.75,
+        7,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        52,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_4",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -3.2,
+        1.0
+      ],
+      "rotation": [
+        -22,
+        0,
+        10
+      ],
+      "origin": [
+        -1.25,
+        9,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_tuft",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -3.2,
+        1.0
+      ],
+      "rotation": [
+        -22,
+        0,
+        10
+      ],
+      "origin": [
+        -1,
+        11,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        9,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tie",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -3.2,
+        1.0
+      ],
+      "rotation": [
+        -22,
+        0,
+        10
+      ],
+      "origin": [
+        -1.5,
+        10.5,
+        -1.5
+      ],
+      "size": [
+        3,
+        1,
+        3
+      ],
+      "uv": [
+        18,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -30
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        31,
+        7
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -30
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        38,
+        7
+      ]
+    },
+    {
+      "id": "fringe_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -50
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        43,
+        7
+      ]
+    },
+    {
+      "id": "fringe_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -50
+      ],
+      "origin": [
+        -1.0,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        52,
+        7
+      ]
+    },
+    {
+      "id": "fringe_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -48
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "fringe_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -48
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        12
+      ]
+    },
+    {
+      "id": "fringe_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -24
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        14,
+        12
+      ]
+    },
+    {
+      "id": "fringe_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -24
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        12
+      ]
+    }
+  ],
+  "description": "One thick braid behind the left ear falling forward over the shoulder, an indigo tie."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "b2202_momohiki_gaiters",
+  "kind": "bottom",
+  "name": "Momohiki Gaiters",
+  "gender": "unisex",
+  "texture": "bottoms/b2202_momohiki_gaiters.png",
+  "extrasHeight": 0,
+  "tags": [
+    "kinoshita",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Snug indigo work trousers, cream gaiters over the shins and dark split-toe tabi."
+}

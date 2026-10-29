@@ -1,0 +1,145 @@
+{
+  "id": "t2210_mallet_wrap",
+  "kind": "top",
+  "name": "Mallet Wrap",
+  "gender": "unisex",
+  "texture": "tops/t2210_mallet_wrap.png",
+  "extrasHeight": 16,
+  "tags": [
+    "kinoshita",
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "obi",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "ink_reel",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        8.9,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "mallet_head",
+      "bone": "TORSO",
+      "pivot": [
+        -4.9,
+        10.0,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -3,
+        -3,
+        -1.5
+      ],
+      "size": [
+        6,
+        3,
+        3
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "mallet_handle",
+      "bone": "TORSO",
+      "pivot": [
+        -4.9,
+        10.0,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ],
+      "motion": "sway",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless cedar wrap top, a wide indigo obi, a wooden mallet at the hip, forearm guards."
+}

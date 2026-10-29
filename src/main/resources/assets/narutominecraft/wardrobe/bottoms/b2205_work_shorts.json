@@ -1,0 +1,16 @@
+{
+  "id": "b2205_work_shorts",
+  "kind": "bottom",
+  "name": "Work Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/b2205_work_shorts.png",
+  "extrasHeight": 0,
+  "tags": [
+    "kinoshita",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Knee-length indigo shorts with a patched knee, cream socks and black jika-tabi."
+}

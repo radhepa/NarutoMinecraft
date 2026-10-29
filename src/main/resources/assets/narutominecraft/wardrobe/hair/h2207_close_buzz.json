@@ -1,0 +1,294 @@
+{
+  "id": "h2207_close_buzz",
+  "kind": "hair",
+  "name": "Close Buzz",
+  "gender": "unisex",
+  "texture": "hair/h2207_close_buzz.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "brush_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -7.8,
+        -2.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        9.6
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "brush_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -7.8,
+        -2.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        9.6
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "brush_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.2,
+        -7.8,
+        -2.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        -9.6
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    },
+    {
+      "id": "brush_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.2,
+        -7.8,
+        -2.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        -9.6
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "brush_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -7.8,
+        -0.2
+      ],
+      "rotation": [
+        -6,
+        0,
+        9.6
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    },
+    {
+      "id": "brush_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -7.8,
+        -0.2
+      ],
+      "rotation": [
+        -6,
+        0,
+        9.6
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        41,
+        0
+      ]
+    },
+    {
+      "id": "brush_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.2,
+        -7.8,
+        -0.2
+      ],
+      "rotation": [
+        -6,
+        0,
+        -9.6
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "brush_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.2,
+        -7.8,
+        -0.2
+      ],
+      "rotation": [
+        -6,
+        0,
+        -9.6
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    },
+    {
+      "id": "brush_4_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.8,
+        2.2
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "brush_4_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.8,
+        2.2
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        4
+      ]
+    }
+  ],
+  "description": "Clipped short all over, a short spiky brush along the top, crisp hairline."
+}
