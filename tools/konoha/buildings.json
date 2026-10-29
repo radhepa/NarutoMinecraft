@@ -368,11 +368,11 @@
    "how": "program + hand dressing",
    "footprint": "17 x 13",
    "counts": {
-    "B1": 1,
-    "B2": 2,
+    "B1": 2,
+    "B2": 1,
     "later": 2
    },
-   "notes": "The furniture shop and its showroom (B1); the weapon shop and the post office (B2)"
+   "notes": "The furniture shop and its showroom, and the weapon shop with its forge room (B1); the post office (B2)"
   },
   {
    "group": "shops",

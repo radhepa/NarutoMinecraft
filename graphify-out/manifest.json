@@ -630,9 +630,9 @@
     "semantic_hash": ""
   },
   "tools/konoha/catalogue.py": {
-    "mtime": 1793308615.1363058,
-    "seen": 1793308677.8801854,
-    "ast_hash": "05b3df83624089285c7c33d398c188ac",
+    "mtime": 1793309143.491919,
+    "seen": 1793309161.9036198,
+    "ast_hash": "4a1db33bfe48dc9efefd5177d536c312",
     "semantic_hash": ""
   },
   "tools/konoha/kit.py": {
@@ -666,9 +666,9 @@
     "semantic_hash": ""
   },
   "KONOHA_BUILD.md": {
-    "mtime": 1793308754.9296784,
-    "seen": 1793308764.018137,
-    "ast_hash": "466b786f5d242817061e6271eacc27bc",
+    "mtime": 1793309157.1796358,
+    "seen": 1793309161.9037085,
+    "ast_hash": "ebb2cf9dcc1a6713c674b5b9c968d953",
     "semantic_hash": ""
   }
 }

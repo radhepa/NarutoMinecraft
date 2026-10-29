@@ -26,7 +26,7 @@ CATEGORY = {"roof": "Roofs", "facade": "Facades and shop fronts", "crest": "Cres
             "story": "Story pieces", "light": "Lanterns", "street": "Streets", "festival": "Festival", "shrine": "Shrine",
             "furniture": "Furniture (the Leaf set)", "keepsake": "Keepsakes", "civic": "Academy, Residence, hospital, stadium",
             "shop": "Shops and food", "training": "Training", "crafting": "Crafting stations", "garden": "Gardens",
-            "clan": "Clan signatures"}
+            "clan": "Clan signatures", "display": "Displays (item-rendering)"}
 GROUP = {"homes": "Homes", "apartments": "Apartment buildings", "shops": "Shops", "clans": "Clan builds",
          "landmarks": "Landmarks", "training": "Training grounds", "forest": "Forest of Death", "wall": "Wall",
          "streets": "Street pieces (bridges, trees, poles)"}
@@ -53,7 +53,7 @@ def block_totals(cat):
         "by_slice": by_slice, "groups_by_slice": groups_by_slice,
         "vanilla": len(cat["vanilla"]), "vanilla_by_slice": Counter(v["slice"] for v in cat["vanilla"]),
         "paintings": len(cat["paintings"]), "prototype_groups": sum(1 for g in groups if g["prototype"]),
-        "prototype_variants": sum(len(g["variants"]) for g in groups if g["prototype"]),
+        "prototype_variants": sum(1 for g in groups if g["prototype"] for v in g["variants"] if v["slice"] == "P0"),
     }
 
 
@@ -75,7 +75,7 @@ def md_block_summary(cat):
             "", f"Complexity: {t['complexity']['simple']} simple, {t['complexity']['medium']} medium and "
             f"{t['complexity']['complex']} complex blocks ({t['complexity_variants']['simple']}, {t['complexity_variants']['medium']} "
             f"and {t['complexity_variants']['complex']} with variants). Prototyped now: {t['prototype_groups']} blocks, "
-            f"{t['prototype_variants']} with variants. Paintings (data-pack painting variants, no block): {t['paintings']}."]
+            f"{t['prototype_variants']} with variants."]
     return "\n".join(out)
 
 
@@ -106,8 +106,9 @@ def md_vanilla(cat):
     out = ["| Need | Vanilla blocks | Use | First |", "|---|---|---|---|"]
     for v in cat["vanilla"]:
         out.append(f"| {v['need']} | {v['blocks']} | {v['use']} | {SLICE_NAME[v['slice']]} |")
-    out += ["", "Paintings (data-pack painting variants, no Java): " +
-            "; ".join(f"`{p['id']}` {p['label']} ({SLICE_NAME[p['slice']]})" for p in cat["paintings"]) + "."]
+    if cat["paintings"]:
+        out += ["", "Paintings (data-pack painting variants, no Java): " +
+                "; ".join(f"`{p['id']}` {p['label']} ({SLICE_NAME[p['slice']]})" for p in cat["paintings"]) + "."]
     return "\n".join(out)
 
 

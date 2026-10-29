@@ -203,16 +203,6 @@
      "slice": "P0"
     },
     {
-     "id": "tea_noren",
-     "label": "Tea (茶)",
-     "slice": "P0"
-    },
-    {
-     "id": "ramen_noren",
-     "label": "Ramen (麺)",
-     "slice": "P0"
-    },
-    {
      "id": "white_noren",
      "label": "Plain white",
      "slice": "B1"
@@ -223,55 +213,15 @@
      "slice": "B1"
     },
     {
-     "id": "flower_noren",
-     "label": "Flowers (花)",
-     "slice": "B1"
-    },
-    {
-     "id": "bath_noren",
-     "label": "Bath house (ゆ)",
-     "slice": "B2"
-    },
-    {
-     "id": "barbecue_noren",
-     "label": "Barbecue (焼)",
-     "slice": "B2"
-    },
-    {
-     "id": "dango_noren",
-     "label": "Dango (団子)",
-     "slice": "B2"
-    },
-    {
-     "id": "sake_noren",
-     "label": "Sake (酒)",
-     "slice": "B2"
-    },
-    {
-     "id": "scroll_noren",
-     "label": "Scrolls (巻)",
-     "slice": "B2"
-    },
-    {
-     "id": "sweets_noren",
-     "label": "Sweets (甘)",
-     "slice": "B2"
-    },
-    {
      "id": "black_noren",
      "label": "Plain black",
      "slice": "B2"
-    },
-    {
-     "id": "inn_noren",
-     "label": "Inn (宿)",
-     "slice": "B3"
     }
    ],
    "functional": null,
    "reuse": null,
    "complexity": "simple",
-   "textures": 16,
+   "textures": 6,
    "prototype": true
   },
   {
@@ -955,24 +905,6 @@
    "prototype": false
   },
   {
-   "id": "sudare",
-   "name": "Sudare blind",
-   "category": "facade",
-   "purpose": "Bamboo roll-up blind for verandas and windows; rolled or down",
-   "variants": [
-    {
-     "id": "sudare",
-     "label": "Bamboo",
-     "slice": "B2"
-    }
-   ],
-   "functional": "toggle",
-   "reuse": null,
-   "complexity": "simple",
-   "textures": 2,
-   "prototype": false
-  },
-  {
    "id": "amado",
    "name": "Amado shutter",
    "category": "facade",
@@ -1046,7 +978,7 @@
    "id": "sealed_stone_door",
    "name": "Sealed stone door",
    "category": "story",
-   "purpose": "A 3 x 3 stone slab door hung with seal tags (a hidden room's door)",
+   "purpose": "A 3 x 3 stone slab door hung with seal tags, at the foot of the Rock (a hidden room)",
    "variants": [
     {
      "id": "sealed_stone_door",
@@ -1502,49 +1434,6 @@
    "prototype": true
   },
   {
-   "id": "futon",
-   "name": "Futon",
-   "category": "furniture",
-   "purpose": "Floor bed, two blocks long",
-   "variants": [
-    {
-     "id": "indigo_futon",
-     "label": "Indigo",
-     "slice": "B1"
-    },
-    {
-     "id": "red_futon",
-     "label": "Red",
-     "slice": "B1"
-    },
-    {
-     "id": "green_futon",
-     "label": "Green",
-     "slice": "B1"
-    },
-    {
-     "id": "white_futon",
-     "label": "White",
-     "slice": "B1"
-    },
-    {
-     "id": "brown_futon",
-     "label": "Brown",
-     "slice": "B1"
-    },
-    {
-     "id": "pink_futon",
-     "label": "Pink",
-     "slice": "B1"
-    }
-   ],
-   "functional": "bed",
-   "reuse": "vanilla BedBlock: VF homes count it, sleep clears fatigue",
-   "complexity": "medium",
-   "textures": 13,
-   "prototype": false
-  },
-  {
    "id": "zabuton",
    "name": "Zabuton cushion",
    "category": "furniture",
@@ -1588,39 +1477,6 @@
    "prototype": false
   },
   {
-   "id": "low_table",
-   "name": "Low table",
-   "category": "furniture",
-   "purpose": "Chabudai: round or rectangular",
-   "variants": [
-    {
-     "id": "low_table_round",
-     "label": "Round, light",
-     "slice": "B1"
-    },
-    {
-     "id": "low_table_round_dark",
-     "label": "Round, dark",
-     "slice": "B1"
-    },
-    {
-     "id": "low_table_long",
-     "label": "Long, light",
-     "slice": "B1"
-    },
-    {
-     "id": "low_table_long_dark",
-     "label": "Long, dark",
-     "slice": "B1"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "simple",
-   "textures": 4,
-   "prototype": false
-  },
-  {
    "id": "kotatsu",
    "name": "Kotatsu",
    "category": "furniture",
@@ -1651,174 +1507,6 @@
    "reuse": "VF Seat on all four sides",
    "complexity": "medium",
    "textures": 9,
-   "prototype": false
-  },
-  {
-   "id": "tansu",
-   "name": "Tansu chest",
-   "category": "furniture",
-   "purpose": "Wooden chest of drawers with iron fittings",
-   "variants": [
-    {
-     "id": "tansu",
-     "label": "Light",
-     "slice": "B1"
-    },
-    {
-     "id": "dark_tansu",
-     "label": "Dark",
-     "slice": "B1"
-    },
-    {
-     "id": "step_tansu",
-     "label": "Step tansu",
-     "slice": "B1"
-    }
-   ],
-   "functional": "container",
-   "reuse": "vanilla chest inventory (27 slots)",
-   "complexity": "medium",
-   "textures": 9,
-   "prototype": false
-  },
-  {
-   "id": "scroll_shelf",
-   "name": "Scroll shelf",
-   "category": "furniture",
-   "purpose": "Shelves of rolled scrolls",
-   "variants": [
-    {
-     "id": "scroll_shelf",
-     "label": "Open shelf",
-     "slice": "B1"
-    },
-    {
-     "id": "scroll_shelf_pigeonhole",
-     "label": "Pigeonhole rack",
-     "slice": "B1"
-    },
-    {
-     "id": "scroll_shelf_archive",
-     "label": "Archive boxes",
-     "slice": "B1"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "medium",
-   "textures": 6,
-   "prototype": false
-  },
-  {
-   "id": "andon",
-   "name": "Andon lamp",
-   "category": "furniture",
-   "purpose": "Paper floor lamp",
-   "variants": [
-    {
-     "id": "andon",
-     "label": "Cream paper",
-     "slice": "B1"
-    },
-    {
-     "id": "red_andon",
-     "label": "Red paper",
-     "slice": "B1"
-    }
-   ],
-   "functional": "light",
-   "reuse": null,
-   "complexity": "medium",
-   "textures": 4,
-   "prototype": false
-  },
-  {
-   "id": "byobu",
-   "name": "Byobu screen",
-   "category": "furniture",
-   "purpose": "Folding screen, two blocks wide",
-   "variants": [
-    {
-     "id": "byobu",
-     "label": "Plain",
-     "slice": "B1"
-    },
-    {
-     "id": "byobu_gold",
-     "label": "Gold clouds",
-     "slice": "B2"
-    },
-    {
-     "id": "byobu_pine",
-     "label": "Pine",
-     "slice": "B2"
-    },
-    {
-     "id": "byobu_crane",
-     "label": "Cranes",
-     "slice": "B2"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "medium",
-   "textures": 8,
-   "prototype": false
-  },
-  {
-   "id": "bonsai",
-   "name": "Bonsai",
-   "category": "furniture",
-   "purpose": "A potted bonsai tree",
-   "variants": [
-    {
-     "id": "pine_bonsai",
-     "label": "Pine",
-     "slice": "B1"
-    },
-    {
-     "id": "maple_bonsai",
-     "label": "Maple",
-     "slice": "B1"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "medium",
-   "textures": 4,
-   "prototype": false
-  },
-  {
-   "id": "weapon_rack",
-   "name": "Weapon rack",
-   "category": "furniture",
-   "purpose": "Standing rack that shows the tools placed on it",
-   "variants": [
-    {
-     "id": "weapon_rack",
-     "label": "Empty",
-     "slice": "B1"
-    },
-    {
-     "id": "weapon_rack_kunai",
-     "label": "Kunai and shuriken",
-     "slice": "B1"
-    },
-    {
-     "id": "weapon_rack_sword",
-     "label": "Swords",
-     "slice": "B2"
-    },
-    {
-     "id": "weapon_rack_staff",
-     "label": "Staffs",
-     "slice": "B2"
-    }
-   ],
-   "functional": "display",
-   "reuse": "Block entity with 4 item slots, rendered",
-   "complexity": "complex",
-   "textures": 6,
    "prototype": false
   },
   {
@@ -1956,203 +1644,6 @@
    "complexity": "medium",
    "textures": 2,
    "prototype": false
-  },
-  {
-   "id": "easel",
-   "name": "Easel",
-   "category": "furniture",
-   "purpose": "A painter's easel with a canvas",
-   "variants": [
-    {
-     "id": "easel",
-     "label": "Wood",
-     "slice": "B2"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "medium",
-   "textures": 2,
-   "prototype": false
-  },
-  {
-   "id": "keepsake",
-   "name": "Keepsakes",
-   "category": "keepsake",
-   "purpose": "Small display pieces earned from quests, placed in the apartment",
-   "variants": [
-    {
-     "id": "keepsake_framed_ladle",
-     "label": "Framed ladle",
-     "slice": "B1"
-    },
-    {
-     "id": "keepsake_cat_figurine",
-     "label": "Cat figurine",
-     "slice": "B1"
-    },
-    {
-     "id": "keepsake_race_ribbon",
-     "label": "Race Ribbon",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_ferry_lantern",
-     "label": "Ferry Lantern",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_lake_lantern",
-     "label": "Lake Lantern",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_beetle_jar",
-     "label": "Beetle Jar",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_price_war_cup",
-     "label": "Price War Cup",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_post_plaque",
-     "label": "Post Plaque",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_senju_keepsake",
-     "label": "Senju welcome keepsake",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_uzumaki_keepsake",
-     "label": "Uzumaki welcome keepsake",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_uchiha_keepsake",
-     "label": "Uchiha welcome keepsake",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_hyuga_keepsake",
-     "label": "Hyuga welcome keepsake",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_nara_keepsake",
-     "label": "Nara welcome keepsake",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_akimichi_keepsake",
-     "label": "Akimichi welcome keepsake",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_yamanaka_keepsake",
-     "label": "Yamanaka welcome keepsake",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_inuzuka_keepsake",
-     "label": "Inuzuka welcome keepsake",
-     "slice": "B2"
-    },
-    {
-     "id": "keepsake_sarutobi_keepsake",
-     "label": "Sarutobi welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_aburame_keepsake",
-     "label": "Aburame welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_hatake_keepsake",
-     "label": "Hatake welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_kurama_keepsake",
-     "label": "Kurama welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_shimura_keepsake",
-     "label": "Shimura welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_yuhi_keepsake",
-     "label": "Yuhi welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_gekko_keepsake",
-     "label": "Gekko welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_shiranui_keepsake",
-     "label": "Shiranui welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_morino_keepsake",
-     "label": "Morino welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_umino_keepsake",
-     "label": "Umino welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_haruno_keepsake",
-     "label": "Haruno welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_namiashi_keepsake",
-     "label": "Namiashi welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_hagane_keepsake",
-     "label": "Hagane welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_kinoshita_keepsake",
-     "label": "Kinoshita welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_tsuchigumo_keepsake",
-     "label": "Tsuchigumo welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_suzuran_keepsake",
-     "label": "Suzuran welcome keepsake",
-     "slice": "B2.5"
-    },
-    {
-     "id": "keepsake_tobari_keepsake",
-     "label": "Tobari welcome keepsake",
-     "slice": "B2.5"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "simple",
-   "textures": 33,
-   "prototype": false,
-   "notes": "One block id per keepsake; the bond keepsakes reuse paintings and these models. Final list follows SIDE_QUESTS.md"
   },
   {
    "id": "academy_desk",
@@ -2450,29 +1941,6 @@
    "prototype": false
   },
   {
-   "id": "shop_counter",
-   "name": "Shop counter",
-   "category": "shop",
-   "purpose": "Counter with an open shelf on the shop side (part: straight, end)",
-   "variants": [
-    {
-     "id": "shop_counter",
-     "label": "Light",
-     "slice": "B1"
-    },
-    {
-     "id": "dark_shop_counter",
-     "label": "Dark",
-     "slice": "B1"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "simple",
-   "textures": 4,
-   "prototype": false
-  },
-  {
    "id": "ramen_counter",
    "name": "Ramen counter",
    "category": "shop",
@@ -2509,266 +1977,6 @@
    "prototype": false
   },
   {
-   "id": "ramen_kitchen",
-   "name": "Ramen kitchen",
-   "category": "shop",
-   "purpose": "Stock pot on a burner, and the noodle station",
-   "variants": [
-    {
-     "id": "ramen_kitchen_stockpot",
-     "label": "Stock pot",
-     "slice": "B1"
-    },
-    {
-     "id": "ramen_kitchen_noodles",
-     "label": "Noodle station",
-     "slice": "B1"
-    }
-   ],
-   "functional": "station",
-   "reuse": "VF tavern kitchen anchor; Hearth & Harvest cooking",
-   "complexity": "medium",
-   "textures": 4,
-   "prototype": false
-  },
-  {
-   "id": "tea_bench",
-   "name": "Tea house bench",
-   "category": "shop",
-   "purpose": "Bench with a red felt cloth",
-   "variants": [
-    {
-     "id": "tea_bench",
-     "label": "Red felt",
-     "slice": "B1"
-    }
-   ],
-   "functional": "seat",
-   "reuse": "VF Seat",
-   "complexity": "simple",
-   "textures": 2,
-   "prototype": false
-  },
-  {
-   "id": "wagasa",
-   "name": "Wagasa parasol",
-   "category": "shop",
-   "purpose": "Large paper parasol over a bench, two blocks tall",
-   "variants": [
-    {
-     "id": "red_wagasa",
-     "label": "Red",
-     "slice": "B1"
-    },
-    {
-     "id": "indigo_wagasa",
-     "label": "Indigo",
-     "slice": "B2"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "medium",
-   "textures": 4,
-   "prototype": false
-  },
-  {
-   "id": "dango_stand",
-   "name": "Dango stand",
-   "category": "shop",
-   "purpose": "Display of skewered dango",
-   "variants": [
-    {
-     "id": "dango_stand",
-     "label": "Wood",
-     "slice": "B2"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "simple",
-   "textures": 1,
-   "prototype": false
-  },
-  {
-   "id": "produce_crate",
-   "name": "Produce crate",
-   "category": "shop",
-   "purpose": "Shallow display crate of goods",
-   "variants": [
-    {
-     "id": "produce_crate_cabbage",
-     "label": "Cabbages",
-     "slice": "B1"
-    },
-    {
-     "id": "produce_crate_daikon",
-     "label": "Daikon",
-     "slice": "B1"
-    },
-    {
-     "id": "produce_crate_apples",
-     "label": "Apples",
-     "slice": "B1"
-    },
-    {
-     "id": "produce_crate_fish",
-     "label": "Fish on ice",
-     "slice": "B1"
-    },
-    {
-     "id": "produce_crate_rice",
-     "label": "Rice sacks",
-     "slice": "B1"
-    },
-    {
-     "id": "produce_crate_mushrooms",
-     "label": "Mushrooms",
-     "slice": "B2"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "simple",
-   "textures": 7,
-   "prototype": false
-  },
-  {
-   "id": "flower_bucket",
-   "name": "Flower bucket",
-   "category": "shop",
-   "purpose": "A bucket of cut flowers",
-   "variants": [
-    {
-     "id": "flower_bucket_mixed",
-     "label": "Mixed",
-     "slice": "B1"
-    },
-    {
-     "id": "flower_bucket_red",
-     "label": "Red",
-     "slice": "B1"
-    },
-    {
-     "id": "flower_bucket_white",
-     "label": "White",
-     "slice": "B1"
-    },
-    {
-     "id": "flower_bucket_purple",
-     "label": "Purple",
-     "slice": "B1"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "simple",
-   "textures": 5,
-   "prototype": false
-  },
-  {
-   "id": "yakiniku_grill",
-   "name": "Barbecue table",
-   "category": "shop",
-   "purpose": "A table with a sunken grill",
-   "variants": [
-    {
-     "id": "yakiniku_grill",
-     "label": "Wood",
-     "slice": "B2"
-    }
-   ],
-   "functional": "station",
-   "reuse": "VF Seat around; Hearth & Harvest grill",
-   "complexity": "medium",
-   "textures": 3,
-   "prototype": false
-  },
-  {
-   "id": "clothes_rack",
-   "name": "Clothes rack",
-   "category": "shop",
-   "purpose": "Garments on a rack",
-   "variants": [
-    {
-     "id": "clothes_rack_shinobi",
-     "label": "Shinobi wear",
-     "slice": "B2"
-    },
-    {
-     "id": "clothes_rack_kimono",
-     "label": "Kimono",
-     "slice": "B2"
-    },
-    {
-     "id": "clothes_rack_yukata",
-     "label": "Yukata",
-     "slice": "B2"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "medium",
-   "textures": 4,
-   "prototype": false
-  },
-  {
-   "id": "yatai",
-   "name": "Yatai stall",
-   "category": "festival",
-   "purpose": "Two-block festival food stall with a roof (part: left, right); the trade is its noren",
-   "variants": [
-    {
-     "id": "yatai_takoyaki",
-     "label": "Takoyaki",
-     "slice": "B2"
-    },
-    {
-     "id": "yatai_goldfish",
-     "label": "Goldfish scooping",
-     "slice": "B2"
-    },
-    {
-     "id": "yatai_masks",
-     "label": "Masks",
-     "slice": "B2"
-    },
-    {
-     "id": "yatai_candy_apple",
-     "label": "Candy apples",
-     "slice": "B2"
-    },
-    {
-     "id": "yatai_yakitori",
-     "label": "Yakitori",
-     "slice": "B3"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "complex",
-   "textures": 11,
-   "prototype": false
-  },
-  {
-   "id": "goldfish_tub",
-   "name": "Goldfish tub",
-   "category": "festival",
-   "purpose": "Tub of goldfish for the scooping game",
-   "variants": [
-    {
-     "id": "goldfish_tub",
-     "label": "Blue tub",
-     "slice": "B2"
-    }
-   ],
-   "functional": "interact",
-   "reuse": "Festival game",
-   "complexity": "medium",
-   "textures": 2,
-   "prototype": false
-  },
-  {
    "id": "mask_display",
    "name": "Mask display",
    "category": "festival",
@@ -2802,29 +2010,6 @@
    "reuse": "Plays a beat",
    "complexity": "medium",
    "textures": 2,
-   "prototype": false
-  },
-  {
-   "id": "target_post",
-   "name": "Target post",
-   "category": "training",
-   "purpose": "Ring target on a post, or on a wall board; shows stuck kunai (hits 0 to 3)",
-   "variants": [
-    {
-     "id": "target_post",
-     "label": "Post",
-     "slice": "B1"
-    },
-    {
-     "id": "target_post_board",
-     "label": "Wall board",
-     "slice": "B1"
-    }
-   ],
-   "functional": "target",
-   "reuse": "Combat hit target",
-   "complexity": "medium",
-   "textures": 4,
    "prototype": false
   },
   {
@@ -2886,47 +2071,6 @@
    "textures": 3,
    "prototype": false,
    "notes": "Engraved names as a texture; check its shape and size against the art"
-  },
-  {
-   "id": "workbench",
-   "name": "Shinobi workbench",
-   "category": "crafting",
-   "purpose": "The crafting station for tags, smoke bombs and furniture",
-   "variants": [
-    {
-     "id": "workbench",
-     "label": "Wood",
-     "slice": "B1"
-    }
-   ],
-   "functional": "workstation",
-   "reuse": "VF tools/workstations pattern",
-   "complexity": "complex",
-   "textures": 4,
-   "prototype": false
-  },
-  {
-   "id": "forge",
-   "name": "Forge",
-   "category": "crafting",
-   "purpose": "Smithy hearth with bellows, two blocks wide; the small one fits an apartment",
-   "variants": [
-    {
-     "id": "forge",
-     "label": "Smithy",
-     "slice": "B2"
-    },
-    {
-     "id": "small_forge",
-     "label": "Small",
-     "slice": "B2"
-    }
-   ],
-   "functional": "workstation",
-   "reuse": "VF tools/workstations pattern",
-   "complexity": "complex",
-   "textures": 8,
-   "prototype": false
   },
   {
    "id": "bedroll",
@@ -3021,24 +2165,6 @@
    "prototype": false
   },
   {
-   "id": "drying_rack",
-   "name": "Herb drying rack",
-   "category": "clan",
-   "purpose": "Bundles of herbs drying on a rack (Suzuran)",
-   "variants": [
-    {
-     "id": "drying_rack",
-     "label": "Herbs",
-     "slice": "B2"
-    }
-   ],
-   "functional": null,
-   "reuse": null,
-   "complexity": "simple",
-   "textures": 2,
-   "prototype": false
-  },
-  {
    "id": "insect_jar",
    "name": "Insect jar",
    "category": "clan",
@@ -3078,6 +2204,2022 @@
    "complexity": "simple",
    "textures": 1,
    "prototype": false
+  },
+  {
+   "id": "workbench",
+   "name": "Shinobi workbench",
+   "category": "crafting",
+   "purpose": "Crafting station for tags, smoke bombs and furniture (Academy workshop, Kinoshita yard, homes)",
+   "variants": [
+    {
+     "id": "workbench",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": "workstation",
+   "reuse": "VF tools/workstations pattern; screen by Items",
+   "complexity": "complex",
+   "textures": 4,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "forge",
+   "name": "Forge",
+   "category": "crafting",
+   "purpose": "The smithy's hearth with bellows, two blocks wide, glows; and the home forge with its anvil in one block",
+   "variants": [
+    {
+     "id": "forge",
+     "label": "Smithy hearth",
+     "slice": "B1"
+    },
+    {
+     "id": "small_forge",
+     "label": "Home forge and anvil",
+     "slice": "B2"
+    }
+   ],
+   "functional": "workstation",
+   "reuse": "Screen by Items",
+   "complexity": "complex",
+   "textures": 8,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "anvil",
+   "name": "Smithy anvil",
+   "category": "crafting",
+   "purpose": "The weapon shop's anvil, where the smithing screen opens",
+   "variants": [
+    {
+     "id": "anvil",
+     "label": "Iron on a stump",
+     "slice": "B1"
+    }
+   ],
+   "functional": "workstation",
+   "reuse": "Screen by Items",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "whetstone_wheel",
+   "name": "Whetstone wheel",
+   "category": "crafting",
+   "purpose": "Treadle whetstone for repair and sharpening",
+   "variants": [
+    {
+     "id": "whetstone_wheel",
+     "label": "Stone and wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": "workstation",
+   "reuse": "Screen by Items",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "quench_trough",
+   "name": "Quench trough",
+   "category": "crafting",
+   "purpose": "Water trough by the forge",
+   "variants": [
+    {
+     "id": "quench_trough",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "apothecary_table",
+   "name": "Apothecary table",
+   "category": "crafting",
+   "purpose": "Mortar, scales and jars: pills and poultices (pharmacy, hospital herb room, homes)",
+   "variants": [
+    {
+     "id": "apothecary_table",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": "workstation",
+   "reuse": "Screen by Items",
+   "complexity": "medium",
+   "textures": 3,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "sealing_desk",
+   "name": "Sealing desk",
+   "category": "crafting",
+   "purpose": "A low desk with brush, ink and tag paper for seals (homes)",
+   "variants": [
+    {
+     "id": "sealing_desk",
+     "label": "Wood",
+     "slice": "B2"
+    }
+   ],
+   "functional": "workstation",
+   "reuse": "Screen by Items",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "calligraphy_desk",
+   "name": "Calligraphy desk",
+   "category": "crafting",
+   "purpose": "The scroll shop's public sealing desk",
+   "variants": [
+    {
+     "id": "calligraphy_desk",
+     "label": "Lacquer",
+     "slice": "B2"
+    }
+   ],
+   "functional": "workstation",
+   "reuse": "Screen by Items",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "tailor_table",
+   "name": "Tailor's table",
+   "category": "crafting",
+   "purpose": "Cutting table with cloth and shears (tailor, homes)",
+   "variants": [
+    {
+     "id": "tailor_table",
+     "label": "Wood",
+     "slice": "B2"
+    }
+   ],
+   "functional": "workstation",
+   "reuse": "Screen by Items",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "futon",
+   "name": "Futon",
+   "category": "furniture",
+   "purpose": "Floor bed, two blocks long",
+   "variants": [
+    {
+     "id": "futon",
+     "label": "Indigo",
+     "slice": "B1"
+    },
+    {
+     "id": "red_futon",
+     "label": "Red",
+     "slice": "B1"
+    },
+    {
+     "id": "green_futon",
+     "label": "Green",
+     "slice": "B1"
+    },
+    {
+     "id": "white_futon",
+     "label": "White",
+     "slice": "B1"
+    },
+    {
+     "id": "brown_futon",
+     "label": "Brown",
+     "slice": "B1"
+    },
+    {
+     "id": "pink_futon",
+     "label": "Pink",
+     "slice": "B1"
+    },
+    {
+     "id": "futon_deluxe",
+     "label": "Deluxe, thick quilt",
+     "slice": "B2"
+    }
+   ],
+   "functional": "bed",
+   "reuse": "vanilla BedBlock: VF homes count it, sleep clears fatigue",
+   "complexity": "medium",
+   "textures": 15,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "low_table",
+   "name": "Low table",
+   "category": "furniture",
+   "purpose": "Chabudai",
+   "variants": [
+    {
+     "id": "low_table",
+     "label": "Round, light",
+     "slice": "B1"
+    },
+    {
+     "id": "dark_low_table",
+     "label": "Round, dark",
+     "slice": "B1"
+    },
+    {
+     "id": "long_low_table",
+     "label": "Long, light",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 3,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "low_desk",
+   "name": "Low desk",
+   "category": "furniture",
+   "purpose": "A floor desk for study",
+   "variants": [
+    {
+     "id": "low_desk",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "zaisu",
+   "name": "Zaisu",
+   "category": "furniture",
+   "purpose": "Legless floor chair",
+   "variants": [
+    {
+     "id": "zaisu",
+     "label": "Wood and cushion",
+     "slice": "B1"
+    }
+   ],
+   "functional": "seat",
+   "reuse": "VF Seat",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "rug",
+   "name": "Rug",
+   "category": "furniture",
+   "purpose": "A woven floor rug, carpet-thin",
+   "variants": [
+    {
+     "id": "indigo_rug",
+     "label": "Indigo",
+     "slice": "B1"
+    },
+    {
+     "id": "red_rug",
+     "label": "Red",
+     "slice": "B1"
+    },
+    {
+     "id": "green_rug",
+     "label": "Green",
+     "slice": "B1"
+    },
+    {
+     "id": "cream_rug",
+     "label": "Cream",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 4,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "folding_screen",
+   "name": "Folding screen",
+   "category": "furniture",
+   "purpose": "Byobu, two blocks wide",
+   "variants": [
+    {
+     "id": "folding_screen",
+     "label": "Plain",
+     "slice": "B1"
+    },
+    {
+     "id": "gold_folding_screen",
+     "label": "Gold clouds",
+     "slice": "B2"
+    },
+    {
+     "id": "pine_folding_screen",
+     "label": "Pine",
+     "slice": "B2"
+    },
+    {
+     "id": "crane_folding_screen",
+     "label": "Cranes",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 8,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "bamboo_blind",
+   "name": "Bamboo blind",
+   "category": "facade",
+   "purpose": "Sudare: roll-up blind for verandas and windows; rolled or down",
+   "variants": [
+    {
+     "id": "bamboo_blind",
+     "label": "Bamboo",
+     "slice": "B1"
+    }
+   ],
+   "functional": "toggle",
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "scroll_shelf",
+   "name": "Scroll shelf",
+   "category": "furniture",
+   "purpose": "Shelves of rolled scrolls; 9 slots",
+   "variants": [
+    {
+     "id": "scroll_shelf",
+     "label": "Open shelf",
+     "slice": "B1"
+    },
+    {
+     "id": "archive_scroll_shelf",
+     "label": "Archive boxes (library)",
+     "slice": "B1"
+    }
+   ],
+   "functional": "container",
+   "reuse": "9-slot inventory",
+   "complexity": "medium",
+   "textures": 4,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "tansu_chest",
+   "name": "Tansu chest",
+   "category": "furniture",
+   "purpose": "Chest of drawers with iron fittings; 27 slots",
+   "variants": [
+    {
+     "id": "tansu_chest",
+     "label": "Light",
+     "slice": "B1"
+    },
+    {
+     "id": "dark_tansu_chest",
+     "label": "Dark",
+     "slice": "B1"
+    },
+    {
+     "id": "step_tansu",
+     "label": "Step tansu, climbable",
+     "slice": "B1"
+    }
+   ],
+   "functional": "container",
+   "reuse": "27-slot inventory",
+   "complexity": "medium",
+   "textures": 9,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "bookcase",
+   "name": "Bookcase",
+   "category": "furniture",
+   "purpose": "A tall bookcase; 18 slots",
+   "variants": [
+    {
+     "id": "bookcase",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": "container",
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "wardrobe_cabinet",
+   "name": "Wardrobe cabinet",
+   "category": "furniture",
+   "purpose": "Opens the wardrobe (outfits you own)",
+   "variants": [
+    {
+     "id": "wardrobe_cabinet",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Wardrobe screen by Items",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "dresser_mirror",
+   "name": "Dresser with mirror",
+   "category": "furniture",
+   "purpose": "Kyodai mirror stand",
+   "variants": [
+    {
+     "id": "dresser_mirror",
+     "label": "Lacquer",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "andon_lamp",
+   "name": "Andon lamp",
+   "category": "furniture",
+   "purpose": "Paper floor lamp",
+   "variants": [
+    {
+     "id": "andon_lamp",
+     "label": "Cream paper",
+     "slice": "B1"
+    },
+    {
+     "id": "red_andon_lamp",
+     "label": "Red paper",
+     "slice": "B1"
+    }
+   ],
+   "functional": "light",
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 4,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "potted_bonsai",
+   "name": "Potted bonsai",
+   "category": "furniture",
+   "purpose": "A bonsai tree in a tray",
+   "variants": [
+    {
+     "id": "potted_bonsai",
+     "label": "Pine",
+     "slice": "B1"
+    },
+    {
+     "id": "maple_potted_bonsai",
+     "label": "Maple",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 4,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "bamboo_vase",
+   "name": "Bamboo vase",
+   "category": "furniture",
+   "purpose": "A cut-bamboo vase with a stem",
+   "variants": [
+    {
+     "id": "bamboo_vase",
+     "label": "Bamboo",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "ikebana",
+   "name": "Ikebana",
+   "category": "furniture",
+   "purpose": "A flower arrangement in a low dish",
+   "variants": [
+    {
+     "id": "ikebana",
+     "label": "Seasonal",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "hanging_scroll",
+   "name": "Hanging scroll",
+   "category": "furniture",
+   "purpose": "Kakejiku, one wide and two tall",
+   "variants": [
+    {
+     "id": "hanging_scroll_fire",
+     "label": "火",
+     "slice": "B1"
+    },
+    {
+     "id": "hanging_scroll_shinobi",
+     "label": "忍",
+     "slice": "B1"
+    },
+    {
+     "id": "hanging_scroll_harmony",
+     "label": "和",
+     "slice": "B1"
+    },
+    {
+     "id": "hanging_scroll_landscape",
+     "label": "Landscape",
+     "slice": "B1"
+    },
+    {
+     "id": "hanging_scroll_crane",
+     "label": "Crane",
+     "slice": "B1"
+    },
+    {
+     "id": "hanging_scroll_leaf",
+     "label": "Hidden Leaf",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 12,
+   "prototype": false,
+   "notes": "Was planned as painting variants; a block so furnish mode places it",
+   "requested_by": "items session"
+  },
+  {
+   "id": "poster",
+   "name": "Poster",
+   "category": "furniture",
+   "purpose": "A printed poster or a framed painting, 1 x 1 or 2 x 2",
+   "variants": [
+    {
+     "id": "poster_academy",
+     "label": "Academy",
+     "slice": "B1"
+    },
+    {
+     "id": "poster_festival",
+     "label": "Leaf Festival",
+     "slice": "B2"
+    },
+    {
+     "id": "poster_wanted",
+     "label": "Wanted",
+     "slice": "B2"
+    },
+    {
+     "id": "poster_exams",
+     "label": "Chunin Exams",
+     "slice": "B3"
+    },
+    {
+     "id": "poster_village",
+     "label": "A painting of the village",
+     "slice": "B1"
+    },
+    {
+     "id": "poster_lake",
+     "label": "A painting of the lake",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 12,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "wall_clock",
+   "name": "Wall clock",
+   "category": "furniture",
+   "purpose": "A pendulum wall clock",
+   "variants": [
+    {
+     "id": "wall_clock",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "calendar_scroll",
+   "name": "Calendar scroll",
+   "category": "furniture",
+   "purpose": "A wall calendar showing the season and day",
+   "variants": [
+    {
+     "id": "calendar_scroll",
+     "label": "Paper",
+     "slice": "B1"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Shows VF Calendar",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "wind_chime",
+   "name": "Wind chime",
+   "category": "furniture",
+   "purpose": "Furin glass chime",
+   "variants": [
+    {
+     "id": "wind_chime",
+     "label": "Glass",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "mailbox",
+   "name": "Mailbox",
+   "category": "furniture",
+   "purpose": "A home's letter box by the door",
+   "variants": [
+    {
+     "id": "mailbox",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Letters by Items",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "kamidana",
+   "name": "Kamidana",
+   "category": "furniture",
+   "purpose": "A small household shrine shelf",
+   "variants": [
+    {
+     "id": "kamidana",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "memorial_altar",
+   "name": "Memorial altar",
+   "category": "furniture",
+   "purpose": "Butsudan, a family memorial cabinet",
+   "variants": [
+    {
+     "id": "memorial_altar",
+     "label": "Lacquer",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "incense_burner",
+   "name": "Incense burner",
+   "category": "furniture",
+   "purpose": "Bronze burner with a curl of smoke",
+   "variants": [
+    {
+     "id": "incense_burner",
+     "label": "Bronze",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "weapon_rack",
+   "name": "Weapon rack",
+   "category": "furniture",
+   "purpose": "Standing rack showing up to 4 tools",
+   "variants": [
+    {
+     "id": "weapon_rack",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Block entity, 4 slots, rendered",
+   "complexity": "complex",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "target_board",
+   "name": "Target board",
+   "category": "training",
+   "purpose": "Wall-mounted ring target that shows stuck kunai",
+   "variants": [
+    {
+     "id": "target_board",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": "target",
+   "reuse": "Combat hit target",
+   "complexity": "medium",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "target_post",
+   "name": "Target post",
+   "category": "training",
+   "purpose": "Ring target on a post",
+   "variants": [
+    {
+     "id": "target_post",
+     "label": "Wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": "target",
+   "reuse": "Combat hit target",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "pet_bowl",
+   "name": "Pet bowl",
+   "category": "furniture",
+   "purpose": "Food and water bowls",
+   "variants": [
+    {
+     "id": "pet_bowl",
+     "label": "Ceramic",
+     "slice": "B1"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "VF Pets feeding",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "cat_tower",
+   "name": "Cat tower",
+   "category": "furniture",
+   "purpose": "Posts and perches for a cat",
+   "variants": [
+    {
+     "id": "cat_tower",
+     "label": "Wood and rope",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "goldfish_bowl",
+   "name": "Goldfish bowl",
+   "category": "furniture",
+   "purpose": "A glass bowl with a goldfish",
+   "variants": [
+    {
+     "id": "goldfish_bowl",
+     "label": "Glass",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "go_board",
+   "name": "Go board",
+   "category": "furniture",
+   "purpose": "A go board on legs",
+   "variants": [
+    {
+     "id": "go_board",
+     "label": "Kaya wood",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "moving_crate",
+   "name": "Moving crate",
+   "category": "furniture",
+   "purpose": "Packs furniture and chests with their contents for a move",
+   "variants": [
+    {
+     "id": "moving_crate",
+     "label": "Wood",
+     "slice": "later"
+    }
+   ],
+   "functional": "container",
+   "reuse": "Keeps contents as an item",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "keepsake",
+   "name": "Keepsake stand",
+   "category": "display",
+   "purpose": "A small stand that shows one of the 40 keepsakes",
+   "variants": [
+    {
+     "id": "keepsake",
+     "label": "Keepsake stand",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "display_shelf",
+   "name": "Display shelf",
+   "category": "display",
+   "purpose": "Home shelf showing 6 items",
+   "variants": [
+    {
+     "id": "display_shelf",
+     "label": "Display shelf",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "goods_shelf",
+   "name": "Goods shelf",
+   "category": "display",
+   "purpose": "Shop shelving",
+   "variants": [
+    {
+     "id": "goods_shelf",
+     "label": "Goods shelf",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "general_store_shelf",
+   "name": "General store shelf",
+   "category": "display",
+   "purpose": "Tall store shelving",
+   "variants": [
+    {
+     "id": "general_store_shelf",
+     "label": "General store shelf",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "crate_display",
+   "name": "Crate display",
+   "category": "display",
+   "purpose": "Stacked crates of goods",
+   "variants": [
+    {
+     "id": "crate_display",
+     "label": "Crate display",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "produce_crate_display",
+   "name": "Produce crate",
+   "category": "display",
+   "purpose": "Tilted crate of vegetables or fruit",
+   "variants": [
+    {
+     "id": "produce_crate_display",
+     "label": "Produce crate",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "fish_ice_display",
+   "name": "Fish on ice",
+   "category": "display",
+   "purpose": "The fishmonger's ice tray",
+   "variants": [
+    {
+     "id": "fish_ice_display",
+     "label": "Fish on ice",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "glass_case",
+   "name": "Glass case",
+   "category": "display",
+   "purpose": "Counter-height glass case",
+   "variants": [
+    {
+     "id": "glass_case",
+     "label": "Glass case",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "weapon_display_wall",
+   "name": "Weapon display wall",
+   "category": "display",
+   "purpose": "Wall board of blades and tools",
+   "variants": [
+    {
+     "id": "weapon_display_wall",
+     "label": "Weapon display wall",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "pouch_hooks",
+   "name": "Pouch hooks",
+   "category": "display",
+   "purpose": "Hooks of pouches and holsters",
+   "variants": [
+    {
+     "id": "pouch_hooks",
+     "label": "Pouch hooks",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "scroll_rack",
+   "name": "Scroll rack",
+   "category": "display",
+   "purpose": "Pigeonholes of scrolls",
+   "variants": [
+    {
+     "id": "scroll_rack",
+     "label": "Scroll rack",
+     "slice": "B2"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "scroll_display_case",
+   "name": "Scroll display case",
+   "category": "display",
+   "purpose": "A glass case for rare scrolls",
+   "variants": [
+    {
+     "id": "scroll_display_case",
+     "label": "Scroll display case",
+     "slice": "B2"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "flower_bucket_stand",
+   "name": "Flower bucket stand",
+   "category": "display",
+   "purpose": "Tiered buckets of cut flowers",
+   "variants": [
+    {
+     "id": "flower_bucket_stand",
+     "label": "Flower bucket stand",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "flower_pot_tiers",
+   "name": "Flower pot tiers",
+   "category": "display",
+   "purpose": "Stepped shelf of potted plants",
+   "variants": [
+    {
+     "id": "flower_pot_tiers",
+     "label": "Flower pot tiers",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "showroom_plinth",
+   "name": "Showroom plinth",
+   "category": "display",
+   "purpose": "Shows one furniture piece in the showroom",
+   "variants": [
+    {
+     "id": "showroom_plinth",
+     "label": "Showroom plinth",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "complex",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "bolt_shelf",
+   "name": "Bolt shelf",
+   "category": "display",
+   "purpose": "Bolts of cloth",
+   "variants": [
+    {
+     "id": "bolt_shelf",
+     "label": "Bolt shelf",
+     "slice": "B2"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "mannequin",
+   "name": "Mannequin",
+   "category": "display",
+   "purpose": "Wears one wardrobe outfit on the resident model",
+   "variants": [
+    {
+     "id": "mannequin",
+     "label": "Mannequin",
+     "slice": "B2"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "complex",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "curio_shelf",
+   "name": "Curio shelf",
+   "category": "display",
+   "purpose": "The pawn shop's shelf of oddments",
+   "variants": [
+    {
+     "id": "curio_shelf",
+     "label": "Curio shelf",
+     "slice": "B2"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "bookshelf_tall",
+   "name": "Tall bookshelf",
+   "category": "display",
+   "purpose": "Bookshop shelving",
+   "variants": [
+    {
+     "id": "bookshelf_tall",
+     "label": "Tall bookshelf",
+     "slice": "later"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "book_display_table",
+   "name": "Book table",
+   "category": "display",
+   "purpose": "A table of books face up",
+   "variants": [
+    {
+     "id": "book_display_table",
+     "label": "Book table",
+     "slice": "later"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "pet_supply_shelf",
+   "name": "Pet supply shelf",
+   "category": "display",
+   "purpose": "The clinic's shelf",
+   "variants": [
+    {
+     "id": "pet_supply_shelf",
+     "label": "Pet supply shelf",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "metal_stock_rack",
+   "name": "Metal stock rack",
+   "category": "display",
+   "purpose": "Bars and blanks at the metalworks",
+   "variants": [
+    {
+     "id": "metal_stock_rack",
+     "label": "Metal stock rack",
+     "slice": "B2"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "charm_stall",
+   "name": "Charm stall",
+   "category": "display",
+   "purpose": "Shrine charms and fortunes",
+   "variants": [
+    {
+     "id": "charm_stall",
+     "label": "Charm stall",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "paint_display",
+   "name": "Paint display",
+   "category": "display",
+   "purpose": "Paints and brushes at the studio",
+   "variants": [
+    {
+     "id": "paint_display",
+     "label": "Paint display",
+     "slice": "B2"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "jar_shelf",
+   "name": "Jar shelf",
+   "category": "display",
+   "purpose": "Jars of herbs and medicines",
+   "variants": [
+    {
+     "id": "jar_shelf",
+     "label": "Jar shelf",
+     "slice": "B1"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "prize_shelf",
+   "name": "Prize shelf",
+   "category": "display",
+   "purpose": "Festival game prizes",
+   "variants": [
+    {
+     "id": "prize_shelf",
+     "label": "Prize shelf",
+     "slice": "B2"
+    }
+   ],
+   "functional": "display",
+   "reuse": "Item display block entity (one renderer for all)",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "shop_counter",
+   "name": "Shop counter",
+   "category": "shop",
+   "purpose": "Straight and corner; the keeper stands behind; right-click opens the shop",
+   "variants": [
+    {
+     "id": "shop_counter",
+     "label": "Shop counter",
+     "slice": "B1"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Shop screen by Items",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "menu_board",
+   "name": "Menu board",
+   "category": "shop",
+   "purpose": "Right-click shows prices",
+   "variants": [
+    {
+     "id": "menu_board",
+     "label": "Menu board",
+     "slice": "B1"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Prices by Items",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "noodle_kitchen",
+   "name": "Noodle kitchen",
+   "category": "shop",
+   "purpose": "The ramen stand's stock pot and noodle station, with steam",
+   "variants": [
+    {
+     "id": "noodle_kitchen",
+     "label": "Noodle kitchen",
+     "slice": "B1"
+    }
+   ],
+   "functional": "station",
+   "reuse": "VF tavern kitchen anchor",
+   "complexity": "medium",
+   "textures": 3,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "rice_sack_pile",
+   "name": "Rice sack pile",
+   "category": "shop",
+   "purpose": "Stacked rice sacks",
+   "variants": [
+    {
+     "id": "rice_sack_pile",
+     "label": "Rice sack pile",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "market_stall",
+   "name": "Market stall",
+   "category": "shop",
+   "purpose": "A stall counter with a cloth canopy (two blocks)",
+   "variants": [
+    {
+     "id": "market_stall",
+     "label": "Market stall",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 3,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "dango_grill",
+   "name": "Dango grill",
+   "category": "shop",
+   "purpose": "Charcoal grill with skewers",
+   "variants": [
+    {
+     "id": "dango_grill",
+     "label": "Dango grill",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "bench_red_cloth",
+   "name": "Red-cloth bench",
+   "category": "shop",
+   "purpose": "Tea house bench with a red felt cloth",
+   "variants": [
+    {
+     "id": "bench_red_cloth",
+     "label": "Red-cloth bench",
+     "slice": "B1"
+    }
+   ],
+   "functional": "seat",
+   "reuse": "VF Seat",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "parasol",
+   "name": "Parasol",
+   "category": "shop",
+   "purpose": "Wagasa over a bench, two blocks tall",
+   "variants": [
+    {
+     "id": "parasol",
+     "label": "Parasol",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "tea_counter",
+   "name": "Tea counter",
+   "category": "shop",
+   "purpose": "The tea house's serving counter with kettles",
+   "variants": [
+    {
+     "id": "tea_counter",
+     "label": "Tea counter",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "barbecue_table",
+   "name": "Barbecue table",
+   "category": "shop",
+   "purpose": "Sunken grill, seats on both sides",
+   "variants": [
+    {
+     "id": "barbecue_table",
+     "label": "Barbecue table",
+     "slice": "B2"
+    }
+   ],
+   "functional": "seat",
+   "reuse": "VF Seat both sides",
+   "complexity": "medium",
+   "textures": 3,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "bench_seat",
+   "name": "Bench",
+   "category": "shop",
+   "purpose": "Plain wooden bench",
+   "variants": [
+    {
+     "id": "bench_seat",
+     "label": "Bench",
+     "slice": "B1"
+    }
+   ],
+   "functional": "seat",
+   "reuse": "VF Seat",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "catalogue_lectern",
+   "name": "Catalogue lectern",
+   "category": "shop",
+   "purpose": "The furniture shop's order book",
+   "variants": [
+    {
+     "id": "catalogue_lectern",
+     "label": "Catalogue lectern",
+     "slice": "B1"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Shop screen by Items",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "lumber_rack",
+   "name": "Lumber rack",
+   "category": "shop",
+   "purpose": "Planks and beams on a rack (Kinoshita yard)",
+   "variants": [
+    {
+     "id": "lumber_rack",
+     "label": "Lumber rack",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "fitting_screen",
+   "name": "Fitting screen",
+   "category": "shop",
+   "purpose": "The tailor's changing screen",
+   "variants": [
+    {
+     "id": "fitting_screen",
+     "label": "Fitting screen",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "pawn_counter_grille",
+   "name": "Pawn counter grille",
+   "category": "shop",
+   "purpose": "The pawn shop's grilled window; opens the pawn screen",
+   "variants": [
+    {
+     "id": "pawn_counter_grille",
+     "label": "Pawn counter grille",
+     "slice": "B2"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Pawn screen by Items",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "bath_counter",
+   "name": "Bath counter",
+   "category": "shop",
+   "purpose": "The bath house's raised attendant's booth",
+   "variants": [
+    {
+     "id": "bath_counter",
+     "label": "Bath counter",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "locker_shelf",
+   "name": "Locker shelf",
+   "category": "shop",
+   "purpose": "Baskets for clothes at the bath house",
+   "variants": [
+    {
+     "id": "locker_shelf",
+     "label": "Locker shelf",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "wash_stool",
+   "name": "Wash stool",
+   "category": "shop",
+   "purpose": "Low wooden stool by the taps",
+   "variants": [
+    {
+     "id": "wash_stool",
+     "label": "Wash stool",
+     "slice": "B2"
+    }
+   ],
+   "functional": "seat",
+   "reuse": "VF Seat",
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "medicine_drawer_wall",
+   "name": "Medicine drawer wall",
+   "category": "shop",
+   "purpose": "A wall of small herb drawers",
+   "variants": [
+    {
+     "id": "medicine_drawer_wall",
+     "label": "Medicine drawer wall",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 1,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "herb_drying_rack",
+   "name": "Herb drying rack",
+   "category": "shop",
+   "purpose": "Bundles of herbs on a rack (Suzuran, the pharmacy)",
+   "variants": [
+    {
+     "id": "herb_drying_rack",
+     "label": "Herb drying rack",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "hospital_counter",
+   "name": "Hospital counter",
+   "category": "shop",
+   "purpose": "Reception and dispensary counter",
+   "variants": [
+    {
+     "id": "hospital_counter",
+     "label": "Hospital counter",
+     "slice": "B1"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Dispensary by Items",
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "cracker_grill",
+   "name": "Senbei grill",
+   "category": "shop",
+   "purpose": "Rice cracker grill",
+   "variants": [
+    {
+     "id": "cracker_grill",
+     "label": "Senbei grill",
+     "slice": "B2"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "target_game_booth",
+   "name": "Target game booth",
+   "category": "shop",
+   "purpose": "The festival throwing game",
+   "variants": [
+    {
+     "id": "target_game_booth",
+     "label": "Target game booth",
+     "slice": "B2"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Festival game",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "arranging_table",
+   "name": "Arranging table",
+   "category": "shop",
+   "purpose": "The flower shop's work table",
+   "variants": [
+    {
+     "id": "arranging_table",
+     "label": "Arranging table",
+     "slice": "B1"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "festival_stall",
+   "name": "Festival stall",
+   "category": "festival",
+   "purpose": "Yatai: a two-block food stall with a roof (part: left, right); the trade is its noren",
+   "variants": [
+    {
+     "id": "takoyaki_festival_stall",
+     "label": "Takoyaki",
+     "slice": "B2"
+    },
+    {
+     "id": "candy_apple_festival_stall",
+     "label": "Candy apples",
+     "slice": "B2"
+    },
+    {
+     "id": "masks_festival_stall",
+     "label": "Masks",
+     "slice": "B2"
+    },
+    {
+     "id": "yakitori_festival_stall",
+     "label": "Yakitori",
+     "slice": "B3"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "complex",
+   "textures": 10,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "goldfish_pool",
+   "name": "Goldfish pool",
+   "category": "festival",
+   "purpose": "Tub of goldfish for the scooping game",
+   "variants": [
+    {
+     "id": "goldfish_pool",
+     "label": "Blue tub",
+     "slice": "B2"
+    }
+   ],
+   "functional": "interact",
+   "reuse": "Festival game",
+   "complexity": "medium",
+   "textures": 2,
+   "prototype": false,
+   "requested_by": "items session"
+  },
+  {
+   "id": "shop_noren",
+   "name": "Shop noren",
+   "category": "facade",
+   "purpose": "A shop's noren with its name or trade painted",
+   "variants": [
+    {
+     "id": "tea_noren",
+     "label": "Tea (茶)",
+     "slice": "P0"
+    },
+    {
+     "id": "ramen_noren",
+     "label": "Ramen (麺)",
+     "slice": "P0"
+    },
+    {
+     "id": "flower_noren",
+     "label": "Flowers (花)",
+     "slice": "B1"
+    },
+    {
+     "id": "bath_noren",
+     "label": "Bath house (ゆ)",
+     "slice": "B2"
+    },
+    {
+     "id": "barbecue_noren",
+     "label": "Barbecue (焼)",
+     "slice": "B2"
+    },
+    {
+     "id": "dango_noren",
+     "label": "Dango (団子)",
+     "slice": "B2"
+    },
+    {
+     "id": "sake_noren",
+     "label": "Sake (酒)",
+     "slice": "B2"
+    },
+    {
+     "id": "scroll_noren",
+     "label": "Scrolls (巻)",
+     "slice": "B2"
+    },
+    {
+     "id": "sweets_noren",
+     "label": "Sweets (甘)",
+     "slice": "B2"
+    },
+    {
+     "id": "inn_noren",
+     "label": "Inn (宿)",
+     "slice": "B3"
+    }
+   ],
+   "functional": null,
+   "reuse": null,
+   "complexity": "simple",
+   "textures": 10,
+   "prototype": true,
+   "requested_by": "items session"
   }
  ],
  "vanilla": [
@@ -3388,78 +4530,23 @@
    "slice": "B2"
   },
   {
-   "need": "Hanging scrolls and posters",
-   "blocks": "painting variants (data-driven paintings)",
-   "use": "No block: a data pack painting variant per design",
-   "slice": "B1"
-  },
-  {
    "need": "Statues of the Hokage",
    "blocks": "stone, andesite, calcite",
    "use": "Sculpted like the Rock faces at small scale",
    "slice": "later"
+  },
+  {
+   "need": "Potted fern",
+   "blocks": "potted_fern",
+   "use": "The items catalogue's potted_fern is the vanilla block",
+   "slice": "B1"
+  },
+  {
+   "need": "Easel and canvas",
+   "blocks": "Village Friends easel_canvas",
+   "use": "Reused from VF for the painters' studio",
+   "slice": "B2"
   }
  ],
- "paintings": [
-  {
-   "id": "scroll_fire",
-   "label": "Hanging scroll 火",
-   "slice": "B1"
-  },
-  {
-   "id": "scroll_shinobi",
-   "label": "Hanging scroll 忍",
-   "slice": "B1"
-  },
-  {
-   "id": "scroll_harmony",
-   "label": "Hanging scroll 和",
-   "slice": "B1"
-  },
-  {
-   "id": "scroll_landscape",
-   "label": "Landscape scroll",
-   "slice": "B1"
-  },
-  {
-   "id": "scroll_crane",
-   "label": "Crane scroll",
-   "slice": "B1"
-  },
-  {
-   "id": "scroll_leaf",
-   "label": "Leaf scroll",
-   "slice": "B1"
-  },
-  {
-   "id": "poster_academy",
-   "label": "Academy poster",
-   "slice": "B1"
-  },
-  {
-   "id": "poster_festival",
-   "label": "Leaf Festival poster",
-   "slice": "B2"
-  },
-  {
-   "id": "poster_wanted",
-   "label": "Wanted poster",
-   "slice": "B2"
-  },
-  {
-   "id": "poster_exams",
-   "label": "Chunin Exams poster",
-   "slice": "B3"
-  },
-  {
-   "id": "painting_village",
-   "label": "A painting of the village (bond keepsake)",
-   "slice": "B1"
-  },
-  {
-   "id": "painting_lake",
-   "label": "A painting of the lake (bond keepsake)",
-   "slice": "B2"
-  }
- ]
+ "paintings": []
 }

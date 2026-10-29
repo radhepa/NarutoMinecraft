@@ -34,11 +34,11 @@ vanilla mapping and painting) and [`tools/konoha/buildings.json`](tools/konoha/b
 
 | | Count |
 |---|---|
-| Custom blocks | **104** blocks, **343** counting colour, wood, crest and sign variants separately; **580** new 16 px textures; 44 of them functional (doors, beds, seats, lights, containers, workstations, boards) |
-| Vanilla mappings | **53** needs met with vanilla blocks or combinations (roofs, walls, streets, the Rock, the forest), plus 12 painting variants for scrolls and posters |
+| Custom blocks | **173** blocks, **373** counting colour, wood, crest and sign variants separately; **670** new 16 px textures; 93 of them functional (doors, beds, seats, lights, containers, item displays, workstations, shop counters, boards). Includes the items session's 117 requests for stations, furniture, displays and shop interiors |
+| Vanilla mappings | **54** needs met with vanilla blocks or combinations (roofs, walls, streets, the Rock, the forest), plus one Village Friends block reused (the easel) |
 | Design programs | **30** Python programs (homes, apartments, shops, clan gates and houses, the wall, the forest's fence and trees, bridges, streets, training props, the Rock faces); 3 prototyped |
 | Buildings | **110** homes, **15** apartment buildings, **53** shops, **75** clan builds, **26** landmarks, **8** training grounds, **704** Forest of Death pieces (660 trees, 44 gates), **142** wall modules |
-| Agent effort | about **78 sessions** (~155 hours) for the whole village; **~70 sessions** (~140 hours) to the end of Beta 3 |
+| Agent effort | about **89 sessions** (~180 hours) for the whole village; **~80 sessions** (~160 hours) to the end of Beta 3 |
 | Your hours in Minecraft | about **78 hours** to the end of Beta 3 (finishing the Rock, terrain and landmarks), **~103 hours** for the whole village; plus ~20 hours reviewing renders |
 
 The detail behind each line is in sections 3, 4 and 7.
@@ -110,7 +110,7 @@ built in the map world. Footprints are in blocks, x by z.
 |---|---:|---:|---:|---:|---:|---:|
 | Homes | 8 | 38 | 28 | 6 | 30 | 110 |
 | Apartment buildings | 1 | 6 | 2 | 1 | 5 | 15 |
-| Shops | 1 | 16 | 15 | 4 | 17 | 53 |
+| Shops | 1 | 17 | 14 | 4 | 17 | 53 |
 | Clan builds | 0 | 31 | 40 | 0 | 4 | 75 |
 | Landmarks | 0 | 9 | 10 | 2 | 5 | 26 |
 | Training grounds | 0 | 0 | 3 | 0 | 5 | 8 |
@@ -156,7 +156,7 @@ whole village and about 220 by the end of Beta 3 (ROADMAP §6: about 300 and abo
 |---|---|---|---:|---:|---:|---:|---:|---:|---|
 | Small shop-house | program `shop_tea_house` | 11 x 11 | 1 | 3 | 3 |  | 3 | 10 | Tea houses (two rivals on one corner), dango, sweets, the test street's shop |
 | Shop-house | program `shop_house` | 11 x 11 |  | 6 | 7 |  | 6 | 19 | Grocer and market fillers (B1); scrolls, pawn, tools, tailor, medicine, metalworker (B2) |
-| Large store | program `shop_large` + hand dressing | 17 x 13 |  | 1 | 2 |  | 2 | 5 | The furniture shop and its showroom (B1); the weapon shop and the post office (B2) |
+| Large store | program `shop_large` + hand dressing | 17 x 13 |  | 2 | 1 |  | 2 | 5 | The furniture shop and its showroom, and the weapon shop with its forge room (B1); the post office (B2) |
 | Market stall row | program `market_stall` | 13 x 5 |  | 6 | 2 | 4 | 4 | 16 | Vegetables, fish, rice; exam-week stalls in B3 |
 | Restaurant | program `restaurant` | 15 x 13 |  |  | 1 |  | 2 | 3 | The barbecue house (B2), an izakaya |
 
@@ -247,6 +247,42 @@ barracks (6 bunks; B1), the wall towers' night watch (1 each, night; 2 towers in
 classrooms (5 teachers, day, chunin; B1), the hospital (6 medics, day and night, chunin and
 special jonin; B1), the police HQ and ANBU HQ (later). Workers live in ordinary homes and flats.
 
+### Shop sites
+
+The items session's shops, with the building each goes in. Its slices come from
+`data/items/shops.tsv` (branch `items`); the weapon shop moves to Beta 1 (a Beta 1 side quest is
+there; it sells practice gear until Genin).
+
+| Shop | Building | Slice |
+|---|---|---|
+| `ichiraku` | Ramen stand (landmark) | Beta 1 |
+| `grocer`, `haruno_store` | `shop_house` | Beta 1 |
+| `fishmonger` | `market_stall` | Beta 1 |
+| `tea_house`, `tea_house_rival` | Two `shop_tea_house` on one corner, one with the green awning | Beta 1, Beta 2 |
+| `flower_shop` | `shop_house` front of the Yamanaka compound | Beta 1 |
+| `furniture_shop` | `shop_large` with the showroom | Beta 1 |
+| `weapon_shop` | `shop_large` with a forge room (forge, anvil, whetstone wheel, quench trough) | Beta 1 |
+| `academy_supply` | The Academy workshop (public workbench) | Beta 1 |
+| `inuzuka_clinic`, `cat_shelter` | Inuzuka compound; `shop_house` next to it | Beta 1 |
+| `hospital_dispensary`, `pharmacy` | The hospital (herb room: apothecary table); `shop_house` by the hospital (Suzuran) | Beta 1 |
+| `shrine_office` | The shrine | Beta 1 |
+| `market_day_stalls` | `market_stall` rows on the market street | Beta 1 |
+| `dango_stand`, `senbei_shop` | `shop_tea_house`; the senbei shop in the Uchiha quarter | Beta 2 |
+| `barbecue_house` | `restaurant` | Beta 2 |
+| `tool_shop`, `scroll_shop`, `tailor`, `pawn_shop` | `shop_house` (the scroll shop's calligraphy desk, the tailor's table) | Beta 2 |
+| `kinoshita_yard` | Kinoshita mark (public workbench) | Beta 2 |
+| `hagane_metalworks` | `shop_house` beside the forge | Beta 2 |
+| `bath_house` | Bath house (landmark) | Beta 2 |
+| `painters_studio` | Kurama clan home (VF easel) | Beta 2 |
+| `festival_stalls` | `festival_stall` blocks on the main street | Beta 2 |
+| `exam_stalls` | `market_stall` rows by the stadium | Beta 3 |
+| `bookshop` | `shop_house` | Later |
+
+Gathering anchors (right-click spots on a respawn timer, no breaking) the items session places
+through `layout.json`: `gather:herb_garden` (behind the hospital), `gather:bamboo_grove` (by the
+shrine), `gather:river` and `gather:river_bend` (iron sand, the riverside), `gather:cliff_nest` (the
+cliff training ground), `gather:forest_floor` (the outer woods), `gather:forest_of_death`.
+
 ### Story locations (neutral)
 
 Where the story needs a place, it is part of a building above:
@@ -307,8 +343,16 @@ Where the story needs a place, it is part of a building above:
 
 **Vanilla first.** A custom block exists only where vanilla cannot make the piece at the kit's
 scale: round tanks and lanterns, thin paper and cloth, signs and crests with text, and anything
-that must work (sliding doors, futons, seats, stations). Everything else is a mapping below. Hanging
-scrolls and posters are data-pack painting variants, not blocks.
+that must work (sliding doors, futons, seats, stations, shelves that show their goods). Everything
+else is a mapping below.
+
+**Shared with the items session** (branch `items`, `data/items/block_requests.json`). Items owns
+each furniture piece's item, price and source, the station screens and recipes, and what a display
+shows; this catalogue owns the block: id, model, collision and states. Where both had a piece, the
+items ids won (`tansu_chest`, `folding_screen`, `andon_lamp`, `bench_red_cloth`, `festival_stall`,
+...); `tatami` stays (asked of items instead of `tatami_mat`); `potted_fern` is vanilla; the easel is
+VF's `easel_canvas`. One `keepsake` stand shows any of the 40 keepsakes, and the 26 displays share
+one item-rendering block entity.
 
 ### Totals
 
@@ -319,31 +363,31 @@ block's slice is the first slice that needs any of its variants.
 | Group | Blocks | With variants | Textures | Functional |
 |---|---:|---:|---:|---:|
 | Roofs | 5 | 15 | 37 | 0 |
-| Facades and shop fronts | 9 | 60 | 91 | 3 |
+| Facades and shop fronts | 10 | 60 | 91 | 3 |
 | Crests and banners | 4 | 58 | 99 | 0 |
 | Interior fittings | 5 | 13 | 26 | 2 |
 | Story pieces | 2 | 4 | 7 | 1 |
 | Lanterns | 2 | 7 | 16 | 2 |
 | Streets | 8 | 22 | 30 | 2 |
-| Festival | 5 | 10 | 18 | 3 |
+| Festival | 5 | 9 | 17 | 3 |
 | Shrine | 6 | 8 | 16 | 4 |
-| Furniture (the Leaf set) | 18 | 49 | 86 | 11 |
-| Training | 5 | 7 | 14 | 3 |
-| Keepsakes | 1 | 33 | 33 | 0 |
+| Furniture (the Leaf set) | 39 | 79 | 137 | 19 |
+| Training | 6 | 7 | 13 | 4 |
 | Academy, Residence, hospital, stadium | 15 | 20 | 45 | 7 |
-| Shops and food | 11 | 24 | 38 | 4 |
-| Crafting stations | 2 | 3 | 12 | 2 |
+| Shops and food | 26 | 26 | 48 | 12 |
 | Gardens | 2 | 3 | 4 | 0 |
-| Clan signatures | 4 | 7 | 8 | 0 |
-| **All custom blocks** | **104** | **343** | **580** | **44** |
+| Clan signatures | 3 | 6 | 6 | 0 |
+| Crafting stations | 9 | 10 | 26 | 8 |
+| Displays (item-rendering) | 26 | 26 | 52 | 26 |
+| **All custom blocks** | **173** | **373** | **670** | **93** |
 
 | By slice (new that slice) | Phase 0 | Beta 1 | Beta 2 | Beta 2.5 | Beta 3 | Later | Total |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Custom blocks (first needed) | 10 | 61 | 30 | 0 | 3 | 0 | 104 |
-| Custom block variants | 21 | 150 | 139 | 17 | 10 | 6 | 343 |
-| Vanilla mappings | 23 | 15 | 9 | 0 | 5 | 1 | 53 |
+| Custom blocks (first needed) | 11 | 110 | 46 | 0 | 3 | 3 | 173 |
+| Custom block variants | 21 | 194 | 138 | 0 | 11 | 9 | 373 |
+| Vanilla mappings | 23 | 15 | 10 | 0 | 5 | 1 | 54 |
 
-Complexity: 51 simple, 43 medium and 10 complex blocks (237, 85 and 21 with variants). Prototyped now: 10 blocks, 40 with variants. Paintings (data-pack painting variants, no block): 12.
+Complexity: 91 simple, 70 medium and 12 complex blocks (247, 107 and 19 with variants). Prototyped now: 11 blocks, 21 with variants.
 <!-- /gen:block-summary -->
 
 ### Vanilla mappings
@@ -404,10 +448,9 @@ Complexity: 51 simple, 43 medium and 10 complex blocks (237, 85 and 21 with vari
 | Smithy dressing | anvil, grindstone, blast_furnace, chain, lava under glass | Around the custom forge | Beta 2 |
 | Bath house | water, smooth_stone, spruce; campfire under a slab for steam | Hand-built | Beta 2 |
 | Memorials | polished_blackstone, chiseled_stone_bricks | The Ino-Shika-Cho memorial with clan crest plaques | Beta 2 |
-| Hanging scrolls and posters | painting variants (data-driven paintings) | No block: a data pack painting variant per design | Beta 1 |
 | Statues of the Hokage | stone, andesite, calcite | Sculpted like the Rock faces at small scale | Later |
-
-Paintings (data-pack painting variants, no Java): `scroll_fire` Hanging scroll 火 (Beta 1); `scroll_shinobi` Hanging scroll 忍 (Beta 1); `scroll_harmony` Hanging scroll 和 (Beta 1); `scroll_landscape` Landscape scroll (Beta 1); `scroll_crane` Crane scroll (Beta 1); `scroll_leaf` Leaf scroll (Beta 1); `poster_academy` Academy poster (Beta 1); `poster_festival` Leaf Festival poster (Beta 2); `poster_wanted` Wanted poster (Beta 2); `poster_exams` Chunin Exams poster (Beta 3); `painting_village` A painting of the village (bond keepsake) (Beta 1); `painting_lake` A painting of the lake (bond keepsake) (Beta 2).
+| Potted fern | potted_fern | The items catalogue's potted_fern is the vanilla block | Beta 1 |
+| Easel and canvas | Village Friends easel_canvas | Reused from VF for the painters' studio | Beta 2 |
 <!-- /gen:vanilla -->
 
 ### Custom blocks
@@ -430,14 +473,15 @@ Paintings (data-pack painting variants, no Java): `scroll_fire` Hanging scroll �
 | Block | Purpose | Variants (slice) | Function | Model | Tex | First |
 |---|---|---|---|---|---:|---|
 | **Shop awning** ★<br>`awning` | Sloped canvas awning with a scalloped valance over shop fronts | `red_awning` Red and cream stripes; `green_awning` Green and cream stripes; `indigo_awning` Plain indigo; `blue_awning` Blue and white stripes (Beta 1); `orange_awning` Plain orange (Beta 1); `cream_awning` Plain cream (Beta 2) | decor | simple | 13 | Phase 0 |
-| **Noren curtain** ★<br>`noren` | Split shop curtain across the top of a doorway; walk-through. Printed ones carry the shop's kanji | 15: Plain indigo, Plain red, Tea (茶), Ramen (麺), Plain white, Plain brown, Flowers (花), Bath house (ゆ), Barbecue (焼), Dango (団子), Sake (酒), Scrolls (巻), Sweets (甘), Plain black, Inn (宿) | decor | simple | 16 | Phase 0 |
+| **Noren curtain** ★<br>`noren` | Split shop curtain across the top of a doorway; walk-through. Printed ones carry the shop's kanji | `indigo_noren` Plain indigo; `red_noren` Plain red; `white_noren` Plain white (Beta 1); `brown_noren` Plain brown (Beta 1); `black_noren` Plain black (Beta 2) | decor | simple | 6 | Phase 0 |
 | **Hanging shop sign**<br>`shop_sign` | Vertical signboard (kanban), one block wide and two tall, hung from a bracket on the front. 16 x 32 text texture per sign; glyphs stamped by pixels.glyph and cleaned up by eye | 23: Ramen, Furniture 家具, Grocer 八百屋, Tea 茶, Flowers 花, Hospital 病院, Weapons 武器, Tools 道具, Barbecue 焼肉, Dango 団子, Scrolls 巻物, Pawn 質, Bath ゆ, Post 郵便, Medicine 薬, Fish 魚, Tailor 呉服, Keep out 立入禁止, Inn 宿, Sake 酒, Books 本, Barber 床屋, Photographs 写真 | decor | simple | 24 | Beta 1 |
 | **Fascia signboard**<br>`shop_board` | Horizontal name board over a landmark's entrance, three blocks wide (part: left, middle, right). Check every landmark's sign against the art | 8: Ramen stand name, Hospital, Ninja Academy, Library 書庫, Mission Desk 任務受付, Bath house 銭湯, Post office 郵便局, Police HQ | decor | simple | 24 | Beta 1 |
 | **Koshi lattice**<br>`koshi_lattice` | Fine vertical timber lattice for machiya windows and shop fronts; connects like a pane | `light_koshi_lattice` Light cypress; `dark_koshi_lattice` Dark timber | decor | simple | 2 | Beta 1 |
 | **Lattice entry door**<br>`koshi_door` | The sliding lattice-and-glass front door of homes and shops | `koshi_door` Light cypress; `dark_koshi_door` Dark timber | door (shoji_door) | medium | 4 | Beta 1 |
-| **Sudare blind**<br>`sudare` | Bamboo roll-up blind for verandas and windows; rolled or down | `sudare` Bamboo | toggle | simple | 2 | Beta 2 |
 | **Amado shutter**<br>`amado` | Wooden storm shutter that closes a window or veranda at night | `amado` Light; `dark_amado` Dark | toggle (Trapdoor logic) | simple | 2 | Beta 2 |
 | **Round window**<br>`marumado` | Round lattice window (2 x 2, four parts) for tea rooms and the shrine | `marumado` Lattice | decor | medium | 4 | Beta 2 |
+| **Bamboo blind**<br>`bamboo_blind` | Sudare: roll-up blind for verandas and windows; rolled or down | `bamboo_blind` Bamboo | toggle | simple | 2 | Beta 1 |
+| **Shop noren** ★<br>`shop_noren` | A shop's noren with its name or trade painted | 10: Tea (茶), Ramen (麺), Flowers (花), Bath house (ゆ), Barbecue (焼), Dango (団子), Sake (酒), Scrolls (巻), Sweets (甘), Inn (宿) | decor | simple | 10 | Phase 0 |
 
 #### Crests and banners
 
@@ -463,7 +507,7 @@ Paintings (data-pack painting variants, no Java): `scroll_fire` Hanging scroll �
 | Block | Purpose | Variants (slice) | Function | Model | Tex | First |
 |---|---|---|---|---|---:|---|
 | **Paper seal tag**<br>`seal_tag` | A paper tag pasted on a wall or door. Decal like a vanilla glow lichen face; the explosive tag is also the thrown item's texture | `seal_tag_seal` Seal 封; `seal_tag_explosive` Explosive tag 起爆 (Beta 2); `seal_tag_ward` Ward 護符 (Beta 2) | decor | simple | 3 | Beta 1 |
-| **Sealed stone door**<br>`sealed_stone_door` | A 3 x 3 stone slab door hung with seal tags (a hidden room's door) | `sealed_stone_door` Stone | story_door (Opens by a quest action, never by hand) | complex | 4 | Beta 1 |
+| **Sealed stone door**<br>`sealed_stone_door` | A 3 x 3 stone slab door hung with seal tags, at the foot of the Rock (a hidden room) | `sealed_stone_door` Stone | story_door (Opens by a quest action, never by hand) | complex | 4 | Beta 1 |
 
 #### Lanterns
 
@@ -490,10 +534,10 @@ Paintings (data-pack painting variants, no Java): `scroll_fire` Hanging scroll �
 | Block | Purpose | Variants (slice) | Function | Model | Tex | First |
 |---|---|---|---|---|---:|---|
 | **Lantern garland**<br>`lantern_garland` | A string of small paper lanterns between poles (axis, sag) | `red_lantern_garland` Red; `mixed_lantern_garland` Red and white | light | simple | 2 | Beta 2 |
-| **Yatai stall**<br>`yatai` | Two-block festival food stall with a roof (part: left, right); the trade is its noren | `yatai_takoyaki` Takoyaki; `yatai_goldfish` Goldfish scooping; `yatai_masks` Masks; `yatai_candy_apple` Candy apples; `yatai_yakitori` Yakitori (Beta 3) | decor | complex | 11 | Beta 2 |
-| **Goldfish tub**<br>`goldfish_tub` | Tub of goldfish for the scooping game | `goldfish_tub` Blue tub | interact (Festival game) | medium | 2 | Beta 2 |
 | **Mask display**<br>`mask_display` | Board of festival masks | `mask_display` Wood | decor | simple | 1 | Beta 2 |
 | **Taiko drum**<br>`taiko` | Drum on a stand | `taiko` Lacquer | interact (Plays a beat) | medium | 2 | Beta 2 |
+| **Festival stall**<br>`festival_stall` | Yatai: a two-block food stall with a roof (part: left, right); the trade is its noren | `takoyaki_festival_stall` Takoyaki; `candy_apple_festival_stall` Candy apples; `masks_festival_stall` Masks; `yakitori_festival_stall` Yakitori (Beta 3) | decor | complex | 10 | Beta 2 |
+| **Goldfish pool**<br>`goldfish_pool` | Tub of goldfish for the scooping game | `goldfish_pool` Blue tub | interact (Festival game) | medium | 2 | Beta 2 |
 
 #### Shrine
 
@@ -510,40 +554,56 @@ Paintings (data-pack painting variants, no Java): `scroll_fire` Hanging scroll �
 
 | Block | Purpose | Variants (slice) | Function | Model | Tex | First |
 |---|---|---|---|---|---:|---|
-| **Futon**<br>`futon` | Floor bed, two blocks long | `indigo_futon` Indigo; `red_futon` Red; `green_futon` Green; `white_futon` White; `brown_futon` Brown; `pink_futon` Pink | bed (vanilla BedBlock: VF homes count it, sleep clears fatigue) | medium | 13 | Beta 1 |
 | **Zabuton cushion**<br>`zabuton` | Floor cushion to sit on | `indigo_zabuton` Indigo; `red_zabuton` Red; `green_zabuton` Green; `brown_zabuton` Brown; `purple_zabuton` Purple; `cream_zabuton` Cream | seat (VF tavern Seat) | simple | 6 | Beta 1 |
-| **Low table**<br>`low_table` | Chabudai: round or rectangular | `low_table_round` Round, light; `low_table_round_dark` Round, dark; `low_table_long` Long, light; `low_table_long_dark` Long, dark | decor | simple | 4 | Beta 1 |
 | **Kotatsu**<br>`kotatsu` | Heated low table under a quilt | `red_kotatsu` Red; `indigo_kotatsu` Indigo; `green_kotatsu` Green; `brown_kotatsu` Brown | seat (VF Seat on all four sides) | medium | 9 | Beta 2 |
-| **Tansu chest**<br>`tansu` | Wooden chest of drawers with iron fittings | `tansu` Light; `dark_tansu` Dark; `step_tansu` Step tansu | container (vanilla chest inventory (27 slots)) | medium | 9 | Beta 1 |
-| **Scroll shelf**<br>`scroll_shelf` | Shelves of rolled scrolls | `scroll_shelf` Open shelf; `scroll_shelf_pigeonhole` Pigeonhole rack; `scroll_shelf_archive` Archive boxes | decor | medium | 6 | Beta 1 |
-| **Andon lamp**<br>`andon` | Paper floor lamp | `andon` Cream paper; `red_andon` Red paper | light | medium | 4 | Beta 1 |
-| **Byobu screen**<br>`byobu` | Folding screen, two blocks wide | `byobu` Plain; `byobu_gold` Gold clouds (Beta 2); `byobu_pine` Pine (Beta 2); `byobu_crane` Cranes (Beta 2) | decor | medium | 8 | Beta 1 |
-| **Bonsai**<br>`bonsai` | A potted bonsai tree | `pine_bonsai` Pine; `maple_bonsai` Maple | decor | medium | 4 | Beta 1 |
-| **Weapon rack**<br>`weapon_rack` | Standing rack that shows the tools placed on it | `weapon_rack` Empty; `weapon_rack_kunai` Kunai and shuriken; `weapon_rack_sword` Swords (Beta 2); `weapon_rack_staff` Staffs (Beta 2) | display (Block entity with 4 item slots, rendered) | complex | 6 | Beta 1 |
 | **Pet bed**<br>`pet_bed` | A round bed for a pup or a cat | `red_pet_bed` Red; `blue_pet_bed` Blue; `green_pet_bed` Green | pet_bed (VF Pets sleep spot) | simple | 4 | Beta 1 |
 | **Shoe cabinet**<br>`getabako` | The low shoe cabinet at a home's entry | `getabako` Wood | container | simple | 2 | Beta 1 |
 | **Tea set**<br>`tea_set` | Teapot and cups on a tray, placed on a table | `tea_set` Clay | decor | simple | 1 | Beta 1 |
 | **Shogi board**<br>`shogi_board` | A shogi board on legs, pieces set | `shogi_board` Kaya wood | decor | simple | 2 | Beta 1 |
 | **Hibachi brazier**<br>`hibachi` | Ceramic charcoal brazier | `hibachi` Ceramic | light | medium | 2 | Beta 2 |
 | **Wooden bath**<br>`ofuro` | Square hinoki bath tub | `ofuro` Hinoki | seat (VF Seat (soak)) | medium | 2 | Beta 2 |
-| **Easel**<br>`easel` | A painter's easel with a canvas | `easel` Wood | decor | medium | 2 | Beta 2 |
 | **Bedroll**<br>`bedroll` | A camping bedroll for the forest nights | `green_bedroll` Green; `brown_bedroll` Brown | bed (BedBlock that is removed on waking) | simple | 2 | Beta 3 |
+| **Futon**<br>`futon` | Floor bed, two blocks long | 7: Indigo, Red, Green, White, Brown, Pink, Deluxe, thick quilt | bed (vanilla BedBlock: VF homes count it, sleep clears fatigue) | medium | 15 | Beta 1 |
+| **Low table**<br>`low_table` | Chabudai | `low_table` Round, light; `dark_low_table` Round, dark; `long_low_table` Long, light | decor | simple | 3 | Beta 1 |
+| **Low desk**<br>`low_desk` | A floor desk for study | `low_desk` Wood | decor | simple | 2 | Beta 1 |
+| **Zaisu**<br>`zaisu` | Legless floor chair | `zaisu` Wood and cushion | seat (VF Seat) | simple | 2 | Beta 1 |
+| **Rug**<br>`rug` | A woven floor rug, carpet-thin | `indigo_rug` Indigo; `red_rug` Red; `green_rug` Green; `cream_rug` Cream | decor | simple | 4 | Beta 1 |
+| **Folding screen**<br>`folding_screen` | Byobu, two blocks wide | `folding_screen` Plain; `gold_folding_screen` Gold clouds (Beta 2); `pine_folding_screen` Pine (Beta 2); `crane_folding_screen` Cranes (Beta 2) | decor | medium | 8 | Beta 1 |
+| **Scroll shelf**<br>`scroll_shelf` | Shelves of rolled scrolls; 9 slots | `scroll_shelf` Open shelf; `archive_scroll_shelf` Archive boxes (library) | container (9-slot inventory) | medium | 4 | Beta 1 |
+| **Tansu chest**<br>`tansu_chest` | Chest of drawers with iron fittings; 27 slots | `tansu_chest` Light; `dark_tansu_chest` Dark; `step_tansu` Step tansu, climbable | container (27-slot inventory) | medium | 9 | Beta 1 |
+| **Bookcase**<br>`bookcase` | A tall bookcase; 18 slots | `bookcase` Wood | container | simple | 2 | Beta 1 |
+| **Wardrobe cabinet**<br>`wardrobe_cabinet` | Opens the wardrobe (outfits you own) | `wardrobe_cabinet` Wood | interact (Wardrobe screen by Items) | medium | 2 | Beta 1 |
+| **Dresser with mirror**<br>`dresser_mirror` | Kyodai mirror stand | `dresser_mirror` Lacquer | decor | medium | 2 | Beta 1 |
+| **Andon lamp**<br>`andon_lamp` | Paper floor lamp | `andon_lamp` Cream paper; `red_andon_lamp` Red paper | light | medium | 4 | Beta 1 |
+| **Potted bonsai**<br>`potted_bonsai` | A bonsai tree in a tray | `potted_bonsai` Pine; `maple_potted_bonsai` Maple | decor | medium | 4 | Beta 1 |
+| **Bamboo vase**<br>`bamboo_vase` | A cut-bamboo vase with a stem | `bamboo_vase` Bamboo | decor | simple | 1 | Beta 1 |
+| **Ikebana**<br>`ikebana` | A flower arrangement in a low dish | `ikebana` Seasonal | decor | simple | 1 | Beta 1 |
+| **Hanging scroll**<br>`hanging_scroll` | Kakejiku, one wide and two tall. Was planned as painting variants; a block so furnish mode places it | `hanging_scroll_fire` 火; `hanging_scroll_shinobi` 忍; `hanging_scroll_harmony` 和; `hanging_scroll_landscape` Landscape; `hanging_scroll_crane` Crane; `hanging_scroll_leaf` Hidden Leaf | decor | simple | 12 | Beta 1 |
+| **Poster**<br>`poster` | A printed poster or a framed painting, 1 x 1 or 2 x 2 | `poster_academy` Academy; `poster_festival` Leaf Festival (Beta 2); `poster_wanted` Wanted (Beta 2); `poster_exams` Chunin Exams (Beta 3); `poster_village` A painting of the village; `poster_lake` A painting of the lake (Beta 2) | decor | simple | 12 | Beta 1 |
+| **Wall clock**<br>`wall_clock` | A pendulum wall clock | `wall_clock` Wood | decor | medium | 2 | Beta 1 |
+| **Calendar scroll**<br>`calendar_scroll` | A wall calendar showing the season and day | `calendar_scroll` Paper | interact (Shows VF Calendar) | simple | 1 | Beta 1 |
+| **Wind chime**<br>`wind_chime` | Furin glass chime | `wind_chime` Glass | decor | simple | 1 | Beta 2 |
+| **Mailbox**<br>`mailbox` | A home's letter box by the door | `mailbox` Wood | interact (Letters by Items) | simple | 2 | Beta 1 |
+| **Kamidana**<br>`kamidana` | A small household shrine shelf | `kamidana` Wood | decor | medium | 2 | Beta 1 |
+| **Memorial altar**<br>`memorial_altar` | Butsudan, a family memorial cabinet | `memorial_altar` Lacquer | decor | medium | 2 | Beta 1 |
+| **Incense burner**<br>`incense_burner` | Bronze burner with a curl of smoke | `incense_burner` Bronze | decor | simple | 1 | Beta 1 |
+| **Weapon rack**<br>`weapon_rack` | Standing rack showing up to 4 tools | `weapon_rack` Wood | display (Block entity, 4 slots, rendered) | complex | 2 | Beta 1 |
+| **Pet bowl**<br>`pet_bowl` | Food and water bowls | `pet_bowl` Ceramic | interact (VF Pets feeding) | simple | 1 | Beta 1 |
+| **Cat tower**<br>`cat_tower` | Posts and perches for a cat | `cat_tower` Wood and rope | decor | medium | 2 | Beta 1 |
+| **Goldfish bowl**<br>`goldfish_bowl` | A glass bowl with a goldfish | `goldfish_bowl` Glass | decor | medium | 1 | Beta 2 |
+| **Go board**<br>`go_board` | A go board on legs | `go_board` Kaya wood | decor | simple | 2 | Beta 1 |
+| **Moving crate**<br>`moving_crate` | Packs furniture and chests with their contents for a move | `moving_crate` Wood | container (Keeps contents as an item) | simple | 1 | Later |
 
 #### Training
 
 | Block | Purpose | Variants (slice) | Function | Model | Tex | First |
 |---|---|---|---|---|---:|---|
 | **Training dummy**<br>`training_dummy` | Straw dummy on a post | `training_dummy` Straw | target (Combat hit counter) | medium | 2 | Beta 1 |
-| **Target post**<br>`target_post` | Ring target on a post, or on a wall board; shows stuck kunai (hits 0 to 3) | `target_post` Post; `target_post_board` Wall board | target (Combat hit target) | medium | 4 | Beta 1 |
 | **Training log**<br>`training_log` | A rope-bound stump or a tall log for strikes | `training_log_stump` Stump; `training_log_tall` Tall log | target | simple | 4 | Beta 1 |
 | **Climb marks**<br>`kunai_mark` | Kunai cut marks on a trunk, for tree walking | `kunai_mark` Cut | decor | simple | 1 | Beta 2 |
 | **Memorial stone**<br>`memorial_stone` | The polished kunai-shaped memorial stone, three blocks tall (part). Engraved names as a texture; check its shape and size against the art | `memorial_stone` Polished stone | decor | complex | 3 | Beta 2 |
-
-#### Keepsakes
-
-| Block | Purpose | Variants (slice) | Function | Model | Tex | First |
-|---|---|---|---|---|---:|---|
-| **Keepsakes**<br>`keepsake` | Small display pieces earned from quests, placed in the apartment. One block id per keepsake; the bond keepsakes reuse paintings and these models. Final list follows SIDE_QUESTS.md | 33: Framed ladle, Cat figurine, Race Ribbon, Ferry Lantern, Lake Lantern, Beetle Jar, Price War Cup, Post Plaque, Senju welcome keepsake, Uzumaki welcome keepsake, Uchiha welcome keepsake, Hyuga welcome keepsake, Nara welcome keepsake, Akimichi welcome keepsake, Yamanaka welcome keepsake, Inuzuka welcome keepsake, Sarutobi welcome keepsake, Aburame welcome keepsake, Hatake welcome keepsake, Kurama welcome keepsake, Shimura welcome keepsake, Yuhi welcome keepsake, Gekko welcome keepsake, Shiranui welcome keepsake, Morino welcome keepsake, Umino welcome keepsake, Haruno welcome keepsake, Namiashi welcome keepsake, Hagane welcome keepsake, Kinoshita welcome keepsake, Tsuchigumo welcome keepsake, Suzuran welcome keepsake, Tobari welcome keepsake | decor | simple | 33 | Beta 1 |
+| **Target board**<br>`target_board` | Wall-mounted ring target that shows stuck kunai | `target_board` Wood | target (Combat hit target) | medium | 1 | Beta 1 |
+| **Target post**<br>`target_post` | Ring target on a post | `target_post` Wood | target (Combat hit target) | medium | 2 | Beta 1 |
 
 #### Academy, Residence, hospital, stadium
 
@@ -569,24 +629,32 @@ Paintings (data-pack painting variants, no Java): `scroll_fire` Hanging scroll �
 
 | Block | Purpose | Variants (slice) | Function | Model | Tex | First |
 |---|---|---|---|---|---:|---|
-| **Shop counter**<br>`shop_counter` | Counter with an open shelf on the shop side (part: straight, end) | `shop_counter` Light; `dark_shop_counter` Dark | decor | simple | 4 | Beta 1 |
 | **Ramen counter**<br>`ramen_counter` | The ramen stand's lacquered bar counter (part: straight, end) | `ramen_counter` Lacquer and wood | decor | medium | 3 | Beta 1 |
 | **Ramen stool**<br>`ramen_stool` | Round stool at the counter | `ramen_stool` Red top | seat (VF tavern Seat) | simple | 1 | Beta 1 |
-| **Ramen kitchen**<br>`ramen_kitchen` | Stock pot on a burner, and the noodle station | `ramen_kitchen_stockpot` Stock pot; `ramen_kitchen_noodles` Noodle station | station (VF tavern kitchen anchor; Hearth & Harvest cooking) | medium | 4 | Beta 1 |
-| **Tea house bench**<br>`tea_bench` | Bench with a red felt cloth | `tea_bench` Red felt | seat (VF Seat) | simple | 2 | Beta 1 |
-| **Wagasa parasol**<br>`wagasa` | Large paper parasol over a bench, two blocks tall | `red_wagasa` Red; `indigo_wagasa` Indigo (Beta 2) | decor | medium | 4 | Beta 1 |
-| **Dango stand**<br>`dango_stand` | Display of skewered dango | `dango_stand` Wood | decor | simple | 1 | Beta 2 |
-| **Produce crate**<br>`produce_crate` | Shallow display crate of goods | `produce_crate_cabbage` Cabbages; `produce_crate_daikon` Daikon; `produce_crate_apples` Apples; `produce_crate_fish` Fish on ice; `produce_crate_rice` Rice sacks; `produce_crate_mushrooms` Mushrooms (Beta 2) | decor | simple | 7 | Beta 1 |
-| **Flower bucket**<br>`flower_bucket` | A bucket of cut flowers | `flower_bucket_mixed` Mixed; `flower_bucket_red` Red; `flower_bucket_white` White; `flower_bucket_purple` Purple | decor | simple | 5 | Beta 1 |
-| **Barbecue table**<br>`yakiniku_grill` | A table with a sunken grill | `yakiniku_grill` Wood | station (VF Seat around; Hearth & Harvest grill) | medium | 3 | Beta 2 |
-| **Clothes rack**<br>`clothes_rack` | Garments on a rack | `clothes_rack_shinobi` Shinobi wear; `clothes_rack_kimono` Kimono; `clothes_rack_yukata` Yukata | decor | medium | 4 | Beta 2 |
-
-#### Crafting stations
-
-| Block | Purpose | Variants (slice) | Function | Model | Tex | First |
-|---|---|---|---|---|---:|---|
-| **Shinobi workbench**<br>`workbench` | The crafting station for tags, smoke bombs and furniture | `workbench` Wood | workstation (VF tools/workstations pattern) | complex | 4 | Beta 1 |
-| **Forge**<br>`forge` | Smithy hearth with bellows, two blocks wide; the small one fits an apartment | `forge` Smithy; `small_forge` Small | workstation (VF tools/workstations pattern) | complex | 8 | Beta 2 |
+| **Shop counter**<br>`shop_counter` | Straight and corner; the keeper stands behind; right-click opens the shop | `shop_counter` Shop counter | interact (Shop screen by Items) | simple | 2 | Beta 1 |
+| **Menu board**<br>`menu_board` | Right-click shows prices | `menu_board` Menu board | interact (Prices by Items) | simple | 2 | Beta 1 |
+| **Noodle kitchen**<br>`noodle_kitchen` | The ramen stand's stock pot and noodle station, with steam | `noodle_kitchen` Noodle kitchen | station (VF tavern kitchen anchor) | medium | 3 | Beta 1 |
+| **Rice sack pile**<br>`rice_sack_pile` | Stacked rice sacks | `rice_sack_pile` Rice sack pile | decor | simple | 1 | Beta 1 |
+| **Market stall**<br>`market_stall` | A stall counter with a cloth canopy (two blocks) | `market_stall` Market stall | decor | medium | 3 | Beta 1 |
+| **Dango grill**<br>`dango_grill` | Charcoal grill with skewers | `dango_grill` Dango grill | decor | medium | 2 | Beta 2 |
+| **Red-cloth bench**<br>`bench_red_cloth` | Tea house bench with a red felt cloth | `bench_red_cloth` Red-cloth bench | seat (VF Seat) | simple | 2 | Beta 1 |
+| **Parasol**<br>`parasol` | Wagasa over a bench, two blocks tall | `parasol` Parasol | decor | medium | 2 | Beta 1 |
+| **Tea counter**<br>`tea_counter` | The tea house's serving counter with kettles | `tea_counter` Tea counter | decor | medium | 2 | Beta 1 |
+| **Barbecue table**<br>`barbecue_table` | Sunken grill, seats on both sides | `barbecue_table` Barbecue table | seat (VF Seat both sides) | medium | 3 | Beta 2 |
+| **Bench**<br>`bench_seat` | Plain wooden bench | `bench_seat` Bench | seat (VF Seat) | simple | 1 | Beta 1 |
+| **Catalogue lectern**<br>`catalogue_lectern` | The furniture shop's order book | `catalogue_lectern` Catalogue lectern | interact (Shop screen by Items) | simple | 2 | Beta 1 |
+| **Lumber rack**<br>`lumber_rack` | Planks and beams on a rack (Kinoshita yard) | `lumber_rack` Lumber rack | decor | simple | 1 | Beta 2 |
+| **Fitting screen**<br>`fitting_screen` | The tailor's changing screen | `fitting_screen` Fitting screen | decor | simple | 1 | Beta 2 |
+| **Pawn counter grille**<br>`pawn_counter_grille` | The pawn shop's grilled window; opens the pawn screen | `pawn_counter_grille` Pawn counter grille | interact (Pawn screen by Items) | medium | 2 | Beta 2 |
+| **Bath counter**<br>`bath_counter` | The bath house's raised attendant's booth | `bath_counter` Bath counter | decor | medium | 2 | Beta 2 |
+| **Locker shelf**<br>`locker_shelf` | Baskets for clothes at the bath house | `locker_shelf` Locker shelf | decor | simple | 1 | Beta 2 |
+| **Wash stool**<br>`wash_stool` | Low wooden stool by the taps | `wash_stool` Wash stool | seat (VF Seat) | simple | 1 | Beta 2 |
+| **Medicine drawer wall**<br>`medicine_drawer_wall` | A wall of small herb drawers | `medicine_drawer_wall` Medicine drawer wall | decor | simple | 1 | Beta 1 |
+| **Herb drying rack**<br>`herb_drying_rack` | Bundles of herbs on a rack (Suzuran, the pharmacy) | `herb_drying_rack` Herb drying rack | decor | simple | 2 | Beta 1 |
+| **Hospital counter**<br>`hospital_counter` | Reception and dispensary counter | `hospital_counter` Hospital counter | interact (Dispensary by Items) | simple | 2 | Beta 1 |
+| **Senbei grill**<br>`cracker_grill` | Rice cracker grill | `cracker_grill` Senbei grill | decor | medium | 2 | Beta 2 |
+| **Target game booth**<br>`target_game_booth` | The festival throwing game | `target_game_booth` Target game booth | interact (Festival game) | medium | 2 | Beta 2 |
+| **Arranging table**<br>`arranging_table` | The flower shop's work table | `arranging_table` Arranging table | decor | simple | 2 | Beta 1 |
 
 #### Gardens
 
@@ -600,9 +668,53 @@ Paintings (data-pack painting variants, no Java): `scroll_fire` Hanging scroll �
 | Block | Purpose | Variants (slice) | Function | Model | Tex | First |
 |---|---|---|---|---|---:|---|
 | **Sealing mask**<br>`sealing_mask` | A wall-hung mask of the Uzumaki hall | `sealing_mask_fox` Fox; `sealing_mask_demon` Demon; `sealing_mask_elder` Elder | decor | medium | 3 | Beta 2 |
-| **Herb drying rack**<br>`drying_rack` | Bundles of herbs drying on a rack (Suzuran) | `drying_rack` Herbs | decor | simple | 2 | Beta 2 |
 | **Insect jar**<br>`insect_jar` | Glass jars of insects (Aburame) | `insect_jar_beetle` Beetles; `insect_jar_firefly` Fireflies | decor | simple | 2 | Beta 2 |
 | **Sawhorse**<br>`sawhorse` | Carpenter's sawhorse with a plank (Kinoshita) | `sawhorse` Wood | decor | simple | 1 | Beta 2 |
+
+#### Crafting stations
+
+| Block | Purpose | Variants (slice) | Function | Model | Tex | First |
+|---|---|---|---|---|---:|---|
+| **Shinobi workbench**<br>`workbench` | Crafting station for tags, smoke bombs and furniture (Academy workshop, Kinoshita yard, homes) | `workbench` Wood | workstation (VF tools/workstations pattern; screen by Items) | complex | 4 | Beta 1 |
+| **Forge**<br>`forge` | The smithy's hearth with bellows, two blocks wide, glows; and the home forge with its anvil in one block | `forge` Smithy hearth; `small_forge` Home forge and anvil (Beta 2) | workstation (Screen by Items) | complex | 8 | Beta 1 |
+| **Smithy anvil**<br>`anvil` | The weapon shop's anvil, where the smithing screen opens | `anvil` Iron on a stump | workstation (Screen by Items) | medium | 2 | Beta 1 |
+| **Whetstone wheel**<br>`whetstone_wheel` | Treadle whetstone for repair and sharpening | `whetstone_wheel` Stone and wood | workstation (Screen by Items) | medium | 2 | Beta 1 |
+| **Quench trough**<br>`quench_trough` | Water trough by the forge | `quench_trough` Wood | decor | simple | 1 | Beta 1 |
+| **Apothecary table**<br>`apothecary_table` | Mortar, scales and jars: pills and poultices (pharmacy, hospital herb room, homes) | `apothecary_table` Wood | workstation (Screen by Items) | medium | 3 | Beta 1 |
+| **Sealing desk**<br>`sealing_desk` | A low desk with brush, ink and tag paper for seals (homes) | `sealing_desk` Wood | workstation (Screen by Items) | medium | 2 | Beta 2 |
+| **Calligraphy desk**<br>`calligraphy_desk` | The scroll shop's public sealing desk | `calligraphy_desk` Lacquer | workstation (Screen by Items) | medium | 2 | Beta 2 |
+| **Tailor's table**<br>`tailor_table` | Cutting table with cloth and shears (tailor, homes) | `tailor_table` Wood | workstation (Screen by Items) | medium | 2 | Beta 2 |
+
+#### Displays (item-rendering)
+
+| Block | Purpose | Variants (slice) | Function | Model | Tex | First |
+|---|---|---|---|---|---:|---|
+| **Keepsake stand**<br>`keepsake` | A small stand that shows one of the 40 keepsakes | `keepsake` Keepsake stand | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **Display shelf**<br>`display_shelf` | Home shelf showing 6 items | `display_shelf` Display shelf | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **Goods shelf**<br>`goods_shelf` | Shop shelving | `goods_shelf` Goods shelf | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **General store shelf**<br>`general_store_shelf` | Tall store shelving | `general_store_shelf` General store shelf | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **Crate display**<br>`crate_display` | Stacked crates of goods | `crate_display` Crate display | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Produce crate**<br>`produce_crate_display` | Tilted crate of vegetables or fruit | `produce_crate_display` Produce crate | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Fish on ice**<br>`fish_ice_display` | The fishmonger's ice tray | `fish_ice_display` Fish on ice | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Glass case**<br>`glass_case` | Counter-height glass case | `glass_case` Glass case | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **Weapon display wall**<br>`weapon_display_wall` | Wall board of blades and tools | `weapon_display_wall` Weapon display wall | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 1 |
+| **Pouch hooks**<br>`pouch_hooks` | Hooks of pouches and holsters | `pouch_hooks` Pouch hooks | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Scroll rack**<br>`scroll_rack` | Pigeonholes of scrolls | `scroll_rack` Scroll rack | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
+| **Scroll display case**<br>`scroll_display_case` | A glass case for rare scrolls | `scroll_display_case` Scroll display case | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 2 |
+| **Flower bucket stand**<br>`flower_bucket_stand` | Tiered buckets of cut flowers | `flower_bucket_stand` Flower bucket stand | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Flower pot tiers**<br>`flower_pot_tiers` | Stepped shelf of potted plants | `flower_pot_tiers` Flower pot tiers | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Showroom plinth**<br>`showroom_plinth` | Shows one furniture piece in the showroom | `showroom_plinth` Showroom plinth | display (Item display block entity (one renderer for all)) | complex | 2 | Beta 1 |
+| **Bolt shelf**<br>`bolt_shelf` | Bolts of cloth | `bolt_shelf` Bolt shelf | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
+| **Mannequin**<br>`mannequin` | Wears one wardrobe outfit on the resident model | `mannequin` Mannequin | display (Item display block entity (one renderer for all)) | complex | 2 | Beta 2 |
+| **Curio shelf**<br>`curio_shelf` | The pawn shop's shelf of oddments | `curio_shelf` Curio shelf | display (Item display block entity (one renderer for all)) | medium | 2 | Beta 2 |
+| **Tall bookshelf**<br>`bookshelf_tall` | Bookshop shelving | `bookshelf_tall` Tall bookshelf | display (Item display block entity (one renderer for all)) | simple | 2 | Later |
+| **Book table**<br>`book_display_table` | A table of books face up | `book_display_table` Book table | display (Item display block entity (one renderer for all)) | simple | 2 | Later |
+| **Pet supply shelf**<br>`pet_supply_shelf` | The clinic's shelf | `pet_supply_shelf` Pet supply shelf | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Metal stock rack**<br>`metal_stock_rack` | Bars and blanks at the metalworks | `metal_stock_rack` Metal stock rack | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
+| **Charm stall**<br>`charm_stall` | Shrine charms and fortunes | `charm_stall` Charm stall | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Paint display**<br>`paint_display` | Paints and brushes at the studio | `paint_display` Paint display | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
+| **Jar shelf**<br>`jar_shelf` | Jars of herbs and medicines | `jar_shelf` Jar shelf | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 1 |
+| **Prize shelf**<br>`prize_shelf` | Festival game prizes | `prize_shelf` Prize shelf | display (Item display block entity (one renderer for all)) | simple | 2 | Beta 2 |
 <!-- /gen:block-table -->
 
 ## 5. Process
@@ -674,7 +786,7 @@ recommended path is agent drafts and your finishing.
 This branch holds the first working slice of the pipeline, to calibrate the estimate and show the
 look.
 
-- **Blocks** (`tools/konoha/blocks.py`, `pixels.py`): 10 blocks, 21 with variants, 50 textures, 32
+- **Blocks** (`tools/konoha/blocks.py`, `pixels.py`): 11 blocks (the noren count as two: plain and shop), 21 with variants, 50 textures, 32
   models: `shoji_screen`, `tatami`, `paper_lantern`, `stone_lantern`, `noren`, `water_tank`,
   `kawara_ridge`, `utility_pole` and `power_wire`, `awning`. Compiled into
   `src/main/resources/assets/narutominecraft/{blockstates,models/block/konoha,textures/block/konoha,items}`.
@@ -730,12 +842,12 @@ from it, with margin for in-game fixes the renders cannot show:
 
 | Work | Phase 0 | Beta 1 | Beta 2 | Beta 3 | Later | Total |
 |---|---:|---:|---:|---:|---:|---:|
-| Block models and textures (94 blocks left, 322 variants, 530 textures) | 0.5 | 7 | 4 | 1 | 0.5 | **13** |
-| Java registration and block behaviour | 2 | 4 | 3 | 1 | — | **10** |
+| Block models and textures (162 blocks left, 352 variants, 620 textures) | 0.5 | 12 | 6 | 1 | 1 | **20.5** |
+| Java registration and block behaviour (the display block entity, seats, beds, containers, station hooks for Items' screens) | 2 | 6 | 4 | 1 | — | **13** |
 | Design programs (27 left) and `roads.py`, `sweep.py`, `rock_faces.py` | 1.5 | 7 | 2.5 | 3 | — | **14** |
 | Paste tooling, `layout.py`, layout files | 6 | 3 | 2 | 1 | 2 | **14** |
 | One-off landmark drafts | — | 12 | 5.5 | 4 | 6 | **27.5** |
-| **Total** | **10** | **33** | **17** | **10** | **8.5** | **~78** (~155 h) |
+| **Total** | **10** | **40** | **20** | **10** | **9** | **~89** (~180 h) |
 
 ### Your hours
 
