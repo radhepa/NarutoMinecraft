@@ -1,0 +1,102 @@
+{
+  "id": "bg020_dungaree_shorts",
+  "kind": "bottom",
+  "name": "Dungaree Shorts",
+  "gender": "unisex",
+  "texture": "bottoms/bg020_dungaree_shorts.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_roll",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "hammer_loop",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.1,
+        0.6,
+        -0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "tg020_dungaree_bib",
+  "description": "Dungaree knee shorts with a rolled hem, side buttons and a hammer loop."
+}

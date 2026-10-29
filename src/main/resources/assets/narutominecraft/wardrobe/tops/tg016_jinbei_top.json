@@ -1,0 +1,88 @@
+{
+  "id": "tg016_jinbei_top",
+  "kind": "top",
+  "name": "Jinbei Top",
+  "gender": "unisex",
+  "texture": "tops/tg016_jinbei_top.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi",
+    "wrap"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tie_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        6.0,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        12
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front",
+      "scale": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    {
+      "id": "tie_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5999999999999999,
+        6.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "motion": "flap_front",
+      "scale": [
+        0.5,
+        1,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Summer wrap top piped along the crossing edge and tied at the side, straight short sleeves."
+}

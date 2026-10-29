@@ -1,0 +1,16 @@
+{
+  "id": "bg004_track_pants",
+  "kind": "bottom",
+  "name": "Track Pants",
+  "gender": "unisex",
+  "texture": "bottoms/bg004_track_pants.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Full-length track pants, two stripes down each leg, elastic cuffs and canvas shoes."
+}

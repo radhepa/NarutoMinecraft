@@ -1,0 +1,48 @@
+{
+  "id": "tg008_stand_collar_shirt",
+  "kind": "top",
+  "name": "Stand-Collar Shirt",
+  "gender": "unisex",
+  "texture": "tops/tg008_stand_collar_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Short-sleeved shirt fastened at the side with toggles, a high collar, mesh forearms."
+}

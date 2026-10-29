@@ -1,0 +1,52 @@
+{
+  "id": "tg018_mesh_tank",
+  "kind": "top",
+  "name": "Mesh Tank",
+  "gender": "unisex",
+  "texture": "tops/tg018_mesh_tank.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "back_crest",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.6,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Tank top over a long-sleeved mesh shirt showing at the neck and arms, a leaf on the back."
+}

@@ -1,0 +1,106 @@
+{
+  "id": "tg015_scarf_tee",
+  "kind": "top",
+  "name": "Scarf Tee",
+  "gender": "unisex",
+  "texture": "tops/tg015_scarf_tee.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "scarf",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.8,
+        -2.7
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "scarf_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        0.4,
+        2.6
+      ],
+      "rotation": [
+        18,
+        0,
+        10
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        9,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "scarf_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        0.4,
+        2.6
+      ],
+      "rotation": [
+        18,
+        0,
+        -6
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Plain tee with a long scarf wound round the neck, its two ends streaming out behind."
+}

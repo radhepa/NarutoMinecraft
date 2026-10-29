@@ -1,0 +1,167 @@
+{
+  "id": "bg016_kneepad_pants",
+  "kind": "bottom",
+  "name": "Kneepad Pants",
+  "gender": "unisex",
+  "texture": "bottoms/bg016_kneepad_pants.png",
+  "extrasHeight": 16,
+  "tags": [
+    "genin",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_kneepad",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        4.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_kneepad_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.4,
+        4.8,
+        -2.4
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        9,
+        0
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.98
+      ]
+    },
+    {
+      "id": "left_kneepad",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        4.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "left_kneepad_strap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.4,
+        4.8,
+        -2.4
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.98
+      ]
+    },
+    {
+      "id": "waist_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5,
+        9.4,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ]
+    }
+  ],
+  "description": "Full-length trousers with padded knee guards and short canvas boots."
+}

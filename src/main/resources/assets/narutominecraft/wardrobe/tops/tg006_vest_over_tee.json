@@ -1,0 +1,19 @@
+{
+  "id": "tg006_vest_over_tee",
+  "kind": "top",
+  "name": "Vest Over Tee",
+  "gender": "unisex",
+  "texture": "tops/tg006_vest_over_tee.png",
+  "extrasHeight": 0,
+  "tags": [
+    "genin",
+    "shinobi",
+    "vest"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Open cloth vest with patch pockets over a long-sleeved tee, sleeves pushed to the elbow."
+}
