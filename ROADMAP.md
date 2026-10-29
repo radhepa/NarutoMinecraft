@@ -112,6 +112,7 @@ Jonin.
 | Death | One level lost (never below your rank's floor) and the thrown tools you carry; on a mission, the mission fails. *Default:* no hospital bill. |
 | Difficulty | Forgiving and cinematic by default, and tunable. |
 | Story premise | Orphan rescued by a squad; the Hokage grants an apartment; no block breaking; buy things, earn money, store in chests; sleep each night, or stay up and grow tired and slower. |
+
 ## 3. Where we start
 
 *BUILD (beta).*
@@ -479,6 +480,7 @@ stream(domain, key) = SplitMix64(hash64(saveSeed, domain, key))
 Residents are shipped as **markers** in the map (a resident spot with a home, a job and a role
 tag), not as saved entities. On first load, Shinobi Village spawns each one from its curated
 profile (Classic) or its rolled profile (Varied), so the same world file serves both modes.
+
 ## 6. The map
 
 *BUILD (beta) for the districts each slice needs (see the schedule below); FOUNDATION (later) for the rest of the village, which is laid out now and built after the beta.*
@@ -603,6 +605,7 @@ off (closed gates, streets under repair) or is not built yet.
    touches the others.
 4. The world is finished by hand (terrain, the Rock, the hand-built landmarks), plaques, markers
    and anchors are checked by `layout.py --check`, and the world is zipped as a release asset.
+
 ## 7. Systems in the beta
 
 *BUILD (beta).* Every system the first 15 hours need, and which slice brings it.
@@ -911,6 +914,7 @@ Rank-specific greeting and reaction pools in VF's dialogue bank (`tools/dialogue
 for Academy, Genin and Chunin in the beta; residents get a rank from their outfit's `rank` field;
 superiors get a salute clip, peers a nod, kids an excited wave; gate guards turn you away from
 places above your rank (the Forest of Death outside the exams) by dialogue, not barrier blocks.
+
 ## 8. The beta, chapter by chapter
 
 *BUILD (beta).* Every main chapter of the first 15 hours, with its time on the main path (a
@@ -1007,6 +1011,7 @@ The curated cast of a Classic save (all original). Varied saves roll these roles
 | `role:classmate_c`, `role:classmate_d` | **Aburame Shion** (thoughtful) and **Gekko Ryō** (protective, a kenjutsu prodigy) |
 | `role:rival` | **Uchiha Hikaru**, proud and lonely |
 | `role:merchant_kenta` | **Kenta**, a travelling merchant who keeps hiring the squad |
+
 ## 9. Delivery plan
 
 *BUILD (beta).* Phase 0, then three slices, each a release: the `.mrpack` with every mod pinned,
@@ -1128,6 +1133,7 @@ districts.
 - Tuning happens in data (`ranks.json`, `economy.json`, `life.json`, `difficulty.json`, quests),
   not code, so a balance pass is a datapack update.
 - After Beta 3, the hour budget for the later stretches is revisited with real numbers.
+
 ## 10. Story bible
 
 *FOUNDATION (later).* The whole ~60-hour story, laid out so the beta plants the right seeds and the
@@ -1252,6 +1258,7 @@ it pays off.
 | The sensei's suspicion | Ch 14 | `story.seed.sensei_knows` | Chunin: the sensei trains your fire in secret |
 | Hotaru says "Kagari" | Ch 19 | `story.ch19.kagari_named` | Road to Hokage: Hotaru defects |
 | The Fourth's fall, the Fifth's hard line | Ch 19 to 20 | `world.hokage` | Chunin: the Fifth steps down |
+
 ## 11. Later systems
 
 *FOUNDATION (later).* Systems the later arcs need. Their data shapes are already reserved in
@@ -1385,6 +1392,7 @@ removed when the arc moves on.
 
 New regions (other villages, the lands where Yūgure hides) are datapack regions with their world
 data ([Regions](#regions)). Multiplayer comes after the single-player story ([Multiplayer](#multiplayer-later)).
+
 ## 12. Risks and open questions
 
 *Both.*
