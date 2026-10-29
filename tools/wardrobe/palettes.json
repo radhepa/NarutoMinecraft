@@ -14,5 +14,6 @@
   "GENIN_SCOUT": {"name": "Genin Scout", "P": "#2e8a86", "S": "#ecebe3", "A": "#e2a33a", "L": "#7a6346", "M": "#aab3b9", "K": "#2a3240", "D": "#2d3c60"},
   "BRAWLER": {"name": "Brawler", "P": "#8c2f2f", "S": "#ecebe3", "A": "#d9a441", "L": "#7a6346", "M": "#aab3b9", "K": "#23262f", "D": "#3a3f4c"},
   "KUNOICHI_VIOLET": {"name": "Kunoichi Violet", "P": "#6c4a9a", "S": "#ecebe3", "A": "#e6c35c", "L": "#7a6346", "M": "#aab3b9", "K": "#23262f", "D": "#2d3c60"},
-  "GENIN_TRACKER": {"name": "Genin Tracker", "P": "#8f8460", "S": "#ecebe3", "A": "#b5502d", "L": "#6b5236", "M": "#aab3b9", "K": "#2a2b30", "D": "#3b3f47"}
+  "GENIN_TRACKER": {"name": "Genin Tracker", "P": "#8f8460", "S": "#ecebe3", "A": "#b5502d", "L": "#6b5236", "M": "#aab3b9", "K": "#2a2b30", "D": "#3b3f47"},
+  "SCROLL_BEARER": {"name": "Scroll Bearer", "P": "#3d6a9e", "S": "#ecebe3", "A": "#b23a3a", "L": "#6b5236", "M": "#aab3b9", "K": "#23262f", "D": "#2d3c60"}
 }

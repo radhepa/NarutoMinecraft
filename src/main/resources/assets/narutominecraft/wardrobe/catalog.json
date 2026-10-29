@@ -90,7 +90,8 @@
     "t13_scout_hoodie",
     "t14_brawler_vest",
     "t15_kunoichi_tunic",
-    "t16_tracker_zip_vest"
+    "t16_tracker_zip_vest",
+    "t17_scroll_bearer"
   ],
   "bottoms": [
     "b01_shinobi_trousers",
@@ -398,6 +399,24 @@
       "eye_style": "soft_glint",
       "feminine": false,
       "complexion": 2,
+      "scale": 14,
+      "rank": "genin"
+    },
+    {
+      "id": "genin_scroll",
+      "name": "Genin Scroll Bearer",
+      "tagline": "Blue wrap top with a red obi and a summoning scroll as long as the torso slung across the back",
+      "face": "f01_shinobi",
+      "hair": "h03_uchiha_spikes",
+      "headwear": "w02_forehead_protector",
+      "top": "t17_scroll_bearer",
+      "bottom": "b01_shinobi_trousers",
+      "palette": "SCROLL_BEARER",
+      "hair_color": "HONEY",
+      "eye_color": "SKY",
+      "eye_style": "starlit",
+      "feminine": false,
+      "complexion": 1,
       "scale": 14,
       "rank": "genin"
     }
