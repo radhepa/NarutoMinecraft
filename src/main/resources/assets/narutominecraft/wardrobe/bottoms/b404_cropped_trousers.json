@@ -1,0 +1,75 @@
+{
+  "id": "b404_cropped_trousers",
+  "kind": "bottom",
+  "name": "Cropped Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b404_cropped_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "hyuga",
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_gather",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_gather",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "description": "Loose charcoal trousers banded below the knee, white tabi, straw sandals."
+}
