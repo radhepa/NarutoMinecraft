@@ -9,7 +9,18 @@ Flags are player scope unless they start with `world.`.
 ## Chapter flags
 
 Every main chapter sets `story.ch<N>.done` when it ends (`story.chN1.done` to `story.chN7.done` for
-the Night Watch). Gates in the character briefs use them ("never before `story.ch36.done`").
+the Night Watch; `story.ch51a.done` and `story.ch51b.done` for the two halves of the war; Ch 51 is
+done when both are). Gates in the character briefs use them ("never before `story.ch36.done`").
+
+## Gates that order the chapters
+
+| Gate | Condition |
+|---|---|
+| Night Watch N1 to N2 | Level 35, `story.ch39.done`, no bad deed in the last season |
+| Night Watch N3 onward | `story.ch44.done` |
+| Ch 47 | The Night Watch finished (`story.chN7.done`) or declined or never offered; entering Ch 47 with the branch half played closes it through Ch 47 |
+| Ch 49 | Level 47 |
+| Ch 55.1 | Level 50, Hero standing with the village, Good Neighbor in every district and clan quarter (the Ch 51 defence counts as a great deed everywhere) |
 
 ## Twist slots (bound at world creation)
 
@@ -70,8 +81,8 @@ the Night Watch). Gates in the character briefs use them ("never before `story.c
 | `story.kindling.awakened` | Ch 24.5 | Kindling Bond everywhere |
 | `story.clue.slip.heard` | Ch 25.1 | Ch 38 |
 | `story.lineage.hint` | Ch 25.3 | Ch 48 |
-| `story.teammate_b.path` (`stayed`, `nearly`, `left`) | Ch 26 | Ch 32, 51 |
-| `story.teammate_b.parent_alive` | Ch 26 | Ch 51 |
+| `story.teammate_b.path` (`stayed`, `nearly`, `left`) | Ch 26 | Ch 32, 51a |
+| `story.teammate_b.parent_alive` | Ch 26 | Ch 51a |
 | `story.seed.candle` | Ch 27.3 | Ch 49 |
 | `story.seed.porter_ledger` | Ch 28.5 | Ch 49, 50 |
 | `story.seed.genin_flame` | Ch 34.3 | N5, Ch 44 |
@@ -79,23 +90,38 @@ the Night Watch). Gates in the character briefs use them ("never before `story.c
 | `story.archive.opened` | Ch 36 | Ch 46 |
 | `story.accused` | Ch 38.6 | Ch 39, 40 |
 | `story.suspected.<candidate>` | Ch 5 and later accusations | Ch 40 |
-| `story.traitor.fate` (`arrested`, `turned`) | Ch 39.2 | Ch 50, 51, 55 |
+| `story.traitor.fate` (`arrested`, `turned`) | Ch 39.2 | Ch 50, 51a, 55 |
 | `story.seed.second_doubts` | Ch 41.4 | Ch 48 |
 | `story.seed.lost_child_breaking` | Ch 44.2 | N3, Ch 47 |
+| `story.squad5_c.stand` (`stood_down`, `fought`) | N6 or Ch 47 | Ch 51a, his file |
 | `story.nightwatch.pretend` | N5 | N6 |
-| `story.nightwatch.undercroft` (`disbanded`, `sworn`, `exposed`) | N7 | Ch 50, 51 |
+| `story.nightwatch.undercroft` (`disbanded`, `sworn`, `exposed`) | N7 | Ch 50, 51a |
 | `story.lost_child.home` (`nightwatch`, `shrine`) | N6 or Ch 47 | Ch 53, 55 |
-| `story.clan.choice` (`kagari`, `own`) | Ch 46 | Ch 50, 55 |
+| `story.clan.choice` (`kagari`, `own`, `rekindled_own`, `enshrined`, `kin_of_host`, `left_host`) | Ch 46 | Ch 50, 55 |
 | `story.hollow_crown.known` | Ch 49 | Ch 50 |
-| `story.array.unbroken` (0 to 81) | Ch 50 | Ch 51 to 53 |
+| `story.array.unbroken` (0 to 81) | Ch 50 | Ch 51a to 53 |
+| `story.cells_cleared` (a counter) | S-ranks between Ch 46 and 48 | Ch 51a (each removes a wave) |
+| `story.trail.count` (a counter) | B-rank trail drops (Chunin) | Ch 27.3 (three or more: an extra line from the second) |
+| `story.merchant.camp_talks` (a counter) | `chain.merchant` camp step (after Ch 14) | The merchant's lines; after Ch 40 the informant chain |
 | `story.finale.reached` | Ch 52.3 | Ch 55 epilogue line |
 | `story.finale.offered_leader` | Ch 53.5 | Ch 54.3 |
 | `story.second.lives` | Ch 53.6 | Ch 54, 55 |
 | `story.traitor.ruling` | Ch 55.3 | Epilogue |
 | `story.suspected.keeper` | Any accusation of the keeper (Ch 4 to 38) | Ch 36 (his dry line) |
 | `story.lost_child.family_known` | Ch 38 (the decoded list names her family) | Her file; Ch 47, 55 |
-| `bond_flag parent_sorry` on `yugure_b_parent` | Ch 51.3 (when `ans.teammate_b.ask = sorry` and the parent apologises) | Ch 51.3 branch |
-| `story.second.lives` also by `friendship [squad4_c, 6]` | Ch 53.6 | Ch 54, 55 |
+| `bond_flag parent_sorry` on `yugure_b_parent` | Ch 51a.4 (when `ans.teammate_b.ask = sorry` and the parent apologises) | Ch 51a.4 branch |
+| `story.second.lives` also by `friendship [squad4_c, 6]` with `ans.squad4_c.second` not "someone else first" | Ch 53.6 | Ch 54, 55 |
+
+## Acts the story asks of the bond engine
+
+| Act | What it is | Used in |
+|---|---|---|
+| `offered_flame` | A person (or a clan or district, by standing) below level 6 freely offers their flame; the only way someone under Spark kindles toward the player | Ch 31.2, Ch 53.2 (clans and districts), the red cord |
+| `gave_flame` | The player relit someone's flame (big, kept) | N6, Ch 47 |
+| `shielded_with_life` | Someone took the dark mirror for the player (big, kept) | Ch 52.4 |
+
+**Story floor.** A scripted gift scene treats its scripted target as at the tier it needs (Ch 24:
+Spark; Ch 31: Flame), whatever the level.
 
 ## Tokens the story needs
 
@@ -113,5 +139,13 @@ answers to one character (how you describe the Leaf, your ramen order, your spee
 Every `ans.*` flag must be read at least once after it is set (a callback line, a branch, or an
 epilogue line). `quests.py --check` treats `ans.*` like seeds.
 
+**Unset defaults.** Many questions are asked only at a bond level, in a bond quest or in a
+hangout, so a player can reach a scene that reads an answer they were never asked. **Every read of
+an `ans.*` flag in a main-path scene lists an `unset` branch**: a neutral default line that does
+not assume an answer (examples: Ch 51a.4 b asks "Why?" and `come_back` defaults to "only if
+sorry"; Ch 55.3 classmate_d says "Beside you, then."). The arc files and character files give the
+unset line beside each read; `quests.py --check` rejects a main-path read with no `unset` branch.
+
 The full list lives in the character files' "Questions for the player" tables and their "New
-flags" sections; [DIALOGUE_BRIEFS.md](DIALOGUE_BRIEFS.md) collects them by chapter.
+flags" sections. The index by chapter is generated from those tables (`quests.py --questions`);
+[DIALOGUE_BRIEFS.md](DIALOGUE_BRIEFS.md) §4 explains where questions are asked.

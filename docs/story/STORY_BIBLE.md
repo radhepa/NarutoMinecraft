@@ -131,7 +131,7 @@ four are on the Rock at the start; the Fifth and Sixth are fixed carvings placed
 | `instructor` | Classic: yes; Varied: rolled | Ch 0 | Your Academy teacher; believes in everyone; holds the Academy in the war | [instructor](CHARACTERS/instructor.md) |
 | `medic` | Classic: yes; Varied: rolled | Ch 0 | A traitor candidate | [medic](CHARACTERS/medic.md) |
 | `hokage_4` | Yes (man) | Ch 1 | The stipend; his fate rotates | [hokage_4](CHARACTERS/hokage_4.md) |
-| `elder_keeper` | Yes (man) | Ch 1 | Keeper of the archive; a red herring; an ally; dies at the door (Ch 51) | [elder_keeper](CHARACTERS/elder_keeper.md) |
+| `elder_keeper` | Yes (man) | Ch 1 | Keeper of the archive; a red herring; an ally; dies at the door (Ch 51b) | [elder_keeper](CHARACTERS/elder_keeper.md) |
 | `elder_councillor` | Yes (man, Senju) | Ch 1 | A traitor candidate | [elder_councillor](CHARACTERS/elder_councillor.md) |
 | `porter` | Yes (young man) | Ch 1 | The hand, in every save; caught Ch 28 | [porter](CHARACTERS/porter.md) |
 | `librarian` | Yes (woman) | Ch 5 | A Kagari descendant; a traitor candidate; if innocent, trains the gift | [librarian](CHARACTERS/librarian.md) |

@@ -54,11 +54,14 @@ callbacks), for any character. Character briefs add their own.
 | Who your parent is | After Ch 48; no character may say "your parent/mother/father" about the second or `fallen_parent` before it |
 | The porter as the hand | After Ch 28 |
 | teammate_b's parent in Yūgure | After Ch 26 |
-| The Undercroft | After N3 (or never, if the branch is skipped; Ch 50 mentions "the old night unit" only if sworn) |
+| The Undercroft | After N3 (or, if the branch is not played, after Ch 47's orders reach the Seventh; Ch 50 mentions "the old night unit" only if sworn) |
+| The leader's voice through the lost child | Ch 44.3 only ("Grow, little flame. I like your friends.") |
 
 **Rotation gates.** A line that is only true for one bound candidate carries its condition
-(`twist.traitor = medic`). Before Ch 39, no line may differ between rotations except the Ch 25
-slip and the alibi scenes (ROTATIONS §1). Lineage lines that differ (`twist.lineage`) are only
+(`twist.traitor = medic`). Before Ch 39, no line may differ between rotations except the two items
+in ROTATIONS §1, **Allowed divergences**: the Ch 25 slip line and the results of the four alibi
+checks. Every other scene, vote, question, visit, flicker and line is identical in every save; a
+candidate's held-back secret keeps their Thread Sight flicker on until Ch 39 or 40 in every save. Lineage lines that differ (`twist.lineage`) are only
 allowed from Ch 48, except the persimmon on the sill (Ch 27), which shows no giver.
 
 ## 4. Questions for the player
@@ -79,6 +82,13 @@ The user's wish: friendship has questions and choices, and answers matter later.
   player turns it around (a `talk.q.<role>.<topic>.back` line).
 - **Remembered by others too.** Big answers can travel (a teammate tells the other), through the
   bond engine's gossip as a `told` memory, so a third character may quote you.
+- **Unset defaults.** A question may never have been asked (it waited for a level or a bond quest
+  the player skipped). Every read of an `ans.*` flag in a main-path scene has an `unset` line that
+  assumes no answer ([FLAGS.md](FLAGS.md), "Unset defaults"). Write it with the same care: for
+  most players it is the line they hear.
+- **The index by chapter** is generated from the character files' question tables
+  (`quests.py --questions`), so the tables stay the single source of truth. The "when" column of
+  each table is what the index sorts by.
 
 ### Where questions are asked
 

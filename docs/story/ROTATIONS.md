@@ -173,7 +173,7 @@ the list's notation, a failed alibi. The player may also accuse anyone without p
 
 | Accusation | What happens |
 |---|---|
-| **The bound candidate, with proof** | The confrontation (below). The player chooses: **arrest** them openly, or **turn** them (they keep feeding Yūgure, now false news: in Ch 51 one district's array anchors are already broken, and the leader's assault starts an hour late). Turning needs `friendship [bound, 4]` or the candidate's own wish to make amends (librarian, medic) |
+| **The bound candidate, with proof** | The confrontation (below). The player chooses: **arrest** them openly, or **turn** them (they keep feeding Yūgure, now false news: in Ch 50 one district's array anchors are already broken, and in Ch 51a the leader's assault starts an hour late). Turning needs `friendship [bound, 4]` or the candidate's own wish to make amends (librarian, medic) |
 | **The bound candidate, without proof** | They deny it; the keeper refuses to act; two days later they try to run (a chase at the east gate, Ch 39b). Caught: arrested, no turning |
 | **An innocent candidate** | The Sixth detains them on your word. `start_conflict` with them (`went_over_their_head` if you were close). The real voice, alarmed, tries to steal the archive key that night: the chase (Ch 39b). The innocent is freed; an apology quest (`bond.c.wrongly_accused.<candidate>`) can mend it |
 

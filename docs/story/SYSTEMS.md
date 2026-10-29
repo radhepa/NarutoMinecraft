@@ -16,7 +16,7 @@ side quests, clans and combat are part of the story and not filler between it.
 | Jonin | A-rank **cell hunts** in far regions | `mission.a.cell_hunt` (rolled region): captured cell members give pieces of the Hollow Crown's shape (they don't know it; they repeat orders: "Mark the doors. Bring the paper.") that make Ch 49 recognisable |
 | Jonin | Your Genin team's D- and C-ranks | Your own teaching; the genin's bonds; genin_3's flame (`story.seed.genin_flame`) |
 | ANBU | Covert and S-rank | The Undercroft's trail (N2) |
-| Road to Hokage | S-ranks clearing the last cells | Each one cleared before Ch 51 removes a wave from the assault |
+| Road to Hokage | S-ranks clearing the last hearths, between Ch 46 and Ch 48 (`story.cells_cleared`) | Each one cleared removes a wave from the Ch 51a assault |
 
 Mission failure never blocks the story; it costs standing, as in the beta.
 
@@ -87,9 +87,18 @@ The bond engine ([BONDS.md](../../BONDS.md), [LIFE_TOGETHER.md](../../LIFE_TOGET
   injury after Ch 24, b's parent news after Ch 26, the keeper's illness hint before Ch 51), so
   comforting them can earn the moments the gates ask for.
 - **The village talks.** Big beats are deeds everyone hears: the stadium (Ch 19), the border post
-  (Ch 24), the testimony (Ch 31), the council (Ch 40), the war (Ch 51). Residents' greetings react.
+  (Ch 24), the testimony (Ch 31), the council (Ch 40), the war (Ch 51a and 51b). Residents' greetings react.
 
-**Requests (bonds session):** the Kindling tiers read friendship levels as approved (Spark 6, Flame 8, Blaze 10 or a spouse, Bonfire the web); answer flags (`ans.*`) as player-scope string flags, readable by a
+**Request (bonds session), required before Phase 0 builds the gift:** replace BONDS.md §11's table
+(nature casts, technique uses, "borrow", a "borrowed" natures source, a 12-use trial that makes a
+nature yours) with the approved powers in [WORLD.md](WORLD.md#kindling-bond-in-the-story): Thread
+Sight, Kindle, Ember Link, Ember Mark and Bonfire on the tiers Spark 6, Flame 8, Blaze 10 or a
+spouse, Bonfire the web. Natures come by resonance: fighting beside someone often enough lets their
+trial teach you their nature, never a copy. Count `kindle` uses for the resonance trial, not for
+borrowing. Thread Sight's mystery limit (reads only bonds at 6+, shows that someone hides, never
+what) is a rule of the engine, not of the story.
+
+**Other requests (bonds session):** the Kindling tiers read friendship levels as approved (Spark 6, Flame 8, Blaze 10 or a spouse, Bonfire the web); answer flags (`ans.*`) as player-scope string flags, readable by a
 `flag` condition with a value; authored life events for story roles at story beats; an act
 `gave_flame` (big, kept; the lost child's return) and `shielded_with_life` (the second); the
 finale reading each bond at 6+ in a fixed order (spouse, teammates, sensei, rival, others by level).
@@ -99,7 +108,7 @@ finale reading each bond at 6+ in a fixed order (spouse, teammates, sensei, riva
 - **The player is a clanless orphan** (a user decision "for now"; clan-born play may return later). Clans reach the player as hosts and teachers: a lesser technique from the clan of their closest classmate (Ch 12), welcome quests, invitations at high friendship (BONDS §10), and the Legacy steps.
 - **Clan politics in the plot**: the Tobari crisis (Ch 30 to 31) is a clan story told through the
   bond engine's relations (`clan_relation tobari hagane`, moods); the council (Ch 40) moves every
-  founding clan's relation with the village; the Legacy steps decide who stands with you in Ch 51.
+  founding clan's relation with the village; the Legacy steps decide who stands with you in Ch 51a.
 - **Your house**: restored Kagari or your own clan (Ch 46), recruited from descendants and friends.
 
 ## 5. Combat
@@ -109,8 +118,8 @@ not mechanics):
 
 | Need | Where |
 |---|---|
-| **Two-man cell** AI: a pair that covers each other and retreats together | Ch 14 onward |
-| **The blade**: a kenjutsu duellist whose cuts leave short-lived ink lines in the air (area denial) | Ch 14 (one cut), 27, 37, 51 |
+| **Hearth** AI: a cell of three or more in road clothes that covers each other and retreats together; ash-violet scarves when they mean to be seen. The second and the blade are the one pair | Ch 14 onward |
+| **The blade**: a kenjutsu duellist whose cuts leave short-lived ink lines in the air (area denial) | Ch 14 (one cut), 27, 37, 51b |
 | **Ember chakra**: the second's burning kunai and ember palms | Ch 16, 19, 27 |
 | **The hollow**: an enemy with flat AI and several stolen natures (cycles through them), who does not flinch | Ch 24 (the lost child), Ch 52 to 53 (hollow fighters) |
 | **Smothered fights**: no sound cues | Ch 31 |
@@ -118,4 +127,11 @@ not mechanics):
 | **Unison techniques** for the player with each close character (ideas in each character file) | Jonin arc onward |
 | **The dark mirror** as an enemy attack: a drain beam the player must break line of sight from | Ch 52 |
 | **The finale**: a fight where the player's power grows with each flame given (data: the bond web) | Ch 53 |
-| **Protect objectives** with evacuating residents | Ch 19, 51 |
+| **Protect objectives** with evacuating residents | Ch 19, 51a |
+| **The crossing**: Ember Mark jumps between Blaze friends, else a guided rooftop run | Ch 51b |
+
+## 6. The Hokage requirement (wording for the roadmap)
+
+The succession (Ch 55) needs level 50, **Hero standing with the village**, and **at least Good
+Neighbor in every district and clan quarter**; defending the village in the last arc counts as a
+great deed in every community. The roadmap session has the neutral wording for ROADMAP §11.
