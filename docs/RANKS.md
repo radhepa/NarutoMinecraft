@@ -266,7 +266,7 @@ shinobi, Academy students or retired shinobi. `rank_distribution.json` gives the
 | **Residents** | 84 | 45 | 37 | **300** | | |
 
 "Away" means VF's schedule keeps them off the map that day: out of the gate, on a mission. A jonin
-you meet on Monday may be gone until Friday, which makes the village feel like a working military
+you meet on Moonday may be gone until Metalday, which makes the village feel like a working military
 town. Named story characters stay when the story needs them.
 
 ### Met and known in the beta

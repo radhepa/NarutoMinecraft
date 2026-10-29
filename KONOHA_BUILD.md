@@ -340,11 +340,9 @@ Places and rules the dialogue writers invented and the user approved, so the map
 | The main gate closes at dusk | The gate's two states and the guards' shift change (Markers, above) | Beta 1 |
 | Ramen at 8 ryo | Ichiraku's prices are the items session's (8 ryo a bowl, extra chashu 2 more); the map carries the `menu_board` | Beta 1 |
 
-**Weekday names.** Dialogue uses Moonday (the fishmonger's day off; SIDE_QUESTS' council day) and
-also Sunday, Monday, Tuesday, Wednesday, Thursday and Friday. The calendar needs one seven-day list.
-The proposal: the Japanese elemental week, which already contains Moonday and Sunday: Moonday,
-Fireday, Waterday, Woodday, Metalday, Earthday, Sunday. If adopted, the stray Monday to Friday
-lines are renamed. Market Day stays a named day of VF's week (*for the calendar's owner to decide*).
+**Weekday names.** Adopted: the Japanese elemental week, Moonday, Fireday, Waterday, Woodday,
+Metalday, Earthday, Sunday. Moonday is the fishmonger's day off and SIDE_QUESTS' council day, and
+Sunday is VF's Market Day. The mapping from VF's `Routine.weekday` is in DIALOGUE.md §5.
 
 ### Story locations (neutral)
 
