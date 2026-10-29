@@ -1,0 +1,74 @@
+# Questions only a steadfast resident asks: promises, duty, who you can rely on.
+# Axis poles: honesty_vs_kindness (1 honesty, -1 kindness).
+#! tags: personality=steadfast
+
+? q.past.stead_hardest_promise | fn: deepen_bond reveal_character | level: 5
+Q: What's the hardest promise you've ever kept?
+Q: Have you ever kept your word when it cost you?
+- A small one that cost a lot :: The small ones are the true test. Nobody's watching. {values:+honesty +duty} {tone:honest}
+- None that hard yet :: Then you've a clean record. Keep it that way. {values:+honesty} {tone:humble}
+- I'd rather not say :: Fair. A kept promise doesn't need telling. {values:+loyalty} {tone:evasive}
+
+? q.values.stead_duty_or_want | fn: deepen_bond reveal_character | kind: opinion | level: 3
+Q: When duty and what you want pull different ways, which one wins?
+Q: Your duty says one thing, your heart another. Which do you follow?
+- Duty :: Duty. Plain and simple. Not easy, but simple. {values:+duty} {tone:dutiful}
+- What I want :: Hm. Honest, at least. Just be sure you can live with it. {values:+freedom} {tone:free}
+- It depends :: On what's at stake. Fair. I'd say the same, if pressed. {values:+knowledge} {tone:cautious}
+
+? q.values.stead_duty_cost | fn: deepen_bond reveal_character | kind: confession | level: 6 | follows: q.values.stead_duty_or_want | depth: 2
+Q: Has duty ever cost you something you wanted?
+Q: Have you ever given up something you wanted because you'd said you'd do a job?
+- Yes, it did :: I'm sorry. And I'm proud of you. Both can be true. {values:+duty} {tone:honest}
+- Not yet :: It will, one day. When it does, you'll know what you're made of. {values:+honesty} {tone:blunt}
+- And I'd do it again :: That's the steel. You'll make a fine shinobi. {values:+duty +strength} {tone:proud}
+
+? q.pref.stead_routine | fn: deepen_bond reveal_character | level: 2
+Q: Do you keep to the same routine every day?
+Q: Same breakfast, same path, same time? Or different each day?
+- Yes, every day :: Good. Routine is a rope you can hold in the dark. {values:+duty} {tone:dutiful}
+- No, I like variety :: Variety. Fair enough. Keep one thing steady, though. {values:+freedom} {tone:free}
+- Mostly :: Mostly is honest. Most of us are mostly. {values:+honesty} {tone:honest}
+
+? q.dilemma.stead_cover_shift | fn: deepen_bond reveal_character | level: 3
+Q: A friend asks you to cover their shift, but you're exhausted. Do you?
+Q: You're dead on your feet, and a friend needs someone to stand in for them. Yes or no?
+- Yes, I'll do it :: A friend asked. That settles it. Get a strong tea first. {values:+loyalty +duty} {tone:loyal}
+- No, I need rest :: Honest. A tired guard is half a guard. You're right. {values:+honesty} {tone:blunt}
+- I'll find someone else :: Solve it without breaking yourself. Good thinking. {values:+loyalty +knowledge} {tone:cautious}
+
+? q.values.stead_rely_on | fn: deepen_bond reveal_character | kind: opinion | level: 4
+Q: Who in your life do you rely on most?
+Q: When it counts, who do you lean on?
+- My squad :: As it should be. A squad that leans together stands. {values:+loyalty} {tone:loyal}
+- My teacher :: A good teacher is a good wall to lean on. {values:+knowledge +loyalty} {tone:humble}
+- Myself :: Yourself. Strong. Just don't make it only yourself. {values:+strength +freedom} {tone:proud}
+- A good friend :: One good friend is worth a hundred acquaintances. {values:+loyalty} {tone:warm}
+
+? q.values.stead_rely_on_you | fn: deepen_bond reveal_character | kind: opinion | level: 6 | follows: q.values.stead_rely_on | depth: 2
+Q: And who relies on you?
+Q: Turn it around. Who leans on you when it counts?
+- My squad does :: Then carry it well. You will. {values:+loyalty +duty} {tone:dutiful}
+- No one yet :: They will. Be ready. {values:+honesty} {tone:humble}
+- More than I know :: Ha. That's usually the truth for good people. {values:+kindness} {tone:gentle}
+
+? q.plans.stead_promise_leaf | fn: deepen_bond reveal_character | level: 4
+Q: If you made the Leaf one promise, what would it be?
+Q: One promise to the whole village. What do you swear?
+- I'll protect it :: A shinobi's oath. Said plainly. Good. {values:+duty +loyalty} {tone:dutiful}
+- I'll never leave :: Never is a long word. But I believe you mean it. {values:+loyalty +family} {tone:loyal}
+- I'll make it proud :: Proud. Yes. That one we can all see you keep. {values:+strength} {tone:ambitious}
+
+? q.plans.stead_promise_daily | fn: deepen_bond reveal_character | level: 6 | follows: q.plans.stead_promise_leaf | depth: 2
+Q: That promise to the Leaf. How do you keep it, day to day?
+Q: Big promises are kept in small days. What does yours look like on a Tuesday?
+- Training every day :: Every day. Rain or shine. That's how. {values:+duty +strength} {tone:dutiful}
+- Helping where I can :: A hand here, an errand there. That's a promise kept quietly. {values:+kindness} {tone:kind}
+- Showing up :: Showing up. Half of duty is just being there. Well said. {values:+loyalty +duty} {tone:honest}
+
+? q.values.stead_truth_hurts | fn: deepen_bond reveal_character | kind: opinion | level: 3 | axis: honesty_vs_kindness
+Q: Should you be honest with a friend, even when it'll hurt them?
+Q: A friend asks you a straight question, and the true answer will sting. Do you give it?
+- Yes, always :: Straight is kindest in the long run. I agree. {values:+honesty} {tone:blunt} {pole:1}
+- No, spare them :: Kindness first. I see it. I'm not sure I could. {values:+kindness} {tone:kind} {pole:-1}
+- Honest, but gently :: The truth, wrapped in care. That's the right way. {values:+honesty +kindness} {tone:gentle}

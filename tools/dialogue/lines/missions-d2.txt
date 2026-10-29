@@ -36,7 +36,7 @@ Half the fruit on the grass. Well, the crows will be happy.
 Not many baskets today. Never mind. The tree will try again next autumn.
 
 ## mission.d.orchard.report  job=mission_desk
-Orchard job, done. There's a persimmon on my desk now. I'm choosing to believe it's for me.
+Orchard job, done. There's a persimmon on my desk now. I'm choosing to think it's for me.
 {client} says the top branches are bare for the first time in years. Logged.
 
 ## mission.d.orchard.twist.wasps  fn=quest,react
