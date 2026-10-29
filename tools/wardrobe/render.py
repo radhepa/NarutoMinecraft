@@ -379,7 +379,7 @@ def village_renders(garments: dict, count: int = 20):
     mixes = []
     for i in range(count):
         spec = W.village_resident(garments, i)
-        spec["name"] = clans[spec["clan"]]["name"] if "clan" in spec else f"{spec['family']} ({spec['role']})"
+        spec["name"] = clans[spec["clan"]]["name"] + " clan" if "clan" in spec else f"{spec['family']} (no clan, {spec['role']})"
         mixes.append(Character(spec, garments))
     for i in range(0, count, 5):
         lineup(mixes[i:i + 5], OUT / "village" / f"residents_{i // 5 + 1}.png", "Hidden Leaf: residents by population")

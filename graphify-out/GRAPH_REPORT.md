@@ -1,7 +1,7 @@
 # Graph Report - NarutoMinecraft  (2026-10-29)
 
 ## Corpus Check
-- 115 files · ~152,093 words
+- 115 files · ~152,217 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .properties 2, .jar 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6f28ab56`
+- Built from commit: `ae8692c7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -612,7 +612,7 @@ Nodes (9): stamp(), decal(), shoulder_decal(), slanted_protector(), crest(), cre
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Clans` connect `Clans` to `Shared helpers`, `load_clans`, `ROADMAP.md`?**
-  _High betweenness centrality (0.464) - this node is a cross-community bridge._
+  _High betweenness centrality (0.463) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `solid()` (e.g. with `Shared helpers` and `Box`) actually correct?**
   _`solid()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `TALK`, `GIFT_LOVED`, `GIFT_LIKED` to the rest of the system?**
@@ -624,4 +624,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `render.py` be split into smaller, more focused modules?**
   _Cohesion score 0.12698412698412698 - nodes in this community are weakly interconnected._
 - **Why does `Shared helpers` connect `Shared helpers` to `fabric`, `Clans`, `footwear`, `leg_bone`, `solid`, `kit_kunoichi.py`, `kit_shinobi.py`, `Box`, `cel_box`, `flaps`, `ring_shell`, `masks.py`, `anime.py`, `bangs`, `strip_fabric`, `bandage`, `kit.py`, `kit_hagane.py`?**
-  _High betweenness centrality (0.406) - this node is a cross-community bridge._
+  _High betweenness centrality (0.410) - this node is a cross-community bridge._
