@@ -150,6 +150,36 @@
         "#654693",
         "#8662b5"
       ]
+    },
+    "ABURAME_UMBER": {
+      "name": "Aburame Umber",
+      "ramp": [
+        "#160f0b",
+        "#24180f",
+        "#352418",
+        "#4b3523",
+        "#634a33"
+      ]
+    },
+    "ABURAME_BLACK": {
+      "name": "Aburame Black",
+      "ramp": [
+        "#0d0e0c",
+        "#171915",
+        "#22251f",
+        "#30352b",
+        "#434a3b"
+      ]
+    },
+    "ABURAME_ASH": {
+      "name": "Aburame Ash",
+      "ramp": [
+        "#24201b",
+        "#352f28",
+        "#4a4339",
+        "#62594c",
+        "#7d7363"
+      ]
     }
   }
 }

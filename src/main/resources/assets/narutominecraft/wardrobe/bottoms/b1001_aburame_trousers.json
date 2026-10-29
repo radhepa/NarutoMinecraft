@@ -1,0 +1,15 @@
+{
+  "id": "b1001_aburame_trousers",
+  "kind": "bottom",
+  "name": "Aburame Trousers",
+  "gender": "unisex",
+  "texture": "bottoms/b1001_aburame_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Loose dusty brown trousers bound at the shin with pale wraps, open-toe sandals."
+}

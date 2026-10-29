@@ -1,0 +1,15 @@
+{
+  "id": "b1004_wrapped_slacks",
+  "kind": "bottom",
+  "name": "Wrapped Slacks",
+  "gender": "unisex",
+  "texture": "bottoms/b1004_wrapped_slacks.png",
+  "extrasHeight": 0,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Narrow slate slacks bound in dark cloth from calf to ankle, soft closed shoes."
+}

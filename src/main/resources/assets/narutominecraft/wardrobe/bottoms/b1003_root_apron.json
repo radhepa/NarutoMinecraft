@@ -1,0 +1,101 @@
+{
+  "id": "b1003_root_apron",
+  "kind": "bottom",
+  "name": "Root Apron",
+  "gender": "unisex",
+  "texture": "bottoms/b1003_root_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "shinobi"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_apron",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_pouch_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        10.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "waist_pouch_1",
+      "bone": "TORSO",
+      "pivot": [
+        4.6,
+        10.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    }
+  ],
+  "description": "Close black trousers, a dark apron over the thighs, hip pouches, split-toe boots."
+}
