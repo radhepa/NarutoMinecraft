@@ -25,8 +25,13 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.decoration.Mannequin;
+import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.ArrayList;
@@ -45,10 +50,11 @@ import java.util.UUID;
  */
 public final class Fighter {
     public static final double CHAKRA = 53, STAMINA = 110;
-    public static final String CLONE = "combat:nin.clone", TRANSFORMATION = "combat:nin.transformation", SUBSTITUTION = "combat:nin.substitution";
+    public static final String CLONE = "combat:nin.clone", TRANSFORMATION = "combat:nin.transformation", SUBSTITUTION = "combat:nin.substitution",
+            RELEASE = "combat:nin.release", ROPE_ESCAPE = "combat:nin.rope_escape", FIRST_AID = "combat:nin.first_aid";
     // core/resources.json and COMBAT.md, "Dodges": 22 stamina, 6 i-frames, a 1.5 s cooldown, about 4 blocks.
     static final int CONTROL = 30, ARM_TICKS = 10, DODGE_COST = 22, DODGE_IFRAMES = 6, DODGE_COOLDOWN = 30;
-    static final double DODGE_SPEED = 1.6, GUARD_REGEN = 0.3;
+    static final double DODGE_SPEED = 1.6, GUARD_REGEN = 0.3, ROPE_ESCAPE_SPEED = 1.4;
     static final String DODGE = "dodge";
 
     /** What is saved with the player and synced to its owner. */
@@ -86,6 +92,9 @@ public final class Fighter {
     long armedUntil = Long.MIN_VALUE, iframesUntil = Long.MIN_VALUE, shotUntil = Long.MIN_VALUE;
     /** A one-shot clip (a cast, a fizzle, a dodge) shown until shotUntil. */
     String shot = "";
+    /** The ally First Aid is tending, until aidUntil; null when none. */
+    UUID aiding;
+    long aidUntil;
 
     private Fighter(State s) {
         chakra.drain(CHAKRA - s.chakra());
@@ -125,7 +134,7 @@ public final class Fighter {
             case Act.SIGN -> { if (a.arg() >= 0 && a.arg() < HandSign.values().length && f.weaver.woven().size() <= f.longest()) f.weaver.input(HandSign.values()[a.arg()], now); }
             case Act.RELEASE -> f.release(p, now);
             case Act.CANCEL -> { if (f.weaver.weaving()) f.weaver.release(now); }
-            case Act.GUARD -> f.guarding = a.arg() != 0;
+            case Act.GUARD -> f.guarding = a.arg() != 0 && f.aiding == null;
             case Act.DODGE -> f.dodge(p, now);
             case Act.SUBSTITUTE -> f.arm(p, now);
             default -> {}
@@ -142,6 +151,7 @@ public final class Fighter {
         var f = ALL.get(p.getUUID());
         if (f == null) return;
         f.guarding = false;
+        f.aiding = null;
         if (f.weaver.weaving()) f.weaver.release(p.level().getGameTime());
     }
 
@@ -149,7 +159,10 @@ public final class Fighter {
         if (!weaver.weaving()) return;
         var r = weaver.release(now);
         switch (r.outcome()) {
-            case CAST -> { if (cast(p, r.technique().orElseThrow(), now)) play("combat.cast.push_palms", now); }
+            case CAST -> {
+                String id = r.technique().orElseThrow();
+                if (cast(p, id, now)) play(id.equals(RELEASE) ? "combat.sign.release_ram" : "combat.cast.push_palms", now);
+            }
             case FIZZLE, INTERRUPTED -> {
                 play("combat.sign.fizzle", now);
                 boolean fizzle = r.outcome() == Weaver.Outcome.FIZZLE;
@@ -179,15 +192,81 @@ public final class Fighter {
             return false;
         }
         cooldowns.start(id, now, t.cooldownTicks());
+        p.sendOverlayMessage(Component.translatable("shinobi_combat.cast", t.name()));
         // shortcut: only the Academy techniques have a world effect yet; any other known technique casts as a puff of smoke.
         switch (id) {
             case CLONE -> Jutsu.clone(p, t);
             case TRANSFORMATION -> Jutsu.disguise(p);
+            case RELEASE -> { if (!Jutsu.dispel(p)) p.sendOverlayMessage(Component.translatable("shinobi_combat.cast.nothing", t.name())); }
             default -> Jutsu.smoke(p.level(), p.position(), 12);
         }
-        p.sendOverlayMessage(Component.translatable("shinobi_combat.cast", t.name()));
         ShinobiCombat.CAST.invoker().accept(p, id);
         return true;
+    }
+
+    /**
+     * Field First Aid, from a use on {@code e}: a player who knows it, crouched with an empty hand by a hurt ally, tends them
+     * for the technique's cast ticks; staying crouched beside them heals them, and moving off, standing up or any hit stops
+     * it. True when the use is taken (begun, or already tending), so the ally's own interaction does not open.
+     * shortcut: no bleeding to stop and no downed state yet, until enemies cause them.
+     */
+    static boolean aid(ServerPlayer p, LivingEntity e) {
+        var f = of(p);
+        if (!tends(p, e)) return false;
+        if (f.aiding != null) return true;   // a held use repeats every few ticks
+        var t = ShinobiCombat.data.technique(FIRST_AID);
+        long now = p.level().getGameTime();
+        if (!p.closerThan(e, t.range() + e.getBbWidth() / 2)) return false;
+        if (!f.cooldowns.ready(FIRST_AID, now)) {
+            p.sendOverlayMessage(Component.translatable("shinobi_combat.cast.cooldown", t.name(), (f.cooldowns.remaining(FIRST_AID, now) + 19) / 20));
+            return true;
+        }
+        f.aiding = e.getUUID();
+        f.aidUntil = now + t.castTicks();
+        f.guarding = false;   // the empty-hand use that tends is also the guard key; the guard waits for its next press
+        f.play("combat.cast.first_aid", now);
+        f.shotUntil = f.aidUntil;
+        p.sendOverlayMessage(Component.translatable("shinobi_combat.aid.start", e.getDisplayName()));
+        return true;
+    }
+
+    /** Whether {@code p}'s use on {@code e} is First Aid's (both sides, from the synced STATE): crouched, empty hand, knows it, a hurt ally. */
+    public static boolean tends(Player p, Entity e) {
+        var s = p.getAttached(ShinobiCombat.STATE);
+        return e instanceof LivingEntity l && p.isShiftKeyDown() && p.getMainHandItem().isEmpty() && s != null && s.learned().contains(FIRST_AID)
+                && !(l instanceof Enemy) && l.isAlive() && l.getHealth() < l.getMaxHealth();
+    }
+
+    /** The tending in progress: it lands at aidUntil or stops if the player stood up, moved off or the ally is gone or healed. */
+    private void tend(ServerPlayer p, long now) {
+        if (aiding == null) return;
+        var t = ShinobiCombat.data.technique(FIRST_AID);
+        var e = p.level().getEntity(aiding) instanceof LivingEntity l ? l : null;
+        if (e == null || !e.isAlive() || !p.isShiftKeyDown() || !p.closerThan(e, t.range() + e.getBbWidth() / 2 + 1) || e.getHealth() >= e.getMaxHealth()) {
+            stopAid(p);
+            return;
+        }
+        if (now < aidUntil) return;
+        aiding = null;
+        e.heal((float) t.effects().stream().mapToDouble(m -> Json.num(m, "heal", 0)).sum());
+        cooldowns.start(FIRST_AID, now, t.cooldownTicks());
+        p.level().sendParticles(ParticleTypes.HEART, e.getX(), e.getY(1), e.getZ(), 4, .3, .2, .3, 0);
+        p.level().playSound(null, e.getX(), e.getY(), e.getZ(), SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS, .5F, 1.6F);
+        p.sendOverlayMessage(Component.translatable("shinobi_combat.aid.done", e.getDisplayName()));
+        ShinobiCombat.CAST.invoker().accept(p, FIRST_AID);
+    }
+
+    private void stopAid(ServerPlayer p) {
+        aiding = null;
+        shotUntil = Long.MIN_VALUE;
+        p.sendOverlayMessage(Component.translatable("shinobi_combat.aid.stopped"));
+    }
+
+    /** Rope Escape (both sides, from the Entity mixin): a player who knows it moves 40% faster through a cobweb. */
+    public static Vec3 unstuck(Entity e, BlockState state, Vec3 multiplier) {
+        if (!(e instanceof Player p) || !state.is(Blocks.COBWEB)) return multiplier;
+        var s = p.getAttached(ShinobiCombat.STATE);
+        return s != null && s.learned().contains(ROPE_ESCAPE) ? multiplier.scale(ROPE_ESCAPE_SPEED) : multiplier;
     }
 
     private void arm(ServerPlayer p, long now) {
@@ -244,12 +323,14 @@ public final class Fighter {
     /**
      * The guard, from the LivingEntity mixin on a hit that lands (past the hurt cooldown and ALLOW_DAMAGE): a guarded melee hit takes {@link Damage#BLOCK_MELEE} off for
      * {@link Damage#GUARD_STAMINA_PER_DAMAGE} stamina a point stopped, and a guard without the stamina breaks. Any melee
-     * hit that lands interrupts a weave.
+     * hit that lands interrupts a weave, and any hit that lands stops First Aid.
      */
     public static float guard(ServerPlayer p, DamageSource source, float amount) {
         var f = ALL.get(p.getUUID());
         boolean melee = source.getEntity() != null && source.getEntity() == source.getDirectEntity() && !source.is(DamageTypeTags.IS_PROJECTILE);
-        if (f == null || !melee) return amount;
+        if (f == null) return amount;
+        if (f.aiding != null) f.stopAid(p);   // here, not in allow(): a hit the hurt cooldown stops never reaches this
+        if (!melee) return amount;
         f.weaver.interrupt();
         if (!f.guarding) return amount;
         boolean held = f.stamina.spend(amount * Damage.BLOCK_MELEE * Damage.GUARD_STAMINA_PER_DAMAGE);
@@ -296,6 +377,7 @@ public final class Fighter {
             var f = of(p);
             f.chakra.tick(ShinobiCombat.regen.applyAsDouble(p));
             f.stamina.tick(f.guarding ? GUARD_REGEN : 1);
+            f.tend(p, p.level().getGameTime());
             f.save(p);
             f.stance(p);
         }

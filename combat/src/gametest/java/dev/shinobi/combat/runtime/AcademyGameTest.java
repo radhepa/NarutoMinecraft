@@ -24,6 +24,8 @@ import net.minecraft.world.entity.decoration.Mannequin;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.levelgen.presets.WorldPresets;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
 
 import java.io.IOException;
@@ -199,6 +201,34 @@ public final class AcademyGameTest implements FabricClientGameTest {
                     "right click with a kunai in hand throws and does not guard");
             c.getInput().releaseKey(ShinobiCombatClient.GUARD);
             w.getServer().runOnServer(s -> player(w).setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY));
+
+            check(w.getServer().computeOnServer(s -> ShinobiCombat.teach(player(w), Fighter.RELEASE) && ShinobiCombat.teach(player(w), Fighter.ROPE_ESCAPE)
+                    && ShinobiCombat.teach(player(w), Fighter.FIRST_AID)), "Release, Rope Escape and First Aid are taught");
+            w.getServer().runCommand("effect give @p nausea 30");
+            c.waitTicks(5);
+            weave(c, HandSign.RAM);
+            c.getInput().releaseKey(ShinobiCombatClient.WEAVE);
+            c.waitTicks(3);
+            check(c.computeOnClient(mc -> clip(mc).equals("combat.sign.release_ram")) && casts.contains(Fighter.RELEASE)
+                    && !w.getServer().computeOnServer(s -> player(w).hasEffect(MobEffects.NAUSEA)), "Release on Ram breaks the illusion");
+            var web = Blocks.COBWEB.defaultBlockState();
+            var held = new Vec3(.25, .05, .25);
+            check(w.getServer().computeOnServer(s -> Fighter.unstuck(player(w), web, held)).equals(held.scale(1.4))
+                    && c.computeOnClient(mc -> Fighter.unstuck(mc.player, web, held)).equals(held.scale(1.4)), "Rope Escape loosens a cobweb on both sides");
+
+            w.getServer().runOnServer(s -> target(w).setHealth(7));   // hurt by no more than First Aid's heal
+            w.getServer().runCommand("tp @p " + (at.getX() + .5) + " " + at.getY() + " " + (at.getZ() + 1.8) + " 0 40");   // crouched over the hurt pig
+            c.getInput().holdKey(o -> o.keyShift);
+            c.waitTicks(3);
+            c.getInput().pressKey(o -> o.keyUse);
+            c.waitTicks(3);
+            check(w.getServer().computeOnServer(s -> Fighter.of(player(w)).aiding != null) && c.computeOnClient(mc -> clip(mc).equals("combat.cast.first_aid")),
+                    "a crouched use with an empty hand on a hurt ally starts First Aid");
+            c.takeScreenshot("academy-first-aid");
+            c.waitTicks(62);
+            check(w.getServer().computeOnServer(s -> target(w).getHealth() == target(w).getMaxHealth() && Fighter.of(player(w)).aiding == null)
+                    && casts.contains(Fighter.FIRST_AID), "First Aid heals the ally after its 3 s");
+            c.getInput().releaseKey(o -> o.keyShift);
             w.getServer().runCommand("tp @p ~ ~ ~ 180 0");   // back to the pig, so the front camera is clear of it
             w.getServer().runCommand("item replace entity @p armor.chest with iron_chestplate");   // the armour follows the guard pose
             w.getServer().runCommand("item replace entity @p armor.legs with iron_leggings");
@@ -219,7 +249,7 @@ public final class AcademyGameTest implements FabricClientGameTest {
         try (var w = save.open()) {
             w.getConnection().waitForChunksRender();
             c.waitTicks(20);
-            check(w.getServer().computeOnServer(s -> ShinobiCombat.knows(player(w), Fighter.CLONE) && state(w).learned().size() == 3), "reopening keeps the learned techniques");
+            check(w.getServer().computeOnServer(s -> ShinobiCombat.knows(player(w), Fighter.CLONE) && state(w).learned().size() == 6), "reopening keeps the learned techniques");
             check(w.getServer().computeOnServer(s -> near(w, Mannequin.class, 16, m -> true).isEmpty()), "no decoy outlives the session");
         }
     }

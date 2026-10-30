@@ -15,6 +15,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
+import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -28,7 +29,9 @@ import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SnowballItem;
@@ -80,6 +83,13 @@ public final class ShinobiCombat implements ModInitializer {
             if (!(player instanceof ServerPlayer p) || p.isSpectator() || !(entity instanceof Mob partner) || !entity.entityTags().contains(Spar.PARTNER)) return InteractionResult.PASS;
             Spar.attack(p, partner);
             return InteractionResult.SUCCESS;
+        });
+        // Crouching with an empty hand on a hurt ally tends them (Field First Aid) instead of the ally's own interaction; the client
+        // takes it too, so the off hand is never used as well.
+        UseEntityCallback.EVENT.register((player, level, hand, entity, hit) -> {
+            if (hand != InteractionHand.MAIN_HAND || player.isSpectator()) return InteractionResult.PASS;
+            boolean taken = player instanceof ServerPlayer p ? entity instanceof LivingEntity e && Fighter.aid(p, e) : Fighter.tends(player, entity);
+            return taken ? InteractionResult.SUCCESS : InteractionResult.PASS;
         });
         ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) -> Fighter.allow(entity, source));
         ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> { if (entity instanceof ServerPlayer p) Fighter.died(p); });

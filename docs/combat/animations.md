@@ -48,9 +48,9 @@ Counts: P0 62, P1 107, P2 33, P3 37, total 239.
 | `combat.sign.boar` | 4 |  | both | yes | yes |  |
 | `combat.sign.transition` | 2 |  | both | yes | yes | Blend between any two signs |
 | `combat.sign.fizzle` | 8 |  | both | yes | yes | Hands shake apart |
-| `combat.sign.release_ram` | 6 |  | both | yes |  | Genjutsu Release |
+| `combat.sign.release_ram` | 6 |  | both | yes | yes | Genjutsu Release |
 | `combat.cast.push_palms` | 8 |  | both | yes | yes | Generic forward release (Clone, Transformation poof) |
-| `combat.cast.first_aid` | 30 | yes | both |  |  |  |
+| `combat.cast.first_aid` | 30 | yes | both |  | yes |  |
 | `combat.tai.academy.jab` | 9 |  | both | yes | yes |  |
 | `combat.tai.academy.cross` | 9 |  | both | yes | yes |  |
 | `combat.tai.academy.roundhouse` | 15 |  | both | yes | yes |  |

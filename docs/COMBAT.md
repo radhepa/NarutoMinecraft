@@ -165,7 +165,7 @@ lays its moves over these: where it has a move you qualify for, it plays; otherw
 **Style tiers.** Initiate, adept, expert, master, grandmaster (x1.0 to x1.4), opened at taijutsu ranks 1, 3,
 5, 7 and 9 by use and a mentor's trial. Each tier opens moves: finishers at tiers 2 to 5.
 
-**Guard, parry and counters.** Block with right click with an empty hand; a held item uses instead (Beta 1). Start a block inside the parry window (Story 6
+**Guard, parry and counters.** Block with right click with an empty hand; a held item uses instead (Beta 1). Crouching, the same click on a hurt ally gives Field First Aid instead: stay crouched beside them for its 3 s. Start a block inside the parry window (Story 6
 ticks, Shinobi 4, Hard 3) before a melee hit lands: no damage, the attacker staggers for 20 ticks, +25
 momentum and a 12-tick counter window (x1.5). Parrying a thrown kunai knocks it down (weapons rank 3 catches
 it). Ninjutsu, grabs and red-flash moves cannot be parried. Counters come from parries (P L), Iron Guard's

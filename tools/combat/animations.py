@@ -264,6 +264,10 @@ keys("tai.academy.sweep", (0, {**FISTS, "body": (0, 0, 0), "right_leg": (0, 0, 0
      (18, {**FISTS, "body": (0, 0, 0), "right_leg": (0, 0, 0), "left_leg": (0, 0, 0)}))
 UP = {"right_arm": (-170, 0, 10), "left_arm": (-60, 25, 0), "body": (-10, 0, 0)}
 keys("tai.academy.launcher", (0, {**FISTS, "body": (10, 0, 0)}), (4, UP), (9, UP), (14, {**FISTS, "body": (0, 0, 0)}))
+# Release: Ram, then the hands snap apart to break the illusion.
+keys("sign.release_ram", (0, SIGN_POSES["ram"]), (3, arms(-75, 5, 30)), (6, SIGN_POSES["ram"]))
+# Field first aid: both hands pressed low on the ally, rocking with the pressure.
+keys("cast.first_aid", (0, arms(-40, 20)), (15, arms(-52, 25)), (30, arms(-40, 20)))
 PALMS = [arms(-90, 0), arms(-90, 0, 0, -50, 25)]
 keys("tai.academy.palm_rush", *[(t, PALMS[i % 2]) for i, t in enumerate(range(0, 25, 3))], (30, FISTS))
 

@@ -10,27 +10,24 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
 - 5f21cc5: Hidden Leaf world preset. a36468c, 8bf6f40 (P06): chakra, hand signs, Academy techniques, guard, dodge.
 - P05: calendar, stipend, flat, pets, dishes, fatigue, Well Rested (e92d2f6 to 2348843); the keeper's shop screen
   and its fixes (8e873b3 to e43e580). Leaf worlds from before e92d2f6: recreate them.
-- 72c995b (P06 controls and animation): every combat key, the twelve signs included, is a vanilla key
-  mapping under Shinobi in Options > Controls, rebindable and saved (COMBAT.md defaults; guard on right click). The
-  twelve signs, transition, fizzle, push-palms, block and four dodges are keyed in `tools/combat/animations.py` and
-  play on every player from the synced stance (clip and start tick).
-- 849882b (P06 review fixes): worn armour follows the poses; the wheel on J and substitution on N
-  (G and X stay for the pouch and a quick slot); a weave or guard ends a one-shot clip.
-- This file's commit (P06): a spar hit plays its Academy taijutsu clip (jab, cross, roundhouse, heavy, sweep,
-  launcher, palm rush, keyed in `tools/combat/animations.py`).
+- 72c995b to 5c7bde0 (P06): rebindable combat keys under Shinobi in Options > Controls (COMBAT.md defaults); sign,
+  block, dodge and Academy taijutsu clips on every player's model; worn armour follows the poses.
+- This file's commit (P06): the rest of the Academy techniques. Release (woven Ram) clears nausea, blindness and
+  darkness; Rope Escape (passive) moves 40% faster through cobwebs; Field First Aid (crouch, empty hand, use on a
+  hurt ally) heals after 3 s, and moving off, standing up or a landed hit stops it.
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-`./gradlew build` and `:combat:runClientGameTest` passed (`.local-dev/logs/taiclips-*.log`; screenshot academy-jab; `:progression:runClientGameTest`
-at 72c995b: `p06anim-*.log`); screenshots in `combat/build/run/clientGameTest/screenshots/`: controls-shinobi,
-academy-weaving, academy-cast, academy-dodge, academy-guard (in iron armour).
+`./gradlew build` and `:combat:runClientGameTest` passed (`.local-dev/logs/academy-tech-*2.log`; screenshot academy-first-aid;
+`:progression:runClientGameTest` at 72c995b: `p06anim-*.log`) and earlier shots in
+`combat/build/run/clientGameTest/screenshots/`.
 
 ## Remaining
 
 - P07: the opening and Academy campaign through graduation.
 - P03: Varied's apartment roll, bound-cast role identities, Konoha loot tables and names.
 - P05: hospital wake, level loss on death; the shop counter block, haggling, selling and orders.
-- P06: full technique and stock coverage; first-person arm poses; air and dash taijutsu clips.
+- P06: smoke bombs, wire and roof hopping; in-play teaching (techniques come from `/shinobi teach`); stock coverage; first-person arm poses; air and dash taijutsu clips.
 
 ## Launch
 
@@ -46,7 +43,9 @@ tamagoyaki are not sold, yakitori only on Market Day; a dedicated server's defau
 ignores season, mess, plant and pet; undrawn dishes show a stand-in sprite; a dead bound resident does not block a
 quest; the quest checker mirrors the street's plots. Guard on right click works only with an empty hand (a held kunai
 throws); signs 1 to 9 share the hotbar keys, which do not switch slots while weaving; poses snap at a clip's start and
-show in third person only; the heavy plays its release without the windup.
+show in third person only; the heavy plays its release without the windup. Release's
+genjutsu are vanilla nausea, blindness and darkness; First Aid has no bleeding or downed state to treat; Rope Escape
+loosens cobwebs only.
 
 ## Blockers
 

@@ -2053,7 +2053,62 @@
    "fp": true,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null,
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      -68,
+      -34,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -60,
+      30,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "right_arm",
+     "rot": [
+      -75,
+      -5,
+      30
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "left_arm",
+     "rot": [
+      -75,
+      5,
+      -30
+     ]
+    },
+    {
+     "tick": 6,
+     "part": "right_arm",
+     "rot": [
+      -68,
+      -34,
+      0
+     ]
+    },
+    {
+     "tick": 6,
+     "part": "left_arm",
+     "rot": [
+      -60,
+      30,
+      0
+     ]
+    }
+   ],
    "note": "Genjutsu Release"
   },
   "combat.cast.push_palms": {
@@ -2416,7 +2471,62 @@
    "fp": false,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      -40,
+      -20,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -40,
+      20,
+      0
+     ]
+    },
+    {
+     "tick": 15,
+     "part": "right_arm",
+     "rot": [
+      -52,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 15,
+     "part": "left_arm",
+     "rot": [
+      -52,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 30,
+     "part": "right_arm",
+     "rot": [
+      -40,
+      -20,
+      0
+     ]
+    },
+    {
+     "tick": 30,
+     "part": "left_arm",
+     "rot": [
+      -40,
+      20,
+      0
+     ]
+    }
+   ]
   },
   "combat.cast.revive_kneel": {
    "ticks": 30,

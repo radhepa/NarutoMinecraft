@@ -78,6 +78,17 @@ final class Jutsu {
     }
 
     /**
+     * Release: breaks an illusion on the player; false if none held them.
+     * shortcut: nausea, blindness and darkness stand in for genjutsu, until enemies cast the shared genjutsu effect.
+     */
+    static boolean dispel(ServerPlayer p) {
+        boolean broke = false;
+        for (var e : List.of(MobEffects.NAUSEA, MobEffects.BLINDNESS, MobEffects.DARKNESS)) broke |= p.removeEffect(e);
+        if (broke) p.level().playSound(null, p.getX(), p.getY(), p.getZ(), SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 1, 1);
+        return broke;
+    }
+
+    /**
      * Transformation: the player hides as a log until they attack or are hurt; mobs hunting them lose them.
      * shortcut: always a log (an item display following the player, the player invisible), until the picker of a resident's look or an object.
      */
