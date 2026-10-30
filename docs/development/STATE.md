@@ -1,6 +1,6 @@
 # Development state
 
-**Phase/task:** P03-4, the street's shop, notice board and training space
+**Phase/task:** P03-5, the test map's rules
 ([ROADMAP.md 13.5](../../ROADMAP.md#p03--make-the-village-tangible)). P00 to P02 passed (13.3).
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
 The story checkout on the Desktop keeps its unfinished work; story review stays paused.
@@ -11,13 +11,22 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 2. Done: the test street (`leaf_block`) with ten residents in their own flats, by day and at night.
 3. Done (partly): deterministic resident identity and appearance, surviving reload. Still open: the
    Core save seed and Classic/Varied mode choosing the cast, role identities for the bound cast (from P02).
-4. The street's shop, notice board and training space; adventure protection and a builder workflow.
+4. Done: the street's tea house, notice board and training yard; adventure protection and builder mode.
 5. Map rules (vanilla and VF generation off on the test map).
 6. A resident count and a measured route for performance.
 
 P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
+
+- P03-4 `./gradlew build`: passed; `:village:runClientGameTest` passed: the street pastes the tea house
+  (keeper upstairs, its own plaque and bed) and the new `training_yard` (targets, hay, VF's notice board)
+  beside `leaf_block`; VF reads 12 houses with a bed each; all 11 residents keep their beds, 11 walk by day,
+  9 sleep at 2 am (screenshot `test-street-yard`). `StreetGuard`: a survival player cannot break or build on
+  the street or make a flat private; `/narutominecraft builder` can. Ponytail review: closed the plaque
+  eviction, kept doors and beds usable with a block in hand, covered reshaping tools, checked every village
+  holding a spot. The tea house needed its stair head walled and capped (VF floods room to room). Not yet:
+  buckets, fire and explosions (shortcut: protection by village name until the map's regions).
 
 - P03-3 `./gradlew build`: passed, 386 tests; `:village:runClientGameTest` passed: each resident's UUID
   comes from the world seed and its marker, so VF draws the same profile, name and look for it; ten
@@ -62,7 +71,6 @@ None.
 
 ## Next
 
-P03-4: add a shop, a notice board and a training space to the test street (blueprints `shop_tea_house`
-and two small fixtures), pasted by `/narutominecraft street`; protect the street in adventure mode with an
-operator builder switch. A client gametest finds each anchor and checks that a survival player cannot break
-street blocks while a builder can.
+P03-5: the test map's rules: vanilla structures, mobs and VF's own village generation stay off on the
+Leaf test map, set once by `/narutominecraft street` rather than by the gametest's commands, and checked
+by the street gametest. Then P03-6 (resident count, performance route), then P04's first errand.

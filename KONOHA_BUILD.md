@@ -119,7 +119,7 @@ built in the map world. Footprints are in blocks, x by z.
 | Street pieces (bridges, trees, poles) | 13 | 188 | 146 | 41 | 205 | 593 |
 | Streets (km, laid by roads.py) | 0.15 | 2.4 | 2.0 | 0.8 | 3.0 | 8.35 |
 
-Design programs: **31** (6 homes, 3 apartment buildings, 5 shops, 3 clan builds, 2 wall, 4 forest of death, 4 street pieces (bridges, trees, poles), 1 training grounds, 1 story, 2 landmarks), 3 of them prototyped.
+Design programs: **31** (6 homes, 3 apartment buildings, 5 shops, 3 clan builds, 2 wall, 4 forest of death, 4 street pieces (bridges, trees, poles), 1 training grounds, 1 story, 2 landmarks), 4 of them prototyped.
 <!-- /gen:building-totals -->
 
 Housing check: 110 homes at about 1.6 residents, 15 apartment buildings at about 70% of their
@@ -394,7 +394,7 @@ Where the story needs a place, it is part of a building above:
 | `village_tree` | Street and garden trees: cherry, pine, maple | Beta 1 | planned |
 | `bridge_flat` | Flat timber bridge | Beta 1 | planned |
 | `bridge_arched` | Arched bridge with giboshi posts | Beta 2 | planned |
-| `training_props` | Training-ground prop sets: target lines, post rows, log circles | Beta 1 | planned |
+| `training_props` | Training-ground prop sets: target lines, post rows, log circles | Beta 1 | prototype |
 | `roads` | roads.py: streets, kerbs, poles and wires, lamps from layout.json polylines | Phase 0 | planned |
 | `camp` | Camp kit: tents, fire, crates (bandit camps, forest camps) | Beta 2 | planned |
 | `rock_faces` | rock_faces.py: the Hokage Rock faces as voxel sculpts from depth maps | Beta 1 | planned |

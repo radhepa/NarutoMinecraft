@@ -66,6 +66,11 @@ def build(wall="cream", roof="orange", awning="red", noren="tea") -> Plan:
     for i, x in enumerate((4, 3, 2)):
         p.set(x, 2 + i, 2, "spruce_stairs[facing=west,half=bottom]")
     p.clear(2, 5, 2, 4, 5, 2)
+    # a partition and door at the stair head close the owner's rooms off from the open shop (VF floods rooms door to door)
+    p.fill(2, 6, 3, 4, 8, 3, "spruce_planks")
+    p.fill(5, 6, 2, 5, 8, 2, "spruce_planks")
+    p.fill(2, 9, 2, 4, 9, 2, "spruce_planks")
+    p.door(2, 6, 3, "south")
     p.set(8, 6, 3, "red_bed[facing=north,part=head]")
     p.set(8, 6, 4, "red_bed[facing=north,part=foot]")
     p.gable_roof(1, 9, 1, 7, 9, roof, gable_style=wall)

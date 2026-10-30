@@ -1,6 +1,8 @@
 package dev.shinobi.village;
 
+import dev.villagefriends.VillageBlocks;
 import dev.villagefriends.VillageFriends;
+import dev.villagefriends.VillageSettlements;
 import dev.villagefriends.home.House;
 import dev.villagefriends.home.Homes;
 import dev.villagefriends.routine.Routine;
@@ -10,9 +12,15 @@ import net.fabricmc.fabric.api.client.gametest.v1.context.TestSingleplayerContex
 import net.fabricmc.fabric.api.client.gametest.v1.world.TestWorldSave;
 import net.minecraft.client.gui.screens.worldselection.WorldCreationUiState;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.npc.villager.Villager;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.levelgen.presets.WorldPresets;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.HashSet;
@@ -23,7 +31,9 @@ import java.util.function.Supplier;
 
 /**
  * P03-2: the test street on a flat map: ten residents each get their own flat and bed, walk by day and sleep at night.
- * P03-3: the same seed gives the same cast, and reopening the save finds the same residents in the same flats. Screenshots: test-street-*.
+ * P03-3: the same seed gives the same cast, and reopening the save finds the same residents in the same flats.
+ * P03-4: the tea house keeper lives over the shop, the notice board and training yard stand in the village, and only
+ * builder mode can change the street. Screenshots: test-street-*.
  */
 @SuppressWarnings({"UnstableApiUsage", "unchecked"})
 public final class TestStreetGameTest implements FabricClientGameTest {
@@ -46,34 +56,66 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             BlockPos origin = player.below().offset(-17, 0, -22);
             var built = w.getServer().computeOnServer(s -> TestStreet.build(w.getConnection().getServerLevel(), origin));
             ShinobiVillage.LOG.info("Test street plaques: {}", built.plaques());
-            check(built.residents().size() == 10, "ten resident markers: " + built.residents().size());
-            check(built.plaques().size() == 11 && built.plaques().stream().allMatch(p -> p.contains("1 bed")), "eleven flats with a bed each: " + built.plaques());
+            int n = built.residents().size();
+            check(n == 11, "ten flat residents and the tea house keeper: " + n);
+            check(built.plaques().size() == 12 && built.plaques().stream().allMatch(p -> p.contains("1 bed")), "eleven flats and the tea house with a bed each: " + built.plaques());
 
             // Their markers; a resident out at its hobby has walked away from one.
             List<Vec3> spawn = w.getServer().computeOnServer(s -> built.residents().stream().map(Villager::position).toList());
             until(c, () -> w.getServer().computeOnServer(s -> {
                 var houses = new HashSet<String>();
                 for (var v : built.residents()) { House h = Homes.houseOf(v); if (h != null) houses.add(h.id()); }
-                return houses.size() == 10;
-            }), 1200, () -> "each resident has a flat of their own");
+                return houses.size() == n;
+            }), 1200, () -> "each resident has a house of their own");
             List<String> beds = w.getServer().computeOnServer(s -> built.residents().stream().map(v -> Homes.bedOf(v).map(b -> b.head().subtract(origin).toShortString()).orElse("-")).toList());
-            check(java.util.stream.IntStream.range(0, 10).allMatch(i -> Homes.bedOf(built.residents().get(i)).map(b -> b.head().distSqr(BlockPos.containing(spawn.get(i))) < 64).orElse(false)),
-                    "each resident's bed is in the flat it was placed in: " + beds + " for " + spawn.stream().map(p -> BlockPos.containing(p).subtract(origin).toShortString()).toList());
+            check(java.util.stream.IntStream.range(0, n).allMatch(i -> Homes.bedOf(built.residents().get(i)).map(b -> b.head().distSqr(BlockPos.containing(spawn.get(i))) < 64).orElse(false)),
+                    "each resident's bed is in the house it was placed in: " + beds + " for " + spawn.stream().map(p -> BlockPos.containing(p).subtract(origin).toShortString()).toList());
 
             until(c, () -> walked(w, built, spawn) > 0, 2400, () -> "a resident walks by day");
-            ShinobiVillage.LOG.info("Test street: {} of 10 residents left their markers", walked(w, built, spawn));
+            ShinobiVillage.LOG.info("Test street: {} of {} residents left their markers", walked(w, built, spawn), n);
             view(c, w, player.getX() + .5, player.getY() + 3, player.getZ() + 6.5, 180, 12, "test-street-day");
+            view(c, w, player.getX() + 25.5, player.getY() + 4, player.getZ() + 3.5, 180, 25, "test-street-yard");
+
+            BlockPos board = built.anchors().get("notice_board"), yard = built.anchors().get("anchor:training");
+            w.getServer().runOnServer(s -> {
+                var level = w.getConnection().getServerLevel();
+                check(level.getBlockState(board).is(VillageBlocks.get("notice_board")), "VF's notice board on the street front");
+                for (var at : List.of(board, yard))
+                    check(built.village().equals(VillageSettlements.book(level).at(at).id()), "board and yard in the street's village: " + at.toShortString());
+                // Adventure protection: a survival player cannot break the street; builder mode can.
+                var me = w.getConnection().getServerPlayer();
+                me.setGameMode(GameType.SURVIVAL);
+                var ground = board.below();
+                var was = level.getBlockState(ground);
+                check(!me.gameMode.destroyBlock(ground) && level.getBlockState(ground).equals(was), "a player cannot break the street");
+                me.addTag(StreetGuard.BUILDER);
+                check(me.gameMode.destroyBlock(ground) && level.getBlockState(ground).isAir(), "builder mode can");
+                level.setBlock(ground, was, 3);
+                me.removeTag(StreetGuard.BUILDER);
+                me.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(Items.DIRT));
+                me.gameMode.useItemOn(me, level, me.getMainHandItem(), InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(yard.below()), Direction.UP, yard.below(), false));
+                check(level.getBlockState(yard).isAir(), "a player cannot build on the street");
+                // Sneak-using a flat's plaque would make it private and turn its resident out.
+                var first = built.residents().getFirst();
+                BlockPos plaque = Homes.houseOf(first).plaque().orElseThrow();
+                me.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
+                me.setShiftKeyDown(true);
+                me.gameMode.useItemOn(me, level, ItemStack.EMPTY, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(plaque), Direction.SOUTH, plaque, false));
+                me.setShiftKeyDown(false);
+                check(!Homes.houseOf(first).privateHome(), "a player cannot make a resident's flat private");
+                me.setGameMode(GameType.CREATIVE);
+            });
 
             // VF's routine clock, frozen at 2 am: past every chronotype's bedtime, night owls included.
             w.getServer().runCommand("time set " + (2 * 24000 + Routine.at(2, 0)));
-            until(c, () -> asleep(w, built) >= 8, 2400, () -> "residents asleep in their own beds: " + asleep(w, built) + "; doing "
+            until(c, () -> asleep(w, built) >= n - 2, 2400, () -> "residents asleep in their own beds: " + asleep(w, built) + "; doing "
                     + w.getServer().computeOnServer(s -> built.residents().stream().map(dev.villagefriends.ResidentRoutines::doing).toList()));
-            ShinobiVillage.LOG.info("Test street: {} of 10 residents asleep in their own beds", asleep(w, built));
+            ShinobiVillage.LOG.info("Test street: {} of {} residents asleep in their own beds", asleep(w, built), n);
 
             cast = w.getServer().computeOnServer(s -> built.residents().stream().map(TestStreetGameTest::identity).toList());
             ShinobiVillage.LOG.info("Test street cast: {}", cast);
             check(built.residents().getFirst().getUUID().equals(TestStreet.resident(26, 0)), "the cast comes from the seed and the markers");
-            check(cast.stream().map(id -> id.split("\\|")[1]).distinct().count() == 10, "ten different residents: " + cast);
+            check(cast.stream().map(id -> id.split("\\|")[1]).distinct().count() == n, "different residents: " + cast);
             save = w.getWorldSave();
         }
 

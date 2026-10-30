@@ -188,7 +188,7 @@
    "name": "Training-ground prop sets: target lines, post rows, log circles",
    "makes": "training",
    "first": "B1",
-   "status": "planned"
+   "status": "prototype"
   },
   {
    "id": "roads",

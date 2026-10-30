@@ -32,13 +32,15 @@ class LeafFlatsTest {
     void residentsKeepFreeLeafFlatBedsTheySleepIn() {
         var a = flat("a", 0, "Flat 1a", false); var b = flat("b", 10, "Flat 1b", false); var shut = flat("c", 20, "Flat 1c", true);
         var own = flat("d", 30, "My house", false); var held = flat("e", 40, "Flat 2a", false);
-        var previous = new HousingIndex("v", List.of(a, b, shut, own, held), Map.of("holder", new HousingIndex.BedKey("e", head(held))),
+        var shop = flat("f", 50, LeafFlats.TEA_HOUSE, false);
+        var previous = new HousingIndex("v", List.of(a, b, shut, own, held, shop), Map.of("holder", new HousingIndex.BedKey("e", head(held))),
                 List.of(), Map.of(), List.of(), Map.of(), Map.of(), 0, true);
         var folk = List.of(folk("ann", Townsfolk.HOME), folk("bo", Townsfolk.HOME), folk("cy", Townsfolk.HOME), folk("di", Townsfolk.HOME),
-                folk("ed", Townsfolk.HOME), folk("gone", Townsfolk.PASSED), folk("holder", Townsfolk.HOME));
-        var anchors = Map.of("ann", head(a), "bo", head(a), "cy", head(shut), "di", head(own), "ed", head(held), "gone", head(b));
+                folk("ed", Townsfolk.HOME), folk("gone", Townsfolk.PASSED), folk("holder", Townsfolk.HOME), folk("fay", Townsfolk.HOME));
+        var anchors = Map.of("ann", head(a), "bo", head(a), "cy", head(shut), "di", head(own), "ed", head(held), "gone", head(b), "fay", head(shop));
         var beds = LeafFlats.seed(previous, folk, anchors).beds();
-        // ann keeps flat a (bo shares the anchor and gets nothing); a private flat, a player's own house, a held bed and the dead are skipped.
-        assertEquals(Map.of("holder", new HousingIndex.BedKey("e", head(held)), "ann", new HousingIndex.BedKey("a", head(a))), beds);
+        // ann keeps flat a and fay the tea house (bo shares the anchor and gets nothing); a private flat, a player's own house, a held bed and the dead are skipped.
+        assertEquals(Map.of("holder", new HousingIndex.BedKey("e", head(held)), "ann", new HousingIndex.BedKey("a", head(a)),
+                "fay", new HousingIndex.BedKey("f", head(shop))), beds);
     }
 }
