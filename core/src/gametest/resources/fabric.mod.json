@@ -5,6 +5,6 @@
   "name": "Shinobi Core Client Tests",
   "environment": "client",
   "entrypoints": {
-    "fabric-client-gametest": ["dev.shinobi.core.LaunchGameTest"]
+    "fabric-client-gametest": ["dev.shinobi.core.LaunchGameTest", "dev.shinobi.core.StateGameTest"]
   }
 }
