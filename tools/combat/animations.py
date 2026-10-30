@@ -273,6 +273,21 @@ keys("sign.release_ram", (0, SIGN_POSES["ram"]), (3, arms(-75, 5, 30)), (6, SIGN
 keys("cast.first_aid", (0, arms(-40, 20)), (15, arms(-52, 25)), (30, arms(-40, 20)))
 PALMS = [arms(-90, 0), arms(-90, 0, 0, -50, 25)]
 keys("tai.academy.palm_rush", *[(t, PALMS[i % 2]) for i, t in enumerate(range(0, 25, 3))], (30, FISTS))
+# The ninja run: body leaned in, both arms swept straight back and fluttering; the legs keep vanilla's run.
+keys("move.ninja_run", (0, {**arms(75, 0, 8), "body": (18, 0, 0)}), (6, {**arms(82, 0, 13), "body": (18, 0, 0)}),
+     (12, {**arms(75, 0, 8), "body": (18, 0, 0)}))
+# Ready stance with a kunai or shuriken in hand: fists up, feet apart, breathing.
+READY = {**FISTS, "body": (8, 0, 0), "right_leg": (0, 0, 10), "left_leg": (0, 0, -10)}
+keys("stance.idle", (0, READY), (20, {**READY, **arms(-75, 28)}), (40, READY))
+# Meditation: hands together low before the chest, head bowed, slow breaths.
+CALM = {**arms(-40, 38), "head": (18, 0, 0)}
+keys("pose.meditate", (0, CALM), (20, {**arms(-44, 40), "head": (22, 0, 0)}), (40, CALM))
+# Victory: a fist thrown high, the other on the hip.
+CHEER = {"right_arm": (-170, 0, 15), "left_arm": (0, 0, -35), "body": (-6, 0, 0)}
+keys("pose.victory", (0, REST), (5, CHEER), (25, CHEER), (30, {**REST, "body": (0, 0, 0)}))
+# The sparring bow, before and after a bout.
+BOW = {**arms(0, 0), "body": (35, 0, 0), "head": (20, 0, 0)}
+keys("res.spar_bow", (0, {**BOW, "body": (0, 0, 0), "head": (0, 0, 0)}), (5, BOW), (11, BOW), (16, {**BOW, "body": (0, 0, 0), "head": (0, 0, 0)}))
 
 
 def summary():

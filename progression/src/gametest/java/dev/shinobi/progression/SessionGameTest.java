@@ -102,6 +102,9 @@ public final class SessionGameTest implements FabricClientGameTest {
                 if (i == 3) c.takeScreenshot("session-spar");
             }
             check("shop".equals(step(w)) && ryo(w) == 130, "the retried spar won pays 30 ryo once: " + journal(w) + ", " + ryo(w));
+            check(w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().getAttached(ShinobiCombat.STANCE).clip().equals("combat.pose.victory")
+                    && w.getConnection().getServerLevel().getEntity(partner).getAttached(ShinobiCombat.STANCE).clip().equals("combat.res.spar_bow")),
+                    "the winner cheers and the partner bows");
             c.takeScreenshot("session-won");
             check(w.getServer().computeOnServer(s -> Stream.of("clone", "transformation", "substitution", "release", "rope_escape", "first_aid")
                     .allMatch(t -> ShinobiCombat.knows(w.getConnection().getServerPlayer(), "combat:nin." + t))), "the won spar teaches the six Academy techniques");

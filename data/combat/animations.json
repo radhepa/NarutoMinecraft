@@ -8,7 +8,143 @@
    "fp": false,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null,
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "body",
+     "rot": [
+      8,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      10
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_leg",
+     "rot": [
+      0,
+      0,
+      -10
+     ]
+    },
+    {
+     "tick": 20,
+     "part": "right_arm",
+     "rot": [
+      -75,
+      -28,
+      0
+     ]
+    },
+    {
+     "tick": 20,
+     "part": "left_arm",
+     "rot": [
+      -75,
+      28,
+      0
+     ]
+    },
+    {
+     "tick": 20,
+     "part": "body",
+     "rot": [
+      8,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 20,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      10
+     ]
+    },
+    {
+     "tick": 20,
+     "part": "left_leg",
+     "rot": [
+      0,
+      0,
+      -10
+     ]
+    },
+    {
+     "tick": 40,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 40,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 40,
+     "part": "body",
+     "rot": [
+      8,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 40,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      10
+     ]
+    },
+    {
+     "tick": 40,
+     "part": "left_leg",
+     "rot": [
+      0,
+      0,
+      -10
+     ]
+    }
+   ],
    "note": "Combat-ready idle: knees bent, kunai or fists up"
   },
   "combat.stance.walk_guard": {
@@ -221,7 +357,89 @@
    "fp": false,
    "priority": "P1",
    "slice": "beta2",
-   "keys": null,
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      75,
+      0,
+      8
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      75,
+      0,
+      -8
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "body",
+     "rot": [
+      18,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 6,
+     "part": "right_arm",
+     "rot": [
+      82,
+      0,
+      13
+     ]
+    },
+    {
+     "tick": 6,
+     "part": "left_arm",
+     "rot": [
+      82,
+      0,
+      -13
+     ]
+    },
+    {
+     "tick": 6,
+     "part": "body",
+     "rot": [
+      18,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 12,
+     "part": "right_arm",
+     "rot": [
+      75,
+      0,
+      8
+     ]
+    },
+    {
+     "tick": 12,
+     "part": "left_arm",
+     "rot": [
+      75,
+      0,
+      -8
+     ]
+    },
+    {
+     "tick": 12,
+     "part": "body",
+     "rot": [
+      18,
+      0,
+      0
+     ]
+    }
+   ],
    "note": "Arms back"
   },
   "combat.move.chakra_jump_charge": {
@@ -1263,7 +1481,143 @@
    "fp": false,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "right_arm",
+     "rot": [
+      -170,
+      0,
+      15
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "left_arm",
+     "rot": [
+      0,
+      0,
+      -35
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "body",
+     "rot": [
+      -6,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 25,
+     "part": "right_arm",
+     "rot": [
+      -170,
+      0,
+      15
+     ]
+    },
+    {
+     "tick": 25,
+     "part": "left_arm",
+     "rot": [
+      0,
+      0,
+      -35
+     ]
+    },
+    {
+     "tick": 25,
+     "part": "body",
+     "rot": [
+      -6,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 30,
+     "part": "right_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 30,
+     "part": "left_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 30,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 30,
+     "part": "left_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 30,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   ]
   },
   "combat.pose.taunt": {
    "ticks": 30,
@@ -1291,7 +1645,89 @@
    "fp": false,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      -40,
+      -38,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -40,
+      38,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "head",
+     "rot": [
+      18,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 20,
+     "part": "right_arm",
+     "rot": [
+      -44,
+      -40,
+      0
+     ]
+    },
+    {
+     "tick": 20,
+     "part": "left_arm",
+     "rot": [
+      -44,
+      40,
+      0
+     ]
+    },
+    {
+     "tick": 20,
+     "part": "head",
+     "rot": [
+      22,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 40,
+     "part": "right_arm",
+     "rot": [
+      -40,
+      -38,
+      0
+     ]
+    },
+    {
+     "tick": 40,
+     "part": "left_arm",
+     "rot": [
+      -40,
+      38,
+      0
+     ]
+    },
+    {
+     "tick": 40,
+     "part": "head",
+     "rot": [
+      18,
+      0,
+      0
+     ]
+    }
+   ]
   },
   "combat.sign.rat": {
    "ticks": 4,
@@ -4769,7 +5205,152 @@
    "fp": false,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "head",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "right_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "left_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "body",
+     "rot": [
+      35,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "head",
+     "rot": [
+      20,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 11,
+     "part": "right_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 11,
+     "part": "left_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 11,
+     "part": "body",
+     "rot": [
+      35,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 11,
+     "part": "head",
+     "rot": [
+      20,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 16,
+     "part": "right_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 16,
+     "part": "left_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 16,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 16,
+     "part": "head",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   ]
   },
   "combat.res.spectator_cheer": {
    "ticks": 30,

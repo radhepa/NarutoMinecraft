@@ -9,7 +9,8 @@
       "dev.shinobi.village.LeafResidentGameTest",
       "dev.shinobi.village.TestStreetGameTest",
       "dev.shinobi.village.CreatorGameTest",
-      "dev.shinobi.village.LeafNamesGameTest"
+      "dev.shinobi.village.LeafNamesGameTest",
+      "dev.shinobi.village.LeafUiGameTest"
     ]
   }
 }

@@ -10,7 +10,7 @@ Counts: P0 62, P1 107, P2 33, P3 37, total 239.
 
 | Clip | Ticks | Loop | Who | First person | Keyed | Note |
 |---|---|---|---|---|---|---|
-| `combat.stance.idle` | 40 | yes | both |  |  | Combat-ready idle: knees bent, kunai or fists up |
+| `combat.stance.idle` | 40 | yes | both |  | yes | Combat-ready idle: knees bent, kunai or fists up |
 | `combat.stance.walk_guard` | 20 | yes | both |  |  |  |
 | `combat.move.crouch_hide` | 30 | yes | player |  |  | Prologue |
 | `combat.move.slip_out` | 40 |  | player |  |  | Prologue: squeezing out of the cell |
@@ -31,9 +31,9 @@ Counts: P0 62, P1 107, P2 33, P3 37, total 239.
 | `combat.react.stagger` | 16 |  | both |  |  |  |
 | `combat.react.knocked_out` | 40 |  | both |  |  | VF Knockouts: lying down |
 | `combat.react.yield` | 20 |  | both |  |  | Hand raised, kneeling |
-| `combat.pose.victory` | 30 |  | both |  |  |  |
+| `combat.pose.victory` | 30 |  | both |  | yes |  |
 | `combat.pose.tired_slouch` | 40 | yes | player |  |  | Fatigue |
-| `combat.pose.meditate` | 40 | yes | both |  |  |  |
+| `combat.pose.meditate` | 40 | yes | both |  | yes |  |
 | `combat.sign.rat` | 4 |  | both | yes | yes |  |
 | `combat.sign.ox` | 4 |  | both | yes | yes |  |
 | `combat.sign.tiger` | 4 |  | both | yes | yes |  |
@@ -69,7 +69,7 @@ Counts: P0 62, P1 107, P2 33, P3 37, total 239.
 | `combat.res.salute` | 16 |  | resident |  |  |  |
 | `combat.res.nod` | 10 |  | resident |  |  |  |
 | `combat.res.excited_wave` | 20 |  | resident |  |  | Kids |
-| `combat.res.spar_bow` | 16 |  | both |  |  |  |
+| `combat.res.spar_bow` | 16 |  | both |  | yes |  |
 | `combat.life.petting` | 30 |  | player |  |  |  |
 | `combat.life.workbench` | 30 | yes | player |  |  |  |
 
@@ -77,7 +77,7 @@ Counts: P0 62, P1 107, P2 33, P3 37, total 239.
 
 | Clip | Ticks | Loop | Who | First person | Keyed | Note |
 |---|---|---|---|---|---|---|
-| `combat.move.ninja_run` | 12 | yes | both |  |  | Arms back |
+| `combat.move.ninja_run` | 12 | yes | both |  | yes | Arms back |
 | `combat.move.chakra_jump_charge` | 20 | yes | player |  |  |  |
 | `combat.move.chakra_jump_air` | 16 |  | both |  |  |  |
 | `combat.move.land_roll` | 10 |  | both |  |  |  |
