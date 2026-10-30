@@ -90,8 +90,10 @@ public final class TestStreetGameTest implements FabricClientGameTest {
                 return houses.size() == n;
             }), 1200, () -> "each resident has a house of their own");
             List<String> beds = w.getServer().computeOnServer(s -> built.residents().stream().map(v -> Homes.bedOf(v).map(b -> b.head().subtract(origin).toShortString()).orElse("-")).toList());
-            check(java.util.stream.IntStream.range(0, n).allMatch(i -> Homes.bedOf(built.residents().get(i)).map(b -> b.head().distSqr(BlockPos.containing(spawn.get(i))) < 64).orElse(false)),
-                    "each resident's bed is in the house it was placed in: " + beds + " for " + spawn.stream().map(p -> BlockPos.containing(p).subtract(origin).toShortString()).toList());
+            // Against the markers, not where the residents stand by now: the keeper can be down the tea house stairs already.
+            List<BlockPos> placed = w.getServer().computeOnServer(s -> markers());
+            check(java.util.stream.IntStream.range(0, n).allMatch(i -> Homes.bedOf(built.residents().get(i)).map(b -> b.head().distSqr(placed.get(i)) < 64).orElse(false)),
+                    "each resident's bed is in the house it was placed in: " + beds + " for " + placed.stream().map(p -> p.subtract(origin).toShortString()).toList());
 
             until(c, () -> walked(w, built, spawn) > 0, 2400, () -> "a resident walks by day");
             ShinobiVillage.LOG.info("Test street: {} of {} residents left their markers", walked(w, built, spawn), n);
@@ -228,6 +230,15 @@ public final class TestStreetGameTest implements FabricClientGameTest {
                     level.getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of())) : null;
         })) != null, 600, () -> "the map's residents load");
         return built[0];
+    }
+
+    /** Each resident marker's block, in the order {@link #street} finds the residents. */
+    static List<BlockPos> markers() {
+        var out = new ArrayList<BlockPos>();
+        for (var plot : TestStreet.PLOTS)
+            for (var m : Blueprint.load(plot.getKey()).json().getAsJsonArray("markers"))
+                if ("resident".equals(m.getAsJsonObject().get("type").getAsString())) out.add(Blueprint.at(TestStreet.MAP.offset(plot.getValue()), m.getAsJsonObject()));
+        return out;
     }
 
     /** Whether the column at x, z holds only air from y {@code from} to {@code to}. */

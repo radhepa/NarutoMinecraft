@@ -26,7 +26,8 @@ import java.util.UUID;
  * P04-4/5: the errand pays 20 ryo once on top of the first day's 100; by the keeper the player buys tea (by the shop's
  * command) and a tatami, is refused what the wallet cannot cover and anything away from the keeper; reopening keeps
  * the wallet and the goods, with no second payout.
- * P04-6: a step whose anchor the map has lost is blocked, not crashed, and opens again with the anchor back.
+ * P04-6: a step whose anchor the map has lost is blocked, not crashed, and opens again with the anchor back; a cast
+ * saved without a slot the quest declares is cast again.
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class ErrandGameTest implements FabricClientGameTest {
@@ -119,6 +120,15 @@ public final class ErrandGameTest implements FabricClientGameTest {
             w.getServer().runOnServer(s -> w.getConnection().getServerLevel().setAttached(ShinobiVillage.ANCHORS, full));
             c.waitTicks(20);
             check(blocked(w, training) == null && "spar".equals(journal(w).active().get(training)), "the anchor back, the step is open again");
+            // A cast saved before the quest declared its yard slot is cast again, not blocked for good.
+            w.getServer().runOnServer(s -> {
+                var p = w.getConnection().getServerPlayer();
+                var cast = new HashMap<>(p.getAttachedOrCreate(ShinobiProgression.JOURNAL).castOf(training));
+                cast.remove("yard");
+                p.setAttached(ShinobiProgression.JOURNAL, p.getAttachedOrCreate(ShinobiProgression.JOURNAL).recast(training, cast));
+            });
+            c.waitTicks(20);
+            check(blocked(w, training) == null && journal(w).castOf(training).containsKey("yard"), "a cast without a slot is cast again: " + journal(w));
         }
     }
 

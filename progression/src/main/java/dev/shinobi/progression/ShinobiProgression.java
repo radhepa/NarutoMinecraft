@@ -207,6 +207,15 @@ public final class ShinobiProgression implements ModInitializer {
             journal = player.getAttachedOrCreate(JOURNAL);
         }
         for (var entry : journal.active().entrySet()) {
+            // A cast saved before the quest declared a slot is cast again; while the map cannot cast it, the step stays blocked.
+            var q = QUESTS.get(entry.getKey());
+            if (q != null && !journal.castOf(entry.getKey()).keySet().containsAll(q.template().slots().keySet())) {
+                try {
+                    journal = journal.recast(entry.getKey(), Quests.cast(q.template(), player.level().getAttachedOrElse(ShinobiVillage.ROLES, Map.of()),
+                            player.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of())));
+                    player.setAttached(JOURNAL, journal);
+                } catch (IllegalArgumentException ignored) {}
+            }
             // A step whose quest, step, place or person is gone waits, blocked, with one warning; it goes on once that is back.
             String missing = blocked(player, entry.getKey());
             if (missing != null) {
@@ -241,7 +250,7 @@ public final class ShinobiProgression implements ModInitializer {
         if (step == null) return "step " + at;
         var level = player.level();
         var cast = journal.castOf(id);
-        String field = switch (step.type()) { case "go", "spar" -> "place"; case "talk" -> "who"; default -> null; };
+        String field = Quests.field(step.type());
         if (field == null) return null;
         String ref = Json.str(step.objective().get(field), ""), key = Quests.resolve(ref, cast);
         boolean there = key != null && ("who".equals(field)

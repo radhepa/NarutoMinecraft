@@ -38,6 +38,13 @@ public record Journal(Map<String, String> active, Map<String, Map<String, String
         return new Journal(Map.copyOf(a), Map.copyOf(c), done, flags);
     }
 
+    /** The journal with the quest cast again, for a quest whose data has declared a slot since it was accepted. */
+    public Journal recast(String quest, Map<String, String> slots) {
+        var c = new LinkedHashMap<>(cast);
+        c.put(quest, Map.copyOf(slots));
+        return new Journal(active, Map.copyOf(c), done, flags);
+    }
+
     /** The quest's cast, empty for a quest with no slots. */
     public Map<String, String> castOf(String quest) { return cast.getOrDefault(quest, Map.of()); }
 

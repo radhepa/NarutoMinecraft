@@ -325,7 +325,7 @@ def catalogue_doc(ts):
 
 # The quest runtime's vocabulary (progression/.../Quests.java) and the test street it casts quests on.
 # shortcut: the street's plots and saved anchors mirror TestStreet.PLOTS and firstStart, until the map's anchors are data.
-QUEST_STEPS = {"", "go", "spar", "talk", "furnish", "sleep"}
+QUEST_STEPS = {"go", "spar", "talk", "furnish", "sleep"}
 QUEST_CONDITIONS = {"all", "any", "not", "flag", "quest_state"}
 QUEST_STATES = {"done", "active", "not_started"}
 STREET = ["leaf_block", "shop_tea_house", "training_yard"]
@@ -385,7 +385,7 @@ def check_quests(files, map_data=None):
         if qid in quests:
             problems.append(f"{rel}: {qid}: duplicate id (also {quests[qid][0]})")
         quests[qid] = (rel, q)
-    set_flags = {a["set_flag"][0] for _, q in quests.values() for s in (q.get("steps") or {}).values() if isinstance(s, dict)
+    set_flags = {a["set_flag"][0] for _, q in quests.values() for s in (q["steps"] if isinstance(q.get("steps"), dict) else {}).values() if isinstance(s, dict)
                  for when in ("on_enter", "on_done") for a in s.get(when) or [] if isinstance(a, dict) and isinstance(a.get("set_flag"), list) and a["set_flag"]}
     for qid, (rel, q) in quests.items():
         def err(where, msg):
@@ -395,6 +395,10 @@ def check_quests(files, map_data=None):
             err("", "no steps")
             continue
         slots = q.get("slots") or {}
+        if not isinstance(slots, dict):
+            err("", "slots must be an object")
+            slots = {}
+        start = q.get("start") if isinstance(q.get("start"), str) else None
         for name, slot in slots.items():
             key = slot_key(slot)
             if key is None:
@@ -403,7 +407,7 @@ def check_quests(files, map_data=None):
                 err("", f"slot {name}: no {key} on the map (anchors: {', '.join(sorted(anchors))})")
             elif not key.startswith("anchor:") and key not in roles:
                 err("", f"slot {name}: no resident with {key} on the map (roles: {', '.join(sorted(roles))})")
-        if q.get("start") not in steps:
+        if start not in steps:
             err("", f"no start step {q.get('start')!r}")
 
         def condition(where, c):
@@ -424,7 +428,7 @@ def check_quests(files, map_data=None):
                     err(where, "flag needs a name")
                 elif v not in set_flags:
                     err(where, f"flag {v} is never set by any quest's set_flag")
-            elif not (isinstance(v, list) and len(v) == 2 and isinstance(v[0], str) and v[1] in QUEST_STATES):
+            elif not (isinstance(v, list) and len(v) == 2 and isinstance(v[0], str) and isinstance(v[1], str) and v[1] in QUEST_STATES):
                 err(where, "quest_state needs [quest, done|active|not_started]")
             elif v[0] == qid:
                 err(where, "quest_state cannot name its own quest")
@@ -436,23 +440,26 @@ def check_quests(files, map_data=None):
                 err(name, "a step must be an object")
                 continue
             nxt = s.get("next")
-            if nxt is not None and nxt not in steps:
+            if nxt is not None and not (isinstance(nxt, str) and nxt in steps):
                 err(name, f"next names missing step {nxt!r}")
             for b in s.get("branch") or []:
-                if not isinstance(b, dict) or b.get("next") not in steps:
+                if not (isinstance(b, dict) and isinstance(b.get("next"), str) and b["next"] in steps):
                     err(name, f"branch to missing step {b.get('next') if isinstance(b, dict) else b!r}")
                 condition(name, b.get("if") if isinstance(b, dict) else None)
             for when in ("on_enter", "on_done"):
                 for a in s.get(when) or []:
                     ok = isinstance(a, dict) and len(a) == 1 and (
                         isinstance(a.get("set_flag"), list) and len(a["set_flag"]) == 2 and isinstance(a["set_flag"][0], str) and isinstance(a["set_flag"][1], bool)
-                        or type(a.get("give_ryo")) in (int, float) and a["give_ryo"] >= 1 and a["give_ryo"] == int(a["give_ryo"]))
+                        or type(a.get("give_ryo")) in (int, float) and 1 <= a["give_ryo"] <= 2**31 - 1 and a["give_ryo"] == int(a["give_ryo"]))
                     if not ok:
-                        err(name, f"{when}: unknown or malformed action {a} (set_flag [name, true|false] or give_ryo <whole ryo, at least 1>)")
+                        err(name, f"{when}: unknown or malformed action {a} (set_flag [name, true|false] or give_ryo <whole ryo, 1 to 2147483647>)")
             o = s.get("objective") or {}
+            if not isinstance(o, dict):
+                err(name, "objective must be an object")
+                continue
             kind = o.get("type", "")
-            if kind not in QUEST_STEPS:
-                err(name, f"unknown step type {kind!r} (known: {', '.join(sorted(QUEST_STEPS - {''}))})")
+            if not isinstance(kind, str) or kind not in QUEST_STEPS:
+                err(name, f"unknown step type {kind!r} (known: {', '.join(sorted(QUEST_STEPS))})")
                 continue
             field = {"go": "place", "spar": "place", "talk": "who"}.get(kind)
             if field is None:
@@ -464,21 +471,21 @@ def check_quests(files, map_data=None):
                 slot = slots.get(ref[5:])
                 if slot is None:
                     err(name, f"names undeclared {ref}")
-                elif (kind == "talk") == (slot.get("pick") == "anchor"):
+                elif isinstance(slot, dict) and (kind == "talk") == (slot.get("pick") == "anchor"):
                     err(name, f"{kind} step needs {'a resident or role' if kind == 'talk' else 'an anchor'} slot, not {ref}")
             elif kind == "talk":
                 err(name, f"talks to {ref}, not a resident slot")
             elif ref not in anchors:
                 err(name, f"no anchor {ref} on the map (anchors: {', '.join(sorted(anchors))})")
-        reached, todo = set(), [q.get("start")]
+        reached, todo = set(), [start]
         while todo:
             n = todo.pop()
-            if n in reached or n not in steps or not isinstance(steps[n], dict):
+            if not isinstance(n, str) or n in reached or n not in steps or not isinstance(steps[n], dict):
                 continue
             reached.add(n)
             todo += [steps[n].get("next")] + [b.get("next") for b in steps[n].get("branch") or [] if isinstance(b, dict)]
         for name in steps:
-            if name not in reached and q.get("start") in steps:
+            if name not in reached and start in steps:
                 err(name, "unreachable from the start step")
     return problems
 
@@ -488,7 +495,7 @@ def quest_mode():
     files = quest_files()
     problems = check_quests(files)
     bad = check_quests([BAD_QUEST]) + check_quests([MISSING_QUEST])
-    want = ["unknown step type", "unknown condition", "malformed action", "missing step", "unreachable", "never set",
+    want = ["objective must be an object", "unknown step type", "unknown step type ''", "unknown condition", "malformed action", "missing step", "unreachable", "never set",
             "unknown quest", "no anchor", "no resident", "no anchor:nowhere"]
     missed = [w for w in want if not any(w in p for p in bad)]
     if missed:
@@ -504,8 +511,7 @@ def quest_mode():
 def main(argv):
     if "--quests" in argv:
         return quest_mode()
-    if "--check" in argv and quest_mode():
-        return 1
+    bad_quests = "--check" in argv and quest_mode()
     ts = [compiled(t) for t in templates()]
     ids = Counter(t["id"] for t in ts)
     problems = [x for t in ts for x in check(t, ids)] + check_tables(ts)
@@ -527,6 +533,8 @@ def main(argv):
         extra = [os.path.join(d, f) for d, _, fs in os.walk(tdir) for f in fs if os.path.join(d, f) not in known] if os.path.isdir(tdir) else []
         if stale or extra:
             print("stale compiled files (run missions.py):", *sorted(os.path.relpath(f, ROOT) for f in stale + extra), sep="\n  ")
+            return 1
+        if bad_quests:
             return 1
         print("ok")
         return 0

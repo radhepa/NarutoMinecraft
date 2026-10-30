@@ -9,19 +9,17 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
 
 - 5f21cc5: a new world is the Hidden Leaf preset; its first start pastes the street, border and spawn.
 - a36468c, 8bf6f40 (P06): chakra, hand signs, Academy techniques, guard and dodge.
-- e92d2f6, f139632 (P05): calendar, 30 ryo stipend from day 2 (one per skipped day), Tired at 01:00 cleared by a bed,
-  a defeat wakes in flat 3a (if the map has it and the spot is free) minus thrown tools, the flat's chest and table,
-  pet adoption. Leaf worlds created before e92d2f6 lack keep_inventory, the chest and the table: recreate them.
-- The commit "P04: ..." (this file's commit) closes P04: a lost spar keeps the quest at its spar, reward unpaid
-  (P04-6); a step missing its quest, step, anchor or resident waits blocked with one warning and shows so in
-  `/shinobi journal`; `missions.py --quests` (also in `--check`) checks every quest file (P04-7, MISSIONS.md).
+- e92d2f6, f139632 (P05): calendar, daily stipend, Tired, a defeat wakes in flat 3a, the flat's chest and table, pet
+  adoption. Leaf worlds created before e92d2f6 lack keep_inventory, the chest and the table: recreate them.
+- ed59bee and "P04: review fixes" (this file's commit) close P04: a lost spar waits unpaid; a step missing its
+  anchor or resident waits blocked with one warning; a cast lacking a newly declared slot is cast again;
+  `missions.py --check` reports quest problems (malformed shapes, untyped steps) and template problems in one run.
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-`./gradlew build` passed (`.local-dev/logs/p04-build.log`); `python tools/missions/missions.py --check` passed.
-`:progression:runClientGameTest` passed (`p04-progression-gametest.log`): `SessionGameTest` loses a spar, retries,
-wins and is paid once across a reload, and a two-day clock jump pays two stipends; `ErrandGameTest` blocks a step
-whose anchor is gone. `:village:` and `:combat:runClientGameTest` passed at e92d2f6 (`p05-day-*-gametest.log`).
+`./gradlew build`, `missions.py --check`, `:progression:` and `:village:runClientGameTest` passed
+(`.local-dev/logs/p04fix-*.log`). The village bed check once failed (`m3-village-gt.log`): it compared beds with where
+residents stood after loading, and the keeper had walked off; it now compares with the markers.
 
 ## Remaining
 
@@ -33,8 +31,8 @@ whose anchor is gone. `:village:` and `:combat:runClientGameTest` passed at e92d
 
 ## Launch
 
-`./gradlew :progression:runClient` (player `ShinobiTester`). A new world needs no command: Create World defaults to
-the Hidden Leaf. Game rule `shinobi_core:varied_world` makes a Varied save. Pack: [PACK.md](PACK.md).
+`./gradlew :progression:runClient` (player `ShinobiTester`); Create World defaults to the Hidden Leaf. Game rule
+`shinobi_core:varied_world` makes a Varied save. Pack: [PACK.md](PACK.md).
 
 ## Known shortcuts
 

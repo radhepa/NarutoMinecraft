@@ -52,6 +52,7 @@ class JournalTest {
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"go\"}}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"spar\"}}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"slep\"}}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"next\": null}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"go\", \"place\": \"slot:nobody\"}}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"talk\", \"who\": \"keeper\"}}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"slots\": {\"s\": {\"pick\": \"anchor\", \"tag\": \"x\"}}, \"steps\": {\"a\": {\"objective\": {\"type\": \"talk\", \"who\": \"slot:s\"}}}}",
@@ -73,12 +74,12 @@ class JournalTest {
     void stepsRunTheirActionsAndFollowTheFirstBranchThatHolds() {
         var q = Quests.quest(Json.object("""
                 {"id": "b", "start": "a",
-                 "steps": {"a": {"on_enter": [{"set_flag": ["entered", true]}], "on_done": [{"set_flag": ["met", true]}, {"give_ryo": 5}],
+                 "steps": {"a": {"objective": {"type": "sleep"}, "on_enter": [{"set_flag": ["entered", true]}], "on_done": [{"set_flag": ["met", true]}, {"give_ryo": 5}],
                                  "branch": [{"if": {"not": {"flag": "met"}}, "next": "never"},
                                             {"if": {"all": [{"flag": "met"}, {"quest_state": ["other", "not_started"]}]}, "next": "side"}],
                                  "next": "never"},
-                           "side": {"on_enter": [{"set_flag": ["entered", false]}], "on_done": [{"give_ryo": 15}], "next": null},
-                           "never": {"next": null}}}"""));
+                           "side": {"objective": {"type": "sleep"}, "on_enter": [{"set_flag": ["entered", false]}], "on_done": [{"give_ryo": 15}], "next": null},
+                           "never": {"objective": {"type": "sleep"}, "next": null}}}"""));
         var o = Quests.start(Journal.EMPTY, q, Map.of());
         assertEquals(List.of("entered"), o.journal().flags());
         o = Quests.complete(o.journal(), q);
