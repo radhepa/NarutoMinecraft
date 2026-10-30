@@ -6,7 +6,6 @@ import dev.shinobi.life.economy.Prices;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
-import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
@@ -53,7 +52,6 @@ public final class ShinobiLife implements ModInitializer {
         catalogue = Catalogue.load(FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow().findPath("data/shinobi_life/items").orElseThrow());
         prices = new Prices(catalogue);
         ServerTickEvents.END_SERVER_TICK.register(Daily::tick);
-        ServerPlayerEvents.AFTER_RESPAWN.register((old, now, alive) -> { if (!alive) Daily.woke(now); });
     }
 
     public static int ryo(ServerPlayer player) { return player.getAttachedOrCreate(WALLET); }

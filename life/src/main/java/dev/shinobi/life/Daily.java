@@ -4,7 +4,6 @@ import com.mojang.serialization.Codec;
 import dev.shinobi.life.economy.Json;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
-import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundSetTitleTextPacket;
 import net.minecraft.resources.Identifier;
@@ -15,11 +14,10 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 
 import java.util.List;
-import java.util.function.Function;
 
 /**
- * The ordinary day (P05): the calendar, the orphan's stipend each morning, fatigue after a night awake, and waking at
- * home after a defeat (ROADMAP.md, "The daily cycle" and "Death").
+ * The ordinary day (P05): the calendar, the orphan's stipend each morning and fatigue after a night awake (ROADMAP.md,
+ * "The daily cycle"); Shinobi Progression wakes a defeated player at home.
  * shortcut: one fatigue stage, Tired (Slowness I, chakra regen -25%), cleared by any bed; no Exhausted, Collapse or
  * Well Rested, until the difficulty thresholds and the home bed's bonus are wired.
  */
@@ -34,12 +32,6 @@ public final class Daily {
     /** Whether the player stayed up through the night; not kept through death, since waking clears it. */
     public static final AttachmentType<Boolean> TIRED = AttachmentRegistry.create(Identifier.fromNamespaceAndPath(ShinobiLife.MOD_ID, "tired"),
             b -> b.persistent(Codec.BOOL).initializer(() -> false));
-    /**
-     * Where a defeated player wakes, standing in their home; the map's mod fills it in.
-     * shortcut: the flat, not the hospital, until the map has one.
-     */
-    public static Function<ServerPlayer, BlockPos> home = p -> null;
-
     private Daily() {}
 
     /** The day number, 1 on the world's first day. */
@@ -52,7 +44,8 @@ public final class Daily {
     /**
      * Once a second: a new day shows its name and pays the stipend; a player awake at 01:00 turns tired, and sleeping
      * clears it. The welcome purse (the wallet's first 100 ryo) is the player's first day's stipend (ITEMS.md, kit:start;
-     * economy.json, stipend.from_day), so a player's first day pays nothing more and each later day pays 30.
+     * economy.json, stipend.from_day), so a player's first day pays nothing more and each later day pays 30: one envelope
+     * for each day since the last one seen, so a clock jumped forward pays every skipped morning and one moved back none.
      */
     static void tick(MinecraftServer server) {
         if (server.getTickCount() % 20 != 0) return;
@@ -62,8 +55,9 @@ public final class Daily {
             if (day > seen) {
                 p.setAttached(SEEN, day);
                 p.connection.send(new ClientboundSetTitleTextPacket(Component.translatable("shinobi_life.day", day, weekday(p.level()))));
-                if (seen > 0 && day >= Json.integer(stipend.get("from_day"), 2)) {
-                    int ryo = Json.integer(stipend.get("amount"), 30);
+                int from = Json.integer(stipend.get("from_day"), 2);
+                if (seen > 0 && day >= from) {
+                    int ryo = Json.integer(stipend.get("amount"), 30) * (day - Math.max(seen, from - 1));
                     p.setAttached(ShinobiLife.WALLET, ShinobiLife.ryo(p) + ryo);
                     p.sendSystemMessage(Component.translatable("shinobi_life.stipend", ryo, ShinobiLife.ryo(p)));
                 }
@@ -81,12 +75,5 @@ public final class Daily {
     static void rested(ServerPlayer p) {
         p.setAttached(TIRED, false);
         p.removeEffect(MobEffects.SLOWNESS);
-    }
-
-    /** After a defeat: the player wakes in their home, fatigue gone (the attachment is not copied). */
-    static void woke(ServerPlayer p) {
-        var at = home.apply(p);
-        if (at != null) p.teleportTo(at.getX() + .5, at.getY(), at.getZ() + .5);
-        p.sendSystemMessage(Component.translatable("shinobi_life.woke"));
     }
 }

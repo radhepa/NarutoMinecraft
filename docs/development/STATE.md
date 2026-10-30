@@ -13,6 +13,9 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
   30 ryo stipend from day 2 (day 1 is the 100 ryo purse, economy.json `stipend.from_day`), Tired at 01:00 awake
   (Slowness I, chakra regen x0.75) cleared by a bed, a defeat wakes in flat 3a with the pack minus thrown tools
   (keep_inventory on the map), chest and crafting table in the flat, kitten/pup adoption from the keeper.
+- P05 review fixes: Progression's one respawn handler wakes the player in the flat only when the map has it and
+  the spot is free; a clock jumped several days pays each skipped stipend. Leaf worlds created before e92d2f6 lack
+  keep_inventory, the chest and the table: recreate them.
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 

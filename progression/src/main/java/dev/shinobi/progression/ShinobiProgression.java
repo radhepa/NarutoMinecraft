@@ -41,6 +41,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.phys.Vec3;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -85,18 +86,21 @@ public final class ShinobiProgression implements ModInitializer {
         });
         // Read at first use: Fabric does not promise Shinobi Life loads its catalogue before this entrypoint runs.
         StreetGuard.furnishing = item -> FURNITURE.get().contains(item);
-        // Fatigue slows chakra by a quarter (ROADMAP.md, "The daily cycle"); a defeated player wakes in the flat, beside the bed.
+        // Fatigue slows chakra by a quarter (ROADMAP.md, "The daily cycle").
         ShinobiCombat.regen = p -> Daily.tired(p) ? .75 : 1;
-        Daily.home = p -> {
-            var bed = p.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(TestStreet.PLAYER_FLAT);
-            return bed == null ? null : bed.offset(1, 1, 1);
-        };
         // The death penalty: the thrown tools carried are lost (ROADMAP.md, Death); the Leaf map keeps the rest of the pack.
-        // shortcut: no level lost, until P07's levels and rank floors.
+        // A defeated player wakes in the flat beside the bed when the map has one and the spot is free, else at the vanilla respawn.
+        // shortcut: no level lost, and the flat not the hospital, until P07's levels and a hospital on the map.
         ServerPlayerEvents.AFTER_RESPAWN.register((old, now, alive) -> {
             if (alive) return;
             var inv = now.getInventory();
             for (int i = 0; i < inv.getContainerSize(); i++) if (ShinobiCombat.THROWN.containsKey(inv.getItem(i).getItem())) inv.setItem(i, ItemStack.EMPTY);
+            var bed = now.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(TestStreet.PLAYER_FLAT);
+            if (bed == null) return;
+            var at = Vec3.atBottomCenterOf(bed.offset(1, 1, 1));
+            if (!now.level().noCollision(now, now.getBoundingBox().move(at.subtract(now.position())))) return;
+            now.teleportTo(at.x, at.y, at.z);
+            now.sendSystemMessage(Component.translatable("shinobi_life.woke"));
         });
         Spar.WON.register(player -> stepDone(player, "spar", step -> true));
         // Furnishing: a block from the furniture shop placed in the player's room, checked in a task after the placement.

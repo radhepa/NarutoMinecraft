@@ -44,7 +44,7 @@ import static dev.shinobi.progression.ErrandGameTest.ryo;
  * at nightfall into the next morning (day 2's stipend paid), and reopening keeps the look, the finished quest, the wallet
  * and the furnishing. The rest of the ordinary day (P05): a night awake tires the player and the bed clears it with day
  * 3's stipend; the flat's chest and crafting table open; a defeat wakes the player in the flat without the kunai; the
- * keeper's shelter line hands over a tamed kitten.
+ * keeper's shelter line hands over a tamed kitten; a two-day clock jump pays two stipends, and turning it back none.
  * Screenshots: session-creator, session-spar, session-won, session-furnished, session-asleep, session-reopened,
  * session-chest, session-woke, session-kitten.
  */
@@ -215,6 +215,13 @@ public final class SessionGameTest implements FabricClientGameTest {
             }), "a tamed kitten owned by the player stands beside them");
             c.waitTicks(20);
             c.takeScreenshot("session-kitten");
+
+            // A clock jumped two days pays both mornings; moved back, it pays nothing.
+            w.getServer().runCommand("time add 48000");
+            for (int i = 0; i < 10 && ryo(w) != 170; i++) c.waitTicks(10);
+            w.getServer().runCommand("time set 3000");
+            c.waitTicks(40);
+            check(ryo(w) == 170, "a two-day jump pays two stipends, and moving the clock back none: " + ryo(w));
         }
     }
 
