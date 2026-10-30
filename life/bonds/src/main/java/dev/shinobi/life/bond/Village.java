@@ -160,10 +160,12 @@ public final class Village {
         String ra = find(parent, a), rb = find(parent, b);
         if (!ra.equals(rb)) parent.put(ra.compareTo(rb) < 0 ? rb : ra, ra.compareTo(rb) < 0 ? ra : rb);
     }
-    private void buildTies() {
+    private void buildTies() { buildTies(id -> true); }
+    /** The first ties, only those touching someone {@code fresh} (on load: the people the save has no ties for). */
+    private void buildTies(java.util.function.Predicate<String> fresh) {
         var circles = new TreeMap<String, List<String>>(); var districts = new TreeMap<String, List<String>>();
         for (var p : w.people.values()) {
-            for (var kin : p.family().entrySet()) if (w.people.containsKey(kin.getKey())) link(p.id(), kin.getKey(), kin.getValue().equals("spouse") ? "spouse" : "family");
+            for (var kin : p.family().entrySet()) if (w.people.containsKey(kin.getKey())) link(fresh, p.id(), kin.getKey(), kin.getValue().equals("spouse") ? "spouse" : "family");
             for (String c : p.circles()) if (c.contains(":")) circles.computeIfAbsent(c, k -> new ArrayList<>()).add(p.id());
             if (!p.district().isEmpty()) districts.computeIfAbsent(p.district(), k -> new ArrayList<>()).add(p.id());
         }
@@ -172,22 +174,23 @@ public final class Village {
             if (!List.of("household", "squad", "class", "work").contains(kind)) continue;
             var members = e.getValue();
             for (int i = 0; i < members.size(); i++) for (int j = i + 1; j < members.size(); j++)
-                if (members.size() <= 8 || Gossip.talks(w.seed, e.getKey(), members.get(i), members.get(j), members.size())) link(members.get(i), members.get(j), kind);
+                if (members.size() <= 8 || Gossip.talks(w.seed, e.getKey(), members.get(i), members.get(j), members.size())) link(fresh, members.get(i), members.get(j), kind);
         }
         for (var house : clans.values()) {
             var members = w.people.values().stream().filter(p -> p.clan().equals(house.clan())).map(Person::id).toList();
             for (String m : members) {
-                if (!m.equals(house.head())) link(m, house.head(), "clan");
-                for (String o : members) if (m.compareTo(o) < 0 && Seeds.roll(w.seed, "clanmates", m, o) < (double) CLANMATES / Math.max(1, members.size() - 1)) link(m, o, "clan");
+                if (!m.equals(house.head())) link(fresh, m, house.head(), "clan");
+                for (String o : members) if (m.compareTo(o) < 0 && Seeds.roll(w.seed, "clanmates", m, o) < (double) CLANMATES / Math.max(1, members.size() - 1)) link(fresh, m, o, "clan");
             }
         }
         for (var e : districts.entrySet()) {
             var members = e.getValue();
             for (int i = 0; i < members.size(); i++) for (int j = i + 1; j < members.size(); j++)
                 if (Seeds.roll(w.seed, "neighbors", members.get(i), members.get(j)) < (double) NEIGHBORS / Math.max(1, members.size() - 1)
-                        && chosen(members.get(i)) < CHOSEN_TIES && chosen(members.get(j)) < CHOSEN_TIES) link(members.get(i), members.get(j), "neighbor");
+                        && chosen(members.get(i)) < CHOSEN_TIES && chosen(members.get(j)) < CHOSEN_TIES) link(fresh, members.get(i), members.get(j), "neighbor");
         }
     }
+    private void link(java.util.function.Predicate<String> fresh, String a, String b, String kind) { if (fresh.test(a) || fresh.test(b)) link(a, b, kind); }
     /** Adds a tie (or upgrades its kind toward the closer one) and returns it. Known since a while back. */
     SocialTie link(String a, String b, String kind) {
         if (a.equals(b)) return null;
@@ -530,6 +533,9 @@ public final class Village {
                     (List<Map<String, Object>>) req.getOrDefault("all", List.of()), (Map<String, Object>) h.getOrDefault("stakes", Map.of())));
         }
         v.hookSerial = (int) SaveFormat.lng(saved.getOrDefault("hook_serial", 0));
+        // People the save has no ties for (new to the pack since) get their first ties now.
+        var untied = new TreeSet<String>(w.people.keySet()); untied.removeAll(v.adjacency.keySet());
+        if (!untied.isEmpty()) v.buildTies(untied::contains);
         w.village = v;
         return v;
     }

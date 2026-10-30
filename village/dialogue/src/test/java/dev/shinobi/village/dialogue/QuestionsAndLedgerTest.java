@@ -103,4 +103,9 @@ class QuestionsAndLedgerTest {
         assertEquals("x\"y", Json.list(m.get("a")).get(2));
         assertEquals("é", Json.map(m.get("b")).get("c"));
     }
+
+    @Test void aNewLevelBringsItsOwnBand() {
+        assertEquals("friend", Context.of("level", "9").with("level", 4).get("band"));
+        assertEquals("best", Context.of("level", "0").with("level", "9").get("band"));
+    }
 }

@@ -235,4 +235,18 @@ class VillageScaleTest {
         assertEquals(r.raised(), again.raised());
         assertEquals(r.drift(), again.drift());
     }
+    @Test void residentsNewSinceTheSaveGetTiesAndTheRestKeepTheirs() {
+        var w = VillageSim.populate(8, 120);
+        var v = Village.settle(w);
+        var saved = v.write();
+        var old = w.people().stream().map(Person::id).toList();
+        w.add(member("newcomer", "uchiha", "quarter:uchiha"));
+        var back = Village.read(w, saved);
+        assertFalse(back.tiesOf("newcomer").isEmpty(), "the newcomer is tied in");
+        for (String id : old) {
+            var mine = new java.util.TreeSet<>(back.tiesOf(id)); mine.remove("newcomer");
+            assertEquals(v.tiesOf(id), mine, id);
+            for (String o : mine) assertEquals(v.tie(id, o), back.tie(id, o));
+        }
+    }
 }

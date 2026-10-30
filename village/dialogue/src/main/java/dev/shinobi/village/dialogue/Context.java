@@ -25,6 +25,7 @@ public final class Context {
     /** A copy with one more tag (or a tag changed; null removes it). */
     public Context with(String key, String value) {
         var m = new HashMap<>(tags);
+        if (key.equals("level")) m.remove("band"); // the band follows the new level
         if (value == null) m.remove(key); else m.put(key, value);
         return new Context(withBand(m), fill);
     }

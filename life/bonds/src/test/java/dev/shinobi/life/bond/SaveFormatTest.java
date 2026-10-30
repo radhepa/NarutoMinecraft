@@ -68,4 +68,39 @@ class SaveFormatTest {
         w.advance(3);
         assertEquals(7, w.level(COOK), "and it holds");
     }
+    @Test void aSaveReadsTheSameUnderATurkishLocale() {
+        var w = lived(77);
+        var before = java.util.Locale.getDefault();
+        try {
+            java.util.Locale.setDefault(java.util.Locale.forLanguageTag("tr-TR"));
+            var back = SaveFormat.read(SaveFormat.write(w), 77, new ArrayList<>(w.people()));
+            assertEquals(snapshot(w), snapshot(back));
+            assertEquals(SaveFormat.write(w).toString(), SaveFormat.write(back).toString());
+        } finally {
+            java.util.Locale.setDefault(before);
+        }
+    }
+    @Test void gossipThatWentQuietStaysQuietAfterAReload() {
+        var w = lived(77);
+        w.deeds().getFirst().quiet = 2;
+        var saved = SaveFormat.write(w);
+        assertEquals(2, SaveFormat.read(saved, 77, new ArrayList<>(w.people())).deeds().getFirst().quiet);
+        @SuppressWarnings("unchecked") var deeds = (List<Map<String, Object>>) saved.get("deeds");
+        deeds.forEach(d -> d.remove("quiet"));
+        assertEquals(0, SaveFormat.read(saved, 77, new ArrayList<>(w.people())).deeds().getFirst().quiet, "an older save without it still loads");
+    }
+    @SuppressWarnings("unchecked")
+    @Test void actsAndKindsGoneFromThePackAreSkipped() {
+        var w = lived(77);
+        var saved = SaveFormat.write(w);
+        var deeds = (List<Map<String, Object>>) saved.get("deeds");
+        deeds.getFirst().put("act", "gone_act");
+        ((Map<String, Map<String, Object>>) deeds.getLast().get("knowers")).values().forEach(k -> k.put("how", "gone_source"));
+        var bond = (Map<String, Object>) ((Map<String, Object>) saved.get("bonds")).values().iterator().next();
+        ((List<Map<String, Object>>) bond.get("memories")).getFirst().put("act", "gone_act");
+        ((Map<String, Object>) bond.get("experiences")).put("gone_kind", 3);
+        var back = SaveFormat.read(saved, 77, new ArrayList<>(w.people()));
+        assertEquals(w.deeds().size() - 1, back.deeds().size());
+        assertTrue(back.deeds().getLast().knowers().isEmpty());
+    }
 }
