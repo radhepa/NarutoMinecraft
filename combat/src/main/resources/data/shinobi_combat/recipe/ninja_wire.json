@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "shinobi_combat:steel_wire",
+    "shinobi_combat:steel_wire",
+    "shinobi_combat:steel_wire"
+  ],
+  "result": {
+    "id": "shinobi_combat:ninja_wire",
+    "count": 2
+  }
+}

@@ -179,10 +179,10 @@ public final class ShinobiLife implements ModInitializer {
 
     /**
      * The registered item for a catalogue id, or air.
-     * shortcut: this mod's own id, then the Konoha block of the same name, until the item data's registry field is read.
+     * shortcut: this mod's own id, then the combat mod's, then the Konoha block of the same name, until the item data's registry field is read.
      */
     public static Item item(String id) {
-        for (String ns : new String[]{MOD_ID, "narutominecraft"}) {
+        for (String ns : new String[]{MOD_ID, "shinobi_combat", "narutominecraft"}) {
             var found = BuiltInRegistries.ITEM.getOptional(Identifier.fromNamespaceAndPath(ns, id));
             if (found.isPresent()) return found.get();
         }

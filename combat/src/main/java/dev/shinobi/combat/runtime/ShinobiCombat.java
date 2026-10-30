@@ -86,6 +86,9 @@ public final class ShinobiCombat implements ModInitializer {
             THROWN.put(item(name, SnowballItem::new), Json.num(data.weapons.get("item:" + name).thrown(), "damage", 1));
         SMOKE_BOMB = item("smoke_bomb", SnowballItem::new);
         item("ninja_wire", props -> new BlockItem(Blocks.TRIPWIRE, props));   // strung like string: a tripwire that trips mobs (Tools.trip)
+        // The workbench's materials, bought at the Academy supply counter.
+        // shortcut: smoke bombs and wire are crafted at the vanilla crafting table with no grade roll, until the workbench station exists.
+        for (String name : new String[]{"smoke_powder", "washi_paper", "thread", "steel_wire"}) item(name, props -> new Item(props.stacksTo(64)));
         PayloadTypeRegistry.serverboundPlay().register(Fighter.Act.TYPE, Fighter.Act.CODEC);
         ServerPlayNetworking.registerGlobalReceiver(Fighter.Act.TYPE, (payload, context) -> Fighter.act(context.player(), payload));
         // The client fires this too, with no tags synced: it passes there and the attack reaches the server, which takes it over.

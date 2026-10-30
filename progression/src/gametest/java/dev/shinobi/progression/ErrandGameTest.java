@@ -33,7 +33,7 @@ import java.util.UUID;
  * P04-3: asking the keeper sets a flag, so the yard step branches to the notice board; the flags survive reopening.
  * P04-4/5: the errand pays 20 ryo once on top of the first day's 100; nothing is sold away from the keeper; reopening
  * keeps the wallet and the goods, with no second payout.
- * P05 shops: at 09:00 on a Moonday using the keeper opens the shop screen on their open shops only (tea house, grocer,
+ * P05 shops: at 09:00 on a Moonday using the keeper opens the shop screen on their open shops only (tea house, grocer, weapon shop, Academy supply,
  * shelter; not Ichiraku before 11:00 or the furniture shop on a Moonday); clicks buy a tea and the grocer's six bentos
  * (wallet and stock drop, the goods in the pack), then a seventh is refused sold out and a kitten refused with 26 ryo;
  * at noon a full pack is refused, then an Ichiraku ramen is bought from its seller; at 05:00, every shop shut, the keeper
@@ -100,8 +100,10 @@ public final class ErrandGameTest implements FabricClientGameTest {
             openShop(c, w, keeper);
             c.takeScreenshot("shop-screen");
             var ids = w.getServer().computeOnServer(s -> offers(w));
-            check(ids.containsAll(List.of("green_tea", "bento", "service.adoption.cat")) && !ids.contains("shio_ramen") && !ids.contains("tatami"),
+            check(ids.containsAll(List.of("green_tea", "bento", "service.adoption.cat", "practice_kunai", "smoke_powder", "steel_wire")) && !ids.contains("shio_ramen") && !ids.contains("tatami"),
                     "the screen lists the keeper's open shops only: " + ids);
+            check(w.getServer().computeOnServer(s -> List.of("smoke_bomb", "ninja_wire").stream().allMatch(r -> s.getRecipeManager().byKey(net.minecraft.resources.ResourceKey.create(
+                    net.minecraft.core.registries.Registries.RECIPE, net.minecraft.resources.Identifier.fromNamespaceAndPath("shinobi_combat", r))).isPresent())), "smoke bombs and wire craft from the supply counter's materials");
             click(c, w, "green_tea");
             check(ryo(w) == 116 && count(w, ShinobiLife.item("green_tea")) == 1, "a tea bought on the screen: " + ryo(w));
             click(c, w, "bento");
@@ -167,6 +169,11 @@ public final class ErrandGameTest implements FabricClientGameTest {
             check(ryo(w) == 46 && left(w, "grocer", "bento") == 6, "day 2's stipend, and the bentos restocked: " + ryo(w));
             check(w.getServer().computeOnServer(s -> ShinobiProgression.buy(w.getConnection().getServerPlayer(), "furniture_shop", "tatami"))
                     && ryo(w) == 6 && left(w, "furniture_shop", "tatami") == 15, "a tatami for 40 ryo on a Fireday, one of the week's 16: " + ryo(w));
+            // Twelve shops' lines fit the 45-line window on a day the furniture shop is open too.
+            openShop(c, w, keeper);
+            var fireday = offers(w);
+            check(fireday.containsAll(List.of("practice_kunai", "smoke_powder", "service.adoption.cat", "tatami")), "every shop's lines on a Fireday (" + fireday.size() + "): " + fireday);
+            c.runOnClient(mc -> mc.player.closeContainer());
             save = w.getWorldSave();
         }
         try (var w = save.open()) {

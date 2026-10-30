@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "shinobi_combat:smoke_powder",
+    "shinobi_combat:smoke_powder",
+    "shinobi_combat:washi_paper",
+    "shinobi_combat:thread"
+  ],
+  "result": {
+    "id": "shinobi_combat:smoke_bomb",
+    "count": 2
+  }
+}
