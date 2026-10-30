@@ -1,16 +1,25 @@
 package dev.shinobi.village;
 
+import com.mojang.serialization.Codec;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
+import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.commands.Commands;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Map;
 
 /** Shinobi Village's entrypoint: the Konoha blocks, the street's protection and the builder's commands. */
 public final class ShinobiVillage implements ModInitializer {
     public static final Logger LOG = LoggerFactory.getLogger("Shinobi Village");
+    /** The map's named anchors (marker type to position), saved with the level: quests find their places here. */
+    public static final AttachmentType<Map<String, BlockPos>> ANCHORS = AttachmentRegistry.create(
+            Identifier.fromNamespaceAndPath("narutominecraft", "anchors"), b -> b.persistent(Codec.unboundedMap(Codec.STRING, BlockPos.CODEC)));
 
     @Override
     public void onInitialize() {

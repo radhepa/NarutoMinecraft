@@ -1,6 +1,6 @@
 # Development state
 
-**Phase/task:** P04-1, the first errand with a persistent journal
+**Phase/task:** P04-2, quest roles and map anchors with clear errors
 ([ROADMAP.md 13.5](../../ROADMAP.md#p04--prove-a-complete-gameplay-loop)). P00 to P03 passed (13.3).
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
 The story checkout on the Desktop keeps its unfinished work; story review stays paused.
@@ -19,7 +19,7 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 
 ## P04 queue
 
-1. A quest runtime and persistent journal: accept and complete one objective (`go` to an anchor).
+1. Done: a quest runtime and persistent journal: accept and complete one objective (`go` to an anchor).
 2. Roles and map anchors, with clear errors when one is missing.
 3. Flags, conditions and actions, and one branch.
 4. Ryo through the Life wallet; one-time rewards.
@@ -30,6 +30,15 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
+
+- P04-1 `./gradlew build`: passed; `:progression:runClientGameTest` passed: the new Shinobi Progression mod
+  (`progression/`, `shinobi_progression`) loads quests from `data/*/quests/` through the mission engine's
+  `Template`, the test errand is accepted with `/shinobi quest accept`, completes at the street's training yard
+  (`go` to `anchor:training`), and the journal and the street's anchors survive reopening; a done quest cannot
+  be taken again. Ponytail review: no crash on a step removed from the data (left in the journal until P04-6),
+  reload with `/reload`, a broken quest file names itself, wrong-typed fields and `go` without a place are
+  refused (unit-tested in `Quests`). Not yet: the pack does not ship Progression; journal commands are
+  operator-only.
 
 - P03-6 `./gradlew build`: passed; `:village:runClientGameTest` passed with the performance route: three stops
   (tea house, apartment block, yard), five seconds each, 11 residents. Baseline, server ms per tick on average:
@@ -95,7 +104,5 @@ None.
 
 ## Next
 
-P04-1: the Shinobi Progression mod (`progression/`, mod id `shinobi_progression`) with a journal attached to the
-player, quests read from data packs through the mission engine's `Template`, a `go` objective on the street's
-anchors (saved by Shinobi Village), and a noncanonical test errand; a client gametest accepts it, walks to the
-yard, completes it and reopens the save.
+P04-2: quests name roles (a resident by job, e.g. the tea house keeper) and anchors; accepting resolves both on
+the map and fails with a clear message naming the missing role or anchor; a gametest covers both paths.

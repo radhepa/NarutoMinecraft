@@ -1,0 +1,59 @@
+plugins {
+    id 'net.fabricmc.fabric-loom'
+}
+
+// Shinobi Progression (ROADMAP.md, "The pack: separate mods"): the quest engine and journal on Shinobi Village.
+// It runs the quest format's step graph through the mission engine's Template (`:progression:missions`, shipped
+// inside its jar). The client check is `./gradlew :progression:runClientGameTest`.
+version = '0.1.0'
+group = 'dev.shinobi'
+base { archivesName = 'shinobi-progression' }
+
+loom {
+    mods {
+        shinobi_progression { sourceSet sourceSets.main }
+    }
+}
+
+repositories { mavenCentral() }
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    implementation project(':village')
+    implementation project(':progression:missions')
+    include project(':progression:missions')
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+test {
+    useJUnitPlatform()
+    testLogging { events 'failed'; exceptionFormat 'full' }
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand version: project.version }
+}
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = 'shinobi_progression_tests'
+        enableGameTests = false
+        enableClientGameTests = true
+        eula = true
+        clearRunDirectory = false
+        username = 'ShinobiTester'
+    }
+}
+
+loom.runs {
+    client { programArgs '--username', 'ShinobiTester' }
+}

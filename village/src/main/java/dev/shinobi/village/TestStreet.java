@@ -93,6 +93,9 @@ public final class TestStreet {
                 }
             }
         }
+        var saved = new HashMap<>(level.getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()));
+        saved.putAll(anchors);
+        level.setAttached(ShinobiVillage.ANCHORS, Map.copyOf(saved));
         return new Built(village, List.copyOf(plaques), List.copyOf(residents), Map.copyOf(anchors));
     }
 

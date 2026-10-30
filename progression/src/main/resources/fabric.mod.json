@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "shinobi_progression",
+  "version": "${version}",
+  "name": "Shinobi Progression",
+  "description": "The quest engine and journal of the Shinobi Modpack.",
+  "authors": ["radhepa"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.shinobi.progression.ShinobiProgression"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "narutominecraft": "*"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "format": 1,
+  "id": "errand.test.yard",
+  "kind": "side",
+  "title": "quest.errand.test.yard.title",
+  "start": "go_yard",
+  "steps": {
+    "go_yard": {"objective": {"type": "go", "place": "anchor:training"}, "next": null}
+  }
+}
