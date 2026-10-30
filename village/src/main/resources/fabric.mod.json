@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "narutominecraft",
+  "version": "${version}",
+  "name": "Shinobi Village",
+  "description": "The Hidden Leaf on Village Friends: the Naruto wardrobe, clans, residents and decor.",
+  "authors": ["radhepa"],
+  "license": "MIT",
+  "environment": "*",
+  "mixins": ["narutominecraft.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "villagefriends": "2.29.1"
+  }
+}

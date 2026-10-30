@@ -1,13 +1,13 @@
 # Development state
 
-**Phase/task:** P03-1, the Shinobi Village assembly and one dressed resident
+**Phase/task:** P03-2, the test street and ten living residents
 ([ROADMAP.md 13.5](../../ROADMAP.md#p03--make-the-village-tangible)). P00 to P02 passed (13.3).
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
 The story checkout on the Desktop keeps its unfinished work; story review stays paused.
 
 ## P03 queue
 
-1. Shinobi Village (`village/`, Core + VF): a VF resident in the test world wears the Leaf wardrobe.
+1. Done: Shinobi Village (`village/`, mod id `narutominecraft`): VF residents wear the Leaf wardrobe.
 2. A small test street and its markers; ten residents with homes and routines.
 3. Role identities for the bound cast (moved from P02).
 4. Map rules (vanilla and VF generation off on the test map).
@@ -16,6 +16,12 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
+
+- P03-1 `./gradlew build`: passed, 385 tests; `:village:runClientGameTest` passed: four residents wear
+  Leaf outfits (screenshot `leaf-residents`); `:core:runClientGameTest -Ppack` loads Core, Village and VF.
+  A mixin hands VF a Leaf catalog; garments ship in VF's namespace. Ponytail review: fixed the CI VF build
+  (`gradlew` not executable), the pack check's mod set and PACK.md. Not yet: Leaf palettes (VF's ten
+  palette ids for now) and the population draw (every profession wears every collection).
 
 - P02-4/5 `./gradlew build` and `:core:runClientGameTest`: passed, 383 tests; the client receives the
   changed record; `checkLayers` passes and fails on a planted Core-imports-Life file.
@@ -31,7 +37,7 @@ P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, 
 
 ## Launch
 
-`./gradlew :core:runClient` (player `ShinobiTester`). Pack: [PACK.md](PACK.md).
+`./gradlew :village:runClient` (Village + VF; player `ShinobiTester`), or `:core:runClient`. Pack: [PACK.md](PACK.md).
 
 ## Blockers
 
@@ -39,5 +45,6 @@ None.
 
 ## Next
 
-P03-1: add the `village` Fabric mod (Core + VF only), load the compiled Leaf wardrobe into VF, and show
-one resident wearing it in a client gametest screenshot.
+P03-2: register the Konoha decor blocks, paste the `leaf_block` blueprint on a flat test map with a VF
+village marker and its twelve House Plaques, and spawn ten residents at its markers; a client gametest
+shows each resident with its own flat and bed, walking by day and asleep at night.

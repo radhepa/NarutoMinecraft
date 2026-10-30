@@ -7,12 +7,14 @@ plugins {
 
 // The pack manifest (ROADMAP.md, "The pack: separate mods"; install steps in docs/development/PACK.md).
 // `./gradlew :pack:mrpack` writes build/pack/shinobi-modpack-<version>.mrpack: Minecraft, Fabric Loader and
-// Fabric API by version and hash, with Village Friends and Shinobi Core as override jars (neither has a
+// Fabric API by version and hash, with Village Friends, Shinobi Core and Shinobi Village as override jars (none has a
 // download yet). `./gradlew :core:runClientGameTest -Ppack` runs Shinobi Core's launch check with every pack mod.
 version = '0.1.0'
 
 def vfJar = rootProject.vfJar
 def coreJar = project(':core').tasks.named('jar')
+evaluationDependsOn(':village')   // evaluated after pack by name
+def villageJar = project(':village').tasks.named('jar')
 
 static String digest(File f, String algorithm) { MessageDigest.getInstance(algorithm).digest(f.bytes).encodeHex().toString() }
 
@@ -61,7 +63,7 @@ def index = tasks.register('mrpackIndex') {
 
 tasks.register('mrpack', Zip) {
     from index
-    into('overrides/mods') { from vfJar; from coreJar }
+    into('overrides/mods') { from vfJar; from coreJar; from villageJar }
     archiveBaseName = 'shinobi-modpack'
     archiveExtension = 'mrpack'
     destinationDirectory = layout.buildDirectory.dir('pack')

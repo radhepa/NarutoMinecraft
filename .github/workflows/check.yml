@@ -17,7 +17,14 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install pillow numpy
-      - name: Java engines and Shinobi Core
+      # Shinobi Village compiles against the pinned Village Friends jar (docs/development/PACK.md, step 1).
+      - name: Village Friends 2.29.1
+        run: |
+          git clone -q https://github.com/radhepa/Village-Friends-Minecraft-Mod "$RUNNER_TEMP/vf"
+          git -C "$RUNNER_TEMP/vf" checkout -q ccd1a2c6cae176549dfb5d038bf4ebc6cbaac631
+          (cd "$RUNNER_TEMP/vf" && sh ./gradlew :jar --console=plain)   # its gradlew is not executable
+          mkdir -p build/deps && cp "$RUNNER_TEMP/vf/build/libs/village-friends-2.29.1.jar" build/deps/
+      - name: Java engines and the Shinobi mods
         run: ./gradlew build --console=plain
       - name: Output check regressions
         run: python -m unittest discover -s tools -p test_output_checks.py

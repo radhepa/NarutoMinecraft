@@ -1,0 +1,65 @@
+plugins {
+    id 'net.fabricmc.fabric-loom'
+}
+
+// Shinobi Village (ROADMAP.md, "The pack: separate mods"): the Naruto content mod on Village Friends. Its
+// resources are the compiled wardrobe and decor in the root src/main/resources. The client check is
+// `./gradlew :village:runClientGameTest` (Leaf residents in a real world, with screenshots).
+version = '0.1.0'
+group = 'dev.shinobi'
+base { archivesName = 'shinobi-village' }
+
+loom {
+    mods {
+        narutominecraft { sourceSet sourceSets.main }
+    }
+}
+
+sourceSets.main.resources.srcDir rootProject.file('src/main/resources')
+
+repositories { mavenCentral() }
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    implementation files(rootProject.vfJar)   // the pinned jar (docs/development/PACK.md, step 1)
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+test {
+    useJUnitPlatform()
+    testLogging { events 'failed'; exceptionFormat 'full' }
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand version: project.version }
+    // VF reads garment definitions and textures only from its own namespace (outfit/Wardrobe, client/ResidentSkins),
+    // so the Leaf hair, tops and bottoms ship there. No Leaf id matches a VF id (LeafWardrobeTest).
+    eachFile { f ->
+        if (f.path ==~ /assets\/narutominecraft\/wardrobe\/(hair|tops|bottoms)\/.+/) f.path = f.path.replace('assets/narutominecraft/', 'assets/villagefriends/')
+    }
+    includeEmptyDirs = false
+}
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = 'shinobi_village_tests'
+        enableGameTests = false
+        enableClientGameTests = true
+        eula = true
+        clearRunDirectory = false
+        username = 'ShinobiTester'
+    }
+}
+
+loom.runs {
+    client { programArgs '--username', 'ShinobiTester' }
+}

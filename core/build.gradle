@@ -56,9 +56,10 @@ fabricApi {
     }
 }
 
-// `-Ppack` runs the launch check with the pack's whole mod set: the pinned Village Friends jar joins it.
+// `-Ppack` runs the launch check with the pack's whole mod set: the pinned Village Friends jar and Shinobi Village join it.
 if (providers.gradleProperty('pack').isPresent()) {
-    dependencies { gametestRuntimeOnly files(rootProject.vfJar) }
+    evaluationDependsOn(':village')
+    dependencies { gametestRuntimeOnly files(rootProject.vfJar, rootProject.project(':village').tasks.named('jar')) }
     tasks.named('runClientGameTest') { dependsOn ':pack:verifyPins' }
 }
 
