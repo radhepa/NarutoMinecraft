@@ -3,8 +3,13 @@
   "id": "errand.test.yard",
   "kind": "side",
   "title": "quest.errand.test.yard.title",
-  "start": "go_yard",
+  "slots": {
+    "keeper": {"pick": "resident", "where": {"job": "tea_house"}},
+    "yard": {"pick": "anchor", "tag": "training"}
+  },
+  "start": "ask_keeper",
   "steps": {
-    "go_yard": {"objective": {"type": "go", "place": "anchor:training"}, "next": null}
+    "ask_keeper": {"objective": {"type": "talk", "who": "slot:keeper"}, "next": "go_yard"},
+    "go_yard": {"objective": {"type": "go", "place": "slot:yard"}, "next": null}
   }
 }

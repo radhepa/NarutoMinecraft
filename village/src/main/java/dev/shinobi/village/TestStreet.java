@@ -3,6 +3,7 @@ package dev.shinobi.village;
 import com.google.gson.JsonArray;
 import dev.villagefriends.HousePlaqueBlockEntity;
 import dev.villagefriends.VillageSettlements;
+import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.core.Vec3i;
@@ -61,6 +62,7 @@ public final class TestStreet {
         var plaques = new ArrayList<String>();
         var residents = new ArrayList<Villager>();
         var anchors = new HashMap<String, BlockPos>();
+        var roles = new HashMap<String, UUID>();
         for (var plot : plots) {
             var beds = new ArrayList<BlockPos>();
             for (var m : plot.getValue()) if ("bed".equals(m.getAsJsonObject().get("type").getAsString())) beds.add(bedHead(level, Blueprint.at(plot.getKey(), m.getAsJsonObject())));
@@ -87,16 +89,24 @@ public final class TestStreet {
                                 .ifPresent(bed -> v.getBrain().setMemory(MemoryModuleType.HOME, GlobalPos.of(level.dimension(), bed)));
                         if (!level.addFreshEntity(v)) throw new IllegalStateException("Resident " + v.getUUID() + " already lives in this world");
                         residents.add(v);
+                        if (marker.has("role")) roles.put("role:" + marker.get("role").getAsString(), v.getUUID());
+                        if (marker.has("job") && !"any".equals(marker.get("job").getAsString())) roles.put("job:" + marker.get("job").getAsString(), v.getUUID());
                     }
                     case "notice_board", "anchor:training" -> anchors.put(marker.get("type").getAsString(), pos);
                     default -> {}
                 }
             }
         }
-        var saved = new HashMap<>(level.getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()));
-        saved.putAll(anchors);
-        level.setAttached(ShinobiVillage.ANCHORS, Map.copyOf(saved));
+        save(level, ShinobiVillage.ANCHORS, anchors);
+        save(level, ShinobiVillage.ROLES, roles);
         return new Built(village, List.copyOf(plaques), List.copyOf(residents), Map.copyOf(anchors));
+    }
+
+    /** Adds {@code found} to what the level already holds under {@code type}. */
+    private static <V> void save(ServerLevel level, AttachmentType<Map<String, V>> type, Map<String, V> found) {
+        var saved = new HashMap<>(level.getAttachedOrElse(type, Map.of()));
+        saved.putAll(found);
+        level.setAttached(type, Map.copyOf(saved));
     }
 
     private static BlockPos bedHead(ServerLevel level, BlockPos pos) {

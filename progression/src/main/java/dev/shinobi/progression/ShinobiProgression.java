@@ -10,11 +10,14 @@ import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,6 +44,12 @@ public final class ShinobiProgression implements ModInitializer {
         ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resources, ok) -> load(server));
         ServerTickEvents.END_SERVER_TICK.register(s -> {
             if (s.getTickCount() % 10 == 0) for (var p : s.getPlayerList().getPlayers()) tick(p);
+        });
+        // Talking: using the resident a talk step names, once per click (the client sends the off hand too after a PASS).
+        // PASS, so the resident's own interaction still runs.
+        UseEntityCallback.EVENT.register((player, level, hand, entity, hit) -> {
+            if (player instanceof ServerPlayer p && hand == InteractionHand.MAIN_HAND) talked(p, entity.getUUID().toString());
+            return InteractionResult.PASS;
         });
         // `/shinobi quest accept <id>` takes a quest (a test hook until givers offer them); `/shinobi journal` lists them.
         CommandRegistrationCallback.EVENT.register((dispatcher, registry, env) -> dispatcher.register(
@@ -75,12 +84,21 @@ public final class ShinobiProgression implements ModInitializer {
     }
 
 
-    /** Takes the quest into the player's journal; false if it is already there or done. */
+    /** Takes the quest into the player's journal, cast on this map; false if it is already there or done, or the map lacks a slot or place. */
     public static boolean accept(ServerPlayer player, String id) {
         var quest = QUESTS.get(id);
         var journal = player.getAttachedOrCreate(JOURNAL);
         if (journal.knows(id)) return false;
-        player.setAttached(JOURNAL, journal.accept(quest.template()));
+        var level = player.level();
+        Map<String, String> cast;
+        try {
+            cast = Quests.cast(quest.template(), level.getAttachedOrElse(ShinobiVillage.ROLES, Map.of()), level.getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()));
+        } catch (IllegalArgumentException e) {
+            LOG.warn("Quest {} cannot start: {}", id, e.getMessage());
+            player.sendSystemMessage(Component.translatable("shinobi_progression.quest.cannot", Component.translatable(quest.title()), e.getMessage()));
+            return false;
+        }
+        player.setAttached(JOURNAL, journal.accept(quest.template(), cast));
         player.sendSystemMessage(Component.translatable("shinobi_progression.quest.accepted", Component.translatable(quest.title())));
         return true;
     }
@@ -92,18 +110,33 @@ public final class ShinobiProgression implements ModInitializer {
             // shortcut: a quest or step since removed from the data stays put in the journal, until P04-6's failure handling.
             var quest = QUESTS.get(entry.getKey());
             var step = quest == null ? null : quest.template().steps().get(entry.getValue());
-            if (step == null || !met(player, step.objective())) continue;
-            var next = player.getAttachedOrCreate(JOURNAL).advance(quest.template());
-            player.setAttached(JOURNAL, next);
-            if (next.done().contains(entry.getKey()))
-                player.sendSystemMessage(Component.translatable("shinobi_progression.quest.done", Component.translatable(quest.title())));
+            if (step != null && "go".equals(step.type()) && near(player, Quests.resolve(Json.str(step.objective().get("place"), ""), journal.castOf(quest.template().id()))))
+                complete(player, quest);
         }
     }
 
-    /** Whether the player meets an objective now; types other than {@code go} wait for later increments. */
-    static boolean met(ServerPlayer player, Map<String, Object> objective) {
-        if (!"go".equals(objective.get("type"))) return false;
-        var at = player.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(Json.str(objective.get("place"), ""));
+    /** Finishes the talk steps that name the resident {@code who} (its UUID). */
+    static void talked(ServerPlayer player, String who) {
+        var journal = player.getAttachedOrCreate(JOURNAL);
+        for (var entry : journal.active().entrySet()) {
+            var quest = QUESTS.get(entry.getKey());
+            var step = quest == null ? null : quest.template().steps().get(entry.getValue());
+            if (step != null && "talk".equals(step.type()) && who.equals(Quests.resolve(Json.str(step.objective().get("who"), ""), journal.castOf(quest.template().id()))))
+                complete(player, quest);
+        }
+    }
+
+    static void complete(ServerPlayer player, Quest quest) {
+        var next = player.getAttachedOrCreate(JOURNAL).advance(quest.template());
+        player.setAttached(JOURNAL, next);
+        if (next.done().contains(quest.template().id()))
+            player.sendSystemMessage(Component.translatable("shinobi_progression.quest.done", Component.translatable(quest.title())));
+    }
+
+    /** Whether the player stands within four blocks of the anchor; null (a slot the journal's cast lacks) is nowhere. */
+    static boolean near(ServerPlayer player, String anchor) {
+        if (anchor == null) return false;
+        var at = player.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(anchor);
         return at != null && player.blockPosition().closerThan(at, 4);
     }
 }

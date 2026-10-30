@@ -1,0 +1,8 @@
+{
+  "format": 1,
+  "id": "errand.test.missing",
+  "kind": "side",
+  "slots": {"spot": {"pick": "anchor", "tag": "nowhere"}},
+  "start": "go_spot",
+  "steps": {"go_spot": {"objective": {"type": "go", "place": "slot:spot"}, "next": null}}
+}

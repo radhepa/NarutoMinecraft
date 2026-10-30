@@ -1,6 +1,6 @@
 # Development state
 
-**Phase/task:** P04-2, quest roles and map anchors with clear errors
+**Phase/task:** P04-3, flags, conditions and actions, and one branch
 ([ROADMAP.md 13.5](../../ROADMAP.md#p04--prove-a-complete-gameplay-loop)). P00 to P03 passed (13.3).
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
 The story checkout on the Desktop keeps its unfinished work; story review stays paused.
@@ -20,7 +20,7 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 ## P04 queue
 
 1. Done: a quest runtime and persistent journal: accept and complete one objective (`go` to an anchor).
-2. Roles and map anchors, with clear errors when one is missing.
+2. Done: roles and map anchors, with clear errors when one is missing.
 3. Flags, conditions and actions, and one branch.
 4. Ryo through the Life wallet; one-time rewards.
 5. A trade at the tea house.
@@ -30,6 +30,15 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
+
+- P04-2 `./gradlew build`: passed; `:progression:runClientGameTest` passed: the street binds its residents by
+  marker role and job (`ShinobiVillage.ROLES`, saved with the level); the test errand casts the tea house keeper
+  (`resident` by job) and the yard (`anchor` by tag) when accepted and keeps the cast in the journal; using the
+  keeper through the client completes the `talk` step, then the yard the `go` step; a test quest whose anchor the
+  map lacks is refused, naming the slot; roles survive reopening. Unit tests: casting and its errors, the checker's
+  new refusals, the journal codec and saves from before the cast. Ponytail review: no tick crash on an old save's
+  missing cast, one talk per click (main hand only), a talk step must name a resident slot. Open: under 5 s of
+  server lag the keeper click failed twice in seven runs, retried clicks included (not reproduced since).
 
 - P04-1 `./gradlew build`: passed; `:progression:runClientGameTest` passed: the new Shinobi Progression mod
   (`progression/`, `shinobi_progression`) loads quests from `data/*/quests/` through the mission engine's
@@ -104,5 +113,5 @@ None.
 
 ## Next
 
-P04-2: quests name roles (a resident by job, e.g. the tea house keeper) and anchors; accepting resolves both on
-the map and fails with a clear message naming the missing role or anchor; a gametest covers both paths.
+P04-3: flags set by step actions and read by conditions, and the errand follows one `branch` (the shortcut in
+`Journal.advance`); a gametest takes the branch and the flag survives reopening.
