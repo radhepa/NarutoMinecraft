@@ -5,8 +5,6 @@
   "shinobi_progression.quest.done": "Quest complete: %s",
   "shinobi_progression.quest.retry": "Spar lost: %s waits at the spar. Hit your partner to try again",
   "shinobi_progression.quest.blocked": "%s is blocked: no %s here. It goes on once that is back",
-  "shinobi_progression.shop.header": "For sale (you have %s ryo). Click a line to buy:",
-  "shinobi_progression.shop.line": "  [Buy] %s for %s ryo",
   "shinobi_progression.shop.away": "Stand by the shopkeeper to buy",
   "quest.training.test.first_day.title": "Training day: spar in the yard, furnish your flat, sleep",
   "quest.training.test.first_day.step.go_yard": "Walk east along the street to the training yard",

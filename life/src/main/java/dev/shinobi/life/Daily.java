@@ -73,6 +73,9 @@ public final class Daily {
 
     public static String weekday(ServerLevel level) { return WEEK.get((day(level) - 1) % WEEK.size()); }
 
+    /** Market Day, as VF's Routine.marketDay counts it: every seventh day, a Sunday. */
+    public static boolean marketDay(ServerLevel level) { return day(level) % 7 == 0; }
+
     public static Rest rest(ServerPlayer player) { return player.getAttachedOrCreate(REST); }
 
     public static boolean tired(ServerPlayer player) { return rest(player).nights() > 0; }

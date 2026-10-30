@@ -24,6 +24,8 @@ import dev.shinobi.combat.runtime.Fighter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import dev.shinobi.life.ShinobiLife;
+import dev.shinobi.life.ShopMenu;
+import net.minecraft.world.entity.Entity;
 import dev.shinobi.combat.runtime.ShinobiCombat;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.minecraft.world.item.ItemStack;
@@ -38,7 +40,6 @@ import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.minecraft.commands.Commands;
 import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.MinecraftServer;
@@ -76,11 +77,13 @@ public final class ShinobiProgression implements ModInitializer {
     static final Supplier<Set<Item>> FURNITURE = Suppliers.memoize(() -> ShinobiLife.stock("furniture_shop").stream()
             .map(l -> ShinobiLife.item(l.item())).collect(Collectors.toSet()));
     /**
-     * The shops each bound resident keeps, by role or job key.
-     * shortcut: the test street's tea house keeper also sells the furniture shop's lines and the clinic's and shelter's
-     * adoptions, until the map has a furniture shop, the Inuzuka clinic and the cat shelter.
+     * The shops each bound resident keeps, by role or job key, their own first.
+     * shortcut: the test street's tea house keeper also keeps the furniture shop, Ichiraku, the dango stand, the grocer,
+     * the fish stall, the Haruno store, the Market Day stalls (each at its own hours) and the clinic's and shelter's
+     * adoptions, so every Beta 1 dish on a shelf has a seller, until the map has those shops and their keepers.
      */
-    static final Map<String, List<String>> SHOPS = Map.of("job:tea_house", List.of("tea_house", "furniture_shop", "inuzuka_clinic", "cat_shelter"),
+    static final Map<String, List<String>> SHOPS = Map.of("job:tea_house", List.of("tea_house", "furniture_shop", "ichiraku", "dango_stand", "grocer",
+                    "fishmonger", "haruno_store", "market_day_stalls", "inuzuka_clinic", "cat_shelter"),
             "role:shop.tea_house.owner", List.of("tea_house"), "role:shop.furniture.keeper", List.of("furniture_shop"));
 
     @Override
@@ -130,18 +133,20 @@ public final class ShinobiProgression implements ModInitializer {
             return InteractionResult.PASS;
         });
         // Talking: using the resident a talk step names, once per click (the client sends the off hand too after a PASS).
-        // In an early phase: VF's own resident listener returns SUCCESS and ends the event, so ours must run first and PASS.
+        // In an early phase: VF's own resident listener returns SUCCESS and ends the event, so ours must run first.
+        // A keeper with a shop open opens the shop screen instead of VF's talk window; a shut shop's keeper talks as usual.
+        // shortcut: no talk window for a keeper while a shop is open, until the shop counter block opens the screen.
         var early = Identifier.fromNamespaceAndPath(MOD_ID, "early");
         UseEntityCallback.EVENT.addPhaseOrdering(early, Event.DEFAULT_PHASE);
         UseEntityCallback.EVENT.register(early, (player, level, hand, entity, hit) -> {
             if (player instanceof ServerPlayer p && hand == InteractionHand.MAIN_HAND) {
                 talked(p, entity.getUUID().toString());
-                offer(p, entity.getUUID());
+                if (offer(p, entity)) return InteractionResult.SUCCESS_SERVER;
             }
             return InteractionResult.PASS;
         });
         // `/shinobi quest accept <id>` takes a quest (a test hook until givers offer them); `/shinobi journal` lists them.
-        // `/shinobi buy <shop> <item>` is what a shop's chat line runs, so it needs no permission.
+        // `/shinobi buy <shop> <item>` buys as the shop screen does, by the keeper, so it needs no permission.
         CommandRegistrationCallback.EVENT.register((dispatcher, registry, env) -> dispatcher.register(
                 Commands.literal("shinobi")
                         .then(Commands.literal("buy").then(Commands.argument("shop", StringArgumentType.string()).then(Commands.argument("item", StringArgumentType.string())
@@ -324,23 +329,10 @@ public final class ShinobiProgression implements ModInitializer {
                 .filter(e -> e.getValue().equals(resident)).flatMap(e -> SHOPS.getOrDefault(e.getKey(), List.of()).stream()).toList();
     }
 
-    /** Lists a shopkeeper's stock in chat, each line a click to buy. shortcut: one chat line per stock line, until P05's shop screen. */
-    static void offer(ServerPlayer player, UUID resident) {
-        var shops = shopsOf(player, resident);
-        if (shops.isEmpty()) return;
-        player.sendSystemMessage(Component.translatable("shinobi_progression.shop.header", ShinobiLife.ryo(player)));
-        for (String shop : shops)
-            for (var line : ShinobiLife.stock(shop)) {
-                String cmd = "/shinobi buy " + shop + " " + line.item();
-                player.sendSystemMessage(Component.translatable("shinobi_progression.shop.line", ShinobiLife.item(line.item()).getDefaultInstance().getHoverName(), ShinobiLife.price(shop, line.item()))
-                        .withStyle(s -> s.withColor(ChatFormatting.GREEN).withClickEvent(new ClickEvent.RunCommand(cmd))));
-            }
-        for (String shop : shops)
-            for (var service : ShinobiLife.services(shop)) {
-                String cmd = "/shinobi buy " + shop + " " + service.id();
-                player.sendSystemMessage(Component.translatable("shinobi_progression.shop.line", service.effect(), service.price())
-                        .withStyle(s -> s.withColor(ChatFormatting.GREEN).withClickEvent(new ClickEvent.RunCommand(cmd))));
-            }
+    /** Opens a shopkeeper's shop screen on their open shops; false (with a polite line if all are shut) for anyone else. */
+    static boolean offer(ServerPlayer player, Entity keeper) {
+        var shops = shopsOf(player, keeper.getUUID());
+        return !shops.isEmpty() && ShopMenu.open(player, keeper, shops);
     }
 
     /** Buys from a shop whose keeper stands within six blocks; false, saying why, otherwise. */

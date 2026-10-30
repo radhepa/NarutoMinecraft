@@ -41,13 +41,14 @@ import static dev.shinobi.progression.ErrandGameTest.ryo;
 /**
  * M2, the ten-minute play session (ROADMAP.md 13.4): on the test street a new player makes a character in the creator,
  * the training quest starts and names each step; the player walks to the yard, loses a first bout (the quest waits,
- * unpaid), then wins a spar by real attacks (each one taken by the server), earns 30 ryo once, buys a tatami from the keeper, places it in flat 3a, sleeps in the flat's bed
+ * unpaid), then wins a spar by real attacks (each one taken by the server), earns 30 ryo once, talks to the keeper, finds
+ * the furniture shop shut on the first day, a Moonday (ErrandGameTest buys the tatami on a Fireday), places a tatami in flat 3a, sleeps in the flat's bed
  * at nightfall into the next morning (day 2's stipend paid), and reopening keeps the look, the finished quest, the wallet
  * and the furnishing. The rest of the ordinary day (P05): awake at 01:00 the player is tired, a lie-down and up again
  * keeps it, and a night in the bed clears it with day 3's stipend; the flat's chest and crafting table open; a defeat at
- * night wakes the player in the flat without the kunai, fatigue cleared and not back; the keeper's shelter line hands
- * over a tamed kitten; a whole night in the flat's bed from 20:00 leaves the player Well Rested by the flat's comfort
- * (Cosy: until 13:00), and a matcha bought from the keeper and drunk adds its regen; that tea puts the night's fatigue
+ * night wakes the player in the flat without the kunai, fatigue cleared and not back; at 13:00 the keeper's shelter line
+ * hands over a tamed kitten; a whole night in the flat's bed from 20:00 leaves the player Well Rested by the flat's comfort
+ * (Cosy: until 13:00), and a matcha bought from the keeper once the tea house opens at 09:00 and drunk adds its regen; that tea puts the night's fatigue
  * off to 02:00, a bento halves its slowdown, a weaker dango leaves the stronger platter's regen, 03:00 exhausts the
  * player (damage -20%) and 06:00 collapses them, to wake in the flat at noon; a two-day clock jump pays two stipends,
  * and turning it back none.
@@ -110,8 +111,9 @@ public final class SessionGameTest implements FabricClientGameTest {
                 c.runOnClient(mc -> mc.gameMode.interact(mc.player, mc.level.getEntity(k), new EntityHitResult(mc.level.getEntity(k)), InteractionHand.MAIN_HAND));
                 c.waitTicks(10);
             }
-            check("furnish".equals(step(w)) && w.getServer().computeOnServer(s -> ShinobiProgression.buy(w.getConnection().getServerPlayer(), "furniture_shop", "tatami"))
-                    && ryo(w) == 90, "talked to the keeper and bought a tatami: " + journal(w) + ", " + ryo(w));
+            check("furnish".equals(step(w)) && !w.getServer().computeOnServer(s -> ShinobiProgression.buy(w.getConnection().getServerPlayer(), "furniture_shop", "tatami"))
+                    && ryo(w) == 130, "talked to the keeper; the furniture shop is shut on a Moonday: " + journal(w) + ", " + ryo(w));
+            w.getServer().runOnServer(s -> w.getConnection().getServerPlayer().getInventory().add(new ItemStack(ShinobiLife.item("tatami"))));
 
             // The tatami goes on the room's floor through the server's game mode, past the street's protection.
             BlockPos room = anchors(w).get(TestStreet.PLAYER_FLAT);
@@ -154,8 +156,8 @@ public final class SessionGameTest implements FabricClientGameTest {
             for (int i = 0; i < 30 && w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().isSleeping()); i++) c.waitTicks(10);
             long after = w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getOverworldClockTime());
             check(after / 24000 > before / 24000, "the night passes: " + before + " to " + after);
-            for (int i = 0; i < 10 && ryo(w) != 120; i++) c.waitTicks(10);
-            check(ryo(w) == 120 && w.getServer().computeOnServer(s -> Daily.day(s.overworld()) == 2 && "Fireday".equals(Daily.weekday(s.overworld()))),
+            for (int i = 0; i < 10 && ryo(w) != 160; i++) c.waitTicks(10);
+            check(ryo(w) == 160 && w.getServer().computeOnServer(s -> Daily.day(s.overworld()) == 2 && "Fireday".equals(Daily.weekday(s.overworld()))),
                     "day 2, a Fireday, pays the 30 ryo stipend: " + ryo(w));
             save = w.getWorldSave();
         }
@@ -163,7 +165,7 @@ public final class SessionGameTest implements FabricClientGameTest {
             w.getConnection().waitForChunksRender();
             c.waitTicks(40);
             check(look.equals(w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().getAttached(PlayerLooks.LOOK)))
-                    && journal(w).done().contains(TRAINING) && !journal(w).active().containsKey(TRAINING) && ryo(w) == 120
+                    && journal(w).done().contains(TRAINING) && !journal(w).active().containsKey(TRAINING) && ryo(w) == 160
                     && w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getBlockState(placed).getBlock() == ((BlockItem) ShinobiLife.item("tatami")).getBlock())
                     && c.computeOnClient(mc -> mc.gui.screen() == null), "reopening keeps the look, the quest, the wallet and the tatami: " + journal(w) + ", " + ryo(w));
             c.takeScreenshot("session-reopened");
@@ -188,8 +190,8 @@ public final class SessionGameTest implements FabricClientGameTest {
                 var p = w.getConnection().getServerPlayer();
                 p.gameMode.useItemOn(p, p.level(), ItemStack.EMPTY, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(room), Direction.UP, room, false));
             });
-            for (int i = 0; i < 40 && (tired(w) || ryo(w) != 150); i++) c.waitTicks(10);
-            check(!tired(w) && ryo(w) == 150 && slow(w) == 0 && w.getServer().computeOnServer(s -> Daily.day(s.overworld()) == 3),
+            for (int i = 0; i < 40 && (tired(w) || ryo(w) != 190); i++) c.waitTicks(10);
+            check(!tired(w) && ryo(w) == 190 && slow(w) == 0 && w.getServer().computeOnServer(s -> Daily.day(s.overworld()) == 3),
                     "sleeping clears the fatigue and day 3 pays the stipend: " + ryo(w));
 
             // The flat's chest and crafting table open, even with a block in hand.
@@ -225,17 +227,18 @@ public final class SessionGameTest implements FabricClientGameTest {
             check(w.getServer().computeOnServer(s -> {
                 var p = w.getConnection().getServerPlayer();
                 return p.isAlive() && TestStreet.inPlayerRoom(s.overworld(), p.blockPosition()) && p.getInventory().countItem(kunai) == 0 && p.getInventory().countItem(Items.DIRT) == 1;
-            }) && ryo(w) == 150 && !tired(w), "a defeated player wakes in the flat, fatigue cleared, with the pack but no kunai: " + ryo(w));
+            }) && ryo(w) == 190 && !tired(w), "a defeated player wakes in the flat, fatigue cleared, with the pack but no kunai: " + ryo(w));
             c.takeScreenshot("session-woke");
 
-            // Adoption: the keeper's shelter line hands over a kitten, tamed by the player, for 40 ryo.
+            // Adoption: at 13:00, with the shelter open (9 to 17), the keeper's shelter line hands over a kitten, tamed by the player, for 40 ryo.
+            w.getServer().runCommand("time set 55000");
             UUID keeper = w.getServer().computeOnServer(s -> s.overworld().getAttachedOrElse(ShinobiVillage.ROLES, Map.<String, UUID>of()).get("job:tea_house"));
             check(w.getServer().computeOnServer(s -> {
                 var p = w.getConnection().getServerPlayer();
                 var v = s.overworld().getEntity(keeper);
                 p.teleportTo(v.getX() + 1, v.getY(), v.getZ());
                 return ShinobiProgression.buy(p, "cat_shelter", "service.adoption.cat");
-            }) && ryo(w) == 110, "the kitten costs 40 ryo: " + ryo(w));
+            }) && ryo(w) == 150, "the kitten costs 40 ryo: " + ryo(w));
             check(w.getServer().computeOnServer(s -> {
                 var p = w.getConnection().getServerPlayer();
                 return p.level().getEntitiesOfClass(Cat.class, new AABB(p.blockPosition()).inflate(4), cat -> cat.isTame() && cat.isOwnedBy(p) && cat.isBaby()).size() == 1;
@@ -252,12 +255,13 @@ public final class SessionGameTest implements FabricClientGameTest {
                 p.gameMode.useItemOn(p, p.level(), ItemStack.EMPTY, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(room), Direction.UP, room, false));
             });
             for (int i = 0; i < 40 && !w.getServer().computeOnServer(s -> Daily.wellRested(w.getConnection().getServerPlayer())); i++) c.waitTicks(10);
-            for (int i = 0; i < 10 && ryo(w) != 140; i++) c.waitTicks(10);
+            for (int i = 0; i < 10 && ryo(w) != 180; i++) c.waitTicks(10);
             check(w.getServer().computeOnServer(s -> Daily.wellRested(w.getConnection().getServerPlayer()) && Daily.day(s.overworld()) == 4
                     && Daily.rest(w.getConnection().getServerPlayer()).rested() == 72000 + 7000)
-                    && Math.abs(regen(w) - 1.1) < 1e-9 && ryo(w) == 140, "a whole night in the Cosy flat's bed leaves the player Well Rested until 13:00: " + regen(w) + ", " + ryo(w));
+                    && Math.abs(regen(w) - 1.1) < 1e-9 && ryo(w) == 180, "a whole night in the Cosy flat's bed leaves the player Well Rested until 13:00: " + regen(w) + ", " + ryo(w));
 
-            // A dish: a matcha bought from the keeper and drunk (the use key held) adds its +10% chakra regen.
+            // A dish: at 09:30, the tea house open, a matcha bought from the keeper and drunk (the use key held) adds its +10% chakra regen.
+            w.getServer().runCommand("time set 75500");
             var matcha = ShinobiLife.item("matcha");
             int price = ShinobiLife.price("tea_house", "matcha");
             check(price > 0 && w.getServer().computeOnServer(s -> {
@@ -271,7 +275,7 @@ public final class SessionGameTest implements FabricClientGameTest {
                 inv.setItem(slot, ItemStack.EMPTY);
                 p.setItemInHand(InteractionHand.MAIN_HAND, cup);
                 return true;
-            }) && ryo(w) == 140 - price, "the keeper sells a matcha at its catalogue price: " + price + ", " + ryo(w));
+            }) && ryo(w) == 180 - price, "the keeper sells a matcha at its catalogue price: " + price + ", " + ryo(w));
             w.getServer().runCommand("tp @p ~ ~ ~ 0 -90");
             c.waitTicks(10);
             c.getInput().holdKeyFor(o -> o.keyUse, 50);

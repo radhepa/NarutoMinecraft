@@ -19,6 +19,7 @@ dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    implementation project(':core')   // the save seed and mode for the shelf, the player's rank
     implementation project(':life:economy')
     include project(':life:economy')
     implementation project(':life:home')   // comfort's Well Rested (docs/HOME.md); it brings the bond engine
