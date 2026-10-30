@@ -68,7 +68,8 @@ public final class TestStreet {
      * The player flat's main room from the apartment block's [0, 0, 0], 6 by 3 by 6 (tools/konoha/blueprints/leaf_block.homes.json).
      * shortcut: one room of the one player flat, kept as an anchor, until P05's home claims a flat with all its rooms.
      */
-    static final Vec3i ROOM = new Vec3i(1, 10, 3), ROOM_SIZE = new Vec3i(5, 2, 5);
+    static final Vec3i ROOM = new Vec3i(1, 10, 3);
+    public static final Vec3i ROOM_SIZE = new Vec3i(5, 2, 5);
     /** The flat's chest and crafting table from the room's corner (the bed's head). */
     public static final Vec3i FLAT_CHEST = new Vec3i(5, 0, 0), FLAT_TABLE = new Vec3i(4, 0, 0);
 

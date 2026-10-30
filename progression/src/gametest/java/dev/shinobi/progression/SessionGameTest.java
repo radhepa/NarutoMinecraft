@@ -43,11 +43,14 @@ import static dev.shinobi.progression.ErrandGameTest.ryo;
  * the training quest starts and names each step; the player walks to the yard, loses a first bout (the quest waits,
  * unpaid), then wins a spar by real attacks (each one taken by the server), earns 30 ryo once, buys a tatami from the keeper, places it in flat 3a, sleeps in the flat's bed
  * at nightfall into the next morning (day 2's stipend paid), and reopening keeps the look, the finished quest, the wallet
- * and the furnishing. The rest of the ordinary day (P05): a night awake tires the player and the bed clears it with day
- * 3's stipend; the flat's chest and crafting table open; a defeat wakes the player in the flat without the kunai; the
- * keeper's shelter line hands over a tamed kitten; a whole night in the flat's bed from 20:00 leaves the player Well
- * Rested, and a matcha bought from the keeper and drunk adds its regen; two nights awake tire and then exhaust the
- * player, and a third collapses them, to wake in the flat; a two-day clock jump pays two stipends, and turning it back none.
+ * and the furnishing. The rest of the ordinary day (P05): awake at 01:00 the player is tired, a lie-down and up again
+ * keeps it, and a night in the bed clears it with day 3's stipend; the flat's chest and crafting table open; a defeat at
+ * night wakes the player in the flat without the kunai, fatigue cleared and not back; the keeper's shelter line hands
+ * over a tamed kitten; a whole night in the flat's bed from 20:00 leaves the player Well Rested by the flat's comfort
+ * (Cosy: until 13:00), and a matcha bought from the keeper and drunk adds its regen; that tea puts the night's fatigue
+ * off to 02:00, a bento halves its slowdown, a weaker dango leaves the stronger platter's regen, 03:00 exhausts the
+ * player (damage -20%) and 06:00 collapses them, to wake in the flat at noon; a two-day clock jump pays two stipends,
+ * and turning it back none.
  * Screenshots: session-creator, session-spar, session-won, session-furnished, session-asleep, session-reopened,
  * session-chest, session-woke, session-kitten, session-collapsed.
  */
@@ -170,9 +173,19 @@ public final class SessionGameTest implements FabricClientGameTest {
             for (int i = 0; i < 10 && !tired(w); i++) c.waitTicks(10);
             check(tired(w) && slow(w) == -.1 && regen(w) == .75, "a night awake makes the player tired: " + slow(w) + ", " + regen(w));
             BlockPos room = anchors(w).get(TestStreet.PLAYER_FLAT);
-            w.getServer().runOnServer(s -> {
+            // Lying down and getting straight up is no night's sleep: the player stays tired.
+            check(w.getServer().computeOnServer(s -> {
                 var p = w.getConnection().getServerPlayer();
                 p.teleportTo(room.getX() + 1.5, room.getY() + 1, room.getZ() + 1.5);
+                p.gameMode.useItemOn(p, p.level(), ItemStack.EMPTY, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(room), Direction.UP, room, false));
+                boolean lay = p.isSleeping();
+                p.stopSleepInBed(true, true);
+                return lay;
+            }), "the player lies down in the flat's bed");
+            c.waitTicks(30);
+            check(tired(w), "a lie-down and up again leaves the player tired");
+            w.getServer().runOnServer(s -> {
+                var p = w.getConnection().getServerPlayer();
                 p.gameMode.useItemOn(p, p.level(), ItemStack.EMPTY, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(room), Direction.UP, room, false));
             });
             for (int i = 0; i < 40 && (tired(w) || ryo(w) != 150); i++) c.waitTicks(10);
@@ -194,7 +207,11 @@ public final class SessionGameTest implements FabricClientGameTest {
                 c.runOnClient(mc -> mc.player.closeContainer());
             }
 
-            // A defeat: the player wakes in the flat and loses the thrown tools carried, nothing else (no bill).
+            // A defeat at 01:30, tired: the player wakes in the flat, fatigue cleared for the night, and loses the thrown
+            // tools carried, nothing else (no bill).
+            w.getServer().runCommand("time set 67500");
+            for (int i = 0; i < 10 && !tired(w); i++) c.waitTicks(10);
+            check(tired(w), "awake at 01:30 on day 3, the player is tired");
             var kunai = BuiltInRegistries.ITEM.getValue(Identifier.fromNamespaceAndPath("shinobi_combat", "practice_kunai"));
             w.getServer().runOnServer(s -> {
                 var p = w.getConnection().getServerPlayer();
@@ -204,10 +221,11 @@ public final class SessionGameTest implements FabricClientGameTest {
             w.getServer().runCommand("gamerule immediate_respawn true");
             w.getServer().runCommand("kill @p");
             for (int i = 0; i < 20 && !w.getServer().computeOnServer(s -> TestStreet.inPlayerRoom(s.overworld(), w.getConnection().getServerPlayer().blockPosition())); i++) c.waitTicks(10);
+            c.waitTicks(40);
             check(w.getServer().computeOnServer(s -> {
                 var p = w.getConnection().getServerPlayer();
                 return p.isAlive() && TestStreet.inPlayerRoom(s.overworld(), p.blockPosition()) && p.getInventory().countItem(kunai) == 0 && p.getInventory().countItem(Items.DIRT) == 1;
-            }) && ryo(w) == 150 && !tired(w), "a defeated player wakes in the flat with the pack but no kunai: " + ryo(w));
+            }) && ryo(w) == 150 && !tired(w), "a defeated player wakes in the flat, fatigue cleared, with the pack but no kunai: " + ryo(w));
             c.takeScreenshot("session-woke");
 
             // Adoption: the keeper's shelter line hands over a kitten, tamed by the player, for 40 ryo.
@@ -235,8 +253,9 @@ public final class SessionGameTest implements FabricClientGameTest {
             });
             for (int i = 0; i < 40 && !w.getServer().computeOnServer(s -> Daily.wellRested(w.getConnection().getServerPlayer())); i++) c.waitTicks(10);
             for (int i = 0; i < 10 && ryo(w) != 140; i++) c.waitTicks(10);
-            check(w.getServer().computeOnServer(s -> Daily.wellRested(w.getConnection().getServerPlayer()) && Daily.day(s.overworld()) == 4)
-                    && Math.abs(regen(w) - 1.1) < 1e-9 && ryo(w) == 140, "a whole night in the flat's bed leaves the player Well Rested: " + regen(w) + ", " + ryo(w));
+            check(w.getServer().computeOnServer(s -> Daily.wellRested(w.getConnection().getServerPlayer()) && Daily.day(s.overworld()) == 4
+                    && Daily.rest(w.getConnection().getServerPlayer()).rested() == 72000 + 7000)
+                    && Math.abs(regen(w) - 1.1) < 1e-9 && ryo(w) == 140, "a whole night in the Cosy flat's bed leaves the player Well Rested until 13:00: " + regen(w) + ", " + ryo(w));
 
             // A dish: a matcha bought from the keeper and drunk (the use key held) adds its +10% chakra regen.
             var matcha = ShinobiLife.item("matcha");
@@ -260,21 +279,32 @@ public final class SessionGameTest implements FabricClientGameTest {
             check(Math.abs(regen(w) - 1.2) < 1e-9 && w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().getInventory().countItem(matcha) == 0),
                     "drinking the matcha adds its regen to Well Rested's: " + regen(w));
 
-            // Two nights awake: Tired, then Exhausted (movement -20%, regen halved); a third collapses the player, who wakes in the flat.
-            w.getServer().runCommand("time set 95000");
+            // Fatigue by the clock on day 4's night: the matcha is a tea, so 01:00 comes at 02:00.
+            w.getServer().runCommand("time set 91500");
+            c.waitTicks(40);
+            check(!tired(w), "the morning's tea keeps the player fresh at 01:30");
+            w.getServer().runCommand("time set 92000");
             for (int i = 0; i < 10 && !tired(w); i++) c.waitTicks(10);
-            check(tired(w) && slow(w) == -.1, "the first night awake tires the player: " + slow(w));
-            w.getServer().runCommand("time add 24000");
+            check(tired(w) && slow(w) == -.1, "tired at 02:00, an hour late for the tea: " + slow(w));
+            // A bento halves the slowdown; a dango's +20% does not replace the stronger platter's +25%.
+            w.getServer().runOnServer(s -> {
+                var p = w.getConnection().getServerPlayer();
+                for (String dish : List.of("bento", "dango_platter", "dango")) new ItemStack(ShinobiLife.item(dish)).finishUsingItem(p.level(), p);
+            });
+            c.waitTicks(30);
+            check(slow(w) == -.05 && Math.abs(regen(w) - .75 * 1.25) < 1e-9, "a meal halves the slowdown and the strongest dish's regen stays: " + slow(w) + ", " + regen(w));
+            w.getServer().runCommand("time set 93000");
             for (int i = 0; i < 10 && !exhausted(w); i++) c.waitTicks(10);
-            check(exhausted(w) && slow(w) == -.2 && regen(w) <= .55 + 1e-9, "the second night awake exhausts the player: " + slow(w) + ", " + regen(w));
+            check(exhausted(w) && slow(w) == -.1 && weak(w) == -.2 && Math.abs(regen(w) - .5 * 1.25) < 1e-9,
+                    "03:00 exhausts the player (movement -20%, halved by the meal; damage -20%; regen halved): " + slow(w) + ", " + weak(w) + ", " + regen(w));
             w.getServer().runOnServer(s -> w.getConnection().getServerPlayer().teleportTo(TestStreet.SPAWN.getX() + .5, TestStreet.SPAWN.getY(), TestStreet.SPAWN.getZ() + .5));
             c.waitTicks(10);
-            w.getServer().runCommand("time add 24000");
+            w.getServer().runCommand("time set 96000");
             for (int i = 0; i < 10 && tired(w); i++) c.waitTicks(10);
-            check(!tired(w) && slow(w) == 0 && w.getServer().computeOnServer(s -> {
+            check(!tired(w) && slow(w) == 0 && weak(w) == 0 && w.getServer().computeOnServer(s -> {
                 var p = w.getConnection().getServerPlayer();
-                return p.isAlive() && TestStreet.inPlayerRoom(s.overworld(), p.blockPosition());
-            }), "the third night awake collapses the player, who wakes in the flat");
+                return p.isAlive() && TestStreet.inPlayerRoom(s.overworld(), p.blockPosition()) && s.overworld().getOverworldClockTime() / 1000 == 102;
+            }), "06:00 still awake collapses the player, who wakes in the flat at noon");
             c.waitTicks(20);
             c.takeScreenshot("session-collapsed");
 
@@ -293,6 +323,14 @@ public final class SessionGameTest implements FabricClientGameTest {
     static boolean tired(TestSingleplayerContext w) { return w.getServer().computeOnServer(s -> Daily.tired(w.getConnection().getServerPlayer())); }
 
     static boolean exhausted(TestSingleplayerContext w) { return w.getServer().computeOnServer(s -> Daily.exhausted(w.getConnection().getServerPlayer())); }
+
+    /** Fatigue's damage modifier on the player (-0.2 for -20%), 0 without one. */
+    static double weak(TestSingleplayerContext w) {
+        return w.getServer().computeOnServer(s -> {
+            var m = w.getConnection().getServerPlayer().getAttribute(Attributes.ATTACK_DAMAGE).getModifier(Daily.FATIGUE);
+            return m == null ? 0 : m.amount();
+        });
+    }
 
     static double regen(TestSingleplayerContext w) { return w.getServer().computeOnServer(s -> ShinobiCombat.regen.applyAsDouble(w.getConnection().getServerPlayer())); }
 

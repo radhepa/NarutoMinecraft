@@ -21,6 +21,9 @@ dependencies {
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     implementation project(':life:economy')
     include project(':life:economy')
+    implementation project(':life:home')   // comfort's Well Rested (docs/HOME.md); it brings the bond engine
+    include project(':life:home')
+    include project(':life:bonds')
 }
 
 processResources {

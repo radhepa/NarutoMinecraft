@@ -34,10 +34,10 @@
   "shinobi_life.shop.lacks": "This shop does not sell that",
   "shinobi_life.day": "Day %s, %s",
   "shinobi_life.stipend": "Your stipend envelope: +%s ryo. Wallet: %s ryo",
-  "shinobi_life.tired": "You stayed up all night and feel tired: slower, and your chakra returns slowly. Sleep in a bed to recover.",
+  "shinobi_life.tired": "Still awake at 1:00, you feel tired: slower, and your chakra returns slowly. Sleep in a bed to recover.",
   "shinobi_life.woke": "You wake up at home, sore but safe.",
-  "shinobi_life.exhausted": "A second night without sleep: you are exhausted, much slower, and your chakra barely returns. Sleep, or you will collapse.",
+  "shinobi_life.exhausted": "Still awake at 3:00, you are exhausted: much slower, weaker, and your chakra barely returns. Sleep before dawn, or you will collapse.",
   "shinobi_life.collapse": "You cannot stay awake any longer and pass out.",
-  "shinobi_life.well_rested": "A full night in your own bed: you are Well Rested, and your chakra returns faster until noon.",
+  "shinobi_life.well_rested": "A full night in your own bed: you are Well Rested, and your chakra returns %s%% faster until %s:00.",
   "shinobi_life.fed": "%s: chakra returns %s%% faster for %s seconds"
 }

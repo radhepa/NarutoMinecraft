@@ -19,6 +19,10 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import dev.shinobi.progression.mission.Json;
 import dev.shinobi.progression.Quests.Quest;
 import dev.shinobi.life.Daily;
+import dev.shinobi.life.Dishes;
+import dev.shinobi.combat.runtime.Fighter;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
 import dev.shinobi.life.ShinobiLife;
 import dev.shinobi.combat.runtime.ShinobiCombat;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
@@ -92,6 +96,12 @@ public final class ShinobiProgression implements ModInitializer {
         ShinobiCombat.regen = Daily::regen;
         Daily.ownBed = TestStreet::inPlayerRoom;
         Daily.home = ShinobiProgression::wakeAtHome;
+        Dishes.chakra = Fighter::restore;
+        // The flat's furniture, by the pieces' ids, for Well Rested's comfort.
+        Daily.furnished = p -> p.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(TestStreet.PLAYER_FLAT) instanceof BlockPos at
+                ? BlockPos.betweenClosedStream(at, at.offset(TestStreet.ROOM_SIZE)).map(pos -> p.level().getBlockState(pos).getBlock().asItem())
+                        .filter(FURNITURE.get()::contains).map(item -> BuiltInRegistries.ITEM.getKey(item).getPath()).toList()
+                : List.of();
         // The death penalty: the thrown tools carried are lost (ROADMAP.md, Death); the Leaf map keeps the rest of the pack.
         // A defeated player wakes in the flat beside the bed when the map has one and the spot is free, else at the vanilla respawn.
         // shortcut: no level lost, and the flat not the hospital, until P07's levels and a hospital on the map.

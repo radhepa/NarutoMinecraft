@@ -296,6 +296,12 @@ public final class Fighter {
         }
     }
 
+    /** Gives back a share of the player's chakra (a ramen's); the next tick saves it. */
+    public static void restore(ServerPlayer p, double share) {
+        var f = of(p);
+        f.chakra.restore(share * f.chakra.max());
+    }
+
     static void end(ServerPlayer p) {
         var f = ALL.remove(p.getUUID());
         if (f != null) f.save(p);
