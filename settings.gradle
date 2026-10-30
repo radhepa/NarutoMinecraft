@@ -3,7 +3,8 @@
 // bond engine at life/bonds, ryo economy at life/economy, home engine at life/home and roster growth at
 // life/roster, Shinobi Progression's mission generator at progression/missions, Shinobi Village's player
 // look (the creator and age stages) at village/look and dialogue engine at village/dialogue, and Shinobi
-// Combat's combat core at combat/core. Shinobi Core (core/) is the first Fabric mod.
+// Combat's combat core at combat/core. Shinobi Core (core/) is the first Fabric mod; pack/ builds the
+// pack manifest.
 pluginManagement {
     repositories {
         maven { url = 'https://maven.fabricmc.net/' }
@@ -21,3 +22,4 @@ include 'village:dialogue'
 include 'village:look'
 include 'combat:core'
 include 'core'
+include 'pack'

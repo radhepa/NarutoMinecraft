@@ -4,30 +4,30 @@
 **Branch:** `dev` in the worktree `C:\Users\minal\NarutoMinecraft-dev`, based on `main` e9238bd.
 The story checkout on the Desktop is untouched; story review stays paused.
 
-## Done: P01 increment 1, Core boots
+## Done
 
-Shinobi Core (`core/`, mod id `shinobi_core`) is a Fabric mod that depends on Fabric API only. Its client
-game test opens the real client, checks the loaded mods, creates a world and saves two screenshots.
-
-Changed paths: `core/`, `settings.gradle` (Fabric plugin repository, `include 'core'`), `gradle.properties`
-(version pins, 2 GB Gradle heap), `.gitignore` (`run/`), `CLAUDE.md` (pointer), `docs/development/`.
+- Increment 1: Shinobi Core (`core/`, mod id `shinobi_core`) boots in a real client with Fabric API.
+- Audit fixes 1–18 in the engines and tools (mission desk, combat, life, bonds, dialogue, look); combat
+  `--check` writes nothing; generated files are LF; CI in `.github/workflows/check.yml` (not yet run on GitHub).
+- Increment 2: the pack manifest in `pack/` and the install procedure in [PACK.md](PACK.md). Changed
+  paths: `pack/`, `build.gradle` (Loom declared once), `core/build.gradle` (`-Ppack`), `settings.gradle`,
+  `gradle.properties` (VF and Fabric API pins), `docs/development/`.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
 
-- `./gradlew :core:build`: passed.
-- `./gradlew :core:runClientGameTest`: passed in 1 min 10 s. The log lists `shinobi_core 0.1.0`,
-  `fabric-api`, `minecraft 26.3`, `fabricloader 0.19.5` and prints `Shinobi Core loaded`. Screenshots:
-  `core/build/run/clientGameTest/screenshots/0000_core_title.png`, `0001_core_world.png`.
-- `./gradlew test`: 357 engine tests, 0 failures.
-- Village Friends 2.29.1 (VF `main` ccd1a2c, no tag or Maven artifact) builds with the same pins:
-  `C:\Users\minal\NarutoMinecraft-deps\village-friends-2.29.1`, jar SHA-256 `13706bf9…c49e69e`.
-- Not checked: the authoring tool checks (no tool or data changes).
-- Graph not refreshed: local graphify is 0.9.76, the committed graph is 0.9.97; an update rewrites ~690
-  cache files. Refresh once graphify is upgraded.
+- `./gradlew build`: passed, 373 engine tests, 0 failures.
+- All authoring checks passed, including font checks; they leave the tree unchanged.
+- `./gradlew :pack:mrpack`: `pack/build/pack/shinobi-modpack-0.1.0.mrpack`. Fabric API's SHA-1 and
+  SHA-512 match Modrinth version `bNnaTiuM`; the VF jar matches `vf_sha256`.
+- `./gradlew :core:runClientGameTest -Ppack`: passed. The log lists `shinobi_core 0.1.0`,
+  `villagefriends 2.29.1`, `fabric-api`, Minecraft 26.3; it opened a world (screenshots saved).
+- Not checked: importing the `.mrpack` into a real launcher. Loom's production-client task crashed
+  natively (0xC0000005) on this PC while loading fonts, even without VF, so it was not kept.
+- Graph not refreshed: local graphify 0.9.76 is older than the committed graph (0.9.97).
 
 ## Launch
 
-From the worktree: `./gradlew :core:runClient` (player `ShinobiTester`, run folder `core/run/`).
+`./gradlew :core:runClient` (player `ShinobiTester`). Pack: see [PACK.md](PACK.md).
 
 ## Blockers
 
@@ -35,7 +35,5 @@ None.
 
 ## Next
 
-P01 increment 2: the minimal pack manifest (`pack/`) pinning Minecraft, Loader, Fabric API, VF 2.29.1
-(jar built from ccd1a2c, by hash) and Shinobi Core, plus the separate test-world install procedure.
-Then the first/third-person player-animation spike. Village, Life, Combat and Progression assemblies
+The first/third-person player-animation spike (P01). Village, Life, Combat and Progression assemblies
 arrive with their first features.

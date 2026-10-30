@@ -1,0 +1,68 @@
+import groovy.json.JsonOutput
+import java.security.MessageDigest
+
+plugins {
+    id 'net.fabricmc.fabric-loom'
+}
+
+// The pack manifest (ROADMAP.md, "The pack: separate mods"; install steps in docs/development/PACK.md).
+// `./gradlew :pack:mrpack` writes build/pack/shinobi-modpack-<version>.mrpack: Minecraft, Fabric Loader and
+// Fabric API by version and hash, with Village Friends and Shinobi Core as override jars (neither has a
+// download yet). `./gradlew :core:runClientGameTest -Ppack` runs Shinobi Core's launch check with every pack mod.
+version = '0.1.0'
+
+def vfJar = rootProject.vfJar
+def coreJar = project(':core').tasks.named('jar')
+
+static String digest(File f, String algorithm) { MessageDigest.getInstance(algorithm).digest(f.bytes).encodeHex().toString() }
+
+configurations { packMods { transitive = false } }
+repositories { mavenCentral() }
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${loader_version}"
+    packMods "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+}
+
+def verifyPins = tasks.register('verifyPins') {
+    def mods = configurations.packMods
+    def vfSha = vf_sha256, apiSha = fabric_api_sha1
+    inputs.files vfJar
+    inputs.files mods
+    doLast {
+        if (!vfJar.isFile()) throw new GradleException("Village Friends jar not found: $vfJar (docs/development/PACK.md, step 1)")
+        if (digest(vfJar, 'SHA-256') != vfSha) throw new GradleException("$vfJar is not Village Friends $vf_version from commit ccd1a2c")
+        if (digest(mods.singleFile, 'SHA-1') != apiSha) throw new GradleException("Fabric API differs from the pinned Modrinth file")
+    }
+}
+
+def index = tasks.register('mrpackIndex') {
+    dependsOn verifyPins
+    def mods = configurations.packMods
+    def out = layout.buildDirectory.file('mrpack/modrinth.index.json')
+    def props = [version: version, minecraft: minecraft_version, loader: loader_version, api: fabric_api_version,
+                 apiVersion: fabric_api_modrinth_version]
+    inputs.files mods
+    inputs.properties props
+    outputs.file out
+    doLast {
+        File api = mods.singleFile
+        def file = [path     : "mods/${api.name}".toString(),
+                    hashes   : [sha1: digest(api, 'SHA-1'), sha512: digest(api, 'SHA-512')],
+                    env      : [client: 'required', server: 'required'],
+                    downloads: ["https://cdn.modrinth.com/data/P7dR8mSH/versions/${props.apiVersion}/${URLEncoder.encode(api.name, 'UTF-8')}".toString()],
+                    fileSize : api.length()]
+        def json = [formatVersion: 1, game: 'minecraft', versionId: props.version, name: 'Shinobi Modpack',
+                    summary: 'The Hidden Leaf on Village Friends (development build).', files: [file],
+                    dependencies: [minecraft: props.minecraft, 'fabric-loader': props.loader]]
+        out.get().asFile.text = JsonOutput.prettyPrint(JsonOutput.toJson(json)) + '\n'
+    }
+}
+
+tasks.register('mrpack', Zip) {
+    from index
+    into('overrides/mods') { from vfJar; from coreJar }
+    archiveBaseName = 'shinobi-modpack'
+    archiveExtension = 'mrpack'
+    destinationDirectory = layout.buildDirectory.dir('pack')
+}

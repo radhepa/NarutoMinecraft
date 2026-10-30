@@ -1,0 +1,7 @@
+// The Fabric build plugin, loaded once for every Fabric mod and the pack.
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}" apply false
+}
+
+// The pinned Village Friends jar for the pack (docs/development/PACK.md, step 1).
+ext.vfJar = file(providers.gradleProperty('vf_jar').getOrElse("build/deps/village-friends-${vf_version}.jar"))

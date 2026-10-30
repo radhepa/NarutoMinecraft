@@ -1,5 +1,5 @@
 plugins {
-    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+    id 'net.fabricmc.fabric-loom'
 }
 
 // Shinobi Core (ROADMAP.md, "The pack: separate mods"): the shared lower layer every Shinobi mod
@@ -46,6 +46,12 @@ fabricApi {
         clearRunDirectory = false
         username = 'ShinobiTester'
     }
+}
+
+// `-Ppack` runs the launch check with the pack's whole mod set: the pinned Village Friends jar joins it.
+if (providers.gradleProperty('pack').isPresent()) {
+    dependencies { gametestRuntimeOnly files(rootProject.vfJar) }
+    tasks.named('runClientGameTest') { dependsOn ':pack:verifyPins' }
 }
 
 loom.runs {
