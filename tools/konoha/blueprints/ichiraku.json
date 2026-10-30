@@ -1,0 +1,329 @@
+{
+ "format": "konoha-blueprint/1",
+ "id": "ichiraku",
+ "title": "Ichiraku Ramen",
+ "kind": "shop",
+ "size": [
+  12,
+  12,
+  12
+ ],
+ "street": "south",
+ "notes": "A VF tavern by bounds: six stools at the counter; the cook lives upstairs",
+ "cutaway": [
+  4
+ ],
+ "palette": {
+  "#": "minecraft:barrel[facing=up]",
+  "@": "minecraft:birch_planks",
+  "%": "minecraft:birch_slab[type=bottom]",
+  "&": "minecraft:chest[facing=south]",
+  "*": "minecraft:deepslate_tile_slab[type=bottom]",
+  "+": "minecraft:deepslate_tile_slab[type=top]",
+  "=": "minecraft:deepslate_tile_stairs[facing=north,half=top]",
+  "-": "minecraft:deepslate_tile_stairs[facing=south,half=top]",
+  "~": "minecraft:deepslate_tiles",
+  "^": "minecraft:dirt_path",
+  ":": "minecraft:furnace[facing=south]",
+  ";": "minecraft:polished_andesite",
+  "!": "minecraft:smoker[facing=south]",
+  "?": "minecraft:smooth_sandstone",
+  "$": "minecraft:smooth_stone",
+  "A": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false]",
+  "B": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false]",
+  "C": "minecraft:spruce_door[facing=west,half=lower,hinge=left,open=false]",
+  "D": "minecraft:spruce_door[facing=west,half=upper,hinge=left,open=false]",
+  "E": "minecraft:spruce_planks",
+  "F": "minecraft:spruce_slab[type=bottom]",
+  "G": "minecraft:spruce_slab[type=top]",
+  "H": "minecraft:spruce_stairs[facing=north,half=bottom]",
+  "I": "minecraft:spruce_trapdoor[facing=south,half=top,open=false]",
+  "J": "minecraft:stripped_spruce_log[axis=y]",
+  "K": "minecraft:terracotta",
+  "L": "minecraft:water_cauldron[level=3]",
+  "M": "minecraft:white_bed[facing=north,part=foot]",
+  "N": "minecraft:white_bed[facing=north,part=head]",
+  "O": "minecraft:white_stained_glass_pane[north=false,south=false,east=true,west=true]",
+  "P": "minecraft:white_stained_glass_pane[north=true,south=false,east=false,west=false]",
+  "Q": "minecraft:white_stained_glass_pane[north=true,south=true,east=false,west=false]",
+  "R": "narutominecraft:grey_kawara_ridge[axis=x]",
+  "S": "narutominecraft:ramen_noren[facing=south]",
+  "T": "narutominecraft:red_paper_lantern",
+  "U": "narutominecraft:tatami[axis=x]",
+  "V": "narutominecraft:white_paper_lantern"
+ },
+ "layers": [
+  [
+   "^^^^^^^^^^^^",
+   "^^^^^^^^^^^^",
+   "^^;;;;;;;;^^",
+   "^^;;;;;;;;^^",
+   "^^;;;;;;;;^^",
+   "^^;;;;;;;;^^",
+   "^^;;;;;;;;^^",
+   "^^^^^^^^^^^^",
+   "^$$$$$$$$$$^",
+   "^$$$$$$$$$$^",
+   "^$$$$$$$$$$^",
+   "^^^^^^^^^^^^"
+  ],
+  [
+   "............",
+   ".J????????J.",
+   "F?#!L:L!#.?#",
+   "F?GG....E.?.",
+   ".?......E.?.",
+   ".C......EH?.",
+   ".?......A.?.",
+   ".J@@@@@@@@J.",
+   "...%%%%%%...",
+   "............",
+   "............",
+   "............"
+  ],
+  [
+   "............",
+   ".J????????J.",
+   ".?......E.?#",
+   ".?......E.?.",
+   ".P......EH?.",
+   ".D......E.?.",
+   ".?......B.?.",
+   ".J.......EJ.",
+   "............",
+   "............",
+   "............",
+   "............"
+  ],
+  [
+   "............",
+   ".J????????J.",
+   ".?IIIIIIE.?.",
+   ".?......EH?.",
+   ".?...V..E.?.",
+   ".?......E.?.",
+   ".?......E.?.",
+   ".J.......EJ.",
+   "............",
+   ".TSSSSSSSST.",
+   "............",
+   "............"
+  ],
+  [
+   "............",
+   ".JKKKKKKKKJ.",
+   ".KEEEEEEEHK.",
+   ".KEEEEEEE.K.",
+   ".KEEEEEEE.K.",
+   ".KEEEEEEE.K.",
+   ".KEEEEEEE.K.",
+   ".JKKKKKKKKJ.",
+   ".GGGGGGGGGG.",
+   ".GGGGGGGGGG.",
+   "............",
+   "............"
+  ],
+  [
+   "............",
+   ".J????????J.",
+   ".?N&UUUU..?.",
+   ".?MUUUUUE.?.",
+   ".QUUUUUUE.?.",
+   ".?UUUUUUE.?.",
+   ".?UUUUUVE.?.",
+   ".J?O??O???J.",
+   "............",
+   "............",
+   "............",
+   "............"
+  ],
+  [
+   "............",
+   ".J????????J.",
+   ".?........?.",
+   ".?......E.?.",
+   ".Q......E.Q.",
+   ".?......E.?.",
+   ".?......E.?.",
+   ".J?O??O???J.",
+   "............",
+   "............",
+   "............",
+   "............"
+  ],
+  [
+   "============",
+   ".J????????J.",
+   ".?......E.?.",
+   ".?......E.?.",
+   ".?......E.?.",
+   ".?......E.?.",
+   ".?......E.?.",
+   ".J????????J.",
+   "------------",
+   "............",
+   "............",
+   "............"
+  ],
+  [
+   "************",
+   "++++++++++++",
+   ".?.......E?.",
+   ".?.......E?.",
+   ".?.......E?.",
+   ".?.......E?.",
+   ".?.......E?.",
+   "++++++++++++",
+   "************",
+   "............",
+   "............",
+   "............"
+  ],
+  [
+   "............",
+   "............",
+   "************",
+   "++++++++++++",
+   ".?........?.",
+   "++++++++++++",
+   "************",
+   "............",
+   "............",
+   "............",
+   "............",
+   "............"
+  ],
+  [
+   "............",
+   "............",
+   "............",
+   "............",
+   "~~~~~~~~~~~~",
+   "............",
+   "............",
+   "............",
+   "............",
+   "............",
+   "............",
+   "............"
+  ],
+  [
+   "............",
+   "............",
+   "............",
+   "............",
+   "RRRRRRRRRRRR",
+   "............",
+   "............",
+   "............",
+   "............",
+   "............",
+   "............",
+   "............"
+  ]
+ ],
+ "markers": [
+  {
+   "type": "tavern_bounds",
+   "pos": [
+    1,
+    0,
+    1
+   ],
+   "to": [
+    10,
+    4,
+    9
+   ]
+  },
+  {
+   "type": "seat",
+   "pos": [
+    3,
+    1,
+    8
+   ],
+   "facing": "north"
+  },
+  {
+   "type": "seat",
+   "pos": [
+    4,
+    1,
+    8
+   ],
+   "facing": "north"
+  },
+  {
+   "type": "seat",
+   "pos": [
+    5,
+    1,
+    8
+   ],
+   "facing": "north"
+  },
+  {
+   "type": "seat",
+   "pos": [
+    6,
+    1,
+    8
+   ],
+   "facing": "north"
+  },
+  {
+   "type": "seat",
+   "pos": [
+    7,
+    1,
+    8
+   ],
+   "facing": "north"
+  },
+  {
+   "type": "seat",
+   "pos": [
+    8,
+    1,
+    8
+   ],
+   "facing": "north"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    5,
+    1,
+    4
+   ],
+   "group": "civilian",
+   "job": "ichiraku"
+  },
+  {
+   "type": "bed",
+   "pos": [
+    2,
+    5,
+    2
+   ]
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    5,
+    6,
+    2
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "door_anchor",
+   "pos": [
+    5,
+    1,
+    10
+   ]
+  }
+ ]
+}

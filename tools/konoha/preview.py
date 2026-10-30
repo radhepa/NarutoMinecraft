@@ -157,15 +157,20 @@ VANILLA = {
     "bamboo_block": ("#7d8a27", "log"), "bamboo_fence": ("#c2ad50", "planks"), "light_gray_wool": ("#8e8e86", "wool"),
     "stone_brick_wall": ("#7b7a7a", "bricks"), "cauldron": ("#4a4a4f", "plain"), "smoker": ("#5b5a58", "bricks"),
     "red_nether_bricks": ("#460709", "bricks"), "quartz_slab": ("#ece6dc", "plain"), "gray_stained_glass_pane": ("#4c4c4c", "glass"),
-    "lime_terracotta": ("#677534", "plain"),
+    "lime_terracotta": ("#677534", "plain"), "anvil": ("#444444", "plain"), "blast_furnace": ("#505052", "bricks"),
+    "bricks": ("#966153", "bricks"), "iron_chain": ("#3a3f4a", "plain"), "composter": ("#6e4a26", "planks"),
+    "dried_kelp_block": ("#323b26", "plain"), "furnace": ("#6e6e6e", "stone"), "loom": ("#8e7a5e", "planks"),
+    "melon": ("#72921e", "plain"), "pumpkin": ("#c57418", "grid"), "smithing_table": ("#3a2f2b", "planks"),
+    "spruce_pressure_plate": ("#735531", "planks"), "stonecutter": ("#7b7672", "plain"), "water_cauldron": ("#4a4a4f", "plain"),
+    "white_bed": ("#e9ecec", "wool"), "green_bed": ("#546d1b", "wool"), "brown_bed": ("#724728", "wool"),
 }
 
 THIN = {"glass_pane", "white_stained_glass_pane", "gray_stained_glass_pane", "iron_bars"}
 FENCE = {"spruce_fence", "oak_fence", "dark_oak_fence", "bamboo_fence"}
 DOORS = {"spruce_door", "dark_oak_door"}
 TRAPDOORS = {"spruce_trapdoor", "dark_oak_trapdoor"}
-CARPET = {"white_carpet", "red_carpet"}
-BEDS = {"red_bed", "blue_bed"}
+CARPET = {"white_carpet", "red_carpet", "spruce_pressure_plate"}
+BEDS = {"red_bed", "blue_bed", "white_bed", "green_bed", "brown_bed"}
 
 
 @lru_cache(None)

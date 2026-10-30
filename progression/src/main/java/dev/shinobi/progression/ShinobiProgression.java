@@ -95,11 +95,15 @@ public final class ShinobiProgression implements ModInitializer {
      * The shops each bound resident keeps, by role or job key, their own first.
      * shortcut: the test street's tea house keeper also keeps the furniture shop, Ichiraku, the dango stand, the grocer,
      * the fish stall, the Haruno store, the Market Day stalls (each at its own hours) and the clinic's and shelter's
-     * adoptions, so every Beta 1 dish on a shelf has a seller, until the map has those shops and their keepers.
+     * adoptions, so every Beta 1 dish on a shelf has a seller, until the map has those shops and their keepers. Main Street's
+     * keepers (Ichiraku, the grocer, the furniture shop, the weapon shop) keep their own as well; the tea house keeper
+     * still keeps those four, until the errand and session gametests buy from the keepers at their own shops.
      */
     static final Map<String, List<String>> SHOPS = Map.of("job:tea_house", List.of("tea_house", "weapon_shop", "academy_supply", "ichiraku", "dango_stand",
                     "grocer", "fishmonger", "haruno_store", "market_day_stalls", "inuzuka_clinic", "cat_shelter", "furniture_shop"),
-            "role:shop.tea_house.owner", List.of("tea_house"), "role:shop.furniture.keeper", List.of("furniture_shop"));
+            "role:shop.tea_house.owner", List.of("tea_house"), "role:shop.furniture.keeper", List.of("furniture_shop"),
+            "job:ichiraku", List.of("ichiraku"), "job:grocer", List.of("grocer"), "job:furniture_shop", List.of("furniture_shop"),
+            "job:weapon_shop", List.of("weapon_shop", "academy_supply"));
 
     @Override
     public void onInitialize() {

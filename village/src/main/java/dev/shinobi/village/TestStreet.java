@@ -171,9 +171,11 @@ public final class TestStreet {
                         // VF draws a resident's profile, look and name from its UUID.
                         v.setUUID(resident(cast, residents.size()));
                         v.setPos(pos.getX() + .5, pos.getY(), pos.getZ() + .5);
-                        // The nearest bed of its house is its own: VF keeps the bed a resident already sleeps in when it hands beds out.
-                        beds.stream().min(Comparator.comparingInt(b -> b.distManhattan(pos)))
-                                .ifPresent(bed -> v.getBrain().setMemory(MemoryModuleType.HOME, GlobalPos.of(level.dimension(), bed)));
+                        // The nearest bed marker is its own (a plot places each resident beside its bed): VF keeps the bed a resident already sleeps in when it hands beds out.
+                        beds.stream().min(Comparator.comparingInt(b -> b.distManhattan(pos))).ifPresent(bed -> {
+                            v.getBrain().setMemory(MemoryModuleType.HOME, GlobalPos.of(level.dimension(), bed));
+                            LeafFlats.CLAIMS.put(v.getUUID().toString(), bed);
+                        });
                         if (!level.addFreshEntity(v)) throw new IllegalStateException("Resident " + v.getUUID() + " already lives in this world");
                         residents.add(v);
                         if (marker.has("role")) roles.put("role:" + marker.get("role").getAsString(), v.getUUID());

@@ -79,10 +79,10 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             var built = street(c, w);
             ShinobiVillage.LOG.info("Test street plaques: {}", built.plaques());
             int n = built.residents().size();
-            check(n == 25, "ten flat residents, the tea house keeper and fourteen Sakura Lane households: " + n);
-            check(built.plaques().size() == 26 && built.plaques().stream().filter(p -> p.contains("Sakura Lane") && p.contains(" 2 beds,")).count() == 14
-                    && built.plaques().stream().filter(p -> !p.contains("Sakura Lane") && p.contains(" 1 bed,")).count() == 12,
-                    "eleven flats and the tea house with a bed each, fourteen Sakura Lane homes with two: " + built.plaques());
+            check(n == 29, "ten flat residents, the tea house keeper, fourteen Sakura Lane households and the four Main Street keepers: " + n);
+            check(built.plaques().size() == 30 && built.plaques().stream().filter(p -> p.contains("Sakura Lane") && p.contains(" 2 beds,")).count() == 14
+                    && built.plaques().stream().filter(p -> !p.contains("Sakura Lane") && p.contains(" 1 bed,")).count() == 16,
+                    "eleven flats, the tea house and the four Main Street shops with a bed each, fourteen Sakura Lane homes with two: " + built.plaques());
 
             // Their markers; a resident out at its hobby has walked away from one.
             List<Vec3> spawn = w.getServer().computeOnServer(s -> built.residents().stream().map(Villager::position).toList());
@@ -105,6 +105,8 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             // the layout's streets and turned homes: Sakura Lane from its east end, Main Street looking north
             view(c, w, TestStreet.MAP.getX() + 51.5, TestStreet.MAP.getY() + 6, TestStreet.MAP.getZ() - 27.5, 90, 15, "konoha-sakura-lane");
             view(c, w, TestStreet.MAP.getX() + 57.5, TestStreet.MAP.getY() + 8, TestStreet.MAP.getZ() + 40.5, 180, 8, "konoha-main-street");
+            // Main Street's shops from the south: the weapon shop and furniture shop on the right, the grocer and Ichiraku on the left
+            view(c, w, TestStreet.MAP.getX() + 57.5, TestStreet.MAP.getY() + 5, TestStreet.MAP.getZ() + 66.5, 180, 6, "konoha-shops");
             check(built.anchors().keySet().containsAll(TestStreet.PLACES), "the map saves every quest place: " + built.anchors().keySet());
             route(c, w, player, "day");
 
@@ -143,8 +145,8 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             // VF's routine clock, frozen at 2 am: past every chronotype's bedtime, night owls included.
             w.getServer().runCommand("time set " + (2 * 24000 + Routine.at(2, 0)));
             // client ticks: Sakura Lane's households walk the farthest, and a loaded server falls behind the client
-            until(c, () -> asleep(w, built) >= n - 2, 4800, () -> "residents asleep in their own beds: " + asleep(w, built) + "; doing "
-                    + w.getServer().computeOnServer(s -> built.residents().stream().map(v -> dev.villagefriends.ResidentRoutines.doing(v) + " at " + v.getSleepingPos().orElse(null)
+            until(c, () -> asleep(w, built) >= n - 2, 4800, () -> "residents asleep in their own beds: " + asleep(w, built) + "; player at " + w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().blockPosition()) + "; doing "
+                    + w.getServer().computeOnServer(s -> built.residents().stream().map(v -> dev.villagefriends.ResidentRoutines.doing(v) + " at " + v.getSleepingPos().orElse(v.blockPosition())
                             + ", bed " + Homes.bedOf(v).map(b -> b.head()).orElse(null)).toList()));
             ShinobiVillage.LOG.info("Test street: {} of {} residents asleep in their own beds", asleep(w, built), n);
             route(c, w, player, "night");

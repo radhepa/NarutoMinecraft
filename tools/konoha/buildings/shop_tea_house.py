@@ -43,12 +43,12 @@ def build(wall="cream", roof="orange", awning="red", noren="tea") -> Plan:
         p.set(x, 1, 9, "spruce_slab[type=bottom]")
     # inside: counter on the left, two tables, a raised tatami room at the back
     p.fill(2, 2, 4, 3, 2, 4, "barrel[facing=up]")
-    p.set(2, 2, 3, "smoker[facing=east]")
+    p.set(2, 2, 5, "smoker[facing=east]")
     for x, z in ((6, 5), (7, 4)):
         p.set(x, 2, z, "spruce_fence")
         p.set(x, 3, z, "spruce_slab[type=bottom]")
-    p.fill(5, 2, 2, 8, 2, 3, "spruce_slab[type=top]")
-    for x in range(5, 9):
+    p.fill(7, 2, 2, 8, 2, 3, "spruce_slab[type=top]")
+    for x in range(7, 9):
         for z in (2, 3):
             p.set(x, 3, z, f"{NS}:tatami[axis=x]")
     p.set(8, 4, 2, f"{NS}:white_paper_lantern")
@@ -62,22 +62,22 @@ def build(wall="cream", roof="orange", awning="red", noren="tea") -> Plan:
         p.window(9, 6, z, 2)
     p.window(1, 3, 3)
     p.window(9, 3, 3)
-    # stair along the back wall to the owner's rooms
-    for i, x in enumerate((4, 3, 2)):
+    # stair along the back wall to the owner's rooms, its last step the upper floor; a partition and a door at its
+    # foot close it off from the open shop (VF floods rooms door to door, and residents path through a door on the level)
+    p.fill(2, 2, 3, 6, 4, 3, "spruce_planks")
+    p.fill(7, 2, 2, 7, 4, 2, "spruce_planks")
+    p.door(6, 2, 3, "north")                                 # onto a landing: residents don't climb a step from a doorway
+    for i, x in enumerate((5, 4, 3, 2)):
         p.set(x, 2 + i, 2, "spruce_stairs[facing=west,half=bottom]")
-    p.clear(2, 5, 2, 4, 5, 2)
-    # a partition and door at the stair head close the owner's rooms off from the open shop (VF floods rooms door to door)
-    p.fill(2, 6, 3, 4, 8, 3, "spruce_planks")
+    p.clear(3, 5, 2, 4, 5, 2)
     p.fill(5, 6, 2, 5, 8, 2, "spruce_planks")
-    p.fill(2, 9, 2, 4, 9, 2, "spruce_planks")
-    p.door(2, 6, 3, "south")
     p.set(8, 6, 3, "red_bed[facing=north,part=head]")
     p.set(8, 6, 4, "red_bed[facing=north,part=foot]")
     p.gable_roof(1, 9, 1, 7, 9, roof, gable_style=wall)
     p.marker("tavern_bounds", (1, 1, 1), to=[9, 8, 9])
     for x in (2, 3, 7, 8):
         p.marker("seat", (x, 1, 9), facing="north")
-    p.marker("seat", (6, 2, 4))
+    p.marker("seat", (5, 2, 5))
     p.marker("seat", (7, 2, 5))
     p.marker("resident", (3, 2, 5), group="civilian", job="tea_house")
     p.marker("bed", (8, 6, 3))

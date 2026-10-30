@@ -6,6 +6,7 @@ import dev.villagefriends.social.Townsfolk;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -15,6 +16,9 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LeafFlatsTest {
+    @AfterEach
+    void clearClaims() { LeafFlats.CLAIMS.clear(); }
+
     static House flat(String id, int x, String name, boolean closed) {
         var foot = new BlockPos(x, 64, 0);
         var bed = new House.Bed(foot.relative(Direction.NORTH), foot, Direction.NORTH, 0, true);
@@ -42,5 +46,21 @@ class LeafFlatsTest {
         // ann keeps flat a and fay the tea house (bo shares the anchor and gets nothing); a private flat, a player's own house, a held bed and the dead are skipped.
         assertEquals(Map.of("holder", new HousingIndex.BedKey("e", head(held)), "ann", new HousingIndex.BedKey("a", head(a)),
                 "fay", new HousingIndex.BedKey("f", head(shop))), beds);
+    }
+
+    @Test
+    void placedResidentsTakeTheirBedBackOnce() {
+        var sakura = flat("s", 0, "Flat 1a", false); var spare = flat("t", 10, "Flat 2c", false);
+        // VF handed out beds before it noted where cy sleeps: cy got the spare flat and bo the bed cy claims.
+        var previous = new HousingIndex("v", List.of(sakura, spare), Map.of("cy", new HousingIndex.BedKey("t", head(spare)), "bo", new HousingIndex.BedKey("s", head(sakura))),
+                List.of(), Map.of(), List.of(), Map.of(), Map.of(), 0, true);
+        LeafFlats.CLAIMS.put("cy", head(sakura));
+        var beds = LeafFlats.seed(previous, List.of(folk("cy", Townsfolk.HOME), folk("bo", Townsfolk.HOME)), Map.of()).beds();
+        assertEquals(Map.of("cy", new HousingIndex.BedKey("s", head(sakura))), beds);
+        // Granted once, the claim is spent: after VF moves cy to the spare flat, a later seed leaves cy there.
+        assertEquals(null, LeafFlats.CLAIMS.get("cy"));
+        var moved = Map.of("cy", new HousingIndex.BedKey("t", head(spare)));
+        var next = new HousingIndex("v", List.of(sakura, spare), moved, List.of(), Map.of(), List.of(), Map.of(), Map.of(), 0, true);
+        assertEquals(moved, LeafFlats.seed(next, List.of(folk("cy", Townsfolk.HOME)), Map.of()).beds());
     }
 }

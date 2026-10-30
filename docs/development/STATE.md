@@ -8,21 +8,26 @@ edit name pools, name rolling or dialogue pools on `dev`.
 ## Done
 
 - P05/P06 (e92d2f6 to c90629e), P07 engine and chapters 0 to 7 as quests (6fc02a7; 0 to 2 client-tested).
-- Konoha K1 (this commit): `tools/konoha/layout.json` (`layout.py --check`/`--plan`) drives the paste: 3 streets,
+- Konoha K1 (442a511): `tools/konoha/layout.json` (`layout.py --check`/`--plan`) drives the paste: 3 streets,
   30 built plots, 31 planned, rotated and mirrored. Leaf Street, Sakura Lane (14 homes), Main Street, and canon first
   versions of the Ninja Academy, the Hokage Residence and the main gate with its wall. Quest places are saved as
   anchors (`TestStreet.PLACES`, the same list as layout.py ANCHORS and missions.py STREET_ANCHORS).
+- Konoha K2 (this commit): Main Street's shops, each with a keeper living upstairs: Ichiraku, the grocer
+  (`shop_house.py`), the furniture and weapon shops (`shop_large.py`), the tea house reworked. Stairs climb in a
+  closed well from a level landing behind a door; tatami lies on the floor, level with the bed. Each keeper sells
+  its own shop (`ShinobiProgression.SHOPS`). `LeafFlats.CLAIMS` gives a placed resident back the bed it stands by
+  once, if VF handed beds out first (`LeafFlatsTest`).
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-`./gradlew build` passed; `layout.py --check` ok; `missions.py --check` ok. `:village:runClientGameTest` passed
-(`.local-dev/logs/konoha-landmarks-gt.log`): 25 residents, 26 plaques, paste 19.2 s, 23 of 25 asleep in their own
-beds, the day route 4.6 to 8.8 ms per tick, the night route 3.1 to 3.6. Screenshots: `village/build/run/clientGameTest/screenshots/*konoha-*`;
+`./gradlew build` passed (`.local-dev/logs/k2-build.log`); `layout.py --check` ok (34 plots built).
+`:village:runClientGameTest` passed (`.local-dev/logs/k2-gt.log`): 29 residents, 30 plaques, paste 18.4 s, 27 of 29
+asleep in their own beds, the day route 11.8 to 19.2 ms per tick, the night route 9.9 to 23.2. Screenshots: `village/build/run/clientGameTest/screenshots/*konoha-*`;
 renders: `docs/renders/konoha/`.
 
 ## Remaining
 
-- Konoha Beta 1: shops (Ichiraku, grocer, furniture, weapon shop, Inuzuka clinic) and the market, the hospital,
+- Konoha Beta 1: the Inuzuka clinic and the market, the hospital,
   the shrine, the apartment blocks and the south homes, Hokage Rock, the clan gates and halls, the prologue hills,
   about 200 residents. Then Beta 2, Beta 3 and Later.
 - P07: chapters 3 to 7 in a client; story stand-ins swapped for the real places.
@@ -45,4 +50,4 @@ None.
 
 ## Next
 
-Konoha K2: the Main Street shops and the market district, one design per building in `tools/konoha/buildings/`.
+Merge `names` into `dev` (owner-approved), then Konoha K3: the market district and the Inuzuka clinic.
