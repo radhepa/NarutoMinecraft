@@ -1,1 +1,1 @@
-{"required":true,"package":"dev.shinobi.village.mixin.client","compatibilityLevel":"JAVA_25","client":["AbstractClientPlayerMixin"],"injectors":{"defaultRequire":1}}
+{"required":true,"package":"dev.shinobi.village.mixin.client","compatibilityLevel":"JAVA_25","client":["AbstractClientPlayerMixin","WorldCreationUiStateMixin"],"injectors":{"defaultRequire":1}}

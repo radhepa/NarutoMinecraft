@@ -17,6 +17,7 @@
     "minecraft": "~26.3",
     "java": ">=25",
     "fabric-api": "*",
+    "shinobi_core": "*",
     "villagefriends": "2.29.1"
   }
 }

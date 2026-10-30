@@ -3,17 +3,13 @@ package dev.shinobi.progression;
 import dev.shinobi.life.ShinobiLife;
 import dev.shinobi.village.PlayerLooks;
 import dev.shinobi.village.ShinobiVillage;
-import dev.shinobi.village.TestStreet;
 import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest;
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext;
 import net.fabricmc.fabric.api.client.gametest.v1.context.TestSingleplayerContext;
 import net.fabricmc.fabric.api.client.gametest.v1.world.TestWorldSave;
-import net.minecraft.client.gui.screens.worldselection.WorldCreationUiState;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.levelgen.presets.WorldPresets;
 import net.minecraft.world.phys.EntityHitResult;
 
 import java.util.List;
@@ -37,18 +33,14 @@ public final class ErrandGameTest implements FabricClientGameTest {
     @Override
     public void runTest(ClientGameTestContext c) {
         TestWorldSave save;
-        try (var w = c.worldBuilder().adjustSettings(ui -> {
-            var flat = ui.getSettings().worldgenLoadContext().lookupOrThrow(Registries.WORLD_PRESET).getOrThrow(WorldPresets.FLAT);
-            ui.setWorldType(new WorldCreationUiState.WorldTypeEntry(flat));
-            ui.setGenerateStructures(false);
-        }).create()) {
+        try (var w = c.worldBuilder().setUseConsistentSettings(false).create()) {
             w.getConnection().waitForChunksRender();
             // The creator is P05's; here the player takes the opening look.
             check(w.getServer().computeOnServer(s -> PlayerLooks.choose(w.getConnection().getServerPlayer(), PlayerLooks.defaultLook())), "the opening look is allowed");
-            for (String cmd : List.of("gamerule advance_time false", "gamerule spawn_mobs false", "time set 3000"))
+            for (String cmd : List.of("gamerule advance_time false", "gamerule advance_weather false", "weather clear", "gamerule spawn_mobs false", "time set 3000"))
                 w.getServer().runCommand(cmd);
-            BlockPos player = w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().blockPosition());
-            var built = w.getServer().computeOnServer(s -> TestStreet.build(w.getConnection().getServerLevel(), player.below().offset(-17, 0, -22)));
+            // The new world's map, pasted at its first start.
+            var anchors = w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.<String, BlockPos>of()));
             check(w.getServer().computeOnServer(s -> ShinobiProgression.QUESTS.containsKey(ERRAND)), "the test errand loads from the data pack");
 
             check(!w.getServer().computeOnServer(s -> ShinobiProgression.accept(w.getConnection().getServerPlayer(), MISSING)) && !journal(w).knows(MISSING),
@@ -75,11 +67,11 @@ public final class ErrandGameTest implements FabricClientGameTest {
             }
             check("go_yard".equals(journal(w).active().get(ERRAND)), "talked to the keeper: " + journal(w));
 
-            BlockPos yard = built.anchors().get("anchor:training");
+            BlockPos yard = anchors.get("anchor:training");
             w.getServer().runCommand("tp @p " + yard.getX() + " " + yard.getY() + " " + (yard.getZ() + 1));
             for (int i = 0; i < 20 && !"go_board".equals(journal(w).active().get(ERRAND)); i++) c.waitTicks(10);
             check("go_board".equals(journal(w).active().get(ERRAND)), "the keeper's flag takes the branch to the board: " + journal(w));
-            BlockPos board = built.anchors().get("notice_board");
+            BlockPos board = anchors.get("notice_board");
             w.getServer().runCommand("tp @p " + board.getX() + " " + board.getY() + " " + (board.getZ() + 1));
             for (int i = 0; i < 20 && !journal(w).done().contains(ERRAND); i++) c.waitTicks(10);
             check(journal(w).done().contains(ERRAND) && !journal(w).active().containsKey(ERRAND), "done at the board: " + journal(w));

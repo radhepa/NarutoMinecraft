@@ -1,12 +1,17 @@
 package dev.shinobi.village;
 
 import com.google.gson.JsonArray;
+import dev.shinobi.core.SaveSeed;
 import dev.villagefriends.HousePlaqueBlockEntity;
 import dev.villagefriends.VillageSettlements;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.core.Vec3i;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.level.Level;
@@ -14,9 +19,13 @@ import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.level.block.BedBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.gamerules.GameRule;
 import net.minecraft.world.level.gamerules.GameRules;
 import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.level.levelgen.presets.WorldPreset;
+import net.minecraft.world.level.storage.LevelData;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -33,7 +42,16 @@ import java.util.UUID;
  * shortcut: three plots pasted by code, until the master map's paste tool and layout.json (Phase 0, Map).
  */
 public final class TestStreet {
+    // shortcut: Varied keeps flat 3a too, until homes.json ships with the map and the apartment stream picks a candidate flat.
     public static final String BUILDING = "leaf_block", PLAYER_FLAT = "flat.leaf_block.3a", VILLAGE = "Leaf Test Street";
+    /** The Hidden Leaf world preset (data/narutominecraft/worldgen/world_preset/leaf.json): void, no structures or features. */
+    public static final ResourceKey<WorldPreset> PRESET = ResourceKey.create(Registries.WORLD_PRESET, Identifier.fromNamespaceAndPath("narutominecraft", "leaf"));
+    /** A new world's map: the apartment block's [0, 0, 0], and the spawn on the street in front of the block. */
+    public static final BlockPos MAP = new BlockPos(0, 64, 0), SPAWN = MAP.offset(17, 1, 22);
+    /** The border's centre (x, z) and side: the three plots and the street, with a margin of at least nine blocks. */
+    public static final double BORDER_X = 18.5, BORDER_Z = 12.5, BORDER = 80;
+    /** Classic's cast seed, whatever the world seed: the street's first cast (P03). */
+    static final long CLASSIC_CAST = 26;
     /**
      * The Leaf map's rules, all off: no monsters, raiders or traders wander in, and TNT and arrows leave the street alone.
      * Mob griefing stays on: VF's farmers harvest and residents pick up items through it.
@@ -58,6 +76,33 @@ public final class TestStreet {
         return at != null && BoundingBox.fromCorners(at, at.offset(ROOM_SIZE)).isInside(pos);
     }
 
+    /**
+     * A world's first start pastes the map: the street at {@link #MAP}, grass on the rest of the bordered square, the
+     * border, and the spawn on the street facing the block. A world with anchors has its map already.
+     */
+    public static void firstStart(MinecraftServer server) {
+        var level = server.overworld();
+        if (level.getAttached(ShinobiVillage.ANCHORS) != null) return;
+        Built built;
+        try {
+            built = build(level, MAP);
+        } catch (IllegalStateException e) {
+            ShinobiVillage.LOG.error("No Leaf map in this world: {}", e.getMessage());
+            return;
+        }
+        var grass = Blocks.GRASS_BLOCK.defaultBlockState();
+        for (int x = (int) Math.floor(BORDER_X - BORDER / 2); x < BORDER_X + BORDER / 2; x++)
+            for (int z = (int) Math.floor(BORDER_Z - BORDER / 2); z < BORDER_Z + BORDER / 2; z++) {
+                var at = new BlockPos(x, MAP.getY(), z);
+                if (level.getBlockState(at).isAir()) level.setBlock(at, grass, Block.UPDATE_CLIENTS);
+            }
+        level.getWorldBorder().setCenter(BORDER_X, BORDER_Z);
+        level.getWorldBorder().setSize(BORDER);
+        server.setRespawnData(LevelData.RespawnData.of(level.dimension(), SPAWN, 180, 0));
+        level.getGameRules().set(GameRules.RESPAWN_RADIUS, 0, server);
+        ShinobiVillage.LOG.info("Leaf map pasted: {} residents, {} plaques", built.residents().size(), built.plaques().size());
+    }
+
     /** Builds the street with the apartment block's [0, 0, 0] (its ground layer) at {@code origin}, on ground no village holds yet. */
     public static Built build(ServerLevel level, BlockPos origin) {
         var here = VillageSettlements.discover(level, origin);
@@ -67,6 +112,7 @@ public final class TestStreet {
         for (var rule : OFF) rules.set(rule, false, level.getServer());
         // No fire spreads or burns blocks; a fire, once lit, also never goes out, so StreetGuard stops players lighting one.
         rules.set(GameRules.FIRE_SPREAD_RADIUS_AROUND_PLAYER, 0, level.getServer());
+        long cast = castSeed(level);
         var plots = new ArrayList<Map.Entry<BlockPos, JsonArray>>();
         for (var plot : PLOTS) {
             var at = origin.offset(plot.getValue());
@@ -96,7 +142,7 @@ public final class TestStreet {
                     case "resident" -> {
                         var v = new Villager(EntityTypes.VILLAGER, level);
                         // VF draws a resident's profile, look and name from its UUID.
-                        v.setUUID(resident(level.getSeed(), residents.size()));
+                        v.setUUID(resident(cast, residents.size()));
                         v.setPos(pos.getX() + .5, pos.getY(), pos.getZ() + .5);
                         // The nearest bed of its house is its own: VF keeps the bed a resident already sleeps in when it hands beds out.
                         beds.stream().min(Comparator.comparingInt(b -> b.distManhattan(pos)))
@@ -130,10 +176,13 @@ public final class TestStreet {
         return pos;
     }
 
-    /**
-     * The UUID of the resident at the building's {@code marker}th resident marker: the same cast in every world with this seed.
-     * shortcut: the world seed, until Shinobi Core's save seed and its Classic/Varied mode choose the cast (P03 queue, item 3).
-     */
+    /** The seed of this save's cast: {@link #CLASSIC_CAST} in Classic, the save seed in Varied. */
+    public static long castSeed(ServerLevel level) {
+        var save = SaveSeed.of(level.getServer());
+        return "varied".equals(save.mode()) ? save.seed() : CLASSIC_CAST;
+    }
+
+    /** The UUID of the resident at the building's {@code marker}th resident marker: the same cast in every world with this cast seed. */
     public static UUID resident(long seed, int marker) {
         return UUID.nameUUIDFromBytes((BUILDING + ":" + seed + ":" + marker).getBytes(StandardCharsets.UTF_8));
     }

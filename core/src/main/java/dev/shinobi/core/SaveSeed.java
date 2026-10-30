@@ -3,6 +3,7 @@ package dev.shinobi.core;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.server.MinecraftServer;
 
 import java.util.Set;
 
@@ -23,6 +24,12 @@ public record SaveSeed(long seed, String mode) {
                 Codec.LONG.fieldOf("seed").forGetter(SaveSeed::seed),
                 (lenient ? Codec.STRING.lenientOptionalFieldOf("mode", "classic") : Codec.STRING.fieldOf("mode")).forGetter(SaveSeed::mode)
         ).apply(i, (seed, mode) -> new SaveSeed(seed, lenient && !MODES.contains(mode) ? "classic" : mode)));
+    }
+
+    /** This save's seed; the first call makes it from the world seed, in the mode of {@link ShinobiCore#VARIED_WORLD}. */
+    public static SaveSeed of(MinecraftServer server) {
+        var level = server.overworld();
+        return level.getAttachedOrCreate(ShinobiCore.SEED, () -> new SaveSeed(level.getSeed(), level.getGameRules().get(ShinobiCore.VARIED_WORLD) ? "varied" : "classic"));
     }
 
     /** This save's stream for one system ({@code domain}) and one thing in it ({@code key}). */

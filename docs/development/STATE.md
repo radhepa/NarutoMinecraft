@@ -36,14 +36,16 @@ sleep in that room's bed at night; reload keeps look, quest, wallet and tatami.
 
 - P04-6: failure and retry at each quest boundary (the spar loss and retry exist, untested).
 - P04-7: the quest checker (extend `tools/missions/missions.py`).
-- P03: Classic/Varied from the Core save seed, role identities for the bound cast, Konoha block loot tables and names.
+- P03: Varied's apartment roll (flat 3a in both modes), role identities for the bound cast, Konoha block loot tables and names.
 - P05/P06 beyond M2: fatigue and the rest of the ordinary day, chakra, signs, techniques, guard/movement,
   animation, rebindable controls, pets, full stock and technique coverage (ROADMAP 13.4, 13.5).
 
 ## Launch
 
-`./gradlew :progression:runClient` (every Shinobi mod + VF; player `ShinobiTester`). New flat world, then
-`/narutominecraft street` builds the test street. Pack: [PACK.md](PACK.md).
+`./gradlew :progression:runClient` (every Shinobi mod + VF; player `ShinobiTester`). Create World defaults to the
+Hidden Leaf preset (void); the first start pastes the test street, its border and the spawn on the street. Game rule
+`shinobi_core:varied_world` (Create World, Game Rules) makes a Varied save. `/narutominecraft street` still builds the
+street for operators. Pack: [PACK.md](PACK.md).
 
 ## Blockers
 

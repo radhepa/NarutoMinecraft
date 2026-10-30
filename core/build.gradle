@@ -58,8 +58,10 @@ fabricApi {
 
 // `-Ppack` runs the launch check with the pack's whole mod set: the pinned Village Friends jar and the other Shinobi mods join it.
 if (providers.gradleProperty('pack').isPresent()) {
-    def mods = [':village', ':life', ':combat', ':progression'].collect { evaluationDependsOn(it); rootProject.project(it).tasks.named('jar') }
-    dependencies { gametestRuntimeOnly files(rootProject.vfJar, *mods) }
+    // Resolved late: those mods build on Core, so Core cannot evaluate them first.
+    def mods = [':village', ':life', ':combat', ':progression']
+    def jars = files { mods.collect { rootProject.project(it).tasks.named('jar').get().archiveFile } }.builtBy(mods.collect { "$it:jar" })
+    dependencies { gametestRuntimeOnly files(rootProject.vfJar, jars) }
     tasks.named('runClientGameTest') { dependsOn ':pack:verifyPins' }
 }
 

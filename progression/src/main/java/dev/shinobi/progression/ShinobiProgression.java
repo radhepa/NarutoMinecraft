@@ -78,7 +78,8 @@ public final class ShinobiProgression implements ModInitializer {
         ServerTickEvents.END_SERVER_TICK.register(s -> {
             if (s.getTickCount() % 10 == 0) for (var p : s.getPlayerList().getPlayers()) tick(p);
         });
-        StreetGuard.furnishing = FURNITURE.get()::contains;
+        // Read at first use: Fabric does not promise Shinobi Life loads its catalogue before this entrypoint runs.
+        StreetGuard.furnishing = item -> FURNITURE.get().contains(item);
         Spar.WON.register(player -> stepDone(player, "spar", step -> true));
         // Furnishing: a block from the furniture shop placed in the player's room, checked in a task after the placement.
         UseBlockCallback.EVENT.register((player, level, hand, hit) -> {

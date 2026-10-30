@@ -9,16 +9,13 @@ import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest;
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext;
 import net.fabricmc.fabric.api.client.gametest.v1.context.TestSingleplayerContext;
 import net.fabricmc.fabric.api.client.gametest.v1.world.TestWorldSave;
-import net.minecraft.client.gui.screens.worldselection.WorldCreationUiState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.levelgen.presets.WorldPresets;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
@@ -48,15 +45,9 @@ public final class SessionGameTest implements FabricClientGameTest {
         TestWorldSave save;
         BlockPos placed;
         String look;
-        try (var w = c.worldBuilder().adjustSettings(ui -> {
-            var flat = ui.getSettings().worldgenLoadContext().lookupOrThrow(Registries.WORLD_PRESET).getOrThrow(WorldPresets.FLAT);
-            ui.setWorldType(new WorldCreationUiState.WorldTypeEntry(flat));
-            ui.setGenerateStructures(false);
-        }).create()) {
+        try (var w = c.worldBuilder().setUseConsistentSettings(false).create()) {
             w.getConnection().waitForChunksRender();
-            for (String cmd : List.of("gamerule spawn_mobs false", "gamerule advance_time true", "time set 3000")) w.getServer().runCommand(cmd);
-            BlockPos start = w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().blockPosition());
-            w.getServer().runOnServer(s -> TestStreet.build(w.getConnection().getServerLevel(), start.below().offset(-17, 0, -22)));
+            for (String cmd : List.of("gamerule spawn_mobs false", "gamerule advance_weather false", "weather clear", "gamerule advance_time true", "time set 3000")) w.getServer().runCommand(cmd);
 
             // The creator lives in Shinobi Village's client classes, which this test does not compile against.
             c.waitFor(mc -> mc.gui.screen() != null && mc.gui.screen().getClass().getSimpleName().equals("CreatorScreen"));

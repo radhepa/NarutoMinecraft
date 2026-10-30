@@ -1,5 +1,8 @@
 package dev.shinobi.village;
 
+import dev.shinobi.core.SaveSeed;
+import dev.shinobi.core.ShinobiCore;
+import dev.villagefriends.HousePlaqueBlockEntity;
 import dev.villagefriends.VillageBlocks;
 import dev.villagefriends.VillageFriends;
 import dev.villagefriends.VillageSettlements;
@@ -10,29 +13,32 @@ import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest;
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext;
 import net.fabricmc.fabric.api.client.gametest.v1.context.TestSingleplayerContext;
 import net.fabricmc.fabric.api.client.gametest.v1.world.TestWorldSave;
-import net.minecraft.client.gui.screens.worldselection.WorldCreationUiState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.gamerules.GameRules;
-import net.minecraft.world.level.levelgen.presets.WorldPresets;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 
 /**
- * P03-2: the test street on a flat map: ten residents each get their own flat and bed, walk by day and sleep at night.
- * P03-3: the same seed gives the same cast, and reopening the save finds the same residents in the same flats.
+ * World creation: a new world made the default way loads the Leaf map, with the player on the street inside the border
+ * and nothing around but the map. Screenshot: test-street-spawn.
+ * P03-2: the test street: ten residents each get their own flat and bed, walk by day and sleep at night.
+ * P03-3: Classic's cast is the same whatever the world seed, and reopening the save finds the same residents in the
+ * same flats; a Varied world (its game rule on) keeps that mode in its save seed and rolls a different cast.
  * P03-4: the tea house keeper lives over the shop, the notice board and training yard stand in the village, and only
  * builder mode can change the street.
  * P03-5: building the street sets the Leaf map's rules.
@@ -44,21 +50,27 @@ public final class TestStreetGameTest implements FabricClientGameTest {
     public void runTest(ClientGameTestContext c) {
         TestWorldSave save;
         List<String> cast;
-        try (var w = c.worldBuilder().adjustSettings(ui -> {
-            var flat = ui.getSettings().worldgenLoadContext().lookupOrThrow(Registries.WORLD_PRESET).getOrThrow(WorldPresets.FLAT);
-            ui.setWorldType(new WorldCreationUiState.WorldTypeEntry(flat));
-            ui.setGenerateStructures(false);
-            ui.setSeed("26");
-        }).create()) {
+        try (var w = c.worldBuilder().setUseConsistentSettings(false).create()) {
             w.getConnection().waitForChunksRender();
             CreatorGameTest.skipCreator(w);
             for (String cmd : List.of("gamerule advance_time false", "gamerule advance_weather false", "gamerule spawn_mobs false",
                     "weather clear", "difficulty peaceful", "time set 3000"))
                 w.getServer().runCommand(cmd);
             BlockPos player = w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().blockPosition());
-            // The building's street side faces south, towards the player.
-            BlockPos origin = player.below().offset(-17, 0, -22);
-            var built = w.getServer().computeOnServer(s -> TestStreet.build(w.getConnection().getServerLevel(), origin));
+            BlockPos origin = TestStreet.MAP;
+            w.getServer().runOnServer(s -> {
+                var level = w.getConnection().getServerLevel();
+                check(player.equals(TestStreet.SPAWN) && level.getWorldBorder().isWithinBounds(player), "the player spawns on the street inside the border: " + player.toShortString());
+                check(SaveSeed.of(s).equals(new SaveSeed(level.getSeed(), "classic")), "a default world is Classic: " + SaveSeed.of(s));
+                // No terrain: nothing under the map's ground layer, and nothing past the border on either axis.
+                int out = (int) (TestStreet.BORDER / 2) + 6;
+                check(empty(level, player.getX(), player.getZ(), level.getMinY(), origin.getY() - 1)
+                        && empty(level, (int) TestStreet.BORDER_X + out, player.getZ(), level.getMinY(), level.getMaxY())
+                        && empty(level, player.getX(), (int) TestStreet.BORDER_Z - out, level.getMinY(), level.getMaxY()), "no terrain but the map");
+            });
+            c.waitTicks(20);
+            c.takeScreenshot("test-street-spawn");
+            var built = street(c, w);
             ShinobiVillage.LOG.info("Test street plaques: {}", built.plaques());
             int n = built.residents().size();
             check(n == 11, "ten flat residents and the tea house keeper: " + n);
@@ -122,7 +134,7 @@ public final class TestStreetGameTest implements FabricClientGameTest {
 
             cast = w.getServer().computeOnServer(s -> built.residents().stream().map(TestStreetGameTest::identity).toList());
             ShinobiVillage.LOG.info("Test street cast: {}", cast);
-            check(built.residents().getFirst().getUUID().equals(TestStreet.resident(26, 0)), "the cast comes from the seed and the markers");
+            check(built.residents().getFirst().getUUID().equals(TestStreet.resident(TestStreet.CLASSIC_CAST, 0)), "Classic's cast comes from its own seed and the markers");
             check(cast.stream().map(id -> id.split("\\|")[1]).distinct().count() == n, "different residents: " + cast);
             save = w.getWorldSave();
         }
@@ -143,6 +155,57 @@ public final class TestStreetGameTest implements FabricClientGameTest {
                 return found[0].equals(cast);
             }, 600, () -> "the same residents in the same flats after reopening: " + found[0]);
         }
+
+        // Varied, set on the Game Rules screen: fixed in the save seed, which rolls the cast.
+        try (var w = c.worldBuilder().setUseConsistentSettings(false).adjustSettings(ui -> {
+            ui.setSeed("7");
+            ui.getGameRules().set(ShinobiCore.VARIED_WORLD, true, null);
+        }).create()) {
+            w.getConnection().waitForChunksRender();
+            CreatorGameTest.skipCreator(w);
+            SaveSeed seed = w.getServer().computeOnServer(SaveSeed::of);
+            check(seed.equals(new SaveSeed(7, "varied")), "a Varied world keeps its mode: " + seed);
+            var varied = street(c, w);
+            check(varied.residents().getFirst().getUUID().equals(TestStreet.resident(7, 0)), "Varied's cast comes from the save seed");
+            List<String> names = new ArrayList<>();
+            until(c, () -> {
+                names.clear();
+                names.addAll(w.getServer().computeOnServer(s -> varied.residents().stream().filter(v -> v.getCustomName() != null).map(v -> v.getCustomName().getString()).toList()));
+                return names.size() == varied.residents().size();
+            }, 600, () -> "the Varied residents have names: " + names);
+            ShinobiVillage.LOG.info("Varied cast: {}", names);
+            check(!names.equals(cast.stream().map(id -> id.split("\\|")[1]).toList()), "a different cast from Classic's: " + names);
+        }
+    }
+
+    /** The street the new world pasted at its first start, read back from the world once its residents have loaded. */
+    static TestStreet.Built street(ClientGameTestContext c, TestSingleplayerContext w) {
+        TestStreet.Built[] built = new TestStreet.Built[1];
+        until(c, () -> (built[0] = w.getServer().computeOnServer(s -> {
+            var level = w.getConnection().getServerLevel();
+            long cast = TestStreet.castSeed(level);
+            var plaques = new ArrayList<String>();
+            var residents = new ArrayList<Villager>();
+            int marker = 0;
+            for (var plot : TestStreet.PLOTS)
+                for (var m : Blueprint.load(plot.getKey()).json().getAsJsonArray("markers")) {
+                    var at = Blueprint.at(TestStreet.MAP.offset(plot.getValue()), m.getAsJsonObject());
+                    switch (m.getAsJsonObject().get("type").getAsString()) {
+                        case "house_plaque" -> { if (level.getBlockEntity(at) instanceof HousePlaqueBlockEntity plaque) plaques.add(plaque.scanForBeds()); }
+                        case "resident" -> { if (level.getEntity(TestStreet.resident(cast, marker++)) instanceof Villager v) residents.add(v); }
+                        default -> {}
+                    }
+                }
+            return marker == residents.size() ? new TestStreet.Built(VillageSettlements.book(level).at(TestStreet.MAP).id(), plaques, residents,
+                    level.getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of())) : null;
+        })) != null, 600, () -> "the map's residents load");
+        return built[0];
+    }
+
+    /** Whether the column at x, z holds only air from y {@code from} to {@code to}. */
+    static boolean empty(ServerLevel level, int x, int z, int from, int to) {
+        for (int y = from; y <= to; y++) if (!level.getBlockState(new BlockPos(x, y, z)).isAir()) return false;
+        return true;
     }
 
     /** A resident's UUID, name, look and flat. */

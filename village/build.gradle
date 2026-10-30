@@ -27,6 +27,7 @@ dependencies {
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     implementation files(rootProject.vfJar)   // the pinned jar (docs/development/PACK.md, step 1)
+    implementation project(':core')   // the save seed and its Classic/Varied mode
     implementation project(':village:look')
     include project(':village:look')
     testImplementation platform('org.junit:junit-bom:5.14.2')

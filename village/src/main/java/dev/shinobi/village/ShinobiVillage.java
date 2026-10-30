@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.commands.Commands;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.UUIDUtil;
@@ -35,6 +36,7 @@ public final class ShinobiVillage implements ModInitializer {
         KonohaBlocks.register();
         StreetGuard.register();
         PlayerLooks.register();
+        ServerLifecycleEvents.SERVER_STARTED.register(TestStreet::firstStart);
         // `/narutominecraft street` builds the P03 test street with its ground layer under the operator's feet;
         // `/narutominecraft builder` switches the operator's builder mode, the only way to change the street.
         CommandRegistrationCallback.EVENT.register((dispatcher, registry, env) -> dispatcher.register(
