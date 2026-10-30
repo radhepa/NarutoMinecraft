@@ -8,23 +8,18 @@ import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Prediction;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.component.Consumables;
 
 import java.util.List;
 import java.util.Map;
@@ -40,18 +35,13 @@ public final class ShinobiLife implements ModInitializer {
     public static Catalogue catalogue;
     static Prices prices;
 
-    /**
-     * shortcut: green tea is the only dish registered, with no buff; the Leaf dishes' buffs (items.json stats.buff) come
-     * with their items, until P05's food items are registered from the item data.
-     */
     @Override
     public void onInitialize() {
-        var tea = Identifier.fromNamespaceAndPath(MOD_ID, "green_tea");
-        Registry.register(BuiltInRegistries.ITEM, tea, new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, tea))
-                .food(new FoodProperties.Builder().nutrition(2).saturationModifier(.3F).alwaysEdible().build(), Consumables.DEFAULT_DRINK)));
         catalogue = Catalogue.load(FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow().findPath("data/shinobi_life/items").orElseThrow());
         prices = new Prices(catalogue);
+        Dishes.register(catalogue);
         ServerTickEvents.END_SERVER_TICK.register(Daily::tick);
+        Daily.register();
     }
 
     public static int ryo(ServerPlayer player) { return player.getAttachedOrCreate(WALLET); }

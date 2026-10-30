@@ -93,7 +93,7 @@ public final class ErrandGameTest implements FabricClientGameTest {
                     "a tatami for 40 ryo: " + ryo(w));
             check(!w.getServer().computeOnServer(s -> ShinobiProgression.buy(w.getConnection().getServerPlayer(), "furniture_shop", "shoji_screen")) && ryo(w) == 76,
                     "a screen for 80 ryo is refused with 76");
-            check(!w.getServer().computeOnServer(s -> ShinobiProgression.buy(w.getConnection().getServerPlayer(), "tea_house", "matcha")) && ryo(w) == 76,
+            check(!w.getServer().computeOnServer(s -> ShinobiProgression.buy(w.getConnection().getServerPlayer(), "tea_house", "matcha_powder")) && ryo(w) == 76,
                     "a line with no item yet is refused");
             save = w.getWorldSave();
         }

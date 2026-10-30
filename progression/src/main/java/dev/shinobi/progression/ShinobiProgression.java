@@ -88,8 +88,10 @@ public final class ShinobiProgression implements ModInitializer {
         });
         // Read at first use: Fabric does not promise Shinobi Life loads its catalogue before this entrypoint runs.
         StreetGuard.furnishing = item -> FURNITURE.get().contains(item);
-        // Fatigue slows chakra by a quarter (ROADMAP.md, "The daily cycle").
-        ShinobiCombat.regen = p -> Daily.tired(p) ? .75 : 1;
+        // Fatigue, Well Rested and the last dish set chakra regen (ROADMAP.md, "The daily cycle"); the flat's bed is the player's own.
+        ShinobiCombat.regen = Daily::regen;
+        Daily.ownBed = TestStreet::inPlayerRoom;
+        Daily.home = ShinobiProgression::wakeAtHome;
         // The death penalty: the thrown tools carried are lost (ROADMAP.md, Death); the Leaf map keeps the rest of the pack.
         // A defeated player wakes in the flat beside the bed when the map has one and the spot is free, else at the vanilla respawn.
         // shortcut: no level lost, and the flat not the hospital, until P07's levels and a hospital on the map.
@@ -97,12 +99,7 @@ public final class ShinobiProgression implements ModInitializer {
             if (alive) return;
             var inv = now.getInventory();
             for (int i = 0; i < inv.getContainerSize(); i++) if (ShinobiCombat.THROWN.containsKey(inv.getItem(i).getItem())) inv.setItem(i, ItemStack.EMPTY);
-            var bed = now.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(TestStreet.PLAYER_FLAT);
-            if (bed == null) return;
-            var at = Vec3.atBottomCenterOf(bed.offset(1, 1, 1));
-            if (!now.level().noCollision(now, now.getBoundingBox().move(at.subtract(now.position())))) return;
-            now.teleportTo(at.x, at.y, at.z);
-            now.sendSystemMessage(Component.translatable("shinobi_life.woke"));
+            wakeAtHome(now);
         });
         Spar.WON.register(player -> stepDone(player, "spar", step -> true));
         // A lost bout leaves the quest at its spar step, its reward unpaid; the next hit is the retry.
@@ -154,6 +151,17 @@ public final class ShinobiProgression implements ModInitializer {
                             ctx.getSource().sendSuccess(() -> Component.literal("Under way: " + under + "; done: " + journal.done()), false);
                             return journal.active().size();
                         }))));
+    }
+
+    /** Puts the player beside the flat's bed when the map has one and the spot is free; false otherwise. */
+    static boolean wakeAtHome(ServerPlayer player) {
+        var bed = player.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(TestStreet.PLAYER_FLAT);
+        if (bed == null) return false;
+        var at = Vec3.atBottomCenterOf(bed.offset(1, 1, 1));
+        if (!player.level().noCollision(player, player.getBoundingBox().move(at.subtract(player.position())))) return false;
+        player.teleportTo(at.x, at.y, at.z);
+        player.sendSystemMessage(Component.translatable("shinobi_life.woke"));
+        return true;
     }
 
     /** Reads every {@code data/<namespace>/quests/*.json}; a broken quest file stops the load, naming the file. */
