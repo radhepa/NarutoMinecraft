@@ -41,7 +41,9 @@ class JournalTest {
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"branch\": [{\"if\": {\"quest_state\": [\"x\", \"begun\"]}, \"next\": \"a\"}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"branch\": [{\"if\": {\"quest_state\": [\"x\", null]}, \"next\": \"a\"}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"branch\": [{\"if\": {\"quest_state\": [\"q\", \"done\"]}, \"next\": \"a\"}]}}}",
-                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_ryo\": 5}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_ryo\": 0}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_ryo\": 2.5}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_item\": \"tea\"}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_enter\": [{\"set_flag\": [\"f\", \"yes\"]}]}}}",
                 "{\"id\": 5, \"start\": \"a\", \"steps\": {\"a\": {}}}",
                 "{\"id\": \"q\", \"start\": \"b\", \"steps\": {\"a\": {}}}",
@@ -69,22 +71,26 @@ class JournalTest {
     void stepsRunTheirActionsAndFollowTheFirstBranchThatHolds() {
         var q = Quests.quest(Json.object("""
                 {"id": "b", "start": "a",
-                 "steps": {"a": {"on_enter": [{"set_flag": ["entered", true]}], "on_done": [{"set_flag": ["met", true]}],
+                 "steps": {"a": {"on_enter": [{"set_flag": ["entered", true]}], "on_done": [{"set_flag": ["met", true]}, {"give_ryo": 5}],
                                  "branch": [{"if": {"not": {"flag": "met"}}, "next": "never"},
                                             {"if": {"all": [{"flag": "met"}, {"quest_state": ["other", "not_started"]}]}, "next": "side"}],
                                  "next": "never"},
-                           "side": {"on_enter": [{"set_flag": ["entered", false]}], "next": null},
+                           "side": {"on_enter": [{"set_flag": ["entered", false]}], "on_done": [{"give_ryo": 15}], "next": null},
                            "never": {"next": null}}}"""));
-        var j = Quests.start(Journal.EMPTY, q, Map.of());
-        assertEquals(List.of("entered"), j.flags());
-        j = Quests.complete(j, q);
-        assertEquals(Map.of("b", "side"), j.active());
-        assertEquals(List.of("met"), j.flags());
-        j = Quests.complete(j, q);
+        var o = Quests.start(Journal.EMPTY, q, Map.of());
+        assertEquals(List.of("entered"), o.journal().flags());
+        o = Quests.complete(o.journal(), q);
+        assertEquals(Map.of("b", "side"), o.journal().active());
+        assertEquals(List.of("met"), o.journal().flags());
+        assertEquals(5, o.ryo());
+        o = Quests.complete(o.journal(), q);
+        var j = o.journal();
+        assertEquals(15, o.ryo());
         assertEquals(List.of("b"), j.done());
         assertEquals("done", j.state("b"));
         assertEquals("not_started", j.state("x"));
-        assertSame(j, Quests.complete(j, q));
+        // A done quest pays nothing more.
+        assertEquals(new Quests.Outcome(j, 0), Quests.complete(j, q));
     }
 
     static final Template ERRAND = Quests.check(Json.object("""

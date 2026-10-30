@@ -99,33 +99,41 @@ final class Quests {
         };
     }
 
-    /** Refuses an action the runtime cannot run. shortcut: {@code set_flag} only, until the reward and trade increments add theirs. */
+    /** Refuses an action the runtime cannot run. shortcut: {@code set_flag} and {@code give_ryo} only, until Shinobi Core's action registry. */
     static void action(String where, Object action) {
         var m = Json.map(action);
-        if (!(m.size() == 1 && m.get("set_flag") instanceof List<?> l && l.size() == 2 && l.get(0) instanceof String && l.get(1) instanceof Boolean))
-            throw new IllegalArgumentException(where + ": unknown or malformed action " + action + " (set_flag [name, true|false])");
+        boolean ok = m.size() == 1 && (m.get("set_flag") instanceof List<?> l && l.size() == 2 && l.get(0) instanceof String && l.get(1) instanceof Boolean
+                || m.get("give_ryo") instanceof Number n && n.doubleValue() >= 1 && n.doubleValue() <= Integer.MAX_VALUE && n.doubleValue() == Math.rint(n.doubleValue()));
+        if (!ok) throw new IllegalArgumentException(where + ": unknown or malformed action " + action + " (set_flag [name, true|false] or give_ryo <whole ryo>)");
     }
 
-    static Journal run(List<Object> actions, Journal j) {
+    /** The journal after some actions, and the ryo they pay (paid on each pass, so a step that loops back pays again). */
+    record Outcome(Journal journal, int ryo) {}
+
+    static Outcome run(List<Object> actions, Outcome o) {
         for (Object a : actions) {
-            var flag = Json.list(Json.map(a).get("set_flag"));
-            j = j.flag((String) flag.get(0), (Boolean) flag.get(1));
+            var m = Json.map(a);
+            if (m.get("give_ryo") instanceof Number n) o = new Outcome(o.journal(), o.ryo() + n.intValue());
+            else {
+                var flag = Json.list(m.get("set_flag"));
+                o = new Outcome(o.journal().flag((String) flag.get(0), (Boolean) flag.get(1)), o.ryo());
+            }
         }
-        return j;
+        return o;
     }
 
     /** The journal with the quest accepted on this cast and its first step's {@code on_enter} run. */
-    static Journal start(Journal j, Quest q, Map<String, String> cast) {
-        return run(q.onEnter().get(q.template().start()), j.accept(q.template(), cast));
+    static Outcome start(Journal j, Quest q, Map<String, String> cast) {
+        return run(q.onEnter().get(q.template().start()), new Outcome(j.accept(q.template(), cast), 0));
     }
 
     /** The journal once the quest's current step is done: its {@code on_done}, the branch or next step, the new step's {@code on_enter}. */
-    static Journal complete(Journal j, Quest q) {
+    static Outcome complete(Journal j, Quest q) {
         String id = q.template().id(), at = j.active().get(id);
-        if (at == null) return j;
-        var after = run(q.onDone().get(at), j);
-        var moved = after.advance(q.template(), c -> test(c, after));
-        String now = moved.active().get(id);
+        if (at == null) return new Outcome(j, 0);
+        var after = run(q.onDone().get(at), new Outcome(j, 0));
+        var moved = new Outcome(after.journal().advance(q.template(), c -> test(c, after.journal())), after.ryo());
+        String now = moved.journal().active().get(id);
         return now == null ? moved : run(q.onEnter().get(now), moved);
     }
 

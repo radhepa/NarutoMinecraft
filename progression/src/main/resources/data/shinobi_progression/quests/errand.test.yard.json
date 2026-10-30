@@ -14,6 +14,6 @@
     "go_yard": {"objective": {"type": "go", "place": "slot:yard"},
                 "branch": [{"if": {"flag": "test.errand.keeper_asked"}, "next": "go_board"}], "next": null},
     "go_board": {"objective": {"type": "go", "place": "notice_board"},
-                 "on_done": [{"set_flag": ["test.errand.board_read", true]}], "next": null}
+                 "on_done": [{"set_flag": ["test.errand.board_read", true]}, {"give_ryo": 20}], "next": null}
   }
 }

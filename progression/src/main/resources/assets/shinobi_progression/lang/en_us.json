@@ -2,5 +2,8 @@
   "quest.errand.test.yard.title": "Test errand: ask the tea house keeper, visit the training yard, read the notice board",
   "shinobi_progression.quest.accepted": "Quest accepted: %s",
   "shinobi_progression.quest.cannot": "Cannot start %s: %s",
-  "shinobi_progression.quest.done": "Quest complete: %s"
+  "shinobi_progression.quest.done": "Quest complete: %s",
+  "shinobi_progression.shop.header": "For sale (you have %s ryo). Click a line to buy:",
+  "shinobi_progression.shop.line": "  [Buy] %s for %s ryo",
+  "shinobi_progression.shop.away": "Stand by the shopkeeper to buy"
 }

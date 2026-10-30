@@ -1,0 +1,7 @@
+{
+  "item.shinobi_life.green_tea": "Green Tea",
+  "shinobi_life.ryo.earned": "+%s ryo. Wallet: %s ryo",
+  "shinobi_life.ryo.paid": "Bought %s for %s ryo. Wallet: %s ryo",
+  "shinobi_life.ryo.short": "%s costs %s ryo; you have %s ryo",
+  "shinobi_life.shop.lacks": "This shop does not sell that"
+}

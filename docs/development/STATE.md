@@ -1,7 +1,7 @@
 # Development state
 
-**Phase/task:** P04-4, ryo through the Life wallet and one-time rewards
-([ROADMAP.md 13.5](../../ROADMAP.md#p04--prove-a-complete-gameplay-loop)). P00 to P03 passed (13.3).
+**Phase/task:** M2, P05-1: create a character, then the M2 training spar, furnishing and sleep
+([ROADMAP.md 13.4](../../ROADMAP.md#134-player-milestones-and-quality-gates)). P00 to P03 passed (13.3); P04-1 to P04-5 done, P04-6/7 open.
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
 The story checkout on the Desktop keeps its unfinished work; story review stays paused.
 
@@ -22,14 +22,22 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 1. Done: a quest runtime and persistent journal: accept and complete one objective (`go` to an anchor).
 2. Done: roles and map anchors, with clear errors when one is missing.
 3. Done: flags, conditions and actions, and one branch.
-4. Ryo through the Life wallet; one-time rewards.
-5. A trade at the tea house.
-6. Reload at each boundary, failure and retry.
+4. Done: ryo through the Life wallet; one-time rewards.
+5. Done: a trade at the tea house.
+6. Open (reload at the accept, branch and payout boundaries is proven; failure and retry wait for the M2 spar): reload at each boundary, failure and retry.
 7. The quest checker reports authoring errors (extend `tools/missions/missions.py`).
 
 P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
+- P04-4/5 `./gradlew build`: passed; `:progression:runClientGameTest` passed three times (logs
+  `.local-dev/logs/p044-*.log`, `p045-*.log`): a new Shinobi Life mod (`:life`, id `shinobi_life`) keeps the wallet
+  (100 ryo the first day, kept through death) and registers green tea; the errand's `give_ryo 20` pays once (120);
+  talking to the tea house keeper lists the stock as click-to-buy chat lines (Green Tea 4, Tatami 40, Shoji Screen
+  80 from `data/items`); `/shinobi buy` (no permission) refuses away from the keeper, a short wallet and a line with
+  no item, and hands over tea and a tatami; wallet and goods survive reopening with no second payout. Ponytail
+  review: 0 blockers; fixed: Life depends on Konoha, `give_ryo` capped at the int range, the real shop role keys
+  map too, `set_flag` parsed once; marked as shortcuts: newcomer prices for everyone, one chat line per stock line.
 - P04-3 `./gradlew build`: passed; `:progression:runClientGameTest` passed twice: the errand's `on_done` sets a flag
   when the keeper is asked; the yard step's `branch` (`if: {flag}`) sends the player to the notice board; both flags
   and the done quest survive reopening. Conditions `all`/`any`/`not`/`flag`/`quest_state` and the `set_flag` action;
@@ -121,6 +129,6 @@ None.
 
 ## Next
 
-P04-4/5: a Shinobi Life mod (`:life`) holding the wallet (100 ryo the first day), a `give_ryo` step action paid
-once, and a trade with the test street's tea house keeper (pay ryo, get the item; refused when short). Gametest:
-earn, buy, reload, no second payout.
+M2 (P05-1): a character creator in Shinobi Village: a persistent, synced look picked from the VF wardrobe in a
+screen on first join, validated on the server, worn as the player's skin; then the training spar (P06-1), the
+flat's furnishing and sleep, and one session gametest with screenshots. P04-6 retry and P04-7's checker follow.

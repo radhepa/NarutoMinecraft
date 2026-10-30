@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "shinobi_life",
+  "version": "${version}",
+  "name": "Shinobi Life",
+  "description": "The wallet, shops and daily life of the Shinobi Modpack.",
+  "authors": ["radhepa"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.shinobi.life.ShinobiLife"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "narutominecraft": "*"
+  }
+}
