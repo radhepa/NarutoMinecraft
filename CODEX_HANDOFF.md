@@ -105,4 +105,53 @@ Then tell the owner the branch is ready to merge.
 
 ## Status
 
-Not started.
+Completed on 30 October 2026. The `names` branch is ready for a local merge into `dev`; nothing was pushed or merged.
+
+### What changed
+
+- Imported the approved `docs/story` documents from `story` as their own commit before writing dialogue.
+- Added Japanese given-name pools: 223 male, 230 female and 185 unisex entries, without canon names or authored-word
+  collisions. Expanded the ordinary family pool to 215 surnames and regenerated the creator's identical pool.
+- Added a small mod-side hook after VF creates a resident profile. It rolls given-first names from the actual save's
+  `names` stream in Classic and Varied, saves them on the resident and migrates settled residents' home/ledger names.
+  Clan markers take their surname from the compiled clan registry shared with the creator. VF's source was not edited.
+- Used the hook rather than a VF pool override: VF's validator requires its regional pool categories, its legacy-name
+  correction does not migrate every stored name, and a UUID-only pool draw cannot vary Classic names by the save seed.
+- The only TestStreet changes are the resident comment and one `LeafNames.marker(v, marker)` call after its UUID is set.
+  Keep that call before `addFreshEntity` when reconciling the map branch's resident-spawn changes. No plaque, bed,
+  map, preset, LeafFlats or `tools/konoha` code was changed.
+- Added beta voices for 28 recurring roles, ten supplementary questions per role, 560 answer callbacks and 280
+  asks-back replies, plus role combat/command barks, mission banter and gated public chapter reactions. Sources stay
+  under `docs/story/dialogue`. No plot outcomes or scripted answer flags were invented.
+- The compiled bank now has 17,448 pieces: 16,556 lines in 4,636 pools, 302 exchanges and 590 questions.
+- Fixed story-tag matching: `story` indexes the source; the explicit `when` condition opens it. The compiler now
+  refuses a gated source missing either, and generated dialogue is always UTF-8 with LF. Updated the code graph.
+
+### Checks passed
+
+- JDK 25 `gradlew build`: 400 JUnit tests, zero failures/errors across 67 suites. The tests include pool loading,
+  all clan surnames, the shared player family pool, save-seed stability, a 300-resident duplicate-rate check,
+  role selection, real reveal gates and answer memory after a ledger round trip.
+- `python tools/dialogue/test_dialogue.py`: four authoring regression checks.
+- `python tools/dialogue/dialogue.py` and `--check --report`: current generated bank, no duplicate/near-duplicate,
+  name, spoiler, pronoun or child-safety violations; all 1,371 required bond pools present; zero new orphan bond keys.
+- `python tools/creator/creator.py --check`, `python tools/missions/missions.py --check` and
+  `python tools/combat/build.py --check`.
+- `gradlew build :village:runClientGameTest`: real client checks for migration, male/female/nonbinary names, clan
+  surnames, dialogue/ledger names and unchanged names after closing and reopening the save. Existing village,
+  street and creator client tests also passed. Client runs waited for the map worktree's client slot.
+- `git diff --check` and LF byte checks. Full local logs are in `build/names-*.log`.
+
+### Screenshot
+
+- [Four named residents, including clan residents](docs/renders/names/leaf-japanese-names.png), captured by the client
+  test and visually checked. The original is `village/build/run/clientGameTest/screenshots/0008_leaf-japanese-names.png`.
+
+### Remaining planned integration
+
+- The new authored bank's live Context/condition/ledger/menu bridge remains Phase 0 work from DIALOGUE section 13;
+  the current client uses VF's conversation UI. Names already work in that UI and its journal/ledger data.
+- Later-arc scenes, exact scripted/bond-quest questions and full Varied voice/craft skins follow the approved
+  briefs' work order after beta play and the remaining cast bindings. The shortcut and upgrade point are recorded
+  in `docs/story/dialogue/README.md`. The current beta batch uses the curated role registers.
+- The graph refresh is AST-only; its existing Gradle-parser warnings remain. No map-branch merge was attempted.
