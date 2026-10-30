@@ -36,6 +36,7 @@ This plan builds on [Village Friends](https://github.com/radhepa/Village-Friends
 | 10 | [Story bible](#10-story-bible) (spoilers, in a separate file) | FOUNDATION (later) |
 | 11 | [Later systems](#11-later-systems) | FOUNDATION (later) |
 | 12 | [Risks and open questions](#12-risks-and-open-questions) | both |
+| 13 | [Development execution](#13-development-execution) | BUILD (beta) |
 
 ## 1. Vision
 
@@ -1558,3 +1559,493 @@ data ([Regions](#regions)). Multiplayer comes after the single-player story ([Mu
 
 Nothing is open right now. The story's specifics are the developers' creative call, kept in the
 story bible so the owner can play unspoiled.
+
+<!-- BEGIN DEVELOPMENT EXECUTION -->
+## 13. Development execution
+
+This section is the authoritative execution workflow for **"do the next step"**,
+**"continue"** or **"next step"**. Sections 1–12 remain the product specification.
+Read only this workflow's relevant portion and the active phase; do not reload
+the entire product roadmap on every turn. Story review is paused. Development
+may proceed with noncanonical fixtures until the private story gate is passed.
+
+### 13.1 Next-step protocol
+
+1. Read `docs/development/STATE.md` and the current phase card below. If the
+   checkpoint is missing or stale, recover it from the current working context,
+   relevant completion notes, source and verification evidence. Inspect current
+   branch/worktree changes without resetting, cleaning, switching over dirty
+   work or overwriting another session's changes. Do not assume development
+   starts at P00 or that a compiled jar proves a client launch.
+2. Select the earliest dependency-ready, uncompleted task. During initial
+   reconciliation, identify which requirements already work; never reimplement
+   them merely because this execution workflow was just installed. Keep at most
+   five short tasks for the active phase. Continue the current task first if
+   interrupted. P05 and P06 may interleave to reach M2 before either is complete.
+3. State the concrete result and scope in one sentence, then implement it.
+   Routine choices within the plan do not need another planning approval. A
+   "next step" request means execute one bounded increment, not write another
+   general plan. Respect tool permissions and ask only for a real decision,
+   missing essential input or action outside the authorized scope.
+4. Verify as specified in 13.2. Fix concrete blockers for this increment. Do not
+   expand into unrelated cleanup or a recurring whole-repository audit.
+5. Update the checkpoint with actual changes, evidence and the exact next task.
+   Advance the phase only when its exit conditions are met; keep incomplete
+   gates explicit. Record the completed phase's gate evidence in the phase table
+   below and retain detailed logs outside the checkpoint. Unknown is not passed.
+6. Stop after the verified increment or an unresolved material blocker. Normally
+   report within 120 words: what now works, actual checks, any unchecked item and
+   the next step. At playable milestones include how to launch and at most three
+   specific things the owner should judge. Keep all output spoiler-free.
+
+If story approval blocks P07, continue only dependency-ready non-story work
+within the planned beta and report the gate. Do not resume the six story
+reviewers, substitute a new plot or declare a story lock under "next step".
+Do not push, merge to the default branch or publish without separate authority.
+
+### 13.2 Verification, review and token policy
+
+- During edits, run focused tests for the affected behavior.
+- After **every coherent code increment**, run the **full repository Gradle
+  build and Java test suite before advancing**. On Windows use
+  `.\gradlew.bat build`; in Bash use `./gradlew build`. Preserve or extend the
+  aggregate build so newly introduced modules/tests are included. Do not skip
+  tests or claim an incomplete/failed command passed. Normal incremental builds
+  and valid caches are allowed; do not force clean/rerun cycles without cause.
+- After data or asset changes run the relevant authoring/compiler checks. At
+  phase integration and release milestones run all required authoring, quest,
+  layout, dependency and runtime gates. The local `.local-dev/check.py` runner
+  can supply the existing checks where applicable. Reuse exact matching evidence
+  and avoid issuing duplicate full builds within the same unchanged batch.
+- Gameplay/runtime behavior requires actual client evidence. Saving features
+  require quit/reload proof. A successful build alone does not prove playability.
+  Documentation-only changes need document/link/consistency checks rather than
+  an unrelated game build.
+- Keep full build logs in files and read failures plus a concise result.
+  Add focused tests for new nontrivial logic and regressions. Preserve validation,
+  error handling and checks that prevent lost saves or duplicate rewards.
+- Keep **Ponytail 5 full** active as the implementation discipline. Review the
+  changed diff and affected callers once; verify concrete fixes. The separate
+  `/ponytail-audit` command is a whole-repository operation, not an automatic
+  post-build step. No repeated audit/refactor loop. Broaden an investigation
+  only when concrete evidence requires it.
+- Begin new repository questions with a targeted
+  `graphify query "<question>" --budget 1200`, then read relevant source passages.
+  Reuse known locations and decisions. If a query stalls/fails, record that once
+  and use bounded searches rather than retrying blindly. The graph navigates;
+  source and actual checks establish behavior. Refresh affected graph data after
+  coherent code changes; do not force costly semantic regeneration per edit.
+- Use one implementer by default, and at most two workers for genuinely separate
+  tasks with stable contracts, explicit owned paths and separate worktrees/run
+  directories. Tell workers others are editing and their changes must survive.
+  Integrate sequentially and never let two processes write one world save.
+- Preserve the current compaction configuration as the initial baseline. Do not
+  retune it or manually compact after every small task. Before compaction or a
+  new session, save the contract, changed paths, actual checks, unresolved issues
+  and next task. Tune from actual `/usage` evidence, not a promised saving.
+
+### 13.3 Phase order and gate evidence
+
+The pacing figures are player targets, not implementation-time estimates.
+Introduce each runtime assembly and interface when the current slice has a real
+caller. Preserve the eight pure engines and VF, existing versions and one-way
+dependencies. Reconcile implementation progress before changing gate status.
+
+| Prompt | Phase | Concrete result | Completion evidence |
+|---|---|---|---|
+| P00 | Establish the starting point | One short execution queue based on the actual checkout, existing tools and reusable code | Safe branch plan, dependency access and first task confirmed |
+| P01 | Make it boot | Shinobi Core launches in a real Fabric client; pack/build conventions established | Client launch with the correct dependencies; introduce other assemblies when their first feature needs them |
+| P02 | Make state reliable | Shared player state, seeds, flags and runtime contracts | Save/reload, deterministic seeds and invalid-data tests |
+| P03 | Make the village tangible | A small test street with ten living residents | Resident routines, homes, appearance and map rules work in game |
+| P04 | Prove a complete gameplay loop | Accept a test quest, act, receive ryo, buy something, save and continue | Branch/role/anchor/flag handling survives reload without duplicate rewards |
+| P05 | Build the player's daily life | Creator, apartment, shopping, furnishing, sleep, fatigue and other Beta 1 life systems | A new player can complete an ordinary day without commands |
+| P06 | Make Academy combat playable | Chakra, signs, basic techniques, melee, practice tools and sparring | Input, animation, feedback and nonlethal fights work in game |
+| P07 | Finish Beta 1 | Opening and Academy, chapters 0–7, connected map and side content | Both world modes reach Genin without commands; roughly 4-hour main path |
+| P08 | Add Genin systems | Movement, nature training, squads, enemies and D/C mission play | A full generated mission works with squad, combat, failure and rewards |
+| P09 | Finish Beta 2 and 2.5 | Chapters 8–14, districts, events, clan and bond content | Roughly 8 additional main-path hours; welcome quests ship in two waves |
+| P10 | Finish Beta 3 | Chunin Exams, chapters 15–20, arenas and beta ending | Complete and recoverable exam flow; roughly 3 additional main-path hours |
+| P11 | Make a reviewable release candidate | Tested pack, separate world archive, install instructions and known issues | Clean-profile install and full beta playthrough evidence |
+
+| Phase | Verified gate evidence |
+|---|---|
+| P00 | Passed 29 Oct 2026: `dev` worktree on `main` e9238bd, JDK 25 and Gradle 9.6, VF 2.29.1 built from pinned commit `ccd1a2c` |
+| P01 | Passed 29 Oct 2026: `:core:runClientGameTest -Ppack` loads Core, VF 2.29.1 and Fabric API in a real 26.3 client and opens a world; pack manifest and install steps in `docs/development/PACK.md`. Animation spike still due before P06 |
+| P02 | Unassessed |
+| P03 | Unassessed |
+| P04 | Unassessed |
+| P05 | Unassessed |
+| P06 | Unassessed |
+| P07 | Unassessed; private story approval required |
+| P08 | Unassessed |
+| P09 | Unassessed |
+| P10 | Unassessed |
+| P11 | Unassessed |
+
+### 13.4 Player milestones and quality gates
+
+These are checkpoints within the existing phases, not extra systems or extra documents.
+
+| Milestone | When | What the owner can actually try |
+|---|---|---|
+| M0: real launch | First P01 increment | Open Minecraft with Shinobi Core loaded; see launch evidence |
+| M1: living street | P03–P04 | Meet residents, accept a fixture errand, earn ryo, buy an item and reload |
+| M2: ten-minute play session | Early P05 + P06 | Create a character, follow a training objective, spar, see clear success feedback, buy/place one furnishing, sleep and reload |
+| M3: complete Academy slice | P07 | Play from the approved opening to graduation without commands |
+| M4: Genin loop | P08–P09 | Choose a mission, travel with the squad, use movement/combat and return for rewards |
+| M5: complete beta | P10–P11 | Play through the exams, retain the save and install the candidate cleanly |
+
+**M2 comes before completing the rest of P05/P06 or mass-producing districts and quests.** Use a noncanonical training fixture until the story gate passes. Implement just the creator, home and combat behavior needed for this play session, then complete the remaining required Beta 1 features. Pets, extra stock and full technique coverage are still required for the slice; they do not delay the first playable combat feedback.
+
+At every player milestone check these observable qualities:
+
+- **Understandable:** the player can identify the next action, its location, costs and completion/failure state without developer explanation. Use clear text, legible UI and input hints; vital feedback must not depend only on color or sound.
+- **Responsive:** attacks, signs, movement and interaction produce coherent animation and hit/target feedback. Verify relevant controls can be rebound and do not conflict with normal Minecraft controls. Use existing settings before adding new ones.
+- **Alive:** the street has readable routes, named residents with varied greetings, routine activity and deliberate visual treatment. Complete one representative street/building to the intended art standard before copying it across Konoha.
+- **Recoverable:** quitting, reloading, losing a fight or retrying a quest preserves progress and avoids duplicate rewards or softlocks. Keep a small set of versioned test-save fixtures for these boundaries.
+- **Measured:** record the machine, relevant settings, resident count and a repeatable route when checking performance. Profile a representative busy scene before multiplying districts. Change only demonstrated bottlenecks.
+
+Give the owner a launch instruction and at most three specific things to judge. Fix a blocking issue in the tested slice before adding more content. Preserve clear user feedback in the checkpoint; do not invent a fun score, pretend to have watched a playtest or add unrelated features under the label of polish.
+
+P05/P06 may run in parallel only after shared state, modifier and rendering
+boundaries are stable and owned paths do not overlap. Serial implementation is
+the default. Packaging/install checks begin early and recur at milestones.
+
+### 13.5 Phase cards
+
+Each card below is a copy/paste phase instruction used with the controller. Its scope is the whole phase; execute it in bounded increments until the listed exit evidence exists. Completion of the first increment does not mean the phase is finished.
+
+#### P00 — establish the starting point
+
+```text
+Establish the development baseline without changing game behavior. Preserve
+the story branch and all review edits. Identify a safe main-based development
+starting state including the existing local setup fixes. Check JDK/wrapper,
+Python, Graphify and Ponytail activation briefly. Inspect existing verification
+records before rerunning costly checks. Reuse facts already confirmed for this
+checkout; repeat discovery only if files or the environment changed. Verify access to the actual pinned
+Village Friends source/artifact and its supported integration APIs. Record
+unresolved dependencies honestly; use official dependency sources if needed.
+Reconcile planned versus implemented systems using the code and a targeted
+Graphify query. Create the short development checkpoint and a dependency-ordered
+queue. First task: record the exact base, reusable engines, dependency proof
+and the smallest P01 launch target. Stop the phase when P01 is executable.
+```
+
+**Produces:** a trusted starting state and a small executable queue. **Does not produce:** another full design document or a new story review.
+
+#### P01 — make it boot
+
+```text
+Create the smallest real Shinobi Core Fabric assembly, preserving nested pure-
+engine modules. Keep VF separate. Follow the roadmap dependency table: Village
+requires Core and VF; Combat requires Core and Village; Life requires Core and
+VF; Progression requires Core, Village, Combat, Life and VF. Add other runtime
+assemblies only when their first required feature needs them in later phases.
+Use the pinned versions proved in P00. Add only the entrypoints, resources,
+development launch configuration and build/CI wiring needed for real boot.
+Establish a minimal pack manifest and separate test-world install procedure.
+First increment: Core plus its real dependency set launches in a client.
+Establish the build convention without filling every mod with placeholder APIs.
+As assemblies are introduced, verify each with only its declared dependencies.
+Keep the first/third-person player-animation feasibility spike early, adding
+only the prerequisites it needs before combat content production. Record logs
+or screenshots; the first owner handoff is the verified Core client launch.
+```
+
+**Produces:** a real Core mod and a launchable development baseline. **Gate:** Core client launch and reproducible build/install instructions. Required dependency-combination checks follow each newly introduced assembly; the early animation spike must pass before bulk combat content work.
+
+#### P02 — make state reliable
+
+```text
+Implement thin runtime adapters for the existing player rules. Core owns the
+versioned player record, save seed and independent random streams, flags,
+events, condition/action registry, stat modifiers, settings and wallet/region
+interfaces. Other modules register their implementations at the documented
+boundary. Use current data formats; avoid a general framework beyond the beta.
+Keep the existing format design, but implement only the concrete contracts and
+condition/action handlers needed by the next playable slice. Expand at their
+first real caller instead of building registries full of unused future behavior.
+First increment: one player record and seed survive a full save/reload.
+Then test deterministic streams, missing/invalid data, role identities, schema
+version handling and minimal required client synchronization. Prove lower mods
+do not import higher mods. Preserve a versioned test save before schema changes.
+```
+
+**Produces:** a reliable shared foundation without rewriting the pure engines. **Gate:** deterministic identity/state, safe reload and meaningful data errors.
+
+#### P03 — make the village tangible
+
+```text
+Build the Phase 0 test street before full Konoha: homes, one shop, a notice board
+and a training space, with ten marker-spawned residents. Reuse the existing
+building tools, wardrobe and VF model, routines, homes, dialogue and social AI.
+Prove hand-built-world registration early: Village Marker, house plaques,
+home bounds and the minimal tavern registration hook where required. Keep VF
+API additions small and in a separate owned change if its repo needs edits.
+Create deterministic Classic/Varied appearance and persistent resident identity.
+Implement adventure protection plus a deliberate builder workflow. Keep the
+master world outside Git and validate versioned blueprints, anchors and markers.
+First increment: one placed home with one resident that saves and reloads.
+Then ten residents walk, blink, eat, greet and use their assigned beds in game.
+Finish one representative street to the intended visual standard and record
+an initial performance route before duplicating buildings or growing population.
+```
+
+**Produces:** a small living map and a repeatable map-building pipeline. **Gate:** in-game routines, deterministic appearances and protected terrain; no claim that all planned Konoha blocks are already implemented.
+
+#### P04 — prove a complete gameplay loop
+
+```text
+Build the minimum quest runtime and journal using the existing format and
+mission engine, with roles, map anchors, flags, conditions/actions and validation.
+Use a clearly noncanonical test errand in the street. Accept it, follow a branch,
+perform an objective, earn ryo through the Life wallet, trade at the shop, then
+save and continue. Add only the ryo/trade adapter necessary for this loop.
+First increment: accept and complete one objective with a persistent journal.
+Then prove reload at each boundary, one-time rewards, failure/retry handling,
+missing actors/anchors and actionable authoring errors. Create or extend the
+documented quest checker rather than adding a second authoring pipeline.
+```
+
+**Produces:** the first small playable loop. **Gate:** branch, role, anchor, flag, ryo trade and reload all work together, including interruption and retry.
+
+#### P05 — build the player's daily life
+
+```text
+Finish Beta 1 daily-life and creation systems using village:look, life:home,
+life:economy, life:bonds and life:roster plus VF services. Follow the creator
+and life specifications. Include the clanless child creator, persisted preview,
+apartment and furnish bounds, vanilla chest storage, shops/jobs, food/crafting,
+sleep, fatigue, calendar, friendships, pet adoption/following and hospital wake.
+Respect 100 ryo on day one, the continuing 30-ryo daily stipend and no rent.
+Keep the wallet authority already established in P04. First increment: create
+a character, enter the apartment and reload with the same identity and look.
+Next supply only the purchase/furnish/sleep behavior needed for M2 and integrate
+the first P06 sparring loop. Test that ten-minute session before filling out the
+rest of this phase. Then deliver one daily-life loop at a time, checking time changes, purchases,
+inventory/reward duplication, protected blocks and valid furniture placement.
+```
+
+**Produces:** a functioning home and ordinary village day. **Gate:** a new player can create, earn, buy, furnish, store, eat, sleep and continue without commands; optional activities stay optional.
+
+#### P06 — make Academy combat playable
+
+```text
+Adapt combat:core into the runtime; preserve its existing data and tests.
+Deliver the Beta 1 combat set: chakra/HUD, typed and radial signs, Clone,
+Transformation and Substitution, three-hit combo, heavy attack, dodge, block,
+practice kunai/shuriken and nonlethal sparring. Use the proven animation path
+from P01 and VF knockouts where appropriate. First increment: one server-
+validated practice attack with animation, hit feedback and correct costs.
+Pair it with early P05 to reach M2; verify a player understands targeting, input,
+costs and success feedback before expanding the move set. Then add techniques
+and controls in small playable batches. Check first/third
+person, pause/reload, input cancellation, invalid targets, cooldowns, death
+penalties/rank floors and difficulty. Defer Genin movement and advanced combat.
+```
+
+**Produces:** playable Academy training rather than a larger simulation library. **Gate:** responsive input, correct costs and feedback, recoverable sparring and evidence from the actual client.
+
+#### P07 — finish Beta 1
+
+```text
+Before integrating main story content, verify the separate story gate is passed
+and its approved revision is recorded privately. If it is not, continue useful
+non-story QA/map work and report the dependency; do not write substitute plot.
+Connect approved chapters 0–7, Beta 1 side content and scheduled districts to
+the working creator, life, quest and combat systems. Work one chapter and its
+required map route at a time. First increment: one approved chapter playable
+end to end, with no developer commands. Require mandatory seed conditions and
+optional-content fallbacks without exposing them in public reports. Exercise
+both Classic and Varied, skipped optional quests, defeat and reload boundaries.
+Use real playtesting for the 3–5-hour main-path target; never infer it from text.
+```
+
+**Produces:** the opening and Academy as a complete first beta slice. **Gate:** both modes reach Genin without commands; all Beta 1 systems and required map districts work together.
+
+#### P08 — add Genin systems
+
+```text
+Implement Beta 2 systems around the existing mission, roster, bond and combat
+engines: squad follow/wait/rescue and growth, D/C mission board, enemy encounters,
+tree/water/wall movement, chakra jump and ninja run, nature training, the planned
+first nature techniques and eligible lesser clan techniques, parry/launcher,
+real thrown tools and the crafting/shop upgrades. Keep canonical roles stable.
+First increment: one generated D-rank mission from board to return and payout.
+Then prove one representative C-rank mission with squad and combat before
+expanding mission content. Check retries, surrender/defeat, absent teammates,
+navigation, mission resets, travel boundaries and save/reload. Implement the
+minimum calendar/event hooks Beta 2 needs, without post-beta mechanics.
+```
+
+**Produces:** repeatable Genin gameplay and travel. **Gate:** a complete mission with squad behavior, movement, combat, rewards and failure recovery.
+
+#### P09 — finish Beta 2 and 2.5
+
+```text
+Integrate approved chapters 8–14, Beta 2 districts and side/filler/bond/event
+quests using the established pipelines. Build map routes and reusable district
+pieces before decorating them fully. First increment: one connected approved
+chapter, its mission loop and required district. Follow the roadmap clan waves:
+all 25 clans' planned quarters/residents/techniques and courtesy content belong
+to Beta 2; the first eight welcome quests ship there and the remaining seventeen
+form Beta 2.5. Beta 2.5 adds content, not another systems rewrite. Verify identity,
+quest prerequisites, friendship/calendar conflicts and optional-content fallbacks.
+Measure the roughly eight additional main-path hours with actual play sessions.
+```
+
+**Produces:** the Genin campaign and its planned content breadth. **Gate:** connected districts, missions, events and both clan-content waves pass their checks without invalidating earlier saves.
+
+#### P10 — finish Beta 3
+
+```text
+Implement the approved Chunin Exams and chapters 15–20, their arenas/districts,
+exam-week content and remaining Beta 3 systems, including camping/On Duty and
+the planned exam reward. Keep the beta in the child age stage and stop at its
+approved endpoint. First increment: one exam stage with persisted entry, result
+and clean recovery. Then link the stages and judged progression under current
+rank rules. Test wins, losses, yields, retries and reloads at every stage; respect
+the approved handling of each outcome. Complete a command-free run in both
+world modes and verify optional prerequisites cannot deadlock the main path.
+Measure the roughly three-hour main path and profile the populated exam areas.
+```
+
+**Produces:** a coherent opening-to-Chunin beta. **Gate:** all approved exam outcomes advance or recover correctly, with measured client behavior and no post-beta expansion.
+
+#### P11 — make a reviewable release candidate
+
+```text
+Prepare a release candidate from the verified beta revision. Run full required
+Java, authoring, quest, layout and runtime checks; inspect failures before fixes.
+Create a pinned/hash-verified .mrpack, the planned CurseForge export, and a
+separate versioned world archive. Respect dependency licenses and redistribution
+rules. Exclude private notes, local configuration, credentials and test saves.
+First increment: a clean-profile install of the development pack and world.
+Then verify first launch, upgrades from supported beta saves, backup/recovery,
+and full command-free playthroughs. Record target-machine performance at busy
+locations and known limits; do not claim an unmeasured FPS target. Supply exact
+install instructions, component/world versions and honest test evidence.
+Prepare artifacts for owner review; do not publish or push them automatically.
+```
+
+**Produces:** an installable, tested candidate with reproducible sources and a separate map download. **Gate:** fresh installation and full-beta evidence, not merely successful compilation.
+
+### 13.6 Checkpoint and session handoff
+
+`docs/development/STATE.md` is the single small execution checkpoint, about 350
+words or fewer. Include phase/task ID, goal, branch/base, changed paths, current
+phase queue, actual check evidence, blocker and exactly one next task. Record
+revisions or relevant changed-file fingerprints so passing evidence cannot be
+mistaken for proof of new edits. Link large logs instead of pasting them.
+
+The coordinator owns checkpoint and phase-gate updates. Preserve another
+session's checkpoint if it changed concurrently. Record verified phase closures
+in 13.3 rather than growing the checkpoint into a historical diary. Do not create
+another backlog, duplicate phase-card files or repeatedly regenerate the plan.
+
+At a fresh session load project instructions, the checkpoint and the active
+card only, then the source passages needed by that task. Continue the same
+session while the context is useful; use a new one for unrelated work or when
+the relevant context is buried. Never clear unfinished work without a handoff.
+
+### 13.7 Execution controller
+
+This is reference text for the workflow. It is not a requirement to repaste it
+on every turn. "Do the next step" invokes 13.1–13.7 through project instructions.
+
+```text
+Continue the Shinobi Modpack using the approved phase card below.
+Follow repository instructions and the existing roadmap. Apply Ponytail 5
+in full mode: reuse working code and tools; implement the smallest complete
+change. Do not reinstall the prepared environment or redesign settled systems.
+
+Read the short development checkpoint if present. Inspect branch and worktree
+state without changing or discarding unfinished work. For repository questions,
+use one narrow Graphify query, normally --budget 1200, then inspect only the
+relevant source passages. Treat the graph as navigation, not ground truth.
+If a query fails or stalls, record that once and use bounded source searches;
+do not loop on it or claim it succeeded. Never dump the graph or whole repo.
+
+Choose the next uncompleted, dependency-ready task in this phase. State its
+goal, owned paths and observable done condition briefly, then implement it.
+Reuse the eight pure engines and Village Friends. Keep client rendering/input
+separate from common/server logic. Preserve the documented one-way mod
+dependencies; shared lower-level contracts live in Shinobi Core.
+
+One session should deliver one reviewable increment. Split large phase work
+into a short queue; do not stop after writing the queue. Execute its first
+bounded task. Do not widen scope into later phases or speculative features.
+Do not add dependencies unless existing facilities cannot meet the requirement.
+Introduce runtime assemblies and shared interfaces when the current slice has
+a real caller. Reach the ten-minute M2 play session before finishing all daily-
+life and combat content or expanding districts. Player clarity, input feedback,
+world activity, recovery and measured performance are part of done.
+
+Use a worker only for genuinely separate work with explicit path ownership,
+shared contracts and acceptance checks. Tell workers others are editing and
+they must preserve those edits. At most two implementation workers. Review
+high-risk save, reward, authority and integration changes after implementation;
+do not repeat broad independent reviews for routine assets or small edits.
+Ponytail full is the coding discipline, not an instruction to run a whole-repo
+/ponytail-audit after each build. Review the changed diff and affected callers
+once, fix concrete blockers and verify fixes. Reserve broad audits for a
+separately requested review; expand an investigation only when evidence needs it.
+
+Test changed behavior at the responsible layer. Add focused tests for new
+nontrivial behavior and regressions; do not test only that code mirrors itself.
+Run focused checks during edits, then the full repository build and Java test
+suite after each coherent code increment and before advancing. Run relevant
+authoring checks after data/asset changes and all required checks at milestones.
+Use normal incremental/cached build behavior; do not skip tests. Keep full logs
+in files, inspect failures, and report concise results. Runtime behavior needs
+in-game proof. Reuse evidence only while its relevant inputs remain unchanged.
+Never label a build-only result playable.
+Refresh affected graph data using the installed documented update workflow
+after a coherent batch. Do not force paid semantic regeneration on every edit.
+
+All plot details, clues and private review findings stay under docs/story/.
+Owner-facing output gives progress and checks without story details. Public
+plans, screenshots, graphs and logs must not expose private content. Before
+story approval use noncanonical fixtures, never silently lock the story.
+
+Preserve settled beta choices: child stage, clanless start, single-player first,
+server-authoritative state, vanilla storage, fixed canonical plot with role-bound
+cast, seeded Classic/Varied appearance. No post-beta romance or power systems.
+Use existing balance and progression data instead of inventing replacements.
+
+On completion, update the short checkpoint with actual checks and the exact
+next task. Normally keep replies within 120 words: result, verification and
+next action, with a launch instruction for a playable milestone. Expand only
+to explain a material blocker or decision. No invented scores or savings.
+Do not push, merge to the default branch or publish release assets under this
+prompt. Prepare a concrete reviewable result and retain all unfinished work.
+```
+
+### 13.8 Deferred story gate and owner boundaries
+
+The story pass remains paused until separately requested. When resumed, follow
+`STORY_CHECK_HANDOFF.md` and the existing private rubric: six independent lenses,
+all at least 8/10 with no blockers and recorded reports. Do not waive this gate
+for token savings, repeat reviewers during foundation work or invent results.
+Consistency, future continuity and required/optional foreshadowing are private
+review responsibilities; findings and the approved revision stay in `docs/story/`.
+
+Owner-facing summaries, plans, graphs, release files, screenshots and logs must
+not expose plot details. Use opaque identifiers in public checkpoints. The beta
+remains child-stage and clanless at creation, with vanilla storage, the existing
+economy/rank rules, single-player first, server-authoritative state and seeded
+Classic/Varied appearance. Do not add post-beta romance or power systems.
+
+### 13.9 Token discipline
+
+1. **Read by task, not by repository.** One focused Graphify query, then specific source passages. Record useful locations. Avoid repeating giant specifications in prompts or worker replies.
+2. **Reuse behavior before adding abstractions.** Existing engines and VF already solve much of the design. Integration and player feedback are the work now.
+3. **Build one example before generating a catalog.** One home, quest, enemy and district route must work before multiplying them. Generate repeatable assets with existing tools.
+4. **Keep parallel work scarce.** No worker merely to repeat the coordinator's reading. Workers report results and evidence, not their entire investigation.
+5. **Validate in layers.** Focused checks during edits; the full repository build and Java test suite after every coherent code increment; relevant authoring checks after data/asset changes; all required checks plus client proof at milestones. Use the local `.local-dev/check.py` runner where applicable and keep normal incremental builds enabled. Store full logs in files and inspect failures. Documentation-only edits need appropriate document checks, not an unrelated game build.
+6. **Checkpoint at useful boundaries.** Short current state, one exact next action. No duplicate diary, backlog and handoff that all repeat the same material.
+7. **Bound investigations.** After two unsuccessful attempts on the same unknown, stop blind edits, record the evidence and isolate the cause. Continue independent ready work where possible. Never bypass a failing gate by declaring it optional.
+8. **Do not pretend to eliminate all token cost.** Record actual usage when available and compare useful accepted increments. No unsupported savings percentage, no automated paid model loops, no unnecessary narration.
+9. **Scope post-build review.** Ponytail's full mode does not require a whole-repository audit. Use a single review of the changed behavior and affected callers, followed by targeted verification of fixes. Reopen review only for new evidence or a substantive change. Do not start an audit/refactor cycle after each successful build.
+
+<!-- END DEVELOPMENT EXECUTION -->

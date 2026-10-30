@@ -13,12 +13,6 @@ The home is [docs/HOME.md](docs/HOME.md); its engine is `life/home`, on top of t
 Combat is [docs/COMBAT.md](docs/COMBAT.md): data authored in `tools/combat/` (`python3 tools/combat/build.py --check`)
 and the pure Java module `combat/core` (`./gradlew :combat:core:test`, `:combat:core:simulate`, `:combat:core:trace`).
 
-## Development
-
-Game development follows [docs/development/WORKFLOW.md](docs/development/WORKFLOW.md). Each session reads
-[docs/development/STATE.md](docs/development/STATE.md) and the active phase card in `docs/development/phases/`, not the whole roadmap.
-Shinobi Core is the Fabric mod in `core/` (`./gradlew :core:runClient`, `./gradlew :core:runClientGameTest`).
-
 ## Commits
 
 - Author every commit as `radhepa <radherpatel7@gmail.com>`:
@@ -43,3 +37,20 @@ Rules:
 - Do not repeatedly dump the full graph, report, story folder or whole repository. Cache the source locations and decisions already established in the current task. Give parallel reviewers distinct lenses and bounded source lists when independent review is authorized.
 - Validate each coherent revision batch with the required handoff checks. Reuse matching passing results; rerun checks when edits, failures or unresolved risks justify them. Do not omit required validation to save tokens.
 - Keep routine replies to the outcome, actual changes and verification. End with one brief line for anything not checked or a material risk; never invent tool use, review scores or measured savings.
+
+## Development continuation
+
+- For "do the next step", "next step" or "continue development", follow
+  [ROADMAP.md section 13](ROADMAP.md#13-development-execution) and
+  `docs/development/STATE.md`. Recover a missing/stale checkpoint from actual
+  progress; never restart completed work automatically.
+- Read only the active phase and relevant source. Execute one bounded,
+  dependency-ready increment, verify it and update the checkpoint/next task.
+- Full repository build and Java tests after every coherent code increment;
+  relevant authoring checks after content edits; real client proof for runtime
+  work. Keep full logs in files. Normal incremental builds are allowed.
+- Ponytail full does not mean whole-repository audit after every build. Review
+  the changed behavior and affected callers, fix blockers and verify fixes.
+- Keep story review paused until separately requested, preserve all unfinished
+  work, and keep owner-facing output spoiler-free. Do not push or publish under
+  a generic next-step request.

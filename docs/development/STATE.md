@@ -1,33 +1,28 @@
 # Development state
 
-**Phase:** P01, make it boot ([card](phases/P01.md)). P00 is complete ([card](phases/P00.md)).
-**Branch:** `dev` in the worktree `C:\Users\minal\NarutoMinecraft-dev`, based on `main` e9238bd.
-The story checkout on the Desktop is untouched; story review stays paused.
+**Phase/task:** P02-1, one player record and seed survive a full save/reload
+([ROADMAP.md 13.5](../../ROADMAP.md#p02--make-state-reliable)). P00 and P01 passed (13.3).
+**Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
+The story checkout on the Desktop keeps its unfinished work; story review stays paused.
 
-## Done
+## P02 queue
 
-- Increment 1: Shinobi Core (`core/`, mod id `shinobi_core`) boots in a real client with Fabric API.
-- Audit fixes 1–18 in the engines and tools (mission desk, combat, life, bonds, dialogue, look); combat
-  `--check` writes nothing; generated files are LF; CI in `.github/workflows/check.yml` (not yet run on GitHub).
-- Increment 2: the pack manifest in `pack/` and the install procedure in [PACK.md](PACK.md). Changed
-  paths: `pack/`, `build.gradle` (Loom declared once), `core/build.gradle` (`-Ppack`), `settings.gradle`,
-  `gradle.properties` (VF and Fabric API pins), `docs/development/`.
+1. Core player record (versioned) with a save seed, kept on the server; survives quit/reload.
+2. Independent random streams from the seed; deterministic-stream tests.
+3. Missing/invalid data and schema-version handling; a versioned test save.
+4. Minimal client sync of the record.
+5. Prove lower mods do not import higher mods.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
 
-- `./gradlew build`: passed, 373 engine tests, 0 failures.
-- All authoring checks passed, including font checks; they leave the tree unchanged.
-- `./gradlew :pack:mrpack`: `pack/build/pack/shinobi-modpack-0.1.0.mrpack`. Fabric API's SHA-1 and
-  SHA-512 match Modrinth version `bNnaTiuM`; the VF jar matches `vf_sha256`.
-- `./gradlew :core:runClientGameTest -Ppack`: passed. The log lists `shinobi_core 0.1.0`,
-  `villagefriends 2.29.1`, `fabric-api`, Minecraft 26.3; it opened a world (screenshots saved).
-- Not checked: importing the `.mrpack` into a real launcher. Loom's production-client task crashed
-  natively (0xC0000005) on this PC while loading fonts, even without VF, so it was not kept.
-- Graph not refreshed: local graphify 0.9.76 is older than the committed graph (0.9.97).
+- `./gradlew build`: passed, 373 engine tests, 0 failures (dev `4ad03db`).
+- `./gradlew :core:runClientGameTest -Ppack`: passed; Core 0.1.0, VF 2.29.1, Fabric API, Minecraft 26.3.
+- Not checked: importing the `.mrpack` into a real launcher (Loom's production client crashes natively here).
+- Open from P01: the first/third-person animation spike, due before P06 combat content.
 
 ## Launch
 
-`./gradlew :core:runClient` (player `ShinobiTester`). Pack: see [PACK.md](PACK.md).
+`./gradlew :core:runClient` (player `ShinobiTester`). Pack: [PACK.md](PACK.md).
 
 ## Blockers
 
@@ -35,5 +30,4 @@ None.
 
 ## Next
 
-The first/third-person player-animation spike (P01). Village, Life, Combat and Progression assemblies
-arrive with their first features.
+P02-1: the player record and seed in Core, with a client gametest that saves, reloads and compares.
