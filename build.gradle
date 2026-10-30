@@ -1,7 +1,29 @@
 // The Fabric build plugin, loaded once for every Fabric mod and the pack.
 plugins {
+    id 'base'
     id 'net.fabricmc.fabric-loom' version "${loom_version}" apply false
 }
 
 // The pinned Village Friends jar for the pack (docs/development/PACK.md, step 1).
 ext.vfJar = file(providers.gradleProperty('vf_jar').getOrElse("build/deps/village-friends-${vf_version}.jar"))
+
+// One-way mod dependencies (ROADMAP.md, "The pack: separate mods"): main and client code imports only its own layer
+// and the layers below it. Each top-level folder is a layer; its engines and its Fabric mod share it.
+def below = [core: [], village: ['core'], life: ['core'], combat: ['core', 'village'], progression: ['core', 'village', 'combat', 'life']]
+def checkLayers = tasks.register('checkLayers') {
+    def root = rootDir.toPath()
+    def sources = fileTree(rootDir) { below.keySet().each { l -> include "$l/src/main/**/*.java", "$l/src/client/**/*.java", "$l/*/src/main/**/*.java", "$l/*/src/client/**/*.java" } }
+    inputs.files sources
+    doLast {
+        def bad = []
+        sources.each { f ->
+            def layer = root.relativize(f.toPath()).getName(0).toString()
+            f.eachLine('UTF-8') { line ->
+                def m = line =~ /^import (?:static )?dev\.shinobi\.([a-z]+)/
+                if (m.find() && !(m.group(1) in below[layer] + layer)) bad << "${root.relativize(f.toPath())}: $line"
+            }
+        }
+        if (bad) throw new GradleException("A lower mod imports a higher one (ROADMAP.md, \"The pack: separate mods\"):\n" + bad.join('\n'))
+    }
+}
+tasks.named('check') { dependsOn checkLayers }

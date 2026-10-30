@@ -6,7 +6,7 @@ import net.fabricmc.fabric.api.client.gametest.v1.world.TestWorldSave;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 
-/** P02-1: the player record and the save seed survive quitting to the title screen and reopening the world. */
+/** P02-1: the player record and the save seed survive quitting to the title screen and reopening the world; P02-4: the record reaches its owner's client. */
 @SuppressWarnings("UnstableApiUsage")
 public final class StateGameTest implements FabricClientGameTest {
     static final PlayerRecord CHANGED = new PlayerRecord(PlayerRecord.VERSION, "genin", 7, "teen", "nara", "hard");
@@ -25,6 +25,8 @@ public final class StateGameTest implements FabricClientGameTest {
                 s.overworld().setAttached(ShinobiCore.SEED, TYPED);
                 player(s).setAttached(ShinobiCore.PLAYER, CHANGED);
             });
+            // P02-4: the owner's client receives the change.
+            c.waitFor(mc -> mc.player != null && CHANGED.equals(mc.player.getAttached(ShinobiCore.PLAYER)), 100);
         }
         try (var w = save.open()) {
             w.getServer().runOnServer(s -> {
@@ -32,7 +34,7 @@ public final class StateGameTest implements FabricClientGameTest {
                 check(CHANGED.equals(player(s).getAttached(ShinobiCore.PLAYER)), "reloaded record " + player(s).getAttached(ShinobiCore.PLAYER));
             });
         }
-        ShinobiCore.LOG.info("Player record and save seed survived a reload");
+        ShinobiCore.LOG.info("Player record synced to its owner; record and save seed survived a reload");
     }
 
     static ServerPlayer player(MinecraftServer s) {

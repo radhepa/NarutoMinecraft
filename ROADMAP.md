@@ -1670,7 +1670,7 @@ dependencies. Reconcile implementation progress before changing gate status.
 |---|---|
 | P00 | Passed 29 Oct 2026: `dev` worktree on `main` e9238bd, JDK 25 and Gradle 9.6, VF 2.29.1 built from pinned commit `ccd1a2c` |
 | P01 | Passed 29 Oct 2026: `:core:runClientGameTest -Ppack` loads Core, VF 2.29.1 and Fabric API in a real 26.3 client and opens a world; pack manifest and install steps in `docs/development/PACK.md`. Animation spike still due before P06 |
-| P02 | Unassessed |
+| P02 | Passed 29 Oct 2026: player record and save seed survive reload and sync to the owner (`StateGameTest`); seed streams, forgiving reads with v1 test saves, and `checkLayers` (`core/src/test`, root `build.gradle`). Role identities move to P03, their first caller (the bound cast) |
 | P03 | Unassessed |
 | P04 | Unassessed |
 | P05 | Unassessed |

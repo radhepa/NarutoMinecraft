@@ -2,8 +2,10 @@ package dev.shinobi.core;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
+import net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,9 +16,10 @@ public final class ShinobiCore implements ModInitializer {
     public static final String MOD_ID = "shinobi_core";
     public static final Logger LOG = LoggerFactory.getLogger("Shinobi Core");
 
-    /** The player's record, saved with the player and kept through death (ROADMAP.md, "Saves"). */
+    /** The player's record, saved with the player, kept through death and synced to its owner (ROADMAP.md, "Saves"). */
     public static final AttachmentType<PlayerRecord> PLAYER = AttachmentRegistry.create(id("player"),
-            b -> b.persistent(PlayerRecord.CODEC).copyOnDeath().initializer(() -> PlayerRecord.NEW));
+            b -> b.persistent(PlayerRecord.CODEC).copyOnDeath().initializer(() -> PlayerRecord.NEW)
+                    .syncWith(ByteBufCodecs.fromCodec(PlayerRecord.CODEC), AttachmentSyncPredicate.targetOnly()));
     /** The save seed, saved with the overworld. */
     public static final AttachmentType<SaveSeed> SEED = AttachmentRegistry.create(id("save_seed"),
             b -> b.persistent(SaveSeed.CODEC));
