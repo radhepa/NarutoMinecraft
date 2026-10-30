@@ -5,5 +5,15 @@
   "shinobi_progression.quest.done": "Quest complete: %s",
   "shinobi_progression.shop.header": "For sale (you have %s ryo). Click a line to buy:",
   "shinobi_progression.shop.line": "  [Buy] %s for %s ryo",
-  "shinobi_progression.shop.away": "Stand by the shopkeeper to buy"
+  "shinobi_progression.shop.away": "Stand by the shopkeeper to buy",
+  "quest.training.test.first_day.title": "Training day: spar in the yard, furnish your flat, sleep",
+  "quest.training.test.first_day.step.go_yard": "Walk east along the street to the training yard",
+  "quest.training.test.first_day.step.spar": "Spar with your partner in the yard: attack to strike (sneak-attack for a heavy blow)",
+  "quest.training.test.first_day.step.shop": "Visit the tea house keeper (west end) and buy a furnishing",
+  "quest.training.test.first_day.step.furnish": "Place your furnishing in your flat's main room (3a, upstairs)",
+  "quest.training.test.first_day.step.sleep": "When night falls, sleep in your bed in flat 3a",
+  "quest.errand.test.yard.step.ask_keeper": "Ask the tea house keeper",
+  "quest.errand.test.yard.step.go_yard": "Visit the training yard",
+  "quest.errand.test.yard.step.go_board": "Read the notice board",
+  "shinobi_progression.quest.next": "Next: %s"
 }

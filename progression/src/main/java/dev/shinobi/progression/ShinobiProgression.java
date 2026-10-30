@@ -1,5 +1,20 @@
 package dev.shinobi.progression;
 
+import net.minecraft.server.TickTask;
+import java.util.stream.Collectors;
+import java.util.function.Supplier;
+import java.util.function.Predicate;
+import java.util.Set;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import com.google.common.base.Suppliers;
+import dev.shinobi.progression.mission.Template;
+import dev.shinobi.village.StreetGuard;
+import dev.shinobi.village.TestStreet;
+import dev.shinobi.village.PlayerLooks;
+import dev.shinobi.combat.runtime.Spar;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import dev.shinobi.progression.mission.Json;
 import dev.shinobi.progression.Quests.Quest;
@@ -28,6 +43,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -41,6 +57,13 @@ public final class ShinobiProgression implements ModInitializer {
             b -> b.persistent(Journal.CODEC).copyOnDeath().initializer(() -> Journal.EMPTY));
     /** Quests by id, read from every data pack's {@code quests/} folder when the server starts. */
     public static final Map<String, Quest> QUESTS = new HashMap<>();
+    /** Players the training quest could not be cast for on this map; tried again after a reload. */
+    static final Set<UUID> UNCAST = new HashSet<>();
+    /** The noncanonical training fixture of the M2 play session (ROADMAP.md 13.4). */
+    static final String TRAINING = "training.test.first_day";
+    /** The furniture shop's blocks, once the registries are complete. */
+    static final Supplier<Set<Item>> FURNITURE = Suppliers.memoize(() -> ShinobiLife.stock("furniture_shop").stream()
+            .map(l -> ShinobiLife.item(l.item())).collect(Collectors.toSet()));
     /**
      * The shops each bound resident keeps, by role or job key.
      * shortcut: the test street's tea house keeper also sells the furniture shop's lines, until the map has a furniture shop.
@@ -54,6 +77,19 @@ public final class ShinobiProgression implements ModInitializer {
         ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resources, ok) -> load(server));
         ServerTickEvents.END_SERVER_TICK.register(s -> {
             if (s.getTickCount() % 10 == 0) for (var p : s.getPlayerList().getPlayers()) tick(p);
+        });
+        StreetGuard.furnishing = FURNITURE.get()::contains;
+        Spar.WON.register(player -> stepDone(player, "spar", step -> true));
+        // Furnishing: a block from the furniture shop placed in the player's room, checked in a task after the placement.
+        UseBlockCallback.EVENT.register((player, level, hand, hit) -> {
+            if (player instanceof ServerPlayer p && p.getItemInHand(hand).getItem() instanceof BlockItem item && FURNITURE.get().contains(item)) {
+                var at = new BlockPlaceContext(p, hand, p.getItemInHand(hand), hit).getClickedPos();
+                if (TestStreet.inPlayerRoom(level, at) && !level.getBlockState(at).is(item.getBlock()))
+                    p.level().getServer().schedule(new TickTask(p.level().getServer().getTickCount(), () -> {
+                        if (level.getBlockState(at).is(item.getBlock())) stepDone(p, "furnish", step -> true);
+                    }));
+            }
+            return InteractionResult.PASS;
         });
         // Talking: using the resident a talk step names, once per click (the client sends the off hand too after a PASS).
         // In an early phase: VF's own resident listener returns SUCCESS and ends the event, so ours must run first and PASS.
@@ -89,6 +125,7 @@ public final class ShinobiProgression implements ModInitializer {
     /** Reads every {@code data/<namespace>/quests/*.json}; a broken quest file stops the load, naming the file. */
     static void load(MinecraftServer server) {
         QUESTS.clear();
+        UNCAST.clear();
         server.getResourceManager().listResources("quests", id -> id.getPath().endsWith(".json")).forEach((file, resource) -> {
             try (var in = resource.open()) {
                 Map<String, Object> raw = Json.object(new String(in.readAllBytes(), StandardCharsets.UTF_8));
@@ -121,15 +158,38 @@ public final class ShinobiProgression implements ModInitializer {
         return true;
     }
 
-    /** Finishes the steps whose objective the player now meets. */
+    /**
+     * Starts the training quest for a player who has made a character, once the map has its training yard; finishes
+     * go and sleep steps, and puts the spar partner in place for a spar step the player has reached.
+     * shortcut: the noncanonical training fixture starts itself, until P07's opening hands out the first quests.
+     */
     static void tick(ServerPlayer player) {
         var journal = player.getAttachedOrCreate(JOURNAL);
+        if (player.hasAttached(PlayerLooks.LOOK) && QUESTS.containsKey(TRAINING) && !journal.knows(TRAINING)
+                && player.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).keySet().containsAll(List.of("anchor:training", TestStreet.PLAYER_FLAT))
+                && !UNCAST.contains(player.getUUID())) {
+            if (!accept(player, TRAINING)) UNCAST.add(player.getUUID());
+            journal = player.getAttachedOrCreate(JOURNAL);
+        }
         for (var entry : journal.active().entrySet()) {
             // shortcut: a quest or step since removed from the data stays put in the journal, until P04-6's failure handling.
             var quest = QUESTS.get(entry.getKey());
             var step = quest == null ? null : quest.template().steps().get(entry.getValue());
-            if (step != null && "go".equals(step.type()) && near(player, Quests.resolve(Json.str(step.objective().get("place"), ""), journal.castOf(quest.template().id()))))
-                complete(player, quest);
+            if (step == null) continue;
+            String place = Quests.resolve(Json.str(step.objective().get("place"), ""), journal.castOf(quest.template().id()));
+            if ("go".equals(step.type()) && near(player, place) || "sleep".equals(step.type()) && player.getSleepingPos().filter(bed -> TestStreet.inPlayerRoom(player.level(), bed)).isPresent()) complete(player, quest);
+            else if ("spar".equals(step.type()) && near(player, place))
+                Spar.partnerAt(player.level(), player.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(place));
+        }
+    }
+
+    /** Finishes the player's active steps of {@code type} that {@code ok} accepts. */
+    static void stepDone(ServerPlayer player, String type, Predicate<Template.Step> ok) {
+        var journal = player.getAttachedOrCreate(JOURNAL);
+        for (var entry : journal.active().entrySet()) {
+            var quest = QUESTS.get(entry.getKey());
+            var step = quest == null ? null : quest.template().steps().get(entry.getValue());
+            if (step != null && type.equals(step.type()) && ok.test(step)) complete(player, quest);
         }
     }
 
@@ -151,9 +211,14 @@ public final class ShinobiProgression implements ModInitializer {
         apply(player, next);
     }
 
-    /** Saves the journal and pays the ryo together, in one tick, so a reload never pays a step twice. */
+    /** Saves the journal and pays the ryo together, in one tick, so a reload never pays a step twice; names each new step. */
     static void apply(ServerPlayer player, Quests.Outcome o) {
+        var before = player.getAttachedOrCreate(JOURNAL).active();
         player.setAttached(JOURNAL, o.journal());
+        o.journal().active().forEach((id, step) -> {
+            if (!step.equals(before.get(id)))
+                player.sendSystemMessage(Component.translatable("shinobi_progression.quest.next", Component.translatable("quest." + id + ".step." + step)).withStyle(ChatFormatting.YELLOW));
+        });
         if (o.ryo() > 0) ShinobiLife.earn(player, o.ryo());
     }
 

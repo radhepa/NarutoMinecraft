@@ -9,6 +9,8 @@ import net.minecraft.core.GlobalPos;
 import net.minecraft.core.Vec3i;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityTypes;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.level.block.BedBlock;
@@ -42,7 +44,19 @@ public final class TestStreet {
     static final List<Map.Entry<String, Vec3i>> PLOTS = List.of(Map.entry(BUILDING, Vec3i.ZERO),
             Map.entry("shop_tea_house", new Vec3i(-12, 0, 4)), Map.entry("training_yard", new Vec3i(36, 0, 4)));
 
+    /**
+     * The player flat's main room from the apartment block's [0, 0, 0], 6 by 3 by 6 (tools/konoha/blueprints/leaf_block.homes.json).
+     * shortcut: one room of the one player flat, kept as an anchor, until P05's home claims a flat with all its rooms.
+     */
+    static final Vec3i ROOM = new Vec3i(1, 10, 3), ROOM_SIZE = new Vec3i(5, 2, 5);
+
     private TestStreet() {}
+
+    /** Whether {@code pos} lies in the main room of the street's player flat. */
+    public static boolean inPlayerRoom(Level level, BlockPos pos) {
+        var at = level instanceof ServerLevel server ? server.getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(PLAYER_FLAT) : null;
+        return at != null && BoundingBox.fromCorners(at, at.offset(ROOM_SIZE)).isInside(pos);
+    }
 
     /** Builds the street with the apartment block's [0, 0, 0] (its ground layer) at {@code origin}, on ground no village holds yet. */
     public static Built build(ServerLevel level, BlockPos origin) {
@@ -97,6 +111,7 @@ public final class TestStreet {
                 }
             }
         }
+        anchors.put(PLAYER_FLAT, origin.offset(ROOM));
         save(level, ShinobiVillage.ANCHORS, anchors);
         save(level, ShinobiVillage.ROLES, roles);
         return new Built(village, List.copyOf(plaques), List.copyOf(residents), Map.copyOf(anchors));

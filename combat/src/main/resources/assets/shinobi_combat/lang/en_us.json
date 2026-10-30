@@ -1,0 +1,19 @@
+{
+  "shinobi_combat.partner": "Spar partner",
+  "shinobi_combat.spar.busy": "Too soon: let the last move finish",
+  "shinobi_combat.spar.tired": "Out of breath: wait for your stamina",
+  "shinobi_combat.spar.hit": "%s hits for %s | Partner %s | You %s | Stamina %s",
+  "shinobi_combat.spar.struck": "Your partner hits back for %s | Partner %s | You %s",
+  "shinobi_combat.spar.left": "Spar over: you walked away",
+  "shinobi_combat.spar.won": "Spar won!",
+  "shinobi_combat.spar.won.sub": "Your partner bows: well fought",
+  "shinobi_combat.spar.lost": "Spar lost",
+  "shinobi_combat.spar.lost.sub": "Hit your partner to go again",
+  "shinobi_combat.move.jab": "Jab",
+  "shinobi_combat.move.cross": "Cross",
+  "shinobi_combat.move.roundhouse": "Roundhouse",
+  "shinobi_combat.move.heavy": "Heavy strike",
+  "shinobi_combat.move.sweep": "Sweep",
+  "shinobi_combat.move.launcher": "Launcher",
+  "shinobi_combat.move.palm_rush": "Palm rush"
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "shinobi_combat",
+  "version": "${version}",
+  "name": "Shinobi Combat",
+  "description": "The fights of the Shinobi Modpack: the practice spar, on the combat core.",
+  "authors": ["radhepa"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.shinobi.combat.runtime.ShinobiCombat"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

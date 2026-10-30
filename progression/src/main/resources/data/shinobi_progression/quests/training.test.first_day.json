@@ -1,0 +1,18 @@
+{
+  "format": 1,
+  "id": "training.test.first_day",
+  "kind": "side",
+  "title": "quest.training.test.first_day.title",
+  "slots": {
+    "keeper": {"pick": "resident", "where": {"job": "tea_house"}},
+    "yard": {"pick": "anchor", "tag": "training"}
+  },
+  "start": "go_yard",
+  "steps": {
+    "go_yard": {"objective": {"type": "go", "place": "slot:yard"}, "next": "spar"},
+    "spar": {"objective": {"type": "spar", "place": "slot:yard"}, "on_done": [{"give_ryo": 30}], "next": "shop"},
+    "shop": {"objective": {"type": "talk", "who": "slot:keeper"}, "next": "furnish"},
+    "furnish": {"objective": {"type": "furnish"}, "next": "sleep"},
+    "sleep": {"objective": {"type": "sleep"}, "next": null}
+  }
+}

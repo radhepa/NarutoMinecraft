@@ -22,6 +22,7 @@ dependencies {
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     implementation project(':village')
     implementation project(':life')
+    implementation project(':combat')
     implementation project(':life:economy')   // the stock lines Shinobi Life hands back
     implementation project(':progression:missions')
     include project(':progression:missions')

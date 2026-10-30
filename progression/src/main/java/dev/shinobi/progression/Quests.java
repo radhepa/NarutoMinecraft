@@ -50,7 +50,12 @@ final class Quests {
             for (String when : List.of("on_enter", "on_done"))
                 for (Object a : Json.list(Json.map(s).get(when))) action(t.id() + ": step " + name + " " + when, a);
             var o = t.steps().get(name).objective();
-            String field = switch (Json.str(o.get("type"), "")) { case "go" -> "place"; case "talk" -> "who"; default -> null; };
+            String field = switch (Json.str(o.get("type"), "")) {
+                case "go", "spar" -> "place";
+                case "talk" -> "who";
+                case "", "furnish", "sleep" -> null;
+                default -> throw new IllegalArgumentException(t.id() + ": step " + name + " has unknown type " + o.get("type"));
+            };
             if (field == null) return;
             if (!(o.get(field) instanceof String ref && !ref.isEmpty())) throw new IllegalArgumentException(t.id() + ": step " + name + " has no " + field);
             if (ref.startsWith("slot:") && !t.slots().containsKey(ref.substring(5))) throw new IllegalArgumentException(t.id() + ": step " + name + " names undeclared " + ref);
@@ -161,7 +166,7 @@ final class Quests {
             cast.put(name, found.toString());
         });
         for (var step : t.steps().values())
-            if ("go".equals(step.type()) && !anchors.containsKey(resolve(Json.str(step.objective().get("place"), ""), cast)))
+            if (("go".equals(step.type()) || "spar".equals(step.type())) && !anchors.containsKey(resolve(Json.str(step.objective().get("place"), ""), cast)))
                 throw new IllegalArgumentException("no " + step.objective().get("place") + " on this map for step " + step.name());
         return Map.copyOf(cast);
     }

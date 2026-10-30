@@ -1,152 +1,55 @@
 # Development state
 
-**Phase/task:** M2, P06-1 and the rest of M2: the training spar, furnishing and sleep, then the session proof
-([ROADMAP.md 13.4](../../ROADMAP.md#134-player-milestones-and-quality-gates)). P00 to P03 passed (13.3); P04-1 to P04-5 done, P04-6/7 open;
-P05-1 (the character creator) done.
+**Phase/task:** M3 (P07, with the outstanding P05/P06 requirements first): play from the approved opening to
+graduation without commands ([ROADMAP.md 13.4](../../ROADMAP.md#134-player-milestones-and-quality-gates)).
+M2 passed 30 October 2026. P00 to P02 passed (13.3); P03 and P04 queues done except the items below.
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
-The story checkout on the Desktop keeps its unfinished work; story review stays paused.
+M2 evidence is for the commit "M2: the training spar, furnishing, sleep and the session proof" (see `git log`).
+The story checkout on the Desktop keeps its unfinished work; story review is paused unless the M3 brief runs it.
+Older evidence (P01 to P05-1): this file at commit b2fc971.
 
-## P03 queue
+## M2 (Early P05 + P06): done
 
-1. Done: Shinobi Village (`village/`, mod id `narutominecraft`): VF residents wear the Leaf wardrobe.
-2. Done: the test street (`leaf_block`) with ten residents in their own flats, by day and at night.
-3. Done (partly): deterministic resident identity and appearance, surviving reload. Still open: the
-   Core save seed and Classic/Varied mode choosing the cast, role identities for the bound cast (from P02).
-4. Done: the street's tea house, notice board and training yard; adventure protection and builder mode.
-5. Done: the Leaf map's rules (no monsters, raids, traders, TNT, arrows or fire spread).
-6. Done: 11 residents on the street (ten flats and the tea house keeper) and the performance route.
-   Open from 3 and 2, folded into later work as M2 needs them: Classic/Varied from the Core save seed,
-   role identities, loot tables and names for the Konoha blocks.
-
-## P04 queue
-
-1. Done: a quest runtime and persistent journal: accept and complete one objective (`go` to an anchor).
-2. Done: roles and map anchors, with clear errors when one is missing.
-3. Done: flags, conditions and actions, and one branch.
-4. Done: ryo through the Life wallet; one-time rewards.
-5. Done: a trade at the tea house.
-6. Open (reload at the accept, branch and payout boundaries is proven; failure and retry wait for the M2 spar): reload at each boundary, failure and retry.
-7. The quest checker reports authoring errors (extend `tools/missions/missions.py`).
-
-P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
-
-## M2 queue (Early P05 + P06)
-
-1. Done: P05-1, the character creator on first join; the look is kept on the server, worn as the skin and survives reopening.
-2. Next: P06-1, one server-validated practice attack (the spar) with feedback and costs, as the training quest's spar step.
-3. Buy one furnishing, place it in the player flat, sleep in its bed; the quest names each step.
-4. The M2 session gametest, Ponytail review, full build and STATE evidence; the pack bundles the new mods.
+Creator on first join; the noncanonical `training.test.first_day` quest starts itself and names each step
+("Next: ..."): walk to the yard, win a spar (new mod Shinobi Combat, `combat/`: each attack taken by the server
+through Academy taijutsu's combo machine and stamina, combat-core damage, crit particles, sound, hit overlay,
+"Spar won!" title, +30 ryo; the partner strikes back, a loss ends the bout and the next hit starts another),
+talk to the keeper and buy a tatami, place it in flat 3a (the guard lets only furnishings down in that room),
+sleep in that room's bed at night; reload keeps look, quest, wallet and tatami.
 
 ## Evidence (30 October 2026, Windows 11, JDK 25.0.5)
-- P05-1 `./gradlew build`: passed; `:village:runClientGameTest` and `:progression:runClientGameTest` passed (logs
-  `.local-dev/logs/p051-*.log`). Shinobi Village gains a client side: a new player meets "Create your character"
-  two seconds after joining (body, skin tone, hair, hair colour, outfit, colours; the player preview wears each change),
-  and Done sends the look (`village:look` rules for a clanless child, plus what Village Friends can draw) to the
-  server, which keeps it as a synced persistent attachment and refuses a second pick, an off-rule look and broken
-  JSON; the look is baked by VF's resident skins and worn as the player's skin, also after reopening (screenshots
-  `village/build/run/clientGameTest/screenshots/0003_creator-open` to `0006_creator-reopened`). Ponytail review:
-  0 blockers; fixed: wrong-typed JSON caught inside the guard, the creator reopens while no look is set and only
-  on servers that take one, a look that cannot bake is not retried every frame, unique texture ids, tests for the
-  opening look and broken payloads. Marked shortcuts: flat skin without VF's 3D pieces, default Roots, no restyle.
-- P04-4/5 `./gradlew build`: passed; `:progression:runClientGameTest` passed three times (logs
-  `.local-dev/logs/p044-*.log`, `p045-*.log`): a new Shinobi Life mod (`:life`, id `shinobi_life`) keeps the wallet
-  (100 ryo the first day, kept through death) and registers green tea; the errand's `give_ryo 20` pays once (120);
-  talking to the tea house keeper lists the stock as click-to-buy chat lines (Green Tea 4, Tatami 40, Shoji Screen
-  80 from `data/items`); `/shinobi buy` (no permission) refuses away from the keeper, a short wallet and a line with
-  no item, and hands over tea and a tatami; wallet and goods survive reopening with no second payout. Ponytail
-  review: 0 blockers; fixed: Life depends on Konoha, `give_ryo` capped at the int range, the real shop role keys
-  map too, `set_flag` parsed once; marked as shortcuts: newcomer prices for everyone, one chat line per stock line.
-- P04-3 `./gradlew build`: passed; `:progression:runClientGameTest` passed twice: the errand's `on_done` sets a flag
-  when the keeper is asked; the yard step's `branch` (`if: {flag}`) sends the player to the notice board; both flags
-  and the done quest survive reopening. Conditions `all`/`any`/`not`/`flag`/`quest_state` and the `set_flag` action;
-  the checker refuses unknown conditions and actions, malformed ones, a branch to a missing step and a
-  `quest_state` naming its own quest. Unit tests: 5 (journal, casting, actions and branches, codec, refusals).
-  Ponytail review fixed: a null `quest_state` value, a self `quest_state` that could never hold. Shortcut noted:
-  quest ids and flag names are not cross-checked until P04-7.
 
-- P04-2 `./gradlew build`: passed; `:progression:runClientGameTest` passed: the street binds its residents by
-  marker role and job (`ShinobiVillage.ROLES`, saved with the level); the test errand casts the tea house keeper
-  (`resident` by job) and the yard (`anchor` by tag) when accepted and keeps the cast in the journal; using the
-  keeper through the client completes the `talk` step, then the yard the `go` step; a test quest whose anchor the
-  map lacks is refused, naming the slot; roles survive reopening. Unit tests: casting and its errors, the checker's
-  new refusals, the journal codec and saves from before the cast. Ponytail review: no tick crash on an old save's
-  missing cast, one talk per click (main hand only), a talk step must name a resident slot. The keeper click that
-  failed some runs was Village Friends' own resident listener returning SUCCESS first and ending the event; fixed in
-  P04-3 (ours runs in an earlier phase and passes).
+- `./gradlew build`: passed (log `.local-dev/logs/m2-build.log`).
+- `:progression:runClientGameTest`: passed, `SessionGameTest` drives the whole M2 session through real client
+  clicks and attacks; screenshots `progression/build/run/clientGameTest/screenshots/0000_session-creator` to
+  `0005_session-reopened` (log `m2-progression-gametest.log`). `:village:runClientGameTest` and
+  `:core:runClientGameTest -Ppack` (all five Shinobi mods, VF, Fabric API) passed.
+- `:pack:mrpack` bundles Core, Village, Life, Combat and Progression with nested engines.
+- Ponytail review: 0 blockers; fixed: only furnishings are placeable in the room, a click onto an existing floor
+  mat does not finish the furnish step, no second partner before the yard's entities load, unknown step types
+  and a spar without a place are refused (tests), a map that cannot cast the quest is not retried every tick,
+  the quest waits for the flat anchor (older street saves), only the room's bed counts, spectators cannot spar.
+  Marked shortcuts: hit lands on input, partner never guards or moves, sneak-attack is the heavy input; the
+  training fixture starts itself until P07; the keeper also sells the furniture shop.
 
-- P04-1 `./gradlew build`: passed; `:progression:runClientGameTest` passed: the new Shinobi Progression mod
-  (`progression/`, `shinobi_progression`) loads quests from `data/*/quests/` through the mission engine's
-  `Template`, the test errand is accepted with `/shinobi quest accept`, completes at the street's training yard
-  (`go` to `anchor:training`), and the journal and the street's anchors survive reopening; a done quest cannot
-  be taken again. Ponytail review: no crash on a step removed from the data (left in the journal until P04-6),
-  reload with `/reload`, a broken quest file names itself, wrong-typed fields and `go` without a place are
-  refused (unit-tested in `Quests`). Not yet: the pack does not ship Progression; journal commands are
-  operator-only.
+## Remaining from earlier phases
 
-- P03-6 `./gradlew build`: passed; `:village:runClientGameTest` passed with the performance route: three stops
-  (tea house, apartment block, yard), five seconds each, 11 residents. Baseline, server ms per tick on average:
-  day 5.6 to 7.7, night 2.5 to 2.6; client 119 fps by day, 30 at night (the test client's frame cap, not load).
-  Ponytail review: logged as a record, not a gate (an average, and shared CI runners are noisy).
-
-- P03-5 `./gradlew build`: passed; `:village:runClientGameTest` passed: building the street turns off monster,
-  patrol, phantom and trader spawns, raids, TNT and projectile block damage, and fire spread (`TestStreet.OFF`),
-  and the gametest checks them; residents still walk and 9 of 11 sleep in their own beds. VF's generation needs
-  no switch: the test map is flat with structures off. Ponytail review: mob griefing stays on (VF's farmers
-  harvest and residents pick up items through it); a fire never goes out with spread off, so `StreetGuard` stops
-  flint and steel and fire charges. Not yet: buckets, explosions of mobs a player places (shortcut).
-
-- P03-4 `./gradlew build`: passed; `:village:runClientGameTest` passed: the street pastes the tea house
-  (keeper upstairs, its own plaque and bed) and the new `training_yard` (targets, hay, VF's notice board)
-  beside `leaf_block`; VF reads 12 houses with a bed each; all 11 residents keep their beds, 11 walk by day,
-  9 sleep at 2 am (screenshot `test-street-yard`). `StreetGuard`: a survival player cannot break or build on
-  the street or make a flat private; `/narutominecraft builder` can. Ponytail review: closed the plaque
-  eviction, kept doors and beds usable with a block in hand, covered reshaping tools, checked every village
-  holding a spot. The tea house needed its stair head walled and capped (VF floods room to room). Not yet:
-  buckets, fire and explosions (shortcut: protection by village name until the map's regions).
-
-- P03-3 `./gradlew build`: passed, 386 tests; `:village:runClientGameTest` passed: each resident's UUID
-  comes from the world seed and its marker, so VF draws the same profile, name and look for it; ten
-  different residents; reopening the save finds all ten with the same names, looks and flats. Building a
-  second street on the same seed fails clearly instead of spawning duplicates. Not yet: the Core save seed
-  and Classic/Varied mode (shortcut: the world seed); Leaf names and palettes.
-
-- P03-2 `./gradlew build`: passed, 386 tests; `:village:runClientGameTest` passed: the 21 Konoha blocks
-  register, `leaf_block` pastes on a flat map, VF reads 11 plaqued flats with a bed each, all ten residents
-  keep the flat they were placed in, at least one walks by day and 8 or more sleep in their own beds at
-  2 am (screenshot `test-street-day`). Two mixins (`LeafFlats`, unit-tested): VF fills plaqued houses in
-  its own order, so residents landed in flats on other floors they could not path to. `/narutominecraft
-  street` builds it in game (operators, empty ground). Ponytail review: scoped the bed seeding to Leaf
-  flats and residents at home, a clear error without room for a plaque or on a village, one-character
-  palette keys. Not yet: loot tables and names for the Konoha blocks; why up to two residents stay up at 2 am.
-
-- P03-1 `./gradlew build`: passed, 385 tests; `:village:runClientGameTest` passed: four residents wear
-  Leaf outfits (screenshot `leaf-residents`); `:core:runClientGameTest -Ppack` loads Core, Village and VF.
-  A mixin hands VF a Leaf catalog; garments ship in VF's namespace. Ponytail review: fixed the CI VF build
-  (`gradlew` not executable), the pack check's mod set and PACK.md. Not yet: Leaf palettes (VF's ten
-  palette ids for now) and the population draw (every profession wears every collection).
-
-- P02-4/5 `./gradlew build` and `:core:runClientGameTest`: passed, 383 tests; the client receives the
-  changed record; `checkLayers` passes and fails on a planted Core-imports-Life file.
-- P02-3 `./gradlew build :core:runClientGameTest`: passed, 383 tests (373 engine + 10 Core), 0 failures;
-  reload gametest passed. Ponytail review: fixed a save blocked by a decode-only check, merged SaveSeed's codecs.
-- P02-1 `./gradlew :core:runClientGameTest`: passed. `StateGameTest` creates a world, checks the new
-  record and seed, changes both, quits, reopens the save and reads them back unchanged.
-- P01 `./gradlew :core:runClientGameTest -Ppack`: passed; Core 0.1.0, VF 2.29.1, Fabric API, Minecraft 26.3.
-- Not checked: the record surviving death (`copyOnDeath` is set, untested).
-- Not checked: importing the `.mrpack` into a real launcher (Loom's production client crashes natively here).
-- Graph not refreshed: local graphify 0.9.76 is older than the committed graph.
-- Open from P01: the first/third-person animation spike, due before P06 combat content.
+- P04-6: failure and retry at each quest boundary (the spar loss and retry exist, untested).
+- P04-7: the quest checker (extend `tools/missions/missions.py`).
+- P03: Classic/Varied from the Core save seed, role identities for the bound cast, Konoha block loot tables and names.
+- P05/P06 beyond M2: fatigue and the rest of the ordinary day, chakra, signs, techniques, guard/movement,
+  animation, rebindable controls, pets, full stock and technique coverage (ROADMAP 13.4, 13.5).
 
 ## Launch
 
-`./gradlew :village:runClient` (Village + VF; player `ShinobiTester`), or `:core:runClient`. Pack: [PACK.md](PACK.md).
+`./gradlew :progression:runClient` (every Shinobi mod + VF; player `ShinobiTester`). New flat world, then
+`/narutominecraft street` builds the test street. Pack: [PACK.md](PACK.md).
 
 ## Blockers
 
-None.
+P07 needs the private story approval gate (ROADMAP 13.8, `STORY_CHECK_HANDOFF.md` in the Desktop checkout).
 
 ## Next
 
-M2 (P05-1): a character creator in Shinobi Village: a persistent, synced look picked from the VF wardrobe in a
-screen on first join, validated on the server, worn as the player's skin; then the training spar (P06-1), the
-flat's furnishing and sleep, and one session gametest with screenshots. P04-6 retry and P04-7's checker follow.
+M3: check the story gate, then finish the outstanding P05/P06 requirements, then P07's opening and Academy
+campaign through graduation without commands.

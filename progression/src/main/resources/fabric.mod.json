@@ -16,6 +16,7 @@
     "java": ">=25",
     "fabric-api": "*",
     "narutominecraft": "*",
-    "shinobi_life": "*"
+    "shinobi_life": "*",
+    "shinobi_combat": "*"
   }
 }

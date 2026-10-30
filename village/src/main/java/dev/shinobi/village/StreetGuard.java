@@ -12,9 +12,12 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.function.Predicate;
 
 /**
  * Adventure protection: nobody breaks or builds on the Leaf map except in builder mode, which an operator
@@ -22,10 +25,14 @@ import net.minecraft.world.level.block.state.BlockState;
  * Monster spawns, fire spread, TNT and arrows are handled by the map's rules ({@link TestStreet#OFF}).
  * shortcut: protects the test street's village by name and only blocks breaking, block placement, lighting fires, the
  * tools that reshape blocks and making a flat private (not buckets or explosions of placed mobs), until the master
- * map's layout names its protected regions (Phase 0, Map).
+ * map's layout names its protected regions (Phase 0, Map). Blocks go down in the player flat's main room, for
+ * furnishing, but nothing there breaks, until P05's home takes furniture back.
  */
 public final class StreetGuard {
     public static final String BUILDER = "narutominecraft.builder";
+
+    /** The furnishings a player may place in their own room; the shop's mod fills it in. */
+    public static Predicate<Item> furnishing = item -> false;
 
     private StreetGuard() {}
 
@@ -41,6 +48,7 @@ public final class StreetGuard {
             if (!sneak && usable(target)) return InteractionResult.PASS;
             BlockPos changed = stack.getItem() instanceof BlockItem || stack.is(Items.FLINT_AND_STEEL) || stack.is(Items.FIRE_CHARGE) ? pos.relative(hit.getDirection())
                     : stack.is(ItemTags.HOES) || stack.is(ItemTags.SHOVELS) || stack.is(ItemTags.AXES) || stack.is(Items.BONE_MEAL) ? pos : null;
+            if (furnishing.test(stack.getItem()) && changed != null && TestStreet.inPlayerRoom(level, changed)) return InteractionResult.PASS;
             return changed != null && !allowed(level, player, changed) ? InteractionResult.FAIL : InteractionResult.PASS;
         });
     }

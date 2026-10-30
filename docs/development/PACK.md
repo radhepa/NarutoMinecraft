@@ -2,7 +2,7 @@
 
 The pack manifest lives in `pack/` ([ROADMAP.md](../../ROADMAP.md), "The pack: separate mods"). It builds a
 Modrinth `.mrpack`: Minecraft 26.3, Fabric Loader 0.19.5 and Fabric API 0.161.0+26.3 by version and hash,
-with Village Friends 2.29.1, Shinobi Core and Shinobi Village as jars inside the pack (none has a download yet). The
+with Village Friends 2.29.1 and the Shinobi mods (Core, Village, Life, Combat, Progression) as jars inside the pack (none has a download yet). The
 world is not part of the pack.
 
 ## Build the pack
@@ -19,8 +19,8 @@ world is not part of the pack.
    Copy `build/libs/village-friends-2.29.1.jar` to `build/deps/` in this repository, or pass
    `-Pvf_jar=<path>`. The pack refuses a jar whose SHA-256 differs from `vf_sha256` in `gradle.properties`.
 2. `./gradlew :pack:mrpack` writes `pack/build/pack/shinobi-modpack-0.1.0.mrpack`.
-3. `./gradlew :core:runClientGameTest -Ppack` checks the pack's mod set: a real client loads Shinobi
-   Core, Shinobi Village, Village Friends (the pinned jar) and Fabric API, opens a new world and saves screenshots to
+3. `./gradlew :core:runClientGameTest -Ppack` checks the pack's mod set: a real client loads the five
+   Shinobi mods, Village Friends (the pinned jar) and Fabric API, opens a new world and saves screenshots to
    `core/build/run/clientGameTest/screenshots/`.
 
 ## Install it for a test world

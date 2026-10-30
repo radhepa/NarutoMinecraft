@@ -50,6 +50,8 @@ class JournalTest {
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"next\": 5}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"next\": \"c\"}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"go\"}}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"spar\"}}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"slep\"}}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"go\", \"place\": \"slot:nobody\"}}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"talk\", \"who\": \"keeper\"}}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"slots\": {\"s\": {\"pick\": \"anchor\", \"tag\": \"x\"}}, \"steps\": {\"a\": {\"objective\": {\"type\": \"talk\", \"who\": \"slot:s\"}}}}",

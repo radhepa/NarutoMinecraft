@@ -55,12 +55,12 @@ public final class ErrandGameTest implements FabricClientGameTest {
                     "a quest whose anchor the map lacks is refused");
             w.getServer().runCommand("execute as @p run shinobi quest accept " + ERRAND);
             UUID keeper = w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getAttachedOrElse(ShinobiVillage.ROLES, Map.<String, UUID>of()).get("job:tea_house"));
-            check(journal(w).active().equals(Map.of(ERRAND, "ask_keeper")) && journal(w).castOf(ERRAND).equals(Map.of("keeper", keeper.toString(), "yard", "anchor:training")),
+            check("ask_keeper".equals(journal(w).active().get(ERRAND)) && journal(w).castOf(ERRAND).equals(Map.of("keeper", keeper.toString(), "yard", "anchor:training")),
                     "accepted at its first step, cast on the map: " + journal(w));
 
             // Using the keeper through the client's game mode: the interaction packet reaches the server's callback.
             // Retried: under load the server can drop a click sent before it has the teleport (out of reach).
-            for (int i = 0; i < 3 && !journal(w).active().equals(Map.of(ERRAND, "go_yard")); i++) {
+            for (int i = 0; i < 3 && !"go_yard".equals(journal(w).active().get(ERRAND)); i++) {
                 int id = w.getServer().computeOnServer(s -> {
                     var v = w.getConnection().getServerLevel().getEntity(keeper);
                     w.getConnection().getServerPlayer().teleportTo(v.getX() + 1, v.getY(), v.getZ());
@@ -73,16 +73,16 @@ public final class ErrandGameTest implements FabricClientGameTest {
                 });
                 c.waitTicks(10);
             }
-            check(journal(w).active().equals(Map.of(ERRAND, "go_yard")), "talked to the keeper: " + journal(w));
+            check("go_yard".equals(journal(w).active().get(ERRAND)), "talked to the keeper: " + journal(w));
 
             BlockPos yard = built.anchors().get("anchor:training");
             w.getServer().runCommand("tp @p " + yard.getX() + " " + yard.getY() + " " + (yard.getZ() + 1));
-            for (int i = 0; i < 20 && !journal(w).active().equals(Map.of(ERRAND, "go_board")); i++) c.waitTicks(10);
-            check(journal(w).active().equals(Map.of(ERRAND, "go_board")), "the keeper's flag takes the branch to the board: " + journal(w));
+            for (int i = 0; i < 20 && !"go_board".equals(journal(w).active().get(ERRAND)); i++) c.waitTicks(10);
+            check("go_board".equals(journal(w).active().get(ERRAND)), "the keeper's flag takes the branch to the board: " + journal(w));
             BlockPos board = built.anchors().get("notice_board");
             w.getServer().runCommand("tp @p " + board.getX() + " " + board.getY() + " " + (board.getZ() + 1));
             for (int i = 0; i < 20 && !journal(w).done().contains(ERRAND); i++) c.waitTicks(10);
-            check(journal(w).done().contains(ERRAND) && journal(w).active().isEmpty(), "done at the board: " + journal(w));
+            check(journal(w).done().contains(ERRAND) && !journal(w).active().containsKey(ERRAND), "done at the board: " + journal(w));
             check(!w.getServer().computeOnServer(s -> ShinobiProgression.accept(w.getConnection().getServerPlayer(), ERRAND)), "taken once");
             check(ryo(w) == 120, "the errand pays 20 ryo on the first day's 100: " + ryo(w));
 
@@ -104,7 +104,7 @@ public final class ErrandGameTest implements FabricClientGameTest {
         }
         try (var w = save.open()) {
             w.getConnection().waitForChunksRender();
-            check(journal(w).done().equals(List.of(ERRAND)) && journal(w).active().isEmpty()
+            check(journal(w).done().equals(List.of(ERRAND)) && !journal(w).active().containsKey(ERRAND)
                     && journal(w).flags().equals(List.of("test.errand.keeper_asked", "test.errand.board_read")), "the journal after reopening: " + journal(w));
             c.waitTicks(20);
             check(ryo(w) == 76 && count(w, ShinobiLife.item("green_tea")) == 1 && count(w, ShinobiLife.item("tatami")) == 1,
