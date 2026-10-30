@@ -1,11 +1,11 @@
 """Every combat pose and clip the player and residents need, keyed the way VF keys its clips
-(tools/animations/: a Python dict of clip id -> clip), so the keyframes can be authored into this
-same table later and compiled to assets/narutominecraft/resident_animations/*.json (residents) and
-the player poser's clip folder (player).
+(tools/animations/: a Python dict of clip id -> clip), with the keyframes authored into this same
+table (keys() below); the player's poser reads them from animations.json, and they compile later to
+assets/narutominecraft/resident_animations/*.json for residents.
 
 Fields: ticks (length), loop, who (player, resident or both), fp (needs a first-person arm path),
 priority (P0: the Phase 0 spike and Beta 1; P1: Beta 2; P2: Beta 3; P3: later), slice, and keys
-(None until authored: VF's keyframe list of {tick, part, rot, pos, ease}).
+(None until authored: VF's keyframe list of {tick, part, rot}; rotation only, linear, for now).
 """
 
 P0, P1, P2, P3 = "P0", "P1", "P2", "P3"
@@ -217,6 +217,7 @@ clip("life.workbench", 30, P0, loop=True, who="player")
 # right_leg, left_leg. A part a clip leaves out keeps the vanilla pose.
 def keys(cid, *frames):
     """frames: (tick, {part: (x, y, z)})."""
+    assert all(p in ("head", "body", "right_arm", "left_arm", "right_leg", "left_leg") for _, parts in frames for p in parts), cid
     CLIPS["combat." + cid]["keys"] = [{"tick": t, "part": p, "rot": list(r)} for t, parts in frames for p, r in parts.items()]
 
 

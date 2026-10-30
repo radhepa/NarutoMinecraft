@@ -10,16 +10,18 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
 - 5f21cc5: Hidden Leaf world preset. a36468c, 8bf6f40 (P06): chakra, hand signs, Academy techniques, guard, dodge.
 - P05: calendar, stipend, flat, pets, dishes, fatigue, Well Rested (e92d2f6 to 2348843); the keeper's shop screen
   and its fixes (8e873b3 to e43e580). Leaf worlds from before e92d2f6: recreate them.
-- This file's commit (P06 controls and animation): every combat key, the twelve signs included, is a vanilla key
+- 72c995b (P06 controls and animation): every combat key, the twelve signs included, is a vanilla key
   mapping under Shinobi in Options > Controls, rebindable and saved (COMBAT.md defaults; guard on right click). The
   twelve signs, transition, fizzle, push-palms, block and four dodges are keyed in `tools/combat/animations.py` and
   play on every player from the synced stance (clip and start tick).
+- This file's commit (P06 review fixes): worn armour follows the poses; the wheel on J and substitution on N
+  (G and X stay for the pouch and a quick slot); a weave or guard ends a one-shot clip.
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-`./gradlew build`, `:combat:runClientGameTest` and `:progression:runClientGameTest` passed
-(`.local-dev/logs/p06anim-*.log`); screenshots in `combat/build/run/clientGameTest/screenshots/`: controls-shinobi,
-academy-weaving, academy-cast, academy-dodge, academy-guard.
+`./gradlew build` and `:combat:runClientGameTest` passed (`.local-dev/logs/animfix-*.log`; `:progression:runClientGameTest`
+at 72c995b: `p06anim-*.log`); screenshots in `combat/build/run/clientGameTest/screenshots/`: controls-shinobi,
+academy-weaving, academy-cast, academy-dodge, academy-guard (in iron armour).
 
 ## Remaining
 

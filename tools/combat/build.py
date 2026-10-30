@@ -158,6 +158,8 @@ def spoiler_terms_from_bible():
     for doc in ("ROADMAP.md", "README.md", "BONDS.md", "SIDE_QUESTS.md", "CLANS.md"):
         if os.path.exists(os.path.join(ROOT, doc)):
             public += fold(open(os.path.join(ROOT, doc), encoding="utf-8").read().lower())
+    # Bold one-word section labels ("**Method.**") are headings, not names; the code says them too.
+    terms -= {"method"}
     return {t for t in terms if len(t) > 3 and fold(t) not in public}
 
 

@@ -120,6 +120,10 @@ public final class AcademyGameTest implements FabricClientGameTest {
             c.getInput().releaseKey(ShinobiCombatClient.WEAVE);
             c.waitTicks(2);
             check(c.computeOnClient(mc -> clip(mc).equals("combat.sign.fizzle")), "a wrong sequence fizzles");
+            c.getInput().pressKey(InputConstants.KEY_2);
+            c.waitTicks(2);
+            check(c.computeOnClient(mc -> mc.player.getInventory().getSelectedSlot() == 1), "outside a weave the hotbar keys switch slots");
+            c.getInput().pressKey(InputConstants.KEY_1);
             c.runOnClient(mc -> { rat.setKey(rat.getDefaultKey()); KeyMapping.resetMapping(); mc.options.save(); });
             c.waitTicks(10);
 
@@ -176,12 +180,16 @@ public final class AcademyGameTest implements FabricClientGameTest {
             float hit = pig - w.getServer().computeOnServer(s -> target(w).getHealth());
             check(Math.abs(hit - 1) < 0.01F, "a practice kunai hits for 1: " + hit);
 
+            int kunai = w.getServer().computeOnServer(s -> player(w).getMainHandItem().getCount());
             c.getInput().holdKey(ShinobiCombatClient.GUARD);
             c.waitTicks(3);
-            check(w.getServer().computeOnServer(s -> !Fighter.of(player(w)).guarding), "right click with a kunai in hand throws and does not guard");
+            check(w.getServer().computeOnServer(s -> !Fighter.of(player(w)).guarding && player(w).getMainHandItem().getCount() < kunai),
+                    "right click with a kunai in hand throws and does not guard");
             c.getInput().releaseKey(ShinobiCombatClient.GUARD);
             w.getServer().runOnServer(s -> player(w).setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY));
             w.getServer().runCommand("tp @p ~ ~ ~ 180 0");   // back to the pig, so the front camera is clear of it
+            w.getServer().runCommand("item replace entity @p armor.chest with iron_chestplate");   // the armour follows the guard pose
+            w.getServer().runCommand("item replace entity @p armor.legs with iron_leggings");
             c.waitTicks(5);
             c.getInput().holdKey(ShinobiCombatClient.GUARD);
             c.waitTicks(3);

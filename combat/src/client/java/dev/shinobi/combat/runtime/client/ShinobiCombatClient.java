@@ -27,10 +27,10 @@ import java.util.stream.Collectors;
  */
 public final class ShinobiCombatClient implements ClientModInitializer {
     static final KeyMapping.Category SHINOBI = KeyMapping.Category.register(Identifier.fromNamespaceAndPath(ShinobiCombat.MOD_ID, "shinobi"));
-    // COMBAT.md: Weave R, the signs 1 to 0, - and =, Dodge Left Alt, block with right click. The wheel and the substitution key are not given there.
-    public static final KeyMapping WEAVE = key("weave", InputConstants.KEY_R), RADIAL = key("radial", InputConstants.KEY_G),
+    // COMBAT.md: Weave R, the signs 1 to 0, - and =, Dodge Left Alt, block with right click, the wheel J and substitution N (keys vanilla leaves free).
+    public static final KeyMapping WEAVE = key("weave", InputConstants.KEY_R), RADIAL = key("radial", InputConstants.KEY_J),
             GUARD = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.shinobi_combat.guard", InputConstants.Type.MOUSE, InputConstants.MOUSE_BUTTON_RIGHT, SHINOBI)),
-            DODGE = key("dodge", InputConstants.KEY_LALT), SUBSTITUTE = key("substitute", InputConstants.KEY_X);
+            DODGE = key("dodge", InputConstants.KEY_LALT), SUBSTITUTE = key("substitute", InputConstants.KEY_N);
     /** The twelve sign keys, read while Weave is held; signs 1 to 9 share the hotbar keys, which do not switch slots while weaving. */
     public static final KeyMapping[] SIGNS = new KeyMapping[12];
     static {

@@ -331,6 +331,7 @@ public final class Fighter {
         long now = p.level().getGameTime();
         var woven = weaver.woven();
         int pose = weaver.weaving() ? Stance.WEAVING : guarding ? Stance.GUARDING : Stance.NONE;
+        if (pose != Stance.NONE) shotUntil = Long.MIN_VALUE;   // a weave or guard ends a one-shot, which never replays after
         String clip = pose == Stance.WEAVING ? "combat.sign." + (woven.isEmpty() ? "transition" : woven.getLast().id())
                 : pose == Stance.GUARDING ? "combat.def.block" : now < shotUntil ? shot : "";
         var signs = woven.stream().map(HandSign::id).toList();

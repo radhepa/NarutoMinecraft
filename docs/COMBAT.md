@@ -165,7 +165,7 @@ lays its moves over these: where it has a move you qualify for, it plays; otherw
 **Style tiers.** Initiate, adept, expert, master, grandmaster (x1.0 to x1.4), opened at taijutsu ranks 1, 3,
 5, 7 and 9 by use and a mentor's trial. Each tier opens moves: finishers at tiers 2 to 5.
 
-**Guard, parry and counters.** Block with right click (Beta 1). Start a block inside the parry window (Story 6
+**Guard, parry and counters.** Block with right click with an empty hand; a held item uses instead (Beta 1). Start a block inside the parry window (Story 6
 ticks, Shinobi 4, Hard 3) before a melee hit lands: no damage, the attacker staggers for 20 ticks, +25
 momentum and a 12-tick counter window (x1.5). Parrying a thrown kunai knocks it down (weapons rank 3 catches
 it). Ninjutsu, grabs and red-flash moves cannot be parried. Counters come from parries (P L), Iron Guard's
@@ -261,8 +261,8 @@ chakra like ninjutsu of their rank.
 *Data: `core/signs.json`, `techniques/*.json`; the full catalogue: [combat/techniques.md](combat/techniques.md). Code: `HandSign`, `Weaver`, `SignBook`, `Mastery`, `Chakra`, `Cooldowns`.*
 
 **Hand signs.** Twelve signs. Hold **Weave** (R) and enter signs **typed** (keys 1 to 0, - and =) or on the
-**radial** wheel (Rat at the top, clockwise, 30 degrees a sign; mouse or stick, a dead zone in the middle).
-Release to cast. Each sign takes 4 ticks (3 from control 80, one less at ninjutsu ranks 5 and 10, never under
+**radial** wheel (Rat at the top, clockwise, 30 degrees a sign; mouse or stick, a dead zone in the middle;
+J opens it, and N substitutes). Release to cast. Each sign takes 4 ticks (3 from control 80, one less at ninjutsu ranks 5 and 10, never under
 2). Improvements on the roadmap's input:
 
 - **Prefix hints**: while you weave, the HUD lists the techniques you know that start with the signs so far.
