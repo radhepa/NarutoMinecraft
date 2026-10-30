@@ -19,6 +19,7 @@ import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.GameType;
+import net.minecraft.world.level.gamerules.GameRules;
 import net.minecraft.world.level.levelgen.presets.WorldPresets;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
@@ -33,7 +34,8 @@ import java.util.function.Supplier;
  * P03-2: the test street on a flat map: ten residents each get their own flat and bed, walk by day and sleep at night.
  * P03-3: the same seed gives the same cast, and reopening the save finds the same residents in the same flats.
  * P03-4: the tea house keeper lives over the shop, the notice board and training yard stand in the village, and only
- * builder mode can change the street. Screenshots: test-street-*.
+ * builder mode can change the street.
+ * P03-5: building the street sets the Leaf map's rules. Screenshots: test-street-*.
  */
 @SuppressWarnings({"UnstableApiUsage", "unchecked"})
 public final class TestStreetGameTest implements FabricClientGameTest {
@@ -79,6 +81,8 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             BlockPos board = built.anchors().get("notice_board"), yard = built.anchors().get("anchor:training");
             w.getServer().runOnServer(s -> {
                 var level = w.getConnection().getServerLevel();
+                var rules = level.getGameRules();
+                check(TestStreet.OFF.stream().noneMatch(rules::get) && rules.get(GameRules.FIRE_SPREAD_RADIUS_AROUND_PLAYER) == 0, "the Leaf map's rules");
                 check(level.getBlockState(board).is(VillageBlocks.get("notice_board")), "VF's notice board on the street front");
                 for (var at : List.of(board, yard))
                     check(built.village().equals(VillageSettlements.book(level).at(at).id()), "board and yard in the street's village: " + at.toShortString());

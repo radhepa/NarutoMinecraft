@@ -1,6 +1,6 @@
 # Development state
 
-**Phase/task:** P03-5, the test map's rules
+**Phase/task:** P03-6, a resident count and a performance route
 ([ROADMAP.md 13.5](../../ROADMAP.md#p03--make-the-village-tangible)). P00 to P02 passed (13.3).
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
 The story checkout on the Desktop keeps its unfinished work; story review stays paused.
@@ -12,12 +12,19 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 3. Done (partly): deterministic resident identity and appearance, surviving reload. Still open: the
    Core save seed and Classic/Varied mode choosing the cast, role identities for the bound cast (from P02).
 4. Done: the street's tea house, notice board and training yard; adventure protection and builder mode.
-5. Map rules (vanilla and VF generation off on the test map).
+5. Done: the Leaf map's rules (no monsters, raids, traders, TNT, arrows or fire spread).
 6. A resident count and a measured route for performance.
 
 P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
+
+- P03-5 `./gradlew build`: passed; `:village:runClientGameTest` passed: building the street turns off monster,
+  patrol, phantom and trader spawns, raids, TNT and projectile block damage, and fire spread (`TestStreet.OFF`),
+  and the gametest checks them; residents still walk and 9 of 11 sleep in their own beds. VF's generation needs
+  no switch: the test map is flat with structures off. Ponytail review: mob griefing stays on (VF's farmers
+  harvest and residents pick up items through it); a fire never goes out with spread off, so `StreetGuard` stops
+  flint and steel and fire charges. Not yet: buckets, explosions of mobs a player places (shortcut).
 
 - P03-4 `./gradlew build`: passed; `:village:runClientGameTest` passed: the street pastes the tea house
   (keeper upstairs, its own plaque and bed) and the new `training_yard` (targets, hay, VF's notice board)
@@ -71,6 +78,6 @@ None.
 
 ## Next
 
-P03-5: the test map's rules: vanilla structures, mobs and VF's own village generation stay off on the
-Leaf test map, set once by `/narutominecraft street` rather than by the gametest's commands, and checked
-by the street gametest. Then P03-6 (resident count, performance route), then P04's first errand.
+P03-6: set the street's resident count and record a performance route: a fixed camera walk along the street
+by day and at night, logging tick time (MSPT) and frame time with all residents loaded, as the baseline before
+any buildings or residents are duplicated. Then P04-1, the first errand with a persistent journal.

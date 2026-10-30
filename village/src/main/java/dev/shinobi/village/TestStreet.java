@@ -11,6 +11,8 @@ import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.level.block.BedBlock;
+import net.minecraft.world.level.gamerules.GameRule;
+import net.minecraft.world.level.gamerules.GameRules;
 import net.minecraft.world.level.block.state.properties.BedPart;
 
 import java.nio.charset.StandardCharsets;
@@ -29,6 +31,12 @@ import java.util.UUID;
  */
 public final class TestStreet {
     public static final String BUILDING = "leaf_block", PLAYER_FLAT = "flat.leaf_block.3a", VILLAGE = "Leaf Test Street";
+    /**
+     * The Leaf map's rules, all off: no monsters, raiders or traders wander in, and TNT and arrows leave the street alone.
+     * Mob griefing stays on: VF's farmers harvest and residents pick up items through it.
+     */
+    public static final List<GameRule<Boolean>> OFF = List.of(GameRules.SPAWN_MONSTERS, GameRules.SPAWN_PATROLS, GameRules.SPAWN_PHANTOMS,
+            GameRules.SPAWN_WANDERING_TRADERS, GameRules.RAIDS, GameRules.TNT_EXPLODES, GameRules.PROJECTILES_CAN_BREAK_BLOCKS);
     /** Each plot and where its [0, 0, 0] sits from the apartment block's: the shop west, the yard east, street fronts in line. */
     static final List<Map.Entry<String, Vec3i>> PLOTS = List.of(Map.entry(BUILDING, Vec3i.ZERO),
             Map.entry("shop_tea_house", new Vec3i(-12, 0, 4)), Map.entry("training_yard", new Vec3i(36, 0, 4)));
@@ -39,6 +47,11 @@ public final class TestStreet {
     public static Built build(ServerLevel level, BlockPos origin) {
         var here = VillageSettlements.discover(level, origin);
         if (here != null) throw new IllegalStateException("The test street needs empty ground; " + here.name() + " is already here");
+        // shortcut: world-wide rules set by the street command, until the master map ships its own level settings (Phase 0, Map).
+        var rules = level.getGameRules();
+        for (var rule : OFF) rules.set(rule, false, level.getServer());
+        // No fire spreads or burns blocks; a fire, once lit, also never goes out, so StreetGuard stops players lighting one.
+        rules.set(GameRules.FIRE_SPREAD_RADIUS_AROUND_PLAYER, 0, level.getServer());
         var plots = new ArrayList<Map.Entry<BlockPos, JsonArray>>();
         for (var plot : PLOTS) {
             var at = origin.offset(plot.getValue());

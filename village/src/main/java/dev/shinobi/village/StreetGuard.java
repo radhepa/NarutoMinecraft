@@ -19,9 +19,10 @@ import net.minecraft.world.level.block.state.BlockState;
 /**
  * Adventure protection: nobody breaks or builds on the Leaf map except in builder mode, which an operator
  * switches on deliberately with `/narutominecraft builder`. Doors, beds, plaques and the board still work.
- * shortcut: protects the test street's village by name and only blocks breaking, block placement, the tools that
- * reshape blocks and making a flat private (not buckets, fire or explosions), until the master map's layout names
- * its protected regions (Phase 0, Map).
+ * Monster spawns, fire spread, TNT and arrows are handled by the map's rules ({@link TestStreet#OFF}).
+ * shortcut: protects the test street's village by name and only blocks breaking, block placement, lighting fires, the
+ * tools that reshape blocks and making a flat private (not buckets or explosions of placed mobs), until the master
+ * map's layout names its protected regions (Phase 0, Map).
  */
 public final class StreetGuard {
     public static final String BUILDER = "narutominecraft.builder";
@@ -38,7 +39,7 @@ public final class StreetGuard {
             // Sneak-using a plaque makes the house private, which turns its resident out.
             if (sneak && target.getBlock() instanceof HousePlaqueBlock) return allowed(level, player, pos) ? InteractionResult.PASS : InteractionResult.FAIL;
             if (!sneak && usable(target)) return InteractionResult.PASS;
-            BlockPos changed = stack.getItem() instanceof BlockItem ? pos.relative(hit.getDirection())
+            BlockPos changed = stack.getItem() instanceof BlockItem || stack.is(Items.FLINT_AND_STEEL) || stack.is(Items.FIRE_CHARGE) ? pos.relative(hit.getDirection())
                     : stack.is(ItemTags.HOES) || stack.is(ItemTags.SHOVELS) || stack.is(ItemTags.AXES) || stack.is(Items.BONE_MEAL) ? pos : null;
             return changed != null && !allowed(level, player, changed) ? InteractionResult.FAIL : InteractionResult.PASS;
         });
