@@ -129,7 +129,7 @@ def flat(p: Plan, x0: int, fy: int, fid: str, wall: str):
         furnish(p, X, Z, y1, role or HOUSEHOLD[fid])
     # markers
     door = (X(1), y1, FRONT)
-    p.marker("house_plaque", (X(0), fy + 2, Z(7)), facing="south", home=f"flat.leaf_block.{fid}")
+    p.marker("house_plaque", (X(0), fy + 2, WALK), facing="south", home=f"flat.leaf_block.{fid}")  # on the gallery, beside the door
     p.marker("mailbox", (X(2), fy + 2, WALK), facing="south", home=f"flat.leaf_block.{fid}")
     p.marker("bed", (X(0), y1, Z(0)))
     for kind, pos in (("anchor:bed", (X(0), y1, Z(0))), ("anchor:stove", (X(9), y1, Z(4))), ("anchor:sink", (X(9), y1, Z(5))),
@@ -141,7 +141,7 @@ def flat(p: Plan, x0: int, fy: int, fid: str, wall: str):
     if player:
         p.marker("candidate_flat", (X(3), y1, Z(3)), home=f"flat.leaf_block.{fid}", note=role)
     return {
-        "id": f"flat.leaf_block.{fid}", "tier": "flat", "plaque": [X(0), fy + 2, Z(7)], "door": list(door),
+        "id": f"flat.leaf_block.{fid}", "tier": "flat", "plaque": [X(0), fy + 2, WALK], "door": list(door),
         "mailbox": [X(2), fy + 2, WALK],
         "rooms": [{"id": "main", "w": 6, "d": 6, "h": 3, "at": [X(0), y1, Z(0)]},
                   {"id": "kitchenette", "w": 3, "d": 4, "h": 3, "at": [X(7), y1, Z(4)]},

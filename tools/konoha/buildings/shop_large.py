@@ -171,7 +171,7 @@ def build(id="shop_large", title="Large store", trade="furniture", wall="terraco
                 p.set(6 + c, 18 - r, 7, "black_concrete" if ch == "#" else "white_concrete")
     p.marker("resident", (11, 2, 6), group="civilian", job=job)
     p.marker("bed", (13, 7, 7))
-    p.marker("house_plaque", (8, 8, 10), facing="north")
+    p.marker("house_plaque", (12, 8, 12), facing="south")     # outside on the front wall, the keeper's rooms behind it
     p.marker("door_anchor", (8, 1, 12))
     p.cutaway = [6, 10]
     return p

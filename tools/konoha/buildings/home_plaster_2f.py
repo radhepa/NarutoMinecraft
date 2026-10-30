@@ -20,7 +20,7 @@ def build(wall="cream", roof="green") -> Plan:
     # The cream and green home keeps the plain id; the other variants carry their styles in theirs.
     pid = "home_plaster_2f" if (wall, roof) == ("cream", "green") else f"home_plaster_2f.{wall}_{roof}"
     p = Plan(pid, "Two-storey plaster home", (11, 14, 11), "home",
-             "A House Plaque inside the door flood-fills the house; beds upstairs; 2-3 residents")
+             "A House Plaque outside beside the door flood-fills the house; beds upstairs; 2-3 residents")
     # ground and garden
     p.fill(0, 0, 0, 10, 0, 10, "grass_block")
     p.fill(4, 0, 8, 6, 0, 10, "dirt_path")
@@ -115,7 +115,7 @@ def build(wall="cream", roof="green") -> Plan:
     # roof: eaves at the top of the upper walls
     p.gable_roof(1, 9, 1, 7, 9, roof, gable_style=wall)
     # markers for the Village Friends homes, census and routines
-    p.marker("house_plaque", (5, 3, 6), facing="south")
+    p.marker("house_plaque", (6, 3, 8), facing="south")     # outside on the front wall, beside the door
     p.marker("bed", (2, 6, 2))
     p.marker("bed", (6, 6, 5))
     p.marker("resident", (4, 2, 3), group="any", job="any")

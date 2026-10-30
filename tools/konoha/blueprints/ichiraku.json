@@ -316,9 +316,9 @@
   {
    "type": "house_plaque",
    "pos": [
-    5,
+    4,
     6,
-    2
+    8
    ],
    "facing": "south"
   },

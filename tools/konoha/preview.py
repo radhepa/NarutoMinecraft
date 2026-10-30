@@ -167,14 +167,17 @@ VANILLA = {
     "stripped_dark_oak_wood": ("#4a3a26", "planks"), "candle": ("#e8d9b0", "plain"), "decorated_pot": ("#8c4a32", "plain"),
     "light_blue_carpet": ("#3aafd9", "wool"), "blue_carpet": ("#35399d", "wool"), "green_carpet": ("#546d1b", "wool"),
     "gray_carpet": ("#3e4447", "wool"), "potted_fern": ("#4f7a2c", "leaves"), "potted_spruce_sapling": ("#3d5a2a", "leaves"),
-    "potted_bamboo": ("#7d8a27", "leaves"),
+    "potted_bamboo": ("#7d8a27", "leaves"), "tuff": ("#6c6d66", "stone"), "polished_diorite": ("#c2c2c4", "plain"),
+    "diorite": ("#bdbdbd", "stone"), "red_sandstone": ("#ba6421", "stone"), "waxed_weathered_cut_copper": ("#6c9e7a", "grid"),
+    "waxed_weathered_cut_copper_stairs": ("#6c9e7a", "grid"), "waxed_weathered_cut_copper_slab": ("#6c9e7a", "grid"),
+    "moss_carpet": ("#596e2d", "wool"),
 }
 
 THIN = {"glass_pane", "white_stained_glass_pane", "gray_stained_glass_pane", "iron_bars"}
 FENCE = {"spruce_fence", "oak_fence", "dark_oak_fence", "bamboo_fence"}
 DOORS = {"spruce_door", "dark_oak_door"}
 TRAPDOORS = {"spruce_trapdoor", "dark_oak_trapdoor", "iron_trapdoor", "birch_trapdoor"}
-CARPET = {"white_carpet", "red_carpet", "light_blue_carpet", "blue_carpet", "green_carpet", "gray_carpet", "spruce_pressure_plate"}
+CARPET = {"moss_carpet", "white_carpet", "red_carpet", "light_blue_carpet", "blue_carpet", "green_carpet", "gray_carpet", "spruce_pressure_plate"}
 BEDS = {"red_bed", "blue_bed", "white_bed", "green_bed", "brown_bed"}
 
 

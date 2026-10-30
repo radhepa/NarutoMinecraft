@@ -404,11 +404,11 @@
   {
    "type": "house_plaque",
    "pos": [
+    12,
     8,
-    8,
-    10
+    12
    ],
-   "facing": "north"
+   "facing": "south"
   },
   {
    "type": "door_anchor",

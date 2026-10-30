@@ -26,6 +26,12 @@ them alone. Each resident a batch spawns calls `LeafNames.marker(v, marker)` aft
   `butsudan`, `desk`, `toilet`; TECHNIQUES §10.1); Sakura Lane's home (all three palettes) with a kitchen run, dining,
   toilet, parents' and child's rooms; the Leaf Block's resident flats by household (the player flats stay open); the
   keepers' rooms above the grocer, the furniture and weapon shops, Ichiraku and the tea house.
+- Konoha K4, first part (this commit): the home family (`tools/konoha/families/home.py`, `--check`): a seeded
+  generator that varies the form (storeys, gable either way, hip, flat roof garden, a wing, porch, balcony, door
+  side, garden), never one form twice within five plots; kit `slab_roof` and `plaster`. Its sheet
+  (`docs/renders/konoha/families/home.png`, `home_cutaway.png`) waits for the owner's sign-off. Every House Plaque
+  moved outside onto a solid wall: beside a home's door, on the gallery beside a flat's door, on a shop's front at
+  its keeper's floor (TECHNIQUES §10).
 - `names` merged (63110e1, owner-approved): resident names and dialogue.
 
 ## Villager track (branch `claude/villagers-eeb914`, for `dev`)
@@ -51,6 +57,9 @@ passed; the client gametest with `LeafNamesGameTest` passed (`.local-dev/logs/me
 day route 8.8 to 13.4 ms per tick, the night route 4.8 to 5.0. Screenshots: `village/build/run/clientGameTest/screenshots/*konoha-*`;
 renders: `docs/renders/konoha/`. K3: build passed (`.local-dev/logs/k3-build2.log`); the client gametest passed
 (`.local-dev/logs/k3-gt2.log`): 29 residents, 30 plaques, 27 of 29 asleep, the day route 6.5 to 10.2 ms per tick.
+K4 (plaques outside, home family): `home.py --check` ok (1800 homes on lots 8-13 x 9-13, 77 forms); build passed
+(`.local-dev/logs/k4-plaque-build.log`); the client gametest passed (`.local-dev/logs/k4-plaque-gt.log`): 29
+residents, 30 plaques, 27 of 29 asleep, the day route 5.4 to 10.6 ms per tick.
 
 ## Remaining
 
@@ -75,4 +84,6 @@ None.
 
 ## Next
 
-K4 building families and the quality gate ([BATCHES.md](../konoha/BATCHES.md)).
+K4 building families and the quality gate ([BATCHES.md](../konoha/BATCHES.md)): the owner signs off the home
+family's sheet; then the shop-house, townhouse, walk-up, round building, compound wall and gate families, and
+Sakura Lane remade from the home family.

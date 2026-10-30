@@ -91,7 +91,7 @@ def build(wall="cream", roof="orange", awning="red", noren="tea") -> Plan:
     p.marker("seat", (7, 2, 5))
     p.marker("resident", (3, 2, 5), group="civilian", job="tea_house")
     p.marker("bed", (8, 6, 3))
-    p.marker("house_plaque", (5, 6, 4), facing="south")
+    p.marker("house_plaque", (5, 7, 8), facing="south")     # outside on the front wall, the keeper's rooms behind it
     p.marker("door_anchor", (5, 1, 9))
     p.cutaway = [5, 9]
     return p

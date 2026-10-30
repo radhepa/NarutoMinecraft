@@ -17,21 +17,29 @@ from __future__ import annotations
 
 import json
 import math
+import random
 from pathlib import Path
 
 NS = "narutominecraft"
 OUT = Path(__file__).with_name("blueprints")
 
 # -- palettes (KONOHA_BUILD.md, style guide) ---------------------------------------------------
+# cluster/high/sill/grime/foot: the gradient of docs/konoha/TECHNIQUES.md §2, laid by Plan.plaster
 WALLS = {
     "cream": {"wall": "smooth_sandstone", "trim": "cut_sandstone", "band": "terracotta", "base": "stone_bricks",
-              "post": "stripped_spruce_log[axis=y]"},
+              "post": "stripped_spruce_log[axis=y]", "cluster": ("cut_sandstone", "sandstone"), "sill": "sandstone",
+              "grime": ("sandstone", "sandstone", "sandstone", "smooth_red_sandstone"),
+              "foot": ("stone_bricks", "stone_bricks", "tuff", "polished_andesite")},
     "white": {"wall": "smooth_quartz", "trim": "calcite", "band": "red_terracotta", "base": "stone_bricks",
-              "post": "stripped_dark_oak_log[axis=y]"},
+              "post": "stripped_dark_oak_log[axis=y]", "cluster": ("calcite",), "sill": "polished_diorite",
+              "grime": ("polished_diorite",), "foot": ("diorite", "andesite")},
     "terracotta": {"wall": "terracotta", "trim": "smooth_sandstone", "band": "brown_terracotta", "base": "stone_bricks",
-                   "post": "stripped_dark_oak_log[axis=y]"},
+                   "post": "stripped_dark_oak_log[axis=y]", "cluster": ("brown_terracotta",), "high": ("white_terracotta",),
+                   "sill": "brown_terracotta", "grime": ("brown_terracotta",), "foot": ("stone_bricks",)},
     "plaster_orange": {"wall": "smooth_red_sandstone", "trim": "smooth_sandstone", "band": "red_terracotta",
-                       "base": "stone_bricks", "post": "stripped_dark_oak_log[axis=y]"},
+                       "base": "stone_bricks", "post": "stripped_dark_oak_log[axis=y]",
+                       "cluster": ("red_sandstone", "cut_red_sandstone"), "sill": "red_sandstone", "grime": ("terracotta",),
+                       "foot": ("stone_bricks",)},
 }
 ROOFS = {
     "grey": {"stairs": "deepslate_tile_stairs", "slab": "deepslate_tile_slab", "full": "deepslate_tiles",
@@ -40,6 +48,8 @@ ROOFS = {
               "full": "waxed_oxidized_cut_copper", "ridge": f"{NS}:green_kawara_ridge"},
     "orange": {"stairs": "waxed_cut_copper_stairs", "slab": "waxed_cut_copper_slab", "full": "waxed_cut_copper",
                "ridge": f"{NS}:orange_kawara_ridge"},
+    "teal": {"stairs": "waxed_weathered_cut_copper_stairs", "slab": "waxed_weathered_cut_copper_slab",
+             "full": "waxed_weathered_cut_copper", "ridge": f"{NS}:green_kawara_ridge"},
     "wood": {"stairs": "dark_oak_stairs", "slab": "dark_oak_slab", "full": "dark_oak_planks",
              "ridge": "stripped_dark_oak_log"},
 }
@@ -179,6 +189,69 @@ class Plan:
                         if self.get(x, yy, z) is None:
                             self.set(x, yy, z, wall)
         return ytop + 1
+
+    def slab_roof(self, x0, x1, z0, z1, y, style, kind="x", gable_style=None, overhang=1):
+        """A low tile roof (bottom and top slabs in turn, about 22°) over the walls x0..x1, z0..z1, eaves at
+        height y; it never replaces a block already placed. kind "x" or "z": a gable with its ridge along that axis;
+        "hip": four slopes to a ridge along the longer side. The span across the ridge, with the overhang, must be
+        odd so the ridge has a centre row. Returns the height of the ridge block."""
+        r = ROOFS[style]
+        xa, xb, za, zb = x0 - overhang, x1 + overhang, z0 - overhang, z1 + overhang
+        along = kind if kind in ("x", "z") else "x" if xb - xa >= zb - za else "z"
+        across = zb - za if along == "x" else xb - xa
+        if across % 2:
+            raise ValueError(f"{self.id}: roof span {across + 1} is even; adjust the walls or the overhang")
+        kmax = across // 2
+        ytop = y + kmax // 2
+
+        def put(x, yy, z, state):
+            if self.get(x, yy, z) is None:
+                self.set(x, yy, z, state)
+
+        for x in range(xa, xb + 1):
+            for z in range(za, zb + 1):
+                kx, kz = min(x - xa, xb - x), min(z - za, zb - z)
+                k = kz if kind == "x" else kx if kind == "z" else min(kx, kz)
+                if k == kmax:
+                    put(x, ytop, z, r["full"])
+                    put(x, ytop + 1, z, f"{r['ridge']}[axis={along}]")
+                else:
+                    put(x, y + k // 2, z, f"{r['slab']}[type={'bottom' if k % 2 == 0 else 'top'}]")
+                if k == 0:  # the eave lip, the kit's shadow line
+                    f = ("north" if z == za else "south") if kz == 0 and kind != "z" else "west" if x == xa else "east"
+                    put(x, y - 1, z, f"{r['stairs']}[facing={f},half=top]")
+        if gable_style and kind in ("x", "z"):  # plaster triangles under the tiles at both ends
+            wall = WALLS[gable_style]["wall"]
+            for v in range(z0, z1 + 1) if kind == "x" else range(x0, x1 + 1):
+                k = min(v - za, zb - v) if kind == "x" else min(v - xa, xb - v)
+                for yy in range(y, (ytop if k == kmax else y + k // 2)):
+                    for u in (x0, x1) if kind == "x" else (z0, z1):
+                        put(*((u, yy, v) if kind == "x" else (v, yy, u)), wall)
+        return ytop + 1
+
+    def plaster(self, x0, y0, z0, x1, y1, z1, style, seed, street_z=None):
+        """TECHNIQUES §2's gradient on the walls in the box: the field broken by seeded clumps (about 15%), darker
+        under every window, the footing course (y0) mixed, and a grime course above it on the street face."""
+        p, rng = WALLS[style], random.Random(seed)
+        field, base = mc(p["wall"]), mc(p["base"])
+        cells = [(x, y, z) for (x, y, z), s in self.blocks.items()
+                 if x0 <= x <= x1 and y0 < y <= y1 and z0 <= z <= z1 and s == field]
+        mid = (min(c[1] for c in cells) + max(c[1] for c in cells)) / 2 if cells else y0
+        for c in rng.sample(cells, len(cells) // 22):  # clumps of about three blocks, never rows
+            pick = p.get("high", p["cluster"]) if c[1] > mid else p["cluster"]
+            for dx, dy, dz in [(0, 0, 0)] + rng.sample([(1, 0, 0), (-1, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, 1), (0, 0, -1)], 3):
+                q = (c[0] + dx, c[1] + dy, c[2] + dz)
+                if self.blocks.get(q) == field:
+                    self.blocks[q] = mc(rng.choice(pick))
+        for (x, y, z), s in list(self.blocks.items()):
+            if not (x0 <= x <= x1 and y0 <= y <= y1 and z0 <= z <= z1):
+                continue
+            if y == y0 and s == base:
+                self.blocks[(x, y, z)] = mc(rng.choice(p["foot"]))
+            elif s != mc(p["post"]) and base_name(self.blocks.get((x, y + 1, z), "")).endswith("_pane") and y > y0:
+                self.blocks[(x, y, z)] = mc(p["sill"])
+            elif z == street_z and y == y0 + 1 and s in (field, *map(mc, p["cluster"])):
+                self.blocks[(x, y, z)] = mc(rng.choice(p["grime"]))
 
     def flat_roof(self, x0, x1, z0, z1, y, style, roof="smooth_stone"):
         """A flat roof slab with a one-block parapet: where Konoha keeps its water tanks."""

@@ -183,6 +183,9 @@ decorated pots, carpet offcuts by the door.
   furniture taller than a carpet or a trapdoor laid flat.
 - Beds stay where their `bed` markers are; a moved bed moves its marker.
 - No furniture on the house plaque, the mailbox or any anchor marker block.
+- The House Plaque hangs outside on a solid wall, never on air: beside a home's door, on the gallery
+  beside a flat's door, on a shop's front at its keeper's floor. The cell two behind it is room air:
+  Village Friends floods the house from there.
 - Low pieces (carpet, trapdoor tables, slabs) in the walk line; tall pieces against the walls.
 
 ### 10.3 Room programmes by home type

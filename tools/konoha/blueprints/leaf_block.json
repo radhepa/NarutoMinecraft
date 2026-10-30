@@ -459,7 +459,7 @@
    "pos": [
     1,
     3,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.1a"
@@ -570,7 +570,7 @@
    "pos": [
     12,
     3,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.1b"
@@ -680,7 +680,7 @@
    "pos": [
     23,
     3,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.1c"
@@ -790,7 +790,7 @@
    "pos": [
     1,
     7,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.2a"
@@ -900,7 +900,7 @@
    "pos": [
     12,
     7,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.2b"
@@ -1010,7 +1010,7 @@
    "pos": [
     23,
     7,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.2c"
@@ -1120,7 +1120,7 @@
    "pos": [
     1,
     11,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.3a"
@@ -1230,7 +1230,7 @@
    "pos": [
     12,
     11,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.3b"
@@ -1340,7 +1340,7 @@
    "pos": [
     23,
     11,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.3c"
@@ -1450,7 +1450,7 @@
    "pos": [
     1,
     15,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.4a"
@@ -1560,7 +1560,7 @@
    "pos": [
     12,
     15,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.4b"
@@ -1671,7 +1671,7 @@
    "pos": [
     23,
     15,
-    10
+    12
    ],
    "facing": "south",
    "home": "flat.leaf_block.4c"

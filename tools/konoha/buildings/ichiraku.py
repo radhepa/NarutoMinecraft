@@ -88,7 +88,7 @@ def build() -> Plan:
         p.marker("seat", (x, 1, 8), facing="north")
     p.marker("resident", (5, 1, 4), group="civilian", job="ichiraku")
     p.marker("bed", (2, 5, 2))
-    p.marker("house_plaque", (5, 6, 2), facing="south")
+    p.marker("house_plaque", (4, 6, 8), facing="south")     # outside on the front wall, the keeper's rooms behind it
     p.marker("door_anchor", (5, 1, 10))
     p.cutaway = [4]
     return p

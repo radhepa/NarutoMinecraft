@@ -95,7 +95,7 @@ def build(id="shop_house", title="Shop-house", wall="cream", roof="green", awnin
     p.gable_roof(1, 9, 1, 7, 9, roof, gable_style=wall)
     p.marker("resident", (5, 2, 4), group="civilian", job=job)
     p.marker("bed", (2, 6, 2))
-    p.marker("house_plaque", (4, 7, 6), facing="north")
+    p.marker("house_plaque", (5, 7, 8), facing="south")     # outside on the front wall, the keeper's rooms behind it
     p.marker("door_anchor", (5, 1, 9))
     p.cutaway = [5, 9]
     return p
