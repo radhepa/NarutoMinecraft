@@ -1,6 +1,6 @@
 # Development state
 
-**Paused (owner, 30 October 2026):** village building waits until the UI session (its own branch) is merged.
+**Resumed (owner, 30 October 2026):** plan the whole village before building more (Next).
 **Phase/task:** Konoha, the owner's order of 30 October 2026: the whole village of KONOHA_BUILD.md, district by
 district (ROADMAP §6: Beta 1, then Beta 2, Beta 3 and Later), before more quest or systems work. M3's story (P07) is
 paused at 6fc02a7. **Branch/base:** `dev`, from `main` e9238bd. Names and dialogue are the merged `names` work: leave
@@ -68,5 +68,6 @@ None.
 
 ## Next
 
-When the owner resumes: Konoha K3, the market district and the Inuzuka clinic; then the rest of Beta 1 in
-Remaining's order; then Beta 2, Beta 3 and Later (ROADMAP §6).
+Konoha master plan: the whole village planned as one city (districts, streets, landmarks, terrain, sightlines,
+story places, building quality and texture references) before more batches; resident home interiors are bare and
+need a pass. Then K3 (the market district and the Inuzuka clinic), the rest of Beta 1, Beta 2, Beta 3 and Later.
