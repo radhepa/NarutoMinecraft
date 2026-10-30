@@ -8,24 +8,25 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
 ## Done since M2
 
 - 5f21cc5: Hidden Leaf world preset. a36468c, 8bf6f40 (P06): chakra, hand signs, Academy techniques, guard, dodge.
-- e92d2f6, f139632, d4e2ed2, 2348843 (P05): calendar, stipend, defeat wakes in flat 3a, chest and table, pets, the 29
-  Beta 1 dishes, fatigue by the clock, Well Rested by comfort. Leaf worlds from before e92d2f6: recreate them.
-- ed59bee, c4f4764 close P04. 8e873b3 (P05): the keeper's server-checked shop screen, weekly shelf and restocks.
-- This file's commit (shop fixes): the training quest's keeper hands over the first tatami (quest action
-  `give_item`); the screen is titled with the keeper's own shop, redraws after every click, and one rule says why a
-  shop is shut; the gametest sends every take-out input at the window.
+- P05: calendar, stipend, flat, pets, dishes, fatigue, Well Rested (e92d2f6 to 2348843); the keeper's shop screen
+  and its fixes (8e873b3 to e43e580). Leaf worlds from before e92d2f6: recreate them.
+- This file's commit (P06 controls and animation): every combat key, the twelve signs included, is a vanilla key
+  mapping under Shinobi in Options > Controls, rebindable and saved (COMBAT.md defaults; guard on right click). The
+  twelve signs, transition, fizzle, push-palms, block and four dodges are keyed in `tools/combat/animations.py` and
+  play on every player from the synced stance (clip and start tick).
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-For the shop fixes: `./gradlew build`, `missions.py --check` and `:progression:runClientGameTest` passed
-(`.local-dev/logs/p05shopfix-*.log`, screenshot `progression/build/run/clientGameTest/screenshots/0000_shop-screen.png`).
+`./gradlew build`, `:combat:runClientGameTest` and `:progression:runClientGameTest` passed
+(`.local-dev/logs/p06anim-*.log`); screenshots in `combat/build/run/clientGameTest/screenshots/`: controls-shinobi,
+academy-weaving, academy-cast, academy-dodge, academy-guard.
 
 ## Remaining
 
 - P07: the opening and Academy campaign through graduation.
 - P03: Varied's apartment roll, bound-cast role identities, Konoha loot tables and names.
 - P05: hospital wake, level loss on death; the shop counter block, haggling, selling and orders.
-- P06: animation, rebindable controls, full technique and stock coverage.
+- P06: full technique and stock coverage; the taijutsu combo with its clips; first-person arm poses.
 
 ## Launch
 
@@ -34,12 +35,15 @@ For the shop fixes: `./gradlew build`, `missions.py --check` and `:progression:r
 
 ## Known shortcuts
 
-One stand-in keeper sells for ten shops; the shop screen is a vanilla chest window, buying only, 45 lines; event
-closings and keeper levels are ignored; the furniture shop is shut on day 1 (a Moonday), so the keeper gives the
-first tatami; miso soup, soba and tamagoyaki are not sold, yakitori only on Market Day; quests run `set_flag`,
-`give_ryo` and `give_item` only; the training fixture starts itself until P07; a dedicated server's default
-level-type gets no map; fatigue has Story thresholds only; comfort ignores season, mess, plant and pet; undrawn dishes
-show a stand-in sprite; a dead bound resident does not block a quest; the quest checker mirrors the street's plots.
+One stand-in keeper sells for ten shops, vanilla chest window, buying only; the furniture shop is shut on day 1, so
+the keeper gives the first tatami; quests run `set_flag`, `give_ryo` and `give_item` only; the training fixture starts
+itself until P07; fatigue has Story thresholds only; event closings and keeper levels are ignored; miso soup, soba and
+tamagoyaki are not sold, yakitori only on Market Day; a dedicated server's default level-type gets no map; comfort
+ignores season, mess, plant and pet; undrawn dishes show a stand-in sprite; a dead bound resident does not block a
+quest; the quest checker mirrors the street's plots. Guard on right click works only with an empty hand (a held kunai
+throws); signs 1 to 9 share the hotbar keys, which do not switch slots while weaving; the wheel (G) and Substitution (X)
+keys are not in COMBAT.md and sit on the pouch and quick-slot keys; poses snap at a clip's start and show in third
+person only. `tools/combat/build.py --check` flags a Minecraft class name in a client mixin as a story-bible term.
 
 ## Blockers
 

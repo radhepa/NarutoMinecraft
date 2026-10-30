@@ -59,11 +59,12 @@ public final class Fighter {
                 Codec.DOUBLE.fieldOf("stamina").forGetter(State::stamina),
                 Codec.STRING.listOf().fieldOf("learned").forGetter(State::learned)).apply(i, State::new));
     }
-    /** What every client draws: the pose and the signs woven so far. */
-    public record Stance(int pose, List<String> signs) {
+    /** What every client draws: the pose, the signs woven so far, and the clip of animations.json playing ("" for none) since a game tick. */
+    public record Stance(int pose, List<String> signs, String clip, long since) {
         public static final int NONE = 0, WEAVING = 1, GUARDING = 2;
         public static final StreamCodec<ByteBuf, Stance> CODEC = StreamCodec.composite(ByteBufCodecs.VAR_INT, Stance::pose,
-                ByteBufCodecs.STRING_UTF8.apply(ByteBufCodecs.list()), Stance::signs, Stance::new);
+                ByteBufCodecs.STRING_UTF8.apply(ByteBufCodecs.list()), Stance::signs, ByteBufCodecs.STRING_UTF8, Stance::clip,
+                ByteBufCodecs.VAR_LONG, Stance::since, Stance::new);
     }
     /** A key the client pressed: one action and its argument (a sign's index, guard on or off). */
     public record Act(int action, int arg) implements CustomPacketPayload {
@@ -82,7 +83,9 @@ public final class Fighter {
     final List<String> learned;
     Weaver weaver;
     boolean guarding;
-    long armedUntil = Long.MIN_VALUE, iframesUntil = Long.MIN_VALUE;
+    long armedUntil = Long.MIN_VALUE, iframesUntil = Long.MIN_VALUE, shotUntil = Long.MIN_VALUE;
+    /** A one-shot clip (a cast, a fizzle, a dodge) shown until shotUntil. */
+    String shot = "";
 
     private Fighter(State s) {
         chakra.drain(CHAKRA - s.chakra());
@@ -146,8 +149,9 @@ public final class Fighter {
         if (!weaver.weaving()) return;
         var r = weaver.release(now);
         switch (r.outcome()) {
-            case CAST -> cast(p, r.technique().orElseThrow(), now);
+            case CAST -> { if (cast(p, r.technique().orElseThrow(), now)) play("combat.cast.push_palms", now); }
             case FIZZLE, INTERRUPTED -> {
+                play("combat.sign.fizzle", now);
                 boolean fizzle = r.outcome() == Weaver.Outcome.FIZZLE;
                 chakra.drain((fizzle ? Weaver.FIZZLE_COST : Weaver.INTERRUPT_COST) * cheapest());
                 Jutsu.smoke(p.level(), p.position(), 6);
@@ -204,6 +208,7 @@ public final class Fighter {
         var in = p.getLastClientInput();
         double x = (in.left() ? 1 : 0) - (in.right() ? 1 : 0), z = (in.forward() ? 1 : 0) - (in.backward() ? 1 : 0);
         if (x == 0 && z == 0) z = -1;
+        play("combat.def.dodge_" + (Math.abs(z) >= Math.abs(x) ? z > 0 ? "forward" : "back" : x > 0 ? "left" : "right"), now);
         double yaw = Math.toRadians(p.getYRot()), len = Math.hypot(x, z);
         var dir = new Vec3((x * Math.cos(yaw) - z * Math.sin(yaw)) / len, 0, (z * Math.cos(yaw) + x * Math.sin(yaw)) / len);
         p.setDeltaMovement(dir.x * DODGE_SPEED, 0.1, dir.z * DODGE_SPEED);
@@ -315,10 +320,25 @@ public final class Fighter {
         if (!s.equals(p.getAttached(ShinobiCombat.STATE))) p.setAttached(ShinobiCombat.STATE, s);
     }
 
+    private void play(String clip, long now) {
+        var c = ShinobiCombat.data.clips.get(clip);
+        shot = clip;
+        shotUntil = now + (c == null ? 0 : c.ticks());
+    }
+
+    /** The pose and its clip: the last sign woven (hands together before the first), the block, or a one-shot. */
     private void stance(ServerPlayer p) {
-        var s = new Stance(weaver.weaving() ? Stance.WEAVING : guarding ? Stance.GUARDING : Stance.NONE, weaver.woven().stream().map(HandSign::id).toList());
+        long now = p.level().getGameTime();
+        var woven = weaver.woven();
+        int pose = weaver.weaving() ? Stance.WEAVING : guarding ? Stance.GUARDING : Stance.NONE;
+        String clip = pose == Stance.WEAVING ? "combat.sign." + (woven.isEmpty() ? "transition" : woven.getLast().id())
+                : pose == Stance.GUARDING ? "combat.def.block" : now < shotUntil ? shot : "";
+        var signs = woven.stream().map(HandSign::id).toList();
         var had = p.getAttached(ShinobiCombat.STANCE);
-        if (Objects.equals(s, had) || had == null && s.pose() == Stance.NONE) return;
+        // The clip restarts when it changes or a sign is added (a second Ram plays again).
+        long since = had != null && had.clip().equals(clip) && had.signs().equals(signs) ? had.since() : now;
+        var s = new Stance(pose, signs, clip, since);
+        if (Objects.equals(s, had) || had == null && pose == Stance.NONE && clip.isEmpty()) return;
         p.setAttached(ShinobiCombat.STANCE, s);
     }
 

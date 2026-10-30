@@ -144,15 +144,16 @@ def bestiary_page():
 def animations_page():
     body = [HEADER + "# Animation clips\n",
             "Every pose and clip the player and residents need for combat, keyed the way VF keys its clips (tools/combat/animations.py; keyframes are "
-            "authored later into the same table). P0: the Phase 0 spike and Beta 1; P1: Beta 2; P2: Beta 3; P3: later. fp: needs the first-person arm path.\n"]
+            "authored into the same table; the keyed clips play on the player). P0: the Phase 0 spike and Beta 1; P1: Beta 2; P2: Beta 3; P3: later. "
+            "fp: needs the first-person arm path.\n"]
     counts = animations.summary()
     body.append("Counts: " + ", ".join("%s %d" % (k, counts[k]) for k in sorted(counts)) + ", total %d.\n" % len(animations.CLIPS))
     for pr in ("P0", "P1", "P2", "P3"):
-        body.append("## %s\n\n| Clip | Ticks | Loop | Who | First person | Note |\n|---|---|---|---|---|---|" % pr)
+        body.append("## %s\n\n| Clip | Ticks | Loop | Who | First person | Keyed | Note |\n|---|---|---|---|---|---|---|" % pr)
         for cid, c in animations.CLIPS.items():
             if c["priority"] == pr:
-                body.append("| `%s` | %d | %s | %s | %s | %s |" % (cid, c["ticks"], "yes" if c["loop"] else "", c["who"], "yes" if c["fp"] else "",
-                                                             esc(c.get("note", ""))))
+                body.append("| `%s` | %d | %s | %s | %s | %s | %s |" % (cid, c["ticks"], "yes" if c["loop"] else "", c["who"], "yes" if c["fp"] else "",
+                                                                  "yes" if c["keys"] else "", esc(c.get("note", ""))))
         body.append("")
     return "\n".join(body) + "\n"
 

@@ -10,12 +10,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-/** Carries a player's synced stance into its render state for PlayerModelMixin. */
+/** Carries a player's synced clip, and the ticks since it started, into its render state for PlayerModelMixin. */
 @Mixin(AvatarRenderer.class)
 abstract class AvatarRendererMixin {
     @Inject(method = "extractRenderState(Lnet/minecraft/world/entity/Avatar;Lnet/minecraft/client/renderer/entity/state/AvatarRenderState;F)V", at = @At("TAIL"))
     private void shinobi_combat$stance(Avatar avatar, AvatarRenderState state, float partialTick, CallbackInfo ci) {
         var stance = avatar.getAttached(ShinobiCombat.STANCE);
-        state.setData(ShinobiCombatClient.POSE, stance == null ? 0 : stance.pose());
+        state.setData(ShinobiCombatClient.CLIP, stance == null ? "" : stance.clip());
+        state.setData(ShinobiCombatClient.AGE, stance == null ? 0F : avatar.level().getGameTime() - stance.since() + partialTick);
     }
 }

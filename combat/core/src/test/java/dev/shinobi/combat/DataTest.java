@@ -20,6 +20,16 @@ class DataTest {
         assertEquals(Difficulty.SHINOBI, DATA.difficulties.get("shinobi"));
         assertEquals(Difficulty.HARD, DATA.difficulties.get("hard"));
     }
+    @Test void keyedClipsSampleBetweenTheirKeys() {
+        for (var s : HandSign.values()) assertTrue(DATA.clips.containsKey("combat.sign." + s.id()), s.id());
+        var rat = DATA.clips.get("combat.sign.rat");
+        assertArrayEquals(new double[]{-63, -31.5, 0}, rat.rot("right_arm", 0), 1e-9);
+        assertArrayEquals(new double[]{-62.5, -31.75, 0}, rat.rot("right_arm", 1), 1e-9, "halfway to the sign");
+        assertArrayEquals(rat.rot("right_arm", 4), rat.rot("right_arm", 40), "held after the last key");
+        assertNull(rat.rot("right_leg", 1), "a part the clip leaves alone");
+        var block = DATA.clips.get("combat.def.block");
+        assertArrayEquals(block.rot("left_arm", 3), block.rot("left_arm", 23), 1e-9, "a loop wraps");
+    }
     @Test void damageTypesMatchTheData() {
         assertEquals(DamageType.BUILT_IN.keySet(), DATA.damageTypes.keySet());
         for (var e : DATA.damageTypes.entrySet()) {

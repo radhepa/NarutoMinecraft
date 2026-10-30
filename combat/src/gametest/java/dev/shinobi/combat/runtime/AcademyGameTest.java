@@ -6,7 +6,11 @@ import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest;
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext;
 import net.fabricmc.fabric.api.client.gametest.v1.context.TestSingleplayerContext;
 import net.fabricmc.fabric.api.client.gametest.v1.world.TestWorldSave;
+import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.CameraType;
+import net.minecraft.client.KeyMapping;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.options.controls.KeyBindsScreen;
 import net.minecraft.client.gui.screens.worldselection.WorldCreationUiState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -22,6 +26,11 @@ import net.minecraft.world.level.levelgen.presets.WorldPresets;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -30,7 +39,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * signs): three decoys stand and chakra drops. Transformation (with the 0, - and = sign keys) hides the player as a log
  * until a hit. Substitution armed by its key takes a hit, blinks the player back short of a wall behind them and leaves
  * a log. A held guard takes 60% off a melee hit, a hit inside the hurt cooldown costs it nothing, a dodge costs stamina,
- * a thrown practice kunai deals its damage, dying mid-guard drops the guard, and reopening keeps what was learned. Screenshots: academy-weaving (the HUD, its hint and the raised hands), academy-clones, academy-guard.
+ * a thrown practice kunai deals its damage, dying mid-guard drops the guard, and reopening keeps what was learned.
+ * P06 controls: every key is in the Shinobi category of Options > Controls, and a sign rebound there (and saved) is
+ * woven by its new key and no longer by its old one. Each pose is the synced clip of animations.json.
+ * Screenshots: controls-shinobi, academy-weaving (the HUD, its hint and the hands in a sign), academy-cast, academy-clones, academy-guard, academy-dodge.
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class AcademyGameTest implements FabricClientGameTest {
@@ -39,6 +51,23 @@ public final class AcademyGameTest implements FabricClientGameTest {
         var casts = new CopyOnWriteArrayList<String>();
         ShinobiCombat.CAST.register((p, id) -> casts.add(id));
         TestWorldSave save;
+        var keys = new ArrayList<>(List.of(ShinobiCombatClient.WEAVE, ShinobiCombatClient.RADIAL, ShinobiCombatClient.GUARD, ShinobiCombatClient.DODGE, ShinobiCombatClient.SUBSTITUTE));
+        keys.addAll(List.of(ShinobiCombatClient.SIGNS));
+        // The run folder's options.txt keeps the bindings of earlier runs: start from the defaults.
+        c.runOnClient(mc -> { keys.forEach(k -> k.setKey(k.getDefaultKey())); KeyMapping.resetMapping(); });
+        check(c.computeOnClient(mc -> keys.stream().allMatch(k -> Arrays.asList(mc.options.keyMappings).contains(k)
+                && k.getCategory().label().getString().equals("Shinobi") && k.getCategory() == ShinobiCombatClient.WEAVE.getCategory())), "every combat key is in Controls under Shinobi");
+        check(ShinobiCombatClient.GUARD.getDefaultKey().getType() == InputConstants.Type.MOUSE && ShinobiCombatClient.SIGNS[11].getDefaultKey().getValue() == InputConstants.KEY_EQUALS,
+                "the documented defaults: guard on right click, the twelfth sign on =");
+        int scale = c.computeOnClient(mc -> mc.options.guiScale().get());
+        c.runOnClient(mc -> { mc.options.guiScale().set(1); mc.resizeGui(); });   // small enough for the whole category
+        c.setScreen(() -> new KeyBindsScreen(null, Minecraft.getInstance().options));
+        c.getInput().setCursorPos(200, 200);
+        c.getInput().scroll(-500);   // the Shinobi category is the last
+        c.waitTicks(2);
+        c.takeScreenshot("controls-shinobi");
+        c.setScreen(() -> null);
+        c.runOnClient(mc -> { mc.options.guiScale().set(scale); mc.resizeGui(); });
         try (var w = c.worldBuilder().adjustSettings(ui -> {
             var flat = ui.getSettings().worldgenLoadContext().lookupOrThrow(Registries.WORLD_PRESET).getOrThrow(WorldPresets.FLAT);
             ui.setWorldType(new WorldCreationUiState.WorldTypeEntry(flat));
@@ -58,14 +87,41 @@ public final class AcademyGameTest implements FabricClientGameTest {
 
             double chakra = state(w).chakra();
             weave(c, HandSign.RAM, HandSign.SNAKE);
-            check(c.computeOnClient(mc -> mc.player.getAttached(ShinobiCombat.STANCE).signs().equals(List.of("ram", "snake"))), "the woven signs reach the client");
+            check(c.computeOnClient(mc -> mc.player.getAttached(ShinobiCombat.STANCE).signs().equals(List.of("ram", "snake"))
+                    && clip(mc).equals("combat.sign.snake")), "the woven signs and the last sign's clip reach the client");
             c.takeScreenshot("academy-weaving");
             weave(c, HandSign.TIGER);
             c.getInput().releaseKey(ShinobiCombatClient.WEAVE);
-            c.waitTicks(5);
+            c.waitTicks(3);
+            check(c.computeOnClient(mc -> clip(mc).equals("combat.cast.push_palms")), "a cast plays the release");
+            c.takeScreenshot("academy-cast");
+            c.waitTicks(2);
             int decoys = w.getServer().computeOnServer(s -> near(w, Mannequin.class, 6, m -> m.entityTags().contains(Jutsu.DECOY)).size());
             check(decoys == 3 && state(w).chakra() < chakra - 4 && casts.contains(Fighter.CLONE), "Clone stands three decoys for its chakra: " + decoys + ", " + state(w));
             c.takeScreenshot("academy-clones");
+
+            // Rat rebound from 1 to K as the Controls screen does it: K weaves Rat, 1 (still the first hotbar slot) does not, and the binding is saved.
+            var rat = ShinobiCombatClient.SIGNS[0];
+            c.runOnClient(mc -> { rat.setKey(InputConstants.getKey("key.keyboard.k")); KeyMapping.resetMapping(); mc.options.save(); });
+            c.getInput().holdKey(ShinobiCombatClient.WEAVE);
+            c.waitTicks(2);
+            c.getInput().pressKey(InputConstants.KEY_1);
+            c.waitTicks(5);
+            c.getInput().pressKey(InputConstants.KEY_K);
+            c.waitTicks(5);
+            c.getInput().pressKey(InputConstants.KEY_2);
+            c.waitTicks(5);
+            check(c.computeOnClient(mc -> mc.player.getAttached(ShinobiCombat.STANCE).signs().equals(List.of("rat", "ox")) && mc.player.getInventory().getSelectedSlot() == 0),
+                    "the rebound key weaves Rat, the old one nothing, and the hotbar keys do not switch slots while weaving");
+            check(c.computeOnClient(mc -> {
+                try { return Files.readString(mc.gameDirectory.toPath().resolve("options.txt")).contains("key_key.shinobi_combat.sign_1:key.keyboard.k"); }
+                catch (IOException e) { throw new UncheckedIOException(e); }
+            }), "the new binding is saved");
+            c.getInput().releaseKey(ShinobiCombatClient.WEAVE);
+            c.waitTicks(2);
+            check(c.computeOnClient(mc -> clip(mc).equals("combat.sign.fizzle")), "a wrong sequence fizzles");
+            c.runOnClient(mc -> { rat.setKey(rat.getDefaultKey()); KeyMapping.resetMapping(); mc.options.save(); });
+            c.waitTicks(10);
 
             weave(c, HandSign.DOG, HandSign.BOAR, HandSign.RAM);
             c.getInput().releaseKey(ShinobiCombatClient.WEAVE);
@@ -91,7 +147,6 @@ public final class AcademyGameTest implements FabricClientGameTest {
             c.waitTicks(15);
             c.getInput().holdKey(ShinobiCombatClient.GUARD);
             c.waitTicks(3);
-            c.takeScreenshot("academy-guard");
             double stamina = state(w).stamina();
             float guarded = drop(w, 5);
             check(state(w).stamina() < stamina, "a guarded hit costs stamina");
@@ -108,6 +163,8 @@ public final class AcademyGameTest implements FabricClientGameTest {
             c.getInput().pressKey(ShinobiCombatClient.DODGE);
             c.waitTicks(3);
             check(state(w).stamina() < stamina - 15, "a dodge costs stamina: " + stamina + " to " + state(w).stamina());
+            check(c.computeOnClient(mc -> clip(mc).equals("combat.def.dodge_back")), "a dodge with no direction held plays the back dodge");
+            c.takeScreenshot("academy-dodge");
 
             w.getServer().runCommand("tp @p " + (at.getX() + .5) + " " + at.getY() + " " + (at.getZ() + .5) + " 0 15");   // facing the pig, a little down
             w.getServer().runOnServer(s -> player(w).setItemInHand(InteractionHand.MAIN_HAND,
@@ -121,7 +178,15 @@ public final class AcademyGameTest implements FabricClientGameTest {
 
             c.getInput().holdKey(ShinobiCombatClient.GUARD);
             c.waitTicks(3);
+            check(w.getServer().computeOnServer(s -> !Fighter.of(player(w)).guarding), "right click with a kunai in hand throws and does not guard");
+            c.getInput().releaseKey(ShinobiCombatClient.GUARD);
+            w.getServer().runOnServer(s -> player(w).setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY));
+            w.getServer().runCommand("tp @p ~ ~ ~ 180 0");   // back to the pig, so the front camera is clear of it
+            c.waitTicks(5);
+            c.getInput().holdKey(ShinobiCombatClient.GUARD);
+            c.waitTicks(3);
             check(w.getServer().computeOnServer(s -> Fighter.of(player(w)).guarding), "the guard is up");
+            c.takeScreenshot("academy-guard");   // here, clear of the substitution's smoke
             w.getServer().runCommand("kill @p");
             c.waitTicks(5);   // the death screen is up: the guard's release reaches a dead player, who cannot act
             c.getInput().releaseKey(ShinobiCombatClient.GUARD);
@@ -146,8 +211,7 @@ public final class AcademyGameTest implements FabricClientGameTest {
         c.waitTicks(2);
         for (var s : signs) {
             int i = s.ordinal();
-            if (i < 9) in.pressKey(o -> o.keyHotbarSlots[i]);
-            else in.pressKey(ShinobiCombatClient.SIGNS_10_12[i - 9]);
+            in.pressKey(ShinobiCombatClient.SIGNS[i]);
             c.waitTicks(5);
         }
     }
@@ -161,6 +225,8 @@ public final class AcademyGameTest implements FabricClientGameTest {
             return before - p.getHealth();
         });
     }
+
+    static String clip(Minecraft mc) { return mc.player.getAttached(ShinobiCombat.STANCE).clip(); }
 
     static ServerPlayer player(TestSingleplayerContext w) { return w.getConnection().getServerPlayer(); }
 

@@ -5,6 +5,7 @@ import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -114,6 +115,33 @@ public final class CombatData {
         public int rank(Scaling.Pillar p) { return ranks.get(p); }
     }
 
+    /** A keyed clip of animations.json: each part's {tick, x, y, z} keys (degrees), in tick order. */
+    public record Clip(int ticks, boolean loop, Map<String, List<double[]>> keys) {
+        static Clip of(Map<String, Object> m) {
+            var keys = new LinkedHashMap<String, List<double[]>>();
+            for (Object o : Json.list(m, "keys")) {
+                var k = Json.obj(o);
+                var r = Json.list(k, "rot");
+                keys.computeIfAbsent(Json.str(k, "part", "?"), p -> new ArrayList<>())
+                        .add(new double[]{Json.num(k, "tick", 0), ((Number) r.get(0)).doubleValue(), ((Number) r.get(1)).doubleValue(), ((Number) r.get(2)).doubleValue()});
+            }
+            for (var l : keys.values()) l.sort(Comparator.comparingDouble(k -> k[0]));
+            return new Clip(Json.integer(m, "ticks", 0), Json.bool(m, "loop"), keys);
+        }
+        /** A part's rotation (x, y, z degrees) {@code t} ticks in: linear between keys, wrapped when looping, held after the last; null if the clip leaves the part alone. */
+        public double[] rot(String part, double t) {
+            var ks = keys.get(part);
+            if (ks == null) return null;
+            if (loop && ticks > 0) t = ((t % ticks) + ticks) % ticks;
+            int i = 0;
+            while (i < ks.size() && ks.get(i)[0] <= t) i++;
+            if (i == 0 || i == ks.size()) { var k = ks.get(i == 0 ? 0 : i - 1); return new double[]{k[1], k[2], k[3]}; }
+            double[] a = ks.get(i - 1), b = ks.get(i);
+            double f = (t - a[0]) / (b[0] - a[0]);
+            return new double[]{a[1] + (b[1] - a[1]) * f, a[2] + (b[2] - a[2]) * f, a[3] + (b[3] - a[3]) * f};
+        }
+    }
+
     public final Map<String, Technique> techniques = new LinkedHashMap<>();
     public final Map<String, Style> styles = new LinkedHashMap<>();
     public final Map<String, Weapon> weapons = new LinkedHashMap<>();
@@ -125,6 +153,8 @@ public final class CombatData {
     public final Map<String, StatusEffects.Def> statuses;
     public final Map<String, Object> gates, ai, tiers, damageTypes, index;
     public final List<String> clans = new ArrayList<>();
+    /** The clips of animations.json that have keys. */
+    public final Map<String, Clip> clips = new LinkedHashMap<>();
 
     private final Path root;
 
@@ -167,6 +197,8 @@ public final class CombatData {
         gates = read(root.resolve("styles/gates.json"));
         damageTypes = Json.obj(read(root.resolve("core/damage_types.json")), "types");
         index = Json.obj(read(root.resolve("index.json")), "counts");
+        for (var e : Json.obj(read(root.resolve("animations.json")), "clips").entrySet())
+            if (!Json.list(Json.obj(e.getValue()), "keys").isEmpty()) clips.put(e.getKey(), Clip.of(Json.obj(e.getValue())));
     }
 
     /** The folder the build writes to, from the {@code combat.data} system property or the working directory. */

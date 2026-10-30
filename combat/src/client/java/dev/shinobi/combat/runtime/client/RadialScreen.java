@@ -7,7 +7,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.network.chat.Component;
 
-/** The sign wheel: Rat at the top and clockwise (HandSign.radial); a click weaves the sign under the mouse, closing casts. */
+/** The sign wheel: Rat at the top and clockwise (HandSign.radial); a click weaves the sign under the mouse, and closing (a click in the middle, Escape) casts. */
 final class RadialScreen extends Screen {
     static final int RADIUS = 70;
 
@@ -23,9 +23,9 @@ final class RadialScreen extends Screen {
 
     @Override
     public boolean mouseClicked(MouseButtonEvent e, boolean doubleClick) {
-        if (e.button() == 1) { onClose(); return true; }
         var s = at(e.x(), e.y());
-        if (s != null) ShinobiCombatClient.send(Fighter.Act.SIGN, s.ordinal());
+        if (s == null) onClose();
+        else ShinobiCombatClient.send(Fighter.Act.SIGN, s.ordinal());
         return true;
     }
 

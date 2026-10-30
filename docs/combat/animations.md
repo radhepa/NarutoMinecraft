@@ -2,266 +2,266 @@
 
 # Animation clips
 
-Every pose and clip the player and residents need for combat, keyed the way VF keys its clips (tools/combat/animations.py; keyframes are authored later into the same table). P0: the Phase 0 spike and Beta 1; P1: Beta 2; P2: Beta 3; P3: later. fp: needs the first-person arm path.
+Every pose and clip the player and residents need for combat, keyed the way VF keys its clips (tools/combat/animations.py; keyframes are authored into the same table; the keyed clips play on the player). P0: the Phase 0 spike and Beta 1; P1: Beta 2; P2: Beta 3; P3: later. fp: needs the first-person arm path.
 
 Counts: P0 62, P1 107, P2 33, P3 37, total 239.
 
 ## P0
 
-| Clip | Ticks | Loop | Who | First person | Note |
-|---|---|---|---|---|---|
-| `combat.stance.idle` | 40 | yes | both |  | Combat-ready idle: knees bent, kunai or fists up |
-| `combat.stance.walk_guard` | 20 | yes | both |  |  |
-| `combat.move.crouch_hide` | 30 | yes | player |  | Prologue |
-| `combat.move.slip_out` | 40 |  | player |  | Prologue: squeezing out of the cell |
-| `combat.move.carried` | 40 | yes | player |  | Prologue: carried over the ravine |
-| `combat.move.carry` | 40 | yes | resident |  | Prologue: the captain carries you |
-| `combat.move.roof_hop` | 10 |  | both |  |  |
-| `combat.def.dodge_left` | 8 |  | both |  |  |
-| `combat.def.dodge_right` | 8 |  | both |  |  |
-| `combat.def.dodge_back` | 8 |  | both |  |  |
-| `combat.def.dodge_forward` | 8 |  | both |  |  |
-| `combat.def.substitution_vanish` | 4 |  | both |  | A puff; the log entity takes the hit |
-| `combat.def.block` | 20 | yes | both | yes |  |
-| `combat.def.block_hit` | 6 |  | both | yes |  |
-| `combat.def.guard_break` | 20 |  | both |  |  |
-| `combat.react.hit_light_front` | 6 |  | both |  |  |
-| `combat.react.hit_light_back` | 6 |  | both |  |  |
-| `combat.react.hit_heavy` | 10 |  | both |  |  |
-| `combat.react.stagger` | 16 |  | both |  |  |
-| `combat.react.knocked_out` | 40 |  | both |  | VF Knockouts: lying down |
-| `combat.react.yield` | 20 |  | both |  | Hand raised, kneeling |
-| `combat.pose.victory` | 30 |  | both |  |  |
-| `combat.pose.tired_slouch` | 40 | yes | player |  | Fatigue |
-| `combat.pose.meditate` | 40 | yes | both |  |  |
-| `combat.sign.rat` | 4 |  | both | yes |  |
-| `combat.sign.ox` | 4 |  | both | yes |  |
-| `combat.sign.tiger` | 4 |  | both | yes |  |
-| `combat.sign.hare` | 4 |  | both | yes |  |
-| `combat.sign.dragon` | 4 |  | both | yes |  |
-| `combat.sign.snake` | 4 |  | both | yes |  |
-| `combat.sign.horse` | 4 |  | both | yes |  |
-| `combat.sign.ram` | 4 |  | both | yes |  |
-| `combat.sign.monkey` | 4 |  | both | yes |  |
-| `combat.sign.bird` | 4 |  | both | yes |  |
-| `combat.sign.dog` | 4 |  | both | yes |  |
-| `combat.sign.boar` | 4 |  | both | yes |  |
-| `combat.sign.transition` | 2 |  | both | yes | Blend between any two signs |
-| `combat.sign.fizzle` | 8 |  | both | yes | Hands shake apart |
-| `combat.sign.release_ram` | 6 |  | both | yes | Genjutsu Release |
-| `combat.cast.push_palms` | 8 |  | both | yes | Generic forward release (Clone, Transformation poof) |
-| `combat.cast.first_aid` | 30 | yes | both |  |  |
-| `combat.tai.academy.jab` | 9 |  | both | yes |  |
-| `combat.tai.academy.cross` | 9 |  | both | yes |  |
-| `combat.tai.academy.roundhouse` | 15 |  | both | yes |  |
-| `combat.tai.academy.heavy_windup` | 8 |  | both | yes |  |
-| `combat.tai.academy.heavy_release` | 13 |  | both | yes |  |
-| `combat.tai.academy.flying_kick` | 19 |  | both | yes |  |
-| `combat.tai.academy.lunge` | 11 |  | both | yes |  |
-| `combat.wpn.blade.slash_1` | 9 |  | both | yes |  |
-| `combat.wpn.blade.slash_2` | 9 |  | both | yes |  |
-| `combat.wpn.blade.slash_3` | 15 |  | both | yes |  |
-| `combat.wpn.blade.stab` | 21 |  | both | yes |  |
-| `combat.wpn.throw.aim_hold` | 20 | yes | both | yes |  |
-| `combat.wpn.throw.overhand` | 8 |  | both | yes |  |
-| `combat.wpn.throw.sidearm` | 8 |  | both | yes |  |
-| `combat.wpn.tool.throw_smoke` | 8 |  | both | yes |  |
-| `combat.res.salute` | 16 |  | resident |  |  |
-| `combat.res.nod` | 10 |  | resident |  |  |
-| `combat.res.excited_wave` | 20 |  | resident |  | Kids |
-| `combat.res.spar_bow` | 16 |  | both |  |  |
-| `combat.life.petting` | 30 |  | player |  |  |
-| `combat.life.workbench` | 30 | yes | player |  |  |
+| Clip | Ticks | Loop | Who | First person | Keyed | Note |
+|---|---|---|---|---|---|---|
+| `combat.stance.idle` | 40 | yes | both |  |  | Combat-ready idle: knees bent, kunai or fists up |
+| `combat.stance.walk_guard` | 20 | yes | both |  |  |  |
+| `combat.move.crouch_hide` | 30 | yes | player |  |  | Prologue |
+| `combat.move.slip_out` | 40 |  | player |  |  | Prologue: squeezing out of the cell |
+| `combat.move.carried` | 40 | yes | player |  |  | Prologue: carried over the ravine |
+| `combat.move.carry` | 40 | yes | resident |  |  | Prologue: the captain carries you |
+| `combat.move.roof_hop` | 10 |  | both |  |  |  |
+| `combat.def.dodge_left` | 8 |  | both |  | yes |  |
+| `combat.def.dodge_right` | 8 |  | both |  | yes |  |
+| `combat.def.dodge_back` | 8 |  | both |  | yes |  |
+| `combat.def.dodge_forward` | 8 |  | both |  | yes |  |
+| `combat.def.substitution_vanish` | 4 |  | both |  |  | A puff; the log entity takes the hit |
+| `combat.def.block` | 20 | yes | both | yes | yes |  |
+| `combat.def.block_hit` | 6 |  | both | yes |  |  |
+| `combat.def.guard_break` | 20 |  | both |  |  |  |
+| `combat.react.hit_light_front` | 6 |  | both |  |  |  |
+| `combat.react.hit_light_back` | 6 |  | both |  |  |  |
+| `combat.react.hit_heavy` | 10 |  | both |  |  |  |
+| `combat.react.stagger` | 16 |  | both |  |  |  |
+| `combat.react.knocked_out` | 40 |  | both |  |  | VF Knockouts: lying down |
+| `combat.react.yield` | 20 |  | both |  |  | Hand raised, kneeling |
+| `combat.pose.victory` | 30 |  | both |  |  |  |
+| `combat.pose.tired_slouch` | 40 | yes | player |  |  | Fatigue |
+| `combat.pose.meditate` | 40 | yes | both |  |  |  |
+| `combat.sign.rat` | 4 |  | both | yes | yes |  |
+| `combat.sign.ox` | 4 |  | both | yes | yes |  |
+| `combat.sign.tiger` | 4 |  | both | yes | yes |  |
+| `combat.sign.hare` | 4 |  | both | yes | yes |  |
+| `combat.sign.dragon` | 4 |  | both | yes | yes |  |
+| `combat.sign.snake` | 4 |  | both | yes | yes |  |
+| `combat.sign.horse` | 4 |  | both | yes | yes |  |
+| `combat.sign.ram` | 4 |  | both | yes | yes |  |
+| `combat.sign.monkey` | 4 |  | both | yes | yes |  |
+| `combat.sign.bird` | 4 |  | both | yes | yes |  |
+| `combat.sign.dog` | 4 |  | both | yes | yes |  |
+| `combat.sign.boar` | 4 |  | both | yes | yes |  |
+| `combat.sign.transition` | 2 |  | both | yes | yes | Blend between any two signs |
+| `combat.sign.fizzle` | 8 |  | both | yes | yes | Hands shake apart |
+| `combat.sign.release_ram` | 6 |  | both | yes |  | Genjutsu Release |
+| `combat.cast.push_palms` | 8 |  | both | yes | yes | Generic forward release (Clone, Transformation poof) |
+| `combat.cast.first_aid` | 30 | yes | both |  |  |  |
+| `combat.tai.academy.jab` | 9 |  | both | yes |  |  |
+| `combat.tai.academy.cross` | 9 |  | both | yes |  |  |
+| `combat.tai.academy.roundhouse` | 15 |  | both | yes |  |  |
+| `combat.tai.academy.heavy_windup` | 8 |  | both | yes |  |  |
+| `combat.tai.academy.heavy_release` | 13 |  | both | yes |  |  |
+| `combat.tai.academy.flying_kick` | 19 |  | both | yes |  |  |
+| `combat.tai.academy.lunge` | 11 |  | both | yes |  |  |
+| `combat.wpn.blade.slash_1` | 9 |  | both | yes |  |  |
+| `combat.wpn.blade.slash_2` | 9 |  | both | yes |  |  |
+| `combat.wpn.blade.slash_3` | 15 |  | both | yes |  |  |
+| `combat.wpn.blade.stab` | 21 |  | both | yes |  |  |
+| `combat.wpn.throw.aim_hold` | 20 | yes | both | yes |  |  |
+| `combat.wpn.throw.overhand` | 8 |  | both | yes |  |  |
+| `combat.wpn.throw.sidearm` | 8 |  | both | yes |  |  |
+| `combat.wpn.tool.throw_smoke` | 8 |  | both | yes |  |  |
+| `combat.res.salute` | 16 |  | resident |  |  |  |
+| `combat.res.nod` | 10 |  | resident |  |  |  |
+| `combat.res.excited_wave` | 20 |  | resident |  |  | Kids |
+| `combat.res.spar_bow` | 16 |  | both |  |  |  |
+| `combat.life.petting` | 30 |  | player |  |  |  |
+| `combat.life.workbench` | 30 | yes | player |  |  |  |
 
 ## P1
 
-| Clip | Ticks | Loop | Who | First person | Note |
-|---|---|---|---|---|---|
-| `combat.move.ninja_run` | 12 | yes | both |  | Arms back |
-| `combat.move.chakra_jump_charge` | 20 | yes | player |  |  |
-| `combat.move.chakra_jump_air` | 16 |  | both |  |  |
-| `combat.move.land_roll` | 10 |  | both |  |  |
-| `combat.move.wall_run` | 12 | yes | both |  |  |
-| `combat.move.tree_walk` | 16 | yes | both |  | The model is rotated to the trunk; the clip is a careful walk |
-| `combat.move.water_stance` | 40 | yes | both |  |  |
-| `combat.move.water_sink` | 20 |  | both |  |  |
-| `combat.move.four_legs_run` | 10 | yes | both |  | Inuzuka beast fang |
-| `combat.move.boulder_roll` | 10 | yes | both |  | Akimichi Human Boulder |
-| `combat.def.perfect_dodge` | 8 |  | both |  | Adds an afterimage particle |
-| `combat.def.parry` | 6 |  | both | yes |  |
-| `combat.def.parry_weapon` | 6 |  | both | yes |  |
-| `combat.react.knocked_down` | 24 |  | both |  |  |
-| `combat.react.get_up` | 10 |  | both |  |  |
-| `combat.react.launched` | 20 |  | both |  |  |
-| `combat.react.air_juggle` | 6 |  | both |  |  |
-| `combat.react.surrender` | 30 | yes | resident |  | Bandits: kneel, hands up |
-| `combat.react.flee` | 12 | yes | resident |  |  |
-| `combat.react.bound_struggle` | 20 | yes | both |  |  |
-| `combat.react.possessed_mirror` | 0 |  | both |  | No clip: copies the caster's pose live |
-| `combat.react.genjutsu_dazed` | 30 | yes | both |  |  |
-| `combat.react.shocked_twitch` | 10 | yes | both |  |  |
-| `combat.react.burning_flail` | 20 | yes | both |  |  |
-| `combat.react.poisoned_stagger` | 30 | yes | both |  |  |
-| `combat.react.feared_cower` | 30 | yes | both |  |  |
-| `combat.pose.taunt` | 30 |  | resident |  |  |
-| `combat.cast.breath` | 16 |  | both | yes | Hand to mouth: fire and wind breath jutsu |
-| `combat.cast.clap_gust` | 8 |  | both | yes | Wind: Gale Palm, Great Breakthrough |
-| `combat.cast.ground_slam` | 10 |  | both | yes | Earth: walls, mud river |
-| `combat.cast.palm_strike` | 8 |  | both | yes | Lightning: Stunning Palm |
-| `combat.cast.spit_wave` | 12 |  | both | yes | Water: Wild Water Wave |
-| `combat.cast.kneel_sign_hold` | 20 | yes | both |  | Nara Shadow Possession |
-| `combat.cast.grow` | 20 |  | both |  | Akimichi Expansion |
-| `combat.cast.arms_open_swarm` | 16 |  | both |  | Aburame Insect Swarm |
-| `combat.cast.chains_back` | 12 |  | both |  | Uzumaki Sealing Chains |
-| `combat.cast.wood_sign` | 14 |  | both |  | Senju Wood Release |
-| `combat.cast.brush_strokes` | 24 |  | both | yes | Kurama Painted Illusion |
-| `combat.cast.step_behind` | 8 |  | both |  | Yuhi Tree Binding |
-| `combat.cast.three_way_slash` | 20 |  | both |  | Gekko Dance of the Crescent Moon |
-| `combat.cast.headhunter_sink` | 12 |  | both |  |  |
-| `combat.cast.headhunter_grab` | 10 |  | both |  |  |
-| `combat.cast.web_slam` | 10 |  | both |  | Tsuchigumo Earth Binding |
-| `combat.cast.night_curtain` | 14 |  | both |  | Tobari |
-| `combat.cast.seal_slap` | 6 |  | both | yes |  |
-| `combat.tai.academy.counter` | 9 |  | both | yes |  |
-| `combat.tai.academy.sweep` | 18 |  | both | yes |  |
-| `combat.tai.academy.launcher` | 14 |  | both | yes |  |
-| `combat.tai.academy.air_1` | 8 |  | both | yes |  |
-| `combat.tai.academy.air_2` | 8 |  | both | yes |  |
-| `combat.tai.academy.air_3` | 10 |  | both | yes |  |
-| `combat.tai.academy.air_spike` | 17 |  | both |  |  |
-| `combat.tai.academy.palm_rush` | 30 |  | both | yes |  |
-| `combat.tai.strong_fist.leaf_hurricane` | 17 |  | both |  |  |
-| `combat.tai.strong_fist.leaf_rising_wind` | 13 |  | both |  |  |
-| `combat.tai.strong_fist.leaf_whirlwind` | 18 |  | both |  |  |
-| `combat.tai.strong_fist.weights_release` | 20 |  | both |  |  |
-| `combat.tai.gentle_fist.stance` | 40 | yes | both |  |  |
-| `combat.tai.gentle_fist.palm_1` | 8 |  | both | yes |  |
-| `combat.tai.gentle_fist.palm_2` | 8 |  | both | yes |  |
-| `combat.tai.gentle_fist.palm_3` | 8 |  | both | yes |  |
-| `combat.tai.gentle_fist.palm_4` | 15 |  | both | yes |  |
-| `combat.tai.gentle_fist.palm_thrust` | 21 |  | both | yes |  |
-| `combat.tai.iron_body.body_slam` | 19 |  | both |  |  |
-| `combat.tai.iron_body.crushing_palm` | 25 |  | both |  |  |
-| `combat.tai.iron_body.human_boulder` | 50 |  | both |  |  |
-| `combat.tai.beast_fang.claw_1` | 8 |  | both |  |  |
-| `combat.tai.beast_fang.claw_2` | 8 |  | both |  |  |
-| `combat.tai.beast_fang.claw_3` | 8 |  | both |  |  |
-| `combat.tai.beast_fang.claw_4` | 14 |  | both |  |  |
-| `combat.tai.beast_fang.pounce` | 12 |  | both |  |  |
-| `combat.tai.iron_guard.guard_shove` | 12 |  | both | yes |  |
-| `combat.tai.iron_guard.guard_crush` | 21 |  | both | yes |  |
-| `combat.wpn.blade.reverse_parry` | 9 |  | both | yes |  |
-| `combat.wpn.blade.throw_out` | 14 |  | both | yes |  |
-| `combat.wpn.throw.fan_of_three` | 12 |  | both | yes |  |
-| `combat.wpn.throw.air_down` | 9 |  | both |  |  |
-| `combat.wpn.throw.needle_flick` | 5 |  | both | yes |  |
-| `combat.wpn.throw.needle_fan` | 9 |  | both | yes |  |
-| `combat.wpn.wave_foot.ripple` | 8 |  | both | yes |  |
-| `combat.wpn.wave_foot.undertow` | 15 |  | both | yes |  |
-| `combat.wpn.wave_foot.side_step_cut` | 10 |  | both | yes |  |
-| `combat.wpn.wave_foot.guard_of_waves` | 10 |  | both | yes |  |
-| `combat.wpn.staff.idle` | 40 | yes | both | yes |  |
-| `combat.wpn.staff.sweep_1` | 11 |  | both | yes |  |
-| `combat.wpn.staff.sweep_2` | 11 |  | both | yes |  |
-| `combat.wpn.staff.thrust` | 16 |  | both | yes |  |
-| `combat.wpn.staff.pole_vault` | 19 |  | both |  |  |
-| `combat.wpn.mace.swing_1` | 14 |  | both | yes |  |
-| `combat.wpn.mace.swing_2` | 14 |  | both | yes |  |
-| `combat.wpn.mace.overhead` | 27 |  | both | yes |  |
-| `combat.wpn.wire.tether_yank` | 10 |  | both | yes |  |
-| `combat.wpn.wire.set_trip_line` | 14 |  | both | yes |  |
-| `combat.wpn.wire.binding_cross` | 16 |  | both | yes |  |
-| `combat.wpn.tool.place_paper_bomb` | 10 |  | both | yes |  |
-| `combat.wpn.tool.tag_kunai` | 6 |  | both | yes |  |
-| `combat.wpn.tool.eat_pill` | 12 |  | both | yes |  |
-| `combat.wpn.tool.apply_coating` | 16 |  | both | yes |  |
-| `combat.wpn.tool.pouch_draw` | 4 |  | both | yes |  |
-| `combat.squad.command_point` | 10 |  | player |  |  |
-| `combat.squad.command_wave` | 10 |  | player |  |  |
-| `combat.squad.acknowledge` | 10 |  | resident |  |  |
-| `combat.squad.high_five` | 16 |  | both |  | After a squad combo |
-| `combat.squad.call_combo` | 12 |  | resident |  |  |
-| `combat.res.sensei_reading` | 40 | yes | resident |  | The cord test |
-| `combat.res.sensei_book_dodge` | 8 |  | resident |  | The cord test: dodges without looking up |
-| `combat.life.forging` | 30 | yes | player |  |  |
+| Clip | Ticks | Loop | Who | First person | Keyed | Note |
+|---|---|---|---|---|---|---|
+| `combat.move.ninja_run` | 12 | yes | both |  |  | Arms back |
+| `combat.move.chakra_jump_charge` | 20 | yes | player |  |  |  |
+| `combat.move.chakra_jump_air` | 16 |  | both |  |  |  |
+| `combat.move.land_roll` | 10 |  | both |  |  |  |
+| `combat.move.wall_run` | 12 | yes | both |  |  |  |
+| `combat.move.tree_walk` | 16 | yes | both |  |  | The model is rotated to the trunk; the clip is a careful walk |
+| `combat.move.water_stance` | 40 | yes | both |  |  |  |
+| `combat.move.water_sink` | 20 |  | both |  |  |  |
+| `combat.move.four_legs_run` | 10 | yes | both |  |  | Inuzuka beast fang |
+| `combat.move.boulder_roll` | 10 | yes | both |  |  | Akimichi Human Boulder |
+| `combat.def.perfect_dodge` | 8 |  | both |  |  | Adds an afterimage particle |
+| `combat.def.parry` | 6 |  | both | yes |  |  |
+| `combat.def.parry_weapon` | 6 |  | both | yes |  |  |
+| `combat.react.knocked_down` | 24 |  | both |  |  |  |
+| `combat.react.get_up` | 10 |  | both |  |  |  |
+| `combat.react.launched` | 20 |  | both |  |  |  |
+| `combat.react.air_juggle` | 6 |  | both |  |  |  |
+| `combat.react.surrender` | 30 | yes | resident |  |  | Bandits: kneel, hands up |
+| `combat.react.flee` | 12 | yes | resident |  |  |  |
+| `combat.react.bound_struggle` | 20 | yes | both |  |  |  |
+| `combat.react.possessed_mirror` | 0 |  | both |  |  | No clip: copies the caster's pose live |
+| `combat.react.genjutsu_dazed` | 30 | yes | both |  |  |  |
+| `combat.react.shocked_twitch` | 10 | yes | both |  |  |  |
+| `combat.react.burning_flail` | 20 | yes | both |  |  |  |
+| `combat.react.poisoned_stagger` | 30 | yes | both |  |  |  |
+| `combat.react.feared_cower` | 30 | yes | both |  |  |  |
+| `combat.pose.taunt` | 30 |  | resident |  |  |  |
+| `combat.cast.breath` | 16 |  | both | yes |  | Hand to mouth: fire and wind breath jutsu |
+| `combat.cast.clap_gust` | 8 |  | both | yes |  | Wind: Gale Palm, Great Breakthrough |
+| `combat.cast.ground_slam` | 10 |  | both | yes |  | Earth: walls, mud river |
+| `combat.cast.palm_strike` | 8 |  | both | yes |  | Lightning: Stunning Palm |
+| `combat.cast.spit_wave` | 12 |  | both | yes |  | Water: Wild Water Wave |
+| `combat.cast.kneel_sign_hold` | 20 | yes | both |  |  | Nara Shadow Possession |
+| `combat.cast.grow` | 20 |  | both |  |  | Akimichi Expansion |
+| `combat.cast.arms_open_swarm` | 16 |  | both |  |  | Aburame Insect Swarm |
+| `combat.cast.chains_back` | 12 |  | both |  |  | Uzumaki Sealing Chains |
+| `combat.cast.wood_sign` | 14 |  | both |  |  | Senju Wood Release |
+| `combat.cast.brush_strokes` | 24 |  | both | yes |  | Kurama Painted Illusion |
+| `combat.cast.step_behind` | 8 |  | both |  |  | Yuhi Tree Binding |
+| `combat.cast.three_way_slash` | 20 |  | both |  |  | Gekko Dance of the Crescent Moon |
+| `combat.cast.headhunter_sink` | 12 |  | both |  |  |  |
+| `combat.cast.headhunter_grab` | 10 |  | both |  |  |  |
+| `combat.cast.web_slam` | 10 |  | both |  |  | Tsuchigumo Earth Binding |
+| `combat.cast.night_curtain` | 14 |  | both |  |  | Tobari |
+| `combat.cast.seal_slap` | 6 |  | both | yes |  |  |
+| `combat.tai.academy.counter` | 9 |  | both | yes |  |  |
+| `combat.tai.academy.sweep` | 18 |  | both | yes |  |  |
+| `combat.tai.academy.launcher` | 14 |  | both | yes |  |  |
+| `combat.tai.academy.air_1` | 8 |  | both | yes |  |  |
+| `combat.tai.academy.air_2` | 8 |  | both | yes |  |  |
+| `combat.tai.academy.air_3` | 10 |  | both | yes |  |  |
+| `combat.tai.academy.air_spike` | 17 |  | both |  |  |  |
+| `combat.tai.academy.palm_rush` | 30 |  | both | yes |  |  |
+| `combat.tai.strong_fist.leaf_hurricane` | 17 |  | both |  |  |  |
+| `combat.tai.strong_fist.leaf_rising_wind` | 13 |  | both |  |  |  |
+| `combat.tai.strong_fist.leaf_whirlwind` | 18 |  | both |  |  |  |
+| `combat.tai.strong_fist.weights_release` | 20 |  | both |  |  |  |
+| `combat.tai.gentle_fist.stance` | 40 | yes | both |  |  |  |
+| `combat.tai.gentle_fist.palm_1` | 8 |  | both | yes |  |  |
+| `combat.tai.gentle_fist.palm_2` | 8 |  | both | yes |  |  |
+| `combat.tai.gentle_fist.palm_3` | 8 |  | both | yes |  |  |
+| `combat.tai.gentle_fist.palm_4` | 15 |  | both | yes |  |  |
+| `combat.tai.gentle_fist.palm_thrust` | 21 |  | both | yes |  |  |
+| `combat.tai.iron_body.body_slam` | 19 |  | both |  |  |  |
+| `combat.tai.iron_body.crushing_palm` | 25 |  | both |  |  |  |
+| `combat.tai.iron_body.human_boulder` | 50 |  | both |  |  |  |
+| `combat.tai.beast_fang.claw_1` | 8 |  | both |  |  |  |
+| `combat.tai.beast_fang.claw_2` | 8 |  | both |  |  |  |
+| `combat.tai.beast_fang.claw_3` | 8 |  | both |  |  |  |
+| `combat.tai.beast_fang.claw_4` | 14 |  | both |  |  |  |
+| `combat.tai.beast_fang.pounce` | 12 |  | both |  |  |  |
+| `combat.tai.iron_guard.guard_shove` | 12 |  | both | yes |  |  |
+| `combat.tai.iron_guard.guard_crush` | 21 |  | both | yes |  |  |
+| `combat.wpn.blade.reverse_parry` | 9 |  | both | yes |  |  |
+| `combat.wpn.blade.throw_out` | 14 |  | both | yes |  |  |
+| `combat.wpn.throw.fan_of_three` | 12 |  | both | yes |  |  |
+| `combat.wpn.throw.air_down` | 9 |  | both |  |  |  |
+| `combat.wpn.throw.needle_flick` | 5 |  | both | yes |  |  |
+| `combat.wpn.throw.needle_fan` | 9 |  | both | yes |  |  |
+| `combat.wpn.wave_foot.ripple` | 8 |  | both | yes |  |  |
+| `combat.wpn.wave_foot.undertow` | 15 |  | both | yes |  |  |
+| `combat.wpn.wave_foot.side_step_cut` | 10 |  | both | yes |  |  |
+| `combat.wpn.wave_foot.guard_of_waves` | 10 |  | both | yes |  |  |
+| `combat.wpn.staff.idle` | 40 | yes | both | yes |  |  |
+| `combat.wpn.staff.sweep_1` | 11 |  | both | yes |  |  |
+| `combat.wpn.staff.sweep_2` | 11 |  | both | yes |  |  |
+| `combat.wpn.staff.thrust` | 16 |  | both | yes |  |  |
+| `combat.wpn.staff.pole_vault` | 19 |  | both |  |  |  |
+| `combat.wpn.mace.swing_1` | 14 |  | both | yes |  |  |
+| `combat.wpn.mace.swing_2` | 14 |  | both | yes |  |  |
+| `combat.wpn.mace.overhead` | 27 |  | both | yes |  |  |
+| `combat.wpn.wire.tether_yank` | 10 |  | both | yes |  |  |
+| `combat.wpn.wire.set_trip_line` | 14 |  | both | yes |  |  |
+| `combat.wpn.wire.binding_cross` | 16 |  | both | yes |  |  |
+| `combat.wpn.tool.place_paper_bomb` | 10 |  | both | yes |  |  |
+| `combat.wpn.tool.tag_kunai` | 6 |  | both | yes |  |  |
+| `combat.wpn.tool.eat_pill` | 12 |  | both | yes |  |  |
+| `combat.wpn.tool.apply_coating` | 16 |  | both | yes |  |  |
+| `combat.wpn.tool.pouch_draw` | 4 |  | both | yes |  |  |
+| `combat.squad.command_point` | 10 |  | player |  |  |  |
+| `combat.squad.command_wave` | 10 |  | player |  |  |  |
+| `combat.squad.acknowledge` | 10 |  | resident |  |  |  |
+| `combat.squad.high_five` | 16 |  | both |  |  | After a squad combo |
+| `combat.squad.call_combo` | 12 |  | resident |  |  |  |
+| `combat.res.sensei_reading` | 40 | yes | resident |  |  | The cord test |
+| `combat.res.sensei_book_dodge` | 8 |  | resident |  |  | The cord test: dodges without looking up |
+| `combat.life.forging` | 30 | yes | player |  |  |  |
 
 ## P2
 
-| Clip | Ticks | Loop | Who | First person | Note |
-|---|---|---|---|---|---|
-| `combat.react.asleep` | 40 | yes | both |  |  |
-| `combat.react.swallowed` | 0 |  | both |  | No clip: hidden while swallowed |
-| `combat.cast.eye_glance` | 6 |  | both |  | Sharingan and Byakugan toggles (the eye change is a face decal) |
-| `combat.cast.mystical_palm` | 20 | yes | both | yes |  |
-| `combat.cast.sensing` | 20 | yes | both |  | Eyes closed, a sign held |
-| `combat.cast.barrier_tags` | 12 |  | both |  |  |
-| `combat.cast.revive_kneel` | 30 | yes | both |  |  |
-| `combat.tai.strong_fist.leaf_great_whirlwind` | 29 |  | both |  |  |
-| `combat.wpn.throw.catch` | 6 |  | both | yes | Windmill return, kunai catch on parry |
-| `combat.wpn.kenjutsu.arc_1` | 10 |  | both | yes |  |
-| `combat.wpn.kenjutsu.arc_2` | 10 |  | both | yes |  |
-| `combat.wpn.kenjutsu.arc_3` | 17 |  | both | yes |  |
-| `combat.wpn.kenjutsu.draw_cut` | 9 |  | both | yes |  |
-| `combat.wpn.kenjutsu.moon_rising` | 16 |  | both | yes |  |
-| `combat.wpn.kenjutsu.unsheathe` | 8 |  | both | yes |  |
-| `combat.wpn.kenjutsu.sheathe` | 10 |  | both | yes |  |
-| `combat.wpn.long_blade.cut` | 10 |  | both | yes |  |
-| `combat.wpn.long_blade.cut_3` | 17 |  | both | yes |  |
-| `combat.wpn.long_blade.thrust` | 24 |  | both | yes |  |
-| `combat.wpn.long_blade.reading_guard` | 9 |  | both | yes |  |
-| `combat.wpn.long_blade.rising_cut` | 16 |  | both | yes |  |
-| `combat.wpn.chain.lash` | 11 |  | both | yes |  |
-| `combat.wpn.chain.hook_pull` | 20 |  | both | yes |  |
-| `combat.wpn.chain.wrap_bind` | 18 |  | both | yes |  |
-| `combat.wpn.fan.cut` | 9 |  | both | yes |  |
-| `combat.wpn.fan.snap` | 15 |  | both | yes |  |
-| `combat.wpn.fan.gust_parry` | 13 |  | both | yes |  |
-| `combat.squad.cover_dive` | 10 |  | both |  |  |
-| `combat.res.spectator_cheer` | 30 | yes | resident |  |  |
-| `combat.res.spectator_gasp` | 12 |  | resident |  |  |
-| `combat.res.spectator_seated_clap` | 20 | yes | resident |  |  |
-| `combat.res.proctor_stop` | 16 |  | resident |  |  |
-| `combat.res.cower_civilian` | 30 | yes | resident |  | The attack: civilians in the stands |
+| Clip | Ticks | Loop | Who | First person | Keyed | Note |
+|---|---|---|---|---|---|---|
+| `combat.react.asleep` | 40 | yes | both |  |  |  |
+| `combat.react.swallowed` | 0 |  | both |  |  | No clip: hidden while swallowed |
+| `combat.cast.eye_glance` | 6 |  | both |  |  | Sharingan and Byakugan toggles (the eye change is a face decal) |
+| `combat.cast.mystical_palm` | 20 | yes | both | yes |  |  |
+| `combat.cast.sensing` | 20 | yes | both |  |  | Eyes closed, a sign held |
+| `combat.cast.barrier_tags` | 12 |  | both |  |  |  |
+| `combat.cast.revive_kneel` | 30 | yes | both |  |  |  |
+| `combat.tai.strong_fist.leaf_great_whirlwind` | 29 |  | both |  |  |  |
+| `combat.wpn.throw.catch` | 6 |  | both | yes |  | Windmill return, kunai catch on parry |
+| `combat.wpn.kenjutsu.arc_1` | 10 |  | both | yes |  |  |
+| `combat.wpn.kenjutsu.arc_2` | 10 |  | both | yes |  |  |
+| `combat.wpn.kenjutsu.arc_3` | 17 |  | both | yes |  |  |
+| `combat.wpn.kenjutsu.draw_cut` | 9 |  | both | yes |  |  |
+| `combat.wpn.kenjutsu.moon_rising` | 16 |  | both | yes |  |  |
+| `combat.wpn.kenjutsu.unsheathe` | 8 |  | both | yes |  |  |
+| `combat.wpn.kenjutsu.sheathe` | 10 |  | both | yes |  |  |
+| `combat.wpn.long_blade.cut` | 10 |  | both | yes |  |  |
+| `combat.wpn.long_blade.cut_3` | 17 |  | both | yes |  |  |
+| `combat.wpn.long_blade.thrust` | 24 |  | both | yes |  |  |
+| `combat.wpn.long_blade.reading_guard` | 9 |  | both | yes |  |  |
+| `combat.wpn.long_blade.rising_cut` | 16 |  | both | yes |  |  |
+| `combat.wpn.chain.lash` | 11 |  | both | yes |  |  |
+| `combat.wpn.chain.hook_pull` | 20 |  | both | yes |  |  |
+| `combat.wpn.chain.wrap_bind` | 18 |  | both | yes |  |  |
+| `combat.wpn.fan.cut` | 9 |  | both | yes |  |  |
+| `combat.wpn.fan.snap` | 15 |  | both | yes |  |  |
+| `combat.wpn.fan.gust_parry` | 13 |  | both | yes |  |  |
+| `combat.squad.cover_dive` | 10 |  | both |  |  |  |
+| `combat.res.spectator_cheer` | 30 | yes | resident |  |  |  |
+| `combat.res.spectator_gasp` | 12 |  | resident |  |  |  |
+| `combat.res.spectator_seated_clap` | 20 | yes | resident |  |  |  |
+| `combat.res.proctor_stop` | 16 |  | resident |  |  |  |
+| `combat.res.cower_civilian` | 30 | yes | resident |  |  | The attack: civilians in the stands |
 
 ## P3
 
-| Clip | Ticks | Loop | Who | First person | Note |
-|---|---|---|---|---|---|
-| `combat.move.air_step` | 8 |  | both |  |  |
-| `combat.move.wind_glide` | 20 | yes | both |  |  |
-| `combat.cast.slump` | 40 | yes | both |  | Yamanaka Mind Transfer body |
-| `combat.cast.water_prison_hold` | 20 | yes | both |  |  |
-| `combat.cast.lightning_blade_charge` | 20 | yes | both | yes |  |
-| `combat.cast.lightning_blade_run` | 12 | yes | both |  |  |
-| `combat.cast.spiral_sphere_form` | 20 |  | both | yes |  |
-| `combat.cast.spiral_sphere_strike` | 8 |  | both | yes |  |
-| `combat.tai.strong_fist.primary_lotus` | 40 |  | both |  |  |
-| `combat.tai.strong_fist.reverse_lotus` | 50 |  | both |  |  |
-| `combat.tai.strong_fist.morning_peacock` | 62 |  | both |  |  |
-| `combat.tai.strong_fist.gate_open` | 20 |  | both |  |  |
-| `combat.tai.gentle_fist.vacuum_palm` | 21 |  | both |  |  |
-| `combat.tai.gentle_fist.palm_rotation` | 24 |  | both |  |  |
-| `combat.tai.gentle_fist.sixty_four_palms` | 52 |  | both |  |  |
-| `combat.tai.gentle_fist.hundred_twenty_eight_palms` | 66 |  | both |  |  |
-| `combat.tai.gentle_fist.twin_lion_fists` | 54 |  | both |  |  |
-| `combat.tai.iron_body.partial_expansion_slap` | 24 |  | both |  |  |
-| `combat.tai.iron_body.meat_tank` | 64 |  | both |  |  |
-| `combat.tai.beast_fang.passing_fang` | 20 |  | both |  |  |
-| `combat.tai.iron_guard.iron_wall` | 48 |  | both | yes |  |
-| `combat.tai.willow.sway_idle` | 40 | yes | both |  |  |
-| `combat.tai.willow.sway_strike` | 9 |  | both |  |  |
-| `combat.tai.willow.falling_willow` | 19 |  | both |  |  |
-| `combat.tai.willow.lean_back_kick` | 17 |  | both |  |  |
-| `combat.tai.willow.willow_storm` | 38 |  | both |  |  |
-| `combat.tai.blossom.blossom_punch` | 25 |  | both |  |  |
-| `combat.tai.blossom.blossom_heel` | 27 |  | both |  |  |
-| `combat.tai.blossom.cherry_blossom_impact` | 34 |  | both |  |  |
-| `combat.tai.lightning_body.lariat` | 20 |  | both |  |  |
-| `combat.tai.lightning_body.guillotine_drop` | 24 |  | both |  |  |
-| `combat.tai.lightning_body.liger_bomb` | 42 |  | both |  |  |
-| `combat.wpn.throw.rain` | 20 |  | both |  |  |
-| `combat.wpn.kenjutsu.crescent_finish` | 26 |  | both |  |  |
-| `combat.wpn.long_blade.single_stroke` | 27 |  | both |  |  |
-| `combat.wpn.kenjutsu.iaido_stance` | 40 | yes | both |  |  |
-| `combat.wpn.staff.whirling_staff` | 33 |  | both |  |  |
+| Clip | Ticks | Loop | Who | First person | Keyed | Note |
+|---|---|---|---|---|---|---|
+| `combat.move.air_step` | 8 |  | both |  |  |  |
+| `combat.move.wind_glide` | 20 | yes | both |  |  |  |
+| `combat.cast.slump` | 40 | yes | both |  |  | Yamanaka Mind Transfer body |
+| `combat.cast.water_prison_hold` | 20 | yes | both |  |  |  |
+| `combat.cast.lightning_blade_charge` | 20 | yes | both | yes |  |  |
+| `combat.cast.lightning_blade_run` | 12 | yes | both |  |  |  |
+| `combat.cast.spiral_sphere_form` | 20 |  | both | yes |  |  |
+| `combat.cast.spiral_sphere_strike` | 8 |  | both | yes |  |  |
+| `combat.tai.strong_fist.primary_lotus` | 40 |  | both |  |  |  |
+| `combat.tai.strong_fist.reverse_lotus` | 50 |  | both |  |  |  |
+| `combat.tai.strong_fist.morning_peacock` | 62 |  | both |  |  |  |
+| `combat.tai.strong_fist.gate_open` | 20 |  | both |  |  |  |
+| `combat.tai.gentle_fist.vacuum_palm` | 21 |  | both |  |  |  |
+| `combat.tai.gentle_fist.palm_rotation` | 24 |  | both |  |  |  |
+| `combat.tai.gentle_fist.sixty_four_palms` | 52 |  | both |  |  |  |
+| `combat.tai.gentle_fist.hundred_twenty_eight_palms` | 66 |  | both |  |  |  |
+| `combat.tai.gentle_fist.twin_lion_fists` | 54 |  | both |  |  |  |
+| `combat.tai.iron_body.partial_expansion_slap` | 24 |  | both |  |  |  |
+| `combat.tai.iron_body.meat_tank` | 64 |  | both |  |  |  |
+| `combat.tai.beast_fang.passing_fang` | 20 |  | both |  |  |  |
+| `combat.tai.iron_guard.iron_wall` | 48 |  | both | yes |  |  |
+| `combat.tai.willow.sway_idle` | 40 | yes | both |  |  |  |
+| `combat.tai.willow.sway_strike` | 9 |  | both |  |  |  |
+| `combat.tai.willow.falling_willow` | 19 |  | both |  |  |  |
+| `combat.tai.willow.lean_back_kick` | 17 |  | both |  |  |  |
+| `combat.tai.willow.willow_storm` | 38 |  | both |  |  |  |
+| `combat.tai.blossom.blossom_punch` | 25 |  | both |  |  |  |
+| `combat.tai.blossom.blossom_heel` | 27 |  | both |  |  |  |
+| `combat.tai.blossom.cherry_blossom_impact` | 34 |  | both |  |  |  |
+| `combat.tai.lightning_body.lariat` | 20 |  | both |  |  |  |
+| `combat.tai.lightning_body.guillotine_drop` | 24 |  | both |  |  |  |
+| `combat.tai.lightning_body.liger_bomb` | 42 |  | both |  |  |  |
+| `combat.wpn.throw.rain` | 20 |  | both |  |  |  |
+| `combat.wpn.kenjutsu.crescent_finish` | 26 |  | both |  |  |  |
+| `combat.wpn.long_blade.single_stroke` | 27 |  | both |  |  |  |
+| `combat.wpn.kenjutsu.iaido_stance` | 40 | yes | both |  |  |  |
+| `combat.wpn.staff.whirling_staff` | 33 |  | both |  |  |  |
 

@@ -212,6 +212,42 @@ clip("life.forging", 30, P1, loop=True, who="player")
 clip("life.workbench", 30, P0, loop=True, who="player")
 
 
+# Keys: VF's {tick, part, rot} keyframes, rot in degrees (x pitches an arm forward when negative, y turns it
+# inward, z swings it out), linear between keys, held after the last; parts head, body, right_arm, left_arm,
+# right_leg, left_leg. A part a clip leaves out keeps the vanilla pose.
+def keys(cid, *frames):
+    """frames: (tick, {part: (x, y, z)})."""
+    CLIPS["combat." + cid]["keys"] = [{"tick": t, "part": p, "rot": list(r)} for t, parts in frames for p, r in parts.items()]
+
+
+def arms(x, y, z=0, lx=None, ly=None, lz=None):
+    """Both arms: the left mirrors the right unless its own raw (x, y, z) is given."""
+    return {"right_arm": (x, -y, z), "left_arm": (x if lx is None else lx, y if ly is None else ly, -z if lz is None else lz)}
+
+
+HANDS = arms(-63, 31.5)   # hands together before the chest: where every sign starts and ends
+SIGN_POSES = {   # (pitch, inward turn, outward swing) for each sign; a sign that is not symmetric gives the left arm too
+    "rat": arms(-62, 32), "ox": arms(-70, 35, -10, -55, 30, 5), "tiger": arms(-78, 30), "hare": arms(-50, 38, 0, -65, 25),
+    "dragon": arms(-82, 28, -5), "snake": arms(-58, 30, 10), "horse": arms(-88, 25), "ram": arms(-68, 34, 0, -60, 30),
+    "monkey": arms(-55, 40, -15, -70, 35), "bird": arms(-65, 36, 15), "dog": arms(-45, 30, 0, -60, 35), "boar": arms(-52, 34),
+}
+for name, sign in SIGN_POSES.items():
+    keys("sign." + name, (0, HANDS), (2, sign), (4, sign))
+keys("sign.transition", (0, HANDS), (2, HANDS))
+keys("sign.fizzle", (0, HANDS), (2, arms(-60, 10, 20)), (4, arms(-50, -10, 30)), (8, arms(0, 0)))
+keys("cast.push_palms", (0, arms(-60, 25)), (3, arms(-90, 10)), (6, arms(-90, 10)), (8, arms(-40, 0)))
+GUARD = arms(-92, 52)
+keys("def.block", (0, GUARD), (10, arms(-88, 50)), (20, GUARD))
+REST = {"right_arm": (0, 0, 0), "left_arm": (0, 0, 0), "right_leg": (0, 0, 0), "left_leg": (0, 0, 0)}
+for d, pose in {
+    "back": {**arms(-60, 15), "right_leg": (30, 0, 0), "left_leg": (-25, 0, 0)},
+    "forward": {**arms(40, 0, 10), "right_leg": (-40, 0, 0), "left_leg": (30, 0, 0)},
+    "left": {**arms(-20, 0, 30, -20, 0, -55), "right_leg": (0, 0, 10), "left_leg": (0, 0, -25)},
+    "right": {**arms(-20, 0, 55, -20, 0, -30), "right_leg": (0, 0, 25), "left_leg": (0, 0, -10)},
+}.items():
+    keys("def.dodge_" + d, (0, REST), (2, pose), (6, pose), (8, REST))
+
+
 def summary():
     counts = {}
     for c in CLIPS.values():
