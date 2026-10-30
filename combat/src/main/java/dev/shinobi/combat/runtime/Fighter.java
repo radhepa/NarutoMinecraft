@@ -320,7 +320,7 @@ public final class Fighter {
         if (!s.equals(p.getAttached(ShinobiCombat.STATE))) p.setAttached(ShinobiCombat.STATE, s);
     }
 
-    private void play(String clip, long now) {
+    void play(String clip, long now) {
         var c = ShinobiCombat.data.clips.get(clip);
         shot = clip;
         shotUntil = now + (c == null ? 0 : c.ticks());

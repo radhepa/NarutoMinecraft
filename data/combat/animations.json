@@ -2434,7 +2434,80 @@
    "fp": true,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 9,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 9,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    }
+   ]
   },
   "combat.tai.academy.cross": {
    "ticks": 9,
@@ -2443,7 +2516,107 @@
    "fp": true,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "left_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "body",
+     "rot": [
+      0,
+      -20,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "left_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "body",
+     "rot": [
+      0,
+      -20,
+      0
+     ]
+    },
+    {
+     "tick": 9,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 9,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 9,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   ]
   },
   "combat.tai.academy.roundhouse": {
    "ticks": 15,
@@ -2452,7 +2625,188 @@
    "fp": true,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 4,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 4,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 4,
+     "part": "right_leg",
+     "rot": [
+      -30,
+      0,
+      40
+     ]
+    },
+    {
+     "tick": 4,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      -15
+     ]
+    },
+    {
+     "tick": 7,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 7,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 7,
+     "part": "right_leg",
+     "rot": [
+      -70,
+      0,
+      60
+     ]
+    },
+    {
+     "tick": 7,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      -15
+     ]
+    },
+    {
+     "tick": 10,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 10,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 10,
+     "part": "right_leg",
+     "rot": [
+      -70,
+      0,
+      60
+     ]
+    },
+    {
+     "tick": 10,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      -15
+     ]
+    },
+    {
+     "tick": 15,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 15,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 15,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 15,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   ]
   },
   "combat.tai.academy.heavy_windup": {
    "ticks": 8,
@@ -2470,7 +2824,116 @@
    "fp": true,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      40,
+      0,
+      20
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "body",
+     "rot": [
+      0,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "right_arm",
+     "rot": [
+      -100,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "body",
+     "rot": [
+      0,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 8,
+     "part": "right_arm",
+     "rot": [
+      -100,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 8,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 8,
+     "part": "body",
+     "rot": [
+      0,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 13,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 13,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 13,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   ]
   },
   "combat.tai.academy.flying_kick": {
    "ticks": 19,
@@ -2506,7 +2969,188 @@
    "fp": true,
    "priority": "P1",
    "slice": "beta2",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "body",
+     "rot": [
+      25,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "right_leg",
+     "rot": [
+      -20,
+      0,
+      50
+     ]
+    },
+    {
+     "tick": 5,
+     "part": "left_leg",
+     "rot": [
+      -30,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 12,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 12,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 12,
+     "part": "body",
+     "rot": [
+      25,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 12,
+     "part": "right_leg",
+     "rot": [
+      -20,
+      0,
+      50
+     ]
+    },
+    {
+     "tick": 12,
+     "part": "left_leg",
+     "rot": [
+      -30,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 18,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 18,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 18,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 18,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 18,
+     "part": "left_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   ]
   },
   "combat.tai.academy.launcher": {
    "ticks": 14,
@@ -2515,7 +3159,116 @@
    "fp": true,
    "priority": "P1",
    "slice": "beta2",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "body",
+     "rot": [
+      10,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 4,
+     "part": "right_arm",
+     "rot": [
+      -170,
+      0,
+      10
+     ]
+    },
+    {
+     "tick": 4,
+     "part": "left_arm",
+     "rot": [
+      -60,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 4,
+     "part": "body",
+     "rot": [
+      -10,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 9,
+     "part": "right_arm",
+     "rot": [
+      -170,
+      0,
+      10
+     ]
+    },
+    {
+     "tick": 9,
+     "part": "left_arm",
+     "rot": [
+      -60,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 9,
+     "part": "body",
+     "rot": [
+      -10,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 14,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 14,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 14,
+     "part": "body",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   ]
   },
   "combat.tai.academy.air_1": {
    "ticks": 8,
@@ -2560,7 +3313,188 @@
    "fp": true,
    "priority": "P1",
    "slice": "beta2",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "left_arm",
+     "rot": [
+      -50,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 6,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 6,
+     "part": "left_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 9,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 9,
+     "part": "left_arm",
+     "rot": [
+      -50,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 12,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 12,
+     "part": "left_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 15,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 15,
+     "part": "left_arm",
+     "rot": [
+      -50,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 18,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 18,
+     "part": "left_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 21,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 21,
+     "part": "left_arm",
+     "rot": [
+      -50,
+      25,
+      0
+     ]
+    },
+    {
+     "tick": 24,
+     "part": "right_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 24,
+     "part": "left_arm",
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 30,
+     "part": "right_arm",
+     "rot": [
+      -70,
+      -25,
+      0
+     ]
+    },
+    {
+     "tick": 30,
+     "part": "left_arm",
+     "rot": [
+      -70,
+      25,
+      0
+     ]
+    }
+   ]
   },
   "combat.tai.strong_fist.leaf_hurricane": {
    "ticks": 17,

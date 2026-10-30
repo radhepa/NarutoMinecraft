@@ -170,6 +170,18 @@ public final class AcademyGameTest implements FabricClientGameTest {
             check(c.computeOnClient(mc -> clip(mc).equals("combat.def.dodge_back")), "a dodge with no direction held plays the back dodge");
             c.takeScreenshot("academy-dodge");
 
+            c.waitTicks(10);   // past the dodge's clip
+            var partner = w.getServer().computeOnServer(s -> Spar.partnerAt(player(w).level(), player(w).blockPosition().offset(3, 0, 0)));
+            check(partner != null, "a spar partner stands by the player");
+            try {
+                w.getServer().runOnServer(s -> Spar.attack(player(w), partner));   // a first light press starts the jab
+                c.waitTicks(2);
+                check(c.computeOnClient(mc -> clip(mc).equals("combat.tai.academy.jab")), "a spar hit plays its combo clip");
+                c.takeScreenshot("academy-jab");
+            } finally {
+                w.getServer().runOnServer(s -> { Spar.end(player(w)); partner.discard(); });
+            }
+
             w.getServer().runCommand("tp @p " + (at.getX() + .5) + " " + at.getY() + " " + (at.getZ() + .5) + " 0 15");   // facing the pig, a little down
             w.getServer().runOnServer(s -> player(w).setItemInHand(InteractionHand.MAIN_HAND,
                     new ItemStack(BuiltInRegistries.ITEM.getValue(Identifier.fromNamespaceAndPath(ShinobiCombat.MOD_ID, "practice_kunai")), 4)));

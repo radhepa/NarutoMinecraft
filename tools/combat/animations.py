@@ -247,6 +247,25 @@ for d, pose in {
     "right": {**arms(-20, 0, 55, -20, 0, -30), "right_leg": (0, 0, 25), "left_leg": (0, 0, -10)},
 }.items():
     keys("def.dodge_" + d, (0, REST), (2, pose), (6, pose), (8, REST))
+# Academy taijutsu: the three-hit combo and the heavy, from a raised guard.
+FISTS = arms(-70, 25)
+keys("tai.academy.jab", (0, FISTS), (3, {**FISTS, "right_arm": (-90, 0, 0)}), (5, {**FISTS, "right_arm": (-90, 0, 0)}), (9, FISTS))
+keys("tai.academy.cross", (0, FISTS), (3, {**FISTS, "left_arm": (-90, 0, 0), "body": (0, -20, 0)}),
+     (5, {**FISTS, "left_arm": (-90, 0, 0), "body": (0, -20, 0)}), (9, {**FISTS, "body": (0, 0, 0)}))
+KICK = {**FISTS, "right_leg": (-70, 0, 60), "body": (0, 0, -15)}
+keys("tai.academy.roundhouse", (0, {**FISTS, "right_leg": (0, 0, 0), "body": (0, 0, 0)}), (4, {**KICK, "right_leg": (-30, 0, 40)}),
+     (7, KICK), (10, KICK), (15, {**FISTS, "right_leg": (0, 0, 0), "body": (0, 0, 0)}))
+WOUND = {**FISTS, "right_arm": (40, 0, 20), "body": (0, -25, 0)}
+keys("tai.academy.heavy_release", (0, WOUND), (3, {**FISTS, "right_arm": (-100, 0, 0), "body": (0, 25, 0)}),
+     (8, {**FISTS, "right_arm": (-100, 0, 0), "body": (0, 25, 0)}), (13, {**FISTS, "body": (0, 0, 0)}))
+# The enders reachable from a spar's light and heavy presses.
+LOW = {**FISTS, "body": (25, 0, 0), "right_leg": (-20, 0, 50), "left_leg": (-30, 0, 0)}
+keys("tai.academy.sweep", (0, {**FISTS, "body": (0, 0, 0), "right_leg": (0, 0, 0), "left_leg": (0, 0, 0)}), (5, LOW), (12, LOW),
+     (18, {**FISTS, "body": (0, 0, 0), "right_leg": (0, 0, 0), "left_leg": (0, 0, 0)}))
+UP = {"right_arm": (-170, 0, 10), "left_arm": (-60, 25, 0), "body": (-10, 0, 0)}
+keys("tai.academy.launcher", (0, {**FISTS, "body": (10, 0, 0)}), (4, UP), (9, UP), (14, {**FISTS, "body": (0, 0, 0)}))
+PALMS = [arms(-90, 0), arms(-90, 0, 0, -50, 25)]
+keys("tai.academy.palm_rush", *[(t, PALMS[i % 2]) for i, t in enumerate(range(0, 25, 3))], (30, FISTS))
 
 
 def summary():

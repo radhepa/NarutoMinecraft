@@ -51,11 +51,11 @@ Counts: P0 62, P1 107, P2 33, P3 37, total 239.
 | `combat.sign.release_ram` | 6 |  | both | yes |  | Genjutsu Release |
 | `combat.cast.push_palms` | 8 |  | both | yes | yes | Generic forward release (Clone, Transformation poof) |
 | `combat.cast.first_aid` | 30 | yes | both |  |  |  |
-| `combat.tai.academy.jab` | 9 |  | both | yes |  |  |
-| `combat.tai.academy.cross` | 9 |  | both | yes |  |  |
-| `combat.tai.academy.roundhouse` | 15 |  | both | yes |  |  |
+| `combat.tai.academy.jab` | 9 |  | both | yes | yes |  |
+| `combat.tai.academy.cross` | 9 |  | both | yes | yes |  |
+| `combat.tai.academy.roundhouse` | 15 |  | both | yes | yes |  |
 | `combat.tai.academy.heavy_windup` | 8 |  | both | yes |  |  |
-| `combat.tai.academy.heavy_release` | 13 |  | both | yes |  |  |
+| `combat.tai.academy.heavy_release` | 13 |  | both | yes | yes |  |
 | `combat.tai.academy.flying_kick` | 19 |  | both | yes |  |  |
 | `combat.tai.academy.lunge` | 11 |  | both | yes |  |  |
 | `combat.wpn.blade.slash_1` | 9 |  | both | yes |  |  |
@@ -123,13 +123,13 @@ Counts: P0 62, P1 107, P2 33, P3 37, total 239.
 | `combat.cast.night_curtain` | 14 |  | both |  |  | Tobari |
 | `combat.cast.seal_slap` | 6 |  | both | yes |  |  |
 | `combat.tai.academy.counter` | 9 |  | both | yes |  |  |
-| `combat.tai.academy.sweep` | 18 |  | both | yes |  |  |
-| `combat.tai.academy.launcher` | 14 |  | both | yes |  |  |
+| `combat.tai.academy.sweep` | 18 |  | both | yes | yes |  |
+| `combat.tai.academy.launcher` | 14 |  | both | yes | yes |  |
 | `combat.tai.academy.air_1` | 8 |  | both | yes |  |  |
 | `combat.tai.academy.air_2` | 8 |  | both | yes |  |  |
 | `combat.tai.academy.air_3` | 10 |  | both | yes |  |  |
 | `combat.tai.academy.air_spike` | 17 |  | both |  |  |  |
-| `combat.tai.academy.palm_rush` | 30 |  | both | yes |  |  |
+| `combat.tai.academy.palm_rush` | 30 |  | both | yes | yes |  |
 | `combat.tai.strong_fist.leaf_hurricane` | 17 |  | both |  |  |  |
 | `combat.tai.strong_fist.leaf_rising_wind` | 13 |  | both |  |  |  |
 | `combat.tai.strong_fist.leaf_whirlwind` | 18 |  | both |  |  |  |

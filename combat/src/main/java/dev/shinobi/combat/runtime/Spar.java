@@ -82,6 +82,7 @@ public final class Spar {
             player.sendOverlayMessage(Component.translatable("shinobi_combat.spar.tired"));
             return;
         }
+        Fighter.of(player).play("combat.tai.academy." + (move.id().equals("heavy") ? "heavy_release" : move.id()), now);
         double hp = Damage.hit(Damage.Attack.player(move.damage(), move.type(), Damage.Delivery.MELEE, 1, Scaling.Pillar.TAIJUTSU, 1, 1),
                 Damage.Defence.of(false, 1, 0, 0, Nature.NONE)).hp();
         bout.partnerHealth -= hp;

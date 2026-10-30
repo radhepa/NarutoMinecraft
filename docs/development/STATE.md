@@ -14,12 +14,14 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
   mapping under Shinobi in Options > Controls, rebindable and saved (COMBAT.md defaults; guard on right click). The
   twelve signs, transition, fizzle, push-palms, block and four dodges are keyed in `tools/combat/animations.py` and
   play on every player from the synced stance (clip and start tick).
-- This file's commit (P06 review fixes): worn armour follows the poses; the wheel on J and substitution on N
+- 849882b (P06 review fixes): worn armour follows the poses; the wheel on J and substitution on N
   (G and X stay for the pouch and a quick slot); a weave or guard ends a one-shot clip.
+- This file's commit (P06): a spar hit plays its Academy taijutsu clip (jab, cross, roundhouse, heavy, sweep,
+  launcher, palm rush, keyed in `tools/combat/animations.py`).
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-`./gradlew build` and `:combat:runClientGameTest` passed (`.local-dev/logs/animfix-*.log`; `:progression:runClientGameTest`
+`./gradlew build` and `:combat:runClientGameTest` passed (`.local-dev/logs/taiclips-*.log`; screenshot academy-jab; `:progression:runClientGameTest`
 at 72c995b: `p06anim-*.log`); screenshots in `combat/build/run/clientGameTest/screenshots/`: controls-shinobi,
 academy-weaving, academy-cast, academy-dodge, academy-guard (in iron armour).
 
@@ -28,7 +30,7 @@ academy-weaving, academy-cast, academy-dodge, academy-guard (in iron armour).
 - P07: the opening and Academy campaign through graduation.
 - P03: Varied's apartment roll, bound-cast role identities, Konoha loot tables and names.
 - P05: hospital wake, level loss on death; the shop counter block, haggling, selling and orders.
-- P06: full technique and stock coverage; the taijutsu combo with its clips; first-person arm poses.
+- P06: full technique and stock coverage; first-person arm poses; air and dash taijutsu clips.
 
 ## Launch
 
@@ -43,9 +45,8 @@ itself until P07; fatigue has Story thresholds only; event closings and keeper l
 tamagoyaki are not sold, yakitori only on Market Day; a dedicated server's default level-type gets no map; comfort
 ignores season, mess, plant and pet; undrawn dishes show a stand-in sprite; a dead bound resident does not block a
 quest; the quest checker mirrors the street's plots. Guard on right click works only with an empty hand (a held kunai
-throws); signs 1 to 9 share the hotbar keys, which do not switch slots while weaving; the wheel (G) and Substitution (X)
-keys are not in COMBAT.md and sit on the pouch and quick-slot keys; poses snap at a clip's start and show in third
-person only. `tools/combat/build.py --check` flags a Minecraft class name in a client mixin as a story-bible term.
+throws); signs 1 to 9 share the hotbar keys, which do not switch slots while weaving; poses snap at a clip's start and
+show in third person only; the heavy plays its release without the windup.
 
 ## Blockers
 
