@@ -33,12 +33,15 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SnowballItem;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiConsumer;
+import java.util.function.Function;
 import java.util.function.ToDoubleFunction;
 
 /** Shinobi Combat's entrypoint: the combat data from data/combat, the practice spar, the Academy techniques and tools. */
@@ -59,6 +62,8 @@ public final class ShinobiCombat implements ModInitializer {
             b -> b.syncWith(Fighter.Stance.CODEC, AttachmentSyncPredicate.all()));
     /** The practice tools, thrown like snowballs, and the damage each deals on a hit (weapons.json). */
     public static final Map<Item, Double> THROWN = new HashMap<>();
+    /** Thrown like the practice tools; bursts where it lands (Tools.smoke). */
+    public static Item SMOKE_BOMB;
     /** A multiplier on each player's chakra regen (fatigue, food); the daily-life mod fills it in. */
     public static ToDoubleFunction<ServerPlayer> regen = p -> 1;
 
@@ -69,14 +74,18 @@ public final class ShinobiCombat implements ModInitializer {
 
     public static boolean knows(ServerPlayer player, String id) { return player.getAttachedOrCreate(STATE).learned().contains(id); }
 
+    private static Item item(String name, Function<Item.Properties, Item> make) {
+        var id = Identifier.fromNamespaceAndPath(MOD_ID, name);
+        return Registry.register(BuiltInRegistries.ITEM, id, make.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, id)).stacksTo(16)));
+    }
+
     @Override
     public void onInitialize() {
         data = new CombatData(FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow().findPath("data/shinobi_combat/combat").orElseThrow());
-        for (String name : new String[]{"practice_kunai", "practice_shuriken"}) {
-            var id = Identifier.fromNamespaceAndPath(MOD_ID, name);
-            var item = Registry.register(BuiltInRegistries.ITEM, id, new SnowballItem(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, id)).stacksTo(16)));
-            THROWN.put(item, Json.num(data.weapons.get("item:" + name).thrown(), "damage", 1));
-        }
+        for (String name : new String[]{"practice_kunai", "practice_shuriken"})
+            THROWN.put(item(name, SnowballItem::new), Json.num(data.weapons.get("item:" + name).thrown(), "damage", 1));
+        SMOKE_BOMB = item("smoke_bomb", SnowballItem::new);
+        item("ninja_wire", props -> new BlockItem(Blocks.TRIPWIRE, props));   // strung like string: a tripwire that trips mobs (Tools.trip)
         PayloadTypeRegistry.serverboundPlay().register(Fighter.Act.TYPE, Fighter.Act.CODEC);
         ServerPlayNetworking.registerGlobalReceiver(Fighter.Act.TYPE, (payload, context) -> Fighter.act(context.player(), payload));
         // The client fires this too, with no tags synced: it passes there and the attack reaches the server, which takes it over.

@@ -15,12 +15,15 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
 - 5a74294 (P06): the rest of the Academy techniques. Release (woven Ram) clears nausea, blindness and
   darkness; Rope Escape (passive) moves 40% faster through cobwebs; Field First Aid (crouch, empty hand, use on a
   hurt ally) heals after 3 s, and moving off, standing up or a landed hit stops it.
-- This file's commit: the quest action `teach_technique` (ROADMAP 5); winning the first-day spar teaches the six
+- 2a9a9df: the quest action `teach_technique` (ROADMAP 5); winning the first-day spar teaches the six
   Academy techniques, so they need no command.
+- This file's commit (P06): the Academy tools and roof hopping. A thrown smoke bomb bursts: mobs within 4 lose
+  their target, others are blinded, a thrower inside goes invisible for 6 s; ninja wire strings a tripwire that
+  holds a mob down 2 s; a sprint jump off leaves, logs, stairs or slabs costs a chakra point and pushes on (keyed clip).
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-`./gradlew build` and `:progression:runClientGameTest` passed (`.local-dev/logs/teach-*.log`); `:combat:runClientGameTest` at 5a74294 (`academy-tech-*2.log`; screenshot academy-first-aid;
+`./gradlew build` and `:combat:runClientGameTest` passed (`.local-dev/logs/tools-build3.log`, `tools-combat-gt5.log`; screenshot academy-smoke); `:progression:runClientGameTest` at 2a9a9df (`teach-*.log`);
 and earlier shots in
 `combat/build/run/clientGameTest/screenshots/`.
 
@@ -29,7 +32,7 @@ and earlier shots in
 - P07: the opening and Academy campaign through graduation.
 - P03: Varied's apartment roll, bound-cast role identities, Konoha loot tables and names.
 - P05: hospital wake, level loss on death; the shop counter block, haggling, selling and orders.
-- P06: smoke bombs, wire and roof hopping; mentors and lessons (the first-day spar teaches all six at once); stock coverage; first-person arm poses; air and dash taijutsu clips.
+- P06: mentors and lessons (the first-day spar teaches all six at once); stock coverage (the tools and practice weapons are not sold yet); first-person arm poses; air and dash taijutsu clips.
 
 ## Launch
 
@@ -47,7 +50,8 @@ quest; the quest checker mirrors the street's plots. Guard on right click works 
 throws); signs 1 to 9 share the hotbar keys, which do not switch slots while weaving; poses snap at a clip's start and
 show in third person only; the heavy plays its release without the windup. Release's
 genjutsu are vanilla nausea, blindness and darkness; First Aid has no bleeding or downed state to treat; Rope Escape
-loosens cobwebs only.
+loosens cobwebs only. Every player roof-hops (no lesson); any tripwire trips mobs, one wire per item, no tether or
+binding; the smoke bomb's numbers are fixed in `Tools` (weapons/tools.json is not loaded).
 
 ## Blockers
 

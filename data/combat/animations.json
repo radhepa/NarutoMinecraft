@@ -67,7 +67,152 @@
    "fp": false,
    "priority": "P0",
    "slice": "beta1",
-   "keys": null
+   "keys": [
+    {
+     "tick": 0,
+     "part": "right_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 0,
+     "part": "left_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "right_arm",
+     "rot": [
+      35,
+      0,
+      20
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "left_arm",
+     "rot": [
+      35,
+      0,
+      -20
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "right_leg",
+     "rot": [
+      -60,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 3,
+     "part": "left_leg",
+     "rot": [
+      -35,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 7,
+     "part": "right_arm",
+     "rot": [
+      35,
+      0,
+      20
+     ]
+    },
+    {
+     "tick": 7,
+     "part": "left_arm",
+     "rot": [
+      35,
+      0,
+      -20
+     ]
+    },
+    {
+     "tick": 7,
+     "part": "right_leg",
+     "rot": [
+      -60,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 7,
+     "part": "left_leg",
+     "rot": [
+      -35,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 10,
+     "part": "right_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 10,
+     "part": "left_arm",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 10,
+     "part": "right_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "tick": 10,
+     "part": "left_leg",
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   ]
   },
   "combat.move.ninja_run": {
    "ticks": 12,

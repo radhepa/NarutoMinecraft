@@ -247,6 +247,9 @@ for d, pose in {
     "right": {**arms(-20, 0, 55, -20, 0, -30), "right_leg": (0, 0, 25), "left_leg": (0, 0, -10)},
 }.items():
     keys("def.dodge_" + d, (0, REST), (2, pose), (6, pose), (8, REST))
+# Roof hop: arms swept back and knees tucked over the gap.
+LEAP = {**arms(35, 0, 20), "right_leg": (-60, 0, 0), "left_leg": (-35, 0, 0)}
+keys("move.roof_hop", (0, REST), (3, LEAP), (7, LEAP), (10, REST))
 # Academy taijutsu: the three-hit combo and the heavy, from a raised guard.
 FISTS = arms(-70, 25)
 keys("tai.academy.jab", (0, FISTS), (3, {**FISTS, "right_arm": (-90, 0, 0)}), (5, {**FISTS, "right_arm": (-90, 0, 0)}), (9, FISTS))

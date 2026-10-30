@@ -16,7 +16,7 @@ Counts: P0 62, P1 107, P2 33, P3 37, total 239.
 | `combat.move.slip_out` | 40 |  | player |  |  | Prologue: squeezing out of the cell |
 | `combat.move.carried` | 40 | yes | player |  |  | Prologue: carried over the ravine |
 | `combat.move.carry` | 40 | yes | resident |  |  | Prologue: the captain carries you |
-| `combat.move.roof_hop` | 10 |  | both |  |  |  |
+| `combat.move.roof_hop` | 10 |  | both |  | yes |  |
 | `combat.def.dodge_left` | 8 |  | both |  | yes |  |
 | `combat.def.dodge_right` | 8 |  | both |  | yes |  |
 | `combat.def.dodge_back` | 8 |  | both |  | yes |  |

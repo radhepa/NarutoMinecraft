@@ -20,7 +20,9 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Display;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.decoration.Mannequin;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.levelgen.presets.WorldPresets;
 import net.minecraft.world.phys.AABB;
@@ -202,6 +204,58 @@ public final class AcademyGameTest implements FabricClientGameTest {
             c.getInput().releaseKey(ShinobiCombatClient.GUARD);
             w.getServer().runOnServer(s -> player(w).setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY));
 
+            // Ninja wire strung at your feet; step back and a mob standing in it is tripped.
+            Item wire = BuiltInRegistries.ITEM.getValue(Identifier.fromNamespaceAndPath(ShinobiCombat.MOD_ID, "ninja_wire"));
+            w.getServer().runOnServer(s -> player(w).setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(wire, 2)));
+            w.getServer().runCommand("tp @p ~ ~ ~ 0 90");
+            c.waitTicks(3);
+            c.getInput().pressKey(o -> o.keyUse);
+            c.waitTicks(3);
+            check(w.getServer().computeOnServer(s -> s.overworld().getBlockState(at).is(Blocks.TRIPWIRE) && player(w).getMainHandItem().getCount() == 1),
+                    "ninja wire strings a tripwire");
+            w.getServer().runCommand("tp @p " + (at.getX() + 3.5) + " " + at.getY() + " " + (at.getZ() + .5) + " 90 30");
+            w.getServer().runCommand("summon husk " + (at.getX() + .5) + " " + at.getY() + " " + (at.getZ() + .5) + " {NoAI:1b,Tags:[\"academy_tool\"]}");
+            c.waitTicks(5);
+            check(w.getServer().computeOnServer(s -> tool(w).hasEffect(MobEffects.SLOWNESS)), "a mob in the wire is tripped");
+
+            // A smoke bomb at your feet: the husk hunting you loses you, and you leave its tracking.
+            w.getServer().runOnServer(s -> { tool(w).removeAllEffects(); tool(w).setTarget(player(w)); player(w).setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(ShinobiCombat.SMOKE_BOMB, 2)); });
+            w.getServer().runCommand("tp @p ~ ~ ~ 0 90");
+            c.waitTicks(3);
+            c.getInput().pressKey(o -> o.keyUse);
+            c.waitTicks(5);
+            check(w.getServer().computeOnServer(s -> tool(w).getTarget() == null && player(w).hasEffect(MobEffects.INVISIBILITY)),
+                    "a smoke bomb loses the hunter and hides its thrower");
+            w.getServer().runCommand("tp @p ~ ~ ~ 90 20");
+            c.waitTicks(2);
+            c.takeScreenshot("academy-smoke");
+            w.getServer().runOnServer(s -> { tool(w).discard(); player(w).removeAllEffects(); player(w).setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY); });
+            w.getServer().runCommand("setblock " + at.getX() + " " + at.getY() + " " + at.getZ() + " air");
+
+            // A sprint jump off a log beam pushes on and costs chakra.
+            String beam = (at.getX() + 2) + " " + (at.getY() - 1) + " " + at.getZ() + " " + (at.getX() - 12) + " " + (at.getY() - 1) + " " + at.getZ();
+            w.getServer().runCommand("fill " + beam + " oak_log");
+            w.getServer().runCommand("tp @p " + (at.getX() + 2.5) + " " + at.getY() + " " + (at.getZ() + .5) + " 90 0");   // facing west, along the beam
+            c.waitTicks(5);
+            c.getInput().holdKey(o -> o.keyUp);
+            c.getInput().holdKey(o -> o.keySprint);
+            c.waitTicks(8);
+            double hopFrom = state(w).chakra();
+            String before = c.computeOnClient(mc -> "sprinting " + mc.player.isSprinting() + ", food " + mc.player.getFoodData().getFoodLevel()
+                    + ", on " + mc.player.level().getBlockState(mc.player.getOnPos()).getBlock() + ", ground " + mc.player.onGround());
+            c.getInput().holdKey(o -> o.keyJump);   // jump reads isDown each tick, which a press-and-release in one tick misses
+            c.waitTicks(1);
+            c.getInput().releaseKey(o -> o.keyJump);
+            c.waitTicks(2);   // the server's push reaches the client
+            double speed = c.computeOnClient(mc -> mc.player.getDeltaMovement().horizontalDistance());
+            check(speed > .4 && hopFrom - state(w).chakra() > .5 && c.computeOnClient(mc -> clip(mc).equals("combat.move.roof_hop")),
+                    "a sprint jump off a log is a roof hop: " + speed + " (" + before + ", chakra " + hopFrom + " to " + state(w).chakra() + ")");
+            c.getInput().releaseKey(o -> o.keySprint);
+            c.getInput().releaseKey(o -> o.keyUp);
+            c.waitTicks(20);
+            w.getServer().runCommand("fill " + beam + " grass_block");
+            w.getServer().runCommand("tp @p " + (at.getX() + .5) + " " + at.getY() + " " + (at.getZ() + .5) + " 0 15");
+
             check(w.getServer().computeOnServer(s -> ShinobiCombat.teach(player(w), Fighter.RELEASE) && ShinobiCombat.teach(player(w), Fighter.ROPE_ESCAPE)
                     && ShinobiCombat.teach(player(w), Fighter.FIRST_AID)), "Release, Rope Escape and First Aid are taught");
             w.getServer().runCommand("effect give @p nausea 30");
@@ -281,6 +335,10 @@ public final class AcademyGameTest implements FabricClientGameTest {
     static ServerPlayer player(TestSingleplayerContext w) { return w.getConnection().getServerPlayer(); }
 
     static Fighter.State state(TestSingleplayerContext w) { return w.getServer().computeOnServer(s -> player(w).getAttached(ShinobiCombat.STATE)); }
+
+    static Mob tool(TestSingleplayerContext w) {
+        return near(w, Mob.class, 16, e -> e.entityTags().contains("academy_tool")).getFirst();
+    }
 
     static LivingEntity target(TestSingleplayerContext w) {
         return near(w, LivingEntity.class, 16, e -> e.entityTags().contains("academy_target")).getFirst();
