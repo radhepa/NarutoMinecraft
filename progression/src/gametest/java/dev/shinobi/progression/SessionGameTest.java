@@ -32,6 +32,7 @@ import net.minecraft.world.phys.Vec3;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import static dev.shinobi.progression.ErrandGameTest.check;
 import static dev.shinobi.progression.ErrandGameTest.journal;
@@ -39,8 +40,8 @@ import static dev.shinobi.progression.ErrandGameTest.ryo;
 
 /**
  * M2, the ten-minute play session (ROADMAP.md 13.4): on the test street a new player makes a character in the creator,
- * the training quest starts and names each step; the player walks to the yard and wins a spar by real attacks (each
- * one taken by the server), earns 30 ryo, buys a tatami from the keeper, places it in flat 3a, sleeps in the flat's bed
+ * the training quest starts and names each step; the player walks to the yard, loses a first bout (the quest waits,
+ * unpaid), then wins a spar by real attacks (each one taken by the server), earns 30 ryo once, buys a tatami from the keeper, places it in flat 3a, sleeps in the flat's bed
  * at nightfall into the next morning (day 2's stipend paid), and reopening keeps the look, the finished quest, the wallet
  * and the furnishing. The rest of the ordinary day (P05): a night awake tires the player and the bed clears it with day
  * 3's stipend; the flat's chest and crafting table open; a defeat wakes the player in the flat without the kunai; the
@@ -78,12 +79,19 @@ public final class SessionGameTest implements FabricClientGameTest {
             w.getServer().runCommand("tp @p " + (yard.getX() + .5) + " " + yard.getY() + " " + (yard.getZ() + 2.5) + " facing entity " + partner + " feet");
             c.waitTicks(20);
             int id = w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getEntity(partner).getId());
+            // P04-6: a bout lost first. One hit starts it, then the player stands in reach and takes the partner's blows;
+            // the quest waits at the spar with its reward unpaid, and the next hit is the retry.
+            var lost = new AtomicBoolean();
+            Spar.LOST.register(p -> lost.set(true));
+            c.runOnClient(mc -> mc.gameMode.attack(mc.player, mc.level.getEntity(id)));
+            for (int i = 0; i < 300 && !lost.get(); i++) c.waitTicks(10);
+            check(lost.get() && "spar".equals(step(w)) && ryo(w) == 100, "a lost spar leaves the quest at the spar, unpaid: " + journal(w) + ", " + ryo(w));
             for (int i = 0; i < 80 && "spar".equals(step(w)); i++) {
                 c.runOnClient(mc -> mc.gameMode.attack(mc.player, mc.level.getEntity(id)));
                 c.waitTicks(i == 3 ? 1 : 12);
                 if (i == 3) c.takeScreenshot("session-spar");
             }
-            check("shop".equals(step(w)) && ryo(w) == 130, "the spar won pays 30 ryo: " + journal(w) + ", " + ryo(w));
+            check("shop".equals(step(w)) && ryo(w) == 130, "the retried spar won pays 30 ryo once: " + journal(w) + ", " + ryo(w));
             c.takeScreenshot("session-won");
 
             UUID keeper = w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getAttachedOrElse(ShinobiVillage.ROLES, Map.<String, UUID>of()).get("job:tea_house"));

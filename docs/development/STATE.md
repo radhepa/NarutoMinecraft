@@ -9,28 +9,26 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
 
 - 5f21cc5: a new world is the Hidden Leaf preset; its first start pastes the street, border and spawn.
 - a36468c, 8bf6f40 (P06): chakra, hand signs, Academy techniques, guard and dodge.
-- The commit "P05: the ordinary day" (this file's commit): calendar ("Day N, Weekday" title, `Daily.day/weekday`),
-  30 ryo stipend from day 2 (day 1 is the 100 ryo purse, economy.json `stipend.from_day`), Tired at 01:00 awake
-  (Slowness I, chakra regen x0.75) cleared by a bed, a defeat wakes in flat 3a with the pack minus thrown tools
-  (keep_inventory on the map), chest and crafting table in the flat, kitten/pup adoption from the keeper.
-- P05 review fixes: Progression's one respawn handler wakes the player in the flat only when the map has it and
-  the spot is free; a clock jumped several days pays each skipped stipend. Leaf worlds created before e92d2f6 lack
-  keep_inventory, the chest and the table: recreate them.
+- e92d2f6, f139632 (P05): calendar, 30 ryo stipend from day 2 (one per skipped day), Tired at 01:00 cleared by a bed,
+  a defeat wakes in flat 3a (if the map has it and the spot is free) minus thrown tools, the flat's chest and table,
+  pet adoption. Leaf worlds created before e92d2f6 lack keep_inventory, the chest and the table: recreate them.
+- The commit "P04: ..." (this file's commit) closes P04: a lost spar keeps the quest at its spar, reward unpaid
+  (P04-6); a step missing its quest, step, anchor or resident waits blocked with one warning and shows so in
+  `/shinobi journal`; `missions.py --quests` (also in `--check`) checks every quest file (P04-7, MISSIONS.md).
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-`./gradlew build` passed (`.local-dev/logs/p05-day-build.log`). `:progression:runClientGameTest` passed: `SessionGameTest`
-adds stipend days 2 and 3, fatigue and recovery, chest and table, death wake, a tamed kitten (screenshots
-`0006_session-chest` to `0008_session-kitten`; log `p05-day-progression-gametest.log`). `:village:` and
-`:combat:runClientGameTest` passed (`p05-day-village-gametest.log`, `p05-day-combat-gametest.log`).
+`./gradlew build` passed (`.local-dev/logs/p04-build.log`); `python tools/missions/missions.py --check` passed.
+`:progression:runClientGameTest` passed (`p04-progression-gametest.log`): `SessionGameTest` loses a spar, retries,
+wins and is paid once across a reload, and a two-day clock jump pays two stipends; `ErrandGameTest` blocks a step
+whose anchor is gone. `:village:` and `:combat:runClientGameTest` passed at e92d2f6 (`p05-day-*-gametest.log`).
 
 ## Remaining
 
 - P07: the opening and Academy campaign through graduation.
-- P04-6: failure and retry at each quest boundary. P04-7: the quest checker (`tools/missions/missions.py`).
 - P03: Varied's apartment roll, role identities for the bound cast, Konoha loot tables and names.
-- P05: Exhausted/Collapse/Well Rested, hospital wake (no hospital on the map), level loss on death (no levels yet),
-  dish items and their buffs, weekly stock and hours, a shop screen.
+- P05: Exhausted/Collapse/Well Rested, hospital wake, level loss on death, dish buffs, weekly stock and hours, a
+  shop screen.
 - P06: animation, rebindable controls, full technique and stock coverage.
 
 ## Launch
@@ -41,7 +39,8 @@ the Hidden Leaf. Game rule `shinobi_core:varied_world` makes a Varied save. Pack
 ## Known shortcuts
 
 The tea house keeper sells the furniture, tea and adoption lines; the training fixture starts itself until P07; a
-dedicated server's default level-type gets no map; one fatigue stage.
+dedicated server's default level-type gets no map; one fatigue stage; a dead but still bound resident does not block a
+quest; the quest checker mirrors the street's plots from `TestStreet`.
 
 ## Blockers
 

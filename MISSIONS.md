@@ -21,6 +21,7 @@ lives in the developers-only [story bible](docs/story/STORY_BIBLE.md), keyed by 
 ```
 python tools/missions/missions.py --doc     # compile templates and tables, write docs/missions/CATALOGUE.md
 python tools/missions/missions.py --check   # validate; fails if the compiled JSON is stale
+python tools/missions/missions.py --quests  # check only the quest files (--check runs it too)
 ./gradlew :progression:missions:test        # 33 tests
 ./gradlew :progression:missions:simulate    # the desk through Genin life and a 200-day run (-Pseed=N)
 ```
@@ -282,6 +283,17 @@ modifier; a choice that leads to an unknown outcome; unknown slots; enemy groups
 `fast` without a fast time; fewer than two twists; a C-rank or above with no fight (except mediation,
 medical, investigation and ANBU work); and stale compiled files. The Java `Catalogue` re-checks the graph
 and that every twist changes the path.
+
+**Quests** (`*/src/main/resources/data/<ns>/quests/*.json`, run by Shinobi Progression) are checked by
+`--quests` and `--check` against the test street's anchors and bound roles (`tools/konoha/blueprints`): known
+step types (`go`, `spar`, `talk`, `furnish`, `sleep`), actions (`set_flag`, `give_ryo` of at least 1) and
+conditions (`all`, `any`, `not`, `flag`, `quest_state`); every flag a condition reads set by some quest;
+`quest_state` naming a known quest; slots, places and people on the map; no missing or unreachable step. Each
+error reads `file: quest/step: problem`; the bad fixtures (`tools/missions/fixtures/quest.bad.json` and the
+gametest's missing-anchor errand) must keep failing. At runtime a lost spar or a walk-away leaves the quest at
+its spar step with its reward unpaid (the next hit retries), so quests need no `fail` or `retry` field; a
+step whose quest, step, anchor or bound resident has gone waits blocked, with one log warning naming the quest,
+step and missing id, and `/shinobi journal` shows it blocked until it is back.
 
 **Text.** Titles, twist premises, choices and banter are dialogue keys in the dialogue session's scheme,
 derived from the id: `dlg:<template id>.<part>` for the parts `brief`, `accept`, `decline`, `progress`,

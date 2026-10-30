@@ -64,6 +64,8 @@ public final class ShinobiProgression implements ModInitializer {
     public static final Map<String, Quest> QUESTS = new HashMap<>();
     /** Players the training quest could not be cast for on this map; tried again after a reload. */
     static final Set<UUID> UNCAST = new HashSet<>();
+    /** Each blocked step already warned about, as player, quest, step and what is missing; cleared on a reload. */
+    static final Set<String> WARNED = new HashSet<>();
     /** The noncanonical training fixture of the M2 play session (ROADMAP.md 13.4). */
     static final String TRAINING = "training.test.first_day";
     /** The furniture shop's blocks, once the registries are complete. */
@@ -103,6 +105,12 @@ public final class ShinobiProgression implements ModInitializer {
             now.sendSystemMessage(Component.translatable("shinobi_life.woke"));
         });
         Spar.WON.register(player -> stepDone(player, "spar", step -> true));
+        // A lost bout leaves the quest at its spar step, its reward unpaid; the next hit is the retry.
+        Spar.LOST.register(player -> player.getAttachedOrCreate(JOURNAL).active().forEach((id, at) -> {
+            var quest = QUESTS.get(id);
+            if (quest != null && quest.template().steps().get(at) instanceof Template.Step s && "spar".equals(s.type()))
+                player.sendSystemMessage(Component.translatable("shinobi_progression.quest.retry", Component.translatable(quest.title())).withStyle(ChatFormatting.YELLOW));
+        }));
         // Furnishing: a block from the furniture shop placed in the player's room, checked in a task after the placement.
         UseBlockCallback.EVENT.register((player, level, hand, hit) -> {
             if (player instanceof ServerPlayer p && p.getItemInHand(hand).getItem() instanceof BlockItem item && FURNITURE.get().contains(item)) {
@@ -139,8 +147,11 @@ public final class ShinobiProgression implements ModInitializer {
                                     return accept(player, id) ? 1 : 0;
                                 }))))
                         .then(Commands.literal("journal").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS)).executes(ctx -> {
-                            var journal = ctx.getSource().getPlayerOrException().getAttachedOrCreate(JOURNAL);
-                            ctx.getSource().sendSuccess(() -> Component.literal("Under way: " + journal.active() + "; done: " + journal.done()), false);
+                            var player = ctx.getSource().getPlayerOrException();
+                            var journal = player.getAttachedOrCreate(JOURNAL);
+                            String under = journal.active().entrySet().stream().map(e -> e.getKey() + " at " + e.getValue()
+                                    + (blocked(player, e.getKey()) instanceof String b ? " (blocked: no " + b + ")" : "")).collect(Collectors.joining(", "));
+                            ctx.getSource().sendSuccess(() -> Component.literal("Under way: " + under + "; done: " + journal.done()), false);
                             return journal.active().size();
                         }))));
     }
@@ -149,6 +160,7 @@ public final class ShinobiProgression implements ModInitializer {
     static void load(MinecraftServer server) {
         QUESTS.clear();
         UNCAST.clear();
+        WARNED.clear();
         server.getResourceManager().listResources("quests", id -> id.getPath().endsWith(".json")).forEach((file, resource) -> {
             try (var in = resource.open()) {
                 Map<String, Object> raw = Json.object(new String(in.readAllBytes(), StandardCharsets.UTF_8));
@@ -195,15 +207,49 @@ public final class ShinobiProgression implements ModInitializer {
             journal = player.getAttachedOrCreate(JOURNAL);
         }
         for (var entry : journal.active().entrySet()) {
-            // shortcut: a quest or step since removed from the data stays put in the journal, until P04-6's failure handling.
+            // A step whose quest, step, place or person is gone waits, blocked, with one warning; it goes on once that is back.
+            String missing = blocked(player, entry.getKey());
+            if (missing != null) {
+                if (WARNED.add(player.getUUID() + " " + entry + " " + missing)) {
+                    LOG.warn("Quest {} step {} is blocked for {}: no {} on this map or in the data", entry.getKey(), entry.getValue(), player.getName().getString(), missing);
+                    player.sendSystemMessage(Component.translatable("shinobi_progression.quest.blocked", Component.translatable(QUESTS.containsKey(entry.getKey()) ? QUESTS.get(entry.getKey()).title() : entry.getKey()), missing)
+                            .withStyle(ChatFormatting.RED));
+                }
+                continue;
+            }
             var quest = QUESTS.get(entry.getKey());
-            var step = quest == null ? null : quest.template().steps().get(entry.getValue());
-            if (step == null) continue;
+            var step = quest.template().steps().get(entry.getValue());
             String place = Quests.resolve(Json.str(step.objective().get("place"), ""), journal.castOf(quest.template().id()));
             if ("go".equals(step.type()) && near(player, place) || "sleep".equals(step.type()) && player.getSleepingPos().filter(bed -> TestStreet.inPlayerRoom(player.level(), bed)).isPresent()) complete(player, quest);
             else if ("spar".equals(step.type()) && near(player, place))
                 Spar.partnerAt(player.level(), player.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(place));
         }
+    }
+
+    /**
+     * What the player's current step of the quest needs and lacks: the quest or step in the data, the anchor of a go
+     * or spar step, the resident a talk step names, bound in the map's roles; null if nothing (or the quest is not under way).
+     * shortcut: a bound resident that has died still counts as present, until roles are rebound when a resident dies (P03).
+     */
+    static String blocked(ServerPlayer player, String id) {
+        var journal = player.getAttachedOrCreate(JOURNAL);
+        String at = journal.active().get(id);
+        if (at == null) return null;
+        var quest = QUESTS.get(id);
+        if (quest == null) return "quest " + id;
+        var step = quest.template().steps().get(at);
+        if (step == null) return "step " + at;
+        var level = player.level();
+        var cast = journal.castOf(id);
+        String field = switch (step.type()) { case "go", "spar" -> "place"; case "talk" -> "who"; default -> null; };
+        if (field == null) return null;
+        String ref = Json.str(step.objective().get(field), ""), key = Quests.resolve(ref, cast);
+        boolean there = key != null && ("who".equals(field)
+                ? level.getAttachedOrElse(ShinobiVillage.ROLES, Map.<String, UUID>of()).values().stream().anyMatch(u -> u.toString().equals(key))
+                : level.getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).containsKey(key));
+        if (there) return null;
+        var slot = ref.startsWith("slot:") ? quest.template().slots().get(ref.substring(5)) : null;
+        return ("who".equals(field) ? "resident " : "anchor ") + (slot == null ? ref : ref + " (" + Quests.key(Json.str(slot.get("pick"), ""), slot) + ")");
     }
 
     /** Finishes the player's active steps of {@code type} that {@code ok} accepts. */

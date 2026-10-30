@@ -46,6 +46,11 @@ public final class Spar {
     public static final Event<Consumer<ServerPlayer>> WON = EventFactory.createArrayBacked(Consumer.class, all -> player -> {
         for (var l : all) l.accept(player);
     });
+    /** Fired on the server thread when a player loses a bout; the next hit starts another. */
+    @SuppressWarnings("unchecked")
+    public static final Event<Consumer<ServerPlayer>> LOST = EventFactory.createArrayBacked(Consumer.class, all -> player -> {
+        for (var l : all) l.accept(player);
+    });
     private static final Map<UUID, Bout> BOUTS = new HashMap<>();
 
     private Spar() {}
@@ -113,6 +118,7 @@ public final class Spar {
             if (bout.health <= 0) {
                 it.remove();
                 title(player, "lost", SoundEvents.VILLAGER_NO);
+                LOST.invoker().accept(player);
             } else player.sendOverlayMessage(Component.translatable("shinobi_combat.spar.struck", one(hp), one(bout.partnerHealth), one(bout.health)));
         }
     }

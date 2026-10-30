@@ -68,8 +68,7 @@ final class Quests {
     /**
      * Refuses a condition the runtime cannot answer. shortcut: {@code all}, {@code any}, {@code not}, {@code flag} and
      * {@code quest_state} only, until Shinobi Core's condition registry answers the rest (ROADMAP.md, "Conditions and actions").
-     * shortcut: quest ids and flag names are not checked against the loaded quests, so a typo never holds (or, for
-     * {@code not_started}, always holds); until the checker's cross-file errors (P04-7).
+     * Quest ids and flag names are checked across the files by {@code tools/missions/missions.py --quests}, not here.
      */
     static void condition(String where, Object cond, String self) {
         var m = Json.map(cond);

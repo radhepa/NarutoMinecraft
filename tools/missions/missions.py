@@ -5,11 +5,15 @@
     python tools/missions/missions.py --check    # validate only; fails if the compiled JSON is stale
     python tools/missions/missions.py --doc      # also write docs/missions/CATALOGUE.md
     python tools/missions/missions.py --summary  # counts by rank, category and status
+    python tools/missions/missions.py --quests   # check only the quest files (also part of --check)
 
 Templates live in tools/missions/catalogue/ (one module per rank group) and compile to one JSON file each
 under adventure/data/shinobi_adventure/missions/templates/<rank>/, with economy.json, desk.json,
 clients.json, squad.json and needs.json beside them. MISSIONS.md explains the format.
+Quests (*/src/main/resources/data/<ns>/quests/*.json, run by Shinobi Progression) are checked against the test
+street's map: its anchors and bound roles from tools/konoha/blueprints.
 """
+import glob
 import json
 import os
 import sys
@@ -319,8 +323,189 @@ def catalogue_doc(ts):
             lines.append(f"| `{t['id']}` | {t['category']} | {t['party']} | {mins} | {t['_premise']} | {tw} | {fights} | {places} |")
     return "\n".join(lines) + "\n"
 
+# The quest runtime's vocabulary (progression/.../Quests.java) and the test street it casts quests on.
+# shortcut: the street's plots and saved anchors mirror TestStreet.PLOTS and firstStart, until the map's anchors are data.
+QUEST_STEPS = {"", "go", "spar", "talk", "furnish", "sleep"}
+QUEST_CONDITIONS = {"all", "any", "not", "flag", "quest_state"}
+QUEST_STATES = {"done", "active", "not_started"}
+STREET = ["leaf_block", "shop_tea_house", "training_yard"]
+STREET_ANCHORS = {"notice_board", "anchor:training"}
+PLAYER_FLAT = "flat.leaf_block.3a"
+BAD_QUEST = os.path.join(HERE, "fixtures", "quest.bad.json")
+MISSING_QUEST = os.path.join(ROOT, "progression", "src", "gametest", "resources", "data", "shinobi_progression_tests", "quests", "errand.test.missing.json")
+
+
+def street():
+    """The anchor keys and role keys (role:x, job:x) the test street saves when it is pasted."""
+    anchors, roles = {PLAYER_FLAT}, set()
+    for b in STREET:
+        with open(os.path.join(ROOT, "tools", "konoha", "blueprints", b + ".json"), encoding="utf-8") as fh:
+            for m in json.load(fh).get("markers", []):
+                if m["type"] in STREET_ANCHORS:
+                    anchors.add(m["type"])
+                elif m["type"] == "resident":
+                    if "role" in m:
+                        roles.add("role:" + m["role"])
+                    if m.get("job", "any") != "any":
+                        roles.add("job:" + m["job"])
+    return anchors, roles
+
+
+def quest_files():
+    return sorted(glob.glob(os.path.join(ROOT, "*", "src", "main", "resources", "data", "*", "quests", "*.json")))
+
+
+def slot_key(slot):
+    pick = slot.get("pick") if isinstance(slot, dict) else None
+    if pick == "resident" and isinstance(slot.get("where"), dict) and isinstance(slot["where"].get("job"), str):
+        return "job:" + slot["where"]["job"]
+    if pick == "role" and isinstance(slot.get("role"), str):
+        return "role:" + slot["role"]
+    if pick == "anchor" and isinstance(slot.get("tag"), str):
+        return "anchor:" + slot["tag"]
+    return None
+
+
+def check_quests(files, map_data=None):
+    """Every problem in the quest files, as `file: quest/step: problem`; quest ids and flags are checked across all files."""
+    anchors, roles = map_data or street()
+    quests, problems = {}, []
+    for f in files:
+        rel = os.path.relpath(f, ROOT).replace(os.sep, "/")
+        try:
+            with open(f, encoding="utf-8") as fh:
+                q = json.load(fh)
+        except (OSError, ValueError) as e:
+            problems.append(f"{rel}: cannot read: {e}")
+            continue
+        qid = q.get("id") if isinstance(q, dict) else None
+        if not isinstance(qid, str):
+            problems.append(f"{rel}: no string id")
+            continue
+        if qid in quests:
+            problems.append(f"{rel}: {qid}: duplicate id (also {quests[qid][0]})")
+        quests[qid] = (rel, q)
+    set_flags = {a["set_flag"][0] for _, q in quests.values() for s in (q.get("steps") or {}).values() if isinstance(s, dict)
+                 for when in ("on_enter", "on_done") for a in s.get(when) or [] if isinstance(a, dict) and isinstance(a.get("set_flag"), list) and a["set_flag"]}
+    for qid, (rel, q) in quests.items():
+        def err(where, msg):
+            problems.append(f"{rel}: {qid}{'/' + where if where else ''}: {msg}")
+        steps = q.get("steps")
+        if not isinstance(steps, dict) or not steps:
+            err("", "no steps")
+            continue
+        slots = q.get("slots") or {}
+        for name, slot in slots.items():
+            key = slot_key(slot)
+            if key is None:
+                err("", f"slot {name} cannot be cast (resident with where.job, role with role, or anchor with tag): {slot}")
+            elif key.startswith("anchor:") and key not in anchors:
+                err("", f"slot {name}: no {key} on the map (anchors: {', '.join(sorted(anchors))})")
+            elif not key.startswith("anchor:") and key not in roles:
+                err("", f"slot {name}: no resident with {key} on the map (roles: {', '.join(sorted(roles))})")
+        if q.get("start") not in steps:
+            err("", f"no start step {q.get('start')!r}")
+
+        def condition(where, c):
+            if not isinstance(c, dict) or len(c) != 1:
+                return err(where, f"a condition needs exactly one key: {c}")
+            (k, v), = c.items()
+            if k not in QUEST_CONDITIONS:
+                err(where, f"unknown condition {k} (known: {', '.join(sorted(QUEST_CONDITIONS))})")
+            elif k in ("all", "any"):
+                if not isinstance(v, list) or not v:
+                    return err(where, f"{k} needs a list")
+                for x in v:
+                    condition(where, x)
+            elif k == "not":
+                condition(where, v)
+            elif k == "flag":
+                if not isinstance(v, str):
+                    err(where, "flag needs a name")
+                elif v not in set_flags:
+                    err(where, f"flag {v} is never set by any quest's set_flag")
+            elif not (isinstance(v, list) and len(v) == 2 and isinstance(v[0], str) and v[1] in QUEST_STATES):
+                err(where, "quest_state needs [quest, done|active|not_started]")
+            elif v[0] == qid:
+                err(where, "quest_state cannot name its own quest")
+            elif v[0] not in quests:
+                err(where, f"quest_state names unknown quest {v[0]}")
+
+        for name, s in steps.items():
+            if not isinstance(s, dict):
+                err(name, "a step must be an object")
+                continue
+            nxt = s.get("next")
+            if nxt is not None and nxt not in steps:
+                err(name, f"next names missing step {nxt!r}")
+            for b in s.get("branch") or []:
+                if not isinstance(b, dict) or b.get("next") not in steps:
+                    err(name, f"branch to missing step {b.get('next') if isinstance(b, dict) else b!r}")
+                condition(name, b.get("if") if isinstance(b, dict) else None)
+            for when in ("on_enter", "on_done"):
+                for a in s.get(when) or []:
+                    ok = isinstance(a, dict) and len(a) == 1 and (
+                        isinstance(a.get("set_flag"), list) and len(a["set_flag"]) == 2 and isinstance(a["set_flag"][0], str) and isinstance(a["set_flag"][1], bool)
+                        or type(a.get("give_ryo")) in (int, float) and a["give_ryo"] >= 1 and a["give_ryo"] == int(a["give_ryo"]))
+                    if not ok:
+                        err(name, f"{when}: unknown or malformed action {a} (set_flag [name, true|false] or give_ryo <whole ryo, at least 1>)")
+            o = s.get("objective") or {}
+            kind = o.get("type", "")
+            if kind not in QUEST_STEPS:
+                err(name, f"unknown step type {kind!r} (known: {', '.join(sorted(QUEST_STEPS - {''}))})")
+                continue
+            field = {"go": "place", "spar": "place", "talk": "who"}.get(kind)
+            if field is None:
+                continue
+            ref = o.get(field)
+            if not isinstance(ref, str) or not ref:
+                err(name, f"{kind} step has no {field}")
+            elif ref.startswith("slot:"):
+                slot = slots.get(ref[5:])
+                if slot is None:
+                    err(name, f"names undeclared {ref}")
+                elif (kind == "talk") == (slot.get("pick") == "anchor"):
+                    err(name, f"{kind} step needs {'a resident or role' if kind == 'talk' else 'an anchor'} slot, not {ref}")
+            elif kind == "talk":
+                err(name, f"talks to {ref}, not a resident slot")
+            elif ref not in anchors:
+                err(name, f"no anchor {ref} on the map (anchors: {', '.join(sorted(anchors))})")
+        reached, todo = set(), [q.get("start")]
+        while todo:
+            n = todo.pop()
+            if n in reached or n not in steps or not isinstance(steps[n], dict):
+                continue
+            reached.add(n)
+            todo += [steps[n].get("next")] + [b.get("next") for b in steps[n].get("branch") or [] if isinstance(b, dict)]
+        for name in steps:
+            if name not in reached and q.get("start") in steps:
+                err(name, "unreachable from the start step")
+    return problems
+
+
+def quest_mode():
+    """Checks the repo's quests, and that the bad fixtures still fail (the checker's self-test)."""
+    files = quest_files()
+    problems = check_quests(files)
+    bad = check_quests([BAD_QUEST]) + check_quests([MISSING_QUEST])
+    want = ["unknown step type", "unknown condition", "malformed action", "missing step", "unreachable", "never set",
+            "unknown quest", "no anchor", "no resident", "no anchor:nowhere"]
+    missed = [w for w in want if not any(w in p for p in bad)]
+    if missed:
+        problems.append("self-test: the bad quest fixtures no longer report: " + ", ".join(missed))
+    if problems:
+        print("\n".join(problems))
+        print(f"{len(problems)} quest problems")
+        return 1
+    print(f"{len(files)} quests ok")
+    return 0
+
 
 def main(argv):
+    if "--quests" in argv:
+        return quest_mode()
+    if "--check" in argv and quest_mode():
+        return 1
     ts = [compiled(t) for t in templates()]
     ids = Counter(t["id"] for t in ts)
     problems = [x for t in ts for x in check(t, ids)] + check_tables(ts)

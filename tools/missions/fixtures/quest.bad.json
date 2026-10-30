@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "id": "fixture.bad",
+  "slots": {"ghost": {"pick": "resident", "where": {"job": "ghost_keeper"}}},
+  "start": "a",
+  "steps": {
+    "a": {"objective": {"type": "go", "place": "nowhere_square"}, "on_done": [{"give_ryo": -5}],
+          "branch": [{"if": {"weather": "rain"}, "next": "b"}, {"if": {"flag": "fixture.never"}, "next": "b"},
+                     {"if": {"quest_state": ["fixture.unknown", "done"]}, "next": "b"}], "next": "b"},
+    "b": {"objective": {"type": "slep"}, "next": "z"},
+    "c": {"objective": {"type": "talk", "who": "slot:ghost"}, "next": null}
+  }
+}

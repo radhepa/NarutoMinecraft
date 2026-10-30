@@ -12,6 +12,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.phys.EntityHitResult;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -25,6 +26,7 @@ import java.util.UUID;
  * P04-4/5: the errand pays 20 ryo once on top of the first day's 100; by the keeper the player buys tea (by the shop's
  * command) and a tatami, is refused what the wallet cannot cover and anything away from the keeper; reopening keeps
  * the wallet and the goods, with no second payout.
+ * P04-6: a step whose anchor the map has lost is blocked, not crashed, and opens again with the anchor back.
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class ErrandGameTest implements FabricClientGameTest {
@@ -103,11 +105,29 @@ public final class ErrandGameTest implements FabricClientGameTest {
                     "the wallet and goods after reopening, with no second payout: " + ryo(w));
             check(w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).containsKey("anchor:training")
                     && w.getConnection().getServerLevel().getAttachedOrElse(ShinobiVillage.ROLES, Map.of()).containsKey("job:tea_house")), "the street's anchors and roles after reopening");
+
+            // P04-6: the training quest, at its spar since the yard visit, waits blocked once the map loses the yard; back with it.
+            String training = ShinobiProgression.TRAINING;
+            check("spar".equals(journal(w).active().get(training)), "the training quest waits at the spar: " + journal(w));
+            var full = w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.<String, BlockPos>of()));
+            var less = new HashMap<>(full);
+            less.remove("anchor:training");
+            w.getServer().runOnServer(s -> w.getConnection().getServerLevel().setAttached(ShinobiVillage.ANCHORS, Map.copyOf(less)));
+            c.waitTicks(20);
+            check("anchor slot:yard (anchor:training)".equals(blocked(w, training)) && "spar".equals(journal(w).active().get(training)),
+                    "a step whose anchor is gone is blocked, without a crash: " + blocked(w, training));
+            w.getServer().runOnServer(s -> w.getConnection().getServerLevel().setAttached(ShinobiVillage.ANCHORS, full));
+            c.waitTicks(20);
+            check(blocked(w, training) == null && "spar".equals(journal(w).active().get(training)), "the anchor back, the step is open again");
         }
     }
 
     static Journal journal(TestSingleplayerContext w) {
         return w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().getAttachedOrCreate(ShinobiProgression.JOURNAL));
+    }
+
+    static String blocked(TestSingleplayerContext w, String quest) {
+        return w.getServer().computeOnServer(s -> ShinobiProgression.blocked(w.getConnection().getServerPlayer(), quest));
     }
 
     static int ryo(TestSingleplayerContext w) {
