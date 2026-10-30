@@ -508,7 +508,7 @@ public final class Playthrough {
         sb.append(String.format("L%d feeling %.0f A %.0f T %.0f R %.0f V %.0f Ro %.0f | warmth %.1f together %d contact %d moments %d%n",
                 b.level(), dev.shinobi.life.bond.Levels.feeling(m), m.affection(), m.trust(), m.respect(), m.rivalry(), m.romance(), b.warmth(), b.together(), b.contactDays(), b.moments().size()));
         var byAct = new java.util.TreeMap<String, dev.shinobi.life.bond.Meters>();
-        for (var mem : b.memories()) byAct.merge(mem.act().id() + (mem.source() == dev.shinobi.life.bond.Reaction.Source.SELF ? "" : "." + mem.source().name().toLowerCase()),
+        for (var mem : b.memories()) byAct.merge(mem.act().id() + (mem.source() == dev.shinobi.life.bond.Reaction.Source.SELF ? "" : "." + mem.source().name().toLowerCase(java.util.Locale.ROOT)),
                 mem.now(w.day()), dev.shinobi.life.bond.Meters::plus);
         byAct.forEach((k, v) -> sb.append(String.format("    %-28s A %5.1f T %5.1f R %5.1f V %5.1f Ro %5.1f%n", k, v.affection(), v.trust(), v.respect(), v.rivalry(), v.romance())));
         return sb.toString();

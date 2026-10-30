@@ -41,8 +41,10 @@ public final class Questions {
 
     public static void load(BondWorld w, List<Question> bank) { w.questionBank.clear(); w.questionBank.addAll(bank); }
     public static Question question(BondWorld w, String id) {
-        return w.questionBank.stream().filter(q -> q.id().equals(id)).findFirst().orElseThrow(() -> new IllegalArgumentException("no question " + id));
+        return find(w, id).orElseThrow(() -> new IllegalArgumentException("no question " + id));
     }
+    /** The question, or empty for one the bank no longer has (an older save's answer or pending question). */
+    static Optional<Question> find(BondWorld w, String id) { return w.questionBank.stream().filter(q -> q.id().equals(id)).findFirst(); }
     /** Days between questions from one person: closer friends ask more often. */
     public static int gap(int level) { return level >= 7 ? 4 : level >= 4 ? 6 : 8; }
 
@@ -55,14 +57,14 @@ public final class Questions {
     public static Optional<Question> next(BondWorld w, String who, java.util.function.Predicate<Question> allowed) {
         var b = w.bond(who); long day = w.day;
         if (w.questionsDay != day) { w.questionsDay = day; w.questionsToday = 0; }
-        if (!b.pendingQuestion.isEmpty() && day - b.pendingSince <= PENDING_DAYS && allowed.test(question(w, b.pendingQuestion)))
-            return Optional.of(question(w, b.pendingQuestion));
+        var pending = find(w, b.pendingQuestion);
+        if (pending.isPresent() && day - b.pendingSince <= PENDING_DAYS && allowed.test(pending.get())) return pending;
         b.pendingQuestion = "";
         int level = w.effectiveLevel(who);
         if (w.questionsToday >= DAILY_CAP || level < MIN_LEVEL || b.conflict.active() || b.conflict.broken()) return Optional.empty();
         if (b.lastQuestion >= 0 && day - b.lastQuestion < gap(level)) return Optional.empty();
         var p = w.person(who);
-        var recentKinds = b.answers.stream().skip(Math.max(0, b.answers.size() - 2)).map(a -> question(w, a.question()).kind()).toList();
+        var recentKinds = b.answers.stream().skip(Math.max(0, b.answers.size() - 2)).flatMap(a -> find(w, a.question()).stream()).map(Question::kind).toList();
         var candidates = new ArrayList<Question>(); var weights = new ArrayList<Double>(); double total = 0;
         for (var q : w.questionBank) {
             if (q.level() > level || answered(b, q.id()) || !q.suits(p) || !allowed.test(q)) continue;
@@ -160,8 +162,15 @@ public final class Questions {
         var b = w.bond(who);
         double before = b.nudges.getOrDefault(trait.name(), 0.0), after = Math.clamp(before + amount, -NUDGE_LIMIT, NUDGE_LIMIT);
         if (after == before) return;
+        var base = w.unnudged.computeIfAbsent(who, k -> w.person(k).personality());
         b.nudges.put(trait.name(), after);
-        w.add(w.person(who).withPersonality(shifted(w.person(who).personality(), trait, after - before)));
+        w.add(w.person(who).withPersonality(nudged(base, b.nudges)));
+    }
+    /** A personality as answers left it: each trait the base plus its total nudge, clamped once (so a reload matches play). */
+    static Personality nudged(Personality base, java.util.Map<String, Double> nudges) {
+        var p = base;
+        for (var n : nudges.entrySet()) p = shifted(p, Personality.Trait.valueOf(n.getKey()), n.getValue());
+        return p;
     }
     static Personality shifted(Personality p, Personality.Trait t, double by) {
         return p.withTraits(p.warmth() + (t == Personality.Trait.WARMTH ? by : 0), p.boldness() + (t == Personality.Trait.BOLDNESS ? by : 0),

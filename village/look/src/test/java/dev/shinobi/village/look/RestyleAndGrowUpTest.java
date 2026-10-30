@@ -75,4 +75,19 @@ class RestyleAndGrowUpTest {
                 assertEquals(List.of(), r.validate(o, AgeStage.ADULT, adult), o + " " + b);
             }
     }
+
+    @Test
+    void venuesReadTheSameUnderATurkishLocale() {
+        var before = java.util.Locale.getDefault();
+        try {
+            java.util.Locale.setDefault(java.util.Locale.forLanguageTag("tr-TR"));
+            var turkish = new Restyle(r);
+            assertEquals(Restyle.Venue.SETTINGS, turkish.venue("pronouns"));
+            var look = r.defaults(CreatorRules.CLANLESS, "male");
+            var no = turkish.apply(look, CreatorRules.CLANLESS, AgeStage.ADULT, "body", "x", Restyle.Venue.TIME_SKIP);
+            assertTrue(no.refused().endsWith("time_skip"), no.refused());
+        } finally {
+            java.util.Locale.setDefault(before);
+        }
+    }
 }

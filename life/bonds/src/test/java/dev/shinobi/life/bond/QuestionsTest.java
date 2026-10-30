@@ -161,4 +161,24 @@ class QuestionsTest {
         assertTrue(keys.contains("answer.contradiction.value:honesty"));
         assertTrue(DialogueKeys.required().containsAll(DialogueKeys.REACTIONS.stream().map(r -> "reaction." + r).toList()));
     }
+    @Test void nudgesPastTheEdgeOfATraitPlayTheSameAfterAReload() {
+        var w = world(TEAMMATE_A, 40);
+        var p = w.person(TEAMMATE_A).personality();
+        w.add(w.person(TEAMMATE_A).withPersonality(p.withTraits(p.warmth(), .98, p.pride(), p.discipline(), p.openness())));
+        var base = new ArrayList<>(w.people());
+        Questions.answer(w, TEAMMATE_A, "q.advice.first_mission", "go_for_it");
+        assertEquals(1, w.person(TEAMMATE_A).personality().boldness(), 1e-9);
+        Questions.answer(w, TEAMMATE_A, "q.advice.first_mission", "be_careful");
+        assertEquals(.98, w.person(TEAMMATE_A).personality().boldness(), 1e-9, "the nudges cancel out");
+        var back = SaveFormat.read(SaveFormat.write(w), w.seed(), base);
+        assertEquals(.98, back.person(TEAMMATE_A).personality().boldness(), 1e-9, "and a reload agrees");
+    }
+    @Test void questionsGoneFromTheBankAreSkippedNotThrown() {
+        var w = world(TEAMMATE_B, 40);
+        var b = w.bond(TEAMMATE_B);
+        b.answers.add(new Questions.Answered("q.gone", "x", w.day(), "", "", false));
+        b.pendingQuestion = "q.gone"; b.pendingSince = w.day();
+        var next = assertDoesNotThrow(() -> Questions.next(w, TEAMMATE_B));
+        assertTrue(next.isEmpty() || !next.get().id().equals("q.gone"));
+    }
 }

@@ -66,7 +66,7 @@ public final class BondConditions {
             case "clan_relation" -> {
                 if (w.village() == null) yield false;
                 double v = w.village().relations().get(str(at(arg, 0)), str(at(arg, 1)));
-                yield at(arg, 2) instanceof Number n ? v >= n.doubleValue() : v >= ClanRelations.Label.valueOf(str(at(arg, 2)).toUpperCase()).from;
+                yield at(arg, 2) instanceof Number n ? v >= n.doubleValue() : v >= ClanRelations.Label.valueOf(str(at(arg, 2)).toUpperCase(java.util.Locale.ROOT)).from;
             }
             case "village_mood" -> w.village() != null && w.village().mood(str(at(arg, 0))).label() == Mood.Label.of(str(at(arg, 1)));
             case "hook_open" -> w.village() != null && w.village().hook(str(arg)) != null;

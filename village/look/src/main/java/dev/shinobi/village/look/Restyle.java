@@ -1,6 +1,7 @@
 package dev.shinobi.village.look;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -14,7 +15,7 @@ public final class Restyle {
     /** Where a change happens. */
     public enum Venue {
         LOCKED, BARBER, HOME, SETTINGS, TIME_SKIP;
-        static Venue of(String id) { return valueOf(id.toUpperCase()); }
+        static Venue of(String id) { return valueOf(id.toUpperCase(Locale.ROOT)); }
     }
 
     /** A refused or accepted change: the new look (unchanged when refused), its ryo cost and the reason if refused. */
@@ -53,7 +54,7 @@ public final class Restyle {
      */
     @SuppressWarnings("unchecked")
     public Result apply(Look look, String origin, AgeStage stage, String field, Object value, Venue at) {
-        if (!canChange(field, at)) return new Result(look, 0, field + " cannot change at " + at.name().toLowerCase());
+        if (!canChange(field, at)) return new Result(look, 0, field + " cannot change at " + at.name().toLowerCase(Locale.ROOT));
         Look next = switch (field) {
             case "hair" -> look.withHair((String) value);
             case "hair_color" -> look.withHairColor((String) value);

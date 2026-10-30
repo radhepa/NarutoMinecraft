@@ -50,6 +50,8 @@ public final class BondWorld {
     long questionsDay = -1;
     /** The questions residents can ask (content, loaded by the glue from the dialogue data; not saved). */
     final List<Question> questionBank = new ArrayList<>();
+    /** Personalities before answers nudged them (not saved: the people arrive unnudged on load). */
+    final Map<String, Personality> unnudged = new TreeMap<>();
 
     public BondWorld(long seed, long day) { this.seed = seed; this.day = day; }
 
@@ -565,9 +567,12 @@ public final class BondWorld {
         for (var b : List.copyOf(bonds.values())) {
             if (b.to.equals(PLAYER)) courtship(b);
             int down = Math.max(1, days / 28);
-            int before = b.level;
+            int before = b.level, mark = events.size();
             updateLevel(b, Levels.MAX);
-            if (b.level < before - down) b.level = Math.max(b.floor, before - down);
+            // One event for where the level settles, not one per step it passed through.
+            events.subList(mark, events.size()).removeIf(e -> e.kind().equals("level_up") || e.kind().equals("level_down"));
+            if (b.level < before - down) b.level = Math.min(levelCap(b), Math.max(b.floor, before - down));
+            if (b.level != before) event(b.to.equals(PLAYER) ? b.from : b.from + ">" + b.to, b.level > before ? "level_up" : "level_down", Integer.toString(b.level));
         }
     }
 

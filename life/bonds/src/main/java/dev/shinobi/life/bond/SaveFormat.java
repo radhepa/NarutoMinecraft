@@ -3,6 +3,7 @@ package dev.shinobi.life.bond;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -33,8 +34,8 @@ public final class SaveFormat {
         var deeds = new ArrayList<Object>();
         for (var d : w.deeds) {
             var knowers = new LinkedHashMap<String, Object>();
-            d.knowers.forEach((id, k) -> knowers.put(id, map("how", k.how().name().toLowerCase(), "day", k.day(), "from", k.from(), "slant", k.slant())));
-            deeds.add(map("serial", d.serial, "act", d.act.id(), "day", d.day, "about", d.about, "note", d.note, "forgiven", d.forgiven, "knowers", knowers));
+            d.knowers.forEach((id, k) -> knowers.put(id, map("how", id(k.how()), "day", k.day(), "from", k.from(), "slant", k.slant())));
+            deeds.add(map("serial", d.serial, "act", d.act.id(), "day", d.day, "about", d.about, "note", d.note, "forgiven", d.forgiven, "quiet", d.quiet, "knowers", knowers));
         }
         out.put("deeds", deeds);
         out.put("plans", w.plans.stream().map(p -> (Object) map("id", p.id(), "with", p.with(), "activity", p.activity(), "day", p.day(), "hour", p.hour(), "host", p.host())).toList());
@@ -59,11 +60,11 @@ public final class SaveFormat {
         for (var mem : b.memories) {
             var d = mem.delta();
             memories.add(map("act", mem.act().id(), "day", mem.day(), "delta", List.of(d.affection(), d.trust(), d.respect(), d.rivalry(), d.romance()),
-                    "source", mem.source().name().toLowerCase(), "about", mem.about(), "count", mem.count()));
+                    "source", id(mem.source()), "about", mem.about(), "count", mem.count()));
         }
         m.put("memories", memories);
         var exp = new LinkedHashMap<String, Object>();
-        b.experiences.forEach((k, v) -> exp.put(k.name().toLowerCase(), v));
+        b.experiences.forEach((k, v) -> exp.put(id(k), v));
         m.put("experiences", exp);
         var hang = new LinkedHashMap<String, Object>();
         b.hangouts.forEach((k, v) -> hang.put(k, List.copyOf(v)));
@@ -99,7 +100,7 @@ public final class SaveFormat {
         w.nextSerial = (int) lng(in.getOrDefault("next_serial", 1));
         w.flags.addAll((List<String>) in.getOrDefault("flags", List.of()));
         var player = (Map<String, Object>) in.getOrDefault("player", Map.of());
-        w.playerStage = Person.Stage.valueOf(((String) player.getOrDefault("stage", "child")).toUpperCase());
+        w.playerStage = Person.Stage.valueOf(((String) player.getOrDefault("stage", "child")).toUpperCase(Locale.ROOT));
         w.playerRank = (int) lng(player.getOrDefault("rank", 0));
         w.playerGender = (String) player.getOrDefault("gender", "NON_BINARY");
         w.playerClan = (String) player.getOrDefault("clan", "");
@@ -111,12 +112,16 @@ public final class SaveFormat {
         if (in.get("squad") instanceof Map<?, ?> sq) w.squad = readSquad((Map<String, Object>) sq);
         for (Object o : (List<Object>) in.getOrDefault("deeds", List.of())) {
             var d = (Map<String, Object>) o;
-            var deed = new Deed((int) lng(d.get("serial")), Act.of((String) d.get("act")), lng(d.get("day")), (String) d.getOrDefault("about", ""));
+            var act = known(Act.class, d.get("act"));
+            if (act == null) continue; // an act this pack no longer has
+            var deed = new Deed((int) lng(d.get("serial")), act, lng(d.get("day")), (String) d.getOrDefault("about", ""));
             deed.note = (String) d.getOrDefault("note", "");
             deed.forgiven = Boolean.TRUE.equals(d.get("forgiven"));
+            deed.quiet = (int) lng(d.getOrDefault("quiet", 0));
             for (var k : ((Map<String, Object>) d.getOrDefault("knowers", Map.of())).entrySet()) {
                 var km = (Map<String, Object>) k.getValue();
-                deed.knowers.put(k.getKey(), new Deed.Know(Reaction.Source.valueOf(((String) km.get("how")).toUpperCase()), lng(km.get("day")), (String) km.getOrDefault("from", ""), dbl(km.getOrDefault("slant", 0))));
+                var how = known(Reaction.Source.class, km.get("how"));
+                if (how != null) deed.knowers.put(k.getKey(), new Deed.Know(how, lng(km.get("day")), (String) km.getOrDefault("from", ""), dbl(km.getOrDefault("slant", 0))));
             }
             w.deeds.add(deed);
         }
@@ -139,9 +144,11 @@ public final class SaveFormat {
         }
         w.questionsToday = (int) lng(in.getOrDefault("questions_today", 0)); w.questionsDay = lng(in.getOrDefault("questions_day", -1));
         // Answers that shaped someone: their personality as the answers left it.
-        for (var b : w.bonds.values()) for (var n : b.nudges.entrySet()) {
+        for (var b : w.bonds.values()) {
+            if (b.nudges.isEmpty()) continue;
             var p = w.person(b.from);
-            w.add(p.withPersonality(Questions.shifted(p.personality(), Personality.Trait.valueOf(n.getKey()), n.getValue())));
+            w.unnudged.put(p.id(), p.personality());
+            w.add(p.withPersonality(Questions.nudged(p.personality(), b.nudges)));
         }
         return w;
     }
@@ -156,12 +163,16 @@ public final class SaveFormat {
         b.romanceSince = lng(m.getOrDefault("romance_since", -1)); b.teenSince = lng(m.getOrDefault("teen_since", -1));
         for (Object o : (List<Object>) m.getOrDefault("memories", List.of())) {
             var mm = (Map<String, Object>) o; var d = (List<Object>) mm.get("delta");
-            b.memories.add(new Memory(Act.of((String) mm.get("act")), lng(mm.get("day")),
+            var act = known(Act.class, mm.get("act")); var how = known(Reaction.Source.class, mm.getOrDefault("source", "self"));
+            if (act == null || how == null) continue; // a memory of an act this pack no longer has
+            b.memories.add(new Memory(act, lng(mm.get("day")),
                     new Meters(dbl(d.get(0)), dbl(d.get(1)), dbl(d.get(2)), dbl(d.get(3)), dbl(d.get(4))),
-                    Reaction.Source.valueOf(((String) mm.getOrDefault("source", "self")).toUpperCase()), (String) mm.getOrDefault("about", ""), (int) lng(mm.getOrDefault("count", 1))));
+                    how, (String) mm.getOrDefault("about", ""), (int) lng(mm.getOrDefault("count", 1))));
         }
-        for (var e : ((Map<String, Object>) m.getOrDefault("experiences", Map.of())).entrySet())
-            b.experiences.put(Act.Experience.valueOf(e.getKey().toUpperCase()), (int) lng(e.getValue()));
+        for (var e : ((Map<String, Object>) m.getOrDefault("experiences", Map.of())).entrySet()) {
+            var kind = known(Act.Experience.class, e.getKey());
+            if (kind != null) b.experiences.put(kind, (int) lng(e.getValue()));
+        }
         b.moments.addAll((List<String>) m.getOrDefault("moments", List.of()));
         ((Map<String, Object>) m.getOrDefault("hangouts", Map.of())).forEach((k, v) -> b.hangouts.put(k, new ArrayList<>(((List<Object>) v).stream().map(SaveFormat::lng).toList())));
         b.rituals.addAll((List<String>) m.getOrDefault("rituals", List.of()));
@@ -191,7 +202,7 @@ public final class SaveFormat {
         var c = (Map<String, Object>) m.getOrDefault("conflict", Map.of());
         String cause = (String) c.getOrDefault("cause", "");
         b.conflict = new Conflict(Conflict.State.of((String) c.getOrDefault("state", "none")), lng(c.getOrDefault("since", -1)), lng(c.getOrDefault("until", -1)),
-                dbl(c.getOrDefault("severity", 0)), cause.isEmpty() ? null : Act.of(cause), (int) lng(c.getOrDefault("strikes", 0)));
+                dbl(c.getOrDefault("severity", 0)), known(Act.class, cause), (int) lng(c.getOrDefault("strikes", 0)));
     }
     @SuppressWarnings("unchecked")
     private static Squad readSquad(Map<String, Object> m) {
@@ -245,6 +256,12 @@ public final class SaveFormat {
         for (int i = 0; i < kv.length; i += 2) m.put((String) kv[i], kv[i + 1]);
         return m;
     }
+    /** The constant an id names, or null for an id this pack no longer has (an act or a kind renamed or removed). */
+    static <E extends Enum<E>> E known(Class<E> type, Object id) {
+        if (!(id instanceof String s) || s.isEmpty()) return null;
+        try { return Enum.valueOf(type, s.toUpperCase(Locale.ROOT)); } catch (IllegalArgumentException e) { return null; }
+    }
+    private static String id(Enum<?> e) { return e.name().toLowerCase(Locale.ROOT); }
     static long lng(Object o) { return o instanceof Number n ? n.longValue() : Long.parseLong(o.toString()); }
     static double dbl(Object o) { return o instanceof Number n ? n.doubleValue() : Double.parseDouble(o.toString()); }
 

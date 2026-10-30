@@ -71,4 +71,15 @@ class TimeAndPacingTest {
         assertEquals(Playthrough.table(Playthrough.play(11, Profile.TYPICAL)), Playthrough.table(Playthrough.play(11, Profile.TYPICAL)));
     }
     static Playthrough.Row row(Playthrough.Result r, String chapter) { return r.rows().stream().filter(x -> x.chapter().equals(chapter)).findFirst().orElseThrow(); }
+    @Test void aTimeSkipRespectsALevelCapAndReportsOnlyWhereTheLevelSettles() {
+        var w = TogetherTest.friends(TEAMMATE_A, 60);
+        assertTrue(w.level(TEAMMATE_A) >= 5, "level " + w.level(TEAMMATE_A));
+        w.capLevel(TEAMMATE_A, 3, "story.later");
+        w.drainEvents();
+        w.timeSkip(28, List.of());
+        assertEquals(3, w.level(TEAMMATE_A));
+        var levels = w.drainEvents().stream().filter(e -> e.who().equals(TEAMMATE_A) && e.kind().startsWith("level_")).toList();
+        assertEquals(1, levels.size(), levels.toString());
+        assertEquals("3", levels.getFirst().detail());
+    }
 }
