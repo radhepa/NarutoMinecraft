@@ -206,6 +206,28 @@
    ]
   },
   {
+   "id": "leaf_east",
+   "name": "Leaf Street east",
+   "polygon": [
+    [
+     74,
+     -36
+    ],
+    [
+     115,
+     -36
+    ],
+    [
+     115,
+     14
+    ],
+    [
+     74,
+     14
+    ]
+   ]
+  },
+  {
    "id": "apartments",
    "name": "Apartment Blocks",
    "polygon": [
@@ -789,6 +811,1070 @@
    "to": [
     -185,
     60
+   ]
+  },
+  {
+   "id": "ms_west_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    41,
+    -4
+   ],
+   "to": [
+    53,
+    -4
+   ]
+  },
+  {
+   "id": "ms_west_p2",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    41,
+    80
+   ],
+   "to": [
+    53,
+    80
+   ]
+  },
+  {
+   "id": "ms_west_p3",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    41,
+    122
+   ],
+   "to": [
+    53,
+    122
+   ]
+  },
+  {
+   "id": "ms_east_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    61,
+    6
+   ],
+   "to": [
+    73,
+    6
+   ]
+  },
+  {
+   "id": "ms_east_p2",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    61,
+    90
+   ],
+   "to": [
+    73,
+    90
+   ]
+  },
+  {
+   "id": "h_rock_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -97,
+    -168
+   ],
+   "to": [
+    -97,
+    -143
+   ]
+  },
+  {
+   "id": "h_rock_p1",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -55,
+    -168
+   ],
+   "to": [
+    -55,
+    -143
+   ]
+  },
+  {
+   "id": "h_rock_p2",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -13,
+    -168
+   ],
+   "to": [
+    -13,
+    -143
+   ]
+  },
+  {
+   "id": "h_rock_p3",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    29,
+    -168
+   ],
+   "to": [
+    29,
+    -143
+   ]
+  },
+  {
+   "id": "h_rock_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -140,
+    -155
+   ],
+   "to": [
+    53,
+    -155
+   ]
+  },
+  {
+   "id": "h_hill_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -97,
+    -80
+   ],
+   "to": [
+    -97,
+    -47
+   ]
+  },
+  {
+   "id": "h_hill_p1",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -55,
+    -80
+   ],
+   "to": [
+    -55,
+    -47
+   ]
+  },
+  {
+   "id": "h_hill_p2",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -13,
+    -80
+   ],
+   "to": [
+    -13,
+    -47
+   ]
+  },
+  {
+   "id": "h_hill_l0",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -140,
+    -78
+   ],
+   "to": [
+    10,
+    -78
+   ]
+  },
+  {
+   "id": "h_hill_a1",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -140,
+    -62
+   ],
+   "to": [
+    10,
+    -62
+   ]
+  },
+  {
+   "id": "h_hill_l2",
+   "name": "Lane",
+   "class": "lane",
+   "width": 3,
+   "from": [
+    -140,
+    -48
+   ],
+   "to": [
+    10,
+    -48
+   ]
+  },
+  {
+   "id": "h_lane_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    0,
+    -120
+   ],
+   "to": [
+    0,
+    -82
+   ]
+  },
+  {
+   "id": "h_east_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    14,
+    -121
+   ],
+   "to": [
+    53,
+    -121
+   ]
+  },
+  {
+   "id": "h_east_l1",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    14,
+    -105
+   ],
+   "to": [
+    53,
+    -105
+   ]
+  },
+  {
+   "id": "c_south_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    74,
+    -23
+   ],
+   "to": [
+    115,
+    -23
+   ]
+  },
+  {
+   "id": "c_south_l1",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    74,
+    -7
+   ],
+   "to": [
+    115,
+    -7
+   ]
+  },
+  {
+   "id": "a_east_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    120,
+    -121
+   ],
+   "to": [
+    147,
+    -121
+   ]
+  },
+  {
+   "id": "c_west_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    61,
+    -49
+   ],
+   "to": [
+    115,
+    -49
+   ]
+  },
+  {
+   "id": "c_east_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    188,
+    -65
+   ],
+   "to": [
+    188,
+    -39
+   ]
+  },
+  {
+   "id": "c_east_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    145,
+    -52
+   ],
+   "to": [
+    203,
+    -52
+   ]
+  },
+  {
+   "id": "ap_s_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -140,
+    -9
+   ],
+   "to": [
+    -104,
+    -9
+   ]
+  },
+  {
+   "id": "ap_s_l1",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -140,
+    10
+   ],
+   "to": [
+    -104,
+    10
+   ]
+  },
+  {
+   "id": "ap_ts_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -62,
+    3
+   ],
+   "to": [
+    -46,
+    3
+   ]
+  },
+  {
+   "id": "m_north_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    1,
+    23
+   ],
+   "to": [
+    1,
+    50
+   ]
+  },
+  {
+   "id": "m_north_l0",
+   "name": "Lane",
+   "class": "lane",
+   "width": 3,
+   "from": [
+    -42,
+    24
+   ],
+   "to": [
+    40,
+    24
+   ]
+  },
+  {
+   "id": "m_north_a1",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -42,
+    38
+   ],
+   "to": [
+    41,
+    38
+   ]
+  },
+  {
+   "id": "m_south_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -97,
+    73
+   ],
+   "to": [
+    -97,
+    98
+   ]
+  },
+  {
+   "id": "m_south_p1",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -55,
+    73
+   ],
+   "to": [
+    -55,
+    98
+   ]
+  },
+  {
+   "id": "m_south_p2",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -13,
+    73
+   ],
+   "to": [
+    -13,
+    98
+   ]
+  },
+  {
+   "id": "m_south_p3",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    29,
+    73
+   ],
+   "to": [
+    29,
+    98
+   ]
+  },
+  {
+   "id": "m_south_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -140,
+    86
+   ],
+   "to": [
+    40,
+    86
+   ]
+  },
+  {
+   "id": "m_west_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -140,
+    36
+   ],
+   "to": [
+    -112,
+    36
+   ]
+  },
+  {
+   "id": "s_row_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    74,
+    92
+   ],
+   "to": [
+    115,
+    92
+   ]
+  },
+  {
+   "id": "s_row_l1",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    74,
+    108
+   ],
+   "to": [
+    115,
+    108
+   ]
+  },
+  {
+   "id": "so_n_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -52,
+    107
+   ],
+   "to": [
+    -52,
+    132
+   ]
+  },
+  {
+   "id": "so_n_p1",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -10,
+    107
+   ],
+   "to": [
+    -10,
+    132
+   ]
+  },
+  {
+   "id": "so_n_p2",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    32,
+    107
+   ],
+   "to": [
+    32,
+    132
+   ]
+  },
+  {
+   "id": "so_n_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -95,
+    120
+   ],
+   "to": [
+    53,
+    120
+   ]
+  },
+  {
+   "id": "so_s_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -52,
+    140
+   ],
+   "to": [
+    -52,
+    166
+   ]
+  },
+  {
+   "id": "so_s_p1",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -10,
+    140
+   ],
+   "to": [
+    -10,
+    166
+   ]
+  },
+  {
+   "id": "so_s_p2",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    32,
+    140
+   ],
+   "to": [
+    32,
+    166
+   ]
+  },
+  {
+   "id": "so_s_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -95,
+    153
+   ],
+   "to": [
+    40,
+    153
+   ]
+  },
+  {
+   "id": "g_east_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    160,
+    139
+   ],
+   "to": [
+    200,
+    139
+   ]
+  },
+  {
+   "id": "g_east_l1",
+   "name": "Lane",
+   "class": "lane",
+   "width": 3,
+   "from": [
+    160,
+    154
+   ],
+   "to": [
+    200,
+    154
+   ]
+  },
+  {
+   "id": "e_north_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    116,
+    -24
+   ],
+   "to": [
+    147,
+    -24
+   ]
+  },
+  {
+   "id": "e_north_l1",
+   "name": "Lane",
+   "class": "lane",
+   "width": 3,
+   "from": [
+    116,
+    -9
+   ],
+   "to": [
+    147,
+    -9
+   ]
+  },
+  {
+   "id": "e_north_a2",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    116,
+    5
+   ],
+   "to": [
+    147,
+    5
+   ]
+  },
+  {
+   "id": "e_artists_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    154,
+    2
+   ],
+   "to": [
+    203,
+    2
+   ]
+  },
+  {
+   "id": "e_mid_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    116,
+    33
+   ],
+   "to": [
+    147,
+    33
+   ]
+  },
+  {
+   "id": "e_mid_l1",
+   "name": "Lane",
+   "class": "lane",
+   "width": 3,
+   "from": [
+    116,
+    48
+   ],
+   "to": [
+    147,
+    48
+   ]
+  },
+  {
+   "id": "e_market_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    154,
+    33
+   ],
+   "to": [
+    203,
+    33
+   ]
+  },
+  {
+   "id": "e_market_l1",
+   "name": "Lane",
+   "class": "lane",
+   "width": 3,
+   "from": [
+    154,
+    48
+   ],
+   "to": [
+    203,
+    48
+   ]
+  },
+  {
+   "id": "e_south_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    159,
+    65
+   ],
+   "to": [
+    159,
+    122
+   ]
+  },
+  {
+   "id": "e_south_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    116,
+    78
+   ],
+   "to": [
+    203,
+    78
+   ]
+  },
+  {
+   "id": "e_south_l1",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    116,
+    94
+   ],
+   "to": [
+    203,
+    94
+   ]
+  },
+  {
+   "id": "e_south_a2",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    116,
+    110
+   ],
+   "to": [
+    203,
+    110
+   ]
+  },
+  {
+   "id": "w_tobari_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -215,
+    -40
+   ],
+   "to": [
+    -215,
+    35
+   ]
+  },
+  {
+   "id": "w_tobari_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -258,
+    -27
+   ],
+   "to": [
+    -190,
+    -27
+   ]
+  },
+  {
+   "id": "w_tobari_l1",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -258,
+    -11
+   ],
+   "to": [
+    -190,
+    -11
+   ]
+  },
+  {
+   "id": "w_tobari_a2",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -258,
+    5
+   ],
+   "to": [
+    -190,
+    5
+   ]
+  },
+  {
+   "id": "w_tobari_l3",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -258,
+    21
+   ],
+   "to": [
+    -190,
+    21
+   ]
+  },
+  {
+   "id": "w_river_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -182,
+    3
+   ],
+   "to": [
+    -171,
+    3
+   ]
+  },
+  {
+   "id": "w_river_p1",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -182,
+    45
+   ],
+   "to": [
+    -171,
+    45
+   ]
+  },
+  {
+   "id": "w_uchiha_p0",
+   "name": "Passage",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -215,
+    -172
+   ],
+   "to": [
+    -215,
+    -78
+   ]
+  },
+  {
+   "id": "w_uchiha_l0",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -258,
+    -170
+   ],
+   "to": [
+    -190,
+    -170
+   ]
+  },
+  {
+   "id": "w_uchiha_a1",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -258,
+    -154
+   ],
+   "to": [
+    -190,
+    -154
+   ]
+  },
+  {
+   "id": "w_uchiha_l2",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -258,
+    -138
+   ],
+   "to": [
+    -190,
+    -138
+   ]
+  },
+  {
+   "id": "w_uchiha_a3",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -258,
+    -122
+   ],
+   "to": [
+    -190,
+    -122
+   ]
+  },
+  {
+   "id": "w_uchiha_l4",
+   "name": "Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -258,
+    -106
+   ],
+   "to": [
+    -190,
+    -106
+   ]
+  },
+  {
+   "id": "w_uchiha_a5",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    -258,
+    -90
+   ],
+   "to": [
+    -190,
+    -90
+   ]
+  },
+  {
+   "id": "f_east_a0",
+   "name": "Back alley",
+   "class": "alley",
+   "width": 3,
+   "from": [
+    136,
+    -192
+   ],
+   "to": [
+    170,
+    -192
    ]
   }
  ],
@@ -1460,21 +2546,6 @@
    ]
   },
   {
-   "id": "hill_homes",
-   "name": "Hill homes",
-   "district": "hospital",
-   "planned": true,
-   "at": [
-    -135,
-    0,
-    -75
-   ],
-   "size": [
-    140,
-    26
-   ]
-  },
-  {
    "id": "umino",
    "name": "Teachers' houses (Umino)",
    "district": "academy",
@@ -1610,36 +2681,6 @@
    ]
   },
   {
-   "id": "machiya_s",
-   "name": "Townhouse rows",
-   "district": "market",
-   "planned": true,
-   "at": [
-    -140,
-    0,
-    73
-   ],
-   "size": [
-    175,
-    25
-   ]
-  },
-  {
-   "id": "market_n",
-   "name": "Market shop-houses",
-   "district": "market",
-   "planned": true,
-   "at": [
-    -42,
-    0,
-    26
-   ],
-   "size": [
-    80,
-    24
-   ]
-  },
-  {
    "id": "smithy",
    "name": "Smithy and forge",
    "district": "shops",
@@ -1670,21 +2711,6 @@
    ]
   },
   {
-   "id": "shop_row",
-   "name": "Shop-houses",
-   "district": "shops",
-   "planned": true,
-   "at": [
-    61,
-    0,
-    79
-   ],
-   "size": [
-    54,
-    45
-   ]
-  },
-  {
    "id": "bath_house",
    "name": "Bath house",
    "district": "shops",
@@ -1697,36 +2723,6 @@
    "size": [
     17,
     15
-   ]
-  },
-  {
-   "id": "south_homes_n",
-   "name": "South homes",
-   "district": "south",
-   "planned": true,
-   "at": [
-    -95,
-    0,
-    107
-   ],
-   "size": [
-    148,
-    27
-   ]
-  },
-  {
-   "id": "south_homes_s",
-   "name": "South homes",
-   "district": "south",
-   "planned": true,
-   "at": [
-    -95,
-    0,
-    140
-   ],
-   "size": [
-    148,
-    27
    ]
   },
   {
@@ -1820,21 +2816,6 @@
    ]
   },
   {
-   "id": "gate_homes",
-   "name": "Gate homes",
-   "district": "inuzuka",
-   "planned": true,
-   "at": [
-    162,
-    0,
-    128
-   ],
-   "size": [
-    38,
-    38
-   ]
-  },
-  {
    "id": "hatake",
    "name": "Hatake clan home",
    "district": "central",
@@ -1865,21 +2846,6 @@
    ]
   },
   {
-   "id": "east_homes_n",
-   "name": "East homes",
-   "district": "east",
-   "planned": true,
-   "at": [
-    120,
-    0,
-    -35
-   ],
-   "size": [
-    28,
-    48
-   ]
-  },
-  {
    "id": "kurama",
    "name": "Kurama studio (artists' lane)",
    "district": "east",
@@ -1892,66 +2858,6 @@
    "size": [
     24,
     24
-   ]
-  },
-  {
-   "id": "artists_homes",
-   "name": "Artists' lane homes",
-   "district": "east",
-   "planned": true,
-   "at": [
-    155,
-    0,
-    -8
-   ],
-   "size": [
-    45,
-    22
-   ]
-  },
-  {
-   "id": "east_homes_s",
-   "name": "East homes",
-   "district": "east",
-   "planned": true,
-   "at": [
-    120,
-    0,
-    22
-   ],
-   "size": [
-    28,
-    38
-   ]
-  },
-  {
-   "id": "east_market",
-   "name": "Shop Lane east",
-   "district": "east",
-   "planned": true,
-   "at": [
-    155,
-    0,
-    22
-   ],
-   "size": [
-    45,
-    38
-   ]
-  },
-  {
-   "id": "east_homes_far",
-   "name": "East homes",
-   "district": "east",
-   "planned": true,
-   "at": [
-    120,
-    0,
-    66
-   ],
-   "size": [
-    80,
-    58
    ]
   },
   {
@@ -2060,18 +2966,18 @@
    ]
   },
   {
-   "id": "uchiha",
-   "name": "Uchiha quarter (walled)",
+   "id": "uchiha_hall",
+   "name": "Uchiha gate and main hall",
    "district": "west_bank",
    "planned": true,
    "at": [
-    -258,
+    -240,
     0,
     -200
    ],
    "size": [
-    70,
-    130
+    36,
+    24
    ]
   },
   {
@@ -2135,36 +3041,6 @@
    ]
   },
   {
-   "id": "riverside",
-   "name": "Riverside houses",
-   "district": "west_bank",
-   "planned": true,
-   "at": [
-    -181,
-    0,
-    -40
-   ],
-   "size": [
-    10,
-    100
-   ]
-  },
-  {
-   "id": "tobari",
-   "name": "Tobari lanes",
-   "district": "west_bank",
-   "planned": true,
-   "at": [
-    -258,
-    0,
-    -38
-   ],
-   "size": [
-    50,
-    80
-   ]
-  },
-  {
    "id": "vacant_sw",
    "name": "Vacant estate",
    "district": "west_bank",
@@ -2222,6 +3098,7606 @@
    "size": [
     20,
     20
+   ]
+  },
+  {
+   "id": "ms_west_0",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    41,
+    0,
+    -14
+   ],
+   "size": [
+    13,
+    8
+   ]
+  },
+  {
+   "id": "ms_west_1",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    41,
+    0,
+    49
+   ],
+   "size": [
+    13,
+    7
+   ]
+  },
+  {
+   "id": "ms_west_2",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    41,
+    0,
+    66
+   ],
+   "size": [
+    13,
+    10
+   ]
+  },
+  {
+   "id": "ms_west_3",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    41,
+    0,
+    82
+   ],
+   "size": [
+    13,
+    9
+   ]
+  },
+  {
+   "id": "ms_west_4",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    41,
+    0,
+    91
+   ],
+   "size": [
+    13,
+    7
+   ]
+  },
+  {
+   "id": "ms_west_5",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    41,
+    0,
+    107
+   ],
+   "size": [
+    13,
+    11
+   ]
+  },
+  {
+   "id": "ms_west_6",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    41,
+    0,
+    124
+   ],
+   "size": [
+    13,
+    8
+   ]
+  },
+  {
+   "id": "ms_west_7",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    41,
+    0,
+    140
+   ],
+   "size": [
+    13,
+    8
+   ]
+  },
+  {
+   "id": "ms_west_8",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    41,
+    0,
+    148
+   ],
+   "size": [
+    13,
+    7
+   ]
+  },
+  {
+   "id": "ms_west_9",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    41,
+    0,
+    155
+   ],
+   "size": [
+    13,
+    10
+   ]
+  },
+  {
+   "id": "ms_east_10",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    -37
+   ],
+   "size": [
+    13,
+    8
+   ]
+  },
+  {
+   "id": "ms_east_11",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    -29
+   ],
+   "size": [
+    13,
+    7
+   ]
+  },
+  {
+   "id": "ms_east_12",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    -22
+   ],
+   "size": [
+    13,
+    10
+   ]
+  },
+  {
+   "id": "ms_east_13",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    -12
+   ],
+   "size": [
+    13,
+    9
+   ]
+  },
+  {
+   "id": "ms_east_14",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    -3
+   ],
+   "size": [
+    13,
+    7
+   ]
+  },
+  {
+   "id": "ms_east_15",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    77
+   ],
+   "size": [
+    13,
+    11
+   ]
+  },
+  {
+   "id": "ms_east_16",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    92
+   ],
+   "size": [
+    13,
+    8
+   ]
+  },
+  {
+   "id": "ms_east_17",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    100
+   ],
+   "size": [
+    13,
+    8
+   ]
+  },
+  {
+   "id": "ms_east_18",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    108
+   ],
+   "size": [
+    13,
+    7
+   ]
+  },
+  {
+   "id": "ms_east_19",
+   "name": "Shop-house",
+   "district": "main_street",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    115
+   ],
+   "size": [
+    13,
+    10
+   ]
+  },
+  {
+   "id": "h_rock_20",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -140,
+    0,
+    -168
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_21",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -132,
+    0,
+    -168
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_22",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -125,
+    0,
+    -168
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_23",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -115,
+    0,
+    -168
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_24",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -106,
+    0,
+    -168
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_25",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -95,
+    0,
+    -168
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_26",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -84,
+    0,
+    -168
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_27",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -76,
+    0,
+    -168
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_28",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -68,
+    0,
+    -168
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_29",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -53,
+    0,
+    -168
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_30",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -43,
+    0,
+    -168
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_31",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -34,
+    0,
+    -168
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_32",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -27,
+    0,
+    -168
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_33",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -11,
+    0,
+    -168
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_34",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -3,
+    0,
+    -168
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_35",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    5,
+    0,
+    -168
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_36",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    12,
+    0,
+    -168
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_37",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    31,
+    0,
+    -168
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_38",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    40,
+    0,
+    -168
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "h_rock_39",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -140,
+    0,
+    -153
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_40",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -130,
+    0,
+    -153
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_41",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -119,
+    0,
+    -153
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_42",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -110,
+    0,
+    -153
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_43",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -95,
+    0,
+    -153
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_44",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -85,
+    0,
+    -153
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_45",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -75,
+    0,
+    -153
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_46",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -64,
+    0,
+    -153
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_47",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -53,
+    0,
+    -153
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_48",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -41,
+    0,
+    -153
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_49",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -31,
+    0,
+    -153
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_50",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -11,
+    0,
+    -153
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_51",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    0,
+    0,
+    -153
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_52",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    9,
+    0,
+    -153
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_53",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    31,
+    0,
+    -153
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_rock_54",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    41,
+    0,
+    -153
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_55",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -140,
+    0,
+    -75
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_56",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -130,
+    0,
+    -75
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_57",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -119,
+    0,
+    -75
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_58",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -110,
+    0,
+    -75
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_59",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -95,
+    0,
+    -75
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_60",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -85,
+    0,
+    -75
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_61",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -75,
+    0,
+    -75
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_62",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -64,
+    0,
+    -75
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_63",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -53,
+    0,
+    -75
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_64",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -41,
+    0,
+    -75
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_65",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -31,
+    0,
+    -75
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_66",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -11,
+    0,
+    -75
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_67",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    0,
+    0,
+    -75
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "h_hill_68",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -140,
+    0,
+    -60
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_69",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -130,
+    0,
+    -60
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_70",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -119,
+    0,
+    -60
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_71",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -110,
+    0,
+    -60
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_72",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -95,
+    0,
+    -60
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_73",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -85,
+    0,
+    -60
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_74",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -75,
+    0,
+    -60
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_75",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -64,
+    0,
+    -60
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_76",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -53,
+    0,
+    -60
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_77",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -41,
+    0,
+    -60
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_78",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -31,
+    0,
+    -60
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_79",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -11,
+    0,
+    -60
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "h_hill_80",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    0,
+    0,
+    -60
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "h_lane_81",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -12,
+    0,
+    -120
+   ],
+   "size": [
+    11,
+    9
+   ]
+  },
+  {
+   "id": "h_lane_82",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -12,
+    0,
+    -110
+   ],
+   "size": [
+    11,
+    10
+   ]
+  },
+  {
+   "id": "h_lane_83",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -12,
+    0,
+    -99
+   ],
+   "size": [
+    11,
+    8
+   ]
+  },
+  {
+   "id": "h_lane_84",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    2,
+    0,
+    -120
+   ],
+   "size": [
+    9,
+    9
+   ]
+  },
+  {
+   "id": "h_lane_85",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    2,
+    0,
+    -110
+   ],
+   "size": [
+    9,
+    10
+   ]
+  },
+  {
+   "id": "h_lane_86",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    2,
+    0,
+    -99
+   ],
+   "size": [
+    9,
+    8
+   ]
+  },
+  {
+   "id": "h_east_87",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    14,
+    0,
+    -134
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "h_east_88",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    22,
+    0,
+    -134
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "h_east_89",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    29,
+    0,
+    -134
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "h_east_90",
+   "name": "Shop-house",
+   "district": "hospital",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    39,
+    0,
+    -134
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h_east_91",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    14,
+    0,
+    -119
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h_east_92",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    24,
+    0,
+    -119
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "h_east_93",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    35,
+    0,
+    -119
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "h_east_94",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    14,
+    0,
+    -102
+   ],
+   "size": [
+    9,
+    10
+   ]
+  },
+  {
+   "id": "h_east_95",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    24,
+    0,
+    -102
+   ],
+   "size": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "h_east_96",
+   "name": "Home",
+   "district": "hospital",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    35,
+    0,
+    -102
+   ],
+   "size": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "c_south_97",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    74,
+    0,
+    -36
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_south_98",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    80,
+    0,
+    -36
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "c_south_99",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    87,
+    0,
+    -36
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_south_100",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    93,
+    0,
+    -36
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "c_south_101",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    101,
+    0,
+    -36
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "c_south_102",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    108,
+    0,
+    -36
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_south_103",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    74,
+    0,
+    -21
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_south_104",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    80,
+    0,
+    -21
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "c_south_105",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    87,
+    0,
+    -21
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_south_106",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    93,
+    0,
+    -21
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "c_south_107",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    101,
+    0,
+    -21
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "c_south_108",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    108,
+    0,
+    -21
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_south_109",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    74,
+    0,
+    -4
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_south_110",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    80,
+    0,
+    -4
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "c_south_111",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    87,
+    0,
+    -4
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_south_112",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    93,
+    0,
+    -4
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "c_south_113",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    101,
+    0,
+    -4
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "c_south_114",
+   "name": "Townhouse",
+   "district": "leaf_east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    108,
+    0,
+    -4
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "a_east_115",
+   "name": "Home",
+   "district": "academy",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    120,
+    0,
+    -134
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "a_east_116",
+   "name": "Home",
+   "district": "academy",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    130,
+    0,
+    -134
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "a_east_117",
+   "name": "Home",
+   "district": "academy",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    120,
+    0,
+    -119
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "a_east_118",
+   "name": "Home",
+   "district": "academy",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    130,
+    0,
+    -119
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "c_west_119",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    61,
+    0,
+    -60
+   ],
+   "size": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "c_west_120",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    69,
+    0,
+    -60
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "c_west_121",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    76,
+    0,
+    -60
+   ],
+   "size": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "c_west_122",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    86,
+    0,
+    -60
+   ],
+   "size": [
+    9,
+    10
+   ]
+  },
+  {
+   "id": "c_west_123",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    95,
+    0,
+    -60
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "c_west_124",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    102,
+    0,
+    -60
+   ],
+   "size": [
+    11,
+    10
+   ]
+  },
+  {
+   "id": "c_west_125",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    61,
+    0,
+    -47
+   ],
+   "size": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "c_west_126",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    67,
+    0,
+    -47
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "c_west_127",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    74,
+    0,
+    -47
+   ],
+   "size": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "c_west_128",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    80,
+    0,
+    -47
+   ],
+   "size": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "c_west_129",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    88,
+    0,
+    -47
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "c_west_130",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    95,
+    0,
+    -47
+   ],
+   "size": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "c_west_131",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    101,
+    0,
+    -47
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "c_west_132",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    108,
+    0,
+    -47
+   ],
+   "size": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "c_east_133",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    153,
+    0,
+    -65
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_east_134",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    159,
+    0,
+    -65
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "c_east_135",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    166,
+    0,
+    -65
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_east_136",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    172,
+    0,
+    -65
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "c_east_137",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    180,
+    0,
+    -65
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "c_east_138",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    190,
+    0,
+    -65
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "c_east_139",
+   "name": "Townhouse",
+   "district": "central",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    196,
+    0,
+    -65
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "c_east_140",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    153,
+    0,
+    -50
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "c_east_141",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    161,
+    0,
+    -50
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "c_east_142",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    168,
+    0,
+    -50
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "c_east_143",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    178,
+    0,
+    -50
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "c_east_144",
+   "name": "Shop-house",
+   "district": "central",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    190,
+    0,
+    -50
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "ap_n_145",
+   "name": "Walk-up",
+   "district": "apartments",
+   "planned": true,
+   "lot": "W",
+   "at": [
+    -140,
+    0,
+    -45
+   ],
+   "size": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "ap_n_146",
+   "name": "Walk-up",
+   "district": "apartments",
+   "planned": true,
+   "lot": "W",
+   "at": [
+    -125,
+    0,
+    -45
+   ],
+   "size": [
+    15,
+    13
+   ]
+  },
+  {
+   "id": "ap_s_147",
+   "name": "Walk-up",
+   "district": "apartments",
+   "planned": true,
+   "lot": "W",
+   "at": [
+    -140,
+    0,
+    -25
+   ],
+   "size": [
+    13,
+    15
+   ]
+  },
+  {
+   "id": "ap_s_148",
+   "name": "Walk-up",
+   "district": "apartments",
+   "planned": true,
+   "lot": "W",
+   "at": [
+    -125,
+    0,
+    -25
+   ],
+   "size": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "ap_s_149",
+   "name": "Walk-up",
+   "district": "apartments",
+   "planned": true,
+   "lot": "W",
+   "at": [
+    -140,
+    0,
+    -7
+   ],
+   "size": [
+    13,
+    15
+   ]
+  },
+  {
+   "id": "ap_s_150",
+   "name": "Walk-up",
+   "district": "apartments",
+   "planned": true,
+   "lot": "W",
+   "at": [
+    -125,
+    0,
+    -7
+   ],
+   "size": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "ap_tn_151",
+   "name": "Walk-up",
+   "district": "apartments",
+   "planned": true,
+   "lot": "W",
+   "at": [
+    -62,
+    0,
+    -45
+   ],
+   "size": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "ap_ts_152",
+   "name": "Walk-up",
+   "district": "apartments",
+   "planned": true,
+   "lot": "W",
+   "at": [
+    -62,
+    0,
+    -10
+   ],
+   "size": [
+    13,
+    12
+   ]
+  },
+  {
+   "id": "ap_ts_153",
+   "name": "Walk-up",
+   "district": "apartments",
+   "planned": true,
+   "lot": "W",
+   "at": [
+    -62,
+    0,
+    5
+   ],
+   "size": [
+    13,
+    10
+   ]
+  },
+  {
+   "id": "m_north_154",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -42,
+    0,
+    26
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "m_north_155",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -34,
+    0,
+    26
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_north_156",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -27,
+    0,
+    26
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "m_north_157",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -17,
+    0,
+    26
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "m_north_158",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -8,
+    0,
+    26
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_north_159",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    3,
+    0,
+    26
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "m_north_160",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    14,
+    0,
+    26
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "m_north_161",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    22,
+    0,
+    26
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "m_north_162",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    30,
+    0,
+    26
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_north_163",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -42,
+    0,
+    40
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "m_north_164",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -34,
+    0,
+    40
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_north_165",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -27,
+    0,
+    40
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "m_north_166",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -17,
+    0,
+    40
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "m_north_167",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    -8,
+    0,
+    40
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_north_168",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    3,
+    0,
+    40
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "m_north_169",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    14,
+    0,
+    40
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "m_north_170",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    22,
+    0,
+    40
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "m_north_171",
+   "name": "Shop-house",
+   "district": "market",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    30,
+    0,
+    40
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_south_172",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -140,
+    0,
+    73
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "m_south_173",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -134,
+    0,
+    73
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "m_south_174",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -127,
+    0,
+    73
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "m_south_175",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -121,
+    0,
+    73
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "m_south_176",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -113,
+    0,
+    73
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "m_south_177",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -106,
+    0,
+    73
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "m_south_178",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -95,
+    0,
+    73
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "m_south_179",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -88,
+    0,
+    73
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "m_south_180",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -82,
+    0,
+    73
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "m_south_181",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -74,
+    0,
+    73
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "m_south_182",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -67,
+    0,
+    73
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "m_south_183",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -53,
+    0,
+    73
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "m_south_184",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -46,
+    0,
+    73
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "m_south_185",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -40,
+    0,
+    73
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "m_south_186",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -32,
+    0,
+    73
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "m_south_187",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -25,
+    0,
+    73
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "m_south_188",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -11,
+    0,
+    73
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "m_south_189",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -4,
+    0,
+    73
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "m_south_190",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    2,
+    0,
+    73
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "m_south_191",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    10,
+    0,
+    73
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "m_south_192",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    17,
+    0,
+    73
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "m_south_193",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    31,
+    0,
+    73
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "m_south_194",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -140,
+    0,
+    88
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "m_south_195",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -134,
+    0,
+    88
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_south_196",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -127,
+    0,
+    88
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "m_south_197",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -121,
+    0,
+    88
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "m_south_198",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -113,
+    0,
+    88
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_south_199",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -106,
+    0,
+    88
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "m_south_200",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -95,
+    0,
+    88
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_south_201",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -88,
+    0,
+    88
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "m_south_202",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -82,
+    0,
+    88
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "m_south_203",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -74,
+    0,
+    88
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_south_204",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -67,
+    0,
+    88
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "m_south_205",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -53,
+    0,
+    88
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_south_206",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -46,
+    0,
+    88
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "m_south_207",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -40,
+    0,
+    88
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "m_south_208",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -32,
+    0,
+    88
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_south_209",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -25,
+    0,
+    88
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "m_south_210",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -11,
+    0,
+    88
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_south_211",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -4,
+    0,
+    88
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "m_south_212",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    2,
+    0,
+    88
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "m_south_213",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    10,
+    0,
+    88
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_south_214",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    17,
+    0,
+    88
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "m_south_215",
+   "name": "Townhouse",
+   "district": "market",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    31,
+    0,
+    88
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "m_west_216",
+   "name": "Home",
+   "district": "market",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -140,
+    0,
+    23
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "m_west_217",
+   "name": "Home",
+   "district": "market",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -130,
+    0,
+    23
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "m_west_218",
+   "name": "Home",
+   "district": "market",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -119,
+    0,
+    23
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "m_west_219",
+   "name": "Home",
+   "district": "market",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -140,
+    0,
+    38
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "m_west_220",
+   "name": "Home",
+   "district": "market",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -130,
+    0,
+    38
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "m_west_221",
+   "name": "Home",
+   "district": "market",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -119,
+    0,
+    38
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "s_row_222",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    74,
+    0,
+    79
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "s_row_223",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    82,
+    0,
+    79
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "s_row_224",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    89,
+    0,
+    79
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "s_row_225",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    99,
+    0,
+    79
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "s_row_226",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    108,
+    0,
+    79
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "s_row_227",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    74,
+    0,
+    94
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "s_row_228",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    82,
+    0,
+    94
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "s_row_229",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    89,
+    0,
+    94
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "s_row_230",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    99,
+    0,
+    94
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "s_row_231",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    108,
+    0,
+    94
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "s_row_232",
+   "name": "Townhouse",
+   "district": "shops",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    74,
+    0,
+    111
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "s_row_233",
+   "name": "Townhouse",
+   "district": "shops",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    80,
+    0,
+    111
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "s_row_234",
+   "name": "Townhouse",
+   "district": "shops",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    87,
+    0,
+    111
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "s_row_235",
+   "name": "Townhouse",
+   "district": "shops",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    93,
+    0,
+    111
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "s_row_236",
+   "name": "Townhouse",
+   "district": "shops",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    101,
+    0,
+    111
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "s_row_237",
+   "name": "Townhouse",
+   "district": "shops",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    108,
+    0,
+    111
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "s_mid_238",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    88,
+    0,
+    42
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "s_mid_239",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    96,
+    0,
+    42
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "s_mid_240",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    103,
+    0,
+    42
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "s_bath_241",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    106,
+    0,
+    21
+   ],
+   "size": [
+    10,
+    8
+   ]
+  },
+  {
+   "id": "s_bath_242",
+   "name": "Shop-house",
+   "district": "shops",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    106,
+    0,
+    29
+   ],
+   "size": [
+    10,
+    7
+   ]
+  },
+  {
+   "id": "so_n_243",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -95,
+    0,
+    107
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_n_244",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -85,
+    0,
+    107
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "so_n_245",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -74,
+    0,
+    107
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "so_n_246",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -65,
+    0,
+    107
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "so_n_247",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -50,
+    0,
+    107
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_n_248",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -40,
+    0,
+    107
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_n_249",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -30,
+    0,
+    107
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "so_n_250",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -19,
+    0,
+    107
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "so_n_251",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -8,
+    0,
+    107
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "so_n_252",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    4,
+    0,
+    107
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_n_253",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    14,
+    0,
+    107
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_n_254",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -95,
+    0,
+    122
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "so_n_255",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -85,
+    0,
+    122
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "so_n_256",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -74,
+    0,
+    122
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "so_n_257",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -65,
+    0,
+    122
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "so_n_258",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -50,
+    0,
+    122
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "so_n_259",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -40,
+    0,
+    122
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "so_n_260",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -30,
+    0,
+    122
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "so_n_261",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -19,
+    0,
+    122
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "so_n_262",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -8,
+    0,
+    122
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "so_n_263",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    4,
+    0,
+    122
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "so_n_264",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    14,
+    0,
+    122
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "so_s_265",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -95,
+    0,
+    140
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_s_266",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -85,
+    0,
+    140
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "so_s_267",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -74,
+    0,
+    140
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "so_s_268",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -65,
+    0,
+    140
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "so_s_269",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -50,
+    0,
+    140
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_s_270",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -40,
+    0,
+    140
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_s_271",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -30,
+    0,
+    140
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "so_s_272",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -19,
+    0,
+    140
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "so_s_273",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -8,
+    0,
+    140
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "so_s_274",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    4,
+    0,
+    140
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_s_275",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    14,
+    0,
+    140
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_s_276",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -95,
+    0,
+    155
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_s_277",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -85,
+    0,
+    155
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "so_s_278",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -74,
+    0,
+    155
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "so_s_279",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -65,
+    0,
+    155
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "so_s_280",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -50,
+    0,
+    155
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_s_281",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -40,
+    0,
+    155
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_s_282",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -30,
+    0,
+    155
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "so_s_283",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -19,
+    0,
+    155
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "so_s_284",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -8,
+    0,
+    155
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "so_s_285",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    4,
+    0,
+    155
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "so_s_286",
+   "name": "Home",
+   "district": "south",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    14,
+    0,
+    155
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "g_east_287",
+   "name": "Townhouse",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    160,
+    0,
+    126
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "g_east_288",
+   "name": "Townhouse",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    166,
+    0,
+    126
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "g_east_289",
+   "name": "Townhouse",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    173,
+    0,
+    126
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "g_east_290",
+   "name": "Townhouse",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    179,
+    0,
+    126
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "g_east_291",
+   "name": "Townhouse",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    187,
+    0,
+    126
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "g_east_292",
+   "name": "Townhouse",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    194,
+    0,
+    126
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "g_east_293",
+   "name": "Home",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    160,
+    0,
+    141
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "g_east_294",
+   "name": "Home",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    170,
+    0,
+    141
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "g_east_295",
+   "name": "Home",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    181,
+    0,
+    141
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "g_east_296",
+   "name": "Home",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    190,
+    0,
+    141
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "g_east_297",
+   "name": "Home",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    160,
+    0,
+    156
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "g_east_298",
+   "name": "Home",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    170,
+    0,
+    156
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "g_east_299",
+   "name": "Home",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    181,
+    0,
+    156
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "g_east_300",
+   "name": "Home",
+   "district": "inuzuka",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    190,
+    0,
+    156
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "e_north_301",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    116,
+    0,
+    -37
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_north_302",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    126,
+    0,
+    -37
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_north_303",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    137,
+    0,
+    -37
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_north_304",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    116,
+    0,
+    -22
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_north_305",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    126,
+    0,
+    -22
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_north_306",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    137,
+    0,
+    -22
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_north_307",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    116,
+    0,
+    -7
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "e_north_308",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    126,
+    0,
+    -7
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "e_north_309",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    137,
+    0,
+    -7
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "e_north_310",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    116,
+    0,
+    7
+   ],
+   "size": [
+    9,
+    8
+   ]
+  },
+  {
+   "id": "e_north_311",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    126,
+    0,
+    7
+   ],
+   "size": [
+    10,
+    8
+   ]
+  },
+  {
+   "id": "e_north_312",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    137,
+    0,
+    7
+   ],
+   "size": [
+    8,
+    8
+   ]
+  },
+  {
+   "id": "e_artists_313",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    154,
+    0,
+    -10
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "e_artists_314",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    160,
+    0,
+    -10
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "e_artists_315",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    167,
+    0,
+    -10
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "e_artists_316",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    173,
+    0,
+    -10
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "e_artists_317",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    181,
+    0,
+    -10
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "e_artists_318",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    188,
+    0,
+    -10
+   ],
+   "size": [
+    6,
+    11
+   ]
+  },
+  {
+   "id": "e_artists_319",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    194,
+    0,
+    -10
+   ],
+   "size": [
+    7,
+    11
+   ]
+  },
+  {
+   "id": "e_artists_320",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    154,
+    0,
+    4
+   ],
+   "size": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "e_artists_321",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    160,
+    0,
+    4
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "e_artists_322",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    167,
+    0,
+    4
+   ],
+   "size": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "e_artists_323",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    173,
+    0,
+    4
+   ],
+   "size": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "e_artists_324",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    181,
+    0,
+    4
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "e_artists_325",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    188,
+    0,
+    4
+   ],
+   "size": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "e_artists_326",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    194,
+    0,
+    4
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "e_mid_327",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    116,
+    0,
+    20
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_mid_328",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    124,
+    0,
+    20
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "e_mid_329",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    131,
+    0,
+    20
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_mid_330",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    116,
+    0,
+    35
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_mid_331",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    126,
+    0,
+    35
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_mid_332",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    137,
+    0,
+    35
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_mid_333",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    116,
+    0,
+    50
+   ],
+   "size": [
+    9,
+    10
+   ]
+  },
+  {
+   "id": "e_mid_334",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    126,
+    0,
+    50
+   ],
+   "size": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "e_mid_335",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    137,
+    0,
+    50
+   ],
+   "size": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "e_market_336",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    154,
+    0,
+    20
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_market_337",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    162,
+    0,
+    20
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "e_market_338",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    169,
+    0,
+    20
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_market_339",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    179,
+    0,
+    20
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_market_340",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    188,
+    0,
+    20
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "e_market_341",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    154,
+    0,
+    35
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_market_342",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    162,
+    0,
+    35
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "e_market_343",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    169,
+    0,
+    35
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_market_344",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    179,
+    0,
+    35
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_market_345",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    188,
+    0,
+    35
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "e_market_346",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    154,
+    0,
+    50
+   ],
+   "size": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "e_market_347",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    160,
+    0,
+    50
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "e_market_348",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    167,
+    0,
+    50
+   ],
+   "size": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "e_market_349",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    173,
+    0,
+    50
+   ],
+   "size": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "e_market_350",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    181,
+    0,
+    50
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "e_market_351",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    188,
+    0,
+    50
+   ],
+   "size": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "e_market_352",
+   "name": "Townhouse",
+   "district": "east",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    194,
+    0,
+    50
+   ],
+   "size": [
+    7,
+    10
+   ]
+  },
+  {
+   "id": "e_south_353",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    116,
+    0,
+    65
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_south_354",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    124,
+    0,
+    65
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "e_south_355",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    131,
+    0,
+    65
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_south_356",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    141,
+    0,
+    65
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_south_357",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    150,
+    0,
+    65
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "e_south_358",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    161,
+    0,
+    65
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "e_south_359",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    172,
+    0,
+    65
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_south_360",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    180,
+    0,
+    65
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_south_361",
+   "name": "Shop-house",
+   "district": "east",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    188,
+    0,
+    65
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "e_south_362",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    116,
+    0,
+    80
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_south_363",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    126,
+    0,
+    80
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_south_364",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    137,
+    0,
+    80
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_south_365",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    146,
+    0,
+    80
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "e_south_366",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    161,
+    0,
+    80
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_south_367",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    171,
+    0,
+    80
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_south_368",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    181,
+    0,
+    80
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_south_369",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    192,
+    0,
+    80
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_south_370",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    116,
+    0,
+    97
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_south_371",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    126,
+    0,
+    97
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_south_372",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    137,
+    0,
+    97
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_south_373",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    146,
+    0,
+    97
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "e_south_374",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    161,
+    0,
+    97
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_south_375",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    171,
+    0,
+    97
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "e_south_376",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    181,
+    0,
+    97
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "e_south_377",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    192,
+    0,
+    97
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "e_south_378",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    116,
+    0,
+    112
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "e_south_379",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    126,
+    0,
+    112
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "e_south_380",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    137,
+    0,
+    112
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "e_south_381",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    146,
+    0,
+    112
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "e_south_382",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    161,
+    0,
+    112
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "e_south_383",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    171,
+    0,
+    112
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "e_south_384",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    181,
+    0,
+    112
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "e_south_385",
+   "name": "Home",
+   "district": "east",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    192,
+    0,
+    112
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "w_tobari_386",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -258,
+    0,
+    -40
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_387",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -252,
+    0,
+    -40
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_388",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -245,
+    0,
+    -40
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_389",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -239,
+    0,
+    -40
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_390",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -231,
+    0,
+    -40
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_391",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -224,
+    0,
+    -40
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_392",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -213,
+    0,
+    -40
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_393",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -206,
+    0,
+    -40
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_394",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -200,
+    0,
+    -40
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_395",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -258,
+    0,
+    -25
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_396",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -252,
+    0,
+    -25
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_397",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -245,
+    0,
+    -25
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_398",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -239,
+    0,
+    -25
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_399",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -231,
+    0,
+    -25
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_400",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -224,
+    0,
+    -25
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_401",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -213,
+    0,
+    -25
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_402",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -206,
+    0,
+    -25
+   ],
+   "size": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_403",
+   "name": "Townhouse",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "T",
+   "at": [
+    -200,
+    0,
+    -25
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_404",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -258,
+    0,
+    -8
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_405",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -248,
+    0,
+    -8
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_406",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -237,
+    0,
+    -8
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_407",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -228,
+    0,
+    -8
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_408",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -213,
+    0,
+    -8
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_409",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -203,
+    0,
+    -8
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_410",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -258,
+    0,
+    7
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_411",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -248,
+    0,
+    7
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_412",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -237,
+    0,
+    7
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_413",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -228,
+    0,
+    7
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_414",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -213,
+    0,
+    7
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_415",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -203,
+    0,
+    7
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_416",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -258,
+    0,
+    24
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_417",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -248,
+    0,
+    24
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_418",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -237,
+    0,
+    24
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_419",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -228,
+    0,
+    24
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_420",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -213,
+    0,
+    24
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_tobari_421",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -203,
+    0,
+    24
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_river_422",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -182,
+    0,
+    -40
+   ],
+   "size": [
+    12,
+    9
+   ]
+  },
+  {
+   "id": "w_river_423",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -182,
+    0,
+    -30
+   ],
+   "size": [
+    12,
+    10
+   ]
+  },
+  {
+   "id": "w_river_424",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -182,
+    0,
+    -19
+   ],
+   "size": [
+    12,
+    8
+   ]
+  },
+  {
+   "id": "w_river_425",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -182,
+    0,
+    -10
+   ],
+   "size": [
+    12,
+    11
+   ]
+  },
+  {
+   "id": "w_river_426",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -182,
+    0,
+    5
+   ],
+   "size": [
+    12,
+    9
+   ]
+  },
+  {
+   "id": "w_river_427",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -182,
+    0,
+    15
+   ],
+   "size": [
+    12,
+    9
+   ]
+  },
+  {
+   "id": "w_river_428",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -182,
+    0,
+    25
+   ],
+   "size": [
+    12,
+    10
+   ]
+  },
+  {
+   "id": "w_river_429",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -182,
+    0,
+    36
+   ],
+   "size": [
+    12,
+    8
+   ]
+  },
+  {
+   "id": "w_river_430",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -182,
+    0,
+    47
+   ],
+   "size": [
+    12,
+    11
+   ]
+  },
+  {
+   "id": "w_uchiha_431",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -258,
+    0,
+    -167
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_432",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -248,
+    0,
+    -167
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_433",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -237,
+    0,
+    -167
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_434",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -228,
+    0,
+    -167
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_435",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -213,
+    0,
+    -167
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_436",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -203,
+    0,
+    -167
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_437",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -258,
+    0,
+    -152
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_438",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -248,
+    0,
+    -152
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_439",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -237,
+    0,
+    -152
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_440",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -228,
+    0,
+    -152
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_441",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -213,
+    0,
+    -152
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_442",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -203,
+    0,
+    -152
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_443",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -258,
+    0,
+    -135
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_444",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -248,
+    0,
+    -135
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_445",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -237,
+    0,
+    -135
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_446",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -228,
+    0,
+    -135
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_447",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -213,
+    0,
+    -135
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_448",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -203,
+    0,
+    -135
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_449",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -258,
+    0,
+    -120
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_450",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -248,
+    0,
+    -120
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_451",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -237,
+    0,
+    -120
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_452",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -228,
+    0,
+    -120
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_453",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -213,
+    0,
+    -120
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_454",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -203,
+    0,
+    -120
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_455",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -258,
+    0,
+    -103
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_456",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -248,
+    0,
+    -103
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_457",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -237,
+    0,
+    -103
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_458",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -228,
+    0,
+    -103
+   ],
+   "size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_459",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -213,
+    0,
+    -103
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_460",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -203,
+    0,
+    -103
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "w_uchiha_461",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -258,
+    0,
+    -88
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "w_uchiha_462",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -248,
+    0,
+    -88
+   ],
+   "size": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "w_uchiha_463",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -237,
+    0,
+    -88
+   ],
+   "size": [
+    8,
+    11
+   ]
+  },
+  {
+   "id": "w_uchiha_464",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -228,
+    0,
+    -88
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "w_uchiha_465",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -213,
+    0,
+    -88
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "w_uchiha_466",
+   "name": "Home",
+   "district": "west_bank",
+   "planned": true,
+   "lot": "H",
+   "at": [
+    -203,
+    0,
+    -88
+   ],
+   "size": [
+    9,
+    11
+   ]
+  },
+  {
+   "id": "f_east_467",
+   "name": "Shop-house",
+   "district": "foot",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    136,
+    0,
+    -205
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "f_east_468",
+   "name": "Shop-house",
+   "district": "foot",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    144,
+    0,
+    -205
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "f_east_469",
+   "name": "Shop-house",
+   "district": "foot",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    151,
+    0,
+    -205
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "f_east_470",
+   "name": "Shop-house",
+   "district": "foot",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    161,
+    0,
+    -205
+   ],
+   "size": [
+    9,
+    12
+   ]
+  },
+  {
+   "id": "f_east_471",
+   "name": "Shop-house",
+   "district": "foot",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    136,
+    0,
+    -190
+   ],
+   "size": [
+    8,
+    12
+   ]
+  },
+  {
+   "id": "f_east_472",
+   "name": "Shop-house",
+   "district": "foot",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    144,
+    0,
+    -190
+   ],
+   "size": [
+    7,
+    12
+   ]
+  },
+  {
+   "id": "f_east_473",
+   "name": "Shop-house",
+   "district": "foot",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    151,
+    0,
+    -190
+   ],
+   "size": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "f_east_474",
+   "name": "Shop-house",
+   "district": "foot",
+   "planned": true,
+   "lot": "S",
+   "at": [
+    161,
+    0,
+    -190
+   ],
+   "size": [
+    9,
+    12
    ]
   }
  ]

@@ -142,26 +142,44 @@ first-start grass fill that walks the border block by block.
 
 ## 6. Density, people and work
 
-About **300 residents** when the whole village is built, about 200 in the beta's districts
-(ROADMAP §6). Today: 29.
+Konoha is a dense town: a sea of two- to four-storey roofs between the landmarks, not a suburb.
+The plan places **about 560 buildings**: 88 landmarks, compounds and built plots, and **475 lots**
+of everyday fabric (`tools/konoha/master.py`, `FILL`): 117 shop-houses, 128 townhouses, 221 homes
+and 9 walk-ups. The lots are cut along the streets, three-wide back alleys between back-to-back
+rows, and three-wide passages through each block about every 42 blocks.
 
-| District | Homes | Residents (target) | Workplaces |
-|---|---|---|---|
-| The Foot and Central Leaf | Clan halls and estates, the garden houses | 25 | Mission Desk (3, B2), jonin standby (6, B2), courier office (4), shrine (2) |
-| Hospital Hill | Hill homes, the herbalists' houses, the Yamanaka | 20 | Hospital (6 medics, day and night), pharmacy, flower shop |
-| Academy | Teachers' houses | 8 | Academy (5 teachers), the workshop |
-| Leaf Street | The Leaf Block, Sakura Lane (built) | 30 | Tea house, training yard |
-| Apartment Blocks | Three blocks and a tower | 45 | Ground-floor shops of the tower |
-| Main Street, Market, Shop Row | Keepers above their shops, townhouse rows | 70 | Every shop and stall, the bath house, the inn, the smithy |
-| South Residential | Detached homes | 40 | The park keeper |
-| Inuzuka and the gate quarter | The compound, gate homes, the barracks | 25 | Clinic, kennels, gate booth (2), barracks (6 bunks), wall towers (night watch) |
-| East Quarters and Nara | Clan homes, family homes | 30 | Dojos, the artists' studio |
-| West bank | The Uchiha quarter, riverside and dark lanes | 25 | The ferry, the quarry |
+| District | Lots | Landmarks and workplaces |
+|---|---|---|
+| The Foot and Central Leaf | 34 shop-houses and townhouses, 18 more in Leaf Street east | Residence, clan halls and estates, the garden houses, Mission Desk, jonin standby, courier office, shrine |
+| Hospital Hill | 77 (23 shop-houses on Rock Road, 54 homes) | Hospital (medics day and night), herb garden, pharmacy, the Yamanaka and the flower shop |
+| Academy | 4 homes | Academy, the teachers' houses |
+| Leaf Street | built | The Leaf Block, Sakura Lane, the tea house, the training yard |
+| Apartment Blocks | 9 walk-ups | Three blocks and the round tower, shops on its ground floor |
+| Main Street, Market, Shop Row | 109 (53 shop-houses, 50 townhouses, 6 homes) | Every shop and stall, Ichiraku, the Akimichi, the bath house, the inn, the smithy |
+| South Residential | 44 homes | The park |
+| Inuzuka and the gate quarter | 14 | The Inuzuka compound and clinic, the cat shelter, the barracks, the gate |
+| East Quarters | 85 (22 shop-houses, 21 townhouses, 42 homes) | Hatake and Yuhi homes, the Kurama studio, Shop Lane east, the stadium, the dojos, the Nara |
+| West bank | 81 (18 townhouses, 63 homes, most inside the Uchiha wall) | The Uchiha gate and hall, Aburame and Morino homes, the ferry, the quarry |
 
-Density by district: **Main Street and the market** continuous frontages (no gap wider than an
-alley), every ground floor a shop; **residential streets** detached homes on 11-block plots, a
-third of each plot garden; **apartment blocks** 4 to 6 storeys with galleries; **clan quarters**
-walled, low, mostly garden; **the edges** forest and fields.
+**Residents have no fixed count.** Every building is furnished and can be entered, but not every
+one is lived in: a lot is a home with its family, a shop with its keeper, a workshop, a storehouse,
+or a house whose family is away. Residents are placed up to a budget per area, not per village,
+because only the chunks around the player tick: batch K5 measures ms per tick against residents
+within 64 blocks before it peoples the fabric. Today: 29 residents; the day route's worst point
+runs 27 ms per tick on the test street, so the budget is the main risk to measure.
+
+Density rules:
+
+- **Main Street, the market, Shop Row, the shop lanes:** continuous frontage with shared walls,
+  every ground floor a shop or workshop, two to four storeys.
+- **Townhouse rows (machiya):** 6 to 8 wide, shared walls, two or three storeys, a small yard on
+  the back alley.
+- **Homes:** 8 to 11 wide, one block apart, two or three storeys, a yard or a roof garden; no
+  lawn round the house.
+- **Walk-ups and apartment blocks:** three to six storeys, flat roofs with tanks, galleries.
+- **Clan compounds:** walled and low, gardens inside the wall. Open ground only where canon has
+  it: the training grounds, the park, the shrine woods, the Nara forest, the Rock.
+- Heights change every two or three lots; about one building in twelve is round (§8).
 
 ## 7. Story places and quest anchors
 
@@ -205,7 +223,7 @@ and round towers. What they changed in the plan:
 |---|---|---|
 | The Rock dominates every view; its faces are the village's biggest object | The Rock rises to about y 170 with the faces from 115 to 160 (§4) | K11 |
 | Green canopy fills every gap between buildings; the K1 street reads bare | A tree budget: a big broadleaf every 15 to 20 blocks along every street, one or two per home plot, groves in every square and clan garden ([TECHNIQUES §9](TECHNIQUES.md#9-trees-and-gardens)) | K6 and each district's batch |
-| Round buildings of every size, not one tower: drums and tiered round towers with stepped roofs | A round-building family (drum house, round shop, tiered tower) used in every district, about one in twelve buildings ([TECHNIQUES §4](TECHNIQUES.md#4-roofs)) | K7 onward |
+| Round buildings of every size, not one tower: drums and tiered round towers with stepped roofs | A round-building family (drum house, round shop, tiered tower) used in every district, about one in twelve buildings ([TECHNIQUES §4](TECHNIQUES.md#4-roofs)) | K4 (the family), every district after |
 | Roofs in many colours: teal and blue beside green, orange and grey; flat grey roofs crowded with white tanks | Teal and blue roof palettes added; flat roofs carry two or three tanks | K4 onward |
 | The gate's two green doors fill the whole opening; ours are narrow strips beside it | The doors as tall and wide as the opening, standing open inward; the あ and ん large on them | K4 |
 | The wall reads warm orange-brown from inside the village; ours is dark spruce and packed mud | The wall's boards shift toward orange-brown (stripped acacia, terracotta) *check against the art* | K4 |
@@ -213,8 +231,47 @@ and round towers. What they changed in the plan:
 
 ## 9. Quality bar
 
-Every building from here on meets [TECHNIQUES.md](TECHNIQUES.md): canon silhouette first (checked
-against reference art), proportions true to the player, depth on every face (frames proud of the
-walls, recessed openings, eaves that cast shadow), textured walls (a gradient, not one block), and a
-lived-in interior for every home a resident sleeps in. Renders before paste; a client screenshot
-after.
+Every building meets [TECHNIQUES.md](TECHNIQUES.md): canon silhouette first (checked against
+reference art), proportions true to the player, depth on every face (frames proud of the walls,
+recessed openings, eaves that cast shadow), textured walls (a gradient, not one block), and an
+interior to its programme. Renders before paste; a client screenshot after.
+
+**Consistency comes from building families, so nothing is built twice.** Every everyday building
+comes from a family in the kit (shop-house, townhouse, home, walk-up, round building, compound wall
+and gate). A family generates its variants from parameters: width, depth, storeys, palette, roof,
+front, mirror and a seed. Each family is signed off by the owner on a reference sheet (every
+variant, front and cutaway, beside the canon art) before it fills a single lot. No lot is edited by
+hand: fixing a family fixes every building made from it. Landmarks are built by hand to the same
+rules, from the same kit pieces.
+
+**Detached homes are never alike.** Palette alone is not a variant: the home family varies the
+form itself, its footprint (square, L, deep, wide), storeys (one to three), roof (gable either
+way, hip, flat with a roof garden, a lean-to wing), the door's side and its porch, a balcony or
+veranda, an annexe or shed, the garden's side. No two neighbouring homes share a form, and no
+street repeats one within five plots. Only buildings that are one structure may repeat: the
+joined townhouse rows (each house still differs in its front: door, window, sign, awning) and the
+walk-ups and apartment blocks. Sakura Lane's 14 copies of one house are remade from the family in K4.
+
+## 10. Things to do and explore
+
+- **Every door opens.** No fake fronts: each building's interior follows its programme
+  (TECHNIQUES §10), a shop sells, a workshop works, a storehouse holds stock.
+- **The rooftops are a road.** The continuous rows make roof routes from the gate to the Rock;
+  back alleys and passages are three wide, a jump; ladders and drainpipes climb at every passage.
+- **Back alleys and passages:** laundry, bins, back doors and yards; each block hides one
+  courtyard with something in it.
+- **Viewpoints:** the heads of the faces, the Rock's lookout, the hospital roof, the round
+  tower's top, the wall walk, the shrine steps.
+- **Things to do** come from the systems already built: trade at the shops and stalls, eat at
+  Ichiraku and the tea houses, the bath house, training and dojos (combat), the Mission Desk and
+  notice boards (missions), residents' homes (bonds), the market's day.
+- **Hidden places:** under the bridges, behind the falls, the old quarry, the vacant estate, the
+  sealed door. What the story puts there stays in `docs/story/`.
+
+## 11. Build order: the whole village, then the beta cut
+
+The whole of Konoha is built first, inside the wall and the grounds just outside it, in the order of
+[BATCHES.md](BATCHES.md): interiors, the building families and their sign-off, the layout and its
+fabric, the terrain, then the landmarks district by district. The beta is cut from the finished
+village afterwards (the border and the districts it opens, K17), so nothing is built for the beta
+and rebuilt later.

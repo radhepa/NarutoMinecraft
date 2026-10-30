@@ -1,7 +1,10 @@
 # Development state
 
 **Resumed (owner, 30 October 2026):** plan the whole village before building more. Done: [docs/konoha/](../konoha/README.md)
-(master plan, district sheets, techniques, batch list K3 to K14).
+(master plan, district sheets, techniques, batch list K3 to K17). Owner, later the same day: the whole village
+first, dense (about 560 buildings, 475 lots from `tools/konoha/master.py`), residents uncapped up to a measured
+per-area budget, everyday buildings from owner-signed building families, detached homes varied in form; the beta
+is cut from the finished village (K17).
 **Phase/task:** Konoha, the owner's order of 30 October 2026: the whole village of KONOHA_BUILD.md, district by
 district (ROADMAP §6: Beta 1, then Beta 2, Beta 3 and Later), before more quest or systems work. M3's story (P07) is
 paused at 6fc02a7. **Branch/base:** `dev`, from `main` e9238bd. Names and dialogue are the merged `names` work: leave
@@ -51,8 +54,7 @@ renders: `docs/renders/konoha/`. K3: build passed (`.local-dev/logs/k3-build2.lo
 
 ## Remaining
 
-- Konoha Beta 1: batches K3 to K14 of [BATCHES.md](../konoha/BATCHES.md), about 200 residents. Then Beta 2,
-  Beta 3 and Later.
+- Konoha: batches K4 to K17 of [BATCHES.md](../konoha/BATCHES.md), then the outside world.
 - P07: chapters 3 to 7 in a client; story stand-ins swapped for the real places.
 - P03, P05, P06 leftovers as before (Varied's roll, the shop counter block, mentors, first-person poses).
 
