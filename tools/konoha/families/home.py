@@ -11,6 +11,7 @@ blocks the way is left out. street() gives a row of lots homes whose forms never
 
   python tools/konoha/families/home.py            # the reference sheet: docs/renders/konoha/families/home*.png
   python tools/konoha/families/home.py --check    # every lot size, many seeds: walk lines, beds, palette, variety
+  python tools/konoha/families/home.py --write    # the blueprints of the home.WxD.SEED designs layout.json uses
 """
 from __future__ import annotations
 
@@ -117,7 +118,7 @@ def roll(r, w, d):
     gap = w - 2 - tw
     ox = 1 + r.choice((0, gap // 2, gap))            # the side garden left, both sides or right
     back = 1
-    fg = d - hd - back
+    fg = min(d - hd - back, 3)                       # the door within three of the street (layout.py DOOR_REACH)
     porch = r.choice(("canopy", "veranda", "gate") if fg >= 3 else ("canopy", "veranda"))   # a gate needs a front garden
     if n >= 2 and fg >= 3 and r.random() < .45:
         porch = "balcony"
@@ -576,6 +577,8 @@ def check(seeds=60):
                     assert base_name(p.get(*m["pos"])).endswith("_bed"), (p.id, m)
                 (x, y, z), = [m["pos"] for m in p.markers if m["type"] == "house_plaque"]
                 assert p.get(x, y, z) is None and p.get(x, y, z - 1) and p.get(x, y, z - 2) is None, (p.id, "plaque")
+                (_, _, az), = [m["pos"] for m in p.markers if m["type"] == "door_anchor"]
+                assert d - az <= 3, (p.id, "door too far from the street")
                 forms.add(form(f))
                 built += 1
     lots = [(w, 12) for w in (9, 10, 8, 11, 9)] * 6
@@ -585,5 +588,15 @@ def check(seeds=60):
     print(f"ok: {built} homes on lots 8-13 x 9-13, {len(forms)} forms, a 30-lot street without a repeat in five")
 
 
+def write():
+    """Write the blueprint of every home.WxD.SEED design the layout's plots use."""
+    import layout
+    designs = {pl.get("design", "") for pl in layout.load()["plots"]}
+    for design in sorted(d for d in designs if d.startswith("home.")):
+        _, size, seed = design.split(".")
+        w, d = map(int, size.split("x"))
+        home(int(seed), w, d)[0].write()
+
+
 if __name__ == "__main__":
-    check() if "--check" in sys.argv else sheet()
+    check() if "--check" in sys.argv else write() if "--write" in sys.argv else sheet()

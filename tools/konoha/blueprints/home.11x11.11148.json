@@ -1,0 +1,327 @@
+{
+ "format": "konoha-blueprint/1",
+ "id": "home.11x11.11148",
+ "title": "Home",
+ "kind": "home",
+ "size": [
+  11,
+  16,
+  11
+ ],
+ "street": "south",
+ "notes": "Home family (tools/konoha/families/home.py): a House Plaque on the front wall beside the door; beds by marker",
+ "cutaway": [
+  5,
+  9
+ ],
+ "palette": {
+  "#": "minecraft:andesite",
+  "@": "minecraft:barrel[facing=east]",
+  "%": "minecraft:barrel[facing=south]",
+  "&": "minecraft:birch_trapdoor[facing=north,half=bottom,open=false]",
+  "*": "minecraft:black_concrete",
+  "+": "minecraft:blue_bed[facing=west,part=foot]",
+  "=": "minecraft:blue_bed[facing=west,part=head]",
+  "-": "minecraft:brown_bed[facing=west,part=foot]",
+  "~": "minecraft:brown_bed[facing=west,part=head]",
+  "^": "minecraft:calcite",
+  ":": "minecraft:cauldron",
+  ";": "minecraft:dark_oak_slab[type=top]",
+  "!": "minecraft:deepslate_tile_slab[type=bottom]",
+  "?": "minecraft:deepslate_tile_slab[type=top]",
+  "$": "minecraft:deepslate_tile_stairs[facing=east,half=top]",
+  "A": "minecraft:deepslate_tile_stairs[facing=west,half=top]",
+  "B": "minecraft:deepslate_tiles",
+  "C": "minecraft:diorite",
+  "D": "minecraft:dirt_path",
+  "E": "minecraft:grass_block",
+  "F": "minecraft:hopper[facing=down]",
+  "G": "minecraft:iron_trapdoor[facing=south,half=top,open=false]",
+  "H": "minecraft:polished_andesite",
+  "I": "minecraft:polished_diorite",
+  "J": "minecraft:potted_azalea_bush",
+  "K": "minecraft:potted_fern",
+  "L": "minecraft:red_carpet",
+  "M": "minecraft:red_terracotta",
+  "N": "minecraft:smoker[facing=south]",
+  "O": "minecraft:smooth_quartz",
+  "P": "minecraft:smooth_stone",
+  "Q": "minecraft:smooth_stone_slab[type=bottom]",
+  "R": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false]",
+  "S": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false]",
+  "T": "minecraft:spruce_fence[north=true,south=false,east=false,west=false]",
+  "U": "minecraft:spruce_planks",
+  "V": "minecraft:spruce_slab[type=bottom]",
+  "W": "minecraft:spruce_slab[type=top]",
+  "X": "minecraft:spruce_stairs[facing=east,half=top]",
+  "Y": "minecraft:spruce_stairs[facing=north,half=bottom]",
+  "Z": "minecraft:spruce_stairs[facing=north,half=top]",
+  "a": "minecraft:spruce_stairs[facing=south,half=top]",
+  "b": "minecraft:spruce_stairs[facing=west,half=top]",
+  "c": "minecraft:spruce_trapdoor[facing=south,half=top,open=true]",
+  "d": "minecraft:stone_brick_slab[type=bottom]",
+  "e": "minecraft:stripped_dark_oak_log[axis=y]",
+  "f": "minecraft:water_cauldron[level=3]",
+  "g": "minecraft:white_concrete",
+  "h": "minecraft:white_stained_glass_pane[north=false,south=false,east=true,west=true]",
+  "i": "minecraft:white_stained_glass_pane[north=true,south=true,east=false,west=false]",
+  "j": "narutominecraft:grey_kawara_ridge[axis=z]",
+  "k": "narutominecraft:tatami[axis=x]",
+  "l": "narutominecraft:tatami[axis=z]"
+ },
+ "layers": [
+  [
+   "EEEEEEEEEEE",
+   "EEEEEEEEEEE",
+   "EEEEEEEEEEE",
+   "EEEEEEEEEEE",
+   "EEEEEEEEEEE",
+   "EEEEEEEEEEE",
+   "EEEEEEEEEEE",
+   "EEEEEEEEEEE",
+   "EEEEEEEEEEE",
+   "EEEEEEDEEEE",
+   "EEEEEEPEEEE"
+  ],
+  [
+   "ddddddddddd",
+   "dC#C#C##CCd",
+   "dCUUUUUUUCd",
+   "d#UUUUUUU#d",
+   "d#UUUUUUU#d",
+   "d#UUUUUUUCd",
+   "d#UUUUUUUCd",
+   "dCUUUUHUU#d",
+   "dC#####CC#d",
+   "dWWWWWQWWWd",
+   "..........."
+  ],
+  [
+   "...W..W....",
+   ".eOI^eIOOe.",
+   ".OW:%g%fNO.",
+   "WI.......IW",
+   ".OK......O.",
+   ".O@LVL...O.",
+   "WIF.....Y^.",
+   ".O.......^.",
+   ".eIIIeRIIe.",
+   ".TW.W....T.",
+   "..........."
+  ],
+  [
+   "...........",
+   ".eOh^ehOOe.",
+   ".O*..g...O.",
+   ".i.......i.",
+   ".O.......O.",
+   ".OJ.....YO.",
+   ".i&......O.",
+   ".O.......O.",
+   ".ehOheSOOe.",
+   ".T.......T.",
+   "..........."
+  ],
+  [
+   "...a..a....",
+   ".eOOOeOOOe.",
+   ".O..c.c.GO.",
+   "XO.......Ob",
+   ".O......YO.",
+   ".O.......O.",
+   "XO.......O.",
+   ".O.......O.",
+   ".eOOOeOOOe.",
+   ".!Z!Z!!!!!.",
+   "..........."
+  ],
+  [
+   ";;;;;;;;;;;",
+   ";eMMMeMMMe;",
+   ";MUUUUUUUM;",
+   ";MUUUUUUUM;",
+   ";MUUUUUU.M;",
+   ";MUUUUUU.M;",
+   ";MUUUUUU.M;",
+   ";MUUUUUUUM;",
+   ";eMMMeMMMe;",
+   ";;;;;;;;;;;",
+   "..........."
+  ],
+  [
+   "...W..W....",
+   ".eOIOeIOOe.",
+   ".O=+klklkO.",
+   "WIklklkl.O.",
+   ".Oklklkl.O.",
+   ".Oklklkl.O.",
+   "WIklklkl.O.",
+   ".O~-klkl.O.",
+   ".eIOIeIOOe.",
+   "..W.W.W....",
+   "..........."
+  ],
+  [
+   "...........",
+   ".eOIOeIOOe.",
+   ".O.......O.",
+   ".I.......O.",
+   ".O.......O.",
+   ".^.......O.",
+   ".I.......O.",
+   ".O.......O.",
+   ".eIOIeIOOe.",
+   "...........",
+   "..........."
+  ],
+  [
+   "A.........$",
+   "AeOhOehOOe$",
+   "AO.......O$",
+   "Ai.......O$",
+   "AO.......O$",
+   "A^.......O$",
+   "Ai.......O$",
+   "A^.......O$",
+   "AehOhehOOe$",
+   "A.........$",
+   "..........."
+  ],
+  [
+   "!?.a..a..?!",
+   "!?OOOOOOO?!",
+   "!?.......?!",
+   "!?.......?!",
+   "!?.......?!",
+   "!?.......?!",
+   "!?.......?!",
+   "!?.......?!",
+   "!?OOOOO^^?!",
+   "!?Z.Z.Z..?!",
+   "..........."
+  ],
+  [
+   "..!?...?!..",
+   "..!?OOO?!..",
+   "..!?...?!..",
+   "..!?...?!..",
+   "..!?...?!..",
+   "..!?...?!..",
+   "..!?...?!..",
+   "..!?...?!..",
+   "..!?OOO?!..",
+   "..!?...?!..",
+   "..........."
+  ],
+  [
+   "....!B!....",
+   "....!B!....",
+   "....!B!....",
+   "....!B!....",
+   "....!B!....",
+   "....!B!....",
+   "....!B!....",
+   "....!B!....",
+   "....!B!....",
+   "....!B!....",
+   "..........."
+  ],
+  [
+   ".....j.....",
+   ".....j.....",
+   ".....j.....",
+   ".....j.....",
+   ".....j.....",
+   ".....j.....",
+   ".....j.....",
+   ".....j.....",
+   ".....j.....",
+   ".....j.....",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ]
+ ],
+ "markers": [
+  {
+   "type": "bed",
+   "pos": [
+    2,
+    6,
+    7
+   ]
+  },
+  {
+   "type": "bed",
+   "pos": [
+    2,
+    6,
+    2
+   ]
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    7,
+    3,
+    9
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    4,
+    2,
+    4
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "door_anchor",
+   "pos": [
+    6,
+    1,
+    9
+   ]
+  }
+ ]
+}

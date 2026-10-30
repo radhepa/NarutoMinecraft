@@ -1,0 +1,273 @@
+{
+ "format": "konoha-blueprint/1",
+ "id": "home.11x11.11222",
+ "title": "Home",
+ "kind": "home",
+ "size": [
+  11,
+  12,
+  11
+ ],
+ "street": "south",
+ "notes": "Home family (tools/konoha/families/home.py): a House Plaque on the front wall beside the door; beds by marker",
+ "cutaway": [
+  5
+ ],
+ "palette": {
+  "#": "minecraft:bamboo_fence[north=false,south=false,east=false,west=true]",
+  "@": "minecraft:bamboo_fence[north=false,south=false,east=true,west=false]",
+  "%": "minecraft:bamboo_fence[north=false,south=false,east=true,west=true]",
+  "&": "minecraft:bamboo_fence[north=true,south=false,east=false,west=true]",
+  "*": "minecraft:bamboo_fence[north=true,south=false,east=true,west=false]",
+  "+": "minecraft:barrel[facing=east]",
+  "=": "minecraft:barrel[facing=west]",
+  "-": "minecraft:birch_trapdoor[facing=north,half=bottom,open=false]",
+  "~": "minecraft:black_concrete",
+  "^": "minecraft:brown_bed[facing=east,part=foot]",
+  ":": "minecraft:brown_bed[facing=east,part=head]",
+  ";": "minecraft:cauldron",
+  "!": "minecraft:cut_sandstone",
+  "?": "minecraft:dirt_path",
+  "$": "minecraft:grass_block",
+  "A": "minecraft:hopper[facing=down]",
+  "B": "minecraft:iron_trapdoor[facing=east,half=top,open=false]",
+  "C": "minecraft:polished_andesite",
+  "D": "minecraft:potted_azalea_bush",
+  "E": "minecraft:potted_fern",
+  "F": "minecraft:red_bed[facing=east,part=foot]",
+  "G": "minecraft:red_bed[facing=east,part=head]",
+  "H": "minecraft:red_carpet",
+  "I": "minecraft:sandstone",
+  "J": "minecraft:smoker[facing=east]",
+  "K": "minecraft:smooth_sandstone",
+  "L": "minecraft:smooth_stone",
+  "M": "minecraft:smooth_stone_slab[type=bottom]",
+  "N": "minecraft:spruce_door[facing=south,half=lower,hinge=right,open=false]",
+  "O": "minecraft:spruce_door[facing=south,half=upper,hinge=right,open=false]",
+  "P": "minecraft:spruce_planks",
+  "Q": "minecraft:spruce_slab[type=bottom]",
+  "R": "minecraft:spruce_slab[type=top]",
+  "S": "minecraft:spruce_stairs[facing=east,half=top]",
+  "T": "minecraft:spruce_stairs[facing=north,half=top]",
+  "U": "minecraft:spruce_stairs[facing=south,half=top]",
+  "V": "minecraft:spruce_stairs[facing=west,half=top]",
+  "W": "minecraft:spruce_trapdoor[facing=east,half=top,open=true]",
+  "X": "minecraft:stone_brick_slab[type=bottom]",
+  "Y": "minecraft:stone_bricks",
+  "Z": "minecraft:stripped_spruce_log[axis=y]",
+  "a": "minecraft:tuff",
+  "b": "minecraft:water_cauldron[level=3]",
+  "c": "minecraft:waxed_cut_copper_slab[type=top]",
+  "d": "minecraft:white_concrete",
+  "e": "minecraft:white_stained_glass_pane[north=false,south=false,east=true,west=false]",
+  "f": "minecraft:white_stained_glass_pane[north=false,south=false,east=true,west=true]",
+  "g": "minecraft:white_stained_glass_pane[north=true,south=true,east=false,west=false]",
+  "h": "minecraft:white_stained_glass_pane[north=true,south=true,east=false,west=true]",
+  "i": "narutominecraft:water_tank[part=bottom]",
+  "j": "narutominecraft:water_tank[part=top]",
+  "k": "narutominecraft:white_paper_lantern"
+ },
+ "layers": [
+  [
+   "$$$$$$$$$$$",
+   "$$$$$$$$$$$",
+   "$$$$$$$$$$$",
+   "$$$$$$$$$$$",
+   "$$$$$$$$$$$",
+   "$$$$$$$$$$$",
+   "$$$$$$$$$$$",
+   "$$$$$$$$$$$",
+   "$$$$$$$$$$$",
+   "$$$$?$$$$$$",
+   "$$$$L$$$$$$"
+  ],
+  [
+   ".XXXXXXXXX.",
+   ".XaYCYYYYX.",
+   ".XaPPPPPCX.",
+   ".XYPPPPPaX.",
+   ".XYPPPPPCX.",
+   ".XCPPPPPYX.",
+   ".XaPPPPPYXD",
+   ".XYPCPPPaX.",
+   ".XYaYYCCYX.",
+   "EXXXMXXXXXE",
+   "*%#...@%%%&"
+  ],
+  [
+   "...R..R....",
+   "..ZIZKIKZ..",
+   "..KJ..^:K..",
+   ".RIb..FGIR.",
+   "..K+HQHRK..",
+   "..Kd....K..",
+   ".RI+...=IR.",
+   "..K..EA;K..",
+   "..ZINIIIZ..",
+   ".....R.R...",
+   "..........."
+  ],
+  [
+   "...........",
+   "..ZfZKf!Z..",
+   "..K.....K..",
+   "..g.....g..",
+   "..K....~K..",
+   "..Kd....K..",
+   "..g....Dh..",
+   "..K...-.K..",
+   "..ZKOeKfZ..",
+   ".....k.....",
+   "..........."
+  ],
+  [
+   "...U..U....",
+   "..ZKZKK!Z..",
+   "..KB....K..",
+   ".SK.....KV.",
+   "..KW....K..",
+   "..K.....K..",
+   ".SKW....IV.",
+   "..K.....!..",
+   "..ZKZKKKZ..",
+   "...ccT.T...",
+   "..........."
+  ],
+  [
+   "...........",
+   "..LLLLLLL..",
+   "..LLLLLLL..",
+   "..LLLLLLL..",
+   "..LLLLLLL..",
+   "..LLLLLLL..",
+   "..LLLLLLL..",
+   "..LLLLLLL..",
+   "..LLLLLLL..",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "..!!!!!!!..",
+   "..!D..i.!..",
+   "..!.....!..",
+   "..!.....!..",
+   "..!.....!..",
+   "..!.....!..",
+   "..!.....!..",
+   "..!!!!!!!..",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "......j....",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ]
+ ],
+ "markers": [
+  {
+   "type": "bed",
+   "pos": [
+    7,
+    2,
+    2
+   ]
+  },
+  {
+   "type": "bed",
+   "pos": [
+    7,
+    2,
+    3
+   ]
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    3,
+    3,
+    9
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    5,
+    2,
+    5
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "door_anchor",
+   "pos": [
+    4,
+    1,
+    9
+   ]
+  }
+ ]
+}

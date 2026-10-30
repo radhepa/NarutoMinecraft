@@ -190,8 +190,8 @@ decorated pots, carpet offcuts by the door.
 
 ### 10.3 Room programmes by home type
 
-**Family house, two storeys** (`home_plaster_2f`, 7 × 5 inside per floor; Sakura Lane, the south
-streets). Too small for a bath: the household uses the bath house (Shop Row), as small Japanese homes
+**Family house, two storeys** (the home family `tools/konoha/families/home.py`, one to three storeys;
+Sakura Lane, the south streets). Too small for a bath: the household uses the bath house (Shop Row), as small Japanese homes
 did; the toilet and basin sit by the genkan.
 
 - Ground floor: genkan (2 × 2) with the shoe cabinet and the stair start; LDK (living, dining,

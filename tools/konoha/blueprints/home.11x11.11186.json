@@ -1,0 +1,273 @@
+{
+ "format": "konoha-blueprint/1",
+ "id": "home.11x11.11186",
+ "title": "Home",
+ "kind": "home",
+ "size": [
+  11,
+  12,
+  11
+ ],
+ "street": "south",
+ "notes": "Home family (tools/konoha/families/home.py): a House Plaque on the front wall beside the door; beds by marker",
+ "cutaway": [
+  5
+ ],
+ "palette": {
+  "#": "minecraft:azalea_leaves",
+  "@": "minecraft:barrel[facing=east]",
+  "%": "minecraft:barrel[facing=south]",
+  "&": "minecraft:birch_trapdoor[facing=north,half=bottom,open=false]",
+  "*": "minecraft:black_concrete",
+  "+": "minecraft:blue_bed[facing=north,part=foot]",
+  "=": "minecraft:blue_bed[facing=north,part=head]",
+  "-": "minecraft:cauldron",
+  "~": "minecraft:cut_sandstone",
+  "^": "minecraft:dirt_path",
+  ":": "minecraft:grass_block",
+  ";": "minecraft:hopper[facing=down]",
+  "!": "minecraft:iron_trapdoor[facing=east,half=top,open=false]",
+  "?": "minecraft:polished_andesite",
+  "$": "minecraft:potted_azalea_bush",
+  "A": "minecraft:potted_fern",
+  "B": "minecraft:red_carpet",
+  "C": "minecraft:sandstone",
+  "D": "minecraft:smoker[facing=east]",
+  "E": "minecraft:smooth_sandstone",
+  "F": "minecraft:smooth_stone",
+  "G": "minecraft:smooth_stone_slab[type=bottom]",
+  "H": "minecraft:spruce_door[facing=south,half=lower,hinge=right,open=false]",
+  "I": "minecraft:spruce_door[facing=south,half=upper,hinge=right,open=false]",
+  "J": "minecraft:spruce_planks",
+  "K": "minecraft:spruce_slab[type=bottom]",
+  "L": "minecraft:spruce_slab[type=top]",
+  "M": "minecraft:spruce_trapdoor[facing=east,half=top,open=true]",
+  "N": "minecraft:stone_brick_slab[type=bottom]",
+  "O": "minecraft:stone_brick_wall",
+  "P": "minecraft:stone_bricks",
+  "Q": "minecraft:stripped_spruce_log[axis=y]",
+  "R": "minecraft:tuff",
+  "S": "minecraft:water_cauldron[level=3]",
+  "T": "minecraft:waxed_cut_copper",
+  "U": "minecraft:waxed_cut_copper_slab[type=bottom]",
+  "V": "minecraft:waxed_cut_copper_slab[type=top]",
+  "W": "minecraft:waxed_cut_copper_stairs[facing=east,half=top]",
+  "X": "minecraft:waxed_cut_copper_stairs[facing=north,half=top]",
+  "Y": "minecraft:waxed_cut_copper_stairs[facing=south,half=top]",
+  "Z": "minecraft:waxed_cut_copper_stairs[facing=west,half=top]",
+  "a": "minecraft:white_bed[facing=north,part=foot]",
+  "b": "minecraft:white_bed[facing=north,part=head]",
+  "c": "minecraft:white_concrete",
+  "d": "minecraft:white_stained_glass_pane[north=false,south=false,east=true,west=false]",
+  "e": "minecraft:white_stained_glass_pane[north=false,south=false,east=true,west=true]",
+  "f": "minecraft:white_stained_glass_pane[north=true,south=false,east=true,west=true]",
+  "g": "minecraft:white_stained_glass_pane[north=true,south=true,east=false,west=false]",
+  "h": "narutominecraft:mossy_stone_lantern[facing=east,half=lower]",
+  "i": "narutominecraft:mossy_stone_lantern[facing=east,half=upper]",
+  "j": "narutominecraft:orange_kawara_ridge[axis=x]",
+  "k": "narutominecraft:white_paper_lantern"
+ },
+ "layers": [
+  [
+   ":::::::::::",
+   ":::::::::::",
+   ":::::::::::",
+   ":::::::::::",
+   ":::::::::::",
+   ":::::::::::",
+   ":::::::::::",
+   ":::::::::::",
+   ":::::^:::::",
+   ":::::F:::::",
+   ":::::^:::::"
+  ],
+  [
+   ".NNNNNNNNNN",
+   "#N??PRPPPPN",
+   "$N?JJJJJJPN",
+   ".NPJJJJJJRN",
+   ".NPJJJJJJRN",
+   ".NRJJJJJJPN",
+   ".NPJJ?JJJRN",
+   ".NRPP??PRRN",
+   ".NNNNGNNNNN",
+   ".h......$..",
+   "OOOO...OOOO"
+  ],
+  [
+   "....L..L...",
+   "..QECQECEQ.",
+   "..ED.b.=LE.",
+   ".LCS.a.+.CL",
+   "..E@.BKB-E.",
+   "..Ec....;E.",
+   "..E...A.%E.",
+   "..QCCHCCCQ.",
+   "......L.L..",
+   ".i.........",
+   "..........."
+  ],
+  [
+   "...........",
+   "..QEeQEeEQ.",
+   "..E.....*E.",
+   "..g......g.",
+   "..E......E.",
+   "..Ec....&E.",
+   "..E.....$E.",
+   "..QECIdEfQ.",
+   "......k....",
+   "...........",
+   "..........."
+  ],
+  [
+   ".XXXXXXXXXX",
+   ".ZQEEQEEEQW",
+   ".ZE!.....EW",
+   ".ZE......EW",
+   ".ZEM.....EW",
+   ".Z~......EW",
+   ".ZC......EW",
+   ".ZQEEQEEEQW",
+   ".YYYYYYYYYY",
+   "...........",
+   "..........."
+  ],
+  [
+   ".UUUUUUUUUU",
+   ".UVVVVVVVVU",
+   ".UV......VU",
+   ".UV......VU",
+   ".UV......VU",
+   ".UV......VU",
+   ".UV......VU",
+   ".UVVVVVVVVU",
+   ".UUUUUUUUUU",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...UUUUUU..",
+   "...UVVVVU..",
+   "...UV..VU..",
+   "...UVVVVU..",
+   "...UUUUUU..",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   ".....TT....",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   ".....jj....",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ],
+  [
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "...........",
+   "..........."
+  ]
+ ],
+ "markers": [
+  {
+   "type": "bed",
+   "pos": [
+    7,
+    2,
+    2
+   ]
+  },
+  {
+   "type": "bed",
+   "pos": [
+    5,
+    2,
+    2
+   ]
+  },
+  {
+   "type": "house_plaque",
+   "pos": [
+    4,
+    3,
+    8
+   ],
+   "facing": "south"
+  },
+  {
+   "type": "resident",
+   "pos": [
+    6,
+    2,
+    5
+   ],
+   "group": "any",
+   "job": "any"
+  },
+  {
+   "type": "door_anchor",
+   "pos": [
+    5,
+    1,
+    8
+   ]
+  }
+ ]
+}

@@ -80,9 +80,9 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             ShinobiVillage.LOG.info("Test street plaques: {}", built.plaques());
             int n = built.residents().size();
             check(n == 29, "ten flat residents, the tea house keeper, fourteen Sakura Lane households and the four Main Street keepers: " + n);
-            check(built.plaques().size() == 30 && built.plaques().stream().filter(p -> p.contains("Sakura Lane") && p.contains(" 2 beds,")).count() == 14
+            check(built.plaques().size() == 30 && built.plaques().stream().filter(p -> p.contains("Sakura Lane") && p.matches(".* [234] beds,.*")).count() == 14
                     && built.plaques().stream().filter(p -> !p.contains("Sakura Lane") && p.contains(" 1 bed,")).count() == 16,
-                    "eleven flats, the tea house and the four Main Street shops with a bed each, fourteen Sakura Lane homes with two: " + built.plaques());
+                    "eleven flats, the tea house and the four Main Street shops with a bed each, fourteen Sakura Lane homes with two to four: " + built.plaques());
 
             // Their markers; a resident out at its hobby has walked away from one.
             List<Vec3> spawn = w.getServer().computeOnServer(s -> built.residents().stream().map(Villager::position).toList());
