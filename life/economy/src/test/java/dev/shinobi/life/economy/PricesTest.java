@@ -50,10 +50,17 @@ class PricesTest {
         assertTrue(second < first);
         int total = first + second;
         for (int i = 0; i < 100; i++) total += pawn.sell(5, "tansu_chest", "standard");
-        assertEquals(400, total);                                   // the day's purse
-        assertEquals(0, pawn.sell(5, "low_table", "standard"));
+        assertTrue(total <= 400 && total == pawn.paidToday(), "never more than the day's purse: " + total);
         assertEquals(30, pawn.sell(6, "low_table", "standard"));    // a new day, a full till
         assertEquals(0, pawn.sell(6, "kunai", "standard"));         // tools are not pawnable
+    }
+
+    @Test void theTillRefusesWhatItCannotPayInFull() {
+        var pawn = prices.pawn();
+        while (400 - pawn.paidToday() >= 30) pawn.sell(5, "low_table", "standard");
+        int paid = pawn.paidToday();
+        assertEquals(0, pawn.sell(5, "tansu_chest", "standard"), "refused: you keep it, never a part payment");
+        assertEquals(paid, pawn.paidToday());
     }
 
     @Test void hagglingOnlyWhereShopsHaggleAndAlwaysTheSameForTheSameDay() {
@@ -64,7 +71,11 @@ class PricesTest {
         assertTrue(prices.haggleChance(0.1, "hero", 1, 0) > prices.haggleChance(0.1, "newcomer", 0, 1));
         assertTrue(prices.haggleChance(0.2, "newcomer", 0, 0) < prices.haggleChance(0.1, "newcomer", 0, 0));
         int won = 0;
-        for (int day = 0; day < 1000; day++) if (prices.haggle(100, 0.1, "newcomer", 0, 0, 1, "pawn_shop", day, "silk") < 100) won++;
+        for (int day = 0; day < 1000; day++) {
+            int pays = prices.haggle(100, 0.1, "newcomer", 0, 0, 1, "pawn_shop", day, "silk", true);
+            assertTrue(pays == 100 || pays == 110, "haggling what the pawn shop pays you only ever raises it");
+            if (pays > 100) won++;
+        }
         assertEquals(550, won, 60);                                 // about the 55% the ask gives
     }
 }

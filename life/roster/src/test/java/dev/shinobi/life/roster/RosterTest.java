@@ -134,6 +134,17 @@ class RosterTest {
         assertEquals(List.of(TEAMMATE_A, TEAMMATE_B), copy.groupMembers());
         assertThrows(IllegalArgumentException.class, () -> copy.load("bonds 1"));
     }
+    @Test void aReloadedSaveGrowsLikeAnUnbrokenOne() {
+        var unbroken = Roster.classic(9);
+        var reloaded = Roster.classic(9);
+        double xp = 0;
+        for (int d = 0; d < 40; d++) {
+            xp += perDay(Curve.level(xp));
+            unbroken.day(Day.apart(xp)); reloaded.day(Day.apart(xp));
+            if (d == 19) { var copy = Roster.classic(9); copy.load(reloaded.save()); reloaded = copy; }
+        }
+        assertEquals(unbroken.save(), reloaded.save());
+    }
     @Test void offsetsMoveFromEarlyToLate() {
         assertThrows(IllegalArgumentException.class, () -> new Peer("x", Niche.TOOLS, "", 0, 0, 1, 0, 1));
         assertEquals(1, Peer.rival("r", Niche.NINJUTSU, "uchiha").offset(10));

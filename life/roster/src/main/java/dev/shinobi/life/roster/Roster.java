@@ -51,13 +51,13 @@ public final class Roster {
         double level() { return Curve.level(xp); }
     }
 
-    final long seed; final Seeds.Rng rng;
+    final long seed;
     final Map<String, Grower> people = new LinkedHashMap<>();
     final Set<String> passed = new LinkedHashSet<>();
     double playerXp, bestXp, pace; long day;
     final List<GrowthEvent> events = new ArrayList<>();
 
-    public Roster(long seed) { this.seed = seed; this.rng = Seeds.stream(seed, "roster", "growth"); player(0); }
+    public Roster(long seed) { this.seed = seed; player(0); }
 
     /** Where the player starts (0 for a new save): their XP, and a day's pace of a level every {@link #DAYS_PER_LEVEL} days. */
     public Roster player(double xp) {
@@ -96,7 +96,8 @@ public final class Roster {
                 gain = d.sharedXp();
                 if (bond.trainedTogether() > 0) gain *= trainingBonus(bond.level(), bond.quarrel());
             } else {
-                gain = pace * g.peer.drive() * rng.range(.75, 1.25);
+                // Rolled from the person and the day, not a running stream, so a reloaded save grows the same.
+                gain = pace * g.peer.drive() * Seeds.stream(seed, "roster", g.peer.id() + "|" + day).range(.75, 1.25);
                 // Sparring with someone off your squad still counts: you both get better.
                 if (bond.trainedTogether() > 0) gain *= trainingBonus(bond.level(), bond.quarrel());
             }
@@ -203,13 +204,16 @@ public final class Roster {
     public List<GrowthEvent> drainEvents() { var out = List.copyOf(events); events.clear(); return out; }
     private void emit(Grower g, String kind, String detail) { events.add(new GrowthEvent(day, g.peer.id(), kind, detail)); }
 
-    /** A header (day, the player's XP, best XP and pace, the beats passed), then one line per person: id, xp, floor, in the group, kindles, techniques. */
+    /**
+     * A header (day, the player's XP, best XP and pace, the beats passed), then one line per person: id, xp, floor, in the
+     * group, kindles, techniques, and whether the band is holding them at its top and at its bottom.
+     */
     public String save() {
         var sb = new StringBuilder("roster 1 ").append(day).append(' ').append(playerXp).append(' ').append(bestXp).append(' ').append(pace)
                 .append(' ').append(String.join(",", passed)).append('\n');
         for (var g : people.values())
             sb.append(g.peer.id()).append(' ').append(g.xp).append(' ').append(g.floor).append(' ').append(g.inGroup).append(' ').append(g.kindles)
-              .append(' ').append(String.join(",", g.learned)).append('\n');
+              .append(' ').append(String.join(",", g.learned)).append(' ').append(g.atTop).append(' ').append(g.atBottom).append('\n');
         return sb.toString();
     }
     /** Restores a {@link #save} into a roster that already has the same people added. */
@@ -227,6 +231,8 @@ public final class Roster {
             g.xp = Double.parseDouble(f[1]); g.floor = Integer.parseInt(f[2]); g.inGroup = Boolean.parseBoolean(f[3]); g.kindles = Integer.parseInt(f[4]);
             g.learned.clear();
             if (!f[5].isEmpty()) g.learned.addAll(List.of(f[5].split(",")));
+            // Older saves end at the techniques: the band state starts clear.
+            g.atTop = f.length > 7 && Boolean.parseBoolean(f[6]); g.atBottom = f.length > 7 && Boolean.parseBoolean(f[7]);
         }
     }
 

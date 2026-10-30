@@ -15,7 +15,7 @@ public final class Stock {
     /** The lines on {@code shop}'s shelf in {@code week} (a VF week: day / 7) for a player of {@code rank}. */
     public static List<Catalogue.Line> shelf(Catalogue.Shop shop, long week, Mode mode, long seed, String rank, String slice) {
         var out = new ArrayList<Catalogue.Line>();
-        if (!Ladder.sliceAllows(slice, shop.slice())) return out;
+        if (!Ladder.sliceAllows(slice, shop.slice()) || !serves(shop, rank)) return out;
         for (var line : shop.core()) if (open(line, rank, slice)) out.add(line);
         var pool = shop.rotation().stream().filter(l -> open(l, rank, slice)).toList();
         int slots = Math.min(shop.rotating(), pool.size());
@@ -28,6 +28,11 @@ public final class Stock {
             for (int i = 0; i < slots; i++) out.add(left.remove(rng.below(left.size())));
         }
         return out;
+    }
+
+    /** Whether a shop serves a player of {@code rank}: an Academy shop serves students only (ITEMS.md), the rest that rank and up. */
+    public static boolean serves(Catalogue.Shop shop, String rank) {
+        return shop.rank().equals("academy") ? rank.equals("academy") : Ladder.rankAllows(rank, shop.rank());
     }
 
     static boolean open(Catalogue.Line line, String rank, String slice) {

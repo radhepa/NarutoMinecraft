@@ -17,11 +17,16 @@ public final class Mailbox {
     private final List<Letter> letters = new ArrayList<>();
     private int dropped;
 
-    /** Posts a letter; a full mailbox keeps the newest twelve (old notes fall behind the box, nothing important). */
+    /**
+     * Posts a letter; a full mailbox keeps twelve. What falls behind the box is never important: the oldest stipend
+     * envelope first (its ryo was paid by {@link Home#morning}), then the oldest note, and only then the oldest letter.
+     */
     public void post(Kind kind, String from, long day, String key, String attachment) {
         letters.add(new Letter(kind, from, day, key, attachment == null ? "" : attachment));
         while (letters.size() > HOLDS) {
-            var oldest = letters.stream().filter(l -> l.kind() == Kind.NOTE || l.kind() == Kind.NEIGHBOUR).findFirst().orElse(letters.getFirst());
+            var oldest = letters.stream().filter(l -> l.kind() == Kind.STIPEND).findFirst()
+                    .or(() -> letters.stream().filter(l -> l.kind() == Kind.NOTE || l.kind() == Kind.NEIGHBOUR).findFirst())
+                    .orElse(letters.getFirst());
             letters.remove(oldest); dropped++;
         }
     }
