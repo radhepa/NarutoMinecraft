@@ -13,6 +13,12 @@ The home is [docs/HOME.md](docs/HOME.md); its engine is `life/home`, on top of t
 Combat is [docs/COMBAT.md](docs/COMBAT.md): data authored in `tools/combat/` (`python3 tools/combat/build.py --check`)
 and the pure Java module `combat/core` (`./gradlew :combat:core:test`, `:combat:core:simulate`, `:combat:core:trace`).
 
+## Development
+
+Game development follows [docs/development/WORKFLOW.md](docs/development/WORKFLOW.md). Each session reads
+[docs/development/STATE.md](docs/development/STATE.md) and the active phase card in `docs/development/phases/`, not the whole roadmap.
+Shinobi Core is the Fabric mod in `core/` (`./gradlew :core:runClient`, `./gradlew :core:runClientGameTest`).
+
 ## Commits
 
 - Author every commit as `radhepa <radherpatel7@gmail.com>`:

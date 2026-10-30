@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "shinobi_core",
+  "version": "${version}",
+  "name": "Shinobi Core",
+  "description": "The shared player record, save seed, conditions, actions and events of the Shinobi Modpack.",
+  "authors": ["radhepa"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.shinobi.core.ShinobiCore"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
