@@ -1,7 +1,7 @@
 # Development state
 
-**Phase/task:** P03-6, a resident count and a performance route
-([ROADMAP.md 13.5](../../ROADMAP.md#p03--make-the-village-tangible)). P00 to P02 passed (13.3).
+**Phase/task:** P04-1, the first errand with a persistent journal
+([ROADMAP.md 13.5](../../ROADMAP.md#p04--prove-a-complete-gameplay-loop)). P00 to P03 passed (13.3).
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
 The story checkout on the Desktop keeps its unfinished work; story review stays paused.
 
@@ -13,11 +13,28 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
    Core save seed and Classic/Varied mode choosing the cast, role identities for the bound cast (from P02).
 4. Done: the street's tea house, notice board and training yard; adventure protection and builder mode.
 5. Done: the Leaf map's rules (no monsters, raids, traders, TNT, arrows or fire spread).
-6. A resident count and a measured route for performance.
+6. Done: 11 residents on the street (ten flats and the tea house keeper) and the performance route.
+   Open from 3 and 2, folded into later work as M2 needs them: Classic/Varied from the Core save seed,
+   role identities, loot tables and names for the Konoha blocks.
+
+## P04 queue
+
+1. A quest runtime and persistent journal: accept and complete one objective (`go` to an anchor).
+2. Roles and map anchors, with clear errors when one is missing.
+3. Flags, conditions and actions, and one branch.
+4. Ryo through the Life wallet; one-time rewards.
+5. A trade at the tea house.
+6. Reload at each boundary, failure and retry.
+7. The quest checker reports authoring errors (extend `tools/missions/missions.py`).
 
 P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
+
+- P03-6 `./gradlew build`: passed; `:village:runClientGameTest` passed with the performance route: three stops
+  (tea house, apartment block, yard), five seconds each, 11 residents. Baseline, server ms per tick on average:
+  day 5.6 to 7.7, night 2.5 to 2.6; client 119 fps by day, 30 at night (the test client's frame cap, not load).
+  Ponytail review: logged as a record, not a gate (an average, and shared CI runners are noisy).
 
 - P03-5 `./gradlew build`: passed; `:village:runClientGameTest` passed: building the street turns off monster,
   patrol, phantom and trader spawns, raids, TNT and projectile block damage, and fire spread (`TestStreet.OFF`),
@@ -78,6 +95,7 @@ None.
 
 ## Next
 
-P03-6: set the street's resident count and record a performance route: a fixed camera walk along the street
-by day and at night, logging tick time (MSPT) and frame time with all residents loaded, as the baseline before
-any buildings or residents are duplicated. Then P04-1, the first errand with a persistent journal.
+P04-1: the Shinobi Progression mod (`progression/`, mod id `shinobi_progression`) with a journal attached to the
+player, quests read from data packs through the mission engine's `Template`, a `go` objective on the street's
+anchors (saved by Shinobi Village), and a noncanonical test errand; a client gametest accepts it, walks to the
+yard, completes it and reopens the save.

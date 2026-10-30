@@ -35,7 +35,8 @@ import java.util.function.Supplier;
  * P03-3: the same seed gives the same cast, and reopening the save finds the same residents in the same flats.
  * P03-4: the tea house keeper lives over the shop, the notice board and training yard stand in the village, and only
  * builder mode can change the street.
- * P03-5: building the street sets the Leaf map's rules. Screenshots: test-street-*.
+ * P03-5: building the street sets the Leaf map's rules.
+ * P03-6: the performance route, by day and at night, logged as the baseline. Screenshots: test-street-*.
  */
 @SuppressWarnings({"UnstableApiUsage", "unchecked"})
 public final class TestStreetGameTest implements FabricClientGameTest {
@@ -77,6 +78,7 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             ShinobiVillage.LOG.info("Test street: {} of {} residents left their markers", walked(w, built, spawn), n);
             view(c, w, player.getX() + .5, player.getY() + 3, player.getZ() + 6.5, 180, 12, "test-street-day");
             view(c, w, player.getX() + 25.5, player.getY() + 4, player.getZ() + 3.5, 180, 25, "test-street-yard");
+            route(c, w, player, "day");
 
             BlockPos board = built.anchors().get("notice_board"), yard = built.anchors().get("anchor:training");
             w.getServer().runOnServer(s -> {
@@ -115,6 +117,7 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             until(c, () -> asleep(w, built) >= n - 2, 2400, () -> "residents asleep in their own beds: " + asleep(w, built) + "; doing "
                     + w.getServer().computeOnServer(s -> built.residents().stream().map(dev.villagefriends.ResidentRoutines::doing).toList()));
             ShinobiVillage.LOG.info("Test street: {} of {} residents asleep in their own beds", asleep(w, built), n);
+            route(c, w, player, "night");
 
             cast = w.getServer().computeOnServer(s -> built.residents().stream().map(TestStreetGameTest::identity).toList());
             ShinobiVillage.LOG.info("Test street cast: {}", cast);
@@ -157,6 +160,20 @@ public final class TestStreetGameTest implements FabricClientGameTest {
     static long asleep(TestSingleplayerContext w, TestStreet.Built built) {
         return w.getServer().computeOnServer(s -> built.residents().stream()
                 .filter(v -> v.isSleeping() && Homes.bedOf(v).map(b -> v.getSleepingPos().map(b.head()::equals).orElse(false)).orElse(false)).count());
+    }
+
+    /**
+     * The performance route: the shop, the apartment block and the yard, five seconds at each, logging the server's average
+     * ms per tick and the client's frames. A record, not a gate: one shared CI runner's noise would fail it.
+     */
+    static void route(ClientGameTestContext c, TestSingleplayerContext w, BlockPos player, String when) {
+        for (int x : new int[]{-24, 0, 25}) {
+            w.getServer().runCommand(String.format(Locale.ROOT, "tp @a %d %d %d 180 15", player.getX() + x, player.getY() + 3, player.getZ() + 6));
+            c.waitTicks(100);
+            double mspt = w.getServer().computeOnServer(s -> s.getAverageTickTimeNanos() / 1e6);
+            int fps = c.computeOnClient(mc -> mc.getFps());
+            ShinobiVillage.LOG.info("Performance route ({}) at x{}: {} ms per tick on average, {} fps", when, x, String.format(Locale.ROOT, "%.2f", mspt), fps);
+        }
     }
 
     static void view(ClientGameTestContext c, TestSingleplayerContext w, double x, double y, double z, float yaw, float pitch, String name) {
