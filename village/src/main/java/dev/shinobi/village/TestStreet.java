@@ -162,8 +162,9 @@ public final class TestStreet {
                     }
                     case "resident" -> {
                         var v = new Villager(EntityTypes.VILLAGER, level);
-                        // VF draws a resident's profile, look and name from its UUID.
+                        // VF draws the profile and look from the UUID; LeafNames draws the name from this save.
                         v.setUUID(resident(cast, residents.size()));
+                        LeafNames.marker(v, marker);
                         v.setPos(pos.getX() + .5, pos.getY(), pos.getZ() + .5);
                         // The nearest bed of its house is its own: VF keeps the bed a resident already sleeps in when it hands beds out.
                         beds.stream().min(Comparator.comparingInt(b -> b.distManhattan(pos)))
