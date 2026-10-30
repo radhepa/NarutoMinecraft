@@ -6,6 +6,7 @@ import dev.shinobi.progression.mission.Template;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 /** Checking a quest file, casting it on the map and walking its steps, apart from the mod's entrypoint so it runs without a game. */
 final class Quests {
@@ -100,24 +101,31 @@ final class Quests {
         };
     }
 
-    /** Refuses an action the runtime cannot run. shortcut: {@code set_flag} and {@code give_ryo} only, until Shinobi Core's action registry. */
+    /**
+     * Refuses an action the runtime cannot run. shortcut: {@code set_flag}, {@code give_ryo} and {@code give_item} (one of
+     * an item id) only, until Shinobi Core's action registry.
+     */
     static void action(String where, Object action) {
         var m = Json.map(action);
         boolean ok = m.size() == 1 && (m.get("set_flag") instanceof List<?> l && l.size() == 2 && l.get(0) instanceof String && l.get(1) instanceof Boolean
-                || m.get("give_ryo") instanceof Number n && n.doubleValue() >= 1 && n.doubleValue() <= Integer.MAX_VALUE && n.doubleValue() == Math.rint(n.doubleValue()));
-        if (!ok) throw new IllegalArgumentException(where + ": unknown or malformed action " + action + " (set_flag [name, true|false] or give_ryo <whole ryo>)");
+                || m.get("give_ryo") instanceof Number n && n.doubleValue() >= 1 && n.doubleValue() <= Integer.MAX_VALUE && n.doubleValue() == Math.rint(n.doubleValue())
+                || m.get("give_item") instanceof String item && !item.isEmpty());
+        if (!ok) throw new IllegalArgumentException(where + ": unknown or malformed action " + action + " (set_flag [name, true|false], give_ryo <whole ryo> or give_item <item id>)");
     }
 
-    /** The journal after some actions, and the ryo they pay (paid on each pass, so a step that loops back pays again). */
-    record Outcome(Journal journal, int ryo) {}
+    /** The journal after some actions, and the ryo and items they give (on each pass, so a step that loops back gives again). */
+    record Outcome(Journal journal, int ryo, List<String> items) {
+        Outcome(Journal journal, int ryo) { this(journal, ryo, List.of()); }
+    }
 
     static Outcome run(List<Object> actions, Outcome o) {
         for (Object a : actions) {
             var m = Json.map(a);
-            if (m.get("give_ryo") instanceof Number n) o = new Outcome(o.journal(), o.ryo() + n.intValue());
+            if (m.get("give_ryo") instanceof Number n) o = new Outcome(o.journal(), o.ryo() + n.intValue(), o.items());
+            else if (m.get("give_item") instanceof String item) o = new Outcome(o.journal(), o.ryo(), Stream.concat(o.items().stream(), Stream.of(item)).toList());
             else {
                 var flag = Json.list(m.get("set_flag"));
-                o = new Outcome(o.journal().flag((String) flag.get(0), (Boolean) flag.get(1)), o.ryo());
+                o = new Outcome(o.journal().flag((String) flag.get(0), (Boolean) flag.get(1)), o.ryo(), o.items());
             }
         }
         return o;
@@ -133,7 +141,7 @@ final class Quests {
         String id = q.template().id(), at = j.active().get(id);
         if (at == null) return new Outcome(j, 0);
         var after = run(q.onDone().get(at), new Outcome(j, 0));
-        var moved = new Outcome(after.journal().advance(q.template(), c -> test(c, after.journal())), after.ryo());
+        var moved = new Outcome(after.journal().advance(q.template(), c -> test(c, after.journal())), after.ryo(), after.items());
         String now = moved.journal().active().get(id);
         return now == null ? moved : run(q.onEnter().get(now), moved);
     }

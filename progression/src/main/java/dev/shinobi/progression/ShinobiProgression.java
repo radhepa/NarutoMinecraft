@@ -29,6 +29,7 @@ import net.minecraft.world.entity.Entity;
 import dev.shinobi.combat.runtime.ShinobiCombat;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.util.Prediction;
 import dev.shinobi.village.ShinobiVillage;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
@@ -312,7 +313,7 @@ public final class ShinobiProgression implements ModInitializer {
         apply(player, next);
     }
 
-    /** Saves the journal and pays the ryo together, in one tick, so a reload never pays a step twice; names each new step. */
+    /** Saves the journal and pays the ryo and items together, in one tick, so a reload never pays a step twice; names each new step. */
     static void apply(ServerPlayer player, Quests.Outcome o) {
         var before = player.getAttachedOrCreate(JOURNAL).active();
         player.setAttached(JOURNAL, o.journal());
@@ -321,6 +322,8 @@ public final class ShinobiProgression implements ModInitializer {
                 player.sendSystemMessage(Component.translatable("shinobi_progression.quest.next", Component.translatable("quest." + id + ".step." + step)).withStyle(ChatFormatting.YELLOW));
         });
         if (o.ryo() > 0) ShinobiLife.earn(player, o.ryo());
+        // A full pack drops the item at the player's feet.
+        for (String item : o.items()) player.getInventory().placeItemBackInInventory(new ItemStack(ShinobiLife.item(item)), Prediction.SERVER_ONLY);
     }
 
     /** The shops the resident keeps, from the level's bound roles. */

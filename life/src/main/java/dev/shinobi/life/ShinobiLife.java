@@ -88,29 +88,25 @@ public final class ShinobiLife implements ModInitializer {
         return Stock.left(line, vfDay(level), sold == null ? 0 : sold.day(), sold == null ? 0 : sold.count());
     }
 
+    /** Whether a shop of the catalogue is open now. */
+    public static boolean open(ServerLevel level, String shop) { return catalogue.shops.containsKey(shop) && shut(level, shop) == null; }
+
     /**
-     * Whether a shop is open now: its hours, less its closed day (a weekday, Market Day, or every day but Market Day).
+     * The polite line of a catalogue shop shut now, or null while it is open: its closed day first (Market Day only,
+     * a weekday, or Market Day), then its hours.
      * shortcut: event closings (festival, exams) never close a shop, until the calendar has events.
      */
-    public static boolean open(ServerLevel level, String shop) {
+    public static Component shut(ServerLevel level, String shop) {
         var s = catalogue.shops.get(shop);
-        if (s == null) return false;
         boolean market = Daily.marketDay(level);
-        if (s.closed().equals(Daily.weekday(level)) || s.closed().equals("Market Day") && market || s.closed().equals("not_market_day") && !market) return false;
+        if (s.closed().equals("not_market_day") && !market) return Component.translatable("shinobi_life.shop.market_only", s.name());
+        if (s.closed().equals(Daily.weekday(level)) || s.closed().equals("Market Day") && market)
+            return Component.translatable("shinobi_life.shop.closed_day", s.name(), s.closed());
         long t = level.getOverworldClockTime() % 24000;
         int now = (int) ((t / 1000 + 6) % 24 * 60 + t % 1000 * 60 / 1000);
-        return minutes(s.opens()) <= now && now < minutes(s.closes());
+        return minutes(s.opens()) <= now && now < minutes(s.closes()) ? null : Component.translatable("shinobi_life.shop.closed", s.name(), s.opens(), s.closes());
     }
     private static int minutes(String hhmm) { return Integer.parseInt(hhmm.substring(0, 2)) * 60 + Integer.parseInt(hhmm.substring(3)); }
-
-    /** The polite line of a shut shop: Market Day only, closed today, or its hours. */
-    public static Component closed(ServerLevel level, String shop) {
-        var s = catalogue.shops.get(shop);
-        if (s.closed().equals("not_market_day")) return Component.translatable("shinobi_life.shop.market_only", s.name());
-        if (s.closed().equals(Daily.weekday(level)) || s.closed().equals("Market Day") && Daily.marketDay(level))
-            return Component.translatable("shinobi_life.shop.closed_day", s.name(), s.closed());
-        return Component.translatable("shinobi_life.shop.closed", s.name(), s.opens(), s.closes());
-    }
 
     /**
      * The price of {@code item} at {@code shop} for a newcomer.
@@ -131,7 +127,7 @@ public final class ShinobiLife implements ModInitializer {
     public static boolean buy(ServerPlayer player, String shop, String item) {
         var level = player.level();
         if (catalogue.shops.containsKey(shop) && !open(level, shop)) {
-            player.sendSystemMessage(closed(level, shop));
+            player.sendSystemMessage(shut(level, shop));
             return false;
         }
         var service = services(shop).stream().filter(s -> s.id().equals(item)).findFirst();

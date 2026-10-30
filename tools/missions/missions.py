@@ -450,9 +450,10 @@ def check_quests(files, map_data=None):
                 for a in s.get(when) or []:
                     ok = isinstance(a, dict) and len(a) == 1 and (
                         isinstance(a.get("set_flag"), list) and len(a["set_flag"]) == 2 and isinstance(a["set_flag"][0], str) and isinstance(a["set_flag"][1], bool)
-                        or type(a.get("give_ryo")) in (int, float) and 1 <= a["give_ryo"] <= 2**31 - 1 and a["give_ryo"] == int(a["give_ryo"]))
+                        or type(a.get("give_ryo")) in (int, float) and 1 <= a["give_ryo"] <= 2**31 - 1 and a["give_ryo"] == int(a["give_ryo"])
+                        or isinstance(a.get("give_item"), str) and a["give_item"] != "")
                     if not ok:
-                        err(name, f"{when}: unknown or malformed action {a} (set_flag [name, true|false] or give_ryo <whole ryo, 1 to 2147483647>)")
+                        err(name, f"{when}: unknown or malformed action {a} (set_flag [name, true|false], give_ryo <whole ryo, 1 to 2147483647> or give_item <item id>)")
             o = s.get("objective") or {}
             if not isinstance(o, dict):
                 err(name, "objective must be an object")

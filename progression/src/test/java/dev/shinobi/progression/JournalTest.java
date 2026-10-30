@@ -43,7 +43,7 @@ class JournalTest {
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"branch\": [{\"if\": {\"quest_state\": [\"q\", \"done\"]}, \"next\": \"a\"}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_ryo\": 0}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_ryo\": 2.5}]}}}",
-                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_item\": \"tea\"}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_item\": \"\"}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_enter\": [{\"set_flag\": [\"f\", \"yes\"]}]}}}",
                 "{\"id\": 5, \"start\": \"a\", \"steps\": {\"a\": {}}}",
                 "{\"id\": \"q\", \"start\": \"b\", \"steps\": {\"a\": {}}}",

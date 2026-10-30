@@ -11,7 +11,7 @@
   "steps": {
     "go_yard": {"objective": {"type": "go", "place": "slot:yard"}, "next": "spar"},
     "spar": {"objective": {"type": "spar", "place": "slot:yard"}, "on_done": [{"give_ryo": 30}], "next": "shop"},
-    "shop": {"objective": {"type": "talk", "who": "slot:keeper"}, "next": "furnish"},
+    "shop": {"objective": {"type": "talk", "who": "slot:keeper"}, "on_done": [{"give_item": "tatami"}], "next": "furnish"},
     "furnish": {"objective": {"type": "furnish"}, "next": "sleep"},
     "sleep": {"objective": {"type": "sleep"}, "next": null}
   }

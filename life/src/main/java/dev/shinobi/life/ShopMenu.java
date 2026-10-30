@@ -46,11 +46,14 @@ public final class ShopMenu extends ChestMenu {
         refresh();
     }
 
-    /** Opens the window on the keeper's shops that are open now; with all of them shut, says so politely and opens nothing. */
+    /**
+     * Opens the window, titled with the keeper's own shop (the first), on the keeper's shops that are open now; with all
+     * of them shut, says so politely and opens nothing.
+     */
     public static boolean open(ServerPlayer player, Entity keeper, List<String> shops) {
         var open = shops.stream().filter(s -> ShinobiLife.open(player.level(), s)).toList();
         if (open.isEmpty()) {
-            if (!shops.isEmpty()) player.sendSystemMessage(ShinobiLife.closed(player.level(), shops.getFirst()));
+            if (!shops.isEmpty()) player.sendSystemMessage(ShinobiLife.shut(player.level(), shops.getFirst()));
             return false;
         }
         var offers = new ArrayList<Offer>();
@@ -61,7 +64,7 @@ public final class ShopMenu extends ChestMenu {
             for (var service : ShinobiLife.services(shop)) offers.add(new Offer(shop, service.id(), null));
         }
         var lines = List.copyOf(offers.subList(0, Math.min(LINES, offers.size())));
-        player.openMenu(new SimpleMenuProvider((id, inv, p) -> new ShopMenu(id, player, keeper, lines), Component.translatable("shinobi_life.shop.title", keeper.getDisplayName())));
+        player.openMenu(new SimpleMenuProvider((id, inv, p) -> new ShopMenu(id, player, keeper, lines), Component.literal(ShinobiLife.catalogue.shops.get(shops.getFirst()).name())));
         return true;
     }
 
@@ -99,11 +102,14 @@ public final class ShopMenu extends ChestMenu {
         box.setItem(PURSE, purse);
     }
 
-    /** A click on a line buys one; any other click in the window does nothing. The pack below works as usual. */
+    /** A click on a line buys one and redraws the window, bought or not; any other click in it does nothing. The pack below works as usual. */
     @Override
     public void clicked(int slot, int button, ContainerInput input, Player who) {
         if (slot >= 0 && slot < ROWS * 9) {
-            if (input == ContainerInput.PICKUP && slot < offers.size() && ShinobiLife.buy(player, offers.get(slot).shop(), offers.get(slot).id())) refresh();
+            if (input == ContainerInput.PICKUP && slot < offers.size()) {
+                ShinobiLife.buy(player, offers.get(slot).shop(), offers.get(slot).id());
+                refresh();
+            }
             return;
         }
         super.clicked(slot, button, input, who);

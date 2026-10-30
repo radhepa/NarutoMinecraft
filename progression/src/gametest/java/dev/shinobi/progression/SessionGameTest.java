@@ -113,7 +113,8 @@ public final class SessionGameTest implements FabricClientGameTest {
             }
             check("furnish".equals(step(w)) && !w.getServer().computeOnServer(s -> ShinobiProgression.buy(w.getConnection().getServerPlayer(), "furniture_shop", "tatami"))
                     && ryo(w) == 130, "talked to the keeper; the furniture shop is shut on a Moonday: " + journal(w) + ", " + ryo(w));
-            w.getServer().runOnServer(s -> w.getConnection().getServerPlayer().getInventory().add(new ItemStack(ShinobiLife.item("tatami"))));
+            check(w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().getInventory().countItem(ShinobiLife.item("tatami"))) == 1,
+                    "the keeper hands over the first tatami");
 
             // The tatami goes on the room's floor through the server's game mode, past the street's protection.
             BlockPos room = anchors(w).get(TestStreet.PLAYER_FLAT);

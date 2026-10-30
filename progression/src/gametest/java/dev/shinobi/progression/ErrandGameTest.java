@@ -12,6 +12,7 @@ import net.minecraft.client.gui.screens.inventory.ContainerScreen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.animal.feline.Cat;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.inventory.ContainerInput;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -109,6 +110,22 @@ public final class ErrandGameTest implements FabricClientGameTest {
             check(ryo(w) == 26 && count(w, ShinobiLife.item("bento")) == 6 && left(w, "grocer", "bento") == 0, "the day's six bentos: " + ryo(w));
             click(c, w, "bento");
             check(ryo(w) == 26 && count(w, ShinobiLife.item("bento")) == 6, "a seventh bento is refused, sold out");
+            // Nothing leaves the window or goes into it: shift-click, number keys and F, Q, clone, and a shift-click and double-click from the pack.
+            int line = offers(w).indexOf("bento"), pack = w.getServer().computeOnServer(s -> {
+                var m = w.getConnection().getServerPlayer().containerMenu;
+                return m.slots.indexOf(m.slots.stream().filter(sl -> sl.container != ((ShopMenu) m).getContainer() && sl.getItem().is(ShinobiLife.item("bento"))).findFirst().orElseThrow());
+            });
+            for (var in : List.of(new Object[]{line, 0, ContainerInput.QUICK_MOVE}, new Object[]{line, 0, ContainerInput.SWAP}, new Object[]{line, 40, ContainerInput.SWAP},
+                    new Object[]{line, 0, ContainerInput.THROW}, new Object[]{line, 2, ContainerInput.CLONE}, new Object[]{line, 0, ContainerInput.PICKUP_ALL},
+                    new Object[]{pack, 0, ContainerInput.QUICK_MOVE}, new Object[]{pack, 0, ContainerInput.PICKUP}, new Object[]{pack, 0, ContainerInput.PICKUP_ALL},
+                    new Object[]{pack, 0, ContainerInput.PICKUP}))
+                c.runOnClient(mc -> mc.gameMode.handleContainerInput(mc.player.containerMenu.containerId, (int) in[0], (int) in[1], (ContainerInput) in[2], mc.player));
+            c.waitTicks(5);
+            check(ryo(w) == 26 && count(w, ShinobiLife.item("bento")) == 6 && left(w, "grocer", "bento") == 0 && w.getServer().computeOnServer(s -> {
+                var p = w.getConnection().getServerPlayer();
+                return p.containerMenu.getCarried().isEmpty() && p.getOffhandItem().isEmpty() && p.containerMenu.getSlot(line).getItem().is(ShinobiLife.item("bento"))
+                        && p.level().getEntitiesOfClass(ItemEntity.class, new AABB(p.blockPosition()).inflate(8)).isEmpty();
+            }), "no input takes a line from the window or puts a pack item into it");
             click(c, w, "service.adoption.cat");
             check(ryo(w) == 26 && w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getEntitiesOfClass(Cat.class,
                     new AABB(w.getConnection().getServerPlayer().blockPosition()).inflate(8)).isEmpty()), "a 40-ryo kitten is refused with 26 ryo");

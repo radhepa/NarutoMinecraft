@@ -7,26 +7,18 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
 
 ## Done since M2
 
-- 5f21cc5: new worlds are the Hidden Leaf preset (street, border, spawn).
-- a36468c, 8bf6f40 (P06): chakra, hand signs, Academy techniques, guard and dodge.
-- e92d2f6, f139632, d4e2ed2 (P05): calendar, stipend, defeat wakes in flat 3a, the flat's chest and table, pet adoption,
-  the 29 Beta 1 dishes. Leaf worlds from before e92d2f6: recreate them.
-- ed59bee, c4f4764 close P04: failure and retry, blocked steps, recasting, the quest checker.
-- 2348843 (P05 fixes): fatigue by the clock (Tired 01:00, Exhausted 03:00 with damage -20%, collapse 06:00
-  waking at noon); only a whole night's sleep or a defeat clears it; Well Rested by the flat's comfort; ramen restores
-  chakra; the strongest dish buff stays.
-- This file's commit (P05 shops): using the shop keeper opens a server-checked shop screen (a chest window) listing
-  each open shop's lines with price and stock; a click buys after checking hours, stock, wallet and pack space. The
-  week's shelf comes from life/economy Stock (save seed, mode, rank), restocks on each line's interval and survives
-  reopening; a shut shop gets a polite line and no screen. The keeper keeps the tea house, furniture shop, Ichiraku,
-  dango stand, grocer, fishmonger, Haruno store, Market Day stalls, clinic and shelter, each at its own hours.
+- 5f21cc5: Hidden Leaf world preset. a36468c, 8bf6f40 (P06): chakra, hand signs, Academy techniques, guard, dodge.
+- e92d2f6, f139632, d4e2ed2, 2348843 (P05): calendar, stipend, defeat wakes in flat 3a, chest and table, pets, the 29
+  Beta 1 dishes, fatigue by the clock, Well Rested by comfort. Leaf worlds from before e92d2f6: recreate them.
+- ed59bee, c4f4764 close P04. 8e873b3 (P05): the keeper's server-checked shop screen, weekly shelf and restocks.
+- This file's commit (shop fixes): the training quest's keeper hands over the first tatami (quest action
+  `give_item`); the screen is titled with the keeper's own shop, redraws after every click, and one rule says why a
+  shop is shut; the gametest sends every take-out input at the window.
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-`./gradlew build`, `missions.py --check`, `:progression:` and `:village:runClientGameTest` passed
-(`.local-dev/logs/p04fix-*.log`); for the P05 fixes, `./gradlew build` and `:progression:runClientGameTest`
-(`p05eatfix-*.log`); for the shops, `./gradlew build` and `:progression:runClientGameTest` (`p05shop-*.log`,
-screenshot `progression/build/run/clientGameTest/screenshots/0000_shop-screen.png`).
+For the shop fixes: `./gradlew build`, `missions.py --check` and `:progression:runClientGameTest` passed
+(`.local-dev/logs/p05shopfix-*.log`, screenshot `progression/build/run/clientGameTest/screenshots/0000_shop-screen.png`).
 
 ## Remaining
 
@@ -42,13 +34,12 @@ screenshot `progression/build/run/clientGameTest/screenshots/0000_shop-screen.pn
 
 ## Known shortcuts
 
-One stand-in keeper sells for ten shops; the shop screen is a vanilla chest window, buying only, 45 lines, and a
-keeper with an open shop shows no talk window; event closings and keeper levels are ignored (newcomer prices); the
-furniture shop is shut on day 1 (a Moonday), so the training fixture's furnish step hands over a tatami; cooked-only
-dishes (miso soup, soba, tamagoyaki) are not sold, and yakitori only on Market Day; the training fixture starts itself until P07; a dedicated
-server's default level-type gets no map; fatigue has Story thresholds only, a Darkness pulse for the darkened edge, no
-short chakra jumps; comfort ignores season, mess, plant and pet; undrawn dishes show a stand-in sprite; a dead bound
-resident does not block a quest; the quest checker mirrors the street's plots.
+One stand-in keeper sells for ten shops; the shop screen is a vanilla chest window, buying only, 45 lines; event
+closings and keeper levels are ignored; the furniture shop is shut on day 1 (a Moonday), so the keeper gives the
+first tatami; miso soup, soba and tamagoyaki are not sold, yakitori only on Market Day; quests run `set_flag`,
+`give_ryo` and `give_item` only; the training fixture starts itself until P07; a dedicated server's default
+level-type gets no map; fatigue has Story thresholds only; comfort ignores season, mess, plant and pet; undrawn dishes
+show a stand-in sprite; a dead bound resident does not block a quest; the quest checker mirrors the street's plots.
 
 ## Blockers
 
