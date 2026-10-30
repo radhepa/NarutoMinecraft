@@ -25,6 +25,15 @@ class StockTest {
         assertTrue(Stock.shelf(c.shops.get("tool_shop"), 0, Stock.Mode.CLASSIC, 1, "genin", "beta1").isEmpty());
     }
 
+    @Test void aShopsOwnRankGatesItsWholeShelf() {
+        var tools = c.shops.get("tool_shop");                      // Genin and up
+        assertTrue(Stock.shelf(tools, 0, Stock.Mode.CLASSIC, 1, "academy", "beta2").isEmpty());
+        assertFalse(Stock.shelf(tools, 0, Stock.Mode.CLASSIC, 1, "chunin", "beta2").isEmpty());
+        var supply = c.shops.get("academy_supply");                // Academy rank only
+        assertFalse(Stock.shelf(supply, 0, Stock.Mode.CLASSIC, 1, "academy", "beta1").isEmpty());
+        assertTrue(Stock.shelf(supply, 0, Stock.Mode.CLASSIC, 1, "genin", "beta1").isEmpty());
+    }
+
     @Test void classicRotatesInOrderAndVariedRollsBySeed() {
         var furniture = c.shops.get("furniture_shop");
         var weeks = new HashSet<List<String>>();

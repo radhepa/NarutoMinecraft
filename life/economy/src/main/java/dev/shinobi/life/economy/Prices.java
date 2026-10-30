@@ -75,7 +75,7 @@ public final class Prices {
         private int paidToday;
         private long day = Long.MIN_VALUE;
 
-        /** Sells one; returns the ryo paid (0 if it will not buy it or the till is empty). */
+        /** Sells one; returns the ryo paid (0, and the item stays yours, if it will not buy it or the till cannot pay it in full). */
         public int sell(long today, String id, String grade) {
             if (today != day) { day = today; soldToday.clear(); paidToday = 0; }
             var pawn = catalogue.tuning("pawn");
@@ -83,8 +83,8 @@ public final class Prices {
             if (value <= 0) return 0;
             int n = soldToday.getOrDefault(id, 0);
             double factor = Math.max(num(pawn.get("repeat_floor"), .25), 1 - num(pawn.get("repeat_decay"), .1) * n);
-            int pay = Math.min((int) Math.floor(value * factor), (int) num(pawn.get("daily_purse"), 400) - paidToday);
-            if (pay <= 0) return 0;
+            int pay = (int) Math.floor(value * factor);
+            if (pay <= 0 || pay > (int) num(pawn.get("daily_purse"), 400) - paidToday) return 0;
             soldToday.merge(id, 1, Integer::sum);
             paidToday += pay;
             return pay;
@@ -105,10 +105,15 @@ public final class Prices {
         var temper = obj(h.get("temper"));
         return Math.clamp(base + standing + num(temper.get("warmth"), 0) * keeperWarmth + num(temper.get("pride"), 0) * keeperPride, 0, 0.95);
     }
-    /** The price after one haggle: lower if the roll succeeds, unchanged if it fails. */
+    /** The price after one haggle over something you buy: lower if the roll succeeds, unchanged if it fails. */
     public int haggle(int price, double ask, String title, double warmth, double pride, long seed, String shop, long day, String item) {
+        return haggle(price, ask, title, warmth, pride, seed, shop, day, item, false);
+    }
+    /** One haggle; {@code selling} is what the shop pays you (the pawn shop), which a won haggle raises instead. */
+    public int haggle(int price, double ask, String title, double warmth, double pride, long seed, String shop, long day, String item,
+                      boolean selling) {
         if (catalogue.shops.containsKey(shop) && !catalogue.shops.get(shop).haggles()) return price;
         boolean won = Streams.roll(seed, "haggle", shop, Long.toString(day), item) < haggleChance(ask, title, warmth, pride);
-        return won ? (int) Math.round(price * (1 - ask)) : price;
+        return won ? (int) Math.round(price * (selling ? 1 + ask : 1 - ask)) : price;
     }
 }

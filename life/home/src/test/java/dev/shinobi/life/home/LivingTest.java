@@ -77,6 +77,16 @@ class LivingTest {
         assertEquals(30, h.morning(500));
         assertEquals(Mailbox.Kind.STIPEND, h.mailbox.collect().getFirst().kind());
     }
+    @Test void aFullMailboxDropsStipendsAndNotesBeforeAnythingImportant() {
+        var h = new Home("player", Flat.CLASSIC);
+        h.mailbox.post(Mailbox.Kind.STORY, "story", 0, "story.letter", "");
+        h.mailbox.post(Mailbox.Kind.NOTE, "role:teammate_a", 0, "home.note.drop_in", "");
+        for (int d = 1; d <= 20; d++) h.morning(d);
+        var left = h.mailbox.peek();
+        assertEquals(Mailbox.HOLDS, left.size());
+        assertEquals(Mailbox.Kind.STORY, left.getFirst().kind(), "the story letter waits, however long you are away");
+        assertTrue(left.stream().anyMatch(l -> l.kind() == Mailbox.Kind.NOTE), "stipend envelopes go before notes");
+    }
     @Test void chestsArePlainStorageAndMoreComeWithFurniture() {
         var h = new Home("player", Flat.CLASSIC);
         assertEquals(27, h.storageSlots(), "the starting chest");

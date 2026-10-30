@@ -32,6 +32,11 @@ class MoveTest {
         assertTrue(h.keyHolder("role:teammate_b")); assertTrue(h.petAtHome());
         assertTrue(Comfort.of(h, 0, 0, "").comfort() > 0);
     }
+    @Test void keyHoldersComeInAFixedOrder() {
+        var h = new Home("player", Flat.CLASSIC);
+        for (String who : List.of("role:sensei", "role:teammate_a", "role:rival")) h.giveKey(who, 6, 1);
+        assertEquals(List.of("role:rival", "role:sensei", "role:teammate_a"), List.copyOf(h.keys().keySet()));
+    }
     @Test void whatDoesNotFitStaysInItsCrate() {
         var h = new Home("player", Flat.of("flat.leaf_block.5b"));
         for (int i = 0; i < 12; i++) h.place("kotatsu");

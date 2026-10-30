@@ -2,6 +2,7 @@ package dev.shinobi.life.home;
 
 import dev.shinobi.life.home.Piece.Category;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -167,7 +168,8 @@ public final class Home {
         return "ok";
     }
     public void takeKeyBack(String who) { keys.remove(who); }
-    public Map<String, Long> keys() { return Map.copyOf(keys); }
+    /** Key holders by id, in that fixed order (visits walk it, so a seed always gives the same day). */
+    public Map<String, Long> keys() { return Collections.unmodifiableMap(new TreeMap<>(keys)); }
     public boolean keyHolder(String who) { return keys.containsKey(who); }
 
     public void pet(String kind) { pet = kind == null ? "" : kind; }
