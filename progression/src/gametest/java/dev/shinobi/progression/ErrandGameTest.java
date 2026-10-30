@@ -1,6 +1,7 @@
 package dev.shinobi.progression;
 
 import dev.shinobi.life.ShinobiLife;
+import dev.shinobi.village.PlayerLooks;
 import dev.shinobi.village.ShinobiVillage;
 import dev.shinobi.village.TestStreet;
 import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest;
@@ -42,6 +43,8 @@ public final class ErrandGameTest implements FabricClientGameTest {
             ui.setGenerateStructures(false);
         }).create()) {
             w.getConnection().waitForChunksRender();
+            // The creator is P05's; here the player takes the opening look.
+            check(w.getServer().computeOnServer(s -> PlayerLooks.choose(w.getConnection().getServerPlayer(), PlayerLooks.defaultLook())), "the opening look is allowed");
             for (String cmd : List.of("gamerule advance_time false", "gamerule spawn_mobs false", "time set 3000"))
                 w.getServer().runCommand(cmd);
             BlockPos player = w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().blockPosition());

@@ -51,6 +51,7 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             ui.setSeed("26");
         }).create()) {
             w.getConnection().waitForChunksRender();
+            CreatorGameTest.skipCreator(w);
             for (String cmd : List.of("gamerule advance_time false", "gamerule advance_weather false", "gamerule spawn_mobs false",
                     "weather clear", "difficulty peaceful", "time set 3000"))
                 w.getServer().runCommand(cmd);

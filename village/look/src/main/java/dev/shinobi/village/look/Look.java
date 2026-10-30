@@ -16,6 +16,7 @@ public record Look(String body, int complexion, String eyeStyle, String brows, S
         marks = List.copyOf(marks);
     }
 
+    public Look withComplexion(int v) { return new Look(body, v, eyeStyle, brows, hair, hairColor, eyeColor, marks, outfit, palette, headwear); }
     public Look withHair(String v) { return new Look(body, complexion, eyeStyle, brows, v, hairColor, eyeColor, marks, outfit, palette, headwear); }
     public Look withHairColor(String v) { return new Look(body, complexion, eyeStyle, brows, hair, v, eyeColor, marks, outfit, palette, headwear); }
     public Look withBrows(String v) { return new Look(body, complexion, eyeStyle, v, hair, hairColor, eyeColor, marks, outfit, palette, headwear); }

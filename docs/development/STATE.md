@@ -1,7 +1,8 @@
 # Development state
 
-**Phase/task:** M2, P05-1: create a character, then the M2 training spar, furnishing and sleep
-([ROADMAP.md 13.4](../../ROADMAP.md#134-player-milestones-and-quality-gates)). P00 to P03 passed (13.3); P04-1 to P04-5 done, P04-6/7 open.
+**Phase/task:** M2, P06-1 and the rest of M2: the training spar, furnishing and sleep, then the session proof
+([ROADMAP.md 13.4](../../ROADMAP.md#134-player-milestones-and-quality-gates)). P00 to P03 passed (13.3); P04-1 to P04-5 done, P04-6/7 open;
+P05-1 (the character creator) done.
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
 The story checkout on the Desktop keeps its unfinished work; story review stays paused.
 
@@ -29,7 +30,24 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 
 P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
 
-## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
+## M2 queue (Early P05 + P06)
+
+1. Done: P05-1, the character creator on first join; the look is kept on the server, worn as the skin and survives reopening.
+2. Next: P06-1, one server-validated practice attack (the spar) with feedback and costs, as the training quest's spar step.
+3. Buy one furnishing, place it in the player flat, sleep in its bed; the quest names each step.
+4. The M2 session gametest, Ponytail review, full build and STATE evidence; the pack bundles the new mods.
+
+## Evidence (30 October 2026, Windows 11, JDK 25.0.5)
+- P05-1 `./gradlew build`: passed; `:village:runClientGameTest` and `:progression:runClientGameTest` passed (logs
+  `.local-dev/logs/p051-*.log`). Shinobi Village gains a client side: a new player meets "Create your character"
+  two seconds after joining (body, skin tone, hair, hair colour, outfit, colours; the player preview wears each change),
+  and Done sends the look (`village:look` rules for a clanless child, plus what Village Friends can draw) to the
+  server, which keeps it as a synced persistent attachment and refuses a second pick, an off-rule look and broken
+  JSON; the look is baked by VF's resident skins and worn as the player's skin, also after reopening (screenshots
+  `village/build/run/clientGameTest/screenshots/0003_creator-open` to `0006_creator-reopened`). Ponytail review:
+  0 blockers; fixed: wrong-typed JSON caught inside the guard, the creator reopens while no look is set and only
+  on servers that take one, a look that cannot bake is not retried every frame, unique texture ids, tests for the
+  opening look and broken payloads. Marked shortcuts: flat skin without VF's 3D pieces, default Roots, no restyle.
 - P04-4/5 `./gradlew build`: passed; `:progression:runClientGameTest` passed three times (logs
   `.local-dev/logs/p044-*.log`, `p045-*.log`): a new Shinobi Life mod (`:life`, id `shinobi_life`) keeps the wallet
   (100 ryo the first day, kept through death) and registers green tea; the errand's `give_ryo 20` pays once (120);

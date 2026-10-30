@@ -34,6 +34,7 @@ public final class ShinobiVillage implements ModInitializer {
     public void onInitialize() {
         KonohaBlocks.register();
         StreetGuard.register();
+        PlayerLooks.register();
         // `/narutominecraft street` builds the P03 test street with its ground layer under the operator's feet;
         // `/narutominecraft builder` switches the operator's builder mode, the only way to change the street.
         CommandRegistrationCallback.EVENT.register((dispatcher, registry, env) -> dispatcher.register(

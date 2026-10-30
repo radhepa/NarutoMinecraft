@@ -19,5 +19,13 @@
   "block.narutominecraft.tea_noren": "Tea Noren",
   "block.narutominecraft.utility_pole": "Utility Pole",
   "block.narutominecraft.water_tank": "Water Tank",
-  "block.narutominecraft.white_paper_lantern": "White Paper Lantern"
+  "block.narutominecraft.white_paper_lantern": "White Paper Lantern",
+  "narutominecraft.creator.title": "Create your character",
+  "narutominecraft.creator.body": "Body: %s",
+  "narutominecraft.creator.complexion": "Skin tone: %s",
+  "narutominecraft.creator.hair": "Hair: %s",
+  "narutominecraft.creator.hair_color": "Hair colour: %s",
+  "narutominecraft.creator.outfit": "Outfit: %s",
+  "narutominecraft.creator.palette": "Colours: %s",
+  "narutominecraft.creator.done": "Done"
 }

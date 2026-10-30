@@ -8,9 +8,10 @@
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "main": ["dev.shinobi.village.ShinobiVillage"]
+    "main": ["dev.shinobi.village.ShinobiVillage"],
+    "client": ["dev.shinobi.village.client.VillageClient"]
   },
-  "mixins": ["narutominecraft.mixins.json"],
+  "mixins": ["narutominecraft.mixins.json", {"config": "narutominecraft.client.mixins.json", "environment": "client"}],
   "depends": {
     "fabricloader": ">=0.19.5",
     "minecraft": "~26.3",

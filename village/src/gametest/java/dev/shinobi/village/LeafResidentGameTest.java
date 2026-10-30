@@ -33,6 +33,7 @@ public final class LeafResidentGameTest implements FabricClientGameTest {
         check(Wardrobe.TOPS.stream().allMatch(g -> leaf.getAsJsonArray("tops").contains(new JsonPrimitive(g.id()))), "VF loaded only Leaf tops");
         try (var w = c.worldBuilder().create()) {
             w.getConnection().waitForChunksRender();
+            CreatorGameTest.skipCreator(w);
             for (String cmd : List.of("time set noon", "weather clear", "gamerule advance_time false")) w.getServer().runCommand(cmd);
             double[] o = w.getServer().computeOnServer(s -> {
                 var p = w.getConnection().getServerPlayer();

@@ -10,8 +10,12 @@ group = 'dev.shinobi'
 base { archivesName = 'shinobi-village' }
 
 loom {
+    splitEnvironmentSourceSets()
     mods {
-        narutominecraft { sourceSet sourceSets.main }
+        narutominecraft {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
     }
 }
 
@@ -23,6 +27,8 @@ dependencies {
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     implementation files(rootProject.vfJar)   // the pinned jar (docs/development/PACK.md, step 1)
+    implementation project(':village:look')
+    include project(':village:look')
     testImplementation platform('org.junit:junit-bom:5.14.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
