@@ -44,6 +44,7 @@ class JournalTest {
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_ryo\": 0}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_ryo\": 2.5}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_item\": \"\"}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"teach_technique\": \"\"}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_enter\": [{\"set_flag\": [\"f\", \"yes\"]}]}}}",
                 "{\"id\": 5, \"start\": \"a\", \"steps\": {\"a\": {}}}",
                 "{\"id\": \"q\", \"start\": \"b\", \"steps\": {\"a\": {}}}",
@@ -74,7 +75,7 @@ class JournalTest {
     void stepsRunTheirActionsAndFollowTheFirstBranchThatHolds() {
         var q = Quests.quest(Json.object("""
                 {"id": "b", "start": "a",
-                 "steps": {"a": {"objective": {"type": "sleep"}, "on_enter": [{"set_flag": ["entered", true]}], "on_done": [{"set_flag": ["met", true]}, {"give_ryo": 5}],
+                 "steps": {"a": {"objective": {"type": "sleep"}, "on_enter": [{"set_flag": ["entered", true]}], "on_done": [{"set_flag": ["met", true]}, {"give_ryo": 5}, {"teach_technique": "combat:nin.clone"}],
                                  "branch": [{"if": {"not": {"flag": "met"}}, "next": "never"},
                                             {"if": {"all": [{"flag": "met"}, {"quest_state": ["other", "not_started"]}]}, "next": "side"}],
                                  "next": "never"},
@@ -86,6 +87,7 @@ class JournalTest {
         assertEquals(Map.of("b", "side"), o.journal().active());
         assertEquals(List.of("met"), o.journal().flags());
         assertEquals(5, o.ryo());
+        assertEquals(List.of("combat:nin.clone"), o.taught());
         o = Quests.complete(o.journal(), q);
         var j = o.journal();
         assertEquals(15, o.ryo());

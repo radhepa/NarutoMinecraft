@@ -45,6 +45,7 @@
   "shinobi_combat.cast.winded": "Too winded to dodge",
   "shinobi_combat.cast.guard_broken": "Your guard breaks!",
   "shinobi_combat.cast.nothing": "%s: no illusion holds you",
+  "shinobi_combat.learned": "Learned %s",
   "shinobi_combat.aid.start": "Tending %s: stay crouched beside them",
   "shinobi_combat.aid.done": "%s is patched up",
   "shinobi_combat.aid.stopped": "First aid stopped",

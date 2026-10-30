@@ -33,6 +33,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.stream.Stream;
 
 import static dev.shinobi.progression.ErrandGameTest.check;
 import static dev.shinobi.progression.ErrandGameTest.journal;
@@ -99,6 +100,8 @@ public final class SessionGameTest implements FabricClientGameTest {
             }
             check("shop".equals(step(w)) && ryo(w) == 130, "the retried spar won pays 30 ryo once: " + journal(w) + ", " + ryo(w));
             c.takeScreenshot("session-won");
+            check(w.getServer().computeOnServer(s -> Stream.of("clone", "transformation", "substitution", "release", "rope_escape", "first_aid")
+                    .allMatch(t -> ShinobiCombat.knows(w.getConnection().getServerPlayer(), "combat:nin." + t))), "the won spar teaches the six Academy techniques");
 
             UUID keeper = w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getAttachedOrElse(ShinobiVillage.ROLES, Map.<String, UUID>of()).get("job:tea_house"));
             for (int i = 0; i < 3 && "shop".equals(step(w)); i++) {

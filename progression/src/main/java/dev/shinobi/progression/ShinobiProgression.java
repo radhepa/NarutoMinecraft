@@ -199,11 +199,13 @@ public final class ShinobiProgression implements ModInitializer {
     }
 
 
-    /** Refuses a give_item naming no registered item, so a typo stops the load instead of handing over nothing. */
+    /** Refuses a give_item naming no registered item or a teach_technique naming no technique, so a typo stops the load instead of handing over nothing. */
     private static void knownItems(Object o) {
         if (o instanceof Map<?, ?> m) {
             if (m.get("give_item") instanceof String id && ShinobiLife.item(id) == net.minecraft.world.item.Items.AIR)
                 throw new IllegalArgumentException("give_item names no item: " + id);
+            if (m.get("teach_technique") instanceof String id && !ShinobiCombat.isTechnique(id))
+                throw new IllegalArgumentException("teach_technique names no technique: " + id);
             m.values().forEach(ShinobiProgression::knownItems);
         } else if (o instanceof List<?> l) l.forEach(ShinobiProgression::knownItems);
     }
@@ -323,7 +325,7 @@ public final class ShinobiProgression implements ModInitializer {
         apply(player, next);
     }
 
-    /** Saves the journal and pays the ryo and items together, in one tick, so a reload never pays a step twice; names each new step. */
+    /** Saves the journal and pays the ryo, items and techniques together, in one tick, so a reload never pays a step twice; names each new step. */
     static void apply(ServerPlayer player, Quests.Outcome o) {
         var before = player.getAttachedOrCreate(JOURNAL).active();
         player.setAttached(JOURNAL, o.journal());
@@ -334,6 +336,7 @@ public final class ShinobiProgression implements ModInitializer {
         if (o.ryo() > 0) ShinobiLife.earn(player, o.ryo());
         // A full pack drops the item at the player's feet.
         for (String item : o.items()) player.getInventory().placeItemBackInInventory(new ItemStack(ShinobiLife.item(item)), Prediction.SERVER_ONLY);
+        for (String technique : o.taught()) ShinobiCombat.teach(player, technique);
     }
 
     /** The shops the resident keeps, from the level's bound roles. */

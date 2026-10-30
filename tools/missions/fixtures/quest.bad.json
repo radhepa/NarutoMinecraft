@@ -4,7 +4,7 @@
   "slots": {"ghost": {"pick": "resident", "where": {"job": "ghost_keeper"}}, "oops": "oops"},
   "start": "a",
   "steps": {
-    "a": {"objective": {"type": "go", "place": "nowhere_square"}, "on_done": [{"give_ryo": -5}, {"give_ryo": 30000000000}],
+    "a": {"objective": {"type": "go", "place": "nowhere_square"}, "on_done": [{"give_ryo": -5}, {"give_ryo": 30000000000}, {"teach_technique": "combat:nin.none"}],
           "branch": [{"if": {"weather": "rain"}, "next": "b"}, {"if": {"flag": "fixture.never"}, "next": "b"},
                      {"if": {"quest_state": ["fixture.unknown", "done"]}, "next": "b"}], "next": "b"},
     "b": {"objective": {"type": "slep"}, "next": "z"},

@@ -65,6 +65,8 @@ public final class ShinobiCombat implements ModInitializer {
     /** Teaches a technique from data/combat; false if it is unknown or already learned. */
     public static boolean teach(ServerPlayer player, String id) { return Fighter.of(player).teach(player, id); }
 
+    public static boolean isTechnique(String id) { return data.techniques.containsKey(id); }
+
     public static boolean knows(ServerPlayer player, String id) { return player.getAttachedOrCreate(STATE).learned().contains(id); }
 
     @Override

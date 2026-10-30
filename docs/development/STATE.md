@@ -12,14 +12,16 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
   and its fixes (8e873b3 to e43e580). Leaf worlds from before e92d2f6: recreate them.
 - 72c995b to 5c7bde0 (P06): rebindable combat keys under Shinobi in Options > Controls (COMBAT.md defaults); sign,
   block, dodge and Academy taijutsu clips on every player's model; worn armour follows the poses.
-- This file's commit (P06): the rest of the Academy techniques. Release (woven Ram) clears nausea, blindness and
+- 5a74294 (P06): the rest of the Academy techniques. Release (woven Ram) clears nausea, blindness and
   darkness; Rope Escape (passive) moves 40% faster through cobwebs; Field First Aid (crouch, empty hand, use on a
   hurt ally) heals after 3 s, and moving off, standing up or a landed hit stops it.
+- This file's commit: the quest action `teach_technique` (ROADMAP 5); winning the first-day spar teaches the six
+  Academy techniques, so they need no command.
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-`./gradlew build` and `:combat:runClientGameTest` passed (`.local-dev/logs/academy-tech-*2.log`; screenshot academy-first-aid;
-`:progression:runClientGameTest` at 72c995b: `p06anim-*.log`) and earlier shots in
+`./gradlew build` and `:progression:runClientGameTest` passed (`.local-dev/logs/teach-*.log`); `:combat:runClientGameTest` at 5a74294 (`academy-tech-*2.log`; screenshot academy-first-aid;
+and earlier shots in
 `combat/build/run/clientGameTest/screenshots/`.
 
 ## Remaining
@@ -27,7 +29,7 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
 - P07: the opening and Academy campaign through graduation.
 - P03: Varied's apartment roll, bound-cast role identities, Konoha loot tables and names.
 - P05: hospital wake, level loss on death; the shop counter block, haggling, selling and orders.
-- P06: smoke bombs, wire and roof hopping; in-play teaching (techniques come from `/shinobi teach`); stock coverage; first-person arm poses; air and dash taijutsu clips.
+- P06: smoke bombs, wire and roof hopping; mentors and lessons (the first-day spar teaches all six at once); stock coverage; first-person arm poses; air and dash taijutsu clips.
 
 ## Launch
 
@@ -37,7 +39,7 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971 and earlier: this f
 ## Known shortcuts
 
 One stand-in keeper sells for ten shops, vanilla chest window, buying only; the furniture shop is shut on day 1, so
-the keeper gives the first tatami; quests run `set_flag`, `give_ryo` and `give_item` only; the training fixture starts
+the keeper gives the first tatami; quests run `set_flag`, `give_ryo`, `give_item` and `teach_technique` only; the training fixture starts
 itself until P07; fatigue has Story thresholds only; event closings and keeper levels are ignored; miso soup, soba and
 tamagoyaki are not sold, yakitori only on Market Day; a dedicated server's default level-type gets no map; comfort
 ignores season, mess, plant and pet; undrawn dishes show a stand-in sprite; a dead bound resident does not block a

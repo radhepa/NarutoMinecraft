@@ -286,7 +286,7 @@ and that every twist changes the path.
 
 **Quests** (`*/src/main/resources/data/<ns>/quests/*.json`, run by Shinobi Progression) are checked by
 `--quests` and `--check` against the test street's anchors and bound roles (`tools/konoha/blueprints`): known
-step types (`go`, `spar`, `talk`, `furnish`, `sleep`; every step has one), actions (`set_flag`, `give_ryo` of 1 to 2^31-1) and
+step types (`go`, `spar`, `talk`, `furnish`, `sleep`; every step has one), actions (`set_flag`, `give_ryo` of 1 to 2^31-1, `give_item` of an item id, `teach_technique` of a technique id) and
 conditions (`all`, `any`, `not`, `flag`, `quest_state`); every flag a condition reads set by some quest;
 `quest_state` naming a known quest; slots, places and people on the map; no missing or unreachable step. Each
 error reads `file: quest/step: problem`; the bad fixtures (`tools/missions/fixtures/quest.bad.json` and the

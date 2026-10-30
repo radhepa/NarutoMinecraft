@@ -10,7 +10,7 @@
   "start": "go_yard",
   "steps": {
     "go_yard": {"objective": {"type": "go", "place": "slot:yard"}, "next": "spar"},
-    "spar": {"objective": {"type": "spar", "place": "slot:yard"}, "on_done": [{"give_ryo": 30}], "next": "shop"},
+    "spar": {"objective": {"type": "spar", "place": "slot:yard"}, "on_done": [{"give_ryo": 30}, {"teach_technique": "combat:nin.clone"}, {"teach_technique": "combat:nin.transformation"}, {"teach_technique": "combat:nin.substitution"}, {"teach_technique": "combat:nin.release"}, {"teach_technique": "combat:nin.rope_escape"}, {"teach_technique": "combat:nin.first_aid"}], "next": "shop"},
     "shop": {"objective": {"type": "talk", "who": "slot:keeper"}, "on_done": [{"give_item": "tatami"}], "next": "furnish"},
     "furnish": {"objective": {"type": "furnish"}, "next": "sleep"},
     "sleep": {"objective": {"type": "sleep"}, "next": null}

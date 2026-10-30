@@ -30,6 +30,20 @@ import later_ranks  # noqa: E402
 import tables  # noqa: E402
 
 ROOT = os.path.normpath(os.path.join(HERE, "..", ".."))
+# Technique ids a quest may teach, as the combat runtime loads them: the technique files and each clan's.
+def _techniques():
+    ids = set()
+    for f in glob.glob(os.path.join(ROOT, "data", "combat", "techniques", "*.json")):
+        with open(f, encoding="utf-8") as fh:
+            ids |= {t["id"] for t in json.load(fh).get("techniques", [])}
+    for f in glob.glob(os.path.join(ROOT, "data", "combat", "clans", "[!_]*.json")):
+        with open(f, encoding="utf-8") as fh:
+            c = json.load(fh)
+        ids |= {t["id"] for t in c.get("techniques", [])} | ({c["lesser"]["id"]} if c.get("lesser") else set())
+    return ids
+
+
+TECHNIQUES = _techniques()
 OUT = os.path.join(ROOT, "adventure", "data", "shinobi_adventure", "missions")
 DOC = os.path.join(ROOT, "docs", "missions", "CATALOGUE.md")
 
@@ -451,9 +465,10 @@ def check_quests(files, map_data=None):
                     ok = isinstance(a, dict) and len(a) == 1 and (
                         isinstance(a.get("set_flag"), list) and len(a["set_flag"]) == 2 and isinstance(a["set_flag"][0], str) and isinstance(a["set_flag"][1], bool)
                         or type(a.get("give_ryo")) in (int, float) and 1 <= a["give_ryo"] <= 2**31 - 1 and a["give_ryo"] == int(a["give_ryo"])
-                        or isinstance(a.get("give_item"), str) and a["give_item"] != "")
+                        or isinstance(a.get("give_item"), str) and a["give_item"] != ""
+                        or isinstance(a.get("teach_technique"), str) and a["teach_technique"] in TECHNIQUES)
                     if not ok:
-                        err(name, f"{when}: unknown or malformed action {a} (set_flag [name, true|false], give_ryo <whole ryo, 1 to 2147483647> or give_item <item id>)")
+                        err(name, f"{when}: unknown or malformed action {a} (set_flag [name, true|false], give_ryo <whole ryo, 1 to 2147483647>, give_item <item id> or teach_technique <technique id>)")
             o = s.get("objective") or {}
             if not isinstance(o, dict):
                 err(name, "objective must be an object")
@@ -497,7 +512,7 @@ def quest_mode():
     problems = check_quests(files)
     bad = check_quests([BAD_QUEST]) + check_quests([MISSING_QUEST])
     want = ["objective must be an object", "unknown step type", "unknown step type ''", "unknown condition", "malformed action", "missing step", "unreachable", "never set",
-            "unknown quest", "no anchor", "no resident", "no anchor:nowhere"]
+            "unknown quest", "no anchor", "no resident", "no anchor:nowhere", "'teach_technique': 'combat:nin.none'"]
     missed = [w for w in want if not any(w in p for p in bad)]
     if missed:
         problems.append("self-test: the bad quest fixtures no longer report: " + ", ".join(missed))

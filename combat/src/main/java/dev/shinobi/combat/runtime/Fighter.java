@@ -120,6 +120,7 @@ public final class Fighter {
         learned.add(id);
         weaver = new Weaver(book(learned), Weaver.ticksPerSign(CONTROL, 1));
         save(p);
+        p.sendSystemMessage(Component.translatable("shinobi_combat.learned", ShinobiCombat.data.technique(id).name()));
         return true;
     }
 
