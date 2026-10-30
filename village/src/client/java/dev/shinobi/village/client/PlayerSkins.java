@@ -17,7 +17,8 @@ import java.util.Map;
 /**
  * The player's skin from their look: Village Friends bakes the outfit as it does a resident's, and the player wears the
  * baked 64x64 skin at the atlas origin.
- * shortcut: the flat skin only, without VF's 3D garment pieces and eye planes, until a player model renders them.
+ * PlayerEyes adds VF's face planes on top.
+ * shortcut: the flat skin and face only, without VF's 3D garment pieces, until a player model renders them.
  */
 public final class PlayerSkins {
     private static final Map<String, Identifier> TEXTURES = new HashMap<>();
@@ -30,7 +31,7 @@ public final class PlayerSkins {
     /** The skin for the player's look (or the creator's preview), or null to keep the account skin. */
     public static PlayerSkin skin(AbstractClientPlayer player, PlayerSkin account) {
         var mc = Minecraft.getInstance();
-        String look = player == mc.player && CreatorScreen.preview != null ? CreatorScreen.preview : player.getAttached(PlayerLooks.LOOK);
+        String look = look(player);
         if (look == null) return null;
         var texture = TEXTURES.get(look);
         if (texture == BROKEN) return null;
@@ -53,6 +54,11 @@ public final class PlayerSkins {
             }
         }
         return new PlayerSkin(new ClientAsset.ResourceTexture(texture, texture), account.cape(), account.elytra(), PlayerModelType.WIDE, account.secure());
+    }
+
+    /** The player's look as JSON, or the creator's preview for the local player while it is open; null if none. */
+    static String look(AbstractClientPlayer player) {
+        return player == Minecraft.getInstance().player && CreatorScreen.preview != null ? CreatorScreen.preview : player.getAttached(PlayerLooks.LOOK);
     }
 
     static void clear() {

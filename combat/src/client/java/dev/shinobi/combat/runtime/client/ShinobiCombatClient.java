@@ -11,6 +11,9 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.RenderStateDataKey;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.VanillaHudElements;
+import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -38,10 +41,27 @@ public final class ShinobiCombatClient implements ClientModInitializer {
                 InputConstants.KEY_7, InputConstants.KEY_8, InputConstants.KEY_9, InputConstants.KEY_0, InputConstants.KEY_MINUS, InputConstants.KEY_EQUALS};
         for (int i = 0; i < 12; i++) SIGNS[i] = key("sign_" + (i + 1), keys[i]);
     }
-    /** The clip an avatar plays (Fighter.Stance) and how many ticks in. */
+    /** The clip an entity plays (Fighter.Stance) and how many ticks in. */
     public static final RenderStateDataKey<String> CLIP = RenderStateDataKey.create(() -> "shinobi_combat:clip");
     public static final RenderStateDataKey<Float> AGE = RenderStateDataKey.create(() -> "shinobi_combat:age");
     static boolean weaving, guarding;
+
+    private static final String[] PARTS = {"head", "body", "right_arm", "left_arm", "right_leg", "left_leg"};
+
+    /** Poses the parts the state's keyed clip names over the model's own pose. */
+    public static void pose(HumanoidModel<?> m, HumanoidRenderState state) {
+        var clip = ShinobiCombat.data.clips.get(state.getDataOrDefault(CLIP, ""));
+        if (clip == null) return;
+        float t = state.getDataOrDefault(AGE, 0F);
+        ModelPart[] parts = {m.head, m.body, m.rightArm, m.leftArm, m.rightLeg, m.leftLeg};
+        for (int i = 0; i < parts.length; i++) {
+            var r = clip.rot(PARTS[i], t);
+            if (r == null) continue;
+            parts[i].xRot = (float) Math.toRadians(r[0]);
+            parts[i].yRot = (float) Math.toRadians(r[1]);
+            parts[i].zRot = (float) Math.toRadians(r[2]);
+        }
+    }
 
     private static KeyMapping key(String name, int key) {
         return KeyMappingHelper.registerKeyMapping(new KeyMapping("key.shinobi_combat." + name, key, SHINOBI));

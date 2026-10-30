@@ -46,7 +46,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * a thrown practice kunai deals its damage, dying mid-guard drops the guard, and reopening keeps what was learned.
  * P06 controls: every key is in the Shinobi category of Options > Controls, and a sign rebound there (and saved) is
  * woven by its new key and no longer by its old one. Each pose is the synced clip of animations.json.
- * Screenshots: controls-shinobi, academy-weaving (the HUD, its hint and the hands in a sign), academy-cast, academy-clones, academy-guard, academy-dodge.
+ * Screenshots: controls-shinobi, academy-weaving (the HUD, its hint and the hands in a sign), academy-cast, academy-clones, academy-guard, academy-dodge,
+ * academy-ready, academy-ninja-run, academy-meditate (the keyed ready stance, run and meditation).
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class AcademyGameTest implements FabricClientGameTest {
@@ -182,6 +183,7 @@ public final class AcademyGameTest implements FabricClientGameTest {
                 c.waitTicks(2);
                 check(c.computeOnClient(mc -> clip(mc).equals("combat.tai.academy.jab")), "a spar hit plays its combo clip");
                 c.takeScreenshot("academy-jab");
+                check(w.getServer().computeOnServer(s -> partner.getAttached(ShinobiCombat.STANCE).clip()).equals("combat.res.spar_bow"), "the partner bows as the bout starts");
             } finally {
                 w.getServer().runOnServer(s -> { Spar.end(player(w)); partner.discard(); });
             }
@@ -189,7 +191,12 @@ public final class AcademyGameTest implements FabricClientGameTest {
             w.getServer().runCommand("tp @p " + (at.getX() + .5) + " " + at.getY() + " " + (at.getZ() + .5) + " 0 15");   // facing the pig, a little down
             w.getServer().runOnServer(s -> player(w).setItemInHand(InteractionHand.MAIN_HAND,
                     new ItemStack(BuiltInRegistries.ITEM.getValue(Identifier.fromNamespaceAndPath(ShinobiCombat.MOD_ID, "practice_kunai")), 4)));
-            c.waitTicks(10);
+            c.waitTicks(15);
+            awaitClip(c, "combat.stance.idle", "standing still with a kunai is the ready stance");
+            c.runOnClient(mc -> mc.options.setCameraType(CameraType.THIRD_PERSON_BACK));   // the pig stands where the front camera goes
+            c.waitTicks(1);
+            c.takeScreenshot("academy-ready");
+            c.runOnClient(mc -> mc.options.setCameraType(CameraType.THIRD_PERSON_FRONT));
             float pig = w.getServer().computeOnServer(s -> target(w).getHealth());
             c.getInput().pressKey(o -> o.keyUse);
             c.waitTicks(11);
@@ -240,6 +247,8 @@ public final class AcademyGameTest implements FabricClientGameTest {
             c.getInput().holdKey(o -> o.keyUp);
             c.getInput().holdKey(o -> o.keySprint);
             c.waitTicks(8);
+            awaitClip(c, "combat.move.ninja_run", "sprinting is the ninja run");
+            c.takeScreenshot("academy-ninja-run");
             double hopFrom = state(w).chakra();
             String before = c.computeOnClient(mc -> "sprinting " + mc.player.isSprinting() + ", food " + mc.player.getFoodData().getFoodLevel()
                     + ", on " + mc.player.level().getBlockState(mc.player.getOnPos()).getBlock() + ", ground " + mc.player.onGround());
@@ -282,6 +291,12 @@ public final class AcademyGameTest implements FabricClientGameTest {
             c.waitTicks(62);
             check(w.getServer().computeOnServer(s -> target(w).getHealth() == target(w).getMaxHealth() && Fighter.of(player(w)).aiding == null)
                     && casts.contains(Fighter.FIRST_AID), "First Aid heals the ally after its 3 s");
+            c.waitTicks(45);
+            awaitClip(c, "combat.pose.meditate", "two seconds crouched still is meditation");
+            c.runOnClient(mc -> mc.options.setCameraType(CameraType.THIRD_PERSON_BACK));   // the pig stands where the front camera goes
+            c.waitTicks(1);
+            c.takeScreenshot("academy-meditate");
+            c.runOnClient(mc -> mc.options.setCameraType(CameraType.THIRD_PERSON_FRONT));
             c.getInput().releaseKey(o -> o.keyShift);
             w.getServer().runCommand("tp @p ~ ~ ~ 180 0");   // back to the pig, so the front camera is clear of it
             w.getServer().runCommand("item replace entity @p armor.chest with iron_chestplate");   // the armour follows the guard pose
@@ -331,6 +346,15 @@ public final class AcademyGameTest implements FabricClientGameTest {
     }
 
     static String clip(Minecraft mc) { return mc.player.getAttached(ShinobiCombat.STANCE).clip(); }
+
+    /** Waits up to 3 s for the player's clip, as the server sets it a tick or more after the action. */
+    static void awaitClip(ClientGameTestContext c, String want, String what) {
+        for (int i = 0; i < 60 && !want.equals(c.computeOnClient(AcademyGameTest::clipOrNone)); i++) c.waitTick();
+        String got = c.computeOnClient(AcademyGameTest::clipOrNone);
+        check(want.equals(got), what + ": " + got);
+    }
+
+    static String clipOrNone(Minecraft mc) { var s = mc.player.getAttached(ShinobiCombat.STANCE); return s == null ? "none" : s.clip(); }
 
     static ServerPlayer player(TestSingleplayerContext w) { return w.getConnection().getServerPlayer(); }
 

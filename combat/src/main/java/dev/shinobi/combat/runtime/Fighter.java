@@ -92,6 +92,9 @@ public final class Fighter {
     long armedUntil = Long.MIN_VALUE, iframesUntil = Long.MIN_VALUE, shotUntil = Long.MIN_VALUE;
     /** A one-shot clip (a cast, a fizzle, a dodge) shown until shotUntil. */
     String shot = "";
+    /** Where the player stood last tick, and since when it has stood still on the ground, for the ambient clips. */
+    double lastX, lastZ;
+    long stillSince;
     /** The ally First Aid is tending, until aidUntil; null when none. */
     UUID aiding;
     long aidUntil;
@@ -409,14 +412,14 @@ public final class Fighter {
         shotUntil = now + (c == null ? 0 : c.ticks());
     }
 
-    /** The pose and its clip: the last sign woven (hands together before the first), the block, or a one-shot. */
+    /** The pose and its clip: the last sign woven (hands together before the first), the block, a one-shot, or an ambient clip. */
     private void stance(ServerPlayer p) {
         long now = p.level().getGameTime();
         var woven = weaver.woven();
         int pose = weaver.weaving() ? Stance.WEAVING : guarding ? Stance.GUARDING : Stance.NONE;
         if (pose != Stance.NONE) shotUntil = Long.MIN_VALUE;   // a weave or guard ends a one-shot, which never replays after
         String clip = pose == Stance.WEAVING ? "combat.sign." + (woven.isEmpty() ? "transition" : woven.getLast().id())
-                : pose == Stance.GUARDING ? "combat.def.block" : now < shotUntil ? shot : "";
+                : pose == Stance.GUARDING ? "combat.def.block" : now < shotUntil ? shot : ambient(p, now);
         var signs = woven.stream().map(HandSign::id).toList();
         var had = p.getAttached(ShinobiCombat.STANCE);
         // The clip restarts when it changes or a sign is added (a second Ram plays again).
@@ -424,6 +427,20 @@ public final class Fighter {
         var s = new Stance(pose, signs, clip, since);
         if (Objects.equals(s, had) || had == null && pose == Stance.NONE && clip.isEmpty()) return;
         p.setAttached(ShinobiCombat.STANCE, s);
+    }
+
+    /**
+     * Between actions: the ninja run while sprinting, meditation after two seconds crouched still, and the ready stance
+     * while standing still with a thrown weapon in hand.
+     */
+    private String ambient(ServerPlayer p, long now) {
+        if (Math.abs(p.getX() - lastX) + Math.abs(p.getZ() - lastZ) > .01 || !p.onGround()) stillSince = now;
+        lastX = p.getX();
+        lastZ = p.getZ();
+        if (p.isSprinting() && !p.isSwimming() && !p.isFallFlying()) return "combat.move.ninja_run";
+        if (p.isShiftKeyDown() && now - stillSince >= 40) return "combat.pose.meditate";
+        if (now - stillSince >= 10 && ShinobiCombat.THROWN.containsKey(p.getMainHandItem().getItem())) return "combat.stance.idle";
+        return "";
     }
 
     private static void tell(ServerPlayer p, String key, SoundEvent sound) {

@@ -25,6 +25,7 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.phys.AABB;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
@@ -62,7 +63,15 @@ public final class Spar {
         double partnerHealth = HEALTH, health = HEALTH;
         long counter;
 
-        Bout(Mob partner, long now) { this.partner = partner; counter = now + COUNTER_TICKS; }
+        final long start;
+
+        Bout(Mob partner, long now) { this.partner = partner; counter = now + COUNTER_TICKS; start = now; }
+    }
+
+    /** Shows a clip of animations.json on the partner from its start, as the player's Stance does; "" clears it. */
+    static void pose(Mob partner, String clip, long now) {
+        if (clip.isEmpty() && partner.getAttached(ShinobiCombat.STANCE) == null) return;
+        partner.setAttached(ShinobiCombat.STANCE, new Fighter.Stance(Fighter.Stance.NONE, List.of(), clip, now));
     }
 
     /** One attack on the partner: a move if the combo machine and stamina allow it, with its feedback. */
@@ -70,7 +79,10 @@ public final class Spar {
         var level = player.level();
         long now = level.getGameTime();
         var bout = BOUTS.get(player.getUUID());
-        if (bout == null || bout.partner != partner) BOUTS.put(player.getUUID(), bout = new Bout(partner, now));
+        if (bout == null || bout.partner != partner) {
+            BOUTS.put(player.getUUID(), bout = new Bout(partner, now));
+            pose(partner, "combat.res.spar_bow", now);
+        }
         var started = bout.combo.press(player.isShiftKeyDown() ? "H" : "L", now, ComboMachine.Context.ground(1, 0));
         if (started == null) {
             player.sendOverlayMessage(Component.translatable("shinobi_combat.spar.busy"));
@@ -91,6 +103,8 @@ public final class Spar {
         level.broadcastDamageEvent(partner, level.damageSources().playerAttack(player));
         if (bout.partnerHealth <= 0) {
             BOUTS.remove(player.getUUID());
+            Fighter.of(player).play("combat.pose.victory", now);
+            pose(partner, "combat.res.spar_bow", now);
             title(player, "won", SoundEvents.UI_TOAST_CHALLENGE_COMPLETE);
             WON.invoker().accept(player);
         } else player.sendOverlayMessage(Component.translatable("shinobi_combat.spar.hit", Component.translatable("shinobi_combat.move." + move.id()),
@@ -106,11 +120,14 @@ public final class Spar {
             var player = server.getPlayerList().getPlayer(e.getKey());
             if (player == null || bout.partner.isRemoved() || player.level() != bout.partner.level() || !player.closerThan(bout.partner, LEAVE)) {
                 it.remove();
+                pose(bout.partner, "", bout.partner.level().getGameTime());
                 if (player != null) player.sendOverlayMessage(Component.translatable("shinobi_combat.spar.left"));
                 continue;
             }
             bout.stamina.tick(1);
             var level = player.level();
+            var had = bout.partner.getAttached(ShinobiCombat.STANCE);
+            if (level.getGameTime() - bout.start >= 16 && (had == null || !had.clip().equals("combat.stance.idle"))) pose(bout.partner, "combat.stance.idle", level.getGameTime());   // after the opening bow
             if (level.getGameTime() < bout.counter || !player.closerThan(bout.partner, REACH)) continue;
             bout.counter = level.getGameTime() + COUNTER_TICKS;
             double hp = Damage.hit(Damage.Attack.enemy(1.5, "physical.blunt", Damage.Delivery.MELEE, 1, 1, 1), Damage.Defence.of(true, 1, 0, 0, Nature.NONE)).hp();
@@ -118,13 +135,18 @@ public final class Spar {
             level.broadcastDamageEvent(player, level.damageSources().mobAttack(bout.partner));
             if (bout.health <= 0) {
                 it.remove();
+                Fighter.of(player).play("combat.res.spar_bow", level.getGameTime());
+                pose(bout.partner, "combat.pose.victory", level.getGameTime());
                 title(player, "lost", SoundEvents.VILLAGER_NO);
                 LOST.invoker().accept(player);
             } else player.sendOverlayMessage(Component.translatable("shinobi_combat.spar.struck", one(hp), one(bout.partnerHealth), one(bout.health)));
         }
     }
 
-    static void end(ServerPlayer player) { BOUTS.remove(player.getUUID()); }
+    static void end(ServerPlayer player) {
+        var bout = BOUTS.remove(player.getUUID());
+        if (bout != null) pose(bout.partner, "", bout.partner.level().getGameTime());
+    }
 
     /** The spar partner by {@code at}, spawned there if none stands within eight blocks; null until the spot's entities load. */
     public static Mob partnerAt(ServerLevel level, BlockPos at) {

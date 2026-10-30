@@ -64,7 +64,7 @@ public final class ShopMenu extends ChestMenu {
             for (var service : ShinobiLife.services(shop)) offers.add(new Offer(shop, service.id(), null));
         }
         var lines = List.copyOf(offers.subList(0, Math.min(LINES, offers.size())));
-        player.openMenu(new SimpleMenuProvider((id, inv, p) -> new ShopMenu(id, player, keeper, lines), Component.literal(ShinobiLife.catalogue.shops.get(shops.getFirst()).name())));
+        player.openMenu(new SimpleMenuProvider((id, inv, p) -> new ShopMenu(id, player, keeper, lines), Component.translatable("shinobi_life.shop.title", ShinobiLife.catalogue.shops.get(shops.getFirst()).name())));
         return true;
     }
 

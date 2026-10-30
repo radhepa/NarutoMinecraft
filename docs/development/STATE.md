@@ -13,6 +13,20 @@ edit name pools, name rolling or dialogue pools on `dev`.
   versions of the Ninja Academy, the Hokage Residence and the main gate with its wall. Quest places are saved as
   anchors (`TestStreet.PLACES`, the same list as layout.py ANCHORS and missions.py STREET_ANCHORS).
 
+## Villager track (branch `claude/villagers-eeb914`, for `dev`)
+
+- Hidden Leaf UI: VF's talk window, journal and ledger and the shop window in washi paper, ink, green and orange with
+  scroll rods and the leaf crest (`LeafUi`, screen mixins); the chat is replaced by `LeafChat`, a message scroll of
+  cards with speaker name plates, a letter-by-letter reveal and answer cards, plus a wooden "Speak" bar.
+- Player eyes: `PlayerEyes` draws VF's face planes (eyes, brows, blush, mouth) on the player, in the world and the
+  creator's preview.
+- Keyed clips: the ninja run (sprinting; residents running too), the ready stance (still with a kunai or shuriken),
+  meditation (2 s crouched still), the victory cheer and the spar bow; spar partners bow, stand ready and cheer
+  (VF residents through `ResidentModelMixin`).
+- Evidence: `./gradlew build`; the three client gametests passed. Screenshots `leaf-eyes`, `leaf-talk`,
+  `leaf-ledger`, `leaf-chat`, `leaf-chat-open` (village), `academy-ready`, `academy-ninja-run`, `academy-meditate`
+  (combat), `shop-screen`, `session-won` (progression); the tests check each clip and the answer card's click.
+
 ## Evidence (30 October 2026, JDK 25.0.5)
 
 `./gradlew build` passed; `layout.py --check` ok; `missions.py --check` ok. `:village:runClientGameTest` passed

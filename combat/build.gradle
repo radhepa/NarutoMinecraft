@@ -26,6 +26,7 @@ dependencies {
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     implementation project(':combat:core')
     include project(':combat:core')
+    compileOnly files(rootProject.vfJar)   // ResidentModelMixin; the mixin is skipped where VF is not installed
 }
 
 processResources {
