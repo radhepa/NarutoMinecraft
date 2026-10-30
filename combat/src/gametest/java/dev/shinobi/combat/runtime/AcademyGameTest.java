@@ -28,9 +28,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * P06-2: a player taught the three Academy techniques weaves Clone with the real keys (Weave held, the hotbar keys as
  * signs): three decoys stand and chakra drops. Transformation (with the 0, - and = sign keys) hides the player as a log
- * until a hit. Substitution armed by its key takes a hit, blinks the player back and leaves a log. A held guard takes
- * 60% off a melee hit, a dodge costs stamina, a thrown practice kunai deals its damage, and reopening keeps what was
- * learned. Screenshots: academy-weaving (the HUD, its hint and the raised hands), academy-clones, academy-guard.
+ * until a hit. Substitution armed by its key takes a hit, blinks the player back short of a wall behind them and leaves
+ * a log. A held guard takes 60% off a melee hit, a hit inside the hurt cooldown costs it nothing, a dodge costs stamina,
+ * a thrown practice kunai deals its damage, dying mid-guard drops the guard, and reopening keeps what was learned. Screenshots: academy-weaving (the HUD, its hint and the raised hands), academy-clones, academy-guard.
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class AcademyGameTest implements FabricClientGameTest {
@@ -73,14 +73,20 @@ public final class AcademyGameTest implements FabricClientGameTest {
             check(w.getServer().computeOnServer(s -> player(w).isInvisible() && Jutsu.disguised(player(w))), "Transformation hides the player as a log");
             check(drop(w, 1) > 0 && !w.getServer().computeOnServer(s -> Jutsu.disguised(player(w))), "a hit ends the disguise");
 
+            // A one-block wall four blocks behind the player, inside the five-block blink.
+            String wall = (at.getX() - 2) + " " + at.getY() + " " + (at.getZ() - 4) + " " + (at.getX() + 2) + " " + (at.getY() + 1) + " " + (at.getZ() - 4);
+            w.getServer().runCommand("tp @p " + (at.getX() + .5) + " " + at.getY() + " " + (at.getZ() + .5) + " 0 0");
+            w.getServer().runCommand("fill " + wall + " stone");
+            c.waitTicks(2);
             c.getInput().pressKey(ShinobiCombatClient.SUBSTITUTE);
             c.waitTicks(2);
             Vec3 from = w.getServer().computeOnServer(s -> player(w).position());
             check(drop(w, 4) == 0, "Substitution takes the hit");
             c.waitTicks(2);
-            double moved = w.getServer().computeOnServer(s -> player(w).position().distanceTo(from));
-            check(moved >= 3 && w.getServer().computeOnServer(s -> !near(w, Display.ItemDisplay.class, 8, d -> d.entityTags().contains(Jutsu.PROP)).isEmpty())
-                    && casts.contains(Fighter.SUBSTITUTION), "the player blinks back " + moved + " and a log stands where they were");
+            Vec3 to = w.getServer().computeOnServer(s -> player(w).position());
+            check(to.distanceTo(from) >= 2.5 && to.z - .3 >= at.getZ() - 3 && w.getServer().computeOnServer(s -> !near(w, Display.ItemDisplay.class, 8, d -> d.entityTags().contains(Jutsu.PROP)).isEmpty())
+                    && casts.contains(Fighter.SUBSTITUTION), "the player blinks back short of the wall, to " + to + ", and a log stands where they were");
+            w.getServer().runCommand("fill " + wall + " air");
 
             c.waitTicks(15);
             c.getInput().holdKey(ShinobiCombatClient.GUARD);
@@ -89,6 +95,10 @@ public final class AcademyGameTest implements FabricClientGameTest {
             double stamina = state(w).stamina();
             float guarded = drop(w, 5);
             check(state(w).stamina() < stamina, "a guarded hit costs stamina");
+            check(w.getServer().computeOnServer(s -> {
+                double before = Fighter.of(player(w)).stamina.value();
+                return drop(w, 5) == 0 && Fighter.of(player(w)).stamina.value() == before;
+            }), "a hit inside the hurt cooldown costs the guard nothing");
             c.getInput().releaseKey(ShinobiCombatClient.GUARD);
             c.waitTicks(12);   // past the guarded hit's invulnerability
             float open = drop(w, 5);
@@ -108,6 +118,16 @@ public final class AcademyGameTest implements FabricClientGameTest {
             c.waitTicks(11);
             float hit = pig - w.getServer().computeOnServer(s -> target(w).getHealth());
             check(Math.abs(hit - 1) < 0.01F, "a practice kunai hits for 1: " + hit);
+
+            c.getInput().holdKey(ShinobiCombatClient.GUARD);
+            c.waitTicks(3);
+            check(w.getServer().computeOnServer(s -> Fighter.of(player(w)).guarding), "the guard is up");
+            w.getServer().runCommand("kill @p");
+            c.waitTicks(5);   // the death screen is up: the guard's release reaches a dead player, who cannot act
+            c.getInput().releaseKey(ShinobiCombatClient.GUARD);
+            c.runOnClient(mc -> mc.player.respawn());
+            c.waitTicks(10);
+            check(w.getServer().computeOnServer(s -> !Fighter.of(player(w)).guarding), "dying mid-guard drops the guard");
             c.runOnClient(mc -> mc.options.setCameraType(CameraType.FIRST_PERSON));
             save = w.getWorldSave();
         }

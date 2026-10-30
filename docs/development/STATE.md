@@ -43,9 +43,10 @@ sleep in that room's bed at night; reload keeps look, quest, wallet and tatami.
 ## Launch
 
 `./gradlew :progression:runClient` (every Shinobi mod + VF; player `ShinobiTester`). Create World defaults to the
-Hidden Leaf preset (void); the first start pastes the test street, its border and the spawn on the street. Game rule
-`shinobi_core:varied_world` (Create World, Game Rules) makes a Varied save. `/narutominecraft street` still builds the
-street for operators. Pack: [PACK.md](PACK.md).
+Hidden Leaf preset (void); the first start of a Leaf world pastes the test street, its border and the spawn on the
+street (other worlds keep their terrain). Game rule `shinobi_core:varied_world` (Create World, Game Rules) makes a
+Varied save. `/narutominecraft street` builds the street for operators in a world without one and refuses where it
+stands already. A dedicated server's default level-type is vanilla's, so it gets no map (shortcut). Pack: [PACK.md](PACK.md).
 
 ## Blockers
 

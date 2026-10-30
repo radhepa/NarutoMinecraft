@@ -118,7 +118,8 @@ public final class Fighter {
         long now = p.level().getGameTime();
         switch (a.action()) {
             case Act.BEGIN -> f.weaver.begin(now);
-            case Act.SIGN -> { if (a.arg() >= 0 && a.arg() < HandSign.values().length) f.weaver.input(HandSign.values()[a.arg()], now); }
+            // A sign past the longest sequence known already fizzles: more would only grow the weave.
+            case Act.SIGN -> { if (a.arg() >= 0 && a.arg() < HandSign.values().length && f.weaver.woven().size() <= f.longest()) f.weaver.input(HandSign.values()[a.arg()], now); }
             case Act.RELEASE -> f.release(p, now);
             case Act.CANCEL -> { if (f.weaver.weaving()) f.weaver.release(now); }
             case Act.GUARD -> f.guarding = a.arg() != 0;
@@ -126,8 +127,19 @@ public final class Fighter {
             case Act.SUBSTITUTE -> f.arm(p, now);
             default -> {}
         }
-        f.stance(p);
-        f.save(p);
+        // The tick syncs what the action changed, once however many actions came in.
+    }
+
+    private int longest() {
+        return learned.stream().map(ShinobiCombat.data.techniques::get).filter(Objects::nonNull).mapToInt(t -> t.signs().size()).max().orElse(0);
+    }
+
+    /** AFTER_DEATH: a death drops the guard and the weave (a dead player's keys are not heard). */
+    static void died(ServerPlayer p) {
+        var f = ALL.get(p.getUUID());
+        if (f == null) return;
+        f.guarding = false;
+        if (f.weaver.weaving()) f.weaver.release(p.level().getGameTime());
     }
 
     private void release(ServerPlayer p, long now) {
@@ -225,15 +237,14 @@ public final class Fighter {
     }
 
     /**
-     * The guard, from the LivingEntity mixin: a guarded melee hit takes {@link Damage#BLOCK_MELEE} off for
+     * The guard, from the LivingEntity mixin on a hit that lands (past the hurt cooldown and ALLOW_DAMAGE): a guarded melee hit takes {@link Damage#BLOCK_MELEE} off for
      * {@link Damage#GUARD_STAMINA_PER_DAMAGE} stamina a point stopped, and a guard without the stamina breaks. Any melee
      * hit that lands interrupts a weave.
      */
     public static float guard(ServerPlayer p, DamageSource source, float amount) {
         var f = ALL.get(p.getUUID());
-        long now = p.level().getGameTime();
         boolean melee = source.getEntity() != null && source.getEntity() == source.getDirectEntity() && !source.is(DamageTypeTags.IS_PROJECTILE);
-        if (f == null || !melee || f.avoids(source, now)) return amount;
+        if (f == null || !melee) return amount;
         f.weaver.interrupt();
         if (!f.guarding) return amount;
         boolean held = f.stamina.spend(amount * Damage.BLOCK_MELEE * Damage.GUARD_STAMINA_PER_DAMAGE);
@@ -260,25 +271,28 @@ public final class Fighter {
         var away = by == null ? p.getLookAngle().reverse() : from.subtract(by);
         away = new Vec3(away.x, 0, away.z);
         away = away.lengthSqr() < 1e-4 ? new Vec3(0, 0, 1) : away.normalize();
-        for (double d = Json.num(t.shape(), "blink", 5); d >= 1; d--) {
+        // Half-block steps outward, stopping at the first blocked one: the blink never passes through a wall.
+        Vec3 to = null;
+        for (double d = .5, blink = Json.num(t.shape(), "blink", 5); d <= blink; d += .5) {
             var off = away.scale(d);
-            if (!p.level().noCollision(p, p.getBoundingBox().move(off))) continue;
-            p.teleportTo(from.x + off.x, from.y, from.z + off.z);
-            break;
+            if (!p.level().noCollision(p, p.getBoundingBox().move(off))) break;
+            to = off;
         }
+        if (to != null) p.teleportTo(from.x + to.x, from.y, from.z + to.z);
         Jutsu.log(p.level(), from);
         save(p);
         p.sendOverlayMessage(Component.translatable("shinobi_combat.cast", t.name()));
         ShinobiCombat.CAST.invoker().accept(p, SUBSTITUTION);
     }
 
-    /** Each tick: chakra and stamina refill (stamina slower while guarding) and the bars sync. */
+    /** Each tick: chakra and stamina refill (stamina slower while guarding) and the bars and pose sync. */
     static void tick(MinecraftServer server) {
         for (var p : server.getPlayerList().getPlayers()) {
             var f = of(p);
             f.chakra.tick(1);
             f.stamina.tick(f.guarding ? GUARD_REGEN : 1);
             f.save(p);
+            f.stance(p);
         }
     }
 

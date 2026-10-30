@@ -43,6 +43,10 @@ public final class ShinobiVillage implements ModInitializer {
                 Commands.literal("narutominecraft").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
                         .then(Commands.literal("street").executes(ctx -> {
                             var src = ctx.getSource();
+                            if (src.getLevel().getAttached(ANCHORS) != null) {
+                                src.sendFailure(Component.literal("This world has its Leaf test street already"));
+                                return 0;
+                            }
                             TestStreet.Built built;
                             try {
                                 built = TestStreet.build(src.getLevel(), BlockPos.containing(src.getPosition()).below());

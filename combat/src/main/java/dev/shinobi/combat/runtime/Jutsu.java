@@ -33,7 +33,7 @@ import java.util.UUID;
  */
 final class Jutsu {
     public static final String DECOY = "shinobi_combat.decoy", PROP = "shinobi_combat.prop";
-    static final int LOG_TICKS = 40, AGGRO_RANGE = 24;
+    static final int LOG_TICKS = 40, AGGRO_RANGE = 24, HIDE_TICKS = 40;
     private record Timed(Entity entity, long until) {}
     private static final List<Timed> TIMED = new ArrayList<>();
     private static final Map<UUID, Display.ItemDisplay> DISGUISES = new HashMap<>();
@@ -56,15 +56,25 @@ final class Jutsu {
             double a = Math.toRadians(p.getYRot()) + i * 2 * Math.PI / (count + 1);
             var m = new Mannequin(EntityTypes.MANNEQUIN, level);
             m.setComponent(DataComponents.PROFILE, ResolvableProfile.createResolved(p.getGameProfile()));
-            m.snapTo(p.getX() - 1.5 * Math.sin(a), p.getY(), p.getZ() + 1.5 * Math.cos(a), p.getYRot(), 0);
+            if (!stand(m, p.getX() - 1.5 * Math.sin(a), p.getY(), p.getZ() + 1.5 * Math.cos(a), p.getYRot())) continue;
             m.addTag(DECOY);
             spawn(level, m, ticks);
             smoke(level, m.position(), 10);
             decoys.add(m);
         }
         level.playSound(null, p.getX(), p.getY(), p.getZ(), SoundEvents.ILLUSIONER_MIRROR_MOVE, SoundSource.PLAYERS, 1, 1);
+        if (decoys.isEmpty()) return;
         for (var mob : level.getEntitiesOfClass(Mob.class, p.getBoundingBox().inflate(AGGRO_RANGE), m -> m.getTarget() == p))
             if (level.getRandom().nextDouble() < chance) mob.setTarget(decoys.get(level.getRandom().nextInt(decoys.size())));
+    }
+
+    /** Stands a decoy at (x, z) on ground at the player's height or a block up or down; false if no such spot is free. */
+    private static boolean stand(Mannequin m, double x, double y, double z, float yaw) {
+        for (double dy : new double[]{0, 1, -1}) {
+            m.snapTo(x, y + dy, z, yaw, 0);
+            if (m.level().noCollision(m) && !m.level().noCollision(m, m.getBoundingBox().move(0, -.2, 0))) return true;
+        }
+        return false;
     }
 
     /**
@@ -90,12 +100,17 @@ final class Jutsu {
         var d = DISGUISES.remove(p.getUUID());
         if (d == null) return;
         d.discard();
-        p.removeEffect(MobEffects.INVISIBILITY);
+        // Only the disguise's own short hidden effect: a potion's (with its particles) stays.
+        var e = p.getEffect(MobEffects.INVISIBILITY);
+        if (e != null && !e.isVisible() && e.getDuration() <= HIDE_TICKS) p.removeEffect(MobEffects.INVISIBILITY);
         smoke(p.level(), p.position(), 16);
     }
 
-    // A short effect kept topped up: a disguise lost to a crash wears off by itself.
-    private static void hide(ServerPlayer p) { p.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 40, 0, false, false)); }
+    // A short effect kept topped up: a disguise lost to a crash wears off by itself. A longer one (a potion) is left alone.
+    private static void hide(ServerPlayer p) {
+        var e = p.getEffect(MobEffects.INVISIBILITY);
+        if (e == null || e.getDuration() < 20) p.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, HIDE_TICKS, 0, false, false));
+    }
 
     /** Substitution's log, standing where the player was for two seconds. */
     static void log(ServerLevel level, Vec3 at) {
@@ -135,7 +150,7 @@ final class Jutsu {
             var d = e.getValue();
             if (p == null || d.isRemoved() || p.level() != d.level()) { d.discard(); return true; }
             d.setPos(p.getX(), p.getY() + .5, p.getZ());
-            if (!p.hasEffect(MobEffects.INVISIBILITY) || p.getEffect(MobEffects.INVISIBILITY).getDuration() < 20) hide(p);
+            hide(p);
             return false;
         });
     }

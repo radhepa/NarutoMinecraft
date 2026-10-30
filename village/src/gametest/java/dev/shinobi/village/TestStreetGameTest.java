@@ -14,14 +14,19 @@ import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext;
 import net.fabricmc.fabric.api.client.gametest.v1.context.TestSingleplayerContext;
 import net.fabricmc.fabric.api.client.gametest.v1.world.TestWorldSave;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.gui.screens.worldselection.WorldCreationUiState;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.GameType;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.LevelData;
 import net.minecraft.world.level.gamerules.GameRules;
+import net.minecraft.world.level.levelgen.presets.WorldPresets;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 
@@ -35,7 +40,8 @@ import java.util.function.Supplier;
 
 /**
  * World creation: a new world made the default way loads the Leaf map, with the player on the street inside the border
- * and nothing around but the map. Screenshot: test-street-spawn.
+ * and nothing around but the map; reopening keeps the border and spawn, and a death respawns on the street. A
+ * Superflat world gets no map. Screenshot: test-street-spawn.
  * P03-2: the test street: ten residents each get their own flat and bed, walk by day and sleep at night.
  * P03-3: Classic's cast is the same whatever the world seed, and reopening the save finds the same residents in the
  * same flats; a Varied world (its game rule on) keeps that mode in its save seed and rolls a different cast.
@@ -56,7 +62,7 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             for (String cmd : List.of("gamerule advance_time false", "gamerule advance_weather false", "gamerule spawn_mobs false",
                     "weather clear", "difficulty peaceful", "time set 3000"))
                 w.getServer().runCommand(cmd);
-            BlockPos player = w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().blockPosition());
+            BlockPos player = w.getServer().computeOnServer(s -> stand(w.getConnection().getServerPlayer()));
             BlockPos origin = TestStreet.MAP;
             w.getServer().runOnServer(s -> {
                 var level = w.getConnection().getServerLevel();
@@ -89,8 +95,8 @@ public final class TestStreetGameTest implements FabricClientGameTest {
 
             until(c, () -> walked(w, built, spawn) > 0, 2400, () -> "a resident walks by day");
             ShinobiVillage.LOG.info("Test street: {} of {} residents left their markers", walked(w, built, spawn), n);
-            view(c, w, player.getX() + .5, player.getY() + 3, player.getZ() + 6.5, 180, 12, "test-street-day");
-            view(c, w, player.getX() + 25.5, player.getY() + 4, player.getZ() + 3.5, 180, 25, "test-street-yard");
+            view(c, w, player.getX() + .5, player.getY() + 3, player.getZ() + 14.5, 180, 12, "test-street-day");
+            view(c, w, player.getX() + 25.5, player.getY() + 4, player.getZ() + 11.5, 180, 25, "test-street-yard");
             route(c, w, player, "day");
 
             BlockPos board = built.anchors().get("notice_board"), yard = built.anchors().get("anchor:training");
@@ -154,6 +160,17 @@ public final class TestStreetGameTest implements FabricClientGameTest {
                 });
                 return found[0].equals(cast);
             }, 600, () -> "the same residents in the same flats after reopening: " + found[0]);
+            w.getServer().runOnServer(s -> {
+                var border = w.getConnection().getServerLevel().getWorldBorder();
+                check(border.getSize() == TestStreet.BORDER && border.getCenterX() == TestStreet.BORDER_X && border.getCenterZ() == TestStreet.BORDER_Z
+                        && s.getRespawnData().equals(LevelData.RespawnData.of(Level.OVERWORLD, TestStreet.SPAWN, 180, 0)), "the border and the spawn survive the reload: " + s.getRespawnData());
+            });
+            w.getServer().runCommand("kill @p");
+            c.waitTicks(5);
+            c.runOnClient(mc -> mc.player.respawn());
+            c.waitTicks(10);
+            BlockPos respawn = w.getServer().computeOnServer(s -> stand(s.getPlayerList().getPlayers().getFirst()));
+            check(respawn.equals(TestStreet.SPAWN), "a death respawns the player on the street: " + respawn.toShortString());
         }
 
         // Varied, set on the Game Rules screen: fixed in the save seed, which rolls the cast.
@@ -176,7 +193,18 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             ShinobiVillage.LOG.info("Varied cast: {}", names);
             check(!names.equals(cast.stream().map(id -> id.split("\\|")[1]).toList()), "a different cast from Classic's: " + names);
         }
+
+        // A world on another generator (Superflat here) keeps its terrain: no map is pasted over it.
+        try (var w = c.worldBuilder().setUseConsistentSettings(false).adjustSettings(ui -> ui.setWorldType(new WorldCreationUiState.WorldTypeEntry(
+                ui.getSettings().worldgenLoadContext().lookupOrThrow(Registries.WORLD_PRESET).getOrThrow(WorldPresets.FLAT)))).create()) {
+            w.getConnection().waitForChunksRender();
+            CreatorGameTest.skipCreator(w);
+            check(w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getAttached(ShinobiVillage.ANCHORS) == null), "a Superflat world gets no map");
+        }
     }
+
+    /** The block a player stands in, counting the dirt path's top (a sixteenth below the block) as the block above it. */
+    static BlockPos stand(net.minecraft.world.entity.Entity e) { return BlockPos.containing(e.position().add(0, .1, 0)); }
 
     /** The street the new world pasted at its first start, read back from the world once its residents have loaded. */
     static TestStreet.Built street(ClientGameTestContext c, TestSingleplayerContext w) {
@@ -232,7 +260,7 @@ public final class TestStreetGameTest implements FabricClientGameTest {
      */
     static void route(ClientGameTestContext c, TestSingleplayerContext w, BlockPos player, String when) {
         for (int x : new int[]{-24, 0, 25}) {
-            w.getServer().runCommand(String.format(Locale.ROOT, "tp @a %d %d %d 180 15", player.getX() + x, player.getY() + 3, player.getZ() + 6));
+            w.getServer().runCommand(String.format(Locale.ROOT, "tp @a %d %d %d 180 15", player.getX() + x, player.getY() + 3, player.getZ() + 14));
             c.waitTicks(100);
             double mspt = w.getServer().computeOnServer(s -> s.getAverageTickTimeNanos() / 1e6);
             int fps = c.computeOnClient(mc -> mc.getFps());

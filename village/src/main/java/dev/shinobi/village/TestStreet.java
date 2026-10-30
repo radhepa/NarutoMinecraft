@@ -24,6 +24,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.gamerules.GameRule;
 import net.minecraft.world.level.gamerules.GameRules;
 import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.levelgen.FlatLevelSource;
 import net.minecraft.world.level.levelgen.presets.WorldPreset;
 import net.minecraft.world.level.storage.LevelData;
 
@@ -46,8 +48,8 @@ public final class TestStreet {
     public static final String BUILDING = "leaf_block", PLAYER_FLAT = "flat.leaf_block.3a", VILLAGE = "Leaf Test Street";
     /** The Hidden Leaf world preset (data/narutominecraft/worldgen/world_preset/leaf.json): void, no structures or features. */
     public static final ResourceKey<WorldPreset> PRESET = ResourceKey.create(Registries.WORLD_PRESET, Identifier.fromNamespaceAndPath("narutominecraft", "leaf"));
-    /** A new world's map: the apartment block's [0, 0, 0], and the spawn on the street in front of the block. */
-    public static final BlockPos MAP = new BlockPos(0, 64, 0), SPAWN = MAP.offset(17, 1, 22);
+    /** A new world's map: the apartment block's [0, 0, 0], and the spawn on the path under the block's front eave. */
+    public static final BlockPos MAP = new BlockPos(0, 64, 0), SPAWN = MAP.offset(17, 1, 14);
     /** The border's centre (x, z) and side: the three plots and the street, with a margin of at least nine blocks. */
     public static final double BORDER_X = 18.5, BORDER_Z = 12.5, BORDER = 80;
     /** Classic's cast seed, whatever the world seed: the street's first cast (P03). */
@@ -78,17 +80,20 @@ public final class TestStreet {
 
     /**
      * A world's first start pastes the map: the street at {@link #MAP}, grass on the rest of the bordered square, the
-     * border, and the spawn on the street facing the block. A world with anchors has its map already.
+     * border, and the spawn on the street facing the block. A world with anchors has its map already, and a world not
+     * on the Leaf's void generator keeps its terrain (an operator can still run `/narutominecraft street`). The ground,
+     * border and spawn are laid even if the street fails, so the player never starts over the void; the save is written at
+     * once, so a crash before the first autosave never pastes the map twice.
+     * shortcut: a dedicated server's default level-type is vanilla's, so it gets no map, until server.properties defaults to the Leaf.
      */
     public static void firstStart(MinecraftServer server) {
         var level = server.overworld();
-        if (level.getAttached(ShinobiVillage.ANCHORS) != null) return;
-        Built built;
+        if (level.getAttached(ShinobiVillage.ANCHORS) != null || !leafVoid(level)) return;
+        Built built = null;
         try {
             built = build(level, MAP);
-        } catch (IllegalStateException e) {
-            ShinobiVillage.LOG.error("No Leaf map in this world: {}", e.getMessage());
-            return;
+        } catch (RuntimeException e) {
+            ShinobiVillage.LOG.error("No Leaf map in this world", e);
         }
         var grass = Blocks.GRASS_BLOCK.defaultBlockState();
         for (int x = (int) Math.floor(BORDER_X - BORDER / 2); x < BORDER_X + BORDER / 2; x++)
@@ -100,7 +105,18 @@ public final class TestStreet {
         level.getWorldBorder().setSize(BORDER);
         server.setRespawnData(LevelData.RespawnData.of(level.dimension(), SPAWN, 180, 0));
         level.getGameRules().set(GameRules.RESPAWN_RADIUS, 0, server);
+        if (built == null) return;
+        server.saveEverything(true, true, false);
         ShinobiVillage.LOG.info("Leaf map pasted: {} residents, {} plaques", built.residents().size(), built.plaques().size());
+    }
+
+    /**
+     * Whether the overworld generates the Leaf preset's void: flat, all air, the void biome.
+     * shortcut: vanilla's The Void superflat matches too (it has no terrain to lose), until the save records its preset.
+     */
+    static boolean leafVoid(ServerLevel level) {
+        return level.getChunkSource().getGenerator() instanceof FlatLevelSource flat && flat.settings().getBiome().is(Biomes.THE_VOID)
+                && flat.settings().getLayers().stream().allMatch(s -> s == null || s.isAir());   // an air layer is null
     }
 
     /** Builds the street with the apartment block's [0, 0, 0] (its ground layer) at {@code origin}, on ground no village holds yet. */

@@ -79,6 +79,7 @@ public final class ShinobiCombat implements ModInitializer {
             return InteractionResult.SUCCESS;
         });
         ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) -> Fighter.allow(entity, source));
+        ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> { if (entity instanceof ServerPlayer p) Fighter.died(p); });
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> Jutsu.loaded(entity));
         ServerTickEvents.END_SERVER_TICK.register(Spar::tick);
         ServerTickEvents.END_SERVER_TICK.register(Fighter::tick);

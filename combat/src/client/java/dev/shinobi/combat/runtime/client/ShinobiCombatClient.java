@@ -46,13 +46,14 @@ public final class ShinobiCombatClient implements ClientModInitializer {
         HudElementRegistry.attachElementAfter(VanillaHudElements.HOTBAR, Identifier.fromNamespaceAndPath(ShinobiCombat.MOD_ID, "hud"), ShinobiCombatClient::hud);
     }
 
-    static void send(int action, int arg) { ClientPlayNetworking.send(new Fighter.Act(action, arg)); }
+    static void send(int action, int arg) { if (ClientPlayNetworking.canSend(Fighter.Act.TYPE)) ClientPlayNetworking.send(new Fighter.Act(action, arg)); }
 
     private static void tick(Minecraft mc) {
         if (mc.player == null || !ClientPlayNetworking.canSend(Fighter.Act.TYPE)) { weaving = guarding = false; return; }
         if (mc.gui.screen() instanceof RadialScreen) return;
         boolean free = mc.gui.screen() == null, hold = free && WEAVE.isDown(), guard = free && GUARD.isDown();
-        if (hold != weaving) send(hold ? Fighter.Act.BEGIN : Fighter.Act.RELEASE, 0);
+        // Letting go of Weave casts; a screen opening mid-weave (a menu, death) drops it.
+        if (hold != weaving) send(hold ? Fighter.Act.BEGIN : free ? Fighter.Act.RELEASE : Fighter.Act.CANCEL, 0);
         weaving = hold;
         for (int i = 0; i < 12; i++) {
             var k = i < 9 ? mc.options.keyHotbarSlots[i] : SIGNS_10_12[i - 9];
