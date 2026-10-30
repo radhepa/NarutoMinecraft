@@ -20,6 +20,9 @@ public final class LeafFlats {
 
     private LeafFlats() {}
 
+    /** Whether a plaque name marks a Leaf house: a flat, or a plot of the map's layout. */
+    static boolean leaf(String name) { return name.startsWith(NAME) || name.equals(TEA_HOUSE) || Layout.leaf().names().contains(name); }
+
     /** {@code previous} with each resident at home who sleeps in a free Leaf house bed ({@code anchors}: VF's id to bed head) holding it. */
     public static HousingIndex seed(HousingIndex previous, Collection<Townsfolk> folk, Map<String, BlockPos> anchors) {
         var beds = new HashMap<>(previous.beds());
@@ -30,7 +33,7 @@ public final class LeafFlats {
             if (!t.home() || head == null || beds.containsKey(t.id()) || taken.contains(head)) continue;
             for (var h : previous.houses()) {
                 var bed = h.bed(head);
-                if (h.kind() == House.Kind.PLAYER && (h.customName().startsWith(NAME) || h.customName().equals(TEA_HOUSE)) && !h.privateHome() && bed != null && bed.present()) {
+                if (h.kind() == House.Kind.PLAYER && leaf(h.customName()) && !h.privateHome() && bed != null && bed.present()) {
                     beds.put(t.id(), new HousingIndex.BedKey(h.id(), head));
                     taken.add(head);
                     break;

@@ -37,7 +37,7 @@ public final class ShinobiVillage implements ModInitializer {
         StreetGuard.register();
         PlayerLooks.register();
         ServerLifecycleEvents.SERVER_STARTED.register(TestStreet::firstStart);
-        // `/narutominecraft street` builds the P03 test street with its ground layer under the operator's feet;
+        // `/narutominecraft street` builds the Leaf map with its ground layer under the operator's feet, on the Leaf's void only;
         // `/narutominecraft builder` switches the operator's builder mode, the only way to change the street.
         CommandRegistrationCallback.EVENT.register((dispatcher, registry, env) -> dispatcher.register(
                 Commands.literal("narutominecraft").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
@@ -45,6 +45,11 @@ public final class ShinobiVillage implements ModInitializer {
                             var src = ctx.getSource();
                             if (src.getLevel().getAttached(ANCHORS) != null) {
                                 src.sendFailure(Component.literal("This world has its Leaf test street already"));
+                                return 0;
+                            }
+                            // The map clears whole street runs to air, so it never lands on terrain.
+                            if (!TestStreet.leafVoid(src.getLevel())) {
+                                src.sendFailure(Component.literal("The Leaf map pastes only on the Leaf's void world"));
                                 return 0;
                             }
                             TestStreet.Built built;

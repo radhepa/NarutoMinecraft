@@ -49,6 +49,7 @@ processResources {
     }
     includeEmptyDirs = false
     from(rootProject.file('tools/konoha/blueprints')) { include '*.json'; exclude '*.homes.json'; into 'data/narutominecraft/blueprints' }
+    from(rootProject.file('tools/konoha')) { include 'layout.json'; into 'data/narutominecraft' }
 }
 tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
 java {

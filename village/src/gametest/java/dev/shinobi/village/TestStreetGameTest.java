@@ -79,8 +79,10 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             var built = street(c, w);
             ShinobiVillage.LOG.info("Test street plaques: {}", built.plaques());
             int n = built.residents().size();
-            check(n == 11, "ten flat residents and the tea house keeper: " + n);
-            check(built.plaques().size() == 12 && built.plaques().stream().allMatch(p -> p.contains("1 bed")), "eleven flats and the tea house with a bed each: " + built.plaques());
+            check(n == 25, "ten flat residents, the tea house keeper and fourteen Sakura Lane households: " + n);
+            check(built.plaques().size() == 26 && built.plaques().stream().filter(p -> p.contains("Sakura Lane") && p.contains(" 2 beds,")).count() == 14
+                    && built.plaques().stream().filter(p -> !p.contains("Sakura Lane") && p.contains(" 1 bed,")).count() == 12,
+                    "eleven flats and the tea house with a bed each, fourteen Sakura Lane homes with two: " + built.plaques());
 
             // Their markers; a resident out at its hobby has walked away from one.
             List<Vec3> spawn = w.getServer().computeOnServer(s -> built.residents().stream().map(Villager::position).toList());
@@ -88,7 +90,8 @@ public final class TestStreetGameTest implements FabricClientGameTest {
                 var houses = new HashSet<String>();
                 for (var v : built.residents()) { House h = Homes.houseOf(v); if (h != null) houses.add(h.id()); }
                 return houses.size() == n;
-            }), 1200, () -> "each resident has a house of their own");
+            }), 1200, () -> "each resident has a house of their own: " + w.getServer().computeOnServer(s -> built.residents().stream()
+                    .map(v -> { House h = Homes.houseOf(v); return h == null ? "none" : h.id(); }).toList()));
             List<String> beds = w.getServer().computeOnServer(s -> built.residents().stream().map(v -> Homes.bedOf(v).map(b -> b.head().subtract(origin).toShortString()).orElse("-")).toList());
             // Against the markers, not where the residents stand by now: the keeper can be down the tea house stairs already.
             List<BlockPos> placed = w.getServer().computeOnServer(s -> markers());
@@ -99,6 +102,10 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             ShinobiVillage.LOG.info("Test street: {} of {} residents left their markers", walked(w, built, spawn), n);
             view(c, w, player.getX() + .5, player.getY() + 3, player.getZ() + 14.5, 180, 12, "test-street-day");
             view(c, w, player.getX() + 25.5, player.getY() + 4, player.getZ() + 11.5, 180, 25, "test-street-yard");
+            // the layout's streets and turned homes: Sakura Lane from its east end, Main Street looking north
+            view(c, w, TestStreet.MAP.getX() + 51.5, TestStreet.MAP.getY() + 6, TestStreet.MAP.getZ() - 27.5, 90, 15, "konoha-sakura-lane");
+            view(c, w, TestStreet.MAP.getX() + 57.5, TestStreet.MAP.getY() + 8, TestStreet.MAP.getZ() + 40.5, 180, 8, "konoha-main-street");
+            check(built.anchors().keySet().containsAll(TestStreet.PLACES), "the map saves every quest place: " + built.anchors().keySet());
             route(c, w, player, "day");
 
             BlockPos board = built.anchors().get("notice_board"), yard = built.anchors().get("anchor:training");
@@ -135,8 +142,10 @@ public final class TestStreetGameTest implements FabricClientGameTest {
 
             // VF's routine clock, frozen at 2 am: past every chronotype's bedtime, night owls included.
             w.getServer().runCommand("time set " + (2 * 24000 + Routine.at(2, 0)));
-            until(c, () -> asleep(w, built) >= n - 2, 2400, () -> "residents asleep in their own beds: " + asleep(w, built) + "; doing "
-                    + w.getServer().computeOnServer(s -> built.residents().stream().map(dev.villagefriends.ResidentRoutines::doing).toList()));
+            // client ticks: Sakura Lane's households walk the farthest, and a loaded server falls behind the client
+            until(c, () -> asleep(w, built) >= n - 2, 4800, () -> "residents asleep in their own beds: " + asleep(w, built) + "; doing "
+                    + w.getServer().computeOnServer(s -> built.residents().stream().map(v -> dev.villagefriends.ResidentRoutines.doing(v) + " at " + v.getSleepingPos().orElse(null)
+                            + ", bed " + Homes.bedOf(v).map(b -> b.head()).orElse(null)).toList()));
             ShinobiVillage.LOG.info("Test street: {} of {} residents asleep in their own beds", asleep(w, built), n);
             route(c, w, player, "night");
 
@@ -144,6 +153,14 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             ShinobiVillage.LOG.info("Test street cast: {}", cast);
             check(built.residents().getFirst().getUUID().equals(TestStreet.resident(TestStreet.CLASSIC_CAST, 0)), "Classic's cast comes from its own seed and the markers");
             check(cast.stream().map(id -> id.split("\\|")[1]).distinct().count() == n, "different residents: " + cast);
+            // the landmarks on Main Street, last: this far off, the street's residents unload: the Academy's front, the Hokage Residence, the main gate from inside, at noon
+            w.getServer().runCommand("time set " + (3 * 24000 + 6000));
+            view(c, w, TestStreet.MAP.getX() + 46.5, TestStreet.MAP.getY() + 12, TestStreet.MAP.getZ() - 88.5, 270, 2, "konoha-academy");
+            view(c, w, TestStreet.MAP.getX() + 57.5, TestStreet.MAP.getY() + 12, TestStreet.MAP.getZ() - 150.5, 180, 10, "konoha-residence");
+            view(c, w, TestStreet.MAP.getX() + 57.5, TestStreet.MAP.getY() + 10, TestStreet.MAP.getZ() + 138.5, 0, -4, "konoha-gate");
+            // back on the street, so the reopened save loads its residents' chunks
+            w.getServer().runCommand(String.format(Locale.ROOT, "tp @a %d %d %d", player.getX(), player.getY(), player.getZ()));
+            c.waitTicks(40);
             save = w.getWorldSave();
         }
 
@@ -217,15 +234,17 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             var plaques = new ArrayList<String>();
             var residents = new ArrayList<Villager>();
             int marker = 0;
-            for (var plot : TestStreet.PLOTS)
-                for (var m : Blueprint.load(plot.getKey()).json().getAsJsonArray("markers")) {
-                    var at = Blueprint.at(TestStreet.MAP.offset(plot.getValue()), m.getAsJsonObject());
+            for (var plot : TestStreet.LAYOUT.plots()) {
+                var bp = Blueprint.load(plot.design());
+                for (var m : bp.json().getAsJsonArray("markers")) {
+                    var at = bp.at(TestStreet.MAP, plot, m.getAsJsonObject());
                     switch (m.getAsJsonObject().get("type").getAsString()) {
                         case "house_plaque" -> { if (level.getBlockEntity(at) instanceof HousePlaqueBlockEntity plaque) plaques.add(plaque.scanForBeds()); }
                         case "resident" -> { if (level.getEntity(TestStreet.resident(cast, marker++)) instanceof Villager v) residents.add(v); }
                         default -> {}
                     }
                 }
+            }
             return marker == residents.size() ? new TestStreet.Built(VillageSettlements.book(level).at(TestStreet.MAP).id(), plaques, residents,
                     level.getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of())) : null;
         })) != null, 600, () -> "the map's residents load");
@@ -235,9 +254,11 @@ public final class TestStreetGameTest implements FabricClientGameTest {
     /** Each resident marker's block, in the order {@link #street} finds the residents. */
     static List<BlockPos> markers() {
         var out = new ArrayList<BlockPos>();
-        for (var plot : TestStreet.PLOTS)
-            for (var m : Blueprint.load(plot.getKey()).json().getAsJsonArray("markers"))
-                if ("resident".equals(m.getAsJsonObject().get("type").getAsString())) out.add(Blueprint.at(TestStreet.MAP.offset(plot.getValue()), m.getAsJsonObject()));
+        for (var plot : TestStreet.LAYOUT.plots()) {
+            var bp = Blueprint.load(plot.design());
+            for (var m : bp.json().getAsJsonArray("markers"))
+                if ("resident".equals(m.getAsJsonObject().get("type").getAsString())) out.add(bp.at(TestStreet.MAP, plot, m.getAsJsonObject()));
+        }
         return out;
     }
 

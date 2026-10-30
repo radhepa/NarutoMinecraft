@@ -339,22 +339,23 @@ def catalogue_doc(ts):
     return "\n".join(lines) + "\n"
 
 # The quest runtime's vocabulary (progression/.../Quests.java) and the test street it casts quests on.
-# shortcut: the street's plots and saved anchors mirror TestStreet.PLOTS and firstStart, until the map's anchors are data.
+# shortcut: the map's built plots and saved anchors mirror TestStreet.build and firstStart, until the map's anchors are data.
 QUEST_STEPS = {"go", "spar", "talk", "furnish", "sleep", "scene", "choose", "cast"}
 RANKS = {"academy", "genin", "chunin", "jonin", "anbu", "hokage"}
 QUEST_CONDITIONS = {"all", "any", "not", "flag", "quest_state"}
 QUEST_STATES = {"done", "active", "not_started"}
-STREET = ["leaf_block", "shop_tea_house", "training_yard"]
-STREET_ANCHORS = {"notice_board", "anchor:training"}
+STREET_ANCHORS = {"notice_board", "anchor:training", "anchor:hokage_office", "anchor:academy.grounds", "anchor:academy.yard", "anchor:academy.library"}
 PLAYER_FLAT = "flat.leaf_block.3a"
 BAD_QUEST = os.path.join(HERE, "fixtures", "quest.bad.json")
 MISSING_QUEST = os.path.join(ROOT, "progression", "src", "gametest", "resources", "data", "shinobi_progression_tests", "quests", "errand.test.missing.json")
 
 
 def street():
-    """The anchor keys and role keys (role:x, job:x) the test street saves when it is pasted."""
+    """The anchor keys and role keys (role:x, job:x) the Leaf map saves when it is pasted (tools/konoha/layout.json)."""
     anchors, roles = {PLAYER_FLAT}, set()
-    for b in STREET:
+    with open(os.path.join(ROOT, "tools", "konoha", "layout.json"), encoding="utf-8") as fh:
+        built = [p["design"] for p in json.load(fh)["plots"] if not p.get("planned")]
+    for b in built:
         with open(os.path.join(ROOT, "tools", "konoha", "blueprints", b + ".json"), encoding="utf-8") as fh:
             for m in json.load(fh).get("markers", []):
                 if m["type"] in STREET_ANCHORS:

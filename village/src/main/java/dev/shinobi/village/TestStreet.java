@@ -1,6 +1,5 @@
 package dev.shinobi.village;
 
-import com.google.gson.JsonArray;
 import dev.shinobi.core.SaveSeed;
 import dev.villagefriends.HousePlaqueBlockEntity;
 import dev.villagefriends.VillageSettlements;
@@ -35,34 +34,35 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 /**
- * The P03 test street: the Leaf apartment block, a tea house and a training yard with the notice board in a marked VF
- * village, House Plaques hung and residents at their markers, each with the bed of the house it stands in.
- * Flat 3a stays unplaqued for the player.
- * shortcut: three plots pasted by code, until the master map's paste tool and layout.json (Phase 0, Map).
+ * The Leaf map from tools/konoha/layout.json: its streets and built plots in a marked VF village, House Plaques hung
+ * and residents at their markers, each with the bed of the house it stands in. The test street (the Leaf apartment
+ * block, a tea house, a training yard with the notice board, Sakura Lane's homes) comes first in the layout, so its
+ * residents keep their UUIDs as the map grows. Flat 3a stays unplaqued for the player.
  */
 public final class TestStreet {
     // shortcut: Varied keeps flat 3a too, until homes.json ships with the map and the apartment stream picks a candidate flat.
     public static final String BUILDING = "leaf_block", PLAYER_FLAT = "flat.leaf_block.3a", VILLAGE = "Leaf Test Street";
     /** The Hidden Leaf world preset (data/narutominecraft/worldgen/world_preset/leaf.json): void, no structures or features. */
     public static final ResourceKey<WorldPreset> PRESET = ResourceKey.create(Registries.WORLD_PRESET, Identifier.fromNamespaceAndPath("narutominecraft", "leaf"));
-    /** A new world's map: the apartment block's [0, 0, 0], and the spawn on the path under the block's front eave. */
-    public static final BlockPos MAP = new BlockPos(0, 64, 0), SPAWN = MAP.offset(17, 1, 14);
-    /** The border's centre (x, z) and side: the three plots and the street, with a margin of at least nine blocks. */
-    public static final double BORDER_X = 18.5, BORDER_Z = 12.5, BORDER = 80;
+    public static final Layout LAYOUT = Layout.leaf();
+    /** A new world's map: the apartment block's [0, 0, 0], and the spawn on the path under the block's front eave, just north of Leaf Street. */
+    public static final BlockPos MAP = LAYOUT.map(), SPAWN = MAP.offset(LAYOUT.spawn());
+    /** The border's centre (x, z, in the world) and side: the whole Beta 1 village, its planned plots included. */
+    public static final double BORDER_X = MAP.getX() + LAYOUT.borderX(), BORDER_Z = MAP.getZ() + LAYOUT.borderZ(), BORDER = LAYOUT.border();
     /** Classic's cast seed, whatever the world seed: the street's first cast (P03). */
     static final long CLASSIC_CAST = 26;
+    /** The quest places the map saves as anchors (layout.py ANCHORS): the board, the yard, the Academy, the Hokage's office. */
+    static final Set<String> PLACES = Set.of("notice_board", "anchor:training", "anchor:hokage_office", "anchor:academy.grounds", "anchor:academy.yard", "anchor:academy.library");
     /**
      * The Leaf map's rules, all off: no monsters, raiders or traders wander in, and TNT and arrows leave the street alone.
      * Mob griefing stays on: VF's farmers harvest and residents pick up items through it.
      */
     public static final List<GameRule<Boolean>> OFF = List.of(GameRules.SPAWN_MONSTERS, GameRules.SPAWN_PATROLS, GameRules.SPAWN_PHANTOMS,
             GameRules.SPAWN_WANDERING_TRADERS, GameRules.RAIDS, GameRules.TNT_EXPLODES, GameRules.PROJECTILES_CAN_BREAK_BLOCKS);
-    /** Each plot and where its [0, 0, 0] sits from the apartment block's: the shop west, the yard east, street fronts in line. */
-    static final List<Map.Entry<String, Vec3i>> PLOTS = List.of(Map.entry(BUILDING, Vec3i.ZERO),
-            Map.entry("shop_tea_house", new Vec3i(-12, 0, 4)), Map.entry("training_yard", new Vec3i(36, 0, 4)));
 
     /**
      * The player flat's main room from the apartment block's [0, 0, 0], 6 by 3 by 6 (tools/konoha/blueprints/leaf_block.homes.json).
@@ -83,8 +83,8 @@ public final class TestStreet {
 
     /**
      * A world's first start pastes the map: the street at {@link #MAP}, grass on the rest of the bordered square, the
-     * border, and the spawn on the street facing the block. A world with anchors has its map already, and a world not
-     * on the Leaf's void generator keeps its terrain (an operator can still run `/narutominecraft street`). The ground,
+     * border, and the spawn by the street facing the block. A world with anchors has its map already, and a world not
+     * on the Leaf's void generator keeps its terrain (so does `/narutominecraft street`). The ground,
      * border and spawn are laid even if the street fails, so the player never starts over the void; the save is written at
      * once, so a crash before the first autosave never pastes the map twice.
      * shortcut: a dedicated server's default level-type is vanilla's, so it gets no map, until server.properties defaults to the Leaf.
@@ -93,12 +93,14 @@ public final class TestStreet {
         var level = server.overworld();
         if (level.getAttached(ShinobiVillage.ANCHORS) != null || !leafVoid(level)) return;
         Built built = null;
+        long start = System.nanoTime();
         try {
             built = build(level, MAP);
         } catch (RuntimeException e) {
             ShinobiVillage.LOG.error("No Leaf map in this world", e);
         }
         var grass = Blocks.GRASS_BLOCK.defaultBlockState();
+        // shortcut: one block at a time over the whole border on the server thread (about 20 s on first start), until the terrain pass fills by chunk section.
         for (int x = (int) Math.floor(BORDER_X - BORDER / 2); x < BORDER_X + BORDER / 2; x++)
             for (int z = (int) Math.floor(BORDER_Z - BORDER / 2); z < BORDER_Z + BORDER / 2; z++) {
                 var at = new BlockPos(x, MAP.getY(), z);
@@ -110,7 +112,7 @@ public final class TestStreet {
         level.getGameRules().set(GameRules.RESPAWN_RADIUS, 0, server);
         if (built == null) return;
         server.saveEverything(true, true, false);
-        ShinobiVillage.LOG.info("Leaf map pasted: {} residents, {} plaques", built.residents().size(), built.plaques().size());
+        ShinobiVillage.LOG.info("Leaf map pasted in {} ms: {} residents, {} plaques", (System.nanoTime() - start) / 1_000_000, built.residents().size(), built.plaques().size());
     }
 
     /**
@@ -122,7 +124,7 @@ public final class TestStreet {
                 && flat.settings().getLayers().stream().allMatch(s -> s == null || s.isAir());   // an air layer is null
     }
 
-    /** Builds the street with the apartment block's [0, 0, 0] (its ground layer) at {@code origin}, on ground no village holds yet. */
+    /** Builds the map with its origin (the apartment block's [0, 0, 0], its ground layer) at {@code origin}, on ground no village holds yet. */
     public static Built build(ServerLevel level, BlockPos origin) {
         var here = VillageSettlements.discover(level, origin);
         if (here != null) throw new IllegalStateException("The test street needs empty ground; " + here.name() + " is already here");
@@ -134,10 +136,12 @@ public final class TestStreet {
         // A defeat costs the thrown tools only, not the pack (ROADMAP.md, Death).
         rules.set(GameRules.KEEP_INVENTORY, true, level.getServer());
         long cast = castSeed(level);
-        var plots = new ArrayList<Map.Entry<BlockPos, JsonArray>>();
-        for (var plot : PLOTS) {
-            var at = origin.offset(plot.getValue());
-            plots.add(Map.entry(at, Blueprint.load(plot.getKey()).paste(level, at)));
+        for (var street : LAYOUT.streets()) Blueprint.load(street.design()).paste(level, street.origin(origin));
+        var plots = new ArrayList<Map.Entry<Layout.Plot, Blueprint>>();
+        for (var plot : LAYOUT.plots()) {
+            var bp = Blueprint.load(plot.design());
+            bp.paste(level, plot.origin(origin), plot.rotation(), plot.mirror());
+            plots.add(Map.entry(plot, bp));
         }
         String village = VillageSettlements.mark(level, origin, VILLAGE).id();
         var plaques = new ArrayList<String>();
@@ -145,19 +149,21 @@ public final class TestStreet {
         var anchors = new HashMap<String, BlockPos>();
         var roles = new HashMap<String, UUID>();
         for (var plot : plots) {
+            var bp = plot.getValue();
+            var markers = bp.json().getAsJsonArray("markers");
             var beds = new ArrayList<BlockPos>();
-            for (var m : plot.getValue()) if ("bed".equals(m.getAsJsonObject().get("type").getAsString())) beds.add(bedHead(level, Blueprint.at(plot.getKey(), m.getAsJsonObject())));
-            for (var m : plot.getValue()) {
+            for (var m : markers) if ("bed".equals(m.getAsJsonObject().get("type").getAsString())) beds.add(bedHead(level, bp.at(origin, plot.getKey(), m.getAsJsonObject())));
+            for (var m : markers) {
                 var marker = m.getAsJsonObject();
-                var pos = Blueprint.at(plot.getKey(), marker);
+                var pos = bp.at(origin, plot.getKey(), marker);
                 switch (marker.get("type").getAsString()) {
                     case "house_plaque" -> {
-                        // Flats name their home; the tea house's plaque has none.
+                        // Flats name their home; a house's plaque carries its plot's name.
                         String home = marker.has("home") ? marker.get("home").getAsString() : null;
                         if (PLAYER_FLAT.equals(home)) continue;
-                        level.setBlock(pos, Blueprint.state(level, "villagefriends:house_plaque[facing=" + marker.get("facing").getAsString() + ",mount=wall]"), 3);
+                        level.setBlock(pos, Blueprint.state(level, "villagefriends:house_plaque[facing=" + Blueprint.facing(plot.getKey(), marker) + ",mount=wall]"), 3);
                         if (!(level.getBlockEntity(pos) instanceof HousePlaqueBlockEntity plaque)) throw new IllegalStateException("No room for a House Plaque at " + pos.toShortString());
-                        plaque.name(home == null ? LeafFlats.TEA_HOUSE : LeafFlats.NAME + home.substring(home.lastIndexOf('.') + 1));
+                        plaque.name(home == null ? plot.getKey().name() : LeafFlats.NAME + home.substring(home.lastIndexOf('.') + 1));
                         plaques.add(plaque.scanForBeds());
                     }
                     case "resident" -> {
@@ -173,7 +179,7 @@ public final class TestStreet {
                         if (marker.has("role")) roles.put("role:" + marker.get("role").getAsString(), v.getUUID());
                         if (marker.has("job") && !"any".equals(marker.get("job").getAsString())) roles.put("job:" + marker.get("job").getAsString(), v.getUUID());
                     }
-                    case "notice_board", "anchor:training" -> anchors.put(marker.get("type").getAsString(), pos);
+                    case String type when PLACES.contains(type) -> anchors.put(type, pos);
                     default -> {}
                 }
             }

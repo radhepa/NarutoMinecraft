@@ -10,7 +10,10 @@ import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -71,6 +74,16 @@ public final class KonohaBlocks {
         Block block = new Block(p) {
             @Override protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> b) { b.add(props); }
             @Override protected VoxelShape getShape(BlockState s, BlockGetter level, BlockPos pos, CollisionContext c) { return shape == NONE ? FULL : shape; }
+            // A turned or mirrored paste turns facings and swaps horizontal axes, as vanilla blocks do.
+            @Override protected BlockState rotate(BlockState s, Rotation r) {
+                if (s.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) return s.setValue(BlockStateProperties.HORIZONTAL_FACING, r.rotate(s.getValue(BlockStateProperties.HORIZONTAL_FACING)));
+                if (s.hasProperty(BlockStateProperties.HORIZONTAL_AXIS) && (r == Rotation.CLOCKWISE_90 || r == Rotation.COUNTERCLOCKWISE_90))
+                    return s.setValue(BlockStateProperties.HORIZONTAL_AXIS, s.getValue(BlockStateProperties.HORIZONTAL_AXIS) == Direction.Axis.X ? Direction.Axis.Z : Direction.Axis.X);
+                return s;
+            }
+            @Override protected BlockState mirror(BlockState s, Mirror m) {
+                return s.hasProperty(BlockStateProperties.HORIZONTAL_FACING) ? s.setValue(BlockStateProperties.HORIZONTAL_FACING, m.mirror(s.getValue(BlockStateProperties.HORIZONTAL_FACING))) : s;
+            }
         };
         Registry.register(BuiltInRegistries.BLOCK, id, block);
         Registry.register(BuiltInRegistries.ITEM, id, new BlockItem(block,

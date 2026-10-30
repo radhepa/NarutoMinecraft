@@ -26,8 +26,8 @@
   "~": "minecraft:bamboo_fence[north=true,south=false,east=true,west=true]",
   "^": "minecraft:bamboo_fence[north=true,south=true,east=false,west=false]",
   ":": "minecraft:barrel[facing=up]",
-  ";": "minecraft:blue_bed[facing=south,part=foot]",
-  "!": "minecraft:blue_bed[facing=south,part=head]",
+  ";": "minecraft:blue_bed[facing=north,part=foot]",
+  "!": "minecraft:blue_bed[facing=north,part=head]",
   "?": "minecraft:cauldron",
   "$": "minecraft:chest[facing=north]",
   "A": "minecraft:dirt_path",
@@ -270,7 +270,7 @@
   {
    "type": "bed",
    "pos": [
-    7,
+    6,
     6,
     5
    ]

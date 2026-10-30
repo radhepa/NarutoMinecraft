@@ -7,17 +7,19 @@ Inside: an earth-floored entry (genkan), a tatami living room behind shoji, a ki
 stair; upstairs two tatami rooms with beds. Sleeps two to three (a civilian family or two shinobi).
 
 Variants the paste tool rolls per plot: wall style (cream, white, terracotta), roof (green, grey,
-orange), mirror, garden or none. Here: cream and green.
+orange), mirror, garden or none. Written here: cream and green, white and grey, terracotta and orange.
 """
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from kit import NS, Plan  # noqa: E402
+from kit import NS, ROOFS, Plan  # noqa: E402
 
 
 def build(wall="cream", roof="green") -> Plan:
-    p = Plan("home_plaster_2f", "Two-storey plaster home", (11, 14, 11), "home",
+    # The cream and green home keeps the plain id; the other variants carry their styles in theirs.
+    pid = "home_plaster_2f" if (wall, roof) == ("cream", "green") else f"home_plaster_2f.{wall}_{roof}"
+    p = Plan(pid, "Two-storey plaster home", (11, 14, 11), "home",
              "A House Plaque inside the door flood-fills the house; beds upstairs; 2-3 residents")
     # ground and garden
     p.fill(0, 0, 0, 10, 0, 10, "grass_block")
@@ -45,7 +47,7 @@ def build(wall="cream", roof="green") -> Plan:
     p.fill(4, 1, 8, 6, 1, 8, "smooth_stone_slab[type=bottom]")
     p.set(5, 1, 8, "smooth_stone_slab[type=bottom]")
     for x in (4, 5, 6):
-        p.set(x, 4, 8, "waxed_oxidized_cut_copper_slab[type=top]")
+        p.set(x, 4, 8, f"{ROOFS[roof]['slab']}[type=top]")
     p.window(2, 3, 7)
     p.window(3, 3, 7)
     p.window(7, 3, 7)
@@ -80,8 +82,8 @@ def build(wall="cream", roof="green") -> Plan:
         for z in range(2, 7):
             p.set(x, 6, z, f"{NS}:tatami[axis={'z' if x % 2 else 'x'}]")
     p.clear(2, 6, 2, 7, 6, 2)
-    p.set(2, 6, 2, "blue_bed[facing=south,part=head]")
-    p.set(2, 6, 3, "blue_bed[facing=south,part=foot]")
+    p.set(2, 6, 2, "blue_bed[facing=north,part=head]")
+    p.set(2, 6, 3, "blue_bed[facing=north,part=foot]")
     p.set(7, 6, 5, "red_bed[facing=west,part=foot]")
     p.set(6, 6, 5, "red_bed[facing=west,part=head]")
     for z in (2, 3):
@@ -93,7 +95,7 @@ def build(wall="cream", roof="green") -> Plan:
     # markers for the Village Friends homes, census and routines
     p.marker("house_plaque", (5, 3, 6), facing="south")
     p.marker("bed", (2, 6, 2))
-    p.marker("bed", (7, 6, 5))
+    p.marker("bed", (6, 6, 5))
     p.marker("resident", (4, 2, 3), group="any", job="any")
     p.marker("door_anchor", (5, 1, 8))
     p.cutaway = [5, 9]
@@ -101,4 +103,5 @@ def build(wall="cream", roof="green") -> Plan:
 
 
 if __name__ == "__main__":
-    build().write()
+    for wall, roof in (("cream", "green"), ("white", "grey"), ("terracotta", "orange")):
+        build(wall, roof).write()

@@ -16,6 +16,7 @@ once that format is checked against tools/village_blueprints/ (see KONOHA_BUILD.
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 
 NS = "narutominecraft"
@@ -39,8 +40,17 @@ ROOFS = {
               "full": "waxed_oxidized_cut_copper", "ridge": f"{NS}:green_kawara_ridge"},
     "orange": {"stairs": "waxed_cut_copper_stairs", "slab": "waxed_cut_copper_slab", "full": "waxed_cut_copper",
                "ridge": f"{NS}:orange_kawara_ridge"},
+    "wood": {"stairs": "dark_oak_stairs", "slab": "dark_oak_slab", "full": "dark_oak_planks",
+             "ridge": "stripped_dark_oak_log"},
 }
 
+FIRE = ["...#...",  # the fire kanji, seven by seven
+        "#..#..#",
+        ".#.#.#.",
+        "...#...",
+        "..#.#..",
+        ".#...#.",
+        "#.....#"]
 FENCES = ("_fence",)
 PANES = ("glass_pane", "iron_bars")
 CHARS = "#@%&*+=-~^:;!?$ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789<>()[]{}/|\\_,'`\""
@@ -116,6 +126,15 @@ class Plan:
     def window(self, x, y, z, h=1, pane="white_stained_glass_pane"):
         for dy in range(h):
             self.set(x, y + dy, z, pane)
+
+    def fire_sign(self, cx, cy, z):
+        """The white disc with a red ring and the red fire kanji, nine blocks across, facing south (the Hokage Residence, the Academy)."""
+        for dx in range(-4, 5):
+            for dy in range(-4, 5):
+                d = math.hypot(dx, dy)
+                if d <= 4.5:
+                    ch = FIRE[3 - dy][dx + 3] if abs(dx) <= 3 and abs(dy) <= 3 else "."
+                    self.set(cx + dx, cy + dy, z, "red_concrete" if d > 3.6 or ch == "#" else "white_concrete")
 
     def gable_roof(self, x0, x1, z0, z1, y, style, gable_style=None, overhang=1, pitch="low"):
         """A tile gable roof, ridge along x, over the walls x0..x1, z0..z1, eaves at height y.
@@ -225,7 +244,7 @@ class Plan:
     def write(self):
         OUT.mkdir(exist_ok=True)
         bp = self.blueprint()
-        (OUT / f"{self.id}.json").write_text(json.dumps(bp, indent=1, ensure_ascii=False) + "\n")
+        (OUT / f"{self.id}.json").write_text(json.dumps(bp, indent=1, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
         counts = {}
         for s in self.blocks.values():
             counts[base_name(s)] = counts.get(base_name(s), 0) + 1

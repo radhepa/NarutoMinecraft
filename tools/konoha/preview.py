@@ -145,24 +145,26 @@ VANILLA = {
     "coarse_dirt": ("#77553b", "stone"), "grass_block": ("#6f9d47", "grass"), "moss_block": ("#596e2d", "wool"),
     "spruce_slab": ("#735531", "planks"), "spruce_stairs": ("#735531", "planks"), "dark_oak_slab": ("#432b14", "planks"),
     "dark_oak_stairs": ("#432b14", "planks"), "oak_slab": ("#a2834f", "planks"), "birch_slab": ("#c0af79", "planks"),
-    "spruce_fence": ("#735531", "planks"), "dark_oak_fence": ("#432b14", "planks"), "iron_bars": ("#8a8b8b", "plain"),
+    "spruce_fence": ("#735531", "planks"), "oak_fence": ("#a2834f", "planks"), "dark_oak_fence": ("#432b14", "planks"), "iron_bars": ("#8a8b8b", "plain"),
     "spruce_trapdoor": ("#6a4d2c", "planks"), "dark_oak_trapdoor": ("#40291a", "planks"),
     "glass_pane": ("#c6dde3", "glass"), "glass": ("#c6dde3", "glass"), "white_stained_glass_pane": ("#efeae0", "glass"),
     "spruce_door": ("#6a4d2c", "planks"), "dark_oak_door": ("#40291a", "planks"),
     "white_wool": ("#e9ecec", "wool"), "red_wool": ("#a02722", "wool"), "blue_wool": ("#35399d", "wool"),
-    "white_carpet": ("#e9ecec", "wool"), "red_bed": ("#a02722", "wool"), "blue_bed": ("#35399d", "wool"),
+    "white_carpet": ("#e9ecec", "wool"), "red_carpet": ("#a02722", "wool"), "hay_block": ("#a68a22", "plain"), "target": ("#d9c3a9", "plain"), "bookshelf": ("#6b5132", "planks"), "crafting_table": ("#7a5a35", "planks"), "grindstone": ("#8a8a8a", "plain"), "lectern": ("#a2834f", "planks"), "lightning_rod": ("#c56d4f", "plain"), "green_terracotta": ("#4c532a", "plain"), "red_bed": ("#a02722", "wool"), "blue_bed": ("#35399d", "wool"),
     "oak_leaves": ("#4d8a2b", "leaves"), "cherry_leaves": ("#e8a8c0", "leaves"), "azalea_leaves": ("#5a7a2c", "leaves"),
     "flower_pot": ("#7c4536", "plain"), "potted_azalea_bush": ("#5a7a2c", "leaves"), "barrel": ("#86643a", "planks"),
     "chest": ("#a37628", "planks"), "lantern": ("#ffd27a", "plain"), "water": ("#3f76e4", "plain"),
     "bamboo_block": ("#7d8a27", "log"), "bamboo_fence": ("#c2ad50", "planks"), "light_gray_wool": ("#8e8e86", "wool"),
     "stone_brick_wall": ("#7b7a7a", "bricks"), "cauldron": ("#4a4a4f", "plain"), "smoker": ("#5b5a58", "bricks"),
+    "red_nether_bricks": ("#460709", "bricks"), "quartz_slab": ("#ece6dc", "plain"), "gray_stained_glass_pane": ("#4c4c4c", "glass"),
+    "lime_terracotta": ("#677534", "plain"),
 }
 
-THIN = {"glass_pane", "white_stained_glass_pane", "iron_bars"}
-FENCE = {"spruce_fence", "dark_oak_fence", "bamboo_fence"}
+THIN = {"glass_pane", "white_stained_glass_pane", "gray_stained_glass_pane", "iron_bars"}
+FENCE = {"spruce_fence", "oak_fence", "dark_oak_fence", "bamboo_fence"}
 DOORS = {"spruce_door", "dark_oak_door"}
 TRAPDOORS = {"spruce_trapdoor", "dark_oak_trapdoor"}
-CARPET = {"white_carpet"}
+CARPET = {"white_carpet", "red_carpet"}
 BEDS = {"red_bed", "blue_bed"}
 
 
