@@ -3,14 +3,19 @@ plugins {
 }
 
 // Shinobi Combat (ROADMAP.md, "The pack: separate mods"): the fights, on the combat core (`:combat:core`, shipped
-// inside its jar) and the authored data in data/combat/.
+// inside its jar) and the authored data in data/combat/. The client check is `./gradlew :combat:runClientGameTest`
+// (the Academy techniques, guard and the HUD in a real world, with screenshots).
 version = '0.1.0'
 group = 'dev.shinobi'
 base { archivesName = 'shinobi-combat' }
 
 loom {
+    splitEnvironmentSourceSets()
     mods {
-        shinobi_combat { sourceSet sourceSets.main }
+        shinobi_combat {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
     }
 }
 
@@ -32,4 +37,20 @@ tasks.withType(JavaCompile).configureEach { options.release = 25; options.encodi
 java {
     sourceCompatibility = JavaVersion.VERSION_25
     targetCompatibility = JavaVersion.VERSION_25
+}
+
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = 'shinobi_combat_tests'
+        enableGameTests = false
+        enableClientGameTests = true
+        eula = true
+        clearRunDirectory = false
+        username = 'ShinobiTester'
+    }
+}
+
+loom.runs {
+    client { programArgs '--username', 'ShinobiTester' }
 }

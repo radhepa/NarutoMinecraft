@@ -3,13 +3,15 @@
   "id": "shinobi_combat",
   "version": "${version}",
   "name": "Shinobi Combat",
-  "description": "The fights of the Shinobi Modpack: the practice spar, on the combat core.",
+  "description": "The fights of the Shinobi Modpack on the combat core: chakra, hand signs, the Academy techniques, guard, dodge and the practice tools.",
   "authors": ["radhepa"],
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "main": ["dev.shinobi.combat.runtime.ShinobiCombat"]
+    "main": ["dev.shinobi.combat.runtime.ShinobiCombat"],
+    "client": ["dev.shinobi.combat.runtime.client.ShinobiCombatClient"]
   },
+  "mixins": ["shinobi_combat.mixins.json", {"config": "shinobi_combat.client.mixins.json", "environment": "client"}],
   "depends": {
     "fabricloader": ">=0.19.5",
     "minecraft": "~26.3",

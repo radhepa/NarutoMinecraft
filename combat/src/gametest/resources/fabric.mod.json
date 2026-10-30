@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "shinobi_combat_tests",
+  "version": "1.0.0",
+  "name": "Shinobi Combat Client Tests",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-client-gametest": ["dev.shinobi.combat.runtime.AcademyGameTest"]
+  }
+}

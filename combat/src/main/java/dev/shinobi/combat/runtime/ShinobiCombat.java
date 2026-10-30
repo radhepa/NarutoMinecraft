@@ -1,30 +1,101 @@
 package dev.shinobi.combat.runtime;
 
+import com.mojang.brigadier.arguments.StringArgumentType;
 import dev.shinobi.combat.CombatData;
+import dev.shinobi.combat.Json;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
+import net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate;
+import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
+import net.fabricmc.fabric.api.event.Event;
+import net.fabricmc.fabric.api.event.EventFactory;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
+import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.commands.Commands;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SnowballItem;
 
-/** Shinobi Combat's entrypoint: the combat data from data/combat and the practice spar. */
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.BiConsumer;
+
+/** Shinobi Combat's entrypoint: the combat data from data/combat, the practice spar, the Academy techniques and tools. */
 public final class ShinobiCombat implements ModInitializer {
     public static final String MOD_ID = "shinobi_combat";
     public static CombatData data;
+    /** Fired on the server thread after a technique is cast, with its id (quests listen for it). */
+    @SuppressWarnings("unchecked")
+    public static final Event<BiConsumer<ServerPlayer, String>> CAST = EventFactory.createArrayBacked(BiConsumer.class, all -> (player, id) -> {
+        for (var l : all) l.accept(player, id);
+    });
+    /** Chakra, stamina and the techniques learned: saved with the player, kept through death and synced to its owner. */
+    public static final AttachmentType<Fighter.State> STATE = AttachmentRegistry.create(Identifier.fromNamespaceAndPath(MOD_ID, "state"),
+            b -> b.persistent(Fighter.State.CODEC).copyOnDeath().initializer(() -> Fighter.State.NEW)
+                    .syncWith(ByteBufCodecs.fromCodec(Fighter.State.CODEC), AttachmentSyncPredicate.targetOnly()));
+    /** The weave or guard pose and the signs woven so far, synced to every client. */
+    public static final AttachmentType<Fighter.Stance> STANCE = AttachmentRegistry.create(Identifier.fromNamespaceAndPath(MOD_ID, "stance"),
+            b -> b.syncWith(Fighter.Stance.CODEC, AttachmentSyncPredicate.all()));
+    /** The practice tools, thrown like snowballs, and the damage each deals on a hit (weapons.json). */
+    public static final Map<Item, Double> THROWN = new HashMap<>();
+
+    /** Teaches a technique from data/combat; false if it is unknown or already learned. */
+    public static boolean teach(ServerPlayer player, String id) { return Fighter.of(player).teach(player, id); }
+
+    public static boolean knows(ServerPlayer player, String id) { return player.getAttachedOrCreate(STATE).learned().contains(id); }
 
     @Override
     public void onInitialize() {
         data = new CombatData(FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow().findPath("data/shinobi_combat/combat").orElseThrow());
+        for (String name : new String[]{"practice_kunai", "practice_shuriken"}) {
+            var id = Identifier.fromNamespaceAndPath(MOD_ID, name);
+            var item = Registry.register(BuiltInRegistries.ITEM, id, new SnowballItem(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, id)).stacksTo(16)));
+            THROWN.put(item, Json.num(data.weapons.get("item:" + name).thrown(), "damage", 1));
+        }
+        PayloadTypeRegistry.serverboundPlay().register(Fighter.Act.TYPE, Fighter.Act.CODEC);
+        ServerPlayNetworking.registerGlobalReceiver(Fighter.Act.TYPE, (payload, context) -> Fighter.act(context.player(), payload));
         // The client fires this too, with no tags synced: it passes there and the attack reaches the server, which takes it over.
         AttackEntityCallback.EVENT.register((player, level, hand, entity, hit) -> {
+            if (player instanceof ServerPlayer p) Jutsu.undisguise(p);
             if (!(player instanceof ServerPlayer p) || p.isSpectator() || !(entity instanceof Mob partner) || !entity.entityTags().contains(Spar.PARTNER)) return InteractionResult.PASS;
             Spar.attack(p, partner);
             return InteractionResult.SUCCESS;
         });
+        ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) -> Fighter.allow(entity, source));
+        ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> Jutsu.loaded(entity));
         ServerTickEvents.END_SERVER_TICK.register(Spar::tick);
-        ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> Spar.end(handler.getPlayer()));
+        ServerTickEvents.END_SERVER_TICK.register(Fighter::tick);
+        ServerTickEvents.END_SERVER_TICK.register(Jutsu::tick);
+        ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
+            Spar.end(handler.getPlayer());
+            Jutsu.undisguise(handler.getPlayer());
+            Fighter.end(handler.getPlayer());
+        });
+        ServerLifecycleEvents.SERVER_STOPPED.register(s -> { Fighter.clear(); Jutsu.clear(); });
+        // `/shinobi teach <id>` teaches a technique (a test hook until mentors teach them).
+        CommandRegistrationCallback.EVENT.register((dispatcher, registry, env) -> dispatcher.register(Commands.literal("shinobi")
+                .then(Commands.literal("teach").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
+                        .then(Commands.argument("id", StringArgumentType.greedyString()).executes(ctx -> {
+                            String id = StringArgumentType.getString(ctx, "id");
+                            if (!data.techniques.containsKey(id)) { ctx.getSource().sendFailure(Component.literal("No technique " + id)); return 0; }
+                            return teach(ctx.getSource().getPlayerOrException(), id) ? 1 : 0;
+                        })))));
     }
 }
