@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_a.light | fn: deepen_bond reveal_character | level: 2 | tags: role=role:teammate_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Um. The same roof looks different at dawn. Do you like that?
+- I like how it changes :: Me too. It is not finished being one thing. {tone:honest}
+- I like recognising it :: I can keep the shape, even when the colour changes. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_a.paper | fn: deepen_bond reveal_character | level: 2 | tags: role=role:teammate_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Clean paper, or a page somebody already tried on?
+- Clean paper :: It is a little frightening. Also nice. {tone:honest}
+- A used page :: There is less to be afraid of ruining. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_a.watch | fn: deepen_bond reveal_character | level: 2 | tags: role=role:teammate_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you rather watch me work, or do something beside me?
+- Watch :: All right. Tell me if I start holding my breath. {tone:honest}
+- Work beside you :: I would like that. We do not have to make the same thing. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_a.colour_day | fn: deepen_bond reveal_character | level: 2 | tags: role=role:teammate_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: What colour does a quiet afternoon feel like?
+- A soft green :: Like shade with light still in it. I can see that. {tone:honest}
+- A pale grey :: Grey has warm bits too. If you look long enough. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_a.unfinished | fn: deepen_bond reveal_character | level: 3 | tags: role=role:teammate_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you keep something you made but never finished?
+- Yes, it is still mine :: I have a whole drawer that agrees with you. {tone:honest}
+- I would start fresh :: Then the first one taught you where to begin. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_a.sharing | fn: deepen_bond reveal_character | level: 3 | tags: role=role:teammate_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Is it easier to show one person, or a whole room?
+- One person :: I can see one face. That helps. {tone:honest}
+- A room :: Maybe then I would not have to choose where to look. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_a.mist_line | fn: deepen_bond reveal_character | level: 3 | tags: role=role:teammate_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A line goes somewhere I did not mean. Erase it or follow it?
+- Follow it :: Just for a little while. It could find something. {tone:honest}
+- Erase it :: I can try the shape again without hurrying. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_a.compliment | fn: deepen_bond reveal_character | level: 4 | tags: role=role:teammate_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Um. Is a specific compliment better than just saying something is good?
+- Tell me the small part :: The corner, or the light. Something I know you saw. {tone:honest}
+- Say how it made you feel :: That would tell me something the lines cannot. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_a.gift_shape | fn: deepen_bond reveal_character | level: 4 | tags: role=role:teammate_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: If I made you something, should it be useful or just yours?
+- Something useful :: Then you could keep it near without needing a reason. {tone:honest}
+- Just mine :: Oh. That is a reason too. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_a.slow | fn: deepen_bond reveal_character | level: 5 | tags: role=role:teammate_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Does taking a long time mean I care, or that I am afraid to finish?
+- It can mean you care :: I like that version. I will still try to finish. {tone:honest}
+- Sometimes it is fear :: Yes. I think I know when it is that. {tone:gentle}

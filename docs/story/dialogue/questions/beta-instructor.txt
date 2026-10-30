@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.instructor.lesson | fn: deepen_bond reveal_character | level: 2 | tags: role=role:instructor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you rather see a demonstration or try the shape first?
+- Show me :: Watch the thumb. That is where the exercise turns. {tone:honest}
+- Let me try :: Here is the space. I will catch the chalk if it goes flying. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.instructor.seat | fn: deepen_bond reveal_character | level: 2 | tags: role=role:instructor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Window seat or front row?
+- Window seat :: Then I will stop standing in your sunlight. {tone:honest}
+- Front row :: Excellent. You get the first look at my terrible diagrams. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.instructor.snack | fn: deepen_bond reveal_character | level: 2 | tags: role=role:instructor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Study snack: something sweet or something filling?
+- Something sweet :: Small portion now. Proper meal after the last page. {tone:honest}
+- Something filling :: A sensible plan for a very long multiplication problem. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.instructor.partner | fn: deepen_bond reveal_character | level: 2 | tags: role=role:instructor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Choose your practice partner, or meet somebody new?
+- Choose my partner :: All right. Try a different exercise together. {tone:honest}
+- Somebody new :: Introduce yourselves before you compare techniques. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.instructor.chalk | fn: deepen_bond reveal_character | level: 2 | tags: role=role:instructor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Should I keep the funny drawing in the lesson?
+- Keep it :: Then it has to teach something as well as make you laugh. {tone:honest}
+- Make it clearer :: Fair. The arrow does seem to be pointing at a potato. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.instructor.stuck | fn: deepen_bond reveal_character | level: 3 | tags: role=role:instructor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: When a problem will not move, what helps?
+- Talk it through :: Start with the part you already understand. {tone:honest}
+- Try it quietly :: I will leave some space and check back after this page. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.instructor.correction | fn: deepen_bond reveal_character | level: 3 | tags: role=role:instructor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Red mark, or a note explaining the correction?
+- A clear mark :: Then you tell me what you think it means. {tone:honest}
+- Write me a note :: I can do that. Read it before trying the whole page again. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.instructor.try_again | fn: deepen_bond reveal_character | level: 3 | tags: role=role:instructor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you show a younger pupil an attempt that went wrong?
+- Yes, with the correction :: Good. Learning has a middle, and they should see it. {tone:honest}
+- Only when I am ready :: Fair. It is your page to share. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.instructor.festival | fn: deepen_bond reveal_character | level: 3 | tags: role=role:instructor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A class festival stall: a game or a little exhibition?
+- A game :: Something a shy visitor can play too. {tone:honest}
+- An exhibition :: With room for work that is still unfinished. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.instructor.good_day | fn: deepen_bond reveal_character | level: 4 | tags: role=role:instructor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: What makes a lesson a good one for you?
+- I understand one new thing :: Tell me which thing. I want to teach it that way again. {tone:honest}
+- I feel safe asking :: Then I will keep making room for the question. {tone:gentle}

@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=reveal_character  | when: {"flag":"story.ch11.done"}
+A customer! Or company. Both improve a road considerably.
+Look at these straps. Better than new: already proved they hold.
+I can offer advice at no charge. Acting on it is your own negotiation.
+Good weather for a delivery. Bad weather for a discount, naturally.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch11.done"}
+The cheap meal is the one that keeps you walking until the next town. I learned that after buying cheap meals.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch11.done"}
+Practise tying the load before you buy a bigger cart. A larger mistake costs extra.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch11.done"}
+I keep descriptions of meals from other towns. Not recipes. The cooks guard those better than the till.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch11.done"}
+My parents could judge a field from its smell. I can judge a market from the queue at lunch.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch11.done"}
+The price should still make sense when the buyer has gone round the corner.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch11.done"}
+Count the wheels and the spare wheels. The road charges for whatever you forgot.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch11.done"}
+A shop whose floor stays in the same town for an entire season.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch11.done"}
+Rain can hold a cart for days. Promises travel faster, which is the difficulty.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.market_stroll.ask role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch11.done"}
+Come round the market. You can tell me when a bargain sounds suspiciously like my lunch.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.market_stroll.arrive role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch11.done"}
+Listen to the stall before buying. You learn what people actually came looking for.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.market_stroll.good role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch11.done"}
+A profitable walk: I bought nothing large enough to need another cart.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=react,deepen_bond  | when: {"flag":"story.ch11.done"}
+A successful errand! Count your pay before putting it away. Pride has holes in its pockets.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=react,deepen_bond  | when: {"flag":"story.ch11.done"}
+A job delayed needs an honest message. Silence never improved a delivery.

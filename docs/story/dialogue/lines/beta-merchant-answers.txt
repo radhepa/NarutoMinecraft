@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.road_food.a1 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.road_food","a1"]}]}
+You chose the lighter road pack. I found wrapping that did not take half the space.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.road_food.a2 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.road_food","a2"]}]}
+You wanted the better lunch. The road seemed shorter after a proper stop.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.bargain.a1 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.bargain","a1"]}]}
+You bought what you needed today. The spare shelf has survived the market.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.bargain.a2 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.bargain","a2"]}]}
+You chose to save for the better thing. I found the maker's actual price, without the stall story.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.weather.a1 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.weather","a1"]}]}
+You waited out the rain. The dry goods were worth the lost hour.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.weather.a2 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.weather","a2"]}]}
+You chose the careful pace through rain. The tightened straps kept the jars together.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.market_look.a1 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.market_look","a1"]}]}
+You compared the size with the price. The cheap basket stopped looking quite so cheap.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.market_look.a2 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.market_look","a2"]}]}
+You wanted to hear the makers. I learned why that handle was worth repairing.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.customer.a1 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.customer","a1"]}]}
+You chose the clean refund. The customer returned when they needed something different.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.customer.a2 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.customer","a2"]}]}
+You wanted an alternative offered. We found the smaller size before refunding the difference.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.cart.a1 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.cart","a1"]}]}
+You wanted the cart checked before loading. The loose pin would have made a very expensive turn.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.cart.a2 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.cart","a2"]}]}
+You chose the empty test. Hearing the wheel made the trouble easier to find.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.free_help.a1 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.free_help","a1"]}]}
+You wanted the unloading paid fairly. I put the labour beside the freight in the account.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.free_help.a2 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.free_help","a2"]}]}
+You chose a specific returned favour. I arrived before the other cart needed lifting.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.story.a1 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.story","a1"]}]}
+You asked for the useful road story. You remembered the fork instead of my excellent imitation of the cart.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.story.a2 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.story","a2"]}]}
+You chose the entertaining version. I still slipped the useful turn in before the ending.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.shop_window.a1 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.shop_window","a1"]}]}
+You wanted a useful display outside the shop. I measured the pavement before imagining another shelf.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.shop_window.a2 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.shop_window","a2"]}]}
+You chose a seat outside the shop. I am looking for a bench the rain will not ruin.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.fair_price.a1 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.fair_price","a1"]}]}
+You would give a discount you could afford. I have stopped calling every gift a lost sale.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.merchant.fair_price.a2 role=role:merchant stage=adult player_stage=child story=story.ch11.done fn=callback | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.fair_price","a2"]}]}
+You wanted the work explained before the price changed. The conversation became easier after that.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.merchant.road_food.back role=role:merchant stage=adult player_stage=child story=story.ch11.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.road_food"]}]}
+Better lunch. I have made several poor decisions on the strength of a light pack.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.merchant.bargain.back role=role:merchant stage=adult player_stage=child story=story.ch11.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.bargain"]}]}
+The thing I need, unless the finer thing is lunch. I remain vulnerable to lunch.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.merchant.weather.back role=role:merchant stage=adult player_stage=child story=story.ch11.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.weather"]}]}
+Wait if the load can spoil. Keep moving if the roof is worse than the road.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.merchant.market_look.back role=role:merchant stage=adult player_stage=child story=story.ch11.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.market_look"]}]}
+Talk first, count afterwards. A maker can tell me which bargain will last.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.merchant.customer.back role=role:merchant stage=adult player_stage=child story=story.ch11.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.customer"]}]}
+Offer, then refund if they still want it. Nobody owes me a purchase because I spoke quickly.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.merchant.cart.back role=role:merchant stage=adult player_stage=child story=story.ch11.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.cart"]}]}
+Empty test, then repair. I prefer the noise before the jars join in.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.merchant.free_help.back role=role:merchant stage=adult player_stage=child story=story.ch11.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.free_help"]}]}
+Ask which helps them. My generous idea may be less useful than their rent.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.merchant.story.back role=role:merchant stage=adult player_stage=child story=story.ch11.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.story"]}]}
+Entertaining, with the useful bit marked clearly enough to find again.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.merchant.shop_window.back role=role:merchant stage=adult player_stage=child story=story.ch11.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.shop_window"]}]}
+A seat, with a small display. I like the sound of a door that stays in one place.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.merchant.fair_price.back role=role:merchant stage=adult player_stage=child story=story.ch11.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch11.done"},{"answered":["role:merchant","q.cast.merchant.fair_price"]}]}
+Explain first. Then decide whether I am making a sale or offering a gift.

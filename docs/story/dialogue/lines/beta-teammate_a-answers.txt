@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.light.a1 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.light","a1"]}]}
+You liked the changing light. I left the dawn edge lighter on this page.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.light.a2 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.light","a2"]}]}
+You wanted the roof to stay recognisable. I kept that small crooked tile.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.paper.a1 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.paper","a1"]}]}
+You chose the clean page. I left you the first corner.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.paper.a2 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.paper","a2"]}]}
+You chose the used sheet. The old lines became part of what we made.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.watch.a1 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.watch","a1"]}]}
+You wanted to watch. I remembered to let you see the unfinished part.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.watch.a2 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.watch","a2"]}]}
+You chose to work beside me. I saved a little space for your tools.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.colour_day.a1 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.colour_day","a1"]}]}
+You called a quiet afternoon green. The bench under the tree looked like your answer.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.colour_day.a2 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.colour_day","a2"]}]}
+You chose pale grey. I noticed the warm edge you meant in the clouds.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.unfinished.a1 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.unfinished","a1"]}]}
+You kept the unfinished work. I stopped calling my drawer a pile of mistakes.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.unfinished.a2 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.unfinished","a2"]}]}
+You would start fresh. I used another sheet without being angry at the old one.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.sharing.a1 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.sharing","a1"]}]}
+You said one person was easier. I showed you the page before taking it anywhere else.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.sharing.a2 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.sharing","a2"]}]}
+You chose the whole room. I tried looking at the work instead of every face.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.mist_line.a1 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.mist_line","a1"]}]}
+You wanted to follow the stray line. That is how the path on this page appeared.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.mist_line.a2 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.mist_line","a2"]}]}
+You wanted the mistaken line erased. The second attempt had more room to breathe.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.compliment.a1 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.compliment","a1"]}]}
+You wanted the small, specific thing. I liked how you waited before turning the page.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.compliment.a2 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.compliment","a2"]}]}
+You wanted the feeling. Your work made this room seem less empty.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.gift_shape.a1 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.gift_shape","a1"]}]}
+You wanted a useful thing. I am thinking about the size of your pocket.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.gift_shape.a2 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.gift_shape","a2"]}]}
+You wanted something simply because it was yours. I stopped looking for another purpose.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.slow.a1 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.slow","a1"]}]}
+You thought taking time could mean caring. I let myself work slowly without hiding the page.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_a.slow.a2 role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.slow","a2"]}]}
+You said slowness can be fear. I noticed when I started fixing a part that was already done.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_a.light.back role=role:teammate_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.light"]}]}
+I like finding the familiar bit inside the different bit.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_a.paper.back role=role:teammate_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.paper"]}]}
+A used page when I am nervous. There is already company on it.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_a.watch.back role=role:teammate_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.watch"]}]}
+Beside. I can ask a question without everybody looking up.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_a.colour_day.back role=role:teammate_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.colour_day"]}]}
+A little blue, with the paper showing through.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_a.unfinished.back role=role:teammate_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.unfinished"]}]}
+I keep it. Sometimes I return when I have changed enough to finish it.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_a.sharing.back role=role:teammate_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.sharing"]}]}
+One person, at first. Preferably someone who sits down.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_a.mist_line.back role=role:teammate_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.mist_line"]}]}
+I trace it on a spare page first, to see what it was trying to be.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_a.compliment.back role=role:teammate_a stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.compliment"]}]}
+A small part. Then I can believe we looked at the same thing.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_a.gift_shape.back role=role:teammate_a stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.gift_shape"]}]}
+Something small enough that keeping it does not become a chore.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_a.slow.back role=role:teammate_a stage=child player_stage=child story=story.ch1.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_a","q.cast.teammate_a.slow"]}]}
+Both, on different afternoons. I am learning to tell them apart.

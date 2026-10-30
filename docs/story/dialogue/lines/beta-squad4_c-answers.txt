@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.label.a1 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.label","a1"]}]}
+You chose "Warning first". Good. The helpful part can wait until the safe part is clear.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.label.a2 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.label","a2"]}]}
+You chose "Use first, then warning". I would still put the warning where the hand reaches.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_c.label.back role=role:squad4_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.label"]}]}
+Warning, then use, then a clear drawing of the edge.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.leaf.a1 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.leaf","a1"]}]}
+You chose "Draw it carefully". Mark the detail that tells it apart.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.leaf.a2 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.leaf","a2"]}]}
+You chose "Use a real sample". Look before touching. I will show the safe part.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_c.leaf.back role=role:squad4_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.leaf"]}]}
+Both. A pressed leaf can change colour before the drawing does.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.ask_hurt.a1 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.ask_hurt","a1"]}]}
+You chose "Ask first". Then I can avoid making a small pain larger.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.ask_hurt.a2 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.ask_hurt","a2"]}]}
+You chose "Tell me what you will do". I can explain before moving anything.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_c.ask_hurt.back role=role:squad4_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.ask_hurt"]}]}
+Ask and explain. The person should know what their body is being asked to do.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.garden.a1 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.garden","a1"]}]}
+You chose "Tidy labels and rows". The right leaf is easier to find in a hurry.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.garden.a2 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.garden","a2"]}]}
+You chose "A little spreading room". Then we need a clear boundary for the ones that should not mix.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_c.garden.back role=role:squad4_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.garden"]}]}
+Room to grow, with labels I can find after rain.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.amount.a1 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.amount","a1"]}]}
+You chose "Measure again". A short check is kinder than a confident error.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.amount.a2 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.amount","a2"]}]}
+You chose "Check what changed". Yes. A different leaf may need a different amount.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_c.amount.back role=role:squad4_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.amount"]}]}
+Measure, especially when I feel too certain to bother.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.practice.a1 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.practice","a1"]}]}
+You chose "One slow attempt". I can watch the whole shape with you.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.practice.a2 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.practice","a2"]}]}
+You chose "Several small attempts". We will stop between them to note what changed.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_c.practice.back role=role:squad4_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.practice"]}]}
+Small attempts, slow enough to know which part improved.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.explain.a1 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.explain","a1"]}]}
+You chose "Learn the name too". I will write it beside the plain explanation.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.explain.a2 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.explain","a2"]}]}
+You chose "The meaning first". That is the part your hands need to know.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_c.explain.back role=role:squad4_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.explain"]}]}
+The meaning. A long word should not hide a simple instruction.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.help_tired.a1 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.help_tired","a1"]}]}
+You chose "Bring water". Leave it where they can reach without getting up.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.help_tired.a2 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.help_tired","a2"]}]}
+You chose "Ask about rest". Offer to take one task so resting is possible.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_c.help_tired.back role=role:squad4_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.help_tired"]}]}
+Water first, then a clear offer to take the next small task.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.wrong_plant.a1 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.wrong_plant","a1"]}]}
+You chose "Ask someone trained". Bring the description. Do not taste the evidence.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.wrong_plant.a2 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.wrong_plant","a2"]}]}
+You chose "Leave them growing". A safe decision. We can return with the book.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_c.wrong_plant.back role=role:squad4_c stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.wrong_plant"]}]}
+Leave them, mark the place, then ask with the drawing.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.reassure.a1 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.reassure","a1"]}]}
+You chose "Tell the uncertainty". I can say what we do know as well.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_c.reassure.a2 role=role:squad4_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.reassure","a2"]}]}
+You chose "Comfort without guessing". That is possible. I can stay without promising what I have not checked.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_c.reassure.back role=role:squad4_c stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_c","q.cast.squad4_c.reassure"]}]}
+What is known, what is uncertain, and what we will do next.

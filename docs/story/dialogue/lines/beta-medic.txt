@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:medic stage=adult player_stage=child story=story.ch0.done fn=reveal_character  | when: {"flag":"story.ch0.done"}
+Before you say anything: did you sleep, and have you eaten?
+Walk over here. Slowly counts as walking.
+That strap is rubbing. Move the buckle before it becomes my problem.
+You look ready to tell me an injury is only small. Sit first.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch0.done"}
+Eat something that was a vegetable recently. Dango are a separate discussion.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch0.done"}
+A rest interval is part of the exercise. I will write it on your sleeve if necessary.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch0.done"}
+Paper cranes. Folding is quieter than telling everyone to stop running in the hall.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch0.done"}
+There is usually somebody at the hospital when I get back. I count that.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch0.done"}
+An early visit can be boring. A late visit can be much less boring. Choose early.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch0.done"}
+Name the pain before you tell me what you think it ought to mean.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch0.done"}
+A ward with windows children can open themselves. Within reason. There will be catches.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch0.done"}
+I check the cupboard twice before a busy day. Running out is preventable.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.tea_at_home.ask role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch0.done"}
+Tea, sitting down. I am putting both requirements in the invitation.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.tea_at_home.arrive role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch0.done"}
+The crane needs one firm crease here. Pressure, not force. There is a difference.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.tea_at_home.good role=role:medic stage=adult player_stage=child story=story.ch0.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch0.done"}
+A whole cup before it went cold. Remarkable. We should record the method.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:medic stage=adult player_stage=child story=story.ch0.done fn=react,deepen_bond  | when: {"flag":"story.ch0.done"}
+The hand exercises helped. Keep the sheet. Progress is easier to believe with dates.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:medic stage=adult player_stage=child story=story.ch0.done fn=react,deepen_bond  | when: {"flag":"story.ch0.done"}
+That lesson can wait until you have rested. The page will remain exactly as difficult tomorrow.

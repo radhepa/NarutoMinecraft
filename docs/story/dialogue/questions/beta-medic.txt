@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.medic.water | fn: deepen_bond reveal_character | level: 2 | tags: role=role:medic stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: You forget to drink. A reminder or a cup already filled?
+- Remind me :: Before training, and after. Those are appointments now. {tone:honest}
+- Leave the filled cup :: Visible, and not beside the ink. We have had confusion. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.medic.rest_place | fn: deepen_bond reveal_character | level: 2 | tags: role=role:medic stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Rest in the quiet room or where you can hear the corridor?
+- The quiet room :: I will tell you before anybody comes in. {tone:honest}
+- Near the corridor :: Then you will know the hospital has not emptied around you. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.medic.explanation | fn: deepen_bond reveal_character | level: 2 | tags: role=role:medic stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Do you want the proper word or the plain explanation first?
+- The proper word :: Then I explain what it means. No extra credit for memorising a sound. {tone:honest}
+- Plain explanation :: Good. We can add the name after you understand the thing. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.medic.crane | fn: deepen_bond reveal_character | level: 2 | tags: role=role:medic stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: First paper crane: neat folds or finish it without starting over?
+- Neat folds :: One crease at a time. The paper will wait. {tone:honest}
+- Finish this one :: A finished awkward bird teaches where the next fold belongs. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.medic.early | fn: deepen_bond reveal_character | level: 3 | tags: role=role:medic stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Would you come in early if you thought the problem might be nothing?
+- Come in anyway :: That is an entirely respectable reason for a short appointment. {tone:honest}
+- Ask what to watch for :: I will write it clearly. Come back if any of it changes. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.medic.visit | fn: deepen_bond reveal_character | level: 3 | tags: role=role:medic stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: A visitor when you are tired: company or a promise to return?
+- Stay quietly :: I can find a chair that does not squeak for attention. {tone:honest}
+- Come back later :: Name a time. Otherwise later becomes a worrying word. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.medic.notes | fn: deepen_bond reveal_character | level: 3 | tags: role=role:medic stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Keep your own recovery notes or leave the record to me?
+- My own notes :: Write what changed, not what you think I want to read. {tone:honest}
+- Keep the record for me :: I will read it back. You can tell me what I missed. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.medic.food_advice | fn: deepen_bond reveal_character | level: 3 | tags: role=role:medic stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Food advice you can actually follow, or the ideal plan?
+- What I can follow :: Tell me when you eat and what you can carry. {tone:honest}
+- Show the ideal too :: As a guide. Nobody heals by feeling guilty at a list. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.medic.ask_twice | fn: deepen_bond reveal_character | level: 4 | tags: role=role:medic stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Would you be annoyed if I asked the same question again?
+- Ask if you need to :: I will say why I am checking. You deserve that much. {tone:honest}
+- Tell me why first :: Fair request. Repetition without a reason sounds like disbelief. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.medic.helping | fn: deepen_bond reveal_character | level: 5 | tags: role=role:medic stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: If a friend keeps refusing rest, argue or offer to take over?
+- Argue kindly :: Specific reasons. Volume is not a treatment. {tone:honest}
+- Take over one task :: That gives rest somewhere to start. {tone:gentle}

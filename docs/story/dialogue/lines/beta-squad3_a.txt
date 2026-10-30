@@ -1,0 +1,31 @@
+# life/bond/teach: the safe beta register from the character brief.
+## greet.personality role=role:squad3_a stage=child player_stage=child story=story.ch1.done  fn=reveal_character | when: {"flag":"story.ch1.done"}
+Two things before we start: clear table, level board. Then the opening.
+
+# life/bond/teach: the safe beta register from the character brief.
+## talk.food role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=1..10 fn=reveal_character | when: {"flag":"story.ch1.done"}
+Food goes away from the board. Grease does not improve a formation.
+
+# life/bond/teach: the safe beta register from the character brief.
+## talk.training role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=1..10 fn=teach | when: {"flag":"story.ch1.done"}
+List the possible steps before choosing the exciting one.
+
+# life/bond/teach: the safe beta register from the character brief.
+## talk.their_hobby role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"flag":"story.ch1.done"}
+I make shogi problems. This one has an answer. I checked twice.
+
+# life/bond/teach: the safe beta register from the character brief.
+## hangout.shogi.ask role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=deepen_bond | when: {"flag":"story.ch1.done"}
+A game? I changed one piece in the problem. Tell me what that breaks.
+
+# life/bond/teach: the safe beta register from the character brief.
+## hangout.shogi.arrive role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=deepen_bond | when: {"flag":"story.ch1.done"}
+There. The move I expected was not the move you made. I need a moment.
+
+# life/bond/teach: the safe beta register from the character brief.
+## life.passed_exam role=role:squad3_a stage=child player_stage=child story=story.ch1.done  fn=react | when: {"flag":"story.ch1.done"}
+One correction, one clean result. I am recording the useful part.
+
+# life/bond/teach: the safe beta register from the character brief.
+## life.dream_setback role=role:squad3_a stage=child player_stage=child story=story.ch1.done  fn=react | when: {"flag":"story.ch1.done"}
+The plan had a gap. I do not know the repair yet.

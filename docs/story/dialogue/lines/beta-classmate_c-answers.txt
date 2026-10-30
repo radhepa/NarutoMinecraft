@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.offcut.a1 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.offcut","a1"]}]}
+You chose a game piece for the offcut. I kept the darker grain as the top.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.offcut.a2 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.offcut","a2"]}]}
+You made the scrap a cup rest. Somebody has already put it to work.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.bench.a1 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.bench","a1"]}]}
+You wanted the bench facing the path. I left room for people to stop and talk.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.bench.a2 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.bench","a2"]}]}
+You chose the river view. I checked how the seat dries in the morning.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.measure.a1 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.measure","a1"]}]}
+You chose another measurement. The piece fitted without the small argument I expected.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.measure.a2 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.measure","a2"]}]}
+You wanted a practice piece. It became the pattern for the second one.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.useful_gift.a1 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.useful_gift","a1"]}]}
+You wanted the useful gift chosen together. The handle fits the person who will use it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.useful_gift.a2 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.useful_gift","a2"]}]}
+You chose the surprise. I watched what the person kept borrowing before starting.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.repair.a1 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.repair","a1"]}]}
+You wanted the repair visible. I chose wood that made the patch easy to find.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.repair.a2 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.repair","a2"]}]}
+You chose a quiet repair. It holds without asking anyone to notice.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.table_noise.a1 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.table_noise","a1"]}]}
+You joined the loud table. There was room for your story between the serving bowls.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.table_noise.a2 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.table_noise","a2"]}]}
+You wanted the quiet corner. I left the small table where the door stays open.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.tools.a1 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.tools","a1"]}]}
+You trusted the good tool to another pair of hands. They brought it back carefully.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.tools.a2 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.tools","a2"]}]}
+You chose the spare for learning. The first mistake did not end the lesson.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.crooked.a1 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.crooked","a1"]}]}
+You wanted the crooked leg fixed. The table stopped teaching everyone to balance their cups.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.crooked.a2 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.crooked","a2"]}]}
+You left the harmless crooked part for later. We got the urgent repair finished first.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.home_sound.a1 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.home_sound","a1"]}]}
+You chose the sound of cooking. I thought of that while carrying bowls into the yard.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.home_sound.a2 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.home_sound","a2"]}]}
+You chose the sound of nearby work. I left the door open while I sanded.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.lasting.a1 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.lasting","a1"]}]}
+You wanted the maker remembered. I added the apprentice's mark beside the master's.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_c.lasting.a2 role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.lasting","a2"]}]}
+You thought the lasting thing could be enough. I watched somebody use the bench without asking who made it.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_c.offcut.back role=role:classmate_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.offcut"]}]}
+A cup rest. I spill less when the table has somewhere for everything.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_c.bench.back role=role:classmate_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.bench"]}]}
+Halfway between. I would like to see who is arriving.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_c.measure.back role=role:classmate_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.measure"]}]}
+Both when the wood belongs to somebody else.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_c.useful_gift.back role=role:classmate_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.useful_gift"]}]}
+Ask one question, then keep a small part as the surprise.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_c.repair.back role=role:classmate_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.repair"]}]}
+Visible if it tells the next person how to fix it again.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_c.table_noise.back role=role:classmate_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.table_noise"]}]}
+A corner near the noise. I like knowing everybody is there.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_c.tools.back role=role:classmate_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.tools"]}]}
+The spare first, then the good one when we both know the grip.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_c.crooked.back role=role:classmate_c stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.crooked"]}]}
+I check what is holding the weight. Appearance can wait for safety.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_c.home_sound.back role=role:classmate_c stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.home_sound"]}]}
+A chair moving to make space at the table.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_c.lasting.back role=role:classmate_c stage=child player_stage=child story=story.ch1.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_c","q.cast.classmate_c.lasting"]}]}
+A little mark, so an apprentice knows another pair of hands learned this once.

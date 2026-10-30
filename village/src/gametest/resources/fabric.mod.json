@@ -5,6 +5,11 @@
   "name": "Shinobi Village Client Tests",
   "environment": "client",
   "entrypoints": {
-    "fabric-client-gametest": ["dev.shinobi.village.LeafResidentGameTest", "dev.shinobi.village.TestStreetGameTest", "dev.shinobi.village.CreatorGameTest"]
+    "fabric-client-gametest": [
+      "dev.shinobi.village.LeafResidentGameTest",
+      "dev.shinobi.village.TestStreetGameTest",
+      "dev.shinobi.village.CreatorGameTest",
+      "dev.shinobi.village.LeafNamesGameTest"
+    ]
   }
 }

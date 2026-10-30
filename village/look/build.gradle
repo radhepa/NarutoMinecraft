@@ -24,4 +24,10 @@ test {
     def data = rootProject.file('src/main/resources/data/narutominecraft/creator/creator.json')
     systemProperty 'creator.json', data.absolutePath
     inputs.file data
+    def given = rootProject.file('village/src/main/resources/data/narutominecraft/names/given.json')
+    systemProperty 'names.json', given.absolutePath
+    inputs.file given
+    def population = rootProject.file('tools/wardrobe/population.json')
+    systemProperty 'population.json', population.absolutePath
+    inputs.file population
 }

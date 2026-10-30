@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.stroke.a1 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.stroke","a1"]}]}
+You chose "The first stroke". A beginning with a reason! Now follow what it started.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.stroke.a2 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.stroke","a2"]}]}
+You chose "The closing stroke". A fine place to stop a very enthusiastic error.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_5.stroke.back role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.stroke"]}]}
+Both, and the small connecting line everyone forgets to admire.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.story.a1 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.story","a1"]}]}
+You chose "Lesson first". Good! You can interrupt when the story wanders away from it.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.story.a2 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.story","a2"]}]}
+You chose "At the end". A patient listener! Keep a finger on the point so I can find it again.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_5.story.back role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.story"]}]}
+First, though my stories keep arguing with that plan.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.copy.a1 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.copy","a1"]}]}
+You chose "Copy it neatly". Then we test whether the neatness belongs to understanding.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.copy.a2 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.copy","a2"]}]}
+You chose "Explain each line". Excellent! Stop where the explanation becomes a guess.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_5.copy.back role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.copy"]}]}
+Explain, copy, then explain the copy. It keeps an old teacher honest.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.interrupt.a1 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.interrupt","a1"]}]}
+You chose "I will ask straight away". A welcome interruption! Bring two if you need them.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.interrupt.a2 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.interrupt","a2"]}]}
+You chose "I will mark the confusing part". Then show the mark before I move to the next page.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_5.interrupt.back role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.interrupt"]}]}
+Immediately. My own teacher needed a student who could wave.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.old_note.a1 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.old_note","a1"]}]}
+You chose "Test it carefully". On spare paper, with no chakra until we understand it.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.old_note.a2 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.old_note","a2"]}]}
+You chose "Keep today's form". A sound beginning. Save the question beside it.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_5.old_note.back role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.old_note"]}]}
+Understand the old note first. An old mistake can still be energetic.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.blank_sheet.a1 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.blank_sheet","a1"]}]}
+You chose "The purpose". Splendid! The drawing should know its job.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.blank_sheet.a2 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.blank_sheet","a2"]}]}
+You chose "A simple working shape". Then leave room to write what it was for.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_5.blank_sheet.back role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.blank_sheet"]}]}
+The purpose, in words short enough to survive my explanation.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.learn_twice.a1 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.learn_twice","a1"]}]}
+You chose "Teach a small part". Ask the listener what you left unclear.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.learn_twice.a2 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.learn_twice","a2"]}]}
+You chose "Practise it again". Make one change you can explain afterwards.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_5.learn_twice.back role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.learn_twice"]}]}
+Teach, then practise. Students find gaps no mirror has ever mentioned.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.good_question.a1 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.good_question","a1"]}]}
+You chose "It can open another path". Then write the path down before I tell another story.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.good_question.a2 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.good_question","a2"]}]}
+You chose "An answer still matters". Of course! The path should lead somewhere a person can stand.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_5.good_question.back role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.good_question"]}]}
+A question earns its keep when the next person understands more.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.handwriting.a1 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.handwriting","a1"]}]}
+You chose "Clear handwriting". A gift to the person who must read it in poor light.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.handwriting.a2 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.handwriting","a2"]}]}
+You chose "A balanced page". Keep the working lines clear enough to find under the beauty.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_5.handwriting.back role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.handwriting"]}]}
+Clear, with room for one cheerful flourish away from the working marks.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.last_check.a1 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.last_check","a1"]}]}
+You chose "The maker again". Fresh eyes after a pause, then.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_5.last_check.a2 role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done fn=callback | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.last_check","a2"]}]}
+You chose "A second reader". And let them tell you where they became uncertain.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_5.last_check.back role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch8.done"},{"answered":["role:sensei_5","q.cast.sensei_5.last_check"]}]}
+Both! A little company is excellent insurance for a dangerous line.

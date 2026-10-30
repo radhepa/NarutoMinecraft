@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:porter stage=adult player_stage=child story=story.ch1.done fn=reveal_character  | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Morning. Mind this corner, please. The cupboard is wider than it looks.
+Oh. Hello, {player}. I can hold that while you find the key.
+Delivery upstairs. I will be with you after the next landing.
+Door sticking again? Let me set this down.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Something wrapped, usually. Crumbs stay on the stairs otherwise. Somebody has to sweep them.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Lift from a low stance. If your back is doing everything, ask for another pair of hands.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=2..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+I oil squeaking hinges. Sometimes the people inside never know. That is all right.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=4..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+I know which doors have children asleep behind them. I knock more softly there.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+A thing can be too heavy for one person without being too heavy to move.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Set it down first. You can decide how to carry it after you have caught your breath.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=6..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+A chair beside a door that opens easily. That would do.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=7..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+I check a stair before putting the weight on it. Other people will use it later.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.evening_walk.ask role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+A walk with no load? I may need reminding where to put my hands.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.evening_walk.arrive role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+That step used to wobble. Somebody has fixed it. Good.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.evening_walk.good role=role:porter stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Thank you for walking slowly. I kept expecting another delivery.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:porter stage=adult player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+You carried that properly. Your hands will thank you tomorrow.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:porter stage=adult player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+A dropped load can be picked up. Check your feet before you worry about the box.

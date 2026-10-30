@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.hokage_4.table | fn: deepen_bond reveal_character | level: 2 | tags: role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Q: At a long table, near the food or near the conversation?
+- Near the food :: Excellent. You can help pass it to the far end. {tone:honest}
+- Near the conversation :: Then leave space for somebody who takes longer to begin. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.hokage_4.bun_extra | fn: deepen_bond reveal_character | level: 2 | tags: role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Q: An extra bun: keep it for later or find somebody to share with?
+- Keep it for later :: Wrap it properly. Future hunger deserves a little planning. {tone:honest}
+- Share it now :: Look past the people already holding one. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.hokage_4.meeting | fn: deepen_bond reveal_character | level: 2 | tags: role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Q: A meeting runs long. Take a break or finish while everyone is here?
+- Take a break :: A hungry committee can turn a doorway into a dispute. {tone:honest}
+- Finish the last point :: One point, with a real end to it. Not six points wearing one hat. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.hokage_4.recipe | fn: deepen_bond reveal_character | level: 2 | tags: role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Q: New dish: follow the recipe or taste as you go?
+- Follow the recipe :: Then we will know which part to change next time. {tone:honest}
+- Taste as we go :: Bring another spoon. An honest second opinion saves a pot. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.hokage_4.welcome | fn: deepen_bond reveal_character | level: 3 | tags: role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Q: A new arrival: show the place or let them sit first?
+- Show them around :: At their pace. There will be time for every corridor. {tone:honest}
+- Let them sit :: And a cup within reach. They can ask when they are ready. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.hokage_4.chair | fn: deepen_bond reveal_character | level: 3 | tags: role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Q: A child needs to speak at a big desk. Smaller desk or taller chair?
+- A smaller desk :: A good room should not make a visitor feel like a misplaced parcel. {tone:honest}
+- A taller chair :: Sturdy steps too. Nobody should have to climb authority. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.hokage_4.thanks | fn: deepen_bond reveal_character | level: 3 | tags: role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Q: Thank the person who cooked, or the person who brought the meal?
+- The cook :: And I shall tell the carrier the praise arrived safely. {tone:honest}
+- The carrier :: A useful reminder that the food does not walk here itself. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.hokage_4.rule | fn: deepen_bond reveal_character | level: 4 | tags: role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Q: A useful rule nobody understands. Explain it or rewrite it?
+- Explain it clearly :: We may discover which part was never useful. {tone:honest}
+- Rewrite it simply :: Then let the people using it try the new words. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.hokage_4.listen | fn: deepen_bond reveal_character | level: 4 | tags: role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Q: Someone takes a long time to answer. Wait or offer choices?
+- Wait for them :: A silence can be somebody gathering courage. {tone:honest}
+- Offer some choices :: And make clear they may choose something we did not think of. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.hokage_4.enough | fn: deepen_bond reveal_character | level: 5 | tags: role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Q: How do you tell whether you have made enough room for people?
+- Ask who is missing :: That question belongs at the start of more meetings. {tone:honest}
+- Ask the people who came :: And believe the person who says the chair is too far away. {tone:gentle}

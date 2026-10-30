@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=reveal_character  | when: {"flag":"story.ch4.done"}
+You are early. Remain so.
+Keep the path clear, child. People use it even when you cannot see them.
+A question may wait until the bell has finished.
+You have brought mud to a stone path. An achievement of sorts.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch4.done"}
+Tea without crumbs in the records room. The crumbs are more persistent than children.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch4.done"}
+Put a tool back in the same place. You should not have to search in the dark.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch4.done"}
+Old handwriting rewards patience. Hurry, and every letter becomes the one you expected.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch4.done"}
+My teacher expected punctuality. I have found no reason to lower the standard.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch4.done"}
+An entry without a date is a rumour with tidy handwriting.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch4.done"}
+Write the question down before you ask it. You may discover which answer you fear.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch4.done"}
+Records that can be understood without their keeper standing beside the desk.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch4.done"}
+A mislaid key makes everyone wait. I account for mine before leaving.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.shrine_visit.ask role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch4.done"}
+Walk the shrine path if you wish. Leave the lanterns where they are.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.shrine_visit.arrive role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch4.done"}
+Read the weathered line slowly. The stone has already waited this long.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.shrine_visit.good role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch4.done"}
+You stayed until the last line. Few do.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=react,deepen_bond  | when: {"flag":"story.ch4.done"}
+A completed exercise belongs in its proper folder. Pride is no filing system.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=react,deepen_bond  | when: {"flag":"story.ch4.done"}
+Copy it again tomorrow, child. A tired hand merely copies its own errors.

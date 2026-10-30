@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.table.a1 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.table","a1"]}]}
+You chose a place near the food. I trusted you with the bowl that has to reach everybody.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.table.a2 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.table","a2"]}]}
+You wanted a place near the talk. I noticed you made room for the quiet guest.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.bun_extra.a1 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.bun_extra","a1"]}]}
+You saved the extra bun. I put a cloth beside the basket this time.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.bun_extra.a2 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.bun_extra","a2"]}]}
+You chose to share the extra. Somebody at the far table stopped pretending not to be hungry.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.meeting.a1 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.meeting","a1"]}]}
+You wanted the meeting to pause for food. We agreed faster when we came back.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.meeting.a2 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.meeting","a2"]}]}
+You wanted the last point finished. I kept the next matter for another day.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.recipe.a1 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.recipe","a1"]}]}
+You chose to follow the recipe. The kitchen has an actual record of what worked.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.recipe.a2 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.recipe","a2"]}]}
+You wanted to taste along the way. The onions escaped my usual enthusiasm.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.welcome.a1 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.welcome","a1"]}]}
+You wanted the new arrival shown around. You remembered where the confusing turn was.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.welcome.a2 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.welcome","a2"]}]}
+You chose a seat before the tour. Our guest asked the first question without being hurried.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.chair.a1 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.chair","a1"]}]}
+You wanted the desk brought closer to the child. The conversation became easier to hear.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.chair.a2 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.chair","a2"]}]}
+You chose the taller chair. I asked for steps before somebody tried the drawer handles.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.thanks.a1 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.thanks","a1"]}]}
+You thanked the cook. The kitchen made enough for the person carrying it too.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.thanks.a2 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.thanks","a2"]}]}
+You thanked the carrier. I followed the tray back to see who had filled it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.rule.a1 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.rule","a1"]}]}
+You wanted the rule explained. The question showed us a needless step.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.rule.a2 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.rule","a2"]}]}
+You chose simpler wording. A visitor filled the form without help today.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.listen.a1 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.listen","a1"]}]}
+You wanted the quiet speaker given time. We heard the answer that was waiting behind the pause.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.listen.a2 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.listen","a2"]}]}
+You chose to offer a starting point. Our guest found a different answer and said it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.enough.a1 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.enough","a1"]}]}
+You wanted us to ask who was missing. We found a person the invitation had passed by.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.hokage_4.enough.a2 role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.enough","a2"]}]}
+You wanted to ask the people already there. The smallest suggestion changed the room.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.hokage_4.table.back role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.table"]}]}
+Near whoever has not been asked anything yet.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.hokage_4.bun_extra.back role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.bun_extra"]}]}
+Share it, then ask the kitchen whether later has been provided for.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.hokage_4.meeting.back role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.meeting"]}]}
+A break before we start mistaking tiredness for conviction.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.hokage_4.recipe.back role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.recipe"]}]}
+Follow it once. Then ask the person eating whether the recipe knew enough.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.hokage_4.welcome.back role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.welcome"]}]}
+A seat, a cup, then a person who has time to walk beside them.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.hokage_4.chair.back role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.chair"]}]}
+I would come round the desk. Furniture can wait for the carpenter.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.hokage_4.thanks.back role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.thanks"]}]}
+Both, and whoever washed the pan. Gratitude has a longer route than the tray.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.hokage_4.rule.back role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.rule"]}]}
+Explain it to the person who will live under it, and listen to the questions.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.hokage_4.listen.back role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.listen"]}]}
+Wait a little. Then ask whether help would make the question smaller.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.hokage_4.enough.back role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done level=5..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]},{"answered":["role:hokage_4","q.cast.hokage_4.enough"]}]}
+Keep asking. A room can be welcoming on one day and difficult on another.

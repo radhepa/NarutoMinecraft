@@ -3,14 +3,14 @@
 # The full story pools wait for the story lock and the per-character dialogue briefs (docs/story/).
 
 ## chat.village  story=story.seed.watcher  fn=foreshadow,react | when: {"flag": "story.ch4.done"}
-Someone was running across the rooftops last night. Too light for a shinobi on patrol, my husband says.
+Someone was running across the rooftops last night. Too heavy on its feet for a shinobi on patrol, my husband says.
 The night watch found scratches on a door in the apartment block. Kids, they think. I'm not so sure.
 
 ## chat.village  story=story.seed.sealed_door  fn=foreshadow,worldbuild | when: {"flag": "story.ch4.done"}
 There's a stone door at the foot of the Rock nobody's opened in my lifetime. My grandmother said not to ask.
 
 ## chat.rank  rank=chunin|jonin  story=story.ch14.done  fn=foreshadow,react | when: {"flag": "story.ch14.done"}
-The desk is passing round a name to watch for on the roads: Yūgure. Two-man teams, ash-violet cloaks. Keep your eyes open.
+The desk is passing round a name to watch for on the roads: Yūgure. Threes or more, in ordinary road clothes, a soot mark on the wrist. Keep your eyes open.
 
 ## chat.village  story=story.seed.cargo_found  fn=foreshadow,hook | when: {"flag": "story.seed.cargo_found"}
 A merchant's cart came back from the east with a false floor. Paper in it, the gate guard said. Chakra paper.

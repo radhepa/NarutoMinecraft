@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.staff.a1 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.staff","a1"]}]}
+You chose "Distance". Then mind the far end! It arrives before my explanation!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.staff.a2 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.staff","a2"]}]}
+You chose "Control". A smaller swing! A larger achievement than it sounds!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_a.staff.back role=role:squad5_a stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.staff"]}]}
+Control, so I can use the distance without borrowing somebody's ankle!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.lantern_frame.a1 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.lantern_frame","a1"]}]}
+You chose "Test it first". Grandma would approve before pretending not to!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.lantern_frame.a2 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.lantern_frame","a2"]}]}
+You chose "Decorate a little first". Keep the working parts clear! A beautiful collapse is still a collapse!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_a.lantern_frame.back role=role:squad5_a stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.lantern_frame"]}]}
+Test first, decorate loudly afterwards!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.ambition.a1 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.ambition","a1"]}]}
+You chose "Say it aloud". Then people can hold you to the work behind it!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.ambition.a2 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.ambition","a2"]}]}
+You chose "Let the work speak". A quieter announcement! I can learn from that!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_a.ambition.back role=role:squad5_a stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.ambition"]}]}
+Aloud! Then I need friends to ask whether I did today's practice!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.welcome.a1 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.welcome","a1"]}]}
+You chose "Introduce the group". Slowly enough that the names have somewhere to land!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.welcome.a2 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.welcome","a2"]}]}
+You chose "One friendly face". A good beginning! The rest of us can wait our turn!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_a.welcome.back role=role:squad5_a stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.welcome"]}]}
+One face first, then a group with room to remember the names!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.practice_laugh.a1 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.practice_laugh","a1"]}]}
+You chose "Laugh, then fix it". That order works! The fixing still has to happen!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.practice_laugh.a2 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.practice_laugh","a2"]}]}
+You chose "Fix it quietly". A solid plan! I will try to leave enough quiet for it!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_a.practice_laugh.back role=role:squad5_a stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.practice_laugh"]}]}
+Laugh once, correct it properly, avoid claiming the mistake was deliberate!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.lantern_word.a1 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.lantern_word","a1"]}]}
+You chose "A name". Somebody you want kept in view!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.lantern_word.a2 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.lantern_word","a2"]}]}
+You chose "A wish". Then choose one you can help carry tomorrow!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_a.lantern_word.back role=role:squad5_a stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.lantern_word"]}]}
+A name, with the wish in what I do after the walk!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.speech.a1 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.speech","a1"]}]}
+You chose "A short speech". A challenge to my strongest natural technique!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.speech.a2 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.speech","a2"]}]}
+You chose "Hear the others". Then I should stop preparing my next sentence while they talk!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_a.speech.back role=role:squad5_a stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.speech"]}]}
+The others, after a short invitation I have actually practised keeping short!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.future_job.a1 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.future_job","a1"]}]}
+You chose "Learn the names". Then the rules have actual people to answer to!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.future_job.a2 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.future_job","a2"]}]}
+You chose "Understand the rules". And ask the people which ones help them!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_a.future_job.back role=role:squad5_a stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.future_job"]}]}
+Names beside rules! A village should fit on neither list alone!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.win_company.a1 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.win_company","a1"]}]}
+You chose "Win the hard match". Then tell the partner which part made it hard!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.win_company.a2 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.win_company","a2"]}]}
+You chose "Improve together". A village-sized answer! I approve at full volume!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_a.win_company.back role=role:squad5_a stage=child player_stage=child story=story.ch7.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.win_company"]}]}
+Improve together, while trying very earnestly to win!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.custom.a1 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.custom","a1"]}]}
+You chose "Repeat them carefully". Then somebody should answer the question after the walk!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_a.custom.a2 role=role:squad5_a stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.custom","a2"]}]}
+You chose "Ask what they mean". Good! I have questions too, enough for the whole lantern path!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_a.custom.back role=role:squad5_a stage=child player_stage=child story=story.ch7.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_a","q.cast.squad5_a.custom"]}]}
+Ask. Old words deserve people who understand what they are carrying!

@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.rest.a1 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.rest","a1"]}]}
+You asked for the break. Your hands were steadier after it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.rest.a2 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.rest","a2"]}]}
+You wanted a clean attempt before resting. You knew when to put the tools down.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.pack.a1 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.pack","a1"]}]}
+You chose to share the load. I packed an extra length of wire.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.pack.a2 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.pack","a2"]}]}
+You left the unnecessary weight behind. Easier to climb with a reason for every item.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.rain.a1 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.rain","a1"]}]}
+You chose the indoor drill. The floor still remembers our footwork.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.rain.a2 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.rain","a2"]}]}
+You practised in the rain. This time bring the dry socks before I ask.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.mistake.a1 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.mistake","a1"]}]}
+You asked for the correction early. You caught the shoulder without my help today.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.mistake.a2 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.mistake","a2"]}]}
+You wanted to find the mistake yourself. I saw the moment you did.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.quiet.a1 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.quiet","a1"]}]}
+You said silence was comfortable. I kept this stretch of path for us.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.quiet.a2 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.quiet","a2"]}]}
+You told me the quiet was awkward. I have a question ready for the walk.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.praise.a1 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.praise","a1"]}]}
+You preferred the nod. That last one earned it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.praise.a2 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.praise","a2"]}]}
+You asked why it worked. You can explain that recovery to the next student.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.shavings.a1 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.shavings","a1"]}]}
+You wanted another cut. The small shape survived your patience.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.shavings.a2 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.shavings","a2"]}]}
+You left the shape alone. It still fits the hand the way you noticed.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.help.a1 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.help","a1"]}]}
+You agreed to interrupt. That warning reached me before my next step.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.help.a2 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.help","a2"]}]}
+You wanted to wait until we were clear. You still spoke when it mattered.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.lunch.a1 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.lunch","a1"]}]}
+You chose company. There is room beside the pot.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.lunch.a2 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.lunch","a2"]}]}
+You asked for a quiet lunch. I checked that bench was free.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.finish.a1 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.finish","a1"]}]}
+You called the day finished when everyone was home. I waited for the last report.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.sensei.finish.a2 role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.finish","a2"]}]}
+You wanted one thing put right. The repaired strap counts.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.sensei.rest.back role=role:sensei stage=adult player_stage=child story=story.ch0.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.rest"]}]}
+I stop when I begin correcting the same mistake twice.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.sensei.pack.back role=role:sensei stage=adult player_stage=child story=story.ch0.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.pack"]}]}
+The thing I packed because I did not trust the first thing.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.sensei.rain.back role=role:sensei stage=adult player_stage=child story=story.ch0.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.rain"]}]}
+Wet weather. Short session. Dry firewood ready.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.sensei.mistake.back role=role:sensei stage=adult player_stage=child story=story.ch0.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.mistake"]}]}
+I ask another person. My own eyes have learned my excuses.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.sensei.quiet.back role=role:sensei stage=adult player_stage=child story=story.ch0.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.quiet"]}]}
+Comfortable, until I realise I should have asked somebody a question.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.sensei.praise.back role=role:sensei stage=adult player_stage=child story=story.ch0.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.praise"]}]}
+The explanation. I pretend otherwise.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.sensei.shavings.back role=role:sensei stage=adult player_stage=child story=story.ch0.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.shavings"]}]}
+I keep it in my pocket until I know what I am making.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.sensei.help.back role=role:sensei stage=adult player_stage=child story=story.ch0.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.help"]}]}
+Straight away, if another pair of feet depends on it.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.sensei.lunch.back role=role:sensei stage=adult player_stage=child story=story.ch0.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.lunch"]}]}
+Quiet company. Those can go together.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.sensei.finish.back role=role:sensei stage=adult player_stage=child story=story.ch0.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:sensei","q.cast.sensei.finish"]}]}
+Putting the tools away, and hearing the last person come in.

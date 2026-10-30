@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.flower.a1 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.flower","a1"]}]}
+You chose "Its colour". Then say so. Meanings are not instructions.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.flower.a2 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.flower","a2"]}]}
+You chose "Its meaning". Check whether the receiver knows the same one.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_c.flower.back role=role:squad3_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.flower"]}]}
+Both, when possible. I ask before assuming either.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.quiet.a1 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.quiet","a1"]}]}
+You chose "Ask quietly". You can decline. That is an answer.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.quiet.a2 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.quiet","a2"]}]}
+You chose "Leave it alone". I will not make the silence a question.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_c.quiet.back role=role:squad3_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.quiet"]}]}
+Ask once. Reading a face does not give me the right to read the whole person.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.signal.a1 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.signal","a1"]}]}
+You chose "Hand signal". Check the other person can see it.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.signal.a2 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.signal","a2"]}]}
+You chose "Spoken warning". Make the important word first.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_c.signal.back role=role:squad3_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.signal"]}]}
+Whichever reaches the person. A missed elegant signal is still missed.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.first_read.a1 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.first_read","a1"]}]}
+You chose "Check another detail". A useful habit. Choose one that could change your mind.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.first_read.a2 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.first_read","a2"]}]}
+You chose "Keep the first in mind". Keep it separate from what you actually know.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_c.first_read.back role=role:squad3_c stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.first_read"]}]}
+Check. A strong feeling can still be about the wrong thing.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.gift.a1 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.gift","a1"]}]}
+You chose "Give them openly". Then the receiver can ask what you meant.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.gift.a2 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.gift","a2"]}]}
+You chose "Leave a note". Sign it if you want the meaning to arrive intact.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_c.gift.back role=role:squad3_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.gift"]}]}
+Openly, unless the person has asked for quiet.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.wrong_read.a1 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.wrong_read","a1"]}]}
+You chose "I will correct you". Good. I would rather update the reading.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.wrong_read.a2 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.wrong_read","a2"]}]}
+You chose "Give you a moment". I may still need the correction after the moment.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_c.wrong_read.back role=role:squad3_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.wrong_read"]}]}
+Correct me. Silence can be difficult to distinguish from agreement.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.colour.a1 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.colour","a1"]}]}
+You chose "Bright ones". Easy to find across a room.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.colour.a2 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.colour","a2"]}]}
+You chose "Slow-opening ones". Then the gift changes after it arrives.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_c.colour.back role=role:squad3_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.colour"]}]}
+Slow-opening. They reward a second visit.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.observation.a1 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.observation","a1"]}]}
+You chose "Say what I noticed". Keep the observation separate from the explanation.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.observation.a2 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.observation","a2"]}]}
+You chose "Ask first". Then leave room for an unexpected answer.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_c.observation.back role=role:squad3_c stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.observation"]}]}
+Ask. Observation without permission can feel like a report.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.care.a1 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.care","a1"]}]}
+You chose "Tell me they came home". A clear fact. It can carry enough.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.care.a2 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.care","a2"]}]}
+You chose "Ask why they left". Ask the person, not the empty chair.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_c.care.back role=role:squad3_c stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.care"]}]}
+That they came home, unless they want to tell the rest.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.certainty.a1 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.certainty","a1"]}]}
+You chose "Yes, begin small". A cup of water does not need a complete theory.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_c.certainty.a2 role=role:squad3_c stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.certainty","a2"]}]}
+You chose "Ask what would help". Then listen without replacing the answer.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_c.certainty.back role=role:squad3_c stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_c","q.cast.squad3_c.certainty"]}]}
+Ask, and keep the small kindness available while waiting.

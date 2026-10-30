@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_b.step | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_b stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Quiet step or quick step?
+- Quiet :: Set the heel later. {tone:honest}
+- Quick :: Keep the balance. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_b.signal | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_b stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Point or whisper?
+- Point :: Make sure I can see. {tone:honest}
+- Whisper :: One clear word. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_b.lantern | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_b stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Trim the wick now or before lighting?
+- Now :: Good light starts early. {tone:honest}
+- Before lighting :: Leave time to check. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_b.path | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_b stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Known route or new turn?
+- Known route :: Check it anyway. {tone:honest}
+- New turn :: Mark the way back. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_b.company | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_b stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Walk beside me or a little behind?
+- Beside :: Enough room here. {tone:honest}
+- Behind :: Watch the other side. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_b.notice | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_b stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Quiet work: tell someone or leave it done?
+- Tell who needs to know :: Briefly. {tone:honest}
+- Leave it finished :: Check they notice the change. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_b.rain | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_b stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Under the eave or through the rain?
+- Under the eave :: Keep the doorway clear. {tone:honest}
+- Through the rain :: Wrap the paper first. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_b.message | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_b stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: A short message or a clear sign?
+- A short message :: Write the time. {tone:honest}
+- A clear sign :: Agree the meaning first. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_b.waiting | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad5_b stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Wait in sight or out of the way?
+- In sight :: Do not block the path. {tone:honest}
+- Out of the way :: Leave a mark. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_b.thanks | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad5_b stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: For quiet help: words or another useful task?
+- A few words :: Enough. {tone:honest}
+- Do another task :: Ask which one. {tone:gentle}

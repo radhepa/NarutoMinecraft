@@ -46,7 +46,8 @@ public final class Tags {
     }
 
     public boolean matches(Context c) {
-        for (var e : needs.entrySet()) if (!e.getValue().ok(c.get(e.getKey()))) return false;
+        // story indexes the authoring gate; when evaluates it. A moment can have many completed story flags.
+        for (var e : needs.entrySet()) if (!e.getKey().equals("story") && !e.getValue().ok(c.get(e.getKey()))) return false;
         return needs.containsKey("stage") || !"child".equals(c.get("stage"));
     }
     public boolean names(String key) { return needs.containsKey(key); }

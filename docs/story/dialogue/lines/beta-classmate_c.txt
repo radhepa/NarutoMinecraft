@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=reveal_character  | when: {"flag":"story.ch1.done"}
+Mind the shavings. I am making a very small mess with a very large broom.
+Sit here. I checked the leg. That bench over there is still a theory.
+Mum packed extra. I think she counts my whole class as a visitor.
+Oh, good. Hold this straight edge a moment, {player}.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+At our table the serving bowl goes round twice. The second time is for people who were being polite.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+If I mark where my foot lands, I can see the mistake. Like measuring a crooked shelf.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch1.done"}
+This offcut could be a cup rest. Or a smaller offcut. I am deciding.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch1.done"}
+Our yard sounds like work even when everyone is eating. Somebody always taps the table to test it.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+A good joint is the bit nobody notices because it keeps holding.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+Put a support under the heavy end before you try lifting it.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch1.done"}
+I would like to build a place people still use when nobody remembers who built it.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch1.done"}
+Making a thing takes so much longer than breaking it. I keep making them.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.flower_viewing.ask role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+We can eat by the river. I fixed the handle on the basket.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.flower_viewing.arrive role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+The lid becomes a little table. Here, this is the clever part.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.flower_viewing.good role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+There. We found a use for that scrap of wood and an entire afternoon.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+The form held! I had to think of it as a frame with moving corners.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:classmate_c stage=child player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+That did not fit. I will measure the gap before I cut the next piece.

@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_d.position | fn: deepen_bond reveal_character | level: 2 | tags: role=role:classmate_d stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Walking together: side by side, or one watching the path ahead?
+- Side by side :: We can still watch different sides. {tone:honest}
+- Watch ahead :: Say if my pace pulls away from yours. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_d.footwork | fn: deepen_bond reveal_character | level: 2 | tags: role=role:classmate_d stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Watch my lead foot or the one following it?
+- Lead foot :: Tell me if it tells you too much. {tone:honest}
+- Following foot :: That is where I get careless. Good choice. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_d.moon | fn: deepen_bond reveal_character | level: 2 | tags: role=role:classmate_d stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Moon-viewing from the platform or from the riverbank?
+- The platform :: I will bring something to sit on. The boards get cold. {tone:honest}
+- The riverbank :: We can watch the reflection as well. Away from the slippery stones. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_d.call | fn: deepen_bond reveal_character | level: 3 | tags: role=role:classmate_d stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: In practice, call the opening before or after the strike?
+- Before :: Then we learn whether the other person can answer it. {tone:honest}
+- After :: Then we compare what we each thought happened. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_d.knots | fn: deepen_bond reveal_character | level: 3 | tags: role=role:classmate_d stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you mind somebody checking your knot?
+- Please check it :: Hold the buckle still. I will show the loose part. {tone:honest}
+- Let me show you first :: All right. I will watch, rather than reach over your hands. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_d.wait | fn: deepen_bond reveal_character | level: 3 | tags: role=role:classmate_d stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A friend falls behind on a path. Wait or walk back?
+- Wait where they can see :: Then they know the meeting place has not moved. {tone:honest}
+- Walk back to them :: I will make sure they can hear me coming. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_d.practice_day | fn: deepen_bond reveal_character | level: 3 | tags: role=role:classmate_d stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Extra practice: the weak form or something you enjoy?
+- The weak form :: A short set. Tired hands hide the correction. {tone:honest}
+- Something I enjoy :: We can end with it. A good stance is worth keeping too. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_d.warning | fn: deepen_bond reveal_character | level: 4 | tags: role=role:classmate_d stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you rather I warn you quietly or make sure everyone hears?
+- Quietly :: If there is time. I will speak louder when there is not. {tone:honest}
+- Make sure they hear :: Then nobody has to guess whether the warning was meant for them. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_d.guard_work | fn: deepen_bond reveal_character | level: 4 | tags: role=role:classmate_d stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Does standing watch count as doing something when nothing happens?
+- That is the work :: I hoped you would say that. Quiet can be a result. {tone:honest}
+- It can still teach you :: The sounds, the feet, who usually comes by. There is a lot to learn. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_d.promise_size | fn: deepen_bond reveal_character | level: 5 | tags: role=role:classmate_d stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A promise you can keep easily, or a difficult one you might fail?
+- Keep the small promise :: Then the next person has something solid to rely on. {tone:honest}
+- Risk the difficult one :: Tell them the risk before they depend on it. {tone:gentle}

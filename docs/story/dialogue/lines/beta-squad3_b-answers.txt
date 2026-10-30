@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.broth.a1 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.broth","a1"]}]}
+You chose "Taste now". A small spoon. Then we know what the next ingredient changes.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.broth.a2 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.broth","a2"]}]}
+You chose "Let it settle". Good. Some flavours need room to meet.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_b.broth.back role=role:squad3_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.broth"]}]}
+A little now and a little later. I like finding the difference.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.help_cook.a1 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.help_cook","a1"]}]}
+You chose "Chop". I will show how I keep the pieces the same size.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.help_cook.a2 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.help_cook","a2"]}]}
+You chose "Stir". Slowly at the bottom too. That bit gets forgotten.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_b.help_cook.back role=role:squad3_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.help_cook"]}]}
+Stirring. It gives me time to hear the person beside me.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.portion.a1 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.portion","a1"]}]}
+You chose "A big serving". Tell me when it is enough. I can still learn that.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.portion.a2 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.portion","a2"]}]}
+You chose "A small first serving". There is more in the pot. You will not have to ask twice.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_b.portion.back role=role:squad3_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.portion"]}]}
+Small first, with the rest where everybody can reach.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.recipe.a1 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.recipe","a1"]}]}
+You chose "Keep it exact". Then we can taste what they meant to make.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.recipe.a2 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.recipe","a2"]}]}
+You chose "Change a little". Write the change down. I always think I will remember.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_b.recipe.back role=role:squad3_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.recipe"]}]}
+Exact once, then ask who is eating it today.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.leftovers.a1 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.leftovers","a1"]}]}
+You chose "Save them properly". Tomorrow deserves something warm too.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.leftovers.a2 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.leftovers","a2"]}]}
+You chose "Invite someone". I know somebody who tends to say they already ate.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_b.leftovers.back role=role:squad3_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.leftovers"]}]}
+Invite somebody, then pack the rest. Food can look after two afternoons.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.table_place.a1 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.table_place","a1"]}]}
+You chose "Choose a seat". Leave one beside it if you want company.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.table_place.a2 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.table_place","a2"]}]}
+You chose "See where I fit". I can make a little room before everybody sits.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_b.table_place.back role=role:squad3_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.table_place"]}]}
+I watch who is trying to be polite about needing a place.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.new_dish.a1 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.new_dish","a1"]}]}
+You chose "Try something new". One taste is enough to begin.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.new_dish.a2 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.new_dish","a2"]}]}
+You chose "Stay with a favourite". That is a good thing to know when I cook for you.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_b.new_dish.back role=role:squad3_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.new_dish"]}]}
+Something familiar beside a little new thing. A kinder experiment.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.thanks_cook.a1 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.thanks_cook","a1"]}]}
+You chose "Name the good part". I like knowing which flavour you noticed.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.thanks_cook.a2 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.thanks_cook","a2"]}]}
+You chose "Finish the bowl". That is a clear answer too.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_b.thanks_cook.back role=role:squad3_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.thanks_cook"]}]}
+Tell them one thing, and finish what I can. Both are honest.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.burnt_edge.a1 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.burnt_edge","a1"]}]}
+You chose "Trim the edge". Let us check the middle before giving up the whole thing.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.burnt_edge.a2 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.burnt_edge","a2"]}]}
+You chose "Start again". We have time, if the pot is cool enough.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_b.burnt_edge.back role=role:squad3_b stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.burnt_edge"]}]}
+Check first. Sometimes it needs a small correction rather than a new morning.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.remember_order.a1 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.remember_order","a1"]}]}
+You chose "Yes, that feels nice". I will leave room for the days you change your mind.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_b.remember_order.a2 role=role:squad3_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.remember_order","a2"]}]}
+You chose "Ask each time". Then I can hear what sort of day it has been.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_b.remember_order.back role=role:squad3_b stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_b","q.cast.squad3_b.remember_order"]}]}
+Remember, but ask if they want the usual. People are allowed to change.

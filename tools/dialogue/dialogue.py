@@ -229,9 +229,9 @@ def check_text(where, text, terms, tags, gated, limit=MAX_LINE, pool=''):
     plain = TOKEN.sub('', text)
     if CANON.search(plain):
         fail(where, f'canon name or catchphrase {CANON.search(plain).group(0)!r}: original characters only, names as tokens')
-    for name in NAME_LITERALS:
-        if re.search(r'\b' + re.escape(name) + r'\b', plain):
-            fail(where, f'literal name {name!r}: names are tokens ({{name:role:x}}, {{given:...}}, {{player}})')
+    literal = NAME_LITERAL.search(plain)
+    if literal:
+        fail(where, f'literal name {literal.group(0)!r}: names are tokens ({{name:role:x}}, {{given:...}}, {{player}})')
     if REAL_WEEKDAY.search(plain):
         fail(where, f'weekday {REAL_WEEKDAY.search(plain).group(0)!r}: the Leaf\'s week is Moonday, Fireday, Waterday, Woodday, Metalday, Earthday, Sunday')
     if ADDRESS.search(plain):
@@ -263,13 +263,20 @@ def family_names():
     names = set(pop.get('family_names', []))
     given = PROJECT / 'village/src/main/resources/data/narutominecraft/names/given.json'
     if given.exists():
-        for pool in json.loads(given.read_text(encoding='utf-8')).values():
-            if isinstance(pool, list):
-                names |= set(pool)
+        data = json.loads(given.read_text(encoding='utf-8'))
+        for gender in ('male', 'female', 'unisex'):
+            pool = data.get(gender, [])
+            if not isinstance(pool, list) or len(pool) < 150 or len(set(pool)) != len(pool):
+                fail(str(given), f'{gender}: needs at least 150 distinct given names')
+            for name in pool:
+                if not isinstance(name, str) or not re.fullmatch(r'[A-Z][a-z]{0,63}', name) or CANON.search(name):
+                    fail(str(given), f'{gender}: invalid or canon given name {name!r}')
+            names |= set(pool)
     return sorted(names)
 
 
 NAME_LITERALS = family_names()
+NAME_LITERAL = re.compile(r'\b(?:' + '|'.join(map(re.escape, NAME_LITERALS)) + r')\b')
 
 
 # -- sources ----------------------------------------------------------------------------------------------
@@ -638,6 +645,9 @@ def load_all():
             read_exchanges(p, gated, terms, exchanges)
         for p in qs:
             read_questions(p, gated, terms, questions, qids)
+    for item in lines + exchanges + questions:
+        if item['gated'] and ('story' not in item['tags'] or item['when'] is None):
+            fail(item['where'], 'story-gated sources need story=<id> and an explicit when condition')
     seen = Counter((it['pool'], it['text'], json.dumps(it['tags'], sort_keys=True)) for it in lines)
     dups = [k for k, c in seen.items() if c > 1]
     if dups:
@@ -873,8 +883,8 @@ def main():
         return
     OUT.mkdir(parents=True, exist_ok=True)
     for name, data in out.items():
-        (OUT / name).write_text(render(data), encoding='utf-8')
-    LOCK.write_text(json.dumps(lock, indent=0, sort_keys=True) + '\n', encoding='utf-8')
+        (OUT / name).write_text(render(data), encoding='utf-8', newline='\n')
+    LOCK.write_text(json.dumps(lock, indent=0, sort_keys=True) + '\n', encoding='utf-8', newline='\n')
     print(f'Dialogue: {total} pieces: {len(lines)} lines in {len({l["pool"] for l in lines})} pools, '
           f'{len(exchanges)} exchanges, {len(questions)} questions; ids up to {lock["next"] - 1}.')
 

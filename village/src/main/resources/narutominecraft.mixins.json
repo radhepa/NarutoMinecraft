@@ -1,1 +1,1 @@
-{"required":true,"package":"dev.shinobi.village.mixin","compatibilityLevel":"JAVA_25","mixins":["AssignmentsMixin","HomesMixin","WardrobeMixin"],"injectors":{"defaultRequire":1}}
+{"required":true,"package":"dev.shinobi.village.mixin","compatibilityLevel":"JAVA_25","mixins":["AssignmentsMixin","HomesMixin","WardrobeMixin","NamesMixin"],"injectors":{"defaultRequire":1}}

@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.route.a1 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.route","a1"]}]}
+You chose "Follow the nose". Adventure by expert opinion!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.route.a2 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.route","a2"]}]}
+You chose "Choose the route". Fine! Expert opinion gets a vote at each turn!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_b.route.back role=role:squad4_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.route"]}]}
+We choose the safe edges. The nose can decorate the middle!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.run.a1 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.run","a1"]}]}
+You chose "Sprint first". A magnificent beginning! We still need legs afterwards!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.run.a2 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.run","a2"]}]}
+You chose "Save the sprint". A dramatic ending! I can appreciate dramatic planning!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_b.run.back role=role:squad4_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.run"]}]}
+Save it! Unless someone says go, which creates difficulties!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.dog_space.a1 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.dog_space","a1"]}]}
+You chose "Wait for the dog". Good manners! The expert approves!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.dog_space.a2 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.dog_space","a2"]}]}
+You chose "Ask the handler first". Excellent! Sometimes the nose is working!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_b.dog_space.back role=role:squad4_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.dog_space"]}]}
+Ask first! A big friendly face still gets to choose visitors!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.cheering.a1 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.cheering","a1"]}]}
+You chose "One enormous cheer". I have trained for this precise task!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.cheering.a2 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.cheering","a2"]}]}
+You chose "Lots of little ones". A sustained campaign! Very professional!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_b.cheering.back role=role:squad4_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.cheering"]}]}
+Little ones until the finish. Then everybody protects their ears!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.contest.a1 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.contest","a1"]}]}
+You chose "Speed round". Small portions! I am interested in victory, not a hospital visit!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.contest.a2 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.contest","a2"]}]}
+You chose "Favourite dish". Then we both get a good reason to lose slowly!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_b.contest.back role=role:squad4_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.contest"]}]}
+Favourite dish! A contest should have excellent ingredients!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.training_partner.a1 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.training_partner","a1"]}]}
+You chose "Ahead to chase". A moving target for my enormous determination!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.training_partner.a2 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.training_partner","a2"]}]}
+You chose "Beside me". Then we can hear when the other needs a slower stretch!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_b.training_partner.back role=role:squad4_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.training_partner"]}]}
+Beside, unless the dog finds something truly urgent to smell!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.rest_signal.a1 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.rest_signal","a1"]}]}
+You chose "Say stop". Loud enough for the person making all the noise! That may be me!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.rest_signal.a2 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.rest_signal","a2"]}]}
+You chose "Raise a hand". Then I promise to look up from my heroic effort!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_b.rest_signal.back role=role:squad4_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.rest_signal"]}]}
+A hand and a word. I am good at enthusiasm and need clear instructions!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.muddy_paws.a1 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.muddy_paws","a1"]}]}
+You chose "Wash outside". A sound plan that does not involve lifting an entire opinion!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.muddy_paws.a2 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.muddy_paws","a2"]}]}
+You chose "Carry if I can". Ask the dog first! Some passengers are very wiggly!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_b.muddy_paws.back role=role:squad4_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.muddy_paws"]}]}
+Outside! The bath door has already expressed concerns!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.rematch.a1 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.rematch","a1"]}]}
+You chose "Rematch now". Yes! With one useful correction, so it is not just the same noise!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.rematch.a2 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.rematch","a2"]}]}
+You chose "Practise tomorrow". Fine! I can become more formidable before breakfast!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_b.rematch.back role=role:squad4_b stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.rematch"]}]}
+Tomorrow, once I have said rematch immediately three times!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.notice_good.a1 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.notice_good","a1"]}]}
+You chose "Say thanks clearly". A good use for a voice that carries!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_b.notice_good.a2 role=role:squad4_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.notice_good","a2"]}]}
+You chose "Help back quietly". A surprise act of useful competence! I like it!
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_b.notice_good.back role=role:squad4_b stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_b","q.cast.squad4_b.notice_good"]}]}
+Both! The dog notices everything without saying a word, so I can learn!

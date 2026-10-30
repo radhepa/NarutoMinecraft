@@ -1,0 +1,180 @@
+# Beta mission banter by actual speaker role, using the existing mission moments.
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.brief.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Read the destination before you tie the pack. A familiar road can still be the wrong one.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.depart.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Check each other's straps. Your own back is difficult to see.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.travel.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Keep a little breath for questions. A hard pace is no use if you arrive unable to speak.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.arrive.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Look at the exits before putting the load down. Then listen to the client.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.ambush.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Off the centre of the path. Give the client somewhere to move.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.twist.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+New information. Say what changed before changing the plan.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.fight.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+One at a time through that opening. Do not fight for the same space.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.low_health.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Name the injury. We change the pace before it changes itself.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.choice.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Tell me which part of the choice you will still stand by tomorrow.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.camp.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Eat while the water heats. Quiet talk after the watch is set.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.victory.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Everyone here. Good. Put the tools away before you start celebrating.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.grade_s.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Clean work leaves little to explain. Explain it anyway, for the next squad.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.partial.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Write down what remains. The next person should not have to rediscover it.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.fail.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+We report the failure accurately. Shame is poor information.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.report.sensei role=role:sensei stage=adult player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+What happened, what changed, what is unfinished. In that order.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.brief.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+I marked the route lightly. Um. We can change it without losing the first plan.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.depart.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+The drawing is only of the crossroads. It fits in your pocket if you fold it here.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.travel.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+From here the ridge looks like a sleeping animal. Sorry. I am watching the path too.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.arrive.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+The building looks smaller from the other side. I think that window faces the yard.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.ambush.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+I can hide the edge of the cart. Tell me when you are past it.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.twist.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+There is a shape in this we did not draw before. Could we look at it together?
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.fight.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+I will keep the outline clear. You choose where to step through it.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.low_health.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+My hands need a moment to stop shaking. I can still tell you what I see.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.choice.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Could we say the choices aloud? Sometimes they sound different outside my head.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.camp.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+The fire changes every face. I am only drawing the cups tonight. Easier to hold still.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.victory.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+The last part worked. I drew the place where we nearly lost it, so I remember.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.grade_s.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+They noticed the small careful part. I hoped someone would.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.partial.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+It is not the finished picture. We can still show what we did manage.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.fail.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+I will keep the first plan. It shows where we stopped seeing what was really there.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.report.teammate role=role:teammate_a stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Um. Should I show the sketch with the report? It explains the turn better than my words.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.brief.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Right! Real job! I am listening all the way through before inventing the exciting version.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.depart.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Grandma packed extra. Do not argue. The pup already tried and lost.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.travel.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+That tree looks like the last tree. I am relying on the map, which is personal growth.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.arrive.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+We made it! Where does the heavy bit go? Point before I decide this is a good floor.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.ambush.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Behind the cart! Pup stays with the client! I have practised saying that seriously!
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.twist.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Hang on. That was not in the brief. Can we ask one more question before charging anywhere?
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.fight.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Your left is mine! Not the other left! Yes, that one!
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.low_health.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+I need a slower bit. I am saying it before anybody has to drag me. See? Learning!
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.choice.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Tell me which plan gets everybody back to dinner. We can argue about the rest while walking.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.camp.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+The pup gets the warm side. I get the noisy side. That is wherever I am sitting.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.victory.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Done! Now we check the bags before I tell Grandma the heroic version!
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.grade_s.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Top grade! For the actual work, not just my very convincing victory pose!
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.partial.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Some of it done is still something. What do we need to tell the next people?
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.fail.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Fine. We missed it. I am writing the mistake down before I turn it into an excuse.
+
+# teach/life: an actual task and the speaker's way of approaching it.
+## mission.banter.report.teammate role=role:teammate_b stage=child player_stage=child story=story.ch8.done fn=react,reveal_character kind=cycle | when: {"flag":"story.ch8.done"}
+Can I tell the part where we got it right? After the important bits. I know the order now.

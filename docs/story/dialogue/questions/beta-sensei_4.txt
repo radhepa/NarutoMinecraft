@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_4.pause | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done | when: {"flag":"story.ch14.done"}
+Q: Why did you pause before answering?
+- I was checking my words :: Keep the pause. Make the words useful. {tone:honest}
+- I was not sure :: A reason to ask, rather than guess. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_4.question | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done | when: {"flag":"story.ch14.done"}
+Q: One precise question or several simple ones?
+- One precise question :: Then make sure it contains only one thing. {tone:honest}
+- Several simple ones :: Leave enough silence for each answer. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_4.listen | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done | when: {"flag":"story.ch14.done"}
+Q: Hear the whole account before taking notes?
+- Hear it first :: Then write before your memory tidies it. {tone:honest}
+- Notes as we go :: Look up often enough to notice the person. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_4.detail | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done | when: {"flag":"story.ch14.done"}
+Q: Check the surprising detail or the ordinary one?
+- The surprising detail :: Ask how it was noticed. {tone:honest}
+- The ordinary one :: Good. Familiar things are easy to copy without seeing. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_4.correction | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done | when: {"flag":"story.ch14.done"}
+Q: Would you rather correct yourself or hear my question?
+- Let me correct it :: You have time. {tone:honest}
+- Ask the question :: What did you see, before deciding what it meant? {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_4.silence | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done | when: {"flag":"story.ch14.done"}
+Q: Does a silence always need another question?
+- Leave it a moment :: A sensible use of a moment. {tone:honest}
+- Ask if they need time :: Clear permission can make a difference. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_4.confidence | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done | when: {"flag":"story.ch14.done"}
+Q: A confident answer or one showing its uncertainty?
+- Confident, with a reason :: The reason is the useful part. {tone:honest}
+- Show the uncertainty :: Then we know where to check next. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_4.repeat | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done | when: {"flag":"story.ch14.done"}
+Q: Repeat an instruction or ask what was understood?
+- Repeat it plainly :: Change the words if the first ones failed. {tone:honest}
+- Ask what they understood :: Then listen for the part you failed to explain. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_4.warm_food | fn: reveal_character deepen_bond | level: 4 | tags: role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done | when: {"flag":"story.ch14.done"}
+Q: Talk first or eat while you decide what to say?
+- Talk first :: Do not hurry for my benefit. {tone:honest}
+- Eat a little :: The food is not another question. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_4.account | fn: reveal_character deepen_bond | level: 4 | tags: role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done | when: {"flag":"story.ch14.done"}
+Q: What makes an account useful?
+- Another person can check it :: Give the place and the time. {tone:honest}
+- It says what is missing :: And distinguishes missing from deliberately hidden. {tone:gentle}

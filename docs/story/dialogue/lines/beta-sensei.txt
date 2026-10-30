@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=reveal_character  | when: {"flag":"story.ch0.done"}
+Feet under you. Good. We can work with that.
+You ate? Answer first. Training second.
+Keep walking, {player}. We can talk on the way.
+An apple? Take one. Leave the core off the training ground.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch0.done"}
+Anything you can eat sitting down. That is the recommendation.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch0.done"}
+Watch the foot you move before the strike. That is where you announce it.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch0.done"}
+Whittling. Gives the hands a job while the head catches up.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch0.done"}
+Had a team. Ask me about the people here first.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch0.done"}
+Everyone accounted for. Then you tell me what you accomplished.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch0.done"}
+Sit. Drink the water. Decide when your hands stop shaking.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch0.done"}
+Old enough to complain about boring mornings. Plenty of them.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch0.done"}
+When a student gets quiet, I count the exits. Habit.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.train.ask role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch0.done"}
+A short session. Leave enough strength to walk home.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.train.arrive role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch0.done"}
+Start without chakra. If the balance is wrong, adding more only makes a larger mistake.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.train.good role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch0.done"}
+Better. You noticed it before I did. That is the part to keep.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=react,deepen_bond  | when: {"flag":"story.ch0.done"}
+You held the form. Stop before your muscles learn the tired version.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:sensei stage=adult player_stage=child story=story.ch0.done fn=react,deepen_bond  | when: {"flag":"story.ch0.done"}
+Put that lesson away for today. There will be another morning.

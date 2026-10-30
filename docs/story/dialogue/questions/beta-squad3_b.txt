@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_b.broth | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Taste the broth now or wait for it to settle?
+- Taste now :: A small spoon. Then we know what the next ingredient changes. {tone:honest}
+- Let it settle :: Good. Some flavours need room to meet. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_b.help_cook | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you rather chop or stir?
+- Chop :: I will show how I keep the pieces the same size. {tone:honest}
+- Stir :: Slowly at the bottom too. That bit gets forgotten. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_b.portion | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A big serving or a small one with more waiting?
+- A big serving :: Tell me when it is enough. I can still learn that. {tone:honest}
+- A small first serving :: There is more in the pot. You will not have to ask twice. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_b.recipe | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Keep a family recipe exact or change one thing?
+- Keep it exact :: Then we can taste what they meant to make. {tone:honest}
+- Change a little :: Write the change down. I always think I will remember. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_b.leftovers | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Save leftovers or invite one more person?
+- Save them properly :: Tomorrow deserves something warm too. {tone:honest}
+- Invite someone :: I know somebody who tends to say they already ate. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_b.table_place | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Choose your seat or wait to see where there is room?
+- Choose a seat :: Leave one beside it if you want company. {tone:honest}
+- See where I fit :: I can make a little room before everybody sits. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_b.new_dish | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Try the unfamiliar dish or stay with a favourite?
+- Try something new :: One taste is enough to begin. {tone:honest}
+- Stay with a favourite :: That is a good thing to know when I cook for you. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_b.thanks_cook | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Tell the cook what worked or simply finish the bowl?
+- Name the good part :: I like knowing which flavour you noticed. {tone:honest}
+- Finish the bowl :: That is a clear answer too. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_b.burnt_edge | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad3_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A slightly burnt edge: trim it or start over?
+- Trim the edge :: Let us check the middle before giving up the whole thing. {tone:honest}
+- Start again :: We have time, if the pot is cool enough. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_b.remember_order | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad3_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you like me to remember your order?
+- Yes, that feels nice :: I will leave room for the days you change your mind. {tone:honest}
+- Ask each time :: Then I can hear what sort of day it has been. {tone:gentle}

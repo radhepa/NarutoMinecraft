@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_5.stroke | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Check the first stroke or the closing one?
+- The first stroke :: A beginning with a reason! Now follow what it started. {tone:honest}
+- The closing stroke :: A fine place to stop a very enthusiastic error. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_5.story | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: A story with the lesson first or at the end?
+- Lesson first :: Good! You can interrupt when the story wanders away from it. {tone:honest}
+- At the end :: A patient listener! Keep a finger on the point so I can find it again. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_5.copy | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Copy a seal neatly or explain each line?
+- Copy it neatly :: Then we test whether the neatness belongs to understanding. {tone:honest}
+- Explain each line :: Excellent! Stop where the explanation becomes a guess. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_5.interrupt | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Will you interrupt when my explanation grows unclear?
+- I will ask straight away :: A welcome interruption! Bring two if you need them. {tone:honest}
+- I will mark the confusing part :: Then show the mark before I move to the next page. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_5.old_note | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: An old note has a different method. Test it or keep today's form?
+- Test it carefully :: On spare paper, with no chakra until we understand it. {tone:honest}
+- Keep today's form :: A sound beginning. Save the question beside it. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_5.blank_sheet | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: What belongs on a new sheet first?
+- The purpose :: Splendid! The drawing should know its job. {tone:honest}
+- A simple working shape :: Then leave room to write what it was for. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_5.learn_twice | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Teach a lesson you just learned or practise it again?
+- Teach a small part :: Ask the listener what you left unclear. {tone:honest}
+- Practise it again :: Make one change you can explain afterwards. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_5.good_question | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Can a question be better than its answer?
+- It can open another path :: Then write the path down before I tell another story. {tone:honest}
+- An answer still matters :: Of course! The path should lead somewhere a person can stand. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_5.handwriting | fn: reveal_character deepen_bond | level: 4 | tags: role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Clear handwriting or a beautifully balanced page?
+- Clear handwriting :: A gift to the person who must read it in poor light. {tone:honest}
+- A balanced page :: Keep the working lines clear enough to find under the beauty. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_5.last_check | fn: reveal_character deepen_bond | level: 4 | tags: role=role:sensei_5 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Who makes the last check: the maker or a second reader?
+- The maker again :: Fresh eyes after a pause, then. {tone:honest}
+- A second reader :: And let them tell you where they became uncertain. {tone:gentle}

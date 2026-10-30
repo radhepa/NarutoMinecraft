@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.form.a1 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.form","a1"]}]}
+You chose to ask about the form. I have changed the instruction that made you stop.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.form.a2 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.form","a2"]}]}
+You wanted time to read. The chair beside the desk proved more useful than another notice.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.garden_path.a1 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.garden_path","a1"]}]}
+You chose the direct garden path. I asked the gardener where the roots needed space.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.garden_path.a2 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.garden_path","a2"]}]}
+You wanted the path round the tree. We put a seat at the bend.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.queue.a1 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.queue","a1"]}]}
+You wanted the place saved. The visitor sat without losing the turn they had waited for.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.queue.a2 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.queue","a2"]}]}
+You chose the chair. It now stays beside the queue instead of in a locked room.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.seal.a1 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.seal","a1"]}]}
+You wanted the seal explained first. The visitor knew what the document would change.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.seal.a2 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.seal","a2"]}]}
+You chose to hear the whole paper. The final condition deserved its own question.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.guest.a1 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.guest","a1"]}]}
+You chose another gentle offer. Our guest asked for water once the question became smaller.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.guest.a2 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.guest","a2"]}]}
+You wanted the cup left within reach. Our guest used it without another explanation.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.rule_change.a1 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.rule_change","a1"]}]}
+You wanted the small obstacle removed promptly. We kept the desk open for the new questions.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.rule_change.a2 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.rule_change","a2"]}]}
+You chose to hear the quiet visitors first. Their objection was not the one we had expected.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.minutes.a1 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.minutes","a1"]}]}
+You wanted the full words kept. They settled a disagreement about what had actually been promised.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.minutes.a2 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.minutes","a2"]}]}
+You chose decisions with reasons. We added the question that had not yet been settled.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.second_view.a1 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.second_view","a1"]}]}
+You wanted both neighbours heard together. We began by agreeing whose turn came first.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.second_view.a2 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.second_view","a2"]}]}
+You chose separate first accounts. We asked permission before bringing their words to the same table.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.names_paper.a1 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.names_paper","a1"]}]}
+You wanted the person's name beside the number. The new cover leaves enough room for it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.names_paper.a2 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.names_paper","a2"]}]}
+You wanted us to ask how the visitor wished to be called. I added that question before opening the file.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.good_order.a1 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.good_order","a1"]}]}
+You meant a place where things could be found. The new labels passed their first visitor's test.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_councillor.good_order.a2 role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.good_order","a2"]}]}
+You called a thing in order when people could use it. I have stopped treating a full desk as proof of failure.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_councillor.form.back role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.form"]}]}
+Read it, then ask about the sentence that seemed simple on the first pass.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_councillor.garden_path.back role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.garden_path"]}]}
+The way a tired visitor can actually walk, whatever the drawing prefers.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_councillor.queue.back role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.queue"]}]}
+A chair and a saved place. We need not make comfort compete with fairness.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_councillor.seal.back role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.seal"]}]}
+The whole paper, with permission to interrupt before we reach the seal.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_councillor.guest.back role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.guest"]}]}
+A cup nearby, and a person who remains available.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_councillor.rule_change.back role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.rule_change"]}]}
+Hear enough to understand the obstacle, then give the change a date.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_councillor.minutes.back role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.minutes"]}]}
+Decisions, reasons, and a way to consult the fuller record.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_councillor.second_view.back role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.second_view"]}]}
+Separately if someone is afraid. Procedure must be able to notice that.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_councillor.names_paper.back role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.names_paper"]}]}
+A name the person recognises, and a number the clerks can put in order.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_councillor.good_order.back role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:elder_councillor","q.cast.elder_councillor.good_order"]}]}
+Usable. I keep reminding my household that I said so.

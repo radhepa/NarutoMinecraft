@@ -1,0 +1,31 @@
+# life/bond/teach: the safe beta register from the character brief.
+## greet.personality role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done  fn=reveal_character | when: {"flag":"story.ch8.done"}
+A clear path and a witness. Dangerous conditions for my notebook.
+
+# life/bond/teach: the safe beta register from the character brief.
+## talk.food role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done level=1..10 fn=reveal_character | when: {"flag":"story.ch8.done"}
+Lunch is the prize. I find this improves the quality of every contest.
+
+# life/bond/teach: the safe beta register from the character brief.
+## talk.training role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done level=1..10 fn=teach | when: {"flag":"story.ch8.done"}
+Race the relay bell. The bell has never complained about a rematch.
+
+# life/bond/teach: the safe beta register from the character brief.
+## talk.their_hobby role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done level=2..10 fn=reveal_character | when: {"flag":"story.ch8.done"}
+A notebook of contests. Most entries are lessons in optimism.
+
+# life/bond/teach: the safe beta register from the character brief.
+## hangout.roof_race.ask role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done level=2..10 fn=deepen_bond | when: {"flag":"story.ch8.done"}
+Gate relay? We can call it a walk if anybody asks.
+
+# life/bond/teach: the safe beta register from the character brief.
+## hangout.roof_race.arrive role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done level=2..10 fn=deepen_bond | when: {"flag":"story.ch8.done"}
+That corner cost a whole step. Put it in the margin.
+
+# life/bond/teach: the safe beta register from the character brief.
+## life.passed_exam role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done  fn=react | when: {"flag":"story.ch8.done"}
+Not bad. I shall record this in handwriting large enough to be noticed.
+
+# life/bond/teach: the safe beta register from the character brief.
+## life.dream_setback role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done  fn=react | when: {"flag":"story.ch8.done"}
+A loss with useful notes. The notebook remains undefeated.

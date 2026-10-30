@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.seat.a1 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.seat","a1"]}]}
+You chose "At the counter". Good! You can tell me when I lose track of a pot!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.seat.a2 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.seat","a2"]}]}
+You chose "End table". A quieter bowl coming up!
+
+# bond: the same question turned back on the speaker.
+## talk.q.ramen_cook.seat.back role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.seat"]}]}
+Counter, if I am eating in somebody else's shop. I like seeing the work.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.broth.a1 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.broth","a1"]}]}
+You chose "Taste the broth". Careful with the steam! It has opinions!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.broth.a2 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.broth","a2"]}]}
+You chose "Straight to noodles". Lift a little, not the entire afternoon!
+
+# bond: the same question turned back on the speaker.
+## talk.q.ramen_cook.broth.back role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.broth"]}]}
+Broth, to hear what the kitchen was trying to say.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.usual.a1 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.usual","a1"]}]}
+You chose "Offer the usual". With permission to change it! I have other ingredients!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.usual.a2 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.usual","a2"]}]}
+You chose "Ask each visit". A new question for a new appetite!
+
+# bond: the same question turned back on the speaker.
+## talk.q.ramen_cook.usual.back role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.usual"]}]}
+Offer the usual, then watch whether the person needs something different today.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.egg.a1 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.egg","a1"]}]}
+You chose "Split it now". A useful knife and a diplomatic hand!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.egg.a2 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.egg","a2"]}]}
+You chose "Save it properly". Wrapped before the bowl gets cold!
+
+# bond: the same question turned back on the speaker.
+## talk.q.ramen_cook.egg.back role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.egg"]}]}
+Split it if somebody is sitting beside me. Later already has a cupboard.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.busy_lunch.a1 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.busy_lunch","a1"]}]}
+You chose "Quick bowl". I can move fast without making you swallow the weather!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.busy_lunch.a2 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.busy_lunch","a2"]}]}
+You chose "Time to sit". Good! The chair has been looking underemployed!
+
+# bond: the same question turned back on the speaker.
+## talk.q.ramen_cook.busy_lunch.back role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.busy_lunch"]}]}
+Time to sit, once the people carrying trays have eaten too.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.new_flavour.a1 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.new_flavour","a1"]}]}
+You chose "A little new flavour". Beside the usual, so the experiment does not steal lunch!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.new_flavour.a2 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.new_flavour","a2"]}]}
+You chose "Keep the favourite". A sound order! Familiar can be exactly the point!
+
+# bond: the same question turned back on the speaker.
+## talk.q.ramen_cook.new_flavour.back role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.new_flavour"]}]}
+A small taste of the new thing, with somebody to compare it with.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.empty_bowl.a1 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.empty_bowl","a1"]}]}
+You chose "Say what was good". Then I know what to keep doing!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.empty_bowl.a2 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.empty_bowl","a2"]}]}
+You chose "Come back tomorrow". An excellent review with actual feet!
+
+# bond: the same question turned back on the speaker.
+## talk.q.ramen_cook.empty_bowl.back role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.empty_bowl"]}]}
+Say one thing. A kitchen gets better from something it can understand.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.last_place.a1 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.last_place","a1"]}]}
+You chose "Take it if clear". Look once before sitting. That is all the ceremony needed!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.last_place.a2 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.last_place","a2"]}]}
+You chose "Ask who was waiting". I will keep the bowl warm while we sort it out!
+
+# bond: the same question turned back on the speaker.
+## talk.q.ramen_cook.last_place.back role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.last_place"]}]}
+Ask. A hungry person is not always the loudest person near the stool.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.takeaway.a1 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.takeaway","a1"]}]}
+You chose "Carry it home". Keep it level! The broth would like to arrive with the noodles!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.takeaway.a2 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.takeaway","a2"]}]}
+You chose "Eat it here". A fine arrangement for my entire profession!
+
+# bond: the same question turned back on the speaker.
+## talk.q.ramen_cook.takeaway.back role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.takeaway"]}]}
+Here, unless somebody at home needs the other half of the meal.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.company.a1 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.company","a1"]}]}
+You chose "Ask one small question". Then I listen while you eat!
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.ramen_cook.company.a2 role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.company","a2"]}]}
+You chose "Just the bowl". Coming up. Words can sit down later!
+
+# bond: the same question turned back on the speaker.
+## talk.q.ramen_cook.company.back role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:ramen_cook","q.cast.ramen_cook.company"]}]}
+The bowl first. The person can decide whether the day needs telling.

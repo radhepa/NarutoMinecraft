@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=reveal_character  | when: {"flag":"story.ch1.done"}
+Um. I left a clean bit of bench, if you wanted it.
+Sorry, that is ink. The dry side is safe to sit on.
+The clouds have different edges today. I thought you might notice.
+Oh, {player}. I was trying to get that roof right. You can look.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+Rice balls leave one hand free. Unless the paper blows away. Then neither hand is free.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+I draw the movement after the lesson. Sometimes the line understands before I do.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch1.done"}
+That roof looks blue from here. Everyone says it is grey. I can see both.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch1.done"}
+At home there is always another person who can make a better line. I keep mine anyway.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+If somebody shows you a thing they made, look at it properly. They waited for that.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+Could you start on scrap paper? It feels less like ruining something.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch1.done"}
+A picture where the people at the edges get as much space as the people in front.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch1.done"}
+I practise saying the first word. Once it is out, the next one is easier.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.painting.ask role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+Would you hold the paper at the overlook? Only if you want to stay.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.painting.arrive role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+Sorry. Keep that corner still. The wind keeps adding a mountain.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.painting.good role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+I kept the wind line. It tells you we were up here.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+I finished a page without covering the first attempt. It looks odd. I think I like it.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:teammate_a stage=child player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+The exercise went wrong. I drew where it changed. Could we look together?

@@ -1,0 +1,384 @@
+# Beta combat voices. No scripted catchphrases, late revelations, or fixed outcome claims.
+# life/react: short tactical response in the role's register.
+## combat.fight_start.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Feet set. Watch the hands.
+
+# life/react: short tactical response in the role's register.
+## combat.taunt.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Your opening is closing.
+
+# life/react: short tactical response in the role's register.
+## combat.low_health.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Need a moment. Cover the gap.
+
+# life/react: short tactical response in the role's register.
+## combat.ally_down.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Keep them covered. I am moving.
+
+# life/react: short tactical response in the role's register.
+## combat.knocked_out.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Get clear. Count everyone.
+
+# life/react: short tactical response in the role's register.
+## combat.yield.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Tools down. We heard the yield.
+
+# life/react: short tactical response in the role's register.
+## combat.flee.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Back by the route we checked.
+
+# life/react: short tactical response in the role's register.
+## combat.victory.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Count heads before tools.
+
+# life/react: short tactical response in the role's register.
+## combat.defeat.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+We are clear. Find the injured first.
+
+# life/react: short tactical response in the role's register.
+## combat.parry_landed.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Too much weight on that side.
+
+# life/react: short tactical response in the role's register.
+## combat.got_parried.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Read it. Change the angle.
+
+# life/react: short tactical response in the role's register.
+## combat.combo_finisher_landed.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Good opening. Use the space.
+
+# life/react: short tactical response in the role's register.
+## combat.jutsu_cast.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Clear my line.
+
+# life/react: short tactical response in the role's register.
+## combat.jutsu_countered.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Change the shape. Less chakra.
+
+# life/react: short tactical response in the role's register.
+## combat.genjutsu_caught.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Something moved twice. Check it.
+
+# life/react: short tactical response in the role's register.
+## combat.genjutsu_broken.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Found the seam. Eyes open.
+
+# life/react: short tactical response in the role's register.
+## combat.smoke_bomb.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Smoke. Stay within voice range.
+
+# life/react: short tactical response in the role's register.
+## combat.substitution.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Keep moving. The decoy bought one step.
+
+# life/react: short tactical response in the role's register.
+## combat.combo_call.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Wait for my turn. Now.
+
+# life/react: short tactical response in the role's register.
+## combat.nature_combo.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Your nature first. I will build on it.
+
+# life/react: short tactical response in the role's register.
+## combat.heal_given.player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Hold still. Breathe normally.
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.attack speaker=player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Taking the opening.
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.defend speaker=player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+I have this side.
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.follow speaker=player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Moving with you.
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.hold speaker=player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+Holding this patch of ground.
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.combo speaker=player_ally role=role:sensei stage=adult player_stage=child story=story.ch0.done kind=cycle fn=react | when: {"flag": "story.ch0.done"}
+On the signal.
+
+# life/react: short tactical response in the role's register.
+## combat.fight_start.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Um. I can see the gap from here.
+
+# life/react: short tactical response in the role's register.
+## combat.taunt.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+This way. The empty space is not empty.
+
+# life/react: short tactical response in the role's register.
+## combat.low_health.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+I need a little cover. Please.
+
+# life/react: short tactical response in the role's register.
+## combat.ally_down.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+I can keep that corner hidden. Go.
+
+# life/react: short tactical response in the role's register.
+## combat.knocked_out.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Sorry. The line went out of reach.
+
+# life/react: short tactical response in the role's register.
+## combat.yield.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+They stopped. Please do not strike again.
+
+# life/react: short tactical response in the role's register.
+## combat.flee.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+The path behind us is still clear.
+
+# life/react: short tactical response in the role's register.
+## combat.victory.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+We are all here. I checked.
+
+# life/react: short tactical response in the role's register.
+## combat.defeat.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Could we sit somewhere without all that noise?
+
+# life/react: short tactical response in the role's register.
+## combat.parry_landed.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+I saw the line before it reached me.
+
+# life/react: short tactical response in the role's register.
+## combat.got_parried.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Oh. That angle was different.
+
+# life/react: short tactical response in the role's register.
+## combat.combo_finisher_landed.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+It joined up. Did you see?
+
+# life/react: short tactical response in the role's register.
+## combat.jutsu_cast.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Watch the edge of the shape.
+
+# life/react: short tactical response in the role's register.
+## combat.jutsu_countered.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+That one blurred. I will change it.
+
+# life/react: short tactical response in the role's register.
+## combat.genjutsu_caught.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+The colours repeat. That is wrong.
+
+# life/react: short tactical response in the role's register.
+## combat.genjutsu_broken.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+There. The real shadow has an edge.
+
+# life/react: short tactical response in the role's register.
+## combat.smoke_bomb.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Smoke makes softer edges. Stay near.
+
+# life/react: short tactical response in the role's register.
+## combat.substitution.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Only a decoy. I am over here.
+
+# life/react: short tactical response in the role's register.
+## combat.combo_call.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+I will leave an opening for your next step.
+
+# life/react: short tactical response in the role's register.
+## combat.nature_combo.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Your colour first. Mine can follow it.
+
+# life/react: short tactical response in the role's register.
+## combat.heal_given.player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Hold this cloth here. Gently.
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.attack speaker=player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Yes. I can reach that gap.
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.defend speaker=player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+I can cover this edge.
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.follow speaker=player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Right beside your shadow.
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.hold speaker=player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Um. This spot. Got it.
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.combo speaker=player_ally role=role:teammate_a stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Ready for your first move.
+
+# life/react: short tactical response in the role's register.
+## combat.fight_start.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+With me! The pup has already voted!
+
+# life/react: short tactical response in the role's register.
+## combat.taunt.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Hey! Try catching the noisy one!
+
+# life/react: short tactical response in the role's register.
+## combat.low_health.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Still here! Could use a hand, though!
+
+# life/react: short tactical response in the role's register.
+## combat.ally_down.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Cover that side! I am going in for them!
+
+# life/react: short tactical response in the role's register.
+## combat.knocked_out.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Okay... floor first... getting up later...
+
+# life/react: short tactical response in the role's register.
+## combat.yield.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Stop swinging! They said enough!
+
+# life/react: short tactical response in the role's register.
+## combat.flee.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Back this way! Nobody wanders off!
+
+# life/react: short tactical response in the role's register.
+## combat.victory.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+All of us standing! That is the good bit!
+
+# life/react: short tactical response in the role's register.
+## combat.defeat.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Next time we fix that gap first. All of us.
+
+# life/react: short tactical response in the role's register.
+## combat.parry_landed.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Ha! Saw your foot move!
+
+# life/react: short tactical response in the role's register.
+## combat.got_parried.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Right! Less shouting, quicker hands!
+
+# life/react: short tactical response in the role's register.
+## combat.combo_finisher_landed.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+That is where the whole drill goes!
+
+# life/react: short tactical response in the role's register.
+## combat.jutsu_cast.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Give me room for the loud part!
+
+# life/react: short tactical response in the role's register.
+## combat.jutsu_countered.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Fine! I have another way in!
+
+# life/react: short tactical response in the role's register.
+## combat.genjutsu_caught.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Wait. Why is the pup in two places?
+
+# life/react: short tactical response in the role's register.
+## combat.genjutsu_broken.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+One pup! Much better!
+
+# life/react: short tactical response in the role's register.
+## combat.smoke_bomb.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Smoke out! Follow my incredibly useful voice!
+
+# life/react: short tactical response in the role's register.
+## combat.substitution.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Missed! I am the one still moving!
+
+# life/react: short tactical response in the role's register.
+## combat.combo_call.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Give me the opening and I will take it!
+
+# life/react: short tactical response in the role's register.
+## combat.nature_combo.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Your turn, then mine! Make it big!
+
+# life/react: short tactical response in the role's register.
+## combat.heal_given.player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Stay put! I brought the bandages this time!
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.attack speaker=player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Right! Opening coming up!
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.defend speaker=player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Nobody past this bit!
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.follow speaker=player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+With you! Watch the pup!
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.hold speaker=player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Staying put! Somehow!
+
+# teach/react: acknowledges the actual squad command.
+## combat.command_ack.combo speaker=player_ally role=role:teammate_b stage=child player_stage=child story=story.ch8.done kind=cycle fn=react | when: {"flag": "story.ch8.done"}
+Our turn! Give the signal!
+
+# life/react: short tactical response in the role's register.
+## combat.fight_start.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+Make the first attempt count.
+
+# life/react: short tactical response in the role's register.
+## combat.taunt.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+You left that side open twice.
+
+# life/react: short tactical response in the role's register.
+## combat.low_health.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+The stance holds. I need a moment.
+
+# life/react: short tactical response in the role's register.
+## combat.ally_down.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+Cover the fallen one. Stop staring.
+
+# life/react: short tactical response in the role's register.
+## combat.knocked_out.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+That... was a clean opening.
+
+# life/react: short tactical response in the role's register.
+## combat.yield.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+Enough. I know when the form is broken.
+
+# life/react: short tactical response in the role's register.
+## combat.flee.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+This ground is spent. Move.
+
+# life/react: short tactical response in the role's register.
+## combat.victory.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+Now show me you can do it twice.
+
+# life/react: short tactical response in the role's register.
+## combat.defeat.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+I saw the fault. Leave me room to fix it.
+
+# life/react: short tactical response in the role's register.
+## combat.parry_landed.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+Your wrist announced that.
+
+# life/react: short tactical response in the role's register.
+## combat.got_parried.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+An angle I have not practised. Yet.
+
+# life/react: short tactical response in the role's register.
+## combat.combo_finisher_landed.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+That opening was earned.
+
+# life/react: short tactical response in the role's register.
+## combat.jutsu_cast.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+Watch carefully if you want to learn.
+
+# life/react: short tactical response in the role's register.
+## combat.jutsu_countered.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+Then I change the approach.
+
+# life/react: short tactical response in the role's register.
+## combat.genjutsu_caught.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+A borrowed picture. Find the boundary.
+
+# life/react: short tactical response in the role's register.
+## combat.genjutsu_broken.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+Your illusion lost its balance.
+
+# life/react: short tactical response in the role's register.
+## combat.smoke_bomb.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+Smoke. Change position before it thins.
+
+# life/react: short tactical response in the role's register.
+## combat.substitution.rival role=role:rival stage=child player_stage=child story=story.ch2.done kind=cycle fn=react | when: {"flag": "story.ch2.done"}
+You committed to the decoy.

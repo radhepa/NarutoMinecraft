@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.opponent.a1 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.opponent","a1"]}]}
+You wanted the stronger opponent. I brought the opening you failed to read.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.opponent.a2 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.opponent","a2"]}]}
+You chose clean form. Your wrist finally stopped announcing the strike.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.target.a1 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.target","a1"]}]}
+You chose the difficult target. I moved the spare tools away from your line.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.target.a2 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.target","a2"]}]}
+You chose several targets. I noticed you changed your footing between throws.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.witness.a1 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.witness","a1"]}]}
+You asked me to watch. The recovery was the part worth seeing.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.witness.a2 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.witness","a2"]}]}
+You wanted practice before an audience. The result looked less borrowed today.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.pace.a1 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.pace","a1"]}]}
+You chose the fast start. You finally carried your balance with it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.pace.a2 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.pace","a2"]}]}
+You waited for the opening. This time you saw the weight change.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.loss.a1 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.loss","a1"]}]}
+You preferred a close loss to an empty win. Your next adjustment made that believable.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.loss.a2 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.loss","a2"]}]}
+You wanted the win. You still came back to work on the weak part.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.equipment.a1 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.equipment","a1"]}]}
+You kept the familiar tool. The repair held through the last round.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.equipment.a2 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.equipment","a2"]}]}
+You chose the new tool. Your hand has stopped searching for the old balance.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.challenge.a1 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.challenge","a1"]}]}
+You accepted to find the gap. You returned with an actual correction.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.challenge.a2 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.challenge","a2"]}]}
+You wanted time to prepare. You arrived on the day you named.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.comparison.a1 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.comparison","a1"]}]}
+You chose yesterday as the measure. The person opposite you noticed the difference anyway.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.comparison.a2 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.comparison","a2"]}]}
+You measured yourself against the best. You watched the footwork instead of the applause.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.instructions.a1 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.instructions","a1"]}]}
+You asked why the drill changed. Your next attempt answered it for yourself.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.instructions.a2 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.instructions","a2"]}]}
+You adapted before asking. You did not spend the opening staring at the teacher.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.ordinary_work.a1 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.ordinary_work","a1"]}]}
+You valued the unseen practice. Your first step looked the same when people arrived.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.rival.ordinary_work.a2 role=role:rival stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.ordinary_work","a2"]}]}
+You wanted a witness for the dull practice. I brought no applause. Start again.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.rival.opponent.back role=role:rival stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.opponent"]}]}
+Strong enough to show me what I have been getting away with.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.rival.target.back role=role:rival stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.target"]}]}
+One I cannot hit yet. The others can wait.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.rival.witness.back role=role:rival stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.witness"]}]}
+Watch if you can say what changed. Otherwise you are blocking the light.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.rival.pace.back role=role:rival stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.pace"]}]}
+Depends who is opposite me. I dislike answering before looking.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.rival.loss.back role=role:rival stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.loss"]}]}
+Learn something. Preferably while winning.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.rival.equipment.back role=role:rival stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.equipment"]}]}
+Whichever works. Being sentimental about a loose binding is expensive.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.rival.challenge.back role=role:rival stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.challenge"]}]}
+Yes. Expecting a loss is different from arranging one.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.rival.comparison.back role=role:rival stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.comparison"]}]}
+Both. An easy measure is no measure at all.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.rival.instructions.back role=role:rival stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.instructions"]}]}
+Adapt. Then decide whether the explanation was worth the change.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.rival.ordinary_work.back role=role:rival stage=child player_stage=child story=story.ch1.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:rival","q.cast.rival.ordinary_work"]}]}
+The target stays a target when the crowd leaves.

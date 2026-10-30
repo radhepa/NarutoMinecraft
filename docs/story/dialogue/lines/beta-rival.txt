@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:rival stage=child player_stage=child story=story.ch1.done fn=reveal_character  | when: {"flag":"story.ch1.done"}
+You changed your stance. Let us see whether you know why.
+Training ground is open. Unless you came to watch the dust.
+Late? No. I started before you arrived.
+Those tools are tied better. Your last attempt was embarrassing.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+I order something I can finish before the broth cools. Keep up.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+The target does not care how hard you tried. Adjust your wrist.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch1.done"}
+I maintain my equipment. You can call that a hobby if yours needs mending.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch1.done"}
+A family standard is still a standard. I can reach it without an audience.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+Earn the opening. Being handed one tells you nothing about your technique.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+Find the part that failed. Practise that part. Complaining uses the same breath.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch1.done"}
+A technique nobody can dismiss as something I was born holding.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch1.done"}
+An easy win teaches bad habits. I prefer an opponent who notices them.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.spar.ask role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+Bring the stance you keep hiding behind. I want to test it.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.spar.arrive role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+No excuses about the ground. We are both standing on it.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.spar.good role=role:rival stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+Your recovery was quicker. It will have to stay quicker.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:rival stage=child player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+Passed. The exercise needs a harder version.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:rival stage=child player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+I know where the mistake was. The correction will be ready before the next attempt.

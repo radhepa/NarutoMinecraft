@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.load.a1 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.load","a1"]}]}
+You took the light end. The cupboard reached the landing without turning sideways.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.load.a2 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.load","a2"]}]}
+You helped balance the heavy end. I remembered to leave space for your hands.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.stairs.a1 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.stairs","a1"]}]}
+You wanted a pause at each landing. Nobody had to pretend their hands were all right.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.stairs.a2 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.stairs","a2"]}]}
+You chose the longer rest. We set the load down before the last flight.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.door.a1 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.door","a1"]}]}
+You chose a little oil first. The hinge stopped complaining before we checked the frame.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.door.a2 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.door","a2"]}]}
+You looked for the rubbing edge. We found the place without planing the whole door.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.knock.a1 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.knock","a1"]}]}
+You wanted the soft knock. The parcel arrived without waking the whole flat.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.knock.a2 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.knock","a2"]}]}
+You chose a note instead of another knock. The household found me after the nap.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.chair.a1 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.chair","a1"]}]}
+You wanted the chair marked. Nobody sat down to discover the loose joint.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.chair.a2 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.chair","a2"]}]}
+You chose to move the chair aside. We made room for one that could be trusted.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.request.a1 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.request","a1"]}]}
+You wanted me to ask before the stairs. We found a better grip while the load was still on the ground.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.request.a2 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.request","a2"]}]}
+You asked for a clear job. Watching the corner helped more than another hand underneath.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.first_room.a1 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.first_room","a1"]}]}
+You chose a shelf for the empty room. The little things no longer had to move from chair to bed.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.first_room.a2 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.first_room","a2"]}]}
+You wanted a seat first. The room looked ready to wait for someone.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.thanks.a1 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.thanks","a1"]}]}
+You wanted the words said. I told the other carrier the cupboard had made the room easier.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.thanks.a2 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.thanks","a2"]}]}
+You chose the water after carrying. I filled a second cup for the person behind us.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.weight.a1 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.weight","a1"]}]}
+You wanted the extra weight named. We adjusted together instead of surprising each other.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.weight.a2 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.weight","a2"]}]}
+You chose to fix the grip first. You still warned me before moving the weight.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.home_thing.a1 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.home_thing","a1"]}]}
+You wanted a place for a person's things. I put the low hook where it could be reached.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.porter.home_thing.a2 role=role:porter stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.home_thing","a2"]}]}
+You thought a room was ready when someone expected its person. I left a light by the landing.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.porter.load.back role=role:porter stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.load"]}]}
+The end that needs another person. Weight is not the only difficult part.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.porter.stairs.back role=role:porter stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.stairs"]}]}
+Every landing, if I remember not to be embarrassed about it.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.porter.door.back role=role:porter stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.door"]}]}
+Look first. Sometimes the hinge is noisy about a different problem.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.porter.knock.back role=role:porter stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.knock"]}]}
+A note if it can wait. A door is allowed to stay quiet.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.porter.chair.back role=role:porter stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.chair"]}]}
+Move it and mark it. People who need to sit stop looking carefully.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.porter.request.back role=role:porter stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.request"]}]}
+I like knowing the job. It is easier than guessing how to be useful.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.porter.first_room.back role=role:porter stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.first_room"]}]}
+A seat, I think. Then a hook so the coat can rest too.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.porter.thanks.back role=role:porter stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.thanks"]}]}
+Water, and a moment to drink it before the next load.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.porter.weight.back role=role:porter stage=adult player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.weight"]}]}
+Say it. I am not always good at taking my own advice there.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.porter.home_thing.back role=role:porter stage=adult player_stage=child story=story.ch1.done level=5..10 fn=reveal_character | when: {"all":[{"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]},{"answered":["role:porter","q.cast.porter.home_thing"]}]}
+A door that opens, and somewhere to put down what they carried.

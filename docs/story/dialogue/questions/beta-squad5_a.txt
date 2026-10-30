@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_a.staff | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_a stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: A staff drill for distance or for control?
+- Distance :: Then mind the far end! It arrives before my explanation! {tone:honest}
+- Control :: A smaller swing! A larger achievement than it sounds! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_a.lantern_frame | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_a stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Test a lantern frame before decorating?
+- Test it first :: Grandma would approve before pretending not to! {tone:honest}
+- Decorate a little first :: Keep the working parts clear! A beautiful collapse is still a collapse! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_a.ambition | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_a stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Say a big ambition aloud or work towards it quietly?
+- Say it aloud :: Then people can hold you to the work behind it! {tone:honest}
+- Let the work speak :: A quieter announcement! I can learn from that! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_a.welcome | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_a stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: A new pupil arrives. Introduce everybody or show one friendly face?
+- Introduce the group :: Slowly enough that the names have somewhere to land! {tone:honest}
+- One friendly face :: A good beginning! The rest of us can wait our turn! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_a.practice_laugh | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_a stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Laugh at your own mistake or correct it silently?
+- Laugh, then fix it :: That order works! The fixing still has to happen! {tone:honest}
+- Fix it quietly :: A solid plan! I will try to leave enough quiet for it! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_a.lantern_word | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_a stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: A lantern message: one name or one wish?
+- A name :: Somebody you want kept in view! {tone:honest}
+- A wish :: Then choose one you can help carry tomorrow! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_a.speech | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_a stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: A short speech or time for other people to speak?
+- A short speech :: A challenge to my strongest natural technique! {tone:honest}
+- Hear the others :: Then I should stop preparing my next sentence while they talk! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_a.future_job | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_a stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: A future leader: learn names or learn rules first?
+- Learn the names :: Then the rules have actual people to answer to! {tone:honest}
+- Understand the rules :: And ask the people which ones help them! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_a.win_company | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad5_a stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Win alone or improve beside a strong partner?
+- Win the hard match :: Then tell the partner which part made it hard! {tone:honest}
+- Improve together :: A village-sized answer! I approve at full volume! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_a.custom | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad5_a stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: A custom: repeat the words or ask what they mean?
+- Repeat them carefully :: Then somebody should answer the question after the walk! {tone:honest}
+- Ask what they mean :: Good! I have questions too, enough for the whole lantern path! {tone:gentle}

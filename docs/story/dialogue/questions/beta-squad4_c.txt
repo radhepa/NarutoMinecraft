@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_c.label | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A herb label: use or warning first?
+- Warning first :: Good. The helpful part can wait until the safe part is clear. {tone:honest}
+- Use first, then warning :: I would still put the warning where the hand reaches. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_c.leaf | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Learn by drawing the leaf or looking beside a real sample?
+- Draw it carefully :: Mark the detail that tells it apart. {tone:honest}
+- Use a real sample :: Look before touching. I will show the safe part. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_c.ask_hurt | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Should I ask where it hurts before offering help?
+- Ask first :: Then I can avoid making a small pain larger. {tone:honest}
+- Tell me what you will do :: I can explain before moving anything. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_c.garden | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A tidy herb bed or room for plants to spread?
+- Tidy labels and rows :: The right leaf is easier to find in a hurry. {tone:honest}
+- A little spreading room :: Then we need a clear boundary for the ones that should not mix. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_c.amount | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Measure again or trust a familiar amount?
+- Measure again :: A short check is kinder than a confident error. {tone:honest}
+- Check what changed :: Yes. A different leaf may need a different amount. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_c.practice | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A careful slow attempt or several small ones?
+- One slow attempt :: I can watch the whole shape with you. {tone:honest}
+- Several small attempts :: We will stop between them to note what changed. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_c.explain | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A medical word: learn the name or what it means?
+- Learn the name too :: I will write it beside the plain explanation. {tone:honest}
+- The meaning first :: That is the part your hands need to know. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_c.help_tired | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Somebody is tired. Bring water or ask about rest?
+- Bring water :: Leave it where they can reach without getting up. {tone:honest}
+- Ask about rest :: Offer to take one task so resting is possible. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_c.wrong_plant | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad4_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Two plants look alike. Ask or leave them alone?
+- Ask someone trained :: Bring the description. Do not taste the evidence. {tone:honest}
+- Leave them growing :: A safe decision. We can return with the book. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_c.reassure | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad4_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you rather hear the uncertainty or a comforting guess?
+- Tell the uncertainty :: I can say what we do know as well. {tone:honest}
+- Comfort without guessing :: That is possible. I can stay without promising what I have not checked. {tone:gentle}

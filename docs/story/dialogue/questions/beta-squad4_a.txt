@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_a.schedule | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A precise meeting time or a short window?
+- A precise time :: I will make the route allow for arriving calmly. {tone:honest}
+- A little window :: Then I shall state when the window ends. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_a.stroke | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A perfect stroke or one that feels like your hand?
+- Perfect form :: I can explain the standard if you wish. {tone:honest}
+- My own hand :: I would like to understand how to practise that. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_a.appeal | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A rule feels unfair. Ask privately or raise it openly?
+- Ask privately first :: A clear question may spare a public misunderstanding. {tone:honest}
+- Raise it openly :: Then others affected may answer as well. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_a.formal | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Titles at practice or simply our given names?
+- Use titles :: Then I will make sure I have yours correct. {tone:honest}
+- Given names :: I shall try. You may remind me if habit wins. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_a.turn | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A turn ends early. Offer the next person time or finish another task?
+- Offer the time :: I will make clear that accepting it is optional. {tone:honest}
+- Finish a small task :: Then leave the next person's place ready. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_a.report | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A short report or a full account?
+- Short, with the key fact :: I will keep the fuller notes available. {tone:honest}
+- A full account :: I shall distinguish what I saw from what I concluded. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_a.instruction | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Repeat the instruction back or begin the attempt?
+- Repeat it back :: A chance for both people to correct a misunderstanding. {tone:honest}
+- Begin carefully :: Then stop if the first step does not fit. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_a.fair_turn | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Equal time or time according to need?
+- Equal time :: A clear starting rule. {tone:honest}
+- More where it is needed :: Then the reason should be explained without embarrassing the person. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_a.invite | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad4_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: An exact invitation or one with room to choose?
+- Exact time and place :: I can make the path clear. {tone:honest}
+- Offer two choices :: A manageable amount of freedom. Thank you for limiting the list. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_a.practice_voice | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad4_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you tell me when I sound like a written notice?
+- Tell you gently :: I would prefer to know before repeating it. {tone:honest}
+- Wait until we are alone :: That is considerate. I will listen then. {tone:gentle}

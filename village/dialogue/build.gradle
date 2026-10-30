@@ -25,7 +25,9 @@ tasks.withType(JavaCompile).configureEach { options.release = javaRelease; optio
 test {
     useJUnitPlatform()
     testLogging { events 'failed'; exceptionFormat 'full' }
-    systemProperty 'dialogue.bank', rootProject.file('src/main/resources/data/narutominecraft/dialogue').absolutePath
+    def bank = rootProject.file('src/main/resources/data/narutominecraft/dialogue')
+    systemProperty 'dialogue.bank', bank.absolutePath
+    inputs.dir bank
 }
 
 // A thorough player's beta against the real compiled bank: how often lines repeat and NPCs hit their budget.

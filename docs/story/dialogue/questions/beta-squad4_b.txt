@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_b.route | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Nose chooses the walk or we choose before leaving?
+- Follow the nose :: Adventure by expert opinion! {tone:honest}
+- Choose the route :: Fine! Expert opinion gets a vote at each turn! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_b.run | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Sprint first or save it for the finish?
+- Sprint first :: A magnificent beginning! We still need legs afterwards! {tone:honest}
+- Save the sprint :: A dramatic ending! I can appreciate dramatic planning! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_b.dog_space | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Greet a dog at once or wait to be noticed?
+- Wait for the dog :: Good manners! The expert approves! {tone:honest}
+- Ask the handler first :: Excellent! Sometimes the nose is working! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_b.cheering | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad4_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: One enormous cheer or lots of little ones?
+- One enormous cheer :: I have trained for this precise task! {tone:honest}
+- Lots of little ones :: A sustained campaign! Very professional! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_b.contest | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Eating contest: speed or a favourite dish?
+- Speed round :: Small portions! I am interested in victory, not a hospital visit! {tone:honest}
+- Favourite dish :: Then we both get a good reason to lose slowly! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_b.training_partner | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A running partner ahead or beside you?
+- Ahead to chase :: A moving target for my enormous determination! {tone:honest}
+- Beside me :: Then we can hear when the other needs a slower stretch! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_b.rest_signal | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A spoken stop or a raised hand for rest?
+- Say stop :: Loud enough for the person making all the noise! That may be me! {tone:honest}
+- Raise a hand :: Then I promise to look up from my heroic effort! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_b.muddy_paws | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad4_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Wash paws outside or carry the dog to the bath?
+- Wash outside :: A sound plan that does not involve lifting an entire opinion! {tone:honest}
+- Carry if I can :: Ask the dog first! Some passengers are very wiggly! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_b.rematch | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad4_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Lose a game: rematch now or practise tomorrow?
+- Rematch now :: Yes! With one useful correction, so it is not just the same noise! {tone:honest}
+- Practise tomorrow :: Fine! I can become more formidable before breakfast! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad4_b.notice_good | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad4_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Should a loud person notice quiet help?
+- Say thanks clearly :: A good use for a voice that carries! {tone:honest}
+- Help back quietly :: A surprise act of useful competence! I like it! {tone:gentle}
