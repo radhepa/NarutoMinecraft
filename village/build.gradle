@@ -41,6 +41,7 @@ processResources {
         if (f.path ==~ /assets\/narutominecraft\/wardrobe\/(hair|tops|bottoms)\/.+/) f.path = f.path.replace('assets/narutominecraft/', 'assets/villagefriends/')
     }
     includeEmptyDirs = false
+    from(rootProject.file('tools/konoha/blueprints')) { include '*.json'; exclude '*.homes.json'; into 'data/narutominecraft/blueprints' }
 }
 tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
 java {

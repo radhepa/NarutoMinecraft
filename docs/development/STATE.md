@@ -1,6 +1,6 @@
 # Development state
 
-**Phase/task:** P03-2, the test street and ten living residents
+**Phase/task:** P03-3, deterministic resident identity and appearance
 ([ROADMAP.md 13.5](../../ROADMAP.md#p03--make-the-village-tangible)). P00 to P02 passed (13.3).
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
 The story checkout on the Desktop keeps its unfinished work; story review stays paused.
@@ -8,14 +8,24 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 ## P03 queue
 
 1. Done: Shinobi Village (`village/`, mod id `narutominecraft`): VF residents wear the Leaf wardrobe.
-2. A small test street and its markers; ten residents with homes and routines.
-3. Role identities for the bound cast (moved from P02).
+2. Done: the test street (`leaf_block`) with ten residents in their own flats, by day and at night.
+3. Deterministic resident identity and appearance from the save seed and marker, surviving reload;
+   role identities for the bound cast (moved from P02).
 4. Map rules (vanilla and VF generation off on the test map).
 5. A resident count and a measured route for performance.
 
 P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
+
+- P03-2 `./gradlew build`: passed, 386 tests; `:village:runClientGameTest` passed: the 21 Konoha blocks
+  register, `leaf_block` pastes on a flat map, VF reads 11 plaqued flats with a bed each, all ten residents
+  keep the flat they were placed in, at least one walks by day and 8 or more sleep in their own beds at
+  2 am (screenshot `test-street-day`). Two mixins (`LeafFlats`, unit-tested): VF fills plaqued houses in
+  its own order, so residents landed in flats on other floors they could not path to. `/narutominecraft
+  street` builds it in game (operators, empty ground). Ponytail review: scoped the bed seeding to Leaf
+  flats and residents at home, a clear error without room for a plaque or on a village, one-character
+  palette keys. Not yet: loot tables and names for the Konoha blocks; why up to two residents stay up at 2 am.
 
 - P03-1 `./gradlew build`: passed, 385 tests; `:village:runClientGameTest` passed: four residents wear
   Leaf outfits (screenshot `leaf-residents`); `:core:runClientGameTest -Ppack` loads Core, Village and VF.
@@ -45,6 +55,6 @@ None.
 
 ## Next
 
-P03-2: register the Konoha decor blocks, paste the `leaf_block` blueprint on a flat test map with a VF
-village marker and its twelve House Plaques, and spawn ten residents at its markers; a client gametest
-shows each resident with its own flat and bed, walking by day and asleep at night.
+P03-3: give each test-street resident a stable identity and look drawn from the save seed and its marker
+(the same ten residents, names and outfits in every new world with that seed), saved with the world; a
+client gametest builds the street, quits, reopens the save and finds the same residents in the same flats.
