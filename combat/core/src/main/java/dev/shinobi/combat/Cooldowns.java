@@ -9,7 +9,7 @@ public final class Cooldowns {
 
     public boolean ready(String id, long now) { return readyAt.getOrDefault(id, Long.MIN_VALUE) <= now; }
     public void start(String id, long now, int ticks) { readyAt.put(id, now + ticks); }
-    public long remaining(String id, long now) { return Math.max(0, readyAt.getOrDefault(id, Long.MIN_VALUE) - now); }
+    public long remaining(String id, long now) { return Math.max(0, readyAt.getOrDefault(id, now) - now); }
     /** Uses it if ready; false (and nothing changes) otherwise. */
     public boolean use(String id, long now, int ticks) {
         if (!ready(id, now)) return false;

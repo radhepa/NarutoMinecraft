@@ -353,12 +353,12 @@ def main(argv):
                     os.remove(os.path.join(d, f))
     for f, text in files.items():
         os.makedirs(os.path.dirname(f), exist_ok=True)
-        with open(f, "w", encoding="utf-8") as fh:
+        with open(f, "w", encoding="utf-8", newline="\n") as fh:
             fh.write(text)
     print(f"wrote {len(files)} files under {os.path.relpath(OUT, ROOT)}")
     if "--doc" in argv:
         os.makedirs(os.path.dirname(DOC), exist_ok=True)
-        with open(DOC, "w", encoding="utf-8") as fh:
+        with open(DOC, "w", encoding="utf-8", newline="\n") as fh:
             fh.write(catalogue_doc(ts))
         print(f"wrote {os.path.relpath(DOC, ROOT)}")
     return 0

@@ -68,6 +68,7 @@ public final class Desk {
 
     /** Opens the desk for the day: refreshes due columns, adds requests, chains and contests, and returns the board. */
     public List<Offer> open(int day, Player p) {
+        board.values().forEach(c -> c.removeIf(o -> day >= o.expires()));
         for (Rank r : Rank.values()) {
             int size = size(p, r);
             if (size == 0 || !Unlocks.test(gate(r), p, day)) { board.remove(r); continue; }
@@ -112,11 +113,13 @@ public final class Desk {
         var rng = Seeds.stream(seed, "missions", "desk|" + day + "|" + r.id());
         if (mode == Mode.CLASSIC && r == Rank.D) {
             int fromOpening = 0;
-            while (column.size() < size && fromOpening < 2 && !opening.isEmpty()) {
-                Template t = cat.get(opening.pollFirst());
-                if (t == null || !eligible(t, day, p)) continue;
+            // An opening template that cannot go up today waits for a later refresh instead of being lost.
+            for (var it = opening.iterator(); it.hasNext() && column.size() < size && fromOpening < 2; ) {
+                Template t = cat.get(it.next());
+                if (t == null) { it.remove(); continue; }
+                if (!eligible(t, day, p)) continue;
                 Offer o = roll(t, rng, day, null, null, false);
-                if (o != null) { column.add(o); fromOpening++; }
+                if (o != null) { column.add(o); fromOpening++; it.remove(); }
             }
         }
         var pool = new ArrayList<Template>();
@@ -288,7 +291,7 @@ public final class Desk {
     /** Why the player cannot take this offer now, or null if they can. */
     public String refusal(Offer o, Player p, int day) {
         if (inHand != null) return "in_hand";
-        if (!offers().contains(o)) return "gone";
+        if (!offers().contains(o) || day >= o.expires()) return "gone";
         int today = perDay.getOrDefault(day, 0);
         int cap = (int) num(map(cat.desk.get("caps")).get("per_day"), 2);
         if (o.rank() == Rank.D ? today >= cap : today > 0) return "day_full";

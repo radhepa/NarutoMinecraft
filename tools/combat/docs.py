@@ -10,6 +10,7 @@ import squad
 import taijutsu
 import techniques
 import weapons
+import common
 from common import ROOT
 
 DOCS = os.path.join(ROOT, "docs", "combat")
@@ -161,6 +162,5 @@ def write_all():
     pages = {"techniques.md": techniques_page(), "clans.md": clans_page(), "styles.md": styles_page(), "bestiary.md": bestiary_page(),
              "animations.md": animations_page()}
     for name, text in pages.items():
-        with open(os.path.join(DOCS, name), "w", encoding="utf-8") as f:
-            f.write(text)
+        common.emit(os.path.join(DOCS, name), text)
     return list(pages)

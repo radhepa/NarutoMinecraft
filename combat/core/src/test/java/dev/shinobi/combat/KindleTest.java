@@ -22,10 +22,11 @@ class KindleTest {
         assertEquals(Kindle.Boost.NONE, Kindle.boost(Tier.NONE), "useless with strangers");
     }
     @Test void overuseBurnsChakraAndStamina() {
-        assertEquals(new Kindle.Burn(0, 0), Kindle.overuse(2, 200), "three a minute are free");
+        assertEquals(new Kindle.Burn(0, 0), Kindle.overuse(3, 200), "three a minute are free");
         var burn = Kindle.overuse(4, 200);
-        assertEquals(40, burn.chakra(), 1e-9);
-        assertEquals(60, burn.stamina(), 1e-9);
+        assertEquals(20, burn.chakra(), 1e-9);
+        assertEquals(30, burn.stamina(), 1e-9);
+        assertEquals(burn, Kindle.overuse(5, 200), "each one past three burns the same");
     }
     @Test void emberLinkSharesOnePoolAndSpreadsTheBlow() {
         var chakra = new LinkedHashMap<String, Double>();

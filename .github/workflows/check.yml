@@ -1,0 +1,33 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 25
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install pillow numpy
+      - name: Java engines and Shinobi Core
+        run: ./gradlew build --console=plain
+      - name: Output check regressions
+        run: python -m unittest discover -s tools -p test_output_checks.py
+      # Font-free authoring checks; the rendered checks need the local fonts.
+      - name: Authoring checks
+        run: |
+          for t in creator/creator.py missions/missions.py items/items.py dialogue/compose.py dialogue/dialogue.py \
+                   roster/roster.py konoha/catalogue.py combat/build.py; do
+            echo "== $t"
+            python tools/$t --check
+          done
+      - name: Checks leave the tree unchanged
+        run: git diff --exit-code

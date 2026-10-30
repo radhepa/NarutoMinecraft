@@ -24,6 +24,7 @@ import squad  # noqa: E402
 import taijutsu  # noqa: E402
 import techniques  # noqa: E402
 import weapons  # noqa: E402
+import common  # noqa: E402
 from common import OUT, RANK_LEVEL, RANKS, ROOT, SIGNS, SLICES, write  # noqa: E402
 
 FAMILIES = {
@@ -39,7 +40,8 @@ def short(eid):
 
 def build():
     for old in glob.glob(os.path.join(OUT, "**", "*.json"), recursive=True):
-        os.remove(old)
+        if common.PENDING is None:
+            os.remove(old)
     write("core/resources.json", {"resources": core.RESOURCES})
     write("core/scaling.json", core.SCALING)
     write("core/natures.json", core.NATURE_RULES)
@@ -320,18 +322,36 @@ def check(every):
     return errors
 
 
+def stale_outputs():
+    """With --check: generated files that differ from disk, plus compiled files nothing generates."""
+    stale = []
+    for path, text in common.PENDING.items():
+        try:
+            with open(path, encoding="utf-8", newline="") as f:
+                same = f.read() == text
+        except FileNotFoundError:
+            same = False
+        if not same:
+            stale.append(path)
+    stale += [p for p in glob.glob(os.path.join(OUT, "**", "*.json"), recursive=True) if p not in common.PENDING]
+    return sorted(os.path.relpath(p, ROOT) for p in stale)
+
+
 def main():
+    if "--check" in sys.argv:
+        common.PENDING = {}
     every = build()
     pages = docs.write_all()
-    n = len(glob.glob(os.path.join(OUT, "**", "*.json"), recursive=True))
-    print("wrote %d files to %s (%d techniques) and %d pages to docs/combat/" % (n, os.path.relpath(OUT, ROOT), len(every), len(pages)))
     if "--check" in sys.argv:
-        errs = check(every)
+        errs = ["stale generated file (run build.py): " + p for p in stale_outputs()] + check(every)
         for e in errs:
             print("ERROR", e)
         if errs:
             sys.exit(1)
         print("check: ok")
+    else:
+        n = len(glob.glob(os.path.join(OUT, "**", "*.json"), recursive=True))
+        print("wrote %d files to %s (%d techniques) and %d pages to docs/combat/" % (n, os.path.relpath(OUT, ROOT), len(every), len(pages)))
 
 
 if __name__ == "__main__":

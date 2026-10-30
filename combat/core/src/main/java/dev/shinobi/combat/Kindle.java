@@ -47,11 +47,11 @@ public final class Kindle {
         return switch (t) { case NONE -> Integer.MAX_VALUE; case SPARK -> 400; case FLAME -> 300; case BLAZE -> 200; };
     }
 
-    /** Overuse: past three kindles in a minute, each one burns a tenth of your chakra bar and 30 stamina more. */
+    /** Overuse: past three kindles in a minute (this one counted), each one burns a tenth of your chakra bar and 30 stamina. */
     public static final int FREE_PER_MINUTE = 3;
     public record Burn(double chakra, double stamina) {}
     public static Burn overuse(int kindlesInLastMinute, double maxChakra) {
-        int over = Math.max(0, kindlesInLastMinute - FREE_PER_MINUTE + 1);
+        int over = kindlesInLastMinute > FREE_PER_MINUTE ? 1 : 0;
         return new Burn(over * 0.1 * maxChakra, over * 30);
     }
 

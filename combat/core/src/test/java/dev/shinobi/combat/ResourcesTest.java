@@ -65,5 +65,6 @@ class ResourcesTest {
         assertEquals(1, c.remaining("dodge", 29));
         assertTrue(c.use("dodge", 30, 30));
         assertTrue(c.ready("fireball", 0), "never used is ready");
+        assertEquals(0, c.remaining("fireball", 1000), "never used has no wait");
     }
 }

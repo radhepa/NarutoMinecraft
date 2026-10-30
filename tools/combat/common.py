@@ -30,12 +30,22 @@ def cid(name):
     return name if name.startswith("combat:") else "combat:" + name
 
 
+# --check sets this to a dict: outputs are collected here (path -> text) instead of written.
+PENDING = None
+
+
+def emit(path, text):
+    if PENDING is not None:
+        PENDING[os.path.normpath(path)] = text
+        return
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(text)
+
+
 def write(rel, payload):
     path = os.path.join(OUT, rel)
-    os.makedirs(os.path.dirname(path), exist_ok=True)
     body = {"format": FORMAT}
     body.update(payload)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(body, f, indent=1, ensure_ascii=False)
-        f.write("\n")
+    emit(path, json.dumps(body, indent=1, ensure_ascii=False) + "\n")
     return path

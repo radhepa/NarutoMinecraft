@@ -138,6 +138,29 @@ class DeskTest {
         assertEquals(opening.subList(0, 2), board.stream().filter(o -> o.rank() == Rank.D).limit(2).map(Offer::template).toList());
     }
 
+    @Test void anOpeningTemplateThatCannotGoUpYetWaits() {
+        var desk = desk(SEED, Desk.Mode.CLASSIC, false);
+        var p = genin();
+        String early = "mission.d.festival_setup";
+        assertFalse(desk.eligible(CAT.get(early), 21, p), "precondition: not up on day 21");
+        desk.opening.addFirst(early);
+        var board = desk.open(21, p);
+        assertTrue(desk.opening.contains(early), "kept for a later refresh");
+        var opening = Json.strings(CAT.desk.get("classic_opening"));
+        assertEquals(opening.subList(0, 2), board.stream().filter(o -> o.rank() == Rank.D).limit(2).map(Offer::template).toList());
+    }
+
+    @Test void expiredOffersLeaveTheBoardBetweenRefreshes() {
+        var desk = desk(SEED, Desk.Mode.VARIED, false);
+        var p = genin("main.ch11.paper_trail");
+        Offer c = desk.open(30, p).stream().filter(o -> o.rank() == Rank.C).findFirst().orElseThrow();
+        int day = c.expires();
+        assertNotEquals(0, (day - 30) % (int) Json.num(Json.map(CAT.desk.get("refresh_days")).get("c"), 1),
+                "precondition: the C column does not refresh on the expiry day");
+        assertEquals("gone", desk.refusal(c, p, day));
+        assertFalse(desk.open(day, p).contains(c));
+    }
+
     @Test void twistsComeOftenButNotTheSameTwiceRunning() {
         int twisted = 0, total = 0;
         for (long s = 0; s < 30; s++) {
