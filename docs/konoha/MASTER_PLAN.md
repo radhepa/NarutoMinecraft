@@ -44,7 +44,7 @@ sheet in [DISTRICTS.md](DISTRICTS.md).
 
 | District | Bounds (x, z) | Character | Height | Status |
 |---|---|---|---|---|
-| Hokage Rock and the ridge | -262..312, -320..-222 | Cliff, the four faces, forest on top (left wild) | 30-70 cliff | Planned (K11) |
+| Hokage Rock and the ridge | -262..312, -320..-222 | Cliff, the four faces, forest on top (left wild) | 45-106 cliff | Planned (K11) |
 | The Foot | -110..204, -221..-176 | Civic heart under the faces: the Residence, the founders' and allied clans, the courier office, the Rock's stair | 1-3 storeys, the Residence 5 | Residence built (K1) |
 | Shrine Hill | 150..204, -168..-104 | The shrine on its hill, woods behind it | Hill +6 | Planned |
 | Central Leaf | 61..204, -98..-37 | Old estates: the Hyuga, garden houses, small clan homes | 1-2 storeys | Planned |
@@ -62,7 +62,7 @@ sheet in [DISTRICTS.md](DISTRICTS.md).
 | Stadium grounds | 210..306, -35..66 | The Chunin Exam stadium | 4-5 storeys of stands | Beta 3 |
 | Training lanes | 210..306, 70..168 | Dojos and an inner training field | 1-2 storeys | Beta 2 |
 | West bank | -262..-166, -221..168 | Across the river: the walled Uchiha quarter, the old quarry, riverside houses, quiet dark lanes | 1-2 storeys | Planned |
-| Main Gate and wall | -200..220, 173..190 | The gate, its towers, the south wall | Wall 14, towers 20 | Gate and 10 wall modules built |
+| Main Gate and wall | -200..220, 173..190 | The gate, its towers, the south wall | Wall 20 (the built module), towers 26 | Gate and 10 wall modules built |
 | Outside the wall | Around the ring | Prologue hills (south), training grounds and the lake (south-west), the cliff ground (west), farms and the east road (south-east), the Forest of Death (east) | Terrain | Beta 1 to Beta 3 |
 
 ## 3. Streets
@@ -112,9 +112,13 @@ route runs unbroken from the gate to the Foot.
 | Chunin Exam stadium | x 212-305, z -32 to 61 | East Avenue; the shrine hill | Beta 3 |
 | Water tanks | On flat roofs everywhere (two or three a block) | The skyline | Canon's signature roof clutter |
 
-**Height rule.** Nothing on Main Street, the Foot or Central Leaf stands taller than 16 blocks (the
-Residence 22 with its roof); towers and the hospital stand off the axis. From the gate the four faces
-(the cliff's top third) stay in full view above the Residence.
+**Height rule.** Nothing on Main Street, the Foot or Central Leaf stands taller than 16 blocks except
+the Residence (36 with its fins, as built) and the Academy (20); towers and the hospital stand off
+the axis. **The sightline sets the Rock's height:** from an eye in the gate (y 65.6, z 182) the line
+to the faces' chins must clear the Residence's top (y 100 at z about -195), so the chins sit at y 115
+or higher. Four faces 50 wide need about 45 rows each, so the faces run from y 115 to 160 and the
+Rock's top stands at about y 170 (106 above the street). The first draft's 134 would have hidden the
+chins behind the Residence.
 
 ## 5. Terrain
 
@@ -123,7 +127,7 @@ Height changes come at the edges and at the landmarks, so the core never needs r
 
 | Place | Height | How |
 |---|---|---|
-| The Rock | Rises from y 64 to about 134 at the faces, falling to about 95 at the ridge's ends where the wall meets it | A sheer face with ledges and buttresses below the faces, scree and pines at its foot; forest on top |
+| The Rock | Rises from y 64 to about 170 at the faces (the faces from y 115 to 160), falling to about 110 at the ridge's ends where the wall meets it | A sheer face with ledges and buttresses below the faces, scree and pines at its foot; forest on top |
 | Rock Walk | A 3-block stone path along the cliff's foot | The sealed door opens onto it, east of the Residence, hidden from the stair by a buttress |
 | The Rock's east stair | Climbs the ridge's east flank from the plaza at Rock Road (x 172-201) to a lookout above the faces | 3 wide, landings every 6 steps, stone lanterns at the landings |
 | Shrine Hill | +6 | Retaining walls of stone brick, a 3-wide stair of 12 steps with two landings, the torii at the foot on Academy Street |
@@ -190,7 +194,24 @@ Places the story and the missions need, by site. Names only; what happens there 
 | Clan places (Nara forest, Aburame garden, Yamanaka shop) | Their quarters | Beta 2 |
 | Generic anchors (client homes, roofs and gardens, vacant homes, hiding spots, pet hideouts, overgrown lots, storerooms, warehouses, the park) | 4 to 8 per kind, spread over the residential districts | Beta 1 to 2 |
 
-## 8. Quality bar
+## 8. Reference check
+
+The owner's reference builds (October 2026; inspiration, not copies) checked against this plan and
+the K1 renders. What they confirm: the Residence centred under the faces at the end of the gate's
+axis; a ring wall far lower than the Rock; dense one- to three-storey blocks broken by the Residence
+and round towers. What they changed in the plan:
+
+| Finding | Change | Batch |
+|---|---|---|
+| The Rock dominates every view; its faces are the village's biggest object | The Rock rises to about y 170 with the faces from 115 to 160 (§4) | K11 |
+| Green canopy fills every gap between buildings; the K1 street reads bare | A tree budget: a big broadleaf every 15 to 20 blocks along every street, one or two per home plot, groves in every square and clan garden ([TECHNIQUES §9](TECHNIQUES.md#9-trees-and-gardens)) | K6 and each district's batch |
+| Round buildings of every size, not one tower: drums and tiered round towers with stepped roofs | A round-building family (drum house, round shop, tiered tower) used in every district, about one in twelve buildings ([TECHNIQUES §4](TECHNIQUES.md#4-roofs)) | K7 onward |
+| Roofs in many colours: teal and blue beside green, orange and grey; flat grey roofs crowded with white tanks | Teal and blue roof palettes added; flat roofs carry two or three tanks | K4 onward |
+| The gate's two green doors fill the whole opening; ours are narrow strips beside it | The doors as tall and wide as the opening, standing open inward; the あ and ん large on them | K4 |
+| The wall reads warm orange-brown from inside the village; ours is dark spruce and packed mud | The wall's boards shift toward orange-brown (stripped acacia, terracotta) *check against the art* | K4 |
+| The Residence stands in a round sandy forecourt with curved stairs and lanterns; ours sits on a grey square | A round forecourt of packed earth and sandstone, curved steps down to Rock Road | K4 |
+
+## 9. Quality bar
 
 Every building from here on meets [TECHNIQUES.md](TECHNIQUES.md): canon silhouette first (checked
 against reference art), proportions true to the player, depth on every face (frames proud of the

@@ -75,11 +75,18 @@ buildings; every face from K4 on has at least the first four.
 | Pent (hisashi) | Every machiya front | A one-deep slab or stair skirt roof at the first-floor line, the full width of the shop front |
 | Flat with parapet | Apartment blocks, the hospital, many town buildings [art] | A one-block parapet, tanks and pipes on top |
 
+**Round buildings** (drum houses, round shops, tiered towers): a cylinder of radius 4 to 8 with posts
+every 4 blocks round the face, each tier one block narrower than the one below, every tier capped by a
+one-block skirt roof stepping out two blocks; a flat top with a tank, or a low cone. About one building
+in twelve, in every district, so the round tower is a family, not a single landmark.
+
 Ridges: one row capped with the kawara ridge block; each end gets a raised cap (onigawara: a wall
 block and a slab, or the ridge block's end piece). Over about 15 × 15, split the roof into sections.
 Colours keep the KONOHA_BUILD.md rule: **grey** (deepslate tile) for homes and the Uchiha quarter,
 **green** (oxidised copper) for public buildings and the Academy, **orange** (cut copper) for shops
-and the Residence's accents.
+and the Residence's accents, and two new palettes for town buildings and round towers: **teal**
+(weathered cut copper) and **blue** (light blue and cyan terracotta, with prismarine bricks for the
+deeper course).
 
 ## 5. Fronts
 
@@ -131,6 +138,12 @@ sparingly at the shrine, the Academy and the river; bamboo in clan gardens; azal
 carpet, ferns and short grass at wall bases. Every home plot keeps a third as garden: a tree or a
 pine, a stone lantern, stepping stones from the gate.
 
+**Tree budget.** Seen from the Rock the village should read as roofs in a forest. A big broadleaf every
+15 to 20 blocks along every street (in the kerb line or a front garden, never on the carriageway);
+one or two per home plot; a grove of three to five in every square, clan garden and park; the
+Academy's swing tree and the shrine's woods as the largest. A tree is never closer than 2 blocks to a
+wall, so canopies frame the roofs instead of hiding them.
+
 ## 10. Interiors
 
 Every home a resident sleeps in gets a lived-in layout (the owner's feedback: today only tatami, a
@@ -181,8 +194,9 @@ decorated pots, carpet offcuts by the door.
 
 ### 10.3 Room programmes by home type
 
-**Family house, two storeys** (`home_plaster_2f`, 9 × 9 inside per floor; Sakura Lane, the south
-streets):
+**Family house, two storeys** (`home_plaster_2f`, 7 × 5 inside per floor; Sakura Lane, the south
+streets). Too small for a bath: the household uses the bath house (Shop Row), as small Japanese homes
+did; the toilet and basin sit by the genkan.
 
 - Ground floor: genkan (2 × 2) with the shoe cabinet and the stair start; LDK (living, dining,
   kitchen, about 5 × 4): a kitchen run along a wall (fridge, counter, sink, stove, counter, cupboards
