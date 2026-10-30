@@ -18,7 +18,11 @@ import dev.shinobi.combat.runtime.Spar;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import dev.shinobi.progression.mission.Json;
 import dev.shinobi.progression.Quests.Quest;
+import dev.shinobi.life.Daily;
 import dev.shinobi.life.ShinobiLife;
+import dev.shinobi.combat.runtime.ShinobiCombat;
+import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
+import net.minecraft.world.item.ItemStack;
 import dev.shinobi.village.ShinobiVillage;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
@@ -66,9 +70,10 @@ public final class ShinobiProgression implements ModInitializer {
             .map(l -> ShinobiLife.item(l.item())).collect(Collectors.toSet()));
     /**
      * The shops each bound resident keeps, by role or job key.
-     * shortcut: the test street's tea house keeper also sells the furniture shop's lines, until the map has a furniture shop.
+     * shortcut: the test street's tea house keeper also sells the furniture shop's lines and the clinic's and shelter's
+     * adoptions, until the map has a furniture shop, the Inuzuka clinic and the cat shelter.
      */
-    static final Map<String, List<String>> SHOPS = Map.of("job:tea_house", List.of("tea_house", "furniture_shop"),
+    static final Map<String, List<String>> SHOPS = Map.of("job:tea_house", List.of("tea_house", "furniture_shop", "inuzuka_clinic", "cat_shelter"),
             "role:shop.tea_house.owner", List.of("tea_house"), "role:shop.furniture.keeper", List.of("furniture_shop"));
 
     @Override
@@ -80,6 +85,19 @@ public final class ShinobiProgression implements ModInitializer {
         });
         // Read at first use: Fabric does not promise Shinobi Life loads its catalogue before this entrypoint runs.
         StreetGuard.furnishing = item -> FURNITURE.get().contains(item);
+        // Fatigue slows chakra by a quarter (ROADMAP.md, "The daily cycle"); a defeated player wakes in the flat, beside the bed.
+        ShinobiCombat.regen = p -> Daily.tired(p) ? .75 : 1;
+        Daily.home = p -> {
+            var bed = p.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).get(TestStreet.PLAYER_FLAT);
+            return bed == null ? null : bed.offset(1, 1, 1);
+        };
+        // The death penalty: the thrown tools carried are lost (ROADMAP.md, Death); the Leaf map keeps the rest of the pack.
+        // shortcut: no level lost, until P07's levels and rank floors.
+        ServerPlayerEvents.AFTER_RESPAWN.register((old, now, alive) -> {
+            if (alive) return;
+            var inv = now.getInventory();
+            for (int i = 0; i < inv.getContainerSize(); i++) if (ShinobiCombat.THROWN.containsKey(inv.getItem(i).getItem())) inv.setItem(i, ItemStack.EMPTY);
+        });
         Spar.WON.register(player -> stepDone(player, "spar", step -> true));
         // Furnishing: a block from the furniture shop placed in the player's room, checked in a task after the placement.
         UseBlockCallback.EVENT.register((player, level, hand, hit) -> {
@@ -238,6 +256,12 @@ public final class ShinobiProgression implements ModInitializer {
             for (var line : ShinobiLife.stock(shop)) {
                 String cmd = "/shinobi buy " + shop + " " + line.item();
                 player.sendSystemMessage(Component.translatable("shinobi_progression.shop.line", ShinobiLife.item(line.item()).getDefaultInstance().getHoverName(), ShinobiLife.price(shop, line.item()))
+                        .withStyle(s -> s.withColor(ChatFormatting.GREEN).withClickEvent(new ClickEvent.RunCommand(cmd))));
+            }
+        for (String shop : shops)
+            for (var service : ShinobiLife.services(shop)) {
+                String cmd = "/shinobi buy " + shop + " " + service.id();
+                player.sendSystemMessage(Component.translatable("shinobi_progression.shop.line", service.effect(), service.price())
                         .withStyle(s -> s.withColor(ChatFormatting.GREEN).withClickEvent(new ClickEvent.RunCommand(cmd))));
             }
     }

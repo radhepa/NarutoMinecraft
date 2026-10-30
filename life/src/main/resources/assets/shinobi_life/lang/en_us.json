@@ -3,5 +3,9 @@
   "shinobi_life.ryo.earned": "+%s ryo. Wallet: %s ryo",
   "shinobi_life.ryo.paid": "Bought %s for %s ryo. Wallet: %s ryo",
   "shinobi_life.ryo.short": "%s costs %s ryo; you have %s ryo",
-  "shinobi_life.shop.lacks": "This shop does not sell that"
+  "shinobi_life.shop.lacks": "This shop does not sell that",
+  "shinobi_life.day": "Day %s, %s",
+  "shinobi_life.stipend": "Your stipend envelope: +%s ryo. Wallet: %s ryo",
+  "shinobi_life.tired": "You stayed up all night and feel tired: slower, and your chakra returns slowly. Sleep in a bed to recover.",
+  "shinobi_life.woke": "You wake up at home, sore but safe."
 }

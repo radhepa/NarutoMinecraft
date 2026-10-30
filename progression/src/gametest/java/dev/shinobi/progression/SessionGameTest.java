@@ -1,6 +1,8 @@
 package dev.shinobi.progression;
 
 import dev.shinobi.combat.runtime.Spar;
+import dev.shinobi.combat.runtime.ShinobiCombat;
+import dev.shinobi.life.Daily;
 import dev.shinobi.life.ShinobiLife;
 import dev.shinobi.village.PlayerLooks;
 import dev.shinobi.village.ShinobiVillage;
@@ -10,7 +12,13 @@ import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext;
 import net.fabricmc.fabric.api.client.gametest.v1.context.TestSingleplayerContext;
 import net.fabricmc.fabric.api.client.gametest.v1.world.TestWorldSave;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.gui.screens.inventory.ContainerScreen;
+import net.minecraft.client.gui.screens.inventory.CraftingScreen;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.animal.feline.Cat;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.item.BlockItem;
@@ -33,8 +41,12 @@ import static dev.shinobi.progression.ErrandGameTest.ryo;
  * M2, the ten-minute play session (ROADMAP.md 13.4): on the test street a new player makes a character in the creator,
  * the training quest starts and names each step; the player walks to the yard and wins a spar by real attacks (each
  * one taken by the server), earns 30 ryo, buys a tatami from the keeper, places it in flat 3a, sleeps in the flat's bed
- * at nightfall into the next morning, and reopening keeps the look, the finished quest, the wallet and the furnishing.
- * Screenshots: session-creator, session-spar, session-won, session-furnished, session-asleep, session-reopened.
+ * at nightfall into the next morning (day 2's stipend paid), and reopening keeps the look, the finished quest, the wallet
+ * and the furnishing. The rest of the ordinary day (P05): a night awake tires the player and the bed clears it with day
+ * 3's stipend; the flat's chest and crafting table open; a defeat wakes the player in the flat without the kunai; the
+ * keeper's shelter line hands over a tamed kitten.
+ * Screenshots: session-creator, session-spar, session-won, session-furnished, session-asleep, session-reopened,
+ * session-chest, session-woke, session-kitten.
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class SessionGameTest implements FabricClientGameTest {
@@ -129,20 +141,86 @@ public final class SessionGameTest implements FabricClientGameTest {
             for (int i = 0; i < 30 && w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().isSleeping()); i++) c.waitTicks(10);
             long after = w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getOverworldClockTime());
             check(after / 24000 > before / 24000, "the night passes: " + before + " to " + after);
+            for (int i = 0; i < 10 && ryo(w) != 120; i++) c.waitTicks(10);
+            check(ryo(w) == 120 && w.getServer().computeOnServer(s -> Daily.day(s.overworld()) == 2 && "Fireday".equals(Daily.weekday(s.overworld()))),
+                    "day 2, a Fireday, pays the 30 ryo stipend: " + ryo(w));
             save = w.getWorldSave();
         }
         try (var w = save.open()) {
             w.getConnection().waitForChunksRender();
             c.waitTicks(40);
             check(look.equals(w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().getAttached(PlayerLooks.LOOK)))
-                    && journal(w).done().contains(TRAINING) && !journal(w).active().containsKey(TRAINING) && ryo(w) == 90
+                    && journal(w).done().contains(TRAINING) && !journal(w).active().containsKey(TRAINING) && ryo(w) == 120
                     && w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getBlockState(placed).getBlock() == ((BlockItem) ShinobiLife.item("tatami")).getBlock())
                     && c.computeOnClient(mc -> mc.gui.screen() == null), "reopening keeps the look, the quest, the wallet and the tatami: " + journal(w) + ", " + ryo(w));
             c.takeScreenshot("session-reopened");
+
+            // The rest of the ordinary day: up at 01:00 the player is tired; the flat's bed clears it, and day 3 pays again.
+            w.getServer().runCommand("time add 19000");
+            for (int i = 0; i < 10 && !tired(w); i++) c.waitTicks(10);
+            check(tired(w) && w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().hasEffect(MobEffects.SLOWNESS)
+                    && ShinobiCombat.regen.applyAsDouble(w.getConnection().getServerPlayer()) == .75), "a night awake makes the player tired");
+            BlockPos room = anchors(w).get(TestStreet.PLAYER_FLAT);
+            w.getServer().runOnServer(s -> {
+                var p = w.getConnection().getServerPlayer();
+                p.teleportTo(room.getX() + 1.5, room.getY() + 1, room.getZ() + 1.5);
+                p.gameMode.useItemOn(p, p.level(), ItemStack.EMPTY, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(room), Direction.UP, room, false));
+            });
+            for (int i = 0; i < 40 && (tired(w) || ryo(w) != 150); i++) c.waitTicks(10);
+            check(!tired(w) && ryo(w) == 150 && w.getServer().computeOnServer(s -> !w.getConnection().getServerPlayer().hasEffect(MobEffects.SLOWNESS)
+                    && Daily.day(s.overworld()) == 3), "sleeping clears the fatigue and day 3 pays the stipend: " + ryo(w));
+
+            // The flat's chest and crafting table open, even with a block in hand.
+            for (var spot : List.of(TestStreet.FLAT_CHEST, TestStreet.FLAT_TABLE)) {
+                BlockPos at = room.offset(spot);
+                w.getServer().runOnServer(s -> {
+                    var p = w.getConnection().getServerPlayer();
+                    p.teleportTo(at.getX() + .5, room.getY() + 1, at.getZ() + 2.5);
+                    p.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(Items.DIRT));
+                });
+                c.waitTicks(10);
+                c.runOnClient(mc -> mc.gameMode.useItemOn(mc.player, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(at), Direction.SOUTH, at, false)));
+                c.waitFor(mc -> spot == TestStreet.FLAT_CHEST ? mc.gui.screen() instanceof ContainerScreen : mc.gui.screen() instanceof CraftingScreen);
+                if (spot == TestStreet.FLAT_CHEST) c.takeScreenshot("session-chest");
+                c.runOnClient(mc -> mc.player.closeContainer());
+            }
+
+            // A defeat: the player wakes in the flat and loses the thrown tools carried, nothing else (no bill).
+            var kunai = BuiltInRegistries.ITEM.getValue(Identifier.fromNamespaceAndPath("shinobi_combat", "practice_kunai"));
+            w.getServer().runOnServer(s -> {
+                var p = w.getConnection().getServerPlayer();
+                p.getInventory().add(new ItemStack(kunai, 4));
+                p.teleportTo(TestStreet.SPAWN.getX() + .5, TestStreet.SPAWN.getY(), TestStreet.SPAWN.getZ() + .5);
+            });
+            w.getServer().runCommand("gamerule immediate_respawn true");
+            w.getServer().runCommand("kill @p");
+            for (int i = 0; i < 20 && !w.getServer().computeOnServer(s -> TestStreet.inPlayerRoom(s.overworld(), w.getConnection().getServerPlayer().blockPosition())); i++) c.waitTicks(10);
+            check(w.getServer().computeOnServer(s -> {
+                var p = w.getConnection().getServerPlayer();
+                return p.isAlive() && TestStreet.inPlayerRoom(s.overworld(), p.blockPosition()) && p.getInventory().countItem(kunai) == 0 && p.getInventory().countItem(Items.DIRT) == 1;
+            }) && ryo(w) == 150 && !tired(w), "a defeated player wakes in the flat with the pack but no kunai: " + ryo(w));
+            c.takeScreenshot("session-woke");
+
+            // Adoption: the keeper's shelter line hands over a kitten, tamed by the player, for 40 ryo.
+            UUID keeper = w.getServer().computeOnServer(s -> s.overworld().getAttachedOrElse(ShinobiVillage.ROLES, Map.<String, UUID>of()).get("job:tea_house"));
+            check(w.getServer().computeOnServer(s -> {
+                var p = w.getConnection().getServerPlayer();
+                var v = s.overworld().getEntity(keeper);
+                p.teleportTo(v.getX() + 1, v.getY(), v.getZ());
+                return ShinobiProgression.buy(p, "cat_shelter", "service.adoption.cat");
+            }) && ryo(w) == 110, "the kitten costs 40 ryo: " + ryo(w));
+            check(w.getServer().computeOnServer(s -> {
+                var p = w.getConnection().getServerPlayer();
+                return p.level().getEntitiesOfClass(Cat.class, new AABB(p.blockPosition()).inflate(4), cat -> cat.isTame() && cat.isOwnedBy(p) && cat.isBaby()).size() == 1;
+            }), "a tamed kitten owned by the player stands beside them");
+            c.waitTicks(20);
+            c.takeScreenshot("session-kitten");
         }
     }
 
     static String step(TestSingleplayerContext w) { return journal(w).active().get(TRAINING); }
+
+    static boolean tired(TestSingleplayerContext w) { return w.getServer().computeOnServer(s -> Daily.tired(w.getConnection().getServerPlayer())); }
 
     static Map<String, BlockPos> anchors(TestSingleplayerContext w) {
         return w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()));

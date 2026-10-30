@@ -289,7 +289,7 @@ public final class Fighter {
     static void tick(MinecraftServer server) {
         for (var p : server.getPlayerList().getPlayers()) {
             var f = of(p);
-            f.chakra.tick(1);
+            f.chakra.tick(ShinobiCombat.regen.applyAsDouble(p));
             f.stamina.tick(f.guarding ? GUARD_REGEN : 1);
             f.save(p);
             f.stance(p);

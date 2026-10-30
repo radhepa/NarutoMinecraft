@@ -36,6 +36,7 @@ import net.minecraft.world.item.SnowballItem;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiConsumer;
+import java.util.function.ToDoubleFunction;
 
 /** Shinobi Combat's entrypoint: the combat data from data/combat, the practice spar, the Academy techniques and tools. */
 public final class ShinobiCombat implements ModInitializer {
@@ -55,6 +56,8 @@ public final class ShinobiCombat implements ModInitializer {
             b -> b.syncWith(Fighter.Stance.CODEC, AttachmentSyncPredicate.all()));
     /** The practice tools, thrown like snowballs, and the damage each deals on a hit (weapons.json). */
     public static final Map<Item, Double> THROWN = new HashMap<>();
+    /** A multiplier on each player's chakra regen (fatigue, food); the daily-life mod fills it in. */
+    public static ToDoubleFunction<ServerPlayer> regen = p -> 1;
 
     /** Teaches a technique from data/combat; false if it is unknown or already learned. */
     public static boolean teach(ServerPlayer player, String id) { return Fighter.of(player).teach(player, id); }

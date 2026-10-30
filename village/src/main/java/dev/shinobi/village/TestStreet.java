@@ -69,6 +69,8 @@ public final class TestStreet {
      * shortcut: one room of the one player flat, kept as an anchor, until P05's home claims a flat with all its rooms.
      */
     static final Vec3i ROOM = new Vec3i(1, 10, 3), ROOM_SIZE = new Vec3i(5, 2, 5);
+    /** The flat's chest and crafting table from the room's corner (the bed's head). */
+    public static final Vec3i FLAT_CHEST = new Vec3i(5, 0, 0), FLAT_TABLE = new Vec3i(4, 0, 0);
 
     private TestStreet() {}
 
@@ -128,6 +130,8 @@ public final class TestStreet {
         for (var rule : OFF) rules.set(rule, false, level.getServer());
         // No fire spreads or burns blocks; a fire, once lit, also never goes out, so StreetGuard stops players lighting one.
         rules.set(GameRules.FIRE_SPREAD_RADIUS_AROUND_PLAYER, 0, level.getServer());
+        // A defeat costs the thrown tools only, not the pack (ROADMAP.md, Death).
+        rules.set(GameRules.KEEP_INVENTORY, true, level.getServer());
         long cast = castSeed(level);
         var plots = new ArrayList<Map.Entry<BlockPos, JsonArray>>();
         for (var plot : PLOTS) {
@@ -174,6 +178,10 @@ public final class TestStreet {
             }
         }
         anchors.put(PLAYER_FLAT, origin.offset(ROOM));
+        // The flat's storage and workbench, on the mat across the room from the bed (ROADMAP.md, P05: vanilla chests).
+        // shortcut: placed by the paste, not the blueprint, until the home session's furnishing rows ship with the map.
+        level.setBlock(origin.offset(ROOM).offset(FLAT_CHEST), Blueprint.state(level, "minecraft:chest[facing=south]"), Block.UPDATE_CLIENTS);
+        level.setBlock(origin.offset(ROOM).offset(FLAT_TABLE), Blocks.CRAFTING_TABLE.defaultBlockState(), Block.UPDATE_CLIENTS);
         save(level, ShinobiVillage.ANCHORS, anchors);
         save(level, ShinobiVillage.ROLES, roles);
         return new Built(village, List.copyOf(plaques), List.copyOf(residents), Map.copyOf(anchors));

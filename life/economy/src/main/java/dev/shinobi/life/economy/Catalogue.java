@@ -37,7 +37,7 @@ public final class Catalogue {
         public List<Line> rotation() { return stock.stream().filter(l -> !l.core()).toList(); }
     }
     public record Job(String id, String shop, String rank, String slice, int pay, int hours) {}
-    public record Service(String id, String provider, String rank, String slice, int price) {}
+    public record Service(String id, String provider, String rank, String slice, int price, String effect) {}
     public record Ingredient(String item, int count) {}
     public record Recipe(String id, String station, List<Ingredient> inputs, String vessel, String output, int count,
                          String rank, String slice, String unlock, int difficulty) {}
@@ -96,7 +96,7 @@ public final class Catalogue {
         for (Object o : list(shops.get("services"))) {
             var m = obj(o);
             var sv = new Service(str(m.get("id"), ""), str(m.get("provider"), ""), str(m.get("rank"), "any"), str(m.get("slice"), "beta1"),
-                    integer(m.get("price"), 0));
+                    integer(m.get("price"), 0), str(m.get("effect"), ""));
             services.put(sv.id(), sv);
         }
         for (Object o : list(recipes.get("stations"))) {

@@ -15,13 +15,15 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.function.Predicate;
 
 /**
  * Adventure protection: nobody breaks or builds on the Leaf map except in builder mode, which an operator
- * switches on deliberately with `/narutominecraft builder`. Doors, beds, plaques and the board still work.
+ * switches on deliberately with `/narutominecraft builder`. Doors, beds, chests, barrels, crafting tables,
+ * plaques and the board still work.
  * Monster spawns, fire spread, TNT and arrows are handled by the map's rules ({@link TestStreet#OFF}).
  * shortcut: protects the test street's village by name and only blocks breaking, block placement, lighting fires, the
  * tools that reshape blocks and making a flat private (not buckets or explosions of placed mobs), until the master
@@ -56,6 +58,7 @@ public final class StreetGuard {
     /** Blocks a player uses rather than changes. */
     static boolean usable(BlockState s) {
         return s.is(BlockTags.DOORS) || s.is(BlockTags.TRAPDOORS) || s.is(BlockTags.FENCE_GATES) || s.is(BlockTags.BEDS)
+                || s.is(Blocks.CHEST) || s.is(Blocks.BARREL) || s.is(Blocks.CRAFTING_TABLE)
                 || s.getBlock() instanceof HousePlaqueBlock || s.getBlock() instanceof NoticeBoardBlock;
     }
 
