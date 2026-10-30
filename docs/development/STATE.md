@@ -1,9 +1,10 @@
 # Development state
 
+**Paused (owner, 30 October 2026):** village building waits until the UI session (its own branch) is merged.
 **Phase/task:** Konoha, the owner's order of 30 October 2026: the whole village of KONOHA_BUILD.md, district by
 district (ROADMAP §6: Beta 1, then Beta 2, Beta 3 and Later), before more quest or systems work. M3's story (P07) is
-paused at 6fc02a7. **Branch/base:** `dev`, from `main` e9238bd. Names and dialogue belong to the `names` branch: don't
-edit name pools, name rolling or dialogue pools on `dev`.
+paused at 6fc02a7. **Branch/base:** `dev`, from `main` e9238bd. Names and dialogue are the merged `names` work: leave
+them alone. Each resident a batch spawns calls `LeafNames.marker(v, marker)` after `setUUID`, before `addFreshEntity`.
 
 ## Done
 
@@ -17,12 +18,15 @@ edit name pools, name rolling or dialogue pools on `dev`.
   closed well from a level landing behind a door; tatami lies on the floor, level with the bed. Each keeper sells
   its own shop (`ShinobiProgression.SHOPS`). `LeafFlats.CLAIMS` gives a placed resident back the bed it stands by
   once, if VF handed beds out first (`LeafFlatsTest`).
+- `names` merged (63110e1, owner-approved): resident names and dialogue.
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
 `./gradlew build` passed (`.local-dev/logs/k2-build.log`); `layout.py --check` ok (34 plots built).
 `:village:runClientGameTest` passed (`.local-dev/logs/k2-gt.log`): 29 residents, 30 plaques, paste 18.4 s, 27 of 29
-asleep in their own beds, the day route 11.8 to 19.2 ms per tick, the night route 9.9 to 23.2. Screenshots: `village/build/run/clientGameTest/screenshots/*konoha-*`;
+asleep in their own beds. After the merge: build, `dialogue.py`, `creator.py`, `missions.py` and `layout.py --check`
+passed; the client gametest with `LeafNamesGameTest` passed (`.local-dev/logs/merge-gt.log`): 27 of 29 asleep, the
+day route 8.8 to 13.4 ms per tick, the night route 4.8 to 5.0. Screenshots: `village/build/run/clientGameTest/screenshots/*konoha-*`;
 renders: `docs/renders/konoha/`.
 
 ## Remaining
@@ -50,4 +54,5 @@ None.
 
 ## Next
 
-Merge `names` into `dev` (owner-approved), then Konoha K3: the market district and the Inuzuka clinic.
+When the owner resumes: Konoha K3, the market district and the Inuzuka clinic; then the rest of Beta 1 in
+Remaining's order; then Beta 2, Beta 3 and Later (ROADMAP §6).
