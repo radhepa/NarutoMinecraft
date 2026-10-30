@@ -1,0 +1,2228 @@
+{
+ "format": "konoha-layout/1",
+ "notes": "Master plan draft (docs/konoha/MASTER_PLAN.md); batch K5 merges it into tools/konoha/layout.json.",
+ "map": [
+  0,
+  64,
+  0
+ ],
+ "spawn": [
+  17,
+  1,
+  14
+ ],
+ "border": {
+  "x": 18.5,
+  "z": 7.5,
+  "size": 680
+ },
+ "wall": [
+  [
+   -200,
+   183
+  ],
+  [
+   -275,
+   90
+  ],
+  [
+   -275,
+   -110
+  ],
+  [
+   -250,
+   -222
+  ],
+  [
+   275,
+   -222
+  ],
+  [
+   310,
+   -110
+  ],
+  [
+   310,
+   90
+  ],
+  [
+   220,
+   183
+  ]
+ ],
+ "districts": [
+  {
+   "id": "ridge",
+   "name": "Hokage Rock and the ridge",
+   "polygon": [
+    [
+     -262,
+     -320
+    ],
+    [
+     312,
+     -320
+    ],
+    [
+     312,
+     -222
+    ],
+    [
+     -262,
+     -222
+    ]
+   ]
+  },
+  {
+   "id": "foot",
+   "name": "The Foot (Residence)",
+   "polygon": [
+    [
+     -110,
+     -221
+    ],
+    [
+     204,
+     -221
+    ],
+    [
+     204,
+     -176
+    ],
+    [
+     -110,
+     -176
+    ]
+   ]
+  },
+  {
+   "id": "central",
+   "name": "Central Leaf",
+   "polygon": [
+    [
+     61,
+     -98
+    ],
+    [
+     204,
+     -98
+    ],
+    [
+     204,
+     -37
+    ],
+    [
+     61,
+     -37
+    ]
+   ]
+  },
+  {
+   "id": "hospital",
+   "name": "Hospital Hill",
+   "polygon": [
+    [
+     -140,
+     -168
+    ],
+    [
+     53,
+     -168
+    ],
+    [
+     53,
+     -47
+    ],
+    [
+     -140,
+     -47
+    ]
+   ]
+  },
+  {
+   "id": "academy",
+   "name": "Academy",
+   "polygon": [
+    [
+     61,
+     -168
+    ],
+    [
+     148,
+     -168
+    ],
+    [
+     148,
+     -104
+    ],
+    [
+     61,
+     -104
+    ]
+   ]
+  },
+  {
+   "id": "shrine",
+   "name": "Shrine Hill",
+   "polygon": [
+    [
+     150,
+     -168
+    ],
+    [
+     204,
+     -168
+    ],
+    [
+     204,
+     -104
+    ],
+    [
+     150,
+     -104
+    ]
+   ]
+  },
+  {
+   "id": "leaf_street",
+   "name": "Leaf Street",
+   "polygon": [
+    [
+     -45,
+     -45
+    ],
+    [
+     53,
+     -45
+    ],
+    [
+     53,
+     22
+    ],
+    [
+     -45,
+     22
+    ]
+   ]
+  },
+  {
+   "id": "apartments",
+   "name": "Apartment Blocks",
+   "polygon": [
+    [
+     -140,
+     -45
+    ],
+    [
+     -46,
+     -45
+    ],
+    [
+     -46,
+     40
+    ],
+    [
+     -140,
+     40
+    ]
+   ]
+  },
+  {
+   "id": "main_street",
+   "name": "Main Street",
+   "polygon": [
+    [
+     36,
+     -175
+    ],
+    [
+     78,
+     -175
+    ],
+    [
+     78,
+     176
+    ],
+    [
+     36,
+     176
+    ]
+   ]
+  },
+  {
+   "id": "market",
+   "name": "Civilian Market",
+   "polygon": [
+    [
+     -140,
+     23
+    ],
+    [
+     53,
+     23
+    ],
+    [
+     53,
+     100
+    ],
+    [
+     -140,
+     100
+    ]
+   ]
+  },
+  {
+   "id": "shops",
+   "name": "Shop Row",
+   "polygon": [
+    [
+     61,
+     20
+    ],
+    [
+     115,
+     20
+    ],
+    [
+     115,
+     125
+    ],
+    [
+     61,
+     125
+    ]
+   ]
+  },
+  {
+   "id": "south",
+   "name": "South Residential",
+   "polygon": [
+    [
+     -140,
+     101
+    ],
+    [
+     53,
+     101
+    ],
+    [
+     53,
+     168
+    ],
+    [
+     -140,
+     168
+    ]
+   ]
+  },
+  {
+   "id": "inuzuka",
+   "name": "Inuzuka and the gate quarter",
+   "polygon": [
+    [
+     61,
+     126
+    ],
+    [
+     200,
+     126
+    ],
+    [
+     200,
+     168
+    ],
+    [
+     61,
+     168
+    ]
+   ]
+  },
+  {
+   "id": "east",
+   "name": "East Quarters",
+   "polygon": [
+    [
+     116,
+     -37
+    ],
+    [
+     200,
+     -37
+    ],
+    [
+     200,
+     125
+    ],
+    [
+     116,
+     125
+    ]
+   ]
+  },
+  {
+   "id": "nara",
+   "name": "Nara forest",
+   "polygon": [
+    [
+     210,
+     -221
+    ],
+    [
+     296,
+     -221
+    ],
+    [
+     296,
+     -40
+    ],
+    [
+     210,
+     -40
+    ]
+   ]
+  },
+  {
+   "id": "stadium",
+   "name": "Stadium grounds",
+   "polygon": [
+    [
+     210,
+     -35
+    ],
+    [
+     306,
+     -35
+    ],
+    [
+     306,
+     66
+    ],
+    [
+     210,
+     66
+    ]
+   ]
+  },
+  {
+   "id": "southeast",
+   "name": "Training lanes",
+   "polygon": [
+    [
+     210,
+     70
+    ],
+    [
+     306,
+     70
+    ],
+    [
+     306,
+     168
+    ],
+    [
+     210,
+     168
+    ]
+   ]
+  },
+  {
+   "id": "west_bank",
+   "name": "West bank (Uchiha, riverside)",
+   "polygon": [
+    [
+     -262,
+     -221
+    ],
+    [
+     -166,
+     -221
+    ],
+    [
+     -166,
+     168
+    ],
+    [
+     -196,
+     168
+    ],
+    [
+     -262,
+     95
+    ]
+   ]
+  },
+  {
+   "id": "river",
+   "name": "The river",
+   "polygon": [
+    [
+     -170,
+     -224
+    ],
+    [
+     -150,
+     -224
+    ],
+    [
+     -150,
+     70
+    ],
+    [
+     -152,
+     135
+    ],
+    [
+     -175,
+     150
+    ],
+    [
+     -230,
+     150
+    ],
+    [
+     -236,
+     138
+    ],
+    [
+     -190,
+     128
+    ],
+    [
+     -166,
+     70
+    ]
+   ]
+  },
+  {
+   "id": "gate",
+   "name": "Main Gate and wall",
+   "polygon": [
+    [
+     -200,
+     173
+    ],
+    [
+     220,
+     173
+    ],
+    [
+     220,
+     190
+    ],
+    [
+     -200,
+     190
+    ]
+   ]
+  },
+  {
+   "id": "prologue_hills",
+   "name": "Prologue Hills (outside)",
+   "polygon": [
+    [
+     -210,
+     200
+    ],
+    [
+     30,
+     200
+    ],
+    [
+     30,
+     335
+    ],
+    [
+     -210,
+     335
+    ]
+   ]
+  }
+ ],
+ "streets": [
+  {
+   "id": "main_street",
+   "name": "Main Street",
+   "class": "main",
+   "width": 7,
+   "from": [
+    57,
+    -175
+   ],
+   "to": [
+    57,
+    176
+   ]
+  },
+  {
+   "id": "leaf_street",
+   "name": "Leaf Street",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -44,
+    17
+   ],
+   "to": [
+    53,
+    17
+   ]
+  },
+  {
+   "id": "sakura_lane",
+   "name": "Sakura Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -44,
+    -28
+   ],
+   "to": [
+    53,
+    -28
+   ]
+  },
+  {
+   "id": "rock_road",
+   "name": "Rock Road",
+   "class": "main",
+   "width": 7,
+   "from": [
+    -140,
+    -172
+   ],
+   "to": [
+    204,
+    -172
+   ]
+  },
+  {
+   "id": "academy_street",
+   "name": "Academy Street",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    61,
+    -101
+   ],
+   "to": [
+    204,
+    -101
+   ]
+  },
+  {
+   "id": "hospital_road",
+   "name": "Hospital Road",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -140,
+    -138
+   ],
+   "to": [
+    53,
+    -138
+   ]
+  },
+  {
+   "id": "sakura_lane_w",
+   "name": "Sakura Lane (west)",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -140,
+    -28
+   ],
+   "to": [
+    -45,
+    -28
+   ]
+  },
+  {
+   "id": "leaf_street_w",
+   "name": "Leaf Street (west)",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -140,
+    17
+   ],
+   "to": [
+    -45,
+    17
+   ]
+  },
+  {
+   "id": "leaf_street_e",
+   "name": "Leaf Street (east)",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    61,
+    17
+   ],
+   "to": [
+    203,
+    17
+   ]
+  },
+  {
+   "id": "market_street",
+   "name": "Market Street",
+   "class": "main",
+   "width": 7,
+   "from": [
+    -140,
+    62
+   ],
+   "to": [
+    53,
+    62
+   ]
+  },
+  {
+   "id": "shop_lane",
+   "name": "Shop Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    61,
+    62
+   ],
+   "to": [
+    204,
+    62
+   ]
+  },
+  {
+   "id": "south_lane",
+   "name": "South Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -140,
+    104
+   ],
+   "to": [
+    53,
+    104
+   ]
+  },
+  {
+   "id": "haruno_lane",
+   "name": "Haruno Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -95,
+    137
+   ],
+   "to": [
+    53,
+    137
+   ]
+  },
+  {
+   "id": "wall_lane",
+   "name": "Wall Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -196,
+    170
+   ],
+   "to": [
+    215,
+    170
+   ]
+  },
+  {
+   "id": "river_road",
+   "name": "River Road",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -143,
+    -168
+   ],
+   "to": [
+    -143,
+    168
+   ]
+  },
+  {
+   "id": "east_avenue",
+   "name": "East Avenue",
+   "class": "main",
+   "width": 7,
+   "from": [
+    207,
+    -168
+   ],
+   "to": [
+    207,
+    168
+   ]
+  },
+  {
+   "id": "artists_lane",
+   "name": "Artists' Lane",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    150,
+    -98
+   ],
+   "to": [
+    150,
+    60
+   ]
+  },
+  {
+   "id": "uchiha_road",
+   "name": "Uchiha Road",
+   "class": "lane",
+   "width": 5,
+   "from": [
+    -185,
+    -200
+   ],
+   "to": [
+    -185,
+    60
+   ]
+  }
+ ],
+ "plots": [
+  {
+   "id": "leaf_block",
+   "design": "leaf_block",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "district": "leaf_street",
+   "name": "Leaf Block"
+  },
+  {
+   "id": "tea_house",
+   "design": "shop_tea_house",
+   "at": [
+    -12,
+    0,
+    4
+   ],
+   "district": "leaf_street",
+   "name": "Tea House"
+  },
+  {
+   "id": "training_yard",
+   "design": "training_yard",
+   "at": [
+    36,
+    0,
+    4
+   ],
+   "district": "leaf_street",
+   "name": "Training Yard"
+  },
+  {
+   "id": "sakura_1",
+   "design": "home_plaster_2f",
+   "at": [
+    -38,
+    0,
+    -41
+   ],
+   "mirror": false,
+   "district": "leaf_street",
+   "name": "Sakura Lane 1"
+  },
+  {
+   "id": "sakura_2",
+   "design": "home_plaster_2f.white_grey",
+   "at": [
+    -38,
+    0,
+    -25
+   ],
+   "rot": 180,
+   "mirror": true,
+   "district": "leaf_street",
+   "name": "Sakura Lane 2"
+  },
+  {
+   "id": "sakura_3",
+   "design": "home_plaster_2f.white_grey",
+   "at": [
+    -25,
+    0,
+    -41
+   ],
+   "mirror": true,
+   "district": "leaf_street",
+   "name": "Sakura Lane 3"
+  },
+  {
+   "id": "sakura_4",
+   "design": "home_plaster_2f.terracotta_orange",
+   "at": [
+    -25,
+    0,
+    -25
+   ],
+   "rot": 180,
+   "mirror": false,
+   "district": "leaf_street",
+   "name": "Sakura Lane 4"
+  },
+  {
+   "id": "sakura_5",
+   "design": "home_plaster_2f.terracotta_orange",
+   "at": [
+    -12,
+    0,
+    -41
+   ],
+   "mirror": false,
+   "district": "leaf_street",
+   "name": "Sakura Lane 5"
+  },
+  {
+   "id": "sakura_6",
+   "design": "home_plaster_2f",
+   "at": [
+    -12,
+    0,
+    -25
+   ],
+   "rot": 180,
+   "mirror": true,
+   "district": "leaf_street",
+   "name": "Sakura Lane 6"
+  },
+  {
+   "id": "sakura_7",
+   "design": "home_plaster_2f",
+   "at": [
+    1,
+    0,
+    -41
+   ],
+   "mirror": true,
+   "district": "leaf_street",
+   "name": "Sakura Lane 7"
+  },
+  {
+   "id": "sakura_8",
+   "design": "home_plaster_2f.white_grey",
+   "at": [
+    1,
+    0,
+    -25
+   ],
+   "rot": 180,
+   "mirror": false,
+   "district": "leaf_street",
+   "name": "Sakura Lane 8"
+  },
+  {
+   "id": "sakura_9",
+   "design": "home_plaster_2f.white_grey",
+   "at": [
+    14,
+    0,
+    -41
+   ],
+   "mirror": false,
+   "district": "leaf_street",
+   "name": "Sakura Lane 9"
+  },
+  {
+   "id": "sakura_10",
+   "design": "home_plaster_2f.terracotta_orange",
+   "at": [
+    14,
+    0,
+    -25
+   ],
+   "rot": 180,
+   "mirror": true,
+   "district": "leaf_street",
+   "name": "Sakura Lane 10"
+  },
+  {
+   "id": "sakura_11",
+   "design": "home_plaster_2f.terracotta_orange",
+   "at": [
+    27,
+    0,
+    -41
+   ],
+   "mirror": true,
+   "district": "leaf_street",
+   "name": "Sakura Lane 11"
+  },
+  {
+   "id": "sakura_12",
+   "design": "home_plaster_2f",
+   "at": [
+    27,
+    0,
+    -25
+   ],
+   "rot": 180,
+   "mirror": false,
+   "district": "leaf_street",
+   "name": "Sakura Lane 12"
+  },
+  {
+   "id": "sakura_13",
+   "design": "home_plaster_2f",
+   "at": [
+    40,
+    0,
+    -41
+   ],
+   "mirror": false,
+   "district": "leaf_street",
+   "name": "Sakura Lane 13"
+  },
+  {
+   "id": "sakura_14",
+   "design": "home_plaster_2f.white_grey",
+   "at": [
+    40,
+    0,
+    -25
+   ],
+   "rot": 180,
+   "mirror": true,
+   "district": "leaf_street",
+   "name": "Sakura Lane 14"
+  },
+  {
+   "id": "hokage_residence",
+   "design": "hokage_residence",
+   "at": [
+    33,
+    0,
+    -215
+   ],
+   "district": "foot",
+   "name": "Hokage Residence"
+  },
+  {
+   "id": "academy",
+   "design": "academy",
+   "at": [
+    61,
+    0,
+    -168
+   ],
+   "rot": 90,
+   "district": "academy",
+   "name": "Ninja Academy"
+  },
+  {
+   "id": "ichiraku",
+   "design": "ichiraku",
+   "at": [
+    41,
+    0,
+    24
+   ],
+   "rot": 270,
+   "district": "market",
+   "name": "Ichiraku"
+  },
+  {
+   "id": "grocer",
+   "design": "grocer",
+   "at": [
+    42,
+    0,
+    38
+   ],
+   "rot": 270,
+   "district": "market",
+   "name": "Grocer"
+  },
+  {
+   "id": "furniture_shop",
+   "design": "furniture_shop",
+   "at": [
+    61,
+    0,
+    24
+   ],
+   "rot": 90,
+   "district": "shops",
+   "name": "Furniture shop"
+  },
+  {
+   "id": "weapon_shop",
+   "design": "weapon_shop",
+   "at": [
+    61,
+    0,
+    42
+   ],
+   "rot": 90,
+   "district": "shops",
+   "name": "Weapon shop"
+  },
+  {
+   "id": "main_gate",
+   "design": "main_gate",
+   "at": [
+    37,
+    0,
+    177
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Main gate"
+  },
+  {
+   "id": "wall_w1",
+   "design": "village_wall",
+   "at": [
+    -43,
+    0,
+    179
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Village wall"
+  },
+  {
+   "id": "wall_w2",
+   "design": "village_wall",
+   "at": [
+    -27,
+    0,
+    179
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Village wall"
+  },
+  {
+   "id": "wall_w3",
+   "design": "village_wall",
+   "at": [
+    -11,
+    0,
+    179
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Village wall"
+  },
+  {
+   "id": "wall_w4",
+   "design": "village_wall",
+   "at": [
+    5,
+    0,
+    179
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Village wall"
+  },
+  {
+   "id": "wall_w5",
+   "design": "village_wall",
+   "at": [
+    21,
+    0,
+    179
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Village wall"
+  },
+  {
+   "id": "wall_e1",
+   "design": "village_wall",
+   "at": [
+    78,
+    0,
+    179
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Village wall"
+  },
+  {
+   "id": "wall_e2",
+   "design": "village_wall",
+   "at": [
+    94,
+    0,
+    179
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Village wall"
+  },
+  {
+   "id": "wall_e3",
+   "design": "village_wall",
+   "at": [
+    110,
+    0,
+    179
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Village wall"
+  },
+  {
+   "id": "wall_e4",
+   "design": "village_wall",
+   "at": [
+    126,
+    0,
+    179
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Village wall"
+  },
+  {
+   "id": "wall_e5",
+   "design": "village_wall",
+   "at": [
+    142,
+    0,
+    179
+   ],
+   "rot": 180,
+   "district": "gate",
+   "name": "Village wall"
+  },
+  {
+   "id": "hokage_faces",
+   "name": "Hokage Rock: the four faces",
+   "district": "ridge",
+   "planned": true,
+   "at": [
+    -43,
+    0,
+    -266
+   ],
+   "size": [
+    200,
+    40
+   ]
+  },
+  {
+   "id": "archive_door",
+   "name": "Sealed door at the foot",
+   "district": "ridge",
+   "planned": true,
+   "at": [
+    128,
+    0,
+    -225
+   ],
+   "size": [
+    3,
+    3
+   ]
+  },
+  {
+   "id": "senju",
+   "name": "Senju compound",
+   "district": "foot",
+   "planned": true,
+   "at": [
+    -15,
+    0,
+    -215
+   ],
+   "size": [
+    48,
+    40
+   ]
+  },
+  {
+   "id": "uzumaki",
+   "name": "Uzumaki memorial compound",
+   "district": "foot",
+   "planned": true,
+   "at": [
+    -60,
+    0,
+    -212
+   ],
+   "size": [
+    40,
+    36
+   ]
+  },
+  {
+   "id": "shimura",
+   "name": "Shimura clan home",
+   "district": "foot",
+   "planned": true,
+   "at": [
+    -105,
+    0,
+    -212
+   ],
+   "size": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "sarutobi",
+   "name": "Sarutobi clan home",
+   "district": "foot",
+   "planned": true,
+   "at": [
+    82,
+    0,
+    -200
+   ],
+   "size": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "courier",
+   "name": "Courier office",
+   "district": "foot",
+   "planned": true,
+   "at": [
+    110,
+    0,
+    -190
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "jonin_station",
+   "name": "Jonin standby station",
+   "district": "foot",
+   "planned": true,
+   "at": [
+    124,
+    0,
+    -190
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "rock_stair",
+   "name": "The Rock's east stair and plaza",
+   "district": "foot",
+   "planned": true,
+   "at": [
+    172,
+    0,
+    -221
+   ],
+   "size": [
+    30,
+    40
+   ]
+  },
+  {
+   "id": "rock_walk",
+   "name": "Rock Walk (foot path)",
+   "district": "foot",
+   "planned": true,
+   "at": [
+    -105,
+    0,
+    -221
+   ],
+   "size": [
+    270,
+    3
+   ]
+  },
+  {
+   "id": "hyuga",
+   "name": "Hyuga compound",
+   "district": "central",
+   "planned": true,
+   "at": [
+    64,
+    0,
+    -96
+   ],
+   "size": [
+    48,
+    34
+   ]
+  },
+  {
+   "id": "central_homes",
+   "name": "Garden houses",
+   "district": "central",
+   "planned": true,
+   "at": [
+    116,
+    0,
+    -96
+   ],
+   "size": [
+    30,
+    30
+   ]
+  },
+  {
+   "id": "shrine",
+   "name": "Shrine Hill",
+   "district": "shrine",
+   "planned": true,
+   "at": [
+    152,
+    0,
+    -140
+   ],
+   "size": [
+    50,
+    36
+   ]
+  },
+  {
+   "id": "hospital",
+   "name": "Hospital",
+   "district": "hospital",
+   "planned": true,
+   "at": [
+    -70,
+    0,
+    -130
+   ],
+   "size": [
+    56,
+    50
+   ]
+  },
+  {
+   "id": "herb_garden",
+   "name": "Herb garden and Suzuran houses",
+   "district": "hospital",
+   "planned": true,
+   "at": [
+    -135,
+    0,
+    -130
+   ],
+   "size": [
+    60,
+    50
+   ]
+  },
+  {
+   "id": "pharmacy",
+   "name": "Pharmacy",
+   "district": "hospital",
+   "planned": true,
+   "at": [
+    -12,
+    0,
+    -132
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "yamanaka",
+   "name": "Yamanaka compound and flower shop",
+   "district": "hospital",
+   "planned": true,
+   "at": [
+    13,
+    0,
+    -90
+   ],
+   "size": [
+    40,
+    36
+   ]
+  },
+  {
+   "id": "hill_homes",
+   "name": "Hill homes",
+   "district": "hospital",
+   "planned": true,
+   "at": [
+    -135,
+    0,
+    -75
+   ],
+   "size": [
+    140,
+    26
+   ]
+  },
+  {
+   "id": "umino",
+   "name": "Teachers' houses (Umino)",
+   "district": "academy",
+   "planned": true,
+   "at": [
+    120,
+    0,
+    -165
+   ],
+   "size": [
+    28,
+    30
+   ]
+  },
+  {
+   "id": "apartment_2",
+   "name": "Apartment block",
+   "district": "apartments",
+   "planned": true,
+   "at": [
+    -100,
+    0,
+    -45
+   ],
+   "size": [
+    35,
+    15
+   ]
+  },
+  {
+   "id": "apartment_3",
+   "name": "Apartment block",
+   "district": "apartments",
+   "planned": true,
+   "at": [
+    -100,
+    0,
+    -24
+   ],
+   "size": [
+    35,
+    15
+   ]
+  },
+  {
+   "id": "apartment_4",
+   "name": "Apartment block",
+   "district": "apartments",
+   "planned": true,
+   "at": [
+    -100,
+    0,
+    -1
+   ],
+   "size": [
+    35,
+    15
+   ]
+  },
+  {
+   "id": "tower_1",
+   "name": "Round apartment tower",
+   "district": "apartments",
+   "planned": true,
+   "at": [
+    -62,
+    0,
+    -24
+   ],
+   "size": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "akimichi",
+   "name": "Akimichi compound",
+   "district": "market",
+   "planned": true,
+   "at": [
+    -110,
+    0,
+    26
+   ],
+   "size": [
+    48,
+    30
+   ]
+  },
+  {
+   "id": "barbecue",
+   "name": "Barbecue house",
+   "district": "market",
+   "planned": true,
+   "at": [
+    -60,
+    0,
+    26
+   ],
+   "size": [
+    15,
+    13
+   ]
+  },
+  {
+   "id": "stalls_n",
+   "name": "Market stalls (north row)",
+   "district": "market",
+   "planned": true,
+   "at": [
+    -42,
+    0,
+    52
+   ],
+   "size": [
+    78,
+    5
+   ]
+  },
+  {
+   "id": "stalls_s",
+   "name": "Market stalls (south row)",
+   "district": "market",
+   "planned": true,
+   "at": [
+    -42,
+    0,
+    67
+   ],
+   "size": [
+    78,
+    5
+   ]
+  },
+  {
+   "id": "machiya_s",
+   "name": "Townhouse rows",
+   "district": "market",
+   "planned": true,
+   "at": [
+    -140,
+    0,
+    73
+   ],
+   "size": [
+    175,
+    25
+   ]
+  },
+  {
+   "id": "market_n",
+   "name": "Market shop-houses",
+   "district": "market",
+   "planned": true,
+   "at": [
+    -42,
+    0,
+    26
+   ],
+   "size": [
+    80,
+    24
+   ]
+  },
+  {
+   "id": "smithy",
+   "name": "Smithy and forge",
+   "district": "shops",
+   "planned": true,
+   "at": [
+    75,
+    0,
+    42
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "tea_corner",
+   "name": "Rival tea houses",
+   "district": "shops",
+   "planned": true,
+   "at": [
+    61,
+    0,
+    66
+   ],
+   "size": [
+    26,
+    11
+   ]
+  },
+  {
+   "id": "shop_row",
+   "name": "Shop-houses",
+   "district": "shops",
+   "planned": true,
+   "at": [
+    61,
+    0,
+    79
+   ],
+   "size": [
+    54,
+    45
+   ]
+  },
+  {
+   "id": "bath_house",
+   "name": "Bath house",
+   "district": "shops",
+   "planned": true,
+   "at": [
+    88,
+    0,
+    26
+   ],
+   "size": [
+    17,
+    15
+   ]
+  },
+  {
+   "id": "south_homes_n",
+   "name": "South homes",
+   "district": "south",
+   "planned": true,
+   "at": [
+    -95,
+    0,
+    107
+   ],
+   "size": [
+    148,
+    27
+   ]
+  },
+  {
+   "id": "south_homes_s",
+   "name": "South homes",
+   "district": "south",
+   "planned": true,
+   "at": [
+    -95,
+    0,
+    140
+   ],
+   "size": [
+    148,
+    27
+   ]
+  },
+  {
+   "id": "park",
+   "name": "Village park",
+   "district": "south",
+   "planned": true,
+   "at": [
+    -140,
+    0,
+    107
+   ],
+   "size": [
+    42,
+    60
+   ]
+  },
+  {
+   "id": "inuzuka",
+   "name": "Inuzuka compound and clinic",
+   "district": "inuzuka",
+   "planned": true,
+   "at": [
+    64,
+    0,
+    126
+   ],
+   "size": [
+    48,
+    40
+   ]
+  },
+  {
+   "id": "cat_shelter",
+   "name": "Cat shelter",
+   "district": "inuzuka",
+   "planned": true,
+   "at": [
+    114,
+    0,
+    128
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "barracks",
+   "name": "Gate barracks",
+   "district": "inuzuka",
+   "planned": true,
+   "at": [
+    130,
+    0,
+    152
+   ],
+   "size": [
+    14,
+    11
+   ]
+  },
+  {
+   "id": "gate_stores",
+   "name": "Gate storehouse",
+   "district": "inuzuka",
+   "planned": true,
+   "at": [
+    130,
+    0,
+    135
+   ],
+   "size": [
+    14,
+    11
+   ]
+  },
+  {
+   "id": "shiranui",
+   "name": "Shiranui house",
+   "district": "inuzuka",
+   "planned": true,
+   "at": [
+    148,
+    0,
+    152
+   ],
+   "size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "gate_homes",
+   "name": "Gate homes",
+   "district": "inuzuka",
+   "planned": true,
+   "at": [
+    162,
+    0,
+    128
+   ],
+   "size": [
+    38,
+    38
+   ]
+  },
+  {
+   "id": "hatake",
+   "name": "Hatake clan home",
+   "district": "central",
+   "planned": true,
+   "at": [
+    120,
+    0,
+    -60
+   ],
+   "size": [
+    24,
+    22
+   ]
+  },
+  {
+   "id": "yuhi",
+   "name": "Yuhi grove",
+   "district": "central",
+   "planned": true,
+   "at": [
+    160,
+    0,
+    -96
+   ],
+   "size": [
+    30,
+    30
+   ]
+  },
+  {
+   "id": "east_homes_n",
+   "name": "East homes",
+   "district": "east",
+   "planned": true,
+   "at": [
+    120,
+    0,
+    -35
+   ],
+   "size": [
+    28,
+    48
+   ]
+  },
+  {
+   "id": "kurama",
+   "name": "Kurama studio (artists' lane)",
+   "district": "east",
+   "planned": true,
+   "at": [
+    155,
+    0,
+    -35
+   ],
+   "size": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "artists_homes",
+   "name": "Artists' lane homes",
+   "district": "east",
+   "planned": true,
+   "at": [
+    155,
+    0,
+    -8
+   ],
+   "size": [
+    45,
+    22
+   ]
+  },
+  {
+   "id": "east_homes_s",
+   "name": "East homes",
+   "district": "east",
+   "planned": true,
+   "at": [
+    120,
+    0,
+    22
+   ],
+   "size": [
+    28,
+    38
+   ]
+  },
+  {
+   "id": "east_market",
+   "name": "Shop Lane east",
+   "district": "east",
+   "planned": true,
+   "at": [
+    155,
+    0,
+    22
+   ],
+   "size": [
+    45,
+    38
+   ]
+  },
+  {
+   "id": "east_homes_far",
+   "name": "East homes",
+   "district": "east",
+   "planned": true,
+   "at": [
+    120,
+    0,
+    66
+   ],
+   "size": [
+    80,
+    58
+   ]
+  },
+  {
+   "id": "nara",
+   "name": "Nara compound",
+   "district": "nara",
+   "planned": true,
+   "at": [
+    214,
+    0,
+    -165
+   ],
+   "size": [
+    48,
+    40
+   ]
+  },
+  {
+   "id": "deer_forest",
+   "name": "Deer forest",
+   "district": "nara",
+   "planned": true,
+   "at": [
+    214,
+    0,
+    -218
+   ],
+   "size": [
+    80,
+    50
+   ]
+  },
+  {
+   "id": "memorial",
+   "name": "Ino-Shika-Cho memorial",
+   "district": "nara",
+   "planned": true,
+   "at": [
+    270,
+    0,
+    -110
+   ],
+   "size": [
+    9,
+    9
+   ]
+  },
+  {
+   "id": "stadium",
+   "name": "Chunin Exam stadium",
+   "district": "stadium",
+   "planned": true,
+   "at": [
+    212,
+    0,
+    -32
+   ],
+   "size": [
+    94,
+    94
+   ]
+  },
+  {
+   "id": "gekko",
+   "name": "Gekko dojo",
+   "district": "southeast",
+   "planned": true,
+   "at": [
+    214,
+    0,
+    72
+   ],
+   "size": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "namiashi",
+   "name": "Namiashi dojo",
+   "district": "southeast",
+   "planned": true,
+   "at": [
+    242,
+    0,
+    72
+   ],
+   "size": [
+    20,
+    20
+   ]
+  },
+  {
+   "id": "inner_field",
+   "name": "Inner training field",
+   "district": "southeast",
+   "planned": true,
+   "at": [
+    214,
+    0,
+    100
+   ],
+   "size": [
+    90,
+    64
+   ]
+  },
+  {
+   "id": "uchiha",
+   "name": "Uchiha quarter (walled)",
+   "district": "west_bank",
+   "planned": true,
+   "at": [
+    -258,
+    0,
+    -200
+   ],
+   "size": [
+    70,
+    130
+   ]
+  },
+  {
+   "id": "quarry",
+   "name": "The old quarry",
+   "district": "west_bank",
+   "planned": true,
+   "at": [
+    -250,
+    0,
+    -221
+   ],
+   "size": [
+    70,
+    18
+   ]
+  },
+  {
+   "id": "tsuchigumo",
+   "name": "Tsuchigumo stone houses",
+   "district": "west_bank",
+   "planned": true,
+   "at": [
+    -181,
+    0,
+    -200
+   ],
+   "size": [
+    10,
+    24
+   ]
+  },
+  {
+   "id": "morino",
+   "name": "Morino house",
+   "district": "west_bank",
+   "planned": true,
+   "at": [
+    -258,
+    0,
+    -66
+   ],
+   "size": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "aburame",
+   "name": "Aburame clan home",
+   "district": "west_bank",
+   "planned": true,
+   "at": [
+    -230,
+    0,
+    -66
+   ],
+   "size": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "riverside",
+   "name": "Riverside houses",
+   "district": "west_bank",
+   "planned": true,
+   "at": [
+    -181,
+    0,
+    -40
+   ],
+   "size": [
+    10,
+    100
+   ]
+  },
+  {
+   "id": "tobari",
+   "name": "Tobari lanes",
+   "district": "west_bank",
+   "planned": true,
+   "at": [
+    -258,
+    0,
+    -38
+   ],
+   "size": [
+    50,
+    80
+   ]
+  },
+  {
+   "id": "vacant_sw",
+   "name": "Vacant estate",
+   "district": "west_bank",
+   "planned": true,
+   "at": [
+    -258,
+    0,
+    46
+   ],
+   "size": [
+    40,
+    40
+   ]
+  },
+  {
+   "id": "ferry",
+   "name": "Ferry landings and the island",
+   "district": "river",
+   "planned": true,
+   "at": [
+    -170,
+    0,
+    95
+   ],
+   "size": [
+    20,
+    20
+   ]
+  },
+  {
+   "id": "hideout",
+   "name": "Hideout",
+   "district": "prologue_hills",
+   "planned": true,
+   "at": [
+    -180,
+    0,
+    230
+   ],
+   "size": [
+    40,
+    30
+   ]
+  },
+  {
+   "id": "ruined_shrine",
+   "name": "Ruined shrine",
+   "district": "prologue_hills",
+   "planned": true,
+   "at": [
+    -90,
+    0,
+    300
+   ],
+   "size": [
+    20,
+    20
+   ]
+  }
+ ]
+}

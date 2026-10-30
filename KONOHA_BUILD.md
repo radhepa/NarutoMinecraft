@@ -6,6 +6,11 @@ process from layout file to zipped world, and what it costs. Read with [ROADMAP.
 (scale, border, what is pasted and what is built by hand, the district schedule) and
 [CLANS.md](CLANS.md) (the 25 clans).
 
+**The city plan.** The whole village is planned as one city in [docs/konoha/](docs/konoha/README.md):
+the [master plan](docs/konoha/MASTER_PLAN.md) (districts, streets, landmarks, terrain, story places),
+the [district sheets](docs/konoha/DISTRICTS.md), the [build techniques and palettes](docs/konoha/TECHNIQUES.md)
+and the [batch list](docs/konoha/BATCHES.md). Where they differ from this file on a site, the plan wins.
+
 **No spoilers here.** Story locations are named neutrally ("the prologue hideout", "a hidden
 room"). What they mean is in the developers-only story bible.
 

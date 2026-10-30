@@ -1,6 +1,7 @@
 # Development state
 
-**Resumed (owner, 30 October 2026):** plan the whole village before building more (Next).
+**Resumed (owner, 30 October 2026):** plan the whole village before building more. Done: [docs/konoha/](../konoha/README.md)
+(master plan, district sheets, techniques, batch list K3 to K14).
 **Phase/task:** Konoha, the owner's order of 30 October 2026: the whole village of KONOHA_BUILD.md, district by
 district (ROADMAP §6: Beta 1, then Beta 2, Beta 3 and Later), before more quest or systems work. M3's story (P07) is
 paused at 6fc02a7. **Branch/base:** `dev`, from `main` e9238bd. Names and dialogue are the merged `names` work: leave
@@ -45,9 +46,8 @@ renders: `docs/renders/konoha/`.
 
 ## Remaining
 
-- Konoha Beta 1: the Inuzuka clinic and the market, the hospital,
-  the shrine, the apartment blocks and the south homes, Hokage Rock, the clan gates and halls, the prologue hills,
-  about 200 residents. Then Beta 2, Beta 3 and Later.
+- Konoha Beta 1: batches K3 to K14 of [BATCHES.md](../konoha/BATCHES.md), about 200 residents. Then Beta 2,
+  Beta 3 and Later.
 - P07: chapters 3 to 7 in a client; story stand-ins swapped for the real places.
 - P03, P05, P06 leftovers as before (Varied's roll, the shop counter block, mentors, first-person poses).
 
@@ -68,6 +68,6 @@ None.
 
 ## Next
 
-Konoha master plan: the whole village planned as one city (districts, streets, landmarks, terrain, sightlines,
-story places, building quality and texture references) before more batches; resident home interiors are bare and
-need a pass. Then K3 (the market district and the Inuzuka clinic), the rest of Beta 1, Beta 2, Beta 3 and Later.
+K3 interiors ([BATCHES.md](../konoha/BATCHES.md)): kit furnishing helpers, lived-in rooms in every built resident
+home (Sakura Lane, the Leaf Block's resident flats, the keepers above the shops). Then K4 facade pass, K5 layout
+merge (the Academy moves to the Rock's foot), K6 terrain, K7 to K14 by district.
