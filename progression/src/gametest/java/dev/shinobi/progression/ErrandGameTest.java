@@ -53,6 +53,7 @@ public final class ErrandGameTest implements FabricClientGameTest {
             w.getConnection().waitForChunksRender();
             // The creator is P05's; here the player takes the opening look.
             check(w.getServer().computeOnServer(s -> PlayerLooks.choose(w.getConnection().getServerPlayer(), PlayerLooks.defaultLook())), "the opening look is allowed");
+            w.getServer().runCommand("execute as @p run shinobi quest accept " + ShinobiProgression.TRAINING);
             for (String cmd : List.of("gamerule advance_time false", "gamerule advance_weather false", "weather clear", "gamerule spawn_mobs false", "time set 3000"))
                 w.getServer().runCommand(cmd);
             // The new world's map, pasted at its first start.
@@ -178,8 +179,8 @@ public final class ErrandGameTest implements FabricClientGameTest {
         }
         try (var w = save.open()) {
             w.getConnection().waitForChunksRender();
-            check(journal(w).done().equals(List.of(ERRAND)) && !journal(w).active().containsKey(ERRAND)
-                    && journal(w).flags().equals(List.of("test.errand.keeper_asked", "test.errand.board_read")), "the journal after reopening: " + journal(w));
+            check(journal(w).done().contains(ERRAND) && !journal(w).active().containsKey(ERRAND)
+                    && journal(w).flags().stream().filter(f -> f.startsWith("test.")).toList().equals(List.of("test.errand.keeper_asked", "test.errand.board_read")), "the journal after reopening: " + journal(w));
             c.waitTicks(20);
             check(ryo(w) == 6 && count(w, ShinobiLife.item("green_tea")) == 1 && count(w, ShinobiLife.item("tatami")) == 1
                     && count(w, ShinobiLife.item("bento")) == 6 && count(w, ShinobiLife.item("shio_ramen")) == 1,

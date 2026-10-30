@@ -35,6 +35,9 @@ public record PlayerRecord(int version, String rank, int level, String ageStage,
         ).apply(i, PlayerRecord::new));
     }
 
+    /** This record at another rank (a promotion). */
+    public PlayerRecord withRank(String rank) { return new PlayerRecord(version, rank, level, ageStage, clan, difficulty); }
+
     private static <T> MapCodec<T> field(Codec<T> codec, String name, T fallback, boolean lenient) {
         return lenient ? codec.lenientOptionalFieldOf(name, fallback) : codec.fieldOf(name);
     }

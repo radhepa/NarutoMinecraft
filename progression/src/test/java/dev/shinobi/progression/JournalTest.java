@@ -45,6 +45,12 @@ class JournalTest {
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_ryo\": 2.5}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_item\": \"\"}]}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"teach_technique\": \"\"}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"say\": \"\"}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"start_quest\": 5}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"choose\", \"flag\": \"f\"}}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"choose\", \"flag\": \"f\", \"options\": [\"Yes\"]}}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"choose\", \"flag\": \"f\", \"options\": [\"y\", \"y\"]}}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"choose\", \"options\": [\"y\"]}}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_enter\": [{\"set_flag\": [\"f\", \"yes\"]}]}}}",
                 "{\"id\": 5, \"start\": \"a\", \"steps\": {\"a\": {}}}",
                 "{\"id\": \"q\", \"start\": \"b\", \"steps\": {\"a\": {}}}",
@@ -96,6 +102,28 @@ class JournalTest {
         assertEquals("not_started", j.state("x"));
         // A done quest pays nothing more.
         assertEquals(new Quests.Outcome(j, 0), Quests.complete(j, q));
+    }
+
+    @Test
+    void aChoiceSetsItsAnswerAndBranchesAndScenesSayTheirLines() {
+        var q = Quests.quest(Json.object("""
+                {"id": "s", "start": "ask",
+                 "steps": {"ask": {"objective": {"type": "choose", "flag": "ans.x", "options": ["yes", "no"]}, "on_enter": [{"say": "s.ask"}],
+                                   "on_done": [{"say": "s.after"}], "branch": [{"if": {"flag": "ans.x.yes"}, "next": "yes"}], "next": "end"},
+                           "yes": {"objective": {"type": "scene"}, "on_enter": [{"say": "s.yes"}], "next": "end"},
+                           "end": {"objective": {"type": "scene"}, "on_done": [{"start_quest": "next"}], "next": null}}}"""));
+        var o = Quests.start(Journal.EMPTY, q, Map.of());
+        assertEquals(List.of("s.ask"), o.said());
+        assertEquals(null, Quests.answer(o.journal(), q, "maybe"));
+        var yes = Quests.answer(o.journal(), q, "yes");
+        assertEquals(Map.of("s", "yes"), yes.journal().active());
+        assertEquals(List.of("ans.x.yes"), yes.journal().flags());
+        assertEquals(List.of("s.after", "s.yes"), yes.said());
+        var no = Quests.answer(o.journal(), q, "no");
+        assertEquals(Map.of("s", "end"), no.journal().active());
+        // Answered, the step is gone: the same link clicked again does nothing.
+        assertEquals(null, Quests.answer(no.journal(), q, "no"));
+        assertEquals(List.of("next"), Quests.complete(no.journal(), q).started());
     }
 
     static final Template ERRAND = Quests.check(Json.object("""

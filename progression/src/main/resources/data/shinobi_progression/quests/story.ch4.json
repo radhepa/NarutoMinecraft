@@ -1,0 +1,275 @@
+{
+  "format": 1,
+  "id": "story.ch4",
+  "kind": "main",
+  "title": "quest.story.ch4.title",
+  "slots": {
+    "landlady": {
+      "pick": "role",
+      "role": "landlady"
+    }
+  },
+  "start": "scratch",
+  "steps": {
+    "scratch": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch4.title"
+        },
+        {
+          "say": "story.ch4.scratch.1"
+        },
+        {
+          "say": "story.ch4.scratch.2"
+        },
+        {
+          "say": "story.ch4.scratch.3"
+        }
+      ],
+      "next": "chase_q",
+      "on_done": [
+        {
+          "set_flag": [
+            "story.seed.door_mark",
+            true
+          ]
+        }
+      ]
+    },
+    "chase_q": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.player.ch4.chase",
+        "options": [
+          "chase",
+          "home"
+        ]
+      },
+      "next": "rest_sleep",
+      "branch": [
+        {
+          "if": {
+            "flag": "ans.player.ch4.chase.chase"
+          },
+          "next": "chase"
+        }
+      ]
+    },
+    "chase": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch4.chase.1"
+        },
+        {
+          "say": "story.ch4.chase.2"
+        },
+        {
+          "say": "story.ch4.chase.3"
+        }
+      ],
+      "next": "follow"
+    },
+    "follow": {
+      "objective": {
+        "type": "go",
+        "place": "notice_board"
+      },
+      "next": "door"
+    },
+    "door": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch4.door.1"
+        },
+        {
+          "say": "story.ch4.door.2"
+        }
+      ],
+      "next": "door_reply",
+      "on_done": [
+        {
+          "set_flag": [
+            "story.seed.sealed_door",
+            true
+          ]
+        }
+      ]
+    },
+    "rest_sleep": {
+      "objective": {
+        "type": "sleep"
+      },
+      "next": "morning"
+    },
+    "night_sleep": {
+      "objective": {
+        "type": "sleep"
+      },
+      "next": "morning",
+      "on_done": [
+        {
+          "say": "story.ch4.late"
+        }
+      ]
+    },
+    "morning": {
+      "objective": {
+        "type": "talk",
+        "who": "slot:landlady"
+      },
+      "next": "morning_after",
+      "on_enter": [
+        {
+          "say": "story.ch4.morning.1"
+        }
+      ]
+    },
+    "morning_after": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch4.morning_after.1"
+        },
+        {
+          "say": "story.ch4.morning_after.2"
+        }
+      ],
+      "next": "close",
+      "branch": [
+        {
+          "if": {
+            "flag": "ans.player.ch4.chase.home"
+          },
+          "next": "report"
+        }
+      ]
+    },
+    "report": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch4.report.1"
+        },
+        {
+          "say": "story.ch4.report.2"
+        }
+      ],
+      "next": "follow_rested"
+    },
+    "follow_rested": {
+      "objective": {
+        "type": "go",
+        "place": "notice_board"
+      },
+      "next": "door_rested"
+    },
+    "door_rested": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch4.door_rested.1"
+        },
+        {
+          "say": "story.ch4.door_rested.2"
+        },
+        {
+          "say": "story.ch4.door_rested.3"
+        }
+      ],
+      "next": "door_reply",
+      "on_done": [
+        {
+          "set_flag": [
+            "story.seed.sealed_door",
+            true
+          ]
+        }
+      ]
+    },
+    "door_reply": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.elder_keeper.door",
+        "options": [
+          "behind",
+          "someone",
+          "leave"
+        ]
+      },
+      "next": "close",
+      "branch": [
+        {
+          "if": {
+            "flag": "ans.elder_keeper.door.someone"
+          },
+          "next": "door_someone"
+        },
+        {
+          "if": {
+            "flag": "ans.player.ch4.chase.chase"
+          },
+          "next": "night_sleep"
+        }
+      ]
+    },
+    "door_someone": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch4.door_someone.1"
+        },
+        {
+          "say": "story.ch4.door_someone.2"
+        }
+      ],
+      "next": "close",
+      "branch": [
+        {
+          "if": {
+            "flag": "ans.player.ch4.chase.chase"
+          },
+          "next": "night_sleep"
+        }
+      ]
+    },
+    "close": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch4.close.1"
+        }
+      ],
+      "next": null,
+      "on_done": [
+        {
+          "set_flag": [
+            "story.ch4.done",
+            true
+          ]
+        },
+        {
+          "start_quest": "story.ch5"
+        }
+      ]
+    }
+  }
+}

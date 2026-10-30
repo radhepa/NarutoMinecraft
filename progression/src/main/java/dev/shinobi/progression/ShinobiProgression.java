@@ -27,6 +27,7 @@ import dev.shinobi.life.ShinobiLife;
 import dev.shinobi.life.ShopMenu;
 import net.minecraft.world.entity.Entity;
 import dev.shinobi.combat.runtime.ShinobiCombat;
+import dev.shinobi.core.ShinobiCore;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.util.Prediction;
@@ -51,7 +52,12 @@ import net.minecraft.world.phys.Vec3;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.minecraft.network.chat.ClickEvent;
+import net.minecraft.network.chat.HoverEvent;
+
 import java.io.IOException;
+import java.util.ArrayDeque;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -72,8 +78,16 @@ public final class ShinobiProgression implements ModInitializer {
     static final Set<UUID> UNCAST = new HashSet<>();
     /** Each blocked step already warned about, as player, quest, step and what is missing; cleared on a reload. */
     static final Set<String> WARNED = new HashSet<>();
-    /** The noncanonical training fixture of the M2 play session (ROADMAP.md 13.4). */
+    /** The noncanonical training fixture of the M2 play session (ROADMAP.md 13.4), now accepted only by the tests. */
     static final String TRAINING = "training.test.first_day";
+    /** The story's first chapter, which starts itself once the player has made a character. */
+    static final String OPENING = "story.ch0";
+    /** Lines waiting to be said to each online player, one every {@link #LINE_TICKS}. */
+    static final Map<UUID, ArrayDeque<Component>> LINES = new HashMap<>();
+    /** A multiple of the tick loop's 10; StoryGameTest shortens it. */
+    static int LINE_TICKS = 60;
+    /** Each player, quest and scene or choose step whose lines are queued, and each choose step whose options are shown, this login. */
+    static final Set<String> NARRATED = new HashSet<>(), PROMPTED = new HashSet<>();
     /** The furniture shop's blocks, once the registries are complete. */
     static final Supplier<Set<Item>> FURNITURE = Suppliers.memoize(() -> ShinobiLife.stock("furniture_shop").stream()
             .map(l -> ShinobiLife.item(l.item())).collect(Collectors.toSet()));
@@ -91,6 +105,14 @@ public final class ShinobiProgression implements ModInitializer {
     public void onInitialize() {
         ServerLifecycleEvents.SERVER_STARTED.register(ShinobiProgression::load);
         ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resources, ok) -> load(server));
+        // A new world starts with nothing told; a /reload keeps what each player has heard.
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { LINES.clear(); NARRATED.clear(); PROMPTED.clear(); });
+        // A player who logs out keeps their unsaid lines and sees the open question's options again on the next login.
+        // shortcut: lines still queued at a server stop are lost (a reopened world re-tells only the current scene or question).
+        ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
+            String who = handler.getPlayer().getUUID().toString();
+            PROMPTED.removeIf(k -> k.startsWith(who));
+        });
         ServerTickEvents.END_SERVER_TICK.register(s -> {
             if (s.getTickCount() % 10 == 0) for (var p : s.getPlayerList().getPlayers()) tick(p);
         });
@@ -116,6 +138,7 @@ public final class ShinobiProgression implements ModInitializer {
             wakeAtHome(now);
         });
         Spar.WON.register(player -> stepDone(player, "spar", step -> true));
+        ShinobiCombat.CAST.register((player, id) -> stepDone(player, "cast", step -> id.equals(step.objective().get("technique"))));
         // A lost bout leaves the quest at its spar step, its reward unpaid; the next hit is the retry.
         Spar.LOST.register(player -> player.getAttachedOrCreate(JOURNAL).active().forEach((id, at) -> {
             var quest = QUESTS.get(id);
@@ -148,8 +171,12 @@ public final class ShinobiProgression implements ModInitializer {
         });
         // `/shinobi quest accept <id>` takes a quest (a test hook until givers offer them); `/shinobi journal` lists them.
         // `/shinobi buy <shop> <item>` buys as the shop screen does, by the keeper, so it needs no permission.
+        // `/shinobi answer <quest> <step> <option>` is what clicking a choice in chat runs, so it needs no permission either.
         CommandRegistrationCallback.EVENT.register((dispatcher, registry, env) -> dispatcher.register(
                 Commands.literal("shinobi")
+                        .then(Commands.literal("answer").then(Commands.argument("quest", StringArgumentType.string()).then(Commands.argument("step", StringArgumentType.string())
+                                .then(Commands.argument("option", StringArgumentType.string()).executes(ctx -> answer(ctx.getSource().getPlayerOrException(),
+                                        StringArgumentType.getString(ctx, "quest"), StringArgumentType.getString(ctx, "step"), StringArgumentType.getString(ctx, "option")) ? 1 : 0)))))
                         .then(Commands.literal("buy").then(Commands.argument("shop", StringArgumentType.string()).then(Commands.argument("item", StringArgumentType.string())
                                 .executes(ctx -> buy(ctx.getSource().getPlayerOrException(), StringArgumentType.getString(ctx, "shop"), StringArgumentType.getString(ctx, "item")) ? 1 : 0))))
                         .then(Commands.literal("quest").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS)).then(Commands.literal("accept").then(Commands.argument("id", StringArgumentType.string())
@@ -195,6 +222,9 @@ public final class ShinobiProgression implements ModInitializer {
                 throw new IllegalStateException("Quest file " + file + ": " + e.getMessage(), e);
             }
         });
+        // A start_quest naming no quest stops the load too, once every file is read.
+        QUESTS.forEach((id, q) -> java.util.stream.Stream.of(q.onEnter(), q.onDone()).flatMap(m -> m.values().stream()).flatMap(List::stream)
+                .forEach(a -> { if (Json.map(a).get("start_quest") instanceof String next && !QUESTS.containsKey(next)) throw new IllegalStateException("Quest " + id + ": start_quest names no quest: " + next); }));
         LOG.info("Shinobi Progression: {} quests", QUESTS.size());
     }
 
@@ -230,18 +260,20 @@ public final class ShinobiProgression implements ModInitializer {
     }
 
     /**
-     * Starts the training quest for a player who has made a character, once the map has its training yard; finishes
-     * go and sleep steps, and puts the spar partner in place for a spar step the player has reached.
-     * shortcut: the noncanonical training fixture starts itself, until P07's opening hands out the first quests.
+     * Starts the story for a player who has made a character, once the map has its training yard and flat; says the
+     * queued lines, one every {@link #LINE_TICKS}; finishes go and sleep steps, and scene steps once their lines are
+     * said; shows a choose step's options after its lines; puts the spar partner in place for a spar step reached.
      */
     static void tick(ServerPlayer player) {
         var journal = player.getAttachedOrCreate(JOURNAL);
-        if (player.hasAttached(PlayerLooks.LOOK) && QUESTS.containsKey(TRAINING) && !journal.knows(TRAINING)
+        if (player.hasAttached(PlayerLooks.LOOK) && QUESTS.containsKey(OPENING) && !journal.knows(OPENING)
                 && player.level().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).keySet().containsAll(List.of("anchor:training", TestStreet.PLAYER_FLAT))
                 && !UNCAST.contains(player.getUUID())) {
-            if (!accept(player, TRAINING)) UNCAST.add(player.getUUID());
+            if (!accept(player, OPENING)) UNCAST.add(player.getUUID());
             journal = player.getAttachedOrCreate(JOURNAL);
         }
+        var lines = LINES.computeIfAbsent(player.getUUID(), u -> new ArrayDeque<>());
+        if (!lines.isEmpty() && player.level().getServer().getTickCount() % LINE_TICKS == 0) player.sendSystemMessage(lines.poll());
         for (var entry : journal.active().entrySet()) {
             // A cast saved before the quest declared a slot is cast again; while the map cannot cast it, the step stays blocked.
             var q = QUESTS.get(entry.getKey());
@@ -264,6 +296,15 @@ public final class ShinobiProgression implements ModInitializer {
             }
             var quest = QUESTS.get(entry.getKey());
             var step = quest.template().steps().get(entry.getValue());
+            String key = player.getUUID() + " " + entry;
+            // After a login the current scene's lines are said again; its other actions ran when the step began.
+            boolean told = List.of("scene", "choose").contains(step.type());
+            if (told && NARRATED.add(key))
+                quest.onEnter().get(entry.getValue()).forEach(a -> { if (Json.map(a).get("say") instanceof String line) lines.add(Component.translatable(line)); });
+            // A scene or question waits for its lines; other quests' steps go on meanwhile.
+            if (told && !lines.isEmpty()) continue;
+            if ("scene".equals(step.type())) { complete(player, quest); return; }
+            if ("choose".equals(step.type()) && PROMPTED.add(key)) prompt(player, quest.template().id(), entry.getValue(), step);
             String place = Quests.resolve(Json.str(step.objective().get("place"), ""), journal.castOf(quest.template().id()));
             if ("go".equals(step.type()) && near(player, place) || "sleep".equals(step.type()) && player.getSleepingPos().filter(bed -> TestStreet.inPlayerRoom(player.level(), bed)).isPresent()) complete(player, quest);
             else if ("spar".equals(step.type()) && near(player, place))
@@ -295,6 +336,34 @@ public final class ShinobiProgression implements ModInitializer {
         if (there) return null;
         var slot = ref.startsWith("slot:") ? quest.template().slots().get(ref.substring(5)) : null;
         return ("who".equals(field) ? "resident " : "anchor ") + (slot == null ? ref : ref + " (" + Quests.key(Json.str(slot.get("pick"), ""), slot) + ")");
+    }
+
+    /** Shows a choose step's question with each option as a link that answers it. */
+    static void prompt(ServerPlayer player, String quest, String at, Template.Step step) {
+        var options = Component.empty();
+        for (Object option : Json.list(step.objective().get("options")))
+            options.append(Component.literal(" [").append(Component.translatable(step.objective().get("flag") + "." + option)).append("]")
+                    .withStyle(s -> s.withColor(ChatFormatting.GREEN).withClickEvent(new ClickEvent.RunCommand("/shinobi answer " + quest + " " + at + " " + option))
+                            .withHoverEvent(new HoverEvent.ShowText(Component.translatable("shinobi_progression.quest.pick")))));
+        player.sendSystemMessage(Component.translatable("quest." + quest + ".step." + at).withStyle(ChatFormatting.YELLOW));
+        player.sendSystemMessage(options);
+    }
+
+    /**
+     * The player picks an option at a quest's choose step; false unless that step is the one under way and its question
+     * was shown, so a stale or early click answers nothing. Answering takes the question down: a step looped back to asks again.
+     */
+    static boolean answer(ServerPlayer player, String id, String at, String option) {
+        var quest = QUESTS.get(id);
+        String key = player.getUUID() + " " + id + "=" + at;
+        if (quest == null || !at.equals(player.getAttachedOrCreate(JOURNAL).active().get(id)) || !PROMPTED.contains(key)) return false;
+        var o = Quests.answer(player.getAttachedOrCreate(JOURNAL), quest, option);
+        if (o == null) return false;
+        PROMPTED.remove(key);
+        player.sendSystemMessage(Component.literal("> ").append(Component.translatable(Json.str(quest.template().steps().get(player.getAttachedOrCreate(JOURNAL).active().get(id)).objective().get("flag"), "") + "." + option))
+                .withStyle(ChatFormatting.GRAY));
+        apply(player, o);
+        return true;
     }
 
     /** Finishes the player's active steps of {@code type} that {@code ok} accepts. */
@@ -329,14 +398,21 @@ public final class ShinobiProgression implements ModInitializer {
     static void apply(ServerPlayer player, Quests.Outcome o) {
         var before = player.getAttachedOrCreate(JOURNAL).active();
         player.setAttached(JOURNAL, o.journal());
+        var lines = LINES.computeIfAbsent(player.getUUID(), u -> new ArrayDeque<>());
+        o.said().forEach(line -> lines.add(Component.translatable(line)));
         o.journal().active().forEach((id, step) -> {
-            if (!step.equals(before.get(id)))
-                player.sendSystemMessage(Component.translatable("shinobi_progression.quest.next", Component.translatable("quest." + id + ".step." + step)).withStyle(ChatFormatting.YELLOW));
+            if (step.equals(before.get(id))) return;
+            // A scene or choice tells itself in its lines; any other step is named.
+            if (List.of("scene", "choose").contains(QUESTS.get(id).template().steps().get(step).type())) NARRATED.add(player.getUUID() + " " + id + "=" + step);
+            else lines.add(Component.translatable("shinobi_progression.quest.next", Component.translatable("quest." + id + ".step." + step)).withStyle(ChatFormatting.YELLOW));
         });
         if (o.ryo() > 0) ShinobiLife.earn(player, o.ryo());
         // A full pack drops the item at the player's feet.
         for (String item : o.items()) player.getInventory().placeItemBackInInventory(new ItemStack(ShinobiLife.item(item)), Prediction.SERVER_ONLY);
         for (String technique : o.taught()) ShinobiCombat.teach(player, technique);
+        if (o.rank() != null) player.setAttached(ShinobiCore.PLAYER, player.getAttachedOrCreate(ShinobiCore.PLAYER).withRank(o.rank()));
+        // shortcut: a chapter whose cast fails on this map is not retried (only the opening is), until maps can lack the Academy's places.
+        for (String next : o.started()) accept(player, next);
     }
 
     /** The shops the resident keeps, from the level's bound roles. */

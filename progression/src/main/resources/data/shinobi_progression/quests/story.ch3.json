@@ -1,0 +1,231 @@
+{
+  "format": 1,
+  "id": "story.ch3",
+  "kind": "main",
+  "title": "quest.story.ch3.title",
+  "start": "leaf",
+  "steps": {
+    "leaf": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch3.title"
+        },
+        {
+          "say": "story.ch3.leaf.1"
+        },
+        {
+          "say": "story.ch3.leaf.2"
+        },
+        {
+          "say": "story.ch3.leaf.3"
+        },
+        {
+          "say": "story.ch3.leaf.4"
+        }
+      ],
+      "next": "sign",
+      "on_done": [
+        {
+          "teach_technique": "combat:nin.release"
+        },
+        {
+          "teach_technique": "combat:nin.rope_escape"
+        },
+        {
+          "teach_technique": "combat:nin.first_aid"
+        }
+      ]
+    },
+    "sign": {
+      "objective": {
+        "type": "cast",
+        "technique": "combat:nin.release"
+      },
+      "next": "pair",
+      "on_enter": [
+        {
+          "say": "story.ch3.sign.1"
+        }
+      ]
+    },
+    "pair": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch3.pair.1"
+        },
+        {
+          "say": "story.ch3.pair.2"
+        },
+        {
+          "say": "story.ch3.pair.3"
+        },
+        {
+          "say": "story.ch3.pair.4"
+        }
+      ],
+      "next": "hushed",
+      "on_done": [
+        {
+          "set_flag": [
+            "story.seed.flare",
+            true
+          ]
+        },
+        {
+          "set_flag": [
+            "bond.teammate_a.trained_together",
+            true
+          ]
+        }
+      ]
+    },
+    "hushed": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch3.hushed.1"
+        },
+        {
+          "say": "story.ch3.hushed.2"
+        },
+        {
+          "say": "story.ch3.hushed.3"
+        }
+      ],
+      "next": "moved"
+    },
+    "moved": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.squad3_c.moved",
+        "options": [
+          "what",
+          "dont_tell",
+          "walk"
+        ]
+      },
+      "next": "gate"
+    },
+    "gate": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch3.gate.1"
+        },
+        {
+          "say": "story.ch3.gate.2"
+        }
+      ],
+      "next": "flare"
+    },
+    "flare": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.teammate_a.flare",
+        "options": [
+          "yes",
+          "no",
+          "dont_tell"
+        ]
+      },
+      "next": "go_home",
+      "branch": [
+        {
+          "if": {
+            "flag": "ans.teammate_a.flare.yes"
+          },
+          "next": "secret"
+        },
+        {
+          "if": {
+            "flag": "ans.teammate_a.flare.dont_tell"
+          },
+          "next": "secret"
+        }
+      ]
+    },
+    "secret": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch3.secret.1"
+        }
+      ],
+      "next": "go_home",
+      "on_done": [
+        {
+          "set_flag": [
+            "bond.teammate_a.flare_secret",
+            true
+          ]
+        }
+      ]
+    },
+    "go_home": {
+      "objective": {
+        "type": "go",
+        "place": "flat.leaf_block.3a"
+      },
+      "next": "medic"
+    },
+    "medic": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch3.medic.1"
+        },
+        {
+          "say": "story.ch3.medic.2"
+        },
+        {
+          "say": "story.ch3.medic.3"
+        },
+        {
+          "say": "story.ch3.medic.4"
+        }
+      ],
+      "next": "medic_reply",
+      "on_done": [
+        {
+          "set_flag": [
+            "story.clue.medic.2",
+            true
+          ]
+        }
+      ]
+    },
+    "medic_reply": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.medic.flare",
+        "options": [
+          "tell",
+          "silent"
+        ]
+      },
+      "next": null,
+      "on_done": [
+        {
+          "say": "story.ch3.medic.after"
+        },
+        {
+          "start_quest": "story.ch4"
+        }
+      ]
+    }
+  }
+}

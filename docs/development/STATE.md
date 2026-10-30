@@ -11,17 +11,21 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971). **Branch/base:** 
 - P06 (a36468c to c90629e): chakra, signs, the six Academy techniques, guard, dodge, rebindable keys (Options >
   Controls > Shinobi), keyed clips on every player's model; winning the first-day spar teaches the techniques
   (`teach_technique`, 2a9a9df); smoke bomb, ninja wire and roof hopping (c90629e).
-- This file's commit: the keeper also sells for the weapon shop and the Academy supply counter (practice kunai and
-  shuriken, smoke powder, washi paper, thread, steel wire); smoke bombs and wire craft from those at a crafting table.
+- 1104995: the keeper also sells the weapon shop's and Academy counter's stock; smoke bombs and wire craft.
+- This file's commit (P07, paused): the story engine (scene and choose steps, chaining, cast steps, `set_rank`,
+  `/shinobi answer <quest> <step> <option>`) and chapters 0 to 7 as quests; 0 to 2 client-tested, 3 to 7 checked by
+  `missions.py --check` only. The owner asked on 30 October 2026 to build Konoha first, then return to the story.
 
 ## Evidence (30 October 2026, JDK 25.0.5)
 
-`./gradlew build`, `:combat:runClientGameTest` (`.local-dev/logs/tools-*.log`, screenshot academy-smoke) and
-`:progression:runClientGameTest` (`stock-build2.log`, `stock-prog-gt2.log`) passed; screenshots under each module's `build/run/clientGameTest/`.
+`./gradlew build`, `:combat:runClientGameTest` (`.local-dev/logs/tools-*.log`) and `:progression:runClientGameTest`
+(`story37-gt.log`: chapters 0 to 2 in Classic and Varied, chapter 3 starts) passed; screenshots under each module's
+`build/run/clientGameTest/`.
 
 ## Remaining
 
-- P07: the opening and Academy campaign through graduation.
+- Konoha (owner's order): the Beta 1 districts of ROADMAP §6 from `tools/konoha/layout.json`.
+- P07: chapters 3 to 7 in a client (Classic and Varied); story stand-ins swapped for the real Konoha places.
 - P03: Varied's apartment roll, bound-cast role identities, Konoha loot tables and names.
 - P05: hospital wake, level loss on death; the shop counter block, haggling, selling and orders.
 - P06: mentors and lessons; first-person arm poses; air and dash taijutsu clips.
@@ -34,8 +38,7 @@ P00 to P02 passed (13.3); M2 passed 30 October 2026 (b2fc971). **Branch/base:** 
 ## Known shortcuts
 
 One stand-in keeper sells for twelve shops (vanilla chest window, buying only, 45 lines); the keeper gives the first
-tatami; quests run `set_flag`, `give_ryo`, `give_item`, `teach_technique` only; the training fixture starts itself
-until P07; fatigue has Story thresholds only; comfort ignores season, mess, plant and pet; undrawn items use stand-in
+tatami; a chapter that fails to start on a map is not retried; the training fixture starts itself; fatigue has Story thresholds only; comfort ignores season, mess, plant and pet; undrawn items use stand-in
 sprites. Guard needs an empty hand; signs share the hotbar keys while weaving; poses snap and show in third person
 only. Release clears vanilla nausea, blindness, darkness; First Aid has no downed state; every player roof-hops; any
 tripwire trips mobs; tool numbers are fixed in `Tools`; the workbench is the vanilla crafting table.
@@ -47,4 +50,5 @@ override after review round 28, not a locked pass; `story` branch, not merged in
 
 ## Next
 
-P07: the approved opening, then the Academy campaign through graduation in Classic and Varied.
+Konoha K1: `layout.json` with `layout.py --check`/`--plan`, the map pasted from it (rotated plots, streets), then one
+district per increment.

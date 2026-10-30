@@ -1,0 +1,207 @@
+{
+  "format": 1,
+  "id": "story.ch6",
+  "kind": "main",
+  "title": "quest.story.ch6.title",
+  "slots": {
+    "family": {
+      "pick": "role",
+      "role": "family_with_child"
+    }
+  },
+  "start": "study",
+  "steps": {
+    "study": {
+      "objective": {
+        "type": "talk",
+        "who": "slot:family"
+      },
+      "next": "table",
+      "on_enter": [
+        {
+          "say": "story.ch6.title"
+        },
+        {
+          "say": "story.ch6.study.1"
+        }
+      ]
+    },
+    "table": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch6.table.1"
+        },
+        {
+          "say": "story.ch6.table.2"
+        },
+        {
+          "say": "story.ch6.table.3"
+        }
+      ],
+      "next": "practise",
+      "on_done": [
+        {
+          "teach_technique": "combat:nin.clone"
+        },
+        {
+          "teach_technique": "combat:nin.transformation"
+        },
+        {
+          "teach_technique": "combat:nin.substitution"
+        },
+        {
+          "set_flag": [
+            "bond.class.studied_together",
+            true
+          ]
+        }
+      ]
+    },
+    "practise": {
+      "objective": {
+        "type": "cast",
+        "technique": "combat:nin.transformation"
+      },
+      "next": "confide",
+      "on_done": [
+        {
+          "say": "story.ch6.practise.after"
+        }
+      ]
+    },
+    "confide": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch6.confide.1"
+        },
+        {
+          "say": "story.ch6.confide.2"
+        },
+        {
+          "say": "story.ch6.confide.3"
+        }
+      ],
+      "next": "parent"
+    },
+    "parent": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.teammate_b.parent_first",
+        "options": [
+          "promise",
+          "not_fault",
+          "ask"
+        ]
+      },
+      "next": "sleep"
+    },
+    "sleep": {
+      "objective": {
+        "type": "sleep"
+      },
+      "next": "dream"
+    },
+    "dream": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch6.dream.1"
+        },
+        {
+          "say": "story.ch6.dream.2"
+        }
+      ],
+      "next": "morning",
+      "on_done": [
+        {
+          "set_flag": [
+            "story.seed.watchfire_song",
+            true
+          ]
+        }
+      ]
+    },
+    "morning": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch6.morning.1"
+        }
+      ],
+      "next": "secret"
+    },
+    "secret": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.player.ch6.secret",
+        "options": [
+          "keep",
+          "tell"
+        ]
+      },
+      "next": "told",
+      "branch": [
+        {
+          "if": {
+            "flag": "ans.player.ch6.secret.keep"
+          },
+          "next": "kept"
+        }
+      ]
+    },
+    "kept": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch6.kept.1"
+        }
+      ],
+      "next": null,
+      "on_done": [
+        {
+          "set_flag": [
+            "bond.teammate_b.kept_secret",
+            true
+          ]
+        },
+        {
+          "start_quest": "story.ch7"
+        }
+      ]
+    },
+    "told": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch6.told.1"
+        }
+      ],
+      "next": null,
+      "on_done": [
+        {
+          "set_flag": [
+            "bond.teammate_b.broke_secret",
+            true
+          ]
+        },
+        {
+          "start_quest": "story.ch7"
+        }
+      ]
+    }
+  }
+}

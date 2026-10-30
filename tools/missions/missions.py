@@ -15,6 +15,7 @@ street's map: its anchors and bound roles from tools/konoha/blueprints.
 """
 import glob
 import json
+import re
 import os
 import sys
 from collections import Counter, defaultdict
@@ -339,7 +340,8 @@ def catalogue_doc(ts):
 
 # The quest runtime's vocabulary (progression/.../Quests.java) and the test street it casts quests on.
 # shortcut: the street's plots and saved anchors mirror TestStreet.PLOTS and firstStart, until the map's anchors are data.
-QUEST_STEPS = {"go", "spar", "talk", "furnish", "sleep"}
+QUEST_STEPS = {"go", "spar", "talk", "furnish", "sleep", "scene", "choose", "cast"}
+RANKS = {"academy", "genin", "chunin", "jonin", "anbu", "hokage"}
 QUEST_CONDITIONS = {"all", "any", "not", "flag", "quest_state"}
 QUEST_STATES = {"done", "active", "not_started"}
 STREET = ["leaf_block", "shop_tea_house", "training_yard"]
@@ -380,8 +382,21 @@ def slot_key(slot):
     return None
 
 
+def lang_keys(quest_file):
+    """The lang keys of the module that holds the quest file (its assets/*/lang/en_us.json)."""
+    module = quest_file.replace(os.sep, "/").split("/src/main/resources/")[0]
+    keys = set()
+    for f in glob.glob(os.path.join(module, "src", "main", "resources", "assets", "*", "lang", "en_us.json")):
+        with open(f, encoding="utf-8") as fh:
+            keys |= set(json.load(fh))
+    return keys
+
+
 def check_quests(files, map_data=None):
-    """Every problem in the quest files, as `file: quest/step: problem`; quest ids and flags are checked across all files."""
+    """
+    Every problem in the quest files, as `file: quest/step: problem`; quest ids and flags are checked across all files,
+    and each line said, choice and step name against its module's lang file.
+    """
     anchors, roles = map_data or street()
     quests, problems = {}, []
     for f in files:
@@ -399,9 +414,14 @@ def check_quests(files, map_data=None):
         if qid in quests:
             problems.append(f"{rel}: {qid}: duplicate id (also {quests[qid][0]})")
         quests[qid] = (rel, q)
-    set_flags = {a["set_flag"][0] for _, q in quests.values() for s in (q["steps"] if isinstance(q.get("steps"), dict) else {}).values() if isinstance(s, dict)
+    all_steps = [s for _, q in quests.values() for s in (q["steps"] if isinstance(q.get("steps"), dict) else {}).values() if isinstance(s, dict)]
+    set_flags = {a["set_flag"][0] for s in all_steps
                  for when in ("on_enter", "on_done") for a in s.get(when) or [] if isinstance(a, dict) and isinstance(a.get("set_flag"), list) and a["set_flag"]}
+    # A choose step sets <flag>.<option> for the option picked.
+    set_flags |= {f"{o['flag']}.{opt}" for s in all_steps for o in [s.get("objective")] if isinstance(o, dict) and o.get("type") == "choose"
+                  and isinstance(o.get("flag"), str) and isinstance(o.get("options"), list) for opt in o["options"] if isinstance(opt, str)}
     for qid, (rel, q) in quests.items():
+        keys = lang_keys(os.path.join(ROOT, rel))
         def err(where, msg):
             problems.append(f"{rel}: {qid}{'/' + where if where else ''}: {msg}")
         steps = q.get("steps")
@@ -466,9 +486,16 @@ def check_quests(files, map_data=None):
                         isinstance(a.get("set_flag"), list) and len(a["set_flag"]) == 2 and isinstance(a["set_flag"][0], str) and isinstance(a["set_flag"][1], bool)
                         or type(a.get("give_ryo")) in (int, float) and 1 <= a["give_ryo"] <= 2**31 - 1 and a["give_ryo"] == int(a["give_ryo"])
                         or isinstance(a.get("give_item"), str) and a["give_item"] != ""
-                        or isinstance(a.get("teach_technique"), str) and a["teach_technique"] in TECHNIQUES)
+                        or isinstance(a.get("teach_technique"), str) and a["teach_technique"] in TECHNIQUES
+                        or isinstance(a.get("say"), str) and a["say"] != ""
+                        or isinstance(a.get("start_quest"), str) and a["start_quest"] != ""
+                        or a.get("set_rank") in RANKS)
                     if not ok:
-                        err(name, f"{when}: unknown or malformed action {a} (set_flag [name, true|false], give_ryo <whole ryo, 1 to 2147483647>, give_item <item id> or teach_technique <technique id>)")
+                        err(name, f"{when}: unknown or malformed action {a} (set_flag [name, true|false], give_ryo <whole ryo, 1 to 2147483647>, give_item <item id>, teach_technique <technique id>, say <lang key>, start_quest <quest id> or set_rank <{'|'.join(sorted(RANKS))}>)")
+                    elif "say" in a and a["say"] not in keys:
+                        err(name, f"{when}: says {a['say']}, which the lang file lacks")
+                    elif "start_quest" in a and a["start_quest"] not in quests:
+                        err(name, f"{when}: starts unknown quest {a['start_quest']}")
             o = s.get("objective") or {}
             if not isinstance(o, dict):
                 err(name, "objective must be an object")
@@ -477,6 +504,20 @@ def check_quests(files, map_data=None):
             if not isinstance(kind, str) or kind not in QUEST_STEPS:
                 err(name, f"unknown step type {kind!r} (known: {', '.join(sorted(QUEST_STEPS))})")
                 continue
+            # A scene tells itself; every other step is named (a choice's name is its question).
+            if kind != "scene" and f"quest.{qid}.step.{name}" not in keys:
+                err(name, f"the lang file lacks quest.{qid}.step.{name}")
+            if kind == "choose":
+                opts = o.get("options")
+                if not (isinstance(o.get("flag"), str) and o["flag"] and isinstance(opts, list) and opts
+                        and all(isinstance(x, str) and re.fullmatch(r"[a-z0-9_]+", x) for x in opts) and len(set(opts)) == len(opts)):
+                    err(name, "choose step needs a flag and distinct lower-case options")
+                else:
+                    for x in opts:
+                        if f"{o['flag']}.{x}" not in keys:
+                            err(name, f"the lang file lacks option {o['flag']}.{x}")
+            if kind == "cast" and o.get("technique") not in TECHNIQUES:
+                err(name, f"cast step names unknown technique {o.get('technique')!r}")
             field = {"go": "place", "spar": "place", "talk": "who"}.get(kind)
             if field is None:
                 continue

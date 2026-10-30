@@ -1,0 +1,323 @@
+{
+  "format": 1,
+  "id": "story.ch7",
+  "kind": "main",
+  "title": "quest.story.ch7.title",
+  "slots": {
+    "yard": {
+      "pick": "anchor",
+      "tag": "training"
+    }
+  },
+  "start": "exam",
+  "steps": {
+    "exam": {
+      "objective": {
+        "type": "go",
+        "place": "slot:yard"
+      },
+      "next": "quiz",
+      "on_enter": [
+        {
+          "say": "story.ch7.title"
+        },
+        {
+          "say": "story.ch7.exam.1"
+        }
+      ]
+    },
+    "quiz": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.player.ch7.quiz",
+        "options": [
+          "focus",
+          "fire",
+          "nothing"
+        ]
+      },
+      "next": "retake",
+      "branch": [
+        {
+          "if": {
+            "flag": "ans.player.ch7.quiz.focus"
+          },
+          "next": "throwing"
+        }
+      ]
+    },
+    "retake": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.retake.1"
+        }
+      ],
+      "next": "retake_sleep"
+    },
+    "retake_sleep": {
+      "objective": {
+        "type": "sleep"
+      },
+      "next": "retake_go"
+    },
+    "retake_go": {
+      "objective": {
+        "type": "go",
+        "place": "slot:yard"
+      },
+      "next": "quiz"
+    },
+    "throwing": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.throwing.1"
+        },
+        {
+          "say": "story.ch7.throwing.2"
+        }
+      ],
+      "next": "clone"
+    },
+    "clone": {
+      "objective": {
+        "type": "cast",
+        "technique": "combat:nin.clone"
+      },
+      "next": "protector",
+      "on_enter": [
+        {
+          "say": "story.ch7.clone.1"
+        }
+      ]
+    },
+    "protector": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.protector.1"
+        },
+        {
+          "say": "story.ch7.protector.2"
+        },
+        {
+          "say": "story.ch7.protector.3"
+        },
+        {
+          "say": "story.ch7.protector.4"
+        }
+      ],
+      "next": "speech",
+      "on_done": [
+        {
+          "set_flag": [
+            "story.ch7.protector",
+            true
+          ]
+        }
+      ]
+    },
+    "speech": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.speech.1"
+        }
+      ],
+      "next": "speech_end",
+      "branch": [
+        {
+          "if": {
+            "flag": "ans.hokage_4.want.strong"
+          },
+          "next": "speech_strong"
+        },
+        {
+          "if": {
+            "flag": "ans.hokage_4.want.safe"
+          },
+          "next": "speech_safe"
+        },
+        {
+          "if": {
+            "flag": "ans.hokage_4.want.find"
+          },
+          "next": "speech_find"
+        },
+        {
+          "if": {
+            "flag": "ans.hokage_4.want.hokage"
+          },
+          "next": "speech_hokage"
+        }
+      ]
+    },
+    "speech_strong": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.speech_strong.1"
+        }
+      ],
+      "next": "speech_end"
+    },
+    "speech_safe": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.speech_safe.1"
+        }
+      ],
+      "next": "speech_end"
+    },
+    "speech_find": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.speech_find.1"
+        }
+      ],
+      "next": "speech_end"
+    },
+    "speech_hokage": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.speech_hokage.1"
+        }
+      ],
+      "next": "speech_end"
+    },
+    "speech_end": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.speech_end.1"
+        },
+        {
+          "say": "story.ch7.speech_end.2"
+        },
+        {
+          "say": "story.ch7.speech_end.3"
+        }
+      ],
+      "next": "stipend"
+    },
+    "stipend": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.hokage_4.stipend",
+        "options": [
+          "yes",
+          "every",
+          "better"
+        ]
+      },
+      "next": "seats",
+      "on_done": [
+        {
+          "say": "story.ch7.stipend.after"
+        }
+      ]
+    },
+    "seats": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.seats.1"
+        },
+        {
+          "say": "story.ch7.seats.2"
+        }
+      ],
+      "next": "graduation"
+    },
+    "graduation": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.rival.graduation",
+        "options": [
+          "went",
+          "let_go"
+        ]
+      },
+      "next": "watchers",
+      "branch": [
+        {
+          "if": {
+            "flag": "ans.rival.graduation.went"
+          },
+          "next": "sat"
+        }
+      ]
+    },
+    "sat": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.sat.1"
+        },
+        {
+          "say": "story.ch7.sat.2"
+        }
+      ],
+      "next": "watchers",
+      "on_done": [
+        {
+          "set_flag": [
+            "bond.rival.stood_by_them",
+            true
+          ]
+        }
+      ]
+    },
+    "watchers": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch7.watchers.1"
+        },
+        {
+          "say": "story.ch7.watchers.2"
+        }
+      ],
+      "next": null,
+      "on_done": [
+        {
+          "set_rank": "genin"
+        },
+        {
+          "set_flag": [
+            "story.ch7.done",
+            true
+          ]
+        }
+      ]
+    }
+  }
+}

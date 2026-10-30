@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "id": "story.ch0",
+  "kind": "main",
+  "title": "quest.story.ch0.title",
+  "start": "charm",
+  "steps": {
+    "charm": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch0.title"}, {"say": "story.ch0.charm.1"}, {"say": "story.ch0.charm.2"}],
+              "on_done": [{"set_flag": ["story.seed.half_charm", true]}], "next": "cell"},
+    "cell": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch0.cell.1"}, {"say": "story.ch0.cell.2"}, {"say": "story.ch0.cell.3"}, {"say": "story.ch0.cell.4"}, {"say": "story.ch0.cell.5"}],
+             "on_done": [{"set_flag": ["story.seed.lost_child_cord", true]}, {"set_flag": ["story.seed.camp_number", true]}], "next": "cell_reply"},
+    "cell_reply": {"objective": {"type": "choose", "flag": "ans.lost_child.cell", "options": ["remember", "find", "silent"]},
+                   "on_done": [{"say": "story.ch0.cell.6"}], "next": "slip"},
+    "slip": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch0.slip.1"}, {"say": "story.ch0.slip.2"}, {"say": "story.ch0.slip.3"}], "next": "freed_boy"},
+    "freed_boy": {"objective": {"type": "choose", "flag": "ans.player.ch0.freed_boy", "options": ["free", "leave"]},
+                  "branch": [{"if": {"flag": "ans.player.ch0.freed_boy.free"}, "next": "boy"}], "next": "raid"},
+    "boy": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch0.boy.1"}], "next": "raid"},
+    "raid": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch0.raid.1"}, {"say": "story.ch0.raid.2"}, {"say": "story.ch0.raid.3"}], "next": "raid_reply"},
+    "raid_reply": {"objective": {"type": "choose", "flag": "ans.sensei.ch0", "options": ["run", "hide", "point"]},
+                   "branch": [{"if": {"flag": "ans.sensei.ch0.point"}, "next": "tunnel"}], "next": "chase"},
+    "tunnel": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch0.tunnel.1"}], "next": "chase"},
+    "chase": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch0.chase.1"}, {"say": "story.ch0.chase.2"}, {"say": "story.ch0.chase.3"}],
+              "on_done": [{"set_flag": ["story.seed.ruined_shrine", true]}], "next": "sample"},
+    "sample": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch0.sample.1"}, {"say": "story.ch0.sample.2"}, {"say": "story.ch0.sample.3"}],
+               "on_done": [{"set_flag": ["story.clue.medic.1", true]}, {"set_flag": ["doc.ledger_sample", true]}], "next": "ravine"},
+    "ravine": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch0.ravine.1"}, {"say": "story.ch0.ravine.2"}],
+               "on_done": [{"set_flag": ["bond.captain.saved_by_them", true]}], "next": "watcher"},
+    "watcher": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch0.watcher.1"}, {"say": "story.ch0.watcher.2"}],
+                "on_done": [{"set_flag": ["story.seed.watcher", true]}, {"start_quest": "story.ch1"}], "next": null}
+  }
+}

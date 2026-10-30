@@ -1,0 +1,170 @@
+{
+  "format": 1,
+  "id": "story.ch5",
+  "kind": "main",
+  "title": "quest.story.ch5.title",
+  "slots": {
+    "yard": {
+      "pick": "anchor",
+      "tag": "training"
+    }
+  },
+  "start": "chore",
+  "steps": {
+    "chore": {
+      "objective": {
+        "type": "go",
+        "place": "notice_board"
+      },
+      "next": "shelve",
+      "on_enter": [
+        {
+          "say": "story.ch5.title"
+        },
+        {
+          "say": "story.ch5.chore.1"
+        }
+      ]
+    },
+    "shelve": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch5.shelve.1"
+        },
+        {
+          "say": "story.ch5.shelve.2"
+        },
+        {
+          "say": "story.ch5.shelve.3"
+        }
+      ],
+      "next": "page",
+      "on_done": [
+        {
+          "set_flag": [
+            "doc.shelving_slip",
+            true
+          ]
+        }
+      ]
+    },
+    "page": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch5.page.1"
+        },
+        {
+          "say": "story.ch5.page.2"
+        },
+        {
+          "say": "story.ch5.page.3"
+        }
+      ],
+      "next": "cut",
+      "on_done": [
+        {
+          "set_flag": [
+            "story.clue.librarian.1",
+            true
+          ]
+        },
+        {
+          "set_flag": [
+            "story.clue.librarian.2",
+            true
+          ]
+        },
+        {
+          "set_flag": [
+            "story.seed.missing_page",
+            true
+          ]
+        }
+      ]
+    },
+    "cut": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.player.ch5.cut",
+        "options": [
+          "new",
+          "let_go"
+        ]
+      },
+      "next": "forget"
+    },
+    "forget": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.librarian.forget",
+        "options": [
+          "yes",
+          "no",
+          "depends"
+        ]
+      },
+      "next": "rock",
+      "on_done": [
+        {
+          "say": "story.ch5.forget.after"
+        }
+      ]
+    },
+    "rock": {
+      "objective": {
+        "type": "go",
+        "place": "slot:yard"
+      },
+      "next": "tour"
+    },
+    "tour": {
+      "objective": {
+        "type": "scene"
+      },
+      "on_enter": [
+        {
+          "say": "story.ch5.tour.1"
+        },
+        {
+          "say": "story.ch5.tour.2"
+        }
+      ],
+      "next": "face",
+      "on_done": [
+        {
+          "set_flag": [
+            "story.seed.blank_spots",
+            true
+          ]
+        }
+      ]
+    },
+    "face": {
+      "objective": {
+        "type": "choose",
+        "flag": "ans.instructor.face",
+        "options": [
+          "saved_me",
+          "nobody",
+          "mine",
+          "yours"
+        ]
+      },
+      "next": null,
+      "on_done": [
+        {
+          "say": "story.ch5.face.after"
+        },
+        {
+          "start_quest": "story.ch6"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "format": 1,
+  "id": "story.ch2",
+  "kind": "main",
+  "title": "quest.story.ch2.title",
+  "slots": {
+    "yard": {"pick": "anchor", "tag": "training"}
+  },
+  "start": "forms",
+  "steps": {
+    "forms": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch2.title"}, {"say": "story.ch2.forms.1"}, {"say": "story.ch2.forms.2"}, {"say": "story.ch2.forms.3"}], "next": "spar"},
+    "spar": {"objective": {"type": "spar", "place": "slot:yard"}, "on_enter": [{"say": "story.ch2.spar.1"}],
+             "on_done": [{"set_flag": ["spar_won", true]}],
+             "next": "pump"},
+    "pump": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch2.pump.1"}, {"say": "story.ch2.pump.2"}],
+             "branch": [{"if": {"flag": "ans.player.intro.nowhere"}, "next": "pump_nowhere"}, {"if": {"flag": "ans.player.intro.joke"}, "next": "pump_joke"}], "next": "pump_where"},
+    "pump_nowhere": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch2.pump.nowhere"}], "next": "fall"},
+    "pump_joke": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch2.pump.joke"}], "next": "fall"},
+    "pump_where": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch2.pump.where"}], "next": "fall"},
+    "fall": {"objective": {"type": "choose", "flag": "ans.rival.fall", "options": ["truth", "nobody", "beat"]},
+             "branch": [{"if": {"flag": "ans.rival.fall.truth"}, "next": "fall_truth"}, {"if": {"flag": "ans.rival.fall.beat"}, "next": "fall_beat"}], "next": "fall_nobody"},
+    "fall_truth": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch2.fall.truth"}], "on_done": [{"start_quest": "story.ch3"}], "next": null},
+    "fall_nobody": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch2.fall.nobody"}], "on_done": [{"start_quest": "story.ch3"}], "next": null},
+    "fall_beat": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch2.fall.beat"}], "on_done": [{"start_quest": "story.ch3"}], "next": null}
+  }
+}

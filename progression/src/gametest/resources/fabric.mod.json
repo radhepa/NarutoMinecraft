@@ -5,6 +5,6 @@
   "name": "Shinobi Progression Client Tests",
   "environment": "client",
   "entrypoints": {
-    "fabric-client-gametest": ["dev.shinobi.progression.ErrandGameTest", "dev.shinobi.progression.SessionGameTest"]
+    "fabric-client-gametest": ["dev.shinobi.progression.ErrandGameTest", "dev.shinobi.progression.SessionGameTest", "dev.shinobi.progression.StoryGameTest"]
   }
 }

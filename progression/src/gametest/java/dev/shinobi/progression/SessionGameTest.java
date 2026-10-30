@@ -41,7 +41,7 @@ import static dev.shinobi.progression.ErrandGameTest.ryo;
 
 /**
  * M2, the ten-minute play session (ROADMAP.md 13.4): on the test street a new player makes a character in the creator,
- * the training quest starts and names each step; the player walks to the yard, loses a first bout (the quest waits,
+ * which starts the story (StoryGameTest plays it); the training quest, taken by command, names each step; the player walks to the yard, loses a first bout (the quest waits,
  * unpaid), then wins a spar by real attacks (each one taken by the server), earns 30 ryo once, talks to the keeper, finds
  * the furniture shop shut on the first day, a Moonday (ErrandGameTest buys the tatami on a Fireday), places a tatami in flat 3a, sleeps in the flat's bed
  * at nightfall into the next morning (day 2's stipend paid), and reopening keeps the look, the finished quest, the wallet
@@ -73,8 +73,11 @@ public final class SessionGameTest implements FabricClientGameTest {
             c.waitFor(mc -> mc.gui.screen() != null && mc.gui.screen().getClass().getSimpleName().equals("CreatorScreen"));
             c.takeScreenshot("session-creator");
             c.clickScreenButton("Done");
+            for (int i = 0; i < 20 && !journal(w).knows(ShinobiProgression.OPENING); i++) c.waitTicks(10);
+            check(journal(w).knows(ShinobiProgression.OPENING), "the creator's look starts the story: " + journal(w));
+            w.getServer().runCommand("execute as @p run shinobi quest accept " + TRAINING);
             for (int i = 0; i < 20 && !"go_yard".equals(step(w)); i++) c.waitTicks(10);
-            check("go_yard".equals(step(w)), "the creator's look starts the training quest: " + journal(w));
+            check("go_yard".equals(step(w)), "the training quest is taken: " + journal(w));
             look = w.getServer().computeOnServer(s -> w.getConnection().getServerPlayer().getAttached(PlayerLooks.LOOK));
 
             BlockPos yard = anchors(w).get("anchor:training");

@@ -1,0 +1,33 @@
+{
+  "format": 1,
+  "id": "story.ch1",
+  "kind": "main",
+  "title": "quest.story.ch1.title",
+  "slots": {
+    "cook": {"pick": "resident", "where": {"job": "tea_house"}},
+    "academy": {"pick": "anchor", "tag": "training"}
+  },
+  "start": "gate",
+  "steps": {
+    "gate": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch1.title"}, {"say": "story.ch1.gate.1"}, {"say": "story.ch1.gate.2"}], "next": "office"},
+    "office": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch1.office.1"}, {"say": "story.ch1.office.2"}, {"say": "story.ch1.office.3"}, {"say": "story.ch1.office.4"}, {"say": "story.ch1.office.5"}, {"say": "story.ch1.office.6"}],
+               "on_done": [{"set_flag": ["story.seed.stipend", true]}, {"set_flag": ["story.seed.keeper_noticed", true]}, {"set_flag": ["story.clue.councillor.1", true]}, {"set_flag": ["doc.stipend_papers", true]}],
+               "next": "want"},
+    "want": {"objective": {"type": "choose", "flag": "ans.hokage_4.want", "options": ["strong", "safe", "find", "hokage"]},
+             "on_done": [{"say": "story.ch1.want.after"}], "next": "go_flat"},
+    "go_flat": {"objective": {"type": "go", "place": "flat.leaf_block.3a"}, "next": "porter"},
+    "porter": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch1.porter.1"}, {"say": "story.ch1.porter.2"}], "next": "porter_reply"},
+    "porter_reply": {"objective": {"type": "choose", "flag": "ans.porter.met", "options": ["asked", "thanked"]},
+                     "branch": [{"if": {"flag": "ans.porter.met.asked"}, "next": "porter_name"}], "next": "furnish"},
+    "porter_name": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch1.porter.name"}], "next": "furnish"},
+    "furnish": {"objective": {"type": "furnish"}, "on_enter": [{"say": "story.ch1.porter.3"}, {"give_item": "tatami"}], "next": "sleep"},
+    "sleep": {"objective": {"type": "sleep"}, "on_done": [{"say": "story.ch1.night.1"}], "next": "ramen"},
+    "ramen": {"objective": {"type": "talk", "who": "slot:cook"}, "on_enter": [{"say": "story.ch1.ramen.1"}], "next": "order"},
+    "order": {"objective": {"type": "choose", "flag": "ans.player.ramen", "options": ["miso", "salt", "pork_bone", "same"]},
+              "on_done": [{"say": "story.ch1.ramen.2"}, {"say": "story.ch1.ramen.3"}], "next": "go_academy"},
+    "go_academy": {"objective": {"type": "go", "place": "slot:academy"}, "next": "class"},
+    "class": {"objective": {"type": "scene"}, "on_enter": [{"say": "story.ch1.class.1"}, {"say": "story.ch1.class.2"}, {"say": "story.ch1.class.3"}, {"say": "story.ch1.class.4"}, {"say": "story.ch1.class.5"}], "next": "intro"},
+    "intro": {"objective": {"type": "choose", "flag": "ans.player.intro", "options": ["where", "nowhere", "joke"]},
+              "on_done": [{"say": "story.ch1.class.6"}, {"start_quest": "story.ch2"}], "next": null}
+  }
+}
